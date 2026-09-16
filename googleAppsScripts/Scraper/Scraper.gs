@@ -1,4 +1,4 @@
-var VERSION = "v02.10g";
+var VERSION = "v02.11g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -958,7 +958,36 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'non-attainment', 'tier 4 final', 'minor source',
             'selective catalytic reduction', 'firm gas', 'virtual pipeline',
             'block load', 'ride-through', 'dealer network'],
-    source: 'guidance:landscape-bridge-and-on-site-generation-2026-09' }
+    source: 'guidance:landscape-bridge-and-on-site-generation-2026-09' },
+  // S2 session 10. `seg-nuclear` already exists but carries only four generic
+  // words - nuclear, reactor, small modular reactor, uranium - which is the
+  // broad technology band. Scored from scratch against all 431 distinct terms
+  // across both arrays (industry-guidance.md step 9, session 3's (i): every
+  // TERM, not every seed label), the segment's LICENSING, FUEL and CONTRACTING
+  // vocabulary scores ZERO across the board - buying criteria 1, 2 and 4 in
+  // their entirety. A label-level glance would have returned "covered".
+  // Dropped and why, in full in section 11 of the analysis file: nine
+  // superstrings of `reactor`/`nuclear`; four already exact (`co-location`
+  // and `behind-the-meter` in topic-utility-procurement, `co-located load` in
+  // topic-federal-interconnection, `iron-air` in seg-bess-longduration); six
+  // too generic to band (`capacity factor`, `baseload`, `license renewal`,
+  // `first-of-a-kind`, `carbon-free energy`, `enrichment`); one company name;
+  // three ambiguous tokens (`SMR` abbreviates an exact existing term, `ZEC`,
+  // `Part 53`); TWO on seg-nuclear duplication grounds (`pebble bed`,
+  // `sodium-cooled`); one absent from the segment's own record (`early site
+  // permit`); and THREE on SPLIT grounds per session 6's (v) - `multi-day
+  // storage` and `long duration storage` are seg-bess-longduration's (the
+  // battery maker is adjacent HERE precisely because its centre of gravity is
+  // THERE), and `front-of-the-meter` would band the same co-location articles
+  // twice, its mirror `front-of-meter` already sitting in seg-bess-utility
+  // and its partner `behind-the-meter` in topic-utility-procurement.
+  { key: 'topic-landscape-clean-firm-and-nuclear',
+    label: 'Clean firm and nuclear: the licence, the ladder and the fuel',
+    terms: ['combined license', 'construction permit', 'DOE authorization',
+            'subsequent license renewal', 'uprate', 'clean firm',
+            'zero emission credit', '45U', 'HALEU', 'TRISO',
+            'fuel fabrication', 'additionality', 'AP1000'],
+    source: 'guidance:landscape-clean-firm-and-nuclear-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

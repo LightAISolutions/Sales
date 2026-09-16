@@ -3,11 +3,51 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.07r] — 2026-09-16 01:36:51 AM EST
+
+> Author S2 session 10 — the `clean-firm-and-nuclear` landscape module — on Opus 5 xhigh as a fresh session. This is ONE guidance module. It authors no lesson, no dossier and no report, creates no track, and regenerates exactly ONE segment: `clean-firm-and-nuclear`. […full §7.35 prompt, elided for length — it is preserved verbatim in `INTEGRATED-REMEDIATION-PLAN.md` §7.35's quoted block…] Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeCleanFirmAndNuclear_()`** — the **nineteenth guidance module** and the **tenth landscape**, authored **below** the `// CONTENT END` fence and registered at the **end** of `guidanceDocs_()`'s The Value Chain lane. Id `landscape-clean-firm-and-nuclear-2026-09`, tier **contributor**, `updated` 2026-09-16, `reviewBy` **2026-12-31**. Nine §10.6 sections in its order: `who-dominates-and-on-what-basis` (prose) · `who-threatens` (prose) · `each-players-bet` (table, **5 rows**) · `the-indicators` (table, 9 rows) · `the-sellers-play` (callout) · `claims-ledger` (ledger, **47 rows**) · `what-the-record-does-not-say` (callout, 7 absences + the curriculum gap) · `drill` (8 cards) · `check-yourself` (5 items). Four tiles, an eight-entry glossary
+- Inputs: corpus synthesis over the segment's **16 member dossiers** at the profile versions in the ledger — `constellation-energy`@v5 · `vistra`@v3 · `talen-energy`@v2 · `oklo`@v2 · `x-energy`@v1 · `form-energy`@v1 · `fermi-america`@v1 · `nextera-energy-resources`@v4 · `southern-company`@v2 · `dominion-energy`@v1 · `entergy`@v2 · `xcel-energy`@v4 · `bechtel`@v4 · `kiewit`@v7 · `black-veatch`@v7 · `sargent-lundy`@v2. No ingested document, no new research
+
+#### `repository-information/industry-guidance/landscape-clean-firm-and-nuclear-analysis.md`
+- The module's source of truth, twelve sections. **§2 — the split — written first, before any other section and before a line of the module**, per §10.6 (j)
+
+#### `googleAppsScripts/Scraper/Scraper.gs`
+- `topic-landscape-clean-firm-and-nuclear` added to `SCRAPER_INTEREST_TOPIC_SEEDS` — **thirteen terms**, scored from scratch against all **431 distinct terms** across both seed arrays
+
+### Changed
+
+#### `scripts/check-classroom-content.py`
+- The registered-guidance-module assertion **18 → 19** — the one edit outside the fence a landscape session makes, mandatory per §10.6 (c)
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- `clLessonSegmentCleanFirmAndNuclear_()` regenerated with `--segment clean-firm-and-nuclear --today 2026-09-16` and nothing else. The run's own line: `changed: read-next; no pin moved`. `updated` 2026-09-14 → 2026-09-16
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md` · `CLASSROOM-CURRICULUM-PLAN.md`
+- §7.3's S2 table row **8 → 10 of ~19**; §7.3's order-5 cell given **both** the missing session 9 record and session 10's — closing the one-session gap §7.35 item (iv) asked for; §6's S2 row **9 → 10**; §10.6's progress note **9 → 10 of 19**, dated; the session-10 findings block **(aa1)–(aa5)** added; **§7.36 written in this same commit** — the Phase 4 row 15 brief, both halves
+
+### Notes
+
+- **THE FINDING OF THE SESSION: the split was drawn by a lesson that does not exist yet.** `contracts-and-revenue` — Phase 4 row 11, **public**, built, stamped on all three of this segment's incumbents — carries a section `clean-firm-and-the-restart` whose opening sentence hands the physics off **by name** to *Clean Firm Power*, which is §7 row 16 and **unbuilt**. A built public lesson pre-declared a handoff **to a lesson that does not exist**, so the declined material is held by nobody. The module names the gap and refuses to fill it — session 6's (s) gaining a **third posture**: say the test is unowned and decline to own it. §7.23's test held on the uprate-inside-a-supply-agreement: an arithmetic example there, a position marker here. **Twenty-two omissions across eight neighbours** enumerated
+- **THE EMPTY `notes` WAS ANSWERED BY MEASUREMENT.** §7.35 flagged that session 8's route needs a registry note and this segment has none. Cross-referencing all nineteen segments: **eleven of the eleven adjacents are ranked incumbent or challenger in another segment, eleven of eleven**, and **the two challengers are the only members of the sixteen belonging to no other segment**. 19 shared memberships, **14 inversions (74 %), the highest measured** — and the direction is **uniform** rather than position-dependent or bimodal. **New instrument: adjacents 100 % ranked elsewhere means the segment is a PRODUCT other industries make, not a LAYER they sell into**
+- **BOTH HALVES OF THE DUE COUNT CALLED CORRECTLY, AND THE NETTING WAS TRACED TO ITS CAUSE FOR THE FIRST TIME.** `--check` **10 → 10 → 9**, `read-next` alone at every step, the section half **derived** from the generator before the write (`self.landscapes` is read at exactly one place, inside `sec_read_next`). But the segment was already due for a reason unrelated to this module: `the-campus-as-a-power-project` was built **after** that segment's last regeneration, so `lesson_ref` had been rendering a **built** lesson as `(planned)`. Recorded as an open item — every Phase 4 row leaves this behind and nobody owns clearing it
+- **TWO §7.35 MEASUREMENTS WERE FALSE AND THE INSTRUCTION TO VERIFY CAUGHT BOTH — the third consecutive brief to carry one.** (1) The brief said this segment was last regenerated 2026-09-16 EST and would report P7; the literal read **`updated: 2026-09-14`**, so **P7 could not fire and did not**. (2) The brief said four of six buying criteria have no built owner; the generator prints a **dash against five** and the sixth points at an unbuilt lesson, so **five of six have no owner at all and six of six have no *built* owner**. The first draft inherited the brief's four into a `sales` line and contradicted its own record section two sections later — **caught only by reading the rendered screenshots**, which nothing in the toolchain does
+- **`reviewBy` produced a SIXTH distinct failure mode: both rejection classes intersecting to exhaust the field.** 67 policy entries, 49 dated, **exactly one in the future** — a Virginia large-load rate class, another lane's subject and already four modules' `reviewBy`. Every on-subject gate is then either month/quarter-level or on a day another module holds. **2026-12-31 is the third module to carry that day**, taken on a four-way convergence in `fermi-america`'s `policyExposure[0].exposure`, an entry with **no `effectiveDate` at all**. **Eight** rejections in writing; the module ships outside its own 30-day horizon so the curriculum checker still reports 2 items due
+- **The Scraper-seed prior resolved YES and decisively.** A `seg-nuclear` seed already exists but carries four generic words. Against all **431** terms the segment's **licensing, fuel and contracting vocabulary scored zero across the board** — criteria 1, 2 and 4 entire. Thirteen terms seeded; nine dropped as superstrings, four as already exact, six as too generic, one company name, three ambiguous tokens, two on `seg-nuclear` duplication, one absent from the record, two as fragile — and **three on split grounds** per session 6's (v), including `front-of-the-meter`, whose mirror already sits in `seg-bess-utility`
+- **Verification.** `node --check` on `.js` copies of both `.gs` files — clean. `check-gas-inner-scripts.js` — 86 blocks, clean. `check-classroom-content.py` — **0 errors / 0 warnings at 44 lessons / 8 tracks / 142 gate cases**, module assertion at 19, **micro-markup clean on the first draft**. `check-classroom-curriculum.py --strict` — no structural findings, 28 stale pins (unmoved), 2 items due for review. `check-classroom-pipeline.py --selftest` — 13 fixtures, 0 failures. `--base origin/main` — **P1 ×7, P2 ×9, no P3, no P5, no P7** across 13 changed paths, exactly the forecast signature. `build-classroom-segments.py --check` — 10 → 10 → 9. `check-readme-tree.py` — 0 findings after `--fix` synced the two GAS displays
+- **Playwright, through the REAL serving path.** Contributor: **9/9 sections rendered, ZERO page errors**, zero surviving `{{…}}` and zero literal asterisks across **42,495 characters**; every section screenshot read. Analyst: **0/9 sections, 187 body characters**, and the server-side probe returned `{"success":false,"error":"ROLE_DENIED","role":"analyst"}` from `handleGuidanceOp_`'s own `clRequire_(sess,'guidance')` boundary. The two console errors are the known environmental `ERR_CERT_AUTHORITY_INVALID`. **The CSP workaround held**: `_gasPost` pointed at a same-origin `/__gas` and fulfilled by `page.route()`. **One harness defect found and fixed in this session**: splicing the new function after the previous one's `};` nested it *inside* that function — valid JavaScript, so `node --check` passed while the registry could never have resolved it. Caught by inspecting the splice point rather than by any checker
+- **The `.cl-tbl` `min-width` question now has twenty clean data points** — a three-column five-row bets table and a three-column nine-row indicators table, both clean at 1400px with no horizontal overflow
+- **No rotation on any of the three.** EST read **2026-09-16 01:2x** against UTC's **05:2x**; the harness banner agreed. `CHANGELOG.md` closes at **96 raw**, three sections dated 2026-09-16 EST → **93 non-exempt**, counter `Sections: 96/100`. **`Classroomgs.changelog.md` closes at 50 raw / 48 non-exempt against a cap of 50** — two sections dated 2026-09-16 EST — so **the session after this one rotates it** unless its push also lands on 2026-09-16 EST; its oldest group is **2026-09-02 (11 sections)**. `Scrapergs.changelog.md` 32/50; `Profilerhtml.changelog.md` untouched at 49/50
 
 ## [v06.06r] — 2026-09-16 12:38:06 AM EST
 

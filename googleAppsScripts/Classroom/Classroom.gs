@@ -1,4 +1,4 @@
-var VERSION = "v01.49g";
+var VERSION = "v01.50g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -16830,7 +16830,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
  "title": "Clean firm and nuclear",
  "short": "Firm carbon-free power as a product — existing reactor output sold on long-term PPAs, restarts and uprates, the SMR vendors and their fuel, and the…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-16",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -18320,8 +18320,8 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *When the Campus Signs a Reactor* (planned) · *Reading the Eight Named Projects* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *When the Campus Signs a Reactor* (planned) · *Reading the Named Projects*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-clean-firm-and-nuclear-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Constellation Energy, Talen Energy, Vistra, Oklo, X-energy, Bechtel, Black & Veatch, Dominion Energy, Entergy, Fermi America, Form Energy, Kiewit, NextEra, Sargent & Lundy, Southern Company, Xcel Energy — each member's dossier carries one in Profiler."
    ]
   },
@@ -18393,6 +18393,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    "date": "2026-09-14",
    "note": "regenerated: concepts:profiler-concepts 2026-09-07→2026-09-13; graph:profiler-graph 2026-09-08→2026-09-13",
    "changed": []
+  },
+  {
+   "date": "2026-09-16",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
+   ]
   }
  ]
 };
@@ -42062,7 +42069,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeAidcDevelopersAndLandlords_(),
           guidanceDocLandscapeInHallPower_(),
           guidanceDocLandscapeGridEquipment_(),
-          guidanceDocLandscapeBridgeAndOnSiteGeneration_()];
+          guidanceDocLandscapeBridgeAndOnSiteGeneration_(),
+          guidanceDocLandscapeCleanFirmAndNuclear_()];
 }
 
 function guidanceIndex_() {
@@ -54221,6 +54229,439 @@ function guidanceDocLandscapeBridgeAndOnSiteGeneration_() {
   }
  ]
 };
+}
+
+
+// S2 session 10 (2026-09-16) - the TENTH landscape and the NINETEENTH guidance
+// module. Corpus synthesis over the sixteen member dossiers of the
+// clean-firm-and-nuclear segment at the profile versions in the claims ledger;
+// no ingested document, no new research. Source of truth:
+// repository-information/industry-guidance/landscape-clean-firm-and-nuclear-analysis.md
+//
+// THE SPLIT, AND IT IS UNLIKE THE NINE BEFORE IT: the line is drawn by a
+// lesson that DOES NOT EXIST YET. contracts-and-revenue (Phase 4 row 11,
+// PUBLIC, built, stamped on all three of this segment's incumbents) carries a
+// section clean-firm-and-the-restart whose opening sentence hands the physics
+// off by name - "The physics - why a reactor follows load badly, what a small
+// modular reactor changes, what clean firm admits - belongs to Clean Firm
+// Power in the campus track, and is deliberately not repeated here."
+// clean-firm-power is CLASSROOM-CURRICULUM-PLAN.md section 7 row 16 and
+// UNBUILT. So a built public lesson has pre-declared a handoff TO A LESSON
+// THAT DOES NOT EXIST, and the material it declined is in nobody's hands.
+// This module NAMES that gap and does not fill it: 10.6 (y3) - a landscape
+// that starts teaching a criterion because nobody else does stops being a
+// landscape - and the temptation is at its strongest here because the missing
+// lesson is the nuclear lesson and this is the nuclear segment.
+//
+// EIGHT NEIGHBOURS. Four built landscapes (utilities, storage-developers-and-
+// ipps, aidc-developers-and-landlords, cells-and-chemistry), two guidance
+// modules (utility-aidc-procurement-2026-08, large-load-interconnection-
+// 2026-09) and the two public mechanism lessons in this segment's own
+// READ_NEXT - the-campus-as-a-power-project (built) and clean-firm-power
+// (unbuilt). TWENTY-TWO OMISSIONS are enumerated in section 2d of the
+// analysis file and summarised here so a later revision cannot import them:
+// FROM contracts-and-revenue (7): hourly versus annual matching; the
+// corporate and virtual PPA and the strike-price settlement; additionality as
+// the quality test; the uprate as the middle answer; what a restart
+// physically involves and the interconnection-rights inheritance; the green
+// tariff in a regulated territory; the eleven-instrument table.
+// FROM clean-firm-power, UNBUILT and therefore held by nobody (4): why a
+// reactor follows load badly; what an SMR changes; what clean firm admits as
+// a category; the licensing path as a physical schedule.
+// FROM the-campus-as-a-power-project (4): the three clocks; the five-rung
+// ladder; the four-parties-one-lease structure; the five campus failure
+// modes. Its tile reads "0 league tables ... this lesson does not invent
+// one" - 10.6 (t) on a tile, for the seventh time.
+// FROM landscape-utilities-2026-09 (3), landscape-storage-developers-and-ipps
+// -2026-09 (2) and the two policy/procurement modules (2): the franchise's
+// instrument and the rate-case machinery; the IPP's pipeline and the
+// merchant-versus-contracted split; the tariff terms, the buyer map and the
+// co-location docket's PROCEDURE. This module takes only the docket's effect
+// on who can sell what.
+//
+// 7.23'S TEST held on THE UPRATE ATTACHED TO A SUPPLY AGREEMENT: an
+// arithmetic worked example of additionality there, naming nobody ("read that
+// pairing whenever you see an uprate appear inside a power deal"), and a
+// POSITION MARKER here - it is Vistra's, and it sorts the three incumbents
+// into three different answers to one objection.
+//
+// THE SHAPE, MEASURED RATHER THAN ASSERTED - the registry notes field is
+// EMPTY, so session 8's (y4) route was not available. Cross-referencing all
+// nineteen segments: ELEVEN OF THE ELEVEN ADJACENTS ARE RANKED - incumbent or
+// challenger - IN ANOTHER SEGMENT, eleven out of eleven with no exception
+// (four utilities, three EPCs, one assurance incumbent, one storage-developer
+// incumbent, one cells challenger, one landlord challenger). And the converse:
+// THE TWO CHALLENGERS ARE THE SEGMENT'S ONLY PURE PLAYS, the only two of the
+// sixteen belonging to no other segment. 19 shared memberships across seven
+// neighbouring segments, 14 inversions, 74 per cent - the highest rate
+// measured - and the direction is UNIFORM rather than bimodal (session 9's
+// (z3)) or position-dependent (session 8's (y1)). THE NEW INSTRUMENT: when a
+// segment's adjacents are 100 per cent ranked elsewhere, the segment is a
+// PRODUCT that other industries make, not a LAYER other industries sell into.
+//
+// reviewBy is 2026-12-31. THE SORT RETURNS EXACTLY ONE FUTURE DATE out of 67
+// policy entries (49 dated): dominion-energy's Virginia GS-5 large-load rate
+// class at 2027-01-01 - a utility tariff, and already FOUR modules' reviewBy.
+// The date taken was read out of fermi-america's policyExposure[0].exposure,
+// an entry carrying NO effectiveDate at all, and corroborated four more times
+// in the same dossier. On 31 December 2026 four gates land at once on the
+// segment's only large light-water new-build applicant: the Part 3
+// site-specific COLA, the NRC final EIS target, the credit facility's
+// approved-customer deadline and the Texas Tech escrow. EIGHT rejections are
+// written out in section 10 of the analysis file.
+// THE NEW FINDING, STATED RATHER THAN HIDDEN: this is the first segment where
+// the two standing rejection classes - month-level-only, and already another
+// module's day - INTERSECT TO EXHAUST THE FIELD. X-energy's Long Mott final
+// safety evaluation (November 2026) is a TELL rather than a gate and its
+// month-end lands on nvidia-800vdc-2026-08's 2026-11-30; the Long Mott
+// construction permit (Q1 2027) is the real gate and its quarter-end lands on
+// grid-equipment-shortage-2026-09's 2027-03-31. So 2026-12-31 is the THIRD
+// module to carry that calendar day (china-policy-stack-2026-08 and
+// landscape-bridge-and-on-site-generation-2026-09 hold it too). Session 9's
+// (z5) permits a shared day when the alternative is fabrication; here the
+// alternative was a DIFFERENTLY shared day, which is not better. The bell is
+// different from both: a licensing filing deadline, not a tariff expiry and
+// not a fuel-and-permit convergence. It keeps the module outside its own
+// 30-day horizon, so the curriculum checker still reports 2 items due.
+function guidanceDocLandscapeCleanFirmAndNuclear_() {
+  return {
+ "id": "landscape-clean-firm-and-nuclear-2026-09",
+ "group": "The Value Chain",
+ "title": "Clean Firm and Nuclear — the Landscape",
+ "short": "Who sells firm carbon-free power, on what basis, and why eleven of the segment's sixteen members are somebody else's incumbent.",
+ "source": {
+  "doc": "Corpus synthesis over the 16 member dossiers of the clean-firm-and-nuclear segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 10,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-clean-firm-and-nuclear-analysis.md"
+ },
+ "updated": "2026-09-16",
+ "reviewBy": "2026-12-31",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "16",
+   "v": "members on record",
+   "sub": "Three incumbent, two challenger, eleven adjacent — re-measured 16 September 2026, confirming the programme's written figure exactly, member for member. The tenth consecutive session to do so, and all sixteen carry a dossier"
+  },
+  {
+   "k": "11 of 11",
+   "v": "adjacents are ranked elsewhere",
+   "sub": "Every one of the eleven adjacents is an incumbent or a challenger in another segment — four utilities, three EPCs, an engineering firm, a renewables IPP, a battery maker and a landlord. Nothing here is a gap in the roster; it is what the product is"
+  },
+  {
+   "k": "2",
+   "v": "pure plays, and neither has sold any",
+   "sub": "The two challengers are the only members of the sixteen that belong to no other segment, and neither has produced a commercial megawatt-hour. What they threaten is the top rung of the price ladder in about a decade, not share today"
+  },
+  {
+   "k": "0",
+   "v": "ranked tables of clean-firm sellers",
+   "sub": "No source in this corpus orders these companies against each other, and this module does not invent one. The three incumbents are described by what their position rests on, in three units that do not compare"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held — here, a merchant generator selling output from an operating reactor fleet under long-term contract."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member attacking the segment on a route the incumbents do not hold. In this segment both challengers are pre-commercial reactor vendors, so the route is a licensing pathway rather than a price."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member that bears on the segment without being ranked in it. In this segment all eleven adjacents are ranked incumbent or challenger in another segment, which is the whole explanation for the shape of this roster."
+  },
+  {
+   "t": "restart",
+   "d": "Returning a retired but preserved reactor to service: proving every dormant system still meets its licensing basis, reinstating the operating licence, and rebuilding a licensed operating staff. The mechanism belongs to the public lesson on contracts and revenue; what matters here is who is doing one."
+  },
+  {
+   "t": "interconnection rights",
+   "d": "A generator's existing entitlement to deliver into the grid at a point. A restart can inherit them from a retiring unit instead of joining a multi-year queue, which is why the restart's advantage is contractual as much as nuclear."
+  },
+  {
+   "t": "DOE authorization pathway",
+   "d": "The route by which the Department of Energy authorises a reactor on its own sites, created for pilot projects by executive order in 2025, as an alternative to a Nuclear Regulatory Commission licence. One of this segment's two challengers has taken it; the other has not."
+  },
+  {
+   "t": "zero emission credit",
+   "d": "A state payment to an existing nuclear unit for its carbon-free attribute, used to keep plants open that the wholesale market alone would close. One incumbent's twenty-year hyperscaler contract is structured to replace an expiring state programme of this kind at market terms."
+  },
+  {
+   "t": "options book",
+   "d": "An order pipeline composed of non-binding instruments — letters of intent, master agreements, rights of first refusal — rather than executed power purchase agreements. Both of this segment's challengers describe their books this way in their own filings."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with what this module is not.** The physics of this segment — why a reactor follows load badly, what a small modular reactor changes, what *{{clean firm power}}* admits as a category — belongs to a planned public lesson, *Clean Firm Power*, **which does not exist yet**. The *instruments* — hourly matching, the corporate {{PPA}}, {{additionality}}, the {{uprate}}, the restart, the {{green tariff}} — belong to *Who Carries Which Risk*, which does exist, is analyst-visible, and says in its own text that it is deliberately not teaching the physics. **So one of this segment's two teachers has not been written, and this module is not going to appoint itself.** What follows is the parties.",
+    "**The shape first, because it is the most useful single fact about this segment and no summary states it.** Sixteen members: three incumbents, two challengers, **eleven adjacents**. That is 69 per cent adjacent, the second-highest in the registry — and the registry's own notes field for this segment is empty, so the explanation has to be measured. It measures cleanly. **Every one of the eleven adjacents is ranked — incumbent or challenger — in another segment.** Four are utilities and incumbents in the utilities segment. Three are EPCs and incumbents in engineering and construction. One is an engineering firm and an incumbent in assurance. One is a renewables IPP and an incumbent among storage developers. One is a battery maker and a challenger in cells. One is a data-centre landlord and a challenger there. **Eleven out of eleven, with no exception.**",
+    "**And the converse is just as clean: the two challengers are the only members of the sixteen that belong to no other segment at all.** Both are pre-commercial reactor vendors. Every incumbent is ranked somewhere else too. **So the segment reads like this: firm carbon-free power is a product made almost entirely by companies whose main business is something else, plus two companies that exist only to sell it and have never sold any.** That is the room a seller is walking into, and it is why a pitch built on segment share lands badly here.",
+    "**The three incumbents do not compete on a product.** All three sell the same physical thing — firm carbon-free megawatt-hours from an operating reactor fleet, delivered under a long-dated contract. What separates them is **three different answers to the same objection**, which is whether power that already existed counts as new. That objection is {{additionality}}, it is the *Who Carries Which Risk* lesson's quality test, and it is this segment's fifth buying criterion. Read the three as three answers and the field stops looking like a ranking.",
+    "**The first answer is price-setting, and it rests on a ladder nobody disclosed.** The largest of the three is described in its own file as the price-setter for firm carbon-free power in the AI buildout, and the basis is an analyst-estimated ladder its own deals created: about **$112/MWh** for restart output, about **$70/MWh** for existing-reactor output, and a management-stated **$20–50/MWh** premium band for new deals. Behind it sits roughly **22 GW across fifteen sites at 94.7 per cent uptime in 2025**, and roughly **30 per cent of that clean baseload already under long-term contract**. Its answer to additionality is a **restart** — a retired unit returned to service, additional by construction, and inheriting **760 MW of capacity interconnection rights transferred from retiring units** rather than joining a queue. *Analysis: none of those prices is company-disclosed, so the ladder is the market's estimate of this company's pricing rather than this company's published tariff. It is still the only ladder there is.*",
+    "**The second answer is the uprate, bought and paid for inside the deal.** The second incumbent holds **6,448 MW across six units at four sites**, of which roughly **3.8 GW is sold to two hyperscalers on twenty-year agreements**. What distinguishes it is a **433 MW uprate programme folded into a 2,609 MW supply agreement** — more output from plants that already exist, which is the one column in the corpus that is unambiguously additional without being a new build. Behind the generation sits a five-million-customer retail book that hedges it mechanically. **The thing its own file is careful about**: every signed large-load agreement it has is nuclear, and **not one exists at any of its gas plants**, where the language has been unchanged across four consecutive filings.",
+    "**The third answer is the one that lost at the regulator and won commercially anyway, and the whole segment now lives inside the record it made.** The third incumbent owns 90 per cent of a two-unit station — **2,245 MW owned, about 17 TWh in 2025 at an all-in cost of roughly $27/MWh**. Its original arrangement put a data centre physically at the plant, {{behind-the-meter}}; **the regulator rejected that structure on 1 November 2024**. What replaced it sells up to **1,920 MW through 2042 front-of-the-meter**, through a retail supplier licence the company already held, and **needed no federal approval at all**. *Analysis: the rejection is the more consequential half. Every co-location rule now being written traces back to that docket, which makes this incumbent's chief asset the precedent rather than the plant.*",
+    "**What the basis is not.** These three positions are measured in a price ladder nobody published, a contracted share, and a docket outcome. **They are not measures of one thing, and no source in this corpus ranks across them** — which is why this section is three paragraphs rather than a league table, and why the tile above reads zero."
+   ],
+   "sales": "Before you price anything into a clean-firm conversation, find out which of the three answers your counterparty is using — a restart, an uprate, or existing output sold forward. It is a one-question diagnostic and it tells you what else the campus still has to buy."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "7 min",
+   "kind": "prose",
+   "ps": [
+    "**The challenger bench is two names — joint second-smallest in the registry — and the reason is structural rather than a gap in coverage.** Session 8's landscape could explain a one-name bench from the registry's own notes; **this segment's notes field is empty**, so the explanation is the measurement in the section above: the two challengers are the only members here that do nothing else. Everyone else in this segment arrived from another one.",
+    "**Neither challenger has sold a megawatt-hour of commercial power. Neither has a definitive power purchase agreement anywhere in its public record.** Both describe their pipelines, in their own filings, as books of non-binding instruments — an {{options book}}. One quoted an order book of 14 GW in mid-2025 and no longer quotes it at all; the other defines roughly **11.5 GWe as assuming full customer exercise of contingent rights**, of which the binding portion is **four reactors**. **So the threat is not displacement.** Nothing in this record supports a claim that either challenger takes share from an incumbent this decade.",
+    "**What they do threaten is the top rung of the price ladder, and the clock is long.** The incumbents currently price the restart-and-new-build column alone, because there is nothing else to price it against. A licensed, delivered small modular reactor changes that — and both challengers' own guidance puts first commercial power in the **late 2027 to early 2028** window for one and **2031 to 2033** for the other, with the latter's file recording a slip of roughly **four to six years** from the original programme goal.",
+    "**The route each is on is a licensing pathway, and the two chose differently — which is this segment's first buying criterion restated as a strategy.** The first challenger's own file calls its decisive move **regulatory rather than technical**: routing first reactors onto a **{{DOE authorization pathway}}** created by executive order rather than waiting for a Nuclear Regulatory Commission licence. Its 2020 {{combined licence}} application was **denied without prejudice in January 2022** and no updated application had been filed as of its August 2026 report. The second challenger took the licence route: a **{{construction permit}}** application under an 18-month regulatory schedule, with the staff's final safety evaluation targeted for **November 2026** and the permit itself guided to **Q1 2027** — the first permit any reactor of its type would hold.",
+    "**The constraint that binds both is not the reactor, and both files name it independently.** It is fuel. **{{HALEU}}** enrichment in the United States is at pilot scale; the first federal allocation round in April 2025 went to five developers. One challenger's entire first core is a fixed **five metric tons of government-owned legacy material** recovered from an experimental reactor shut down in 1994, and that material is not its to keep. The other's answer is to run initial cores on ordinary low-enriched uranium and take HALEU **for the second core and beyond**, with a fuel plant licensed and due in the first half of 2028 — **the plant will be ready before the fuel is**. *Analysis: criterion four is where the challenger half of this segment actually fails or does not, and it is the criterion a seller is least likely to raise.*",
+    "**The finding a reader would not guess, and it follows straight from the roster's shape: the segment's new capacity is coming mostly from its ADJACENTS rather than from its challengers.** Four of the eleven adjacents are building or restarting nuclear right now — a landlord with **four large light-water units under the first combined licence application accepted since 2009**, a renewables IPP restarting a **615 MW** unit for a first-quarter-2029 delivery on a twenty-five-year hyperscaler contract, a utility that has already delivered **two new large units** and is uprating two more, and a utility developing a small modular reactor at an existing site. **So if you are watching only the two challengers for new firm megawatts, you are watching the smaller half.**"
+   ],
+   "sales": "The question that separates a real clean-firm opportunity from a press release is whether the counterparty's fuel is contracted or allocated. Ask it of a challenger and you will usually get the honest answer, because their own filings already say it."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "One row per incumbent and challenger, in registry order. **Every row is analysis** — read off each dossier's own strategy section and labelled as judgment, never blended with fact. The eleven adjacents are not here: the registry does not rank them in this segment, and inventing a bet for a member ranked elsewhere would be the module ranking a field the corpus does not.",
+   "cols": ["Player", "Role", "The bet (analysis)"],
+   "rows": [
+    ["Constellation Energy", "incumbent", "That **the ladder it created is the asset** — about $112/MWh for restart output, about $70/MWh for existing output and a $20–50/MWh premium band, none of it company-disclosed — and that the **rulebook rather than demand** gates the next wave. It filed the complaint that produced the December 2025 co-location order and ties its own deal flow to that rulemaking. The exposure its file names is political: three consecutive capacity auctions clearing at the administrative cap make legislated clawback a live scenario for exactly the revenue behind its raised guidance"],
+    ["Vistra", "incumbent", "That **contracting the fleet beats owning the upside** — roughly 3.8 GW of six nuclear units sold forward on twenty-year terms, with a 433 MW uprate folded in to answer the additionality objection inside the deal. Its integrated retail book is the hedge: when prices move, generation and retail book the inverse of each other. *Its own file is blunt that the gas half of the story is not there yet:* the language about large-load discussions at its gas plants is unchanged across four consecutive filings and **no agreement has been signed at one**"],
+    ["Talen Energy", "incumbent", "That **PJM stays short of dispatchable capacity**, funded with debt rather than equity — total principal from $6.9bn to $9.7bn in fourteen months while cleared capacity revenue went from about $670m to about $1,208m. The nuclear anchor is contracted through 2042; the growth bet is gas. *Its file's own caution is that the last three auctions cleared at the administrative cap, so the collar rather than scarcity is setting that price* — and a collar is a ceiling as readily as a floor"],
+    ["Oklo", "challenger", "That **the regulatory route is the product decision** — first reactors authorised by the Department of Energy rather than licensed by the Nuclear Regulatory Commission, funded by roughly $3.0bn of equity against $84.3m of total liabilities and no convertible debt, with vertical integration into fuel as the hedge on the sector's actual bottleneck. *The gap its own file names is between an announced pipeline and a delivered plant:* not one definitive power purchase agreement exists, and an order book once quoted at 14 GW is no longer quoted"],
+    ["X-energy", "challenger", "That **a hyperscaler shareholder plus federal cost-share carries a first-of-a-kind through**, with fuel fabrication owned rather than bought — one of two demonstration awardees, a licensed fuel plant due in the first half of 2028, and priority queue slots and rights of first refusal held by its largest shareholder. *Its own file puts the pacing item on the sponsor rather than the regulator:* the first project's final investment decision is not expected before 2028 and operations are guided to the early 2030s, four to six years later than the programme's original goal"]
+   ],
+   "note": "**Five rows is the shortest bets table in the corpus**, against twenty-seven for the deepest — and it is honest rather than trimmed. Three incumbents and two challengers is the *entire* ranked roster of a sixteen-member segment, because eleven of the sixteen are ranked somewhere else instead. Section proportions follow the segment, never the previous module.",
+   "sales": "A bet is a hypothesis about what the company needs next. Two of these five turn on a rulebook and two on a fuel supply chain — neither of which anyone in this segment controls."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it. **Where a row has no date the row says so** rather than supplying one — and three of this segment's most consequential gates are stated only to the month or the quarter, which is itself the finding recorded under this module's review date.",
+   "cols": ["Watch", "When the record dates it", "Why it moves the segment"],
+   "rows": [
+    ["The co-location rulebook at the federal regulator — three new transmission services directed, compliance language filed and further guidance issued, plus show-cause orders to every regional operator", "**Open, no date stated.** One incumbent's file calls it *still being written*", "This is the gate on the next wave of deals, and all three incumbents say so. One of them filed the complaint that opened it. It decides whether a campus can sit at a plant, and on what terms"],
+    ["The first small modular reactor construction permit — the staff's final safety evaluation, then the permit itself", "**November 2026 target, then Q1 2027** — month and quarter, no day stated", "The first permit of its type. Its own vendor's file says a miss defers the whole book — so this is the gate on whether the challenger half has a licensable product at all"],
+    ["The first large light-water combined licence application to complete since 2009 — the site-specific portion, and the regulator's final environmental statement", "**31 December 2026**", "The segment's only large new-build applicant, and this module's own review date. Two more of that applicant's obligations fall the same day, both financing"],
+    ["A state zero-emission-credit programme expiring, with a twenty-year hyperscaler contract structured to replace it at market terms", "**June 2027** — month, no day stated", "The cleanest test in the corpus of what an existing reactor is worth when the policy support stops and a contract starts"],
+    ["A restart reaching commercial operation, with interconnection rights transferred from retiring units rather than queued for", "**2027** — year, no month stated. Reported as running ahead of schedule", "If it lands, the top rung of the price ladder becomes a delivered product rather than an estimate"],
+    ["A 615 MW restart on a twenty-five-year hyperscaler contract, run by an adjacent rather than an incumbent", "**Q1 2029**", "The second restart, and evidence for whether the restart column is a category or a one-off"],
+    ["Fuel: high-assay low-enriched uranium reaching commercial scale, and a licensed fabrication plant opening", "**First half of 2028** for the plant. Enrichment itself: **no date stated**", "Both challengers name this as the binding external constraint. The plant is due before the fuel is"],
+    ["Whether a signed large-load agreement ever appears at one incumbent's gas plants", "**No date.** The language is unchanged across four consecutive filings", "The tell for whether this segment's incumbents are a nuclear story or a dispatchable-power story"],
+    ["Capacity auctions clearing at the administrative cap for a fourth consecutive time", "**The next auction, no date confirmed in the record**", "Two incumbents' earnings rest on it, and one of their files says the collar rather than scarcity is setting the price — which makes it a ceiling as readily as a floor"]
+   ],
+   "sales": "Two of the nine rows above have no date at all and three are month- or quarter-level. That is not a weakness in the record — it is what a segment looks like when the schedule is a licence rather than a delivery slot."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "6 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**If you sell storage, the honest answer on this segment is mostly no — and the reason is stated by an incumbent's own file rather than inferred here.** Every nuclear power purchase agreement a hyperscaler signs **reduces near-term appetite for firming storage at that load**. A twenty-year contract for firm carbon-free output is bought precisely so that the buyer does not have to solve the hours a battery solves. Pretending otherwise in the room costs credibility you will need later.",
+    "**Two doors are genuinely open, and both are narrow.** The first is the **addition beside an existing plant**: storage built where a connection already exists is, with an {{uprate}}, the one column the corpus treats as unambiguously additional — the same argument that makes an uprate folded into a supply agreement worth paying for. The second is the **multi-day alternative**, which is why a battery maker sits in this segment as an adjacent at all: its product is sold against a still, overcast week rather than an evening peak, so it competes for the *clean firm* line in a contract rather than for the arbitrage stack. *The honest caveat the corpus attaches to that second door:* no independent laboratory validation of that chemistry at its full rated duration exists anywhere in the record, and the contested number is cost per kilowatt rather than per kilowatt-hour, because capacity markets pay for kilowatts.",
+    "**If you sell AIDC power, the play is a single diagnostic: which of the three incumbent answers is this counterparty using?** It decides what the campus still has to buy, and the three answers leave very different holes.",
+    "**A grid-delivered contract** — output sold into the wholesale market with the buyer taking delivery through the utility — leaves the **entire on-site chain open**. Nothing about the contract supplies a substation, a bridge plant, an uninterruptible supply or a rack. It also needs no federal approval, which is why two of the three incumbents' marquee deals are structured that way.",
+    "**A co-location** attaches the campus to **a docket that is still being written**, and the terms of the attachment — which transmission services, paid on what basis, with what behind-the-meter treatment — are the subject of that docket rather than of the contract. Read any co-location claim as provisional until the rulebook lands.",
+    "**A restart** puts the whole campus on a **three-to-four-year clock**, and the advantage that makes that clock possible is contractual rather than nuclear: the plant inherits existing {{interconnection rights}} instead of joining a queue. **Your window is that clock.** Everything that has to be delivered before first power has a date set by the restart, not by the campus.",
+    "**And one structure to recognise before you misread an announcement, because it changes whose credit was underwritten.** In a regulated, vertically integrated territory a data centre cannot buy from a project across the street — only the franchise may sell retail power. The approved workaround is a {{green tariff}}, where the utility signs the contract and the corporate customer commits to take the output. **The credit the lenders underwrote is the utility's.** So when an owner tells you it supplies a named hyperscaler, ask whose name is on the contract: the answer decides whether that relationship is repeatable anywhere else. *That mechanism is taught in full, publicly, in* Who Carries Which Risk *— this module only tells you which counterparties are using it.*"
+   ],
+   "sales": "Not one of this segment's six buying criteria has a built lesson teaching it, so in most rooms you will be the only person who has read the licensing path and the fuel position together. That is an advantage — use it to ask, not to lecture."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 16 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Four claims in this module are the module's own** and are labelled as analysis wherever they appear: that the eleven adjacents being ranked elsewhere is what the product is rather than a gap in the roster; that the three incumbents are three answers to one objection rather than a ranking; that the challengers threaten a price rung on a decade's clock rather than share today; and every row of the bets table.",
+   "rows": [
+    ["Segment holds 16 members — 3 incumbent, 2 challenger, 11 adjacent; chain position 7, tier build; and the registry entry carries NO notes field", "profiler-segments.json @ v05.41r — segments[].members[], .position, .tier"],
+    ["The definition names existing reactor output on long-term PPAs, restarts and uprates, the SMR vendors and their fuel, and the storage-firmed alternatives, closing on the licence being the schedule", "profiler-segments.json @ v05.41r — segments[].definition"],
+    ["The six buying criteria, verbatim", "profiler-segments.json @ v05.41r — segments[].buyingCriteria"],
+    ["Every one of the eleven adjacents is ranked incumbent or challenger in another segment, and the two challengers are the only members belonging to no other segment", "profiler-segments.json @ v05.41r — cross-referenced across all nineteen segments[].members[]"],
+    ["Price-setter for firm carbon-free power; the ladder at about $112/MWh restart, about $70/MWh existing output, and a management-stated $20–50/MWh premium band, none of it company-disclosed", "profile:constellation-energy @ v5 — ecosystemRole; strategyRead[0]"],
+    ["About 22 GW across fifteen sites, 94.7 per cent uptime in 2025, and roughly 30 per cent of clean baseload under long-term contract", "profile:constellation-energy @ v5 — summary; productsAndServices[0]"],
+    ["The 835 MW restart running ahead of schedule for 2027, with a $1bn federal loan and 760 MW of capacity interconnection rights transferred from retiring units rather than queued for", "profile:constellation-energy @ v5 — productsAndServices[1]"],
+    ["Regulation rather than demand gates the next phase, and the company filed the complaint that produced the December 2025 co-location order", "profile:constellation-energy @ v5 — strategyRead[1]; policyExposure[0]"],
+    ["Three consecutive capacity auctions clearing at the administrative cap make legislated clawback of capacity upside a live scenario", "profile:constellation-energy @ v5 — strategyRead[2]"],
+    ["A nuclear PPA signed by a hyperscaler reduces near-term appetite for firming storage at that load", "profile:constellation-energy @ v5 — ecosystemRole"],
+    ["A state zero-emission-credit programme expiring in June 2027, with a twenty-year 1,121 MW agreement structured to replace it at market terms, plus a 30 MW uprate", "profile:constellation-energy @ v5 — policyExposure[2]; productsAndServices[0]"],
+    ["6,448 MW across six units at four sites; roughly 3.8 GW sold to two hyperscalers on twenty-year agreements", "profile:vistra @ v3 — summary; productsAndServices[0], [4]"],
+    ["A 433 MW uprate programme inside a 2,609 MW supply agreement", "profile:vistra @ v3 — productsAndServices[4]"],
+    ["Not one signed large-load agreement exists at any of its gas plants, and the filing language is unchanged across four consecutive filings", "profile:vistra @ v3 — strategyRead[1]"],
+    ["The integrated model is the differentiator: when prices move, generation and retail book the inverse of each other", "profile:vistra @ v3 — strategyRead[2]"],
+    ["No independent, dated ranking of this kind of fleet by size exists — the trade trackers and the federal statistics agency all decline to publish one", "profile:vistra @ v3 — strategyRead[0]"],
+    ["Storage is disclosed in megawatts only; no megawatt-hour figure appears in any filing, so every one in circulation is third-party", "profile:vistra @ v3 — strategyRead[7]"],
+    ["None of its signed large-load agreements is a co-location; both are grid-delivered", "profile:vistra @ v3 — policyExposure[1]"],
+    ["90 per cent of a two-unit station, 2,245 MW owned, about 17 TWh in 2025 at an all-in cost of about $27/MWh", "profile:talen-energy @ v2 — productsAndServices[0]"],
+    ["The behind-the-meter structure was rejected on 1 November 2024; what replaced it sells up to 1,920 MW through 2042 front-of-the-meter through a pre-existing retail supplier licence and needed no federal approval", "profile:talen-energy @ v2 — summary; strategyRead[0]; productsAndServices[3]"],
+    ["Every co-location rule now being written traces back to that docket, and the rulebook is still being written", "profile:talen-energy @ v2 — ecosystemRole; policyExposure[0]"],
+    ["Total debt principal from $6.9bn to $9.7bn in fourteen months; cleared capacity revenue from about $670m to about $1,208m, with the last three auctions clearing at the administrative cap so the collar is setting the price", "profile:talen-energy @ v2 — strategyRead[1], [2]"],
+    ["The decisive strategic move was regulatory rather than technical — first reactors on a federal authorization pathway rather than a Commission licence, after a 2020 licence application was denied without prejudice in January 2022 with no updated application as of August 2026", "profile:oklo @ v2 — strategyRead[0]; policyExposure[1]"],
+    ["The customer book is a pipeline of options: not one definitive power purchase agreement appears anywhere in the public record, and an order book quoted at 14 GW in mid-2025 is no longer quoted", "profile:oklo @ v2 — strategyRead[1], [6]"],
+    ["A 75 MWe first unit targeted late 2027 to early 2028, and no unit of the type has ever produced power", "profile:oklo @ v2 — summary"],
+    ["Roughly $3.0bn of cash and securities against $84.3m of total liabilities and no convertible debt — a build-own-operate developer funding construction from shareholders rather than lenders", "profile:oklo @ v2 — strategyRead[4]"],
+    ["The first core is a fixed five metric tons of government-owned legacy material, and the government retains ownership of it", "profile:oklo @ v2 — policyExposure[3]"],
+    ["High-assay enrichment is at pilot scale and the first federal allocation round in April 2025 went to five developers", "profile:oklo @ v2 — policyExposure[3]; strategyRead[2]"],
+    ["The order book is an options book: roughly 11.5 GWe assuming full exercise of contingent rights, of which the binding portion is four reactors", "profile:x-energy @ v1 — strategyRead[1]"],
+    ["A construction permit application under an 18-month regulatory schedule, final safety evaluation targeted November 2026 and the permit guided to Q1 2027; no unit of the type holds a construction permit yet", "profile:x-energy @ v1 — policyExposure[1]; summary"],
+    ["First power has slipped roughly four to six years from the original programme goal to 2031–2033, and the sponsor rather than the regulator is the pacing item", "profile:x-energy @ v1 — strategyRead[2]"],
+    ["Fuel is the binding external constraint and the fabrication plant will be ready before the fuel — licensed and due in the first half of 2028, with initial cores on low-enriched uranium and high-assay fuel for the second core and beyond", "profile:x-energy @ v1 — strategyRead[4]; policyExposure[2]"],
+    ["Its largest shareholder holds 23.4 per cent of the listed shares plus priority queue slots and rights of first refusal across the fleet", "profile:x-energy @ v1 — strategyRead[0]"],
+    ["The product is sold against a still, overcast week rather than an evening peak — the one storage vendor in the corpus whose product a data centre buys for a reason unrelated to arbitrage", "profile:form-energy @ v1 — ecosystemRole"],
+    ["No independent laboratory validation at the full rated duration exists, and the contested number is cost per kilowatt rather than per kilowatt-hour because capacity markets pay for kilowatts", "profile:form-energy @ v1 — strategyRead[2]; collection gaps at strategyRead[9]"],
+    ["Four large light-water units under a combined licence application — the first accepted since 2009 — with the site-specific portion targeted for 31 December 2026 and the regulator's final environmental statement targeted the same month", "profile:fermi-america @ v1 — productsAndServices[3]; policyExposure[0]"],
+    ["Two further obligations fall on 31 December 2026: a credit facility's approved-customer-agreement deadline and a ground-lease escrow", "profile:fermi-america @ v1 — technicalSpecs[3].specs[3]; productsAndServices[1]"],
+    ["A 615 MW restart targeted for the first quarter of 2029 on a twenty-five-year hyperscaler contract, run by a renewables developer rather than by one of this segment's incumbents", "profile:nextera-energy-resources @ v4 — productsAndServices (AIDC energy franchise)"],
+    ["Two new large units delivered and reaching commercial operation in 2023 and 2024, plus uprates at two existing stations", "profile:southern-company @ v2 — productsAndServices (nuclear fleet)"],
+    ["Seven units in three states, with small modular reactor development at an existing site recovered through a dedicated rate mechanism", "profile:dominion-energy @ v1 — productsAndServices (nuclear fleet and SMR development)"],
+    ["Four plants and five reactors totalling 5,113 MW, with a 40 MW uprate in November 2026 and a hyperscaler agreement that funds further uprates", "profile:entergy @ v2 — productsAndServices (nuclear fleet)"],
+    ["Three units totalling about 1,650 MW supplying 27 per cent of one region's customers at above 90 per cent capacity factor and about $29/MWh production cost", "profile:xcel-energy @ v4 — productsAndServices (nuclear fleet)"],
+    ["The only engineering and construction firm to bring twenty-first-century large nuclear online in the United States, and first-mover on an advanced reactor with a construction permit", "profile:bechtel @ v4 — productsAndServices (nuclear)"],
+    ["Lead constructor for the first unit of one challenger, with commissioning targeted late 2027 to early 2028", "profile:kiewit @ v7 — productsAndServices (nuclear)"],
+    ["An equal-share member of the joint venture selected to build the first four of twelve units of the other challenger's design", "profile:black-veatch @ v7 — productsAndServices (nuclear / SMR)"],
+    ["Architect-engineer and owner's-engineer services across new build, SMR licensing and design, restarts, uprates and life extension — plus behind-the-meter industrial applications of operating plants", "profile:sargent-lundy @ v2 — productsAndServices (nuclear; data-centre power)"],
+    ["Two of the sixteen members carry no policy-exposure array at all, so the policy fence for the engineering-and-construction half of this segment is a gap in the record rather than an absence of exposure", "profile:bechtel @ v4 and profile:black-veatch @ v7 — policyExposure absent"]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does not say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**Seven absences. Every one is stated by the dossier that has it, not asserted here** — and the first two are the reason this module is written the way it is.",
+    "**One. No ranked table of clean-firm sellers exists in this corpus, and this module does not invent one.** The general point is made inside the roster itself, about a neighbouring market: no independent, dated ranking exists, because the trade trackers and the federal statistics agency all decline to publish one. The three incumbents are described here by what their positions rest on, in three units that do not compare.",
+    "**Two. No incumbent discloses a power purchase agreement price.** The whole ladder — the restart number, the existing-output number, the premium band — is analyst-estimated or stated by management in aggregate. One incumbent's own file says it in terms: none of the prices is company-disclosed. **Treat the ladder as the market's estimate of a company's pricing, not as a published tariff**, and never quote it back to that company as its own number.",
+    "**Three. Neither challenger has a definitive power purchase agreement, anywhere.** One file says not one appears in the public record; the other defines its book as assuming full exercise of contingent rights, with four reactors binding. A pipeline of letters of intent, master agreements and rights of first refusal is a real commercial asset and it is **not** an order book, and both companies say so themselves.",
+    "**Four. Neither challenger's reactor has ever produced power**, and neither design holds a construction permit. Both summaries state it. Everything downstream — the fuel plant, the constructor, the sponsor's investment decision — is scheduled against a first unit that does not yet exist.",
+    "**Five. No independent laboratory validation exists for the multi-day chemistry at its full rated duration.** It appears in neither of the two federal long-duration assessments the corpus cites, and no third-party teardown or bench validation is public — so every cost figure in circulation traces back to the vendor or to one reported transaction. That is a material gap in a product sold on the argument that it is cheap.",
+    "**Six. One incumbent discloses storage in megawatts only** — no energy figure in any filing, deck or report — so any megawatt-hour number you see attached to that fleet came from somewhere else.",
+    "**Seven. Two of the sixteen members carry no policy-exposure record at all.** Both are engineering and construction firms. That is an absence in the corpus rather than evidence that the engineering-and-construction half of this segment is unexposed, and it is worth saying out loud because this is a segment where a permit is the schedule.",
+    "**And the largest absence is not in the dossiers at all — it is in the curriculum.** **Not one of this segment's six buying criteria has a built lesson teaching it.** The generated segment lesson's own table prints a dash against **five** of them — the licensing path, capacity factor and firmness, fuel security, additionality and the sponsor's balance sheet — and the sixth points at *Clean Firm Power*, which is planned and unbuilt. **This module deliberately does not fill that gap.** Its job is to say who sits where, not to become the nuclear lesson by default — so where you want the mechanism rather than the parties, the honest answer today is that nobody in this curriculum has written it yet."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "read": "5 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What is the split between this module and the lessons that are this segment's own reading list?",
+     "a": "Three-way, and one of the three does not exist. *Who Carries Which Risk* — public and built — owns the **instruments**: hourly matching, the corporate PPA, additionality, the uprate, the restart, the green tariff. *Clean Firm Power* is assigned the **physics** and is unbuilt, so nobody holds it. This module owns the **parties**. It carries no instrument definitions and no reactor tutorial, and it says the gap is a gap rather than filling it."
+    },
+    {
+     "q": "Why are eleven of this segment's sixteen members adjacent?",
+     "a": "Because all eleven are ranked — incumbent or challenger — in another segment: four utilities, three engineering-and-construction firms, an engineering firm, a renewables IPP, a battery maker and a data-centre landlord. Firm carbon-free power is a product made almost entirely by companies whose main business is something else. It is not a gap in the roster; it is what the product is."
+    },
+    {
+     "q": "What is unusual about the two challengers, in registry terms?",
+     "a": "They are the only two of the sixteen members that belong to no other segment at all — the segment's only pure plays. Every incumbent and every adjacent is ranked somewhere else too."
+    },
+    {
+     "q": "The three incumbents sell the same physical product. What actually separates them?",
+     "a": "Three different answers to one objection — whether power that already existed counts as new. One answers with a **restart** (a retired unit returned to service, inheriting interconnection rights). One answers with an **uprate folded into the supply agreement** (more output from a plant that already exists). One answers by having **lost the behind-the-meter argument at the regulator and re-signed front-of-the-meter**, which needed no approval at all."
+    },
+    {
+     "q": "Why does this module decline to rank the three incumbents?",
+     "a": "Because the three positions are measured in a price ladder nobody published, a contracted share of a fleet, and the outcome of a regulatory docket. Those are not measures of one thing and no source in this corpus ranks across them. The module's tile reads zero ranked tables for exactly that reason."
+    },
+    {
+     "q": "What do the two challengers actually threaten, and on what clock?",
+     "a": "Not share. Neither has sold a commercial megawatt-hour and neither has a definitive power purchase agreement; both describe their pipelines as options books in their own filings. What they threaten is the **top rung of the price ladder** — the restart-and-new-build column the incumbents currently price alone — on a clock running from late 2027 at the earliest to the early 2030s."
+    },
+    {
+     "q": "What is the binding external constraint on both challengers, and how do their answers differ?",
+     "a": "Fuel. High-assay enrichment in the United States is at pilot scale. One challenger's entire first core is a fixed five metric tons of government-owned legacy material that the government still owns; the other runs initial cores on ordinary low-enriched uranium and takes high-assay fuel from the second core onward, with a licensed fabrication plant due in the first half of 2028 — **the plant is ready before the fuel is**."
+    },
+    {
+     "q": "Where is this segment's new capacity actually coming from?",
+     "a": "Mostly from the adjacents rather than the challengers. Four of the eleven adjacents are building or restarting nuclear now: a landlord with four large light-water units under the first combined licence application accepted since 2009, a renewables IPP restarting 615 MW for 2029 on a twenty-five-year contract, a utility that has already delivered two new large units, and a utility developing a small modular reactor at an existing site."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "read": "6 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague asks you to rank this segment's three incumbents from strongest to weakest. What is the right response?",
+     "c": [
+      "Rank them by nuclear megawatts owned, the one figure that exists for all three",
+      "Rank them by contracted share, since a long-dated contract is what the segment sells",
+      "Decline the ordering: the three positions rest on a price ladder nobody disclosed, a contracted share and a regulatory docket outcome, which are not measures of one thing, and no source here ranks across them",
+      "Rank them by the price of their last announced deal"
+     ],
+     "a": 2,
+     "why": "Megawatts owned fails because it says nothing about what is *uncontracted*, which is the actual scarcity. Contracted share fails because it is published for one of the three and is a different denominator for each. Deal price fails hardest: **no incumbent discloses a PPA price at all** — the whole ladder is analyst-estimated or stated by management in aggregate, so ranking on it would be ranking on somebody else's estimate."
+    },
+    {
+     "q": "Sixty-nine per cent of this segment's members are adjacent. What does that tell you?",
+     "c": [
+      "The segment is under-covered and more incumbents will be added as the corpus fills",
+      "That firm carbon-free power is a product other industries make: all eleven adjacents are ranked incumbent or challenger elsewhere, and only the two challengers belong to no other segment",
+      "That the adjacent role was used loosely by whoever built the registry",
+      "That the segment sits low in the chain, where adjacency is normal"
+     ],
+     "a": 1,
+     "why": "It is a measurement, not a coverage gap: **eleven of eleven** adjacents carry a ranked role somewhere else — four utilities, three EPCs, an engineering firm, a renewables IPP, a battery maker and a landlord. The registry's notes field for this segment is empty, so the shape has to be read off the memberships, and when it is, it says the segment is a product line rather than a chain position."
+    },
+    {
+     "q": "A hyperscaler tells you it has signed a twenty-year nuclear PPA for its new campus. What does that most reliably change about your storage opportunity there?",
+     "c": [
+      "Nothing — firm power and storage serve different needs",
+      "It improves it, because a firm contract makes the site bankable",
+      "It reduces near-term appetite for firming storage at that load, because the contract was bought precisely to cover the hours a battery would cover",
+      "It depends entirely on whether the reactor is a restart or a new build"
+     ],
+     "a": 2,
+     "why": "This is stated in an incumbent's own file rather than inferred: every nuclear PPA a hyperscaler signs reduces near-term appetite for firming storage at that load. The two doors that remain are the **addition beside an existing plant** (storage where a connection already exists, which is unambiguously additional) and the **multi-day alternative** sold against a still, overcast week rather than an evening peak."
+    },
+    {
+     "q": "You want the mechanism — why a reactor follows load badly, and what a small modular reactor changes. Where in this curriculum do you send someone?",
+     "c": [
+      "This module's dominance section, which covers it",
+      "The public lesson on contracts and revenue, which teaches clean firm",
+      "Nowhere yet: the public lesson that teaches the instruments says in its own text that the physics belongs to a planned lesson, and that lesson is unbuilt",
+      "The generated segment lesson, which carries it in the players table"
+     ],
+     "a": 2,
+     "why": "*Who Carries Which Risk* hands the physics off by name and says it is *deliberately not repeated here*; the lesson it hands off to is planned and unbuilt. This module owns the parties and **declines to become the nuclear lesson by default** — a landscape that starts teaching a criterion because nobody else does stops being a landscape. Saying the gap is a gap is the correct answer today."
+    },
+    {
+     "q": "A counterparty describes a co-location arrangement at an operating plant. What is the first thing to establish?",
+     "c": [
+      "The plant's capacity factor, since it sets how firm the supply really is",
+      "That the terms are provisional: the rulebook for co-located load is still being written, and the terms of the attachment are the subject of that docket rather than of the contract",
+      "Whether the reactor is licensed past the term of the contract",
+      "Whether the tenant or the landlord holds the offtake"
+     ],
+     "a": 1,
+     "why": "One incumbent's behind-the-meter structure was rejected outright in November 2024 and re-signed front-of-the-meter, needing no federal approval at all; another filed the complaint that opened the rulemaking; a third says none of its own agreements is a co-location. All three files describe the rulebook as still being written — which makes it this segment's most consequential indicator and the one with **no date attached to it**."
+    }
+   ]
+  }
+ ]
+  };
 }
 
 

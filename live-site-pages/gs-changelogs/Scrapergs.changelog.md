@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 31/50`
+`Sections: 32/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.11g] — 2026-09-16 01:24:09 AM EST — v06.07r
+
+### Added
+- New topic added to the interest list
+
+### Changed
+- Digest relevance scoring updated
 
 ## [v02.10g] — 2026-09-15 11:26:20 PM EST — v06.03r
 

@@ -889,8 +889,8 @@ def run_gate_truth_table(src, lesson_ids=()):
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 18:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 18" % len(gids))
+    if len(gids) != 19:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 19" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:
