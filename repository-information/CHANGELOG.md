@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.02r] — 2026-09-15 10:02:38 PM EST
+
+> **Prompt:** "Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session." *(Reconciling push — the v06.01r fix did not carry `SESSION-CONTEXT.md` with it.)*
+
+### Fixed
+
+- **`repository-information/SESSION-CONTEXT.md`** — brought back into agreement with `repository.version.txt`, and the lesson recorded. The v06.01r commit closed the handover recursion in §7.33's prose but **did not carry `SESSION-CONTEXT.md` with it**, so `main` briefly held a Latest Session recording `v06.00r` against a `repository.version.txt` reading `v06.01r`. The Session Start Checklist's staleness check is a plain **equality test** between those two values, so the next session would have read the context as stale and **auto-reconstructed it from CHANGELOG** — replacing a written record of this session's findings with a generated bullet list. **The general rule, now recorded in the Latest Session itself: any commit that bumps the repo version after `SESSION-CONTEXT.md` has been written must carry `SESSION-CONTEXT.md` in the same commit**, because nothing else reconciles the two and no checker watches the pair
+- The Latest Session's own figures updated with it — repo version, the CHANGELOG counts, and a fourth `What was done` bullet recording both the v06.01r fix and this reconciliation
+
+### Changed
+
+- **`README.md`** — `Last updated:` and `Repo version:` `v06.01r` → `v06.02r`
+
+### Notes
+
+- **Two defects in a row found by re-reading produced artifacts rather than by a checker**, which is the transferable half. v06.01r's was a version number in a brief's prose that the brief's own handover would spend; this one is a cross-file equality no assertion tests. Neither is reachable by `check-classroom-*`, `check-readme-tree` or the pipeline judge, and both were visible only by reading the output back against the files it describes
+- **No rotation.** At counting time EST read **2026-09-15 22:0x** while UTC read **2026-09-16 02:0x** — the EST/UTC divergence holding across all four pushes of this session. 103 raw minus the twenty-three sections dated 2026-09-15 EST is **80 non-exempt**; this section makes it **104 raw / 80 non-exempt**, twenty clear of the cap, counter `Sections: 104/100`. **The moment EST rolls past 2026-09-15 it becomes 104 non-exempt — past the 100 trigger — so the next session is the rotator unless its push also lands on 2026-09-15 EST**
+- Nothing in a deployed surface moved, so **no GAS bump, no page bump and no public changelog entry**. Classroom GAS stays **v01.47g**, Scraper **v02.09g**, page **v01.14w**
 
 ## [v06.01r] — 2026-09-15 10:00:26 PM EST
 

@@ -6,7 +6,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 ## Latest Session
 
 **Date:** 2026-09-15 09:58:10 PM EST
-**Repo version:** v06.00r — two pushes (v05.99r the lesson, v06.00r the handover)
+**Repo version:** v06.02r — four pushes (v05.99r the lesson, v06.00r the handover, v06.01r the recursion fix, v06.02r this reconciliation)
 **Branch:** `claude/optimistic-knuth-vdazpm` — restarted from `origin/main` before each push
 
 ### What was done
@@ -16,6 +16,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **`segment-grid-equipment` regenerated** with `--segment grid-equipment` and nothing else; Classroom GAS **v01.46g → v01.47g** in both places with one generic public changelog line. No page bump; `Scraper.gs`, `Profiler.gs` and `Profiler.html` untouched
 - **§7.33 written in the same work commit** as S2 session 9's brief, both halves; §7.3 order 6, §6's Phase 4 row (12 → 13 of 26), curriculum §7 row 13 and §4's track table all flipped and dated
 - **v06.00r (the second push)** — §7.33's counters refreshed in both halves and `SESSION-CONTEXT.md` written; the handover recursion fired an **eighth** consecutive time
+- **v06.01r (the third push)** — **the handover recursion CLOSED rather than absorbed, for the first time.** §7.33 was written in the work commit saying *"Repo v05.99r — your push is v06.00r"*, and the v06.00r handover consumed both figures. Correcting the number could not work (a correction commit spends the next version too), so the forward-looking claim was **deleted** in both halves and replaced with *read `repository.version.txt` on the day*. Found by **reading the produced paste-in prompt back in full** before closing the session — no checker watches a brief's prose for a version it will not hold
+- **v06.02r (the fourth push)** — **the reconciliation, and the lesson the v06.01r fix did not carry far enough.** The v06.01r commit closed the recursion in §7.33's prose but did **not** carry `SESSION-CONTEXT.md` with it, so `main` briefly held a Latest Session recording `v06.00r` against a `repository.version.txt` reading `v06.01r` — a mismatch the next Session Start Checklist would have read as stale context and auto-reconstructed from CHANGELOG, discarding the richer record for a poorer one. **The general rule: any commit that bumps the repo version after `SESSION-CONTEXT.md` has been written must carry `SESSION-CONTEXT.md` in the same commit**, because the staleness check is an equality test against `repository.version.txt` and nothing else reconciles them
 
 ### Where we left off
 
@@ -33,7 +35,7 @@ Everything is merged and live. **Phase 4 is 13 of 26; S2 is 8 of ~19**, so the i
 
 ### Active context
 
-- **Repo version** v06.00r · **CHANGELOG 102 raw / 80 non-exempt**, twenty-two sections dated 2026-09-15 EST, counter `Sections: 102/100` (legitimately above 100 — `CHANGELOG-archive.md` step 3 allows it on a busy day). **The moment EST rolls past 2026-09-15 those twenty-two stop being exempt and the file is at 102 non-exempt, past the 100 trigger — so the next session IS the rotator unless its push also lands on 2026-09-15 EST, and it must check `TZ=America/New_York date` first, because that check has now changed the answer three sessions running.** Deepen the clone before that push so every rotated header enriches, and run the **mandatory post-rotation grep**
+- **Repo version** v06.02r · **CHANGELOG 104 raw / 80 non-exempt**, twenty-four sections dated 2026-09-15 EST, counter `Sections: 104/100` (legitimately above 100 — `CHANGELOG-archive.md` step 3 allows it on a busy day). **The moment EST rolls past 2026-09-15 those twenty-four stop being exempt and the file is at 104 non-exempt, past the 100 trigger — so the next session IS the rotator unless its push also lands on 2026-09-15 EST, and it must check `TZ=America/New_York date` first, because that check has now changed the answer three sessions running.** Deepen the clone before that push so every rotated header enriches, and run the **mandatory post-rotation grep**
 - **Standing changelog state:** `Classroomgs.changelog.md` **47 raw / 38 non-exempt** against 50 — three from its cap and still the closest of the page/GAS three to arming. `Scrapergs.changelog.md` **30 raw / 26 non-exempt**. `Profilerhtml.changelog.md` **49 raw / 49 non-exempt**, one section from its own trigger, and nothing this session touched Profiler
 - **GAS versions:** Classroom **v01.47g**, Scraper v02.09g, Profiler v01.39g. **Page versions:** Classroom v01.14w, Profiler v01.90w, Scraper v01.72w — no page bump this session
 - **Content-checker baseline is 0 errors / 0 warnings at 43 lessons / 8 tracks / 142 gate cases** — protect it. **Its guidance-module assertion is still 17 and it does NOT move on a Phase 4 row**; S2 session 9 is the commit that takes it to 18
