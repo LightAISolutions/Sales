@@ -1,4 +1,4 @@
-var VERSION = "v01.44g";
+var VERSION = "v01.45g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -39568,6 +39568,435 @@ function clLessonContractsAndRevenue_() {
  ]
 };
 }
+function clLessonWhereBatteriesStop_() {
+  return {
+ "schemaVersion": 1,
+ "id": "where-batteries-stop",
+ "type": "module",
+ "title": "Long Duration, Sodium, and the Engine Boundary",
+ "short": "Every extra hour of duration is bought in cells. Where that stops making sense, what sodium and 8-hour-native cells change, and why engines own the long end.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-15",
+ "reviewBy": "2027-03-15",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:wartsila",
+    "date": "2026-08-08",
+    "note": "the lesson's spine - the capacity-against-energy asymmetry stated plainly (batteries get expensive with duration because every extra MWh is more cells; engines get expensive with power because more MW is more engines, while their tank is a fuel supply so duration is nearly free), the proportionality that makes the bars a cell bill (a four-hour battery is roughly twice the cell cost of a two-hour one), the collapse point (beyond about four to eight hours the economics fail against anything that burns fuel), and the engine column of the boundary table - about 50 per cent efficiency without a steam cycle and up to 52.1 per cent on one spark-ignited unit, two-minute starts with thirty-second grid connection on some models, dozens of independent 10-23 MW units each run at its own sweet spot, full output from -45 to +50 Celsius, almost no water, N-1 by construction - plus the turbine contrast and the hybrid logic in which the battery catches the millisecond-to-hours swings and the engine carries the sustained gap"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hithium",
+    "date": "2026-08-08",
+    "note": "the eight-hour-native section almost entire - duration as MWh divided by MW; the distinction between stretching a four-hour product by discharging it gently and designing from the cell (a 1,300 Ah energy brick at 0.125P with the PCS sized small against the storage, 6.9 MWh per container); the container ladder 3.7 to 5.0 to 6.25 to 6.9 MWh per 20-foot footprint; the cell-count arithmetic (about 5,000 cells at 314 Ah against about 1,300 at 1,175 Ah for the same 5 MWh, a roughly 70 per cent cut in welds, busbars, sensors and BMS channels); why the physics permits it for storage and forbids it for a vehicle; the LDES cost argument that power electronics amortise over more delivered hours so cell dollars per kWh dominate the project price; the eight-hour mandate as a demand driver; round-trip efficiency of 92 to 96 per cent with I-squared-R losses growing as the square of current; and the sodium figures - roughly half the energy density of LFP, at least 20,000 cycles, -40 Celsius tolerance, and the one-hour 2.28 MWh container class where sodium actually sells today"
+   },
+   {
+    "kind": "public",
+    "ref": "study:catl",
+    "date": "2026-08-08",
+    "note": "the sodium card's published performance figures and the honest caution beside them - sodium cells cycling 15,000 times at 25 Celsius behind a thirty-year warranty, holding above 92 per cent capacity at -20 Celsius without heaters, and not entering thermal runaway until about 200 Celsius; a separate sodium line quoted at 175 Wh/kg with more than 10,000 cycles and 90 per cent usable power at -40 Celsius, which is a claim about one product line rather than about sodium as a class and is read that way here; plus the framing that duration is a design choice made by changing the ratio of energy to power, that longer duration means cell cost dominates, and that grid buyers weigh Wh per litre, cycle life, round-trip efficiency, auxiliary draw and the degradation warranty rather than Wh per kilogram"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sungrow",
+    "date": "2026-08-08",
+    "note": "what sets the duration ask on the plant that most often buys it - storage as the machine that shifts abundant midday solar into the scarce evening peak, with longer durations winning as solar penetration rises; duration stated as MWh per MW; the conversion side of the round-trip figure, where a bidirectional PCS's loss is paid on both charge and discharge so converter efficiency compounds into the roughly 92 per cent round trip a container is sold on; liquid cooling as the reason cells age evenly; and the grid-forming contrast that makes the battery row of the boundary table more than a fast responder - synthetic inertia, frequency support and black start as products a tender now asks for"
+   },
+   {
+    "kind": "public",
+    "ref": "study:form-energy",
+    "date": "2026-09-06",
+    "note": "the whole iron-air section and the hundredth bar - the framing that a lithium cell is a good battery made from expensive materials and an iron-air cell is a poor battery made from nearly free materials; the cell rated about 0.15 kW and 15 kWh so that the hundred hours is built into the cell rather than configured later; round-trip efficiency of 35 to 50 per cent against 85 to 90, eight to thirteen cycles a year, idle about 97 per cent of the time, self-discharge of 1 to 3 per cent a day; the four intrinsic loss mechanisms (hydrogen evolution as the dominant one and intrinsic to alkaline iron electrodes at 45 to 60 per cent coulombic efficiency, the air electrode doing two opposite jobs on one surface, passivation, and carbonation from breathing ambient air); the denominator table - about 20 dollars per kWh target against about 250 for lithium, and about 2,000 to 3,333 per kW against about 1,000, with roughly 200 MWh per acre against 20 to 40; what a utility is actually buying (ELCC at a winter peak and a return in rate base rather than arbitrage, because no merchant market anywhere pays for a hundred hours); and the verdicts this lesson keeps - no published round-trip figure anywhere including a thirty-slide deck filed to a grid operator that does carry costs, footprints, cell dimensions, cycle counts and certifications; no cost per kWh in any public rate filing; absence from the 2024 eleven-technology long-duration cost study and from the national laboratory cost database with no third-party teardown; one operating project at 1.5 MW and 150 MWh; five projects with no first-party update since 2023; and 74 per cent of the itemisable backlog in two counterparties signed in one year"
+   },
+   {
+    "kind": "public",
+    "ref": "study:narada",
+    "date": "2026-09-04",
+    "note": "the mechanism under eight-hour-native, from the cell side - electrode thickness as the design choice that resolves the whole energy-against-power argument (a thick coating stores a great deal per litre and makes every ion travel further, which is fine at 0.25C and hopeless at 10C because the interior of the coating cannot supply the surface and usable capacity collapses; a thin coating delivers current hard, carries far more foil, separator and tab area per amp-hour, stores much less and costs more per stored kWh), the resulting fact that an energy cell and a power cell are different objects rather than two settings of one, and the published span of a single catalogue from 0.25C grid containers to a 10C cabinet. NOTE FOR THE RECORD: the v05.07r amendment pins this guide for sodium and for the two-cells-one-company view. The section id survives, but the guide was revised on 2026-09-04 and its subject is now the grid cell against the AI-rack backup cell; sodium appears once, as a cross-reference to two other guides. The ref is kept because what it now teaches is load-bearing here, and the parenthetical is recorded as stale rather than followed"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mitsubishi-power",
+    "date": "2026-09-03",
+    "note": "the turbine row and the hydrogen row of the boundary table - the compressor consuming roughly half of what the turbine produces, so output is the small difference between two large numbers and a one-per-cent compressor change moves net output by about two; efficiency as a full-load property, with a minimum stable load below which the lean premixed flame cannot be held, and the compounding penalty in combined cycle where less and cooler exhaust makes the bottoming cycle fall faster than the turbine's own output; starting as a thermal rather than a control problem, and every start counting for many equivalent operating hours of overhaul life; the ISO-rating corrections (about half a per cent of output per degree above 15 Celsius, a few per cent per thousand metres, and the hot-day loss arriving on the afternoon demand peaks); and the co-firing arithmetic that the hydrogen row exists to teach - hydrogen carries about a third of methane's energy per unit volume, so a 30 per cent volumetric blend is about a tenth of the energy and a tenth of the carbon, with independent analysis at roughly 12 per cent for 30 and a little over 20 for 50, and one manufacturer's own 50 per cent demonstration reporting about 22"
+   },
+   {
+    "kind": "public",
+    "ref": "study:bloom-energy",
+    "date": "2026-08-21",
+    "note": "the other half of the hydrogen row - the fuel cell as an electrochemical rather than a thermal machine, so efficiency is nearly scale-free and a building-sized installation performs like a combustion plant many times its size; no flame meaning near-zero criteria pollutants while the carbon dioxide ledger stays roughly comparable per kWh to efficient combustion; the ceramics disliking thermal cycling, so the machines hold a load rather than chase a swing and pair with batteries for transients, which is what makes the row a base and not a buffer; the pipeline read as weeks of stored energy rather than as a fuel line; and the honest conditional this lesson borrows for its hydrogen row - hydrogen-ready is a promise about a fuel that may arrive late or never at scale, so the bridge's value depends on whether the far side gets built"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rolls-royce-power-systems",
+    "date": "2026-09-04",
+    "note": "the engine boundary from the engine side, and the sentence that keeps the battery row honest - a battery is not a bigger UPS, it buys minutes to hours and is an economic device rather than a reliability one; with stored energy holding the bus the engine no longer has to be first, only eventually, so it can be soft-loaded over tens of seconds instead of catching a block load, which relaxes turbo lag and lets slower and more efficient machines into a plant; the plant can then be sized for the average rather than the peak, because the store absorbs the swings; power and energy are two independent purchases whose ratio is the C-rate, and engines are a far cheaper way to buy hours than cells are while cells are a far cheaper way to buy seconds and steps than an oversized engine is; and the failure this lesson repeats in its own words - a hybrid whose store was spent on the earning duty cannot ride the outage it was bought for"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "the shared vocabulary this lesson leans on rather than redefining - duration, long-duration energy storage, C-rate, round-trip efficiency, depth of discharge, state of charge, state of health, cycle life, calendar life, augmentation, energy density, specific power, electrode thickness, energy battery and power battery, LFP, sodium-ion, iron-air, thermal runaway, coulombic efficiency, the hydrogen evolution reaction, passivation, self-discharge, auxiliary load, heat rate, simple cycle and combined cycle, aeroderivative, firing temperature, pressure ratio, HRSG, ISO rating, inlet air cooling, minimum stable load, DLN combustor, flame speed, flashback, NOx, hydrogen co-firing, solid-oxide fuel cell, ammonia, block load, turbo lag, grid-forming inverter, synthetic inertia, black start, ELCC, unforced capacity, capacity market, reserve margin, rate base and multi-day storage"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "2×",
+   "v": "per doubling of duration",
+   "sub": "A four-hour battery is roughly twice the cell cost of a two-hour one, because every extra hour is that many more megawatt-hours of cells. Nothing else in the plant doubles. That single sentence is the whole lesson, and everything below is either a consequence of it or an attempt to escape it."
+  },
+  {
+   "k": "100 h",
+   "v": "built into one cell",
+   "sub": "An iron-air cell is rated at roughly 0.15 kW and 15 kWh. Divide one by the other and the duration is a hundred hours — not a configuration choice made later with more containers, but a property of the cell itself. That is what a purpose-built multi-day chemistry looks like."
+  },
+  {
+   "k": "35–50%",
+   "v": "iron-air round trip",
+   "sub": "Against 85 to 90 per cent for lithium. Every stored megawatt-hour costs about two to buy, and the technology is designed to cycle eight to thirteen times a year — idle roughly 97 per cent of the time. Both numbers are deliberate trades, and both are why the cheap material is not the whole argument."
+  },
+  {
+   "k": "30% → ~10%",
+   "v": "a hydrogen claim, corrected",
+   "sub": "Co-firing is quoted by volume, and hydrogen carries about a third of methane's energy per unit volume. So a 30 per cent hydrogen machine is roughly a ten per cent decarbonisation. Independent analysis puts it near 12; one manufacturer's own 50 per cent demonstration reported about 22."
+  }
+ ],
+ "glossary": [
+  {
+   "t": "eight-hour-native",
+   "d": "A storage design whose cell was chosen for an eight-hour discharge from the start — a large energy cell run at roughly an eighth of its capacity per hour, with the converter sized small against the stored energy. The opposite of a four-hour product discharged gently, which delivers the same hours while paying for power hardware it never uses."
+  },
+  {
+   "t": "electrolyser",
+   "d": "The machine that splits water into hydrogen and oxygen with electricity — a fuel cell run backwards. It is the first stage of the hydrogen round trip, and the stage where most of the round trip's losses are incurred."
+  },
+  {
+   "t": "equivalent operating hours",
+   "d": "The maintenance clock a gas turbine is overhauled against. A start counts for many hours of steady running because of the thermal cycling it imposes on hot-section parts, so a machine dispatched as a follower reaches its overhaul sooner in calendar terms than an identical machine run flat out. Dispatch changes the service bill, not just the fuel bill."
+  },
+  {
+   "t": "air electrode",
+   "d": "In a metal-air cell, the positive electrode that must reduce oxygen while discharging and evolve it while charging — two opposite reactions on one surface, both kinetically poor. It is the source of a voltage penalty in each direction and the main durability question of the design."
+  },
+  {
+   "t": "carbonation",
+   "d": "The degradation of an alkaline electrolyte by the carbon dioxide in ambient air, forming carbonates. A failure mode unique to a cell that literally breathes: a sealed lithium cell has no equivalent, and it is the price of using the atmosphere as a reactant."
+  },
+  {
+   "t": "winter peaking",
+   "d": "A power system whose hardest hour is a cold, still, dark stretch lasting days rather than a summer evening lasting hours. The distinction decides what a multi-day resource is credited with at peak, and it is why the same technology is worth very different amounts in two neighbouring systems."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-cost-of-an-hour",
+   "title": "What an hour costs",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "MWh of cells per MW of power",
+   "intro": "{{Duration}} is one division: megawatt-hours held, divided by megawatts the plant can push. A 150 MW plant holding 300 MWh is a two-hour plant. So the bars below are not a price list — they are that division, read as a shopping list. **To put one megawatt on the wire for one more hour you buy one more megawatt-hour of cells**, and the converter, the transformer, the pad, the interconnection and the control system do not change at all. Nothing else in the plant scales with the hour. That is why this is the only chart in the track whose axis is a bill.",
+   "items": [
+    {
+     "label": "1-hour class",
+     "v": 1,
+     "sub": "frequency work and price spikes - the shortest product anyone sells"
+    },
+    {
+     "label": "2-hour class",
+     "v": 2,
+     "sub": "the merchant default, chasing the evening spread"
+    },
+    {
+     "label": "4-hour class",
+     "v": 4,
+     "sub": "shifting abundant midday solar into the scarce evening peak"
+    },
+    {
+     "label": "8-hour class",
+     "v": 8,
+     "sub": "carrying renewables overnight - where the mandates start"
+    },
+    {
+     "label": "100-hour class",
+     "v": 100,
+     "sub": "the multi-day store: one iron-air cell is about 0.15 kW and 15 kWh"
+    }
+   ],
+   "note": "**Two readings, and the second one is the lesson.** Reading down, the proportionality is stated rather than assumed: one source puts a four-hour battery at roughly twice the cell cost of a two-hour one, for exactly this reason. Reading the shape, the first four bars have almost collapsed against the fifth — and they have collapsed at a *twelvefold* gap, not a hundredfold, because the hundred-hour bar is not lithium. **Beyond roughly four to eight hours a lithium plant's economics fail against anything that burns fuel**, which is the sentence the whole lesson is built to make defensible. Two escapes exist and only two. Either the cell gets radically cheaper per stored kilowatt-hour — {{sodium-ion}} and {{iron-air}}, the next two sections — or you stop buying hours in cells at all and buy them in fuel, which is the section after that. The hundredth bar is on the chart precisely so that the reader sees why a hundred hours is never a lithium question: at that duration the cell bill is the project, and the technology that answers it had to be designed around the number rather than scaled up to it.",
+   "sales": "Ask for the duration before the megawatts, every time. A prospect who says \"200 MW\" has told you almost nothing about the size of their purchase; a prospect who says \"200 MW for six hours\" has told you they are about to discover this chart, and that is a conversation you can be useful in."
+  },
+  {
+   "id": "eight-hour-native",
+   "title": "Eight hours by design, not by discipline",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "There are two ways to sell an eight-hour battery, and they cost different money. You can take a four-hour product and discharge it gently — the energy is genuinely there, the hours arrive, and you have paid for {{PCS}} capacity, switchgear and thermal design that will never be used at more than half throttle. Or you can design from the cell. An {{eight-hour-native}} system starts with a very large energy cell discharged at roughly an eighth of its capacity per hour, with the converter deliberately sized small against the stored energy. Both deliver eight hours. Only one of them is priced for eight hours.",
+    "**The native design's whole argument is the cell, and the cell's argument is thickness.** The active material is coated onto thin metal foils, and how thick that coating is resolves the entire energy-against-power question. A thick coating stores a great deal per litre and makes every lithium ion travel further through it — which is fine at an eighth of a C and hopeless at ten, because at high current the interior of the coating simply cannot supply the surface and usable capacity collapses. A thin coating delivers current hard, carries far more foil, separator and tab area per amp-hour, and stores much less. So an {{energy battery}} and a {{power battery}} are not two settings of one product. They are different objects, with different {{electrode thickness}}, different failure modes, different warranties and different prices per stored kilowatt-hour — and the long-duration plant wants the thick one.",
+    "**Which is why the long-duration race is a big-cell race.** The format ladder in one line: 280 Ah as the first-generation standard, 314 Ah as today's volume workhorse, 587 Ah as the emerging large class, and 1,175 to 1,300 Ah as kilo-amp-hour territory — the same chemistry, the same container, radically fewer cells. A 5 MWh container needs about 5,000 cells at 314 Ah and about 1,300 at 1,175 Ah: a roughly 70 per cent cut in cells, welds, busbars, sensors and management channels, and every deleted connection is a deleted failure point and a deleted assembly cost. The container ladder follows straight behind it — about 3.7 MWh per twenty-foot footprint in the 280 Ah era, 5.0 at 314 Ah, 6.25 at the 587 and 1,175 Ah classes, and 6.9 on a 1,300 Ah eight-hour design.",
+    "**The physics that permits this is the duty itself, which is worth stating because it is the cleanest example in the track of a constraint that is not a constraint.** Storage discharges gently, over two to eight hours. A huge cell's thick electrodes and slower heat removal are therefore acceptable — and a vehicle, which must dump its energy in minutes, could never use one. The cell that makes long duration cheap is a cell the automotive industry has no use for at all, which is why stationary storage stopped being the electric car's side market and became its own.",
+    "**And the cost structure inverts as the hours grow.** At one or two hours the converter, the transformer and the connection are a large share of the project, so a dollar saved on power electronics is a dollar worth chasing. At eight hours that same hardware amortises over four times as many delivered hours, and cell dollars per kilowatt-hour dominate the price outright. This is the mechanism behind the previous section's chart rather than a separate fact: as duration rises, the project converges on being a cell purchase with some equipment attached.",
+    "**Two things the gentle rate does not simply give you, and this is where a spec sheet gets read carelessly.** Resistive losses grow as the *square* of current, so running at an eighth of a C rather than half of one genuinely reduces them, and a native design's published {{round-trip efficiency}} at gentle rates is honestly better for that reason. But the {{auxiliary load}} — cooling, controls, dehumidification, the housekeeping that runs whenever the plant is awake — is drawn for the whole discharge, and an eight-hour discharge has twice as many hours of it as a four-hour one. The two terms move in opposite directions as duration rises, which means a round-trip figure quoted at one rate is not the figure the revenue is earned at. Ask for it at the duration being bought, at the site temperature that actually exists. The honest version of the number is always a triple: at what rate, at what temperature, measured where.",
+    "One boundary, stated rather than assumed. How a cell is actually built — the formats, the manufacturing, the yield — belongs to *From Cell to Container* and to the storage-fundamentals guidance module, and how capacity fades and how the warranty is written belongs to *Duration, Degradation, and the Twenty-Year Promise*. What this lesson adds is narrower and it is the thing neither of those answers: what happens to the **bill** when the duration changes, and at what point on that bill somebody should be buying a different machine entirely. Worth knowing that the hours are not always the buyer's choice either — at least one grid has written an eight-hour requirement into a multi-gigawatt-hour procurement programme, so the duration class can arrive as a rule rather than as an optimisation."
+   ]
+  },
+  {
+   "id": "sodium-honestly",
+   "title": "Sodium, honestly",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "The first escape from the cell bill is a cheaper element. {{Sodium-ion}} swaps lithium for sodium — from common salt, with no cobalt and no nickel anywhere in the cell — and pays for it in {{energy density}}. The interesting thing about that trade is where it lands: **on a concrete pad, weight is nearly free.** A grid container is not weighed, it is sited, so the density penalty converts into land and cabling rather than into a lost sale. Which means sodium's contest with {{LFP}} is not a physics argument at all. It is a single number: cost per delivered kilowatt-hour over the asset's life. Read the two cards as one question asked twice.",
+   "cards": [
+    {
+     "t": "Sodium-ion",
+     "meta": "Same architecture, different working ion. Roughly half the energy density of LFP on one maker's published comparison - about 95 Wh/kg against 173 and up - and a set of advantages that are all about the things density is not.",
+     "adv": [
+      "**No lithium, cobalt or nickel exposure at all.** The feedstock is abundant and the price is not set by a market that has twice repriced the entire storage industry. For a buyer planning a ten-year platform, that is option value rather than a saving.",
+      "**{{Cycle life}} well past what the duty needs.** One maker publishes at least 20,000 cycles; another quotes 15,000 at 25 °C behind a thirty-year warranty. At one cycle a day those are multi-decade assets, and the second escape from the cell bill is always to spread it over more delivered energy.",
+      "**Cold performance is the genuine superpower**, and it comes from an electrolyte that does not seize. Published figures include above 92 per cent capacity at −20 °C with no heaters at all, and one line claims 90 per cent usable power at −40 °C. A lithium plant in the same climate buys heaters, and then buys the energy to run them.",
+      "**A materially higher thermal-runaway threshold** — one maker puts the onset near 200 °C — which is a fire-engineering and permitting argument as much as a safety one.",
+      "**It is a hedge that can be exercised.** The cells appear in three costumes from one line — vehicle packs, a truck start-stop battery, and a thirty-megawatt-hour-class grid block — so the capacity that serves it is not stranded if one of those markets stalls."
+     ],
+     "dis": [
+      "**The density penalty is real and it lands on land.** Fewer kilowatt-hours per litre means more containers, more foundations, more cable runs and more acres for the same megawatt-hours — and on an expensive site that is the whole argument against it.",
+      "**Read parity claims one line at a time.** One sodium line published at 175 Wh/kg is at parity with *older* LFP, not with the large-format cells the market actually buys today. That is a claim about one product against one historical baseline, and it is not evidence that sodium as a class has closed the gap.",
+      "**It stays niche while lithium is cheap**, and lithium has been cheap. The technology's commercial case is a function of somebody else's commodity price, which is an uncomfortable thing to build a roadmap on in either direction.",
+      "**The supporting apparatus is thinner.** The certification data, the insurers' comfort, the augmentation practice and the second-source supply chain all exist in depth for LFP and are being built for sodium. On a bankability review that difference is priced.",
+      "**It does not solve long duration.** Sodium attacks the cost of an hour; it does not change the fact that an eighth hour is an eighth hour of cells. Today it sells hardest into high-cycling short-duration work — a one-hour container class is where the volume is — which is the opposite end of the chart from the problem this lesson opened with."
+     ]
+    },
+    {
+     "t": "LFP at the same duty",
+     "meta": "The incumbent, and the honest comparator. Lithium iron phosphate: cheap materials by lithium standards, no nickel or cobalt, hard to ignite, ten thousand cycles and up, and the chemistry essentially all grid storage is built from today.",
+     "adv": [
+      "**The lowest cost per delivered kilowatt-hour on the market right now**, and falling on a manufacturing learning curve every year as the large-format cells scale. Sodium has to beat a moving number.",
+      "**The whole apparatus exists.** Fire-test data, siting codes, warranty structures, augmentation practice, insurance, lenders' precedent and multiple qualified suppliers per format — all of it, for the exact product being bought.",
+      "**The big-cell roadmap is attacking the same bill from the other side.** A 70 per cent cut in cell count per container is a cost reduction sodium has to match as well as beat on materials.",
+      "**Density it does not need is density it can spend.** Where land is expensive, more megawatt-hours per footprint is money — and that is the one axis on which LFP is simply ahead."
+     ],
+     "dis": [
+      "**Exposed to a commodity that has moved violently**, in a market where a supply shock is a project-level risk rather than a procurement inconvenience.",
+      "**Cold is a cost, not a capability.** Below freezing the plant buys thermal management and then buys the energy to run it, and that energy is subtracted from the round trip the revenue is earned on.",
+      "**Its advantage is the one the duty cares least about.** Weight per kilowatt-hour is close to irrelevant on a pad, so LFP is winning partly on a metric the buyer is not paying for — which is exactly the opening a cheaper element is built to exploit."
+     ]
+    }
+   ],
+   "note": "**So the honest summary is a conditional, not a verdict.** Sodium is a real technology with real published cycle life and a genuine cold-climate advantage, currently selling into high-cycling short-duration work and brutally cold sites, and held back by density-driven land cost and by cheap lithium. It becomes a volume product the moment lithium is not cheap — which is a statement about a commodity market rather than about a laboratory. **The transferable habit is to check what the penalty is denominated in.** A density penalty is fatal in a vehicle, expensive on costly land and close to free on a cheap pad; the same cell is three different products in those three places, and a seller who asks about the site before arguing about the chemistry will be right more often than one who does the reverse."
+  },
+  {
+   "id": "iron-air-honestly",
+   "title": "Iron-air, honestly",
+   "kind": "proscons",
+   "read": "9 min",
+   "intro": "The second escape is more radical: stop trying to build a good battery. {{Iron-air}} stores energy by rusting iron and releases it by un-rusting it, using the oxygen in ambient air as the other half of the reaction. The framing its own developer uses is the one to carry: **a lithium cell is a good battery made from expensive materials; an iron-air cell is a poor battery made from nearly free materials.** Every specification below is bad, deliberately, and the trade only pays if iron and air are cheap enough to buy a hundred hours of them. This section is also the one place in the lesson where the honest answer to \"how do we know?\" is that nobody independent has checked — so read the second card as the comparator rather than as a straw man.",
+   "cards": [
+    {
+     "t": "Iron-air at a hundred hours",
+     "meta": "Reversible rusting. Discharging, the cell breathes oxygen in and turns iron into rust; charging, current turns the rust back into iron and the cell breathes oxygen out. About 0.15 kW and 15 kWh per cell, so the hundred hours is a property of the cell rather than a configuration chosen later.",
+     "adv": [
+      "**The active material is nearly free.** Iron, air and water are costed by one developer at roughly six dollars per kilowatt-hour of active material, against fifty to eighty for lithium. Its energy-capacity target is about twenty dollars per kilowatt-hour against roughly two hundred and fifty. **Buying hours is cheap** — which is the entire proposition.",
+      "**It is the only product on the market that covers a still, overcast week.** Not a long evening, not a hot afternoon: a multi-day weather event. No lithium product of any chemistry reaches that duration at any price, so where the requirement is genuinely multi-day this is not the cheap option, it is the only option.",
+      "**Better per acre than lithium, at about 200 MWh to the acre against 20 to 40** — worse per megawatt, better per megawatt-hour, and a buyer should always say which they mean.",
+      "**The buyer is creditworthy in a way a merchant developer is not.** Because no market pays for a hundred hours, essentially every deployment reaches its customer through a regulated proceeding, where an approved asset earns a return in {{rate base}}. The counterparty is a utility recovering costs from customers, and the growth rate is set by commission calendars rather than by a sales team.",
+      "**What that utility is buying is accreditation, not arbitrage.** It must show its regulator it can meet peak demand plus a {{reserve margin}}, and what counts is {{ELCC}} rather than nameplate. A four-hour battery is credited well below nameplate because at hour five it is empty; a hundred-hour resource is credited very differently in a {{winter peaking}} system whose binding risk is a multi-day cold, still, dark stretch."
+     ],
+     "dis": [
+      "**A round trip of 35 to 50 per cent, against 85 to 90 for lithium** — every stored megawatt-hour costs about two to buy. Four mechanisms produce it and none is a manufacturing defect anyone can polish out: the {{hydrogen evolution reaction}} spends charging current splitting water instead of reducing iron and drives {{coulombic efficiency}} to roughly 45 to 60 per cent in prototypes; the {{air electrode}} must reduce oxygen and evolve it on the same surface, both poorly, degrading itself in the process; {{passivation}} grows resistive layers on the iron as it discharges; and {{carbonation}} lets ambient carbon dioxide attack the electrolyte. Add {{self-discharge}} of 1 to 3 per cent a day in an asset whose whole purpose is *holding* energy for days.",
+      "**It is expensive per kilowatt, and capacity markets pay for kilowatts.** About 2,000 to 3,333 dollars per kilowatt against roughly 1,000 for lithium — dearer per kilowatt than a gas peaker. The strongest published criticism attacks exactly this row, and calculates something like sixteen years of record capacity revenue to return the capital before financing and operating costs. The developer's answer is that it is not selling into a capacity market at all. Whether the market it *is* selling into exists at scale is the open question.",
+      "**Eight to thirteen cycles a year, by design** — idle roughly 97 per cent of the time, so the fixed cost spreads over a hundredth of the revenue events a daily-cycling asset gets.",
+      "**No round-trip-efficiency figure is published anywhere.** Including in a thirty-slide technical deck filed to a grid operator that *does* carry costs, footprints, cell dimensions, cycle counts and safety certifications. A datasheet that answers every other question and not that one has told you something, and the absence is the disclosure.",
+      "**And no cost per kilowatt-hour appears in any public rate filing.** One state's filing was made as a trade secret; one pilot's figure bundles two different technologies and is never split; two more jurisdictions disclose nothing. The best number in circulation — about thirty-three dollars per kilowatt-hour — is arithmetic on a single reported purchase price sourced to a paywalled outlet and confirmed by no party to it.",
+      "**Nobody independent has validated the chemistry at duration.** It appears in neither a national energy department's 2024 eleven-technology long-duration cost study nor the associated laboratory cost database, and no third-party teardown of a cell exists. Every hundred-hour cost figure traces back to the developer or to that one transaction.",
+      "**The record on the ground is thin and concentrated.** Exactly one project is operating, at 1.5 MW and 150 MWh. Five more have had no first-party update since 2023 although all carried 2025 or 2026 targets — unknown rather than known to be bad, but unknown. Seventy-four per cent of the itemisable order book is two counterparties signed in the same year, neither delivering before 2027, and the larger of the two depends on a commission decision that was still pending with objections filed. **And the factory is the constraint, not the chemistry**: full nameplate arrives in 2028, commercial production has already slipped a year, and the stated backlog is about 1.6 years of eventual full-rate output."
+     ]
+    },
+    {
+     "t": "Just buy more lithium",
+     "meta": "The incumbent answer to a hundred hours: the same four-hour container, twenty-five of them instead of one. Nobody markets this, which is the point - it is what the previous chart says you would have to do, priced honestly.",
+     "adv": [
+      "**85 to 90 per cent round trip**, so the energy you bought is the energy you sell, and roughly 365 cycles a year rather than eight to thirteen — the same fixed cost spread over a hundred times as many revenue events.",
+      "**Every number is published, audited and financeable.** One basis, multiple suppliers per format, a certification stack, insurers who have seen it, lenders with precedent, and an augmentation practice for the fade. A bankability review on this has somewhere to start.",
+      "**It gets cheaper every year on a manufacturing learning curve** that a first-of-a-kind factory does not yet sit on, which means the comparator the challenger has to beat is moving in the wrong direction for the challenger.",
+      "**It can do the other jobs too.** The same asset earns from frequency work, from the evening spread and from availability payments between the multi-day events, which is revenue a hundred-hour asset idle 97 per cent of the year does not collect."
+     ],
+     "dis": [
+      "**The energy capacity costs roughly two hundred and fifty dollars per kilowatt-hour against a twenty-dollar target** — and a hundred hours is a hundred hours of that. This is the row that ends the argument, and it is the reason the first card exists at all.",
+      "**20 to 40 MWh to the acre**, so the land bill scales with the duration alongside the cell bill. At a hundred hours the site becomes a serious line item in its own right.",
+      "**Nobody has actually built it.** A hundred hours of lithium is a thought experiment used to price the alternative, not a product with a reference plant — so the honest comparison is between a technology with one operating project and a configuration with none.",
+      "**It does not remove the market question either.** No merchant market anywhere pays for a hundred hours, whichever chemistry delivers them. If the willingness to pay is absent, cheap lithium does not conjure it — the multi-day product is a regulated purchase or it is nothing."
+     ]
+    }
+   ],
+   "note": "**The one habit to take from this section is the denominator question, and it generalises well past iron-air.** Long-duration storage is *sold* on cost per kilowatt-hour and *paid* on cost per kilowatt, and a multi-day technology looks transformative on the first number and uncompetitive on the second. Neither figure is wrong; they answer different questions, and the argument is almost always about which one the buyer is actually settling in. Ask what the buyer pays for — energy delivered, or capacity credited — and the right denominator follows from the answer rather than from the brochure. **One structural variation is worth knowing because it is a template.** In the largest announced deal the asset is not rate-based across all customers: the corporate buyer pays all costs of the new service and of any new grid infrastructure through a dedicated charge inside its own electric service agreement. That is a deliberate answer to the obvious objection — if a novel technology underperforms, the damage lands on the buyer's carbon accounting rather than on a state's ratepayers — and it is a structure any seller of unproven equipment into a regulated market should expect to be asked about. **And keep the epistemics straight.** Nothing above says iron-air does not work. It says that the evidence available in September 2026 is one developer's own figures, one reported price, and one small operating plant, and that the technology's own literature is silent on the number a storage buyer would ask for first. That is a reason to interrogate rather than to dismiss — and being able to say exactly which claims are load-bearing and which are unverified is what makes the interrogation credible in the room."
+  },
+  {
+   "id": "engines-own-the-long-end",
+   "title": "Where the answer stops being cells",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "The third escape is to stop buying hours in cells and buy them in fuel. **A battery's energy side is its cells; an engine's energy side is a pipeline or a tank** — so duration costs a battery capital and costs an engine almost nothing. That asymmetry is the single most important idea in this lesson, and the table makes it readable by comparing four machines on one axis. **Read the last column first**, because it is the one that decides the argument; the four before it explain why each machine behaves the way it does when you ask it for another day. One boundary to state before the table rather than after it: *Bridge Power*, in the AI data-centre track, compares these same machines on an entirely different axis — what a campus with no grid connection can actually have delivered, what the local {{air permit}} will allow, how much water it needs and how it behaves when a training cluster changes its mind. That table is not repeated here and this one is not repeated there. Same machines, different question: **that one asks how soon, this one asks how long.**",
+   "cols": [
+    "Machine",
+    "Start time",
+    "Efficiency",
+    "Part-load behaviour",
+    "Temperature sensitivity",
+    "What an extra day of duration costs"
+   ],
+   "rows": [
+    [
+     "**Battery — LFP, four-hour class**",
+     "**Milliseconds.** The fastest responder on the grid: it injects or absorbs within a cycle of a frequency deviation, which is a thing no rotating machine can do.",
+     "**85 to 90 per cent round trip**, and 92 to 96 on the best published cells at gentle rates. The loss is paid twice — you bought the energy, and then you pay again to cool it away.",
+     "**Essentially flat.** A battery at a tenth of its rating is not penalised the way a thermal machine is, and modern control can go further: a {{grid-forming inverter}} imposes its own voltage and frequency, supplying {{synthetic inertia}} and even {{black start}} where a tender asks for them.",
+     "**Cooling is not optional.** Cells age fast when hot and unevenly aged cells drift apart, so liquid cooling holds every cell within a couple of degrees of its neighbours. Cold costs heaters, and the heaters cost energy the round trip pays for.",
+     "**Twenty-four more megawatt-hours of cells, per megawatt.** Capital, not fuel. This is the cell bill from the first chart arriving as a single number, and it is the cell in this table that ends the argument."
+    ],
+    [
+     "**Reciprocating gas engine**",
+     "**Two minutes**, with thirty-second grid connection on some models. And with a store holding the bus it need not be first, only eventually — it can be ramped on over tens of seconds instead of catching a {{block load}}, which relaxes {{turbo lag}} and lets slower, more efficient machines into a plant at all.",
+     "**About 50 per cent with no steam cycle**, and up to 52.1 per cent on one spark-ignited unit — near the top for any single-cycle machine, and reached without the second plant a turbine needs.",
+     "**The best of the four, structurally.** A plant is dozens of independent 10 to 23 MW units, so it runs only the engines it needs, each at its own sweet spot, and adds or sheds them in minutes. Redundancy comes free: a unit out for service costs a slice of capacity, never the plant.",
+     "**Full output from −45 °C to +50 °C**, and almost no water — which is why it keeps appearing in hot, arid and very cold places where the alternatives derate or cannot be permitted.",
+     "**More fuel, and nothing else.** The tank or the pipeline *is* the energy side, so duration is close to free. This cell is the reason the lesson has its title."
+    ],
+    [
+     "**Gas turbine — {{simple cycle}}, with {{combined cycle}} noted**",
+     "**About five minutes for an {{aeroderivative}} machine** at high start reliability. A combined-cycle plant is a different proposition: thick steam casings distort if heated too fast, so a hot start, a warm start and a cold start are quoted separately and the gap between them is large.",
+     "**A third to two-fifths in simple cycle; past 60 per cent in combined cycle** — the highest of anything that burns gas. Worth knowing why it is fragile: the compressor consumes roughly *half* of what the turbine produces, so output is the small difference between two large numbers and a one-per-cent compressor change moves net output by about two.",
+     "**The worst of the four.** Efficiency is a full-load property, and below a {{minimum stable load}} the lean premixed flame of a {{DLN combustor}} cannot be held at all. In combined cycle the penalty compounds — less and cooler exhaust means the bottoming cycle, the part that made the plant efficient, falls faster than the turbine's own output. And every start counts for many {{equivalent operating hours}} of overhaul life, so dispatching it as a follower moves the service bill and not just the fuel bill.",
+     "**The largest correction on the table.** About half a per cent of output per degree above the 15 °C {{ISO rating}} reference, plus a few per cent per thousand metres of altitude — thinner air is less mass through the same swept volume. The hot-day loss lands on exactly the afternoon the system needs the megawatts.",
+     "**More fuel, at the best {{heat rate}} here** — provided the plant is combined cycle and the load does not move. A plant held part-loaded to follow a swinging campus burns much of that advantage, which is why the efficient machine is the base and never the buffer."
+    ],
+    [
+     "**Hydrogen — {{electrolyser}} → store → fuel cell, or hydrogen in the combustor**",
+     "**Depends which half.** A {{solid-oxide fuel cell}} prefers steady output: the ceramics dislike thermal cycling, so it holds a load rather than chases a swing and pairs with a battery for transients. A hydrogen-capable engine or turbine starts exactly as fast as the gas version of itself.",
+     "**The round trip is the problem.** Electricity → hydrogen → storage → electricity multiplies each stage's loss, and the product sits far below a lithium battery's 85 to 90 per cent. Burning the hydrogen instead only substitutes the combustion machine's own third-to-half, so neither path recovers it.",
+     "**A fuel cell's efficiency is nearly scale-free**, so a building-sized installation performs like a combustion plant many times its size — a real advantage, and still a base rather than a buffer. Granularity gives it the engine's redundancy property: hundreds of modules mean a failure shaves capacity instead of dropping the site.",
+     "**No flame, so near-zero {{NOx}} and particulates** — which changes what an {{air permit}} allows rather than what the weather does. The carbon ledger is separate and roughly comparable per kilowatt-hour to efficient combustion, because the carbon comes from the fuel.",
+     "**Almost free in principle, unpriced in practice.** A molecule in a tank is the cheapest day of duration on this table, and at scale the fuel largely does not exist yet at a price anyone has paid. **And read a co-firing percentage as volume**: hydrogen carries about a third of methane's energy per unit volume, so a 30 per cent blend is roughly a tenth of the energy and a tenth of the carbon. Independent analysis puts 30 per cent volumetric near 12 per cent carbon and 50 per cent a little above 20; one manufacturer's own 50 per cent demonstration reported about 22."
+    ]
+   ],
+   "note": "**Read down the last column and the lesson is finished.** One of the four cells is a capital cost and three are fuel — and the one that is capital is the battery. That is what \"engines own the long end\" means: not that engines are better machines, but that **only one of these four buys duration with hardware**, and hardware is the expensive way to buy it. Which also settles the question this lesson exists to answer. \"Why not twelve hours?\" is arithmetic, not opinion: twelve hours is twelve hours of cells, and at some point on that bill a machine that stores its energy as a molecule wins on price no matter how good the cell gets. **Two honest qualifications.** First, the comparison is per unit of *duration* and nothing else — a {{hydrogen co-firing}} claim is priced into a turbine today for a fuel that may arrive late or never, and a hundred-hour battery is priced for a market that may not exist; the long end of this table is where the least verified numbers in the whole conversation live. Second, the four are not exclusive and in practice they are not chosen exclusively: the pattern that keeps winning is a store sized for the seconds and the steps, and a fuel machine sized for the hours, with a controller arbitrating between them. **That is the boundary this lesson hands on** — *Bridge Power* picks the machines up where the question changes from how long to how soon.",
+   "sales": "Bring this table into the room that contains an engine vendor, and bring it first. A storage seller who concedes the long end in their own words is the one the buyer believes about the short end — and the short end is where the sale is. Conceding row four costs nothing and buys the first row."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "6 min",
+   "ps": [
+    "**Duration over-promised by discharging gently.** A four-hour product quoted at eight hours does deliver eight hours, and the customer has bought converter capacity, switchgear and thermal design that will never work above half throttle — while the container count, which is what actually sets the land, the cabling and the installation labour, was never re-derived for the new duty. The fault is invisible on the single-line diagram and obvious in the bill of materials. Owned by whoever sized the plant from a nameplate instead of from a duty.",
+    "**{{Auxiliary load}} quietly eroding the round trip.** Resistive losses fall with gentler rates, so the headline improves — but cooling, controls and dehumidification draw for the whole discharge, and an eight-hour discharge has twice as many hours of housekeeping as a four-hour one. The two terms move in opposite directions as duration rises, so a {{round-trip efficiency}} quoted at a test rate is not the number the revenue is earned at. Ask for the triple: at what rate, at what ambient temperature, measured at which terminals. Owned by whoever compared two datasheets that were not measured on the same basis.",
+    "**A cold-climate chemistry quoted into a hot site.** {{sodium-ion}}'s real advantage is usable power well below freezing without heaters, and its penalty is {{energy density}}. On a hot pad with expensive land, the advantage is worth nothing and the penalty is all that is left — more containers, more foundations, more acres. Owned by whoever matched a chemistry to a headline rather than to a site.",
+    "**A long-duration price read on the wrong denominator.** Dollars per kilowatt-hour and dollars per kilowatt answer different questions, and a multi-day technology looks transformative on the first and uncompetitive on the second. If the buyer is a {{capacity market}}, it is paying for kilowatts and the second number is the one that decides. If the buyer is a regulator crediting {{ELCC}} at a multi-day winter peak, the first number is closer to the truth. Owned by whoever compared two technologies on one number without asking what the buyer settles in.",
+    "**An unpublished efficiency treated as an unimportant one.** A specification that carries costs, footprints, cell dimensions, cycle counts and safety certifications and does not carry a round-trip figure has answered every question except the one a storage buyer asks first. Absence of a number in an otherwise complete document is data, not an oversight — and the correct response is to ask for it in writing, not to infer it. Owned by whoever read a deck for what it contained rather than for what it omitted.",
+    "**An engine row read as a concession rather than as credibility.** The room where this arithmetic matters usually contains someone selling the machine on the other side of the boundary, and the instinct is to defend duration to the last hour. It is the wrong instinct: a seller who can say exactly where batteries stop is trusted about where they start, and a seller who cannot is discounted on everything. The honest boundary is the asset here, and this is the one failure on the list that costs a deal rather than a plant."
+   ],
+   "sales": "Turn every one of these into a question you ask rather than an objection you answer. \"At what rate is that round trip measured?\" and \"is your buyer paying per kilowatt or per kilowatt-hour?\" are ordinary engineering and commercial questions, and both of them tell you within a minute whether the person across the table has priced their own project."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "6 cards",
+   "cards": [
+    {
+     "q": "Why does adding an hour of duration cost a battery so much more than it costs an engine?",
+     "a": "Because the two machines keep their energy in different places. A battery's energy side **is** its cells, so one more hour at one megawatt is one more megawatt-hour of cells — capital, bought up front, scaling linearly with the hour while the converter, transformer, pad and controls stay exactly the same. An engine's energy side is a tank or a pipeline, so one more hour is one more hour of fuel and nothing else. The mirror image holds on the other axis: a battery buys megawatts cheaply because the cells are already there, while an engine buys megawatts expensively because more megawatts means more engines. **Batteries get dear with duration; engines get dear with power.**"
+    },
+    {
+     "q": "What is the difference between an eight-hour-native design and a four-hour system discharged gently?",
+     "a": "Where the choice was made. A four-hour system run at half rate delivers eight hours while carrying power hardware — converter, switchgear, thermal capacity — sized for a rate it will never use, so the customer pays for capability that is idle by design. An {{eight-hour-native}} design starts at the cell: a very large energy cell discharged at roughly an eighth of its capacity per hour, with the converter deliberately sized small against the stored energy, so more of the spend is cells and less is power equipment. Both give eight hours. Only the second is *priced* for eight hours, and the difference shows up in dollars per kilowatt-hour rather than in the hours delivered."
+    },
+    {
+     "q": "Why can a grid storage cell be enormous when an electric vehicle's cannot?",
+     "a": "Because the duty allows a thick electrode. Storage discharges gently, over two to eight hours, so a huge cell's thick coating and slower heat removal are acceptable — the ions have time to travel through the coating and the heat has time to leave. A vehicle must dump its energy in minutes, and at that rate the interior of a thick coating cannot supply the surface, so usable capacity collapses. The payoff is structural rather than chemical: a 5 MWh container needs about 5,000 cells at 314 Ah and about 1,300 at 1,175 Ah, a roughly 70 per cent cut in welds, busbars, sensors and management channels — and every deleted connection is a deleted failure point. **The cell that makes long duration cheap is a cell no car could use.**"
+    },
+    {
+     "q": "Sodium-ion holds roughly half the energy per kilogram that LFP does. Why is that often not the deciding objection?",
+     "a": "Because a grid container is sited, not carried. On a concrete pad, weight is nearly free, so the density penalty converts into land, foundations and cable runs rather than into a lost capability — and the contest with {{LFP}} reduces to one number: cost per delivered kilowatt-hour over the asset's life. Whether the penalty bites therefore depends entirely on what land costs at that site. The same cell is close to free of penalty on a cheap pad, expensive on costly land, and impossible in a vehicle. **Always ask what the penalty is denominated in before arguing about the chemistry.**"
+    },
+    {
+     "q": "A hundred-hour storage technology is quoted at a fifth of lithium's cost per kilowatt-hour and three times its cost per kilowatt. How can both be true, and which matters?",
+     "a": "Both are true because the two figures divide by different things. A multi-day design buys its hours in very cheap active material, so the **energy** capacity is cheap per kilowatt-hour. But delivering one megawatt means putting a hundred hours of that hardware behind it, so the **power** capacity is dear per kilowatt. Which one matters is decided by the buyer, not by the technology: a {{capacity market}} pays per kilowatt of availability and will price it badly, while a regulator crediting {{ELCC}} against a multi-day winter peak is buying exactly the hours and will price it well. **Long-duration storage is sold on dollars per kilowatt-hour and paid on dollars per kilowatt — ask which the buyer settles in.**"
+    },
+    {
+     "q": "A machine is advertised as 30 per cent hydrogen capable. What has actually been decarbonised?",
+     "a": "About a tenth of it. Co-firing percentages are quoted **by volume**, and hydrogen carries roughly a third of methane's energy per unit volume — so replacing three-tenths of the volume replaces only about a ninth to a tenth of the energy, and since the carbon dioxide comes from the energy-bearing carbon displaced, carbon falls by about that same tenth. Independent analysis puts a 30 per cent volumetric blend near 12 per cent carbon reduction and a 50 per cent blend a little above 20, and one manufacturer's own 50 per cent demonstration reported about 22 — three sources agreeing with the arithmetic. Getting to a large reduction means getting close to pure hydrogen, which changes the combustor, the fuel system and the safety case rather than a blend ratio, because hydrogen's {{flame speed}} is several times methane's and pushes a lean premixed flame toward {{flashback}}."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A utility planner asks why the developer will not simply quote a twelve-hour battery instead of a four-hour one. What is the honest answer?",
+     "c": [
+      "Twelve hours is eight more megawatt-hours of cells per megawatt, and nothing else in the plant scales with the hour — so past roughly four to eight hours the cell bill outruns anything that burns fuel",
+      "Cells cannot be discharged for longer than about four hours without exceeding their depth-of-discharge limit",
+      "Twelve-hour operation voids the degradation warranty, because deeper cycling ages cells faster",
+      "The converter and transformer would have to be scaled twelvefold, which is what makes long duration expensive"
+     ],
+     "a": 0,
+     "why": "Duration is megawatt-hours divided by megawatts, so buying another hour at the same power means buying another megawatt-hour of cells — and the converter, transformer, pad, interconnection and controls do not change at all. That is why the answer is arithmetic rather than opinion, and why it lands on cost rather than on capability. The third option inverts the physics: an eight-hour-native design cycles *more* gently than a four-hour one, which is better for the cells, not worse. The fourth names the equipment that specifically does **not** scale."
+    },
+    {
+     "q": "Two vendors quote 94 per cent round-trip efficiency for eight-hour systems. One is a four-hour product run at half rate and one is an eight-hour-native design. What should you ask before comparing them?",
+     "c": [
+      "At what rate and ambient temperature each figure was measured, and at which terminals — because gentle rates reduce resistive loss while auxiliary load accrues for the whole discharge",
+      "Which vendor has the higher cell energy density, since that determines the round trip",
+      "Whether each system is liquid-cooled, since air-cooled systems cannot reach 94 per cent",
+      "How many cycles each is warranted for, since the round trip is defined at end of warranty"
+     ],
+     "a": 0,
+     "why": "Resistive losses grow with the square of current, so a gentler rate genuinely improves the figure — but cooling, controls and dehumidification draw for the whole discharge, and an eight-hour discharge has twice as many hours of that as a four-hour one. The two terms move in opposite directions as duration rises, so an unqualified percentage is not comparable across two different duties. The honest form of the number is always a triple: at what rate, at what temperature, measured where. Density and cycle warranty are real questions about other things."
+    },
+    {
+     "q": "A hundred-hour iron-air system's specification lists costs, footprints, cell dimensions, cycle counts and safety certifications, and gives no round-trip efficiency. What is the correct reading?",
+     "c": [
+      "The omission is itself information — a document that answers every other question and not the one a storage buyer asks first should be asked for that number in writing",
+      "Round-trip efficiency is not a meaningful metric for multi-day storage, so its absence is expected",
+      "It can be inferred reliably from the coulombic efficiency quoted for prototype cells",
+      "The figure is proprietary because it is unusually high for a metal-air chemistry"
+     ],
+     "a": 0,
+     "why": "The technology's published range is 35 to 50 per cent against 85 to 90 for lithium, which is exactly why the number is the first thing a storage buyer asks for — so its absence from an otherwise complete specification is a disclosure rather than an oversight. Nor can it be inferred: coulombic efficiency counts charge and says nothing about the voltage penalty on each direction, which is a separate loss. Treating the gap as unimportant is how an unverified figure enters a comparison, and the right response is to request it rather than to reconstruct it."
+    },
+    {
+     "q": "Why is a gas turbine the worst of the four machines at following a swinging load, and what does that cost beyond fuel?",
+     "c": [
+      "Efficiency is a full-load property and the lean premixed flame cannot be held below a minimum stable load; in combined cycle the bottoming cycle falls faster still, and every start consumes many equivalent operating hours of overhaul life",
+      "Its inertia is too high to allow rapid output change, so the governor limits the ramp rate",
+      "Part-load operation raises firing temperature, which shortens hot-section life directly",
+      "It cannot be restarted until the compressor has fully cooled, which caps the number of daily cycles"
+     ],
+     "a": 0,
+     "why": "The compressor keeps turning at full speed and consuming its share while useful output falls, so backing off costs disproportionately, and below a minimum stable load a {{DLN combustor}}'s lean premixed flame simply cannot be held. In combined cycle the penalty compounds, because less and cooler exhaust means less steam at worse conditions and the bottoming cycle — the part that made the plant efficient — falls faster than the turbine's own output. The cost beyond fuel is maintenance: overhaul intervals are counted in {{equivalent operating hours}} and a start counts for many hours of steady running, so how a plant is dispatched changes its service bill, not only its fuel bill."
+    },
+    {
+     "q": "A campus proposes electrolysing hydrogen with surplus power and burning it later for multi-day firmness. Where does the argument actually stand or fall?",
+     "c": [
+      "On the round trip and the fuel's existence — each stage of electricity to hydrogen to storage to electricity multiplies its loss, landing far below a battery's, and at scale the molecule is not yet available at a price anyone has paid",
+      "On the fuel cell's start time, since ceramics cannot be brought up fast enough to answer an outage",
+      "On the nitrogen-oxide permit, since hydrogen combustion produces more NOx than natural gas at any blend",
+      "On storage volume, since hydrogen's energy per unit volume makes multi-day storage physically impossible"
+     ],
+     "a": 0,
+     "why": "The molecule is genuinely the cheapest day of duration on the table — a tank is not a cell — and that is exactly why the argument moves to the two things it cannot assume: the compounded round trip, which sits far below a lithium battery's 85 to 90 per cent whether the hydrogen is burned or run through a fuel cell, and whether the fuel exists at that scale and price at all. Start time is a real property but is answered by pairing with a store. Hydrogen does burn hotter and does push {{NOx}} up, which is a combustor design problem rather than the argument's hinge — and a fuel cell has no flame at all."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -39575,12 +40004,13 @@ function clTrackBessFoundations_() {
  "title": "BESS Foundations",
  "short": "Finish this and you can read a grid-storage spec sheet, hold a technical conversation about cells, duration and degradation, and say which control layer is deciding what while the plant runs.",
  "group": "Technology Foundations",
- "updated": "2026-09-03",
+ "updated": "2026-09-15",
  "lessons": [
   "cell-to-container",
   "duration-and-degradation",
   "spec-sheet-decoded",
-  "the-control-stack"
+  "the-control-stack",
+  "where-batteries-stop"
  ]
 };
 }
@@ -39775,7 +40205,8 @@ function clLessons_() {
           clLessonRedundancyByTheNumbers_(),
           clLessonTheCampusAsAPowerProject_(),
           clLessonHowAStorageProjectHappens_(),
-          clLessonContractsAndRevenue_()];
+          clLessonContractsAndRevenue_(),
+          clLessonWhereBatteriesStop_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

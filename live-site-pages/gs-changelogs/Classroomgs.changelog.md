@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.45g] — 2026-09-15 08:08:36 PM EST — v05.95r
+
+### Added
+
+- A new lesson in the BESS Foundations track, on how long a battery is worth building for and what takes over past that point — what each extra hour of storage actually costs, how newer cell chemistries change the answer, and where other kinds of generating equipment become the better fit
 
 ## [v01.44g] — 2026-09-15 06:47:49 PM EST — v05.93r
 
