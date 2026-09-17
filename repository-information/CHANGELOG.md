@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.37r] — 2026-09-17 03:17:33 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.48's deploy counters written into BOTH halves** — the prose paragraph and the quoted prompt block — against the v06.36r job log rather than a forecast. **The two-leg forecast was right on both legs**: `Scraper deploy confirmed (GET): Updated to v02.17g (deployment 162) | 162/200` in **16 seconds** and `Classroom deploy confirmed (GET): Updated to v01.63g (deployment 75) | 75/200` in **17 seconds**, with exactly **two** `Deploy <Project>` steps firing and every other one exiting 0 silently in zero seconds on its own `git diff` guard. The run closed on *All GAS deploys confirmed the merged version*. **Classroom now stands at 75/200 with 125 of its allowance left; Scraper at 162/200 with 38**
+- The §7.19 order resolved on its **two reads** for the **thirtieth** time and no `?op=deploy` probe was made: Pages read `|v01.62g|` / `|v02.16g|` at 03:12:17 AM EST before the deploy landed and `|v01.63g|` / `|v02.17g|` at 03:13 AM after, re-read rather than assumed, and the job log agreed on both. The post-merge `check-readme-tree.py --fix` step reported *already in sync — nothing to commit*, so no correction commit landed behind the push
+
+#### `repository-information/SESSION-CONTEXT.md`
+- **Latest Session written for S2 session 16**, with v06.34r/v06.35r demoted to `## Previous Sessions` and the 2-session cap applied. It carries the ten §10.6 findings, the derived `--check` call, the two-leg deploy, the no-rotation arithmetic, and **one correction to the render harness this session found the hard way** — the shim's `validateSessionForData` must return `role`, `permissions` and `email` at the **top level**, because `clRoleOf_` reads `sess.role` directly and a nested shape silently resolves to `viewer`
+
+#### `README.md`
+- `Last updated:` timestamp and `Repo version:`
+
+### Notes
+
+- **No rotation on this push.** `CHANGELOG.md` sits at **105 raw / 97 non-exempt** against a 100 trigger with **eight** sections dated 2026-09-17 EST — the non-exempt count does not move, because every section added today is same-day. `Classroomgs.changelog.md` untouched at 50/50 raw (46 non-exempt) and `Scrapergs.changelog.md` at 38/50, this push moving no `.gs` file. **A push landing on 18 September or later is the rotator on `CHANGELOG.md` at 105 against 100, and at the boundary on `Classroomgs.changelog.md` at 50 against 50**
 
 ## [v06.36r] — 2026-09-17 03:05:03 AM EST
 
