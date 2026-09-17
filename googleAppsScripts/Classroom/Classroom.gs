@@ -1,4 +1,4 @@
-var VERSION = "v01.68g";
+var VERSION = "v01.69g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -31317,8 +31317,8 @@ function clLessonSegmentAssurance_() {
  "title": "Assurance",
  "short": "The independent and owner's engineers, testing laboratories and certification bodies that make a project bankable and a product installable — the seat every…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-03-17",
  "provenance": {
   "inputs": [
    {
@@ -31468,7 +31468,7 @@ function clLessonSegmentAssurance_() {
     ],
     [
      "Laboratory accreditation and the standard the certificate is issued against (UL 9540A, IEC 62040-3, IEC 62443)",
-     "*Listing, Test Method, Code* (planned)"
+     "*Listing, Test Method, Code*"
     ],
     [
      "Authorship of the recommended practice the contract cites",
@@ -32173,8 +32173,8 @@ function clLessonSegmentAssurance_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Listing, Test Method, Code* (planned) · *The Independent Engineer's Report* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *Listing, Test Method, Code* · *The Independent Engineer's Report* (planned).",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-assurance-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** DNV, Intertek, Sargent & Lundy, UL Solutions, CSA Group, Black & Veatch, Burns & McDonnell — each member's dossier carries one in Profiler."
    ]
   },
@@ -32253,6 +32253,14 @@ function clLessonSegmentAssurance_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -46695,7 +46703,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeCooling_(),
           guidanceDocLandscapeComputeAndTheRack_(),
           guidanceDocLandscapeSoftwareAndOptimization_(),
-          guidanceDocLandscapeInsuranceAndRiskTransfer_()];
+          guidanceDocLandscapeInsuranceAndRiskTransfer_(),
+          guidanceDocLandscapeAssurance_()];
 }
 
 function guidanceIndex_() {
@@ -64419,6 +64428,610 @@ function guidanceDocLandscapeInsuranceAndRiskTransfer_() {
      ],
      "a": 1,
      "why": "The tower reduces its delay-in-start-up sum automatically as phases energise, which means a slipped energisation date is a coverage-period problem as well as a construction one. The other three lines are real parts of the same tower and none of them is sensitive to the schedule."
+    }
+   ]
+  }
+ ]
+};
+}
+
+
+// BELOW the // CONTENT END fence per CLASSROOM-CURRICULUM-PLAN.md 10.6 and
+// .claude/rules/industry-guidance.md step 4 - guidance is never a C2 pipeline
+// write. Source of truth:
+// repository-information/industry-guidance/landscape-assurance-analysis.md
+//
+// THE NINETEENTH LANDSCAPE AND THE ONE THAT CLOSES S2. Seven members - 4
+// incumbents (dnv, sargent-lundy, ul-solutions, intertek), 1 challenger
+// (csa-group), 2 adjacent (black-veatch, burns-mcdonnell) - chain position 17
+// of 19, tier services, five buying criteria. Every figure re-derived off
+// profiler-segments.json, profiler-graph.json and the seven dossiers before a
+// line was drafted; the brief's arithmetic survived, and the record carried
+// one thing more than the brief named (see the third change of control below).
+//
+// THE COVERAGE BOUNDARY IS THE OPENING SECTION BECAUSE NO INSTRUMENT COVERS
+// THE ROSTER. Four measure parts of it and the largest covers FOUR OF SEVEN:
+// the July 2026 battery-storage TIC assessment names six major companies, of
+// which four are members here (the two it calls leading key players, a third
+// among its five leaders, and the challenger among the majors) and two carry
+// no dossier at all. The May 2026 global TIC league table ranks two of the
+// seven - 5th at USD 4,619m and 8th at USD 3,106m in a market whose top ten
+// hold under a quarter of revenue - and omits three more by name. The design
+// lists cover three others. Nothing ranks the seventh on revenue anywhere.
+// The sub-market claim is real and it is SMALL: the two firms it calls leaders
+// each book several times its whole USD 0.66bn in a year, 4.6x and 7.0x. The
+// registry's own notes asked for this sentence and it is a measurement.
+//
+// THE GRAPH DRAWS THE SAME BOUNDARY FROM A DIFFERENT ARTEFACT - (dd2) ACROSS
+// ARTEFACT KINDS. 15 of the 21 possible member pairs carry an edge, 12 curated
+// carrying 15 typings, and ALL FIFTEEN READ competitor - no partner, no
+// customer, no supplier edge anywhere inside the roster, which no previous
+// landscape has measured. And the six absent pairs are not scattered: they are
+// EXACTLY the three engineering firms against the two pure certification
+// bodies. The two members joined to all six others are the two that hold both
+// kinds of authority. The graph splits the segment into a report half and a
+// certificate half and names the two companies in both, without arguing it.
+//
+// THE SEGMENT SELLS AUTHORITY IN FOUR SEPARABLE PIECES AND NOBODY HOLDS ALL
+// FOUR - write the standard, run the laboratory, issue the mark, sign the
+// lender's report. The party with the largest North American listing business
+// holds the FEWEST: a sister non-profit publishes the three storage standards,
+// holds about 61.6 per cent of the equity and 94.1 per cent of the votes, and
+// is paid USD 22m a year for library access out of cost of revenue, while the
+// mark goes the other way royalty-free. The challenger is the inverse and is
+// about to be split on that line: it wrote the large-scale fire test, and it
+// is selling the laboratories and keeping the standards.
+//
+// THREE PENDING CHANGES OF CONTROL, ALL TARGETED AT Q4 2026, AND THE BRIEF
+// NAMED TWO. The third is on the incumbent side and moves the opposite way:
+// UL Solutions agreed on 2026-04-13 to buy an electrical and electronics
+// division carrying an independent NRTL mark for about EUR 575m, closing
+// expected the same quarter. So one quarter separates a standards author from
+// its laboratories, takes a listed certifier private, and folds an independent
+// laboratory into an incumbent. Two change a role label on this roster; the
+// third changes the map it competes on. Recorded as two changes of control OF
+// members and one in which a member is the BUYER - the brief was right about
+// its two and the record carried a third it did not have.
+//
+// reviewBy 2026-10-31, read off the challenger's two-thirds member vote in
+// EARLY OCTOBER 2026 - a month-only date, taken at month end per (y5) because
+// a review firing on the first of the month fires before the event it watches.
+// The fence contributes NOTHING: 40 policyExposure entries across seven
+// members, 17 dated, ZERO in the future, two members carrying no policy array.
+// (nn8) fired in a FOURTH shape - the ISO sweep returns 3 distinct future days
+// in the whole segment, the word-form sweep returns 1 that the ISO sweep
+// already had, and NONE of the four is any of the three deals, because every
+// deal in this segment is stated as a QUARTER. Nine rejections in section 10
+// of the analysis file, including 2026-12-31 rejected because it is already
+// the reviewBy of the landscape module two positions downstream, and the
+// takeover long-stop rejected as an outside date rather than a gate.
+//
+// WHAT THE NEIGHBOURS OWN AND THIS MODULE DOES NOT - 10.6 (t), TWELVE
+// OMISSIONS ACROSS TWO NEIGHBOURS. From the mechanism lesson
+// the-certification-stack (public, v06.44r): (1) what a listing, a test method
+// and an installation code each ARE; (2) the six-row stack and its five
+// natures; (3) the 5th-against-6th edition change and its 2027-01-01 date;
+// (4) the fire record and the failure-rate series; (5) how an incident prices
+// and the legacy-indoor-NMC against modern-outdoor-LFP sort; (6) the
+// vocabulary traps. That lesson names no vendor and pre-declares its own stop
+// at "what an underwriter or a lender does with the file". From the landscape
+// module landscape-insurance-and-risk-transfer-2026-09 (contributor, v06.43r):
+// (7) that neither broker in that segment names a standard anywhere; (8) the
+// thermal-runaway underwriting question and the 30-to-40-cents rate; (9) the
+// absence of any storage revenue put; (10) the lifecycle tower against the
+// operational exchange and their USD 5bn and USD 10bn figures; (11) the
+// embedded commissioning cover with automatic DSU reduction; (12) that DNV is
+// the only company connected to all three of its members. That module named
+// THIS segment as where its own gap is filled, so the split was written before
+// this module was; it is cited, never re-derived.
+//
+// A CORPUS DISAGREEMENT CARRIED RATHER THAN RESOLVED. The challenger's own
+// file records the 2026 installation-code edition as referencing Section 9.7
+// of its consensus standard; the mechanism lesson, written from the code's
+// issued text, records that the issued text does NOT name it and that a
+// submitted amendment would. Both readings are in the prose and in section 7,
+// and neither is picked - it is the first time this lane has found its own
+// neighbour lesson and a member dossier stating the same fact two ways.
+//
+// Five rows in the bets table - one per incumbent and challenger, which is
+// 10.6's shape and here leaves the two adjacents to the threat section, where
+// they belong because both OUTRANK this segment's engineering incumbent on the
+// only list covering all three (7th and 14th against 22nd) and both are
+// incumbents of epc-and-construction. Quiz answer indices 2, 0, 3, 1, 0 per
+// (ff4); per (ll3)/(mm5) the answer-LENGTH channel was measured at BOTH ends
+// and closed by DEEPENING DISTRACTORS rather than padding per (nn10) - sole
+// longest 0 of 5, sole shortest 0 of 5, ranks 3, 2, 2, 2, 2 of four. Seven
+// pre-splice simulations with printed denominators: 195 clFmt fields, 48
+// plain-text fields, 101 term uses over 17 distinct, 8 glossary entries all
+// used, 5 quiz items, 32 ledger rows. The literal is 100 per cent ASCII.
+//
+// AND THE RECOUNT CAUGHT THE CLAIM THIS MODULE MOST WANTED TO MAKE - (nn7)'s
+// shape, replicated into THREE places. The draft read "the second source held
+// the scope first", off the challenger's NRTL entry listing UL 9540 and UL
+// 1973 beside a 2021-03-05 renewal date. The same dossier records OSHA
+// GRANTING UL 2580 on 2026-02-03 - and UL 2580 is in that same list. So the
+// list is the CURRENT scope, not the renewal's, and the record gives no grant
+// date for either storage standard on that member at all. The true finding is
+// better than the false one and survives as the module's advice: one party's
+// scope dates are published to the day and the other's are not, which is an
+// asymmetry in the RECORD rather than a difference in quality. A ledger row
+// was added to carry the correction rather than deleting the claim quietly.
+// ==============
+function guidanceDocLandscapeAssurance_() {
+  return {
+ "id": "landscape-assurance-2026-09",
+ "group": "The Value Chain",
+ "title": "Assurance - the Landscape",
+ "short": "Seven members and not one league table that covers them. The segment sells authority, and the party whose mark the codes point at owns the least of it: it pays a sister organisation for access to the standards its own mark certifies to. Three changes of control land in one quarter.",
+ "source": {
+  "doc": "Corpus synthesis over the 7 member dossiers of the assurance segment, at the profile versions in the claims ledger - no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 10,
+  "series": "Industry Guidance - landscape module",
+  "repo": "repository-information/industry-guidance/landscape-assurance-analysis.md"
+ },
+ "updated": "2026-09-17",
+ "reviewBy": "2026-10-31",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "7 members, 4 rankings",
+   "v": "and not one of them covers all seven",
+   "sub": "The battery-storage assessment names six major companies and four of them sit here. The global revenue league table ranks two of the seven and omits three more by name. The design-firm lists cover three others. Nothing ranks the remaining member on revenue anywhere. Say which market you mean before you say who leads it"
+  },
+  {
+   "k": "15 of 21",
+   "v": "member pairs connected in the graph - and all 15 curated typings read competitor",
+   "sub": "No partner, no customer, no supplier edge anywhere inside the roster. The six pairs with no edge at all are exactly the six that would join the report half to the certificate half without passing through the two members that sit in both"
+  },
+  {
+   "k": "USD 22m a year",
+   "v": "paid by the default certifier for access to the standards its own mark certifies to",
+   "sub": "It owns the mark and not the documents. A sister non-profit publishes UL 9540, UL 9540A and UL 1973, holds about 61.6 per cent of the equity and 94.1 per cent of the votes, and is paid for library access out of cost of revenue"
+  },
+  {
+   "k": "Three in one quarter",
+   "v": "pending changes of control, every one of them targeted at the fourth quarter of 2026",
+   "sub": "One separates a standards author from its laboratories, one takes a listed certifier private, and one folds an independent laboratory into an incumbent. Two can change a role label on this roster; the third changes the map the roster competes on"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held. Four carry it here, and no single measure ranks all four: two are ranked by a global revenue league table, one by design-firm lists that do not rank the other two at all, and one appears in neither."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member contesting the established set. One carries it here, and its dossier attaches a published expiry to the label: the entire testing and certification subsidiary is under an agreement to be sold, so after closing the party that authored the test and the party that runs it are different organisations."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member that sells into a segment without being ranked in it. Two carry it here, and both are incumbents of another segment - which is why the only league table that covers all three engineering members puts the two adjacent ones above the ranked one."
+  },
+  {
+   "t": "lender's engineer",
+   "d": "The independent engineer seen from the lender's side of the table: the firm the bank appoints, and the borrower pays, to test a project's design, equipment, contracts and revenue model before it will lend, and to sign each construction drawdown afterwards. The same firm is an owner's engineer when the owner appoints it, and the seat is what this segment's first buying criterion buys."
+  },
+  {
+   "t": "NRTL scope",
+   "d": "The list of standards and sites a US laboratory is actually recognised to certify against. Recognition is not general: it is granted standard by standard and site by site, so two laboratories can both be recognised and still be unable to issue the same certificate. The dates a standard entered a laboratory's scope are therefore commercial facts, not paperwork."
+  },
+  {
+   "t": "battery-storage TIC",
+   "d": "The named sub-market in which this segment's two certifier incumbents are called leaders - testing, inspection and certification work on battery energy storage specifically, sized by the assessment that names them at USD 0.66bn in 2026 rising to USD 1.30bn by 2032. It is a small fraction of global TIC and of either firm's own revenue."
+  },
+  {
+   "t": "test witness",
+   "d": "The independent party that attends a large-scale fire test, verifies that the procedure was followed and attests the result. It need not be the body that wrote the procedure or the body that will issue any listing, and in this corpus it frequently is not - which is how a protocol's author loses the test work it created."
+  },
+  {
+   "t": "standards library access",
+   "d": "A paid licence to use the text of the standards a laboratory tests against. It is what separates owning a mark from owning the documents behind it, and in this segment the leading certifier's licence is a disclosed annual sum sitting in cost of revenue rather than a footnote."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Say which market you mean before you say who leads it, because on this roster that sentence does more work than any ranking in it.** Seven members - four {{incumbent}}s, one {{challenger}} and two {{adjacent}} - and **not one league table in the corpus covers all seven.** Four separate instruments touch the segment and each one measures a different thing. The registry's own notes say, in as many words, that a landscape drawing on this segment should say which market it means. This section is that sentence, and it is a measurement rather than a caveat.",
+    "**Instrument one is the only ranking of the market this corpus actually cares about.** A July 2026 assessment of {{battery-storage TIC}} names **six major companies** and calls **the first five leading players**, with two of those five singled out as *the leading key players* in its company evaluation. **Four of those six are members here** - the two singled out, a third named among the leaders, and the {{challenger}} placed among the majors behind them. The two it does not cover, TUV Rheinland and TUV SUD, carry no dossier in this corpus at all. That is the strongest claim anybody can make about this segment from a named source, and it is a claim about a market sized at **USD 0.66bn in 2026, rising to USD 1.30bn by 2032**.",
+    "**Instrument two ranks on revenue, covers two of the seven, and contradicts the word incumbent.** A May 2026 league table of global TIC - the only source located that ranks the majors on a single stated measure - places one member **fifth of ten at USD 4,619m** and the other **eighth at USD 3,106m**, in a market so fragmented that **the top ten hold under a quarter of global revenue and the top five about 11.7 per cent**, which puts each of the two under 2 per cent of the world market. **Nobody is an incumbent in global TIC.** Two cautions travel with that table and both are the dossiers' own: the fifth-place figure does **not** reconcile to that company's reported FY2025 revenue at prevailing rates, so **the rank order is the finding and the absolute number is indicative**; and the table **omits** a third {{incumbent}} of this segment, its {{challenger}}, and the buyer that is acquiring the challenger's laboratories.",
+    "**Put the two instruments beside each other and the boundary draws itself.** The two firms the battery assessment calls its leading key players each book more revenue in a year than **the entire market that assessment measures** - about **4.6 times** it on one side and about **7.0 times** it on the other, taking each firm's own reported group revenue against the USD 0.66bn figure. So the sub-market ranking is true and it is small. **Read as a superlative about the segment it would be wrong; read as what it is - a named leadership claim inside a named sub-market - it is the most useful sentence in this module.**",
+    "**Instrument three covers three other members and inverts the roles.** The three engineering firms here are ranked by the design-industry lists rather than by any TIC table, and on the 2026 editions the segment's **engineering** {{incumbent}} sits **22nd** overall and third in power, while the two {{adjacent}} members sit **7th** - first in power design for an eleventh consecutive year - and **14th**. **The bench outranks the ranked player on the only instrument that covers all three of them**, and the registry is not wrong to do it: those two are ranked as engineer-builders, and they are {{incumbent}}s in a different segment for exactly that reason. Instrument four is the absence of one - **no source anywhere ranks the fourth {{incumbent}} on revenue against this cohort**, and its own group accounts are published in a currency the corpus carries no sourced conversion for.",
+    "**Now the relationship graph, which was run independently and says the same thing in a different language.** Of the **21 possible member pairs, 15 carry an edge** - and the typings are the finding rather than the density: **15 curated typings across 12 curated edges, and every one of the fifteen reads competitor.** There is **no partner, no customer and no supplier edge anywhere inside this roster.** Every other segment this lane has covered has at least one. Here the members only compete.",
+    "**And the six pairs with no edge at all are not scattered.** They are exactly the six that would join the three engineering firms to the two pure certification bodies. **The two members that do connect to all six others are the two that hold both kinds of authority at once** - one writes the recommended practice, runs the laboratory and signs the lender's report; the other holds the mark and the laboratory and sits on lender panels as well. **So the graph splits this segment into a report half and a certificate half and names the two companies that are in both**, without anybody having to argue it. That is the same boundary the two league tables draw, arrived at from a different artefact.",
+    "**Which leaves the question of what is actually being sold, and the answer is authority in four separable pieces.** A member can *write* the document, *run the laboratory* that tests to it, *issue the mark* that says a product passed, and *sign the report* a lender relies on. **Nobody here holds all four, and the party with the largest share of the North American listing business holds the fewest.** It owns the mark and not the standards: a sister non-profit publishes {{UL 9540}}, {{UL 9540A}} and UL 1973, controls about **61.6 per cent of the equity and 94.1 per cent of the votes**, and is paid **USD 22m a year** for {{standards library access}}, recorded in cost of revenue. The mark is licensed royalty-free in the other direction. **A segment whose product is authority, in which the party issuing most of its market's listings licenses that authority from somebody else, is the finding this module exists to state.**",
+    "**The {{challenger}} is the inverse case and it is about to be split down that line.** It *wrote* the {{large-scale fire test}} - an interim procedure in 2024, made a {{consensus standard}} approved in both the United States and Canada in May 2025, whose own stated purpose is an assessment of bankability and insurability - and the 2026 edition of the installation code references its Section 9.7. It also runs laboratories that perform it. **Under an agreement announced on 2026-08-28 it is selling the laboratories and keeping the standards**, so after closing the author and the certifier are different organisations. One caution belongs beside that sentence and it is a disagreement inside the corpus rather than a doubt about the sale: **the member's own file records the 2026 code edition as referencing that Section 9.7, and the mechanism lesson built on the code's issued text records that the issued text does not name it and that a submitted amendment would.** Carry both readings; see the last section.",
+    "**The fourth axis is the one buyers meet first, and it is not certification at all.** FIVE of the seven sell an engineer's report of one kind or another, and the count is the segment's own: one {{incumbent}}'s summary names the holders of that seat in this corpus as itself, the engineering {{incumbent}}, both {{adjacent}} members, one firm outside the corpus and the mark-holding {{incumbent}} - six firms, five of them members here. Only one of the five sells the seat beside a laboratory it also owns. The registry's first buying criterion is **reliance** - who may trust the report - and its instrument is the {{reliance letter}}, not a mark. **The report seat and the certificate seat are bought by different people, at different moments, on different paper**, and that is why the graph refuses to connect the two halves except through the two members that sell both."
+   ],
+   "sales": "Before you quote anybody's leadership in this segment, name the market the claim was made about. The strongest available claim is a leadership position inside a sub-market worth USD 0.66bn - real, sourced, and worth about a fifth of one of those firms' annual group revenue and a seventh of the other's."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on what route",
+   "read": "7 min",
+   "kind": "prose",
+   "ps": [
+    "**The registry gives this segment one {{challenger}}, and reading the threat off that label alone would miss almost all of it.** The bench is one named party, and its own dossier says its position is that of a second source rather than a leader: the battery assessment puts it among the majors and behind the five it calls leaders, the global revenue table omits it, and the mark-holding {{incumbent}}'s own annual filing does not list it among competitors. **The real contest in this segment is not one company against four. It is four different attacks on four different pieces of the authority the segment sells**, and three of the four come from outside the roster entirely.",
+    "**Route one - the second source, and the dates are published on one side only.** The {{challenger}} has been a recognised US laboratory since 1992, its recognition was renewed effective 2021-03-05 across 23 sites, and its {{NRTL scope}} carries **both** of the central storage standards today. One {{incumbent}}'s scope carries them only recently and the grants are dated: **UL 1973 entered it on 2024-04-24 and {{UL 9540}} on 2025-08-22**, the latter four and a half years after the application was filed in February 2021 and only after an on-site review. **What the record does not give is when each standard entered the challenger's scope** - the list is stated as current rather than as of any grant, and the same file records a separate OSHA expansion as recently as February 2026. **So the comparison a buyer can actually make is asymmetric: one party's scope dates are published to the day and the other's are not, and neither fact is about quality.**",
+    "**Route two - authorship erodes into an industry procedure the moment it works.** The {{challenger}}'s own strength is that it wrote the {{large-scale fire test}} the codes now ask for. Its own record shows what that buys: the 2025 and 2026 witness roster splits across at least three bodies, a repeat customer took its newer test to a rival witness in August 2026 fourteen months after this body witnessed the earlier one, another manufacturer ran the challenger's own procedure **at a different member's test facility**, and the test method nearly every RFP names has, at its sixth edition, taken on large-scale fire requirements of its own. **A test written into a code belongs to everyone who can run it.** The author keeps the citation; the {{test witness}} fee goes to whoever has a site and a diary.",
+    "**Route three - the threat to the mark-holding {{incumbent}} is not a competitor at all; it is mutual recognition, and its own filing names it.** The annuity in that business is not the test but the recurring inspection that keeps a mark valid - the largest of its four service categories at about **a third of FY2025 revenue**. Its 10-K names as risks any requirement that it accept third-party test results, any reduction in required inspections, and any harmonisation of international benchmarks. **All three attack the annuity rather than the test.** The same filing separately contemplates that artificial intelligence could replicate its services outright. Neither risk has a named company behind it, and neither is in this segment.",
+    "**Route four - a franchise awarded by a regulator can be taken back, and one was.** The same {{incumbent}} was named lead administrator of a federal cybersecurity labelling programme in December 2024, faced a confirmed regulatory investigation into its China joint venture and China-based laboratories from June 2025, and **withdrew from the role effective immediately on 2025-12-19**; a different body was appointed in its place in April 2026. **Its own file records this as the only documented instance in which that company held and then gave up an assurance franchise awarded by a regulator** - and it is the clearest available statement that authority here is held on terms rather than owned.",
+    "**And then there is the route that is not a threat to anybody in the segment but changes who is in it.** The mark-holding {{incumbent}} agreed in April 2026 to buy an electrical and electronics division carrying an **independent NRTL mark** for about EUR 575m in cash, closing expected in the same quarter as the other two deals. **Of roughly twenty recognised laboratories in the United States, that transaction removes one from independent hands**, and the buyer's own dossier reads it as making the company a consolidator for the first time. **The recognition map does not change; the ownership map does.**",
+    "**Where the two {{adjacent}} members fit, which is not where their role label suggests.** Neither sells a mark, and neither sells a standard. Both sell the {{owner's engineer}} and design seats, both are ranked above this segment's engineering {{incumbent}} on the design lists, and both are {{incumbent}}s of the construction segment. **They are not challengers to the certification half of this segment at all - they are the volume competition for the report half**, and the corpus says so from the other side: **DNV's own dossier** records that owner's engineering is a secondary line for DNV and that these two, which also design and build, are the volume providers in the United States.",
+    "**The honest summary of the threat picture.** The one labelled challenger is the segment's most credible attacker on exactly one axis - the second-source certificate - and is about to have that axis sold to a European buyer. The serious structural threats to the mark-holding {{incumbent}} are regulatory and technological rather than competitive, and neither is a party to this roster. **And the largest competitive pressure on the report half comes from two members the registry calls {{adjacent}}.** A threat section proportioned to the role labels would have described one contest and missed four."
+   ],
+   "sales": "If you are being asked to choose a certifier, the useful question is not who leads - it is whose NRTL scope already carries the standard your buyer's code cites, on the date you need the certificate. For one body that is a published fact with a date on it; for another the record gives no date at all - and knowing which of the two you are dealing with is itself the answer to how hard to check."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "One row per {{incumbent}} and {{challenger}}, which is the spec's shape and here means **five of the seven members**; the two {{adjacent}} members are covered in the section above and are ranked in another segment. Each bet is drawn from that company's **own** strategy read and is **analysis, not fact**; each risk column is the file's own rather than this module's.",
+   "cols": [
+    "Player",
+    "Role, and which pieces of authority it holds",
+    "The bet, and what its own file says about the risk"
+   ],
+   "rows": [
+    [
+     "**DNV**",
+     "{{incumbent}} - **all four pieces**: writes the recommended practice, runs the laboratory, issues certificates, and sits as {{lender's engineer}}. Foundation-owned; FY2025 group operating revenue NOK 35,291m, of which Energy Systems NOK 12,217m",
+     "**Sell independence itself, and sell it in three reinforcing layers.** The seat is the one input a lender cannot buy from the developer, the EPC or the OEM, and the recommended practice, the laboratory and the report each make the other two easier to sell. Foundation ownership removes external capital discipline entirely - no listing, no guidance, no rating, and an extraordinary dividend and a NOK 2bn research fund in the same year. **Its own file's risk:** the North American book is weaker than the brand suggests. Every storage financing it publicised in the trailing thirty months sits in Australia, Chile, Germany, Egypt or the United Kingdom, no readable source names it as engineer on any US project among the roughly eighty covered US developers, hyperscalers, EPCs and OEMs, and its own accounts record North America - Energy Systems' largest market - contracting about **12 per cent** in 2025."
+    ],
+    [
+     "**UL Solutions**",
+     "{{incumbent}} - **two pieces**: the laboratory and the mark. It does **not** own the standards. FY2025 revenue USD 3,053m, up 6.2 per cent organically; 87 laboratory sites in 27 countries",
+     "**Defend the annuity, and buy the recognition map.** The durable asset is the mark and the recurring inspection programme behind it - the largest of four service categories at about a third of revenue - rather than the standards, which a sister non-profit publishes and charges it USD 22m a year for. The bet on top of that is consolidation: an agreement in April 2026 to buy an independent laboratory and its mark for about EUR 575m. **Its own file's risk:** the premium is brand-defended rather than legally protected. A rival mark is reported at 25 to 50 per cent below its pricing at up to half the turnaround, any recognised laboratory satisfies the same federal requirement, and its own 10-K names mutual recognition and harmonisation - not a competitor - as the structural threat to the annuity."
+    ],
+    [
+     "**Intertek**",
+     "{{incumbent}} - **two pieces**, and a different second one: a laboratory and a mark, plus a buyer-side inspection business the others do not have. FY2025 revenue GBP 3,431.6m. Being taken private on a court-sanctioned {{scheme of arrangement}}",
+     "**Reach the project from the buyer's side rather than the manufacturer's.** The distinctive asset is not laboratory depth but position: the quality-assurance arm audits more than ninety storage factories to a 400-point checklist, runs inline monitoring at 280 inspection points, witnesses factory acceptance tests and traces raw materials upstream to the mine - engaged by the developer, integrator, IPP or financier buying the equipment, not by the manufacturer selling it. **Its own file's risk:** the division that holds that business is the one most likely to be sold again. A strategic review proposed separating it at **GBP 1,587.2m of FY2025 revenue on a 10.0 per cent margin** from the testing arm's GBP 1,844.4m on 25.0 per cent, with a sale preferred; the review was paused for the takeover and the buyer intends to recommence it about twelve months after completion. The division's margin fell to 8.7 per cent in FY2025 and to 6.9 per cent in the first half of 2026 - the only one to lose margin in either period."
+    ],
+    [
+     "**Sargent & Lundy**",
+     "{{incumbent}} - **one piece**: the report. No mark, no standard, no laboratory. Privately owned by its own engineers; **no revenue figure has ever been published**",
+     "**Be paid fees for judgment and never for equipment.** The model is architect-engineer, {{owner's engineer}} and {{independent engineer}}, and it takes construction exposure only inside a consortium where a constructor carries the risk. The published proxies are ranks rather than revenue: first in nuclear plants and second in battery-storage design on the 2026 sector lists, 22nd overall, with owner's and independent engineering claimed across nearly 25 GW of clean generation and storage. **Its own file's risk:** the growth claims cannot be checked. There are no financial statements, the firm has never published a revenue figure, aggregator estimates for it differ by more than an order of magnitude, and the data-centre practice that its own file calls real and growing is **deliberately unnamed** - clients appear as confidential hyperscaler and confidential colocater."
+    ],
+    [
+     "**CSA Group**",
+     "{{challenger}} - **two pieces today and one after closing**: it writes the standard and runs the laboratory, and the laboratory is being sold. A member-based not-for-profit; revenue disclosed to members only",
+     "**Own the protocol, and fund the standards work out of the laboratory that runs it - until the laboratory is sold.** It wrote the {{large-scale fire test}} procedure, turned it into a {{consensus standard}} approved in both countries, and holds the deepest relationship with the Canadian installation code, which provinces adopt into law on a three-year cycle. **Its own file's risk:** the sale strips the authorship of its laboratory, and the authorship was already eroding into an industry procedure rivals run. Its own read is that the home-market moat is **the code, not the mark** - one jurisdiction's authority recognises 26 marks and treats accredited ones as carrying equivalent weight - and a US appellate court held in 2024 that codes incorporated into **Canadian** law are the law and freely copyable in the United States, against Canadian courts that enforced the same copyright to a contempt sentence."
+    ]
+   ],
+   "sales": "Five members and FOUR distinct combinations of the same four pieces - the two that share a combination differ instead on who engages them. Work out which pieces your buyer's requirement actually needs before you work out which firm to approach; a mark and a report are bought by different people on different paper."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it and marked coarse where it is not. **The coarseness is the story here.** A sweep of all seven dossiers for ISO dates returns **three** distinct future days across the whole segment and a word-form sweep returns **one**, which the ISO sweep had already found. Every one of the three pending changes of control is stated as a **quarter**, so no day-level scan can see any of them. Rows are ordered by how soon the record says they resolve, and **row 1 is this module's own review date**.",
+   "cols": [
+    "Watch",
+    "When the record says",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**The {{challenger}}'s members vote on selling its laboratories**",
+     "**Early October 2026 - month only, no day published.** A two-thirds vote of members is required",
+     "**This module's review date is set on it.** A vote for the sale confirms that the author of the fire-test procedure and the body that runs it become different organisations; a vote against leaves this roster exactly as described. It is the nearest gate in the segment and the only one of the three that can resolve inside six weeks"
+    ],
+    [
+     "That sale closes, and the change-of-ownership notice reaches the US regulator",
+     "**Targeted fourth quarter 2026 - quarter only.** The laboratory's US recognition carries an explicit condition to notify any change of ownership in writing",
+     "It decides whether the {{challenger}} role here attaches to a Canadian standards association or to a Dutch-owned testing group - and what survives of the mark, the {{NRTL scope}} and the 23 recognised sites under a new owner"
+    ],
+    [
+     "The other {{incumbent}}'s purchase of an independent laboratory closes",
+     "**Expected fourth quarter 2026 - quarter only**",
+     "It takes one of roughly twenty recognised US laboratories out of independent hands and makes the buyer a consolidator for the first time. Watch whether the acquired mark is retained or retired - that is the difference between buying capacity and buying a competitor"
+    ],
+    [
+     "The listed {{incumbent}}'s court sanction hearing",
+     "**Fourth quarter 2026 or first quarter 2027 - two quarters wide, no day.** Long-stop 2027-06-18",
+     "Every downstream date floats with the court's diary: last trading day, suspension, delisting. Shareholders approved it in August 2026 with 98.72 per cent in favour, so the binding constraints are the nine merger clearances, the eight investment-screening regimes and a defence-trade notification - not the vote"
+    ],
+    [
+     "Whether the separation review of the buyer-side inspection business restarts",
+     "**About twelve months after the take-private completes - derived from an undated completion**",
+     "The division the review proposed selling is the one that holds the business this corpus actually uses that {{incumbent}} for. Two changes of ownership in about eighteen months would be the outcome, and no date in the record fixes either"
+    ],
+    [
+     "Which body witnesses the next large-scale fire test a covered manufacturer announces",
+     "**No date - it happens when it happens**",
+     "The cleanest live test of whether authorship holds test work. The 2025 and 2026 roster already splits across at least three bodies, and one repeat customer changed witness between editions"
+    ],
+    [
+     "Whether a sixth edition of the foundation-owned {{incumbent}}'s battery benchmark appears",
+     "**No date. Editions ran 2018, 2019, 2020, 2022 and 2024** and none has been published since",
+     "Its own file reads the silence as a move from market-shaping publication to maintenance mode, with vendor-commissioned bankability reports as the revenue-bearing form of the same testing. A sixth edition would refute that reading"
+    ],
+    [
+     "Whether any US financing names that same {{incumbent}} as engineer",
+     "**No date - the check is continuous**",
+     "Its own file's second judgment is that the North American book is weaker than the brand suggests. A named US mandate weakens that reading; a second year of North American contraction alongside continued silence strengthens it"
+    ]
+   ],
+   "sales": "Three of these eight rows resolve inside one quarter and none of the three carries a day. If a proposal of yours turns on which organisation holds a certificate or a mark in 2027, write the name of the body and the standard rather than the brand, and the scope date wherever the record gives one."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "6 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**If you sell BESS - the first thing to internalise is that no single firm here can give you the whole file, and exactly one comes close.** Four separable pieces of authority are on sale in this segment - the standard, the laboratory, the mark and the report - and **no member holds all four**. Work out which pieces the requirement in front of you actually needs before you work out whom to call.",
+    "**1 - Check the {{NRTL scope}}, not the reputation, and check it with a date.** US recognition is granted standard by standard and site by site, so two recognised laboratories are not interchangeable. On the two central storage standards one {{incumbent}}'s grants are published to the day and they are recent - UL 1973 on **2024-04-24** and {{UL 9540}} on **2025-08-22** - while the {{challenger}}'s scope carries both **today** with no grant date stated anywhere in the record. **Ask which body held the scope on the date your certificate is dated, and expect to have to look it up rather than be told.**",
+    "**2 - Separate the mark from the standard when somebody quotes the standard's name at you.** The documents your buyer's code cites are published by a standards body; the mark on your enclosure is issued by a laboratory, and the two are not always the same organisation - in the case that matters most here they are deliberately not, with a disclosed **USD 22m a year** paid for {{standards library access}} and the mark licensed royalty-free the other way. **So a claim of being UL-listed names a mark and not an author, and any recognised laboratory can issue a listing to the same document.** That is a pricing lever: a rival mark is reported at 25 to 50 per cent below and at up to half the turnaround, and it satisfies the same federal requirement.",
+    "**3 - A {{test witness}} is a role, not a brand, and it is separable from the body that wrote the procedure and from the body that will issue any listing.** One manufacturer ran the {{challenger}}'s own procedure at a **different member's** test facility. A repeat customer took its newer test to a rival witness. **If your buyer's RFP names a body rather than a procedure, that is worth a question** - the procedure is the requirement and the witness is a supplier.",
+    "**If you sell AIDC power - the seat you will meet is the report, not the certificate, and there are two different seats wearing one name.** The {{lender's engineer}} is appointed by the bank and paid by you; the {{owner's engineer}} is appointed by the owner and writes the specification you are answering. **The same firms sell both, and the one you are talking to determines whether you are being tested or being briefed.**",
+    "**4 - {{reliance}} is the first buying criterion the registry lists for this segment, and it is a document rather than a reputation.** A report in a data room is information; a {{reliance letter}} is what makes a named third party - a new lender, a buyer of the project - able to act on it, usually under the same liability cap. **If a report is being used to support a transaction it was not written for, ask who has reliance before you argue about its contents.**",
+    "**5 - The engineering seats you will actually compete against are held by firms this registry calls {{adjacent}}.** Both are ranked above the segment's own engineering {{incumbent}} on the design lists - 7th and 14th against 22nd - and **DNV's own file** says as much about itself: owner's engineering is a secondary line for DNV, and the two design-and-build firms are the volume providers in the United States. **Do not size the competition off the role labels.**",
+    "**The line that reads across both paths, and it is this segment's one structural warning.** One member appears on **both sides of the same transaction** - as the manufacturer's certifier and as the lender's engineer. Its own file states it plainly and does not treat it as a problem. **The corpus contains no rule, disclosure practice or published finding about that position anywhere**, and the one member that publishes a structural firewall between advising and certifying does so for an entirely different regulated business. If you are relying on a report about a product the same group certified, **nobody in this record will tell you whether that matters; you have to decide it.**"
+   ],
+   "sales": "The two questions that move a deal here are which body holds the scope on your standard, and who holds reliance on the report your buyer is reading. Both have answers in documents rather than in reputations - though only some of those documents carry a date."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "6 min",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's seven member dossiers at the versions below; no ingested document and no new research. Every load-bearing claim above traces to a dossier field, to the segment registry or to the relationship graph. Dossiers already cite their own sources, so this ledger cites dossiers - and a claim whose only support is this module is an opinion, written as one in the prose.",
+   "rows": [
+    [
+     "Segment holds 7 members - 4 incumbents, 1 challenger, 2 adjacent; chain position 17 of 19, tier services; five buying criteria",
+     "profiler-segments.json - segments[assurance].members[], .position, .tier, .buyingCriteria"
+    ],
+    [
+     "The registry itself says a landscape drawing on this segment should say which market it means, and that neither new incumbent is an incumbent in global TIC",
+     "profiler-segments.json - segments[assurance].notes"
+    ],
+    [
+     "The battery-storage TIC assessment of 2026-07-08 names six major companies, calls the first five leading players, and singles out two as the leading key players; market sized USD 0.66bn in 2026 rising to USD 1.30bn by 2032",
+     "profile:csa-group @ v1 - recentDevelopments 2026-07-08 and productsAndServices positioning; corroborated at profile:intertek @ v1 - strategyRead 1 and relationships ul-solutions"
+    ],
+    [
+     "Four of those six named majors are members of this segment; the two that are not carry no dossier in this corpus",
+     "profiler-segments.json members[] compared against profile:csa-group @ v1 - productsAndServices positioning (which lists all six)"
+    ],
+    [
+     "The global TIC league table of 2026-05-11 ranks Intertek 5th of ten at USD 4,619m and UL Solutions 8th at USD 3,106m; top ten under a quarter of global revenue, top five about 11.7 per cent",
+     "profile:intertek @ v1 - strategyRead 1; profile:ul-solutions @ v1 - strategyRead 2"
+    ],
+    [
+     "That table's USD 4,619m does not reconcile to the reported FY2025 revenue at prevailing rates, so the rank order is the finding and the figure indicative; the table omits DNV, CSA Group and Kiwa",
+     "profile:intertek @ v1 - technicalSpecs notes on the market-position band"
+    ],
+    [
+     "UL Solutions FY2025 revenue USD 3,053m up 6.2 per cent organically; 87 laboratory sites in 27 countries; Ongoing Certification Services about a third of revenue and the largest of four categories",
+     "profile:ul-solutions @ v1 - financials FY2025, summary, productsAndServices Ongoing Certification Services"
+    ],
+    [
+     "Intertek FY2025 revenue GBP 3,431.6m; the division holding the buyer-side inspection business at GBP 1,587.2m on a 10.0 per cent margin against testing at GBP 1,844.4m on 25.0 per cent; margin 8.7 per cent FY2025 and 6.9 per cent H1 2026",
+     "profile:intertek @ v1 - financials FY2025 and strategyRead 7 and 9"
+    ],
+    [
+     "UL Solutions does not own UL 9540, UL 9540A or UL 1973; UL Standards and Engagement publishes them, holds about 61.6 per cent of equity and 94.1 per cent of votes, and is paid USD 22m in 2025 for library access recorded in cost of revenue; the mark is licensed to it royalty-free",
+     "profile:ul-solutions @ v1 - summary, ownership.notes and strategyRead 1"
+    ],
+    [
+     "Intertek NRTL scope: UL 1973 added 2024-04-24 and UL 9540 added 2025-08-22, the latter four and a half years after a 2021-02-15 application and after an on-site review",
+     "profile:intertek @ v1 - policyExposure[0] and technicalSpecs regulatory-scope band"
+    ],
+    [
+     "CSA Group recognised as a US laboratory since 1992, renewed effective 2021-03-05 at 23 sites, with UL 9540, UL 1973, UL 1741, UL 2580 and UL 347A in scope; the recognition carries an explicit change-of-ownership notification condition",
+     "profile:csa-group @ v1 - summary and policyExposure[1]"
+    ],
+    [
+     "That scope list is stated as CURRENT rather than as of the 2021 renewal - the same dossier records OSHA granting UL 2580 on 2026-02-03, and UL 2580 is in the list - so the record gives no grant date for either central storage standard on this member",
+     "profile:csa-group @ v1 - summary, policyExposure[1] and recentDevelopments 2026-02-03"
+    ],
+    [
+     "CSA Group wrote TS-800 in 2024 and turned it into the CSA/ANSI C800:25 consensus standard published 2025-05-14, whose stated purpose is an assessment of bankability and insurability of energy storage",
+     "profile:csa-group @ v1 - ecosystemRole, recentDevelopments 2025-05-14 and strategyRead 3"
+    ],
+    [
+     "The member's own file records the 2026 installation-code edition as referencing Section 9.7 of that standard; the registered mechanism lesson on the certification stack records that the issued text does not name it and that a submitted amendment would",
+     "profile:csa-group @ v1 - policyExposure[0], against lesson the-certification-stack section the-stack"
+    ],
+    [
+     "CSA Group agreed on 2026-08-28 to sell CSA Group Testing and Certification Inc - 20 laboratories, about 2,100 employees, the CSA mark and the NRTL and SCC accreditations - to Kiwa Group for about C$2.1bn cash on a EUR 1.3bn enterprise value, subject to a two-thirds member vote in early October 2026, closing targeted Q4 2026",
+     "profile:csa-group @ v1 - ownership.notes and recentDevelopments 2026-08-28"
+    ],
+    [
+     "Intertek is being taken private at GBP 60.00 plus a retained 107.7p dividend, about GBP 9.5bn equity on GBP 10.9bn enterprise value; approved 2026-08-06 with 98.72 per cent in favour; court sanction expected Q4 2026 or Q1 2027; long-stop 2027-06-18; nine merger jurisdictions, eight investment-screening regimes and an ITAR notification",
+     "profile:intertek @ v1 - ownership.notes and policyExposure[10], [11] and [12]"
+    ],
+    [
+     "The buyer intends to recommence the paused separation review about twelve months after completion",
+     "profile:intertek @ v1 - ownership.notes and strategyRead 7"
+    ],
+    [
+     "UL Solutions agreed on 2026-04-13 to acquire an electrical and electronics division including the MET Labs certification mark for about EUR 575m in cash, closing expected Q4 2026; roughly twenty NRTLs are recognised in the United States",
+     "profile:ul-solutions @ v1 - recentDevelopments 2026-04-13 and policyExposure[0]"
+    ],
+    [
+     "UL Solutions was named lead administrator of a federal cybersecurity labelling programme in December 2024, faced a confirmed investigation from June 2025 and withdrew effective 2025-12-19; another body was appointed 2026-04-13",
+     "profile:ul-solutions @ v1 - policyExposure[4] and strategyRead 4"
+    ],
+    [
+     "Its 10-K names acceptance of third-party results, reduced inspection requirements and harmonisation as risks aimed at the recurring half of the business, and separately contemplates AI replicating its services",
+     "profile:ul-solutions @ v1 - policyExposure[1] and [7], and strategyRead 9"
+    ],
+    [
+     "A rival mark is reported at 25 to 50 per cent below UL pricing at up to half the turnaround, and products certified by any recognised laboratory satisfy the same federal requirement",
+     "profile:ul-solutions @ v1 - strategyRead 3"
+    ],
+    [
+     "DNV writes DNVGL-RP-0043, runs cell and fire test facilities at Rochester and in Texas, certifies OEM products and sits as lender's engineer - appearing on both sides of the same transaction, stated in its own file",
+     "profile:dnv @ v1 - summary, ecosystemRole and strategyRead 1 and 3"
+    ],
+    [
+     "DNV FY2025 group operating revenue NOK 35,291m with Energy Systems NOK 12,217m; North America, Energy Systems' largest market, contracted about 12 per cent; no US storage or data-centre engineer mandate is named on any readable channel",
+     "profile:dnv @ v1 - financials FY2025, summary and strategyRead 2"
+    ],
+    [
+     "The DNV Battery Scorecard ran to five editions - 2018, 2019, 2020, 2022 and 2024 - with none since",
+     "profile:dnv @ v1 - strategyRead 4 and recentDevelopments 2024-04-24"
+    ],
+    [
+     "Sargent and Lundy publishes no revenue figure and never has; 2026 sector ranks are nuclear first, battery storage second, power third; 22nd on the 2026 design list; owner's and independent engineering claimed across nearly 25 GW",
+     "profile:sargent-lundy @ v2 - financials FY2024 and FY2025, recentDevelopments 2026-07-15, 2026-04-27 and 2026-05-29"
+    ],
+    [
+     "Sargent and Lundy's data-centre clients appear only as confidential hyperscaler and confidential colocater, and the anonymity is read in its own file as the client's choice",
+     "profile:sargent-lundy @ v2 - strategyRead 2"
+    ],
+    [
+     "Burns and McDonnell is 7th on the 2026 design list and first in power design for an eleventh consecutive year, at USD 8.6bn 2025 revenue; Black and Veatch is 14th and 6th in power at about USD 5.0 to 5.1bn",
+     "profile:burns-mcdonnell @ v5 - recentDevelopments 2026-04-23 and financials 2025; profile:black-veatch @ v7 - financials 2025"
+    ],
+    [
+     "DNV's own file names Sargent and Lundy, Black and Veatch and Burns and McDonnell as holding the visible owner's-engineer seats and the last two as the volume providers in the United States",
+     "profile:dnv @ v1 - productsAndServices owner's engineering and data-centre advisory entries"
+    ],
+    [
+     "15 of the 21 possible member pairs carry an edge; 12 are curated and carry 15 typings, all 15 reading competitor; DNV and UL Solutions each connect to all six other members; the six absent pairs are exactly the engineering-half against certification-half pairs",
+     "profiler-graph.json @ built 2026-09-13 - edges[] filtered to both ends in the segment"
+    ],
+    [
+     "Six external memberships across the roster out of 314 in the registry; three incumbents rank adjacent elsewhere and both adjacent members are incumbents of epc-and-construction",
+     "profiler-segments.json - all segments[].members[] cross-referenced"
+    ],
+    [
+     "40 policyExposure entries across the seven members, 17 dated, none in the future; two members carry no policy array at all",
+     "profile:dnv, sargent-lundy, ul-solutions, intertek, csa-group, black-veatch, burns-mcdonnell - policyExposure[]"
+    ],
+    [
+     "The insurance-and-risk-transfer landscape module records that neither broker in that segment names a standard anywhere, and that DNV is the only company connected to all three of its members",
+     "guidance:landscape-insurance-and-risk-transfer-2026-09 - sections the-sellers-play and claims-ledger"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does not say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**1 - No instrument in the corpus ranks this segment.** Four measure parts of it - a battery-storage assessment covering four members, a global revenue table covering two, design-firm lists covering three, and nothing at all for one. **The largest coverage any single source gives is four of seven**, and the two revenue-based instruments do not overlap by a single company. Every ranking sentence in this module therefore carries the name of the instrument that produced it.",
+    "**2 - Two members publish no revenue, and one of them has never published one.** The engineering {{incumbent}} has no financial statements and no revenue figure of any kind; the two aggregator estimates located for it differ by more than an order of magnitude and neither is used. The {{challenger}} discloses its accounts to members only, and the only public figures are the sale price, a small US affiliate's tax filing, and one executive biography. **Where a scale claim appears for either, it is a rank or a headcount and it is labelled as one.**",
+    "**3 - It states the code reference two different ways, and this module carries both.** The {{challenger}}'s own file records the 2026 edition of the installation code as referencing Section 9.7 of its {{consensus standard}}; the registered mechanism lesson on the certification stack, written from the code's issued text, records that the issued text does **not** name it and that a submitted amendment would put the reference into the code's own Section 9.2.1. **The two readings are not reconciled anywhere in the corpus and this module does not reconcile them** - if a proposal of yours turns on that reference, read the issued edition yourself.",
+    "**4 - It does not say what any of this costs.** Not one fee, quotation, day rate, test price or contract value for a report, a listing, a witnessed burn or a factory audit appears anywhere in the seven files. The only price in the segment is the **USD 22m a year** one member pays another organisation for {{standards library access}}, and a reported **25 to 50 per cent** discount of one mark against another with no absolute figure behind it.",
+    "**5 - It does not address the conflict it describes.** One member sells the {{lender's engineer}} report and certifies the OEM products those reports assess, and says so in its own summary without treating it as a problem. **The corpus contains no rule, no disclosure practice, no regulator finding and no published criticism of that position.** The nearest thing to a governance answer anywhere in the segment is a different member's structural firewall between advising and certifying, which it maintains for a medical-device regime and not for this one. Its own file separately records that the obvious conflict-of-interest critique of the standards-writer relationship is **structurally obvious and evidentially thin** - widely paraphrased, and with no substantial independent investigation, academic work or regulator finding published since 2024.",
+    "**6 - It does not tell you who wins a contested seat.** No member publishes a win rate, a panel position, a client list for the report business or a competitive loss. One {{incumbent}}'s data-centre clients are named only as confidential hyperscaler and confidential colocater; another's US storage mandates are **absent from every readable channel** rather than confidential. **Absence of a named mandate and confidentiality of a named mandate look identical in this record and are not the same thing.**",
+    "**7 - It does not date any of the three changes of control.** All three are stated as quarters. A sweep of all seven dossiers returns **three** distinct future day-level dates in the whole segment - a takeover long-stop, an accreditation expiry and a control-sunset provision - and **not one of them is any of the three deals.** The fourth quarter of 2026 is where this segment's map changes, and the record gives no day inside it.",
+    "**8 - It does not say what happens to a mark under new ownership.** Whether the {{challenger}}'s mark keeps its name, whether the acquired laboratory's mark is retained or retired, and what becomes of one member's China joint venture under a new owner are all unpublished. **The recognitions themselves are public; the brands attached to them are not, and the dates they were granted are published unevenly across the roster.**",
+    "**9 - And the segment's own gap is one this module can only name.** The landscape module on the segment two positions downstream found that **neither insurance broker in the corpus names a standard anywhere**, and that the one company connected to all three of its members is an {{incumbent}} of this segment. **This module can say who owns the standards and who is accredited to them. It cannot say why the brokers do not cite them** - no member of this segment publishes anything about that relationship either."
+   ],
+   "sales": "The two things a buyer is most likely to ask you for - a price and a named reference - are the two this segment publishes least. Answer with the standard, the body, and the scope date where the record gives one."
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "4 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "This segment has seven members. How many league tables cover all seven, and what is the most any single source covers?",
+     "a": "None, and four. The battery-storage assessment names six major companies of which four are members here; the global revenue table ranks two of the seven; the design-firm lists cover three others; and one {{incumbent}} is ranked on revenue by nothing at all. The two revenue-based instruments do not share a single company."
+    },
+    {
+     "q": "What does the relationship graph say about the seven members, and what is unusual about it?",
+     "a": "Fifteen of the twenty-one possible pairs carry an edge, and **all fifteen curated typings read competitor** - no partner, no customer, no supplier edge anywhere inside the roster. The six pairs with no edge are exactly those joining the three engineering firms to the two pure certification bodies, and the two members connected to all six others are the two that hold both kinds of authority."
+    },
+    {
+     "q": "What are the four separable pieces of authority sold in this segment, and who holds all four?",
+     "a": "Writing the standard, running the laboratory, issuing the mark, and signing the report a lender relies on. **Nobody holds all four.** One {{incumbent}} comes closest - it writes a recommended practice, runs laboratories, certifies products and sits as {{lender's engineer}} - and the party with the largest North American listing business holds the fewest of them."
+    },
+    {
+     "q": "The default certifier's name is on the standards. What does it actually own, and what does it pay?",
+     "a": "It owns the **mark**, not the documents. A sister non-profit publishes {{UL 9540}}, {{UL 9540A}} and UL 1973, holds about 61.6 per cent of the equity and 94.1 per cent of the votes, and is paid **USD 22m a year** for {{standards library access}}, recorded in cost of revenue. The mark is licensed to the non-profits royalty-free in the other direction."
+    },
+    {
+     "q": "Why is checking a laboratory's NRTL scope with a date on it a commercial question rather than a paperwork one?",
+     "a": "Because {{NRTL scope}} is granted standard by standard and site by site, so two recognised laboratories are not interchangeable - and the record is asymmetric about when. One {{incumbent}}'s grants are dated to the day: UL 1973 on 2024-04-24 and {{UL 9540}} on 2025-08-22, four and a half years after applying. The {{challenger}}'s scope carries both **today**, with no grant date stated anywhere. **Look the date up; do not infer it from how long a body has been recognised.**"
+    },
+    {
+     "q": "Three changes of control are pending in this segment. What are they, and what do they have in common?",
+     "a": "The {{challenger}} is selling its laboratories and keeping its standards; one {{incumbent}} is being taken private on a {{scheme of arrangement}}; and another {{incumbent}} is buying an independent laboratory and its mark. **All three are targeted at the fourth quarter of 2026 and none carries a day-level date anywhere in the record.** Two can change a role label here; the third changes the map."
+    },
+    {
+     "q": "Why are the two adjacent members not challengers, and what do they actually compete for?",
+     "a": "Because they are ranked as engineer-builders rather than as certifiers - and they are {{incumbent}}s of the construction segment for that reason. They sell no mark and no standard. What they compete for is the **report half**: they sit 7th and 14th on the design lists against this segment's engineering {{incumbent}} at 22nd, and that {{incumbent}}'s own file calls them the volume providers in the United States."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "4 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague's slide says one of this segment's members is *the leader in testing and certification*. What is the defensible version of that claim?",
+     "c": [
+      "That it leads global TIC, since the only revenue league table located ranks it fifth of ten at USD 4,619m and no other member of this segment appears above it on that measure anywhere in the corpus",
+      "That it leads North American product safety listing, since holding the most recognised mark in that market is what incumbency in a listing business means",
+      "That it is named a leading key player in battery-storage TIC by the July 2026 assessment - a market that source sizes at USD 0.66bn, which is a fraction of that firm's own annual revenue",
+      "That leadership cannot be claimed here at all, because a market whose top ten hold under a quarter of global revenue and whose top five hold about 11.7 per cent has no leader on any measure worth quoting"
+     ],
+     "a": 2,
+     "why": "The claim survives only where a market is named. The battery-storage assessment names it; the global revenue table places the segment's two ranked certifiers fifth and eighth with world shares of roughly 1.5 to 2 per cent, so the general claim fails. The fourth option over-corrects: the sub-market claim is real, sourced and useful - it is simply small, and the two firms it names each book several times that market's whole size."
+    },
+    {
+     "q": "Who publishes UL 9540, UL 9540A and UL 1973, and what does the company whose name appears on them actually hold?",
+     "c": [
+      "A separate non-profit publishes all three; the company holds the mark, licenses it to that non-profit royalty-free, and pays USD 22m a year for access to the standards library",
+      "The company publishes all three and licenses them to other laboratories, which is why any recognised laboratory may issue a listing against them",
+      "A federal regulator publishes them as incorporated standards and separately recognises the laboratories permitted to certify against them, so no private party owns the text and the recognition is the only asset in play",
+      "A consensus committee publishes them under the company's chairmanship, which is the arrangement the conflict-of-interest critique is aimed at"
+     ],
+     "a": 0,
+     "why": "The gap between owning the mark and owning the documents is the whole company, and both directions are disclosed: the mark goes to the non-profits royalty-free, and USD 22m a year comes back the other way, recorded in cost of revenue. Recognised laboratories may indeed all certify to the same documents - but that follows from the regulator's recognition scheme, not from a licence the company grants."
+    },
+    {
+     "q": "A buyer asks why it should not simply use whichever recognised laboratory quotes lowest. What is the substantive answer?",
+     "c": [
+      "Because recognition is general once granted, so the only real differences are turnaround and price - which is exactly the argument the cheaper mark's owner publishes",
+      "Because only one laboratory's mark satisfies the federal requirement outright, and every other mark on the market is issued as a private certification mark outside a recognised scope - which is why an inspector having jurisdiction may decline one on sight and send the equipment back for re-listing",
+      "Because a certificate issued outside a laboratory's accredited scope is void, so the low quote usually signals work that would have to be redone under the correct body",
+      "Because recognition is granted standard by standard and site by site, so two recognised laboratories are not interchangeable - and on the two central storage standards one body's grants are dated and recent while another's are not stated at all"
+     ],
+     "a": 3,
+     "why": "Scope is the substantive difference. One incumbent's grants are published to the day - UL 1973 on 2024-04-24 and UL 9540 on 2025-08-22, four and a half years after applying - while the challenger's scope carries both today with no grant date in the record at all. The first option is the marketing claim and is half right - products certified by any recognised laboratory do satisfy the same federal requirement - but it assumes the scope question has already been answered."
+    },
+    {
+     "q": "The relationship graph connects fifteen of the twenty-one possible member pairs. What is the finding, and what is the shape of the six that are missing?",
+     "c": [
+      "That the roster is unusually dense, and the six gaps are the pairs where one member is too small to have been typed by the other",
+      "That every one of the fifteen curated typings reads competitor, and the six absent pairs are exactly those joining the engineering firms to the pure certification bodies",
+      "That the segment splits into two disconnected components - a report half and a certificate half - with the two members holding both kinds of authority sitting in neither of them and connecting to nothing",
+      "That partner and competitor typings appear in roughly equal numbers, which is what a segment selling four separable products should look like"
+     ],
+     "a": 1,
+     "why": "The typings are the finding rather than the density: fifteen of fifteen read competitor, with no partner, customer or supplier edge anywhere inside the roster. The graph is one connected component, not two - the two members that hold both report-side and certificate-side authority connect to all six others, which is precisely what prevents a split."
+    },
+    {
+     "q": "This module's review date is set on the challenger's member vote rather than on the two takeovers. Why is that the right gate?",
+     "c": [
+      "Because it is the nearest of the three and the only one that can resolve inside six weeks, and its outcome decides whether the segment's standards author and its laboratories become different organisations",
+      "Because a members' vote on a fixed date is the only one of the three that is certain to happen, the other two being conditional on merger clearances in nine jurisdictions and investment screening in eight, any one of which may refuse",
+      "Because the other two transactions change ownership without changing any role label on this roster, so neither of them would require a line of this module to be rewritten whenever they eventually complete",
+      "Because the long-stop date of the larger takeover falls outside any reasonable review horizon, leaving the vote as the only dated gate the segment carries"
+     ],
+     "a": 0,
+     "why": "All three changes of control target the same quarter and none carries a day, so the review is set on the earliest step that resolves something. The second option is wrong on certainty - the vote can fail. The third is wrong on effect: the take-private changes an incumbent's ownership and sets up a later separation of the division this corpus uses. The fourth is wrong on fact - that long-stop is one of only three future day-level dates in the whole segment."
     }
    ]
   }

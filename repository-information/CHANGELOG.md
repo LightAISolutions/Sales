@@ -3,11 +3,55 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 112/100`
+`Sections: 113/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.45r] — 2026-09-17 05:55:44 PM EST
+
+> Author S2 session 19 — the `assurance` landscape module — on Opus 5 xhigh as a fresh session. This is ONE module and ONE segment regeneration. It authors no mechanism lesson, no dossier and no report, and it creates no track. It is the LAST of the nineteen landscapes and the session that closes S2. [... full brief in `INTEGRATED-REMEDIATION-PLAN.md` §7.53 ...]
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeAssurance_()` — the twenty-eighth guidance module, the NINETEENTH landscape and the one that CLOSES S2**, id `landscape-assurance-2026-09`, lane The Value Chain, tier contributor, authored **below** the `// CONTENT END` fence per §10.6 and registered at the **end** of its lane in `guidanceDocs_()`. Seven members at **4 incumbents · 1 challenger · 2 adjacent**, chain position 17 of 19, five buying criteria
+- **Nine sections at §10.6's ids and order** — `who-dominates-and-on-what-basis` (prose, 11 paragraphs) · `who-threatens` (prose, 8) · `each-players-bet` (**table 5×3**) · `the-indicators` (**table 8×3**) · `the-sellers-play` (callout, 8) · `claims-ledger` (**ledger, 32 rows**) · `what-the-record-does-not-say` (callout, 9) · `drill` (7 cards) · `check-yourself` (quiz, 5 items at indices **2 · 0 · 3 · 1 · 0**). Four tiles, an **eight-entry glossary with every entry used** (101 `{{term}}` uses over 17 distinct, all resolving). **The literal is 100 % ASCII**
+- **`reviewBy` 2026-10-31**, read off a **month-only** members' vote and taken at month end per (y5). **Nine rejections in writing**, including **2026-12-31 rejected because it is already the downstream landscape's own gate** and the takeover long-stop rejected as an outside date rather than a gate
+- A **function header comment** enumerating **twelve omissions across two neighbours of different kinds** — a public mechanism lesson and a contributor landscape module — plus the corpus disagreement the module carries rather than resolves, so a later revision cannot import across the boundary
+
+#### `repository-information/industry-guidance/landscape-assurance-analysis.md`
+- The module's source of truth, 257 lines: the four-instrument coverage table, the graph partition, the three changes of control, the `reviewBy` resolution with its nine rejections, the Scraper seed with its rejection list, and the verification record
+
+#### `googleAppsScripts/Scraper/Scraper.gs`
+- **`topic-landscape-assurance` seeded, 12 terms**, scoped to the parties-and-authority layer rather than the standards layer `topic-bess-bankability` already holds. **All 12 score zero against the 532 distinct terms held** — the widest gap any S2 seed check has found
+
+### Changed
+
+#### `scripts/check-classroom-content.py`
+- **The module assertion moved 27 → 28**, with a comment recording that S2 is closed and the number stops rising with it
+
+#### `googleAppsScripts/Classroom/Classroom.gs` (generated)
+- **`segment-assurance` regenerated** — `--segment assurance --today 2026-09-17`, one segment and nothing else. `changed: read-next, what-is-bought-and-on-what`, no pin moved; `updated` 2026-09-17, `reviewBy` 2027-03-14 → 2027-03-17 (the six-month default). **The `(planned)` leak on the row-23 lesson is closed here**, leaving one segment still leaking it and owned by no scheduled session
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§6's and §7.3's S2 rows flipped to `CLOSED — 19 of 19`**, all nineteen segments struck, `assurance` added to the built list, and the §7.3 programme paragraph superseded to record that G6, C3 and S2 are all closed
+- **§7.54 written in both halves** — Phase 4 row 24, `what-bankable-means`, with the insert index measured against the live array (5) rather than taken from §4
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§10.6's progress note flipped to `19 of 19 — S2 CLOSED`**; **findings (oo1)–(oo10)** written
+- **(oo1)** no league table covers the roster — four instruments, the largest covering **four of seven**, and the two revenue-based ones sharing no company. **(oo2)** the **first wholly competitive roster** S2 has measured: 15 typings, 15 `competitor`, and the six absent pairs drawing the segment's own partition. **(oo3)** authority sells in four separable pieces and **nobody holds all four**; the party issuing most of its market's listings holds the fewest and pays **USD 22m a year** for the standards behind its own mark. **(oo4)** the brief named two changes of control and the record carried **three**, the third pointing the opposite way. **(oo5)** **(nn8)** in a fourth shape — both day-level scans complete and **blind to all three deals**, because every deal is stated as a quarter. **(oo6)** **(mm6)**/**(nn3)** in BOTH directions on one check: a hand-rolled heuristic reported four phantom failures and the renderer's own `clFmt`, mis-transcribed, then swallowed a real one. **(oo7)** `clFmt` **cannot render italic inside bold** and prints literal asterisks — the complement of (mm7), and a new open item (xvii). **(oo8)** **(nn7)** at a second firing, with the recount finding the primary assertion and the screenshots its **five** restatements. **(oo9)** **(kk7)** at a sixteenth session — eighteen and eighteen, including a table contradicting its own intro. **(oo10)** a seed term rejected on **punctuation** and another on **(nn9)**'s collision moved from the tooltip path to the scoring path
+
+#### `README.md`
+- Structure tree version displays synced after the two GAS bumps (`check-readme-tree.py --fix`); `Last updated:` and `Repo version:` refreshed
+- **Two `industry-guidance/` entries added to the structure tree** — this session's analysis file and **`landscape-insurance-and-risk-transfer-analysis.md`, which S2 session 18 created at v06.43r and never listed.** Found by auditing the directory against the tree rather than by the version checker, which reads page and GAS displays only and is structurally blind to a missing file row. The tree is now complete against `repository-information/industry-guidance/`
+
+### Verification
+
+- `check-classroom-content.py` **0 errors / 0 warnings at 53 lessons, 8 tracks, 142 gate cases**, module assertion **28**. `check-classroom-curriculum.py --strict` no structural findings, 28 stale pins, **4 items due** — unchanged. `check-classroom-pipeline.py --selftest` 13 fixtures / 0 failures; `--base origin/main` **P1** on the developer paths and **P2** on the module below the fence, **no P3, P5, P7, P8 or P12**. `build-classroom-segments.py --check` **7 → 7 → 6**, derived before the write and exact — **(aa5) at a SIXTEENTH session**. `node --check` and `check-gas-inner-scripts.js` clean on both `.gs` files
+- **Playwright, contributor:** 9 of 9 section headings plus title and glossary, **53,584 characters, ZERO uncaught page errors**, 101 of 101 `{{term}}` spans resolving against a 4,208-key map, zero unresolved braces / literal `**` / backticks / stray asterisks. **Analyst: denied at the server** — `ROLE_DENIED` on both `gop=doc` and `gop=index`, 280 characters, 0 of 9 headings. PROJECT region 3,777,118 → **3,848,937** bytes
+- **No rotation on any changelog.** This push lands on **2026-09-17 EST** (`TZ=America/New_York date` read 2026-09-17), so that day's sections stay exempt: `CHANGELOG.md` **113 raw / 97 non-exempt** against a 100 trigger with **sixteen** same-day sections, counter `Sections: 113/100`; `Classroomgs.changelog.md` **56 raw / 46 non-exempt** against a cap of 50 with **ten** same-day; `Scrapergs.changelog.md` **41 / 36** with five. **All three deferrals lapse on the first push dated 2026-09-18 EST or later, and that session rotates `CHANGELOG.md` and `Classroomgs.changelog.md`**
 
 ## [v06.44r] — 2026-09-17 04:19:40 PM EST
 

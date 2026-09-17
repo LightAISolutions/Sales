@@ -956,8 +956,15 @@ def run_gate_truth_table(src, lesson_ids=()):
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 27:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 27" % len(gids))
+    # 27 -> 28 at S2 session 19 (landscape-assurance-2026-09), which is the
+    # NINETEENTH landscape and the last: S2 is closed, so this number stops
+    # rising with S2 and moves next only when some other session registers a
+    # module. 10.6 (t) fired across TWO neighbours of different kinds at once -
+    # a public mechanism lesson and a contributor landscape module - and the
+    # landscape module had already named this segment as where its own gap is
+    # filled, so the split was written before the module was.
+    if len(gids) != 28:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 28" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:

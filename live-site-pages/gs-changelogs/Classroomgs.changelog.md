@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 55/50`
+`Sections: 56/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.69g] — 2026-09-17 05:55:44 PM EST — v06.45r
+
+### Added
+
+- A new reference entry has been added to the guidance library, completing the value-chain set. It covers the part of the chain that reviews and approves equipment and projects on behalf of buyers and lenders: what is actually being sold there, why the published rankings of it measure different things and none of them covers the whole field, how the parties differ in which parts of that work they own, and which of them are changing hands in the coming months. It requires a higher access level than the main course material
+
+### Changed
+
+- One value-chain reference page has been refreshed so its onward-reading list points at the new entry and at a recently added lesson
+- Minor internal improvements
 
 ## [v01.68g] — 2026-09-17 04:19:40 PM EST — v06.44r
 

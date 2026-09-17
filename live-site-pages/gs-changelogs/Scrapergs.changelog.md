@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 40/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.20g] — 2026-09-17 05:55:44 PM EST — v06.45r
+
+### Added
+
+- A new interest topic has been added so the daily digest scores articles about the review, testing and approval side of the industry — the reports lenders rely on, the laboratory recognitions behind a product mark, and the ownership changes among the firms that issue them. It is on by default and flagged as new, and can be switched off in the interests list
+
+### Changed
+
+- Minor internal improvements
 
 ## [v02.19g] — 2026-09-17 07:19:17 AM EST — v06.43r
 

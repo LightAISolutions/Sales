@@ -1,4 +1,4 @@
-var VERSION = "v02.19g";
+var VERSION = "v02.20g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1443,7 +1443,79 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'insurance broker', 'gross written premium',
             'insurance-linked securities', 'hard market',
             'severe convective storm'],
-    source: 'guidance:landscape-insurance-and-risk-transfer-2026-09' }
+    source: 'guidance:landscape-insurance-and-risk-transfer-2026-09' },
+  // Guidance seed for the NINETEENTH and LAST landscape module, and so the
+  // last topic-landscape-* seed S2 will add (industry-guidance.md step 9).
+  // Checked per (i) against every TERM rather than every seed label: 532
+  // distinct term literals across both arrays, and the assurance vocabulary
+  // scores ZERO on all twelve taken below - this is the widest gap any S2
+  // seed check has found, because the segment's own nouns (the seats, the
+  // recognitions, the marks, the deal instruments) had never been seeded at
+  // all. What IS already covered is the layer next door: 'topic-bess-
+  // bankability' holds UL 9540A, NFPA 855, bankability, certification and
+  // warranty, which is the STANDARDS layer, and this seed is scoped to the
+  // PARTIES and their authority instead.
+  // REJECTIONS, written down. TWO as superstrings of an existing term per
+  // (x6) (`certification body`, `third-party certification` - `certification`
+  // is held by topic-bess-bankability). SIX on SPLIT grounds per (v): `UL
+  // 9540`, `UL 1973`, `C800`, `TS-800` and `large-scale fire test` to
+  // topic-bess-bankability, which owns the standards-and-safety layer, and
+  // `IEC 62443` because topic-landscape-software-and-optimization already
+  // holds it. FOUR more on split grounds to topic-china-policy, which holds
+  // `FEOC` (`UFLPA`, `chain of custody`, `traceability audit`, `domestic
+  // content`). THREE as too rare in article text (`ISO/IEC 17065`,
+  // `Standards Council of Canada`, `Canadian Electrical Code`). ONE as out of
+  // band for an energy digest (`notified body` - EU medical devices). TWO as
+  // too generic (`due diligence`, `product safety`). ONE as a near-duplicate
+  // of topic-landscape-cooling's `factory witness test` was CONSIDERED and
+  // KEPT: `factory acceptance test` is a different object - the test itself
+  // rather than attending it - and it is a named product of this segment's
+  // buyer-side inspection business.
+  // AND ONE REJECTED FOR (nn9)'s REASON, WHICH IS THE ONE WORTH COPYING. The
+  // bare word `accreditation` scores zero and is the third buying criterion's
+  // own first word - and it is NOT taken, because in this corpus that word
+  // belongs to CAPACITY accreditation: the concepts registry resolves it to
+  // ELCC, effective load carrying capability. A term that would tooltip the
+  // wrong definition in the module would score the wrong article in the
+  // digest, from the same collision. `laboratory accreditation` is taken
+  // instead and is unambiguous.
+  // ONE REJECTED ON A PUNCTUATION GROUND NO PREVIOUS SESSION HAS RECORDED,
+  // and it was drafted into this array before being traced out of it.
+  // `owner's engineer` is the segment's second seat and scores zero - but it
+  // would have been the ONLY apostrophe-bearing term in all 532, and
+  // scTermsHit_ matches with text.indexOf, an exact substring test. Run on
+  // the real path: the ASCII form matches ASCII copy and returns FALSE
+  // against the typographic apostrophe that news text routinely carries. A
+  // term that cannot match half its own occurrences is worse than no term,
+  // because it scores as if the layer were covered. The seat is reached
+  // instead through `independent engineer`, `technical due diligence` and
+  // `construction monitoring`, which carry no punctuation at all.
+  // AND `independent engineering` IS TAKEN ALONGSIDE `independent engineer`,
+  // which looks like the superstring (x6) forbids and is not. Traced on the
+  // same path: the word-boundary guard tests the character AFTER the match
+  // against /[a-z0-9]/, so `independent engineer` returns FALSE on "the
+  // independent engineering report" - (kk8)'s plural blindness in an -ING
+  // shape. The two forms are disjoint in the matcher, so they are two terms.
+  // THE TWO STANDING DEBTS, BOTH RE-CHECKED AND BOTH STILL OPEN. (1)
+  // `restart` scores zero across all 532 and is still topic-landscape-clean-
+  // firm-and-nuclear's word for that module's next revision - FOURTEEN
+  // sessions unseeded. (2) Session 12's six terms assigned on split grounds
+  // to topic-aidc-landlords (`tenant of record`, `credit backstop`,
+  // `recognition agreement`, `bankruptcy-remote`, `triple-net lease`, `penny
+  // warrant`) are still not in that seed and ALL SIX still score zero, for a
+  // TENTH session. Neither is taken here. With this seed the topic-landscape-*
+  // count goes to TWELVE against NINETEEN built landscapes - shortfall seven,
+  // unchanged, and now frozen, because S2 has no sessions left to close it.
+  // New key, no sheet row, so no `tv` marker applies and no existing seed's
+  // terms array was edited. No outlet was added to SCRAPER_SOURCE_ROSTER.
+  { key: 'topic-landscape-assurance',
+    label: 'Assurance: the engineers who sign the report, the laboratories that issue the mark, and who owns the standards behind both',
+    terms: ['independent engineer', 'independent engineering', 'technical due diligence',
+            'reliance letter', 'NRTL', 'laboratory accreditation',
+            'conformity assessment', 'ETL Mark', 'standards body',
+            'construction monitoring', 'factory acceptance test',
+            'scheme of arrangement'],
+    source: 'guidance:landscape-assurance-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies
