@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 53/50`
+`Sections: 54/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.67g] — 2026-09-17 07:19:17 AM EST — v06.43r
+
+### Added
+
+- A new study module has been added to the value-chain library, covering the part of the market that prices and carries the risks a project financing cannot hold. It sets out who leads that market and on which published measure, notes that the ranking changes depending on which part of the market is being asked about, explains the difference between a party that places a risk and one that prices it, and records a gap in the published guidance that the library's readers are most likely to run into. It also states plainly which of the library's usual comparisons could not be run here and why. It requires a higher access level than most of the library
+
+### Changed
+
+- Minor internal improvements
 
 ## [v01.66g] — 2026-09-17 06:13:35 AM EST — v06.42r
 

@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 39/50`
+`Sections: 40/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.19g] — 2026-09-17 07:19:17 AM EST — v06.43r
+
+### Added
+
+- The news digest now recognises one more subject area when it scores an article, so stories about that part of the market are grouped under their own heading instead of being spread across neighbouring topics. The new grouping is on by default and can be turned off like any other
+
+### Changed
+
+- Minor internal improvements
 
 ## [v02.18g] — 2026-09-17 05:18:32 AM EST — v06.40r
 

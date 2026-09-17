@@ -3,11 +3,49 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 110/100`
+`Sections: 111/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.43r] — 2026-09-17 07:19:53 AM EST
+
+> Author S2 session 18 — the insurance-and-risk-transfer landscape module — on Opus 5 xhigh as a fresh session. This is ONE guidance module. It authors no lesson, no dossier and no report, and it creates no track. [... full brief in `INTEGRATED-REMEDIATION-PLAN.md` §7.51 ...]
+
+### Added
+
+#### `repository-information/industry-guidance/landscape-insurance-and-risk-transfer-analysis.md`
+- **The source of truth for the eighteenth landscape**, ~400 lines: the segment as measured, the three instruments (two empty, one complete), the roster and threat sections, the bets table, the indicators, the seller's two paths, a 38-row claims ledger, what the record does not say, the `reviewBy` resolution with eight rejections, the Scraper seed with its full drop record, verification, and two appendices — the criterion table measured against the generator and the `--check` forecast derived before the write
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeInsuranceAndRiskTransfer_()` — the twenty-seventh guidance module and the eighteenth landscape**, id `landscape-insurance-and-risk-transfer-2026-09`, lane The Value Chain, tier contributor, authored **below** the `// CONTENT END` fence per §10.6 and `industry-guidance.md` step 4, and registered at the **end** of `guidanceDocs_()`'s Value Chain lane
+- **Nine sections at §10.6's ids and order** — `who-dominates-and-on-what-basis` (prose, 11 paragraphs) · `who-threatens` (prose, 11) · `each-players-bet` (table, **3 rows** — one per incumbent and challenger, which on this roster is every member) · `the-indicators` (table, 8 rows) · `the-sellers-play` (callout, 8) · `claims-ledger` (ledger, **38 rows**) · `what-the-record-does-not-say` (callout, 8) · `drill` (8 cards) · `check-yourself` (quiz, 5 items at indices **3 · 1 · 2 · 0 · 1**). Four tiles, an **eight-entry glossary with every entry used** (42 `{{term}}` uses, all resolvable). **The literal is 100 % ASCII**
+- **`reviewBy` 2026-12-31**, read out of `kwh-analytics` `ownership.ticker` — a field no previous S2 session has found a gate in. The `policyExposure[]` fence contributes **nothing** (17 entries, 5 dated, **zero** future) and an ISO sweep of all three whole dossiers returns **nothing anywhere**; only a word-form sweep finds anything. **Eight rejections in writing**, two of them new classes
+
+#### `googleAppsScripts/Scraper/Scraper.gs`
+- **`topic-landscape-insurance-and-risk-transfer` seeded with 13 terms** covering all five buying criteria. Denominator re-counted per (bb5) against **both** arrays — 43 seeds / 295 terms plus 29 lenses / 249 terms, **544 raw and 519 distinct** — and **64 of 68 candidates scored zero**, the widest zero rate S2 has measured. Every drop carries its ground in the seed comment, including two new classes
+
+### Changed
+
+#### `scripts/check-classroom-content.py`
+- **The hard module assertion moved 26 → 27** in the same commit that registers the module, per §10.6 (c)
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`clLessonSegmentInsuranceAndRiskTransfer_()` regenerated** — exactly one segment, `--segment insurance-and-risk-transfer --today 2026-09-17`. `read-next` now names the landscape module, and the regeneration **closed an (ll5) leak in this segment's own lesson**: `*Who Carries Which Risk*` had rendered as `(planned)` in `read-next` and in row 3 of `what-is-bought-and-on-what` since `contracts-and-revenue` was built at v05.91r
+- `VERSION` **v01.66g → v01.67g**
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§10.6's progress note flipped to 18 of 19**, and **findings (mm1)–(mm9)** written
+- **(mm1)** two standing instruments had an **empty input set** and both absences were published as absences — zero external memberships across all 314, and chain position 19 of 19 leaving the terminus test no denominator. **(mm2)** the graph fired **complete at 3 of 3 pairs**, the first complete roster the lane has met. **(mm3)** the registry's prose and the relationship graph attested the standard-naming gap **independently**, (dd2) firing across artefact kinds. **(mm4)** a new `reviewBy` source field and two new rejection classes. **(mm5)** (ll3) fired, and closing it **opened the inverse channel** — measure both extremes. **(mm6)** (ll1) one level along: the denominator was right and the **path** was wrong, three times. **(mm7)** the checker caught a plain-text field class the simulations did not know existed. **(mm8)** the brief's own instruction falsified its own prediction. **(mm9)** the screenshots caught a **replicated positional error in four places**
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.3's S2 row and §6's S2 row flipped to 18 of ~19**, `insurance` struck from the remaining list, and **§7.52 written in both halves** — the brief for Phase 4 row 23, `the-certification-stack`
+
+### Verification
+- `check-classroom-content.py` **0 errors / 0 warnings at 52 lessons, 8 tracks, 142 gate cases**, module assertion **27**. `check-classroom-curriculum.py --strict` unchanged — no structural findings, 28 stale pins, 4 items due. `check-classroom-pipeline.py --selftest` 13 fixtures / 0 failures; `--base origin/main` **P1 × 4 on the developer paths and P2 × 9 on the module below the fence, which §10.6 requires — no P3, no P5, no P7, no P8**. `build-classroom-segments.py --check` **6 → 6 → 5**, exact on both halves. `node --check` and `check-gas-inner-scripts.js` clean
+- **Playwright**: contributor renders **9 of 9 section headings at 43,930 characters with ZERO uncaught page errors**, zero unresolved `{{…}}`, zero literal asterisks and zero backticks; analyst is **denied at the server** with 175 characters, **0 of 9** headings and the title never in the DOM. The PROJECT region moved 3,720,112 → 3,720,539 bytes and the render 43,535 → 43,930 characters across the fix round, so both meters were demanded and both moved
+- **No rotation fired** — the EST day had not rolled, so **fourteen** same-day sections here and **eight** in `Classroomgs.changelog.md` stay exempt and the non-exempt counts hold at **97 against 100** and **46 against 50**. `Scrapergs.changelog.md` goes `39/50` → `40/50` at 36 non-exempt
 
 ## [v06.42r] — 2026-09-17 06:13:14 AM EST
 

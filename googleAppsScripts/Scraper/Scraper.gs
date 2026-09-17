@@ -1,4 +1,4 @@
-var VERSION = "v02.18g";
+var VERSION = "v02.19g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1363,7 +1363,87 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'QSE', 'capture rate', 'revenue floor',
             'optimizers', 'optimisers',
             'Autobidder', 'Nispera', 'IEC 62443'],
-    source: 'guidance:landscape-software-and-optimization-2026-09' }
+    source: 'guidance:landscape-software-and-optimization-2026-09' },
+  // S2 session 18. THE WIDEST ZERO RATE S2 HAS MEASURED, AND THE SEGMENT'S
+  // WHOLE VOCABULARY IS THE GAP. Denominator re-counted per 10.6 (bb5) against
+  // BOTH arrays on the day: SCRAPER_INTEREST_TOPIC_SEEDS (43 seeds, 295 terms)
+  // AND SCRAPER_SEGMENT_SEEDS (29 lenses, 249 terms) - 544 raw, 519 distinct,
+  // reconciling with session 17's 506 plus its own thirteen. SIXTY-EIGHT
+  // candidates scored against all 519 and SIXTY-FOUR scored ZERO - 94 per
+  // cent, against session 17's 33 of 35. Only four are non-zero and every one
+  // is instructive: `thermal runaway` is an EXACT held term in
+  // topic-battery-incidents, so the fire half of buying criterion 4 is already
+  // covered correctly; `warranty wrap` is a SUPERSTRING of the held `warranty`
+  // and is buying criterion 3's OWN WORDS - the only one of the five criteria
+  // whose verbatim phrase cannot be seeded, recorded rather than forced;
+  // `capacity` and `facility` are substrings of six and two held terms and far
+  // too generic besides.
+  // THE THIRTEEN TAKEN COVER ALL FIVE BUYING CRITERIA: criterion 1 deductible;
+  // criterion 2 delay in start-up, business interruption; criterion 3 revenue
+  // put, parametric insurance; criterion 4 managing general agent, MGA,
+  // delegated authority (plus the already-held thermal runaway); criterion 5
+  // insurance broker, hard market, gross written premium, insurance-linked
+  // securities. `severe convective storm` is the one term not tied to a
+  // criterion and it earns its place because it is the single peril both live
+  // instruments in the segment turn on.
+  // DROPS WITH GROUNDS: two on duplication (above); two as substrings and too
+  // generic (above); TWO ON ABBREVIATION AMBIGUITY with the long form taken
+  // instead (`DSU` - Delaware State University, data service unit; `ILS` -
+  // instrument landing system); ONE on ambiguity with no long form worth
+  // taking (bare `captive`, because `captive power` is a live energy term and
+  // `captive market` is ordinary English; `captive insurance` scores zero but
+  // is too rare in article text about this market); FIFTEEN as too generic
+  // (`premium`, `placement`, `claims`, `carrier`, `treaty`, `binder`,
+  // `underwriter`, `underwriting`, `brokers`, `insurers`, `syndicate`,
+  // `property damage`, `property insurance`, `all-risk`, `risk transfer`);
+  // ELEVEN as too rare or too technical (`subrogation`, `facultative`, `quota
+  // share`, `program business`, `specialty insurer`, `primary layer`, `excess
+  // layer`, `loss ratio`, `combined ratio`, `first-party property`, `risk
+  // engineering`); SIX as near-duplicates of a term already taken
+  // (`delegated underwriting`, `binding authority`, `parametric hedge`,
+  // `parametric trigger`, `parametric cover`, `underwriting capacity`); THREE
+  // on SPLIT grounds per (v) (`tax credit insurance` to topic-china-policy and
+  // topic-federal-action, `nat cat` and `natural catastrophe` to
+  // topic-battery-incidents and the weather seeds); THREE where the word IS
+  // the false positive (`soft market`, `rate change`, `loss record`); and ONE
+  // as the registry's wording rather than the market's (`hardening market`,
+  // session 13's ground - the market form `hard market` is taken).
+  // WHY `MGA` IS TAKEN DESPITE (kk8)'s AMBIGUITY RULE: MGA Entertainment and
+  // the MG sports car were both considered and judged out of band for an
+  // energy digest, and the trade's standard shorthand is the form that appears
+  // in headlines about this segment's only managing general agent. Note also
+  // that scLoadInterestModel_ drops any term shorter than three characters, so
+  // a two-letter form would not survive the load at all; `MGA` is exactly
+  // three.
+  // A CASE-BLINDNESS "DEFECT" WAS MEASURED HERE AND IS NOT REAL - recorded
+  // because the near-miss is the finding. 83 of the 517 held terms (16.1 per
+  // cent) carry an uppercase character, and scTermsHit_ is called with
+  // LOWERCASED text and tests its boundaries with /[a-z0-9]/, which looks like
+  // it makes every one of them unable to match. It does not:
+  // scLoadInterestModel_ lowercases every term on the way in from the sheet,
+  // two functions earlier. The check traced ONE function and produced a
+  // confident, precise, corpus-wide and entirely false result. Print the
+  // denominator AND trace the whole path.
+  // THE TWO STANDING DEBTS, BOTH RE-CHECKED AND BOTH STILL OPEN. (1) `restart`
+  // scores zero across all 519 and is still topic-landscape-clean-firm-and-
+  // nuclear's word for that module's next revision - THIRTEEN sessions
+  // unseeded. (2) Session 12's six terms assigned "on split grounds to
+  // topic-aidc-landlords" (`tenant of record`, `credit backstop`, `recognition
+  // agreement`, `bankruptcy-remote`, `triple-net lease`, `penny warrant`) are
+  // still not in that seed and ALL SIX still score zero, for a NINTH session.
+  // Neither is taken here. The topic-landscape-* shortfall stands at eleven
+  // seeds against eighteen built landscapes - seven, unchanged.
+  // New key, no sheet row, so no `tv` marker applies and no existing seed's
+  // terms array was edited. No outlet was added to SCRAPER_SOURCE_ROSTER.
+  { key: 'topic-landscape-insurance-and-risk-transfer',
+    label: 'Insurance and risk transfer: the brokers who place the risk, the agent who prices it, and the balance sheet that carries neither',
+    terms: ['managing general agent', 'MGA', 'delegated authority',
+            'revenue put', 'parametric insurance',
+            'delay in start-up', 'business interruption', 'deductible',
+            'insurance broker', 'gross written premium',
+            'insurance-linked securities', 'hard market',
+            'severe convective storm'],
+    source: 'guidance:landscape-insurance-and-risk-transfer-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

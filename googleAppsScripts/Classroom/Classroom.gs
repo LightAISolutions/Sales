@@ -1,4 +1,4 @@
-var VERSION = "v01.66g";
+var VERSION = "v01.67g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -33804,8 +33804,8 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
  "title": "Insurance and risk transfer",
  "short": "The brokers, insurers and risk-analytics firms that price and carry the risks a financing cannot hold — property and business interruption, delay-in-start-up…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-03-17",
  "provenance": {
   "inputs": [
    {
@@ -33931,7 +33931,7 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
     ],
     [
      "Warranty wrap or revenue put that substitutes for a supplier's balance sheet",
-     "*Who Carries Which Risk* (planned)"
+     "*Who Carries Which Risk*"
     ],
     [
      "Data behind the underwriting — degradation, fire incidents, performance history",
@@ -34314,8 +34314,8 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-insurance-and-risk-transfer-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Aon, Marsh McLennan, kWh Analytics — each member's dossier carries one in Profiler."
    ]
   },
@@ -34395,6 +34395,14 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -46332,7 +46340,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeEpcAndConstruction_(),
           guidanceDocLandscapeCooling_(),
           guidanceDocLandscapeComputeAndTheRack_(),
-          guidanceDocLandscapeSoftwareAndOptimization_()];
+          guidanceDocLandscapeSoftwareAndOptimization_(),
+          guidanceDocLandscapeInsuranceAndRiskTransfer_()];
 }
 
 function guidanceIndex_() {
@@ -63499,6 +63508,570 @@ function guidanceDocLandscapeSoftwareAndOptimization_() {
  ]
 };
 }
+
+
+// ==============
+// LANDSCAPE - INSURANCE AND RISK TRANSFER (S2 session 18, 2026-09-17)
+// The eighteenth landscape and the TWENTY-SEVENTH guidance module. Authored
+// BELOW the // CONTENT END fence per CLASSROOM-CURRICULUM-PLAN.md 10.6 and
+// .claude/rules/industry-guidance.md step 4 - guidance is never a C2 pipeline
+// write. Source of truth:
+// repository-information/industry-guidance/landscape-insurance-and-risk-transfer-analysis.md
+//
+// THE SMALLEST ROSTER IN THE TAXONOMY AND THE EXACT INVERSE OF THE ONE BEFORE
+// IT. Three members - 2 incumbents (marsh-mclennan, aon) and 1 challenger
+// (kwh-analytics) - with ZERO adjacent, against session 17's twenty members at
+// 75.0 per cent adjacent, the highest share of all nineteen. Five buying
+// criteria. Every figure re-derived off profiler-segments.json,
+// profiler-graph.json and the three dossiers before a line was drafted; the
+// brief's arithmetic survived in full, per (kk1)/(jj1).
+//
+// TWO STANDING INSTRUMENTS HAVE AN EMPTY INPUT SET, AND SAYING SO IS THE
+// RESULT - (kk3) AT ITS LIMIT. All three members hold ZERO external
+// memberships across all 314 in the registry, so (aa2)/(ee3)'s role-inversion
+// instrument cannot be run. And the segment is chain position 19 of 19, so the
+// terminus test of (ii4) has a denominator of zero - session 17 declined that
+// claim from position 18 with one segment below it; from 19 there is nothing at
+// all. Both absences are published as absences. This is also only the SECOND
+// CLOSED segment in the taxonomy (zero adjacents AND every member belonging to
+// no other segment), after hyperscalers-and-ai-labs at 8 of 8, and the smaller
+// of the two at 3 of 3.
+//
+// THE THIRD INSTRUMENT FIRES COMPLETE - THE FIRST COMPLETE ROSTER THIS LANE HAS
+// MET. profiler-graph.json connects ALL 3 of the 3 possible member pairs, 100
+// per cent, against (ii3)'s previous best of 5 of 6. One competitor edge typed
+// by BOTH sides between the two incumbents; two partner edges to the
+// challenger, each typed by one side - a broker distributes an MGA rather than
+// competing with it.
+//
+// AND THE ONE EXTERNAL COMPANY ALL THREE TOUCH IS DNV, AN ASSURANCE INCUMBENT.
+// Fourteen edges touch the roster and eleven reach outside it; dnv is the only
+// company on the far end of an edge from all three members. The segment
+// registry's own notes, written at assignment and untouched since, say the
+// standard-naming gap "is the gap the assurance segment's members occupy". The
+// registry's prose and the relationship graph attest the same finding from two
+// independent directions without citing each other - (dd2)'s cross-attestation
+// instrument firing across artefact KINDS rather than across two dossiers.
+//
+// reviewBy 2026-12-31, read out of kwh-analytics ownership.ticker - a field no
+// previous S2 session has found a gate in. The policy fence contributes
+// nothing (17 entries, 5 dated, ZERO in the future) and an ISO scan of all
+// three whole dossiers returns NOTHING ANYWHERE; only a word-form scan finds
+// anything, 10 future days of which 4 are in horizon. EIGHT rejections in
+// writing in section 10 of the analysis file, including two new classes: a
+// date before which nothing MAY happen is not a date on which anything MUST
+// (the USI earliest-close floor), and a date the record's own text hedges as
+// "(unconfirmed)" cannot set a clock. (bb4)'s own-segment-lesson check passes
+// clean and (ii8)'s default tautology does NOT fire - the generated segment
+// lesson recomputes to 2027-03-17 and this module takes 2026-12-31.
+//
+// Three rows in the bets table, which is 10.6's own shape on a roster of two
+// and one. Quiz answer indices 3, 1, 2, 0, 1 per (ff4) - and per (ll3) the
+// answer-LENGTH channel was measured explicitly and closed: the correct choice
+// is the SOLE LONGEST in 0 of 5 and the SOLE SHORTEST in 0 of 5, ranking
+// 2, 3, 3, 2, 3 of four. The literal is 100 per cent ASCII.
+// ==============
+function guidanceDocLandscapeInsuranceAndRiskTransfer_() {
+  return {
+ "id": "landscape-insurance-and-risk-transfer-2026-09",
+ "group": "The Value Chain",
+ "title": "Insurance and Risk Transfer - the Landscape",
+ "short": "Three members, no bench, and nobody in it sells anywhere else - the smallest roster in the taxonomy and the exact inverse of the segment before it. Two of this lane's standing instruments have nothing to run on here, and saying so is the result; the third fires complete, and points at a company in a different segment.",
+ "source": {
+  "doc": "Corpus synthesis over the 3 member dossiers of the insurance-and-risk-transfer segment, at the profile versions in the claims ledger - no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance - landscape module",
+  "repo": "repository-information/industry-guidance/landscape-insurance-and-risk-transfer-analysis.md"
+ },
+ "updated": "2026-09-17",
+ "reviewBy": "2026-12-31",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "3 members",
+   "v": "the smallest roster in the taxonomy, and the exact inverse of the one before it",
+   "sub": "Two incumbent brokers and one challenger, with zero adjacent members. The next smallest segment carries four and the largest thirty-four. The segment S2 covered immediately before this one held twenty members at 75.0 per cent adjacent, the highest share of all nineteen; here the share is zero"
+  },
+  {
+   "k": "0 and 0",
+   "v": "external memberships across the roster, and segments downstream of it",
+   "sub": "Not one of the three appears in any other segment, so the role-inversion instrument has an empty input set. And this is chain position 19 of 19, so the terminus test has no denominator either. Both readings are published as absences rather than dressed as superlatives"
+  },
+  {
+   "k": "3 of 3",
+   "v": "possible member pairs connected in the relationship graph - the first complete roster this lane has met",
+   "sub": "One competitor edge, typed by both sides, between the two incumbents; two partner edges to the challenger, because a broker distributes a managing general agent rather than competing with it. The densest roster measured before this one was five pairs of six"
+  },
+  {
+   "k": "0 standards",
+   "v": "named in either incumbent's battery-storage guidance",
+   "sub": "Seven Marsh documents across four web properties from 2021 to 2026, and every Aon battery and renewables publication reviewed, name no UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global. Both state insurer requirements in engineering terms and leave the code unnamed"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held. Two carry it here, and unusually for this taxonomy their incumbency rests on an external league table rather than on a dossier's judgment - AM Best and Business Insurance have ranked them first and second for sixteen and more than fifteen consecutive years."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member contesting the established set. One carries it here, and the registry attaches a published expiry to the label: the company agreed in March 2026 to be acquired, and its acquirer is itself being acquired, with completion expected before the end of 2026."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member that sells into a segment without being ranked in it. Zero members carry it here. Only two other segments of the nineteen have no adjacent member at all, and this is the smallest of the three."
+  },
+  {
+   "t": "managing general agent",
+   "d": "A firm that holds delegated authority to price and bind insurance on a carrier's behalf without carrying the risk itself. It is not a broker, which works for the buyer, and not a carrier, which pays the claim. This segment holds exactly one, and it is the segment's only member that sets a price rather than negotiating one."
+  },
+  {
+   "t": "delegated authority",
+   "d": "The written permission a carrier gives an agent to underwrite and bind risk within agreed limits. It is the structural difference between this segment's challenger and its two incumbents, and it is the thing an acquisition can withdraw: the authority belongs to the carrier, not to the agent."
+  },
+  {
+   "t": "revenue put",
+   "d": "An insurance policy that guarantees a share of a plant's expected output so that a lender will size more debt against it. It exists for solar, and parametrically for wind. It does not exist for storage anywhere in this segment, which is the single most common misreading of what these firms sell."
+  },
+  {
+   "t": "delay in start-up",
+   "d": "Cover for the earnings a project loses when construction finishes late, written alongside the construction policy and sized on the schedule the lender assumed. It is one of this segment's five buying criteria, and on data-centre towers it is the line that shrinks automatically as phases energise."
+  },
+  {
+   "t": "thermal runaway",
+   "d": "The self-sustaining heating of a battery cell that propagates to its neighbours. It is the question this segment's only underwriter says it is actually asking: its submission form is named after it, and the technology sort that follows is legacy indoor NMC against modern outdoor LFP."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with the shape, because it decides what this module is allowed to say.** Three members - two {{incumbent}}s and one {{challenger}}, with **zero {{adjacent}}**. That is the smallest roster of all nineteen segments; the next smallest carries four and the largest thirty-four. It is also the exact inverse of the segment this lane covered immediately before it, which held twenty members at 75.0 per cent adjacent, the highest share in the taxonomy.",
+    "**Two of the instruments this lane normally reaches for cannot run here at all, and the honest result is to say so.** The first asks whether a member ranked one way here ranks differently somewhere else. Measured across all nineteen segments and all 314 memberships, **these three companies hold zero external memberships between them** - not one appears anywhere else. The instrument has no input. The second asks which direction a roster's external memberships point, and reads a segment as a terminus when they all point upstream. **This segment is chain position 19 of 19, so nothing lies downstream and the denominator is zero.** A terminus reading here would restate the index number and call it a discovery.",
+    "**The third instrument fires complete, and it is the only one of the three that tells you anything.** The relationship graph connects **all three of the three possible member pairs** - the first complete roster this lane has met, against a previous best of five pairs out of six. And the typings are clean rather than merely dense: **one competitor edge, typed by both sides, between the two incumbents; two partner edges to the challenger, each typed by one side.**",
+    "**So the structure is legible without being argued.** The two brokers compete with each other - publicly, and in court, after a team of twenty resigned from one to the other inside a 38-minute window in March 2025. Both are the challenger's **distribution** rather than its rivals, because a {{managing general agent}} prices and binds risk under {{delegated authority}} while a broker works for the buyer and places it. Neither broker operates a renewables or storage managing general agency of its own.",
+    "**Now the ranking, and it comes from outside the corpus.** This is one of the few segments whose incumbency rests on a named third-party league table rather than on a dossier's judgment. AM Best ranks **Marsh McLennan first among global brokers on 2025 total revenue at USD 26.98bn, for a sixteenth consecutive year**, and **Aon second at USD 17.20bn**, for more than fifteen. Business Insurance ranks them first and second both globally and among the largest brokers of US business.",
+    "**Quote that ranking with its basis attached, because the party it favours less disputes the measure in its own file.** Aon's dossier records that AM Best's total bundles Marsh McLennan's consulting businesses, which are not broking, and that AM Best's own 2018 table showed Aon larger on a broking-only basis. **No source published since offers a clean broking-only comparison of the two.** A sixteen-year ranking on a contested measure that nobody has restated for eight years is still the best evidence available - and it is not the same claim as market leadership in this corpus's market.",
+    "**Because on the two measures this corpus exists to track, the ranking inverts.** Aon's Data Center Lifecycle Insurance Program **went from USD 1.5bn to USD 5bn in twelve months, in four steps** - 9 July 2025, then 14 January, 15 April and 20 July 2026 - against Marsh's Nimbus at **USD 2.7bn**, which has not moved since January. Aon also placed what its chief executive's shareholder letter calls the first-ever data-centre-specific reinsurance treaty, aligning up to USD 5bn behind a single insurer. And FY2025 organic growth was **6 per cent at Aon against 4 per cent at Marsh McLennan**.",
+    "**Marsh McLennan's own file reads that sequence the same way, at moderate confidence: Stratus was built on the operational side because the construction side had already been lost.** Stratus launched 26 August 2026 offering up to **USD 10bn of property capacity on a single placement**, drawn from thirty traditional and alternative capital providers on a prior-submit exchange basis. Five weeks after Aon reached USD 5bn, the larger broker answered not with a bigger tower of its own but with an exchange on the operational phase, at twice the capacity.",
+    "**That is the practical reading, and it is not a tie-break.** Aon's programme runs the whole lifecycle and prices its headline capacity around construction; Marsh's exchange does one phase at twice the size. The two are not the largest on the same phase. A campus under construction meets the larger tower, with embedded commissioning cover and automatic {{delay in start-up}} sum reduction as phases energise. A campus already running meets the larger exchange. **Ask which phase the conversation is about before deciding which broker the conversation is with.**",
+    "**And dominance stops at batteries, for both of them, on their own dossiers' collection-gap lines.** No independent source located names Marsh McLennan as a protagonist in **any** battery-storage placement; its BESS credentials - a USD 200m Asia facility, 3.8 GW of UK grid-scale storage placed, a 60-strong London team - appear only on its own website. Aon has **one** documented placement, two UK projects reaching financial close on 7 July 2026 behind up to thirteen years of technology performance insurance, described as a first for UK energy storage; its only megawatt-scale battery figure comes from a regional brochure coded **June 2018** that also claims a headcount 20 per cent above today's.",
+    "**So the segment's incumbents are incumbents of data-centre risk on independent evidence, and of battery risk on their own say-so.** Reporting the first without the second would be reporting half of what the record holds."
+   ],
+   "sales": "There are two correct answers to who leads here, and which one is correct depends on the question. If a prospect says the biggest broker, ask whether they mean the biggest firm or the biggest tower for their phase - the answers are different companies, and the person who knows that is worth talking to."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**There is no bench, so the threat section is about one company and one mechanism.** Zero {{adjacent}} members means nothing is selling into this segment from outside it. Where an earlier landscape in this lane found the {{challenger}} role filled by a structural placeholder while the real pressure came from the adjacents, the reverse holds here: **there are no adjacents at all, and the single challenger is a real one with a real mechanism.**",
+    "**The mechanism is {{delegated authority}}.** kWh Analytics is a {{managing general agent}}: it holds no balance sheet, binds paper on carriers' behalf under full delegated authority from Aspen Specialty, and prices renewable-asset risk on its own loss and performance database. Aspen, Swiss Re, Everest and Munich Re carry every risk it writes. Its own file assesses at high confidence that **the data is the asset**, and that its authority has widened on the strength of that database - **USD 75 million per renewable-energy project location in 2024, raised to USD 100 million at the February 2026 renewal**, with a USD 20 million excess natural-catastrophe layer added in August 2025.",
+    "**What it threatens is not the brokers' revenue. It is the brokers' monopoly on the judgment.** A broker builds a submission and markets it to carriers who price it. An agent with delegated authority prices it itself, on data the carriers do not hold. That is a different seat at the same table, and it is why both brokers type the relationship **partner** rather than competitor.",
+    "**The partnership is closer than either party's public account admits.** Marsh and its wholly owned subsidiary McGriff hold **two of the eight seats** on the challenger's Renewable Energy Broker Council in both published years - **a quarter of the 2026 council** - and McGriff has been a subsidiary since November 2024, so both readouts post-date the close. **Neither readout discloses the common ownership, and no source located notes it.** Aon holds one seat, represented by the same person in both years, the only firm on the council with that continuity.",
+    "**Look at what the instruments actually are, because the absence in the list is the important part.** Property cover on the primary layer to USD 100m per location; an excess natural-catastrophe layer to USD 20m; a {{revenue put}} guaranteeing up to 95 per cent of a solar plant's expected output for ten to twenty-five years, extended to thirty under the enhanced variant; and a parametric wind hedge written by Munich Re Trading, of which two have closed - 59 MW in 2024 and 79 MW in 2025.",
+    "**There is no storage revenue product, no availability cover and no degradation cover anywhere in this segment.** The battery-storage sector page offers property cover and data services and nothing else. The put idea has been applied to solar and, parametrically, to wind; **it has never been applied to storage.** A customer whose financial model assumes an insurable revenue floor on a battery has made an assumption this segment cannot meet, and that gap has to be closed in the contract instead.",
+    "**A fifth product was announced and never shipped.** Tax-credit insurance for distributed generation under 20 MW was announced in January 2025 with an expected launch within eighteen months, funded by a USD 500,000 innovation prize. In December 2025 it was still described as being in development. **Twenty months after the announcement it had not launched**, and a competitor had reached the market first with Lloyd's backing.",
+    "**And the challenger's own label is expiring on a published clock.** On 10 March 2026 it agreed to be acquired by Beazley plc, which manages six Lloyd's syndicates and said the firm will be integrated into its own underwriting team. **Beazley is itself completing an all-cash takeover by Zurich Insurance Group** - shareholder-approved in April 2026, cleared by the European Commission on 7 July 2026, **completion expected before the end of 2026.**",
+    "**Two consequences the record raises and does not resolve.** First, the independence that makes this company a challenger is ending, and its own file assesses at high confidence that a Lloyd's-managing insurer has no reason to keep a competitor's paper behind its own agent once it can write the risk itself - **neither party has said whether the Aspen programme stays.** Second, **the completion itself is undocumented**: the company's own pages call it a wholly owned subsidiary and its acquirer's half-year results refer to the addition, while trade press reported closing in the second half of 2026 and no completion release exists anywhere.",
+    "**So the honest statement of the threat is conditional, and the condition resolves this year.** If the delegated authority survives integration and the brand survives with it, this segment keeps a member that prices risk rather than placing it. If the book moves onto its acquirer's syndicates, **the segment's roster becomes two brokers and nothing else** - and the only party in it that sets a price disappears into a carrier.",
+    "**One more thing the bench's absence does not excuse.** A segment with no adjacent members is not a segment with no outside contact. The relationship graph gives the roster fourteen edges, eleven of which reach outside it - and **exactly one company sits on the other end of an edge from all three members: DNV.** It is an {{incumbent}} of the assurance segment at chain position 17, two places upstream of this one - and it is one of the very bodies whose names are absent from both brokers' battery guidance."
+   ],
+   "sales": "The pressure in this segment is not price, it is who owns the judgment. Ask a prospect whether the party quoting them set the rate or negotiated it. If they cannot say, they are talking to a broker and their real counterparty is somewhere behind it."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "One row per {{incumbent}} and {{challenger}}, which on this roster is **every member**. The spec's shape needs no argument here and no addition: three members, three rows, and the table is the segment. Each bet is drawn from that company's **own** strategy read and is **analysis, not fact**; each risk column is the file's own rather than this module's.",
+   "cols": [
+    "Player",
+    "Role, and where the revenue comes from",
+    "The bet, and what its own file says about the risk"
+   ],
+   "rows": [
+    [
+     "**Marsh McLennan**",
+     "{{incumbent}} - FY2025 revenue USD 26,981m; risk and insurance services USD 17,265m, consulting USD 9,794m",
+     "**Build capacity products, and earn from placement design rather than from rate.** Its own quarterly index reports an eighth consecutive decline - composite down 6 per cent, property down 12 per cent globally - and a broker's commission is a percentage of a shrinking premium. The answer has been facilities and exchanges: a renewables facility for solar and storage under 50 MW, a hydrogen facility the company itself calls the world's first for green and blue hydrogen, and the three digital-infrastructure structures launched inside fifteen months. **Its own risk:** the growth has moved to consulting. Underlying growth fell from 7 per cent to 4; in the second quarter of 2026 consulting grew 8 per cent underlying against risk and insurance services at 3, and the reinsurance arm shrank 2 per cent."
+    ],
+    [
+     "**Aon**",
+     "{{incumbent}} - FY2025 revenue USD 17,181m; risk capital USD 11,290m, human capital USD 5,907m",
+     "**Own the AI data-centre lifecycle, and buy the middle market to fund the rest.** The lifecycle programme is written into the annual report's own business description, which is a rare signal of where a filing wants its growth story read, and management states it can now structure individual projects to USD 13-15bn using alternative capital with a pipeline three times the prior year. **Its own risk:** a USD 17.0bn all-debt acquisition agreed in August 2026 reverses a deleveraging it had only just completed - leverage to about **4.8x** against roughly 3x as the stated downgrade trigger, buybacks paused, dilution through 2027, and an interim chief financial officer in post since 17 August 2026."
+    ],
+    [
+     "**kWh Analytics**",
+     "{{challenger}} - private; no revenue, premium, claims or headcount figure has ever been published",
+     "**Price the risk yourself on data nobody else holds, and let somebody else's balance sheet carry it.** {{delegated authority}} at USD 100m per location, an excess natural-catastrophe layer above it, a {{revenue put}} for solar and a parametric hedge for wind - with resilience pricing, premium and deductible credits for hail stow and thicker glass, as the differentiation. **Its own risk:** its own 2026 broker council found rates reducing and the urgency to build weather-resilient assets diminished, so **a softening market erodes the thing it sells** - and the independence the whole bet rests on is being acquired twice over."
+    ]
+   ],
+   "sales": "Ask each of the three what it owns when a battery burns. The two brokers own the advocacy - they built the submission and they will argue the claim, and neither pays it. The agent owns the price and not the payment. **Nobody in this segment carries the risk on their own balance sheet**, and a customer who thinks otherwise has misread who they are buying from."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "What to watch, dated where the record dates it and marked as coarse where it does not. **Four of these eight rows carry no day at all** - a quarter, a month, a pair of months, and one row with no date of any kind - and of the four that do carry a day, three carry a day that has already passed. They are written that way rather than sharpened into a precision the record does not have. Row 1 is this module's own review date.",
+   "cols": [
+    "Watch",
+    "When the record says",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**The challenger's acquisition completes**",
+     "Before end-2026 - shareholder-approved April 2026, cleared by the European Commission 7 July 2026",
+     "**This module's review date.** It decides whether the segment still has a member that prices risk rather than placing it, and whether {{challenger}} survives as a role label here"
+    ],
+    [
+     "The property programme's renewal season",
+     "Q1 2027 - **quarter only, no day published**",
+     "Whether {{delegated authority}} survives integration on the same carrier's paper, moves onto the acquirer's syndicates, or lapses. It is the test of whether {{delegated authority}} outlived the change of ownership, which the row above cannot answer"
+    ],
+    [
+     "The second incumbent's middle-market acquisition completes",
+     "Expected Q4 2026; the parties are not required to close before 19 October 2026; outside date 1 June 2027",
+     "Takes leverage to about 4.8x and narrows a broking-revenue gap between the two incumbents that has been stable for over fifteen years"
+    ],
+    [
+     "Whether the construction facility moves off USD 2.7bn",
+     "Unmoved since 26 January 2026",
+     "The capacity race is the clearest live contest between the two incumbents, and one side has now stood still for eight months while the other doubled"
+    ],
+    [
+     "The ninth edition of the challenger's annual risk report",
+     "May 2027 - **month only**",
+     "Publication under the existing name would show the research franchise survived integration; a rebranded edition would show what the acquirer kept"
+    ],
+    [
+     "Whether the announced tax-credit product ever launches",
+     "Announced January 2025 for launch within eighteen months; still in development in December 2025",
+     "Twenty months past announcement with no launch, and a competitor already in the market with Lloyd's backing"
+    ],
+    [
+     "The larger incumbent's quarterly rate index",
+     "Quarterly; the second-quarter 2026 edition published 23 July 2026",
+     "One of very few public series against which the cost of insuring an energy asset can be tracked - and it has fallen for eight consecutive quarters"
+    ],
+    [
+     "Whether **either** broker ever names a standard",
+     "**No date - no publication in the record does**",
+     "The clearest test of whether the boundary with the assurance segment has moved. Today neither names one, across seven documents on one side and every reviewed publication on the other"
+    ]
+   ],
+   "sales": "Not one of these eight rows puts a future day on the event it asks you to watch. Four rows carry a day, three of those days have already passed, and the fourth row carries two days that bracket an expected quarter rather than naming it. Say that out loud when you brief a customer on timing, because a coarse date quoted as a precise one is the easiest promise in this segment to get wrong."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**If you sell BESS - the first thing to internalise is that the party handing you a requirement is not the party that priced it.** A broker works for the buyer, builds the submission and argues the claim. It does not set the rate and it does not pay the loss. There is exactly one member of this segment that sets a price, and it is not a broker.",
+    "**1 - Expect an engineering requirement with no code behind it, and ask anyway.** The published guidance from both {{incumbent}}s is written as separation between enclosures, independent grid routing, three metres or more of spacing. **Neither names a test method, a standard or a certification body** - not across seven documents on one side, not across every reviewed publication on the other. Ask which standard and which edition the requirement descends from, and expect the broker not to know. The party that owns that answer sits two places upstream in the chain, in assurance, and the relationship graph says all three of these firms already talk to its incumbent.",
+    "**2 - The underwriting question is {{thermal runaway}}, and the sort that follows is legacy indoor NMC against modern outdoor LFP.** The segment's only underwriter says so plainly: most underwriters are hesitant to insure indoor installations, and technology-risk rates have been stable at roughly **30 to 40 cents per USD 100 of insured value**. Its submission form is named after the hazard, and it asks for hazard-mitigation analyses and emergency-response plans. If your product changes either the propagation story or the enclosure story, **that is the sentence the underwriter is reading for.**",
+    "**3 - Do not promise a revenue product that does not exist.** There is no {{revenue put}} for storage anywhere in this segment, no availability cover and no degradation cover. Solar has a put; wind has a parametric hedge; **storage has property cover and data services.** A customer model that assumes an insurable revenue floor on a battery has to be closed in the contract instead - and that is a conversation with the offtaker, not with the broker.",
+    "**If you sell AIDC power - the two {{incumbent}}s have split the campus by phase, and the phase decides who you are talking to.** One built a lifecycle tower whose headline capacity is priced around construction: at USD 5bn it carries construction all risks, {{delay in start-up}}, property damage and business interruption, third-party liability at USD 200m outside the United States and USD 100m inside it, cyber and technology errors and omissions at USD 400m and project cargo at USD 500m. The other built an exchange for the operational phase alone: up to USD 10bn on a single placement across thirty traditional and alternative capital providers.",
+    "**4 - The structural feature to sell against is stated on only one side, and it is about your schedule.** The lifecycle tower carries **embedded commissioning cover with automatic delay-in-start-up sum reduction as phases go live.** A campus that energises in blocks reduces its own exposure as it goes, inside the policy, automatically. **So your commissioning window sits inside somebody's insurance schedule** - a slipped energisation date is a coverage-period problem as well as a construction one, and the broker is the party who notices first.",
+    "**5 - There is exactly one published broker statement of battery loss experience anywhere in these three files, and it is about commissioning.** At the challenger's 2025 broker council, one incumbent's claims team reported having seen a small number of hot commissioning losses on battery storage farms. **It was not repeated in 2026 and appears in no publication of that company anywhere.** Treat it as the single datum it is - and notice that the loss it describes happens during commissioning, the same phase transition the tower above is built to price.",
+    "**The line that reads across both paths.** Nobody in this segment carries risk on their own balance sheet. Two place it and one prices it, and all three are between your customer and a carrier you will never meet. **The question worth asking any counterparty here is not what they cover - it is what they decide.**"
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "6 min",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's three member dossiers at the versions below; no ingested document and no new research. Every load-bearing claim above traces to a dossier field, to the segment registry or to the relationship graph. Dossiers already cite their own sources, so this ledger cites dossiers - and a claim whose only support is this module is an opinion, written as one in the prose.",
+   "rows": [
+    [
+     "Segment holds 3 members - 2 incumbents, 1 challenger, 0 adjacent; chain position 19, tier services; five buying criteria",
+     "profiler-segments.json - segments[].members[], .position, .tier, .buyingCriteria"
+    ],
+    [
+     "Three members is the smallest roster of all nineteen segments; the next smallest carries four and the largest thirty-four",
+     "profiler-segments.json - computed over members[] for all nineteen segments"
+    ],
+    [
+     "Zero external memberships across the roster; all 3 of 3 members belong to no other segment; only one other segment is closed in the same way, at 8 of 8",
+     "profiler-segments.json - computed over all 314 memberships"
+    ],
+    [
+     "Zero segments lie downstream of chain position 19",
+     "profiler-segments.json - segments[].position"
+    ],
+    [
+     "The segment before this one in the S2 order held 20 members at 75.0 per cent adjacent, the highest share of all nineteen",
+     "profiler-segments.json - computed over members[].role"
+    ],
+    [
+     "All 3 of 3 possible member pairs are present in the relationship graph; 14 edges touch the roster and 3 of them are internal",
+     "profiler-graph.json, built 2026-09-13 - edges[].a and .b"
+    ],
+    [
+     "The two incumbents are typed competitor by both sides; both partner edges to the challenger are typed by one side only",
+     "profiler-graph.json - edges[].curated.a.type and .curated.b.type"
+    ],
+    [
+     "DNV is the only company connected to all three members, and is an incumbent of the assurance segment at chain position 17",
+     "profiler-graph.json - edges[]; profiler-segments.json - segments[assurance].members[]"
+    ],
+    [
+     "The challenger's role label may be wrong by the end of 2026 and should be re-read at the first refresh; the standard-naming gap is the assurance segment's territory",
+     "profiler-segments.json - segments[].notes"
+    ],
+    [
+     "AM Best ranks Marsh McLennan first on 2025 total revenue at USD 26.98bn for a sixteenth consecutive year, and Aon second at USD 17.20bn for more than fifteen",
+     "profile:marsh-mclennan @ v1 - strategyRead; profile:aon @ v1 - strategyRead"
+    ],
+    [
+     "AM Best's total bundles consulting revenue that is not broking; its own 2018 table showed Aon larger broking-only; no clean comparison has been published since",
+     "profile:aon @ v1 - relationships[marsh-mclennan].context"
+    ],
+    [
+     "Marsh McLennan FY2025 revenue USD 26,981m; risk and insurance services USD 17,265m; consulting USD 9,794m; underlying growth 4 per cent",
+     "profile:marsh-mclennan @ v1 - summary, financials.periods[]"
+    ],
+    [
+     "Aon FY2025 revenue USD 17,181m; risk capital USD 11,290m; human capital USD 5,907m; organic growth 6 per cent",
+     "profile:aon @ v1 - summary, financials.periods[]"
+    ],
+    [
+     "Nimbus launched 16 June 2025, expanded to USD 2.7bn on 26 January 2026; Nimbus Casualty 19 February 2026 at USD 75m excess of USD 25m; Stratus 26 August 2026 at up to USD 10bn across 30 capital providers",
+     "profile:marsh-mclennan @ v1 - productsAndServices[].highlights"
+    ],
+    [
+     "Aon's lifecycle programme went USD 1.5bn on 9 July 2025, USD 2.5bn on 14 January 2026, USD 3.5bn on 15 April 2026 and USD 5bn on 20 July 2026",
+     "profile:aon @ v1 - productsAndServices[].highlights"
+    ],
+    [
+     "At USD 5bn the tower carries construction all risks, delay in start-up, property damage and business interruption to USD 5bn; third-party liability USD 200m outside the US and USD 100m within it; cyber and technology errors and omissions USD 400m; project cargo USD 500m",
+     "profile:aon @ v1 - productsAndServices[].highlights"
+    ],
+    [
+     "The tower carries embedded commissioning cover and automatic delay-in-start-up sum reduction as phases go live",
+     "profile:aon @ v1 - productsAndServices[].highlights"
+    ],
+    [
+     "Aon placed what its chief executive's shareholder letter calls the first-ever data-centre-specific reinsurance treaty, aligning up to USD 5bn behind a single insurer; management states individual projects to USD 13-15bn using alternative capital",
+     "profile:aon @ v1 - productsAndServices[].highlights"
+    ],
+    [
+     "Marsh McLennan's own file assesses at moderate confidence that Stratus was built on the operational side because the construction side had been lost",
+     "profile:marsh-mclennan @ v1 - strategyRead"
+    ],
+    [
+     "The second-quarter 2026 rate index reported composite down 6 per cent, an eighth consecutive quarterly decline, with property down 12 per cent globally; published 23 July 2026",
+     "profile:marsh-mclennan @ v1 - productsAndServices[], recentDevelopments[]"
+    ],
+    [
+     "Marsh McLennan underlying growth fell from 7 to 4 per cent; second-quarter 2026 consulting grew 8 per cent underlying against risk and insurance services at 3; the reinsurance arm shrank 2 per cent",
+     "profile:marsh-mclennan @ v1 - strategyRead"
+    ],
+    [
+     "No independent source located names Marsh McLennan in any battery-storage placement; its BESS credentials appear only on its own website",
+     "profile:marsh-mclennan @ v1 - productsAndServices[] collection gap, strategyRead"
+    ],
+    [
+     "Aon's documented battery placement is two UK projects reaching financial close on 7 July 2026 behind up to thirteen years of technology performance insurance, described as a first for UK energy storage",
+     "profile:aon @ v1 - productsAndServices[].highlights, strategyRead"
+    ],
+    [
+     "Aon's only published megawatt-scale battery figure comes from a regional brochure coded June 2018 that also claims more than 72,000 colleagues against about 60,000 today",
+     "profile:aon @ v1 - productsAndServices[] collection gap"
+    ],
+    [
+     "Seven Marsh documents across four web properties from 2021 to 2026 name no standard or certification body; every Aon battery and renewables publication reviewed does the same; both state requirements in engineering terms",
+     "profile:marsh-mclennan @ v1 - strategyRead; profile:aon @ v1 - strategyRead"
+    ],
+    [
+     "kWh Analytics is a managing general agent holding no balance sheet; Aspen, Swiss Re, Everest and Munich Re carry every risk it writes",
+     "profile:kwh-analytics @ v2 - ecosystemRole, summary"
+    ],
+    [
+     "Property capacity was USD 75m per location in 2024 and USD 100m from the February 2026 renewal; a USD 20m excess natural-catastrophe layer was added in August 2025",
+     "profile:kwh-analytics @ v2 - productsAndServices[]"
+    ],
+    [
+     "The revenue put guarantees up to 95 per cent of a solar plant's expected output for ten to twenty-five years, thirty under the enhanced variant, and the company reports average debt-sizing increases of 10 per cent",
+     "profile:kwh-analytics @ v2 - productsAndServices[]"
+    ],
+    [
+     "The parametric wind hedge is written by Munich Re Trading; two deals have closed, at 59 MW in 2024 and 79 MW in 2025",
+     "profile:kwh-analytics @ v2 - productsAndServices[], relationships[apex-clean-energy]"
+    ],
+    [
+     "The company publishes no storage revenue, availability or degradation product; its storage franchise is property-only",
+     "profile:kwh-analytics @ v2 - strategyRead, ecosystemRole"
+    ],
+    [
+     "Its published post-fire view is that thermal runaway is the question, that most underwriters are hesitant to insure indoor installations, and that technology-risk rates were stable at approximately 30 to 40 cents per USD 100 of insured value",
+     "profile:kwh-analytics @ v2 - policyExposure[]"
+    ],
+    [
+     "Beazley agreed to acquire kWh Analytics on 10 March 2026 and stated it will be integrated into its own underwriting team; Beazley is completing an all-cash takeover by Zurich, cleared by the European Commission on 7 July 2026, with completion expected before the end of 2026",
+     "profile:kwh-analytics @ v2 - summary, ownership, strategyRead"
+    ],
+    [
+     "No completion release exists; the closing date, price and any retention terms are unpublished; the ownership is treated as a subsidiary on the company's own word",
+     "profile:kwh-analytics @ v2 - strategyRead"
+    ],
+    [
+     "The tax-credit product was announced in January 2025 for launch within eighteen months and had not launched twenty months later",
+     "profile:kwh-analytics @ v2 - productsAndServices[], policyExposure[]"
+    ],
+    [
+     "Marsh and McGriff hold two of the eight broker-council seats in both published years, a quarter of the 2026 council, and neither readout discloses the common ownership",
+     "profile:marsh-mclennan @ v1 - relationships[kwh-analytics], strategyRead"
+    ],
+    [
+     "Aon holds one council seat, represented by the same person in both years - the only firm with that continuity - and its 2025 contribution reported a small number of hot commissioning losses on battery storage farms",
+     "profile:aon @ v1 - relationships[kwh-analytics]"
+    ],
+    [
+     "Marsh USA sued Aon and a named executive in April 2025 after twenty employees resigned inside a 38-minute window on 10 March 2025; Aon declined to comment",
+     "profile:marsh-mclennan @ v1 - relationships[aon].context"
+    ],
+    [
+     "Aon's USI purchase is USD 17.0bn all-debt, agreed 30 August 2026, taking leverage to about 4.8x against a stated downgrade trigger of roughly 3x, with buybacks paused and an interim chief financial officer since 17 August 2026",
+     "profile:aon @ v1 - summary, strategyRead"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does not say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**1 - Nothing in the corpus ranks this segment on the market this corpus is about.** The two league tables that rank its {{incumbent}}s measure **total revenue** and **US brokerage revenue** - the first of which bundles consulting, health and wealth businesses with no connection to either batteries or data centres, and the second of which measures broking across every line of business there is. There is no ranking of brokers on data-centre risk and none on storage risk. The module ranks on the measure that exists and names what that measure contains.",
+    "**2 - It prices nothing for a battery except property.** One rate appears anywhere in the segment - roughly 30 to 40 cents per USD 100 of insured value for technology risk - and it is one underwriter's characterisation of a market rather than a quote. **No deductible, no premium, no attachment point and no capacity figure for a named project appears anywhere in any of the three files.**",
+    "**3 - It does not say what either broker actually placed in storage.** One documented placement on one side; **zero independently documented placements on the other.** Both publish portfolio claims and neither claim is corroborated by an outside source.",
+    "**4 - It does not disclose the {{challenger}}'s economics.** Revenue, gross written premium, claims paid, headcount and the acquisition price are published nowhere. The only third-party revenue estimate located is an unsourced database range, and the company reports growth through cumulative assets-insured boilerplate whose **own published sequence is not monotonic.**",
+    "**5 - It does not settle when that acquisition completes.** The company's own pages and its acquirer's half-year results read as though it is done; trade press and the absence of any completion release read as though it is not. **The module carries both and resolves neither**, because the record does not.",
+    "**6 - It does not name a standard.** This is the segment's own gap, it is attested twice independently, and **no source inside the segment fills it.** It is the sharpest boundary this module can draw between this segment and assurance, two places upstream, and the only one attested from two directions at once.",
+    "**7 - It does not tell you who carries the risk on a given programme.** Carriers are named for the {{challenger}} - Aspen, Swiss Re, Everest, Munich Re. For the two {{incumbent}}s the record describes **panels**: Lloyd's and company-market insurers, an A-plus rated London panel, thirty traditional and alternative capital providers. **Not one panel member is named.**",
+    "**8 - It contains no {{adjacent}} member at all, and that is a registry fact rather than a research gap.** No covered company sells into this segment from another one. **If that ever changes, the arrival of the first adjacent member is the most interesting thing that could happen to this roster** - and it is the change this module's next revision should look for first."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "4 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What are the three roles in this segment, and how many members carry each?",
+     "a": "Two {{incumbent}} brokers, one {{challenger}}, and zero {{adjacent}}. Three members in total - the smallest roster of all nineteen segments."
+    },
+    {
+     "q": "Why can the role-inversion instrument not be run on this segment?",
+     "a": "Because it needs a member that belongs to two segments, and all three of these companies hold zero external memberships. The instrument has an empty input set, and the module publishes that as an absence rather than as a finding about relative standing."
+    },
+    {
+     "q": "What does the relationship graph say about the three members?",
+     "a": "All three of the three possible pairs are connected - the first complete roster this lane has met. The two incumbents are typed competitor by both sides; both edges to the challenger are typed partner, because a broker distributes a {{managing general agent}} rather than competing with it."
+    },
+    {
+     "q": "Which company sits outside the segment but connects to all three members, and why does that matter?",
+     "a": "DNV, an {{incumbent}} of the assurance segment at chain position 17, two places upstream of this one. It matters because the registry's prose independently says the standard-naming gap is assurance's territory, so the graph and the registry attest the same finding without citing each other."
+    },
+    {
+     "q": "On which two measures does the incumbent ranking invert?",
+     "a": "AI data-centre capacity and organic growth. The smaller broker's lifecycle programme reached USD 5bn against the larger one's USD 2.7bn construction facility, and FY2025 organic growth was 6 per cent against 4."
+    },
+    {
+     "q": "What is the structural difference between the challenger and the two incumbents?",
+     "a": "{{delegated authority}}. The challenger prices and binds risk on carriers' paper using its own loss database; the brokers build a submission and market it to carriers who price it. Neither broker operates a renewables or storage managing general agency of its own."
+    },
+    {
+     "q": "Does any member of this segment sell a revenue product for battery storage?",
+     "a": "No. A {{revenue put}} exists for solar and a parametric hedge for wind. For storage this segment sells property cover and data services only - no availability cover and no degradation cover anywhere."
+    },
+    {
+     "q": "What do both incumbents' battery-storage publications leave out?",
+     "a": "Any named standard or certification body. Across seven documents on one side and every reviewed publication on the other, no UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global reference appears; both state insurer requirements in engineering terms instead."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "4 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "This segment's roster holds zero adjacent members and sits at chain position 19 of 19. What is the correct thing for a landscape module to do with the role-inversion and terminus instruments?",
+     "c": [
+      "Run both instruments and report the strongest superlative each one yields, since an extreme reading is still a reading",
+      "Run the terminus instrument only, because chain position is always measurable even when memberships are not",
+      "Substitute the relationship graph's density for both, on the grounds that one complete instrument can stand in for two empty ones",
+      "Report both as empty, name the property of the segment that emptied them, and publish no reading derived from either"
+     ],
+     "a": 3,
+     "why": "Both instruments have a zero denominator here - no external memberships to invert, no segments downstream to point at. An instrument that returns the same answer from any position is measuring the position rather than the segment, so the absence is the finding and a superlative built on it would be a defect."
+    },
+    {
+     "q": "A customer's financial model assumes it can insure a minimum revenue on its battery project. What does the segment's record actually support?",
+     "c": [
+      "The larger broker's renewables facility covers construction, operational and liability risk for solar and storage under 50 MW per project, so a project below that threshold qualifies for revenue cover as well",
+      "No member of this segment sells any storage revenue, availability or degradation product; the revenue put exists for solar and the parametric hedge for wind, and neither has ever been written on a battery",
+      "The parametric hedge can be written against measured battery throughput on the same indifference structure the segment uses for wind speed, with the trigger set so the sponsor is indifferent",
+      "The challenger's USD 20m excess natural-catastrophe layer converts into a revenue floor once the primary property layer attaches, which is how storage projects reach an investment-grade case"
+     ],
+     "a": 1,
+     "why": "The battery-storage offering across this segment is property cover and data services. The revenue put has been applied to solar and, parametrically, to wind, and never to storage - so a model assuming an insurable revenue floor on a battery has to close that gap in the contract instead."
+    },
+    {
+     "q": "Both incumbents publish battery-storage guidance stating separation distances and grid-routing requirements. What is missing from all of it, and where does the corpus say that gap is filled?",
+     "c": [
+      "Loss experience, which is held only by the reinsurance market behind the placement and is never published by a broker at any tier, in any jurisdiction, at any point in the policy lifecycle",
+      "Pricing, which no broker may publish because the rate belongs to the carrier that wrote the policy rather than to the intermediary that placed it, and remains confidential to that individual placement",
+      "Any named standard or certification body at all - and the relationship graph and the segment registry agree independently, without citing each other, that assurance is the segment where that is owned",
+      "Project references, because the placements themselves are confidential to the insured and appear only in the brokers' own marketing material, which no independent source in the corpus corroborates"
+     ],
+     "a": 2,
+     "why": "Seven documents on one side and every reviewed publication on the other name no UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global. The registry's notes say the gap is the assurance segment's territory, and the relationship graph shows DNV as the only company connected to all three members - two independent artefacts attesting the same thing."
+    },
+    {
+     "q": "What is the published clock on the challenger's role label, and what would change if it runs out the way the record suggests?",
+     "c": [
+      "Completion of its acquirer's own takeover is expected before the end of 2026; if the book then moves onto that acquirer's syndicates, the segment holds two brokers and no member that sets a price",
+      "Its delegated authority renews annually each February on the same carrier's paper, and a non-renewal would move it from challenger to adjacent within this segment without changing the roster size",
+      "Its announced tax-credit insurance product carried an eighteen-month launch window from January 2025, and missing that window demotes it to adjacent under the registry's floor rule for the segment",
+      "Its property capacity per location is reviewed at each annual broker council, and any reduction below the USD 75 million per location it carried in 2024 would end the challenger typing outright"
+     ],
+     "a": 0,
+     "why": "The registry's notes say the label may be wrong by the end of 2026, and the challenger's own file dates its acquirer's takeover to completion before then. The consequence the record supports is structural: the segment's only non-broker - its only member that sets a price rather than negotiating one - would become a division of a carrier."
+    },
+    {
+     "q": "A campus energises in blocks over eighteen months. Which feature of the larger construction tower matters most to a power-equipment seller, and why?",
+     "c": [
+      "The USD 500m project-cargo line, because equipment in transit is where a phased build carries most of its uninsured exposure, and where a delayed shipment is the first thing that shows up in the construction schedule",
+      "Embedded commissioning cover with automatic delay-in-start-up sum reduction as phases go live, which puts every commissioning window on the campus inside somebody else's insurance schedule",
+      "The USD 400m cyber and technology errors-and-omissions line, because each newly energised phase adds control systems and so multiplies the attack surface the tower has to answer for",
+      "The third-party liability split of USD 200m outside the United States against USD 100m within it, which decides where a phased campus should be domiciled"
+     ],
+     "a": 1,
+     "why": "The tower reduces its delay-in-start-up sum automatically as phases energise, which means a slipped energisation date is a coverage-period problem as well as a construction one. The other three lines are real parts of the same tower and none of them is sensitive to the schedule."
+    }
+   ]
+  }
+ ]
+};
+}
+
 
 
 // PROJECT END
