@@ -1,4 +1,4 @@
-var VERSION = "v01.56g";
+var VERSION = "v01.57g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -30432,7 +30432,7 @@ function clLessonSegmentCapital_() {
  "title": "Capital",
  "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-16",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -30581,7 +30581,7 @@ function clLessonSegmentCapital_() {
    "rows": [
     [
      "Contracted cash flow — tenant credit, toll length, resource-adequacy terms",
-     "*Who Carries Which Risk* (planned)"
+     "*Who Carries Which Risk*"
     ],
     [
      "The independent engineer's report and the lender's approved-vendor file",
@@ -31196,8 +31196,8 @@ function clLessonSegmentCapital_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk* (planned) · *One Dollar, Four Names* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk* · *One Dollar, Four Names* (planned).",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-capital-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Blackstone, Brookfield, Macquarie, MGX, Excelsior Energy Capital, Digital Realty, Galaxy Digital, Vantage Data Centers — each member's dossier carries one in Profiler."
    ]
   },
@@ -31271,6 +31271,14 @@ function clLessonSegmentCapital_() {
    "changed": [
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -43801,7 +43809,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeBridgeAndOnSiteGeneration_(),
           guidanceDocLandscapeCleanFirmAndNuclear_(),
           guidanceDocLandscapeHyperscalersAndAiLabs_(),
-          guidanceDocLandscapeNeoclouds_()];
+          guidanceDocLandscapeNeoclouds_(),
+          guidanceDocLandscapeCapital_()];
 }
 
 function guidanceIndex_() {
@@ -57627,6 +57636,686 @@ function guidanceDocLandscapeNeoclouds_() {
   }
  ]
   };
+}
+
+// ══════════════
+// LANDSCAPE - CAPITAL (S2 session 13, 2026-09-16)
+// The THIRTEENTH landscape and the TWENTY-SECOND guidance module. Spec:
+// CLASSROOM-CURRICULUM-PLAN.md 10.6; brief: INTEGRATED-REMEDIATION-PLAN.md
+// 7.41. Analysis and source of truth:
+// repository-information/industry-guidance/landscape-capital-analysis.md
+//
+// ROSTER 4 - 1 - 3, re-measured from the registry on the day. It INVERTS
+// session 12's 1 - 6 - 0, and it is the first roster whose incumbents do NOT
+// share a basis: the registry's four basis lines name four different
+// INSTRUMENTS (perpetual capital; operational integration; the finite-life
+// fund; sovereign capital), so there are four bases to sort rather than one
+// ranking to make. The module declines the ranking and sorts on the CLOCK -
+// when must this money leave - which two of the four dossiers state about
+// EACH OTHER, independently, in almost the same words, on the same day.
+//
+// THE GRAPH SETTLES THE RIVALRY QUESTION. 13 edges among the eight, 8
+// curated, 13 typings: competitor 6, partner 5, other 1, portfolio 1. The six
+// competitor typings are THREE PAIRS IN BOTH DIRECTIONS - a complete triangle
+// among the three asset managers. The sovereign incumbent is typed competitor
+// with NOBODY (a historical transaction counterparty and an active portfolio
+// holding; no curated typing at all to the other two incumbents), and so is
+// the single challenger. Three competitors and a counterparty, not four
+// rivals - and TWO of the three competitor edges are the same transaction
+// seen from both sides.
+//
+// SPLIT - NINE NEIGHBOURS, and the first split against a MODULE'S WHOLE
+// SUBJECT rather than an overlap.
+//
+// FROM bess-bankability-2026-08 - NINE: what the IE report tests; the
+// contractual skeleton (commissioning guarantee, energy-retention warranty,
+// availability guarantee through the LTSA, liquidated damages); the BNEF
+// Tier 1 screen and its 15 August 2026 tightening; DNV's Battery Performance
+// Scorecard; CEA's 72 per cent system-level defect finding; the UL 9540A /
+// NFPA 855 stack; the FCC Covered List inverter rule and its three exits; the
+// FEOC and MACR documentation; the RFP diligence checklist. This segment's
+// buying criterion 2 IS that module's subject, not an overlap with it. The
+// line: that module is written for the party being DILIGENCED, this one about
+// the party COMMISSIONING the report. 7.23's test holds on the IE report
+// itself - a gauntlet with a pass mark there, a SORTING INSTRUMENT here
+// (its presence tells you which seat the counterparty is in).
+//
+// FROM contracts-and-revenue (row 11, public, built, and stamped on THIS
+// SEGMENT'S OWN CHALLENGER) - FIVE: the eleven instruments and the two
+// questions that read any of them; capacity-market mechanics; the take-or-pay
+// cap; the credit-backstop arithmetic behind the ~375 bp spread; the
+// clean-firm restart handoff. (t) in its cleanest form yet: its third tile
+// carries 9.875 per cent and 6.192 per cent and NAMES NEITHER COMPANY. 7.23's
+// test holds on 9.875 per cent - an arithmetic demonstration of what tenant
+// credit costs there, ONE NAMED ADJACENT'S OWN COST OF CAPITAL here.
+//
+// FROM landscape-aidc-developers-and-landlords-2026-09 - FIVE: the landlord
+// rankings; powered land and entitlement; pre-leasing and speculative build;
+// the four-party lease chain; the campus megawatt tables. THREE shared
+// members, ALL THREE INVERTED (100 per cent).
+//
+// FROM landscape-storage-developers-and-ipps-2026-09 - TWO: the IPP ownership
+// layer; the developer-side exit vocabulary. ONE shared member, ZERO inverted.
+// So 3 of 4 shared members invert (75 per cent), BIMODAL per (z3) - but the
+// decomposition is new: the three inverters sell capital as an adjunct to
+// owning buildings and the non-inverter sells nothing else, so the rate sorts
+// on whether capital is the member's BUSINESS or its SECOND PRODUCT. The
+// other TEN built landscapes share no member at all.
+//
+// FROM the-campus-as-a-power-project and bridge-power - THREE: the five-rung
+// campus ladder; the capex-against-backlog reading test; behind-the-meter
+// generation as a time-to-power product. The campus lesson names Frontier,
+// Lighthouse and Stargate - two of them an adjacent's own campuses - and
+// names NO PARTY to any of them.
+//
+// FROM reading-the-numbers, WHEN IT IS BUILT - TWO: one dollar as an order, a
+// backlog, a percentage-of-completion line, a lease treatment and a
+// tax-equity allocation; the same lease read three ways.
+//
+// TWENTY-SIX omissions in total.
+//
+// THE LANE OPENER RETURNS NOTHING, AND A NAME COLLISION DOES. (bb3) and (cc4)
+// both found reading-the-graph pre-empting the landscape on its own material;
+// measured here it names NOT ONE of the eight and does not mention this
+// segment. What the scan found instead is NEW TO S2: nvidia-800vdc-2026-08
+// carries a GLOSSARY ENTRY defining MGX as NVIDIA's modular rack form factor,
+// and one of this segment's incumbents IS MGX, the Abu Dhabi sovereign fund.
+// Both modules sit at this tier. So: {{MGX}} is NEVER used as a tooltip term
+// here (MGX is not in the 1,460-term concepts registry either), and the
+// module names the collision once in its own prose. THE RULE: check the
+// neighbours for the member's NAME, not only for its subject - no checker in
+// the toolchain can see a homograph.
+//
+// BUYING CRITERIA: 1 of 5 has a BUILT owner, 2 of 5 are MAPPED, and the five
+// rows are produced by FOUR different mechanisms - the first segment where
+// the diagnosis differs ROW BY ROW rather than segment-wide. Criterion 1 maps
+// to a lesson in READ_NEXT that is BUILT (a genuine intersection - and the
+// shipped lesson was rendering it as "(planned)", which is why this segment
+// was already due). Criterion 2 maps to a lesson in READ_NEXT that is
+// UNBUILT. Criteria 3 and 4 hit NO lexicon key at all - (y3)'s real
+// curriculum gap. Criterion 5 hits a BUILT lesson NOT in this segment's
+// READ_NEXT, filtered by the generator's eligibility guard - (cc3)'s disjoint
+// -set artefact. THE BRIEF'S QUESTION ANSWERED: "mapped but unbuilt" is a
+// VARIANT OF THE FIRST mechanism, not a fourth one, because rows 1 and 2
+// travel the SAME code path and differ only at the registry lookup inside
+// lesson_ref(). A dash row is what the reader sees when the INTERSECTION
+// fails; rows 1 and 2 are not dash rows. A row-2 false positive (the lexicon
+// key "engine" matching "engineer" and mapping to bridge-power) NEVER REACHES
+// THE PAGE - the eligibility guard drops it, which is the guard working.
+//
+// READ_NEXT IS TWO-THIRDS UNBUILT AND IT WAS VERIFIED BY ID, NOT ASSERTED.
+// what-bankable-means (row 24) and reading-the-numbers (row 25) are both
+// absent from the registered id set; contracts-and-revenue is built. (bb1)
+// does NOT bind: the claim is that two lessons do not exist and it was
+// checked by absence. Row 24 is held by 8 item 3 until the bankability
+// module's quarterly review lands; row 25 is already specified on
+// profile:galaxy-digital, an adjacent here. Session 10's THIRD POSTURE - say
+// the test is unowned and decline to own it - applies and is correct.
+//
+// reviewBy 2026-11-06 - READ, NOT SORTED, for the fourteenth session. 27
+// policyExposure entries across eight members, 22 dated, EXACTLY ONE in the
+// future: 2027-12-31, a Section 232 tariff expiry. It is rejected THREE ways
+// - later than the six-month default; off-subject (an equipment customs duty
+// clocking a capital module, (x4)'s trap and (z7)'s cross-segment regime);
+// and ALREADY THIS SEGMENT'S OWN GENERATED LESSON'S reviewBy, set by the
+// generator from the SAME entry. That is (bb4) firing a second time, and a
+// NEW SUB-CASE: the sort and the generator read one field, so on this segment
+// the mechanical route cannot produce a second opinion at all - a TAUTOLOGY
+// rather than session 9's (z4) trap. SIX further rejections are in section 10
+// of the analysis file, including 2026-10-14 (the strongest rival, rejected
+// on SUBJECT - the entities voting are the affiliates that dossier excludes
+// as not its subject - and kept as indicators row 2 per (u)) and 2026-11-07
+// (a chief-executive handover ONE DAY after the date taken, which is the pair
+// a naive scan gets wrong). The date TAKEN is a half-year result whose year
+// ended before the platform exit closed, so the gain lands in that period and
+// no earlier, and NO RETURN FIGURE HAS EVER BEEN PUBLISHED for it - a gate on
+// this module's own central claim. Corroborated by the prior year's half-year result
+// falling on 2025-11-06, held by no other module, and OUTSIDE the
+// 30-day horizon, so the curriculum checker still reports 3 items due.
+// ══════════════
+function guidanceDocLandscapeCapital_() {
+  return {
+ "id": "landscape-capital-2026-09",
+ "group": "The Value Chain",
+ "title": "Capital — the Landscape",
+ "short": "Four incumbents on four different instruments, one challenger and three adjacents that are operators selling capital — a segment where the question that sorts the money is not how much of it there is, but when it has to leave.",
+ "source": {
+  "doc": "Corpus synthesis over the 8 member dossiers of the capital segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-capital-analysis.md"
+ },
+ "updated": "2026-09-16",
+ "reviewBy": "2026-11-06",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "4 · 1 · 3",
+   "v": "incumbents, challenger, adjacents",
+   "sub": "Eight members, re-measured 16 September 2026 from the registry member by member. The first roster with an incumbent plurality whose members do not share a basis: the registry's own basis lines describe four different instruments, so there are four bases to sort rather than one ranking to make"
+  },
+  {
+   "k": "3 of 8",
+   "v": "members the graph types as rivals",
+   "sub": "Thirteen edges connect the eight and eight are curated, carrying thirteen typings. Six read competitor — and they are three pairs typed in both directions, a complete triangle among the three asset managers. The fourth incumbent and the challenger are typed competitor with nobody"
+  },
+  {
+   "k": "4 of 4",
+   "v": "incumbents belong to no other segment",
+   "sub": "Every one of the four is a pure play here, while all three adjacents are ranked in exactly one other segment and all three invert into adjacent. The bench is one segment's roster wearing a second hat: operators that learned to sell capital, not investors that bought operations"
+  },
+  {
+   "k": "4 of 8",
+   "v": "buy nothing this corpus sells",
+   "sub": "Each of the four incumbents says so in its own file: reached through portfolio companies, not directly. The purchasing authority sits entirely with the challenger and the three adjacents, which is why this landscape is a map of whose approved-vendor file matters rather than a target list"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held. Four of the eight carry it here, and — uniquely so far — they do not share a basis: the registry's four basis lines name four different instruments rather than four sizes."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member contesting the established set. Exactly one member carries it, running the same instrument as one of the incumbents at roughly a thousandth of the size. It is also the only one of the eight holding the same role in another segment."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member whose primary business is elsewhere but whose dossier records a line, a channel or a position touching this segment. All three here are operating companies with capital-markets franchises, and all three are ranked higher in one other segment."
+  },
+  {
+   "t": "perpetual capital",
+   "d": "Capital held in vehicles with no fixed life, so the manager is never contractually obliged to sell. One incumbent holds 555.6 billion US dollars of it at 30 June 2026, 48 per cent of its fee-earning base, and its own file calls this the defining structural advantage in this ecosystem."
+  },
+  {
+   "t": "closed-end fund",
+   "d": "A fund with a stated life that must eventually return capital to its investors. It is the reason the segment's clearest platform exit happened when it did rather than when the market peaked, and the exact obligation the perpetual vehicles above do not carry."
+  },
+  {
+   "t": "fee-bearing capital",
+   "d": "The portion of capital under management on which a manager actually earns a fee, which is smaller than headline assets under management and is the number a fee-and-carry business is valued on. One incumbent reports 672 billion US dollars of it against total assets of 20 billion."
+  },
+  {
+   "t": "carried interest",
+   "d": "The manager's share of a fund's profits above a hurdle. Where it sits decides who owns the upside: at one incumbent the listed manager keeps its own carry, at another the parent retains effectively all of it in mature funds and a third in newer ones."
+  },
+  {
+   "t": "securitization",
+   "d": "Financing an asset by issuing bonds secured on its own contracted cash flows rather than on the sponsor's balance sheet. One adjacent invented the data-centre version in 2018 and has since opened the sterling and euro markets for it; its own file calls the franchise, not the design, the durable moat."
+  },
+  {
+   "t": "enterprise value",
+   "d": "The whole value of a business including its debt, which is not what a seller receives. The segment's largest transaction is characterised identically by three parties as an enterprise value of about 40 billion US dollars, with the equity cheque separately reported at about 21 billion and no source reconciling the two."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with the shape, because it decides what this section can honestly do.** Eight members: **Blackstone, Brookfield, Macquarie and MGX** as {{incumbent}}s, **Excelsior Energy Capital** as the single {{challenger}}, and **Digital Realty, Galaxy Digital and Vantage Data Centers** as {{adjacent}}s. Every previous landscape with a plural incumbency could sort it — nine incumbents holding nine stages of a chain, six utility franchises that do not compete, three answers to one objection. **Here the registry's own four basis lines describe four different instruments**, and a section that ranked them would be choosing a publisher rather than reading the record.",
+    "**That is not a dodge, and the corpus says so in its own words.** One member's file states flatly that **no publisher ranks data-centre owners by capacity or value**, and that its own four scale figures — a portfolio at about 150 billion US dollars, a pipeline at about 160, over 130 billion of assets inside about 200 billion of transactions since 2018, and a reported platform valuation of 185 billion — **measure four different things and do not crosswalk**. Where a ranking does exist it contradicts the obvious reading: Infrastructure Investor's 2026 edition puts the largest alternatives manager **eighth** in five-year infrastructure fundraising at 45.7 billion, behind BlackRock at 113.4 billion and behind Macquarie Asset Management at 87.9 billion — while IPE Real Assets' table for the prior year puts Macquarie **first** by assets under management. Stock and flow disagree.",
+    "**What can be sorted is the instrument, and the question that sorts it is the clock: when must this money leave?** Blackstone holds **{{perpetual capital}}** — 555.6 billion US dollars at 30 June 2026, of which 463.0 billion is fee-earning, **48 per cent of its entire fee-earning base** — so the answer is *never*. It has held QTS five years and its position in the vehicle holding it has **risen** from 33 per cent at the take-private to 35.4 per cent. Brookfield holds operational integration: generation, transmission-adjacent assets and data-centre platforms inside one franchise, run as a fee-and-carry business with **672 billion of {{fee-bearing capital}} against total assets of 20.1 billion**. Macquarie is the corpus's exemplar {{closed-end fund}}: it entered Aligned in April 2018 at **85 MW across two facilities** and exited on 21 July 2026 at **51 campuses and 6.4 GW**, about 40 billion of {{enterprise value}}. MGX is sovereign capital, and its answer is *undisclosed* — like its assets under management, its ticket sizes, its stake percentages and its headcount.",
+    "**The cut is not this module's invention. Two of the four state it about each other, independently, in almost the same words.** Blackstone's own strategy section: *\"Macquarie, running the closest comparable platform in Aligned out of finite-life infrastructure funds, exited at eight years. Same asset class, opposite structural obligation.\"* Macquarie's own: *\"the exit happened because a closed-end fund must eventually return capital, which is precisely the obligation Blackstone's perpetual vehicles do not carry over QTS. Same asset class, opposite structural clock.\"* **Neither file cites the other and both were written on 6 September 2026.** Two analysts reached for the same comparison from opposite ends, which is as close to a shared basis as this segment has.",
+    "**And the graph confirms the cut by refusing to extend it to the fourth.** Thirteen edges connect the eight, eight of them curated, carrying thirteen typings. Six read **competitor** — and they are three pairs typed in both directions: Blackstone and Brookfield (*\"Direct peers in infrastructure and digital infrastructure, and counterparties on the pending Aypa Power sale\"*), Blackstone and Macquarie (*\"counterparties on the 2024 AirTrunk sale — Blackstone bought the platform Macquarie was exiting\"*), Brookfield and Macquarie (*\"Peers in infrastructure, and the two rankings that measure them disagree about which is larger\"*). **MGX is typed competitor with none of them.** Its only typed links are a historical *other* to Macquarie, which the note calls *\"a transaction counterparty, not an ongoing relationship\"* because it bought Aligned from Macquarie-managed funds, and an active *portfolio* holding in Vantage. Its edges to the other two incumbents carry **no curated typing at all**.",
+    "**So the module's own judgment, and it is analysis rather than record: this is three competitors and a counterparty, not four rivals.** The three asset managers contest the same assets on different clocks — and notice that **two of the three competitor edges are the same transaction seen from both sides**, one firm buying the platform another was obliged to sell. That is what competition here actually looks like: not price, not share, but one party's deadline meeting another party's patience. Sovereign capital is not in that contest. It is the party the exits are sold **to**, it has published no clock of its own, and its own file rates its edge as **access rather than analysis**.",
+    "**One caution before the next section, because the name is a trap.** **MGX** in this segment is the Abu Dhabi sovereign vehicle. **MGX** in the registered module on 800 VDC architecture is NVIDIA's modular rack and server form factor, and that module carries a glossary entry defining it that way. Both modules sit at this tier, so the same reader meets both. The member's own dossier records the same collision from the other side — two of its ten corpus mentions turned out to be the rack rather than the fund. **When a source says MGX, establish which one before you act on it.**"
+   ],
+   "sales": "There is no league table here and inventing one will cost you credibility with anyone who actually works in this segment. What you can say precisely is which instrument a counterparty is holding, and the tell is the clock: a perpetual vehicle is not obliged to sell and will outwait you on price; a closed-end fund has a stated life and a return to deliver, which is why it moves on a schedule you can read; a sovereign vehicle publishes nothing and is usually a co-investor rather than the party signing. Establish the clock before you establish the number."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**The challenger bench is one company, and the size gap inside it is the segment's own sharpest number.** Excelsior Energy Capital runs **1,505,418,687 US dollars of regulatory assets under management** across two pooled vehicles with 25 employees, per its March 2026 Form ADV. The largest {{incumbent}} in the table holds **1,346.3 billion** of total assets under management. That is roughly **one to nine hundred**. A threat section proportioned to that ratio would be one sentence — so the honest move is to say what the {{challenger}} actually is, and then look at where the pressure is really coming from.",
+    "**What the challenger is: the only member of the eight that holds the same role somewhere else, and the only one in this table that buys equipment.** It carries {{challenger}} in the storage developers and IPPs segment as well, running a {{closed-end fund}} structure — Fund I at 504 million closed January 2021 and fully deployed, Fund II at just over 1 billion closed April 2025 — with a wholly owned late-stage development platform underneath it. And it is a real buyer: **9.7 GWh of US-made batteries reserved in 2024**, 2.2 GWh of Fluence Gridstack Pro and 7.5 GWh from LG Energy Solution Vertech, both framed to capture the domestic-content bonus. Its own file is candid that this is **a procurement option sized to the pipeline rather than a delivery schedule**, that its first three operating batteries use a different supplier's cells entirely, and that **no delivery to one of its sites is reported as of September 2026**.",
+    "**But the challenger is not taking anything from the four incumbents, and the record does not claim it is.** It is typed **competitor** with nobody — its only edges to the table are derived, with no curated typing. It is running the same instrument at a different scale, in a different asset class, for different investors. **The pressure on the incumbents comes from the adjacent bench, and that bench runs the opposite way from most segments.**",
+    "**All three {{adjacent}}s are ranked higher in exactly one other segment, and all three invert into adjacent here.** They are not investors that bought operations. **They are operators that learned to sell capital**, and each of them sells an instrument one of the incumbents sells.",
+    "**Digital Realty — the fee model, built by the asset owner.** A listed REIT must distribute most of its taxable income, so it cannot retain earnings to fund a 4.25 to 4.75 billion annual development programme. Third-party capital breaks that constraint: a **3.25 billion US hyperscale fund** closed March 2026 with the company **retaining 20 per cent and the management mandate**, twenty unconsolidated joint ventures, and **fee income that rose 98.3 per cent in FY2025** to 143.8 million. Its own file calls the fund pillar *\"a structural response to the REIT constraint rather than a diversification play\"* — and notes the cost, which is transparency: twenty entities now sit between the reader and the assets.",
+    "**Vantage Data Centers — criterion three, owned outright by a landlord.** It **invented the data-centre {{securitization}}**: 1.125 billion US dollars in February 2018, rated A− by S&P, the first of ten-plus including the first sterling and the first euro data-centre ABS. It runs regionally ring-fenced equity with sovereign and pension co-investors in each region, and states **more than 60 billion raised globally since late 2024**. Its own strategy section says the capital-markets franchise, **not design intellectual property, is the durable moat** — an out-financing capability peers have imitated but not matched.",
+    "**Galaxy Digital — the counter-example, and it is the one that prices the whole argument.** A broker-dealer under SIC 6211 that owns a 1.63 GW ERCOT campus and allocates roughly **36 per cent of its equity capital to data centres**, against 36 per cent to its original digital-asset business. It finances the campus in the public bond market on its own credit rather than a sponsor's — and **paid 9.875 per cent** on the Phase II notes in July 2026, behind a single unrated tenant with no disclosed credit enhancement, against **6.192 per cent** for a rated and enhanced comparable in the same market. The public lesson on contract instruments carries both numbers and names neither company; what it teaches is the spread. **What this table adds is the party, and therefore the lesson: selling capital without a balance sheet is available to an operator, but selling it cheaply is not.**",
+    "**The module's own judgment, labelled as analysis: disintermediation here runs upward, it is aimed at the fee rather than the asset, and it is already priced.** A landlord that raises a fund on its own pipeline keeps the mandate and pays no promote to anybody. A landlord that can issue its own ABS does not need a sponsor to recapitalise it. The limit is the roughly **375 basis points** the most independent of the three pays for having no sponsor behind its tenant. **And the traffic runs both ways** — one incumbent's own 2026 move was a **listed data-centre REIT externally managed by its own advisory arm**, IPO'd in May 2026 at over 2.0 billion gross. Landlords are learning to raise funds and fund managers are learning to list buildings."
+   ],
+   "sales": "The three adjacents are where your purchase orders are, and they are not interchangeable: one reserves manufacturing capacity by contract, one replicates a single blueprint across forty-one campuses so a specification decision travels globally, and one funds and owns its own substation. The single challenger is a genuine battery buyer with a reserved volume that has not yet been drawn against a named project — which makes it a live conversation rather than a closed one. The four incumbents are not a call list; they are the party whose approved-vendor file follows you across every asset they lend to."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "One row per incumbent and challenger, in registry order. **Every row is analysis** — read off that dossier's own strategy section and labelled as judgment, never blended with fact. **Five rows, and exactly one of them is attacking**: four established positions and a single challenger, which is the inverse of the previous landscape's one-against-six.",
+   "cols": [
+    "Player",
+    "Role",
+    "The bet, and what its own file says about the risk"
+   ],
+   "rows": [
+    [
+     "Blackstone",
+     "incumbent",
+     "That **not being obliged to sell is the whole advantage**, and that a credit book monetises the assets it does not own. Its own file rates the 2026 share-price decline **a liquidity-structure story rather than an earnings story**: a 94.62 billion US dollar non-traded business development company **enforced its redemption gate for the first time in its history** in June 2026 when requests reached roughly 10 per cent against a 5 per cent quarterly cap — and that vehicle is a channel through which the perpetual capital was raised."
+    ],
+    [
+     "Brookfield",
+     "incumbent",
+     "That **owning the power and the platform in one franchise beats owning either**, sold at sovereign scale — France, Sweden, Qatar, Korea, Paducah. Its own file rates all four sovereign programmes **moderate confidence**: *\"commitments to a framework rather than to capacity\"*, none yet shown to convert, one described by a third party as a non-binding term sheet. It separately rates a 10.5 GW hyperscaler framework **materially undelivered**, with no party publishing the figure that would settle it."
+    ],
+    [
+     "Macquarie",
+     "incumbent",
+     "That **the fund's clock is a feature, not a constraint**: enter early and small, build the platform out, exit at scale — and lend across everything in between. Its own file records that the value was created **by building rather than by re-rating**, and that **no return figure has been published anywhere**. It also names the commonest error made about the firm: reading a Macquarie appearance as ownership when three of its four live corpus positions are debt."
+    ],
+    [
+     "MGX",
+     "incumbent",
+     "That **access is the edge rather than analysis** — a state vehicle with a government council behind it, buying the landlords and the labs at once. Its own file rates US political risk **moderate and rising** and calls it the main threat to North American deployment, with about **70 per cent of capital allocated there**. It separately rates its own exposure to the largest build-out's joint venture **moderate**, on the ground that the venture's later communications omit it entirely."
+    ],
+    [
+     "Excelsior Energy Capital",
+     "challenger",
+     "That a **specialist closed-end manager can run the giants' instrument at a thousandth of the size** if it owns the development arm underneath. Its own file rates the data-centre and firm-power pivot **low confidence** — *\"positioning without a project\"*, with no named site, megawatt figure or offtaker — and rates the 9.7 GWh battery reservation an option whose draw-down is **unverified**, with the first three operating projects using another supplier's cells."
+    ]
+   ],
+   "note": "**The three adjacents are deliberately not rows here, and on this segment that is worth saying out loud.** The table is fixed at incumbents and challengers, and on most segments the adjacents are a minor line — but here they carry the threat, so a reader arriving from the section above will look for them. They are in that section instead, with their instruments and their prices. **Read the column, not the row order**: registry order puts the incumbents first and there is no ranking inside it. The four incumbent rows are not ordered by assets, by fundraising, by exits or by megawatts behind them, because the segment's own record supports none of those orderings."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "What to watch, dated **only where the record dates it**. Nine future day-level dates exist across the eight dossiers, and **four of the eight members carry no future date of any kind** — including two of the four incumbents, which is itself the finding rather than a gap in the reading.",
+   "cols": [
+    "Watch",
+    "When the record dates it",
+    "Why it matters"
+   ],
+   "rows": [
+    [
+     "**The first audited number the eight-year platform exit produces.** The seller's financial year ended 31 March and the transaction closed 21 July, so the gain lands in this half and in no earlier period",
+     "**6 November 2026** — day-level, named in that dossier's own account of the annual general meeting, and corroborated by the prior year's half-year result falling on 6 November 2025. **This module's own review date**",
+     "The {{closed-end fund}} instrument has exactly one worked example in this corpus and **no return figure has ever been published for it**. This is the first mandatory disclosure that could contain one — and the same file warns that an inferred quarterly date for this company would be wrong, because it reports half-yearly"
+    ],
+    [
+     "**Three simultaneous reorganisations at one incumbent** — two listed-affiliate combinations going to a vote, and a parent reorganisation targeted at the same quarter",
+     "**14 October 2026** special meetings; completion expected **Q4 2026**. That dossier's own note calls it *\"the first hard date\"* and warns that any share-count, ticker or entity-name fact in the file *\"has a shelf life measured in weeks\"*",
+     "The entities voting are the minority co-investors the dossier excludes as not its subject — but the third reorganisation touches the parent that retains the {{carried interest}}, which is the structural difference between two of the four instruments above"
+    ],
+    [
+     "**Whether a sovereign vehicle's aggregate capacity claim is ever broken down by asset**",
+     "**End 2026** — the board's own statement that portfolio companies' contracted AI-infrastructure capacity is *\"projected to exceed 8GWs by the end of 2026\"*, carried in that dossier's own indicator list",
+     "It is the only quantity this incumbent publishes at all. A breakdown would make its ownership position testable for the first time; another year without one confirms that the figure is an aggregate rather than a disclosure"
+    ],
+    [
+     "**A closed-end fund's harvest completing** — an 830 MW operating wind and solar portfolio sold for about 1 billion US dollars against a 504 million fund, subject to antitrust, FERC and foreign-investment review",
+     "**Q3 2026** guidance in the buyer's announcement. **No day is stated, and the seller has issued no release at all**",
+     "The {{challenger}}'s whole thesis in one transaction, and the test of the roughly eight-times multiple its own file assigns to a contracted book. A lapse would signal review friction rather than valuation"
+    ],
+    [
+     "**Whether the segment's largest private position lists or sells**",
+     "**2027** — an exploration reported at about 100 billion US dollars, raising around 10 billion, described as **early-stage with no formal process launched** and unconfirmed by the company",
+     "Criterion four's exit route, tested on the member that owns criterion three. It would also put a public number on a landlord-run capital-markets franchise for the first time, in a segment where the three private members publish no revenue at all"
+    ],
+    [
+     "**Whether a first-party statement ever names a sovereign contribution to the joint venture behind the largest build-out**",
+     "**Undated** — that dossier's own indicator list says 2026 to 2027",
+     "Its own file rates that exposure **moderate** precisely because the venture's later communications omit the member, and says a confirmed contribution would reverse the judgment"
+    ],
+    [
+     "**Whether the redemption gate at a perpetual-capital channel recurs**",
+     "**Undated.** June 2026 was the first time in that vehicle's history; the precedent is a sixteen-month gating episode at a sister vehicle from November 2022",
+     "{{perpetual capital}} is the first instrument in this table, and a material part of it was raised through vehicles sold to individuals. A second gate would test whether *not obliged to sell* survives its own funding channel"
+    ],
+    [
+     "**Whether speculative landlord capacity leases** — capacity under development rose **82 per cent** in six months to 1,402 MW while the pre-leased share fell from **64 to 54 per cent**",
+     "**Undated**, and the same file says **no source establishes management intent**, offering a competing reading in which leases simply lag construction starts in a market where power sets the schedule",
+     "The largest {{adjacent}}'s fee model is underwritten on a stated 11.5 per cent stabilised yield across the whole pipeline, which is only realisable if the unleased half leases"
+    ]
+   ],
+   "note": "**Six of the eight rows carry no day at all, and the two that do come from two different dossiers.** That is the honest state of this segment's calendar rather than a gap in the reading: 27 policy entries across the eight members, 22 of them dated, and **exactly one in the future** — a tariff expiry in December 2027 that is off-subject, further out than a default review would be, and already the review date of this segment's own public lesson. A segment whose business is dated obligations publishes almost no dates of its own."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "6 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**The organising measurement, and it decides everything below: four of the eight buy nothing this corpus sells, and each of the four says so in its own file.** *\"For vendors in this corpus Blackstone is reached through its portfolio companies, not directly — QTS buys the switchgear, Aypa buys the batteries.\"* *\"For vendors in this corpus, Brookfield is reached through Compass, Data4, Ascenty and Csquare on the data-centre side and through Brookfield Renewable on the power side.\"* Macquarie *\"appears in this corpus far more often as a financier than as an owner.\"* And *\"MGX owns no power project and has no energy strategy of its own.\"* **So this landscape is not a target list**, and a seller who reads it as one will spend a quarter calling the wrong desk. The purchasing authority sits entirely with the {{challenger}} and the three {{adjacent}}s.",
+    "**What the four {{incumbent}}s control instead is worth more than a purchase order: the approved-vendor file, the lender's conditions precedent, and the definition of what the asset is worth on exit.** Two of the four appear in this corpus more often as lenders than as owners, and **a lender's vendor file travels across every asset that lender touches** — which is why the indirect route is slower and wider than the direct one.",
+    "**Path one, the BESS or storage seller.** The addressable member is the {{challenger}}, and it is a real one: 9.7 GWh reserved across two US-made frameworks, a captive development platform building merchant batteries in ERCOT and contracted storage in Utah and California, and a stated pivot toward firm power for data centres. **Two things to establish before the call.** First, **the reservations are options, not schedules** — its own file says the first three operating batteries use a different supplier's cells and that the frameworks *\"do not have an impact\"* on them, so treating 9.7 GWh as a pipeline reads a ceiling as a forecast. Second, **the criterion that decides it is domestic content**: both frameworks were signed to capture the bonus, and the live procurement language in its 2026 releases is *\"FEOC-compliant and Section 45X-eligible\"*. Bring the documentation, not the assurance.",
+    "**Path two, the AIDC-power seller.** The addressable members are the three {{adjacent}}s, and they buy at very different scales through very different doors. One is a named buyer under a **373 million US dollar supply-capacity agreement that reserves manufacturing capacity rather than ordering equipment** — a direct answer to lead times, and the shape you should expect to be asked for. One runs **41 campuses on a single replicated blueprint** with a new global product organisation and a chief procurement office, so one specification decision travels across five continents and a loss is correspondingly total. One **funds and owns its own electrical infrastructure** — a private substation, front of the meter — and is therefore the buyer of record for its own interconnection.",
+    "**The cross-cutting instruction for both paths, and it is the single most useful thing in this module.** When one of the four incumbents appears in a deal you are quoting into, **establish which seat it is in before you price: owner, lender, or neither.** The commonest error in this corpus about this segment is reading a sponsor's name as ownership, and one dossier documents it three times over — a facility that was credit rather than equity, preferred equity that replaced tax equity at project level, and a loan to a platform that a **different member of this same segment** owns. **The seat decides who signs, what gets diligenced and how long it takes**, and the tell is usually which operating group or which fund the source names.",
+    "**What this module does not teach, on purpose.** What makes a supplier bankable — what the {{independent engineer}} tests, the warranty and service-agreement skeleton it expects, the scorecards it consults, the headwinds to raise first — is the subject of the registered bankability module, and it is written for the party being diligenced rather than the party commissioning the report. **Read that module for the gate; read this one for who is standing behind it.** The mechanism lesson on contract instruments teaches the arithmetic of what tenant credit costs; this module says whose credit it was."
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's eight member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier at that dossier's profile version and to the field it rests on, or to the segment registry, or to the graph. Dossiers carry their own sources; this ledger cites the dossiers.",
+   "rows": [
+    [
+     "Segment holds 8 members — 4 incumbent, 1 challenger, 3 adjacent; chain position 16, tier services; and the registry entry carries NO notes field",
+     "profiler-segments.json @ last commit 2026-09-13 — segments[].members[], .position, .tier"
+    ],
+    [
+     "The five buying criteria, verbatim, including securitizability and the exit route",
+     "profiler-segments.json @ 2026-09-13 — segments[].buyingCriteria[]"
+    ],
+    [
+     "All four incumbents belong to no other segment; all three adjacents are ranked in exactly one other segment and all three invert into adjacent; the challenger holds the same role in one other segment",
+     "profiler-segments.json @ 2026-09-13 — every segment's members[], counted"
+    ],
+    [
+     "13 edges among the eight, 8 curated, carrying 13 typings: competitor 6, partner 5, other 1, portfolio 1",
+     "profiler-graph.json @ built 2026-09-13 — edges[] where both ends are members"
+    ],
+    [
+     "The competitor set is a complete triangle among the three asset managers, typed in both directions; MGX and the challenger are typed competitor with nobody",
+     "profiler-graph.json @ 2026-09-13 — edges[].curated[].type, with the notes quoted"
+    ],
+    [
+     "MGX to Macquarie is typed other and historical, the note calling it a transaction counterparty rather than an ongoing relationship; MGX to Vantage is portfolio and active",
+     "profiler-graph.json @ 2026-09-13 — edges[].curated[].type, .status, .note"
+    ],
+    [
+     "Perpetual-capital AUM 555.6bn at 30 June 2026, 463.0bn fee-earning, 48 per cent of all fee-earning AUM; QTS held five years; the BREIT position rose from 33 to 35.4 per cent",
+     "profile:blackstone @ v1 — strategyRead[0]"
+    ],
+    [
+     "No publisher ranks data-centre owners by capacity or value; the firm's own four scale figures measure four different things and do not crosswalk",
+     "profile:blackstone @ v1 — strategyRead[1]"
+    ],
+    [
+     "Eighth in five-year infrastructure fundraising at 45.7bn against BlackRock's 113.4bn; third in the PEI 300 private-equity table; largest alternatives manager by total AUM",
+     "profile:blackstone @ v1 — strategyRead[2]"
+    ],
+    [
+     "The credit business is the reason the firm is systematically misread: a facility that was credit, preferred equity replacing tax equity at project level, and lending to a platform GIP and MGX own",
+     "profile:blackstone @ v1 — strategyRead[3]"
+    ],
+    [
+     "A 94.62bn non-traded BDC enforced its redemption gate for the first time in June 2026 at roughly 10 per cent against a 5 per cent quarterly cap; the precedent is a sixteen-month gating episode from November 2022",
+     "profile:blackstone @ v1 — strategyRead[4]"
+    ],
+    [
+     "Total AUM 1,346.3bn and fee-earning AUM 961.6bn at 30 June 2026",
+     "profile:blackstone @ v1 — recentDevelopments[1]"
+    ],
+    [
+     "A listed data-centre REIT externally managed by the firm's own advisory arm completed its IPO in May 2026 at over 2.0bn gross",
+     "profile:blackstone @ v1 — recentDevelopments[5]"
+    ],
+    [
+     "Fee-bearing capital 672bn at 30 June 2026, up 19 per cent, against total assets of 20,080m; the parent retains effectively 100 per cent of carried interest in mature funds and 33.3 per cent on newer ones",
+     "profile:brookfield @ v2 — summary, strategyRead[5]"
+    ],
+    [
+     "The four sovereign programmes are commitments to a framework rather than to capacity, and none has been shown to convert; one is described by a third party as a non-binding term sheet",
+     "profile:brookfield @ v2 — strategyRead[3]"
+    ],
+    [
+     "The 10.5 GW hyperscaler framework is materially undelivered and no party publishes the figure that would settle it",
+     "profile:brookfield @ v2 — strategyRead[4]"
+    ],
+    [
+     "Three reorganisations closing in Q4 2026, with special meetings on 14 October 2026 called the first hard date, and a warning that entity facts have a shelf life measured in weeks",
+     "profile:brookfield @ v2 — technicalSpecs[2], including its notes field"
+    ],
+    [
+     "Aligned entered April 2018 at 85 MW across two facilities and exited 21 July 2026 at 51 campuses and more than 6.4 GW; a closed-end fund must eventually return capital, which the perpetual vehicles do not",
+     "profile:macquarie @ v1 — strategyRead[0]"
+    ],
+    [
+     "The about 40bn figure is an enterprise value; the equity cheque is separately reported at about 21bn and no source reconciles the two with a stated debt figure",
+     "profile:macquarie @ v1 — strategyRead[1]"
+    ],
+    [
+     "The firm appears far more often as a financier than as an owner — a GPU-secured facility, a senior loan, preferred equity and a tax-equity partnership — and the operating group named in the source is the reliable tell",
+     "profile:macquarie @ v1 — strategyRead[2]"
+    ],
+    [
+     "Fourth at 87.9bn of five-year capital raised in one ranking while first by assets under management in another; stock and flow are diverging",
+     "profile:macquarie @ v1 — strategyRead[3]"
+    ],
+    [
+     "6 November 2026 carries the half-year result, with the chief-executive change the following day; the prior year's half-year result fell on 6 November 2025; reporting is half-yearly and an inferred quarterly date would be wrong",
+     "profile:macquarie @ v1 — recentDevelopments[0], [3], [5]; decisionMakers[0], [1]"
+    ],
+    [
+     "The gain falls into FY27 because the year ends 31 March, and the firm has published no return figure",
+     "profile:macquarie @ v1 — recentDevelopments[1]"
+    ],
+    [
+     "Fund I closed 1 July 2026 at 49bn against a 45bn target with 14 portfolio companies; an initial equity funder of Stargate; co-founder of AIP; an owner in Aligned and Vantage",
+     "profile:mgx @ v2 — summary, ecosystemRole"
+    ],
+    [
+     "The edge is access rather than analysis; US political risk has moved from background to foreground with about 70 per cent of capital allocated to North America; Stargate exposure is rated moderate because later communications omit the member",
+     "profile:mgx @ v2 — strategyRead[0], [2], [3]"
+    ],
+    [
+     "No headcount, no AUM total, no LP names, no ticket or stake for any position, and no confirmed Stargate contribution",
+     "profile:mgx @ v2 — strategyRead[5]"
+    ],
+    [
+     "Contracted AI-infrastructure capacity projected to exceed 8 GW by the end of 2026, stated by the board",
+     "profile:mgx @ v2 — summary; strategyRead[6]"
+    ],
+    [
+     "Regulatory AUM 1,505,418,687 across two pooled vehicles with 25 employees; Fund I 504m, Fund II just over 1bn; 9.7 GWh of US-made batteries reserved in 2024",
+     "profile:excelsior-energy-capital @ v1 — summary, ecosystemRole"
+    ],
+    [
+     "The 9.7 GWh is a procurement option sized to the pipeline rather than a delivery schedule; the first three operating batteries use another supplier's cells; no delivery to a site is reported as of September 2026",
+     "profile:excelsior-energy-capital @ v1 — strategyRead[1]"
+    ],
+    [
+     "The data-centre and firm-power pivot is positioning without a project — no named site, megawatt figure or offtaker; the Enel sale is guided to close in Q3 2026 and the seller has issued no release",
+     "profile:excelsior-energy-capital @ v1 — strategyRead[2], [4]; recentDevelopments[3]"
+    ],
+    [
+     "A 3.25bn US hyperscale fund closed March 2026 with 20 per cent retained and the management mandate; twenty unconsolidated joint ventures; fee income up 98.3 per cent in FY2025 to 143.8m",
+     "profile:digital-realty @ v2 — summary, strategyRead[1]"
+    ],
+    [
+     "Capacity under development rose 82 per cent in six months to 1,402 MW while the pre-leased share fell from 64 to 54 per cent; no source establishes management intent and a competing reading is offered",
+     "profile:digital-realty @ v2 — strategyRead[2]"
+    ],
+    [
+     "Roughly 24.6 per cent of annualised recurring revenue cannot be assigned to a named counterparty; nine of the twenty largest customers are redacted including the largest at 11.7 per cent; the dossier declines to infer them",
+     "profile:digital-realty @ v2 — strategyRead[4]"
+    ],
+    [
+     "A named buyer under a 373m supply-capacity agreement that reserves manufacturing capacity rather than ordering equipment",
+     "profile:digital-realty @ v2 — ecosystemRole; policyExposure[4].mitigation"
+    ],
+    [
+     "Classified under SIC 6211 as a securities broker-dealer; equity capital at 30 June 2026 roughly 36 per cent data centres against 36 per cent digital assets; 1.63 GW ERCOT-approved with 800 MW gross leased to one tenant",
+     "profile:galaxy-digital @ v1 — summary, strategyRead[0], [1]"
+    ],
+    [
+     "Phase II notes priced at 9.875 per cent in July 2026 behind an unrated tenant with no disclosed credit enhancement, against 6.192 per cent for a rated and enhanced comparable",
+     "profile:galaxy-digital @ v1 — strategyRead[4]"
+    ],
+    [
+     "No all-phase base-term contract value is published, only average annual figures, which is what makes cross-company lease comparisons in this cohort unsound",
+     "profile:galaxy-digital @ v1 — strategyRead[2]"
+    ],
+    [
+     "The industry's first data-centre securitization at 1.125bn in February 2018 rated A− by S&P, ten-plus since including the first sterling and first euro data-centre ABS; more than 60bn raised globally since late 2024",
+     "profile:vantage @ v9 — summary, financials.periods[1]"
+    ],
+    [
+     "The capital-markets franchise rather than design intellectual property is assessed as the durable moat; 41 campuses on one replicated blueprint with a new global product organisation and chief procurement office",
+     "profile:vantage @ v9 — strategyRead[3]; ecosystemRole"
+    ],
+    [
+     "An IPO exploration reported at about 100bn raising around 10bn as soon as 2027, early-stage and unconfirmed by the company",
+     "profile:vantage @ v9 — summary; recentDevelopments[0]"
+    ],
+    [
+     "No revenue or EBITDA figures are disclosed",
+     "profile:vantage @ v9 — summary"
+    ],
+    [
+     "27 policyExposure entries across the eight members, 22 dated, exactly one in the future: a Section 232 tariff expiry at 2027-12-31, which is also this segment's own public lesson's review date",
+     "the eight profiles @ the versions above — policyExposure[]; Classroom.gs — segment-capital reviewBy"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "Ten absences. Each one is **stated by the dossier that has it**, not inferred from silence — and on this segment they matter more than anywhere else in the corpus, because two of the four {{incumbent}}s publish no financial statements at all and the segment's entire subject is what things are worth.",
+    "**1 · No return figure exists for the segment's defining transaction.** The seller has published none anywhere, and its own file says so. The roughly 40 billion US dollar figure is characterised identically by three parties as an {{enterprise value}}; the equity cheque is separately reported at about 21 billion; **no source reconciles the two with a stated debt figure**. The 5 billion of growth capital committed at close appears in no seller document at all.",
+    "**2 · The sovereign incumbent publishes no assets under management, no ticket sizes, no stake percentages, no headcount and no investor names.** Its own collection-gap note lists every one of them, and adds that no first-party statement names its contribution to the joint venture behind the largest build-out.",
+    "**3 · No publisher ranks data-centre owners by capacity or value.** Two members state this independently. One adds that its own four scale figures **measure four different things and do not crosswalk**; the other that the claim to lead an AI-landlord market is **unfalsifiable rather than true or false**, because the private platforms capturing that demand publish nothing comparable and a category ranking would omit half the field by construction.",
+    "**4 · The largest private member discloses no revenue and no EBITDA at all** — 41 campuses, roughly 9 GW of power capacity, more than 60 billion raised since late 2024, and not one income-statement line.",
+    "**5 · The {{challenger}} publishes no fund returns, no fee terms and no Form ADV Part 2 brochure**, and has issued no release on its own largest exit. The multiple its file assigns to that exit is a third party's arithmetic on the buyer's figures.",
+    "**6 · Roughly a quarter of the largest {{adjacent}}'s recurring revenue cannot be assigned to a named counterparty.** Nine of its twenty largest customers are redacted, including the largest at 11.7 per cent. Its dossier **explicitly declines to infer the identities** and says no source it found resolves them.",
+    "**7 · No all-phase contract value is published** by the adjacent whose campus is the segment's clearest single-tenant exposure — only average annual figures, against peers who publish fifteen-year base-term aggregates. Its own file says this is **what makes cross-company lease comparisons in this cohort unsound**, and it is precisely the subject of a planned public lesson that does not exist yet.",
+    "**8 · One incumbent's first-party website was unreachable throughout its research.** Every path tested returned HTTP 403, including the robots file, with no archive fallback. Its dossier says its first-party share *\"reads high not because the firm is unusually forthcoming but because filings were the only first-party channel available\"* — an under-checked file that says so about itself.",
+    "**9 · Four sovereign-scale programme commitments have no completion data of any kind**, which is why that dossier rates all four at moderate confidence. The shape repeats: a government supplies demand and siting, the investor supplies capital, and the announcement precedes the build by years. One is described by a third party as a non-binding term sheet.",
+    "**10 · No source establishes intent behind the fall in pre-leasing from 64 to 54 per cent.** The dossier that carries the number offers a competing reading — that leases lag construction starts in a market where power rather than demand sets the schedule — and rates its own judgment moderate for exactly that reason.",
+    "**And two things about the curriculum, stated here so the gap is explicit rather than implied.** The public lesson on this segment prints a dash against three of its five buying criteria, for **two different reasons**: securitizability and the exit route hit no keyword in the curriculum's map at all, because no lesson in the plan teaches them; while the regulatory-exposure criterion is substantially covered by a built public lesson that is simply not mapped to this segment. Separately, **two of the three follow-on lessons this segment points at do not exist yet** — one on what bankable means, which is deliberately held until the bankability module's quarterly review lands, and one on reading financial statements, which is already specified on one of this segment's own members. **This module names every one of those gaps and fills none of them.** A landscape that starts teaching a criterion because nobody else does has stopped being a landscape."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "6 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "This segment has four incumbents. Why does the module refuse to rank them?",
+     "a": "**Because they are not competing on one axis, and the corpus says so twice over.** The registry's four basis lines describe four different instruments — perpetual capital, operational integration, a finite-life fund, and sovereign capital — not four sizes. And where a ranking exists it contradicts itself: one publisher puts the largest alternatives manager **eighth** in five-year infrastructure fundraising while another puts a different member **first** by assets under management. One member's own file states that **no publisher ranks data-centre owners by capacity or value at all**, and that its own four scale figures do not crosswalk. Ranking them would be choosing a publisher."
+    },
+    {
+     "q": "What single question actually sorts the four incumbents?",
+     "a": "**When must the money leave?** Perpetual capital: never — one member has held its platform five years and its stake has risen. Operational integration: at fund life, but the franchise persists, run as fee-and-carry on a deliberately small balance sheet. The {{closed-end fund}}: at fund life, demonstrated — 85 MW to 6.4 GW in eight years and then out. Sovereign capital: **undisclosed**, like everything else about it. The clock, not the size, is the segment's real structure."
+    },
+    {
+     "q": "Two of these four dossiers make the same comparison about each other. What is it, and why does it matter?",
+     "a": "One says *\"Same asset class, opposite structural obligation\"*; the other says *\"Same asset class, opposite structural clock\"*. **Neither file cites the other and both were written on the same day.** It matters because it is a corpus-internal cross-attestation: two independent analyses converging unprompted on the axis that separates the two largest instruments here. That is much stronger evidence for the cut than a module asserting it."
+    },
+    {
+     "q": "The graph types six of thirteen curated links among these eight as competitor. Who is in that set, and who is not?",
+     "a": "**A complete triangle among the three asset managers**, typed in both directions on every pair. **The sovereign incumbent is typed competitor with nobody** — its only typed links are a historical transaction counterparty and an active portfolio holding, and its links to the other two incumbents carry no curated typing at all. **The single {{challenger}} is typed competitor with nobody either.** So the segment holds exactly one rivalry set, of three."
+    },
+    {
+     "q": "Two of the three competitor edges have something unusual in common. What?",
+     "a": "**They are the same transaction seen from both sides** — one firm buying the platform another was obliged to sell. That is what competition in this segment looks like: not price and not share, but **one party's deadline meeting another party's patience**. It is the clock argument showing up in the relationship data rather than in the prose."
+    },
+    {
+     "q": "The adjacent bench here runs the opposite way from most segments. How, and why does it matter?",
+     "a": "Elsewhere adjacents are usually investors or suppliers reaching into a segment. **Here all three are operating companies that learned to sell capital** — a landlord running a 3.25 billion third-party fund on 20 per cent of the equity and keeping the mandate, a landlord that invented the data-centre {{securitization}} in 2018, and a broker-dealer that owns a campus. All three are ranked higher in exactly one other segment and all three invert into adjacent here. **They are attacking the fee, not the asset**, which is a different threat from the one a challenger poses."
+    },
+    {
+     "q": "What does 9.875 per cent tell you about what a capital-markets franchise is worth?",
+     "a": "It is what the most independent of the three adjacents paid to issue on its own credit, behind a single unrated tenant with no disclosed enhancement — against **6.192 per cent** for a rated and enhanced comparable in the same market. Roughly **375 basis points**. **Selling capital without a balance sheet is available to an operator; selling it cheaply is not.** The public lesson on contract instruments teaches that spread and names nobody; this module supplies the party."
+    },
+    {
+     "q": "A sponsor's name appears in a deal you are quoting into. What do you establish before you price?",
+     "a": "**Which seat it is in: owner, lender, or neither.** The commonest error in this corpus about this segment is reading an appearance as ownership, and one dossier documents it three times over — a facility that was credit, preferred equity replacing tax equity at project level, and a loan to a platform that a **different member of this same segment** owns. The seat decides who signs, what gets diligenced and how long it takes, and the tell is usually which operating group or fund the source names."
+    },
+    {
+     "q": "You want to sell power equipment into this segment. Where is the purchasing authority?",
+     "a": "**Not with the four incumbents — with the challenger and the three adjacents.** All four incumbents say in their own files that they are reached through portfolio companies rather than directly, or that they appear as financiers rather than owners, or that they own no power asset at all. What the incumbents control is the approved-vendor file, the lender's conditions precedent and the exit valuation — and **a lender's vendor file travels across every asset that lender touches**, which makes that route slower and wider than a direct sale."
+    },
+    {
+     "q": "The name MGX appears in a source you are reading. What is the risk?",
+     "a": "**There are two MGXs at this tier and they are unrelated.** One is the Abu Dhabi sovereign vehicle that is an incumbent in this segment. The other is **NVIDIA's modular rack and server form factor**, which the registered module on 800 VDC architecture defines in its own glossary. The member's own dossier records the same collision from the other side: two of its ten corpus mentions turned out to be the rack rather than the fund. Establish which one before acting on it."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "7 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague sees four incumbents against one challenger and concludes this is a consolidated market with a stable oligopoly. What does the record actually support?",
+     "c": [
+      "Consolidation — four established positions against one sub-scale contender is a mature market",
+      "That it may not be one market at all: the four incumbents' own basis lines describe four different instruments, and the graph types only three of the eight as rivals",
+      "Fragmentation — eight members with no shared basis means the segment has not formed yet",
+      "That the challenger is about to be acquired, since it runs the same instrument at a thousandth of the size"
+     ],
+     "a": 1,
+     "why": "The registry gives four different instruments — perpetual capital, operational integration, a finite-life fund and sovereign capital — not four positions on one axis. The graph reinforces it: six of thirteen curated typings read competitor, and they are three pairs in both directions among the asset managers only. The sovereign incumbent and the challenger are typed competitor with nobody. Neither consolidation nor fragmentation describes that; four instruments sharing one counterparty class does."
+    },
+    {
+     "q": "What is the strongest evidence in the corpus that the clock — rather than size — is the axis that separates these incumbents?",
+     "c": [
+      "The module's own analysis section says so",
+      "The published rankings agree on the ordering",
+      "Two of the four dossiers state the same comparison about each other, independently, in almost the same words, on the same day",
+      "The segment registry's definition names it"
+     ],
+     "a": 2,
+     "why": "One file says 'Same asset class, opposite structural obligation' and the other 'Same asset class, opposite structural clock' — neither citing the other, both written 6 September 2026. That is a cross-attestation rather than an assertion. The published rankings in fact disagree with each other, one placing a member eighth by fundraising while another places a different member first by assets, which is why size cannot be the axis."
+    },
+    {
+     "q": "The public lesson for this segment prints a dash against three of its five buying criteria. What is the correct diagnosis?",
+     "c": [
+      "All three are curriculum gaps — no lesson teaches any of them",
+      "All three are keyword artefacts — the lessons exist but are not mapped",
+      "Two are genuine curriculum gaps and one is a mapping artefact: a built public lesson covers it but is not in this segment's follow-on list",
+      "The generator is malfunctioning and the rows should be populated"
+     ],
+     "a": 2,
+     "why": "Securitizability and the exit route hit no keyword in the curriculum map at all, because no lesson in the plan teaches them — a real gap. The regulatory-exposure criterion does hit a keyword that maps to a built, public lesson, but that lesson is not in this segment's follow-on list, so the generator's eligibility guard filters it before the keyword matters. Same dash, two different causes, and the module says which is which rather than making one claim about all three."
+    },
+    {
+     "q": "Which statement about this segment's adjacents is supported by the measurement?",
+     "c": [
+      "They are financial investors that acquired operating businesses",
+      "They are operating companies that built capital-markets franchises, and each is ranked higher in exactly one other segment",
+      "They are suppliers to the incumbents and appear here as vendors",
+      "They are former incumbents that lost their positions"
+     ],
+     "a": 1,
+     "why": "All three are primarily something else — two landlords and a broker-dealer — and each carries incumbent or challenger in the same one other segment, inverting into adjacent here. The direction is a demotion into this segment from a higher rank elsewhere, on a single source segment, which is why the threat they pose is aimed at the incumbents' fee rather than at their assets."
+    },
+    {
+     "q": "You are selling medium-voltage switchgear and you want to reach the money in this segment. What does the record say about who to call?",
+     "c": [
+      "Call the four incumbents directly — they hold the capital and therefore the decision",
+      "Call the challenger and the three adjacents; the four incumbents' own files say they are reached through portfolio companies or appear as financiers rather than owners",
+      "Call nobody in this segment — it buys no equipment at any level",
+      "Call the largest incumbent, because its portfolio companies follow its vendor list"
+     ],
+     "a": 1,
+     "why": "Four of the eight state in their own files that vendors reach them through portfolio companies, that they appear far more often as financiers than as owners, or that they own no power asset at all. The purchasing authority sits with the challenger — a real battery buyer with reserved volume — and with the three adjacents, one of which reserves manufacturing capacity by contract, one of which replicates a single blueprint across forty-one campuses, and one of which owns its own substation. What the incumbents control is the approved-vendor file rather than the purchase order."
+    },
+    {
+     "q": "This module names two follow-on lessons that do not exist, and declines to teach either subject. Why is declining the right answer rather than a gap in the module?",
+     "c": [
+      "Because guidance modules may not teach mechanisms at any time",
+      "Because the material is not in the corpus",
+      "Because a landscape's job is the parties, and one that starts teaching a criterion because nobody else does has stopped being a landscape",
+      "Because the missing lessons will be built next week"
+     ],
+     "a": 2,
+     "why": "One of the two is deliberately held until the registered bankability module's quarterly review lands, so that it does not ship with an already-expired review date; the other is already specified on one of this segment's own members. The material exists and the gap has a stated reason in both cases. A landscape that filled it would be duplicating a planned public lesson behind a higher access gate, which is the opposite of what this layer is for."
+    }
+   ]
+  }
+ ]
+};
 }
 
 

@@ -1,4 +1,4 @@
-var VERSION = "v02.13g";
+var VERSION = "v02.14g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1068,7 +1068,62 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     terms: ['neocloud', 'merchant cloud', 'AI cloud',
             'credit substitution', 'delayed-draw term loan',
             'customer concentration', 'ClusterMAX', 'bare metal'],
-    source: 'guidance:landscape-neoclouds-2026-09' }
+    source: 'guidance:landscape-neoclouds-2026-09' },
+  // S2 session 13. ADDED - and the brief's prior was wrong about the REASON,
+  // which is a new outcome beyond (i)'s yes, (e)'s no and (v)'s half-and-half.
+  // 7.41 forecast that "finance words will collide with the broadest terms
+  // already in the roster, so expect a LOW YIELD". Denominator re-measured
+  // against BOTH arrays per 10.6 (bb5): SCRAPER_INTEREST_TOPIC_SEEDS (38
+  // seeds, 238 terms) AND SCRAPER_SEGMENT_SEEDS (29 lenses, 249 terms) - 487
+  // raw, 462 distinct, which reconciles exactly with session 12's 454 plus
+  // its own eight terms. SIXTY candidates run; FIFTY-SEVEN scored ZERO - the
+  // highest zero rate any S2 seed check has produced. THERE WAS NO COLLISION
+  // TO HAVE: the roster is an equipment, power, project, site and policy
+  // vocabulary with NO finance seed in it at all, and the only three non-zero
+  // scores are the two finance terms S2 sessions placed while covering OTHER
+  // segments from the financing side (`data center ABS` in topic-aidc-
+  // landlords, `delayed-draw term loan` in topic-landscape-neoclouds) plus
+  // `GPU-secured` as a superstring of `gpu`. So the drops below are almost
+  // all EDITORIAL rather than duplication.
+  // DROPPED: two as exact duplicates; one as a superstring; THREE on SPLIT
+  // grounds to topic-bess-bankability (`independent engineer`, `approved
+  // vendor`, `non-recourse`) - this segment's buying criterion 2 IS that
+  // module's whole subject, so seeding its vocabulary here would blur in the
+  // digest exactly the line the module draws in the curriculum, which is (v)
+  // applied for the first time to a registered MODULE rather than a sibling
+  // landscape; ONE on split grounds to topic-storage-owners (`tax equity`,
+  // whose competing structure `tax credit transfer` already lives there);
+  // THREE as NEAR-DUPLICATES an exact-match score does not catch, (cc6)'s
+  // class firing three times (`fee-earning AUM` against the taken `fee-
+  // bearing capital`; `finite-life fund` against the taken `closed-end fund`;
+  // `asset-backed` against `securitization`); TWENTY-ONE as too generic,
+  // including `ring-fenced`, which is criterion 3's own third element but
+  // whose UK banking sense (`ring-fenced bank`) carries far more article
+  // volume; and ONE as unlikely to appear in article text (`fund-to-fund` is
+  // the registry's wording for criterion 4, not the market's).
+  // TWO STANDING RESERVATION DEBTS, and the second is identified here.
+  // (1) `restart` still scores zero across all 462 and is still topic-
+  // landscape-clean-firm-and-nuclear's word for that module's next revision -
+  // FOUR sessions unseeded. (2) Session 12 dropped six terms "on split
+  // grounds to topic-aidc-landlords" (`tenant of record`, `credit backstop`,
+  // `recognition agreement`, `bankruptcy-remote`, `triple-net lease`, `penny
+  // warrant`). Checked here: NONE of the six is in that seed and ALL SIX
+  // still score zero - a term ASSIGNED to another seed's territory is not a
+  // term SEEDED there, and topic-aidc-landlords has not been edited since
+  // session 6. Two of the six are directly relevant to this segment
+  // (`bankruptcy-remote` is criterion 3's second element, `tenant of record`
+  // criterion 1's) and are LEFT ALONE rather than taken. The GPU-residual-
+  // value gap (blocked in both directions, no admissible term) is unchanged
+  // and still wants a developer decision on the scorer.
+  // New key, no sheet row, so no `tv` marker applies and no existing seed's
+  // terms array was edited. No outlet was added to SCRAPER_SOURCE_ROSTER.
+  { key: 'topic-landscape-capital',
+    label: 'Capital: the funds, sovereign vehicles and lenders above the developer, and the clock each one runs on',
+    terms: ['perpetual capital', 'closed-end fund', 'continuation fund',
+            'carried interest', 'fee-bearing capital', 'infrastructure fund',
+            'alternative asset manager', 'sovereign wealth fund',
+            'private credit', 'securitization'],
+    source: 'guidance:landscape-capital-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

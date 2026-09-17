@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 56/50`
+`Sections: 57/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.57g] — 2026-09-16 08:22:31 PM EST — v06.24r
+
+### Added
+
+- A new guidance module in the Value Chain library, covering the tier of the market that owns and lends against the platforms this curriculum describes: who holds which position, what each is betting on, what to watch, and how a seller should read the difference
+
+### Changed
+
+- The corresponding segment page now points to that module and no longer describes one of its follow-on lessons as still to come, since that lesson is already available
 
 ## [v01.56g] — 2026-09-16 06:47:59 PM EST — v06.22r
 

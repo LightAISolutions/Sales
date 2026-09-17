@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 34/50`
+`Sections: 35/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.14g] — 2026-09-16 08:22:31 PM EST — v06.24r
+
+### Added
+
+- A new news-interest topic for the funds, sovereign vehicles and lenders that sit above the developers, so stories about that part of the market are picked up and scored in the daily digest
 
 ## [v02.13g] — 2026-09-16 06:38:00 AM EST — v06.15r
 
