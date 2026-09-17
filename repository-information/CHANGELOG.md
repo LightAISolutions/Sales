@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.39r] — 2026-09-17 04:21:16 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.49's deploy counters written into BOTH halves** — the prose paragraph and the quoted prompt block — against the v06.38r job log rather than a forecast. **The one-leg forecast was right**: `Classroom deploy confirmed (GET): Updated to v01.64g (deployment 76) | 76/200` in **16 seconds**, with exactly **one** `Deploy <Project>` step firing and the other **seven** exiting 0 silently in zero seconds on their own `git diff` guard. The run closed on *All GAS deploys confirmed the merged version*. **Classroom now stands at 76/200 with 124 of its allowance left; Scraper unchanged at 162/200 with 38**
+- The §7.19 order resolved on its **two reads** for the **thirty-first** time and no `?op=deploy` probe was made: Pages read `|v01.63g|` at 04:17:03 AM EST before the deploy landed and `|v01.64g|` at 04:18:22 AM after, re-read rather than assumed, and the job log agreed. The post-merge `check-readme-tree.py --fix` step reported *already in sync — nothing to commit*, because the session had run `--fix` itself after catching the one-bump GAS display drift that [PC-GS-VERSION] #1 warns is the item most often missed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- **Latest Session written for Phase 4 row 21**, with v06.36r demoted to `## Previous Sessions` and the 2-session cap applied. It carries the six §10.6 findings, the derived-and-exact `--check` call, the one-leg deploy, the no-rotation arithmetic, and **two corrections to the render harness this session found the hard way**: `var _e` must NOT be blanked (a blank `_e` means no `#gas-app` element, so `_gasPost` has no base URL and the page renders "Classroom content is not connected yet" — set it to `c2FnX18v`, base64 of `/__gas` reversed), and `_gasPost` puts every parameter in the **query string** rather than the body, so a shim must read `u.searchParams`. It also records that `pkill -f "node .*shim"` in the same Bash call that starts the shim kills the enclosing shell, whose own command line matches the pattern
+
+#### Version and counter files
+- `repository.version.txt` **v06.38r → v06.39r**; this file **`106/100` → `107/100`**. **No rotation** — the EST day had not rolled, so **ten** same-day sections stay exempt and the non-exempt count holds at **97 against 100**. No `.gs` file was touched on this push, so no GAS version moved and no GAS changelog entry was written
 
 ## [v06.38r] — 2026-09-17 04:12:42 AM EST
 
