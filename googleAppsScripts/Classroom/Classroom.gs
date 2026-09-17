@@ -1,4 +1,4 @@
-var VERSION = "v01.58g";
+var VERSION = "v01.59g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -20569,8 +20569,8 @@ function clLessonSegmentEpcAndConstruction_() {
  "title": "EPC and construction",
  "short": "The engineers, EPCs, general contractors and electrical contractors that turn a permit into commissioned megawatts — the data-hall builders, the storage and…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
  "provenance": {
   "inputs": [
    {
@@ -20784,15 +20784,15 @@ function clLessonSegmentEpcAndConstruction_() {
    "rows": [
     [
      "Schedule certainty and speed benchmarks (commissioned MW per year, days to energize)",
-     "*From Site Control to Commercial Operation* (planned)"
+     "*From Site Control to Commercial Operation*"
     ],
     [
      "Self-perform craft labour and prefabrication share",
-     "*From Site Control to Commercial Operation* (planned)"
+     "*From Site Control to Commercial Operation*"
     ],
     [
      "Commissioning record (L1–L5) and reliability engineering",
-     "*From Site Control to Commercial Operation* (planned)"
+     "*From Site Control to Commercial Operation*"
     ],
     [
      "Bonding capacity, backlog quality and project-controls record (percentage-of-completion)",
@@ -22017,8 +22017,8 @@ function clLessonSegmentEpcAndConstruction_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *From Site Control to Commercial Operation* (planned) · *Reading the Eight Named Projects* (planned) · *The Failure-Point Map* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *From Site Control to Commercial Operation* · *Reading the Named Projects* · *The Failure-Point Map*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-epc-and-construction-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Bechtel, Black & Veatch, Blattner, Burns & McDonnell, DPR Construction, HITT Contracting, Holder Construction, Kiewit, MasTec, Mortenson, Primoris, Quanta Services, Rosendin, SOLV, Turner Construction, Whiting-Turner, McCarthy, Samsung C&T, Strata Clean Energy — each member's dossier carries one in Profiler."
    ]
   },
@@ -22092,6 +22092,14 @@ function clLessonSegmentEpcAndConstruction_() {
    "changed": [
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -44296,7 +44304,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeCleanFirmAndNuclear_(),
           guidanceDocLandscapeHyperscalersAndAiLabs_(),
           guidanceDocLandscapeNeoclouds_(),
-          guidanceDocLandscapeCapital_()];
+          guidanceDocLandscapeCapital_(),
+          guidanceDocLandscapeEpcAndConstruction_()];
 }
 
 function guidanceIndex_() {
@@ -58797,6 +58806,754 @@ function guidanceDocLandscapeCapital_() {
      ],
      "a": 2,
      "why": "One of the two is deliberately held until the registered bankability module's quarterly review lands, so that it does not ship with an already-expired review date; the other is already specified on one of this segment's own members. The material exists and the gap has a stated reason in both cases. A landscape that filled it would be duplicating a planned public lesson behind a higher access gate, which is the opposite of what this layer is for."
+    }
+   ]
+  }
+ ]
+};
+}
+
+// ══════════════
+// S2 SESSION 14 - THE FOURTEENTH LANDSCAPE, TWENTY-THIRD GUIDANCE MODULE.
+// Source of truth:
+// repository-information/industry-guidance/landscape-epc-and-construction-analysis.md
+// Spec CLASSROOM-CURRICULUM-PLAN.md 10.6; brief INTEGRATED-REMEDIATION-PLAN.md
+// 7.43. Lane The Value Chain, tier contributor, nine section ids in 10.6's
+// order. Below the CONTENT END fence, per CLASSROOM-COMMITTER-CONTRACT.md 3.
+//
+// THE MOST INCUMBENT-HEAVY ROSTER IN THE TAXONOMY - 19 members, 16 - 2 - 1,
+// no registry notes field, and FOUR incompatible kinds of basis. So sixteen
+// bases and no ordering, which is the INVERSE of session 13's four incumbents
+// that shared no basis. Session 13's verdict was to decline the ranking; this
+// session declines the SIXTEEN-FIRM ranking and publishes the ONE the record
+// supports, with both conditions the corpus itself attaches.
+//
+// THE PUBLISHABLE RANKING, AND ITS TWO CONDITIONS. The ENR 2026 Top 400
+// Contractors table ranks 13 of 19 - turner 1, bechtel 2, kiewit 4,
+// whiting-turner 5, mastec 6, dpr 7, hitt 8, mortenson 10, holder 12,
+// mccarthy 22, burns-mcdonnell 35, black-veatch 49, solv-energy 66. SIX are
+// absent, INCLUDING THE TWO LARGEST US ELECTRICAL CONTRACTORS (quanta at 3.7x
+// the runner-up, rosendin) plus primoris, blattner, samsung-ct and strata.
+// Condition one, stated in a member's own file about its own rank: "ENR
+// publishes several revenue bases across different lists, so 'ENR rank' is
+// meaningless without naming the list" - burns-mcdonnell is 1 in Power design
+// eleven years and 35 as a contractor; black-veatch is 1 Hydrogen, 1 O&M,
+// 6 Power, 14 design and 49 contractor; mastec 6 and black-veatch 6 are two
+// different sixes on two different lists. Condition two: the MOVEMENT is the
+// signal and the LEVEL is the noise, because the Top 400 grew 11.8 per cent in
+// FY2025 while the telecom category inside it grew 86.4 per cent - one table,
+// two populations, seven times apart. whiting-turner FELL 4 to 5 while adding
+// USD 1.4bn.
+//
+// THEN THE GRAPH SAYS THE ONE RANKING COVERS TWO MARKETS. 53 edges among the
+// nineteen, 45 curated, 57 typings - competitor 39, partner 16, investor 1,
+// other 1, and ZERO untyped curated pairs. 35 competitor edges, 20.5 per cent
+// of all 171 possible pairs, against capital's 13 edges among eight. The
+// competitor subgraph is ONE component of 18 that falls into TWO when one node
+// and one edge are cut: mortenson (competitor with 3 GC-side and 4 power-side,
+// the only member typed on both) and the single edge mccarthy-strata. Result
+// 6 + 10 + blattner: a data-hall GC market (dpr, hitt, holder, mccarthy,
+// turner, whiting-turner - 12 of 15 possible pairs typed competitor) and a
+// power-and-energy EPC market (bechtel, black-veatch, burns-mcdonnell, kiewit,
+// mastec, primoris, quanta, rosendin, solv, strata - 15 of 45). The Top 400
+// order runs ACROSS that boundary: 1 and 5 in the first, 2, 4 and 6 in the
+// second. blattner hangs off the second by ONE edge because its link to its
+// own parent quanta is typed investor/other, not competitor - the graph
+// getting a wholly-owned arm right.
+//
+// samsung-ct HAS ZERO EDGES OF ANY KIND - the only member of nineteen with
+// degree zero. A registered challenger the graph cannot see challenging
+// anybody, and its own basis line says why: "the US platform is a developer,
+// not an EPC". Section 2 states it rather than sizing it.
+//
+// THE BENCH INVERTS DOWNWARD, 6 OF 6, AND THAT IS A NEW INSTRUMENT. 8 of 19
+// shared, 11 memberships across 6 neighbours (5 with a built landscape),
+// 10 inversions - 91 per cent, the HIGHEST any landscape has measured, past
+// (aa2)'s 74 - and 9 downward, 1 upward, 1 equal. EVERY ONE of the six shared
+// incumbents is adjacent in EVERY other segment it appears in, 6 of 6 with no
+// exception. (aa2) reads: adjacents 100 per cent ranked elsewhere means the
+// segment is a PRODUCT other industries make. This is its MIRROR: when a
+// segment's INCUMBENTS are demoted to adjacent everywhere else, the segment is
+// the SERVICES LAYER the rest of the chain borrows a builder from. The lone
+// upward inversion confirms it - strata is a DEVELOPER with an EPC arm, ranked
+// where it develops and demoted where it builds, so the direction tracks the
+// balance sheet rather than the crews.
+//
+// 10.6 (t) FIRED ON A LESSON BUILT ONE DAY EARLIER AND IT TEACHES FOUR OF THIS
+// SEGMENT'S SIX CRITERIA. how-a-storage-project-happens (7 row 10, public,
+// first in READ_NEXT) already teaches percentage-of-completion on a
+// cost-to-cost basis as a term, the performance bond past the damages cap,
+// owner-furnished equipment from the builder's side, craft labour as the one
+// un-procurable input, and commissioning through the capacity test - naming
+// NOBODY. So 7.23's test holds exactly where it held at rows 13 and 16: the
+// lesson teaches the instrument vendor-blind, this module says who holds it,
+// at what size, and on WHICH OF THE TWO MARKETS it is measured. 22 omissions
+// across NINE neighbours - three built public lessons, five built landscapes
+// and one registered module - are enumerated in 2g of the analysis file.
+//
+// AND THE SAME MEASUREMENT PRODUCED A FOURTH MECHANISM FOR A DASH ROW. THREE
+// dash rows, THREE diagnoses. Criterion 6 (TRIR, repeat-relationship share)
+// hits NO lexicon key and NOTHING in all 48 lessons teaches it - TRIR,
+// recordable, incident rate, experience modification, surety all score zero -
+// so (y3)'s real gap, and total. Criterion 5's open-book half is (cc3)'s
+// disjoint-set artefact exactly. But criterion 4's material IS TAUGHT, BY A
+// LESSON IN THIS SEGMENT'S READ_NEXT, AND THAT LESSON IS BUILT - and the row
+// still prints a dash, because CRITERION_LEXICON's entry for it is ("epc",
+// "schedule", "construction", "commissioning", "labor", "labour", "craft")
+// and criterion 4 contains none of the seven. percentage-of-completion appears
+// in FOUR lessons, performance bond in exactly ONE, both including that
+// lesson. The intersection did not fail; THE KEYWORD TABLE DID. That is a
+// generator gap, not a curriculum gap and not an artefact - the first dash row
+// in fourteen landscapes whose cause sits in neither.
+//
+// reviewBy IS THE SIX-MONTH DEFAULT, AND THIS IS THE FIRST LANDSCAPE OF
+// FOURTEEN TO TAKE IT. All thirteen before found a read date. The mechanical
+// sort returns NOTHING: 21 policyExposure entries across 19 members - 1.1 per
+// member, the THINNEST fence any landscape has met, with 10 members carrying
+// none at all - 6 dated and ZERO in the future, 20 in-effect against 1
+// announced. A regime already in force has no future date to ring. Session
+// 3's (g) for a fifth time, and the EMPTY-SET version rather than row 18's
+// DISTANT-SET version. The whole corpus holds FOUR future day-level dates and
+// all four are rejected: 2026-09-21 (a securities lead-plaintiff deadline -
+// off-subject, and it would put the module inside its own 30-day horizon and
+// make the checker report 4 due); 2026-11-02 (an ESTIMATED earnings date its
+// own file calls unconfirmed with two sources a week apart - fabricating
+// precision); 2027-12-31 (the OBBBA placed-in-service cliff - on-subject but
+// LATER than the default and already twice a reviewBy, so kept as indicators
+// row 6 per (u)); 2028-04-30 (a buyback authorization expiry). SIX further
+// month- or window-level candidates rejected in section 10, including the next
+// ENR Top 400 edition - the one thing that genuinely clocks this module's
+// central claim, published annually on NO announced day, and kept as
+// indicators row 1.
+// ══════════════
+function guidanceDocLandscapeEpcAndConstruction_() {
+  return {
+ "id": "landscape-epc-and-construction-2026-09",
+ "group": "The Value Chain",
+ "title": "EPC and Construction — the Landscape",
+ "short": "Sixteen incumbents, four incompatible kinds of ranking, and one table that covers two different markets — a segment whose real question is not who is largest but which of the two contests a counterparty is in, and whether it self-performs the scope you sell.",
+ "source": {
+  "doc": "Corpus synthesis over the 19 member dossiers of the EPC and construction segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-epc-and-construction-analysis.md"
+ },
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "16 of 19",
+   "v": "members the registry types incumbent",
+   "sub": "Two challengers and one adjacent make up the rest. The most incumbent-heavy roster in the taxonomy, re-measured 2026-09-16 from the registry member by member, and the entry carries no notes field — so there are sixteen bases to sort and no ordering to lean on"
+  },
+  {
+   "k": "2 markets",
+   "v": "the competitor graph splits in two",
+   "sub": "Fifty-three edges connect the nineteen, forty-five curated, thirty-nine typings reading competitor. The subgraph is one component of eighteen that falls into six plus ten when one firm and one edge are cut — a data-hall general-contracting market and a power-and-energy EPC market"
+  },
+  {
+   "k": "13 of 19",
+   "v": "carry an ENR Top 400 rank",
+   "sub": "The only measure any two members share, and six are absent from the table entirely — including the two largest electrical contractors in the United States. A ranking that omits the trade which installs the load is not a ranking of this segment"
+  },
+  {
+   "k": "6 of 6",
+   "v": "shared incumbents rank lower elsewhere",
+   "sub": "Every incumbent that belongs to another segment is typed adjacent there, with no exception, and nine of the eleven shared memberships invert downward. This is the segment the rest of the chain borrows a builder from"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held. Sixteen of the nineteen carry it — the highest count in the taxonomy — and their basis lines name four different kinds of claim rather than four positions on one axis."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member contesting the established set. Two carry it here. One has the joint-highest edge count of the nineteen and four competitor typings; the other has no edge of any kind."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member whose primary business is elsewhere but whose dossier records a line touching this segment. Exactly one member carries it here, and it is the only member of the nineteen ranked higher in another segment than in this one."
+  },
+  {
+   "t": "self-perform",
+   "d": "To execute a construction trade with directly employed craft workers rather than subcontracting it. It is the sharpest line on this roster: one member states in its own file that it self-performs nothing and holds its mechanical and electrical expertise as a coordination function, while another employs about six thousand craft workers and calls itself a builder rather than a broker."
+  },
+  {
+   "t": "construction manager at risk",
+   "d": "A delivery model in which the builder is engaged as a manager but carries the price, usually against a guaranteed maximum. One member on this roster delivers one hundred per cent of its revenue this way and another about ninety per cent, which is why neither holds a purchase order for the equipment on its own sites."
+  },
+  {
+   "t": "owner-furnished equipment",
+   "d": "Equipment the project owner buys directly and hands to the builder to install. On this roster it is the norm rather than the exception: five dossiers state it in their own words, which is why a seller wins a builder by being easy to install and service rather than by selling it anything."
+  },
+  {
+   "t": "percentage-of-completion",
+   "d": "The accounting convention under which a contractor recognises revenue in proportion to the costs it has incurred against its own estimate of the total. Because the estimate drives the revenue, the estimate is the control that matters, and a segment member spent 2026 demonstrating what happens when it fails on six projects at once."
+  },
+  {
+   "t": "ENR Top 400",
+   "d": "Engineering News-Record's annual table of United States contractors by self-reported revenue, published each May. It is the one ranking two members of this segment can be compared on, it covers thirteen of the nineteen, and the publisher issues several other tables on different revenue bases — so a rank quoted without its list names nothing."
+  },
+  {
+   "t": "craft labour",
+   "d": "The directly employed trades that physically build the work — electricians, pipefitters, ironworkers, operators. It is the one input on a construction site that cannot be procured at short notice, because it is already employed somewhere and the training pipeline runs years, and the trade press named the resulting ceiling the defining constraint of the 2026 buildout."
+  },
+  {
+   "t": "bonding capacity",
+   "d": "The total value of surety bonds a contractor can have outstanding, set by its surety rather than by itself. It caps how much work a builder can hold at once, it is a buying criterion in this segment's registry entry, and six members of the roster publish no figure that would let anyone estimate it."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with the shape, because it decides what this section can honestly do.** Nineteen members, and **sixteen of them are {{incumbent}}s** — Turner Construction, HITT, DPR, Holder, Whiting-Turner, Mortenson, Kiewit, Bechtel, Black & Veatch, Burns & McDonnell, Quanta Services, Rosendin, Primoris, MasTec, SOLV Energy and Blattner. Two {{challenger}}s, McCarthy and Samsung C&T; one {{adjacent}}, Strata Clean Energy. The registry carries **no notes field** to explain that shape, so it has to be measured. And the sixteen bases are not one kind of claim: several are third-party ranks on named scales, several are gigawatt or megawatt volumes, several are dollar volumes, and five are role claims carrying **no number at all** — *the craft-labor chokepoint*, *the interconnection specialist*, *the single largest procurement channel*. **Ranking sixteen firms across four scales would be choosing a publisher rather than reading the record.**",
+    "**But one ranking is publishable, and it is worth being precise about which.** The **{{ENR Top 400}}** Contractors table for 2026 gives a rank to **thirteen** of the nineteen: Turner **#1** at 28.3 billion US dollars, Bechtel **#2** at 19.5, Kiewit **#4** at 15.3, Whiting-Turner **#5** at 14.68, MasTec **#6** at 14.3, DPR **#7** at 14.0, HITT **#8** at 13.0, Mortenson **#10** at 10.85, Holder **#12** at about 10.2, McCarthy **#22**, Burns & McDonnell **#35** at 8.6, Black & Veatch **#49** at about 5.0, SOLV **#66**. That is twelve of the sixteen incumbents plus one challenger — and it is the only measure any two members of this segment share.",
+    "**Two conditions come attached, and the corpus states both in its own words.** The first is that the list must be named. A member's own dossier, about its own rank: *\"ENR publishes several revenue bases across different lists, so 'ENR rank' is meaningless without naming the list.\"* It wrote that because a secondary source called it the *15th largest domestic builder* in the same year the Top 400 put it at 20. The roster proves the point twice over: **Burns & McDonnell is #1 in ENR Power design revenue for eleven consecutive years and #35 as a contractor**; **Black & Veatch is #1 Hydrogen, #1 O&M, #6 Power, #8 Water, #14 design — and #49 as a contractor**; HITT is **#1** on ENR's telecom and data-centre list and **#8** on the Top 400; SOLV is **#2** solar contractor and **#66** overall. **And two different members both carry '#6'** — MasTec on the Top 400, Black & Veatch on Power. A rank without its list names nothing.",
+    "**The second condition is that the movement must be published with the level, because the level mixes two populations.** In the same edition, **the Top 400 as a whole grew 11.8 per cent while the telecom and data-centre category inside it grew 86.4 per cent** — one table, two groups of firms, moving at seven times different speeds. That is why Whiting-Turner **fell from #4 to #5 while adding 1.4 billion dollars of revenue**, and why Mortenson rose twelve places, Clune thirteen and Fortis eleven in the same year. A member states the consequence about itself: *\"In a league table of self-reported revenue, relative position is the only comparable measure, and it is moving the wrong way.\"* **Read with the movement column, the table says something real**: three firms climbed hard on hyperscale books, two fell while growing, and one fell twice while calling itself an entrant.",
+    "**Six members are absent from the table entirely, and that is not a rounding error.** Quanta Services, Rosendin, Primoris, Blattner, Samsung C&T and Strata Clean Energy carry no Top 400 rank. Quanta is the **#1 United States electrical contractor at 13.5 billion dollars of electrical revenue, roughly 3.7 times the runner-up** — and the runner-up is Rosendin, also absent. **A general-contractor table that omits the first and second largest firms in the trade that physically installs the load is not a ranking of this segment.** It is a ranking of one of its two markets.",
+    "**Which is what the graph says next, and it is the finding of this module.** Fifty-three edges connect the nineteen; **forty-five are curated and carry fifty-seven typings, of which thirty-nine read competitor** — thirty-five distinct rivalries, four of them typed from both ends, across 20.5 per cent of every possible pair. That density is a market. But the competitor subgraph, though it is a single connected component of eighteen, **falls into two neighbourhoods when one firm and one edge are removed**: a **six-firm data-hall general-contracting market** — DPR, HITT, Holder, McCarthy, Turner and Whiting-Turner, with twelve of their fifteen possible pairs typed competitor — and a **ten-firm power-and-energy EPC market** — Bechtel, Black & Veatch, Burns & McDonnell, Kiewit, MasTec, Primoris, Quanta, Rosendin, SOLV and Strata, with fifteen of forty-five. Blattner hangs off the second by a single edge, because its link to Quanta is its **parent** and the graph types it investor rather than competitor.",
+    "**The firm that joins them is the one whose own file says it is in both.** Mortenson is typed **competitor with three members of the data-hall market and four of the power market** — the only member of nineteen typed that way on both sides. Its dossier states the position in a sentence: *\"the only US contractor at scale holding both a hyperscale data-center building franchise and a fleet-scale power-EPC franchise.\"* The graph is the independent confirmation, and it means **the boundary this module draws is not the module's invention** — it is where the curated typings stop. The second and only other seam is one edge, McCarthy against Strata, two solar-and-storage contractors meeting in the part of each book that is not what its segment role describes.",
+    "**So the module's own judgment, and it is analysis rather than record: the Top 400 order runs straight across the boundary and therefore cannot be read as one contest.** #1 and #5 are in the data-hall market; #2, #4 and #6 are in the power market. **Those firms are not competing with each other and the table cannot say so.** What the table can do — and this is the correct use of it — is rank *within* a market and read the movement. What it cannot do is tell a reader that the second-largest contractor in America competes with the fifth. The graph says it does not.",
+    "**And the nineteenth member is the sharpest fact in the file.** Samsung C&T is a registered {{challenger}} with **zero edges of any kind** to the other eighteen — no curated typing, no derived cross-mention, degree zero. Its own basis line contains the reason: *\"top-tier global EPC with BESS execution in Australia and the Middle East; the US platform is a developer, not an EPC.\"* Section two says what the record holds about it rather than sizing a threat the graph cannot see."
+   ],
+   "sales": "Do not walk into this segment with a league table. The first question that earns you credibility is which of the two markets the counterparty is in — a data-hall construction manager or a power-and-energy EPC — because the second question depends entirely on it. Then ask whether the firm self-performs the scope you sell: a manager that subcontracts everything will hand your package to a prequalified trade contractor and never hold your paper, while a self-perform EPC may take your equipment onto its own balance sheet. If you do quote a rank, name the list. Two firms on this roster are number one on one ENR table and thirty-fifth or forty-ninth on another, and a counterparty who hears the wrong one quoted at them knows immediately that you read a press release."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and on which route",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**The registry gives two {{challenger}}s and the graph believes exactly one of them.** McCarthy has twelve edges inside the segment — the joint-highest of the nineteen — four of them typed competitor. Samsung C&T has none. That asymmetry is the section, and both halves of it are useful.",
+    "**McCarthy is entering the market rather than competing in it, and its own two published figures say so.** **418 MW of data centres delivered against more than 2 GW in planning, design and preconstruction** — a five-to-one ratio ahead of the company. Every named hyperscale client on its site is one landlord, and its largest engagement, **468 MW at a Wisconsin campus for two AI tenants, is reached through a joint venture with the #1 firm on the table** — which its dossier names as the mechanism by which it reached a gigawatt campus at all: *\"McCarthy is the smaller partner by ENR rank — 22 against 1 in the 2026 Top 400.\"* It appears in none of the named data-centre leader lists. **And its rank fell from 20 to 22 in the year the data-centre category grew 86.4 per cent**, which its own file calls *\"the single most informative datapoint in a file with no income statement.\"*",
+    "**The route it is attacking on is the one the ranking cannot see, and it is not the data-centre group.** A 100 per cent employee-owned self-perform stack covering concrete, full mechanical, electrical and plumbing, and civil — the scopes that sit on a data hall's critical path. A century of healthcare work in occupied facilities, which its file calls *\"the closest analogue in construction to building beside a live data hall.\"* A forty-year water and wastewater practice, which is the capability a water-reuse campus commitment actually requires. **And a renewables group scaled from 20 million dollars to more than 2 billion, ranked second in large-scale storage installation, whose builder was made president and chief operating officer of the whole holding company in August 2026.** Its own file's judgment: *\"the renewables group, not the data-centre group, is the business the company has actually bet on.\"* The counterweight is dated and it is the fence's only real gate — the placed-in-service cliff at the end of 2027.",
+    "**Samsung C&T is the opposite case and the honest move is to say what the record holds rather than size it.** A ten-gigawatt-hour global cooperation agreement signed with its engineering and construction group in January 2025 has, nineteen months on, produced **no publicly attributed project anywhere** — no named site, no volume drawn, in any market. And the partnership sits with the wrong arm for United States purposes: the group's US value pool is a **develop-and-sell platform in a different division**, which originates land and interconnection at twenty-gigawatt scale and then hands battery procurement to the buyer **after** the sale. The corpus records the consequence concretely: a Texas pipeline this member originated was sold, and the buyer then signed **503 MWh** of supply with an entirely different supplier. **Two events would change the picture** — a first attributed project from the engineering group in any market, and the supplier decision on a 500 MW Texas battery joint venture where, for the first time, this member stays in past the flip point.",
+    "**Neither challenger is taking anything from the sixteen, and the pressure the record documents is vertical instead.** It runs in both directions and it is the reason this segment is not stable even though its roster looks it.",
+    "**Upward, into the equipment layer.** Quanta — a **contractor** — is spending **500 to 700 million dollars to nearly double high-voltage transformer manufacturing capacity by 2028**, and is making 800 kV-class circuit breakers in a Pennsylvania joint venture. Its own file states the consequence: *\"if the #1 buyer of grid equipment self-supplies from 2028, the scarcity rents currently flowing to Hitachi, Siemens Energy and GE Vernova erode at the margin, and Quanta's EPC bids gain a schedule weapon competitors can't match.\"* **A builder becoming its own supplier is a threat aimed at a different segment entirely.**",
+    "**Upward, into the procurement layer.** Turner's buying desk runs **open-book OEM procurement on the long-lead electrical and mechanical packages** — transformers, switchgear, generators, chillers — at roughly a billion dollars a year, against a data-centre order book of 18 to 22 billion euros. Its own file is explicit that this, and not construction labour, is the durable advantage: the desk *\"sits exactly on the industry's binding constraint.\"* **The largest general contractor in America is assembling EPC-grade control of the packages that decide campus schedules.**",
+    "**Downward, from the owners, by design.** Hyperscalers dual-source general-contracting capacity deliberately — three general contractors on one campus, four buildings split across three entities on another. Turner's file records it as a structural fact: *\"no single builder, even the largest, gets an AI gigacampus alone.\"* DPR's puts the intent plainly: *\"hyperscalers are deliberately maintaining a bench of substitutable top-tier GCs.\"* **The largest buyers have engineered away the leverage the top of the ranking would otherwise carry.**",
+    "**And sideways, from the seam.** Mortenson's file names the gap it is exploiting in one line: *\"Renewables rivals lack a hyperscale building book; building rivals subcontract most gigawatt-class power scope.\"* It has bought the grid-interface controls layer rather than renting it, and it is repositioning a family real-estate arm into a data-centre origination channel.",
+    "**The module's own judgment, labelled as analysis: the competitive question here is not share, it is whether a firm holds a scarce input or rents it.** The corpus names three. **Craft hours** — Quanta at 69,500 employees, more than 80 per cent {{self-perform}}, about 250 million dollars a year of training; DPR at roughly 6,000 in-house craft workers; Rosendin at more than 7,000 MW of annual prefabrication capacity. **Allocation** — Kiewit sitting inside a turbine maker's slot allocation, which its file calls *\"the scarcest capability set in the AI-power complex\"*; Quanta building its own transformers. **And the owner relationship** — Holder at more than 90 per cent repeat business, HITT inside the world's largest data-centre market. **Everything else on this roster can be subcontracted, and a firm whose advantage can be subcontracted does not have one.**"
+   ],
+   "sales": "The two challengers are not equally worth your time and the reason is in the graph rather than the registry. One has twelve edges, four rivalries and a renewables business its own file says is the real bet — a live conversation, and the domestic-content arithmetic is what decides it. The other has no edge at all, a paper agreement nineteen months unconverted, and a US arm that sells the project before the batteries are bought; keep it warm and watch two specific events, but do not forecast against it. Among the sixteen, aim at where the scarce input sits: the firm that trains its own electricians decides what gets installed, and the firm that is building its own transformers has stopped being a customer for someone."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "9 min",
+   "kind": "table",
+   "intro": "One row per incumbent and challenger — **eighteen rows**, the largest bet table any landscape has carried. **Every row is analysis**, read off that dossier's own strategy section and labelled as judgment, never blended with fact. **The rows are grouped by the market the graph puts the firm in rather than by registry role**, because two incumbents in different markets are not comparable and a reader sorting by role would conclude they are. Mortenson sits in a group of one, because it is the only member typed a rival on both sides.",
+   "cols": [
+    "Player",
+    "Market · role",
+    "The bet, and what its own file says about the risk"
+   ],
+   "rows": [
+    [
+     "Turner Construction",
+     "data hall · incumbent",
+     "That **scale is a moat the specialists cannot copy**, and that the durable part of it is the buying desk rather than the crews — open-book OEM procurement on the long-lead packages, plus reliability engineering and self-perform mechanical and electrical bought in. Its own file names the twin risks the growth is pricing: **data centres are about 42 per cent of a record backlog held against a handful of counterparties**, and the trade press's own framing of the year was a craft ceiling. It also notes the collection gap — it publishes **no MW delivered**, so the roughly 3 GW figure is a third party's estimate."
+    ],
+    [
+     "HITT Contracting",
+     "data hall · incumbent",
+     "That **speed is the product**, inherited from an interiors business where thousands of small fast jobs bred a velocity culture — a 22.5 MW facility in 180 days, pad to ribbon in seven months. Its own file rates concentration the defining risk: **82 per cent of 2025 revenue in one category, delivered 100 per cent {{construction manager at risk}}**, in a market where land costs rose 45 per cent year on year. Two acquisitions in healthcare and semiconductor cleanrooms are read as deliberate hedges. The cost of private ownership is stated plainly: no margin, backlog or debt disclosure exists to verify how profitably the book is built."
+    ],
+    [
+     "DPR Construction",
+     "data hall · incumbent",
+     "That **schedule certainty can be manufactured through vertical integration** — about 6,000 {{self-perform}} craft workers, prefabrication on more than 90 per cent of new work, and in-house engineering and digital manufacturing — documented at a flagship site where a 154-day delay was re-planned to 28. Its own file notes that the same site now carries a national-media safety narrative and pending litigation, so **execution and reputation risk are concentrated in the exact asset that made the year**. It rates itself the most cycle-insulated of the specialists at 57 per cent category mix."
+    ],
+    [
+     "Holder Construction",
+     "data hall · incumbent",
+     "That **invisibility is a commercial strategy matched to clients who require it** — no leadership page, no press room, no disclosed backlog — alongside more than 90 per cent repeat relationships and a chief executive on a utility's board in its home market, where power availability is the gating input. Its own file states the cost: market share can be tracked only through client-side disclosure, and **it holds no reported role in the newest wave of mega-campus awards**, with undisclosed private work the alternative explanation it cannot exclude."
+    ],
+    [
+     "Whiting-Turner",
+     "data hall · incumbent",
+     "That **diversification beats participation** — at 27 per cent category mix it is a general builder with a large data-centre line rather than a specialist, and it self-performs nothing by deliberate model, holding its mechanical and electrical group as a coordination and commissioning function. Its own file says the ENR submissions prove the position: **it grew 10.4 per cent against the list's 11.8 and the category's 86.4, and fell a place**. It also records that a widely repeated claim of employee ownership is **unsupported** and traces to content farms."
+    ],
+    [
+     "Kiewit",
+     "power · incumbent",
+     "That **the electrons are the scarce thing, not the shells** — about 11 GW of gas EPC stacked, a completed high-voltage direct-current line, the constructor seat on a first small modular reactor, and reserved turbine slots inside an OEM's allocation, which its file calls the scarcest capability set in the complex. It self-performs more than 80 per cent. The mirror risk is named: **fixed-price concentration at campus scale against constrained turbine logistics and scarce craft amplifies any miss**, and a public bridge award it walked away from on price is read as discipline rather than loss."
+    ],
+    [
+     "Bechtel",
+     "power · incumbent",
+     "That the right place to stand is **one phase ahead of the cycle** — no incumbent hyperscale general-contracting role at all, and instead the nuclear, LNG and megafab bench plus a partnership to modularise gigawatt AI factories for the moment campuses become energy megaprojects. Its own file rates the nuclear franchise its most defensible asset and names the cost of the appetite: **three concurrent LNG megaprojects, a defence programme and a legacy cleanup each carry a live execution or reputational wound**, and a safety record that collided with a triple fatality is now a commercial variable."
+    ],
+    [
+     "Black & Veatch",
+     "power · incumbent",
+     "That **the client-owned substation is the product** — building the operator's own transmission-connected substation to cut interconnection timelines by half or more, six sites for one colocation client, and early-procured breakers beating market lead times by 20 to 37 weeks. Deliberately engineer-brain rather than megaproject balance sheet, which its own file says costs it the named behind-the-meter gas awards. The live internal risk it states itself: **two restructurings in 22 months and an adverse verdict on a large claim**, a pattern employee-owned cultures absorb poorly."
+    ],
+    [
+     "Burns & McDonnell",
+     "power · incumbent",
+     "That **design authority beats construction scale on the regulated side of the meter** — number one in power design for eleven consecutive years, the largest United States substation design group, and a template where one campus generated a full utility transmission programme. It is a design-led hybrid by construction: **number seven as a designer and number 35 as a contractor**. Its own file names the constraint: employee-ownership repurchase obligations to an ageing workforce consume the cash public rivals spend on acquisitions, so it must grow organically."
+    ],
+    [
+     "Quanta Services",
+     "power · incumbent",
+     "That **craft labour is the chokepoint and the way to own it is to employ it** — 69,500 people, more than 80 per cent self-perform, a four-year craftsman development cycle, about 250 million dollars a year of training — and then to **vertically integrate into the equipment bottleneck as well**, nearly doubling transformer capacity by 2028 and making 800 kV breakers in a joint venture. Its own file names the bear case: 41 per cent headline growth with heavy acquisition assist, goodwill and intangibles at about 39 per cent of assets, and a backlog that is *\"neither floor nor firm\"*."
+    ],
+    [
+     "Rosendin",
+     "power · incumbent",
+     "That **prefabrication converts the binding constraint into factory throughput** — more than 7,000 MW of annual fabrication capacity and factory-built electrical rooms — while converging the energy group with the data-centre franchise so it sells power capacity rather than only installation, because without power, in its own executive's words, development stops. Its own file records the disclosure cost: **financials are company-reported and unaudited, and no independent verification exists** for the roughly 10 GWh installed-storage aggregate."
+    ],
+    [
+     "Primoris",
+     "power · incumbent",
+     "That the money is **outside the walls** — behind-the-meter gas generation, transmission and substations, duct banks, fibre, and now inside-the-fence electrical distribution by acquisition — a bundle its own file calls the most complete among mid-cap specialty contractors. **And 2026 is the year that bet met its own project controls**: two guidance cuts in seven weeks on six renewables projects, a segment president's departure, a securities class action. Its file reads the overrun cluster as specific to fixed-price renewables rather than company-wide, and the gas franchise as quietly the more valuable asset."
+    ],
+    [
+     "MasTec",
+     "power · incumbent",
+     "That **one roof over fibre, transmission, generation, storage and now inside-the-fence electrical is what a hyperscaler wants to buy**, with management explicitly chasing projects above a billion dollars each and a record backlog behind it. Its own file is candid that the pivot **dilutes battery salience at the account**: capital and attention rotate to data-centre scope where procurement screens are strictest, and it has **no policy of its own on restricted suppliers** — the posture is outsourced to customers by design, which structurally selects compliant equipment onto its sites."
+    ],
+    [
+     "SOLV Energy",
+     "power · incumbent",
+     "That the **pure play is the position** — solar and storage EPC only, more than 21 GW built, the second-largest storage builder of 2024, and the industry's largest solar operations-and-maintenance fleet at about 22 GW across 155 plants. Its own file names where the recurring value is, and it is not new build: **augmentation and repowering purchases recur for decades and are less visible to content rules than new-build procurement**. It rates the AI-campus angle *forming rather than formed* — one contract away, with no named award yet."
+    ],
+    [
+     "Blattner",
+     "power · incumbent",
+     "That **being the install infrastructure of an entire industry is worth more than being visible in it** — more than 75,000 MW and 3,300 storage containers built, about a fifth of United States utility-scale renewables, disclosing essentially nothing. Its own file reads the opacity as strategically informative: a business that runs on long-cycle repeat-owner relationships. Inside its parent it is one arm of an integrated package, and its file is sober about the consequence: the corporate narrative showcases domestic-content stacks, so **it will not advocate for a restricted supplier into those accounts**."
+    ],
+    [
+     "Mortenson",
+     "**both markets** · incumbent",
+     "That **the building and the power behind it are becoming one product**, and that it is the only contractor at scale holding both franchises — the direct evidence being a gigawatt-class campus substation and the power scopes on the largest campus in the country. It is the seam in this segment's graph. Its own file names the defining exposure: **one customer across three simultaneous engagements through at least 2028**, a concentration that would hit it harder than any peer except possibly the firm at the top of the table, and a development arm whose re-entitlement is the highest-variance item in the book."
+    ],
+    [
+     "McCarthy",
+     "data hall · challenger",
+     "That **a self-perform stack and occupied-facility experience are the credible route in**, not revenue rank — 418 MW delivered against more than 2 GW ahead, every named client one landlord, the largest engagement reached through a joint venture with the number-one firm. Its own file says the **renewables group, not the data-centre group, is the business it actually bet on** — scaled from 20 million to more than 2 billion dollars, with its builder promoted to run the holding company — and names the counterweight as regulatory and dated: the placed-in-service cliff at the end of 2027."
+    ],
+    [
+     "Samsung C&T",
+     "no edges · challenger",
+     "That a **global EPC franchise plus a twenty-gigawatt origination platform will eventually meet in the United States** — floating data centres, a national AI programme abroad, a data-centre business team, and a stated ambition to develop AI campuses. Its own file is blunt about the present: a ten-gigawatt-hour cooperation agreement **nineteen months old with no attributed project anywhere**, sitting with the engineering group while the United States value pool is a develop-and-sell platform in another division that hands battery procurement to the buyer after the sale."
+    ]
+   ],
+   "sales": "Read the middle column before the third. A data-hall construction manager and a power EPC are not two versions of the same customer: the first is buying a schedule and will not hold your purchase order, the second may be buying your equipment. Then read the risk sentence in the third column, because every one of them is the firm's own words about itself and several are live — a contractor repairing its project controls will not take a new fixed-price risk this quarter, and a firm whose backlog sits with one customer is not the diversified counterparty its rank implies."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "What to watch, dated **only where the record dates it** — and on this segment that qualification does most of the work. The **policy fence holds twenty-one entries across nineteen members, six of them dated and not one in the future**: twenty are already in effect and one is merely announced. So most of what follows is an **event with an owner** rather than a date. **Three rows carry a day between them and they hold four days in total — of which exactly one, the tax-credit cliff, is still ahead.**",
+   "cols": [
+    "Indicator",
+    "Dated",
+    "Whose",
+    "Why it moves this landscape"
+   ],
+   "rows": [
+    [
+     "The next annual contractor ranking edition",
+     "annual, late May — the 2026 edition published 2026-05-22; **no publication day is announced**",
+     "the publisher",
+     "The one ranking this segment supports, and the **movement** column is the whole signal. Watch whether the two firms that fell while growing fall again, and whether the challenger's slide from 20 to 22 continues in a category still growing many times faster than the table"
+    ],
+    [
+     "A contractor's own transformer capacity reaching production",
+     "**by 2028** — a company-stated target year, no day",
+     "the largest electrical contractor",
+     "A builder becoming its own supplier changes what an EPC bid can promise and erodes scarcity rents in a different segment. Its own file says the schedule weapon is what rivals cannot match"
+    ],
+    [
+     "A first attributed project for the ten-gigawatt-hour agreement",
+     "undated — nineteen months elapsed",
+     "the edgeless challenger",
+     "The only thing that would give this segment's second challenger an edge the graph can draw. Until then it is a paper reference, and its own file warns an unconverted flagship *\"decays into a diligence liability\"*"
+    ],
+    [
+     "The supplier decision on a 500 MW Texas storage joint venture",
+     "**2026 to 2028** — a window, not a date",
+     "the same challenger",
+     "The first United States battery purchase order this member could itself issue, because for the first time it stays in the project past the point it usually sells"
+    ],
+    [
+     "Whether a third overrun disclosure follows the first two",
+     "next quarterly results, **estimated only** and explicitly unconfirmed by the company, with two sources a week apart",
+     "the specialty contractor in a controls repair",
+     "Decides whether the renewables-EPC control failure is contained to six projects or structural. Treat the date as an estimate — its own file does"
+    ],
+    [
+     "The placed-in-service cliff for wind and solar tax credits",
+     "**2027-12-31**, with a begin-construction safe harbour that closed on 2026-07-04",
+     "six members by exposure",
+     "The only genuine future dated gate in the whole segment, and it decides the renewables half of the power market's post-2027 book. **Rejected as this module's review date for being later than the six-month default** — kept here instead"
+    ],
+    [
+     "A development arm's re-entitlement outcome",
+     "undated, in litigation",
+     "the seam firm",
+     "Whether the one member in both markets gains an origination channel no general-contractor peer has. Its own file calls it the highest-variance item in the book"
+    ],
+    [
+     "Continued absence from the newest mega-campus awards",
+     "undated",
+     "the low-visibility incumbent",
+     "Its own file cannot distinguish lost share from work it is contractually forbidden to announce. A named award either way would settle a judgment the firm itself has left open"
+    ],
+    [
+     "A named hyperscaler, gas or power-to-x project at the adjacent",
+     "undated",
+     "the segment's only adjacent",
+     "The test of a 2026 repositioning toward entitled power land. Its own file says the only sizing available comes from a firm that represents the company"
+    ],
+    [
+     "Whether walking away from a public megaproject on price repeats",
+     "2026-04-30 — **already passed**",
+     "the gas EPC",
+     "Its own file reads the off-ramp as priced discipline protecting the margin engine rather than lost work. A second instance would confirm it; a reversal would not"
+    ]
+   ],
+   "sales": "Only three rows here carry a day, and of the four days among them just one is still ahead. That is not a gap in this module, it is the shape of the segment: construction regimes arrive as rules already in force rather than as effective dates in the future, so the things that actually move this market are awards, rankings and disclosures. Diary the late-May ranking edition and the tax-credit cliff at the end of 2027; treat everything else as a trigger to check rather than a date to plan against."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "8 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**The organising measurement, and it decides everything below: on this roster the builder usually does not hold the purchase order, and five dossiers say so in their own words.** One is *\"install infrastructure, not a procurement door: owners furnish the batteries on its sites.\"* One is *\"a constructability and services channel, not a procurement principal — every verified flagship was owner-furnished.\"* One states that most equipment is {{owner-furnished equipment}} in its own contract language. One describes itself as the side that *\"physically installs what the suppliers sell.\"* And one *\"self-performs nothing\"* and holds its mechanical and electrical expertise as a coordination and commissioning function. **So this landscape is a map of who can refuse you, not a target list** — and on most of it the refusal is technical rather than commercial.",
+    "**What the builder decides instead is whether your hardware is buildable, and it decides it once.** The public lesson on how a storage project happens states the principle naming nobody — compatibility, not selection. This roster is where it has a size. One member has installed **more than 3,300 storage containers** and its own file names the qualification list exactly: *\"container handling, foundation and spacing standards, termination and commissioning interfaces.\"* Another runs the industry's largest operations fleet at about **22 GW across 155 plants**, and its file names why that matters more than new build: **augmentation and repowering purchases recur for decades and are less visible to content rules than new-build procurement.** **Clear the qualification by documentation and training. It is not a sales pursuit.**",
+    "**Path one, the BESS or storage seller — and there are exactly two genuine procurement doors on a roster of nineteen.** The first is a specialty contractor with a documented **design-procure-install** package at mid scale, which its own file calls the only such credential in its peer batch, plus delegated turnkey scopes where owners hand over the balance-of-system buy. The second is an electrical contractor holding roughly **10 GWh of installed storage EPC in-house** and a partnership putting utility-scale storage in place of data-centre uninterruptible supplies and diesel. Everyone else on the storage side is a compatibility gate. **And the one member whose own procurement is live is the segment's adjacent, not one of its sixteen incumbents** — a developer that buys batteries repeatedly across four different suppliers and runs a factory pre-production audit programme. That inversion is the whole shape of this section in one line.",
+    "**Two things to establish before any storage call, because the record is explicit about both.** First, **the restricted-supplier question is settled at the owner's level, not the contractor's**: two dossiers state from opposite sides that a restricted-origin system gets installed when the owner buys it, and that there is *\"no blanket refusal at the EPC level, only owner-level economics and politics.\"* Second, **the parent matters more than the arm**: one install specialist sits inside a group whose corporate narrative showcases domestic-content stacks into hyperscaler accounts, and its own file says plainly that it will not advocate for a restricted supplier into them. The constraint is tax-credit arithmetic and customer screening, in that order.",
+    "**Path two, the AIDC-power seller — and the door depends entirely on which market you are in front of.** In the **data-hall market** you are selling into a procurement desk, and the largest of them runs open-book OEM buying on the long-lead electrical and mechanical packages against an order book of 18 to 22 billion euros a year. Its own file names the moment that decides it: *\"preconstruction is where equipment gets specified and reserved.\"* **Preconstruction, not construction, is the sales cycle** — by the time a site is mobilised your package was chosen months earlier. The other doors in that market are different in kind: one firm's franchise is raw speed inside the world's largest data-centre market, one's is more than 90 per cent repeat business and a seat on a utility board, one's is self-perform craft with prefabrication on more than 90 per cent of new work, and one **subcontracts every trade** — so there the specification conversation is with a prequalified trade contractor rather than with the manager.",
+    "**In the power market you may be selling to the party that actually signs, and the scarce thing it controls tells you what to lead with.** A gas EPC that self-performs more than 80 per cent and sits inside a turbine maker's slot allocation is not buying equipment from you — it is selling a schedule, and the question is whether your equipment fits one. The largest electrical contractor is simultaneously **channel, competitor and customer intelligence**: its EPC pulls your equipment, it is building its own transformers and breakers, and its backlog is the best leading indicator of United States grid construction there is. And two members are **design authorities before they are builders** — one is number one in power design for eleven years and number 35 as a contractor. **Being specified by a designer is worth more than winning a bid from a builder**, because the specification travels to every project that designer touches.",
+    "**On the seam, one firm buys both.** It delivers the building and its substation, medium-voltage distribution and on-site generation, and it bought the grid-interface controls layer rather than renting it. **It is the only counterparty on this roster where one specification decision can travel across both markets** — which makes it the highest-leverage single qualification available here, and the one with the most concentrated customer risk behind it.",
+    "**The cross-cutting instruction, and it is the single most useful thing in this module: before you price, establish whether the counterparty {{self-perform}}s the scope you are selling into.** A manager that subcontracts everything will hand your package to a prequalified trade contractor and never hold your paper — different signatory, different diligence, different timeline. A self-perform EPC may take your equipment onto its own balance sheet. **The tell is public**: the firms that self-perform publish a page for it, and the ones that do not list trade-contractor *selection* among their own services.",
+    "**What this module does not teach, on purpose.** How a project gets from site control to commercial operation, where an overrun hides and why it arrives all at once, what the performance bond covers past the liquidated-damages cap, and why craft labour cannot be procured are all taught by the public lesson this segment names first — vendor-blind, naming nobody. **Read that lesson for the mechanism; read this module for who holds it and at what size.** What the independent engineer tests belongs to the registered bankability module, and the transformer queue that makes all of this urgent belongs to the registered grid-equipment module."
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's nineteen member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier at that dossier's profile version and to the field it rests on, or to the segment registry, or to the relationship graph. Dossiers carry their own sources; this ledger cites the dossiers.",
+   "rows": [
+    [
+     "Segment holds 19 members — 16 incumbent, 2 challenger, 1 adjacent; chain position 10, tier build; and the registry entry carries NO notes field",
+     "profiler-segments.json @ last commit 2026-09-13 — segments[].members[], .position, .tier"
+    ],
+    [
+     "The six buying criteria verbatim, including bonding capacity and percentage-of-completion, owner-furnished versus contractor-furnished, and the safety record",
+     "profiler-segments.json @ 2026-09-13 — segments[].buyingCriteria[]"
+    ],
+    [
+     "8 of 19 members are shared with 6 other segments across 11 memberships; 10 inversions, 9 downward, 1 upward, 1 equal; and all 6 shared incumbents are adjacent in every other segment they appear in",
+     "profiler-segments.json @ 2026-09-13 — every segment's members[], counted"
+    ],
+    [
+     "53 edges among the nineteen, 45 curated, carrying 57 typings: competitor 39, partner 16, investor 1, other 1; zero curated pairs untyped",
+     "profiler-graph.json @ built 2026-09-13 — edges[] where both ends are members"
+    ],
+    [
+     "35 competitor edges; the subgraph is one component of 18 that falls into 6 plus 10 plus 1 when the seam firm and the single cross edge are removed; 12 of 15 possible pairs in the smaller market and 15 of 45 in the larger",
+     "profiler-graph.json @ 2026-09-13 — edges[].curated[].type, components computed"
+    ],
+    [
+     "One member is typed competitor with three firms on one side and four on the other, the only member of nineteen typed on both; the install subsidiary's link to its own parent is typed investor and other, never competitor",
+     "profiler-graph.json @ 2026-09-13 — edges[].curated[].type, .note"
+    ],
+    [
+     "One registered challenger has zero edges of any kind to the other eighteen members",
+     "profiler-graph.json @ 2026-09-13 — edges[], degree computed"
+    ],
+    [
+     "Number one on the annual contractor table for six consecutive years at 28.3bn; data centres about 42 per cent of a record 48.9bn backlog; roughly 3 GW delivered is a third-party estimate and the firm publishes no MW",
+     "profile:turner-construction @ v8 — summary, ecosystemRole, strategyRead[0], strategyRead[2]"
+    ],
+    [
+     "The buying desk runs open-book OEM procurement on the long-lead packages at about 1bn a year against an 18 to 22bn annual order book, and preconstruction is where equipment is specified and reserved",
+     "profile:turner-construction @ v8 — ecosystemRole, strategyRead[1]"
+    ],
+    [
+     "Number eight at 13.0bn, up from ten; 82 per cent of revenue in one category delivered 100 per cent construction-manager-at-risk; 22.5 MW in 180 days; number one on the publisher's own telecom and data-centre list",
+     "profile:hitt @ v5 — summary, recentDevelopments, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "Number seven at 14.0bn, up from eight, on 26.1bn of new contracts; about 6,000 self-perform craft workers and prefabrication on more than 90 per cent of new work; a 154-day delay re-planned to 28",
+     "profile:dpr @ v6 — summary, strategyRead[0]"
+    ],
+    [
+     "Hyperscalers deliberately maintain a bench of substitutable top-tier general contractors, which caps any one builder's share of the largest programmes",
+     "profile:dpr @ v6 — strategyRead[4]"
+    ],
+    [
+     "Number twelve at about 10.2bn — rated low confidence in its own file against a paywalled original, with a third party reporting 8.5bn; more than 90 per cent repeat relationships; no reported role in the newest mega-campus awards",
+     "profile:holder-construction @ v5 — summary, strategyRead[2], strategyRead[5]"
+    ],
+    [
+     "Number five at 14,675.9m, down one place while adding 1.4bn; grew 10.4 per cent against the list's 11.8 and the telecom category's 86.4; self-performs nothing by deliberate model; the employee-ownership claim is unsupported and traces to content farms",
+     "profile:whiting-turner @ v1 — summary, strategyRead[0], strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "Number ten at 10.85bn, up twelve places, the largest single-year move in the top ten; the only contractor at scale holding both a hyperscale building franchise and a fleet-scale power-EPC franchise; one customer across three simultaneous engagements through at least 2028",
+     "profile:mortenson @ v7 — summary, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "Number four at 15.3bn as the publisher counted it against 18.2bn company-stated, down from three; about 11 GW of gas EPC; more than 80 per cent self-perform; reserved turbine slots called the scarcest capability set in the complex",
+     "profile:kiewit @ v7 — summary, strategyRead[0], strategyRead[1], strategyRead[4]"
+    ],
+    [
+     "Number two at 19.5bn from 15.9bn; no incumbent hyperscale general-contracting role at all, and a partnership to modularise gigawatt AI factories instead; the nuclear franchise rated its most defensible asset",
+     "profile:bechtel @ v4 — summary, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "Number 49 as a contractor and number 14 as a designer, with number one in hydrogen and operations-and-maintenance and number six in power; the client-owned substation cuts interconnection timelines by half or more; breakers procured 20 to 37 weeks ahead of market lead times",
+     "profile:black-veatch @ v7 — recentDevelopments, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "Number one in power design for eleven consecutive years and number 35 as a contractor, number seven as a designer; the largest United States substation design group; repurchase obligations force organic growth",
+     "profile:burns-mcdonnell @ v5 — summary, strategyRead[0], strategyRead[1], strategyRead[4]"
+    ],
+    [
+     "Number one United States electrical contractor at 13.5bn of electrical revenue, roughly 3.7 times the runner-up, and absent from the general-contractor table; 69,500 employees, more than 80 per cent self-perform, about 250m a year of training",
+     "profile:quanta-services @ v5 — summary, ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "A 500 to 700m programme to nearly double high-voltage transformer capacity by 2028 and an 800 kV breaker joint venture, with the firm's own assessment that scarcity rents to the incumbent equipment makers erode at the margin from 2028",
+     "profile:quanta-services @ v5 — ecosystemRole, strategyRead[2]"
+    ],
+    [
+     "Second-largest United States electrical contractor and also absent from the contractor table; roughly 10 GWh of installed storage EPC; more than 7,000 MW of annual prefabrication capacity; financials company-reported and unaudited",
+     "profile:rosendin @ v7 — summary, ecosystemRole, strategyRead[0], strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "Two guidance cuts in seven weeks totalling about 57 per cent of adjusted earnings on six renewables projects, a segment president's departure and an active securities class action, against a record 13.9bn backlog; the overrun cluster read as specific to fixed-price renewables",
+     "profile:primoris @ v4 — summary, strategyRead[0], strategyRead[2]"
+    ],
+    [
+     "Number six on the contractor table at 14.3bn with a record 21.4bn backlog; the only firm in its batch with a documented design-procure-install storage credential; no supplier-origin policy of its own, the posture outsourced to customers by design",
+     "profile:mastec @ v3 — summary, strategyRead[0], strategyRead[3]"
+    ],
+    [
+     "More than 21 GW built, second-largest storage builder of 2024 at 4,586 MWh, and an operations fleet of about 22 GW across 155 plants whose augmentation purchases recur for decades; the data-centre angle rated forming rather than formed",
+     "profile:solv-energy @ v3 — summary, strategyRead[0], strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "More than 75,000 MW and 3,300 storage containers built, about a fifth of United States utility-scale renewables, with essentially no disclosure; install infrastructure rather than a procurement door, and the qualification list named",
+     "profile:blattner @ v5 — summary, strategyRead[0], strategyRead[2], strategyRead[3]"
+    ],
+    [
+     "418 MW of data centres delivered against more than 2 GW in planning and preconstruction; rank fell from 20 to 22 in the year the category grew 86.4 per cent; the renewables group scaled from 20m to more than 2bn and its builder promoted to run the holding company",
+     "profile:mccarthy @ v5 — summary, strategyRead[0], strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "The publisher issues several revenue bases across different lists, so a rank quoted without its list names nothing — stated in a member's own file about its own rank after a secondary source called it fifteenth in the year the main table put it at twenty",
+     "profile:mccarthy @ v5 — financials commentary, strategyRead[1]"
+    ],
+    [
+     "No company-wide current-year total recordable incident rate or experience modification rate is published anywhere for the member whose registry criterion it is",
+     "profile:mccarthy @ v5 — strategyRead[6], stated as a collection gap"
+    ],
+    [
+     "A ten-gigawatt-hour cooperation agreement nineteen months old with no publicly attributed project anywhere; the United States platform is a developer rather than an EPC and hands battery procurement to the buyer after the sale; a pipeline it originated was supplied by a different vendor at 503 MWh",
+     "profile:samsung-ct @ v4 — summary, ecosystemRole, strategyRead[0], strategyRead[1]"
+    ],
+    [
+     "A developer with a self-perform EPC arm that buys batteries repeatedly across four suppliers and runs a factory pre-production audit programme; every flagship battery was sold to a fund-backed owner with a service role retained",
+     "profile:strata-clean-energy @ v2 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "21 policyExposure entries across the 19 members, 6 dated, none in the future, 20 in effect against 1 announced, and 10 members carrying none at all",
+     "every member profile @ the versions above — policyExposure[], counted"
+    ],
+    [
+     "The four future day-level dates in the whole segment and the grounds on which each was rejected as the review date",
+     "profile:primoris @ v4 and profile:mccarthy @ v5 — sources[], financials commentary, policyExposure[]"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "6 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**Twelve of the nineteen are private, and seven members' own files carry an explicit statement that they publish no such figure — four of them naming backlog specifically.** One dossier states the consequence better than any summary could: *\"almost everything hard in this dossier reaches the record because a counterparty was compelled to speak\"* — a survey, a consent decree, a debarment, federal obligation totals, and a surety panel reconstructed from court filings. **Every private firm's capability figure on this roster comes from the party making the claim.**",
+    "**No megawatt-delivered figure is published by the largest firm on the table.** The roughly 3 GW attributed to it is a third party's estimate and its own file says so. For a segment whose first buying criterion is commissioned megawatts per year, **the leading firm does not report the unit**.",
+    "**One rank and one revenue figure are single-source, and the dossier that carries them says so.** A member's number-twelve rank and roughly 10.2 billion dollars are rated **low confidence** in its own file — one secondary aggregator against a paywalled original, with a different publisher reporting 8.5 billion on a different fiscal cutoff. **A rank in this module's own ranking table is therefore softer than the others in it**, and the table says which.",
+    "**Category revenue is survey-derived everywhere it exists.** Two members' implied data-centre revenues — about 10.7 billion and about 8 billion — both come from the ranking publisher's own survey mix data, and both dossiers instruct that the precision be treated as indicative. One adds that definitional noise between *telecom*, *mission critical* and *advanced technology* accounts for part of the gap against far lower third-party estimates.",
+    "**Two members' revenue cannot be reconciled at all, and neither file pretends otherwise.** One reports 18.2 billion against the publisher's 15.3; another 20.6 billion against 15.9 for the prior year. Both call it methodology rather than contradiction and **neither reconciles it**, which means the ranking table above compares numbers built on at least two different definitions.",
+    "**The criterion the registry lists sixth is measured by nobody.** No company-wide, current-year, dated total recordable incident rate or experience modification rate exists for the challenger whose own file raises it — the figures that do exist are *\"undated and market-scope\"*. Across the whole public curriculum the same hole appears: **nothing teaches contractor safety metrics at all.** A buying criterion with no published measure and no lesson is a criterion a buyer cannot actually apply.",
+    "**One widely repeated fact about a member is false, and its file names the kind of source that carries it.** A firm frequently described as employee-owned is not: it appears on no employee-ownership index while peers of identical size all do, its own site never claims it, and **every instance traces to a network of machine-generated content pages that also assert a mutually exclusive fact on the same page.** Treat any capability claim about a private contractor that appears only in aggregated content as unverified.",
+    "**Two framework namings are optionality rather than backlog, and both files say so.** A large international AI-infrastructure framework names two members of this roster as delivery contractors with **no projects assigned**; both dossiers rate it directional rather than bankable. **A shortlist is not a contract**, and the two-firm shortlist itself is the only signal the record supports.",
+    "**The segment's second challenger has produced no attributed delivery in nineteen months.** Its ten-gigawatt-hour agreement has no named project, no volume drawn, in any market. Its own file's warning is worth repeating: an unconverted flagship reference *\"decays into a diligence liability\"*.",
+    "**And the fence is nearly empty, which is a fact about the record rather than about the regime.** Twenty-one policy entries across nineteen members, ten of them carrying none at all, six dated and **none in the future**. A segment this exposed to prevailing wage, apprenticeship ratios, domestic content, immigration enforcement and safety regimes should have a denser fence than 1.1 entries per member. **What the corpus holds here is thinner than the industry is** — so treat the absence of a regime in this module as an absence in the dossiers, never as an absence in the market."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "7 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Sixteen of nineteen members are incumbents. Why can this segment not be ranked as one table?",
+     "a": "**Because the sixteen bases are four different kinds of claim.** Third-party ranks on named scales, gigawatt and megawatt volumes, dollar volumes, and five role claims carrying no number at all. The registry has no notes field to impose an order, so there are sixteen bases and no ordering — the inverse of the previous landscape, where four incumbents shared no basis."
+    },
+    {
+     "q": "One ranking IS publishable. Which, for how many, and with what two conditions?",
+     "a": "**The annual contractor revenue table, for 13 of the 19.** Condition one: **name the list** — the publisher issues several tables on different revenue bases, and one member is first on one and thirty-fifth on another. Condition two: **publish the movement with the level**, because the whole table grew 11.8 per cent in the year the data-centre category inside it grew 86.4, so a firm can fall a place while adding over a billion dollars of revenue."
+    },
+    {
+     "q": "Six members carry no rank on that table at all. Why does that matter more than it sounds?",
+     "a": "**Because two of the six are the largest and second-largest electrical contractors in the United States** — the first at roughly 3.7 times the second. A general-contractor table that omits the trade which physically installs the load is not a ranking of this segment; it is a ranking of one of its two markets."
+    },
+    {
+     "q": "The competitor graph is a single connected component of eighteen. What does removing one firm and one edge do to it?",
+     "a": "**It falls into two markets.** A six-firm data-hall general-contracting market, with twelve of its fifteen possible pairs typed as rivals, and a ten-firm power-and-energy EPC market with fifteen of forty-five. The install subsidiary hangs off the second by one edge. Thirty-five rivalries in total, across 20.5 per cent of every possible pair."
+    },
+    {
+     "q": "Which firm is the seam between the two markets, and what makes the claim more than an interpretation?",
+     "a": "**The one typed competitor with three firms on one side and four on the other** — the only member of nineteen typed that way on both. Its own file says why in a sentence: it is the only contractor at scale holding both a hyperscale building franchise and a fleet-scale power-EPC franchise. **The boundary is where the curated typings stop, not where this module drew a line.**"
+    },
+    {
+     "q": "One registered challenger has zero edges of any kind. What is the right thing to do with it?",
+     "a": "**Say what the record holds and decline to size it.** Its basis line explains the absence — the US platform is a developer rather than an EPC — and its ten-gigawatt-hour agreement is nineteen months old with no attributed project anywhere. A challenger the graph cannot see challenging anybody is a fact about the corpus's reach, not a measurable threat."
+    },
+    {
+     "q": "Eight members belong to other segments. What is the direction, and what does it tell you?",
+     "a": "**Nine of eleven shared memberships invert downward, and all six shared incumbents are adjacent in every other segment they appear in — six of six.** That is the mirror of the instrument that reads an all-ranked adjacent bench as a product other industries make: **when a segment's incumbents are demoted everywhere else, the segment is the services layer the rest of the chain borrows a builder from.**"
+    },
+    {
+     "q": "The one upward inversion is a developer with an EPC arm. Why is that the exception that confirms the rule?",
+     "a": "**Because the direction tracks the balance sheet rather than the crews.** It is ranked higher where it develops and demoted to adjacent where it builds — so a firm whose money is in the project outranks its own construction arm, and a firm whose money is in construction is demoted wherever the project is someone else's."
+    },
+    {
+     "q": "On this roster, who holds the purchase order for the equipment on site?",
+     "a": "**Usually the owner, not the builder** — five dossiers say so in their own words, and one member self-performs nothing at all. There are two genuine procurement doors among nineteen: a specialty contractor with a documented design-procure-install package, and an electrical contractor with about 10 GWh of installed storage EPC in house. **The one member whose own procurement is live is the segment's single adjacent, not one of its sixteen incumbents.**"
+    },
+    {
+     "q": "You are selling long-lead electrical gear into the data-hall market. When is the decision actually made?",
+     "a": "**In preconstruction, months before mobilisation.** The largest firm's own file says preconstruction is where equipment gets specified and reserved, and its buying desk runs open-book OEM procurement at roughly a billion dollars a year against an order book of 18 to 22 billion. By the time a site is active, your package was chosen."
+    },
+    {
+     "q": "Why is being specified by a designer worth more here than winning a bid from a builder?",
+     "a": "**Because a specification travels and a bid does not.** Two members of this roster are design authorities before they are builders — one is first in power design for eleven consecutive years and thirty-fifth as a contractor. The specification it writes reaches every project it touches; a single award reaches one."
+    },
+    {
+     "q": "Which three scarce inputs does the corpus name, and why does the answer decide the competitive question?",
+     "a": "**Craft hours, allocation, and the owner relationship.** One firm employs 69,500 people and spends about 250 million dollars a year training them; one sits inside a turbine maker's slot allocation and is building its own transformers; one runs more than 90 per cent repeat business. **Everything else on this roster can be subcontracted — and an advantage that can be subcontracted is not one.**"
+    },
+    {
+     "q": "A contractor is spending 500 to 700 million dollars to double its own transformer capacity. Whose problem is that?",
+     "a": "**A different segment's.** Its own file says that if the largest buyer of grid equipment self-supplies from 2028, the scarcity rents flowing to the incumbent equipment makers erode at the margin and its own bids gain a schedule weapon rivals cannot match. **The threat in this segment runs upward into the equipment layer, not sideways at the challengers.**"
+    },
+    {
+     "q": "Why does the biggest buyer of general-contracting capacity have more leverage than the biggest general contractor?",
+     "a": "**Because it dual-sources on purpose.** Three general contractors on one campus, four buildings split across three entities on another. One member's file states it flatly — no single builder, even the largest, gets a gigawatt campus alone — and another names the intent: the bench of substitutable top-tier builders is deliberately maintained."
+    },
+    {
+     "q": "The public segment lesson prints a dash against three of six buying criteria. What are the three diagnoses?",
+     "a": "**Three different ones.** The safety criterion hits no keyword and nothing in the whole curriculum teaches it — a real gap, and total. The procurement half of criterion five hits keywords that all map outside this segment's reading list — a keyword artefact. **And the bonding and project-controls criterion is taught, by a built lesson that IS in this segment's reading list — the keyword table simply has no entry that matches its wording.** That last one is a generator gap, not a curriculum gap."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "8 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague reads sixteen incumbents against two challengers and concludes this is a consolidated market with a stable top tier. What does the record actually support?",
+     "c": [
+      "Consolidation — sixteen established positions against two sub-scale contenders is a mature oligopoly",
+      "That it is two markets rather than one: the competitor graph falls into a six-firm data-hall market and a ten-firm power market when one firm and one edge are removed, and the ranking table runs across that boundary",
+      "Fragmentation — nineteen members with no shared basis means the segment has not formed yet",
+      "That the two challengers will be acquired, since both are sub-scale against the sixteen"
+     ],
+     "a": 1,
+     "why": "The registry's sixteen bases describe four different kinds of claim and impose no order. The graph then answers the question the registry cannot: fifty-three edges, thirty-five of them rivalries, forming one component of eighteen that separates into six plus ten at two seams. The firms ranked first and fifth are in one market and the firms ranked second, fourth and sixth are in the other, so they are not competing with each other and no single table can say they are. Neither consolidation nor fragmentation describes that."
+    },
+    {
+     "q": "You need to quote a contractor's rank to a counterparty. What must go with the number, and why?",
+     "c": [
+      "The revenue figure it was derived from, because ranks without revenue are meaningless",
+      "The name of the list, and the year-on-year movement — because the publisher issues several tables on different revenue bases, and the one table mixes two populations growing 11.8 and 86.4 per cent",
+      "Nothing — the rank is a published third-party fact and stands on its own",
+      "The firm's backlog, since a rank measures past revenue and backlog measures future work"
+     ],
+     "a": 1,
+     "why": "One member of this roster is first in power design for eleven consecutive years and thirty-fifth as a contractor; another is first in hydrogen and forty-ninth as a contractor; two different members both carry a sixth place on two different lists. A member's own dossier states the rule after a secondary source misquoted its own rank: the publisher issues several revenue bases across different lists, so a rank quoted without its list names nothing. And because the whole table grew 11.8 per cent while the data-centre category inside it grew 86.4, a firm can add over a billion dollars of revenue and still fall a place — which is exactly what happened to the fifth-ranked firm."
+    },
+    {
+     "q": "Eight members of this segment also belong to other segments. What does the direction of those memberships tell you about the segment itself?",
+     "c": [
+      "Nothing — cross-membership is bookkeeping, and the registry places members independently in each segment",
+      "That every one of the six shared incumbents is adjacent elsewhere, which reads the segment as the services layer the rest of the chain borrows a builder from",
+      "That the segment is too broadly drawn and should be split into general contracting and power EPC in the registry",
+      "That the shared members are misclassified here, since a firm ranked adjacent elsewhere cannot be an incumbent anywhere"
+     ],
+     "a": 1,
+     "why": "Ten of eleven shared memberships invert, nine of them downward, and all six shared incumbents are adjacent in every other segment they appear in with no exception. The established instrument reads an all-ranked adjacent bench as evidence the segment is a product other industries make; this is its mirror. The lone upward inversion confirms it rather than weakening it: a developer with an EPC arm is ranked where it develops and demoted where it builds, so the direction tracks where the balance sheet sits. The registry is not wrong — a firm genuinely can be the established builder here and a peripheral participant in the segment whose asset it builds."
+    },
+    {
+     "q": "The public lesson for this segment prints a dash against the buying criterion covering bonding capacity and percentage-of-completion. What is the correct diagnosis?",
+     "c": [
+      "A curriculum gap — no lesson in the corpus teaches project controls or surety",
+      "A keyword artefact — the criterion's words map to lessons outside this segment's reading list",
+      "A keyword-table gap — the material IS taught by a built lesson that IS in this segment's reading list, and the generator's keyword entry for that lesson matches none of the criterion's words",
+      "A rendering defect in the generated lesson that a regeneration will clear"
+     ],
+     "a": 2,
+     "why": "Percentage-of-completion appears in four registered lessons and the performance bond in exactly one, and both sets include the lesson that sits first in this segment's reading list — so the intersection did not fail. The keyword entry for that lesson matches on words like schedule, construction, commissioning and craft, and the criterion contains none of them. That is a third mechanism, distinct from the real curriculum gap the safety criterion suffers and from the artefact the procurement half of the next criterion suffers: a dash whose cause is in neither the curriculum nor the segment, but in the generator's own table."
+    },
+    {
+     "q": "You want to sell equipment onto a data-hall project. Which fact about the builder decides how you sell?",
+     "c": [
+      "Its rank on the contractor table, since larger firms buy more equipment",
+      "Whether it self-performs the scope you are selling into — a manager that subcontracts everything will never hold your paper",
+      "Its backlog, since a bigger backlog means more near-term purchase orders",
+      "Whether it is publicly listed, since listed firms publish their procurement policies"
+     ],
+     "a": 1,
+     "why": "Five dossiers on this roster state that equipment is owner-furnished on their sites, and one states that it self-performs nothing at all and holds its mechanical and electrical expertise as a coordination and commissioning function. Those firms will hand your package to a prequalified trade contractor: different signatory, different diligence, different timeline. A self-perform EPC may take the equipment onto its own balance sheet. The tell is public — firms that self-perform publish a page for it, and firms that do not list trade-contractor selection among their own services."
+    },
+    {
+     "q": "This module takes its review date as six months from publication rather than from a dated gate. Why, and why does it say so out loud?",
+     "c": [
+      "Because a landscape module has no dated gates by definition — only policy modules do",
+      "Because the segment's policy fence holds no future effective date at all: twenty-one entries, six dated, twenty already in effect — and every one of the four future day-level dates in the corpus fails on subject or on precision",
+      "Because the six-month default is the standard for every guidance module",
+      "Because the nearest gate falls inside the thirty-day review horizon and would make the module look stale on publication"
+     ],
+     "a": 1,
+     "why": "Construction regimes reach the record as rules already in force rather than as future effective dates, so a mechanical sort over this segment's fence returns an empty set — not a distant one. The corpus holds four future day-level dates: a securities lead-plaintiff deadline that clocks a lawsuit rather than a market, an earnings date the dossier itself calls estimated and unconfirmed with two sources a week apart, a tax-credit cliff that is genuinely on subject but later than the default and already carried twice elsewhere, and a buyback authorisation expiry. The thing that would actually clock this module — the next edition of the one ranking it publishes — appears annually on no announced day, and inventing one would be worse than defaulting. Thirteen landscapes before this one found a read date; saying that this one could not is the record working."
+    },
+    {
+     "q": "A counterparty on this roster says it is 'the number one data-center builder'. What is the first question?",
+     "c": [
+      "By revenue or by square footage?",
+      "On which list, and for which year — because at least three different publishers rank this category and one firm is first on one while eighth on another",
+      "Is that self-reported or audited?",
+      "Compared with which peers?"
+     ],
+     "a": 1,
+     "why": "All four questions are reasonable and the second is the one that resolves the others. One member of this roster is ranked first on a telecom-and-data-centre list and eighth on the general contractor table in the same cycle; another was ranked first by one publisher in two consecutive years and second in the third; a third is credited with more hyperscale square footage than any named peer while holding no reported role in the newest wave of awards. Naming the list fixes the population, the year fixes the edition, and the revenue base follows from both."
     }
    ]
   }

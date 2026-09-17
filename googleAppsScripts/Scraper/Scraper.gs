@@ -1,4 +1,4 @@
-var VERSION = "v02.14g";
+var VERSION = "v02.15g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1123,7 +1123,64 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'carried interest', 'fee-bearing capital', 'infrastructure fund',
             'alternative asset manager', 'sovereign wealth fund',
             'private credit', 'securitization'],
-    source: 'guidance:landscape-capital-2026-09' }
+    source: 'guidance:landscape-capital-2026-09' },
+  // S2 session 14. THE ZERO RATE IS ESSENTIALLY TOTAL AND THE REASON IS THAT
+  // THE ROSTER HAS NEVER HELD A CONSTRUCTION SEED. Denominator re-measured
+  // against BOTH arrays per 10.6 (bb5): SCRAPER_INTEREST_TOPIC_SEEDS (39
+  // seeds, 248 terms) AND SCRAPER_SEGMENT_SEEDS (29 lenses, 249 terms) - 497
+  // raw, 472 distinct, reconciling with session 13's 462 plus its own ten.
+  // FORTY-NINE candidates scored, FORTY-FIVE zero. The only four non-zero are
+  // not construction terms at all: `interconnection queue` (exact duplicate),
+  // `substation EPC` and `transmission EPC` (superstrings of the held
+  // `substation` and `transmission`), and `EPC` (the held `epc contract` is a
+  // superstring). The roster is an equipment, power, project, site, policy and
+  // - since session 13 - finance vocabulary; NOTHING in it describes how the
+  // thing gets built. So every drop below is EDITORIAL rather than duplication,
+  // which is session 13's mechanism one layer down.
+  // CRITERION 1 IS COVERED BY THE SEGMENT ONE LINK UP, so this is a (v)
+  // half-and-half: `days to energize` is the REGISTRY's wording rather than the
+  // market's - session 13's ground for dropping `fund-to-fund` - and its market
+  // form `speed to power` is ALREADY SEEDED in topic-landscape-hyperscalers-
+  // and-ai-labs, because the hyperscalers are the counterparties in the same
+  // articles.
+  // CRITERION 3 IS BLOCKED IN BOTH DIRECTIONS - session 12's class, third
+  // appearance. The precise forms (`Level 5 commissioning`, `commissioning
+  // agent`) score zero and carry almost no article volume; the broad form
+  // `commissioning` also scores zero but is used of ships, plants, artworks and
+  // public buildings, so it would mis-band heavily. NO ADMISSIBLE TERM EXISTS
+  // and criterion 3 is recorded unseeded rather than served badly.
+  // DROPPED: ELEVEN as too generic (`design-build`, `construction manager at
+  // risk`, `general contractor`, `turnkey`, `backlog`, `craft`,
+  // `commissioning`, `mission critical`, `preconstruction`, `data hall`,
+  // `safety record`); FOUR as near-duplicates or superstrings (above); THREE as
+  // too rare in article text (`guaranteed maximum price`, `progressive design-
+  // build`, `experience modification rate`) plus `craft ceiling`, one
+  // publication's coinage for one edition; TWO on SPLIT grounds to topic-bess-
+  // bankability (`contractor-furnished`, and `total recordable incident rate`
+  // in long form, whose short form TRIR is taken here); and nothing about
+  // transformer lead times enters, per the split against topic-grid-equipment-
+  // shortage.
+  // THE TWO STANDING RESERVATION DEBTS, BOTH RE-CHECKED AND BOTH STILL OPEN.
+  // (1) `restart` still scores zero across all 472 and is still topic-
+  // landscape-clean-firm-and-nuclear's word for that module's next revision -
+  // FIVE sessions unseeded. (2) Session 12's six terms assigned "on split
+  // grounds to topic-aidc-landlords" (`tenant of record`, `credit backstop`,
+  // `recognition agreement`, `bankruptcy-remote`, `triple-net lease`, `penny
+  // warrant`) are STILL not in that seed and ALL SIX still score zero - a
+  // second consecutive session confirming that a term ASSIGNED to another
+  // seed's territory is not a term SEEDED there. Neither is taken here. The
+  // GPU-residual-value gap still wants a developer decision on the scorer.
+  // RECORDED NOT TAKEN, as candidates for a future session: `apprenticeship
+  // ratio` and `project labor agreement` both score zero and are genuinely
+  // this segment's regimes, dropped only as too rare in article text today.
+  // New key, no sheet row, so no `tv` marker applies and no existing seed's
+  // terms array was edited. No outlet was added to SCRAPER_SOURCE_ROSTER.
+  { key: 'topic-landscape-epc-and-construction',
+    label: 'EPC and construction: the builders, the craft ceiling and who furnishes the equipment',
+    terms: ['self-perform', 'craft labor', 'prefabrication', 'ENR Top 400',
+            'percentage-of-completion', 'bonding capacity', 'owner-furnished',
+            'TRIR', 'electrical contractor', 'prevailing wage'],
+    source: 'guidance:landscape-epc-and-construction-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

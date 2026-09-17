@@ -3,11 +3,89 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 116/100`
+`Sections: 117/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.28r] — 2026-09-16 10:28:01 PM EST
+
+> Author S2 session 14 — the epc-and-construction landscape module — on Opus 5 xhigh as a fresh session. This is ONE guidance module plus its analysis file, one Scraper seed and ONE segment regeneration. It authors no lesson, no dossier and no report, and creates no track.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md (Latest Session); INTEGRATED-REMEDIATION-PLAN.md §7.43 (your brief), §7.41 and §7.42 (for the S2 session signature, the both-halves due-count rule, what session 13 settled about declining a ranking whose bases do not share a basis, and what row 18 settled about a reviewBy sort that returns real dates and still fails); §7.3 orders 5 and 6, and §6; CLASSROOM-CURRICULUM-PLAN.md §10.2–§10.6 IN FULL (the segment layer, the generator, the module's nine section ids and their order, and the (t)/(bb1)/(cc3) findings), §10.9, and §8 items 2 and 3. Then .claude/rules/industry-guidance.md, .claude/rules/classroom-app.md, repository-information/CLASSROOM-SCHEMA.md, .claude/rules/scraper-sources.md and .claude/rules/changelog-security.md before you write any public changelog line.
+>
+> UNSHALLOW THE CLONE FIRST — git fetch --unshallow origin main, before any measurement and before any pin. A shallow clone's boundary commit looks like it introduced every file, so git log -1 --format=%cs -- <path> returns the boundary's date rather than the file's, and every rotation SHA lookup beyond the horizon fails. If a container restart has left your clone behind origin/main, run git fetch --prune origin and git checkout -B <branch> origin/main BEFORE any measurement.
+>
+> THE WORK — one push commit. (1) Write repository-information/industry-guidance/landscape-epc-and-construction-analysis.md, the source of truth, with §2 (the split) drafted before any other section. (2) Author guidanceDocLandscapeEpcAndConstruction_() BELOW the // CONTENT END fence in Classroom.gs, id landscape-epc-and-construction-2026-09, lane The Value Chain, tier contributor, nine sections at §10.6's ids and order, and register it at the END of guidanceDocs_()'s Value Chain lane. (3) Seed topic-landscape-epc-and-construction in Scraper.gs. (4) Regenerate exactly one segment — build-classroom-segments.py --only epc-and-construction --today <EST day of the push>. (5) Flip §7.3's S2 row, §6's S2 row and §10.6's progress note to 14 of ~19, strike epc-and-construction, and write the findings block. (6) Write §7.44 — the next run's brief, which by the interleave is Phase 4 row 19, how-a-cell-is-made — in the same commit, and edit BOTH halves of any §7.x brief you refresh: the prose paragraphs and the quoted prompt block.
+>
+> SIXTEEN INCUMBENTS OF NINETEEN — THE MOST INCUMBENT-HEAVY ROSTER IN THE TAXONOMY, AND THE RANKING PROBLEM IS THE INVERSE OF SESSION 13'S. MEASURED at v06.26r, not asserted. 19 members, 16 · 2 · 1, and the segment carries no notes field, so who-dominates-and-on-what-basis has sixteen bases to sort and no registry ordering. The bases are four incompatible kinds of claim — third-party rankings on named scales (ENR #1/#2/#6/#7, BD+C #1, #1 US electrical contractor at 3.7× the runner-up, #2 US BESS builder 2024 at 4.6 GWh), gigawatt volumes, dollar volumes, and role claims with no number. Do not rank sixteen firms on four scales. Session 13's verdict — decline the ranking and test the rivalry against the graph — is the precedent; measure the edges first, and if a ranking IS publishable, say on which single basis and for how many of the sixteen it is available. Parse the registry; do not take the roster from this prompt.
+>
+> EIGHT OF NINETEEN ARE SHARED AND SEVEN OF THE EIGHT INVERT DOWNWARD. bechtel, black-veatch, burns-mcdonnell, kiewit, quanta-services and rosendin are incumbent here and adjacent everywhere else; samsung-ct is a challenger here and adjacent twice elsewhere; strata-clean-energy is the lone adjacent here and a challenger in storage-developers-and-ipps. That is the mirror of session 13, where all three adjacents ranked higher elsewhere. The reading to test: this is the segment every other segment borrows a builder from. Re-measure it.
+>
+> PREDICT ALL THREE NUMBERS BEFORE YOU WRITE, AND THIS IS THE CLEAR CASE. --check should read 8 due as you start, with epc-and-construction among them — differing in read-next and what-is-bought-and-on-what, inputs moved: none, the stale lesson_ref Phase 4 row 17 left behind. Forecast 8 at the start, 8 after the module (a module registration moves no lesson_ref) and 7 at the end, this segment clearing on its own regeneration. Three of its six criteria already resolve and three print a dash — read the generator before you write and name which of the three mechanisms produced each dash; (cc3)'s keyword-artefact case is live, since criteria 4, 5 and 6 are written in commercial vocabulary (bonding, percentage-of-completion, TRIR) the lexicon does not carry.
+>
+> reviewBy — read, do not sort. Sixteen incumbents means sixteen policyExposure[] arrays, and construction regimes carry enjoined and in-effect statuses more often than future effective dates. Row 18's failure mode is the one to watch: its sort returned four genuine future day-level dates and every one was twenty-seven months out or further, so the default was taken DESPITE a non-empty result. Record every rejection in writing. The curriculum checker reports 3 items due for review — landscape-utilities-2026-09 and landscape-in-hall-power-2026-09 at 2026-10-01 and landscape-neoclouds-2026-09 at 2026-09-30, all three by design. Do not "fix" any of the three.
+>
+> DO NOT: author or revise a lesson; regenerate more than the one segment; edit a generated segment-* literal by hand; touch Profiler.gs or Profiler.html. And NEVER sweep a date across Classroom.gs with a blanket find-and-replace — it holds twenty-two independently dated guidance modules and session 9 corrupted a comment-deadline date inside guidanceDocEo14420_() that way; scope every replacement to the function you are authoring.
+>
+> VERIFY: node --check on a .js copy of Classroom.gs and of Scraper.gs; scripts/check-gas-inner-scripts.js; scripts/check-classroom-content.py — capture a pristine HEAD baseline BEFORE any edit. It is 0 errors / 0 warnings at 48 lessons / 8 tracks / 142 gate cases with the module assertion at 22, and must be 0/0 after with the assertion at 23 and the lesson count still 48. Then scripts/check-classroom-curriculum.py --strict (no structural findings; 28 stale pins and 3 items due for review are pre-existing and not yours); scripts/check-classroom-pipeline.py --selftest (13 fixtures, 0 failures) and --base origin/main; build-classroom-segments.py --check before, after the module, and after the regeneration; scripts/check-readme-tree.py after the version bumps. Playwright render at contributor with ZERO page errors, plus an analyst denial from the real serving path. [Render-harness recipe, shell traps and screenshot discipline as recorded in §7.43.]
+>
+> THE DEPLOY: the §7.19 order, on its twenty-sixth use. Read Pages first and the workflow's own deploy confirmed lines from the job log. Probe ?op=deploy only if those disagree, and use curl -sL if you do. Your session touches TWO .gs files, so forecast two steps and two logged lines — Classroom from a measured 70/200 to 71 and Scraper from a measured 159/200 to 160. A counter forecast has to add every intervening .gs push, not just your own. Scraper headroom is 41 and only an S2 seed moves it.
+>
+> THE CHANGELOG ARITHMETIC — AND YOU MAY BE THE ROTATOR, SO TEST THE DATE RATHER THAN GUESSING. Eleven consecutive sessions have been deferred by the same fact: the push landed ON 2026-09-16 EST. The deferral is a function of the day of the push, not of the section count, and it lapses on the first push dated 2026-09-17 EST or later. Run TZ=America/New_York date '+%Y-%m-%d' and trust it over the harness banner, which follows UTC and flips five hours early. If it reads 2026-09-17 or later you are the rotator: CHANGELOG.md clears in ONE group (2026-09-08, 10 sections) and Classroomgs.changelog.md needs TWO (2026-09-01's 2, then 2026-09-02's 11) — do not stop after one group; repeat until fewer than the trigger remain. Scrapergs.changelog.md sits at 35 and Profilerhtml.changelog.md at 49, closest to its own trigger and untouched by an S2 row. RE-COUNT FROM THE FILES rather than from this prompt. Deepen the clone first so every rotated header enriches, and run the mandatory post-rotation grep.
+>
+> Normal Pre-Commit and Pre-Push checklists; claude/* branch restarted from origin/main first, git ls-remote before each push. End every commit message with the two attribution lines this repo's recent commits carry. Read repository-information/repository.version.txt for the version to bump from — do not take it from this prompt, whose own handover commit consumes the next number.
+>
+> AFTER THIS SESSION Phase 4 is 18 of 26 and S2 is 14 of ~19, so the interleave returns to Phase 4 and the recommended next run is Phase 4 row 19 — how-a-cell-is-made — for which §7.44 should be written.
+>
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeEpcAndConstruction_()`** — the **twenty-third** guidance module and the **fourteenth** landscape, id `landscape-epc-and-construction-2026-09`, lane **The Value Chain**, tier **contributor**, authored **below** the `// CONTENT END` fence and registered at the END of `guidanceDocs_()`'s Value Chain lane. Nine sections at §10.6's ids and order, four tiles (all `k` values in pure ASCII), a ten-entry local glossary, an **eighteen-row** `each-players-bet` table grouped by market rather than by registry role, a **thirty-three-row** claims ledger, 15 drill cards and 7 quiz items. `updated` 2026-09-16, `reviewBy` **2027-03-16**
+- **`Sections: 58/50` → `59/50`** in the Classroom GAS changelog, with a generic entry naming no segment, no member and no module subject per `changelog-security.md`
+
+#### `repository-information/industry-guidance/landscape-epc-and-construction-analysis.md`
+- The module's source of truth, **839 lines**, with §2 (the split against **nine** neighbours — three built public `READ_NEXT` lessons, five built landscape modules and one registered guidance module) drafted before any other section, and §2g enumerating **22** omissions
+
+#### `googleAppsScripts/Scraper/Scraper.gs`
+- **`topic-landscape-epc-and-construction`** — ten terms (`self-perform`, `craft labor`, `prefabrication`, `ENR Top 400`, `percentage-of-completion`, `bonding capacity`, `owner-furnished`, `TRIR`, `electrical contractor`, `prevailing wage`), each audited for exact, substring and near-duplicate collision against all **472** distinct terms. New key, no sheet row, so no `tv` marker applies and **no existing seed's `terms` array was edited**; no outlet was added to `SCRAPER_SOURCE_ROSTER`
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.44** — the paste-in brief for **Phase 4 row 19, `how-a-cell-is-made`** — written in this commit, **both halves**
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`segment-epc-and-construction` regenerated** (`--segment epc-and-construction --today 2026-09-16`), appending exactly one `revisions[]` entry with `changed: [read-next, what-is-bought-and-on-what]`. `read-next` now names the landscape module and all three mechanism lesson titles lose their `(planned)` suffix; `what-is-bought-and-on-what` resolves three of six criteria to their built titles
+- `VERSION` **v01.58g → v01.59g**, with `live-site-pages/gs-versions/Classroomgs.version.txt` moved in the same commit
+
+#### `scripts/check-classroom-content.py`
+- The gate truth table's hard-coded module count **22 → 23**, in the same commit that registers the module (§10.6 **(c)**)
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§10.6 progress note 13 → 14 of 19**, and the **(ee1)–(ee7)** findings block written for session 14
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.3's S2 row and §6's S2 row flipped to 14 of ~19**, the §6 row's stale *"Session 11 … is `hyperscalers-and-ai-labs`"* pointer replaced with the five remaining segments, and `epc-and-construction` struck from the **S2 needs** attach-map list — all four landscapes named there are now built, so that need is spent
+
+#### `README.md`
+- `Last updated:` and `Repo version:` refreshed; the tree's two GAS version displays synced by `check-readme-tree.py --fix`
+
+### Fixed
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **Two defects the screenshots caught and every checker passed at 0/0** — both the *recount* class rather than row 18's *glyph* class. `the-indicators` asserted in two places that **two rows carry a day** beside a table where **three** do (rows 1, 6 and 10, holding four days between them, exactly one of them still ahead); `what-the-record-does-not-say` opened *eleven of the nineteen are private*, where re-counting the `ownership` field gives **12 private, 5 public, 2 subsidiary**, and its triple-disclosure claim was replaced with the measurable one — **seven members' files carry an explicit *publishes no …* statement and four name backlog specifically**
+- A hyphenation slip (*in house* → *in-house*) in `the-sellers-play`
+
+### Notes
+
+- **All three `--check` numbers were called before the generator ran and all three held: 8 → 8 → 7.** Eight at the start (`epc-and-construction` already due on the stale `lesson_ref` Phase 4 row 17 left behind), eight after the module because a guidance registration moves no `lesson_ref`, and seven after the regeneration. **The clear case, not row 18's enter case.**
+- **The pipeline signature was 4 × P1 and 9 × P2 — no P3, no P5, no P7, no P8, no P10, no P12** — the standard S2 landscape signature: P2 is what a developer diff below the content fence reports, and no P7 because the base literal was dated 2026-09-14 rather than the same day.
+- **Render: 9 of 9 sections at contributor, 63,051 characters, zero page errors**, zero unresolved `{{…}}`, zero literal asterisks, zero backticks, and the re-render after the fixes moved the count **62,894 → 63,051** — the stale-process evidence row 18 established. Through the real serving path: **analyst → `ROLE_DENIED`** (0 of 9 sections and *"Industry Guidance is available to the admin and contributor tiers"* at the page level), **viewer → `ROLE_DENIED`**, **token under 32 characters → `SESSION_EXPIRED`**, admin and contributor → the full module. The two `ERR_CERT_AUTHORITY_INVALID` console errors are environmental.
+- **No rotation on either file, for a TWELFTH consecutive session**, and for the same clause every brief since §7.36 has recorded: **the deferral is a function of the day of the push, not of the section count.** `TZ=America/New_York date` read **2026-09-16** while the harness banner read 2026-09-17 UTC, so `CHANGELOG.md` goes to **117 raw / 93 non-exempt** against a 100 trigger with 24 same-day sections, and `Classroomgs.changelog.md` to **59 / 48** against a cap of 50. It lapses on the first push dated **2026-09-17 EST or later**.
 
 ## [v06.27r] — 2026-09-16 09:14:58 PM EST
 
