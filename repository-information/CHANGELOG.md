@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 115/100`
+`Sections: 116/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.27r] — 2026-09-16 09:14:58 PM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.43's deploy counters written into BOTH halves** — the prose paragraph and the quoted prompt block — against the v06.26r job log rather than a forecast. The log read **`Classroom deploy confirmed (GET): Updated to v01.58g (deployment 70) | 70/200`** and logged **nothing** for Scraper, whose `Deploy Scraper` step exited 0 silently in zero seconds on its own `git diff` guard — so Scraper stands at **159/200** with 41 left. **Exactly one step fired and logged exactly one line, and both legs of v06.26r's forecast were right.** Classroom's headroom is now **130**
+- The §7.19 order resolved on its **two reads** for the **twenty-fifth** time and no `?op=deploy` probe was made: Pages read `|v01.57g|` at 09:11:00 PM EST and `|v01.58g|` at 09:12:17 PM — re-read rather than assumed, a lag of about **77 seconds** — and the job log agreed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- `## Latest Session` written for v06.27r; the v06.25r entry moved to `## Previous Sessions` and the 2-session cap applied
+
+### Notes
+
+- **No rotation on either file, for an ELEVENTH consecutive session.** This push also lands on **2026-09-16 EST** (`TZ=America/New_York date` read 2026-09-16 while the harness banner read 2026-09-17 UTC): `CHANGELOG.md` **116 raw / 93 non-exempt** against a 100 trigger, **23** sections dated 2026-09-16 EST, counter `Sections: 116/100`. `Classroomgs.changelog.md` holds at **58 raw / 48 non-exempt** against a cap of 50 — untouched by this push, which changes no `.gs` file. **Both deferrals lapse on the first push dated 2026-09-17 EST or later, and that session rotates both**
 
 ## [v06.26r] — 2026-09-16 09:07:17 PM EST
 
