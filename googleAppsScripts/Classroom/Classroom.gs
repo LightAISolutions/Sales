@@ -1,4 +1,4 @@
-var VERSION = "v01.63g";
+var VERSION = "v01.64g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -43154,12 +43154,13 @@ function clTrackMarketAccess_() {
  "title": "Selling Into the Market",
  "short": "Finish this and you can name who signs the PO, under which contract, against which certification file, inside which policy fence — and say what 'bankable' concretely means to the lender who decides.",
  "group": "Market Access & Bankability",
- "updated": "2026-09-15",
+ "updated": "2026-09-17",
  "lessons": [
   "who-buys-storage",
   "how-a-storage-project-happens",
   "contracts-and-revenue",
-  "how-a-utility-buys"
+  "how-a-utility-buys",
+  "utility-procurement-meets-ai-load"
  ],
  "prereqs": [
   "bess-foundations",
@@ -44201,6 +44202,502 @@ function clLessonDcFaultEngineering_() {
  ]
 };
 }
+// Phase 4 row 21 — the seller's playbook over the regulated machine, and the
+// SECOND gated lesson Phase 4 has authored. One guidance: ref in the stamp, so
+// clGateForProvenance_() returns guidance and no field here says so.
+//
+// THE SPLIT, CHECKED RATHER THAN INHERITED. Curriculum plan §2.2 reserved four
+// things for this lesson on 2026-09-07 — the four moves, the buyer map across
+// the five channels, the concrete awards, and the dated gates as one timeline.
+// All four were grepped against how-a-utility-buys (row 2, built v05.54r) and
+// the six utility guides before drafting, and two had partly moved: the
+// two-lane sales motion is already public in the Dominion and Southern guides,
+// and row 2's who-picks-the-battery teaches three lanes inside one utility with
+// the same qualification-list sentence. What no source holds is the five
+// channels as ONE comparable set and the counterparties of channels four and
+// five — so this lesson maps the set and leaves the lanes where they are.
+//
+// AND ONE ITEM §2.2 DID NOT ANTICIPATE. The fifth channel's product — the
+// ride-through obligation, the two adjacent rules, the box inline between grid
+// and campus — is where-bess-plugs-in's socket 2, already taught at length
+// (NOGRR x7, ride-through x21, buffering x8). The card here is the procurement
+// half only: who signs, on what clock, against what test. Its own note says so.
+//
+// THE DATED GATES WERE HANDED OVER IN WRITING. where-bess-plugs-in's timeline
+// note declines "the utility procurement lane — certification orders, storage
+// RFP cycles, new large-load tariffs taking effect" and says it "belongs to the
+// market-access material rather than here". That is this section, and the
+// handoff is written as a POINTER rather than a status report, so nothing in it
+// became false when this lesson landed — which is (hh2) applied correctly by a
+// prior row rather than violated by one.
+//
+// TWO RENDERER FACTS FOUND PRE-SPLICE AND USED. CL_LANE_COLORS in
+// Classroom.html is keyed on the literal lane names gen/deploy/eco, so any
+// other key renders faint grey for both swatch and dot — the lanes here are
+// those keys with free-text labels, as row 2's timeline does. And clTimeline
+// prints Math.floor(x) in the left gutter, so on a CALENDAR timeline x carries
+// the real year (2025.52 … 2027.0) and the gutter reads 2025 / 2026 / 2027.
+//
+// reviewBy 2026-12-10 is INHERITED per §7 row 21, confirmed by re-reading the
+// module on the day, and the nearest-gate sort was run anyway. Both scans were
+// run per (ii7) and they disagreed: an ISO regex finds ONE future day-level
+// date in all seven inputs (the module's own reviewBy — a tautology), while a
+// word-form scan finds FIVE it cannot see, two of them EARLIER than the
+// inherited date. Five rejections in writing, in the §7 record.
+//
+// The literal is 100% ASCII. All six pre-splice simulations returned 0/0 — 114
+// formatted fields, 75 plain, 7 local glossary entries every one of them used,
+// 28 distinct {{term}} uses all resolvable. The recount pass that the
+// simulations cannot do then caught SIX defects of the (ii10) class before the
+// splice, among them a field note conflating two different moves and a table
+// note calling a move a purchase that its own row says buys nothing.
+function clLessonUtilityProcurementMeetsAiLoad_() {
+  return {
+ "schemaVersion": 1,
+ "id": "utility-procurement-meets-ai-load",
+ "type": "module",
+ "title": "The Gatekeeper",
+ "short": "The utility as gatekeeper for AI load: a four-move playbook, five channels storage enters through, three counterparties who sign, and a calendar of dated gates.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-17",
+ "reviewBy": "2026-12-10",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:utility-aidc-procurement-2026-08",
+    "date": "2026-08-24",
+    "note": "the gatekeeper thesis and the risk-transfer reading of it; the four-move playbook; the five channels and their buyers; the two-lane motion; the ERCOT-against-regulated comparison; the concrete storage procurements; and the dated regulatory gates this lesson assembles into a calendar"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dominion-energy",
+    "date": "2026-09-03",
+    "note": "the annual solicitation cycle as a repeating channel rather than an event; the GS-5 order date against its effective date - the gap this lesson's timeline is built to show; the statutory storage mandate that makes one column's megawatts already authorised"
+   },
+   {
+    "kind": "public",
+    "ref": "study:southern-company",
+    "date": "2026-09-03",
+    "note": "the single largest certification order as the worked example of one order splitting into three counterparties; the utility-owned tranche against the third-party purchases; the shareholder backstop as the risk-transfer move a commission accepted"
+   },
+   {
+    "kind": "public",
+    "ref": "study:entergy",
+    "date": "2026-09-03",
+    "note": "a first-ever standalone storage solicitation from the least storage-mature buyer, and the reading that a first cycle is where a vendor position is cheapest to take"
+   },
+   {
+    "kind": "public",
+    "ref": "study:aep",
+    "date": "2026-09-03",
+    "note": "the multi-state all-source solicitations with standalone storage explicitly eligible; the tariff that produced the demand filter the rest of the country copied, and the appeal that keeps it unsettled"
+   },
+   {
+    "kind": "public",
+    "ref": "study:oncor",
+    "date": "2026-09-03",
+    "note": "the merchant column of the comparison table - what a wires-only market pays storage for, who signs there, and the load-side friction that has slowed it"
+   },
+   {
+    "kind": "public",
+    "ref": "study:xcel-energy",
+    "date": "2026-09-03",
+    "note": "the near-term procurement that runs beside the resource plan, which is why a solicitation calendar and a plan calendar are two different clocks a seller has to watch"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "5 channels",
+   "v": "and three counterparties",
+   "sub": "the utility signs two of them, a developer signs two, the campus signs one"
+  },
+  {
+   "k": "4 moves",
+   "v": "one strategy, not four policies",
+   "sub": "each transfers the risk that announced load never arrives, to a different party"
+  },
+  {
+   "k": "12-36 months",
+   "v": "award to purchase order",
+   "sub": "the fuse on a certified megawatt, once the years upstream of it are done"
+  },
+  {
+   "k": "Dec 10, 2026",
+   "v": "the review date this lesson inherits",
+   "sub": "the procurement module's own clock, not a six-month default"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "certification order",
+   "d": "The commission order that authorises a specific project or portfolio to be built and put into rate base. It is the moment a plan stops being a forecast: the megawatts in a certification order have names, prices and an owner, and they are the only megawatts a seller should treat as pipeline."
+  },
+  {
+   "t": "independent evaluator",
+   "d": "A third party a commission requires a utility to appoint to run a solicitation it is also bidding into. The evaluator publishes the criteria, scores the bids and reports to the commission rather than to the utility. Its existence is the reason a solicitation has readable rules, and its absence is the reason a self-build award does not."
+  },
+  {
+   "t": "master supply agreement",
+   "d": "A multi-year framework between an equipment maker and a buyer that fixes terms, warranty and often a volume envelope, against which individual projects then draw. It is not a project and it is not an order; it is the thing that makes a series of later orders fast."
+  },
+  {
+   "t": "approved vendor list",
+   "d": "The register of suppliers a utility or its engineering contractor has already qualified. Being on it is a precondition of being evaluated, not an advantage within the evaluation, and it is maintained by a function with no project attached and no deadline to help you."
+  },
+  {
+   "t": "vendor qualification",
+   "d": "The separate process of getting onto an approved vendor list: document review, factory audit, test evidence, financial screening. It is a sale in its own right, made to a different audience than the project sale, and it is the one that has to close first."
+  },
+  {
+   "t": "bid stage",
+   "d": "The window while a developer is assembling a response to a solicitation. It is when the bill of materials is priced and therefore fixed. After the bid goes in, the equipment choice is contractual and a seller arriving later is quoting against a decision that has already been made."
+  },
+  {
+   "t": "shareholder backstop",
+   "d": "A commitment that a utility's investors, rather than its customers, absorb the cost of capacity built for demand that does not materialise. It is the risk-transfer move a commission can require when it doubts a load forecast but approves the build anyway."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-gatekeeper",
+   "title": "What the gatekeeper is actually deciding",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A regulated utility used to answer a new industrial customer with an engineering study. AI load turned that question into a financial one, because the quantities asked for stopped being credible: single systems have fielded large-load requests several times their all-time peak. The utility did not become powerful by choosing to be. It became the gatekeeper of compute because **a campus cannot exist without an interconnection and a supply, and only one party grants both** - and the consequence for anybody selling hardware into this market is that the decision has moved onto a docket calendar that no procurement department controls.",
+    "**The question every one of these utilities answered between 2024 and 2026 was the same, and it was not about megawatts.** It was: *how do we find the demand that is real, and make somebody other than the existing ratepayer carry the cost of the rest?* Read the next section as four answers to that one question and it stops looking like four unrelated policies. A {{large-load tariff}} puts the risk on the customer who signs. A customer-funded plant puts it on the customer who funded it. A {{shareholder backstop}} puts it on investors. {{curtailment}} puts it on the load itself. **The playbook is a risk-transfer strategy that happens to buy equipment along the way.**",
+    "**What this lesson assumes you already have.** That a queue is not a pipeline, and that the ratio between requests and financially committed load is the sanity check on any forecast, is taught on the campus side in the lesson on where storage plugs in; the sequence a regulated purchase moves through - plan, file, prove, recover - and the terms of the large-load tariffs themselves, five jurisdictions across, are in this track's public lesson on the regulated machine. Neither is repeated here. **This lesson starts one step later, at the question those two leave open: once a utility has decided that a tranche of that load is real, what does it buy, and whose signature is on the order?**",
+    "**Field note - two asymmetries, and they are not the same move.** One of the four moves buys no equipment at all, and a *different* one creates a buyer the utility never meets. Keep both in view through the rest of the lesson: between them they are why the channel list that follows contains a card sitting in no docket, and why the move with the largest effect on what gets procured is the move with no procurement in it."
+   ]
+  },
+  {
+   "id": "the-four-moves",
+   "title": "The four moves, read as one strategy",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Every row answers the same question - *how do we find the demand that is real and make somebody else carry the cost of the rest* - and they differ only in where the risk lands. Read the third column down before you read any row across: that is the strategy.",
+   "cols": [
+    "The move",
+    "The mechanism",
+    "Where the risk lands",
+    "What it means for a storage seller"
+   ],
+   "rows": [
+    [
+     "**1. Large-load tariff classes**",
+     "{{minimum take}} obligations, fixed terms from twelve years upward, a {{ramp schedule}}, {{exit fee}}s and collateral - written into a new rate class or, in one state, into a statute",
+     "**On the customer.** A campus that signs pays for contracted capacity whether it draws it or not",
+     "It buys nothing. Its job in the playbook is to **qualify the demand the other three moves are sized against** - which is why a tariff order is a leading indicator of procurement rather than a procurement event"
+    ],
+    [
+     "**2. Large gas procurement**",
+     "Expedited certification of combined-cycle and combustion-turbine capacity, increasingly funded by the single customer it was built to serve",
+     "**On that customer** where the plant is single-customer; **on the ratepayer** where it is not, which is the fight",
+     "This is the competitor for {{firm capacity}}, and the reason an all-source solicitation is not a storage solicitation. Storage is scored on what it is accredited to contribute, not on what it costs"
+    ],
+    [
+     "**3. Storage procurement growth**",
+     "Certified self-build, storage-specific solicitations, all-source solicitations where storage clears, and statutory mandates that oblige a utility to own a stated quantity",
+     "**On the ratepayer** through {{rate base}}, or **on the developer** under a {{PPA}}, depending which lane the megawatts come out of",
+     "**The move that actually buys.** Three of the five channels in the next section come out of this row alone, and they do not all have the same customer"
+    ],
+    [
+     "**4. Flexible and curtailable interconnection**",
+     "Curtailment accepted as the price of an earlier connection; {{demand response}} written into supply contracts; {{ride-through}} obligations placed on the load itself",
+     "**On the load.** The campus absorbs the reliability event instead of the system doing it for them",
+     "It creates demand for equipment **at the campus rather than at the utility** - the fifth channel, and a different call sheet entirely"
+    ]
+   ],
+   "note": "**Move four is the one that changes address.** The first three all operate inside the utility's own accounts - a rate class it files, a plant it certifies, a portfolio it procures - even though only one of them buys storage. The fourth is a duty it *imposes*, and the equipment that duty creates demand for is bought by somebody else entirely. That is why the channel list below contains a card that sits in no docket. **And one channel there comes from none of these four rows** - the merchant market existed before AI load and would exist without it. What AI load changed is the price shape it earns on, not the fact of it."
+  },
+  {
+   "id": "five-channels",
+   "title": "The five channels storage enters through",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "Same hardware, five different processes. Read each card for one thing only - **who the counterparty is and what clock they are on** - because that is the whole of what changes between them, and it is what the next section maps.",
+   "cards": [
+    {
+     "t": "Storage-specific solicitations",
+     "meta": "the purest channel, and the slowest",
+     "adv": [
+      "Named megawatts with a {{certification order}} behind them, so the money is authorised rather than forecast",
+      "An {{independent evaluator}} runs the process, which means published criteria and a scoring method rather than a relationship",
+      "Award to purchase order is a twelve-to-thirty-six-month fuse - long, but it is a fuse and not a hope"
+     ],
+     "dis": [
+      "Everything upstream of the award is measured in years: resource plan, then solicitation, then certification",
+      "Diligence runs at {{prudence review}} depth, because the utility has to defend the choice to a commission and to a consumer advocate"
+     ]
+    },
+    {
+     "t": "All-source solicitations where storage clears",
+     "meta": "storage does not compete against storage here",
+     "adv": [
+      "The largest single storage tranches in this market have come out of technology-neutral processes rather than storage-only ones",
+      "A neutral process rewards whatever wins on the evaluated attributes, and peak-hour economics have been moving in storage's direction"
+     ],
+     "dis": [
+      "The comparison is against accredited {{firm capacity}}, so the argument is about what a battery counts for rather than what it costs",
+      "**Clearing the solicitation does not tell you who your customer is** - the winner chooses the equipment, and the winner is often a developer rather than the utility"
+     ]
+    },
+    {
+     "t": "Utility self-build supply agreements",
+     "meta": "the only channel where the utility is the direct customer",
+     "adv": [
+      "A {{master supply agreement}} with a utility is a multi-year framework rather than a project - the largest are measured in gigawatt-hours",
+      "The route in is the {{EPC}} contractor and the {{approved vendor list}}, both reachable long before any solicitation opens"
+     ],
+     "dis": [
+      "**{{vendor qualification}} is a separate sale and it has to close first.** A seller who arrives when the solicitation does has already lost this channel for that cycle",
+      "Incumbency and a credible {{domestic content}} story have decided these awards so far, which makes it a displacement sale"
+     ]
+    },
+    {
+     "t": "ERCOT merchant",
+     "meta": "the volume channel, and the one the playbook did not create",
+     "adv": [
+      "The largest merchant storage fleet outside California, with a buyer - the developer or {{IPP}} - who decides in weeks on cost and availability",
+      "AI load is a named force in the revenue case, because it widens the price shape the fleet earns on"
+     ],
+     "dis": [
+      "Growth is decelerating and the {{ancillary services}} markets the fleet grew up on have saturated, pushing new projects toward energy revenues and longer durations",
+      "**No certificate, no docket and no mandate underwrites any of it.** The revenue is a forecast, so the counterparty's cost of capital is the real gate"
+     ]
+    },
+    {
+     "t": "Ride-through buffering at the campus",
+     "meta": "a procurement question, not a product question",
+     "adv": [
+      "The buyer moves in quarters rather than regulatory years, because the deadline is a compliance date rather than a docket",
+      "The counterparty is the campus developer or its power-infrastructure partner - a call sheet that overlaps with none of the four above"
+     ],
+     "dis": [
+      "Supply-chain provenance is specified at the start rather than evaluated at the end, so a {{FEOC}} question closes the door before price is discussed",
+      "First movers already hold named multi-gigawatt agreements, so this is a displacement sale in a category only a few years old"
+     ]
+    }
+   ],
+   "note": "**The fifth card is deliberately thin on the product, and that is the split working.** *Why* this socket exists - the ride-through obligation that created it, the two adjacent rules sellers confuse, and what the box inline between grid and campus actually has to do - is the campus-side lesson's subject and is taught there in full. What belongs here is the procurement half only: who signs, on what clock, and against what test."
+  },
+  {
+   "id": "who-signs-the-po",
+   "title": "Who signs the PO",
+   "kind": "callout",
+   "tone": "info",
+   "read": "6 min",
+   "intro": "This track opened by promising you could name who signs the purchase order. Here is the answer in its shortest form: **five channels, three counterparties.** The public lesson on the regulated machine taught the lanes a decision travels through inside one utility. This is the question that comes before that one - *given the channel, whose signature is on the order, and when did it become too late to influence it?*",
+   "ps": [
+    "**The utility signs in two of the five.** On a self-build supply agreement it signs directly, specified through its engineering contractor. On a storage or all-source solicitation *that the self-build case wins*, it signs the same way and for the same reasons. In both, the sale actually happened at {{vendor qualification}} - months or years earlier, with no project attached to it. **The deadline in this lane is one nobody publishes.**",
+    "**A developer or {{IPP}} signs in two more.** On a solicitation a third party wins, and on every merchant project, the equipment decision belongs to whoever assembled the bid or the financing. The real deadline there is the **{{bid stage}}, not the award** - the bid prices the {{BOM}} and fixes it. In this lane the utility never chooses the cell and will only ever see it in technical review.",
+    "**The campus signs the fifth.** Behind-the-meter buffering is bought by the data-center developer or its power partner, on a compliance clock, through a procurement organisation with no docket and no evaluator anywhere in it. Nothing you learned about the other four transfers, except the bankability file.",
+    "**The two-lane motion, and the order of it matters.** Lane A is the design win at bid stage with the developer community, because that is where the bill of materials locks. Lane B is qualification with utilities and their {{EPC}} contractors, because that is where the door opens at all. The two run on different clocks - Lane A on solicitation dates you can look up, Lane B on a cycle you have to anticipate - and **a seller running only Lane A is invisible in the two channels where the utility signs.**",
+    "**One throughline under all five.** A {{minimum take}} world is a bankability world. A regulated buyer answers to a commission and to a consumer advocate, and its supplier diligence is built to survive that audience rather than to satisfy an engineer. **A product that cannot survive a {{prudence review}} is unsellable in these channels at any price** - which is what makes the safety file, the warranty arithmetic and a defensible supply chain part of the product rather than paperwork attached to it."
+   ],
+   "sales": "Ask which channel before you ask anything else, because the channel fixes both the signature and the deadline. **A solicitation gives you a bid date you can look up. A self-build gives you a qualification cycle nobody announces.** One of those you can plan around; the other you have to already be inside when it opens."
+  },
+  {
+   "id": "ercot-versus-regulated",
+   "title": "ERCOT against the regulated states",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The same box, sold twice, against two different scoring systems. The public lesson on the regulated machine explains *why* Texas is different - a wires-only utility with no generation to certify and a statute that keeps it out of storage. This table is the shorter thing to have in mind walking into a meeting: **what each market pays for, how fast it decides, and what it is scoring you on.**",
+   "cols": [
+    "",
+    "ERCOT merchant",
+    "Regulated states"
+   ],
+   "rows": [
+    [
+     "**Where the revenue comes from**",
+     "{{energy arbitrage}} and {{ancillary services}}, at whatever the market pays on the day. AI load is named in the revenue case because it widens the spread",
+     "{{rate base}} recovery, or a contract of ten to twenty years certified in a docket before a megawatt is built"
+    ],
+    [
+     "**What the contract is**",
+     "Merchant exposure, a hedge, or a {{tolling agreement}}. The developer carries the market risk and prices it",
+     "A commission-approved arrangement. In at least one state a {{shareholder backstop}} moved the demand risk onto investors rather than customers"
+    ],
+    [
+     "**How fast it moves**",
+     "Months to {{NTP}} - though statutory large-load conditions and a queue audit have added real friction on the load side",
+     "Two to four years from plan to certification, and then a single large order that is already financed"
+    ],
+    [
+     "**Which way the cycle points**",
+     "Saturating. Additions are decelerating and new queue entries fell by roughly half in the second half of 2025",
+     "Building. Statutory mandates, certified portfolios and first-ever solicitations are all still ahead of the market rather than behind it"
+    ],
+    [
+     "**What actually wins**",
+     "Cost, availability, and a credible {{augmentation}} plan over the life of the asset",
+     "Bankability: safety test data, code compliance, {{domestic content}} and a supply chain that survives a {{prudence review}}"
+    ]
+   ],
+   "note": "**The two columns are moving in opposite directions, and that is the planning point rather than a curiosity.** The merchant column is the larger *installed* fleet and the one whose growth is levelling off. The regulated column is where the already-authorised but still-unbuilt megawatts sit, and where the first cycles have not run yet. A pipeline weighted entirely to the first is a pipeline weighted to the half of the market that has already had its growth."
+  },
+  {
+   "id": "the-dated-gates",
+   "title": "The dated gates, as one calendar",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "A calendar, not a sequence. The public lesson on the regulated machine draws the *order* a purchase moves through in relative years; the campus-side lesson carries the **rule** dates that created the buffering obligation, and says in its own note that the procurement dates belong to this track. These are those dates. **The left column is the actual calendar year.** Three lanes: **tariffs and rate classes**, **certifications and orders**, and **solicitations opening**.",
+   "lanes": {
+    "gen": "Tariffs and rate classes",
+    "deploy": "Certifications and orders",
+    "eco": "Solicitations opening"
+   },
+   "items": [
+    {
+     "x": 2025.52,
+     "lane": "gen",
+     "label": "A data-center tariff class litigated to an order - 9 July 2025",
+     "sub": "The first of the large-load classes to be argued all the way to a commission order, and the source of the demand filter every later state copied. It is **still under appeal**, which is the standing reminder that an approved tariff is not a settled one - and that a seller quoting its terms as fixed is quoting a document that may move."
+    },
+    {
+     "x": 2025.9,
+     "lane": "gen",
+     "label": "A second large-load class ordered - 25 November 2025",
+     "sub": "{{minimum take}} at eighty-five per cent on delivery and sixty on generation, a fourteen-year term, exit fees. Ordered in November 2025 and **effective for new agreements only from 1 January 2027.** That gap of thirteen months is not administrative slack; it is the window in which the campuses that will sign under it are being designed."
+    },
+    {
+     "x": 2025.96,
+     "lane": "deploy",
+     "label": "The largest single certification order to date - 19 December 2025",
+     "sub": "Close to ten gigawatts of new capacity authorised at once, of which **about three gigawatts is utility-owned storage** and roughly 2,800 megawatts more is bought from third parties. **One order, and the battery seller's counterparty is different depending on which tranche the megawatts came out of** - which is the whole argument of this lesson compressed into a single docket number."
+    },
+    {
+     "x": 2026.12,
+     "lane": "eco",
+     "label": "Multi-state all-source solicitations issued - February 2026",
+     "sub": "Two affiliated utilities in one holding company opened solicitations totalling several gigawatts with standalone storage **explicitly eligible**. This is the practical reason a storage seller has to read solicitations that do not have the word storage in the title: the largest storage awards in this market have come out of exactly these."
+    },
+    {
+     "x": 2026.17,
+     "lane": "eco",
+     "label": "A first-ever standalone storage solicitation - 3 March 2026",
+     "sub": "Final documents from a utility with no storage history at all, scoped to a single market zone. **The least storage-mature buyer is the least crowded vendor field**, and a first cycle is the moment an {{approved vendor list}} position is cheapest to take - because the list is being written rather than defended."
+    },
+    {
+     "x": 2026.94,
+     "lane": "deploy",
+     "label": "Queue audit and repricing target - 10 December 2026",
+     "sub": "**The date this lesson expires on.** A very large interconnection queue is under audit and a batch of decisions is paused pending it. Until it resolves, every figure in this lesson that depends on that market is provisional, and that is why the review date here is this day rather than six months from writing."
+    },
+    {
+     "x": 2027.0,
+     "lane": "gen",
+     "label": "The second large-load class becomes effective - 1 January 2027",
+     "sub": "**The only future date on this line that is not conditional on anything.** The December target above it can slip; this one is written into an order already issued. It is also the template the drafts still in front of other commissions are being measured against - so it is the entry to read before reading any tariff that is still being written."
+    }
+   ],
+   "note": "**Two of these seven have not happened yet, and the gap between an order and its effect is where the selling is.** A class ordered in November 2025 binds no new agreement until January 2027. A solicitation issued in February closes months later and awards months after that. A certified portfolio has construction dates years out. **An order date tells you the money is authorised; an effective or closing date tells you when you were already too late.** Those are two different diary entries and a pipeline that records only the first will keep arriving on time for the wrong deadline."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "The four moves look like four separate policies. What single question are they four answers to?",
+     "a": "*How do we find the demand that is real, and make somebody other than the existing ratepayer carry the cost of the rest?* The {{large-load tariff}} puts that risk on the customer who signs; a customer-funded plant puts it on the customer who funded it; a {{shareholder backstop}} puts it on investors; {{curtailment}} puts it on the load itself. Read that way, the playbook is a risk-transfer strategy that buys equipment on the way past."
+    },
+    {
+     "q": "Five channels, but how many counterparties - and which is which?",
+     "a": "**Three.** The utility signs two of them: a self-build supply agreement, and a solicitation its own self-build case wins. A developer or {{IPP}} signs two more: a solicitation a third party wins, and any merchant project. The campus signs the fifth, for buffering behind its own meter. Naming the channel names the signature."
+    },
+    {
+     "q": "Which of the four moves is not a purchase at all, and why does it still matter more than most sales forecasts?",
+     "a": "The {{large-load tariff}}. It purchases nothing - its function is to **qualify the demand the other three moves are then sized against.** That makes a tariff order a leading indicator: the certified procurement that follows is sized on the load that survived the tariff's terms, not on the load that was announced before them."
+    },
+    {
+     "q": "In a solicitation won by a developer, when is the equipment decision actually made?",
+     "a": "At {{bid stage}}, not at award. Assembling the bid is what prices and fixes the {{BOM}}, so by the time the award is public the choice is contractual. A seller who engages on the award date is quoting against a decision taken months earlier - which is why the solicitation's **bid** date, not its award date, is the one that belongs in a diary."
+    },
+    {
+     "q": "Why is a utility's first-ever storage solicitation worth more attention than its fifth?",
+     "a": "Because the {{approved vendor list}} is being written rather than defended. The least storage-mature buyer has the least crowded vendor field, no incumbent with a delivery record to point at, and a {{vendor qualification}} process that has not yet hardened around whoever won last time. A first cycle is where a position is cheapest to take."
+    },
+    {
+     "q": "A colleague reports that the merchant market is where the growth is. What is the correction?",
+     "a": "It is where the growth *was*. The merchant column is the larger installed fleet and the decelerating one - additions slowing, new queue entries roughly halved in the second half of 2025, and the {{ancillary services}} revenues it grew up on saturated. The regulated column is smaller today but holds the authorised-and-unbuilt megawatts: mandates, certified portfolios and first cycles still to run. **Weighting a pipeline entirely to the merchant side is weighting it to the half that has already had its growth.**"
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A utility issues an all-source solicitation and a battery clears it. What does that tell you about who your customer is?",
+     "c": [
+      "The utility, since it ran the solicitation and will own the resulting asset",
+      "Nothing on its own - the winner chooses the equipment, and the winner may be the utility's own self-build case or a third-party developer",
+      "The independent evaluator, who scores the equipment before the bids are ranked",
+      "The commission, which certifies the specific equipment choice as part of its order"
+     ],
+     "a": 1,
+     "why": "This is the trap inside the all-source channel. Clearing the solicitation tells you the *technology* won; it does not tell you whose signature ends up on the order. If the utility's self-build case won, the utility buys directly through its {{EPC}} and its {{approved vendor list}}. If a developer won, that developer chose the equipment at {{bid stage}} and the utility will never see the cell brand outside technical review. **Same result on the docket, two completely different customers.**"
+    },
+    {
+     "q": "A large-load tariff class is ordered in November 2025 but takes effect for new agreements only in January 2027. What follows from that gap?",
+     "c": [
+      "Nothing much - the obligation attaches on the order date, so the effective date is administrative",
+      "Existing customers have to be re-signed onto the new class before it takes effect",
+      "The tariff's terms cannot be relied on in a bid until the effective date passes",
+      "The campuses that will sign under those terms are being designed during the gap, which is when the equipment inside them is chosen"
+     ],
+     "a": 3,
+     "why": "Thirteen months is not administrative slack. A campus signing in early 2027 is being engineered now, and its electrical design - including whether it carries storage and how much - is being fixed while the class sits ordered but not yet binding. **An order date says the money and the rules are settled. The effective date says when the customers arrive.** A diary that records only the first arrives on time for the wrong deadline."
+    },
+    {
+     "q": "Which of the five channels is created by none of the four moves in the playbook?",
+     "c": [
+      "ERCOT merchant - that market predated AI load and would exist without it",
+      "Ride-through buffering at the campus, since compliance is not a procurement move",
+      "Utility self-build supply agreements, which sit outside the solicitation process entirely",
+      "Storage-specific solicitations, which come from statutory mandates rather than from the playbook"
+     ],
+     "a": 0,
+     "why": "The merchant channel is the one the playbook did not make. What AI load changed there is the *price shape* the fleet earns on, not the existence of the market or the way it buys. Buffering does come from move four; self-build and storage-specific solicitations both come from move three. **Knowing which channel the playbook did not create is knowing which one a change in regulatory strategy will not move.**"
+    },
+    {
+     "q": "You hold no utility vendor qualification anywhere, and you engage a utility on the day its storage solicitation opens. What have you already lost, and what is still reachable?",
+     "c": [
+      "Nothing is lost - the solicitation is public and open to every bidder on equal terms",
+      "Everything - a solicitation cannot be bid at all without an approved vendor position",
+      "The self-build outcome is gone, because that decision ran on a qualification cycle that closed before the solicitation opened; the developer-bid outcome is still reachable",
+      "Only the merchant channel remains, because every utility-facing channel requires a certification order first"
+     ],
+     "a": 2,
+     "why": "A solicitation has two possible outcomes and you are in only one of them. If the utility's own self-build case wins, it buys through its {{EPC}} and its {{approved vendor list}} - a process with no project attached, no deadline to accommodate you, and a close date months or years before this one. If a developer wins, that developer chooses the equipment at {{bid stage}}, and a developer is under no obligation to use anybody's vendor list. **You are late, not excluded - but in only one of the two branches.**"
+    },
+    {
+     "q": "Why does a regulated buyer's supplier diligence run deeper than an engineer's technical review?",
+     "c": [
+      "Because regulated utilities are legally required to buy domestically and must audit every component's origin",
+      "Because the independent evaluator rather than the utility sets the technical acceptance criteria",
+      "Because a storage purchase in a regulated market is simply larger than one in a merchant market",
+      "Because the utility must defend the choice in a prudence review before a commission and a consumer advocate, so the diligence is built for that audience"
+     ],
+     "a": 3,
+     "why": "The audience is the answer. A merchant buyer answers to its own investment committee and can accept a risk it has priced. A regulated buyer has to persuade a commission, with intervenors arguing the other way, that the choice was prudent at the time it was made - which means the file has to survive people whose job is to find the hole in it. **That is why the safety data, the warranty arithmetic and the supply-chain story are the product in these channels, rather than documents attached to it.**"
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -44249,7 +44746,8 @@ function clLessons_() {
           clLessonWhereTheChainBreaks_(),
           clLessonTheCoolingPlantAndWater_(),
           clLessonHowACellIsMade_(),
-          clLessonDcFaultEngineering_()];
+          clLessonDcFaultEngineering_(),
+          clLessonUtilityProcurementMeetsAiLoad_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 51/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.64g] — 2026-09-17 04:12:42 AM EST — v06.38r
+
+### Added
+
+- A new advanced lesson has been added to the market-access track, and it completes that track's published sequence. It is about how a regulated electricity company decides what to buy when very large new customers arrive: the four responses those companies have converged on and the single question all four answer, the five different routes through which storage equipment reaches them, who actually signs the purchase order on each of those routes and when that decision becomes fixed, how a competitive market and a regulated one score the same equipment differently, and a calendar of the dated decisions a seller has to plan around. The lesson requires a higher access level than most of the curriculum, so readers below that level see it only as a count of withheld material inside its track — the first time that count has appeared in this particular track
+
+### Changed
+
+- Minor internal improvements
 
 ## [v01.63g] — 2026-09-17 03:05:03 AM EST — v06.36r
 

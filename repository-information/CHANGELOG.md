@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.38r] — 2026-09-17 04:12:42 AM EST
+
+> Author Phase 4 row 21 — the utility-procurement-meets-ai-load lesson — on Opus 5 xhigh as a fresh session. This is ONE mechanism lesson. It authors no guidance module, no landscape, no dossier and no report, and it creates no track. [...] Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`clLessonUtilityProcurementMeetsAiLoad_()`** — the **fifty-first** lesson, id `utility-procurement-meets-ai-load`, title *The Gatekeeper*, group Market Access & Bankability, authored **inside** the `// CONTENT START … // CONTENT END` fence, registered at the **end** of `clLessons_()` and **APPENDED** to `clTrackMarketAccess_()` (whose `updated` moved to 2026-09-17). Curriculum plan §7 row 21; the **second gated lesson Phase 4 has authored** and the first guidance lesson `market-access` has ever carried
+- **Eight sections at §3.5's ids and order** — `the-gatekeeper` (prose) · `the-four-moves` (table, 4×4) · `five-channels` (**proscons**, 5 cards) · `who-signs-the-po` (callout, 5 ¶ + `sales`) · `ercot-versus-regulated` (table, 3×5) · `the-dated-gates` (**timeline**, 3 lanes / 7 items) · `drill` (6 cards) · `check-yourself` (5 items at indices **1·3·0·2·3**). Four tiles, a **seven-entry** glossary with **every entry used**, 28 distinct `{{term}}` uses all resolvable. **The literal is 100 % ASCII**
+- **Eight stamps, every pin read off the document fetched this run (G2)** — `guidance:utility-aidc-procurement-2026-08@2026-08-24` (the module's own `updated`) · `study:dominion-energy@2026-09-03` · `study:southern-company@2026-09-03` · `study:entergy@2026-09-03` · `study:aep@2026-09-03` · `study:oncor@2026-09-03` · `study:xcel-energy@2026-09-03` (each guide's own `lastUpdated`, not the registry's) · `concepts:profiler-concepts@2026-09-13` (`git log` on the deepened clone). One `guidance:` ref, so `clGateForProvenance_()` returns `guidance` and no field says so
+
+### Changed
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§7 row 21 marked built** with the full record; **§4's `market-access` table at position 9** updated to `built` with the append rationale (4 → 5 built of nine)
+- **§8 item 10's standing check corrected.** It read *"never sees `dc-fault-engineering`, `where-bess-plugs-in` or the four guidance market lessons"* — written at S0 against a **planned** track. **None of those four exist**: `the-certification-stack`, `what-bankable-means` and `the-china-policy-stack` are §7 rows 22–24 and register **zero times**, and `reading-the-numbers` is public. The sentence now names the four gated lessons that actually exist
+- **§10.6 findings `(jj1)`–`(jj6)`** written
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.3's Phase 4 row and §6's Phase 4 row flipped to 21 of 26**, each with the row-21 record
+- **§7.49 written in BOTH halves** — the brief for **S2 session 17, `software-and-optimization`**, whose order is settled for the first time since §7.45 by the v05.62r record fixing `insurance-and-risk-transfer` and `assurance` as 18th and 19th of 19
+
+#### Version and counter files
+- `repository.version.txt` **v06.37r → v06.38r**; `Classroom.gs` `VERSION` and `Classroomgs.version.txt` **v01.63g → v01.64g**; `Classroomgs.changelog.md` **`Sections: 50/50` → `51/50`** with a generic entry naming no company and no gated subject per `changelog-security.md`; this file **`105/100` → `106/100`**. **No rotation fired** — the EST day had not rolled, so nine same-day sections here and five there stay exempt and the non-exempt counts hold at **97 against 100** and **46 against 50**
+
+### Fixed
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **The brief's denial arithmetic, caught by measurement.** §7.48 stated in both halves that `market-access` "already carries three gated lessons" and that the analyst `withheld` count would move **3 → 4**. Measured base against head through the real `handleClassroomOp_`, it moves **0 → 1** — the same as row 20's. The brief's "the analyst index stays at 50 of 51" was wrong on both numbers: **the analyst index holds at 47** while the corpus goes 50 → 51
+- **Ten authoring defects caught before the commit, in two distinct passes.** Six by a recount pass the simulations cannot perform (among them a field note welding **two different moves** into one sentence, and a timeline note claiming three future dates where the items give two); four more by reading every section's screenshot, for an **eleventh** consecutive session — including a table `note` calling a move a non-purchase when its own row 2 is gas *procurement*, and a timeline item calling itself *"the one date on this line that has not happened"* directly above a note saying **two** have
 
 ## [v06.37r] — 2026-09-17 03:17:33 AM EST
 
