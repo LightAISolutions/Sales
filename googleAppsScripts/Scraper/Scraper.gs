@@ -1,4 +1,4 @@
-var VERSION = "v02.16g";
+var VERSION = "v02.17g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1253,7 +1253,76 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'waterside economizer', 'dry cooler', 'cold plate', 'liquid-to-air',
             'AIM Act', 'low-GWP', 'factory witness test',
             'building management system'],
-    source: 'guidance:landscape-cooling-2026-09' }
+    source: 'guidance:landscape-cooling-2026-09' },
+  // S2 session 16, the compute-and-the-rack landscape. ADDED - and the gap is
+  // not a residue. It is the SAME ASYMMETRY the module is about, reproduced
+  // inside this roster. Denominator re-counted from this file per 10.6 (bb5):
+  // SCRAPER_INTEREST_TOPIC_SEEDS (41 seeds, 270 terms) AND SCRAPER_SEGMENT_SEEDS
+  // (29 lenses, 249 terms) - 519 raw, 494 distinct, which reconciles exactly
+  // (267 + 227 = 494) and with session 15's 482 plus its twelve.
+  // A LABEL-LEVEL GLANCE SAYS COVERED AND IS WRONG, which is (gg9) again. Two
+  // lenses look like this segment: seg-gpu-silicon holds 'gpu', 'accelerator',
+  // 'blackwell', 'rubin', 'hbm', 'tpu', 'ai chip', 'xpu', 'nvlink', and
+  // seg-rack-power holds the busway and PDU nouns. Score the segment's actual
+  // MARKET vocabulary and it is a rout: 'odm', 'odm direct', 'white box',
+  // 'contract manufacturer', 'server oem', 'rack oem', 'server market share',
+  // 'rack-scale', 'reference architecture', 'performance per watt', 'open
+  // compute project', 'ocp', 'kyber', 'instinct', 'helios', 'rocm', 'cuda',
+  // 'epyc' and 'mi355x' ALL SCORE ZERO.
+  // AND THE ZEROES ARE NOT RANDOM - THE ROSTER IS BIASED IN THE SAME DIRECTION
+  // AS THE MARKET IT OBSERVES. The incumbent's roadmap is seeded exactly
+  // ('blackwell', 'rubin', 'nvlink'); the challenger's is entirely absent
+  // ('instinct', 'helios', 'rocm', 'epyc' all zero). A digest scored on this
+  // set bands NVIDIA's product news and is blind to AMD's, on a segment whose
+  // registry typed AMD a challenger on measured evidence - so the scraper
+  // would keep confirming the incumbency it exists to help measure. That is a
+  // class beyond (gg9)'s half-seeded metric pair: not a missing half of one
+  // pair, but a systematic tilt across a roster, and it is the sharpest reason
+  // yet that the audit must run at TERM level. Three of the twelve below exist
+  // to correct it directly, and 'CUDA' and 'ROCm' are taken TOGETHER on
+  // purpose - seeding one without the other is (gg9)'s half-seeded pair.
+  // DROPS, eight, each with its ground, in full in section 11 of the analysis
+  // file. 'ODM Direct' as a NEAR-DUPLICATE of the taken 'ODM', which catches it
+  // - and on ROSTER CONSISTENCY, session 15's ground: this roster seeds this
+  // shape bare ('psu', 'bbu', 'tpu', 'xpu', 'ors'). 'white box' as the same
+  // channel one layer of jargon down, which would band one story twice.
+  // 'Vera Rubin' on roster consistency against the held 'rubin'. 'EPYC' as the
+  // WRONG MARKET - it names the socket where that member is an incumbent
+  // co-leader at 34.5 per cent of x86 server units, not the accelerator where
+  // it is the challenger, and this segment is defined as the rack and its
+  // power ask. 'MI355X' as a part number inside 'Instinct', which churns every
+  // generation where the line name does not. 'qualified vendor' because
+  // 'pre-qualified vendor' is already held and contains it. 'allocation' as
+  // generic and partially held ('cost allocation'), its narrowing form 'GPU
+  // allocation' double-counting the held 'gpu'. 'NVL72' as a rack part number
+  // contained by 'rack-scale' and adjacent to 'nvlink'.
+  // THE SHORTFALL, unchanged and still the developer's: counted as QUOTED key:
+  // literals, this file held EIGHT topic-landscape-* seeds against FIFTEEN
+  // built landscapes before this session. This takes it to nine against
+  // sixteen, so the shortfall stays at seven. An S2 session may only add its
+  // own segment's seed, so the backlog cannot be cleared from inside the lane.
+  // BOTH STANDING RESERVATION DEBTS re-checked against all 494 and both still
+  // open: 'restart' scores zero for a NINTH consecutive session and remains
+  // topic-landscape-clean-firm-and-nuclear's word for that module's next
+  // revision; and session 12's six terms assigned on split grounds to
+  // topic-aidc-landlords - 'tenant of record', 'credit backstop', 'recognition
+  // agreement', 'bankruptcy-remote', 'triple-net lease', 'penny warrant' - are
+  // still in no seed and still score zero, a FIFTH consecutive session
+  // confirming that a term ASSIGNED to another seed's territory is not a term
+  // SEEDED there. topic-aidc-landlords has not been edited since session 6.
+  // Session 11 reserved 'Trainium' and 'custom silicon' for THIS seed by name
+  // and both are LEFT: they name a hyperscaler's in-house programme, and no
+  // in-house silicon programme is a member of this segment - the registry's
+  // own notes record that no ASIC programme is covered.
+  // New key, no sheet row, so no `tv` marker applies and no existing seed's
+  // terms array was edited. No outlet was added to SCRAPER_SOURCE_ROSTER.
+  { key: 'topic-landscape-compute-and-the-rack',
+    label: 'Compute and the rack: the architecture author, the merchant second source and the channel that undercuts both',
+    terms: ['ODM', 'contract manufacturer', 'server OEM', 'rack-scale',
+            'Instinct', 'Helios', 'ROCm', 'CUDA', 'Kyber',
+            'Open Compute Project', 'performance per watt',
+            'reference architecture'],
+    source: 'guidance:landscape-compute-and-the-rack-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.63g] — 2026-09-17 03:05:03 AM EST — v06.36r
+
+### Added
+
+- A new module has been added to the Industry Guidance library, in the value-chain section. It covers the part of the chain where the computing equipment itself sits, and it opens by saying plainly how much of that market the library can actually see: the only independent ranking available for it names four organisations and only one of them has a company record here. The module explains what leadership in this part of the chain actually rests on, why the two challengers are challenging quite different things and should not be read as one group, how unusually interconnected the small group of covered organisations is, and which questions the record simply cannot answer. It requires a higher access level than the public curriculum, so readers below that level do not see it
+
+### Changed
+
+- One of the generated value-chain lessons has been refreshed: it now points readers to the new guidance module, and a topic it previously described as not yet taught is now shown with the lesson that teaches it
+- Minor internal improvements
 
 ## [v01.62g] — 2026-09-17 01:55:40 AM EST — v06.34r
 

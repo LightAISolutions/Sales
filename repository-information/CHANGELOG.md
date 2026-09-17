@@ -3,11 +3,55 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.36r] — 2026-09-17 03:05:03 AM EST
+
+> Author S2 session 16 — the compute-and-the-rack landscape module — on Opus 5 xhigh as a fresh session. This is ONE guidance module. It authors no mechanism lesson, no dossier and no report, and it creates no track. […] THE WORK — one push commit. (1) Write repository-information/industry-guidance/landscape-compute-and-the-rack-analysis.md, the source of truth, with the coverage-boundary section drafted BEFORE any other section. (2) Author guidanceDocLandscapeComputeAndTheRack_() BELOW the // CONTENT END fence in Classroom.gs, id landscape-compute-and-the-rack-2026-09, lane The Value Chain, tier contributor, nine sections at §10.6's ids and order, and register it at the END of guidanceDocs_()'s Value Chain lane. (3) EDIT THE MODULE ASSERTION IN scripts/check-classroom-content.py FROM 24 TO 25 IN THE SAME COMMIT. (4) Seed topic-landscape-compute-and-the-rack in Scraper.gs, every term scored against both arrays first. (5) Regenerate exactly one segment — yours. (6) Flip §7.3's S2 row, §6's S2 row and §10.6's progress note to 16 of ~19, strike compute from the remaining list, and write the findings block — the (hh…) label is spent; continue at (ii1). (7) Write §7.48 — the next run's brief, which by the interleave is Phase 4 row 21 — in the same commit. […] FOUR MEMBERS IS THE SMALLEST ROSTER S2 HAS COVERED AND THE COVERAGE BOUNDARY IS THE MODULE'S OPENING PROBLEM, NOT A FOOTNOTE. […] PREDICT THE --check NUMBER BEFORE YOU WRITE. […] reviewBy — SORT, DO NOT INVENT, AND WRITE EVERY REJECTION DOWN. […] Then READ EVERY SECTION'S SCREENSHOT. […] Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeComputeAndTheRack_()`** (`landscape-compute-and-the-rack-2026-09`, lane **The Value Chain**, tier **contributor**) — the **twenty-fifth** guidance module and the **sixteenth** landscape, authored **below** the `// CONTENT END` fence and registered at the **end** of `guidanceDocs_()`'s Value Chain lane. Nine sections at §10.6's ids and order, four tiles, an **eight-entry glossary with every entry used**, a **35-row** claims ledger, 13 drill cards and 7 quiz items with answer indices **3, 1, 2, 0, 3, 1, 2**. **The literal is 100 % ASCII**, so the rendered DOM's only non-ASCII characters are the page's own `·`, `—` and back-arrow. `updated` 2026-09-17, `reviewBy` **2027-03-17**
+- **A header comment recording the row's findings** — the covered fraction of the segment's only ranking, the two vocabulary collisions, the edge density against the single competitor typing, the upstream-only memberships, the empty policy fence and the provenance rejection, and the ASCII discipline
+
+#### `googleAppsScripts/Scraper/Scraper.gs`
+- **Interest seed `topic-landscape-compute-and-the-rack`**, twelve terms, sourced to the new module. Scored against **all 494 distinct terms** across both seed arrays before any term was taken, with **eight drops each carrying its ground** recorded in the seed's own comment
+
+#### `repository-information/industry-guidance/`
+- **`landscape-compute-and-the-rack-analysis.md`** — the module's source of truth, twelve sections, with the coverage boundary drafted before any other section
+
+### Changed
+
+#### `scripts/check-classroom-content.py`
+- **The guidance-module assertion moved 24 → 25**, in the same commit that registers the twenty-fifth module
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`clLessonSegmentComputeAndTheRack_()` regenerated** by `build-classroom-segments.py --segment compute-and-the-rack --today 2026-09-17` — `changed: read-next, what-is-bought-and-on-what; no pin moved`. Its `read-next` now names the landscape module, and its criterion table stops rendering a built lesson as `(planned)`
+- Classroom GAS version **v01.62g → v01.63g**; Scraper **v02.16g → v02.17g**
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§6's S2 row and §7.3's S2 row flipped to 16 of ~19** with `compute` struck from the remaining list, and **§7.3's order-table row 5 corrected from 14 done to 16** — it was **two sessions stale**, which is the exact failure that row's own note warns about
+- **§7.48 written in both halves** — the brief for **Phase 4 row 21, `utility-procurement-meets-ai-load`**, which carries a derived `--check` forecast of **5 → 7** and the corrected render-harness shim shape
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§10.6's progress note flipped to 16 of 19** and the findings block **(ii1)–(ii10)** written
+
+#### `README.md`
+- `Last updated:` timestamp, `Repo version:`, and the two GAS version displays in the structure tree
+
+### Notes
+
+- **The coverage boundary is the module's opening section because it is the segment's only ranking.** The one named independent series is IDC's worldwide server revenue share, naming **ODM Direct 50.2 %, Dell 16.5, Supermicro 7.6 and HPE 3.0** — **one of the four carries a dossier**, 7.6 of the 77.3 points named. Every figure is read out of the one covered member's own file
+- **The gap is visible in the curriculum's own vocabulary.** `Dell` appears ten times in `Classroom.gs` and **nine are `Dell'Oro`**, the research firm; `Quanta` appears **forty-two times and all forty-two are `Quanta Services`**, the covered EPC contractor
+- **`--check` 6 → 5, derived from the parsed generator and recorded before the run.** The segment was already due for a reason unrelated to this module — a built lesson still rendering as `(planned)`, the ninth segment on that pattern
+- **`reviewBy` took the six-month default, only the second landscape of sixteen to do so.** Nineteen `policyExposure` entries, ten dated, **none in the future**; seven rejections written down, including a date rejected on **provenance** because it lives only inside a `sources[]` label
+- **No rotation on this push.** `CHANGELOG.md` at **104 raw / 97 non-exempt** against a 100 trigger with **seven** sections dated 2026-09-17 EST; `Classroomgs.changelog.md` **50 / 46** against a cap of 50; `Scrapergs.changelog.md` **38 / 36**. **A push landing on 18 September or later is the rotator on both of the first two**
+- **The screenshots caught SEVEN defects for a tenth consecutive session**, every checker having passed 0/0 first and all six pre-splice simulations clean. Five were the prose contradicting the content beside it
 
 ## [v06.35r] — 2026-09-17 02:06:47 AM EST
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.62g";
+var VERSION = "v01.63g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -19714,8 +19714,8 @@ function clLessonSegmentComputeAndTheRack_() {
  "title": "Compute and the rack",
  "short": "The compute that sits in the rack and defines the power ask — the GPU, the rack-scale system it ships as, and the system integrators that build it — the load…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-03-17",
  "provenance": {
   "inputs": [
    {
@@ -19839,15 +19839,15 @@ function clLessonSegmentComputeAndTheRack_() {
    "rows": [
     [
      "Performance per watt and per dollar across a generation",
-     "*The Last Ten Metres* (planned)"
+     "*The Last Ten Metres*"
     ],
     [
      "Allocation and delivery against a sold-out roadmap",
-     "*The Last Ten Metres* (planned)"
+     "*The Last Ten Metres*"
     ],
     [
      "Rack density (kW) and the NVLink domain the rack forms",
-     "*Heat Is the Constraint* · *The Last Ten Metres* (planned)"
+     "*Heat Is the Constraint* · *The Last Ten Metres*"
     ],
     [
      "Reference architecture and the qualified power and cooling vendor set",
@@ -20482,8 +20482,8 @@ function clLessonSegmentComputeAndTheRack_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Last Ten Metres* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *Heat Is the Constraint*.",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *The Last Ten Metres* · *The 800 VDC Shift: Convert Once, Early, High* · *Heat Is the Constraint*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-compute-and-the-rack-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** NVIDIA, AMD, Supermicro, Flex — each member's dossier carries one in Profiler."
    ]
   },
@@ -20563,6 +20563,14 @@ function clLessonSegmentComputeAndTheRack_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -45314,7 +45322,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeNeoclouds_(),
           guidanceDocLandscapeCapital_(),
           guidanceDocLandscapeEpcAndConstruction_(),
-          guidanceDocLandscapeCooling_()];
+          guidanceDocLandscapeCooling_(),
+          guidanceDocLandscapeComputeAndTheRack_()];
 }
 
 function guidanceIndex_() {
@@ -61289,6 +61298,603 @@ function guidanceDocLandscapeCooling_() {
      ],
      "a": 2,
      "why": "A landlord on this roster framed a 31 MW / 62 MWh battery as an interconnection accelerator in October 2025 alongside a 540 MW self-funded campus — a storage purchase made for a power reason, by a company whose cooling platform is its own. Separately the most-ranked incumbent sells a 1 MW to 200-plus MW utility-grade product through its data-centre relationships, which its own file reads as a lane-crossing move worth tracking for every storage vendor, and another member sells a 1.5 MW / 3.1 MWh system as site infrastructure. What does not work is pitching thermal management as a differentiator to eleven firms that sell it for a living."
+    }
+   ]
+  }
+ ]
+};
+}
+
+// SIXTEENTH LANDSCAPE, TWENTY-FIFTH GUIDANCE MODULE - compute-and-the-rack,
+// S2 session 16. Authored BELOW the CONTENT END fence because guidance is
+// authored by a named session and never by the unattended C2 pipeline
+// (CLASSROOM-COMMITTER-CONTRACT.md 3). Spec: CLASSROOM-CURRICULUM-PLAN.md
+// 10.6, nine section ids in the order fixed there. Brief: 7.47.
+//
+// FOUR MEMBERS - EXACTLY THE FLOOR, AND THE SMALLEST ROSTER S2 HAS COVERED.
+// NVIDIA incumbent, AMD and Supermicro challengers, Flex adjacent, against
+// cooling's eleven. Both challenger typings re-tested against the dossiers on
+// the day and both hold on the evidence the registry recorded.
+//
+// THE COVERAGE BOUNDARY IS THE OPENING PROBLEM, NOT A FOOTNOTE, AND IT IS A
+// MEASUREMENT. The only named independent series this segment has is IDC's
+// worldwide server revenue share, and it names FOUR parties of which the
+// corpus covers ONE - ODM Direct 50.2 per cent, Dell 16.5, Supermicro 7.6,
+// HPE 3.0. That is 7.6 of the 77.3 points named, 9.8 per cent of the ranking.
+// Every figure is read out of the one covered member's own file, so the
+// segment's own member is the source for the fact that the segment is mostly
+// uncovered. The registry's notes field has said so since 2026-09-08.
+//
+// AND THE GAP HAS TWO HOMONYMS SITTING IN IT. A reverse sweep of this file
+// for the module's own material returned empty on ODM, Foxconn, Wiwynn,
+// Sanmina, Wistron, Inventec, HPE, rack OEM and contract manufacturer - and
+// found two collisions instead. Dell appears ten times and NINE are Dell'Oro,
+// the research firm; the single reference to the company is a share figure in
+// a generated player table that no prose explains. Quanta appears forty-two
+// times and ALL forty-two are Quanta Services, the covered EPC contractor -
+// Quanta Computer, the ODM, appears zero times. Session 15's (hh3) collision
+// class, fired twice, pointing at the coverage boundary.
+//
+// FIVE OF SIX POSSIBLE PAIRS AND ONE COMPETITOR TYPING. Four members give six
+// possible pairs; the graph carries five, the densest ratio any landscape in
+// this lane has measured, with seven curated typings of which exactly ONE
+// reads competitor. This is a supply chain with a single rivalry in it. The
+// one missing pair is Flex and Supermicro - the two members that both build
+// racks to designs somebody else owns, the two most alike, and the only pair
+// the corpus does not connect at all.
+//
+// EVERY EXTERNAL MEMBERSHIP POINTS UPSTREAM - the segment is a terminus.
+// Six memberships at chain positions 3, 4, 5 and 8 against this segment's 9,
+// and NOT ONE member appears in any of the ten segments downstream. Four of
+// the six invert and the direction sorts perfectly: nothing ranked incumbent
+// or challenger here ranks higher elsewhere in two chances, and the adjacent
+// member ranks lower nowhere in four - 10.6 (aa2) and (ee3) firing together
+// for the SECOND time, after session 15's (gg4), and complete rather than
+// merely dominant this time.
+//
+// reviewBy 2027-03-17 - the six-month default, only the SECOND landscape of
+// sixteen to take it. Nineteen policyExposure entries across four members,
+// ten dated, and NOT ONE in the future: the sort returns the empty set and the
+// empty set is total. SEVEN rejections in writing in section 10 of the
+// analysis file, including 2026-11-10 - the one future day-level date inside
+// six months anywhere in the segment, rejected on PROVENANCE because it lives
+// only inside a sources[] label and the dossier never analyses it. An
+// ISO-date scan finds none of the four future dates this segment carries;
+// all four are written in words.
+//
+// The bets table carries FOUR rows, which for once is 10.6's own shape rather
+// than a decision - session 15's (gg8) added rows to an eleven-member roster
+// and this roster IS the floor. Quiz answer indices 3, 1, 2, 0, 3, 1, 2 per
+// (ff4). The literal is 100 per cent ASCII per (hh7).
+// ==============
+function guidanceDocLandscapeComputeAndTheRack_() {
+  return {
+ "id": "landscape-compute-and-the-rack-2026-09",
+ "group": "The Value Chain",
+ "title": "Compute and the Rack - the Landscape",
+ "short": "Four members, exactly the floor, and the only independent ranking the segment has names four parties of which the corpus covers one. A supply chain with a single rivalry in it, sitting at the end of the chain and facing backwards.",
+ "source": {
+  "doc": "Corpus synthesis over the 4 member dossiers of the compute-and-the-rack segment, at the profile versions in the claims ledger - no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance - landscape module",
+  "repo": "repository-information/industry-guidance/landscape-compute-and-the-rack-analysis.md"
+ },
+ "updated": "2026-09-17",
+ "reviewBy": "2027-03-17",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "1 of 4",
+   "v": "parties in the only ranking that carry a dossier",
+   "sub": "The single named independent series this segment has is IDC's worldwide server revenue share. It names ODM Direct at 50.2 per cent, Dell at 16.5, Supermicro at 7.6 and HPE at 3.0. Only Supermicro is covered here - 7.6 points of the 77.3 the series names, or 9.8 per cent of it"
+  },
+  {
+   "k": "5 of 6",
+   "v": "possible pairs the graph connects",
+   "sub": "Four members give six possible pairs and five of them carry an edge, the densest roster S2 has measured. Only one of the seven curated typings across those five reads competitor. This is a supply chain with a single rivalry in it, not a field of four rivals"
+  },
+  {
+   "k": "6 of 6",
+   "v": "external memberships that point upstream",
+   "sub": "Three members belong to another segment, across six memberships at chain positions 3, 4, 5 and 8 against this segment's 9. Not one member appears in any of the ten segments downstream. The load faces backwards into the chain it consumes"
+  },
+  {
+   "k": "0 of 19",
+   "v": "policy entries with a future date",
+   "sub": "Nineteen policy exposure entries across the four members, ten of them dated, and not one in the future. The first landscape whose fence has no forward date at all, so the review clock falls back to the six-month default"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held. One carries it here, and its basis is not a share of anything: it is that the company's architecture decisions create the market every upstream segment sells into."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member contesting the established set. Two carry it here and they are contesting different things - one the accelerator silicon, one the assembled rack - so averaging them into a single bench misprices both."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member that sells into a segment without being ranked in it. One carries it here, and it is a challenger in two other segments and about to separate the business that puts it in this one."
+  },
+  {
+   "t": "ODM Direct",
+   "d": "The market-tracker category for original design manufacturers selling servers straight to hyperscalers rather than through a branded OEM, at roughly 2 to 3 per cent margins. It passed half the worldwide server market and no member of it is covered in this corpus."
+  },
+  {
+   "t": "rack-scale system",
+   "d": "A whole rack sold as one product - dozens of accelerators, their CPUs, the interconnect fabric and the liquid cooling, integrated and factory-tested. The unit of competition in this segment moved here from the individual chip, which is why the power ask moved with it."
+  },
+  {
+   "t": "reference architecture",
+   "d": "A chip vendor's published design for the system around its silicon: the rack, the power feed, the cooling and the network. Whoever writes it decides what every supplier to that rack must build, whether or not the author sells any of it."
+  },
+  {
+   "t": "qualified vendor slate",
+   "d": "The named list of suppliers a platform owner publishes for a layer of its architecture. In this segment exactly one member publishes one, and appearing on it is a product decision rather than a commercial negotiation."
+  },
+  {
+   "t": "merchant second source",
+   "d": "A supplier that sells the same class of part as the dominant vendor, to anyone, so that a buyer is not single-sourced. The role one challenger here occupies in accelerators - and the reason its share is small and its strategic weight is not."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with what this segment does not have, because everything else depends on it: nobody ranks it.** The previous landscape in this lane had three named independent rankings of itself and the interesting work was reconciling them. Search these four dossiers for a named, dated, quantified ranking of AI accelerators and what comes back is two ranges in two different files, sourced between them to nothing more specific than IDC-cited estimates and independent estimates - and they disagree with each other.",
+    "**NVIDIA's own file puts it at about 80 to 85 per cent of AI-accelerator revenue, per IDC-cited estimates, and marks the familiar 92 per cent explicitly as a 2023 figure. AMD's file puts the same company at 75 to 92 per cent**, against its own estimated 5 to 10, and adds that no named tier-one house publishes the split at all. One number is a dated point estimate; the other is a range wide enough to contain three years of history. **The registry took the second when it typed AMD.**",
+    "**Publish the disagreement, because it changes what a seller may say out loud without changing the typing.** Five to ten against eighty to eighty-five is exactly as decisive as five to ten against seventy-five to ninety-two, so the {{challenger}} role survives either way. What does not survive is quoting the wide range as a current measurement: cite 75 to 92 and you have cited an artefact that still contains a peak from three years ago. The narrower figure is at least dated and at least attributed to a tracker.",
+    "**The one named independent series this segment does have measures the wrong market and ranks mostly uncovered parties.** IDC's worldwide server revenue share for 1Q26 reads **{{ODM Direct}} 50.2 per cent, Dell 16.5, Supermicro 7.6, HPE 3.0** - and of those four, one has a dossier in this corpus. That is 7.6 points of the 77.3 the series names, **9.8 per cent of the ranking**. Every figure in it is read out of Supermicro's own file, which is to say the covered member is the source for the fact that the segment is mostly uncovered.",
+    "**So dominance here cannot be stated as a share, and the registry already knew that.** Its basis line for the {{incumbent}} mentions no revenue at all: the ecosystem's gravitational center, which does not sell power or storage but whose architecture decisions create the market for both. That is the correct basis, and unlike a share it is testable against the record three separate ways.",
+    "**One: the incumbent publishes the power architecture and names who will build to it.** The 800 VDC initiative redesigns facility power for megawatt-class racks - 13.8 kV AC to 800 VDC distribution, single-stage conversion to 12 VDC at the compute node, replacing 415/480 VAC three-phase plus in-rack 54 V conversion - with published claims of about 157 per cent more power through the same copper, up to 45 per cent less copper, up to 5 per cent end-to-end efficiency and a 30 per cent reduction in total cost of ownership. Its own ecosystem list is a {{qualified vendor slate}}: Delta, LITEON, Megmeet and Flex among power-system components; Vertiv, Eaton, Schneider, Siemens, ABB, GE Vernova and Hitachi Energy at the grid tier. **Ten of those eleven names carry a dossier here and sit in segments elsewhere in the chain - Siemens is the only one the corpus does not cover, and it holds Siemens Energy instead - and one of the ten, Flex, is a member of this segment.**",
+    "**Two: it prescribes where the battery goes.** The file records a two-tier storage hierarchy the company states itself - supercapacitors at the rack for millisecond GPU transients, facility-level BESS at the utility interconnection for second-to-minute smoothing - and a productized rack-level smoothing feature in GB300 NVL72 claiming up to 30 per cent peak-grid-demand reduction. A company that specifies where the battery sits is setting this corpus's agenda whether or not it ever sells one.",
+    "**Three: the roadmap is the power ask, and every upstream segment designs against it.** About 120 to 150 kW per rack today, Vera Rubin NVL72 and NVL144 in production in the second half of 2026 and fully liquid-cooled, Rubin Ultra NVL576 in Kyber racks at about **600 kW per rack** in the second half of 2027, and an announced Feynman generation at **1 MW class**. That ladder is the reason positions 1 through 8 of the chain exist in the shape they do.",
+    "**Against that, the other three members publish no architecture at all, and the contrast is the measurement.** AMD's file states at high confidence that no statement on 800 VDC or higher-voltage rack power appears in any of its 2024 to 2026 releases or filings reviewed, that it adopted the Open Rack Wide specification Meta contributed to the Open Compute Project rather than writing one of its own, and that **it names no power-conversion vendor roster**; its only published power figures are a 50 V DC busbar, a 400 W default CPU power for one part, and comparative claims normalised to a 100 kW rack envelope. Supermicro and Flex build to other companies' {{reference architecture}}s by definition.",
+    "**Put plainly: one company in this room writes the specification and the other three build to somebody's.** That is a cleaner statement of dominance than any share table this segment could honestly produce, and it is the one the registry made before this module existed."
+   ],
+   "sales": "Never cite an accelerator share number in this segment without saying where it came from. The two ranges the corpus carries disagree, neither names a publisher, and the only named series in the file measures servers rather than accelerators and ranks three companies nobody here has a dossier on. Lead with that and the buyer will trust your second sentence."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and from where",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**The registry gives this segment two {{challenger}}s and the first thing to say about them is that they are not challenging the same thing.** One is a {{merchant second source}} of accelerator silicon; the other assembles racks. Read them as a single bench and you will price both wrong, which is the error this section exists to prevent - and it is the error the dossiers themselves warn against, one of them in as many words.",
+    "**AMD is asymmetric and its own file forbids averaging it.** On server CPUs it is an incumbent co-leader at **34.5 per cent of x86 server units**, up 7.2 points year on year on Mercury Research's Q2 2026 count. On accelerators it books an estimated **5 to 10 per cent** of revenue, and the incumbent's data-centre revenue alone is **more than thirteen times AMD's entire Data Center segment**. Its own words: the position is asymmetric and the dossier should not average it. It is an incumbent in the socket and a challenger in the accelerator, and the {{rack-scale system}} is the bet that converts one into the other.",
+    "**Its binding constraint is not silicon.** One independent assessment upgraded its chances of breaking the incumbent's software moat to a great chance of success while documenting that its internal development clusters remain more than an order of magnitude smaller, that continuous-integration coverage on two key paths sits at zero parity, and that clusters were pulled from its own software team during launch week. **And it has deliberately chosen not to be a rack manufacturer**: it bought a systems company for USD 4.9 billion and sold that company's manufacturing arm for about USD 3 billion within seven months, keeping the design IP and the engineers. Its 10-Q states that although it supplies parts used in a Helios system, it does not manufacture or sell the completed rack.",
+    "**Supermicro is a challenger by its own gross margin, and that is the cleanest evidence in the file.** Revenue grew **5.5 times from FY2023 to FY2026** while gross margin fell **719 basis points to 10.8 per cent** - its own file calls that the arithmetic of an integrator winning volume on price. The one quarter that broke the pattern, 17.5 per cent in Q4 FY2026, is explained by its own chief financial officer as about **75 per cent** driven by contracts deferred into the following quarter and called non-recurring, with the next quarter guided back to 10.4 to 10.8 per cent. **The company's own guidance says the recovery does not repeat.**",
+    "**But the threat to Supermicro is not on this roster, and this is the segment's most important finding.** Its file locates the pressure above and below rather than among its named peers: {{ODM Direct}} - vendors selling straight to hyperscalers at roughly 2 to 3 per cent margins - reached **59.4 per cent** of the server market in 3Q25 and **50.2 per cent** in 1Q26; Dell grew **244.1 per cent** year on year in 1Q26 against Supermicro's 128.9; HPE drifted from 6.8 per cent to 3.0. The file's own summary is exact and worth quoting: **Supermicro comfortably beats its nearest OEM peers and still loses share.**",
+    "**That sentence is the coverage boundary in one line.** The channel taking the share and the branded OEM outgrowing it have no dossier here - and nor does the peer it comfortably beats - so the corpus holds all three numbers only because the covered member reports them. A landscape cannot rank a field it cannot see, and the floor rule exists to stop it trying - so this module names them, sizes them from the one file that carries them, and declines to rank them.",
+    "**The fourth member is {{adjacent}} and is about to become two companies.** Flex builds AMD's accelerator platforms in Austin and wafer-scale systems for a third party in Milpitas, and separately owns a branded critical-power and cooling portfolio bought across six deals for roughly **USD 6.3 billion**, two thirds of it committed in the sixteen months after the build-out began. On 5 May 2026 its board approved separating that business entirely, targeted for the first calendar quarter of 2027. **Its own file's first judgment is that this single fact governs every other reading of the company**, and that the company this dossier describes has about two quarters left in its present shape.",
+    "**The structural reading is that this segment is a supply chain with one rivalry in it.** The relationship graph carries **five edges among the four members - five of the six pairs a four-member roster can have**, the densest ratio any landscape in this lane has measured - and across those five there are seven curated typings of which **exactly one reads competitor**. The other four edges are vertical: one member manufactures another's platform, one is a named OEM for another's rack, one supplies the silicon the third's business is built on, and two are partners on a published power architecture, each side saying so independently. **Walk into this room expecting four rivals and you will misread every conversation in it.**",
+    "**And the one pair the graph does not connect is the pair that does the same job.** Flex and Supermicro both build {{rack-scale system}}s to designs somebody else owns - one for AMD, one for NVIDIA. They are the two most alike members of the segment and **the corpus records no relationship between them of any kind**: not competitor, not supplier, not partner. That silence is stated in the record section below rather than explained away here.",
+    "**Finally, every member of this segment that belongs anywhere else belongs upstream, and that is what being the load looks like as a graph property.** Three of the four sit in another segment, across six memberships at chain positions 3, 4, 5 and 8 - all of them below this segment's 9. **Not one member appears in any of the ten segments downstream.** Four of the six memberships invert the role held here, and the direction sorts perfectly: no member ranked incumbent or challenger here is ranked higher anywhere else, in two chances; the adjacent member is ranked lower nowhere, in four. A firm that is an incumbent at the end of the chain is a component supplier in the middle of it."
+   ],
+   "sales": "Ask which of the two challengers your prospect actually competes with before you position against either. One does not build racks by choice and will never buy a power shelf; the other builds them at 10.8 per cent gross margin and will negotiate like it. And if the conversation is about the server market rather than the accelerator market, remember that half of it belongs to companies neither of them is."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "One row per member - **four rows, three of which the spec asks for and one of which is an addition.** The spec's shape is one row per {{incumbent}} and {{challenger}}, which on this roster of one and two is three. The previous landscape in this lane carried eleven against its own five, because six of its eleven members were somebody else's incumbent and a shorter table would have hidden that. The addition here is far smaller and rests on the same ground - the adjacent member is a challenger in two other segments, it is the only other party here that builds a rack, and leaving it out would leave the missing edge of the previous section unexplained. Each bet is drawn from that company's own strategy read and is **analysis, not fact**; the risk column is the file's own, not this module's.",
+   "cols": [
+    "Player",
+    "Arrived from / role",
+    "The bet, and what its own file says about the risk"
+   ],
+   "rows": [
+    [
+     "**NVIDIA**",
+     "the architecture / {{incumbent}}",
+     "**That specifying the whole stack is more durable than selling the best part of it.** Publish the 800 VDC architecture, name the {{qualified vendor slate}}, prescribe where the storage sits, and the roadmap becomes every upstream segment's design constraint - without selling a single watt of power equipment. **Its own file's risk, at moderate confidence:** the circular-financing critique is the most serious structural one - up to USD 100 billion invested in a customer as that customer buys its systems, reported discussions of guaranteeing up to USD 250 billion of that customer's lease payments, and **four direct customers at 61 per cent of revenue**. Separately, China is now regulatory downside only: guidance assumes zero China data-centre compute revenue."
+    ],
+    [
+     "**AMD**",
+     "the silicon / {{challenger}}",
+     "**That being the {{merchant second source}} is worth more than being a rack vendor.** It bought a systems company for USD 4.9 billion, sold that company's manufacturing arm for about USD 3 billion seven months later, kept the design IP and the engineers, and now licenses the {{rack-scale system}} rather than building it - so the rack reaches site through other people's factories. **Its own file's risk:** the binding constraint is software and internal cluster capacity rather than silicon, and the demand book is concentrated and reflexive - three of the four largest commitments carry equity consideration flowing between the parties, and the 10-Q discloses **USD 4.1 billion of maximum gross exposure** from guarantees on partners' data-centre lease obligations on terms up to fifteen years."
+    ],
+    [
+     "**Supermicro**",
+     "the factory / {{challenger}}",
+     "**That owning the seam between the chip and the building is a position rather than a margin.** Sell the GPU system, then the coolant distribution unit, the rear-door heat exchanger, the power shelf and a 1.5 MW battery system around it - the only member of this corpus that sells across that seam. **Its own file's risk:** the gross margin says integrator, **719 basis points given up in three years to 10.8 per cent**, and the cooling standing is a manufactured product line rather than a rank - the leading independent liquid-cooling assessment does not name the company at all. Working capital, not demand, is the constraint: FY2026 cash from operations was **negative USD 6,809.9 million** against USD 2,230.5 million of net income, and USD 7.0 billion was raised in June 2026 to pre-fund components for about USD 39 billion of recent orders."
+    ],
+    [
+     "**Flex**",
+     "the contract factory / {{adjacent}}",
+     "**That a contract manufacturer can buy its way into owning the power train - and then leave with it.** About **USD 6.3 billion** across six acquisitions, two thirds of it committed in the sixteen months after the build-out began, and on 5 May 2026 the board approved separating the whole data-centre business, targeted for the first calendar quarter of 2027. **Its own file's risk:** the growth is funded rather than harvested - Q1 FY2027 produced record adjusted earnings per share on USD 7,928 million of revenue and only **USD 41 million of free cash flow**, with FY2027 conversion guidance cut to about 40 per cent from about 60 - and its visibility inside the incumbent's own communications has fallen: it is named in the published 800 VDC components tier but absent from the May 2026 partner release and from an independent rundown of that vendor's GTC 2026 ecosystem."
+    ]
+   ],
+   "sales": "All four of these bets are about where a company chooses to stop. One stops at the specification, one stops at the design, one stops at the finished rack and one has decided to stop being one company. Ask a prospect which of those four boundaries their own product sits against, and the qualification conversation writes itself."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "What to watch, dated **only where the record dates it**. The policy fence contributes nothing here and the table says so: **nineteen policy exposure entries across the four members, ten of them dated, and not one in the future** - the first segment in this lane whose fence has no forward date at all. So every dated row below comes from a member's own developments or roadmap, and a row the record leaves open is marked undated rather than given a plausible quarter.",
+   "cols": [
+    "Indicator",
+    "Dated",
+    "Whose",
+    "Why it moves this landscape"
+   ],
+   "rows": [
+    [
+     "**Whether the covered {{challenger}}'s server share stops falling** - 8.0 per cent at its 4Q23 peak, 7.6 in 1Q26, against an uncovered 16.5 and an uncovered channel above 50",
+     "**quarterly, undated**",
+     "IDC series, read through Supermicro",
+     "The only named independent series this segment has. If the one covered party in it keeps losing share, the covered fraction of the segment's own ranking falls with it."
+    ],
+    [
+     "**Whether the accelerator {{challenger}}'s rack ships in volume, not merely on time**",
+     "**Q4 2026 into Q1 2027**",
+     "AMD",
+     "Launch-date parity was achieved on 23 July 2026 and volume parity is not yet demonstrated. Guidance puts initial volume in Q3 2026 and significant ramp in Q4 into Q1 2027, against documented production-engineering risk of 1,728 cables and more than 550 retimers per rack."
+    ],
+    [
+     "**Whether the integrator's gross margin returns to its own 10.4 to 10.8 per cent guide, or holds the 17.5 per cent spike**",
+     "**Q1 FY2027 result**",
+     "Supermicro",
+     "The whole integrator reading rests on the margin. Its own chief financial officer attributes about 75 per cent of the spike to contracts deferred out of the prior quarter and calls it non-recurring, so a second high quarter would be the first real evidence against the reading."
+    ],
+    [
+     "**Whether the {{adjacent}} member's separation completes, and what the separated business finally discloses**",
+     "**1Q calendar 2027**",
+     "Flex",
+     "The segment's only adjacent member has about two quarters left in its present shape, and **no revenue line has ever been published** for any of its branded power or cooling businesses. A standalone filer would be the first time the corpus could size that half of it."
+    ],
+    [
+     "**Whether the EPC Power acquisition closes**",
+     "**Q4 calendar 2026**",
+     "Flex",
+     "USD 4.4 billion agreed on 3 September 2026, funded with debt and equity, landing immediately before the separation it will be part of."
+    ],
+    [
+     "**Whether the next rack generation arrives at its published power**",
+     "**2H 2027**",
+     "NVIDIA",
+     "About 600 kW per rack for Kyber against 120 to 150 kW today, with a 1 MW-class generation announced behind it. Every segment from position 1 to position 8 is sizing equipment against that ladder, so a slip moves nine other landscapes and not only this one."
+    ],
+    [
+     "**Whether an ODM or an uncovered server OEM enters this corpus**",
+     "**undated**",
+     "the segment registry's own notes",
+     "The named alternates were not needed to reach the floor and remain uncovered. Until one lands, three of the four parties in this segment's only ranking have no dossier, and the module's opening measurement stands as written."
+    ]
+   ],
+   "sales": "Not one of these seven carries a date you could put in a diary. Every dated row is a quarter or a half-year, and they are not even the same kind of quarter - two are calendar, one is a fiscal year that ends in June, and one spans a pair of them. This segment runs on reporting clocks rather than regulatory ones, which is unusual in this corpus, is why this module's review date is an arithmetic default rather than a gate, and is worth knowing before you promise a customer a timeline anchored to policy."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**For the BESS seller: this segment is the reason your product exists, and also the reason it may be specified out of the rack.**",
+    "The {{incumbent}} prescribes a **two-tier** storage hierarchy in its own materials - supercapacitors at the rack for millisecond transients, facility-level BESS at the utility interconnection for second-to-minute smoothing - and has productized rack-level smoothing claiming up to 30 per cent peak-grid-demand reduction. Read that as the segment drawing your boundary for you: **the millisecond layer is being internalised and the second-to-minute layer is being legitimised.** Sell into the second. And when a customer cites the incumbent's slate as a qualification requirement, check which tier the slate actually covers - the published lists name power-system components and grid-tier equipment, and storage is not one of the tiers.",
+    "**For the AIDC-power seller, three things follow and all three are practical.**",
+    "**One: the specification is published and the qualification is public.** Exactly one member of this segment publishes a {{qualified vendor slate}} and the other three publish none. If you are selling into an 800 VDC build, the list you need to be on belongs to the architecture author rather than to the company assembling the rack, and the conversation about getting on it is a product conversation rather than a commercial one.",
+    "**Two: do not sell to the segment - sell to the seam.** Two of these four members build {{rack-scale system}}s to designs somebody else owns, and the graph records no relationship between them. The power shelf, the busbar and the coolant distribution unit are bought by whoever is doing the assembling, and on this roster that is the {{adjacent}} member for one challenger's platforms and the integrator for the incumbent's.",
+    "**Three: price the channel you cannot see.** About half the servers in the market are sold by {{ODM Direct}} vendors at roughly 2 to 3 per cent margins, and not one of them is covered here. If your pricing assumes a branded OEM's margin structure, it is calibrated to the smaller half of the market - the three branded OEMs this corpus can name hold 27.1 points between them against that channel's 50.2 - and you will lose on price to a bidder you never modelled.",
+    "**For both: open with what is not known.** The measurement at the top of this module - one of the four parties in the only independent ranking has a dossier - is the most useful sentence in it. A seller who says that out loud, early, is a seller the buyer trusts with the next claim; a seller who quotes a share range without saying it spans three years is one correction away from losing the room."
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "6 min",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's four member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier field, to the segment registry or to the relationship graph. Dossiers already cite their own sources, so this ledger cites dossiers - a claim whose only support is this module is an opinion and is written as one in the prose.",
+   "rows": [
+    [
+     "Segment holds 4 members - 1 incumbent, 2 challengers, 1 adjacent; chain position 9, tier build; five buying criteria; and the longest notes field in the taxonomy",
+     "profiler-segments.json @ last commit 2026-09-13 - segments[].members[], .position, .tier, .buyingCriteria, .notes"
+    ],
+    [
+     "No dossier exists for Dell or HPE, and no ODM is covered, although ODM Direct is above 50 per cent of the server market",
+     "profiler-segments.json @ 2026-09-13 - segments[].notes, final sentence"
+    ],
+    [
+     "Both challenger typings were decided on recorded evidence rather than on the alternates being unavailable",
+     "profiler-segments.json @ 2026-09-13 - segments[].notes; members[].basis for amd and supermicro"
+    ],
+    [
+     "NVIDIA is the incumbent on the basis that its architecture decisions create the market for power and storage without it selling either",
+     "profile:nvidia @ v10 - ecosystemRole; profiler-segments.json members[].basis"
+    ],
+    [
+     "About 80 to 85 per cent of AI-accelerator revenue per IDC-cited estimates, down from about 92 per cent in 2023",
+     "profile:nvidia @ v10 - summary"
+    ],
+    [
+     "An estimated 5 to 10 per cent of data-centre accelerator revenue against 75 to 92 per cent, and no named tier-one house publishes the split",
+     "profile:amd @ v1 - summary; strategyRead[0]; relationships, competitor edge context"
+    ],
+    [
+     "800 VDC architecture: 13.8 kV AC to 800 VDC to single-stage 12 VDC at the node, about 157 per cent more power through the same copper, up to 45 per cent copper reduction, up to 5 per cent efficiency, 30 per cent TCO reduction",
+     "profile:nvidia @ v10 - productsAndServices[1]"
+    ],
+    [
+     "The published 800 VDC ecosystem names Delta, LITEON, Megmeet and Flex among components and Vertiv, Eaton, Schneider, Siemens, ABB, GE Vernova and Hitachi Energy at the grid tier",
+     "profile:nvidia @ v10 - ecosystemRole"
+    ],
+    [
+     "Ten of those eleven names carry a dossier and sit in segments elsewhere; Siemens is uncovered and Siemens Energy is the corpus entry",
+     "profiler-segments.json @ 2026-09-13 - membership scan across all 19 segments; profiler-companies.json"
+    ],
+    [
+     "A two-tier storage hierarchy - supercapacitors at the rack, facility BESS at the interconnection - and GB300 NVL72 rack-level smoothing claiming up to 30 per cent peak-grid-demand reduction",
+     "profile:nvidia @ v10 - ecosystemRole; strategyRead[3]"
+    ],
+    [
+     "Rack power ladder: 120 to 150 kW today, Vera Rubin in 2H 2026 fully liquid-cooled, Rubin Ultra NVL576 in Kyber at about 600 kW in 2H 2027, Feynman at 1 MW class",
+     "profile:nvidia @ v10 - summary; productsAndServices[0]"
+    ],
+    [
+     "Circular-financing risk: up to USD 100 billion invested in one customer, reported discussions of guaranteeing up to USD 250 billion of lease payments, four direct customers at 61 per cent of revenue",
+     "profile:nvidia @ v10 - strategyRead[2]"
+    ],
+    [
+     "China is regulatory downside only; guidance assumes zero China data-centre compute revenue",
+     "profile:nvidia @ v10 - strategyRead[4]"
+    ],
+    [
+     "AMD is an incumbent co-leader at 34.5 per cent of x86 server units in Q2 2026, up 7.2 points year on year, and a challenger in accelerators",
+     "profile:amd @ v1 - summary; strategyRead[0]; technicalSpecs"
+    ],
+    [
+     "NVIDIA data-centre revenue alone is more than thirteen times AMD's entire Data Center segment",
+     "profile:amd @ v1 - summary; relationships, competitor edge context"
+    ],
+    [
+     "The binding constraint is software and internal cluster capacity: a great chance of breaking the software moat, against clusters more than an order of magnitude smaller and zero continuous-integration parity on two paths",
+     "profile:amd @ v1 - strategyRead[1]"
+    ],
+    [
+     "AMD does not manufacture or sell the completed rack; it bought a systems company for USD 4.9 billion and sold the manufacturing arm for about USD 3 billion within seven months",
+     "profile:amd @ v1 - strategyRead[2]; ecosystemRole"
+    ],
+    [
+     "AMD publishes no rack power architecture and names no power-conversion vendor roster; it adopted Open Rack Wide rather than writing its own, and publishes only a 50 V DC busbar, a 400 W default CPU power and claims normalised to a 100 kW rack",
+     "profile:amd @ v1 - strategyRead[3]; ecosystemRole"
+    ],
+    [
+     "USD 4.1 billion of maximum gross exposure from guarantees on partners' data-centre lease obligations, on terms up to fifteen years",
+     "profile:amd @ v1 - strategyRead[5]"
+    ],
+    [
+     "Helios volume: launch 23 July 2026, initial volume Q3 2026 and significant ramp Q4 2026 into Q1 2027, against 1,728 cables and more than 550 retimers per rack",
+     "profile:amd @ v1 - strategyRead[6]; recentDevelopments"
+    ],
+    [
+     "Supermicro revenue grew 5.5 times from FY2023 to FY2026 while gross margin fell 719 basis points to 10.8 per cent",
+     "profile:supermicro @ v1 - summary; strategyRead[0]; financials.periods"
+    ],
+    [
+     "IDC: Supermicro peaked at 8.0 per cent of worldwide server revenue in 4Q23 and sat at 7.6 per cent in 1Q26 against Dell's 16.5 per cent, with ODM Direct above 50 per cent",
+     "profile:supermicro @ v1 - summary; strategyRead[0]"
+    ],
+    [
+     "ODM Direct reached 59.4 per cent of the server market in 3Q25 and 50.2 per cent in 1Q26 at roughly 2 to 3 per cent margins; Dell grew 244.1 per cent year on year in 1Q26 against Supermicro's 128.9; HPE drifted from 6.8 to 3.0 per cent",
+     "profile:supermicro @ v1 - strategyRead[1]; recentDevelopments 2025-12-11"
+    ],
+    [
+     "The Q4 FY2026 gross-margin spike to 17.5 per cent was about 75 per cent driven by deferred contracts and called non-recurring; the next quarter is guided to 10.4 to 10.8 per cent",
+     "profile:supermicro @ v1 - strategyRead[6]; financials.periods, Q4 FY2026"
+    ],
+    [
+     "FY2026 cash from operations was negative USD 6,809.9 million against USD 2,230.5 million of net income; USD 7.0 billion was raised in June 2026 to fund components for about USD 39 billion of orders",
+     "profile:supermicro @ v1 - strategyRead[5]; financials.periods, FY2026"
+    ],
+    [
+     "Supermicro sells across the seam from GPU systems to 1 to 50 MW cooling towers, including CDUs to 250 kW in-rack and 1.8 MW in-row, rear-door exchangers 10 to 120 kW, 33 kW power shelves and a 1.5 MW battery system; the leading independent liquid-cooling assessment does not name it",
+     "profile:supermicro @ v1 - ecosystemRole; strategyRead[2]; strategyRead[3]"
+    ],
+    [
+     "About 94.4 per cent of power supplies and 95.3 per cent of chassis purchased in FY2026 came from two related parties controlled by the chief executive's brothers",
+     "profile:supermicro @ v1 - ecosystemRole; strategyRead[2]; strategyRead[7]"
+    ],
+    [
+     "A customer cancelled an order for 300 to 400 rack systems worth an estimated USD 1.05 to 1.40 billion",
+     "profile:supermicro @ v1 - strategyRead[4]"
+    ],
+    [
+     "Flex owns a branded critical-power and cooling portfolio and also builds to other companies' designs, including AMD accelerator platforms in Austin and wafer-scale systems in Milpitas",
+     "profile:flex @ v1 - ecosystemRole; profiler-segments.json members[].basis"
+    ],
+    [
+     "The board approved separating Cloud and Power Infrastructure on 5 May 2026, targeted for the first calendar quarter of 2027; the file's first judgment is that this governs every other reading",
+     "profile:flex @ v1 - strategyRead[0]; recentDevelopments"
+    ],
+    [
+     "About USD 6.3 billion across six acquisitions, two thirds committed in the sixteen months after the build-out began, including EPC Power at USD 4.4 billion agreed 3 September 2026 and closing in Q4 calendar 2026",
+     "profile:flex @ v1 - strategyRead[2]; recentDevelopments 2026-09-03"
+    ],
+    [
+     "Q1 FY2027: USD 7,928 million of revenue and record adjusted earnings per share, but only USD 41 million of free cash flow, with conversion guidance cut to about 40 per cent from about 60",
+     "profile:flex @ v1 - strategyRead[5]; financials.periods"
+    ],
+    [
+     "Flex is named in the published 800 VDC power-system-components tier and has shipped a 33 kW shelf at 97.5 per cent peak half-load efficiency and a 110 kW shelf and 800 VDC rack, but is absent from the May 2026 partner release and from an independent GTC 2026 ecosystem rundown",
+     "profile:flex @ v1 - strategyRead[4]; relationships, partner edge context, both sides"
+    ],
+    [
+     "Five edges among the four members, seven curated typings, one reading competitor; no edge of any kind between Flex and Supermicro",
+     "profiler-graph.json @ built 2026-09-13 - edges[] filtered to the four member slugs"
+    ],
+    [
+     "Nineteen policy exposure entries across the four members, ten dated, none in the future; the latest effective date is 2026-07-24",
+     "profile:nvidia @ v10, profile:amd @ v1, profile:supermicro @ v1, profile:flex @ v1 - policyExposure[]"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does not say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**The corpus can name this segment's parties and cannot rank its market, and the arithmetic is worth stating exactly rather than gesturing at.** The one named independent series the segment has - IDC's worldwide server revenue share for 1Q26 - names four parties: {{ODM Direct}} at 50.2 per cent, Dell at 16.5, Supermicro at 7.6 and HPE at 3.0. **One of the four carries a dossier here.** That is 7.6 points of the 77.3 the series names, or 9.8 per cent of it, and every one of those figures is read out of the covered member's own file.",
+    "**There is no dossier for Dell Technologies**, which holds more than twice the covered member's share and grew 244.1 per cent year on year in 1Q26 against its 128.9. **There is no dossier for HPE**, at 3.0 per cent and falling from 6.8. **And no ODM is covered at all** - not Foxconn, not Quanta Computer, not Wiwynn - although the accelerator challenger's own file names Sanmina, Wiwynn, Wistron and Inventec as the route by which its rack reaches a site. The registry's own notes field says all of this in its last sentence, and has said it since the segment reached the floor.",
+    "**The gap has two homonyms sitting in it, which is why it is easy to miss.** Search this curriculum for Dell and nine of the ten results are Dell'Oro, a market-research firm; the single reference to the company is a share figure inside a generated table that no prose explains. Search it for Quanta and all forty-two results are Quanta Services, a covered engineering and construction contractor - Quanta Computer, the original design manufacturer, appears nowhere. **The words are present and the companies are not.**",
+    "**No named tier-one house publishes the accelerator revenue split, and one member's file says so outright.** The two ranges the corpus carries - about 80 to 85 per cent in one file, 75 to 92 in the other - name no publication between them, one sourced to IDC-cited estimates and the other to independent estimates, and they are not reconciled anywhere. Neither cites the other. A reader who needs a defensible number for this market does not have one here, and this module does not manufacture one.",
+    "**The graph records no relationship of any kind between the two members that do the same job.** Flex and Supermicro both assemble {{rack-scale system}}s to designs owned by somebody else, one for each of the segment's two silicon vendors. They are the two most alike members of a four-member roster and the only pair of six the graph does not connect. The corpus is silent on whether they compete for the same work, supply each other, or have never met - and silence is not evidence of any of the three.",
+    "**No member publishes a revenue line for the thing this segment is defined as.** The four fiscal years end on four different dates inside a six-month window - 27 December 2025, 25 January 2026, 31 March 2026 and 30 June 2026 - which in a market where the leader's own revenue rose 65 per cent in a year is a material offset by itself; and the four headline figures measure four different businesses, only a minority of each being the rack. The ladder those figures happen to form runs in the same order as the registry's roles, and **that agreement is a coincidence rather than a corroboration**: read it as a ranking and you have ranked a chip company, a server company and a contract manufacturer on revenue that mostly is not this segment's.",
+    "**Finally, the segment's own fence is empty of forward dates.** Nineteen policy exposure entries, ten of them dated, none in the future - so nothing in this module is clocked by a regulation. Its review date is the six-month default rather than a gate, and a reader who wants to know when the judgments here go stale should watch the quarterly results in the indicators table instead."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "4 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "This segment has four members, exactly the floor. What is the first thing a landscape written on it has to say?",
+     "a": "**That the corpus can name the parties and cannot rank the market.** The only named independent series covering anything close to this segment names four parties and one of them has a dossier here. State the covered fraction before stating anything about who is winning."
+    },
+    {
+     "q": "Two member files give different figures for the incumbent's accelerator share. Which do you cite?",
+     "a": "**The narrower, dated one - and say that the other exists.** One file gives about 80 to 85 per cent from a named tracker and marks 92 per cent explicitly as a 2023 figure; the other gives 75 to 92 with no publisher. The wide range still contains a three-year-old peak, so quoting it as current is quoting an artefact."
+    },
+    {
+     "q": "Does the disagreement between those two files change the challenger typing?",
+     "a": "**No, and saying so is part of publishing it.** Five to ten per cent against eighty to eighty-five is as decisive as five to ten against seventy-five to ninety-two. The role survives; only the sentence a seller may say out loud changes."
+    },
+    {
+     "q": "What is the actual basis for incumbency in this segment, if not a share?",
+     "a": "**Writing the specification.** One member publishes the rack power architecture, names the qualified vendor slate for it, prescribes where storage sits, and publishes the rack power ladder every upstream segment designs against. The other three build to somebody's reference architecture."
+    },
+    {
+     "q": "Why must the two challengers not be read as one bench?",
+     "a": "**They are challenging different things.** One is a merchant second source of accelerator silicon that has deliberately refused to build racks; the other builds racks and is losing share to a channel that undercuts it. One of them is simultaneously an incumbent co-leader at 34.5 per cent of x86 server units - in a different market."
+    },
+    {
+     "q": "Where does the pressure on the rack integrator actually come from?",
+     "a": "**From above and below, and both are uncovered.** ODM Direct at roughly 2 to 3 per cent margins passed half the server market; the largest branded OEM grew nearly twice as fast in the same quarter. Its own file's summary is that it comfortably beats its nearest OEM peers and still loses share."
+    },
+    {
+     "q": "Five of six possible pairs carry an edge and only one of seven typings reads competitor. What does that mean for a seller?",
+     "a": "**This is a supply chain with one rivalry in it, not a field of four rivals.** One member manufactures another's platform, one is a named OEM for another's rack, one supplies the silicon a third is built on, and two are partners on a published power architecture with both sides saying so. Expect trade relationships in the room, not a bake-off."
+    },
+    {
+     "q": "Which pair does the graph not connect, and why is that interesting?",
+     "a": "**The two contract builders.** They both assemble rack-scale systems to designs owned by somebody else, one for each silicon vendor here. They are the two most alike members and the only unconnected pair - and the corpus is silent on whether they compete, supply each other, or have never met."
+    },
+    {
+     "q": "Three members belong to another segment. What is true of every one of those memberships?",
+     "a": "**All six point upstream.** Positions 3, 4, 5 and 8 against this segment's 9, and not one member appears in any of the ten segments downstream. This segment's members reach backwards into the chain they consume and never forwards into the chain that buys them."
+    },
+    {
+     "q": "The role inversions here sort perfectly. In which direction, and why?",
+     "a": "**Top ranks fall, the bottom rank rises.** No member ranked incumbent or challenger here is ranked higher anywhere else, in two chances; the adjacent member is ranked lower nowhere, in four. A firm that is an incumbent at the end of the chain is a component supplier in the middle of it."
+    },
+    {
+     "q": "A customer says the platform vendor's ecosystem list is a qualification requirement. What do you check first?",
+     "a": "**Which tier the list covers.** The published slate names power-system components and grid-tier equipment. Storage is not one of the tiers - the same vendor prescribes storage placement separately, in two tiers of its own, and being absent from the components list is not the same as being disqualified."
+    },
+    {
+     "q": "Why is the review date on this module a default rather than a gate?",
+     "a": "**Because the fence has no forward date to sort.** Nineteen policy exposure entries across four members, ten dated, none in the future. The sort returns the empty set, so the clock falls back to six months from the update date and the indicators table carries the real timing instead."
+    },
+    {
+     "q": "Why is the revenue ladder these four companies form not a ranking of the segment?",
+     "a": "**Four year-ends inside a six-month window, and four different businesses.** Only a minority of each figure is the rack. The ladder happens to run in the same order as the registry's roles, and that is a coincidence rather than evidence."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "4 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A prospect quotes a table showing this segment's incumbent at 75 to 92 per cent of accelerator revenue and asks you to confirm it. What does the record actually support?",
+     "c": [
+      "Confirm it - it is the figure the segment registry itself used to type the challenger",
+      "Reject it - no share figure for this market appears anywhere in the corpus",
+      "Confirm it, but only for the incumbent's most recent fiscal year",
+      "Neither confirm nor reject the number: say that two member files carry different figures, that the wide range still contains a 2023 peak, and that no named house publishes the split"
+     ],
+     "a": 3,
+     "why": "Both ranges are in the corpus and they disagree. The incumbent's own file gives about 80 to 85 per cent from a named tracker and marks 92 per cent as a 2023 figure; the challenger's gives 75 to 92 unattributed, and adds that no named tier-one house publishes the split. Confirming either as current overstates what the record holds."
+    },
+    {
+     "q": "What is the honest basis for calling one member of this segment the incumbent?",
+     "c": [
+      "Its revenue is more than five times the next member's",
+      "It writes the specification: it publishes the rack power architecture, names the qualified vendor slate, prescribes storage placement, and publishes the power ladder other segments design against",
+      "It is the only member with a dossier in the corpus",
+      "Three independent rankings place it first"
+     ],
+     "a": 1,
+     "why": "The registry's basis line mentions no revenue at all. There are no independent rankings of this segment, all four members carry dossiers, and the revenue comparison is not like-for-like. What is testable in the record is the specification."
+    },
+    {
+     "q": "Why does treating the two challengers as a single bench misprice both?",
+     "c": [
+      "Because one is much larger than the other by revenue",
+      "Because only one of them is covered by the segment registry's notes field",
+      "Because they are challenging different things - accelerator silicon in one case, the assembled rack in the other - and one of them is simultaneously an incumbent co-leader in a third market",
+      "Because one of them is about to be separated into two companies"
+     ],
+     "a": 2,
+     "why": "One is a merchant second source that has deliberately chosen not to manufacture racks; the other is the manufacturer, at 10.8 per cent gross margin. The first is also an incumbent co-leader at 34.5 per cent of x86 server units. Its own file warns in as many words that the position must not be averaged."
+    },
+    {
+     "q": "The graph shows five edges among four members with only one competitor typing. What should a seller expect walking into this segment?",
+     "c": [
+      "Trade relationships rather than a bake-off: most members in the room buy from, build for or partner with another member in the room",
+      "Four rivals competing for the same sockets",
+      "A single dominant vendor and three firms with no relationship to it",
+      "A market split into two disconnected halves"
+     ],
+     "a": 0,
+     "why": "Four of the five edges are vertical: a manufacturing relationship, a named-OEM relationship, a silicon supply relationship, and a two-sided partnership on a published power architecture. Only one edge reads competitor. The previous landscape in this lane was the opposite - 36 of 39 typings read competitor there."
+    },
+    {
+     "q": "Where does the real competitive pressure on this segment's rack integrator come from?",
+     "c": [
+      "From the accelerator challenger, which is taking its OEM business",
+      "From the incumbent, which is moving into rack assembly",
+      "From the adjacent contract manufacturer, which builds the same systems",
+      "From ODM Direct above half the market and a branded OEM growing nearly twice as fast - and none of those parties has a dossier in this corpus"
+     ],
+     "a": 3,
+     "why": "Its own file locates the pressure above and below rather than among its named peers, and summarises it as beating its nearest OEM peers while still losing share. The parties doing the threatening are precisely the ones the corpus does not cover."
+    },
+    {
+     "q": "Every external membership held by this segment's members points upstream. What does that tell you?",
+     "c": [
+      "That the segment registry has a gap in its downstream assignments",
+      "That this segment is the end of the chain - the load itself - so its members reach backwards into what they consume and never forwards into what buys them",
+      "That the members are too small to appear in the demand segments",
+      "That the graph is missing edges to the downstream segments"
+     ],
+     "a": 1,
+     "why": "Six memberships at positions 3, 4, 5 and 8 against this segment's 9, and none in the ten segments downstream. It is a property of being the load, and it also explains the role inversions: an incumbent at the end of the chain is a component supplier in the middle of it."
+    },
+    {
+     "q": "This module's review date is six months out rather than a dated gate. Why?",
+     "c": [
+      "Because guidance modules covering fast-moving segments always default to six months",
+      "Because the segment's nearest gate falls outside the six-month horizon",
+      "Because the policy fence has nineteen entries, ten of them dated, and not one in the future - so the sort returns nothing to take",
+      "Because the review date was inherited from the segment lesson"
+     ],
+     "a": 2,
+     "why": "This is the first segment in the lane whose fence carries no forward date at all. The sort returns the empty set, so the six-month default applies and the timing that matters lives in the indicators table, which is on a quarterly reporting clock rather than a regulatory one."
     }
    ]
   }
