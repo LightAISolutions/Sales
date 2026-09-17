@@ -1,4 +1,4 @@
-var VERSION = "v01.59g";
+var VERSION = "v01.60g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -39657,7 +39657,7 @@ function clLessonWhereBatteriesStop_() {
  "title": "Long Duration, Sodium, and the Engine Boundary",
  "short": "Every extra hour of duration is bought in cells. Where that stops making sense, what sodium and 8-hour-native cells change, and why engines own the long end.",
  "group": "Technology Foundations",
- "updated": "2026-09-15",
+ "updated": "2026-09-17",
  "reviewBy": "2027-03-15",
  "provenance": {
   "inputs": [
@@ -39821,7 +39821,7 @@ function clLessonWhereBatteriesStop_() {
     "**The physics that permits this is the duty itself, which is worth stating because it is the cleanest example in the track of a constraint that is not a constraint.** Storage discharges gently, over two to eight hours. A huge cell's thick electrodes and slower heat removal are therefore acceptable — and a vehicle, which must dump its energy in minutes, could never use one. The cell that makes long duration cheap is a cell the automotive industry has no use for at all, which is why stationary storage stopped being the electric car's side market and became its own.",
     "**And the cost structure inverts as the hours grow.** At one or two hours the converter, the transformer and the connection are a large share of the project, so a dollar saved on power electronics is a dollar worth chasing. At eight hours that same hardware amortises over four times as many delivered hours, and cell dollars per kilowatt-hour dominate the price outright. This is the mechanism behind the previous section's chart rather than a separate fact: as duration rises, the project converges on being a cell purchase with some equipment attached.",
     "**Two things the gentle rate does not simply give you, and this is where a spec sheet gets read carelessly.** Resistive losses grow as the *square* of current, so running at an eighth of a C rather than half of one genuinely reduces them, and a native design's published {{round-trip efficiency}} at gentle rates is honestly better for that reason. But the {{auxiliary load}} — cooling, controls, dehumidification, the housekeeping that runs whenever the plant is awake — is drawn for the whole discharge, and an eight-hour discharge has twice as many hours of it as a four-hour one. The two terms move in opposite directions as duration rises, which means a round-trip figure quoted at one rate is not the figure the revenue is earned at. Ask for it at the duration being bought, at the site temperature that actually exists. The honest version of the number is always a triple: at what rate, at what temperature, measured where.",
-    "One boundary, stated rather than assumed. How a cell is actually built — the formats, the manufacturing, the yield — belongs to *From Cell to Container* and to the storage-fundamentals guidance module, and how capacity fades and how the warranty is written belongs to *Duration, Degradation, and the Twenty-Year Promise*. What this lesson adds is narrower and it is the thing neither of those answers: what happens to the **bill** when the duration changes, and at what point on that bill somebody should be buying a different machine entirely. Worth knowing that the hours are not always the buyer's choice either — at least one grid has written an eight-hour requirement into a multi-gigawatt-hour procurement programme, so the duration class can arrive as a rule rather than as an optimisation."
+    "One boundary, stated rather than assumed. How a cell is actually built — the formats, the manufacturing, the yield — belongs to *From Powder to Cell: Manufacturing, Formats, and Yield* and to the storage-fundamentals guidance module, and how capacity fades and how the warranty is written belongs to *Duration, Degradation, and the Twenty-Year Promise*. What this lesson adds is narrower and it is the thing neither of those answers: what happens to the **bill** when the duration changes, and at what point on that bill somebody should be buying a different machine entirely. Worth knowing that the hours are not always the buyer's choice either — at least one grid has written an eight-hour requirement into a multi-gigawatt-hour procurement programme, so the duration class can arrive as a rule rather than as an optimisation."
    ]
   },
   {
@@ -40072,6 +40072,15 @@ function clLessonWhereBatteriesStop_() {
      "a": 0,
      "why": "The molecule is genuinely the cheapest day of duration on the table — a tank is not a cell — and that is exactly why the argument moves to the two things it cannot assume: the compounded round trip, which sits far below a lithium battery's 85 to 90 per cent whether the hydrogen is burned or run through a fuel cell, and whether the fuel exists at that scale and price at all. Start time is a real property but is answered by pairing with a store. Hydrogen does burn hotter and does push {{NOx}} up, which is a combustor design problem rather than the argument's hinge — and a fuel cell has no flame at all."
     }
+   ]
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-17",
+   "note": "The boundary note in this section named the wrong lesson. How a cell is actually built — the formats, the manufacturing and the yield — is taught in From Powder to Cell: Manufacturing, Formats, and Yield, which now sits at position 5 of this track, and the sentence names it instead of From Cell to Container, which teaches none of the three. Nothing else in the section changed and no source date moved.",
+   "changed": [
+    "eight-hour-native"
    ]
   }
  ]
@@ -43017,14 +43026,15 @@ function clTrackBessFoundations_() {
  "schemaVersion": 1,
  "id": "bess-foundations",
  "title": "BESS Foundations",
- "short": "Finish this and you can read a grid-storage spec sheet, hold a technical conversation about cells, duration and degradation, and say which control layer is deciding what while the plant runs.",
+ "short": "Finish this and you can read a grid-storage spec sheet, explain what the control stack is trading off every afternoon, say where the cells came from, and know where batteries stop and engines begin.",
  "group": "Technology Foundations",
- "updated": "2026-09-15",
+ "updated": "2026-09-17",
  "lessons": [
   "cell-to-container",
   "duration-and-degradation",
   "spec-sheet-decoded",
   "the-control-stack",
+  "how-a-cell-is-made",
   "where-batteries-stop"
  ]
 };
@@ -43187,6 +43197,442 @@ function clTrackValueChainBuyersAndBackers_() {
 };
 }
 
+// Phase 4 row 19 (curriculum plan §3.1, §7 row 19) — the manufacturing half of
+// the BESS floor, at `bess-foundations` position 5 between `the-control-stack`
+// and `where-batteries-stop`. A mid-array insert, not an append.
+//
+// §10.6 (t) fired THREE times and on three different shapes, all of them inside
+// this lesson's own track, so the omissions are written down rather than
+// discovered. (1) DECLARED AND MIS-ADDRESSED: `where-batteries-stop` (position
+// 6, row 12) closes its `eight-hour-native` section by handing "the formats,
+// the manufacturing, the yield" to *From Cell to Container* and the storage
+// fundamentals guidance module — a handoff written before this lesson was
+// scheduled beneath it, and pointed at a sibling that teaches none of the
+// three. It is corrected in the same commit, in place, under the same section
+// id, with one `revisions[]` entry naming that one section. (2) UNDECLARED:
+// `cell-to-container` (position 1) already carries the assembly ladder, the
+// chemistry scoreboard and — in its `why-containers-grew` note — the sentence
+// that fewer, bigger cells means fewer welds with thermal management as the
+// honest tradeoff. It carries no decline sentence anywhere (grepped for
+// belongs, elsewhere, not repeated, deliberately: nothing). (3) STATED BUT NOT
+// EXPLAINED: `spec-sheet-decoded` (position 3, guidance-gated) plots the
+// amp-hour ladder as a `bars` section and its note states the same counterweight
+// in almost the same words. So this lesson does NOT re-plot either ladder and
+// does not restate the cells-per-container arithmetic `where-batteries-stop`
+// computes; `scaling-physics` opens by handing both ladders back by name and
+// teaches only what the climb costs the cell — cube-square, the hottest interior
+// point, the current path, and abuse tolerance that has to be re-proven by test.
+// §8 item 8's rule in its own words: the ladder appears once.
+//
+// Ten inputs, all public, so the fold is `tracks` and an analyst sees it.
+// §3.3's pin-only-what-you-use rule cut in ONE direction: `study:envision-energy`
+// was read and DROPPED — its material is the cell distribution and the
+// management hierarchy, which is `the-control-stack`'s, and that lesson already
+// teaches that an unbalanced string is limited by its worst cell. The C12 pair
+// both earned their place and they do different jobs: `study:gotion` for status
+// attaching to the owner rather than the site, `study:rept` for the corollary
+// that moving production to a third country answers a tariff and not an
+// ownership test. Policy mechanics stay in track 5 — 45X and thermal runaway
+// enter here as vocabulary, and `the-china-policy-stack` owns the levers.
+//
+// THE G2 TRAP ON THIS ROW IS TEN OF TEN and every pin below is the guide's own
+// `lastUpdated`, read off the fetched document. `git log -1 --format=%cs` — the
+// correct source for `project:` and `concepts:` — disagrees with ALL TEN:
+// 2026-08-31 against a stated 2026-08-21 for eve-energy, lg-energy-solution,
+// panasonic and samsung-sdi; 2026-08-31 against 2026-08-08 for hithium; and
+// 2026-09-07 against 2026-09-06 for gotion, rept, sunwoda, trina-storage and
+// envision-energy. A session taking the commit date writes ten wrong pins and
+// no checker sees one. `concepts:profiler-concepts` is the opposite case and its
+// commit date, 2026-09-13, IS the pin.
+//
+// `reviewBy` 2027-03-17 on the six-month default, and the sort returned an
+// EMPTY set within the lesson's own material — the (ee5) empty-set shape, met
+// by a Phase 4 row for the first time. Across the nine stamped study guides
+// there is not one day-level date of any kind, future or past, and the FEOC
+// material they do carry is structural rather than dated. Three candidates
+// rejected in writing: (1) 2027-10-01, the NDAA §154 procurement ban, genuine
+// and day-level but carried by the members' DOSSIERS rather than by any stamped
+// input, thirteen months out — further than the default — and a defence
+// procurement lever, which is track 5's subject; (2) `the-china-policy-stack`'s
+// own 2026-12-31, rejected by (r) and (u) as a candidate that is already
+// another module's gate, and expressly warned against by this row's brief;
+// (3) the §45X step-down schedule, which the corpus describes without giving
+// this lesson a day. The default sits outside the curriculum checker's 30-day
+// horizon, so the 3 items it reports due stay 3.
+function clLessonHowACellIsMade_() {
+  return {
+ "schemaVersion": 1,
+ "id": "how-a-cell-is-made",
+ "type": "module",
+ "title": "From Powder to Cell: Manufacturing, Formats, and Yield",
+ "short": "How a lithium cell is actually built, why yield is the whole game, what changes when a cell gets big, and why a factory is the product a country is buying.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-03-17",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:eve-energy",
+    "date": "2026-08-21",
+    "note": "the line step by step; yield economics and the ramp; scaling physics of big cells; the three-format trade; battery passports"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sunwoda",
+    "date": "2026-09-06",
+    "note": "the plant step table and what each defect looks like later; the parts-per-million arithmetic; statistical process control and first-pass yield; traceability; the bathtub curve"
+   },
+   {
+    "kind": "public",
+    "ref": "study:panasonic",
+    "date": "2026-08-21",
+    "note": "cylindrical engineering and the tab bottleneck; quality at billions; the tenfold cost of an escape at each stage"
+   },
+   {
+    "kind": "public",
+    "ref": "study:lg-energy-solution",
+    "date": "2026-08-21",
+    "note": "gigafactory capital and fixed-cost economics; the joint venture as a risk split; production credits and content rules taught generically; EV lines repointed to storage; the pouch format"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hithium",
+    "date": "2026-08-08",
+    "note": "the big-cell bet — cells per container at 314 Ah against 1,175 Ah, and why a kilo-amp-hour cell is a process achievement rather than a design choice"
+   },
+   {
+    "kind": "public",
+    "ref": "study:samsung-sdi",
+    "date": "2026-08-21",
+    "note": "the staged thermal-runaway chain at the cell, and propagation prevention as the system-level goal"
+   },
+   {
+    "kind": "public",
+    "ref": "study:gotion",
+    "date": "2026-09-06",
+    "note": "eligibility status attaches to the owner rather than the site; nameplate against built against shipped capacity"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rept",
+    "date": "2026-09-06",
+    "note": "the corollary — moving production to a third country answers a tariff and not an ownership test"
+   },
+   {
+    "kind": "public",
+    "ref": "study:trina-storage",
+    "date": "2026-09-06",
+    "note": "the defect warranty against the capacity guarantee, and which one a late-surfacing manufacturing defect lands on"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "1 ppm vs 100 ppm",
+   "v": "the whole product",
+   "sub": "one bad cell per two hundred enclosures, or one per two"
+  },
+  {
+   "k": "3 formats",
+   "v": "one duty each",
+   "sub": "stationary storage settled on the large rectangular can"
+  },
+  {
+   "k": "cube vs square",
+   "v": "why big cells are hard",
+   "sub": "energy grows with volume, the cooling surface does not"
+  },
+  {
+   "k": "USD 50-100m",
+   "v": "per GWh of annual capacity",
+   "sub": "and a plant at half load is not half as profitable"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "slurry",
+   "d": "The wet mixture of active powder, binder and conductive carbon that is coated onto metal foil to make an electrode. Everything downstream inherits how well it was mixed."
+  },
+  {
+   "t": "slitting",
+   "d": "Cutting the coated, compressed foil into ribbons the width the cell design needs. The cut edge is where burrs start, and a burr is the classic internal short-circuit precursor."
+  },
+  {
+   "t": "cylindrical cell",
+   "d": "A wound roll of electrode sealed in a small drawn steel can. The oldest format and the fastest to manufacture; the can supplies structure, stack pressure and a predictable burst vent for free."
+  },
+  {
+   "t": "pouch cell",
+   "d": "Stacked electrodes sealed in a laminated aluminium foil bag. The lightest packaging and the best surface-to-volume ratio for shedding heat, with no structure of its own — the pack must supply compression and absorb swelling."
+  },
+  {
+   "t": "grading",
+   "d": "Measuring every finished cell after ageing and sorting it by capacity and self-discharge into matched groups, so that the cells wired into one string start out close to each other."
+  },
+  {
+   "t": "epidemic failure",
+   "d": "A defect that is systematic rather than random — a process that drifted for a fortnight and put a common flaw into every cell built in that window. Not rare, distributed through the fleet, and discovered only when units start failing together."
+  },
+  {
+   "t": "cube-square law",
+   "d": "The geometric fact that volume grows faster than surface area as an object scales up. A bigger cell stores energy in proportion to its volume and sheds heat in proportion to its surface, so every size jump is a thermal engineering project."
+  },
+  {
+   "t": "battery passport",
+   "d": "A digital identity carried by an individual battery — its chemistry, carbon footprint, recycled content and supply-chain origins — readable by regulators, buyers and recyclers. It turns serial-level manufacturing records into a market-access document."
+  },
+  {
+   "t": "internal resistance",
+   "d": "The cell's own opposition to current, measured in milliohms. It sets how much of each charge and discharge turns into heat instead of useful energy, and on a large-format cell it is the specification that reveals how well the current path was redesigned."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-line",
+   "title": "The line, in the order it happens",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A cell factory is a printing press with a chemistry problem at the end of it. **Eight steps, always in the same order.** One, a {{slurry}} of active powder, binder and conductive carbon is coated onto metal foil — copper under the {{anode}}, aluminium under the {{cathode}} — in a continuous web, then dried. Two, {{calendering}} presses the dried coating between rollers to a target density. Three, {{slitting}} cuts the web into ribbons the cell design's width. Four, the ribbons and their {{separator}} are assembled into the cell's internal package, either wound into a roll or stacked as flat sheets. Five, that package goes into its can or bag and is sealed in a {{dry room}}, because these materials react with water. Six, precisely metered electrolyte is introduced and the cell is closed. Seven, {{cell formation}} — the first careful charge. Eight, days or weeks of ageing, then {{grading}}.",
+    "**The order matters less than the tempo, and the tempo is the thing nobody expects.** The steps that make the electrodes are fast: coating runs at metres per second down a line that can be a kilometre long. The steps that *stabilise and prove* the cell are slow. Formation grows the {{solid electrolyte interphase}}, the protective film whose quality determines the cell's entire life, and it cannot be hurried without damaging what it is growing. Ageing then parks finished cells under observation for days before anyone is allowed to measure them. **Formation and ageing dominate a plant's capital and its floor space** — acres of racks holding cells that are doing nothing visible — which is the most counter-intuitive fact about where a battery factory's money goes.",
+    "**Where the tempo goes, the money follows.** It is why a plant's {{nameplate capacity}} and its actual output diverge most in its early years, and why a new line climbs its yield over quarters rather than weeks. It is also where the process fights itself: pushing the line faster — more cells per second — raises output and invites coating streaks, misalignments and weld faults. Holding record line speed and a parts-per-billion defect rate at the same time is the real manufacturing achievement. Either one alone is easy.",
+    "**And almost every defect this line produces is latent.** It passes acceptance and reveals itself in service, sometimes years later. An uneven coating is not a visible blemish; it is a patch of electrode that works harder than its neighbours and therefore ages faster, and on the day it ships it is indistinguishable from a good cell. A burr at a slit edge is harmless for months and then catastrophic. A poor formation profile produces cells that meet specification on delivery and degrade abnormally afterwards. Which is why the industry's quality argument is not *these units were inspected* but *the process that made them was demonstrably in control, and here is the record*.",
+    "One boundary, stated rather than assumed. This lesson stops at the factory gate. What the finished cell is — electrodes, separator, electrolyte, the chemistry choice — and how cells become modules, racks and a container belongs to *From Cell to Container*; how capacity fades and how the warranty is written belongs to *Duration, Degradation, and the Twenty-Year Promise*; what the management electronics do about the spread between cells belongs to *BMS, EMS, PCS: Who Decides What*. What this lesson adds is the half nobody sells you: **what had to go right, at what tempo and at what cost, before any of that existed.**"
+   ],
+   "sales": "When a buyer asks how one supplier differs from another, the honest differences are almost all in this section: what the line measures, how fast it runs, and how long it has been running at that speed."
+  },
+  {
+   "id": "three-formats",
+   "title": "Three formats, one duty each",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Every lithium cell ever built is one of three shapes — the {{cylindrical cell}}, the {{prismatic cell}} and the {{pouch cell}} — and the shape is a manufacturing decision before it is an electrical one. Read the three cards against the same four questions: **how fast does it manufacture**, **how does it get its heat out**, **what does it need from whatever holds it**, and **what happens when one of them fails**. Format follows duty — and the duty stationary storage has is why grid boxes converged on one of the three.",
+   "cards": [
+    {
+     "t": "Cylindrical",
+     "meta": "A wound roll of electrode in a small drawn steel can. The oldest format, a century of process maturity behind it, and the one an EV pack or a rack-mounted backup unit uses in the thousands.",
+     "adv": [
+      "**It manufactures beautifully.** Winding a continuous ribbon is faster and more repeatable than any stacking process, which is why the format survives every prediction of its death.",
+      "**The can is free structure.** A drawn steel case supplies mechanical protection, the stack pressure the electrodes need for even contact, and a predictable burst vent — three jobs the pack would otherwise have to design and pay for.",
+      "**Small cells fail small.** A few tens of watt-hours venting is a containable event, and thousands of cells give the designer statistical redundancy: per-cell fuses and disconnects can isolate one failure. *Choosing a format is also choosing a failure mode.*",
+      "**The tab bottleneck has an answer.** Current gathered from metres of wound foil used to funnel through one or two small connection points — a long, resistive, heat-concentrating path that got worse as diameters grew. Making the foil's entire edge the terminal turns metres of spiral travel into millimetres of axial travel, and it is what makes today's larger-diameter cells practical at all."
+     ],
+     "dis": [
+      "**Many small cells mean many connections**, and every connection is an assembly cost and a failure point.",
+      "**Round things waste rectangular space.** The cans themselves plus the gaps between them lose pack volume that a flat-sided cell keeps.",
+      "**Wrong duty for bulk stationary energy.** It is a high-rate, mechanically robust format, and a container sitting on concrete for twenty years is asking for neither."
+     ]
+    },
+    {
+     "t": "Prismatic",
+     "meta": "A rigid rectangular can holding a stack of flat sheets or a flattened winding. The default format of grid-scale storage and the home of today's very large cells.",
+     "adv": [
+      "**Flat faces stack with almost no wasted space**, so the format converts directly into megawatt-hours per twenty-foot footprint — the number a storage buyer actually shops on.",
+      "**The can carries load**, which lets the module and rack structure above it get lighter and simpler rather than heavier.",
+      "**Stacking suits it, and stacking suits large cells.** Layering cut sheets fills a rectangular can's corners and spreads mechanical stress evenly; it also gives better control of the edges than winding a very wide ribbon does.",
+      "**A flat face is a cooling surface.** A rectangular can presents a large plane to whatever the module presses against it, and a short path from the interior to that plane — which is the geometric reason the format survives the size ladder the next section describes, where the cells get flatter rather than fatter.",
+      "**It is where the large-format race is run.** The very large energy cells that stationary storage now buys exist in this format and essentially only in this format."
+     ],
+     "dis": [
+      "**Stacking is slower than winding**, so the machine rate — cells per second — became a competitive weapon rather than a given. A maker that cannot stack fast cannot play at this size.",
+      "**Bigger cans concentrate more energy per failure unit**, which makes the fire-test file harder to write with every rung of the size ladder.",
+      "**The format is a poor fit where mass matters**, which is precisely why it lost the vehicle argument it never seriously entered."
+     ]
+    },
+    {
+     "t": "Pouch",
+     "meta": "Stacked electrodes sealed in a laminated aluminium foil bag. The lightest packaging there is, and the only one of the three with no case of its own.",
+     "adv": [
+      "**Almost no packaging mass**, so more of the cell's weight is active material — the reason it appears wherever mass is carried.",
+      "**The best surface-to-volume ratio of the three**, so it sheds heat well, which is what makes it attractive for thin, heat-sensitive float duty such as rack-mounted backup electronics.",
+      "**Nearly free-form dimensions.** One line can serve many sizes, which suits a customer designing a pack around a vehicle floor or a rack tray rather than around a standardised cell."
+     ],
+     "dis": [
+      "**What the can provided, the pack must now supply** — compression for uniform contact and even ageing, mechanical protection, and gas management.",
+      "**It swells over life**, and the mechanical design has to budget foams and gaps for that swelling from day one.",
+      "**Venting is less controllable** than a can's designed burst point, which is a fire-engineering argument rather than a packaging one."
+     ]
+    }
+   ],
+   "note": "Two things to take from the three cards. First, **the format wars ended in portfolios**: the large makers now run all three lines at once and match format to duty, and multi-format fluency is itself a sales asset. Second, **the trade is not free at the moment of switching** — a new format begins with poor yield, because the tooling, the process windows and the failure modes are all new. That is why an aggressive new format can be genuinely more expensive per kilowatt-hour than the mature one it replaces for its first year or two, despite being denser. The {{learning curve}} is real, and it restarts from the beginning each time the product changes fundamentally."
+  },
+  {
+   "id": "yield-is-the-game",
+   "title": "Yield is the game",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Start with the arithmetic, because it is what makes this section a commercial subject rather than a factory one. A twenty-foot storage container holds on the order of five thousand cells, all in service, all in series strings where one failed cell can take a string offline. At a defect rate of a hundred parts per million — one bad cell in ten thousand, which sounds excellent — that is roughly **one defective cell in every two enclosures shipped**. At one part per million it is one in every two hundred. **Two orders of magnitude in defect rate is the difference between a normal product and an unsellable one, and neither rate is visible from outside the factory.** The six classes below are where that rate comes from, and the third column is what each one costs the party who eventually meets it.",
+   "cols": [
+    "Defect class",
+    "Where it surfaces",
+    "What it costs there"
+   ],
+   "rows": [
+    [
+     "Coating thickness or uniformity drift",
+     "In-line if {{statistical process control}} catches it; otherwise years into service",
+     "Caught in the parameter, it costs one cell's worth of material. Missed, it is a patch of electrode carrying more than its share of the current — a cell that ages faster and unevenly, and that looked perfect when new"
+    ],
+    [
+     "Burr or misalignment at a cut or stacked edge",
+     "Months or years into service, without warning",
+     "The classic internal short-circuit precursor. It passes every acceptance test, so the cost lands as a field failure and, if the cause is systematic, as an {{epidemic failure}} claim"
+    ],
+    [
+     "Moisture ingress at assembly or a poor seal",
+     "The first years, across a whole population at once",
+     "Gas generation and accelerated ageing — the usual explanation for a group of cells that swell and fade together. Expensive because it is rarely one cell"
+    ],
+    [
+     "A poor {{cell formation}} profile",
+     "After delivery, as an abnormal degradation slope",
+     "The single most consequential step for long-term life. These cells meet specification on the day they ship, so the cost arrives as capacity the owner was promised and does not have"
+    ],
+    [
+     "High {{self-discharge}} missed at {{grading}}",
+     "Immediately, but invisibly — from the first cycle",
+     "A string charges until its highest cell hits the limit and discharges until its lowest one does, so one badly graded cell caps what the whole string can deliver for its entire life"
+    ],
+    [
+     "A parameter that drifted for one production window",
+     "When units start failing together, not one at a time",
+     "Not rare at all, and distributed through the fleet in a pattern nobody discovers early. Whether it is a bounded remediation or a solvency question depends entirely on whether {{traceability}} can name the affected serial numbers"
+    ]
+   ],
+   "note": "**Why a point of yield moves the margin more than a point of price.** Materials — cathode powder above all — are the majority of a cell's cost, so a scrapped cell burns money that has already been spent, and at gigawatt-hour scale one point of {{first-pass yield}} is millions of dollars a year. The escape cost then multiplies roughly tenfold at each stage it survives: caught in-line it is one cell, at formation a batch, at pack assembly a module, in the field a recall and a customer relationship. And note which promise a late defect lands on — the **defect warranty** covering materials and workmanship usually expires long before the capacity guarantee, so a manufacturing flaw that surfaces in year twelve has to be argued as lost capacity rather than as a defect. Detection speed is not a quality metric. It is an economic weapon."
+  },
+  {
+   "id": "scaling-physics",
+   "title": "What changes when a cell gets big",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "The prize for a bigger cell is simple and it is the same prize every time: **fewer parts per megawatt-hour** — fewer cells, fewer welds, fewer busbars, fewer sensors, fewer management channels, and every deleted connection is a deleted assembly cost and a deleted failure point. The price is physics, and the physics is not negotiable. Where the size ladder itself sits — the amp-hour classes, and what each one did to container density — is the spec sheet's business and belongs to *The Spec Sheet, Decoded* and *From Cell to Container*; **what it costs the cell to climb that ladder is this section, and it is the half those two state and do not explain.**",
+    "**Start with the {{cube-square law}}, because everything else follows from it.** Stored energy grows with a cell's volume. The surface through which it can shed heat grows more slowly. So a cell that is twice as big in every direction holds eight times the energy behind four times the cooling area, and every rung of the ladder is therefore a thermal engineering project rather than a scaled drawing. It matters because **a cell ages at the rate of its hottest interior point**, not its average temperature, and a fatter cell puts its core further from any cooled surface than a small one ever does.",
+    "**The answer is geometry, and it is why the big cells are flat.** Large-format designs get thinner in the dimension that matters, which shortens the path heat has to travel to reach a face the cooling system can touch, and they route heat and electricity out along separate paths rather than through the same hardware. Current collection strains at the same time: pushing more energy through the same terminals means more current, and resistive losses grow with the *square* of current. Large cells answer by multiplying tabs, thickening foils, or redesigning the current path outright — and **{{internal resistance}} is the specification that tells you how well they did it.** A large cell quoting a resistance a small one would be ashamed of has bought its size with heat it will pay for every cycle for twenty years.",
+    "**Then safety concentrates, and this is the part that cannot be argued on paper.** One very large cell failing releases the energy of several small ones in a single place. {{Thermal runaway}} is a staged chain rather than an explosion from nowhere — the protective film on the negative electrode begins to decompose somewhere around 90 °C, the {{separator}} melts and shorts the electrodes by roughly 130 °C, the positive electrode then releases oxygen, the cell vents hot flammable gas, and a neighbour is heated past its own trigger. The chain is attacked link by link, and the three levers are different in kind: chemistry choice raises the trigger temperatures, directional vents dump gas away from neighbours, and barriers and spacing slow the conduction that recruits the next victim. **The system-level goal is propagation prevention, not failure prevention** — accept that one cell in millions may fail and guarantee that its neighbours do not follow. Make the failure unit bigger and every one of those margins has to be re-proven at the new size, by test. Abuse tolerance does not scale on a spreadsheet.",
+    "**Which is why a very large cell is a process achievement before it is a design choice.** Thick electrodes carry more energy per litre and are harder to coat, calender and fill without a defect, and the defect they hide is exactly the latent kind the previous section described. So the makers that climb the ladder fastest do it by **cutting derivative sizes from one platform** — the same electrode recipe, the same tooling, the same process window, in two or three heights — rather than by starting a new process each time. That is the manufacturing reading of a product roadmap, and it is available to anyone who asks which of a vendor's cells share a line. Where the ladder stops paying, and why an eighth hour of duration is an eighth hour of cells, is *Long Duration, Sodium, and the Engine Boundary*."
+   ],
+   "sales": "On a large-format cell, ask for internal resistance and for the fire-test file at that size. Both are questions the vendor either answered by engineering or did not, and neither can be inferred from the amp-hour number on the front page."
+  },
+  {
+   "id": "factories-are-the-product",
+   "title": "The factory is the product",
+   "kind": "callout",
+   "read": "5 min",
+   "ps": [
+    "**Cell capacity is bought in billions.** A cell plant costs very roughly fifty to a hundred million dollars per gigawatt-hour of annual capacity, and competitive scale starts in the tens of gigawatt-hours. The money buys {{dry room}} space, coating lines that can run a kilometre, and acres of formation racks. Then the economics turn fixed: depreciation, dry-room climate control and staffing run whether cells ship or not, so **a plant at half load is not half as profitable — it is usually deep in loss.** Utilisation is the number to watch, and a {{ramp period}} is a planned loss by construction: from first cell to rated output takes quarters to years of climbing yield while customers run their own qualification, and the plant pays full costs on partial sellable output all the way up. **Announced capacity is a press release; ramped, qualified, contracted capacity is a business.**",
+    "**Because the capital is sunk, built capacity almost never idles — it gets repointed.** Coating, assembly and formation are the same steps whichever market the cell is going to, so converting a vehicle line to storage cells is new chemistry and format variants plus stationary certification: months and millions, against years and billions for a new build. The product priorities invert as it converts — a vehicle cell chases energy density and charge rate because a car carries its battery, a storage cell chases {{cycle life}}, {{calendar life}} and cost because a container sits on concrete. Same factory, opposite optimisation targets. Watching which lines a maker converts is a better guide to where it believes demand is than anything it says about where it believes demand is.",
+    "**The {{joint venture}} exists because neither side wants the bet alone.** A cell plant only pays when it runs full for years; a customer's programme only ships if cells exist at scale on day one. The structure marries them — shared equity and capital, committed purchase volumes on one side, process technology and plant operations on the other — and it allocates the risk each side fears most. When demand disappoints, committed volumes become liabilities and the venture becomes the negotiation table, which is why a partner buying the other out during a downturn is usually a capacity-flexibility move rather than a retreat.",
+    "**And this is where \"domestic content\" turns out to be a factory question before it is a policy question.** Three levers exist in outline: a production credit that pays the maker per unit made domestically, content rules that work on the buyer by conditioning eligibility on where components were made, and sourcing restrictions that disqualify components from designated foreign entities. **How those levers are written, and how they interact, is not this lesson's subject** — it belongs to *Four Levers and One Order* in the market track. What belongs here is the fact about factories they all rest on: **eligibility status attaches to the owner, not to the site.** An American plant owned by a restricted parent cannot claim the domestic production credit — {{45X}} is the one people name — for what it makes on American soil, and moving production to a third country answers a tariff question rather than an ownership one. That is also why traceability has quietly become a market-access filter: the same serial-level records that bound a recall are the only credible way to demonstrate where a component was made, and a {{battery passport}} is that requirement written down. Factories built data-deep comply cheaply. Retrofits hurt."
+   ],
+   "sales": "Ask which plant, at what utilisation, and how long it has been at rated output. A supplier quoting an announced gigawatt-hour figure and a supplier quoting a shipped one are not answering the same question."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why do formation and ageing dominate a cell plant's capital and floor space when they add no material to the cell?",
+     "a": "Because they are the slow steps and they cannot be hurried. Formation grows the protective film that determines the cell's whole life, and ageing then parks finished cells under observation for days before they can be measured and sorted. Coating runs at metres per second; these two run at days per cell, so they need acres of racks and they set how fast the plant can actually deliver."
+    },
+    {
+     "q": "Why can statistical sampling not prove a cell's defect rate?",
+     "a": "To detect a one-in-a-million event with any confidence you would have to test something close to a million units, which for a destructive test is the whole production run. Sampling catches a process that has drifted badly and is essentially blind to rare events — and rare events are what a twenty-year fleet is made of. So the industry proves the process was in control instead of proving the output was good."
+    },
+    {
+     "q": "What does calendering set, and what goes wrong at each extreme?",
+     "a": "It presses the dried coating to a target density. Under-compress and the electrode wastes volume and stores less than it could; over-compress and the pores that let electrolyte reach the active material close up. Both show up later as capacity or rate behaviour that drifts away from the model, not as anything visible at the factory."
+    },
+    {
+     "q": "Why is making a cell bigger a thermal engineering project rather than a scaled drawing?",
+     "a": "Stored energy grows with volume while the surface that sheds heat grows more slowly, and a cell ages at the rate of its hottest interior point. A fatter cell puts its core further from any cooled face, so large formats get flatter to shorten the heat path, add tabs or thicken foils to cut resistive heating, and re-prove abuse tolerance by test because one big cell concentrates more energy in one failure."
+    },
+    {
+     "q": "Why can a denser new cell format be more expensive per kilowatt-hour than the mature one it replaces?",
+     "a": "Because yield restarts. New tooling, new process windows and new failure modes mean the plant is relearning, and for the first year or two the scrap and rework can outweigh the density gain. The learning curve is real but it runs from the beginning again every time the product changes fundamentally."
+    },
+    {
+     "q": "A maker with no plant in a country still cannot supply projects there that claim a domestic production credit. What is the most likely reason?",
+     "a": "Eligibility status attaches to the company, not to the factory. An ownership-based test follows the owner wherever it manufactures, so moving production to a third country answers a tariff question and not that one — and a plant on the right soil owned by the wrong parent fails it too."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A supplier quotes a defect rate of one hundred parts per million on a container holding about five thousand cells. Roughly what does that mean for a hundred-container project?",
+     "c": [
+      "Around fifty defective cells across the project",
+      "Around five defective cells across the project",
+      "One defective container in a hundred",
+      "Nothing measurable — the rate is too low to matter"
+     ],
+     "a": 0,
+     "why": "A hundred parts per million is one bad cell in ten thousand, and five thousand cells per container makes that roughly one defective cell in every two containers — about fifty across a hundred-container project. The point of the arithmetic is that a rate which sounds excellent per cell becomes a fleet problem once it is multiplied by the fleet."
+    },
+    {
+     "q": "Which step is the single most consequential for a cell's long-term life?",
+     "c": [
+      "Slitting the coated foil into ribbons",
+      "Sealing the can in the dry room",
+      "Formation — the first controlled charge",
+      "Grading the finished cells into matched groups"
+     ],
+     "a": 2,
+     "why": "Formation grows the protective film on the negative electrode, and the quality of that film sets how the cell ages for the rest of its life. It is also the slowest and most capital-intensive step, and a poor profile produces cells that meet specification on delivery and degrade abnormally afterwards."
+    },
+    {
+     "q": "Why did stationary storage converge on the large rectangular can rather than the cylinder or the pouch?",
+     "c": [
+      "It is the cheapest format to manufacture",
+      "Flat faces stack with almost no wasted space, and the can carries load",
+      "It has the highest energy density by weight",
+      "It is the only format that can be liquid-cooled"
+     ],
+     "a": 1,
+     "why": "A storage buyer shops on energy per twenty-foot footprint, and rectangular cells waste no volume packing into a rectangular box while the can itself carries structural load. The cylinder manufactures faster and the pouch is lighter — neither is what a box bolted to a concrete pad needs."
+    },
+    {
+     "q": "A large-format cell quotes an internal resistance well above what a small cell of the same chemistry would. What is that mainly telling you?",
+     "c": [
+      "Its chemistry is different",
+      "It will charge faster",
+      "It has a longer calendar life",
+      "Its current path was not fully redesigned for the size, so more of every cycle becomes heat"
+     ],
+     "a": 3,
+     "why": "Pushing more energy through the same terminals means more current, and resistive losses grow with the square of current. Large formats answer with more tabs, thicker foils or a redesigned path — so internal resistance is the specification that reveals how well that work was done, and the heat it implies is paid for every cycle for twenty years."
+    },
+    {
+     "q": "A manufacturing flaw surfaces as abnormal capacity loss in year twelve. Under a typical set of guarantees, where does the owner's protection come from?",
+     "c": [
+      "The capacity guarantee, because the defect warranty has usually expired by then",
+      "The defect warranty, which covers materials and workmanship for the asset's life",
+      "Neither — late failures are always excluded",
+      "The round-trip efficiency guarantee"
+     ],
+     "a": 0,
+     "why": "The defect warranty covering materials and workmanship normally runs for a much shorter period than the capacity guarantee, so a flaw that surfaces late has to be argued as capacity the owner was promised and does not have. It is the asymmetry that decides who pays for a latent manufacturing defect."
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -43233,7 +43679,8 @@ function clLessons_() {
           clLessonStringVersusCentral_(),
           clLessonCleanFirmPower_(),
           clLessonWhereTheChainBreaks_(),
-          clLessonTheCoolingPlantAndWater_()];
+          clLessonTheCoolingPlantAndWater_(),
+          clLessonHowACellIsMade_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
