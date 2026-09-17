@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 57/50`
+`Sections: 58/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.58g] — 2026-09-16 09:07:17 PM EST — v06.26r
+
+### Added
+
+- A new lesson in the AI campus track, second in the reading order: the cooling plant outside the hall — the two efficiency ratios a facilities team runs the plant on, how a chiller and an economiser split the year between them, the water argument and what a closed loop costs to win it, what aisle containment changes beyond the hall, the software that decides the energy bill, and five ways a cooling plant disappoints the people who paid for it
+- Six new flashcards and a five-question self-test on that lesson, plus seven lesson-specific glossary terms
+
+### Changed
+
+- The AI campus track is now complete, so its summary line describes what you can do after finishing it rather than how far it has got
 
 ## [v01.57g] — 2026-09-16 08:22:31 PM EST — v06.24r
 

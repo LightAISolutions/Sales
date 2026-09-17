@@ -1,4 +1,4 @@
-var VERSION = "v01.57g";
+var VERSION = "v01.58g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -42520,6 +42520,490 @@ function clLessonWhereTheChainBreaks_() {
 };
 }
 
+// `the-cooling-plant-and-water` — CLASSROOM-CURRICULUM-PLAN.md §7 row 18, and
+// position 2 of `aidc-campus`, which this registration completes at five of
+// five. The chip-side chain is `heat-is-the-constraint`'s (position 1); this
+// lesson starts where that one stops, at facility water, and ends outdoors.
+//
+// §2.3's line is the constraint and it has been re-argued once already. G7
+// closed both halves of the cooling corpus — a chiller OEM and a CDU
+// specialist — and the developer's verdict was still ONE lesson: the seller's
+// cooling conversation is PUE, WUE and approach temperature at the level a
+// facilities lead uses, and CDU internals decide no storage sale. The reversal
+// was to this lesson's INPUTS (four guides added at v05.07r), not to the line,
+// and the `liquid-cooling-hardware` lesson G7 imagined stays unscheduled. So
+// the equipment side is carried inside §3.4's eight sections: the chiller
+// arrives as temperature lift, part load and the compressor choice, and the CDU
+// arrives as one number — the approach that sizes the plant — rather than as a
+// machine to open. Eight sections, §3.4's ids in §3.4's order, no ninth.
+//
+// WHAT THE LESSON ONE POSITION UPSTREAM ALREADY OWNS — and it declares none of
+// it. `heat-is-the-constraint` (public, built 2026-09-01, the other lesson in
+// `cooling`'s READ_NEXT) carries no decline sentence anywhere: it hands nothing
+// off in prose. It has nevertheless already taught six things §3.4's outline
+// reads as this lesson's — the CRAC/CRAH distinction, the economiser, the CDU,
+// the blanking panel, warm-water supply, and `approach` as a glossary term —
+// because it was authored before this row was scheduled beneath it. That is
+// §10.6 (t) inverted: an UNDECLARED PRE-EMPTION rather than a pre-declared
+// handoff, and it changes this lesson's job. Six omissions follow, each a thing
+// this lesson uses and does not re-teach: (1) CRAC against CRAH — named once in
+// the opening sentence of `chillers-economisers-and-the-climate-file` and left
+// there; (2) what a CDU physically is and isolates — this lesson takes only its
+// approach; (3) the rear-door heat exchanger as the first step into liquid;
+// (4) the five-stage chip-to-atmosphere temperature budget — reached here only
+// from the plant end; (5) the air ceiling and why the rack got hot; (6) the
+// blanking panel as the cheapest in-cabinet fix, which `containment` explicitly
+// re-reads from outside the cabinet instead of repeating.
+//
+// §7.23's test on the one number both lessons cite. Both carry the 40-45 °C
+// warm-water band. In `heat-is-the-constraint` it is a DESTINATION — the
+// temperature you would like servers to accept, because accepting it buys
+// chiller-free hours. Here it is a CEILING — the rack's published ASHRAE class
+// is what the chip vendor permits, and the plant's water is that limit MINUS
+// the CDU's approach, which is why the tile reads 45 - 5 = 40 and why ten
+// degrees of approach is the difference between a plant with chillers and a
+// plant without them. Same number, opposite direction of travel.
+//
+// `reviewBy` 2027-03-16 — the ~6-month default (§8 item 3), taken after the
+// dated-gate search returned nothing usable, and recorded here because the
+// search found real dates rather than none. Five rejections: (1) the AIM Act's
+// next HFC allowance step, 1 January 2029 — a genuine day-level future gate in
+// this lesson's own subject (the refrigerant calendar the failure map names),
+// but twenty-seven months out, and material that moves every quarter cannot
+// wait that long for its own review; the gate is TAUGHT rather than used as the
+// clock. (2) The EPA Technology Transitions rule as amended, which moved
+// industrial process chillers to 1 January 2030 — same defect, further out, and
+// the amendment that set it is already in effect. (3) The Texas energy-and-water
+// audit that paused new data-centre approvals (in effect since 2026-08-03) —
+// the nearest LIVE gate the lesson actually teaches, and the corpus dates its
+// start and nowhere its end; a freeze pending an audit has no day. (4) An
+// Arizona tax-programme pause running to 30 June 2029 — day-level and inside a
+// stamped input, but a tax programme rather than a cooling gate. (5) ASHRAE's
+// W-class table, whose vocabulary this lesson teaches: the fifth edition landed
+// in 2021 and no next revision date exists in the corpus. The default also sits
+// outside the curriculum checker's 30-day horizon, so the 3 items it reports
+// due stay 3.
+//
+// Thirteen inputs, all public, so the fold is `tracks` and an analyst sees it.
+// Every date is read off the fetched document itself (G2): a study guide's own
+// `lastUpdated`, and the registry file's last commit date for `concepts:`.
+function clLessonTheCoolingPlantAndWater_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-cooling-plant-and-water",
+ "type": "module",
+ "title": "PUE, WUE, and the Plant Outside the Hall",
+ "short": "The chip-side chain ends at facility water; this is the half after — chillers against economisers, why water became the fight, and the software that runs it.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-16",
+ "reviewBy": "2027-03-16",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:vertiv",
+    "date": "2026-09-04",
+    "note": "the economiser as the plant's profit centre; the weather file as the first design input; precision cooling as a different animal from comfort cooling"
+   },
+   {
+    "kind": "public",
+    "ref": "study:aligned",
+    "date": "2026-08-21",
+    "note": "PUE and WUE defined and priced; delta-T as the physics lever; evaporative consumption against the dry closed loop; the community objection"
+   },
+   {
+    "kind": "public",
+    "ref": "study:qts",
+    "date": "2026-08-21",
+    "note": "pumped-refrigerant water-free cooling; trading a little PUE for a WUE near zero; the construction-water nuance behind a water-free claim"
+   },
+   {
+    "kind": "public",
+    "ref": "study:holder-construction",
+    "date": "2026-08-21",
+    "note": "the wet/dry fork and water neutrality; hot and cold aisles; containment as an interior-construction trade proven in commissioning"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vantage",
+    "date": "2026-08-21",
+    "note": "the 1.1-1.3 hyperscale PUE band and what 0.1 costs at scale; free cooling as a geographic advantage; the liquid ladder"
+   },
+   {
+    "kind": "public",
+    "ref": "study:switch",
+    "date": "2026-08-21",
+    "note": "containment taken to a sealed thermal compartment; multi-mode exterior units; source WUE and the boundary question behind a water claim"
+   },
+   {
+    "kind": "public",
+    "ref": "study:google",
+    "date": "2026-08-21",
+    "note": "operating thousands of liquid loops as a fleet: one standard loop, continuous telemetry, rehearsed leak response"
+   },
+   {
+    "kind": "public",
+    "ref": "study:schneider-electric",
+    "date": "2026-09-04",
+    "note": "DCIM and stranded capacity; the BMS and the sequence of operations; fault detection as continuous automated commissioning"
+   },
+   {
+    "kind": "public",
+    "ref": "study:coolit",
+    "date": "2026-09-04",
+    "note": "approach temperature as the number that sizes the plant; the ASHRAE W-classes; what a liquid-to-air bridge spends; the approach that gets eaten"
+   },
+   {
+    "kind": "public",
+    "ref": "study:trane-technologies",
+    "date": "2026-09-04",
+    "note": "temperature lift and the cycle; the compressor choice; IPLV and NPLV weights; air against water; the tower's five numbers; low delta-T syndrome"
+   },
+   {
+    "kind": "public",
+    "ref": "study:edgecore",
+    "date": "2026-09-05",
+    "note": "PUE and WUE bands written into a lease; a density clause as a promise about a building not yet built; near-zero WUE as the entitlement"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mccarthy",
+    "date": "2026-09-04",
+    "note": "the reuse plant a water promise commits a campus to building and operating, and why reuse improves WUE and does not improve PUE"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "the shared vocabulary this lesson leans on rather than redefining: PUE, WUE, approach temperature, ASHRAE W-class, dry cooler, free cooling, IPLV, temperature lift, low delta-T syndrome, sequence of operations, DCIM, stranded capacity"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "1.1–1.3",
+   "v": "the hyperscale PUE band",
+   "sub": "on 900 MW of IT load, each 0.1 of PUE is about 90 MW of pure overhead — around the clock, for decades"
+  },
+  {
+   "k": "45 − 5 = 40",
+   "v": "the plant's permitted water",
+   "sub": "a W45 rack minus a five-degree CDU approach, and forty-degree water is a dry cooler rather than a chiller"
+  },
+  {
+   "k": "1 of 100",
+   "v": "what full load is worth",
+   "sub": "IPLV weights the four rating points about 1, 42, 45 and 12 per cent of the hours — the brochure's headline carries the first"
+  },
+  {
+   "k": "PUE up, WUE down",
+   "v": "the trade on every lever",
+   "sub": "almost every decision in this lesson buys one ratio with the other, so a figure quoted without its partner is half an answer"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "economiser",
+   "d": "Any arrangement that rejects a building's heat to the outdoors without running the compressors, whenever the weather allows it. Air-side economisers bring outdoor air in; water-side economisers pass the loop through a heat exchanger cooled by the tower or the dry coolers. The hours per year it works are a property of the site's climate, not of the equipment, which is why cooling design begins with a weather file."
+  },
+  {
+   "t": "weather file",
+   "d": "The hour-by-hour record of a site's temperature and humidity across a typical year, used to size a cooling plant and to count how many hours it can run without compressors. It is the first input to a cooling design and the reason two identical buildings in different places post different efficiency numbers."
+  },
+  {
+   "t": "containment",
+   "d": "Physically walling off the hot aisle or the cold aisle — doors, roof panels, blanking panels — so exhaust and supply air never mix. It is built as interior construction inside the data hall, and its quality is proven in commissioning rather than on a drawing."
+  },
+  {
+   "t": "blanking panel",
+   "d": "A blank plate closing an empty rack slot so air cannot short-circuit from the cold side to the hot side through the cabinet. Individually trivial and collectively decisive: unsealed slots are the commonest reason a contained aisle behaves as though it were not contained."
+  },
+  {
+   "t": "pumped refrigerant",
+   "d": "A closed cooling loop that carries heat as refrigerant rather than as water, pumped at low pressure to an outdoor exchanger where it gives the heat up to ambient air. It consumes no water in operation and spends somewhat more electricity than an evaporative design for the same duty."
+  },
+  {
+   "t": "source WUE",
+   "d": "Water usage effectiveness counted to include the water evaporated at the power station that generated the site's electricity, rather than only the water the site itself withdraws. It is rarely published, and a site figure and a source figure are not comparable."
+  },
+  {
+   "t": "fault detection and diagnostics",
+   "d": "Software that scans a building management system's own data for signatures of things going quietly wrong — simultaneous heating and cooling, a stuck damper, a drifting sensor — and reports them. It is continuous automated commissioning, aimed at the efficiency an operating building loses gradually and nobody notices."
+  }
+ ],
+ "sections": [
+  {
+   "id": "two-ratios",
+   "title": "The two ratios, and the trade between them",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Two numbers describe a cooling plant to anyone who runs one, and a facilities lead will use both within the first ten minutes. They are not independent: almost every design decision below buys one of them with the other, which is why the last row exists.",
+   "cols": [
+    "Ratio",
+    "The arithmetic",
+    "What moves it",
+    "What a good number looks like"
+   ],
+   "rows": [
+    [
+     "**{{PUE}}**",
+     "Total facility power divided by IT power. A hall that draws 130 MW to compute with 100 MW has a PUE of 1.3, and the extra 30 MW is overhead",
+     "Fan and pump power, and above all **compressor hours** — how much of the year the plant can reject heat without running compressors at all. That is climate before it is equipment",
+     "Modern hyperscale designs run **1.1 to 1.3**. Cool, dry sites reach the low end on {{free cooling}} alone; hot or humid ones pay compressors and sit higher. A landlord writes the band into the lease, because the tenant pays the overhead"
+    ],
+    [
+     "**{{WUE}}**",
+     "Litres of water consumed per kWh of IT energy. It counts water that leaves permanently, not water that circulates",
+     "Whether heat is rejected by **evaporating water** or by blowing air across a closed loop — and, on a tower, how many {{cycles of concentration}} the chemistry tolerates before {{blowdown}} rises",
+     "An evaporative site consumes millions of gallons a year. A closed loop reaches **near zero**, and landlords now publish bands **below 0.01 L/kWh**. In a water-stressed market that number is the entitlement, not the sustainability page"
+    ],
+    [
+     "**Source {{WUE}}**",
+     "The same litres per kWh, counted to include the water the *power station* evaporated to generate the electricity",
+     "The generation mix behind the meter, which the operator mostly does not choose — and which a site-boundary figure silently excludes",
+     "Rarely published, and the question that separates a real claim from a boundary one. **Ask which boundary a figure was drawn at before comparing two of them**"
+    ],
+    [
+     "**The pair, read together**",
+     "There is no single number. The two move in **opposite directions** across almost every decision in this lesson",
+     "Every lever: evaporation buys efficiency with water; a {{dry cooler}} buys water with fan power; reusing water on site improves {{WUE}} and does **not** improve {{PUE}}, because pushing water through a membrane at pressure is work",
+     "**Both, or neither.** A plant tuned hard for water shows a worse energy number and a plant tuned hard for energy shows a worse water number. Anyone quoting one without the other is quoting half the answer"
+    ]
+   ],
+   "note": "**The climate half of the answer is why two identical buildings post different numbers.** A design that can reject heat to outdoor air for most of the year is structurally cheaper to run than the same design in a hot, humid one — the advantage belongs to the site, not to the engineering, and it is the single largest term in a PUE comparison between campuses. **The lease half is why the numbers are committed rather than measured.** A landlord promises a band before the building exists, and the published bands cluster just under 1.25 to 1.3 for PUE and below 0.01 L/kWh for WUE — figures that bind the landlord for the life of the lease.",
+   "sales": "Ask for both ratios and the boundary each was drawn at. A site WUE next to a source WUE is not a comparison, and a PUE quoted without the climate it was achieved in is a number about a place rather than about a design."
+  },
+  {
+   "id": "chillers-economisers-and-the-climate-file",
+   "title": "Chillers, economisers, and the climate file",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The room-side machines — the {{CRAC}} and the {{CRAH}} — belong to the previous lesson. This one starts at the plant they are fed from, and the first thing to know about that plant is that a chiller does not make cold. It **moves heat**, from a place you want cool to a place you do not care about, and moving heat uphill costs work. That work is the electricity bill. A machine shifting six kilowatts of heat for one kilowatt of electricity has a {{coefficient of performance}} of 6 — it is not creating energy, it is relocating it, and the electricity only pays for the relocation.",
+    "The number that decides the size of that bill is **{{temperature lift}}**: the gap between the temperature the refrigerant condenses at and the temperature it evaporates at. Compressor work rises steeply with lift and almost everything else is second order, which reduces plant efficiency to two moves. **Raise the chilled water** and the evaporator end of the lift comes up. **Lower the condensing temperature** and the other end comes down. Both are worth real money and both are free whenever the weather cooperates.",
+    "Which is why the **{{economiser}}** is the plant's profit centre rather than an accessory. When outdoor conditions are cool enough the plant unloads or bypasses mechanical cooling and rejects heat almost free, air-side or water-side. How many hours a year that works is a property of the site, so a cooling design starts with a **{{weather file}}** and not with an equipment schedule — and the two levers above are worth twice over, because warmer chilled water means the outdoor condition that allows free cooling is reached far more often.",
+    "Where the heat finally goes is the largest architectural decision in the plant, and it is made before any machine is selected. An air-cooled plant rejects to the **{{dry-bulb temperature}}**; a water-cooled plant rejects through a tower to the **{{wet-bulb temperature}}**, which is always at or below dry-bulb and on a hot dry day dramatically below. So the tower gives a smaller lift, better capacity on the worst afternoon, and access to the largest and most efficient machines — and consumes water continuously, by design. Most new plants now land in the middle on {{adiabatic cooling}}, pre-wetting the air entering an air-cooled condenser only on the hottest days, which spends water for a few hundred hours a year rather than all of them.",
+    "Then the operating point, which is not the one on the brochure. A chiller is selected against the hottest hour of the design year and spends essentially none of its life there. The industry codified the rest into **{{IPLV}}**, a weighted average of efficiency at 100, 75, 50 and 25 per cent load, weighted roughly **1, 42, 45 and 12 per cent** of the hours under {{AHRI 550/590}}. Read those weights again: the rated full-load point carries about one per cent of the number, and nearly nine tenths of it comes from the middle two points. **{{NPLV}} is the same calculation at the project's own temperatures**, which is what a data hall needs, because its chilled water is usually warmer than the standard's.",
+    "A hall changes one thing about that argument and sharpens another. Its load is far flatter than an office's — it does not go home at six and it does not stop in winter — so the machine sits nearer its design load all year and the load-following case weakens. But the **outdoor** condition still swings through the whole year, so the value migrates from load-following to **lift-following**: a hall's efficiency story is almost entirely about how low the plant is allowed to let its condensing temperature go on a cold night, and whether it can stop the compressors altogether. A control setting that holds condenser water warm all year to protect the machine throws that away, quietly, every winter."
+   ]
+  },
+  {
+   "id": "waterless",
+   "title": "Waterless: what a closed loop costs and what it buys",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "Both options reject the same heat to the same atmosphere. They differ in the temperature they can reach — and therefore in the compressor work they demand — and in whether the site consumes water at all. Read the four dimensions across both cards: **water**, **energy**, **capacity on the worst day**, and **where each one wins**.",
+   "cards": [
+    {
+     "t": "Evaporative — reject to wet-bulb through a cooling tower",
+     "meta": "Warm condenser water is pumped to a tower, a small fraction of it evaporates into an air stream, and the heat leaves with the vapour. The floor it can reach is the wet-bulb temperature, and reaching a lower floor is what the water buys",
+     "adv": [
+      "**Energy:** evaporation reaches {{wet-bulb temperature}}, always at or below dry-bulb and on a hot dry day far below — a smaller {{temperature lift}} and materially less compressor work for the same duty, every hour of the year",
+      "**Capacity:** it holds up on the worst afternoon, because wet-bulb rises less than dry-bulb does. The machine is least stressed exactly when the hall needs it most",
+      "**It permits the biggest machines** — a large {{centrifugal compressor}} is a water-cooled machine — and it opens {{free cooling}} whenever the wet-bulb is low enough for a heat exchanger to do the whole job",
+      "**Where it wins:** cool or humid climates with secure water, and any site where the electricity price dominates the water price"
+     ],
+     "dis": [
+      "**Water:** it consumes water continuously and by design. {{makeup water}} replaces what evaporates, what is discharged as {{blowdown}}, and the small amount lost as {{drift}} — millions of gallons a year on a large site",
+      "**It is a chemistry programme, not a machine:** scale, corrosion, biology, and a mandated {{Legionella}} regime with testing and records. Pushing {{cycles of concentration}} up to save water pushes the chemistry towards scale on the condenser tubes, which widens the {{approach}}, which raises the lift, which raises the bill",
+      "**Far more equipment:** tower, condenser pumps, basin heaters, filtration, chemical dosing — more to install, more to fail, more to freeze",
+      "**It is visible and wet.** The plume and the discharge attract permitting attention, and in several markets the water objection now arrives before the power one"
+     ]
+    },
+    {
+     "t": "Dry and pumped-refrigerant — reject to dry-bulb through a closed loop",
+     "meta": "A closed loop runs through finned coils and fans blow ambient air across them, the way a car radiator works. The pumped-refrigerant variant carries the heat as low-pressure refrigerant rather than as water and exchanges it against outdoor air through an indirect air-side arrangement. Nothing evaporates",
+     "adv": [
+      "**Water:** zero consumed in operation. The same fluid circulates forever, there is no tower, no basin, no chemistry, no {{Legionella}} programme and no discharge permit",
+      "**It is the entitlement.** A closed loop removes the community's most concrete objection, which is why it unlocks water-stressed, power-rich regions that evaporative competitors struggle to permit — and why *we consume no water for cooling* is the first line of the pitch rather than the last",
+      "**Less to run:** one packaged arrangement instead of a chiller, a tower, condenser pumps and the piping between them; nothing to freeze, nothing to drain",
+      "**Where it wins:** deserts and drought-prone markets, and anywhere consent rather than thermodynamics decides whether a building gets built"
+     ],
+     "dis": [
+      "**Energy:** the condensing temperature can never fall below {{dry-bulb temperature}}, so the lift is structurally higher and costs compressor power every hour of every year. The design deliberately trades a little {{PUE}} for a {{WUE}} of essentially zero",
+      "**Capacity:** performance falls exactly when it is needed most. On the hottest afternoon the plant is both least efficient and least capable, which has to be bought back with more coil and more fans",
+      "**Fan power and noise:** numerous fans, which become a planning condition near neighbours, and coils that foul with airborne dirt and pollen — a fouled coil raises the condensing temperature further",
+      "**The claim is narrower than it sounds.** It describes steady-state operation; construction itself still uses substantial water for dust control, concrete and testing, and that distinction matters in local politics"
+     ]
+    }
+   ],
+   "note": "**Three honest points the cards do not carry.** First, the middle ground is where most new plants now land: {{adiabatic cooling}} pre-wets the air only on the hottest days, capturing most of the tower's efficiency for a few hundred hours of water a year. Second, **reuse is not the same as not using**: a campus that promises to reclaim water or to return more than it takes has committed to building and operating a small treatment plant — screening, {{clarification}}, filtration, softening or {{reverse osmosis}}, {{disinfection}} and residuals handling — with operators, chemistry, permits and failure modes, and pumping water through a membrane at pressure is work, so its {{WUE}} improves and its {{PUE}} does not. Third, **net positive is an accounting structure layered on a design**, not a property of the plant: it funds restoration elsewhere to return more to the basin than the site consumes, and it says nothing about what the cooling equipment does.",
+   "sales": "If a prospect's site sits in a water-stressed market and the design is still evaporative, the permitting risk lives on the cooling drawing rather than the electrical one — and the person who can say that is in a different conversation from the person quoting kilowatts."
+  },
+  {
+   "id": "containment",
+   "title": "Containment, and what it changes outside the hall",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Racks are arranged in alternating rows: cold aisles where chilled air is supplied to equipment intakes, hot aisles where exhaust discharges. Keeping the two streams from mixing is the fundamental airflow problem, and **{{containment}}** solves it physically — framed walls, roof panels, doors and {{blanking panel}}s that seal one aisle type off so supply and exhaust never meet. The previous lesson taught the blanking panel as the cheapest fix *inside* the cabinet. This one reads the same discipline from outside, where it decides something different.",
+    "What it decides is the temperature of the air coming **back**. Heat removed is airflow multiplied by temperature rise, so capturing exhaust at its hottest moves far more heat per fan-watt than mixing it into the room and chilling the lukewarm result. Conventional perimeter cooling works across an effective exchange of only a few degrees, and the fans forcing that arrangement can consume of the order of a tenth of a site's IT load by themselves. Containment widens the return **{{delta-T}}**, which cuts the flow needed for the same duty, which cuts pump and fan power — and which raises the outdoor temperature at which the plant can still free-cool. It is an airflow trade that is paid out in {{PUE}}.",
+    "It is also, unglamorously, **interior construction inside a live building**: walls, ceilings, doors and panels installed in a data hall, which is why a general contractor self-performs it as an in-house trade and why it sits on the fit-out critical path. Its quality is proven in {{commissioning}} rather than on a drawing — leaky containment means recirculation, hot spots and a failed thermal test, and the fix is a fit-and-finish problem with mission-critical consequences.",
+    "Taken to its logical end, the aisle becomes a sealed compartment: racks in enclosed thermal rows where the whole of the exhaust is captured into an overhead plenum and returned to the cooling units, so the IT floor never sees mixed air at all. The same logic then reappears around liquid, with enclosed chambers for AI racks running several independent loops at their own pressures and temperatures. Some operators also push the argument outward and keep every drop of cooling water **outside the building shell**, running multi-mode exterior units that switch between direct evaporative, indirect and mechanical cooling as the weather moves — which is a leak-risk argument and a security argument as much as a thermal one.",
+    "The ordinary case now is the **hybrid hall**: air-cooled rows and liquid-cooled rows in the same building, sharing one plant that has to satisfy both. That is harder than either alone, because the air side wants cold supply air and the liquid side wants the warmest facility water it can get, and a single plant cannot optimise for both at once. Which temperature the plant is run at — and therefore which half of the hall is being subsidised — is a decision somebody makes in the control sequence, and it is the subject of the next section."
+   ]
+  },
+  {
+   "id": "the-nervous-system",
+   "title": "The nervous system: DCIM, the BMS, and the sequence nobody reads",
+   "kind": "callout",
+   "read": "4 min",
+   "tone": "info",
+   "ps": [
+    "Two pieces of software run the building and they are not the same thing. **{{DCIM}}** inventories the physical plant — racks, circuits, cooling units, sensors — and watches it as one live system, bridging two teams that historically shared no tools at all: facilities engineers and IT operators. Its raw material is measurement. Branch-circuit monitors, metered rack outlets and temperature sensors feed per-rack, per-circuit data upward, so an operator can see exactly which cabinet is nearing its power limit or its thermal one.",
+    "Its killer application is capacity planning, and the failure it exists to find is **{{stranded capacity}}**: power, cooling, space and redundancy stop lining up row by row, and a row with spare amps but exhausted cooling cannot take another rack. The megawatts on the one-line are real and the places to put them are not. Modern platforms have converged with simulation — model what happens if a rack lands here rather than there, before anything moves — and fleet operators run dozens of sites from one console, at which point the software is the operating experience of the building.",
+    "The **{{BMS}}** is the other half, and it is the one that decides the bill. It is the building's autopilot: sensors feed controllers running continuous loops that hold setpoints — temperatures, pressures, flows — by commanding valves, dampers and fan speeds. But its real product is the **{{sequence of operations}}**, the written logic for how equipment stages, ramps and recovers. Two identical plants with different sequences differ enormously in energy use, and programming quality is invisible and decisive.",
+    "Open protocols let equipment interoperate on the wire, and integration is still where projects live or die. In a data centre the BMS also splits duties with the electrical power-monitoring system, each watching half the building's life — which is exactly the seam a fault crosses when a hall throttles and the electrical room is the first place people look. On top of both sits **{{fault detection and diagnostics}}**: software scanning the BMS's own data for signatures like simultaneous heating and cooling, a stuck damper or a drifting sensor. It is continuous automated commissioning, aimed at the efficiency an operating building loses gradually and nobody notices.",
+    "The reason all of this belongs in a cooling lesson rather than a software one is the **{{chiller staging}}** sequence. It decides how many machines run and which. Stage on too early and four run lightly loaded where two would be efficient; stage on too late and a machine hits its floor or the hall loses temperature. The right sequence depends on each machine's part-load curve, on the pumping arrangement and on the season — and in a growing hall the load changes continuously. **A badly sequenced plant is not broken.** It simply costs more, every hour, for twenty years, which is precisely why nobody fixes it."
+   ],
+   "sales": "Nobody sells a sequence of operations, which is why nobody audits one. Ask who wrote it and when it was last revisited: the answer names the person whose problem your product is not, and that is worth knowing before you quote."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "table",
+   "read": "5 min",
+   "tone": "warn",
+   "intro": "Five ways a cooling plant disappoints the people who paid for it — one at the design table, one in the control room, one on a datasheet, one in a permitting hearing, and one on the day a tenant's racks arrive. Not one of them is a broken machine, and the note says what follows from that.",
+   "cols": [
+    "Failure",
+    "What actually happens",
+    "The signature",
+    "Who owns it"
+   ],
+   "rows": [
+    [
+     "**Stranded capacity**",
+     "Power, cooling, space and redundancy stop lining up row by row. A row with spare amps but exhausted cooling cannot take another rack, so the building reports megawatts it cannot physically deploy",
+     "A hall advertising spare capacity on the one-line while the next cabinet has nowhere to go — and a leasing conversation that stalls on a drawing rather than on price",
+     "Whoever wrote the {{basis of design}} and chose the density the halls were built to; discovered two years later by whoever is leasing the space, and found — if it is found — by {{DCIM}}"
+    ],
+    [
+     "**A bad sequence of operations**",
+     "The staging logic is left as the vendor shipped it, or condenser water is held warm all year to protect the machine, which throws away {{condenser-water relief}} — most of the reason part-load efficiency beats full-load efficiency",
+     "A plant at half its cooling load with every chiller running. That is also {{low delta-T syndrome}}'s signature, and the diagnostic for both is which way and how much water moves through the {{decoupler}} — which most plants do not measure",
+     "The controls and commissioning agent, and then the operator who inherits it for twenty years. It is invisible in every report except the electricity bill"
+    ],
+    [
+     "**The {{approach temperature}} pinch**",
+     "Every CDU capacity rating hides an approach. A unit rated at a five-degree approach is installed behind a plant whose water arrives three degrees warmer than the design assumed, on a day the dry coolers are two degrees short. It still moves heat — at less than its rating — and the racks see coolant above their limit",
+     "Rated equipment quietly under-delivering with nothing in alarm. **Every figure on the sheet was conditional, and the condition was the plant's to meet** — so a capacity number quoted without its approach is a headline rather than a rating",
+     "The mechanical engineer who set the design-day facility-water temperature, and the buyer who read a capacity without asking *at what approach*"
+    ],
+    [
+     "**Water rights and consent**",
+     "In several markets the objection that stops a campus is now about water rather than power. A state pauses new approvals pending an energy-and-water audit; a county or a village votes; a tax programme closes to new applications for years",
+     "A permitting problem that arrives on the cooling drawing rather than the electrical one — and a competitor down the road that is unaffected because its heat rejection never needed the water",
+     "The developer, and it is settled long before any equipment is selected. This is the one row on the map where the cooling architecture is the *permitting* argument"
+    ],
+    [
+     "**A hall that cannot take the tenant's next rack**",
+     "Density written into a lease is a promise about a building that does not exist yet. Row CDUs went from 750 kW to 2 MW in about two years while the rack went from roughly 120 kW to 220 kW and the platform owner began talking about megawatt racks. A hall whose CDU generation is fixed at construction serves a rack generation it was not sized for",
+     "A lease clause reading *designed to accommodate* against a delivered hall specified at a lower density — and {{liquid-to-air CDU}} bridges, which spend three times the approach of a liquid-to-liquid unit, running out first",
+     "The landlord, who carries the retrofit; discovered by the tenant on the day its racks arrive"
+    ]
+   ],
+   "note": "**Three of the five are decided before a machine is selected** — the basis of design, the water and consent question, and the density the structure and the mechanical galleries were built to. The other two are commissioning and operating failures against equipment that is working exactly as specified. **Not one of the five is a machine that broke**, which is the reason a cooling problem is so often diagnosed in the electrical room: heat flows in series, the worst stage limits the whole path, and the stage that is limiting it is usually a decision rather than a device."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does {{PUE}} measure, and what does a PUE of 1.3 actually cost?",
+     "a": "Total facility power divided by IT power. At 1.3 the building spends thirty per cent on top of every computing watt — on a 900 MW IT load each 0.1 of PUE is about 90 MW of pure overhead, running around the clock for the life of the building. That is why a landlord commits to a band in the lease: the tenant pays it."
+    },
+    {
+     "q": "Why does sending the chilled water out *warmer* save more than most equipment upgrades?",
+     "a": "Because compressor work is driven by {{temperature lift}} — the gap between condensing and evaporating temperature — and raising the supply temperature brings the evaporator end of that gap up. It also compounds: a warmer loop reaches the outdoor condition needed for {{free cooling}} far more often, so the hours when compressors can simply stop go up sharply. It buys energy, not capacity: the plant still has to be sized for the hottest day."
+    },
+    {
+     "q": "A rack is published as ASHRAE **W45** and its CDU is rated at a five-degree approach. What is the warmest facility water the plant may deliver, and why does that number decide the plant?",
+     "a": "Forty degrees. Work the chain backwards: the rack's inlet limit minus the CDU's {{approach temperature}} is the warmest water the plant may send. A plant making thirty-degree water needs compressors for much of the year in most climates; a {{dry cooler}} can make forty-degree water with no compressor whenever the outdoor air is a few degrees cooler than that. Ten degrees of approach is the difference between a plant with chillers and a plant without them."
+    },
+    {
+     "q": "Why is {{IPLV}} a better guide to a chiller's running cost than the efficiency on the front of the brochure — and when is it the wrong number too?",
+     "a": "IPLV weights efficiency at 100, 75, 50 and 25 per cent load by roughly 1, 42, 45 and 12 per cent of the hours, so the rated full-load point carries about one per cent and the machine's real life is in the middle two. It is the wrong number when the project does not run at the rating standard's temperatures, which a data hall usually does not — then ask for {{NPLV}}, the same calculation at the project's own conditions. Comparing one maker's IPLV against another's NPLV is meaningless, and it happens."
+    },
+    {
+     "q": "The previous lesson taught {{blanking panel}}s as the cheapest fix inside a cabinet. What does {{containment}} change *outside* the hall?",
+     "a": "It widens the return {{delta-T}}. Heat removed is flow times temperature rise, so capturing exhaust at its hottest carries far more heat per fan-watt than chilling a lukewarm mixture. Less flow means less pump and fan power, and a warmer return raises the outdoor temperature at which the plant can still free-cool. An airflow discipline inside the hall is paid out as {{PUE}} at the plant."
+    },
+    {
+     "q": "What is {{stranded capacity}}, which software is supposed to find it, and why does it not show up as a fault?",
+     "a": "It is capacity that exists on paper and cannot be deployed, because power, cooling, space and redundancy stop lining up row by row — a row with spare amps but exhausted cooling cannot take another rack. {{DCIM}} exists to find and unlock it by watching per-rack power and thermal data as one system. It raises no alarm because nothing is failing: every machine is working, and the building simply cannot use what it is paying for."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A site publishes a {{WUE}} of essentially zero and a {{PUE}} of 1.45. What is the most likely explanation?",
+     "c": [
+      "It rejects heat through a closed dry loop, spending fan and compressor power to avoid evaporating water",
+      "Its metering is faulty, because both numbers cannot be true at once",
+      "It has no cooling plant and relies on outside air alone",
+      "It is counting water at the source boundary rather than the site boundary"
+     ],
+     "a": 0,
+     "why": "The two ratios move in opposite directions. A dry or pumped-refrigerant design consumes no water and pays for it in electricity, because the condensing temperature can never fall below dry-bulb. Both figures are true and they describe the same deliberate trade. A source-boundary count would make the water number *worse*, not near zero."
+    },
+    {
+     "q": "Under the North American rating standard, the 100 per cent load point carries roughly what share of a chiller's {{IPLV}}?",
+     "c": [
+      "About one per cent",
+      "About a quarter",
+      "About half",
+      "All of it — IPLV is the full-load rating"
+     ],
+     "a": 0,
+     "why": "The weights are roughly 1, 42, 45 and 12 per cent at 100, 75, 50 and 25 per cent load. Nearly nine tenths of the number comes from the middle two points, which is where the machine actually lives. The headline on the brochure describes an hour the plant almost never sees."
+    },
+    {
+     "q": "A rack accepts 40 °C coolant, its CDU is rated at a 5 °C approach, and the site's dry coolers make water 6 °C above outdoor air. Above roughly what outdoor temperature does the plant need a chiller?",
+     "c": [
+      "29 °C",
+      "34 °C",
+      "40 °C",
+      "It never needs one — the rack accepts warm water"
+     ],
+     "a": 0,
+     "why": "40 minus 5 minus 6 is 29. Every hour above that is a compressor hour, and every degree of approach saved at the CDU buys another degree of chiller-free weather. Warm-water racks reduce chiller dependency; they do not delete the plant, because the design condition is the worst day rather than the average one."
+    },
+    {
+     "q": "A chilled-water plant is at half its cooling load with every chiller running. What should you look at first?",
+     "c": [
+      "Which way and how much water is flowing through the {{decoupler}}",
+      "The chillers' full-load efficiency ratings",
+      "The outdoor wet-bulb temperature",
+      "The IT load forecast for next quarter"
+     ],
+     "a": 0,
+     "why": "That is the signature of {{low delta-T syndrome}}: return water comes back too cool, so the plant must move far more water for the same duty and *flow* rather than load stages the next machine on. The cause is downstream — a leaking control valve, a three-way bypass, a fouled coil — and the decoupler flow is the diagnostic. Most plants do not measure it."
+    },
+    {
+     "q": "Why is *water-free cooling* a claim about operations rather than about the project?",
+     "c": [
+      "Construction itself uses substantial water for dust control, concrete and testing",
+      "The cooling equipment still contains water that is topped up monthly",
+      "It only applies below a stated outdoor temperature",
+      "It excludes the water used by the site's backup generators"
+     ],
+     "a": 0,
+     "why": "*Water-free* describes steady-state operation, and the distinction matters in local politics, where the objection is usually raised by people who watched the build. The claim is still the strongest one in the permitting file — it is just narrower than the phrase sounds, and saying so is what makes it credible."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -42592,11 +43076,12 @@ function clTrackAidcCampus_() {
  "schemaVersion": 1,
  "id": "aidc-campus",
  "title": "The AI Campus: Heat, Water, Power Projects, and the BESS Socket",
- "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall; how to read a campus announcement as a power project running on three clocks, and who is in the room at each stage; and where a battery does and does not plug into the buildout.",
+ "short": "Finish this and you can explain why heat and water set the density, hold the PUE and WUE conversation with the facilities lead who owns the plant, read a campus announcement as a power project running on three clocks, say what a campus commits to when it signs a reactor and what it still buys in the meantime — and say exactly where, and where not, a battery plugs into the AI buildout.",
  "group": "The AI Data-Center Wave",
  "updated": "2026-09-16",
  "lessons": [
   "heat-is-the-constraint",
+  "the-cooling-plant-and-water",
   "the-campus-as-a-power-project",
   "clean-firm-power",
   "where-bess-plugs-in"
@@ -42739,7 +43224,8 @@ function clLessons_() {
           clLessonGridStabilityAndTheGenerator_(),
           clLessonStringVersusCentral_(),
           clLessonCleanFirmPower_(),
-          clLessonWhereTheChainBreaks_()];
+          clLessonWhereTheChainBreaks_(),
+          clLessonTheCoolingPlantAndWater_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
