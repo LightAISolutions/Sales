@@ -1,4 +1,4 @@
-var VERSION = "v02.17g";
+var VERSION = "v02.18g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1322,7 +1322,48 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
             'Instinct', 'Helios', 'ROCm', 'CUDA', 'Kyber',
             'Open Compute Project', 'performance per watt',
             'reference architecture'],
-    source: 'guidance:landscape-compute-and-the-rack-2026-09' }
+    source: 'guidance:landscape-compute-and-the-rack-2026-09' },
+  // S2 session 17. Every candidate was scored against BOTH arrays first -
+  // 282 terms in this array and 249 in SCRAPER_SEGMENT_SEEDS, 506 distinct -
+  // and 33 of 35 candidates scored ZERO, which is this corpus having almost
+  // no vocabulary for a segment it has carried since S0.
+  // (ii9) found the previous landscape's roster tilted toward the incumbent
+  // it exists to measure. THIS segment has TWO incumbents whose vocabulary
+  // comes from two DIFFERENT adjacent businesses, plus a merchant-desk
+  // vocabulary belonging to neither, so the seed is spread deliberately:
+  // controls/EMS (FlexGen) HybridOS, EMS retrofit, hardware-agnostic;
+  // asset performance (Stem) PowerTrack, asset performance management;
+  // the merchant desk (Habitat, Gridmatic) QSE, capture rate, revenue floor,
+  // optimizers, optimisers; the vendor-bundled rivals Autobidder, Nispera;
+  // and IEC 62443, the buying criterion no lesson in the curriculum teaches.
+  // SIX DROPS, each with its ground: `state of health` is an EXACT term held
+  // by topic-storage-degradation; `tolling` is NEAR - topic-storage-offtake
+  // holds `tolling agreement` and the bare form would widen it; `Mosaic` and
+  // `GEMS` are dropped on AMBIGUITY, because The Mosaic Company is a listed
+  // fertiliser producer and `gems` is an ordinary English word, and the
+  // word-boundary guard does not help when the false positive IS the word;
+  // bare `EMS` on the same ground (Emergency Medical Services); and the long
+  // form `Qualified Scheduling Entity` as redundant beside QSE.
+  // WHY THE CLASS NOUN IS SEEDED AS A PLURAL, TWICE: scTermsHit_() requires a
+  // non-alphanumeric character on BOTH sides of a match - the guard that
+  // stops ABB firing inside RABBIT - so a singular term can NEVER match its
+  // own plural. Measured across the 506 held terms, 447 of the 451
+  // singular-form terms (99 per cent) have no plural counterpart seeded and
+  // only 4 do. That is corpus-wide, pre-existing and NOT this session's to
+  // fix; it is recorded as open item (xiv) for the developer. It did change
+  // this seed: the trade writes this word as a class ("battery storage
+  // optimizers and operators" is Modo's own title), so both plurals are
+  // seeded in both spellings and the singulars are knowingly foregone.
+  // New key, no sheet row, so no `tv` marker applies and no existing seed's
+  // terms array was edited. No outlet was added to SCRAPER_SOURCE_ROSTER.
+  { key: 'topic-landscape-software-and-optimization',
+    label: 'Software and optimization: the controls layer, the fleet reporter and the desk that bids the battery',
+    terms: ['HybridOS', 'EMS retrofit', 'hardware-agnostic',
+            'PowerTrack', 'asset performance management',
+            'QSE', 'capture rate', 'revenue floor',
+            'optimizers', 'optimisers',
+            'Autobidder', 'Nispera', 'IEC 62443'],
+    source: 'guidance:landscape-software-and-optimization-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

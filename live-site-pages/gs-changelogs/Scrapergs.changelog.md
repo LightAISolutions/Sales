@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 38/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.18g] — 2026-09-17 05:18:32 AM EST — v06.40r
+
+### Added
+
+- A new interest topic has been added to the news digest, covering the software and optimisation layer of the storage market — the control systems that run a plant, the reporting layer that watches a fleet, and the trading desks that bid batteries into wholesale markets. Articles matching these subjects will now be picked up and scored like any other tracked interest
+
+### Changed
+
+- Minor internal improvements
 
 ## [v02.17g] — 2026-09-17 03:05:03 AM EST — v06.36r
 

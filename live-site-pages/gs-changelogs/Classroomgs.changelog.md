@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 51/50`
+`Sections: 52/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.65g] — 2026-09-17 05:18:32 AM EST — v06.40r
+
+### Added
+
+- A new advanced study module has been added to the value-chain library, covering the part of the market that supplies the control and market-facing software behind large battery installations. It sets out how the established suppliers reached that business, the different routes newer entrants are taking into it, what each of the named companies is betting on and the risks their own disclosures attach to those bets, which developments are worth watching and which of them carry real dates, and — first, because everything else depends on it — an honest account of how much of this part of the market can actually be measured from published sources and how much cannot. It requires a higher access level than most of the library
+
+### Changed
+
+- Minor internal improvements
 
 ## [v01.64g] — 2026-09-17 04:12:42 AM EST — v06.38r
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.64g";
+var VERSION = "v01.65g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -32267,8 +32267,8 @@ function clLessonSegmentSoftwareAndOptimization_() {
  "title": "Software and optimization",
  "short": "The energy-management, controls, asset-performance and market-bidding software that decides what a storage plant earns — the site controller, the fleet…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-03-17",
  "provenance": {
   "inputs": [
    {
@@ -33703,8 +33703,8 @@ function clLessonSegmentSoftwareAndOptimization_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Control Stack: BMS, PCS, EMS — Who Decides What* · *Who Carries Which Risk* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *The Control Stack: BMS, PCS, EMS — Who Decides What* · *Who Carries Which Risk*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-software-and-optimization-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** FlexGen, Stem, Fluence, Gridmatic, Habitat Energy, Canadian Solar, DNV, ERock, ENGIE North America, Form Energy, Hunt Energy Network, HyperStrong, NRG Energy, Prevalon, Rolls-Royce Power Systems, Schneider Electric, Tesla, UL Solutions, Wärtsilä, Zhonhen Electric — each member's dossier carries one in Profiler."
    ]
   },
@@ -33783,6 +33783,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
    ]
   }
  ]
@@ -45821,7 +45828,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeCapital_(),
           guidanceDocLandscapeEpcAndConstruction_(),
           guidanceDocLandscapeCooling_(),
-          guidanceDocLandscapeComputeAndTheRack_()];
+          guidanceDocLandscapeComputeAndTheRack_(),
+          guidanceDocLandscapeSoftwareAndOptimization_()];
 }
 
 function guidanceIndex_() {
@@ -62400,6 +62408,594 @@ function guidanceDocLandscapeComputeAndTheRack_() {
 };
 }
 
+
+
+// S2 session 17. Authored BELOW the CONTENT END fence because guidance is
+// authored by a named session and never by the unattended C2 pipeline
+// (CLASSROOM-COMMITTER-CONTRACT.md 3). Spec: CLASSROOM-CURRICULUM-PLAN.md
+// 10.6, nine section ids in the order fixed there. Brief: 7.49.
+//
+// TWENTY MEMBERS AND 75.0 PER CENT OF THEM ADJACENT - THE MOST
+// ADJACENT-HEAVY ROSTER IN THE TAXONOMY, MEASURED RATHER THAN INHERITED.
+// Two incumbents, three challengers, fifteen adjacent. The next segment is
+// clean-firm-and-nuclear at 68.8 per cent and only three segments carry no
+// adjacent member at all. 10.6 (jj1) says a brief's arithmetic about the
+// corpus is a claim about the corpus, so this was re-derived off
+// profiler-segments.json before a line was drafted; it agreed.
+//
+// AND SIXTEEN OF THE TWENTY ARE HERE ON A PRODUCT LINE RATHER THAN A
+// BUSINESS. Counted off members[].basis: sixteen productsAndServices, three
+// ecosystemRole, one registry tagline. Of the three, Stem's own basis line
+// types it an incumbent of a DIFFERENT market - solar and hybrid asset
+// performance management, not merchant storage bidding. So exactly two of
+// twenty are here because this is the whole company: Habitat Energy and
+// Gridmatic, both private, both challengers, one in a sale process.
+//
+// THE BENCH IS OTHER SEGMENTS' RANKED PLAYERS AND THE RANKED PLAYERS ARE
+// OTHER SEGMENTS' BENCH - (aa2) AND (ee3) TOTAL ON BOTH SIDES FOR THE FIRST
+// TIME. 38 external memberships. All fifteen adjacent members are incumbent
+// or challenger somewhere else, eleven of them incumbent, and NOT ONE is
+// adjacent everywhere. Meanwhile four of the five external memberships held
+// by this segment's own ranked members DEMOTE them. habitat-energy is the
+// only member belonging to no other segment at all.
+//
+// THE MODULE DECLINES THE TERMINUS CLAIM. All 38 memberships point upstream,
+// but this segment sits at position 18 of 19, so exactly one segment lies
+// downstream and the result is nearly forced by arithmetic.
+// compute-and-the-rack reported the same shape from position 9 with TEN
+// segments below it, which was a measurement. This one is not, and says so.
+//
+// FOUR NAMED THIRD PARTIES PUBLISH SIX MEASUREMENTS NEAR THIS SEGMENT AND
+// NOT ONE RANKS IT - AND THE BRIEF UNDERSTATED THIS. Section 7.49 recorded
+// "no third party except Modo Energy". Measured: Wood Mackenzie ranks
+// AC-BLOCK HARDWARE and the segment's own incumbent deliberately sits it
+// out; Modo's April 2025 US directory is VENDOR-WRITTEN and quantifies six
+// peers while listing Stem in capability-only language; Modo's Great Britain
+// table covers 2 of 10 named parties and its leader is uncovered; Modo's
+// ERCOT monthly has two free months that DISAGREE; Amperical's leaderboard
+// ranks 308 individual batteries, not optimisers; Guidehouse's award is four
+// years old and about solar. Coverage and relevance run in OPPOSITE
+// directions - the ranking the corpus covers completely measures the wrong
+// market, and the two that measure the right one are covered at 44 and 20
+// per cent. Wood Mackenzie's Global BESS software landscape 2026 would
+// settle it and is paywalled.
+//
+// (dd2)'s CROSS-ATTESTATION INSTRUMENT FIRED SEVEN FOR SEVEN, ITS WIDEST
+// POSITIVE. Stem's ecosystemRole names seven rivals' vendor-bundled products
+// - Mosaic, Nispera, GEMS, Autobidder, EQ-S, insightOS, mtu EnergetIQ, the
+// AVEVA layer - and every one is confirmed in that vendor's own dossier.
+//
+// reviewBy 2027-03-17 - the six-month default, only the THIRD of seventeen
+// landscapes to take it against fourteen that found a dated gate. (jj5) ran
+// harder than ever: the ISO scan finds 5 future dates and the word-form scan
+// 13, and INSIDE THE HORIZON THEIR RESULTS ARE DISJOINT - ISO sees only
+// zhonhen 2026-10-31, word-form only habitat 2026-09-30 and hunt 2027-02-01.
+// Four rejections in writing in section 10 of the analysis file, including a
+// NEW rejection class: Habitat's FY2025 Companies House deadline of
+// 2026-09-30 was rejected on THE FILER'S OWN CADENCE, because its FY2024
+// accounts for a year ended 31 December 2024 were filed 4 January 2026. The
+// date is carried in the indicators table instead.
+//
+// The bets table carries FIVE rows, which is 10.6's own shape on a roster of
+// two and three - the previous two landscapes both added rows and had to
+// argue for them. Quiz answer indices 2, 0, 3, 1, 0 per (ff4). The literal
+// is 100 per cent ASCII.
+// ==============
+function guidanceDocLandscapeSoftwareAndOptimization_() {
+  return {
+ "id": "landscape-software-and-optimization-2026-09",
+ "group": "The Value Chain",
+ "title": "Software and Optimization - the Landscape",
+ "short": "Twenty members and fifteen of them are here because a company whose business is something else ships a software product. Both incumbents arrived sideways, the only two pure-plays are private, and four named third parties publish six measurements near this segment without one of them ranking it.",
+ "source": {
+  "doc": "Corpus synthesis over the 20 member dossiers of the software-and-optimization segment, at the profile versions in the claims ledger - no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance - landscape module",
+  "repo": "repository-information/industry-guidance/landscape-software-and-optimization-analysis.md"
+ },
+ "updated": "2026-09-17",
+ "reviewBy": "2027-03-17",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "75 per cent",
+   "v": "of the roster is adjacent - the highest share in the taxonomy",
+   "sub": "Twenty members: two incumbents, three challengers, fifteen adjacent. No other segment comes close - clean-firm-and-nuclear is next at 68.8 per cent and three segments carry no adjacent member at all. This segment is defined by a capability most of its covered members acquired sideways"
+  },
+  {
+   "k": "2 of 20",
+   "v": "members for whom this is the whole business",
+   "sub": "Sixteen are typed on a product line inside a company that does something else, three on their own ecosystem role, one on the registry tagline. Of the three, one is an incumbent of a different market by its own basis line. Only Habitat Energy and Gridmatic do nothing but this - both private, both challengers, one for sale"
+  },
+  {
+   "k": "4 and 0",
+   "v": "named third parties that measure something near this segment, and that rank the segment itself",
+   "sub": "Wood Mackenzie, Modo Energy, Amperical and Guidehouse Insights publish six measurements between them: a hardware integrator league table this segment's own incumbent deliberately sits out, a vendor-written census, a Great Britain contracted-megawatt table, a monthly per-asset capture benchmark whose two free months disagree, a settlement-derived leaderboard of 308 individual batteries, and a four-year-old award in a solar category. The one source that would settle the ranking is paywalled"
+  },
+  {
+   "k": "15 of 15",
+   "v": "bench members ranked higher somewhere else",
+   "sub": "Every adjacent member here is an incumbent or a challenger in at least one other segment - eleven of them an incumbent. Meanwhile four of the five external memberships held by this segment's own ranked players demote them. The bench is other segments' ranked players and the ranked players are other segments' bench"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held. Two carry it here, and both reach the business from an adjacent one - FlexGen from hardware integration, Stem from solar asset-performance management. No other segment in the taxonomy has an incumbent set that arrived entirely sideways."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member contesting the established set. Three carry it here and they are contesting on three different routes: a hardware company's software lines, a desk sold on revenue share, and a fund that buys the merchant risk outright. Averaging them into one bench misprices all three."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member that sells into a segment without being ranked in it. Fifteen carry it here - three quarters of the roster, the highest share in the taxonomy - and every one of the fifteen is ranked incumbent or challenger somewhere else."
+  },
+  {
+   "t": "hardware-agnostic",
+   "d": "Software sold with no equipment attached, able to control or report on any vendor's batteries. It is this segment's first buying criterion and the thing a vendor-bundled control arm cannot honestly claim, because its job is partly to keep the customer on its own hardware."
+  },
+  {
+   "t": "QSE",
+   "d": "Qualified Scheduling Entity - the ERCOT registration that lets a party submit bids and take settlement on behalf of a generator or battery. It is not software: it is a market seat with a legal obligation attached, and for the two pure-play members of this segment it is the product rather than a feature of one."
+  },
+  {
+   "t": "capture rate",
+   "d": "The share of the theoretically achievable arbitrage revenue a battery actually captured in a period, usually quoted against a fleet median. It is one of only two independent performance measures this segment has, it is published monthly, and the two months on the free record point in different directions."
+  },
+  {
+   "t": "revenue floor",
+   "d": "A contract in which a counterparty guarantees a battery owner a minimum revenue and takes the merchant upside or risk in exchange. It converts an optimiser from a fee-taker into a principal, which is why one member's own file names it as the thing that puts its balance sheet at risk."
+  },
+  {
+   "t": "asset performance management",
+   "d": "Monitoring, analytics and reporting across a fleet of generating or storage assets from many manufacturers - what is running, what is degrading, what an operator owes under a contract. It is a different business from bidding an asset into a market, and this segment's largest fleet belongs to a company that is an incumbent of this and not of the other."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with the thing that decides everything else in this module: this is the most adjacent-heavy segment in the taxonomy, and it is not close.** Twenty members - two {{incumbent}}s, three {{challenger}}s, fifteen {{adjacent}}. That is **75.0 per cent adjacent**, the highest of all nineteen segments; the next is clean-firm-and-nuclear at 68.8 per cent, and three segments carry no adjacent member at all.",
+    "**And the registry says why, member by member.** Each member is typed against a named dossier field. Counted: **sixteen** are typed on a product line - productsAndServices, some named piece of software inside a company whose business is something else. **Three** are typed on their own ecosystem role. **One**, the segment's software-first integrator, is typed on the registry tagline.",
+    "**Of the three typed on what the company is, one is explicitly an incumbent of a different market.** Stem's basis line says it in capitals: incumbency is on solar and hybrid {{asset performance management}}, not on merchant storage bidding. **So exactly two of the twenty members are in this segment because this is the whole company - Habitat Energy and Gridmatic. Both are private, both are challengers, and one of them is for sale.** Everything below follows from that sentence.",
+    "**Both incumbents arrived from an adjacent business, and neither file hides it.** FlexGen was founded in 2009 as a military hybrid-power hardware company, pivoted to utility-scale integration, and after 2023 to software and services. Stem's software suite carries **38.3 GW of solar** against **1.8 GWh of storage** at 30 June 2026 - the storage figure flat for two years while the solar side grew. No other segment in this taxonomy has an incumbent set that reached the business entirely sideways.",
+    "**The single most useful sentence in this segment's evidence base is one incumbent's description of everybody else.** Stem's own file states that every other software position in the segment except FlexGen is a division of something else - Fluence's Mosaic and Nispera, Wartsila's GEMS, Tesla's Autobidder, Canadian Solar's EQ-S, Prevalon's insightOS, Rolls-Royce's mtu EnergetIQ, Schneider's AVEVA layer - **sold with, or to protect, the vendor's own equipment.** Seven vendors named, and **every one of those products is confirmed in that vendor's own dossier.** One member's claim about seven others, each attested independently in the other's file.",
+    "**Nobody publishes a share, so dominance has to mean something testable. Here it means three things.**",
+    "**One: the largest fleet under management, which is this segment's own fifth buying criterion.** Stem's suite runs 38.3 GW of solar and 1.8 GWh of storage and **USD 62.4 million of annual recurring revenue** at 30 June 2026. Whatever else it is not, that is the largest fleet any member of this segment discloses - and note that it is the fleet rather than the revenue, because a challenger's recurring line is larger.",
+    "**Two: the retrofit path off an orphaned control system, which is this segment's first buying criterion.** FlexGen sells HybridOS **with no battery attached** - {{hardware-agnostic}} by construction - and claims 65-plus hardware configurations from 22 vendors over fifteen years. It runs an explicit EMS Retrofit line for taking over underperforming or orphaned third-party controls, and in August 2025 it bought the assets of bankrupt rival Powin for **USD 36 million** in a stalking-horse bid. That turned a pitch into an installed base: it now services the ex-Powin fleet and offers migration to its own platform. When an integrator fails, somebody has to own the controls.",
+    "**Three: absence from the wrong league table, read as evidence.** FlexGen does not appear in Wood Mackenzie's July 2026 global BESS integrator top ten. Its own file assesses at **high confidence** that this is consistent with the software-and-services position it chose, not competitive failure - and it repeats that reading against three different rivals. A company that reads its own absence from a hardware ranking as confirmation is making a claim you can test in a meeting.",
+    "**Two numbers will be put in front of you as a ranking, and they are not one.** FlexGen records **25-plus GWh** under software and services; Stem records **1.8 GWh** of storage under management. That looks like a fourteen-fold gap and it fails twice: the figures **count different things** - every system FlexGen's software and services touch, against storage assets inside a suite whose weight is solar - and they are **not sourced alike**, one being a private company's own statement and the other an SEC filer's disclosure. A company-reported number and a filed number are not two points on one scale.",
+    "**Finally, one incumbent has told us it is not in your market.** Stem's file assesses at high confidence that any framing placing it in the data-centre power trade is wrong: no data-centre product, contract or revenue exists in any source located, and the single mention anywhere is one exploratory sentence on a quarterly call that was not repeated on the next one. In a corpus built around the AI power build-out, that is worth knowing before you walk in."
+   ],
+   "sales": "Never say the word incumbent in this room without saying what it stands on. Here it stands on fleet under management, which the registry chose deliberately and which is this segment's fifth buying criterion - not on revenue, not on a share, and not on a ranking, because none of the three exists. Say that first and the rest of your numbers get a fair hearing."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and from where",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**Three {{challenger}}s, three different routes, and reading them as one bench misprices all three.** One is a hardware company's software lines. One sells a desk on a share of what the battery earns. One puts its own fund behind the battery and takes the merchant risk outright. They are not competing for the same decision.",
+    "**Fluence is by far the largest of the five members this segment ranks, and its software is an instrument of something else.** Mosaic - automated market bidding, technology-agnostic, live in ERCOT, CAISO, MISO, Australia and Japan - carried **17 GW of wind, solar and storage optimised or contracted at 31 December 2025**. Nispera does multi-OEM {{asset performance management}} across wind, solar, hydro and storage. The parent is ranked **seventh** in Wood Mackenzie's first global BESS integrator ranking of July 2026, carries 6.8 GW of cumulative deployed capacity and a record **USD 6.4 billion** backlog, and its file assesses at high confidence that AI and data-centre demand is a contracted channel rather than pipeline talk - roughly **USD 850 million** of data-centre orders through July 2026 and master supply agreements with two hyperscalers.",
+    "**And Fluence publishes the number that should make you careful with the word incumbent.** Its digital and recurring line reached **USD 148 million of annual recurring revenue at its FY2025 year end**, against a **USD 180 million** target for FY2026. The segment's fleet-scale incumbent discloses **USD 62.4 million** of total company ARR. **The challenger's software-and-recurring line is more than twice the incumbent's entire ARR** - on figures nine months apart, on definitions that do not match, and inside a company whose backlog is billions of dollars of hardware. The registry typed on fleet, which is the right basis. Just know which measure your sentence is standing on.",
+    "**Habitat Energy sells the route to market and nothing else.** Its service bundles probabilistic price forecasting, automated bid construction and a **24/7 human trading desk** with the registrations an owner would otherwise have to hold itself - Balancing Mechanism Virtual Lead Party in Great Britain, a Level 4 {{QSE}} in ERCOT, NEM bidding in Australia - sold mainly on **revenue share**. Company-stated scale is 5.5 GW under contract across three markets at June 2026. Its own file assesses at high confidence that the commercial position rests on **being a registered market participant with a desk, not on software**, which is why owners who could buy software keep buying the service. It puts the threshold at about **2 GW** before running the desk in-house pays.",
+    "**It is also the only member of this segment whose ranking rests on a third party rather than its own claim.** Third in Great Britain at **600 MW** in January 2025, behind EDF at 750 and Tesla at 680; and first among ERCOT optimisers in Modo Energy's December 2025 benchmark at an **84 per cent {{capture rate}} against a 35 per cent fleet median**.",
+    "**And its own file immediately discounts that.** Only two months of that benchmark are on the free record and **they point in different directions** - April 2026's table was led by Aypa and did not name Habitat at all. The dossier notes that a single month on a small named fleet is noisy, citing the company's own August 2025 argument that leaderboards are noisy. The one firm in this segment with an independent first place published the case against reading it that way.",
+    "**Gridmatic runs the same trade with capital instead of a fee.** Where Habitat sells a desk on revenue share, Gridmatic puts a **USD 50 million fund** behind the battery - a tolling or {{revenue floor}} offtake in which it takes the merchant risk and the scheduling seat - and then runs a retail book selling matched power to data centres and miners off the same forecasts. Named assets: Energy Vault's Cross Trails on a **ten-year physically settled revenue floor**, Alpha Omega Power's Caballero in CAISO, and Endurance Park in ERCOT West.",
+    "**The two pure-plays are measured in opposite ways and both measurements need their scope attached.** Habitat's position is independently measured and self-discounted. Gridmatic's is self-asserted and independently contradicted in scope: every scale claim is the company's own, while the one independent leaderboard that can be read - built from ERCOT's own 60-day settlement disclosures across **308 resources** for January to July 2026 - places its two ERCOT batteries **eleventh and forty-third**. Its own file is explicit that capture rate and revenue rank measure different things and that both readings can be true.",
+    "**The audited picture of the segment's independently top-ranked optimiser is small, and it is for sale.** Habitat's UK entity booked **GBP 1.99 million of turnover** and a GBP 5.0 million loss in FY2024, with GBP 12.7 million of net liabilities carried by GBP 37.2 million of parent loans and 57 average employees; the group line consolidating all three countries' optimisation fees was **GBP 4.17 million, up 80 per cent**. Its owner engaged two advisers in March 2026 to sell it, ten weeks after selling a sister platform, and as at 12 September 2026 **no buyer, signing, completion or withdrawal is on the public record.** Its next owner decides whether this segment's leading independent stays independent.",
+    "**The relationship graph is rivalrous - and mostly about somebody else's business.** Thirty-four of the 190 possible member pairs carry an edge, and those edges carry **37 curated typings of which 30 read competitor - 81 per cent.** That is the inverse of the previous landscape in this lane, where one typing of seven read competitor. But only **nine** of the thirty are between two members this segment ranks; **twenty-one involve a member it benches**, and those are overwhelmingly about AC-block hardware - one container against another, rivalries that are real in a different segment and arrive here through an overlapping roster.",
+    "**And the two pairs the graph does not connect share an endpoint.** Five ranked members give ten possible pairs. Eight carry an edge. The two that do not are **FlexGen and Habitat Energy**, and **FlexGen and Gridmatic** - so the segment's software-first incumbent has no recorded relationship of any kind with either pure-play optimiser, while the other incumbent connects to both. That silence sits exactly on the seam this module is about: one party sells the controls that run the plant, the other sells the desk that bids it, and they are adjacent layers on the same battery."
+   ],
+   "sales": "Ask which of the three routes your prospect has already bought before you position against anything. A site on a vendor-bundled control arm has a switching decision in front of it; a site on a hardware-agnostic layer has made it; a site with a third-party optimiser has an owner who decided not to build a desk, and the threshold the record gives for that decision is about 2 GW."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "6 min",
+   "kind": "table",
+   "intro": "One row per {{incumbent}} and {{challenger}} - **five rows, which is exactly the shape the spec asks for on a roster of two and three.** The previous two landscapes in this lane both added rows to their bets table and both had to argue for the addition; this roster needs none, because the fifteen {{adjacent}} members are not betting on this segment at all - they are shipping a control arm beside a business they are ranked in elsewhere. Each bet is drawn from that company's **own** strategy read and is **analysis, not fact**; the risk column is the file's own, not this module's.",
+   "cols": [
+    "Player",
+    "Arrived from / role",
+    "The bet, and what its own file says about the risk"
+   ],
+   "rows": [
+    [
+     "**FlexGen**",
+     "{{incumbent}}, from hardware integration",
+     "**Be the controls layer on everybody else's hardware, and inherit the fleets when integrators fail.** Sells {{hardware-agnostic}} software with no battery attached; bought bankrupt rival Powin's assets for USD 36 million and now services that fleet. Assesses at high confidence that it exited the hardware lane deliberately. **Its own risk:** it is private, and the headline scale claims - number two in the US, about 80 per cent of Texas - are **2022 company statements**, flagged at low confidence as unverified until updated."
+    ],
+    [
+     "**Stem**",
+     "{{incumbent}}, from solar {{asset performance management}}",
+     "**Become the application layer over a multi-vendor fleet, and let the hardware line die.** Total revenue fell from USD 461.5m to USD 156.3m while the software and services core grew from 76.0 to 111.2, gross margin swung from minus 8 per cent to 38, and adjusted earnings turned positive. **Its own risk:** recurring revenue has **stalled at the moment the pivot was supposed to pay** - 15.7 per cent growth in FY2025, then about 2 per cent sequentially twice, against a USD 65-70m year-end guide - and the binding constraint is a **USD 270.0 million stockholders' deficit**, not the product."
+    ],
+    [
+     "**Fluence**",
+     "{{challenger}}, from AC-block hardware",
+     "**Sell the bidding and asset-performance layers beyond its own hardware, so a recurring business grows under a lumpy one.** USD 148 million of digital and recurring revenue at its FY2025 year end against a USD 180 million FY2026 target, and 17 GW optimised or contracted. **Its own risk:** the binding constraint is **execution of the new manufacturing footprint, not demand** - its FY2025 guidance collapse is what a supply-chain slip does to this company, and the software line does not escape it."
+    ],
+    [
+     "**Habitat Energy**",
+     "{{challenger}}, pure-play",
+     "**Sell the route to market rather than software** - the registration, the forecast, the bid and the desk, on a share of what the battery earns. Assesses at high confidence that this is why owners who could buy software keep buying the service. **Its own risk:** the floors, tolls and swaps it uses to answer the tolling wave **raise balance-sheet risk** - a revenue-share optimiser carries no market risk and a {{revenue floor}} originator does - and **no source quantifies that book**. It is also in a sale process with no outcome on the record."
+    ],
+    [
+     "**Gridmatic**",
+     "{{challenger}}, pure-play",
+     "**Monetise one forecasting engine three ways** - proprietary trading, fund-backed tolling and floors, and a retail book for flexible load - financing the last two from its own fund rather than venture equity. **Its own risk:** the offtake business is **smaller than its rhetoric**, about 200 MW named against a 500 MW fund target, and the retail book is where growth and risk now sit, with collateral posting across market operators named as a new capital-markets hire's first responsibility."
+    ]
+   ],
+   "sales": "Every one of these five bets is an answer to the same question: how much of the asset's outcome are you willing to own? FlexGen and Stem own none of it and charge for the software. Fluence owns the hardware warranty around it. Habitat owns a share of the upside. Gridmatic owns the downside as well. Ask a prospect which of those four postures their own commercial model assumes, and the pricing conversation writes itself."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "What to watch, dated **only where the record dates it**. This segment's policy fence is large - **71 policy exposure entries across twenty members** - and it contributes **nothing** to the timing here, because **not one future dated item in it bears on what this segment sells.** The nearest belong to adjacent members' businesses elsewhere in the chain, and the one that does belong to an incumbent is a solar tax-credit cliff rather than anything about software. That is the adjacency problem showing up in the one instrument built to measure timing. So every dated row below is a corporate or reporting event, and a row the record leaves open is marked undated rather than given a plausible quarter.",
+   "cols": [
+    "Indicator",
+    "Dated",
+    "Whose",
+    "Why it moves this landscape"
+   ],
+   "rows": [
+    [
+     "**Whether the sale of the segment's independently top-ranked optimiser completes, and to whom**",
+     "**undated**",
+     "Habitat Energy and its owner",
+     "Two advisers were engaged in March 2026 and nothing has been announced since. A statutory filing on the ownership register shows a completed sale before any press release does. The buyer decides whether this segment's leading independent stays independent - and a trade buyer would move it out of the pure-play column altogether."
+    ],
+    [
+     "**The same company's FY2025 audited accounts**",
+     "**due 30 September 2026**",
+     "Habitat Energy Limited",
+     "The only audited view of an independently-ranked optimiser anywhere in this segment. **Read the date as a deadline, not an event:** its FY2024 accounts, for a year ended 31 December 2024, were filed on **4 January 2026** - more than twelve months after the year end. That is why this module's review clock is not set on this date."
+    ],
+    [
+     "**Whether the fleet-scale {{incumbent}} reaches its own USD 65-70m year-end recurring-revenue guide**",
+     "**Q4 2026 result**",
+     "Stem",
+     "Two consecutive quarters of about 2 per cent sequential growth do not get there. Recurring revenue is the measure on which the registry's incumbency claim rests, so a miss is not a small miss."
+    ],
+    [
+     "**Whether the largest {{challenger}}'s digital and recurring line reaches USD 180 million**",
+     "**FY2026, ended 30 September 2026**",
+     "Fluence",
+     "If it does, the challenger's software line is close to three times the incumbent's entire recurring revenue, and the word incumbent in this segment rests on fleet scale and nothing else."
+    ],
+    [
+     "**The next full-year independent ERCOT tables**",
+     "**undated - monthly and annual**",
+     "Modo Energy and Amperical",
+     "The only independent performance measures this segment has. Two free months disagree with each other; a full year would say whether December 2025's first place was a market-design effect or a durable edge, and whether the eleventh and forty-third placings hold."
+    ],
+    [
+     "**Whether the fund-backed optimiser raises the debt and equity its own job postings anticipate**",
+     "**undated**",
+     "Gridmatic",
+     "The fund is the whole difference between this company and the other pure-play - it is what lets it be the offtaker rather than only the bidder. An outside round would also end the independent, founder-controlled framing its file records."
+    ],
+    [
+     "**Whether the ex-Powin fleet actually migrates, and what Europe books**",
+     "**undated**",
+     "FlexGen",
+     "The retrofit path off an orphaned control system is this segment's first buying criterion, and this is the largest test of it anyone has run. The company is private, so it shows up as customer announcements or not at all."
+    ],
+    [
+     "**Whether any of the nine uncovered optimisers named in the industry census enters this corpus**",
+     "**undated**",
+     "the segment registry",
+     "Nine of the sixteen parties named in the only list of the whole field have no dossier here. Until one lands, this module's coverage arithmetic stands exactly as written."
+    ]
+   ],
+   "sales": "Not one of these eight comes from a rulemaking, which in this corpus is unusual - and it is the tell for how this segment actually moves. It moves on results days, filings and one sale process, not on rulemakings. If you are building a customer timeline for anything in this layer, anchor it to a reporting calendar rather than to a policy one."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**For the BESS seller: ask the software question first, because it decides who you are selling against.**",
+    "Three lanes exist and the corpus names all three - the **controls layer** that runs the plant whoever built it, the **{{asset performance management}} layer** that reports on a fleet, and the **route to market**: registration, forecast, bid and desk, sold on a share of revenue. A site running a vendor-bundled control arm has a switching decision in front of it. A site on a {{hardware-agnostic}} layer has already made it. A site with a third-party optimiser has an owner who has decided **not** to build a desk - and the record puts that threshold at about **2 GW** under management.",
+    "**The orphaned-controls conversation is the one with a named product behind it.** When an integrator fails, its control software is stranded and somebody has to own it. One member bought a bankrupt rival's assets for USD 36 million and sells the takeover as a product line. If your prospect's site runs software from a vendor that no longer exists, that is not an objection to work around - it is this segment's first buying criterion, written into the registry.",
+    "**For the AIDC-power seller, three things follow and all three are practical.**",
+    "**One: do not assume this segment sells into your build.** The clearest statement in the corpus is one {{incumbent}}'s, at high confidence: it has **no data-centre product, contract or revenue**, and any framing placing it in the data-centre power trade is wrong. The largest {{challenger}} is the opposite - roughly **USD 850 million** of data-centre orders through July 2026 and master supply agreements with two hyperscalers - and one pure-play built its retail book explicitly on data-centre and miner load. The segment does not have one posture towards your market. It has three, and they are held by companies that look alike on a slide.",
+    "**Two: the certification question has no shared vocabulary behind it, and two members have answers.** Cybersecurity certification is this segment's fourth buying criterion. One member's file records the **first IEC 62443 certification in the industry**; another records IEC 62443-4-1 on its plant-level control product; and one of the two incumbents publishes **no certification list at all**. Nothing in this curriculum teaches the criterion, so there is no common ground to fall back on and the answer has to come from the vendor, in writing.",
+    "**Three: price the desk, not the licence.** The two companies for whom this is the whole business do not sell software at a price. They take a percentage of what the asset earns, or they take the asset's merchant risk outright on a toll or a {{revenue floor}}. If your commercial model assumes a per-site licence, it is calibrated to the vendor-bundled arms - sixteen of the twenty members - and to **neither** of the two companies whose only business this is.",
+    "**For both: open with what is not known, because here that is a strong opening rather than a weak one.** Four named third parties publish six measurements near this segment and not one of them ranks the segment. The source that would settle it is paywalled; the only list of the whole field is written by the field. A seller who says that out loud, early, is a seller the buyer trusts with the next claim - and in a segment with no league table, being trusted with the next claim is the whole game."
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "6 min",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's twenty member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier field, to the segment registry or to the relationship graph. Dossiers already cite their own sources, so this ledger cites dossiers - a claim whose only support is this module is an opinion, and is written as one in the prose.",
+   "rows": [
+    [
+     "Segment holds 20 members - 2 incumbents, 3 challengers, 15 adjacent; chain position 18, tier services; five buying criteria",
+     "profiler-segments.json - segments[].members[], .position, .tier, .buyingCriteria"
+    ],
+    [
+     "75.0 per cent adjacent is the highest share of all nineteen segments; clean-firm-and-nuclear is next at 68.8 per cent",
+     "profiler-segments.json - computed over members[].role for all nineteen segments"
+    ],
+    [
+     "16 members are typed on a productsAndServices line, 3 on ecosystemRole, 1 on the registry tagline",
+     "profiler-segments.json - segments[].members[].basis, counted"
+    ],
+    [
+     "Both incumbents reach the segment from an adjacent business; the pure-play optimisers are private; the landscape hold was released on 2026-09-12",
+     "profiler-segments.json - segments[].notes"
+    ],
+    [
+     "No third party reachable in the research ranks storage bidding except Modo Energy, whose 2025 directory does not quantify Stem; Wood Mackenzie's Global BESS software landscape 2026 is the source that would settle it and is paywalled",
+     "profiler-segments.json - segments[].notes"
+    ],
+    [
+     "FlexGen: software-first integrator, HybridOS, 25-plus GWh across 200-plus systems under software and services, hardware-agnostic site controls",
+     "profile:flexgen @ v7 - ecosystemRole; registry tagline"
+    ],
+    [
+     "FlexGen: Powin asset purchase at USD 36m in a stalking-horse bid, August 2025; Clean Energy Services April 2026; European launch June 2026",
+     "profile:flexgen @ v7 - summary, recentDevelopments"
+    ],
+    [
+     "FlexGen: 65-plus hardware configurations from 22 vendors over fifteen years; an EMS Retrofit product line; sold with no battery attached",
+     "profile:flexgen @ v7 - productsAndServices, HybridOS and EMS Retrofit"
+    ],
+    [
+     "FlexGen: deliberate exit from the hardware lane, and absence from Wood Mackenzie's top ten read as confirmation - high confidence",
+     "profile:flexgen @ v7 - strategyRead[0]; recentDevelopments[0]"
+    ],
+    [
+     "FlexGen: number two in the US and about 80 per cent of Texas are 2022 company claims, flagged unverified at low confidence",
+     "profile:flexgen @ v7 - strategyRead[3]; ecosystemRole"
+    ],
+    [
+     "FlexGen: publishes no cybersecurity certification list - neither IEC 62443 nor NERC CIP is documented",
+     "profile:flexgen @ v7 - productsAndServices, HybridOS Control BMS positioning"
+    ],
+    [
+     "Stem: every other software position in this segment except FlexGen is a division of something else - seven vendors named by name",
+     "profile:stem @ v1 - ecosystemRole"
+    ],
+    [
+     "Each of the seven vendor-bundled products named is confirmed in that vendor's own dossier",
+     "profile:fluence @ v9, wartsila @ v7, tesla @ v7, canadian-solar @ v4, prevalon @ v5, rolls-royce-power-systems @ v1, schneider-electric @ v9 - term counts in each file"
+    ],
+    [
+     "Stem: 38.3 GW of solar and 1.8 GWh of storage under management at 2026-06-30; USD 62.4m of ARR; storage flat at 1.7-1.8 GWh for two years",
+     "profile:stem @ v1 - productsAndServices, PowerTrack Software; strategyRead[1] and [3]"
+    ],
+    [
+     "Stem: revenue 461.5 to 156.3 while hardware resale ran 360.2, 31.3, 14.8, 0.3; software core 76.0 to 111.2; gross margin minus 8 per cent to 38; adjusted earnings positive",
+     "profile:stem @ v1 - summary; strategyRead[0]"
+    ],
+    [
+     "Stem: USD 270.0m stockholders' deficit and about USD 347m of debt principal, with no going-concern qualification in the Q2 2026 filing",
+     "profile:stem @ v1 - strategyRead[4]; summary"
+    ],
+    [
+     "Stem: not a data-centre story - no product, contract or revenue in any source located; one exploratory sentence on the Q1 2026 call, not repeated",
+     "profile:stem @ v1 - strategyRead[5]"
+    ],
+    [
+     "Stem: the only third-party rank located is Guidehouse Insights' August 2022 first place for AlsoEnergy in Solar and Storage Monitoring and Control",
+     "profile:stem @ v1 - strategyRead[1]; recentDevelopments[2]"
+    ],
+    [
+     "Modo Energy's April 2025 directory lists seventeen US optimizers, quantifies six of them, and lists Stem in capability-only language",
+     "profile:stem @ v1 - relationships to tesla; strategyRead[1]"
+    ],
+    [
+     "Fluence: Mosaic and Nispera sold beyond its own hardware; ranked seventh in Wood Mackenzie's July 2026 integrator ranking; 6.8 GW cumulative; USD 6.4bn backlog",
+     "profile:fluence @ v9 - ecosystemRole; registry basis"
+    ],
+    [
+     "Fluence: 17 GW optimised or contracted through Mosaic at 2025-12-31; digital and recurring ARR USD 148m at FY2025 end against a USD 180m FY2026 target; fiscal year ends 30 September",
+     "profile:fluence @ v9 - productsAndServices, Mosaic and Fluence OS and Fluence IQ; financials.periods[]"
+    ],
+    [
+     "Fluence: about USD 850m of data-centre orders through July 2026 and master supply agreements with two hyperscalers; execution of the manufacturing footprint is the binding constraint",
+     "profile:fluence @ v9 - strategyRead[1] and [2]"
+    ],
+    [
+     "Habitat Energy: forecasting, automated bidding and a 24/7 desk bundled with Virtual Lead Party, ERCOT Level 4 QSE and NEM registrations, sold mainly on revenue share; 5.5 GW under contract at June 2026, company-stated",
+     "profile:habitat-energy @ v1 - summary; productsAndServices, EVOLVE"
+    ],
+    [
+     "Habitat Energy: third in Great Britain at 600 MW in January 2025 behind EDF at 750 and Tesla at 680; first among ERCOT optimisers in December 2025 at 84 per cent capture against a 35 per cent median; April 2026's table led by Aypa without naming Habitat",
+     "profile:habitat-energy @ v1 - productsAndServices[0].highlights[0]; recentDevelopments[4]"
+    ],
+    [
+     "Habitat Energy: the monthly rankings are paywalled beyond two months, the two months disagree, and the company's own August 2025 insight argues leaderboards are noisy",
+     "profile:habitat-energy @ v1 - technicalSpecs[2].notes"
+    ],
+    [
+     "Habitat Energy: FY2024 UK turnover GBP 1.99m, loss after tax GBP 5.0m, net liabilities GBP 12.7m, GBP 37.2m owed to group, 57 average employees; group optimisation line GBP 4.17m, up 80 per cent",
+     "profile:habitat-energy @ v1 - financials.periods[0].metrics[]"
+    ],
+    [
+     "Habitat Energy: the FY2024 accounts for a year ended 31 December 2024 were filed on 4 January 2026; the FY2025 accounts are due by 30 September 2026",
+     "profile:habitat-energy @ v1 - financials.periods[0].metrics[0].result; strategyRead[6]"
+    ],
+    [
+     "Habitat Energy: two advisers engaged in March 2026 to sell the company, ten weeks after a sister platform was sold for GBP 36m; no outcome on the public record at 2026-09-12",
+     "profile:habitat-energy @ v1 - summary; strategyRead[1]"
+    ],
+    [
+     "Habitat Energy: about 2 GW is the stated threshold before in-house optimisation pays",
+     "profile:habitat-energy @ v1 - strategyRead[0]"
+    ],
+    [
+     "Gridmatic: a USD 50m fund behind tolling and revenue-floor offtake plus the scheduling seat, and a retail book on the same forecasts; Cross Trails on a ten-year physically settled floor, Caballero in CAISO, Endurance Park in ERCOT West",
+     "profile:gridmatic @ v1 - summary; ecosystemRole; strategyRead[0]"
+    ],
+    [
+     "Gridmatic: Amperical's leaderboard, built from ERCOT's 60-day settlement disclosures over 308 resources for January to July 2026, places its two ERCOT batteries eleventh and forty-third",
+     "profile:gridmatic @ v1 - productsAndServices[0].highlights[0]; technicalSpecs[2]"
+    ],
+    [
+     "Gridmatic: every scale claim is its own, the industry-census entry is self-written, and the offtake book is about 200 MW named against a 500 MW fund target",
+     "profile:gridmatic @ v1 - ecosystemRole; productsAndServices[0].highlights[4]; strategyRead[3]"
+    ],
+    [
+     "Gridmatic: August 2026 job postings reference upcoming debt and equity raises, with collateral posting named as a capital-markets hire's first responsibility",
+     "profile:gridmatic @ v1 - strategyRead[1] and [4]"
+    ],
+    [
+     "Wartsila records the first IEC 62443 certification in the industry; Prevalon records IEC 62443-4-1 on its plant-level control product",
+     "profiler-segments.json - members[].basis for wartsila and prevalon; profile:wartsila @ v7; profile:prevalon @ v5"
+    ],
+    [
+     "38 external memberships, all upstream; all 15 bench members are ranked higher in at least one other segment; 4 of the 5 memberships held by ranked members demote them; habitat-energy belongs to no other segment",
+     "profiler-segments.json - computed across all nineteen segments[].members[]"
+    ],
+    [
+     "34 of 190 member pairs are connected, carrying 37 typings of which 30 read competitor; 9 of the 30 are between two ranked members; flexgen to habitat-energy and flexgen to gridmatic are the two missing ranked pairs",
+     "relationships[] across the twenty member dossiers at the versions in this ledger"
+    ],
+    [
+     "Eight of the twenty dossiers are at profile version 1, including one incumbent and both pure-play challengers; the spread runs v1 to v9",
+     "the twenty profile.json files - profileVersion"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does not say",
+   "read": "5 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**No source ranks this segment, and six near-misses from four named parties is a different problem from having none.** The one that covers this segment's own business best is **written by the vendors in it**. The one the corpus covers completely measures **AC-block hardware**, a business one {{incumbent}} has deliberately left. A third measures **contracted megawatts in Great Britain**. The two independent performance measures are **a single month** and **a per-asset revenue table**. The sixth is **four years old and about solar**. The source that would settle any of it is paywalled. Nothing in this module converts one of them into a market share, and a reader who wants one is being asked to accept that it does not exist.",
+    "**The industry census quantifies six entries and declines to quantify one of this segment's two incumbents.** It records a bench member's bidding product as first in two prior years and gives quantified performance for six named parties, while listing that incumbent in capability-only language. A list that quantifies six and not the seventh is saying something; what it is saying is nowhere on the record.",
+    "**Nine of the sixteen parties named in that census have no dossier here.** In the Great Britain table the corpus covers **two of ten** - and the leader, at 750 MW, is one of the uncovered eight. In the monthly ERCOT table, **April 2026's leader is uncovered**. In every case the corpus holds the number only because a covered member reports it.",
+    "**The two members that do the adjacent halves of one job are not connected.** One sells the controls that run the plant; two sell the desk that bids the same plant. Eight of the ten possible pairs among the five ranked members carry an edge, and **the two that do not are both the controls incumbent against a pure-play optimiser** - not competitor, not supplier, not partner. The other incumbent connects to both. That silence is stated here rather than explained away.",
+    "**No member publishes a revenue line for the thing this segment is defined as.** One discloses whole-company recurring revenue across solar and storage; one discloses a digital-and-recurring line inside a hardware business; one has an audited three-country fee line inside a fund's group accounts; one is private and publishes nothing; one publishes no financial statements at all. **Four different definitions and one silence - so this segment can be described and cannot be sized.**",
+    "**Every performance claim by the two pure-plays is either the company's own or a single month.** One company's leading claims about profitability, trading rank and capacity under management are all self-asserted, and its own file records the capacity figure stated on three different bases. The other's strongest marketing claims come from a company deck, and **the third-party table that deck cites was not located**. What is genuinely independent amounts to two disagreeing months, one share table from another continent, and two placings out of 308.",
+    "**The evidence base is unevenly deep, and the depth runs against the ranking.** Eight of the twenty dossiers are at **profile version 1**, and those eight include **one of the two incumbents and both pure-play challengers**. The two deepest files in the segment are a challenger and a bench member. The corpus knows the companies that arrived sideways better than the companies actually in this business - a direct consequence of the pure-plays having landed five days before this module was written.",
+    "**And nothing in this curriculum teaches two of this segment's five buying criteria.** The cybersecurity criterion resolves to no lesson: the only near-match is a certification lesson about fire testing, which is a different subject. The fleet-scale-and-scheduling-entity criterion is worse - **no term in the curriculum's entire criterion vocabulary matches it at all**, which is to say the corpus has no words for the basis on which one of this segment's two incumbents is an incumbent."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "4 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "This segment is 75 per cent adjacent. What is the first thing a landscape written on it has to say?",
+     "a": "**That most of its covered members acquired the capability sideways.** Sixteen of the twenty are typed on a software product inside a company whose business is something else, and only two are here because this is the whole company. State that before saying anything about who is winning."
+    },
+    {
+     "q": "Which two members are in this segment because merchant storage optimisation is their entire business?",
+     "a": "**Habitat Energy and Gridmatic.** Both are private, both are typed challenger, one is in a sale process with no outcome on the record, and neither has any recorded relationship with the segment's software-first incumbent."
+    },
+    {
+     "q": "A prospect quotes a share number for storage optimisation software. What do you check?",
+     "a": "**Whether it exists at all, because no source in the corpus publishes one.** Four named third parties publish six measurements nearby: a hardware league table, a vendor-written census, a Great Britain contracted-megawatt table, a monthly per-asset capture benchmark, a settlement-derived leaderboard of 308 individual batteries, and a four-year-old solar award. **None of the six ranks this segment**, and the source that would is paywalled."
+    },
+    {
+     "q": "Why is the largest fleet under management the right basis for calling a member the incumbent here?",
+     "a": "**Because it is the segment's own fifth buying criterion and it is disclosed.** Revenue is not a like-for-like basis in this roster - four members define their software revenue four different ways and a fifth publishes nothing - so fleet is the only comparable measure the record supports."
+    },
+    {
+     "q": "One member's file compares 25-plus GWh against another's 1.8 GWh. Why is that not a ranking?",
+     "a": "**Different units and different provenance.** One counts every system a software-and-services business touches; the other counts storage assets inside a suite whose weight is solar. One is a private company's own statement, the other an SEC filer's disclosure. A company-reported number and a filed number are not two points on one scale."
+    },
+    {
+     "q": "The segment's only independently top-ranked optimiser tops an ERCOT table. What else does its own file say?",
+     "a": "**That only two months of that benchmark are free, that they point in different directions, and that single-month leaderboards are noisy - citing the company's own published argument to that effect.** It also books about GBP 4 million of audited group fee income and is for sale."
+    },
+    {
+     "q": "A customer asks about cybersecurity certification for the control layer. Where does the answer come from?",
+     "a": "**From the vendor, in writing, because the curriculum has no lesson on it.** The criterion resolves to nothing: the only near-match in the whole lesson vocabulary is a certification lesson about fire testing. Two members publish IEC 62443 credentials and one incumbent publishes no certification list at all."
+    },
+    {
+     "q": "Why does the segment's very large policy fence tell you nothing about timing?",
+     "a": "**Because it belongs to other segments.** Seventy-one policy exposure entries across twenty members, and every future dated item in them attaches to an adjacent member's business elsewhere in the chain. A big fence with no relevant clock is the adjacency problem showing up in the one instrument built to measure timing."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "4 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A prospect says this segment's incumbent has the largest software business in storage. What does the record actually support?",
+     "c": [
+      "Confirm it - it discloses the largest software revenue of any member",
+      "Reject it - no member of this segment discloses any revenue figure",
+      "Confirm only the largest FLEET under management, and add that on the one recurring-revenue measure both companies publish, a challenger's digital line is more than twice that incumbent's whole-company ARR",
+      "Confirm it, because the segment registry typed the company incumbent"
+     ],
+     "a": 2,
+     "why": "The registry typed on fleet under management, which is the fifth buying criterion and is disclosed. Revenue is not a like-for-like basis here: the incumbent reports USD 62.4m of whole-company ARR while the largest challenger reports USD 148m of digital and recurring revenue inside a hardware business. Both numbers are real, they are nine months apart, and they do not measure the same thing."
+    },
+    {
+     "q": "Three quarters of this segment's roster is adjacent. How should that change the way you read its relationship graph?",
+     "c": [
+      "Seven in ten of the recorded competitor typings involve a company the segment does not rank, and most of those rivalries are about AC-block hardware in a different segment",
+      "Adjacent members cannot have relationships recorded, so the graph is incomplete by construction",
+      "The adjacent members are all smaller than the ranked ones, so their edges matter less",
+      "The graph is too sparse at 34 of 190 pairs to support any reading"
+     ],
+     "a": 0,
+     "why": "Thirty of the 37 curated typings read competitor, which looks like a field of rivals. But only nine of those thirty are between two members this segment ranks. The other twenty-one involve a bench member, and they are largely container-against-container rivalries that are real in storage-integrators-and-containers and arrive here through an overlapping roster."
+    },
+    {
+     "q": "What is the honest summary of independent rankings of this segment?",
+     "c": [
+      "There are none of any kind, in any market",
+      "There is exactly one - an industry directory - and it can be used as a market share",
+      "Wood Mackenzie ranks this segment directly and the corpus covers every party in it",
+      "Four named third parties publish six measurements near this segment and none ranks the segment; the one the corpus covers completely measures AC-block hardware, and the source that would settle it is paywalled"
+     ],
+     "a": 3,
+     "why": "The six are a hardware integrator ranking, a vendor-written US census, a Great Britain contracted-megawatt table, a monthly per-asset capture benchmark, a settlement-derived leaderboard of 308 individual batteries, and a 2022 award in a solar category. Coverage and relevance run in opposite directions: the best-covered measures the wrong market, and the two that measure the right one are covered at 44 per cent and 20 per cent."
+    },
+    {
+     "q": "A buyer asks which vendors in this segment are genuinely hardware-agnostic. What does the corpus let you say?",
+     "c": [
+      "All twenty, since every member ships software that runs on other people's equipment",
+      "That one incumbent's own file names seven rivals' products as divisions sold with, or to protect, the vendor's own equipment - and every one of those seven products is confirmed in that vendor's own dossier",
+      "None of them, because every member also manufactures hardware",
+      "Nothing - the registry does not record the distinction anywhere"
+     ],
+     "a": 1,
+     "why": "Stem's ecosystemRole names Mosaic and Nispera, GEMS, Autobidder, EQ-S, insightOS, mtu EnergetIQ and the AVEVA layer as divisions of something else. Cross-checking each against its own company's dossier confirms all seven. That is one member's claim about seven others, attested independently on the other side in every case."
+    },
+    {
+     "q": "This module's review date is the six-month default rather than a dated gate. Why?",
+     "c": [
+      "Because the nearest dated candidate is a filing deadline the same filer ran more than twelve months past a year earlier, and the other two in-horizon dates belong to adjacent members' businesses in other segments",
+      "Because the segment carries no policy exposure entries at all",
+      "Because guidance modules covering services segments always take the six-month default",
+      "Because the review date was inherited from the segment lesson"
+     ],
+     "a": 0,
+     "why": "The fence is the largest in the lane at 71 entries, so it is not empty - it is irrelevant. Three candidate dates fell inside six months: an accounts deadline for a filer whose previous accounts landed more than twelve months after the year end, a quarterly-reporting deadline for an adjacent member, and a peaker's planned in-service date. The first was rejected on the filer's own cadence and carried into the indicators table instead; the other two on subject."
+    }
+   ]
+  }
+ ]
+};
+}
 
 
 // PROJECT END

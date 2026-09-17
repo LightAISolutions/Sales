@@ -3,11 +3,49 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 107/100`
+`Sections: 108/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.40r] — 2026-09-17 05:20:02 AM EST
+
+> Author S2 session 17 — the software-and-optimization landscape module — on Opus 5 xhigh as a fresh session. This is ONE guidance module. It authors no mechanism lesson, no dossier and no report, and it creates no track. [...] Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `repository-information/industry-guidance/landscape-software-and-optimization-analysis.md`
+- **The source of truth for the seventeenth landscape**, with the **coverage-boundary section drafted before any other** per §7.49. Twelve sections plus an appendix: the measured segment table, the executive read, the coverage boundary (§2a–§2f), who dominates, who threatens, each player's bet, the indicators, the seller's play, a 37-row claims ledger, what the record does not say, the resolved freshness gate, the Scraper seed with six drops in writing, verification, and **Appendix A2** — the criterion table run through the generator's own `READ_NEXT` ∩ `CRITERION_LEXICON` test rather than asserted
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeSoftwareAndOptimization_()`** — id `landscape-software-and-optimization-2026-09`, lane The Value Chain, tier contributor, **the twenty-sixth guidance module and the seventeenth landscape**. Authored **BELOW** the `// CONTENT END` fence per `CLASSROOM-COMMITTER-CONTRACT.md` §3, registered at the **end** of `guidanceDocs_()`'s Value Chain lane. Nine sections at §10.6's ids and order, four tiles, an **eight-entry glossary with every entry used** (29 `{{term}}` uses, all resolvable), a 5-row bets table, an 8-row indicators table, a 37-row ledger, 8 drill cards and 5 quiz items at indices **2 · 0 · 3 · 1 · 0**. `reviewBy` **2027-03-17**. **The literal is 100 per cent ASCII**
+- `segment-software-and-optimization` regenerated — **one segment, `--segment` not `--all`** — its `read-next` now deep-linking the module. `--check` **7 → 7 → 6**, derived from the parsed generator before the run and **exact on both halves**
+
+#### `googleAppsScripts/Scraper/Scraper.gs`
+- **`topic-landscape-software-and-optimization`** seeded with **13 terms**, every candidate scored against **both** arrays first — 282 + 249 terms, **506 distinct** — with **33 of 35 candidates scoring zero** and **six drops each with its ground** (one exact collision, one near-collision, three on ambiguity, one redundant). Terms spread deliberately across the segment's **three** vocabularies per §10.6 **(ii9)**, because this segment has two incumbents drawn from two different adjacent businesses
+
+### Changed
+
+#### `scripts/check-classroom-content.py`
+- **The module assertion moved 25 → 26** in the same commit that registers the module — the hard assertion §10.6 (c) says must be bumped with every registration, and the edit sessions forget
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§10.6's progress note flipped to 17 of 19** and the seventeenth landscape recorded; **findings (kk1)–(kk8) written**
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.3's S2 row, §7.3's order-table row 5 and §6's S2 row flipped to 17 of ~19**, `software` struck from the remaining list, and the session record written into the S2 row
+- **§7.50 written in BOTH halves** — the brief for Phase 4 row 22, `the-china-policy-stack`, whose two gate clocks were **read off `Classroom.gs` rather than inherited** (2026-12-31 and 2026-12-24; the earlier wins) and whose §4 position was **re-measured against the built track**: position 8 sits **before** the built position 9, so row 22 is a **mid-array insert** and **P5 will fire** — the opposite of row 21's append, and a forecast a session copying row 21 would get wrong
+
+#### `README.md`
+- The structure tree gained the new analysis file (17 landscape analyses listed), and **`check-readme-tree.py --fix` corrected two one-bump GAS display drifts** — the item [PC-GS-VERSION] #1 warns is most often missed, caught by running the checker rather than by self-report
+
+### Fixed
+
+- **Nine defects in the module's own prose, caught in two passes that overlapped on nothing** — §10.6 **(kk7)**. All six pre-splice simulations returned 0/0. The **recount** pass then caught five: two miscounts (*five segments* for three; *five named third parties* for four parties publishing six measurements) and **three superlatives the adjacent content contradicted** — *the largest company in this segment* when two bench members are larger, *the largest recurring base any member discloses* when the module's own next section shows a challenger's line is bigger, and *the largest fence any landscape in this lane has met* when it is the **seventh**-largest at 71 against 142. The **screenshot** pass then caught four more: a fence claim that every future dated item belongs to an *adjacent* member when one belongs to an **incumbent**, a sales line calling none of eight rows *a regulatory date* beside a **statutory filing deadline**, and — **twice** — a paragraph promising **six** near-misses and enumerating **five**
+
+### Version and counter files
+- `repository.version.txt` **v06.39r → v06.40r**; `Classroom.gs` `VERSION` and `Classroomgs.version.txt` **v01.64g → v01.65g**; `Scraper.gs` `VERSION` and `Scrapergs.version.txt` **v02.17g → v02.18g**; `Classroomgs.changelog.md` **`51/50` → `52/50`** and `Scrapergs.changelog.md` **`38/50` → `39/50`**, each with a **generic** entry naming no company and no gated subject per `changelog-security.md`; this file **`107/100` → `108/100`**. **No rotation fired** — the EST day had not rolled, so **eleven** same-day sections here and **six** there stay exempt and the non-exempt counts hold at **97 against 100** and **46 against 50**
 
 ## [v06.39r] — 2026-09-17 04:21:16 AM EST
 
