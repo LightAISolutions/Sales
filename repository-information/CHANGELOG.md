@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.31r] — 2026-09-17 12:06:24 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.45's deploy counters written into BOTH halves** — the prose paragraph and the quoted prompt block — against the v06.30r job log rather than a forecast. **The single-leg forecast was right**: the log reads `Classroom deploy confirmed (GET): Updated to v01.60g (deployment 72) | 72/200`. Exactly **one** `Deploy <Project>` step fired — Classroom, in 26 s — and every other one, Scraper's included, exited 0 silently in zero seconds on its own `git diff` guard. **Classroom now stands at 72/200 with 128 of its allowance left; Scraper unchanged at 160/200 with 40**
+- The §7.19 order resolved on its **two reads** for the **twenty-seventh** time and no `?op=deploy` probe was made: Pages read `|v01.59g|` at 12:03 AM EST before the push and `|v01.60g|` at 12:04 AM after — re-read rather than assumed — and the job log agreed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- **Latest Session written for Phase 4 row 19**, with v06.29r demoted to `## Previous Sessions` and the 2-session cap applied. It carries the six §10.6 findings, the measured deploy, the post-rotation changelog state, the render harness including the two-step character-count movement (25,968 → 26,279 → 26,328), and a **Recommendation for next session** naming S2 session 15 (`cooling`) with the four things that carry the attention
+
+#### `README.md`
+- `Last updated:` timestamp and `Repo version:`
+
+### Notes
+
+- **No rotation on this push.** `CHANGELOG.md` sits at **99 raw / 97 non-exempt** against a 100 trigger with **two** sections dated 2026-09-17 EST — the first day since 2026-09-08 on which the non-exempt count is below the trigger, because v06.30r cleared two date groups. `Classroomgs.changelog.md` is untouched at **47/50** (this push moves no `.gs` file, so no GAS version bump and no GAS changelog entry)
+- **Three rotation bugs were caught in a DRY RUN during v06.30r and fixed before anything was committed**, and they are worth carrying: the archived date groups landed **oldest-first** where the archive is reverse-chronological; the seam between the rotated block and the pre-existing archive lost its **blank line**; and the source file's trailing `Developed by:` footer was **dragged into the archive**, duplicating it, because the oldest date group sits at the bottom of the file and the slice ran to end-of-file. **Rotate into a copy and read the seams before committing**
 
 ## [v06.30r] — 2026-09-17 12:00:37 AM EST
 
