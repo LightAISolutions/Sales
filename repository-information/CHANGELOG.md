@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 117/100`
+`Sections: 118/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.29r] — 2026-09-16 10:36:45 PM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.44's deploy counters written into BOTH halves** — the prose paragraph and the quoted prompt block — against the v06.28r job log rather than a forecast. **Both legs of v06.28r's forecast were right**: the log read `Scraper deploy confirmed (GET): Updated to v02.15g (deployment 160) | 160/200` and `Classroom deploy confirmed (GET): Updated to v01.59g (deployment 71) | 71/200`. Exactly **two** steps fired — Scraper in 9 s, Classroom in 14 s — and every other `Deploy <Project>` step exited 0 silently in zero seconds on its own `git diff` guard. **Classroom now stands at 71/200 with 129 of its allowance left; Scraper at 160/200 with 40**
+- The §7.19 order resolved on its **two reads** for the **twenty-sixth** time and no `?op=deploy` probe was made: Pages read `|v01.58g|`/`|v02.14g|` at 10:25 PM EST before the push and `|v01.59g|`/`|v02.15g|` at 10:34 PM after — re-read rather than assumed — and the job log agreed on both
+
+#### `repository-information/SESSION-CONTEXT.md`
+- `## Latest Session` written for v06.29r; the v06.27r entry moved to `## Previous Sessions` and the 2-session cap applied, dropping v06.25r
+
+### Notes
+
+- **No rotation on any file, for a TWELFTH consecutive session.** This push also lands on **2026-09-16 EST** (`TZ=America/New_York date` read 2026-09-16 while the harness banner read 2026-09-17 UTC), so `CHANGELOG.md` closes at **118 raw / 93 non-exempt** against a 100 trigger with twenty-five same-day sections, and `Classroomgs.changelog.md` at **59 / 48** against a cap of 50. Both deferrals lapse on the first push dated **2026-09-17 EST or later**, which §7.44 states as a date test the next session runs.
 
 ## [v06.28r] — 2026-09-16 10:28:01 PM EST
 
