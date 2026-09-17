@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 113/100`
+`Sections: 114/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.25r] — 2026-09-16 08:29:34 PM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.42's deploy counters written into BOTH halves** — the prose paragraph and the quoted prompt block — against the v06.24r job log rather than a forecast. The log read **`Classroom deploy confirmed (GET): Updated to v01.57g (deployment 69) | 69/200`** and **`Scraper deploy confirmed (GET): Updated to v02.14g (deployment 159) | 159/200`**. **Both legs of the v06.24r forecast were right**, which is the first time a two-`.gs` session has called both — the correction §7.41 recorded (*a counter forecast must add every intervening `.gs` push, not just the forecasting session's own*) held on its first outing.
+
+#### `repository-information/SESSION-CONTEXT.md`
+- `## Latest Session` written for v06.25r; the v06.23r entry moved to `## Previous Sessions` and the 2-session cap applied.
+
+### Notes
+
+- **THE DEPLOY RESOLVED ON ITS TWO READS FOR THE TWENTY-FOURTH TIME.** Pages read `|v01.56g|` and `|v02.13g|` at 08:27:01 PM EST and `|v01.57g|` and `|v02.14g|` at 08:27:18 PM EST — **re-read rather than assumed**, a lag of about seventeen seconds — and the job log's own two lines agreed. **No `?op=deploy` probe was made.** Exactly **two** `Deploy <Project>` steps fired (Scraper 10 s, Classroom 15 s) and logged exactly **two** lines; every other step exited 0 silently in zero seconds on its own `git diff` guard. Classroom is at a **fifth consecutive equal cycle** (69 = 69) with **131** of its allowance left; **Scraper is at 159/200 with 41 left**, and only an S2 seed moves it.
+- **NO ROTATION ON ANY FILE, FOR A TENTH CONSECUTIVE SESSION.** This push also lands on **2026-09-16 EST** — `TZ=America/New_York date` against a harness banner five hours ahead on UTC. `CHANGELOG.md` **114 raw / 93 non-exempt** against a 100 trigger, twenty-one sections dated 2026-09-16 EST; `Classroomgs.changelog.md` holds at **57 raw / 48 non-exempt** against 50 and `Scrapergs.changelog.md` at **35 raw / 31 non-exempt**, both untouched by this push. **The deferral is a function of the day of the push, not of the section count**, and all three lapse on the first push dated **2026-09-17 EST or later** — which §7.42 now states as a date test the next session runs rather than as a forecast.
 
 ## [v06.24r] — 2026-09-16 08:22:09 PM EST
 
