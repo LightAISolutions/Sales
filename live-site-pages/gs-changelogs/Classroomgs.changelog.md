@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 52/50`
+`Sections: 53/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.66g] — 2026-09-17 06:13:35 AM EST — v06.42r
+
+### Added
+
+- A new advanced lesson has been added to the market track, taking its place before the lesson that previously closed that reading list rather than at the end of it. It sets out the separate rules a seller has to keep apart when selling into this market, shows how each one asks a different question and why answering the wrong one is the common mistake, puts the dates they turn on into a single calendar running from 2023 to 2031, explains what the newest of those rules does and does not cover, and closes with the routes that remain open and the commitments a seller should never make. It requires a higher access level than most of the track
+
+### Changed
+
+- Minor internal improvements
 
 ## [v01.65g] — 2026-09-17 05:18:32 AM EST — v06.40r
 

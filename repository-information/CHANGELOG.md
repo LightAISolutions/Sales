@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 109/100`
+`Sections: 110/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.42r] — 2026-09-17 06:13:14 AM EST
+
+> Author Phase 4 row 22 — the `the-china-policy-stack` mechanism lesson — on Opus 5 xhigh as a fresh session. This is ONE lesson. It authors no guidance module, no dossier and no report, it seeds no Scraper topic, and it creates no track. [...] THIS IS THE FIRST LESSON IN THE PROGRAMME GATED ON TWO MODULES, AND IT MUST TAKE THE EARLIER CLOCK. [...] AND THE POSITION IS AN INSERT, NOT AN APPEND — DO NOT COPY ROW 21's FORECAST. [...] Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`clLessonTheChinaPolicyStack_()` — the fifty-second lesson**, *Four Levers and One Order*, id `the-china-policy-stack`, group Market Access & Bankability, authored **inside** the `// CONTENT START` … `// CONTENT END` fence, registered at the **end** of `clLessons_()` and **inserted at index 4** of `clTrackMarketAccess_()`. Eight sections at `CLASSROOM-CURRICULUM-PLAN.md` §3.5's ids and order — `four-levers` (table, 5 cols × 4 rows) · `the-macr-ladder` (`bars`, 6 items) · `the-timeline` (`timeline`, 14 items across 2023–2031) · `eo-14420` (callout, 6 paragraphs) · `compliant-lanes` (`proscons`, 5 cards) · `red-lines` (callout, 6 items, `tone: warn`) · `drill` (6 flashcards) · `check-yourself` (5 quiz items at answer indices 3·2·0·1·2). Four tiles, a seven-entry glossary with **every entry used**, 20 distinct `{{term}}` uses all resolvable, and the literal is **100 % ASCII**
+- **The third gated lesson Phase 4 has authored and the second in `market-access`.** No field says so: the stamp carries two `guidance:` refs, so `clStampKinds_()` → `clGateForProvenance_()` folds the lesson to contributor+. **All eight provenance pins were read off the documents fetched this run** — `guidance:china-policy-stack-2026-08` @2026-08-24 and `guidance:eo14420-bulk-power-2026-08` @2026-09-13 from each module's own `updated`; `study:gotion`, `study:rept`, `profile:power-electronics` @2026-09-06 and `profile:sungrow`, `profile:huawei-digital-power` @2026-09-07 from each document's own `lastUpdated`; `concepts:profiler-concepts` @2026-09-13 from `git log -1 --format=%cs` on the **unshallowed** clone
+- **`reviewBy` 2026-12-24 — the first lesson in the programme to choose between two inherited clocks.** Both were re-read off `Classroom.gs` on the day rather than carried from the brief (2026-12-31 and 2026-12-24) and both matched; the earlier wins. The nearest-gate sort ran anyway and produced **nine rejections in writing**
+
+### Changed
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§7 row 22 marked built** with the full record, **§4's `market-access` table flipped at position 8** (5 → 6 built of nine; positions 4, 6 and 7 remain), and **findings (ll1)–(ll5)** written
+- **(ll1)** a pre-splice simulation returned *0 walked / 0 failed* because `fmt_strings()` takes a **section** and was handed the **lesson**; corrected it walked **141** fields and caught a nested emphasis that would have printed literal asterisks. **A zero denominator is a failure, not a pass.** **(ll2)** the same self-contradiction appeared in **three** sections because one phrasing was drafted once and reused — invisible to every checker *and* to the recount, visible immediately in the laid-out prose. **(ll3)** the correct quiz answer was the **sole longest choice in four of five items**, a channel `(ff4)`'s index check does not measure and nothing in the repo has ever looked for. **(ll4)** a superlative beaten by a paragraph three below it, and a four-way comparison made at a date when only three of the four existed. **(ll5)** `(jj3)` is worse than recorded — registration does **not** retract the word *(planned)* from a generated segment; only a regeneration does
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.3's Phase 4 row and §6's Phase 4 row flipped to 22 of 26** with the row-22 record, and **§7.51 written in both halves** — the brief for S2 session 18, `insurance-and-risk-transfer`, measured rather than asserted: **3 members at 2 · 1 · 0, the floor of the taxonomy and the exact inverse of session 17's 20 members at 75 % adjacent**, **zero external memberships across all three**, and **position 19 of 19**, so both the inversion instrument and the terminus test have empty or zero denominators
+
+### Verified
+- `check-classroom-content.py` **0 errors / 0 warnings at 52 lessons, 8 tracks, 142 gate cases**, module assertion left at **26** (a mechanism lesson registers no module); `node --check` clean; `check-gas-inner-scripts.js` 9 files / 86 blocks clean; `check-classroom-curriculum.py --strict` no structural findings (28 stale pins and 4 items due are pre-existing; 2026-12-24 is outside the 30-day horizon and adds none); `check-classroom-pipeline.py --selftest` 13 fixtures / 0 failures
+- **The denial measured base against head through the real `handleClassroomOp_`**, two shims loading `origin/main`'s and head's PROJECT regions: `market-access` analyst `withheld` **1 → 2** — the first time any track's count has left one — visible cards holding at **4** for the analyst and **5 → 6** for contributor and admin; `cop=lesson` answers **`ROLE_DENIED`** with **0 of 8 section nodes** at 55 characters; **neither the id nor the title appears in the analyst index payload**; the analyst index **holds at 47** while the corpus goes 51 → 52. Contributor renders all eight sections at **27,193 characters with zero uncaught page errors**
+- **`--check` 6 → 6, derived from the parsed generator before the write and exact on both halves** — `the-china-policy-stack` is the only `READ_NEXT` member and the only `CRITERION_LEXICON` target of `cells-and-chemistry`, which was **already due**, so the count held while its detail line moved `read-next` → `read-next, what-is-bought-and-on-what`, predicted verbatim. **The first row on which the two halves fired on the same single segment.** Nothing was regenerated
+- `check-readme-tree.py` caught the **one-bump GAS display drift** ([PC-GS-VERSION] #1's most-missed item) and `--fix` cleared it in this commit rather than leaving it to the post-merge sweep. The PROJECT region moved **3,679,196 → 3,719,126 bytes** and the rendered lesson **26,726 → 27,193 characters** across the fix round
+
+### Version and counter files
+- `repository.version.txt` **v06.41r → v06.42r**; `Classroom.gs` `VERSION` and `Classroomgs.version.txt` **v01.65g → v01.66g**; `Classroomgs.changelog.md` **`Sections: 52/50` → `53/50`** with a generic entry naming no company and no gated subject per `changelog-security.md`; this file **`109/100` → `110/100`**. **No rotation fired** — the EST day had not rolled, so **thirteen** same-day sections here and **seven** there stay exempt and the non-exempt counts hold at **97 against 100** and **46 against 50**. `Scraper.gs` was not touched, so no Scraper version moved
 
 ## [v06.41r] — 2026-09-17 05:26:57 AM EST
 

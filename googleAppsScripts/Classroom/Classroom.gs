@@ -1,4 +1,4 @@
-var VERSION = "v01.65g";
+var VERSION = "v01.66g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -43167,6 +43167,7 @@ function clTrackMarketAccess_() {
   "how-a-storage-project-happens",
   "contracts-and-revenue",
   "how-a-utility-buys",
+  "the-china-policy-stack",
   "utility-procurement-meets-ai-load"
  ],
  "prereqs": [
@@ -44705,6 +44706,507 @@ function clLessonUtilityProcurementMeetsAiLoad_() {
  ]
 };
 }
+function clLessonTheChinaPolicyStack_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-china-policy-stack",
+ "type": "module",
+ "title": "Four Levers and One Order",
+ "short": "Four levers as four different tests on one box - ownership, origin, naming, content - what EO 14420 adds, the lanes still open, and the calendar to 2031.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-17",
+ "reviewBy": "2026-12-24",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:china-policy-stack-2026-08",
+    "date": "2026-08-24",
+    "note": "the four levers and their dates; the storage MACR ladder and the ~34% computed position; the SFE and FIE entity tests; the effective-control licensing indicia and the certification machinery; the interaction map; the five compliant lanes; and the red lines this lesson reorganises around the test each lever applies"
+   },
+   {
+    "kind": "guidance",
+    "ref": "guidance:eo14420-bulk-power-2026-08",
+    "date": "2026-09-13",
+    "note": "what the order is and what it is not; the named equipment classes under Section 5(b); the 69 kV scoping line; the four definitions, and in particular the 'or assembled' clause that makes this test run opposite to the tax test; the Section 3(b) rules deadline this lesson takes as its own review gate"
+   },
+   {
+    "kind": "public",
+    "ref": "study:gotion",
+    "date": "2026-09-06",
+    "note": "the worked example of a maker caught on two independent statutory grounds at once - named on the Section 154(b) list that the tax code imports, and separately captured by the incorporation prong - which is what makes the named-route against status-route distinction teachable"
+   },
+   {
+    "kind": "public",
+    "ref": "study:rept",
+    "date": "2026-09-06",
+    "note": "the counterpart worked example: a maker caught only by incorporation, identical to Gotion under the tax lever and outside the named-maker defense ban entirely - and the generic standard that closes the difference from 2028"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:sungrow",
+    "date": "2026-09-07",
+    "note": "public corroboration that the FCC action and EO 14420 are separate overhangs landing a month apart on the same equipment, and that the order's reach is not assessable until the implementing rules define the covered set"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:huawei-digital-power",
+    "date": "2026-09-07",
+    "note": "the case where two earlier regimes had already closed the US market, which is why an origin-based rule can have near-zero incremental effect on one vendor and a decisive effect on its rivals - the reason a lesson has to name the instrument rather than the country"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:power-electronics",
+    "date": "2026-09-06",
+    "note": "the example that breaks the intuition: a Spanish manufacturer with no Chinese ownership is covered by the FCC origin test exactly as a Chinese-built unit is, and its EO 14420 exposure is unknowable until the December rules land"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "4 + 1",
+   "v": "four levers and one order",
+   "sub": "four different tests on the same box - ownership, origin, naming, content"
+  },
+  {
+   "k": "34% vs 55%",
+   "v": "the gap that kills the credit",
+   "sub": "a listed-maker-cell system against the 2026 storage floor"
+  },
+  {
+   "k": "3 tests",
+   "v": "one phrase: foreign-produced",
+   "sub": "EO 14420, the FCC Covered List and the tax rules can disagree about one unit"
+  },
+  {
+   "k": "Dec 24, 2026",
+   "v": "the review date this lesson takes",
+   "sub": "the earlier of its two modules' clocks, not a six-month default"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "FIE",
+   "d": "Foreign-Influenced Entity - the second route into prohibited status under the tax rules. A company is an FIE if a specified foreign entity can appoint a board member or officer, if one such entity owns 25 per cent or more, if several together own 40 per cent or more, if they hold 15 per cent or more of its debt, or if a contract gives one of them effective control. The practical consequence is that a US-incorporated subsidiary of a listed maker is an FIE, so what it builds on American soil is still treated as prohibited-entity product."
+  },
+  {
+   "t": "effective control",
+   "d": "A defined set of contract terms that, if present, makes a payment to a specified foreign entity disqualifying. For intellectual-property licences signed on or after 4 July 2025 the indicia include the licensor being able to specify component sources, direct operations or limit use of the technology; royalties running beyond year ten; service agreements longer than two years; and any licence that fails to transfer all the know-how needed to operate independently. An outright purchase of the intellectual property is carved out."
+  },
+  {
+   "t": "domestic end product",
+   "d": "The Buy American origin standard at 48 CFR 25.101(a): an article manufactured in the United States whose domestic component cost exceeds 65 per cent through calendar 2028 and 75 per cent from 2029. It is a content test with a percentage bar, which is why it can answer differently from a test that asks only where final assembly happened."
+  },
+  {
+   "t": "IEEPA",
+   "d": "The International Emergency Economic Powers Act - the statute a president uses to declare a national emergency and then prohibit or condition transactions connected to it. It is an authority to restrict dealings, not a tax and not a tariff, and the same statute underpinned the 2026 tariff layers the Supreme Court struck down in February of that year."
+  },
+  {
+   "t": "bulk-power system",
+   "d": "Defined in EO 14420 as transmission facilities and control systems plus the generation needed for reliability. It includes transmission rated at 69,000 volts or more and expressly excludes facilities used in local distribution. The 69 kV line is the single most useful scoping fact in the order."
+  },
+  {
+   "t": "covered foreign entity",
+   "d": "The category EO 14420 restricts dealings with. Two routes: a government subject to a US arms embargo or sanctions regime under the ITAR, or any entity the Secretary of Energy determines is engaged in conduct detrimental to US national security or foreign policy. The second route is discretionary and carries no deadline, which is where the order's real uncertainty sits."
+  },
+  {
+   "t": "Covered List",
+   "d": "The Federal Communications Commission's list of equipment that may not receive new US equipment authorisations. Foreign-produced grid-connected inverters and power conversion systems with remote-communication capability were added on 28 July 2026 on an origin test, not an ownership one: the notices name no company and no country."
+  }
+ ],
+ "sections": [
+  {
+   "id": "four-levers",
+   "title": "The four machines, and the four different tests they apply",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Four federal machines constrain Chinese battery storage in the United States, running on four separate legal levers: tax, trade, defense procurement and the domestic-content bonus. The guidance module sets out what each machine does. **What this lesson adds is the question that separates them - what kind of test does each one apply?** One asks who owns the maker. One asks where the goods were made. One asks whether the maker is on a list. One asks how much of the cost is American. Those are four different questions, and the same container can pass one and fail the next.",
+   "cols": [
+    "Lever",
+    "What it decides",
+    "The test it applies",
+    "The date that matters",
+    "Can a seller cure it?"
+   ],
+   "rows": [
+    [
+     "Tax - the {{48E}} storage {{ITC}}",
+     "Whether roughly thirty per cent of the buyer's capital cost survives. Not a bonus on top - the whole credit.",
+     "**Ownership.** A {{prohibited foreign entity}} qualifies by name or by incorporation, and the status attaches to the owner rather than to the site.",
+     "Projects at {{begin construction}} by 31 December 2025 escape the test entirely. A 2026 start must reach 55 per cent non-{{PFE}} cost, rising to 75 by 2030.",
+     "No. American soil does not cleanse the product: a US subsidiary a quarter owned by a listed maker is an {{FIE}}, and what it builds is PFE-made."
+    ],
+    [
+     "Trade - the tariff stack",
+     "What the imported content costs. A price rather than a prohibition, and there is no exclusion process to apply to.",
+     "**Origin.** The customs origin of the goods presented at the border, with nothing said about who owns the maker.",
+     "About 40.9 per cent since 24 July 2026, after carrying three different values inside seven months. Re-verify at quote time.",
+     "Partly. Importing cells and assembling in the United States narrows the dutiable base to the cell value instead of the finished container."
+    ],
+    [
+     "Defense - {{Section 154}} and its successor",
+     "Whether the Department of Defense may buy it at all. Commercial sales are untouched, which is the distinction most often collapsed.",
+     "**Naming.** Six makers are listed by name - and from 2028 a generic foreign-entity standard replaces the list with a category.",
+     "The named-maker ban starts 1 October 2027. The generic standard phases in during 2028 and 2029 and closes on 30 January 2031.",
+     "No, for a named maker. And the later standard is wider, so a maker outside the list today is not necessarily outside its successor."
+    ],
+    [
+     "Domestic content - the ten-point adder",
+     "Whether a bonus sits on top of the credit. The smallest of the four levers and the one claimed in error most often.",
+     "**Content by cost.** A percentage of US-manufactured product: 50 per cent for 2026 starts, 55 per cent from 2027.",
+     "The same construction-start clock as the credit it attaches to.",
+     "Only with an American-made cell - and moot in any case once the base credit has already failed."
+    ]
+   ],
+   "note": "**Read the last column down.** Two of the four levers cannot be cured by anything a seller does, and they are the two whose tests are about identity rather than about the goods: who owns the maker, and whether the maker is named. The two that can be worked - the duty and the content percentage - are both about the goods. **That is the shape of the whole stack: what you build is negotiable and who you are is not.**"
+  },
+  {
+   "id": "the-macr-ladder",
+   "title": "The ladder, and where a listed-maker system actually lands",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "% non-PFE manufactured-product cost required (Section 48E storage)",
+   "intro": "The tax lever never asks whether a project used Chinese cells. It asks what share of the manufactured-product cost is **not** attributable to a {{prohibited foreign entity}} - the {{material assistance cost ratio}} - and compares that share to a floor that rises every year. **The first bar below is not a rule.** It is where a system built on listed-maker cells computes out, so that the rules above it can be read against something real.",
+   "items": [
+    {
+     "label": "A listed-maker-cell system, computed",
+     "v": 34,
+     "sub": "where the arithmetic lands, not a rule"
+    },
+    {
+     "label": "2026 construction start",
+     "v": 55,
+     "sub": "the floor in force today"
+    },
+    {
+     "label": "2027",
+     "v": 60,
+     "sub": ""
+    },
+    {
+     "label": "2028",
+     "v": 65,
+     "sub": ""
+    },
+    {
+     "label": "2029",
+     "v": 70,
+     "sub": ""
+    },
+    {
+     "label": "2030 and later",
+     "v": 75,
+     "sub": "the steepest ladder in the statute"
+    }
+   ],
+   "note": "The pack and module are about **65.6 per cent** of manufactured-product cost under the IRS tables, and a listed maker's output counts as PFE-made wherever the plant stands - so the system computes to roughly 34 per cent against a floor of 55. **That is a gap of twenty-one points in 2026 and forty-one by 2030, and no amount of American assembly closes it**, because the test is about the owner and not the address. Storage was given the steepest ladder in the statute on purpose; other facility types run a 40-to-60 band. Note what the shape of this chart implies for a pipeline: a project that fails today fails by more every year it is delayed."
+  },
+  {
+   "id": "the-timeline",
+   "title": "The calendar, 2023 to 2031",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "**The left column is the real calendar year.** Three lanes, grouped by the *test* each instrument applies rather than by the agency that issued it - which is why an executive order and a tariff schedule share a lane while a tax statute and a defense authorisation act do not. **Seven of these fourteen entries land inside 2026 alone.**",
+   "lanes": {
+    "gen": "Ownership tests (tax)",
+    "deploy": "Origin tests (trade and security)",
+    "eco": "Naming tests (defense)"
+   },
+   "items": [
+    {
+     "x": 2023.98,
+     "lane": "eco",
+     "label": "Six makers named in statute - 22 December 2023",
+     "sub": "The FY2024 defense authorisation act lists six battery producers by name and bars Department of Defense procurement from them from 1 October 2027. **It was then the narrowest instrument in this picture, and the lever that would make it decisive did not yet exist.** It did not stay narrow."
+    },
+    {
+     "x": 2025.51,
+     "lane": "gen",
+     "label": "The tax code imports the defense list - 4 July 2025",
+     "sub": "**The single most consequential entry on this calendar.** The prohibited-foreign-entity regime is created, and it adopts the defense list by reference. A procurement statute with no commercial reach becomes a test that decides commercial project finance."
+    },
+    {
+     "x": 2025.96,
+     "lane": "eco",
+     "label": "The list is replaced by a standard - 18 December 2025",
+     "sub": "The FY2026 act drops the named-company approach for a generic foreign-entity standard covering batteries, cells and functional cell components, phased across 2028, 2029 and 2031. **A maker not on the list is not outside the successor.**"
+    },
+    {
+     "x": 2025.99,
+     "lane": "gen",
+     "label": "The safe-harbour line - 31 December 2025",
+     "sub": "A project that has {{begin construction}} by this date under the physical-work or five-per-cent tests is exempt from the ratio test altogether. Everything after it is inside the ladder. This is the line the whole 2026-27 sales conversation runs along."
+    },
+    {
+     "x": 2026.0,
+     "lane": "gen",
+     "label": "The ratio era begins - 1 January 2026",
+     "sub": "A 55 per cent non-{{PFE}} floor on storage construction starts, climbing five points a year. The same midnight as the entry beside it in the other lane, and unrelated to it."
+    },
+    {
+     "x": 2026.0,
+     "lane": "deploy",
+     "label": "Non-EV battery duty rises to 25 per cent - 1 January 2026",
+     "sub": "{{Section 301}} on non-electric-vehicle lithium-ion. The stacked rate reaches 48.4 per cent, the highest point it would touch all year."
+    },
+    {
+     "x": 2026.14,
+     "lane": "deploy",
+     "label": "The Supreme Court strikes the emergency tariffs - 20 February 2026",
+     "sub": "Six to three. Both {{IEEPA}} layers fall and a bridging authority takes the stack down to 38.4 per cent. **A duty rate quoted in January was wrong by ten points in February**, which is the reason every figure in a proposal carries a date."
+    },
+    {
+     "x": 2026.56,
+     "lane": "deploy",
+     "label": "The stack settles near 40.9 per cent - 24 July 2026",
+     "sub": "The bridge expires and a 12.5 per cent forced-labour layer begins. Three different stacked values inside seven months, and none of them announced far in advance."
+    },
+    {
+     "x": 2026.57,
+     "lane": "deploy",
+     "label": "Inverters added to the {{Covered List}} - 28 July 2026",
+     "sub": "Four days later, and an entirely separate instrument: new US equipment authorisations are blocked for foreign-produced grid-connected inverters and conversion systems with remote-communication capability. **The notices name no company and no country** - the test is a {{domestic end product}} content bar."
+    },
+    {
+     "x": 2026.65,
+     "lane": "deploy",
+     "label": "EO 14420 signed - 26 August 2026",
+     "sub": "A month after the FCC action, a third origin instrument: an {{IEEPA}} emergency over the {{bulk-power system}} naming storage, inverters and critical-infrastructure uninterruptible supplies as covered equipment at 69 kV and above."
+    },
+    {
+     "x": 2026.98,
+     "lane": "deploy",
+     "label": "EO 14420 implementing rules due - 24 December 2026",
+     "sub": "**The date this lesson expires on.** Section 3(b) allows 120 days from signing for the rules that define which countries and companies are covered. Until they land nobody can tell a buyer whether a given plant is in scope, and a seller who claims otherwise is guessing."
+    },
+    {
+     "x": 2027.51,
+     "lane": "gen",
+     "label": "The recapture window opens - tax years beginning after 4 July 2027",
+     "sub": "A ten-year clawback of the full credit if the owner makes an {{effective control}} payment to a listed entity after {{COD}}. It is why post-commissioning service contracts with listed suppliers are being written short and non-exclusive - a structural change to the aftermarket, not a paperwork one."
+    },
+    {
+     "x": 2027.75,
+     "lane": "eco",
+     "label": "The named-maker ban takes effect - 1 October 2027",
+     "sub": "Department of Defense funds may not procure the six named makers' batteries. *Produced* means final assembly or a majority of components. **Commercial sales remain untouched** - this is the lever most often quoted at a commercial buyer who is not affected by it."
+    },
+    {
+     "x": 2031.08,
+     "lane": "eco",
+     "label": "The last phase of the generic standard - 30 January 2031",
+     "sub": "Existing acquisitions come inside the FY2026 standard. The furthest date on this calendar, and the one that closes the gap between a maker caught by name and a maker caught by incorporation."
+    }
+   ],
+   "note": "**Four of the fourteen entries are still ahead, and the nearest of them is this lesson's own expiry.** The pattern to carry away sits in the 2026 band: the duty stack carried three different values in seven months and settled four days before a wholly separate origin test landed at the FCC, which was itself a month before an executive order put the same equipment inside an emergency authority. **None of those three instruments refers to the others, and not one of them is the tax rule that actually decides whether the project gets financed.**"
+  },
+  {
+   "id": "eo-14420",
+   "title": "The order on top: scope, the four definitions, and the gates",
+   "kind": "callout",
+   "read": "6 min",
+   "ps": [
+    "**What it is.** A national emergency declared under {{IEEPA}} over the foreign supply of bulk-power electrical equipment. It is not a tariff, not a tax rule and not a procurement preference - it is an authority to prohibit transactions, and separately to impose conditions on equipment already installed. It matters on this desk because Section 5(b) enumerates covered equipment and the list names **battery energy storage systems**, **utility-scale and other grid-connected inverters** and **uninterruptible supplies serving critical infrastructure** on the face of the definition. No inference required.",
+    "**Definition one - the scoping line is a voltage.** The {{bulk-power system}} is transmission facilities and control systems plus the generation needed for reliability. It includes transmission rated at 69,000 volts or more and expressly excludes facilities used in local distribution. A battery behind a 34.5 kV feeder is generally outside the order; the same battery at a transmission substation is inside it. **The equipment is identical and the answer is different**, because this instrument scopes on where a thing is connected rather than on what it is.",
+    "**Definition two - and this is where the levers point in opposite directions.** Section 5(c) defines foreign-produced as *not manufactured, produced, or assembled in the United States*. Because assembly is inside the definition, US final assembly of foreign content sits **outside** this test. Now set that beside the one other instrument that uses the same words for the same equipment: the FCC's inverter entry defines foreign-produced as a unit that is neither {{45X}}-eligible nor a {{domestic end product}}, so US final assembly is **not** enough unless it clears a content bar. And the tax rules, which decide more than either of them, never use the phrase at all - they test ownership, so US assembly by a listed maker changes nothing. **One inverter, given final assembly in America from foreign subassemblies, is not foreign-produced under the order and is foreign-produced for the FCC.** Name the instrument before you answer the question.",
+    "**Definition three - who is covered is not yet knowable.** A {{covered foreign entity}} arrives by one of two routes: a government under a US arms embargo or sanctions regime, or an entity the Secretary determines is engaged in conduct detrimental to national security or foreign policy. **The second route is discretionary and undated**, so the covered set can grow later without notice and comment. This is why a European manufacturer with no Chinese ownership cannot currently say whether it is in scope - the answer does not exist yet.",
+    "**Definition four - installation is itself a transaction.** Section 2(a) reaches acquisition, importation, transfer *or installation*, so a unit already sitting in a warehouse is not automatically clear. And Section 2(b) separately authorises conditions on equipment acquired or installed **before** the order - identify, isolate, monitor, secure, disconnect, replace or remove - after weighing reliability, safety, replacement availability and continuity, with phased compliance expressly permitted. **An installed fleet is a live question rather than a closed sale.**",
+    "**One date, and six things the order does not say.** Section 3(b) requires implementing rules within 120 days of signing - **24 December 2026** - and that is where the covered-entity designations and the licensing procedures are expected to arrive. Against that one certainty, six absences worth memorising, because each is a claim somebody has already made in a meeting: it names **no companies and no countries**; it sets **no duty rate**; it does **not require removal** of anything; it gives **no deadline and no criteria** for the pre-qualified vendor list under Section 2(e); it does **not touch the tax-side rules** at all; and it creates **no private right of action**."
+   ]
+  },
+  {
+   "id": "compliant-lanes",
+   "title": "What remains open - five lanes, and which lever each one answers",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Five lanes, in the order a seller should work them. The discipline that makes this list useful is in the second line of each card: **a lane that answers one lever almost never answers another**, and the commonest way to lose a customer is to sell a tariff fix as though it were a tax fix.",
+   "cards": [
+    {
+     "t": "The safe-harboured 2025 pipeline",
+     "meta": "answers the tax lever, and only the tax lever",
+     "adv": [
+      "The full {{ITC}} is preserved through completion because the ratio test never applies to the project",
+      "The qualifying tests are the familiar ones - documented physical work, or five per cent of cost spent - with roughly four years of continuity",
+      "Binding contracts signed before mid-June 2025 carry their own cost exclusion on top"
+     ],
+     "dis": [
+      "A finite and shrinking inventory. Every month it gets smaller and no new projects enter it",
+      "Contracting discipline is required throughout: services kept inside two years, no exclusivity, full data access, nothing that reads as {{effective control}}",
+      "The ten-year recapture window opens in 2027 and reaches payments made long after the sale closed"
+     ]
+    },
+    {
+     "t": "Buyers with no tax appetite",
+     "meta": "there is no credit to lose",
+     "adv": [
+      "Merchant operators, industrial behind-the-meter loads and owners without tax capacity give up nothing, because they were never claiming the credit",
+      "Wins on the grounds that actually differentiate the product - availability, delivery date, cycle economics",
+      "The cleanest conversation available: nothing has to be argued about eligibility at all"
+     ],
+     "dis": [
+      "The duty is still payable on imported content, so the price has to absorb it",
+      "The real competitor is not the list price of a rival system but **a rival system net of its credit**, which is a gap of roughly forty to fifty per cent of capital cost to close",
+      "{{tax equity}} and {{transferability}} value is absent on both sides, so the financing structure is different and often thinner"
+     ]
+    },
+    {
+     "t": "Assembly inside the United States",
+     "meta": "a cost lever, not a tax fix, and not an FCC fix either",
+     "adv": [
+      "Duty applies to the customs value of the cells rather than the finished container, which roughly halves the tariff burden",
+      "Domestic logistics, shorter delivery, and a supply story a buyer can inspect"
+     ],
+     "dis": [
+      "It fixes nothing on the ownership test. A listed maker's American output is still prohibited-entity product, and the {{domestic content adder}} stays out of reach",
+      "It does not automatically answer the FCC either: that test wants a {{domestic end product}}, which is a content percentage rather than a final-assembly location",
+      "**Overpromising a tax outcome on the strength of a US address is the fastest way to lose a customer**, because their counsel will check it"
+     ]
+    },
+    {
+     "t": "An outright sale of the technology",
+     "meta": "moves the technology without moving the entity",
+     "adv": [
+      "A genuine purchase of intellectual property is carved out of the {{effective control}} tests",
+      "It puts the technology inside somebody else's compliant supply chain, where the ownership question is answered before it is asked"
+     ],
+     "dis": [
+      "The royalty-bearing licence is the dangerous version, and every indicium in the rules was written with it in mind",
+      "The defense channel has already closed its licence route, and the tax regulations may tighten further",
+      "It is a corporate transaction on a corporate timetable, so it is never the answer to a live opportunity"
+     ]
+    },
+    {
+     "t": "Markets outside the United States",
+     "meta": "none of the four levers reaches",
+     "adv": [
+      "Latin America, the Middle East, Australia and Southeast Asia are open on the same containerised product with no tariff or tax penalty",
+      "The sale is decided on the merits of the equipment rather than on the nationality of its owner"
+     ],
+     "dis": [
+      "Different bankability regimes and different certification files, so the qualification work does not transfer",
+      "Europe is not a clean substitute: a separate phase-out of Chinese-origin inverters from EU-funded projects takes hold from April 2027",
+      "It builds no American reference fleet, which is the asset the US market will ask for whenever it reopens"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "red-lines",
+   "title": "Six red lines for a listed-supplier sales team",
+   "kind": "callout",
+   "read": "3 min",
+   "tone": "warn",
+   "ps": [
+    "**1 - Never assert credit eligibility** for a 2026-or-later construction start using listed-maker content. It is not supportable on the current law, and the assertion will be checked by somebody whose job is to check it.",
+    "**2 - Never sign or facilitate a certification** that product is not prohibited-entity made when it is. These are penalties-of-perjury documents carrying the supplier's tax identification number, a six-year retention duty and a supplier penalty of the greater of ten per cent of the underpayment or five thousand dollars. A buyer who calls it *just paperwork* has misunderstood the document.",
+    "**3 - Route every begin-construction and safe-harbour representation through counsel.** Support the buyer's documentation; never opine on the buyer's tax position. The distinction is not a formality - it is the difference between helping and advising.",
+    "**4 - Date-stamp every duty figure you put in a model.** The stack carried three values in seven months and none of the changes was announced far ahead. A total-cost model quoting an undated rate is a model that will be wrong on a schedule nobody controls.",
+    "**5 - Never answer the question \"is it foreign-produced\" without naming the instrument.** Two regimes now use that phrase for the same equipment and they can disagree about one physical unit - the order's definition includes assembly, the FCC's requires a content percentage - and a third instrument decides the same practical question without using the phrase at all, because the tax rules test ownership instead. **A one-word answer to that question is always wrong somewhere.**",
+    "**6 - In Texas, lead with the security architecture before it is asked for.** The no-remote-access requirements and the attestation regime are the first questions a listed supplier will face there, and volunteering the answer reads very differently from producing it under pressure."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Four levers. What single question separates them, and what are the four answers?",
+     "a": "*What kind of test does this lever apply?* The tax lever tests **ownership** - who owns the maker. The trade lever tests **origin** - where the goods were made. The defense lever tests **naming** - whether the maker is on a list. The adder tests **content by cost** - what share of the manufactured product is American. Four questions, four different dates, four different remedies. Establishing which one a buyer means is the whole of the first conversation."
+    },
+    {
+     "q": "Why does assembling in the United States not fix a listed maker's tax problem?",
+     "a": "Because the test is about the owner, not the address. A US subsidiary that a specified foreign entity owns a quarter of is an {{FIE}}, and an FIE's output is prohibited-entity product wherever the plant stands. American assembly is a **tariff** lever - it narrows the dutiable base to the cell value rather than the finished container - and it is never a tax fix. It does not settle the FCC question either, because that test wants a content percentage rather than a final-assembly location."
+    },
+    {
+     "q": "Two instruments define *foreign-produced* differently. A third decides the same question without ever using the phrase. What are they?",
+     "a": "**EO 14420 Section 5(c):** not manufactured, produced, **or assembled** in the United States - so US final assembly of foreign content falls outside the test. **The FCC's {{Covered List}} entry:** a unit that is neither {{45X}}-eligible nor a {{domestic end product}} - so US final assembly is not enough unless it clears the content bar. **The tax rules:** they never use the phrase, because they test ownership rather than origin - which is why they can disqualify a plant that both of the other two would clear. The same inverter can sit inside one definition and outside another. Always name the instrument first."
+    },
+    {
+     "q": "Two Chinese cell makers, same answer under the tax lever, different routes into it. What follows?",
+     "a": "One is caught **by name** - listed in the defense statute the tax code imports - and also, independently, by being incorporated in the relevant jurisdiction. The other is caught **only by incorporation**. Under the tax lever the outcome is identical: both are prohibited entities and both fail the ratio. Under the defense lever the outcome is opposite: the named-maker ban reaches the first and not the second. **That gap closes from 2028**, when the generic standard replaces the list - so a maker outside the list today should not be sold as permanently outside it."
+    },
+    {
+     "q": "What escapes the ratio test entirely, and on what evidence?",
+     "a": "A project that has {{begin construction}} for tax purposes by **31 December 2025**, evidenced either by documented physical work of a significant nature or by having incurred five per cent of total cost, under the long-standing notices. Nothing about the equipment matters once that is established - the ratio test simply does not apply to the project. It is the reason the safe-harboured pipeline is the primary lane, and the reason that lane keeps shrinking."
+    },
+    {
+     "q": "A buyer says *the FEOC thing is a problem for us*. What do you ask before answering?",
+     "a": "Which machine they mean - and note that one of the likely answers is not FEOC at all. They may mean **credit eligibility** (ownership, and the ratio), **duty cost** (origin, and a number), **defense scope** (naming, and a date in 2027), the **ten-point adder** (content by cost), or one of the **two newer origin instruments**, the FCC's inverter entry and the bulk-power order, which are not FEOC rules at all. **Five things that phrase can mean, four different tests behind them, and only one of the five that is fatal to a project.**"
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A developer documented five per cent of project cost spent in November 2025. In 2026 they buy DC blocks built on listed-maker cells. What happens to the credit?",
+     "c": [
+      "It is lost - the equipment is prohibited-entity product, and entity status is decisive whenever it applies",
+      "It is reduced in proportion to the prohibited content, down to the ratio the system actually computes to",
+      "It survives only if the cells are assembled into finished containers on American soil before delivery",
+      "It survives, because the project began construction before the line and the ratio test never applies to it"
+     ],
+     "a": 3,
+     "why": "The ratio test attaches to projects that {{begin construction}} after **31 December 2025**. This one did not, so the test never applies and the equipment choice does not disturb the credit. Conditions still travel with it - the claimant must not itself be a prohibited entity, there must be no {{effective control}} contracting, and after 2027 the ten-year recapture rule reaches post-{{COD}} payments - but the ratio is simply not in the picture. **The date the project started, not the origin of the cells, is what decides this one.**"
+    },
+    {
+     "q": "A proposal claims the ten-point domestic-content adder because the system ships from a Texas plant owned by a listed maker. What is wrong with it?",
+     "c": [
+      "Nothing is wrong, provided the plant performs final assembly of the system in the United States",
+      "Only the arithmetic - the content percentage would need recalculating against the current IRS tables and their weightings",
+      "Two things: the content cannot reach the bar without an American-made cell, and the base credit it attaches to has failed",
+      "Only the timing - the adder applies to construction starts from 2027 rather than to starts in 2026"
+     ],
+     "a": 2,
+     "why": "Both halves fail, and the second is the one people miss. Without a US-made cell the content maths tops out well below the bar, because the pack and module dominate manufactured-product cost. And the adder is a **bonus on top of** a base credit that a listed-maker-cell system has already lost on the ratio - so even a perfect content calculation would be adding ten points to zero. **A bonus on a credit you do not have is not a smaller benefit; it is no benefit.**"
+    },
+    {
+     "q": "An inverter is given final assembly in the United States from foreign subassemblies. Is it foreign-produced?",
+     "c": [
+      "The question is incomplete - it is outside the order's definition, which counts assembly, and inside the FCC's, which does not",
+      "Yes under both instruments, because the subassemblies were made abroad and origin follows the components into the finished unit",
+      "No under either instrument, because final assembly in the United States settles origin for both of them",
+      "Yes under EO 14420 and no for the FCC, because the order is the stricter of the two instruments here"
+     ],
+     "a": 0,
+     "why": "This is the trap the lesson exists to defuse. Section 5(c) reads *not manufactured, produced, or assembled in the United States*, and because **assembled** is in the list, US final assembly puts the unit outside the order's test. The FCC's entry defines the same phrase as a unit that is neither {{45X}}-eligible nor a {{domestic end product}} - a content percentage - so the same unit is covered there unless it clears the bar. **One box, one phrase, two opposite answers.** Neither instrument is stricter in general; they are asking different questions."
+    },
+    {
+     "q": "A defense contractor wants batteries from a maker named in the statute inside a 2028 deliverable. What is the clean answer?",
+     "c": [
+      "Yes, provided the cells are assembled into packs in the United States at some point before delivery",
+      "No, and for two independent reasons - the named-maker ban is in force by then and the generic standard has begun",
+      "Yes, because the named-maker ban reaches direct Department of Defense purchases and not a contractor's own materials",
+      "No, but only until the pre-qualified vendor list under Section 2(e) is published and the maker appears on it"
+     ],
+     "a": 1,
+     "why": "The named-maker ban takes effect on **1 October 2027**, so a 2028 deliverable is past it. Independently, the successor standard replaces the named list with a generic foreign-entity test covering cells and functional cell components, phasing from 2028. Either one answers the question; together they make it unarguable. Note what does **not** help here: assembling in the United States is an origin move, and this lever tests naming rather than origin. And the pre-qualified vendor list belongs to a different instrument altogether."
+    },
+    {
+     "q": "A buyer asks whether the bulk-power order covers a battery installed behind a 34.5 kV distribution feeder. What do you tell them?",
+     "c": [
+      "Yes - battery energy storage systems are named equipment under Section 5(b), and that naming is what governs",
+      "It depends entirely on where the cells inside the battery enclosure were manufactured",
+      "Generally no - the order's own definition sets the line at 69 kV and expressly excludes local distribution",
+      "Yes, but only once the implementing rules due in December have actually been published"
+     ],
+     "a": 2,
+     "why": "Storage is indeed named equipment, but naming is not the scoping test. The {{bulk-power system}} definition includes transmission at 69,000 volts and above and expressly **excludes facilities used in local distribution**, so a battery on a 34.5 kV feeder sits outside. **The same battery at a transmission substation is inside**, which is the point worth taking away: this instrument scopes on the circumstances of the installation, not on the product. Cell origin is a question for a different lever entirely."
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -44754,7 +45256,8 @@ function clLessons_() {
           clLessonTheCoolingPlantAndWater_(),
           clLessonHowACellIsMade_(),
           clLessonDcFaultEngineering_(),
-          clLessonUtilityProcurementMeetsAiLoad_()];
+          clLessonUtilityProcurementMeetsAiLoad_(),
+          clLessonTheChinaPolicyStack_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
