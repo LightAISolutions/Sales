@@ -3,11 +3,52 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.32r] — 2026-09-17 12:50:41 AM EST
+
+> Author S2 session 15 — the cooling landscape module — on Opus 5 xhigh as a fresh session. This is ONE guidance module. It authors no mechanism lesson, no dossier and no report, and it creates no track. […] THE WORK — one push commit. (1) Write repository-information/industry-guidance/landscape-cooling-analysis.md, the source of truth, with §2 (the split) drafted before any other section. (2) Author guidanceDocLandscapeCooling_() BELOW the // CONTENT END fence in Classroom.gs, id landscape-cooling-2026-09, lane The Value Chain, tier contributor, nine sections at §10.6's ids and order, and register it at the END of guidanceDocs_()'s Value Chain lane. (3) Seed topic-landscape-cooling in Scraper.gs. (4) Regenerate exactly one segment. (5) Flip §7.3's S2 row, §6's S2 row and §10.6's progress note to 15 of ~19, strike cooling from the remaining list, and write the findings block — the (ff…) label is spent; continue at (gg1). (6) Write §7.46 — the next run's brief, which by the interleave is Phase 4 row 20, dc-fault-engineering — in the same commit, and edit BOTH halves of any §7.x brief you refresh. […] Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `repository-information/industry-guidance/landscape-cooling-analysis.md`
+- **The source of truth for the fifteenth landscape**, written §2-first per §10.6 (j). Twelve sections: the segment as measured, the executive read, **the split (§2)**, who dominates, who threatens, the bets, the indicators, the seller's play, the claims ledger, the absences, the `reviewBy` judgment with **nine rejections in writing**, the Scraper audit, and the verification table
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`guidanceDocLandscapeCooling_()`** — id `landscape-cooling-2026-09`, lane **The Value Chain**, tier **contributor**, authored **below** the `// CONTENT END` fence per `CLASSROOM-COMMITTER-CONTRACT.md` §3 and registered at the **END** of `guidanceDocs_()`'s Value Chain lane. The **twenty-fourth** guidance module and the **fifteenth** landscape. Nine sections at §10.6's ids and order, four tiles (all `k` values pure ASCII), a ten-entry glossary with **every entry used**, a **39-row** claims ledger, 15 drill cards and 7 quiz items at answer indices **1, 2, 1, 1, 2, 0, 2** per §10.6 (ff4)
+- A ~110-line header comment recording the rejected hypothesis, the eleven things the two public lessons own, the nine neighbours, the `reviewBy` reasoning and the eleven-row bets-table decision
+
+#### `googleAppsScripts/Scraper/Scraper.gs`
+- **`topic-landscape-cooling`** — twelve terms, every one scoring **zero** across all **482** distinct terms in both seed arrays. The gap is the segment's **arithmetic**, not a residue: four of its six buying criteria score zero while the existing `seg-cooling` lens holds eight equipment nouns
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`clLessonSegmentCooling_()` regenerated** (`--segment cooling --today 2026-09-17`) — `read-next` and `what-is-bought-and-on-what`, one `revisions[]` entry, **no pin moved**. **All six `(planned)` refs cleared**: row 18's `the-cooling-plant-and-water` now resolves every criterion, and `read-next` deep-links the new module
+- GAS `VERSION` **v01.60g → v01.61g**
+
+#### `scripts/check-classroom-content.py`
+- The hard-coded registered-module assertion **23 → 24**, with the reasoning recorded in the comment above it
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- §10.6's progress note to **15 of 19**, and the **(gg1)–(gg10)** findings block
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- §6's S2 row and §7.3's S2 row to **15 of ~19**, with `cooling` struck. **§7.3's row was two sessions stale for a SECOND time** — it still read "13 of ~19" with `EPC/GC` unstruck, so session 14's landing never reached it; both the count and the strike list are now correct and the recurrence is recorded in the cell
+- **§7.46 written in both halves** — the brief for **Phase 4 row 20, `dc-fault-engineering`**, the first gated lesson Phase 4 will author
+
+### Notes
+
+- **ALL THREE `--check` NUMBERS WERE CALLED BEFORE THE WRITE AND ALL THREE HELD: 7 → 7 → 6.** `cooling` cleared `read-next` **and** `what-is-bought-and-on-what` together on its own regeneration — **(aa5)** holding for an eighth time
+- **THE BRIEF'S CENTRAL HYPOTHESIS WAS TESTED AND REJECTED.** §7.45 proposed *two markets wearing one name*; the competitor subgraph is **one connected component of ten** whose only cut vertex detaches a single leaf, and the thermally-worded edges alone still form one component of nine. What replaced it: **two independent rankings place the same firm first and fifth**, and both members' dossiers give the same reason independently — the segment is **one chain measured at two points**
+- **THE SCREENSHOTS CAUGHT FOUR DEFECTS FOR AN EIGHTH CONSECUTIVE SESSION**, every checker having passed 0/0 first: an eleven-versus-eight recount, a table intro promising an ordering the rows did not use, a claim contradicted by the same module two sections earlier, and a **role named wrongly** against the module's own roster
+- **`reviewBy` 2026-09-28 — the earliest any module carries.** (bb4) and (dd5) fired together on a future date that is on-subject and still unusable because the generator already holds it. The curriculum checker now reports **4** items due rather than 3, by design
+- **Render at contributor: 9/9 sections, 50,330 characters, zero page errors**, the count moving 49,973 → 50,330 across the fix round on a vm PROJECT region moving 3,459,343 → 3,459,716 bytes. Through the real serving path: **analyst → `ROLE_DENIED` on both ops and 0/9 sections with the page-level denial**; token < 32 chars → `SESSION_EXPIRED`
+- **No rotation on any file.** Re-counted from the files: `CHANGELOG.md` **100 raw / 97 non-exempt** against a 100 trigger with three sections dated 2026-09-17 EST; `Classroomgs.changelog.md` **48 / 46** against a cap of 50; `Scrapergs.changelog.md` **37 / 36**; `Profilerhtml.changelog.md` 49 and untouched. v06.30r's two-group clearance on each of the first two is what keeps every file inside its trigger
 
 ## [v06.31r] — 2026-09-17 12:06:24 AM EST
 

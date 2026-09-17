@@ -1,4 +1,4 @@
-var VERSION = "v02.15g";
+var VERSION = "v02.16g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1180,7 +1180,80 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     terms: ['self-perform', 'craft labor', 'prefabrication', 'ENR Top 400',
             'percentage-of-completion', 'bonding capacity', 'owner-furnished',
             'TRIR', 'electrical contractor', 'prevailing wage'],
-    source: 'guidance:landscape-epc-and-construction-2026-09' }
+    source: 'guidance:landscape-epc-and-construction-2026-09' },
+  // S2 session 15, the cooling landscape. ADDED - and a label-level glance
+  // would have said no, which is exactly why 10.6 (i) and (bb5) require the
+  // check to run against TERMS. A seg-cooling lens already exists and holds
+  // eight terms: 'liquid cooling', 'direct-to-chip', 'immersion cooling',
+  // 'cdu', 'coolant distribution', 'rear-door heat exchanger', 'chiller' and
+  // 'thermal management'. Every one of the eight is an EQUIPMENT NOUN. What
+  // scores zero is the segment's ARITHMETIC, and it is not a residue - it is
+  // FOUR OF THE SIX BUYING CRITERIA. Criterion 1 (approach temperature and the
+  // facility water the chip vendor allows): 'approach temperature', 'facility
+  // water', 'technology cooling system', 'warm-water cooling' all zero.
+  // Criterion 2 (PUE and WUE by climate, waterless heat rejection): 'WUE',
+  // 'water usage effectiveness', 'dry cooler', 'waterless cooling', 'heat
+  // rejection', 'free cooling' all zero - WHILE ITS PARTNER 'pue' IS AN EXACT
+  // HELD TERM, inside topic-aidc-buildout beside 'rack density' and 'kilowatt
+  // per rack'. The segment's own pair of ratios is HALF SEEDED, so a digest
+  // scores the efficiency half of this segment and not the water half - the
+  // half that gets campuses refused permits, which the registry's own
+  // definition leads with. Criterion 3 (part-load efficiency and the chiller's
+  // real operating point): 'IPLV', 'part-load efficiency', 'waterside
+  // economizer', 'kW/ton' all zero. Criterion 6 (the refrigerant calendar and
+  // the sequence the BMS runs): 'refrigerant', 'low-GWP', 'AIM Act', 'A2L',
+  // 'building management system', 'DCIM' all zero.
+  // Denominator re-counted from this file per (bb5): SCRAPER_INTEREST_TOPIC_SEEDS
+  // (40 seeds, 258 terms) AND SCRAPER_SEGMENT_SEEDS (29 lenses, 249 terms) -
+  // 507 raw, 482 distinct, reconciling with session 14's 472 plus its ten.
+  // TWELVE taken, each zero on exact, substring and near-duplicate checks.
+  // DROPS, with the reason. 'water usage effectiveness' on ROSTER CONSISTENCY,
+  // a ground no previous session has recorded: the paired metric is seeded as
+  // the bare acronym 'pue' with no expansion, so seeding both forms here would
+  // double-count one article against a convention the roster already set.
+  // 'part-load efficiency' as a near-duplicate of 'IPLV' per (cc6). 'cooling
+  // tower' because it MIS-BANDS - the corpus covers clean-firm-and-nuclear and
+  // the cooling tower is the iconic nuclear-plant image, session 14's
+  // 'commissioning' class. Bare 'refrigerant' as too generic across automotive
+  // and residential HVAC, with 'AIM Act' and 'low-GWP' carrying the same
+  // coverage precisely. 'sequence of operations' as generic outside HVAC.
+  // 'DCIM' on SPLIT grounds per (v) - it is software-and-optimization's, an
+  // unwritten S2 row, and an S2 session may only add topic-landscape-<segment>.
+  // 'chiller plant', 'centrifugal chiller', 'air-cooled chiller' and
+  // 'magnetic-bearing chiller' as superstrings of the held 'chiller';
+  // 'coolant distribution unit', 'in-row CDU', 'in-rack CDU' and 'sidecar CDU'
+  // as superstrings of 'coolant distribution', 'cdu' and 'sidecar'.
+  // 'liquid-to-liquid' as the default case, where 'liquid-to-air' is the
+  // discriminating one (the retrofit class). 'CRAH' and 'CRAC' as the machine
+  // being displaced rather than this segment's product, answering none of the
+  // six criteria. 'containment' and 'hot aisle' on split grounds - the public
+  // lesson the-cooling-plant-and-water owns containment and it belongs to the
+  // room. 'ASHRAE W17', 'W45' and 'W-class' as too narrow to carry article
+  // volume.
+  // THE SHORTFALL IS BIGGER THAN THIS SEED AND IT IS THE DEVELOPER'S: counted
+  // as QUOTED key: literals (a loose grep on the string returns thirteen),
+  // this file held SEVEN topic-landscape-* seeds against FOURTEEN built
+  // landscapes. This takes it to eight against fifteen. Seven S2 sessions
+  // seeded nothing, and an S2 session may only add its own segment's seed, so
+  // the backlog cannot be cleared from inside the lane that created it.
+  // BOTH STANDING RESERVATION DEBTS re-checked against all 482 and both still
+  // open: 'restart' scores zero for a SEVENTH consecutive session and remains
+  // topic-landscape-clean-firm-and-nuclear's word for that module's next
+  // revision; and session 12's six terms assigned on split grounds to
+  // topic-aidc-landlords - 'tenant of record', 'credit backstop', 'recognition
+  // agreement', 'bankruptcy-remote', 'triple-net lease', 'penny warrant' - are
+  // still in no seed and still score zero, a THIRD consecutive session
+  // confirming that a term ASSIGNED to another seed's territory is not a term
+  // SEEDED there. (A first pass here checked session 6's seven landlord terms
+  // by mistake, found all seven held, and nearly recorded a false state
+  // change - (aa4) catching itself: open the file, never trust the brief.)
+  { key: 'topic-landscape-cooling',
+    label: 'Cooling: the approach-temperature contract, the water ratio and the refrigerant calendar',
+    terms: ['approach temperature', 'facility water', 'WUE', 'IPLV',
+            'waterside economizer', 'dry cooler', 'cold plate', 'liquid-to-air',
+            'AIM Act', 'low-GWP', 'factory witness test',
+            'building management system'],
+    source: 'guidance:landscape-cooling-2026-09' }
 ];
 
 // Business-segment lenses (developer feedback 2026-08-27): covered companies

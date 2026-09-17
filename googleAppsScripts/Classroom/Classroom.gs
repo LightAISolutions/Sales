@@ -1,4 +1,4 @@
-var VERSION = "v01.60g";
+var VERSION = "v01.61g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -18421,7 +18421,7 @@ function clLessonSegmentCooling_() {
  "title": "Cooling",
  "short": "The thermal chain from the cold plate to the cooling tower — chillers and economisers, coolant distribution units, cold plates and rack manifolds, rear-door…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-17",
  "reviewBy": "2026-11-09",
  "provenance": {
   "inputs": [
@@ -18588,27 +18588,27 @@ function clLessonSegmentCooling_() {
    "rows": [
     [
      "Approach temperature and the facility-water temperature the chip vendor allows (ASHRAE W-classes)",
-     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+     "*PUE, WUE, and the Plant Outside the Hall*"
     ],
     [
      "PUE and WUE by climate; waterless heat rejection",
-     "*PUE, WUE, and the Plant Outside the Hall* (planned) · *Heat Is the Constraint*"
+     "*PUE, WUE, and the Plant Outside the Hall* · *Heat Is the Constraint*"
     ],
     [
      "Part-load efficiency (IPLV) and the chiller's real operating point",
-     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+     "*PUE, WUE, and the Plant Outside the Hall*"
     ],
     [
      "NVIDIA recommended-vendor status for cold plates and CDUs; leak detection and rack-down behaviour",
-     "*PUE, WUE, and the Plant Outside the Hall* (planned) · *Heat Is the Constraint*"
+     "*PUE, WUE, and the Plant Outside the Hall* · *Heat Is the Constraint*"
     ],
     [
      "Lead time on chillers and CDUs; factory witness testing",
-     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+     "*PUE, WUE, and the Plant Outside the Hall*"
     ],
     [
      "Refrigerant calendar and the sequence of operations the BMS runs",
-     "*PUE, WUE, and the Plant Outside the Hall* (planned)"
+     "*PUE, WUE, and the Plant Outside the Hall*"
     ]
    ]
   },
@@ -19611,8 +19611,8 @@ function clLessonSegmentCooling_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Heat Is the Constraint* · *PUE, WUE, and the Plant Outside the Hall* (planned).",
-    "**No landscape module yet.** The judgment layer — who dominates and on what basis, who threatens, each player's bet — is authored separately and only once the segment holds three members including an incumbent and a challenger.",
+    "**Mechanism lessons for this segment:** *Heat Is the Constraint* · *PUE, WUE, and the Plant Outside the Hall*.",
+    "**The landscape module** — the judgment layer for this segment — is *landscape-cooling-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** CoolIT Systems, Schneider Electric, Trane Technologies, Vertiv, Eaton, Aligned Data Centers, Delta Electronics, Flex, LITEON, Mitsubishi Electric, Supermicro — each member's dossier carries one in Profiler."
    ]
   },
@@ -19692,6 +19692,14 @@ function clLessonSegmentCooling_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-17",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -44752,7 +44760,8 @@ function guidanceDocs_() {
           guidanceDocLandscapeHyperscalersAndAiLabs_(),
           guidanceDocLandscapeNeoclouds_(),
           guidanceDocLandscapeCapital_(),
-          guidanceDocLandscapeEpcAndConstruction_()];
+          guidanceDocLandscapeEpcAndConstruction_(),
+          guidanceDocLandscapeCooling_()];
 }
 
 function guidanceIndex_() {
@@ -60007,6 +60016,733 @@ function guidanceDocLandscapeEpcAndConstruction_() {
  ]
 };
 }
+
+// ══════════════
+// S2 SESSION 15 - THE FIFTEENTH LANDSCAPE, TWENTY-FOURTH GUIDANCE MODULE.
+// Source of truth:
+// repository-information/industry-guidance/landscape-cooling-analysis.md
+// Spec CLASSROOM-CURRICULUM-PLAN.md 10.6; brief INTEGRATED-REMEDIATION-PLAN.md
+// 7.45. Lane The Value Chain, tier contributor, nine section ids in 10.6's
+// order. Below the CONTENT END fence, per CLASSROOM-COMMITTER-CONTRACT.md 3.
+//
+// THE BRIEF'S HYPOTHESIS WAS TESTED AND REJECTED, WHICH IS WHY THE FIRST
+// SECTION IS SHAPED AS IT IS. 7.45 proposed that cooling is "two markets
+// wearing one name". The graph says no: 26 edges among the eleven, 36 of 39
+// typings reading competitor, 21 rival pairs of 55 - and the competitor
+// subgraph is ONE connected component of TEN. Its only cut vertex detaches a
+// single leaf, and restricting to thermally-worded edges still leaves one
+// component of NINE. Session 14's (ee2) showed what a two-market roster looks
+// like: cut one node and one edge and it fell into 6 + 10 + 1. Nothing here
+// cuts.
+//
+// WHAT REPLACED IT IS STRONGER AND THE CORPUS STATES IT TWICE. ABI Research
+// (30 Jan 2025) ranks Vertiv FIRST among thermal-management providers and
+// Trane FIFTH; Global Market Insights (Aug 2026) ranks Trane SECOND at 18.7%
+// of a USD 2.6bn chiller market and Vertiv FIFTH at 8.1%. Both members' own
+// dossiers give the same reason INDEPENDENTLY, neither citing the other -
+// "strong at different points in the same chain". That is (dd2)'s
+// corpus-internal cross-attestation firing a second time and, for the first
+// time, about a RANKING. So the published judgment is that cooling is ONE
+// CHAIN MEASURED AT TWO POINTS, and (ee1)'s name-the-list condition is met in
+// a new way: not one publisher running several lists, but two publishers
+// measuring different PLACES.
+//
+// THE ROLE INVERSION DECOMPOSES PERFECTLY AND IT IS THE STRUCTURAL SIGNATURE.
+// 9 of 11 shared, 22 memberships elsewhere, 17 inversions (77%) - and sorted
+// by the role held HERE: incumbents 0 up / 4 down / 2 equal; the challenger
+// 1 up / 4 down; adjacents 8 up / 0 DOWN / 3 equal. No member ranked at the
+// top here is ranked higher anywhere else in six chances; no adjacent here is
+// ranked lower anywhere else in eleven. (aa2) and (ee3) BOTH fire, in
+// opposite directions, which no landscape has met - and they are not in
+// conflict, they are two halves of one statement that the section above
+// explains. The two members that CANNOT invert prove it: trane-technologies
+// and coolit belong to no other segment, are the only two pure plays, sit at
+// opposite ends of the loop, and the graph carries NO EDGE BETWEEN THEM.
+//
+// 10.6 (t) FIRES IN A FOURTH SHAPE - THE NEIGHBOURS ARE SILENT. Both
+// READ_NEXT lessons are public and between them own all six buying criteria,
+// and NEITHER NAMES ONE OF THE ELEVEN in prose: measured, 0 of 11 in each.
+// The six apparent matches are all provenance.inputs[].ref - stamps, not
+// sentences - and the-cooling-plant-and-water is STAMPED ON FIVE OF THIS
+// SEGMENT'S OWN MEMBERS while naming none of them. Session 6's shape was a
+// pre-declared handoff, row 18's an undeclared pre-emption, row 19's a
+// declared handoff naming the wrong sibling. All three presuppose the
+// neighbour SAID or TOOK something. Here the boundary is ENACTED rather than
+// declared, and it is only visible as a measurement of what was NOT written.
+//
+// WHAT THE TWO LESSONS OWN AND THIS MODULE THEREFORE DOES NOT - eleven
+// things, enumerated so a later revision cannot import them: (1) why the rack
+// got hot and the scale-up domain; (2) where air runs out and the Q = m.c.dT
+// ceiling; (3) the five-stage chip-to-atmosphere chain as a temperature
+// budget; (4) what each piece of liquid kit is; (5) why warm water is the
+// whole argument; (6) the two ratios and the trade between them; (7) chillers
+// against economisers and the climate file; (8) the waterless proscons; (9)
+// containment and what it changes outside the hall; (10) the BMS, DCIM and
+// the sequence of operations; (11) five named failure modes. 7.23's test
+// holds on the APPROACH TEMPERATURE: arithmetic that sizes a plant there, a
+// published product specification that sorts a roster here.
+//
+// NINE NEIGHBOURS BEYOND THE TWO LESSONS, all checked for the member's
+// SUBJECT and, per (dd7), for the member's NAME: six built landscapes
+// (in-hall-power 6 shared, power-conversion 5, grid-equipment 4,
+// storage-integrators 2, bridge-and-on-site-generation 1,
+// aidc-developers-and-landlords 1) plus the lane opener, which returns
+// NOTHING - reading-the-graph names no member here and never mentions
+// cooling, so (cc4)'s instrument is reported as disabled per (bb1) rather
+// than skipped. compute-and-the-rack and software-and-optimization share
+// members and have no landscape yet.
+//
+// reviewBy 2026-09-28 - THE EARLIEST ANY MODULE CARRIES, and (bb4) + (dd5)
+// fired together to force it. 34 policyExposure entries, 17 dated, EXACTLY
+// ONE in the future: 2026-11-09, the Section 301 exclusion expiry, which is
+// genuinely ON-SUBJECT (the expiring exclusions name rotary compressors) -
+// and is ALREADY segment-cooling's own generated reviewBy, set by the
+// generator from that exact field. (dd5)'s tautology in a new sub-shape: its
+// date was off-subject AND the generator's, so two grounds agreed; here the
+// date is on-subject and still unusable, so reading is the only way out.
+// Reading returns 28 September 2026 - the next-generation CDU launch, stated
+// SEVEN separate times in one dossier, the seventh inside a field headed
+// INDICATORS TO WATCH which names the test: a capacity above 2 MW and a Vera
+// Rubin rating would confirm the judgment this module's own ladder rests on.
+// NINE rejections in writing in section 10 of the analysis file. The module
+// ships INSIDE its own 30-day horizon by choice, so the curriculum checker
+// reports 4 items due rather than 3 - (k) for a fourth time, by design.
+//
+// SIX OF SIX BUYING CRITERIA RESOLVE, AND IT IS A MEASURED SUPERLATIVE. Run
+// the generator's own READ_NEXT-and-CRITERION_LEXICON intersection across all
+// nineteen segments and cooling is the ONLY one whose criterion table prints
+// no dash at all; the next best is cells-and-chemistry at five of six and
+// three segments resolve none. Row 18 cleared the last of them the day before
+// this module. So this module owns NONE of the six tests and only says who
+// sits where on each - the sharpest form of layer 4's job the curriculum has
+// yet been able to support.
+//
+// THE BETS TABLE CARRIES ELEVEN ROWS RATHER THAN THE FIVE 10.6 SPECIFIES,
+// grouped by which END OF THE CHAIN the member arrived from. Session 4's (m)
+// established that section proportions follow the segment; this is that rule
+// ADDING rows. On a roster where six of eleven are somebody else's incumbent
+// and every one is ranked higher elsewhere, a five-row table would omit the
+// finding. Quiz answer indices are 1, 2, 1, 1, 2, 0, 2 per (ff4).
+// ══════════════
+function guidanceDocLandscapeCooling_() {
+  return {
+ "id": "landscape-cooling-2026-09",
+ "group": "The Value Chain",
+ "title": "Cooling — the Landscape",
+ "short": "Eleven members, three independent rankings, and two of them place the same firm first and fifth — a segment that is not two markets but one chain measured at two points, where the rank order is the inverse of the rank order everywhere else.",
+ "source": {
+  "doc": "Corpus synthesis over the 11 member dossiers of the cooling segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "publisher": "Internal analysis",
+  "date": "September 2026",
+  "pages": 9,
+  "series": "Industry Guidance — landscape module",
+  "repo": "repository-information/industry-guidance/landscape-cooling-analysis.md"
+ },
+ "updated": "2026-09-17",
+ "reviewBy": "2026-09-28",
+ "revisions": [],
+ "tiles": [
+  {
+   "k": "1st and 5th",
+   "v": "the same firm, both rankings",
+   "sub": "ABI Research places Vertiv first among thermal-management providers for data centres and Global Market Insights places it fifth in data-centre chillers. Trane is fifth on the first and second on the second. Both members' own files give the same reason independently: they are strong at different points in one chain"
+  },
+  {
+   "k": "17 of 22",
+   "v": "memberships that invert elsewhere",
+   "sub": "Nine of the eleven belong to another segment. Not one of the four ranked at the top here is ranked higher anywhere else, in six chances, and not one of the six called adjacent here is ranked lower anywhere else, in eleven. The order here is the inverse of the order everywhere else"
+  },
+  {
+   "k": "9.5bn vs 53m",
+   "v": "what the same layer cost",
+   "sub": "Eaton paid USD 9.5 billion for Boyd Thermal in March 2026; Flex paid USD 53 million for JetCool in November 2024, about 179 times less. All five ranked members bought their position or were bought inside eighteen months, and the bench built instead"
+  },
+  {
+   "k": "6 of 6",
+   "v": "buying criteria with a built owner",
+   "sub": "Run the generator's own test across all nineteen segments and cooling is the only one whose criterion table prints no dash at all. The lesson that cleared the last of them landed the day before this module, so this module owns none of the six tests"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "incumbent",
+   "d": "The registry role for a member whose position in this segment is established and held. Four carry it here, and their bases are four different measuring points on one chain rather than four places on one list."
+  },
+  {
+   "t": "challenger",
+   "d": "The registry role for a member contesting the established set. One carries it here, and it took the position by acquisition rather than by product: about 1.5 billion US dollars of liquid cooling entered by buying a specialist."
+  },
+  {
+   "t": "adjacent",
+   "d": "The registry role for a member that sells into a segment without being ranked in it. Six carry it here, and every one of the six is ranked incumbent or challenger in at least one other segment."
+  },
+  {
+   "t": "approach temperature",
+   "d": "The degrees a coolant distribution unit spends between the technology loop it serves and the facility water it rejects into. Vendors publish it per unit, and every degree spent here is a degree the plant outside cannot spend."
+  },
+  {
+   "t": "coolant distribution unit",
+   "d": "The machine that separates the clean technology-cooling loop around the chips from the building's own water, and meters flow to the racks. Rated in kilowatts or megawatts of heat, and increasingly in racks cooled per unit."
+  },
+  {
+   "t": "facility water",
+   "d": "The building-side water loop a coolant distribution unit hands heat to, and the boundary between the equipment a cooling vendor sells and the plant a mechanical engineer designs."
+  },
+  {
+   "t": "direct-to-chip",
+   "d": "Cooling that brings liquid to a cold plate sitting on the processor rather than cooling the air around the rack. The layer the chip-side vendors arrived from, and the one the plant-side vendors bought their way into."
+  },
+  {
+   "t": "liquid-to-air",
+   "d": "A coolant distribution unit that rejects its heat into the room instead of into facility water, so a liquid-cooled rack can be retrofitted into a hall that has no water loop. It buys compatibility by spending about three times the approach temperature of a liquid-to-liquid unit."
+  },
+  {
+   "t": "IPLV",
+   "d": "Integrated part-load value: a single efficiency number that weights a chiller's performance across four load points rather than at full load alone. It matters because a data-centre chiller almost never runs at the rating on the brochure."
+  },
+  {
+   "t": "rear-door heat exchanger",
+   "d": "A cooling coil mounted on the back of a rack, taking heat out of the exhaust air before it reaches the room. The middle rung between air cooling and direct-to-chip, and the product several members sell on both sides of that line."
+  }
+ ],
+ "sections": [
+  {
+   "id": "who-dominates-and-on-what-basis",
+   "title": "Who dominates, and on what basis",
+   "read": "9 min",
+   "kind": "prose",
+   "ps": [
+    "**Start with the fact that decides what this section can honestly do: this segment has three independent rankings of itself, and two of them place the same firm first and fifth.** ABI Research's competitive ranking of thermal-management providers for data centres, published 30 January 2025, puts **Vertiv first as a Market Leader** and **Trane fifth in the Mainstream tier**, with Johnson Controls, Schneider Electric and Daikin in between. Global Market Insights' data-centre chiller share table, published August 2026 on a USD 2.6 billion 2025 market, runs the other way: Johnson Controls 20.9 per cent, **Trane second at 18.7**, Carrier 14.5, Daikin 12.0, **Vertiv fifth at 8.1**.",
+    "**Both members' own dossiers explain the inversion, independently, in almost the same words, and neither cites the other** — they are strong *at different points in the same chain*. That is the single most useful sentence in the corpus about this segment, and it is the reason a landscape here cannot simply publish a rank order. **Cooling is not two markets. It is one chain measured at two points**, and the number you cite tells the reader which end you stood at rather than who is winning.",
+    "**The test for two markets was run and it failed.** The relationship graph carries **26 edges among the eleven** — 23 with at least one curated typing, **36 of the 39 typings reading competitor**, and **21 distinct rival pairs out of 55 possible, 38 per cent**. If this were two markets the rivalry would separate, as it did on the previous landscape, where one firm and one edge cut the graph into six plus ten. Here the competitor subgraph is **one connected component of ten of the eleven**; the only cut vertex detaches a single leaf; and restricting to the edges that actually mention thermal content still leaves **one component of nine**. The rivalry does not divide. Only the measurement does.",
+    "**A third ranking covers the newest layer and agrees with neither of the first two.** Dell'Oro's January 2026 assessment names **Vertiv the liquid-cooling leader**, with **CoolIT**, nVent and Boyd holding strong positions — and does not name Supermicro at all. The same publisher counts *around forty companies with {{coolant distribution unit}}s* and expects *fewer than ten vendors to ultimately capture the lion's share*. Omdia puts Vertiv **top three** in data-centre thermal with **about six points of share gained**, which is the only movement figure anybody publishes here, and had placed **CoolIT first** in CDUs back in 2023.",
+    "**So only one member appears in all three assessments, and it is first in two of them and fifth in the third.** Trane appears in two and is absent from the liquid-cooling one. Schneider appears in one by name. CoolIT appears only where the layer is liquid, because no plant-side ranking reaches the chip. Four {{incumbent}}s, four different measuring points, and the registry is right about all four.",
+    "**There is an apparent ladder, and publishing it without its defeater would be the error this section exists to prevent.** Every member selling a merchant unit publishes a capacity: **Trane at 14 MW**, Delta at **3 MW**, Schneider through Motivair at **2.5 MW**, Vertiv at **2.3 MW**, LITEON at **2.1 MW**, CoolIT's CHx2000 at **2.0 MW** rated at twelve GB300 NVL72 racks and a five-degree {{approach temperature}}, Flex and Supermicro at **1.8 MW**. Two things disqualify it as a rank order. **The top rung is an assembly of 2.5 MW blocks validated to fourteen and the rest are single units**, so the numbers do not measure the same object. And **the ladder contradicts all three independent assessments at once** — it places an {{adjacent}} member above three of the four incumbents, and that member is named by none of ABI, Global Market Insights or Dell'Oro.",
+    "**Read the ladder as evidence of convergence instead, because that is what it is.** Eight of the eleven publish a rating on the same machine, and they arrived at it from six different businesses — the room, the building system, the chiller plant, the cold plate, the power shelf and the server rack — and CoolIT's own file says the unit of competition has already moved past megawatts to **racks cooled per CDU**. The convergence point is the {{coolant distribution unit}}, and the four incumbents reach it from opposite ends: Vertiv from the room, Schneider from the building system, Trane from the machine that rejects the heat, and CoolIT from the cold plate on the processor.",
+    "**The second organising fact is that position at the top here was bought rather than built, and every one of the five ranked members proves it inside eighteen months.** Eaton bought Boyd Thermal for **USD 9.5 billion at 22.5 times forward EBITDA**, closed 12 March 2026, bringing about **USD 1.5 billion of liquid cooling**. CoolIT was itself bought — Ecolab from KKR for about **USD 4.75 billion**, 29 times next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales, closed 2 July 2026. Schneider took control of Motivair in September 2025. Trane converted a 2023 minority in LiquidStack to full ownership in March 2026 and bought Stellar Energy a month earlier for **USD 553.4 million gross**. Vertiv assembled equivalent scope through four smaller deals.",
+    "**The bench did the opposite, and the single exception prices the difference.** Delta's GoCool line, LITEON's CDUs, Mitsubishi Electric's CritiCool chillers and Supermicro's own manufactured units are organic; Aligned's file calls its programme *a sustained build-not-buy pattern* behind more than fifty patents. One {{adjacent}} member bought — **Flex paid USD 53 million for JetCool in November 2024**, against Eaton's USD 9.5 billion for the same layer, **about 179 times apart**. When the entry price for one segment spans two orders of magnitude, the thing being bought is not the technology."
+   ],
+   "sales": "Before you cite a share number in this segment, say which list it comes from and which point of the chain that list measures. Two published rankings put the same vendor first and fifth, both are honest, and the one person in the room holding the other table will correct you — fatally, because they will be right."
+  },
+  {
+   "id": "who-threatens",
+   "title": "Who threatens, and from where",
+   "read": "8 min",
+   "kind": "prose",
+   "ps": [
+    "**The registry gives this segment exactly one {{challenger}}, and it is not where the threat is.** Eaton carries the role, and its basis line says how it earned it in eight words: about 1.5 billion US dollars of liquid cooling entered by acquisition. It is a challenger *here* and an **incumbent** in in-hall power, and {{adjacent}} in four other segments. Its own dossier calls the whole conversion inorganic by design — roughly **USD 12.5 billion across three acquisitions in fourteen months** — and quotes an analyst reading that it went *all-in on liquid cooling rather than dipping a toe*. At 22.5 times forward EBITDA, that file's own verdict is that the price demands execution.",
+    "**The threat is the bench, and the measurement is the sharpest structural fact this segment carries.** Nine of the eleven members belong to at least one other segment, across **22 memberships**, and **17 of those invert the role held here — 77 per cent**. The direction is not mixed. It is sorted perfectly by the role the member holds here: of the six memberships the four {{incumbent}}s hold elsewhere, **none is a promotion** and four are demotions; of the eleven the six {{adjacent}}s hold, **none is a demotion** and eight are promotions.",
+    "**Put plainly: no member this segment ranks at the top is ranked higher anywhere else, and no member it calls adjacent is ranked lower anywhere else.** Cooling is the only segment in the taxonomy whose rank order is the inverse of the rank order everywhere else, member for member — and the reason is the one the previous section established. A segment whose own rank depends on the measuring point will invert against every neighbour, because a neighbour measures somewhere else by definition.",
+    "**The two members that cannot invert are the proof.** Trane Technologies and CoolIT are the only two of the eleven that belong to **no other segment at all**, and they are the two pure cooling plays — one selling the chiller that rejects the heat, one selling the cold plate that collects it. They sit at opposite ends of the same loop, and **the graph carries no edge between them of any kind**. The segment's only two members with nothing to contradict them are also the two that never meet.",
+    "**So the threat is six companies that are somebody else's incumbent, arriving with a cooling line bolted to a franchise they already hold in the same building.** Delta Electronics and LITEON are incumbents in power conversion and rack-power silicon; Mitsubishi Electric is an incumbent in **both** grid equipment and in-hall power; Flex is a challenger in two segments; Aligned is an incumbent landlord; Supermicro is a challenger in compute and the rack. Three cases size the risk precisely.",
+    "**Delta and LITEON are already inside the rack, and the incumbent concedes it.** Delta is the first-qualified power-shelf supplier for the GB200 and GB300 NVL72 platforms and TrendForce's named primary beneficiary of the 800 volt shift; it now ships a 3 MW {{coolant distribution unit}} and a 2.4 MW unit that is **800 VDC-native by design** with a four-degree {{approach temperature}}. Vertiv's own dossier grants the point in as many words: *Delta-class ODM power vendors sit closer to the NVIDIA rack than any incumbent*. LITEON is a step behind Delta on the GPU-side ramp by its own account and is routing around it through ASIC customers, with a 2.1 MW in-row unit and a 140 kW {{liquid-to-air}} sidecar.",
+    "**Aligned is the demand side refusing to buy, and the graph types it honestly.** Its only edge inside the segment is to Vertiv and it is typed *other* rather than *competitor*, with the note carrying the whole reading: in-house cooling IP *is its moat claim versus peers who buy merchant CRAH and CDU equipment from Vertiv and others*. Delta-cubed source capture runs at about **1 per cent of IT load in fan power against roughly 10 per cent** for conventional rows; DeltaFlow rejects **350 kW per rack**; neither is sold to anybody. A landlord that builds its own is a unit of demand that never enters an order book — and its waterless closed loop is framed in its own file as removing the **water-permitting veto** in Texas, Arizona and Utah, which is the fastest-moving constraint in the segment.",
+    "**Supermicro is the boundary, and the registry argues it in writing rather than asserting a label.** The segment's notes field is about this one member and it cuts both ways deliberately: the FY2026 annual report states that Supermicro designs, builds and delivers {{direct-to-chip}} cold-plate solutions and **manufactures the CDUs and manifolds itself** — the same standard on which Delta and LITEON sit here. Against that, Dell'Oro names Vertiv the liquid-cooling leader and **does not name Supermicro at all**; every DLC-2 performance claim is the company's own rather than an independent measurement; and a component shortage in that stack cost a reported **USD 800 million of revenue in a quarter**, which the dossier reads as *the behaviour of a taker of cooling supply rather than a maker of it*. Adjacent, not challenger — and the reasoning travels better than the label.",
+    "**One disagreement inside the corpus belongs here and is stated rather than smoothed.** CoolIT's file records Supermicro as a stated collaborator; Supermicro *names no third-party cooling vendor anywhere in its filings or product pages*. Both can be true — a collaboration one side publicises and the other does not — and **no source reconciles them**, so the graph types the pair *competitor* on the ground that competition in cold plates and rack CDUs is the reading both records support. When two covered companies describe the same relationship differently, the typing is the arbitration and the disagreement is the finding."
+   ],
+   "sales": "Do not build a competitive plan around the one member the registry calls a challenger. The pressure on this segment comes from six firms it calls adjacent, every one of which is ranked higher in a segment that sells into the same building — and two of them are already qualified inside the rack you are trying to cool."
+  },
+  {
+   "id": "each-players-bet",
+   "title": "Each player's bet",
+   "read": "9 min",
+   "kind": "table",
+   "intro": "One row per member — **eleven rows, not the five the {{incumbent}} and {{challenger}} set would give**, and the reason is the previous section rather than a preference. On a roster where six of the eleven are somebody else's incumbent and every one of them is ranked higher elsewhere, a five-row table would leave out the thing this landscape is about. **Every row is analysis**, read off that dossier's own strategy section and labelled as judgment — never blended with the ranking facts above. **The rows run {{incumbent}} then {{challenger}} then {{adjacent}}, and the middle column names the end of the chain each member arrived from** — because that end, not the role and not the size, is the axis the whole module turns on.",
+   "cols": [
+    "Player",
+    "Arrived from · role",
+    "The bet, and what its own file says about the risk"
+   ],
+   "rows": [
+    [
+     "**Vertiv**",
+     "the room · {{incumbent}}",
+     "**That being the pure play is worth the volatility.** About 75 to 80 per cent data-centre revenue, a USD 15.0 billion backlog at end-2025 and a book-to-bill near 2.9 times — against a stock that fell 25 to 30 per cent in days on the DeepSeek scare and 10 to 17 per cent on a 3 per cent revenue miss. **Its own file names execution rather than demand as the binding risk into 2027**: five plant expansions and six acquisitions integrating at once, with a 2021-22 precedent it still carries."
+    ],
+    [
+     "**Schneider Electric**",
+     "the building system · {{incumbent}}",
+     "**That the design layer beats the hardware layer.** The only incumbent with NVIDIA co-developed designs spanning electrical, liquid-cooling controls and whole-factory blueprints — a position that pulls its hardware into a project before competitive bidding starts. **Its own caveat is that no design-linked order figure is published**, so conversion is inferred rather than shown, and its file grades the cooling lead itself as contestable."
+    ],
+    [
+     "**Trane Technologies**",
+     "the chiller plant · {{incumbent}}",
+     "**That a chiller vendor which stops at the plant room sells into a shrinking share of the heat path** — so buy down the chain toward the chip. **Its own file grades the execution as following rather than leading**: a 2023 minority in LiquidStack converted to full ownership only after a rival took control of a CDU specialist. The instrument is now the reference design, three published in ten months, which is how a vendor gets specified before procurement starts."
+    ],
+    [
+     "**CoolIT**",
+     "the cold plate · {{incumbent}}",
+     "**That the {{coolant distribution unit}} is where the category's margin and its consolidation are decided** — and, under Ecolab, that the recurring revenue is chemistry and monitoring rather than hardware, which is what a 29-times multiple on a hardware maker buys. **Its own stated risk is that hyperscalers run their own fluid programmes and treat the CDU as a commodity**, and its customer base is concentrated in a small number of buyers it has never named."
+    ],
+    [
+     "**Eaton**",
+     "the electrical room · {{challenger}}",
+     "**That AI data centres will buy delivered power systems rather than components** — switchgear, UPS, busway, prefabricated enclosures, liquid cooling and on-site generation sold as one scope, assembled by purchase. **Its own file prices the risk honestly**: four integrations and a spin-off landing together across 2026 and 2027, against a market that already prices the company for perfection."
+    ],
+    [
+     "**Delta Electronics**",
+     "the power shelf · {{adjacent}}",
+     "**That proximity to the rack wins the cooling attach.** First-qualified power shelves on the GB200 and GB300 platforms, a reported DC-DC exclusive, and a CDU line designed 800 VDC-native rather than adapted. **Its own file names the exposure**: AI data centre is more than half of revenue, which concentrates everything on one rack cadence and a handful of buyers."
+    ],
+    [
+     "**LITEON**",
+     "the power shelf · {{adjacent}}",
+     "**That the battery-backup franchise becomes non-discretionary as backup moves from optional to standard** — and that the CDU rides into the same rack beside it. **Its own file concedes it is a step behind on the GPU-side ramp** and is routing around that through ASIC customers, while the balance sheet visibly carries the ramp."
+    ],
+    [
+     "**Flex**",
+     "contract manufacturing · {{adjacent}}",
+     "**That buying rather than building closes a credible but sub-scale position** — about USD 6.3 billion across six deals since 2021, JetCool among them at USD 53 million. **Its own file states the gap without softening it**: JetCool appears in no liquid-cooling league table from any named ranking. The separation of the cloud and power business, targeted for the first quarter of 2027, governs every other reading."
+    ],
+    [
+     "**Mitsubishi Electric**",
+     "the switchgear hall · {{adjacent}}",
+     "**That one corporate parent for the medium-voltage equipment upstream, the uninterruptible supply inside and the chiller beside it is the differentiator.** **Its own file is the most sceptical of any member about its own marketing**: the real exposure is transmission and distribution rather than the UPS line the data-centre pitch leads with, and no reachable source publishes a share percentage for it in any of its three named markets."
+    ],
+    [
+     "**Aligned**",
+     "the hall itself · {{adjacent}}",
+     "**That cooling intellectual property is a landlord's moat rather than a product.** Source-capture arrays at about 1 per cent of IT load in fan power against roughly 10 per cent for conventional rows, a universal liquid platform rejecting 350 kW per rack, more than fifty patents, and a waterless closed loop its own file frames as removing the water-permitting veto in three states. **The risk it names is capital cadence rather than technology** — the financing machinery has to keep running whoever owns the platform."
+    ],
+    [
+     "**Supermicro**",
+     "the compute · {{adjacent}}",
+     "**That scope across the seam beats depth anywhere on it** — GPU systems at one end and 1 to 50 MW cooling towers at the other, sold as building blocks with {{rear-door heat exchanger}}s and in-rack CDUs in between. **Its own file grades the cooling position honestly**: a genuine manufactured line, and not a leadership one, with every performance figure company-stated."
+    ]
+   ],
+   "sales": "Read the middle column before the right-hand one. Two members with the same role are not comparable if they arrived from different ends of the loop, and on this roster the end a firm came from predicts its ranking better than its size does."
+  },
+  {
+   "id": "the-indicators",
+   "title": "The indicators",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "What to watch, dated **only where the record dates it**. The policy fence holds **34 entries across the eleven members, 17 of them dated and exactly one in the future** — and that one is already the public segment lesson's own review date, so it is an indicator here rather than this module's clock. **Four of the ten rows below carry a day**, four carry a month, a quarter or a half-year, one is in force with **no end date at all**, and one is undated by construction.",
+   "cols": [
+    "Indicator",
+    "Dated",
+    "Whose",
+    "Why it moves this landscape"
+   ],
+   "rows": [
+    [
+     "**A next-generation CDU sized for racks above 1 MW** — and specifically whether it is named above 2 MW and rated for the Vera Rubin platform",
+     "**28 September 2026**",
+     "CoolIT",
+     "**This module's review date.** That dossier's own indicators section states the test: a named capacity above 2 MW and a Rubin rating would confirm that the CDU is where consolidation is decided; a re-badged existing unit would not. It is the top rung of the ladder in the first section being replaced by the firm that set it."
+    ],
+    [
+     "**Tariff exclusions covering rotary compressors within defined wattage ranges expire** and entries revert to the underlying list rate",
+     "**9 November 2026**",
+     "Trane Technologies",
+     "The only future effective date in the whole policy fence, and a genuine component-cost gate on the plant side. It is **already the public segment lesson's review date**, set from this same entry — which is why it sits here rather than clocking this module."
+    ],
+    [
+     "**The first quarterly filing to carry the acquired CDU specialist inside its new parent's reporting segment**",
+     "late October 2026",
+     "Ecolab and CoolIT",
+     "Any disclosed contribution or customer-concentration language tests both the 29-times price and the claim of four of the five hyperscalers as customers, none of whom has ever been named."
+    ],
+    [
+     "**The next independent liquid-cooling and thermal rankings**",
+     "Q4 2026",
+     "Dell'Oro and Omdia",
+     "Whether the named leader holds against a forty-vendor field the same publisher expects to consolidate below ten. **Watch the movement column rather than the level** — the only share change anybody publishes here is about six points, and it belongs to one firm."
+    ],
+    [
+     "**A shipping 800 VDC product and a doubling of chiller capacity at one campus**",
+     "second half of 2026 into end-2026",
+     "Vertiv",
+     "The pure play adding plant capacity while announcing a DC portfolio that **no incumbent has yet shipped as a switchboard product** — the clearest test of whether the room-side incumbent keeps content through the architecture change."
+    ],
+    [
+     "**The separation of a contract manufacturer's cloud and power business into a standalone**",
+     "targeted Q1 2027",
+     "Flex",
+     "It moves a cooling line off a contract manufacturer's balance sheet and into a company whose whole business it is, which changes what adjacency means for one of the six."
+    ],
+    [
+     "**Industrial process chillers move to a later compliance date under the refrigerant transitions rule**",
+     "**1 January 2030**",
+     "Trane Technologies",
+     "A forced-replacement catalyst one incumbent had already priced in, pushed out by four years. **A demand-timing change rather than a compliance problem** — and it relieves competitors still holding legacy inventory."
+    ],
+    [
+     "**Capped metals-tariff rates on HVAC and on specified grid equipment expire and step up**",
+     "**31 December 2027**",
+     "Trane Technologies and Mitsubishi Electric",
+     "A cross-segment regime that reaches this roster from two directions at once. It has no segment home, so it is watched here rather than owned here."
+    ],
+    [
+     "**A state audit of data-centre interconnection queue positions, with new projects frozen while it runs**",
+     "in effect **August 2026, no end date**",
+     "Aligned",
+     "The clearest live instance of **water deciding a site**. One member has publicly committed to the state's standards and positions zero-water operational cooling as already compliant — a pause with no end date cannot be a clock, but it is the constraint the segment's own definition leads with."
+    ],
+    [
+     "**The first covered operator to name a cooling supplier**",
+     "undated",
+     "the whole roster",
+     "Two members record the same absence from opposite ends: no public source names any hyperscaler, colocation operator or general contractor as a customer of one incumbent, and another claims four of the five hyperscalers without naming one. **The first disclosure closes the largest gap in this segment's record.**"
+    ]
+   ],
+   "sales": "Six of these ten rows are somebody's product, filing or ranking calendar rather than a regulation. On this segment the things that move a position are launches, rankings and disclosures — and of the four regulatory rows, the only one inside the next twelve months is a component tariff rather than a refrigerant rule."
+  },
+  {
+   "id": "the-sellers-play",
+   "title": "The seller's play",
+   "read": "8 min",
+   "kind": "callout",
+   "tone": "info",
+   "ps": [
+    "**For the AIDC-power seller, three things follow from the measurements above, and all three are practical rather than rhetorical.**",
+    "**First: know which ranking the room is holding, and name its measuring point.** If the customer's thermal shortlist came from a chiller-share table, Trane is second and Vertiv is fifth. If it came from a thermal-management assessment, Vertiv is first and Trane is fifth. Both are published by named firms, neither is wrong, and they describe **different points on one chain**. A seller who cites whichever suits them without naming the list will be corrected by the one person in the room holding the other table — and the correction lands because it is true.",
+    "**Second: assume the cooling incumbent is also your power competitor, or your power partner.** Nine of the eleven sit in another segment and three of the five ranked members are in-hall-power incumbents. The clearest instance is the **only partner typing in this entire segment**: an August 2026 joint reference design integrating one firm's electrical infrastructure with another's chillers, CDUs and controls, claiming **80 per cent less copper and 30 per cent lower installation cost**. Two firms that compete nowhere are selling one scope — and a reference design gets a vendor specified **before** procurement starts, which is the go-to-market instrument three members now name as primary.",
+    "**Third: treat the {{approach temperature}} as the negotiation rather than the spec sheet.** It is the number where a vendor's machine meets the building's water, and it is published per unit — five degrees on one 2 MW CDU, fifteen on a {{liquid-to-air}} unit, four on an 800 VDC-native one. Every degree spent there is a degree the plant outside cannot spend, so the specification decides **whether this site needs a chiller at all**. That single quantity carries the first two of the segment's six buying criteria, and it is the one place a cooling conversation becomes a power conversation. **Its plant-side counterpart is {{IPLV}}** — the third criterion — because a chiller quoted at its full-load rating is being quoted at a load it will almost never carry.",
+    "**For the BESS seller the honest answer is that this segment buys storage rarely and indirectly — and the two places it does are worth knowing precisely.**",
+    "**One member has already bought.** A landlord on this roster framed a **31 MW / 62 MWh** battery explicitly as an **interconnection accelerator** in October 2025, alongside a 540 MW self-funded campus. That is a storage purchase made for a power reason, by a company whose cooling platform is its own — so the storage conversation and the cooling conversation are with one counterparty, not two.",
+    "**One member is crossing into your lane.** The segment's most-ranked incumbent sells a **1 MW to 200-plus MW utility-grade** storage product **through its data-centre relationships**, and its own file reads this as convergence between data-centre power vendors and the storage integrator space — *a lane-crossing move worth tracking for every storage vendor in this file*. A second member sells a **1.5 MW / 3.1 MWh** system as site infrastructure beside its cooling towers. Neither is a storage company; both are selling storage to a buyer you already call on.",
+    "**And one thing to stop doing: pitching thermal management as a differentiator in this room.** Every one of these eleven designs and builds cooling; four are ranked on it by independent publishers; and the one that does not sell it at all built its own rather than buy anybody's. The container's HVAC is a component to this audience rather than a claim. The credible differentiator in front of this audience is **what your enclosure does to their water and their approach budget**, not that it is cooled."
+   ]
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "**Provenance:** corpus synthesis over the segment's eleven member dossiers at the versions below; no ingested document, no new research. Every load-bearing claim above traces to a dossier at its profile version and to the field it rests on, or to the segment registry, or to the relationship graph. Dossiers carry their own sources; this ledger cites the dossiers.",
+   "rows": [
+    [
+     "Segment holds 11 members — 4 incumbent, 1 challenger, 6 adjacent; chain position 8, tier build; six buying criteria; and a notes field addressing exactly one member",
+     "profiler-segments.json @ last commit 2026-09-13 — segments[].members[], .position, .tier, .buyingCriteria, .notes"
+    ],
+    [
+     "26 edges among the eleven, 23 carrying a curated typing, 39 typings of which 36 read competitor; 21 distinct rival pairs of 55 possible; one competitor component of ten with a single cut vertex detaching one leaf",
+     "profiler-graph.json @ built 2026-09-13 — edges[].curated"
+    ],
+    [
+     "ABI Research 30 January 2025 places Vertiv first as a Market Leader and Trane fifth in the Mainstream tier, with Johnson Controls, Schneider Electric and Daikin between",
+     "profile:trane-technologies @ v1 — productsAndServices[2].positioning, relationships[2].context"
+    ],
+    [
+     "Global Market Insights August 2026 places Trane second at 18.7 per cent of a USD 2.6bn 2025 data-centre chiller market, behind Johnson Controls at 20.9, ahead of Carrier at 14.5, Daikin at 12.0 and Vertiv at 8.1",
+     "profile:trane-technologies @ v1 — productsAndServices[0].positioning"
+    ],
+    [
+     "The two rankings invert because the two firms are strong at different points in the same chain — stated independently in both dossiers, neither citing the other",
+     "profile:trane-technologies @ v1 — relationships[2].context; profile:vertiv @ v9 — relationships[9].context"
+    ],
+    [
+     "Dell'Oro January 2026 names Vertiv the liquid-cooling leader with CoolIT, nVent and Boyd holding strong positions, and does not name Supermicro",
+     "profile:supermicro @ v1 — strategyRead[3], productsAndServices[0].positioning"
+    ],
+    [
+     "Dell'Oro counts around forty companies with CDUs and expects fewer than ten vendors to capture the lion's share",
+     "profile:coolit @ v1 — productsAndServices[0].positioning, strategyRead[1]"
+    ],
+    [
+     "Omdia ranks Vertiv top three in data-centre thermal with about six points of share gained, and had placed CoolIT first in CDUs in 2023",
+     "profile:vertiv @ v9 — ecosystemRole, productsAndServices[1].description; profile:coolit @ v1 — strategyRead[1]"
+    ],
+    [
+     "CDU capacities: Trane GigaModular in 2.5 MW blocks validated to 14 MW; Delta GoCool 3 MW; Schneider Motivair MCDU-70 2.5 MW; Vertiv CoolChip 70 kW to 2.3 MW; LITEON 2.1 MW in-row; CoolIT CHx2000 2.0 MW at 5 degrees ATD and twelve GB300 NVL72 racks; Flex 600 kW to 1.8 MW; Supermicro 1.8 MW in-row and 250 kW in-rack",
+     "profile:trane-technologies @ v1, profile:delta-electronics @ v5, profile:schneider-electric @ v9, profile:vertiv @ v9, profile:liteon @ v6, profile:coolit @ v1, profile:flex @ v1, profile:supermicro @ v1 — productsAndServices[]"
+    ],
+    [
+     "Eaton acquired Boyd Thermal for USD 9.5bn at 22.5 times forward EBITDA, closed 12 March 2026, bringing about USD 1.7bn of 2026 sales of which roughly USD 1.5bn is liquid cooling; about USD 12.5bn of acquisitions in fourteen months",
+     "profile:eaton @ v8 — summary, productsAndServices[3], strategyRead[0]"
+    ],
+    [
+     "Ecolab acquired CoolIT for about USD 4.75bn, 29 times next-twelve-month adjusted EBITDA on roughly USD 550m of expected sales, closed 2 July 2026",
+     "profile:coolit @ v1 — summary, strategyRead[0]"
+    ],
+    [
+     "Trane took LiquidStack from a 2023 minority to full ownership in March 2026 and acquired Stellar Energy in February 2026 for USD 553.4m gross; its own read is that it is buying down the thermal chain as a follower",
+     "profile:trane-technologies @ v1 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Schneider took a controlling interest in Motivair in September 2025 and launched a 2.5 MW unit in January 2026; its own read is that the cooling lead is contestable",
+     "profile:schneider-electric @ v9 — strategyRead[3]; profile:trane-technologies @ v1 — strategyRead[0]"
+    ],
+    [
+     "Vertiv assembled equivalent scope through four smaller deals including PurgeRite at about USD 1.0bn, plus Strategic Thermal Labs, ThermoKey and BMarko",
+     "profile:vertiv @ v9 — productsAndServices[1].positioning, strategyRead[3]"
+    ],
+    [
+     "Flex paid USD 53m for JetCool in November 2024, against Eaton's USD 9.5bn for Boyd — the comparison is drawn inside the corpus",
+     "profile:eaton @ v8 — relationships[8].context; profile:flex @ v1 — strategyRead[2]"
+    ],
+    [
+     "Nine of eleven members are shared, across 22 memberships elsewhere, with 17 inversions; incumbents 0 promotions and 4 demotions in six chances, adjacents 8 promotions and 0 demotions in eleven",
+     "profiler-segments.json @ last commit 2026-09-13 — segments[].members[] across all nineteen"
+    ],
+    [
+     "Trane Technologies and CoolIT belong to no other segment, and the graph carries no edge between them",
+     "profiler-segments.json; profiler-graph.json — edges[]"
+    ],
+    [
+     "An August 2026 joint reference design integrates one member's electrical infrastructure with another's chillers, CDUs and controls, claiming 80 per cent less copper and 30 per cent lower installation cost — the only partner typing in the segment",
+     "profiler-graph.json — edges[].curated (partner, since 2026-08); profile:trane-technologies @ v1 — strategyRead[1]"
+    ],
+    [
+     "Aligned's in-house cooling IP is its moat claim versus peers buying merchant CRAH and CDU equipment; source capture at about 1 per cent of IT load in fan power against roughly 10 per cent; DeltaFlow at 350 kW per rack; more than fifty patents; the waterless loop framed as removing the water-permitting veto in Texas, Arizona and Utah",
+     "profiler-graph.json — edges[].curated (other); profile:aligned @ v7 — strategyRead[1], policyExposure[0]"
+    ],
+    [
+     "The registry argues Supermicro is adjacent rather than challenger on a manufactured product line rather than a market position; a DLC component shortage cost a reported USD 800m of revenue in a quarter",
+     "profiler-segments.json — segments[cooling].notes; profile:supermicro @ v1 — strategyRead[2], strategyRead[3]"
+    ],
+    [
+     "CoolIT records Supermicro as a stated collaborator while Supermicro names no third-party cooling vendor anywhere; no source reconciles them and the graph types the pair competitor",
+     "profiler-graph.json — edges[].curated.b.context; profile:coolit @ v1 — ecosystemRole; profile:supermicro @ v1 — productsAndServices[]"
+    ],
+    [
+     "Delta is the first-qualified power-shelf supplier for GB200 and GB300 NVL72 and TrendForce's named primary 800V beneficiary; its 2.4 MW CDU is 800 VDC-native with a four-degree approach; AI data centre is more than half of revenue",
+     "profile:delta-electronics @ v5 — strategyRead[0], strategyRead[3], productsAndServices[]"
+    ],
+    [
+     "Delta-class ODM power vendors sit closer to the NVIDIA rack than any incumbent",
+     "profile:vertiv @ v9 — strategyRead[1]"
+    ],
+    [
+     "LITEON's battery-backup content moves from optional to standard, it is a step behind on the GPU-side 800V ramp by its own timeline, and it ships a 2.1 MW in-row CDU and a 140 kW liquid-to-air sidecar",
+     "profile:liteon @ v6 — strategyRead[0], strategyRead[1], productsAndServices[]"
+    ],
+    [
+     "JetCool appears in no liquid-cooling league table from any named ranking; about USD 6.3bn across six deals; the cloud and power separation is targeted for the first calendar quarter of 2027",
+     "profile:flex @ v1 — strategyRead[3], strategyRead[2], strategyRead[0]"
+    ],
+    [
+     "Mitsubishi Electric sells the CritiCool air-cooled chiller line and wall-mounted units beside its UPS line, introduced 2021; its own read is that the real exposure is transmission and distribution rather than the UPS line its data-centre marketing leads with",
+     "profile:mitsubishi-electric @ v3 — productsAndServices[], strategyRead[0], strategyRead[4]"
+    ],
+    [
+     "Vertiv runs about 75 to 80 per cent data-centre revenue, a USD 15.0bn backlog at end-2025 and a book-to-bill near 2.9 times; it fell 25 to 30 per cent on the DeepSeek scare and 10 to 17 per cent on a 3 per cent miss; its own read names execution rather than demand as the binding risk into 2027",
+     "profile:vertiv @ v9 — summary, strategyRead[0], strategyRead[3]"
+    ],
+    [
+     "Schneider is the only vendor with NVIDIA co-developed designs spanning power management, liquid-cooling controls and gigawatt factory blueprints, and publishes no design-linked order figures",
+     "profile:schneider-electric @ v9 — ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "Trane's order backlog reached USD 12.1bn at Q2 2026, up 70 per cent, while the company publishes no data-centre revenue figure of any kind and no public source names a single data-centre customer",
+     "profile:trane-technologies @ v1 — summary, ecosystemRole, strategyRead[5]"
+    ],
+    [
+     "178 tariff exclusions expire at 23:59 ET on 9 November 2026 and specifically include rotary compressors within defined wattage ranges",
+     "profile:trane-technologies @ v1 — policyExposure[4]"
+    ],
+    [
+     "A next-generation CDU engineered for racks above 1 MW launches 28 September 2026, announced 17 August 2026 with no name, capacity or specification disclosed; a named capacity above 2 MW and a Vera Rubin rating would confirm the CDU consolidation judgment",
+     "profile:coolit @ v1 — strategyRead[8], productsAndServices[0].roadmap, recentDevelopments[1], summary"
+    ],
+    [
+     "Industrial process chillers moved from 2026 and 2028 to 1 January 2030 under the amended refrigerant transitions rule; the HFC allowance schedule steps down across 2026-2028, 2029-2033, 2034-2035 and 2036 onward",
+     "profile:trane-technologies @ v1 — policyExposure[1], policyExposure[0]"
+    ],
+    [
+     "Residential HVAC is held at 15 per cent ad valorem through 31 December 2027, and a capped 15 per cent rate on specified electrical-grid equipment runs to the same date before rising to 25 per cent",
+     "profile:trane-technologies @ v1 — policyExposure[3]; profile:mitsubishi-electric @ v3 — policyExposure[0]"
+    ],
+    [
+     "A state audit of data-centre interconnection queue positions took effect in August 2026 with new projects frozen and no end date stated, and one member publicly committed to the state's standards",
+     "profile:aligned @ v7 — policyExposure[0]"
+    ],
+    [
+     "A 31 MW / 62 MWh battery was framed as an interconnection accelerator in October 2025 alongside a 540 MW self-funded campus",
+     "profile:aligned @ v7 — strategyRead[2]"
+    ],
+    [
+     "A 1 MW to 200-plus MW utility-grade storage product is sold through data-centre relationships and read by its own dossier as a lane-crossing move worth tracking for every storage vendor; a second member sells a 1.5 MW / 3.1 MWh system as site infrastructure",
+     "profile:vertiv @ v9 — strategyRead[4]; profile:supermicro @ v1 — productsAndServices[0]"
+    ],
+    [
+     "CoolIT claims four of the top five server OEMs and four of the five hyperscalers as customers and names none of them, and publishes no revenue, margin, installed-megawatt or annual unit figure",
+     "profile:coolit @ v1 — summary, strategyRead[3], strategyRead[7]"
+    ],
+    [
+     "Supermicro publishes its liquid-to-air sidecar capacity at two different figures on its own pages, up to 200 kW and up to 500 kW, and no source reconciles them",
+     "profile:supermicro @ v1 — productsAndServices[1]"
+    ],
+    [
+     "Two members carry no policyExposure entry at all",
+     "profile:vertiv @ v9; profile:eaton @ v8 — policyExposure"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "read": "6 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**The corpus does not cover the top of this segment's own plant market, and the arithmetic is worth stating exactly.** The chiller share table names five vendors with percentages and **two of them are members** — 18.7 and 8.1 per cent, **26.8 points between them**. The other three, at 20.9, 14.5 and 12.0 — **47.4 points** — have no dossier at all. **The leader of the plant layer is outside this roster.** The thermal-management assessment has the same shape: five named, three covered, two absent. The liquid-cooling assessment names four: two members, one reachable only through the {{challenger}} that bought it, and one absent entirely.",
+    "**No cooling vendor in this corpus has a named data-centre customer.** One incumbent's file states it after an exhaustive check — *no source states a commercial relationship* with any hyperscaler, colocation operator, AIDC developer or general contractor, and its only two stated relationships in this ecosystem are reference designs. Another claims **four of the five hyperscalers** and names none of them. **The buyer side of this segment is invisible from both ends**, and both dossiers say so about themselves rather than about each other.",
+    "**Two of the four {{incumbent}}s cannot be sized on the business this module is about.** One publishes **no data-centre revenue figure of any kind** — the phrase appears four times in its annual report, all inside an alphabetical product list — while attributing its backlog growth to data-centre orders. The other publishes **no revenue, margin, installed-megawatt or annual unit figure at all**, being a subsidiary since July 2026.",
+    "**Two members' own pages contradict themselves and no source reconciles them.** One publishes its {{liquid-to-air}} sidecar capacity as **up to 200 kW on one page and up to 500 kW on another**, and its memory bandwidth as two different figures. This is recorded beside the capacity ladder in the first section because a ladder is only as reliable as the capacities on it.",
+    "**Every performance figure in one member's cooling stack is a company claim rather than an independent measurement** — 98 per cent heat capture, 40 per cent power saving, 20 per cent lower total cost of ownership — in that dossier's own words. The same caution applies to a published head-to-head comparison elsewhere on the roster, which sets one vendor's 2,269 kW against **anonymised** competitors at 1,073 and 734 kW.",
+    "**Two members carry no policy exposure entry at all — one {{incumbent}} and the {{challenger}}** — and they are the leader named by all three independent assessments and the firm that paid the most to enter. The fence in the indicators section is therefore thin **by absence rather than by measurement**: whatever refrigerant or tariff exposure those two carry is simply not on this record.",
+    "**And the registry's own explanatory note addresses exactly one member.** It argues that firm's adjacency in careful detail and says nothing about the other ten — so the lopsided four-one-six shape, and the finding that the bench outranks the leaders everywhere else, are measured here rather than explained by the registry."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "read": "7 min",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Two independent rankings of this segment place the same firm first and fifth. What is the resolution?",
+     "a": "**They measure different points on one chain.** A thermal-management assessment ranks the room and the distribution equipment; a chiller-share table ranks the machine that rejects the heat. Both members' own dossiers state the reason independently and neither cites the other. The segment is **one chain measured at two points**, not two markets."
+    },
+    {
+     "q": "The brief for this module proposed that cooling is two markets under one name. What test rejected it?",
+     "a": "**The relationship graph.** Twenty-six edges among the eleven, thirty-six competitor typings, twenty-one rival pairs — and the competitor subgraph is **one connected component of ten**. Its only cut vertex detaches a single leaf, and restricting to thermally-worded edges still leaves one component of nine. A two-market segment separates in the graph; this one does not."
+    },
+    {
+     "q": "What is the inversion measurement, and why does the direction matter more than the rate?",
+     "a": "**Nine of eleven members are shared, across twenty-two memberships elsewhere, and seventeen invert — 77 per cent.** The direction is sorted perfectly by the role held here: **no member ranked at the top here is ranked higher anywhere else**, in six chances, and **no member called adjacent here is ranked lower anywhere else**, in eleven. The rank order here is the inverse of the rank order everywhere else."
+    },
+    {
+     "q": "Which two members cannot invert, and what does that prove?",
+     "a": "**Trane Technologies and CoolIT** — the only two of the eleven belonging to no other segment, and the only two pure cooling plays. One sells the chiller that rejects the heat, one the cold plate that collects it, **and the graph carries no edge between them of any kind**. The segment's only two members with nothing to contradict them are also the two that never meet."
+    },
+    {
+     "q": "The CDU capacity ladder runs from 1.8 MW to 14 MW. Why is it not a ranking?",
+     "a": "**Two reasons.** The top rung is an **assembly of 2.5 MW blocks validated to fourteen** while the rest are single units, so the numbers do not measure the same object. And the ladder **contradicts all three independent assessments**, placing an {{adjacent}} member above three of the four {{incumbent}}s — a member none of the three publishers names. Read it as evidence of convergence on the {{coolant distribution unit}} instead."
+    },
+    {
+     "q": "How did each of the five ranked members take its position in liquid cooling?",
+     "a": "**By purchase, all five, inside eighteen months.** One bought a specialist for USD 9.5 billion; one **was itself bought** for about USD 4.75 billion; one took control of a CDU vendor; one converted a minority to full ownership and bought a modular plant business; one assembled equivalent scope through four smaller deals. The bench built instead."
+    },
+    {
+     "q": "What does the 179-times price gap between two acquisitions of the same layer tell you?",
+     "a": "**That the thing being bought is not the technology.** USD 9.5 billion for one cold-plate and CDU business against USD 53 million for another, twenty-eight months apart. The larger buyer was purchasing scope and installed position to sell as one grid-to-chip offer; the smaller was filling a product gap in a contract-manufacturing portfolio."
+    },
+    {
+     "q": "Where does the threat to this segment actually come from, if not from its single {{challenger}}?",
+     "a": "**From six firms that are somebody else's incumbent**, arriving with a cooling line attached to a franchise they already hold in the same building — the power shelf, the switchgear and UPS, the rack, or the hall itself. Every one of the six is ranked incumbent or challenger in at least one other segment: **six of six, no exception**."
+    },
+    {
+     "q": "One member's only edge inside the segment is typed 'other' rather than 'competitor'. Why is that the right typing?",
+     "a": "**Because it is a buyer that refused to buy.** Its in-house cooling intellectual property is explicitly its moat **versus peers who purchase merchant equipment** from the segment's incumbents. Source capture at about 1 per cent of IT load in fan power against roughly 10 per cent, 350 kW per rack rejected, more than fifty patents — and none of it sold. A landlord that builds its own is demand that never enters an order book."
+    },
+    {
+     "q": "Why does the registry call one manufacturer adjacent when it manufactures its own CDUs and manifolds?",
+     "a": "**The note argues it both ways and lands on market position rather than product line.** The filing does state it manufactures the units — the same standard on which two other adjacents sit. But the independent liquid-cooling assessment **does not name it at all**, every performance figure is company-stated, and a component shortage in that stack cost a reported USD 800 million of revenue in a quarter: *the behaviour of a taker of cooling supply rather than a maker of it*."
+    },
+    {
+     "q": "What is the {{approach temperature}}, and why is it the seller's number rather than the engineer's?",
+     "a": "**The degrees a {{coolant distribution unit}} spends between the technology loop and {{facility water}}.** The public lesson uses it as arithmetic — a forty-five-degree rack minus a five-degree approach leaves forty-degree water, which a dry cooler can make. A seller uses it to decide **which vendor's unit lets this site run without a chiller**, which is the first two of the segment's six buying criteria in one specification."
+    },
+    {
+     "q": "Two covered companies describe the same relationship differently. How is that handled?",
+     "a": "**It is published as a disagreement, and the graph's typing is the arbitration.** One records the other as a stated collaborator; the other names no third-party cooling vendor anywhere in its filings or product pages. Both can be true — a collaboration one side publicises — and **no source reconciles them**, so the pair is typed competitor on the reading both records support."
+    },
+    {
+     "q": "What is the biggest hole in this segment's record?",
+     "a": "**The buyer side, from both ends.** No public source names a single hyperscaler, colocation operator or general contractor as a customer of one incumbent, and another claims four of the five hyperscalers without naming one. Add that **the leader of the plant-share table has no dossier at all** — 47.4 points of that market sit outside the roster against 26.8 inside."
+    },
+    {
+     "q": "What single date does this module's review clock hang on, and what would it change?",
+     "a": "**The launch of a next-generation CDU for racks above 1 MW, on 28 September 2026.** That dossier's own indicators section sets the test: a **named capacity above 2 MW and a Vera Rubin rack rating** would confirm that the CDU is where consolidation is decided; a re-badged existing unit would not. It is the top rung of this module's own ladder being replaced by the firm that set it."
+    },
+    {
+     "q": "This module owns none of the six buying criteria. Is that a weakness?",
+     "a": "**No — it is the sharpest form of layer four's job, and it is measured.** Run the generator's own test across all nineteen segments and cooling is the **only one whose criterion table prints no dash at all**: six of six resolve to a built public lesson, where the next best manages five of six and three segments resolve none. The tests are taught elsewhere; this module says who sits where on each."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "read": "8 min",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague shows you a share table putting one vendor fifth and concludes it is a marginal player in cooling. What does the record actually support?",
+     "c": [
+      "That the vendor is indeed marginal — a published share table is the best available evidence",
+      "That the table measures the chiller plant, where that vendor is genuinely fifth, while a separate assessment of thermal-management providers places the same vendor first — the two rank different points on one chain",
+      "That the table is wrong and should be discarded in favour of the assessment that ranks the vendor first",
+      "That the segment is two markets and the vendor competes in only one of them"
+     ],
+     "a": 1,
+     "why": "Both tables are honest and both are published by named firms. The chiller table ranks the machine that rejects the heat; the thermal-management assessment ranks the room and the distribution equipment between the chip and that machine. Both dossiers state the reason independently and neither cites the other: they are strong at different points in the same chain. The fourth option is the hypothesis this module tested and rejected — the competitor graph is one connected component of ten, so the rivalry does not divide even though the measurement does."
+    },
+    {
+     "q": "You need to decide whether this segment is two markets. Which evidence settles it, and which way?",
+     "c": [
+      "The two inverted rankings settle it — two rankings mean two markets",
+      "The four incumbents' bases settle it — four different measuring points mean four sub-markets",
+      "The relationship graph settles it against the hypothesis: the competitor subgraph is one connected component of ten, its only cut vertex detaches a single leaf, and the thermally-worded edges alone still form one component of nine",
+      "Nothing in the record settles it, so the question stays open"
+     ],
+     "a": 2,
+     "why": "A two-market segment separates in the graph — the previous landscape's competitor subgraph fell into six plus ten when one firm and one edge were cut. Nothing here cuts. Remove the only cut vertex and the result is eight plus one. The rankings invert because they measure different points, which is a measurement property rather than a market boundary, and the four incumbent bases are four measuring points on the same chain rather than four separate contests."
+    },
+    {
+     "q": "Seventeen of twenty-two memberships elsewhere invert the role a member holds here. Which reading does the direction support?",
+     "c": [
+      "That the registry is inconsistent and one of the two role assignments must be wrong in each case",
+      "That the rank order in this segment is the inverse of the rank order everywhere else: no member ranked at the top here is ranked higher anywhere else, and no member called adjacent here is ranked lower anywhere else",
+      "That the segment is immature, since a settled segment would show stable roles across the taxonomy",
+      "That the adjacent members are about to be promoted here, since they are already ranked elsewhere"
+     ],
+     "a": 1,
+     "why": "The direction is what carries the finding, not the rate. Of the six memberships held elsewhere by members ranked at the top here, none is a promotion and four are demotions; of the eleven held by members called adjacent here, none is a demotion and eight are promotions. That is exactly what a segment whose own rank depends on the measuring point will produce, because every neighbour measures somewhere else by definition. The registry is not inconsistent — it is right in both places."
+    },
+    {
+     "q": "A capacity ladder runs from 1.8 MW to 14 MW across eight members. How should it be used?",
+     "c": [
+      "As the segment's rank order, since it is the only numeric comparison covering most of the roster",
+      "As evidence of convergence rather than rank — its top rung is an assembly of blocks while the rest are single units, and it places an adjacent member above three of the four incumbents",
+      "Discarded entirely, because published capacities are marketing figures",
+      "As a rank order for the plant-side members only, where the units are comparable"
+     ],
+     "a": 1,
+     "why": "The top rung is 2.5 MW blocks validated to fourteen; the others are single machines, so the numbers do not measure the same object. And the ladder contradicts all three independent assessments at once, placing above three incumbents a member that none of the three publishers names. What it does show honestly is that eleven firms arriving from four different businesses are now rated on the same machine — and one dossier notes the unit of competition has already moved past megawatts to racks cooled per unit."
+    },
+    {
+     "q": "The registry gives this segment one challenger. Where is the competitive pressure actually coming from?",
+     "c": [
+      "From that challenger, which spent USD 9.5 billion to enter",
+      "From outside the corpus, since the plant-share leader has no dossier",
+      "From six members the registry calls adjacent, every one of which is ranked incumbent or challenger in another segment that sells into the same building",
+      "From the two pure plays, which belong to no other segment and therefore concentrate entirely here"
+     ],
+     "a": 2,
+     "why": "Six of six adjacents are ranked elsewhere with no exception — two are power-conversion incumbents already qualified inside the rack, one is an incumbent in two electrical segments, one is a challenger in two, one is an incumbent landlord that builds its own, and one is a compute challenger selling the plant around its own racks. The challenger's USD 9.5 billion is real and is covered in the bets table, but it bought a position rather than opening a new route. The second option is a genuine coverage gap and is recorded as one — it is not where competitive pressure inside the roster comes from."
+    },
+    {
+     "q": "You are selling AIDC power and the cooling incumbent on the account is also a competitor of yours in switchgear. What does this segment's record suggest you check first?",
+     "c": [
+      "Whether they have a reference design with anyone, because three members now name that as their primary go-to-market instrument and it gets a vendor specified before procurement opens",
+      "Their published CDU capacity, since the largest number wins the thermal scope",
+      "Their share position in the chiller table, since that determines the whole account",
+      "Whether they are the registry's challenger, since only the challenger competes on price"
+     ],
+     "a": 0,
+     "why": "The only partner typing in this entire segment is an August 2026 joint reference design integrating one firm's electrical infrastructure with another's chillers, CDUs and controls, claiming 80 per cent less copper and 30 per cent lower installation cost. Two firms that compete nowhere are selling one scope, and a design gets specified before competitive bidding starts. The capacity number is not a rank order, the chiller table measures only one point of the chain, and the challenger label describes how a position was acquired rather than how it is priced."
+    },
+    {
+     "q": "What is the honest answer to whether this segment buys battery storage?",
+     "c": [
+      "Yes — thermal management and storage are sold together, so it is a natural attach",
+      "No — cooling vendors have no interest in storage at any point",
+      "Rarely and indirectly, with two specific exceptions: one member bought a battery explicitly as an interconnection accelerator, and two members sell storage products of their own into the buyers you already call on",
+      "Only through the landlords, which buy everything centrally"
+     ],
+     "a": 2,
+     "why": "A landlord on this roster framed a 31 MW / 62 MWh battery as an interconnection accelerator in October 2025 alongside a 540 MW self-funded campus — a storage purchase made for a power reason, by a company whose cooling platform is its own. Separately the most-ranked incumbent sells a 1 MW to 200-plus MW utility-grade product through its data-centre relationships, which its own file reads as a lane-crossing move worth tracking for every storage vendor, and another member sells a 1.5 MW / 3.1 MWh system as site infrastructure. What does not work is pitching thermal management as a differentiator to eleven firms that sell it for a living."
+    }
+   ]
+  }
+ ]
+};
+}
+
 
 
 // PROJECT END

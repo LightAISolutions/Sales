@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.61g] — 2026-09-17 12:50:41 AM EST — v06.32r
+
+### Added
+
+- A new module in the Industry Guidance library covering another link of the value chain: who leads it, on what published basis, who is pressing in from neighbouring parts of the chain, what each named player is betting, and what to watch next
+
+### Changed
+
+- One generated value-chain lesson has been refreshed so that every buying criterion it lists now points at the lesson that teaches it, and so that it links on to the new guidance module
+- Minor internal improvements
 
 ## [v01.60g] — 2026-09-17 12:00:37 AM EST — v06.30r
 

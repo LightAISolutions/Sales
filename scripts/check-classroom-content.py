@@ -935,11 +935,29 @@ def run_gate_truth_table(src, lesson_ids=()):
     # header comment enumerates TWENTY-THREE omissions across eight
     # neighbours, the heaviest of which is the public Value Chain LANE OPENER
     # that uses this segment's own credit chain as its worked example.
+    # 24 at S2 session 15 (2026-09-17), landscape-cooling-2026-09 - the
+    # FIFTEENTH landscape. Its brief proposed the segment was "two markets
+    # wearing one name" and the GRAPH REJECTED IT: 26 edges among the eleven,
+    # 36 of 39 typings competitor, and the competitor subgraph is ONE
+    # component of ten whose only cut vertex detaches a single leaf. What
+    # replaced it is that two independent rankings place the SAME firm first
+    # and fifth - ABI Research on thermal management against Global Market
+    # Insights on chillers - and BOTH members' dossiers give the same reason
+    # independently, neither citing the other: they are strong at different
+    # points in one chain. So the segment is ONE CHAIN MEASURED AT TWO POINTS,
+    # which also explains its structural signature: 17 of 22 memberships
+    # elsewhere invert, sorted perfectly by role, with NO member ranked at the
+    # top here ranked higher anywhere else and NO adjacent here ranked lower
+    # anywhere else - (aa2) and (ee3) firing together in opposite directions
+    # for the first time. 10.6 (t) fired in a FOURTH shape: both READ_NEXT
+    # lessons are public, own all six criteria, and name NONE of the eleven -
+    # a boundary enacted rather than declared, visible only as a measurement
+    # of what was not written.
     # S2 runs one landscape per segment in the INTEGRATED-REMEDIATION-PLAN.md
     # 7.3 sales-value order, so this number rises by one per S2 session and
     # the session that forgets it is stopped here rather than in review.
-    if len(gids) != 23:
-        err("progress test: guidanceDocs_() registers %d module(s), expected 23" % len(gids))
+    if len(gids) != 24:
+        err("progress test: guidanceDocs_() registers %d module(s), expected 24" % len(gids))
     cases += 1
     clash = sorted(set(gids) & set(lesson_ids))
     if clash:
