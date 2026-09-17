@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.62g] — 2026-09-17 01:55:40 AM EST — v06.34r
+
+### Added
+
+- A new advanced lesson has been added to one of the AI data-center tracks. It covers the engineering that a higher-voltage direct-current hall brings with it: how the faults that can occur there differ from the ones on an alternating-current system, what detects each one and what stops it, the four earthing arrangements under consideration and what each costs, the two protection areas a hall is divided into, the connector sequence that keeps a live conductor out of anyone's hand, and how long the different classes of protective device take to act. The lesson requires a higher access level than most of the curriculum, so readers below that level continue to see it only as a count of withheld material inside its track
+
+### Changed
+
+- One existing lesson in the same track has been updated: two places where it said a particular topic was not yet taught anywhere now point at the lesson that teaches it
+- Minor internal improvements
 
 ## [v01.61g] — 2026-09-17 12:50:41 AM EST — v06.32r
 

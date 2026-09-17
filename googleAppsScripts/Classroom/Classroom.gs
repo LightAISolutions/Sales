@@ -1,4 +1,4 @@
-var VERSION = "v01.61g";
+var VERSION = "v01.62g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -40920,6 +40920,9 @@ function clLessonGridStabilityAndTheGenerator_() {
 // so the material is in nobody's hands. It is not this lesson's to take: the
 // gate differs and the subject is protection, not granularity. Recorded here
 // and in the §8 CHANGELOG record for whoever authors row 20.
+// CLOSED 2026-09-17 at v06.34r: row 20 shipped dc-fault-engineering, which
+// carries the taxonomy with detection and clearing. The finding above records
+// what was true when this lesson was written and is left as written.
 //
 // reviewBy 2027-03-16 is the ~6-month default from updated, with three
 // rejections in writing. (1) study:power-electronics' "available from January
@@ -41892,6 +41895,12 @@ function clLessonCleanFirmPower_() {
 // guidance-gated and UNBUILT, so the taxonomy is currently held by nobody -
 // and the row, the drill card and the table note all say so rather than
 // teaching a classification the curriculum has reserved.
+// CLOSED 2026-09-17 at v06.34r: dc-fault-engineering is built and registered
+// at position 9 of this track's ten, and it carries the classification with
+// a "what sees it" and a "what stops it" column. The row cell and the drill
+// card were corrected in that same commit under one revisions[] entry naming
+// both section ids; the paragraph above is left as the record of what row 17
+// found.
 //
 // THE STAMP IS 30 PUBLIC INPUTS AND EVERY ONE CONTRIBUTED. All `study:` and
 // `concepts:`, so the fold is `tracks` - analyst-visible, as a capstone over
@@ -41949,8 +41958,18 @@ function clLessonWhereTheChainBreaks_() {
  "title": "The Failure-Point Map",
  "short": "One chain, a dozen weak points. Where the grid-to-chip path fails, why the physics makes it fail there, and who owns each failure.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-16",
+ "updated": "2026-09-17",
  "reviewBy": "2027-03-16",
+ "revisions": [
+  {
+   "date": "2026-09-17",
+   "note": "Section one-chain-twelve-weak-points and the drill card both taught that the DC arc taxonomy was held by nobody because the lesson that owns it was unbuilt; dc-fault-engineering is now registered and carries the taxonomy with detection and clearing, so both now name where the classification lives instead.",
+   "changed": [
+    "one-chain-twelve-weak-points",
+    "drill"
+   ]
+  }
+ ],
  "provenance": {
   "inputs": [
    {
@@ -42263,7 +42282,7 @@ function clLessonWhereTheChainBreaks_() {
      "A sustained series arc; a conversion stage deleted without a plan for its fault duty; a stock supply that was never rated for DC.",
      "An AC arc self-extinguishes a hundred and twenty times a second at the {{zero crossing}}, which is exactly what a {{vacuum interrupter}} relies on. A DC arc has no such moment and must be engineered out - {{DC circuit breaker}}s, arc-fault management, grounding treated as a design decision, and {{SSCB}} devices that stop conducting in microseconds because nothing else will stop them. Every stage removed makes the surviving converter's job harder.",
      "**No zero crossing.** The one row where the genuinely new physics is dominant - and the one row this lesson deliberately stops short on.",
-     "OEM and electrical contractor. **The arc taxonomy itself is not taught here.** *Faults, Grounding, and the Interlock at 800 Volts* owns it, and that lesson is not yet built, so the classification is currently held by nobody."
+     "OEM and electrical contractor. **The arc taxonomy itself is not taught here.** *Faults, Grounding, and the Interlock at 800 Volts* owns it, and that lesson is now built - so the classification lives there, at the stricter gate, rather than with this map."
     ],
     [
      "**12 · The load itself**",
@@ -42450,7 +42469,7 @@ function clLessonWhereTheChainBreaks_() {
     },
     {
      "q": "**Row 11.** What does an alternating-current arc do for free that a direct-current arc does not?",
-     "a": "It dies. An AC arc self-extinguishes a hundred and twenty times a second at the {{zero crossing}}, and a great deal of protection quietly depends on that gift - a {{vacuum interrupter}} is built around it. A DC arc has no such moment and must be extinguished deliberately: {{DC circuit breaker}}s, arc-fault management, grounding as a design decision, and {{SSCB}} devices that stop conducting in microseconds. **This lesson states the failure and stops.** The classification of DC arcs belongs to *Faults, Grounding, and the Interlock at 800 Volts*, which is not yet built - so that taxonomy is currently held by nobody, and this card says so rather than inventing one."
+     "a": "It dies. An AC arc self-extinguishes a hundred and twenty times a second at the {{zero crossing}}, and a great deal of protection quietly depends on that gift - a {{vacuum interrupter}} is built around it. A DC arc has no such moment and must be extinguished deliberately: {{DC circuit breaker}}s, arc-fault management, grounding as a design decision, and {{SSCB}} devices that stop conducting in microseconds. **This lesson states the failure and stops.** The classification of DC arcs - which arc types exist, what sees each one and what stops it - belongs to *Faults, Grounding, and the Interlock at 800 Volts*, which is now built and carries it at the stricter gate."
     },
     {
      "q": "**Row 12.** Why does an enterprise sizing assumption undersize a plant for an AI hall?",
@@ -43071,9 +43090,9 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the vocabulary all of it is written, priced and proven in, the last ten metres from the rack inlet to the die, the case for converting it all to DC once, early and high - and the map of where the whole chain breaks, with who owns each break.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the vocabulary all of it is written, priced and proven in, the last ten metres from the rack inlet to the die, the case for converting it all to DC once, early and high, the fault engineering that voltage brings with it - and the map of where the whole chain breaks, with who owns each break.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-16",
+ "updated": "2026-09-17",
  "lessons": [
   "the-fence-line",
   "bridge-power",
@@ -43083,6 +43102,7 @@ function clTrackAidcGridToChip_() {
   "redundancy-by-the-numbers",
   "inside-the-rack",
   "the-800-vdc-shift",
+  "dc-fault-engineering",
   "where-the-chain-breaks"
  ],
  "prereqs": [
@@ -43641,6 +43661,538 @@ function clLessonHowACellIsMade_() {
  ]
 };
 }
+// ── Phase 4 row 20 — the fiftieth lesson, and the FIRST GATED ONE ──────────
+// dc-fault-engineering is the first hand-authored lesson in the corpus whose
+// stamp folds to `guidance` rather than to `tracks`. The gate is not a field
+// anyone set: guidance:nvidia-800vdc-2026-08 sits in the stamp, so
+// clGateForProvenance_() returns 'guidance' and an analyst sees this lesson
+// only as a withheld count inside aidc-grid-to-chip. Verified through the
+// real serving path rather than asserted — analyst gets one card fewer with
+// withheld incremented and cop=lesson answers ROLE_DENIED; contributor gets
+// all eight sections.
+//
+// THE INHERITED DEBT IS CLOSED, AND IT WAS CHECKED WORD BY WORD — (ff1).
+// Two declarations named this row before it existed. the-800-vdc-shift's
+// dc-safety-in-plain-terms enumerates FIVE things as belonging to "a separate
+// lesson at a stricter gate": how a DC fault behaves against an AC one, which
+// grounding scheme a hall adopts and what each costs it, where the protection
+// zones are drawn, the interlock that keeps hands off a live whip, and how
+// quickly the device classes actually clear. All five are carried, one per
+// section, and each was grepped against this draft before the splice.
+// where-the-chain-breaks declined "the taxonomy of arc types and how each is
+// detected and cleared" in a row cell and again in a drill card; the taxonomy
+// is rows 2-5 of ac-versus-dc-faults and detection and clearing are two whole
+// columns. Both of that lesson's sentences also said the taxonomy was "held
+// by nobody", which this commit makes false, so both were corrected here
+// under one revisions[] entry naming both section ids.
+//
+// THE TABLE WAS TURNED ONTO A FAULT SPINE, DELIBERATELY. The source's own
+// Table 1 runs on a topic spine and answers "how does DC differ". Turned onto
+// a fault spine it also answers "what sees it and what stops it", which is
+// what the declined handoff actually promised. Every topic of the original
+// survives and two of them became whole columns, so §3's named row list is
+// carried rather than replaced. Six rows, five columns.
+//
+// THE REVERSE (t) CHECK RETURNED EMPTY. All 49 existing lessons were grepped
+// for HRMG, HRRG, interlock, SSCB, insulation monitoring, IMD, RCM, tap can,
+// protection zone, ungrounded and high-resistance. Nobody teaches any of the
+// four grounding schemes, either monitoring device, the two zones, the
+// connector interlock or the four deployment options. S2 session 15's FOURTH
+// (t) shape — a silent neighbour standing on the material — does not fire.
+// One real collision surfaced and became a paragraph: `interlock` already
+// means four other things in this curriculum (a zone-selective wire between
+// two breakers; a fire-alarm interlock; a grid-interactive UPS reserve floor;
+// a relay setting proved at a factory acceptance test) and none is this one.
+//
+// THE STAMP IS SIX INPUTS, ALL RE-READ ON THE DAY (G2).
+// guidance:nvidia-800vdc-2026-08@2026-08-22 is the module's own `updated`,
+// read out of guidanceDocNvidia800_() in this file. The four study pins are
+// each the guide's own lastUpdated read off the fetched document, NOT its
+// commit date, and THREE OF THE FOUR DIFFER: study:zhonhen@2026-08-19 against
+// a commit of 2026-08-31, study:abb@2026-08-21 against 2026-08-31,
+// study:powell-industries@2026-09-03 against 2026-09-04; only
+// study:infineon@2026-09-04 agrees with its commit. concepts:profiler-
+// concepts@2026-09-13 is the commit date, which IS the right source for that
+// prefix and for no other here.
+//
+// reviewBy 2026-11-30 is INHERITED from the stamped module, per §3, and the
+// module was confirmed to still carry that date on the day. The nearest-gate
+// sort over all six inputs returned an EMPTY SET: the only day-level date
+// anywhere in the six is the module's own revisions[].date of 2026-08-29,
+// which is past and housekeeping. Two rejections in writing — that date, and
+// the quarter-level execution calendar (Q3 2026, Q3 2027, toward 2029), which
+// is a real set of forward gates but gives no day. Sharing the module's date
+// is not an (r)/(u) violation: §3 prescribes the inheritance, and this
+// lesson's freshness IS that module's freshness.
+//
+// --check HELD AT 6 -> 6, DERIVED BEFORE THE RUN RATHER THAN GUESSED.
+// Measured against the parsed generator: dc-fault-engineering appears in NONE
+// of the 27 CRITERION_LEXICON entries, so (ff2)'s first part fails and the
+// what-is-bought-and-on-what half cannot fire whatever the segment looks
+// like; and it sits in exactly ONE segment's READ_NEXT — power-conversion-
+// and-rack-power-silicon — which was already due and differing in read-next
+// alone. So the same section moves a second time and no segment joins or
+// leaves the due set. The stale lesson_ref left behind is open item (v) at an
+// EIGHTH segment: recorded, not regenerated, because a Phase 4 row
+// regenerates nothing.
+//
+// §10.6 (ff5) NOW HAS A SECOND LESSON ON ITS PERMISSIVE SIDE. The track view
+// withholds this lesson's title from an analyst while the generated read-next
+// of segment-power-conversion-and-rack-power-silicon, which is public,
+// prints it. The asymmetry is recorded and unchanged — neither surface was
+// "fixed", and this row's only contribution to it is a second title.
+//
+// The literal is 100% ASCII, which retires row 18's glyph-that-lies class by
+// construction. The micro-markup simulation ran BEFORE the splice over both
+// plain-field families this row puts in play — proscons cards' t/meta and a
+// bars item's label/sub, which no recent lesson has had together — and came
+// back 0/0, with every one of the ten local glossary entries actually used.
+function clLessonDcFaultEngineering_() {
+  return {
+ "schemaVersion": 1,
+ "id": "dc-fault-engineering",
+ "type": "module",
+ "title": "Faults, Grounding, and the Interlock at 800 Volts",
+ "short": "The genuinely new engineering: how DC faults differ, four grounding schemes, two protection zones, and the interlock that keeps hands off a live whip.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-17",
+ "reviewBy": "2026-11-30",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:nvidia-800vdc-2026-08",
+    "date": "2026-08-22",
+    "note": "the four deployment architectures, the AC-against-DC fault table, the four grounding schemes, the two protection zones and the interlock sequence, the SSCB ratings and the Figure 15 clearing shapes, and the guardrails section"
+   },
+   {
+    "kind": "public",
+    "ref": "study:zhonhen",
+    "date": "2026-08-19",
+    "note": "DC safety literacy - the arc has no zero crossing and must be engineered out, and the decade of 240/336 V fleet practice behind that claim"
+   },
+   {
+    "kind": "public",
+    "ref": "study:abb",
+    "date": "2026-08-21",
+    "note": "arc interruption as a physical act, and why a semiconductor is the only one of the four methods that does not need a current zero"
+   },
+   {
+    "kind": "public",
+    "ref": "study:powell-industries",
+    "date": "2026-09-03",
+    "note": "arc flash as a hazard distinct from a bolted fault, incident energy and clearing time as the term an engineer can change, and the three-stage protection study that goes stale"
+   },
+   {
+    "kind": "public",
+    "ref": "study:infineon",
+    "date": "2026-09-04",
+    "note": "conduction against switching loss - why a solid-state breaker burns power all day merely carrying load"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "vocabulary"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "No zero crossing",
+   "v": "the fact the whole lesson turns on",
+   "sub": "an AC arc gets 120 chances a second to go out; a DC arc gets none"
+  },
+  {
+   "k": "4 schemes, 1 favoured",
+   "v": "grounding is still under evaluation",
+   "sub": "the lean is stated, the choice is deferred to system-level studies"
+  },
+  {
+   "k": "2 zones",
+   "v": "facility distribution, rack interface",
+   "sub": "alarm without shutdown upstream; the strictest hardware where hands are"
+  },
+  {
+   "k": "20 ms down to under 1",
+   "v": "the span of clearing times",
+   "sub": "a branch MCCB against a solid-state breaker"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "HRMG",
+   "d": "High-resistance midpoint grounding. A resistor network grounds the midpoint between the positive and the return conductor, so both sit at a balanced voltage to earth and a first fault to either one is limited the same way and seen the same way."
+  },
+  {
+   "t": "HRRG",
+   "d": "High-resistance return grounding. The return conductor alone is grounded through a resistance. It limits the first fault current just as the midpoint scheme does and needs fewer components, but a fault on the return conductor itself is detected later."
+  },
+  {
+   "t": "IMD",
+   "d": "Insulation monitoring device. It continuously measures the insulation resistance between the live conductors and earth and alarms when it falls, which is how a first fault is found on a system deliberately designed to keep running through one."
+  },
+  {
+   "t": "RCM",
+   "d": "Residual current monitor. It watches for current returning by some path other than the return conductor - the signature of a leak to earth through damaged insulation or through a person - and is the fast-detection device where hands are closest to the copper."
+  },
+  {
+   "t": "MCCB",
+   "d": "Moulded-case circuit breaker. The familiar mechanical branch device: a thermal element for sustained overload and a magnetic one for short circuit, in a sealed case. It is the day-one branch device at 800 volts for the unglamorous reason that it exists, is certified and can be bought."
+  },
+  {
+   "t": "series arc",
+   "d": "An arc across a break in a conductor that is still carrying its normal load - a loosened lug, a fretted connector. The load, not the fault, still sets the current, so the current never rises and no overcurrent device will ever see it."
+  },
+  {
+   "t": "parallel arc",
+   "d": "An arc between two conductors at different potentials, through air rather than through metal. It draws a large and unstable current, and it is the event an arc-flash calculation is about."
+  },
+  {
+   "t": "tap can",
+   "d": "A junction box hung off an overhead DC busway that takes one rated feed down to one rack. It is the boundary between the facility's distribution and the rack's interface, and it is where the connector interlock lives."
+  },
+  {
+   "t": "let-through energy",
+   "d": "How much energy a fault delivers before the protection cuts it off. It grows with the square of the current and with the time the current flows, so every argument for a faster device is underneath an argument about this number."
+  },
+  {
+   "t": "clearing time",
+   "d": "The interval from the instant a fault begins to the instant current actually stops - not the moment the device decides to act. It enters an incident-energy calculation roughly linearly, which is why it is the term an engineer can actually change."
+  }
+ ],
+ "sections": [
+  {
+   "id": "four-deployment-options",
+   "title": "Four ways to put 800 volts in a hall",
+   "kind": "proscons",
+   "read": "7 min",
+   "intro": "The architecture's owner is explicit that these are **deployment options rather than a sequence of required steps**: all four coexist inside one reference design, and the 800 volt scope is deliberately confined to the compute slice of the electrical plan so that the upstream facility design survives unchanged. What picks between them is the building you already have, the date you need capacity, and the density you are building for - not a view about which is the future. A fifth option sits beyond all of them on the roadmap, converting 34.5 kV medium voltage straight to 800 VDC once the {{SST}} matures toward 2029, and the paper puts it explicitly outside today's deployment horizons.",
+   "cards": [
+    {
+     "t": "Existing AC, converted in the rack",
+     "meta": "480 VAC to the rack - today's default",
+     "adv": [
+      "Fully supported and not going away: this is the coexistence anchor, and the paper forecloses no date for retiring it",
+      "No new certification, no new grounding study, no new {{AHJ}} conversation",
+      "A known supply chain and electricians who already know the work"
+     ],
+     "dis": [
+      "Interface complexity grows with density - hundred-amp AC whips, four feeds to make three, a dozen or more per rack",
+      "Every rack converts to low-voltage DC inside itself, so the conversion count scales with the rack count",
+      "Runs out of road as racks pass the hundreds-of-kilowatt mark, which is where this generation is going"
+     ]
+    },
+    {
+     "t": "Power Rack - rack level",
+     "meta": "about 660 kW - production Q3 2026",
+     "adv": [
+      "The fastest path, because **nothing upstream changes**: a conversion cabinet stands in the row and feeds its neighbours",
+      "A standard 19-inch rack, with point-to-point interlocked 125 A DC whips and no busbar to certify",
+      "Takes a backup shelf: four 20 kW {{BBU}} modules give 80 kW for a minute at N+1",
+      "Any rack in the same mechanical family becomes 800 volt capable through a step-down shelf"
+     ],
+     "dis": [
+      "It eats row footprint next to the compute it serves",
+      "Twelve to twenty-four AC whips per cabinet still have to be managed",
+      "Existing row-level AC capacity may not actually support it and has to be validated",
+      "**Explicitly a bridge, not a destination** - it has a density ceiling by construction"
+     ]
+    },
+    {
+     "t": "Power Center - cluster level",
+     "meta": "up to 2 MW - as soon as Q3 2027",
+     "adv": [
+      "Removes the side cabinets and gives the white space back to compute",
+      "Converts a hall **row by row**: 800 volts arrives selectively inside a building that is still AC everywhere else",
+      "Built on mature rectifier families rather than on a new device class",
+      "Confines the 800 volt exposure to controlled zones, fed by an overhead {{busway}} and 125 A {{tap can}}s"
+     ],
+     "dis": [
+      "A new certification chain arrives all at once: busway, tap cans, DC breakers, connectors",
+      "Facility-grade grounding and protection coordination become a requirement rather than an option",
+      "A {{MCCB}} at the 125 A branch can take around twenty milliseconds to clear, and solid-state devices are not assumed on day one",
+      "It depends on several suppliers delivering a matched ecosystem at once"
+     ]
+    },
+    {
+     "t": "DC Power Block - hall level",
+     "meta": "4.8 MW blocks - 20 MW deployment units",
+     "adv": [
+      "The fewest conversion stages of the four: medium voltage in, transformer, rectification, a DC switchboard, busways out",
+      "Redundancy without phase synchronisation - a DC {{STS}} can catch a failed block because direct current has no phase to match",
+      "Arrives as factory-tested outdoor containerised packages, which moves work out of the building and out of the field",
+      "Scales cleanly toward megawatt-class racks and gigawatt campuses, and leaves room for storage or generation on the DC bus later"
+     ],
+     "dis": [
+      "The largest certification and {{AHJ}} lift of the four",
+      "The rectifier supply chain for it is still forming",
+      "**It is a whole-hall architectural commitment** - there is no incremental version of it"
+     ]
+    }
+   ],
+   "sales": "The three new options differ less in physics than in who has to agree. A rack-level cabinet is an IT decision; a cluster-level centre needs the electrical engineer; a hall-level block needs the authority having jurisdiction and a year of lead time. Ask which of those three people is in the room and you know which option is actually on the table."
+  },
+  {
+   "id": "ac-versus-dc-faults",
+   "title": "What can go wrong, what sees it, what stops it",
+   "kind": "table",
+   "read": "9 min",
+   "intro": "Two facts set up everything in this table, and they pull in opposite directions. The first is the one every earlier lesson has already told you: alternating current passes through zero a hundred and twenty times a second and an arc is briefly left with nothing sustaining it, while **direct current never offers that instant**. The second is less well known and is the paper's own counterweight: a bus fed through converters can be made to **limit its own fault current at the source**, which a stiff utility feed cannot. So DC is worse at ending a fault and can be better at sizing one, and the whole protection strategy is built on exactly that trade - hold the current down, and take the {{clearing time}} down with it, because {{let-through energy}} is the product of the two.",
+   "cols": [
+    "Fault",
+    "On alternating current",
+    "On an 800 volt DC bus",
+    "What sees it",
+    "What stops it"
+   ],
+   "rows": [
+    [
+     "**Bolted short** - metal to metal",
+     "The full available {{fault current}}, unmistakable to a relay, and weakened at every {{zero crossing}}",
+     "**Continuous, with no weak moment** - but often smaller than the AC equivalent where the source is a converter rather than the utility",
+     "Overcurrent. This is the one fault that announces itself",
+     "The branch device, and above it a fast shutdown commanded through the rectifiers themselves"
+    ],
+    [
+     "**{{parallel arc}}** - the arc-flash event",
+     "Through air between conductors. It draws *less* current than a bolted fault and draws it erratically, which is what makes it hard to recognise - and it is the event an {{IEEE 1584}} study is about",
+     "Same physics, no reset. **{{Incident energy}} can be lower on a converter-limited bus** - the one line in this table where DC is the safer of the two",
+     "Overcurrent, late and imperfectly. The {{arc flash}} study assumes it is seen at all",
+     "Current limiting at the source, then isolation as fast as the device class allows. Every millisecond removed comes straight off the energy"
+    ],
+    [
+     "**{{series arc}}** - a break in a live conductor",
+     "Periodically starved at each zero crossing, so it tends to put itself out",
+     "**It can sit and burn.** The load still sets the current, so the current never rises and the fault never looks like one",
+     "Arc-fault detection reading the *signature* rather than the magnitude - and connector design that stops the gap forming in the first place",
+     "Nothing downstream can. The feed has to be opened deliberately once something has recognised it"
+    ],
+    [
+     "**Earth fault, the first one**",
+     "A ground-fault relay sees it; a solidly grounded system simply trips",
+     "The grounding scheme answers this, not the device. Under {{HRMG}} or {{HRRG}} the current is small and **the hall keeps running**",
+     "{{IMD}} upstream, watching insulation resistance fall; {{RCM}} at the rack interface, watching current return by the wrong path",
+     "Deliberately, and usually not at once - an alarm rather than a shutdown, so service survives while somebody locates it"
+    ],
+    [
+     "**Earth fault, the second one**",
+     "Rarely reached, because the first one has already tripped",
+     "**This is the one that bites.** A fault on the other conductor completes, through earth, the short the first one never made",
+     "Overcurrent, by then. The monitor was supposed to have caught the first",
+     "As a bolted short - with all the energy the first fault was spared"
+    ],
+    [
+     "**Shock** - a person becomes the path",
+     "Can cause muscle lock-on: the victim cannot let go",
+     "More often one violent contraction than a lock-on. **Neither is a reason to relax the personnel protection**",
+     "{{RCM}}, which is exactly why it is the device at the rack interface",
+     "The interlock, which takes the person out of the path *before* there is a fault to clear"
+    ]
+   ],
+   "note": "**This is the classification the previous lesson declined to teach, and it is worth saying how the table was built.** The source's own version runs on a topic spine - fault current, fault energy, shock, protection devices, ground-fault detection, arcing - and answers 'how does DC differ'. Turned onto a fault spine it answers a second question the first shape could not: *how is each one detected, and what actually stops it*. Every topic in the original is still here and you can check it: fault current and fault energy in row one and in the opening paragraph, shock as row six, arcing as rows two and three, and the two that were left - protection devices and ground-fault detection - as whole columns. **Rows two to five are the classification itself: two arc types, and the two states of an earth fault.** The row labels are this lesson's, drawn from the source's own fault vocabulary and reordered onto the spine; the detection and clearing columns are assembled from its protection-zone and device sections."
+  },
+  {
+   "id": "grounding",
+   "title": "Four grounding schemes, and what each one costs",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "An 800 volt distribution is **two-wire** - a positive conductor and a return, and nothing else - so there is no neutral to lean on and the grounding architecture has to decide two things at once: what a first fault does to a person, and whether anybody finds out it happened. Four candidates are on the table, and they are not ranked by safety. They trade *detectability* against *fault current*, and every one of them is defensible in some hall.",
+   "cols": [
+    "Scheme",
+    "How it works",
+    "What it buys",
+    "What it costs"
+   ],
+   "rows": [
+    [
+     "**{{HRMG}}** - high-resistance midpoint",
+     "A resistor network grounds the midpoint between the two conductors, so both sit symmetrically about earth",
+     "Balanced conductor-to-earth voltages and better electromagnetic behaviour; **the same detection on both conductors**; and the hall keeps operating after a first fault",
+     "More components, and resistor sizing becomes a discipline rather than a detail"
+    ],
+    [
+     "**{{HRRG}}** - high-resistance return",
+     "The return conductor alone is grounded through a resistance",
+     "The same current-limiting benefit, with a simpler and cheaper arrangement",
+     "**A fault on the return conductor itself is seen late** - the asymmetry is the whole difference between this and the scheme above"
+    ],
+    [
+     "Floating - no intentional ground",
+     "Nothing is bonded to earth on purpose",
+     "A first fault draws almost no current at all, and the system rides straight through it",
+     "Leakage and cable capacitance still make paths, and **finding the fault is genuinely hard** - it needs monitoring plus locating equipment"
+    ],
+    [
+     "Solid - return bonded to earth",
+     "The return conductor is bonded directly to earth, as a conventional low-voltage system is",
+     "The simplest of the four, and **fast, sensitive detection** - it may suit future racks that take 800 volts natively",
+     "**The highest fault current of the four.** It demands fast devices and a low-impedance ground path to be safe at all"
+    ]
+   ],
+   "note": "**The choice has not been made, and that is the honest thing to say in a room.** The paper states a lean - the midpoint scheme gives more uniform fault monitoring, earlier identification and better reliability while keeping ground-fault current low - and then defers the decision to system-level studies. So the correct sentence is *under evaluation, with the midpoint scheme favoured on balance*, and a seller who says it will be HRMG is a step ahead of the document. Notice also what the second column is really telling you: the first two schemes and the floating one all choose to **survive** a first fault, and only the solid scheme chooses to **clear** it. That is the same availability-against-certainty trade the protection zones make in the next section."
+  },
+  {
+   "id": "zones-and-the-interlock",
+   "title": "Two zones, and the sequence that keeps hands off",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**The bus is split into two protection zones because the risk in them is different, and so is the right answer.** The *facility distribution zone* runs from the rectifier output to the input of the {{tap can}}. It is qualified-personnel territory: {{IMD}} monitoring runs continuously, and - this is the design decision, not an oversight - **it raises an alarm without shutting anything down**, so a hall keeps serving while somebody goes and finds the fault. Real overcurrent is a different matter, and protective relays there coordinate a fast shutdown commanded through the rectifiers. The *rack interface zone* runs from the tap can to the compute rack, and it is where almost every human hand in the building goes. It gets {{RCM}} for fast leakage detection and the strictest hardware discipline in the system.",
+    "**The interlock sequence is borrowed, deliberately, from electric-vehicle charging, and it is four steps in a fixed order.** The 125 A DC whip is hardwired into the tap can behind a normally-open contactor, so **it is dead while it is being installed and dead while it is being removed**. To energise: the connector's mechanical lock engages first, and only then does an enable signal close the upstream contactor. To de-energise: the contactor opens first, and only then does the lock release. Nothing is ever hot in a hand, and nothing is ever unlatched under load. It is the cheapest safety measure in this entire lesson and the one most likely to be defeated in the field by somebody in a hurry.",
+    "**A vocabulary warning, because this curriculum already uses the word four other ways.** *Interlock* in the AIDC power chain means a wire between two breakers telling the upstream one to wait; in a fire system it means a detector that must stop a fan; in a grid-interactive UPS it means a reserve floor that a market signal cannot cross; at a factory acceptance test it means a relay setting that has been proved. **None of those is this one.** This interlock is mechanical and electrical at a connector, it protects a person rather than a schedule or a sequence, and when an 800 volt conversation says 'the interlock' without qualification, this is what it means.",
+    "**Everything above is only as true as the study behind it, and the study goes stale on a schedule nobody puts in a contract.** A protection scheme is three studies in order - what fault current is available, how the devices coordinate, and what {{incident energy}} that leaves at each door - and each feeds the next. The third produces the label on the door, and the label carries a date. Energise a second hall, close a tie that is normally open, add a block, and the one-line the settings were derived from no longer describes the plant. **Nothing alarms when that happens.** The system is simply mis-coordinated until somebody re-runs it, and on a campus that energises in phases over years, that is not an edge case - it is the normal condition."
+   ],
+   "sales": "Two questions separate an operator who has done this from one who has read about it. Which zone is a given piece of kit in, and does its monitoring alarm or trip? And who owns the re-study when the next hall energises? The second one has a contract answer or it has no answer."
+  },
+  {
+   "id": "sscb-versus-mccb",
+   "title": "How long a fault lasts, by device class",
+   "kind": "bars",
+   "read": "4 min",
+   "unit": "milliseconds to clear",
+   "intro": "Read this as a **shape, not a datasheet**. Four of the five bars come from one chart in the source, plotted for one fault with a steep rise rate, and the chart itself was read off an image; the fifth is the paper's own statement about a branch device in service. What the shape says is the only thing that matters commercially: **{{clearing time}} is the one term in the energy calculation an engineer can move**, it moves by more than a factor of twenty across the device classes here, and {{let-through energy}} follows it down.",
+   "items": [
+    {
+     "label": "MCCB at a 125 A branch",
+     "v": 20,
+     "sub": "the day-one device - the paper's own figure, in service rather than on the chart"
+    },
+    {
+     "label": "Thermal-magnetic breaker",
+     "v": 7,
+     "sub": "about 6 to 7 ms on the chart; plotted at the top of the band"
+    },
+    {
+     "label": "Fuse",
+     "v": 3,
+     "sub": "peaks near 9.4 kA at about 3 ms before it parts"
+    },
+    {
+     "label": "Hybrid breaker",
+     "v": 2.5,
+     "sub": "about 2.5 ms - mechanical contacts with electronic help"
+    },
+    {
+     "label": "Solid-state breaker",
+     "v": 1,
+     "sub": "sub-millisecond; plotted at the 1 ms ceiling the text gives it"
+    }
+   ],
+   "note": "**The top bar is not measured the same way as the four below it**, and treating the five as one ladder would be the easiest mistake in this section. The twenty milliseconds is what the source says a moulded-case device at a 125 A branch *can reach* in a real installation; the other four are read off a single chart at a single fault-rise rate. Read the gap, not the ratio. **Two target ratings are named for the solid-state device**: 125 A air-cooled for the step-down shelves inside compute racks, and 1250 A - and probably liquid-cooled - for the rack interfaces of future native-800-volt racks, with the practical ceiling on air-cooled current still under evaluation. And the sober counterweight the paper supplies itself: **the {{MCCB}} remains the primary day-one branch device**, because it is available, its supply chain exists and its certification is familiar. The physics argument and the procurement argument point different ways, and the procurement argument is winning the first deployments.",
+   "sales": "The silicon has a standing cost the mechanical device does not: a semiconductor conducting all day has resistance, so a solid-state breaker burns power and makes heat while merely carrying load, and its price scales with the current it carries rather than with the fault it breaks. That is why the honest pitch is not 'replace the breakers' but 'put the fast device where the energy is worst' - which, on this bus, is the branch nearest the hands."
+  },
+  {
+   "id": "what-the-paper-does-not-say",
+   "title": "What the paper does not say",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "3 min",
+   "intro": "A reference document is as useful for its silences as for its claims, and this one is unusually disciplined about both. Five things it is routinely credited with are not in it.",
+   "ps": [
+    "**No efficiency percentages, no copper-savings figures, no total-cost numbers.** Those belong to the earlier feasibility paper of October 2025 and to vendor decks. They are real numbers with real sources; they are simply not this document's, and attributing them to it is the commonest way this material gets quoted wrongly.",
+    "**No roster of power-equipment suppliers.** Two organisations are named in the whole document - the source of one chart, and the certification body the standards work runs through - and neither is named as a vendor recommendation. *Panama* is the name of an architecture, not of a company, and reading it as one turns a device-class discussion into a shortlist that does not exist.",
+    "**No efficiency comparison between the two rectifier classes.** The transformer-plus-rectifier block and the solid-state transformer are contrasted on maturity, fault behaviour, medium-voltage compatibility and practical scale - all qualitative. Anyone quoting a percentage difference between them is quoting something else.",
+    "**No retirement date for alternating current.** Coexistence is stated for the foreseeable future, and the AC baseline is one of the four options rather than a legacy case being tolerated. A pitch built on AC going away is built on a claim the architecture's own owner declines to make.",
+    "**And the one this lesson adds, because the grounding table earlier in this lesson turns on it: the grounding scheme is not chosen.** The document states a lean and then defers the decision to system-level studies that have not been published. Every number downstream of that choice - available fault current at a rack, the incident energy on a label, whether a first fault trips or alarms - is therefore provisional. **The engineering is settled in shape and open in detail, and a seller who collapses that distinction will be wrong in a room with an engineer in it.**"
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why will no overcurrent device ever clear a {{series arc}} on a DC bus?",
+     "a": "Because the current never rises. A series arc opens a gap in a conductor that is still carrying its normal load, and the load - not the fault - is what sets the current through it. To a breaker or a relay the circuit looks like it is working. It has to be found by reading the *signature* of the arc rather than its magnitude, and then the feed has to be opened deliberately, because nothing downstream is going to do it."
+    },
+    {
+     "q": "An AC arc gets a free reset a hundred and twenty times a second. What replaces that at 800 volts?",
+     "a": "Deliberate engineering, in three parts: devices rated for direct current rather than AC devices pressed into DC service; arc-fault management designed in as a function rather than inherited from the code; and a grounding scheme chosen in advance so that what a first fault does is a decision rather than a discovery. The gift AC gives away free is the one thing a DC bus cannot buy."
+    },
+    {
+     "q": "What does {{HRMG}} buy over {{HRRG}}, and what does it cost?",
+     "a": "It buys symmetry. Grounding the midpoint puts both conductors at a balanced voltage to earth, so a first fault on either one is limited the same way and detected the same way; the return-grounded scheme sees a fault on the return conductor itself late. It costs more components and real discipline in sizing the resistors. Both keep the hall running through a first fault - the difference is whether you find out about it at the same speed on both wires."
+    },
+    {
+     "q": "Name the two protection zones and the one thing that changes between them.",
+     "a": "The facility distribution zone runs from the rectifier output to the {{tap can}} input and is qualified-personnel territory: {{IMD}} monitoring that alarms without shutting down, so service survives while the fault is located. The rack interface zone runs from the tap can to the rack and is where the hands are: {{RCM}} for fast leakage detection and the strictest hardware discipline. What changes is who is expected to be standing there."
+    },
+    {
+     "q": "State the connector interlock sequence in order, both ways.",
+     "a": "Energising: the mechanical lock on the connector engages first, and only then does an enable signal close the upstream contactor. De-energising: the contactor opens first, and only then does the lock release. Between those, the whip is hardwired behind a normally-open contactor, so it is dead during installation and dead during removal. Nothing is ever hot in a hand and nothing is ever unlatched under load."
+    },
+    {
+     "q": "The solid-state breaker clears in under a millisecond. Why is the {{MCCB}} still the day-one branch device?",
+     "a": "Because it exists, it is certified and it can be bought. Availability, a working supply chain and familiar certification beat a twenty-fold advantage in {{clearing time}} on a first deployment - and the semiconductor has a standing cost the mechanical device does not, burning power and making heat all day while merely carrying load. The physics argument and the procurement argument point different ways, and procurement is winning the early halls."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A hall is running on a high-resistance grounded 800 volt bus. The insulation monitor alarms on a fault to the positive conductor and nothing trips. What is the most urgent consequence?",
+     "c": [
+      "The alarm is spurious - a high-resistance system cannot fault to earth",
+      "Incident energy at every door has just risen and the labels are wrong",
+      "The next fault to the other conductor becomes a bolted short through earth",
+      "The rectifiers will shut down automatically within twenty milliseconds"
+     ],
+     "a": 2,
+     "why": "A high-resistance scheme is *designed* to survive one earth fault: the current is small and the hall keeps serving, which is why it alarms rather than trips. The danger is the second fault. A fault on the other conductor completes, through earth, the short the first one never made - and it arrives with all the energy the first was spared. The alarm is not an inconvenience to be silenced; it is a countdown."
+    },
+    {
+     "q": "Which statement about DC fault behaviour is the counter-intuitive one the protection strategy is actually built on?",
+     "c": [
+      "A converter-fed bus can limit its own fault current at the source",
+      "A DC arc has no zero crossing and cannot self-extinguish",
+      "DC shock tends to cause one contraction rather than lock-on",
+      "Solid-state devices interrupt without an arc"
+     ],
+     "a": 0,
+     "why": "The other three are all true and all well known. The one that carries the strategy is the source-side limit: a bus fed through converters can be made to hold its own fault current down, which a stiff utility feed cannot. That is what makes the arc-flash case workable at all - reduce the current at the source, reduce the clearing time with a fast device, and the let-through energy falls on both terms at once."
+    },
+    {
+     "q": "An operator wants 800 volts in one row of an existing AC hall, with capacity next quarter and no work in the electrical rooms. Which option fits, and what is the catch?",
+     "c": [
+      "The hall-level DC power block - it is the fewest conversion stages",
+      "The cluster-level power center - but it will not be available for a year",
+      "Keep AC and convert in the rack - the others all need new grounding studies",
+      "The rack-level power rack - but it eats row footprint and has a density ceiling"
+     ],
+     "a": 3,
+     "why": "The rack-level cabinet is the only one of the four that changes nothing upstream, which is exactly the constraint stated. What it costs is floor space in the row next to the compute it serves, a dozen or more AC whips still to manage, and a density ceiling by construction - the architecture's owner calls it a bridge rather than a destination. The cluster-level option does fit the 'no electrical room work' test too, but not the timing."
+    },
+    {
+     "q": "A supplier's deck quotes a thirty per cent total-cost-of-ownership improvement and cites the August 2026 architecture paper. What is wrong with that?",
+     "c": [
+      "The figure is too high to be credible for a voltage change",
+      "That paper carries no cost numbers at all - the figure belongs elsewhere",
+      "Total cost of ownership cannot be calculated before the grounding scheme is fixed",
+      "The paper forbids any commercial use of its content"
+     ],
+     "a": 1,
+     "why": "The August 2026 document is an execution paper - architectures, fault engineering, certification - and it deliberately carries no efficiency percentages, no copper-savings figures and no cost-of-ownership numbers. Those live in the earlier feasibility paper and in vendor material. The figure may well be defensible; the citation is not, and mis-citing a reference document in front of an engineer who has read it is an expensive way to lose credibility."
+    },
+    {
+     "q": "Why is the connector interlock, rather than a faster breaker, the thing that protects a technician changing a rack whip?",
+     "c": [
+      "Because breakers cannot be fitted at the tap can",
+      "Because the interlock clears faults faster than a solid-state device",
+      "Because it removes the person from the path before a fault can exist",
+      "Because personnel protection is a procedural requirement, not an electrical one"
+     ],
+     "a": 2,
+     "why": "Every device in this lesson answers a fault that has already started, and the argument between them is only about how many milliseconds it lasts. The interlock is the one measure that works earlier than that: the whip is dead while it is being connected and dead while it is being disconnected, the lock engages before the contactor closes, and the contactor opens before the lock releases. There is no fault to clear because there was never energy in a hand."
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -43688,7 +44240,8 @@ function clLessons_() {
           clLessonCleanFirmPower_(),
           clLessonWhereTheChainBreaks_(),
           clLessonTheCoolingPlantAndWater_(),
-          clLessonHowACellIsMade_()];
+          clLessonHowACellIsMade_(),
+          clLessonDcFaultEngineering_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
