@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 108/100`
+`Sections: 109/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.41r] — 2026-09-17 05:26:57 AM EST
+
+> Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§7.50's deploy counters written from the v06.40r job log rather than a forecast.** **The TWO-leg forecast was right on both legs**: `Scraper deploy confirmed (GET): Updated to v02.18g (deployment 163) | 163/200` in **11 seconds** and `Classroom deploy confirmed (GET): Updated to v01.65g (deployment 77) | 77/200` in **15 seconds**, with exactly **two** `Deploy <Project>` steps firing and the other **six** exiting 0 silently in zero seconds on their own `git diff` guard. The run closed on *All GAS deploys confirmed the merged version*. **Classroom now stands at 77/200 with 123 of its allowance left; Scraper at 163/200 with 37** — Scraper is the tight one, and Phase 4 row 22 does not spend any of it
+- The §7.19 order resolved on its **two reads** for the **thirty-second** time and no `?op=deploy` probe was made: Pages read `|v01.64g|` and `|v02.17g|` at 05:23:12 AM EST before the deploys landed and `|v01.65g|` and `|v02.18g|` at 05:24:08 AM after, re-read rather than assumed, and the job log agreed. The post-merge `check-readme-tree.py --fix` step reported *already in sync — nothing to commit*, because the session had run `--fix` itself after the checker caught **two** one-bump GAS display drifts
+
+#### `repository-information/SESSION-CONTEXT.md`
+- **Latest Session written for S2 session 17**, with v06.36r dropped and the **2-session cap** applied. It carries the eight §10.6 findings, the derived-and-exact `--check` call, the two-leg deploy, the no-rotation arithmetic, the **P1 × 4 / P2 × 9 / no-P3** pipeline signature an S2 session should expect, and **one new render-harness fact found the hard way**: the page does not boot itself in a shim — after seeding the session keys you must call `clAppMount()` and then `clRoute()` through `page.evaluate`, because the router is gated on `clAdmitted()` and mounted from the sign-in wrapper, and without those two calls the app makes **zero** backend requests and renders **0 characters**
+
+### Version and counter files
+- `repository.version.txt` **v06.40r → v06.41r**; this file **`108/100` → `109/100`**. **No rotation** — the EST day had not rolled, so **twelve** same-day sections stay exempt and the non-exempt count holds at **97 against 100**. No `.gs` file was touched on this push, so no GAS version moved and no GAS changelog entry was written
 
 ## [v06.40r] — 2026-09-17 05:20:02 AM EST
 
