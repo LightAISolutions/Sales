@@ -1,4 +1,4 @@
-var VERSION = "v01.67g";
+var VERSION = "v01.68g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -43175,6 +43175,7 @@ function clTrackMarketAccess_() {
   "how-a-storage-project-happens",
   "contracts-and-revenue",
   "how-a-utility-buys",
+  "the-certification-stack",
   "the-china-policy-stack",
   "utility-procurement-meets-ai-load"
  ],
@@ -45215,6 +45216,358 @@ function clLessonTheChinaPolicyStack_() {
  ]
 };
 }
+// Phase 4 row 23 - the certification stack. Authored from the bankability
+// module's stack table, its 9540A/NFPA-855 section and its fire record, with
+// DNV's public study guide corroborating what each document proves and what a
+// witness attests to. Three boundaries are deliberate and a later revision
+// should not quietly import across them: the GRID gauntlet (inverter and
+// interconnection standards, transmission performance rules, market-operator
+// guide revisions) belongs to other lessons and is named here only to be
+// excluded; the MONEY gauntlet (the IE report, the counterparty file, the RFP
+// diligence checklist) is curriculum plan 3.5's next row and is not previewed
+// here, not even by title; and the finding that neither insurance broker in
+// the corpus names a standard anywhere belongs to the insurance landscape
+// module and to the assurance segment - this lesson teaches what the names
+// mean and does not restate a measurement it did not make.
+// NOTE for a later revision: spec-sheet-decoded's safety-words callout says
+// UL 9540A is tested 'at cell, module and unit level' with 'no pass or fail'.
+// Both are 5th-edition facts. The 6th edition (effective 2027-01-01) drops
+// unit level for most non-residential systems and applies pass/fail to the
+// installation test. That lesson is not this row's to edit; this one states
+// the edition dependence explicitly instead.
+function clLessonTheCertificationStack_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-certification-stack",
+ "type": "module",
+ "title": "Listing, Test Method, Code",
+ "short": "UN 38.3 to NFPA 855 - what each document is, which authority demands it, and the fire record that rewrote the rules underneath them.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-01-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:bess-bankability-2026-08",
+    "date": "2026-09-13",
+    "note": "the spine: the certification-stack table and its nature column, UL 9540A and NFPA 855-2026 in detail including the 5th-to-6th edition change and the unsettled large-scale-test procedure, the fire record from McMicken through Moss Landing and AB 303, the EPRI failure-rate decline with its caveat, and the insurance paragraph this lesson's closing callout is built on"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dnv",
+    "date": "2026-09-04",
+    "note": "the public corroborating input added at v05.07r: three-documents-that-are-not-the-same for what each document proves and is silent about, fire-testing-and-the-witness for the level-by-level reading of a burn test and what a witness does and does not attest, and recommended-practice-versus-standard for the fourth nature and the conflict of interest named in it"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "term definitions behind the {{...}} tooltips this lesson does not define locally"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "UL 9540A",
+   "v": "a test, not a listing",
+   "sub": "It produces a data report and no mark. 'Certified' has never been the right word - and from 1 January 2027 exactly one of its levels does carry pass and fail."
+  },
+  {
+   "k": "Three authorities",
+   "v": "body, laboratory, jurisdiction",
+   "sub": "A mark, a report and a rule - issued by three parties that do not talk to each other. No buyer asks for them by those names, and two further natures fit none of the three."
+  },
+  {
+   "k": "1 Jan 2027",
+   "v": "the stack changes shape",
+   "sub": "The 6th edition drops unit-level testing for most non-residential systems and runs the installation test on every one. A proposal written today has to name its edition."
+  },
+  {
+   "k": "~97-99%",
+   "v": "failure-rate fall per GWh",
+   "sub": "2018 to 2025 on EPRI's incident database - which is media-derived and may undercount small events. Say the caveat out loud; the number still lands."
+  }
+ ],
+ "glossary": [
+  {
+   "t": "test method",
+   "d": "A published procedure that produces measured data, usually with no verdict attached. Its output is a report - there is no mark, no certificate and nothing to hang on a wall. UL 9540A is the storage industry's best-known example, and the reason 'certified to 9540A' is a phrase that cannot be true."
+  },
+  {
+   "t": "installation code",
+   "d": "A rule about how equipment is put in the ground rather than about what the equipment is: siting, spacing, detection, explosion control, emergency planning. It binds only where a jurisdiction adopts it, which is why a code has no single national effective date the way a listing has a date of issue."
+  },
+  {
+   "t": "certification body",
+   "d": "The laboratory or notified body that tests a sample against a standard and issues the mark. It certifies the sample it tested on the day it tested it - not the units later shipped, and not their behaviour in any particular project."
+  },
+  {
+   "t": "hazard mitigation analysis",
+   "d": "The written analysis an installation code requires before a storage system is approved: what can fail, what happens when it does, and what the design and the site's emergency response do about it. NFPA 855's 2026 edition makes it the default requirement rather than a conditional one."
+  },
+  {
+   "t": "TRPPS",
+   "d": "Thermal-runaway propagation prevention system. Under UL 9540A's 6th edition an active TRPPS is one of only two cases - the other being residential systems - in which the unit-level test is still run."
+  },
+  {
+   "t": "IFC",
+   "d": "The International Fire Code. Its Section 1207 carries the stationary energy-storage requirements and is the vehicle through which many US jurisdictions adopt what NFPA 855 says."
+  },
+  {
+   "t": "Test Summary",
+   "d": "The document a manufacturer writes itself to record that its cells and batteries passed the eight UN 38.3 transport tests. No body countersigns it, which is why a buyer asks for the summary rather than for a certificate - there is none to ask for."
+  },
+  {
+   "t": "recommended practice",
+   "d": "A structured, published set of recommendations written to be cited in a contract rather than enforced by a regulator. DNV-RP-0043 is the storage example: no authority mandates it, and nothing else covers the same ground."
+  }
+ ],
+ "sections": [
+  {
+   "id": "three-different-things",
+   "title": "Three documents, three authorities",
+   "kind": "prose",
+   "read": "6 min",
+   "ps": [
+    "Three kinds of document cross a storage seller's desk and buyers call all of them *the certifications*. They are not the same kind of object. They are issued by three different authorities, they answer three different questions, and **each one is silent about what the other two prove**. A seller who hands over the wrong one has not been careless about paperwork - they have answered a question nobody asked.",
+    "**A listing is a mark.** A {{certification body}} tests a sample against a standard and issues it. {{UL 1973}} covers the cell, the module and the rack; {{UL 9540}} covers the complete system as one integrated assembly and is the umbrella mark an {{AHJ}} normally asks for by name. What a listing proves is narrow and exact: that a sample of that product met that standard's tests on the day it was tested. It proves nothing about field reliability, nothing about {{degradation}}, nothing about this project's duty cycle, and nothing about whether the units arriving on the truck are identical to the sample.",
+    "**A {{test method}} is a report.** {{UL 9540A}} is not a listing and never has been at any edition. A laboratory drives a cell into {{thermal runaway}} and records what happens: whether runaway spreads, what gases vent and how flammable they are, flame extension, heat release, whether deflagration occurs. The output is design data that a fire-protection engineer and the {{AHJ}} use to justify spacing, venting and suppression. There is no mark. *UL 9540A certified* is one of the vocabulary traps the source of this lesson says marks a seller as a tourist, and quoting the test's levels without naming the edition is another.",
+    "**An {{installation code}} is a rule about the ground, not about the box.** {{NFPA 855}} and {{IFC}} Section 1207 govern siting, spacing, {{hazard mitigation analysis}}, detection, explosion control and emergency planning, and they are enforced by a fire marshal rather than by a laboratory. They carry a property that catches sellers out: **a code binds only where a jurisdiction has adopted it.** A listing has a date of issue and a test has a date of test, but a code's operative date is the adopting jurisdiction's, so the same edition can be live in one county and not yet in the next one along.",
+    "**Two more natures fit none of the three, and both turn up in real tenders.** {{UN 38.3}} is a transport test regime whose evidence is a {{Test Summary}} the manufacturer writes itself - which is why a buyer asks for the summary and not for a certificate, there being no body to issue one. And a {{recommended practice}} such as DNV-RP-0043 is a fourth thing again: a published checklist of what a well-specified storage system should address across its whole life, written to be cited in a tender rather than enforced by anyone. No regulator mandates it; nothing else covers the same ground. Worth noticing without being scandalised by: the organisation that wrote it also certifies against it and sits as {{independent engineer}} on projects that cite it.",
+    "**What this lesson is not about, and why the boundary is real.** The stack below is one of three gauntlets a US storage sale clears at the same time. The **grid gauntlet** - inverter and interconnection standards at distribution, transmission-level performance rules and their enforceable successors, and the market operator's own guide revisions - is a different set of authorities testing a different property, and nothing in the table below is evidence of it. The **money gauntlet** is the {{independent engineer}}'s, and is not this lesson's subject either. When a buyer says *send me the certifications*, they usually mean documents from all three; the seller who asks **which authority is asking** before answering is the one who sends the right file first."
+   ],
+   "sales": "Ask which authority is asking before you promise a document. The marshal, the laboratory and the lender each want a different one, and only one of the three can be satisfied with a mark."
+  },
+  {
+   "id": "the-stack",
+   "title": "The safety and code stack",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "**Read the nature column first.** Six rows and five different natures: two listings, one {{test method}}, one consensus test procedure, one {{installation code}}, and one declaration the manufacturer writes itself. The nature is the column a buyer never asks about and the one that decides who may issue the document and what it can be made to say.",
+   "note": "**Nothing in this table is evidence of grid compliance.** The grid gauntlet named in the section above is enforced by different parties against a different property, and it has its own documents. A buyer asking for *the certifications* may well mean that stack instead, or both.",
+   "cols": [
+    "Standard",
+    "What it covers",
+    "Nature",
+    "Who demands it"
+   ],
+   "rows": [
+    [
+     "**UN 38.3**",
+     "Eight transport abuse tests on cells and batteries",
+     "Test regime evidenced by a {{Test Summary}} - **the manufacturer's own responsibility**, with no body issuing anything",
+     "Carriers and customs; buyers ask for the summary"
+    ],
+    [
+     "**{{UL 1973}}**",
+     "Cell, module and rack safety for stationary applications",
+     "Certification - a **listing**",
+     "Integrators, {{AHJ}}s, lenders"
+    ],
+    [
+     "**{{UL 9540}}**",
+     "The complete energy-storage system as one integrated assembly",
+     "Certification - the **umbrella listing**, and the mark the installation code points at",
+     "{{AHJ}}s, utilities, lenders, insurers"
+    ],
+    [
+     "**{{UL 9540A}}** - 5th ed. 2025, 6th ed. effective 1 January 2027",
+     "Thermal-runaway propagation. 5th edition: cell, module, unit, installation. 6th edition: cell, module, installation - unit level kept only for residential systems and for non-residential systems carrying an active {{TRPPS}}",
+     "**{{test method}}** - a report, never a listing and never a mark. The 6th edition runs the installation-level test on every system regardless of the unit-level result, and applies pass and fail criteria to that test alone",
+     "{{AHJ}}s, insurers, lenders, nearly every RFP"
+    ],
+    [
+     "**ANSI/CSA C800:25**, superseding the interim TS-800:24",
+     "The {{large-scale fire test}} at Section 9.7: one unit fully alight, suppression off, no propagation to its neighbours",
+     "Published, ANSI-approved **consensus test procedure** - but the issued text of the installation code does not name it; a submitted amendment would put the reference into the code's own Section 9.2.1",
+     "{{AHJ}}s and developers working to the 2026 edition; RFPs"
+    ],
+    [
+     "**{{NFPA 855}} 2026 edition** and {{IFC}} Section 1207",
+     "Siting, spacing, {{hazard mitigation analysis}}, detection, explosion control, emergency planning; the new Annex G.11 sets out what a large-scale fire test is expected to demonstrate",
+     "**{{installation code}}** - an installation standard as adopted into a jurisdiction's fire code",
+     "Fire marshals and {{AHJ}}s; insurers; lenders check compliance"
+    ]
+   ]
+  },
+  {
+   "id": "9540a-precisely",
+   "title": "UL 9540A and NFPA 855-2026, precisely",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**What the test does.** The laboratory forces a cell into {{thermal runaway}} and observes, at escalating levels, whether runaway propagates, what gases vent and how flammable they are, flame extension, heat release, and whether deflagration occurs. Each level answers one question and is silent about the next one. The cell level is chemistry and says nothing about design. The module level shows whether runaway spreads inside a module and nothing about the enclosure or the suppression around it. The unit level shows propagation between modules, external surface temperatures, deflagration risk and what the venting does - and says nothing about a different layout. The installation level burns several full units at contractual spacing and shows what a site fire would look like, while saying nothing about whether the cells shipped to a project match the tested batch.",
+    "**The edition question is live, and it changes what you hand over.** The laboratory tests to both the 5th and the 6th editions today, and the 6th carries an effective date of **1 January 2027**. The 5th edition's four levels are cell, module, unit, installation. The 6th **drops the unit-level test for most non-residential systems**, keeping it for residential systems and for non-residential systems with an active {{TRPPS}}; it runs the **installation-level large-scale test on every system regardless of the unit-level result**; and it adds the intentional ignition of vented gases during a propagation event. So *cell plus module plus unit is the complete stack* is a 5th-edition sentence. Under the 6th the complete stack is **cell plus module plus installation**, and an RFP still demanding unit-level reports for a non-residential system is asking for a 5th-edition document. Answer it by naming the edition rather than by silently substituting.",
+    "**One consequence is worth stating on its own, because it contradicts what this curriculum taught first.** *A test method with no pass or fail* has been the correct shorthand for UL 9540A for its whole life, and under the 5th edition it is unconditionally true. Under the 6th it holds at every level **except the installation-level test, which carries pass and fail criteria**. Nothing about this makes a product *certified* to 9540A - there is still no mark and no listing at any level. But the blanket phrase has become edition-dependent, and a seller who says it in front of a fire-protection engineer in 2027 will be corrected.",
+    "**{{NFPA 855}} 2026, the changes that matter.** The {{large-scale fire test}} is elevated from best practice to an effectively mandatory requirement for lithium-ion installations - one unit fully involved, suppression and detection disabled, demonstrating no spread to neighbours - with a new Annex G.11 setting out what that test is expected to show. {{hazard mitigation analysis}} becomes the default requirement rather than a conditional one. Fire-detection options broaden. The explosion-control philosophy shifts: **deflagration venting is no longer accepted as the primary strategy**, and the push is toward preventing and managing gas accumulation instead. Spacing, outdoor-exemption and listing requirements are updated throughout.",
+    "**Which large-scale procedure, and why the answer is unsettled.** The 2026 edition demands the test but was finalised before any consensus method existed, so **the issued text does not define one**. Two routes have appeared since and a seller should be able to name both. ANSI/CSA C800:25, which supersedes the interim TS-800:24, carries the procedure at Section 9.7, and a submitted tentative interim amendment would reference it directly in the code's own 9.2.1. UL 9540A's 6th-edition installation-level test was rewritten to align with Annex G.11. **Neither is universally required today.** The safe posture is to ask the {{AHJ}} and the owner's engineer which they will accept *before* booking laboratory time, and to say plainly in the proposal which procedure the report follows. A large-scale test run to the wrong method is a six-figure retest.",
+    "**And then there is the witness, who certifies something different from everybody else.** A witnessing body does not test anything. It observes, and attests to the *conduct* of the test - not to the product, not to the design, and not to how either behaves once the site is energised. That is a narrower claim than most proposals imply when they name one. It is also the claim with the sharpest consequence attached, and the consequence runs one way only: **when a witnessed product fails in service, the trail leads back through the witness.** The narrowness is why a witness is worth having."
+   ],
+   "sales": "Put the edition and the large-scale procedure on the cover sheet. In 2026 that one sentence is the difference between a complete file and a file that has to be explained."
+  },
+  {
+   "id": "the-fire-record",
+   "title": "The fire record that wrote the rules",
+   "kind": "timeline",
+   "read": "7 min",
+   "intro": "**The left column is the real calendar year.** Three lanes: what burned, what the standards bodies did about it, and what legislatures and regulators did about it. Read it for the shape rather than the dates: **two incidents, April 2019 and January 2025, produced almost everything in the stack above.** Over a span that starts slightly earlier - 2018 to 2025 - the failure rate per deployed GWh fell on the order of **97 to 99 per cent** on EPRI's incident database. That database is assembled from media and published reports and may undercount minor events; the decline survives the caveat.",
+   "lanes": {
+    "gen": "What burned",
+    "deploy": "What the standards bodies did",
+    "eco": "What legislatures and regulators did"
+   },
+   "items": [
+    {
+     "x": 2019.29,
+     "lane": "gen",
+     "label": "APS McMicken - April 2019",
+     "sub": "An internal cell failure cascades into runaway, flammable gas accumulates in the enclosure, and the explosion injures firefighters who open the door. The investigation names four things: missing thermal barriers, suppression that could not stop runaway once started, gas accumulation, and gaps in responder coordination. **Those four findings are why three things are now table stakes rather than differentiators** - propagation test data, deflagration management, and emergency-response planning."
+    },
+    {
+     "x": 2025.04,
+     "lane": "gen",
+     "label": "Moss Landing Phase 1 - 16 January 2025",
+     "sub": "A 300 MW installation burns: **NMC cells in a legacy indoor design** - a repurposed turbine hall - on an earlier-standards water-suppression scheme. Between roughly 1,200 and 1,500 residents are evacuated; a flare-up follows on 18 February; the owner writes off about 400 million dollars; toxic-plume litigation and two county moratoria follow. It defined how the public saw storage for two years."
+    },
+    {
+     "x": 2025.25,
+     "lane": "eco",
+     "label": "The setback bill is postponed, not killed - 2 April 2025",
+     "sub": "California's AB 303 would have barred any development project with **200 MWh or more** of storage within **3,200 feet** of a sensitive receptor, or on an environmentally sensitive site. Its committee hearing is postponed. **Postponed is not dead**, and the gap between the two is where the risk lived."
+    },
+    {
+     "x": 2026.0,
+     "lane": "deploy",
+     "label": "NFPA 855, 2026 edition",
+     "sub": "The inflection edition: large-scale fire testing moves from best practice to effectively mandatory, {{hazard mitigation analysis}} becomes the default, and deflagration venting stops being an acceptable primary explosion-control strategy. **This entry's date is a different kind of date from the others on this timeline** - an edition binds where and when a jurisdiction adopts it, so the operative date for any given project is the adopting county's, not the publisher's."
+    },
+    {
+     "x": 2026.08,
+     "lane": "eco",
+     "label": "The setback bill dies - 31 January 2026",
+     "sub": "AB 303 sat as a live two-year bill for nearly ten months after its hearing was postponed, and then died on the constitutional deadline. Anyone who filed it away as a spring-2025 non-event was carrying an open California siting risk for the whole of that time without knowing it. Meanwhile the state regulator moved separately on maintenance and operating standards and on emergency-response oversight, and opened an investigation. **Check a two-year bill's status before telling a buyer a threat has passed.**"
+    },
+    {
+     "x": 2027.0,
+     "lane": "deploy",
+     "label": "UL 9540A 6th edition takes effect - 1 January 2027",
+     "sub": "Cell, module and installation; unit level only for residential systems and for non-residential systems with an active {{TRPPS}}; the installation-level test run on every system and carrying pass and fail criteria; vented gases intentionally ignited. **The laboratory already tests to it**, so the edition question is live in every proposal written before the date rather than after it. This is the nearest dated gate in this lesson and the date it is reviewed against."
+    }
+   ]
+  },
+  {
+   "id": "how-incidents-price",
+   "title": "How an incident prices",
+   "kind": "callout",
+   "read": "5 min",
+   "ps": [
+    "**The market's own verdict on the fire that defined how the public saw storage for two years was that it was not a market-moving event.** Brokers reached that consensus for a specific and teachable reason: underwriters distinguish a legacy indoor NMC installation on an earlier-standards suppression scheme from a modern outdoor containerised LFP system with unit-level propagation data. They are **categorically different risk objects**, and the insurance market priced them as two things rather than one.",
+    "**That is the sentence a seller has to be able to say, and the reason it works is the stack above.** The difference is not a matter of opinion or vintage - it is four specific properties that a document can evidence: the chemistry, the enclosure, the siting and suppression regime, and whether propagation was ever measured at the level the installation is built at. A seller who accepts the comparison to Moss Landing has conceded the sale. A seller who can name the four differences, and point at the report behind each, has not.",
+    "**The consequences are priced, not rhetorical.** Claims severity for NMC against LFP is now priced separately. Premium softening continues into 2026 but more slowly than before. The best deductibles go to operators who can demonstrate granular monitoring and disciplined operations and maintenance - which is to say, to the operator whose evidence is continuous rather than a file assembled at financial close.",
+    "**And the document that decides the most has no pass mark on it.** Complete {{UL 9540A}} documentation is effectively an insurance prerequisite. A report that awards no mark, certifies nothing and - at every level but one - returns no verdict at all is nevertheless the paper an underwriter reads before setting a deductible - which is the whole argument of this lesson compressed into one fact. **The nature of a document and its commercial weight are unrelated.**",
+    "**Handle the statistic the way the underwriters do.** The 97-to-99-per-cent decline in failures per deployed GWh between 2018 and 2025 is the number a seller most wants to reach for, and it comes from a database built out of media and published reports, which may undercount small events. **Volunteer the caveat.** A figure whose weakness you name yourself is a figure the buyer will repeat; a figure whose weakness they find themselves is a figure that ends the meeting.",
+    "**Where this lesson stops.** What an underwriter or a lender does with the file - the counterparty test, the independent engineer's report, the warranty and service-agreement structure behind it - is the money gauntlet - a separate subject with a separate authority, and not this one. The boundary is deliberate: this lesson is about what each document *is*, and that is a different question from who reads it and what they then decide."
+   ],
+   "sales": "Never argue that the industry is safe. Argue that this installation is a different object from that one, and hand over the evidence behind each of the four properties."
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "kind": "flashcards",
+   "read": "4 min",
+   "cards": [
+    {
+     "q": "A listing, a {{test method}} and an {{installation code}} - what is each one, and who issues it?",
+     "a": "A **listing** is a mark: a {{certification body}} tests a sample against a standard and issues it, and it speaks only for that sample on that day. A **{{test method}}** is a report: a laboratory runs a defined procedure and publishes what happened, with no mark and usually no verdict. An **{{installation code}}** is a rule about how the thing is put in the ground, written by a standards body and enforced by a fire marshal once a jurisdiction adopts it. Three authorities, three questions, and none of them answers the others."
+    },
+    {
+     "q": "Why does a buyer ask for the {{UN 38.3}} {{Test Summary}} rather than for a certificate?",
+     "a": "Because there is no certificate to ask for. UN 38.3 is a transport test regime and the evidence is a summary the **manufacturer writes itself** - no body countersigns it. The nature of the document dictates what a buyer can reasonably demand, which is why the nature column is worth reading before the coverage column."
+    },
+    {
+     "q": "Under {{UL 9540A}}'s 6th edition, what is a complete test file for a non-residential system, and what changed from the 5th?",
+     "a": "**Cell, module and installation.** The unit-level test is kept only for residential systems and for non-residential systems carrying an active {{TRPPS}}; the installation-level large-scale test is run on **every** system regardless of the unit-level result; vented gases are intentionally ignited. And one nuance: *no pass or fail* remains true of the cell, module and unit levels but **not** of the installation test, which carries pass and fail criteria. Nothing is *certified* to 9540A at any edition - there is still no mark."
+    },
+    {
+     "q": "Why does an {{installation code}} have no single national effective date the way a listing has a date of issue?",
+     "a": "Because a code binds **only where a jurisdiction adopts it**. The publisher's edition date is when the text exists; the operative date for any given project is the date the county, city or state adopted that edition into its fire code. The same edition can therefore be live on one side of a boundary and not the other, and a seller quoting a national date is quoting the wrong one."
+    },
+    {
+     "q": "A witnessing body attended a {{large-scale fire test}}. What has it attested to, and what has it not?",
+     "a": "It attests that **the test happened as described, to the protocol claimed, with the stated result**. It does not attest that the product is safe in service, that a different layout would behave the same way, or that the cells shipped to a project match the batch burned. The value is the asymmetry: a witnessed product that later fails in the field is traced back to the witness, which is why the witness is worth having and why the witness is careful."
+    },
+    {
+     "q": "Why can a serious fire at one installation leave the insurance market for another installation largely unmoved?",
+     "a": "Because underwriters price **risk objects, not headlines**. A legacy indoor NMC installation on an earlier-standards suppression scheme differs from a modern outdoor containerised LFP system on four evidenced properties: chemistry, enclosure, siting and suppression regime, and whether propagation was ever measured at the level the installation is actually built at. Each of the four is a document rather than an assertion, which is what makes the distinction hold in a pricing conversation."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A buyer's RFP asks for 'the UL 9540A certificate'. What is the accurate response?",
+     "c": [
+      "Send the {{UL 9540}} listing instead, since it is the umbrella mark for the complete system and covers the ground this RFP is plainly reaching for",
+      "Explain that 9540A is a {{test method}} whose output is a report rather than a certificate, and send the reports with the edition named on the cover sheet",
+      "Send the {{UL 1973}} certificate, which is the nearest equivalent document and covers the cells, modules and racks inside the same system",
+      "Ask the {{AHJ}} to issue a letter confirming that the test was passed, since it is the authority that relies on the propagation data when it approves the layout"
+     ],
+     "a": 1,
+     "why": "There is no such certificate at any edition. UL 9540A produces propagation data for a fire-protection engineer and the {{AHJ}} to design against. Substituting a listing quietly - the first and third options - answers a different question and leaves the propagation data missing; asking an authority to certify a test inverts who does what. **Naming the edition is now part of the answer**, because the 5th and 6th editions define different level sets."
+    },
+    {
+     "q": "Why can one edition of an {{installation code}} be binding in one county and not in the next one along?",
+     "c": [
+      "Because the publisher releases each edition to different regions on a staggered schedule",
+      "Because a code applies only to installations permitted after the edition's own publication date",
+      "Because a fire marshal may waive an edition at any site where a {{hazard mitigation analysis}} has already been filed and accepted by the authority",
+      "Because a code binds only where a jurisdiction adopts it, so the operative date is the adopting jurisdiction's rather than the publisher's"
+     ],
+     "a": 3,
+     "why": "This is the property that separates a code from a listing and a test. A listing has a date of issue and a test has a date of test - both facts about a document. A code's operative date is a fact about a **jurisdiction**, so the same edition can be live on one side of a county line and not the other. Nothing in the other three happens: editions are published once for everyone, adoption rather than permitting is the trigger, and a {{hazard mitigation analysis}} is a requirement of the code rather than an escape from it."
+    },
+    {
+     "q": "Under {{UL 9540A}}'s 6th edition, what is a complete test file for a non-residential system with no active {{TRPPS}}?",
+     "c": [
+      "Cell, module and installation levels, with pass and fail criteria applied to the installation-level test alone",
+      "Cell, module and unit levels, with the installation-level test run only where the spacing deviates from the code",
+      "Cell, module, unit and installation levels - the same four the 5th edition required of every system",
+      "The installation level alone, since the 6th edition runs that test on every system regardless of the other results"
+     ],
+     "a": 0,
+     "why": "The 6th edition drops the unit level for most non-residential systems, keeping it for residential systems and for non-residential systems with an active {{TRPPS}}. It also runs the installation-level test on **every** system regardless of the unit-level result and applies pass and fail criteria to that test. The third option is the 5th edition's answer and is the one most RFPs still ask for; the fourth mistakes *run on every system* for *the only test run*."
+    },
+    {
+     "q": "A witnessing body attended a vendor's {{large-scale fire test}}. What has the witness attested to?",
+     "c": [
+      "That the product is safe in service when installed at the spacing the test used and maintained as specified",
+      "That an {{AHJ}} reviewing the same layout will accept the installation without asking for any further propagation data or a repeat test",
+      "That the test happened as described, to the protocol claimed, with the stated result - and nothing about behaviour in service",
+      "That the cells shipped to any project using this product match the batch that was burned during the test"
+     ],
+     "a": 2,
+     "why": "A witness certifies a **test**, not a product. The first, second and fourth options each extend the attestation to something the witness never observed - service behaviour, an authority's future decision, and the contents of a later shipment. The reputational asymmetry is the point: a witnessed product that fails in the field is traced back to the witness, which is why the attestation is narrow and why it is worth something."
+    },
+    {
+     "q": "A buyer raises Moss Landing as a reason to hesitate on a modern outdoor containerised LFP quote. What is the strongest answer?",
+     "c": [
+      "That the failure rate per deployed GWh has fallen by something like 97 to 99 per cent between 2018 and 2025 on the industry's own published incident database",
+      "That the brokers' own consensus at the time was that the event did not move the insurance market for storage",
+      "That the installation in question was run by a different operator under a different maintenance regime entirely",
+      "That the two are different risk objects on four evidenced properties - chemistry, enclosure, siting and suppression, and the propagation level measured"
+     ],
+     "a": 3,
+     "why": "The first two are true and both are **arguments about the industry**, which is not what the buyer asked. The third is a deflection onto the operator and invites the obvious reply. Only the fourth answers the question actually on the table - is *this* thing like *that* thing - and every one of its four properties is a document rather than an assertion, which is why it holds when the conversation moves to an underwriter. **Use the statistic as support afterwards, with its caveat, never as the answer.**"
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -45265,7 +45618,8 @@ function clLessons_() {
           clLessonHowACellIsMade_(),
           clLessonDcFaultEngineering_(),
           clLessonUtilityProcurementMeetsAiLoad_(),
-          clLessonTheChinaPolicyStack_()];
+          clLessonTheChinaPolicyStack_(),
+          clLessonTheCertificationStack_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

@@ -3,11 +3,44 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 111/100`
+`Sections: 112/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.44r] — 2026-09-17 04:19:40 PM EST
+
+> Author Phase 4 row 23 — the `the-certification-stack` mechanism lesson — on Opus 5 xhigh as a fresh session. This is ONE lesson. It authors no guidance module, no dossier and no report, it seeds no Scraper topic, and it creates no track. [... full brief in `INTEGRATED-REMEDIATION-PLAN.md` §7.52 ...]
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`clLessonTheCertificationStack_()` — the fifty-third lesson, the FOURTH gated lesson Phase 4 has authored and the THIRD in `market-access`**, id `the-certification-stack`, title *Listing, Test Method, Code*, group Market Access & Bankability, authored **inside** the `// CONTENT START` fence, registered at the **end** of `clLessons_()` and **INSERTED at index 4** of `clTrackMarketAccess_()` — §4 position 6 of nine with positions 8 and 9 already built, so the programme's **fourth mid-array insert**. Index verified against the array's live order before the write, not against the plan
+- **Seven sections at §3.5's ids and order** — `three-different-things` (prose, 6 paragraphs) · `the-stack` (table, **6×4** — five natures across six rows: two listings, one test method, one consensus test procedure, one installation code, one manufacturer declaration) · `9540a-precisely` (prose, 6) · `the-fire-record` (**timeline**, 6 items, 2019–2027, lanes `gen`/`deploy`/`eco` and `x` carrying the real year per (jj4)) · `how-incidents-price` (callout, 6) · `drill` (6 cards) · `check-yourself` (quiz, 5 items at indices **1 · 3 · 0 · 2 · 3**). Four tiles, an **eight-entry glossary with every entry used** (69 `{{term}}` uses, all 69 resolving). **The literal is 100 % ASCII**
+- **Three inputs, the §3.5 roster re-derived rather than copied** — `guidance:bess-bankability-2026-08@2026-09-13` (the spine), `study:dnv@2026-09-04` (the v05.07r public corroborating amendment), `concepts:profiler-concepts@2026-09-13`. Every date read off the fetched document body per G2; every ref resolved per G7
+- **`reviewBy` 2027-01-01**, reached by **two independent paths** — the gate module's own clock, and the UL 9540A 6th edition's effective date inside this lesson's own material. **Nine rejections in writing**, including 2026-10-01, the nearest future date in the module, rejected because it gates the grid gauntlet this lesson names only to exclude
+- A **function header comment** recording three deliberate boundaries (the grid gauntlet, the money gauntlet, and the insurance landscape's standard-naming finding) plus the stale-neighbour note in (nn6), so a later revision cannot import across them
+
+### Changed
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§7 row 23 marked built** with the full record; **§4's table flipped at `market-access` position 6** (6 → 7 built of nine; positions 4 and 7 remain); **findings (nn1)–(nn11)** written
+- **(nn1)** the `--check` forecast's two halves are **not two channels** — `sec_what_is_bought()` gates every lexicon hit on `READ_NEXT` membership, so 4 of 6 keyword hits can never fire; forecast **5 → 7** derived before the write and **exact on both halves**, (aa5) at fifteen sessions. **(nn2)** registration **opens** `(planned)` leaks rather than closing them — two new ones, only one of which a scheduled session owns. **(nn3)** (mm6) in this session's own harness: **0 of 69 tooltips "bound"** and the defect did not exist; binding is a delegated listener resolving `clGlossMap`, and **69 of 69** resolve. **(nn4)** the page **clears `sessionStorage` during boot**, so a pre-navigation seed is wiped and the render returns ~50 characters with zero page errors. **(nn5)** a gated **lesson** answers `ROLE_DENIED` and so confirms its own existence to an id probe, while a gated **track** answers `UNKNOWN_TRACK` specifically so it cannot — a new open item (xvi). **(nn6)** `spec-sheet-decoded`'s vocabulary callout teaches two **5th-edition** facts the 6th supersedes. **(nn7)** the claim just corrected **replicated into three sections**, one contradicting the paragraph above it. **(nn8)** the two `reviewBy` sweeps returned **3 and 35** on one source and **both zero** on another. **(nn9)** `{{accreditation}}` resolves through the registry to **ELCC** — a wrong tooltip no checker can flag. **(nn10)** closing (ll3)'s length channel by padding leaves words that exist only for their character count. **(nn11)** flashcard answers sit behind a click-to-flip, so the screenshot pass **structurally cannot read them**
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§6's and §7.3's Phase 4 rows flipped to 23 of 26** with the measured denial arithmetic; **§7.53 written in both halves** — the brief for S2 session 19, `assurance`, the last of the nineteen landscapes and the session that closes S2
+
+#### `live-site-pages/gs-versions/Classroomgs.version.txt` · `live-site-pages/gs-changelogs/Classroomgs.changelog.md`
+- Classroom GAS `VERSION` **v01.67g → v01.68g**, both files in the same commit; one generic public entry naming no company and no gated subject
+
+### Notes
+
+- **The denial arithmetic, measured base against head through the real `handleClassroomOp_` rather than reasoned about**: `market-access` analyst `withheld` **2 → 3** — the first track in the programme to reach three — with the analyst's visible cards holding at **4** and contributor and admin going **5 → 6 → 7**; `cop=lesson` answers **`ROLE_DENIED`** with **0 of 7 section nodes**; neither the id nor the title enters the analyst index payload, which is **byte-identical at 42,265 characters** across the commit while the corpus goes **52 → 53**
+- **Checkers**: `check-classroom-content.py` **0 errors / 0 warnings at 53 lessons, 8 tracks, 142 gate cases** with the module assertion left at **27** (a mechanism lesson registers none); `check-classroom-curriculum.py --strict` no structural findings, 28 stale pins and 4 items due, all pre-existing; `check-classroom-pipeline.py --selftest` 13 fixtures / 0 failures; `--base origin/main` reported **P1 and P5** exactly as forecast — no P3 (`clTrackMarketAccess_` is not a `GATE_SYMBOL`), no P7, P8 or P12; `build-classroom-segments.py --check` **5 → 7 due**; `node --check` and `check-gas-inner-scripts.js` clean
+- **Render**: contributor 7 of 7 section headings plus title and glossary, **25,100 characters, ZERO uncaught page errors**, zero unresolved `{{…}}`, zero literal asterisks, zero backticks; analyst **denied at the server** with **55 characters**, **0 of 7** headings and the title never in the DOM. PROJECT region **3,776,956 → 3,777,062 bytes** and the render **24,992 → 25,100 characters** across the fix round, so both meters were demanded and both moved
+- **Defect tally**: nine pre-splice simulations with printed denominators (106 formatted fields, 46 plain-text fields, 69 term uses, 5 quiz items, 33,028 characters) all returned 0 failures after the length channel was closed; the recount pass then caught **seven** and the screenshots **eleven more with zero overlap**, a **fifteenth** consecutive session for (kk7)
+- No rotation fired on either changelog — the EST day had not rolled, re-counted by hand: `CHANGELOG.md` **112 raw / 97 non-exempt** against a 100 trigger with fifteen sections dated 2026-09-17, `Classroomgs.changelog.md` **55 raw / 46 non-exempt** against a cap of 50
 
 ## [v06.43r] — 2026-09-17 07:19:53 AM EST
 

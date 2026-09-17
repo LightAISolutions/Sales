@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 54/50`
+`Sections: 55/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.68g] — 2026-09-17 04:19:40 PM EST — v06.44r
+
+### Added
+
+- A new lesson has been added to the market track. It explains why the approval documents a buyer asks for are three different kinds of thing issued by three different authorities, what each one proves and what it is silent about, how a scheduled change at the start of 2027 alters what a complete file looks like, and how the record of past incidents shaped both the rules and the way the risk is priced. It sits between two lessons already in the track and requires a higher access level than most of the track
+
+### Changed
+
+- Minor internal improvements
 
 ## [v01.67g] — 2026-09-17 07:19:17 AM EST — v06.43r
 
