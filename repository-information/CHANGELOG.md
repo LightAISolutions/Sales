@@ -3,11 +3,46 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.54r] — 2026-09-18 04:30:22 PM EST
+
+> **Prompt:** "Run C5 session 3 — three scenarios, the first two set at named projects — on Opus 5 xhigh as a fresh session. **C5 SESSION 2 LANDED AT v06.53r (2026-09-18) WITH NO CODE IN THE COMMIT**, §11 reads **5 of 14**, the corpus stands at **sixty-one lessons across eight tracks**, `--check` at 0, the roster deck at 314 cards, and the Rehearsal library carries both modes for the two principal buyer classes. **You write no code** — you author §11 rows 6, 7 and 8. The design's eleven decisions still stand as written unless the developer has amended one; **none of design §12's eight calls has been taken**, and item 2 (the quarterly review Routine re-reading scenarios stamped on a revised landscape) is the developer's, update-in-place with approval only. […the full paste-in brief of `INTEGRATED-REMEDIATION-PLAN.md` §7.62, verbatim: READ FIRST, UNSHALLOW THE CLONE FIRST, THE WORK (five numbered items), VERIFY, THE RENDER HARNESS, THE CONTENT RULES THAT NO CHECKER SEES, the denominator/instrument/decompose paragraph with (ll1)/(rr2)/(rr9)/(rr16)/(rr17)/(rr35)/(rr38)/(rr39)/(rr37), DO NOT, THE DEPLOY, THE CHANGELOG ARITHMETIC, the checklist paragraph, and AFTER THIS SESSION…] Then, give me a prompt to paste into a new session (with recommended AI model & effort level) to continue the action plan, then remember session."
+
+### Added
+
+- **C5 SESSION 3 — THREE SCENARIOS, NO CODE, AND THE PURE-AUTHORING SHAPE HOLDING FOR A SECOND SESSION.** `INTEGRATED-REMEDIATION-PLAN.md` §7.62, Opus 5 xhigh, one push. Corpus **61 → 64 lessons**, 8 tracks unchanged, **`CLASSROOM-CURRICULUM-PLAN.md` §11's ledger reads 8 of 14** (storage-seller 4 of 7, aidc-power-seller 4 of 7). The commit contains no server function, no page, no checker and no track — a `Classroom.gs` content diff plus `var VERSION`, four documents, one version file and a README display: **1,131 insertions and exactly 2 deletions in the `.gs`**, both of them the VERSION line and the registry's last entry gaining a comma.
+- **`scenario-utilities-discovery`** (`guidance`) — the storage seller's prospecting work on the Southeast's regulated gatekeeper, before any meeting exists: three lanes buy the same equipment (owned-and-operated under the utility's own supply agreements, purchased power where the counterparty picks the hardware, and a 500 MW solicitation a developer bids), the owned lane is larger than the solicited one by an order of magnitude, and the buyer's own file says the purchasing decisions were taken a year or more before the certificate. Inputs: `profile:southern-company@2026-09-05` (v2), `guidance:landscape-utilities-2026-09@2026-09-14`. Ten sections, three beats, **18 ledger rows (12 fact / 6 analysis)**, `reviewBy` **2026-10-01** — an Alabama statute's effective date, which is also the landscape's own review date, so it ships inside its 30-day horizon with a gold chip on day one. The first `prospecting`-stage room in the library.
+- **`scenario-hyperscalers-and-ai-labs-objection`** (`guidance`) — the AI-data-centre power seller on a shortlist at the Hyperion campus, against the segment's characteristic answer: every battery attached to this buyer's load sits on somebody else's balance sheet, three of them inside a utility package whose megawatts the buyer does not publish and one owned by a pipeline company and tolled — and the campus itself is held in an eighty-twenty joint venture with third-party debt and a residual guarantee. The exception is in the same record and dated. Inputs: `profile:meta@2026-09-06` (v9), `guidance:landscape-hyperscalers-and-ai-labs-2026-09@2026-09-16`, `project:hyperion@2026-09-06`. Ten sections, three beats, **18 ledger rows (12 fact / 6 analysis)**, `reviewBy` **2026-12-31** — the landscape's own, because the segment carries no future day-level date.
+- **`scenario-epc-and-construction-objection`** (`guidance`) — the same seat in a negotiation over two Lighthouse buildings carrying a combined 468 MW inside a fifty-fifty joint venture, where the package was specified at preconstruction and bought open-book, and where the segment's own measurement is that the builder usually does not hold the purchase order at all. Inputs: `profile:turner-construction@2026-09-06` (v8), `guidance:landscape-epc-and-construction-2026-09@2026-09-16`, `project:lighthouse@2026-09-06`. Ten sections, three beats, **18 ledger rows (10 fact / 8 analysis)**, `reviewBy` **2027-03-16** — the landscape's own bound, because the ledger's only future dated gate falls beyond it, with the reason recorded as a ledger row.
+- **Both `project:` pins read 2026-09-06 off an unshallowed clone**, and both slugs were verified against `profiler-projects.json` before either stamp was written — (rr39) applied rather than repeated.
+- **Findings (rr41)–(rr45)** in `CLASSROOM-CURRICULUM-PLAN.md` §10.6; the register continues at **(rr46)**.
+- **`INTEGRATED-REMEDIATION-PLAN.md` §7.63** — the paste-in brief for C5 session 4 (§11 rows 9, 10, 11: `brookfield` objection, `sargent-lundy` discovery, `fluidstack` discovery), written in **both halves**.
+
+### Changed
+
+- **`CLASSROOM-CURRICULUM-PLAN.md` §11** — rows 6, 7 and 8 flipped to `v06.54r`, the heading to **8 OF 14 BUILT**, a session-3 paragraph added, and the findings pointer advanced to (rr46).
+- **`INTEGRATED-REMEDIATION-PLAN.md`** — §7.62 marked **SPENT**, §6's C5 row and §7.3 order 9 moved to **8 of 14 / 3 done**, both naming §7.63 as next.
+- **Classroom GAS v01.76g → v01.77g**, its version file, the public GAS changelog (generic lines, no counterparty named — P11) and the README tree GAS display.
+
+### Fixed
+
+- **Three design §9 premises corrected against the record before a word was authored** — (rr41), (rr42), (rr43). Row 6's *before an RFP exists* is false in both halves (two solicitations were live; the room is the lane count). Row 7's *qualified-vendor set* appears nowhere in `meta` v9 and could not have been ledgered, while the same file carries the dated counter-example to the objection it supports. Row 8's *guaranteed maximum price* is absent from `turner-construction` v8, whose model is open-book sourcing at preconstruction — and *the codes* is absent by construction, because that dossier is the only one of the three with no `policyExposure[]` at all. **Six re-derivations in six rows.**
+- **One ledger address corrected before commit** by the verification script rather than by eye: a campus's acreage and completion year were cited to two fields that did not contain them, and the `recentDevelopments[]` entry that does was added to the row.
+
+### Verified
+
+- **Content checker 0 errors / 0 warnings at 64 lessons, 8 tracks, 217 gate cases**, module assertion **28** — **the gate-case count did not move**, the pure-authoring signature measured for a second consecutive session. `--selftest` **15 fixtures / 0 failures**. `build-classroom-segments.py --check` **19 segments, 0 due**. `check-readme-tree.py` 10 page + 8 GAS displays, 0 findings. `node --check` and `check-gas-inner-scripts.js` clean.
+- **`--base origin/main` signature as forecast:** P1 on the developer paths, P12 until the version file was bumped, P13 ×3 and P10 — and **no P2, P3, P5, P6, P7 or P8**, so `gateDigest` is untouched.
+- **Health script `--strict`:** no structural findings, **28 stale pins across 45 hand-authored lessons** (the count held while the denominator moved 42 → 45), coverage **8 of 14**, moved-landscape list **0**, review list **6** — the five carried plus `scenario-utilities-discovery` at 2026-10-01, counted rather than taken from the brief.
+- **Tier test from the real `handleClassroomOp_` path:** the analyst `cop=index` **byte-identical** base → head; the contributor delta decomposing to exactly the three new cards and nothing else; all **eight** scenarios `ROLE_DENIED` to an analyst on `cop=lesson` and served to a contributor; drill pools **446 / 970** and the roster deck **314** with **every id→hash pair identical**.
+- **Ledger verified programmatically:** **54 rows, 91 addresses and 205 distinctive numbers resolved against the fetched documents, 0 failures**, plus all eight stamp pins and all three `reviewBy` bounds re-checked. **Zero persons named** (1,447 full names and 1,295 surnames from every dossier's `decisionMakers[]` scanned), zero attributed quotations, zero scare quotes and zero nested emphasis.
+- **Rendered in the real page** from fixtures generated by the real server path: all ten sections of each of the three, **all nine beats clicked**, `why` 1,393–1,597 characters with **zero literal asterisks**, the section-level `note` rendering on all nine, zero `{{` or `[c:` tokens in `#cl-app`, and zero page errors.
+- **No rotation on any changelog.** `CHANGELOG.md` **96** against a 100 trigger, counter `Sections: 96/100`; `Classroomgs.changelog.md` **48** against a cap of 50; `Classroomhtml.changelog.md` **16**. **`Profilerhtml.changelog.md` 49 / 49 — one section from its own rotation and not this row's file.**
 
 ## [v06.53r] — 2026-09-18 02:39:03 PM EST
 

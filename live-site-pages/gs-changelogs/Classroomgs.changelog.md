@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.77g] — 2026-09-18 04:30:22 PM EST — v06.54r
+
+### Added
+
+- **Three more rehearsals, and the shelf now covers six kinds of buyer.** Each is one conversation against one buyer's own published record — who is across the table, what you walk in knowing, what is actually in dispute, three decisions with four real options each, and a debrief that names the trap in every one. The library now holds eight.
+- **A discovery rehearsal in a regulated market.** The new one opens before a meeting exists: the record shows three different ways the same buyer acquires the same equipment, and the exercise is working out which of the three you are in before you ask for anything. It is the first rehearsal set at the earliest stage of a sale.
+- **Two rehearsals set at named projects.** The other two put you in the room on a specific campus, so the facts you argue from are that project's rather than the company's in general — and both turn on the same question, which is which entity actually signs.
+- **A second seat gets its third and fourth rehearsals.** Both halves of the sale are now covered for four buyer types, with the remaining six queued.
+
+### Changed
+
+- **The review-date chips read true.** One of the three new rehearsals ships with its chip already amber, because the nearest dated event in its own record falls inside the next month; the other two sit further out. Each rehearsal carries the review date its own evidence justifies rather than a default.
 
 ## [v01.76g] — 2026-09-18 02:38:34 PM EST — v06.53r
 
