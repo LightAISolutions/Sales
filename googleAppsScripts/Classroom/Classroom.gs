@@ -1,4 +1,4 @@
-var VERSION = "v01.71g";
+var VERSION = "v01.72g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -43121,11 +43121,12 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, the ten-second race the engines run, the room that covers the seconds they cannot, the vocabulary all of it is written, priced and proven in, the last ten metres from the rack inlet to the die, the case for converting it all to DC once, early and high, the fault engineering that voltage brings with it - and the map of where the whole chain breaks, with who owns each break.",
+ "short": "Finish this and you can walk a megawatt from the interconnection study to the one-volt rail on the chip, say which regulator owns each step of the way, name every box on it, say what each is for, and say where and why each one fails.",
  "group": "The AI Data-Center Wave",
  "updated": "2026-09-17",
  "lessons": [
   "the-fence-line",
+  "interconnection-for-large-loads",
   "bridge-power",
   "the-aidc-power-chain",
   "backup-generation",
@@ -46473,6 +46474,485 @@ function clLessonReadingTheNumbers_() {
  ]
 };
 }
+function clLessonInterconnectionForLargeLoads_() {
+  return {
+ "schemaVersion": 1,
+ "id": "interconnection-for-large-loads",
+ "type": "module",
+ "title": "The Rulebook Above the Fence",
+ "short": "A large load answers to two regulators. One wrote it a whole instrument; the other wrote one for generators, left load out, and is only now writing it in.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-17",
+ "reviewBy": "2026-11-16",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:large-load-interconnection-2026-09",
+    "date": "2026-09-13",
+    "note": "the whole federal spine - the two-jurisdiction seam, Order No. 2023's scope and its four mechanisms, the three study-fee ladders, the co-location docket record from the November 2024 rejection to the June 2026 section 206 orders, and the honesty section this lesson carries through"
+   },
+   {
+    "kind": "public",
+    "ref": "study:burns-mcdonnell",
+    "date": "2026-08-21",
+    "note": "the three studies from the requester's chair and the load-versus-generation distinction - referenced as the handoff to the-fence-line, not re-taught"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dominion-energy",
+    "date": "2026-09-03",
+    "note": "the GS-5 threshold at 25 MW on a contiguous site at 75 per cent load factor, the split minimum of 85 per cent on delivery and 60 on generation, the fourteen-year term as a four-year ramp plus ten, exit fees equal to remaining minimums and collateral up to 60 per cent of minimum charges - and the observation that a slipped year costs a year of minimum charges"
+   },
+   {
+    "kind": "public",
+    "ref": "study:oncor",
+    "date": "2026-09-03",
+    "note": "SB 6's 75 MW threshold, the statutory study fee of at least USD 100,000 and the proposed rule's scaling to 100,000 and 300,000 plus actual costs, security per megawatt with forfeiture split 80/20, and the point that the proposed rule was published for comment in March 2026 and not adopted"
+   },
+   {
+    "kind": "public",
+    "ref": "study:aep",
+    "date": "2026-09-03",
+    "note": "the five-parameter reading of a large-load tariff and the instruction to read the minimum together with the other four - thresholds from 25 MW to 150 MW, terms of 12 to 20 years, ramps of four to five years, minimums of 80 to 90 per cent, and exit as minimum bills capped at three to five years"
+   },
+   {
+    "kind": "public",
+    "ref": "study:southern-company",
+    "date": "2026-09-03",
+    "note": "a threshold above 100 MW, a term lengthened from five years to fifteen, and the minimum billing requirement that sits in the filed contract rather than in the rule"
+   },
+   {
+    "kind": "public",
+    "ref": "study:xcel-energy",
+    "date": "2026-09-03",
+    "note": "the same tariff in three drafts - the 50 MW threshold that is the lowest of the three and the 80 per cent minimum that is the highest - as the evidence that the parameters are set one commission at a time"
+   },
+   {
+    "kind": "public",
+    "ref": "study:entergy",
+    "date": "2026-09-03",
+    "note": "the instrument with no rate class at all - a contract inside a certificate that names the customer, with a revenue-requirement match in place of a percentage and no ramp"
+   },
+   {
+    "kind": "public",
+    "ref": "study:talen-energy",
+    "date": "2026-09-05",
+    "note": "the amended interconnection service agreement that started the co-location record, the 300 MW already permitted and the 480 MW asked for, and the rejection read correctly as a loss on burden of proof - the reading itself is taught in clean-firm-power and the workaround in this guide, and neither is restated here"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "large-load tariff, minimum demand charge, cost allocation, co-location, interconnection queue, curtailment, network upgrades, site control, ramp period, credit support, exit fee, load factor, point of interconnection, docket and FERC"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "Two forums",
+   "v": "and one of them was empty",
+   "sub": "A state commission sets the threshold, the minimum, the term, the ramp and the exit. The federal layer sets none of the five - and until January 2026 no large load anywhere had a federal process to be studied under."
+  },
+  {
+   "k": "0 of 336",
+   "v": "pages that mention a large load",
+   "sub": "The 2023 federal interconnection order runs 336 Federal Register pages and rebuilt how a generator connects. The phrases large load and load interconnection appear in it zero times."
+  },
+  {
+   "k": "20% uncapped",
+   "v": "against one fee at the door",
+   "sub": "A generator leaving the federal queue late owes a fifth of its assigned upgrade cost with no ceiling. A load in the only accepted federal process loses a non-refundable USD 10,000 and pays no exit penalty at all."
+  },
+  {
+   "k": "6 in one day",
+   "v": "tariffs put under investigation",
+   "sub": "On 18 June 2026 every FERC-jurisdictional grid operator was ordered to justify its large-load treatment or change it. A seventh region was not ordered, and could not be."
+  }
+ ],
+ "glossary": [
+  {
+   "t": "cluster study",
+   "d": "Studying a window of interconnection requests together rather than one at a time in date order, with the cost of shared upgrades divided among the cluster by a proportional impact method. The 2023 federal order made it the standard for generators. It is a generator process: where a grid operator batches large-load requests, that is a separate arrangement of its own making."
+  },
+  {
+   "t": "section 206",
+   "d": "The Federal Power Act's complaint route, which the federal regulator may also open on its own motion, to test whether an existing tariff is still just and reasonable. It reaches a tariff whose owner has filed nothing and never intended to, and it carries a date from which any rate change ordered at the end can be made retroactive."
+  },
+  {
+   "t": "LGIP",
+   "d": "Large Generator Interconnection Procedures: the standard federal process a generating plant follows to connect, ending in the agreement it signs. The 2023 order rebuilt both the procedures and the agreement. There is no load-side equivalent in the federal rulebook."
+  },
+  {
+   "t": "commercial readiness deposit",
+   "d": "Money an interconnection customer posts to show its project is real, sized against the upgrade cost the studies have assigned to it rather than against a fixed schedule - so the amount at risk grows as the project learns what it will cost the network. It is the federal analogue of the collateral a state large-load tariff asks for."
+  },
+  {
+   "t": "withdrawal penalty",
+   "d": "What a generator owes for leaving the federal queue, rising with how far the request progressed - twice study costs early, then a rising percentage of its assigned upgrade cost, ending at a fifth of it after the agreement is signed. The ceilings the regulator proposed were not adopted, so the last rung has none."
+  },
+  {
+   "t": "study delay penalty",
+   "d": "Money owed by the transmission provider to the customer for missing a study deadline in its own tariff, after a short grace period. It replaced a reasonable-efforts standard on the generator side in 2023. No federal deadline penalty of any kind protects a load study."
+  },
+  {
+   "t": "HILL",
+   "d": "High Impact Large Load: one regional operator's tariff term for a load at or above 10 MW connected at 69 kV and below, or at or above 50 MW above 69 kV. Accepted in January 2026, it is the first and so far only large-load interconnection process the federal regulator has approved, and a storage resource is expressly not one."
+  },
+  {
+   "t": "Co-Located Load",
+   "d": "End-use load physically connected to an existing or planned generating facility on the interconnection customer's side of the point of interconnection. Which side of that point the load sits on is the whole test, and it is the definition every order in the co-location record is written against."
+  }
+ ],
+ "sections": [
+  {
+   "id": "two-jurisdictions",
+   "title": "Two jurisdictions, and the question that tells you which one owns your problem",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Every large load in the United States answers to two regulators at once, and for most of the last decade only one of them had written it anything. The state commission writes the retail tariff, certifies the plant and the line, and sets the terms on which a campus takes service. {{FERC}} writes the transmission tariff, the interconnection procedures and the rules on load sitting behind a generator's meter. **For a load, the federal shelf was very nearly empty** - and the reason it is filling now is the subject of this lesson.",
+    "**The question to ask first is jurisdictional, not technical.** Is the transmission provider a FERC-jurisdictional public utility? If it is, the queue the campus stands in, the assumed demand it is studied at, whether a generator may serve it from behind the fence, and who carries the {{network upgrades}} if it never arrives are all federal, and all of them are being rewritten this quarter under dockets with dates on them. If it is not - the Texas grid, or a vertically integrated utility outside a regional operator - the same delay is a state matter on a different clock. **A proposal aimed at the wrong forum has no deadline in it.**",
+    "**What the state forum owns is a complete instrument, and this app teaches it elsewhere.** Five parameters - the threshold, the {{minimum demand charge}}, the term, the {{ramp period}}, and the {{credit support}} and {{exit fee}} pair - are all set by a state, six utilities give six different answers, and *The Regulated Machine* sets out the machinery underneath them - the plan, the filing, the proof and the recovery a purchase moves through. This lesson does not re-derive any of it. It puts the federal layer beside it and asks what the federal layer can reach.",
+    "**What the federal forum owns, it changes through three instruments.** A utility may file its own tariff change and have it accepted, rejected or accepted subject to condition - the route the one accepted large-load process took. The regulator may open a **{{section 206}}** complaint on its own motion against a tariff whose owner has filed nothing - the route all six 2026 investigations took, and the reason they could reach operators that had volunteered no change at all. And an interconnection service agreement is itself a filed rate, which is why the most consequential co-location decision on the books began life as an amendment to one.",
+    "**One region is absent from every federal list here, and it is a jurisdictional fact rather than a policy choice.** The Texas grid's transmission providers are not FERC-jurisdictional public utilities, so {{section 206}} does not reach them. That single fact explains a pattern the corpus shows without explaining it: Texas did not go without a large-load rulebook, it wrote one as a **statute** where other regions are getting one as a tariff amendment. A utility can sit on both sides at once - one of the six this app teaches operates inside a regional market under a federal tariff and under Texas law simultaneously.",
+    "**Field note - where the boundaries of this lesson run.** *The Fence Line: Interconnection and the Substation* teaches the three studies from the requester's chair and the queue they form; this lesson is the rulebook above them and does not repeat the ladder. *The Regulated Machine* owns the state tariff parameters and the five-jurisdiction comparison. *When the Campus Signs a Reactor* owns the reading of the November 2024 rejection - a loss on burden of proof rather than a ruling on the merits - and this lesson takes that reading as given rather than re-arguing it. And one word does two jobs in this corpus: in *Who Carries Which Risk* a colocation lease is a landlord-and-tenant contract, while {{co-location}} here is a load sitting on a generator's side of the {{point of interconnection}}. **Same word, different instruments, different regulators.**"
+   ],
+   "sales": "The sentence that separates someone who has read this from someone who has read a headline is not about megawatts. It is: **which regulator owns the thing that is delaying me, and what is the next dated step in that forum?** A queue delay inside a federal operator has an open docket and a filing date attached to it. The same delay in Texas, or behind a vertically integrated utility's own process, has a state proceeding and a different calendar. Naming the forum is what turns a complaint into a schedule."
+  },
+  {
+   "id": "order-2023",
+   "title": "The 2023 order: four mechanisms, and the word that is not in it",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The federal regulator's 2023 interconnection order is the most-cited reform in this market and the most often mis-cited. It rebuilt the {{LGIP}} into a first-ready, first-served process and it took effect in November 2023, clarified on rehearing in May 2024. **Read it as four mechanisms rather than as a rule**, because each mechanism answers a question a large load also has - and the last column is where the answer for a load actually comes from, when there is one.",
+   "cols": [
+    "The mechanism",
+    "What it installed, for a generator",
+    "The question it was built to answer",
+    "Where a load's answer comes from"
+   ],
+   "rows": [
+    [
+     "First-ready, first-served **{{cluster study}}**",
+     "A window of requests studied together instead of one at a time in date order, with the cost of shared upgrades divided among the cluster by proportional impact",
+     "Can a queue be cleared faster than requests arrive at it?",
+     "**Nothing federal until 2026.** The one accepted federal load process studies a request on its own account, and the state processes study one campus at a time. Where a grid operator batches load requests it is that operator's own arrangement, not this order"
+    ],
+    [
+     "Readiness at the door - **{{site control}}** and a deposit",
+     "Demonstrated rights over the land at the moment the request is filed, with a narrow affidavit route where a regulatory limitation makes them unobtainable",
+     "Is this a project, or a drawing holding a place in the line?",
+     "The same question, answered by **statute in Texas** and by security or collateral in a state tariff almost everywhere else. It has never been answered by a federal interconnection rule for load"
+    ],
+    [
+     "A study clock with money on the provider - **{{study delay penalty}}**",
+     "The reasonable-efforts standard for study deadlines is replaced by a per-business-day amount the transmission provider owes the customer when it is late",
+     "Who pays when the party doing the studying is the party that is slow?",
+     "**Nowhere.** No federal deadline penalty of any kind protects a load study. This is the reform a delayed campus most wishes applied to it, and it is the clearest single asymmetry in the whole file"
+    ],
+    [
+     "An exit priced by stage - **{{withdrawal penalty}}**",
+     "A rising charge for leaving the queue: twice study costs early, then a growing share of assigned {{network upgrades}}, ending at a fifth of them once the agreement is signed. **The ceilings the regulator proposed were not adopted**",
+     "What should a speculative position cost the requests behind it?",
+     "The state {{large-load tariff}}, which prices the same fear as a minimum bill and an {{exit fee}} on a customer rather than as a queue penalty on a requester - a different instrument aimed at the same behaviour"
+    ],
+    [
+     "**And the word that is not in it**",
+     "The order amends the Large and Small Generator Interconnection Procedures and Agreements. Across its 336 Federal Register pages, *large load* and *load interconnection* each appear **zero** times",
+     "Was a load ever the subject of this rulemaking?",
+     "It was not, and no earlier federal interconnection rulemaking addressed one either. **That absence is the space the state large-load tariff grew into** - and the space the 2026 investigations are now trying to fill"
+    ]
+   ],
+   "note": "**The useful reframing.** This order is not slow for a campus and it is not fast for one; it is not about one. What it governs is how quickly new **supply** reaches the grid the campus wants to draw from - which is a real effect on a campus date, arriving by a route the campus's own study never mentions. Saying *the 2023 reform should speed up my connection* to a counterparty who has read it is a tell.",
+   "sales": "There is a better version of the same claim and it survives contact with counsel. **The 2023 order set the terms on which generation reaches the grid; the rulebook for the campus's own connection was empty until 2026 and is being written now.** That sentence opens two conversations rather than closing one: what the campus's region has in force today, and what its next dated filing is."
+  },
+  {
+   "id": "a-tariff-as-a-class",
+   "title": "The large-load tariff as a class - five parameters, six answers, one forum",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "*The Regulated Machine* reads this instrument one jurisdiction at a time, which is how you price a state. **Read it the other way for one screen and a different thing appears: the instrument is five answers to five fears, and every one of the five is set in the same forum.** The middle column is the spread across six utilities, not a quotation of any of them - go to that lesson for a row you can price. **It prices five of the six, and the missing one is the point**: the sixth has no rate class for a comparison table to hold, which is itself an answer to every row below.",
+   "cols": [
+    "Parameter",
+    "The fear it prices",
+    "The spread across six utilities",
+    "Who sets it, and what the federal layer can do to it"
+   ],
+   "rows": [
+    [
+     "**Threshold**",
+     "Which customers are large enough to need rules of their own",
+     "25 MW on a contiguous site at a 75 per cent {{load factor}} in one; 25 MW to 150 MW across another's eight jurisdictions; 50 MW in the lowest of three drafts of a third; above 100 MW in a fourth; 75 MW by statute rather than tariff in a fifth; **and no class at all in the sixth**, which writes a contract inside a certificate that names the customer",
+     "The state, in all six. The federal layer has a **suggested** large-load definition sitting inside an open investigation and no rule behind it"
+    ],
+    [
+     "**{{minimum demand charge}}**",
+     "A substation and a plant built for a campus that never fully arrives",
+     "80 to 90 per cent across most of them, one splitting it into 85 per cent on delivery and 60 on generation, one leaving the percentage **in the filed contract rather than in the rule**, one replacing the percentage with a revenue-requirement match, and **none at all in the statutory case**, which has no minimum-demand construct to set",
+     "The state. The federal orders did not modify regional wholesale {{cost allocation}}, so nothing federal reaches this number at all"
+    ],
+    [
+     "**Term**",
+     "A twenty-year asset recovered against a five-year customer",
+     "12 to 20 years, with one at 14 and one lengthened from five years to fifteen, and **no tariffed term at all in the statutory case**, where an interconnection agreement and a separate retail contract do the work. **The terms grew as the thing being built shifted from wires to generation** - a feeder over twelve years is a comfortable match and a power station is not",
+     "The state. What the federal layer reaches instead is a standardised cost recovery agreement with security posted toward the transmission owner's revenue requirement - a different promise to a different party"
+    ],
+    [
+     "**{{ramp period}}**",
+     "Billing a campus in full for halls it has not built yet",
+     "Four years in most of them, up to five in one, **and absent entirely in the one with no rate class**. It is the parameter that decides whether a slipped construction year costs a year of minimum charges or is simply absorbed",
+     "The state - and it is the least-quoted of the five. The federal layer has no equivalent because it is not billing anyone"
+    ],
+    [
+     "**{{credit support}} and {{exit fee}}**",
+     "A customer that walks away and leaves a stranded asset behind it",
+     "Exit fees equal to the remaining minimums in one; minimum bills for the remaining term capped at three to five years in another; collateral up to 60 per cent of minimum charges for weaker credits; **and in the statutory case security per megawatt with the forfeiture split rather than an exit fee at all**",
+     "The state. The nearest federal object is the generator {{withdrawal penalty}} the section above sets out, which prices the same fear against a different party in a different forum"
+    ]
+   ],
+   "note": "**The parameter that gets quoted is the minimum; the parameter that decides the outcome is usually the ramp.** An 85 per cent obligation over twelve years with a four-year ramp is a different instrument from a 90 per cent obligation over twenty with the same ramp, and both are different again from a 75 MW statutory threshold with no minimum and no term. Read the five together or you have read one number.",
+   "sales": "Two of these five are the storage opening and they are not the ones a seller usually reaches for. **The ramp is a calendar, and the calendar is the sale**: the moment a construction schedule and a billing schedule stop agreeing is the moment on-site generation and storage stop being a line item and start being a rescue. And **curtailability is the one physical capability that buys a schedule** - which is why the service election in the co-location record below is a commercial question rather than a regulatory footnote."
+  },
+  {
+   "id": "who-pays-the-study",
+   "title": "The deposit ladder, rung by rung",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "A requester does not pay once; it climbs. **Read this down a column to see one regime's ladder, and across a row to see the same rung priced by three different regulators for two different kinds of customer.** The first column is the rung. The generator column is federal and complete. The federal load column exists at all only since January 2026 and describes one region. The state column is a statute whose implementing rule was **published for comment in March 2026 and was not adopted as of the guide this lesson draws it from** - treat every figure in it as proposed.",
+   "cols": [
+    "Rung on the ladder",
+    "Generator, federal",
+    "Large load, federal - the one accepted process",
+    "Large load, state - the Texas statute"
+   ],
+   "rows": [
+    [
+     "**At the door, never returned**",
+     "Nothing separate. The study deposit below is the entry",
+     "A **USD 10,000** application fee, and the signed study agreement must come back with it **inside 30 calendar days** or the request is treated as withdrawn",
+     "A non-refundable interconnection fee per megawatt in the proposed rule, charged on top of the study fee"
+    ],
+    [
+     "**To be studied**",
+     "USD 35,000 plus USD 1,000 per MW between 20 and 80 MW; USD 150,000 from 80 to under 200 MW; **USD 250,000 at 200 MW and above**",
+     "A **USD 100,000** deposit, plus **USD 200,000** more where a detailed transient study is required, plus **USD 25,000** if the host transmission owner calls for a supplemental connection study - or nothing further, if it does not",
+     "**At least USD 100,000 by statute**; the proposed rule scales it to USD 100,000 from 75 to 250 MW and USD 300,000 above that, plus actual costs"
+    ],
+    [
+     "**To stay in as the number grows**",
+     "**{{commercial readiness deposit}}** - twice the study deposit to enter the {{cluster study}}, topped up to 5 per cent of assigned {{network upgrades}} at the restudy and 10 per cent at the facilities study",
+     "**Nothing.** There is no readiness ladder on the load side of any accepted federal process - the exposure is fixed at the door and does not grow with the upgrade estimate",
+     "Security per megawatt, set as a rate in the proposed rule rather than as a share of an assigned cost"
+    ],
+    [
+     "**To leave**",
+     "**{{withdrawal penalty}}** - the greater of the study deposit or 2 times study costs, then 5, 10 and 20 per cent of assigned upgrade cost, **the last rung uncapped**",
+     "The excess deposit is returned and study costs above it are billed. The application fee stays gone. **Nothing else is owed**",
+     "Forfeited security, split between the utility's {{rate base}} and a refund to the customer"
+    ],
+    [
+     "**If the party doing the studying is late**",
+     "**{{study delay penalty}}** - the provider owes the customer per business day, more for each later study stage, after a short grace period",
+     "Nothing",
+     "Nothing"
+    ]
+   ],
+   "note": "**The asymmetry is narrower than it looks, and reading it precisely is the whole value of the table.** Down the generator column, exposure escalates with progress and has no ceiling at the end. Down the **federal** load column it is set at the door and then stops - which is what the 2026 investigations are aimed at. But the **state** column does not behave that way at all: security charged per megawatt scales with the campus, so a large enough load posts more at a state commission than any generator posts federally. **The federal layer prices a load's speculation at almost nothing and a state legislature prices it heavily** - two instruments aimed at the same behaviour from opposite directions, and only one of them is under investigation.",
+   "sales": "The study charge is almost never the number that matters: the deposits and penalties behind it are one to two orders of magnitude larger. The more useful discipline is a refusal. **No study fee has been published for a large load in most federal regions, because no accepted process exists there to attach one to** - so a figure quoted for those regions is not a citable number, whoever quoted it. Saying so, and then naming the one region where the charges are real, is worth more than a confident wrong figure."
+  },
+  {
+   "id": "the-co-location-docket",
+   "title": "The co-location record, dated",
+   "kind": "timeline",
+   "read": "6 min",
+   "intro": "**Two questions run down this chart and they never merge.** One is co-location - what may sit behind a generator's fence - and it narrows, from an amendment to one filed agreement to an order on one grid operator's tariff. The other is the large-load rulebook, and it goes wide, from a directed rulemaking to an order against every FERC-jurisdictional operator in the country on a single day. **They overlap in time and not in subject**, which is why a campus can be reached by one and untouched by the other. The horizontal axis is the calendar year, and **the lane a step sits in is the scope of what that step can bind** - read the lane first.",
+   "lanes": {
+    "gen": "One agreement",
+    "eco": "One tariff",
+    "deploy": "Every tariff"
+   },
+   "items": [
+    {
+     "x": 2024.83,
+     "lane": "gen",
+     "label": "**An amended agreement is rejected** - November 2024",
+     "sub": "A grid operator filed to raise the load permitted behind one nuclear plant's connection from the 300 MW its agreement already allowed. The regulator rejected it two votes to one, because the non-standard provisions had not been shown to be **necessary** deviations from the standard form. **What the step establishes for this lesson is narrower than what it is usually quoted for: a co-location arrangement lives inside a filed agreement, so it is a federal question by construction rather than by choice** - which is why everything below it happens at the federal regulator and not at a state commission."
+    },
+    {
+     "x": 2025.14,
+     "lane": "eco",
+     "label": "**The tariff itself is put in question** - February 2025",
+     "sub": "A **{{section 206}}** proceeding opened on the regulator's own motion, asking whether the operator's tariff was just and reasonable as to {{Co-Located Load}}. **The subject has moved from one contract to the document every contract in that region hangs from** - and because nobody had filed anything, only the complaint route could reach it."
+    },
+    {
+     "x": 2025.81,
+     "lane": "deploy",
+     "label": "**A large-load rulemaking is directed** - October 2025",
+     "sub": "The energy secretary directed the regulator to consider a large-load rule, framing large loads as demand above 20 MW; a docket opened four days later. **It is an advance notice, not a proposed rule** - a stage for gathering a record on whether and how to write one. Nothing in it binds anybody today."
+    },
+    {
+     "x": 2025.96,
+     "lane": "eco",
+     "label": "**The tariff is found unjust and unreasonable** - December 2025",
+     "sub": "Three transmission service elections directed into existence for a customer serving {{Co-Located Load}}: network service billed on **gross demand**, a firm contract-demand service, and a non-firm one, the last two paid against the load's actual net withdrawals with {{curtailment}} above the contracted level. The 2004 behind-the-meter netting rule was ordered rewritten with a materiality threshold, a three-year transition and grandfathering. **The two new services exist and have no rates** - a paper hearing was set to determine them."
+    },
+    {
+     "x": 2026.04,
+     "lane": "deploy",
+     "label": "**The first accepted federal load process** - January 2026",
+     "sub": "One regional operator's **{{HILL}}** process took effect, carrying the first study charges for a load the federal regulator has ever accepted, followed in July by a companion service that is curtailable behind all firm service with a **seven-year maximum term** - a ceiling set so that the customer must eventually move to firm service rather than live on the conditional one. **Before this date no large load anywhere had a federal process to be studied under.**"
+    },
+    {
+     "x": 2026.46,
+     "lane": "deploy",
+     "label": "**Six orders, one day** - June 2026",
+     "sub": "Every FERC-jurisdictional grid operator ordered to show its large-load treatment is still just and reasonable or to file the changes that would make it so, against a common list of subjects that includes transmission service for **flexible** large loads and a standardised cost recovery agreement. **The Texas grid is absent and cannot be present**, and the regulator stated the boundary in the same breath: the terms of interstate service taken on a large load's behalf are federal, while siting and retail terms stay with the states."
+    },
+    {
+     "x": 2026.63,
+     "lane": "deploy",
+     "label": "**Responses due** - August 2026",
+     "sub": "Justify the tariff or file the change; a 90-day abeyance was available on request. **What each operator actually filed is not established from a primary source, and this lesson does not guess at it** - which is the honest state of the record rather than a gap in this lesson."
+    },
+    {
+     "x": 2026.87,
+     "lane": "deploy",
+     "label": "**The next gate** - November 2026",
+     "sub": "Filings from the operators that took the abeyance, and the month the regulator's own published agenda projects for the next action in the rulemaking docket. **This lesson's review date is this day**, because it is the first date on which anything above it can change."
+    }
+   ],
+   "note": "**Two things to carry off this chart, and both are read off the gaps rather than the entries.** The first is that the widest step is not the strongest one: the June 2026 orders reach every operator and decide nothing, while the December 2025 order reaches one operator and creates three services. **Scope and force run in opposite directions here.** The second is that the gaps are closing - roughly eight months from the rulemaking direction to the six orders, two from the orders to the responses, three from the responses to the next gate. **A file that once moved in years now moves in quarters**, so the useful question about a campus is not what the rules say but what the next dated step in its region is - and a term sheet written against last quarter's rules ages faster than the quarter does."
+  },
+  {
+   "id": "what-the-module-does-not-say",
+   "title": "What the record does not say - six refusals, and one of this lesson's own",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**1 - There is no federal large-load interconnection rule.** There is a directed advance notice, an open docket whose next action the regulator's own agenda records as undetermined, and six investigations. No proposed rule has issued and no standard large-load interconnection procedure exists anywhere in the federal tariff. **Anyone describing FERC's large-load interconnection rule is describing something that has not been written**, and the confident version of that sentence is the fastest way to lose a room that has read the docket.",
+    "**2 - The suggested 50 MW definition is not a threshold, and the secondary sources disagree about whether the orders state one at all.** Some summaries report no megawatt or voltage figure in the June 2026 orders; others report 50 MW above 69 kV as a suggested definition. **The only load thresholds that are law today are the ones inside an accepted tariff or a statute** - the {{HILL}} figures and the 75 MW Texas threshold. Quote those; flag the rest as proposed.",
+    "**3 - No study fee has been published for a large load in most federal regions.** The load charges in this lesson's ladder belong to exactly two places - one region's accepted federal process and one state's statute. Generalising them anywhere else is inventing a number, and the fact that the number is plausible is exactly what makes it dangerous - a plausible invented figure survives a meeting and fails diligence.",
+    "**4 - The two new contract-demand services have no rates.** The December 2025 order created them and set a paper hearing to determine what they cost. **A specific price quoted today for firm or non-firm contract demand service is not a real number**, however precisely it is stated.",
+    "**5 - The behind-the-meter netting threshold is a directive, not a figure.** The regulator told one operator to propose one. Any megawatt number attributed to the regulator for netting is unsourced, and the three-year transition and the grandfathering are the parts of that directive that actually bear on a deal being signed now.",
+    "**6 - Nothing in the record says whether co-location is lawful in general.** The regulator acted on one operator's tariff and on the terms of transmission service taken on a co-located load's behalf; it expressly declined blanket jurisdiction over the arrangements themselves, and the objection that a broader assertion would federalise the entire electric system sits on the record unresolved. **A process is not a ruling**, and the difference decides whether you are describing a closed door or an open question.",
+    "**And one refusal about this lesson rather than about the record.** Every dated step above is stated as a docket and a date because that is what can be checked. **None of it is a forecast.** What the six responses produce, whether the rulemaking becomes a rule, and when any campus's connection date moves are all outside what the record supports, and a lesson that guessed at them would be teaching its reader to guess."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "4 min",
+   "ps": [
+    "**A load study run on generation assumptions.** The regulator's own finding about one regional operator is that its tariff still studies a new load at its **maximum** demand regardless of the load's willingness to be curtailed, with the resulting {{network upgrades}} rolled into the host utility's base rates. A campus that has built genuine flexibility and is studied as though it had not pays for upgrades it was prepared to make unnecessary. **Ask what demand the study assumed before asking how long the study takes.**",
+    "**A deposit forfeited on a campus that never happened.** The question is never what the study cost - it is what is at risk at the rung the project has reached, and the rungs are priced by different regulators. On the generator side the exposure is a rising share of an assigned upgrade cost with no ceiling at the end. On the federal load side it is fixed at the door. **On the state side it is security charged per megawatt, which scales with the campus and is the number one actually walks away from** - so a seller who has read only the federal ladder has read the smallest of the three.",
+    "**A tariff draft that moved between filing and approval.** Every figure in a proposed rule or a filed tariff is provisional until an order issues, and one of the six utilities in this lesson's tariff table is carrying the same tariff in three different drafts in three states at once. **A term sheet that quotes a draft without saying it is a draft is a term sheet with an undated number in it.**",
+    "**A co-located load whose grid charges were never priced.** Two of the three service elections that exist for such a load exist without rates. And the election does not carry everything with it: some ancillary obligations stay on **gross demand** whichever service is chosen, so the bill is not a single basis but an election with obligations layered on top of it.",
+    "**A behind-the-meter arrangement priced on a netting rule that is being narrowed.** The netting benefit that made some of these deals pencil was written in 2004 for a different scale of load and is under a directive to be limited, with a transition and grandfathering attached. **A model built on today's netting and a fifteen-year term is a model with a regulatory change inside its own horizon.**",
+    "**And the failure that produces all the others: naming the wrong forum.** A delay owned by a state commission does not move because a federal docket moved, and the reverse is equally true. The diagnostic is three questions long - is the transmission provider federally jurisdictional, is the instrument a tariff or a statute, and what is the next dated filing - and getting it wrong means writing a good proposal to a regulator who cannot grant it."
+   ],
+   "sales": "The honest version of the flexibility pitch is stronger than the dishonest one, and it is stronger precisely because of what it refuses. **A campus that can hold to a contracted demand has a physical capability before it has a contractual one**, and that is the commercial opening this whole record creates for storage, on-site generation and load shaping. The discipline is to say what it does not buy: firm service keeps its priority, the conditional product carries a term ceiling where it exists at all, some ancillary charges stay on gross demand, and none of it moves a single parameter of the state tariff. **Batteries make the interconnection problem go away is not a claim this record supports** - and a buyer who has read the record will know that before you finish the sentence."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "A campus's connection is late. What is the first question that tells you which regulator owns the delay?",
+     "a": "**Is the transmission provider a FERC-jurisdictional public utility?** If it is, the queue, the assumed demand, the co-located arrangement and the terms of transmission service are federal, and every one of them is under an open docket with dates on it. If it is not - the Texas grid, or a vertically integrated utility outside a regional operator - the same delay belongs to a state commission on a different calendar. **A proposal aimed at the wrong forum has no deadline in it.**"
+    },
+    {
+     "q": "What does the 2023 federal interconnection order do for a large load?",
+     "a": "Nothing directly. It rebuilt the **generator** interconnection procedures into a first-ready, first-served {{cluster study}} process, and across its 336 Federal Register pages the phrases *large load* and *load interconnection* each appear **zero** times. What it does reach is how quickly new **supply** arrives on the grid the campus wants to draw from - a real effect on a campus date, arriving by a route the campus's own study never mentions."
+    },
+    {
+     "q": "Name the two routes by which a federal tariff changes, and say which one produced the 2026 large-load investigations.",
+     "a": "Either the utility files its own change and the regulator accepts, rejects or conditions it; or the regulator opens a **{{section 206}}** complaint, including on its own motion, against a tariff whose owner has filed nothing. The one accepted large-load process arrived by the first route. **All six 2026 investigations came by the second** - which is precisely why they could reach operators that had volunteered no change at all."
+    },
+    {
+     "q": "What is the test for Co-Located Load, and what did the December 2025 order actually change?",
+     "a": "The test is **which side of the {{point of interconnection}} the load sits on**: {{Co-Located Load}} is end-use load physically connected to a generating facility on the interconnection customer's side of it. The order found one operator's tariff unjust and unreasonable as to that load, directed **three service elections** into existence, and ordered the 2004 behind-the-meter netting rule rewritten with a materiality threshold, a three-year transition and grandfathering. **Two of the three elections still have no rates.**"
+    },
+    {
+     "q": "Compare what a generator and a large load each pay to leave a federal interconnection process.",
+     "a": "A generator owes a **{{withdrawal penalty}}** that rises with how far it got - twice study costs early, then 5, 10 and finally 20 per cent of its assigned {{network upgrades}} - and the ceilings that were proposed were **not adopted**, so the last rung has none. A load in the only accepted federal process gets its excess deposit back, is billed for study costs above it, and loses a **USD 10,000** application fee. **Speculation is priced heavily on one side and barely at all on the other**, which is the asymmetry the 2026 orders are aimed at."
+    },
+    {
+     "q": "Which of a large-load tariff's five parameters does the federal layer set?",
+     "a": "**None of them.** Threshold, {{minimum demand charge}}, term, {{ramp period}} and the {{credit support}} and {{exit fee}} pair are state instruments in every case in this corpus - a rate class, a statute, or a contract inside a certificate. What the federal layer reaches instead is whose queue the campus stands in, at what assumed demand it is studied, whether a generator may serve it from behind the fence, and who carries the upgrade if it never arrives. **Different questions, different forums, and either one can break a schedule.**"
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A campus sits in a region whose transmission providers are not federally jurisdictional. Its developer says the June 2026 federal orders are about to change its large-load terms. What is the accurate correction?",
+     "c": [
+      "They reach it once the six proceedings' compliance filings are accepted",
+      "They reach generator interconnection there, but not load interconnection",
+      "They cannot reach that region's transmission providers under the Act",
+      "They reach it only for loads above the 50 MW the regulator suggested"
+     ],
+     "a": 2,
+     "why": "The six orders were issued under the complaint route of the Federal Power Act, which reaches public utilities the federal regulator has jurisdiction over. That region's transmission providers are not among them, so no compliance filing, threshold or later stage of those proceedings changes anything there. It is the same fact that explains why the state legislature wrote a statute where other regions are getting tariff amendments - and it is jurisdictional rather than a policy preference, so it will not change with the docket."
+    },
+    {
+     "q": "Which of these is in force today, rather than under investigation or awaiting a rate?",
+     "c": [
+      "A standard federal large-load interconnection procedure every operator follows",
+      "One regional operator's accepted large-load process, with published charges",
+      "A netting threshold for co-located data-center load, set in December 2025",
+      "The firm and non-firm contract-demand services the December 2025 order created"
+     ],
+     "a": 1,
+     "why": "That operator's process was accepted in January 2026 and its thresholds are tariff language, which is what makes its study charges the only citable federal load figures anywhere. No standard federal large-load procedure exists. The netting threshold was directed to be proposed, not set. And the two contract-demand services exist but were sent to a paper hearing to determine their rates, so they are real instruments with no prices - which is a different thing from being in force."
+    },
+    {
+     "q": "A seller is asked what it costs to be studied as a large load in a federal region that has no accepted large-load process. What should it say?",
+     "c": [
+      "That no charge has been published there, because no process exists to attach one to",
+      "The application fee and deposit published by the one region that has an accepted process",
+      "The federal generator deposit schedule, which any interconnection request follows",
+      "The Texas statutory study fee, as the nearest published load figure"
+     ],
+     "a": 0,
+     "why": "The refusal is the right answer and it is the commercially stronger one. Study charges exist where a tariff creates them; in a region with no accepted large-load process there is nothing for a charge to attach to, so any figure offered is transferred from somewhere else. The generator schedule is a generator schedule. The statutory fee belongs to a state that the federal orders cannot reach. Naming the one region whose charges are real, and saying plainly that the rest are not published, survives diligence in a way a plausible number does not."
+    },
+    {
+     "q": "Which parameter of a large-load tariff most often decides whether a slipped construction year costs the customer a year of minimum charges?",
+     "c": [
+      "The threshold, because it decides whether the tariff applies to the customer at all",
+      "The minimum demand charge, because it is the percentage that gets quoted",
+      "The exit fee, because it is what leaving early costs",
+      "The ramp, because it is the schedule the minimum bill grows in against"
+     ],
+     "a": 3,
+     "why": "The minimum sets how much is owed at full obligation; the ramp sets when full obligation arrives. A campus that energizes in halls is protected by a four- or five-year ramp and exposed without one, and the customer that slips a year against a ramp has eaten a year of the schedule rather than a year of the term. The threshold decides applicability once and then stops mattering, and the exit fee prices a decision the customer has not made. The instrument with no rate class at all has no ramp either, which is the clearest evidence that the ramp is the term a campus negotiates for its calendar."
+    },
+    {
+     "q": "What did the November 2024 rejection of the amended interconnection agreement decide?",
+     "c": [
+      "That serving a load from behind a generator's meter is unlawful under the Federal Power Act",
+      "Only that the departures from the standard form had not been shown to be necessary",
+      "That such a load must take network service billed on gross demand",
+      "That the grid operator had to create a firm contract-demand service"
+     ],
+     "a": 1,
+     "why": "It was a loss on burden of proof, and the distinction is the whole point: a ruling on the merits settles a question, while a ruling on evidence leaves it open, and open questions get litigated repeatedly. The gross-demand basis and the two contract-demand services came more than a year later, in the December 2025 order on the operator's tariff - a different proceeding with a different subject. The reading itself is taught in *When the Campus Signs a Reactor*, and the commercial route the seller took around the process is in the generator's own study guide."
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -46526,7 +47006,8 @@ function clLessons_() {
           clLessonTheChinaPolicyStack_(),
           clLessonTheCertificationStack_(),
           clLessonWhatBankableMeans_(),
-          clLessonReadingTheNumbers_()];
+          clLessonReadingTheNumbers_(),
+          clLessonInterconnectionForLargeLoads_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

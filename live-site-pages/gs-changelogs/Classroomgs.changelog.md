@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 58/50`
+`Sections: 59/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.72g] — 2026-09-17 11:18:24 PM EST — v06.48r
+
+### Added
+
+- A new lesson has been added to the grid-to-chip course, second in the reading order, immediately after the one about the fence line. It covers the layer of rules that sits above a site's own connection: which regulator decides what, what the 2023 federal interconnection reform did and did not cover, what it costs to be studied and what is at risk at each stage, and the dated record of decisions about a large customer sitting next to a power plant. It is held back for higher access levels
+- Eight new glossary definitions, available as hover tooltips anywhere those terms appear in the lesson
+
+### Changed
+
+- The grid-to-chip course now lists eleven lessons instead of ten and is complete. Its one-line summary has been rewritten from a running list of what it covers so far into a description of what a reader can do after finishing it
+- Because the new lesson is held back, readers at the general access level see the same number of lessons in that course as before, with the count of held-back lessons rising from one to two
+- Minor internal improvements
 
 ## [v01.71g] — 2026-09-17 10:12:02 PM EST — v06.47r
 

@@ -3,12 +3,47 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 115/100`
+`Sections: 116/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v06.48r] — 2026-09-17 11:18:24 PM EST
+
+> Author Phase 4 row 26 — the interconnection-for-large-loads mechanism lesson — on Opus 5 xhigh as a fresh session. This is ONE lesson and it is THE LAST ROW IN PHASE 4: after it the phase CLOSES at 26 of 26. It authors no guidance module, no dossier and no report, it regenerates no segment, and it creates no track. It is GATED (guidance), so the acceptance test is the DENIAL test again — the analyst's visible card count must NOT move and the withheld count must. FIRST, VERIFY THE DEPENDENCY WITH ONE GREP, because four sessions carried a wrong answer — (qq9). THE WORK — one push commit: author clLessonInterconnectionForLargeLoads_() inside the // CONTENT START … // CONTENT END fence, register it at the END of clLessons_() and INSERT it at index 1 of clTrackAidcGridToChip_(); do not move the module assertion; regenerate nothing; flip §7.3's and §6's Phase 4 rows to CLOSED — 26 of 26, mark curriculum §7 row 26 built and §4's table at aidc-grid-to-chip position 2, write the findings block continuing at (rr1), and write §7.57 in the same commit. Predict the --check number before you write. Run the reviewBy sweep in both forms and write down every candidate you reject. Grep all 55 built lessons for this subject's own nouns before reading the two you expect. Verify with node --check, check-gas-inner-scripts.js, check-classroom-content.py, --strict, --selftest, --base origin/main, build-classroom-segments.py --check and check-readme-tree.py; Playwright render at CONTRIBUTOR with zero uncaught page errors and the analyst DENIED at the server. Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+
+- **`clLessonInterconnectionForLargeLoads_()` — id `interconnection-for-large-loads`, title *The Rulebook Above the Fence*, group The AI Data-Center Wave, gate `guidance` (contributor+).** The **fifty-sixth** lesson and Phase 4 row 26 — **the row that closes the phase at 26 of 26** and completes `aidc-grid-to-chip` at **eleven of eleven**. Authored **inside** the `// CONTENT START` … `// CONTENT END` fence, registered at the **end** of `clLessons_()` and **inserted at index 1** of `clTrackAidcGridToChip_()` — the programme's **seventh mid-array insert**, verified against the live ten-element array before the write
+- **Nine sections at §3.3's ids and order** — `two-jurisdictions` (prose, 6 ps) · `order-2023` (**table 4×5**) · `a-tariff-as-a-class` (**table 4×5**) · `who-pays-the-study` (**table 4×5**) · `the-co-location-docket` (**timeline, 8 items across 3 lanes**) · `what-the-module-does-not-say` (callout, 7 items) · `where-it-fails` (callout, 6 items) · `drill` (6 cards) · `check-yourself` (5 items at **2·1·0·3·1**, length-ranks 3·3·2·3·2 with **0 of 5 sole-longest and 0 of 5 sole-shortest**). **Three tables plus a timeline is the widest kind mix any mechanism lesson has carried.** Four tiles, an **eight-entry glossary with every entry used**, **48 `{{term}}` uses over 22 distinct, all resolving** against a 4,206-key map. **100 % ASCII**
+- **Ten provenance inputs**, each pinned off the document fetched this run — one `guidance:` at its `updated`, eight `study:` at their own `lastUpdated`, and `concepts:profiler-concepts` at its file's last commit date on the **unshallowed** clone. `reviewBy` **2026-11-16 is inherited** from the guidance module and was re-read off `Classroom.gs` on the day; the nearest-gate sweep was run in both forms anyway and **nine future candidates were rejected in writing**, including one **45 days nearer** than the date taken
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+
+- `clLessons_()` 55 → **56** entries; `clTrackAidcGridToChip_()` `lessons[]` 10 → **11**, `interconnection-for-large-loads` at index 1 between `the-fence-line` and `bridge-power`
+- **The track `short` moved off its "So far:" enumeration to the whole-track form**, as rows 18 and 19 did on completing their tracks, with one clause added that is this lesson's own
+- GAS `VERSION` **v01.71g → v01.72g**. **The module assertion in `scripts/check-classroom-content.py` was NOT moved** — it stays at **28**; this row registers a lesson, not a module. **Nothing was regenerated**
+
+#### `repository-information/`
+
+- `INTEGRATED-REMEDIATION-PLAN.md` — **§7.3's and §6's Phase 4 rows flipped to CLOSED — 26 of 26** with row 26's record written into both, and **§7.57 written in both halves** as the next run's brief (K2, the opt-in roster deck)
+- `CLASSROOM-CURRICULUM-PLAN.md` — §7 row 26 marked **built**, §4's table updated at `aidc-grid-to-chip` **position 2** (the track's last gap), and **findings (rr1)–(rr6)** written in §10.6
+- `repository.version.txt` **v06.47r → v06.48r**; `README.md` timestamp and repo-version display refreshed; `scripts/check-readme-tree.py` run and the Classroom GAS display re-synced
+
+### Fixed
+
+- **Thirteen defects caught before the push, with zero overlap between the two instruments.** The recount caught **six** — sharpest, a section titled *six refusals* that contained seven paragraphs each calling itself one — and reading every section's rendered screenshot caught **seven more**, of which two were the headline claim of their own section: a table note asserting that *the load side is cheap to enter* while its own third column charges security **per megawatt**, and a timeline intro asserting that *the subject widens at every step* while the chart's own lanes go wide and then back again
+
+### Notes
+
+- **The denial test passed on all three signals, and the byte-identity leg needed decomposing to say so — (rr2).** Measured base against head through the real `handleClassroomOp_` with one analyst token: `aidc-grid-to-chip` goes **9 visible / withheld 1 → 9 visible / withheld 2** (the visible count **does not move**), `cop=lesson` goes **`UNKNOWN_LESSON` → `ROLE_DENIED`**, and the analyst index payload moved **43,071 → 42,708 bytes**. That **−363** is **entirely** the track `short` rewrite the completion obliged — swapping only that string into the base payload reproduces the head payload byte for byte — so **the gated registration's own contribution to the analyst payload is +0** and the invariant holds
+- **`build-classroom-segments.py --check` HELD at 9 → 9**, forecast from the parsed generator before the write and exact on both halves: **one** segment names the lesson in `READ_NEXT` and was already due, and **zero of the 27 `CRITERION_LEXICON` entries target it at all**. The `(planned)` leak went **27 → 28** across the **same nine** segments, which are still byte-for-byte the nine `--check` reports as due
+- **No rotation on any changelog.** This push lands on **2026-09-17 EST** (`TZ=America/New_York date` read 2026-09-17), so that day's sections stay exempt: `CHANGELOG.md` **116 raw / 97 non-exempt** against a 100 trigger with **nineteen** same-day sections, counter `Sections: 116/100`; `Classroomgs.changelog.md` **59 raw / 46 non-exempt** against a cap of 50 with **thirteen** same-day; `Scrapergs.changelog.md` **41 / 36**. **Both deferrals lapse on the first push dated 2026-09-18 EST or later, and that session rotates `CHANGELOG.md` and `Classroomgs.changelog.md`**
 ## [v06.47r] — 2026-09-17 10:12:02 PM EST
 
 > Author Phase 4 row 25 — the reading-the-numbers mechanism lesson — on Opus 5 xhigh as a fresh session. This is ONE lesson. It authors no guidance module, no dossier and no report, it regenerates no segment, and it creates no track. IT IS PUBLIC (tracks), so it changes no withheld count anywhere and the acceptance test is the content, not the denial. [... full brief in `INTEGRATED-REMEDIATION-PLAN.md` §7.55 ...]
