@@ -1,4 +1,4 @@
-var VERSION = "v01.73g";
+var VERSION = "v01.74g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4037,7 +4037,7 @@ function clLessonSegmentCellsAndChemistry_() {
  "title": "Cells and chemistry",
  "short": "Makers of the storage cell itself — the lithium-iron-phosphate prismatic cell that every containerized system is built from, the high-power NCA/LMO and…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-18",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -4282,7 +4282,7 @@ function clLessonSegmentCellsAndChemistry_() {
     ],
     [
      "Prohibited-foreign-entity status and the factory's location (status follows ownership, not site)",
-     "*Four Levers and One Order* (planned)"
+     "*Four Levers and One Order*"
     ],
     [
      "Factory capacity and delivery slots; yield record",
@@ -6125,7 +6125,7 @@ function clLessonSegmentCellsAndChemistry_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *From Cell to Container* · *Duration, Degradation, and the Twenty-Year Promise* · *From Powder to Cell: Manufacturing, Formats, and Yield* (planned) · *Long Duration, Sodium, and the Engine Boundary* (planned) · *Four Levers and One Order* (planned).",
+    "**Mechanism lessons for this segment:** *From Cell to Container* · *Duration, Degradation, and the Twenty-Year Promise* · *From Powder to Cell: Manufacturing, Formats, and Yield* · *Long Duration, Sodium, and the Engine Boundary* · *Four Levers and One Order*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-cells-and-chemistry-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** BYD, CATL, Hithium, LG Energy Solution, CALB, Cornex, Envision, EVE Energy, Form Energy, Gotion High-Tech, Great Power, Narada, REPT BATTERO, Samsung SDI, Sunwoda, Albemarle, Canadian Solar, Mitra Chem, NOVONIX, Panasonic, Tesla, Trina Storage — each member's dossier carries one in Profiler."
    ]
@@ -6214,6 +6214,14 @@ function clLessonSegmentCellsAndChemistry_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-18",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
+   ]
   }
  ]
 };
@@ -6227,7 +6235,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
  "title": "Storage integrators and containers",
  "short": "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-18",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -6520,7 +6528,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "rows": [
     [
      "Bankability — Wood Mackenzie / BNEF ranking and independent-engineer acceptance",
-     "*The Independent Engineer's Report* (planned)"
+     "*The Independent Engineer's Report*"
     ],
     [
      "Installed cost per kWh and site density (MWh per acre)",
@@ -6540,7 +6548,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     ],
     [
      "UL 9540A / NFPA 855 file and the vendor's fire record",
-     "*Listing, Test Method, Code* (planned)"
+     "*Listing, Test Method, Code*"
     ],
     [
      "Grid-forming capability and EMS/trading integration",
@@ -8889,7 +8897,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *From Cell to Container* · *The Spec Sheet, Decoded* · *The Control Stack: BMS, PCS, EMS — Who Decides What* · *The Independent Engineer's Report* (planned) · *Listing, Test Method, Code* (planned).",
+    "**Mechanism lessons for this segment:** *From Cell to Container* · *The Spec Sheet, Decoded* · *The Control Stack: BMS, PCS, EMS — Who Decides What* · *The Independent Engineer's Report* · *Listing, Test Method, Code*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-storage-integrators-and-containers-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** BYD, Canadian Solar, CATL, CRRC Zhuzhou, Envision, Fluence, HyperStrong, Sungrow, Tesla, Wärtsilä, Hithium, Jinko, LG Energy Solution, LS-ES, Prevalon, Samsung SDI, Sunwoda, Trina Storage, CALB, Caterpillar, Cornex, Cummins, Eaton, FlexGen, GE Vernova, Great Power, Huawei Digital Power, Narada, ON.energy, Rolls-Royce Power Systems, Sinexcel, Vertiv — each member's dossier carries one in Profiler."
    ]
@@ -8977,6 +8985,14 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-18",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
+   ]
   }
  ]
 };
@@ -8990,8 +9006,8 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
  "title": "Power conversion and rack-power silicon",
  "short": "The conversion layer at every voltage: utility-scale PCS and inverters, the solid-state transformer and MV-to-800 VDC sidecar, the power shelf, PSU and BBU…",
  "group": "The Value Chain",
- "updated": "2026-09-15",
- "reviewBy": "2027-03-15",
+ "updated": "2026-09-18",
+ "reviewBy": "2027-03-18",
  "provenance": {
   "inputs": [
    {
@@ -10974,7 +10990,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* · *One Big Box or Many Small Ones* (planned) · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* · *Faults, Grounding, and the Interlock at 800 Volts* (planned).",
+    "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* · *One Big Box or Many Small Ones* · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* · *Faults, Grounding, and the Interlock at 800 Volts*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-power-conversion-and-rack-power-silicon-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Flex, Heron Power, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
    ]
@@ -11059,6 +11075,13 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
   },
   {
    "date": "2026-09-15",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
+   ]
+  },
+  {
+   "date": "2026-09-18",
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next"
@@ -22130,8 +22153,8 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
  "title": "Storage developers and IPPs",
  "short": "The owners and developers of grid-connected storage and merchant generation — standalone and hybrid battery fleets, the IPPs and yieldcos that hold them, and…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
- "reviewBy": "2027-03-14",
+ "updated": "2026-09-18",
+ "reviewBy": "2027-03-18",
  "provenance": {
   "inputs": [
    {
@@ -22439,11 +22462,11 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     ],
     [
      "Installed cost per kWh and the augmentation plan against the revenue model",
-     "*Who Carries Which Risk* (planned)"
+     "*Who Carries Which Risk*"
     ],
     [
      "Warranty and LTSA terms; the cycle budget the contract allows",
-     "*Who Carries Which Risk* (planned)"
+     "*Who Carries Which Risk*"
     ],
     [
      "Prohibited-foreign-entity exposure against the tax-credit and tax-equity file",
@@ -22451,7 +22474,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     ],
     [
      "Delivery date against the interconnection date and the offtake",
-     "*Who Carries Which Risk* (planned)"
+     "*Who Carries Which Risk*"
     ],
     [
      "Dual-sourcing and geography of the two suppliers chosen per project",
@@ -24432,7 +24455,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Eleven Buyer Classes* · *From Site Control to Commercial Operation* (planned) · *Who Carries Which Risk* (planned) · *One Dollar, Four Names* (planned).",
+    "**Mechanism lessons for this segment:** *Eleven Buyer Classes* · *From Site Control to Commercial Operation* · *Who Carries Which Risk* · *One Dollar, Four Names*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-storage-developers-and-ipps-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Constellation Energy, Gridmatic, ON.energy, Pattern Energy, ProEnergy, Samsung C&T, Stem — each member's dossier carries one in Profiler."
    ]
@@ -24520,6 +24543,14 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next"
+   ]
+  },
+  {
+   "date": "2026-09-18",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
    ]
   }
  ]
@@ -27118,7 +27149,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
  "title": "Hyperscalers and AI labs",
  "short": "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and…",
  "group": "The Value Chain",
- "updated": "2026-09-16",
+ "updated": "2026-09-18",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -28066,7 +28097,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *Reading the Named Projects* · *The Gatekeeper* (planned).",
+    "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *Reading the Named Projects* · *The Gatekeeper*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-hyperscalers-and-ai-labs-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Amazon, Google, Meta, Microsoft, Oracle, Anthropic, OpenAI, xAI — each member's dossier carries one in Profiler."
    ]
@@ -28144,6 +28175,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
   },
   {
    "date": "2026-09-16",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
+   ]
+  },
+  {
+   "date": "2026-09-18",
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next"
@@ -29056,7 +29094,7 @@ function clLessonSegmentUtilities_() {
  "title": "Utilities",
  "short": "The regulated wires-and-generation franchises whose IRP, certificate, rate case, large-load tariff and interconnection process decide whether AI load and the…",
  "group": "The Value Chain",
- "updated": "2026-09-14",
+ "updated": "2026-09-18",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -30354,7 +30392,7 @@ function clLessonSegmentUtilities_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Regulated Machine* · *The Gatekeeper* (planned) · *The Fence Line: Interconnection and the Substation* · *The Rulebook Above the Fence* (planned).",
+    "**Mechanism lessons for this segment:** *The Regulated Machine* · *The Gatekeeper* · *The Fence Line: Interconnection and the Substation* · *The Rulebook Above the Fence*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-utilities-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** AEP, Dominion Energy, Entergy, Oncor, Southern Company, Xcel Energy, NRG Energy, Vistra, ENGIE North America, Grid United, Invenergy, NextEra, Pattern Energy, Tesla — each member's dossier carries one in Profiler."
    ]
@@ -30443,6 +30481,13 @@ function clLessonSegmentUtilities_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-18",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next"
+   ]
   }
  ]
 };
@@ -30456,7 +30501,7 @@ function clLessonSegmentCapital_() {
  "title": "Capital",
  "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
  "group": "The Value Chain",
- "updated": "2026-09-16",
+ "updated": "2026-09-18",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -30609,7 +30654,7 @@ function clLessonSegmentCapital_() {
     ],
     [
      "The independent engineer's report and the lender's approved-vendor file",
-     "*The Independent Engineer's Report* (planned)"
+     "*The Independent Engineer's Report*"
     ],
     [
      "Securitizability — ABS-grade collateral, standardized buildings, ring-fenced SPVs",
@@ -31220,7 +31265,7 @@ function clLessonSegmentCapital_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk* · *One Dollar, Four Names* (planned).",
+    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* · *Who Carries Which Risk* · *One Dollar, Four Names*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-capital-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Blackstone, Brookfield, Macquarie, MGX, Excelsior Energy Capital, Digital Realty, Galaxy Digital, Vantage Data Centers — each member's dossier carries one in Profiler."
    ]
@@ -31304,6 +31349,14 @@ function clLessonSegmentCapital_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-18",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
+   ]
   }
  ]
 };
@@ -31317,8 +31370,8 @@ function clLessonSegmentAssurance_() {
  "title": "Assurance",
  "short": "The independent and owner's engineers, testing laboratories and certification bodies that make a project bankable and a product installable — the seat every…",
  "group": "The Value Chain",
- "updated": "2026-09-17",
- "reviewBy": "2027-03-17",
+ "updated": "2026-09-18",
+ "reviewBy": "2027-03-18",
  "provenance": {
   "inputs": [
    {
@@ -31460,7 +31513,7 @@ function clLessonSegmentAssurance_() {
    "rows": [
     [
      "Reliance — who may trust the report, and the lender's acceptance of the firm",
-     "*The Independent Engineer's Report* (planned)"
+     "*The Independent Engineer's Report*"
     ],
     [
      "Scope of the technical due diligence and the construction-monitoring sequence",
@@ -31476,7 +31529,7 @@ function clLessonSegmentAssurance_() {
     ],
     [
      "Turnaround against financial close and the 30/60/90 review calendar",
-     "*The Independent Engineer's Report* (planned)"
+     "*The Independent Engineer's Report*"
     ]
    ]
   },
@@ -32173,7 +32226,7 @@ function clLessonSegmentAssurance_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *Listing, Test Method, Code* · *The Independent Engineer's Report* (planned).",
+    "**Mechanism lessons for this segment:** *Listing, Test Method, Code* · *The Independent Engineer's Report*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-assurance-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** DNV, Intertek, Sargent & Lundy, UL Solutions, CSA Group, Black & Veatch, Burns & McDonnell — each member's dossier carries one in Profiler."
    ]
@@ -32257,6 +32310,14 @@ function clLessonSegmentAssurance_() {
   },
   {
    "date": "2026-09-17",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
+   ]
+  },
+  {
+   "date": "2026-09-18",
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next",
@@ -33812,8 +33873,8 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
  "title": "Insurance and risk transfer",
  "short": "The brokers, insurers and risk-analytics firms that price and carry the risks a financing cannot hold — property and business interruption, delay-in-start-up…",
  "group": "The Value Chain",
- "updated": "2026-09-17",
- "reviewBy": "2027-03-17",
+ "updated": "2026-09-18",
+ "reviewBy": "2027-03-18",
  "provenance": {
   "inputs": [
    {
@@ -33931,11 +33992,11 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    "rows": [
     [
      "Premium and deductible against the technology's loss record (legacy indoor NMC vs modern outdoor LFP)",
-     "*The Independent Engineer's Report* (planned)"
+     "*The Independent Engineer's Report*"
     ],
     [
      "Delay-in-start-up and business-interruption cover on the schedule the lender assumes",
-     "*The Independent Engineer's Report* (planned)"
+     "*The Independent Engineer's Report*"
     ],
     [
      "Warranty wrap or revenue put that substitutes for a supplier's balance sheet",
@@ -34322,7 +34383,7 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    "kind": "callout",
    "read": "1 min",
    "ps": [
-    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* (planned) · *Who Carries Which Risk*.",
+    "**Mechanism lessons for this segment:** *The Independent Engineer's Report* · *Who Carries Which Risk*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-insurance-and-risk-transfer-2026-09*, for the tiers that hold guidance access.",
     "**Study guides:** Aon, Marsh McLennan, kWh Analytics — each member's dossier carries one in Profiler."
    ]
@@ -34407,6 +34468,14 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
   },
   {
    "date": "2026-09-17",
+   "note": "regenerated: registry or graph content moved with no pin change",
+   "changed": [
+    "read-next",
+    "what-is-bought-and-on-what"
+   ]
+  },
+  {
+   "date": "2026-09-18",
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next",

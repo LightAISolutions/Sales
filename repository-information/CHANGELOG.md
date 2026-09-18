@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.50r] — 2026-09-18 02:13:44 AM EST
+
+> Run the segment-lesson regeneration pass on Opus 5 xhigh as a fresh session. K2 IS CLOSED at v06.49r and Phase 4 is CLOSED at 26 of 26 — the corpus stands at fifty-six lessons across eight tracks with a second, opt-in deck of 314 company cards beside the mechanism deck. This is the static maintenance pass: one --all run of scripts/build-classroom-segments.py over the nine due segments, which clears 28 stale (planned) renders and takes --check from 9 to 0. It authors no lesson, no track, no guidance module, no dossier and no report; it writes only generated literals; it touches no gate symbol. WHY THIS AND NOT C5 OR THE Q CLOCK: C5 opens with a design session which the standing model rule puts on Fable 5.1 xhigh, and the Q plan clock is next due ~2026-12. AND THE TIMING IS THE REAL ARGUMENT, SO RE-MEASURE IT FIRST — the roster deck reads the-players directly and its content hash is the basis text, so a regeneration that moves a player row's basis re-introduces that card; measured at v06.49r the nine due segments differ on read-next and what-is-bought-and-on-what ONLY, so a regeneration today moves ZERO roster cards, and that window closes at the next dossier push. Confirm it in one command before running anything and read the sections differing list rather than the count. UNSHALLOW THE CLONE FIRST — §8 item 2 and G2 make git log -1 --format=%cs the PIN SOURCE, so the generator itself writes a wrong date off a shallow clone. RE-DERIVE WHAT THE PASS CLEARS, DO NOT CARRY IT. THE WORK — one push commit: (1) --check before anything and forecast the after-number from the parsed generator; (2) run the regeneration with --today; (3) DO NOT hand-edit a single generated literal; (4) DO NOT move the module assertion (28), the lesson count (56) or the gate-case count (192); (5) leave gateDigest EXACTLY as K2 set it — NEVER P3; (6) confirm --check reads 0 after, with both halves of the forecast checked; (7) mark the pass done against §10.4 and §7.57's item (xx) and write the findings block continuing at (rr16); (8) write §7.59 in the same commit, editing BOTH halves. Expect P1 on the developer paths, P8 on the sections whose JSON differs, and P10 on the revised-lesson cap — nine revisions against a cap of three, expected and accepted. THE ACCEPTANCE TEST IS THE ROSTER DECK STILL HOLDING 314 CARDS WITH THE SAME 314 IDS, MEASURED — compare the id sets and the hash multiset, not just the count, and re-measure both queues with the pool size beside them. MAKE EVERY CHECK PRINT ITS DENOMINATOR, TRACE THE WHOLE PATH, TEST THE INSTRUMENT, AND DECOMPOSE A SIGNAL BEFORE YOU BELIEVE IT. THE CHANGELOG ARITHMETIC — RE-COUNT ON THE DAY. Then, give me a prompt to paste into a new Opus 5 xhigh session to continue the action plan, then remember session.
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+
+- **THE SEGMENT-LESSON REGENERATION PASS (`CLASSROOM-CURRICULUM-PLAN.md` §10.4) — `build-classroom-segments.py --check` READS 0 FOR THE FIRST TIME SINCE THE GENERATOR WAS BUILT AT v05.17r.** One `--all --today 2026-09-18` run. **Nine lessons rewritten, not nineteen** — `segment-cells-and-chemistry`, `segment-storage-integrators-and-containers`, `segment-power-conversion-and-rack-power-silicon`, `segment-storage-developers-and-ipps`, `segment-hyperscalers-and-ai-labs`, `segment-utilities`, `segment-capital`, `segment-assurance`, `segment-insurance-and-risk-transfer`. **Not one generated literal was hand-edited**, and no registry, dossier or template was touched
+- **THE 28 STALE `(planned)` RENDERS ARE GONE — 28 → 0, re-derived from the corpus rather than carried.** 28 renders across 9 segment lessons over 12 distinct titles, all twelve of them built lessons, per segment `storage-developers-and-ipps` 6 · `cells-and-chemistry` 4 · `storage-integrators-and-containers` 4 · `assurance` 3 · `capital` 3 · `insurance-and-risk-transfer` 3 · `power-conversion-and-rack-power-silicon` 2 · `utilities` 2 · `hyperscalers-and-ai-labs` 1 — matching §7.58's figures exactly. The nine leaking segments are **byte-for-byte** the nine `--check` reported as due, so **(qq1)'s invariant survives the clearing as well as the accumulation**
+- **`updated` moved on nine lessons, not nineteen, and the generator wrote every one of them.** `reviewBy` moved on **only four of the nine** — the four sitting on §10.3's `updated + 6 months` default (`assurance`, `insurance-and-risk-transfer`, `power-conversion-and-rack-power-silicon`, `storage-developers-and-ipps`); the other five are pinned to a future policy `effectiveDate` and correctly held. **No pin moved on any lesson** — `--check` reported `inputs moved: none` for all nine before the run and the generator's own log confirmed `no pin moved` nine times, so every revision note reads *"regenerated: registry or graph content moved with no pin change"*
+- **Nine `revisions[]` entries appended, `changed[]` written by the generator and verified against the real differing-section set on all nine (P8-OK ×9).** `read-next` in all nine; `what-is-bought-and-on-what` in six of them. `gateDigest` untouched at `sha256:f568052fa2fb…`, `coveredThrough` and `lastRun` untouched
+- `var VERSION` **v01.73g → v01.74g**
+
+### Fixed
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+
+- **(rr15) WAS WRITTEN INTO §7.58 BUT NEVER INTO §10.6's FINDINGS REGISTER, WHICH ENDED AT (rr14) — (rr16).** `SESSION-CONTEXT.md` asserts *"findings (rr7)–(rr15) written"*; eight of the nine landed. Repaired in place so the register is contiguous before `(rr16)` opens on top of it
+- §10.4 marked **CLEARED**; §10.6's findings register continued at **(rr16)–(rr21)**
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+
+- §7.58 marked **SPENT**; §7.57's open item **(xx)** closed; **§7.59 written in both halves** — the next run's brief
 
 ## [v06.49r] — 2026-09-18 01:37:44 AM EST
 

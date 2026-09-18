@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.74g] — 2026-09-18 02:13:44 AM EST — v06.50r
+
+### Changed
+
+- **Nine of the nineteen value-chain lessons refreshed against the curriculum as it now stands.** Their *Read next* panels and their buying-criteria tables were written while several of the lessons they point at were still unwritten, so those pointers read as *planned* rather than as somewhere you could actually go. **All twenty-eight of them now name a lesson that exists and open it directly**
+- In six of those nine, the table of what buyers in that part of the chain buy on now names the lesson that teaches each criterion, wherever one teaches it — so a criterion you do not recognise has a route out of the table itself
+- Each refreshed lesson carries a dated update note listing exactly which of its sections moved, so if you had already worked through one you can see what changed instead of re-reading the whole thing
+- The other ten value-chain lessons were already current and were left alone. **No player table, company card, figure, timeline, connection map or policy table changed anywhere** — this refresh moved forward pointers only, so nothing you have already drilled has been reset
 
 ## [v01.73g] — 2026-09-18 01:37:44 AM EST — v06.49r
 
