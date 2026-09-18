@@ -3,11 +3,23 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15w] — 2026-09-18 01:37:44 AM EST — v06.49r
+
+### Added
+
+- **The switch for the optional company-card deck, and the screen that drills it.** A second card on the drill landing page explains what the deck is and turns it on or off for your account; it starts off. Once on, the card shows how many company cards are due and how many you have started, and opens a drill screen of its own
+- Each company card asks which part of the value chain a company sits in and which role it holds there, and reveals the answer together with the line from the company's own profile that puts it there. From the answer you can open the company's profile or the value-chain lesson whose table the row came from
+- The two decks keep their own counts on the landing page, so the everyday deck's numbers are unaffected by turning the new one on
+
+### Changed
+
+- Minor internal improvements
 
 ## [v01.14w] — 2026-09-14 06:39:45 AM EST — v05.64r
 

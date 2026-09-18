@@ -8,6 +8,155 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.29g] — 2026-09-13 09:25:11 PM EST — v05.57r — [0cbf1d8](https://github.com/LightAISolutions/Sales/commit/0cbf1d8dd51dd78af60a6bf22fb72f66cc10de9f)
+
+### Added
+
+- New lesson added to the curriculum
+
+### Changed
+
+- One track's reading order now places the new lesson before a lesson you may already have finished, so it appears next in your study path
+- A track summary card now describes everything the track currently covers
+
+## [v01.28g] — 2026-09-13 08:31:30 PM EST — v05.55r — [5886b83](https://github.com/LightAISolutions/Sales/commit/5886b8366a1fd8647eff5e67423bb742f36386ff)
+
+### Added
+
+- New lesson added to the curriculum
+
+### Changed
+
+- One track's reading order now places the new lesson before a lesson you may already have finished, so it appears next in your study path
+- Minor text formatting corrected in a lesson
+
+## [v01.27g] — 2026-09-13 07:54:01 PM EST — v05.54r — [4f98709](https://github.com/LightAISolutions/Sales/commit/4f98709c60a3d471ec8d37e8fe46e9dcf372bdab)
+
+### Added
+
+- New lesson added to the curriculum
+- New track added, grouping the lessons about selling into the market
+
+### Changed
+
+- The new track suggests two recommended tracks to finish first
+
+## [v01.26g] — 2026-09-13 06:41:02 PM EST — v05.53r — [8788f41](https://github.com/LightAISolutions/Sales/commit/8788f41005cef8e7e04002487a33206a91d84382)
+
+### Added
+
+- New lesson added to the curriculum
+- New track added, grouping the lessons that teach the electrical basics
+
+### Changed
+
+- Two tracks now suggest a recommended track to finish first
+
+## [v01.25g] — 2026-09-13 04:35:07 PM EST — v05.52r — [bcad98b](https://github.com/LightAISolutions/Sales/commit/bcad98bcfbc4b8385f4a4c55e3ad968be3ad48bd)
+
+### Changed
+- **Two Industry Guidance modules now warn you about a phrase that means different things in different rulebooks.** The same two words are used by more than one authority, for the same kind of equipment, with tests that can reach opposite answers about the very same unit — so a sentence that is correct under one rulebook is wrong under another. Both modules now say which rulebook they are answering for, and each points at the other
+- One module's reading sections, and both modules' section names and order, are unchanged — reading marks and review schedules carry over untouched
+- One flashcard was reworded to carry the distinction, so **it re-enters the review rotation as new**; the schedule built on the old wording no longer describes the new text. A self-test explanation was expanded, which does **not** affect its schedule
+
+## [v01.24g] — 2026-09-13 06:28:51 AM EST — v05.50r — [9b42972](https://github.com/LightAISolutions/Sales/commit/9b4297274258b4c188428b34901a4961a3d58392)
+
+### Changed
+- **One Industry Guidance module was refreshed against current sources.** Several dated items in it had moved on since it was written, so the text now says where they actually stand; two statements that had drifted from the record were corrected outright; and the module's review-by date moved forward to the next date its own subject matter is due to change
+- **Its reading sections keep the same names and order**, so any reading marks and review schedules already attached to them carry over untouched
+- The module's flashcards and self-test each gained one item, and several existing ones were reworded for the updated material. **A reworded card re-enters the review rotation as new** — the schedule built on the old wording no longer describes the new text, so it is not carried forward. This is intended, not a fault
+
+## [v01.23g] — 2026-09-13 03:24:43 AM EST — v05.48r — [c488512](https://github.com/LightAISolutions/Sales/commit/c488512de8c96d3df4aafd9e0384b64da0e1f256)
+
+### Added
+- **Reading marks on guidance modules are kept here now**, per account and across devices, in the same place lesson marks are kept — so a module you read on one machine shows as read on another
+- **Guidance flashcards and self-test questions feed the drill**, alongside the lesson and study-guide cards, on the same review schedule
+- A one-off tool for bringing across the reading history built up in the other app, together with a check that reports whether every mark arrived. It can be run twice safely, and a mark already recorded here is never replaced by an older one from the transfer
+
+### Changed
+- Who can read the modules is unchanged
+
+## [v01.22g] — 2026-09-13 01:24:48 AM EST — v05.46r — [a79be73](https://github.com/LightAISolutions/Sales/commit/a79be732dd41be12de633ba8980fbb1c448a4b12)
+
+### Fixed
+- The link that lets a company dossier in the other app list which study modules mention that company no longer fails when the connection setting was pasted in with an invisible trailing space or line break. Surrounding blank space is now ignored on both ends
+- If that lookup cannot complete for some other reason, it now reports a readable reason instead of appearing to be a network fault
+## [v01.21g] — 2026-09-13 12:52:01 AM EST — v05.45r — [4d24368](https://github.com/LightAISolutions/Sales/commit/4d24368a48b02404ac5a741aeb0e75643761e8b0)
+
+### Added
+- Groundwork so that a company dossier in the other app can again list which study modules mention that company, now that the modules live here. Nothing changes in this app's own screens
+
+### Changed
+- Minor internal improvements
+## [v01.20g] — 2026-09-13 12:13:40 AM EST — v05.44r — [40b6782](https://github.com/LightAISolutions/Sales/commit/40b6782b7ba16a7040e24cc46ea9c3d8857b68dd)
+
+### Added
+- **The nine Industry Guidance modules are now served by this app.** The library, each module and their glossaries are answered here, so guidance no longer has to be read in a different app
+- Access is unchanged: the admin and contributor tiers can read guidance, and the analyst and viewer tiers cannot — the same rule that applied when the modules were served elsewhere
+
+### Changed
+- Guidance content sits outside the region the automatic weekly curriculum job is allowed to write, so a scheduled run can never alter a guidance module
+
+## [v01.19g] — 2026-09-08 06:59:28 AM EST — v05.18r — [da43160](https://github.com/LightAISolutions/Sales/commit/da43160e5359ab0a94826f6153a253a2d19a4dfa)
+
+### Added
+- **A new lesson opens the Value Chain lane** — it teaches how to read the relationship map before the market-structure lessons that use it, with flashcards and a five-question self-test. Readable by every admitted tier
+- Curriculum updated
+
+### Changed
+- The first Value Chain track now opens with that lesson
+
+## [v01.18g] — 2026-09-08 06:32:46 AM EST — v05.17r — [968077d](https://github.com/LightAISolutions/Sales/commit/968077dd5c012008f43f924c91e7a59cb5cab687)
+
+### Added
+- **A new lane, The Value Chain, with nineteen market-structure lessons and three tracks** — one lesson per link of the value chain, from cells to insurance, each stating who sits where, what is bought there and on what, the comparable figures on record, who is connected to whom, what moved recently and which policy regimes bear on it, with a structure self-test. Every one is readable by every admitted tier
+- Curriculum updated
+
+### Changed
+- The lesson index now groups four lanes instead of three
+
+## [v01.17g] — 2026-09-07 07:44:48 PM EST — v05.10r — [bdca7ac](https://github.com/LightAISolutions/Sales/commit/bdca7ac54cdceb4fab70262ffbbb99a09dff7dc8)
+
+### Fixed
+- **The drill's study pool now includes every study-guide card**, not only the ones kept at the top of a guide — about 1,920 cards instead of about 770. Existing card histories are unchanged
+
+### Changed
+- The pool can now grow to 2,400 study cards before the safety cap applies, and its cached form is smaller, so the full pool stays cached rather than being rebuilt on every request
+
+## [v01.16g] — 2026-09-03 01:27:59 AM EST — v04.37r — [54d2084](https://github.com/LightAISolutions/Sales/commit/54d20848616b50b31762d64b7dffdd39f9a30b6b)
+
+### Added
+- A new lesson has been added to the campus track. It is restricted to the contributor tier and above; readers below that tier will see it counted as withheld rather than listed
+- Curriculum updated
+
+### Changed
+- The campus track now runs two lessons and its summary describes what the walk covers today
+
+## [v01.15g] — 2026-09-03 01:16:17 AM EST — v04.36r — [beb650a](https://github.com/LightAISolutions/Sales/commit/beb650a09d29a04b303e3e2b17bc8add8278185a)
+
+### Added
+- A new lesson on the software that actually runs a storage plant: the layers of control between the cells and the market, which layer decides what, and which two of them only watch
+- It walks a single operating day on three lanes — what the market is doing, what the plant does about it, and the ceiling the whole day runs under — and shows why the bidding software is the revenue rather than a convenience
+- A reference table assigns every number quoted about a storage plant to the layer that owns it, and says what you would actually observe if that layer were the one at fault
+- It covers the choice between an inverter that follows the grid's wave and one that creates it, why that has moved from a preference to a tender requirement, and what it means when three different kinds of buyer ask for the same thing
+- It closes on where control fails: a fault whose blast radius was set by the architecture years earlier, a mis-dispatch that voids a warranty silently, a converter that disconnects where it was contracted to stay connected, a control layer whose supplier is gone, and a plant that was available almost all year and still missed the hours that mattered
+
+### Changed
+- The BESS foundations track now runs four lessons and its summary describes what the walk covers today
+
+## [v01.14g] — 2026-09-03 12:59:55 AM EST — v04.35r — [34edfe9](https://github.com/LightAISolutions/Sales/commit/34edfe9b2c9e79c1f3db56083d7920ba481bed33)
+
+### Added
+- A new lesson closing out the grid-to-chip walk: why the traditional building power chain converts to direct current twice and throws one of them away, and what happens when that redundancy is designed out
+- It sets three architectures side by side — the incumbent chain, the one standardised in China fifteen years ago, and the high-voltage direct-current chain arriving now — and explains why the whole argument comes down to a single relationship between voltage, current and heat
+- It walks the new equipment: what each box replaces, where it physically stands, and which parts are shipping into existing halls today versus which commit a building to a new architecture
+- It closes on where the approach fails — a stage deleted without a plan for the jobs it was quietly doing, an arc with no moment when it must go out, a commodity power supply pressed one voltage too far, and a retrofit that works per rack and fails per hall
+- Reading the sources honestly is taught as part of the material: the efficiency figures quoted for the three architectures are not measured on the same basis, and the lesson says so rather than lining them up as a ranking
+
+### Changed
+- The grid-to-chip track now runs four lessons end to end, and its summary describes the walk as it currently reads
+
+
 ## [v01.13g] — 2026-09-02 11:38:08 PM EST — v04.34r — [ddd7c5f](https://github.com/LightAISolutions/Sales/commit/ddd7c5f41f76fe45daa64de11fe270c5c726741e)
 
 ### Changed

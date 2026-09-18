@@ -1,4 +1,4 @@
-var VERSION = "v01.72g";
+var VERSION = "v01.73g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -47766,6 +47766,169 @@ function clDrillAllowed_(sess) {
 }
 
 
+// PROJECT: ── The roster deck (K2) ─ opt-in, separate, company cards ────────
+// CLASSROOM-CURRICULUM-PLAN.md §10.8. The one place company cards live, and the
+// reason the amended content contract can keep "never company trivia" as the
+// rule for every hand-authored mechanism lesson: the company knowledge is not
+// suppressed, it is moved somewhere a reader asks for it on purpose.
+//
+// One card per row of a segment lesson's `the-players` table — 314 rows across
+// the nineteen segment lessons as built (re-derived at K2; §10.8's own figure of
+// 283 was the S0 registry's membership count and had gone stale by two
+// generations). A company in two segments yields two cards deliberately: the
+// role differs, and which role it holds where IS the thing being learned.
+//
+// Three properties make this a second deck rather than a bigger first one:
+//
+//   1. ENUMERATION IS SERVER-SIDE FROM clLessonVisible_, exactly as the
+//      mechanism deck's is. Every segment lesson is public (its stamp is all
+//      `public` refs and folds to `tracks`), so the deck reaches ANALYST and
+//      above — which is the tier it exists for. Reading the lessons rather than
+//      the segments registry means the deck follows regeneration automatically
+//      and needs no registry read at drill time.
+//   2. THE ID NAMESPACE IS ITS OWN. `rc:<lessonId>:<dossierSlug>` — and note
+//      that CL_DRILL_ID_RE *cannot* match it: that regex requires a trailing
+//      `:<n>` index, and an rc: id ends in a slug. So the pre-K2 cop=grade
+//      guard refuses every rc: id on its own, and the roster path had to be
+//      added explicitly rather than inherited by accident. The separation is
+//      enforced by the existing code, not merely documented.
+//   3. IT IS OPT-IN, DEFAULT OFF, PER ACCOUNT. The flag is its own key in the
+//      same Script Properties store the reading progress uses — NOT a member of
+//      the progress map itself, because clProgressVisible_ filters that map to
+//      lesson and module ids a tier may read and would drop a preference key on
+//      every read. Absence of the property is "off", so no existing account is
+//      opted in by this commit.
+//
+// The mechanism queue never contains an rc: item and the roster queue never
+// contains anything else. Both halves are asserted in
+// scripts/check-classroom-content.py on a COUNT rather than on the absence of
+// an error, because an enumeration that silently returned nothing would pass
+// any test written the other way round.
+var CL_ROSTER_SESSION_CAP = 20;   // items served in one roster drill session
+var CL_ROSTER_NEW_CAP = 10;       // never-seen roster items introduced per day
+var CL_ROSTER_LESSON_PREFIX = 'segment-';
+var CL_ROSTER_SECTION_ID = 'the-players';
+var CL_ROSTER_PREF_PROP_PREFIX = 'cl_rosterdeck:';
+// The trailing field is a dossier slug, not an index — which is precisely why
+// CL_DRILL_ID_RE rejects these and this regex exists.
+var CL_ROSTER_ID_RE = /^rc:segment-[a-z0-9][a-z0-9-]{0,63}:[a-z0-9][a-z0-9-]{0,63}$/;
+
+// The generator emits the company cell as `**Name**` (its table cells are
+// clFmt-rendered in the lesson view). The drill card's question reaches the DOM
+// through clEl()'s textContent, where an asterisk is a literal character — so
+// the emphasis has to come off here or the reader sees `**BYD**`. Measured at
+// K2: all 314 company cells are `**…**` and not one basis line contains an
+// asterisk at all, so only this cell needs it.
+function clRosterPlain_(s) {
+  return String(s == null ? '' : s).replace(/\*\*/g, '').replace(/^\s+|\s+$/g, '');
+}
+
+// Resolve the four columns by HEADER NAME rather than by position. The
+// generator's column order is fixed by §10.3 and measured identical across all
+// nineteen tables today, but a deck keyed on position would mis-label every
+// card in silence if that order ever moved, and no checker looks at this file.
+// Returns null when any column is missing, which skips the table rather than
+// emitting 314 cards with the role and the basis swapped.
+function clRosterColIndex_(cols) {
+  var want = { company: -1, dossier: -1, role: -1, basis: -1 };
+  for (var i = 0; i < (cols || []).length; i++) {
+    var h = String(cols[i] || '').toLowerCase();
+    if (h.indexOf('company') === 0) want.company = i;
+    else if (h.indexOf('dossier') === 0) want.dossier = i;
+    else if (h.indexOf('role') === 0) want.role = i;
+    else if (h.indexOf('basis') === 0) want.basis = i;
+  }
+  if (want.company < 0 || want.dossier < 0 || want.role < 0 || want.basis < 0) return null;
+  return want;
+}
+
+// The roster item pool — the deck's whole source, derived from the lessons this
+// session may actually read.
+//
+// THE CONTENT HASH IS THE BASIS TEXT AND NOTHING ELSE (§10.8). A moved basis
+// re-introduces the card, which is the same reasoning as revisions[].changed[]:
+// material that changed is material you have not learned. Recorded rather than
+// silently widened: a row whose ROLE changes while its basis line does not
+// would keep its schedule. In the built corpus the basis quotes the reasoning
+// the role rests on, so the two move together — but that is a property of the
+// generator's template, not of the hash, and widening the hash to cover the
+// role is a §10.8 amendment rather than an implementation detail.
+function clDrillRosterItems_(sess) {
+  var all = clLessons_(), out = {};
+  for (var i = 0; i < all.length; i++) {
+    var lesson = all[i];
+    if (String(lesson.id || '').indexOf(CL_ROSTER_LESSON_PREFIX) !== 0) continue;
+    if (!clLessonVisible_(sess, lesson)) continue;
+    var secs = lesson.sections || [];
+    for (var j = 0; j < secs.length; j++) {
+      var sec = secs[j];
+      if (!sec || sec.id !== CL_ROSTER_SECTION_ID || sec.kind !== 'table') continue;
+      var cx = clRosterColIndex_(sec.cols);
+      if (!cx) continue;
+      var rows = sec.rows || [];
+      for (var r = 0; r < rows.length; r++) {
+        var row = rows[r];
+        if (!row) continue;
+        var company = clRosterPlain_(row[cx.company]);
+        var slug = String(row[cx.dossier] || '');
+        var role = String(row[cx.role] || '');
+        var basis = String(row[cx.basis] || '');
+        if (!company || !slug || !role || !basis) continue;
+        var id = 'rc:' + lesson.id + ':' + slug;
+        // An id the grade path would refuse must never be served — served and
+        // gradable stay one set, the rule the study and guidance walks follow.
+        if (!CL_ROSTER_ID_RE.test(id)) continue;
+        out[id] = {
+          kind: 'flash', src: 'roster',
+          q: company + ' — which segment, and which role?',
+          a: lesson.title + ' — ' + role + '. ' + basis,
+          company: company, slug: slug, role: role,
+          lesson: lesson.id, lessonTitle: lesson.title, section: CL_ROSTER_SECTION_ID,
+          hash: clDrillHash_(basis)
+        };
+      }
+    }
+  }
+  return out;
+}
+
+// Is this account opted in? Absence of the property is OFF, so the deck is off
+// for every account that existed before this commit and for every new one.
+function clRosterEnabled_(sess) {
+  var acct = clProgressAcct_(sess);
+  if (!acct) return false;
+  try {
+    return PropertiesService.getScriptProperties()
+      .getProperty(CL_ROSTER_PREF_PROP_PREFIX + acct) === '1';
+  } catch (e) { return false; }
+}
+
+// Turning it off DELETES the key rather than writing '0': the store's default
+// is the feature's default, so there is one representation of "off" and an
+// account that opts out leaves no residue.
+function clRosterSetEnabled_(sess, on) {
+  var acct = clProgressAcct_(sess);
+  if (!acct) return { success: false, error: 'NO_ACCOUNT' };
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var key = CL_ROSTER_PREF_PROP_PREFIX + acct;
+    if (on) props.setProperty(key, '1'); else props.deleteProperty(key);
+    return { success: true, rosterDeck: !!on };
+  } catch (e) { return { success: false, error: 'ROSTER_STORE_UNAVAILABLE' }; }
+}
+
+// THE SINGLE PLACE cop=drill&deck=roster AND cop=grade BOTH AUTHORISE AGAINST,
+// the same pattern clDrillAllowed_ establishes for the mechanism deck, so the
+// two ops cannot drift apart on what counts as drillable. The opt-in check
+// lives HERE rather than at each call site: with the flag off the enumeration
+// is empty, so "validated against the same enumeration it served" and "refused
+// because the deck is off" are one fact rather than two that could disagree.
+function clDrillRosterAllowed_(sess) {
+  if (!clRosterEnabled_(sess)) return {};
+  return clDrillRosterItems_(sess);
+}
+
+
 // SM-2, with the grade collapsed to four buttons (0 Again / 1 Hard / 2 Good /
 // 3 Easy). The schema's table is the specification; this is it in code.
 // Returns the NEXT state from the previous one — pure, so the checker can
@@ -47792,11 +47955,39 @@ function clDrillSchedule_(prev, grade, today) {
            lapses: lapses, due: clDrillAddDays_(today, ivl), seen: today };
 }
 
+// Split a drill state map by deck. The two decks share the two sheet tabs —
+// the id prefix separates the rows (CLASSROOM-CURRICULUM-PLAN.md §10.8) — but
+// they must NOT share the daily new-card budget: opting into the roster deck
+// would otherwise silently halve the mechanism deck's introduction rate, which
+// is the opposite of "opt-in and separate". Each deck counts introducedToday
+// over its own rows only.
+//
+// For any account holding no rc: rows this returns the whole map unchanged, so
+// no account that existed before K2 sees its mechanism queue move. That is
+// asserted in scripts/check-classroom-content.py rather than trusted here.
+var CL_ROSTER_ID_PREFIX = 'rc:';
+
+function clDrillStateForDeck_(state, roster) {
+  var out = {}, want = !!roster;
+  for (var id in state) {
+    if (!state.hasOwnProperty(id)) continue;
+    if ((String(id).indexOf(CL_ROSTER_ID_PREFIX) === 0) === want) out[id] = state[id];
+  }
+  return out;
+}
+
 // The queue: everything due today or earlier, oldest first, then never-seen
 // items up to the daily new cap, all trimmed to the session cap. An item whose
 // stored hash no longer matches its content is treated as NEW — the text moved
 // under the schedule, so the schedule is not evidence of anything.
-function clDrillQueue_(allowed, state, today) {
+//
+// The caps are arguments with the mechanism deck's constants as defaults, so
+// the roster deck can pass its own (CL_ROSTER_SESSION_CAP / CL_ROSTER_NEW_CAP)
+// without a second copy of the scheduling policy existing to drift from this
+// one. Callers that pass neither behave exactly as before K2.
+function clDrillQueue_(allowed, state, today, sessionCap, newCap) {
+  var capSession = sessionCap || CL_DRILL_SESSION_CAP;
+  var capNew = newCap || CL_DRILL_NEW_CAP;
   var due = [], fresh = [], id;
   for (id in allowed) {
     if (!allowed.hasOwnProperty(id)) continue;
@@ -47814,8 +48005,8 @@ function clDrillQueue_(allowed, state, today) {
   for (id in state) {
     if (state.hasOwnProperty(id) && state[id].seen === today && state[id].reps <= 1) introducedToday++;
   }
-  var room = Math.max(0, CL_DRILL_NEW_CAP - introducedToday);
-  var queue = due.concat(fresh.slice(0, room)).slice(0, CL_DRILL_SESSION_CAP);
+  var room = Math.max(0, capNew - introducedToday);
+  var queue = due.concat(fresh.slice(0, room)).slice(0, capSession);
   return { queue: queue, dueTotal: due.length, newTotal: fresh.length };
 }
 
@@ -47906,12 +48097,20 @@ function handleClassroomOp_(e) {
       return wr;
     }
     if (op === 'drill') {
+      // `deck` selects which of the two decks to serve. An unrecognised value
+      // is REFUSED rather than falling through to the mechanism deck: a typo
+      // must not silently hand back the wrong deck (K2, §10.8).
+      var dDeck = String(p.deck || '');
+      if (dDeck && dDeck !== 'roster') return { success: false, error: 'UNKNOWN_DECK' };
+      var dRoster = dDeck === 'roster';
       var dAcct = clProgressAcct_(sess);
       if (!dAcct) return { success: false, error: 'NO_ACCOUNT' };
       var dToday = clDrillToday_();
-      var dAllowed = clDrillAllowed_(sess);
-      var dState = clDrillState_(dAcct);
-      var built = clDrillQueue_(dAllowed, dState, dToday);
+      var dAllowed = dRoster ? clDrillRosterAllowed_(sess) : clDrillAllowed_(sess);
+      var dState = clDrillStateForDeck_(clDrillState_(dAcct), dRoster);
+      var built = dRoster
+        ? clDrillQueue_(dAllowed, dState, dToday, CL_ROSTER_SESSION_CAP, CL_ROSTER_NEW_CAP)
+        : clDrillQueue_(dAllowed, dState, dToday);
       // Lesson and guidance items ship their payload — the gate has already
       // been checked. Study items ship the id only; the client holds that text
       // already. `src` names where a payload item came from, so the page can
@@ -47926,6 +48125,12 @@ function handleClassroomOp_(e) {
           if (it.kind === 'quiz') { row.c = it.c; row.why = it.why; }
           if (it.src === 'guidance') {
             row.src = 'guidance'; row.doc = it.doc; row.docTitle = it.docTitle;
+          } else if (it.src === 'roster') {
+            // A roster card names the company and the segment lesson its row
+            // lives in, so the reader can open the whole player table in
+            // context or the dossier the basis line was read off.
+            row.src = 'roster'; row.company = it.company; row.slug = it.slug;
+            row.lesson = it.lesson; row.lessonTitle = it.lessonTitle;
           } else {
             row.lesson = it.lesson; row.lessonTitle = it.lessonTitle;
           }
@@ -47934,20 +48139,73 @@ function handleClassroomOp_(e) {
         }
         return row;
       });
-      return { success: true, today: dToday, items: served,
-               stats: { due: built.dueTotal, fresh: built.newTotal,
-                        known: Object.keys(dState).length,
-                        pool: Object.keys(dAllowed).length,
-                        sessionCap: CL_DRILL_SESSION_CAP, newCap: CL_DRILL_NEW_CAP } };
+      var dStats = { due: built.dueTotal, fresh: built.newTotal,
+                     known: Object.keys(dState).length,
+                     pool: Object.keys(dAllowed).length,
+                     sessionCap: dRoster ? CL_ROSTER_SESSION_CAP : CL_DRILL_SESSION_CAP,
+                     newCap: dRoster ? CL_ROSTER_NEW_CAP : CL_DRILL_NEW_CAP };
+      var dOut = { success: true, today: dToday, deck: dRoster ? 'roster' : 'mechanism',
+                   items: served, stats: dStats };
+      // The mechanism response carries the roster deck's opt-in state so the
+      // page can render the toggle from the one op it already makes at mount.
+      // When the deck is off that is the whole answer and no enumeration runs;
+      // when it is on, its counts come from the same derivation cop=grade
+      // authorises against.
+      if (!dRoster) {
+        var rEnabled = clRosterEnabled_(sess);
+        if (!rEnabled) {
+          dOut.roster = { enabled: false };
+        } else {
+          var rAllowed = clDrillRosterAllowed_(sess);
+          var rState = clDrillStateForDeck_(clDrillState_(dAcct), true);
+          var rBuilt = clDrillQueue_(rAllowed, rState, dToday,
+                                     CL_ROSTER_SESSION_CAP, CL_ROSTER_NEW_CAP);
+          dOut.roster = { enabled: true, due: rBuilt.dueTotal, fresh: rBuilt.newTotal,
+                          known: Object.keys(rState).length,
+                          pool: Object.keys(rAllowed).length,
+                          sessionCap: CL_ROSTER_SESSION_CAP, newCap: CL_ROSTER_NEW_CAP };
+        }
+      }
+      return dOut;
+    }
+    // The opt-in switch. Its own op because it writes a preference, not
+    // progress and not a grade — and because the flag is a key of its own in
+    // the progress property store rather than a member of the progress map
+    // (clProgressVisible_ filters that map to readable lesson and module ids
+    // and would drop a preference key on every read).
+    if (op === 'rosterdeck') {
+      if (p.on === undefined || p.on === null || String(p.on) === '') {
+        return { success: true, rosterDeck: clRosterEnabled_(sess) };
+      }
+      var rOn = String(p.on) === '1' || String(p.on) === 'true';
+      var rSet = clRosterSetEnabled_(sess, rOn);
+      if (rSet.success) {
+        dataAuditLog(sess.email, 'write', 'classroom_rosterdeck',
+          rOn ? 'on' : 'off', { role: clRoleOf_(sess) });
+      }
+      return rSet;
     }
     if (op === 'grade') {
       var gAcct = clProgressAcct_(sess);
       if (!gAcct) return { success: false, error: 'NO_ACCOUNT' };
       var gId = String(p.id || '');
-      if (!CL_DRILL_ID_RE.test(gId)) return { success: false, error: 'BAD_ITEM' };
+      // An rc: id is the roster deck's (K2, §10.8) and takes the roster
+      // derivation. It is recognised by PREFIX rather than by trying
+      // CL_DRILL_ID_RE first, because that regex requires a trailing :<n>
+      // index and an rc: id ends in a dossier slug — so without this branch
+      // every roster grade is refused as BAD_ITEM, which is the separation
+      // working and is exactly why the branch must be explicit.
+      var gRoster = gId.indexOf(CL_ROSTER_ID_PREFIX) === 0;
+      if (gRoster) {
+        if (!CL_ROSTER_ID_RE.test(gId)) return { success: false, error: 'BAD_ITEM' };
+      } else if (!CL_DRILL_ID_RE.test(gId)) {
+        return { success: false, error: 'BAD_ITEM' };
+      }
       // Re-authorise against the SAME derivation cop=drill served from, so
-      // grading can never reach an item reading could not.
-      var gAllowed = clDrillAllowed_(sess);
+      // grading can never reach an item reading could not. For a roster id
+      // that derivation also carries the opt-in check, so a deck that was
+      // never served cannot be graded.
+      var gAllowed = gRoster ? clDrillRosterAllowed_(sess) : clDrillAllowed_(sess);
       if (!gAllowed[gId]) return { success: false, error: 'ITEM_DENIED' };
       var gGrade = Math.max(0, Math.min(3, parseInt(p.grade, 10) || 0));
       var gState = clDrillState_(gAcct);

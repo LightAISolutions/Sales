@@ -740,6 +740,106 @@ Object.keys(TIERS).forEach(function(t) {
                            docs: ids.map(function(i) { return i.split(':')[1]; })
                                     .filter(function(v, k, a) { return a.indexOf(v) === k; }).sort() };
 });
+// ── The roster deck (K2): opt-in, separate, and never in the other queue ──
+// Two invariants, both asserted on COUNTS rather than on the absence of an
+// error, because an enumeration that silently returned nothing would satisfy
+// any test written the other way round (curriculum plan §10.8; (ll1)).
+//
+// The fixture registry carries five shapes on purpose: a PUBLIC segment
+// lesson, a GATED one (no real segment lesson is gated — every stamp folds to
+// `tracks` — but the invariant under test is that clLessonVisible_ governs the
+// roster pool exactly as it governs the mechanism pool, so the gate needs a
+// fixture to bite on), a NON-segment lesson carrying a the-players-shaped
+// table (the id-prefix filter must exclude it, or a hand-authored mechanism
+// lesson could inject company cards into the deck that is supposed to be the
+// only place they live), a segment whose COLUMNS ARE REORDERED (the deck
+// resolves them by header name, so a card must come out with the company and
+// the role in the right fields rather than swapped), and one MISSING a column
+// (skipped whole rather than emitted mis-keyed).
+var __clLessonsPreRoster = clLessons_;
+var __rcCols = ['Company', 'Dossier', 'Role', "Basis (the dossier's own line)"];
+clLessons_ = function() { return [
+  { id: 'segment-pub-seg', title: 'Public segment', provenance: FX['public-only'].provenance,
+    sections: [ { id: 'the-players', kind: 'table', cols: __rcCols, rows: [
+      ['**Alpha Co**', 'alpha-co', 'incumbent', 'ecosystemRole: the first basis line'],
+      ['**Beta Co**', 'beta-co', 'challenger', 'ecosystemRole: the second basis line'] ] } ] },
+  { id: 'segment-gated-seg', title: 'Gated segment', provenance: FX['public-plus-guidance'].provenance,
+    sections: [ { id: 'the-players', kind: 'table', cols: __rcCols, rows: [
+      ['**Gamma Co**', 'gamma-co', 'adjacent', 'ecosystemRole: the gated basis line'] ] } ] },
+  { id: 'l-not-a-segment', title: 'Not a segment', provenance: FX['public-only'].provenance,
+    sections: [ { id: 'the-players', kind: 'table', cols: __rcCols, rows: [
+        ['**Delta Co**', 'delta-co', 'incumbent', 'ecosystemRole: must never be drawn'] ] },
+      { id: 'f1', kind: 'flashcards', cards: [ { q: 'mech q', a: 'mech a' } ] } ] },
+  { id: 'segment-reordered', title: 'Reordered segment', provenance: FX['public-only'].provenance,
+    sections: [ { id: 'the-players', kind: 'table',
+      cols: ['Role', "Basis (the dossier's own line)", 'Company', 'Dossier'], rows: [
+      ['incumbent', 'ecosystemRole: the reordered basis line', '**Epsilon Co**', 'epsilon-co'] ] } ] },
+  { id: 'segment-missing-col', title: 'Missing column', provenance: FX['public-only'].provenance,
+    sections: [ { id: 'the-players', kind: 'table', cols: ['Company', 'Role'], rows: [
+      ['**Zeta Co**', 'incumbent'] ] } ] }
+]; };
+out.roster = {};
+Object.keys(TIERS).forEach(function(t) {
+  var sess = { role: TIERS[t].role, permissions: TIERS[t].permissions, email: 'rc-' + t + '@example.com' };
+  var ids = Object.keys(clDrillRosterItems_(sess)).sort();
+  // The flag is untouched for this account, so the OPT-IN derivation — the one
+  // both ops authorise against — must be empty however large the enumeration.
+  var allowedOff = Object.keys(clDrillRosterAllowed_(sess)).length;
+  var mech = Object.keys(clDrillAllowed_(sess));
+  out.roster[t] = {
+    n: ids.length, ids: ids,
+    allRosterRe: ids.every(function(i) { return CL_ROSTER_ID_RE.test(i); }),
+    anyDrillRe: ids.filter(function(i) { return CL_DRILL_ID_RE.test(i); }).length,
+    allowedOff: allowedOff,
+    mechPool: mech.length,
+    mechRc: mech.filter(function(i) { return i.indexOf(CL_ROSTER_ID_PREFIX) === 0; }).length
+  };
+});
+// Opting in is per account and reaches ANALYST, the tier the deck exists for:
+// every segment lesson is public, so an analyst can read the player tables and
+// must therefore be able to drill them.
+var rcAn = { role: 'analyst', permissions: [], email: 'rc-on@example.com' };
+out.rosterOn = { before: Object.keys(clDrillRosterAllowed_(rcAn)).length };
+out.rosterOn.set = clRosterSetEnabled_(rcAn, true);
+out.rosterOn.enabled = clRosterEnabled_(rcAn);
+var rcPool = clDrillRosterAllowed_(rcAn);
+out.rosterOn.after = Object.keys(rcPool).length;
+// Opting in must not widen the MECHANISM pool by one item.
+out.rosterOn.mechRc = Object.keys(clDrillAllowed_(rcAn))
+  .filter(function(i) { return i.indexOf(CL_ROSTER_ID_PREFIX) === 0; }).length;
+// Header-name resolution: the reordered table's card must carry the company in
+// q and the role in a, not the other way round.
+out.rosterOn.reordered = rcPool['rc:segment-reordered:epsilon-co'] || null;
+// The emphasis the generator puts on the company cell must be off the question:
+// the drill card reaches the DOM through textContent, where `**` is literal.
+out.rosterOn.anyAsterisk = Object.keys(rcPool)
+  .filter(function(i) { return rcPool[i].q.indexOf('*') >= 0; }).length;
+// The content hash is the BASIS TEXT and nothing else (§10.8).
+out.rosterOn.hashIsBasis = clDrillHash_('ecosystemRole: the reordered basis line') ===
+  (out.rosterOn.reordered && out.rosterOn.reordered.hash);
+// Opting back out leaves no residue — "off" has one representation.
+clRosterSetEnabled_(rcAn, false);
+out.rosterOn.afterOff = Object.keys(clDrillRosterAllowed_(rcAn)).length;
+out.rosterOn.caps = { session: CL_ROSTER_SESSION_CAP, newCap: CL_ROSTER_NEW_CAP };
+// The two decks share the two sheet tabs but NOT the daily new-card budget.
+// A state map holding rc: rows must leave the mechanism queue's budget whole,
+// which is what makes "no account that existed before K2 sees its mechanism
+// queue move" a measurement rather than a claim.
+var rcState = { 'lc:l-x:f1:0': { due: '2026-01-01', hash: 'h', seen: '2026-09-18', reps: 1 },
+                'rc:segment-pub-seg:alpha-co': { due: '2026-01-01', hash: 'h', seen: '2026-09-18', reps: 1 },
+                'rc:segment-pub-seg:beta-co': { due: '2026-01-01', hash: 'h', seen: '2026-09-18', reps: 1 } };
+out.rosterSplit = {
+  mech: Object.keys(clDrillStateForDeck_(rcState, false)).sort(),
+  roster: Object.keys(clDrillStateForDeck_(rcState, true)).sort(),
+  // Three rows introduced today, two of them roster: the mechanism deck must
+  // see ONE against its cap, and the roster deck TWO against its own.
+  mechRoom: clDrillQueue_({ 'n1': { hash: 'x' }, 'n2': { hash: 'x' } },
+                          clDrillStateForDeck_(rcState, false), '2026-09-18').queue.length,
+  rosterRoom: clDrillQueue_({ 'n1': { hash: 'x' }, 'n2': { hash: 'x' } },
+                            clDrillStateForDeck_(rcState, true), '2026-09-18',
+                            CL_ROSTER_SESSION_CAP, CL_ROSTER_NEW_CAP).queue.length
+};
+clLessons_ = __clLessonsPreRoster;
 clLessons_ = __clLessonsOrig;   // restore: study-next below asserts against the original registry
 // Study-item containment: a real slug validates, a bogus one does not, and
 // the registry fetch is stubbed so the checker never touches the network.
@@ -1060,6 +1160,113 @@ def run_gate_truth_table(src, lesson_ids=()):
         elif row.get("n"):
             err("drill gate: %s drew %d guidance item(s) without the guidance capability"
                 % (tier, row.get("n")))
+
+    # The roster deck (K2, curriculum plan §10.8): opt-in, separate, and
+    # NEVER in the mechanism queue. Asserted on COUNTS in both directions,
+    # because a roster enumeration that silently returned nothing would satisfy
+    # a test written as "no rc: item appears" and prove nothing at all ((ll1)).
+    #
+    # Fixture expectations, from the five shapes the harness registers: a
+    # public segment lesson (2 rows), a gated one (1), a NON-segment lesson
+    # carrying a the-players-shaped table (must contribute 0), a segment whose
+    # columns are reordered (1, resolved by header name), and one missing a
+    # column (0, skipped whole rather than emitted mis-keyed).
+    RC_PUBLIC = ["rc:segment-pub-seg:alpha-co", "rc:segment-pub-seg:beta-co",
+                 "rc:segment-reordered:epsilon-co"]
+    RC_GATED = ["rc:segment-gated-seg:gamma-co"]
+    rc = out.get("roster") or {}
+    for tier in EXPECTED_INDEX:
+        row = rc.get(tier) or {}
+        want = []
+        if tier in READS["tracks"]:
+            want += RC_PUBLIC
+        if tier in READS["guidance"]:
+            want += RC_GATED
+        cases += 1
+        if row.get("ids") != sorted(want):
+            err("roster deck: %s enumerates %s, expected %s — the pool is derived from "
+                "clLessonVisible_, so it must be exactly the segment lessons the tier may read"
+                % (tier, row.get("ids"), sorted(want)))
+        cases += 1
+        if not row.get("allRosterRe"):
+            err("roster deck: %s was served rc: ids CL_ROSTER_ID_RE rejects, so cop=grade "
+                "would refuse what cop=drill served" % tier)
+        # The namespaces are separated by the EXISTING regex, not by convention:
+        # CL_DRILL_ID_RE requires a trailing :<n> index and an rc: id ends in a
+        # dossier slug. If that ever stopped holding, the mechanism grade path
+        # would start accepting roster ids without anyone editing it.
+        cases += 1
+        if row.get("anyDrillRe"):
+            err("roster deck: %d rc: id(s) for %s also match CL_DRILL_ID_RE — the two "
+                "id namespaces have stopped being disjoint" % (row.get("anyDrillRe"), tier))
+        # Default OFF: the derivation both ops authorise against is empty until
+        # the account opts in, however large the enumeration behind it.
+        cases += 1
+        if row.get("allowedOff") != 0:
+            err("roster deck: %s drew %s item(s) from clDrillRosterAllowed_ without opting in "
+                "— the deck must be off by default" % (tier, row.get("allowedOff")))
+        # THE INVARIANT THE CONTENT CONTRACT NAMES: the mechanism queue never
+        # contains an rc: item. Counted, with the pool size beside it so a zero
+        # from an empty pool cannot pass as a zero from a working separation.
+        cases += 1
+        if row.get("mechRc"):
+            err("roster deck: the mechanism pool for %s carries %d rc: item(s) — the "
+                "mechanism queue must never contain one" % (tier, row.get("mechRc")))
+        cases += 1
+        if tier in READS["tracks"] and not row.get("mechPool"):
+            err("roster deck: the mechanism pool for %s is empty, so the "
+                "'no rc: item' assertion above proves nothing" % tier)
+    ro = out.get("rosterOn") or {}
+    rc_checks = [
+        (ro.get("before") == 0, "an account drew %s roster item(s) before opting in" % ro.get("before")),
+        (ro.get("set", {}).get("success") is True, "opting in failed: %r" % (ro.get("set"),)),
+        (ro.get("enabled") is True, "the opt-in flag did not read back as set"),
+        # An ANALYST is the tier the deck is designed to reach: every segment
+        # lesson is public, so an analyst reads the player tables and must be
+        # able to drill them.
+        (ro.get("after") == len(RC_PUBLIC),
+         "an opted-in analyst drew %s roster item(s), expected %d" % (ro.get("after"), len(RC_PUBLIC))),
+        (ro.get("mechRc") == 0,
+         "opting in put %s rc: item(s) into the mechanism pool" % ro.get("mechRc")),
+        (ro.get("afterOff") == 0, "opting back out left %s item(s) drillable" % ro.get("afterOff")),
+        (ro.get("caps") == {"session": 20, "newCap": 10},
+         "the roster caps are %r, expected CL_ROSTER_SESSION_CAP 20 / CL_ROSTER_NEW_CAP 10" % (ro.get("caps"),)),
+        # Header-name resolution: the reordered table must not swap fields.
+        ((ro.get("reordered") or {}).get("company") == "Epsilon Co"
+         and (ro.get("reordered") or {}).get("role") == "incumbent",
+         "a table whose columns are reordered produced %r — the columns are resolved "
+         "by header name precisely so this cannot happen silently" % (ro.get("reordered"),)),
+        (ro.get("anyAsterisk") == 0,
+         "%s roster question(s) still carry a literal asterisk — the drill card reaches "
+         "the DOM through textContent, where ** does not render as emphasis" % ro.get("anyAsterisk")),
+        (ro.get("hashIsBasis") is True,
+         "the roster content hash is not the basis text alone, which §10.8 fixes it as"),
+    ]
+    for ok, msg in rc_checks:
+        cases += 1
+        if not ok:
+            err("roster deck: " + msg)
+    # The two decks share the two sheet tabs and must NOT share the daily
+    # new-card budget. Three rows were introduced today, two of them roster:
+    # the mechanism deck sees one against CL_DRILL_NEW_CAP and the roster deck
+    # two against CL_ROSTER_NEW_CAP, so each deck has its own room left.
+    rs = out.get("rosterSplit") or {}
+    split_checks = [
+        (rs.get("mech") == ["lc:l-x:f1:0"],
+         "the mechanism half of a mixed state map is %r" % (rs.get("mech"),)),
+        (rs.get("roster") == ["rc:segment-pub-seg:alpha-co", "rc:segment-pub-seg:beta-co"],
+         "the roster half of a mixed state map is %r" % (rs.get("roster"),)),
+        (rs.get("mechRoom") == 2,
+         "two roster rows introduced today cost the mechanism deck %s of its 2 new slots "
+         "— opting into the roster deck must not shrink the mechanism deck's budget"
+         % (2 - (rs.get("mechRoom") or 0))),
+        (rs.get("rosterRoom") == 2,
+         "the roster deck drew %s new item(s) with 2 of its own rows introduced today" % rs.get("rosterRoom")),
+    ]
+    for ok, msg in split_checks:
+        cases += 1
+        if not ok:
+            err("roster deck: " + msg)
 
     ds = out["drillStudy"]
     cases += 1

@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.14w">
+  <meta name="build-version" content="v01.15w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -498,6 +498,25 @@
       text-decoration-color: var(--cl-line2); text-underline-offset: 3px; }
     .cl-drillcard .ti:disabled { cursor: default; text-decoration: none; color: var(--cl-muted); }
     .cl-drillcard .sb { font: 12px/1.6 var(--cl-mono); color: var(--cl-muted); margin-top: 7px; }
+    /* The roster deck's landing card (K2). Same shape as the drill card — they
+       are the same kind of object — but cool-toned rather than warn-toned,
+       because this deck is opt-in and optional rather than something falling
+       due. When it is off the card is quieter still: no accent border. */
+    .cl-rostercard { border: 1px solid var(--cl-line); border-left-width: 4px; border-radius: 10px;
+      background: var(--cl-card); padding: 14px 18px 16px; margin: 8px 0 4px; }
+    .cl-rostercard.on { border-color: var(--cl-accent); }
+    .cl-rostercard .lb { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--cl-faint); margin-bottom: 7px; }
+    .cl-rostercard.on .lb { color: var(--cl-accent); }
+    .cl-rostercard .ti { font: 700 19px/1.3 var(--cl-serif); color: var(--cl-ink); background: none;
+      border: 0; padding: 0; cursor: pointer; text-align: left; text-decoration: underline;
+      text-decoration-color: var(--cl-line2); text-underline-offset: 3px; }
+    .cl-rostercard .ti:disabled { cursor: default; text-decoration: none; color: var(--cl-muted); }
+    .cl-rostercard .sb { font: 12px/1.6 var(--cl-mono); color: var(--cl-muted); margin-top: 7px; }
+    .cl-rostercard .tg { font: 11px/1 var(--cl-mono); letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--cl-accent); background: none; border: 0;
+      padding: 6px 0 0; cursor: pointer; text-decoration: underline;
+      text-decoration-color: var(--cl-line2); text-underline-offset: 3px; }
     .cl-drill { background: var(--cl-card); border: 1px solid var(--cl-line); border-radius: 12px;
       padding: 22px 24px 20px; margin: 18px 0; }
     .cl-drill .mt { display: flex; gap: 12px; align-items: center; margin-bottom: 14px;
@@ -5167,7 +5186,7 @@ function clApplyProgressUI() {
         : (st.ticks ? st.ticks + ' / ' + st.total + ' sections' : st.total + ' sections');
     }
   }
-  if (!clCurDoc) { clRenderNext(shell); clRenderDrillCard(shell); }
+  if (!clCurDoc) { clRenderNext(shell); clRenderDrillCard(shell); clRenderRosterCard(shell); }
   var rollups = shell.querySelectorAll('.cl-rollup[data-lessons]');
   for (var t = 0; t < rollups.length; t++) {
     var ids = (rollups[t].getAttribute('data-lessons') || '').split(',').filter(Boolean);
@@ -6101,6 +6120,18 @@ var clDrillText = {};         // id → {q, a, title} for study cards actually s
 var clDrillQueueArr = [];
 var clDrillPos = 0;
 var clDrillStats = null;
+// The roster deck (K2, CLASSROOM-CURRICULUM-PLAN.md §10.8) — a SECOND deck of
+// company cards beside the mechanism deck, opt-in and default off. The server
+// owns the enumeration, the caps and the opt-in flag; this file owns the
+// toggle, the second landing card and the #drill/roster view.
+//
+// clDrillQueueArr / clDrillPos are the ACTIVE VIEW's state, shared by both
+// decks because only one is ever on screen — clDrillLoadedDeck records which
+// deck filled them, so entering the other route resyncs instead of painting
+// the wrong cards. The two stats objects stay separate: both landing cards are
+// rendered at once on the index.
+var clRosterStats = null;     // res.roster from the mechanism cop=drill
+var clDrillLoadedDeck = null; // '' | 'roster' | null (nothing loaded yet)
 
 function clDrillHashJs(text) {
   var h = 5381, s = String(text == null ? '' : text);
@@ -6179,11 +6210,92 @@ function clDrillSync(cb) {
     if (res && res.success) {
       clDrillQueueArr = res.items || [];
       clDrillStats = res.stats || null;
+      clDrillLoadedDeck = '';
+      // The mechanism response carries the roster deck's opt-in state, so one
+      // op at mount populates both landing cards.
+      clRosterStats = res.roster || { enabled: false };
       clDrillLoadText(clDrillQueueArr, function() { if (cb) cb(); });
       return;
     }
     if (cb) cb();
   });
+}
+
+// The roster queue. Its own op parameter, so the two queues cannot be confused
+// for one another on the wire either.
+function clRosterSync(cb) {
+  clApi('drill', { deck: 'roster' }, function(res) {
+    if (res && res.success) {
+      clDrillQueueArr = res.items || [];
+      clDrillLoadedDeck = 'roster';
+      clRosterStats = {
+        enabled: true, due: (res.stats || {}).due, fresh: (res.stats || {}).fresh,
+        known: (res.stats || {}).known, pool: (res.stats || {}).pool,
+        sessionCap: (res.stats || {}).sessionCap, newCap: (res.stats || {}).newCap
+      };
+      // Roster cards travel with their payload, like lesson cards — nothing to
+      // fetch, so no clDrillLoadText round trip.
+      if (cb) cb();
+      return;
+    }
+    if (cb) cb();
+  });
+}
+
+// Flip the opt-in flag, then re-read both decks so the two landing cards and
+// the queue agree with the server rather than with an optimistic guess.
+function clRosterToggle(on) {
+  clApi('rosterdeck', { on: on ? '1' : '0' }, function() {
+    clDrillLoadedDeck = null;
+    clDrillSync(function() { if (!clCurLesson) clApplyProgressUI(); });
+  });
+}
+
+// The roster deck's landing card. Sits BELOW the drill card: what is falling
+// due outranks an optional second deck. Off is the default and reads as an
+// invitation rather than as a warning — nothing is overdue in a deck you have
+// not opted into.
+function clRenderRosterCard(host) {
+  var old = document.getElementById('cl-rostercard');
+  if (old && old.parentNode) old.parentNode.removeChild(old);
+  if (!host || !clRosterStats) return;
+  var on = !!clRosterStats.enabled;
+  var box = clEl('div', 'cl-rostercard' + (on ? ' on' : ''));
+  box.id = 'cl-rostercard';
+  box.appendChild(clEl('div', 'lb', 'Roster deck'));
+  if (!on) {
+    var offTi = clEl('div', 'ti', 'Company cards — off');
+    box.appendChild(offTi);
+    box.appendChild(clEl('div', 'sb',
+      'A second deck: which segment a company sits in, which role it holds there, '
+      + 'and the line from its own dossier that puts it there. Separate from the '
+      + 'lesson deck and off unless you turn it on.'));
+    var onBtn = clEl('button', 'tg', 'Turn the roster deck on');
+    onBtn.type = 'button';
+    onBtn.addEventListener('click', function() { clRosterToggle(true); });
+    box.appendChild(onBtn);
+  } else {
+    var due = clRosterStats.due || 0, fresh = clRosterStats.fresh || 0;
+    var btn = clEl('button', 'ti', due
+      ? due + (due === 1 ? ' company card to review' : ' company cards to review')
+      : (fresh ? 'Start learning ' + Math.min(fresh, clRosterStats.newCap || 10) + ' new company cards'
+               : 'All caught up'));
+    btn.type = 'button';
+    btn.disabled = !due && !fresh;
+    btn.addEventListener('click', function() { window.location.hash = 'drill/roster'; });
+    box.appendChild(btn);
+    box.appendChild(clEl('div', 'sb',
+      (clRosterStats.known || 0) + ' of ' + (clRosterStats.pool || 0) + ' company cards started'
+      + (fresh ? '  ·  ' + fresh + ' not yet seen' : '')
+      + '  ·  up to ' + (clRosterStats.sessionCap || 20) + ' per session'));
+    var offBtn = clEl('button', 'tg', 'Turn the roster deck off');
+    offBtn.type = 'button';
+    offBtn.addEventListener('click', function() { clRosterToggle(false); });
+    box.appendChild(offBtn);
+  }
+  var anchor = document.getElementById('cl-drillcard');
+  if (anchor && anchor.parentNode === host) host.insertBefore(box, anchor.nextSibling);
+  else host.insertBefore(box, host.firstChild);
 }
 
 
@@ -6197,13 +6309,14 @@ var CL_GRADES = [
   { g: 3, label: 'Easy',  hint: 'I knew it instantly' }
 ];
 
-function clShowDrill() {
+function clShowDrill(deck) {
+  var roster = deck === 'roster';
   clCurLesson = null; clCurLessonObj = null;
   var shell = clShell();
   if (!shell) return;
   shell.innerHTML = '';
   var top = clEl('div', 'cl-top');
-  top.appendChild(clEl('h1', null, 'Drill'));
+  top.appendChild(clEl('h1', null, roster ? 'Roster drill' : 'Drill'));
   var back = clEl('button', 'cl-back', '← All tracks');
   back.type = 'button';
   back.addEventListener('click', function() { window.location.hash = ''; });
@@ -6211,9 +6324,13 @@ function clShowDrill() {
   shell.appendChild(top);
   var host = clEl('div'); host.id = 'cl-drillhost';
   shell.appendChild(host);
-  if (!clDrillQueueArr.length) {
+  // Resync whenever the loaded queue belongs to the OTHER deck, not only when
+  // it is empty: the two decks share the active-view state, so arriving from
+  // the other route with cards still in hand would paint the wrong ones.
+  var want = roster ? 'roster' : '';
+  if (clDrillLoadedDeck !== want || !clDrillQueueArr.length) {
     host.appendChild(clEl('p', 'cl-loading', 'Building your queue…'));
-    clDrillSync(function() { clDrillPos = 0; clDrillPaint(); });
+    (roster ? clRosterSync : clDrillSync)(function() { clDrillPos = 0; clDrillPaint(); });
     return;
   }
   clDrillPos = 0;
@@ -6278,6 +6395,24 @@ function clDrillPaint() {
     src.appendChild(document.createTextNode('Study guide · '));
     src.appendChild(gl);
     if (txt.section) src.appendChild(document.createTextNode(' · ' + txt.section));
+  } else if (it.src === 'roster') {
+    // A roster card opens either the dossier the basis line was read off or the
+    // segment lesson's whole player table, which is where the row lives and
+    // where the comparison it is teaching actually reads.
+    var dl = clEl('button', 'lk', it.company || it.slug || '');
+    dl.type = 'button';
+    dl.addEventListener('click', function() {
+      window.location.href = 'Profiler.html#' + encodeURIComponent(it.slug || '');
+    });
+    var sl = clEl('button', 'lk', it.lessonTitle || it.lesson);
+    sl.type = 'button';
+    sl.addEventListener('click', function() {
+      window.location.hash = 'lesson/' + it.lesson + '/' + it.section;
+    });
+    src.appendChild(document.createTextNode('Roster · '));
+    src.appendChild(dl);
+    src.appendChild(document.createTextNode(' · '));
+    src.appendChild(sl);
   } else if (it.src === 'guidance') {
     // A guidance card opens its module scrolled to the section it came from —
     // the same #guidance/<id>/<section> route the library and the dossier
@@ -6328,9 +6463,12 @@ function clDrillGrade(it, grade) {
   clDrillPos++;
   clDrillPaint();
   clApi('grade', { id: it.id, grade: String(grade), hash: it.hash || '' }, function(res) {
-    if (res && res.success && clDrillStats) {
-      if (!it.seen) { clDrillStats.known++; clDrillStats.fresh = Math.max(0, clDrillStats.fresh - 1); }
-      else clDrillStats.due = Math.max(0, clDrillStats.due - 1);
+    // The server routes on the id's prefix; the page only has to credit the
+    // right deck's counters, so the two landing cards stay honest.
+    var st = it.src === 'roster' ? clRosterStats : clDrillStats;
+    if (res && res.success && st) {
+      if (!it.seen) { st.known++; st.fresh = Math.max(0, st.fresh - 1); }
+      else st.due = Math.max(0, st.due - 1);
     }
   });
 }
@@ -6348,7 +6486,8 @@ function clRoute() {
   if (g) { clShowGuidanceDoc(g[1], g[2] || ''); return; }
   clCurGuidance = '';
   clCurGuidanceObj = null;
-  if (h === 'drill') { clShowDrill(); return; }
+  if (h === 'drill') { clShowDrill(''); return; }
+  if (h === 'drill/roster') { clShowDrill('roster'); return; }
   var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
   if (m) clShowLesson(m[1], m[2] || ''); else clShowIndex();
 }
