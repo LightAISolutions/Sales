@@ -1,4 +1,4 @@
-var VERSION = "v01.69g";
+var VERSION = "v01.70g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -43184,6 +43184,7 @@ function clTrackMarketAccess_() {
   "contracts-and-revenue",
   "how-a-utility-buys",
   "the-certification-stack",
+  "what-bankable-means",
   "the-china-policy-stack",
   "utility-procurement-meets-ai-load"
  ],
@@ -45576,6 +45577,378 @@ function clLessonTheCertificationStack_() {
  ]
 };
 }
+// Phase 4 row 24 - what bankable concretely means. Authored from the
+// bankability module's bankability, counterparty, checklist and sales-motion
+// sections, with DNV's and Sargent & Lundy's public study guides corroborating
+// the report's anatomy, the reliance instrument, the liability cap and the
+// owner's-engineer seat that sits beside the lender's. Four boundaries are
+// deliberate and a later revision should not quietly import across them.
+// 1 - THE SEQUENCE. Who appoints the engineer, who pays, where the report sits
+//     in the financing calendar and the conditions precedent it clears are
+//     already PUBLIC in how-a-storage-project-happens, which teaches them in a
+//     timeline item and two flashcards. This lesson names that once, in its
+//     first paragraph, and then goes inside the report.
+// 2 - THE CURVE. Degradation, the warranty floor and augmentation as a design
+//     decision are public in duration-and-degradation, which already carries
+//     'a curve that is optimistic by two points a year moves an augmentation
+//     event forward by years'. This lesson takes only the money half of that
+//     sentence - the haircut, the downside case and the debt sizing - and
+//     credits the neighbour by title rather than re-teaching the physics.
+// 3 - THE SAFETY DOCUMENTS belong to the-certification-stack, which declared
+//     this handoff in its own header comment: 'the MONEY gauntlet (the IE
+//     report, the counterparty file, the RFP diligence checklist) is
+//     curriculum plan 3.5's next row and is not previewed here'. The
+//     declaration is honoured in both directions - the checklist table names
+//     those documents as file contents and says nothing about what a listing,
+//     a test method or an installation code is.
+// 4 - THE POLICY FENCE. FEOC, the material assistance cost ratio, 45X, the
+//     domestic-end-product test and the equipment-authorization question are
+//     the-china-policy-stack's. The trade-and-tax and cyber rows name the file
+//     and hand the instruments straight back to that lesson by title.
+// And one omission pointing the other way. landscape-assurance-2026-09
+// (contributor, v06.45r) ranks the PARTIES that sell this seat and finds that
+// the segment sells authority in four separable pieces of which no member
+// holds all four. It deliberately does not teach what an IE report contains,
+// what the contract skeleton is, or what the diligence checklist asks; and it
+// names reliance as the segment's first buying criterion and the reliance
+// letter as its instrument while leaving what that letter does inside a
+// financing to this row. That gap is the last paragraph of the-ie-report.
+// NOT taken, on purpose: that module's finding that one firm sells the
+// lender's report and certifies the products those reports assess is the
+// landscape's own, and the-certification-stack already notes the
+// author-certifies-its-own-practice case once. This lesson teaches the
+// independence discipline and does not restate either instance.
+function clLessonWhatBankableMeans_() {
+  return {
+ "schemaVersion": 1,
+ "id": "what-bankable-means",
+ "type": "module",
+ "title": "The Independent Engineer's Report",
+ "short": "Lenders close on an engineer's report, not a brochure: what it tests, the four promises it reads, the screens behind it, and the file that answers all three.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-01-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:bess-bankability-2026-08",
+    "date": "2026-09-13",
+    "note": "the spine - what bankable concretely means, the contractual skeleton, the scorecards buyers consult, the counterparty file and the ten-item RFP diligence checklist, plus the sales-motion implications"
+   },
+   {
+    "kind": "public",
+    "ref": "study:dnv",
+    "date": "2026-09-04",
+    "note": "the IE report section by section and what each part is really testing; bankability as a property of the package; the five parties and what each wants the engineer to say; degradation as the leak and the three augmentation questions; where a degradation curve comes from and why a vendor curve is haircut; reliance, the liability cap and the confidentiality that follows; the vendor-commissioned bankability report as a document about the seller"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sargent-lundy",
+    "date": "2026-09-04",
+    "note": "the owner's engineer as the second seat wearing the same competence, the asymmetry that creates it, and why an engineer paid by the party it reviews is not independent of it"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "the shared vocabulary this lesson leans on rather than redefining - bankability, independent engineer, reliance letter, LTSA, liquidated damages, availability guarantee, capacity test, round-trip efficiency, state of health, cycle life, energy throughput, augmentation, degradation, drawdown, prudence review, factory audit, parent company guarantee, surety bond, FEOC, material assistance cost ratio and the tax-credit terms"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "Appointed by the lender",
+   "v": "paid by the borrower",
+   "sub": "The sponsor pays for a report it does not commission and cannot soften. That asymmetry is the whole product: a report whose author the borrower chose is worth nothing to the bank."
+  },
+  {
+   "k": "One finding",
+   "v": "the commonest finding on a battery project",
+   "sub": "A use case the design or the warranty cannot support. Two cycles a day against a one-cycle warranty is a plant whose guarantee lapses the day it opens."
+  },
+  {
+   "k": "72%",
+   "v": "of manufacturing defects are now found at system level",
+   "sub": "Fire detection and suppression 28 per cent of those findings, auxiliary circuit panels 19, thermal management 15. Cell quality is no longer where most defects live."
+  },
+  {
+   "k": "Six files",
+   "v": "and completeness is the differentiation",
+   "sub": "The ten standing diligence requests group into six folders. Most bidders assemble them after they are asked, which is the whole opportunity."
+  }
+ ],
+ "glossary": [
+  {
+   "t": "credit committee",
+   "d": "The body inside a lender that approves or refuses a loan. It never meets the equipment, so everything it decides rests on documents other people signed - which is what makes an independent report worth commissioning."
+  },
+  {
+   "t": "pro forma",
+   "d": "The project's financial model: the spreadsheet that turns capacity, efficiency, degradation, availability, operating cost and contracted revenue into a cash flow the debt is sized against. Every technical number in it is something the engineer either confirms or reduces."
+  },
+  {
+   "t": "operating envelope",
+   "d": "The conditions a long-dated performance warranty is conditioned on - a maximum cycle count per year, a depth-of-discharge window, a temperature band and sometimes a resting state of charge. Running outside it voids the guarantee rather than reducing it, so it is the term to read before the headline percentage."
+  },
+  {
+   "t": "energy-retention warranty",
+   "d": "The supplier's promise that a battery will still hold a stated fraction of its original energy after a given number of years or cycles, delivered as an annual retention table rather than a single number. It is the physics of degradation written as a commercial obligation, and it is only as good as the party giving it."
+  },
+  {
+   "t": "commissioning guarantee",
+   "d": "The promise that the finished plant will meet its contracted capacity and round-trip efficiency when they are measured at handover. It is tested once, on a date, by a witnessed test - and it says nothing about any later year."
+  },
+  {
+   "t": "haircut",
+   "d": "An adviser's downward adjustment to an assumption it cannot verify: a degradation curve reduced, an availability figure cut, a production estimate trimmed. The model is re-run on the lower number, so a haircut is not a criticism filed somewhere - it is a smaller loan."
+  },
+  {
+   "t": "debt sizing",
+   "d": "How much a lender will actually lend against a project: the amount that keeps its coverage ratio above a floor in its own downside case. It is the number every technical assumption eventually moves, which is why an optimistic input costs equity rather than credibility."
+  },
+  {
+   "t": "BNEF Tier 1",
+   "d": "BloombergNEF's quarterly energy-storage financeability screen: six eligible projects in two years, each at least 10 MW or 10 MWh, across at least three unaffiliated buyers, from a manufacturer that owns its plants - and, since the 15 August 2026 methodology, at least one of them financed with non-recourse debt from two or more different commercial banks. A screen, not a quality award."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-ie-report",
+   "title": "What the report tests",
+   "kind": "prose",
+   "read": "8 min",
+   "ps": [
+    "**Bankable is the lender's word, and it describes a package rather than a battery.** A project is bankable when a {{credit committee}} will approve the loan - meaning it believes the cash flows repay the debt even when things go moderately wrong. Nothing about the hardware confers that. Technology, contracts, counterparties, permits and forecasts are judged together by a ring of advisers, each answering one question the lender cannot answer itself, and the report the others lean on is the {{independent engineer}}'s - because every one of their questions eventually reduces to whether the plant will perform. Who appoints it, who pays for it and where it sits in the financing calendar are taught in *From Site Control to Commercial Operation*; this lesson is about what is inside it, and about what a seller can have in the file before anybody asks.",
+    "**The report follows a recognisable order, and each part is testing something other than what it appears to cover.** The technology review reads the cell, module and rack design, the {{PCS}}, the {{BMS}} and the {{EMS}}, and the field record of that exact product generation - it is asking whether this is proven equipment or a first-of-a-kind dressed as one. The design review sets the dispatch the {{pro forma}} assumes against the plant's electrical and thermal design and against the warranty envelope. The contract review reads the {{EPC}} contract, the supply and warranty terms, the {{LTSA}} and the {{offtake}} to see whether the risks the model assigns to other parties are actually theirs on paper. The model-input section validates capacity, efficiency, {{degradation}}, availability, operating cost and the cost and timing of {{augmentation}}. Permitting and safety asks whether the plant can lawfully be built and run where it stands. Schedule and budget asks whether it reaches {{commissioning}} before the offtake or tax-credit deadline. Then two parts that run after the money starts moving: construction monitoring, where each {{drawdown}} is certified and no certificate means no disbursement, and commissioning, where the {{capacity test}} and the {{round-trip efficiency}} test are witnessed rather than reported.",
+    "**The single most common finding on a battery project is a use case the design or the warranty cannot support**, and it is worth carrying in its exact form: the revenue model cycles the plant more often than the warranty permits. Two cycles a day against a one-cycle warranty is a plant whose guarantee lapses the day it opens. What makes it common is not carelessness. The offtake was bid by one team against a market shape; the warranty was negotiated by another against a test programme; the two documents were written months apart in different units, one in dollars per megawatt-hour and the other in cycles, {{depth of discharge}} and degrees. Nobody reads them side by side until the engineer does, and by then both are signed.",
+    "**The report is narrower than the word suggests, and the boundary is where sellers lose meetings.** The engineer validates every technical number the model contains and does not opine on price: what merchant energy is worth over the debt term is the market consultant's question, whether the contracts are enforceable is counsel's, and what is insurable at what premium is the broker's. Four advisers read the same project and each writes to a different question, so a seller who answers the wrong one has answered nobody. What is being asked for is the tell, and the sales line below is the whole of it.",
+    "**And two different documents in this market carry the word bankability on the cover.** A vendor-commissioned bankability report is written about a manufacturer, for that manufacturer, and paid for by it: financial strength, manufacturing capacity, service network, product track record. That is the counterparty half of the lender's question and it is real evidence. What it is not is a statement about any project. The record carries a storage product that received independent bankability reports from two assessors at once - two stamps bought together, and still no answer to whether a given plant's contracts, schedule and model hold up. **The engineer's report is project-specific, appointed by the lender, and about the borrower's plant rather than about you.** Offer the vendor report as what it is and it does work; offer it as the answer and the reader learns something about you that you did not mean to disclose.",
+    "**Reliance decides who may act on the report, and it is a document rather than a courtesy.** The engineer's duty of care runs to the party that appointed it. Anybody else who wants to rely - a {{tax equity}} investor joining later, a bond trustee, a buyer of the project in year five - needs a {{reliance letter}}, a short agreement extending that duty to a named party, normally on the original terms and under the original liability cap. **The cap is the tell.** Firms limit liability to a multiple of their fee or a fixed sum, so against a financing of several hundred million the engineer's exposure is a rounding error next to the lender's. That is the price of having any independent party willing to sign, and it fixes what the report is for: it is information, not insurance. The bank cannot recover its loan from the engineer if the engineer was wrong, which is precisely why it reads the report instead of filing it. The same arrangement explains why these reports are almost invisible from outside - they are lender deliverables under non-disclosure, and reliance letters name banks."
+   ],
+   "sales": "Work out which of the four advisers is asking before you answer. The engineer wants test data, a warranty and a service scope; the broker wants a loss record; counsel wants the contract; the market consultant wants nothing from you at all."
+  },
+  {
+   "id": "the-contract-skeleton",
+   "title": "The four promises",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The equipment side of a financeable project is four promises with support standing behind them. Each is given by a different party at a different moment, and each is silent about exactly what the others cover - which is what the last two columns are for.",
+   "cols": [
+    "Promise",
+    "Who gives it, and when",
+    "The condition it hangs on",
+    "What it does not cover"
+   ],
+   "rows": [
+    [
+     "**{{commissioning guarantee}}**",
+     "The supplier or the {{EPC}}, depending on how the plant was bought; tested once, at the {{commercial operation date}}",
+     "A witnessed {{capacity test}} and a {{round-trip efficiency}} test, measured at handover against the contracted numbers",
+     "Anything after that day. A plant that passes at handover and then fades quickly has satisfied this promise in full"
+    ],
+    [
+     "**{{energy-retention warranty}}**",
+     "The {{system integrator}} or the cell supplier, for a term of ten to twenty years",
+     "The plant staying inside its {{operating envelope}} - a cycle count per year, a {{depth of discharge}} window, a temperature band, sometimes a resting {{state of charge}}",
+     "Operation outside the envelope, which voids the guarantee rather than reducing it. Read the envelope before the retention percentage"
+    ],
+    [
+     "**{{availability guarantee}}**, delivered through the {{LTSA}}",
+     "The supplier, through the long-term service agreement, across the service term",
+     "Measured hours available over a period, with {{liquidated damages}} attaching to any shortfall",
+     "Performance. A plant that is available and has faded is still available, which is why retention and availability are two promises and not one"
+    ],
+    [
+     "**{{liquidated damages}}**",
+     "The contractor or supplier, written into the contract long before anybody is late",
+     "The miss itself. A pre-agreed sum falls due per day of delay or per unit of shortfall, without the owner proving its loss",
+     "Anything past the cap. Whether the cap reaches the financing's outside date is arithmetic rather than argument, and the engineer does the arithmetic"
+    ],
+    [
+     "**Counterparty support**",
+     "A corporate parent, an insurer or a surety, at signature rather than after a supplier is already in difficulty",
+     "The named instrument existing and being documented: a {{parent company guarantee}}, warranty insurance, a {{surety bond}}, escrowed spare parts, or a service agreement backed by an entity that will still be there",
+     "More than its own wording. A guarantee capped at contract value may not reach the loss the buyer is actually afraid of"
+    ]
+   ],
+   "note": "**Read the second column down and the structural problem appears: these can be four promises from three different parties.** The engineer's contract review asks whether the risks the model hands to other people are genuinely theirs on paper, so every extra signature is another paper trail to test and another party to point at somebody else when performance is short. **What the safety documents behind this table are - a listing, a test method, an installation code - is the subject of** *Listing, Test Method, Code* **and is deliberately not restated here.**"
+  },
+  {
+   "id": "the-scorecards",
+   "title": "The screens behind the seat",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**A scorecard is a screen, and a screen is a decision about whose file is worth opening.** None of the three instruments below is about your project and none of them is a quality award. What they do is tell a lender, a {{tax equity}} investor or a utility's evaluator whether a supplier is worth spending diligence hours on - and a supplier that fails a screen is rarely told so, because the conversation simply does not begin.",
+    "**The {{BNEF Tier 1}} storage list is the financeability screen the market actually runs, and it is a list of financings rather than of products.** Six eligible projects in two years, each at least ten megawatts or ten megawatt-hours, across at least three unaffiliated buyers, from a manufacturer that owns its plants. **On 15 August 2026 the criteria tightened** and the new clause is the one to know: at least one of those projects must have been financed with non-recourse debt from two or more different commercial banks. That is a screen a supplier can fail while its shipment volumes rise, because volume was never the test - other people's banks lending against your equipment is. Nor is the list a Western club that a non-Chinese supplier passes by default: Chinese manufacturers held about eighty-five per cent of the second-quarter 2026 list. Check your own project list against the clause before a buyer checks it for you, and never call the list a quality tier in a room where somebody knows better.",
+    "**The second instrument exists because a vendor's own curve cannot be taken at face value.** A {{degradation}} curve comes from testing under conditions the tester chose, and two vendors quoting {{cycle life}} rarely mean the same thing by it. An independent laboratory series fixes those conditions - the {{depth of discharge}}, the current rates, the temperatures, the rest periods, the measurement method - and runs cells through the duty profiles a grid plant actually sees rather than the tidy full cycles of a datasheet. The published example is DNV's annual battery performance scorecard, and its sharpest finding is about safety rather than fade: **thermal-runaway onset temperatures are vastly different across cells that all pass the same standard.** A listing says a product met a threshold; a test series says by how much. Where such data exist the engineer sets them against the warranty; where they do not, the engineer applies a {{haircut}}.",
+    "**The third instrument is the factory audit, and what it now finds has moved.** Factory-audit reporting in this lesson's source records that **seventy-two per cent of storage manufacturing defects are now found at system level** rather than at cell level, with fire detection and suppression twenty-eight per cent of those system-level findings, auxiliary circuit panels nineteen and thermal management fifteen. Cell quality is no longer where most defects live. Two things follow. In-line {{factory audit}} rights and pre-shipment inspection are standing requirements rather than a concession a seller grants under pressure. And the defects that matter sit in the parts of a container a spec sheet does not describe - the detection loop, the auxiliary panel, the cooling circuit - which is where an inspector will look and where a supplier's own quality story should therefore start.",
+    "**And one instrument gets cited for this product although it does not exist.** The best-known independent scorecard in the adjacent solar market is a photovoltaic-module series, and the source this lesson is built on says that no dedicated battery-storage equivalent from that publisher was confirmed. A proposal that cites one is citing a document nobody can produce, which is worse than citing nothing: the reader who knows stops believing the rest of the page. The rule is the same one the safety vocabulary needs - name the instrument, and if you cannot name it, do not claim it.",
+    "**Together the three answer the counterparty half of the engineer's question and none of the project half.** The screen says a supplier is financeable in general. The laboratory series says how a cell behaves under stated conditions. The audit says how a factory behaves. **What none of them says is whether this plant, on these contracts, at this duty cycle, repays this debt** - which is the question the report exists to answer, and the reason the file in the next section is assembled per project rather than kept on a shelf."
+   ],
+   "sales": "Lead with the screen you pass, the independent laboratory data you hold and the audit you will invite, in that order and each as a document. A supplier that offers factory-line access before it is demanded has answered a question the buyer had already decided to ask."
+  },
+  {
+   "id": "the-rfp-checklist",
+   "title": "The diligence file, grouped",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "A composite of 2025-26 utility-scale solicitation and engineer data requests, grouped into the folders they actually belong in. **The source's own verdict is that arriving with all of it assembled is the differentiation** - not because any item is hard, but because most bidders assemble them after they are asked.",
+   "cols": [
+    "File",
+    "What the buyer asks for",
+    "What it proves, and the gap that shows up"
+   ],
+   "rows": [
+    [
+     "**Safety**",
+     "{{UL 1973}} and {{UL 9540}} listings from a recognised laboratory, with the conversion equipment's own grid-interconnection evidence; complete {{UL 9540A}} reports with the edition named; the {{large-scale fire test}} result stating which procedure was used; the {{NFPA 855}} package - hazard-mitigation-analysis support, spacing drawings, gas detection design, an emergency response plan template, a first-responder training offer; and {{UN 38.3}} test summaries with the dangerous-goods shipping documentation",
+     "That the product may lawfully be shipped, installed and permitted. **The gap is completeness rather than existence** - a 9540A report at some levels and not others, or a line that says only that the test was done. What each of these documents is, and is not, is the subject of *Listing, Test Method, Code*"
+    ],
+    [
+     "**Performance**",
+     "Independently validated {{cycle life}}, {{degradation}} and {{round-trip efficiency}} data; the {{energy-retention warranty}} with its term, its annual {{state of health}} table and its {{operating envelope}}; the {{availability guarantee}}; {{energy throughput}} terms; the {{liquidated damages}} regime; the {{LTSA}} scope; and the {{augmentation}} plan",
+     "That the numbers in the {{pro forma}} came from somewhere. **The gap is the envelope** - a warranty quoted as a retention percentage with its conditions in an annex nobody attached"
+    ],
+    [
+     "**Counterparty**",
+     "Audited financial statements; a {{parent company guarantee}}, warranty insurance or a {{surety bond}}; named bank references; and quantified operating-fleet references - energy delivered, availability achieved, projects named",
+     "That somebody will still be standing in year twelve. **The gap is quantification** - a fleet described in gigawatt-hours shipped rather than in availability achieved on sites a reader can look up"
+    ],
+    [
+     "**Trade and tax**",
+     "Country-of-origin and tariff-classification documentation; domestic-content declarations; {{FEOC}} and {{material assistance cost ratio}} certifications with the cost breakdowns behind them; and recapture indemnities",
+     "That the project's {{ITC}} survives a later examination. **The gap is the breakdown** - a certification a supplier will sign without the arithmetic that supports it. The instruments themselves, and what a seller can and cannot certify, are the subject of *Four Levers and One Order*"
+    ],
+    [
+     "**Quality**",
+     "Pre-shipment inspection and in-line {{factory audit}} rights; factory and site acceptance test protocols; and non-conformance reporting",
+     "That the units arriving resemble the unit tested. **The gap is the rights rather than the protocols** - documents are offered readily and access to the line is negotiated slowly"
+    ],
+    [
+     "**Cyber and equipment authorization**",
+     "{{EMS}} and {{BMS}} architecture; a software bill of materials; firmware chain of custody; a remote-access policy; and, for every grid-tied conversion unit, its equipment-authorization status and the ground that status stands on",
+     "That a remotely reachable asset on somebody's grid has a provenance. **The gap is that this file is the newest** - this lesson's source calls the cybersecurity dossier responsive rather than decorative now, and the authorization question in particular is *Four Levers and One Order*'s to explain"
+    ]
+   ],
+   "note": "**Ten standing requests, six folders, and one habit that decides the bid.** The list is not ordered by importance; it is ordered by who is asking. The safety file is the fire marshal's question arriving through the buyer, the trade file is tax counsel's, the quality file is the buyer's own inspector's, the cyber file is a security reviewer's, and the performance and counterparty files are the engineer's. **A bidder that keeps one folder answers all six questions slowly**, and each gap in the third column is invisible to everybody except the one reader who asked for that folder.",
+   "sales": "Assemble the six folders once, per product generation, and keep them current. The bid you win on this is the one where the buyer had three technically acceptable offers and picked the one whose diligence did not need chasing."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**1 - A warranty sold without the service agreement behind it.** A supplier will generally not give a long-dated {{energy-retention warranty}} on a plant that somebody else maintains, because the {{LTSA}} is what holds the plant inside the {{operating envelope}} the warranty is conditioned on. A bid that unbundles the two looks cheaper and arrives in diligence with a promise nobody is contractually able to keep honest. Lenders have moved the other way and now expect availability-anchored service structures as standard.",
+    "**2 - A curve two points optimistic.** What that does to the plant is taught in *Duration, Degradation, and the Twenty-Year Promise*: an augmentation event moves forward by years. What it does to the money is this lesson's half. The engineer does not delete an optimistic curve - it applies a {{haircut}}, the {{pro forma}} is re-run on the lower number, the downside case worsens, the {{DSCR}} floor bites earlier and the {{debt sizing}} falls. The project does not stop; it gets less debt, and the difference is made up in equity priced for a different return. **A curve argued in a sales meeting is argued again, far more expensively, in a credit meeting.**",
+    "**3 - Augmentation costed in the model and nowhere to put it.** The engineer asks three questions of every augmentation assumption: is it costed, is there physical room for it - empty rack positions, spare conversion and transformer headroom, a fire-code layout that anticipates it - and will a supplier still be selling a compatible product when the year arrives. All three have to hold. A model that assumes augmentation on a site built full is a contradiction between two documents that are each perfectly defensible alone, which is exactly why it survives until somebody reads both.",
+    "**4 - Assurances where the file wanted documents.** The counterparty half of the question is answered in instruments: a {{parent company guarantee}}, warranty insurance or a {{surety bond}}, escrowed spare parts, a service agreement backed by an entity that will still exist, named bank references, quantified fleet performance, and factory-audit invitations offered before they are demanded. A supplier that answers with adjectives about its own size and stability has produced nothing a {{credit committee}} can read.",
+    "**5 - The vendor's own bankability report offered as the project's answer.** It is evidence about a seller, bought by that seller. Two of them bought at once are still evidence about a seller. Hand it over as counterparty evidence and it does real work; hand it over when the question was about this plant's contracts, duty cycle and schedule, and it answers a question nobody asked.",
+    "**6 - A supplier that cannot survive a {{prudence review}}.** In a regulated channel the buyer's real audience is a hearing examiner some years later, and a cost found imprudent when it was incurred is disallowed and falls on shareholders rather than customers. That review is why a regulated buyer is so attentive to a supplier's file, and why a product that cannot survive it is unsellable in those channels at any price - not expensive, unsellable. The machinery of the review itself belongs to the public lesson *The Regulated Machine*."
+   ],
+   "note": "**Only one of these six is a contradiction between two documents - the model that assumes augmentation on a site with nowhere to put it.** Two more are a supplier answering with the wrong kind of object, one is an assumption the evidence will not carry, one is a bid structured to win on price and lose in diligence, and the last is a channel a product does not fit. **What all six share is when they are found.** Every one is cheap to find in the week the bid is written and expensive to find in the month before close - and the two that hide longest are caught by one habit: for every number in the model, ask which document it came from and which other document has to agree with it."
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "kind": "flashcards",
+   "read": "4 min",
+   "cards": [
+    {
+     "q": "A buyer asks for your bankability documentation and you hold two vendor-commissioned bankability reports on the product. What have you got, and what have you not got?",
+     "a": "Evidence about the seller. A vendor bankability report is written about a manufacturer, for that manufacturer, and paid for by it - financial strength, manufacturing capacity, service network, product record - which is the counterparty half of a lender's question and is genuinely useful there. What it is not is a statement about any project. The project document is the {{independent engineer}}'s report: appointed by the lender, specific to one plant, and about whether that plant's design, contracts, schedule, budget and model inputs hold together. Two vendor stamps bought at once are two answers to the same half of the question."
+    },
+    {
+     "q": "Name the four promises the equipment side of a financeable project is made of, and say what each one is conditioned on.",
+     "a": "A **{{commissioning guarantee}}** - capacity and {{round-trip efficiency}} measured once, at the {{commercial operation date}}. An **{{energy-retention warranty}}** - a retention table, conditioned on an {{operating envelope}} the plant has to stay inside. An **{{availability guarantee}}**, delivered through the {{LTSA}} and measured in hours available. And **{{liquidated damages}}**, payable on the miss without the owner proving its loss, and capped. Behind all four sits counterparty support - a guarantee, insurance, a bond or escrowed spares."
+    },
+    {
+     "q": "The BloombergNEF Tier 1 storage criteria tightened on 15 August 2026. What was added, and why can a manufacturer fail the screen while its shipments rise?",
+     "a": "At least one of the six qualifying projects must now have been financed with non-recourse debt from two or more different commercial banks. The screen has never counted volume - it counts financings other people's banks were willing to lend against. A manufacturer selling hard into balance-sheet buyers, or into projects financed by a single relationship bank, accumulates gigawatt-hours and no qualifying financings. It is a financeability screen rather than a quality tier, and calling it one is a vocabulary error a diligence reader will notice."
+    },
+    {
+     "q": "Where are most battery-storage manufacturing defects found today, and what did that change about what a buyer asks for?",
+     "a": "At system level rather than at cell level - about seventy-two per cent of them on the factory-audit data behind this lesson, with fire detection and suppression twenty-eight per cent of the system-level findings, auxiliary circuit panels nineteen and thermal management fifteen. The cell is no longer the likeliest place for a defect to be. The consequence is that in-line {{factory audit}} rights and pre-shipment inspection are standing requirements rather than concessions, and that an inspector's attention is on the parts of a container a spec sheet does not describe."
+    },
+    {
+     "q": "A financial model assumes augmentation in years seven and twelve. What three things does the engineer check before accepting it?",
+     "a": "Whether it is costed in the {{pro forma}}; whether there is physical room for it - empty rack positions, spare conversion and transformer headroom, a fire-code layout that anticipates it; and whether a supplier will still be selling a compatible product when the year arrives. All three have to hold, and the third is the one people forget: a compatible product has to still be on sale when year seven arrives."
+    },
+    {
+     "q": "An engineer's liability on a several-hundred-million-dollar financing is capped at a multiple of its fee. Why is that not a scandal, and what does it tell you about what the report is for?",
+     "a": "It is the price of having any independent party willing to sign at all; without one, few firms would take the engagement. What it fixes is the report's role - it is information, not insurance. The bank cannot recover its loan from the engineer if the engineer was wrong, so the report exists to help the lender decide rather than to transfer the risk of deciding. The same logic governs reliance: a third party acquires the engineer's duty of care only through a {{reliance letter}}, and the letter carries the original cap with it."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A developer's revenue model cycles the plant twice a day; the supplier's warranty permits one. The engineer finds it four months before financial close. What actually happens?",
+     "c": [
+      "Either document can move before close - the revenue case is cut to the envelope, or the warranty is rewritten - and if neither moves the debt is sized on the smaller case",
+      "The warranty is void from the first day of operation, so the plant is uninsurable and the lenders withdraw their commitment before close",
+      "Nothing at all, because a warranty is a matter between the developer and its supplier, while the lender's security is the offtake contract and the plant standing behind it",
+      "The engineer issues a qualified report, which the sponsor cures by commissioning a second opinion from an engineer of its own choosing"
+     ],
+     "a": 0,
+     "why": "The finding is a contradiction between two signed documents, and it is resolved commercially rather than fatally. **The engineer does not stop the project; it prices it.** The warranty is not void until the plant is actually run outside its {{operating envelope}} - the risk is that it will be - so nothing is uninsurable on the day. And the lender's security depends directly on whether the plant can perform what it contracted to, which is why this is not the supplier's private business. The second opinion is the answer that most misunderstands the seat: the lender appointed the engineer, so the sponsor cannot replace a report it is merely paying for."
+    },
+    {
+     "q": "Which of these does an independent engineer's report deliberately not opine on?",
+     "c": [
+      "Whether the degradation curve in the model is supported by independent test evidence",
+      "Whether the schedule is credible against long-lead deliveries",
+      "Whether the plant as designed can meet the offtake contract's performance requirements",
+      "What merchant energy prices do over the debt term, and what the plant earns from them"
+     ],
+     "a": 3,
+     "why": "The engineer validates every **technical** number in the model and is silent on price. Merchant revenue is the market consultant's question, legal enforceability is counsel's and insurability is the broker's. The other three are squarely the engineer's - the degradation evidence, the schedule against {{long-lead item}} deliveries, and the design against the contract's performance requirements. **Knowing the boundary saves a meeting**: a seller who arrives with a price view for the engineer, or with test data for the broker, has prepared for the wrong reader."
+    },
+    {
+     "q": "A supplier ranked in the global top three by shipments last year is absent from the BloombergNEF Tier 1 list. What is the likeliest explanation?",
+     "c": [
+      "The list is a quality ranking republished each quarter, so the product must have failed one of the independent laboratory tests behind it",
+      "The screen counts qualifying financings rather than volume, and at least one must now be non-recourse from two or more commercial banks",
+      "The list admits only manufacturers that outsource production, which excludes anybody who owns the plants making its cells",
+      "Tier 1 status lapses automatically once a manufacturer has had its first warranty claim on a listed project"
+     ],
+     "a": 1,
+     "why": "Tier 1 is a **financeability screen** and never a quality award. Its criteria count project financings across unaffiliated buyers, from a manufacturer that **owns** its plants, with at least one of them now non-recourse from two or more commercial banks. So owning plants is a requirement rather than a disqualifier, and a maker selling into balance-sheet buyers can be enormous and still have no qualifying financings. Laboratory results and warranty claims are different instruments entirely - the list is assembled from project financings, not from test reports."
+    },
+    {
+     "q": "Why does an equipment supplier normally refuse to give a long-dated energy-retention warranty unless it also holds the long-term service agreement?",
+     "c": [
+      "Because the commissioning guarantee is witnessed by the buyer's engineer, and the supplier wants the same engineer for both tests",
+      "Because the liquidated-damages cap is negotiated per contract and the supplier needs both contracts to reach one cap",
+      "Because the service agreement is what actually keeps the plant inside the operating envelope the warranty is conditioned on",
+      "Because availability is measured in hours while retention is measured in megawatt-hours, and one contract cannot carry both units"
+     ],
+     "a": 2,
+     "why": "A retention promise holds only while the plant is operated inside the envelope the warranty names, and the {{LTSA}} is the instrument through which the supplier actually controls those conditions. Asked to warrant retention on a plant somebody else maintains, a supplier is being asked to guarantee an outcome it does not govern, which is why **lenders now expect availability-anchored service structures as standard**. The damages cap, the witnessing arrangement and the units of measure are all real features of these contracts and none of them is the reason."
+    },
+    {
+     "q": "A pension fund is buying an operating storage portfolio and finds the original lender's engineer report in the data room. What does its adviser tell it?",
+     "c": [
+      "That it may rely on the report, because the fund is stepping into the position of the party the report was addressed to at close",
+      "That the report is information until the engineer grants a reliance letter carrying the original liability cap",
+      "That the report is superseded by the commissioning test results and can be set aside for a plant already operating",
+      "That reliance follows automatically once the fund has paid the engineer a fee equal to the original engagement"
+     ],
+     "a": 1,
+     "why": "An engineer's duty of care runs to the party that appointed it, and buying the project does not buy the report. A named third party acquires the right to act on it only through a **{{reliance letter}}**, which the engineer may refuse, condition or charge for, and which normally carries the original cap. Nothing about the transaction transfers it automatically, and paying a fee is not the mechanism - the letter is. Commissioning results answer what the plant did on one day and say nothing about the contracts, schedule and model the report tested. Where no letter is available the buyer commissions its own {{technical due diligence}}."
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -45627,7 +46000,8 @@ function clLessons_() {
           clLessonDcFaultEngineering_(),
           clLessonUtilityProcurementMeetsAiLoad_(),
           clLessonTheChinaPolicyStack_(),
-          clLessonTheCertificationStack_()];
+          clLessonTheCertificationStack_(),
+          clLessonWhatBankableMeans_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

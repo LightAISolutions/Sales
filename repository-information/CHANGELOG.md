@@ -3,11 +3,49 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 113/100`
+`Sections: 114/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.46r] — 2026-09-17 09:22:06 PM EST
+
+> Author Phase 4 row 24 — the what-bankable-means mechanism lesson — on Opus 5 xhigh as a fresh session. This is ONE lesson. It authors no guidance module, no dossier and no report, it regenerates no segment, and it creates no track. S2 is CLOSED, so there is no interleave left: Phase 4 runs alone from here. [... full brief in `INTEGRATED-REMEDIATION-PLAN.md` §7.54 ...]
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+- **`clLessonWhatBankableMeans_()` — the fifty-fourth lesson, the FIFTH gated lesson Phase 4 has authored and the FOURTH in `market-access`**, id `what-bankable-means`, title *The Independent Engineer's Report*, group Market Access & Bankability, gate `guidance` (contributor+). Authored **inside** the `// CONTENT START` … `// CONTENT END` fence, registered at the **end** of `clLessons_()` and **inserted at index 5** of `clTrackMarketAccess_()` — §4 position 7 with positions 8 and 9 already built, so the programme's **fifth mid-array insert**
+- **Seven sections at curriculum plan §3.5's ids and order** — `the-ie-report` (prose, 6 paragraphs) · `the-contract-skeleton` (**table 4×5**) · `the-scorecards` (prose, 6) · `the-rfp-checklist` (**table 3×6** — the module's ten standing diligence requests regrouped into six folders, which is the *grouped* the spec asks for) · `where-it-fails` (callout, 6 items) · `drill` (6 cards) · `check-yourself` (quiz, 5 items at indices **0 · 3 · 1 · 2 · 1**, ranks 2 · 2 · 2 · 3 · 3 with **0 of 5 sole-longest and 0 of 5 sole-shortest**). Four tiles, an **eight-entry glossary with every entry used**, **95 `{{term}}` uses over 48 distinct, all resolving**. **The literal is 100 % ASCII**
+- **All four stamps pinned off documents fetched this run** — `guidance:bess-bankability-2026-08@2026-09-13` (its own `updated`), `study:dnv@2026-09-04` and `study:sargent-lundy@2026-09-04` (their own `lastUpdated`), `concepts:profiler-concepts@2026-09-13` (`git log -1 --format=%cs` on the **unshallowed** clone)
+- **`reviewBy` 2027-01-01 inherited** from the module and re-read off `Classroom.gs` on the day. The nearest-gate sort ran anyway across all four inputs: an ISO day-level sweep returned **one** future date and a word-form sweep **two**, and the one only the word-form sweep sees — **2026-10-01, PRC-029-1's effective date** — is the **grid** gauntlet this lesson excludes by name. **One rejection in writing.** The date taken is attested three ways inside one module
+- A **function header comment** enumerating **four deliberate boundaries** (the financing sequence, the degradation curve, the safety documents, the policy fence) and **one omission pointing the other way** (`landscape-assurance-2026-09` names reliance as its segment's first buying criterion and leaves what a reliance letter does inside a financing to this row), plus one finding deliberately not taken
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs` (versioning)
+- `VERSION` **v01.69g → v01.70g**; PROJECT region **3,848,938 → 3,892,311 bytes**
+
+#### `live-site-pages/gs-versions/Classroomgs.version.txt`
+- `|v01.69g|` → `|v01.70g|`
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+- **§6's and §7.3's Phase 4 rows flipped to 24 of 26**, row 24's record written into both, and **§7.55 written in both halves** for Phase 4 row 25, `reading-the-numbers` — index 3, public, `--check` forecast `9 → 9` derived from the parsed generator
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+- **§7 row 24 marked BUILT** with its full record; **§4's `market-access` table** updated at position 7 (and position 6's trailing note corrected — position 7 closed the same day), leaving **position 4 alone outstanding**
+- **§10.6 findings (pp1)–(pp8)** written; the `(pp…)` label is spent and the next session continues at `(qq1)`
+
+### Notes
+
+- **The denial measured base against head through the real `handleClassroomOp_`**, not reasoned about: analyst `market-access` **withheld 3 → 4** — the first track in the programme to reach four — visible cards hold at **4**, contributor and admin **7 → 8**, `cop=lesson` answers **`ROLE_DENIED`** with **0 of 7 section nodes** at **55 characters**, and the **analyst index payload is byte-identical at 42,265 characters** while the corpus goes 53 → 54. **(pp5): at base the same call answered `UNKNOWN_LESSON`**, so the channel an id-probing analyst can watch is the *transition*, not the state
+- **`build-classroom-segments.py --check` 6 → 9 due, derived from the parsed generator before the write and exact on BOTH halves.** Four segments name the lesson in `READ_NEXT`; one (`storage-integrators-and-containers`) was already due so could not raise the count per (p); all four also carry a matching criterion, so all four differ in `read-next` **and** `what-is-bought-and-on-what`. **(aa5) holds for a SEVENTEENTH session.** Nothing was regenerated
+- **(pp1): the `(planned)` leak measured corpus-wide rather than named.** 25 false renders across **9 segments** over **10 registered titles**, **five gated and five public** — so the leak is the standing cost of any registration landing after a segment's last regeneration, not of gated ones. This commit contributes **10 renders across 4 segments** for one title, the largest single-title leak the register has seen. §7.54's forecast of "one segment … to five" was wrong in both halves and the measurement caught it
+- **Checkers:** `check-classroom-content.py` **0 errors / 0 warnings at 54 lessons, 8 tracks, 142 gate cases**, module assertion **unchanged at 28**; `check-classroom-curriculum.py --strict` no structural findings, **28** stale pins, **4** items due (all pre-existing); `check-classroom-pipeline.py --selftest` **13 fixtures / 0 failures**; `--base origin/main` **P5 alone on the code paths** (the mid-array insert, correct by construction) plus P1 on the developer paths — no P2, P3, P7, P8 or P12; `node --check` and `check-gas-inner-scripts.js` clean
+- **Render:** contributor **29,450 characters, 7 section nodes plus the glossary, ZERO uncaught page errors**, 95 of 95 tooltips resolving against a 4,208-key map, zero unresolved `{{…}}`, zero literal asterisks, zero backticks; analyst **denied at the server** with **55 characters and 0 of 7 headings**, and the title never entering the analyst DOM
+- **Defect tally — (kk7) at a SEVENTEENTH consecutive session.** Seven pre-splice simulations with printed denominators (113 `clFmt` fields, 44 plain-text fields, 95 term uses over 48 distinct, 8 glossary entries, 5 quiz items, ~38,800 ASCII characters, the structural check) returned **one** failure — **(pp2)**, an italic title nested inside a bold span, introduced by an edit made to fix a *different* finding. The recount then caught **twenty-four** and the screenshots **nine more** with near-zero overlap. The recount's sharpest was an opening paragraph claiming the report judges forecasts while the paragraph three below says the engineer does not opine on price; the screenshots' sharpest was a table `note` promising six folders ordered by who asks and then naming the asker for **five**. **(pp3): the callout's own count of its six items was wrong, was corrected, and the correction was wrong too** — the second pass was computed from memory of the list rather than by re-walking it
+- **No rotation on any changelog.** This push lands on **2026-09-17 EST** (`TZ=America/New_York date` read 2026-09-17), so that day's sections stay exempt: `CHANGELOG.md` **114 raw / 97 non-exempt** against a 100 trigger with **seventeen** same-day sections, counter `Sections: 114/100`; `Classroomgs.changelog.md` **57 raw / 46 non-exempt** against a cap of 50 with **eleven** same-day; `Scrapergs.changelog.md` **41 / 36**. **All three deferrals lapse on the first push dated 2026-09-18 EST or later, and that session rotates `CHANGELOG.md` and `Classroomgs.changelog.md`**
 
 ## [v06.45r] — 2026-09-17 05:55:44 PM EST
 

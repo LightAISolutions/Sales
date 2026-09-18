@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 56/50`
+`Sections: 57/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.70g] — 2026-09-17 09:22:06 PM EST — v06.46r
+
+### Added
+
+- A new lesson has been added to the market course, placed between two existing ones so the reading order still runs from the product to the paperwork to the money. It explains what the technical review a lender commissions actually examines, the four promises that make up the equipment side of a financeable project and what each of them is silent about, the screens a buyer runs before it spends any diligence time on a supplier, and the file a serious bid arrives with already assembled. It requires a higher access level than the main course material
+- Eight new glossary definitions, available as hover tooltips anywhere those terms appear in the lesson
+
+### Changed
+
+- The market course now lists eight lessons instead of seven, and readers below the higher access level see the same four lessons as before with the withheld count moving from three to four
+- Minor internal improvements
 
 ## [v01.69g] — 2026-09-17 05:55:44 PM EST — v06.45r
 
