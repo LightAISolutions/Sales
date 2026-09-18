@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.76g] — 2026-09-18 02:38:34 PM EST — v06.53r
+
+### Added
+
+- **Three more rehearsals, and two of them are a different exercise.** The library now covers both halves of a sale for the two buyer types it started with, and adds a third. **Two of the three are discovery rehearsals** — instead of answering a position the buyer has already taken, you are in a first meeting working out who decides, what they are optimising and which decision is still open, and the section that used to carry the buyer's position now carries what the record does *not* settle, in the order a good conversation would take it. The last section becomes the question list you would actually walk in with.
+- **A rehearsal against a regulated buyer.** The third is an objection rehearsal in a market where the answer to "why not you" is a standard a regulator applies rather than a preference the buyer holds — which changes what a strong move looks like at every beat.
+- **Five rehearsals in the shelf, over four kinds of buyer.** Each still shows the seat you are selling from, the kind of buyer, the mode, the stage of the sale and how many of its ten sections you have finished, and carries a review-date chip. One of the three ships with its chip already amber, because the nearest dated event in its own record falls inside the next month — that is the chip doing its job rather than a mistake.
+
+### Changed
+
+- **Curriculum updated.**
 
 ## [v01.75g] — 2026-09-18 05:38:44 AM EST — v06.52r
 

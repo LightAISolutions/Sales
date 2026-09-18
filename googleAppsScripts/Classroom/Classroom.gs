@@ -1,4 +1,4 @@
-var VERSION = "v01.75g";
+var VERSION = "v01.76g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -47786,6 +47786,1116 @@ function clLessonScenarioAidcDevelopersAndLandlordsObjection_() {
 };
 }
 
+function clLessonScenarioStorageDevelopersAndIppsDiscovery_() {
+  return {
+ "schemaVersion": 1,
+ "id": "scenario-storage-developers-and-ipps-discovery",
+ "type": "scenario",
+ "title": "Rehearsal — One Supplier, No Offtaker",
+ "short": "Discovery rehearsal: a first meeting at Spearmint Energy, a merchant ERCOT owner four-for-four with one integrator and no offtaker in the file.",
+ "group": "The Value Chain",
+ "scenario": {
+  "mode": "discovery",
+  "seat": "storage-seller",
+  "segment": "storage-developers-and-ipps",
+  "counterparty": "spearmint-energy",
+  "stage": "discovery"
+ },
+ "updated": "2026-09-18",
+ "reviewBy": "2027-01-01",
+ "tiles": [
+  {
+   "k": "Spearmint Energy",
+   "v": "across the table"
+  },
+  {
+   "k": "Storage developers and IPPs",
+   "v": "the segment"
+  },
+  {
+   "k": "Discovery",
+   "v": "the exercise"
+  },
+  {
+   "k": "Discovery",
+   "v": "where in the sale"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "merchant",
+   "d": "Selling into the wholesale market at whatever price the market sets, with no contract fixing the revenue in advance. A merchant battery earns what the market pays that day; a contracted one earns what somebody agreed to pay."
+  },
+  {
+   "t": "tax equity",
+   "d": "An investor that funds part of a project in exchange for the tax credits and losses it generates rather than for the power it sells. Its diligence is a separate approval from the lender's and it usually has its own technical adviser."
+  },
+  {
+   "t": "augmentation",
+   "d": "Adding cells or whole racks to a battery part-way through its life so it still delivers the energy it was contracted to deliver after years of degradation. The plan for it, and who pays for it, is a term of the supply and service agreements rather than an afterthought."
+  },
+  {
+   "t": "material assistance cost ratio",
+   "d": "The share of a project's cost that must come from outside a prohibited foreign entity's supply chain for the project to keep its tax credit. It is indexed to the calendar year in which construction begins."
+  }
+ ],
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:spearmint-energy",
+    "date": "2026-09-05",
+    "note": "the record: the four-project single-integrator fleet, the capital stack with no sponsor and no offtaker, the stated FEOC position with no contract behind it, the two Minnesota permits and their unselected equipment basis"
+   },
+   {
+    "kind": "guidance",
+    "ref": "guidance:landscape-storage-developers-and-ipps-2026-09",
+    "date": "2026-09-14",
+    "note": "the seller's play (find the veto before you find the buyer; read the criteria against the project's vintage), the ratio-step indicator, the deferred foreign-entity guidance row that names this buyer, and this buyer's row in the bets table"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "id": "the-room",
+   "title": "The room",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "info",
+   "ps": [
+    "**You are the storage seller** — the commercial lead for an integrator, in a first meeting you asked for. There is no solicitation, no shortlist and no specification. You are here to find out how this buyer decides, and the honest answer is that you do not yet know.",
+    "**Across the table** sit the development function, the optimisation desk that dispatches the fleet, and the corporate-development office — three of the roles this buyer's own record names, and the three that between them touch a supply decision. **There is no chief financial officer on the published leadership page**, which matters less as a curiosity than as a clue: the seat you would normally expect to arbitrate a capital commitment is not on the org chart, so somebody else is doing it.",
+    "**On the table** is nothing. That is the point of the {{merchant}} account in this segment: the buyer has four batteries, one integrator and one construction contractor, no named offtaker anywhere in the file, and no obvious reason to talk to you. What it does have is two permitted projects in a second market whose equipment is explicitly not yet chosen, and a dated tax rule that decides what those projects may be built from.",
+    "**What you are rehearsing** is the discovery meeting — three questions asked in the order that makes the fourth one possible. The failure mode here is not losing the argument. It is spending the hour on the wrong number."
+   ],
+   "sales": "A first meeting with a merchant owner is not a pitch with questions in it. It is three questions, and you get the third one only if the first two were the right ones."
+  },
+  {
+   "id": "what-the-record-says",
+   "title": "What the record says",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The nine things you walk in knowing, each one a row of the ledger at the bottom of this scenario. Nothing in the three beats depends on a fact that is not here.",
+   "cols": [
+    "What you know",
+    "The record",
+    "Where it sits"
+   ],
+   "rows": [
+    [
+     "**The fleet, and that it is four-for-four**",
+     "Three operating two-hour ERCOT batteries totalling **350 MW / 700 MWh**, and a fourth of 300 MW / 600 MWh under construction — every one of them on the same integrator's product, every one built by the same construction contractor",
+     "the buyer's supplier relationships and its owned-fleet line"
+    ],
+    [
+     "**That nobody has contracted the output**",
+     "All of it is dispatched by the buyer's own optimisation team with **no named offtaker, hedge provider or revenue put** anywhere in the record",
+     "the buyer's owned-fleet line and its summary"
+    ],
+    [
+     "**What the market paid the fleet last year**",
+     "ERCOT battery revenue at about **USD 26–29 per kW in 2025** against USD 193 per kW in 2023; ancillary-service revenue down about 90 per cent since 2023 and the ancillary share of revenue down from 84 to 48 per cent; real-time co-optimisation with batteries went live in December 2025",
+     "the buyer's policy exposure, ERCOT market design"
+    ],
+    [
+     "**How it is financed, and by whom**",
+     "A **USD 325 million platform facility** from four private-credit lenders (June 2026), on top of project-level {{tax equity}} of USD 92 million and USD 252 million and a roughly USD 450 million package at the fourth project, part of which is repaid at commercial operation by about USD 126 million of transferred tax credit — **the credit buyer is unnamed**",
+     "the buyer's financing line and its capital-structure entry"
+    ],
+    [
+     "**That there is no sponsor behind it**",
+     "No corporate equity round, valuation or sponsor commitment has ever been announced; the single ownership statement in the record is a lender's, and the company names no owner itself",
+     "the buyer's financials and its own strategy read — **analysis**"
+    ],
+    [
+     "**The supplier question, as the buyer itself put it**",
+     "Company statements on the record: the foreign-entity rules are 'unquestionably a big issue', and the team 'took aggressive action in May 2024' and began evaluating suppliers in Europe, Japan and Korea. **No non-Chinese supplier has been contracted on the record, and no source quantifies the exposure**",
+     "the buyer's policy exposure, credit phase-down and foreign-entity restrictions"
+    ],
+    [
+     "**The clock on that question**",
+     "The {{material assistance cost ratio}} steps to its next calendar-year value on **1 January 2027**, rising from 55 per cent in 2026 toward 75 per cent in 2030 — every project is priced against the year its construction begins",
+     "the segment landscape, indicators"
+    ],
+    [
+     "**Where the equipment is genuinely unchosen**",
+     "Two permitted projects in a second market — the state's first standalone-storage site permit in August 2025 and a second on 16 July 2026 — are modelled in the regulator's own record on **a different vendor's enclosure, stated as a basis 'to allow flexibility during equipment selection'**. Neither is a supply contract, and construction is stated for the first quarter of 2027",
+     "the buyer's supplier relationships and its permitting exposure"
+    ],
+    [
+     "**Where a project has actually failed**",
+     "A plan commission denied a rezoning **unanimously on 12 November 2024** on fire risk and proximity to homes and a manufacturing plant, with a six-month reapplication bar; the fourth ERCOT project was approved in August 2025 only after rework and under a new battery-specific zoning district",
+     "the buyer's local zoning and fire-safety exposure"
+    ]
+   ],
+   "sales": "Read row six and row eight together. They are the only two rows where this buyer's record has an opening in it rather than an answer."
+  },
+  {
+   "id": "the-position",
+   "title": "What the record does not settle",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "**In discovery the counterparty has no position yet, and neither should you.** What this section carries is the three things the record leaves open, in the order a good conversation would take them — because each one only becomes answerable once the one before it has been answered.",
+    "**First: nobody in the file has told you who approves a supplier here.** The segment's own reading is that the parties who must approve a battery are the {{tax equity}} banks and the minority co-owners rather than the developer alone, and that a sponsor's diligence sits between a vendor and a signature. But this buyer has no sponsor, no named offtaker and no utility counterparty — so the chain the segment describes may not be this buyer's chain at all. What the record does give you is a list of parties with money in the fleet: four lenders on the platform facility, two named {{tax equity}} investors at project level, and an unnamed credit buyer at the fourth project. Which of them, if any, holds an approved-vendor list is exactly what the meeting is for.",
+    "**Second: the fleet's economics are an open question the buyer can answer and you cannot.** Every operating project is two-hour and {{merchant}}, in a market whose battery revenue fell by roughly four fifths in two years. The dossier's own judgment that realised revenue is running well below what the fleet was underwritten on is rated moderate confidence and says in terms that no revenue figure exists to confirm it. So the useful question is not what the fleet earned — that number has never been published to anybody — but what the existing service agreements allow the desk to do to it, and where the {{augmentation}} line sits in the model. Those are answerable from the buyer's own records, and the answer tells you what kind of supplier this account actually needs.",
+    "**Third: the supplier question is open in exactly one direction, and it is dated.** The company has said on the record that the foreign-entity rules are a big issue and that it began looking at suppliers in Europe, Japan and Korea in May 2024. No contract has followed in any source. Meanwhile two permitted projects in a second market carry a different vendor's enclosure as a *design basis* in a regulator's filing, reserved explicitly so equipment can be selected later, and construction is stated for the first quarter of 2027 — on the far side of the ratio step. That is an invitation to ask. It is not a weakness to name."
+   ],
+   "sales": "Discovery is not a pitch with questions in it. It is establishing, in order, who decides, what they are optimising, and which decision is still open."
+  },
+  {
+   "id": "beat-1",
+   "title": "Beat 1 — the opening",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The development lead opens plainly and without defensiveness. Four projects, one integrator, one construction contractor, all four delivered. The relationship works. They ask what you wanted to talk about.",
+   "items": [
+    {
+     "q": "What do you open with?",
+     "c": [
+      "Open on the product against the incumbent integrator — cycle life, round-trip efficiency and delivered cost per kilowatt-hour on a like-for-like block.",
+      "Ask who has to approve a supplier here rather than who prefers one: the four lenders on the platform facility, the two project-level tax-equity investors, the unnamed transferred-credit buyer — and whether any of them runs an approved-vendor list or a technical adviser you would have to clear.",
+      "Ask about the development pipeline the company has described at over fifteen gigawatt-hours, and which projects come next.",
+      "Ask whether they are looking to replace the incumbent integrator now that the foreign-entity rules have tightened."
+     ],
+     "a": 1,
+     "why": "**Option 2 asks the only question that makes the rest of the meeting possible.** This segment's first move is to find the veto before you find the buyer, and in a company with no sponsor and no offtaker the veto is not on the org chart — the parties with a documented say are the ones with money in the fleet, and the record names them. It is also a question the buyer can answer in one sentence without disclosing anything. **Option 1 ignores that you do not yet know what this buyer ranks first.** The segment's leading buying criterion is the engineer's acceptance and the lender's approved-vendor list, and price is settled after that; a like-for-like block comparison in the first ten minutes asks the room to rank on the criterion it ranks last. **Option 3 ignores what the record already says about that number.** The pipeline figure rose from ten to thirteen to fifteen gigawatt-hours in eighteen months, was dropped from the company's own boilerplate on 21 May 2026, and its identifiable pieces are a small fraction of it — so you would be spending the meeting on the least reliable figure in the file. **Option 4 ignores the difference between a question and an accusation.** It asks the buyer to concede a weakness before it has told you who decides, and the company's own public position is that it started that search in May 2024 — so the premise is not news to them, and putting it first makes the meeting about their supplier rather than about their process."
+    }
+   ],
+   "note": "The development lead names the lenders and the project-level investors, and says the last equipment decision was taken before the platform facility was expanded."
+  },
+  {
+   "id": "beat-2",
+   "title": "Beat 2 — the question that decides it",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The optimisation desk joins. Three operating projects, all two-hour, all dispatched without a hedge or an offtaker, in a market where last year's battery revenue was about USD 26–29 per kW against USD 193 two years earlier and ancillary-service revenue fell roughly ninety per cent. They ask, fairly, what you would need to know before you could quote anything.",
+   "items": [
+    {
+     "q": "What do you ask?",
+     "c": [
+      "Ask for the fleet's realised revenue per kilowatt over the last twelve months, so the quote can be modelled against it.",
+      "Ask what cycle count the existing service agreements allow per year, what the desk actually ran against that allowance in the last twelve months, and whether the augmentation plan is priced inside the model or held outside it.",
+      "Ask what discount against the incumbent would be needed to win the next ERCOT project.",
+      "Ask whether a four-hour system would suit the next site better than the two-hour fleet they have."
+     ],
+     "a": 1,
+     "why": "**Option 2 asks the warranty and the dispatch as one question, which is what they are.** In a {{merchant}} fleet the cycle budget written into the service agreement and what the optimisation desk actually does to the battery are the same variable seen from two ends, and the {{augmentation}} line is where a two-hour merchant asset's economics live once degradation starts. It is also answerable: the cycle allowance and the dispatch record are the buyer's own documents. **Option 1 ignores what the record says about disclosure.** No revenue figure, dispatch result or contract price has ever been published by this company — its own file records that as a collection gap — so you are opening by asking for the one number it has never given anybody, and the refusal costs you the rest of the meeting. **Option 3 ignores that you still do not know who approves a vendor**; a discount offered before the approval chain is established is a concession made to somebody who may not be able to accept it, and it converts a discovery meeting into a price meeting on the buyer's terms. **Option 4 ignores the fleet in front of you.** Every operating project is two-hour and the one under construction is two-hour; proposing a different duration before you know what the revenue model rewards is a product conversation held in place of the buying one."
+    }
+   ],
+   "note": "The desk answers on cycles and on where the augmentation line sits, and says the model is rebuilt each year against the merchant curve rather than against a contract."
+  },
+  {
+   "id": "beat-3",
+   "title": "Beat 3 — the ask",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The corporate-development office closes the meeting. Two projects in a second market are permitted — the first standalone-storage site permit that state has issued, and a second in July 2026 — and construction is stated for the first quarter of 2027. The regulator's file models both on a vendor's enclosure chosen as a basis, reserved so that equipment can be selected later. No supply contract exists for either.",
+   "items": [
+    {
+     "q": "What do you ask for?",
+     "c": [
+      "Ask to be included in the next ERCOT procurement, where the volume and the operating fleet are.",
+      "Ask to be qualified now against the two permitted projects in the second market — the equipment is unselected in the regulator's own record, construction is stated for the first quarter of 2027, and the material assistance cost ratio steps on 1 January 2027, so the construction-start year decides what the credit will allow.",
+      "Ask for a master supply agreement across the whole development pipeline at a volume price.",
+      "Ask for an introduction to the board, since there is no sponsor to go to."
+     ],
+     "a": 1,
+     "why": "**Option 2 asks for the one slot the record says is genuinely open, and attaches a date the buyer cannot move.** A project starting construction in 2027 is priced against the 2027 ratio, so the supplier question and the tax question are one question with a deadline on it — and the buyer's own filings say the equipment is not yet chosen, which is the rarest sentence in a four-for-four account. **Option 1 ignores what the record shows about the operating fleet.** ERCOT is where the volume is and where the incumbency is complete; asking to be considered where the file shows no opening asks the buyer to disturb a working relationship for nothing, and gives it an easy no in the last five minutes. **Option 3 ignores what the pipeline number is.** The company dropped its own gigawatt-hour figure from its boilerplate in May 2026 and the identifiable pieces are a fraction of it, so a volume price against that volume is a discount with no order behind it — and it asks a buyer with no sponsor to commit capital across projects that are not yet permitted. **Option 4 ignores where approval sits in a company like this one.** The board is not the vendor approver, the lenders are not on it, and beat 1 established who is — so this spends the access that beat just earned on the one route the record says does not lead anywhere."
+    }
+   ],
+   "note": "You leave with a qualification request against two named, permitted projects and a date attached to it. In discovery, that is what a first meeting is for."
+  },
+  {
+   "id": "the-mechanism-behind-it",
+   "title": "The mechanism behind it",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "info",
+   "ps": [
+    "**Beat 1 rested on two lessons.** *Eleven Buyer Classes* (`who-buys-storage`) is where the merchant IPP stops being a logo and becomes a buying shape: no offtaker means no utility counterparty and no contracted revenue to underwrite against, so the parties with money in the fleet are the only parties with a documented say. *Who Carries Which Risk* (`contracts-and-revenue`) is the companion — it is the lesson that explains why 'who approves a supplier' and 'who carries the performance risk' turn out to be the same list of names.",
+    "**Beat 2 rested on the degradation lesson.** *Duration, Degradation, and the Twenty-Year Promise* (`duration-and-degradation`) is where the cycle budget, the {{augmentation}} schedule and the warranty stop being three documents and become one commitment with a number in it. The first option in that beat fails on a different lesson — *One Dollar, Four Names* (`reading-the-numbers`) — which teaches that a figure a company has never published is not a figure you can ask for and get; the question that lands is the one whose answer already exists in the buyer's own files.",
+    "**Beat 3 rested on the policy lesson.** *Four Levers and One Order* (`the-china-policy-stack`) is where the material assistance cost ratio stops being a phrase and becomes a number attached to a construction-start year — which is why 'the first quarter of 2027' is a sales date and not a project-management one, and why the ask lands on the two projects whose equipment the record says is still unchosen."
+   ]
+  },
+  {
+   "id": "debrief",
+   "title": "Debrief",
+   "kind": "table",
+   "read": "3 min",
+   "cols": [
+    "Beat",
+    "The strong move",
+    "Why, against this record",
+    "The trap"
+   ],
+   "rows": [
+    [
+     "**1 — the opening**",
+     "Ask who has to approve a supplier — naming the lenders, the project-level tax-equity investors and the transferred-credit buyer — rather than who prefers one",
+     "In a buyer with no sponsor and no offtaker the approval chain is not on the org chart, and the parties with money in the fleet are the only ones the record documents",
+     "Opening on the product, which asks the room to rank on its last criterion — or opening on the supplier's nationality, which makes the meeting about their incumbent rather than their process"
+    ],
+    [
+     "**2 — the question that decides it**",
+     "Ask the cycle allowance, what the desk ran against it, and where the augmentation line sits in the model",
+     "It is the warranty and the dispatch asked as one question, it is where a two-hour merchant asset's economics live, and the answer exists in the buyer's own records",
+     "Asking for realised revenue — the one number this company has never published to anybody, so the question can only be refused"
+    ],
+    [
+     "**3 — the ask**",
+     "Ask to be qualified against the two permitted projects whose equipment the regulator's file says is still unselected, with the 1 January 2027 ratio step as the reason it is urgent",
+     "It is the only opening the record actually shows, and the construction-start year decides what the tax credit will allow, so the date is the buyer's problem and not a sales device",
+     "Asking for the ERCOT fleet where the incumbency is complete, or for a volume price against a pipeline figure the company itself withdrew"
+    ]
+   ],
+   "sales": "In a merchant account with no contract anywhere in it, the thing you are qualifying for is not the next project. It is the next construction-start year."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "kind": "ledger",
+   "read": "reference",
+   "intro": "Every premise in the room, the record and the open questions, plus every fact the three rationales lean on. **Facts are the dossier's; analysis is the landscape's or the dossier's own labelled assessment** — and the dated rule is a fact row, never an analysis one. The dossier version and the module's `updated` are the values read off each fetched document on 2026-09-18.",
+   "rows": [
+    [
+     "Three operating two-hour ERCOT batteries totalling 350 MW / 700 MWh, and a fourth of 300 MW / 600 MWh under construction since May 2026 for a 2027 commercial operation date — all four on the same integrator's product and all four built by the same construction contractor",
+     "profile:spearmint-energy v1 · productsAndServices[0], relationships[0], relationships[1] · fact"
+    ],
+    [
+     "The whole fleet is dispatched by the company's own optimisation team with no named offtaker, hedge provider or revenue put",
+     "profile:spearmint-energy v1 · productsAndServices[0], summary · fact"
+    ],
+    [
+     "ERCOT battery revenue about USD 26–29 per kW in 2025 against USD 193 per kW in 2023; ancillary-service revenue down about 90 per cent since 2023 and the ancillary share of revenue down from 84 to 48 per cent; real-time co-optimisation with batteries scheduled for December 2025",
+     "profile:spearmint-energy v1 · policyExposure[2] · fact"
+    ],
+    [
+     "A USD 325 million platform facility with four private-credit lenders (23 June 2026), up from a USD 200 million term loan of June 2023; project-level tax equity of USD 92 million and USD 252 million; about USD 450 million at the fourth project, part repaid at commercial operation by about USD 126 million of transferred tax credit whose buyer is unnamed",
+     "profile:spearmint-energy v1 · productsAndServices[3], financials · fact"
+    ],
+    [
+     "No corporate equity round, valuation or sponsor commitment has ever been announced; the only ownership statement in the record is a lender's, and the company names no owner",
+     "profile:spearmint-energy v1 · financials · fact"
+    ],
+    [
+     "No revenue figure, dispatch result or contract price has ever been published; the file records the absence as a collection gap",
+     "profile:spearmint-energy v1 · financials, summary · fact"
+    ],
+    [
+     "Company statements on the record: the foreign-entity rules are 'unquestionably a big issue', and the team 'took aggressive action in May 2024' and began evaluating suppliers in Europe, Japan and Korea. No source quantifies the exposure and no non-Chinese supplier has been contracted",
+     "profile:spearmint-energy v1 · policyExposure[1] · fact"
+    ],
+    [
+     "Two permitted projects of 150 MW / 600 MWh each in Minnesota — the state's first standalone-storage site permit in August 2025 and a second on 16 July 2026 — both modelled on a Tesla Megapack 2XL design basis reserved so equipment can be selected during construction, with construction stated for the first quarter of 2027",
+     "profile:spearmint-energy v1 · technicalSpecs[0], relationships[2], policyExposure[4] · fact"
+    ],
+    [
+     "The pipeline figure rose from 2.8 GW to 4.1 GW to 'over 13 GWh' to 'over 15 GWh' between February 2024 and May 2026, and was dropped from the company's boilerplate from 21 May 2026 onward",
+     "profile:spearmint-energy v1 · productsAndServices[1] · fact"
+    ],
+    [
+     "A plan commission denied a rezoning unanimously on 12 November 2024 on fire risk and proximity to homes and a manufacturing plant, with a six-month reapplication bar; the fourth ERCOT project was approved in August 2025 only after rework and under a new battery-specific zoning district",
+     "profile:spearmint-energy v1 · policyExposure[5] · fact"
+    ],
+    [
+     "Twenty executives and directors are published on the company's site, among them a chief development officer, a head of optimisation and a head of corporate development — and no chief financial officer is listed",
+     "profile:spearmint-energy v1 · summary, decisionMakers · fact"
+    ],
+    [
+     "No sponsor stands behind the company in the way a reader would expect: the capital is debt and tax equity rather than sponsor equity",
+     "profile:spearmint-energy v1 · strategyRead[1] · analysis"
+    ],
+    [
+     "The fleet's realised revenue in 2025–2026 is well below what it was underwritten on, and the June 2026 facility expansion is partly a liquidity response — held at moderate confidence, with no revenue figure to confirm it",
+     "profile:spearmint-energy v1 · strategyRead[2] · analysis"
+    ],
+    [
+     "The 'over 15 GWh' pipeline is a development-stage inventory, most of it early, and its removal from the boilerplate was deliberate",
+     "profile:spearmint-energy v1 · strategyRead[3] · analysis"
+    ],
+    [
+     "Supplier concentration in one integrator is the fleet's largest policy exposure, and the May 2024 supplier search has not yet produced a contract",
+     "profile:spearmint-energy v1 · strategyRead[4] · analysis"
+    ],
+    [
+     "The material assistance cost ratio steps to its next calendar-year value on 1 January 2027, rising from 55 per cent in 2026 toward 75 per cent in 2030",
+     "guidance:landscape-storage-developers-and-ipps-2026-09 · the-indicators · fact"
+    ],
+    [
+     "Find the veto before you find the buyer: the parties who must approve a battery in this segment are the tax-equity banks and the minority co-owners rather than the developer alone, and a sponsor's diligence can sit between a vendor and a signature",
+     "guidance:landscape-storage-developers-and-ipps-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "Read the foreign-entity criterion against the project's construction vintage rather than against the company, because the content rules bind by construction start",
+     "guidance:landscape-storage-developers-and-ipps-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "This buyer's bet is to develop and hold rather than develop and sell: a pure merchant ERCOT fleet on a single integrator, financed on tax credits and private credit instead of utility contracts, and monetised through its own trading desk",
+     "guidance:landscape-storage-developers-and-ipps-2026-09 · each-players-bet · analysis"
+    ],
+    [
+     "Final prohibited-foreign-entity rules are undated and the effective-control question was deferred in the February 2026 draft guidance; this buyer is named among those without a disclosed compliance pathway",
+     "guidance:landscape-storage-developers-and-ipps-2026-09 · the-indicators · analysis"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "warn",
+   "ps": [
+    "**In discovery this section is the question list.** Each of these is something no dossier carries, which is exactly why it has to be asked rather than assumed — and each is phrased as the question you would actually put in the room.",
+    "**1 · Who approves a supplier here?** Not who prefers one. The record names four lenders on the platform facility, two project-level tax-equity investors and an unnamed buyer of transferred credit; it does not say whether any of them runs an approved-vendor list, retains a technical adviser, or has ever refused an equipment choice. **Ask which of them has to see a vendor before the order is placed.**",
+    "**2 · What does the cycle allowance say, and what is the desk running against it?** No dispatch result, revenue figure or contract price has ever been published — so this is not a number you can look up and then discuss. **Ask for the allowance and the actual, and ask where the augmentation line sits in the model.**",
+    "**3 · What did the supplier search find?** The company said in public that it began evaluating suppliers in Europe, Japan and Korea in May 2024. No contract has followed in any source read. **Ask what the search concluded and what would have to be true for a second supplier to be qualified** — the honest form of the question, not the accusation.",
+    "**4 · Is the second market's equipment genuinely unselected?** The regulator's file says the design basis was chosen to preserve flexibility, and no supply contract exists. **Ask when selection happens, who makes it, and against what construction-start date** — because the answer to the third part is what decides which tax year the project is priced in.",
+    "**5 · What is actually in the pipeline?** The company withdrew its own gigawatt-hour figure in May 2026 and has never itemised it. **Do not quote it back.** Ask instead which projects have site control and an interconnection position, because those are the only two things that make a project a customer.",
+    "**6 · Who signs, given that no chief financial officer is published?** The record shows a chief accounting officer and a head of corporate development but no CFO. **Ask who arbitrates a capital commitment** — and treat the answer as the most useful thing you will learn all meeting."
+   ],
+   "sales": "Six questions, none of them answerable from outside the company. That is what makes them worth an hour of a buyer's time."
+  }
+ ]
+};
+}
+
+function clLessonScenarioUtilitiesObjection_() {
+  return {
+ "schemaVersion": 1,
+ "id": "scenario-utilities-objection",
+ "type": "scenario",
+ "title": "Rehearsal — Prudence, Not Preference",
+ "short": "Objection rehearsal: a supplier-qualification meeting at Dominion Energy, where 'why not you' is a commission's standard rather than a buyer's taste.",
+ "group": "The Value Chain",
+ "scenario": {
+  "mode": "objection",
+  "seat": "storage-seller",
+  "segment": "utilities",
+  "counterparty": "dominion-energy",
+  "stage": "rfp"
+ },
+ "updated": "2026-09-18",
+ "reviewBy": "2026-10-01",
+ "tiles": [
+  {
+   "k": "Dominion Energy",
+   "v": "across the table"
+  },
+  {
+   "k": "Utilities",
+   "v": "the segment"
+  },
+  {
+   "k": "Objection",
+   "v": "the exercise"
+  },
+  {
+   "k": "RFP",
+   "v": "where in the sale"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "prudence",
+   "d": "The standard a regulator applies when deciding whether a utility's spending may be recovered from customers: was the decision reasonable on what was known when it was made? It is judged on the record at the time of the decision, not on how the investment turned out."
+  },
+  {
+   "t": "integrated resource plan",
+   "d": "The long-range plan a regulated utility files showing the demand it expects and the mix of resources it proposes to meet it. It is not itself an authorisation to build or buy anything — it is the document every later authorisation is measured against."
+  },
+  {
+   "t": "certificate of public convenience and necessity",
+   "d": "The regulator's authorisation for a utility to build a specific facility, granted after a case of its own. It is the gate for what the utility owns and builds; a purchase under contract goes through a different filing."
+  },
+  {
+   "t": "rate base",
+   "d": "The pool of capital a regulated utility is allowed to earn a return on. Getting an investment into it is the whole of the utility's economics, and the regulator decides what may enter."
+  }
+ ],
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:dominion-energy",
+    "date": "2026-09-03",
+    "note": "the record: the plan and the statute in conflict, the two procurement lanes and their calendar, what the last clean-energy petition actually got, the storage line inside the capital plan, the rate order and the new large-load class, and the pending combination"
+   },
+   {
+    "kind": "guidance",
+    "ref": "guidance:landscape-utilities-2026-09",
+    "date": "2026-09-14",
+    "note": "the seller's play (identify the instrument before the account plan; read the collateral not the queue; qualification as an asset with an expiry date), and this buyer's row in the bets table"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "id": "the-room",
+   "title": "The room",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "info",
+   "ps": [
+    "**You are the storage seller** — the commercial lead for an integrator, in a supplier-qualification meeting you asked for, two weeks before this utility's annual purchase solicitation issues. You are not bidding anything today. You are trying to be someone a bid can be built on.",
+    "**Across the table** sit the utility-operations organisation — the one the record names with a president of its own for the Virginia franchise — and the regulatory and customer organisation, which is the function that has to defend whatever gets bought. There is no procurement person in this room with the authority to prefer you, and that is not an accident of scheduling. **It is the segment.**",
+    "**On the table** is the calendar. The annual purchase solicitation for Virginia and North Carolina issues on **1 October 2026**; the acquisition solicitation already ran its bidder webinar in June. Behind both sits a five-year capital plan in which battery storage is about **two billion dollars against a sixty-five billion dollar total** — three per cent — while transmission is a quarter of it.",
+    "**What you are rehearsing** is the objection every regulated account eventually makes, and it is not a preference. It is a standard: this utility may only recover what a commission finds {{prudence}} in. Your product is not being compared with a competitor's. It is being compared with what a regulator will allow."
+   ],
+   "sales": "In this segment the buyer is not deciding whether it likes you. It is deciding whether it can defend you in a filing."
+  },
+  {
+   "id": "what-the-record-says",
+   "title": "What the record says",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The nine things you walk in knowing, each one a row of the ledger at the bottom of this scenario. Nothing in the three beats depends on a fact that is not here.",
+   "cols": [
+    "What you know",
+    "The record",
+    "Where it sits"
+   ],
+   "rows": [
+    [
+     "**The plan, and how small storage is in it**",
+     "The 2025 {{integrated resource plan}} update's preferred plan adds **2,000 MW of storage by 2045** alongside 17,534 MW of solar, 3,460 MW of wind, 1,944 MW of small modular reactors and 8,510 MW of gas; the 10-K puts about **USD 2.0 billion of battery-storage capital across 2026–2030** inside a USD 64.7 billion five-year plan of which 25 per cent is transmission and 18 per cent new gas",
+     "the buyer's plan snapshot and its capital programme"
+    ],
+    [
+     "**The statute that sits above the plan**",
+     "A Virginia law of **April 2026** requires 16.0 GW of short-duration storage by 2045 **including 4.0 GW by the end of 2030**, and 4.0 GW of long-duration by 2045 including 2.0 GW by 2035 — replacing the earlier 2.7 GW-by-2035 finding",
+     "the buyer's policy exposure, the state clean-energy statute"
+    ],
+    [
+     "**That the two are in open conflict**",
+     "The preferred plan carries no generic storage build before 2030 and is down from about 4,500 MW in the prior plan, while the statute names 4.0 GW by the end of 2030. The dossier's own judgment is that the next comprehensive plan raises the storage build — **held at moderate confidence**, and the reconciliation could come through purchases rather than build",
+     "the buyer's own strategy read — **analysis**"
+    ],
+    [
+     "**How it actually buys, and when**",
+     "Two annual solicitations: an acquisition solicitation (bidder webinar 18 June 2026) and **a purchase solicitation issuing 1 October 2026** for Virginia and North Carolina; the prior purchase solicitation closed 9 February 2026. The company states it both self-develops storage and solicits storage purchase agreements annually",
+     "the buyer's procurement line"
+    ],
+    [
+     "**What the last filing actually got**",
+     "An October 2025 clean-energy petition asked for six utility-scale solar projects of about 845 MW, **two storage projects totalling about 155 MW**, and purchase agreements for ten solar facilities of 439 MW. The commission approved four solar projects of about 532 MW and **one storage project of about 80 MW**, for roughly USD 1.5 billion, in service between **2028 and 2030**",
+     "the buyer's procurement line"
+    ],
+    [
+     "**The cost-recovery machine, and its last order**",
+     "A biennial review whose final order of **25 November 2025** authorised a 9.8 per cent return on equity, approved USD 565.7 million and USD 209.9 million of base-rate increases for 2026 and 2027, created a new large-load rate class and certified a 944 MW gas station for 2029 under a {{certificate of public convenience and necessity}} of its own",
+     "the buyer's summary and its rate proceedings"
+    ],
+    [
+     "**The new large-load class, and its date**",
+     "The new class takes effect **1 January 2027**, with 14-year contracts and 85 per cent transmission-and-distribution minimums; a separate July 2026 order requires direct assignment of defined transmission facilities through mandatory contributions in aid of construction, with the amended line-extension policy due about **29 October 2026**",
+     "the buyer's policy exposure, large-load cost allocation"
+    ],
+    [
+     "**Who the counterparty becomes**",
+     "An all-stock combination agreed **15 May 2026**. The state evidentiary hearing is **17 November 2026** with a final order expected **29 January 2027**, a second state's hearings on **8 December 2026**, and closing expected in the second half of 2027. The Virginia utility keeps its president and its dockets",
+     "the buyer's merger exposure and its investor relationship"
+    ],
+    [
+     "**Where the veto sits in this segment**",
+     "The landscape's reading: identify the instrument before you build the account plan, because this buyer's addressable market is **the developer bidding the October purchase solicitation first and the utility's own approved-vendor list second** — and qualification is an asset with an expiry date in the one segment where it can expire without the customer doing anything",
+     "the segment landscape, the seller's play — **analysis**"
+    ]
+   ],
+   "sales": "Read row five and row nine together. Row five is what a commission did to this buyer's last storage ask; row nine is who will be reading your file by the time the next one is decided."
+  },
+  {
+   "id": "the-position",
+   "title": "The position",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "**The buyer's position is that it does not choose, and on this record that is very nearly true.** A regulated franchise converts load into plant through a sequence of documents, and the purchase order is the last of them: the {{integrated resource plan}} sets what the utility says it needs, the annual solicitation collects what the market will offer, a petition asks the commission to approve specific projects and specific agreements, and only an approval lets anything be signed. **What it owns and builds goes through a {{certificate of public convenience and necessity}} instead** — the gas station certified in November 2025 is that lane, not this one. Neither lane has a step in it where a supplier is preferred, and every step is on a calendar the utility publishes rather than one it controls.",
+    "**The rule behind the position is {{prudence}}, and it is a fact rather than a posture.** This utility may only recover from customers what a commission finds reasonable on the record at the time the decision was made. The evidence for that is not rhetorical: its last clean-energy petition asked for two storage projects totalling about 155 megawatts and came away with one of about eighty. So the objection you are about to hear — *we cannot prefer you, and what we do buy has to survive a filing* — is a description of a standard the buyer is held to, not a way of declining a meeting.",
+    "**And the pressure on that position is also in the record, which is what makes the room worth having.** A statute passed in April 2026 names four gigawatts of short-duration storage by the end of 2030; the plan in force carries two gigawatts by 2045 and no generic build before 2030. The dossier holds at moderate confidence that the next comprehensive plan raises the storage number, and notes the reconciliation could come through purchases rather than build — which is the lane the October solicitation opens. **Expect the objection to be true and the conclusion to be wrong**: *we do not pick the battery* is accurate, and *therefore there is nothing to talk about* does not follow from it."
+   ],
+   "sales": "The objection is a standard, not a preference. Answer the standard — and never argue with a regulated utility about its own filings."
+  },
+  {
+   "id": "beat-1",
+   "title": "Beat 1 — the opening",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The utility-operations organisation opens with the objection in its plainest form. We do not choose batteries. The solicitation chooses, the commission approves, and the last time we asked for two storage projects we were allowed one. What, they ask, are you actually here for?",
+   "items": [
+    {
+     "q": "Your move?",
+     "c": [
+      "Lead on delivered cost per kilowatt-hour — show that you would have been the cheapest project in the last petition, and let the number make the case.",
+      "Ask which of the two lanes this conversation is about — the purchase solicitation issuing on 1 October, where your customer is the developer bidding it, or the utility's own programme, where the commission is the reviewer — and offer the evidence that lane's reviewer actually reads.",
+      "Point out that the April 2026 statute requires four gigawatts by the end of 2030 while the plan in force carries two by 2045, so far more storage will have to be bought than is planned.",
+      "Ask to be added to the approved-vendor list, and leave the specification to them."
+     ],
+     "a": 1,
+     "why": "**Option 2 is the only move that changes what you are being asked to prove.** The record shows two lanes with two different reviewers — a bidder's economics in one, a commission's {{prudence}} finding in the other — and the same product is judged on different evidence in each. Naming the lane converts an objection you cannot argue with into a question the buyer can answer in a sentence. **Option 1 ignores the segment's first criterion.** What a regulated utility buys is decided by what the commission will allow into {{rate base}} or into an approved agreement, not by what is cheapest; a price the filing cannot carry is not a cheaper offer, and the last petition's outcome is the evidence. **Option 3 ignores whose argument that is.** The conflict between the statute and the plan is real and the dossier rates it moderate confidence — but it is an argument made by parties to a docket, and a vendor making it in a supplier meeting has told a regulated utility that its own filing is wrong. **Option 4 ignores the order the record puts the two routes in.** This buyer's addressable market is the developer bidding the October solicitation first and the approved-vendor list second, so asking only for the list asks for the smaller half and skips the question of who is going to bid you."
+    }
+   ],
+   "note": "The operations organisation says both lanes are live and that the purchase solicitation is the nearer one, then hands the meeting to the regulatory organisation."
+  },
+  {
+   "id": "beat-2",
+   "title": "Beat 2 — the objection itself",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The regulatory organisation puts the objection that actually decides it. Whatever is approved out of the next solicitation goes into service between 2028 and 2030 — the last approved projects carry exactly that window. A prudence finding is made on the record as it stood when the decision was taken. So, they ask: what happens to your evidence when the standards move between the award and the energisation?",
+   "items": [
+    {
+     "q": "What do you put on the table?",
+     "c": [
+      "Confirm the product is certified today and offer to send the current certificates.",
+      "Answer in editions and dates — the listing with the standard and the edition it was tested to, the large-scale fire test with its procedure, its result and its date, and a written position on what happens when an edition changes between award and energisation: who requalifies, who pays for it, and on what schedule.",
+      "Offer to hold the quoted price firm across the whole in-service window, so the commercial risk of the delay sits with you.",
+      "Propose an earlier in-service date so the project lands ahead of the next code cycle."
+     ],
+     "a": 1,
+     "why": "**Option 2 answers the question that was actually asked.** In a procurement whose award and whose energisation are two or three years apart, the variable is not whether you hold a certificate — it is which **edition** you hold one to, and who carries the cost when that edition is superseded. A commission's finding is made on the record at the time of the decision, so the only document that survives the gap is one that says in advance what happens when the ground moves. **Option 1 ignores the specificity the question demanded.** A certificate with no standard named, no edition and no date cannot be compared across a three-year window, and 'certified today' is an answer to a question nobody asked. **Option 3 ignores what kind of risk this is.** A firm price prices a commercial exposure; the objection is evidentiary, and no discount makes a superseded test report admissible in a filing. **Option 4 ignores who owns the schedule.** The in-service window is set by the commission's order and by interconnection, not by the supplier — the last approved projects were put in service between 2028 and 2030 by the order approving them. Offering to move it offers something you do not hold."
+    }
+   ],
+   "note": "The regulatory organisation accepts that the requalification question is answerable in a document, and asks for it in writing rather than in the meeting."
+  },
+  {
+   "id": "beat-3",
+   "title": "Beat 3 — the close",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The meeting ends where a regulated procurement always ends — on a calendar rather than a decision. The purchase solicitation issues on 1 October. The new large-load class takes effect on 1 January 2027. The combination's state evidentiary hearing is 17 November 2026, a second state's hearings are on 8 December, a final order is expected on 29 January 2027, and closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets.",
+   "items": [
+    {
+     "q": "What do you ask for?",
+     "c": [
+      "Ask for a decision on qualification before the solicitation issues, so a bidder can name you in its offer.",
+      "Ask to complete qualification on this side of the combination and to be told in writing what carries over after it — the record says the dockets, the plan cycle and the solicitation calendar survive, and that supplier qualification would sit with the combined company.",
+      "Ask for an introduction to the acquirer instead, since that is where supplier qualification will sit.",
+      "Agree to come back once the combination has closed and the combined company's supplier process is published."
+     ],
+     "a": 1,
+     "why": "**Option 2 asks the one question only this counterparty can answer, and it is the segment's characteristic risk.** The landscape's reading is that qualification is an asset with an expiry date and that this is the one segment where it can expire without the customer doing anything — and the record makes that concrete here: the dockets and the calendar survive the combination, while supplier qualification moves to a platform whose own merchant arm is the largest storage developer in the corpus. What carries over is therefore the question, and it is answerable in writing today. **Option 1 ignores what a solicitation is.** It is a published process with a date, not a decision anyone in the room may accelerate; asking a regulated utility to prefer a vendor outside the process it is required to run asks it to do the exact thing a {{prudence}} finding punishes. **Option 3 ignores that there is no combined company yet.** Five approvals are pending, the nearest hearing is two months out and closing is expected in the second half of 2027 — a call to the acquirer during a pending review is the least welcome call either party can take, and it spends the access this meeting earned. **Option 4 ignores the calendar in front of you.** The solicitation issues in a fortnight, the rate class takes effect in January, and at least one full annual cycle runs before any close — so waiting forfeits the only lane that is open now."
+    }
+   ],
+   "note": "You leave with a written requalification position to send and a request pending on what survives the combination. In this segment that is a good day."
+  },
+  {
+   "id": "the-mechanism-behind-it",
+   "title": "The mechanism behind it",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "info",
+   "ps": [
+    "**Beat 1 rested on the procurement lesson.** *The Regulated Machine* (`how-a-utility-buys`) is where the sequence stops being an org chart and becomes a chain of documents — the plan, the solicitation, the petition, the order, and only then the contract — with the {{certificate of public convenience and necessity}} sitting on the build-and-own branch rather than on the purchase branch. The whole of beat 1 is knowing which branch you are standing on before you answer.",
+    "**Beat 2 rested on the certification lesson.** *Listing, Test Method, Code* (`the-certification-stack`) separates the three things a seller is tempted to say in one breath: a product listing is not a test report, a test method is not a certificate, and neither is a code package. The first option in that beat fails on exactly that distinction — and in a multi-year procurement the lesson's real payload is the **edition**, because that is the part of the evidence with a date on it.",
+    "**Beat 3 rested on the gatekeeper lesson.** *The Gatekeeper* (`utility-procurement-meets-ai-load`) is why this counterparty's calendar rather than any customer's decides when things get built, and why the instruments it is designing for large load — the new rate class, the direct assignment of transmission cost — are the same machinery that decides a storage purchase. It is also where the ownership question belongs: a franchise is the one buyer whose procurement platform can change hands while the dockets stay exactly where they were."
+   ]
+  },
+  {
+   "id": "debrief",
+   "title": "Debrief",
+   "kind": "table",
+   "read": "3 min",
+   "cols": [
+    "Beat",
+    "The strong move",
+    "Why, against this record",
+    "The trap"
+   ],
+   "rows": [
+    [
+     "**1 — the opening**",
+     "Ask which lane the conversation is about — the October purchase solicitation, where the customer is the bidder, or the utility's own programme, where the commission is the reviewer — and offer that lane's evidence",
+     "The record shows two lanes with two different reviewers, and the landscape puts the bidder first and the approved-vendor list second; naming the lane changes what you must prove",
+     "Leading on price, which the commission decides last — or arguing that the utility's own plan is out of step with the statute, which is a docket party's argument and not a vendor's"
+    ],
+    [
+     "**2 — the objection**",
+     "Answer in editions and dates, and put the requalification question — who requalifies, who pays, on what schedule — in writing",
+     "Award and energisation are two to three years apart on this buyer's own approved projects, and a prudence finding is made on the record as it stood at the decision",
+     "Offering a current certificate with no standard, edition or date — the answer to a question that was not asked"
+    ],
+    [
+     "**3 — the close**",
+     "Complete qualification now and ask in writing what survives the combination",
+     "The dockets and the solicitation calendar survive; supplier qualification moves to the acquirer's platform, so qualification here has an expiry date the customer is not choosing",
+     "Asking for a decision ahead of the published solicitation, calling the acquirer during a pending review, or waiting for a close that is expected in the second half of 2027"
+    ]
+   ],
+   "sales": "In a regulated account, ask what the reviewer reads and when the reviewer changes. Everything else in the meeting is downstream of those two answers."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "kind": "ledger",
+   "read": "reference",
+   "intro": "Every premise in the room, the record and the position, plus every fact the three rationales lean on. **Facts are the dossier's; analysis is the landscape's or the dossier's own labelled assessment** — and the rule behind the objection is carried by fact rows, never by an analysis one. The dossier version and the module's `updated` are the values read off each fetched document on 2026-09-18. **This scenario's review date is 1 October 2026** — the nearest dated gate in the ledger below, and the date the landscape's own review falls on, so it ships inside its own thirty-day horizon by design.",
+   "rows": [
+    [
+     "The 2025 integrated resource plan update's preferred plan adds 2,000 MW of storage by 2045, alongside 17,534 MW of solar, 3,460 MW of wind, 1,944 MW of small modular reactors and 8,510 MW of gas; demand in the zone is forecast to rise 6.3 per cent a year over the next decade",
+     "profile:dominion-energy v1 · summary, technicalSpecs[5] · fact"
+    ],
+    [
+     "The 10-K states about USD 2.0 billion of battery-storage investment across 2026–2030, inside a USD 64.7 billion five-year capital plan of which 25 per cent is transmission and 18 per cent new gas",
+     "profile:dominion-energy v1 · productsAndServices[3], summary · fact"
+    ],
+    [
+     "A Virginia law of April 2026 requires 16.0 GW of short-duration storage by the end of 2045 including 4.0 GW by the end of 2030, and 4.0 GW of long-duration storage by 2045 including 2.0 GW by 2035, replacing the earlier 2.7 GW-by-2035 finding",
+     "profile:dominion-energy v1 · policyExposure[3], productsAndServices[3] · fact"
+    ],
+    [
+     "The company annually issues requests for proposal for new solar and energy storage, self-develops storage and solicits storage purchase agreements in those annual solicitations; the 2026 acquisition solicitation held a bidder webinar on 18 June 2026 and the 2026 purchase solicitation issues on 1 October 2026 for Virginia and North Carolina, the prior one having closed on 9 February 2026",
+     "profile:dominion-energy v1 · productsAndServices[3] · fact"
+    ],
+    [
+     "The October 2025 clean-energy petition sought six utility-scale solar projects totalling about 845 MW, two energy-storage projects totalling about 155 MW and purchase agreements for ten solar facilities totalling 439 MW; the commission approved four solar projects of about 532 MW and one storage project of about 80 MW for approximately USD 1.5 billion, in service between 2028 and 2030",
+     "profile:dominion-energy v1 · productsAndServices[3] · fact"
+    ],
+    [
+     "The biennial review's final order of 25 November 2025 authorised a 9.8 per cent return on equity, approved USD 565.7 million and USD 209.9 million of base-rate increases for 2026 and 2027, created the new large-load rate class and certified a 944 MW simple-cycle gas station for 2029",
+     "profile:dominion-energy v1 · summary · fact"
+    ],
+    [
+     "The new large-load rate class takes effect on 1 January 2027, with 14-year contracts and 85 per cent transmission-and-distribution minimums",
+     "profile:dominion-energy v1 · summary, technicalSpecs[0] · fact"
+    ],
+    [
+     "A commission order of 31 July 2026 requires direct assignment of defined transmission facilities to data centres through mandatory contributions in aid of construction",
+     "profile:dominion-energy v1 · policyExposure[1] · fact"
+    ],
+    [
+     "An all-stock combination was agreed on 15 May 2026; the state evidentiary hearing is 17 November 2026 with a final order expected 29 January 2027, a second state's hearings are on 8 December 2026, five approvals are pending, and closing is expected in the second half of 2027. The Virginia utility keeps its president and its dockets",
+     "profile:dominion-energy v1 · summary, policyExposure[5], relationships[8] · fact"
+    ],
+    [
+     "The leadership the record names for this decision is an executive vice president for utility operations who is also president of the Virginia utility, and an executive vice president who is chief regulatory and customer officer",
+     "profile:dominion-energy v1 · decisionMakers[2], decisionMakers[3] · fact"
+    ],
+    [
+     "Storage procurement here is a statutory machine with two lanes, and the utility-owned lane is the smaller and more contractor-mediated of the two; no battery integrator or cell maker appears on any first-party page",
+     "profile:dominion-energy v1 · strategyRead[2] · analysis"
+    ],
+    [
+     "The 2025 plan update and the April 2026 storage statute are in open conflict, and the next comprehensive plan will raise the storage build — held at moderate confidence, with the reconciliation possibly coming through purchase agreements rather than build",
+     "profile:dominion-energy v1 · strategyRead[3] · analysis"
+    ],
+    [
+     "The combination changes the buyer more than the docket: the rate proceedings, the plan cycle and the solicitation calendar stay intact, while capital allocation and supplier qualification would sit with the combined company, whose merchant subsidiary is the largest developer of storage in this corpus",
+     "profile:dominion-energy v1 · strategyRead[5] · analysis"
+    ],
+    [
+     "Identify the instrument before you build the account plan: this buyer's own record puts the addressable market as the developer bidding the October 2026 purchase solicitation and the utility's approved-vendor list, in that order",
+     "guidance:landscape-utilities-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "Qualification is an asset with an expiry date, and this is the one segment where it can expire without the customer doing anything — a vendor qualified with a franchise today is not thereby qualified with the combined company after close",
+     "guidance:landscape-utilities-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "The amended line-extension policy with mandatory contributions in aid of construction falls due about 29 October 2026 — a clock computed from the July order rather than a stated effective date",
+     "guidance:landscape-utilities-2026-09 · the-indicators · analysis"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "warn",
+   "ps": [
+    "**In an objection room this is the list of things you must ask rather than assert.** Each is a gap the record states about itself, and each is a sentence a seller under pressure will be tempted to fill.",
+    "**1 · The tariff's own text.** The dossier records that the standalone large-load rate sheet, the collateral quantum in dollars per megawatt and the commission's final-order text were **not reachable** — the ramp, exit-fee and notice terms in this file rest on a regulator's fact sheet and an investor deck. Quote the fact sheet's labels or quote nothing.",
+    "**2 · Who the incumbent supplier is.** There is none on the record. The segment's reading is that two of the six franchises run open storage solicitations and **neither one's battery supplier is discoverable in any source** — so do not walk in assuming a competitor is installed here, and do not let the buyer's silence be read as one.",
+    "**3 · The commercial terms of the large-load contracts.** Contracted megawatts, minimum-bill percentages and termination formulas are filed under seal or redacted, and the dossiers say so in their own collection gaps. Every figure in this scenario about those contracts is a company disclosure or a regulator's summary — never the contract.",
+    "**4 · How the plan and the statute get reconciled.** That the next comprehensive plan raises the storage number is a moderate-confidence judgment, not a filing. Whether the gap is closed by building or by buying is exactly the question a seller wants answered and exactly the one nobody has published. **Ask it; do not model it.**",
+    "**5 · What supplier qualification looks like after the combination.** Neither party has published a position. The record says the dockets survive and the platform decides — which is a shape, not a process. The written answer to that question is worth more than anything else in the meeting, and only this counterparty can give it."
+   ],
+   "sales": "Five gaps, and four of them are places where a confident sentence would be an invention. In a regulated account an invention is not a risk to the deal — it is the end of the file."
+  }
+ ]
+};
+}
+
+function clLessonScenarioAidcDevelopersAndLandlordsDiscovery_() {
+  return {
+ "schemaVersion": 1,
+ "id": "scenario-aidc-developers-and-landlords-discovery",
+ "type": "scenario",
+ "title": "Rehearsal — Four Parties, One Lease",
+ "short": "Discovery rehearsal: a first meeting at Hut 8 on the River Bend campus, where landlord, tenant of record, credit support and end user are four parties.",
+ "group": "The Value Chain",
+ "scenario": {
+  "mode": "discovery",
+  "seat": "aidc-power-seller",
+  "segment": "aidc-developers-and-landlords",
+  "counterparty": "hut-8",
+  "stage": "discovery"
+ },
+ "updated": "2026-09-18",
+ "reviewBy": "2026-12-10",
+ "tiles": [
+  {
+   "k": "Hut 8",
+   "v": "across the table"
+  },
+  {
+   "k": "AIDC developers and landlords",
+   "v": "the segment"
+  },
+  {
+   "k": "Discovery",
+   "v": "the exercise"
+  },
+  {
+   "k": "Discovery",
+   "v": "where in the sale"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "critical IT capacity",
+   "d": "The power available to the computing equipment itself, after cooling and losses. It is the rung a lease is written at, and it is always smaller than the utility capacity behind it — so the two numbers are never interchangeable."
+  },
+  {
+   "t": "triple net",
+   "d": "A lease under which the tenant pays the taxes, the insurance and the maintenance on top of the rent, so the landlord's income is close to the rent itself. It shifts operating cost to the tenant without shifting the building's capital decisions."
+  },
+  {
+   "t": "non-recourse",
+   "d": "Debt secured only on the project that borrowed it, so the lender's claim stops at that project's assets and cannot reach the parent. It means the project has its own lenders, its own covenants and usually its own technical adviser."
+  },
+  {
+   "t": "ride-through",
+   "d": "The requirement that a large electronic load stay connected through a voltage or frequency disturbance rather than tripping off. Because a data hall's electronics would otherwise drop out together, meeting it generally means putting something that can absorb the disturbance between the grid and the processors."
+  }
+ ],
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:hut-8",
+    "date": "2026-09-06",
+    "note": "the record: the contracted book across two campuses, the lease and its three parties with the end user outside it, the non-recourse project financings, the buffering statement made at one campus and not the other, and the two regulatory clocks"
+   },
+   {
+    "kind": "guidance",
+    "ref": "guidance:landscape-aidc-developers-and-landlords-2026-09",
+    "date": "2026-09-15",
+    "note": "the seller's play (establish the route before the product; lead with lead time then the specification; the bench contracts with the landlord and the engineering firm writes the specification), storage as an interconnection instrument, and the audit-report indicator"
+   },
+   {
+    "kind": "public",
+    "ref": "project:river-bend-campus",
+    "date": "2026-09-06",
+    "note": "the project registry's own entry — the named infrastructure and EPCM partners, and the warning that the campus is not the nuclear station of the same name in the same parish"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "id": "the-room",
+   "title": "The room",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "info",
+   "ps": [
+    "**You are the AI-data-centre power seller** — medium-voltage equipment, switchgear and the skids that carry it — in a first meeting on a campus that is financed, permitted and under construction, and has not yet delivered a megawatt.",
+    "**Across the table** sit the development organisation and the design organisation of the landlord. **The landlord is the only party in the room**, and it is worth being precise about who is not: the lessee of record is a subsidiary of a compute provider, the rent is backstopped for fifteen years by a hyperscaler that took no warrants and no equity, and the end user that will actually run the machines **is not a party to the lease at all**. The company's own record calls this a three-party arrangement that reporting routinely collapses into two — and the fourth actor makes it a four-party room with three signatures in it.",
+    "**On the table** is a campus of 245 MW of {{critical IT capacity}} on 330 MW of utility capacity, on ground the company owns, with vertical construction begun and the first data hall targeted for the second quarter of 2027. Behind it sits a second campus of 704 MW in another state, on another grid, under two identical leases to a tenant nobody has named.",
+    "**What you are rehearsing** is the discovery meeting where the answer you need is not about your product at all. It is about which of two schedules your lead time has to beat, who writes the specification, and whether the buffering the company describes at one campus is a standard or a local answer to one grid's rule."
+   ],
+   "sales": "In this segment the first thing to establish is not what the buyer needs. It is which entity is the buyer, because the one in the press release usually is not."
+  },
+  {
+   "id": "what-the-record-says",
+   "title": "What the record says",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The ten things you walk in knowing, each one a row of the ledger at the bottom of this scenario. Nothing in the three beats depends on a fact that is not here.",
+   "cols": [
+    "What you know",
+    "The record",
+    "Where it sits"
+   ],
+   "rows": [
+    [
+     "**The book, and that none of it is delivered**",
+     "**949 MW of contracted {{critical IT capacity}} across about USD 26.6 billion of base-term lease value**, on two campuses. **Neither has delivered a megawatt** — the first hall at one is targeted for the second quarter of 2027 and initial energisation at the other for the first quarter",
+     "the buyer's contracted-lease line and its summary"
+    ],
+    [
+     "**This campus, at every rung**",
+     "245 MW of critical IT on **330 MW of utility capacity available from 1 July 2026** and scalable to 1,000 MW; an implied gross-to-critical ratio of about 1.35 to 1; 627 acres owned with 2,361 more under option; design efficiency 1.35; build cost USD 9–11 million per MW; vertical construction begun in the second quarter of 2026",
+     "the buyer's campus specification"
+    ],
+    [
+     "**Who the parties actually are**",
+     "The landlord's project subsidiary is lessor; **a subsidiary of a compute provider is lessee of record**; a hyperscaler **backstops all rent and related pass-through obligations for the fifteen-year base term, having taken no warrants and no equity**; and the end user **is not a party to the lease at all**",
+     "the buyer's counterparty relationships and its own strategy read — **analysis on the three-party reading**"
+    ],
+    [
+     "**The lease itself**",
+     "{{triple net}}; a fifteen-year base term with a 3.0 per cent annual escalator and three five-year renewal options; **USD 7.0 billion of base-term value**, about USD 17.7 billion if every renewal is exercised; expected net operating income averaging about USD 454 million a year. The annual report discloses that the lease gives the customer **certain termination rights**",
+     "the buyer's campus specification and its filings"
+    ],
+    [
+     "**How it is financed, and at what level**",
+     "**USD 3.25 billion of senior secured notes at 6.192 per cent**, issued through a campus subsidiary on a **{{non-recourse}} basis**, rated BBB− with a stated minimum debt-service coverage of 1.31 times, amortising from May 2028, up to 85 per cent loan-to-cost — part of about **USD 7.5 billion** of project debt against roughly **USD 159.3 million** of parent recourse debt",
+     "the buyer's campus specification and its capital structure"
+    ],
+    [
+     "**What is said about storage, and where**",
+     "At the **other** campus — 704 MW under two identical leases to an unnamed tenant, on 1,000 MW of interconnection in Texas — the design is stated to incorporate **battery systems to mitigate voltage impacts and support reliable integration with the grid**. **Nothing comparable is stated for this campus**, which sits in a different grid operator's territory in another state",
+     "the buyer's campus specifications, both"
+    ],
+    [
+     "**The clock on the other campus**",
+     "A state directive of **3 August 2026** put the grid operator and the commission to verifying and auditing every data centre advancing through interconnection and paused new large-load energisations; the scope is some 250–300 projects of at least 75 MW against a queue of more than 1,800 requests totalling about 474 GW, and **the report is targeted for 10 December 2026**. That campus's energisation target sits inside the window",
+     "the buyer's policy exposure, the grid-operator audit"
+    ],
+    [
+     "**The clock on this one**",
+     "A state commission approved a **fast-track process for large load in December 2025** requiring a fifteen-year supply agreement and at least half the infrastructure capital cost borne by the data centre, while waiving solicitation requirements; the utility plans new transmission for a roughly 345 MW load of which 330 MW is allocated here. **No docket specific to this company or this campus was identified**",
+     "the buyer's policy exposure, the state large-load framework"
+    ],
+    [
+     "**Who is already on the site**",
+     "A named infrastructure partner for custom critical infrastructure, and an engineering, procurement and construction-management firm named in the project registry. The pipeline behind both campuses is recorded in **stages rather than orders**: 5,400 MW under diligence, 1,880 MW under exclusivity, 550 MW under development and 830 MW under construction",
+     "the buyer's supplier relationships, the project registry and the portfolio line"
+    ],
+    [
+     "**Who signs, in this segment generally**",
+     "The landscape's reading: the general-contractor bench holds its contract **with the landlord, not with the tenant named in the press release**, and the specification is usually written by the engineering firm rather than by either — and in this cycle **a factory-built unit deliverable in months outranks a better unit deliverable in three years**",
+     "the segment landscape, the seller's play — **analysis**"
+    ]
+   ],
+   "sales": "Read row six and row seven together. One campus has a buffering statement and a regulator's clock on it; the campus you are sitting on has neither."
+  },
+  {
+   "id": "the-position",
+   "title": "What the record does not settle",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "**In discovery the counterparty has no position yet, and neither should you.** What follows is the three things the record leaves open, in the order a good conversation would take them — because each one is only worth asking once the one before it has an answer.",
+    "**First: which schedule your lead time has to beat.** This company has two campuses, on two grids, in two states, with two different clocks. Here the utility capacity has been available since 1 July 2026, vertical construction began in the second quarter, and the first hall is targeted for the second quarter of 2027. At the other campus the energisation target sits **inside a regulator's audit window whose report is due on 10 December 2026**, with new large-load energisations paused meanwhile. The segment's own rule is to lead with lead time and then with the specification — but lead time is a comparison, and the record does not say which date is the one the order has to meet.",
+    "**Second: who holds the storage scope, and whether there is one here at all.** The company's record states that the design at its **other** campus incorporates battery systems to mitigate voltage impacts and support reliable integration with that grid — the jurisdiction where large electronic loads must {{ride-through}} disturbances rather than trip. **Nothing of the kind is stated about this campus**, which sits under a different grid operator in another state. So there are two open questions inside one: whether the buffering is a company design standard or a local answer to one grid's rule, and — if there is scope here — whether it belongs to the landlord, to the named infrastructure partner, or to the engineering firm that writes the specification. The landscape's reading is that the bench contracts with the landlord and the specification is usually written by neither party to the lease.",
+    "**Third: whose evidence qualifies you.** The campus is financed {{non-recourse}} at project level — USD 3.25 billion of rated notes with a stated minimum coverage ratio and an amortisation date — which means the project has lenders and covenants of its own, and almost certainly a technical adviser of its own. The record does not say what that adviser requires of an equipment supplier, or whether the landlord's qualification and the project's are the same process. In a campus funded this way that is not a procedural detail. **It is the difference between being specified and being paid.**"
+   ],
+   "sales": "Three questions, and the order matters: which date, whose scope, whose evidence. Answered out of order, each of them makes the next one unanswerable."
+  },
+  {
+   "id": "beat-1",
+   "title": "Beat 1 — the opening",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The development organisation opens without ceremony. Both campuses are financed, both schedules are published, and construction is under way on this one. They have taken the meeting because somebody said you were worth twenty minutes. What, they ask, are you selling?",
+   "items": [
+    {
+     "q": "What do you open with?",
+     "c": [
+      "Open on the specification — the switchgear rating, the footprint, the standards the product is built and tested to.",
+      "Ask which schedule the order has to meet and which entity places it: this campus, whose utility capacity has been available since July and whose first hall is targeted for the second quarter of 2027, or the other one, whose energisation sits inside an audit window closing on 10 December — then lead with lead time against whichever it turns out to be.",
+      "Ask for an introduction to the tenant, since the tenant is the party that will operate the hall.",
+      "Ask about the development pipeline behind the two campuses and where the next sites will be."
+     ],
+     "a": 1,
+     "why": "**Option 2 asks the question that makes lead time mean anything.** The segment's own rule is to lead with lead time and then with the specification — but a lead time is a comparison against a date, and this buyer has two dates on two grids, only one of which has a regulator's window on it. It is also a question the buyer can answer immediately and at no cost, which is what a first question should be. **Option 1 ignores the sequence this cycle actually rewards.** In a market where substation transformers run seventy-five to a hundred and ten weeks and medium-voltage switchgear fifty-two to eighty, a factory-built unit deliverable in months outranks a better unit deliverable in three years — so the specification is the second conversation, not the first. **Option 3 ignores who holds the contract.** The bench contracts with the landlord rather than with the tenant named in the release, and at this campus the end user is not even a party to the lease — so the introduction you asked for is to the party with the least authority over the equipment, and asking for it tells the room you have not read the structure. **Option 4 ignores what the pipeline is.** It is recorded in stages rather than orders — 5,400 MW under diligence against 830 MW under construction — and one named pipeline site appears on the company's own site and in no filing at all; a conversation about it spends the meeting on the least committed part of the file."
+    }
+   ],
+   "note": "The development organisation names the binding date and says the design organisation owns what goes into the specification, then brings it into the room."
+  },
+  {
+   "id": "beat-2",
+   "title": "Beat 2 — the question that decides it",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The design organisation joins. The company's published description of its other campus says the design incorporates battery systems to mitigate voltage impacts and support reliable integration with that grid. Nothing comparable has been said about this one, which sits under a different grid operator in another state. They ask what you would need to know before proposing anything on the buffering side.",
+   "items": [
+    {
+     "q": "What do you ask?",
+     "c": [
+      "Propose the same buffering package at both campuses — one design costs less to engineer, procure and support than two.",
+      "Ask two things: whether the buffering statement is a company design standard or a local answer to one grid's ride-through rule — and, separately, whether the scope here sits with the landlord, with the named infrastructure partner, or with the engineering firm that writes the specification.",
+      "Ask what duration and cycling profile the batteries at the other campus are designed for.",
+      "Ask whether the tenant's lease carries a storage requirement."
+     ],
+     "a": 1,
+     "why": "**Option 2 asks both halves of the only question that decides whether there is a product conversation at all.** The record supports the buffering statement at exactly one campus on exactly one grid, so whether it travels is unknown and answerable only here; and the landscape's reading is that the bench contracts with the landlord while the specification is usually written by the engineering firm — so 'who holds the scope' has three candidate answers and the buyer knows which. **Option 1 ignores what the record actually says.** It generalises a statement made about one campus under one grid operator's rules to a campus in another state under another, which is this segment's characteristic error; and it offers a design before establishing that a requirement exists. **Option 3 ignores the order.** Duration and cycling are specification questions, and the specification belongs to whoever writes it — which is exactly what you have not yet established; asking it first assumes the answer to the question you skipped. **Option 4 ignores what the lease is.** It is a {{triple net}} lease between the landlord's project subsidiary and a tenant of record, with a third party backstopping the rent and the end user outside it altogether. The record gives no reason to think a campus equipment scope sits in that document, and the party whose operating requirement it would be has not signed it."
+    }
+   ],
+   "note": "The design organisation separates the two: the ride-through answer is jurisdictional, and the scope on this campus has not been assigned yet."
+  },
+  {
+   "id": "beat-3",
+   "title": "Beat 3 — the ask",
+   "kind": "quiz",
+   "read": "3 min",
+   "intro": "The closing question is the one the capital structure asks. About USD 7.5 billion of non-recourse, investment-grade-rated campus-level notes fund the two campuses against roughly USD 159 million of parent recourse debt; this campus's notes are rated BBB− with a stated minimum debt-service coverage of 1.31 times and principal amortising from May 2028. They ask what you actually want out of the meeting.",
+   "items": [
+    {
+     "q": "What do you ask for?",
+     "c": [
+      "Ask for a purchase order against the second-quarter-2027 hall, since the date is published and the campus is under construction.",
+      "Ask to be written into the specification now, with a named reservation of factory slots tied to the campus's own published dates — and ask what the project's lenders and their technical adviser require of an equipment supplier, since this campus is financed non-recourse at project level rather than on the parent.",
+      "Ask for a master supply agreement across both campuses and the development pipeline behind them.",
+      "Ask for a meeting with the party backstopping the rent, since that is where the credit ultimately sits."
+     ],
+     "a": 1,
+     "why": "**Option 2 asks for the two things this segment has already shown it gives.** Reservations rather than orders are what it has voted for — supply-capacity agreements at two landlords, a supplier's plant standing on a third's campus, up to fifteen hundred medium-voltage skids contracted ahead of need — and a campus financed {{non-recourse}} at project level has lenders, covenants and a technical adviser of its own, so the evidence that qualifies you is theirs rather than the parent's. Asking both in one breath converts a twenty-minute meeting into a qualification track. **Option 1 ignores that you are not in the specification.** Nothing in the record says the equipment scope has been placed or that you have been qualified for it; a purchase order asked for at this point asks for the last document in the sequence first. **Option 3 ignores what the pipeline is.** It is stages — 5,400 MW under diligence, 1,880 under exclusivity — against 830 MW under construction, with one named site that appears on the company's own pages and in no filing; a master agreement prices a volume the record cannot support and invites the buyer to say no to all of it at once. **Option 4 ignores what the backstop is.** It took no warrants and no equity, and it guarantees rent and related pass-through obligations — not equipment, not design, not procurement. Going there confuses the credit with the buyer, and it is the one call that would make the landlord's room harder to get back into."
+    }
+   ],
+   "note": "You leave with the binding date named, the scope question owned by somebody, and a request in for the project lenders' supplier requirements. That is a first meeting that earns a second."
+  },
+  {
+   "id": "the-mechanism-behind-it",
+   "title": "The mechanism behind it",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "info",
+   "ps": [
+    "**Beat 1 rested on the project lesson.** *Reading the Named Projects* (`the-campus-as-a-power-project`) is where a campus stops being an announcement and becomes a ladder of rungs and a pair of clocks — utility capacity at one rung, {{critical IT capacity}} at another, and a regulatory schedule running beside a construction one. The whole of beat 1 is refusing to quote a lead time until you know which clock it is being compared with.",
+    "**Beat 2 rested on the sockets lesson.** *Where BESS Plugs In: The Three Sockets* (`where-bess-plugs-in`) is where buffering between the grid and the processors stops being 'a battery' and becomes a named requirement with a jurisdiction attached — which is exactly why a statement made about a campus on one grid does not travel to a campus on another. *Eleven Buyer Classes* (`who-buys-storage`) is the companion for the second half of the beat: the landlord, the contractor bench and the engineering firm are three different buyers of the same box, and only one of them writes the specification.",
+    "**Beat 3 rested on two.** *Who Carries Which Risk* (`contracts-and-revenue`) is why a {{non-recourse}} project financing puts a lender's technical adviser between a supplier and a signature — the risk sits at the project, so the diligence does too. *From Site Control to Commercial Operation* (`how-a-storage-project-happens`) is the sequence lesson: specification, qualification, reservation, order, delivery — and the reason asking for the last of those first reads as not knowing the order."
+   ]
+  },
+  {
+   "id": "debrief",
+   "title": "Debrief",
+   "kind": "table",
+   "read": "3 min",
+   "cols": [
+    "Beat",
+    "The strong move",
+    "Why, against this record",
+    "The trap"
+   ],
+   "rows": [
+    [
+     "**1 — the opening**",
+     "Ask which of the two schedules the order has to meet and which entity places it, then lead with lead time against that date",
+     "Two campuses on two grids carry two clocks, and only one of them sits inside a regulator's audit window; lead time is a comparison and the buyer holds the other half of it",
+     "Opening on the specification, which this cycle ranks second — or asking for the tenant, who does not hold the equipment contract and at this campus does not even hold the lease"
+    ],
+    [
+     "**2 — the question that decides it**",
+     "Ask whether the buffering statement is a company standard or a local answer to one grid's ride-through rule, and separately who owns the scope here",
+     "The statement is made about one campus under one grid operator and nothing comparable is said about this one; and the bench contracts with the landlord while the specification is usually written by the engineering firm",
+     "Generalising one campus's design to the other, or asking about duration and cycling before establishing who writes the specification"
+    ],
+    [
+     "**3 — the ask**",
+     "Ask to be written into the specification with a named slot reservation, and ask what the project's lenders and their technical adviser require of a supplier",
+     "This segment gives reservations before it gives orders, and a campus financed non-recourse at project level qualifies suppliers through its own lenders rather than through the parent",
+     "Asking for a purchase order before qualification, pricing a master agreement against a pipeline recorded in stages, or calling the party that backstops the rent as though it bought equipment"
+    ]
+   ],
+   "sales": "Name the rung, name the clock, and find out whose adviser signs. Everything a power seller can control in this segment is downstream of those three."
+  },
+  {
+   "id": "claims-ledger",
+   "title": "Claims ledger",
+   "kind": "ledger",
+   "read": "reference",
+   "intro": "Every premise in the room, the record and the open questions, plus every fact the three rationales lean on. **Facts are the dossier's or the project registry's; analysis is the landscape's or the dossier's own labelled assessment.** The dossier version and the module's `updated` are the values read off each fetched document on 2026-09-18, and the project pin is that file's last commit on the base revision.",
+   "rows": [
+    [
+     "949 MW of contracted critical IT capacity across about USD 26.6 billion of base-term lease value on two campuses; neither has delivered a megawatt, with the first data hall here targeted for the second quarter of 2027 and initial energisation at the other campus for the first quarter of 2027",
+     "profile:hut-8 v2 · summary, productsAndServices[0] · fact"
+    ],
+    [
+     "This campus: 245 MW of critical IT on 330 MW of utility capacity available from 1 July 2026 and scalable to 1,000 MW; implied gross-to-critical ratio about 1.35 to 1; 627 acres owned with 2,361 further acres under option; design efficiency 1.35; build cost USD 9–11 million per MW; vertical construction commenced in the second quarter of 2026",
+     "profile:hut-8 v2 · technicalSpecs[0] · fact"
+    ],
+    [
+     "The lessor is the landlord's campus subsidiary, the lessee of record is a subsidiary of a compute provider, a hyperscaler backstops all rent and related pass-through obligations across the fifteen-year base term with no warrants and no equity given, and the end user is not a party to the lease",
+     "profile:hut-8 v2 · relationships[0], relationships[1], relationships[2], technicalSpecs[0] · fact"
+    ],
+    [
+     "The lease is triple net with a fifteen-year base term, a 3.0 per cent annual escalator and three five-year renewal options; USD 7.0 billion of base-term value and about USD 17.7 billion if all renewals are exercised; expected net operating income averaging about USD 454 million a year; the annual report discloses certain customer termination rights",
+     "profile:hut-8 v2 · technicalSpecs[0], strategyRead[6] · fact"
+    ],
+    [
+     "USD 3.25 billion of senior secured notes at 6.192 per cent issued through a campus subsidiary on a non-recourse basis, rated BBB− with a stated minimum debt-service coverage of 1.31 times, amortising from May 2028, up to 85 per cent loan-to-cost; about USD 7.5 billion of project debt in total against roughly USD 159.3 million of parent recourse debt",
+     "profile:hut-8 v2 · technicalSpecs[0], summary · fact"
+    ],
+    [
+     "The other campus carries 704 MW of critical IT under two identical 352 MW leases of USD 9.8 billion each to one unnamed tenant described only as rated AA− or higher, on 1,000 MW of interconnection, and its design is stated to incorporate battery systems to mitigate voltage impacts and support reliable integration with that grid",
+     "profile:hut-8 v2 · technicalSpecs[1] · fact"
+    ],
+    [
+     "A state directive of 3 August 2026 put the grid operator and the commission to verifying and auditing every data centre advancing through interconnection and paused new large-load energisations; the scope is some 250 to 300 projects of at least 75 MW against a queue of more than 1,800 requests totalling about 474 GW, and the report is targeted for 10 December 2026",
+     "profile:hut-8 v2 · policyExposure[0] · fact"
+    ],
+    [
+     "A state commission approved a fast-track process for large-load infrastructure in December 2025 requiring a fifteen-year supply agreement and at least 50 per cent of infrastructure capital cost borne by the data centre while waiving solicitation requirements; the utility plans new transmission for a roughly 345 MW load of which 330 MW is allocated to this campus; no docket specific to this company or this campus was identified",
+     "profile:hut-8 v2 · policyExposure[1] · fact"
+    ],
+    [
+     "A named infrastructure partner supplies custom critical infrastructure at this campus, and the project registry names it alongside an engineering, procurement and construction-management firm",
+     "profile:hut-8 v2 · relationships[5] · fact; project:river-bend-campus · note · fact"
+    ],
+    [
+     "The pipeline behind the two campuses is recorded in stages at 30 June 2026 — 5,400 MW under diligence, 1,880 MW under exclusivity, 550 MW under development and 830 MW under construction — and one named 500 MW pipeline site appears on the company's own site but in no filing",
+     "profile:hut-8 v2 · technicalSpecs[2] · fact"
+    ],
+    [
+     "The counterparty structure here is a three-party arrangement that reporting routinely collapses into two, and the end user is deliberately not a party to the lease",
+     "profile:hut-8 v2 · strategyRead[2] · analysis"
+    ],
+    [
+     "This capital structure is the most conventional in its cohort and that is the deliberate strategy — non-recourse investment-grade campus notes against almost no parent recourse debt",
+     "profile:hut-8 v2 · strategyRead[5] · analysis"
+    ],
+    [
+     "The largest near-term risk to the contracted book is regulatory timing rather than credit, because the other campus's energisation target falls inside the audit window",
+     "profile:hut-8 v2 · strategyRead[6] · analysis"
+    ],
+    [
+     "Establish the route before the product, and lead with lead time then the specification: substation transformers run seventy-five to a hundred and ten weeks, generator step-up units a hundred to a hundred and fifty or more, and medium-voltage switchgear fifty-two to eighty and largely sold out through 2028 — so a factory-built unit deliverable in months outranks a better unit deliverable in three years",
+     "guidance:landscape-aidc-developers-and-landlords-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "The general-contractor bench holds its contract with the landlord rather than with the tenant named in the press release, and the specification is usually written by the engineering firm rather than by either",
+     "guidance:landscape-aidc-developers-and-landlords-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "This segment has already voted for reservations rather than orders: supply-capacity agreements at two landlords, a supplier's plant standing on a third's campus, and up to fifteen hundred medium-voltage skids contracted ahead of need",
+     "guidance:landscape-aidc-developers-and-landlords-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "Storage in this segment is an interconnection instrument with three live sockets, one of which is the ride-through requirement for new large electronic loads in one state — a named, funded requirement at a named campus",
+     "guidance:landscape-aidc-developers-and-landlords-2026-09 · the-sellers-play · analysis"
+    ],
+    [
+     "This buyer's bet is that the most conventional capital structure in the converted-miner cohort is the differentiator, and that a backstop can be obtained without warrants or equity where no peer on the same template achieved it",
+     "guidance:landscape-aidc-developers-and-landlords-2026-09 · each-players-bet · analysis"
+    ]
+   ]
+  },
+  {
+   "id": "what-the-record-does-not-say",
+   "title": "What the record does NOT say",
+   "kind": "callout",
+   "read": "2 min",
+   "tone": "warn",
+   "ps": [
+    "**In discovery this section is the question list.** Each is something no dossier carries — which is precisely why it is asked in the room rather than assumed on the way there.",
+    "**1 · Is the buffering a standard or a jurisdiction?** The design statement exists for one campus, under one grid operator, in the state whose {{ride-through}} rule makes it necessary. Nothing comparable is on the record here. **Ask which it is** — and accept that 'we have not decided' is a real answer and a useful one.",
+    "**2 · Who owns the equipment scope on this campus?** The record names an infrastructure partner and an engineering firm, and the segment's reading is that the specification usually belongs to neither party to the lease. **Ask which of the three writes it, and which of the three places the order.**",
+    "**3 · Which date binds?** Two campuses, two grids, two clocks, and one of them has a regulator's report due on 10 December. **Ask which schedule the procurement is actually run against** — and remember that the audit's conclusion is not in the record either. What the record carries is the pause, the scope and the date.",
+    "**4 · What do the project's lenders require of a supplier?** The campus is financed {{non-recourse}} with rated notes, a stated coverage minimum and an amortisation date, so it has covenants and almost certainly a technical adviser. **Ask whether the landlord's qualification and the project's are one process or two.** Nobody has published the answer.",
+    "**5 · Who is the other campus's tenant?** Unnamed in every first-party source, and named in none the segment's own review could find. **Do not guess it, and do not let a guess reach a slide.** If the answer matters to your proposal, ask what the tenant's design organisation requires and let the buyer decide how much of that to say.",
+    "**6 · What is in the pipeline, as opposed to in the stages?** Diligence and exclusivity are not orders, and one 500 MW site appears on the company's own pages and in no filing. **Ask which pipeline sites have site control and an interconnection position** — those two things are what turn a stage into a customer."
+   ],
+   "sales": "Six questions, five of which the buyer can answer in a sentence. The sixth — what the audit concludes — nobody can, and saying so out loud is worth more than a forecast."
+  }
+ ]
+};
+}
+
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -47843,7 +48953,10 @@ function clLessons_() {
           clLessonInterconnectionForLargeLoads_(),
           // C5 — the Rehearsal library; in no track, in no deck.
           clLessonScenarioStorageDevelopersAndIppsObjection_(),
-          clLessonScenarioAidcDevelopersAndLandlordsObjection_()];
+          clLessonScenarioAidcDevelopersAndLandlordsObjection_(),
+          clLessonScenarioStorageDevelopersAndIppsDiscovery_(),
+          clLessonScenarioUtilitiesObjection_(),
+          clLessonScenarioAidcDevelopersAndLandlordsDiscovery_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
