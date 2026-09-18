@@ -3,11 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16w] — 2026-09-18 05:38:44 AM EST — v06.52r
+
+### Added
+
+- **A Rehearsal library, reached from the masthead.** It lists the sales rehearsals you can read, grouped by the seat you are selling from and then by the kind of buyer, with a line under each seat saying who that reader is. Every card shows the mode, where in the sale it sits, the counterparty it is set against, its review date and how many of its ten sections you have finished.
+- **A rehearsal opens on its own page and returns you to the library**, rather than to the list of tracks it is deliberately not part of.
+
+### Changed
+
+- **The main index no longer mixes rehearsals in with the modules.** It shows a single line saying how many are in the library and links straight to it.
 
 ## [v01.15w] — 2026-09-18 01:37:44 AM EST — v06.49r
 

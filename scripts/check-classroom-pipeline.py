@@ -802,6 +802,46 @@ def p11_public_changelog(base, head, changed):
                  % m.group(0))
 
 
+def p13_scenario_discipline(base, head):
+    """C5 / design D6 — the committer never authors and never revises a scenario.
+
+    A `type: scenario` lesson lives INSIDE the content fence, so it is inside
+    the committer's write set by geography; this is what closes that gap by
+    rule. There is no permitted revision and no permitted authoring: a run that
+    finds a scenario's pinned input moved lists it under `Needs the developer`
+    and touches nothing.
+
+    Why no split rule (facts refreshable, beats frozen): a beat's correctness
+    depends on the facts it was written against, so a run permitted to refresh
+    `what-the-record-says` under G3 without re-judging the three beats would
+    produce a scenario whose record and rehearsal disagree — which is worse
+    than a stale scenario wearing a "review due" chip.
+
+    Byte-level, not meaning-level: unlike P8 there is no whitespace forgiveness,
+    because there is no revision this can be the honest half of.
+    """
+    for lid in sorted(head.lessons):
+        h = head.lessons[lid]
+        if h.get("type") != "scenario":
+            continue
+        b = base.lessons.get(lid)
+        if b is None:
+            fail("P13", "lesson %r is a new `type: scenario` literal — a scenario "
+                        "is authored by a developer session only, never by the "
+                        "committer (design D6)" % lid)
+        elif canon(b) != canon(h):
+            fail("P13", "scenario %r differs base → head — there is no permitted "
+                        "revision of a scenario: its beats were judged against the "
+                        "facts they were written from, so a refreshed record with "
+                        "un-re-judged beats is worse than a stale scenario (design D6)"
+                 % lid)
+    for lid in sorted(base.lessons):
+        if base.lessons[lid].get("type") == "scenario" and lid not in head.lessons:
+            fail("P13", "scenario %r disappeared — a scenario is never removed by a "
+                        "pipeline run (P5 also covers this; stated here so the "
+                        "scenario rule is complete)" % lid)
+
+
 def p12_version_pair(base, head, changed):
     if GS_PATH not in changed:
         return
@@ -837,6 +877,7 @@ def run_all(base, head, changed, today):
     p10_blast_radius(base, head)
     p11_public_changelog(base, head, changed)
     p12_version_pair(base, head, changed)
+    p13_scenario_discipline(base, head)
 
 
 # ── Fixtures ──────────────────────────────────────────────────────────────
@@ -992,6 +1033,59 @@ def mutate_p12(base, head, changed):
     head.ver = "|%s|" % nv
 
 
+# ── C5 · the two P13 fixtures ─────────────────────────────────────────────
+# D6 forbids two distinct writes, so it takes two negative fixtures: authoring
+# a scenario, and revising one that already exists. The second has to plant a
+# scenario at BASE first (the repo's real base carried none when P13 was
+# written, and will carry only a handful after), so `scenario_at_base` mutates
+# both sides and the fixture then edits only the head copy.
+
+SCENARIO_FIXTURE = {
+    "schemaVersion": 1, "id": "scenario-fixture-objection", "type": "scenario",
+    "title": "A rehearsal", "short": "A rehearsal against a buyer's record.",
+    "group": "The Value Chain", "updated": "2026-09-10", "reviewBy": "2026-12-01",
+    "scenario": {"mode": "objection", "seat": "storage-seller",
+                 "segment": "storage-developers-and-ipps",
+                 "counterparty": "aypa-power", "stage": "shortlist"},
+    "provenance": {"inputs": [
+        {"kind": "public", "ref": "profile:aypa-power", "date": "2026-09-06"},
+        {"kind": "guidance", "ref": "guidance:landscape-storage-developers-and-ipps-2026-09",
+         "date": "2026-09-14"}]},
+    "sections": [{"id": "the-room", "title": "The room", "kind": "callout", "ps": ["x"]}],
+}
+
+
+def _insert_scenario(gs, obj, fn="clLessonScenarioFixture_"):
+    gs = gs.replace(
+        "function clLessons_() {",
+        "function %s() {\n  return %s;\n}\nfunction clLessons_() {"
+        % (fn, json.dumps(obj, indent=1, ensure_ascii=False)), 1)
+    return gs.replace("clLessonHeatConstraint_()];",
+                      "clLessonHeatConstraint_(), %s()];" % fn, 1)
+
+
+def mutate_p13_added(base, head, changed):
+    """The committer authors a scenario."""
+    head.gs = _insert_scenario(head.gs, SCENARIO_FIXTURE)
+
+
+def mutate_p13_revised(base, head, changed):
+    """The committer revises a scenario that already existed at base.
+
+    Written as a G3-shaped revision — a section's meaning moves, `changed[]`
+    names it, `updated` advances — precisely so the fixture proves P13 refuses
+    the ONE revision every other assertion would wave through.
+    """
+    base.gs = _insert_scenario(base.gs, SCENARIO_FIXTURE)
+    base._lessons = None
+    revised = json.loads(json.dumps(SCENARIO_FIXTURE))
+    revised["sections"][0]["ps"] = ["The record moved."]
+    revised["updated"] = GOOD_DATE
+    revised["revisions"] = [{"date": GOOD_DATE, "note": "the record moved",
+                             "changed": ["the-room"]}]
+    head.gs = _insert_scenario(head.gs, revised)
+
+
 FIXTURES = [
     ("P1", "a path outside the write set", mutate_p1),
     ("P2", "an edit outside the content fence", mutate_p2),
@@ -1005,12 +1099,14 @@ FIXTURES = [
     ("P10", "more revised lessons than the cap allows", mutate_p10),
     ("P11", "a gated lesson title in the deployed changelog", mutate_p11),
     ("P12", "VERSION moved two steps", mutate_p12),
+    ("P13", "a scenario authored by the committer", mutate_p13_added),
+    ("P13", "a scenario revised by the committer", mutate_p13_revised),
 ]
 
 
 def selftest(base, today):
     global FINDINGS
-    missing = {c for c, _, _ in FIXTURES} ^ {"P%d" % i for i in range(1, 13)}
+    missing = {c for c, _, _ in FIXTURES} ^ {"P%d" % i for i in range(1, 14)}
     if missing:
         print("ERROR fixtures do not cover: %s" % ", ".join(sorted(missing)))
         return 1

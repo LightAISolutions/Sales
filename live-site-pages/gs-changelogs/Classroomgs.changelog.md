@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.75g] — 2026-09-18 05:38:44 AM EST — v06.52r
+
+### Added
+
+- **A new kind of lesson: a rehearsal.** Instead of explaining how something works, a rehearsal drops you into one conversation — who is across the table, what the record says before you walk in, and the position you have to answer — and asks you to choose your next move three times. Each choice has four real options and a written explanation of what every one of them costs, then the conversation carries on as if you had made the strong move. **Two are in the library to start with, one for each seat.**
+- **A Rehearsal shelf on the masthead.** Rehearsals are chosen rather than sequenced, so they live in their own library rather than in a track. The shelf groups them by the seat you are selling from and then by the kind of buyer, shows the mode, the stage of the sale and how many of the ten sections you have finished, and carries the same review-date chip everything else does.
+
+### Changed
+
+- **Curriculum updated.**
+- **Rehearsals never appear in your flashcard queue.** They are practice for a decision, not a fact to memorise, so nothing in one is ever added to the drill — your daily queue is exactly the size it was before they existed.
 
 ## [v01.74g] — 2026-09-18 02:13:44 AM EST — v06.50r
 

@@ -33,6 +33,30 @@ SEGMENT_SECTION_IDS = ["the-segment", "where-it-sits", "what-is-bought-and-on-wh
                        "the-numbers", "who-is-connected", "what-moved", "the-fence", "read-next",
                        "check-yourself"]   # build-classroom-segments.py SECTION_IDS — fixed for life
 
+# ── C5 · the scenario (simulation) layer ─────────────────────────────────────
+# C5-SALES-SIMULATIONS-DESIGN.md §4/§5. The ten ids are fixed for life for the
+# same reason the segment layer's are: progress keys on lesson id + section id,
+# and a scenario's ten ticks are its completion record. Kinds are fixed too —
+# the three `quiz` beats are the decision mechanic (D9) and the checker asserts
+# the per-beat shape below, because "four real options with a rationale that
+# addresses all four" is the only thing separating a rehearsal from a quiz.
+SCENARIO_SECTION_IDS = ["the-room", "what-the-record-says", "the-position",
+                        "beat-1", "beat-2", "beat-3", "the-mechanism-behind-it",
+                        "debrief", "claims-ledger", "what-the-record-does-not-say"]
+SCENARIO_SECTION_KINDS = {"the-room": "callout", "what-the-record-says": "table",
+                          "the-position": "prose", "beat-1": "quiz", "beat-2": "quiz",
+                          "beat-3": "quiz", "the-mechanism-behind-it": "callout",
+                          "debrief": "table", "claims-ledger": "ledger",
+                          "what-the-record-does-not-say": "callout"}
+SCENARIO_BEATS = ["beat-1", "beat-2", "beat-3"]
+SCENARIO_FIELDS = ("mode", "seat", "segment", "counterparty", "stage")
+SCENARIO_MODES = ("objection", "discovery")
+SCENARIO_SEATS = ("storage-seller", "aidc-power-seller")   # curriculum plan §10.10
+SCENARIO_STAGES = ("prospecting", "discovery", "rfp", "shortlist", "negotiation", "post-award")
+SCENARIO_TILE_VS = ["across the table", "the segment", "the exercise", "where in the sale"]
+SCENARIO_LANE = "The Value Chain"
+PROFILE_DIR = ROOT / "live-site-pages" / "profiler-data"
+
 SECTION_KINDS = {"prose", "callout", "table", "proscons", "timeline", "bars",
                  "flashcards", "quiz", "ledger"}
 LANES = {"Technology Foundations", "The AI Data-Center Wave", "Market Access & Bankability",
@@ -440,8 +464,8 @@ def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver, public):
     if not (isinstance(lesson.get("id"), str) and ID_RE.match(lesson.get("id") or "")):
         err("%s: id fails the id rules" % tag)
     ltype = lesson.get("type", "module")
-    if ltype not in ("module", "briefing"):
-        err("%s: type must be module or briefing" % tag)
+    if ltype not in ("module", "briefing", "scenario"):
+        err("%s: type must be module, briefing or scenario" % tag)
     if ltype == "briefing":
         if not (isinstance(lesson.get("edition"), str) and DATE_RE.match(lesson["edition"])):
             err("%s: briefing lessons require edition YYYY-MM-DD" % tag)
@@ -449,6 +473,8 @@ def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver, public):
             warn("%s: briefing ids conventionally start with 'briefing-'" % tag)
     elif "edition" in lesson:
         err("%s: edition is for briefings only" % tag)
+    if ltype != "scenario" and "scenario" in lesson:
+        err("%s: a `scenario` block is for type: scenario only" % tag)
     if isinstance(lesson.get("short"), str) and len(lesson["short"]) > 160:
         warn("%s: short exceeds 160 chars" % tag)
     if lesson.get("group") not in LANES:
@@ -501,10 +527,224 @@ def check_track(track, tag, lessons_by_id, schema_ver):
         if l is None:
             err("%s: lesson %r is not registered" % (tag, lid))
         elif l.get("type", "module") != "module":
-            err("%s: lesson %r is a briefing — tracks list modules only" % (tag, lid))
+            err("%s: lesson %r is a %s — tracks list modules only"
+                % (tag, lid, l.get("type")))
     for pid in track.get("prereqs") or []:
         if not isinstance(pid, str):
             err("%s: prereqs must be track ids" % tag)
+
+
+def gate_of(lesson, ref_kinds, caps, strictness):
+    """The server's fold, in Python — `clStampKinds_` then `clGateForProvenance_`.
+
+    The single Python copy of the derivation: check-classroom-curriculum.py
+    imports this module and uses this function rather than keeping its own, so
+    the health report and this checker can never disagree about what a stamp
+    means. The authority is still the .gs — every constant below is read out of
+    it (CL_PROVENANCE_REF_KINDS / _CAPS / _STRICTNESS) rather than written here,
+    and the truth table runs the real region in Node beside this.
+    Returns the capability name, or '(denied)' for a stamp that fails closed.
+    """
+    kinds = []
+    for i in (lesson.get("provenance") or {}).get("inputs") or []:
+        ref = str(i.get("ref", "")) if isinstance(i, dict) else ""
+        k = ref_kinds.get(ref.split(":", 1)[0]) if ":" in ref else None
+        if not k or i.get("kind") != k:
+            return "(denied)"
+        kinds.append(k)
+    if not kinds:
+        return "(denied)"
+    top = max(kinds, key=lambda k: strictness.index(k) if k in strictness else -1)
+    return caps.get(top, "(denied)")
+
+
+def guidance_module_dates(src):
+    """id → {updated, reviewBy} for every guidanceDoc<Name>_() literal in the .gs.
+
+    The four keys sit at the top of each strict-JSON literal, so a bounded
+    window after the function head reads them without parsing the whole file —
+    the same reader check-classroom-curriculum.py uses, kept local because a
+    scenario's gate depends on its landscape module being REGISTERED, which is
+    a fact about this file.
+    """
+    out = {}
+    for m in re.finditer(r"^function guidanceDoc[A-Z]\w*_\(\) \{", src, re.M):
+        window = src[m.end():m.end() + 3000]
+        mid = re.search(r'"id":\s*"([a-z0-9][a-z0-9-]*)"', window)
+        if not mid:
+            continue
+        upd = re.search(r'"updated":\s*"(\d{4}-\d{2}-\d{2})"', window)
+        rev = re.search(r'"reviewBy":\s*"(\d{4}-\d{2}-\d{2})"', window)
+        out.setdefault(mid.group(1), {"updated": upd.group(1) if upd else "",
+                                      "reviewBy": rev.group(1) if rev else ""})
+    return out
+
+
+def check_scenario_lessons(lessons_by_id, src, ref_kinds, caps, strictness):
+    """C5 scenarios — the shape, the two registries, and the gate.
+
+    Everything a scenario IS, its five-field `scenario` block says in a form two
+    registries can answer: the seat and mode and stage against their enums, the
+    segment against profiler-segments.json, the counterparty against that
+    segment's own roster AND against the profile file the stamp must pin. The
+    gate is NOT stored — it is computed from the stamp exactly as the server
+    computes it, and a scenario whose fold is not `guidance` is an authoring
+    defect rather than a gate option (design D3/§6): a fold of `tracks` means
+    the landscape input was lost, `reports` means a report was gained.
+    """
+    reg = None
+    try:
+        reg = json.loads(SEGMENTS.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        if any(l.get("type") == "scenario" for l in lessons_by_id.values()):
+            err("cannot read %s (%s) — scenarios cannot be checked" % (SEGMENTS.name, e))
+        return
+    by_seg = {s["id"]: s for s in reg.get("segments") or []}
+    modules = guidance_module_dates(src)
+    for lid, lesson in sorted(lessons_by_id.items(), key=lambda kv: str(kv[0])):
+        if lesson.get("type") != "scenario":
+            continue
+        tag = "scenario %s" % lid
+        sc = lesson.get("scenario")
+        if not isinstance(sc, dict):
+            err("%s: type is scenario, so a `scenario` block is required" % tag)
+            continue
+        extra = sorted(set(sc) - set(SCENARIO_FIELDS))
+        missing = [f for f in SCENARIO_FIELDS if not isinstance(sc.get(f), str) or not sc[f]]
+        if missing:
+            err("%s: scenario block is missing %s" % (tag, missing))
+        if extra:
+            err("%s: scenario block carries unknown field(s) %s — the five of design §4 "
+                "and nothing else" % (tag, extra))
+        if sc.get("mode") not in SCENARIO_MODES:
+            err("%s: scenario.mode %r not in %s" % (tag, sc.get("mode"), list(SCENARIO_MODES)))
+        if sc.get("seat") not in SCENARIO_SEATS:
+            err("%s: scenario.seat %r not in %s (curriculum plan §10.10)"
+                % (tag, sc.get("seat"), list(SCENARIO_SEATS)))
+        if sc.get("stage") not in SCENARIO_STAGES:
+            err("%s: scenario.stage %r not in %s" % (tag, sc.get("stage"), list(SCENARIO_STAGES)))
+        seg = by_seg.get(str(sc.get("segment")))
+        if seg is None:
+            err("%s: scenario.segment %r is not a registered segment in %s"
+                % (tag, sc.get("segment"), SEGMENTS.name))
+        else:
+            cp = str(sc.get("counterparty"))
+            roles = {m["slug"]: m.get("role") for m in seg.get("members") or []}
+            if cp not in roles:
+                err("%s: counterparty %r is not a member of segment %r"
+                    % (tag, cp, seg["id"]))
+            elif roles[cp] not in ("incumbent", "challenger"):
+                err("%s: counterparty %r is %r in segment %r — a counterparty is the desk "
+                    "that signs, so only an incumbent or a challenger"
+                    % (tag, cp, roles[cp], seg["id"]))
+            if not (PROFILE_DIR / ("%s.profile.json" % cp)).exists():
+                err("%s: counterparty %r has no profile file — every fact row rests on it"
+                    % (tag, cp))
+            if isinstance(lesson.get("short"), str) and cp:
+                if cp.replace("-", " ").split()[0] not in lesson["short"].lower():
+                    warn("%s: short does not name the counterparty — a library card is read "
+                         "without opening it (design §4); short is %r" % (tag, lesson["short"]))
+        if lesson.get("group") != SCENARIO_LANE:
+            warn("%s: group %r — a scenario is keyed to a segment, so its lane is %r"
+                 % (tag, lesson.get("group"), SCENARIO_LANE))
+        tiles = lesson.get("tiles") or []
+        if len(tiles) != 4:
+            err("%s: exactly four tiles required, got %d" % (tag, len(tiles)))
+        else:
+            got_vs = [str(t.get("v")) for t in tiles if isinstance(t, dict)]
+            if got_vs != SCENARIO_TILE_VS:
+                err("%s: tile `v` values must be %s in order, got %s"
+                    % (tag, SCENARIO_TILE_VS, got_vs))
+        # ── Sections: ten ids, in order, with the kinds design §5 fixes ──────
+        secs = [s for s in lesson.get("sections") or [] if isinstance(s, dict)]
+        ids = [s.get("id") for s in secs]
+        if ids != SCENARIO_SECTION_IDS:
+            err("%s: sections must be exactly %s in order, got %s"
+                % (tag, SCENARIO_SECTION_IDS, ids))
+        for s in secs:
+            want = SCENARIO_SECTION_KINDS.get(str(s.get("id")))
+            if want and s.get("kind") != want:
+                err("%s: section %r must be kind %r, got %r"
+                    % (tag, s.get("id"), want, s.get("kind")))
+            if s.get("kind") == "flashcards":
+                err("%s: section %r is `flashcards` — a scenario's only drillable-looking "
+                    "sections are its three beats, and even those never enter a deck (D7)"
+                    % (tag, s.get("id")))
+        # ── The beats: one item, four options, an answer, a rationale ────────
+        for bid in SCENARIO_BEATS:
+            b = next((s for s in secs if s.get("id") == bid), None)
+            if b is None:
+                continue
+            if not (isinstance(b.get("intro"), str) and b["intro"].strip()):
+                err("%s: %s needs an `intro` — it carries the counterparty's line for the beat"
+                    % (tag, bid))
+            # `note` is a SECTION field — the renderer prints it as .cl-note after
+            # the item. Written inside items[0] it is valid JSON, passes every
+            # other check, and is never shown to anybody; found in the render at
+            # C5 session 1, on all six beats, and turned into this assertion so
+            # the next session cannot repeat it.
+            if not (isinstance(b.get("note"), str) and b["note"].strip()):
+                err("%s: %s needs a section-level `note` — it carries the conversation "
+                    "forward on the assumption the strong move was taken, and a `note` "
+                    "written inside items[] renders nowhere" % (tag, bid))
+            if isinstance(b.get("items"), list) and b["items"] and isinstance(b["items"][0], dict) \
+                    and "note" in b["items"][0]:
+                err("%s: %s carries `note` inside items[0] — the renderer only prints a "
+                    "section-level note, so that text reaches no reader" % (tag, bid))
+            items = b.get("items")
+            if not (isinstance(items, list) and len(items) == 1):
+                err("%s: %s must carry exactly one item, got %s"
+                    % (tag, bid, len(items) if isinstance(items, list) else items))
+                continue
+            it = items[0]
+            if not isinstance(it, dict):
+                err("%s: %s items[0] must be an object" % (tag, bid)); continue
+            choices = it.get("c")
+            if not (isinstance(choices, list) and len(choices) == 4):
+                err("%s: %s must offer exactly four options, got %s"
+                    % (tag, bid, len(choices) if isinstance(choices, list) else choices))
+            a = it.get("a")
+            if not (isinstance(a, int) and not isinstance(a, bool)
+                    and isinstance(choices, list) and 0 <= a < len(choices)):
+                err("%s: %s `a` must index its own options, got %r" % (tag, bid, a))
+            if not (isinstance(it.get("why"), str) and it["why"].strip()):
+                err("%s: %s needs a `why` — and it must address all four options" % (tag, bid))
+            if not (isinstance(it.get("q"), str) and it["q"].strip()):
+                err("%s: %s needs a `q` — the situation question" % (tag, bid))
+        # ── The stamp, and the gate it must compute to ───────────────────────
+        refs = [str(i.get("ref", "")) for i in (lesson.get("provenance") or {}).get("inputs") or []
+                if isinstance(i, dict)]
+        cp = str(sc.get("counterparty") or "")
+        if cp and ("profile:%s" % cp) not in refs:
+            err("%s: the stamp must carry profile:%s — it is where every fact row comes from"
+                % (tag, cp))
+        want_pfx = "guidance:landscape-%s-" % sc.get("segment")
+        lands = [r for r in refs if r.startswith(want_pfx)]
+        if not lands:
+            err("%s: the stamp must carry a `%sYYYY-MM` input — the landscape is where the "
+                "strong move and the counterparty's posture come from, and it is what makes "
+                "the fold `guidance` (design D3)" % (tag, want_pfx))
+        for r in lands:
+            mid = r.split(":", 1)[1]
+            if mid not in modules:
+                err("%s: stamp names %r, which guidanceDocs_() does not register" % (tag, r))
+        for bad in ("report:", "corpus:", "briefing:"):
+            for r in refs:
+                if r.startswith(bad):
+                    err("%s: stamp carries %r — a scenario needs no ranking and is not "
+                        "week-bound; `%s` is forbidden (design §6)" % (tag, r, bad[:-1]))
+        fold = gate_of(lesson, ref_kinds, caps, strictness)
+        if fold != "guidance":
+            err("%s: the stamp folds to %r, not 'guidance' — a fold of 'tracks' means the "
+                "landscape input was lost, 'reports' means a report was gained; both are "
+                "authoring defects, not gate options (design §6)" % (tag, fold))
+        # ── reviewBy: a scenario cannot outlive the judgment it rests on ─────
+        rb = str(lesson.get("reviewBy") or "")
+        for r in lands:
+            lrb = modules.get(r.split(":", 1)[1], {}).get("reviewBy") or ""
+            if rb and lrb and rb > lrb:
+                warn("%s: reviewBy %s is later than %s's own %s — a scenario cannot outlive "
+                     "the judgment it rests on (design §6)" % (tag, rb, r.split(':', 1)[1], lrb))
 
 
 def check_segment_lessons(lessons_by_id):
@@ -599,6 +839,12 @@ FIXTURES = {
     "public-plus-guidance": {"provenance": {"inputs": [
         {"kind": "public", "ref": "profile:sungrow"},
         {"kind": "guidance", "ref": "guidance:bess-tech-fundamentals-2026-08"}]}},
+    # C5: the stamp every scenario carries by construction — the counterparty's
+    # dossier and its segment's landscape. It folds to `guidance`, which is what
+    # makes a scenario contributor+ without a capability of its own (design D3).
+    "scenario-stamp": {"provenance": {"inputs": [
+        {"kind": "public", "ref": "profile:aypa-power"},
+        {"kind": "guidance", "ref": "guidance:landscape-storage-developers-and-ipps-2026-09"}]}},
     "corpus": {"provenance": {"inputs": [{"kind": "briefing", "ref": "corpus:abc123"}]}},
     "guidance-plus-briefing": {"provenance": {"inputs": [
         {"kind": "guidance", "ref": "guidance:x"}, {"kind": "briefing", "ref": "briefing:briefing-2026-09-01"}]}},
@@ -616,7 +862,8 @@ FIXTURES = {
     "bad-ref-shape": {"provenance": {"inputs": [{"kind": "public", "ref": "profile"}]}},
 }
 EXPECTED_GATE = {
-    "public-only": "tracks", "public-plus-guidance": "guidance", "corpus": "briefing",
+    "public-only": "tracks", "public-plus-guidance": "guidance",
+    "scenario-stamp": "guidance", "corpus": "briefing",
     "guidance-plus-briefing": "briefing", "public-plus-report": "reports",
     "note-ref": "", "kind-prefix-mismatch": "", "kind-upgraded-mismatch": "", "unknown-kind": "",
     "empty-inputs": "", "missing-provenance": "", "inputs-not-array": "", "bad-ref-shape": "",
@@ -660,7 +907,12 @@ function clLessons_() { return [
   { id: 'l-gd',  title: 'G', provenance: FX['public-plus-guidance'].provenance, sections: [{id:'a'},{id:'b'}] },
   { id: 'l-rep', title: 'R', provenance: FX['public-plus-report'].provenance, sections: [{id:'a'}] },
   { id: 'l-bad', title: 'B', provenance: FX['note-ref'].provenance, sections: [{id:'a'}] },
-  { id: 'b-1', type: 'briefing', edition: '2026-09-01', title: 'W', provenance: FX['corpus'].provenance, sections: [{id:'a'}] }
+  { id: 'b-1', type: 'briefing', edition: '2026-09-01', title: 'W', provenance: FX['corpus'].provenance, sections: [{id:'a'}] },
+  // C5: a scenario, registered in no track, carrying its ten fixed section ids.
+  { id: 'l-scn', type: 'scenario', title: 'S', provenance: FX['scenario-stamp'].provenance,
+    scenario: { mode: 'objection', seat: 'storage-seller', segment: 'seg-x',
+                counterparty: 'cp-x', stage: 'shortlist' },
+    sections: %(scnSections)s }
 ]; }
 function clTracks_() { return [
   { id: 't-mixed', title: 'M', lessons: ['l-pub', 'l-gd', 'l-rep', 'l-bad', 'ghost'] },
@@ -674,9 +926,14 @@ Object.keys(TIERS).forEach(function(t) {
 });
 // ── Progress ops: progress is never a weaker gate than reading ──────────
 out.tickable = {};
+out.scenarioTickable = {};
 Object.keys(TIERS).forEach(function(t) {
   var sess = { role: TIERS[t].role, permissions: TIERS[t].permissions, email: t + '@example.com' };
-  out.tickable[t] = Object.keys(clProgressValid_(sess)).sort();
+  var v = clProgressValid_(sess);
+  out.tickable[t] = Object.keys(v).sort();
+  // C5: the ten section ids named, not merely the lesson id — a scenario's
+  // completion record IS its ten ticks, so the admitted set is the assertion.
+  out.scenarioTickable[t] = v['l-scn'] ? Object.keys(v['l-scn']).sort() : null;
 });
 // C3 session 3: guidance modules are tickable and drillable here, behind the
 // `guidance` capability rather than a lesson's provenance stamp. Emit the
@@ -722,11 +979,29 @@ clLessons_ = function() { return [
   ] },
   { id: 'l-rep', title: 'R', provenance: FX['public-plus-report'].provenance, sections: [
     { id: 'f3', kind: 'flashcards', cards: [ { q: 'rep q1', a: 'rep a1' } ] }
-  ] }
+  ] },
+  // C5 / D7: a scenario carrying BOTH drillable section kinds, readable by the
+  // same tiers as l-gd. If clDrillLessonItems_ stopped skipping scenarios, this
+  // fixture would contribute lq:l-scn:beat-1:0 and lc:l-scn:f-scn:0 — which is
+  // what makes the zero below a measurement rather than an empty set (ll1).
+  { id: 'l-scn', type: 'scenario', title: 'S', provenance: FX['scenario-stamp'].provenance,
+    scenario: { mode: 'objection', seat: 'storage-seller', segment: 'seg-x',
+                counterparty: 'cp-x', stage: 'shortlist' },
+    sections: [
+      { id: 'beat-1', kind: 'quiz', items: [ { q: 'scn q', c: ['w','x','y','z'], a: 1, why: 'because' } ] },
+      { id: 'f-scn', kind: 'flashcards', cards: [ { q: 'scn c1', a: 'scn a1' } ] }
+    ] }
 ]; };
 out.drill = {};
+out.drillScenario = {};
 Object.keys(TIERS).forEach(function(t) {
-  out.drill[t] = Object.keys(clDrillLessonItems_(TIERS[t])).sort();
+  var ids = Object.keys(clDrillLessonItems_(TIERS[t])).sort();
+  out.drill[t] = ids;
+  out.drillScenario[t] = {
+    n: ids.filter(function(i) { return i.split(':')[1] === 'l-scn'; }).length,
+    pool: ids.length,
+    visible: clLessonVisible_(TIERS[t], { provenance: FX['scenario-stamp'].provenance })
+  };
 });
 // The guidance half of the pool: ids only (the modules are real, so the count
 // is large), plus the prefixes, which is what the gate assertion needs.
@@ -882,21 +1157,29 @@ process.stdout.write(JSON.stringify(out));
 """
 
 EXPECTED_INDEX = {
-    "admin":               {"tracks": ["t-mixed:l-pub,l-gd,l-rep/2", "t-admin:l-rep/0"], "lessons": ["l-pub", "l-gd", "l-rep", "b-1"]},
-    "admin-by-permission": {"tracks": ["t-mixed:l-pub,l-gd,l-rep/2", "t-admin:l-rep/0"], "lessons": ["l-pub", "l-gd", "l-rep", "b-1"]},
-    "contributor":         {"tracks": ["t-mixed:l-pub,l-gd/3"], "lessons": ["l-pub", "l-gd", "b-1"]},
+    "admin":               {"tracks": ["t-mixed:l-pub,l-gd,l-rep/2", "t-admin:l-rep/0"], "lessons": ["l-pub", "l-gd", "l-rep", "b-1", "l-scn"]},
+    "admin-by-permission": {"tracks": ["t-mixed:l-pub,l-gd,l-rep/2", "t-admin:l-rep/0"], "lessons": ["l-pub", "l-gd", "l-rep", "b-1", "l-scn"]},
+    "contributor":         {"tracks": ["t-mixed:l-pub,l-gd/3"], "lessons": ["l-pub", "l-gd", "b-1", "l-scn"]},
     "analyst":             {"tracks": ["t-mixed:l-pub/4"], "lessons": ["l-pub"]},
     "viewer":              {"tracks": [], "lessons": []},
     "unknown-role":        {"tracks": [], "lessons": []},
 }
 CARD_KEYS = "edition,gate,group,id,kinds,reviewBy,revised,sections,short,title,type,updated"
+# C5: `scenario` is emitted on a scenario's card ONLY — the Rehearsal library
+# groups seat → segment and shows mode · counterparty · stage off the same
+# cop=index payload, and a card that carried the key unconditionally would move
+# every other card's bytes, breaking the "analyst index byte-identical" test a
+# gated registration is supposed to pass. The paired assertion below therefore
+# checks BOTH directions: present on the scenario, absent everywhere else.
+SCENARIO_CARD_KEYS = "edition,gate,group,id,kinds,reviewBy,revised,scenario,sections,short,title,type,updated"
 
 
 def run_gate_truth_table(src, lesson_ids=()):
     m = re.search(r"^// PROJECT START.*?\n(.*?)^// PROJECT END", src, re.S | re.M)
     if not m:
         err("gate test: PROJECT region not found in %s" % GS.name); return
-    js = HARNESS % {"region": m.group(1), "fixtures": json.dumps(FIXTURES), "tiers": json.dumps(TIERS)}
+    js = HARNESS % {"region": m.group(1), "fixtures": json.dumps(FIXTURES), "tiers": json.dumps(TIERS),
+                    "scnSections": json.dumps([{"id": s} for s in SCENARIO_SECTION_IDS])}
     with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as f:
         f.write(js); path = f.name
     try:
@@ -918,9 +1201,12 @@ def run_gate_truth_table(src, lesson_ids=()):
         got = out["index"][t]
         if got["tracks"] != want["tracks"] or got["lessons"] != want["lessons"]:
             err("gate test: index for %s = %s, expected %s" % (t, {"tracks": got["tracks"], "lessons": got["lessons"]}, want))
-        for keys in got["cards"]:
-            if keys != CARD_KEYS:
-                err("gate test: card keys for %s = %s (sections must never leak into a card)" % (t, keys))
+        for lid, keys in zip(got["lessons"], got["cards"]):
+            want_keys = SCENARIO_CARD_KEYS if lid == "l-scn" else CARD_KEYS
+            if keys != want_keys:
+                err("gate test: card keys for %s/%s = %s, expected %s (sections must never "
+                    "leak into a card; `scenario` appears on a scenario's card and on no other)"
+                    % (t, lid, keys, want_keys))
     if out["forbidden"] != 3:
         err("gate test: expected 3 CLASSROOM_FORBIDDEN throws, got %s" % out["forbidden"])
 
@@ -1078,6 +1364,16 @@ def run_gate_truth_table(src, lesson_ids=()):
         if got != exp:
             err("progress test: %s may tick %s, but may read %s — progress must not be a weaker gate"
                 % (t, got, exp))
+    # C5: the scenario's TEN section ids are admitted for the tiers that read it
+    # and nothing at all for the tiers that do not. Named rather than counted,
+    # because ten ticks are the whole of a scenario's completion record.
+    st = out.get("scenarioTickable") or {}
+    for t in EXPECTED_INDEX:
+        cases += 1
+        want_secs = sorted(SCENARIO_SECTION_IDS) if t in READS["guidance"] else None
+        if st.get(t) != want_secs:
+            err("progress test: %s may tick %s of scenario l-scn, expected %s"
+                % (t, st.get(t), want_secs))
     pr = out["progress"]
 
     # A completed section stores its COMPLETION DATE ('YYYY-MM-DD') as of
@@ -1138,6 +1434,30 @@ def run_gate_truth_table(src, lesson_ids=()):
     cases += 1
     if "lq:l-pub:z1:0" not in dr.get("admin", []):
         err("drill: quiz items are not being enumerated (expected lq:l-pub:z1:0 for admin)")
+
+    # ── C5 / D7: NO SCENARIO EVER ENTERS A DECK ─────────────────────────────
+    # Every scenario is company-specific and the mechanism deck's contract is
+    # "never company trivia", so clDrillLessonItems_ skips type: scenario. The
+    # assertion is a ZERO, and a zero proves nothing on its own — so the second
+    # loop below is the positive control that makes it a measurement: the same
+    # fixture must be READABLE by the tier and the tier's pool must be NON-EMPTY
+    # ((ll1)). Remove the one-line skip in clDrillLessonItems_ and this fires
+    # with lq:l-scn:beat-1:0 and lc:l-scn:f-scn:0; if it does not, look for a
+    # second guard before concluding the assertion has a hole ((rr13)).
+    ds = out.get("drillScenario") or {}
+    for tier in EXPECTED_INDEX:
+        row = ds.get(tier) or {}
+        cases += 1
+        if row.get("n"):
+            err("drill gate: %s drew %d item(s) from a type: scenario lesson — a scenario "
+                "never enters the mechanism deck (design D7)" % (tier, row.get("n")))
+    for tier in EXPECTED_INDEX:
+        row = ds.get(tier) or {}
+        cases += 1
+        if tier in READS["guidance"] and not (row.get("visible") and row.get("pool")):
+            err("drill gate: the scenario fixture is visible=%r to %s with a pool of %s — the "
+                "zero above is then an empty set rather than a working exclusion ((ll1))"
+                % (row.get("visible"), tier, row.get("pool")))
 
     # The guidance half of the pool, on the same rule: a tier without the
     # `guidance` capability must draw nothing from it — not a card, not an id.
@@ -1364,6 +1684,7 @@ def main():
         tracks_by_id[tid] = t
     check_prereq_cycles(tracks_by_id)
     check_segment_lessons(lessons_by_id)
+    check_scenario_lessons(lessons_by_id, src, ref_kinds, caps, strictness)
     # Guidance modules live below the // CONTENT END fence and are not lessons,
     # so nothing else here validates them — but Classroom.html renders them
     # through the SAME cl* engine, so they carry the identical markup hazard.

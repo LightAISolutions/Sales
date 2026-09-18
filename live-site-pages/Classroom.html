@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.15w">
+  <meta name="build-version" content="v01.16w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -419,6 +419,16 @@
     .cl-badge.guidance { color: var(--cl-accent); border-color: var(--cl-accent); }
     .cl-badge.briefing { color: #4f6fb0; border-color: #4f6fb0; }
     .cl-badge.report { color: var(--cl-dis); border-color: var(--cl-dis); }
+    /* PROJECT: C5 — the Rehearsal badge. A scenario's provenance badge is
+       already `guidance-derived` (every scenario folds there by construction),
+       so this one says what the card IS rather than where it came from, and
+       takes the advantage green so the two never read as the same chip. */
+    .cl-badge.scenario { color: var(--cl-adv); border-color: var(--cl-adv); }
+    .cl-seat { font: 600 12.5px/1.5 var(--cl-serif); color: var(--cl-muted); font-style: italic;
+      margin: 2px 0 12px; }
+    .cl-scn-meta { font: 11px/1 var(--cl-mono); letter-spacing: 0.06em; color: var(--cl-faint);
+      margin-top: 4px; }
+    .cl-scn-meta .cp { color: var(--cl-muted); }
 
     /* ── Lesson view: masthead, tiles, nav, sections ────────────────────── */
     .cl-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
@@ -4594,6 +4604,14 @@ function clHeaderShow() {
   if (clCan('guidance')) {
     // C3 session 1 brought the hub here; the link is an in-app route from now on.
     add('#guidance', '✦ Industry Guidance', 'The guidance library — every module, with search and a unified glossary');
+    // PROJECT: C5 — the Rehearsal library. Gated on the SAME capability rather
+    // than on a new one: every scenario's stamp carries its segment's landscape
+    // and therefore folds to `guidance`, so the server gate is already exactly
+    // this set of tiers and a `rehearse` capability would be a second, parallel
+    // gate — which the Classroom rules forbid. This link is convenience only;
+    // an analyst that typed the route would see an empty library and take
+    // ROLE_DENIED on any cop=lesson it tried.
+    add('#rehearse', '🎭 Rehearsal', 'Sales simulations — practise a conversation against a buyer\'s own record');
   }
   var badge = document.createElement('span');
   badge.className = 'cl-role';
@@ -4920,6 +4938,7 @@ var clServerProg = null;      // null until a sync succeeds — then authoritati
 var clProgSyncStarted = false;
 var clCurLesson = null;       // lesson currently rendered, for repaints
 var clCurLessonObj = null;    // ...and the object itself, for revisions[]
+var clCurRehearse = false;    // C5: the Rehearsal LIBRARY owns the shell
 
 function clAcctKey() {
   var e = String((loadSession() || {}).email || '').trim().toLowerCase();
@@ -5186,7 +5205,11 @@ function clApplyProgressUI() {
         : (st.ticks ? st.ticks + ' / ' + st.total + ' sections' : st.total + ' sections');
     }
   }
-  if (!clCurDoc) { clRenderNext(shell); clRenderDrillCard(shell); clRenderRosterCard(shell); }
+  // The index tail — study-next, the drill card, the roster card. The Rehearsal
+  // LIBRARY is a card list like the index and its rows are painted above, but
+  // it is not the index: injecting the queue cards into it would put a "what to
+  // study next" prompt on a page whose whole point is choosing.
+  if (!clCurDoc && !clCurRehearse) { clRenderNext(shell); clRenderDrillCard(shell); clRenderRosterCard(shell); }
   var rollups = shell.querySelectorAll('.cl-rollup[data-lessons]');
   for (var t = 0; t < rollups.length; t++) {
     var ids = (rollups[t].getAttribute('data-lessons') || '').split(',').filter(Boolean);
@@ -5322,17 +5345,26 @@ function clRenderLesson(lesson, shell, scrollTo) {
 
     var top = clEl('div', 'cl-top');
     var tl = clEl('div');
+    // PROJECT: C5 — the third header case. The counterparty's display name is
+    // read off the tile whose `v` is 'across the table', which the content
+    // checker fixes as tiles[0] for every scenario, so this never has to
+    // title-case a dossier slug and never gets an acronym wrong.
     tl.appendChild(clEl('div', 'cl-kick',
-      (lesson.type === 'briefing' ? 'Briefing · ' + (lesson.edition || '') : 'Lesson · ' + (lesson.group || ''))));
+      lesson.type === 'scenario'
+        ? 'Scenario · ' + ((lesson.scenario || {}).mode || '') + ' · ' + clScenarioParty(lesson)
+        : (lesson.type === 'briefing' ? 'Briefing · ' + (lesson.edition || '') : 'Lesson · ' + (lesson.group || ''))));
     tl.appendChild(clEl('h2', 'cl-title', lesson.title));
     var asof = clEl('div', 'cl-asof', 'as of ' + (lesson.updated || ''));
     var chip = clReviewChip(lesson.reviewBy);
     if (chip) asof.appendChild(chip);
     tl.appendChild(asof);
     top.appendChild(tl);
-    var back = clEl('button', 'cl-back', '← All tracks');
+    // PROJECT: C5 — a scenario is only ever reached from the Rehearsal library,
+    // so its back link goes there rather than to the index it is not listed in.
+    var toLib = lesson.type === 'scenario';
+    var back = clEl('button', 'cl-back', toLib ? '← All rehearsals' : '← All tracks');
     back.type = 'button';
-    back.addEventListener('click', function() { window.location.hash = ''; clRoute(); });
+    back.addEventListener('click', function() { window.location.hash = toLib ? 'rehearse' : ''; clRoute(); });
     top.appendChild(back);
     shell.appendChild(top);
 
@@ -5434,7 +5466,11 @@ function clGateBadge(card) {
   return clEl('span', 'cl-badge ' + strictest, label);
 }
 
-function clLessonRow(card, n) {
+// `route` defaults to the lesson view; C5's Rehearsal library passes
+// 'rehearse/' so a scenario card opens through the library's own route rather
+// than the index's. One parameter rather than a second click listener on the
+// same button, which would set the hash twice on every click.
+function clLessonRow(card, n, route) {
   var row = clEl('button', 'cl-row');
   row.type = 'button';
   row.appendChild(clEl('div', 'n', n === null ? '·' : String(n)));
@@ -5452,7 +5488,7 @@ function clLessonRow(card, n) {
   row.setAttribute('data-lesson', card.id);
   row.setAttribute('data-sections', String(card.sections || 0));
   row.addEventListener('click', function() {
-    window.location.hash = 'lesson/' + card.id;
+    window.location.hash = (route || 'lesson/') + card.id;
   });
   return row;
 }
@@ -5515,7 +5551,13 @@ function clRenderIndex(res, shell) {
   var inTracks = {};
   tracks.forEach(function(t) { (t.lessons || []).forEach(function(c) { inTracks[c.id] = true; }); });
   var briefings = lessons.filter(function(c) { return c.type === 'briefing'; });
-  var loose = lessons.filter(function(c) { return c.type !== 'briefing' && !inTracks[c.id]; });
+  // PROJECT: C5 — the third partition. A scenario is in no track by design, so
+  // without this it would land among the loose modules; it belongs in the
+  // Rehearsal library instead, and the index says so in one line.
+  var scenarios = lessons.filter(function(c) { return c.type === 'scenario'; });
+  var loose = lessons.filter(function(c) {
+    return c.type !== 'briefing' && c.type !== 'scenario' && !inTracks[c.id];
+  });
 
   if (briefings.length) {
     shell.appendChild(clEl('div', 'cl-lane', 'Briefings'));
@@ -5530,7 +5572,126 @@ function clRenderIndex(res, shell) {
     loose.forEach(function(c) { lbox.appendChild(clLessonRow(c, null)); });
     shell.appendChild(lbox);
   }
+  if (scenarios.length) {
+    shell.appendChild(clEl('div', 'cl-lane', 'Rehearsal'));
+    var sbox = clEl('div', 'cl-track');
+    var line = clEl('p', 'cl-tsub', scenarios.length + ' rehearsal scenario'
+      + (scenarios.length === 1 ? '' : 's') + ' in the library — one conversation each, '
+      + 'played against a buyer’s own record. ');
+    var a = clEl('a', null, 'Open the Rehearsal library →');
+    a.href = '#rehearse';
+    line.appendChild(a);
+    sbox.appendChild(line);
+    shell.appendChild(sbox);
+  }
   clApplyProgressUI();
+}
+
+// PROJECT: ── C5 · the Rehearsal library ──────────────────────────────────
+// Scenarios come from the SAME cop=index payload the index already fetches —
+// there is no rehearse op and no rehearse capability. The server has already
+// removed every scenario this tier may not read, which for a scenario is all
+// of them below contributor, so an analyst that typed #rehearse sees the empty
+// state rather than a denial, and takes ROLE_DENIED only if it asks for one by
+// id. Grouped seat → segment in registry order, which is the inventory order
+// of C5-SALES-SIMULATIONS-DESIGN.md §9.
+var CL_SEATS = {
+  'storage-seller': {
+    label: 'The storage seller',
+    line: 'Product first: you sell the battery system, and the room you are in is the desk that signs for it — with the lender’s engineer holding the pen.'
+  },
+  'aidc-power-seller': {
+    label: 'The AI-data-centre power seller',
+    line: 'The chain first: you sell into a campus rather than a grid, and the question is always which organisation qualifies you and how long the equipment takes to arrive.'
+  }
+};
+
+function clScenarioParty(lesson) {
+  var tiles = lesson.tiles || [];
+  for (var i = 0; i < tiles.length; i++) {
+    if (tiles[i] && tiles[i].v === 'across the table') return tiles[i].k || '';
+  }
+  return ((lesson.scenario || {}).counterparty || '');
+}
+
+function clScenarioRow(card) {
+  var row = clLessonRow(card, null, 'rehearse/');
+  var mid = row.childNodes[1];
+  var sc = card.scenario || {};
+  var meta = clEl('div', 'cl-scn-meta');
+  meta.appendChild(document.createTextNode(String(sc.mode || '').toUpperCase()
+    + '  ·  ' + String(sc.stage || '')  + '  ·  '));
+  meta.appendChild(clEl('span', 'cp', String(sc.counterparty || '')));
+  if (mid) mid.appendChild(meta);
+  var t = mid && mid.firstChild;
+  if (t) {
+    // The type strip: what this card IS, beside clGateBadge's where-it-came-from.
+    // The counterparty stays on the mono meta line below rather than inside the
+    // pill — the card carries the dossier slug, not a display name, and the
+    // exact name is on the lesson's own header, read off its tile.
+    t.appendChild(clEl('span', 'cl-badge scenario',
+      'Rehearsal · ' + String(sc.mode || '')));
+    var chip = clReviewChip(card.reviewBy);
+    if (chip) t.appendChild(chip);
+  }
+  return row;
+}
+
+function clRenderRehearse(res, shell) {
+  clCurLesson = null;
+  clCurLessonObj = null;
+  clProgressSync();
+  shell.innerHTML = '';
+  var all = (res.lessons || []).filter(function(c) { return c.type === 'scenario'; });
+  shell.appendChild(clEl('div', 'cl-asof',
+    'Rehearsal  ·  ' + all.length + ' scenario' + (all.length === 1 ? '' : 's') + ' readable'));
+  if (!all.length) {
+    shell.appendChild(clEl('p', 'cl-empty',
+      'No rehearsal scenarios are readable at your access level.'));
+    clApplyProgressUI();
+    return;
+  }
+  var seats = [];
+  all.forEach(function(c) {
+    var s = (c.scenario || {}).seat || 'other';
+    if (seats.indexOf(s) < 0) seats.push(s);
+  });
+  seats.forEach(function(seat) {
+    var meta = CL_SEATS[seat] || { label: seat, line: '' };
+    shell.appendChild(clEl('div', 'cl-lane', meta.label));
+    if (meta.line) shell.appendChild(clEl('div', 'cl-seat', meta.line));
+    var rows = all.filter(function(c) { return ((c.scenario || {}).seat || 'other') === seat; });
+    var segs = [];
+    rows.forEach(function(c) {
+      var g = (c.scenario || {}).segment || '—';
+      if (segs.indexOf(g) < 0) segs.push(g);
+    });
+    segs.forEach(function(seg) {
+      var box = clEl('div', 'cl-track');
+      box.appendChild(clEl('h3', null, seg));
+      rows.filter(function(c) { return ((c.scenario || {}).segment || '—') === seg; })
+          .forEach(function(c) { box.appendChild(clScenarioRow(c)); });
+      shell.appendChild(box);
+    });
+  });
+  clApplyProgressUI();
+}
+
+function clShowRehearse() {
+  var shell = clShell();
+  if (!shell) return;
+  clCurRehearse = true;
+  if (clIndexCache) { clRenderRehearse(clIndexCache, shell); window.scrollTo(0, 0); return; }
+  shell.innerHTML = '';
+  shell.appendChild(clEl('p', 'cl-loading', 'Loading rehearsals…'));
+  clApi('index', {}, function(res) {
+    if (!res || !res.success) { clShowError(shell, res && res.error); return; }
+    if (typeof res.progress === 'object' && res.progress !== null) clServerProg = res.progress;
+    if (res.hasOwnProperty('next')) clNext = res.next;
+    clIndexCache = res;
+    clRenderRehearse(res, shell);
+    window.scrollTo(0, 0);
+  });
 }
 
 // ── Views + routing ───────────────────────────────────────────────────────
@@ -6486,6 +6647,14 @@ function clRoute() {
   if (g) { clShowGuidanceDoc(g[1], g[2] || ''); return; }
   clCurGuidance = '';
   clCurGuidanceObj = null;
+  // C5 — the Rehearsal library and a scenario inside it. The library flag is
+  // set by clShowRehearse and cleared by every other route, the way the
+  // guidance flag above is, so clApplyProgressUI always knows which shell it
+  // is painting. A scenario renders through clRenderLesson unchanged.
+  clCurRehearse = false;
+  if (h === 'rehearse') { clShowRehearse(); return; }
+  var rh = /^rehearse\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
+  if (rh) { clShowLesson(rh[1], rh[2] || ''); return; }
   if (h === 'drill') { clShowDrill(''); return; }
   if (h === 'drill/roster') { clShowDrill('roster'); return; }
   var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);

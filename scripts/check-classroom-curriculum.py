@@ -47,11 +47,18 @@ def strict(msg):
     strict_findings.append(msg)
 
 
+_CCC = None
+
+
 def load_checker():
-    spec = importlib.util.spec_from_file_location("ccc", ROOT / "scripts" / "check-classroom-content.py")
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    return mod
+    """The content checker, loaded once — it is both this report's parser and,
+    since C5 session 1, the single Python copy of the stamp → gate fold."""
+    global _CCC
+    if _CCC is None:
+        spec = importlib.util.spec_from_file_location("ccc", ROOT / "scripts" / "check-classroom-content.py")
+        _CCC = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_CCC)
+    return _CCC
 
 
 def git_date(base, rel):
@@ -98,18 +105,37 @@ def guidance_modules():
     return out
 
 
+def scenario_ledger():
+    """The C5 ledger of CLASSROOM-CURRICULUM-PLAN.md §11 — the planned fourteen.
+
+    Read from the plan rather than hard-coded here, so the coverage block below
+    measures against what the ledger actually says and cannot drift from it.
+    Returns [(n, id, seat, segment, mode, counterparty, session)], or [] if the
+    section is absent (the block then reports the absence rather than a zero).
+    """
+    try:
+        txt = (ROOT / "repository-information" / "CLASSROOM-CURRICULUM-PLAN.md").read_text(encoding="utf-8")
+    except OSError:
+        return []
+    m = re.search(r"^## 11 .*?$(.*?)(?=^## |\Z)", txt, re.S | re.M)
+    if not m:
+        return []
+    rows = []
+    for line in m.group(1).splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")] if line.strip().startswith("|") else []
+        if len(cells) < 8 or not cells[0].isdigit():
+            continue
+        unq = lambda s: s.strip("`* ")
+        rows.append((int(cells[0]), unq(cells[1]), unq(cells[2]), unq(cells[3]),
+                     unq(cells[4]), unq(cells[5]), unq(cells[6])))
+    return rows
+
+
 def gate_of(lesson, ref_kinds, caps, strictness):
-    kinds = []
-    for i in (lesson.get("provenance") or {}).get("inputs") or []:
-        ref = str(i.get("ref", "")) if isinstance(i, dict) else ""
-        k = ref_kinds.get(ref.split(":", 1)[0]) if ":" in ref else None
-        if not k or i.get("kind") != k:
-            return "(denied)"
-        kinds.append(k)
-    if not kinds:
-        return "(denied)"
-    top = max(kinds, key=lambda k: strictness.index(k) if k in strictness else -1)
-    return caps.get(top, "(denied)")
+    """The server's fold — imported from the content checker so there is exactly
+    one Python copy of the derivation (C5 session 1; it used to be duplicated
+    here and the two could have disagreed about what a stamp means)."""
+    return load_checker().gate_of(lesson, ref_kinds, caps, strictness)
 
 
 def live_date(ref, base, cache):
@@ -249,20 +275,43 @@ def main():
             elif pin and live > pin:
                 stale_n += 1
                 print("  %-36s %-44s pin %s → live %s" % (l["id"], ref, pin, live))
-    print("  %d stale pin(s) on the hand-authored lessons" % stale_n)
+    hand = [l for l in lesson_order if not l["id"].startswith("segment-")]
+    print("  %d stale pin(s) across %d hand-authored lesson(s) — segment lessons are NOT "
+          "counted here" % (stale_n, len(hand)))
+    # (rr17): this total and the generator's due count below are DISJOINT
+    # numbers four lines apart, and two consecutive briefs read them as one.
+    # The label was already right; the adjacency misled. Both now carry a
+    # denominator and the line between them says they do not add up.
     try:
         gen = subprocess.run([sys.executable, str(GENERATOR), "--check", "--base", args.base],
                              cwd=ROOT, capture_output=True, text=True, timeout=300)
-        print("  Segment lessons due for regeneration:")
-        for line in gen.stdout.strip().splitlines():
+        out = gen.stdout.strip()
+        print("  Segment lessons due for regeneration (a SEPARATE count — the generated "
+              "lessons, whose pins the line above excludes):")
+        for line in out.splitlines():
             print("    " + line)
+        m = re.search(r"(\d+)\s+segment\(s\),\s*(\d+)\s+due", out)
+        if m:
+            print("  %s of %s segment lesson(s) due for regeneration — not addable to the "
+                  "%d stale pin(s) above" % (m.group(2), m.group(1), stale_n))
     except (OSError, subprocess.TimeoutExpired) as e:
         print("  generator --check did not run: %s" % e)
 
     # 4 · Drill pool size
     print("\n4 · Drill pool size")
     lc = lq = rc = 0
+    scn_lq = 0
     for l in lesson_order:
+        # C5 / design D7: clDrillLessonItems_ skips type: scenario, so a
+        # scenario's three quiz beats are NOT drillable. Counting them here
+        # would report a pool six items larger than the one the server serves —
+        # the same class of defect as (rr17): a number that looks like the
+        # drill pool and is not it.
+        if l.get("type") == "scenario":
+            for s in l.get("sections") or []:
+                if s.get("kind") == "quiz":
+                    scn_lq += len(s.get("items") or [])
+            continue
         for s in l.get("sections") or []:
             if s.get("kind") == "flashcards":
                 lc += len(s.get("cards") or [])
@@ -282,6 +331,10 @@ def main():
     roster_cap = ccc.js_number(src, "CL_ROSTER_SESSION_CAP")
     print("  study pool  sf %d + ss %d = %d  (CL_DRILL_INV_CAP %s)" % (sf, ss, sf + ss, inv_cap))
     print("  lesson pool lc %d + lq %d = %d" % (lc, lq, lc + lq))
+    if scn_lq:
+        print("  scenario beats %d quiz item(s) across %d scenario(s) — NOT drillable and "
+              "not in the total below (design D7)"
+              % (scn_lq, sum(1 for l in lesson_order if l.get("type") == "scenario")))
     print("  roster deck rc %d player rows across segment lessons  (%s)" % (
         rc, "K2 not built — no roster caps in Classroom.gs" if roster_cap is None else "CL_ROSTER_SESSION_CAP %s" % roster_cap))
     print("  total drillable today %d  (CL_DRILL_ACCOUNT_CAP %s)" % (sf + ss + lc + lq, acct_cap))
@@ -302,6 +355,58 @@ def main():
             due += 1
             print("  module  %-40s reviewBy %s%s" % (mid, rb, "  PASSED" if rb < today else ""))
     print("  %d item(s) due for review" % due)
+
+    # 6 · Rehearsal coverage (C5) — the ledger of CLASSROOM-CURRICULUM-PLAN.md
+    # §11 against what clLessons_() actually registers, per seat and per buyer
+    # segment. Scenarios are hand-authored, so section 3 above already covers
+    # their dossier pins with no change; what it does NOT cover is the pin most
+    # likely to move under them — the landscape module their stamp must carry,
+    # which the quarterly guidance review revises on its own clock. That is the
+    # "landscape moved under it" list, and it is the human-refresh trigger the
+    # no-pipeline-authoring rule (design D6 / P13) relies on.
+    print("\n6 · Rehearsal coverage (C5 — CLASSROOM-CURRICULUM-PLAN.md §11)")
+    planned = scenario_ledger()
+    built = [l for l in lesson_order if l.get("type") == "scenario"]
+    by_lid = {l["id"]: l for l in built}
+    if not planned:
+        print("  §11's ledger could not be read — coverage is reported against the "
+              "registry alone: %d scenario(s) registered" % len(built))
+    else:
+        seats = []
+        for row in planned:
+            if row[2] not in seats:
+                seats.append(row[2])
+        for seat in seats:
+            rows = [r for r in planned if r[2] == seat]
+            have = sum(1 for r in rows if r[1] in by_lid)
+            print("  %-18s %d of %d" % (seat, have, len(rows)))
+            segs = []
+            for r in rows:
+                if r[3] not in segs:
+                    segs.append(r[3])
+            for sid in segs:
+                srows = [r for r in rows if r[3] == sid]
+                modes = " · ".join("%s %s" % (r[4], "yes" if r[1] in by_lid else "—")
+                                   for r in srows)
+                print("    %-40s %s" % (sid, modes))
+        print("  %d of %d scenario(s) registered" % (len(by_lid), len(planned)))
+        stray = sorted(set(by_lid) - {r[1] for r in planned})
+        for s in stray:
+            print("  registered but not in §11's ledger: %s" % s)
+    # The landscape each scenario is stamped on, pin vs live
+    moved = 0
+    for l in built:
+        for i in (l.get("provenance") or {}).get("inputs") or []:
+            ref, pin = str(i.get("ref", "")), str(i.get("date") or "")
+            if not ref.startswith("guidance:landscape-"):
+                continue
+            live = modules.get(ref.split(":", 1)[1], {}).get("updated", "")
+            if live and pin and live > pin:
+                moved += 1
+                print("  landscape moved under it: %-38s %s pin %s → live %s"
+                      % (l["id"], ref.split(":", 1)[1], pin, live))
+    print("  %d scenario(s) whose landscape has moved since the pin — each needs a "
+          "developer session (the pipeline never revises a scenario)" % moved)
 
     print("\n" + "=" * 72)
     if strict_findings:
