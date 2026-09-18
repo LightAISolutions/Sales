@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 57/50`
+`Sections: 58/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.71g] — 2026-09-17 10:12:02 PM EST — v06.47r
+
+### Added
+
+- A new lesson has been added to the market course, fourth in the reading order, immediately after the one about contracts. It is about reading the numbers a counterparty puts in front of you: how one sale is called four different things between the day it is signed and the day the money arrives, why the same word means four unrelated objects depending on whose accounts it appears in, how a long construction contract's revenue is a fraction with a forecast underneath it and why a correction to that forecast lands all at once, how the same set of leases can be published on three different measurement bases and why adding them together produces nothing, why a company can report a large loss that nobody actually lost, and what the app's own comparison layer can and cannot make comparable. It is open to everyone with course access
+- Eight new glossary definitions, available as hover tooltips anywhere those terms appear in the lesson
+
+### Changed
+
+- The market course now lists nine lessons instead of eight. This one is open to all course readers, so the number of lessons held back for higher access levels is unchanged
+- Minor internal improvements
 
 ## [v01.70g] — 2026-09-17 09:22:06 PM EST — v06.46r
 

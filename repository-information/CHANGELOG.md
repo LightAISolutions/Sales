@@ -3,11 +3,46 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 114/100`
+`Sections: 115/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.47r] — 2026-09-17 10:12:02 PM EST
+
+> Author Phase 4 row 25 — the reading-the-numbers mechanism lesson — on Opus 5 xhigh as a fresh session. This is ONE lesson. It authors no guidance module, no dossier and no report, it regenerates no segment, and it creates no track. IT IS PUBLIC (tracks), so it changes no withheld count anywhere and the acceptance test is the content, not the denial. [... full brief in `INTEGRATED-REMEDIATION-PLAN.md` §7.55 ...]
+
+### Added
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+
+- **`clLessonReadingTheNumbers_()` — id `reading-the-numbers`, title *One Dollar, Four Names*, group Market Access & Bankability, gate `tracks` (public).** The **fifty-fifth** lesson and Phase 4 row 25. Authored **inside** the `// CONTENT START` … `// CONTENT END` fence, registered at the **end** of `clLessons_()` and **inserted at index 3** of `clTrackMarketAccess_()` — the programme's **sixth mid-array insert**, verified against the live eight-element array before the write. `updated` 2026-09-17, `reviewBy` **2027-01-01**
+- **Nine sections at §3.5's ids and order** — `one-dollar-four-names` (prose, 7 ps) · `reading-a-backlog` (**table 4×5**) · `percentage-of-completion` (prose, 6 ps) · `the-same-lease-three-ways` (**table 4×4**) · `tax-equity-and-hlbv` (callout, 6 items) · `the-overlay` (**table 6×4**) · `where-it-fails` (callout, 6 items) · `drill` (6 cards) · `check-yourself` (5 items at **3·1·2·0·2**). **Three tables is the most any mechanism lesson carries.** Four tiles, an **eight-entry glossary with every entry used**, **38 `{{term}}` uses over 22 distinct, all resolving** against a 4,208-key map. **100 % ASCII**
+- **Twenty provenance inputs**, each pinned off the document fetched this run — four `study:`, fifteen `profile:` and `concepts:profiler-concepts` at its file's last commit date. The `profile:` roster was **re-derived rather than copied**: `100 of 174` profiles carry a normalized KPI marker, and only the profiles whose overlay rows a table actually prints are pinned
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs`
+
+- `clLessons_()` 54 → **55** entries; `clTrackMarketAccess_()` `lessons[]` 8 → **9**, `reading-the-numbers` at index 3 between `contracts-and-revenue` and `how-a-utility-buys`
+- GAS `VERSION` **v01.70g → v01.71g**. **The module assertion in `scripts/check-classroom-content.py` was NOT moved** — it stays at **28**; this row registers a lesson, not a module. **Nothing was regenerated**
+
+#### `live-site-pages/gs-versions/Classroomgs.version.txt` · `README.md`
+
+- `|v01.70g|` → `|v01.71g|`; README tree GAS display synced by `scripts/check-readme-tree.py --fix` (one drift, caught before the commit rather than by the post-merge sweep)
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+
+- §6 and §7.3 Phase 4 rows flipped to **25 of 26**; §7.3 order 8 annotated; **§7.56 written in both halves** for the next run
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+
+- §7 row 25 marked built; §4's `market-access` table updated at **position 4** (the last position the track was missing); §10.6 findings **(qq1)–(qq8)** written and the open-items list refreshed
+
+### Fixed
+
+- Twelve defects caught by the recount and five more by the per-section screenshots, with **zero overlap** — (kk7) at an **eighteenth** consecutive session. Sharpest of the recount: the opening section listed a factory-slot reservation as the fourth rung of the order-firmness ladder while the table two sections below said slot reservations sit upstream of the order book and are never in it. Sharpest of the screenshots: a `where-it-fails` item told the reader to ask what share of *the book* was cancellable, in a lesson whose first two sections exist to teach that the book is a stock and the book-to-bill's numerator is a flow
 
 ## [v06.46r] — 2026-09-17 09:22:06 PM EST
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.70g";
+var VERSION = "v01.71g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -43182,6 +43182,7 @@ function clTrackMarketAccess_() {
   "who-buys-storage",
   "how-a-storage-project-happens",
   "contracts-and-revenue",
+  "reading-the-numbers",
   "how-a-utility-buys",
   "the-certification-stack",
   "what-bankable-means",
@@ -45949,6 +45950,529 @@ function clLessonWhatBankableMeans_() {
  ]
 };
 }
+// reading-the-numbers - curriculum plan 3.5, market-access position 4 of nine,
+// section 7 row 25. PUBLIC: every stamp is study:, profile: or concepts:, so
+// clGateForProvenance_ folds it to 'tracks' and it changes no withheld count.
+// Nine sections at the ids and order 3.5 fixes; three of them tables, which is
+// the most any mechanism lesson carries.
+//
+// BOUNDARIES, from grepping all 54 built lessons for this subject's own nouns
+// rather than from reading the two neighbours (curriculum plan 10.6, (pp7)):
+// 1 - how-a-storage-project-happens (public, market-access position 2) already
+//     carries 'backlog' seventeen times, 'percentage-of-completion' five and
+//     'cost to complete' twice, in its how-overruns-hide callout plus a drill
+//     card and a quiz item - and declares no handoff, because it was authored
+//     before this row was scheduled. It teaches the mechanism FROM OUTSIDE, as
+//     part of reading a builder before pricing against it. percentage-of-
+//     completion here opens by naming that lesson and saying so, and teaches
+//     only what it does not: the arithmetic inside the estimate, the worked
+//     cumulative catch-up, the loss-contract asymmetry, and what the method
+//     does to a revenue line being compared with somebody else's.
+// 2 - contracts-and-revenue (public, position 3) carries 'contracted revenue'
+//     four times as an INSTRUMENT. Here it is a measurement BASIS in the lease
+//     table, which is a different use of the same words; the instruments are
+//     not restated.
+// 3 - segment-epc-and-construction and segment-neoclouds each carry a buying
+//     criterion whose words are this lesson's own ('backlog quality',
+//     'percentage-of-completion'), and neither can link to it, because
+//     build-classroom-segments.py only offers a lesson a segment's READ_NEXT
+//     already names. Recorded as a finding; no data touched.
+//
+// reviewBy 2027-01-01 is the nearest dated gate in the taught material, not an
+// inheritance: the backlog table carries one maker's 'approximately USD 6bn
+// scheduled for 2027 and beyond' off a 30 June 2026 period end, and that
+// calendar boundary is the first day any of this lesson's forward splits can
+// be checked. It coincides with rows 23-24's date and shares no source with it.
+function clLessonReadingTheNumbers_() {
+  return {
+ "schemaVersion": 1,
+ "id": "reading-the-numbers",
+ "type": "module",
+ "title": "One Dollar, Four Names",
+ "short": "The same dollar is an order, a backlog line, revenue against an estimate, and cash - four dates, four documents, and four numbers that disagree on purpose.",
+ "group": "Market Access & Bankability",
+ "updated": "2026-09-17",
+ "reviewBy": "2027-01-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:siemens-energy",
+    "date": "2026-09-04",
+    "note": "backlog economics for long-cycle equipment - contracted future revenue and visibility, book-to-bill as the pulse, how scarcity converts to pricing power as cheap vintages deliver first and margin in backlog improves, and the quality caveats: frameworks and estimates inside the number, escalation clauses, and reservation fees that sit upstream of the book entirely"
+   },
+   {
+    "kind": "public",
+    "ref": "study:primoris",
+    "date": "2026-08-21",
+    "note": "backlog quality as a mix rather than a total - unit-price framework work against fixed-price project work, concentration, escalation and the twelve-month conversion share; and percentage-of-completion on a cost-to-cost basis, the estimate-to-complete as the denominator, the cumulative catch-up in the quarter of discovery, and project controls as the discipline that prevents it"
+   },
+   {
+    "kind": "public",
+    "ref": "study:hut-8",
+    "date": "2026-09-06",
+    "note": "the same economics reported in four places - consolidation with a minority interest, the equity method putting a 280 MW site nowhere in revenue, ring-fenced non-recourse project debt sitting on a consolidated balance sheet, and a disposal that reads as a revenue decline"
+   },
+   {
+    "kind": "public",
+    "ref": "study:clearway-energy",
+    "date": "2026-09-06",
+    "note": "tax equity and HLBV - why a partnership whose profit share changes over time cannot be expressed by ordinary consolidation, what hypothetical liquidation at book value allocates, the (400)m line inside a (231)m consolidated loss, the January 2026 material weakness over that exact calculation, and what credit transferability is changing"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:hut-8",
+    "date": "2026-09-06",
+    "note": "the USD 26.6bn book stated as base-term lease value excluding extension options - 7.0bn at one campus and two identical 9.8bn leases at another - and the mw-energized and mw-contracted overlay rows for the same period"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:cipher-mining",
+    "date": "2026-09-06",
+    "note": "the USD 11.4bn book stated as contracted revenue - base rent plus operating-expense reimbursement across the base terms - over three leases of differing lengths"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:galaxy-digital",
+    "date": "2026-09-06",
+    "note": "the landlord that publishes no book total - about USD 4.5bn of total lease payments for one phase, USD 10.4bn of minimum contracted lease payments for another, no equivalent for the third, and an audited ASC 842 future minimum of USD 4,747.8m; plus the gross principal trading turnover and equity that make its enterprise value a different object from its leases"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:powell-industries",
+    "date": "2026-09-04",
+    "note": "the orders and backlog overlay rows that carry a book-to-bill and a stated twelve-month conversion share on both a fiscal-year and a quarter period end"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:trane-technologies",
+    "date": "2026-09-04",
+    "note": "the bookings, backlog and book-to-bill overlay rows, including a backlog with a stated share scheduled for 2027 and beyond"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:caterpillar",
+    "date": "2026-09-04",
+    "note": "an equipment maker's backlog restated between a fiscal year end and a quarter end, as the currency-key worked example"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:applied-digital",
+    "date": "2026-08-30",
+    "note": "the single metric headed Backlog that carries a gigawatt figure, a base-term contracted dollar figure and a with-renewals dollar figure on one line"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:clearway-energy",
+    "date": "2026-09-06",
+    "note": "the mw-energized row whose stored quantity is the rated figure while the prose beside it carries a rated and a net figure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:recurrent-energy",
+    "date": "2026-09-06",
+    "note": "the backlog-gwh row that stores the whole development pipeline while the same dossier's stage split names a backlog line inside it, with the early-stage share and the company's own stage definition"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:lg-energy-solution",
+    "date": "2026-09-05",
+    "note": "the contracted ESS order backlog carried on the same physical key, as the comparison that shows the key holding two different objects"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mitsubishi-electric",
+    "date": "2026-09-06",
+    "note": "order markers denominated in yen that carry no converted figure, because no citable rate was recorded - the overlay's absent-is-better-than-forced rule as it appears in the data"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mitsubishi-power",
+    "date": "2026-09-03",
+    "note": "an order-backlog marker in the same condition, on a different reporting entity"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:catl",
+    "date": "2026-09-07",
+    "note": "the converted revenue figure and the fxBasis that carries its rate, its period and its source, cross-checked against the dossier's own stated dollar equivalent"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:fluence",
+    "date": "2026-09-06",
+    "note": "an annual period ending 30 September, as the fiscal-year offset periodEnd exists to make explicit"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:tesla",
+    "date": "2026-09-05",
+    "note": "an annual period ending 31 December carrying the same FY2025 label, as the other half of that offset"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-13",
+    "note": "the shared vocabulary this lesson leans on rather than redefining - tax equity, HLBV, contracted revenue, enterprise value, minority interest, yieldco, order book, retainage, ITC, tax credit transferability, offtake, interconnection queue, EPC, IPP, master service agreement, critical IT load and DSCR"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "One dollar",
+   "v": "four names before it is cash",
+   "sub": "An order, a backlog line, revenue recognised against an estimate, and cash collected. Four dates, four documents, and every counterparty headlines the one that flatters it."
+  },
+  {
+   "k": "USD 19bn",
+   "v": "a combined figure that failed three separate ways",
+   "sub": "The three leases it named already reach about USD 22.3bn on their own. The three companies' full books reach at least USD 52.9bn, nearly three times it. And the numbers being added were on three different bases to begin with."
+  },
+  {
+   "k": "1,439 / 849",
+   "v": "megawatts rated against megawatts net",
+   "sub": "One yieldco's operating battery fleet, on one line of one dossier. The comparable field stores the first figure, and the overlay has no place to record which of the two it is - only the sentence beside it does."
+  },
+  {
+   "k": "100 of 174",
+   "v": "profiles carry the comparable overlay",
+   "sub": "Three of its sixteen backlog and order markers carry no converted figure at all, because no citable rate was recorded. The blank is the rule working, not a gap in the data."
+  }
+ ],
+ "glossary": [
+  {
+   "t": "backlog",
+   "d": "Work or deliveries a company has signed and not yet earned revenue on. The word is a container rather than a measurement: what it holds, what converts it and what can cancel it differ completely between an equipment maker, a contractor, a landlord and a developer, so the figure means nothing until you know whose it is."
+  },
+  {
+   "t": "book-to-bill",
+   "d": "Orders taken in a period divided by revenue recognised in the same period. Above 1.0 the book is growing faster than the business is delivering; below 1.0 the company is eating its backlog. It is a ratio between two different things measured over one window, so it says nothing about the quality of either."
+  },
+  {
+   "t": "percentage-of-completion",
+   "d": "The method that recognises a long contract's revenue as the work progresses, usually cost-to-cost: spend forty per cent of the estimated total cost and book forty per cent of the contract revenue. Every figure it produces is a fraction, and the denominator of that fraction is a forecast."
+  },
+  {
+   "t": "cost to complete",
+   "d": "A contractor's running forecast of what the remaining work on a job will cost. It is the denominator percentage-of-completion divides by, which makes it the one number every quarter already reported depends on - and it is produced by the same people whose job it is to hit it."
+  },
+  {
+   "t": "cumulative catch-up",
+   "d": "The single-quarter correction that lands when a contractor revises its cost forecast. Because earlier quarters recognised revenue against the old estimate, the whole history is restated at once rather than the remaining work being adjusted. The cost accrued over quarters; the charge arrives on one day."
+  },
+  {
+   "t": "ASC 842",
+   "d": "The United States lease accounting standard. Its future-minimum-payments disclosure is an audited figure with a defined scope - fixed payments over the non-cancellable term - which is why it is usually smaller than the lease value the same company quotes in a press release, and why the two are not interchangeable."
+  },
+  {
+   "t": "base-term lease value",
+   "d": "The undiscounted sum of the rent a lease obliges a tenant to pay across its initial term, before any extension option. It is a gross total spread over many years rather than a valuation or a price, and it is the figure a data-centre landlord most often puts in a headline."
+  },
+  {
+   "t": "material weakness",
+   "d": "A deficiency in internal control serious enough that a material misstatement could go undetected. It is a statement about the machinery that produces a number rather than about the number itself, which is why it can sit beside financial statements that were never restated - and why it belongs in diligence rather than in a footnote."
+  }
+ ],
+ "sections": [
+  {
+   "id": "one-dollar-four-names",
+   "title": "Where the dollar is on each date",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**One sale is one dollar and four names.** It is an order on the day it is signed, a {{backlog}} line for every day between then and delivery, revenue on the day an accounting rule says it has been earned, and cash on the day it arrives. Four dates, four documents, four places in the report - and at any given moment the four are different sizes. Nothing about that is irregular; it is what long-cycle businesses look like written down. What causes damage is that each counterparty headlines whichever of the four is largest or fastest-growing this quarter, and a listener who does not ask which one is being quoted carries the wrong number into the next meeting.",
+    "**Name one is the order, and its date is a signature.** An order is a commitment to buy something the seller has not yet delivered. Its quality is entirely a question of how firm the commitment is, and firmness runs down a ladder: a signed fixed-scope purchase order, a framework agreement against which jobs will be released, a letter of intent. Only the first is unambiguous - and a {{slot reservation}}, the deposit that holds a place in a factory schedule before the equipment is even specified, is not on the ladder at all, because it sits upstream of the book and is never counted in it. An {{order book}} that mixes the three and reports one total is not lying - it is reporting a legitimate aggregate - but it is not a queue of shipments either.",
+    "**Name two is backlog, and its date is every day in between.** Backlog is the running store of what has been ordered and not yet earned. It grows with orders and drains with revenue, so it is the only one of the four names that is a stock rather than a flow, and it is the one most often quoted as though it were a forecast. It is not a forecast. It is a balance whose composition decides what it is worth, and the next section is four completely different objects that all answer to the word.",
+    "**Name three is revenue recognised, and its date is set by a rule rather than by an event.** This is where the four names diverge most sharply, because the rule is different in each business. An equipment maker generally recognises on delivery or acceptance, so its revenue date is a physical event. A contractor recognises under {{percentage-of-completion}} as cost is incurred, so its revenue date is an arithmetic consequence of a forecast. A landlord recognises rent across the lease term once the space is handed over, so its revenue date is simply the passage of time and building faster after handover changes nothing. Three businesses, three answers, one word on the income statement.",
+    "**Name four is cash, and its date is the last one.** Between revenue and cash sit payment terms, the certification of work by somebody else's engineer, and {{retainage}} withheld from every progress certificate until the job finishes. The gap between the two is visible from outside: when a contractor has performed more work than it has billed, the difference sits on its balance sheet as an asset, and a firm whose unbilled position grows faster than its revenue is financing its customers out of its own equity. That is the condition that ends construction companies in booms rather than in downturns.",
+    "**One company, one period, and three published numbers that are all true and all different.** An electrical-equipment maker closed its 2025 fiscal year on 30 September with **USD 1.2bn of new orders** taken during the year, **USD 1.4bn of backlog** standing at the year end, and approximately **USD 824m** of that backlog expected to be recognised as revenue in the following fiscal year. Orders are a flow, backlog is a stock, and the third figure is the company's own statement of how much of the stock becomes the next year's flow. Quote any one of the three as 'the number' and you have said something true and nearly useless.",
+    "**And the same economics can be spread across four places in one report before any of this starts.** A company that consolidates a subsidiary it does not wholly own reports one hundred per cent of its revenue and removes the outside share on a single line far below. A fifty-per-cent joint venture under the equity method contributes **nothing to revenue at all** - one 280 MW site disappears above the line and returns as one net figure. Ring-fenced project debt sits on the consolidated balance sheet while being legally unreachable from the parent. And an asset sold mid-year makes revenue fall for a reason that is a disposal rather than a deterioration. **None of that is unusual accounting. All of it is correct.** The reader's job is not to find irregularity; it is to know which question each figure answers before repeating it."
+   ]
+  },
+  {
+   "id": "reading-a-backlog",
+   "title": "Four things called backlog",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "The word survives translation between these four businesses and the object does not. Read the second column down and it becomes obvious that only the first two rows describe anything a factory or a crew will work through; the third is a rent schedule and the fourth is mostly an option.",
+   "cols": [
+    "Who reports it",
+    "What the word means there",
+    "What converts it into revenue",
+    "What can un-book it",
+    "The gauge that says whether it is growing"
+   ],
+   "rows": [
+    [
+     "**Equipment maker**",
+     "Signed orders for units not yet shipped - an {{order book}} that for long-cycle plant runs years ahead. New orders enter at current prices while older, cheaper vintages deliver first, so the margin inside the book improves as it rolls over. One engine and machinery maker's book stood at **USD 51bn** at its 2025 year end and **USD 72.1bn** six months later.",
+     "Shipment against the contract, on delivery or acceptance. Conversion is a factory-slot question, so a sold-out plant converts no faster for being in demand.",
+     "Cancellation clauses; framework volumes that were estimates rather than commitments; and {{slot reservation}} payments, which sit upstream of the book and are not in it at all.",
+     "{{book-to-bill}}, and it is the only row here that has one. One electrical-equipment maker booked **3.0x in a quarter and 2.2x fiscal year to date**; a diversified maker reported **123 per cent** for a quarter and above 100 per cent in every segment."
+    ],
+    [
+     "**EPC contractor**",
+     "Signed-but-unearned construction work, whose mix decides its risk. Recurring unit-price work released under a {{master service agreement}} re-prices regularly; fixed-price project work locks a number years ahead against costs nobody knows yet.",
+     "{{percentage-of-completion}} rather than delivery: revenue is recognised as cost is incurred against the {{cost to complete}}, so it converts continuously and invisibly.",
+     "Scope cancellation and de-scoping - and, more commonly, a re-estimate, which removes no backlog at all but restates the revenue already taken out of it.",
+     "Not a ratio but a composition: the fixed-price share and the twelve-month conversion share, read before the headline. **A thousand small framework jobs cannot sink a firm; one giant fixed-price megaproject can.**"
+    ],
+    [
+     "**Data-centre landlord**",
+     "Not a backlog in the equipment sense at all - the undiscounted rent a signed lease obliges a tenant to pay. One landlord's single line headed *Backlog* carries **1.4 GW**, about **USD 36bn** base-term contracted and about **USD 86bn** with renewals: three numbers, one row, three questions.",
+     "Time. Rent is recognised across the lease term once the space is delivered, so after handover nothing the landlord does converts it faster.",
+     "Tenant credit rather than tenant intention, because a lease is enforceable. Which is why the guarantee standing behind the tenant matters more than the tenant's name.",
+     "There is no book-to-bill, because there are no orders and no shipments. The nearest gauge is megawatts contracted against megawatts energised - and the two are routinely reported in the same sentence as different figures."
+    ],
+    [
+     "**Developer or IPP**",
+     "Usually a **pipeline**, which is not a backlog: projects under control at some stage of development, most of them an option rather than a contract. One storage developer's 84 GWh pipeline is **84.7 per cent early-stage** on the company's own definition - projects in the process of securing interconnection rights.",
+     "An offtake signature first, then financial close. Most of a pipeline never converts, because most projects that enter an {{interconnection queue}} never leave it as operating plants.",
+     "Nothing has to un-book it, because most of it was never booked. A queue position lapses, a permit fails, an {{offtake}} does not close - and an early-stage position that stops clearing gets written down.",
+     "The stage split behind the total, not the total. A pipeline that grows while its contracted and advanced stages do not is a pipeline getting younger, which is the opposite of what the headline suggests."
+    ]
+   ],
+   "note": "**The last column is a growth gauge in exactly one of the four rows.** In the contractor's row and the developer's it is a composition read rather than a gauge at all; in the landlord's it is a physical ratio, because a business with no orders and no shipments has nothing for a book-to-bill to divide. So the single most-quoted backlog statistic in industrial equity research does not exist for three of these four businesses - and quoting it where it does not exist is not a small error, it is a claim about a mechanism the business does not have. **The contractor's row is taught from the outside in** *From Site Control to Commercial Operation* - the mix, the twelve-month share, why a record book sits naturally beside a charge - and that reading is deliberately not restated here. What this table adds is the other three rows beside it, because the mistake a desk actually makes is not misreading a builder's backlog; it is carrying one row's habits into another row's number.",
+   "sales": "Before a pricing conversation, find which of these four rows your counterparty is in and read the matching gauge rather than the headline. It takes twenty minutes in a public filing and it tells you whether you are negotiating with a firm that has room."
+  },
+  {
+   "id": "percentage-of-completion",
+   "title": "Inside the estimate",
+   "kind": "prose",
+   "read": "7 min",
+   "ps": [
+    "**This mechanism is already taught once in this track, from outside.** *From Site Control to Commercial Operation* uses it to read a builder before you price against it: the backlog mix, the twelve-month share, why a record book and a large charge appear in the same quarter and both are honest. None of that is restated here. What follows is the arithmetic inside the estimate - where the revenue figure comes from, why the correction lands on a single day, and what it does to a revenue line you may be about to compare with somebody else's.",
+    "**A contractor's revenue is a fraction, and only two of its three inputs are facts.** Under {{percentage-of-completion}} on a cost-to-cost basis, revenue recognised to date is the contract value multiplied by cost incurred to date divided by the estimated total cost of the job. The contract value is a signed number. The cost incurred is a measured number. The estimated total cost is the {{cost to complete}} plus what has been spent, and it is a forecast produced inside the company by the people responsible for hitting it. **Every quarter of revenue already reported on a multi-year job rests on that forecast being right**, which is the whole of what follows.",
+    "**Work the arithmetic once and the shape is obvious.** Take a job worth 100 with an estimated total cost of 90 - an expected margin of 10. Spend 45, which is half the estimate, and the job is fifty per cent complete: book 50 of revenue, 45 of cost, 5 of margin. Now the forecast moves to 100. Nothing was built and nothing was spent on the day it moved, but the job is no longer half done - 45 of 100 is forty-five per cent complete, so cumulative revenue should have been 45 and cumulative margin zero. The quarter therefore books **negative 5 of revenue and reverses the entire 5 of margin**. That is the {{cumulative catch-up}}: the past restating itself through the present because the denominator it was divided by has changed.",
+    "**The asymmetry is the part that surprises people.** Push the same forecast to 110 and the job is now expected to lose 10 over its life. That loss does not arrive in slices as the work proceeds; a contract expected to lose money is provided for **in full, immediately, in the period the loss becomes foreseeable**, while profit is only ever taken as work is performed. So the accounting recognises good news gradually and bad news all at once - which is why a contractor's disclosure looks like an event when the underlying deterioration was a slope. The suddenness is in the announcement, never in the site.",
+    "**What this does to comparability is the reason the section is in this lesson.** A contractor's revenue line and an equipment maker's revenue line carry the same label and are produced by different machinery: one is a measurement of deliveries, the other is an estimate-derived fraction that can go negative in a quarter without anything physical happening. A normalized field that calls both of them revenue makes them arithmetically comparable and does not make them the same object. **Normalising a label is not normalising a measurement**, and the overlay section below is honest about which of those two things it does.",
+    "**Three things are visible from outside before the charge is.** The unbilled position: work performed and not yet billed sits on the balance sheet, and when it grows faster than revenue the firm is lending its customers money it has not been paid. The twelve-month conversion share: one electrical-equipment maker's backlog grew from **USD 1.4bn to USD 2.4bn** across three quarters while the share it expected to convert within twelve months fell from about **fifty-nine per cent to about fifty-four** - a bigger book converting more slowly, which is a different business from a bigger book converting at the same rate. And the language of the estimate itself: a company that discusses productivity against plan, independent project reviews and escalation clauses in specifics is telling a reader something a headline margin cannot."
+   ],
+   "sales": "A counterparty that has just taken a cumulative catch-up is not a counterparty that has become poor; it is one whose project controls have just been publicly questioned. It will renegotiate hard, pay slowly, and refuse schedule risk on anybody's behalf - all three of which are yours to price before the contract, not after."
+  },
+  {
+   "id": "the-same-lease-three-ways",
+   "title": "Four names for one lease",
+   "kind": "table",
+   "read": "6 min",
+   "intro": "Three companies now let data-centre capacity on sites that came out of bitcoin mining, and each has published the value of its leases. The first three rows below are three ways of stating the same kind of thing, each of them correct; the fourth is a number that is not a lease figure at all and turns up in the same sentence anyway.",
+   "cols": [
+    "The name",
+    "What it measures",
+    "What it includes and excludes",
+    "Why it is not the others"
+   ],
+   "rows": [
+    [
+     "**{{base-term lease value}}**",
+     "The undiscounted sum of rent a lease obliges a tenant to pay over its initial term.",
+     "Includes every fixed payment in the base term. Excludes extension options, and excludes any discount for the fact that year fifteen's dollar is not today's.",
+     "It is a gross total spread across many years, none of it yet earned. One landlord's **USD 26.6bn** is three leases added up - **USD 7.0bn** at one campus and **two identical USD 9.8bn leases** at another, whose counterparty is not disclosed."
+    ],
+    [
+     "**{{contracted revenue}}**",
+     "Base rent plus the operating-expense reimbursement the tenant also owes, across the base terms.",
+     "Includes recoverable costs the landlord will incur and pass through. Excludes renewals, like the row above.",
+     "It is larger than base rent for the same leases, so two landlords saying *contracted* are not necessarily saying the same word. One publishes about **USD 11.4bn** on this basis across three leases - and one of the three runs ten years where the others run fifteen, which the total does not show."
+    ],
+    [
+     "**{{ASC 842}} future minimum**",
+     "The audited disclosure of fixed lease payments over the non-cancellable term.",
+     "Includes only what is fixed and non-cancellable. Excludes variable payments and options not reasonably certain of exercise. Its scope is set by a standard rather than by a press release.",
+     "It is the only one of the four an auditor signs. For the third landlord it is **USD 4,747.8m**, while the same book is described elsewhere as about **USD 4.5bn** of total lease payments for one phase and **USD 10.4bn** of minimum contracted payments for another - with no equivalent published for the third phase."
+    ],
+    [
+     "**{{enterprise value}}**",
+     "What the whole business is worth, including its debt.",
+     "Includes every asset and obligation the company has. Belongs to no particular contract, and excludes nothing that could be netted against one.",
+     "It is not a lease figure and never belongs in a sum with one. That third landlord is a digital-asset broker-dealer reporting **USD 60.41bn** of gross principal trading turnover against **USD 3.03bn** of equity - a company whose value has almost nothing to do with the leases being counted."
+    ]
+   ],
+   "note": "**A widely repeated brief once summed these companies' leases to more than USD 19bn combined, and the figure failed three separate ways.** The three leases the brief itself named already reach about **USD 22.3bn** before the third company is counted at all. The three companies' full published books reach at least **USD 52.9bn**, nearly three times the figure. And the numbers being added sat on three different bases to begin with, so even an arithmetically correct sum would have measured nothing. **The third company publishes no book total** - two phase figures on two different definitions, nothing for the third phase, and an audited future minimum different again - which means a combined book total cannot be assembled from published numbers at all. Before repeating a combined figure, check that every number inside it answers the same question. **A sum across three bases is not a bigger number; it is no number.**"
+  },
+  {
+   "id": "tax-equity-and-hlbv",
+   "title": "The loss that is somebody else's tax benefit",
+   "kind": "callout",
+   "tone": "info",
+   "read": "6 min",
+   "ps": [
+    "**1 - The structure, in one sentence.** A large part of American renewable generation is financed by selling tax benefits to somebody who can use them. A bank puts cash into the project and takes most of the {{ITC}} or the {{production tax credit}} plus most of the taxable loss for an agreed period; the developer keeps the cash and keeps the asset. That is {{tax equity}}, and it is ordinary rather than exotic - but it creates a partnership whose profit share is designed to change over time, which ordinary consolidation has no way to express.",
+    "**2 - So the answer is a hypothetical liquidation, every period.** {{HLBV}} asks a strange-sounding question each reporting period: if this project were wound up today at the carrying amounts in its own accounts, what would each partner receive? The change in that answer between two periods is the partner's income or loss for the period. It is not a measure of cash, it is not a measure of performance, and it is not optional - it is the only method that tracks a share which moves by agreement rather than by ownership percentage.",
+    "**3 - What it does to the income statement, on real figures.** One {{yieldco}} reported a consolidated net loss of **USD 231m** in a year when depreciation alone was **USD 682m** - a real expense and no cash at all. Underneath that consolidated figure, HLBV allocated **USD 400m of loss to the tax-equity partners**, which left net income attributable to the parent's own shareholders at a **positive USD 169m**. Nobody lost USD 400m. The partners' claim on a hypothetical liquidation fell by that much, largely because they had absorbed depreciation and credits, which is precisely what they were paid to do. In the same year the company distributed **USD 430m** of cash available for distribution and raised its dividend. **Every one of those figures is correct, and no two of them answer the same question.**",
+    "**4 - And the diligence item is about the machinery, not the number.** In January 2026 the same company disclosed a {{material weakness}} in internal control over exactly this calculation, and its auditor issued an adverse opinion on internal control for the year. The revisions themselves were immaterial and changed neither net income nor operating cash flow. That is what makes it instructive rather than alarming: **a control failure over a number that turned out to be right is still a live item**, because the weakness sits in the mechanism through which the entire tax-credit economics reach the income statement, and next period's number has to come through the same machinery.",
+    "**5 - What is changing, slowly.** Since the 2022 law, credits can be sold outright - {{tax credit transferability}} - so a developer can take cash for a credit instead of assembling a partnership to consume it. That is simpler and cheaper, and it is gradually shrinking the role of classic tax equity. But partnerships already in place run for years, so HLBV will keep distorting these income statements long after the structure stops being written.",
+    "**6 - The reading rule, for anyone selling into this counterparty.** A yieldco's headline net income is the least informative number on its page, and its dividend is not paid out of it. What a seller actually needs is the cash available for distribution, the parent's own attributable share, and whether the allocation machinery has an unremediated control finding sitting over it. **A loss caused by an allocation is not distress and a profit produced by one is not strength** - which is the whole lesson in miniature: the label on the line says less than the mechanism that put a number on it."
+   ]
+  },
+  {
+   "id": "the-overlay",
+   "title": "The comparable layer, and what it can carry",
+   "kind": "table",
+   "read": "7 min",
+   "intro": "The corpus's dossiers report every metric the way its company words it - hundreds of distinct metric names, with the caveats attached. On top of that prose sits a small optional overlay whose only purpose is to let one metric be set beside another company's, and which the Compare view reads. Its governing instruction is worth reading before its fields: fill it only where the mapping is genuine, because an absent field is always better than a forced one.",
+   "cols": [
+    "Field",
+    "What it holds",
+    "The rule that governs it",
+    "What it looks like in the corpus"
+   ],
+   "rows": [
+    [
+     "**kpi** - the currency keys",
+     "A canonical name for what a metric is, independent of how the company words it: revenue, net income, EPS, operating profit, gross margin, orders, backlog, capex, shipments.",
+     "Whole-company actuals only. A segment figure is not revenue, a guidance range is not an actual, and there is one marker per key per period - a reader asking a period for its revenue must get exactly one answer.",
+     "**100 of 174 profiles** carry at least one, across **thirteen distinct keys** counting the physical ones below. Revenue is marked on **176** metrics; backlog and orders on **eight** each."
+    ],
+    [
+     "**usdMillions**",
+     "The same figure restated in millions of US dollars, so that two companies' numbers can be subtracted from one another.",
+     "It must be derivable from the prose beside it and must never introduce a figure the prose does not contain. **The prose is the source of truth; where the two disagree, the overlay is the bug.**",
+     "A contractor's stated $7.6B is carried as **7600**. A broker-dealer's USD 60,406.728m is carried as written. Nothing is rounded into existence."
+    ],
+    [
+     "**fxBasis**",
+     "How a converted figure was arrived at - the rate, the period the rate applies to, and where it came from - or simply the words *as reported* for a company that reports in dollars.",
+     "Mandatory on any conversion. **An unsourced conversion is fabricated precision**, forbidden as squarely as an invented number would be.",
+     "One cell maker's RMB 423.7B is carried as **58,951** at **7.1873 CNY/USD**, the 2025 calendar-year average, cross-checked against the dossier's own stated dollar equivalent. **Three yen-denominated backlog and order markers carry no converted figure at all**, because no citable rate was recorded - the rule working, not a gap."
+    ],
+    [
+     "**kpi** - the physical keys",
+     "The storage and data-centre vocabulary the currency keys cannot express: gigawatt-hours shipped, backlog in gigawatt-hours, megawatts energised, megawatts contracted.",
+     "The unit is fixed by the key, so there is no conversion machinery at all - a source stating 2.5 GW becomes 2500 on a megawatt key, a pure restatement. A metric carries a currency overlay or a physical one, never both.",
+     "**Forty markers** across the corpus. The largest is one utility's **69 GW** of contracted incremental load through 2030, up from more than 20 GW at the end of 2024."
+    ],
+    [
+     "**qty**",
+     "The number for a physical key, in the unit that key names.",
+     "The same derivability rule as a converted figure: it comes out of the prose and is never introduced by the overlay.",
+     "One yieldco's operating battery fleet is stored as **1,439** while the prose beside it reads **1,439 MW rated / 849 MW net**. **There is no fxBasis for a physical figure**, so which of those two bases was stored is recorded nowhere in the overlay - only in the sentence it came from."
+    ],
+    [
+     "**periodType / periodEnd**",
+     "What kind of period this is, and the calendar day it ended.",
+     "Both are independent of how the label is worded. *FY2025 (ended Sep 30, 2025)* and *FY2025* are both annual, and only the end date says they are not the same twelve months.",
+     "**326 periods** carry them. One storage integrator's FY2025 ended **2025-09-30** and one carmaker's ended **2025-12-31**: identical labels, three months apart, and this field is the only place in the record that says so."
+    ]
+   ],
+   "note": "**The overlay's own rule is best seen where it strains.** The backlog-in-gigawatt-hours key is defined as contracted-but-undelivered storage backlog at period end. It carries one cell maker's **140 GWh of ESS order backlog** - which is exactly what the key describes - and, on another profile, **84,057 MWh** described in the metric's own name as a *storage development pipeline*. The same dossier's stage split for that day names **4,378 MWh of backlog** inside the pipeline, so the stored figure is about **nineteen times** the object the key is defined as, and **84.7 per cent** of what was stored is early-stage development on the company's own definition. A Compare view ranking the key puts the two side by side. **The prose is the source of truth and the prose says these are different objects**, which is the schema's own test for the overlay being the bug rather than the number. It is the whole lesson in one field: **a layer built to make figures comparable can only do so where the things underneath already are.**",
+   "sales": "If you quote a comparison drawn from a normalized view, say which field it came from and what period end it sits on. The one question that ends a credibility problem before it starts is the one you ask yourself: are these two numbers the same kind of thing?"
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "6 min",
+   "ps": [
+    "**1 - A segment figure set beside a whole-company one.** One maker's storage-division revenue against another maker's group total is a comparison between a part and a whole, and it reads as a ranking. This is exactly why the corpus's overlay sets a key only when the metric is that measure for the entire company: a division's line is a real number about a real business and it belongs in a different column. The tell is a growth rate that looks implausibly good, because a fast-growing division inside a flat company outgrows any whole.",
+    "**2 - A book-to-bill read without asking how firm the numerator was.** A ratio above 1.0 says orders exceeded revenue over a window. It says nothing about whether those orders are fixed-scope commitments, framework volumes that were estimates, or letters of intent - and reservation payments for future factory slots are not in the book at all. The number is right and it is missing the one qualifier that decides what it means. Ask what share of those orders is cancellable before quoting the ratio they drive.",
+    "**3 - An enterprise value quoted as though it were a contract.** A valuation of a whole business, debt included, is not a lease, an order or a backlog, and no correct arithmetic exists that adds it to one. This is the single most common form of the failure in this market, because both figures are large, both are quoted in billions and both are attached to the same company name. If a sum contains one valuation and two contract totals, the sum has no unit.",
+    "**4 - A converted figure with no rate cited.** A number moved from one currency to another without a stated rate, period and source is not a translated fact; it is a new number whose provenance has been thrown away. Its precision is invented, and its error is unbounded because nobody can tell whether a year-average rate, a period-end rate or a rate from memory produced it. Where no rate can be cited, the honest output is nothing at all - and three backlog and order markers in the corpus are blank for exactly this reason.",
+    "**5 - Two revenue lines compared across two recognition regimes.** A contractor's revenue is a fraction whose denominator is a cost forecast, and it can go negative in a quarter with nothing happening on site. An equipment maker's is a record of things that left a factory. A landlord's is the passage of time. Giving all three the same field name makes them subtractable and does not make them the same measurement, and no amount of normalisation will fix that, because the difference is in the object rather than in the label.",
+    "**6 - A fiscal year read as a calendar year.** Two annual figures both labelled FY2025 can end three months apart, and in a market moving as fast as this one a quarter is a different world. A growth rate computed across two companies whose years end on different days is not a growth rate; it is a growth rate plus an unmeasured timing difference. The fix costs one lookup - find the period end before you find the number."
+   ],
+   "note": "**Six failures, and half of them are the same mistake wearing different clothes.** Three are a label taken as if it named one thing when it names several - a part read as a whole, one recognition regime read as another, one fiscal calendar read as another. One is a wrong object entirely, a valuation dropped into a sum of contracts. One is a right number missing its qualifier. And one is precision that nothing supports. **Every one of the six survives a spreadsheet**, which is why the check belongs in the sentence before the figure is repeated rather than in the model afterwards. The question is always the same and it takes four seconds: **which of the four names is this, whose measurement regime produced it, and what day did its period end?**",
+   "sales": "You will repeat a counterparty's numbers in front of people who know them better than you do. Being the person in the room who says which basis a figure is on - before being asked - is worth more than being the person who knew it first."
+  },
+  {
+   "id": "drill",
+   "title": "Drill",
+   "kind": "flashcards",
+   "read": "4 min",
+   "cards": [
+    {
+     "q": "Name the four things one sale is called before it becomes cash, and say what sets the date of each.",
+     "a": "An **order**, dated by a signature. **{{backlog}}**, which is not a date at all but the stock of what is ordered and unearned on every day in between. **Revenue recognised**, dated by an accounting rule rather than an event - delivery for an equipment maker, cost incurred against a forecast for a contractor, the passage of time for a landlord. And **cash**, dated last, after payment terms, certification and {{retainage}}. At any given moment the four are different sizes, and each counterparty headlines whichever is largest or growing fastest."
+    },
+    {
+     "q": "The word backlog is used by an equipment maker, an EPC contractor, a data-centre landlord and a project developer. What converts it into revenue in each?",
+     "a": "For the equipment maker, **shipment** against the contract - a factory-slot question. For the contractor, **{{percentage-of-completion}}**: cost incurred against the {{cost to complete}}, so it converts continuously and invisibly rather than on a delivery date. For the landlord, **time** - rent recognised across the lease term once the space is handed over, so building faster afterwards changes nothing. For the developer it usually converts through **an offtake signature and then financial close**, and most of it never converts at all, because what is being reported is a pipeline rather than a backlog."
+    },
+    {
+     "q": "A job is worth 100 with an estimated total cost of 90. The contractor has spent 45. The estimate then moves to 100 with nothing built on the day it moves. What does the quarter book?",
+     "a": "**Negative 5 of revenue, and the whole 5 of margin reverses.** At an estimate of 90 the job was fifty per cent complete, so 50 of revenue and 5 of margin had been taken. At an estimate of 100 it is forty-five per cent complete, so cumulative revenue should have been 45 and cumulative margin zero. The difference lands in one quarter as a **{{cumulative catch-up}}** - the past restating itself through the present because its denominator changed. Push the estimate to 110 and the expected loss is recognised **in full and immediately**, because a loss-making contract is provided for as soon as it is foreseeable while profit is only ever taken as work proceeds."
+    },
+    {
+     "q": "Three data-centre landlords publish the value of their leases and a brief sums them to a single combined figure. Why can that sum not be a number?",
+     "a": "Because the three are on three different bases. One publishes **{{base-term lease value}}** - undiscounted rent over the initial terms, excluding options. One publishes **{{contracted revenue}}** - base rent plus the operating-expense reimbursement, which is a larger figure for the same leases. And one publishes **no book total at all**: two phase figures on two different definitions, nothing for a third phase, and an audited **{{ASC 842}}** future minimum different again from both. Adding them produces a quantity with no unit. The arithmetic failed too - the leases named already exceeded the combined figure, and the full books reach nearly three times it - but the basis problem would have remained even if the addition had been right."
+    },
+    {
+     "q": "A yieldco reports a consolidated net loss while raising its dividend, and a USD 400m loss is allocated to its tax-equity partners. What actually happened?",
+     "a": "Nobody lost USD 400m. **{{HLBV}}** asks each period what every partner would receive if the project were wound up at the carrying amounts in its own accounts, and the change in that answer is the partner's income or loss. The partners' claim fell because they absorbed depreciation and the credits they were paid to consume - which is the structure working, not a deterioration. Underneath, net income attributable to the parent's own shareholders was **positive**, depreciation was a large non-cash charge, and the dividend was paid out of cash available for distribution rather than out of accounting profit. **A loss produced by an allocation is not distress.**"
+    },
+    {
+     "q": "In the corpus's normalized overlay, what is fxBasis for, and why are some converted figures simply left blank?",
+     "a": "It records **how** a figure was converted - the rate, the period that rate applies to, and its source - or the words *as reported* where a company already reports in dollars. It is mandatory on any conversion, because an unsourced conversion is **fabricated precision** rather than a translated fact. Where no citable rate was recorded, the overlay field is left empty instead: three yen-denominated backlog and order markers in the corpus carry no converted figure at all. **A blank is the rule working.** The same discipline is why there is no conversion machinery on the physical keys - a megawatt figure is restated into its unit and nothing else."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 min",
+   "items": [
+    {
+     "q": "A supplier's quarterly release leads on a record order book while its revenue fell. Which reading is safe?",
+     "c": [
+      "The fall must be a timing effect inside the quarter, because an order enters the book and the income statement in the same period, so a book that grew cannot sit beside revenue that shrank unless deliveries slipped across the period end",
+      "The two figures cannot both be current, so one of them has been restated: a book measured at period end and revenue measured across the period cannot move in opposite directions without a correction the release has chosen not to name",
+      "Orders exceeded revenue over the period and the book therefore grew, so the revenue fall tells you nothing at all - a book and a revenue line are independent disclosures that happen to share a release",
+      "Backlog is a stock while orders and revenue are the flows into and out of it, so a record book standing beside falling revenue is simply an inflow that beat an outflow over one particular window, which is all a book-to-bill says"
+     ],
+     "a": 3,
+     "why": "This is the most common misreading in the whole lesson, and it is a category error rather than an arithmetic one. **Backlog is the stock and both orders and revenue are flows into and out of it**, so a record book beside falling revenue means only that the inflow beat the outflow - which is what a book-to-bill above 1.0 says and nothing more. The first option inverts the mechanism entirely: an order raises revenue in the period it is *delivered*, never the period it is booked. The second treats an ordinary relationship as a discrepancy. The third is true as far as it goes and stops one step short of the reason, which is the stock-and-flow structure the fourth names."
+    },
+    {
+     "q": "A contractor discloses a large charge on a project and says no new costs were incurred in the quarter. Is that possible?",
+     "c": [
+      "No - under percentage-of-completion every figure is driven by cost incurred, so a charge in a period with no new cost incurred in it is a contradiction on the face of the method",
+      "Yes - the charge comes from revising the estimated total cost, which is the denominator every prior quarter's revenue was divided by, so all of them restate at once through the current period",
+      "Yes, but only on a cancelled contract, since terminating the scope is the one event that reverses revenue already recognised without any new cost being incurred against it",
+      "No - if earlier quarters were computed on an estimate now known to be wrong, they were misstated, and a misstatement is corrected by amending those filings rather than by a charge in the current period"
+     ],
+     "a": 1,
+     "why": "Revenue to date is the contract value multiplied by cost incurred over **estimated** total cost, so moving the denominator changes every figure already reported. The correction lands in the current period as a **{{cumulative catch-up}}** rather than as an amendment to earlier ones - which is precisely why the fourth option is wrong: the method is designed to correct forward, not to reopen the past. A cancellation would do something quite different and is not needed here, and the first option confuses the two things the fraction is made of."
+    },
+    {
+     "q": "Two data-centre landlords each publish a lease book. One reports base-term lease value and one reports contracted revenue. Which statement about the comparison is correct?",
+     "c": [
+      "They are interchangeable for comparison, because both are undiscounted totals across the leases' initial terms, both exclude extension options, and both are stated before any discounting for time",
+      "Only the first is meaningful, because contracted revenue folds operating-expense reimbursement into the total and so mixes a landlord's recoverable costs into a figure presented as the value of its leases",
+      "Contracted revenue is the larger measure of the same leases because it adds the reimbursement to base rent, so neither figure means much until it is labelled",
+      "Neither can be compared with the other until both are restated onto the audited future-minimum basis, which is the only figure with a defined scope"
+     ],
+     "a": 2,
+     "why": "Both are legitimate and they measure different amounts of the same obligation, which is the whole trap: the wider measure looks like a bigger business. The first option is the mistake the lesson exists to prevent. The second is a real accounting observation used to reach a wrong conclusion - passing through a recoverable cost is ordinary and does not make the figure meaningless. The fourth sounds rigorous and is impractical: the audited **{{ASC 842}}** future minimum has a narrower scope again, so restating onto it discards the recoverable operating-expense payments that one of the two headline figures includes, and a landlord that has never published one cannot be restated at all."
+    },
+    {
+     "q": "A metric in the corpus's overlay carries a converted figure with no fxBasis recorded. What is the correct conclusion?",
+     "c": [
+      "It is a defect - the conversion is unsourced, and the rule is that a converted figure without a citable rate, period and source should not be stored at all",
+      "It is acceptable where the company itself states a dollar equivalent, because the dossier's own cross-check replaces the need for a basis",
+      "It is acceptable for a period shorter than a year, because a quarter is too short for the choice of rate to matter materially",
+      "It is acceptable when the reporting currency is one the Compare view can convert on the fly, so recording a basis would duplicate machinery that already exists"
+     ],
+     "a": 0,
+     "why": "**An unsourced conversion is fabricated precision**, and the schema treats that as squarely forbidden as an invented figure. The honest output where no rate can be cited is an empty field - which is why three yen-denominated markers in the corpus carry no converted number at all. The second option describes a real practice pointing the other way: where a company states its own dollar equivalent, that is used to **cross-check** a conversion whose basis is still recorded, never to replace it. The third invents a materiality threshold the rule does not have. The fourth describes machinery that does not exist and would not help if it did, because the question is what rate was used, not whether one could be found."
+    },
+    {
+     "q": "A comparison view ranks storage backlog in gigawatt-hours and puts a cell maker's contracted order backlog beside a developer's 84 GWh figure. What has gone wrong, and where?",
+     "c": [
+      "Nothing has gone wrong - both figures are storage volumes measured in gigawatt-hours at a stated period end, which is exactly the condition a normalized field exists to create, and ranking them is what the field is for",
+      "The ranking is wrong because the two companies report on different fiscal calendars, and the period ends have to be aligned before the volumes can be set beside one another",
+      "The developer's figure is a development pipeline rather than contracted backlog, so the overlay has mapped an object this key is not defined to hold, and the prose beside it says as much",
+      "The cell maker's figure is the mismatched one, because an order backlog stated in gigawatt-hours is really a shipment forecast for future periods rather than a contracted position standing at the period end the key asks for"
+     ],
+     "a": 2,
+     "why": "The key is defined as contracted-but-undelivered backlog at period end, and the cell maker's figure is that. The developer's is a **pipeline**, which its own dossier splits by stage - the backlog line inside it is a small fraction of the total, and the great majority is early-stage development on the company's own definition. **The prose is the source of truth and the overlay is the bug** where they disagree; that is the schema's own test, not an outside criticism. Aligning period ends is a genuine discipline and would not repair this, because the objects differ rather than the dates. And the fourth option reverses which figure is the sound one."
+    }
+   ]
+  }
+ ]
+};
+}
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -46001,7 +46525,8 @@ function clLessons_() {
           clLessonUtilityProcurementMeetsAiLoad_(),
           clLessonTheChinaPolicyStack_(),
           clLessonTheCertificationStack_(),
-          clLessonWhatBankableMeans_()];
+          clLessonWhatBankableMeans_(),
+          clLessonReadingTheNumbers_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),
