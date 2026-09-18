@@ -6,22 +6,67 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-18 05:46:16 AM EST
+**Repo version:** v06.52r — one push, merged and deployed (auto-merge run 676, 54 s, **one `Deploy Classroom` step: `Updated to v01.75g (deployment 88) | 88/200`**), then this handover
+**Branch:** `claude/c5-session-1-machinery-ba2286` — restarted from `origin/main` at session start, and again after the merge for this handover
+
+### What was done
+
+- **C5 AUTHORING SESSION 1 RAN — `INTEGRATED-REMEDIATION-PLAN.md` §7.60, Opus 5 xhigh, v06.52r — AND THE SIMULATION LAYER NOW EXISTS.** The machinery of design §7/§8 plus the first scenario for each seat. Corpus **56 → 58 lessons**, 8 tracks unchanged, curriculum plan **§11 reads 2 of 14**.
+- **The two scenarios.** `scenario-storage-developers-and-ipps-objection` (storage seller · `aypa-power` · shortlist) — the incumbency objection, 17 ledger rows, `reviewBy` 2027-01-01. `scenario-aidc-developers-and-landlords-objection` (AIDC power seller · `vantage` · rfp) — the published storage commitment with no supplier named against it, 19 ledger rows, `reviewBy` 2026-12-15. Both fold to **`guidance`**; every pin read off the fetched document on an unshallowed clone.
+- **The checkers, red before green.** `check-classroom-content.py`: the `type` enum, the five-field block against its enums and two registries, `SCENARIO_SECTION_IDS` and the per-beat shape, the stamp constraints and the **computed fold == `guidance`**, `reviewBy` vs the landscape's; a truth-table fixture asserting analyst denial, contributor visibility, the ten tickable ids and **zero drill items at every tier** with an (ll1) positive control. `check-classroom-pipeline.py`: **P13** with two negative fixtures, `--selftest` **13 → 15, 0 failures**. `check-classroom-curriculum.py`: the **"6 · Rehearsal coverage"** block, the (rr17) denominator, and scenario beats excluded from the drill total.
+- **The server and the page.** `clDrillLessonItems_` skips scenarios (D7, one line); **`clLessonCard_` emits the `scenario` block conditionally** — the design's one-line claim was wrong against its own library spec, and the conditional emission is what keeps the analyst index byte-identical (rr30). `Classroom.html`: the `🎭 Rehearsal` library behind `clCan('guidance')` with **no new capability**, `#rehearse` and `#rehearse/<id>`, the index partition, the badge and the header case.
+- **The three documents amended in the commit that enforces them** — `CLASSROOM-SCHEMA.md` (the "planned, not built" pointer replaced by a built **Scenario lessons** section), `CLASSROOM-COMMITTER-CONTRACT.md` (§3.1, §4.4, the P13 row, and "Settled at C5 session 1 — in force"), `.claude/rules/classroom-app.md` (the P13 row and a scenario bullet).
+
+### Where we left off
+
+Everything is merged and deployed; Pages serves **v01.75g / v01.16w**. **C5 authoring is 2 of 14 with four Opus sessions left, and §7.61 is written in both halves** — session 2 is rows 3, 4 and 5 (`spearmint-energy` discovery, `dominion-energy` objection, `hut-8` discovery) as **pure authoring against machinery that exists**. §7.59's carried-items row is still open Opus work and blocks nothing. The Q plan clock (~2026-12) reports only. **None of design §12's eight developer calls has been taken** — item 2 (the quarterly review Routine re-reading scenarios stamped on a revised landscape) is the consequential one and is an in-place prompt change requiring the developer's explicit approval.
+
+### Key decisions made
+
+- **THE CARD HAD TO CARRY THE BLOCK, AND CONDITIONALLY — (rr30).** Design §7 says the server change is one line; its own library spec groups seat → segment and shows mode · counterparty · stage, and `clLessonCard_` emitted none of them. Adding `scenario` to the card moved a `GATE_SYMBOLS` member, so **P3 fired where the brief forecast it would not** — decomposed to **exactly 1 of 32** symbols and the digest refreshed in the same commit. Emitting it **only when present** (not as a `null`) is what preserves the analyst-index invariant.
+- **`note` IS A SECTION FIELD — (rr32).** All six beats were first written with it inside `items[0]`, where the schema allows it, every checker passed it, and **the renderer never reads it**. Found in the first screenshot of a beat; fixed on all six and turned into two assertions.
+- **(rr29)'s PARENTHETICAL IS WRONG — (rr33).** `landscape-aidc-developers-and-landlords-2026-09` names **both** seats in `the-sellers-play`, not just the storage seller, so row 2 was written straight off its own play rather than leaning on the mechanism lessons.
+- **THE DESIGN'S "FOUR-WAY GC BENCH" IS THREE ENTITIES ON FOUR BUILDINGS — (rr35).** The `vantage` dossier says so explicitly, and beat 3's strong move turns on the correction. A §9 premise is a reading, not a pin.
+- **Proceeded on all eleven §3 decisions as written**, since the developer had said nothing.
+
+### Active context
+
+- **Repo version v06.52r** · `CHANGELOG.md` **94 raw / 90 non-exempt** on 2026-09-18 EST (**94 non-exempt from 2026-09-19**) against a 100 trigger, counter `Sections: 94/100` — **six from the trigger**; `Classroomgs.changelog.md` **46 / 43** (cap 50 — **C5 sessions 2–5 reach it exactly, so session 5 rotates**); `Classroomhtml.changelog.md` **16 / 14**; **`Profilerhtml.changelog.md` 49 / 49 — one section from its own rotation.** No rotation this session.
+- **GAS versions:** Classroom **v01.75g**, Scraper v02.20g, Profiler v01.39g. **Page versions:** Classroom **v01.16w**.
+- **Baselines, measured this session:** `check-classroom-content.py` **0 / 0 at 58 lessons / 8 tracks / 217 gate cases**, module assertion **28**. The gate-case count moved 192 → 217 and decomposes as `(14 × 7) + 6 + 113` — **+7** for the new fixture, **+18** in `cases`. `--strict` no structural findings, **28 stale pins across 39 hand-authored lessons**, **4 review items due**, coverage **2 of 14**, moved-landscape list **0**. `--selftest` **15 / 0**. `build-classroom-segments.py --check` **0**. `check-readme-tree.py` 10 + 8, 0 findings. Drill pools **446 / 970 / 314**, id→hash pairs identical. **`gateDigest` is now `sha256:3d09700026d2…`** — a P3 next session is a real finding.
+- **Checker signature on this push:** P1 ×5, **P2** (two server functions below the fence — fired by construction, (rr31)), **P3** (decomposed and refreshed), **P10** (two new lessons vs a cap of 1), **P13 ×2** (the assertion working). No P5, P6, P7, P8, P12.
+- **Deployment: verified from the job log.** Run 676 merged `caf01f9`, the SHA tracker `2411e37` followed, **exactly one `Deploy Classroom` step** and the counter reads **88/200 with 112 LEFT — MEASURED**. **Scraper 165/200 with 35 left is still the tight one.** The post-merge README sync ran and found nothing to fix, because the displays were corrected before committing.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+- **Where the programme stands.** Done: Phases 0, 1, 2a, 2b, 3, 4 (26 of 26), 5, 6; S0, K1, S1, S2 (19 of 19), S3, G6, C3, the bankability review, K2, the regeneration pass, the C5 design, **and C5 authoring session 1**. **Open:** C5 authoring (**2 of 14**, §7.61 next), §7.59's carried-items row, the Q plan clock. Deferred: C6.
+- **The findings register is at (rr36); the next session continues at (rr37).** `INTEGRATED-REMEDIATION-PLAN.md` still carries the stranded footer at line 1927 and none at end-of-file (rr22) — left as found. A remote branch `claude/adoring-brown-mvddj2` exists that is not this session's — left alone.
+
+### Recommendation for next session
+
+- **Run C5 session 2 on Opus 5 xhigh from `INTEGRATED-REMEDIATION-PLAN.md` §7.61 — three scenarios (§11 rows 3, 4, 5) against machinery that already exists, with no code in the commit.** It is the critical path and the cheapest it will ever be: the checkers, the page and the server are done and proved, so the whole session is authoring plus verification. Two of the three are `discovery` mode, which session 1 never built, so read design §5 rows 3 and 10 before writing the first one — and `landscape-utilities-2026-09`'s `reviewBy` is 2026-10-01, so row 4 ships inside its own 30-day horizon by design.
+
+**To continue:** type `run C5 session 2`
+
+## Previous Sessions
+
+### Session — v06.51r (the C5 design gate)
+
 **Date:** 2026-09-18 04:43:23 AM EST
 **Repo version:** v06.51r — one push, merged and deployed (auto-merge run 674, 50 s, no `Deploy` step fired), then this handover
 **Branch:** `claude/fable-5-1-xhigh-c5-fvvrbp` — restarted from `origin/main` at session start, and again after the merge for this handover
 
-### What was done
+#### What was done
 
 - **THE C5 DESIGN GATE RAN — `INTEGRATED-REMEDIATION-PLAN.md` §7.3 order 9, Fable 5.1 xhigh, v06.51r — AND THE OPUS LANE IS UNBLOCKED.** Wrote **`repository-information/C5-SALES-SIMULATIONS-DESIGN.md`** (fourteen sections, ~72 KB): the corpus measured on the day (§2), **eleven decisions each with what it rejects and what it costs** (§3), the `type: "scenario"` schema and five-field `scenario` block (§4), the ten-section template with three `quiz` beats (§5), the stamp/gate/review-date rule (§6), the Rehearsal surface and the one server change (§7), the checker extensions incl. **P13** (§8), a **fourteen-scenario inventory over nine buyer segments and two seats** (§9), a worked example against `aypa-power` v2 and the developers landscape (§10), done-when (§11), the developer's open calls (§12), the five-session plan (§13), findings (§14)
 - **The decisions in one line each — ALL PROPOSED for the developer's approval before authoring session 1.** D1 a lesson with `type: "scenario"` inside the content fence; D2 additive, **no `CL_LESSON_SCHEMA_VERSION` bump**; D3 **contributor by construction** — the stamp must carry the segment's landscape so the fold is `guidance`, no `report:` input, never analyst, never admin-only; D4 the G12 customer-language rule — paraphrased positions the record supports, no quotations unless the dossier quotes, **the counterparty is a role, never a person**; D5 fact/analysis separated in the ledger; D6 **the unattended pipeline never authors or revises a scenario** (P13); D7 no drill items; D8 never a track member or study-next target; D9 ten fixed section ids, three beats; D10 fourteen scenarios, unit = **buyer segment × seat × mode**; D11 all five sessions on Opus 5 xhigh, session 1 carrying the machinery
 - **Plan documents flipped and briefed.** Curriculum plan **§11** (the fourteen-row ledger the sessions flip), **§10.1** sentence (the rehearsal as the third cross-cutting feed), **§10.6 findings (rr23)–(rr29)**, **§9** row; IRP **§6** and **§7.3 order 9** → Design Done, authoring OPEN 0 of 14; **§7.60 written in both halves** — the paste-in brief for C5 session 1 (machinery + `aypa-power` objection + `vantage` objection); "planned, not built" pointers in `CLASSROOM-SCHEMA.md` and at the end of `CLASSROOM-COMMITTER-CONTRACT.md`; README tree entry
 - **Nothing built.** No lesson, track, module, dossier, guide, report, checker, page or `.gs` touched — no page or GAS bump, zero `Deploy` steps, counter unmoved
 
-### Where we left off
+#### Where we left off
 
 Everything is merged and deployed — Pages still serves **v01.74g / v01.15w** (unchanged by design). **The programme table now has three open rows and one deferred:** **C5 authoring** (0 of 14, five Opus 5 xhigh sessions, session 1 briefed in **§7.60**), **§7.59's carried-items row** (four items, Opus, blocks nothing and is blocked by nothing), the **Q plan clock** (~2026-12), and **C6** deferred on a team existing. **The developer owes the design its decisions:** design §3 (D3 and D6 first) and §12's eight calls — chiefly item 2, an in-place prompt change to the quarterly guidance review Routine so a revised landscape re-reads the scenarios stamped on it.
 
-### Key decisions made
+#### Key decisions made
 
 - **THE UNIT IS BUYER SEGMENT × SEAT × MODE, NOT "PER SEGMENT" — (rr23).** Nine of nineteen segments are buyers for the two seats; the other ten are supply-side. Fourteen scenarios, seven per seat, five sessions at two to three each
 - **CONTRIBUTOR BY CONSTRUCTION, AND NO SCENARIO IS ADMIN-ONLY — (rr24).** `IMPROVEMENT-PLAN.md` §5's "most are report-built and admin-only" inverted under measurement: every fact layer is public (147 dossiers with `policyExposure[]` / 596 entries; 1,362 relationships / 62 project-pinned) and the only judgment layer needed is the contributor-tier landscape, which the stamp must therefore carry. Its counts were stale by more than double
@@ -30,7 +75,7 @@ Everything is merged and deployed — Pages still serves **v01.74g / v01.15w** (
 - **A TYPE, NOT AN ID PREFIX — (rr27):** `clRenderIndex` already partitions by `type`, so a prefix would have needed the same page edit plus three string tests. **`clStudyNext_` walks tracks only — (rr26)** — so scenarios need no study-next change; the contract's wording is wrong about it and is the developer's to fix
 - **Roles, never persons; paraphrase, never quotation** — the honest form of a rehearsal under G12
 
-### Active context
+#### Active context
 
 - **Repo version v06.51r** · `CHANGELOG.md` **93 raw / 90 non-exempt** on 2026-09-18 EST against a 100 trigger, counter `Sections: 93/100`; `Classroomgs.changelog.md` **45 / 43** (cap 50); `Classroomhtml.changelog.md` **15 / 14**; `Scrapergs.changelog.md` **41 / 41**; **`Profilerhtml.changelog.md` 49 / 49 — one section from its own rotation, not Classroom's file.** No rotation this session; (rr15)/(rr22)'s footer trap still live for whoever rotates next
 - **GAS versions:** Classroom **v01.74g**, Scraper v02.20g, Profiler v01.39g. **Page versions:** Classroom **v01.15w**. All unchanged
@@ -40,62 +85,6 @@ Everything is merged and deployed — Pages still serves **v01.74g / v01.15w** (
 - **Where the programme stands.** Done: Phases 0, 1, 2a, 2b, 3, 4 (26 of 26), 5, 6; S0, K1, S1, S2 (19 of 19), S3, G6, C3, the bankability review, K2, the regeneration pass, **and the C5 design**. **Open:** C5 authoring (0 of 14, §7.60 next), the §7.59 carried-items row, the Q plan clock (~2026-12). Deferred: C6
 - **The findings register is at (rr29); the next session continues at (rr30).** `INTEGRATED-REMEDIATION-PLAN.md` still carries the stranded footer at line 1927 and none at end-of-file (rr22) — left as found. A remote branch `claude/adoring-brown-mvddj2` exists that is not this session's — left alone
 
-### Recommendation for next session
 
-- **Run C5 session 1 on Opus 5 xhigh from `INTEGRATED-REMEDIATION-PLAN.md` §7.60 — after reading `C5-SALES-SIMULATIONS-DESIGN.md` §3 and taking or amending the eleven decisions, D3 and D6 first.** It is the critical path: four more authoring sessions wait behind it and nothing else does. §7.59's carried-items row is Opus work too and may run before or after it — the two interact only on the computed gate-case count, which whichever runs second re-derives. The Q plan clock is eleven weeks out and only reports.
-
-**To continue:** type `run C5 session 1`
-
-## Previous Sessions
-
-### Session — v06.50r (the segment-lesson regeneration pass)
-
-**Date:** 2026-09-18 02:13:44 AM EST
-**Repo version:** v06.50r — one push, merged, deployed, then this handover
-**Branch:** `claude/segment-lesson-regen-phjb3f` — restarted from `origin/main` at session start, and again after the merge for this handover
-
-### What was done
-
-- **THE SEGMENT-LESSON REGENERATION PASS (v06.50r), briefed as §7.58 — and `build-classroom-segments.py --check` READS 0 FOR THE FIRST TIME SINCE THE GENERATOR WAS BUILT AT v05.17r.** One `--all --today 2026-09-18` run. Classroom GAS **v01.73g → v01.74g**; **no page bump** — the renderer was never touched. No lesson, track, guidance module, dossier or report authored; **not one generated literal hand-edited**
-- **THE WINDOW WAS RE-MEASURED BEFORE ANYTHING ELSE AND IT WAS OPEN.** All nine due segments differed on **`read-next` and `what-is-bought-and-on-what` only**, with `inputs moved: none` on every one — `the-players` in none of them. That is the entire argument for having run this today, and it held
-- **NINE LESSONS WRITTEN, NOT NINETEEN — forecast from the write loop BEFORE the run, and exact on both halves.** `--all` marks all nineteen `forced`, but the loop skips `forced and not secs and not moved`, and **no section builder reads `self.today`** (assigned in `Builder.__init__`, never referenced again), so rebuilding a current segment at today's date is identical to rebuilding it at its own `updated`. Measured: **9 written, no track line, and 47 of 56 lessons byte-identical after the run — ten of them segment lessons**, which is §10.4's determinism claim measured rather than asserted
-- **THE 28 STALE `(planned)` RENDERS ARE GONE — 28 → 0**, re-derived from the corpus rather than carried: 28 renders / 9 segments / 12 titles, all twelve built, per segment 6·4·4·3·3·3·2·2·1 exactly as §7.58 recorded. The nine leaking segments were **byte-for-byte** the nine `--check` reported as due, so **(qq1)'s invariant survives the clearing as well as the accumulation**
-- **No pin moved on any lesson.** `updated` advanced on nine; **`reviewBy` on only four** — the four on §10.3's `updated + 6 months` default, the other five pinned to a future policy `effectiveDate` and correctly holding
-- **THE ACCEPTANCE TEST HELD, MEASURED FOUR WAYS, ON THE FIRST RUN THAT COULD HAVE MOVED K2's CARDS.** Base against head over the real `handleClassroomOp_`: **314 cards, identical id set, identical hash multiset, and every one of the 314 id→hash PAIRS identical — 0 of 314 cards moved.** Queues with denominators: flag OFF → **0** `rc:` items for every tier against pools of **446** (analyst) and **970** (contributor+); flag ON → analyst pool **314**, draw **10**
-- **§10.4 marked CLEARED, §7.58 SPENT, §7.57's item (xx) CLOSED, §7.3 order 9 annotated, §7.59 written in both halves**, findings **(rr16)–(rr22)** written — and **(rr15) repaired into §10.6**, where K2 never wrote it
-- **No changelog rotation** — `CHANGELOG.md` 92 raw / 90 non-exempt against a 100 trigger; `Classroomgs.changelog.md` 45 / 43 against a cap of 50. Re-counted on the day
-
-### Where we left off
-
-Everything is merged, deployed and live — Pages serves **v01.74g / v01.15w**, the run logged *All GAS deploys confirmed the merged version*, and **exactly one `Deploy Classroom` step fired (25 s)** with the other seven in ≤1 s. **`--check` reads 0.** With this pass closed, **only two items remain on the programme table: C5 and the Q plan clock** — and the next run is briefed in **§7.59**, written this session.
-
-### Key decisions made
-
-- **THE BRIEF NAMED THE WRONG NUMBER AS THIS PASS'S TARGET, AND THE CHECKER'S OWN OUTPUT LINE SAYS SO — (rr17).** §7.58 and the paste-in prompt both state *"the stale-pin count is what this pass exists to move."* It cannot: `check-classroom-curriculum.py`'s stale-pin loop **`continue`s on every `segment-` id** (line 240) and labels its total *"28 stale pin(s) on the **hand-authored** lessons"*; segment staleness is routed to the generator's `--check` instead (§10.9). The two are **disjoint by construction** and sit four lines apart in the same report, which is how they came to be read as one. **Forecast before the run: 28 → 28 and `--check` 9 → 0. Measured after: exactly that**
-- **(rr15) HAD BEEN WRITTEN INTO §7.58 AND NEVER INTO THE FINDINGS REGISTER — (rr16), and following the brief's own reading instruction is what surfaced it.** `SESSION-CONTEXT.md` asserted *"findings (rr7)–(rr15) written"*; §10.6 ended at **(rr14)**. The brief said to read *"§10.6's findings list through (rr15)"* — the list stopped one short. The cost would have been silent, because the next label is (rr16) either way. **A finding is not recorded until it is in the register the next session reads.** Repaired
-- **P8 SILENT AND P8 NOT RUN ARE THE SAME OUTPUT — (rr19), (ll1) on a check rather than on a probe.** §7.58 said to *expect* P8 and to read it. Read: **P8 never appears.** It is error-only, so its silence carries no denominator. Computing the comparison independently — parsing base and head literals and diffing `revisions[-1].changed[]` against the real differs set — returns **9 of 9 matching**, which is the positive evidence the silent check cannot give
-- **THE ACCEPTANCE TEST §7.58 SPECIFIED HAS A HOLE, AND THE PAIRING CLOSES IT — (rr20).** The brief asks for the id set and the hash multiset compared **separately**, reasoning that a swapped pair moves two hashes. True — but two cards that **exchange** hashes leave count, id set **and** multiset all identical. Only the **id→hash pairing** catches it, and it was run
-- **A +69 THAT WAS REALLY +70 WAS A BOUNDARY CONVENTION, NOT GROWTH — (rr21), (rr10) paying off one session later, and the first arithmetic off it was still wrong.** §7.58 carried **both** units for the v06.49r PROJECT region because (rr10) required it. The harness, extracting **inclusive** of markers, read apparently +69/+71 — done in the head. Measured: the markers are **+70 chars / +72 bytes**, and exclusive of them the base region reads 3,992,979 / 4,013,692 against §7.58's 3,992,980 / 4,013,693 — **one newline, no growth**. With only one unit carried, the same reading would have been indistinguishable from a 20,651-byte regression. Post-run: **+1,265 in BOTH units**, so the addition is pure ASCII, which is what nine `revisions[]` entries should cost
-- **THE HARNESS WORKED FIRST TRY, WHICH IS ITSELF THE (rr14) LESSON PAYING OFF.** Playwright was not retried — K2's substitute, rebuilt to (rr14)'s spec, ran with no changes. The one addition worth keeping: `SPREADSHEET_ID` declared **empty** rather than stubbed with a fake sheet, so `clDrillSheet_`'s own guard returns null and drill state is legitimately empty instead of throwing — and a **self-test printing `clLessons_()` = 56 / 19 segment lessons** before any zero is believed
-- **§7.58's DEPLOY COUNTER FORECAST WAS EXACT, TWICE OVER.** K2's own job log (unread at the time it was written) reads `Updated to v01.73g (deployment 86) | 86/200`, so **v06.49r was 86/200** and §7.58's *"86 is the forecast and 87 is possible"* resolved to **86**. This push then read **87/200 with 113 left**. **Two consecutive pushes moved the counter exactly one step each**, which retires the v06.47r→v06.48r "83 → 85" jump as a one-off rather than a pattern
-
-### Active context
-
-- **Repo version v06.50r** · `CHANGELOG.md` **92 raw / 90 non-exempt** against a 100 trigger, counter `Sections: 92/100`; `Classroomgs.changelog.md` **45 / 43** (cap 50); `Classroomhtml.changelog.md` **15 / 14**; `Scrapergs.changelog.md` **41 / 41**; **`Profilerhtml.changelog.md` 49 / 49 — still ONE section from its own rotation, and not Classroom's file.** No rotation fired this session, so **(rr15)'s footer trap was not exercised — it is still live for whoever rotates next**
-- **GAS versions:** Classroom **v01.74g**, Scraper v02.20g, Profiler v01.39g. **Page versions:** Classroom **v01.15w** (unchanged — no page bump was needed or taken)
-- **`build-classroom-segments.py --check` reads 0 due.** Content checker **0 errors / 0 warnings at 56 lessons, 8 tracks, 192 gate cases**, module assertion **28** — all four unchanged, because the pass authored nothing. `--strict`: no structural findings, **28 stale pins** (unchanged, and **not movable by a regeneration**), **4 items due** (`landscape-cooling-2026-09` overdue **by design**). `--selftest` 13/0. `check-readme-tree.py` **10 page + 8 GAS, 0 findings** — run before committing, which is again why the one-bump GAS drift did not fire
-- **Pipeline signature for a pure-generated-content row: `P1 ×2` on the two plan documents + `P10` (9 revised against a cap of 3, expected and accepted), and NO P2, P3, P5, P7, P8 or P12.** `gateDigest` untouched at **`sha256:f568052fa2fb`**; `coveredThrough` and `lastRun` untouched. **P3 never fired**, which was the row's hard requirement
-- **PROJECT region, both units, exclusive of markers: 3,992,979 → 3,994,244 characters and 4,013,692 → 4,014,957 bytes — +1,265 in each.** Markers add +70 chars / +72 bytes if you measure inclusively
-- **Roster deck: 314 cards, unchanged in every respect** — same ids, same hashes, same pairs, 314 distinct hash values. Pools: analyst **446**, contributor/admin **970**, roster **314**. A fresh account draws **10** (`CL_ROSTER_NEW_CAP`), not 20 and not 314
-- **Deployment: fully verified and the counter MEASURED. Classroom 87/200 with 113 left.** Pages serves v01.74g / v01.15w; the run logged *All GAS deploys confirmed the merged version*; **exactly ONE `Deploy Classroom` step fired (25 s)** with the other seven ≤1 s, so the one-step forecast was exact and the §7.19 order resolved on its **two reads for the forty-first time** — no `?op=deploy` probe needed. **Scraper 165/200 with 35 left is still the tight one** and was untouched
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-- **Where the programme stands.** Done: Phases 0, 1, 2a, 2b, 3, 4 (CLOSED, 26 of 26), 5, 6; S0, K1, S1, S2 (17 of 19), S3, G6, C3, the bankability review, K2, **and the regeneration pass**. **Open: only C5** (~6 sessions — design ×1 **Fable 5.1 xhigh**, authoring ×~5 **Opus 5 xhigh**; its `~6 landscapes` precondition has been MET since S2 session 6) **and the Q plan clock** (~2026-12). Deferred: C6
-- **FIVE items are now carried and unowned, and they are the whole Opus backlog until C5's design runs:** **(rr12)** three audit assertions sitting below a `return` in `check-classroom-content.py` that have never run — the sharpest, because it may surface real failures; **(rr11)** `CL_DRILL_ACCOUNT_CAP` already binding at 3,139 against 3,000; **the roster hash under-triggering on a role change alone** (a §10.8 amendment — and this pass is the first evidence, which **never exercised the case**); **(rr17)'s one-line fix** to the health script's adjacency; and **(rr22)** — `INTEGRATED-REMEDIATION-PLAN.md`'s stranded `Developed by:` footer at line 1927 with none at end-of-file, recorded and deliberately not moved. All five are briefed in **§7.59**
-
-### Recommendation for next session
-
-- **Tell the developer to run the Fable 5.1 xhigh C5 design session — that is the single highest-value next action and it is not an Opus row.** With the regeneration pass closed, C5 and the Q clock are the only rows left; C5's `~6 landscape modules` precondition has been met since S2 session 6 (S2 stands at 17 of 19), so **one Fable design session is all that stands between the programme and five Opus authoring sessions**, and the Q clock is eleven weeks out and only reports. Meanwhile the next **Opus** run is the **carried-items row briefed in §7.59** — four items, of which **(rr12)** is the one with a real chance of finding a bug: three audit assertions in `check-classroom-content.py` sit below a `return` and have never executed, so the audit-trail half of the gate truth table is unverified while the report reads as covering it. Note that the gate-case count is **computed, not literal**, so moving 192 is legitimate there in a way it was not here — move it deliberately and decompose the new number. The other three go to the developer as decisions rather than being taken unilaterally. Neither row blocks the other, so the ordering between them is free.
-
-**To continue:** type `run the carried-items row`
 
 Developed by: LightAISolutions
