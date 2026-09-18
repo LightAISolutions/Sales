@@ -289,4 +289,8 @@ The authoring prompt is the section **"Authoring a pipeline lesson"** in `.claud
 
 Two things C2b deliberately did **not** do. It did not soften any assertion to make the current repo pass: P1–P12 are written against the contract, and this developer commit fails P1 by design (it writes seven paths outside the committer's write set) — that is the checker working, not a defect. And it did not give the committer a way to record a `STAND-DOWN` or a `BLOCKED` run anywhere in the repo; §5's silence is preserved exactly.
 
+### Planned at the C5 design gate (2026-09-18, v06.51r) — **not yet in force**
+
+`C5-SALES-SIMULATIONS-DESIGN.md` (proposed, awaiting the developer's approval) adds a third lesson `type`, `"scenario"`, **inside** the content fence — so inside this contract's write set by geography — and closes that gap by rule rather than by fence: **the committer never authors and never revises a `type: scenario` lesson** (design D6). When C5 session 1 lands it makes three edits here through the developer's own procedure, in the same commit as the assertion that enforces them: §3.1 permitted edit 1 gains "never a `type: scenario` literal", §4.4 gains "a scenario literal is never touched by the committer — a moved input on one is reported under `Needs the developer`", and §7 gains **P13 — scenario discipline** (a pipeline diff that adds a scenario or changes an existing one in any byte fails; `--selftest` 13 → 15 fixtures). No schema-version change accompanies it (design D2), so §5.1 step 4 is unaffected. Until that commit, nothing in this contract changes and no scenario exists for a run to encounter.
+
 Developed by: LightAISolutions

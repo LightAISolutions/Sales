@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.51r] — 2026-09-18 04:14:39 AM EST
+
+> **Prompt:** "Picking up from my last session, run the Fable 5.1 xhigh C5 design session — it is the only thing unblocking five Opus sessions."
+
+### Added
+
+#### `repository-information/C5-SALES-SIMULATIONS-DESIGN.md`
+
+- **THE C5 DESIGN GATE — SALES SIMULATIONS — RAN ON FABLE 5.1 xhigh, AND THE OPUS LANE IS UNBLOCKED.** `INTEGRATED-REMEDIATION-PLAN.md` §7.3 order 9's one design session, briefed by §7.59 as the single highest-value next action. Fourteen sections: what C5 is and is not (§1); the corpus measured on the day (§2 — 174 dossiers, **147 with `policyExposure[]` / 596 entries**, **1,362 relationships / 62 project-pinned** on nine projects, 19 landscapes, 19 segments / 314 memberships, nine buyer segments for the two seats); **eleven decisions, each with what it rejects and what it costs** (§3); the schema (§4); the ten-section template (§5); the stamp, gate and review-date rule (§6); the Rehearsal surface and the one server change (§7); the checker extensions (§8); a **fourteen-scenario inventory over nine buyer segments and two seats** with premises and counterparties (§9); a worked example against `aypa-power` v2 and the developers landscape (§10); done-when (§11); the developer's open calls (§12); the five-session plan (§13); findings (rr23)–(rr29) (§14)
+- **The decisions, in one line each — all PROPOSED for the developer's approval before authoring session 1.** D1 a lesson with `type: "scenario"` inside the content fence (not a prefix-only module, not a third content family, not a guidance module); D2 additive, **no `CL_LESSON_SCHEMA_VERSION` bump** (a bump would `BLOCKED` every pipeline run at contract §5.1 step 4); D3 **contributor by construction** — the stamp must carry the segment's landscape so the fold is `guidance`, no `report:` input, never analyst, never admin-only; D4 the customer-language rule for G12 — paraphrased positions the record supports, no quotations unless the dossier quotes, **the counterparty is a role, never a person**; D5 fact and analysis separate in the ledger; D6 **the unattended pipeline never authors or revises a scenario** (P13); D7 no drill items; D8 never a track member or study-next target; D9 ten fixed section ids with three `quiz` beats; D10 fourteen scenarios, unit = buyer segment × seat × mode; D11 all five sessions on Opus 5 xhigh including session 1's machinery
+- **Nothing built.** No lesson, track, module, dossier, guide, report, checker, page or `.gs` touched; `Classroom.gs` and `Classroom.html` unchanged, so no page or GAS bump and **zero `Deploy` steps** forecast for this push
+
+### Changed
+
+#### `repository-information/CLASSROOM-CURRICULUM-PLAN.md`
+
+- **§11 added — the simulation layer's ledger**: the fourteen scenario rows (id · seat · segment · mode · proposed counterparty · session · built), the machinery line, the flip rule, the done-when in short; **§10.1** one sentence naming the rehearsal as the third cross-cutting feed (designed, not built); **§10.6** findings **(rr23)–(rr29)** — the unit is not "per segment" (nine of nineteen segments are buyers), `IMPROVEMENT-PLAN.md` §5's admin-only premise inverted under measurement and its counts are stale by more than double, the schema-bump assumption versus the schema's own rule 2 and the `BLOCKED` pre-flight that decided it, `clStudyNext_` walks tracks only while two developer files say registry-then-tracks, `clRenderIndex` already partitions by `type`, project-pinned relationships concentrate 45 of 62 on three projects, the seat split is explicit in six of nineteen landscapes; **§9** one revision-log row
+
+#### `repository-information/INTEGRATED-REMEDIATION-PLAN.md`
+
+- **§6 C5 row → Design Done — v06.51r; authoring OPEN, 0 of 14**; **§7.3 order 9** rewritten to say the design has run and what it decided; **§7.60 written in both halves** — the paste-in brief for C5 session 1 (the machinery through three checkers, the one-line drill exclusion, the Rehearsal library, the contract/schema/rules amendments, and §11 rows 1–2: `aypa-power` objection and `vantage` objection), with the measured baselines, the mutation acceptance test, the deploy counter (87/200 → forecast 88) and the changelog arithmetic. §7.59's carried-items row stays open and is not blocked by C5. The stranded `Developed by:` footer at line 1927 **(rr22)** was left exactly as found — the developer's convention call
+
+#### `repository-information/CLASSROOM-SCHEMA.md` · `repository-information/CLASSROOM-COMMITTER-CONTRACT.md`
+
+- A **"planned, not built"** blockquote above the content contract pointing at the design's §4 (the third `type`, the five-field block, no bump — the `type` row widens when session 1 lands); a **"Planned at the C5 design gate — not yet in force"** note at the end of the contract naming the three edits session 1 makes (§3.1 item 1, §4.4, §7 P13) and confirming §5.1 step 4 is unaffected
+
+#### `README.md`
+
+- Tree entry for `C5-SALES-SIMULATIONS-DESIGN.md` (alphabetical, before `CHANGELOG.md`); the `CLASSROOM-CURRICULUM-PLAN.md` description now names §11; `Last updated:` and repo version
+- **Verification, all measured before and after with nothing moving:** `check-classroom-content.py` **0 errors / 0 warnings at 56 lessons / 8 tracks / 192 gate cases**, module assertion 28; `check-classroom-curriculum.py --strict` no structural findings, 28 stale pins, 4 review items due; `check-classroom-pipeline.py --selftest` 13 / 0 and `--base origin/main` P1 on the plan documents only — **no P3**, `gateDigest` untouched; `build-classroom-segments.py --check` **0 due**; `check-readme-tree.py` 10 page + 8 GAS displays, 0 findings; `tail -1` on every touched file. **No changelog rotation** — `CHANGELOG.md` **93 raw / 90 non-exempt** on 2026-09-18 EST against a 100 trigger, counter `Sections: 93/100`; no page or GAS changelog touched
 
 ## [v06.50r] — 2026-09-18 02:13:44 AM EST
 
