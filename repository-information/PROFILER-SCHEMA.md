@@ -375,6 +375,16 @@ git log -1 --format=%cs -- live-site-pages/profiler-data/profiler-segments.json
 
 `%cs` is the committer date as `YYYY-MM-DD`, which is exactly the pin format. Read it on the base revision the run started from (`origin/main`), not on a dirty working tree.
 
+**Amendment (2026-09-19, developer decision — (rr69)): a commit-date move is a staleness SIGNAL, not a staleness VERDICT.** The commit date above says *when the file last moved*; it does not say *whether the move could have invalidated anything*. These registries move on almost every `profiler <Company>` run — a new dossier registers new concepts — so under the bare rule every lesson pinning `concepts:profiler-concepts` went stale every few days, and the count grew without any lesson's content being in question. Measured 2026-09-19: **55 stale pins, 37 of them this one signal**.
+
+So `scripts/check-classroom-curriculum.py` now qualifies the signal before it reports a pin stale. Given a pin date, it reads the registry as it stood at that date (`git show <last commit on or before the pin>:<path>`) and compares it entry-by-entry with the registry today, keyed on `slug`:
+
+- **Every pinned entry still present and byte-identical → ADDITIONS ONLY.** Not stale, and reported on its own line rather than in the count. A lesson's `{{term}}` spans resolve against the entries it drew on; vocabulary the lesson never used cannot change a word it says.
+- **Any entry removed, or any entry's `term`/`def`/`aliases` rewritten → STALE**, exactly as before. A definition the lesson leaned on may now read differently, and only a re-read can settle it.
+- **Anything unprovable → STALE.** A blob that will not parse, an unresolvable commit, or a shallow clone with no history at the pin all fall through to stale. The check can only ever *remove* a finding it has positively disproved, never add one.
+
+This changes no pin and writes no date — **G2 is untouched**, and re-pinning still requires a session that actually re-read the source. It changes only which movements are worth a developer's attention. The same 2026-09-19 measurement after the change: **18 stale, 37 additions-only** — and five `concepts` pins stayed stale, correctly, because the `leakage-inductance` alias edit that day was a modification rather than an addition.
+
 Why the file date rather than a per-entry `updated`:
 
 - **A per-entry date cannot serve the concepts layer at all.** `concepts:profiler-concepts` is a *fixed* ref — the whole registry is one identity, the way `graph:profiler-graph` is. There is no entry to date. Any per-entry scheme would still need a file-level answer here, so it could never be the single mechanism

@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.65r] — 2026-09-19 04:39:04 PM EST
+
+> **Prompt:** "I approve updating the prompt of the \"Industry Guidance quarterly review\" Routine (trig_01CrhxzfBV6uKQNKpUXLLMSZ) in place, changing the prompt field only, to exactly the 34-line amended text in the §12 annex of C5-SALES-SIMULATIONS-DESIGN.md. Do not change the cron, the name, or the model, and do not delete and recreate the Routine. Read the prompt back afterwards and confirm it matches the annex character for character. On the second question: (rr56) is taken — re-cut the eleven earlier scenarios' answer positions in its own separate session. (rr59), the roster hash change, is not taken. […] Change what counts as stale […] Refresh the 15 content pins. If this is the only open item left from the overall Profiler & Classroom update plan, then give me a prompt to paste into a new session."
+
+### Changed
+
+- **The quarterly guidance review Routine is AMENDED IN PLACE, and design §12 item 2 — the programme's last open action item — is CLOSED.** The developer's approval arrived as their own sentence in session rather than in a brief's `[DEVELOPER: …]` slot, which satisfies the C3 session 3 rule on its own terms: the rule requires explicit approval *in the session that makes the change*, and never required a particular vessel for it. `update_trigger` was called once on `trig_01CrhxzfBV6uKQNKpUXLLMSZ` with **`prompt` only**, carrying the 34-line block extracted programmatically from the `C5-SALES-SIMULATIONS-DESIGN.md` §12 annex (lines 307–340; **7,917 characters with the trailing newline, 7,916 as the JSON string** — reproducing (rr68)'s one-character convention gap exactly, which is itself evidence the extraction was faithful). Read back through an independent `list_triggers`: **cron `0 13 15 1,4,7,10 *`, name, model, `next_run_at` 2026-10-15T13:00:20Z, enabled, and never-fired all unchanged**; `updated_at` moved 2026-09-16 → 2026-09-19T20:30:23Z and is the only field besides the prompt that moved. Nothing was deleted, recreated, re-scheduled or re-modelled. **Step 3a is now live**: when the review revises a `landscape-*` module it will read the scenarios stamped on it off `Classroom.gs` and report them under `Needs a developer session — scenarios on revised landscapes` — and revise none of them, as design D6 and pipeline assertion P13 require.
+- **The staleness rule is amended: a commit-date move is a signal, not a verdict — (rr69).** `check-classroom-curriculum.py` reported **55 stale pins**, of which **37 were a single signal**: `concepts:profiler-concepts` plus four `project:` refs moving because new dossiers had registered new entries. The C2b commit-date rule cannot distinguish an addition from a rewrite, so every `profiler <Company>` run re-staled the hand-authored corpus wholesale and the count measured how fast the corpus grew rather than what needed a developer's attention. The checker now qualifies the signal: it reads each registry as it stood at the pin (`git show <last commit on or before the pin>:<path>`) and compares entry-by-entry on `slug`. Every pinned entry still present and byte-identical → **ADDITIONS ONLY**, printed on its own line and excluded from the count; any entry removed or rewritten → stale exactly as before; **anything unprovable → stale**, so the check can only ever remove a finding it has positively disproved, never add one. Measured after: **18 stale, 37 additions-only**. Five `concepts` pins correctly stayed stale — the same day's `leakage-inductance` alias removal was a modification, and the check caught it unprompted.
+- **`profiler-concepts.json` / `profiler-projects.json` pins are unchanged and G2 is untouched.** No pin was written. Re-pinning still requires a session that actually re-read the source; this changes only which movements are reported as needing one.
+
+### Added
+
+- **`registry_additive_only()` and `_registry_entries()`** in `scripts/check-classroom-curriculum.py`, with the reasoning in the docstring: a lesson's `{{term}}` spans resolve against the entries it pinned, so vocabulary the lesson never used cannot change a word it says.
+
+### Notes
+
+- **Developer decisions taken this push:** **(rr56) TAKEN** — the answer-position re-cut of the eleven earlier scenarios, to run as its own session (the strong move sits at option index 1 in 31 of 42 beats and no checker can see it). **(rr59) NOT TAKEN** — the roster hash stays `clDrillHash_(basis)`, `CLASSROOM-CURRICULUM-PLAN.md` §10.8's amendment stays PROPOSED, and all 314 id→hash pairs are untouched. **(rr22)** — the stranded footer — is left as found, unchanged and still the developer's convention call.
+- **Records written:** `PROFILER-SCHEMA.md` ("Registry revision signals" — the amendment and its three outcomes), `C5-SALES-SIMULATIONS-DESIGN.md` §12 item 2 (APPLIED/CLOSED with the read-back evidence), `CLASSROOM-CURRICULUM-PLAN.md` §10.6 **(rr69)** and the register advanced to **(rr70)**, `INTEGRATED-REMEDIATION-PLAN.md` closing note (fourth revision — no open action item remains), and `.claude/rules/industry-guidance.md` (the Freshness-discipline sentence that (rr68) correctly refused to write while the Routine lacked the prompt — it now has it).
+- **Checker results:** `check-classroom-curriculum.py --strict` **no structural findings**, 18 stale / 37 additions-only, 0 of 19 segments due, coverage 14 of 14; `check-classroom-content.py` **70 lessons / 8 tracks / 220 gate cases, 0 / 0**; `check-classroom-pipeline.py --selftest` **15 fixtures / 0 failures**; `check-profiler-reports.py` 0 / 0; `sync-profiler-registry.py --check` 0 of 177; `check-readme-tree.py` 0 findings. **No `Classroom.gs` change in this push**, so no GAS version bump and no page bump — the content corpus is byte-identical.
+- **CHANGELOG arithmetic:** 107 raw / 98 non-exempt (nine sections carry today's EST date); `Classroomgs.changelog.md` untouched at 46. Neither rotates.
 
 ## [v06.64r] — 2026-09-19 03:52:07 PM EST
 

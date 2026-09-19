@@ -74,6 +74,67 @@ def git_date(base, rel):
     return ""
 
 
+def _registry_entries(text):
+    """slug → entry for an undated registry blob, or None if it will not parse.
+    Both undated registries are {schemaVersion, <name>: [{slug, …}]}."""
+    try:
+        obj = json.loads(text)
+    except (ValueError, TypeError):
+        return None
+    if not isinstance(obj, dict):
+        return None
+    for key, val in obj.items():
+        if key != "schemaVersion" and isinstance(val, list):
+            out = {}
+            for e in val:
+                if isinstance(e, dict) and e.get("slug"):
+                    out[e["slug"]] = json.dumps(e, sort_keys=True)
+            return out
+    return None
+
+
+def registry_additive_only(base, rel, pin, cache):
+    """True when every entry the registry carried at `pin` is still present today
+    and unchanged — so the only movement since the pin is NEW entries.
+
+    Why this is not staleness (rr69).  A lesson's pin on an undated registry is a
+    claim about the entries it actually drew on: the {{term}} spans it renders
+    resolve against those entries.  Adding vocabulary the lesson never used cannot
+    change a word the lesson says, so a pure addition leaves every such claim true.
+    Removing an entry or rewriting one CAN — a definition the lesson leaned on may
+    now read differently — so either is real staleness and this returns False.
+
+    Conservative by construction: any failure to prove additivity (a blob that
+    will not parse, a commit that cannot be resolved, a shallow clone with no
+    history at the pin) returns False and the pin stays stale.  The check can only
+    ever remove a finding it has positively disproved.
+    """
+    key = (rel, pin)
+    if key in cache:
+        return cache[key]
+    cache[key] = False
+    now = _registry_entries((ROOT / rel).read_text(encoding="utf-8")) if (ROOT / rel).exists() else None
+    if now is None:
+        return False
+    try:
+        rev = subprocess.run(["git", "log", "-1", "--format=%H",
+                              "--before=%sT23:59:59" % pin, base, "--", rel],
+                             cwd=ROOT, capture_output=True, text=True, timeout=30)
+        if rev.returncode != 0 or not rev.stdout.strip():
+            return False
+        blob = subprocess.run(["git", "show", "%s:%s" % (rev.stdout.strip(), rel)],
+                              cwd=ROOT, capture_output=True, text=True, timeout=30)
+        if blob.returncode != 0:
+            return False
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    then = _registry_entries(blob.stdout)
+    if then is None:
+        return False
+    cache[key] = all(slug in now and now[slug] == body for slug, body in then.items())
+    return cache[key]
+
+
 def read_json(path):
     try:
         return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -306,6 +367,7 @@ def main():
     # 3 · Stale pins
     print("\n3 · Stale pins (live date later than the pin)")
     cache, stale_n = {}, 0
+    add_cache, additive = {}, []
     for l in lesson_order:
         if l["id"].startswith("segment-"):
             continue
@@ -317,11 +379,26 @@ def main():
                     continue
                 print("  %-36s %-44s live date unknown" % (l["id"], ref))
             elif pin and live > pin:
+                # (rr69) An undated registry that has only GAINED entries since
+                # the pin cannot have invalidated this lesson — see
+                # registry_additive_only().  Reported below, not counted here.
+                kind = ref.split(":")[0]
+                if kind in UNDATED_LAYERS and registry_additive_only(
+                        args.base, UNDATED_LAYERS[kind], pin, add_cache):
+                    additive.append((l["id"], ref, pin, live))
+                    continue
                 stale_n += 1
                 print("  %-36s %-44s pin %s → live %s" % (l["id"], ref, pin, live))
     hand = [l for l in lesson_order if not l["id"].startswith("segment-")]
     print("  %d stale pin(s) across %d hand-authored lesson(s) — segment lessons are NOT "
           "counted here" % (stale_n, len(hand)))
+    if additive:
+        refs = sorted({a[1] for a in additive})
+        print("  %d pin(s) on %d registry/registries moved by ADDITIONS ONLY — not stale, "
+              "nothing to do (rr69): %s" % (len(additive), len(refs), ", ".join(refs)))
+        print("     every entry these lessons pinned is still present and unchanged; "
+              "the registry only gained new ones. Re-pinning them would assert a "
+              "re-read that did not happen (G2).")
     # (rr17): this total and the generator's due count below are DISJOINT
     # numbers four lines apart, and two consecutive briefs read them as one.
     # The label was already right; the adjacency misled. Both now carry a
