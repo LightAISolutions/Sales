@@ -5243,6 +5243,45 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "dg-matrix",
+      "name": "DG Matrix",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The low-voltage-first SST challenger — Raleigh–Durham multi-port solid-state transformer (Interport Flex 200/400 kVA six-port skid shipping pre-certification, Cell-LV sidecar, Cell-MV 12–34.5 kV skid dated 2028+), USD 60M Series A led by Engine Ventures with ABB and Mitsubishi Heavy Industries, Infineon SiC; self-declared NVIDIA MGX member absent from NVIDIA's rosters; no named energised customer.",
+      "hq": "Morrisville, North Carolina, United States (Raleigh–Durham)",
+      "status": "active",
+      "lastUpdated": "2026-09-19",
+      "aka": [
+        "DG Matrix Inc.",
+        "DG Matrix, Inc.",
+        "DGMatrix",
+        "Interport",
+        "Interport SST",
+        "Interport 360",
+        "Power Router",
+        "Power SideCar",
+        "Power Bridge"
+      ],
+      "domains": [
+        "dgmatrix.com",
+        "pub-603db131244d4898a25e35ad020f3bf9.r2.dev"
+      ],
+      "srcTotal": 84,
+      "srcFirstPct": 44,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        }
+      ]
     }
   ]
 }

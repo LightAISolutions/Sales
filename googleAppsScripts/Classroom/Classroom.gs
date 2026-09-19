@@ -1,4 +1,4 @@
-var VERSION = "v01.81g";
+var VERSION = "v01.82g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -9030,6 +9030,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    },
    {
     "kind": "public",
+    "ref": "profile:dg-matrix",
+    "date": "2026-09-19",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:eaton",
     "date": "2026-09-05",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
@@ -9145,14 +9151,14 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "21",
+   "k": "22",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -9162,12 +9168,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "4",
+   "k": "5",
    "v": "challengers",
    "sub": "contesting that set; 8 adjacent"
   },
   {
-   "k": "105",
+   "k": "116",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -9329,6 +9335,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "amperesand",
      "challenger",
      "ecosystemRole: the platform challenger at the hall edge — a 3.3 kV SiC medium-voltage solid-state transformer (5–10 MW modular) for 800 V DC AI factories, sold against the transformer-rectifier units and the hedged incumbents; NTU lineage and a Reno line, no shipped fleet, absent from NVIDIA's rosters"
+    ],
+    [
+     "**DG Matrix**",
+     "dg-matrix",
+     "challenger",
+     "ecosystemRole: the low-voltage-first challenger in the hall-edge power-conversion layer — a multi-port solid-state transformer that today replaces the transformer-rectifier-UPS chain at 480 V (Interport Flex, shipping pre-certification) and is positioned against Heron Power, Amperesand and the hedged incumbents for the 34.5 kV-to-800 V DC block once its Cell-MV (2028+) exists; absent from NVIDIA's rosters, no certified unit"
     ],
     [
      "**Flex**",
@@ -9593,7 +9605,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "—",
      "—",
      "—",
-     "Huawei Digital Power, Amperesand, Heron Power, LS-ES"
+     "Huawei Digital Power, Amperesand, DG Matrix, Heron Power, LS-ES"
     ]
    ]
   },
@@ -9647,6 +9659,14 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     [
      "**Amperesand**",
      "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**DG Matrix**",
      "competitor",
      "active",
      "—",
@@ -9727,6 +9747,86 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     [
      "**Amperesand**",
      "**Tesla**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**ABB**",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Amperesand**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Heron Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Infineon**",
+     "supplier",
+     "active",
+     "—",
+     "Interport and Interport Cell-LV"
+    ],
+    [
+     "**DG Matrix**",
+     "**NVIDIA**",
+     "other",
+     "announced",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Schneider Electric**",
      "other",
      "historical",
      "—",
@@ -10581,6 +10681,22 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "—"
     ],
     [
+     "**DG Matrix**",
+     "FlexGen",
+     "partner",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "Vertiv",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**Delta Electronics**",
      "Vertiv",
      "competitor",
@@ -10755,25 +10871,9 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "active",
      "—",
      "—"
-    ],
-    [
-     "**Huawei Digital Power**",
-     "BYD",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Huawei Digital Power**",
-     "CRRC Zhuzhou",
-     "competitor",
-     "active",
-     "—",
-     "—"
     ]
    ],
-   "note": "Curated edges among members: 105 · to the neighbouring segments: 113 (the first 40 shown, by company) · derived-only mentions (no curated typing): 36 among members, 20 to the neighbours."
+   "note": "Curated edges among members: 116 · to the neighbouring segments: 115 (the first 40 shown, by company) · derived-only mentions (no curated typing): 41 among members, 22 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -10788,74 +10888,74 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-16 — Daniel Doimo (MGE UPS Systems co-founder, ex-Schneider Electric EVP Power, partner at Series A investor Helios) joins the Executive Advisory Board as the company 'accelerates pilot deployments … with hyperscale, neocloud and colocation customers'",
+     "sub": "DG Matrix · leadership"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-10 — USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board",
      "sub": "Heron Power · financial"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-08 — Hiring for a Head of Service to stand up field service, commissioning, spares and warranty from scratch, and a Director of Product Compliance naming UL 2877 and UL 1741 as the governing standards",
      "sub": "Amperesand · corporate"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-04 — Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
      "sub": "Sungrow · regulatory"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-09-04 — Flex agrees to acquire the US conversion manufacturer EPC Power for $4.4bn",
      "sub": "Power Electronics · market"
     },
     {
-     "x": 5,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-03 — Consensus for the 10 or 11 November Q4 FY2026 print stands at €4,704m of revenue and a 23.2% Segment Result margin",
      "sub": "Infineon · corporate"
     },
     {
-     "x": 6,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
      "sub": "Flex · ma"
     },
     {
-     "x": 7,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-29 — H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
      "sub": "Sungrow · financial"
     },
     {
-     "x": 8,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 9,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-27 — Board approves a $150 million share-repurchase authorization with no expiration, replacing the prior program (8-K, event date August 25, 2026)",
      "sub": "Vicor · corporate"
     },
     {
-     "x": 10,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-27 — Headquarters-base project deferred from September 2026 to December 2027",
      "sub": "Megmeet · corporate"
     },
     {
-     "x": 11,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: revenue +29.68%, headline profit +45.21%, ex-non-recurring profit −16.13%",
      "sub": "Megmeet · financial"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-26 — US Executive Order 14420 declares a national emergency over the bulk-power system, reaching foreign-made grid equipment at 69 kV and above including storage; Sungrow shares fall more than 11% the following day",
-     "sub": "Sungrow · policy"
     }
    ]
   },
@@ -10969,10 +11069,22 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "Power Electronics"
     ],
     [
+     "FEOC / domestic-content and Buy-American expectations for AI-campus procurement",
+     "proposed",
+     "—",
+     "DG Matrix"
+    ],
+    [
      "FEOC restrictions",
      "in-effect",
      "—",
      "LS-ES, Tesla"
+    ],
+    [
+     "FERC large-load interconnection orders and Texas SB 6",
+     "in-effect",
+     "2025-06",
+     "DG Matrix"
     ],
     [
      "ITC/45X",
@@ -11011,6 +11123,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "Infineon"
     ],
     [
+     "Section 232 tariffs on transformers and grid equipment",
+     "in-effect",
+     "2025-08-18",
+     "DG Matrix"
+    ],
+    [
      "Section 232 tariffs on transformers and power-conversion equipment",
      "in-effect",
      "2025-08-18",
@@ -11039,6 +11157,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "in-effect",
      "—",
      "Infineon"
+    ],
+    [
+     "UL 1741 / UL 2877 / IEEE 1547 certification for power-conversion equipment",
+     "proposed",
+     "—",
+     "DG Matrix"
     ],
     [
      "UL 2877 / UL 1741 / IEEE 1547 certification for medium-voltage conversion equipment",
@@ -11116,7 +11240,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "ps": [
     "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* · *One Big Box or Many Small Ones* · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* · *Faults, Grounding, and the Interlock at 800 Volts*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-power-conversion-and-rack-power-silicon-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Amperesand, Flex, Heron Power, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
+    "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Amperesand, DG Matrix, Flex, Heron Power, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -11216,6 +11340,18 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "note": "regenerated: graph:profiler-graph 2026-09-13→2026-09-19; profile:amperesand added@2026-09-19",
    "changed": [
     "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; profile:dg-matrix added@2026-09-19",
+   "changed": [
     "read-next",
     "the-fence",
     "the-numbers",
@@ -13011,6 +13147,12 @@ function clLessonSegmentInHallPower_() {
    },
    {
     "kind": "public",
+    "ref": "profile:dg-matrix",
+    "date": "2026-09-19",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:eaton",
     "date": "2026-09-05",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
@@ -13156,14 +13298,14 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "28",
+   "k": "29",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -13175,10 +13317,10 @@ function clLessonSegmentInHallPower_() {
   {
    "k": "7",
    "v": "challengers",
-   "sub": "contesting that set; 11 adjacent"
+   "sub": "contesting that set; 12 adjacent"
   },
   {
-   "k": "101",
+   "k": "110",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -13227,7 +13369,7 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Assurance (8 edges) · Cells and chemistry (7 edges) · Storage integrators and containers (7 edges) · Software and optimization (6 edges) · Power conversion and rack-power silicon (5 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · EPC and construction (1 edge) · Insurance and risk transfer (1 edge)",
+     "Assurance (8 edges) · Cells and chemistry (7 edges) · Storage integrators and containers (7 edges) · Power conversion and rack-power silicon (6 edges) · Software and optimization (6 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · EPC and construction (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -13406,6 +13548,12 @@ function clLessonSegmentInHallPower_() {
      "delta-electronics",
      "adjacent",
      "productsAndServices › Data-center infrastructure (InfraSuite, Ultron DPM UPS, UZR3 lithium cabinets) beside the rack-power franchise"
+    ],
+    [
+     "**DG Matrix**",
+     "dg-matrix",
+     "adjacent",
+     "productsAndServices › Interport Cell-LV Series: the three-port sidecar 'located next to the IT load' puts galvanic isolation, rack-proximate storage and sub-millisecond pulse-load buffering in the white space — the 'built-in UPS functionality' sold against the UPS; conversion is the primary business"
     ],
     [
      "**FlexGen**",
@@ -13646,7 +13794,7 @@ function clLessonSegmentInHallPower_() {
      "—",
      "—",
      "—",
-     "Huawei Digital Power, Mitsubishi Electric, Panasonic, ON.energy, Amperesand, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin"
+     "Huawei Digital Power, Mitsubishi Electric, Panasonic, ON.energy, Amperesand, DG Matrix, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin"
     ]
    ]
   },
@@ -13700,6 +13848,14 @@ function clLessonSegmentInHallPower_() {
     [
      "**Amperesand**",
      "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**DG Matrix**",
      "competitor",
      "active",
      "—",
@@ -13792,6 +13948,70 @@ function clLessonSegmentInHallPower_() {
      "active",
      "—",
      "Data-center standby generator sets"
+    ],
+    [
+     "**DG Matrix**",
+     "**ABB**",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Amperesand**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**FlexGen**",
+     "partner",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Heron Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Schneider Electric**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Vertiv**",
+     "other",
+     "historical",
+     "—",
+     "—"
     ],
     [
      "**Delta Electronics**",
@@ -14562,6 +14782,22 @@ function clLessonSegmentInHallPower_() {
      "Behind-the-meter prime power"
     ],
     [
+     "**DG Matrix**",
+     "GE Vernova",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "Hitachi Energy",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Delta Electronics**",
      "GE Vernova",
      "competitor",
@@ -14776,25 +15012,9 @@ function clLessonSegmentInHallPower_() {
      "active",
      "—",
      "Medium-voltage switchgear"
-    ],
-    [
-     "**Powell Industries**",
-     "**Schneider Electric**",
-     "competitor",
-     "active",
-     "—",
-     "Medium-voltage switchgear and low-voltage breaker elements"
-    ],
-    [
-     "**Prevalon**",
-     "Mitsubishi Power",
-     "other",
-     "historical",
-     "—",
-     "Battery energy storage carve-out"
     ]
    ],
-   "note": "Curated edges among members: 101 · to the neighbouring segments: 50 (the first 40 shown, by company) · derived-only mentions (no curated typing): 14 among members, 18 to the neighbours."
+   "note": "Curated edges among members: 110 · to the neighbouring segments: 52 (the first 40 shown, by company) · derived-only mentions (no curated typing): 17 among members, 19 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -14809,74 +15029,74 @@ function clLessonSegmentInHallPower_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-16 — Daniel Doimo (MGE UPS Systems co-founder, ex-Schneider Electric EVP Power, partner at Series A investor Helios) joins the Executive Advisory Board as the company 'accelerates pilot deployments … with hyperscale, neocloud and colocation customers'",
+     "sub": "DG Matrix · leadership"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-10 — USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board",
      "sub": "Heron Power · financial"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-08 — Hiring for a Head of Service to stand up field service, commissioning, spares and warranty from scratch, and a Director of Product Compliance naming UL 2877 and UL 1741 as the governing standards",
      "sub": "Amperesand · corporate"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
      "sub": "Flex · ma"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
      "sub": "Rolls-Royce Power Systems · product-launch"
     },
     {
-     "x": 5,
+     "x": 6,
      "lane": "record",
      "label": "2026-08-28 — New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant",
      "sub": "Piller · regulatory"
     },
     {
-     "x": 6,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
      "sub": "Caterpillar · capacity"
     },
     {
-     "x": 7,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 8,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-27 — Rehlko joined the Wisconsin Data Center Coalition as an energy-resilience member, stating a track record of 14-plus GW of deployed data-center capacity, more than 90 percent of it custom-engineered",
      "sub": "Rehlko · corporate"
     },
     {
-     "x": 9,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-26 — Website relaunch: leadership roster now Dow (CEO), Joyner (SVP Engineering), Reznik (CFO), Bouchet (Chief of Staff); headline claims moderated from 'up to 10x' faster time to power and '>80%' footprint reduction to '5×' and '50%'; 'deploying … to Fortune 100 customers in 2026'",
      "sub": "Amperesand · corporate"
     },
     {
-     "x": 10,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-25 — Volkswagen-nominated director Olaf Korzinovski resigns; Jörg Fenstermann nominated to replace him, pending an extraordinary general meeting",
      "sub": "Gotion High-Tech · leadership"
     },
     {
-     "x": 11,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-25 — H1 2026 results — revenue RMB 27,775.5m (+43.22%), net profit attributable RMB 1,386.0m (+278.05%), but profit excluding non-recurring items of only RMB 106.9m",
      "sub": "Gotion High-Tech · financial"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-25 — Board authorises management to sell listed equity holdings opportunistically, up to 15% of net assets attributable to the parent — roughly RMB 4.37bn — over twelve months",
-     "sub": "Gotion High-Tech · corporate"
     }
    ]
   },
@@ -15044,6 +15264,12 @@ function clLessonSegmentInHallPower_() {
      "Huawei Digital Power"
     ],
     [
+     "FEOC / domestic-content and Buy-American expectations for AI-campus procurement",
+     "proposed",
+     "—",
+     "DG Matrix"
+    ],
+    [
      "FEOC / NDAA Section 889 / UFLPA",
      "proposed",
      "—",
@@ -15060,6 +15286,12 @@ function clLessonSegmentInHallPower_() {
      "in-effect",
      "2026-01",
      "Prevalon"
+    ],
+    [
+     "FERC large-load interconnection orders and Texas SB 6",
+     "in-effect",
+     "2025-06",
+     "DG Matrix"
     ],
     [
      "German grid code VDE-AR-N 4110",
@@ -15158,6 +15390,12 @@ function clLessonSegmentInHallPower_() {
      "Mitsubishi Electric"
     ],
     [
+     "Section 232 tariffs on transformers and grid equipment",
+     "in-effect",
+     "2025-08-18",
+     "DG Matrix"
+    ],
+    [
      "Section 232 tariffs on transformers and power-conversion equipment",
      "in-effect",
      "2025-08-18",
@@ -15210,6 +15448,12 @@ function clLessonSegmentInHallPower_() {
      "proposed",
      "2026",
      "Caterpillar"
+    ],
+    [
+     "UL 1741 / UL 2877 / IEEE 1547 certification for power-conversion equipment",
+     "proposed",
+     "—",
+     "DG Matrix"
     ],
     [
      "UL 2877 / UL 1741 / IEEE 1547 certification for medium-voltage conversion equipment",
@@ -15329,7 +15573,7 @@ function clLessonSegmentInHallPower_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *The UPS Room: Static, Rotary, and the Battery Under Each* · *The Ten-Second Race* · *N+1, 2N, and Six Nines* · *Where BESS Plugs In: The Three Sockets*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-in-hall-power-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Amperesand, Caterpillar, Cummins, Delta Electronics, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
+    "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Amperesand, Caterpillar, Cummins, Delta Electronics, DG Matrix, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -15423,6 +15667,19 @@ function clLessonSegmentInHallPower_() {
    "note": "regenerated: graph:profiler-graph 2026-09-13→2026-09-19; profile:amperesand added@2026-09-19",
    "changed": [
     "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; profile:dg-matrix added@2026-09-19",
+   "changed": [
     "read-next",
     "the-fence",
     "the-numbers",

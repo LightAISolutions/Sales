@@ -100,8 +100,8 @@
     {
       "date": "2026-08-11",
       "category": "market",
-      "headline": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named; NVIDIA's own October 2025 roster names ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv at the facility tier, the August 2026 post names no vendors, and DG Matrix and Delta appear only in Power Electronics News' GTC 2026 list (corrected 2026-09-19 with the DG Matrix dossier: no NVIDIA-published roster names DG Matrix either)",
-      "read": "Third consecutive NVIDIA publication without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+      "headline": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters",
+      "read": "Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
       "source": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
     },
     {
@@ -197,7 +197,7 @@
     }
   ],
   "strategyRead": [
-    "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: NVIDIA's October 2025 roster names ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv at the facility tier and omits Amperesand, the August 2026 execution-paper post names no vendors, and Power Electronics News' GTC 2026 list (the only document naming DG Matrix and Delta as SST providers, citing 'Nvidia's list') also omits it. Basis: the NVIDIA developer and corporate blogs read in full and the trade-press GTC coverage (corrected 2026-09-19: an earlier version of this judgment placed DG Matrix on NVIDIA's own rosters; no NVIDIA-published page names it); the CEO's 'five of seven OCP working groups' is self-reported and the specification's contributor list could not be read. A hyperscaler pilot can proceed without a roster line, but the roster is what a buyer's design-build firm reads first (analysis).",
+    "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: three consecutive rosters (October 2025, GTC 2026, August 2026) name Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge and omit Amperesand. Basis: the NVIDIA developer blog and execution-paper coverage; the CEO's 'five of seven OCP working groups' is self-reported and the specification's contributor list could not be read. A hyperscaler pilot can proceed without a roster line, but the roster is what a buyer's design-build firm reads first (analysis).",
     "(High confidence) We assess that no delivery commitment has been met on schedule: the PSA proof of value was 'slated for mid-2025' (October 2024), first commercial units 'early 2026' (November 2025), 'Q2 2026' for both the port and a hyperscaler (Nevada milestone slide), and 'underway' with no energisation confirmed by either party by September 2026. Basis: PSA's and the company's releases, the GOED packet and PCIM reporting. The 30 MW 2026 target is therefore back-loaded into the final quarter.",
     "(Moderate confidence) We assess the platform argument is the company's real differentiator against Heron Power and the reason it entered through ports rather than data centers: a 200 kW cell proven at 1.5 MW on the Singapore grid and cycled daily at megawatt charging loads accumulates the fleet reliability record that a 99.999% uptime claim requires and that no data-center SST vendor yet has. Basis: NTU's account of Generation 0–2 testing, the PSA engagement, and SemiAnalysis's caveat that SSTs 'lack field reliability data at datacenter scale'. The cost is a cell rated for the worst duty cycle of three markets rather than optimised for one (analysis).",
     "(Moderate confidence) We assess the 3.3 kV Wolfspeed design-in is both the engineering edge and the single-supplier risk: it roughly halves the series cell count of a 1.7 kV design and buys overshoot margin, and it ties the front end to one part (IBB020A33GM4) from a supplier that emerged from Chapter 11 in 2025 whose 200 mm capacity mgrid calls the sector's 'single biggest external constraint'. The company's stated second sources (Infineon, STMicroelectronics, Microchip) are unconfirmed by those suppliers.",
@@ -210,7 +210,7 @@
       "slug": "nvidia",
       "type": "other",
       "note": "Absent from every NVIDIA 800 V DC partner roster (October 2025, GTC 2026, August 2026) while building for NVIDIA's 800 V DC architecture; the CEO says the company sits on five of seven OCP working groups.",
-      "context": "NVIDIA's 13 October 2025 developer blog listed nine facility-tier power providers and its rack-power and silicon partners; Power Electronics News' GTC 2026 coverage listed 'Delta Electronics, DG Matrix, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton … Heron Power' as SST providers citing 'Nvidia's list' — a trade-press list, not an NVIDIA page, and the only document naming DG Matrix — and the August 2026 execution-paper post names no vendors at all. Amperesand appears on none, and the OCP LVDC SST specification's contributor list could not be read. Its product is nevertheless specified against that architecture ('designed for global 800V DC AI factory architectures'; twin 800 V outputs), and Wolfspeed's case study says AI-training load profiles 'jointly released by NVIDIA, Open AI and Microsoft' were used in testing — a paper reference, not a partnership.",
+      "context": "NVIDIA's 13 October 2025 developer blog listed nine facility-tier power providers and its rack-power and silicon partners; Power Electronics News' GTC 2026 coverage and the August 2026 execution paper again named Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge. Amperesand appears on none, and the OCP LVDC SST specification's contributor list could not be read. Its product is nevertheless specified against that architecture ('designed for global 800V DC AI factory architectures'; twin 800 V outputs), and Wolfspeed's case study says AI-training load profiles 'jointly released by NVIDIA, Open AI and Microsoft' were used in testing — a paper reference, not a partnership.",
       "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
       "status": "historical",
       "since": "2025-10"
@@ -223,15 +223,6 @@
       "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
       "status": "active",
       "since": "2025-11"
-    },
-    {
-      "slug": "dg-matrix",
-      "type": "competitor",
-      "note": "The third venture-backed SST startup in every survey; DG Matrix ships a six-port 480 V low-voltage skid (Interport Flex) and dates its 12–34.5 kV multi-port unit to 2028+, while Amperesand's platform is medium-voltage from the first unit.",
-      "context": "TechCrunch's February 2026 survey frames the field as 'DG Matrix/ABB' versus 'Heron/a16z' versus Amperesand 'incubated by Temasek's early stage fund'; SemiAnalysis (May 2026) lists DG Matrix as the 'LV-input SST in place of the conventional rectifier-plus-PSU stack' at 'claims up to 98.5%' beside Amperesand's 'greater than 98.5%'. DG Matrix has the earlier shipping product (pre-certification 200/400 kVA units), ABB and Mitsubishi Heavy Industries as investors and an Infineon SiC agreement; neither company appears on any NVIDIA-published roster and neither has a certified, energised data-center unit as of September 2026. The two compete for the same first hyperscaler pilot from opposite ends — Amperesand from medium voltage down, DG Matrix from the low-voltage bus up (analysis).",
-      "source": "https://www.techcrunch.com/2026/02/20/why-investors-are-going-gaga-over-solid-state-transformers/",
-      "status": "active",
-      "since": "2025-08"
     },
     {
       "slug": "liteon",
@@ -982,5 +973,5 @@
     }
   ],
   "lastUpdated": "2026-09-19",
-  "profileVersion": 2
+  "profileVersion": 1
 }

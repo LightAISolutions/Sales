@@ -2533,6 +2533,21 @@
     "A datasheet or product page: per-unit MW, input kV range, DC outputs and lead time currently rest on PCIM 2026 trade-show reporting; reconcile the 10×/80% versus 5×/50% and 15+/20/20–30-year lifetime claims if the company restates them",
     "Chesterton check: do not import Tracxn/CB Insights valuation or revenue estimates as company figures; the 'Fortune 100 customers in 2026' and '500 MW in five years' lines are company statements no customer or filing corroborates"
    ]
+  },
+  {
+   "slug": "dg-matrix",
+   "cadence": "quarterly",
+   "source": "Private, pre-revenue; no earnings clock. Public record is dgmatrix.com (press releases, Insights posts and gated whitepapers whose PDFs are public on the company's r2.dev asset store), Business Wire releases read via finance.yahoo.com syndication (businesswire.com returns 403 from this environment), the two Interport Flex spec sheets, SEC Form D metadata via efts.sec.gov (CIK 0002059108; sec.gov blocked at v06.62r) and trade press (Power Electronics News, SemiAnalysis, Canary Media, TechCrunch, mgrid.org). Legal name DG Matrix Inc. (Delaware); HQ Morrisville, NC; former product brand Power Router. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-19",
+   "watch": [
+    "UL 1741 listing (or any NRTL certification) for the Interport Flex 200/400 — 'targeted for the end of Q2 2026' and unannounced as of 2026-09-19; the company ships 'pre-certification units'",
+    "A named, dated, energised customer site with unit counts (Exowatt Miami, PowerSecure Durham, a hyperscaler or neocloud pilot) confirmed by either party — none exists on the record",
+    "Interport Cell-LV sidecar ('1+ MW sidecar in development (Q3 2026)' per PEN) delivery, and any Cell-MV datasheet, kV rating or cell count — the MV multi-port SST is '2028+' on the CFO's March 2026 deck",
+    "Any nvidia.com page, GTC 2027 roster or OCP LVDC SST specification contributor list naming DG Matrix — the MGX membership and 'Nvidia's list' placement rest on the company's releases and one Power Electronics News article",
+    "Morrisville factory: 'first production build', capacity (1,000 units/yr vs 400 MW work cell vs 10 GW by Q2 2027 — four incompatible statements), any NC/Wake County incentive filing with jobs and capex; status of the reported Lahore, Pakistan factory and any domestic-content statement",
+    "Series B or strategic manufacturing partnership (ABB, Mitsubishi Heavy Industries, Infineon) — ~USD 80M equity + USD 25M debt against an MV product two years out; Form D amounts if sec.gov becomes reachable",
+    "Chesterton check: do not import Heatmap 2026-04-10 (rounds transposed with Heron Power — DG Matrix's is the USD 60M Series A); quote the 400 kVA datasheet's 96–97% peak efficiency beside the 'up to 98.5%' platform claim; MHI's stake is Mitsubishi Heavy Industries, Ltd. — not linked to the mitsubishi-power slug unless a source names that entity"
+   ]
   }
  ]
 }

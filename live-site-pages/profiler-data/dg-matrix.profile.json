@@ -1,0 +1,1242 @@
+{
+  "schemaVersion": 7,
+  "slug": "dg-matrix",
+  "name": "DG Matrix Inc. (Delaware corporation; SEC CIK 0002059108; North Carolina registration formed 10 November 2022 per state-record mirror)",
+  "shortName": "DG Matrix",
+  "categories": [
+    "supplier"
+  ],
+  "website": "https://www.dgmatrix.com",
+  "headquarters": "951 Aviation Parkway, Suite 1000, Morrisville, North Carolina, United States (Raleigh–Durham); SEC Form D business address Cary, NC; earlier releases datelined Raleigh",
+  "founded": 2022,
+  "employees": "'250+ engineers' (company About page, 2026); 'about 400 engineers today' (CEO, MCJ podcast, May 2026); 185 total employees per a PitchBook snippet (aggregator); engineering and an operating factory in Lahore, Pakistan reported by engage.vc (November 2025) — not on the current company site",
+  "ownership": {
+    "type": "private",
+    "ticker": ""
+  },
+  "summary": "BOTTOM LINE UP FRONT: DG Matrix is the third venture-backed solid-state-transformer startup at the AI hall edge and the only one shipping a product — but the product shipping is a six-port low-voltage skid (Interport Flex, 200 and 400 kVA, 480 V AC in, 800 V DC out, 96–97% peak efficiency on its own datasheet), not the 12–34.5 kV medium-voltage unit that competes with Heron Power and Amperesand, which the company's own roadmap dates to '2028+'. As of 19 September 2026 it has USD 60M of Series A capital (February 2026, Engine Ventures; ABB and Mitsubishi Heavy Industries on the cap table), an Infineon silicon-carbide supply agreement, a self-declared NVIDIA MGX ecosystem membership that no NVIDIA-published roster corroborates, 'pre-certification units … shipping' against a UL target that passed at the end of Q2 2026 without an announced listing, and no named, energised commercial customer site on the public record. BACKGROUND. Founded 2022 in Raleigh, North Carolina by CEO Haroon Inam (ex-CTO of Smart Wires) and CTO Dr. Subhashish Bhattacharya (NC State; FREEDM Systems Center solid-state-transformer research since 2008), DG Matrix began as a multi-port EV fast-charging company (Natron sodium-ion partnership, December 2023; FlexGen EMS, August 2024), branded its unit the 'Power Router' and re-pointed it at data centers through 2025, then relaunched as 'Interport' with the Series A in February 2026. Three product tiers: Interport Flex (six-port LV skid, 'commercially deployed'; paralleled into 'Interport 360'), Interport Cell-LV (three-port sidecar for GPU pulse loads, ±400 / 800 V DC), and Interport Cell-MV (three-port medium-voltage SST skid, 'up to 15 MW UPS power', 2028+). Funding per company releases: USD 20M seed (March 2025, Clean Energy Ventures; ABB minority stake via ABB Electrification Ventures), USD 60M Series A (18 February 2026), 'over $100 million' total, which Power Electronics News breaks down as USD 80M equity, USD 15M venture debt and USD 10M loans. Partners: PowerSecure (Southern Company) as nationwide channel, Exowatt, Ampace, Skeleton Technologies, InfraPartners, Satterfield & Pontikes. Collection gap: no datasheet exists for either Cell Series, no topology, cell count or switching frequency is disclosed, no factory capacity or opening date is published, the Form D amounts cannot be read (sec.gov blocked), and every shipped-unit statement is the company's own.",
+  "ecosystemRole": "We assess DG Matrix as the low-voltage-first challenger in the hall-edge power-conversion layer — a multi-port converter that today replaces the transformer-rectifier-UPS chain at 480 V behind the meter and in the gray space, sold against conventional microgrid and UPS packages now and positioned against Heron Power, Amperesand and the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider, Delta) for the 34.5 kV-to-800 V DC block once its Cell-MV exists. Its adjacency to in-hall power is the Cell-LV sidecar, which puts isolation, storage and pulse-load buffering next to the rack — the 'built-in UPS functionality' the company sells against the UPS. It is not a battery, switchgear or rack power-shelf vendor.",
+  "productsAndServices": [
+    {
+      "name": "Interport Cell-MV Series — medium-voltage multi-port solid-state transformer skid (formerly 'Power Bridge MV SST'; 'Interport CM')",
+      "category": "Hall-edge power conversion (medium-voltage solid-state transformer)",
+      "description": "The company's medium-voltage product: 'a three-port, cell-based, medium-voltage solid-state transformer that integrates utility power, onsite generation, and energy storage directly onto a DC backbone' (Grid-to-Rack whitepaper, February 2026). It 'accepts a single MV input port, consistent with utility and MV-generator interconnection practices, while simultaneously integrating battery energy storage and low-voltage AC sources through its additional ports' (Facility Power Fabric whitepaper); the data-center page describes the 'MV – Skid Solution' as 'Interport Cell Series that will transform medium voltage AC (12 – 34.5 kV) to high voltage DC', and the Skeleton release calls it 'the Interport CM medium-voltage SST skid, which converts 12 34.5 kV AC directly to high-voltage DC'. The December 2025 whitepaper rates it 'up to 15 MW UPS power with up to 2x surge', handling 'MV AC (up to 34.5 kV) and DC (300-1,500 V) voltage ranges in single device', for 'gray space or outdoor deployment'. Platform-level claims apply: 'single-stage, multi-port power conversion architecture', 'up to 98.5%' conversion efficiency with Infineon silicon-carbide MOSFETs (March 2026 release), 'galvanic isolation at each port', and ports 'reprogrammable' from ±400 VDC to 'up to 1,500 VDC'. No datasheet exists for the Cell-MV; the CFO's March 2026 roadmap deck places the multi-port medium-voltage SST at '2028+'.",
+      "highlights": [
+        "This is the product that competes with Heron Link and Amperesand's SST at the 34.5 kV-to-800 V DC hall edge — and it is the one DG Matrix has not yet shipped: the December 2025 whitepaper tags only the Flex Series 'Commercially deployed', the March 2026 Infineon release says there is 'now … a clear pathway to multi-megawatt medium voltage solid-state transformers', and the CFO's own deck dates the multi-port MV SST to '2028+' (company documents; the gap between the '15 MW' marketing rating and the roadmap is the dossier's central finding).",
+        "The 'end goal is achieving 34.5kV AC to 800V DC power conversion' (CEO, June 2026 Insights post); the whitepapers describe the Cell-MV feeding a DC backbone from which the Cell-LV sidecar regulates ±400 VDC or 800 VDC at the rack.",
+        "No first-party statement of dimensions, weight, cell count, cooling, standards targets or lead time exists for the Cell-MV; the only medium-voltage figures on the record are the 12–34.5 kV input range, the '15 MW UPS power' rating and the '2x surge' claim (collection gap).",
+        "The medium-voltage lineage is the CTO's: SemiAnalysis, as quoted by the company, 'traces the company's origin to NC State including its FREEDM Systems Center, where the CTO of DG Matrix has been researching solid-state transformers and silicon-carbide transistors since 2008'."
+      ],
+      "positioning": "Sits at the medium-voltage-to-800 V DC hall-edge block that NVIDIA's August 2026 execution paper builds first from transformer-rectifier units and reserves for 34.5 kV-direct SSTs 'toward 2029' — which is consistent with DG Matrix's own '2028+' date for the multi-port MV SST. The named peer set at this layer is Heron Power (34.5 kV, 4.2 MW single unit, mass production late 2027, on NVIDIA's facility-tier roster) and Amperesand (3.3 kV SiC, 200 kW modules to 4–10 MW, Reno line), plus the hedged incumbents (GE Vernova, ABB, Eaton via Resilient Power, Siemens, Hitachi Energy, Schneider) and Delta, which has a live SST at a Chinese operator. DG Matrix's differentiators, as the record supports them: a multi-port topology (one MV port plus battery and LV AC ports in the same unit, versus the single-input, single-output units of Heron and Amperesand), a shipping low-voltage product family that accumulates field hours before the MV unit exists, ABB and Mitsubishi Heavy Industries on the cap table, an NVIDIA MGX ecosystem listing, and Infineon as named SiC supplier. Its handicap is the same as its rivals' — no certified, energised medium-voltage unit — plus a later MV date than either (analysis).",
+      "soldThrough": "Direct to hyperscale, neocloud and colocation operators and their design-build firms (Satterfield & Pontikes 'priority access', May 2026; InfraPartners RapidNode integration, May 2026), with PowerSecure (Southern Company) as 'nationwide energy partner' for channels, deployment and service (December 2025). No EPC, OEM-merchant or distributor pricing model is published.",
+      "targetSegments": [
+        "AI factories on NVIDIA MGX / 800 V DC racks — hyperscalers, neoclouds and colocation operators",
+        "Behind-the-meter power blocks combining utility interconnection, on-site generation and storage (Exowatt, PowerSecure)",
+        "Gray-space and outdoor skid deployments at data-center campuses"
+      ],
+      "roadmap": "'2028+: Medium voltage … Multi-port' SST (CFO deck, March 2026); 'clear pathway to multi-megawatt medium voltage solid-state transformers' after the 200 kW and 400 kW Interport launch (Infineon release, March 2026); 'UL certification targeted for the end of Q2 2026' for the Interport platform (June 2026 MGX release — no completion announced as of 19 September 2026)."
+    },
+    {
+      "name": "Interport Cell-LV Series — three-port low-voltage sidecar for GPU pulse loads (formerly 'Power SideCar LV SST'; 'Interport CL' / 'IPT-CL')",
+      "category": "In-hall power conversion and pulse-load buffering (white space)",
+      "description": "'A three-port, low-voltage, cell-based platform that converts incoming power and delivers regulated ±400 VDC or 800-VDC output while providing localized energy storage, capacitance, and fast transient support for white-space loads' (Grid-to-Rack whitepaper, February 2026). It 'supports AC input, a dedicated capacitive-module input for AI pulse loading, and regulated ±400-VDC or 800-VDC output, all within a galvanically isolated' unit (Facility Power Fabric whitepaper); the data-center page's 'SideCar Solution' is 'Interport Cell Series designed to be located next to the IT load to address pulse-load mitigation with galvanic isolation'. Rated 'up to 1.6 MW UPS power with up to 2x surge' with 'sub-millisecond surge response at the load interface' (Stranded Power whitepaper). The May 2026 MGX release adds 'integrated liquid cooling, and rack-proximate battery storage for dynamic GPU pulse-load response', and the Skeleton Technologies collaboration (July 2026) integrates GrapheneCBU800/BBU800 supercapacitor storage 'directly in the white space'. The Infineon release names the Cell-LV as one of the two systems using Infineon SiC MOSFETs.",
+      "highlights": [
+        "The sidecar is DG Matrix's answer to the rack-power question NVIDIA's 800 V DC papers pose — pulse-load smoothing next to the IT load — and it is the product tied most directly to the NVIDIA relationship: 'a yearlong program of testing energy storage solutions for dynamic GPU load response in collaboration with NVIDIA' (May 2026 release).",
+        "Status: the December 2025 whitepaper carries no 'commercially deployed' tag for the Cell-LV; the May 2026 release speaks of 'the commercial launch of its Interport and Interport Cell products'; no datasheet, dimensions, cooling detail or standards target is published (collection gap).",
+        "Programmable output — 'data centers … initially operate at ±400 VDC and reprogram the port to up to 1,500 VDC in the future, supporting with NVIDIA 800 VDC power architecture and Open Compute Project's Mount Diablo guidelines' (December 2025 whitepaper)."
+      ],
+      "positioning": "Competes with the DC-side storage and power-shelf layer that Delta, LITEON, Megmeet and Vicor own on NVIDIA's rosters and with the sidecar/BBU designs those vendors showed at OCP 2025, and with DC-coupled battery approaches such as Dimaag's; unlike a power shelf it sits between the facility bus and the rack with its own isolation and storage port. No competitor is named by the company (analysis).",
+      "soldThrough": "Direct, as part of an Interport 360 'grid-to-rack' block with the Flex and Cell-MV; storage partners (Ampace UL-certified BESS, Skeleton supercapacitors, Musashi, Noon Energy, Exowatt) supply the storage side.",
+      "targetSegments": [
+        "GPU white space at 800 V DC (NVIDIA MGX racks; Vera Rubin class)",
+        "Retrofits of AC halls to ±400 VDC / 800 VDC distribution"
+      ],
+      "roadmap": "'2026+: Low voltage multi-port SST' (CFO deck, March 2026); Skeleton supercapacitor integration announced July 2026 with no delivery date."
+    },
+    {
+      "name": "Interport Flex Series — six-port low-voltage multi-port SST skid, 200 kVA and 400 kVA (formerly 'Power Router'), paralleled into 'Interport 360'",
+      "category": "Behind-the-meter power routing, microgrid and UPS-class conversion (low voltage)",
+      "description": "The shipping product. 'A modular, six-port-capable power routing platform designed to aggregate and distribute AC and DC energy sources within a unified AC/DC architecture. Each unit provides a configurable set of power ports that can be defined at deployment' (Grid-to-Rack whitepaper). Two datasheets exist: the 400 kVA (Rev C) — DC port 300–850 VDC (800 V nominal) at 530 ADC, AC port 400–480 VAC three-phase at 520 A, 50/60 Hz, peak efficiency 96–97%, six ports (standard three AC and three DC), 8,818 lb / 4,000 kg, 51 × 69 × 122 in, liquid cooled (sealed), NEMA 3R, 'Designed for Compliance to* UL 1741' — and the 200 kVA (Rev B) — 350–800 VDC at 250 ADC, 400–480 VAC at 260 A, 96% peak efficiency, six ports (two AC and four DC), 4,409 lb / 2,000 kg, 'Designed for Compliance to* UL 1741, UL 2202, UL 2231'. 'Each port is galvanically isolated and independently controlled, enabling fault-tolerant operation and port-level redundancy. Additional systems can be paralleled to achieve N+1 or greater redundancy' (Behind-the-Meter whitepaper); the December 2025 whitepaper rates a Flex system at 'up to 1.2 MW UPS power' and tags it 'Commercially deployed'. Paralleled Flex skids with the company's energy-management software form 'Interport 360', 'a software-configurable power architecture that supports native AC and DC distribution, 800-VDC readiness, integrated behind-the-meter energy, and AI pulse-load management' (InfraPartners whitepaper, May 2026). The 2025 CEC filing lists the platform's grid functions: 'Native support for black start, islanding, UPS, grid-forming operation, Volt-VAR control, and vehicle-to-grid (V2G) integration'.",
+      "highlights": [
+        "The datasheet efficiency is 96–97% peak, not the '98.5%' of the platform claim — the only rating table on the record is two to three points below the headline figure, and the datasheets carry '*Certification information can be provided upon request' rather than a listing.",
+        "Six software-defined ports are the multi-port idea made concrete: a 400 kVA unit ships with three AC and three DC ports as standard, and 'Field-reconfigurable AC and DC ports allow migration toward hybrid or fully DC-native architectures'.",
+        "This is the unit behind every deployment statement on the record — 'commercial units shipping' (Darcy, March 2026), 'DG Matrix has installed a working pilot at Exowatt' (June 2026), 'Pre-certification units are shipping now' (June 2026) — and the unit Exowatt selected as 'a preferred platform for power conversion' (February 2026).",
+        "Ratings and enclosure are datasheet facts: 100 dBA at 1 m (400 kVA) and 75 dBA (200 kVA); −25 to 40 °C operating (the 200 kVA 'is designed to operate at –40 °C; however, for certification purposes, the specified operating temperature range is limited to –25 °C'); 'The footprint does not include the AC and DC switchgear'.",
+        "Grid functions per the CEC filing: 'Six bi-directional, software-defined ports that are remotely programmable'; 'Interconnection and commissioning in 1–7 days'; 'currently proven in behind-the-meter applications'."
+      ],
+      "positioning": "In the behind-the-meter block it replaces the low-voltage transformer, switchgear, UPS, rectifiers and inverters of a microgrid or fleet depot — the company's '10-20 electrical systems' / 'up to 15 discrete electrical components into four' claim — and competes with conventional PCS-plus-transformer microgrid packages from the PowerSecure/Schneider/Eaton class and with grid-forming PCS vendors. In the data hall it is the gray-space, outdoor skid that InfraPartners' RapidNode prefabricated blocks pair with. It is not a medium-voltage product: it connects at 400–480 VAC, so a site still needs the utility transformer the Cell-MV is meant to remove (analysis).",
+      "soldThrough": "Direct sales ('sales@dgmatrix.com'; 'Talk to sales'), with PowerSecure as nationwide channel and service partner, general contractors (Satterfield & Pontikes) and modular-data-center integrators (InfraPartners) as design-in partners; FlexGen's HybridOS as EMS partner for fleet charging (August 2024).",
+      "targetSegments": [
+        "Data-center gray space and outdoor skids (paralleled to megawatt blocks; 'Interport 360')",
+        "Behind-the-meter microgrids for enterprise and industrial sites (PowerSecure channel)",
+        "Fleet-electrification depots and EV charging hubs (with the Interport Dispenser)",
+        "Utility and virtual-power-plant edge nodes (Duke Energy award; CEC front-of-meter proposal)"
+      ],
+      "roadmap": "'commercial launch of its 200 kW and 400 kW Interport units' (Infineon release, March 2026); UL certification 'targeted for the end of Q2 2026' (June 2026); Morrisville manufacturing 'from first unit to hundreds per year' (job postings, September 2026)."
+    },
+    {
+      "name": "Interport Dispenser and fleet-charging configuration (Natron sodium-ion and FlexGen partnerships; the company's 2023–2024 origin market)",
+      "category": "EV fleet charging (DC fast-charging dispensers on the multi-port platform)",
+      "description": "'A simple dispenser that works with Interport out of the box' (fleet page), paired with the Flex Series in an 'EV Charging + Microgrid Solution' with '>1-kW dynamic power sharing across ports' and support for 'evolving high-power charging standards (CCS, MCS, DC architectures)'. The company began here: in December 2023 it described itself as 'the global leader in high-power, high-efficiency multi-port electric vehicle (EV) chargers', announced Natron Energy sodium-ion 'Blue Pack' batteries in its fast chargers with 'up to 10-X reduction in product footprint and volume' and said it was 'accepting orders now for delivery in 2024'; FlexGen's HybridOS was added as EMS for EV fleet charging in August 2024. The 2025 CEC filing lists 'Modular and scalable AC or DC Fast Charging with 400 kW capacity' and pilots 'already … demonstrated in behind-the-meter microgrids and EV infrastructure pilots'. The 200 kVA Flex datasheet's UL 2202 and UL 2231 targets mark it as the charging variant.",
+      "highlights": [
+        "No dispenser specification, connector type, power rating or customer is published (collection gap); the fleet market has been de-emphasised on the company's channels since the February 2026 relaunch put data centers first.",
+        "The charging heritage matters technically: a fleet depot is where a multi-port unit's dynamic power sharing between ports was first exercised, and where its early field hours were accumulated (analysis)."
+      ],
+      "positioning": "Competes with the conventional depot chain (transformer, switchgear, per-charger rectifiers) and with integrated charging-plus-storage vendors; Amperesand pursues the same market at medium voltage for ports (analysis).",
+      "soldThrough": "Direct and through fleet-charging developers (anonymised 'Major Fleet Charging Hub Developer' testimonial); FlexGen EMS partnership.",
+      "targetSegments": [
+        "Fleet depots (school bus, delivery, autonomous fleets)",
+        "Charging hub developers and utilities' fleet programmes"
+      ],
+      "roadmap": "None published since 2024."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-16",
+      "category": "leadership",
+      "headline": "Daniel Doimo (MGE UPS Systems co-founder, ex-Schneider Electric EVP Power, partner at Series A investor Helios) joins the Executive Advisory Board as the company 'accelerates pilot deployments … with hyperscale, neocloud and colocation customers'",
+      "read": "Seven months after the Series A the company's own wording is still 'pilot deployments', and the newest hire advises on 'manufacturing scale-up' — the ramp is ahead, not behind (analysis).",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-appoints-daniel-doimo-mge-ups-systems-co-founder-and-former-schneider-electric-executive-vice-president-to-executive-advisory-board/1233"
+    },
+    {
+      "date": "2026-08-11",
+      "category": "market",
+      "headline": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and note the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; DG Matrix is not named, and NVIDIA's own SST phase 'targets 2029'",
+      "read": "NVIDIA's public SST timing (2029) is closer to DG Matrix's '2028+' Cell-MV date than to any startup's 2026–2027 promise — the medium-voltage race is later than the funding rounds imply.",
+      "source": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+    },
+    {
+      "date": "2026-07-24",
+      "category": "partnership",
+      "headline": "Skeleton Technologies supercapacitor collaboration across all three tiers — first public naming of the 'Interport CM medium-voltage SST skid, which converts 12 34.5 kV AC directly to high-voltage DC', the 'Interport CL sidecar' and the paralleled Flex 'Interport 360'",
+      "read": "The clearest company statement of the product ladder; the MV skid is described in the present tense while the roadmap deck dates it to 2028+.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-and-skeleton-technologies-join-forces-to-deliver-resilient-fast-response-power-for-800-vdc-ai-data-centers/1228"
+    },
+    {
+      "date": "2026-07-23",
+      "category": "leadership",
+      "headline": "Deepak Thakkar, Ph.D. (Intel, Flex, Boyd, ECI, Neos Partners) appointed Chief Commercial Officer; release restates 'up to 15 discrete electrical components into four', TCO 'one-half to two-thirds' and deployment 'approximately six months'",
+      "read": "A contract-manufacturing and data-center sales profile in the top commercial seat signals the hyperscale channel is the priority over the fleet and microgrid markets the company came from (analysis).",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-appoints-data-center-infrastructure-veteran-deepak-thakkar-ph-d-as-chief-commercial-officer/1227"
+    },
+    {
+      "date": "2026-06-17",
+      "category": "partnership",
+      "headline": "'DG Matrix Joins the NVIDIA MGX Ecosystem' as an SST supplier for 800 V DC — 'more than two years of direct technical collaboration with NVIDIA'; 'Pre-certification units are shipping now, with UL certification targeted for the end of Q2 2026'; same day Anthony Wanger named first Executive Chairman and Peter Gross joins the advisory board",
+      "read": "The membership is the company's statement; no nvidia.com page, blog or GTC press-kit item names DG Matrix as of September 2026, and the UL date in the same paragraph has passed without an announced listing.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-joins-the-nvidia-mgx-ecosystem-to-power-the-next-era-of-accelerated-computing/1224"
+    },
+    {
+      "date": "2026-05-28",
+      "category": "product-launch",
+      "headline": "'Interport SST for the NVIDIA MGX Ecosystem' reveal (shown at GTC 2026 in March): 'natively supports 800 VDC today', ports 'up to 1,500 VDC', 'up to 98.5 percent conversion efficiency, integrated liquid cooling, and rack-proximate battery storage', 'a yearlong program of testing energy storage solutions for dynamic GPU load response in collaboration with NVIDIA'",
+      "read": "The NVIDIA collaboration on the record is storage-response testing and rack-interface validation, not a roster listing — a real technical relationship short of the badge the company implies (analysis).",
+      "source": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-reveals-interport-sst-120000871.html"
+    },
+    {
+      "date": "2026-05-27",
+      "category": "partnership",
+      "headline": "InfraPartners RapidNode prefabricated data center integrated with 'Interport 360'; joint whitepaper cites 'a recent 50 MW client deployment' with 5–10% power-infrastructure capex reduction and time-to-revenue '3–6 months faster'",
+      "read": "The only deployment-scale figure on the record is a modelled client case in a partner whitepaper, not a commissioned site.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/infrapartners-and-dg-matrix-launch-end-to-end-ai-infrastructure-platform-to-address-power-and-deployment-constraints/1222"
+    },
+    {
+      "date": "2026-05-26",
+      "category": "market",
+      "headline": "SemiAnalysis '800VDC Revolution' places DG Matrix as the 'LV-input SST in place of the conventional rectifier-plus-PSU stack', 'ABB-backed', 'shipping pre-certification units and targeting UL certification by end of Q2 2026', 'claims up to 98.5%'; Power Electronics News the same day describes Interport 360 as eight paralleled 400 kVA Flex units (3.2 MVA, 'scalable to 10 MVA') and relays a '10 GW capacity planned online by Q2 2027'",
+      "read": "The independent analyst's word is 'claims', and its classification — low-voltage input — is the distinction that matters against Heron and Amperesand.",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part"
+    },
+    {
+      "date": "2026-05-07",
+      "category": "partnership",
+      "headline": "Satterfield & Pontikes (ENR Top 400 general contractor) gets 'priority access' to Interport for Texas data-center builds, '6 to 9 months' ahead of conventional transformer procurement",
+      "read": "A general contractor as channel is how a startup without a hyperscaler contract reaches the build schedule; the release names no project.",
+      "source": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-satterfield-pontikes-partner-110000307.html"
+    },
+    {
+      "date": "2026-04-14",
+      "category": "market",
+      "headline": "Power Electronics News: CTO says 'DG Matrix's current design does not plan to integrate 10 kV devices'; first-generation SSTs run '98–98.5% efficiency—not yet matching conventional transformers' >99%' and cost 'double the price of a normal transformer'",
+      "read": "The medium-voltage unit will be built from lower-voltage SiC in series — the cascaded-cell route its rivals also take — and the efficiency parity claim against iron does not hold on the CTO's own numbers.",
+      "source": "https://www.powerelectronicsnews.com/solid-state-transformers-path-from-concept-to-common/"
+    },
+    {
+      "date": "2026-04-10",
+      "category": "market",
+      "headline": "Heatmap transformer-startups feature transposes the rounds — 'DG Matrix raised a $140 million Series B round and Heron Power raised a $60 million Series A' — with no correction; CEO quoted on a 'multi-billion dollar pipeline'",
+      "read": "Chesterton check for every future refresh: DG Matrix's round is the USD 60M Series A; Heatmap's own February piece and TechCrunch have it right.",
+      "source": "https://heatmap.news/climate-tech/transformers-startups-ayr-dg-matrix-heron-power"
+    },
+    {
+      "date": "2026-03-24",
+      "category": "partnership",
+      "headline": "Infineon named 'a key silicon carbide supplier': latest-generation SiC MOSFETs in the Interport and Interport Cell-LV systems, 'platform efficiencies of up to 98.5%', 'commercial launch of its 200 kW and 400 kW Interport units. Now there's a clear pathway to multi-megawatt medium voltage solid-state transformers'",
+      "read": "The silicon partner's own release dates the medium-voltage product as a 'pathway' after the LV launch — consistent with the CFO's 2028+ slide.",
+      "source": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-selects-infineon-key-110000334.html"
+    },
+    {
+      "date": "2026-03-19",
+      "category": "market",
+      "headline": "Power Electronics News' GTC 2026 roundup lists 'Delta Electronics, DG Matrix, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton (through Resilient Power Systems), Heron Power' as SST providers citing 'Nvidia's list', and quotes the CTO that NVIDIA is 'incorporating it as the reference architecture for 800V DC'",
+      "read": "The only document placing DG Matrix on an NVIDIA roster is this article; every NVIDIA-published list (May 2025, October 2025, August 2026) omits it — treat the roster claim as trade press, not NVIDIA.",
+      "source": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/"
+    },
+    {
+      "date": "2026-03-12",
+      "category": "leadership",
+      "headline": "Rainer Stiller, former Vertiv CMO (2021–2024) and two decades at Schneider Electric/APC, appointed Chief Marketing Officer",
+      "read": "The relaunch team is drawn from the UPS incumbents the product is meant to displace.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/solid-state-transformer-pioneer-dg-matrix-appoints-former-vertiv-cmo-rainer-stiller-as-chief-marketing-officer/1207"
+    },
+    {
+      "date": "2026-03-09",
+      "category": "financial",
+      "headline": "CEO to Power Electronics News: 'we are currently the only solid-state transformer company shipping a commercial product today'; funding 'over $100 million, including $80 million in equity raised, $15 million in venture debt, and $10 million in loans and debt'",
+      "read": "The only breakdown of the '>$100M' total on the record — a fifth of it is debt — and the sole-shipper claim is the CEO's, repeated by no customer.",
+      "source": "https://www.powerelectronicsnews.com/solid-state-transformers-in-the-spotlight/"
+    },
+    {
+      "date": "2026-02-18",
+      "category": "financial",
+      "headline": "USD 60M oversubscribed Series A led by Engine Ventures with Helios Climate Ventures, Mitsubishi Heavy Industries, Fine Structure Ventures, MCJ and Sabancı Climate Ventures; 'All existing investors committed new capital in this round, including ABB'; total 'over $100 million'; 'multiple gigawatt-class datacenters in the pipeline'; TechCrunch: 'Rolling out initial units June 2026', pipeline '~90% data centers'",
+      "read": "The round that rebranded Power Router as Interport and dated the first production units to June 2026 — a date no source has confirmed met.",
+      "source": "https://finance.yahoo.com/news/dg-matrix-closes-60-million-131700216.html"
+    },
+    {
+      "date": "2026-02-11",
+      "category": "customer",
+      "headline": "Exowatt selects the Power Router 'as a preferred platform for power conversion for its modular energy architectures'; a Miami pilot is the first installed data-center-adjacent site the CEO names",
+      "read": "The first named platform customer is a behind-the-meter generation startup, not a hyperscaler — the multi-port unit's natural first buyer is whoever has several sources to blend (analysis).",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-and-exowatt-form-strategic-partnership-to-deliver-gigawatt-scale-dispatchable-power-for-the-ai-era/1187"
+    },
+    {
+      "date": "2026-01-20",
+      "category": "partnership",
+      "headline": "PowerSecure (Southern Company subsidiary, 'over 3 gigawatts of microgrid capacity') becomes 'nationwide energy partner' — 'immediate customer channels, deployment capacity, and service coverage for our Power Router platform'; a PowerSecure site in Durham is a test location",
+      "read": "A utility-owned microgrid integrator as channel and service arm is the most bankable commercial relationship on the record.",
+      "source": "https://finance.yahoo.com/news/dg-matrix-announces-strategic-collaboration-140000074.html"
+    },
+    {
+      "date": "2025-12-15",
+      "category": "partnership",
+      "headline": "Ampace partnership: 'industry's first UL-certified, grid-active Battery Energy Storage System (BESS) integrated with a multi-port solid-state transformer (SST) platform' — Ampace 'selected DG Matrix after a comprehensive evaluation of competing solutions'",
+      "read": "The UL certification in the headline is the battery's, not the SST's; the partner's endorsement is the strongest third-party product judgment on the record.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/ampace-and-dg-matrix-announce-strategic-partnership-to-deliver-first-ul-certified-grid-active-bess-integrated-with-multi-port-solid-state-transformer-architecture-for-ai-data-centers/1151"
+    },
+    {
+      "date": "2025-12-04",
+      "category": "product-launch",
+      "headline": "Power Electronics News founder interview publishes the fullest technical description on record: 'Merged two-stage design' eliminating the DC-link capacitor, switching at 'tens of kilohertz', four 200 kW DC ports plus two 200 kW AC ports, '380-480V AC inputs; future plans extend to 13.8-34.5 kV', patented vortex liquid cooling with '4°C delta' across transistors, '200 kW and 400 kW systems currently shipping; 1+ MW sidecar in development (Q3 2026)'",
+      "read": "The nearest thing to a design disclosure is an interview; the sidecar date it gives (Q3 2026) is the next one to check.",
+      "source": "https://www.powerelectronicsnews.com/a-look-into-the-industrys-first-commercially-available-multiport-sst/"
+    },
+    {
+      "date": "2025-08-18",
+      "category": "market",
+      "headline": "Canary Media feature: testing 'with ABB, Duke Energy, and PowerSecure'; North Carolina factory 'opening late 2025' with capacity 'up to 1,000 units annually'; Power Router 'can cost half as much as using the standard mix of multiple technologies'",
+      "read": "The factory date slipped: job postings in September 2026 still describe a Morrisville plant before its 'first production build' (analysis).",
+      "source": "https://www.canarymedia.com/articles/distributed-energy-resources/solid-state-transformers-dgmatrix-resilient-power"
+    },
+    {
+      "date": "2025-07-31",
+      "category": "regulatory",
+      "headline": "California Energy Commission EPIC docket comment by DG Matrix: the Power Router is 'currently proven in behind-the-meter applications' with 'Six bi-directional, software-defined ports', '96–98% system efficiency', 'Interconnection and commissioning in 1–7 days'; asks for front-of-meter demonstration funding",
+      "read": "The company's own regulatory filing scopes what is proven — behind-the-meter, low-voltage — more modestly than its marketing.",
+      "source": "https://efiling.energy.ca.gov/GetDocument.aspx?tn=265174&DocumentContentId=102113"
+    },
+    {
+      "date": "2025-03-11",
+      "category": "financial",
+      "headline": "USD 20M oversubscribed seed led by Clean Energy Ventures with ABB, Cerberus Ventures, Chevron Technology Ventures and Piedmont Capital ('nearly $30 million' total); ABB's own release: 'a minority stake … through ABB Electrification Ventures'; 'paid pilot deployments in Q1 2025, with a full commercial launch anticipated in late Q2 2025'; Vlatko Vlatkovic (ex-CTO GE Power Conversion) to the board",
+      "read": "ABB's investment is documented from ABB's side, which is rare for this corpus; the commercial-launch date it announced slipped by at least a year.",
+      "source": "https://new.abb.com/news/detail/124139/abb-invests-in-dg-matrix-to-advance-ai-data-center-power-optimization"
+    }
+  ],
+  "strategyRead": [
+    "(High confidence) We assess that DG Matrix's shipping product is a low-voltage converter and that its medium-voltage SST — the unit that competes with Heron Link and Amperesand's platform — does not yet exist as a product. Basis: the two datasheets (400–480 V AC input, 800 V DC output), the CEC filing ('currently proven in behind-the-meter applications'), SemiAnalysis's 'LV-input' classification, the Infineon release's 'clear pathway to multi-megawatt medium voltage' and the CFO deck's '2028+' for the multi-port MV SST. The 'first company shipping a commercial multiport SST' claim is true of a 480 V unit and does not transfer to the hall-edge block.",
+    "(High confidence) We assess that no NVIDIA-published roster names DG Matrix. Basis: the May 2025 and October 2025 developer blogs, the October 2025 and August 2026 corporate blogs and the GTC 2026 press kit, all read in full; the only source placing it on 'Nvidia's list' is Power Electronics News' GTC coverage, and the MGX membership rests on the company's releases and analyst repeats. The technical collaboration (storage-response testing, rack-interface validation) is plausible and unrefuted; the badge is unverified. Collection gap: NVIDIA's MGX partner directory does not render partner names.",
+    "(High confidence) We assess that every delivery and certification date has slipped: commercial launch 'late Q2 2025' (March 2025), 'shipping … next month' (Axios, December 2025), 'initial units June 2026' (TechCrunch, February 2026), UL certification 'end of Q2 2026' (June 2026) — and as of 19 September 2026 the company's own wording is 'pilot deployments', the Morrisville plant's job postings precede its 'first production build', and no listing has been announced. Basis: the dated releases and job postings above.",
+    "(Moderate confidence) We assess the multi-port topology is a genuine architectural difference, not marketing: one converter with several galvanically isolated, software-defined AC and DC ports lets a site blend utility, generator, battery and solar and serve AC and DC loads from one box, which is what Exowatt, PowerSecure and a fleet depot buy and what a single-input hall-edge SST cannot do. Basis: the datasheets' 3 AC + 3 DC port configuration, the CEC filing's black-start/islanding/V2G functions, the Ampace and Exowatt selections. The cost is that a multi-port LV design is optimised for behind-the-meter aggregation, not for the highest-efficiency single path from 34.5 kV to the rack, where NVIDIA rates the TRU at 98.5% and the company's own datasheet says 96–97% (analysis).",
+    "(Moderate confidence) We assess that the company's efficiency and cost claims should be read at the datasheet, not the headline: 'up to 98.5%' (platform), '96–98%' (CEC and trade press), '96–97% peak' (400 kVA sheet), 96% (200 kVA sheet); 'half the cost' (Canary), '60–70% of the cost' (CEO to TechCrunch), TCO 'one-half to two-thirds' (release), 'up to 90% lower system cost' (MCJ). No customer has published a delivered cost or measured efficiency; the CTO's own statement that first-generation SSTs are 'not yet matching conventional transformers' >99%' is the honest baseline.",
+    "(Moderate confidence) We assess that roughly USD 80M of equity plus USD 25M of debt funds the Morrisville ramp to 'hundreds per year' of LV units and the Cell-LV sidecar, but not a medium-voltage production line: the peers raised more for less (Heron USD 140M Series B for one 4.2 MW unit; Amperesand USD 80M plus USD 30M), and DG Matrix's MV product is two years out on its own slide. A Series B or a strategic (ABB, MHI, Infineon) manufacturing arrangement before the Cell-MV ships is the expected tripwire (analysis).",
+    "(Low confidence) We assess that the reported Lahore, Pakistan engineering and manufacturing footprint (engage.vc, November 2025; '250 engineers') and imported sub-assemblies (Morrisville inventory postings) make domestic-content, FEOC and Section 232 questions live for a US data-center buyer, and that the company has published nothing on them. No source states how Interport is classified for tariff purposes or where its power stages are built; the reading rests on one profile and job postings.",
+    "INDICATORS TO WATCH — Q4 2026: any UL 1741 (or UL 2877) listing or NRTL announcement for the Flex 200/400 (converts 'pre-certification' into a bankable product; a second slip past year-end would mean two years late against the March 2025 plan). A named, dated, energised customer site with unit counts — Exowatt Miami, PowerSecure Durham or a hyperscaler pilot — from either party (confirms Judgment 1's 'only one shipping'). The '1+ MW sidecar' (Cell-LV) delivery promised for Q3 2026 (tests the NVIDIA-adjacent product). Any nvidia.com page naming DG Matrix, or its name in the OCP LVDC SST specification contributor list (closes Judgment 2). A Cell-MV datasheet, cell count or kV rating (settles whether the 2028+ unit is a cascaded-cell design and what it competes with). Morrisville 'first production build' and any NC incentive filing with jobs and capex (the only externally checkable ramp numbers). A Series B or strategic manufacturing partnership (tests Judgment 6). ABB and MHI: any first-party statement beyond the seed release, and whether MHI's stake channels through Mitsubishi Power (not on the record)."
+  ],
+  "relationships": [
+    {
+      "slug": "abb",
+      "type": "investor",
+      "note": "Minority shareholder since the March 2025 seed through ABB Electrification Ventures; re-invested in the February 2026 Series A; also a testing partner and a hedged competitor at the hall edge.",
+      "context": "ABB's own Zurich release (11 March 2025) says it 'acquired a minority stake in North Carolina company DG Matrix' through 'ABB Electrification Ventures, the venture capital arm of ABB Electrification', with terms undisclosed, describing the Power Router as 'up to five times smaller' with '98 percent' efficiency and able to 'replace 10-20 electrical devices with a single system'. DG Matrix's Series A release states 'All existing investors committed new capital in this round, including ABB'. Canary Media (August 2025) lists ABB among the testing partners. ABB is simultaneously on NVIDIA's facility-tier roster with its own solid-state MV product, so the stake is an option on a startup topology rather than a channel commitment (analysis). Former ABB global head Allen Burchett sits on DG Matrix's advisory board.",
+      "source": "https://new.abb.com/news/detail/124139/abb-invests-in-dg-matrix-to-advance-ai-data-center-power-optimization",
+      "status": "active",
+      "since": "2025-03"
+    },
+    {
+      "slug": "infineon",
+      "type": "supplier",
+      "note": "Named 'a key silicon carbide supplier' in March 2026 — latest-generation SiC MOSFETs in the Interport and Interport Cell-LV systems, with 'continued alignment on next-generation SiC device roadmaps' toward higher-voltage platforms.",
+      "context": "The joint release (24 March 2026) says DG Matrix 'will source latest-generation silicon carbide (SiC) MOSFETs from Infineon Technologies AG' for the Interport platform, supporting 'platform efficiencies of up to 98.5%', and quotes Infineon's Andreas Weisl. The CTO told Power Electronics News (April 2026) that the design 'does not plan to integrate 10 kV devices', so the medium-voltage unit will be built from lower-voltage Infineon parts in series. mgrid (April 2026) argues 200 mm SiC wafer capacity — Wolfspeed and 'a smaller Infineon footprint' — is the sector's binding constraint; Infineon's device class for DG Matrix is not disclosed (collection gap).",
+      "source": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-selects-infineon-key-110000334.html",
+      "status": "active",
+      "since": "2026-03",
+      "via": "Interport and Interport Cell-LV"
+    },
+    {
+      "slug": "nvidia",
+      "type": "other",
+      "note": "Self-declared NVIDIA MGX ecosystem member and 800 V DC SST supplier after 'more than two years of direct technical collaboration'; absent from every NVIDIA-published 800 V DC partner list (May 2025, October 2025, August 2026) and the GTC 2026 press kit.",
+      "context": "DG Matrix's releases (28 May and 17 June 2026) describe the Interport SST as 'purpose-built for the NVIDIA MGX architecture', shown at GTC 2026, with 'a yearlong program of testing energy storage solutions for dynamic GPU load response in collaboration with NVIDIA' and ongoing work 'with NVIDIA and MGX integrators to validate rack power interfaces'; neither carries an NVIDIA quote. Power Electronics News (March 2026) lists DG Matrix among SST providers citing 'Nvidia's list' and quotes the CTO that NVIDIA is 'incorporating it as the reference architecture for 800V DC'; SemiAnalysis repeats 'only SST included in Nvidia's MGX reference architecture'. Every NVIDIA-published roster read for this dossier names ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv at the facility tier and omits DG Matrix. Nothing refutes the technical collaboration; nothing from NVIDIA confirms the membership (collection gap).",
+      "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+      "status": "announced",
+      "since": "2026-03"
+    },
+    {
+      "slug": "heron-power",
+      "type": "competitor",
+      "note": "The medium-voltage hall-edge SST startup DG Matrix is compared with in every survey; Heron is on NVIDIA's roster with a 4.2 MW 34.5 kV unit due in volume late 2027, DG Matrix ships a 480 V six-port unit now and dates its MV unit to 2028+.",
+      "context": "SemiAnalysis (May 2026) contrasts Heron's 'direct MV-input units' with DG Matrix's 'LV-input SST'; Power Electronics News (March 2026) says Heron and Amperesand 'focus on medium-voltage solutions, whereas DG Matrix emphasizes multiport flexibility'. Heron raised a USD 140M Series B the same day DG Matrix announced its USD 60M Series A (18 February 2026); Heatmap's April 2026 feature transposed the two figures. The contest is different in kind: Heron sells one product into one wave; DG Matrix sells field hours on a low-voltage platform while its MV product is developed (analysis).",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+      "status": "active",
+      "since": "2025-08"
+    },
+    {
+      "slug": "amperesand",
+      "type": "competitor",
+      "note": "The other venture-backed hall-edge SST startup; Amperesand's 3.3 kV SiC modular platform (4–10 MW, Reno line, Port of Singapore pilot) versus DG Matrix's multi-port LV skid and 2028+ MV unit; neither has a certified, energised data-center unit.",
+      "context": "Canary Media (August 2025) and TechCrunch (February 2026) survey the three startups together — 'DG Matrix/ABB' versus 'Heron/a16z' versus Amperesand 'incubated by Temasek's early stage fund' — and DG Matrix's own June 2026 Insights repost profiles Amperesand's USD 80M Series A and port pilot. SemiAnalysis lists Amperesand at 'greater than 98.5%' and DG Matrix at 'claims up to 98.5%'. Amperesand is absent from NVIDIA's rosters as DG Matrix is; Amperesand's 30 MW-in-2026 commitment and DG Matrix's June 2026 first-units date are the two schedules to check against each other (analysis).",
+      "source": "https://techcrunch.com/2026/02/20/why-investors-are-going-gaga-over-solid-state-transformers/",
+      "status": "active",
+      "since": "2025-08"
+    },
+    {
+      "slug": "southern-company",
+      "type": "partner",
+      "note": "PowerSecure, Southern Company's microgrid subsidiary, is DG Matrix's 'nationwide energy partner' (December 2025/January 2026) for channels, deployment capacity and service; a PowerSecure site in Durham, NC is a test location.",
+      "context": "The collaboration release quotes PowerSecure president Jim Smith and describes 'over 3 gigawatts of microgrid capacity'; the CEO says the deal brings 'immediate customer channels, deployment capacity, and service coverage for our Power Router platform'. Canary Media (August 2025) already listed PowerSecure among the testing partners, and the CEO named 'PowerSecure in Durham, North Carolina' as a deployment site on the MCJ podcast (May 2026). No unit count, site or contract value is published. Recorded on Southern Company's slug because PowerSecure is a wholly owned subsidiary and has no dossier of its own.",
+      "source": "https://finance.yahoo.com/news/dg-matrix-announces-strategic-collaboration-140000074.html",
+      "status": "active",
+      "since": "2025-12",
+      "via": "PowerSecure"
+    },
+    {
+      "slug": "flexgen",
+      "type": "partner",
+      "note": "FlexGen's HybridOS energy-management software paired with the DG Matrix Power Router for EV fleet charging (August 2024) — the company's pre-data-center market.",
+      "context": "The August 2024 release announces a strategic partnership combining 'FlexGen HybridOS EMS' with the 'DG Matrix Power Router for EV charging', quoting FlexGen's Pasi Taimela. No deployment has been announced since, and the company's own EMS ('Power Operating System') now covers the functions the partnership assigned to HybridOS, so the relationship is recorded as historical (analysis).",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/flexgen-and-dg-matrix-announce-strategic-partnership-for-ev-fleet-charging-solutions/57",
+      "status": "historical",
+      "since": "2024-08"
+    },
+    {
+      "slug": "eaton",
+      "type": "competitor",
+      "note": "The incumbent that bought an SST startup (Resilient Power Systems, August 2025, USD 55M plus up to USD 95M earn-out per Canary) and sits on every NVIDIA roster; named with DG Matrix in every SST vendor survey.",
+      "context": "Canary Media's August 2025 feature frames Eaton/Resilient Power as DG Matrix's most direct competitor; SemiAnalysis, MarketsandMarkets and the vendor-authored HIITIO list place both in the data-center SST set. Eaton's Boyd acquisition is also where CCO Deepak Thakkar's previous employer went. No commercial contact between the companies is published.",
+      "source": "https://www.canarymedia.com/articles/distributed-energy-resources/solid-state-transformers-dgmatrix-resilient-power",
+      "status": "active"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "competitor",
+      "note": "Facility-tier incumbent on NVIDIA's roster with a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027; listed beside DG Matrix in Power Electronics News' GTC 2026 SST-provider list.",
+      "context": "Power Electronics News' GTC 2026 coverage names 'Delta Electronics, DG Matrix, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton … Heron Power' as the SST providers; GE Vernova's conditional 1,000-unit commitment (recorded in the Heron Power dossier) is the incumbent order any startup's MV product must displace. DG Matrix board member Vlatko Vlatkovic is the former CTO of GE Power Conversion.",
+      "source": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+      "status": "active"
+    },
+    {
+      "slug": "delta-electronics",
+      "type": "competitor",
+      "note": "Delta showed a medium-voltage-to-800 V DC SST at 'up to 98.5%' at GTC 2026 and has a live 1 MW SST cabinet at a Chinese operator; Delta also owns the rack power-shelf layer a sidecar hands off to.",
+      "context": "Power Electronics News lists Delta first among GTC 2026 SST providers; DG Matrix's own June 2026 Insights repost records Delta's 1 MW cabinet live at Chindata/Meituan (February 2026) — field-hour evidence no startup yet has. HIITIO's vendor-authored list ranks DG Matrix third and Delta tenth, cited only as evidence the two are seen in one set.",
+      "source": "https://www.dgmatrix.com/news-and-media/news/solid-state-transformers-could-reshape-ai-infrastructure/1223",
+      "status": "active"
+    },
+    {
+      "slug": "hitachi-energy",
+      "type": "competitor",
+      "note": "Incumbent named with DG Matrix in the SemiAnalysis, MarketsandMarkets and GTC 2026 vendor sets; the transformer supplier whose 'two to three years' lead times DG Matrix's 'speed to power' pitch is measured against.",
+      "context": "MarketsandMarkets (May 2026) lists 'DG Matrix (US), Heron Power … Amperesand … Hitachi Energy … Eaton' as the US data-center SST companies; the Satterfield & Pontikes release frames Interport against 'conventional transformer lead times [that] have stretched to two to three years'. No commercial contact is published.",
+      "source": "https://www.marketsandmarkets.com/ResearchInsight/us-data-centers-solid-state-transformers-companies.asp",
+      "status": "active"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "other",
+      "note": "The executive lineage: COO Tasha Keadle (ex-SVP North America Purchasing), CMO Rainer Stiller (two decades at Schneider/APC) and advisor Daniel Doimo (ex-EVP Power) all came from Schneider Electric, which is itself on every NVIDIA roster as a hedged incumbent.",
+      "context": "The appointment releases present Schneider Electric and APC experience as the qualification for each hire; Doimo co-founded MGE UPS Systems and led its merger with APC inside Schneider. Schneider competes at the hall edge and in the UPS the sidecar is meant to replace; no direct commercial or competitive statement naming both companies exists beyond roster context.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-appoints-daniel-doimo-mge-ups-systems-co-founder-and-former-schneider-electric-executive-vice-president-to-executive-advisory-board/1233",
+      "status": "historical"
+    },
+    {
+      "slug": "vertiv",
+      "type": "other",
+      "note": "CMO Rainer Stiller was Vertiv's CMO (2021–2024) and advisor Peter Gross chairs Vertiv's advisory council; Vertiv is an NVIDIA-listed power-system incumbent whose UPS business the Interport pitch targets.",
+      "context": "The Stiller and Gross releases record the Vertiv connections; Vertiv appears on NVIDIA's May 2025 and October 2025 DC power-system lists and in StorageReview's August 2026 production partners. No commercial relationship exists on the record.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/solid-state-transformer-pioneer-dg-matrix-appoints-former-vertiv-cmo-rainer-stiller-as-chief-marketing-officer/1207",
+      "status": "historical"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "UL 1741 / UL 2877 / IEEE 1547 certification for power-conversion equipment",
+      "status": "proposed",
+      "exposure": "Both Interport Flex datasheets state 'Designed for Compliance to* UL 1741' (the 200 kVA adds UL 2202 and UL 2231, the EV-charging standards) with the footnote '*Certification information can be provided upon request'; no listing appears on any company channel. The June 2026 MGX release said 'Pre-certification units are shipping now, with UL certification targeted for the end of Q2 2026', and SemiAnalysis (May 2026) recorded the same target; no completion had been announced by 19 September 2026. UL 2877 — which applies to power-conversion equipment with input above 1,000 V up to 38 kV — would govern the Cell-MV; no company document names it. The Series A use of funds includes 'advancing UL, IEEE, and international certifications'.",
+      "mitigation": "Chief Delivery Officer Karamjit Singh, a former Intertek executive with '25+ years driving testing, certification, quality assurance, and compliance programs', per the company's About page; the Ampace partnership pairs the SST with a UL-certified BESS.",
+      "source": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-joins-the-nvidia-mgx-ecosystem-to-power-the-next-era-of-accelerated-computing/1224"
+    },
+    {
+      "regime": "Section 232 tariffs on transformers and grid equipment",
+      "status": "in-effect",
+      "effectiveDate": "2025-08-18",
+      "exposure": "Steel-and-aluminium derivative duties were extended to transformers, cores and laminations at 50% on component value from 18 August 2025 (CRS R48933; tEDmag) and restructured by the 2 April 2026 proclamation (effective 6 April; Federal Register 9 April 2026) that caps 'electrical grid equipment' at 15% through 2027 on full customs value. No source addresses how a solid-state transformer — a power-electronics cabinet with a medium-frequency transformer and SiC modules — is classified, and DG Matrix has published nothing on tariff exposure, country of origin or domestic content. Morrisville inventory postings coordinate 'all international inbound shipments — customs documentation' for 'sub-assembly' stock, and engage.vc (November 2025) reports an operating factory in Lahore, Pakistan — so imported content is on the record while its share is not (collection gap).",
+      "source": "https://www.everycrsreport.com/reports/R48933.html"
+    },
+    {
+      "regime": "FEOC / domestic-content and Buy-American expectations for AI-campus procurement",
+      "status": "proposed",
+      "exposure": "No FEOC, domestic-content, 45X or Buy-American statement exists for DG Matrix. The company markets Morrisville manufacturing ('new manufacturing facility in Morrisville, NC'; 'scale from first unit to hundreds per year'), while engage.vc reports 'Operating factories in Lahore, Pakistan (250 engineers) and developing one in Raleigh' and the current About page no longer mentions Lahore. Silicon carbide is sourced from Infineon (Germany/Austria/Malaysia fabs). For a hyperscaler or utility buyer applying domestic-content scoring, the record does not say where the power stages, magnetics and enclosures are built (collection gap).",
+      "source": "https://engage.vc/old_news/power-to-change-the-world-haroon-inams-journey-to-dg-matrix/"
+    },
+    {
+      "regime": "FERC large-load interconnection orders and Texas SB 6",
+      "status": "in-effect",
+      "effectiveDate": "2025-06",
+      "exposure": "The company's July 2026 whitepaper argues FERC's large-load orders (a 60-day process) favour behind-the-meter, flexible-load architectures and that Interport 'qualifies for the new service models FERC is asking operators to create'; the Satterfield & Pontikes release cites Texas SB 6 (June 2025) large-load rules as the context for Texas data-center builds. These are the company's own policy readings of demand drivers, not obligations on it.",
+      "source": "https://www.dgmatrix.com/news-and-media/whitepapers/speed-to-power-becomes-policy-what-ferc-s-large-load-orders-mean-for-the-ai-build-out/1229"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Interport Flex Series 400 kVA (specification sheet Rev C) and 200 kVA (Rev B)",
+      "specs": [
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "DC port voltage range",
+          "value": "300 - 850 VDC (800 Nominal Voltage)"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "DC current (max.)",
+          "value": "530 ADC"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "AC port voltage range (3-phase)",
+          "value": "400 - 480 VAC (480 Nominal Voltage)"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "AC current (max.)",
+          "value": "520 A"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "Rated frequency",
+          "value": "50 / 60 Hz"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "Efficiency (peak)",
+          "value": "96 - 97 %"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "Current THD",
+          "value": "<5 %"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "Power factor correction",
+          "value": "0.85 Leading - 0.85 Lagging"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "Protection",
+          "value": "Internal Surge Protection Device (SPD); Over-Temperature Protection; Over / Under-Voltage Protection; Ground Fault Protection"
+        },
+        {
+          "band": "Electrical — 400 kVA",
+          "label": "Designed for compliance to*",
+          "value": "UL 1741 (*Certification information can be provided upon request)"
+        },
+        {
+          "band": "Mechanical — 400 kVA",
+          "label": "Dimensions (D x W x H)",
+          "value": "51 x 69 x 122 in / 1,295 x 1,753 x 3,099 mm"
+        },
+        {
+          "band": "Mechanical — 400 kVA",
+          "label": "Ports",
+          "value": "6 Port Version — Standard Configuration: 3 AC Ports, 3 DC Ports"
+        },
+        {
+          "band": "Mechanical — 400 kVA",
+          "label": "Weight (estimated)",
+          "value": "8,818 lb / 4,000 kg"
+        },
+        {
+          "band": "Mechanical — 400 kVA",
+          "label": "Noise level",
+          "value": "100 dBA at 1 m"
+        },
+        {
+          "band": "Electrical — 200 kVA",
+          "label": "DC port voltage range",
+          "value": "350 - 800 VDC (800 Nominal Voltage)"
+        },
+        {
+          "band": "Electrical — 200 kVA",
+          "label": "DC current (max.)",
+          "value": "250 ADC"
+        },
+        {
+          "band": "Electrical — 200 kVA",
+          "label": "AC port / current",
+          "value": "400 - 480 VAC (480 Nominal Voltage); 260 A"
+        },
+        {
+          "band": "Electrical — 200 kVA",
+          "label": "Efficiency (peak)",
+          "value": "96 %"
+        },
+        {
+          "band": "Electrical — 200 kVA",
+          "label": "Power factor correction",
+          "value": "0.90 Leading - 0.90 Lagging"
+        },
+        {
+          "band": "Electrical — 200 kVA",
+          "label": "Designed for compliance to*",
+          "value": "UL 1741, UL 2202, UL 2231"
+        },
+        {
+          "band": "Mechanical — 200 kVA",
+          "label": "Dimensions / weight",
+          "value": "40 x 40 x 120 in / 1,016 x 1,016 x 3,048 mm; 4,409 lb / 2,000 kg"
+        },
+        {
+          "band": "Mechanical — 200 kVA",
+          "label": "Ports",
+          "value": "6 Port Version — Standard Configuration: 2 AC Ports, 4 DC Ports"
+        },
+        {
+          "band": "Mechanical — 200 kVA",
+          "label": "Noise level",
+          "value": "75 dBA at 1 m"
+        },
+        {
+          "band": "General (both)",
+          "label": "Mounting",
+          "value": "Ground Mount"
+        },
+        {
+          "band": "General (both)",
+          "label": "Operating temperature",
+          "value": "-13 to 104 °F / -25 to 40 °C (200 kVA: designed to operate at –40 °C; for certification purposes … limited to –25 °C; can be operated at temperature up to 55 °C, with derating)"
+        },
+        {
+          "band": "General (both)",
+          "label": "Relative humidity",
+          "value": "5 to 95 % (including condensing)"
+        },
+        {
+          "band": "General (both)",
+          "label": "Cooling method",
+          "value": "Liquid Cooled (sealed)"
+        },
+        {
+          "band": "General (both)",
+          "label": "Enclosure",
+          "value": "NEMA 3R"
+        },
+        {
+          "band": "General (both)",
+          "label": "Communication / connectivity",
+          "value": "TCP / IP Modbus; 5G/ 4G LTE Cellular; Dual-Band Wi-Fi (2.4/ 5 GHz); 10/100/1000Base-T Gigabit Ethernet; Fiber Optic Ethernet"
+        },
+        {
+          "band": "General (both)",
+          "label": "Warranty",
+          "value": "Standard 2 years; extended available for up to 10 years"
+        },
+        {
+          "band": "General (both)",
+          "label": "Footprint note",
+          "value": "The footprint does not include the AC and DC switchgear"
+        }
+      ],
+      "notes": "Values verbatim from the two specification sheets on the company's asset store (undated; Rev C and Rev B, read 19 September 2026) — the only datasheets DG Matrix publishes. Ratings are in kVA; no kW-at-unity-PF, per-port rating, semiconductor type, topology, isolation frequency, MTBF, lead time or price appears on either sheet."
+    },
+    {
+      "product": "Interport platform tiers and design (company whitepapers, releases and the December 2025 founder interview — not a datasheet)",
+      "specs": [
+        {
+          "band": "Family (Dec 2025 whitepaper, Figure 2)",
+          "label": "Interport Flex Series",
+          "value": "Delivers up to 1.2 MW UPS power; Handles AC (400-480 V) and DC (300-1,500 V) voltage ranges in single device; Gray space or outdoor deployment; Commercially deployed"
+        },
+        {
+          "band": "Family (Dec 2025 whitepaper, Figure 2)",
+          "label": "Interport Cell-LV Series",
+          "value": "Delivers up to 1.6 MW UPS power with up to 2x surge; Handles AC (400-480 V) and DC (300-1,500 V) voltage ranges in single device; White space deployment"
+        },
+        {
+          "band": "Family (Dec 2025 whitepaper, Figure 2)",
+          "label": "Interport Cell-MV Series",
+          "value": "Delivers up to 15 MW UPS power with up to 2x surge; Handles MV AC (up to 34.5 kV) and DC (300-1,500 V) voltage ranges in single device; Gray space or outdoor deployment"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Efficiency",
+          "value": "Up to 98.5% power conversion efficiency (whitepaper; Infineon and MGX releases); 96–98% system efficiency (CEC filing, July 2025)"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Modularity",
+          "value": "Complete modularity for 200 kW to GW AI data center solutions"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Ports",
+          "value": "Six bi-directional, software-defined ports that are remotely programmable (CEC filing); galvanic isolation at each port; ports reprogrammable from ±400 VDC to up to 1,500 VDC"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Grid functions",
+          "value": "Native support for black start, islanding, UPS, grid-forming operation, Volt-VAR control, and vehicle-to-grid (V2G) integration (CEC filing); voltage ride-through, frequency ride-through, ramp-rate control (InfraPartners whitepaper)"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Response",
+          "value": "Microseconds for power conversion and single milliseconds for batteries; <1 ms transfer times; sub-millisecond surge response at the load interface (Cell-LV)"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Consolidation",
+          "value": "consolidates up to 15 discrete electrical components into four (Thakkar release, July 2026); consolidates approximately ten discrete power components (CFO whitepaper, March 2026); replace 10-20 electrical systems (seed release, March 2025)"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Losses and cost",
+          "value": "reduces total losses to approximately 2 to 3 percent versus approximately 8 to 10 percent (CFO whitepaper); One-half to two-thirds reduction in total cost of ownership; Approximately one-half the physical footprint (data-center page)"
+        },
+        {
+          "band": "Platform claims",
+          "label": "Deployment",
+          "value": "Deployment timelines can be reduced from the industry's typical 18 to 24 months to approximately six months (July 2026); Interconnection and commissioning in 1–7 days (CEC filing)"
+        },
+        {
+          "band": "Design (PEN founder interview, Dec 2025)",
+          "label": "Topology",
+          "value": "Merged two-stage design converting low-frequency AC to high-frequency AC via transformer, then to DC or low-frequency AC output. Eliminates DC-link capacitor present in conventional SSTs"
+        },
+        {
+          "band": "Design (PEN founder interview, Dec 2025)",
+          "label": "Switching frequency",
+          "value": "tens of kilohertz"
+        },
+        {
+          "band": "Design (PEN founder interview, Dec 2025)",
+          "label": "Port configuration",
+          "value": "Four DC ports (each 200 kW) plus two 200 kW AC ports, upgradeable to six-port configuration"
+        },
+        {
+          "band": "Design (PEN founder interview, Dec 2025)",
+          "label": "Input voltage",
+          "value": "Currently 380-480V AC inputs; future plans extend to 13.8-34.5 kV range"
+        },
+        {
+          "band": "Design (PEN founder interview, Dec 2025)",
+          "label": "Cooling",
+          "value": "Patented liquid-cooling with tornado-like vortices; direct-to-chip mounting eliminates thermal paste … 4°C delta between hottest and coolest transistors"
+        },
+        {
+          "band": "Design (PEN founder interview, Dec 2025)",
+          "label": "Roadmap",
+          "value": "200 kW and 400 kW systems currently shipping; 1+ MW sidecar in development (Q3 2026); multi-megawatt data center solutions planned"
+        },
+        {
+          "band": "Semiconductors",
+          "label": "SiC supplier",
+          "value": "Infineon's latest-generation SiC MOSFETs are integrated into DG Matrix's low-voltage and medium-voltage platforms (March 2026); DG Matrix's current design does not plan to integrate 10 kV devices (CTO, April 2026)"
+        },
+        {
+          "band": "System (PEN, May 2026)",
+          "label": "Interport 360",
+          "value": "Interport Flex Series rated at 400 kVA each, scalable to 10 MVA … eight units are paralleled to deliver 3.2 MVA … (three AC, three DC ports)"
+        },
+        {
+          "band": "Validation",
+          "label": "Testing",
+          "value": "30,000+ reliability testing hours validating Interport architectures (About page); a yearlong program of testing energy storage solutions for dynamic GPU load response in collaboration with NVIDIA (May 2026)"
+        }
+      ],
+      "notes": "The family ratings are 'UPS power' marketing figures from a company whitepaper (page-dated 18 December 2025) and have no datasheet behind them for the Cell Series; the 'Design' rows are the founders' statements as quoted by Power Electronics News (4 December 2025) and are the only description of the converter's internals on the public record. Cell count, isolation-transformer frequency and SiC voltage class are undisclosed. The 400 kVA datasheet's 96–97% peak efficiency is the figure to quote against the 'up to 98.5%' platform claim."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Haroon Inam",
+      "title": "Co-Founder and Chief Executive Officer",
+      "photo": "images/execs/dg-matrix-inam.jpg",
+      "background": [
+        "Co-Founder and CEO — DG Matrix (2022–present)",
+        "Chief Technology Officer — Smart Wires (from October 2014; company bio: 'built product from zero to $60M+ rev & IPO', 'five senior Smart Wires execs joined DG Matrix'; Smart Wires Technology listed on Nasdaq First North Growth Market, Stockholm, May 2021)",
+        "Chief Operating Officer and VP Engineering & Operations — Varentec; CTO and VP Global Engineering — Cattron Holdings (MarketScreener)",
+        "Company bio: '50+ patents & deep background in low & medium voltage'; 'Led $1B+ products at large corporates'",
+        "BSEE 1984 and MSEE 1986 — Duke University"
+      ]
+    },
+    {
+      "name": "Dr. Subhashish Bhattacharya",
+      "title": "Co-Founder and Chief Technology Officer; Duke Energy Distinguished Professor, NC State University",
+      "photo": "images/execs/dg-matrix-bhattacharya.jpg",
+      "background": [
+        "Co-Founder and CTO — DG Matrix (2022–present)",
+        "Duke Energy Distinguished Professor of Electrical and Computer Engineering — NC State University (joined August 2005); founding faculty member of the NSF FREEDM Systems Center (solid-state transformer research 'since 2008' per Engine Ventures) and of PowerAmerica; principal investigator of the DOE Flexible Large Power SST project (2019)",
+        "FACTS and Power Quality group — Westinghouse, later Siemens Power (1998–2005)",
+        "IEEE Fellow (2021); company bio: '12 patents and 700+ publications'; PhD — University of Wisconsin–Madison (2003)"
+      ]
+    },
+    {
+      "name": "Anthony Wanger",
+      "title": "Executive Chairman (appointed June 2026 — the company's first)",
+      "photo": "images/execs/dg-matrix-wanger.jpg",
+      "background": [
+        "Executive Chairman — DG Matrix (June 2026–present)",
+        "Founder and CEO — Regnaw Capital",
+        "Industry Advisor and Co-Investor — KKR (2021–2024; CyrusOne take-private, CoolIT acquisition, per the appointment release)",
+        "Co-founder and President — IO Data Centers (2007; acquired by Digital Realty); co-founder — BASELAYER (acquired 2021); sold a Phoenix colocation asset to Digital Realty for USD 180M (2006)"
+      ]
+    },
+    {
+      "name": "Deepak Thakkar, Ph.D.",
+      "title": "Chief Commercial Officer (appointed July 2026; reports to the CEO)",
+      "photo": "images/execs/dg-matrix-thakkar.jpg",
+      "background": [
+        "Chief Commercial Officer — DG Matrix (July 2026–present)",
+        "Chief Commercial Officer — Neos Partners thermal portfolio",
+        "Vice President of Sales — Boyd Corporation; President, Global Sales — ECI; ~10 years as Vice President of Business Development — Flex ('more than $2 billion in annual outsourced manufacturing revenue' per the release)",
+        "Earlier roles — Intel, McAfee, Silicon Graphics"
+      ]
+    },
+    {
+      "name": "Karamjit Singh",
+      "title": "Chief Delivery Officer",
+      "photo": "images/execs/dg-matrix-singh.jpg",
+      "background": [
+        "Chief Delivery Officer — DG Matrix (listed on the About page; no appointment release — collection gap on start date)",
+        "Former Intertek executive 'with 25+ years driving testing, certification, quality assurance, and compliance programs worldwide' (company bio)",
+        "'Technical committee member helping shape industry standards and certification best practices' (company bio)"
+      ]
+    },
+    {
+      "name": "Peter Sopher",
+      "title": "Chief Financial Officer (from August 2025)",
+      "photo": "images/execs/dg-matrix-sopher.jpg",
+      "background": [
+        "Chief Financial Officer — DG Matrix (August 2025–present, per Clean Energy Ventures' note)",
+        "Investment Partner — Clean Energy Ventures (June 2019–2025); led the firm's DG Matrix seed investment and 'Led $100M investments across 18 high-growth startups' (company bio)",
+        "MBA — Wharton and MPA — Harvard Kennedy School (2019); AB — Princeton (2011)"
+      ]
+    },
+    {
+      "name": "Rainer Stiller",
+      "title": "Chief Marketing Officer (appointed March 2026)",
+      "photo": "images/execs/dg-matrix-stiller.jpg",
+      "background": [
+        "Chief Marketing Officer — DG Matrix (March 2026–present)",
+        "Chief Marketing Officer — Vertiv (2021–2024)",
+        "Senior Vice President and two decades — Schneider Electric and APC; early career — BMW headquarters",
+        "'CMO to Watch 2024'; PR News 'People of the Year 2023' (per the appointment release)"
+      ]
+    },
+    {
+      "name": "Dr. Vlatko Vlatkovic",
+      "title": "Board Member (joined at the March 2025 seed); Venture Partner, Clean Energy Ventures",
+      "photo": "images/execs/dg-matrix-vlatkovic.jpg",
+      "background": [
+        "Board of Directors — DG Matrix (March 2025–present); the only board member named on the company site — investor seats (Engine Ventures and others) are undisclosed (collection gap)",
+        "Venture Partner — Clean Energy Ventures",
+        "Chief Technology Officer — GE Power Conversion; former CTO — GE Power Electronics and GE Aviation ('leading 2,000+ engineers in 24 countries' per company bio); PhD in Power Electronics"
+      ]
+    },
+    {
+      "name": "Tasha Keadle",
+      "title": "Chief Operating Officer (appointed February 2024; absent from the 2026 leadership page — status unconfirmed)",
+      "background": [
+        "Chief Operating Officer — DG Matrix (February 2024 appointment release: 'responsible for DG Matrix's operational ramp-up, manufacturing, supply chain, and purchasing'); a 2026 Morrisville facility-manager posting still reports to 'COO', but she is not on the current About page (collection gap)",
+        "Senior Vice President, North America Purchasing — Schneider Electric ('$2B spend, 450 people' per the release); earlier — Dell",
+        "BSEE and MS — NC State University"
+      ]
+    },
+    {
+      "name": "Michael Wood III",
+      "title": "Director, Commercial Development (Chief of Staff per Canary Media, August 2025)",
+      "background": [
+        "Director, Commercial Development — DG Matrix (named in the company's whitepapers and the FERC large-load whitepaper of July 2026); described as chief of staff by Canary Media (August 2025) and co-host of the company's Climate Cowboys podcast appearance (April 2025)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Funding to date (company releases; trade press breakdown)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Equity raised",
+            "actual": "USD 20M oversubscribed seed (announced 11 March 2025; led by Clean Energy Ventures with ABB, Cerberus Ventures, Chevron Technology Ventures and Piedmont Capital; 'combined with earlier non-dilutive funding, brings DG Matrix's total funding to nearly $30 million') and USD 60M oversubscribed Series A (18 February 2026; led by Engine Ventures with Helios Climate Ventures, Mitsubishi Heavy Industries, Ltd., Fine Structure Ventures, MCJ and Sabancı Climate Ventures; 'All existing investors committed new capital in this round, including ABB'); 'total capital raised to over $100 million'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Power Electronics News (9 March 2026) quotes the CEO: 'over $100 million, including $80 million in equity raised, $15 million in venture debt, and $10 million in loans and debt'. SEC Form D filings 6 March 2025 and 4 March 2026 (CIK 0002059108) exist; amounts unreadable — sec.gov blocked from this environment. Aggregators differ (CB Insights USD 90M; Tracxn USD 80M); no valuation published by any source"
+          },
+          {
+            "name": "Pipeline and orders (company statements)",
+            "actual": "'robust pipeline with tens of millions in purchase orders for 2025 and 2026' (March 2025); 'over $1bn of pipeline to date' (CEO, Climate Cowboys podcast, April 2025); 'multiple gigawatt-class datacenters in the pipeline' (February and June 2026); 'multi-billion dollar pipeline' (CEO to Heatmap, April 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No customer, order value, backlog or revenue figure has been published or corroborated by a counterparty; recorded as company statements only"
+          }
+        ],
+        "commentary": "Private and pre-revenue on the public record. Funding is documented through the company's two round releases and ABB's own seed release; the debt split is a single trade-press quotation. Expected fields are left empty: no consensus exists for a private company."
+      },
+      {
+        "period": "Manufacturing and headcount commitments (company channels and reporting)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Manufacturing capacity",
+            "actual": "North Carolina factory 'opening late 2025', 'capable of producing up to 1,000 units annually' (Canary Media, August 2025, company-sourced); 'a 5,000 square foot work cell that can produce up to 400' MW a year with 20 people, 'expandable to 4 gigawatts in three months' (CEO, MCJ podcast, May 2026); 'Active production with 10 GW capacity planned online by Q2 2027' (Power Electronics News, May 2026, company claim); Morrisville postings (September 2026): 'scale from first unit to hundreds per year', a role 'in place before the first production build begins'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Four incompatible capacity statements and no first-party figure for square footage, capex, opening date or MW per year; no North Carolina incentive filing with jobs or investment numbers was found (collection gap)"
+          },
+          {
+            "name": "Headcount",
+            "actual": "'250+ engineers' (About page); 'about 400 engineers today' (CEO, May 2026); 185 employees (PitchBook snippet, aggregator); 'Operating factories in Lahore, Pakistan (250 engineers)' (engage.vc, November 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Unreconciled; the Lahore footprint is not on the current company site"
+          }
+        ],
+        "commentary": "Analysis: roughly USD 80M of equity and USD 25M of debt funds an LV production ramp and the sidecar programme; a medium-voltage line on the scale of Heron's Morgan Hill or Amperesand's Reno plan is not on the record and would need a further raise or a strategic manufacturing partner."
+      }
+    ],
+    "commentary": "Everything a buyer would price on — unit cost, measured efficiency in service, MW delivered, backlog, gross margin — is undisclosed. The dossier records the funding as the company states it, the debt split as one outlet reports it, and every pipeline figure as an uncorroborated company statement."
+  },
+  "sources": [
+    {
+      "label": "DG Matrix — Daniel Doimo appointed to Executive Advisory Board (pilot deployments with hyperscale, neocloud and colocation customers)",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-appoints-daniel-doimo-mge-ups-systems-co-founder-and-former-schneider-electric-executive-vice-president-to-executive-advisory-board/1233",
+      "date": "2026-09-16"
+    },
+    {
+      "label": "DG Matrix — Pantokrator podcast: The Power Behind AI with Haroon Inam",
+      "url": "https://www.dgmatrix.com/news-and-media/news/the-power-behind-ai-with-haroon-inam-ceo-co-founder-of-dg-matrix-pantokrator-podcast/1232",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "StorageReview — NVIDIA moves 800 VDC power architecture from concept to production (SST phase 'targets 2029'; partner list)",
+      "url": "https://www.storagereview.com/news/nvidia-moves-800-vdc-power-architecture-from-concept-to-production-just-dont-turn-off-ac-power-yet",
+      "date": "2026-08-15"
+    },
+    {
+      "label": "NVIDIA blog — Why scaling AI compute performance requires a new power architecture (800 VDC execution paper; OCP LVDC SST spec v0.3; no DG Matrix)",
+      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "DG Matrix whitepaper — Speed-to-Power Becomes Policy: What FERC's Large-Load Orders Mean for the AI Build-Out (Michael Wood III)",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/speed-to-power-becomes-policy-what-ferc-s-large-load-orders-mean-for-the-ai-build-out/1229",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "DG Matrix — Skeleton Technologies collaboration (Interport CM 12–34.5 kV skid, CL sidecar, Flex / Interport 360)",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-and-skeleton-technologies-join-forces-to-deliver-resilient-fast-response-power-for-800-vdc-ai-data-centers/1228",
+      "date": "2026-07-24"
+    },
+    {
+      "label": "DG Matrix — Deepak Thakkar, Ph.D. appointed Chief Commercial Officer",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-appoints-data-center-infrastructure-veteran-deepak-thakkar-ph-d-as-chief-commercial-officer/1227",
+      "date": "2026-07-23"
+    },
+    {
+      "label": "HIITIO — Top 10 solid-state transformer suppliers for data centers in 2026 (vendor-authored; ranks itself first; DG Matrix third)",
+      "url": "https://www.hiitio.com/top-10-solid-state-transformer-suppliers-for-data-centers/",
+      "date": "2026-07-07"
+    },
+    {
+      "label": "ChargedUp — DG Matrix builds the Power Router for data centers today (Wanger, Belady, Gross, Satterfield & Pontikes)",
+      "url": "https://chargeduppro.com/post/dg-matrix-interport-solid-state-transformer-data-center-commercial-real-estate-future-2026",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "DG Matrix — Joins the NVIDIA MGX ecosystem (pre-certification units shipping; UL certification targeted end of Q2 2026)",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-joins-the-nvidia-mgx-ecosystem-to-power-the-next-era-of-accelerated-computing/1224",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "DG Matrix — Anthony Wanger appointed first Executive Chairman",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-appoints-digital-infrastructure-pioneer-anthony-wanger-as-first-executive-chairman/1225",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "DG Matrix — Peter Gross appointed to Executive Advisory Board",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-appoints-peter-gross-data-center-mission-critical-pioneer-and-imasons-hall-of-fame-inductee-to-executive-advisory-board/1226",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "DG Matrix Insights — Solid State Transformers Could Reshape AI Infrastructure (republished industry deep-dive; competitor profiles; Exowatt pilot)",
+      "url": "https://www.dgmatrix.com/news-and-media/news/solid-state-transformers-could-reshape-ai-infrastructure/1223",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "Data Center Richness (Rich Miller) — Solid State Transformers Could Reshape AI Infrastructure",
+      "url": "https://datacenterrichness.substack.com/p/solid-state-transformers-could-reshape",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "DG Matrix — Reveals Interport SST for the NVIDIA MGX Ecosystem (Business Wire release via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-reveals-interport-sst-120000871.html",
+      "date": "2026-05-28"
+    },
+    {
+      "label": "DG Matrix — InfraPartners and DG Matrix launch end-to-end AI infrastructure platform (Interport 360 + RapidNode)",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/infrapartners-and-dg-matrix-launch-end-to-end-ai-infrastructure-platform-to-address-power-and-deployment-constraints/1222",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "DG Matrix / InfraPartners whitepaper — The First End-to-End AI-Ready Power + AI Factory Platform (50 MW client case)",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/the-first-end-to-end-ai-ready-power-ai-factory-platform/1221",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "SemiAnalysis — Inside the 800VDC Revolution, Part 1 (DG Matrix 'LV-input SST', 'claims up to 98.5%', pre-certification shipping)",
+      "url": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Power Electronics News — Real-world solid-state transformers overcome barriers (Interport 360: eight 400 kVA units, 3.2 MVA, scalable to 10 MVA)",
+      "url": "https://www.powerelectronicsnews.com/real-world-solid-state-transformers-overcome-barriers-to-meet-adoption-needs-of-ac-and-dc-networks/",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "MCJ Inevitable podcast — Haroon Inam (rebrand to Interport; deployment sites; 'about 400 engineers'; work-cell capacity)",
+      "url": "https://mcj.vc/inevitable-podcast/dg-matrix",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "MarketsandMarkets — US data-center solid-state transformer companies (DG Matrix, Heron Power, Amperesand, Hitachi Energy, Eaton)",
+      "url": "https://www.marketsandmarkets.com/ResearchInsight/us-data-centers-solid-state-transformers-companies.asp",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "DG Matrix — Satterfield & Pontikes partnership for Texas AI data-center construction (Business Wire release via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-satterfield-pontikes-partner-110000307.html",
+      "date": "2026-05-07"
+    },
+    {
+      "label": "Congressional Research Service — R48933: Distribution transformers, supply and tariffs (Section 232 timeline)",
+      "url": "https://www.everycrsreport.com/reports/R48933.html",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "mgrid.org — Wolfspeed's 200 mm SiC wafer capacity is the biggest 2026 bottleneck on SST production ('DG Matrix is shipping production multi-port SSTs in 2026')",
+      "url": "https://mgrid.org/2026/04/22/wolfspeeds-200mm-silicon-carbide-wafer-capacity-is-the-single-biggest-2026-bottleneck-on-solid-state-transformer-production/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "DG Matrix whitepaper — Behind-the-Meter Power: Powering AI Infrastructure at Scale with the Interport SST Platform",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/behind-the-meter-power-powering-ai-infrastructure-at-scale-with-the-dg-matrix-interport-sst-platform/1217",
+      "date": "2026-04-20"
+    },
+    {
+      "label": "Power Electronics News — Solid-state transformers' path from concept to common (CTO: no 10 kV devices planned; 98–98.5% vs >99%; 'double the price')",
+      "url": "https://www.powerelectronicsnews.com/solid-state-transformers-path-from-concept-to-common/",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "Heatmap — America's transformer crisis has supercharged a wave of new startups (funding figures for DG Matrix and Heron Power transposed — do not cite for rounds)",
+      "url": "https://heatmap.news/climate-tech/transformers-startups-ayr-dg-matrix-heron-power",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "DG Matrix — Selects Infineon as a key silicon carbide supplier (Business Wire release via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-selects-infineon-key-110000334.html",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "Semiconductor Today — Infineon to supply SiC MOSFETs for DG Matrix's multi-port SST platform",
+      "url": "https://www.semiconductor-today.com/news_items/2026/mar/infineon-240326.shtml",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "Power Electronics News — Nvidia GTC 2026: Power from grid to GPU (SST providers 'Delta Electronics, DG Matrix, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton, Heron Power')",
+      "url": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "MCJ — Our investment in DG Matrix (founded 2022 in Raleigh; 'will be the first to market')",
+      "url": "https://newsletter.mcj.vc/p/dg-matrix-investment-announcement",
+      "date": "2026-03-18"
+    },
+    {
+      "label": "DG Matrix whitepaper — 800-VDC Data Centers and the Central Role of Solid-State Transformers (Peter Sopher, CFO; ~10 components consolidated; 2–3% losses)",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/800-vdc-data-centers-and-the-central-role-of-solid-state-transformers/1210",
+      "date": "2026-03-18"
+    },
+    {
+      "label": "DG Matrix deck — 800-VDC Data Centers: Monetary Value to NVIDIA and Value of SSTs (roadmap: LV multi-port SST 2026+, MV multi-port 2028+)",
+      "url": "https://www.dgmatrix.com/news-and-media/articles/800-vdc-data-centers-monetary-value-to-nvida-and-value-of-ssts/1209",
+      "date": "2026-03-18"
+    },
+    {
+      "label": "DG Matrix whitepaper — Unlocking Stranded Power (IPT-CL sub-millisecond surge response; 35 MW on a 30 MW interconnection)",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/unlocking-stranded-power-increasing-ai-data-center-revenue-with-software-defined-power-infrastructure/1208",
+      "date": "2026-03-13"
+    },
+    {
+      "label": "DG Matrix — Rainer Stiller appointed Chief Marketing Officer",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/solid-state-transformer-pioneer-dg-matrix-appoints-former-vertiv-cmo-rainer-stiller-as-chief-marketing-officer/1207",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "TechCrunch — Hyperscale Power is the latest startup to challenge transformer tech (four SST startups; DG Matrix/ABB)",
+      "url": "https://techcrunch.com/2026/03/10/hyperscale-power-is-the-latest-startup-to-challenge-140-year-old-transformer-tech/",
+      "date": "2026-03-10"
+    },
+    {
+      "label": "Power Electronics News — Solid-state transformers in the spotlight (CEO: 'only … company shipping a commercial product today'; USD 80M equity / 15M venture debt / 10M loans)",
+      "url": "https://www.powerelectronicsnews.com/solid-state-transformers-in-the-spotlight/",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "ChargedUp — The industrialization of DG Matrix (Morrisville; first production units scheduled June 2026)",
+      "url": "https://chargeduppro.com/post/the-industrialization-of-dg-matrix-moving-from-disruption-to-infrastructure-scale",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "DG Matrix — Recognized as Top 10 innovator in grid technologies by Darcy Partners ('commercial units shipping')",
+      "url": "https://www.dgmatrix.com/news-and-media/news/dg-matrix-recognized-as-top-10-innovator-in-innovative-grid-technologies-by-darcy-partners-2025-review/1196",
+      "date": "2026-03-02"
+    },
+    {
+      "label": "Converge Digest — DG Matrix raises $60M to scale solid-state transformers for AI data centers (Morrisville)",
+      "url": "https://convergedigest.com/dg-matrix-raises-60m-to-scale-solid-state-transformers-for-ai-data-centers/",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "TechCrunch — Why investors are going gaga over solid-state transformers (DG Matrix/ABB vs Heron/a16z vs Amperesand; '60% to 70% of that cost')",
+      "url": "https://techcrunch.com/2026/02/20/why-investors-are-going-gaga-over-solid-state-transformers/",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Heatmap — Funding Friday: Heron Power's $140M Series B and DG Matrix's $60M Series A (correct figures)",
+      "url": "https://heatmap.news/climate-tech/heron-power-transformers",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "DG Matrix — Closes $60 million Series A led by Engine Ventures (Business Wire release via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/news/dg-matrix-closes-60-million-131700216.html",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "TechCrunch — DG Matrix raises $60M to make data center power smarter (2.4 MW of connections; 95–98%; initial units June 2026; ~90% data-center pipeline)",
+      "url": "https://techcrunch.com/2026/02/18/dg-matrix-raises-60m-to-make-data-center-power-smarter/",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "Canary Media — Heron Power raises $140M for electrical transformers (same-day peer round)",
+      "url": "https://www.canarymedia.com/articles/climatetech-finance/heron-power-raises-140m-electrical-transformers",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "DG Matrix — Exowatt strategic partnership: Power Router selected as preferred power-conversion platform",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-and-exowatt-form-strategic-partnership-to-deliver-gigawatt-scale-dispatchable-power-for-the-ai-era/1187",
+      "date": "2026-02-11"
+    },
+    {
+      "label": "DG Matrix whitepaper — Speed-to-AI Power: How Solid-State Transformers Enable Grid-to-Rack 800-VDC (Flex, Cell-LV, Cell-MV definitions)",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/speed-to-ai-power-how-solid-state-transformers-enable-grid-to-rack-800-vdc/1182",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "DG Matrix whitepaper — Transforming Data Centers into AI Factories: Multi-Port SST as the Facility Power Fabric",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/transforming-data-centers-into-ai-factories-multi-port-solid-state-transformer-as-the-facility-power-fabric/1184",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "DG Matrix article — Why solid-state transformers are finally ready for scale ('early deployments already underway')",
+      "url": "https://www.dgmatrix.com/news-and-media/articles/why-solid-state-transformers-are-finally-ready-for-scale/1180",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "DG Matrix — Strategic collaboration with PowerSecure (Business Wire release via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/news/dg-matrix-announces-strategic-collaboration-140000074.html",
+      "date": "2026-01-20"
+    },
+    {
+      "label": "DG Matrix — Named to 2026 Global Cleantech 100",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-named-to-2026-global-cleantech-100-list/1168",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "DG Matrix whitepaper — Powering the AI Revolution: New Cost-Effective and Efficient AI Data Center Power Architecture (Thomas Schuldt; Figure 2 family ratings)",
+      "url": "https://www.dgmatrix.com/news-and-media/whitepapers/powering-the-ai-revolution-new-cost-effective-and-efficient-ai-data-center-power-architecture/1194",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "DG Matrix — Ampace partnership: first UL-certified grid-active BESS integrated with a multi-port SST platform",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/ampace-and-dg-matrix-announce-strategic-partnership-to-deliver-first-ul-certified-grid-active-bess-integrated-with-multi-port-solid-state-transformer-architecture-for-ai-data-centers/1151",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "Power Electronics News — A look into the industry's first commercially available multiport SST (founder interview: topology, ports, cooling, roadmap)",
+      "url": "https://www.powerelectronicsnews.com/a-look-into-the-industrys-first-commercially-available-multiport-sst/",
+      "date": "2025-12-04"
+    },
+    {
+      "label": "engage.vc — Power to change the world: Haroon Inam's journey to DG Matrix (first install April 2024 Durham; Lahore factory; Raleigh plant under development)",
+      "url": "https://engage.vc/old_news/power-to-change-the-world-haroon-inams-journey-to-dg-matrix/",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "NVIDIA developer blog — Building the 800 VDC ecosystem for efficient, scalable AI factories (facility-tier roster; no DG Matrix)",
+      "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "Canary Media — A universal adapter for solar, batteries, EVs and microgrids is here (DG Matrix, Resilient Power; testing with ABB, Duke Energy, PowerSecure; 1,000 units a year)",
+      "url": "https://www.canarymedia.com/articles/distributed-energy-resources/solid-state-transformers-dgmatrix-resilient-power",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "California Energy Commission docket 25-EPIC-01 — DG Matrix (Thomas Schuldt) research-concept comment on the Power Router",
+      "url": "https://efiling.energy.ca.gov/GetDocument.aspx?tn=265174&DocumentContentId=102113",
+      "date": "2025-07-31"
+    },
+    {
+      "label": "Climate Cowboys podcast #244 — Solid-state transformers with Haroon Inam and Michael Wood ('over $1bn of pipeline')",
+      "url": "https://climatecowboys.substack.com/p/244-solid-state-transformers",
+      "date": "2025-04-30"
+    },
+    {
+      "label": "Renewable Energy World — DTECH Initiate 2025: DG Matrix receives special recognition from Duke Energy",
+      "url": "https://www.renewableenergyworld.com/power-grid/smart-grids/thinklabs-ai-crowned-dtech-initiate-winner-senpilot-treeswift-dg-matrix-turn-heads/",
+      "date": "2025-04-01"
+    },
+    {
+      "label": "Transformers Magazine — DG Matrix raises $20M to scale its Power Router platform (Raleigh; investors; Vlatkovic to board)",
+      "url": "https://transformer-magazine.com/news/dg-matrix-raises-20-m-to-scale-its-power-router-platform/",
+      "date": "2025-03-13"
+    },
+    {
+      "label": "Charged EVs — DG Matrix raises $20 million to commercialize its multi-port SST (seed investors; commercial launch late Q2 2025)",
+      "url": "https://chargedevs.com/newswire/dg-matrix-raises-20-million-to-commercialize-its-multi-port-solid-state-transformer-solutions/",
+      "date": "2025-03-12"
+    },
+    {
+      "label": "ABB — ABB invests in DG Matrix to advance AI data center power optimization (minority stake via ABB Electrification Ventures)",
+      "url": "https://new.abb.com/news/detail/124139/abb-invests-in-dg-matrix-to-advance-ai-data-center-power-optimization",
+      "date": "2025-03-11"
+    },
+    {
+      "label": "DG Matrix — Raises $20 million to revolutionize global energy infrastructure with the world's first multi-port SST (seed release)",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-raises-20-million-to-revolutionize-global-energy-infrastructure-with-the-world-s-first-multi-port-solid-state-transformer/86",
+      "date": "2025-03-10"
+    },
+    {
+      "label": "DG Matrix — FlexGen strategic partnership for EV fleet charging (HybridOS + Power Router)",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/flexgen-and-dg-matrix-announce-strategic-partnership-for-ev-fleet-charging-solutions/57",
+      "date": "2024-08-07"
+    },
+    {
+      "label": "DG Matrix — Tasha Keadle appointed Chief Operating Officer",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/tasha-keadle-top-supply-chain-and-operations-executive-appointed-as-chief-operating-officer-of-dg-matrix/38",
+      "date": "2024-02-08"
+    },
+    {
+      "label": "DG Matrix — Natron Energy partnership for sodium-ion EV fast-charger solutions ('accepting orders now for delivery in 2024')",
+      "url": "https://www.dgmatrix.com/news-and-media/press-release/dg-matrix-and-natron-energy-announce-strategic-partnership-for-ev-fast-charger-solutions/21",
+      "date": "2023-12-18"
+    },
+    {
+      "label": "Smart Wires Technology — Q2 2021 interim report (first trading day Nasdaq First North Growth Market, 18 May 2021)",
+      "url": "https://news.cision.com/smart-wires/r/smart-wires-technology-ltd--q2-2021-interim-report,c3399573",
+      "date": "2021-08-19"
+    },
+    {
+      "label": "US DOE — Flexible Large Power Solid State Transformer (FLP-SST), FREEDM Systems Center, NC State (Bhattacharya presentation)",
+      "url": "https://www.energy.gov/sites/prod/files/2019/12/f70/10%20Subhashish%20Battacharya,%20NCSU%20--%20FLPSST_Aug2019%20presentation_0.pdf",
+      "date": "2019-08"
+    },
+    {
+      "label": "DG Matrix — Homepage (Interport Series configurations; awards; NVIDIA Inception and MGX badges)",
+      "url": "https://www.dgmatrix.com/"
+    },
+    {
+      "label": "DG Matrix — About (leadership, board and advisors with headshots; '250+ engineers'; '30,000+ reliability testing hours'; Morrisville address)",
+      "url": "https://www.dgmatrix.com/about"
+    },
+    {
+      "label": "DG Matrix — Interport platform page",
+      "url": "https://www.dgmatrix.com/sst/interport"
+    },
+    {
+      "label": "DG Matrix — Interport Data Center Solutions (LV skid, SideCar, MV skid; TCO and loss claims; spec-sheet links)",
+      "url": "https://www.dgmatrix.com/sst/interport/data-center-solutions"
+    },
+    {
+      "label": "DG Matrix — Interport Fleet Solutions (Interport Dispenser; CCS/MCS; dynamic power sharing)",
+      "url": "https://www.dgmatrix.com/sst/interport/fleet-solutions"
+    },
+    {
+      "label": "DG Matrix — Careers (Morrisville manufacturing facility roles; 'first unit to hundreds per year')",
+      "url": "https://www.dgmatrix.com/careers"
+    },
+    {
+      "label": "DG Matrix — Interport Flex Series 400 kVA Specification Sheet (Rev C)",
+      "url": "https://pub-603db131244d4898a25e35ad020f3bf9.r2.dev/dgmv4/assets/documents/Interport_Flex_Series_400_kVA_Specification_Sheet.pdf"
+    },
+    {
+      "label": "DG Matrix — Interport Flex Series 200 kVA Specification Sheet (Rev B)",
+      "url": "https://pub-603db131244d4898a25e35ad020f3bf9.r2.dev/dgmv4/assets/documents/Interport_Flex_Series_200_kVA_Specification_Sheet.pdf"
+    },
+    {
+      "label": "Engine Ventures — Portfolio: DG Matrix",
+      "url": "https://engineventures.com/companies/dg-matrix"
+    },
+    {
+      "label": "Sabancı Climate Ventures — Portfolio (DG Matrix)",
+      "url": "https://www.sabancict.com/en/climate-ventures/portfolio/Portfolio/20/0/0"
+    },
+    {
+      "label": "NC State ECE — Subhashish Bhattacharya faculty page",
+      "url": "https://www.ece.ncsu.edu/people/sbhatta4"
+    },
+    {
+      "label": "MarketScreener — Haroon Inam positions (Smart Wires CTO from October 2014; Varentec; Cattron)",
+      "url": "https://www.marketscreener.com/insider/HAROON-INAM-A0XOI0/"
+    },
+    {
+      "label": "DISTRIBUTECH — Past Initiate winners: DG Matrix",
+      "url": "https://www.distributech.com/past-initiate-winners/dg-matrix"
+    },
+    {
+      "label": "CB Insights — DG Matrix company profile (aggregator: Morrisville address, USD 90M total, 10 patents)",
+      "url": "https://www.cbinsights.com/company/dg-matrix"
+    },
+    {
+      "label": "SEC EDGAR full-text search — DG Matrix Inc. (CIK 0002059108): Form D 2025-03-06 and 2026-03-04 (metadata only; documents blocked from this environment)",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=%22DG%20Matrix%22"
+    }
+  ],
+  "lastUpdated": "2026-09-19",
+  "profileVersion": 1
+}

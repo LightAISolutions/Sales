@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 2,
+  "slug": "dg-matrix",
+  "title": "DG Matrix — Technology Study Guide",
+  "lastUpdated": "2026-09-19",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: one box, six ports",
+      "kind": "callout",
+      "tone": "info",
+      "read": "A multi-port solid-state transformer is a power router: several isolated AC and DC connections on one converter, with software deciding which port feeds which. That idea — not medium voltage — is what DG Matrix sells today.",
+      "ps": [
+        "Two guides already teach most of the {{SST}} story. The Heron Power guide teaches the machine — why a kilohertz {{medium-frequency transformer}} fits in a suitcase, the three-stage {{cascaded H-bridge}} architecture, and the choice between an SST and a {{transformer-rectifier unit}} at the hall edge (its sections 2–6). The Amperesand guide teaches {{SiC}} device classes and cell count, five-nines {{availability}} arithmetic, megawatt charging and the bidirectional storage case. Read those first if they are new; this guide does not repeat them.",
+        "This guide owns what neither covers. Why a converter can have several ports where a transformer has two windings, and how power is steered between them. Why a unit that connects at 480 V is a different product from one that connects at 34.5 kV, even when both are called SSTs. What a GPU {{pulse load}} is and why a {{sidecar}} with capacitors next to the rack answers it. How to read a converter datasheet against a marketing page. What 'designed for compliance to UL 1741' means, what {{UL 2877}} is for, and what a listing costs. And how a {{behind-the-meter}} power block turns a 30 MW interconnection into 35 MW of AI load.",
+        "It assumes high-school physics and nothing about power electronics."
+      ]
+    },
+    {
+      "id": "ports-not-windings",
+      "title": "Ports, not windings: how one converter steers power several ways",
+      "kind": "prose",
+      "read": "A 60 Hz transformer has two windings and one ratio. A multi-port SST has several isolated bridges on one magnetic core, and the controller decides where the power goes.",
+      "ps": [
+        "Inside every SST cell (Heron guide, section 4) sits a {{dual active bridge}}: two full-bridge switch stages facing each other across a small {{medium-frequency transformer}}, and power flows from whichever bridge leads in switching phase to whichever lags. Now put a third, fourth or sixth winding on the same core, each with its own bridge. That is a {{multi-active bridge}}: all windings see the same magnetic flux, so their voltages track each other automatically, and shifting any bridge's phase steers power into or out of its winding. One core, several ports, every port {{galvanic isolation}}-separated from the others.",
+        "Give each port its own front end and the ports stop caring what is on the other side. A bridge with a rectifier stage in front is an AC port; a bridge left as DC is a DC port. That is why a datasheet can say 'six-port version — standard configuration: three AC ports, three DC ports' and 'field-reconfigurable': the port's function is which stage is populated and how the controller drives it, not a different transformer. It is also why the DC ports can run at 800 V today and be 'reprogrammed' toward 1,500 V later — the output voltage is a regulated set-point, bounded by the switches' rating.",
+        "The physics has a cost. A single-path SST (grid in, 800 V out) can optimise one transfer; a multi-port core carries several transfers at once and its leakage inductances, which set how much power each port can move, are fixed by winding geometry. Efficiency per path is a little lower and the control problem is harder. The reward is what a transformer cannot do at all: blend a battery discharging, a solar array producing and the grid supplying into one bus, while serving an AC load on one port and a DC load on another, and change the mix every millisecond (analysis)."
+      ]
+    },
+    {
+      "id": "power-routing-arithmetic",
+      "title": "Power routing: what a six-port unit replaces, worked through",
+      "kind": "table",
+      "read": "The commercial claim is 'ten to fifteen components into one'. Count them for one real configuration.",
+      "intro": "Take the example DG Matrix gave TechCrunch: 600 kW of solar plus 600 kW of batteries serving twelve racks drawing 100 kW each, with the grid as the third source. Here is the equipment each approach needs to connect those sources and loads.",
+      "cols": [
+        "Function",
+        "Conventional low-voltage block",
+        "One multi-port unit",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Grid connection at 480 V AC",
+          "Switchgear + a rectifier to make DC for the racks",
+          "One AC port (rectifier stage populated)",
+          "The rectifier is the same job the port's front end does"
+        ],
+        [
+          "Solar (DC) input",
+          "A solar inverter to make AC, then the same rectifier turns it back to DC",
+          "One DC port — solar stays DC",
+          "Two conversions removed; the losses of each were 2–3% (analysis)"
+        ],
+        [
+          "Battery (DC) charge and discharge",
+          "A battery {{PCS}} (bidirectional inverter) plus its transformer",
+          "One DC port, bidirectional by construction",
+          "The dual-active-bridge stage is symmetric — see the Amperesand guide's storage section"
+        ],
+        [
+          "Backup during a grid dip",
+          "A {{UPS}} with its own rectifier, battery and inverter",
+          "The battery port keeps the DC bus up; '<1 ms transfer'",
+          "This is the 'built-in UPS functionality' claim — a battery on the bus, not a UPS box"
+        ],
+        [
+          "Racks at 800 V DC",
+          "A DC distribution panel behind the UPS",
+          "One or more DC ports at 800 V",
+          "The rack power shelf (Delta, LITEON, Megmeet) still converts 800 V to the rack bus"
+        ],
+        [
+          "An AC load on the same site",
+          "A separate feed from the switchgear",
+          "One AC port (inverter stage)",
+          "Mixed AC/DC sites are where a multi-port unit is hardest to replace (analysis)"
+        ]
+      ]
+    },
+    {
+      "id": "lv-in-vs-mv-in",
+      "title": "480 V in versus 34.5 kV in: two products that share a name",
+      "kind": "prose",
+      "read": "A low-voltage-input SST replaces the conversion chain behind a transformer. A medium-voltage-input SST replaces the transformer too. The difference decides what the unit competes with and who certifies it.",
+      "ps": [
+        "Utilities deliver power to a campus at {{medium voltage}} — 12 to 34.5 kV in the United States. Something has to bring it down to what equipment can use. A conventional data hall does it with a big line-frequency transformer to 480 V, then switchgear, then a UPS, then distribution. Heron Power's and Amperesand's SSTs connect at 34.5 kV: they are the transformer, the rectifier and the UPS in one enclosure (Heron guide, sections 6 and 9). DG Matrix's shipping units connect at 400–480 V AC. They replace everything downstream of the transformer — and leave the transformer standing.",
+        "That is not a small distinction. The medium-voltage transformer is the item with the two-to-three-year lead time that the whole 'speed to power' argument is about; a 480 V-input unit shortens the electrical room, not the transformer queue, unless the site already has spare transformer capacity or a source that arrives at low voltage (a battery, a generator, solar). It also changes the certification path: a low-voltage converter is evaluated to {{UL 1741}} with {{IEEE 1547}} for its grid interface, while anything above 1,000 V falls under {{UL 2877}} — a different standard, a different test programme.",
+        "Reading a vendor through this lens: SemiAnalysis classifies DG Matrix as the 'LV-input SST in place of the conventional rectifier-plus-PSU stack'. The company's own medium-voltage product — a three-port skid taking 12–34.5 kV to high-voltage DC — is on its roadmap for 2028 and has no datasheet. So the question to ask any 'SST' vendor first is the input voltage: it tells you whether the box replaces the transformer or sits behind it, and therefore which wave of the 800 V DC transition (Heron guide, section 11) it can actually ship into."
+      ]
+    },
+    {
+      "id": "pulse-loads",
+      "title": "Pulse loads: why the rack needs a buffer, and how big",
+      "kind": "prose",
+      "read": "Thousands of GPUs starting and finishing a training step together make a load that swings by megawatts in microseconds. Nothing upstream can follow that; something next to the rack has to absorb it.",
+      "ps": [
+        "A CPU data hall's load is flat. A GPU training cluster's is not: every accelerator computes, then waits for the others to exchange results, then computes again, in lockstep. The power draw of the whole cluster therefore steps between a low level and a high level several times a second. Each step is a {{pulse load}}. At the rack it is hundreds of kilowatts; at the campus it is tens or hundreds of megawatts. A transformer and the grid behind it see that as a flicker source; a battery's chemistry cannot respond in microseconds; a UPS is designed to bridge an outage, not to follow a waveform.",
+        "The physics says buffer close and buffer fast. Energy is power times time: a 500 kW step lasting 20 milliseconds is 10 kilojoules — a small amount of energy, but it must arrive in 20 milliseconds, which is a large power. Capacitors and {{supercapacitor}} banks store little energy but release it instantly, which is exactly this shape of problem; a battery stores a great deal but ramps in milliseconds to seconds. So the architecture puts a capacitive stage at the rack for the microseconds, a fast storage stage in the hall for the seconds, and lets the slow grid see only the average.",
+        "That is what a {{sidecar}} is for. DG Matrix's Cell-LV is described as a three-port unit next to the IT load with 'a dedicated capacitive-module input for AI pulse loading', regulated ±400 or 800 V DC output, and 'sub-millisecond surge response'; its rating is quoted as 1.6 MW 'with up to 2x surge', which is the vocabulary of a buffer, not a transformer. The Skeleton Technologies supercapacitor collaboration is the same idea with a named storage medium. Ask of any sidecar: how many joules, how fast, and does it also isolate the rack from the bus (the galvanic-isolation claim) — because a fault on an 800 V bus is the other thing a rack-proximate stage is asked to contain."
+      ]
+    },
+    {
+      "id": "reading-a-datasheet",
+      "title": "Reading a converter datasheet against the marketing page",
+      "kind": "table",
+      "read": "Every row on a spec sheet is a question you can now ask. These are the rows on the Interport Flex sheets and what each one is telling you.",
+      "intro": "Two one-page specification sheets exist for the shipping product. Read each row twice: once for what it says, once for what it leaves out.",
+      "cols": [
+        "Datasheet row",
+        "What it means",
+        "What to ask"
+      ],
+      "rows": [
+        [
+          "'400 kVA' (product name)",
+          "Apparent power — volts times amps. Real power in kW is kVA times {{power factor}}, so a 400 kVA unit at 0.85 PF delivers about 340 kW of real power",
+          "Is the rating kVA or kW, and at what power factor? The '1.2 MW UPS power' whitepaper figure is not the same quantity as the datasheet's kVA"
+        ],
+        [
+          "'Efficiency (peak) 96–97%'",
+          "The best point on the curve, usually near full load. System efficiency across a day, with the unit part-loaded and its cooling running, is lower",
+          "How does the 96–97% peak reconcile with the 'up to 98.5%' platform claim? Different product, different measurement, or a target?"
+        ],
+        [
+          "'DC port 300–850 VDC (800 nominal), 530 ADC'",
+          "The DC port regulates anywhere in that window; 800 V is the design point for an 800 V DC hall. 850 V × 530 A ≈ 450 kW is the port's ceiling",
+          "Can several DC ports run at different voltages at once? (The multi-port promise says yes; the sheet does not say)"
+        ],
+        [
+          "'AC port 400–480 VAC, 520 A'",
+          "This is a low-voltage input. 480 V × 520 A × √3 ≈ 430 kVA. There is no medium-voltage port on this product",
+          "What sits upstream of this unit at the site — a transformer with what lead time?"
+        ],
+        [
+          "'Current THD <5%' and 'PF 0.85 leading–lagging'",
+          "The distortion the unit puts back on the grid ({{harmonics}}) and how much reactive power it can absorb or supply — both {{IEEE 1547}} quantities",
+          "Does the unit meet the utility's interconnection requirements in grid-following and grid-forming modes?"
+        ],
+        [
+          "'Designed for compliance to* UL 1741' — '*certification information can be provided upon request'",
+          "A design intent, not a listing. A listed product carries the certifier's mark and file number on the sheet",
+          "Is there a listing, from which laboratory, dated when? Which edition and supplements (SA/SB)?"
+        ],
+        [
+          "'Liquid cooled (sealed)', '{{NEMA 3R}}', '100 dBA at 1 m', '−25 to 40 °C'",
+          "Outdoor-rated enclosure, closed coolant loop, loud enough to need siting away from people, and derated above 40 °C",
+          "Where does the heat go, what is the coolant, and what is the rating at a 45 °C site?"
+        ],
+        [
+          "'8,818 lb / 4,000 kg; 51 × 69 × 122 in' and 'footprint does not include the AC and DC switchgear'",
+          "Four tonnes on a pad, plus the switchgear the unit does not replace",
+          "What does the whole block weigh and occupy once the switchgear the sheet excludes is added back?"
+        ]
+      ]
+    },
+    {
+      "id": "certification-path",
+      "title": "From 'pre-certification units' to a listed product",
+      "kind": "prose",
+      "read": "A converter connected to the grid needs a safety listing and an interconnection conformance report before most utilities and insurers will accept it. The path is long, and it is where every SST startup is today.",
+      "ps": [
+        "Two things get certified. Safety — will the box hurt someone or start a fire — is evaluated by a Nationally Recognized Testing Laboratory (UL, Intertek, CSA, TÜV) against a product standard: {{UL 1741}} for inverters and converters up to 1,000 V, {{UL 2877}} for power-conversion equipment above 1,000 V up to 38 kV. Grid behaviour — will the box ride through a fault, avoid feeding an islanded line, keep its {{harmonics}} within limits — is tested to {{IEEE 1547}} and its test procedure, with the UL 1741 SA/SB supplements packaging those tests for the utility's approval. A product with both is 'listed' and 'conforms'; a product with neither is a prototype, however many are in the field.",
+        "The path takes time and money. mgrid's April 2026 walk-through puts a single product variant at six to eighteen months and a mid-six-figure cost, and a full product line across voltages and geographies at more than USD 5 million and two to three years — and every variant (200 kVA, 400 kVA, a different port mix) is a variant. That is why a company's certification target dates matter: DG Matrix said 'UL certification targeted for the end of Q2 2026' while shipping 'pre-certification units'; the quarter passed without an announced listing. Amperesand names UL 2877 and UL 1741 as targets with no listing; SemiAnalysis recorded in May 2026 that no vendor had completed data-center SST certification.",
+        "What the buyer does with a pre-certification unit: a field evaluation by an NRTL for one installation (the 'UL labs testing' the CEO mentions is this kind of work), an authority having jurisdiction willing to accept it, and a contract that says who pays if the listing never comes. A hyperscaler's design-build firm will not do that at scale, which is why 'first commercial shipment' and 'first listed product' are different milestones and the second is the one that opens volume (analysis)."
+      ]
+    },
+    {
+      "id": "behind-the-meter-block",
+      "title": "The behind-the-meter block: 35 MW of AI on a 30 MW interconnection",
+      "kind": "prose",
+      "read": "The multi-port unit's strongest use is not replacing a transformer. It is letting a site run more load than its grid connection allows by blending on-site sources — which is the market DG Matrix's partners are in.",
+      "ps": [
+        "A data-center developer's binding constraint is often the size of its utility interconnection and the years in the {{interconnection queue}} to enlarge it. {{Behind-the-meter}} generation and storage relieve that if something can blend them with the grid feed continuously. DG Matrix's worked example: a 30 MW utility interconnection, a 35 MWh battery and a 10 MW fuel cell, orchestrated by the converter, support 'approximately 35 MW of AI capacity' — the grid covers the average, the battery the peaks, the fuel cell the baseload the grid cannot, and the ports move power between them as the load moves.",
+        "The same ports carry the grid services a utility will pay for or require. In the company's own regulatory filing the platform supports {{black start}}, {{islanded}} operation, {{grid-forming}} mode, Volt-VAR control and vehicle-to-grid — the vocabulary of a microgrid controller, because a multi-port converter is one. This is why the first commercial relationships are a microgrid integrator (PowerSecure, three gigawatts of microgrids), a behind-the-meter generation startup (Exowatt) and a battery maker (Ampace), not a hyperscaler: the multi-port unit is most valuable where there are several sources to blend (analysis).",
+        "The policy backdrop pushes the same way. FERC's 2026 large-load orders and Texas SB 6 both ask big new loads to be flexible or self-supplied; a block that can drop to its interconnection limit in milliseconds by leaning on storage is what 'flexible load' means in hardware. Teach the learner to ask the {{time to power}} question in two halves: how fast can the site be energised at all, and how much load can it run before the utility upgrade arrives."
+      ]
+    },
+    {
+      "id": "where-the-products-slot-in",
+      "title": "Where DG Matrix's products slot in",
+      "kind": "prose",
+      "read": "Three tiers of one platform, each read against the public record — and the record is clearest at the bottom of the ladder.",
+      "ps": [
+        "**Interport Flex (shipping).** A six-port, low-voltage skid in 200 and 400 kVA sizes: 400–480 V AC in, 800 V DC nominal out, three AC and three DC ports as standard, liquid-cooled, outdoor-rated, 96–97% peak efficiency on the datasheet, 'designed for compliance to UL 1741'. Paralleled — eight units for 3.2 MVA in the published example — it becomes 'Interport 360', a gray-space power block for a data hall or a microgrid. This is the unit behind every deployment statement (Exowatt's Miami pilot, PowerSecure's Durham site, 'pre-certification units are shipping'). It is the product of sections 2, 3 and 9: a router for a low-voltage site, not a replacement for the utility transformer.",
+        "**Interport Cell-LV (next).** The three-port sidecar of section 5: AC in, a capacitive-module port, regulated ±400 or 800 V DC out, rated 1.6 MW with 2× surge, galvanically isolated, with rack-proximate storage — the product tied to the NVIDIA storage-response testing programme and the 800 V DC {{MGX}} rack. It was 'in development (Q3 2026)' in December 2025 and has no datasheet. Its competitors are the DC-side storage and power-shelf vendors on NVIDIA's rosters, not the transformer makers.",
+        "**Interport Cell-MV (2028+).** The three-port medium-voltage skid — 12–34.5 kV in, high-voltage DC out, battery and low-voltage AC ports, 'up to 15 MW UPS power' — that would compete with Heron Link and Amperesand's platform at the hall edge. It is described in the present tense in partner releases and dated '2028+' on the company's own roadmap slide; the CTO says the design will not use 10 kV devices, so expect a cascaded-cell front end of the kind the Heron guide's section 5 teaches. Until a datasheet exists, treat every medium-voltage claim as a plan.",
+        "The vendor-specification exercise: sort the company's figures into datasheet facts (96–97% peak, 400 kVA, 4,000 kg, NEMA 3R, −25 to 40 °C), platform claims ('up to 98.5%', 'fifteen components into four', 'six months'), and roadmap ('2028+', 'Q3 2026 sidecar', 'end of Q2 2026 UL'). Then check the roadmap column against the calendar: three of its dates have already passed."
+      ]
+    },
+    {
+      "id": "industry-map",
+      "title": "The industry map: who buys, who competes, why the port count matters",
+      "kind": "prose",
+      "read": "The buyer of a low-voltage multi-port unit today is a site with several sources; the buyer of the medium-voltage unit tomorrow is a hyperscaler's design-build firm. They are different sales.",
+      "ps": [
+        "**Who buys now.** Microgrid integrators and their customers (PowerSecure and the enterprise sites behind it), behind-the-meter generation developers (Exowatt), fleet depots, and data-center builders who need gray-space power blocks quickly (Satterfield & Pontikes in Texas, InfraPartners' prefabricated halls). They buy on port flexibility, commissioning time and the microgrid functions, and they can live with a pre-certification unit under a field evaluation. **Who buys later.** The campus owner through its design-build firm, against a GPU delivery schedule — the buyer the Heron and Amperesand guides describe — who needs a listed, medium-voltage, single-path unit with field hours and a place on NVIDIA's reference architecture.",
+        "**Who competes.** At the low-voltage block: conventional microgrid packages (transformer, switchgear, PCS, UPS) from the Schneider, Eaton and ABB class, and grid-forming PCS vendors. At the sidecar: the rack-power and DC-storage layer — Delta, LITEON, Megmeet, Vicor on NVIDIA's rosters, and DC-coupled battery approaches. At the hall edge, in 2028: Heron Power (34.5 kV, 4.2 MW, on NVIDIA's roster, volume late 2027), Amperesand (3.3 kV SiC modules to 4–10 MW), Delta (a live 1 MW SST at a Chinese operator), and the hedged incumbents — GE Vernova with a hyperscaler's conditional thousand-unit commitment, Eaton via Resilient Power, ABB (which also owns a stake in DG Matrix), Hitachi Energy, Siemens, Schneider.",
+        "**Why the port count matters economically.** A single-path hall-edge SST wins or loses on efficiency at one operating point, lead time and field hours. A multi-port unit's value rises with the number of sources and loads on the site: at a plain grid-fed hall it is a slightly less efficient rectifier with unused ports; at a stranded-power campus with batteries, fuel cells and solar it is the only device that does the job. That is why the company's partners are storage and generation companies, why its first hyperscaler sale is likeliest at a power-constrained campus, and why the 'first company shipping a multi-port SST' claim, while true of a 480 V unit, says nothing yet about the medium-voltage race (analysis).",
+        "**What a buyer will ask, September 2026.** Which unit — Flex, Cell-LV or Cell-MV — and at what input voltage. A listing, from which laboratory. A named energised site with unit counts. Where the power stages are built, given a Morrisville plant before its first production build and a reported engineering and factory footprint in Lahore. And the ABB question: an investor that is also a roster incumbent is a hedge, and hedges can be exercised either way."
+      ]
+    },
+    {
+      "id": "the-clock",
+      "title": "The clock",
+      "kind": "timeline",
+      "read": "Company milestones against the industry's 800 V DC waves — the dated claims to check as they fall due.",
+      "lanes": {
+        "d": "DG Matrix",
+        "i": "Industry"
+      },
+      "items": [
+        {
+          "x": 2008,
+          "lane": "d",
+          "label": "Solid-state transformer research begins at NC State's FREEDM Systems Center",
+          "sub": "the CTO's lineage; DOE Flexible Large Power SST project follows in 2019"
+        },
+        {
+          "x": 2022,
+          "lane": "d",
+          "label": "DG Matrix Inc. formed in Raleigh, North Carolina",
+          "sub": "multi-port EV fast charging is the first market"
+        },
+        {
+          "x": 2023,
+          "lane": "d",
+          "label": "Natron sodium-ion charger partnership; 'accepting orders now for delivery in 2024'",
+          "sub": "the Power Router brand"
+        },
+        {
+          "x": 2024,
+          "lane": "d",
+          "label": "First system installed, Durham NC; FlexGen EMS partnership",
+          "sub": "behind-the-meter and EV pilots"
+        },
+        {
+          "x": 2025.2,
+          "lane": "d",
+          "label": "USD 20M seed led by Clean Energy Ventures; ABB minority stake",
+          "sub": "'full commercial launch anticipated in late Q2 2025'"
+        },
+        {
+          "x": 2025.6,
+          "lane": "d",
+          "label": "Testing with ABB, Duke Energy, PowerSecure; NC factory 'late 2025', 1,000 units a year",
+          "sub": "Canary Media, August 2025"
+        },
+        {
+          "x": 2025.8,
+          "lane": "i",
+          "label": "NVIDIA publishes its 800 V DC ecosystem roster at OCP",
+          "sub": "nine facility-tier vendors incl. Heron Power; DG Matrix not named"
+        },
+        {
+          "x": 2025.95,
+          "lane": "d",
+          "label": "Ampace BESS + SST partnership; PowerSecure collaboration; 'shipping … next month'",
+          "sub": "December 2025"
+        },
+        {
+          "x": 2026.13,
+          "lane": "d",
+          "label": "USD 60M Series A (Engine Ventures; ABB, MHI); rebrand to Interport",
+          "sub": "'initial units June 2026'; same day Heron Power raises USD 140M"
+        },
+        {
+          "x": 2026.22,
+          "lane": "d",
+          "label": "Infineon SiC supply agreement; GTC 2026 'commercial launch'",
+          "sub": "March 2026; Power Electronics News lists DG Matrix among SST providers"
+        },
+        {
+          "x": 2026.4,
+          "lane": "d",
+          "label": "Interport SST 'for the NVIDIA MGX ecosystem' revealed; 'pre-certification units shipping'; UL 'end of Q2 2026'",
+          "sub": "May–June 2026; no NVIDIA page names the company"
+        },
+        {
+          "x": 2026.55,
+          "lane": "d",
+          "label": "Skeleton supercapacitor collaboration names the CM, CL and Flex tiers; CCO appointed",
+          "sub": "July 2026"
+        },
+        {
+          "x": 2026.6,
+          "lane": "i",
+          "label": "NVIDIA, Google, Microsoft execution paper; OCP LVDC SST specification v0.3",
+          "sub": "August 2026; NVIDIA's own SST phase 'targets 2029'"
+        },
+        {
+          "x": 2026.7,
+          "lane": "d",
+          "label": "Check point: UL listing? energised customer site? Cell-LV sidecar delivered?",
+          "sub": "September 2026 — none on the record"
+        },
+        {
+          "x": 2027.5,
+          "lane": "i",
+          "label": "First 800 V DC halls on transformer-rectifier units; Heron Link volume production",
+          "sub": "the first wave"
+        },
+        {
+          "x": 2028,
+          "lane": "d",
+          "label": "Interport Cell-MV — multi-port medium-voltage SST",
+          "sub": "'2028+' on the company's March 2026 roadmap"
+        },
+        {
+          "x": 2029,
+          "lane": "i",
+          "label": "NVIDIA's 34.5 kV-direct SST phase",
+          "sub": "the second wave the medium-voltage startups are built for"
+        }
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Drill: the concepts",
+      "kind": "flashcards",
+      "read": "Technology and product understanding only — nothing here is a date, a name or a headquarters.",
+      "cards": [
+        {
+          "q": "How can one converter have six isolated ports when a transformer has two windings?",
+          "a": "Several full-bridge stages share one medium-frequency transformer with several windings (a multi-active bridge). Every winding is isolated from the others, and shifting a bridge's switching phase steers power into or out of its port."
+        },
+        {
+          "q": "What makes a port 'AC' or 'DC' on a multi-port SST?",
+          "a": "Which stage is populated in front of its bridge — a rectifier/inverter stage makes an AC port, a bare DC bridge makes a DC port — and how the controller drives it. The transformer is the same."
+        },
+        {
+          "q": "Why is a 480 V-input SST a different product from a 34.5 kV-input SST?",
+          "a": "The medium-voltage unit replaces the utility transformer — the long-lead item. The low-voltage unit replaces the rectifier, UPS and distribution behind it and leaves the transformer in place; it is also certified to a different standard."
+        },
+        {
+          "q": "A 400 kVA unit at 0.85 power factor delivers how much real power?",
+          "a": "About 340 kW. kVA is apparent power; real power is kVA times power factor."
+        },
+        {
+          "q": "What is a GPU pulse load, in one sentence?",
+          "a": "Thousands of accelerators computing and then waiting in lockstep, so the cluster's draw steps between low and high by megawatts in microseconds to milliseconds, several times a second."
+        },
+        {
+          "q": "Why put capacitors at the rack and batteries in the hall for pulse loads?",
+          "a": "A pulse is little energy at very high power: capacitors release small energy instantly, batteries release large energy slowly. Buffer the microseconds close and fast, the seconds further back, and let the grid see the average."
+        },
+        {
+          "q": "What does 'designed for compliance to UL 1741' mean versus 'UL listed'?",
+          "a": "Design intent versus a completed third-party evaluation. A listed product carries the laboratory's mark and file number; a 'designed for' product has neither yet."
+        },
+        {
+          "q": "Which standard covers a converter whose input is 13.8 kV?",
+          "a": "UL 2877 — power-conversion equipment above 1,000 V up to 38 kV. UL 1741 covers converters up to 1,000 V; IEEE 1547 covers the grid interface in both cases."
+        },
+        {
+          "q": "Why does peak efficiency on a datasheet differ from the efficiency a site experiences?",
+          "a": "Peak is the best point on the curve, near full load. A part-loaded unit with its cooling running averages lower — and an 'up to' platform figure may not be the datasheet product at all."
+        },
+        {
+          "q": "How does a multi-port converter let a site run 35 MW on a 30 MW interconnection?",
+          "a": "The grid port covers the average, a battery port covers the peaks and an on-site generator port covers what the grid cannot, with power routed between ports as the load moves — the interconnection never sees more than its limit."
+        },
+        {
+          "q": "Why do multi-port units find their first buyers at microgrids and generation startups rather than plain grid-fed halls?",
+          "a": "Their value rises with the number of sources and loads to blend. A plain grid-fed hall uses one path and leaves ports idle; a site with batteries, fuel cells and solar needs exactly what the ports do."
+        },
+        {
+          "q": "What is the 'built-in UPS' claim, physically?",
+          "a": "A battery on one DC port holding the bus up through a grid dip, with the converter switching sources in under a millisecond — the UPS's function without a separate rectifier-battery-inverter box."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Check yourself",
+      "kind": "quiz",
+      "read": "Six questions on the mechanisms; each answer is in the sections above.",
+      "items": [
+        {
+          "q": "In a multi-active bridge, power is steered from one port to another by:",
+          "c": [
+            "Changing the transformer's turns ratio",
+            "Shifting the switching phase of one bridge relative to the others",
+            "Adding a second magnetic core",
+            "Raising the DC bus voltage"
+          ],
+          "a": 1
+        },
+        {
+          "q": "A vendor's shipping unit connects at 400–480 V AC. The most direct consequence for a data-center buyer is:",
+          "c": [
+            "It cannot serve DC loads",
+            "It replaces the utility transformer",
+            "The medium-voltage transformer and its lead time remain",
+            "It needs no certification"
+          ],
+          "a": 2
+        },
+        {
+          "q": "A 500 kW pulse lasting 20 milliseconds is roughly how much energy, and what is the best buffer for it?",
+          "c": [
+            "10 kJ — a capacitor bank close to the rack",
+            "10 MJ — a lithium battery in the hall",
+            "10 kWh — the utility grid",
+            "10 J — nothing is needed"
+          ],
+          "a": 0
+        },
+        {
+          "q": "'Designed for compliance to UL 1741; certification information available upon request' tells you:",
+          "c": [
+            "The product is UL listed",
+            "The product meets IEEE 1547",
+            "The design targets the standard but no listing is shown on the sheet",
+            "UL 2877 applies instead"
+          ],
+          "a": 2
+        },
+        {
+          "q": "Which standard governs a medium-voltage (12–34.5 kV input) solid-state transformer's safety evaluation in the United States?",
+          "c": [
+            "UL 1741 alone",
+            "UL 2877",
+            "UL 9540",
+            "NEMA 3R"
+          ],
+          "a": 1
+        },
+        {
+          "q": "Why is a multi-port SST most valuable at a power-constrained campus with on-site generation and storage?",
+          "c": [
+            "Because it has higher peak efficiency than a single-path SST",
+            "Because it blends several sources and loads on one bus so the site can run more load than its interconnection",
+            "Because it is certified to UL 2877",
+            "Because it replaces the rack power shelf"
+          ],
+          "a": 1
+        }
+      ]
+    }
+  ]
+}

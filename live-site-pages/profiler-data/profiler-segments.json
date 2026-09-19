@@ -439,6 +439,11 @@
      "slug": "amperesand",
      "role": "challenger",
      "basis": "ecosystemRole: the platform challenger at the hall edge — a 3.3 kV SiC medium-voltage solid-state transformer (5–10 MW modular) for 800 V DC AI factories, sold against the transformer-rectifier units and the hedged incumbents; NTU lineage and a Reno line, no shipped fleet, absent from NVIDIA's rosters"
+    },
+    {
+     "slug": "dg-matrix",
+     "role": "challenger",
+     "basis": "ecosystemRole: the low-voltage-first challenger in the hall-edge power-conversion layer — a multi-port solid-state transformer that today replaces the transformer-rectifier-UPS chain at 480 V (Interport Flex, shipping pre-certification) and is positioned against Heron Power, Amperesand and the hedged incumbents for the 34.5 kV-to-800 V DC block once its Cell-MV (2028+) exists; absent from NVIDIA's rosters, no certified unit"
     }
    ]
   },
@@ -689,6 +694,11 @@
      "slug": "amperesand",
      "role": "adjacent",
      "basis": "productsAndServices › Amperesand SST: the DC bus lets customers 'replace uninterruptible power supply (UPS) systems with lower cost, multi-sourced battery energy storage' — conversion is the primary business"
+    },
+    {
+     "slug": "dg-matrix",
+     "role": "adjacent",
+     "basis": "productsAndServices › Interport Cell-LV Series: the three-port sidecar 'located next to the IT load' puts galvanic isolation, rack-proximate storage and sub-millisecond pulse-load buffering in the white space — the 'built-in UPS functionality' sold against the UPS; conversion is the primary business"
     }
    ]
   },

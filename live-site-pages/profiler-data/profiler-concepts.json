@@ -7070,6 +7070,15 @@
       ]
     },
     {
+      "slug": "mgx",
+      "term": "MGX",
+      "def": "NVIDIA's modular reference architecture for GPU server racks: a fixed set of mechanical, electrical and power interfaces that lets vendors build interchangeable racks, trays and power hardware. A vendor 'in the MGX ecosystem' claims its product fits those interfaces; the claim is NVIDIA's to confirm.",
+      "aliases": [
+        "NVIDIA MGX",
+        "MGX ecosystem"
+      ]
+    },
+    {
       "slug": "microgrid",
       "term": "microgrid",
       "def": "A self-contained power system — generation, storage, and controls — that can run connected to the grid or islanded on its own. It is how some AI campuses get power before utility interconnection arrives."
@@ -7297,12 +7306,31 @@
       ]
     },
     {
+      "slug": "multi-active-bridge",
+      "term": "multi-active bridge",
+      "def": "A DC-DC converter in which three or more full-bridge switch stages share one medium-frequency transformer with several windings on a common core. Shifting the switching phase of any bridge relative to the others steers power between windings, so one magnetic core can exchange power among several isolated ports at once.",
+      "aliases": [
+        "MAB",
+        "multi-winding transformer converter"
+      ]
+    },
+    {
       "slug": "multi-contract",
       "term": "multi-contract",
       "def": "A delivery model in which the owner lets several direct contracts — civil, electrical, substation, commissioning — instead of one wrapped contract, and coordinates them itself. It avoids the wrap premium and keeps every seam between the scopes, so what the owner saves in price it pays in coordination and in delay arguments it must referee rather than transfer.",
       "aliases": [
         "multi-contracting",
         "split EPC"
+      ]
+    },
+    {
+      "slug": "multi-port-sst",
+      "term": "multi-port SST",
+      "def": "A solid-state transformer whose power stages expose several independently controlled, galvanically isolated AC and DC connections ('ports') rather than one input and one output. The controller decides which port sources power and which sinks it, so one unit can blend grid, generator, battery and solar and serve AC and DC loads simultaneously.",
+      "aliases": [
+        "multiport SST",
+        "multi-port solid-state transformer",
+        "power router"
       ]
     },
     {
@@ -9065,6 +9093,16 @@
       "def": "A very short discharge and recovery — hundreds of milliseconds rather than hours. Rack-level backup cells are rated in hundreds of thousands of them, which is a different life metric from the cycle count quoted on a grid battery.",
       "aliases": [
         "pulse cycles"
+      ]
+    },
+    {
+      "slug": "pulse-load",
+      "term": "pulse load",
+      "def": "A load that steps between a low and a high level in milliseconds or less and repeats — the profile of thousands of GPUs starting and finishing synchronised training steps together. Sized in the swing (megawatts) and the ramp (microseconds to milliseconds), and buffered with capacitance or fast storage close to the load so the swing never reaches the utility.",
+      "aliases": [
+        "GPU pulse load",
+        "pulse loading",
+        "AI pulse load"
       ]
     },
     {
@@ -11938,6 +11976,14 @@
       "slug": "ul-1973",
       "term": "UL 1973",
       "def": "The North American safety standard for stationary batteries — construction, protection and abuse testing for a battery meant to live in a building or a container. Listing to it is usually the first thing a fire marshal asks for."
+    },
+    {
+      "slug": "ul-2877",
+      "term": "UL 2877",
+      "def": "The UL safety standard for power-conversion equipment whose input or output exceeds 1,000 V, up to 38 kV — the standard a medium-voltage solid-state transformer is evaluated against, where a low-voltage converter is evaluated to UL 1741. 'Designed for compliance to' a standard is a design intent; a listing is a completed third-party evaluation.",
+      "aliases": [
+        "UL2877"
+      ]
     },
     {
       "slug": "ul-94",
