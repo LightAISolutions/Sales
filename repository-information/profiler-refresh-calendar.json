@@ -2548,6 +2548,21 @@
     "Series B or strategic manufacturing partnership (ABB, Mitsubishi Heavy Industries, Infineon) — ~USD 80M equity + USD 25M debt against an MV product two years out; Form D amounts if sec.gov becomes reachable",
     "Chesterton check: do not import Heatmap 2026-04-10 (rounds transposed with Heron Power — DG Matrix's is the USD 60M Series A); quote the 400 kVA datasheet's 96–97% peak efficiency beside the 'up to 98.5%' platform claim; MHI's stake is Mitsubishi Heavy Industries, Ltd. — not linked to the mitsubishi-power slug unless a source names that entity"
    ]
+  },
+  {
+   "slug": "novos-power",
+   "cadence": "quarterly",
+   "source": "Private, pre-product, pre-round; no earnings clock. Public record is novospower.com (four Wix pages, sitemap lastmod 2026-03-20, empty blog), the LinkedIn company page and its posts (dates decoded from activity IDs), the CTO's seminar pages (Stanford, ShanghaiTech), SDSU AI x Energy Summit pages, FedTech/PR Newswire, Connect Foundation/SDIC, and one SemiAnalysis citation (2026-05-26). Legal name Novos Power Inc., Delaware, per a CA SOS record mirror (bizprofile.net — bizfileonline and OpenCorporates blocked; sec.gov blocked, efts.sec.gov answered with no Form D). CEO's prior company ChargePodX (LACI Cohort 10) carries the same pitch. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-19",
+   "watch": [
+    "A priced round, Form D (efts.sec.gov full-text for 'Novos Power'), SBIR/STTR or CEC award, or a named investor — none exists as of 2026-09-19; CB Insights stage 'Biz Plan Competition'",
+    "Any published patent application assigned to Novos Power or naming a variable-air-gap / variable-airgap solid-state transformer (Google Patents; inventor Chunting Chris Mi) — a 2025 filing publishes from 2027; 'variable airgap' is undefined on the record",
+    "First hardware evidence: a datasheet, prototype photograph, unit rating (kV in / V DC out / MW), cell count, switching frequency, cooling spec or test result — from the UCSD Horizon Accelerator residency (from June 2026), an SDSU demonstration or a company page; check whether the input claim stays '13 - 48KV' (site) or '35 kV' (July 2026 post) and the scale '1–50 MW' (post) or 'up to 10 MW' (LinkedIn tagline)",
+    "A named pilot or customer — defense base (FedTech channel), microgrid, charging depot, generator/reliability buyer or data hall — from either party; the site's 'early access program' is the only offer",
+    "Roster placement: any nvidia.com page, GTC 2027 list, OCP LVDC contributor list or trade-press SST roundup beyond SemiAnalysis naming Novos Power (absent from all as of 2026-09-19); the 2027 SDSU AI x Energy Summit (29–30 March 2027) sponsor and awardee pages",
+    "A certification target (UL 2877 stops at 38 kV — the site's 48 kV bound is outside it; UL 1741/IEEE 1547) or NRTL engagement; headcount beyond LinkedIn '2-10'; whether the CEO or CTO leaves ChargePodX / SDSU roles (full-time signal); any Delaware record confirming the incorporation date",
+    "Chesterton check: the 'incubated by LACI' claim is not on LACI's cohort pages (ChargePodX is) — do not import it as fact; the '50% footprint reduction' traces to a BigGo summary of SemiAnalysis, not to the SemiAnalysis text read; the 'DOE/NASA-funded' lineage is the CTO's portfolio, not an SST project; the Google and Silicon Valley AI Summit awards have no organiser page"
+   ]
   }
  ]
 }

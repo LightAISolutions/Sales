@@ -1,4 +1,4 @@
-var VERSION = "v01.82g";
+var VERSION = "v01.83g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -9096,6 +9096,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    },
    {
     "kind": "public",
+    "ref": "profile:novos-power",
+    "date": "2026-09-19",
+    "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:nvidia",
     "date": "2026-09-06",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
@@ -9158,7 +9164,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
  },
  "tiles": [
   {
-   "k": "22",
+   "k": "23",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -9168,12 +9174,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "sub": "the established leading set, per the dossiers"
   },
   {
-   "k": "5",
+   "k": "6",
    "v": "challengers",
    "sub": "contesting that set; 8 adjacent"
   },
   {
-   "k": "116",
+   "k": "119",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -9359,6 +9365,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "megmeet",
      "challenger",
      "ecosystemRole: a power-conversion supplier converting an industrial base into AI data-center power; the only mainland vendor NVIDIA named for GB200 NVL72 power"
+    ],
+    [
+     "**Novos Power**",
+     "novos-power",
+     "challenger",
+     "ecosystemRole: a pre-product entrant in the hall-edge power-conversion layer — a claimed direct 13–48 kV-to-DC solid-state transformer (VASST) positioned against Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block and against the hedged incumbents on NVIDIA's facility-tier roster; no shipped unit, no listed product, no disclosed capital, absent from NVIDIA's lists"
     ],
     [
      "**ABB**",
@@ -9605,7 +9617,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "—",
      "—",
      "—",
-     "Huawei Digital Power, Amperesand, DG Matrix, Heron Power, LS-ES"
+     "Huawei Digital Power, Amperesand, DG Matrix, Heron Power, Novos Power, LS-ES"
     ]
    ]
   },
@@ -10337,6 +10349,30 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "GB200 NVL72 power"
     ],
     [
+     "**Novos Power**",
+     "**Amperesand**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Novos Power**",
+     "**DG Matrix**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Novos Power**",
+     "**Heron Power**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Power Electronics**",
      "**ABB**",
      "competitor",
@@ -10873,7 +10909,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "—"
     ]
    ],
-   "note": "Curated edges among members: 116 · to the neighbouring segments: 115 (the first 40 shown, by company) · derived-only mentions (no curated typing): 41 among members, 22 to the neighbours."
+   "note": "Curated edges among members: 119 · to the neighbouring segments: 115 (the first 40 shown, by company) · derived-only mentions (no curated typing): 48 among members, 24 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -11069,6 +11105,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "Power Electronics"
     ],
     [
+     "Federal defense-innovation commercialisation channel (FedTech Crucible / Department of War prime contractors)",
+     "in-effect",
+     "2026-02",
+     "Novos Power"
+    ],
+    [
      "FEOC / domestic-content and Buy-American expectations for AI-campus procurement",
      "proposed",
      "—",
@@ -11171,6 +11213,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "Amperesand"
     ],
     [
+     "UL 2877 / UL 1741 / IEEE 1547 certification for medium-voltage power-conversion equipment",
+     "proposed",
+     "—",
+     "Novos Power"
+    ],
+    [
      "US Entity List",
      "in-effect",
      "—",
@@ -11240,7 +11288,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "ps": [
     "**Mechanism lessons for this segment:** *Rectifier, Inverter, DC-DC, Transformer* · *One Big Box or Many Small Ones* · *The 800 VDC Shift: Convert Once, Early, High* · *The Last Ten Metres* · *Faults, Grounding, and the Interlock at 800 Volts*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-power-conversion-and-rack-power-silicon-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Amperesand, DG Matrix, Flex, Heron Power, Megmeet, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
+    "**Study guides:** Delta Electronics, Huawei Digital Power, Infineon, LITEON, Power Electronics, Sinexcel, Sungrow, Vicor, Zhonhen Electric, Amperesand, DG Matrix, Flex, Heron Power, Megmeet, Novos Power, ABB, Eaton, GE Vernova, Hitachi Energy, LS-ES, NVIDIA, Schneider Electric, Tesla — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -11357,6 +11405,17 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     "the-numbers",
     "the-players",
     "what-moved",
+    "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: profile:novos-power added@2026-09-19",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
     "who-is-connected"
    ]
   }

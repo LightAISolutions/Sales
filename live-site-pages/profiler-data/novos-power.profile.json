@@ -1,0 +1,549 @@
+{
+ "schemaVersion": 7,
+ "slug": "novos-power",
+ "name": "Novos Power Inc. (Delaware stock corporation per a California Secretary of State record mirror; California foreign-corporation registration B20250375580 filed 7 November 2025; the Delaware file number is not verified from this environment)",
+ "shortName": "Novos Power",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.novospower.com",
+ "headquarters": "San Diego, California, United States (principal office 6386 Alvarado Court S, Suite 200, 92120 — a multi-tenant professional building near San Diego State University, per the CA SOS record mirror and CB Insights; the company's own site shows only 'San Diego, CA 92120'); mailing address and registered agent in Palo Alto, California (the site footer reads 'San Diego and Palo Alto, California USA')",
+ "founded": 2025,
+ "employees": "'2-10 employees' (LinkedIn company page, read 19 September 2026); 3 (PitchBook, aggregator snippet); besides the two founders the only named staff are two post-doctoral researchers from the CTO's SDSU group, listed as 'Novos Power Inc.' affiliates on a March 2026 award page",
+ "ownership": {
+  "type": "private",
+  "ticker": ""
+ },
+ "summary": "BOTTOM LINE UP FRONT: Novos Power is the fourth and by far the smallest name in SemiAnalysis's May 2026 solid-state-transformer vendor set — a 2025 San Diego university spin-out (SDSU Distinguished Professor Chris Mi as co-founder and CTO, Stanford GSB graduate Susan Linwood as co-founder and CEO) with a 2–10-person team, a four-page template website whose blog is empty, no disclosed funding round, no SEC Form D, no patent or paper on its technology visible in any public database, no named customer, and no product on the record beyond a name — the Variable Airgap Solid State Transformer (VASST) — and a set of company-stated figures (direct 13–48 kV utility input, ≥98.5% peak efficiency, 1–50 MW, DC 400–1,500 V, air cooling, response '1000x faster than the current setup'). As of 19 September 2026 its public record consists of two pitch-competition wins (FedTech's Crucible Ignitor studio, February 2026; UC San Diego's Golden Ticket to the Horizon Accelerator, June 2026), a showcase slot at the IEEE Hard Tech Venture Summit (April 2026), the CTO's academic talks describing 'a novel megawatt-scale, medium-voltage power conversion system based on a Variable Air Gap Solid-State Transformer architecture', platinum sponsorship of SDSU's AI x Energy Summit, and one analyst citation. BACKGROUND. Novos Power Inc. is a Delaware corporation registered in California on 7 November 2025 (state-record mirror); the concept predates the entity — LACI's June 2025 cohort blurb for ChargePodX, Linwood's earlier company, already describes 'power electronics that convert medium-voltage AC directly into DC, eliminating the need for bulky traditional transformers' for EV charging, data centers and renewables. The company's own description: it 'stabilizes megawatt, millisecond AI load fluctuations', 'connects directly to 13 - 48KV utility feeds, bypassing legacy 480V step-down transformers', and rests on 'decades of DOE and NASA-funded research, with a foundation spanning 300+ peer-reviewed publications and 30+ issued patents'. On the public record that lineage is the CTO's general portfolio — the DOE GATE Center for Electric Drive Transportation he directs, a NASA University Leadership Initiative eVTOL design-tools grant on which he is a team member, and California Energy Commission battery grants — none of which is a solid-state-transformer project; his published patents are in wireless power transfer and battery management. SemiAnalysis (26 May 2026) records that 'Novos Power reports peak efficiencies over 98%', 'is concentrating on direct MV-input units that collapse the LV transformer and rectifier into a single device' and 'uses air cooling through proprietary insulation', and thanks the company in its acknowledgments; a secondary summary of the same piece adds 'claiming a 50% footprint reduction'. The company itself says it has 'not just one product, but a rich architecture roadmap' — a '5 generations technical roadmap' with no dates. Collection gap: no datasheet, topology, cell count, switching frequency, unit rating, test result, delivery date, price, customer, pilot, investor or round exists in any source; sec.gov is blocked from this environment but efts.sec.gov full-text search returns no Form D; the Delaware record, the Google and Silicon Valley AI Summit awards and the LACI incubation claim could not be verified from any organiser page (LACI's three 2025–2026 cohort lists carry ChargePodX, not Novos Power).",
+ "ecosystemRole": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster. It has no shipped unit, no listed product and no disclosed capital, and its stated applications (AI data centers, EV fast charging, microgrids, energy storage, on-site generation, defense installations) are the same list every multi-market SST startup carries before it has a customer. It is not a battery, switchgear, UPS or rack power-shelf vendor, and it is absent from every NVIDIA-published 800 VDC list.",
+ "productsAndServices": [
+  {
+   "name": "Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+   "category": "Hall-edge power conversion (medium-voltage solid-state transformer)",
+   "description": "The company's only named product, and it exists on the record as claims rather than as a unit. The site: 'Novos Power connects directly to 13 - 48KV utility feeds, bypassing legacy 480V step-down transformers. Our Variable Airgap Solid State Transformer (VASST) redefines SST -- delivering scalable, high-density power with dynamic responsiveness to millisecond-level GPU load swings'; 'We use high-frequency SiC to maintain voltage stability and prevent GPU restarts. 1000x faster than the current setup'; 'Built with high redundancy and hot-swap capability'; 'Over the lifetime, we reduce power waste by 25% and achieve 50% cost savings between CapEx and OpEx'; 'Our on-board AI transforms reactive power management into proactive power management'. The April 2026 IEEE showcase post: 'VASST (Variable Airgap Solid-State Transformer) replaces 100-year-old copper-and-iron transformer technology with advanced SiC semiconductor-based architecture', 'Built for AI data centers, EV fast charging, microgrids, energy storage, and on-site generation: ≥98.5% peak efficiency; 1–50 MW power ratings; DC 400–1500 V operating range; Real-time smart control + modular grid integration'. The LinkedIn tagline: 'AI-driven, modular power conversion systems that replace legacy transformers, scalable up to 10 MW'. The July 2026 post: 'Novos Power's SST goes directly from the 35 kV line to the GPU — we power the AI racks.' The CTO's May 2026 seminar abstract: 'a novel megawatt-scale, medium-voltage (MV) power conversion system based on a Variable Air Gap Solid-State Transformer architecture' aiming 'to reduce energy loss, footprint, and cost while enabling flexible, modular deployment'. SemiAnalysis (May 2026): 'Novos Power reports peak efficiencies over 98%'; 'concentrating on direct MV-input units that collapse the LV transformer and rectifier into a single device'; 'air cooling through proprietary insulation'. FedTech (February 2026) positions the same unit for defense: 'Their Variable Airgap Solid-State Transformer (VASST) system enables modular, rapid deployment at bases to deliver real-time voltage and frequency regulation during grid stress.' No datasheet, drawing, photograph of hardware, topology description, cell count, switching frequency, cooling specification, weight, footprint figure, certification target or delivery date has been published by the company or reported by anyone else.",
+   "highlights": [
+    "Direct medium-voltage input is the positioning that separates it from DG Matrix (whose shipping unit connects at 480 V) and aligns it with Heron Power and Amperesand — but the input range is stated three ways on the company's own channels ('13 - 48KV', 'the 35 kV line', and 'up to 10 MW' against '1–50 MW' for scale), and 48 kV lies above the 38 kV ceiling of UL 2877, the safety standard that would govern a medium-voltage power supply (UL's scope statement).",
+    "'Variable airgap' is the company's stated differentiator and it is undefined on the record: no company document, patent, application, paper or talk abstract explains what is varied, how, or why. Google Patents shows no filing assigned to Novos Power and none by the CTO on a solid-state or air-gap transformer as of 19 September 2026 (a 2025 filing would not publish before 2027).",
+    "Every performance figure is a company statement without a unit behind it: '≥98.5% peak efficiency' (company post), 'over 98%' (SemiAnalysis, reporting the company), '1000x faster', '25%' waste reduction and '50%' cost savings (site, no baseline defined), '50% footprint reduction' (a secondary summary of SemiAnalysis). The CTO's own July 2026 scoreboard is of him, not the product: '25 years in power electronics · 30 patents filed · 400 papers · h-index 47'.",
+    "Air cooling 'through proprietary insulation' (SemiAnalysis) would be a genuine difference from DG Matrix's liquid-cooled Interport and from the liquid-cooled cell stacks Heron and Amperesand describe, if it exists at medium voltage and megawatt scale — insulation coordination at 13–48 kV in air is the hard problem the claim names without solving on the record (analysis).",
+    "The only commercial offer on the record is the site's 'Join our early access program'; no customer, pilot, letter of intent, utility or hyperscaler engagement, price or lead time has been published."
+   ],
+   "positioning": "Fourth of the four SST startups SemiAnalysis names (with DG Matrix, Heron Power and Amperesand), and the only one with no funding round, no factory, no datasheet and no roster placement. Against Heron Link (4.2 MW, 34.5 kV, on NVIDIA's October 2025 list) and Amperesand (3.3 kV SiC platform, USD 80M Series A, Reno line) it claims the same direct MV-to-DC block with air rather than liquid cooling; against DG Matrix it claims medium-voltage input where DG Matrix ships low-voltage. Against the incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric, Mitsubishi Electric) it has no product to position. Its stated non-data-center markets — EV fast charging, microgrids, storage, on-site generation and, through FedTech, defense installations — mirror the multi-market pitch Amperesand (port charging) and DG Matrix (EV charging, behind-the-meter) each started with.",
+   "soldThrough": "Not disclosed. The site offers an 'early access program'; FedTech's studio offers 'visibility among Department of War (DoW) prime contractors and private-sector investors' and 'funding connections'. No channel, integrator, EPC or OEM partner is named.",
+   "targetSegments": [
+    "AI data centers (800 V DC bus architectures)",
+    "EV fast charging",
+    "Microgrids and energy storage",
+    "On-site generation",
+    "Defense installations (per FedTech)"
+   ],
+   "roadmap": "'With our 5 generations technical roadmap, we believe Novos Power has not just one product, but a rich architecture roadmap for the next decade of AI data center power' (company post, June 2026) — no generation is defined, dated or specified. No prototype, pilot, certification or delivery date has been announced."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "VASST — company-stated figures (no datasheet exists; every value is a claim from the channel named in the label)",
+   "specs": [
+    {
+     "band": "Electrical (claimed)",
+     "label": "Utility input — site",
+     "value": "13 - 48KV utility feeds, bypassing legacy 480V step-down transformers"
+    },
+    {
+     "band": "Electrical (claimed)",
+     "label": "Utility input — company post, July 2026",
+     "value": "directly from the 35 kV line to the GPU"
+    },
+    {
+     "band": "Electrical (claimed)",
+     "label": "DC operating range — company post, April 2026",
+     "value": "DC 400–1500 V operating range"
+    },
+    {
+     "band": "Electrical (claimed)",
+     "label": "Power ratings — company post, April 2026",
+     "value": "1–50 MW power ratings"
+    },
+    {
+     "band": "Electrical (claimed)",
+     "label": "Scale — LinkedIn company tagline",
+     "value": "scalable up to 10 MW"
+    },
+    {
+     "band": "Electrical (claimed)",
+     "label": "Peak efficiency — company post, April 2026",
+     "value": "≥98.5% peak efficiency"
+    },
+    {
+     "band": "Electrical (claimed)",
+     "label": "Peak efficiency — SemiAnalysis, May 2026",
+     "value": "reports peak efficiencies over 98%"
+    },
+    {
+     "band": "Design (claimed)",
+     "label": "Semiconductor",
+     "value": "high-frequency SiC"
+    },
+    {
+     "band": "Design (claimed)",
+     "label": "Cooling — SemiAnalysis, May 2026",
+     "value": "air cooling through proprietary insulation"
+    },
+    {
+     "band": "Design (claimed)",
+     "label": "Footprint — secondary summary of SemiAnalysis",
+     "value": "claiming a 50% footprint reduction"
+    },
+    {
+     "band": "Design (claimed)",
+     "label": "Redundancy — site",
+     "value": "high redundancy and hot-swap capability"
+    },
+    {
+     "band": "Design (claimed)",
+     "label": "Control — site",
+     "value": "on-board AI transforms reactive power management into proactive power management"
+    },
+    {
+     "band": "Performance (claimed)",
+     "label": "Dynamic response — site",
+     "value": "1000x faster than the current setup"
+    },
+    {
+     "band": "Performance (claimed)",
+     "label": "Losses — site",
+     "value": "Over the lifetime, we reduce power waste by 25%"
+    },
+    {
+     "band": "Performance (claimed)",
+     "label": "Cost — site",
+     "value": "50% cost savings between CapEx and OpEx"
+    },
+    {
+     "band": "Compliance",
+     "label": "Certification",
+     "value": "No standard, target date or NRTL is named in any company document (collection gap)"
+    }
+   ],
+   "notes": "No unit rating, topology, cell count, switching frequency, transformer frequency, weight, dimensions, enclosure rating, ambient range, THD, power factor or certification target is published. The input range is stated as 13–48 kV on the site and 35 kV in a later post; the scale as 1–50 MW in a post and 'up to 10 MW' in the LinkedIn tagline. 'Variable airgap' is not defined anywhere on the record. Compare the sibling dossiers: DG Matrix publishes two datasheets for its shipping 480 V unit (96–97% peak efficiency); Heron and Amperesand publish unit ratings and cell voltages. Nothing comparable exists here."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-07-02",
+   "category": "corporate",
+   "headline": "Company post: 'Novos Power's SST goes directly from the 35 kV line to the GPU — we power the AI racks'; the CTO's scoreboard '25 years in power electronics · 30 patents filed · 400 papers · h-index 47'; 'Small squad. Big mission.' — the last first-party activity on the record as of 19 September 2026",
+   "read": "Eleven weeks of silence after a post whose only figures describe the founder, not the product; the input voltage has moved from '13 - 48KV' to '35 kV' between the site and this post (analysis).",
+   "source": "https://www.linkedin.com/posts/novospower_solidstatetransformer_datacenter_aiinfrastructure-activity-7478500854996623360"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "other",
+   "headline": "Wins the UC San Diego 'Golden Ticket' at the San Diego Innovation Council's 2026 SDIC Showcase — 'six months of free access to UC San Diego's Horizon Accelerator, plus dedicated workspace for a physical sciences startup'; Connect Foundation calls it 'a cleantech company developing solid-state transformers and SDSU alum'",
+   "read": "The prize is workspace and accelerator access, not capital — the second non-cash award of the year, and the first tie to an incubator that an organiser page actually confirms (analysis).",
+   "source": "https://connect.org/sdic-showcase-highlights-the-power-of-san-diegos-innovation-network/"
+  },
+  {
+   "date": "2026-06-07",
+   "category": "market",
+   "headline": "Company post on the SemiAnalysis citation: 'Novos Power was cited multiple times, with diagrams and technical discussion presented alongside other major innovators'; 'we are building a direct medium-voltage to 800VDC SST architecture designed to simplify the power chain, reduce conversion stages, lower footprint, and support modular deployment'; 'With our 5 generations technical roadmap, we believe Novos Power has not just one product, but a rich architecture roadmap'",
+   "read": "The company's first explicit 800 V DC statement, and a roadmap of five generations announced before the first generation has a datasheet.",
+   "source": "https://www.linkedin.com/posts/novospower_inside-the-800vdc-revolution-part-1-activity-7469272279793811457"
+  },
+  {
+   "date": "2026-05-28",
+   "category": "other",
+   "headline": "CTO Chris Mi presents 'Medium voltage solid-state transformer for AI data centers' at Stanford's Smart Grid Seminar: 'a novel megawatt-scale, medium-voltage (MV) power conversion system based on a Variable Air Gap Solid-State Transformer architecture' to 'reduce energy loss, footprint, and cost while enabling flexible, modular deployment'; bio: 'founder and CTO of Novos Power'",
+   "read": "The most technical first-party description on the record is a seminar abstract, and it still does not say what the air gap varies or what the unit is rated at.",
+   "source": "https://events.stanford.edu/event/smart-grid-seminar-chris-mi"
+  },
+  {
+   "date": "2026-05-26",
+   "category": "market",
+   "headline": "SemiAnalysis 'Inside the 800VDC Revolution – Part 1' names Novos Power in the SST vendor set with DG Matrix, Heron Power and Amperesand: 'Novos Power reports peak efficiencies over 98%', 'is concentrating on direct MV-input units that collapse the LV transformer and rectifier into a single device', 'uses air cooling through proprietary insulation'; the acknowledgments thank 'DG Matrix, Novos Power, and Aran Industries'",
+   "read": "The company's entire analyst standing rests on this one piece, which it briefed; every other SST roundup of 2026 omits it (Power Electronics News ×3, TechCrunch ×2, Heatmap, mgrid, Bessemer).",
+   "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part"
+  },
+  {
+   "date": "2026-05-14",
+   "category": "other",
+   "headline": "CTO's Distinguished Colloquium at ShanghaiTech (SIST) with the same VASST abstract; bio: 'Co-Founder and CTO of Novos Power'; 'ranked the top 1% highly cited researchers in the world by Clarivate in 2025'",
+   "read": "The founder-scientist is the company's public face; the talks are academic, not commercial.",
+   "source": "https://sist.shanghaitech.edu.cn/sist_en/2026/0511/c11304a1121785/page.htm"
+  },
+  {
+   "date": "2026-05-08",
+   "category": "market",
+   "headline": "Joins the 2026 Generator Reliability Summit (13 May): 'Reliable power infrastructure is becoming mission-critical as AI data centers and large electrical loads scale rapidly'",
+   "read": "The audience is the backup-generation and reliability community — the buyers of the bridge-power and behind-the-meter block, not the hall-edge SST — consistent with a microgrid/defense-installation pitch (analysis).",
+   "source": "https://www.linkedin.com/posts/novospower_2026-generator-reliability-summit-grid-activity-7458412428788219904"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "corporate",
+   "headline": "Presents on Day 1 of the IEEE Entrepreneurship Hard Tech Venture Summit (SRI International, Menlo Park, 16–17 April): 'Selected by IEEE'; the post carries the company's only spec set (≥98.5% peak efficiency, 1–50 MW, DC 400–1500 V), the lineage claim ('backed by NASA, the U.S. Department of Energy, and the California Energy Commission — and incubated by LACI and FedTech'), the awards list ('1st place — FedTech Crucible', '1st place — Google Startups for Sustainability', 'Silicon Valley AI Summit Innovation Award') and the investors 'in attendance' (Intel Capital, Samsung Next, Bosch Ventures, Sony Semiconductors, TSVC, At One Ventures)",
+   "read": "A showcase selection, not an IEEE award; the investors listed attended the summit, not the company. The LACI claim is not borne out by LACI's cohort pages, which list ChargePodX (the CEO's prior company), and the Google and AI Summit awards have no organiser page (analysis).",
+   "source": "https://www.linkedin.com/posts/novospower_selected-by-ieee-presenting-on-day-1-activity-7449516378325434368"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "corporate",
+   "headline": "Platinum sponsor of SDSU's AI x Energy Summit (19–20 March, San Diego) alongside DG Matrix, SDG&E, WattEV and Vertiv; CEO Susan Linwood is the summit's Awards Chair; two 'Novos Power Inc.' staff — Naser Vosoughi Kurdkandi and Zhi Cao, both post-docs in the CTO's SDSU group — receive Outstanding Young Scientist awards",
+   "read": "The summit is organised from the CTO's department and chaired for awards by the CEO; it is the company's home venue, and its co-sponsor DG Matrix is its closest competitor.",
+   "source": "https://ai-energy.sdsu.edu/2026-awardees/"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "other",
+   "headline": "Wins FedTech's 2026 Crucible Ignitor pitch competition at the Warfighting Innovation Summit (La Quinta, California): 'Novos Power took top honors in FedTech's Ignitor studio, which is dedicated to emerging, early-stage concepts with high market potential'; FedTech: VASST 'enables modular, rapid deployment at bases to deliver real-time voltage and frequency regulation during grid stress'",
+   "read": "The first external recognition, from a defense-commercialisation studio; no cash prize is stated, and the product is pitched as a base microgrid device rather than an AI-hall SST.",
+   "source": "https://www.prnewswire.com/news-releases/novos-power-and-wearabledose-win-fedtechs-2026-crucible-competition-at-the-warfighting-innovation-summit-302699855.html"
+  },
+  {
+   "date": "2026-01-24",
+   "category": "corporate",
+   "headline": "Company circulates the AI x Energy Summit call for participation; questions 'may be directed to the Awards Chair, Susan Linwood (susan@novospower.com)'",
+   "read": "The company and the summit share an address book.",
+   "source": "https://www.linkedin.com/posts/novospower_you-are-invited-to-participate-in-theai-activity-7420715588471160832"
+  },
+  {
+   "date": "2025-11-07",
+   "category": "corporate",
+   "headline": "Novos Power Inc., a Delaware stock corporation, registers as a foreign corporation in California (entity B20250375580; principal office 6386 Alvarado Court S, Suite 200, San Diego; agent Susan Linwood, Palo Alto) — per a Secretary of State record mirror",
+   "read": "The entity's earliest verifiable date; no first-party page states when the company was founded.",
+   "source": "https://www.bizprofile.net/ca/san-diego/novos-power-inc"
+  },
+  {
+   "date": "2025-06-17",
+   "category": "corporate",
+   "headline": "LACI admits ChargePodX — Susan Linwood's earlier company — to Incubation Cohort 10 with the blurb 'cutting-edge power electronics that convert medium-voltage AC directly into DC, eliminating the need for bulky traditional transformers', for 'EV charging, data centers, and renewable energy infrastructure'",
+   "read": "The VASST pitch predates Novos Power under another company name; the 'incubated by LACI' claim traces here, not to a Novos Power cohort (analysis).",
+   "source": "https://laincubator.org/laci-welcomes-16-new-startups-to-incubation-cohort-10-spring-2025/"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Novos Power is pre-product and pre-funding. Basis: no datasheet, drawing or hardware photograph on any channel; no customer, pilot or letter of intent; no Form D (efts.sec.gov full-text search, 0 hits for the name in 2025–2026) and no round reported by any outlet; CB Insights' stage 'Biz Plan Competition'; a four-page Wix site last modified 20 March 2026 with placeholder copy ('© 2035', '123-456-7890') and an empty blog; LinkedIn '2-10 employees'. The two non-cash awards and the IEEE showcase are the whole of the external record.",
+  "(High confidence) We assess that the 'DOE- and NASA-funded' lineage describes the CTO's research portfolio, not a solid-state-transformer program. Basis: SDSU pages list the DOE GATE Center (electric-drive transportation), a NASA University Leadership Initiative eVTOL design-tools grant led by UC San Diego, and CEC battery grants; Google Patents and FreePatentsOnline return no transformer, air-gap or medium-voltage filing by him (his patents are wireless power transfer and battery management) and none assigned to Novos Power. The '300+ publications / 30+ patents' figure is his career total.",
+  "(Moderate confidence) We assess that the VASST is the ChargePodX product re-pointed from EV charging to AI data centers — the pivot DG Matrix made a year earlier. Basis: LACI's June 2025 blurb for ChargePodX (Linwood, CEO) already describes medium-voltage-AC-to-DC SiC power electronics 'eliminating the need for bulky traditional transformers'; the Novos site lists EV fast charging among its applications; the company's own 'incubated by LACI' claim matches ChargePodX's cohort, not a Novos Power one.",
+  "(Moderate confidence) We assess that 'variable airgap' most plausibly denotes an adjustable inductance in the converter's medium-frequency isolation transformer — an air gap sets a core's magnetizing and leakage inductance, and in a dual-active-bridge cell the series inductance sets how much power a given phase shift transfers, so varying it is one way to hold soft switching and control authority across the light-to-full load swings a GPU cluster produces. This is analysis: the company has disclosed no topology, and no patent, application, paper or talk abstract describes the mechanism. The CTO's published expertise in loosely coupled wireless-power coils — the extreme air-gap case — is consistent with the reading and does not confirm it.",
+  "(High confidence) We assess that Novos Power is absent from every NVIDIA-published 800 VDC list and from every 2026 SST roundup except SemiAnalysis. Basis: NVIDIA's May 2025 and October 2025 developer blogs and its August 2026 corporate post name no Novos Power; Power Electronics News' GTC 2026 list and its May 2026 'real-world SSTs' piece (which names Heron, DG Matrix, SolarEdge, Amperesand, Hyperscale Power and Enphase) omit it; so do TechCrunch (February and March 2026), Heatmap (April 2026), mgrid and Bessemer. SemiAnalysis's acknowledgments show the company briefed that piece.",
+  "(Moderate confidence) We assess that the near-term commercial path runs through accelerators, pitch competitions and defense installations rather than hyperscalers. Basis: FedTech's studio pitches VASST for 'defense installations' and 'bases'; the Golden Ticket delivers accelerator residency; the Generator Reliability Summit audience is the backup-power community; the only offer on the site is an 'early access program'. At the pace of the three funded siblings — USD 60–140M raised each, factories announced, and still no listed medium-voltage unit — a 2–10-person team without a round is several years from a certified 13–48 kV product; the '5 generations' roadmap has no dates because the first generation has none.",
+  "(Low confidence) We assess that the 48 kV upper bound is a marketing envelope rather than a design point: 46 kV is a subtransmission class above the 15/25/35 kV distribution classes at which US data centers are served, and UL 2877's scope stops at 38 kV, so a 48 kV-input unit would fall outside the medium-voltage power-supply standard as written. The later '35 kV line' wording is the plausible design target. No source states either.",
+  "INDICATORS TO WATCH — through Q2 2027: a priced round or Form D (converts Judgment 1); any published patent application naming Novos Power or a variable-air-gap transformer (tests Judgment 4 and dates the IP); a datasheet, prototype photograph, unit rating or test result from the Horizon Accelerator residency or an SDSU/UCSD demonstration (the first hardware evidence); a named pilot — defense base, microgrid, charging depot or data hall — from either party (tests Judgment 6); appearance on any NVIDIA page, OCP contributor list or trade-press SST roundup beyond SemiAnalysis (tests Judgment 5); a UL 2877 or UL 1741 target date; and the CEO's or CTO's departure from ChargePodX or SDSU roles, which would signal the company has become full-time."
+ ],
+ "relationships": [
+  {
+   "slug": "heron-power",
+   "type": "competitor",
+   "note": "Named together in SemiAnalysis's May 2026 SST vendor set; both claim the direct medium-voltage-to-800 V DC block, Heron with a 4.2 MW unit on NVIDIA's roster and a factory, Novos with claims.",
+   "context": "SemiAnalysis's 'Inside the 800VDC Revolution – Part 1' (26 May 2026) is the only source that places the two side by side: it records Heron Link's 98.5% MV-to-rack target and Heron's manufacturing plans next to 'Novos Power reports peak efficiencies over 98%' and its concentration on 'direct MV-input units'. Heron Power is on NVIDIA's October 2025 800 VDC ecosystem list; Novos Power is on no NVIDIA list. No source records any contact between the companies.",
+   "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+   "status": "active",
+   "since": "2026-05"
+  },
+  {
+   "slug": "amperesand",
+   "type": "competitor",
+   "note": "Named together in SemiAnalysis's May 2026 SST vendor set; both are direct medium-voltage SST platforms pitched at AI halls and charging, Amperesand with USD 80M and a Reno line, Novos with neither.",
+   "context": "SemiAnalysis lists 'Amperesand claims greater than 98.5%' beside 'Novos Power reports peak efficiencies over 98%' in its efficiency discussion and includes both in its vendor landscape. The Amperesand dossier records the same piece as the analyst recognition of the vendor set. Both companies list EV/port charging and storage among applications alongside data centers; Amperesand names UL 2877 and UL 1741 as certification targets, Novos names no standard. No source records any contact between the companies.",
+   "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+   "status": "active",
+   "since": "2026-05"
+  },
+  {
+   "slug": "dg-matrix",
+   "type": "competitor",
+   "note": "Closest analogue and closest competitor: SemiAnalysis contrasts DG Matrix's liquid cooling with Novos's air cooling; both are university-lineage SST startups that pivoted from EV charging to AI halls; DG Matrix co-sponsored the SDSU summit Novos sponsors.",
+   "context": "SemiAnalysis (26 May 2026) writes of the reliability question that vendors answer it differently, 'DG Matrix using integrated liquid cooling and Novos Power using air cooling through proprietary insulation', and thanks both companies in its acknowledgments. The difference in input voltage runs the other way: DG Matrix ships a 480 V-input unit with its medium-voltage Cell-MV dated 2028+, while Novos claims 13–48 kV input and ships nothing. DG Matrix appears on SDSU's AI x Energy Summit sponsor list next to Novos Power (the summit's platinum sponsor), so the two have shared a stage in the CTO's own department; no other contact is recorded.",
+   "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+   "status": "active",
+   "since": "2026-05"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "UL 2877 / UL 1741 / IEEE 1547 certification for medium-voltage power-conversion equipment",
+   "status": "proposed",
+   "exposure": "No company document names a safety standard, a certification target date or a Nationally Recognized Testing Laboratory. UL 2877's scope statement — 'power supplies having ac or dc input voltage ratings above 1000 V, up to 38 kV, and ac or dc output voltage ratings up to 38 kV' — would govern a 13–35 kV-input unit; the site's 48 kV upper bound lies above that ceiling. Grid-interactive behaviour at the point of common coupling would be tested to IEEE 1547 through the UL 1741 supplements. The three funded SST siblings each name their targets and none had completed a data-center SST listing as of May 2026 (Power Electronics News).",
+   "source": "https://www.shopulstandards.com/ProductDetail.aspx?productId=UL2877"
+  },
+  {
+   "regime": "Federal defense-innovation commercialisation channel (FedTech Crucible / Department of War prime contractors)",
+   "status": "in-effect",
+   "effectiveDate": "2026-02",
+   "exposure": "FedTech's release states that its Crucible winners gain 'visibility among Department of War (DoW) prime contractors and private-sector investors' and 'the exposure, guidance, and funding connections they need', and its own page pitches VASST for 'defense installations' and 'bases' — 'real-time voltage and frequency regulation during grid stress'. The Ignitor studio 'is dedicated to emerging, early-stage concepts with high market potential'; no contract, award value or program of record is stated.",
+   "mitigation": "None stated by the company beyond the award itself.",
+   "source": "https://www.prnewswire.com/news-releases/novos-power-and-wearabledose-win-fedtechs-2026-crucible-competition-at-the-warfighting-innovation-summit-302699855.html"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Susan Linwood",
+   "title": "Co-Founder and Chief Executive Officer",
+   "linkedin": "https://www.linkedin.com/in/susanlinwood/",
+   "background": [
+    "Co-Founder and CEO — Novos Power Inc. (2025–present); registered agent for the company's California filing (Palo Alto address); Awards Chair of SDSU's AI x Energy Summit 2026",
+    "Co-Founder and CEO — ChargePodX, Palo Alto (LACI Incubation Cohort 10, spring 2025; Stanford Smart Grid Seminar speaker, May 2024, on a 'Level 2.5 Charger' delivering 'fast DC charging at Level 3 speeds without requiring 480V three-phase infrastructure')",
+    "LinkedIn headline (search snippet): 'energy business development leader' who 'built a $550M commercial pipeline' — unverified, profile not readable from this environment",
+    "Stanford Graduate School of Business, class of 2024 (Stanford seminar page); company copy: 'a Stanford GSB alum and DeepTech entrepreneur', 'two-time entrepreneur'"
+   ]
+  },
+  {
+   "name": "Chris Mi (Chunting Chris Mi)",
+   "title": "Co-Founder and Chief Technology Officer",
+   "linkedin": "https://www.linkedin.com/in/chrismi/",
+   "background": [
+    "Co-Founder and CTO — Novos Power Inc. (2025–present; 'founder and CTO' per his May 2026 Stanford seminar bio); the company's technical public face (Stanford, ShanghaiTech and Data Center World talks, 2026)",
+    "Distinguished Professor of Electrical and Computer Engineering — San Diego State University (2015–present; named Distinguished Professor 2022); Director, DOE-funded GATE Center for Electric Drive Transportation (renamed the Caili and Daniel Chang Center, December 2023); 2024 SDSU Inventor of the Year",
+    "Professor — University of Michigan–Dearborn (2001–2015); Electrical Engineer — General Electric Canada; President and CTO — 1Power Solutions, Inc. (2008–2011); CTO — EV Safe Charge, Inc. (SDSU biography)",
+    "Fellow of IEEE and SAE; Editor, IEEE Transactions on Power Electronics (company post); 2019 IEEE PELS Emerging Technology Award; 2023 IEEE PELS Vehicle and Transportation Systems Achievement Award; Clarivate top-1% highly cited researcher (2025); Google Scholar ~39,000 citations, h-index 98; research record in wireless power transfer, battery management and electric-drive systems, with 'solid-state transformer' listed among Scholar interests",
+    "Ph.D. in Electrical Engineering — University of Toronto (2001); B.S. and M.S. — Northwestern Polytechnical University, Xi'an"
+   ]
+  },
+  {
+   "name": "Zhi Cao",
+   "title": "Staff (title not published) — listed as 'Novos Power Inc.' on SDSU's 2026 AI x Energy Summit awardee page",
+   "background": [
+    "Outstanding Young Scientist award, SDSU AI x Energy Summit (March 2026), affiliation 'Novos Power Inc.'",
+    "Post-doctoral researcher — Chris Mi's group, San Diego State University (from October 2022, per the group's people page)",
+    "Ph.D. — Southeast University, China (2022)"
+   ]
+  },
+  {
+   "name": "Naser Vosoughi Kurdkandi",
+   "title": "Staff (title not published) — listed as 'Novos Power Inc.' on SDSU's 2026 AI x Energy Summit awardee page",
+   "background": [
+    "Outstanding Young Scientist award, SDSU AI x Energy Summit (March 2026), affiliation 'Novos Power Inc.'",
+    "Post-doctoral researcher — Chris Mi's group, San Diego State University (group's people page)",
+    "Doctorate — University of Tabriz (group's people page)"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "Funding to date (public record, 19 September 2026)",
+    "periodType": "other",
+    "metrics": [
+     {
+      "name": "Equity raised",
+      "actual": "None disclosed. No round announced by the company or reported by any outlet; efts.sec.gov full-text search returns no Form D for 'Novos Power' in 2025–2026 (sec.gov itself is blocked from this environment); CB Insights records the stage as 'Biz Plan Competition' and lists the FedTech competition as its only 'investor'; PitchBook (aggregator, page blocked) reports 3 employees and no round",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No consensus, valuation or round exists for a company at this stage; the field is empty by the schema's expectations-honesty rule"
+     },
+     {
+      "name": "Non-dilutive awards and programs",
+      "actual": "FedTech 2026 Crucible Ignitor pitch competition — winner (February 2026; no cash prize stated; 'visibility among Department of War (DoW) prime contractors and private-sector investors'); UC San Diego Golden Ticket at the 2026 SDIC Showcase (June 2026; 'six months of free access to UC San Diego's Horizon Accelerator, plus dedicated workspace'); company-claimed '1st place — Google Startups for Sustainability' and 'Silicon Valley AI Summit Innovation Award' (no organiser page found); 'incubated by LACI and FedTech' (LACI's cohort pages list ChargePodX, not Novos Power)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Recognition without disclosed capital; the two verifiable awards are in-kind"
+     },
+     {
+      "name": "Grants and public funding",
+      "actual": "None found under the company's name: SBIR/STTR (sbir.gov blocked; web search empty), CalSEED, CEC EPIC, ARPA-E, NASA SBIR — zero hits. The 'DOE and NASA-funded research' the site cites is the CTO's university portfolio (DOE GATE Center; NASA ULI eVTOL grant led by UC San Diego, 2021; CEC battery grants 2020 and 2023), none of it an SST project",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company statement versus public record: the lineage is real but not transformer-specific"
+     }
+    ],
+    "commentary": "Private, pre-revenue and pre-round on every public source. Nothing a buyer or investor would price on — unit cost, measured efficiency, a prototype rating, a pilot, headcount beyond '2-10' — is disclosed. The dossier records the awards as their organisers describe them and the company's own claims as claims."
+   }
+  ],
+  "commentary": "There is no financial record to assess. The comparison that matters is with the three funded SST siblings: Heron Power (USD 140M Series B, Morgan Hill factory), Amperesand (USD 80M Series A, Reno line) and DG Matrix (USD 60M Series A, Morrisville plant) each raised institutional capital before publishing a datasheet, and none has a listed medium-voltage unit; Novos Power has raised nothing on the record and has published less. Expected fields are empty because no benchmark exists."
+ },
+ "sources": [
+  {
+   "label": "Novos Power — LinkedIn company post: 'SST goes directly from the 35 kV line to the GPU'; CTO scoreboard (25 years · 30 patents filed · 400 papers · h-index 47)",
+   "url": "https://www.linkedin.com/posts/novospower_solidstatetransformer_datacenter_aiinfrastructure-activity-7478500854996623360",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "Connect Foundation — SDIC Showcase highlights: UC San Diego Golden Ticket (Horizon Accelerator) won by NovosPower, 'co-founded by SDSU College of Engineering professor Chris Mi'",
+   "url": "https://connect.org/sdic-showcase-highlights-the-power-of-san-diegos-innovation-network/",
+   "date": "2026-06"
+  },
+  {
+   "label": "San Diego Innovation Council — 2026 SDIC Showcase (10 June 2026, San Diego Tech Center): Novos Power among 27 presenting companies, Cleantech/Bluetech track",
+   "url": "https://sdic.org/showcase-2026/",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Novos Power — LinkedIn company post on the SemiAnalysis citation: 'direct medium-voltage to 800VDC SST architecture'; '5 generations technical roadmap'",
+   "url": "https://www.linkedin.com/posts/novospower_inside-the-800vdc-revolution-part-1-activity-7469272279793811457",
+   "date": "2026-06-07"
+  },
+  {
+   "label": "Stanford Smart Grid Seminar — Chris Mi, 'Medium voltage solid-state transformer for AI data centers' (VASST abstract; bio 'founder and CTO of Novos Power')",
+   "url": "https://events.stanford.edu/event/smart-grid-seminar-chris-mi",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "SemiAnalysis — Inside the 800VDC Revolution, Part 1 (Novos Power 'reports peak efficiencies over 98%', 'direct MV-input units', 'air cooling through proprietary insulation'; acknowledgments)",
+   "url": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "BigGo Finance — summary of the SemiAnalysis piece (Novos Power 'claiming a 50% footprint reduction')",
+   "url": "https://finance.biggo.com/news/wpuCZZ4BDXrLZJaAMptK",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "Power Electronics News — Real-world solid-state transformers overcome barriers (names Heron, DG Matrix, SolarEdge, Amperesand, Hyperscale Power, Enphase; no Novos Power; no completed data-center SST certification)",
+   "url": "https://www.powerelectronicsnews.com/real-world-solid-state-transformers-overcome-barriers-to-meet-adoption-needs-of-ac-and-dc-networks/",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "ShanghaiTech SIST — Distinguished Colloquium, Chris Mi: 'Co-Founder and CTO of Novos Power'; VASST abstract; Clarivate top-1% 2025",
+   "url": "https://sist.shanghaitech.edu.cn/sist_en/2026/0511/c11304a1121785/page.htm",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Novos Power — LinkedIn company post: joining the 2026 Generator Reliability Summit",
+   "url": "https://www.linkedin.com/posts/novospower_2026-generator-reliability-summit-grid-activity-7458412428788219904",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Novos Power — LinkedIn company post: fireside chat with Dr. Arun Majumdar (Stanford Doerr School); 'building modular solid-state transformers (SSTs) for next-generation AI data centers'",
+   "url": "https://www.linkedin.com/posts/novospower_aiinfrastructure_energytransition_datacenters-activity-7458649648749068289",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Novos Power — LinkedIn company post: 'Selected by IEEE. Presenting on Day 1' (spec claims ≥98.5% / 1–50 MW / DC 400–1500 V; lineage, incubator and award claims; investors in attendance)",
+   "url": "https://www.linkedin.com/posts/novospower_selected-by-ieee-presenting-on-day-1-activity-7449516378325434368",
+   "date": "2026-04-13"
+  },
+  {
+   "label": "Novos Power — LinkedIn reshare of the IEEE Hard Tech Venture Summit 2026 startup feature ('Novos Power Inc. … next-generation Solid-State Transformer (SST) technology')",
+   "url": "https://www.linkedin.com/posts/novospower_novospower-energyinnovation-aiinfrastructure-activity-7448805145519333377",
+   "date": "2026-04-11"
+  },
+  {
+   "label": "Heatmap — America's transformer crisis has supercharged a wave of new startups (Ayr, DG Matrix, Heron Power; no Novos Power)",
+   "url": "https://heatmap.news/climate-tech/transformers-startups-ayr-dg-matrix-heron-power",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "SDSU AI x Energy Summit — 2026 awardees (Outstanding Young Scientist: Naser Vosoughi Kurdkandi and Zhi Cao, 'Novos Power Inc.')",
+   "url": "https://ai-energy.sdsu.edu/2026-awardees/",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Novos Power — website home (VASST; '13 - 48KV utility feeds'; '1000x faster'; '25%' / '50%'; contact San Diego, CA 92120) — sitemap last modified 2026-03-20",
+   "url": "https://www.novospower.com/",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Novos Power — website About ('We invented Variable Airgap Solid State Transformer (VASST) to bypass 480 V transformers with direct 13–48 kV utility feed interconnects')",
+   "url": "https://www.novospower.com/about",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Power Electronics News — Nvidia GTC 2026: power from grid to GPU (26 partners incl. DG Matrix and Heron Power; no Novos Power)",
+   "url": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "TechCrunch — Hyperscale Power is the latest startup to challenge transformer tech (SST startup field; no Novos Power)",
+   "url": "https://techcrunch.com/2026/03/10/hyperscale-power-is-the-latest-startup-to-challenge-140-year-old-transformer-tech/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "PR Newswire (FedTech) — Novos Power and WearableDose win FedTech's 2026 Crucible competition at the Warfighting Innovation Summit",
+   "url": "https://www.prnewswire.com/news-releases/novos-power-and-wearabledose-win-fedtechs-2026-crucible-competition-at-the-warfighting-innovation-summit-302699855.html",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "FedTech — 2026 Warfighting Innovation Summit recap ('Ignitor Winner – Novos Power'; VASST 'enables modular, rapid deployment at bases')",
+   "url": "https://www.fedtech.io/resource/2026-warfighting-innovation-summit",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "TechCrunch — Why investors are going gaga over solid-state transformers (no Novos Power)",
+   "url": "https://techcrunch.com/2026/02/20/why-investors-are-going-gaga-over-solid-state-transformers/",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "IEEE Entrepreneurship — Hard Tech Venture Summit, Silicon Valley, 16–17 April 2026 (SRI International; investor roster)",
+   "url": "https://entrepreneurship.ieee.org/2026_02_10_htvs-silicon-valley/",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Novos Power — LinkedIn company post: AI x Energy Summit call for participation (Awards Chair Susan Linwood, susan@novospower.com)",
+   "url": "https://www.linkedin.com/posts/novospower_you-are-invited-to-participate-in-theai-activity-7420715588471160832",
+   "date": "2026-01-24"
+  },
+  {
+   "label": "NVIDIA developer blog — Building the 800 VDC ecosystem for efficient, scalable AI factories (facility-tier partners incl. Heron Power; no Novos Power)",
+   "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+   "date": "2025-10-13"
+  },
+  {
+   "label": "LACI — 16 new startups in Incubation Cohort 10, spring 2025 (ChargePodX: 'convert medium-voltage AC directly into DC, eliminating the need for bulky traditional transformers')",
+   "url": "https://laincubator.org/laci-welcomes-16-new-startups-to-incubation-cohort-10-spring-2025/",
+   "date": "2025-06-17"
+  },
+  {
+   "label": "Stanford Smart Grid Seminar — Susan Linwood, Co-Founder and CEO of ChargePodX ('Level 2.5 Charger'; Stanford GSB class of 2024)",
+   "url": "https://events.stanford.edu/event/smart-grid-seminar-susan-linwood",
+   "date": "2024-05-02"
+  },
+  {
+   "label": "UC San Diego Jacobs School — NASA University Leadership Initiative award (USD 5.8M, eVTOL design tools; Chris Mi a team member)",
+   "url": "https://jacobsschool.ucsd.edu/news/release/3219",
+   "date": "2021-02-12"
+  },
+  {
+   "label": "bizprofile.net — Novos Power Inc., California Secretary of State record mirror (Delaware stock corporation; CA registration 2025-11-07, B20250375580; principal office and agent)",
+   "url": "https://www.bizprofile.net/ca/san-diego/novos-power-inc",
+   "party": "independent"
+  },
+  {
+   "label": "CB Insights — Novos Power (founded 2025; HQ 6386 Alvarado Court Suite 200; stage 'Biz Plan Competition') — aggregator",
+   "url": "https://www.cbinsights.com/company/novos-power",
+   "party": "independent"
+  },
+  {
+   "label": "PitchBook — Novos Power company profile (private; 3 employees; founded 2025) — aggregator snippet only, page returns 403",
+   "url": "https://pitchbook.com/profiles/company/1273969-09",
+   "party": "independent"
+  },
+  {
+   "label": "Novos Power — LinkedIn company page (tagline 'scalable up to 10 MW'; '2-10 employees'; Privately Held; posts)",
+   "url": "https://www.linkedin.com/company/novospower"
+  },
+  {
+   "label": "Novos Power — YouTube channel video 'Novos Power - The Solid State Transformer Company' (description and date unreadable from this environment)",
+   "url": "https://www.youtube.com/watch?v=lvOt_sEv2S8"
+  },
+  {
+   "label": "Chris Mi — SDSU biography (career history, GATE Center, awards; no mention of Novos Power or solid-state transformers)",
+   "url": "https://chrismi.sdsu.edu/biography/",
+   "party": "independent"
+  },
+  {
+   "label": "SDSU Electrical & Computer Engineering — Chris Mi faculty page",
+   "url": "https://electrical.sdsu.edu/people/chris-mi",
+   "party": "independent"
+  },
+  {
+   "label": "Google Scholar — Chris Mi (citations, h-index; 'solid-state transformer' among listed interests)",
+   "url": "https://scholar.google.com/citations?user=wAOPsG8AAAAJ",
+   "party": "independent"
+  },
+  {
+   "label": "SEC EDGAR full-text search (efts.sec.gov) — 'Novos Power', 2025-01-01 to 2026-09-19: no Form D or other filing",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Novos%20Power%22&dateRange=custom&startdt=2025-01-01&enddt=2026-09-19",
+   "party": "independent"
+  },
+  {
+   "label": "UL Standards — UL 2877, Outline of Investigation for Power Supplies, Medium Voltage (scope: input above 1000 V up to 38 kV)",
+   "url": "https://www.shopulstandards.com/ProductDetail.aspx?productId=UL2877",
+   "party": "independent"
+  }
+ ],
+ "lastUpdated": "2026-09-19",
+ "profileVersion": 1
+}

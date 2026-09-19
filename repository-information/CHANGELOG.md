@@ -3,11 +3,41 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.63r] — 2026-09-19 07:19:47 AM EST
+
+> **Prompt:** "profiler novos-power and profiler prep novos-power"
+
+### Added
+
+- **Novos Power dossier (profileVersion 1)** — `live-site-pages/profiler-data/novos-power.profile.json`, schema v7, `intel-briefing` style. Identity verified first (step 1a): **Novos Power Inc.**, Delaware stock corporation, California foreign registration B20250375580 filed 2025-11-07 (bizprofile.net CA SOS mirror — bizfileonline and OpenCorporates blocked; sec.gov/data.sec.gov blocked per `check-source-reachability.py`, efts.sec.gov full-text search answered with **no Form D**); principal office 6386 Alvarado Court S, Suite 200, San Diego (a professional building near SDSU, not an incubator address), mailing/agent address Palo Alto; private, independent, no ticker; co-founders Susan Linwood (CEO, Stanford GSB 2024, prior company ChargePodX) and Chris Mi (CTO, SDSU Distinguished Professor). Two parallel `general-purpose` research subagents — first-party 35 URLs (the four Wix pages, sitemap, eight LinkedIn company posts with dates decoded from activity IDs, YouTube oEmbed, the CTO's SDSU and seminar pages, SDSU AI x Energy Summit pages), third-party ~45 (SemiAnalysis, FedTech/PR Newswire, Connect Foundation/SDIC, LACI cohorts 10–12, three NVIDIA 800 VDC lists, twelve 2026 SST roundups, Google Patents/FreePatentsOnline, efts.sec.gov). What the corpus knew from SemiAnalysis alone ("direct MV-to-800VDC SST with 50% smaller footprint", "peak efficiencies over 98%") checks out as the company's briefing relayed by the analyst — the acknowledgments thank the company — and the "50%" wording traces to a BigGo summary of the piece, not to the text read. **Findings:** one product on the record (VASST) and it exists as claims only — no datasheet, topology, cell count, unit rating, certification target, delivery date, customer, pilot, round, investor or patent (Google Patents: zero filings assigned to Novos Power, none by the CTO on a transformer or air gap); the input range is stated three ways (13–48 kV site, 35 kV July post; 1–50 MW post vs "up to 10 MW" tagline), and 48 kV lies above UL 2877's 38 kV ceiling (UL scope statement fetched); the "DOE/NASA-funded" lineage is the CTO's portfolio (DOE GATE Center, NASA ULI eVTOL grant, CEC battery grants), not an SST project; "incubated by LACI" matches LACI's Cohort 10 entry for **ChargePodX** (the CEO's prior company, whose blurb already carries the MV-AC-to-DC pitch), not any Novos cohort; the Google and Silicon Valley AI Summit awards have no organiser page; Novos is absent from every NVIDIA list and every 2026 SST roundup except SemiAnalysis. One product line, 16 claimed-spec rows, 13 developments (2025-06-17 → 2026-07-02), 7 confidence-tagged key judgments + indicators, 3 competitor relationships (heron-power, amperesand, dg-matrix — SemiAnalysis as source), 2 policy exposures (UL 2877/1741/IEEE 1547; the FedTech defense channel), 4 decision makers (no company-published photos exist — initials avatars), 38 sources (first-party share 8% — the company publishes almost nothing; the dossier says so).
+- **Novos Power study guide (schema v2)** — `live-site-pages/profiler-data/novos-power.study.json`, 11 sections: reluctance and the air gap, what a variable gap could do (labelled as the guide's reading — the company has disclosed no mechanism), the load-step arithmetic behind "1000x faster" (table), air cooling at 13–48 kV as an insulation-coordination problem, the technology-readiness ladder for a pre-product company (table), where VASST would slot in, the industry map, the clock (timeline), 12 concept flashcards, 6-item quiz. Cross-refers to the Heron Power guide (cascaded-cell physics), the Amperesand guide (SiC, availability, charging) and the DG Matrix guide (multi-port topology, pulse loads, datasheet literacy, certification) instead of repeating them.
+- **Novos Power lesson plan** — `repository-information/study-prep/novos-power/novos-power-lesson-plan.md` (not deployed), eight modules + pacing + sources.
+- **Seven concepts registered** in `profiler-concepts.json`: `air-gap`, `control-bandwidth`, `insulation-coordination` (aliases BIL / basic insulation level), `leakage-inductance`, `magnetizing-inductance`, `reluctance`, `technology-readiness-level` (alias TRL) — registry now 1,477 concepts (the alias "stray inductance" was dropped from `leakage-inductance` because `parasitic-inductance` already owns it).
+- **Registry, calendar, segments** — `profiler-companies.json` entry (supplier; `aka[]` Novos Power Inc. / Novos Power, Inc. / NovosPower / VASST / Variable Airgap Solid State Transformer / Variable Air Gap Solid-State Transformer; `domains[]` novospower.com); `profiler-refresh-calendar.json` quarterly-cadence row with seven watch items (round/Form D, patent publication from 2027, first hardware evidence, a named pilot, roster placement, certification target and full-time signals, a Chesterton list of the four claims not to import); `profiler-segments.json` membership: `power-conversion-and-rack-power-silicon` **challenger** (basis cites the dossier's `ecosystemRole`; no adjacency — the dossier supports no in-hall, charging or storage product line).
+
+### Changed
+
+- **Corpus reconciliation (step 7)** — the display name and all six `aka[]` entries grepped across every dossier, study guide, lesson plan and `Classroom.gs`: **1 inbound mention** (`amperesand.profile.json`, the 2026-05-26 SemiAnalysis development naming Novos Power in the SST vendor set) — accurate against the new research, **0 dossiers changed**. `check-profiler-crossrefs.py` 440 pairs, 0 candidates.
+- **Segment lesson regenerated** (`scripts/build-classroom-segments.py --segment power-conversion-and-rack-power-silicon`): `segment-power-conversion-and-rack-power-silicon` now lists Novos Power in its player table, connections and self-test (changed sections per the generator: read-next, the-fence, the-numbers, the-players, who-is-connected; `profile:novos-power` pinned 2026-09-19).
+- **Graph rebuilt** — `profiler-graph.json` 1,481 edges (1,107 curated), 4,318 evidence items; registry synced (`novos-power` srcTotal 38, srcFirstPct 8, segments mirrored).
+- **README.md** — tree entries for the two Novos Power data files and the `study-prep/novos-power/` curriculum; Classroom GAS display v01.82g → v01.83g (`check-readme-tree.py --fix`); `Last updated` timestamp.
+
+#### `Classroom.gs` — v01.83g
+
+##### Changed
+
+- Curriculum updated — a market-structure lesson now lists a newly covered company in its segment roster, connections and self-test (`Classroomgs.changelog.md` 45/50; `Classroomgs.version.txt` |v01.83g|)
+
+### Notes
+
+- **Checker results:** `sync-profiler-registry.py` 1 entry updated then `--check` 0 drift, roster/calendar bijection 0 findings; `check-profiler-relationships.py` 0 findings; `check-profiler-crossrefs.py` 0 candidates; `check-profiler-study.py` 177 guides + 1,477 concepts, 0/0; `check-classroom-content.py` 70 lessons / 8 tracks / 220 gate cases, 0 errors 0 warnings; `check-classroom-pipeline.py --base origin/main` 10 paths, 9 findings — P1 developer paths (expected) and **P7 ×1** (`updated` did not advance on the regenerated segment lesson — the same-day-regeneration artifact recorded at v06.62r: this lesson was regenerated three times on 2026-09-19; no P3); `--selftest` 15 fixtures / 0 failures; `node --check` OK; `check-gas-inner-scripts.js` 9 files / 86 blocks clean; `check-readme-tree.py` 10 page + 8 GAS displays, 0 findings.
+- **CHANGELOG arithmetic:** pushed on 2026-09-19 EST beside v06.57r–v06.62r, so seven sections are exempt today — **105 raw / 98 non-exempt**, no rotation; counter `105/100`. The first push on a later EST day rotates the 2026-09-14 group of twenty.
 
 ## [v06.62r] — 2026-09-19 06:22:13 AM EST
 

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-19",
- "companies": 176,
+ "companies": 177,
  "edges": [
   {
    "a": "abb",
@@ -575,6 +575,27 @@
     }
    ],
    "last": "2025-10-13"
+  },
+  {
+   "a": "abb",
+   "b": "novos-power",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against the incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric, Mitsubishi Electric) it has no product to position.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "abb",
@@ -5893,6 +5914,72 @@
     }
    ],
    "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "novos-power",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named together in SemiAnalysis's May 2026 SST vendor set; both are direct medium-voltage SST platforms pitched at AI halls and charging, Amperesand with USD 80M and a Reno line, Novos with neither.",
+     "context": "SemiAnalysis lists 'Amperesand claims greater than 98.5%' beside 'Novos Power reports peak efficiencies over 98%' in its efficiency discussion and includes both in its vendor landscape. The Amperesand dossier records the same piece as the analyst recognition of the vendor set. Both companies list EV/port charging and storage among applications alongside data centers; Amperesand names UL 2877 and UL 1741 as certification targets, Novos names no standard. No source records any contact between the companies.",
+     "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "status": "active",
+     "since": "2026-05"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-26",
+     "text": "SemiAnalysis '800VDC Revolution' names Amperesand (>98.5%) with DG Matrix, Heron Power and Novos Power as the SST vendor set, sizes a 2030 SST market of ~USD 32B at USD 1.25M/MW, and cautions that SSTs 'lack field reliability data at datacenter scale and require active cooling' — Independent analyst recognition of the vendor set, with the reliability caveat that applies to every name on it.",
+     "src": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: NVIDIA's May 2025 and October 2025 developer blogs and its August 2026 corporate post name no Novos Power; Power Electronics News' GTC 2026 list and its May 2026 'real-world SSTs' piece (which names Heron, DG Matrix, SolarEdge, Amperesand, Hyperscale Power and Enphase) omit it; so do TechCrunch (February and March 2026), Heatmap (April 2026), mgrid and Bessemer.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Fourth of the four SST startups SemiAnalysis names (with DG Matrix, Heron Power and Amperesand), and the only one with no funding round, no factory, no datasheet and no roster placement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against Heron Link (4.2 MW, 34.5 kV, on NVIDIA's October 2025 list) and Amperesand (3.3 kV SiC platform, USD 80M Series A, Reno line) it claims the same direct MV-to-DC block with air rather than liquid cooling; against DG Matrix it claims medium-voltage input where DG Matrix ships low-voltage.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Its stated non-data-center markets — EV fast charging, microgrids, storage, on-site generation and, through FedTech, defense installations — mirror the multi-market pitch Amperesand (port charging) and DG Matrix (EV charging, behind-the-meter) each started with.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-26",
+     "text": "SemiAnalysis 'Inside the 800VDC Revolution – Part 1' names Novos Power in the SST vendor set with DG Matrix, Heron Power and Amperesand: 'Novos Power reports peak efficiencies over 98%', 'is concentrating on direct MV-input units that collapse the LV transformer and rectifier into a single device', 'uses air cooling through proprietary insulation'; the acknowledgments thank 'DG Matrix, Novos Power, and Aran Industries' — The company's entire analyst standing rests on this one piece, which it briefed; every other SST roundup of 2026 omits it (Power Electronics News ×3, TechCrunch ×2, Heatmap, mgrid, Bessemer).",
+     "src": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-26"
   },
   {
    "a": "amperesand",
@@ -22731,6 +22818,79 @@
   },
   {
    "a": "dg-matrix",
+   "b": "novos-power",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Closest analogue and closest competitor: SemiAnalysis contrasts DG Matrix's liquid cooling with Novos's air cooling; both are university-lineage SST startups that pivoted from EV charging to AI halls; DG Matrix co-sponsored the SDSU summit Novos sponsors.",
+     "context": "SemiAnalysis (26 May 2026) writes of the reliability question that vendors answer it differently, 'DG Matrix using integrated liquid cooling and Novos Power using air cooling through proprietary insulation', and thanks both companies in its acknowledgments. The difference in input voltage runs the other way: DG Matrix ships a 480 V-input unit with its medium-voltage Cell-MV dated 2028+, while Novos claims 13–48 kV input and ships nothing. DG Matrix appears on SDSU's AI x Energy Summit sponsor list next to Novos Power (the summit's platinum sponsor), so the two have shared a stage in the CTO's own department; no other contact is recorded.",
+     "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "status": "active",
+     "since": "2026-05"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the VASST is the ChargePodX product re-pointed from EV charging to AI data centers — the pivot DG Matrix made a year earlier.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: NVIDIA's May 2025 and October 2025 developer blogs and its August 2026 corporate post name no Novos Power; Power Electronics News' GTC 2026 list and its May 2026 'real-world SSTs' piece (which names Heron, DG Matrix, SolarEdge, Amperesand, Hyperscale Power and Enphase) omit it; so do TechCrunch (February and March 2026), Heatmap (April 2026), mgrid and Bessemer.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Fourth of the four SST startups SemiAnalysis names (with DG Matrix, Heron Power and Amperesand), and the only one with no funding round, no factory, no datasheet and no roster placement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against Heron Link (4.2 MW, 34.5 kV, on NVIDIA's October 2025 list) and Amperesand (3.3 kV SiC platform, USD 80M Series A, Reno line) it claims the same direct MV-to-DC block with air rather than liquid cooling; against DG Matrix it claims medium-voltage input where DG Matrix ships low-voltage.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Its stated non-data-center markets — EV fast charging, microgrids, storage, on-site generation and, through FedTech, defense installations — mirror the multi-market pitch Amperesand (port charging) and DG Matrix (EV charging, behind-the-meter) each started with.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-26",
+     "text": "SemiAnalysis 'Inside the 800VDC Revolution – Part 1' names Novos Power in the SST vendor set with DG Matrix, Heron Power and Amperesand: 'Novos Power reports peak efficiencies over 98%', 'is concentrating on direct MV-input units that collapse the LV transformer and rectifier into a single device', 'uses air cooling through proprietary insulation'; the acknowledgments thank 'DG Matrix, Novos Power, and Aran Industries' — The company's entire analyst standing rests on this one piece, which it briefed; every other SST roundup of 2026 omits it (Power Electronics News ×3, TechCrunch ×2, Heatmap, mgrid, Bessemer).",
+     "src": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "Platinum sponsor of SDSU's AI x Energy Summit (19–20 March, San Diego) alongside DG Matrix, SDG&E, WattEV and Vertiv; CEO Susan Linwood is the summit's Awards Chair; two 'Novos Power Inc.' staff — Naser Vosoughi Kurdkandi and Zhi Cao, both post-docs in the CTO's SDSU group — receive Outstanding Young Scientist awards — The summit is organised from the CTO's department and chaired for awards by the CEO; it is the company's home venue, and its co-sponsor DG Matrix is its closest competitor.",
+     "src": "https://ai-energy.sdsu.edu/2026-awardees/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-26"
+  },
+  {
+   "a": "dg-matrix",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -25054,6 +25214,27 @@
      "where": "Capabilities · Medium-voltage vacuum circuit breakers",
      "date": "",
      "text": "Profiled alongside Powell Industries, ABB, Siemens, Schneider Electric, Eaton, GE Vernova, Hitachi Energy and Toshiba International in Mordor Intelligence's North America medium-voltage switchgear roster, where the top five are said to control roughly 55-60% of the market.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
+   "b": "novos-power",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against the incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric, Mitsubishi Electric) it has no product to position.",
      "src": "",
      "from": "b"
     }
@@ -32623,6 +32804,27 @@
   },
   {
    "a": "ge-vernova",
+   "b": "novos-power",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against the incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric, Mitsubishi Electric) it has no product to position.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "ge-vernova",
    "b": "nrg-energy",
    "curated": {
     "b": {
@@ -34062,6 +34264,34 @@
     }
    ],
    "last": "2025-12-08"
+  },
+  {
+   "a": "google",
+   "b": "novos-power",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: no datasheet, topology, cell count, switching frequency, unit rating, test result, delivery date, price, customer, pilot, investor or round exists in any source; sec.gov is blocked from this environment but efts.sec.gov full-text search returns no Form D; the Delaware record, the Google and Silicon Valley AI Summit awards and the LACI incubation claim could not be verified from any organiser page (LACI's three 2025–2026 cohort lists carry ChargePodX, not Novos Power).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: SDSU pages list the DOE GATE Center (electric-drive transportation), a NASA University Leadership Initiative eVTOL design-tools grant led by UC San Diego, and CEC battery grants; Google Patents and FreePatentsOnline return no transformer, air-gap or medium-voltage filing by him (his patents are wireless power transfer and battery management) and none assigned to Novos Power.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-16",
+     "text": "Presents on Day 1 of the IEEE Entrepreneurship Hard Tech Venture Summit (SRI International, Menlo Park, 16–17 April): 'Selected by IEEE'; the post carries the company's only spec set (≥98.5% peak efficiency, 1–50 MW, DC 400–1500 V), the lineage claim ('backed by NASA, the U.S. Department of Energy, and the California Energy Commission — and incubated by LACI and FedTech'), the awards list ('1st place — FedTech Crucible', '1st place — Google Startups for Sustainability', 'Silicon Valley AI Summit Innovation Award') and the investors 'in attendance' (Intel Capital, Samsung Next, Bosch Ventures, Sony Semiconductors, TSVC, At One Ventures) — A showcase selection, not an IEEE award; the investors listed attended the summit, not the company. The LACI claim is not borne out by LACI's cohort pages, which list ChargePodX (the CEO's prior company), and the Google and AI Summit awards have no organiser page (analysis).",
+     "src": "https://www.linkedin.com/posts/novospower_selected-by-ieee-presenting-on-day-1-activity-7449516378325434368",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-16"
   },
   {
    "a": "google",
@@ -35977,6 +36207,37 @@
   },
   {
    "a": "heron-power",
+   "b": "novos-power",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named together in SemiAnalysis's May 2026 SST vendor set; both claim the direct medium-voltage-to-800 V DC block, Heron with a 4.2 MW unit on NVIDIA's roster and a factory, Novos with claims.",
+     "context": "SemiAnalysis's 'Inside the 800VDC Revolution – Part 1' (26 May 2026) is the only source that places the two side by side: it records Heron Link's 98.5% MV-to-rack target and Heron's manufacturing plans next to 'Novos Power reports peak efficiencies over 98%' and its concentration on 'direct MV-input units'. Heron Power is on NVIDIA's October 2025 800 VDC ecosystem list; Novos Power is on no NVIDIA list. No source records any contact between the companies.",
+     "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "status": "active",
+     "since": "2026-05"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Fourth of the four SST startups SemiAnalysis names (with DG Matrix, Heron Power and Amperesand), and the only one with no funding round, no factory, no datasheet and no roster placement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-26",
+     "text": "SemiAnalysis 'Inside the 800VDC Revolution – Part 1' names Novos Power in the SST vendor set with DG Matrix, Heron Power and Amperesand: 'Novos Power reports peak efficiencies over 98%', 'is concentrating on direct MV-input units that collapse the LV transformer and rectifier into a single device', 'uses air cooling through proprietary insulation'; the acknowledgments thank 'DG Matrix, Novos Power, and Aran Industries' — The company's entire analyst standing rests on this one piece, which it briefed; every other SST roundup of 2026 omits it (Power Electronics News ×3, TechCrunch ×2, Heatmap, mgrid, Bessemer).",
+     "src": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-26"
+  },
+  {
+   "a": "heron-power",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -36306,6 +36567,27 @@
     }
    ],
    "last": "2025-10-13"
+  },
+  {
+   "a": "hitachi-energy",
+   "b": "novos-power",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against the incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric, Mitsubishi Electric) it has no product to position.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "hitachi-energy",
@@ -45474,6 +45756,20 @@
   },
   {
    "a": "mitsubishi-electric",
+   "b": "novos-power",
+   "evid": [
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against the incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric, Mitsubishi Electric) it has no product to position.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "mitsubishi-electric",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -46894,6 +47190,111 @@
     }
    ],
    "last": "2026-06-11"
+  },
+  {
+   "a": "novos-power",
+   "b": "nvidia",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is not a battery, switchgear, UPS or rack power-shelf vendor, and it is absent from every NVIDIA-published 800 VDC list.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that Novos Power is absent from every NVIDIA-published 800 VDC list and from every 2026 SST roundup except SemiAnalysis.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: NVIDIA's May 2025 and October 2025 developer blogs and its August 2026 corporate post name no Novos Power; Power Electronics News' GTC 2026 list and its May 2026 'real-world SSTs' piece (which names Heron, DG Matrix, SolarEdge, Amperesand, Hyperscale Power and Enphase) omit it; so do TechCrunch (February and March 2026), Heatmap (April 2026), mgrid and Bessemer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "INDICATORS TO WATCH — through Q2 2027: a priced round or Form D (converts Judgment 1); any published patent application naming Novos Power or a variable-air-gap transformer (tests Judgment 4 and dates the IP); a datasheet, prototype photograph, unit rating or test result from the Horizon Accelerator residency or an SDSU/UCSD demonstration (the first hardware evidence); a named pilot — defense base, microgrid, charging depot or data hall — from either party (tests Judgment 6); appearance on any NVIDIA page, OCP contributor list or trade-press SST roundup beyond SemiAnalysis (tests Judgment 5); a UL 2877 or UL 1741 target date; and the CEO's or CTO's departure from ChargePodX or SDSU roles, which would signal the company has become full-time.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against Heron Link (4.2 MW, 34.5 kV, on NVIDIA's October 2025 list) and Amperesand (3.3 kV SiC platform, USD 80M Series A, Reno line) it claims the same direct MV-to-DC block with air rather than liquid cooling; against DG Matrix it claims medium-voltage input where DG Matrix ships low-voltage.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "novos-power",
+   "b": "power-electronics",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: NVIDIA's May 2025 and October 2025 developer blogs and its August 2026 corporate post name no Novos Power; Power Electronics News' GTC 2026 list and its May 2026 'real-world SSTs' piece (which names Heron, DG Matrix, SolarEdge, Amperesand, Hyperscale Power and Enphase) omit it; so do TechCrunch (February and March 2026), Heatmap (April 2026), mgrid and Bessemer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-26",
+     "text": "SemiAnalysis 'Inside the 800VDC Revolution – Part 1' names Novos Power in the SST vendor set with DG Matrix, Heron Power and Amperesand: 'Novos Power reports peak efficiencies over 98%', 'is concentrating on direct MV-input units that collapse the LV transformer and rectifier into a single device', 'uses air cooling through proprietary insulation'; the acknowledgments thank 'DG Matrix, Novos Power, and Aran Industries' — The company's entire analyst standing rests on this one piece, which it briefed; every other SST roundup of 2026 omits it (Power Electronics News ×3, TechCrunch ×2, Heatmap, mgrid, Bessemer).",
+     "src": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "from": "a"
+    }
+   ],
+   "last": "2026-05-26"
+  },
+  {
+   "a": "novos-power",
+   "b": "schneider-electric",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Novos Power as a pre-product entrant in the hall-edge power-conversion layer — a claimed direct medium-voltage (13–48 kV) to DC solid-state transformer that would compete with Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block, and with the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric) that sit on NVIDIA's facility-tier roster.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Variable Airgap Solid State Transformer (VASST) — medium-voltage solid-state transformer platform (pre-product)",
+     "date": "",
+     "text": "Against the incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider Electric, Mitsubishi Electric) it has no product to position.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "novos-power",
+   "b": "vertiv",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "Platinum sponsor of SDSU's AI x Energy Summit (19–20 March, San Diego) alongside DG Matrix, SDG&E, WattEV and Vertiv; CEO Susan Linwood is the summit's Awards Chair; two 'Novos Power Inc.' staff — Naser Vosoughi Kurdkandi and Zhi Cao, both post-docs in the CTO's SDSU group — receive Outstanding Young Scientist awards — The summit is organised from the CTO's department and chaired for awards by the CEO; it is the company's home venue, and its co-sponsor DG Matrix is its closest competitor.",
+     "src": "https://ai-energy.sdsu.edu/2026-awardees/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-19"
   },
   {
    "a": "nrg-energy",

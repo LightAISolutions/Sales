@@ -1,0 +1,393 @@
+{
+ "schemaVersion": 2,
+ "slug": "novos-power",
+ "title": "Novos Power — Technology Study Guide",
+ "lastUpdated": "2026-09-19",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a claim, not yet a machine",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Novos Power's product exists as a name — Variable Airgap Solid State Transformer — and a set of figures. This guide teaches what the name could mean physically, what the figures would have to prove, and how to read a company at this stage without being told what to think.",
+   "ps": [
+    "Three guides already teach most of the {{SST}} story. The Heron Power guide teaches the machine — why a kilohertz {{medium-frequency transformer}} fits in a suitcase, the three-stage {{cascaded H-bridge}} architecture, the SST-versus-{{transformer-rectifier unit}} choice at the hall edge. The Amperesand guide teaches {{SiC}} device classes, five-nines {{availability}} arithmetic and the bidirectional storage case. The DG Matrix guide teaches the {{multi-port SST}}, 480 V versus 34.5 kV input, {{pulse load}}s and datasheet literacy. Read those first if they are new; this guide does not repeat them.",
+    "This guide owns what none of them covers. What an {{air gap}} does inside a magnetic core, and why a converter designer would ever want to change it — the physics behind the one word in the product's name that is not generic. What a load step actually demands of a converter's {{control bandwidth}}, and what '1000x faster' would have to mean. Why cooling a 13–48 kV converter in air is an {{insulation coordination}} problem before it is a thermal one. And how to place a two-to-ten-person university spin-out with no datasheet on the {{technology readiness level}} ladder, next to three funded rivals that are themselves still pre-listing.",
+    "It assumes high-school physics and nothing about power electronics. Where the company has said nothing, the guide says so and teaches the physics the claim rests on."
+   ]
+  },
+  {
+   "id": "reluctance-and-the-gap",
+   "title": "Reluctance and the gap: why a slice of air changes everything",
+   "kind": "prose",
+   "read": "Magnetic flux flows around a core the way current flows around a circuit, and a millimetre of air is the largest resistor in the loop.",
+   "ps": [
+    "A coil wound on an iron or ferrite core pushes magnetic flux around the core the way a battery pushes current around a wire. The magnetic equivalent of resistance is {{reluctance}}: iron and ferrite have very little, air has thousands of times more. So if the core is cut and a thin spacer inserted, the {{air gap}} — however short — dominates the total reluctance of the loop, and the coil's inductance, which is turns squared divided by reluctance, drops in proportion to the gap length.",
+    "Why would anyone weaken a magnetic circuit on purpose? Because a gapped core stores energy. Flux in iron costs almost nothing to establish and stores almost nothing; flux across air stores energy in proportion to the gap volume, and the core can carry far more current before it saturates. That is why every inductor in a power converter has a gap and every ordinary {{transformer}} has none: a transformer's job is to pass energy through, not to hold it, so it wants the highest {{magnetizing inductance}} it can get and therefore no gap at all.",
+    "The trade is exact. A gap lowers the magnetizing inductance, so more current is needed just to set up the flux — current that does no useful work and heats the windings. It also changes the {{leakage inductance}}: the part of the field that links one winding but not the other, which acts like a small inductor in series with the transformer. In a 60 Hz transformer leakage is a nuisance that drops the voltage under load. In a kilohertz converter it is a design element, and the gap is one of the knobs that sets it.",
+    "Hold on to the two numbers a gap moves: magnetizing inductance (how much current the transformer wastes) and leakage inductance (how much series inductance the converter sees). Everything a 'variable airgap' could mean lives in those two quantities."
+   ]
+  },
+  {
+   "id": "what-a-variable-gap-could-do",
+   "title": "What a variable gap could do — and what Novos has not said",
+   "kind": "prose",
+   "read": "In a dual-active-bridge cell the series inductance sets how much power a given phase shift transfers. Make it adjustable and the converter's operating range moves with the load. That is a plausible reading of the name; it is not a disclosure.",
+   "ps": [
+    "Inside every SST cell the isolation stage is some form of {{dual active bridge}}: two switch bridges facing each other across a medium-frequency transformer, power flowing from the bridge that leads in phase to the one that lags. The amount of power a given phase shift moves is inversely proportional to the inductance in series with the transformer — the leakage inductance plus any added coil. A small inductance means high power capability but coarse control and heavy circulating currents at light load; a large inductance means fine control at light load but a ceiling on peak power. A fixed inductance is a compromise struck at the factory for one expected load.",
+    "A GPU hall does not offer one expected load. The DG Matrix guide teaches the {{pulse load}}: thousands of accelerators stepping between a low and a high draw several times a second, so the converter spends its life swinging between a light load where {{soft switching}} is hard to hold and a full load where the inductance must not limit it. An inductance that could change with the load — larger when light, smaller when heavy — would let one cell keep its efficiency and its control authority across the whole swing. Mechanically moving a gap, or magnetically biasing a core to change its effective gap, are the two classical ways to build a variable inductor, and both appear in the patent literature for resonant and dual-active-bridge converters.",
+    "That is the reading this guide offers, and it is analysis. Novos Power has published no topology, no drawing and no paper. Its CTO's seminar abstract says only 'a novel megawatt-scale, medium-voltage power conversion system based on a Variable Air Gap Solid-State Transformer architecture', and no patent or application on such a transformer is visible under his name or the company's. His published research is in wireless power transfer — inductively coupled coils across a large air gap, the extreme case of a gapped magnetic circuit — which makes the reading plausible and does not confirm it.",
+    "Two questions test any explanation the company eventually gives. Which inductance does the gap vary — magnetizing, leakage, or an external resonant element — and what actuates it: a motor, a magnetic bias winding, or a set of switched gap positions? And what does the variation buy that a fixed design with a wider switching-frequency range would not? Until those are answered, 'variable airgap' is a name."
+   ]
+  },
+  {
+   "id": "load-step-arithmetic",
+   "title": "What '1000x faster' would have to mean",
+   "kind": "table",
+   "read": "Every stage between the utility and the GPU answers a load step on its own clock. Line them up and the claim becomes a question with units.",
+   "intro": "The site says the converter is '1000x faster than the current setup' at holding voltage through GPU load swings. No baseline is given. Here is what each element of a conventional chain and of an SST can do, so the claim can be asked properly.",
+   "cols": [
+    "Element",
+    "How it answers a load step",
+    "Typical timescale",
+    "What to ask Novos"
+   ],
+   "rows": [
+    [
+     "60 Hz utility transformer",
+     "Passively — its {{leakage inductance}} drops voltage in proportion to the current change; nothing corrects it",
+     "Instant sag, held until the load changes back; no control loop",
+     "'Faster than' a device with no loop is not a comparison; what is the reference?"
+    ],
+    [
+     "Rectifier / UPS front end",
+     "A control loop adjusts the switches; its {{control bandwidth}} is a fraction of the switching frequency (silicon IGBTs: low kilohertz)",
+     "Milliseconds to correct; capacitors on the {{DC link}} cover the gap",
+     "Is the '1000x' against a UPS loop, a transformer, or the grid?"
+    ],
+    [
+     "Battery in a UPS",
+     "Chemistry and its converter follow the demand",
+     "Milliseconds; fine for outages, coarse for a waveform",
+     "Is storage inside the unit, and what kind?"
+    ],
+    [
+     "SiC solid-state transformer cell",
+     "A loop running at tens of kilohertz switching, with a {{DC link}} in every cell",
+     "Tens of microseconds to correct; the cell's own capacitors cover the first microseconds",
+     "What is the switching frequency and the closed-loop bandwidth?"
+    ],
+    [
+     "Capacitive sidecar at the rack",
+     "Stored charge next to the load, no loop needed for the first pulse",
+     "Microseconds; sized in kilojoules per pulse (DG Matrix guide)",
+     "Does VASST include rack-side storage, or does it end at the hall edge?"
+    ],
+    [
+     "The pulse itself",
+     "A 500 kW step over 20 ms is 10 kJ; a cluster steps several times a second",
+     "Milliseconds, repeated",
+     "At 1–50 MW, how much energy does the unit hold, and where?"
+    ]
+   ]
+  },
+  {
+   "id": "air-cooling-at-medium-voltage",
+   "title": "Air cooling at 13–48 kV: an insulation problem before a thermal one",
+   "kind": "prose",
+   "read": "SemiAnalysis records that Novos cools in air 'through proprietary insulation' where DG Matrix cools with liquid. At tens of kilovolts, air is the hard medium.",
+   "ps": [
+    "Two things must be kept apart inside a medium-voltage converter: heat from the semiconductors and the electric field from the voltage. Liquid cooling solves the first by carrying heat away in a sealed loop and can help with the second, because a dielectric fluid or a potted, sealed cell tolerates a stronger field than open air. Air cooling puts the heat and the field in the same medium, and air breaks down at roughly 3 kV per millimetre in clean, dry conditions — less with dust, humidity or altitude.",
+    "{{Insulation coordination}} is the discipline that sizes the gaps. A 15 kV-class piece of equipment carries a basic insulation level of 95 kV — the lightning surge it must survive; a 35 kV class carries 150 kV or more. Those ratings set the {{clearance}} through air and the {{creepage}} along surfaces between every live part and every grounded one, and they grow faster than the working voltage. That is why a 35 kV air-insulated switchgear cubicle is the size of a wardrobe, and why the cascaded-cell SSTs the Heron guide teaches surround each cell with its own insulation system.",
+    "'Proprietary insulation' is therefore the interesting phrase in the SemiAnalysis line, not 'air cooling'. An SST that could hold the medium-voltage stack apart in air at a useful power density would avoid the coolant loop, the pump, the leak risk and the maintenance the liquid-cooled rivals carry — a genuine difference if it exists. The questions are concrete: what is the BIL of the design, what material does the insulation use, how does the cell stack meet the creepage and clearance tables at 35 kV, and what is the rated ambient and altitude. None is on the record.",
+    "One more number sits oddly. The site's upper bound of 48 kV is above the 38 kV where UL 2877 — the medium-voltage power-supply standard the DG Matrix guide teaches — stops, and 46 kV is a subtransmission class rather than the 15, 25 or 35 kV classes at which US data centers are served. The company's later post says '35 kV line'. Read the 48 kV as an envelope and the 35 kV as the likely design point, and ask which one the insulation was designed for."
+   ]
+  },
+  {
+   "id": "reading-a-pre-product-company",
+   "title": "Reading a pre-product company: the readiness ladder",
+   "kind": "table",
+   "read": "A company with no datasheet is still a company with a position on a ladder. Place each piece of Novos Power's record on the rung it actually proves.",
+   "intro": "The {{technology readiness level}} scale was built for exactly this situation — separating a proven principle from a working prototype from a product. Each row takes something the company or its observers have said and asks which rung it establishes.",
+   "cols": [
+    "Evidence on the record",
+    "Rung it proves",
+    "What would move it up"
+   ],
+   "rows": [
+    [
+     "CTO's seminar abstract: 'a novel megawatt-scale, medium-voltage power conversion system based on a Variable Air Gap SST architecture'",
+     "TRL 2–3 — a formulated concept with the principle described in a talk",
+     "A paper or patent application with a topology, a simulation, a bench result"
+    ],
+    [
+     "Spec claims: ≥98.5% peak efficiency, 1–50 MW, DC 400–1500 V, 13–48 kV in",
+     "No rung — targets are not measurements",
+     "A datasheet with a measured efficiency curve at a stated rating"
+    ],
+    [
+     "Pitch-competition wins (FedTech Crucible; UCSD Golden Ticket) and an IEEE showcase slot",
+     "Commercial signal, not technical — juries judge a pitch, not a unit",
+     "Accelerator residency producing a demonstrator"
+    ],
+    [
+     "'Incubated by LACI and FedTech'; 'DOE and NASA-funded research'",
+     "Lineage claims; LACI's cohort pages carry the CEO's prior company, and the DOE/NASA work is the CTO's portfolio, not an SST project",
+     "A grant, cohort or program page naming Novos Power for this technology"
+    ],
+    [
+     "SemiAnalysis: 'reports peak efficiencies over 98%', 'air cooling through proprietary insulation'",
+     "An analyst relaying the company's briefing — the acknowledgments say so",
+     "An independent test, a customer, or a second outlet with its own reporting"
+    ],
+    [
+     "Two–ten employees, no round, four-page site, empty blog, '5 generations' roadmap with no dates",
+     "Pre-seed stage; the roadmap is aspiration",
+     "A priced round, a Form D, hires beyond the founders' lab"
+    ],
+    [
+     "The funded rivals: Heron (USD 140M, factory), Amperesand (USD 80M, Reno line), DG Matrix (USD 60M, shipping a 480 V unit pre-certification)",
+     "TRL 5–7 for the siblings, and none has a listed medium-voltage unit",
+     "For Novos: reaching the rung the siblings reached two to three years and USD 60–140M ago"
+    ]
+   ]
+  },
+  {
+   "id": "where-vasst-would-slot-in",
+   "title": "Where VASST would slot in, and what it would displace",
+   "kind": "prose",
+   "read": "If the claims hold, the unit sits exactly where Heron Link and Amperesand's platform sit: at the hall edge, replacing the utility transformer, rectifier and UPS. If they do not, it sits nowhere yet.",
+   "ps": [
+    "Take the company's description at face value and trace the power path. A 13–35 kV feeder enters the unit directly, so the line-frequency transformer — the long-lead item the whole 'speed to power' argument concerns — is gone, as it is for Heron and Amperesand and is not for DG Matrix's shipping 480 V unit. The unit regulates a DC output somewhere in 400–1,500 V, so at 800 V it feeds the {{800 VDC}} bus NVIDIA has specified and the rectifier and UPS in the conventional chain are gone too. 'High redundancy and hot-swap capability' says the unit is built from modules that can be replaced live, as every cascaded-cell design is. At 1–50 MW the range spans a single hall block to a small campus.",
+    "The stated applications beyond the hall — EV fast charging, microgrids, energy storage, on-site generation, defense installations — are the same list Amperesand (port charging) and DG Matrix (EV charging, behind-the-meter) each carried before a data-center customer existed, and for the same reason: a medium-voltage-to-DC converter is a platform, and a startup pitches it wherever a buyer will listen. FedTech's framing — 'modular, rapid deployment at bases to deliver real-time voltage and frequency regulation during grid stress' — is the microgrid version of the same box.",
+    "What the record does not let you place is scale and form. No unit rating, cell count, enclosure, weight or footprint is published, so the unit cannot be compared with Heron Link's 4.2 MW block or DG Matrix's 400 kVA skid on any axis except the claimed efficiency. The DG Matrix guide's datasheet exercise — sort every figure into datasheet fact, platform claim and roadmap — applies here with the first column empty."
+   ]
+  },
+  {
+   "id": "industry-map",
+   "title": "The industry map: four startups, one roster, no listed unit",
+   "kind": "prose",
+   "read": "Novos Power enters a race in which the three funded entrants have each raised USD 60–140M, announced factories, and still have no certified medium-voltage unit. Its position is defined by what it has not yet done.",
+   "ps": [
+    "Who buys. The hall-edge block is specified by the hyperscaler or its design-build engineer and bought through the electrical contractor; NVIDIA's 800 VDC ecosystem lists are the shortlist most of them start from. Those lists name the incumbents — ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens, Vertiv — and one startup, Heron Power. Novos Power is on none of them, and appears in one analyst piece (SemiAnalysis, May 2026), which it briefed.",
+    "Who competes. Heron owns the roster placement and the largest raise; Amperesand owns the platform argument and a production line; DG Matrix owns the only shipping unit, at low voltage, with its medium-voltage product dated 2028+. All three name their certification targets; none has completed a data-center SST listing. The incumbents hedge with their own solid-state programs and with the {{transformer-rectifier unit}} — proven iron plus modern rectifiers — which is what most 800 V halls will be built with first.",
+    "Why the transition matters economically, and why it is slow. The prize is the transformer lead time, the electrical room and two conversion stages of losses; the price is giving up forty-year iron for actively controlled semiconductors with no field record. A buyer who will not install an unlisted unit at scale needs a certified product, and certification is one to two years and millions of dollars per variant. Every SST startup, funded or not, is on the same clock; Novos Power has not yet started it.",
+    "What Novos Power would have to show to matter to a buyer, in order: a topology and a prototype rating; a measured efficiency curve; a certification target and an NRTL engagement; a pilot with a named counterparty; capital sufficient for a certification campaign. The public record as of September 2026 contains none of the five."
+   ]
+  },
+  {
+   "id": "the-clock",
+   "title": "The clock",
+   "kind": "timeline",
+   "read": "The company's dated record against the industry's 800 V DC waves — every entry is a claim to check as it falls due.",
+   "lanes": {
+    "n": "Novos Power",
+    "i": "Industry"
+   },
+   "items": [
+    {
+     "x": 2024.4,
+     "lane": "n",
+     "label": "CEO speaks at Stanford as ChargePodX founder",
+     "sub": "a 'Level 2.5' EV charger without 480 V three-phase"
+    },
+    {
+     "x": 2025.4,
+     "lane": "i",
+     "label": "NVIDIA announces 800 V DC with its first partner list",
+     "sub": "no SST startup named"
+    },
+    {
+     "x": 2025.5,
+     "lane": "n",
+     "label": "LACI admits ChargePodX with the MV-AC-to-DC pitch",
+     "sub": "the concept predates the company"
+    },
+    {
+     "x": 2025.8,
+     "lane": "i",
+     "label": "NVIDIA's second list adds the facility tier",
+     "sub": "ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider, Siemens"
+    },
+    {
+     "x": 2025.85,
+     "lane": "n",
+     "label": "Novos Power Inc. registers in California (Delaware entity)",
+     "sub": "earliest verifiable date"
+    },
+    {
+     "x": 2026.15,
+     "lane": "n",
+     "label": "FedTech Crucible Ignitor win",
+     "sub": "pitched for defense installations; no cash prize stated"
+    },
+    {
+     "x": 2026.15,
+     "lane": "i",
+     "label": "Heron Series B (USD 140M), DG Matrix Series A (USD 60M)",
+     "sub": "the funded siblings"
+    },
+    {
+     "x": 2026.22,
+     "lane": "n",
+     "label": "Platinum sponsor of SDSU's AI x Energy Summit",
+     "sub": "the CTO's department; DG Matrix a co-sponsor"
+    },
+    {
+     "x": 2026.3,
+     "lane": "n",
+     "label": "IEEE Hard Tech Venture Summit showcase; spec claims posted",
+     "sub": "≥98.5%, 1–50 MW, DC 400–1500 V"
+    },
+    {
+     "x": 2026.4,
+     "lane": "i",
+     "label": "SemiAnalysis names the four-startup SST set",
+     "sub": "'Novos Power reports peak efficiencies over 98%'"
+    },
+    {
+     "x": 2026.45,
+     "lane": "n",
+     "label": "UCSD Golden Ticket: Horizon Accelerator residency",
+     "sub": "workspace, not capital"
+    },
+    {
+     "x": 2026.5,
+     "lane": "n",
+     "label": "'From the 35 kV line to the GPU' — last post on record",
+     "sub": "silence from July"
+    },
+    {
+     "x": 2027,
+     "lane": "i",
+     "label": "Vera Rubin / 800 V DC volume ramp expected",
+     "sub": "the first SST listings, if any"
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Drill: the concepts",
+   "kind": "flashcards",
+   "read": "Technology and product understanding only — nothing here is a date, a name or a headquarters.",
+   "cards": [
+    {
+     "q": "Why does a millimetre of air gap change a core's inductance so much?",
+     "a": "Air's reluctance is thousands of times iron's, so a short gap dominates the magnetic loop's total reluctance; inductance is turns squared over reluctance, so it drops in proportion to the gap."
+    },
+    {
+     "q": "Why are inductors gapped and transformers not?",
+     "a": "A gap stores energy and raises the saturation current — what an inductor is for. A transformer passes energy through and wants the largest magnetizing inductance it can get, which a gap destroys."
+    },
+    {
+     "q": "Which two inductances does a gap move, and what does each cost or buy?",
+     "a": "Magnetizing inductance falls (more wasted magnetizing current); leakage inductance changes (the series element a converter sees). The first is a cost; the second is a design knob."
+    },
+    {
+     "q": "In a dual-active-bridge cell, what does the series inductance set?",
+     "a": "How much power a given phase shift between the bridges transfers — small inductance means high power but coarse light-load control; large inductance the reverse."
+    },
+    {
+     "q": "What could a variable air gap buy a converter facing GPU pulse loads?",
+     "a": "An inductance that rises at light load and falls at full load, holding soft switching and control authority across the swing — a plausible reading; the company has not disclosed its mechanism."
+    },
+    {
+     "q": "What is control bandwidth, and why does a 60 Hz transformer have none?",
+     "a": "The highest disturbance frequency a converter's loop can correct, usually a tenth or less of its switching frequency. A transformer has no loop; its leakage inductance sets the sag and nothing corrects it."
+    },
+    {
+     "q": "Why is a '1000x faster' claim incomplete on its own?",
+     "a": "It names no baseline — a transformer, a UPS loop, or the grid — and no unit; a kilohertz SiC loop corrects in tens of microseconds versus a UPS's milliseconds, which is the comparison to ask for."
+    },
+    {
+     "q": "Why is air cooling at 35 kV an insulation problem first?",
+     "a": "Air breaks down at about 3 kV per millimetre; the basic insulation level (150 kV at 35 kV class) sets clearance and creepage distances that grow faster than the working voltage, so density in air is limited by spacing before heat."
+    },
+    {
+     "q": "What would 'proprietary insulation' have to specify to be evaluable?",
+     "a": "The BIL of the design, the insulation material, how the cell stack meets creepage and clearance at the rated kV, and the ambient and altitude ratings."
+    },
+    {
+     "q": "Why does a 48 kV upper bound sit oddly next to UL 2877?",
+     "a": "UL 2877 covers medium-voltage power supplies with input above 1,000 V up to 38 kV; 46 kV is a subtransmission class above the distribution classes data centers use, so 48 kV reads as an envelope, not a design point."
+    },
+    {
+     "q": "What does a pitch-competition win prove on the technology readiness scale?",
+     "a": "Nothing technical — a jury judges a pitch, not a unit. It is a commercial signal; a rung is proven by a bench result, a prototype rating or a measured curve."
+    },
+    {
+     "q": "What five things must a pre-product SST vendor show, in order, before a hall-edge buyer cares?",
+     "a": "A topology and prototype rating; a measured efficiency curve; a certification target and NRTL engagement; a named pilot; capital sufficient for a certification campaign."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Check yourself",
+   "kind": "quiz",
+   "read": "Six questions on the mechanisms; each answer is in the sections above.",
+   "items": [
+    {
+     "q": "Inserting an air gap into a transformer core mainly:",
+     "c": [
+      "Raises magnetizing inductance and lowers saturation current",
+      "Lowers magnetizing inductance and raises the current the core can carry before saturating",
+      "Has no effect on inductance",
+      "Removes leakage inductance"
+     ],
+     "a": 1
+    },
+    {
+     "q": "In a dual-active-bridge cell, increasing the series (leakage) inductance:",
+     "c": [
+      "Raises peak power capability",
+      "Lowers peak power capability and improves fine control at light load",
+      "Changes the transformer turns ratio",
+      "Eliminates the need for soft switching"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A vendor says its converter is '1000x faster' at holding voltage through GPU load swings. The most useful next question is:",
+     "c": [
+      "What colour is the enclosure",
+      "Faster than what, in what unit — a transformer's passive sag, a UPS loop, or the grid?",
+      "How many patents the CTO has",
+      "Whether it uses SiC"
+     ],
+     "a": 1
+    },
+    {
+     "q": "Air cooling a 35 kV converter is hard primarily because:",
+     "c": [
+      "Air holds too much heat",
+      "Air breaks down at about 3 kV/mm, so the basic insulation level forces clearance and creepage distances that limit density",
+      "Fans are expensive",
+      "Liquid is required by code"
+     ],
+     "a": 1
+    },
+    {
+     "q": "A university spin-out has a seminar abstract, spec targets, two pitch-competition wins and no prototype photograph. On the readiness ladder it has proven:",
+     "c": [
+      "TRL 7–8, a qualified product",
+      "TRL 5–6, a validated prototype",
+      "TRL 2–3, a formulated concept",
+      "TRL 9, proven in operation"
+     ],
+     "a": 2
+    },
+    {
+     "q": "An analyst piece says a company 'reports peak efficiencies over 98%' and thanks the company in its acknowledgments. The line is best read as:",
+     "c": [
+      "An independent measurement",
+      "The company's briefing relayed by the analyst",
+      "A regulatory finding",
+      "A customer testimonial"
+     ],
+     "a": 1
+    }
+   ]
+  }
+ ]
+}

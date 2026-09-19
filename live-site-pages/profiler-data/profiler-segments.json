@@ -444,6 +444,11 @@
      "slug": "dg-matrix",
      "role": "challenger",
      "basis": "ecosystemRole: the low-voltage-first challenger in the hall-edge power-conversion layer — a multi-port solid-state transformer that today replaces the transformer-rectifier-UPS chain at 480 V (Interport Flex, shipping pre-certification) and is positioned against Heron Power, Amperesand and the hedged incumbents for the 34.5 kV-to-800 V DC block once its Cell-MV (2028+) exists; absent from NVIDIA's rosters, no certified unit"
+    },
+    {
+     "slug": "novos-power",
+     "role": "challenger",
+     "basis": "ecosystemRole: a pre-product entrant in the hall-edge power-conversion layer — a claimed direct 13–48 kV-to-DC solid-state transformer (VASST) positioned against Heron Link, Amperesand's platform and DG Matrix's roadmap Cell-MV for the 34.5 kV-to-800 V DC block and against the hedged incumbents on NVIDIA's facility-tier roster; no shipped unit, no listed product, no disclosed capital, absent from NVIDIA's lists"
     }
    ]
   },

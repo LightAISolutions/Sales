@@ -5282,6 +5282,37 @@
           "role": "adjacent"
         }
       ]
+    },
+    {
+      "slug": "novos-power",
+      "name": "Novos Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The pre-product SST entrant — 2025 San Diego State University spin-out (CTO Chris Mi, CEO Susan Linwood) claiming a direct 13–48 kV 'Variable Airgap' solid-state transformer at ≥98.5% peak efficiency, 1–50 MW, air-cooled; no funding round, no datasheet, no patent, no customer; pitch-competition wins and one SemiAnalysis citation are the record.",
+      "hq": "San Diego, California, United States (and Palo Alto, California)",
+      "status": "active",
+      "lastUpdated": "2026-09-19",
+      "aka": [
+        "Novos Power Inc.",
+        "Novos Power, Inc.",
+        "NovosPower",
+        "VASST",
+        "Variable Airgap Solid State Transformer",
+        "Variable Air Gap Solid-State Transformer"
+      ],
+      "domains": [
+        "novospower.com"
+      ],
+      "srcTotal": 38,
+      "srcFirstPct": 8,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        }
+      ]
     }
   ]
 }

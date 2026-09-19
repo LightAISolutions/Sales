@@ -260,6 +260,16 @@
       "def": "The continuous layer that stops air leaking through a building envelope. In a building full of dry heat it governs how much outdoor moisture arrives uninvited, and it must be continuous to work at all."
     },
     {
+      "slug": "air-gap",
+      "term": "air gap",
+      "def": "A deliberate break in a magnetic core, usually a thin spacer of air or plastic. It raises the core's reluctance so the coil can store energy and carry more current before the core saturates, at the cost of needing more magnetizing current — which is why inductors are gapped and ordinary transformers are not. Changing the gap changes the inductance.",
+      "aliases": [
+        "airgap",
+        "gapped core",
+        "core gap"
+      ]
+    },
+    {
       "slug": "air-insulated-switchgear",
       "term": "air-insulated switchgear",
       "def": "High-voltage switchgear whose live parts are separated by open air, so the clearances — and therefore the land — grow with the voltage. Cheap per bay and expensive per hectare.",
@@ -2244,6 +2254,16 @@
       "term": "contracted revenue",
       "def": "The sum of payments a tenant is contractually obliged to make over a lease's term. It is a revenue figure spread across many years, not a valuation and not cash received, and it is only as good as the tenant's ability to pay.",
       "aliases": []
+    },
+    {
+      "slug": "control-bandwidth",
+      "term": "control bandwidth",
+      "def": "How fast a converter's control loop can correct its output — roughly the highest frequency of disturbance it can follow, typically a tenth or less of its switching frequency. A 60 Hz transformer feeding a rectifier has no loop at all and answers a load step with whatever its inductance and capacitors allow; a kilohertz silicon-carbide converter can correct in tens of microseconds.",
+      "aliases": [
+        "loop bandwidth",
+        "control loop bandwidth",
+        "response bandwidth"
+      ]
     },
     {
       "slug": "controlled-company",
@@ -5885,6 +5905,16 @@
       ]
     },
     {
+      "slug": "insulation-coordination",
+      "term": "insulation coordination",
+      "def": "Choosing the insulation, spacing and surge protection of a piece of medium-voltage equipment so that it survives the voltage stresses it will see — the working voltage, switching transients and lightning surges — with margin. Expressed through a basic insulation level (BIL) rating and the creepage and clearance distances that go with it; at tens of kilovolts it is what decides whether a converter can be cooled in air or must be sealed in oil or liquid.",
+      "aliases": [
+        "BIL",
+        "basic insulation level",
+        "basic impulse level"
+      ]
+    },
+    {
       "slug": "insurance-capacity",
       "term": "insurance capacity",
       "def": "The amount of limit insurers are collectively willing to put on a risk or a class of risk. For a managing general agent, capacity is the limit its carriers allow it to bind per location; when capacity is scarce the market is 'hard' and prices rise, when abundant it is 'soft'.",
@@ -6388,6 +6418,15 @@
       ]
     },
     {
+      "slug": "leakage-inductance",
+      "term": "leakage inductance",
+      "def": "The part of a transformer's magnetic field that links one winding but not the other, behaving like a small inductor in series with the winding. In a 60 Hz transformer it is a nuisance that drops voltage under load; in a dual-active-bridge or resonant converter it is the element that sets how much power a given phase shift or frequency transfers, so designers set it on purpose — by winding geometry or by an air gap.",
+      "aliases": [
+        "series inductance",
+        "leakage"
+      ]
+    },
+    {
       "slug": "lean-burn",
       "term": "lean-burn",
       "def": "A gas-engine combustion strategy that burns with excess air, which lowers peak flame temperature and so forms far less nitrogen oxide inside the cylinder. It is how a natural-gas gen-set meets a tight air permit with little after-treatment, at the cost of a slower response to sudden load steps than a diesel.",
@@ -6847,6 +6886,15 @@
         "active magnetic bearing"
       ],
       "def": "A bearing that holds a shaft in place with controlled magnetic fields instead of contact, so a high-speed flywheel can spin with almost no friction and no lubrication. It is what lets a small, light rotor store useful energy at tens of thousands of rpm — and it needs control power of its own."
+    },
+    {
+      "slug": "magnetizing-inductance",
+      "term": "magnetizing inductance",
+      "def": "The inductance a transformer's primary presents with nothing connected to the secondary — the measure of how much current it takes to set up the flux in the core. A large magnetizing inductance means little wasted current; an air gap lowers it and raises the magnetizing current, which is the price paid for a gapped core's energy storage.",
+      "aliases": [
+        "magnetizing current",
+        "magnetising inductance"
+      ]
     },
     {
       "slug": "main-tie-main",
@@ -9559,6 +9607,14 @@
       ]
     },
     {
+      "slug": "reluctance",
+      "term": "reluctance",
+      "def": "The magnetic equivalent of electrical resistance: how hard it is to drive magnetic flux through a path. Iron and ferrite have low reluctance, air has very high reluctance, so a millimetre of air gap can dominate a core's total reluctance and therefore its inductance — the lever behind any adjustable-gap magnetic component.",
+      "aliases": [
+        "magnetic reluctance"
+      ]
+    },
+    {
       "slug": "remote-power-panel",
       "term": "remote power panel",
       "def": "A distribution cabinet placed out on the data-hall floor, fed from a larger upstream board, that breaks power out into the branch circuits serving racks. It shortens the runs to the load and puts metering and breakers where the equipment actually is.",
@@ -11474,6 +11530,16 @@
       "aliases": [
         "TS",
         "interim specification"
+      ]
+    },
+    {
+      "slug": "technology-readiness-level",
+      "term": "technology readiness level",
+      "def": "A nine-step scale, originated by NASA and used by DOE and defense buyers, for how mature a technology is: 1–3 are principles and laboratory proof of concept, 4–6 are prototypes validated in the lab and then in a relevant environment, 7–8 are system demonstrations and qualified products, 9 is proven in operation. A pitch-competition winner with no prototype photograph sits at the low end; a listed, energised unit at the top.",
+      "aliases": [
+        "TRL",
+        "readiness level",
+        "TRL scale"
       ]
     },
     {
