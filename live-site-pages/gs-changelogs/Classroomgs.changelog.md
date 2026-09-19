@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.78g] — 2026-09-18 08:01:10 PM EST — v06.55r
+
+### Added
+
+- **Three more rehearsals, and all three put you opposite somebody who cannot buy from you.** Each is one conversation against one buyer's own published record — who is across the table, what you walk in knowing, what the record leaves open, three decisions with four real options each, and a debrief that names the trap in every one. The library now holds eleven.
+- **The room where the other side does not sign.** In all three the party across the table sits between a supplier and a signature rather than holding the order itself, which changes what there is to ask for. Two of the three are discovery rehearsals, where the exercise is the question list rather than the argument — and in the third, most of the meeting is still questions.
+- **A rehearsal against an engineer rather than a buyer.** One of the new ones puts you in front of a firm paid for judgment and never for equipment, where the first thing worth establishing is which of two very similar roles it is playing on your project, because the answer changes what every document you send is being read for.
+- **Both halves of the sale are now covered for five buyer types**, with the last three rehearsals queued.
+
+### Changed
+
+- **The review-date chips read true.** Two of the three new rehearsals ship with their chip already amber, because the nearest dated event in each one's own record falls inside the next month; the third sits further out. Each rehearsal carries the review date its own evidence justifies rather than a default, and where that date comes from the wider judgment rather than from the room's own facts, the rehearsal now says so in its own sources list.
 
 ## [v01.77g] — 2026-09-18 04:30:22 PM EST — v06.54r
 
