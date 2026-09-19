@@ -14,7 +14,8 @@ profiler-segments.json, the registries and the guidance module list, and prints:
   3. Stale pins — per lesson, inputs whose live date is later than the pin (the
      pipeline's candidate list made visible); for segment-* lessons this is
      "regeneration due", read from build-classroom-segments.py --check
-  4. Drill pool size — sf · ss · lc · lq · rc against their caps
+  4. Drill pool size — sf · ss · lc · lq · rc against their caps, and each tier's
+     deck (with and without the roster deck) against CL_DRILL_ACCOUNT_CAP
   5. Review dates — every lesson and module whose reviewBy is within 30 days or passed
 
 Usage:  python3 scripts/check-classroom-curriculum.py [--strict] [--today YYYY-MM-DD] [--base origin/main]
@@ -158,6 +159,49 @@ def live_date(ref, base, cache):
         d = str((obj or {}).get("generated") or "")
     cache[ref] = d if DATE_RE.match(d) else ""
     return cache[ref]
+
+
+def js_role_caps(src):
+    """role → [capability, …] from `var CL_ROLE_CAPS = {…};` — the access matrix
+    the server folds a lesson's gate against (clCan_), read out of the .gs."""
+    m = re.search(r"^var CL_ROLE_CAPS = \{(.*?)^\};", src, re.S | re.M)
+    if not m:
+        return {}
+    return {role: re.findall(r"'([a-z]+)'", body)
+            for role, body in re.findall(r"(\w+):\s*\[([^\]]*)\]", m.group(1))}
+
+
+def guidance_drill_items(src):
+    """(gc, gq), or None when the registry is not found: the guidance items
+    clDrillGuidanceItems_ enumerates — every
+    registered guidanceDoc<Name>_() module's sections of kind `flashcards`
+    (cards with a `q`) and `quiz` (items with a `q`), under the same id rule the
+    server applies (a module or section id CL_DRILL_SECTION_ID_RE would reject
+    never enters the pool). The same walk, so the count is the server's."""
+    ccc = load_checker()
+    # The registry body carries comment lines between its brace and `return [`,
+    # so the match runs from the function head to the list's closing bracket and
+    # the comment lines are dropped before the names are read. A registry that
+    # cannot be found is reported as None, never as an empty walk: a zero here
+    # would print a contributor deck that equals no real deck (rr64).
+    m = re.search(r"^function guidanceDocs_\(\) \{(.*?)\];", src, re.S | re.M)
+    if not m:
+        return None
+    body = "\n".join(ln for ln in m.group(1).splitlines() if not ln.strip().startswith("//"))
+    registered = set(re.findall(r"(guidanceDoc[A-Z]\w*_)\(\)", body))
+    id_ok = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")
+    gc = gq = 0
+    for fn, doc in ccc.parse_literals(src, "guidanceDoc").items():
+        if fn not in registered or not id_ok.match(str(doc.get("id") or "")):
+            continue
+        for s in doc.get("sections") or []:
+            if not isinstance(s, dict) or not id_ok.match(str(s.get("id") or "")):
+                continue
+            if s.get("kind") == "flashcards":
+                gc += sum(1 for c in s.get("cards") or [] if isinstance(c, dict) and c.get("q"))
+            elif s.get("kind") == "quiz":
+                gq += sum(1 for it in s.get("items") or [] if isinstance(it, dict) and it.get("q"))
+    return gc, gq
 
 
 def floor_met(seg):
@@ -337,9 +381,54 @@ def main():
               % (scn_lq, sum(1 for l in lesson_order if l.get("type") == "scenario")))
     print("  roster deck rc %d player rows across segment lessons  (%s)" % (
         rc, "K2 not built — no roster caps in Classroom.gs" if roster_cap is None else "CL_ROSTER_SESSION_CAP %s" % roster_cap))
-    print("  total drillable today %d  (CL_DRILL_ACCOUNT_CAP %s)" % (sf + ss + lc + lq, acct_cap))
     if inv_cap is not None and sf + ss > inv_cap:
         strict("study pool %d exceeds CL_DRILL_INV_CAP %d — the cap silently truncates the pool" % (sf + ss, inv_cap))
+    # Each tier's DECK against CL_DRILL_ACCOUNT_CAP (v06.58r — (rr58), (rr61)).
+    # The cap is tested against an account's WHOLE row set — both decks share
+    # the tab and the check runs before the deck split, so a never-graded item's
+    # first grade past it returns DRILL_FULL — and the only comparison a real
+    # account can hit is its own deck: the lesson items its tier may read (the
+    # clLessonVisible_ fold, gate_of above), the guidance items contributor+
+    # holds, the public study items every tier holds, and the roster deck when
+    # opted in. The composite this block printed before v06.58r (sf + ss + lc +
+    # lq) equalled no tier's deck: it omitted the guidance items every
+    # contributor+ deck carries and the roster cards the cap counts, and read
+    # UNDER the cap while the contributor deck was OVER it (rr17, rr58).
+    gitems = guidance_drill_items(src)
+    if gitems is None:
+        print("  guidance items: guidanceDocs_() registry NOT found — guidance items are not counted below")
+    gc, gq = gitems or (0, 0)
+    role_caps = js_role_caps(src)
+    tier_lesson = {}
+    for l in lesson_order:
+        if l.get("type") == "scenario":
+            continue
+        g = gate_of(l, ref_kinds, caps, strictness)
+        n_items = sum(len(s.get("cards") or []) if s.get("kind") == "flashcards"
+                      else len(s.get("items") or []) if s.get("kind") == "quiz" else 0
+                      for s in l.get("sections") or [])
+        for role, rcaps in role_caps.items():
+            if g in rcaps:
+                tier_lesson[role] = tier_lesson.get(role, 0) + n_items
+    decks = []
+    for role in [r for r in ("analyst", "contributor", "admin") if "tracks" in role_caps.get(r, [])]:
+        guidance = gc + gq if "guidance" in role_caps[role] else 0
+        lesson_n = tier_lesson.get(role, 0)
+        parts = "lesson %d + %sstudy %d" % (lesson_n, ("guidance %d + " % guidance) if guidance else "", sf + ss)
+        decks.append((role, lesson_n + guidance + sf + ss, parts))
+    if len(decks) >= 2 and decks[-1][1:] == decks[-2][1:]:
+        decks = decks[:-2] + [("contributor+", decks[-2][1], decks[-2][2])]
+    print("  deck totals against CL_DRILL_ACCOUNT_CAP %s — the cap counts BOTH decks, one row set per account; "
+          "a first grade past it returns DRILL_FULL" % acct_cap)
+    for role, mech, parts in decks:
+        print("    %-13s %4d mechanism deck (%s)  ·  %4d with the roster deck" % (role, mech, parts, mech + rc))
+        if acct_cap is not None:
+            if mech > acct_cap:
+                strict("%s mechanism deck %d exceeds CL_DRILL_ACCOUNT_CAP %d — the cap refuses the last %d first grades (DRILL_FULL)"
+                       % (role, mech, acct_cap, mech - acct_cap))
+            elif mech + rc > acct_cap:
+                strict("%s deck %d with the roster deck exceeds CL_DRILL_ACCOUNT_CAP %d — an opted-in account is refused the last %d first grades (DRILL_FULL)"
+                       % (role, mech + rc, acct_cap, mech + rc - acct_cap))
 
     # 5 · Review dates
     print("\n5 · Review dates within 30 days or passed (today %s, horizon %s)" % (today, horizon))

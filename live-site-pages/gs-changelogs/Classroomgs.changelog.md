@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 51/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.80g] — 2026-09-19 02:29:14 AM EST — v06.58r
+
+### Changed
+
+- **Drill scheduling capacity increased.** An account can now keep a review schedule for every card in its drill decks at once, including the company roster deck — previously a well-studied account could reach a point where new cards were still shown but their schedules were no longer kept.
+- Minor internal improvements
 
 ## [v01.79g] — 2026-09-18 11:38:22 PM EST — v06.56r
 

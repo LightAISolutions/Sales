@@ -1,4 +1,4 @@
-var VERSION = "v01.79g";
+var VERSION = "v01.80g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -52892,7 +52892,7 @@ var CL_DRILL_LOG_HEADERS = ['Timestamp', 'Account', 'ItemId', 'Grade',
                             'IntervalBefore', 'IntervalAfter', 'Ease'];
 var CL_DRILL_SESSION_CAP = 20;    // items served in one drill session
 var CL_DRILL_NEW_CAP = 10;        // never-seen items introduced per day
-var CL_DRILL_ACCOUNT_CAP = 3000;  // state rows per account — a guard, not a limit
+var CL_DRILL_ACCOUNT_CAP = 6000;  // state rows per account, BOTH decks together — a guard again at ~1.7× the largest deck measured (3,453: contributor + roster deck, 2026-09-19); it bound at 3,000 (rr58)
 var CL_DRILL_INV_CAP = 2400;      // study items built into the pool — a guard, not a limit (~1,920 today)
 var CL_DRILL_ID_RE = /^(lc|lq|sf|ss|gc|gq):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
 var CL_DRILL_SECTION_ID_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;   // an ss: section id must survive CL_DRILL_ID_RE
