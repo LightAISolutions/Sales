@@ -661,6 +661,16 @@
       "def": "How long a UPS can carry its rated load from stored energy alone — seconds for a flywheel, minutes for a battery string. It is sized to cover the generator's start with a margin, not to run the hall: a longer autonomy is insurance against the engine failing its first start attempt, and it is bought in battery cabinets and floor space."
     },
     {
+      "slug": "availability",
+      "term": "availability",
+      "def": "The fraction of time a system is actually able to do its job, counting both how rarely it fails and how quickly it is repaired: availability = MTBF ÷ (MTBF + MTTR). 'Five nines' means 99.999%, about five minutes of downtime a year — a fleet-level statistical claim that only field hours can substantiate, never a single prototype.",
+      "aliases": [
+        "five nines",
+        "99.999%",
+        "uptime"
+      ]
+    },
+    {
       "slug": "availability-guarantee",
       "term": "availability guarantee",
       "def": "A contracted promise about the fraction of hours a plant will be ready to perform, with money attached to missing it. It matters more than an average suggests, because storage and generation revenue concentrate into a small number of extreme-price hours — a site that is available almost all year and unavailable for the wrong afternoon has not lost a proportional share of its income.",
@@ -6962,6 +6972,16 @@
       ]
     },
     {
+      "slug": "mcs",
+      "term": "MCS",
+      "def": "Megawatt Charging System: the SAE J3271 / IEC 63379 standard for charging heavy-duty electric vehicles — trucks, buses, port equipment, vessels — through a liquid-cooled connector rated up to 1,250 V DC and 3,000 A, or 3.75 MW. At that power a single charger draws as much as a small factory, which is why megawatt charging is a medium-voltage problem.",
+      "aliases": [
+        "Megawatt Charging System",
+        "megawatt charging",
+        "SAE J3271"
+      ]
+    },
+    {
       "slug": "medium-frequency-transformer",
       "term": "medium-frequency transformer",
       "def": "The small transformer inside a solid-state transformer cell that provides galvanic isolation and step-down at 5–50 kHz instead of 60 Hz. Its core shrinks by the ratio of the frequencies, but it must hold medium-voltage insulation in a small volume under fast-edged square waves, which makes it the component with the fewest suppliers.",
@@ -8122,6 +8142,15 @@
         "part-load",
         "part-load efficiency",
         "turndown"
+      ]
+    },
+    {
+      "slug": "partial-discharge",
+      "term": "partial discharge",
+      "def": "Tiny electrical sparks inside voids or along surfaces of an insulator that do not bridge the whole gap but slowly erode the material until it fails. Fast-switched square waves at kilohertz frequencies stress insulation far harder than a 60 Hz sine wave does, which is why the medium-frequency transformer inside a solid-state transformer is insulation-limited before it is magnetics-limited.",
+      "aliases": [
+        "PD",
+        "corona"
       ]
     },
     {
@@ -10308,6 +10337,16 @@
       ]
     },
     {
+      "slug": "shore-power",
+      "term": "shore power",
+      "def": "Supplying a berthed ship or a docked vehicle with electricity from the port's grid so it can switch off its own engines — also called cold ironing. It turns a port into a very large, spiky electrical load and is one of the reasons port electrification needs medium-voltage conversion equipment.",
+      "aliases": [
+        "cold ironing",
+        "onshore power supply",
+        "OPS"
+      ]
+    },
+    {
       "slug": "short-circuit-study",
       "term": "short-circuit study",
       "def": "The calculation of how much current would flow at every point in an electrical system if it faulted there, given every source that can contribute — the utility, the generators, and the motors that briefly act as generators as they spin down. It sets the interrupting rating every breaker must meet and is the input both the coordination study and the arc-flash calculation run on.",
@@ -12051,6 +12090,15 @@
       "slug": "us-gaap",
       "term": "US GAAP",
       "def": "The accounting rulebook used by companies reporting to the US Securities and Exchange Commission as domestic filers. It is generally more prescriptive than IFRS and more reluctant to revalue assets upward."
+    },
+    {
+      "slug": "v2g",
+      "term": "V2G",
+      "def": "Vehicle-to-grid: letting a parked electric vehicle's battery discharge back into a building or the grid, which requires a charger — and any transformer or converter feeding it — that moves power in both directions. Bidirectional converters are a native property of solid-state transformers, whose dual-active-bridge stage is symmetric by construction.",
+      "aliases": [
+        "vehicle-to-grid",
+        "bidirectional charging"
+      ]
     },
     {
       "slug": "vacuum-circuit-breaker",

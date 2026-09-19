@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "updated": "2026-09-13",
+ "updated": "2026-09-19",
  "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
  "companies": [
   {
@@ -2517,6 +2517,21 @@
     "US EXPOSURE: Cornex is NOT on the DoD 1260H list (OpenSanctions 'no match' 2026-09-12; CATL, BYD, CALB, EVE are); Section 301 on non-EV Chinese cells 25% from 2026-01-01; PFE material-assistance ratio from 2026; China's export VAT rebate 6% for April–December 2026 and ZERO from 2027-01-01. Watch Q4-2026 overseas signings for pull-forward and any 1260H addition.",
     "THE OWNER'S CAR VENTURE: 楚能汽车 (RMB 2bn, 50/50 恒信汽车集团 / 代德明, outside Cornex) rolled out its ET prototype 2026-07-11, targets a mid-2027 launch and may take over the ex-威马 黄冈 plant; the company site is silent. All three Cornex operating subsidiaries carry 道路机动车辆生产 in their licensed scope (龙蟠 filing 2025-05-10). Watch for vehicle production inside a Cornex entity or a transfer of Cornex cash.",
     "Chesterton check: the M5 mass-production date is 2024-02-01 (release id 1237), not 2025; no CATL v 楚能 patent suit exists in the public record (six searches; the suits are v CALB, Hithium and others); the '2026-05-20 Hubei DRC approval adding 290 GWh' could not be found and no combination of known phases sums to 290; 武汉楚能新能源有限公司 was incorporated 2017-03-30 with 黄锋 as legal representative (龙蟠 filing) — four years before the 2021 founding date; the H1-2026 'over 40 GWh' is the company's via 海融网 against SNE's 30.2 GWh, unreconciled."
+   ]
+  },
+  {
+   "slug": "amperesand",
+   "cadence": "quarterly",
+   "source": "Private, pre-revenue; no earnings clock. Public record is amperesand.io (five pages, no press archive — releases are read from Business Wire syndications since businesswire.com returns 403 from this environment), the legacy careers.amperesand.io site, Greenhouse job postings, the Wolfspeed case study, NTU news, PSA International's newsroom and the Nevada GOED board packet (Amperesand Inc., Delaware, formed 2024-12-06; NV entity E45200342024-2). Legal name Amperesand Pte. Ltd. (Singapore) with US subsidiary Amperesand Inc. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1).",
+   "lastRefreshed": "2026-09-19",
+   "watch": [
+    "Any energised unit: the PSA Singapore prime-mover charging pilot ('first commercial units in early 2026') and any hyperscaler / 'Fortune 100' pilot — the 30 MW-in-2026 commitment falls due at year-end and no delivery has been confirmed by either party",
+    "UL 2877 / UL 1741 listing or any NRTL certification announcement (targets only, per job postings); any NVIDIA 800 V DC partner-list appearance (absent from every published roster as of 2026-09-19)",
+    "Company confirmation of the ~USD 30M June 2026 Series A extension (DealStreetAsia/Tracxn only) and any Series B; the About page's '>$100M' is the only first-party total",
+    "Reno: operations start (GOED said July 2026), the 62-FTE / USD 18.7M equipment milestones, and any tariff or domestic-content statement about a 'U.S.-built' unit with Wolfspeed silicon and Singapore engineering",
+    "Leadership: no release ever recorded Gary Lawrence's exit or Brian Dow's elevation to CEO, and Phil Inagaki's chairmanship is unconfirmed since January 2025 — verify on the site and any new filing",
+    "A datasheet or product page: per-unit MW, input kV range, DC outputs and lead time currently rest on PCIM 2026 trade-show reporting; reconcile the 10×/80% versus 5×/50% and 15+/20/20–30-year lifetime claims if the company restates them",
+    "Chesterton check: do not import Tracxn/CB Insights valuation or revenue estimates as company figures; the 'Fortune 100 customers in 2026' and '500 MW in five years' lines are company statements no customer or filing corroborates"
    ]
   }
  ]

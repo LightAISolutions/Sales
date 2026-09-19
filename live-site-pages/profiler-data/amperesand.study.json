@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 2,
+  "slug": "amperesand",
+  "title": "Amperesand — Technology Study Guide",
+  "lastUpdated": "2026-09-19",
+  "sections": [
+    {
+      "id": "start-here",
+      "title": "Start here: one converter, three markets",
+      "kind": "callout",
+      "tone": "info",
+      "read": "A solid-state transformer is software-defined conversion. The same stack of silicon-carbide cells can charge a port vehicle at a megawatt, hold a data hall's 800 V bus, or buffer a battery — which is the whole commercial argument for a platform vendor.",
+      "ps": [
+        "The Heron Power study guide teaches the {{SST}} as a machine: why a kilohertz transformer fits in a suitcase, the three-stage {{cascaded H-bridge}} architecture, and the choice between an SST and a {{transformer-rectifier unit}} at the hall edge. Read its first four sections first if that architecture is new; this guide does not repeat them.",
+        "This guide teaches the other half. What silicon carbide is and why the device's voltage class sets the cell count. How the Megawatt Charging System turned truck and port charging into a {{medium voltage}} problem years before AI did. What a 'five nines' {{availability}} claim asserts and why a prototype cannot prove it. Why the same unit is bidirectional by construction and what that means for storage. And where Amperesand's 34.5 kV-to-{{800 VDC}} unit slots into the AI hall NVIDIA has specified, against the incumbents and the other startups.",
+        "It assumes high-school physics and nothing about power electronics."
+      ]
+    },
+    {
+      "id": "platform-not-product",
+      "title": "The SST as a platform, not a product",
+      "kind": "prose",
+      "read": "A conventional transformer changes voltage by a fixed ratio. An SST is a controller with power stages attached, so its 'product' is a configuration.",
+      "ps": [
+        "A 60 Hz {{transformer}} does one thing, set by its winding ratio at the factory. A solid-state transformer rectifies {{medium voltage}} AC, chops it to kilohertz, isolates it through a small {{medium-frequency transformer}}, and rectifies it again — and every stage is switched under software control. The input side is the same whether the load is a charger, a data hall or a battery. What changes is the output voltage the controller regulates, the direction it lets power flow, and the behaviour it shows the grid.",
+        "That is why one hardware stack can be *configured* rather than *redesigned*: a vendor that proves a cell in one market carries the same certified cell, the same magnetics and the same production line into the next, with the controller and the enclosure as the delta. It is also why a platform vendor counts field hours across every application at once — a charger running around the clock at a port is accumulating the reliability record a data-centre buyer will later ask to see.",
+        "The cost of the platform is that no configuration is optimised for one duty cycle. A charger sees violent load steps as vehicles plug in; a data hall sees a flat, continuous load; a battery sees both directions. A single cell design has to be rated for the worst of each, which is a margin a single-purpose vendor need not carry (analysis)."
+      ]
+    },
+    {
+      "id": "silicon-carbide",
+      "title": "Silicon carbide: the material every cell is switched with",
+      "kind": "table",
+      "read": "The transistor's material sets three things at once — blocking voltage, switching speed and loss — and the device class a vendor buys sets its cell count.",
+      "intro": "Every switch in an SST cell is a transistor. {{SiC}} is a {{wide bandgap}} semiconductor: its electrons need about three times more energy than silicon's to be freed into conduction, so the same thickness blocks roughly ten times the electric field. The consequences propagate through the whole product.",
+      "cols": [
+        "Property",
+        "Silicon {{IGBT}} (the old choice)",
+        "{{SiC}} {{MOSFET}} (the new one)",
+        "Why it matters in an SST"
+      ],
+      "rows": [
+        [
+          "Blocking voltage per device",
+          "Practical to about 6.5 kV, but slow at that rating",
+          "Production parts at 1.2, 1.7 and 3.3 kV; 10 kV in research",
+          "At 34.5 kV the peak line-to-neutral voltage is about 28 kV; after derating, a 1.7 kV part needs roughly ten cells per phase in series, a 3.3 kV part about five. The device class sets the parts count, cost and failure points."
+        ],
+        [
+          "Switching speed",
+          "Microseconds; tail current on turn-off",
+          "Tens of nanoseconds",
+          "Faster switching lets the {{medium-frequency transformer}} run at higher kilohertz and shrink — but faster edges stress insulation ({{partial discharge}}) and radiate noise."
+        ],
+        [
+          "Losses",
+          "High {{switching loss}} at high frequency, so designers keep frequency low",
+          "Both switching and conduction losses fall; conduction loss still rises with current squared ({{I²R loss}})",
+          "This is the source of the '>98.5% efficiency' class of claim: fewer watts lost per cell, and less heat to remove."
+        ],
+        [
+          "Operating temperature",
+          "Junctions to about 150°C",
+          "Rated to 175°C and beyond",
+          "Higher allowable temperature means smaller heatsinks or liquid loops for the same power density."
+        ],
+        [
+          "Supply chain",
+          "Mature, many fabs",
+          "A handful of wafer growers (Wolfspeed, Infineon, onsemi, ROHM, STMicroelectronics); 200 mm wafers only recently",
+          "A vendor's SiC supplier is a bankability and a trade-policy question as much as an engineering one."
+        ]
+      ]
+    },
+    {
+      "id": "megawatt-charging",
+      "title": "Megawatt charging: how trucks and ports became a medium-voltage problem",
+      "kind": "prose",
+      "read": "A passenger car charges at 150–350 kW. A truck or a port vehicle wants a megawatt or more, and ten of them are a small factory's load.",
+      "ps": [
+        "Light vehicles charge through the Combined Charging System connector at up to 1,000 V and about 350 kW. A 40-tonne truck or a port prime mover carrying a 500–900 kWh battery cannot wait hours, so the industry wrote a new standard: the **Megawatt Charging System** ({{MCS}}, SAE J3271, published March 2025, with IEC 63379 as the international twin) — a liquid-cooled connector rated 1,250 V DC and 3,000 A, or 3.75 MW through one plug.",
+        "Work the arithmetic. A depot of ten such chargers is a 20–40 MW load. Utilities serve loads of that size at {{medium voltage}} — 12 to 35 kV — not at the 480 V a garage is wired for. The conventional way down is a step-down transformer, low-voltage switchgear, then a rectifier per charger: three pieces of equipment, each with its own losses, footprint and lead time. An SST collapses them into one cabinet — medium voltage in, regulated DC out — and because every cell's output is a controllable DC source, the same unit can feed several dispensers at different voltages and currents at once, sharing power dynamically as vehicles come and go.",
+        "Ports are the sharpest case. A container terminal converting its automated guided vehicles and prime movers to batteries schedules their charging centrally, ships at berth draw {{shore power}} from the same grid connection, and a vehicle idle at a dead charger stops a crane — which is why J3271 targets better than 99.99% first-attempt charge starts. Megawatt charging is where a solid-state transformer earns field hours under the harshest load profile it will ever see: full power from a standing start, dozens of times a day."
+      ]
+    },
+    {
+      "id": "five-nines",
+      "title": "Five nines: what an availability claim asserts and how it is earned",
+      "kind": "prose",
+      "read": "99.999% is about five minutes of downtime a year. It is a fleet statistic and a service-model statement, not a property of a prototype.",
+      "ps": [
+        "{{availability}} = {{MTBF}} ÷ (MTBF + MTTR): the mean time between failures divided by that plus the mean time to repair. MTBF is estimated from parts counts and confirmed only by accumulated field hours across many units; MTTR is a service question — is a spare cell on site, and can a failed cell be bypassed while the unit keeps running?",
+        "The second question is where the cascaded architecture earns its reliability. A 5 MW unit contains hundreds of {{SiC}} devices and a capacitor bank, gate driver and sensor set per cell, so the raw parts count is worse than an iron transformer's, not better. But with one or two spare cells per phase, a cell failure becomes a maintenance ticket rather than an outage: the unit's availability can exceed any single cell's, and the repair happens at the next scheduled visit. The claim therefore depends on redundancy being *designed in* and on a service organisation that closes the loop.",
+        "The honest reading of a five-nines figure on a product with a few dozen field units: it is a design target derived from a reliability model. The customers who care most — data-centre operators writing service-level agreements, ports whose cranes stop — will ask for the field-hour evidence behind it, and the vendor with chargers running around the clock at a port is the one accumulating it (analysis)."
+      ]
+    },
+    {
+      "id": "bidirectional-storage",
+      "title": "Storage and the grid: the bidirectional case",
+      "kind": "prose",
+      "read": "The dual-active-bridge stage is symmetric, so power flows whichever way the controller asks. A footnote in a data hall; the whole point in storage.",
+      "ps": [
+        "Inside every cell the {{dual active bridge}} moves power by phase-shifting two identical bridges across the {{medium-frequency transformer}}; reverse the shift and power flows the other way. An SST is bidirectional by construction.",
+        "A {{BESS}} needs a {{PCS}} that charges from the grid and discharges into it, follows a set-point, rides through faults and increasingly forms the grid when nothing else is there. The conventional block is battery, DC-DC stage, low-voltage inverter, then a step-up transformer to medium voltage. The SST removes the transformer and often the DC-DC stage, because the battery couples to the converter's DC side directly. The same symmetry gives {{V2G}}: a fleet of charging vehicles becomes a dispatchable battery, which matters most exactly where ports and depots sit — on constrained urban feeders.",
+        "The grid-code hooks a bidirectional medium-voltage converter must satisfy are the same ones the storage guides in this corpus teach: {{IEEE 2800}} {{ride-through}}, anti-islanding, {{harmonics}} limits, and increasingly {{grid-forming inverter}} behaviour as a purchase criterion rather than a feature."
+      ]
+    },
+    {
+      "id": "the-hall-edge",
+      "title": "The AI hall: 34.5 kV to 800 V DC and what the unit displaces",
+      "kind": "table",
+      "read": "Function by function, the legacy chain against the single block — and what the block keeps.",
+      "intro": "NVIDIA's 800 V DC architecture needs one conversion from utility {{medium voltage}} to the rack bus. The Heron Power guide teaches the two candidate machines; this table maps the chain a modular SST is sold against. Amperesand's own comparison is to 'legacy UPS/transformer systems' — it names no competitor.",
+      "cols": [
+        "Legacy element",
+        "What it does today",
+        "In a solid-state block"
+      ],
+      "rows": [
+        [
+          "Line-frequency {{transformer}} (34.5 kV → 480 V)",
+          "Steps voltage down; tonnes of iron and copper; 12–36-month lead times reported through 2026",
+          "Replaced by the cascaded {{SiC}} front end and the {{medium-frequency transformer}} inside each cell; the vendor's lead-time claim is weeks, not years"
+        ],
+        [
+          "Switchgear room",
+          "Protects and sectionalises the low-voltage side",
+          "Folded into the unit — one enclosure, medium-voltage protection integrated; the arc-flash question moves to settable electronic shutdown"
+        ],
+        [
+          "{{UPS}} with its rectifier and inverter",
+          "Rides through the seconds between grid loss and generator start",
+          "Removed: a battery couples straight to the DC bus, which is why the vendor pitches 'multi-sourced battery energy storage' instead of a UPS"
+        ],
+        [
+          "{{PDU}}s and remote power panels",
+          "Distribute 480 V AC to rows",
+          "Replaced by DC distribution from the unit's paralleled bus to the row"
+        ],
+        [
+          "Rack power shelf (AC → 54 V DC)",
+          "Rectifies inside every rack",
+          "Kept, but as a DC-DC shelf: {{800 VDC}} in, the rack's bus out — this is the layer Delta, LITEON and Megmeet own"
+        ],
+        [
+          "Cooling of electrical losses",
+          "Every stage's percent or two of loss is heat the hall must remove",
+          "A single conversion at '>98.5%' cuts the loss chain; the unit's own heat is carried by its liquid loop"
+        ]
+      ]
+    },
+    {
+      "id": "where-the-products-slot-in",
+      "title": "Where Amperesand's products slot in",
+      "kind": "prose",
+      "read": "One platform, three configurations, and a reading of each claim against what the public record supports.",
+      "ps": [
+        "**The data-hall configuration.** The Amperesand SST is sold as a medium-voltage-to-DC block for '800V DC AI factory architectures' at '5–10 MW of modular power conversion', built from 3.3 kV Wolfspeed {{SiC}} full-bridge modules with a liquid loop that holds the module temperature rise below 30°C at 50°C-plus ambient. Read the 3.3 kV choice through the silicon-carbide section: it roughly halves the series cell count of a 1.7 kV design at 34.5 kV, at the price of a device class with fewer suppliers. Trade-show reporting from PCIM 2026 — not a company datasheet — puts the input at 10–34.5 kV, the output at 800 or 1,500 V DC, the module at 200 kW and the lead time at about 22 weeks.",
+        "**The charging configuration.** The same platform, containerised, with 'customizable mixed AC/DC output' and bidirectional operation, is the one the technology was proven on: a 1.5 MW system on the Singapore grid closed the NTU programme, and a proof-of-value at PSA Singapore's electric prime-mover charging is the first commercial engagement. This is the {{MCS}}-class load the megawatt-charging section describes, and it is where the platform is accumulating the field hours the {{availability}} section says a five-nines claim needs.",
+        "**The grid configuration.** A fifth generation 'in development for utility application', with on-grid/off-grid switching and 'large load management in constrained grid environments'. Nothing is rated or named yet; the bidirectional-storage section is the concept map for what it would do.",
+        "**How to read the headline claims.** The company's figures moved between November 2025 and August 2026 — 'up to 10×' faster time to power became '5×', and 'greater than 80%' footprint reduction became '50%'. Lifetime is stated as 15+, 20, and 20–30 years in three documents. Efficiency ('>98.5%') is the one figure every source agrees on, and it is the same figure NVIDIA assigns to the {{transformer-rectifier unit}} it uses first — so, as with Heron Link, the sale is lead time, footprint and grid behaviour, not efficiency. A learner should be able to say which of these claims a datasheet could settle and which only field hours can."
+      ]
+    },
+    {
+      "id": "industry-map",
+      "title": "The industry map",
+      "kind": "prose",
+      "read": "Who buys, who competes at the hall edge, and why an Asia-born platform vendor with a Nevada line sells a different story from a California one.",
+      "ps": [
+        "**Who buys.** The campus owner — a hyperscaler, a neocloud or a colocation landlord — through its design-build firm, against a schedule set by GPU delivery. The vendor's own product-management postings name 'hyperscalers, colocation providers, and data-center design-build firms' as the direct contacts and 'battery providers' as the integration partners, because a UPS-less DC hall needs someone to supply the battery on the bus.",
+        "**Who competes at the hall edge.** The hedged incumbents — ABB, Eaton, GE Vernova, Siemens, Hitachi Energy, Schneider — sell the {{transformer-rectifier unit}} bridge now and develop the SST for the generation NVIDIA reserves for 'toward 2029'. Chinese and Taiwanese conversion specialists (Sungrow's EnerNeo, Zhonhen, Delta, Megmeet) bring inverter-scale manufacturing. The startups — Heron Power, DG Matrix, Amperesand — hold specifications and factories but no shipped fleets; Heron is the one on NVIDIA's published facility-tier roster, Amperesand is not. In charging, the rival is the conventional depot chain and a handful of in-house SST efforts such as WattEV's.",
+        "**Why the platform story differs.** Heron Power sells a single unit into one market from one California factory. Amperesand sells the same cells into three markets from Singapore and Reno, with a decade of NTU lineage and Temasek on the cap table. The upside is field hours and manufacturing volume accumulating across applications; the questions a US data-centre buyer will ask are about certification (UL 2877 and UL 1741 are targets, not listings), about the supply chain behind a 'U.S.-built' unit whose silicon comes from Wolfspeed and whose engineering sits partly in Singapore, and about which customer has actually energised a unit. None of those has a public answer as of September 2026 (analysis).",
+        "**Why the timing matters economically.** A block that arrives in the 2027 TRU wave competes on lead time against transformers with multi-year waits; one that arrives with the 2029 SST wave competes against incumbents who by then have field data of their own. A platform vendor's bet is that port and charging deployments in 2026 give it the fleet record before the data-centre wave decides."
+      ]
+    },
+    {
+      "id": "the-clock",
+      "title": "The clock",
+      "kind": "timeline",
+      "read": "Company milestones against the two 800 V DC waves — the dated claims to check as they fall due.",
+      "lanes": {
+        "a": "Amperesand",
+        "i": "Industry"
+      },
+      "items": [
+        {
+          "x": 2016,
+          "lane": "a",
+          "label": "NTU / ERI@N solid-state transformer research begins",
+          "sub": "18 patent families follow"
+        },
+        {
+          "x": 2019,
+          "lane": "a",
+          "label": "Generation 0 piloted",
+          "sub": "medium-voltage AC, 50 kW, three-phase"
+        },
+        {
+          "x": 2022,
+          "lane": "a",
+          "label": "Generation I piloted",
+          "sub": "500 kW and 1.5 MW on the Singapore grid"
+        },
+        {
+          "x": 2023.8,
+          "lane": "a",
+          "label": "Spin-out, SGD 10M Temasek–NTU–NUS boost",
+          "sub": "first company selected for the SGD 75M programme"
+        },
+        {
+          "x": 2024.1,
+          "lane": "a",
+          "label": "USD 12.45M seed",
+          "sub": "Xora Innovation and Material Impact co-lead"
+        },
+        {
+          "x": 2024.8,
+          "lane": "a",
+          "label": "PSA unboXed proof of value agreed; Generation 2 full-power and bidirectional testing",
+          "sub": "electric prime-mover charging at PSA Singapore"
+        },
+        {
+          "x": 2025.05,
+          "lane": "a",
+          "label": "Veteran leadership team appointed",
+          "sub": "6 MW platform demonstrated late 2024"
+        },
+        {
+          "x": 2025.8,
+          "lane": "i",
+          "label": "NVIDIA publishes the 800 V DC architecture and partner roster",
+          "sub": "Heron Power named at the facility tier; Amperesand not listed"
+        },
+        {
+          "x": 2025.88,
+          "lane": "a",
+          "label": "USD 80M Series A",
+          "sub": "Walden Catalyst and Temasek co-lead; 30 MW of 2026 deliveries planned"
+        },
+        {
+          "x": 2026.2,
+          "lane": "a",
+          "label": "Reno manufacturing facility selected",
+          "sub": "73,000 sq ft; USD 2.0M Nevada abatements; operations from July 2026"
+        },
+        {
+          "x": 2026.4,
+          "lane": "a",
+          "label": "Wolfspeed 3.3 kV WolfPACK partnership; PCIM Europe showcase",
+          "sub": "200 kW modules to 10 MW; 22-week lead time reported"
+        },
+        {
+          "x": 2026.6,
+          "lane": "i",
+          "label": "NVIDIA execution paper builds 2027 halls on transformer-rectifier units",
+          "sub": "34.5 kV-direct SSTs reserved for 'toward 2029'"
+        },
+        {
+          "x": 2026.9,
+          "lane": "a",
+          "label": "'First commercial units delivering 2026' — unverified",
+          "sub": "no energised unit, PSA delivery or named customer on the record"
+        },
+        {
+          "x": 2027,
+          "lane": "i",
+          "label": "First 800 V DC halls on TRU bridges",
+          "sub": "the wave a 2026 shipper sells into"
+        },
+        {
+          "x": 2029,
+          "lane": "i",
+          "label": "SST-direct hall-edge generation",
+          "sub": "incumbents arrive with field data"
+        }
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Drill: the concepts",
+      "kind": "flashcards",
+      "read": "Technology and product understanding only — nothing here is a date, a name or a headquarters.",
+      "cards": [
+        {
+          "q": "Why can one SST hardware stack serve charging, a data hall and a battery?",
+          "a": "Because every stage is a software-controlled converter: the medium-voltage input is common, and only the regulated output voltage, the direction of power flow and the grid behaviour change between configurations."
+        },
+        {
+          "q": "What does silicon carbide's wide bandgap buy a converter designer?",
+          "a": "About ten times the blocking field of silicon for the same thickness, so devices can be thin, switch in nanoseconds and run hotter — lower switching and conduction losses and smaller magnetics."
+        },
+        {
+          "q": "Why does choosing 3.3 kV devices instead of 1.7 kV matter at 34.5 kV?",
+          "a": "The peak line-to-neutral voltage is about 28 kV; after derating, 3.3 kV parts need roughly five cells per phase in series against about ten — halving parts, drivers and failure points at the cost of a scarcer device class."
+        },
+        {
+          "q": "What is the Megawatt Charging System, in one line?",
+          "a": "SAE J3271 / IEC 63379: a liquid-cooled DC connector rated 1,250 V and 3,000 A — up to 3.75 MW through one plug — for trucks, buses, port equipment and vessels."
+        },
+        {
+          "q": "Why is a ten-charger truck depot a medium-voltage problem?",
+          "a": "Ten megawatt-class chargers are a 20–40 MW load, which utilities serve at 12–35 kV; the depot needs a step-down chain or a single MV-to-DC converter."
+        },
+        {
+          "q": "Write the availability formula and say what 'five nines' means.",
+          "a": "Availability = MTBF ÷ (MTBF + MTTR); 99.999% is about five minutes of downtime a year."
+        },
+        {
+          "q": "How can a unit with hundreds of SiC devices claim higher availability than any single cell?",
+          "a": "Redundant cells per phase let a failed cell be bypassed while the unit keeps running, turning a cell failure into a scheduled repair rather than an outage."
+        },
+        {
+          "q": "Why is an SST bidirectional 'by construction'?",
+          "a": "Its dual-active-bridge stage moves power by phase-shifting two identical bridges; reversing the shift reverses the flow, so charging and discharging need no extra hardware."
+        },
+        {
+          "q": "Which legacy element does a DC-bus SST remove that lets a battery replace the UPS?",
+          "a": "The UPS's rectifier–inverter pair: the battery couples directly to the DC bus, so ride-through comes from storage on the bus rather than a separate UPS."
+        },
+        {
+          "q": "Why is efficiency not the deciding argument at the hall edge?",
+          "a": "NVIDIA rates the transformer-rectifier unit and the SST at the same 98.5%-plus; the contest is lead time, footprint and grid behaviour."
+        },
+        {
+          "q": "What can a datasheet settle and what can only field hours settle?",
+          "a": "A datasheet settles ratings, efficiency, footprint and standards listings; MTBF, availability and lifetime are fleet statistics that only accumulated running hours substantiate."
+        },
+        {
+          "q": "What does partial discharge have to do with a kilohertz transformer?",
+          "a": "Fast-edged square waves stress insulation far harder than a 60 Hz sine, so small internal discharges erode the medium-frequency transformer's insulation — it is insulation-limited before it is magnetics-limited."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Check yourself",
+      "kind": "quiz",
+      "read": "Six questions on the mechanisms; each answer is in the sections above.",
+      "items": [
+        {
+          "q": "A vendor moves from 1.7 kV to 3.3 kV silicon-carbide devices in a 34.5 kV solid-state transformer. The most direct consequence is:",
+          "c": [
+            "Higher conversion efficiency at the rack",
+            "Roughly half as many series cells per phase",
+            "A larger medium-frequency transformer",
+            "No need for galvanic isolation"
+          ],
+          "a": 1
+        },
+        {
+          "q": "Which statement about a '99.999% uptime' claim is correct?",
+          "c": [
+            "It can be verified from a single prototype's test report",
+            "It is a fleet statistic combining failure rate and repair time",
+            "It follows automatically from >98.5% efficiency",
+            "It is required by SAE J3271"
+          ],
+          "a": 1
+        },
+        {
+          "q": "The Megawatt Charging System connector is rated up to:",
+          "c": [
+            "1,000 V and 500 A",
+            "800 V and 1,250 A",
+            "1,250 V and 3,000 A",
+            "34.5 kV and 200 A"
+          ],
+          "a": 2
+        },
+        {
+          "q": "Why can an SST-fed DC hall drop the UPS?",
+          "c": [
+            "The SST stores energy in its capacitors for minutes",
+            "A battery couples directly to the DC bus and rides through the generator start",
+            "SiC devices never fail",
+            "800 V DC loads tolerate outages"
+          ],
+          "a": 1
+        },
+        {
+          "q": "Bidirectional power flow in a solid-state transformer comes from:",
+          "c": [
+            "A separate reverse converter added for storage",
+            "The symmetric dual-active-bridge stage under phase-shift control",
+            "Running the 60 Hz transformer backwards",
+            "A software licence"
+          ],
+          "a": 1
+        },
+        {
+          "q": "Which of these is the strongest argument for an SST at the hall edge, given NVIDIA rates it and the transformer-rectifier unit at the same efficiency?",
+          "c": [
+            "Lower losses",
+            "Shorter lead time, smaller footprint and controllable grid behaviour",
+            "Cheaper silicon",
+            "Higher output voltage"
+          ],
+          "a": 1
+        }
+      ]
+    }
+  ]
+}

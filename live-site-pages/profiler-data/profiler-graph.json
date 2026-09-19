@@ -1,8 +1,66 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-13",
- "companies": 174,
+ "built": "2026-09-19",
+ "companies": 175,
  "edges": [
+  {
+   "a": "abb",
+   "b": "amperesand",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Incumbent named in the Series A competitive set; ABB is also an investor in rival DG Matrix and holds the 34.5 kV static UPS position at the hall edge.",
+     "context": "mgrid names ABB among the incumbents competing for the medium-voltage-to-DC block; TechCrunch's February 2026 survey frames the startup field as 'DG Matrix/ABB' versus 'Heron/a16z' versus Amperesand 'incubated by Temasek's early stage fund'. No commercial contact between ABB and Amperesand is published.",
+     "source": "https://mgrid.org/2025/11/18/amperesand-raises-80-million-series-a-led-by-walden-catalyst-and-temasek-for-ai-data-center-solid-state-transformers/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Amperesand as the second venture-backed challenger in the hall-edge power-conversion layer beside Heron Power — a modular 3.3 kV SiC solid-state transformer sold against the transformer-rectifier units NVIDIA's 2027 halls use and against the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) — distinguished by a multi-application platform (megawatt port charging, storage, data halls) that accumulates field hours across markets, Singapore engineering with a Nevada line, and Temasek on the cap table.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: three consecutive rosters (October 2025, GTC 2026, August 2026) name Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge and omit Amperesand.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Amperesand SST for megawatt charging and port electrification",
+     "date": "",
+     "text": "Competes with the conventional depot chain (step-down transformer, low-voltage switchgear, per-charger rectifiers) and with the handful of SST-for-charging entrants (WattEV's in-house MV-PCS for truck charging; Delta and ABB's charging-side power).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-31",
+     "text": "Brian Dow signs the Nevada incentive application as 'Chief Executive Office / Co-Founder' — the earliest dated document showing him as CEO after Gary Lawrence's January 2025 appointment; Marc Bouchet joins as Chief of Staff from TDK Ventures (October 2025) — The company's second CEO change in a year went unannounced; Lawrence's exit has no date or reason on the record, and the Schneider/ABB grid-incumbent profile he brought has been replaced by a Tesla energy-products profile (analysis).",
+     "src": "https://globalventuring.com/corporate/people/bouchet-tdk-ventures-amperesand/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-11"
+  },
   {
    "a": "abb",
    "b": "applied-digital",
@@ -5288,6 +5346,477 @@
     }
    ],
    "last": "2026-01-09"
+  },
+  {
+   "a": "amperesand",
+   "b": "delta-electronics",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Delta had a live SST deployment (Chindata/Meituan, February 2026) and is ranked with Amperesand on the vendor-authored HIITIO top-ten list; Delta also owns the rack-shelf layer an SST hands off to.",
+     "context": "HIITIO's July 2026 ranking places Amperesand fourth and Delta tenth among data-center SST suppliers — a vendor-authored list that ranks its author first, cited here only as a statement that the two are seen in the same set. Power Electronics News' spotlight piece records Delta's live SST at a Chinese operator, which is the field-hour evidence no startup yet has.",
+     "source": "https://www.hiitio.com/top-10-solid-state-transformer-suppliers-for-data-centers/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "amperesand",
+   "b": "eaton",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named with ABB, Hitachi Energy and Siemens Energy as the incumbent SST competitors in Series A coverage; Eaton bought Resilient Power in August 2025 and is on every NVIDIA roster.",
+     "context": "mgrid's Series A analysis lists 'Heron Power (modular multilevel topology), DG Matrix (multiport topology) … Eaton, ABB, Hitachi Energy, Siemens Energy' as the competitive set. Eaton's in-house SST via the Resilient Power acquisition and its 2.5 MW MV SST container for the NUS testbed (May 2026) make it the incumbent most directly overlapping Amperesand's Singapore home market; mgrid's separate claim of a 2024 '2.5 MW demonstration with Eaton at NUS' by Amperesand appears in no other source and is treated as a conflation.",
+     "source": "https://mgrid.org/2025/11/18/amperesand-raises-80-million-series-a-led-by-walden-catalyst-and-temasek-for-ai-data-center-solid-state-transformers/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Amperesand as the second venture-backed challenger in the hall-edge power-conversion layer beside Heron Power — a modular 3.3 kV SiC solid-state transformer sold against the transformer-rectifier units NVIDIA's 2027 halls use and against the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) — distinguished by a multi-application platform (megawatt port charging, storage, data halls) that accumulates field hours across markets, Singapore engineering with a Nevada line, and Temasek on the cap table.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: three consecutive rosters (October 2025, GTC 2026, August 2026) name Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge and omit Amperesand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-18",
+     "text": "Canary Media's SST survey notes Amperesand's units 'being tested on Singapore's power grid' alongside DG Matrix and Resilient Power (acquired by Eaton that month) — Grid-connected testing in Singapore is the company's differentiator against paper-stage rivals; the incumbent buying a startup the same month shows how the hedged players intend to compete.",
+     "src": "https://www.canarymedia.com/articles/distributed-energy-resources/solid-state-transformers-dgmatrix-resilient-power",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "ge-vernova",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Named at the hall edge on NVIDIA's GTC 2026 roster from which Amperesand was absent; holds a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027.",
+     "context": "Power Electronics News' GTC 2026 coverage lists the SST vendors NVIDIA showcased — 'DG Matrix, Delta, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton, Heron Power' — and Amperesand is not among them. GE Vernova's conditional 1,000-unit hyperscaler commitment (recorded in the Heron Power dossier) is the tier's key commercial datapoint and the incumbent order Amperesand's 'Fortune 100' pilots would have to displace (analysis).",
+     "source": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Amperesand as the second venture-backed challenger in the hall-edge power-conversion layer beside Heron Power — a modular 3.3 kV SiC solid-state transformer sold against the transformer-rectifier units NVIDIA's 2027 halls use and against the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) — distinguished by a multi-application platform (megawatt port charging, storage, data halls) that accumulates field hours across markets, Singapore engineering with a Nevada line, and Temasek on the cap table.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: three consecutive rosters (October 2025, GTC 2026, August 2026) name Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge and omit Amperesand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "google",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "heron-power",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The two venture-backed 34.5 kV-class hall-edge SST startups; SemiAnalysis lists both (Heron 98.5%, Amperesand >98.5%) and trade press pairs them with DG Matrix as the startups 'riding the 800VDC wave'.",
+     "context": "Heron Link is a single 4.2 MW unit for data centers (and 5 MW for solar/storage) with mass production in Morgan Hill from late 2027, USD 140M Series B and a place on NVIDIA's facility-tier roster. Amperesand sells a 200 kW-module platform to 4–10 MW with a Reno line running from mid-2026, USD 80M Series A plus a USD 30M extension, and no roster listing. Neither has a confirmed energised data-center unit as of September 2026. The contest between them is schedule and fleet evidence, not efficiency, since both claim 98.5%-plus (analysis).",
+     "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "status": "active",
+     "since": "2025-11"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Amperesand as the second venture-backed challenger in the hall-edge power-conversion layer beside Heron Power — a modular 3.3 kV SiC solid-state transformer sold against the transformer-rectifier units NVIDIA's 2027 halls use and against the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) — distinguished by a multi-application platform (megawatt port charging, storage, data halls) that accumulates field hours across markets, Singapore engineering with a Nevada line, and Temasek on the cap table.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: three consecutive rosters (October 2025, GTC 2026, August 2026) name Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge and omit Amperesand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the platform argument is the company's real differentiator against Heron Power and the reason it entered through ports rather than data centers: a 200 kW cell proven at 1.5 MW on the Singapore grid and cycled daily at megawatt charging loads accumulates the fleet reliability record that a 99.999% uptime claim requires and that no data-center SST vendor yet has.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "Amperesand's differentiators, as the record supports them, are a decade of NTU-lineage development with grid-tested Generation 0–2 hardware (50 kW in 2019, 500 kW and 1.5 MW in 2022, full-power and bidirectional testing of Generation 2 in 2024), a 3.3 kV SiC front end that roughly halves the series cell count of a 1.7 kV design, and a US production line in Reno; it is absent from NVIDIA's published 800 V DC partner rosters, which Heron Power is on (analysis).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-26",
+     "text": "SemiAnalysis '800VDC Revolution' names Amperesand (>98.5%) with DG Matrix, Heron Power and Novos Power as the SST vendor set, sizes a 2030 SST market of ~USD 32B at USD 1.25M/MW, and cautions that SSTs 'lack field reliability data at datacenter scale and require active cooling' — Independent analyst recognition of the vendor set, with the reliability caveat that applies to every name on it.",
+     "src": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA publishes its 800 V DC ecosystem partner list at the OCP Global Summit — nine facility-tier power providers including Heron Power — without Amperesand — The roster that defines the hall-edge peer set for hyperscaler buyers omitted the company at the moment it was closing its Series A on that very thesis.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "hitachi-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Incumbent named in the Series A competitive set; also the transformer supplier whose lead times the company's 'time to power' claim is measured against.",
+     "context": "mgrid lists Hitachi Energy among the incumbent SST developers; the company's own pitch — 'reducing time to power from 24-36 months to just 100 days' (January 2025) — is a claim against the conventional transformer supply chain that Hitachi Energy leads. No commercial contact is published.",
+     "source": "https://mgrid.org/2025/11/18/amperesand-raises-80-million-series-a-led-by-walden-catalyst-and-temasek-for-ai-data-center-solid-state-transformers/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Amperesand as the second venture-backed challenger in the hall-edge power-conversion layer beside Heron Power — a modular 3.3 kV SiC solid-state transformer sold against the transformer-rectifier units NVIDIA's 2027 halls use and against the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) — distinguished by a multi-application platform (megawatt port charging, storage, data halls) that accumulates field hours across markets, Singapore engineering with a Nevada line, and Temasek on the cap table.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: three consecutive rosters (October 2025, GTC 2026, August 2026) name Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge and omit Amperesand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "infineon",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Named with STMicroelectronics and Wolfspeed as the company's SiC sourcing breadth in PCIM 2026 reporting, and by the CEO as a competing 3.3 kV module supplier; Wolfspeed is the design-in.",
+     "context": "all-about-industries' PCIM report says the company sources SiC from 'Infineon, STMicroelectronics, and Wolfspeed'; the July 2026 CEO interview names 'Infineon Technologies, Microchip' as the alternative 3.3 kV module suppliers to Wolfspeed. Wolfspeed (not a covered company) is the named part in the medium-voltage front end (IBB020A33GM4); Infineon's role is second-source optionality, stated by the company and not confirmed by Infineon.",
+     "source": "https://www.all-about-industries.com/the-faster-available-alternative-to-the-traditional-line-transformer-a-20e822e9ab4e2a4ca661191834c73a44/",
+     "status": "announced",
+     "since": "2026-06"
+    }
+   },
+   "evid": [],
+   "last": "2026-06"
+  },
+  {
+   "a": "amperesand",
+   "b": "liteon",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-developer of the STT GDC FutureGrid Accelerator HVDC testbed at NTU (January 2026), where Amperesand's SST supports the 325 kW-plus system.",
+     "context": "STT GDC's release says the testbed was 'jointly developed by STT GDC and LITEON, supported by ERI@N and NTU deep-tech spinoff Amperesand'. LITEON is an NVIDIA-listed rack-power and BBU vendor, so the testbed pairs a hall-edge SST with a qualified rack shelf on a live HVDC bus — the integration a hyperscaler pilot would require. No commercial agreement between the two companies is published.",
+     "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+     "status": "active",
+     "since": "2026-01"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-26",
+     "text": "STT GDC launches the FutureGrid Accelerator at NTU's Jurong Island campus — 'Southeast Asia's first live HVDC-powered AI infrastructure testbed', developed with LITEON and supported by ERI@N and Amperesand, validating at least 325 kW; STT GDC 'plans to deploy this technology in future data centres in Singapore' — The first data-center operator engagement on the record is a sub-megawatt testbed with an NVIDIA-listed rack-power partner, in the company's home market.",
+     "src": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-26"
+  },
+  {
+   "a": "amperesand",
+   "b": "microsoft",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Absent from every NVIDIA 800 V DC partner roster (October 2025, GTC 2026, August 2026) while building for NVIDIA's 800 V DC architecture; the CEO says the company sits on five of seven OCP working groups.",
+     "context": "NVIDIA's 13 October 2025 developer blog listed nine facility-tier power providers and its rack-power and silicon partners; Power Electronics News' GTC 2026 coverage and the August 2026 execution paper again named Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge. Amperesand appears on none, and the OCP LVDC SST specification's contributor list could not be read. Its product is nevertheless specified against that architecture ('designed for global 800V DC AI factory architectures'; twin 800 V outputs), and Wolfspeed's case study says AI-training load profiles 'jointly released by NVIDIA, Open AI and Microsoft' were used in testing — a paper reference, not a partnership.",
+     "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "status": "historical",
+     "since": "2025-10"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Amperesand is the platform challenger at the 800 V DC hall edge — a 3.3 kV silicon-carbide medium-voltage solid-state transformer built from 200 kW modules to 4–10 MW, with a decade of NTU-lineage grid testing behind it, USD 122M of reported equity, a Reno production line running from mid-2026 and a Port of Singapore charging pilot as its first commercial engagement — but as of 19 September 2026 it has no confirmed energised unit, no named data-center customer, no certification listing and no place on any NVIDIA 800 V DC roster; whether the '30MW of commercial systems' promised for 2026 ships by year-end is the whole thesis.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Amperesand as the second venture-backed challenger in the hall-edge power-conversion layer beside Heron Power — a modular 3.3 kV SiC solid-state transformer sold against the transformer-rectifier units NVIDIA's 2027 halls use and against the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) — distinguished by a multi-application platform (megawatt port charging, storage, data halls) that accumulates field hours across markets, Singapore engineering with a Nevada line, and Temasek on the cap table.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: three consecutive rosters (October 2025, GTC 2026, August 2026) name Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova at the hall edge and omit Amperesand.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the NVIDIA developer blog and execution-paper coverage; the CEO's 'five of seven OCP working groups' is self-reported and the specification's contributor list could not be read.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Any appearance on NVIDIA's GTC 2027 roster or in the OCP LVDC SST specification's contributor list (closes Judgment 1).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "Sits at the medium-voltage-to-800 V DC hall-edge block that NVIDIA's August 2026 execution paper builds first from transformer-rectifier units and reserves for 34.5 kV-direct SSTs 'toward 2029'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "Amperesand's differentiators, as the record supports them, are a decade of NTU-lineage development with grid-tested Generation 0–2 hardware (50 kW in 2019, 500 kW and 1.5 MW in 2022, full-power and bidirectional testing of Generation 2 in 2024), a 3.3 kV SiC front end that roughly halves the series cell count of a 1.7 kV design, and a US production line in Reno; it is absent from NVIDIA's published 800 V DC partner rosters, which Heron Power is on (analysis).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-11",
+     "text": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named, while Heron Power, DG Matrix, Delta, Eaton, ABB, Siemens, Hitachi Energy and GE Vernova are named across the October 2025, GTC 2026 and August 2026 rosters — Third consecutive NVIDIA roster without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+     "src": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-26",
+     "text": "STT GDC launches the FutureGrid Accelerator at NTU's Jurong Island campus — 'Southeast Asia's first live HVDC-powered AI infrastructure testbed', developed with LITEON and supported by ERI@N and Amperesand, validating at least 325 kW; STT GDC 'plans to deploy this technology in future data centres in Singapore' — The first data-center operator engagement on the record is a sub-megawatt testbed with an NVIDIA-listed rack-power partner, in the company's home market.",
+     "src": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA publishes its 800 V DC ecosystem partner list at the OCP Global Summit — nine facility-tier power providers including Heron Power — without Amperesand — The roster that defines the hall-edge peer set for hyperscaler buyers omitted the company at the moment it was closing its Series A on that very thesis.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-11"
+  },
+  {
+   "a": "amperesand",
+   "b": "power-electronics",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "Power Electronics News CEO interview publishes the fullest specification on record: 10–34.5 kV in, twin 800 V outputs (series for 1,500 V), 200 kW galvanically isolated power stages, 4–10 MW systems, N+X with automatic bypass, IP55 enclosure, sub-25-week lead time, Wolfspeed 3.3 kV baseplate-less modules; pilots named as Port of Singapore, STT GDC and 'hyperscale AI customers'; standards UL 2877 and IEEE 3105 — The only near-datasheet in the public record is an interview; a buyer still cannot download a rating table.",
+     "src": "https://www.powerelectronicsnews.com/inside-amperesands-sst-a-conversation-with-ceo-brian-dow/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-21"
+  },
+  {
+   "a": "amperesand",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Former CEO Gary Lawrence's eleven years as Schneider's global president of power and grid, and 'APC (now Schneider Electric)' hires cited by the company; Schneider is on every NVIDIA roster as an incumbent.",
+     "context": "The January 2025 appointment release presented Lawrence's Schneider Electric and ABB record as the reason for his hiring; he left within the year, unannounced. The company's Reno team includes a 'designer of UPS systems at APC' per the Nevada filing. Schneider competes at the hall edge as one of the hedged incumbents but no direct commercial or competitive statement naming both companies exists beyond roster context.",
+     "source": "https://transformer-technology.com/amperesand-appoints-new-leadership-team-to-accelerate-growth-in-solid-state-transformer-market-transformer-technology-news/",
+     "status": "historical",
+     "since": "2025-01"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-01"
+  },
+  {
+   "a": "amperesand",
+   "b": "sungrow",
+   "evid": [
+    {
+     "where": "Capabilities · Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+     "date": "",
+     "text": "The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "amperesand",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "The executive lineage: CEO Brian Dow (Powerpack/Megapack, Hornsdale, Supercharger V3, 4680 pilot) and SVP Engineering Tommy Joyner (4680 capacity, Cybertruck 400/800 V architecture, Powerwall 3) are ex-Tesla, and the Reno team is drawn from Gigafactory Nevada.",
+     "context": "Company bios and the Nevada filing ('Former Tesla key lead of Gigafactory Nevada manufacturing for Model 3 … and all Tesla energy products'; NPI manager ex-Tesla) show the operating team was recruited from Tesla's energy and Nevada manufacturing organisations — the same lineage as Heron Power's founder. No commercial relationship with Tesla exists.",
+     "source": "https://www.amperesand.io/about.html",
+     "status": "historical"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Leadership turned over twice in a year: Xora's Phil Inagaki (interim CEO) to Schneider veteran Gary Lawrence (January 2025) to ex-Tesla Brian Dow (CEO by October 2025), the last change unannounced.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-31",
+     "text": "Brian Dow signs the Nevada incentive application as 'Chief Executive Office / Co-Founder' — the earliest dated document showing him as CEO after Gary Lawrence's January 2025 appointment; Marc Bouchet joins as Chief of Staff from TDK Ventures (October 2025) — The company's second CEO change in a year went unannounced; Lawrence's exit has no date or reason on the record, and the Schneider/ABB grid-incumbent profile he brought has been replaced by a Tesla energy-products profile (analysis).",
+     "src": "https://globalventuring.com/corporate/people/bouchet-tdk-ventures-amperesand/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-31"
   },
   {
    "a": "anthropic",

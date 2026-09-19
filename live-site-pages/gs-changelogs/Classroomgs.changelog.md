@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 51/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.81g] — 2026-09-19 05:37:35 AM EST — v06.61r
+
+### Changed
+
+- Curriculum updated
+- Two market-structure lessons now list a newly covered company in their segment rosters, connections and self-tests
 
 ## [v01.80g] — 2026-09-19 02:29:14 AM EST — v06.58r
 
@@ -433,89 +440,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 - New lesson added to a track
 - Curriculum updated
-
-## [v01.38g] — 2026-09-14 11:10:40 PM EST — v05.78r
-
-### Added
-
-- A new module in the guidance library, covering another part of the market
-
-### Changed
-
-- One reading list now points to the new module instead of saying none exists yet
-
-## [v01.37g] — 2026-09-14 10:21:39 PM EST — v05.76r
-
-### Added
-
-- A new lesson in the AI data-center track, on how reliability is written down, priced and proven
-
-### Changed
-
-- That track now has one more step in its reading order, and its summary says what the new step covers
-
-## [v01.36g] — 2026-09-14 08:22:55 PM EST — v05.74r
-
-### Added
-
-- A new module in the guidance library, covering another part of the market
-
-### Changed
-
-- One curriculum page now points on to the new guidance module instead of saying none was available yet
-
-## [v01.35g] — 2026-09-14 06:53:36 PM EST — v05.72r
-
-### Added
-
-- New lesson added to a track
-
-### Changed
-
-- A track's reading list now places the new lesson in its teaching position, so your study path picks it up in order
-
-## [v01.34g] — 2026-09-14 05:01:12 PM EST — v05.70r
-
-### Added
-
-- Guidance library updated — a new module is available to the tiers that hold guidance access
-
-### Changed
-
-- Curriculum updated
-
-## [v01.33g] — 2026-09-14 02:07:50 PM EST — v05.67r
-
-### Added
-
-- New lesson added to a track
-- Curriculum updated
-
-## [v01.32g] — 2026-09-14 06:39:45 AM EST — v05.64r
-
-### Added
-- Guidance library updated — a new module is available to the tiers that hold guidance access
-
-### Changed
-- Curriculum updated
-
-## [v01.31g] — 2026-09-14 05:05:11 AM EST — v05.62r
-
-### Changed
-
-- Curriculum updated
-- The market-structure lessons now list every company currently on record in their segment, so the rosters match the wider corpus again
-- Related sections of those lessons — the figures on record, the connections, the recent timeline and the self-test — were refreshed alongside the rosters
-
-## [v01.30g] — 2026-09-14 04:08:19 AM EST — v05.61r
-
-### Added
-
-- New lesson added to the curriculum
-
-### Changed
-
-- A track's reading list now includes the new lesson, so it appears in your study path
-- Corrected a few places where a glossary marker printed its own punctuation instead of the term it names
 
 Developed by: LightAISolutions

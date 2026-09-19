@@ -8,6 +8,90 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.38g] — 2026-09-14 11:10:40 PM EST — v05.78r — [e0035f8](https://github.com/LightAISolutions/Sales/commit/e0035f8069bfed0caca2f5c2e5d4e363fc890e41)
+
+### Added
+
+- A new module in the guidance library, covering another part of the market
+
+### Changed
+
+- One reading list now points to the new module instead of saying none exists yet
+
+## [v01.37g] — 2026-09-14 10:21:39 PM EST — v05.76r — [130aad8](https://github.com/LightAISolutions/Sales/commit/130aad897bae4b22cba517934047e7c6c3644b7d)
+
+### Added
+
+- A new lesson in the AI data-center track, on how reliability is written down, priced and proven
+
+### Changed
+
+- That track now has one more step in its reading order, and its summary says what the new step covers
+
+## [v01.36g] — 2026-09-14 08:22:55 PM EST — v05.74r — [f9ebfdf](https://github.com/LightAISolutions/Sales/commit/f9ebfdffef26b9afb5177a975331380ca86b5262)
+
+### Added
+
+- A new module in the guidance library, covering another part of the market
+
+### Changed
+
+- One curriculum page now points on to the new guidance module instead of saying none was available yet
+
+## [v01.35g] — 2026-09-14 06:53:36 PM EST — v05.72r — [5445e53](https://github.com/LightAISolutions/Sales/commit/5445e53044752948a0cc320ed9eb2b8ea83d3d3f)
+
+### Added
+
+- New lesson added to a track
+
+### Changed
+
+- A track's reading list now places the new lesson in its teaching position, so your study path picks it up in order
+
+## [v01.34g] — 2026-09-14 05:01:12 PM EST — v05.70r — [1298cc1](https://github.com/LightAISolutions/Sales/commit/1298cc1b255676bf8ed33e38cfd075618ec062ba)
+
+### Added
+
+- Guidance library updated — a new module is available to the tiers that hold guidance access
+
+### Changed
+
+- Curriculum updated
+
+## [v01.33g] — 2026-09-14 02:07:50 PM EST — v05.67r — [2d25f01](https://github.com/LightAISolutions/Sales/commit/2d25f011db3780ac257d7cac06527018aafb55e8)
+
+### Added
+
+- New lesson added to a track
+- Curriculum updated
+
+## [v01.32g] — 2026-09-14 06:39:45 AM EST — v05.64r — [6fdfecb](https://github.com/LightAISolutions/Sales/commit/6fdfecb2365b5bc4cc9df3873baa8a1b5d205cc2)
+
+### Added
+- Guidance library updated — a new module is available to the tiers that hold guidance access
+
+### Changed
+- Curriculum updated
+
+## [v01.31g] — 2026-09-14 05:05:11 AM EST — v05.62r — [c5a6b10](https://github.com/LightAISolutions/Sales/commit/c5a6b108ae5b8423764b5ad7ca11b8ab5c86661c)
+
+### Changed
+
+- Curriculum updated
+- The market-structure lessons now list every company currently on record in their segment, so the rosters match the wider corpus again
+- Related sections of those lessons — the figures on record, the connections, the recent timeline and the self-test — were refreshed alongside the rosters
+
+## [v01.30g] — 2026-09-14 04:08:19 AM EST — v05.61r — [04a9e26](https://github.com/LightAISolutions/Sales/commit/04a9e265511ecfabfc4b88d84df80eb3fc07e950)
+
+### Added
+
+- New lesson added to the curriculum
+
+### Changed
+
+- A track's reading list now includes the new lesson, so it appears in your study path
+- Corrected a few places where a glossary marker printed its own punctuation instead of the term it names
+
 ## [v01.29g] — 2026-09-13 09:25:11 PM EST — v05.57r — [0cbf1d8](https://github.com/LightAISolutions/Sales/commit/0cbf1d8dd51dd78af60a6bf22fb72f66cc10de9f)
 
 ### Added

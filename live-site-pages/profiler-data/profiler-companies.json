@@ -191,6 +191,40 @@
       ]
     },
     {
+      "slug": "amperesand",
+      "name": "Amperesand",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The platform SST challenger — NTU Singapore lineage, 3.3 kV Wolfspeed SiC medium-voltage solid-state transformer (5–10 MW modular) for 800 V DC AI factories, megawatt port charging and storage; Reno production line, USD 80M Series A, first deliveries promised for 2026 and unverified.",
+      "hq": "Singapore (with San Francisco and Reno, Nevada)",
+      "status": "active",
+      "lastUpdated": "2026-09-19",
+      "aka": [
+        "Amperesand Inc.",
+        "Amperesand Pte Ltd",
+        "Amperesand PTE LTD",
+        "Amperesand SST"
+      ],
+      "domains": [
+        "amperesand.io",
+        "amperesand.com"
+      ],
+      "srcTotal": 63,
+      "srcFirstPct": 10,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
       "slug": "anthropic",
       "name": "Anthropic",
       "categories": [
