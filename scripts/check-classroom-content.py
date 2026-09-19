@@ -1148,11 +1148,22 @@ nx.contribAdvances = clStudyNext_(nxContrib, { 'l-pub': { a: true, b: true } });
 nx.contribMidLesson = clStudyNext_(nxContrib, { 'l-pub': { a: true } });
 out.next = nx;
 
-var forbidden = 0;
-try { clRequireLesson_(TIERS['analyst'], clStampKinds_(FX['public-plus-guidance']), 't'); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
-try { clRequireLesson_(TIERS['admin'], clStampKinds_(FX['note-ref']), 't'); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
-try { clRequire_(TIERS['viewer'], 'tracks', 't'); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
-out.forbidden = forbidden; out.audited = __audit.map(function(a) { return a.result; });
+// ── The three fail-closed paths, and their audit trail ─────────────────
+// Each denial is captured as the audit entries pushed DURING its own call —
+// not read off the run-wide __audit list — so a denial logged by some other
+// path in this harness (progress, drill) can never stand in for the one the
+// gate is supposed to write (§7.59 item (i), (rr12)).
+var forbidden = 0, denials = {};
+function __deny(label, fn) {
+  var before = __audit.length;
+  try { fn(); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
+  denials[label] = __audit.slice(before);
+}
+__deny('classroom_capability_denied', function() { clRequireLesson_(TIERS['analyst'], clStampKinds_(FX['public-plus-guidance']), 'gate-t'); });
+__deny('classroom_bad_provenance',    function() { clRequireLesson_(TIERS['admin'], clStampKinds_(FX['note-ref']), 'gate-t'); });
+__deny('classroom_not_admitted',      function() { clRequire_(TIERS['viewer'], 'tracks', 'gate-t'); });
+out.forbidden = forbidden; out.denials = denials;
+out.audited = __audit.map(function(a) { return a.result; });
 process.stdout.write(JSON.stringify(out));
 """
 
@@ -1623,10 +1634,36 @@ def run_gate_truth_table(src, lesson_ids=()):
         cases += 1
         if not ok:
             err("study-next: " + msg)
+    # The audit-trail half of the truth table: every fail-closed path writes a
+    # security_alert naming the denial, the operation and (for a capability
+    # denial) the capability it refused. These three checks sat BELOW the
+    # `return` on the last line of this function from C1 until v06.57r and had
+    # never executed — the report counted the gate cases while the audit half
+    # went unverified (§7.59 item (i), (rr12)). They now run, one gate case
+    # each, and each is asserted against the entries logged during its own
+    # call, with the denominator printed when it fails.
+    DENIAL_DETAILS = {
+        "classroom_capability_denied": {"operation": "gate-t", "capability": "guidance", "role": "analyst"},
+        "classroom_bad_provenance":    {"operation": "gate-t"},
+        "classroom_not_admitted":      {"operation": "gate-t", "role": "viewer"},
+    }
+    denials = out.get("denials") or {}
+    for want, details in DENIAL_DETAILS.items():
+        cases += 1
+        logged = denials.get(want) or []
+        hits = [a for a in logged if a.get("result") == want]
+        if len(hits) != 1:
+            err("gate test: denial %r was audit-logged %d time(s) during its own call, expected exactly 1 "
+                "(%d entr%s logged during the call: %s)"
+                % (want, len(hits), len(logged), "y" if len(logged) == 1 else "ies",
+                   [a.get("result") for a in logged]))
+            continue
+        got = hits[0].get("details") or {}
+        bad = {k: got.get(k) for k, v in details.items() if got.get(k) != v}
+        if bad:
+            err("gate test: denial %r was audit-logged with details %s, expected %s"
+                % (want, bad, {k: details[k] for k in bad}))
     return (len(EXPECTED_GATE) * (1 + len(TIERS))) + len(EXPECTED_INDEX) + cases
-    for want in ("classroom_capability_denied", "classroom_bad_provenance", "classroom_not_admitted"):
-        if want not in out["audited"]:
-            err("gate test: denial %r was not audit-logged" % want)
 
 def main():
     src = read_gs()
