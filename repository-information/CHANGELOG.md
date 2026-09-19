@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 111/100`
+`Sections: 112/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.70r] — 2026-09-19 07:32:58 PM EST
+
+> See attached screenshot for what my NEW Profiler earnings desk looks like after I copied the instructions over.
+
+### Fixed
+
+- **THE REBUILT EARNINGS DESK IS LIVE WITH THE REPOSITORY ATTACHED — the fix the whole week has been chasing.** `trig_01HkrwpCULei8Gje6RGqcp1B`, created in the UI 2026-09-19 23:24 UTC, prompt saved 23:29 UTC. Verified against the API: prompt complete and matching the old Routine line for line (opening, STEP 0 a–e, the `add_repo` warning, the body, the corpus token, the closing REPORT line), `mcp_connections: []` so **none of the five default connectors came along**, cron `0 13 * * 1-5`, push + email, `model: ""` (Default), `next_run_at` 2026-09-21T13:08:01Z. The repository chip `LightAISolutions/Sales` is visible in the editor and in the detail page's **Runs with** card.
+- **THE OLD ROUTINE IS DELIBERATELY LEFT LIVE THROUGH MONDAY, AS A CONTROLLED A/B.** `trig_01UyH77BMKJnxzBUZJ11ej6A` fires at 13:03:56Z and the new one at 13:08:01Z — old first, four minutes clear, and the old one dies at the dry-run push in ~34 seconds without touching the queue, so there is no collision. **The only difference between the two is the attached repository**, which makes Monday the cleanest possible proof of the diagnosis rather than merely a hopeful run.
+
+### Changed
+
+#### `.claude/rules/profiler-app.md`
+- **THE REBUILD'S PRICE, RECORDED BECAUSE IT WAS DISCOVERED THE HARD WAY: a UI-created Routine can never be edited by an agent again.** The new Routine carries `created_via: "http_api"` and `update_trigger` refuses it — *"Agents can only update routines they created (via create_trigger)."* A Routine's own session may still set `enabled=false`; nothing else. **For every rebuilt Routine this retires the entire apparatus this repo built around `update_trigger`** — the C3 session 3 rule, design §12 item 2, and the three-session (rr66)/(rr68)/(rr69) sequence that landed one approved prompt amendment on 2026-09-19. A prompt change becomes a developer pasting into the UI. Still the right trade — a Routine that cannot push is useless whoever may edit it, and amendments are occasional while runs are daily — but it applies to all five committing Routines and should be taken knowingly.
+- **TWO API FIELDS THAT LOOK LIKE THEY ANSWER "IS A REPOSITORY ATTACHED" AND DO NOT.** `derived_state.folders_state` reads `FOLDERS_STATE_NONE` and `folders` reads `[]` on a Routine whose repository is demonstrably attached; `session_request.config.sources` is simply absent from a UI-created record rather than present-and-empty. **Neither is evidence.** The only reliable check is the **Runs with** card in the UI. That misreading was made in this session and is corrected here before it hardens into a rule.
+
+### Notes
+
+- **The plan to have an agent fill the prompt failed, and the fallback cost one paste.** v06.69r's approach was: developer creates an empty shell, agent writes the 4,455-character prompt in by API so the corpus token never passes through a file or a clipboard. `update_trigger` refused it for the reason above. The developer copied the Instructions field from the old Routine instead — which keeps the token inside the UI just as well, and is the method the rebuild guide should have led with.
+- **Still to do:** delete the old Routine after Monday's comparison, then rebuild the four remaining committing Routines. The ACL health check is read-only, works today, and needs no rebuild.
 
 ## [v06.69r] — 2026-09-19 07:12:53 PM EST
 
