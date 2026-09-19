@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.79g] — 2026-09-18 11:38:22 PM EST — v06.56r
+
+### Added
+
+- **The last three rehearsals, and the library is complete at fourteen.** Both halves of the sale are now covered for every buyer type the library set out to cover — seven rehearsals for each of the two seats, across nine kinds of buyer. Each is still one conversation against one buyer's own published record: who is across the table, what you walk in knowing, what the record leaves open, three decisions with four real options each, and a debrief that names the trap in every one.
+- **A room where the objection comes from a party that cannot price it.** One of the new rehearsals puts you opposite an adviser who relays a requirement without setting the price or carrying the loss — and whose own published guidance states the requirement while naming no standard behind it. The exercise is finding out whose rule it actually is, which is a different conversation from arguing about the requirement.
+- **A room where the rulebook you prepared does not apply.** Another opens on a gatekeeper whose published process governs most of its territory and not the site you came about, so the first ten minutes are about establishing which rulebook the meeting is in before any date can be quoted.
+- **A room where one buyer is three different customers.** The third puts you in front of a party that owns the equipment at one site, pays for it through somebody else's arrangement at a second, and stands behind a third party's payments at a third — holding a very different amount of the decision in each.
+
+### Changed
+
+- **The strong answer no longer sits in the same place every time.** Across the rehearsals the best move had settled into one position far more often than chance, and the final slot had never been used at all. The newest rehearsals spread it across the options, so the exercise rewards reading the record rather than spotting a pattern.
 
 ## [v01.78g] — 2026-09-18 08:01:10 PM EST — v06.55r
 
