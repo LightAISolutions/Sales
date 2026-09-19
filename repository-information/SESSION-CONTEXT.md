@@ -6,6 +6,43 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-19 05:42:31 AM EST
+**Repo version:** v06.61r — one push, merged (auto-merge landed `afebc9d` on main; Classroom GAS v01.81g deploy step due on that merge), then this handover
+**Branch:** `claude/beautiful-mayer-oxembl` — restarted from `origin/main` after the merge (`git fetch --prune origin`) for this handover
+
+### What was done
+
+- **Amperesand dossier + technology study guide (the Profiler Command and the Prep Command, one push).** Fable 5.1, two parallel `general-purpose` research subagents (first-party 24 sources; third-party ~38). Identity verified first: Amperesand Pte. Ltd. (UEN 202318356C, 2023-05-11) with US subsidiary Amperesand Inc. (Delaware, 2024-12-06); CEO Brian Dow on every dated source from 2025-10-31 — Gary Lawrence (appointed January 2025) left unannounced. `amperesand.profile.json` v1 (schema v7, intel-briefing): three product lines, 27-row spec table, 17 developments, 6 key judgments + indicators, 11 relationships, 4 policy exposures, 8 decision makers with four company-published headshots, 63 sources (first-party share 10% — businesswire.com 403s, so releases were read from syndications).
+- **`amperesand.study.json`** (schema v2, 12 sections) and `study-prep/amperesand/amperesand-lesson-plan.md` — built as a sibling to the Heron Power guide (does not repeat its SST physics; owns silicon carbide, megawatt/port charging, five-nines arithmetic, bidirectional storage). Five concepts registered: `availability`, `mcs`, `partial-discharge`, `shore-power`, `v2g` (registry 1,465).
+- **Registered:** roster entry (`aka[]`, `domains[]`), quarterly refresh-calendar row with seven watch items, segments `power-conversion-and-rack-power-silicon` challenger + `in-hall-power` adjacent; graph rebuilt; registry synced; corpus reconciliation read 2 inbound mentions (heron-power dossier + study guide), 0 changed.
+- **Segment regeneration cascaded into Classroom:** the content checker fails until `segment-*` lessons match the registry, so both segments were regenerated (`build-classroom-segments.py --segment …`), Classroom.gs v01.80g → v01.81g, and `Classroomgs.changelog.md` hit its 50 non-exempt trigger — the 2026-09-14 group (nine sections, v01.30g–v01.38g) rotated to the archive with SHA links; counter `43/50`. Pipeline checker: P1 developer-path findings only, no P3; selftest 15 / 0.
+
+### Where we left off
+
+Everything is merged. The developer asked for a paste-ready prompt to run `profiler dg-matrix` + `profiler prep dg-matrix` in a fresh Fable 5.1 High session (given in the handover response). The four open decisions from the previous session (quarterly-review Routine amendment, (rr56), roster hash (rr59), stranded footer (rr22)) are unchanged and undated.
+
+### Key decisions made
+
+- **A new dossier that joins a segment regenerates that segment's lesson in the same push** — the content checker enforces it, so budget a Classroom GAS bump, a GAS changelog section, and possibly a GAS changelog rotation into every `profiler <Company>` run.
+- **Unreconciled vendor figures stay unreconciled in the dossier** (4–10 / 5–10 / 6+ MW; 15+ / 20 / 20–30 years; IP55 vs IP65; the halved 10×/80% → 5×/50% claims); the June 2026 USD 30M round is recorded as third-party only.
+- **Study guides for sibling companies cross-refer rather than repeat** — Amperesand's guide points at Heron Power's Modules 2–4 for the cascaded-cell physics.
+
+### Active context
+
+- **Repo version v06.61r** · `CHANGELOG.md` **103 raw / 98 non-exempt** (five sections dated 2026-09-19; the first push on a later EST day rotates the 2026-09-14 group of twenty) · `Classroomgs.changelog.md` 43 raw / 42 non-exempt · `Profilerhtml.changelog.md` 49.
+- **GAS versions:** Classroom **v01.81g**, Scraper v02.20g, Profiler v01.39g. **Pages:** Profiler v01.90w, Classroom v01.16w.
+- **Profiler corpus:** 175 dossiers; SST startups covered: heron-power, amperesand; DG Matrix not covered (mentioned in both SST guides and the power-conversion segment lesson from trade press).
+- **Environment:** sec.gov and data.sec.gov blocked (efts.sec.gov full-text search answered); businesswire.com 403; the Profiler earnings desk still cannot push (Routines carry no repo source).
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Run `profiler dg-matrix` and `profiler prep dg-matrix` in one push** so the third hall-edge SST startup joins Heron Power and Amperesand — verify identity first (Raleigh, NC; USD 60M Series A February 2026 led by Engine Ventures with ABB and Mitsubishi Heavy Industries; "first company shipping commercial multiport SST"; named on NVIDIA's GTC 2026 roster), assign it to `power-conversion-and-rack-power-silicon` (regenerating that segment lesson → Classroom GAS bump), and cross-refer its study guide to the Heron and Amperesand guides instead of repeating the SST physics. Run on Fable 5.1 High.
+
+**To continue:** type `profiler and profiler prep dg-matrix`
+
+## Previous Sessions
+
 **Date:** 2026-09-19 05:07:48 AM EST
 **Repo version:** v06.60r — one push, merged (auto-merge run 693, ~17 s auto-merge job, **zero GAS deploy steps fired — "All GAS deploys confirmed the merged version (or none were due)"**, every Deploy step under a second, Pages deploy job skipped), then this handover
 **Branch:** `claude/modest-bell-vb2pzt` — restarted from `origin/main` at session start, and again after the merge (`git fetch --prune origin`) for this handover
@@ -40,47 +77,6 @@ Everything is merged; Pages/GAS still serve **v01.80g / v01.16w** (zero deploy s
 ### Recommendation for next session
 
 - **Apply the drafted amendment to the quarterly review Routine — but only after the developer has typed the approval sentence into the brief's slot in their own words, replacing the `[DEVELOPER: …]` placeholder rather than leaving it in place.** Two sessions have now stopped on the placeholder, correctly. The session reads `C5-SALES-SIMULATIONS-DESIGN.md` §12 annex, calls `update_trigger` with the annex's amended text as `prompt` and no other field, reads it back with `list_triggers`, compares character for character, and records it in design §12 item 2, the annex header, curriculum plan §10.6 at (rr69), the IRP closing note (three decisions remain) and the guidance rule's Freshness-discipline paragraph. Do it before 2026-10-15 13:00 UTC, the first firing. Run on Fable 5.1 High.
-
-**To continue:** type `approve the quarterly review routine prompt change`
-
-## Previous Sessions
-
-### Session — v06.59r (the quarterly-review-Routine decision — (rr66)–(rr67), read and drafted, not applied)
-
-**Date:** 2026-09-19 03:42:34 AM EST
-**Repo version:** v06.59r — one push, merged (auto-merge run 691, ~24 s auto-merge job, **zero GAS deploy steps fired — "All GAS deploys confirmed the merged version (or none were due)"**, every Deploy step under a second, Pages deploy job skipped), then this handover
-**Branch:** `claude/wonderful-pasteur-2c9q6m` — at `origin/main` at session start, restarted from it again after the merge (`git fetch --prune origin`) for this handover
-
-### What was done
-
-- **THE QUARTERLY-REVIEW-ROUTINE DECISION (design §12 item 2) — READ, DRAFTED, NOT APPLIED. Fable 5.1 High, one session, one push, no `.gs`, no page, nothing authored.** The brief's two bracketed `[DEVELOPER: …]` slots — the approval sentence the C3 session 3 rule requires in the session that changes a live Routine, and the (rr59)/(rr56) answer — were pasted blank; both read as **not taken** ((rr62)'s rule, now (rr66)). `trig_01CrhxzfBV6uKQNKpUXLLMSZ` was read through `list_triggers` (cron `0 13 15 1,4,7,10 *`, `next_run_at` 2026-10-15T13:00:20Z, `updated_at` 2026-09-16, **never fired**); **`update_trigger` was not called**; cron, name and model untouched.
-- **`C5-SALES-SIMULATIONS-DESIGN.md`** — §12 item 2 records the state; a new **§12 annex** carries the current prompt verbatim (27 lines / 4,824 chars) and the **amended prompt verbatim (34 lines / 7,917 chars) — the exact `prompt` text for `update_trigger`**. The amendment is three edits: header parenthetical, a new **step 3a** (for every `landscape-*` module the run edits: read the scenarios stamped on it off `Classroom.gs` through the content checker's parser via a pasted one-liner, confirm after the edit that the health script's §6 `landscape moved under it` line names exactly them, never edit or re-stamp a scenario, report the scenario-outlives-landscape warning rather than fix it, list them under `Needs a developer session — scenarios on revised landscapes`; re-dated-only landscapes list none; empty list stated), and the closing line.
-- **Both of step 3a's reads proved on the day ((rr67)):** the one-liner returns 14 rows folding to 9 landscapes; the moved-landscape line — 0 on eight consecutive pushes because no landscape has been revised since C5 — printed exactly the three utilities rooms when `landscape-utilities-2026-09`'s `updated` was bumped 2026-09-14 → 2026-09-20 in the working copy (restored, clean).
-- **(rr60)'s count re-derived:** **five** rooms rest on landscapes with `reviewBy` ≤ 2026-10-31 (utilities ×3 at 2026-10-01, neoclouds 2026-09-30, assurance 2026-10-31), **four** strictly before; cooling (09-28), in-hall-power (10-01) and grid-equipment (10-31) review inside the window with no room on them. Findings **(rr66)–(rr67)** in `CLASSROOM-CURRICULUM-PLAN.md` §10.6; **the register continues at (rr68)**. IRP §7 closing note: item 2 bullet + a v06.59r revision of the recommendation (still four decisions open; item 2 one approval sentence from applied).
-- **CHANGELOG arithmetic re-counted:** pushed 2026-09-19 03:39 AM EST, so this section is exempt beside two others — **101 raw / 98 non-exempt, no rotation**, counter `101/100`; **the first push after the day boundary rotates the 2026-09-14 group of twenty**. `Classroomgs.changelog.md` untouched at 51 raw / 50 non-exempt.
-
-### Where we left off
-
-Everything is merged; Pages/GAS still serve **v01.80g / v01.16w** (zero deploy steps this push). **Four decisions remain open and one of them is now one sentence from done:** design §12 item 2 is drafted verbatim in the design's §12 annex and needs only a session whose brief carries the developer's explicit approval in their own words — that session calls `update_trigger` (prompt only), reads it back with `list_triggers`, compares character for character, and records it. Until then the Routine fires 2026-10-15 13:00 UTC with the prompt it has, after the utilities/neoclouds review dates and before the assurance one. (rr56), the roster hash ((rr59), §10.8 PROPOSED) and the stranded footer ((rr22)) are unchanged and undated.
-
-### Key decisions made
-
-- **A blank approval slot is "not taken" — for a Routine change as for a GAS change.** The session did not infer approval from the brief's surrounding intent; it drafted, proved the draft's reads, and stopped short of the API call. Nothing was fired, re-scheduled or renamed.
-- **The amendment lists, never revises.** Design §12 item 2's "either revise it in the same session or list it as due" was resolved to *list only*, per the brief and D6/P13 — the beats are re-judged only by a developer session.
-- **The scenario set is read off the file, not carried in the prompt.** A list in the prompt is right today and wrong at the first fifteenth room (§12 item 8); the one-liner loads `check-classroom-content.py` as a module and walks `parse_literals`.
-
-### Active context
-
-- **Repo version v06.59r** · `CHANGELOG.md` **101 raw / 98 non-exempt** (counter `101/100`; the next push on a later EST day rotates the 2026-09-14 group of twenty — read archive step 1, detach the footer first) · `Classroomgs.changelog.md` 51 raw / 50 non-exempt (next GAS push on a later day rotates it) · `Profilerhtml.changelog.md` 49.
-- **GAS versions:** Classroom **v01.80g** (deployment 93, 93/200), Scraper v02.20g (165/200 — the tight one), Profiler v01.39g. **Page:** Classroom v01.16w.
-- **Baselines measured this session (pristine HEAD, and again after the edits — identical):** content checker **0 / 0 at 70 / 8 / 220**, module assertion 28; `--selftest` 15 / 0; `--base origin/main` P1 ×3 developer paths only; `--strict` no structural findings, 28 stale pins across 51 hand-authored lessons, 9 review items due (5 scenario lessons + 4 modules), coverage 14 of 14, moved-landscape 0, pools study 2,169 + lesson 533 + roster 314, decks 2,615 / 2,929 and 3,139 / 3,453 against 6,000; segments 19 / 0; readme tree 10 + 8 / 0.
-- **The Routine, as read:** id `trig_01CrhxzfBV6uKQNKpUXLLMSZ`, name `Industry Guidance quarterly review`, cron `0 13 15 1,4,7,10 *`, enabled, next 2026-10-15T13:00:20Z, never fired, `sources: []` (clone-in-prompt STEP 0 preamble).
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-- **The findings register is at (rr67); the next session continues at (rr68).**
-
-### Recommendation for next session
-
-- **Apply the drafted amendment to the quarterly review Routine — the one open decision with a date, now one sentence from done.** Paste the approval sentence in the developer's own words into the brief; the session reads `C5-SALES-SIMULATIONS-DESIGN.md` §12 annex, calls `update_trigger` with the annex's amended text as `prompt` and no other field, reads it back with `list_triggers`, compares character for character against the annex, and records the change in design §12 item 2, curriculum plan §10.6 at (rr68) and the IRP closing note (three decisions remain). Do it before 2026-10-15 13:00 UTC, the first firing. Run on Fable 5.1 High.
 
 **To continue:** type `approve the quarterly review routine prompt change`
 
