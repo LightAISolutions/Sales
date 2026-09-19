@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 109/100`
+`Sections: 110/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.68r] — 2026-09-19 06:55:09 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+
+- **`reading-the-graph` taught a corpus count the graph had already falsified — the first genuine contradiction found in this three-session arc, and one (rr70)'s audit missed — (rr72).** Section `what-an-edge-is` taught *"At the last build there were **1,260 edges** across the corpus."* The figure was **correct when authored** (commits `c582f11e` and `5687fe99`, both 2026-09-08, carried exactly 1,260) and a **later build the same day** (`78cfaf6c`) took it to 1,283; the graph holds **1,481** today. G3's sentence writes itself — *section `what-an-edge-is` teaches 1,260 edges; `graph:profiler-graph` now says 1,481* — so the lesson is revised. The section **no longer quotes a running total at all**: it states the scale and tells the reader to read the live figure off the graph's own `built` snapshot, which is a better lesson than the number was and cannot go stale. `graph:profiler-graph` re-pinned 2026-09-08 → **2026-09-19**, read off `built` this run (G2); the other five inputs keep their pins because the revision did not draw on them. `updated` → 2026-09-19; `reviewBy` 2027-03-08 unchanged (no new dated gate); one `revisions[]` entry appended with `changed: ["what-an-edge-is"]`.
+- **The `tiles[0]` entry carried the same superseded `1,260`** and is corrected in the same commit. The committer is forbidden to touch `tiles[]` and is told to report a contradicted tile under `Needs the developer` — this is the developer session that rule defers to.
+- **A correction to (rr70):** it read the graph diff, checked **the edges the lessons quote**, and concluded "no contradiction" — never checking the sentence *about* the corpus. A diff-reading pass structurally cannot catch a claim about a file's **shape** rather than its rows. Everything else (rr70) said about the graph was re-measured this run and stands: `fluidstack↔terawulf` 23 cross-mentions and `last` 2026-08-05, `fluidstack↔hut-8` `last` 2026-02-25, `hut-8↔terawulf` five undated mentions, TeraWulf's five curated relationships — **all byte-stable at pin and today.**
+
+### Changed
+
+- **The stale count is 13 → 12.** `reading-the-graph` leaves the list because its pin was **earned** by a revision, not cleared by a rule — which is the outcome the whole layer is for.
+- **`PROFILER-SCHEMA.md` → "Registry revision signals"** gains the standing answer on why `graph:` gets no rule, plus the corollary for authors: **do not teach a corpus-wide count** — state the scale and point at the file's own `built` snapshot.
+- **Records:** `CLASSROOM-CURRICULUM-PLAN.md` §10.6 **(rr72)** with the register advanced to **(rr73)**; `INTEGRATED-REMEDIATION-PLAN.md` seventh revision of the closing note.
+- Classroom GAS **v01.84g → v01.85g**, `Classroomgs.version.txt` and a generic `Classroomgs.changelog.md` entry; the README tree's Classroom GAS display updated to match.
+
+### Notes
+
+- **The recommendation this session was sent to implement was wrong, and the evidence that killed it came from implementing it.** (rr71)(d) queued an edge-keyed sibling of `source_revision_only()` — edges keyed on `(a, b)`, a new edge additive because a new pair says nothing about an existing pair, `evid[]` compared order-insensitively — and predicted it would take 13 to 11. The design question was asked **before** the code was written: *does any pinned lesson enumerate the graph rather than quoting individual edges?* One does. **An additive edge rule would have cleared the single graph pin that was genuinely stale.** That is the exact false negative `source_revision_only()` was built to refuse, reached from the other direction.
+- **The standing finding: a derived aggregate's own size is a claim, so a wholesale-regenerated file has no cheap "unchanged" state.** A rule that additionally required the edge count to hold would never fire — the graph gains edges on nearly every `profiler <Company>` run. **`graph:` gets no source-side rule, and that is the answer rather than a deferral.** Its pins stay in the stale list and are closed by reading, which is the correct cost for a file whose every build is a new document.
+- **The other two graph pins were swept for the same class of claim and carry none.** Every figure in `where-bess-plugs-in` and `the-campus-as-a-power-project` is a project or dossier fact (210 engines, 330/245 MW, 2.8 GWh, 5 GW, 474 GW), never a graph statistic — so they stay pinned and stale with nothing to revise.
+- **What the arc looks like closed.** Session one proved eighteen stale pins were noise and wrote the disproof by hand; session two taught the checker to see five of them as noise by construction; this one found that the thing none of that machinery could articulate — a pin whose *sentence* nobody had read — was a real error being taught to learners. **The staleness report was right to keep pointing at the graph.**
+- **Checker results:** `check-classroom-content.py` **70 lessons / 8 tracks / 220 gate cases — 0 errors / 0 warnings**; `check-classroom-curriculum.py` **no structural findings**, **12 stale / 37 additions-only / 5 migration-only**, 0 of 19 segments due, coverage 14 of 14, 0 scenarios on moved landscapes; `check-classroom-pipeline.py --selftest` **15 fixtures / 0 failures**; `check-classroom-pipeline.py --base origin/main` **9 paths changed, 3 findings, all P1** (`CLASSROOM-CURRICULUM-PLAN.md`, `INTEGRATED-REMEDIATION-PLAN.md`, `PROFILER-SCHEMA.md` — outside the committer's write set, expected for a developer session). **Everything else passes on a diff that genuinely revises a lesson**: P2 the content fence, P3 the gate digest, P5 surviving ids, P6 the derived gate, **P7 the pin move and the single appended revision**, **P8 `changed[]` == the sections that differ**, P10 the caps (1 revised, cap 3), P11 the generic public changelog and P12 the `VERSION` / version-file pair — the first time in this arc those assertions have judged a real revision rather than an empty diff; `node --check` on a `.js` copy of `Classroom.gs` clean; `check-gas-inner-scripts.js` 9 files / 86 inner blocks; `check-readme-tree.py` **0 findings**.
 
 ## [v06.67r] — 2026-09-19 06:26:54 PM EST
 

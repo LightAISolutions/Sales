@@ -1,4 +1,4 @@
-var VERSION = "v01.84g";
+var VERSION = "v01.85g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -35128,14 +35128,14 @@ function clLessonReadingTheGraph_() {
  "title": "Reading the Relationship Graph",
  "short": "What an edge is, the seven types and their inverses, the chips that carry the deal — and how to read a player table without mistaking a mention for a deal.",
  "group": "The Value Chain",
- "updated": "2026-09-08",
+ "updated": "2026-09-19",
  "reviewBy": "2027-03-08",
  "provenance": {
   "inputs": [
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-08",
+    "date": "2026-09-19",
     "note": "the edge shape, the curated/derived split, and every edge quoted in the worked example"
    },
    {
@@ -35170,11 +35170,20 @@ function clLessonReadingTheGraph_() {
    }
   ]
  },
+ "revisions": [
+  {
+   "date": "2026-09-19",
+   "note": "section `what-an-edge-is` teaches \"At the last build there were 1,260 edges across the corpus\"; graph:profiler-graph now says 1,481. The count was correct when authored and the graph's own rebuild falsified it the same day, so the section no longer quotes a running total at all — it states the scale and tells the reader to read the live figure off the graph's `built` snapshot. Every other graph claim the lesson makes was re-measured against the source this run and stands unchanged: the Fluidstack/TeraWulf pair at 23 cross-mentions and last 2026-08-05, the Fluidstack/Hut 8 pair at last 2026-02-25, the Hut 8/TeraWulf pair at five undated mentions, and TeraWulf's five curated relationships. The `1,260` tile carried the same superseded figure and was corrected outside sections[] as a developer session may.",
+   "changed": [
+    "what-an-edge-is"
+   ]
+  }
+ ],
  "tiles": [
   {
-   "k": "1,260",
-   "v": "edges in the graph",
-   "sub": "one per company pair with a curated link or a cross-mention"
+   "k": "1 per pair",
+   "v": "how edges are counted",
+   "sub": "one per company pair with a curated link or a cross-mention — the running total is on the graph's own build"
   },
   {
    "k": "7",
@@ -35200,7 +35209,7 @@ function clLessonReadingTheGraph_() {
    "read": "4 min",
    "ps": [
     "Every covered company has a dossier, and every dossier states who it works with, who it buys from, who it sells to and who it competes against. Read one dossier and you get one company's account of its own world. The {{relationship graph}} exists so you can read the other direction too: it merges all of those stated relationships with the mentions detected across the whole corpus into one file, so a company's connections can be seen from both ends at once. It is **built, never hand-edited** — regenerated from the registry and the profiles after any dossier write — which means it can say nothing that a dossier does not.",
-    "The unit is the {{edge}}: one company pair, stored once, with the two slugs in alphabetical order. Fluidstack and Hut 8 are one edge, not two, and it holds everything either side has to say. At the last build there were **1,260 edges** across the corpus.",
+    "The unit is the {{edge}}: one company pair, stored once, with the two slugs in alphabetical order. Fluidstack and Hut 8 are one edge, not two, and it holds everything either side has to say. The corpus runs to **well over a thousand** edges and gains more on every rebuild — so read the total off the graph's own `built` snapshot rather than carrying a figure around, because a count quoted from memory goes stale within days.",
     "An edge carries two different kinds of content, and confusing them is the single most common way to misread the graph. A {{curated edge}} is a relationship a dossier *states*: it has a type, a note, the context, a cited source, and the deal chips. Someone read a filing and wrote it down. A {{derived edge}} is a pair the builder found because one dossier's prose happens to name the other company. It carries the sentence — the {{cross-mention}} — and nothing else. No type, no chips, no claim about a transaction. The Profiler calls these *Detected*, which is exactly the right word: something was noticed, not classified.",
     "One more field sits on the edge itself rather than on either side: **last**, the date of the newest dated evidence on the pair. It tells you how fresh the *record* is, not how current the *relationship* is — and it is empty whenever none of the evidence carries a date at all.",
     "So the honest reading of an edge is narrow and useful: **an edge is a claim that the record connects these two names.** Whether it connects them as a deal, a rivalry, an investment, or a single sentence of comparison is what the type and the chips are for — and if there is no type, nobody has answered that question yet."
