@@ -6,6 +6,47 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-19 03:42:34 AM EST
+**Repo version:** v06.59r — one push, merged (auto-merge run 691, ~24 s auto-merge job, **zero GAS deploy steps fired — "All GAS deploys confirmed the merged version (or none were due)"**, every Deploy step under a second, Pages deploy job skipped), then this handover
+**Branch:** `claude/wonderful-pasteur-2c9q6m` — at `origin/main` at session start, restarted from it again after the merge (`git fetch --prune origin`) for this handover
+
+### What was done
+
+- **THE QUARTERLY-REVIEW-ROUTINE DECISION (design §12 item 2) — READ, DRAFTED, NOT APPLIED. Fable 5.1 High, one session, one push, no `.gs`, no page, nothing authored.** The brief's two bracketed `[DEVELOPER: …]` slots — the approval sentence the C3 session 3 rule requires in the session that changes a live Routine, and the (rr59)/(rr56) answer — were pasted blank; both read as **not taken** ((rr62)'s rule, now (rr66)). `trig_01CrhxzfBV6uKQNKpUXLLMSZ` was read through `list_triggers` (cron `0 13 15 1,4,7,10 *`, `next_run_at` 2026-10-15T13:00:20Z, `updated_at` 2026-09-16, **never fired**); **`update_trigger` was not called**; cron, name and model untouched.
+- **`C5-SALES-SIMULATIONS-DESIGN.md`** — §12 item 2 records the state; a new **§12 annex** carries the current prompt verbatim (27 lines / 4,824 chars) and the **amended prompt verbatim (34 lines / 7,917 chars) — the exact `prompt` text for `update_trigger`**. The amendment is three edits: header parenthetical, a new **step 3a** (for every `landscape-*` module the run edits: read the scenarios stamped on it off `Classroom.gs` through the content checker's parser via a pasted one-liner, confirm after the edit that the health script's §6 `landscape moved under it` line names exactly them, never edit or re-stamp a scenario, report the scenario-outlives-landscape warning rather than fix it, list them under `Needs a developer session — scenarios on revised landscapes`; re-dated-only landscapes list none; empty list stated), and the closing line.
+- **Both of step 3a's reads proved on the day ((rr67)):** the one-liner returns 14 rows folding to 9 landscapes; the moved-landscape line — 0 on eight consecutive pushes because no landscape has been revised since C5 — printed exactly the three utilities rooms when `landscape-utilities-2026-09`'s `updated` was bumped 2026-09-14 → 2026-09-20 in the working copy (restored, clean).
+- **(rr60)'s count re-derived:** **five** rooms rest on landscapes with `reviewBy` ≤ 2026-10-31 (utilities ×3 at 2026-10-01, neoclouds 2026-09-30, assurance 2026-10-31), **four** strictly before; cooling (09-28), in-hall-power (10-01) and grid-equipment (10-31) review inside the window with no room on them. Findings **(rr66)–(rr67)** in `CLASSROOM-CURRICULUM-PLAN.md` §10.6; **the register continues at (rr68)**. IRP §7 closing note: item 2 bullet + a v06.59r revision of the recommendation (still four decisions open; item 2 one approval sentence from applied).
+- **CHANGELOG arithmetic re-counted:** pushed 2026-09-19 03:39 AM EST, so this section is exempt beside two others — **101 raw / 98 non-exempt, no rotation**, counter `101/100`; **the first push after the day boundary rotates the 2026-09-14 group of twenty**. `Classroomgs.changelog.md` untouched at 51 raw / 50 non-exempt.
+
+### Where we left off
+
+Everything is merged; Pages/GAS still serve **v01.80g / v01.16w** (zero deploy steps this push). **Four decisions remain open and one of them is now one sentence from done:** design §12 item 2 is drafted verbatim in the design's §12 annex and needs only a session whose brief carries the developer's explicit approval in their own words — that session calls `update_trigger` (prompt only), reads it back with `list_triggers`, compares character for character, and records it. Until then the Routine fires 2026-10-15 13:00 UTC with the prompt it has, after the utilities/neoclouds review dates and before the assurance one. (rr56), the roster hash ((rr59), §10.8 PROPOSED) and the stranded footer ((rr22)) are unchanged and undated.
+
+### Key decisions made
+
+- **A blank approval slot is "not taken" — for a Routine change as for a GAS change.** The session did not infer approval from the brief's surrounding intent; it drafted, proved the draft's reads, and stopped short of the API call. Nothing was fired, re-scheduled or renamed.
+- **The amendment lists, never revises.** Design §12 item 2's "either revise it in the same session or list it as due" was resolved to *list only*, per the brief and D6/P13 — the beats are re-judged only by a developer session.
+- **The scenario set is read off the file, not carried in the prompt.** A list in the prompt is right today and wrong at the first fifteenth room (§12 item 8); the one-liner loads `check-classroom-content.py` as a module and walks `parse_literals`.
+
+### Active context
+
+- **Repo version v06.59r** · `CHANGELOG.md` **101 raw / 98 non-exempt** (counter `101/100`; the next push on a later EST day rotates the 2026-09-14 group of twenty — read archive step 1, detach the footer first) · `Classroomgs.changelog.md` 51 raw / 50 non-exempt (next GAS push on a later day rotates it) · `Profilerhtml.changelog.md` 49.
+- **GAS versions:** Classroom **v01.80g** (deployment 93, 93/200), Scraper v02.20g (165/200 — the tight one), Profiler v01.39g. **Page:** Classroom v01.16w.
+- **Baselines measured this session (pristine HEAD, and again after the edits — identical):** content checker **0 / 0 at 70 / 8 / 220**, module assertion 28; `--selftest` 15 / 0; `--base origin/main` P1 ×3 developer paths only; `--strict` no structural findings, 28 stale pins across 51 hand-authored lessons, 9 review items due (5 scenario lessons + 4 modules), coverage 14 of 14, moved-landscape 0, pools study 2,169 + lesson 533 + roster 314, decks 2,615 / 2,929 and 3,139 / 3,453 against 6,000; segments 19 / 0; readme tree 10 + 8 / 0.
+- **The Routine, as read:** id `trig_01CrhxzfBV6uKQNKpUXLLMSZ`, name `Industry Guidance quarterly review`, cron `0 13 15 1,4,7,10 *`, enabled, next 2026-10-15T13:00:20Z, never fired, `sources: []` (clone-in-prompt STEP 0 preamble).
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+- **The findings register is at (rr67); the next session continues at (rr68).**
+
+### Recommendation for next session
+
+- **Apply the drafted amendment to the quarterly review Routine — the one open decision with a date, now one sentence from done.** Paste the approval sentence in the developer's own words into the brief; the session reads `C5-SALES-SIMULATIONS-DESIGN.md` §12 annex, calls `update_trigger` with the annex's amended text as `prompt` and no other field, reads it back with `list_triggers`, compares character for character against the annex, and records the change in design §12 item 2, curriculum plan §10.6 at (rr68) and the IRP closing note (three decisions remain). Do it before 2026-10-15 13:00 UTC, the first firing. Run on Fable 5.1 High.
+
+**To continue:** type `approve the quarterly review routine prompt change`
+
+## Previous Sessions
+
+### Session — v06.58r (the drill-account-cap decision — (rr61)–(rr65), cap 3,000 → 6,000, GAS v01.80g)
+
 **Date:** 2026-09-19 02:37:07 AM EST
 **Repo version:** v06.58r — one push, merged (auto-merge run 689, ~33 s auto-merge job, **exactly one GAS deploy step fired — `Classroom deploy confirmed (GET): Updated to v01.80g (deployment 93) | 93/200`**, the forecast met on the day), then this handover
 **Branch:** `claude/relaxed-bohr-uxj84u` — restarted from `origin/main` at session start, and again after the merge (`git fetch --prune origin`) for this handover
@@ -42,48 +83,5 @@ Everything is merged and **Pages/GAS serve v01.80g / v01.16w**. **No session-sha
 - **Take design §12 item 2 next — the quarterly review Routine's prompt — because it is the one open decision with a date on it: the Routine fires for the first time on 2026-10-15, two weeks after three utilities rooms and the neoclouds room pass their landscape review dates (2026-10-01 / 09-30), and its prompt says nothing about the scenarios stamped on the landscapes it revises ((rr60)).** It is an in-place prompt change to a live Routine and needs the developer's explicit approval in the session that makes it; run it as a named developer session on Fable 5.1 High, reading the Routine first (`list_triggers`), changing only its prompt (`update_trigger`), and recording the change in `C5-SALES-SIMULATIONS-DESIGN.md` §12 and the curriculum plan. The other three open decisions ((rr56), the roster hash, the stranded footer) have no date and can wait.
 
 **To continue:** type `approve the quarterly review routine prompt change`
-
-## Previous Sessions
-
-### Session — v06.57r (§7.59 carried-items row — (rr57)–(rr60), items (ii)/(iii) put to the developer)
-
-**Date:** 2026-09-19 02:11:39 AM EST
-**Repo version:** v06.57r — one push, merged (auto-merge run 686, ~17 s auto-merge job, **zero GAS deploy steps fired — "All GAS deploys confirmed the merged version (or none were due)"**, Pages deploy job skipped), then this handover
-**Branch:** `claude/bold-pasteur-xwm8fi` — restarted from `origin/main` at session start, and again after the merge for this handover
-
-### What was done
-
-- **§7.59's CARRIED-ITEMS ROW RAN — Fable 5.1 High, one session, one push, no content authored, `Classroom.gs` byte-identical to `origin/main` — AND THE ROW CAN BE CLOSED.** 70 lessons, 8 tracks, module assertion 28, both decks unmoved. Findings **(rr57)–(rr60)** written into `CLASSROOM-CURRICULUM-PLAN.md` §10.6; the register continues at **(rr61)**.
-- **Item (i) DONE — (rr57).** The three denial-audit assertions in `run_gate_truth_table()` (`scripts/check-classroom-content.py`) sat below the function's `return` from C1 and had never executed. They now run, one gate case each: **217 → 220** = 14 fixtures × 7 + 6 index tiers + `cases` **113 → 116**. **They passed at once**, so the instrument was proved first: seven mutations of the audit path in copies of `Classroom.gs` (each `auditLog` deleted, capability detail dropped, operation blanked, result string swapped, denial double-logged) — **7 of 7 caught, each by exactly one error**. Tightened in the moving: each denial captured during its own call (`__deny`), asserted exactly once with operation `gate-t`, capability `guidance` and role, and every failure prints its denominator. The run-wide audit list holds exactly 3 entries at HEAD, so the old form would also have passed — **the audit path was never broken; the coverage claim was. Item (i) opened no work of its own.**
-- **Item (ii) WITH THE DEVELOPER — (rr58).** Re-measured from the real `handleClassroomOp_` path (transport stubbed to the repo's `profiler-data/`, 1,050 fetches, harness self-test 70 / 14 / 28): a **contributor's mechanism deck is 3,139** (`lc` 253 + `lq` 280 + `gc` 275 + `gq` 162 + `sf` 766 + `ss` 1,403), **3,453 with the roster deck**; an analyst's 2,615 / 2,929. The cap (3,000) is tested against the account's **whole** row set, both decks together; past it a new item's first grade returns `DRILL_FULL`. The health script's `total drillable today 2702` equals no tier's deck. `CLASSROOM-SCHEMA.md`'s paragraph now states the measured figures; **the constant is untouched; recommendation 6,000** plus a per-tier line in the health script.
-- **Item (iii) WITH THE DEVELOPER — (rr59).** §10.8 amendment written as a proposal, not applied: hash `role + '||' + basis`. Measured: 314 cards, 314 distinct hashes, pairs unchanged across six consecutive pushes, role-only case never yet observed. Cost stated: all 314 cards re-key at once for every account that has graded any.
-- **Item (iv) CONFIRMED DONE, not re-done.** The (rr17) adjacency fix landed at **v06.52r** (caf01f9, C5 session 1); §10.9 now says so.
-- **§7.59 carries its status at close; the §7 closing note is revised** (recommendation line + register pointer). CHANGELOG **99/100** (98 non-exempt, no rotation); no public changelog line (no `.gs`, no page).
-
-### Where we left off
-
-Everything is merged; Pages still serves **v01.79g / v01.16w** (nothing deployable changed). **No session-shaped work is left on the programme until the developer decides something.** Five decisions are open, each with numbers behind it in the closing block of this session and in §10.6: **design §12 item 2** (the quarterly review Routine's prompt — (rr60)), **(rr56)** (re-cutting the eleven earlier scenarios' answer positions), **`CL_DRILL_ACCOUNT_CAP`** ((rr58), recommendation 6,000), **the roster-hash amendment** ((rr59), proposed in §10.8), and **the stranded footer** at `INTEGRATED-REMEDIATION-PLAN.md` line 1927 ((rr22), left as found). The Q plan clock (~2026-12, reports only) is the only date on the table.
-
-### Key decisions made
-
-- **The assertions were tightened, not just moved.** A per-call capture was chosen over the run-wide `want in out["audited"]` form because the latter would let a denial logged by any other harness path stand in; measured, no such path exists today (3 entries, all from the gate calls), so the tightening closes a gap the corpus had not exercised. Chesterton's fence held: nothing pre-existing was removed — `out.audited` is still emitted.
-- **The health script's cap line was recorded as a finding, not fixed** — it prints a composite (2,702) that equals no tier's deck; the fix belongs with the cap decision, and this row's commit was kept to item (i) plus documents.
-- **(rr60) re-derived the brief's "four rooms inside six weeks" on the day:** four rest on landscapes reviewing by 2026-10-01 (utilities ×3 at 10-01, neoclouds at 09-30) and a fifth (`scenario-assurance-discovery`, assurance) at 2026-10-31, exactly six weeks out. The Routine `trig_01CrhxzfBV6uKQNKpUXLLMSZ` was read, not changed: cron `0 13 15 1,4,7,10 *`, **next firing 2026-10-15 13:00 UTC, never yet fired**, and its prompt says nothing about scenarios.
-
-### Active context
-
-- **Repo version v06.57r** · `CHANGELOG.md` **99 raw / 98 non-exempt** against a 100 trigger — **the next push commit takes it to 100 raw / 99 non-exempt, still no rotation; the one after that rotates** (test the non-exempt count on the day — (rr55)); `Classroomgs.changelog.md` 50 raw / 43 non-exempt; `Profilerhtml.changelog.md` 49, one section from its own rotation.
-- **GAS versions:** Classroom **v01.79g**, Scraper v02.20g, Profiler v01.39g — none touched. **Page versions:** Classroom v01.16w.
-- **Baselines, measured this session:** `check-classroom-content.py` **0 / 0 at 70 lessons / 8 tracks / 220 gate cases** (was 217), module assertion 28; `--strict` no structural findings, 28 stale pins across 51 hand-authored lessons, 9 review items due, coverage 14 of 14 (both seats 7 of 7), moved-landscape list 0, pools study 2,169 + lesson 533 + roster 314, 42 scenario beats not drillable — **the `--strict` report was byte-identical before and after the commit apart from the date line**. `--selftest` 15 / 0. `build-classroom-segments.py --check` 19 / 0 → 0. `check-readme-tree.py` 10 + 8, 0 findings. Pipeline `--base origin/main`: **P1 ×4** (checker, curriculum plan, schema, IRP), no P2, no P3.
-- **Tier test from the real path:** analyst `cop=index` **42,708 bytes, byte-identical** base → head; contributor 57,344; all 14 scenarios `ROLE_DENIED` to an analyst, served to contributor and admin; mechanism lesson pools 446 / 970 (analyst / contributor+), roster 314 with 314 distinct hashes, every id→hash pair identical; roster flag off → `{enabled:false}`, on → pool 314, draw 10.
-- **Deploy counter:** Classroom **92/200 with 108 left — unchanged, measured at v06.56r**, zero steps fired this push. Scraper 165/200 with 35 left remains the tight one.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-- **The findings register is at (rr60); the next session continues at (rr61).**
-
-### Recommendation for next session
-
-- **Take the cheapest of the five open decisions first — raise `CL_DRILL_ACCOUNT_CAP` to 6,000 and give the health script a per-tier deck line — as one named developer session on Opus 5 xhigh, because it is the only one of the five that is a live defect today: a contributor who has graded every mechanism card once cannot schedule the last 139, and cannot schedule any roster card past 3,000.** It is a one-constant `.gs` change (GAS bump, one `Deploy Classroom` step, forecast 93/200), a health-script edit, and a schema line; the roster-hash amendment (rr59) can ride the same `.gs` push if the developer takes it, since both want a GAS bump. Design §12 item 2 must be decided before 2026-10-15 (the Routine's first firing) and is an approval, not a session.
-
-**To continue:** type `raise the drill account cap`
 
 Developed by: LightAISolutions
