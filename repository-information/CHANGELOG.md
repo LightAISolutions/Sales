@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.64r] — 2026-09-19 03:52:07 PM EST
+
+> **Prompt:** "run the segment regeneration pass, then give me step-by-step instructions on how to write the approval sentence."
+
+### Changed
+
+- **Segment regeneration pass** — `scripts/build-classroom-segments.py --all`, a developer run under curriculum plan §10.4's "cleared in a single developer run whenever convenient". **17 of 19 segment lessons written; `--check` 17 due → 0 due.** The two already-current segments (`power-conversion-and-rack-power-silicon`, `in-hall-power`, regenerated earlier on 2026-09-19 by v06.62r and v06.63r) produced **identical bytes and were not written**, confirming the generator's determinism contract — `--all` is a no-op on an unchanged segment rather than a forced rewrite.
+- **Three of the seventeen carried real content drift, not pin dates** — `storage-integrators-and-containers`, `grid-equipment` and `bridge-and-on-site-generation` each reported `sections differing: who-is-connected`, and the change is **DG Matrix entering their connection tables**: the v06.62r session regenerated only its own two segments, so the graph rebuild that added DG Matrix's edges (1,468) left three other segments listing connections that no longer matched the graph. The remaining fourteen were pin-date only (`concepts:profiler-concepts` and `graph:profiler-graph` 2026-09-13 → 2026-09-19, `sections differing: none`).
+- **Why this was worth a session rather than a wait** — a standing backlog is not cosmetic: at v05.62r twelve stale segment lessons were failing the content checker's membership assertion at two errors each, so every Classroom commit proved itself against a 24-error baseline. Clearing to 0 restores a zero baseline against which the next real error is visible.
+
+#### `Classroom.gs` — v01.84g
+
+##### Changed
+
+- Curriculum refreshed — every market-structure lesson across the value chain brought up to date with the latest company coverage; three now show a recently covered company in their connection tables (`Classroomgs.changelog.md` 46/50; `Classroomgs.version.txt` |v01.84g|)
+
+### Notes
+
+- **Clone depth** — `git fetch --unshallow origin main` was run before any `--check` or pin read (1,432 commits). The 17-due reading is therefore genuine and not the shallow-clone artifact CLAUDE.md documents, where a boundary commit makes every per-file `git log` return the boundary's date.
+- **Rotation arithmetic** — `CHANGELOG.md` 106 raw / 98 non-exempt against a 100 trigger (eight sections carry today's EST date and are exempt); `Classroomgs.changelog.md` 46 raw / 41 non-exempt against 50. Neither rotates. The first push on a later EST day rotates the 2026-09-14 group of twenty.
 
 ## [v06.63r] — 2026-09-19 07:19:47 AM EST
 

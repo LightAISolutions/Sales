@@ -1,4 +1,4 @@
-var VERSION = "v01.83g";
+var VERSION = "v01.84g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4037,7 +4037,7 @@ function clLessonSegmentCellsAndChemistry_() {
  "title": "Cells and chemistry",
  "short": "Makers of the storage cell itself — the lithium-iron-phosphate prismatic cell that every containerized system is built from, the high-power NCA/LMO and…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
+ "updated": "2026-09-19",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -4176,13 +4176,13 @@ function clLessonSegmentCellsAndChemistry_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -6222,6 +6222,11 @@ function clLessonSegmentCellsAndChemistry_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -6235,7 +6240,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
  "title": "Storage integrators and containers",
  "short": "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
+ "updated": "2026-09-19",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -6434,13 +6439,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -8152,6 +8157,30 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "—"
     ],
     [
+     "**Amperesand**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**Tesla**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**BYD**",
      "REPT BATTERO",
      "competitor",
@@ -8212,6 +8241,38 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "REPT BATTERO",
      "competitor",
      "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**FlexGen**",
+     "partner",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Vertiv**",
+     "other",
+     "historical",
      "—",
      "—"
     ],
@@ -8390,65 +8451,9 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "active",
      "—",
      "—"
-    ],
-    [
-     "**Gotion High-Tech**",
-     "**Envision**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Gotion High-Tech**",
-     "**Hithium**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Gotion High-Tech**",
-     "**LG Energy Solution**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Gotion High-Tech**",
-     "**Narada**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Gotion High-Tech**",
-     "**Samsung SDI**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Gotion High-Tech**",
-     "**Sunwoda**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Great Power**",
-     "REPT BATTERO",
-     "competitor",
-     "active",
-     "REPT 31.4 GWh vs Great Power 20.5 GWh, H1 2026",
-     "—"
     ]
    ],
-   "note": "Curated edges among members: 140 · to the neighbouring segments: 95 (the first 40 shown, by company) · derived-only mentions (no curated typing): 19 among members, 32 to the neighbours."
+   "note": "Curated edges among members: 140 · to the neighbouring segments: 102 (the first 40 shown, by company) · derived-only mentions (no curated typing): 19 among members, 37 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -8992,6 +8997,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "changed": [
     "read-next",
     "what-is-bought-and-on-what"
+   ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": [
+    "who-is-connected"
    ]
   }
  ]
@@ -11431,8 +11443,8 @@ function clLessonSegmentGridEquipment_() {
  "title": "Grid equipment",
  "short": "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that…",
  "group": "The Value Chain",
- "updated": "2026-09-16",
- "reviewBy": "2027-03-16",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -11528,13 +11540,13 @@ function clLessonSegmentGridEquipment_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -12408,6 +12420,46 @@ function clLessonSegmentGridEquipment_() {
      "—"
     ],
     [
+     "**Amperesand**",
+     "**ABB**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**Schneider Electric**",
+     "other",
+     "historical",
+     "—",
+     "—"
+    ],
+    [
      "**Caterpillar**",
      "**GE Vernova**",
      "competitor",
@@ -12422,6 +12474,46 @@ function clLessonSegmentGridEquipment_() {
      "active",
      "—",
      "SGT-400 turbines beside Solar units at Socrates South"
+    ],
+    [
+     "**DG Matrix**",
+     "**ABB**",
+     "investor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Hitachi Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**Schneider Electric**",
+     "other",
+     "historical",
+     "—",
+     "—"
     ],
     [
      "**Delta Electronics**",
@@ -12630,89 +12722,9 @@ function clLessonSegmentGridEquipment_() {
      "active",
      "—",
      "800 VDC power shelves"
-    ],
-    [
-     "**LS-ES**",
-     "Samsung SDI",
-     "supplier",
-     "active",
-     "—",
-     "E4D NMC cells"
-    ],
-    [
-     "**LS-ES**",
-     "Tesla",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Megmeet**",
-     "**Flex**",
-     "competitor",
-     "active",
-     "—",
-     "800 VDC power system components"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "Delta Electronics",
-     "competitor",
-     "active",
-     "—",
-     "Data-center UPS"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "Infineon",
-     "competitor",
-     "active",
-     "—",
-     "Power discretes and modules"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "NVIDIA",
-     "partner",
-     "active",
-     "—",
-     "800 VDC power delivery"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "Narada",
-     "supplier",
-     "active",
-     "—",
-     "HRL-700 VRLA battery strings for the 9900D UPS"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "Piller",
-     "competitor",
-     "active",
-     "—",
-     "Data-center UPS"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "Samsung SDI",
-     "supplier",
-     "active",
-     "—",
-     "Lithium-ion battery strings for the 9900D UPS"
-    ],
-    [
-     "**Mitsubishi Electric**",
-     "Tesla",
-     "customer",
-     "active",
-     "—",
-     "Uninterruptible power supplies"
     ]
    ],
-   "note": "Curated edges among members: 62 · to the neighbouring segments: 71 (the first 40 shown, by company) · derived-only mentions (no curated typing): 5 among members, 27 to the neighbours."
+   "note": "Curated edges among members: 62 · to the neighbouring segments: 81 (the first 40 shown, by company) · derived-only mentions (no curated typing): 5 among members, 35 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -13156,6 +13168,13 @@ function clLessonSegmentGridEquipment_() {
    "note": "regenerated: registry or graph content moved with no pin change",
    "changed": [
     "read-next"
+   ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": [
+    "who-is-connected"
    ]
   }
  ]
@@ -15760,8 +15779,8 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
  "title": "Bridge and on-site generation",
  "short": "The prime movers a campus buys when the grid cannot arrive in time or at all — heavy-frame and aeroderivative gas turbines, reciprocating engines, fuel cells…",
  "group": "The Value Chain",
- "updated": "2026-09-16",
- "reviewBy": "2027-03-16",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -15869,13 +15888,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -16583,12 +16602,44 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
      "flywheel synchronous condensers"
     ],
     [
+     "**Amperesand**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Amperesand**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Caterpillar**",
      "FlexGen",
      "other",
      "historical",
      "$25.5M Series A (with Altira and GE Ventures)",
      "Caterpillar Ventures Series A participation"
+    ],
+    [
+     "**DG Matrix**",
+     "**Eaton**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DG Matrix**",
+     "**GE Vernova**",
+     "competitor",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**Delta Electronics**",
@@ -16845,41 +16896,9 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
      "active",
      "—",
      "—"
-    ],
-    [
-     "**NRG Energy**",
-     "Vistra",
-     "competitor",
-     "active",
-     "~25 GW vs ~50 GW pro forma",
-     "—"
-    ],
-    [
-     "**NextEra**",
-     "**GE Vernova**",
-     "supplier",
-     "active",
-     "4 GW CCGT turbine slots",
-     "CCGT turbines"
-    ],
-    [
-     "**ON.energy**",
-     "**Eaton**",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**ON.energy**",
-     "**GE Vernova**",
-     "supplier",
-     "active",
-     "5 GW of pad-mount transformers",
-     "pad-mount transformers"
     ]
    ],
-   "note": "Curated edges among members: 40 · to the neighbouring segments: 63 (the first 40 shown, by company) · derived-only mentions (no curated typing): 16 among members, 15 to the neighbours."
+   "note": "Curated edges among members: 40 · to the neighbouring segments: 67 (the first 40 shown, by company) · derived-only mentions (no curated typing): 16 among members, 16 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -17383,6 +17402,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": [
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -17396,7 +17422,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
  "title": "Clean firm and nuclear",
  "short": "Firm carbon-free power as a product — existing reactor output sold on long-term PPAs, restarts and uprates, the SMR vendors and their fuel, and the…",
  "group": "The Value Chain",
- "updated": "2026-09-16",
+ "updated": "2026-09-19",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -17499,13 +17525,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -18974,6 +19000,11 @@ function clLessonSegmentCleanFirmAndNuclear_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -18987,7 +19018,7 @@ function clLessonSegmentCooling_() {
  "title": "Cooling",
  "short": "The thermal chain from the cold plate to the cooling tower — chillers and economisers, coolant distribution units, cold plates and rack manifolds, rear-door…",
  "group": "The Value Chain",
- "updated": "2026-09-17",
+ "updated": "2026-09-19",
  "reviewBy": "2026-11-09",
  "provenance": {
   "inputs": [
@@ -19060,13 +19091,13 @@ function clLessonSegmentCooling_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -20267,6 +20298,11 @@ function clLessonSegmentCooling_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -20280,8 +20316,8 @@ function clLessonSegmentComputeAndTheRack_() {
  "title": "Compute and the rack",
  "short": "The compute that sits in the rack and defines the power ask — the GPU, the rack-scale system it ships as, and the system integrators that build it — the load…",
  "group": "The Value Chain",
- "updated": "2026-09-17",
- "reviewBy": "2027-03-17",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -20311,13 +20347,13 @@ function clLessonSegmentComputeAndTheRack_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -21138,6 +21174,11 @@ function clLessonSegmentComputeAndTheRack_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -21151,8 +21192,8 @@ function clLessonSegmentEpcAndConstruction_() {
  "title": "EPC and construction",
  "short": "The engineers, EPCs, general contractors and electrical contractors that turn a permit into commissioned megawatts — the data-hall builders, the storage and…",
  "group": "The Value Chain",
- "updated": "2026-09-16",
- "reviewBy": "2027-03-16",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -21272,13 +21313,13 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -22683,6 +22724,11 @@ function clLessonSegmentEpcAndConstruction_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -22696,8 +22742,8 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
  "title": "Storage developers and IPPs",
  "short": "The owners and developers of grid-connected storage and merchant generation — standalone and hybrid battery fleets, the IPPs and yieldcos that hold them, and…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
- "reviewBy": "2027-03-18",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -22907,13 +22953,13 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -25095,6 +25141,11 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -25108,7 +25159,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
  "title": "AIDC developers and landlords",
  "short": "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and…",
  "group": "The Value Chain",
- "updated": "2026-09-15",
+ "updated": "2026-09-19",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -25295,13 +25346,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -27679,6 +27730,11 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -27692,7 +27748,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
  "title": "Hyperscalers and AI labs",
  "short": "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
+ "updated": "2026-09-19",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -27747,13 +27803,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -28729,6 +28785,11 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -28742,8 +28803,8 @@ function clLessonSegmentNeoclouds_() {
  "title": "Neoclouds",
  "short": "The GPU-cloud operators that sell contracted AI compute to labs and hyperscalers on leased or self-built capacity and thin balance sheets — faster than…",
  "group": "The Value Chain",
- "updated": "2026-09-16",
- "reviewBy": "2027-03-16",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -28791,13 +28852,13 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -29624,6 +29685,11 @@ function clLessonSegmentNeoclouds_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -29637,7 +29703,7 @@ function clLessonSegmentUtilities_() {
  "title": "Utilities",
  "short": "The regulated wires-and-generation franchises whose IRP, certificate, rate case, large-load tariff and interconnection process decide whether AI load and the…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
+ "updated": "2026-09-19",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -29728,13 +29794,13 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -31031,6 +31097,11 @@ function clLessonSegmentUtilities_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -31044,7 +31115,7 @@ function clLessonSegmentCapital_() {
  "title": "Capital",
  "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
+ "updated": "2026-09-19",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -31099,13 +31170,13 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -31900,6 +31971,11 @@ function clLessonSegmentCapital_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -31913,8 +31989,8 @@ function clLessonSegmentAssurance_() {
  "title": "Assurance",
  "short": "The independent and owner's engineers, testing laboratories and certification bodies that make a project bankable and a product installable — the seat every…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
- "reviewBy": "2027-03-18",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -31962,13 +32038,13 @@ function clLessonSegmentAssurance_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -32866,6 +32942,11 @@ function clLessonSegmentAssurance_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -32879,8 +32960,8 @@ function clLessonSegmentSoftwareAndOptimization_() {
  "title": "Software and optimization",
  "short": "The energy-management, controls, asset-performance and market-bidding software that decides what a storage plant earns — the site controller, the fleet…",
  "group": "The Value Chain",
- "updated": "2026-09-17",
- "reviewBy": "2027-03-17",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -33006,13 +33087,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -34403,6 +34484,11 @@ function clLessonSegmentSoftwareAndOptimization_() {
    "changed": [
     "read-next"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };
@@ -34416,8 +34502,8 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
  "title": "Insurance and risk transfer",
  "short": "The brokers, insurers and risk-analytics firms that price and carry the risks a financing cannot hold — property and business interruption, delay-in-start-up…",
  "group": "The Value Chain",
- "updated": "2026-09-18",
- "reviewBy": "2027-03-18",
+ "updated": "2026-09-19",
+ "reviewBy": "2027-03-19",
  "provenance": {
   "inputs": [
    {
@@ -34441,13 +34527,13 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-13",
+    "date": "2026-09-19",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -35024,6 +35110,11 @@ function clLessonSegmentInsuranceAndRiskTransfer_() {
     "read-next",
     "what-is-bought-and-on-what"
    ]
+  },
+  {
+   "date": "2026-09-19",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": []
   }
  ]
 };

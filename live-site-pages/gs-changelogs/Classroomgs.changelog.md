@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.84g] — 2026-09-19 03:52:07 PM EST — v06.64r
+
+### Changed
+
+- Curriculum refreshed — every market-structure lesson across the value chain was brought up to date with the latest company coverage
+- Three of them now show a recently covered company in their connection tables, where it had been missing
 
 ## [v01.83g] — 2026-09-19 07:19:47 AM EST — v06.63r
 
