@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 110/100`
+`Sections: 111/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.69r] — 2026-09-19 07:12:53 PM EST
+
+> Check whether the earnings desk landed its commit. I believe I saw a phone notification telling me that it failed because it didn't have access to my Sales repository.
+
+### Fixed
+
+- **SETTLED: A ROUTINE-FIRED SESSION CAN CLONE BUT CANNOT PUSH — THE QUESTION LEFT OPEN AT v06.18r IS ANSWERED, AND THE ANSWER IS NO.** The earnings desk fired Thursday 17 and Friday 18 September with the corrected STEP 0 and **landed no commit**. Friday's run telemetry: **34 seconds, 47,441 context tokens, 1,315 output tokens, $0.11**, `status_bucket: REVIEW_READY`. The token count proves it **cloned** — a session with no checkout spends near-zero, and the repo-less runs that preceded STEP 0 all did — while 34 seconds proves it **stopped at the dry-run push** rather than researching. `profiler-refresh-calendar.json` is untouched at `updated: 2026-09-13`, with `iren` (2026-08-27), `jinko` (2026-08-27), `oracle` (2026-09-10) and `novonix` (2026-09-14) still due. The developer's push notification said the run failed for lack of access to the repository, which matches exactly.
+- **THE TWO HALVES OF REPOSITORY ACCESS ARE SEPARABLE, AND ONLY ONE IS REACHABLE FROM A PROMPT.** `git clone` over the session's git proxy authenticates for **READ**; **WRITE is denied**, and no instruction written into a Routine prompt can grant it. That is the single fact that explains the whole week: the read-only ACL detector has run green every day since 2026-09-16 (it clones, probes and reports), while every committing Routine lands nothing. `create_trigger` cannot attach a source, `update_trigger` cannot add one, and the claude.ai repository picker exists only on the New routine creation form — so **recreating each committing Routine with `LightAISolutions/Sales` selected is now the only remaining fix, and it is mandatory rather than optional.**
+- **STEP 0 STILL EARNED ITS PLACE, AND THE TWO RUNS MEASURE EXACTLY WHAT IT BOUGHT.** On 2026-09-16 the same Routine spent about an hour researching IREN, Jinko and Oracle, committed locally as `a378a96`, hit the denial at the last step, and lost all of it with the queue left in the dark. On 2026-09-18 it spent **34 seconds and eleven cents**, wrote nothing, advanced no row, and reported why. **STEP 0 did not fix the access problem and was never capable of fixing it; what it fixed is the cost and the silence of the failure.** Keep it after the rebuild for that reason alone — it is what makes a future loss of write access cheap and loud instead of expensive and invisible.
+
+### Changed
+
+#### `.claude/rules/profiler-app.md`
+- **"Scheduled Refreshes" updated with the settled finding** — the clone/push split, the two runs' measured cost as the evidence, and the upgrade of recreate-with-repo-attached from optional cleanup to a requirement for every committing Routine. The "never create a Routine and assume it can reach the repo" paragraph now says so inline.
+
+### Notes
+
+- **The queue lost nothing across three failed cycles.** Four rows remain due and the desk will take the three oldest on its first healthy run. Every failure since 2026-09-16 has been a clean stand-down; the only casualty in the whole episode is the research inside `a378a96`, lost before STEP 0 existed.
+- **Sep 19 is a Saturday** (`date -d` verified), and the desk's cron is `0 13 * * 1-5`, so today was not a missed run — the next firing is Monday 2026-09-21.
+- **One Routine was amended by another session today** (`Industry Guidance quarterly review`, 2026-09-19 20:30 UTC, for the C5 rehearsal scenarios) and it **preserved STEP 0 intact** — worth recording, because a later editor dropping that block is the failure mode the rebuild guide warns about.
+- **No rotation.** 111 raw / **98 non-exempt** against a 100 trigger, counter `Sections: 111/100`, with **thirteen** sections dated 2026-09-19 EST. This is the closest the non-exempt count has come to the trigger; the next push dated 2026-09-20 or later almost certainly rotates.
 
 ## [v06.68r] — 2026-09-19 06:55:09 PM EST
 
