@@ -135,6 +135,121 @@ def registry_additive_only(base, rel, pin, cache):
     return cache[key]
 
 
+# ── (rr71) A dossier that only MIGRATED is not a dossier that was REVISED ──
+# Fields whose movement says nothing about any claim.
+_META_FIELDS = {"schemaVersion", "lastUpdated", "profileVersion"}
+# Fields whose values are citation pointers: one that grew back from a strict
+# prefix of itself was a truncation being repaired, not a different source.
+_URLISH = {"source", "url", "linkedin", "photo", "website"}
+# Identity-keyed lists where a NEW entry cannot rewrite an existing claim — a
+# new counterparty, regime, person, product line or spec block says nothing
+# about the ones already there.  `recentDevelopments` and `strategyRead` are
+# deliberately ABSENT: a development or a judgement appended later CAN
+# supersede one a lesson taught, and clearing that is the false negative this
+# whole layer exists to prevent.
+_ADDITIVE_LISTS = {"sources": ("label",), "relationships": ("slug",),
+                   "policyExposure": ("regime",), "decisionMakers": ("name",),
+                   "productsAndServices": ("name",), "technicalSpecs": ("product",)}
+
+
+def _empty(v):
+    return v is None or v == "" or v == [] or v == {}
+
+
+def _benign(then, now, field=""):
+    """True when `then` → `now` cannot have changed a claim: identical, absent
+    at the pin, or a citation string repaired from a strict prefix of itself."""
+    if then == now:
+        return True
+    if _empty(then):
+        return True                       # nothing was there to be drawn on
+    if isinstance(then, str) and isinstance(now, str) and field in _URLISH:
+        return now.startswith(then)       # a repaired truncation
+    if isinstance(then, dict) and isinstance(now, dict):
+        return all(_benign(v, now.get(k), k) for k, v in then.items())
+    return False
+
+
+def source_revision_only(base, ref, pin, cache):
+    """True when a `profile:`/`study:` source has moved since `pin` by
+    MIGRATION only — and False whenever that cannot be proved.
+
+    Why this is not staleness (rr71).  The 2026-09-05/06 schema v6 → v7 wave
+    moved dossiers' `lastUpdated` without changing a word any lesson had drawn
+    on: truncated `source` URLs were repaired, the new `via` / `project`
+    typings were populated, and `policyExposure` blocks were written where the
+    field had been null.  A dossier's own `lastUpdated` cannot tell that apart
+    from a revised figure, so every lesson pinned to one went stale on a
+    migration — measured 2026-09-19 at v06.66r, where all eighteen reported
+    stale pins turned out to be non-contradictions and (rr70) had to disprove
+    them by hand.
+
+    This reads the source as it stood at the pin and clears the move only when
+    EVERY difference is provably claim-free: a metadata field, a field that was
+    empty at the pin (nothing was there for the lesson to draw on), a citation
+    repaired from a strict prefix of itself, or a new entry in one of
+    `_ADDITIVE_LISTS`.  Everything else — a rewritten entry, a changed figure,
+    a new `recentDevelopments` item, a new `strategyRead` judgement, a study
+    guide's new `sections[]` — leaves the pin stale.
+
+    Conservative by construction, like registry_additive_only(): a blob that
+    will not parse, a commit that cannot be resolved, a shape not recognised,
+    a shallow clone with no history at the pin — all return False.  The check
+    can only ever remove a finding it has positively disproved.
+    """
+    key = (ref, pin)
+    if key in cache:
+        return cache[key]
+    cache[key] = False
+    # A pin git cannot parse makes `--before` fall back to "now", which would
+    # resolve to today's blob and clear the pin against itself.  Refuse it.
+    if not DATE_RE.match(pin or ""):
+        return False
+    prefix, _, ident = ref.partition(":")
+    if prefix not in ("profile", "study") or not ident:
+        return False
+    rel = "live-site-pages/profiler-data/%s.%s.json" % (ident, prefix)
+    now = read_json(ROOT / rel)
+    if not isinstance(now, dict):
+        return False
+    try:
+        rev = subprocess.run(["git", "log", "-1", "--format=%H",
+                              "--before=%sT23:59:59" % pin, base, "--", rel],
+                             cwd=ROOT, capture_output=True, text=True, timeout=30)
+        if rev.returncode != 0 or not rev.stdout.strip():
+            return False
+        blob = subprocess.run(["git", "show", "%s:%s" % (rev.stdout.strip(), rel)],
+                              cwd=ROOT, capture_output=True, text=True, timeout=30)
+        if blob.returncode != 0:
+            return False
+        then = json.loads(blob.stdout)
+    except (OSError, subprocess.TimeoutExpired, ValueError, TypeError):
+        return False
+    if not isinstance(then, dict):
+        return False
+    for field, tv in then.items():
+        if field in _META_FIELDS:
+            continue
+        nv = now.get(field)
+        if field in _ADDITIVE_LISTS and isinstance(tv, list):
+            if not isinstance(nv, list):
+                return False
+            idf = _ADDITIVE_LISTS[field]
+            live = {tuple(str(e.get(f, "")) for f in idf): e
+                    for e in nv if isinstance(e, dict)}
+            for e in tv:
+                if not isinstance(e, dict):
+                    return False
+                match = live.get(tuple(str(e.get(f, "")) for f in idf))
+                if match is None or not _benign(e, match):
+                    return False
+            continue
+        if not _benign(tv, nv, field):
+            return False
+    cache[key] = True
+    return True
+
+
 def read_json(path):
     try:
         return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -368,6 +483,7 @@ def main():
     print("\n3 · Stale pins (live date later than the pin)")
     cache, stale_n = {}, 0
     add_cache, additive = {}, []
+    mig_cache, migrated = {}, []
     for l in lesson_order:
         if l["id"].startswith("segment-"):
             continue
@@ -387,6 +503,14 @@ def main():
                         args.base, UNDATED_LAYERS[kind], pin, add_cache):
                     additive.append((l["id"], ref, pin, live))
                     continue
+                # (rr71) A dated source whose every difference since the pin is
+                # a schema migration — a repaired citation, a field that was
+                # empty, a new entry in an additive list — has not moved a
+                # claim either.  See source_revision_only().
+                if kind in ("profile", "study") and source_revision_only(
+                        args.base, ref, pin, mig_cache):
+                    migrated.append((l["id"], ref, pin, live))
+                    continue
                 stale_n += 1
                 print("  %-36s %-44s pin %s → live %s" % (l["id"], ref, pin, live))
     hand = [l for l in lesson_order if not l["id"].startswith("segment-")]
@@ -399,6 +523,14 @@ def main():
         print("     every entry these lessons pinned is still present and unchanged; "
               "the registry only gained new ones. Re-pinning them would assert a "
               "re-read that did not happen (G2).")
+    if migrated:
+        refs = sorted({m[1] for m in migrated})
+        print("  %d pin(s) on %d dated source(s) moved by SCHEMA MIGRATION ONLY — not "
+              "stale, nothing to do (rr71): %s" % (len(migrated), len(refs), ", ".join(refs)))
+        print("     every claim these lessons pinned reads back identically; the source "
+              "moved only by a repaired citation, a field that was empty at the pin, or "
+              "a new entry that cannot rewrite an existing one. Re-pinning them would "
+              "assert a re-read that did not happen (G2).")
     # (rr17): this total and the generator's due count below are DISJOINT
     # numbers four lines apart, and two consecutive briefs read them as one.
     # The label was already right; the adjacency misled. Both now carry a
