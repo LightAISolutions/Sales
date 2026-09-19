@@ -4,7 +4,10 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
 
 ## Active Reminders
 
-*(none)*
+- `2026-09-19 07:43:09 PM EST` — **Close out the "Repo access denied" issue after Monday's two earnings-desk runs** — Monday 2026-09-21 fires a deliberate A/B: the OLD desk (`trig_01UyH77BMKJnxzBUZJ11ej6A`, no repository) at 13:03:56Z, then the NEW one (`trig_01HkrwpCULei8Gje6RGqcp1B`, `LightAISolutions/Sales` attached) at 13:08:01Z. The only difference between them is the attached repository. Two things are wanted from that comparison:
+  - **Final confirmation the new desk works as intended** — it should land a commit (the first a scheduled run has ever landed in this repo), advance the `iren` / `jinko` / `oracle` rows in `profiler-refresh-calendar.json`, and report that the clone and the dry-run push both succeeded. The old one should stand down in ~34 seconds at the push probe.
+  - **Assurance that the OLD earnings desk can be deleted.** It is being kept only as the control arm and as a fallback; once the new one has demonstrably pushed, it has no further purpose. Deleting it loses its run history and is assumed irreversible, so it waits on evidence rather than on confidence.
+  - Only after that: rebuild the four remaining committing Routines — **C2 first, before it fires Wednesday 2026-09-23 04:00 PDT** — then the two 1 October ones and Industry Guidance on 15 October. The ACL health check is read-only and is **not** rebuilt.
 
 ## Completed Reminders
 

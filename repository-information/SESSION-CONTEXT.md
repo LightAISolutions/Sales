@@ -6,6 +6,53 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-19 07:44:03 PM EST
+**Repo version:** v06.70r — five pushes across 2026-09-16 and 2026-09-19 (`b80afcf` v06.17r, `9f70b5f` v06.18r, `6518ce5` v06.19r, `cef9c51` v06.69r, `134076e` v06.70r), all merged
+**Branch:** `claude/repo-access-denied-339rna` — restarted from `origin/main` before each push
+**Model:** Opus 5 xhigh
+
+### What was done
+
+This session is one long root-cause investigation of the **"Repo access denied"** notifications, ending in a rebuilt Routine awaiting proof.
+
+- **ROOT CAUSE (v06.17r).** Every one of the six Routines was stored with `sources: []`, because all were created by a Claude session calling `create_trigger` (`created_via: meta_mcp`) and **that tool has no `sources` parameter**. Proved rather than inferred: a throwaway Routine created *from a session that did have the repo attached* also came back `sources: []`. So no scheduled session has ever held a repository — `git log` confirms **no commit in the entire history came from a scheduled run**, and the repo's own v05.41r note had already recorded the symptom ("the 7 Sep run landing no commit") without naming the cause.
+- **STEP 0, first version — WRONG (v06.17r), corrected the same day (v06.18r).** It told fired sessions to call `add_repo` / `register_repo_root`. A manual probe proved **those tools do not exist in a Routine-fired session** ("No matching deferred tools found"). A fired session's toolset is narrower than an interactive one's and that difference is invisible from inside an interactive session.
+- **STEP 0, second version — `git clone` + a dry-run push probe (v06.18r).** A plain clone works; the git proxy authenticates transparently. The five committing Routines also got `git push --dry-run` as step (c), *before any research*, with a hard stop on denial.
+- **A LIVE OUTAGE, found by the probe and fixed by the developer.** `check-acl-health.sh` returned exit 1 — both Profiler and Receipts unable to read the Master ACL on a lapsed account-level `spreadsheets` grant. The developer re-consented via Receipts and the fleet returned to exit 0. **The Profiler/Receipts asymmetry was a grace-snapshot effect**: Receipts' snapshot was unarmed, Profiler's was armed and carried its users through. Profiler was cushioned, not spared.
+- **SETTLED (v06.69r): a Routine-fired session can CLONE but cannot PUSH.** The desk fired Thu 17 and Fri 18 Sep and landed nothing. Friday's telemetry — **34 seconds, 47,441 context tokens, $0.11** — proves it cloned (a repo-less session spends near-zero) and stopped at the push probe. Write access is not reachable from a prompt, so **recreating each committing Routine with the repository attached became mandatory**.
+- **THE EARNINGS DESK IS REBUILT (v06.70r).** New Routine `trig_01HkrwpCULei8Gje6RGqcp1B`, created in the UI 23:24 UTC, prompt pasted 23:29 UTC. Verified: prompt matches the old one line for line including the corpus token, `mcp_connections: []` (none of the five default connectors), cron `0 13 * * 1-5`, push + email, model Default, repository chip `LightAISolutions/Sales` present in the editor and the **Runs with** card.
+
+### Where we left off
+
+**Awaiting Monday 2026-09-21.** Both desks are live on purpose: OLD `trig_01UyH77BMKJnxzBUZJ11ej6A` at 13:03:56Z, NEW `trig_01HkrwpCULei8Gje6RGqcp1B` at 13:08:01Z. Old fires first, dies in ~34s at the push probe without touching the queue, so there is no collision. **The only difference between them is the attached repository**, which makes Monday a controlled A/B rather than a hopeful run. Four rows are due (`iren` 2026-08-27, `jinko` 2026-08-27, `oracle` 2026-09-10, `novonix` 2026-09-14); a healthy run takes the three oldest and lands one commit.
+
+### Key decisions made
+
+- **Keep both desks live through Monday.** The control arm is worth one extra notification, and the old one is also the fallback if the rebuild turns out not to fix push.
+- **Do not rebuild anything else until Monday's result is in.** Monday's answer lands two days before C2's Wednesday deadline, so waiting costs nothing and avoids destroying four more run histories for a fix that might not work.
+- **Keep STEP 0 in every rebuilt prompt.** With the repo attached the clone is a no-op and the dry-run push passes; it costs one command and it is what turned an hour-long silent loss (2026-09-16) into a 34-second loud one (2026-09-18).
+- **The ACL health check is NOT rebuilt** — read-only, working correctly, rebuilding would cost its run history for nothing.
+- **Accepted, knowingly: rebuilding forfeits `update_trigger`.** A UI-created Routine carries `created_via: "http_api"` and agents cannot edit it — which retires the C3 session 3 rule, design §12 item 2 and the whole approved-amendment path for each rebuilt Routine. Judged worth it: a Routine that cannot push is useless whoever may edit it.
+- **`fire_trigger` payloads are not a diagnostic channel.** One firing complied with a diagnostic addendum; a near-identical one **refused it as a prompt injection**, ran only its configured job, and raised a security notice. The refusal was correct and the compliance was the anomaly.
+
+### Active context
+
+- **Repo version v06.70r.** `CHANGELOG.md` at **112 raw / 98 non-exempt** against a 100 trigger with **fourteen** sections dated 2026-09-19 EST — the closest the non-exempt count has come. **The next push dated 2026-09-20 EST or later will almost certainly need an archive rotation.**
+- **Four Routines still to rebuild**, in deadline order: C2 pipeline (Wed 2026-09-23 04:00 PDT), Profiler opportunity report and Profiler quarterly check (both Thu 2026-10-01), Industry Guidance quarterly review (Thu 2026-10-15).
+- **Rebuild recipe**: New routine → paste Instructions copied from the old Routine's own field (never from a snapshot — one went stale within three days) → select `LightAISolutions/Sales` → **remove all five pre-loaded connectors** (they carry a "write actions, without asking" warning and the current Routines have none) → set schedule and notifications → Create → verify → delete the old one.
+- **Do not trust `derived_state.folders_state`, `folders`, or `session_request.config.sources`** as evidence of repository attachment — all read empty on a Routine whose repo is demonstrably attached. The only reliable check is the **Runs with** card in the UI.
+- **Still open, unrelated to the Routines:** Receipts' ACL grace snapshot is **unarmed** (8 users, ~4.8 days old). It arms on the next successful sign-in to Receipts; if it stays unarmed, check `ACL_GRACE_ENABLED` in Receipts' `.gs`.
+- **Timezone gotcha that cost a round trip:** the Routines UI renders run times in the viewer's zone (PDT), this repo timestamps EST/EDT. A 17:28 EDT firing lists as "Today at 2:28 PM".
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Read Monday's two earnings-desk runs and close the issue out** — confirm the new desk cloned, passed the dry-run push, landed a commit and advanced the `iren` / `jinko` / `oracle` rows; confirm the old one stood down at the push probe; then give the developer the go-ahead to delete the old Routine and rebuild C2 ahead of Wednesday. A reminder for this is in `REMINDERS.md` and a scheduled wake-up is armed for 2026-09-21 16:00 UTC.
+
+**To continue:** type `check whether the earnings desk landed its commit`
+
+## Previous Sessions
+
 **Date:** 2026-09-19 07:06:40 PM EST
 **Repo version:** v06.68r — three pushes, all merged (`684398d` v06.66r audit, `56c55fa` v06.67r migration rule, `cb1e988` v06.68r graph finding + lesson revision)
 **Branch:** `claude/compassionate-franklin-7kzee3`
@@ -51,49 +98,5 @@ Everything is merged. **The stale-pin arc is closed and the developer confirmed 
 - **Nothing is pending — pick any new task.** The Profiler & Classroom programme has no open action item, and the stale-pin backlog this session was handed is **closed by audit**: the 12 remaining pins are disproved in writing at (rr70)/(rr72) and the developer has explicitly confirmed they want no further work on them. Do **not** open a session to "clear the stale count"; if a report prompts the question, read those two findings and stop. The only things still standing are the developer's own deferred calls listed in Active context, none of which is urgent.
 
 **To continue:** *(nothing to resume — start whatever is next)*
-
-## Previous Sessions
-
-
-**Date:** 2026-09-19 04:49:26 PM EST
-**Repo version:** v06.65r — five pushes, all merged (`0562eb8` context reconstruction, `ec9a0d5` v06.64r segment pass, `497cd0a` v06.65r Routine + staleness; plus this handover)
-**Branch:** `claude/sleepy-heisenberg-qt5pit`
-
-### What was done
-
-This session began as an evaluation of the Profiler & Classroom programme against a screenshot of `INTEGRATED-REMEDIATION-PLAN.md` §7.3 and ended with **the programme's last open action item closed**.
-
-- **Programme evaluation (research).** The screenshot was six days and ~120 repo versions stale. Verified against the repo rather than the table's own status cells: **9 of 10 orders closed**, order 10 (Q plan clock) not yet due, C6 still deferred. **The §7.3 order-5 cell is stale** — it reads "~19 — 17 done" but all 19 landscape modules exist. Phase 4 closed at 26 of 26; C5 at 14 of 14.
-- **Segment regeneration pass (v06.64r).** `build-classroom-segments.py --all` — **17 of 19 written, `--check` 17 due → 0 due**. The two already-current segments produced byte-identical output and were not written (the determinism contract holding). **Three carried real content drift**, not pin dates: `storage-integrators-and-containers`, `grid-equipment`, `bridge-and-on-site-generation` all differed on `who-is-connected` — DG Matrix was missing from their connection tables because v06.62r regenerated only its own two segments. Classroom GAS v01.83g → **v01.84g**. Pipeline reported **P10 alone** (17 revised vs cap 3, breached by design on a developer run), matching the v05.62r precedent exactly.
-- **The quarterly guidance review Routine is APPLIED (v06.65r) — design §12 item 2 CLOSED.** The developer gave the approval sentence **directly in session** rather than in a brief's `[DEVELOPER: …]` slot. That satisfies the C3 session 3 rule on its own terms: the rule requires explicit approval *in the session making the change* and never specified a vessel. `update_trigger` called once on `trig_01CrhxzfBV6uKQNKpUXLLMSZ`, **prompt field only**, with the 34-line annex block (7,917 chars / 7,916 as JSON — (rr68)'s one-character convention gap reproduced). Read back independently: cron, name, model, `next_run_at` 2026-10-15T13:00:20Z, enabled and never-fired **all unchanged**; `updated_at` 2026-09-16 → 2026-09-19T20:30:23Z. **Step 3a is live.**
-- **Staleness rule amended (v06.65r, (rr69)) — 55 → 18 stale pins.** `check-classroom-curriculum.py` now reads each undated registry as it stood at the pin and compares entry-by-entry on `slug`: additions only → reported separately, not counted; removals/rewrites → stale as before; **anything unprovable → stale**, so the check can only remove what it positively disproves. **Five `concepts` pins correctly stayed stale** — the same day's `leakage-inductance` alias removal is a modification, caught unprompted. No pin written; **G2 untouched**.
-
-### Where we left off
-
-Everything is merged. **The programme has no open action item.** What remains: the 18-pin refresh backlog (paste-in prompt was given in the handover response, Opus 5 xhigh), (rr56) as a developer-approved queued session, the Q plan clock (~2026-12), and C6 whenever a team exists.
-
-### Key decisions made
-
-- **(rr56) TAKEN** — re-cut the eleven earlier scenarios' answer positions, as its own session. The strong move sits at option index 1 in 31 of 42 beats and no checker can see it.
-- **(rr59) NOT TAKEN** — the roster hash stays `clDrillHash_(basis)`; §10.8's amendment stays PROPOSED; all 314 id→hash pairs untouched. Rationale: it pays a real cost (re-keying every account's roster progress) to close a gap never observed in seven measurements.
-- **(rr22)** — the stranded footer at `INTEGRATED-REMEDIATION-PLAN.md` line 1927 — left as found, still the developer's convention call.
-- **A commit-date move is a signal, not a verdict.** Recorded in `PROFILER-SCHEMA.md` → "Registry revision signals". Adding vocabulary cannot invalidate a lesson that never used it.
-- **A brief placeholder is a convenience, not the contract.** Three sessions were spent waiting for a slot to be filled when the rule wanted a person's approval in the room, and a person was there. Recorded in (rr69) for the next brief-writer.
-
-### Active context
-
-- **Repo version v06.65r** · `CHANGELOG.md` **107 raw / 98 non-exempt** (nine sections carry 2026-09-19; **the first push on a later EST day rotates the 2026-09-14 group of twenty** — detach the footer first, SHA enrichment) · `Classroomgs.changelog.md` 46/50 · `Profilerhtml.changelog.md` 49.
-- **GAS:** Classroom **v01.84g**, Scraper v02.20g, Profiler v01.39g. **Pages:** Profiler v01.90w, Classroom v01.16w.
-- **Measured state:** 70 lessons · 8 tracks · 220 gate cases (0/0) · 19 of 19 landscapes · `--check` 0 due · **18 stale / 37 additions-only** · 14 of 14 scenarios, both seats 7/7 · selftest 15/0 · 177 dossiers · registry 0 of 177 · reports 0/0 · README tree 0.
-- **The 18 remaining pins:** `bridge-power` ×7 (profile: voltagrid, proenergy, enchanted-rock, mainspring-energy, kiewit, bloom-energy, stack-infrastructure), `the-aidc-power-chain` ×2, `heat-is-the-constraint` ×2 (study:vertiv + concepts each), `where-bess-plugs-in` ×2, `reading-the-graph` ×1, `the-campus-as-a-power-project` ×1 (graph), `cell-to-container` / `duration-and-degradation` / `spec-sheet-decoded` ×1 each (concepts).
-- **Findings register at (rr69); next session continues at (rr70).**
-- **Environment gotcha:** `node --check` throws `ERR_UNKNOWN_FILE_EXTENSION` on a `.gs` file under Node 22 — copy to a `.js` in the scratchpad first. Do not read that error as a syntax failure.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Run the 18-pin refresh session on Opus 5 xhigh** — the paste-in prompt is in the v06.65r handover response and the exact pin list is in Active context above. Unshallow the clone first, read every moved source in full before re-pinning anything (G2), and expect a P10 finding if more than three lessons are revised. It is the last piece of actual work on the Profiler & Classroom plan.
-
-**To continue:** type `run the 18-pin refresh session`
 
 Developed by: LightAISolutions
