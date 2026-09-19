@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-19 06:31:08 AM EST
+**Repo version:** v06.62r — one push, merged (auto-merge landed `9093bdc` on main; Classroom GAS v01.82g deploy step due on that merge), then this handover
+**Branch:** `claude/focused-bardeen-ov4ovr` — restarted from `origin/main` after the merge (`git fetch --prune origin`) for this handover
+
+### What was done
+
+- **DG Matrix dossier + technology study guide (the Profiler Command and the Prep Command, one push).** Fable 5.1, two parallel `general-purpose` research subagents (first-party 62 sources incl. both Interport Flex spec sheets and nine whitepaper PDFs from the company's r2.dev asset store; third-party 78, 64 read). Identity verified first: **DG Matrix Inc.**, Delaware (SEC CIK 0002059108; Form D 2025-03-06 and 2026-03-04 via efts.sec.gov — metadata only), HQ **Morrisville, NC** (951 Aviation Parkway; the brief's "Raleigh" is the metro / registered-agent address), private, independent, CEO Haroon Inam. `dg-matrix.profile.json` v1 (schema v7, intel-briefing): four product lines, 51 spec rows, 23 developments, 7 key judgments + indicators, 13 relationships, 4 policy exposures, 10 decision makers with eight company-published headshots, 84 sources (first-party share 44%).
+- **Of the brief's four trade-press claims:** Series A **verified** (USD 60M, 2026-02-18, Engine Ventures; ABB, MHI, Helios, Fine Structure, MCJ, Sabancı; ABB's own 2025 seed release confirms the stake); "first company shipping a commercial multiport SST" **partially verified** — true of a 480 V six-port unit shipping "pre-certification", no named energised site, UL target (end Q2 2026) passed unannounced; **NVIDIA GTC 2026 roster NOT verified** — no NVIDIA-published page names DG Matrix (only Power Electronics News' list citing "Nvidia's list"); MGX membership is the company's statement; SemiAnalysis **verified** as "claims up to 98.5%". The central finding: the shipping product is low-voltage input (96–97% peak on its datasheet); the 12–34.5 kV Cell-MV that competes with Heron/Amperesand is "2028+" on the CFO's own roadmap slide.
+- **`dg-matrix.study.json`** (schema v2, 13 sections) and `study-prep/dg-matrix/dg-matrix-lesson-plan.md` — third sibling of the Heron and Amperesand guides (owns multi-port topology / multi-active bridge, 480 V vs 34.5 kV input, GPU pulse loads and the sidecar, datasheet literacy, UL 1741/2877 certification path, the behind-the-meter block). Five concepts registered: `mgx`, `multi-active-bridge`, `multi-port-sst` (alias "power router"), `pulse-load`, `ul-2877` (registry 1,470).
+- **Registered:** roster entry (`aka[]`, `domains[]` incl. the r2.dev asset host), quarterly refresh-calendar row with seven watch items, segments `power-conversion-and-rack-power-silicon` challenger + `in-hall-power` adjacent; graph rebuilt (1,468 edges); all Profiler checkers 0 findings.
+- **Corpus reconciliation:** 21 inbound mentions across 5 files reviewed; **1 dossier changed** — `amperesand` v1 → **v2** (archived): three fields had placed DG Matrix on NVIDIA's own rosters; corrected, and a reciprocal `dg-matrix` competitor link added. Heron Power's two mentions and both study guides' "no shipped fleets" line were accurate and untouched.
+- **Classroom cascade:** both segment lessons regenerated, Classroom.gs v01.81g → **v01.82g**, `Classroomgs.changelog.md` 44/50 (no rotation), README GAS display; content checker 0/0; pipeline `--base origin/main` P1 ×19 developer paths + **P7 ×2** (same-day regeneration — `updated` could not advance because v06.61r regenerated the same two lessons earlier on 2026-09-19; no P3); selftest 15/0; node --check and inner-scripts clean; readme tree 10 + 8 / 0.
+
+### Where we left off
+
+Everything is merged. The developer asked for a paste-ready prompt for the next company (given in the handover response — Novos Power, the fourth name in SemiAnalysis's SST vendor set and the only one uncovered). The four open decisions from earlier sessions (quarterly-review Routine amendment, (rr56), roster hash (rr59), stranded footer (rr22)) are unchanged and undated.
+
+### Key decisions made
+
+- **A trade-press roster line is not an NVIDIA roster line.** Every NVIDIA-published 800 V DC list (May 2025, Oct 2025, Aug 2026 blogs; GTC 2026 press kit) is read in full before a dossier says a vendor is "on NVIDIA's roster"; Power Electronics News' GTC list citing "Nvidia's list" is recorded as trade press. The Amperesand dossier was corrected on this rule.
+- **MHI's stake is not linked to `mitsubishi-power`.** The investor is Mitsubishi Heavy Industries, Ltd.; the covered slug is a brand of MHI, and the brief said "only if the source names the right entity" — recorded in prose and the calendar's Chesterton item instead.
+- **Quote the datasheet beside the headline.** The 400 kVA sheet's 96–97% peak efficiency is recorded next to the "up to 98.5%" platform claim in specs, judgments and the calendar row; kVA is not kW.
+- **A same-day second regeneration of a segment lesson trips P7 in the pipeline checker** (`updated` cannot advance within the day). It is an artifact for a developer commit, not a defect; a future session that regenerates the same lesson twice in one EST day should expect it and say so.
+
+### Active context
+
+- **Repo version v06.62r** · `CHANGELOG.md` **104 raw / 98 non-exempt** (six sections dated 2026-09-19; the first push on a later EST day rotates the 2026-09-14 group of twenty — detach the footer first, SHA enrichment) · `Classroomgs.changelog.md` 44 raw / 43 non-exempt · `Profilerhtml.changelog.md` 49.
+- **GAS versions:** Classroom **v01.82g**, Scraper v02.20g, Profiler v01.39g. **Pages:** Profiler v01.90w, Classroom v01.16w.
+- **Profiler corpus:** 176 dossiers; SST startups covered: heron-power, amperesand, dg-matrix; Novos Power, Hyperscale Power, Enphase (IQ SST) not covered.
+- **Environment:** sec.gov and data.sec.gov blocked (efts.sec.gov full-text search answered — metadata only); businesswire.com 403 (Yahoo Finance syndications work); inc.com, PitchBook, Crunchbase, Tracxn, DCD 403; PIL had to be pip-installed to convert webp headshots.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Run `profiler novos-power` and `profiler prep novos-power` in one push** so the fourth name in SemiAnalysis's 800 V DC SST vendor set joins Heron Power, Amperesand and DG Matrix — verify identity first (the corpus knows only SemiAnalysis's line: "direct MV-to-800VDC SST with 50% smaller footprint", "peak efficiencies over 98%" — HQ, legal name, funding and leadership are all unverified), assign it to `power-conversion-and-rack-power-silicon` (regenerating that segment lesson → Classroom GAS bump v01.82g → v01.83g), and cross-refer its study guide to the three sibling guides instead of repeating them. Run on Fable 5.1 High.
+
+**To continue:** type `profiler and profiler prep novos-power`
+
+## Previous Sessions
+
 **Date:** 2026-09-19 05:42:31 AM EST
 **Repo version:** v06.61r — one push, merged (auto-merge landed `afebc9d` on main; Classroom GAS v01.81g deploy step due on that merge), then this handover
 **Branch:** `claude/beautiful-mayer-oxembl` — restarted from `origin/main` after the merge (`git fetch --prune origin`) for this handover
@@ -40,44 +80,5 @@ Everything is merged. The developer asked for a paste-ready prompt to run `profi
 - **Run `profiler dg-matrix` and `profiler prep dg-matrix` in one push** so the third hall-edge SST startup joins Heron Power and Amperesand — verify identity first (Raleigh, NC; USD 60M Series A February 2026 led by Engine Ventures with ABB and Mitsubishi Heavy Industries; "first company shipping commercial multiport SST"; named on NVIDIA's GTC 2026 roster), assign it to `power-conversion-and-rack-power-silicon` (regenerating that segment lesson → Classroom GAS bump), and cross-refer its study guide to the Heron and Amperesand guides instead of repeating the SST physics. Run on Fable 5.1 High.
 
 **To continue:** type `profiler and profiler prep dg-matrix`
-
-## Previous Sessions
-
-**Date:** 2026-09-19 05:07:48 AM EST
-**Repo version:** v06.60r — one push, merged (auto-merge run 693, ~17 s auto-merge job, **zero GAS deploy steps fired — "All GAS deploys confirmed the merged version (or none were due)"**, every Deploy step under a second, Pages deploy job skipped), then this handover
-**Branch:** `claude/modest-bell-vb2pzt` — restarted from `origin/main` at session start, and again after the merge (`git fetch --prune origin`) for this handover
-
-### What was done
-
-- **THE QUARTERLY-REVIEW-ROUTINE APPLY SESSION (design §12 item 2) — RE-READ, PROVED UNCHANGED, NOT APPLIED. Fable 5.1 High, one session, one push, no `.gs`, no page, nothing authored, no Routine field touched.** The apply brief's two bracketed `[DEVELOPER: …]` slots — the approval sentence and the (rr59)/(rr56) answer — arrived a **second time** as their own placeholder text; a placeholder is "not taken" ((rr62), (rr66)), so the brief's own fallback governed: re-read, confirm, STOP.
-- **`trig_01CrhxzfBV6uKQNKpUXLLMSZ` read through `list_triggers`** and its live `prompt` compared by `json.load` against the design annex's *as it stands* fenced block — **equal, character for character** (27 lines / 4,823 characters; the annex's 4,824 / 7,917 count the fenced block's trailing newline — same text, one counting convention apart). No `last_run`, no `last_fired_at` (**never fired**), `updated_at` 2026-09-16, `next_run_at` 2026-10-15T13:00:20Z, cron `0 13 15 1,4,7,10 *`, enabled. **`update_trigger` was not called.**
-- **(rr60)'s count re-derived on the day through the health script's own `guidance_modules()` parser (28 modules):** landscapes reviewing on or before 2026-10-31 carry **five** rooms (utilities ×3 at 2026-10-01, neoclouds 2026-09-30, assurance 2026-10-31), **four** strictly before; cooling, in-hall-power and grid-equipment review inside the window with no room. A naive first-occurrence regex had first returned 19 landscapes with false dates silently — recorded in (rr68) as (rr64) a third time.
-- **Recorded:** design §12 item 2 (RE-READ / STILL NOT APPLIED at v06.60r) and the annex header (keeps NOT APPLIED, notes the re-verification); `CLASSROOM-CURRICULUM-PLAN.md` §10.6 **(rr68)** and the §11 label → **(rr69)**; IRP §7 closing note (item 2 bullet, a third revision of the recommendation, register line at (rr68)/(rr69)). **`.claude/rules/industry-guidance.md` deliberately untouched** — its Freshness-discipline sentence would otherwise describe a prompt the Routine does not have.
-- **CHANGELOG arithmetic re-counted:** pushed 2026-09-19 EST beside v06.57r–v06.59r, so **102 raw / 98 non-exempt**, no rotation, counter `102/100`; **the first push after the day boundary rotates the 2026-09-14 group of twenty**. `Classroomgs.changelog.md` untouched at 51 raw / 50 non-exempt.
-
-### Where we left off
-
-Everything is merged; Pages/GAS still serve **v01.80g / v01.16w** (zero deploy steps this push). **Four decisions remain open and the first has now been asked for twice:** design §12 item 2 is drafted verbatim in the design's §12 annex and needs a session whose brief carries the developer's approval **written in their own words in place of the `[DEVELOPER: …]` placeholder** — that session calls `update_trigger` (prompt only), reads it back with `list_triggers`, compares character for character (expect 7,916 characters by the JSON string), and records it in design §12 item 2, the annex header, §10.6 at (rr69), the IRP closing note (three remain) and the guidance rule's Freshness-discipline paragraph. Until then the Routine fires 2026-10-15 13:00 UTC with the prompt it has. (rr56), the roster hash ((rr59), §10.8 PROPOSED) and the stranded footer ((rr22)) are unchanged and undated.
-
-### Key decisions made
-
-- **A placeholder left in the slot is a blank slot, twice.** The session did not read the brief's surrounding intent ("APPLY session") as the approval; the C3 session 3 rule wants the sentence itself, in the session that makes the change. Nothing was fired, re-scheduled, renamed or re-modelled.
-- **The rule file is not updated ahead of the Routine.** The apply brief's step (4) edit to `industry-guidance.md` was skipped because it is conditional on the amendment existing; recording a change that did not happen is drift.
-- **The health script's parser is the authority for module dates.** An ad-hoc regex over `Classroom.gs` finds the id's first mention (prose or a stamp), not the module literal; `guidance_modules()` anchors on the function head. Briefs should say so rather than say "read it off the file".
-
-### Active context
-
-- **Repo version v06.60r** · `CHANGELOG.md` **102 raw / 98 non-exempt** (counter `102/100`; the next push on a later EST day rotates the 2026-09-14 group of twenty — read archive step 1, detach the footer first) · `Classroomgs.changelog.md` 51 raw / 50 non-exempt · `Profilerhtml.changelog.md` 49.
-- **GAS versions:** Classroom **v01.80g** (deployment 93, 93/200), Scraper v02.20g (165/200 — the tight one), Profiler v01.39g. **Page:** Classroom v01.16w.
-- **Baselines measured this session (pristine HEAD, and again after the edits — identical):** content checker **0 / 0 at 70 / 8 / 220**, module assertion 28; `--selftest` 15 / 0; `--base origin/main` nothing to judge at HEAD, P1 ×3 developer paths only after the edits; `--strict` no structural findings, 28 stale pins across 51 hand-authored lessons, 9 review items due (5 scenario lessons + 4 modules), coverage 14 of 14, moved-landscape 0 (ninth consecutive push), pools study 2,169 + lesson 533 + roster 314, decks 2,615 / 2,929 and 3,139 / 3,453 against 6,000; segments 19 / 0; readme tree 10 + 8 / 0.
-- **The Routine, as read this session:** id `trig_01CrhxzfBV6uKQNKpUXLLMSZ`, name `Industry Guidance quarterly review`, cron `0 13 15 1,4,7,10 *`, enabled, next 2026-10-15T13:00:20Z, never fired, prompt = annex *as it stands* (4,823 chars).
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-- **The findings register is at (rr68); the next session continues at (rr69).**
-
-### Recommendation for next session
-
-- **Apply the drafted amendment to the quarterly review Routine — but only after the developer has typed the approval sentence into the brief's slot in their own words, replacing the `[DEVELOPER: …]` placeholder rather than leaving it in place.** Two sessions have now stopped on the placeholder, correctly. The session reads `C5-SALES-SIMULATIONS-DESIGN.md` §12 annex, calls `update_trigger` with the annex's amended text as `prompt` and no other field, reads it back with `list_triggers`, compares character for character, and records it in design §12 item 2, the annex header, curriculum plan §10.6 at (rr69), the IRP closing note (three decisions remain) and the guidance rule's Freshness-discipline paragraph. Do it before 2026-10-15 13:00 UTC, the first firing. Run on Fable 5.1 High.
-
-**To continue:** type `approve the quarterly review routine prompt change`
 
 Developed by: LightAISolutions
