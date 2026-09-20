@@ -6,6 +6,45 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-20 12:26:53 AM EST
+**Repo version:** v06.75r — two pushes this session (`8df12be` v06.74r the gate, this one), both on `claude/optimistic-fermat-ru79p0`, restarted from `origin/main` before each
+**Branch:** `claude/optimistic-fermat-ru79p0`
+**Model:** Fable 5.1 xhigh
+
+### What was done
+
+The **NE0 design gate for Network + Events** — §13.1 of `NETWORK-EVENTS-DESIGN-PLAN.md` executed step by step.
+
+- **v06.74r — the gate.** The eleven open rows walked one at a time in §13.1's order and recorded in §3: D4, D8, D16, D17 as recommended; **D7 overridden by the developer — both apps start admin-only** (tier keys kept in the caps maps as the widening path; §12.4: no team layer); **D6 Gemini-only** (no Claude leg, no `ANTHROPIC_API_KEY`; §12.1: Gemini may process card PII); **D12 Overpass venues** (§12.5: no billed Google Cloud project); **D14 no data poll in either app + a new Q0 Fable Medium session** rolling the `op=quota` counter to the eight existing projects (§12.2: consumer account until Q); D5 refined (single-valued `relationship` + Account `Tags`, the `stage` validator rule); D9 made precise (`unknown` consent allowed for the two D15 mail occasions); D2 with the no-service-worker offline limit; §12.6 both seats equal. **`NETWORK-SCHEMA.md`** (284 lines) and **`EVENTS-SCHEMA.md`** (179 lines) written as the two apps' single sources of truth; §13.3 (N0) and §13.4 (E0) briefs written; §11 NE0 → Done; all eight §12 questions settled. The reading surfaced that D15 collided with §4.4's Gmail/Calendar sweep (which would also have read the script account's mailbox) — resolved as **import-only touches** for N4 and scrubbed from §8, §9, §10.
+- **v06.75r — this push.** The N0 paste-in prompt added under §13.3; this session context; the **2026-09-14 CHANGELOG date group (20 sections) rotated** into the archive with SHA enrichment.
+
+### Where we left off
+
+**The gate is closed; nothing is scaffolded.** Next is **N0 on Fable 5.1 High** — paste the §13.3 prompt block. After N0: Q0 (Fable Medium, the counter rollout), then N1, with E0 (Opus 5 xhigh research, §13.4) running beside N1–N2. Dated target from D16: N1 and E1 live before RE+ 2026 opens on 2026-11-16.
+
+### Key decisions made
+
+- **Admin-only tiers for both apps** (D7 override) — the developer will widen if they ever want to share.
+- **Gemini is the only processor of card PII**; Drive OCR and Claude both declined.
+- **No data poll anywhere new**; heartbeat 600 s; execution counting via `op=quota` across all ten projects.
+- **Overpass, not Places**; no billed GCP project exists.
+- **The apps hold no mail or calendar scope at all** — D15 applied to N4 (import-only touches).
+
+### Active context
+
+- **Repo version v06.75r.** `CHANGELOG.md` rotated this push: the 2026-09-14 group moved, counter `Sections: 97/100`, 96 non-exempt — the next rotation fires when a push dated after the last remaining date finds ≥ 100 non-exempt again.
+- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
+- **Values N0 will ask for:** `SPREADSHEET_ID`, `CLIENT_ID`, the Master ACL default; `DEPLOYMENT_ID` after the developer deploys.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Open a Fable 5.1 High session and paste the N0 prompt block under §13.3 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — it scaffolds Network from the auth template, builds the admin-only door, the schema's tabs, the `op=quota` counter and the Profiler "Ecosystem" relabel, writes the N1 brief as §13.5, and pushes once. (Monday's earnings-desk check-out in `REMINDERS.md` fires on its own wake-up first.)
+
+**To continue:** type `run N0`
+
+## Previous Sessions
+
 **Date:** 2026-09-19 09:53:18 PM EST
 **Repo version:** v06.73r — three pushes this session (`1cd05e9` v06.71r, `ff64c9b` v06.72r, this one), all on `claude/brave-ride-nfjh9j`, rebased onto `origin/main` before each
 **Branch:** `claude/brave-ride-nfjh9j`
@@ -43,54 +82,5 @@ The **Network + Events strategic design session** — the founding brief for two
 - **Open a Fable 5.1 xhigh session and paste §13.2 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — it starts the NE0 gate, walks the eleven open decisions one at a time, and ends with both schema skeletons and the N0/E0 briefs in one push. (Monday's earnings-desk check-out in `REMINDERS.md` is a separate, earlier item and fires on its own wake-up.)
 
 **To continue:** type `start the NE0 gate`
-
-## Previous Sessions
-
-
-**Date:** 2026-09-19 07:44:03 PM EST
-**Repo version:** v06.70r — five pushes across 2026-09-16 and 2026-09-19 (`b80afcf` v06.17r, `9f70b5f` v06.18r, `6518ce5` v06.19r, `cef9c51` v06.69r, `134076e` v06.70r), all merged
-**Branch:** `claude/repo-access-denied-339rna` — restarted from `origin/main` before each push
-**Model:** Opus 5 xhigh
-
-### What was done
-
-This session is one long root-cause investigation of the **"Repo access denied"** notifications, ending in a rebuilt Routine awaiting proof.
-
-- **ROOT CAUSE (v06.17r).** Every one of the six Routines was stored with `sources: []`, because all were created by a Claude session calling `create_trigger` (`created_via: meta_mcp`) and **that tool has no `sources` parameter**. Proved rather than inferred: a throwaway Routine created *from a session that did have the repo attached* also came back `sources: []`. So no scheduled session has ever held a repository — `git log` confirms **no commit in the entire history came from a scheduled run**, and the repo's own v05.41r note had already recorded the symptom ("the 7 Sep run landing no commit") without naming the cause.
-- **STEP 0, first version — WRONG (v06.17r), corrected the same day (v06.18r).** It told fired sessions to call `add_repo` / `register_repo_root`. A manual probe proved **those tools do not exist in a Routine-fired session** ("No matching deferred tools found"). A fired session's toolset is narrower than an interactive one's and that difference is invisible from inside an interactive session.
-- **STEP 0, second version — `git clone` + a dry-run push probe (v06.18r).** A plain clone works; the git proxy authenticates transparently. The five committing Routines also got `git push --dry-run` as step (c), *before any research*, with a hard stop on denial.
-- **A LIVE OUTAGE, found by the probe and fixed by the developer.** `check-acl-health.sh` returned exit 1 — both Profiler and Receipts unable to read the Master ACL on a lapsed account-level `spreadsheets` grant. The developer re-consented via Receipts and the fleet returned to exit 0. **The Profiler/Receipts asymmetry was a grace-snapshot effect**: Receipts' snapshot was unarmed, Profiler's was armed and carried its users through. Profiler was cushioned, not spared.
-- **SETTLED (v06.69r): a Routine-fired session can CLONE but cannot PUSH.** The desk fired Thu 17 and Fri 18 Sep and landed nothing. Friday's telemetry — **34 seconds, 47,441 context tokens, $0.11** — proves it cloned (a repo-less session spends near-zero) and stopped at the push probe. Write access is not reachable from a prompt, so **recreating each committing Routine with the repository attached became mandatory**.
-- **THE EARNINGS DESK IS REBUILT (v06.70r).** New Routine `trig_01HkrwpCULei8Gje6RGqcp1B`, created in the UI 23:24 UTC, prompt pasted 23:29 UTC. Verified: prompt matches the old one line for line including the corpus token, `mcp_connections: []` (none of the five default connectors), cron `0 13 * * 1-5`, push + email, model Default, repository chip `LightAISolutions/Sales` present in the editor and the **Runs with** card.
-
-### Where we left off
-
-**Awaiting Monday 2026-09-21.** Both desks are live on purpose: OLD `trig_01UyH77BMKJnxzBUZJ11ej6A` at 13:03:56Z, NEW `trig_01HkrwpCULei8Gje6RGqcp1B` at 13:08:01Z. Old fires first, dies in ~34s at the push probe without touching the queue, so there is no collision. **The only difference between them is the attached repository**, which makes Monday a controlled A/B rather than a hopeful run. Four rows are due (`iren` 2026-08-27, `jinko` 2026-08-27, `oracle` 2026-09-10, `novonix` 2026-09-14); a healthy run takes the three oldest and lands one commit.
-
-### Key decisions made
-
-- **Keep both desks live through Monday.** The control arm is worth one extra notification, and the old one is also the fallback if the rebuild turns out not to fix push.
-- **Do not rebuild anything else until Monday's result is in.** Monday's answer lands two days before C2's Wednesday deadline, so waiting costs nothing and avoids destroying four more run histories for a fix that might not work.
-- **Keep STEP 0 in every rebuilt prompt.** With the repo attached the clone is a no-op and the dry-run push passes; it costs one command and it is what turned an hour-long silent loss (2026-09-16) into a 34-second loud one (2026-09-18).
-- **The ACL health check is NOT rebuilt** — read-only, working correctly, rebuilding would cost its run history for nothing.
-- **Accepted, knowingly: rebuilding forfeits `update_trigger`.** A UI-created Routine carries `created_via: "http_api"` and agents cannot edit it — which retires the C3 session 3 rule, design §12 item 2 and the whole approved-amendment path for each rebuilt Routine. Judged worth it: a Routine that cannot push is useless whoever may edit it.
-- **`fire_trigger` payloads are not a diagnostic channel.** One firing complied with a diagnostic addendum; a near-identical one **refused it as a prompt injection**, ran only its configured job, and raised a security notice. The refusal was correct and the compliance was the anomaly.
-
-### Active context
-
-- **Repo version v06.70r.** `CHANGELOG.md` at **112 raw / 98 non-exempt** against a 100 trigger with **fourteen** sections dated 2026-09-19 EST — the closest the non-exempt count has come. **The next push dated 2026-09-20 EST or later will almost certainly need an archive rotation.**
-- **Four Routines still to rebuild**, in deadline order: C2 pipeline (Wed 2026-09-23 04:00 PDT), Profiler opportunity report and Profiler quarterly check (both Thu 2026-10-01), Industry Guidance quarterly review (Thu 2026-10-15).
-- **Rebuild recipe**: New routine → paste Instructions copied from the old Routine's own field (never from a snapshot — one went stale within three days) → select `LightAISolutions/Sales` → **remove all five pre-loaded connectors** (they carry a "write actions, without asking" warning and the current Routines have none) → set schedule and notifications → Create → verify → delete the old one.
-- **Do not trust `derived_state.folders_state`, `folders`, or `session_request.config.sources`** as evidence of repository attachment — all read empty on a Routine whose repo is demonstrably attached. The only reliable check is the **Runs with** card in the UI.
-- **Still open, unrelated to the Routines:** Receipts' ACL grace snapshot is **unarmed** (8 users, ~4.8 days old). It arms on the next successful sign-in to Receipts; if it stays unarmed, check `ACL_GRACE_ENABLED` in Receipts' `.gs`.
-- **Timezone gotcha that cost a round trip:** the Routines UI renders run times in the viewer's zone (PDT), this repo timestamps EST/EDT. A 17:28 EDT firing lists as "Today at 2:28 PM".
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Read Monday's two earnings-desk runs and close the issue out** — confirm the new desk cloned, passed the dry-run push, landed a commit and advanced the `iren` / `jinko` / `oracle` rows; confirm the old one stood down at the push probe; then give the developer the go-ahead to delete the old Routine and rebuild C2 ahead of Wednesday. A reminder for this is in `REMINDERS.md` and a scheduled wake-up is armed for 2026-09-21 16:00 UTC.
-
-**To continue:** type `check whether the earnings desk landed its commit`
-
 
 Developed by: LightAISolutions
