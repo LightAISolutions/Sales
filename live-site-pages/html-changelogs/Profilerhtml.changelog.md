@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.91w] — 2026-09-20 12:56:34 AM EST — v06.76r
+
+### Changed
+- **The relationship explorer is now called “Ecosystem.”** The heading on the explorer view and the message shown to accounts that cannot open it now use that name, so the explorer is no longer confused with the separate Network app. Where the explorer lives, who can open it, and everything it shows are unchanged
 
 ## [v01.90w] — 2026-09-13 05:38:06 AM EST — v05.49r
 

@@ -44,6 +44,7 @@ Each GAS project has a code file and a corresponding embedding page. Register th
 | Receipts | `googleAppsScripts/Receipts/Receipts.gs` | `googleAppsScripts/Receipts/Receipts.config.json` | `live-site-pages/Receipts.html` |
 | Profiler | `googleAppsScripts/Profiler/Profiler.gs` | `googleAppsScripts/Profiler/Profiler.config.json` | `live-site-pages/Profiler.html` (inline note-box iframe — PROJECT OVERRIDE, not full-screen) |
 | Classroom | `googleAppsScripts/Classroom/Classroom.gs` | `googleAppsScripts/Classroom/Classroom.config.json` | `live-site-pages/Classroom.html` |
+| Network | `googleAppsScripts/Network/Network.gs` | `googleAppsScripts/Network/Network.config.json` | `live-site-pages/Network.html` |
 
 
 ## GAS Project Config (config.json)

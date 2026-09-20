@@ -361,7 +361,7 @@ def run():
 
             # Entry points are hidden per tier, but a bookmarked hash reaches
             # the renderer directly — assert the routes deny on their own.
-            for hash_, cap, label in (('#network', 'network', 'ecosystem network'),
+            for hash_, cap, label in (('#network', 'network', 'ecosystem'),
                                       ('#compare/zhonhen,abb', 'compare', 'compare view')):
                 page.evaluate("h => { location.hash = h; }", hash_)
                 page.wait_for_timeout(500)

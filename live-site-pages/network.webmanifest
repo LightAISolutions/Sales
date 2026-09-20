@@ -1,0 +1,15 @@
+{
+  "name": "Network",
+  "short_name": "Network",
+  "description": "Business-card capture and the account-centric contact layer",
+  "id": "./Network.html",
+  "start_url": "./Network.html",
+  "scope": "./Network.html",
+  "display": "standalone",
+  "background_color": "#f4f1ea",
+  "theme_color": "#1f3a5f",
+  "icons": [
+    { "src": "images/network-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/network-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
