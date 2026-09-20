@@ -3,11 +3,41 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 114/100`
+`Sections: 115/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.73r] — 2026-09-19 09:53:18 PM EST
+
+> A few changes to the plan:
+>
+> * Regarding when either app would send mail, you said Version 1 creates Gmail drafts, but I would almost always send emails from my work email (regardless of which company I work for at the moment). Therefore, I want Version 1 to create email drafts for each recipient that I can modify in the app and then either export or copy/paste to a 3rd party app (could be Outlook or anything else). 
+> * Regarding finding target contacts without Linkedin, I approve and want you to include everything in your list, especially your recommended quoted-people extraction over Scraper's articles.
+>
+>
+> Give me a prompt to paste into a new Fable 5.1 xhigh session to start §13.1 and walk the eleven remaining decisions with me, then remember session.
+
+### Changed
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- **D15 DECIDED — the apps never send and never touch Gmail.** The developer mails from a work account that changes with the employer, so v1 renders one editable draft per recipient in-app (merge fields from the contact and account rows) and hands off by `.eml` bundle, one-column CSV/`.txt`, per-draft copy-to-clipboard, or a `mailto:` link; marking a draft sent writes the `email-out` interaction. No `gmail.*` scope, no `MailApp`, no Gmail API in either app. §4.3's mailing bullet rewritten to match.
+- **D11 APPROVED AND WIDENED to a thirteen-row signal-source catalogue (§5.5.1)** — exhibitor directories, speaker rosters, newswire RSS, newsroom/"meet us at" pages, the quoted-people extraction over Scraper's articles, agendas and recordings, FERC/PUC dockets, SEC filings, association directories, per-person Google News RSS, registrant mail, the corpus's own 1,479 decision makers, and the manual-only LinkedIn/X/attendee-list path — each with what it yields, how it is read, and its phase.
+- **D17 added — the people route.** Scraper's summarisation schema gains `people[] { name, title, company, role, context }` at near-zero extra spend; the corpus route gains `cop=people&slug=&since=`; Network reads it through its own proxy behind a new `NETWORK_CORPUS_TOKEN` (a third token namespace — routing through Profiler's proxy rejected as a back-door widening of `CORPUS_TOKEN`). Bridge table gains the Scraper → Network row.
+- **E4 grew to three sessions** (directory/roster/newswire/manual; newsrooms/agendas/FERC; the Scraper-side extraction and route); ≈ 23 sessions total. §11's NE0 row now lists six settled rows and the eleven the gate walks — D2, D4, D5, D6, D7, D8, D9, D12, D14, D16, D17. §13.1 updated to the same list.
+- **§13.2 — the paste-in prompt for the gate session**, verbatim, so it survives the chat.
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Latest Session rewritten for this three-push design session; the prior entry moved to Previous Sessions under the two-session cap. Recommendation: open a Fable 5.1 xhigh session and paste §13.2.
+
+#### `README.md`
+- `Last updated` and `Repo version` refreshed.
+
+### Notes
+
+- **No rotation.** This push lands on **2026-09-19 EST**: 115 raw / **98 non-exempt** against a 100 trigger with **seventeen** same-day sections, counter `Sections: 115/100`. The first push dated 2026-09-20 EST or later rotates the 2026-09-14 date group (20 sections).
+- **No page, GAS script, diagram or rule changed.** Every Scraper change D17 names (`people[]`, `cop=people`) is a proposal for E4 session 3, not an edit made here.
 
 ## [v06.72r] — 2026-09-19 09:07:42 PM EST
 
