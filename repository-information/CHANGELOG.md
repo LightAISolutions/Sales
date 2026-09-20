@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 113/100`
+`Sections: 114/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.72r] — 2026-09-19 09:07:42 PM EST
+
+> Regarding the headline recommendations:
+>
+> * "Keep the names, and treat 'Network' as a known collision" - I want to resolve the collision by renaming Profiler's Network to Ecosystem. 
+> * "The decisive architectural fork is public versus private." - I agree that everything about people should be private and lives in Drive, whereas the event registry lives on Pages. 
+> * "Network is account-centric, not card-centric." - I'm not 100% sure I can visualize what you mean. Can you expand on this? How does everything work together across accounts, and specifically, in the Network app?
+> * "Mass email should leave your own mailbox." - I don't anticipate either Network nor Events will have to send out mass emails like Scraper. Under which circumstances do you foresee these apps needing to send out mass emails?
+> * "Events sources are a hybrid of the corpus and research." - I approve this plan. Recommend me some ways you can search for my target contacts if Linkedin is blocked off. 
+> * "Model rule, applied." - Give me the action plan in a table. 
+> * "Classroom hook: deferred, narrow, and one-directional." - I approve your decision.
+>
+>
+> You recommended me to paste the §13 brief from NETWORK-EVENTS-DESIGN-PLAN.md, and hold the NE0 gate: walk the sixteen decisions one at a time, then have that session write the two schema skeletons and the N0 and E0 briefs. I want to see that plan in detail before I continue in a new session.
+
+### Changed
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- **FOUR GATE DECISIONS PRE-SETTLED BY THE DEVELOPER, RECORDED IN THE ROWS THEY BELONG TO.** D1 amended: the collision is resolved by renaming Profiler's explorer to **"Ecosystem"** — the heading, the denied-view sentence and the `verify-profiler-roles.py` label assertion change together in N0; the `network` capability key and the `#network` hash stay. D3 (people private in Drive, event registry public on Pages), D10 (hybrid corpus + Opus research sources) and D13 (`event:` prefix deferred, `contact:` never) approved as recommended. §11's NE0 row says the gate now walks the remaining eleven.
+- **D15 AMENDED — drafts, not sends.** Asked when either app would ever send mail like Scraper, the honest answer is: never a digest; only post-event follow-up (one note per card scanned at a show, 20–60 at a time) and a few reconnect nudges a week. v1 therefore creates **Gmail drafts** per recipient through `gmail.compose` with the merge fields filled, and the developer sends from Gmail. The browser-side send path stays an off-by-default N3 option; `MailApp` stays ruled out.
+- **§13.1 — the NE0 session step by step**, written before it runs at the developer's request: seven steps with outputs and a 60–90 minute budget — restate the settled rows, walk the eleven open rows in a stated order (account model and taxonomy first, build order last), settle the §12 questions each decision touches, write `NETWORK-SCHEMA.md` and `EVENTS-SCHEMA.md` with their exact contents listed, write the N0 and E0 briefs, one push. What the developer brings is listed, so silence on a row means "as recommended".
+
+#### `README.md`
+- Tree description for the plan updated; `Last updated` and `Repo version` refreshed.
+
+### Notes
+
+- **Answered in chat, not in the file, because they are explanation rather than decision:** the account-centric model walked through with one scanned card; the legally clean ways to find target contacts without LinkedIn, including a new idea — a *quoted-people* extraction over the trade press Scraper already ingests; the action plan as a table.
+- **No rotation.** This push lands on **2026-09-19 EST**: 114 raw / **98 non-exempt** against a 100 trigger with **sixteen** same-day sections, counter `Sections: 114/100`. The first push dated 2026-09-20 EST or later rotates the 2026-09-14 date group (20 sections).
+- **No page, GAS script, diagram or rule changed.** The Profiler relabel is a decision recorded here and executed in N0 with its own page-version train, not in this housekeeping push.
 
 ## [v06.71r] — 2026-09-19 08:47:39 PM EST
 
