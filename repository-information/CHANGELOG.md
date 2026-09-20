@@ -3,11 +3,41 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 115/100`
+`Sections: 116/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.74r] — 2026-09-19 11:55:37 PM EST
+
+> **Prompt:** "Start the NE0 design gate for Network + Events. Read `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md` in full, then follow §13 (the brief) and §13.1 (the step-by-step) exactly. Six rows are settled and are not re-opened: D1 (Profiler's explorer becomes "Ecosystem" in N0), D3 (people private in Drive, the event registry public on Pages), D10 (hybrid corpus + Opus 5 xhigh research sources), D11 (the full §5.5.1 signal-source catalogue, quoted-people extraction included), D13 (`event:` prefix deferred, `contact:` never), D15 (in-app editable drafts exported or copied to any mail client — the apps never send). Walk the remaining eleven with me one row at a time in §13.1's order — D4, D5, D7, D8, D9, D6, D2, D14, D17, D12, D16 — recommendation first in two sentences, one alternative only where a real trade-off exists, then stop and wait for my answer before the next row; my silence on a row means "as recommended". Then settle the §12 questions each decision touches (I will tell you whether a Google Cloud project with billing exists and whether Gemini or Claude may process card PII), write `NETWORK-SCHEMA.md` and `EVENTS-SCHEMA.md` with exactly the contents §13.1 steps 4–5 list (skeleton + Edits, never a single large Write), write the N0 and E0 paste-in briefs as §13.3 and §13.4 of the plan, flip §11's NE0 row to Done with the version, and push once. Do not scaffold either app in this session. Normal Session Start, Pre-Commit and Pre-Push checklists on a `claude/*` branch restarted from `origin/main`. The repo CHANGELOG stands at 98 non-exempt sections against a 100 trigger: if your push lands on 2026-09-20 EST or later (`TZ=America/New_York date`), it rotates the 2026-09-14 date group (20 sections) into the archive with SHA enrichment on every header — run `git fetch --unshallow origin main` first."
+
+### Added
+
+#### `repository-information/NETWORK-SCHEMA.md`
+- **New — the Network app's single source of truth**, written at the gate as skeleton + sectional appends: the public/private line stated once; opaque id rules (`a-` `c-` `i-` `s-` `d-` `m-` + 13 base36 characters, `NW_ID_RE`); the admin-only access model with `NW_ROLE_CAPS` keeping all four tier keys; the `Accounts` / `Contacts` / `Interactions` / `Signals` / `Mailings` / `Drafts` / `Shares` / `Profiles` tabs with every column typed; the D5 enums with display labels (flat server lists + the grouped `NW_ENUMS` client map, the Receipts idiom) and the `stage`-only-for-`target`/`customer` validator rule; computed warmth weights and reconnect cadences; the own-Drive `Network App/_inbox/` → `<Company>/` layout; the Gemini-only card-extraction `responseSchema` with per-field `confidence{}`; the `nop=accounts` / `nop=signals` peer-op request and response shapes with the upsert key and the LinkedIn-host rejection; the Scraper `cop=people` route behind `NETWORK_CORPUS_TOKEN`; the D15 drafts flow with merge fields and the four hand-off formats; CSV/`.xlsx`/vCard 3.0 mappings; the audit-row rule (ids and counts, never a card field) and disclosure rows; soft delete, restore and browser-side purge; the checkers
+
+#### `repository-information/EVENTS-SCHEMA.md`
+- **New — the Events app's single source of truth**: the public/private line; slug and source-key rules; the admin-only access model (`EV_ROLE_CAPS`); the `events.json` registry row with every field typed and the `kind` / `status` enums; the `events-sources.json` roster row with the probe record and the `blocked` reason; the `Stars` / `Plans` / `Meetings` / `Proposed` / `Tuning` tabs; the E3 score terms with default weights (segment fit 0.35 · account presence 0.35 · corpus salience 0.15 · proximity 0.10 · conflict −0.25 · relevance prior 0.05; both seats weigh equally per §12.6); the `Proposed` diff row and the `events sync` contract; the `eop=today|starred|signals` peer ops; the RFC 5545 ICS and Add-to-Google-Calendar mappings; Overpass venues with the Places option; the corpus-count corollary; the checker assertions
+
+### Changed
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- **§3 — every row now reads as a decision (header "approved 2026-09-20").** The eleven open rows were walked one at a time in §13.1's order and recorded: D4, D8, D16, D17 approved as recommended; **D7 overridden by the developer — both apps start admin-only** (the four tier keys stay in the caps maps as the widening path; §12.4 settled: no team layer); **D6 decided Gemini-only** (no Claude Haiku leg, no `ANTHROPIC_API_KEY`; §12.1: Gemini may process card PII); **D12 with Overpass venues** instead of Places (§12.5: no billed Google Cloud project); **D14 tightened to no data poll** in either app plus a new **Q0** Fable Medium session that rolls the `op=quota` counter to the eight existing projects (§12.2: consumer account until Q); D5 refined (single-valued `relationship` + Account `Tags`, the `stage` validator rule); D9 made precise (`unknown` consent allowed for the two D15 mail occasions); D2 with the no-service-worker offline limit recorded
+- **D15 consequence recorded** — the reading surfaced that D15's "no `gmail.*` scope anywhere" collided with §4.4's `GmailApp`/`CalendarApp` sweep, which would also have read the *script* account's mailbox rather than the developer's work account; N4's touches are now **import-only** (`.ics` / sent-mail CSV, confirmed row by row). §4.4, §8 N3 and N4 done-whens, §9 N3/N4, and §10 precondition 3 scrubbed of the stale send/scope text; §5.6 and §8 E5 now say Overpass
+- **§8** N0 and E0 rows cite `NETWORK-SCHEMA.md` / `EVENTS-SCHEMA.md` by name; **Q0** row added; E1 carries the RE+ 2026 (2026-11-16) date target; session count ≈ 24
+- **§11** NE0 row flipped to **Done — v06.74r, 2026-09-20**; N0 and E0 rows to Open with their brief pointers; Q0 row added
+- **§12** — all eight questions marked settled with the answer given at the gate
+- **§13.1** carries a ran-on status line; **§13.3 (N0 brief)** and **§13.4 (E0 brief)** written as paste-in blocks — N0: the setup-script JSON, the PWA files and CSP override, the admin-only door and verifier, the tab bootstrap, the D14 intervals and `op=quota`, the D1 relabel lines, the deploy hand-off and done-when; E0: the corpus extraction script, Appendix A as input, the organiser-page verification rule, the `scraper-sources.md` probe procedure with the known blocked sources, the checker, the files and the done-when
+
+#### `README.md`
+- Structure tree: `EVENTS-SCHEMA.md` and `NETWORK-SCHEMA.md` entries added; the `NETWORK-EVENTS-DESIGN-PLAN.md` description updated to the decided state. `Last updated` and `Repo version` refreshed
+
+### Notes
+
+- **No rotation.** This push lands on **2026-09-19 EST**: 116 raw / 98 non-exempt against the 100 trigger (eighteen same-day sections exempt). The first push dated 2026-09-20 EST or later rotates the 2026-09-14 date group (20 sections).
+- **No page, GAS script, diagram or rule changed.** Neither app was scaffolded (the brief forbids it); the Profiler "Ecosystem" relabel and every Scraper change are N0 / E4 work. `scripts/check-readme-tree.py` reports 0 findings.
 
 ## [v06.73r] — 2026-09-19 09:53:18 PM EST
 
