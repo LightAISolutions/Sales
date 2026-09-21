@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.00r] — 2026-09-21 03:39:15 PM EST
+
+> **Prompt:** "A few questions:\n- How difficult to execute are my routines? You mentioned that they are currently using the default model which is sonnet 5. Evaluate if sonnet 5 is capable enough for my routines. If not, recommend me a different model to use and why. \n- the biggest expense in my last earnings desk run was cache reading. Is there any way to reduce that?\n- I want to delete the old non-functional earnings desk routines, but am worried I will delete the wrong one. Can you give me a link to the old desk to be deleted? Make things as easy as possible. \n\nThen, give me step by step instructions on how to rebuild C2 and my other routines, if needed."
+
+### Changed
+
+#### `.claude/rules/profiler-app.md`
+- **Model selection per Routine, decided on evidence rather than on task difficulty.** Every failure in the 2026-09-16→21 saga was infrastructural, not a run reasoning badly — so the default stays. The test that earns an upgrade is narrow: **can a checker see the failure?** `check-classroom-content.py` and `check-classroom-pipeline.py` verify structure only and cannot tell a real freshness pin from a fabricated one, so a structurally perfect lesson with an invented input passes every gate. **Opus 5 for C2 and the Industry Guidance review; Sonnet 5 for the earnings desk, ACL check, opportunity report and quarterly sweep.**
+- **Priced the alternatives on the 2026-09-21 run's real token mix.** Sonnet 5 $13.76 · Opus 5 $34.39 · Fable 5.1 $36.61 · Haiku 4.5 disqualified by arithmetic (200K context against runs of 335K and 361K). Two non-obvious results recorded: **Fable 5.1 lands only 6% above Opus 5**, not the 2× its headline price implies, because its cache reads are $0.25/MTok against Opus 5's $0.50; and C2 on Opus 5 costs ≈$42/month of plan allowance.
+- **Reframed the cache-read line and then found the thing actually worth cutting.** 42.9M cache-read tokens billed $8.58 but would bill $85.79 uncached — the cache saved $77 and dominating a long run is what it looks like working. The quantity behind it is the lever: **the 384,240-byte / ~96,000-token refresh calendar is read whole to act on one due row worth ~1,300 tokens**, costing ≈$2.46 a run (~29% of the cache-read bill). Added a tested extraction snippet returning 5,075 bytes instead of 384,240.
+- **Found a latent correctness bug while measuring it:** the calendar is **2,573 lines against the Read tool's 2,000-line default**, so a plain Read silently truncates the tail of the queue.
+- **Named this file's own cost honestly** — 74,675 bytes at the time of writing, seven edits during this investigation, ≈$1.64 a run in per-turn re-reads alongside CLAUDE.md and PROFILER-SCHEMA.md, with a split proposed for when it next grows.
+
+### Fixed
+
+#### `.claude/rules/profiler-app.md`
+- **Corrected the "a Routine's repository can never be edited, it must be recreated" claim, which the current documentation contradicts.** `code.claude.com/docs/en/routines` states that **Edit** changes "the name, prompt, **repositories**, environment, connectors, or any of the routine's triggers." The 2026-09-16 observation predates that reading by five days and looked in the "Runs with" card rather than the menu beside the routine's name. **Four rebuilds were about to be recommended on the strength of a claim that may no longer hold** — the amendment requires a two-minute re-test first, and records `/schedule update` in a local terminal as a second editing surface the MCP tools do not expose. What stands: `create_trigger`/`update_trigger` carry no repository parameter, so no session here can attach one by any means.
+- **Corrected the v06.19r `fire_trigger` "prompt-injection refusal" post-mortem.** It was a build behaviour, not an anomaly: before v2.1.213 a fired prompt arrived framed as an untrusted background notification and could be refused. Both the refusal and the compliance were correct for their builds. Retiring the diagnostic was still right; the recorded reason was not.
+
+### Added
+
+#### `.claude/rules/profiler-app.md`
+- Two operational facts not previously recorded: Routines carry a **daily per-account run cap** separate from subscription limits (so a duplicate left enabled spends cap as well as allowance), and a lapsed GitHub connection makes a Routine **skip runs for 72 hours and then disable itself** — a second, independent cause of "no repository access" to rule out before re-deriving the whole diagnosis.
+- The documented canonical Routines URL, `claude.ai/code/routines`.
 
 ## [v06.99r] — 2026-09-21 03:18:20 PM EST
 
