@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.21g] — 2026-09-20 09:06:03 PM EST — v06.79r
+
+### Added
+- **A daily execution counter the operator can read.** A status address now reports how many requests the backend handled today, grouped by type — counts only, never who made them or what they contained
 
 ## [v02.20g] — 2026-09-17 05:55:44 PM EST — v06.45r
 

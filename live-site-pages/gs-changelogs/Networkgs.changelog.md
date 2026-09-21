@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 2/50`
+`Sections: 3/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.03g] — 2026-09-20 09:06:03 PM EST — v06.79r
+
+### Added
+- **A daily execution counter the operator can read.** A status address now reports how many requests the backend handled today, grouped by type — counts only, never who made them or what they contained (the counter now carries the same name as in every other app, so one fleet-wide check reads all of them)
 
 ## [v01.02g] — 2026-09-20 08:38:53 PM EST — v06.77r
 

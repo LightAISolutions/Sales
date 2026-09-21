@@ -3,11 +3,41 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.79r] — 2026-09-20 09:06:03 PM EST
+
+> **Prompt:** "Run Q0 — the quota-counter rollout — from `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`: §3 row D14 and the §8 Q0 row are the whole spec. Read first `nwQuotaProbe_()` and the two `op=quota` dispatch lines beside `op=aclhealth` in `googleAppsScripts/Network/Network.gs` `doGet` (the source of truth — copy it, do not redesign it), the `op=aclhealth` dispatch in `Receipts.gs` `doGet` as the precedent for where a PROJECT-marked unauthenticated probe sits inside the AUTH `doGet`, `scripts/check-acl-health.sh` (the probe-script shape to follow, including how it discovers projects from the `.gs` files and skips `YOUR_DEPLOYMENT_ID` projects), and `.claude/rules/gas-scripts.md` §"Template vs Project Code Separation". Then, in **one commit**: (1) copy the function into the eight existing projects — Classroom, Globalacl, MasterACL, Profiler, Receipts, Scraper, Testauthgas1, Testauthhtml1 (`Claspdeploytest` has no config and is not a project) — as `quotaProbe_()` with the same body and comment, and rename Network's `nwQuotaProbe_` to `quotaProbe_` so all nine read identically for Q's grep; it depends only on template globals (`SPREADSHEET_ID`, `AUTH_CONFIG`, `ACL_PAGE_NAME`, `VERSION`, `getEpochCache`) that every auth project has, and every one of the eight already runs with `ENABLE_AUDIT_LOG` on (the two `standard`-preset projects, Classroom and Profiler, override it on), so no preset changes; (2) add the `if (action === 'api' && op === 'quota')` dispatch beside `op=deploy` in each `doGet`, marked `// PROJECT:` exactly as Network's is; (3) write `scripts/check-quota.sh` on the `check-acl-health.sh` shape — one row per deployed project (`page`, `gasVersion`, `date`, `executions`, the top three `byEvent` keys), a total across the fleet against the 20,000/day account quota, `audit_log_disabled` / `spreadsheet_not_configured` surfaced as warnings not failures, exit 0 healthy / 1 any probe unreachable / 2 nothing probed; (4) nine GAS bumps with nine GAS changelog entries (user-facing: "a daily execution counter the operator can read"), no page bumps (no HTML changes), README tree entry for the script, CHANGELOG entry, flip §11's Q0 row to Done with the version. Verify with `node --check` on every `.gs` copy and `scripts/check-gas-inner-scripts.js`; after the merge, run `bash scripts/check-quota.sh` and paste its table into the CHANGELOG entry's Notes (the three placeholder-id projects — Globalacl, Testauthgas1, Testauthhtml1 — never deploy, so their copies are repo-only bookkeeping and the script skips them; the deployed six plus Network answer). Do not touch `Events` (E1 inherits the op from the shared template region when it is scaffolded), do not change any interval (that is Q), do not add auth to the probe (counts only, never a user or a details cell — the trust model is `aclhealth`'s). Normal Session Start, Pre-Commit and Pre-Push checklists on a `claude/*` branch restarted from `origin/main`; run `git fetch --unshallow origin main` first. The repo CHANGELOG stands at `Sections: 100/100` with four sections dated 2026-09-20 EST exempt: **if your push lands on 2026-09-21 EST or later, 100 non-exempt reaches the 100 trigger and the oldest date group rotates** into the archive with SHA enrichment on every header — read the counter and `CHANGELOG-archive.md` §"Rotation Logic" before assuming otherwise."
+
+### Added
+
+#### `scripts/check-quota.sh`
+- **Fleet execution-quota probe** on the `check-acl-health.sh` shape: discovers every project whose `doGet` dispatches `op=quota`, skips the placeholder-id projects, prints one row per deployed project (page, GAS version, date, executions, top three `byEvent` keys) and a fleet total against the 20,000/day account quota. `audit_log_disabled` / `spreadsheet_not_configured` are warnings; an empty or non-JSON body (or `audit_log_unreadable`) is a failure. Exit 0 healthy / 1 any probe unreachable / 2 nothing probed. README tree entry added
+
+#### `googleAppsScripts/*` — Classroom, Globalacl, MasterACL, Profiler, Receipts, Scraper, Testauthgas1, Testauthhtml1
+- **`quotaProbe_()` + the `op=quota` dispatch** copied verbatim from `Network.gs` into all eight (same body, same comment; the dispatch sits beside `op=deploy` — after `op=aclhealth` in Profiler and Receipts — marked `// PROJECT:` exactly as Network's). The function lives in each file's first PROJECT region (after `aclHealthProbe_` where one exists). It depends only on template globals every auth project has; no preset changes (all eight already run `ENABLE_AUDIT_LOG` on). GAS bumps: Classroom v01.86g, Globalacl v01.09g, MasterACL v01.15g, Profiler v01.40g, Receipts v01.30g, Scraper v02.21g, Testauthgas1 v01.08g, Testauthhtml1 v01.08g — one page/GAS changelog entry each
+
+### Changed
+
+#### `googleAppsScripts/Network/Network.gs`
+- `nwQuotaProbe_` renamed to `quotaProbe_` so all nine copies read identically for Q's grep (v01.03g)
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- §11 Q0 row flipped to **Done — v06.79r**
+
+#### `README.md`
+- `check-quota.sh` tree entry; nine GAS version displays; `Last updated` and `Repo version` refreshed
+
+### Notes
+
+- **No page bumps** — no HTML changed. Events is untouched (E1 inherits the op from the shared template region); no interval changed (that is Q); the probe carries no auth (counts only, never a user or a details cell — aclhealth's trust model).
+- **Verified** with `node --check` on all nine `.gs` copies (copied to `.js` in the scratchpad, since Node refuses the `.gs` extension), `scripts/check-gas-inner-scripts.js` (10 files, 96 inner blocks clean) and `scripts/check-readme-tree.py` (0 findings).
+- **The three placeholder-id projects** — Globalacl, Testauthgas1, Testauthhtml1 — never deploy, so their copies are repo-only bookkeeping and the script skips them; the deployed six plus Network answer. The first `bash scripts/check-quota.sh` table lands in the follow-up push once this merge has deployed the nine scripts.
+- **No rotation fired.** The push lands on 2026-09-20 EST: 101 sections total, five dated today exempt, 96 non-exempt → below the 100 trigger. The first push dated 2026-09-21 EST or later rotates the oldest date group (2026-09-15). CHANGELOG `Sections: 100/100` → `101/100`.
 
 ## [v06.78r] — 2026-09-20 08:53:15 PM EST
 

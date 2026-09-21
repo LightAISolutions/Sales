@@ -1,4 +1,4 @@
-var VERSION = "v01.14g";
+var VERSION = "v01.15g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -482,6 +482,57 @@ function ensureRolesTab_(ss) {
 }
 
 // ══════════════
+// quota (design plan D14): today's execution count by event type, read from
+// the SessionAuditLog tab — the counter FUTURE-CONSIDERATIONS.md describes,
+// defined once here and copied verbatim into the other eight projects by Q0
+// so the Q review reads a full month across all ten. "Today" is the EST
+// calendar day (the account's quota window is not exposed, so the local day
+// is the honest proxy). Counts only — never a user, never a details cell.
+// Unauthenticated by the same trust model as aclhealth: an execution count per
+// event name is not sensitive and the tab is the template's own audit log.
+// 60-second cache so an unauthenticated caller cannot burn Sheets quota.
+function quotaProbe_() {
+  var tz = 'America/New_York';
+  var today = Utilities.formatDate(new Date(), tz, 'yyyy-MM-dd');
+  var out = { success: true, probe: 'quota', page: ACL_PAGE_NAME, gasVersion: VERSION,
+              date: today, tz: tz, executions: 0, byEvent: {}, source: AUTH_CONFIG.AUDIT_LOG_SHEET_NAME };
+  if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
+    out.success = false; out.error = 'spreadsheet_not_configured'; return out;
+  }
+  if (!AUTH_CONFIG.ENABLE_AUDIT_LOG) { out.success = false; out.error = 'audit_log_disabled'; return out; }
+  var cache = getEpochCache();
+  var cached = cache.get('quota_probe_' + today);
+  if (cached) { try { return JSON.parse(cached); } catch (eCache) {} }
+  try {
+    var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    var sheet = ss.getSheetByName(AUTH_CONFIG.AUDIT_LOG_SHEET_NAME);
+    var last = sheet ? sheet.getLastRow() : 0;
+    if (last > 1) {
+      // Newest rows are at the bottom; walk up from the end and stop at the
+      // first row dated before today so a long log costs one bounded read.
+      var window = Math.min(last - 1, 5000);
+      var vals = sheet.getRange(last - window + 1, 1, window, 2).getValues();
+      for (var i = vals.length - 1; i >= 0; i--) {
+        var ts = vals[i][0];
+        var day = '';
+        if (ts instanceof Date) day = Utilities.formatDate(ts, tz, 'yyyy-MM-dd');
+        else if (ts) { var d = new Date(String(ts)); if (!isNaN(d.getTime())) day = Utilities.formatDate(d, tz, 'yyyy-MM-dd'); }
+        if (day !== today) { if (day && day < today) break; else continue; }
+        var ev = String(vals[i][1] || 'unknown');
+        out.byEvent[ev] = (out.byEvent[ev] || 0) + 1;
+        out.executions++;
+      }
+      if (window < last - 1) out.truncated = true;
+    }
+  } catch (e) {
+    out.success = false;
+    out.error = 'audit_log_unreadable';
+    out.detail = String((e && e.message) || e).split(SPREADSHEET_ID).join('[SHEET_ID]').slice(0, 200);
+  }
+  try { cache.put('quota_probe_' + today, JSON.stringify(out), 60); } catch (ePut) {}
+  return out;
+}
+
 // PROJECT END
 // ══════════════
 
@@ -2594,6 +2645,14 @@ function doGet(e) {
   // re-pull what GitHub already contains. Do NOT add guards, secrets, or auth here.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'deploy') {
     return ContentService.createTextOutput(pullAndDeployFromGitHub());
+  }
+  // PROJECT: unauthenticated execution counter — GET ?action=api&op=quota
+  // (design plan D14). Today's SessionAuditLog rows grouped by event; counts
+  // only, never a user or a details cell (details on quotaProbe_). This is
+  // the op Q0 copies into the other eight projects.
+  if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'quota') {
+    return ContentService.createTextOutput(JSON.stringify(quotaProbe_()))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 
   // GET API fallback for the fetch transport — Google's serving can drop POST

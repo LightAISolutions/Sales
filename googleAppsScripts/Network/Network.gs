@@ -1,4 +1,4 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -687,7 +687,7 @@ function aclHealthProbe_() {
 // Unauthenticated by the same trust model as aclhealth: an execution count per
 // event name is not sensitive and the tab is the template's own audit log.
 // 60-second cache so an unauthenticated caller cannot burn Sheets quota.
-function nwQuotaProbe_() {
+function quotaProbe_() {
   var tz = 'America/New_York';
   var today = Utilities.formatDate(new Date(), tz, 'yyyy-MM-dd');
   var out = { success: true, probe: 'quota', page: ACL_PAGE_NAME, gasVersion: VERSION,
@@ -2891,10 +2891,10 @@ function doGet(e) {
 
   // PROJECT: unauthenticated execution counter — GET ?action=api&op=quota
   // (design plan D14). Today's SessionAuditLog rows grouped by event; counts
-  // only, never a user or a details cell (details on nwQuotaProbe_). This is
+  // only, never a user or a details cell (details on quotaProbe_). This is
   // the op Q0 copies into the other eight projects.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'quota') {
-    return ContentService.createTextOutput(JSON.stringify(nwQuotaProbe_()))
+    return ContentService.createTextOutput(JSON.stringify(quotaProbe_()))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
