@@ -31,7 +31,9 @@ pair lands in the IndexedDB queue and the count reads 1 (screenshot
 network-capture-queued.png). Back online, the drain runs the same pipeline
 against the stub (nop=newid → Drive upload → nop=extract) and the extracted
 strip appears with the count back at 0 (network-capture-extracted.png) under the green
-Filed signal, with its photo link and, on a tap, its field detail (network-capture-detail.png).
+Filed signal, with its photo link and, on a tap, its field detail (network-capture-detail.png);
+the low-confidence note's Fix opens the editor, and saving clears the note, marks the field verified
+and persists the edit in IndexedDB (network-capture-edited.png).
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -113,10 +115,10 @@ def gas_stub(role, counter):
                         'extraction': {'fullName': 'Jane Doe', 'firstName': 'Jane', 'lastName': 'Doe',
                                        'title': 'Director of Grid Services', 'company': 'Acme Energy',
                                        'department': '', 'emails': [{'value': 'jane@acme.example', 'kind': 'work'}],
-                                       'phones': [], 'address': '', 'website': '', 'linkedin': '', 'socials': [],
+                                       'phones': [], 'address': '', 'website': 'acme.example', 'linkedin': '', 'socials': [],
                                        'languages': ['en'], 'rawText': 'Jane Doe',
                                        'confidence': {'fullName': 0.98, 'title': 0.9, 'company': 0.95, 'emails': 0.97,
-                                                      'phones': 0, 'address': 0, 'website': 0}}}
+                                                      'phones': 0, 'address': 0, 'website': 0.4}}}
         route.fulfill(status=200, content_type='application/json',
                       headers={'Access-Control-Allow-Origin': '*'}, body=json.dumps(body))
     return handle
@@ -189,7 +191,9 @@ def probe(page):
         progressOn: !!document.querySelector('#nw-progress.nw-on'),
         progressOk: !!document.querySelector('#nw-progress.nw-ok'),
         statusOk: !!document.querySelector('#nw-cap-status.nw-status-ok'),
-        photoLinks: document.querySelectorAll('#nw-extracted .nw-strip .nw-strip-photos a[href]').length,
+        photoLinks: document.querySelectorAll('#nw-extracted .nw-strip .nw-strip-photos a[href]:not(.nw-edit-btn)').length,
+        notes:   document.querySelectorAll('#nw-extracted .nw-strip .nw-note-check').length,
+        editor:  !!document.querySelector('#nw-extracted .nw-strip .nw-editor'),
         detailRows: document.querySelectorAll('#nw-extracted .nw-strip .nw-strip-detail dd').length,
         stored:  sessionStorage.getItem('Network_gas_user_role'),
         admitted: typeof nwAdmitted === 'function' ? nwAdmitted() : null
@@ -319,8 +323,12 @@ def run():
         extract_posts = [r for r in reqs if 'script.google.com' in r]
         if got['queued'] != '0' or got['strips'] != 1:
             failures.append('drain: expected queued=0 and one strip, got queued=%r strips=%d' % (got['queued'], got['strips']))
-        if 'Jane Doe' not in strip or 'c-0123456789abc' not in strip or 'Front photo' not in strip:
+        if 'Jane Doe' not in strip or 'Front photo' not in strip:
             failures.append('drain: strip text unexpected: %r' % strip[:120])
+        if 'c-0123456789abc' in strip or 'check:' in strip:
+            failures.append('drain: the id or the raw confidence list is shown on the strip')
+        if got['notes'] != 1 or 'Check the website' not in strip:
+            failures.append('drain: expected one low-confidence note for website, got %d' % got['notes'])
         if not (got['progressOk'] and got['statusOk']):
             failures.append('drain: expected the green Filed signal (progress=%s status=%s)' % (got['progressOk'], got['statusOk']))
         if got['photoLinks'] != 1 or got['detailRows'] < 4:
@@ -330,6 +338,25 @@ def run():
         if not page.evaluate("() => !!document.querySelector('#nw-extracted .nw-strip.nw-open')"):
             failures.append('drain: tapping the strip did not open the field detail')
         page.screenshot(path=str(SHOTS / 'network-capture-detail.png'), full_page=False)
+        # The note's Fix opens the editor on that field; saving a value marks it verified and clears the note.
+        page.click('#nw-extracted .nw-note-check button:not(.nw-note-dismiss)')
+        page.wait_for_timeout(200)
+        if not probe(page)['editor'] or page.evaluate("() => document.activeElement && document.activeElement.getAttribute('data-field')") != 'website':
+            failures.append('edit: Fix did not open the editor focused on the website field')
+        page.fill('#nw-extracted .nw-editor input[data-field="website"]', 'https://acme.example')
+        page.fill('#nw-extracted .nw-editor input[data-field="phones"]', '+1 555 0100')
+        page.click('#nw-extracted .nw-editor button[type="submit"]')
+        page.wait_for_timeout(400)
+        got = probe(page)
+        strip = page.evaluate("() => (document.querySelector('#nw-extracted .nw-strip') || {}).textContent || ''")
+        if got['notes'] != 0 or got['editor'] or 'edited' not in strip or '+1 555 0100' not in strip:
+            failures.append('edit: after save expected no note, no editor, "edited" and the new phone; got notes=%d editor=%s' % (got['notes'], got['editor']))
+        stored = page.evaluate("""() => new Promise(res => { const r = indexedDB.open('nw-capture', 1); r.onsuccess = () => {
+            const tx = r.result.transaction('pending', 'readonly'); const g = tx.objectStore('pending').getAll();
+            g.onsuccess = () => res(g.result.map(o => [o.extraction.website, o.extraction.confidence.website, o.edited])); }; })""")
+        if stored != [['https://acme.example', 1, True]]:
+            failures.append('edit: held record not updated in IndexedDB: %r' % (stored,))
+        page.screenshot(path=str(SHOTS / 'network-capture-edited.png'), full_page=False)
         if order[:1] != ['newid'] or 'upload' not in order or order.index('newid') > order.index('upload'):
             failures.append('drain: expected the id minted BEFORE the Drive upload (D8), saw %r' % order)
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]

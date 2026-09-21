@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.04w">
+  <meta name="build-version" content="v01.05w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -456,6 +456,19 @@
     .nw-strip-detail dt { font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); }
     .nw-strip-detail dd { margin: 0 0 4px; word-break: break-word; }
     .nw-strip-detail dd.nw-low { color: var(--nw-gold); }
+    .nw-notes { margin: 6px 0 2px; }
+    .nw-note-check, .nw-note-missing { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; line-height: 1.5;
+      border-radius: 8px; padding: 8px 10px; margin: 0 0 6px; }
+    .nw-note-check { background: #fbf3e3; border-left: 3px solid var(--nw-gold); color: #6b4d12; }
+    .nw-note-missing { background: #eef2f7; border-left: 3px solid var(--nw-accent); color: var(--nw-accent); }
+    .nw-note-check span, .nw-note-missing span { flex: 1 1 180px; }
+    .nw-note-btn { font: 600 12px/1 var(--nw-serif); padding: 7px 11px; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; min-height: 30px; }
+    .nw-note-dismiss { opacity: .8; }
+    .nw-edit-btn { font: 600 13px/1 var(--nw-serif); color: var(--nw-ink); border: 1px solid var(--nw-line2); border-radius: 999px; padding: 7px 12px; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; }
+    .nw-editor { margin: 8px 0 4px; padding: 10px 12px; border: 1px solid var(--nw-line2); border-radius: 8px; background: #fff; }
+    .nw-editor label { display: block; font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); margin: 0 0 6px; }
+    .nw-editor input { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); }
+    .nw-editor-actions { display: flex; gap: 8px; margin-top: 4px; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4910,13 +4923,45 @@ function nwRunBatch(files) {
   }
   next();
 }
-// The extracted-not-yet-saved strip: what was read, which fields need a
-// second look, where the photos went. Session 2 turns this into the review
-// card; until then the card is held on this device (IndexedDB) and in memory.
+// The held-card strip: what was read, a removable "check this" note for
+// every field the model was unsure of, a "missing" line for fields other
+// cards carried and this one did not, the original photos, and an inline
+// editor that writes back to the held record (IndexedDB) — an edited field
+// counts as verified (confidence 1) and its note goes away. The id and the
+// raw confidence numbers stay in the record; they are not shown.
+var NW_EDIT_FIELDS = [
+  ['fullName', 'Name'], ['title', 'Title'], ['company', 'Company'], ['department', 'Department'],
+  ['emails', 'Email(s)'], ['phones', 'Phone(s)'], ['address', 'Address'], ['website', 'Website'], ['linkedin', 'LinkedIn']
+];
+var NW_FIELD_LABEL = { fullName: 'name', title: 'title', company: 'company', emails: 'email', phones: 'phone', address: 'address', website: 'website', linkedin: 'LinkedIn', department: 'department' };
+function nwFieldText(x, f) {
+  var v = x[f];
+  if (f === 'emails') return (v || []).map(function(e) { return e.value; }).join(', ');
+  if (f === 'phones') return (v || []).map(function(p) { return p.number; }).join(', ');
+  return v || '';
+}
+function nwFieldHas(x, f) { return !!nwFieldText(x, f); }
+// Fields empty on this card that at least one other held card carries —
+// the cue that this card is missing something the stack usually prints.
+function nwMissingFields(rec) {
+  var out = [];
+  for (var i = 0; i < NW_EDIT_FIELDS.length; i++) {
+    var f = NW_EDIT_FIELDS[i][0];
+    if (f === 'department' || nwFieldHas(rec.extraction || {}, f)) continue;
+    for (var j = 0; j < _nwPending.length; j++) {
+      if (_nwPending[j].id !== rec.id && nwFieldHas(_nwPending[j].extraction || {}, f)) { out.push(f); break; }
+    }
+  }
+  return out;
+}
+function nwPendingSave(rec) {
+  for (var i = 0; i < _nwPending.length; i++) if (_nwPending[i].id === rec.id) _nwPending[i] = rec;
+  return nwPendingPut(rec).catch(function() {});
+}
 function nwRenderStrip(rec) {
   var box = document.getElementById('nw-extracted');
   if (!box) return;
-  var x = rec.extraction || {}, conf = x.confidence || {};
+  var x = rec.extraction || {}, conf = x.confidence || {}, dismissed = rec.dismissed || {};
   var strip = nwEl('div', 'nw-strip');
   strip.setAttribute('data-id', rec.id);
   var head = nwEl('div', 'nw-strip-head');
@@ -4924,6 +4969,34 @@ function nwRenderStrip(rec) {
   head.appendChild(nwEl('div', 'nw-strip-sub', [x.title, x.company].filter(Boolean).join(' · ') || '—'));
   head.addEventListener('click', function() { strip.classList.toggle('nw-open'); });
   strip.appendChild(head);
+  // Removable notes — one per field the model read but was not sure of.
+  var notes = nwEl('div', 'nw-notes');
+  NW_CONFIDENCE_FIELDS.forEach(function(f) {
+    if (dismissed[f] || !nwFieldHas(x, f) || Number(conf[f] || 0) >= NW_CONFIDENCE_FLOOR) return;
+    var n = nwEl('div', 'nw-note-check');
+    n.setAttribute('data-field', f);
+    n.appendChild(nwEl('span', null, 'Check the ' + NW_FIELD_LABEL[f] + ' against the card — it was read with low confidence.'));
+    var edit = nwEl('button', 'nw-note-btn', 'Fix'); edit.type = 'button';
+    edit.addEventListener('click', function() { nwEditCard(rec, f); });
+    var ok = nwEl('button', 'nw-note-btn nw-note-dismiss', 'Looks right'); ok.type = 'button';
+    ok.addEventListener('click', function() {
+      rec.dismissed = rec.dismissed || {}; rec.dismissed[f] = true;
+      if (rec.extraction && rec.extraction.confidence) rec.extraction.confidence[f] = 1;
+      nwPendingSave(rec).then(function() { nwRenderStrip(rec); });
+    });
+    n.appendChild(edit); n.appendChild(ok);
+    notes.appendChild(n);
+  });
+  var missing = nwMissingFields(rec);
+  if (missing.length) {
+    var m = nwEl('div', 'nw-note-missing');
+    m.appendChild(nwEl('span', null, 'Missing: ' + missing.map(function(f) { return NW_FIELD_LABEL[f]; }).join(', ') + ' — other cards had these.'));
+    var add = nwEl('button', 'nw-note-btn', 'Add'); add.type = 'button';
+    add.addEventListener('click', function() { nwEditCard(rec, missing[0]); });
+    m.appendChild(add);
+    notes.appendChild(m);
+  }
+  if (notes.childNodes.length) strip.appendChild(notes);
   // The original photos — the Drive links the upload returned, opened in
   // the Drive viewer where the signed-in account owns the files.
   var photos = nwEl('div', 'nw-strip-photos');
@@ -4933,26 +5006,20 @@ function nwRenderStrip(rec) {
   if (rec.frontLink) photos.appendChild(photoLink('Front photo', rec.frontLink));
   if (rec.backLink) photos.appendChild(photoLink('Back photo', rec.backLink));
   if (!rec.frontLink && !rec.backLink) photos.appendChild(nwEl('span', null, rec.driveError ? 'photos not filed — retried on save' : 'no photos'));
+  var editBtn = nwEl('a', 'nw-edit-btn', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
+  editBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwEditCard(rec, null); });
+  photos.appendChild(editBtn);
   strip.appendChild(photos);
-  var low = [];
-  for (var i = 0; i < NW_CONFIDENCE_FIELDS.length; i++) {
-    if (Number(conf[NW_CONFIDENCE_FIELDS[i]] || 0) < NW_CONFIDENCE_FLOOR) low.push(NW_CONFIDENCE_FIELDS[i]);
-  }
   var meta = nwEl('div', 'nw-strip-meta');
-  meta.appendChild(document.createTextNode(rec.id + ' · ' + (rec.sides === 2 ? 'two sides' : 'one side') + (rec.viaQr ? ' · from QR' : '') + ' · Drive '));
-  meta.appendChild(nwEl('span', rec.driveError ? 'nw-bad' : null, rec.driveError ? 'not filed' : 'filed'));
-  if (low.length) {
-    meta.appendChild(document.createTextNode(' · '));
-    meta.appendChild(nwEl('span', 'nw-low', 'check: ' + low.join(', ')));
-  }
+  meta.appendChild(document.createTextNode((rec.sides === 2 ? 'two sides' : 'one side') + (rec.viaQr ? ' · from QR' : '') + (rec.edited ? ' · edited' : '') + ' · '));
+  meta.appendChild(nwEl('span', rec.driveError ? 'nw-bad' : null, rec.driveError ? 'photos not filed' : 'held on this phone'));
   strip.appendChild(meta);
-  // Tap the name to see every field that was read (view only — editing and
-  // saving are the review card, next release).
+  // Tap the name to see every field that was read (the editor changes them).
   var dl = nwEl('dl', 'nw-strip-detail');
   function row(label, value, key) {
     if (!value) return;
     dl.appendChild(nwEl('dt', null, label));
-    dl.appendChild(nwEl('dd', (key && Number(conf[key] || 0) < NW_CONFIDENCE_FLOOR) ? 'nw-low' : null, value));
+    dl.appendChild(nwEl('dd', (key && !dismissed[key] && Number(conf[key] || 0) < NW_CONFIDENCE_FLOOR) ? 'nw-low' : null, value));
   }
   row('Name', x.fullName, 'fullName'); row('Title', x.title, 'title'); row('Company', x.company, 'company');
   row('Department', x.department);
@@ -4964,7 +5031,66 @@ function nwRenderStrip(rec) {
   strip.appendChild(dl);
   var empty = box.querySelector('.nw-empty');
   if (empty) empty.remove();
-  box.insertBefore(strip, box.firstChild);
+  var prev = box.querySelector('.nw-strip[data-id="' + rec.id + '"]');
+  if (prev) { if (prev.classList.contains('nw-open')) strip.classList.add('nw-open'); box.replaceChild(strip, prev); }
+  else box.insertBefore(strip, box.firstChild);
+}
+// Inline editor on the held card. Emails and phones are comma-separated
+// text; kinds already read are kept for values that survive the edit,
+// new values default to work / other. Every edited field becomes
+// confidence 1 and its check note is cleared. Nothing leaves the phone —
+// saving to the spreadsheet is the next release.
+function nwEditCard(rec, focusField) {
+  var box = document.getElementById('nw-extracted');
+  var strip = box && box.querySelector('.nw-strip[data-id="' + rec.id + '"]');
+  if (!strip || strip.querySelector('.nw-editor')) return;
+  var x = rec.extraction || {};
+  var form = nwEl('form', 'nw-editor');
+  var inputs = {};
+  NW_EDIT_FIELDS.forEach(function(pair) {
+    var f = pair[0], label = nwEl('label', null, pair[1]);
+    var inp = document.createElement('input');
+    inp.type = 'text'; inp.value = nwFieldText(x, f); inp.setAttribute('data-field', f);
+    inp.autocomplete = 'off'; inp.autocapitalize = (f === 'emails' || f === 'website' || f === 'linkedin') ? 'none' : 'words';
+    if (f === 'emails') inp.inputMode = 'email'; if (f === 'phones') inp.inputMode = 'tel'; if (f === 'website' || f === 'linkedin') inp.inputMode = 'url';
+    if (f === 'emails' || f === 'phones') inp.placeholder = 'comma-separated';
+    label.appendChild(inp); form.appendChild(label); inputs[f] = inp;
+  });
+  var actions = nwEl('div', 'nw-editor-actions');
+  var save = nwEl('button', 'nw-btn nw-btn-primary', 'Save changes'); save.type = 'submit';
+  var cancel = nwEl('button', 'nw-btn nw-btn-quiet', 'Cancel'); cancel.type = 'button';
+  cancel.addEventListener('click', function() { form.remove(); });
+  actions.appendChild(save); actions.appendChild(cancel);
+  form.appendChild(actions);
+  form.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    var nx = x, changed = false;
+    nx.confidence = nx.confidence || {};
+    NW_EDIT_FIELDS.forEach(function(pair) {
+      var f = pair[0], v = inputs[f].value.trim();
+      if (v === nwFieldText(x, f)) return;
+      changed = true;
+      if (f === 'emails' || f === 'phones') {
+        var old = x[f] || [], kinds = {};
+        old.forEach(function(o) { kinds[(f === 'emails' ? o.value : o.number)] = o.kind; });
+        nx[f] = v.split(',').map(function(s) { return s.trim(); }).filter(Boolean).map(function(s) {
+          return f === 'emails' ? { value: s.toLowerCase(), kind: kinds[s.toLowerCase()] || 'work' } : { number: s, kind: kinds[s] || 'other' };
+        });
+      } else nx[f] = v;
+      if (NW_CONFIDENCE_FIELDS.indexOf(f) >= 0) nx.confidence[f] = 1;
+      if (rec.dismissed) delete rec.dismissed[f];
+    });
+    rec.extraction = nx;
+    if (changed) rec.edited = true;
+    nwPendingSave(rec).then(function() {
+      nwRenderStrip(rec);
+      // A field added here may have been "missing" on other cards' terms too — repaint them.
+      _nwPending.forEach(function(o) { if (o.id !== rec.id) nwRenderStrip(o); });
+    });
+  });
+  strip.insertBefore(form, strip.querySelector('.nw-strip-meta'));
+  var target = focusField && inputs[focusField] ? inputs[focusField] : inputs.fullName;
+  try { target.focus(); } catch (e) {}
 }
 function nwCaptureMount(app) {
   if (document.getElementById('nw-capture')) return;
@@ -5031,7 +5157,7 @@ function nwCaptureMount(app) {
   queue.appendChild(drain);
   card.appendChild(queue);
   var box = nwEl('div'); box.id = 'nw-extracted';
-  var none = nwEl('div', 'nw-empty', 'Cards you read are held here — tap a name for the fields, or open its photos. Review and save arrive in the next release.');
+  var none = nwEl('div', 'nw-empty', 'Cards you read are held here — tap a name for the fields, Edit to correct them, or open the photos. Saving to Contacts arrives in the next release.');
   box.appendChild(none);
   card.appendChild(box);
   app.appendChild(card);

@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05w] — 2026-09-21 03:30:03 AM EST — v06.84r
+
+### Added
+- **A note you can clear** for each detail the card reader was unsure of — “Check the website against the card”. Tap **Fix** to correct it or **Looks right** to dismiss it; a dismissed note stays dismissed
+- **Missing details are pointed out** — when other cards you have scanned had a field (say, a website) and this one does not, the card says so with an **Add** button
+- **Edit any card you have read** — name, title, company, department, emails, phones, address, website and LinkedIn, right on the card; corrected details are kept on the phone and count as verified
+
+### Changed
+- The technical identifier and the confidence list are no longer shown under a card
 
 ## [v01.04w] — 2026-09-21 03:17:50 AM EST — v06.83r
 

@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 79/100`
+`Sections: 80/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.84r] — 2026-09-21 03:30:03 AM EST
+
+> **Prompt:** "Hide each contact's identifier and the low-confidence list either. Instead, give me a removeable note that asks me to check a low-confidence source and an option to edit the contacts after they are saved. That way, I can manually add the low-confidence information and remove the reminder. If one card didn't successfully extract a field (ie: website) that other cards did, I want to see that this contact is missing that information field, so I can try to make it up."
+
+### Added
+
+#### `live-site-pages/Network.html` — v01.05w
+- **Removable "check" notes** on a held card: one per field the model read with confidence below `NW_CONFIDENCE_FLOOR` ("Check the website against the card — it was read with low confidence"), each with **Fix** (opens the editor on that field) and **Looks right** (dismisses it — `rec.dismissed[field]`, confidence set to 1, persisted to the IndexedDB `pending` record so it stays gone after a reload)
+- **"Missing: …" line** (`nwMissingFields`): fields empty on this card that at least one other held card carries, with **Add** opening the editor on the first of them; repainted for every held card after any edit, since an added field changes what counts as usual for the stack
+- **Inline editor** (`nwEditCard`, `NW_EDIT_FIELDS`): name, title, company, department, emails, phones, address, website, LinkedIn on every held card (✎ Edit, or from a note); emails and phones as comma-separated text keeping the kinds already read; an edited field becomes confidence 1 and its note clears; the record is written back to IndexedDB (`nwPendingSave`) and flagged `edited`. Nothing leaves the phone — the same form becomes session 2's review card ahead of `nop=save`
+
+### Changed
+
+#### `live-site-pages/Network.html` — v01.05w
+- The strip no longer shows the `c-` id or the raw `check:` list (both stay in the record); the meta line reads sides · from QR · edited · held on this phone; `nwRenderStrip` replaces an existing strip in place, keeping its open state
+
+#### `scripts/verify-network-roles.py`
+- The stub now returns a low-confidence website; the drain scenario asserts no id and no `check:` on the strip, exactly one check note, Fix focusing the website input, and after a save no note, no editor, the "edited" flag, the new phone on the strip and the updated record in IndexedDB (`network-capture-edited.png`)
+
+### Notes
+- Prompted after the first live card showed `c-09zfk101vmaah · check: website` under the name. Still 2026-09-21 EST — 80 sections, two exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 79/100` → `80/100`
+- Editing a held card is session 2's step 6 pulled forward at the developer's request; dedupe, company resolution and `nop=save` (steps 7–9) remain session 2's
 
 ## [v06.83r] — 2026-09-21 03:17:50 AM EST
 
