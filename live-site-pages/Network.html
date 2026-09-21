@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.06w">
+  <meta name="build-version" content="v01.07w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -410,7 +410,12 @@
     .nw-thumb span { font: 11px/1.4 var(--nw-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--nw-faint); }
     .nw-thumb.nw-thumb-set { border-style: solid; border-color: var(--nw-accent); }
     .nw-thumb.nw-thumb-set span { position: absolute; left: 6px; bottom: 5px; background: rgba(35,32,27,.72); color: #fff; padding: 2px 6px; border-radius: 4px; }
-    .nw-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+    .nw-toprow { display: flex; align-items: center; gap: 10px; margin: 2px 0 10px; }
+    .nw-toprow .nw-seg { margin: 0; flex: 0 0 auto; }
+    .nw-toprow .nw-btn { flex: 1 1 auto; }
+    .nw-actions { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; margin: 0 0 10px; }
+    .nw-actions .nw-seg { margin: 0; flex: 0 0 auto; }
+    .nw-actions .nw-seg button { padding: 9px 12px; }
     .nw-btn { font: 600 14px/1 var(--nw-serif); padding: 11px 16px; border-radius: 8px; border: 1px solid var(--nw-line2);
       background: var(--nw-card); color: var(--nw-ink); cursor: pointer; flex: 1 1 auto; min-height: 44px; }
     .nw-btn:disabled { opacity: .45; cursor: default; }
@@ -457,14 +462,14 @@
     .nw-strip-detail dd { margin: 0 0 4px; word-break: break-word; }
     .nw-strip-detail dd.nw-low { color: var(--nw-gold); }
     .nw-notes { margin: 6px 0 2px; }
-    .nw-note-check, .nw-note-missing { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; line-height: 1.5;
+    .nw-note-check { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; line-height: 1.5;
       border-radius: 8px; padding: 8px 10px; margin: 0 0 6px; }
     .nw-note-check { background: #fbf3e3; border-left: 3px solid var(--nw-gold); color: #6b4d12; }
-    .nw-note-missing { background: #eef2f7; border-left: 3px solid var(--nw-accent); color: var(--nw-accent); }
-    .nw-note-check span, .nw-note-missing span { flex: 1 1 180px; }
+    .nw-note-check span { flex: 1 1 100%; }
     .nw-note-btn { font: 600 12px/1 var(--nw-serif); padding: 7px 11px; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; min-height: 30px; }
     .nw-note-dismiss { opacity: .8; }
     .nw-strip-photos a.nw-edit-btn { color: var(--nw-ink); }
+    .nw-strip-photos a.nw-del-btn { color: var(--nw-dis); }
     .nw-editor { margin: 8px 0 4px; padding: 10px 12px; border: 1px solid var(--nw-line2); border-radius: 8px; background: #fff; }
     .nw-editor label { display: block; font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); margin: 0 0 6px; }
     .nw-editor input { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); }
@@ -4442,6 +4447,13 @@ var _nwFolders = null;        // { root, inbox, accounts } — from the list pay
 var _nwDriveToken = null;     // the user's drive.file access token, in memory only
 var _nwPair = { front: null, back: null, qr: null };   // the staged pair (base64, no data: prefix)
 var _nwSide = 'front';
+var _nwBatchSides = 1;        // 1 or 2 — how a chosen batch is grouped
+function nwSetBatchSides(n) {
+  _nwBatchSides = n === 2 ? 2 : 1;
+  var a = document.getElementById('nw-sides-one'), b = document.getElementById('nw-sides-two');
+  if (a) a.setAttribute('aria-pressed', _nwBatchSides === 1 ? 'true' : 'false');
+  if (b) b.setAttribute('aria-pressed', _nwBatchSides === 2 ? 'true' : 'false');
+}
 var _nwBusy = false;
 var _nwDraining = false;
 var _nwLastExtractAt = 0;
@@ -4624,7 +4636,7 @@ function nwDriveFetch(tok, url, opts) {
   return fetch(url, opts).then(function(resp) {
     if (resp.status === 401) { _nwDriveToken = null; throw new Error('drive_auth'); }
     if (!resp.ok) throw new Error('drive_http_' + resp.status);
-    return resp.json();
+    return resp.status === 204 ? {} : resp.json();
   });
 }
 function nwDriveCreateFolder(tok, name, parentId) {
@@ -4729,6 +4741,7 @@ function nwProcessPair(pair, onStatus) {
       }
       return extractP.then(function(res) {
         if (!(res && res.success)) throw new Error((res && res.error) || 'extract_failed');
+        nwTidyNames(res.extraction);
         var rec = { id: cid, extraction: res.extraction, viaQr: !!res.viaQr, sides: pair.back ? 2 : 1,
           frontLink: (up.front && up.front.link) || '', backLink: (up.back && up.back.link) || '',
           driveError: up.error || '', createdAt: new Date().toISOString() };
@@ -4891,17 +4904,26 @@ function nwExtractStaged() {
   nwSetBusy(true);
   nwProgressSet(1, '', 'This card');
   nwProcessPair(pair, nwCaptureStatus)
-    .then(function(rec) { nwPairReset(); nwSetBusy(false); if (rec && !rec.queued && !rec.driveError) nwCaptureDone(); })
+    .then(function(rec) {
+      nwPairReset(); nwSetBusy(false);
+      if (!rec || rec.queued || rec.driveError) return;
+      var unclear = nwUnclearFields(rec);
+      if (unclear.length) nwCaptureStatus('Filed, but the ' + unclear.map(function(f) { return NW_FIELD_LABEL[f]; }).join(', ') + ' looked unclear in the scan — rescan the card or enter it by hand (see the note below). Or go on to the next card.', 'warn', NW_PROGRESS_STEPS.length);
+      else nwCaptureDone();
+    })
     .catch(function(e) { nwSetBusy(false); nwCaptureStatus('Could not read the card (' + nwErrText(String((e && e.message) || e)) + ')', 'err'); });
 }
 // A batch: each file is its own single-sided card, processed one at a time
 // (compress → pipeline), spaced by NW_EXTRACT_SPACING_MS inside the pipeline.
 function nwRunBatch(files) {
   if (_nwBusy) { nwCaptureStatus('Finish the current card first.', 'warn'); return; }
-  if (files.length > NW_MAX_BATCH) {
-    nwCaptureStatus('Up to ' + NW_MAX_BATCH + ' photos per batch — taking the first ' + NW_MAX_BATCH + '.', 'warn');
-    files = files.slice(0, NW_MAX_BATCH);
+  var per = _nwBatchSides, cards = [];
+  for (var k = 0; k < files.length; k += per) cards.push({ front: files[k], back: per === 2 ? (files[k + 1] || null) : null });
+  if (cards.length > NW_MAX_BATCH) {
+    nwCaptureStatus('Up to ' + NW_MAX_BATCH + ' cards per batch — taking the first ' + NW_MAX_BATCH + '.', 'warn');
+    cards = cards.slice(0, NW_MAX_BATCH);
   }
+  files = cards;
   nwSetBusy(true);
   var i = 0, done = 0, failed = 0, queued = 0;
   function next() {
@@ -4912,12 +4934,14 @@ function nwRunBatch(files) {
       nwProgressSet(NW_PROGRESS_STEPS.length, failed ? 'warn' : 'ok', 'Batch: ' + files.length + ' of ' + files.length);
       return;
     }
-    var file = files[i++];
+    var card = files[i++];
     var label = 'Card ' + i + ' of ' + files.length + ': ';
-    nwProgressSet(1, '', 'Batch: card ' + i + ' of ' + files.length);
+    nwProgressSet(1, '', 'Batch: card ' + i + ' of ' + files.length + (per === 2 ? ' (two-sided)' : ''));
     nwCaptureStatus(label + 'preparing…', '', 1);
-    Promise.all([nwCompressImage(file), nwQrDecode(file)]).then(function(r) {
-      return nwProcessPair({ front: r[0], back: null, qr: nwParseQr(r[1]) }, function(t, lv, st) { nwCaptureStatus(label + t, lv, st); });
+    var backP = card.back ? Promise.all([nwCompressImage(card.back), nwQrDecode(card.back)]) : Promise.resolve([null, null]);
+    Promise.all([nwCompressImage(card.front), nwQrDecode(card.front), backP]).then(function(r) {
+      var q = nwParseQr(r[1]) || nwParseQr(r[2][1]);
+      return nwProcessPair({ front: r[0], back: r[2][0], qr: q }, function(t, lv, st) { nwCaptureStatus(label + t, lv, st); });
     }).then(function(res) { if (res && res.queued) queued++; else done++; next(); })
       .catch(function() { failed++; next(); });
   }
@@ -4941,18 +4965,53 @@ function nwFieldText(x, f) {
   return v || '';
 }
 function nwFieldHas(x, f) { return !!nwFieldText(x, f); }
-// Fields empty on this card that at least one other held card carries —
-// the cue that this card is missing something the stack usually prints.
-function nwMissingFields(rec) {
-  var out = [];
-  for (var i = 0; i < NW_EDIT_FIELDS.length; i++) {
-    var f = NW_EDIT_FIELDS[i][0];
-    if (f === 'department' || nwFieldHas(rec.extraction || {}, f)) continue;
-    for (var j = 0; j < _nwPending.length; j++) {
-      if (_nwPending[j].id !== rec.id && nwFieldHas(_nwPending[j].extraction || {}, f)) { out.push(f); break; }
-    }
+// Fields the model read but was not sure of (below the floor), not yet
+// accepted by the user.
+function nwUnclearFields(rec) {
+  var x = rec.extraction || {}, conf = x.confidence || {}, dismissed = rec.dismissed || {};
+  return NW_CONFIDENCE_FIELDS.filter(function(f) {
+    return !dismissed[f] && nwFieldHas(x, f) && Number(conf[f] || 0) < NW_CONFIDENCE_FLOOR;
+  });
+}
+// "austin york" → "Austin York": the first letter of every word (and of
+// each part after a hyphen or apostrophe) is upper-cased; nothing else is
+// touched, so "McDonald", "PhD" and a native script in parentheses survive.
+function nwCapName(s) {
+  return String(s || '').replace(/(^|[\s\-'’])([a-z\u00e0-\u00ff])/g, function(m, pre, ch) { return pre + ch.toUpperCase(); });
+}
+function nwTidyNames(x) {
+  if (!x) return false;
+  var changed = false;
+  ['fullName', 'firstName', 'lastName'].forEach(function(f) {
+    var v = nwCapName(x[f]);
+    if (v !== (x[f] || '')) { x[f] = v; changed = true; }
+  });
+  return changed;
+}
+function nwPendingDelete(id) { return nwIdb('pending', 'readwrite', function(os) { return os.delete(id); }).catch(function() {}); }
+// Drive file id from the webViewLink the upload returned.
+function nwDriveIdFromLink(link) { var m = /\/d\/([A-Za-z0-9_-]{10,})/.exec(String(link || '')); return m ? m[1] : ''; }
+// Remove a held card: its record here and, best-effort, its photos in the
+// user's Drive (created by this app, so the drive.file token may delete them).
+function nwDeleteCard(rec, quiet) {
+  if (!quiet && !window.confirm('Delete this card and its photos? This cannot be undone.')) return Promise.resolve(false);
+  _nwPending = _nwPending.filter(function(o) { return o.id !== rec.id; });
+  var box = document.getElementById('nw-extracted');
+  var strip = box && box.querySelector('.nw-strip[data-id="' + rec.id + '"]');
+  if (strip) strip.remove();
+  if (box && !box.querySelector('.nw-strip') && !box.querySelector('.nw-empty')) {
+    box.appendChild(nwEl('div', 'nw-empty', 'Cards you read are held here — tap a name for the fields, Edit to correct them, or open the photos. Saving to Contacts arrives in the next release.'));
   }
-  return out;
+  var ids = [nwDriveIdFromLink(rec.frontLink), nwDriveIdFromLink(rec.backLink)].filter(Boolean);
+  if (ids.length) {
+    nwDriveToken(function(tok) {
+      if (!tok) return;
+      ids.forEach(function(id) {
+        nwDriveFetch(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(id), { method: 'DELETE' }).catch(function() {});
+      });
+    });
+  }
+  return nwPendingDelete(rec.id).then(function() { return true; });
 }
 function nwPendingSave(rec) {
   for (var i = 0; i < _nwPending.length; i++) if (_nwPending[i].id === rec.id) _nwPending[i] = rec;
@@ -4969,14 +5028,25 @@ function nwRenderStrip(rec) {
   head.appendChild(nwEl('div', 'nw-strip-sub', [x.title, x.company].filter(Boolean).join(' · ') || '—'));
   head.addEventListener('click', function() { strip.classList.toggle('nw-open'); });
   strip.appendChild(head);
-  // Removable notes — one per field the model read but was not sure of.
+  // The "unclear in the scan" notification — one per field the model read
+  // but was not sure of: rescan the card, enter the field by hand, or accept
+  // it. No "missing field" cues: cards vary too much for absence to mean
+  // anything.
   var notes = nwEl('div', 'nw-notes');
-  NW_CONFIDENCE_FIELDS.forEach(function(f) {
-    if (dismissed[f] || !nwFieldHas(x, f) || Number(conf[f] || 0) >= NW_CONFIDENCE_FLOOR) return;
+  nwUnclearFields(rec).forEach(function(f) {
     var n = nwEl('div', 'nw-note-check');
     n.setAttribute('data-field', f);
-    n.appendChild(nwEl('span', null, 'Check the ' + NW_FIELD_LABEL[f] + ' against the card — it was read with low confidence.'));
-    var edit = nwEl('button', 'nw-note-btn', 'Fix'); edit.type = 'button';
+    n.appendChild(nwEl('span', null, 'The ' + NW_FIELD_LABEL[f] + ' looked unclear in the scan. Rescan the card, or enter it by hand.'));
+    var rescan = nwEl('button', 'nw-note-btn nw-note-rescan', 'Rescan'); rescan.type = 'button';
+    rescan.addEventListener('click', function() {
+      if (_nwBusy || !window.confirm('Rescan this card? The held reading and its photos are removed; photograph the front again.')) return;
+      nwDeleteCard(rec, true).then(function() {
+        nwPairReset(); nwSetSide('front'); nwProgressSet(0);
+        nwCaptureStatus('Photograph the front of the card again.');
+        var inp = document.getElementById('nw-cap-input'); if (inp) inp.click();
+      });
+    });
+    var edit = nwEl('button', 'nw-note-btn nw-note-fix', 'Enter manually'); edit.type = 'button';
     edit.addEventListener('click', function() { nwEditCard(rec, f); });
     var ok = nwEl('button', 'nw-note-btn nw-note-dismiss', 'Looks right'); ok.type = 'button';
     ok.addEventListener('click', function() {
@@ -4984,18 +5054,9 @@ function nwRenderStrip(rec) {
       if (rec.extraction && rec.extraction.confidence) rec.extraction.confidence[f] = 1;
       nwPendingSave(rec).then(function() { nwRenderStrip(rec); });
     });
-    n.appendChild(edit); n.appendChild(ok);
+    n.appendChild(rescan); n.appendChild(edit); n.appendChild(ok);
     notes.appendChild(n);
   });
-  var missing = nwMissingFields(rec);
-  if (missing.length) {
-    var m = nwEl('div', 'nw-note-missing');
-    m.appendChild(nwEl('span', null, 'Missing: ' + missing.map(function(f) { return NW_FIELD_LABEL[f]; }).join(', ') + ' — other cards had these.'));
-    var add = nwEl('button', 'nw-note-btn', 'Add'); add.type = 'button';
-    add.addEventListener('click', function() { nwEditCard(rec, missing[0]); });
-    m.appendChild(add);
-    notes.appendChild(m);
-  }
   if (notes.childNodes.length) strip.appendChild(notes);
   // The original photos — the Drive links the upload returned, opened in
   // the Drive viewer where the signed-in account owns the files.
@@ -5009,6 +5070,9 @@ function nwRenderStrip(rec) {
   var editBtn = nwEl('a', 'nw-edit-btn', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
   editBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwEditCard(rec, null); });
   photos.appendChild(editBtn);
+  var delBtn = nwEl('a', 'nw-edit-btn nw-del-btn', '🗑 Delete'); delBtn.href = '#'; delBtn.setAttribute('role', 'button');
+  delBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwDeleteCard(rec, false); });
+  photos.appendChild(delBtn);
   strip.appendChild(photos);
   var meta = nwEl('div', 'nw-strip-meta');
   // The Front / Back pills already say how many sides there are.
@@ -5077,7 +5141,7 @@ function nwEditCard(rec, focusField) {
         nx[f] = v.split(',').map(function(s) { return s.trim(); }).filter(Boolean).map(function(s) {
           return f === 'emails' ? { value: s.toLowerCase(), kind: kinds[s.toLowerCase()] || 'work' } : { number: s, kind: kinds[s] || 'other' };
         });
-      } else nx[f] = v;
+      } else nx[f] = (f === 'fullName') ? nwCapName(v) : v;
       if (NW_CONFIDENCE_FIELDS.indexOf(f) >= 0) nx.confidence[f] = 1;
       if (rec.dismissed) delete rec.dismissed[f];
     });
@@ -5085,8 +5149,6 @@ function nwEditCard(rec, focusField) {
     if (changed) rec.edited = true;
     nwPendingSave(rec).then(function() {
       nwRenderStrip(rec);
-      // A field added here may have been "missing" on other cards' terms too — repaint them.
-      _nwPending.forEach(function(o) { if (o.id !== rec.id) nwRenderStrip(o); });
     });
   });
   strip.insertBefore(form, strip.querySelector('.nw-strip-meta'));
@@ -5104,7 +5166,11 @@ function nwCaptureMount(app) {
   bf.addEventListener('click', function() { nwSetSide('front'); });
   bb.addEventListener('click', function() { nwSetSide('back'); });
   seg.appendChild(bf); seg.appendChild(bb);
-  card.appendChild(seg);
+  var top = nwEl('div', 'nw-toprow');
+  top.appendChild(seg);
+  var capBtn = nwEl('button', 'nw-btn nw-btn-primary', '📷 Scan'); capBtn.id = 'nw-cap-btn'; capBtn.type = 'button';
+  top.appendChild(capBtn);
+  card.appendChild(top);
   var thumbs = nwEl('div', 'nw-thumbs');
   var tf = nwEl('div', 'nw-thumb'); tf.id = 'nw-thumb-front'; tf.appendChild(nwEl('span', null, 'front'));
   var tb = nwEl('div', 'nw-thumb'); tb.id = 'nw-thumb-back'; tb.appendChild(nwEl('span', null, 'back'));
@@ -5117,16 +5183,26 @@ function nwCaptureMount(app) {
   batchInput.type = 'file'; batchInput.id = 'nw-batch-input'; batchInput.accept = 'image/*'; batchInput.multiple = true; batchInput.style.display = 'none';
   card.appendChild(capInput); card.appendChild(batchInput);
   var actions = nwEl('div', 'nw-actions');
-  var capBtn = nwEl('button', 'nw-btn nw-btn-primary', '📷 Photograph'); capBtn.id = 'nw-cap-btn'; capBtn.type = 'button';
-  var batchBtn = nwEl('button', 'nw-btn', '🖼 Choose up to ' + NW_MAX_BATCH); batchBtn.id = 'nw-batch-btn'; batchBtn.type = 'button';
+  // Batch sides — in a two-sided batch consecutive photos are paired
+  // (front, back, front, back …); an odd last photo is a front on its own.
+  var sides = nwEl('div', 'nw-seg'); sides.id = 'nw-sides'; sides.setAttribute('role', 'group'); sides.setAttribute('aria-label', 'Sides per card in a batch');
+  var s1 = nwEl('button', null, 'One-sided'); s1.id = 'nw-sides-one'; s1.type = 'button'; s1.setAttribute('aria-pressed', 'true');
+  var s2 = nwEl('button', null, 'Two-sided'); s2.id = 'nw-sides-two'; s2.type = 'button'; s2.setAttribute('aria-pressed', 'false');
+  s1.addEventListener('click', function() { nwSetBatchSides(1); });
+  s2.addEventListener('click', function() { nwSetBatchSides(2); });
+  sides.appendChild(s1); sides.appendChild(s2);
+  actions.appendChild(sides);
+  var batchBtn = nwEl('button', 'nw-btn', '🖼 Choose photos'); batchBtn.title = 'Up to ' + NW_MAX_BATCH + ' cards per batch'; batchBtn.id = 'nw-batch-btn'; batchBtn.type = 'button';
   var exBtn = nwEl('button', 'nw-btn', 'Extract'); exBtn.id = 'nw-extract-btn'; exBtn.type = 'button'; exBtn.disabled = true;
   var clrBtn = nwEl('button', 'nw-btn nw-btn-quiet', 'Clear'); clrBtn.id = 'nw-clear-btn'; clrBtn.type = 'button';
   capBtn.addEventListener('click', function() { if (!_nwBusy) capInput.click(); });
   batchBtn.addEventListener('click', function() { if (!_nwBusy) batchInput.click(); });
   exBtn.addEventListener('click', nwExtractStaged);
   clrBtn.addEventListener('click', function() { if (!_nwBusy) { nwPairReset(); nwCaptureStatus(''); nwProgressSet(0); } });
-  actions.appendChild(capBtn); actions.appendChild(batchBtn); actions.appendChild(exBtn); actions.appendChild(clrBtn);
-  card.appendChild(actions);
+  actions.appendChild(batchBtn);
+  var actions2 = nwEl('div', 'nw-actions');
+  actions2.appendChild(exBtn); actions2.appendChild(clrBtn);
+  card.appendChild(actions); card.appendChild(actions2);
   var prog = nwEl('div', 'nw-progress'); prog.id = 'nw-progress';
   var progTitle = nwEl('div', 'nw-progress-title'); progTitle.id = 'nw-progress-title'; prog.appendChild(progTitle);
   var progBar = nwEl('div', 'nw-progress-bar'); progBar.appendChild(document.createElement('i')); prog.appendChild(progBar);
@@ -5165,7 +5241,10 @@ function nwCaptureMount(app) {
   nwQueueRefresh();
   nwPendingAll().then(function(items) {
     items.sort(function(a, b) { return String(a.createdAt || '').localeCompare(String(b.createdAt || '')); });
-    items.forEach(function(rec) { _nwPending.push(rec); nwRenderStrip(rec); });
+    items.forEach(function(rec) {
+      if (nwTidyNames(rec.extraction)) nwPendingPut(rec).catch(function() {});
+      _nwPending.push(rec); nwRenderStrip(rec);
+    });
   }).catch(function() {});
   if (navigator.onLine !== false) setTimeout(nwQueueDrain, 1500);
 }

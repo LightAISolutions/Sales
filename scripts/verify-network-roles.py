@@ -112,7 +112,7 @@ def gas_stub(role, counter):
                 # body-POST only: the images travel in the form body, not the URL
                 assert 'front=' in post and 'contactId=c-0123456789abc' in post
                 body = {'success': True, 'contactId': 'c-0123456789abc', 'model': 'stub',
-                        'extraction': {'fullName': 'Jane Doe', 'firstName': 'Jane', 'lastName': 'Doe',
+                        'extraction': {'fullName': 'jane o’doe-smith', 'firstName': 'jane', 'lastName': 'o’doe-smith',
                                        'title': 'Director of Grid Services', 'company': 'Acme Energy',
                                        'department': '', 'emails': [{'value': 'jane@acme.example', 'kind': 'work'}],
                                        'phones': [], 'address': '', 'website': 'acme.example', 'linkedin': '', 'socials': [],
@@ -129,6 +129,8 @@ def drive_stub(counter):
     drive.file token: folder creation and the multipart upload."""
     def handle(route, request):
         counter.append(request.url)
+        if request.method == 'DELETE':
+            route.fulfill(status=204, body=''); return
         if '/upload/drive/v3/files' in request.url:
             body = {'id': 'FILEID00000000000001', 'webViewLink': 'https://drive.google.com/file/d/FILEID00000000000001/view'}
         elif '/drive/v3/files' in request.url:
@@ -185,6 +187,9 @@ def probe(page):
         capture: !!document.querySelector('#nw-app #nw-capture'),
         inputs:  document.querySelectorAll('#nw-cap-input, #nw-batch-input').length,
         toggle:  !!document.querySelector('#nw-capture #nw-side-front[aria-pressed]'),
+        sidesToggle: !!document.querySelector('#nw-capture #nw-sides-one[aria-pressed]') && !!document.querySelector('#nw-sides-two'),
+        scanLabel: (document.getElementById('nw-cap-btn') || {}).textContent || '',
+        scanBeside: !!document.querySelector('#nw-capture .nw-toprow .nw-seg + #nw-cap-btn'),
         queued:  (document.getElementById('nw-queue-count') || {}).textContent || '',
         strips:  document.querySelectorAll('#nw-extracted .nw-strip').length,
         progress: !!document.querySelector('#nw-capture #nw-progress .nw-progress-bar'),
@@ -255,6 +260,9 @@ def run():
                     failures.append('%s: turned-away card rendered for the admitted tier' % role)
                 if len(data_reqs) != 1:
                     failures.append('%s: expected exactly one list request, saw %d' % (role, len(data_reqs)))
+                if not (got['sidesToggle'] and 'Scan' in got['scanLabel'] and got['scanBeside']):
+                    failures.append('%s: sides toggle / Scan placement wrong — sides=%s label=%r beside=%s'
+                                    % (role, got['sidesToggle'], got['scanLabel'], got['scanBeside']))
                 if not (got['capture'] and got['inputs'] == 2 and got['toggle']):
                     failures.append('%s: capture card incomplete — card=%s inputs=%s toggle=%s'
                                     % (role, got['capture'], got['inputs'], got['toggle']))
@@ -323,11 +331,11 @@ def run():
         extract_posts = [r for r in reqs if 'script.google.com' in r]
         if got['queued'] != '0' or got['strips'] != 1:
             failures.append('drain: expected queued=0 and one strip, got queued=%r strips=%d' % (got['queued'], got['strips']))
-        if 'Jane Doe' not in strip or 'Front' not in strip or 'one side' in strip:
-            failures.append('drain: strip text unexpected: %r' % strip[:120])
+        if 'Jane O’Doe-Smith' not in strip or 'Front' not in strip or 'one side' in strip or 'Missing' in strip:
+            failures.append('drain: strip text unexpected (names capitalised, no Missing cue): %r' % strip[:120])
         if 'c-0123456789abc' in strip or 'check:' in strip:
             failures.append('drain: the id or the raw confidence list is shown on the strip')
-        if got['notes'] != 1 or 'Check the website' not in strip:
+        if got['notes'] != 1 or 'website looked unclear' not in strip or not page.query_selector('#nw-extracted .nw-note-check .nw-note-rescan'):
             failures.append('drain: expected one low-confidence note for website, got %d' % got['notes'])
         if not (got['progressOk'] and got['statusOk']):
             failures.append('drain: expected the green Filed signal (progress=%s status=%s)' % (got['progressOk'], got['statusOk']))
@@ -339,7 +347,7 @@ def run():
             failures.append('drain: tapping the strip did not open the field detail')
         page.screenshot(path=str(SHOTS / 'network-capture-detail.png'), full_page=False)
         # The note's Fix opens the editor on that field; saving a value marks it verified and clears the note.
-        page.click('#nw-extracted .nw-note-check button:not(.nw-note-dismiss)')
+        page.click('#nw-extracted .nw-note-check button.nw-note-fix')
         page.wait_for_timeout(200)
         if not probe(page)['editor'] or page.evaluate("() => document.activeElement && document.activeElement.getAttribute('data-field')") != 'website':
             failures.append('edit: Fix did not open the editor focused on the website field')
@@ -357,6 +365,17 @@ def run():
         if stored != [['https://acme.example', 1, True]]:
             failures.append('edit: held record not updated in IndexedDB: %r' % (stored,))
         page.screenshot(path=str(SHOTS / 'network-capture-edited.png'), full_page=False)
+        # Delete: confirm, the strip goes, the held record goes, the Drive file is deleted.
+        page.once('dialog', lambda d: d.accept())
+        page.click('#nw-extracted .nw-strip .nw-del-btn')
+        page.wait_for_timeout(600)
+        left = page.evaluate("""() => new Promise(res => { const r = indexedDB.open('nw-capture', 1); r.onsuccess = () => {
+            const tx = r.result.transaction('pending', 'readonly'); const g = tx.objectStore('pending').count();
+            g.onsuccess = () => res(g.result); }; })""")
+        if probe(page)['strips'] != 0 or left != 0:
+            failures.append('delete: strip or held record still present (strips=%d records=%d)' % (probe(page)['strips'], left))
+        if not [u for u in reqs if '/drive/v3/files/FILEID' in u]:
+            failures.append('delete: no Drive delete request for the card photo')
         if order[:1] != ['newid'] or 'upload' not in order or order.index('newid') > order.index('upload'):
             failures.append('drain: expected the id minted BEFORE the Drive upload (D8), saw %r' % order)
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]

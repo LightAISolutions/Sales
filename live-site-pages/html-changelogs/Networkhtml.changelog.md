@@ -3,11 +3,23 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07w] — 2026-09-21 03:59:29 AM EST — v06.86r
+
+### Added
+- **Names are capitalised** — the first letter of every name word is upper-cased even when the card prints it in lower case
+- **Unclear scans tell you** — when a detail looked unclear in the photo, the card shows a note with **Rescan**, **Enter manually** and **Looks right**, and the filed message says which detail to check
+- **One-sided / Two-sided switch for batches** — choose it before picking photos; in a two-sided batch every two photos become one card
+- **Delete a card** — remove a card you have read, together with its photos in your Drive
+
+### Changed
+- **Photograph** is now **Scan** and sits beside the Front / Back switch; the batch button reads **Choose photos**
+- The “Missing: …” reminders are gone — business cards vary too much for them to help
 
 ## [v01.06w] — 2026-09-21 03:36:02 AM EST — v06.85r
 

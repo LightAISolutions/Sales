@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-21 03:36:02 AM EST` · Repo version: `v06.85r`
+Last updated: `2026-09-21 03:59:29 AM EST` · Repo version: `v06.86r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -63,7 +63,7 @@ Last updated: `2026-09-21 03:36:02 AM EST` · Repo version: `v06.85r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Classroom.html">Classroom.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Classroom.html">🌐</a>🟢 · ◽ · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">v01.16w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">v01.86g</a> | [template] Classroom — BESS/AIDC Curriculum page
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Network.html">Network.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Network.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1YjY3XMXDGwhW4U-lf3aKxGTJz5JvMyQcdCyVWdptBiQ/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Network/Network.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Networkhtml.changelog.md">v01.06w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Networkgs.changelog.md">v01.04g</a> | [template] Network — business-card capture and the account-centric contact layer (N0 scaffold: admin-only door, schema tabs, Drive folder registry, PWA; N1 s1: capture card with front/back pair, IndexedDB offline queue, own-Drive upload into `Network App/_inbox/`, Gemini extraction with QR merge, four-step progress bar, filed signal, photo links, removable check notes, missing-field cues and an inline editor on held cards)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Network.html">Network.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Network.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1YjY3XMXDGwhW4U-lf3aKxGTJz5JvMyQcdCyVWdptBiQ/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Network/Network.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Networkhtml.changelog.md">v01.07w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Networkgs.changelog.md">v01.04g</a> | [template] Network — business-card capture and the account-centric contact layer (N0 scaffold: admin-only door, schema tabs, Drive folder registry, PWA; N1 s1: capture card with front/back pair, IndexedDB offline queue, own-Drive upload into `Network App/_inbox/`, Gemini extraction with QR merge, four-step progress bar, filed signal, photo links, unclear-scan notes with rescan, an inline editor, delete and a one/two-sided batch toggle on held cards)
 │   │
 │   <b>│ ─ External Sites (Placeholder) ────────────────────────────────────────────</b>
 │   │   <i>(No external-site pages yet)</i>

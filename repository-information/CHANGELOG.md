@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 81/100`
+`Sections: 82/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.86r] — 2026-09-21 03:59:29 AM EST
+
+> **Prompt:** "For all contact entries, make sure the first letter of both first and last names are capitalized even if the card isn't. Also, dont show any reminders for missing information anymore because there is too much variance in business cards. However, if a scanned picture is unclear somewhere, pop up a notification for me to either rescan or manually input the missing information. Also, for mass uploading contacts, make sure to give me a toggle between one- or two-sided cards, similar to the one  between front and back of a photograph. Rename "photograph" with "scan" and move the button to the right of the "front/back" toggle. In its original spot, that's where I want the "one/two" sided toggle. Also, give me the option to delete saved contacts."
+
+### Added
+
+#### `live-site-pages/Network.html` — v01.07w
+- **Name capitalisation** (`nwCapName` / `nwTidyNames`): the first letter of every word in `fullName`, `firstName`, `lastName` (and after a hyphen or apostrophe) is upper-cased on receipt from the extraction, on an edit, and once for held cards at mount; nothing else in the name is touched, so "McDonald", "PhD" and a native script in parentheses survive
+- **"Unclear in the scan" notification** on a held card, one per field read below `NW_CONFIDENCE_FLOOR`: **Rescan** (confirm → `nwDeleteCard(rec, true)` removes the held record and its Drive photos, resets the pair to Front and opens the camera), **Enter manually** (the editor on that field) and **Looks right**; the filed status says which fields looked unclear instead of the plain green signal
+- **One-sided / Two-sided toggle for batches** (`_nwBatchSides`, `nwSetBatchSides`) in the slot Photograph used to occupy: a two-sided batch pairs consecutive photos (front, back, …) into one card each, an odd last photo is a front alone; `NW_MAX_BATCH` now counts cards
+- **Delete on every held card** (`nwDeleteCard`): confirm, remove the strip and the IndexedDB record, and best-effort `DELETE /drive/v3/files/<id>` for each photo with the user's own `drive.file` token (`nwDriveIdFromLink` parses the id from the stored link; `nwDriveFetch` accepts a 204)
+
+### Changed
+
+#### `live-site-pages/Network.html` — v01.07w
+- Photograph renamed **📷 Scan** and moved beside the Front / Back toggle (`.nw-toprow`); the batch button is now "🖼 Choose photos" (the 15-card cap is in its tooltip and the status line)
+- The "Missing: …" cue and `nwMissingFields` are removed — cards vary too much for an absent field to mean anything
+
+#### `scripts/verify-network-roles.py`
+- The stub returns a lower-case, punctuated name and the assertions check it is capitalised ("Jane O’Doe-Smith"), no Missing cue, the sides toggle and Scan beside the side toggle, the unclear note with its Rescan button, Enter manually opening the editor, and the delete round-trip (dialog accepted, strip and record gone, a Drive DELETE issued; the Drive stub answers 204)
+
+### Notes
+- Still 2026-09-21 EST — 82 sections, four exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 81/100` → `82/100`
+- Delete and Rescan act on held cards (nothing is in the spreadsheet yet); session 2's `nop=delete` soft-deletes saved rows per NETWORK-SCHEMA.md §13
 
 ## [v06.85r] — 2026-09-21 03:36:02 AM EST
 
