@@ -1,0 +1,4675 @@
+{
+  "schemaVersion": 1,
+  "built": "2026-09-21T11:47:42Z",
+  "events": [
+    {
+      "slug": "naatbatt-annual-2026",
+      "name": "NAATBatt 2026 Annual Meeting & Conference",
+      "series": "NAATBatt Annual",
+      "organiser": "NAATBatt International",
+      "kind": "conference",
+      "start": "2026-02-09",
+      "end": "2026-02-12",
+      "tz": "America/Phoenix",
+      "city": "Tucson",
+      "region": "AZ",
+      "country": "US",
+      "venue": "JW Marriott Tucson Starr Pass",
+      "venueLatLng": [
+        32.1989,
+        -111.0247
+      ],
+      "website": "https://www.naatbatt.org/events",
+      "audience": [
+        "cells-and-chemistry",
+        "storage-integrators-and-containers",
+        "capital"
+      ],
+      "relevance": 3,
+      "tierNote": "The seed calendar carried a weakly-sourced 'Aug 1-5 2027' row. The organiser's own events page, read 2026-09-21, publishes only this February 2026 edition and no 2027 dates — so the 2027 row is not carried and this past edition stands in its place until NAATBatt publishes again.",
+      "sources": [
+        {
+          "sourceKey": "naatbatt-events",
+          "kind": "html",
+          "url": "https://www.naatbatt.org/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "past",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "csa-group",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "acp-recharge-2026",
+      "name": "ACP RECHARGE 2026",
+      "series": "ACP RECHARGE",
+      "organiser": "American Clean Power Association",
+      "kind": "conference",
+      "start": "2026-09-22",
+      "end": "2026-09-24",
+      "tz": "America/Denver",
+      "city": "Aurora",
+      "region": "CO",
+      "country": "US",
+      "website": "https://cleanpower.org/events/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities",
+        "capital"
+      ],
+      "relevance": 5,
+      "tierNote": "ACP's dedicated storage conference — the single highest-density US storage buyer week outside RE+.",
+      "sources": [
+        {
+          "sourceKey": "acp-events",
+          "kind": "html",
+          "url": "https://cleanpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "bisnow-ireland-dc-investment-2026",
+      "name": "Bisnow Ireland Data Centre Investment Conference & Expo 2026",
+      "series": "Bisnow Ireland Data Centre Investment Conference & Expo",
+      "organiser": "Bisnow Media",
+      "kind": "regional",
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "tz": "Europe/Dublin",
+      "city": "Dublin",
+      "region": "",
+      "country": "IE",
+      "website": "https://www.bisnow.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 2,
+      "tierNote": "One-day regional format — a breakfast-to-late-afternoon room of local developers, GCs and utility staff. Speaker rosters are published; there is no exhibitor directory.",
+      "sources": [
+        {
+          "sourceKey": "bisnow-events",
+          "kind": "html",
+          "url": "https://www.bisnow.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "imasons-innovation-incubator-2026-09",
+      "name": "iMasons Innovation Incubator: Meet the Startups (Sep 2026)",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "webinar",
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 2,
+      "tierNote": "Virtual, members-first; useful for named-startup intelligence rather than meetings.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "imasons-women-powered-2026-09",
+      "name": "iMasons Women Powered, Part 1 (Sep 2026)",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "webinar",
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 1,
+      "tierNote": "Virtual, members-first; useful for named-startup intelligence rather than meetings.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "uptime-network-americas-fall-2026",
+      "name": "Uptime Network Americas Fall Conference 2026",
+      "series": "Uptime Network Americas",
+      "organiser": "Uptime Institute",
+      "kind": "conference",
+      "start": "2026-09-22",
+      "end": "2026-09-23",
+      "tz": "America/Chicago",
+      "city": "Chicago",
+      "region": "IL",
+      "country": "US",
+      "website": "https://uptimeinstitute.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "assurance"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: Uptime's own events page lists 'Uptime Network Americas Fall Conference 2026 - Fall 2026' with no dates, and uptimeinstitute.com/events 302s off-site to google.com for non-browser clients (probed 2026-09-21). Dates from the seed calendar. Vendors are excluded from Network meetings — end users only, which is why relevance is 2 despite the audience being exactly right.",
+      "sources": [
+        {
+          "sourceKey": "uptime-institute",
+          "kind": "manual",
+          "url": "https://uptimeinstitute.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "esig-large-loads-workshop-2026",
+      "name": "ESIG Large Loads Workshop 2026",
+      "series": "ESIG Large Loads Workshop",
+      "organiser": "Energy Systems Integration Group",
+      "kind": "conference",
+      "start": "2026-09-28",
+      "end": "2026-09-28",
+      "tz": "Europe/Lisbon",
+      "city": "Porto",
+      "region": "",
+      "country": "PT",
+      "venue": "Pestana Douro Riverside",
+      "website": "https://www.esig.energy/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "aidc-developers-and-landlords"
+      ],
+      "relevance": 3,
+      "tierNote": "The large-load interconnection question that every AIDC sale runs into, argued by the planners who set the rules.",
+      "sources": [
+        {
+          "sourceKey": "esig-events",
+          "kind": "jsonld",
+          "url": "https://www.esig.energy/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "gcpa-fall-2026",
+      "name": "GCPA 2026 Annual Fall Conference & Exhibition",
+      "series": "GCPA 2026 Annual Fall Conference &",
+      "organiser": "Gulf Coast Power Association",
+      "kind": "regional",
+      "start": "2026-09-28",
+      "end": "2026-09-30",
+      "tz": "America/Chicago",
+      "city": "Austin",
+      "region": "TX",
+      "country": "US",
+      "venue": "AT&T Hotel and Conference Center",
+      "website": "https://www.gulfcoastpower.org/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 4,
+      "tierNote": "Theme: 'Building the Grid of 2050: One Decision at a Time'. ERCOT-centric regional audience — the sub-mega tier the corpus names only through a sponsor page.",
+      "sources": [
+        {
+          "sourceKey": "gcpa-events",
+          "kind": "html",
+          "url": "https://www.gulfcoastpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "hunt-energy-network",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "imasons-at-yotta-2026",
+      "name": "iMasons at Yotta 2026",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "social",
+      "start": "2026-09-28",
+      "end": "2026-09-30",
+      "tz": "America/Los_Angeles",
+      "city": "Las Vegas",
+      "region": "NV",
+      "country": "US",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 4,
+      "tierNote": "Chapter-level social — no exhibitor list and no badge scan; the value is the room. This is the sub-mega tier the dossier corpus never names.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "yotta-2026",
+      "name": "Yotta 2026",
+      "series": "Yotta",
+      "organiser": "Yotta (Bisnow Media)",
+      "kind": "mega",
+      "start": "2026-09-28",
+      "end": "2026-09-30",
+      "tz": "America/Los_Angeles",
+      "city": "Las Vegas",
+      "region": "NV",
+      "country": "US",
+      "venue": "Caesars Forum",
+      "venueLatLng": [
+        36.1188,
+        -115.1653
+      ],
+      "website": "https://www.yotta-event.com/",
+      "registrationUrl": "https://www.yotta-event.com/2026-passes/",
+      "exhibitorListUrl": "https://www.yotta-event.com/2026-sponsors-exhibitors/",
+      "agendaUrl": "https://www.yotta-event.com/2026-agenda/",
+      "speakersUrl": "https://www.yotta-event.com/2026-speakers/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "storage-integrators-and-containers",
+        "neoclouds",
+        "capital"
+      ],
+      "relevance": 5,
+      "tierNote": "6,500+ attendees at the AI/energy/infrastructure intersection; moved from the MGM Grand to Caesars Forum for 2026. iMasons runs a parallel programme on site.",
+      "sources": [
+        {
+          "sourceKey": "yotta-event",
+          "kind": "jsonld",
+          "url": "https://www.yotta-event.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "bisnow-central-dc-construction-2026",
+      "name": "Bisnow Central Region Data Center Construction, Design & Development 2026",
+      "series": "Bisnow Central Region Data Center Construction, Design & Development",
+      "organiser": "Bisnow Media",
+      "kind": "regional",
+      "start": "2026-10-06",
+      "end": "2026-10-06",
+      "tz": "America/Chicago",
+      "city": "Dallas",
+      "region": "TX",
+      "country": "US",
+      "website": "https://www.bisnow.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 3,
+      "tierNote": "One-day regional format — a breakfast-to-late-afternoon room of local developers, GCs and utility staff. Speaker rosters are published; there is no exhibitor directory.",
+      "sources": [
+        {
+          "sourceKey": "bisnow-events",
+          "kind": "html",
+          "url": "https://www.bisnow.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "imasons-denver-power-up-poker-2026",
+      "name": "iMWomen Denver Power Up Poker Night 2026",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "social",
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "tz": "America/Denver",
+      "city": "Denver",
+      "region": "CO",
+      "country": "US",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 3,
+      "tierNote": "Chapter-level social — no exhibitor list and no badge scan; the value is the room. This is the sub-mega tier the dossier corpus never names.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "battery-show-na-2026",
+      "name": "The Battery Show North America 2026",
+      "series": "The Battery Show North America",
+      "organiser": "Informa Markets",
+      "kind": "mega",
+      "start": "2026-10-12",
+      "end": "2026-10-15",
+      "tz": "America/New_York",
+      "city": "Detroit",
+      "region": "MI",
+      "country": "US",
+      "venue": "Huntington Place",
+      "venueLatLng": [
+        42.3272,
+        -83.0474
+      ],
+      "website": "https://www.thebatteryshow.com/en/home.html",
+      "registrationUrl": "https://www.xpressreg.net/register/BATT1026/start.asp",
+      "exhibitorListUrl": "https://tbsm26.mapyourshow.com/8_0/explore/exhibitor-gallery.cfm?featured=false",
+      "agendaUrl": "https://tbsm26.mapyourshow.com/8_0/sessions/#/",
+      "floorPlanUrl": "https://tbsm26.mapyourshow.com/8_0/floorplan/index.cfm?hallID=campus&level=0",
+      "audience": [
+        "cells-and-chemistry",
+        "storage-integrators-and-containers",
+        "compute-and-the-rack",
+        "epc-and-construction"
+      ],
+      "relevance": 5,
+      "tierNote": "1,300+ exhibitors across the cell, pack and manufacturing chain; the densest single week for cell and container supply-chain conversations in North America.",
+      "hours": [
+        {
+          "date": "2026-10-12",
+          "open": "09:00",
+          "close": "16:00"
+        },
+        {
+          "date": "2026-10-13",
+          "open": "09:30",
+          "close": "16:30"
+        },
+        {
+          "date": "2026-10-14",
+          "open": "09:30",
+          "close": "16:30"
+        },
+        {
+          "date": "2026-10-15",
+          "open": "09:30",
+          "close": "15:00"
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "informa-battery-show",
+          "kind": "jsonld",
+          "url": "https://www.thebatteryshow.com/en/home.html",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "ocp-global-summit-2026",
+      "name": "OCP Global Summit 2026",
+      "series": "OCP Global Summit",
+      "organiser": "Open Compute Project Foundation",
+      "kind": "mega",
+      "start": "2026-10-12",
+      "end": "2026-10-15",
+      "tz": "America/Los_Angeles",
+      "city": "San Jose",
+      "region": "CA",
+      "country": "US",
+      "website": "https://www.opencompute.org/summit/global-summit",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "in-hall-power",
+        "cooling",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 5,
+      "tierNote": "Not confirmed: the organiser's own page answers 403 to non-browser clients (probed 2026-09-21), so these dates come from the seed calendar's third-party listing and may be stale. The 800 VDC and Open Rack Wide announcements the corpus cites all originate here, so the row is kept and hand-maintained.",
+      "sources": [
+        {
+          "sourceKey": "ocp-global-summit",
+          "kind": "manual",
+          "url": "https://www.opencompute.org/summit/global-summit",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "amd",
+          "where": "developments"
+        },
+        {
+          "slug": "amperesand",
+          "where": "developments"
+        },
+        {
+          "slug": "flex",
+          "where": "developments"
+        },
+        {
+          "slug": "flex",
+          "where": "sources"
+        },
+        {
+          "slug": "heron-power",
+          "where": "developments"
+        },
+        {
+          "slug": "megmeet",
+          "where": "developments"
+        },
+        {
+          "slug": "megmeet",
+          "where": "sources"
+        },
+        {
+          "slug": "nvidia",
+          "where": "developments"
+        },
+        {
+          "slug": "vicor",
+          "where": "developments"
+        }
+      ]
+    },
+    {
+      "slug": "imasons-innovation-exchange-2026-10",
+      "name": "iMasons Innovation Exchange: Thought Leadership (Oct 2026)",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "webinar",
+      "start": "2026-10-13",
+      "end": "2026-10-13",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 2,
+      "tierNote": "Virtual, members-first; useful for named-startup intelligence rather than meetings.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "semicon-west-2026",
+      "name": "SEMICON West 2026",
+      "series": "SEMICON West",
+      "organiser": "SEMI",
+      "kind": "mega",
+      "start": "2026-10-13",
+      "end": "2026-10-15",
+      "tz": "America/Los_Angeles",
+      "city": "San Francisco",
+      "region": "CA",
+      "country": "US",
+      "website": "https://www.semiconwest.org/",
+      "audience": [
+        "compute-and-the-rack",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: SEMI's domains answer a Cloudflare challenge (probed 2026-09-21). Dates from the seed calendar. This is the last San Francisco edition before the permanent move to Phoenix on a spring schedule from 2027.",
+      "sources": [
+        {
+          "sourceKey": "semi-semiconwest",
+          "kind": "manual",
+          "url": "https://www.semiconwest.org/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "imasons-cascadia-digital-frontier-2026",
+      "name": "iMasons Cascadia Chapter: The Digital Frontier 2026",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "social",
+      "start": "2026-10-15",
+      "end": "2026-10-15",
+      "tz": "America/Vancouver",
+      "city": "Vancouver",
+      "region": "BC",
+      "country": "CA",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 3,
+      "tierNote": "Chapter-level social — no exhibitor list and no badge scan; the value is the room. This is the sub-mega tier the dossier corpus never names.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "bisnow-national-dc-connectivity-ai-2026",
+      "name": "Bisnow National Data Center Connectivity & AI Infrastructure Conference & Expo 2026",
+      "series": "Bisnow National Data Center Connectivity & AI Infrastructure Conference & Expo",
+      "organiser": "Bisnow Media",
+      "kind": "regional",
+      "start": "2026-10-20",
+      "end": "2026-10-20",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.bisnow.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 3,
+      "tierNote": "One-day regional format — a breakfast-to-late-afternoon room of local developers, GCs and utility staff. Speaker rosters are published; there is no exhibitor directory. The organiser's calendar prints 'National' in place of a city for this edition.",
+      "sources": [
+        {
+          "sourceKey": "bisnow-events",
+          "kind": "html",
+          "url": "https://www.bisnow.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "nvidia-gtc-berlin-2026",
+      "name": "NVIDIA GTC Berlin 2026",
+      "series": "NVIDIA GTC",
+      "organiser": "NVIDIA",
+      "kind": "corporate-summit",
+      "start": "2026-10-20",
+      "end": "2026-10-22",
+      "tz": "Europe/Berlin",
+      "city": "Berlin",
+      "region": "",
+      "country": "DE",
+      "website": "https://www.nvidia.com/en-eu/gtc/",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "in-hall-power",
+        "cooling"
+      ],
+      "relevance": 2,
+      "tierNote": "European GTC; the seed calendar did not carry it.",
+      "sources": [
+        {
+          "sourceKey": "nvidia-gtc",
+          "kind": "html",
+          "url": "https://www.nvidia.com/gtc/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "bisnow-west-coast-dc-ops-cooling-2026",
+      "name": "Bisnow West Coast Data Center Operations & Cooling Conference 2026",
+      "series": "Bisnow West Coast Data Center Operations & Cooling Conference",
+      "organiser": "Bisnow Media",
+      "kind": "regional",
+      "start": "2026-10-21",
+      "end": "2026-10-21",
+      "tz": "America/Los_Angeles",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.bisnow.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 3,
+      "tierNote": "One-day regional format — a breakfast-to-late-afternoon room of local developers, GCs and utility staff. Speaker rosters are published; there is no exhibitor directory. The organiser's calendar prints 'National' in place of a city for this edition.",
+      "sources": [
+        {
+          "sourceKey": "bisnow-events",
+          "kind": "html",
+          "url": "https://www.bisnow.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "7x24-exchange-fall-2026",
+      "name": "7x24 Exchange Fall 2026",
+      "series": "7x24 Exchange International Conference",
+      "organiser": "7x24 Exchange International",
+      "kind": "conference",
+      "start": "2026-10-25",
+      "end": "2026-10-28",
+      "tz": "America/Chicago",
+      "city": "San Antonio",
+      "region": "TX",
+      "country": "US",
+      "venue": "JW Marriott San Antonio Hill Country",
+      "venueLatLng": [
+        29.6116,
+        -98.4419
+      ],
+      "website": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+      "registrationUrl": "https://conferences.7x24exchange.org/fall2026/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "assurance"
+      ],
+      "relevance": 5,
+      "tierNote": "End-user-heavy: owners and operators of mission-critical facilities, not a trade-show floor. Theme: The Intersection of AI & Traditional Data Centers.",
+      "sources": [
+        {
+          "sourceKey": "7x24-exchange",
+          "kind": "html",
+          "url": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "cigre-grid-of-the-future-2026",
+      "name": "CIGRE US Grid of the Future Symposium 2026",
+      "series": "CIGRE Grid of the Future",
+      "organiser": "CIGRE US National Committee",
+      "kind": "conference",
+      "start": "2026-10-26",
+      "end": "2026-10-29",
+      "tz": "America/New_York",
+      "city": "Richmond",
+      "region": "VA",
+      "country": "US",
+      "venue": "Greater Richmond Convention Center",
+      "venueLatLng": [
+        37.5449,
+        -77.4383
+      ],
+      "website": "https://na.eventscloud.com/website/87912/home/",
+      "registrationUrl": "https://na.eventscloud.com/website/87912/registration/",
+      "agendaUrl": "https://na.eventscloud.com/website/87912/program/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "epc-and-construction"
+      ],
+      "relevance": 3,
+      "tierNote": "Transmission-engineering audience. cigre-usnc.org now 301s to the EventsCloud site.",
+      "sources": [
+        {
+          "sourceKey": "cigre-usnc",
+          "kind": "html",
+          "url": "https://na.eventscloud.com/website/87912/home/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "esig-fall-technical-workshop-2026",
+      "name": "ESIG Fall Technical Workshop 2026",
+      "series": "ESIG Technical Workshop",
+      "organiser": "Energy Systems Integration Group",
+      "kind": "conference",
+      "start": "2026-10-26",
+      "end": "2026-10-29",
+      "tz": "America/New_York",
+      "city": "Reston",
+      "region": "VA",
+      "country": "US",
+      "venue": "Hyatt Regency Reston",
+      "venueLatLng": [
+        38.954,
+        -77.351
+      ],
+      "website": "https://www.esig.energy/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "software-and-optimization",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 3,
+      "tierNote": "Engineers and planners, not buyers — attend to be credible on interconnection, not to sell. The Oscillations Workshop runs alongside it at the same venue.",
+      "sources": [
+        {
+          "sourceKey": "esig-events",
+          "kind": "jsonld",
+          "url": "https://www.esig.energy/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-powerup-data-centers-investment-2026",
+      "name": "Infocast PowerUp Data Centers: Investment 2026",
+      "series": "Infocast PowerUp Data Centers: Investment",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "conference",
+      "start": "2026-10-27",
+      "end": "2026-10-29",
+      "tz": "America/New_York",
+      "city": "McLean",
+      "region": "VA",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "capital",
+        "storage-developers-and-ipps",
+        "aidc-developers-and-landlords",
+        "bridge-and-on-site-generation"
+      ],
+      "relevance": 4,
+      "tierNote": "Hybrid deal structures financing data-center and generation build — capital-side room.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "imasons-texas-energy-update-2026-11",
+      "name": "iMasons Data Center Energy Industry Update (Texas, Nov 2026)",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "social",
+      "start": "2026-11-02",
+      "end": "2026-11-02",
+      "tz": "America/Chicago",
+      "city": "",
+      "region": "TX",
+      "country": "US",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 4,
+      "tierNote": "Chapter-level social — no exhibitor list and no badge scan; the value is the room. This is the sub-mega tier the dossier corpus never names.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "edgecore",
+          "where": "products"
+        },
+        {
+          "slug": "powerhouse-data-centers",
+          "where": "products"
+        },
+        {
+          "slug": "rehlko",
+          "where": "developments"
+        },
+        {
+          "slug": "rehlko",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "dcd-connect-virginia-2026",
+      "name": "DCD>Connect Virginia 2026",
+      "series": "DCD>Connect Virginia",
+      "organiser": "DatacenterDynamics (Informa)",
+      "kind": "conference",
+      "start": "2026-11-03",
+      "end": "2026-11-04",
+      "tz": "America/New_York",
+      "city": "Leesburg",
+      "region": "VA",
+      "country": "US",
+      "website": "https://www.datacenterdynamics.com/en/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "storage-integrators-and-containers",
+        "capital"
+      ],
+      "relevance": 5,
+      "tierNote": "Not confirmed: the organiser's own page answers 403 to non-browser clients (probed 2026-09-21), so these dates come from the seed calendar's third-party listing and may be stale. DCD is the most-cited event name in the dossier corpus (36 dossiers), which is why the row is kept despite being hand-maintained.",
+      "sources": [
+        {
+          "sourceKey": "dcd-events",
+          "kind": "manual",
+          "url": "https://www.datacenterdynamics.com/en/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "aligned",
+          "where": "sources"
+        },
+        {
+          "slug": "anthropic",
+          "where": "developments"
+        },
+        {
+          "slug": "anthropic",
+          "where": "products"
+        },
+        {
+          "slug": "anthropic",
+          "where": "sources"
+        },
+        {
+          "slug": "anthropic",
+          "where": "specs"
+        },
+        {
+          "slug": "anthropic",
+          "where": "strategy"
+        },
+        {
+          "slug": "coreweave",
+          "where": "sources"
+        },
+        {
+          "slug": "crusoe",
+          "where": "products"
+        },
+        {
+          "slug": "crusoe",
+          "where": "sources"
+        },
+        {
+          "slug": "dpr",
+          "where": "developments"
+        },
+        {
+          "slug": "dpr",
+          "where": "products"
+        },
+        {
+          "slug": "dpr",
+          "where": "sources"
+        },
+        {
+          "slug": "dpr",
+          "where": "specs"
+        },
+        {
+          "slug": "equinix",
+          "where": "sources"
+        },
+        {
+          "slug": "fermi-america",
+          "where": "products"
+        },
+        {
+          "slug": "fluidstack",
+          "where": "strategy"
+        },
+        {
+          "slug": "google",
+          "where": "sources"
+        },
+        {
+          "slug": "heron-power",
+          "where": "developments"
+        },
+        {
+          "slug": "hitachi-energy",
+          "where": "strategy"
+        },
+        {
+          "slug": "hithium",
+          "where": "sources"
+        },
+        {
+          "slug": "holder-construction",
+          "where": "sources"
+        },
+        {
+          "slug": "iren",
+          "where": "sources"
+        },
+        {
+          "slug": "kiewit",
+          "where": "developments"
+        },
+        {
+          "slug": "kiewit",
+          "where": "sources"
+        },
+        {
+          "slug": "lambda",
+          "where": "sources"
+        },
+        {
+          "slug": "lightsource-bp",
+          "where": "developments"
+        },
+        {
+          "slug": "meta",
+          "where": "sources"
+        },
+        {
+          "slug": "microsoft",
+          "where": "sources"
+        },
+        {
+          "slug": "nebius",
+          "where": "sources"
+        },
+        {
+          "slug": "nextera-energy-resources",
+          "where": "developments"
+        },
+        {
+          "slug": "nscale",
+          "where": "strategy"
+        },
+        {
+          "slug": "on-energy",
+          "where": "developments"
+        },
+        {
+          "slug": "panasonic",
+          "where": "sources"
+        },
+        {
+          "slug": "piller",
+          "where": "sources"
+        },
+        {
+          "slug": "powerhouse-data-centers",
+          "where": "sources"
+        },
+        {
+          "slug": "prime-data-centers",
+          "where": "strategy"
+        },
+        {
+          "slug": "proenergy",
+          "where": "developments"
+        },
+        {
+          "slug": "qts",
+          "where": "products"
+        },
+        {
+          "slug": "qts",
+          "where": "sources"
+        },
+        {
+          "slug": "qts",
+          "where": "specs"
+        },
+        {
+          "slug": "samsung-ct",
+          "where": "developments"
+        },
+        {
+          "slug": "stack-infrastructure",
+          "where": "sources"
+        },
+        {
+          "slug": "switch",
+          "where": "sources"
+        },
+        {
+          "slug": "terawulf",
+          "where": "sources"
+        },
+        {
+          "slug": "tract",
+          "where": "sources"
+        },
+        {
+          "slug": "vantage",
+          "where": "developments"
+        },
+        {
+          "slug": "voltagrid",
+          "where": "developments"
+        },
+        {
+          "slug": "voltagrid",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "imasons-innovation-incubator-2026-11",
+      "name": "iMasons Innovation Incubator: Meet the Startups (Nov 2026)",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "webinar",
+      "start": "2026-11-03",
+      "end": "2026-11-03",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 2,
+      "tierNote": "Virtual, members-first; useful for named-startup intelligence rather than meetings.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-southeast-power-next-2026",
+      "name": "Infocast Southeast Power NEXT 2026",
+      "series": "Infocast Southeast Power NEXT",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "regional",
+      "start": "2026-11-04",
+      "end": "2026-11-06",
+      "tz": "America/New_York",
+      "city": "Charlotte",
+      "region": "NC",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 3,
+      "tierNote": "Regional: the whole Southeast interconnection cast in one room.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "naruc-annual-2026",
+      "name": "NARUC 2026 Annual Meeting and Education Conference",
+      "series": "NARUC Annual Meeting",
+      "organiser": "National Association of Regulatory Utility Commissioners",
+      "kind": "conference",
+      "start": "2026-11-08",
+      "end": "2026-11-11",
+      "tz": "America/Puerto_Rico",
+      "city": "San Juan",
+      "region": "PR",
+      "country": "US",
+      "website": "https://www.naruc.org/annual-meeting/",
+      "audience": [
+        "utilities",
+        "capital"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: NARUC's own Annual Meeting page (read 2026-09-21) carries the 2026 branding and the registration link but prints no dates, city or venue. Dates from the seed calendar. Regulators, not buyers.",
+      "sources": [
+        {
+          "sourceKey": "naruc-meetings",
+          "kind": "manual",
+          "url": "https://www.naruc.org/annual-meeting/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "enlit-europe-2026",
+      "name": "Enlit Europe 2026",
+      "series": "Enlit Europe",
+      "organiser": "Clarion Events",
+      "kind": "mega",
+      "start": "2026-11-10",
+      "end": "2026-11-12",
+      "tz": "Europe/Vienna",
+      "city": "Vienna",
+      "region": "",
+      "country": "AT",
+      "website": "https://enlit.world/enlit-europe",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps",
+        "software-and-optimization"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: the organiser's own page answers 403 to non-browser clients (probed 2026-09-21), so these dates come from the seed calendar's third-party listing and may be stale. enlit-europe.com 301s to enlit.world, which answers a Cloudflare 'Attention Required!' page.",
+      "sources": [
+        {
+          "sourceKey": "enlit-europe",
+          "kind": "manual",
+          "url": "https://enlit.world/enlit-europe",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "bisnow-carolinas-dc-2026",
+      "name": "Bisnow Carolinas Data Center Conference & Expo 2026",
+      "series": "Bisnow Carolinas Data Center Conference & Expo",
+      "organiser": "Bisnow Media",
+      "kind": "regional",
+      "start": "2026-11-12",
+      "end": "2026-11-12",
+      "tz": "America/New_York",
+      "city": "Charlotte",
+      "region": "NC",
+      "country": "US",
+      "website": "https://www.bisnow.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 3,
+      "tierNote": "One-day regional format — a breakfast-to-late-afternoon room of local developers, GCs and utility staff. Speaker rosters are published; there is no exhibitor directory.",
+      "sources": [
+        {
+          "sourceKey": "bisnow-events",
+          "kind": "html",
+          "url": "https://www.bisnow.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "bisnow-european-dc-investment-2026",
+      "name": "Bisnow European Data Centre Investment Conference & Expo 2026",
+      "series": "Bisnow European Data Centre Investment Conference & Expo",
+      "organiser": "Bisnow Media",
+      "kind": "regional",
+      "start": "2026-11-12",
+      "end": "2026-11-12",
+      "tz": "Europe/London",
+      "city": "London",
+      "region": "",
+      "country": "GB",
+      "website": "https://www.bisnow.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 2,
+      "tierNote": "One-day regional format — a breakfast-to-late-afternoon room of local developers, GCs and utility staff. Speaker rosters are published; there is no exhibitor directory.",
+      "sources": [
+        {
+          "sourceKey": "bisnow-events",
+          "kind": "html",
+          "url": "https://www.bisnow.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "gcpa-empowering-leadership-2026",
+      "name": "GCPA emPOWERing Leadership Conference 2026",
+      "series": "GCPA emPOWERing Leadership Conference",
+      "organiser": "Gulf Coast Power Association",
+      "kind": "regional",
+      "start": "2026-11-12",
+      "end": "2026-11-13",
+      "tz": "America/Chicago",
+      "city": "Cedar Creek",
+      "region": "TX",
+      "country": "US",
+      "venue": "Hyatt Regency Lost Pines",
+      "website": "https://www.gulfcoastpower.org/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 2,
+      "tierNote": "Leadership-development format, not a selling venue.",
+      "sources": [
+        {
+          "sourceKey": "gcpa-events",
+          "kind": "html",
+          "url": "https://www.gulfcoastpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "sc26",
+      "name": "SC26 — International Conference for HPC, Networking, Storage and Analysis",
+      "series": "SC (Supercomputing)",
+      "organiser": "ACM / IEEE Computer Society",
+      "kind": "mega",
+      "start": "2026-11-15",
+      "end": "2026-11-20",
+      "tz": "America/Chicago",
+      "city": "Chicago",
+      "region": "IL",
+      "country": "US",
+      "venue": "McCormick Place",
+      "venueLatLng": [
+        41.8517,
+        -87.6169
+      ],
+      "website": "https://sc26.supercomputing.org/",
+      "registrationUrl": "https://sc26.supercomputing.org/registration/",
+      "exhibitorListUrl": "https://sc26.supercomputing.org/exhibits",
+      "agendaUrl": "https://sc26.supercomputing.org/program/",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "cooling",
+        "in-hall-power"
+      ],
+      "relevance": 3,
+      "tierNote": "HPC centres and rack-scale liquid-cooling buyers; adjacent to AIDC rather than in it.",
+      "sources": [
+        {
+          "sourceKey": "sc-supercomputing",
+          "kind": "html",
+          "url": "https://sc26.supercomputing.org/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "re-plus-2026",
+      "name": "RE+ 2026",
+      "series": "RE+",
+      "organiser": "SEIA / SEPA (RE+ Events)",
+      "kind": "mega",
+      "start": "2026-11-16",
+      "end": "2026-11-19",
+      "tz": "America/Los_Angeles",
+      "city": "Las Vegas",
+      "region": "NV",
+      "country": "US",
+      "venue": "Las Vegas Convention Center",
+      "venueLatLng": [
+        36.1317,
+        -115.151
+      ],
+      "website": "https://www.re-plus.com/",
+      "registrationUrl": "https://www.re-plus.com/register/",
+      "exhibitorListUrl": "https://re26.mapyourshow.com/8_0/explore/exhibitor-gallery.cfm?featured=false",
+      "agendaUrl": "https://www.re-plus.com/schedule/",
+      "speakersUrl": "https://www.re-plus.com/schedule/speakers/",
+      "floorPlanUrl": "https://re26.mapyourshow.com/8_0/floorplan/index.cfm",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities",
+        "capital",
+        "epc-and-construction"
+      ],
+      "relevance": 5,
+      "tierNote": "North America's largest clean-energy show; the storage hall is where integrators, cell makers and IPPs all appear in one week. Conference education Nov 16-18, exhibits Nov 17-19 — the organiser prints the two ranges separately.",
+      "sources": [
+        {
+          "sourceKey": "re-plus",
+          "kind": "html",
+          "url": "https://www.re-plus.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "canadian-solar",
+          "where": "developments"
+        },
+        {
+          "slug": "canadian-solar",
+          "where": "sources"
+        },
+        {
+          "slug": "cornex",
+          "where": "sources"
+        },
+        {
+          "slug": "hithium",
+          "where": "products"
+        },
+        {
+          "slug": "hithium",
+          "where": "sources"
+        },
+        {
+          "slug": "hyperstrong",
+          "where": "sources"
+        },
+        {
+          "slug": "power-electronics",
+          "where": "developments"
+        },
+        {
+          "slug": "power-electronics",
+          "where": "products"
+        },
+        {
+          "slug": "power-electronics",
+          "where": "sources"
+        },
+        {
+          "slug": "power-electronics",
+          "where": "strategy"
+        },
+        {
+          "slug": "samsung-sdi",
+          "where": "sources"
+        },
+        {
+          "slug": "samsung-sdi",
+          "where": "specs"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "sources"
+        },
+        {
+          "slug": "sinexcel",
+          "where": "products"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "developments"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "products"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "sources"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "specs"
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-ignite-2026",
+      "name": "Microsoft Ignite 2026",
+      "series": "Microsoft Ignite",
+      "organiser": "Microsoft",
+      "kind": "corporate-summit",
+      "start": "2026-11-17",
+      "end": "2026-11-20",
+      "tz": "America/Los_Angeles",
+      "city": "San Francisco",
+      "region": "CA",
+      "country": "US",
+      "website": "https://ignite.microsoft.com/",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: ignite.microsoft.com serves no readable date text to non-browser clients (probed 2026-09-21). Dates from the seed calendar's third-party listing.",
+      "sources": [
+        {
+          "sourceKey": "microsoft-ignite",
+          "kind": "manual",
+          "url": "https://ignite.microsoft.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "imasons-innovation-exchange-2026-11",
+      "name": "iMasons Innovation Exchange: Thought Leadership (Nov 2026)",
+      "series": "Infrastructure Masons events",
+      "organiser": "Infrastructure Masons",
+      "kind": "webinar",
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "",
+      "website": "https://imasons.org/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction"
+      ],
+      "relevance": 2,
+      "tierNote": "Virtual, members-first; useful for named-startup intelligence rather than meetings.",
+      "sources": [
+        {
+          "sourceKey": "imasons-events",
+          "kind": "jsonld",
+          "url": "https://imasons.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "aws-reinvent-2026",
+      "name": "AWS re:Invent 2026",
+      "series": "AWS re:Invent",
+      "organiser": "Amazon Web Services",
+      "kind": "corporate-summit",
+      "start": "2026-11-30",
+      "end": "2026-12-04",
+      "tz": "America/Los_Angeles",
+      "city": "Las Vegas",
+      "region": "NV",
+      "country": "US",
+      "website": "https://aws.amazon.com/events/reinvent",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "hyperscalers-and-ai-labs"
+      ],
+      "relevance": 2,
+      "tierNote": "Cloud-platform audience; relevant only through the silicon and cooling sessions. The organiser names the city but not the venues.",
+      "sources": [
+        {
+          "sourceKey": "aws-reinvent",
+          "kind": "html",
+          "url": "https://aws.amazon.com/events/reinvent",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "nvidia-gtc-dc-2026",
+      "name": "NVIDIA GTC Washington, D.C. 2026",
+      "series": "NVIDIA GTC",
+      "organiser": "NVIDIA",
+      "kind": "corporate-summit",
+      "start": "2026-11-30",
+      "end": "2026-12-03",
+      "tz": "America/New_York",
+      "city": "Washington",
+      "region": "DC",
+      "country": "US",
+      "website": "https://www.nvidia.com/gtc/dc/",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "in-hall-power",
+        "cooling",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 4,
+      "tierNote": "The policy-and-federal edition; partial exhibitor presence, speaker roster published.",
+      "sources": [
+        {
+          "sourceKey": "nvidia-gtc",
+          "kind": "html",
+          "url": "https://www.nvidia.com/gtc/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "gartner-io-cloud-2026",
+      "name": "Gartner IT Infrastructure, Operations & Cloud Strategies Conference 2026",
+      "series": "Gartner IT Infrastructure, Operations & Cloud Strategies",
+      "organiser": "Gartner",
+      "kind": "conference",
+      "start": "2026-12-08",
+      "end": "2026-12-10",
+      "tz": "America/Los_Angeles",
+      "city": "Las Vegas",
+      "region": "NV",
+      "country": "US",
+      "website": "https://www.gartner.com/en/conferences/na/infrastructure-operations-cloud-us",
+      "audience": [
+        "compute-and-the-rack",
+        "software-and-optimization",
+        "hyperscalers-and-ai-labs"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: the organiser's own page answers 403 to non-browser clients (probed 2026-09-21), so these dates come from the seed calendar's third-party listing and may be stale. Gartner serves a Cloudflare challenge. Enterprise-IT audience — low relevance to a BESS/AIDC seller.",
+      "sources": [
+        {
+          "sourceKey": "gartner-conferences",
+          "kind": "manual",
+          "url": "https://www.gartner.com/en/conferences/calendar",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "reuters-energy-live-2026",
+      "name": "Reuters Events Energy LIVE 2026",
+      "series": "Reuters Events Energy LIVE",
+      "organiser": "Reuters Events",
+      "kind": "conference",
+      "start": "2026-12-08",
+      "end": "2026-12-09",
+      "tz": "America/Chicago",
+      "city": "Houston",
+      "region": "TX",
+      "country": "US",
+      "website": "https://events.reutersevents.com/reutersevents",
+      "audience": [
+        "utilities",
+        "capital",
+        "clean-firm-and-nuclear"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: reutersevents.com answers a DataDome 403 to non-browser clients (probed 2026-09-21); reutersevents.com/events/energy-live/ 301s to the blocked hub. Dates from the seed calendar's third-party listing.",
+      "sources": [
+        {
+          "sourceKey": "reuters-events",
+          "kind": "manual",
+          "url": "https://events.reutersevents.com/reutersevents",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "ces-2027",
+      "name": "CES 2027",
+      "series": "CES",
+      "organiser": "Consumer Technology Association",
+      "kind": "mega",
+      "start": "2027-01-06",
+      "end": "2027-01-09",
+      "tz": "America/Los_Angeles",
+      "city": "Las Vegas",
+      "region": "NV",
+      "country": "US",
+      "website": "https://www.ces.tech/",
+      "registrationUrl": "https://registration.experientevent.com/showCES271/Wizard/Landing",
+      "exhibitorListUrl": "https://exhibitors.ces.tech/8_0/#/",
+      "agendaUrl": "https://www.ces.tech/attend/conference-program/",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 2,
+      "tierNote": "Silicon and platform launches land here; the corpus names it for product announcements, not for buyer meetings.",
+      "sources": [
+        {
+          "sourceKey": "ces-tech",
+          "kind": "html",
+          "url": "https://www.ces.tech/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "amd",
+          "where": "products"
+        },
+        {
+          "slug": "amd",
+          "where": "sources"
+        },
+        {
+          "slug": "samsung-sdi",
+          "where": "specs"
+        }
+      ]
+    },
+    {
+      "slug": "ptc-27",
+      "name": "PTC'27",
+      "series": "PTC Annual Conference",
+      "organiser": "Pacific Telecommunications Council",
+      "kind": "conference",
+      "start": "2027-01-17",
+      "end": "2027-01-20",
+      "tz": "Pacific/Honolulu",
+      "city": "Honolulu",
+      "region": "HI",
+      "country": "US",
+      "venue": "Hilton Hawaiian Village Waikiki Beach Resort",
+      "venueLatLng": [
+        21.2818,
+        -157.8368
+      ],
+      "website": "https://www.ptc.org/ptc27/",
+      "registrationUrl": "https://council.ptc.org/register-for-ptc27",
+      "agendaUrl": "https://www.ptc.org/ptc27/agenda",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "capital"
+      ],
+      "relevance": 3,
+      "tierNote": "Subsea, carrier and colo dealmaking week — the January calendar's capacity market.",
+      "sources": [
+        {
+          "sourceKey": "ptc-council",
+          "kind": "html",
+          "url": "https://www.ptc.org/ptc27/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "powergen-international-2027",
+      "name": "POWERGEN International 2027",
+      "series": "POWERGEN International",
+      "organiser": "Clarion Events",
+      "kind": "mega",
+      "start": "2027-01-18",
+      "end": "2027-01-21",
+      "tz": "America/Denver",
+      "city": "Salt Lake City",
+      "region": "UT",
+      "country": "US",
+      "venue": "Salt Palace Convention Center",
+      "venueLatLng": [
+        40.7699,
+        -111.8954
+      ],
+      "website": "https://www.powergen.com/",
+      "agendaUrl": "https://www.powergen.com/event-info/event-schedule",
+      "speakersUrl": "https://www.powergen.com/program/keynote",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "bridge-and-on-site-generation",
+        "clean-firm-and-nuclear",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 4,
+      "tierNote": "Generation-side buyers: utilities, IPPs, EPCs and OEMs. The load-growth framing makes it the bridge-generation and gen-set venue.",
+      "sources": [
+        {
+          "sourceKey": "clarion-powergen",
+          "kind": "jsonld",
+          "url": "https://www.powergen.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "sargent-lundy",
+          "where": "developments"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "wef-annual-meeting-2027",
+      "name": "World Economic Forum Annual Meeting 2027",
+      "series": "WEF Annual Meeting",
+      "organiser": "World Economic Forum",
+      "kind": "conference",
+      "start": "2027-01-18",
+      "end": "2027-01-22",
+      "tz": "Europe/Zurich",
+      "city": "Davos",
+      "region": "",
+      "country": "CH",
+      "website": "https://www.weforum.org/events/",
+      "audience": [
+        "capital",
+        "hyperscalers-and-ai-labs",
+        "utilities"
+      ],
+      "relevance": 1,
+      "tierNote": "Not confirmed: weforum.org answers 403 to non-browser clients (probed 2026-09-21). The third-week-of-January Davos-Klosters slot is the Forum's pattern, not a published 2027 date. Invitation-only — carried because three dossiers cite it as where an executive commitment was made, not because it is sellable.",
+      "sources": [
+        {
+          "sourceKey": "wef-events",
+          "kind": "manual",
+          "url": "https://www.weforum.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "eolian",
+          "where": "specs"
+        },
+        {
+          "slug": "marsh-mclennan",
+          "where": "developments"
+        },
+        {
+          "slug": "marsh-mclennan",
+          "where": "products"
+        },
+        {
+          "slug": "marsh-mclennan",
+          "where": "sources"
+        },
+        {
+          "slug": "mgx",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "infocast-projects-money-2027",
+      "name": "Infocast Projects & Money 2027",
+      "series": "Infocast Projects & Money",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "conference",
+      "start": "2027-01-19",
+      "end": "2027-01-21",
+      "tz": "America/Chicago",
+      "city": "New Orleans",
+      "region": "LA",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "capital",
+        "storage-developers-and-ipps",
+        "aidc-developers-and-landlords"
+      ],
+      "relevance": 3,
+      "tierNote": "Project-finance dealmaking.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-ercot-power-next-2027",
+      "name": "Infocast ERCOT Power NEXT 2027",
+      "series": "Infocast ERCOT Power NEXT",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "regional",
+      "start": "2027-01-25",
+      "end": "2027-01-27",
+      "tz": "America/Chicago",
+      "city": "Austin",
+      "region": "TX",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps",
+        "storage-integrators-and-containers"
+      ],
+      "relevance": 4,
+      "tierNote": "The ERCOT storage room — the densest regional venue for Texas BESS offtake and interconnection.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "re-plus-northeast-2027",
+      "name": "RE+ Northeast 2027",
+      "series": "RE+ Northeast",
+      "organiser": "RE+ Events",
+      "kind": "regional",
+      "start": "2027-02-02",
+      "end": "2027-02-04",
+      "tz": "America/New_York",
+      "city": "Boston",
+      "region": "MA",
+      "country": "US",
+      "website": "https://www.re-plus.com/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: RE+ Events' regional index (read 2026-09-21) names the US regional series but publishes no 2027 dates for the Northeast edition. Dates from the seed calendar's third-party listing.",
+      "sources": [
+        {
+          "sourceKey": "re-plus",
+          "kind": "manual",
+          "url": "https://www.re-plus.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "intersolar-esna-2027",
+      "name": "Intersolar & Energy Storage North America 2027",
+      "series": "Intersolar & Energy Storage North America",
+      "organiser": "Solar Promotion International / Diversified Communications",
+      "kind": "mega",
+      "start": "2027-02-09",
+      "end": "2027-02-11",
+      "tz": "America/Los_Angeles",
+      "city": "San Diego",
+      "region": "CA",
+      "country": "US",
+      "venue": "San Diego Convention Center",
+      "venueLatLng": [
+        32.7057,
+        -117.1611
+      ],
+      "website": "https://www.iesna.com/",
+      "registrationUrl": "https://www.iesna.com/flagship/attendee-inquiry/",
+      "exhibitorListUrl": "https://www.iesna.com/flagship/2027-exhibitors/",
+      "agendaUrl": "https://www.iesna.com/schedule-at-a-glance/",
+      "speakersUrl": "https://www.iesna.com/flagship/conference-program/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities",
+        "capital"
+      ],
+      "relevance": 4,
+      "tierNote": "The flagship edition; intersolar.us now redirects to iesna.com.",
+      "sources": [
+        {
+          "sourceKey": "iesna-intersolar",
+          "kind": "html",
+          "url": "https://www.iesna.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "crrc-zhuzhou",
+          "where": "sources"
+        },
+        {
+          "slug": "huawei-digital-power",
+          "where": "developments"
+        },
+        {
+          "slug": "huawei-digital-power",
+          "where": "sources"
+        },
+        {
+          "slug": "ls-energy-solutions",
+          "where": "developments"
+        },
+        {
+          "slug": "ls-energy-solutions",
+          "where": "sources"
+        },
+        {
+          "slug": "ls-energy-solutions",
+          "where": "strategy"
+        },
+        {
+          "slug": "narada",
+          "where": "sources"
+        },
+        {
+          "slug": "power-electronics",
+          "where": "sources"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "developments"
+        },
+        {
+          "slug": "sinexcel",
+          "where": "developments"
+        },
+        {
+          "slug": "sinexcel",
+          "where": "products"
+        },
+        {
+          "slug": "sinexcel",
+          "where": "specs"
+        },
+        {
+          "slug": "sungrow",
+          "where": "developments"
+        },
+        {
+          "slug": "sungrow",
+          "where": "products"
+        },
+        {
+          "slug": "sungrow",
+          "where": "sources"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "developments"
+        }
+      ]
+    },
+    {
+      "slug": "gcpa-miso-spp-2027",
+      "name": "GCPA MISO/SPP Regional Conference 2027",
+      "series": "GCPA MISO/SPP Regional Conference",
+      "organiser": "Gulf Coast Power Association",
+      "kind": "regional",
+      "start": "2027-02-18",
+      "end": "2027-02-19",
+      "tz": "America/Chicago",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.gulfcoastpower.org/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 3,
+      "tierNote": "Listed as 'Save the Date' — the organiser has not published a city or venue.",
+      "sources": [
+        {
+          "sourceKey": "gcpa-events",
+          "kind": "html",
+          "url": "https://www.gulfcoastpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "acp-oms-2027",
+      "name": "ACP Operations, Maintenance & Safety Conference 2027",
+      "series": "ACP Operations, Maintenance & Safety Conference",
+      "organiser": "American Clean Power Association",
+      "kind": "conference",
+      "start": "2027-02-23",
+      "end": "2027-02-25",
+      "tz": "America/Los_Angeles",
+      "city": "Long Beach",
+      "region": "CA",
+      "country": "US",
+      "website": "https://cleanpower.org/events/",
+      "audience": [
+        "storage-developers-and-ipps",
+        "assurance",
+        "software-and-optimization",
+        "insurance-and-risk-transfer"
+      ],
+      "relevance": 3,
+      "tierNote": "O&M and asset-management audience — service contracts rather than new-build sales.",
+      "sources": [
+        {
+          "sourceKey": "acp-events",
+          "kind": "html",
+          "url": "https://cleanpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "distributech-2027",
+      "name": "DISTRIBUTECH International 2027",
+      "series": "DISTRIBUTECH International",
+      "organiser": "Clarion Events",
+      "kind": "mega",
+      "start": "2027-03-01",
+      "end": "2027-03-04",
+      "tz": "America/New_York",
+      "city": "Atlanta",
+      "region": "GA",
+      "country": "US",
+      "venue": "Georgia World Congress Center",
+      "venueLatLng": [
+        33.759,
+        -84.3966
+      ],
+      "website": "https://www.distributech.com/",
+      "exhibitorListUrl": "https://www.distributech.com/exhibit-sponsor/eventsponsors",
+      "agendaUrl": "https://www.distributech.com/event-information/about-distributech-international/event-agenda",
+      "speakersUrl": "https://www.distributech.com/education/keynote",
+      "floorPlanUrl": "https://dt2027.mapyourshow.com/8_0/floorplan/index.cfm",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "software-and-optimization",
+        "storage-developers-and-ipps",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 5,
+      "tierNote": "18,000+ attendees with 3,800+ from utilities — the one week a seller reaches interconnection and T&D decision-makers at scale. Host utility: Southern Company.",
+      "sources": [
+        {
+          "sourceKey": "informa-distributech",
+          "kind": "jsonld",
+          "url": "https://www.distributech.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "dg-matrix",
+          "where": "sources"
+        },
+        {
+          "slug": "mitsubishi-electric",
+          "where": "products"
+        }
+      ]
+    },
+    {
+      "slug": "mwc-barcelona-2027",
+      "name": "MWC Barcelona 2027",
+      "series": "MWC Barcelona",
+      "organiser": "GSMA",
+      "kind": "mega",
+      "start": "2027-03-01",
+      "end": "2027-03-04",
+      "tz": "Europe/Madrid",
+      "city": "Barcelona",
+      "region": "",
+      "country": "ES",
+      "venue": "Fira Gran Via",
+      "venueLatLng": [
+        41.3547,
+        2.1277
+      ],
+      "website": "https://www.mwcbarcelona.com/",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 2,
+      "tierNote": "Edge and AI-RAN power is the only thread that touches this brief; the corpus names it for a product launch.",
+      "sources": [
+        {
+          "sourceKey": "mwc-barcelona",
+          "kind": "jsonld",
+          "url": "https://www.mwcbarcelona.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "liteon",
+          "where": "products"
+        }
+      ]
+    },
+    {
+      "slug": "ceraweek-2027",
+      "name": "CERAWeek 2027",
+      "series": "CERAWeek",
+      "organiser": "S&P Global",
+      "kind": "conference",
+      "start": "2027-03-08",
+      "end": "2027-03-12",
+      "tz": "America/Chicago",
+      "city": "Houston",
+      "region": "TX",
+      "country": "US",
+      "website": "https://ceraweek.com/",
+      "audience": [
+        "utilities",
+        "capital",
+        "clean-firm-and-nuclear",
+        "bridge-and-on-site-generation"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: ceraweek.com answers an Akamai 'Access Denied' 403 to non-browser clients (probed 2026-09-21). The week-of-March-8 slot is CERAWeek's long-standing pattern, not a published 2027 date — treat the dates as unverified. The corpus names CERAWeek in four dossiers as the venue for executive energy commitments.",
+      "sources": [
+        {
+          "sourceKey": "ceraweek",
+          "kind": "manual",
+          "url": "https://ceraweek.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "abb",
+          "where": "developments"
+        },
+        {
+          "slug": "abb",
+          "where": "products"
+        },
+        {
+          "slug": "grid-united",
+          "where": "developments"
+        },
+        {
+          "slug": "grid-united",
+          "where": "products"
+        },
+        {
+          "slug": "hitachi-energy",
+          "where": "developments"
+        },
+        {
+          "slug": "hitachi-energy",
+          "where": "products"
+        },
+        {
+          "slug": "hitachi-energy",
+          "where": "sources"
+        },
+        {
+          "slug": "mitsubishi-power",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "interbattery-2027",
+      "name": "InterBattery 2027",
+      "series": "InterBattery",
+      "organiser": "Korea Battery Industry Association / COEX",
+      "kind": "mega",
+      "start": "2027-03-10",
+      "end": "2027-03-12",
+      "tz": "Asia/Seoul",
+      "city": "Seoul",
+      "region": "",
+      "country": "KR",
+      "venue": "COEX Halls A-D, the Platz, Grand Ballroom",
+      "venueLatLng": [
+        37.5126,
+        127.059
+      ],
+      "website": "https://www.interbattery.or.kr/",
+      "audience": [
+        "cells-and-chemistry",
+        "storage-integrators-and-containers"
+      ],
+      "relevance": 3,
+      "tierNote": "667 exhibitors / 2,382 booths / 77,000 visitors per the organiser. The seed calendar had it third-party sourced; the organiser's own page prints the dates.",
+      "sources": [
+        {
+          "sourceKey": "interbattery",
+          "kind": "html",
+          "url": "https://www.interbattery.or.kr/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "samsung-sdi",
+          "where": "products"
+        },
+        {
+          "slug": "samsung-sdi",
+          "where": "strategy"
+        }
+      ]
+    },
+    {
+      "slug": "infocast-solar-wind-finance-2027",
+      "name": "Infocast Solar + Wind Finance & Investment 2027",
+      "series": "Infocast Solar + Wind Finance & Investment",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "conference",
+      "start": "2027-03-14",
+      "end": "2027-03-17",
+      "tz": "America/Phoenix",
+      "city": "Phoenix",
+      "region": "AZ",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "capital",
+        "storage-developers-and-ipps",
+        "aidc-developers-and-landlords"
+      ],
+      "relevance": 3,
+      "tierNote": "Renewables dealmaking.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "international-battery-seminar-2027",
+      "name": "International Battery Seminar & Exhibit 2027",
+      "series": "International Battery Seminar",
+      "organiser": "Cambridge EnerTech",
+      "kind": "conference",
+      "start": "2027-03-15",
+      "end": "2027-03-18",
+      "tz": "America/New_York",
+      "city": "Orlando",
+      "region": "FL",
+      "country": "US",
+      "website": "https://www.internationalbatteryseminar.com/",
+      "registrationUrl": "https://www.internationalbatteryseminar.com/register-group",
+      "exhibitorListUrl": "https://www.internationalbatteryseminar.com/event-sponsors",
+      "agendaUrl": "https://www.internationalbatteryseminar.com/programs",
+      "speakersUrl": "https://www.internationalbatteryseminar.com/Speaker-Biographies",
+      "audience": [
+        "cells-and-chemistry",
+        "storage-integrators-and-containers",
+        "assurance"
+      ],
+      "relevance": 4,
+      "tierNote": "Cell chemistry and safety research; the technical counterpart to The Battery Show. The organiser publishes the city but not the venue.",
+      "sources": [
+        {
+          "sourceKey": "ibs-cambridge",
+          "kind": "html",
+          "url": "https://www.internationalbatteryseminar.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "nvidia-gtc-2027",
+      "name": "NVIDIA GTC 2027",
+      "series": "NVIDIA GTC",
+      "organiser": "NVIDIA",
+      "kind": "corporate-summit",
+      "start": "2027-03-15",
+      "end": "2027-03-18",
+      "tz": "America/Los_Angeles",
+      "city": "San Jose",
+      "region": "CA",
+      "country": "US",
+      "website": "https://www.nvidia.com/gtc/",
+      "agendaUrl": "https://www.nvidia.com/gtc/session-catalog/",
+      "speakersUrl": "https://www.nvidia.com/gtc/speakers/",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "in-hall-power",
+        "cooling",
+        "power-conversion-and-rack-power-silicon",
+        "aidc-developers-and-landlords"
+      ],
+      "relevance": 5,
+      "tierNote": "The rack-power and 800 VDC architecture announcements land here; the single most cited event in the dossier corpus after DCD. The seed calendar had it third-party sourced — nvidia.com now prints the dates.",
+      "sources": [
+        {
+          "sourceKey": "nvidia-gtc",
+          "kind": "html",
+          "url": "https://www.nvidia.com/gtc/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "amperesand",
+          "where": "developments"
+        },
+        {
+          "slug": "amperesand",
+          "where": "sources"
+        },
+        {
+          "slug": "amperesand",
+          "where": "strategy"
+        },
+        {
+          "slug": "bechtel",
+          "where": "developments"
+        },
+        {
+          "slug": "bechtel",
+          "where": "products"
+        },
+        {
+          "slug": "coolit",
+          "where": "developments"
+        },
+        {
+          "slug": "coolit",
+          "where": "sources"
+        },
+        {
+          "slug": "delta-electronics",
+          "where": "developments"
+        },
+        {
+          "slug": "delta-electronics",
+          "where": "products"
+        },
+        {
+          "slug": "delta-electronics",
+          "where": "sources"
+        },
+        {
+          "slug": "dg-matrix",
+          "where": "developments"
+        },
+        {
+          "slug": "dg-matrix",
+          "where": "sources"
+        },
+        {
+          "slug": "dg-matrix",
+          "where": "strategy"
+        },
+        {
+          "slug": "eaton",
+          "where": "developments"
+        },
+        {
+          "slug": "eaton",
+          "where": "products"
+        },
+        {
+          "slug": "flex",
+          "where": "products"
+        },
+        {
+          "slug": "flex",
+          "where": "sources"
+        },
+        {
+          "slug": "flex",
+          "where": "strategy"
+        },
+        {
+          "slug": "fluidstack",
+          "where": "sources"
+        },
+        {
+          "slug": "heron-power",
+          "where": "sources"
+        },
+        {
+          "slug": "liteon",
+          "where": "developments"
+        },
+        {
+          "slug": "liteon",
+          "where": "products"
+        },
+        {
+          "slug": "liteon",
+          "where": "sources"
+        },
+        {
+          "slug": "liteon",
+          "where": "strategy"
+        },
+        {
+          "slug": "nebius",
+          "where": "products"
+        },
+        {
+          "slug": "novos-power",
+          "where": "sources"
+        },
+        {
+          "slug": "novos-power",
+          "where": "strategy"
+        },
+        {
+          "slug": "nvidia",
+          "where": "developments"
+        },
+        {
+          "slug": "nvidia",
+          "where": "products"
+        },
+        {
+          "slug": "nvidia",
+          "where": "sources"
+        },
+        {
+          "slug": "schneider-electric",
+          "where": "developments"
+        },
+        {
+          "slug": "schneider-electric",
+          "where": "products"
+        },
+        {
+          "slug": "schneider-electric",
+          "where": "sources"
+        },
+        {
+          "slug": "switch",
+          "where": "developments"
+        },
+        {
+          "slug": "switch",
+          "where": "products"
+        },
+        {
+          "slug": "vicor",
+          "where": "developments"
+        },
+        {
+          "slug": "vicor",
+          "where": "sources"
+        },
+        {
+          "slug": "vicor",
+          "where": "strategy"
+        }
+      ]
+    },
+    {
+      "slug": "dcd-connect-new-york-2027",
+      "name": "DCD>Connect New York 2027",
+      "series": "DCD>Connect New York",
+      "organiser": "DatacenterDynamics (Informa)",
+      "kind": "conference",
+      "start": "2027-03-17",
+      "end": "2027-03-18",
+      "tz": "America/New_York",
+      "city": "New York",
+      "region": "NY",
+      "country": "US",
+      "venue": "New York Marriott Marquis",
+      "venueLatLng": [
+        40.759,
+        -73.9855
+      ],
+      "website": "https://www.datacenterdynamics.com/en/dcdconnect-live/new-york/2027/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "storage-integrators-and-containers",
+        "capital"
+      ],
+      "relevance": 5,
+      "tierNote": "UNRESOLVED DATE CONFLICT, carried from the seed calendar. Two third-party listings disagree: Clocate (read 2026-09-21; its JSON-LD startDate is 2027-03-17) prints '17-18 Mar 2027, New York Marriott Marquis'; a second widely-mirrored listing prints 17-18 May 2027 at the same venue. DCD's own page is Cloudflare-blocked to non-browser clients, so neither can be checked against the organiser. March is recorded because it is the listing actually read this session; the row stays tentative until a browser session confirms it.",
+      "sources": [
+        {
+          "sourceKey": "clocate-listings",
+          "kind": "manual",
+          "url": "https://www.clocate.com/data-centre-dynamics-dcd-connect-new-york/58062/",
+          "lastConfirmed": "2026-09-21"
+        },
+        {
+          "sourceKey": "dcd-events",
+          "kind": "manual",
+          "url": "https://www.datacenterdynamics.com/en/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "battery-japan-2027",
+      "name": "Battery Japan 2027 (International Rechargeable Battery Expo)",
+      "series": "Battery Japan",
+      "organiser": "RX Japan",
+      "kind": "mega",
+      "start": "2027-03-24",
+      "end": "2027-03-26",
+      "tz": "Asia/Tokyo",
+      "city": "Tokyo",
+      "region": "",
+      "country": "JP",
+      "website": "https://www.battery-japan.jp/",
+      "audience": [
+        "cells-and-chemistry",
+        "storage-integrators-and-containers"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: battery-japan.jp does not resolve from this network (probed 2026-09-21). Dates from the seed calendar's third-party listing.",
+      "sources": [
+        {
+          "sourceKey": "battery-japan-listing",
+          "kind": "manual",
+          "url": "https://www.battery-japan.jp/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "re-plus-texas-2027",
+      "name": "RE+ Texas 2027",
+      "series": "RE+ Texas",
+      "organiser": "RE+ Events",
+      "kind": "regional",
+      "start": "2027-03-24",
+      "end": "2027-03-25",
+      "tz": "America/Chicago",
+      "city": "Houston",
+      "region": "TX",
+      "country": "US",
+      "website": "https://www.re-plus.com/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 4,
+      "tierNote": "Not confirmed: as RE+ Northeast above — no 2027 dates on the organiser's regional index. Relevance 4 on the ERCOT storage pipeline alone.",
+      "sources": [
+        {
+          "sourceKey": "re-plus",
+          "kind": "manual",
+          "url": "https://www.re-plus.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "semicon-west-2027",
+      "name": "SEMICON West 2027",
+      "series": "SEMICON West",
+      "organiser": "SEMI",
+      "kind": "mega",
+      "start": "2027-03-30",
+      "end": "2027-04-01",
+      "tz": "America/Phoenix",
+      "city": "Phoenix",
+      "region": "AZ",
+      "country": "US",
+      "venue": "Phoenix Convention Center",
+      "venueLatLng": [
+        33.4466,
+        -112.07
+      ],
+      "website": "https://www.semiconwest.org/",
+      "audience": [
+        "compute-and-the-rack",
+        "power-conversion-and-rack-power-silicon",
+        "epc-and-construction"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: semi.org and semiconwest.org both answer a Cloudflare challenge (403, probed 2026-09-21). SEMI's own press release announcing the permanent move to Phoenix on a spring schedule gives March 30 - April 1 2027; it is hosted on the blocked domain, so the row rests on secondary coverage of that release.",
+      "sources": [
+        {
+          "sourceKey": "semi-semiconwest",
+          "kind": "manual",
+          "url": "https://www.semiconwest.org/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "acp-clean-power-on-the-hill-2027",
+      "name": "ACP Clean Power on The Hill 2027",
+      "series": "ACP Clean Power on The Hill",
+      "organiser": "American Clean Power Association",
+      "kind": "conference",
+      "start": "2027-04-06",
+      "end": "2027-04-07",
+      "tz": "America/New_York",
+      "city": "Washington",
+      "region": "DC",
+      "country": "US",
+      "website": "https://cleanpower.org/events/",
+      "audience": [
+        "utilities",
+        "capital",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 1,
+      "tierNote": "Policy advocacy day, not a sales venue.",
+      "sources": [
+        {
+          "sourceKey": "acp-events",
+          "kind": "html",
+          "url": "https://cleanpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "esie-beijing-2027",
+      "name": "ESIE 2027 — Energy Storage International Conference and Expo",
+      "series": "ESIE",
+      "organiser": "China Energy Storage Alliance",
+      "kind": "mega",
+      "start": "2027-04-10",
+      "end": "2027-04-12",
+      "tz": "Asia/Shanghai",
+      "city": "Beijing",
+      "region": "",
+      "country": "CN",
+      "website": "https://www.esieexpo.com/en/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "assurance"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: esieexpo.com answers 503 (probed 2026-09-21) and the organiser has not published 2027 dates anywhere reachable. The April slot is ESIE's pattern, not a published date — treat as unverified. The corpus names it once, as the venue where a sixth-edition fire-testing certification was announced.",
+      "sources": [
+        {
+          "sourceKey": "esie-listing",
+          "kind": "manual",
+          "url": "https://www.esieexpo.com/en/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "csa-group",
+          "where": "developments"
+        }
+      ]
+    },
+    {
+      "slug": "acp-siting-permitting-2027",
+      "name": "ACP Siting + Permitting Conference 2027",
+      "series": "ACP Siting + Permitting Conference",
+      "organiser": "American Clean Power Association",
+      "kind": "conference",
+      "start": "2027-04-13",
+      "end": "2027-04-15",
+      "tz": "America/Chicago",
+      "city": "New Orleans",
+      "region": "LA",
+      "country": "US",
+      "website": "https://cleanpower.org/events/",
+      "audience": [
+        "storage-developers-and-ipps",
+        "epc-and-construction",
+        "assurance"
+      ],
+      "relevance": 2,
+      "tierNote": "Development-stage audience. Listed separately from PEAK on the organiser's events index — the seed calendar merged the two into one Apr 13-17 row.",
+      "sources": [
+        {
+          "sourceKey": "acp-events",
+          "kind": "html",
+          "url": "https://cleanpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "acp-peak-2027",
+      "name": "ACP PEAK: Performance, Modeling & Assessment Conference 2027",
+      "series": "ACP PEAK: Performance, Modeling & Assessment Conference",
+      "organiser": "American Clean Power Association",
+      "kind": "conference",
+      "start": "2027-04-15",
+      "end": "2027-04-17",
+      "tz": "America/Chicago",
+      "city": "New Orleans",
+      "region": "LA",
+      "country": "US",
+      "website": "https://cleanpower.org/events/",
+      "audience": [
+        "software-and-optimization",
+        "assurance",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 2,
+      "tierNote": "Modelling and performance engineers; overlaps Siting + Permitting by one day.",
+      "sources": [
+        {
+          "sourceKey": "acp-events",
+          "kind": "html",
+          "url": "https://cleanpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "gcpa-spring-2027",
+      "name": "GCPA Spring Conference 2027",
+      "series": "GCPA Spring Conference",
+      "organiser": "Gulf Coast Power Association",
+      "kind": "regional",
+      "start": "2027-04-19",
+      "end": "2027-04-21",
+      "tz": "America/Chicago",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.gulfcoastpower.org/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 4,
+      "tierNote": "Listed as 'Save the Date' — the organiser has not published a city or venue.",
+      "sources": [
+        {
+          "sourceKey": "gcpa-events",
+          "kind": "html",
+          "url": "https://www.gulfcoastpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "hannover-messe-2027",
+      "name": "HANNOVER MESSE 2027",
+      "series": "HANNOVER MESSE",
+      "organiser": "Deutsche Messe AG",
+      "kind": "mega",
+      "start": "2027-04-19",
+      "end": "2027-04-23",
+      "tz": "Europe/Berlin",
+      "city": "Hannover",
+      "region": "",
+      "country": "DE",
+      "website": "https://www.hannovermesse.de/en/",
+      "audience": [
+        "grid-equipment",
+        "epc-and-construction",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: hannovermesse.de returns 200 but serves no date or venue text to non-browser clients (probed 2026-09-21, 0 JSON-LD Event objects). Dates are the seed calendar's third-party listing shifted to Deutsche Messe's published Monday-Friday April pattern and should be treated as unverified.",
+      "sources": [
+        {
+          "sourceKey": "hannover-messe",
+          "kind": "manual",
+          "url": "https://www.hannovermesse.de/en/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "energy-storage-summit-usa-2027",
+      "name": "Energy Storage Summit USA 2027",
+      "series": "Energy Storage Summit USA",
+      "organiser": "Solar Media (Informa Markets)",
+      "kind": "conference",
+      "start": "2027-04-20",
+      "end": "2027-04-21",
+      "tz": "America/Chicago",
+      "city": "Dallas",
+      "region": "TX",
+      "country": "US",
+      "venue": "Renaissance Dallas at Plano Legacy West Hotel",
+      "website": "https://storageusa.solarenergyevents.com/",
+      "registrationUrl": "https://info.informamanufacturing.com/essus-2027",
+      "exhibitorListUrl": "https://storageusa.solarenergyevents.com/sponsors-partners/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "capital",
+        "software-and-optimization",
+        "insurance-and-risk-transfer"
+      ],
+      "relevance": 5,
+      "tierNote": "Two days, all storage, Texas-weighted. The 2027 venue moves to Plano — the seed calendar's Hilton Dallas Lincoln Centre was the 2026 venue.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-03-24",
+          "end": "2026-03-25",
+          "city": "Dallas",
+          "venue": "Hilton Dallas Lincoln Centre"
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "storageusa-solarmedia",
+          "kind": "html",
+          "url": "https://storageusa.solarenergyevents.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "spearmint-energy",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "woodmac-na-power-renewables-2027",
+      "name": "Wood Mackenzie North American Power & Renewables Forum 2027",
+      "series": "Wood Mackenzie North American Power & Renewables Forum",
+      "organiser": "Wood Mackenzie",
+      "kind": "conference",
+      "start": "2027-04-28",
+      "end": "2027-04-29",
+      "tz": "America/Denver",
+      "city": "Denver",
+      "region": "CO",
+      "country": "US",
+      "venue": "Omni Interlocken Hotel",
+      "website": "https://www.woodmac.com/events/",
+      "audience": [
+        "utilities",
+        "capital",
+        "storage-developers-and-ipps",
+        "software-and-optimization"
+      ],
+      "relevance": 3,
+      "tierNote": "Analyst-led forecast forum. The seed calendar listed this as 'not yet dated for 2027' — the organiser now publishes April 28-29.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-04-29",
+          "end": "2026-04-30",
+          "city": "Denver",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "woodmac-events",
+          "kind": "html",
+          "url": "https://www.woodmac.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "bisnow-dice-national-2027",
+      "name": "Bisnow National Data Center Investment Conference and Expo (DICE) 2027",
+      "series": "Bisnow National Data Center Investment Conference and Expo (DICE)",
+      "organiser": "Bisnow Media",
+      "kind": "conference",
+      "start": "2027-05-04",
+      "end": "2027-05-06",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.bisnow.com/events",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 4,
+      "tierNote": "Bisnow's three-day national investment conference — the 'DICE' brand. The organiser's calendar prints it as 'National Data Center Investment Conference And Expo'; 'DICE South' and 'DICE West' are not on the calendar for 2027.",
+      "sources": [
+        {
+          "sourceKey": "bisnow-events",
+          "kind": "html",
+          "url": "https://www.bisnow.com/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "compass-datacenters",
+          "where": "products"
+        },
+        {
+          "slug": "compass-datacenters",
+          "where": "sources"
+        },
+        {
+          "slug": "compass-datacenters",
+          "where": "specs"
+        },
+        {
+          "slug": "compass-datacenters",
+          "where": "strategy"
+        },
+        {
+          "slug": "entergy",
+          "where": "developments"
+        },
+        {
+          "slug": "entergy",
+          "where": "sources"
+        },
+        {
+          "slug": "fermi-america",
+          "where": "sources"
+        },
+        {
+          "slug": "powerhouse-data-centers",
+          "where": "developments"
+        },
+        {
+          "slug": "powerhouse-data-centers",
+          "where": "products"
+        },
+        {
+          "slug": "powerhouse-data-centers",
+          "where": "sources"
+        },
+        {
+          "slug": "prime-data-centers",
+          "where": "developments"
+        },
+        {
+          "slug": "prime-data-centers",
+          "where": "sources"
+        },
+        {
+          "slug": "prime-data-centers",
+          "where": "strategy"
+        },
+        {
+          "slug": "tract",
+          "where": "products"
+        },
+        {
+          "slug": "tract",
+          "where": "sources"
+        },
+        {
+          "slug": "tract",
+          "where": "specs"
+        }
+      ]
+    },
+    {
+      "slug": "infocast-tax-credits-2027",
+      "name": "Infocast Tax Credits & Transferability 2027",
+      "series": "Infocast Tax Credits & Transferability",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "conference",
+      "start": "2027-05-04",
+      "end": "2027-05-05",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "capital"
+      ],
+      "relevance": 2,
+      "tierNote": "Tax-equity and transferability; city not yet published by the organiser.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "dcf-trends-microgrid-knowledge-2027",
+      "name": "Data Center Frontier Trends Summit + Microgrid Knowledge 2027",
+      "series": "Data Center Frontier Trends Summit",
+      "organiser": "Endeavor Business Media",
+      "kind": "conference",
+      "start": "2027-05-05",
+      "end": "2027-05-07",
+      "tz": "America/Phoenix",
+      "city": "Glendale",
+      "region": "AZ",
+      "country": "US",
+      "venue": "Renaissance Phoenix Glendale Hotel & Spa",
+      "venueLatLng": [
+        33.532,
+        -112.261
+      ],
+      "website": "https://www.dcftrends.com/",
+      "speakersUrl": "https://www.dcftrends.com/2027/speakers",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "storage-integrators-and-containers",
+        "bridge-and-on-site-generation",
+        "software-and-optimization"
+      ],
+      "relevance": 5,
+      "tierNote": "Fourth edition, moved from Reston to Glendale and co-located with Microgrid Knowledge for the first time — shared show floor, separate programmes. The behind-the-meter generation conversation and the data-center one in one room.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "",
+          "end": "",
+          "city": "Reston",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "dcftrends",
+          "kind": "html",
+          "url": "https://www.dcftrends.com/",
+          "lastConfirmed": "2026-09-21"
+        },
+        {
+          "sourceKey": "microgrid-conferences",
+          "kind": "html",
+          "url": "https://www.microgridconferences.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "caterpillar",
+          "where": "sources"
+        },
+        {
+          "slug": "enchanted-rock",
+          "where": "sources"
+        },
+        {
+          "slug": "rolls-royce-power-systems",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "intersolar-esna-texas-2027",
+      "name": "Intersolar & Energy Storage North America Texas 2027",
+      "series": "Intersolar & Energy Storage North America Texas",
+      "organiser": "Solar Promotion International / Diversified Communications",
+      "kind": "regional",
+      "start": "2027-05-11",
+      "end": "2027-05-12",
+      "tz": "America/Chicago",
+      "city": "",
+      "region": "TX",
+      "country": "US",
+      "website": "https://www.iesna.com/texas/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: the organiser's Texas page (read 2026-09-21) says only '2027 Edition Details to Come'. Dates carry the 2026 edition's May slot and are a pattern, not a publication; no city is recorded because none is published.",
+      "sources": [
+        {
+          "sourceKey": "iesna-intersolar",
+          "kind": "manual",
+          "url": "https://www.iesna.com/texas/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "cibf-2027",
+      "name": "CIBF 2027 — China International Battery Fair",
+      "series": "CIBF",
+      "organiser": "China Industrial Association of Power Sources (CIAPS)",
+      "kind": "mega",
+      "start": "2027-05-12",
+      "end": "2027-05-14",
+      "tz": "Asia/Shanghai",
+      "city": "Shenzhen",
+      "region": "",
+      "country": "CN",
+      "website": "https://www.cibf.com.cn/en/",
+      "audience": [
+        "cells-and-chemistry",
+        "storage-integrators-and-containers"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: cibf.com.cn answers 503 (probed 2026-09-21). Dates from the seed calendar. The corpus names CIBF as a cell-launch venue.",
+      "sources": [
+        {
+          "sourceKey": "cibf-listing",
+          "kind": "manual",
+          "url": "https://www.cibf.com.cn/en/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "cornex",
+          "where": "developments"
+        },
+        {
+          "slug": "cornex",
+          "where": "products"
+        },
+        {
+          "slug": "cornex",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "cleanpower-2027",
+      "name": "CLEANPOWER 2027",
+      "series": "CLEANPOWER",
+      "organiser": "American Clean Power Association",
+      "kind": "mega",
+      "start": "2027-05-24",
+      "end": "2027-05-27",
+      "tz": "America/Los_Angeles",
+      "city": "Anaheim",
+      "region": "CA",
+      "country": "US",
+      "website": "https://cleanpower.org/events/cleanpower-2027/",
+      "registrationUrl": "https://cleanpower.org/expo/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities",
+        "epc-and-construction",
+        "capital"
+      ],
+      "relevance": 5,
+      "tierNote": "ACP's flagship. The organiser's own 2027 landing page still carries a 'CLEANPOWER 2026 will be held May 24-27, 2027' typo in its body copy; the header and the events index both print May 24-27 2027 — dates taken from those.",
+      "sources": [
+        {
+          "sourceKey": "acp-events",
+          "kind": "html",
+          "url": "https://cleanpower.org/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "cornex",
+          "where": "sources"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "developments"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "sources"
+        },
+        {
+          "slug": "solv-energy",
+          "where": "developments"
+        },
+        {
+          "slug": "solv-energy",
+          "where": "sources"
+        },
+        {
+          "slug": "trina-storage",
+          "where": "products"
+        }
+      ]
+    },
+    {
+      "slug": "data-center-world-2027",
+      "name": "Data Center World 2027",
+      "series": "Data Center World",
+      "organiser": "AFCOM / Informa",
+      "kind": "mega",
+      "start": "2027-05-24",
+      "end": "2027-05-27",
+      "tz": "America/Chicago",
+      "city": "Nashville",
+      "region": "TN",
+      "country": "US",
+      "venue": "Music City Center",
+      "venueLatLng": [
+        36.158,
+        -86.776
+      ],
+      "website": "https://www.datacenterworld.com/",
+      "registrationUrl": "https://info.datacenterworld.com/datacenterusa_reginterest",
+      "exhibitorListUrl": "https://exhibitors.datacenterworld.com/",
+      "agendaUrl": "https://schedule.datacenterworld.com/",
+      "speakersUrl": "https://2027.c4p.datacenterworld.com/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "storage-integrators-and-containers"
+      ],
+      "relevance": 5,
+      "tierNote": "AFCOM's operator audience — facility and critical-power buyers rather than IT. Call for proposals closes 2026-10-09.",
+      "sources": [
+        {
+          "sourceKey": "informa-data-center-world",
+          "kind": "jsonld",
+          "url": "https://www.datacenterworld.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "delta-electronics",
+          "where": "sources"
+        },
+        {
+          "slug": "piller",
+          "where": "developments"
+        },
+        {
+          "slug": "piller",
+          "where": "products"
+        },
+        {
+          "slug": "proenergy",
+          "where": "specs"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "developments"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "products"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "sources"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "developments"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "products"
+        },
+        {
+          "slug": "sunwoda",
+          "where": "sources"
+        },
+        {
+          "slug": "zhonhen",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "computex-2027",
+      "name": "COMPUTEX 2027",
+      "series": "COMPUTEX",
+      "organiser": "TAITRA / TCA",
+      "kind": "mega",
+      "start": "2027-06-01",
+      "end": "2027-06-04",
+      "tz": "Asia/Taipei",
+      "city": "Taipei",
+      "region": "",
+      "country": "TW",
+      "venue": "Taipei Nangang Exhibition Center Halls 1 & 2, TWTC Hall 1, TICC",
+      "venueLatLng": [
+        25.0556,
+        121.6168
+      ],
+      "website": "https://www.computextaipei.com.tw/en/index.html",
+      "exhibitorListUrl": "https://www.computextaipei.com.tw/en/exhibitor/index.html",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "power-conversion-and-rack-power-silicon",
+        "cooling"
+      ],
+      "relevance": 3,
+      "tierNote": "Where the rack-power and cooling supply chain shows silicon. Note: the organiser's robots.txt disallows the fetched path, so the poller must not read it.",
+      "sources": [
+        {
+          "sourceKey": "computex-taipei",
+          "kind": "html",
+          "url": "https://www.computextaipei.com.tw/en/index.html",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "delta-electronics",
+          "where": "developments"
+        },
+        {
+          "slug": "delta-electronics",
+          "where": "products"
+        },
+        {
+          "slug": "delta-electronics",
+          "where": "sources"
+        },
+        {
+          "slug": "delta-electronics",
+          "where": "specs"
+        },
+        {
+          "slug": "liteon",
+          "where": "developments"
+        },
+        {
+          "slug": "liteon",
+          "where": "products"
+        },
+        {
+          "slug": "liteon",
+          "where": "sources"
+        },
+        {
+          "slug": "liteon",
+          "where": "specs"
+        },
+        {
+          "slug": "megmeet",
+          "where": "strategy"
+        },
+        {
+          "slug": "nvidia",
+          "where": "developments"
+        },
+        {
+          "slug": "vicor",
+          "where": "developments"
+        }
+      ]
+    },
+    {
+      "slug": "datacloud-global-congress-2027",
+      "name": "Datacloud Global Congress 2027",
+      "series": "Datacloud Global Congress",
+      "organiser": "Datacloud (techoraco / BroadGroup)",
+      "kind": "conference",
+      "start": "2027-06-01",
+      "end": "2027-06-04",
+      "tz": "Europe/Paris",
+      "city": "Cannes",
+      "region": "",
+      "country": "FR",
+      "website": "https://datacloudseries.com/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "capital",
+        "neoclouds"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: the Global Congress page datacloudcongress.com 301s to an archived BroadGroup page carrying only 2024/2025 content, and the Datacloud series index lists the 2026 edition (1-4 June 2026, Cannes) without a 2027 date (read 2026-09-21). Dates from the seed calendar.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-06-01",
+          "end": "2026-06-04",
+          "city": "Cannes",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "datacloud-series",
+          "kind": "html",
+          "url": "https://datacloudseries.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "piller",
+          "where": "developments"
+        },
+        {
+          "slug": "piller",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "snec-pv-es-2027",
+      "name": "SNEC PV Power Expo & ES+ 2027",
+      "series": "SNEC PV Power Expo",
+      "organiser": "SNEC / Shanghai New Energy Chamber of Commerce",
+      "kind": "mega",
+      "start": "2027-06-02",
+      "end": "2027-06-04",
+      "tz": "Asia/Shanghai",
+      "city": "Shanghai",
+      "region": "",
+      "country": "CN",
+      "website": "https://www.snec.org.cn/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "cells-and-chemistry"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: snec.org.cn 302s to pv.snec.org.cn, whose English and listing paths both answer 404 (probed 2026-09-21). Dates from the seed calendar. The corpus names SNEC in seven dossiers as a Chinese launch venue.",
+      "sources": [
+        {
+          "sourceKey": "snec-listing",
+          "kind": "manual",
+          "url": "https://www.snec.org.cn/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "cornex",
+          "where": "developments"
+        },
+        {
+          "slug": "cornex",
+          "where": "sources"
+        },
+        {
+          "slug": "gotion",
+          "where": "products"
+        },
+        {
+          "slug": "great-power",
+          "where": "developments"
+        },
+        {
+          "slug": "great-power",
+          "where": "products"
+        },
+        {
+          "slug": "great-power",
+          "where": "sources"
+        },
+        {
+          "slug": "great-power",
+          "where": "specs"
+        },
+        {
+          "slug": "hithium",
+          "where": "developments"
+        },
+        {
+          "slug": "hithium",
+          "where": "products"
+        },
+        {
+          "slug": "hithium",
+          "where": "sources"
+        },
+        {
+          "slug": "hyperstrong",
+          "where": "sources"
+        },
+        {
+          "slug": "narada",
+          "where": "products"
+        },
+        {
+          "slug": "narada",
+          "where": "specs"
+        },
+        {
+          "slug": "rept",
+          "where": "developments"
+        },
+        {
+          "slug": "rept",
+          "where": "products"
+        }
+      ]
+    },
+    {
+      "slug": "7x24-exchange-spring-2027",
+      "name": "7x24 Exchange Spring 2027",
+      "series": "7x24 Exchange International Conference",
+      "organiser": "7x24 Exchange International",
+      "kind": "conference",
+      "start": "2027-06-06",
+      "end": "2027-06-09",
+      "tz": "America/New_York",
+      "city": "Orlando",
+      "region": "FL",
+      "country": "US",
+      "venue": "JW Marriott Grande Lakes",
+      "venueLatLng": [
+        28.4054,
+        -81.4926
+      ],
+      "website": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "assurance"
+      ],
+      "relevance": 5,
+      "tierNote": "End-user-heavy: owners and operators of mission-critical facilities, not a trade-show floor. Theme: Powering the AI Surge.",
+      "sources": [
+        {
+          "sourceKey": "7x24-exchange",
+          "kind": "html",
+          "url": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "the-smarter-e-europe-2027",
+      "name": "The smarter E Europe 2027 (with ees Europe and Intersolar Europe)",
+      "series": "The smarter E Europe",
+      "organiser": "Solar Promotion GmbH / FWTM",
+      "kind": "mega",
+      "start": "2027-06-08",
+      "end": "2027-06-10",
+      "tz": "Europe/Berlin",
+      "city": "Munich",
+      "region": "",
+      "country": "DE",
+      "venue": "Messe München",
+      "venueLatLng": [
+        48.1351,
+        11.6984
+      ],
+      "website": "https://www.thesmarterE.de/",
+      "exhibitorListUrl": "https://www.thesmarterE.de/exhibitorlist",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities",
+        "grid-equipment"
+      ],
+      "relevance": 3,
+      "tierNote": "One ticket across Intersolar Europe, ees Europe, Power2Drive and EM-Power. The corpus names 'ees Europe' and 'The smarter E' as the same week — they are. Exhibitions Jun 8-10; the conferences run Jun 7-8 at the ICM.",
+      "sources": [
+        {
+          "sourceKey": "thesmartere",
+          "kind": "html",
+          "url": "https://www.thesmarterE.de/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "cornex",
+          "where": "developments"
+        },
+        {
+          "slug": "cornex",
+          "where": "sources"
+        },
+        {
+          "slug": "crrc-zhuzhou",
+          "where": "developments"
+        },
+        {
+          "slug": "crrc-zhuzhou",
+          "where": "sources"
+        },
+        {
+          "slug": "envision-energy",
+          "where": "products"
+        },
+        {
+          "slug": "envision-energy",
+          "where": "sources"
+        },
+        {
+          "slug": "hyperstrong",
+          "where": "developments"
+        },
+        {
+          "slug": "hyperstrong",
+          "where": "sources"
+        },
+        {
+          "slug": "ls-energy-solutions",
+          "where": "sources"
+        },
+        {
+          "slug": "stem",
+          "where": "developments"
+        },
+        {
+          "slug": "stem",
+          "where": "products"
+        },
+        {
+          "slug": "stem",
+          "where": "sources"
+        },
+        {
+          "slug": "stem",
+          "where": "specs"
+        },
+        {
+          "slug": "stem",
+          "where": "strategy"
+        },
+        {
+          "slug": "sungrow",
+          "where": "developments"
+        },
+        {
+          "slug": "sungrow",
+          "where": "products"
+        },
+        {
+          "slug": "sungrow",
+          "where": "sources"
+        },
+        {
+          "slug": "sungrow",
+          "where": "specs"
+        }
+      ]
+    },
+    {
+      "slug": "eei-2027",
+      "name": "EEI 2027 Annual Convention",
+      "series": "EEI Annual Convention",
+      "organiser": "Edison Electric Institute",
+      "kind": "conference",
+      "start": "2027-06-14",
+      "end": "2027-06-16",
+      "tz": "America/New_York",
+      "city": "Orlando",
+      "region": "FL",
+      "country": "US",
+      "website": "https://www.eei.org/en/events",
+      "audience": [
+        "utilities",
+        "capital"
+      ],
+      "relevance": 3,
+      "tierNote": "Not confirmed: EEI's events page (read 2026-09-21) links a Meetings section but publishes no dates or venues on the page itself. Dates from the seed calendar's third-party listing. Investor-owned-utility CEOs — a relationship venue, not a booth one.",
+      "sources": [
+        {
+          "sourceKey": "eei-events",
+          "kind": "manual",
+          "url": "https://www.eei.org/en/events",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "intersolar-esna-midwest-2027",
+      "name": "Intersolar & Energy Storage North America Midwest 2027",
+      "series": "Intersolar & Energy Storage North America Midwest",
+      "organiser": "Solar Promotion International / Diversified Communications",
+      "kind": "regional",
+      "start": "2027-06-14",
+      "end": "2027-06-16",
+      "tz": "America/Chicago",
+      "city": "Rosemont",
+      "region": "IL",
+      "country": "US",
+      "website": "https://www.iesna.com/midwest/",
+      "registrationUrl": "https://www.iesna.com/midwest/attend/",
+      "agendaUrl": "https://www.iesna.com/midwest/schedule-at-a-glance/",
+      "speakersUrl": "https://www.iesna.com/midwest/conference-program/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities"
+      ],
+      "relevance": 3,
+      "tierNote": "Regional edition the seed calendar did not carry.",
+      "sources": [
+        {
+          "sourceKey": "iesna-intersolar",
+          "kind": "html",
+          "url": "https://www.iesna.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "battery-show-europe-2027",
+      "name": "The Battery Show Europe 2027",
+      "series": "The Battery Show Europe",
+      "organiser": "Informa Markets",
+      "kind": "mega",
+      "start": "2027-06-22",
+      "end": "2027-06-24",
+      "tz": "Europe/Berlin",
+      "city": "Stuttgart",
+      "region": "",
+      "country": "DE",
+      "venue": "Messe Stuttgart",
+      "venueLatLng": [
+        48.69,
+        9.193
+      ],
+      "website": "https://www.thebatteryshow.eu/en/home.html",
+      "registrationUrl": "https://www.thebatteryshow.eu/battery-registration-inquiry/",
+      "exhibitorListUrl": "https://tbse26.mapyourshow.com/8_0/explore/exhibitor-gallery.cfm?featured=false",
+      "audience": [
+        "cells-and-chemistry",
+        "storage-integrators-and-containers"
+      ],
+      "relevance": 3,
+      "tierNote": "The seed calendar had this third-party sourced; the organiser's own page prints the dates, the venue and the hours.",
+      "hours": [
+        {
+          "date": "2027-06-22",
+          "open": "09:00",
+          "close": "17:00"
+        },
+        {
+          "date": "2027-06-23",
+          "open": "09:00",
+          "close": "17:00"
+        },
+        {
+          "date": "2027-06-24",
+          "open": "09:00",
+          "close": "15:00"
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "informa-battery-show-europe",
+          "kind": "html",
+          "url": "https://www.thebatteryshow.eu/en/home.html",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-transmission-interconnection-2027",
+      "name": "Infocast Transmission & Interconnection Summit 2027",
+      "series": "Infocast Transmission & Interconnection Summit",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "conference",
+      "start": "2027-06-22",
+      "end": "2027-06-24",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "VA",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities"
+      ],
+      "relevance": 3,
+      "tierNote": "Interconnection queue and transmission build; the organiser lists 'Virginia' without a city.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-powerup-data-centers-2027",
+      "name": "Infocast PowerUp Data Centers 2027",
+      "series": "Infocast PowerUp Data Centers",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "conference",
+      "start": "2027-07-20",
+      "end": "2027-07-22",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "bridge-and-on-site-generation",
+        "capital"
+      ],
+      "relevance": 4,
+      "tierNote": "City not yet published by the organiser.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "esvolta",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "amd-advancing-ai-2027",
+      "name": "AMD Advancing AI 2027",
+      "series": "AMD Advancing AI",
+      "organiser": "AMD",
+      "kind": "corporate-summit",
+      "start": "2027-07-22",
+      "end": "2027-07-22",
+      "tz": "America/Los_Angeles",
+      "city": "",
+      "region": "CA",
+      "country": "US",
+      "website": "https://www.amd.com/en/corporate/events.html",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "power-conversion-and-rack-power-silicon",
+        "cooling"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: AMD's events page answers 503 to non-browser clients and announces no 2027 edition (probed 2026-09-21). The July date follows the 2026 edition (23 July 2026, where Helios entered production and the MI400 Series launched) and is a pattern, not a publication. Carried because the corpus names it as a rack-architecture launch venue.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-07-23",
+          "end": "2026-07-23",
+          "city": "",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "amd-events",
+          "kind": "manual",
+          "url": "https://www.amd.com/en/corporate/events.html",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "amd",
+          "where": "developments"
+        },
+        {
+          "slug": "amd",
+          "where": "products"
+        },
+        {
+          "slug": "amd",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "ieee-pes-general-meeting-2027",
+      "name": "IEEE PES General Meeting 2027",
+      "series": "IEEE PES General Meeting",
+      "organiser": "IEEE Power & Energy Society",
+      "kind": "conference",
+      "start": "2027-07-25",
+      "end": "2027-07-29",
+      "tz": "America/Los_Angeles",
+      "city": "San Francisco",
+      "region": "CA",
+      "country": "US",
+      "venue": "Hilton San Francisco Union Square",
+      "venueLatLng": [
+        37.7858,
+        -122.4104
+      ],
+      "website": "https://pes-gm.org/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "software-and-optimization",
+        "assurance"
+      ],
+      "relevance": 3,
+      "tierNote": "Theme: 'Grid Modernization: Scaling the Grid for Emerging Demand'. Academic and utility-planning audience; paper submissions opened 2026-10-06.",
+      "sources": [
+        {
+          "sourceKey": "ieee-pes-gm",
+          "kind": "html",
+          "url": "https://pes-gm.org/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "sargent-lundy",
+          "where": "developments"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "products"
+        },
+        {
+          "slug": "sargent-lundy",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "solar-storage-live-usa-2027",
+      "name": "Solar & Storage Live USA 2027",
+      "series": "Solar & Storage Live USA",
+      "organiser": "Terrapinn",
+      "kind": "conference",
+      "start": "2027-08-11",
+      "end": "2027-08-12",
+      "tz": "America/New_York",
+      "city": "Philadelphia",
+      "region": "PA",
+      "country": "US",
+      "website": "https://www.solarandstoragelive.com/usa/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: solarandstoragelive.com/usa/ answers 404 (probed 2026-09-21) and no 2027 edition is published. Dates carry the 2026 edition's August slot and are a pattern, not a publication. Listed in the seed calendar as 'not yet dated for 2027'.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-08-12",
+          "end": "2026-08-13",
+          "city": "Philadelphia",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "solar-storage-live",
+          "kind": "manual",
+          "url": "https://www.solarandstoragelive.com/usa/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "hot-chips-2027",
+      "name": "Hot Chips 39 (2027)",
+      "series": "Hot Chips",
+      "organiser": "IEEE Technical Committee on Microprocessors",
+      "kind": "conference",
+      "start": "2027-08-22",
+      "end": "2027-08-24",
+      "tz": "America/Los_Angeles",
+      "city": "",
+      "region": "CA",
+      "country": "US",
+      "website": "https://www.hotchips.org/",
+      "audience": [
+        "compute-and-the-rack",
+        "power-conversion-and-rack-power-silicon",
+        "cooling"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: hotchips.org (read 2026-09-21) states only that 'Hot Chips 2026 has concluded' and announces no 2027 edition. The August dates follow the 2026 edition's Aug 23-25 slot and are a pattern, not a publication; the city is not recorded because the organiser has published none.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-08-23",
+          "end": "2026-08-25",
+          "city": "",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "hotchips",
+          "kind": "manual",
+          "url": "https://www.hotchips.org/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "amd",
+          "where": "sources"
+        }
+      ]
+    },
+    {
+      "slug": "ai-infra-summit-2027",
+      "name": "AI Infra Summit 2027",
+      "series": "AI Infra Summit",
+      "organiser": "Kisaco Research",
+      "kind": "conference",
+      "start": "2027-08-31",
+      "end": "2027-09-02",
+      "tz": "America/Los_Angeles",
+      "city": "San Jose",
+      "region": "CA",
+      "country": "US",
+      "venue": "San Jose McEnery Convention Center",
+      "venueLatLng": [
+        37.3297,
+        -121.8886
+      ],
+      "website": "https://ai-infra-summit.com/events/ai-infra-summit",
+      "agendaUrl": "https://ai-infra-summit.com/2026agenda",
+      "audience": [
+        "compute-and-the-rack",
+        "hyperscalers-and-ai-labs",
+        "neoclouds",
+        "in-hall-power",
+        "cooling",
+        "neoclouds"
+      ],
+      "relevance": 4,
+      "tierNote": "The corpus names the Beijing edition; this is the US one. The organiser's own header prints an impossible 'Sept 31 - Aug 2, 2027' — the body's Aug 31 - Sep 2 is the coherent reading and is what is recorded here.",
+      "sources": [
+        {
+          "sourceKey": "ai-infra-summit",
+          "kind": "jsonld",
+          "url": "https://ai-infra-summit.com/events/ai-infra-summit",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "megmeet",
+          "where": "developments"
+        }
+      ]
+    },
+    {
+      "slug": "datacloud-usa-2027",
+      "name": "Datacloud USA 2027 x Metro Connect Fall",
+      "series": "Datacloud USA",
+      "organiser": "Datacloud (techoraco / BroadGroup)",
+      "kind": "conference",
+      "start": "2027-08-31",
+      "end": "2027-09-02",
+      "tz": "America/Chicago",
+      "city": "Austin",
+      "region": "TX",
+      "country": "US",
+      "venue": "Fairmont Austin",
+      "venueLatLng": [
+        30.2626,
+        -97.7395
+      ],
+      "website": "https://www.datacloud-usa.com/",
+      "registrationUrl": "https://events.datacloudseries.com/GVWmeQ",
+      "agendaUrl": "https://www.datacloud-usa.com/agenda",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "capital",
+        "neoclouds"
+      ],
+      "relevance": 4,
+      "tierNote": "~3,000 senior leaders with the fiber and capital side present; co-located with Metro Connect Fall. The seed calendar listed Datacloud USA as 'not yet dated for 2027' — the organiser now publishes 31 Aug - 2 Sep with a 30 Aug pre-event day.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-09-02",
+          "end": "2026-09-03",
+          "city": "Austin",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "datacloud-usa",
+          "kind": "jsonld",
+          "url": "https://www.datacloud-usa.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-energy-storage-finance-2027",
+      "name": "Infocast Energy Storage Finance & Investment 2027",
+      "series": "Infocast Energy Storage Finance & Investment",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "conference",
+      "start": "2027-09-08",
+      "end": "2027-09-09",
+      "tz": "America/Los_Angeles",
+      "city": "San Diego",
+      "region": "CA",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "capital",
+        "storage-developers-and-ipps",
+        "storage-integrators-and-containers",
+        "insurance-and-risk-transfer"
+      ],
+      "relevance": 4,
+      "tierNote": "Storage-specific capital: the room where offtake and financing terms are set.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "idee-shenzhen-2027",
+      "name": "International Digital Energy Expo 2027",
+      "series": "International Digital Energy Expo",
+      "organiser": "Shenzhen Municipal People's Government / CNESA",
+      "kind": "mega",
+      "start": "2027-09-18",
+      "end": "2027-09-20",
+      "tz": "Asia/Shanghai",
+      "city": "Shenzhen",
+      "region": "",
+      "country": "CN",
+      "website": "https://www.szidee.com/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "grid-equipment"
+      ],
+      "relevance": 2,
+      "tierNote": "Not confirmed: no reachable organiser page for a 2027 edition (checked 2026-09-21). The September slot follows the 2025 edition the corpus cites (BYD's 14.5 MWh DC block launch, 18 September 2025) — the dates are a pattern, not a publication.",
+      "sources": [
+        {
+          "sourceKey": "idee-listing",
+          "kind": "manual",
+          "url": "https://www.szidee.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-21",
+      "mentions": [
+        {
+          "slug": "byd",
+          "where": "products"
+        },
+        {
+          "slug": "byd",
+          "where": "specs"
+        }
+      ]
+    },
+    {
+      "slug": "7x24-exchange-fall-2027",
+      "name": "7x24 Exchange Fall 2027",
+      "series": "7x24 Exchange International Conference",
+      "organiser": "7x24 Exchange International",
+      "kind": "conference",
+      "start": "2027-10-03",
+      "end": "2027-10-06",
+      "tz": "America/Phoenix",
+      "city": "Phoenix",
+      "region": "AZ",
+      "country": "US",
+      "venue": "JW Marriott Desert Ridge",
+      "venueLatLng": [
+        33.6754,
+        -111.9803
+      ],
+      "website": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "assurance"
+      ],
+      "relevance": 5,
+      "tierNote": "End-user-heavy: owners and operators of mission-critical facilities, not a trade-show floor. Theme: Operational Excellence in the Age of Automation.",
+      "sources": [
+        {
+          "sourceKey": "7x24-exchange",
+          "kind": "html",
+          "url": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-southeast-power-next-2027",
+      "name": "Infocast Southeast Power NEXT 2027",
+      "series": "Infocast Southeast Power NEXT",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "regional",
+      "start": "2027-10-13",
+      "end": "2027-10-15",
+      "tz": "America/New_York",
+      "city": "Charlotte",
+      "region": "NC",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 3,
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "infocast-western-power-next-2027",
+      "name": "Infocast Western Power NEXT 2027",
+      "series": "Infocast Western Power NEXT",
+      "organiser": "Infocast (Clarion Events)",
+      "kind": "regional",
+      "start": "2027-10-26",
+      "end": "2027-10-28",
+      "tz": "America/Los_Angeles",
+      "city": "",
+      "region": "",
+      "country": "US",
+      "website": "https://www.infocastinc.com/events/",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "storage-developers-and-ipps"
+      ],
+      "relevance": 3,
+      "tierNote": "'Western U.S. Region' — the organiser has not named the city.",
+      "sources": [
+        {
+          "sourceKey": "infocast-events",
+          "kind": "html",
+          "url": "https://www.infocastinc.com/events/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "re-plus-2027",
+      "name": "RE+ 2027",
+      "series": "RE+",
+      "organiser": "RE+ Events",
+      "kind": "mega",
+      "start": "2027-11-15",
+      "end": "2027-11-18",
+      "tz": "America/Los_Angeles",
+      "city": "Las Vegas",
+      "region": "NV",
+      "country": "US",
+      "website": "https://www.re-plus.com/",
+      "audience": [
+        "storage-integrators-and-containers",
+        "storage-developers-and-ipps",
+        "cells-and-chemistry",
+        "power-conversion-and-rack-power-silicon",
+        "utilities",
+        "capital"
+      ],
+      "relevance": 5,
+      "tierNote": "Dates published on the RE+ 2026 site; venue not yet named.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-11-16",
+          "end": "2026-11-19",
+          "city": "Las Vegas",
+          "venue": "Las Vegas Convention Center"
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "re-plus",
+          "kind": "html",
+          "url": "https://www.re-plus.com/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "7x24-exchange-spring-2028",
+      "name": "7x24 Exchange Spring 2028",
+      "series": "7x24 Exchange International Conference",
+      "organiser": "7x24 Exchange International",
+      "kind": "conference",
+      "start": "2028-06-04",
+      "end": "2028-06-07",
+      "tz": "America/New_York",
+      "city": "Orlando",
+      "region": "FL",
+      "country": "US",
+      "venue": "JW Marriott Orlando Grande Lakes",
+      "venueLatLng": [
+        28.4054,
+        -81.4926
+      ],
+      "website": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "epc-and-construction",
+        "assurance"
+      ],
+      "relevance": 5,
+      "tierNote": "End-user-heavy: owners and operators of mission-critical facilities, not a trade-show floor. Theme: Power, Cooling & Compute for AI.",
+      "sources": [
+        {
+          "sourceKey": "7x24-exchange",
+          "kind": "html",
+          "url": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+          "lastConfirmed": "2026-09-21"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-21"
+    }
+  ]
+}

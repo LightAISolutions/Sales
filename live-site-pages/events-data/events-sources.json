@@ -1,0 +1,900 @@
+{
+  "schemaVersion": 1,
+  "built": "2026-09-21T11:47:42Z",
+  "sources": [
+    {
+      "key": "10times-listings",
+      "name": "10times event directory",
+      "url": "https://10times.com/usa/technology/tradeshows",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "cloudflare-challenge partner-only-tos 2026-09-21",
+      "notes": "NEVER USABLE AS AN EVENT SOURCE. Recorded only so it is not re-proposed: 403 with cf-mitigated: challenge, and its terms restrict data reuse to partners. No events[] row may cite this key; check-events-registry.py asserts that."
+    },
+    {
+      "key": "7x24-exchange",
+      "name": "7x24 Exchange future national conferences",
+      "url": "https://www.7x24exchange.org/conferences/future-national-conferences/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Publishes venues and themes three years ahead — the longest horizon on the roster. No ICS endpoint was found, so the seed calendar's ICS flag does not hold."
+    },
+    {
+      "key": "acp-events",
+      "name": "American Clean Power events index",
+      "url": "https://cleanpower.org/events/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Clean HTML list of every ACP conference with dates and cities; no structured data."
+    },
+    {
+      "key": "ai-infra-summit",
+      "name": "AI Infra Summit (Kisaco Research)",
+      "url": "https://ai-infra-summit.com/events/ai-infra-summit",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 2,
+        "newestItem": "2026-09-15"
+      },
+      "notes": "aiinfrasummit.com 301s here. The page's own header prints an impossible date range; the JSON-LD is the reliable field."
+    },
+    {
+      "key": "amd-events",
+      "name": "AMD corporate events",
+      "url": "https://www.amd.com/en/corporate/events.html",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 503,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "503-non-browser 2026-09-21",
+      "notes": "Hand-maintained."
+    },
+    {
+      "key": "aws-reinvent",
+      "name": "AWS re:Invent",
+      "url": "https://aws.amazon.com/events/reinvent",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "reinvent.awsevents.com 301s here. Dates are in the page title."
+    },
+    {
+      "key": "battery-japan-listing",
+      "name": "Battery Japan (RX Japan)",
+      "url": "https://www.battery-japan.jp/",
+      "feedKind": "manual",
+      "robots": "unknown",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 0,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "dns-unresolved 2026-09-21",
+      "notes": "The host does not resolve from this network. Hand-maintained."
+    },
+    {
+      "key": "bisnow-events",
+      "name": "Bisnow events calendar",
+      "url": "https://www.bisnow.com/events",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "One-day regional events; the calendar prints 'National' in place of a city for some editions."
+    },
+    {
+      "key": "ceraweek",
+      "name": "CERAWeek by S&P Global",
+      "url": "https://ceraweek.com/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "403-akamai-non-browser 2026-09-21",
+      "notes": "403 'Access Denied' from AkamaiGHost — a different wall from Cloudflare but the same outcome for a server-side reader. Hand-maintained."
+    },
+    {
+      "key": "ces-tech",
+      "name": "CES (Consumer Technology Association)",
+      "url": "https://www.ces.tech/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": ""
+    },
+    {
+      "key": "cibf-listing",
+      "name": "CIBF (CIAPS)",
+      "url": "https://www.cibf.com.cn/en/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 503,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "503 2026-09-21",
+      "notes": "Hand-maintained."
+    },
+    {
+      "key": "cigre-usnc",
+      "name": "CIGRE US National Committee (EventsCloud)",
+      "url": "https://na.eventscloud.com/website/87912/home/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "cigre-usnc.org/grid-of-the-future/ 301s here; the numeric id changes per edition."
+    },
+    {
+      "key": "clarion-powergen",
+      "name": "POWERGEN International (Clarion)",
+      "url": "https://www.powergen.com/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 1,
+        "newestItem": "2027-01-18"
+      },
+      "notes": "Event JSON-LD present."
+    },
+    {
+      "key": "clocate-listings",
+      "name": "Clocate conference directory",
+      "url": "https://www.clocate.com/data-centre-dynamics-dcd-connect-new-york/58062/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 1,
+        "newestItem": "2027-03-17"
+      },
+      "notes": "A third-party listing, used only as the `manual` source for DCD>Connect New York 2027 because DCD's own page is blocked. Never a substitute for an organiser page: no event sourced only from here may be `confirmed`."
+    },
+    {
+      "key": "computex-taipei",
+      "name": "COMPUTEX TAIPEI (TAITRA / TCA)",
+      "url": "https://www.computextaipei.com.tw/en/index.html",
+      "feedKind": "html",
+      "robots": "disallowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "ROBOTS DISALLOWED for the fetched path — the E2 poller must skip this row. The registry entry is hand-maintained from a read made this session; do not schedule it."
+    },
+    {
+      "key": "datacloud-series",
+      "name": "Datacloud series index",
+      "url": "https://datacloudseries.com/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "The series index; the Global Congress' own domain is an archived page."
+    },
+    {
+      "key": "datacloud-usa",
+      "name": "Datacloud USA",
+      "url": "https://www.datacloud-usa.com/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 1,
+        "newestItem": "2027-08-30"
+      },
+      "notes": "Event JSON-LD; startDate is the 30 Aug pre-event day, the main conference runs 31 Aug - 2 Sep."
+    },
+    {
+      "key": "dcd-events",
+      "name": "DatacenterDynamics events (DCD>Connect)",
+      "url": "https://www.datacenterdynamics.com/en/events/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "cloudflare-challenge 2026-09-21",
+      "notes": "403 with cf-mitigated: challenge. Known blocked at the gate and re-probed here. This is why the DCD New York 2027 date conflict cannot be resolved from the organiser. Hand-maintained."
+    },
+    {
+      "key": "dcftrends",
+      "name": "Data Center Frontier Trends Summit",
+      "url": "https://www.dcftrends.com/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Co-located with Microgrid Knowledge from 2027."
+    },
+    {
+      "key": "eei-events",
+      "name": "Edison Electric Institute events",
+      "url": "https://www.eei.org/en/events",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "no-feed 2026-09-21",
+      "notes": "200 but no dates or venues on the page itself. Hand-maintained."
+    },
+    {
+      "key": "enlit-europe",
+      "name": "Enlit Europe (Clarion)",
+      "url": "https://enlit.world/enlit-europe",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "cloudflare-challenge 2026-09-21",
+      "notes": "enlit-europe.com 301s here; 403 with an 'Attention Required! | Cloudflare' title. Known blocked at the gate and re-probed here. Hand-maintained."
+    },
+    {
+      "key": "esie-listing",
+      "name": "ESIE (China Energy Storage Alliance)",
+      "url": "https://www.esieexpo.com/en/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 503,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "503 2026-09-21",
+      "notes": "Hand-maintained."
+    },
+    {
+      "key": "esig-events",
+      "name": "ESIG events calendar",
+      "url": "https://www.esig.energy/events/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 12,
+        "newestItem": "2027-01-14"
+      },
+      "notes": "12 Event objects; a tribe-style calendar that publishes workshops months ahead."
+    },
+    {
+      "key": "gartner-conferences",
+      "name": "Gartner conference calendar",
+      "url": "https://www.gartner.com/en/conferences/calendar",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "cloudflare-challenge 2026-09-21",
+      "notes": "403 with cf-mitigated: challenge. Hand-maintained; low relevance anyway."
+    },
+    {
+      "key": "gcpa-events",
+      "name": "Gulf Coast Power Association events",
+      "url": "https://www.gulfcoastpower.org/events/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "403-azure-waf 2026-09-21",
+      "notes": "403, 69 bytes, 'This request has been blocked by the Web Application Firewall policy' behind Azure Front Door. The page is readable by a browser-class client, so the four GCPA rows are confirmed — but the poller cannot fetch it. Hand-maintained."
+    },
+    {
+      "key": "hannover-messe",
+      "name": "HANNOVER MESSE (Deutsche Messe)",
+      "url": "https://www.hannovermesse.de/en/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "no-feed 2026-09-21",
+      "notes": "200 with no date, venue or Event JSON-LD served to a non-browser client. Hand-maintained."
+    },
+    {
+      "key": "hotchips",
+      "name": "Hot Chips Symposium",
+      "url": "https://www.hotchips.org/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "no-feed 2026-09-21",
+      "notes": "200 and readable, but the site announces no 2027 edition — nothing to poll. Hand-maintained."
+    },
+    {
+      "key": "ibs-cambridge",
+      "name": "International Battery Seminar (Cambridge EnerTech)",
+      "url": "https://www.internationalbatteryseminar.com/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "No ICS endpoint found — the seed calendar's ICS flag does not hold."
+    },
+    {
+      "key": "idee-listing",
+      "name": "International Digital Energy Expo (Shenzhen)",
+      "url": "https://www.szidee.com/",
+      "feedKind": "manual",
+      "robots": "unknown",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 0,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "unreachable 2026-09-21",
+      "notes": "No reachable organiser page for a 2027 edition. Hand-maintained."
+    },
+    {
+      "key": "ieee-pes-gm",
+      "name": "IEEE PES General Meeting",
+      "url": "https://pes-gm.org/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Mixes the current and next edition on one page — read the year labels carefully."
+    },
+    {
+      "key": "iesna-intersolar",
+      "name": "Intersolar & Energy Storage North America",
+      "url": "https://www.iesna.com/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "intersolar.us 301s here. ld+json present but no Event object, so the seed calendar's 'LD (BusinessEvent)' flag does not hold on the current page."
+    },
+    {
+      "key": "imasons-events",
+      "name": "Infrastructure Masons events calendar",
+      "url": "https://imasons.org/events/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 11,
+        "newestItem": "2026-11-24"
+      },
+      "notes": "The richest feed found: 11 Event objects covering chapter socials and webinars — the sub-mega tier no other roster row carries."
+    },
+    {
+      "key": "infocast-events",
+      "name": "Infocast events index",
+      "url": "https://www.infocastinc.com/events/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Eleven conferences listed with dates; several carry no city yet."
+    },
+    {
+      "key": "informa-battery-show",
+      "name": "The Battery Show North America (Informa)",
+      "url": "https://www.thebatteryshow.com/en/home.html",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 1,
+        "newestItem": "2026-10-12"
+      },
+      "notes": "One Event object on the home page. The European edition is a separate host and a separate roster row (informa-battery-show-europe)."
+    },
+    {
+      "key": "informa-battery-show-europe",
+      "name": "The Battery Show Europe (Informa)",
+      "url": "https://www.thebatteryshow.eu/en/home.html",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Publishes dates, venue and per-day expo hours; no Event JSON-LD found on the home page."
+    },
+    {
+      "key": "informa-data-center-world",
+      "name": "Data Center World (AFCOM / Informa)",
+      "url": "https://www.datacenterworld.com/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 1,
+        "newestItem": "2027-05-24"
+      },
+      "notes": "Event JSON-LD present; separate schedule and exhibitor subdomains."
+    },
+    {
+      "key": "informa-distributech",
+      "name": "DISTRIBUTECH International (Clarion)",
+      "url": "https://www.distributech.com/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 1,
+        "newestItem": "2027-03-01"
+      },
+      "notes": "Event JSON-LD present with the 2027 startDate."
+    },
+    {
+      "key": "interbattery",
+      "name": "InterBattery (KBIA / COEX)",
+      "url": "https://www.interbattery.or.kr/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Korean-language dates in a 'YY.MM.DD' format the poller must normalise."
+    },
+    {
+      "key": "microgrid-conferences",
+      "name": "Microgrid Knowledge Conference",
+      "url": "https://www.microgridconferences.com/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "The co-located twin of dcftrends."
+    },
+    {
+      "key": "microsoft-ignite",
+      "name": "Microsoft Ignite",
+      "url": "https://ignite.microsoft.com/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "no-feed 2026-09-21",
+      "notes": "microsoft.com/en-us/ignite 301s here; the page serves no readable date text. Hand-maintained."
+    },
+    {
+      "key": "mwc-barcelona",
+      "name": "MWC Barcelona (GSMA)",
+      "url": "https://www.mwcbarcelona.com/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 2,
+        "newestItem": "2027-03-01"
+      },
+      "notes": "Event JSON-LD with 2027 dates."
+    },
+    {
+      "key": "naatbatt-events",
+      "name": "NAATBatt International events",
+      "url": "https://www.naatbatt.org/events",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "403-azure-waf 2026-09-21",
+      "notes": "Same Azure WAF signature as GCPA. Readable by a browser-class client, so the 2026 row is confirmed; the poller cannot fetch it. Hand-maintained."
+    },
+    {
+      "key": "naruc-meetings",
+      "name": "NARUC Annual Meeting",
+      "url": "https://www.naruc.org/annual-meeting/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "no-feed 2026-09-21",
+      "notes": "200 and readable, but the page prints no dates, city or venue. Hand-maintained."
+    },
+    {
+      "key": "nvidia-gtc",
+      "name": "NVIDIA GTC",
+      "url": "https://www.nvidia.com/gtc/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Carries GTC San Jose, GTC Washington DC and GTC Berlin on one page."
+    },
+    {
+      "key": "ocp-global-summit",
+      "name": "OCP Global Summit (Open Compute Project Foundation)",
+      "url": "https://www.opencompute.org/summit/global-summit",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "cloudflare-challenge 2026-09-21",
+      "notes": "403 with cf-mitigated: challenge and a 'Just a moment...' title. Known blocked at the NE0 gate and re-probed here — do not try another URL or a browser User-Agent; both were tried. Hand-maintained."
+    },
+    {
+      "key": "ptc-council",
+      "name": "Pacific Telecommunications Council",
+      "url": "https://www.ptc.org/ptc27/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Per-year path; PTC'28 will need a new row or a URL update."
+    },
+    {
+      "key": "re-plus",
+      "name": "RE+ Events",
+      "url": "https://www.re-plus.com/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "ld+json present but no Event object — Appendix A's 'ld+json, no Event' flag confirmed. Hand-maintained; the regional editions have no 2027 dates published."
+    },
+    {
+      "key": "reuters-events",
+      "name": "Reuters Events",
+      "url": "https://events.reutersevents.com/reutersevents",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "403-datadome 2026-09-21",
+      "notes": "403 from DataDome. reutersevents.com/events/energy-live/ 301s into this blocked hub. Hand-maintained."
+    },
+    {
+      "key": "sc-supercomputing",
+      "name": "SC Conference Series",
+      "url": "https://sc26.supercomputing.org/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Per-year hostname; the poller must follow sc27.supercomputing.org next cycle."
+    },
+    {
+      "key": "semi-semiconwest",
+      "name": "SEMI / SEMICON West",
+      "url": "https://www.semiconwest.org/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "cloudflare-challenge 2026-09-21",
+      "notes": "Both semi.org and semiconwest.org serve a Cloudflare challenge, so SEMI's own press release announcing the 2027 Phoenix move cannot be read directly. Hand-maintained."
+    },
+    {
+      "key": "snec-listing",
+      "name": "SNEC PV Power Expo",
+      "url": "https://www.snec.org.cn/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 404,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "404 2026-09-21",
+      "notes": "snec.org.cn 302s to pv.snec.org.cn, whose /en/ and listing paths both 404. Hand-maintained."
+    },
+    {
+      "key": "solar-storage-live",
+      "name": "Solar & Storage Live USA (Terrapinn)",
+      "url": "https://www.solarandstoragelive.com/usa/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 404,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "404 2026-09-21",
+      "notes": "404 — the USA path is gone and no 2027 edition is published. Hand-maintained."
+    },
+    {
+      "key": "storageusa-solarmedia",
+      "name": "Energy Storage Summit USA (Solar Media)",
+      "url": "https://storageusa.solarenergyevents.com/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "The page is branded for the past edition while announcing the next one's dates and venue."
+    },
+    {
+      "key": "thesmartere",
+      "name": "The smarter E Europe",
+      "url": "https://www.thesmarterE.de/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": "Covers Intersolar Europe, ees Europe, Power2Drive and EM-Power on one ticket."
+    },
+    {
+      "key": "uptime-institute",
+      "name": "Uptime Institute events",
+      "url": "https://uptimeinstitute.com/events",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "no-feed 2026-09-21",
+      "notes": "Returns 200 but 302s off-site to google.com for a non-browser client, and the browser-class read shows the Fall 2026 Network conference with no dates. Nothing for a poller to read. Hand-maintained."
+    },
+    {
+      "key": "wef-events",
+      "name": "World Economic Forum events",
+      "url": "https://www.weforum.org/events/",
+      "feedKind": "manual",
+      "robots": "allowed",
+      "cadence": "manual",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 403,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "blocked": "403-non-browser 2026-09-21",
+      "notes": "Hand-maintained; invitation-only event anyway."
+    },
+    {
+      "key": "woodmac-events",
+      "name": "Wood Mackenzie events",
+      "url": "https://www.woodmac.com/events/",
+      "feedKind": "html",
+      "robots": "allowed",
+      "cadence": "monthly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 0,
+        "newestItem": ""
+      },
+      "notes": ""
+    },
+    {
+      "key": "yotta-event",
+      "name": "Yotta",
+      "url": "https://www.yotta-event.com/",
+      "feedKind": "jsonld",
+      "robots": "allowed",
+      "cadence": "weekly",
+      "lastProbe": {
+        "at": "2026-09-21",
+        "status": 200,
+        "itemCount": 1,
+        "newestItem": "2026-09-28"
+      },
+      "notes": "Behind Cloudflare but served 200 to a plain curl — not challenged. Event JSON-LD present."
+    }
+  ]
+}

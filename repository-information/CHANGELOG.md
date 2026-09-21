@@ -3,11 +3,50 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
+*(No changes yet)*
+
+## [v06.95r] — 2026-09-21 07:50:53 AM EST
+
+> **Prompt:** "Run E0 — the Events registry and source roster — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.4 is the brief (follow its reading list in order, then its five steps exactly — the corpus pass first, then the organiser-page research, the live-probed roster, the checker, the files), §5.1–5.2 and Appendix A the design and the 64-row seed calendar, and repository-information/EVENTS-SCHEMA.md §1, §3, §4, §11, §12 the shapes. This is research and data, not app code: create live-site-pages/events-data/events.json and events-sources.json, scripts/extract-corpus-events.py and scripts/check-events-registry.py, and nothing under Events.html / Events.gs (that is E1). Every event is `confirmed` only on an organiser page you read this session (WebFetch); a row you could not read stays `tentative` with the third-party listing as its `manual` source and a note. Probe every roster row live before writing it, the .claude/rules/scraper-sources.md way (curl status, JSON-LD Event or VEVENT count, newest item, robots), and record a Cloudflare challenge as `blocked: "<reason> <date>"` — keep the row, never try another URL or User-Agent; 10times, DCD, OCP and Enlit are known blocked and hand-maintained. Never add LinkedIn, 10times, a Google-News feed or an attendee list as a source. All 31 corpus events must end with ≥ 1 mentions[] entry; target ≥ 60 events; the checker must exit 0 on the files you commit. Current state: the repo is at v06.94r, N2 is Done (§11), and the E1 brief already exists as §13.7 — so ignore §13.4's closing line about writing E1 as §13.6: write nothing new in §13, only flip §11's E0 row to Done with the version and the counts (verified on the organiser's page, still tentative, blocked sources with reasons). README tree entries for the new events-data/ folder, both files and both scripts; mirror profiler-data/'s treatment in REPO-ARCHITECTURE.md if it appears there; CHANGELOG entry naming those same counts. Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG stands at Sections: 90/100 — no rotation is due (90 < 100). One push — or two if the roster runs as its own Fable 5.1 Medium session per §13.4 step 3."
+
+### Added
+
+#### `live-site-pages/events-data/events.json`
+- **The public Events registry — 100 events: 72 `confirmed`, 27 `tentative`, 1 `past`.** One row per edition per `EVENTS-SCHEMA.md` §3 — slug, series, organiser, kind, `start`/`end`, IANA `tz`, city/region/country, venue and `venueLatLng` where the organiser publishes one, website plus registration / exhibitor-list / agenda / speakers / floor-plan URLs, `audience[]` segment ids from `profiler-segments.json`, `relevance` 1–5, a `tierNote`, show-floor `hours[]` where published, and `editions[]` for the prior year
+- **`confirmed` means an organiser page was read this session** — 72 rows clear that bar, plus the one `past` row (NAATBatt 2026) which was organiser-read before the checker flipped its status. The other 27 stay `tentative`, each with a `manual` source and a `tierNote` saying exactly why: eleven because the organiser blocks non-browser clients, the rest because the organiser has published no dates for that edition. **No row is ever `confirmed` on a third-party listing**
+- **Sub-mega and social tiers the dossier corpus never names** are now carried: nine iMasons chapter socials and webinars, seven Bisnow one-day regionals, four GCPA rows, eleven Infocast conferences, and the two ESIG workshops
+- **Appendix A caveats resolved.** The DCD>Connect New York 2027 date conflict stands unresolved *by design* and is recorded as such — Clocate's JSON-LD (read this session) gives 17–18 Mar 2027 at the New York Marriott Marquis, a second mirrored listing gives 17–18 May, and DCD's own page is Cloudflare-blocked, so both are written into the `tierNote` and the row is `tentative`. NAATBatt's weakly-sourced Aug 1–5 2027 row is **dropped**: the organiser publishes only the Feb 9–12 2026 edition and no 2027 dates. From the "not yet dated for 2027" list, **Wood Mackenzie North American Power & Renewables (Apr 28–29 2027, Omni Interlocken, Denver) and Datacloud USA (Aug 31–Sep 2 2027, Fairmont Austin) are now dated and confirmed**; Solar & Storage Live USA, DCD Silicon Valley/Dallas, Bisnow DICE South/West and Uptime 2027 remain undated
+- **Three seed-calendar errors corrected against the organiser**: ACP Siting + Permitting and ACP PEAK are two events (Apr 13–15 and Apr 15–17 2027), not one Apr 13–17 row; Energy Storage Summit USA 2027 moves to the Renaissance Dallas at Plano Legacy West (the seed's Hilton Lincoln Centre was the 2026 venue); and six rows the seed calendar could only source third-party — GTC 2027, InterBattery 2027, CIGRE Grid of the Future 2026, IEEE PES General Meeting 2027, The Battery Show Europe 2027 and AWS re:Invent 2026 — are now read from the organiser's own page
+
+#### `live-site-pages/events-data/events-sources.json`
+- **The source roster — 58 rows, every one probed live before it was written** (HTTP status, `Event`/`VEVENT` count, newest item, and `robots.txt` evaluated for the fetched path), the `.claude/rules/scraper-sources.md` discipline verbatim
+- **11 live JSON-LD feeds** the E2 poller can read: The Battery Show NA, DISTRIBUTECH, Data Center World, POWERGEN, Yotta, MWC Barcelona, Datacloud USA, AI Infra Summit, Clocate — and two the seed calendar did not know about, **iMasons (11 `Event` objects) and ESIG (12)**, which between them carry the entire sub-mega and social tier
+- **24 blocked rows, each kept with its reason and date so it is never re-proposed**: `cloudflare-challenge` on OCP, DCD, Enlit, 10times, SEMI/SEMICON West and Gartner; `403-akamai-non-browser` on CERAWeek; `403-datadome` on Reuters Events; `403-azure-waf` on GCPA and NAATBatt; `no-feed` on Uptime Institute (its `/events` path 302s off-site to google.com), Hannover Messe, Microsoft Ignite, EEI, NARUC and Hot Chips; and 404 / 503 / DNS failures on Solar & Storage Live, SNEC, CIBF, ESIE, IDEE Shenzhen, Battery Japan and AMD. No alternative URL or browser User-Agent was tried on any of them
+- **COMPUTEX is on the roster with `robots: disallowed`** for the fetched path — the row records that the poller must skip it and the registry entry is hand-maintained
+- **The 10times row exists only as a never-re-propose marker.** It is cited by no event and never may be: `check-events-registry.py` rejects any event source whose host is LinkedIn, 10times or Google News
+
+#### `scripts/extract-corpus-events.py`
+- Walks all 177 dossiers' `recentDevelopments[]`, `productsAndServices[]`, `technicalSpecs[]`, `strategyRead[]` and `sources[]` against a table of **33 corpus events** (one regex and one target edition per row), emitting **256 `mentions[]` rows across 90 dossiers onto 32 registry rows** — every corpus event ends with at least one mention (`ees Europe` and `The smarter E` resolve to the same edition, which is why 33 keys land on 32 rows)
+- Idempotent — rewrites every `mentions[]` from scratch each run; `--check` fails when the file is stale and `--report` prints the per-event table. Seeds a `tentative` row for any table event with no registry row, so a new corpus event is never silently dropped
+- The table documents what was **checked and rejected** as not being events: `SNE Research` (a research firm, 9 files), an `ESIG` report, `Data Center Frontier` the publication, the `Uptime Institute M&O Stamp` certification, `Supercomputing centres` as a noun phrase, and the `OCP-Ready` / `Open Rack Wide` specifications
+
+#### `scripts/check-events-registry.py`
+- Implements every assertion in `EVENTS-SCHEMA.md` §12 — slug rule and uniqueness, `start` ≤ `end`, IANA `tz` resolved through `zoneinfo`, `audience[]` ids present in `profiler-segments.json`, every `sources[].sourceKey` in the roster **with its URL host matching that roster row**, every `mentions[].slug` resolving to a dossier, `lastUpdated` and ≥ 1 source with `lastConfirmed` on every row, no roster row without a `lastProbe`, and `status = past` iff `end` < today. `--fix-past` flips `status` and nothing else
+- Two assertions beyond the schema, both earned this session: a `confirmed` row must carry at least one source whose `kind` is not `manual` (a listing can never confirm), and no event source may have a LinkedIn, 10times or Google-News host
+- A minimal RFC 5545 `VEVENT` walker runs over `events.ics` when E1 publishes one — unfolding continuation lines and requiring `UID`, `DTSTART` and `SUMMARY` per event with no duplicate `UID`. An absent file is not a finding
+- Exits 0 on the files committed here
+
 ### Changed
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- §11's **E0 row flipped to Done** with the version and all three count sets the brief asks for — verified on the organiser's page, still tentative, and every blocked source with its reason. Nothing new written in §13: E0's brief closes by asking for an E1 brief as §13.6, but N2 already wrote E1 as §13.7, so that line is stale and was not acted on
+
+#### `README.md`
+- Structure-tree entries for the new `live-site-pages/events-data/` folder and both its files, and for both new scripts (`extract-corpus-events.py` placed beside `check-events-registry.py` rather than alphabetically, matching how the Scripts group is organised by subsystem)
 
 #### `repository-information/SESSION-CONTEXT.md`
 - Latest Session rewritten at the close of N2 (v06.94r; the phone check pending; E0 next with its prompt handed over in chat); the earlier entry moved to Previous Sessions under the two-session cap
