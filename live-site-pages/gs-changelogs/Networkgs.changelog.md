@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06g] — 2026-09-21 05:39:58 AM EST — v06.91r
+
+### Added
+- **Editing a saved contact.** A contact's details, role, account and consent choices can be changed after saving; the same checks as saving apply, the photos and the original reading are kept, and a move to a different company is recorded in the contact's history. Recorded as an event with identifiers only
 
 ## [v01.05g] — 2026-09-21 05:01:07 AM EST — v06.90r
 

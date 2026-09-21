@@ -1,4 +1,4 @@
-var VERSION = "v01.05g";
+var VERSION = "v01.06g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -323,7 +323,7 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // file first, then this one. N0 builds the door, the tabs, the ids, the folder
 // registry and the quota counter; N1 session 1 adds the card extraction
 // (nop=newid + nop=extract, below); session 2 (v01.05g) adds the write path —
-// nop=dupcheck, nop=save, nop=links, nop=get, nop=delete / nop=restore.
+// nop=dupcheck, nop=save, nop=update, nop=links, nop=get, nop=delete / nop=restore.
 
 // PROJECT: ── Role + Access matrix (D7 — admin-only, decided 2026-09-20) ──
 // NETWORK-SCHEMA.md §2. All four tier keys are kept so that widening later is
@@ -1019,6 +1019,10 @@ function handleNetworkOp_(e) {
       nwRequire_(sess, 'contacts', 'network_save');
       return nwSaveOp_(sess, p);
     }
+    if (op === 'update') {
+      nwRequire_(sess, 'contacts', 'network_update');
+      return nwUpdateOp_(sess, p);
+    }
     if (op === 'links') {
       nwRequire_(sess, 'contacts', 'network_links');
       return nwLinksOp_(sess, p);
@@ -1395,6 +1399,45 @@ function nwSaveOp_(sess, p) {
   auditLog('data_write', sess.email, 'network_save', { contactId: cid, accountId: account.id, accountCreated: account.created ? 1 : 0, interactions: 1 });
   return { success: true, contactId: cid, accountId: account.id, accountName: account.name, accountCreated: account.created,
            interactionId: ix, linksTarget: 'contact' };
+}
+
+// nop=update — a saved contact edited from its list row (v01.06g): the same
+// validation as save, the row rewritten in place (id, links, Raw Extraction
+// and Created At kept), the account re-resolved from the block — a different
+// employer writes an `account-change` Interaction carrying the previous a-
+// id (D4). No dedupe here: the developer is editing a row they can see.
+function nwUpdateOp_(sess, p) {
+  var cid = nwStr_(p.contactId);
+  if (!NW_ID_RE.test(cid) || cid.charAt(0) !== 'c') return { success: false, error: 'bad_contact_id' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var ownerEmail = scopeRes.owner;
+  var c, a;
+  try { c = nwContactFromPayload_(p.contact); a = nwAccountFromPayload_(p.account); }
+  catch (vErr) { return { success: false, error: String((vErr && vErr.message) || 'INVALID_INPUT') }; }
+  if (!c.fullName) return { success: false, error: 'name_required' };
+  if (!a.id && !a.name) return { success: false, error: 'account_name_required' };
+  var tabs = ensureNetworkTabs_(), now = nwNow_();
+  var ct = nwSheetRead_(tabs.contacts), found = nwFindRow_(ct, cid);
+  if (!nwOwned_(found, ownerEmail)) return { success: false, error: 'contact_not_found' };
+  var account;
+  try { account = nwAccountResolve_(tabs, ownerEmail, a, now); }
+  catch (aErr) { return { success: false, error: String((aErr && aErr.message) || 'account_failed') }; }
+  var old = found.obj;
+  if (!c.frontLink) c.frontLink = old['Card Front Link'];
+  if (!c.backLink) c.backLink = old['Card Back Link'];
+  var row = nwContactRowObj_(cid, ownerEmail, account.id, c, old['Raw Extraction'], old['Created At'] || now, now);
+  row['Deleted At'] = old['Deleted At'];
+  nwWriteRow_(tabs.contacts, ct.headers, row, found.row);
+  var moved = 0;
+  if (old['Account ID'] && old['Account ID'] !== account.id) {
+    nwInteractionAdd_(tabs, ownerEmail, cid, account.id, 'account-change', Utilities.formatDate(new Date(), 'UTC', 'yyyy-MM-dd'),
+      'Changed employer', old['Account ID'], '', now, {});
+    moved = 1;
+  }
+  bumpDataRev();
+  auditLog('data_write', sess.email, 'network_update', { contactId: cid, accountId: account.id, accountCreated: account.created ? 1 : 0, accountChanged: moved });
+  return { success: true, contactId: cid, accountId: account.id, accountName: account.name, accountCreated: account.created, accountChanged: !!moved };
 }
 
 // nop=links — after the browser moved the pair from _inbox/ to <Company>/ the

@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.10w">
+  <meta name="build-version" content="v01.11w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -5036,12 +5036,84 @@ function nwCapName(s) {
     return seg.toLowerCase().replace(/(^|[\s\-'’.])([a-z\u00e0-\u024f])/g, function(m, pre, ch) { return pre + ch.toUpperCase(); });
   });
 }
+// Titles, departments and company names — the developer's rule (v01.11w):
+// every word First-letter-capitalised and the rest lower, EXCEPT a C-suite
+// title or a token reasonably taken as an acronym, which stays in capitals;
+// a token already in mixed case (McKinsey, PhD, iPhone) is left as printed;
+// connector words (of, and, for …) stay lower unless they lead; anything in
+// parentheses (a native script) is never touched. In a title: Vice President
+// → VP, Executive Vice President → EVP, Senior → Sr. (so "Senior Vice
+// President" → "Sr. VP"). What counts as an acronym: a C-suite title or a
+// listed abbreviation always; in a mixed-case string any 2–4-letter capital
+// token (the card printed it so on purpose); in an ALL-CAPS string only a
+// listed one or a 2–3-letter token with no vowel (TSMC, LG) — "HEAD OF
+// SALES" must become "Head of Sales", not "HEAD of Sales". A company that
+// resolves to the Profiler registry takes the registry's own name instead.
+var NW_CSUITE = ['CEO', 'CFO', 'COO', 'CTO', 'CIO', 'CMO', 'CSO', 'CRO', 'CHRO', 'CCO', 'CDO', 'CPO', 'CLO', 'CAO', 'CISO', 'CBO', 'CVO', 'CXO', 'CINO', 'CSCO', 'CGO', 'CEA'];
+var NW_ACRONYMS = {};
+NW_CSUITE.concat(['VP', 'EVP', 'AVP', 'GM', 'MD', 'IT', 'HR', 'PR', 'QA', 'QC', 'BD', 'RD', 'R&D', 'EMEA', 'APAC', 'LATAM', 'NA', 'US', 'USA', 'UK', 'EU',
+  'LLC', 'PLC', 'LTD', 'INC', 'AG', 'SA', 'NV', 'BV', 'PTE', 'PTY', 'EPC', 'HV', 'MV', 'LV', 'AC', 'DC', 'UPS', 'BESS', 'PV', 'EV', 'AI', 'ML', 'IoT', 'OEM', 'ODM',
+  'KAM', 'NAM', 'GAM', 'SDR', 'BDR', 'AE', 'PM', 'PMO', 'SVP', 'CTO', 'RF', 'HVAC', 'DER', 'ESS', 'IPP', 'EPCM', 'O&M', 'AVP', 'JD', 'CPA', 'PE', 'MBA', 'PHD']).forEach(function(a) { NW_ACRONYMS[a] = true; });
+var NW_CASE_FIXES = { gmbh: 'GmbH', llc: 'LLC', plc: 'PLC', ltd: 'Ltd', inc: 'Inc', co: 'Co', corp: 'Corp', phd: 'PhD', mba: 'MBA', 'p.e': 'P.E', iot: 'IoT', ohsa: 'OSHA' };
+var NW_CONNECTORS = { of: 1, and: 1, the: 1, for: 1, at: 1, in: 1, on: 1, to: 1, 'a': 1, an: 1, de: 1, du: 1, del: 1, della: 1, von: 1, van: 1, der: 1, den: 1, la: 1, le: 1, y: 1, e: 1, '&': 1 };
+function nwTitleAbbrev(s) {
+  return String(s || '')
+    .replace(/\bexecutive\s+vice[\s-]*president\b/gi, 'EVP')
+    .replace(/\bsenior\s+vice[\s-]*president\b/gi, 'Sr. VP')
+    .replace(/\bs\.?v\.?p\.?(?=\W|$)/gi, 'Sr. VP')
+    .replace(/\be\.?v\.?p\.?(?=\W|$)/gi, 'EVP')
+    .replace(/\bvice[\s-]*president\b/gi, 'VP')
+    .replace(/\bv\.\s*p\.?(?=\W|$)/gi, 'VP')
+    .replace(/\bsenior(?=\W|$)/gi, 'Sr.')
+    .replace(/\bsr\.?(?=\s|,|$)/gi, 'Sr.')
+    .replace(/Sr\.\./g, 'Sr.');
+}
+function nwStdField(s, isTitle) {
+  var str = String(s || '').replace(/\s+/g, ' ').trim();
+  if (!str) return str;
+  if (isTitle) str = nwTitleAbbrev(str);
+  var outside = str.replace(/\([^)]*\)/g, '');
+  var letters = outside.replace(/[^A-Za-zÀ-ɏ]/g, '');
+  var allUpper = !!letters && letters === letters.toUpperCase();
+  var first = true;
+  return str.replace(/\([^)]*\)|[^\s()]+/g, function(tok) {
+    if (tok.charAt(0) === '(') return tok;
+    var lead = first; first = false;
+    var m = /^([^A-Za-zÀ-ɏ0-9&]*)(.*?)([^A-Za-zÀ-ɏ0-9&.]*)$/.exec(tok);
+    var pre = m[1], core = m[2], post = m[3];
+    var coreLetters = core.replace(/[^A-Za-zÀ-ɏ]/g, '');
+    if (!coreLetters) return tok;
+    var lower = core.toLowerCase(), upper = core.toUpperCase();
+    var key = lower.replace(/\.+$/, '');
+    if (NW_CASE_FIXES[key]) return pre + NW_CASE_FIXES[key] + (lower.length > key.length ? '.' : '') + post;
+    var isUpper = coreLetters === coreLetters.toUpperCase(), isLower = coreLetters === coreLetters.toLowerCase();
+    if (NW_ACRONYMS[upper.replace(/\.+$/, '')] && (isUpper || isLower || isTitle)) return pre + upper + post;
+    if (isUpper) {
+      var n = coreLetters.length;
+      if (!allUpper && n >= 2 && n <= 4) return tok;                       // printed as an acronym on purpose
+      if (allUpper && n >= 2 && n <= 4 && !/[AEIOU]/.test(coreLetters)) return tok;   // TSMC, LG, SK
+      if (allUpper && n <= 3 && !/\s/.test(str)) return tok;                          // a lone ABB / GE — the whole name is the acronym
+    } else if (!isLower) {
+      if (!/^[A-ZÀ-Þ][a-zß-ɏ'’.]*$/.test(core)) return tok;   // McKinsey, iPhone — left as printed
+    }
+    if (!lead && NW_CONNECTORS[key]) return pre + lower + post;
+    var cased = lower.replace(/(^|[\s\-'’.\/])([a-zß-ɏ])/g, function(mm, p, ch) { return p + ch.toUpperCase(); });
+    return pre + cased + post;
+  });
+}
+// Names by the two-case rule, titles / departments / company by the
+// standardisation rule above — applied at extraction, on load of the held
+// cards, after Retry and on every edit.
 function nwTidyNames(x) {
   if (!x) return false;
   var changed = false;
   ['fullName', 'firstName', 'lastName'].forEach(function(f) {
     var v = nwCapName(x[f]);
     if (v !== (x[f] || '')) { x[f] = v; changed = true; }
+  });
+  [['title', true], ['department', false], ['company', false]].forEach(function(pair) {
+    var v = nwStdField(x[pair[0]], pair[1]);
+    if (v !== (x[pair[0]] || '')) { x[pair[0]] = v; changed = true; }
   });
   return changed;
 }
@@ -5065,6 +5137,7 @@ function nwDeleteCard(rec, quiet) {
   return nwPendingDelete(rec.id).then(function() { return true; });
 }
 function nwPendingSave(rec) {
+  if (rec.saved) return Promise.resolve();   // a saved contact being edited — nothing of it is held here
   for (var i = 0; i < _nwPending.length; i++) if (_nwPending[i].id === rec.id) _nwPending[i] = rec;
   return nwPendingPut(rec).catch(function() {});
 }
@@ -5175,9 +5248,10 @@ function nwRenderStrip(rec) {
 // new values default to work / other. Every edited field becomes
 // confidence 1 and its check note is cleared. Nothing leaves the phone —
 // saving to the spreadsheet is the next release.
-function nwEditCard(rec, focusField) {
+function nwEditCard(rec, focusField, opts) {
+  opts = opts || {};
   var box = document.getElementById('nw-extracted');
-  var strip = box && box.querySelector('.nw-strip[data-id="' + rec.id + '"]');
+  var strip = opts.host || (box && box.querySelector('.nw-strip[data-id="' + rec.id + '"]'));
   if (!strip || strip.querySelector('.nw-editor')) return;
   var x = rec.extraction || {};
   var form = nwEl('form', 'nw-editor');
@@ -5222,7 +5296,7 @@ function nwEditCard(rec, focusField) {
         nx[f] = v.split(',').map(function(s) { return s.trim(); }).filter(Boolean).map(function(s) {
           return f === 'emails' ? { value: s.toLowerCase(), kind: kinds[s.toLowerCase()] || 'work' } : { number: s, kind: kinds[s] || 'other' };
         });
-      } else nx[f] = (f === 'fullName') ? nwCapName(v) : v;
+      } else nx[f] = (f === 'fullName') ? nwCapName(v) : (f === 'title') ? nwStdField(v, true) : (f === 'department' || f === 'company') ? nwStdField(v, false) : v;
       if (NW_CONFIDENCE_FIELDS.indexOf(f) >= 0) nx.confidence[f] = 1;
       if (rec.dismissed) delete rec.dismissed[f];
     });
@@ -5230,11 +5304,12 @@ function nwEditCard(rec, focusField) {
     if (changed) rec.edited = true;
     if (readReview) readReview();
     if (changed && rec.review) rec.review.resolvedFor = '';   // the company may have changed — resolve again
+    if (opts.onSave) { form.remove(); opts.onSave(rec); return; }
     nwPendingSave(rec).then(function() {
       nwRenderStrip(rec);
     });
   });
-  strip.insertBefore(form, strip.querySelector('.nw-strip-meta'));
+  if (opts.host) strip.appendChild(form); else strip.insertBefore(form, strip.querySelector('.nw-strip-meta'));
   var target = focusField && inputs[focusField] ? inputs[focusField] : inputs.fullName;
   try { target.focus(); } catch (e) {}
 }
@@ -5445,6 +5520,8 @@ function nwResolveCard(rec) {
     rv.segmentIds = hit ? hit.segmentIds.slice() : [];
     rv.registryName = hit ? hit.name : '';
     rv.hq = hit ? hit.hq : '';
+    // A covered company takes the registry's own casing of its name.
+    if (hit && hit.name && nwNormaliseCompany(hit.name) === nwNormaliseCompany(x.company) && x.company !== hit.name) { x.company = hit.name; if (!rec.saved) nwPendingSave(rec); }
     var acc = nwExistingAccount(x.company);
     rv.accountId = acc ? acc.id : '';
     if (acc) { rv.relationship = acc.relationship || rv.relationship; rv.stage = acc.stage || 'none'; if (acc.slug) rv.slug = acc.slug; }
@@ -5824,6 +5901,38 @@ function nwRowDetail(row, id) {
     line('Notes', c.notes);
     linkLine('Front', c.frontLink, '🖼 Front'); linkLine('Back', c.backLink, '🖼 Back');
     line('History', (res.interactions || []).map(function(ix) { return ix.date + ' ' + nwLabel('interactionKind', ix.kind); }).join(' · '));
+    var acts = nwEl('div', 'nw-strip-photos');
+    var editBtn = nwEl('a', 'nw-edit-btn nw-row-edit', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
+    editBtn.addEventListener('click', function(ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      var rec = nwRecFromRow(c, a);
+      if (a && a.id) _nwAccountsById[a.id] = _nwAccountsById[a.id] || a;
+      nwEditCard(rec, null, { host: det, onSave: function(r) { nwUpdateContact(r, row); } });
+    });
+    acts.appendChild(editBtn);
+    det.appendChild(acts);
+  });
+}
+// Edit a saved contact from its row: the same editor and review block as a
+// held card, pre-filled from the full row, writing back through nop=update.
+function nwRecFromRow(c, a) {
+  return { id: c.id, saved: true, frontLink: c.frontLink || '', backLink: c.backLink || '', createdAt: c.createdAt || '', dismissed: {},
+    extraction: { fullName: c.fullName || '', firstName: c.firstName || '', lastName: c.lastName || '', title: c.title || '', company: (a && a.name) || '',
+      department: c.department || '', emails: c.emails || [], phones: c.phones || [], address: c.address || '', website: c.website || '',
+      linkedin: c.linkedin || '', socials: c.socials || [], languages: c.languages || [], rawText: '', confidence: {} },
+    review: { role: c.role || 'other', relationship: (a && a.relationship) || 'target', stage: (a && a.stage) || 'none', slug: (a && a.slug) || '',
+      linkSlug: !!(a && a.slug), segmentIds: (a && a.segmentIds) || [], accountId: (a && a.id) || '', sourceEvent: c.sourceEvent || '',
+      metDate: c.metDate || '', consent: c.consent || 'unknown', dnc: !!c.dnc, notes: c.notes || '', hq: (a && a.hq) || '',
+      registryName: '', resolvedFor: (a && a.id) ? nwNormaliseCompany(a.name) + '|' + nwDomainOf(c.website, c.emails) : '' } };
+}
+function nwUpdateContact(rec, row) {
+  var x = rec.extraction || {};
+  var params = { contactId: rec.id, contact: JSON.stringify(nwContactPayload(rec)), account: JSON.stringify(nwAccountPayload(rec)) };
+  nwCaptureStatus('Saving changes to ' + (x.fullName || 'the contact') + '…', '', 0);
+  nwApiBody('update', params, function(res) {
+    if (!(res && res.success)) { nwCaptureStatus('Could not save the changes (' + nwSaveErrText(res && res.error) + ')', 'err'); return; }
+    nwCaptureStatus('✓ Saved changes to ' + (x.fullName || 'the contact') + (res.accountChanged ? ' — now at ' + (res.accountName || 'a different account') : '') + '.', 'ok', 0);
+    nwAfterWrite();
   });
 }
 function nwRowMark(row, deleted) {

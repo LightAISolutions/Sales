@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11w] — 2026-09-21 05:39:58 AM EST — v06.91r
+
+### Added
+- **Edit a saved contact.** Tap a row in Contacts, then **Edit**: the same editor and review block as a held card, filled from the saved row — change any detail, the role, the account block, the source event, met date or consent, and **Save changes** writes it back. Moving a contact to a different company records the change of employer in their history
+
+### Changed
+- **Titles, departments and company names are standardised** when a card is read, when a held card loads and whenever you edit them: every word First-letter-capitalised with the rest lower ("Director of Grid Services", "Sungrow Power Supply Co., Ltd."), except a C-suite title (CEO, CFO, COO …) or a word that is reasonably an acronym (IT, HR, EMEA, ABB, TSMC), which stays in capitals; a word already in mixed case (McKinsey, PhD) is left as printed, and text in another script is never touched. In titles, **Vice President becomes VP, Executive Vice President becomes EVP, and Senior becomes Sr.** — so "Senior Vice President, Sales" reads "Sr. VP, Sales". A company the Profiler record covers takes the record's own spelling of its name
 
 ## [v01.10w] — 2026-09-21 05:01:07 AM EST — v06.90r
 

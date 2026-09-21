@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.91r] — 2026-09-21 05:39:58 AM EST
+
+> **Prompt:** "Standardize titles, departments, and company names to first-letter-capitalized-rest-not unless the titles are of a C-suite or reasonably-assumed to be a 3-letter acronym. If a title is Vice President or VP, standardize to VP. If a title is Executive Vice President or EVP, standardize to EVP. If a title has Senior in it, standardize to Sr. Also, allow me to edit saved contacts."
+
+### Added
+
+#### `googleAppsScripts/Network/Network.gs` — v01.06g
+- `nop=update` (`nwUpdateOp_`, body-POST): the save validators (`nwContactFromPayload_` / `nwAccountFromPayload_`, enums + the D5 stage rule) on an existing owned row, rewritten in place with its id, `Raw Extraction`, `Created At`, `Deleted At` and (when the payload carries none) its card links kept; the account re-resolved through `nwAccountResolve_`; an `account-change` Interaction with the previous `a-` id when the employer differs (D4). No dedupe on an update. Audit `{ contactId, accountId, accountCreated, accountChanged }`; dispatcher case
+
+#### `live-site-pages/Network.html` — v01.11w
+- **`nwStdField(s, isTitle)`** — the standardisation rule for titles, departments and company names: word-wise First-letter caps, rest lower; kept in capitals: a C-suite title (`NW_CSUITE`), a listed abbreviation (`NW_ACRONYMS` — VP, EVP, IT, HR, EMEA, LLC, R&D …), in a mixed-case string any 2–4-letter capital token, in an ALL-CAPS string a 2–4-letter token with no vowel (TSMC) or a lone ≤3-letter name (ABB); a token already in mixed case (McKinsey, iPhone) left as printed; `NW_CASE_FIXES` for GmbH / LLC / Ltd / Inc / PhD; connector words (of, and, for, de, von …) lower unless leading; parentheses never touched. `nwTitleAbbrev` on titles first: Executive Vice President → EVP, Senior Vice President / SVP → Sr. VP, Vice President / V.P. → VP, Senior / Sr → Sr.  Applied through `nwTidyNames` (extraction, held-card load, Retry) and on the editor's title / department / company fields; a company resolved to the registry takes the registry's `name` casing (`nwResolveCard`)
+- **Edit a saved contact**: the row detail gains an **Edit** pill; `nwRecFromRow` builds the editor's record from the `nop=get` response (`saved: true`, review block pre-filled from the contact and its account); `nwEditCard` takes `{ host, onSave }` so the same form mounts inside the row detail and submits through `nwUpdateContact` → `nop=update` → `nwAfterWrite()`; `nwPendingSave` ignores a saved record so nothing is written to IndexedDB
+
+### Changed
+
+#### `scripts/verify-network-roles.py`
+- The stub answers `nop=update` (row rewritten, account re-resolved, `accountChanged`); after delete → restore: 17 `nwStdField` cases asserted, then the saved-row Edit — editor pre-filled (name, company, role, stage, source event), title set to "senior vice president, grid" and role to champion, the `nop=update` payload carries `Sr. VP, Grid` / `champion` / the met date, the row re-renders with the new title, no held record written; the merge-sheet assertion now accepts several differing fields as long as every checked radio is the new card
+
+#### `scripts/check-network-schema.py`
+- `accountChanged` added to the audit-key allow-list (a flag)
+
+#### `README.md`
+- Tree: `Network.html` description extended (standardisation, edit-in-place); displays v01.11w · v01.06g
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- §11 N1 row and §13.6 prompt: versions advanced to v01.11w / v01.06g, v06.91r
+
+### Notes
+- Still 2026-09-21 EST — 87 sections, nine dated today and exempt, 78 non-exempt; no rotation. CHANGELOG `Sections: 86/100` → `87/100`
+- Verified: `node --check` on the `.gs` copy, `check-gas-inner-scripts.js`, `check-readme-tree.py` (0 findings), `verify-network-roles.py` (all checks passed, 0 page errors), `check-network-schema.py` (exit 0)
 
 ## [v06.90r] — 2026-09-21 05:01:07 AM EST
 

@@ -61,7 +61,7 @@ COUNT_SHAPES = [r'\b[A-Za-z_$][\w$]*\.(?:id|length|created)\b', r'\bnwFieldCount
                 r'\(?\b[A-Za-z_$][\w$]*\s*\?\s*\d+\s*:\s*\d+\)?']
 ALLOWED_KEYS = {'contactId', 'accountId', 'absorbedId', 'duplicateOf', 'interactionId', 'id', 'accounts', 'contacts',
                 'interactions', 'fields', 'sides', 'duplicate', 'accountCreated', 'count', 'error', 'operation', 'role',
-                'capability', 'op', 'ids', 'rows', 'signals', 'drafts', 'mailings', 'purged', 'retried'}
+                'capability', 'op', 'ids', 'rows', 'signals', 'drafts', 'mailings', 'purged', 'retried', 'accountChanged'}
 
 
 def schema_enums(text):

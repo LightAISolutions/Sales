@@ -47,7 +47,9 @@ appears (network-save-list.png); a second card with the same email gets the
 merge sheet, never a silent reject (network-save-merge.png), and Merge sends
 mergeInto=<the survivor>; "Keep as a separate contact" sends distinct=; a
 row tap fetches the full row (nop=get); Delete → Restore round-trips
-(nop=delete / nop=restore) and Save all files the stack.
+(nop=delete / nop=restore) and Save all files the stack. v01.11w: titles,
+departments and company names are standardised (nwStdField) and a saved
+contact is editable from its row (nop=update).
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -164,6 +166,19 @@ def gas_stub(role, counter, state=None):
                                                   'email': (c.get('emails') or [{}])[0].get('value', ''), 'full': dict(c, id=cid, accountId=acc['id'])})
                         body = {'success': True, 'contactId': cid, 'accountId': acc['id'], 'accountName': acc['name'],
                                 'accountCreated': created, 'interactionId': 'i-0000000000002', 'linksTarget': 'contact'}
+            elif 'nop=update' in post:
+                state['posts'].append(('update', post))
+                c = json.loads(q(post, 'contact') or '{}'); a = json.loads(q(post, 'account') or '{}')
+                row = next(x for x in state['contacts'] if x['id'] == q(post, 'contactId'))
+                acc = next((x for x in state['accounts'] if x['name'].lower() == a.get('name', '').lower()), None)
+                if acc is None:
+                    acc = {'id': 'a-%013d' % (len(state['accounts']) + 1), 'name': a.get('name', ''), 'slug': a.get('slug', ''),
+                           'relationship': a.get('relationship'), 'stage': a.get('stage'), 'updatedAt': '2026-09-21T00:00:00Z'}
+                    state['accounts'].append(acc)
+                changed = row['accountId'] != acc['id']
+                row.update({'accountId': acc['id'], 'name': c.get('fullName'), 'title': c.get('title'), 'role': c.get('role')})
+                row['full'].update(c, accountId=acc['id'])
+                body = {'success': True, 'contactId': row['id'], 'accountId': acc['id'], 'accountName': acc['name'], 'accountCreated': False, 'accountChanged': changed}
             elif 'nop=links' in url:
                 body = {'success': True}
             elif 'nop=get' in url:
@@ -545,6 +560,37 @@ def run():
         page.wait_for_function("() => !document.querySelector('#nw-list .nw-row.nw-deleted') && document.querySelectorAll('#nw-list .nw-row').length === 1", timeout=8000)
         if not [u for u in reqs if 'nop=restore' in u] or state['contacts'][0].get('deletedAt'):
             failures.append('restore: nop=restore not issued or the stub row still deleted')
+        # Standardisation of titles / departments / company names (the developer's rule).
+        std = page.evaluate("""() => [['DIRECTOR OF GRID SERVICES', true], ['Senior Vice President, Sales', true], ['Executive Vice President', true],
+            ['vice president of business development', true], ['SVP Sales', true], ['HEAD OF IT', true], ['CEO', true], ['Sr Engineer, R&D', true],
+            ['Key Account Manager (亚太区)', true], ['AVANTUS', false], ['acme energy', false], ['ABB', false], ['TSMC', false], ['McKinsey & Company', false],
+            ['SUNGROW POWER SUPPLY CO., LTD.', false], ['Siemens Energy GMBH', false], ['SALES & MARKETING', false]].map(c => nwStdField(c[0], c[1]))""")
+        want_std = ['Director of Grid Services', 'Sr. VP, Sales', 'EVP', 'VP of Business Development', 'Sr. VP Sales', 'Head of IT', 'CEO', 'Sr. Engineer, R&D',
+                    'Key Account Manager (亚太区)', 'Avantus', 'Acme Energy', 'ABB', 'TSMC', 'McKinsey & Company', 'Sungrow Power Supply Co., Ltd.',
+                    'Siemens Energy GmbH', 'Sales & Marketing']
+        if std != want_std:
+            failures.append('standardise: nwStdField gave %r' % (std,))
+        # Edit a saved contact from its row: the editor opens in the detail pre-filled, the review block too; save → nop=update → the row re-renders.
+        page.click('#nw-list .nw-row .nw-row-main')
+        page.wait_for_selector('#nw-list .nw-row.nw-open .nw-row-edit', timeout=8000)
+        page.click('#nw-list .nw-row.nw-open .nw-row-edit')
+        page.wait_for_selector('#nw-list .nw-row-detail .nw-editor select[data-review="role"]', timeout=5000)
+        pre = page.evaluate("""() => { const f = document.querySelector('#nw-list .nw-row-detail .nw-editor');
+            return [f.querySelector('input[data-field="fullName"]').value, f.querySelector('input[data-field="company"]').value,
+                    f.querySelector('[data-review="role"]').value, f.querySelector('[data-review="stage"]').value, f.querySelector('[data-review="sourceEvent"]').value]; }""")
+        if pre != ['Jane O’Doe-Smith', 'Acme Energy', 'decision-maker', 'discovery', 're-plus-2026']:
+            failures.append('edit saved: editor not pre-filled from the row: %r' % (pre,))
+        page.fill('#nw-list .nw-row-detail .nw-editor input[data-field="title"]', 'senior vice president, grid')
+        page.select_option('#nw-list .nw-row-detail .nw-editor select[data-review="role"]', 'champion')
+        page.click('#nw-list .nw-row-detail .nw-editor button[type="submit"]')
+        page.wait_for_function("() => /Saved changes/.test((document.getElementById('nw-cap-status') || {}).textContent || '')", timeout=10000)
+        page.wait_for_function("() => /Sr\\. VP, Grid/.test((document.querySelector('#nw-list .nw-row') || {}).textContent || '')", timeout=10000)
+        up = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        uc = json.loads(up.get('contact', '{}'))
+        if state['posts'][-1][0] != 'update' or up.get('contactId') != 'c-0123456789abc' or uc.get('title') != 'Sr. VP, Grid' or uc.get('role') != 'champion' or uc.get('metDate') != today:
+            failures.append('edit saved: nop=update payload wrong: %r' % ({k: uc.get(k) for k in ('title', 'role', 'metDate')},))
+        if page.evaluate(idb_count) != 0:
+            failures.append('edit saved: editing a saved contact wrote a held record')
         # A second card with the same email: the merge sheet, never a silent reject; Merge sends mergeInto.
         def seed(cid, name, email, back=False):
             page.evaluate("""([cid, name, email, back]) => { const rec = { id: cid, sides: back ? 2 : 1, createdAt: new Date().toISOString(),
@@ -563,7 +609,7 @@ def run():
         page.screenshot(path=str(SHOTS / 'network-save-merge.png'), full_page=False)
         sheet = page.evaluate("() => document.querySelector('#nw-extracted .nw-sheet').textContent")
         radios = page.evaluate("() => [...document.querySelectorAll('#nw-extracted .nw-sheet input[type=radio]:checked')].map(r => r.value)")
-        if 'Looks like Jane O’Doe-Smith' not in sheet or 'email address' not in sheet or not page.query_selector('#nw-extracted .nw-sheet .nw-merge-keep') or radios != ['new']:
+        if 'Looks like Jane O’Doe-Smith' not in sheet or 'email address' not in sheet or not page.query_selector('#nw-extracted .nw-sheet .nw-merge-keep') or not radios or set(radios) != {'new'}:
             failures.append('merge: sheet wrong — text=%r checked=%r' % (sheet[:120], radios))
         page.click('#nw-extracted .nw-sheet .nw-merge-go')
         page.wait_for_function("() => !document.querySelector('#nw-extracted .nw-strip[data-id=\"c-1111111111111\"]')", timeout=15000)
