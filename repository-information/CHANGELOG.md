@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.81r] — 2026-09-20 09:14:47 PM EST
+
+> **Prompt:** "give me a prompt to paste into the next session (with recommended AI model/effort level) in the action plan, then remember session."
+
+### Added
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- **The paste-in prompt for N1 session 1** (Fable 5.1 High, with the model/effort rationale and the note that E0 can run beside it), verbatim, as a block under §13.5: steps 1–5 of the brief only, the D6/D8/D9/D14 constraints restated, the verification train, the hand-off to write in chat, and the rotation state the push will meet
+
+### Changed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Latest Session rewritten for the Q0 session (v06.79r rollout, v06.80r probe table, this push); recommendation: paste the N1 session-1 prompt. The prior entry moved to Previous Sessions under the two-session cap
+
+#### `README.md`
+- `Last updated` and `Repo version` refreshed
+
+### Notes
+
+- Still 2026-09-20 EST — 103 sections, seven exempt, 96 non-exempt, no rotation. CHANGELOG `Sections: 102/100` → `103/100`.
 
 ## [v06.80r] — 2026-09-20 09:11:43 PM EST
 
