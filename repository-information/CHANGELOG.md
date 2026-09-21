@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.78r] — 2026-09-20 08:53:15 PM EST
+
+> **Prompt:** "ive signed into Network.html once more - see screenshot. Give me a prompt to paste into a new Fable 5.1 Medium session to start Q0, then remember session." — and, mid-turn: "Upon checking the overall Network and Events plan, I noticed Q0 is supposed to be the last phase of the plan. Evaluate the plan again and give me a prompt to paste that is confirmed to be the next step."
+
+### Added
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- **The paste-in prompt for the Q0 session** (Fable 5.1 Medium), verbatim, as a block under §13.3 beside the N0 prompt: copy `nwQuotaProbe_()` + the `op=quota` dispatch into the eight existing projects as `quotaProbe_()` (Network renamed to match — nine GAS bumps), `scripts/check-quota.sh` on the `check-acl-health.sh` shape, the placeholder-id projects skipped by the script, the CHANGELOG rotation the push will trigger on 2026-09-21 EST or later, and the do-nots (no Events, no interval change, no auth on the probe)
+
+### Changed
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- §11 N0 row: the live done-when closed 2026-09-20 — deployed `AKfycbxu…c0_U8`, admin signed in, `op=deploy` → `Already up to date (v01.02g)`, `op=aclhealth` → `acl_ok`, `op=quota` answering, `check-acl-health.sh` lists Network; the bootstrap lesson for E1 recorded (Manage deployments → Edit → New version once, by hand)
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Latest Session rewritten for the N0 session (v06.76r scaffold, v06.77r deployment id, the live verification, this push); recommendation: paste the Q0 prompt. The prior entry moved to Previous Sessions under the two-session cap
+
+#### `README.md`
+- `Last updated` and `Repo version` refreshed
+
+### Notes
+- **Order confirmed against the plan (the developer asked whether Q0 is the last phase):** it is not — there are two quota phases. **Q0** (the counter rollout) follows N0 in D16's decided sequence (§3 line "Gate → N0 → **Q0** → N1 …"), in §8's Q0 row, in §9 and in §11 ("after N0"); **Q** (the quota *review*) is the final phase, "after E5" in §8 and §11. No reordering was made; the Q0 prompt is the confirmed next step
+- **Live probe results this session (no push):** `op=quota` reported 23 executions on 2026-09-20 including 12 `security_alert` rows — most plausibly `data_access_expired_session` retries during the redeploy window; the developer may confirm in the `SessionAuditLog` Details column. `grace: NOT armed` on Network arms on the next sign-in against v01.02g (the developer has since signed in once more)
+- **§13 numbering collision for the next brief-writer:** the N1 brief reserves §13.6 for N2 and the E0 brief reserves §13.6 for E1 — first writer takes 13.6, the other 13.7
+- **No rotation — but at capacity.** 100 sections, four dated 2026-09-20 EST exempt → 96 non-exempt against the 100 trigger; counter `Sections: 100/100`. The first push dated 2026-09-21 EST or later finds 100 non-exempt and rotates the oldest date group
 
 ## [v06.77r] — 2026-09-20 08:38:53 PM EST
 

@@ -6,6 +6,48 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-20 08:53:15 PM EST
+**Repo version:** v06.78r — four pushes this session (`e27d74c` v06.76r the scaffold, `bc50445` v06.77r the deployment id, this one), all on `claude/cool-wozniak-dpgz7a`, restarted from `origin/main` before each
+**Branch:** `claude/cool-wozniak-dpgz7a`
+**Model:** Fable 5.1 High
+
+### What was done
+
+**N0 — the Network scaffold — built, deployed and verified live.**
+
+- **v06.76r — the scaffold** (§13.3, all eight steps). `setup-gas-project.sh` run once with the developer's `SPREADSHEET_ID` `1YjY3…ptBiQ`, the fleet `CLIENT_ID`, and the fleet Master ACL `1kG2K…UvE` passed explicitly (the Global ACL config's own value is still a placeholder, so the script's auto-default resolves to nothing). PWA manifest + icons with the `manifest-src 'self'` override on both CSP tags; the admin-only door on both sides (`NW_ROLE_CAPS`, `nwAdmitted_` / `nwAdmitted()`, `?as=` only subtracts) with `scripts/verify-network-roles.py` passing 4/4 tiers at phone width, zero page errors; `ensureNetworkTabs_()` with the eight `NETWORK-SCHEMA.md` §3 tabs; the §4 enum mirrors; `NW_ID_RE` / `nwNewId_`; the `nwfolders` registry; ownership helpers verbatim from Receipts; heartbeat 600 s and no data poll on both sides; `op=quota` + a ported `op=aclhealth`; Profiler's explorer relabelled "Ecosystem" (v01.91w, matrix unchanged); the N1 brief as §13.5.
+- **v06.77r — `DEPLOYMENT_ID` recorded** (`AKfycbxu…c0_U8`) and synced three ways (config, `.gs`, the page's `_e`); v01.02w / v01.02g.
+- **Live verification (in chat, no push):** sign-in works as admin; the first webhook run hit the one-time bootstrap gap (pasted code with the placeholder id cannot repoint its own deployment — fixed by Manage deployments → Edit → New version); then `op=deploy` → `Already up to date (v01.02g)`, `op=aclhealth` → `acl_ok`, `op=quota` answering, `check-acl-health.sh` lists Network. §11 N0 row closed.
+- **v06.78r — this push.** The Q0 paste-in prompt added under §13.3 beside the N0 prompt; this session context.
+
+### Where we left off
+
+**N0 is fully done, including the live done-when.** Next is **Q0 on Fable 5.1 Medium** — paste the Q0 prompt block under §13.3. After Q0: N1 (§13.5, two Fable High sessions), with E0 (Opus 5 xhigh, §13.4) beside N1–N2. Dated target from D16: N1 and E1 live before RE+ 2026 opens on 2026-11-16.
+
+### Key decisions made
+
+- **Master ACL id is passed explicitly** to the setup script on this repo — the Global ACL config default is a placeholder.
+- **D1 scope held exactly**: heading + denied sentence + verifier label; Profiler's masthead button still reads "⛓ Network" (flagged, not changed).
+- **`op=aclhealth` ported into Network** alongside `op=quota`, so the daily ACL health Routine covers it.
+- **E1 hand-off must include the Manage deployments → Edit → New version click** before the first webhook run (the bootstrap gap).
+
+### Active context
+
+- **Repo version v06.78r.** `CHANGELOG.md` at `Sections: 100/100` — four sections dated 2026-09-20 EST are exempt, so no rotation fired; **the first push dated 2026-09-21 EST or later rotates the oldest date group** (SHA enrichment; unshallow first).
+- Profiler's page changelog is at `Sections: 50/50` (today's section exempt) — its next bump on a later date rotates the 2026-08-24 group.
+- **Pre-existing, not N0's:** `verify-profiler-roles.py`'s guidance-progress isolation check fails identically on `origin/main` (the hub moved to Classroom in C3); the template's `action=getData` route calls an undefined `processDataPoll()` in every project (dead route, never called).
+- **§13 numbering collision to resolve at the next brief:** the N1 brief reserves §13.6 for N2 and the E0 brief reserves §13.6 for E1 — whichever session writes first takes 13.6, the other takes 13.7.
+- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Open a Fable 5.1 Medium session and paste the Q0 prompt block under §13.3 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — it copies `quotaProbe_()` and the `op=quota` dispatch into the eight existing projects (renaming Network's to match), writes `scripts/check-quota.sh`, bumps nine GAS versions with changelogs, flips §11's Q0 row, and pushes once — with the CHANGELOG rotation that push will trigger if it lands on or after 2026-09-21 EST.
+
+**To continue:** type `run Q0`
+
+## Previous Sessions
+
 **Date:** 2026-09-20 12:26:53 AM EST
 **Repo version:** v06.75r — two pushes this session (`8df12be` v06.74r the gate, this one), both on `claude/optimistic-fermat-ru79p0`, restarted from `origin/main` before each
 **Branch:** `claude/optimistic-fermat-ru79p0`
@@ -42,45 +84,5 @@ The **NE0 design gate for Network + Events** — §13.1 of `NETWORK-EVENTS-DESIG
 - **Open a Fable 5.1 High session and paste the N0 prompt block under §13.3 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — it scaffolds Network from the auth template, builds the admin-only door, the schema's tabs, the `op=quota` counter and the Profiler "Ecosystem" relabel, writes the N1 brief as §13.5, and pushes once. (Monday's earnings-desk check-out in `REMINDERS.md` fires on its own wake-up first.)
 
 **To continue:** type `run N0`
-
-## Previous Sessions
-
-**Date:** 2026-09-19 09:53:18 PM EST
-**Repo version:** v06.73r — three pushes this session (`1cd05e9` v06.71r, `ff64c9b` v06.72r, this one), all on `claude/brave-ride-nfjh9j`, rebased onto `origin/main` before each
-**Branch:** `claude/brave-ride-nfjh9j`
-**Model:** Fable 5.1 High
-
-### What was done
-
-The **Network + Events strategic design session** — the founding brief for two new federated apps became `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`, a design-gate proposal in the shape `PHASE6-CLASSROOM-DESIGN.md` had before its gate.
-
-- **v06.71r — the proposal.** Four research passes (Receipts mechanics; Profiler/Scraper/Classroom surfaces and plumbing; the card-scanner/personal-CRM market; the event-platform market with live probes of organiser sites) → ground truth measured at v06.70r, market-parity inventories, sixteen gate decisions with recommendations, both app designs, the peer-token bridge, the model rule applied, a phase plan with per-phase model/effort, an all-Proposed ledger, eight open questions, the NE0 brief, and Appendix A — the 64-row seed event calendar for 2026-Q4 → 2027.
-- **v06.72r — the developer's first decisions recorded.** D1: the `#network` collision is resolved by renaming Profiler's explorer to **"Ecosystem"** (executed in N0 with the `verify-profiler-roles.py` label). D3, D10, D13 approved. §13.1 written: the gate session step by step.
-- **v06.73r — this push.** D15 decided: the apps **never send mail and hold no mail scope** — v1 renders one editable draft per recipient in-app and hands off by `.eml`/CSV export, copy-to-clipboard or `mailto:` (the developer mails from a work account that changes with the employer). D11 approved and widened to the **§5.5.1 signal-source catalogue** (13 rows, every one in scope), with the quoted-people extraction over Scraper's articles as **D17** (Scraper extracts `people[]` at summarisation time; `cop=people`; Network reads over a new `NETWORK_CORPUS_TOKEN`). E4 grew to three sessions; ≈ 23 sessions total. **§13.2 holds the paste-in prompt for the gate session.**
-
-### Where we left off
-
-**The proposal is complete and six of seventeen decisions are settled.** The next session is the **NE0 gate on Fable 5.1 xhigh**: paste §13.2, walk D4 · D5 · D7 · D8 · D9 · D6 · D2 · D14 · D17 · D12 · D16 one at a time, write `NETWORK-SCHEMA.md` and `EVENTS-SCHEMA.md`, write the N0 and E0 briefs, one push. Nothing has been scaffolded; no page, GAS script, diagram or rule changed in this session.
-
-### Key decisions made
-
-- **People are private, the event registry is public** (D3) — the M3 field-notes architecture for contacts, cards, interactions, plans and signals; `live-site-pages/events-data/` for the registry.
-- **Account-centric model** (D4, still to be confirmed at the gate but explained and accepted in conversation): Account → Contact → Card → Interaction, the dossier attached at the Account.
-- **No LinkedIn automation ever**; the signal stack is exhibitor/speaker diffs, newswire RSS, newsrooms, agendas, FERC dockets, the corpus's own decision makers, and the Scraper quoted-people extraction; LinkedIn/X/attendee lists enter by hand with a confidence score.
-- **The apps never send email** (D15) — drafts only, exported to whatever client the developer uses.
-- **Model rule**: Fable 5.1 xhigh exactly twice (NE0, X), Opus 5 xhigh for the E0 registry research and the `events plan` narrative, Fable 5.1 High for every code session, Fable 5.1 Medium for roster bookkeeping and the quota review. This session ran on High deliberately — a proposal is synthesis; the gate is where xhigh pays.
-
-### Active context
-
-- **Repo version v06.73r.** `CHANGELOG.md` at **115 raw / 98 non-exempt** against the 100 trigger with seventeen sections dated 2026-09-19 EST — **the first push dated 2026-09-20 EST or later rotates the 2026-09-14 date group (20 sections)**; deepen the clone first.
-- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged by this session and still gates every scheduled job in the Network/Events plan (phase R).
-- **Two answers to bring to the gate:** does a Google Cloud project with billing exist (Places, E5)? May Gemini/Claude process card PII (D6)?
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Open a Fable 5.1 xhigh session and paste §13.2 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — it starts the NE0 gate, walks the eleven open decisions one at a time, and ends with both schema skeletons and the N0/E0 briefs in one push. (Monday's earnings-desk check-out in `REMINDERS.md` is a separate, earlier item and fires on its own wake-up.)
-
-**To continue:** type `start the NE0 gate`
 
 Developed by: LightAISolutions
