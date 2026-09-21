@@ -190,6 +190,12 @@ def probe(page):
         sidesToggle: !!document.querySelector('#nw-capture #nw-sides-one[aria-pressed]') && !!document.querySelector('#nw-sides-two'),
         scanLabel: (document.getElementById('nw-cap-btn') || {}).textContent || '',
         scanBeside: !!document.querySelector('#nw-capture .nw-toprow .nw-seg + #nw-cap-btn'),
+        rowOrder: (function(){ const rows = [...document.querySelectorAll('#nw-capture .nw-toprow, #nw-capture .nw-actions')];
+          return rows.map(r => r.querySelector('#nw-cap-btn') ? 'scan' : r.querySelector('#nw-extract-btn') ? 'extract' : r.querySelector('#nw-sides') ? 'sides' : '?').join(','); })(),
+        halves: (function(){ const r = document.querySelector('#nw-capture .nw-toprow'); if (!r) return false;
+          const a = r.children[0].getBoundingClientRect(), b = r.children[1].getBoundingClientRect();
+          return Math.abs(a.width - b.width) < 2 && Math.abs(a.height - b.height) < 2; })(),
+        stacked: (function(){ const b = document.getElementById('nw-sides-one'); return !!(b && b.querySelector('small') && b.textContent.replace(/\s/g,'') === 'One-sided'); })(),
         queued:  (document.getElementById('nw-queue-count') || {}).textContent || '',
         strips:  document.querySelectorAll('#nw-extracted .nw-strip').length,
         progress: !!document.querySelector('#nw-capture #nw-progress .nw-progress-bar'),
@@ -260,6 +266,8 @@ def run():
                     failures.append('%s: turned-away card rendered for the admitted tier' % role)
                 if len(data_reqs) != 1:
                     failures.append('%s: expected exactly one list request, saw %d' % (role, len(data_reqs)))
+                if got['rowOrder'] != 'scan,extract,sides' or not got['halves'] or not got['stacked']:
+                    failures.append('%s: control rows wrong — order=%r halves=%s stacked=%s' % (role, got['rowOrder'], got['halves'], got['stacked']))
                 if not (got['sidesToggle'] and 'Scan' in got['scanLabel'] and got['scanBeside']):
                     failures.append('%s: sides toggle / Scan placement wrong — sides=%s label=%r beside=%s'
                                     % (role, got['sidesToggle'], got['scanLabel'], got['scanBeside']))

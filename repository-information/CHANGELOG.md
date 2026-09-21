@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 83/100`
+`Sections: 84/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.88r] — 2026-09-21 04:12:37 AM EST
+
+> **Prompt:** "A few more changes:
+
+* change "one-sided" and "two-sided" from a side-by-side format to a stacked format with "one-" and "two-" on top of "sided"; Format the "Front", "Back", "One-sided", and "Two-sided" buttons to take up the the left half of the row with the "Scan" and "Choose Photos" buttons also being the same size taking up the right half of the row. 
+* move the "Extract" and "Clear" buttons above the "One-sided", "Two-sided", and "Choose Photos" buttons."
+
+### Changed
+
+#### `live-site-pages/Network.html` — v01.09w
+- Capture-card control rows are two-column grids (`1fr 1fr`, `align-items: stretch`): Front / Back and Scan on the first row, Extract / Clear on the second, One- / Two-sided and Choose photos on the third — each toggle fills the left half as a two-cell grid, each button the right half at the same size (selectors scoped under `#nw-capture` to outrank the base `.nw-seg` inline-flex rule)
+- The sides toggle renders stacked: "One-" / "Two-" over a small "sided" (`aria-label` keeps the full word for screen readers)
+- Extract / Clear now sit above the sides + Choose photos row
+
+#### `scripts/verify-network-roles.py`
+- Asserts the row order (scan, extract, sides), that the two halves of the top row measure the same width and height, and that the sides buttons are stacked
+
+### Notes
+- Still 2026-09-21 EST — 84 sections, six exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 83/100` → `84/100`
 
 ## [v06.87r] — 2026-09-21 04:03:50 AM EST
 

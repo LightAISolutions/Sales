@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.08w">
+  <meta name="build-version" content="v01.09w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -410,12 +410,15 @@
     .nw-thumb span { font: 11px/1.4 var(--nw-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--nw-faint); }
     .nw-thumb.nw-thumb-set { border-style: solid; border-color: var(--nw-accent); }
     .nw-thumb.nw-thumb-set span { position: absolute; left: 6px; bottom: 5px; background: rgba(35,32,27,.72); color: #fff; padding: 2px 6px; border-radius: 4px; }
-    .nw-toprow { display: flex; align-items: center; gap: 10px; margin: 2px 0 10px; }
-    .nw-toprow .nw-seg { margin: 0; flex: 0 0 auto; }
-    .nw-toprow .nw-btn { flex: 1 1 auto; }
-    .nw-actions { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; margin: 0 0 10px; }
-    .nw-actions .nw-seg { margin: 0; flex: 0 0 auto; }
-    .nw-actions .nw-seg button { padding: 9px 12px; }
+    /* Control rows: two equal halves — a toggle on the left, its button on
+       the right — so every row lines up down the card. */
+    .nw-toprow, .nw-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: stretch; margin: 2px 0 10px; }
+    #nw-capture .nw-toprow .nw-seg, #nw-capture .nw-actions .nw-seg { margin: 0; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; width: 100%; min-height: 44px; box-sizing: border-box; }
+    #nw-capture .nw-toprow .nw-seg button, #nw-capture .nw-actions .nw-seg button { padding: 9px 6px; }
+    #nw-capture .nw-toprow .nw-btn, #nw-capture .nw-actions .nw-btn { width: 100%; box-sizing: border-box; }
+    /* One- / Two- over "sided" */
+    #nw-sides button { line-height: 1.15; }
+    #nw-sides button small { display: block; font-size: 11px; font-weight: 400; letter-spacing: .02em; }
     .nw-btn { font: 600 14px/1 var(--nw-serif); padding: 11px 16px; border-radius: 8px; border: 1px solid var(--nw-line2);
       background: var(--nw-card); color: var(--nw-ink); cursor: pointer; flex: 1 1 auto; min-height: 44px; }
     .nw-btn:disabled { opacity: .45; cursor: default; }
@@ -5198,8 +5201,8 @@ function nwCaptureMount(app) {
   // Batch sides — in a two-sided batch consecutive photos are paired
   // (front, back, front, back …); an odd last photo is a front on its own.
   var sides = nwEl('div', 'nw-seg'); sides.id = 'nw-sides'; sides.setAttribute('role', 'group'); sides.setAttribute('aria-label', 'Sides per card in a batch');
-  var s1 = nwEl('button', null, 'One-sided'); s1.id = 'nw-sides-one'; s1.type = 'button'; s1.setAttribute('aria-pressed', 'true');
-  var s2 = nwEl('button', null, 'Two-sided'); s2.id = 'nw-sides-two'; s2.type = 'button'; s2.setAttribute('aria-pressed', 'false');
+  var s1 = nwEl('button', null, 'One-'); s1.id = 'nw-sides-one'; s1.type = 'button'; s1.setAttribute('aria-pressed', 'true'); s1.setAttribute('aria-label', 'One-sided'); s1.appendChild(nwEl('small', null, 'sided'));
+  var s2 = nwEl('button', null, 'Two-'); s2.id = 'nw-sides-two'; s2.type = 'button'; s2.setAttribute('aria-pressed', 'false'); s2.setAttribute('aria-label', 'Two-sided'); s2.appendChild(nwEl('small', null, 'sided'));
   s1.addEventListener('click', function() { nwSetBatchSides(1); });
   s2.addEventListener('click', function() { nwSetBatchSides(2); });
   sides.appendChild(s1); sides.appendChild(s2);
@@ -5214,7 +5217,7 @@ function nwCaptureMount(app) {
   actions.appendChild(batchBtn);
   var actions2 = nwEl('div', 'nw-actions');
   actions2.appendChild(exBtn); actions2.appendChild(clrBtn);
-  card.appendChild(actions); card.appendChild(actions2);
+  card.appendChild(actions2); card.appendChild(actions);
   var prog = nwEl('div', 'nw-progress'); prog.id = 'nw-progress';
   var progTitle = nwEl('div', 'nw-progress-title'); progTitle.id = 'nw-progress-title'; prog.appendChild(progTitle);
   var progBar = nwEl('div', 'nw-progress-bar'); progBar.appendChild(document.createElement('i')); prog.appendChild(progBar);
