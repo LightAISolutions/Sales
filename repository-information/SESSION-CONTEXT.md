@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-21 04:38:22 AM EST
+**Repo version:** v06.89r — seven pushes this session (`ee6a82b` v06.82r the N1 session-1 build, `14003f5` v06.83r, `e75c5e8` v06.84r, `ad698c6` v06.85r, `f6edad9` v06.86r, `3b0ea8a` v06.87r, `c06546e` v06.88r the UX passes while the developer scanned, this one), all on `claude/epic-dirac-gbh9bk`, restarted from `origin/main` before each
+**Branch:** `claude/epic-dirac-gbh9bk`
+**Model:** Fable 5.1 (N1 session 1 brief)
+
+### What was done
+
+**N1 session 1 — capture → extraction — built, live, and used: 20 real cards scanned.**
+
+- **v06.82r** — `Network.gs` v01.04g: `nop=newid` (opaque `c-` id before upload, D8), `nop=extract` (`nwExtractFromBase64_` on the Receipts Gemini idiom with the §7 `responseSchema`, both sides as `inline_data` parts, three-leg retry, `GEMINI_API_KEY` from Script Properties, digest cache, audit rows with id + field count + side count only). `Network.html` v01.03w: capture card (single + batch of 15, front/back pair), IndexedDB offline queue drained on `online`, own-Drive upload into `Network App/_inbox/` with a separate `drive.file` token client, BarcodeDetector QR merge, body-POST transport (`nwApiBody`). Verifier: capture card admin-only, offline capture queues (1) and drains.
+- **v06.83r–v06.88r (v01.04w → v01.09w)** — while the developer scanned: four-step progress bar + green "ready for the next card" signal; Front / Back photo links and tap-to-expand field detail; the `c-` id and `check:` list hidden; removable "unclear in the scan" notes (Rescan / Enter manually / Looks right) and an inline editor writing back to the held record; "Missing" cues added then removed at the developer's request; name-case rule (ALL CAPS / all-lower → First-letter caps, mixed case untouched, parentheses never); One-/Two-sided batch toggle (pairs consecutive photos); Photograph → Scan beside Front/Back; Delete on every held card (record + Drive photos); control rows as equal halves with Extract/Clear above the sides row.
+- **v06.83r also fired the first CHANGELOG rotation on the new EST day** — the 2026-09-15 date group (26 sections, v05.79r–v06.04r) archived with SHA enrichment (v05.90r's push commit has no version prefix; matched by its 04:43 timestamp).
+- **Live**: `GEMINI_API_KEY` set on the Network project by the developer; the first card read and filed (Rai Energy); the Android "low memory" tab kill diagnosed (close background apps / gallery path); 20 cards now held in the phone's IndexedDB `pending` store with photos in `_inbox/`.
+- **v06.89r** — the N1 session-2 paste-in prompt written under §13.5 (Fable 5.1 High); this session context.
+
+### Where we left off
+
+**N1 session 1 closed; session 2 (review, dedupe, save, checker, §11 flip, N2 brief) is next** — paste the block under §13.5. §11's N1 row stays *Proposed* until session 2. E0 (§13.4) can still run beside it.
+
+### Key decisions made
+
+- **Held cards live in IndexedDB `pending` until save** (record shape in §13.5's session-2 prompt); session 2 must not rename the db or drop the store — the developer's 20 cards are in it.
+- **Drive access is a second token client in the PROJECT region** (`NW_DRIVE_SCOPE`), not a change to the template's sign-in scope; the first upload asks the consent once per tab.
+- **Folder ids come from the list payload on load**; `nop=folders` only on demand, so the admin's first paint stays at exactly one request (the verifier asserts it).
+- **Drive upload failure is soft** — extraction runs, `driveError` is kept on the record for save to retry.
+- **UX rules the developer set** (keep in session 2): no id / confidence numbers on a card; no missing-field cues; names rule two-case only; Rescan removes the held card and its photos; Delete confirms.
+- The QR vCard path (`nwQrSufficient` → no model call) is unexercised on a real card so far.
+
+### Active context
+
+- **Repo version v06.89r.** `CHANGELOG.md` at `Sections: 85/100`, seven dated 2026-09-21 — 78 non-exempt today, 85 on any later date: **no rotation due**. Archive at 504 sections.
+- Network page changelog `Sections: 9/50`, GAS `4/50`. Verifier: `scripts/verify-network-roles.py` (door + capture + queue/drain + note/edit/delete round-trips; five screenshots in `.playwright-screenshots/`). `pip install playwright` is needed in a fresh container; Chromium is under `/opt/pw-browsers`.
+- **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()` (dead route).
+- **§13 numbering:** N1 session 2 writes the N2 brief as §13.6 (or §13.7 if E0 took 13.6 first).
+- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Open a Fable 5.1 High session and paste the N1 session-2 prompt block under §13.5 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the review card on the existing editor, company resolution, `nwFindDuplicate_` with merge, `nop=save` with the browser-side Drive move, soft delete / restore, `check-network-schema.py`, the §11 flip and the N2 brief — and save the 20 held cards as its done-when.
+- **To continue:** type `run N1 session 2`
+
+## Previous Sessions
+
 **Date:** 2026-09-20 09:14:47 PM EST
 **Repo version:** v06.81r — three pushes this session (`5798119` v06.79r the rollout, `59e29c9` v06.80r the probe table, this one), all on `claude/amazing-archimedes-kp0rh7`, restarted from `origin/main` before each
 **Branch:** `claude/amazing-archimedes-kp0rh7`
@@ -43,47 +87,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Open a Fable 5.1 High session and paste the N1 session-1 prompt block under §13.5 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — capture inputs with the front/back toggle, the IndexedDB offline queue, own-Drive upload into `Network App/_inbox/` with `nop=newid` ids, `nwExtractFromBase64_` on the Gemini `responseSchema` idiom, QR decode — and let it write the session-2 prompt at its close.
 - **To continue:** type `run N1 session 1`
-
-## Previous Sessions
-
-**Date:** 2026-09-20 08:53:15 PM EST
-**Repo version:** v06.78r — four pushes this session (`e27d74c` v06.76r the scaffold, `bc50445` v06.77r the deployment id, this one), all on `claude/cool-wozniak-dpgz7a`, restarted from `origin/main` before each
-**Branch:** `claude/cool-wozniak-dpgz7a`
-**Model:** Fable 5.1 High
-
-### What was done
-
-**N0 — the Network scaffold — built, deployed and verified live.**
-
-- **v06.76r — the scaffold** (§13.3, all eight steps). `setup-gas-project.sh` run once with the developer's `SPREADSHEET_ID` `1YjY3…ptBiQ`, the fleet `CLIENT_ID`, and the fleet Master ACL `1kG2K…UvE` passed explicitly (the Global ACL config's own value is still a placeholder, so the script's auto-default resolves to nothing). PWA manifest + icons with the `manifest-src 'self'` override on both CSP tags; the admin-only door on both sides (`NW_ROLE_CAPS`, `nwAdmitted_` / `nwAdmitted()`, `?as=` only subtracts) with `scripts/verify-network-roles.py` passing 4/4 tiers at phone width, zero page errors; `ensureNetworkTabs_()` with the eight `NETWORK-SCHEMA.md` §3 tabs; the §4 enum mirrors; `NW_ID_RE` / `nwNewId_`; the `nwfolders` registry; ownership helpers verbatim from Receipts; heartbeat 600 s and no data poll on both sides; `op=quota` + a ported `op=aclhealth`; Profiler's explorer relabelled "Ecosystem" (v01.91w, matrix unchanged); the N1 brief as §13.5.
-- **v06.77r — `DEPLOYMENT_ID` recorded** (`AKfycbxu…c0_U8`) and synced three ways (config, `.gs`, the page's `_e`); v01.02w / v01.02g.
-- **Live verification (in chat, no push):** sign-in works as admin; the first webhook run hit the one-time bootstrap gap (pasted code with the placeholder id cannot repoint its own deployment — fixed by Manage deployments → Edit → New version); then `op=deploy` → `Already up to date (v01.02g)`, `op=aclhealth` → `acl_ok`, `op=quota` answering, `check-acl-health.sh` lists Network. §11 N0 row closed.
-- **v06.78r — this push.** The Q0 paste-in prompt added under §13.3 beside the N0 prompt; this session context.
-
-### Where we left off
-
-**N0 is fully done, including the live done-when.** Next is **Q0 on Fable 5.1 Medium** — paste the Q0 prompt block under §13.3. After Q0: N1 (§13.5, two Fable High sessions), with E0 (Opus 5 xhigh, §13.4) beside N1–N2. Dated target from D16: N1 and E1 live before RE+ 2026 opens on 2026-11-16.
-
-### Key decisions made
-
-- **Master ACL id is passed explicitly** to the setup script on this repo — the Global ACL config default is a placeholder.
-- **D1 scope held exactly**: heading + denied sentence + verifier label; Profiler's masthead button still reads "⛓ Network" (flagged, not changed).
-- **`op=aclhealth` ported into Network** alongside `op=quota`, so the daily ACL health Routine covers it.
-- **E1 hand-off must include the Manage deployments → Edit → New version click** before the first webhook run (the bootstrap gap).
-
-### Active context
-
-- **Repo version v06.78r.** `CHANGELOG.md` at `Sections: 100/100` — four sections dated 2026-09-20 EST are exempt, so no rotation fired; **the first push dated 2026-09-21 EST or later rotates the oldest date group** (SHA enrichment; unshallow first).
-- Profiler's page changelog is at `Sections: 50/50` (today's section exempt) — its next bump on a later date rotates the 2026-08-24 group.
-- **Pre-existing, not N0's:** `verify-profiler-roles.py`'s guidance-progress isolation check fails identically on `origin/main` (the hub moved to Classroom in C3); the template's `action=getData` route calls an undefined `processDataPoll()` in every project (dead route, never called).
-- **§13 numbering collision to resolve at the next brief:** the N1 brief reserves §13.6 for N2 and the E0 brief reserves §13.6 for E1 — whichever session writes first takes 13.6, the other takes 13.7.
-- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Open a Fable 5.1 Medium session and paste the Q0 prompt block under §13.3 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — it copies `quotaProbe_()` and the `op=quota` dispatch into the eight existing projects (renaming Network's to match), writes `scripts/check-quota.sh`, bumps nine GAS versions with changelogs, flips §11's Q0 row, and pushes once — with the CHANGELOG rotation that push will trigger if it lands on or after 2026-09-21 EST.
-
-**To continue:** type `run Q0`
 
 Developed by: LightAISolutions

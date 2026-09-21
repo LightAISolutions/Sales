@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 84/100`
+`Sections: 85/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.89r] — 2026-09-21 04:38:22 AM EST
+
+> **Prompt:** "I scanned 20 cards into Network. Give me a prompt to paste into a new session (recommend model/effort) to run N1 session 2, then remember session."
+
+### Added
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- **The paste-in prompt for N1 session 2** (Fable 5.1 High, with the rationale that session 1 over-delivered an editor, notes, delete, rescan, the batch toggle and the name rule, so the review card builds on that editor), verbatim, as a block under §13.5 after session 1's: the reading list against the code as it now stands, the IndexedDB `pending` record shape and the instruction never to drop it (the developer's 20 cards are in it), steps 6–10 restated with the session-1 UI decisions that stand, Save / Save all, `nop=get`, the verification train including `check-network-schema.py` and the verifier's save round-trip, the §11 flip and the N2 brief as §13.6 / §13.7, the hand-off to write, the session-1 lessons, and the CHANGELOG state (85 sections, no rotation due on any later date)
+
+### Changed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Latest Session rewritten for the N1 session-1 run (seven pushes v06.82r–v06.88r, the first rotation, the live card run, the UX rules the developer set); recommendation: paste the N1 session-2 prompt. The prior entry moved to Previous Sessions under the two-session cap
+
+### Notes
+- Still 2026-09-21 EST — 85 sections, seven exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 84/100` → `85/100`. On any later EST date all 85 are non-exempt and still under the trigger
 
 ## [v06.88r] — 2026-09-21 04:12:37 AM EST
 
