@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-21 07:50:53 AM EST` · Repo version: `v06.95r`
+Last updated: `2026-09-21 09:28:13 AM EST` · Repo version: `v06.96r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -594,9 +594,11 @@ Last updated: `2026-09-21 07:50:53 AM EST` · Repo version: `v06.95r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/iren.profile.v1.json">iren.profile.v1.json</a> — Archived v1 dossier (IREN)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/iren.profile.v2.json">iren.profile.v2.json</a> — Archived v2 dossier (IREN)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/iren.profile.v3.json">iren.profile.v3.json</a> — Archived v3 dossier (IREN)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/iren.profile.v4.json">iren.profile.v4.json</a> — Archived v4 dossier (IREN)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jinko.profile.v1.json">jinko.profile.v1.json</a> — Archived v1 dossier (Jinko)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jinko.profile.v3.json">jinko.profile.v3.json</a> — Archived v3 dossier (Jinko)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jinko.profile.v4.json">jinko.profile.v4.json</a> — Archived v4 dossier (JinkoSolar Holding Co., Ltd. (晶科能源) — incl. Jinko Solar Co. (SSE STAR: 688223) and Jinko ESS)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jinko.profile.v5.json">jinko.profile.v5.json</a> — Archived v5 dossier (Jinko)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jupiter-power.profile.v2.json">jupiter-power.profile.v2.json</a> — Archived v2 dossier (Jupiter Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jupiter-power.profile.v3.json">jupiter-power.profile.v3.json</a> — Archived v3 dossier (Jupiter Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jupiter-power.profile.v4.json">jupiter-power.profile.v4.json</a> — Archived v4 dossier (Jupiter Power)
@@ -673,6 +675,7 @@ Last updated: `2026-09-21 07:50:53 AM EST` · Repo version: `v06.95r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/oracle.profile.v1.json">oracle.profile.v1.json</a> — Archived v1 dossier (Oracle)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/oracle.profile.v2.json">oracle.profile.v2.json</a> — Archived v2 dossier (Oracle)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/oracle.profile.v3.json">oracle.profile.v3.json</a> — Archived v3 dossier (Oracle)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/oracle.profile.v4.json">oracle.profile.v4.json</a> — Archived v4 dossier (Oracle)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/panasonic.profile.v1.json">panasonic.profile.v1.json</a> — Archived v1 dossier (Panasonic)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/panasonic.profile.v3.json">panasonic.profile.v3.json</a> — Archived v3 dossier (Panasonic)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/piller.profile.v1.json">piller.profile.v1.json</a> — Archived v1 dossier (Piller Power Systems)

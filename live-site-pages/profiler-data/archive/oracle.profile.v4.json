@@ -12,7 +12,7 @@
  "ownership": "public",
  "employees": "~160,000+",
  "website": "https://www.oracle.com",
- "summary": "BOTTOM LINE UP FRONT: Oracle has converted itself into the largest external AI-compute landlord on earth — remaining performance obligations of $664B at Q1 FY2027 (ended Aug 31, 2026), up from $638B three months earlier, against a quarterly free cash flow of negative $5.4B on $28.5B of capex — and is funding the buildout with debt and equity at a scale ($25B bond plus a since-completed $20B at-the-market equity program, ~$40B in total additional financing signaled) that made its credit default swaps a market-wide barometer for AI-capex risk. BACKGROUND: Founded 1977; database and SaaS incumbent; fiscal year ends May 31. Q1 FY2027 revenue $19.3B (+30%), with OCI infrastructure revenue $7.4B (+121%) on a company-published trajectory to $144B OCI revenue by FY2030. Dual-CEO structure since September 2025 (Clay Magouyrk and Mike Sicilia); Safra Catz moved to executive vice chair; CFO Hilary Maxson (from Schneider Electric, AES energy background) guided FY2027 gross capex to $90-95B. Oracle is simultaneously running a second, AI-capex-linked restructuring program (2026 Restructuring Plan raised to ~$2.8B in expected cost as of mid-September 2026) alongside the buildout. Oracle is the compute landlord for five named US Stargate campuses and discloses per-site power strategy in unusual detail.",
+ "summary": "BOTTOM LINE UP FRONT: Oracle has converted itself into the largest external AI-compute landlord on earth — remaining performance obligations of $638B (+363%) at fiscal year-end May 2026, roughly half of it attributed by press reporting to a single ~$300B five-year OpenAI contract starting 2027 — and is funding the buildout with debt and equity at a scale ($43B debt plus $5B equity raised in FY2026, ~$40B more planned, free cash flow negative $23.7B) that made its credit default swaps a market-wide barometer for AI-capex risk. BACKGROUND: Founded 1977; database and SaaS incumbent; fiscal year ends May 31. FY2026 revenue $67.4B (+17%), with OCI infrastructure revenue $18.1B (+77%) on a company-published trajectory to $144B by FY2030. Dual-CEO structure since September 2025 (Clay Magouyrk and Mike Sicilia); Safra Catz moved to executive vice chair; new CFO Hilary Maxson arrived from Schneider Electric with an AES energy background. Oracle is the compute landlord for five named US Stargate campuses and discloses per-site power strategy in unusual detail.",
  "ecosystemRole": "We assess Oracle as the demand-side account with the most explicit power-procurement story in this file: it does not just buy data centers, it publishes how each campus is powered — a genset microgrid at Shackelford (115 MW already live), a Bloom Energy fuel-cell microgrid at Doña Ana (up to 2.45 GW earmarked, replacing planned gas turbines and diesel), GE Vernova turbines plus grid at Abilene, DTE grid plus new battery storage at Saline Township, and ~70% renewables-plus-battery at Port Washington. Basis: Oracle's own data-center hub pages and the January 2026 'we pay our own way on energy' policy post. For power and BESS vendors, Oracle campuses are the single richest observable menu of behind-the-fence power choices — and its OpenAI concentration makes it the sector's counterparty-risk bellwether.",
  "productsAndServices": [
   {
@@ -49,41 +49,6 @@
   }
  ],
  "recentDevelopments": [
-  {
-   "date": "2026-09-14",
-   "category": "financial",
-   "headline": "2026 Restructuring Plan supplemented by ~$700M (to ~$2.8B expected total cost); a further round of layoffs hit staff the same week with same-day termination notices",
-   "read": "The AI buildout is funded by debt, equity and headcount at once — restructuring is running in parallel with the capex ramp, not after it; workforce is down roughly 21,000 (~13%) from a year earlier.",
-   "source": "https://finance.yahoo.com/technology/ai/articles/oracle-expands-2026-layoff-plan-132318715.html"
-  },
-  {
-   "date": "2026-09-11",
-   "category": "policy",
-   "headline": "Oracle and OpenAI pursue a solar-heavy generation mix for Project Jupiter (Doña Ana, NM) to blunt local opposition to the ~$165B campus, alongside a public environmental dashboard and a $1M carbon-capture research commitment",
-   "read": "The power-diversity strategy is now explicitly a permitting and community-relations tool, not just an engineering choice — filed the same week New Mexico's land commissioner denied the supporting gas pipeline's rights-of-way and federal authorities used emergency permitting powers to keep the flagship Stargate site on schedule.",
-   "source": "https://www.latitudemedia.com/news/oracle-and-openai-bet-that-more-solar-could-combat-data-center-pushback/"
-  },
-  {
-   "date": "2026-09-10",
-   "category": "financial",
-   "headline": "Q1 FY2027 results: revenue $19.3B (+30%), OCI infrastructure revenue $7.4B (+121%), RPO $664B (+$26B q/q), free cash flow -$5.4B on $28.5B capex; 850MW datacenter capacity and 300,000+ GPUs delivered in the quarter",
-   "read": "Backlog growth decelerated (RPO +$26B q/q vs +$85B the prior quarter) while the capex/FCF gap held roughly steady — the quarter did not resolve the funding question the FY2026 print raised; stock swung from +7.5% to a -1.7% close the same day on gross-margin and financing concerns.",
-   "source": "https://www.oracle.com/news/announcement/q1fy27-earnings-release-2026-09-10/"
-  },
-  {
-   "date": "2026-09-08",
-   "category": "capacity",
-   "headline": "RFP issued for up to 2GW of new renewable capacity (solar/wind/geothermal) in New Mexico, prioritizing projects deliverable 2027-2031, to support 100% carbon-free energy matching at Project Jupiter by 2031",
-   "read": "The clearest first-party evidence yet of Oracle procuring grid-scale renewables directly, rather than only fuel cells or gas, to offset a single campus's emissions.",
-   "source": "https://www.oracle.com/news/announcement/oracle-issues-rfp-for-2gw-of-renewable-energy-2026-09-08/"
-  },
-  {
-   "date": "2026-09-04",
-   "category": "partnership",
-   "headline": "Expanded HPE collaboration: HPE Juniper Networking (PTX/MX routing, QFX/EX switching) to scale OCI's global data-center and edge networks, with multi-year support and financing; HPE issued Oracle warrants to purchase HPE common stock",
-   "read": "A rare instance of an Oracle infrastructure supplier taking Oracle equity exposure alongside the commercial deal — aligns HPE's networking upside directly with OCI's buildout pace.",
-   "source": "https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-and-oracle-deepen-networking-collaboration-to-accelerate-gigawatt-scale-ai-infrastructure.html"
-  },
   {
    "date": "2026-06-10",
    "category": "financial",
@@ -160,9 +125,7 @@
   "(High confidence) We assess the buildout is structurally debt-and-equity funded with thin near-term economics. Basis: FCF -$23.7B in FY2026, ~$130B total debt, S&P at BBB- with a forecast FY2027 FCF deficit of ~$42B, and leaked internals (The Information) showing ~14-16% gross margins on GPU rentals versus ~70% legacy — the CFO's own FY2027 gross-margin step-down guidance corroborates the direction.",
   "(High confidence) We assess Oracle's per-site power diversity is deliberate procurement strategy, not improvisation — and the best public map of behind-the-fence options. Basis: five simultaneously active but different architectures (gensets, fuel cells, turbines+grid, utility+BESS, renewables+BESS) with the January 2026 policy post codifying self-funded energy as doctrine.",
   "(Moderate confidence) We assess the RPO number overstates firm demand. Basis: $75B is GPU-prepayment/customer-supplied structures; the Abilene expansion to 2.1 GW was reversed per independent tracking; and ~0.3 GW operational versus >9 GW projected by 2029 leaves conversion overwhelmingly in front of, not behind, the company.",
-  "(Low confidence) We assess the Abilene permitting controversy (turbines authorized via minor 'permit by rule' pathways; community-notification failures documented by Floodlight and the Texas Tribune) is a latent regulatory and reputational exposure for the whole behind-the-fence generation model, not just Oracle. Basis: press investigation only; no enforcement action reported to date.",
-  "(Moderate confidence) We assess the Q1 FY2027 print is a stabilization, not a resolution, of the RPO/FCF gap the FY2026 print raised. Basis: RPO grew only +$26B sequentially versus +$85B the prior quarter (Q4 FY2026), while free cash flow (-$5.4B) and capex ($28.5B) held at roughly the same quarterly order of magnitude as FY2026's run rate — the ratio did not visibly narrow. The market read it the same way: the stock opened +7.5% intraday and closed down 1.74%.",
-  "(Moderate confidence) We assess the ~$40B of additional financing Oracle signaled in June 2026 is, at least in part, taking an equity-first form. Basis: the $20B at-the-market equity program disclosed alongside the February 2026 $25B bond sale was reported completed during Q1 FY2027 (ended Aug 31, 2026), with no new bond issuance identified in the same window and Oracle's own February guidance stating it did not expect further calendar-2026 bond issuance beyond the $25B sale. The instrument is dilutive common equity, not a new secured facility — we found no evidence the financing is secured against specific assets."
+  "(Low confidence) We assess the Abilene permitting controversy (turbines authorized via minor 'permit by rule' pathways; community-notification failures documented by Floodlight and the Texas Tribune) is a latent regulatory and reputational exposure for the whole behind-the-fence generation model, not just Oracle. Basis: press investigation only; no enforcement action reported to date."
  ],
  "relationships": [
   {
@@ -433,89 +396,10 @@
      }
     ],
     "commentary": "S&P models FY2027 capex of $90-95B and an FCF deficit widening to ~$42B. The OpenAI contract begins contributing revenue in 2027 — the collectability question converts from theoretical to observable."
-   },
-   {
-    "period": "Q1 FY2027 (ended 8/31/2026)",
-    "periodType": "quarter",
-    "periodEnd": "2026-08-31",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "$19.3B (+30%)",
-      "expected": "~$19.14B consensus",
-      "verdict": "beat",
-      "kpi": "revenue",
-      "usdMillions": 19300,
-      "fxBasis": "as reported",
-      "result": "Cloud revenue (IaaS+SaaS) $11.6B (+62%); OCI infrastructure revenue $7.4B (+121%); Cloud Applications (SaaS) +10%; Software -3%"
-     },
-     {
-      "name": "Non-GAAP EPS",
-      "actual": "$1.92 (+30%)",
-      "expected": "$1.74 consensus",
-      "verdict": "beat",
-      "result": "GAAP EPS $1.56 (+55%)"
-     },
-     {
-      "name": "RPO",
-      "actual": "$664B",
-      "expected": "~$640B consensus",
-      "verdict": "beat",
-      "result": "+$26B sequentially (vs +$85B the prior quarter) and +$209B y/y; more than $30B of new AI cloud contracts signed in the quarter using prepayment or customer-supplied-hardware structures — CFO Maxson: these require 'no incremental capital from Oracle'"
-     },
-     {
-      "name": "Free cash flow",
-      "actual": "-$5.4B",
-      "expected": "—",
-      "verdict": "miss",
-      "result": "Capex $28.5B (vs $8.5B in Q1 FY2026); record operating cash flow $23.1B (+184%), inflated by customer prepayments; 850MW of new datacenter capacity and 300,000+ GPUs delivered in the quarter; GPU utilization 97.9%"
-     }
-    ],
-    "commentary": "The RPO/FCF gap the FY2026 print raised did not close: backlog growth decelerated sharply on a sequential basis while the quarterly cash burn held at a similar order of magnitude to FY2026's run rate. Stock opened +7.5% intraday, then closed down 1.74% as analysts (e.g. BMO cutting its price target to $195 from $220) flagged the sequential gross-margin step-down and unresolved cash-flow timeline; management pointed to an October event for a fuller margin/cash-flow plan, without Oracle itself confirming a fixed date at time of writing. FY2027 gross capex guidance held at $90-95B; net cash capex guided not to exceed $70B."
    }
   ]
  },
  "sources": [
-  {
-   "label": "Yahoo Finance — Oracle expands 2026 layoff plan by $700M amid AI costs",
-   "url": "https://finance.yahoo.com/technology/ai/articles/oracle-expands-2026-layoff-plan-132318715.html",
-   "date": "2026-09-14"
-  },
-  {
-   "label": "Latitude Media — Oracle and OpenAI bet that more solar could combat data center pushback",
-   "url": "https://www.latitudemedia.com/news/oracle-and-openai-bet-that-more-solar-could-combat-data-center-pushback/",
-   "date": "2026-09-11"
-  },
-  {
-   "label": "TIKR — Oracle Q1 FY2027 stock reaction and analyst commentary",
-   "url": "https://www.tikr.com/blog/oracle-stock-plunges-10-on-capex-panic-why-the-523b-backlog-justifies-a-731-target",
-   "date": "2026-09-11"
-  },
-  {
-   "label": "Oracle Q1 FY2027 earnings release",
-   "url": "https://www.oracle.com/news/announcement/q1fy27-earnings-release-2026-09-10/",
-   "date": "2026-09-10"
-  },
-  {
-   "label": "ERP Today — Oracle Q1 FY27 results: $664B backlog, negative cash flow",
-   "url": "https://erp.today/oracle-q1-fy27-results-664b-backlog-ai-contracts",
-   "date": "2026-09-10"
-  },
-  {
-   "label": "Yahoo Finance — Oracle (ORCL): Oracle has the backlog, Wall Street wants the cash",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-orcl-oracle-backlog-wall-203907436.html",
-   "date": "2026-09-10"
-  },
-  {
-   "label": "Oracle — RFP for 2GW of new renewable energy in New Mexico",
-   "url": "https://www.oracle.com/news/announcement/oracle-issues-rfp-for-2gw-of-renewable-energy-2026-09-08/",
-   "date": "2026-09-08"
-  },
-  {
-   "label": "HPE — HPE and Oracle deepen networking collaboration to accelerate gigawatt-scale AI infrastructure",
-   "url": "https://www.hpe.com/us/en/newsroom/press-release/2026/09/hpe-and-oracle-deepen-networking-collaboration-to-accelerate-gigawatt-scale-ai-infrastructure.html",
-   "date": "2026-09-04"
-  },
   {
    "label": "Oracle Q4 FY2026 earnings release",
    "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/",
@@ -595,6 +479,6 @@
    "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
   }
  ],
- "lastUpdated": "2026-09-21",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

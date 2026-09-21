@@ -13,7 +13,7 @@
  "ownership": "public",
  "employees": "257 (Jun 30, 2025) + ~200 site contractors; >3,000 across the Childress build with contractors",
  "website": "https://iren.com",
- "summary": "BOTTOM LINE UP FRONT: IREN is the most vertically integrated of the miner-pivots — it owns the land, the substations, the buildings, AND runs the GPU cloud on top — with 5 GW of secured power across three continents, a $9.7B five-year Microsoft GB300 contract whose first liquid-cooled data center (Horizon 1, Childress TX) was delivered and accepted on August 13, 2026, a $3.4B NVIDIA cloud contract plus a 5 GW 'DSX' strategic partnership carrying a $2.1B NVIDIA share-purchase right, and a year-end 2026 ARR target above $4B (~85% contracted). The tension: every quarter of the trailing year missed sell-side consensus (Q3 FY26 revenue missed by 34%), SemiAnalysis ClusterMAX rates the cloud 'Underperforming' even as NVIDIA grants Exemplar Cloud status, and the stock sits ~46% below its November 2025 peak against a Street average target near $80. BACKGROUND: Founded 2018 in Sydney by ex-Macquarie brothers Daniel and Will Roberts as renewable-powered bitcoin miner Iris Energy; peaked at 50 EH/s (June 2025), then began decommissioning miners for GPUs — $172M of ASIC impairments across two quarters, and Bitcoin has vanished from the company boilerplate. FY2025: revenue $501.0M, net income $86.9M. FY2026 (ended Jun 30, 2026, reported Aug 27): revenue $707.0M (+41%; a $15.9M / 2.2% miss on the $722.9M consensus), net loss $702.6M including $638.8M of non-cash Bitcoin-hardware impairments (EPS -$2.06 vs -$1.57 consensus — a wider miss than the revenue line), adj. EBITDA $245.7M; $4B contracted ARR for 2026 capacity (largely sold out) and $1B operating ARR as of Aug 26; management guides mining 'effectively decommissioned' by end of December 2026. Cash $5.9B unrestricted + $1.7B restricted (~$7.6B total, Jun 30, final); ~$6.3B of converts outstanding (unchanged from the prior derived estimate; SEC EDGAR is unreachable from this network so the 10-K's own tranche breakdown could not be directly verified); the $3.65B investment-grade GPU financing (Fitch A, June 2026) plus a further $2.8B at 9.0% for the Mackenzie expansion (Aug 2026).",
+ "summary": "BOTTOM LINE UP FRONT: IREN is the most vertically integrated of the miner-pivots — it owns the land, the substations, the buildings, AND runs the GPU cloud on top — with 5 GW of secured power across three continents, a $9.7B five-year Microsoft GB300 contract whose first liquid-cooled data center (Horizon 1, Childress TX) was delivered and accepted on August 13, 2026, a $3.4B NVIDIA cloud contract plus a 5 GW 'DSX' strategic partnership carrying a $2.1B NVIDIA share-purchase right, and a year-end 2026 ARR target above $4B (~85% contracted). The tension: every quarter of the trailing year missed sell-side consensus (Q3 FY26 revenue missed by 34%), SemiAnalysis ClusterMAX rates the cloud 'Underperforming' even as NVIDIA grants Exemplar Cloud status, and the stock sits ~46% below its November 2025 peak against a Street average target near $80. BACKGROUND: Founded 2018 in Sydney by ex-Macquarie brothers Daniel and Will Roberts as renewable-powered bitcoin miner Iris Energy; peaked at 50 EH/s (June 2025), then began decommissioning miners for GPUs — $172M of ASIC impairments across two quarters, and Bitcoin has vanished from the company boilerplate. FY2025: revenue $501.0M, net income $86.9M. FY2026 annual results land August 27, 2026, with consensus at $722.9M revenue / -$1.57 EPS. Cash ~$7.6B (June 30, preliminary, incl. $1.7B restricted); ~$6.3B of converts outstanding (derived); a $3.65B investment-grade GPU financing (Fitch A) closed June 2026.",
  "ecosystemRole": "We assess IREN as the test of whether one company can hold both ends of the AI-infrastructure stack — landlord-grade power ownership (5 GW secured: Childress 750 MW, Sweetwater 2 GW, Oklahoma 1.6 GW, British Columbia 160 MW, Spain 490 MW, Bundey Australia 800 MW) and a climbing cloud business (Mirantis software acquisition, managed services for NVIDIA itself). For power-chain vendors the buildout is unusually visible: IREN owns its ERCOT substations, energized Sweetwater 1's 1.4 GW bulk substation (345/138 kV) on schedule in April 2026, builds 130–200 kW-rack liquid-cooled Horizons at 50 MW IT each, and pairs air-cooled halls (PUE 1.1, BC) with direct-to-chip conversions. Basis: company site-level disclosures and independent trade coverage. The Diligence Stack's taxonomy places IREN between the full-stack platforms ($10–12M revenue/MW) and the pure landlords (~$1.4M/MW) — it is deliberately trying to be both, with newest contracts pricing ~$15M/MW.",
  "productsAndServices": [
   {
@@ -85,27 +85,6 @@
   }
  ],
  "recentDevelopments": [
-  {
-   "date": "2026-09-08",
-   "category": "capacity",
-   "headline": "2GW Sweetwater Hub (SW1 1,400MW + SW2 600MW) conditionally included as Base Load in ERCOT's Batch Zero process; 300MW gross of Sweetwater 1 capacity under construction, delivery targeted Q4 2027; classification remains conditional pending further ERCOT verification",
-   "read": "Grid-status progress, not a tenant — the release names no customer for Sweetwater, still the biggest uncontracted power block in the portfolio even as the interconnection path clears.",
-   "source": "https://www.globenewswire.com/news-release/2026/09/08/3357498/0/en/iren-s-2gw-sweetwater-hub-included-as-base-load-in-ercot-batch-zero.html"
-  },
-  {
-   "date": "2026-09-01",
-   "category": "regulatory",
-   "headline": "PUCT unanimously approves the northernmost of three proposed 765kV transmission routes (Dinosaur Switch to Drill Hole Switch, ~425 miles into the Permian Basin) — Oncor targets the Dinosaur-to-Longshore segment by end of 2028 and Longshore-to-Drill Hole by 2029; coverage names IREN's Sweetwater campuses as a direct beneficiary",
-   "read": "A multi-year grid build-out, not an immediate unlock — it derisks the region's power ceiling for Sweetwater's later phases without moving any near-term delivery date.",
-   "source": "https://finance.yahoo.com/technology/ai/articles/iren-iren-gains-clearer-path-170708035.html"
-  },
-  {
-   "date": "2026-08-27",
-   "category": "financial",
-   "headline": "FY2026 full-year results: revenue $707.0M (+41% YoY, mining $578.2M / AI Cloud $128.8M) missed the $722.9M consensus by 2.2%; net loss $702.6M (incl. $638.8M non-cash Bitcoin-hardware impairments) and EPS -$2.06 missed the -$1.57 consensus; adj. EBITDA $245.7M; $4B contracted ARR for 2026 capacity (largely sold out) / $1B operating ARR as of Aug 26; new customer signings incl. Cohere, Prometheus, Fal AI and Higgsfield AI plus an unnamed multi-year contract with a 'leading frontier AI lab'; Horizon 2 commissioning, Horizons 3-4 in late-stage construction targeting Q4 2026; management guides Bitcoin mining 'effectively decommissioned' by end of December 2026",
-   "read": "The report the whole FY26 narrative pivoted on: both lines missed consensus — worse on EPS than revenue, on non-cash impairment timing rather than the AI Cloud ramp, which is real (8x YoY) — while the ARR bridge held and mining got its first hard exit date.",
-   "source": "https://www.globenewswire.com/news-release/2026/08/27/3352401/0/en/iren-reports-fy26-results.html"
-  },
   {
    "date": "2026-08-28",
    "category": "financial",
@@ -206,9 +185,9 @@
   }
  ],
  "strategyRead": [
-  "(High confidence) We assess IREN is executing the most aggressive full-conversion in the cohort — not diversifying from mining but liquidating it, now on a stated clock. Basis: the FY26 report (Aug 27) added $638.8M of non-cash Bitcoin-hardware impairments to the prior $172M, and for the first time gave a hard date — mining 'effectively decommissioned' by end of December 2026 — rather than an open-ended wind-down. Mining was still 82% of FY26 revenue ($578.2M of $707.0M), so the transition is not yet reflected in the P&L mix; no updated EH/s figure has been disclosed since October 2025, a gap this refresh could not close either.",
+  "(High confidence) We assess IREN is executing the most aggressive full-conversion in the cohort — not diversifying from mining but liquidating it. Basis: $172M of voluntary ASIC impairments in two quarters, Bitcoin dropped from the corporate boilerplate and site navigation, monthly mining updates discontinued, and no EH/s figure published since October 2025. The FY26 report (Aug 27) is the last checkpoint where mining still meaningfully colors the numbers.",
   "(High confidence) We assess vertical integration is the genuine differentiator and Sweetwater is its test. Basis: IREN owns land, substations, buildings, and cloud across 5 GW of secured power — landlord economics under cloud revenue ($15M/MW newest contracts vs ~$1.4M/MW pure-landlord colocation). Sweetwater 1's 1.4 GW is energized with no announced tenant; filling it (via the NVIDIA DSX partnership or a hyperscaler) decides whether the integrated model compounds or the power sits as optionality.",
-  "(High confidence) We assess the consensus-miss streak is structural, not informational. Basis: every quarter of FY26 missed (Q3 by 34% on revenue), and the FY26 full-year print missed on both lines too — revenue by 2.2% ($707.0M vs $722.9M) and EPS by a wider margin (-$2.06 vs -$1.57) — because sell-side models can't time mining decommissioning against GPU commissioning and non-cash impairment timing. The market has responded by trading contracts and delivery milestones instead of the P&L: shares rose on the Sweetwater ERCOT Batch Zero news (Sep 8) and the PUCT transmission approval (Sep 1) despite the FY26 miss ten days earlier.",
+  "(High confidence) We assess the consensus-miss streak is structural, not informational. Basis: every quarter of the trailing year missed (Q3 FY26 by 34% on revenue) because sell-side models can't time mining decommissioning against GPU commissioning; the market has responded by trading contracts and delivery milestones instead — +26% after one miss, -11% after another, depending entirely on what was announced alongside.",
   "(Moderate confidence) We assess the NVIDIA relationship is simultaneously IREN's strongest endorsement and its most cited risk. Basis: NVIDIA is a $3.4B customer, DSX partner, Exemplar Cloud certifier, and holder of a $2.1B share-purchase right — while JPMorgan's Underweight rests precisely on 'the circular nature and undefined access to GPUs' behind the 5 GW ambition. The Aug 27 report and early-2027 NVIDIA-contract commissioning are the verification points.",
   "(Moderate confidence) We assess the quality gap flagged by ClusterMAX ('Underperforming') is real but closing by acquisition. Basis: SemiAnalysis's criteria are software/operations maturity, exactly what Mirantis (>1,500 enterprise customers, NVIDIA DSX OS integration) was bought to fix; Horizon 1's on-time Microsoft acceptance and dual Exemplar Cloud statuses cut against the rating. Collection gap: no independent re-rating since the Mirantis close; the EDNY Culper-era class action's status also remains unresolved in the public record."
  ],
@@ -412,7 +391,7 @@
     "periodEnd": "2025-06-30"
    },
    {
-    "period": "FY2026 quarterly detail (Q1–Q4, Jul 2025–Jun 2026)",
+    "period": "FY2026 through Q3 (Jul 2025–Mar 2026; FY report due Aug 27, 2026)",
     "metrics": [
      {
       "name": "Q1 (Sep) revenue",
@@ -436,78 +415,18 @@
       "result": "-6.8% on the day; FCF ~-$874M in the quarter; $3.1B ARR under contract"
      },
      {
-      "name": "Q4 (Jun) results",
-      "actual": "Full FY26 revenue $707.0M less Q1-Q3 combined $569.8M implies Q4 revenue ~$137.2M (company did not break out Q4 alone in the FY26 release); net loss $684.0M for the quarter carried most of the FY26 $638.8M impairment charge",
-      "expected": "-$0.80 (WallStreetZen) to -$0.55 (TipRanks) EPS estimates pre-print",
-      "verdict": "miss",
-      "result": "A fifth straight quarterly miss — the impairment wave that closed out the mining book landed here"
-     }
-    ],
-    "commentary": "Four straight quarterly misses through Q3, then a fifth in Q4 — contracted ARR went $225M → $4B over the same stretch. Cash ~$7.6B at Jun 30 (preliminary at the time; confirmed final in the FY26 report). Street: consensus Buy, avg target $80.19 (range $41–131): Bernstein $100, Citizens $80, Goldman Neutral $50, JPMorgan Underweight $46."
-   },
-   {
-    "period": "FY2026 (ended Jun 30, 2026)",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "$707.0M (+41%): Bitcoin mining $578.2M (FY25: $484.6M) / AI Cloud $128.8M (FY25: $16.4M, ~8x growth)",
-      "expected": "$722.9M (stockanalysis.com consensus)",
-      "verdict": "miss",
-      "result": "2.2% revenue miss — the AI Cloud ramp is real (8x YoY) but not yet enough to offset the shrinking mining book",
-      "kpi": "revenue",
-      "usdMillions": 707,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "Profitability",
-      "actual": "Net loss $702.6M (FY25: net income $86.9M) incl. $638.8M non-cash impairments on decommissioned Bitcoin mining hardware; diluted loss per share $2.06 (FY25: $0.41 profit); adj. EBITDA $245.7M (FY25: $269.7M)",
-      "expected": "EPS -$1.57 (stockanalysis.com consensus)",
-      "verdict": "miss",
-      "result": "EPS missed by more than revenue did (-$2.06 vs -$1.57 consensus) — a wider miss on the bottom line than the top",
-      "kpi": "net-income",
-      "usdMillions": -702.6,
-      "fxBasis": "as reported"
-     },
-     {
-      "name": "ARR bridge",
-      "actual": "$4B contracted ARR for 2026 capacity (company says 'largely sold out'); $1B operating ARR as of Aug 26, 2026; new signings named: Cohere, Prometheus, Fal AI, Higgsfield AI plus an unnamed multi-year 'leading frontier AI lab' contract",
-      "expected": "",
+      "name": "FY2026 consensus into the Aug 27 print",
+      "actual": "—",
+      "expected": "Revenue $722.9M / EPS -$1.57 (stockanalysis.com); Q4 EPS est. -$0.80 (WallStreetZen) to -$0.55 (TipRanks)",
       "verdict": "inline",
-      "result": "The ARR side of the ledger held through the P&L miss — Horizon 2 commissioning, Horizons 3–4 in late-stage construction targeting Q4 2026 delivery"
+      "result": "Watch items: >$4B ARR bridge, Horizon 2–4 cadence, convert/dilution detail, any Sweetwater tenant"
      }
     ],
-    "commentary": "The first full fiscal year carrying a genuine AI Cloud segment: mining was still 82% of revenue but AI Cloud grew ~8x, and both P&L lines missed consensus — driven by the timing/size of the Bitcoin-hardware impairment wave rather than the AI ramp itself. Cash $5.9B unrestricted + $1.7B restricted at Jun 30 (~$7.6B total, final, confirming the prior preliminary figure). Management now guides mining 'effectively decommissioned' by end of December 2026 — the first hard exit date on record; no updated EH/s hashrate figure was disclosed in the release (last published figure remains from October 2025). SEC EDGAR (sec.gov / data.sec.gov) was unreachable from this session's network (403 on both hosts, confirmed via scripts/check-source-reachability.py) — the 10-K itself could not be read directly; the figures above are drawn from IREN's own FY26 results release (wire-distributed) and corroborated by third-party financial media.",
-    "periodType": "annual",
-    "periodEnd": "2026-06-30"
+    "commentary": "Four straight consensus misses while contracted ARR went $225M → $3.1B+ — the P&L reports the dying business, the contracts report the living one. Cash ~$7.6B at Jun 30 (preliminary, incl. $1.7B restricted). Street: consensus Buy, avg target $80.19 (range $41–131): Bernstein $100, Citizens $80, Goldman Neutral $50, JPMorgan Underweight $46."
    }
   ]
  },
  "sources": [
-  {
-   "label": "GlobeNewswire (IREN wire release) — 2GW Sweetwater Hub included as Base Load in ERCOT Batch Zero",
-   "url": "https://www.globenewswire.com/news-release/2026/09/08/3357498/0/en/iren-s-2gw-sweetwater-hub-included-as-base-load-in-ercot-batch-zero.html",
-   "date": "2026-09-08"
-  },
-  {
-   "label": "Yahoo Finance — PUCT approves West Texas 765kV transmission route benefiting IREN's Sweetwater campuses",
-   "url": "https://finance.yahoo.com/technology/ai/articles/iren-iren-gains-clearer-path-170708035.html",
-   "date": "2026-09-02"
-  },
-  {
-   "label": "Data Center Dynamics — IREN secures contract from 'leading frontier lab,' on track to exit crypto by end of year",
-   "url": "https://www.datacenterdynamics.com/en/news/iren-secures-contract-from-leading-frontier-lab-on-track-to-exit-crypto-business-by-end-of-year/",
-   "date": "2026-09-02"
-  },
-  {
-   "label": "GlobeNewswire (IREN wire release) — FY26 results: $707.0M revenue, $(702.6)M net loss, $245.7M adj. EBITDA",
-   "url": "https://www.globenewswire.com/news-release/2026/08/27/3352401/0/en/iren-reports-fy26-results.html",
-   "date": "2026-08-27"
-  },
-  {
-   "label": "Simply Wall St — IREN FY26 loss per share US$2.06 vs US$0.41 FY25 profit",
-   "url": "https://simplywall.st/stocks/us/software/nasdaq-iren/iren",
-   "date": "2026-08-28"
-  },
   {
    "label": "StockTitan — Blue Owl leads $2.4B AI-factory financing for IREN",
    "url": "https://www.stocktitan.net/news/OWL/blue-owl-managed-funds-lead-2-4-billion-ai-factory-financing-for-n5sfwyw6ua9x.html",
@@ -670,6 +589,6 @@
    "url": "https://stockanalysis.com/stocks/iren/forecast/"
   }
  ],
- "lastUpdated": "2026-09-21",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

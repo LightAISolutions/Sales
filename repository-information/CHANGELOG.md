@@ -3,11 +3,50 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.96r] — 2026-09-21 09:28:13 AM EST
+
+> **Prompt:** "[Profiler earnings desk Routine, scheduled fire] STEP 0 — clone, prove push works, before any research. Then: read repository-information/profiler-refresh-calendar.json as the queue. DUE = any row whose nextReport is yesterday or earlier. Take at most THREE due rows this run, oldest nextReport first. For each: (1) verify the report actually published, (2) run the Profiler Command end to end including the news-triage step against the Scraper corpus (token supplied in the Routine prompt only, never written to the repo), (3) advance the row's nextReport/confirmed/source/lastRefreshed/watch[]. Also confirm any unconfirmed row due within seven days. Land one commit per run under the repo's normal Pre-Commit/Pre-Push checklists. Never create/update/delete a Routine or trigger. If nothing is due, stand down with no commit."
+
+### Fixed
+
+#### Scheduled Routines — the earnings desk landed a commit for the first time
+- **The push path held this run.** `git clone` + `git push --dry-run` both succeeded before any research began, confirming the 2026-09-18 finding (Routine recreated with the repository attached at creation) is holding — the desk has now gone clone→research→commit→push clean, closing the loop that failed 7-for-7 in August and again on 2026-09-16 (`a378a96`, unrecoverable) and 2026-09-18 (34-second stand-down, no repo access).
+
+### Changed
+
+#### `live-site-pages/profiler-data/iren.profile.json` — profileVersion 4 → 5
+- **FY2026 annual results (fiscal year ended 2026-06-30) added** — confirmed published 2026-08-27 via IREN's own wire release, corroborated by GlobeNewswire/StockTitan/Barchart/TradingView (sec.gov/data.sec.gov 403-blocked from this network for the whole session, per `check-source-reachability.py`; the 10-K itself was not read directly, and the dossier says so). Revenue $707.0M (+41% YoY; mining $578.2M / AI Cloud $128.8M) — a 2.2% miss vs the $722.9M consensus already on file. Net loss $702.6M (including $638.8M of non-cash Bitcoin-hardware impairment) vs FY2025's $86.9M profit; diluted loss per share -$2.06 against the -$1.57 consensus — a wider miss than revenue. Adj. EBITDA $245.7M. Cash $5.9B unrestricted + $1.7B restricted (~$7.6B total, now final, not preliminary). $4B contracted 2026 ARR (largely sold out) / $1B operating ARR as of Aug 26. New named customers disclosed: Cohere, Prometheus, Fal AI, Higgsfield AI, plus an unnamed "leading frontier AI lab" — none are covered companies, so no new `relationships[]` entries. Management gave the first hard mining-exit date: "effectively decommissioned" by end of December 2026
+- **Two new `recentDevelopments[]` entries**: Sweetwater's 2GW hub conditionally entering ERCOT Batch Zero as Base Load (2026-09-08, still no named tenant) and the PUCT's approval of a 765kV transmission route benefiting Sweetwater (2026-09-01, Oncor targeting 2028-2029). `strategyRead[]` bullets on the mining exit and the FY26 miss updated with the confirmed figures. 5 new `sources[]`, chronological
+- **Honest gaps recorded rather than guessed**: no updated Bitcoin EH/s hashrate found anywhere in the FY26 release (last published figure remains October 2025); convertible-note tranche breakdown inside the 10-K itself not independently re-verified (the ~$6.3B total stands, consistent with the prior derived estimate); FY26-close GPU fleet unit count not disclosed
+
+#### `live-site-pages/profiler-data/jinko.profile.json` — profileVersion 5 → 6
+- **Q2/H1 2026 results added** — confirmed published 2026-08-26 via JinkoSolar's own PRNewswire release. Q2: revenue RMB 12.36B/$1.82B (-31.3% YoY, +0.9% QoQ); gross margin **4.2%, down from Q1's 8.3%** — a reversal, not the continued recovery the prior dossier version was tracking; net loss RMB 697.3M/$102.8M; module shipments 15.96 GW. H1: revenue RMB 24.61B/$3.63B; net loss RMB 1.16B/$171.1M; 29.6 GW modules; 3.1 GWh ESS shipped. **FY2026 module guidance cut to 60-70 GW** (from 75-85 GW)
+- **Rebranding proposal verified, NOT yet effective** — board proposed renaming to "Jinko Holdings Limited" (晶科控股有限公司) on 2026-09-09, pending a shareholder vote at the 2026-10-21 AGM; ticker JKS unaffected. Recorded as a `corporate` recentDevelopment with an explicit pending-vote flag — `name`/`shortName` intentionally left unchanged per the schema's rename rules until the vote actually happens. Registry `aka[]` (`profiler-companies.json`, "jinko" entry) gained "Jinko Holdings Limited" / "Jinko Holdings" / 晶科控股有限公司 plus other existing-name variants for the step-7 reconciliation grep; collision test on "Jinko Holdings" returned zero corpus hits
+- **CEO change found and incorporated**: founder Li Xiande stepped down as JinkoSolar Holding CEO 2026-08-26 (remains Chairman); Wei "Dimi" Du succeeded him — `decisionMakers[]` updated, new `leadership` recentDevelopment added
+- **FEOC exposure found and incorporated**: the Jacksonville, FL plant's 75.1% stake was sold to FH JKV Holdings (~$191.5M, closed 2026-05-31, deconsolidated 2026-06-01) under FEOC 25%-ownership-threshold pressure — new `policyExposure` entry added, AD/CVD mitigation text updated accordingly
+- **Also**: SunGiga G2/IES Middle East ESS distribution deal (2026-09-10, BNEF Tier-1 status now 10 consecutive quarters); Tiger Neo 5.0 mass production noted (25.91% efficiency, >700W) as the platform's next step
+
+#### `live-site-pages/profiler-data/oracle.profile.json` — profileVersion 4 → 5
+- **Q1 FY2027 results added** (quarter ended 2026-08-31) — confirmed published 2026-09-10, matching the calendar's mid-September tracker estimate. Revenue $19.3B (+30% YoY, beat ~$19.14B consensus); OCI infrastructure revenue $7.4B (+121% YoY); total cloud $11.6B (+62%). **RPO $664B, up only +$26B sequentially versus +$85B the prior quarter** — the backlog-growth deceleration the calendar's watch item was tracking, addressed as a new `strategyRead[]` bullet rather than a resolved question, since FCF and capex held at similar order of magnitude to FY2026's run rate (FCF -$5.4B on capex $28.5B). GAAP EPS $1.56 (beat); FY2027 guidance held (gross capex $90-95B, net cash capex <=$70B)
+- **The ~$40B financing-form watch item**: evidence points equity-first — the $20B ATM equity program was reported completed during the quarter, no new bond issuance found in the window, and Oracle's own February guidance said it didn't expect further CY2026 bond issuance. No evidence found that it's asset-secured; recorded at moderate confidence, not asserted as certain
+- **5 new `recentDevelopments[]` entries**: the 2026 Restructuring Plan supplemented ~$700M (total ~$2.8B, 2026-09-14); the Oracle/OpenAI Project Jupiter (NM) solar push to counter community pushback plus an emissions dashboard and $1M carbon-capture commitment (2026-09-11); the Q1 FY2027 release itself (2026-09-10); a 2GW New Mexico renewable-capacity RFP (2026-09-08); and an expanded HPE partnership for OCI fabric networking under which HPE reportedly received Oracle warrants (2026-09-04)
+- **Step-7 full cross-dossier reconciliation deliberately NOT attempted** — Oracle remains in the 40+-inbound-mention class per the calendar's explicit scope note, deferred as a session of its own
+
+#### `live-site-pages/profiler-data/archive/` and registry
+- Three archived snapshots added (`iren.profile.v4.json`, `jinko.profile.v5.json`, `oracle.profile.v4.json`) with matching `archive-index.json` entries. `sync-profiler-registry.py` reconciled all three roster entries (`lastUpdated`, `srcTotal`, `srcFirstPct`); `build-profiler-graph.py` regenerated the ecosystem graph (1,482 edges); `check-profiler-relationships.py` and `check-profiler-crossrefs.py` both ran clean (0 findings across 440 examined pairs, corpus-wide). Manual step-7 grep-and-read reconciliation for IREN (8 inbound files) and Jinko (3 inbound files) found only peer-comparison mentions, no contradicted claims — segment memberships in `profiler-segments.json` checked against the revised `ecosystemRole` for all three companies and found still consistent, no reassignment needed
+
+#### `repository-information/profiler-refresh-calendar.json`
+- All three rows advanced: `iren` → nextReport 2026-11-05 (tracker estimate off IREN's own Q1 FY2026 precedent, not company-confirmed), `jinko` → nextReport 2026-11-10 (tracker estimate, prior quarters reported at inconsistent lags), `oracle` → nextReport 2026-12-10 (tracker estimate off Oracle's own ~3-month filing cadence). `lastRefreshed` set to 2026-09-21 on all three; `watch[]` rewritten around each company's actual post-refresh open questions. `novonix` (nextReport 2026-09-14) left untouched — over the three-row cap this run, due again tomorrow
+
+### Notes
+
+- **News triage ran against the Scraper corpus for all three companies** — 50 (IREN) / 16 (Jinko) / 26 (Oracle) scored items pulled since each dossier's prior `lastUpdated`, each promoted item verified against its underlying article/press release before being written into a dossier rather than taken on headline/score alone
 
 ## [v06.95r] — 2026-09-21 07:50:53 AM EST
 

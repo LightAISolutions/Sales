@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-19",
+ "built": "2026-09-21",
  "companies": 177,
  "edges": [
   {
@@ -40522,6 +40522,20 @@
   },
   {
    "a": "iren",
+   "b": "switch",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "PUCT unanimously approves the northernmost of three proposed 765kV transmission routes (Dinosaur Switch to Drill Hole Switch, ~425 miles into the Permian Basin) — Oncor targets the Dinosaur-to-Longshore segment by end of 2028 and Longshore-to-Drill Hole by 2029; coverage names IREN's Sweetwater campuses as a direct beneficiary — A multi-year grid build-out, not an immediate unlock — it derisks the region's power ceiling for Sweetwater's later phases without moving any near-term delivery date.",
+     "src": "https://finance.yahoo.com/technology/ai/articles/iren-iren-gains-clearer-path-170708035.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-01"
+  },
+  {
+   "a": "iren",
    "b": "terawulf",
    "curated": {
     "b": {
@@ -49211,13 +49225,6 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: Oracle has converted itself into the largest external AI-compute landlord on earth — remaining performance obligations of $638B (+363%) at fiscal year-end May 2026, roughly half of it attributed by press reporting to a single ~$300B five-year OpenAI contract starting 2027 — and is funding the buildout with debt and equity at a scale ($43B debt plus $5B equity raised in FY2026, ~$40B more planned, free cash flow negative $23.7B) that made its credit default swaps a market-wide barometer for AI-capex risk.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Summary",
-     "date": "",
      "text": "For power and BESS vendors, Oracle campuses are the single richest observable menu of behind-the-fence power choices — and its OpenAI concentration makes it the sector's counterparty-risk bellwether.",
      "src": "",
      "from": "b"
@@ -49234,6 +49241,13 @@
      "date": "",
      "text": "Operational responsibility sits with OpenAI, build execution with developers (Crusoe, Vantage, STACK, Related), power with utilities and on-site vendors — Oracle is the contracting hub that turns OpenAI demand into physical campuses.",
      "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-11",
+     "text": "Oracle and OpenAI pursue a solar-heavy generation mix for Project Jupiter (Doña Ana, NM) to blunt local opposition to the ~$165B campus, alongside a public environmental dashboard and a $1M carbon-capture research commitment — The power-diversity strategy is now explicitly a permitting and community-relations tool, not just an engineering choice — filed the same week New Mexico's land commissioner denied the supporting gas pipeline's rights-of-way and federal authorities used emergency permitting powers to keep the flagship Stargate site on schedule.",
+     "src": "https://www.latitudemedia.com/news/oracle-and-openai-bet-that-more-solar-could-combat-data-center-pushback/",
      "from": "b"
     },
     {
@@ -49258,7 +49272,7 @@
      "from": "b"
     }
    ],
-   "last": "2025-10-21"
+   "last": "2026-09-11"
   },
   {
    "a": "openai",
@@ -49696,7 +49710,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "Dual-CEO structure since September 2025 (Clay Magouyrk and Mike Sicilia); Safra Catz moved to executive vice chair; new CFO Hilary Maxson arrived from Schneider Electric with an AES energy background.",
+     "text": "Dual-CEO structure since September 2025 (Clay Magouyrk and Mike Sicilia); Safra Catz moved to executive vice chair; CFO Hilary Maxson (from Schneider Electric, AES energy background) guided FY2027 gross capex to $90-95B.",
      "src": "",
      "from": "a"
     }

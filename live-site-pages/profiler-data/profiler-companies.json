@@ -2052,13 +2052,13 @@
       "hq": "Sydney, Australia",
       "ticker": "NASDAQ: IREN",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-21",
       "domains": [
         "iren.com",
         "iren.gcs-web.com"
       ],
-      "srcTotal": 33,
-      "srcFirstPct": 67,
+      "srcTotal": 38,
+      "srcFirstPct": 63,
       "kpiNorm": true,
       "segments": [
         {
@@ -2081,12 +2081,23 @@
       "hq": "Shangrao, China",
       "ticker": "NYSE: JKS · SSE: 688223",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-21",
+      "aka": [
+        "JinkoSolar",
+        "JinkoSolar Holding Co., Ltd.",
+        "Jinko Holdings Limited",
+        "Jinko Holdings",
+        "晶科能源",
+        "晶科控股有限公司",
+        "Jiangxi Jinko",
+        "Jinko Solar Co.",
+        "Jinko ESS"
+      ],
       "domains": [
         "jinkosolar.com"
       ],
-      "srcTotal": 15,
-      "srcFirstPct": 40,
+      "srcTotal": 23,
+      "srcFirstPct": 39,
       "kpiNorm": true,
       "segments": [
         {
@@ -2889,12 +2900,12 @@
       "hq": "Austin, TX, USA",
       "ticker": "NYSE: ORCL",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-21",
       "domains": [
         "oracle.com"
       ],
-      "srcTotal": 16,
-      "srcFirstPct": 44,
+      "srcTotal": 24,
+      "srcFirstPct": 38,
       "kpiNorm": false,
       "segments": [
         {

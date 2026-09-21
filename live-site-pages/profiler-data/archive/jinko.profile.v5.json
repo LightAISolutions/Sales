@@ -14,7 +14,7 @@
   "type": "public",
   "ticker": "NYSE: JKS · SSE: 688223"
  },
- "summary": "BOTTOM LINE UP FRONT: Jinko is the world's #1 PV module shipper (tied with LONGi in 2025) taking its first annual loss in 12 years to the solar price war — management has designated energy storage (SunTera BESS, 3.1 GWh shipped in H1 2026, guided to more than double 2025's 5.2 GWh) the 'second growth engine', and a new AI-data-center solar+storage play ('Sunny 365' AIDC, plus a planned 1 GW Ningxia data center) a third front — but Q2 2026 gross margin fell back to 4.2% (from 8.3% in Q1), the margin-recovery path is not yet linear, and FY2026 module-shipment guidance was cut to 60–70 GW (from 75–85 GW) as management pivots toward 'effective supply' over volume. On 2026-08-26 founder Li Xiande stepped down as CEO of JinkoSolar Holding (remaining Chairman); Wei 'Dimi' Du, previously the group's strategic-investment chief, succeeded him. On 2026-09-09 the board proposed renaming the holding company 'Jinko Holdings Limited' — pending an October 21, 2026 shareholder vote — formalizing a two-engine model of industrial holdings (Jinko Solar) plus a strategic-investment portfolio (stakes in Moonshot AI, StepFun, SiliconFlow and others). BACKGROUND: JinkoSolar Holding (NYSE: JKS) holds ~54% of Jiangxi Jinko (SSE STAR: 688223). Flagship Tiger Neo N-type TOPCon modules (>400 GW cumulative delivered — a world first); manufacturing bases across China, Southeast Asia, and the Middle East, plus a US Jacksonville, FL facility in which Jinko sold down to a 24.9% minority stake in May 2026 under FEOC ownership-threshold pressure; sales in ~200 countries. FY2025: revenue RMB 65.5B (−29%), net loss RMB 4.45B. H1 2026: revenue RMB 24.61B / $3.63B, net loss RMB 1.16B / $171.1M.",
+ "summary": "BOTTOM LINE UP FRONT: Jinko is the world's #1 PV module shipper (tied with LONGi in 2025) taking its first annual loss in 12 years to the solar price war — and management has explicitly designated energy storage (SunTera BESS, 5.2 GWh shipped in 2025, guided to more than double in 2026) as the 'second growth engine' to restore profitability, with a new AI-data-center solar+storage play ('Sunny 365' AIDC, plus a planned 1 GW Ningxia data center) opening a third front. BACKGROUND: JinkoSolar Holding (NYSE: JKS) holds ~54% of Jiangxi Jinko (SSE STAR: 688223). Flagship Tiger Neo N-type TOPCon modules (>400 GW cumulative delivered — a world first); >10 manufacturing bases across China, the US (Jacksonville, FL), Southeast Asia, and the Middle East; sales in ~200 countries. FY2025: revenue RMB 65.5B (−29%), net loss RMB 4.45B; Q1 2026 gross margin recovered to 8.3%.",
  "ecosystemRole": "We assess Jinko as a PV giant becoming a storage challenger: BNEF Tier-1 ESS maker for 8 straight quarters and 12 GWh of claimed ESS capacity, but absent from top-10 BESS integrator rankings (Wood Mackenzie/EnergyTrend) — a fast-growing niche player against Sungrow/BYD/CATL/Tesla scale. Its differentiation is the integrated solar-plus-storage sell (SunTera grid-forming BESS + Tiger Neo modules) now packaged for AI data centers with claimed 800V HVDC architecture compatibility — the first module maker to also move into data-center operation itself (planned 1 GW Ningxia campus).",
  "productsAndServices": [
   {
@@ -25,27 +25,25 @@
     "#1 global module shipper: 92.9 GW in 2024; 86 GW in 2025 (7th straight year, tied #1 with LONGi per InfoLink)",
     "731 N-type TOPCon patents claimed; RETC 'Overall Highest Achiever' 7 consecutive years; TÜV Rheinland shading/hail verification (June 2026)",
     "Tiger Neo 3.0 global rollout explicitly excludes the US — a tariff-era product-segmentation decision",
-    "10 GW Saudi cell/module JV with PIF's RELC and Vision Industries (announced July 2024)",
-    "Tiger Neo 5.0 reached mass production in Q2 2026: 25.91% module efficiency, >700 W output — the next efficiency step after the 3.0 platform"
+    "10 GW Saudi cell/module JV with PIF's RELC and Vision Industries (announced July 2024)"
    ],
    "positioning": "Top of a brutally consolidating market: top-4 makers ≈58% of 536 GW ranked 2025 shipments, entire Chinese chain loss-making through 2024–25; US trade barriers include combined rates up to ~246% on its Vietnam output plus the unresolved 2023 Jacksonville raid backdrop",
-   "soldThrough": "Direct to developers/EPCs/IPPs and distribution; ~70% of H1 2026 module shipments overseas",
+   "soldThrough": "Direct to developers/EPCs/IPPs and distribution; ~80%+ of Q1 2026 module shipments overseas",
    "targetSegments": "Utility-scale, C&I, and distributed solar globally; AIDC-variant modules for data-center campuses",
-   "roadmap": "FY2026 module guidance cut to 60–70 GW (from an earlier 75–85 GW) as management prioritizes 'effective supply' and margin over volume; Q3 2026 guided 15–17 GW; China's national energy-efficiency standard (effective Jan 2027) is management's stated catalyst for premium pricing on high-efficiency modules"
+   "roadmap": "FY2026 module guidance 75–85 GW; 'anti-involution' policy-driven price recovery is the margin variable"
   },
   {
    "name": "Energy Storage — SunTera / SunGiga (Jinko ESS)",
    "category": "BESS · the designated second growth engine",
    "description": "Utility-scale SunTera line: G2 (5.015 MWh, 314 Ah) and G3 (6.25 MWh, 587 Ah cells, >95% RTE, grid-forming modes incl. black start and microgrid operation — global shipments from Q4 2025); C&I SunGiga line (215–522 kWh liquid-cooled cabinets; G2 Plus adds AI price-forecasting EMS for energy trading); US-market EAGLE Storage variants (DCB-5000/6250, ACB-261) with cybersecurity provisions; 12 GWh of claimed ESS manufacturing capacity.",
    "highlights": [
-    "5.2 GWh shipped in 2025 (only ~1.7 GWh revenue-recognized); H1 2026: 3.1 GWh shipped (~1.5 GWh revenue-recognized, >1 GWh in Q2 alone); signed + high-probability orders >10 GWh",
+    "5.2 GWh shipped in 2025 (only ~1.7 GWh revenue-recognized); Q1 2026: 1.42 GWh shipped; signed + high-probability orders >10 GWh",
     "2026 guidance: more than double 2025 shipments; management guides storage growing 100–150% annually over the next three years",
-    "BNEF Tier-1 ESS provider for a 10th consecutive quarter (as of Q2 2026 reporting, up from 8 straight quarters at the prior refresh)",
-    "China only 10–15% of ESS sales — focus is Europe, LatAm, Middle East, APAC; US ~600 MWh in 2025 with a 2026 'breakthrough' targeted",
-    "SunGiga G2 liquid-cooling C&I line signed as a Middle East distribution agreement with Innovative Efficient Solutions (IES), partnered with local firm Ruya Energy (announced 2026-09-10)"
+    "Chairman Li Xiande: storage is 'a primary driver for enhancing our profitability profile' — the explicit loss-offset strategy",
+    "China only 10–15% of ESS sales — focus is Europe, LatAm, Middle East, APAC; US ~600 MWh in 2025 with a 2026 'breakthrough' targeted"
    ],
-   "positioning": "BNEF Tier-1 ESS provider for 10 consecutive quarters but not yet in any top-10 integrator ranking — a credible fast-follower whose bundled solar+storage channel is the wedge, not standalone BESS scale",
-   "soldThrough": "Direct supply agreements with developers/EPCs/IPPs (Sunrev 1 GWh framework; Marubeni in Japan) plus EU and Middle East distribution (IES/Ruya Energy)",
+   "positioning": "BNEF Tier-1 ESS provider 8 consecutive quarters but not yet in any top-10 integrator ranking — a credible fast-follower whose bundled solar+storage channel is the wedge, not standalone BESS scale",
+   "soldThrough": "Direct supply agreements with developers/EPCs/IPPs (Sunrev 1 GWh framework; Marubeni in Japan) plus EU distribution",
    "targetSegments": "Utility solar-plus-storage, standalone grid services, C&I energy trading, and (new) AI data centers",
    "roadmap": "SunTera G3 global ramp through 2026; >10 GWh order conversion; US market entry expansion"
   },
@@ -64,41 +62,6 @@
   }
  ],
  "recentDevelopments": [
-  {
-   "date": "2026-09-10",
-   "category": "partnership",
-   "headline": "Jinko ESS signs SunGiga G2 liquid-cooling ESS distribution agreement with Innovative Efficient Solutions (IES) for the Middle East",
-   "read": "A channel-expansion move, not a scale one — IES partners with local firm Ruya Energy to cover project development and after-sales support, extending the C&I liquid-cooling line into a region the dossier already flags as an ESS growth focus.",
-   "source": "https://www.ess-news.com/2026/09/10/jinko-ess-expands-in-the-middle-east-through-strategic-partnership-with-innovative-efficient-solutions-ies/"
-  },
-  {
-   "date": "2026-09-09",
-   "category": "corporate",
-   "headline": "Board proposes renaming the company 'Jinko Holdings Limited' (晶科控股有限公司); AGM set for October 21, 2026",
-   "read": "We read this as the group formalizing a two-engine identity — industrial holdings (Jinko Solar Co.) plus a strategic-investment portfolio (Moonshot AI, StepFun, SiliconFlow, Noetix Robotics, Taiyi Quantum, Janbon Metallic Materials) — rather than a pure solar rebrand; NYSE ticker JKS is unaffected. PENDING SHAREHOLDER VOTE — not yet effective as of this dossier's 2026-09-21 refresh; do not treat the name as changed until the AGM result is confirmed.",
-   "source": "https://www.prnewswire.com/news-releases/jinkosolar-announces-proposed-change-of-company-name-to-jinko-holdings-limited-and-provides-strategic-investment-update-302873616.html"
-  },
-  {
-   "date": "2026-08-26",
-   "category": "leadership",
-   "headline": "Wei 'Dimi' Du named CEO of JinkoSolar Holding, succeeding founder Li Xiande (who remains Chairman)",
-   "read": "The parent holdco now has a professional-manager CEO layered on top of the March 2026 Jiangxi Jinko CEO change — company frames it as planned succession 'not due to any disagreement'; Du's background is strategic investment, not solar operations, consistent with the same-day rebrand/strategic-investment announcement.",
-   "source": "https://www.prnewswire.com/news-releases/jinkosolar-appoints-new-chief-executive-officer-302860484.html"
-  },
-  {
-   "date": "2026-08-26",
-   "category": "financial",
-   "headline": "Q2 2026: revenue RMB 12.36B/$1.82B (−31.3% YoY); gross margin fell back to 4.2% (from 8.3% Q1 2026); FY2026 module guidance cut to 60–70 GW",
-   "read": "The Q1 margin recovery did not hold sequentially — management's own guidance cut (from 75–85 GW) alongside a pivot to asset-light overseas JV manufacturing and a $500M–$1B annual capex ceiling reads as a deliberate de-risking of the volume strategy, not just a weak quarter.",
-   "source": "https://www.prnewswire.com/news-releases/jinkosolar-announces-second-quarter-2026-financial-results-302860485.html"
-  },
-  {
-   "date": "2026-05-31",
-   "category": "regulatory",
-   "headline": "Completed sale of 75.1% of Jacksonville, FL US manufacturing subsidiary to FH JKV Holdings for ~$191.5M; Jinko retains 24.9%, effective deconsolidation 2026-06-01",
-   "read": "Directly FEOC-driven: the 2025 US budget bill's 25% foreign-ownership cap for IRA tax-credit eligibility forced Jinko below controlling interest in its only US plant — a structural, not cyclical, narrowing of its US manufacturing footprint that predates and helps explain the H1 2026 revenue/consolidation shift.",
-   "source": "https://www.pv-tech.org/jinkosolar-sells-majority-stake-in-us-manufacturing-business/"
-  },
   {
    "date": "2026-08-04",
    "category": "product-launch",
@@ -157,11 +120,10 @@
   }
  ],
  "strategyRead": [
-  "(High confidence) We assess storage is a survival strategy, not diversification: with module gross margin still under pressure (Q2 2026 4.2%, down from Q1's 8.3%) and the whole Chinese chain loss-making, the ESS ramp (5.2 GWh 2025 → 3.1 GWh already in H1 2026) is management's stated primary profitability lever. Basis: earnings calls and management's own framing.",
-  "(Moderate confidence) We assess the margin-recovery path is not linear: Q1 2026's jump to 8.3% gross margin reversed to 4.2% in Q2 — the FY2026 module-shipment guidance cut (75–85 GW → 60–70 GW) and the shift to 'effective supply' language read as management choosing margin discipline over the volume race, which should reduce (not eliminate) the swings but has not yet been proven across a full year.",
+  "(High confidence) We assess storage is a survival strategy, not diversification: with module gross margin at 2.2% for FY2025 and the whole Chinese chain loss-making, the ESS ramp (5.2 GWh → >10 GWh guided) is management's stated primary profitability lever. Basis: earnings calls and the chairman's own framing.",
+  "(Moderate confidence) We assess the analyst view is that storage is a margin story, not yet a revenue replacement: 2026 consensus EPS was revised up sharply on margin recovery while revenue forecasts stayed flat (~RMB 92B) — the recovery depends on 'anti-involution' price discipline holding as much as on Jinko's own execution.",
   "(Moderate confidence) We assess the AIDC moves (Sunny 365, the Ningxia 1 GW campus) are a demand-side hedge: owning/serving data-center load monetizes Jinko's own solar+storage output in-country while US trade barriers cap its western module business — an unproven but structurally logical pivot.",
-  "(Moderate confidence) We assess a broader, deliberate stepping-back of the founding family from day-to-day operations is now visible at both levels of the group: Jiangxi Jinko's CEO changed in March 2026 (Chen → Cao) and JinkoSolar Holding's CEO changed in August 2026 (founder Li Xiande → strategic-investment chief Wei 'Dimi' Du, Li remaining Chairman) — professional managers now run both operating layers through the loss period while Li retains board control.",
-  "(Moderate confidence) We assess the proposed 'Jinko Holdings' rebrand (pending an October 21, 2026 shareholder vote) formalizes a second business line already underway — a strategic-investment portfolio (Moonshot AI, StepFun, SiliconFlow, Noetix Robotics, Taiyi Quantum, Janbon Metallic Materials) that has already booked real gains (Gold Electronic's ChiNext listing, the LAPLACE disposal). This diversifies the earnings base beyond the solar cycle, but also means a reader must now track venture/portfolio marks, not just module and storage fundamentals, to understand consolidated results.",
+  "(Moderate confidence) We assess governance transition is a live risk: the founding family controlled ~55.6% of the holdco, and co-founder Kangping Chen's full 2026 exit amid the first loss in 12 years leaves professional managers (ex-CFO Cao) running the operating company through its hardest stretch.",
   "(Low confidence) The reported desert AI data-center power-supply arrangement (Nikkei/KrAsia) and the polysilicon consolidation fund are both unconfirmed — either would materially change the economics if realized."
  ],
  "relationships": [
@@ -208,25 +170,17 @@
  ],
  "policyExposure": [
   {
-   "regime": "FEOC restrictions",
-   "status": "in-effect",
-   "effectiveDate": "2026-06-01",
-   "exposure": "The 2025 US budget bill's Foreign Entity of Concern provisions cap Chinese ownership/influence in a facility seeking IRA tax-credit eligibility at 25% — Jinko's Jacksonville, FL plant (its only US manufacturing site) exceeded that threshold under full ownership.",
-   "mitigation": "Sold 75.1% of the Jacksonville subsidiary to FH JKV Holdings Limited for ~$191.5M, closing 2026-05-31 and deconsolidating the facility from Jinko's financials effective 2026-06-01; Jinko retains a 24.9% minority stake rather than exiting the US market outright.",
-   "source": "https://www.pv-tech.org/jinkosolar-sells-majority-stake-in-us-manufacturing-business/"
-  },
-  {
    "regime": "AD/CVD",
    "status": "in-effect",
-   "exposure": "US Commerce's April 2025 final AD/CVD determinations set Jinko-specific combined rates up to ~246% on its Vietnam-made modules — ROTH called the determinations 'negative for JinkoSolar' — narrowing the US module door for Southeast Asia-made product. The Tiger Neo 3.0 global rollout explicitly excludes the US, a tariff-era product-segmentation decision, with the 2023 Jacksonville raid an unresolved backdrop.",
-   "mitigation": "Following the May 2026 Jacksonville stake sale (see the FEOC entry above), Jinko's direct US manufacturing hedge is now a 24.9% minority interest rather than a controlled 2 GW plant; storage and non-US module markets carry the growth burden.",
+   "exposure": "US Commerce's April 2025 final AD/CVD determinations set Jinko-specific combined rates up to ~246% on its Vietnam-made modules — ROTH called the determinations 'negative for JinkoSolar' — narrowing the US module door to Jacksonville assembly. The Tiger Neo 3.0 global rollout explicitly excludes the US, a tariff-era product-segmentation decision, with the 2023 Jacksonville raid an unresolved backdrop.",
+   "mitigation": "US-market EAGLE modules assembled in Jacksonville, FL (2 GW, 650+ workers, since 2018) as the US hedge; storage and non-US markets carry the growth burden.",
    "source": "https://pv-magazine-usa.com/2025/04/21/u-s-commerce-department-slaps-unexpectedly-high-tariffs-on-solar-imports/"
   },
   {
    "regime": "China anti-involution policy",
    "status": "in-effect",
-   "exposure": "The margin-recovery thesis rides on China's 'anti-involution' price discipline: gross margin recovered to 8.3% in Q1 2026 (from 2.2% FY2025) on policy-driven price firming plus storage mix, but fell back to 4.2% in Q2 2026 — the dossier assesses the recovery is not yet linear and depends on that discipline holding as much as on Jinko's own execution.",
-   "source": "https://www.prnewswire.com/news-releases/jinkosolar-announces-second-quarter-2026-financial-results-302860485.html"
+   "exposure": "The margin-recovery thesis rides on China's 'anti-involution' price discipline: Q1 2026 gross margin recovered to 8.3% (from 2.2% FY2025) on policy-driven price firming plus storage mix, and the dossier assesses the recovery depends on that discipline holding as much as on Jinko's own execution.",
+   "source": "https://www.prnewswire.com/news-releases/jinkosolar-announces-first-quarter-2026-financial-results-302757116.html"
   }
  ],
  "technicalSpecs": [
@@ -286,24 +240,12 @@
  "decisionMakers": [
   {
    "name": "Li Xiande (李仙德)",
-   "title": "Founder & Chairman — JinkoSolar Holding (CEO Dec 2020 – Aug 2026)",
+   "title": "Founder, Chairman & CEO — JinkoSolar Holding",
    "background": [
-    "Stepped down as CEO 2026-08-26 in what the company called a planned succession, 'not due to any disagreement'; remains Chairman of the Board, Chair of the Compensation Committee, and Chair of the Nominating and Corporate Governance Committee",
-    "Chairman & CEO (CEO Dec 2020 – Aug 2026); founder (2006)",
+    "Chairman & CEO (CEO since Dec 2020); founder (2006)",
     "Marketing manager — Zhejiang Yuhuan Solar (2003–04); operations — ReneSola (2005–06)",
     "Family concert (with brother Li Xianhua and brother-in-law Kangping Chen) controlled ~55.6% of the holdco",
     "B.A. Shanghai University of Finance and Economics"
-   ]
-  },
-  {
-   "name": "Wei \"Dimi\" Du (杜巍)",
-   "title": "CEO — JinkoSolar Holding (since Aug 2026)",
-   "background": [
-    "Vice President of Strategic Investment, JinkoSolar (Apr 2026 – Aug 2026)",
-    "General Manager of Strategic Investment & Assistant to Chairman, JinkoSolar (Dec 2021 – Mar 2026)",
-    "Assistant to Chairman, Jinko Power Technology Co., Ltd. (Feb 2021 – Dec 2021)",
-    "Executive General Manager of Investor Relations, Shanghai Yuyuan Tourist Mart Group (Oct 2018 – Jan 2021)",
-    "MSc Finance, Imperial College London; BSc Accounting and Finance, University of Bristol"
    ]
   },
   {
@@ -337,39 +279,7 @@
   "type": "public",
   "periods": [
    {
-    "period": "H1 2026 (Q2 2026 latest interim)",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "H1: RMB 24.61B / $3.63B; Q2 alone: RMB 12.36B / $1.82B (−31.3% YoY, +0.9% QoQ)",
-      "expected": "",
-      "verdict": "",
-      "result": "Q2 revenue essentially flat sequentially despite the YoY decline",
-      "kpi": "revenue",
-      "usdMillions": 3630,
-      "fxBasis": "as stated in this dossier's own reporting (RMB 24.61B / $3.63B H1 2026 per company release)"
-     },
-     {
-      "name": "Net loss",
-      "actual": "H1: −RMB 1.16B / −$171.1M; Q2 alone: −RMB 697.3M / −$102.8M (adjusted −RMB 910.8M / −$134.2M, excluding fair-value changes, subsidiary-disposal gains, and share-based comp)",
-      "expected": "",
-      "verdict": "",
-      "result": "Q2 loss widened from Q1's −RMB 463.5M"
-     },
-     {
-      "name": "Gross margin",
-      "actual": "Q2: 4.2% (down from 8.3% Q1 2026; up from 2.9% Q2 2025)",
-      "expected": "",
-      "verdict": "miss",
-      "result": "the Q1 recovery reversed sequentially"
-     }
-    ],
-    "commentary": "Module shipments: Q2 15.96 GW (+16.7% QoQ, −34.4% YoY); H1 29.6 GW (~70% overseas). ESS: H1 3.1 GWh shipped (~1.5 GWh revenue-recognized, >1 GWh in Q2 alone). FY2026 guidance cut to 60–70 GW modules (from 75–85 GW) on an 'effective supply' shift; Q3 2026 guided 15–17 GW; ESS still guided to more than double 2025. Annual capex guided $500M–$1B, reflecting a shift to asset-light overseas JV manufacturing. Figures per company release; H1/Q2 breakdown as reported.",
-    "periodType": "half",
-    "periodEnd": "2026-06-30"
-   },
-   {
-    "period": "Q1 2026",
+    "period": "Q1 2026 (latest interim)",
     "metrics": [
      {
       "name": "Revenue",
@@ -393,7 +303,7 @@
       "result": "price firming + storage mix"
      }
     ],
-    "commentary": "Module shipments ~13.7 GW (>80% overseas); ESS 1.42 GWh shipped, 520 MWh revenue-recognized. FY2026 guidance at the time: 75–85 GW modules, ESS >2× 2025 (later cut — see H1 2026 period above)."
+    "commentary": "Module shipments ~13.7 GW (>80% overseas); ESS 1.42 GWh shipped, 520 MWh revenue-recognized. FY2026 guidance: 75–85 GW modules, ESS >2× 2025."
    },
    {
     "period": "FY2025",
@@ -448,49 +358,9 @@
     "commentary": "'Record shipments, operational losses' (PV-Tech) — the price war's signature year."
    }
   ],
-  "commentary": "Listing structure: NYSE ADR (JKS) holds ~54.17% of Jiangxi Jinko (SSE STAR 688223). ESS competitive context: BYD >60 GWh and Tesla 46.7 GWh shipped in 2025 (Benchmark) vs Jinko's 5.2 GWh (2025) / 3.1 GWh (H1 2026 alone) — a challenger, not yet a ranked integrator. US trade barriers: combined AD/CVD rates up to ~246% (Vietnam); Jinko sold 75.1% of its Jacksonville, FL plant in May 2026 under FEOC ownership-threshold pressure, retaining a 24.9% minority stake and deconsolidating the facility from June 2026."
+  "commentary": "Listing structure: NYSE ADR (JKS) holds ~54.17% of Jiangxi Jinko (SSE STAR 688223). ESS competitive context: BYD >60 GWh and Tesla 46.7 GWh shipped in 2025 (Benchmark) vs Jinko's 5.2 GWh — a challenger, not yet a ranked integrator. US trade barriers: combined AD/CVD rates up to ~246% (Vietnam); 2 GW Jacksonville assembly is the US hedge."
  },
  "sources": [
-  {
-   "label": "ESS-News — Jinko ESS Middle East partnership (SunGiga G2 / IES / Ruya Energy)",
-   "url": "https://www.ess-news.com/2026/09/10/jinko-ess-expands-in-the-middle-east-through-strategic-partnership-with-innovative-efficient-solutions-ies/",
-   "date": "2026-09-10"
-  },
-  {
-   "label": "PRNewswire — JinkoSolar proposed name change to Jinko Holdings Limited + strategic investment update (company release)",
-   "url": "https://www.prnewswire.com/news-releases/jinkosolar-announces-proposed-change-of-company-name-to-jinko-holdings-limited-and-provides-strategic-investment-update-302873616.html",
-   "date": "2026-09-09"
-  },
-  {
-   "label": "PRNewswire — JinkoSolar appoints new Chief Executive Officer (company release)",
-   "url": "https://www.prnewswire.com/news-releases/jinkosolar-appoints-new-chief-executive-officer-302860484.html",
-   "date": "2026-08-26"
-  },
-  {
-   "label": "PRNewswire — JinkoSolar Q2 2026 financial results (company release)",
-   "url": "https://www.prnewswire.com/news-releases/jinkosolar-announces-second-quarter-2026-financial-results-302860485.html",
-   "date": "2026-08-26"
-  },
-  {
-   "label": "pv-tech — Q2 2026 shipments (15.9 GW) and Wei 'Dimi' Du CEO appointment",
-   "url": "https://www.pv-tech.org/jinkosolar-ships-15-9gw-modules-q2-2026-names-wei-dimi-du-new-ceo/",
-   "date": "2026-08-26"
-  },
-  {
-   "label": "GreentechLead — Q2 2026 revenue, asset-light JV manufacturing shift, capex guidance",
-   "url": "https://greentechlead.com/solar/jinkosolar-q2-2026-revenue-falls-31-to-1-82-billion-as-company-cuts-shipments-expands-storage-and-shifts-manufacturing-to-asset-light-jvs-55147",
-   "date": "2026-08-28"
-  },
-  {
-   "label": "EnergyTrend — Jacksonville, FL US plant stake sale completed (close date, buyer, value)",
-   "url": "https://www.energytrend.com/news/20260602-51507.html",
-   "date": "2026-06-02"
-  },
-  {
-   "label": "pv-tech — JinkoSolar sells 75.1% majority stake in US manufacturing business (FEOC rationale)",
-   "url": "https://www.pv-tech.org/jinkosolar-sells-majority-stake-in-us-manufacturing-business/",
-   "date": "2026-05-11"
-  },
   {
    "label": "Jinko ESS — Sunny 365 AIDC launch (company release)",
    "url": "https://www.pv-magazine.com/press-releases/jinkosolar-unveils-the-sunny-365-smart-solar-storage-system-an-integrated-solar-storage-aidc-model/",
@@ -565,6 +435,6 @@
    "url": "https://www.jinkosolar.com/en/site/tigerneo_3"
   }
  ],
- "lastUpdated": "2026-09-21",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

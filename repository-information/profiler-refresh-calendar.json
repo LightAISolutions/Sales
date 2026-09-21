@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "updated": "2026-09-19",
+ "updated": "2026-09-21",
  "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
  "companies": [
   {
@@ -939,30 +939,32 @@
   },
   {
    "slug": "iren",
-   "nextReport": "2026-08-27",
-   "confirmed": true,
-   "source": "FY2026 annual results (fiscal year ended 2026-06-30) were company-confirmed for 2026-08-27 after close; the FY2026 Form 10-K is on EDGAR. OVERDUE — the 2026-08-28 one-shot fired and was ABANDONED (the session blocked on a permission prompt while hunting for the repo checkout); the dossier still reads 'FY2026 through Q3 ... FY report due Aug 27, 2026'. Next after this: Q1 FY2027, tracker estimate 2026-12-01, not company-confirmed.",
-   "lastRefreshed": "2026-08-30",
+   "nextReport": "2026-11-05",
+   "confirmed": false,
+   "source": "FY2026 annual results (fiscal year ended 2026-06-30) confirmed published 2026-08-27 (company wire release + IR release, corroborated by GlobeNewswire/StockTitan/Barchart/TradingView; sec.gov/data.sec.gov 403-blocked from this network, 10-K not read directly). FY2026 actuals: revenue $707.0M (+41% YoY, 2.2% miss vs $722.9M consensus), net loss $702.6M (incl. $638.8M non-cash BTC-hardware impairment) vs -$1.57 consensus EPS (-$2.06 actual), adj. EBITDA $245.7M. Next after this: Q1 FY2027 (quarter ended Sep 30, 2026) — tracker estimate based on IREN's own Q1 FY2026 precedent (reported 2025-11-06); NOT company-confirmed.",
+   "lastRefreshed": "2026-09-21",
    "watch": [
-    "ADD THE MISSING PERIOD: FY2026 actuals are absent from financials.periods[]",
-    "FY2026 actuals vs consensus ($722.9M revenue / -$1.57 EPS per stockanalysis.com)",
-    "The >$4B year-end-2026 ARR bridge (~85% contracted claim)",
-    "Horizon 2-4 delivery cadence for Microsoft",
-    "Mining wind-down status (last EH/s disclosure); convert/dilution detail in the 10-K",
-    "Any Sweetwater tenant news"
+    "Q1 FY2027 vs the FY2026 miss — first quarter with mining 'effectively decommissioned' per management's new Dec-2026 target",
+    "AI Cloud ARR conversion: $4B contracted 2026 ARR (largely sold out) vs $1B operating ARR as of Aug 26 — the gap that resolves quarter to quarter",
+    "Sweetwater tenant: 2GW hub conditionally entered ERCOT Batch Zero as Base Load (Sep 8, 2026) but still no named tenant",
+    "New customers named in the FY26 print (Cohere, Prometheus, Fal AI, Higgsfield AI) — scale/contract terms not yet disclosed",
+    "765kV transmission route PUCT-approved benefiting Sweetwater (Oncor targeting 2028-2029) — early-stage, watch for schedule firming",
+    "Convertible-note tranche detail and any updated Bitcoin EH/s hashrate figure (last published Oct 2025) if disclosed in the 10-K once EDGAR is reachable"
    ]
   },
   {
    "slug": "jinko",
-   "nextReport": "2026-08-27",
-   "confirmed": true,
-   "source": "JinkoSolar (NYSE: JKS) Q2 2026 released 2026-08-27 before market open (call held 2026-08-26 08:30 ET); the A-share listing (SSE STAR: 688223) filed H1 2026 by the 2026-08-31 deadline. OVERDUE — the 2026-08-28 one-shot fired (SUCCEEDED) but landed no commit and the dossier's latest period is still Q1 2026. Next after this: Q3 2026, unannounced at time of writing.",
-   "lastRefreshed": "2026-08-30",
+   "nextReport": "2026-11-10",
+   "confirmed": false,
+   "source": "Q2/H1 2026 confirmed published 2026-08-26 (JinkoSolar's own PRNewswire release; ir.jinkosolar.com mirror 503'd on fetch). Q2 2026: revenue RMB 12.36B/$1.82B (-31.3% YoY), gross margin 4.2% (down from Q1's 8.3% — a reversal), net loss RMB 697.3M/$102.8M; H1 2026: revenue RMB 24.61B/$3.63B, net loss RMB 1.16B/$171.1M, 29.6 GW modules, 3.1 GWh ESS shipped. FY2026 module guidance CUT to 60-70 GW (from 75-85 GW). Also: board proposed renaming to 'Jinko Holdings Limited' on 2026-09-09, pending shareholder vote at the 2026-10-21 AGM (NOT yet effective; ticker JKS unaffected); founder Li Xiande stepped down as JinkoSolar Holding CEO 2026-08-26 (remains Chairman), succeeded by Wei 'Dimi' Du. Next after this: Q3 2026, tracker estimate only (prior quarters reported at inconsistent lags — Q1 29 days after quarter-end, Q2 57 days — so this is a rough midpoint, not company-confirmed.",
+   "lastRefreshed": "2026-09-21",
    "watch": [
-    "ADD THE MISSING PERIOD: Q2/H1 2026 actuals are absent from financials.periods[]",
-    "Energy-storage 'second growth engine' (SunTera shipments/orders, grid-forming wins)",
-    "Module pricing/margin recovery vs the first loss in 12 years",
-    "US tariff exposure; the Sunny 365 AIDC initiative"
+    "THE OCT 21 2026 AGM VOTE on renaming to 'Jinko Holdings Limited' — confirm the outcome; if approved, update name/shortName and aka[] per the Naming and renames schema rules",
+    "Whether the Q2 gross-margin reversal (8.3% -> 4.2%) continues or the 'anti-involution' price-discipline recovery resumes in Q3",
+    "FY2026 module guidance cut (75-85 GW -> 60-70 GW) — watch for further revisions",
+    "ESS momentum: SunGiga G2/IES Middle East distribution deal (Sep 10, 2026); BNEF Tier-1 status now 10 consecutive quarters",
+    "FEOC-driven Jacksonville, FL plant divestiture (75.1% sold to FH JKV Holdings, closed 2026-05-31) — watch for further US-manufacturing-ownership restructuring under FEOC pressure",
+    "New CEO Wei 'Dimi' Du's strategic direction at Jiangxi Jinko under the new leadership"
    ]
   },
   {
@@ -1356,14 +1358,17 @@
   },
   {
    "slug": "oracle",
-   "nextReport": "2026-09-10",
+   "nextReport": "2026-12-10",
    "confirmed": false,
-   "source": "PUBLIC COMPANY — NYSE: ORCL (Oracle Corporation, CIK 0001341439). **FISCAL YEAR ENDS 31 MAY**, so Oracle's quarters do not line up with the calendar quarters of every other company on this desk: Q1 FY2027 ends 31 August 2026. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis, from Oracle's own EDGAR filing history: Q1 FY2026 10-Q filed 2025-09-10, Q2 filed 2025-12-11, Q3 filed 2026-03-11, FY2026 10-K filed 2026-06-22. **THIS ROW IS DUE WITHIN DAYS** — it is the desk's confirm-the-date work under the seven-day rule. HOW TO CONFIRM: the company files an 8-K carrying the earnings release on the day; check EDGAR CIK 0001341439 for 8-K filings, and its investor-relations events page for the advance notice.",
-   "lastRefreshed": "2026-09-06",
+   "source": "Q1 FY2027 (quarter ended Aug 31, 2026) confirmed published 2026-09-10 (oracle.com press release + corroborating trade press). Revenue $19.3B (+30% YoY, beat ~$19.14B consensus); OCI infrastructure revenue $7.4B (+121% YoY); RPO $664B, up only +$26B sequentially (vs +$85B the prior quarter) — backlog growth decelerating; FCF -$5.4B on capex of $28.5B; GAAP EPS $1.56 (beat). FY2027 guidance held (gross capex $90-95B, net cash capex <=$70B). Next after this: Q2 FY2027, tracker estimate from Oracle's own cadence (Q1 FY2026 filed 2025-09-10, Q2 FY2026 filed 2025-12-11 -> ~3-month gap); NOT company-confirmed. SCOPE NOTE still applies: Oracle is in the 40+-inbound-mention class — full step-7 cross-dossier reconciliation remains deferred as a session of its own.",
+   "lastRefreshed": "2026-09-21",
    "watch": [
-    "RPO of USD 638bn (+363%) against free cash flow of MINUS USD 23.7bn at FY2026 — the widest gap between contracted backlog and cash generation in the corpus. Watch whether the next quarter narrows or widens it.",
-    "The ~USD 40bn of additional planned financing that moved the stock ~10% on the FY2026 print. Watch the form it takes and what it is secured on.",
-    "SCOPE NOTE: Oracle is in the 40+-inbound-mention class. A full step-7 reconciliation of what other dossiers say about Oracle is a session of its own and has been deferred by C6, C9 and C10. Do not attempt it inside a refresh."
+    "RPO deceleration (+$26B this quarter vs +$85B prior) vs FCF trajectory (-$5.4B this quarter, -$23.7B FY2026) — does the growth-rate slowdown show up in the cash burn next quarter",
+    "The ~$40B additional financing Oracle flagged at the FY2026 print — evidence so far points equity-first ($20B ATM program) with no new bond issuance found; confirm the final mix and whether any of it is asset-secured",
+    "2026 Restructuring Plan (supplemented ~$700M in Sep 2026, total ~$2.8B) and the layoff round — watch for further increases",
+    "Oracle/OpenAI Project Jupiter (NM) solar push and the 2GW New Mexico renewable-capacity RFP (Sep 2026) — community-pushback mitigation strategy in action",
+    "HPE partnership (Juniper Networking for OCI fabric, Sep 2026) — HPE reportedly received Oracle warrants, an unusual supplier-takes-equity structure; watch for details",
+    "SCOPE: do not attempt full step-7 cross-dossier reconciliation inside a routine refresh (40+ inbound mentions) — remains deferred"
    ]
   },
   {
