@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "updated": "2026-09-21",
- "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
+ "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md. Cadence rows carry a tier: core = Megmeet/SST-adjacent segments plus the named private/unit-level set, swept every 90 days; watch = the rest, swept every 180 days. The quarterly Routine reads these tiers via scripts/profiler-queue.py --quarterly instead of a hardcoded company list, so coverage is changed by a commit, not a prompt paste.",
  "companies": [
   {
    "slug": "abb",
@@ -48,7 +48,8 @@
     "Fluence: whether AES sells below 22%, whether equity-method treatment survives, and any disclosure of Fluence-specific procurement spend — AES has never published one. Also the securities class action naming the AES defendants (purchasers 28 October 2021 to 10 February 2025)",
     "Maximo fleet size against the five units at 31 December 2025, and whether any third-party EPC is named as a customer — the service-to-competitors model is asserted but unproven",
     "Chesterton check: the parent is being taken private and has stopped issuing guidance and earnings calls; AES Clean Energy is NOT a reportable segment; the Escondido 2024 battery fire was SDG&E-owned (AES built it in 2017) and the McMicken 2019 explosion was APS-owned with Fluence as integrator — neither is an AES-owned incident; the Utility Dive 'AES layoffs' article that dominates search is from 2018, not the 2025 restructuring; there is no AES product called 'Atlas'. Do not re-import any of these"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "aligned",
@@ -63,7 +64,8 @@
     "DeltaFlow liquid retrofits at scale",
     "ERCOT/Texas interconnection-audit fallout",
     "ODATA/LatAm expansion"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "amazon",
@@ -91,7 +93,8 @@
     "Power: ERock 470 MW order deliveries and permits, the '100% of grid upgrades' pledge in utility dockets (Entergy row is `announced`), Monarch's islanded 2 GW, transformer/switchgear lead times flagged as the Hawesville choke point",
     "Shareholder-suppliers: Amazon's holding (about USD 190bn of Anthropic paper) and milestone releases, Google's about 14% and Fluidstack backstops, Microsoft up to USD 5bn and NVIDIA up to USD 10bn — any change in stake or in the Azure USD 30bn / 1 GW commitment",
     "Chesterton check: the 401 MW Hawesville lease is at Justified (Hawesville, KY), direct with TeraWulf, no Fluidstack entity; Microsoft walked from Monarch and the Anthropic terms there are unconfirmed; Anthropic owns no campus. Do not re-import any of these premises"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "apex-clean-energy",
@@ -102,7 +105,8 @@
     "The dossier's own framing: 'the observable financial record is lender behavior, not accounts'. Nearly USD 7bn of project financing closed in the 13 months to January 2026 on traditional tax equity from four banks, plus a USD 1.05bn corporate facility. Watch the financing cadence as the proxy for activity.",
     "CEO Ken Young became Chair of the American Clean Power Association in August 2026, with ACP citing more than 11 GW commercialized. Trade-body leadership is a visibility signal, not a company disclosure.",
     "Apex is queued for a `profiler prep` study-guide backfill among the IPPs in §5. IF ARES SELLS OR LISTS IT, convert this row."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "applied-digital",
@@ -129,7 +133,8 @@
     "Nighthawk (300 MW / 1,200 MWh, Poway) reached commercial operation in August 2026 under a PG&E long-term offtake. Watch the CAISO resource-adequacy contracting cadence.",
     "THE FINANCING PATTERN IS THE STORY: Vikings included a USD 191m ITC+PTC transfer to J.P. Morgan among the first IRA transferability deals; Condor used **Blackstone Credit preferred equity replacing traditional tax equity**; Nighthawk used a Goldman Sachs Alternatives preferred plus a USD 268m credit transfer to an unnamed corporate. Watch which structure recurs.",
     "NOTE ON THE BLACKSTONE LINK: it is PROJECT-LEVEL preferred equity, not a platform holding, and `blackstone`→`arevon` is typed `other` for exactly that reason. Do not read it as ownership. Arevon is queued for a §5 guide backfill."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "available-power",
@@ -143,7 +148,8 @@
     "Datavault AI's filings and the parent's Project Qestrel releases for any statement tying micro data-centre sites to on-site batteries — nothing does today",
     "Bastrop County: the Central Texas Airport / GREENPORT campus approval status — the host site of the only named project remains unapproved",
     "Chesterton check: Texas only (no CAISO); develop-and-sell at NTP, not owner-operator; no sponsor named; nothing operating under its ownership on any tracker; Sungrow is a caption in a 2024 article about another company's project, not a supplier. Do not re-import the 2026-09-03 premise"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "aypa-power",
@@ -157,7 +163,8 @@
     "Any supplier other than Canadian Solar e-STORAGE, any FEOC or domestic-content statement, and any named tax-credit-transfer buyer — each would move the supplier-concentration judgment",
     "Project-count and pipeline reconciliation: Aypa's 42 against Brookfield's 35 and the 3,000 MW / 3,500 MW split; an Aypa-published operating figure would replace the buyer's",
     "Chesterton check: the sale is signed, not closed; '6.5 GW' is Brookfield's figure; the Yadkins PPA counterparty and the Bypass offtaker are undisclosed; no Aypa fire incident is documented (the Hamilton County press claim is unsupported). Do not re-import these as facts"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "bechtel",
@@ -171,7 +178,8 @@
     "Sentinel re-baselining",
     "Micron Clay NY",
     "Annual impact-report figures against the $20.6B/$58.2B 2024 baseline"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "black-veatch",
@@ -183,7 +191,8 @@
     "Client-owned substation expansion and any first named behind-the-meter AI-campus gas award",
     "The Boldt retrial outcome",
     "Annual revenue vs the ~$5B 2025 baseline"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "blattner",
@@ -194,7 +203,8 @@
     "Quanta's record backlog (USD 53.4bn at Q2 2026, FY2026 guidance raised to USD 39.3-39.7bn) is the parent-level proxy; watch the renewable segment's share of it.",
     "CHESTERTON CHECK carried from v04.85r: the `blattner x quanta-services` reciprocal sits on the relationships accept list and was RE-REASONED AND KEPT — `portfolio` was considered and rejected, because a wholly-owned operating construction subsidiary is not a financial holding. The types actually missing are `parent`/`subsidiary`. Do not re-type this edge to `portfolio`.",
     "RWE's Emily Solar and the Lafitte project are Blattner's in-corpus links; C5 corrected the `mccarthy` dossier's claim that no RWE relationship existed beyond Bright Arrow."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "bloom-energy",
@@ -220,7 +230,8 @@
     "Santee Cooper-template utility-side data-center transmission awards",
     "The Certus/1898 & Co. MWBE suit disposition",
     "RICE/bridge-power awards"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "byd",
@@ -325,7 +336,8 @@
     "Brookfield Infrastructure quarterly letters: any Compass-specific MW, FFO or 'commissioned' figure; any change in co-control (Ontario Teachers' or Brookfield stake sale)",
     "Prime-power, BESS or Bloom Energy award at a Compass campus (would overturn the dossier's flexible-load judgment); the Phoenix 191 MW diesel microgrid status",
     "Chesterton check: the coverage-plan cell's '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's and 'Joliet 1.8 GW' is Hillwood/PowerHouse's — neither describes Compass; Rosemount, MN is Meta's project, not Compass's; Compass names no tenant and no GC except Power Construction (Hoffman Estates); the '$5.5 billion' 2023 price is press-only (Brookfield: $1.35bn for the co-controlling stake). Do not re-import any of these"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "constellation-energy",
@@ -355,7 +367,8 @@
     "Channel concentration: named server-OEM design wins (Dell, HPE, Gigabyte are sourced; Supermicro and Lenovo run in-house designs) and any first named hyperscaler — CoolIT claims '4 of 5' hyperscalers without naming one",
     "Litigation: the Asetek disputes ended in 2022 (summary judgment, settlement) with the Federal Circuit reviving CoolIT's '567 patent in March 2024 — watch for any new assertion now that a deep-pocketed parent owns the portfolio",
     "Chesterton check: CoolIT was KKR/Mubadala-owned May 2023–July 2026, not 'KKR-owned since 2023' today, and no jury verdict was ever reached in Asetek v. CoolIT. Do not re-import either premise"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "core-scientific",
@@ -393,7 +406,8 @@
     "The dossier's own flagged gap: integration capacity of 21.5 GWh/yr across seven bases against 14.16 GWh of 2024 shipments — a capacity overhang amid a >100-vendor domestic price war. **The 2025 full-year shipment figure and global rank are UNDISCLOSED.** Establishing either is the priority.",
     "The 6.X liquid-cooled system shown at The smarter E Europe (June 2026) — +25% energy density, >20% smaller footprint. Watch for a shipping product and a customer.",
     "CRRC Zhuzhou is queued for a `profiler prep` study-guide backfill among the integrators in §5."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "crusoe",
@@ -405,7 +419,8 @@
     "Funding/valuation",
     "Energy-stack partnerships",
     "IPO signals"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "cummins",
@@ -449,7 +464,8 @@
     "Grid-code and interconnection-study work in ERCOT, PJM and Europe as large-load rules change — DNV is cited on both the storage side and the load side",
     "Ownership and structure: any change to the foundation model, a sale of a non-core unit, or an acquisition in digital assurance (Veracity, GreenPowerMonitor) that shifts the mix",
     "Chesterton check: DNV is an assurance body, not a supplier — no order books, no backlog. Do not import revenue estimates from consultancy rankings; the annual report is the only figure"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "dominion-energy",
@@ -482,7 +498,8 @@
     "CalSTRS case rulings",
     "ENR bookings updates",
     "WND Ventures"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "eaton",
@@ -509,7 +526,8 @@
     "Arizona: ACC rules under HB 2756 for extra-high-load customers and the 2026–2029 sales-tax exemption pause (HB 4168) — whether Mesa buildings hold grandfathered certifications; SRP's Large Customer Integration Process",
     "Ratepayer posture: any campus abandoned on power economics (Brewer: 'will abandon projects if power economics become financially unworkable'); Virginia's electricity consumption tax (USD 0.011/kWh, July 2026–June 2028)",
     "Chesterton check: '1.8 GW delivered or under development on $16.1B planned' is EdgeCore's own January 2026 wording (superseded by the site's 2.27+ GW / $7.4bn) — the verifiable operating base is two buildings (PH01 26 MW, SV01 36 MW); EdgeCore is Partners Group-owned, not Brookfield-owned (its only Brookfield link is buying Mesa land from a Brookfield Properties affiliate) and has no Illinois site; Holder's Mesa contract value is undisclosed (the '$1.9B' is EdgeCore's loan). Do not re-import any of these"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "enchanted-rock",
@@ -536,7 +554,8 @@
     "Duration mix: whether more two-hour batteries follow the five 50+ MW units Modo recorded in Q3 2025, and whether ENGIE publishes any MWh figure beyond Sun Valley's 100 MW / 100 MWh. Also any named cell, module or integrator supplier — there is none in any first-party source",
     "Ocean Winds and SouthCoast Wind (2.4 GW, not cancelled, COD target 2030) after the April 2026 surrender of the Bluepoint and Golden State leases for about USD 885m conditioned on equal investment in US LNG, oil and energy infrastructure; and the Senate investigation into the comparable TotalEnergies buyout",
     "Chesterton check: ENGIE Impact was DIVESTED to Arcadia (closed 2026-04-29) and is no longer an ENGIE business; the Distributed Solar & Storage business is being sold with a ~EUR 250m impairment even though the Renewables page still markets '500+ distributed solar projects'; the QTS deal is resale of ABEI Energy's generation, not ENGIE's own; the only resolvable ENGIE-Amazon named asset is Moray West in the UK, not North America; ENGIE Energy Access is African and irrelevant; a '$9m 2017 class action settlement' circulating under a similar name belongs to Genie Energy, not ENGIE. Do not re-import any of these"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "entergy",
@@ -565,7 +584,8 @@
     "**THE SINGLE BIGGEST OPEN QUESTION IN THAT FILE**, in the dossier's own words: whether the Fixx structure survives Treasury's final FEOC regulations, due late 2026. If continuing licensing and IP ties are ruled to taint effective control, the structure fails. This is the priority item.",
     "Galaxy Campus (Ulanqab) commissioned its first building in August 2026, billed as the world's largest AIDC building running on on-site renewables. NAME TRAP: this 'Galaxy' is Envision's campus and is NOT Galaxy Digital — C9 recorded it as a confirmed false-positive class along with `piller`'s hit and Schneider's Galaxy VXL UPS product family.",
     "Envision is queued for a `profiler prep` study-guide backfill among the integrators in §5."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "eolian",
@@ -576,7 +596,8 @@
     "DISAMBIGUATION, and the reason it is the first item here: Eolian is **BlackRock/GIP**, NOT Blackstone. C10 recorded that `\\bBlackRock\\b` and `\\bBlackstone\\b` each hit 19 files in this corpus and overlap in eight. Verify the referent before writing any edge.",
     "Flint Grid — 200 MW / 1.06 GWh, PJM's largest battery, BALANCE-SHEET FINANCED and under construction as of July 2026. Balance-sheet financing from a sponsor-owned developer is unusual; watch whether it recurs.",
     "The `eolian`/`jupiter-power` pair sits on the relationships accept list as an `other`/`other` corporate-structure link (both GIP-owned), reported by design. Do not re-type it."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "equinix",
@@ -604,7 +625,8 @@
     "PG&E or CAISO confirmation of Hummingbird's commercial operation (company page: March 2026; no third-party COD article) and any disclosure of the ERCOT hedge counterparty or tenor",
     "The first named SPP or MISO project (promised since June 2026) and any FEOC-driven change from Sungrow on the 2026–2027 projects",
     "Chesterton check: esVolta is in CAISO, ERCOT and WECC with SPP/MISO expansion — not PJM; the Captona deal was preferred equity, not a sale; Generate acquired it in July 2022, not 2023. Do not re-import the 2026-09-03 premise"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "eve-energy",
@@ -635,7 +657,8 @@
     "Fund III: a Form D or first-close release would end the 'two active funds' boilerplate; the March 2027 Form ADV amendment for regulatory AUM and headcount",
     "Stella Power and CleanAmps alliances: any named site, MW or data-centre offtaker (none disclosed as of September 2026)",
     "Chesterton check: the Fluence 2.2 GWh deal dates from 30 July 2024 (not December 2024 — that is the LG deal); no source names Holland, MI or a 2030 end year for the LG agreement; the fourth co-founder is Ryan Fegley (no 'Ryan Stephenson'); a 'Fund III $1.8bn' web claim is uncorroborated. Do not re-import any of these"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "fermi-america",
@@ -681,7 +704,8 @@
    "watch": [
     "Project awards and software/integration wins",
     "Ownership and financing developments"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "fluence",
@@ -708,7 +732,8 @@
     "Anthropic routing around the intermediary: Hawesville (401 MW direct with TeraWulf, July 2026), Riot, Hut 8 Beacon Point, Nscale, Lambda — each new direct contract reduces the credit-substitution half of Fluidstack's product",
     "Europe: the withdrawn 1 GW France campus (March 2026), any remaining Nordic/UK colocation for Mistral, Poolside, Black Forest Labs; the Macquarie GPU-secured facility's status",
     "Chesterton check: Fluidstack does not own Lake Mariner, Barber Lake, River Bend or New Lebanon — it is tenant of record; the USD 18bn valuation is reported, not announced; the 401 MW Hawesville lease has no Fluidstack entity in it. Do not re-import any of these premises"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "form-energy",
@@ -724,7 +749,8 @@
     "Any independently disclosed cost. NO public rate filing anywhere states a $/kWh for 100-hour iron-air: Xcel filed the Sherco cost as a TRADE SECRET under Minnesota law, Dominion's $70.6m Darbytown figure bundles Form with an Eos zinc-hybrid unsplit, and Georgia and Colorado disclose nothing. The only figure in existence is about $33/kWh implied by a reported $1bn Google purchase, sourced to The Information via TechCrunch and confirmed by no party",
     "The reported Series G down round — about $1.75bn pre-money against about $3bn in October 2024, roughly 42% lower (Axios Pro, company-unconfirmed). Watch for any confirmed valuation, a further round, or IPO preparation",
     "Chesterton check, do not re-import: GOOGLE IS A CUSTOMER, NOT AN INVESTOR — no Alphabet, GV or CapitalG entity appears in any round from Series A to G, on Form's investor wall, or in the investor list Form filed to ISO New England, and 'Google-backed' headlines are loose language for the Pine Island offtake; Wikipedia's claim that Microsoft and Amazon are investors is likewise uncorroborated; NO NYPA or Rochester project exists in any first-party source; PG&E Mendocino is a California Energy Commission GRANT not a CPUC rate proceeding, and the New York system is a NYSERDA award not a PSC proceeding; and iron-air appears in NEITHER the DOE Office of Electricity's 2024 eleven-technology LDES cost analysis NOR PNNL's cost database, so there is no national-laboratory validation to cite"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "galaxy-digital",
@@ -781,7 +807,8 @@
     "The pipeline figure in the next boilerplate ('over 5 GW' in September 2025, 'over 3 GW' since November 2025) and any update on the 2022 Los Angeles Basin portfolio beyond Santa Fe Springs",
     "Any Goldman Sachs Asset Management release naming the fund, a co-investor, a continuation vehicle or a platform sale — the sponsor's exit route and commitment are undisclosed",
     "Chesterton check: the company is contracted, not merchant (SCE RA, APS and Fortune 500 tolls, Axpo swap); the markets are CA, TX, AZ, OK and CO; HQ is Portland, not Los Angeles; the sponsor is a GSAM-managed fund, not 'GSAM Infrastructure' by name. Do not re-import the 2026-09-03 premise"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "hitachi-energy",
@@ -806,7 +833,8 @@
    "watch": [
     "ESS cell/system shipments and overseas orders",
     "Capacity and financing milestones"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "hitt",
@@ -820,7 +848,8 @@
     "The Vantage Ashburn trench-collapse citation outcome",
     "Brycon/Central integration",
     "New-HQ delivery early 2027"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "holder-construction",
@@ -833,7 +862,8 @@
     "Mega-campus lineup appearances",
     "Ownership/leadership disclosures",
     "Georgia Power board developments"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "huawei-digital-power",
@@ -845,7 +875,8 @@
     "US/EU regulatory actions",
     "AIDC launches",
     "Gulf/APAC wins"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "hunt-energy-network",
@@ -860,7 +891,8 @@
     "Any lender, tax-equity or credit-transfer announcement; none has ever been published for a 420 MW fleet",
     "The next fleet count (33 facilities in February 2026 vs '31 batteries' in May 2026) and whether the web project list is updated to include Fort Duncan",
     "Chesterton check: HEN is ERCOT-only, fully merchant, and a sub-10 MW distributed owner (plus one 100 MW battery); Manulife is a JV equity partner, not an owner; the Caterpillar agreement is the parent's. Do not re-import the 2026-09-03 premise"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "hut-8",
@@ -921,7 +953,8 @@
     "Any non-Google tenant or third-party project, which would refute the captive-developer judgment; Roman's scope and dates; Google's Armstrong and Wilbarger County campuses and whether Intersect is attached",
     "Alphabet's next 10-Q for any Intersect operating disclosure or impairment; IPX Power's financings for what they say about the former fleet",
     "Chesterton check: the deal is closed (10 March 2026), not pending; Google bought the development platform and parks, not the operating fleet; there is no Wyoming campus; the 840 MW Meitner load is a trade outlet's reading of filings, not a party statement. Do not re-import the brief's premises"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "invenergy",
@@ -935,7 +968,8 @@
     "Ownership: a Blackstone or CDPQ stake change, a holding-company rating, a recapitalisation or IPO report from a primary source — the 2023 baseline is the last confirmed state; aggregator valuation claims are excluded",
     "The 4 July 2026 begin-construction record for the 2027–2028 Meta and Verizon projects and Treasury's final FEOC rule — a project dropping from the Meta list would show the deadline bit",
     "Chesterton check: 'largest privately held' is company language (Cleanview #2 by pipeline); the storage fleet is Arizona-contracted, not merchant; the NVIDIA/Emerald AI 'AI factory-ready sites' are stated intent with no named site; boilerplate megawatts (36/38 GW developed, 20/25 GW operated) move release to release. Do not re-import these as facts"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "iren",
@@ -976,7 +1010,8 @@
     "DISAMBIGUATION: BlackRock, not Blackstone. Same caution as `eolian`, with which it shares an accept-list entry.",
     "The dossier's own judgment: the AIDC angle is 'siting-led and latent' — **no named data-centre offtake exists**, but Callisto (Houston) and Trimount (Boston/Mystic) are sited for it and the CEO frames storage as the fast answer to data-centre load. Watch for the first named offtake; that would change the judgment.",
     "Trimount received final Massachusetts EFSB approval in early March 2026 with Hithium 5.015 MWh units confirmed. Watch construction and the Hithium supply relationship."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "key-capture-energy",
@@ -987,7 +1022,8 @@
     "**OWNERSHIP IS THE LIVE ITEM.** SK Innovation's own balance-sheet stress (battery losses drove the E&S merger) underlies a monetization push. If KCE is sold, this row's ownership facts and every in-corpus reference change together.",
     "A USD 300m letter-of-credit facility closed August 2026 with Standard Chartered as sole provider and arranger, to post development-phase credit support. Watch drawdown as a build-rate proxy.",
     "ERCOT merchant softness through 2025-26 (mild weather, algorithmic competition) is the stated revenue pressure. Aypa's own dossier benchmarks against KCE and esVolta as comparable standalone storage platforms."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "kiewit",
@@ -1001,7 +1037,8 @@
     "Grain Belt financing status",
     "The Key Bridge Phase 2 rebid outcome",
     "US-Japan framework project assignments"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "lambda",
@@ -1015,7 +1052,8 @@
     "The NVIDIA leaseback and allocation changes",
     "Data-center milestones - Kansas City scaling past 24 MW, new owned sites",
     "Leadership changes under CEO Michel Combes"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "lg-energy-solution",
@@ -1040,7 +1078,8 @@
     "**THE SALE IS THE STORY.** FT via Reuters, 24 July 2026: bp is in advanced talks to sell the ENTIRE Lightsource business to a Kuwait-backed consortium including Wren House. Sale-process valuations are undisclosed. If it completes, ownership, strategy and every in-corpus reference change at once — and the row may need converting if the buyer is listed.",
     "Platform data per bp's February 2025 capital-markets day: 5.7 GW operating across 19 markets, >2 GW completed in 2024, a 3-5 GW/yr addition target — but that target was set BEFORE bp's renewables retreat and the dossier records its credibility as now unclear. Do not repeat it without that caveat.",
     "Lightsource bp is queued for a `profiler prep` study-guide backfill among the IPPs in §5."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "liteon",
@@ -1063,7 +1102,8 @@
     "Parent LS ELECTRIC won a USD 34m Bloom Energy power order for a hyperscale data centre in Wyoming (a REPEAT order, August 2026) — watch whether the relationship becomes a disclosed programme.",
     "The Samsung C&T JV's 500 MW Texas BESS is the joint event to track from both sides; keep this row and `samsung-ct` consistent.",
     "LS Energy Solutions is queued for a `profiler prep` study-guide backfill among the integrators in §5."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "mainspring-energy",
@@ -1074,7 +1114,8 @@
     "A ~USD 1bn data-centre pipeline is reported by Latitude, alongside an UNNAMED islanded AI data centre already running on Mainspring linear generators. Watch for the site or customer becoming nameable.",
     "CHESTERTON CHECK: the `amazon`/`mainspring-energy` reciprocal was among the seven edges flipped `other` → `portfolio` at v04.85r when the enum gained the value. It should now read coherently; do not revert it.",
     "Mainspring is queued for a `profiler prep` study-guide backfill among the bridge-power suppliers in §5."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "mastec",
@@ -1102,7 +1143,8 @@
     "Leadership: Dhruv Patel became President and COO in August 2026 having scaled renewables from $20M to $2B-plus; Cathy Orquiola joined from PCL in August 2026 focused on self-perform and mission critical. Watch whether a data-centre-specific practice leadership emerges",
     "Safety: the open OSHA health citation at Sparks NV (inspection 1826381.015, silica NEP) and whether any company-wide, dated EMR or TRIR is ever published — the existing 0.45 and 0.47 figures are undated and market-scoped",
     "Chesterton check: no civil litigation, debarment, bid protest or licensing action was found after direct database and press searching. Three false attributions circulate and must not be re-imported — the Whiting-Turner Top 400 entry, EdgeCore Mesa (Holder), and Meta Beaver Dam (Mortenson)"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "megmeet",
@@ -1145,7 +1187,8 @@
     "Successor fund or new commitments after the USD 49bn Fund I close (1 July 2026); any LP named",
     "Regulated-entity governance: the ADGM register's licensed directors (Xiao and Edelman withdrawn 18 May 2026; Namphy and Dweik added) and any MGX statement explaining it",
     "Chesterton check: MGX publishes no AUM total, ticket sizes, stakes or headcount — do not import press estimates as facts; the mgx.ae index headline '$18B Series K' for Databricks is a typo for USD 1bn; eight corpus 'MGX' hits are NVIDIA's MGX rack architecture, not this fund"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "microsoft",
@@ -1208,7 +1251,8 @@
     "Nor-Cal Controls integration",
     "The Darden buildout",
     "Gigawatt-class substation awards"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "narada",
@@ -1281,7 +1325,8 @@
     "Debt stack against revenue: about USD 6.1bn of facilities (February 2026 GPU-secured DDTL, August 2026 investment-grade Texas and North Carolina loans, USD 900m twelve-bank RCF) — drawdowns, covenant disclosures and the first audited revenue figure",
     "Figure's USD 3.5bn compute commitment (3 September 2026): whether a lender rates a loan against a non-hyperscaler anchor; the Anyscale acquisition closing and what it adds to the software layer",
     "Chesterton check: OpenAI is no longer the Narvik offtaker (LOI replaced by Microsoft per Aker, April 2026) and Stargate UK is paused; Microsoft is not the Monarch anchor; revenue and backlog figures are press-reported. Do not re-import any of these premises"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "nvidia",
@@ -1323,7 +1368,8 @@
     "**THE MOST VALUABLE OPEN QUESTION THIS DOSSIER TRACKS**, in its own words: the UNNAMED AI UPS cell supplier. A 5 GW deployment implies one of the largest non-Chinese cell procurements in the US market, and whoever wins it matters to a dozen other dossiers. Naming it is the priority.",
     "Crusoe and ON.energy announced 5 GW of AI UPS across multiple hyperscale campuses in July 2026, commissioning 2026-2027. Watch the first commissioning against that schedule.",
     "ON.energy is queued for a `profiler prep` study-guide backfill among the bridge-power suppliers in §5."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "oncor",
@@ -1354,7 +1400,8 @@
     "Planned compute spend was raised to USD 750bn through 2030, from ~USD 600bn, in July 2026, alongside Project Camellia in Effingham County, Georgia. Watch the figure and the site list, both of which move often.",
     "SCOPE NOTE: OpenAI is in the 40+-inbound-mention class alongside NVIDIA, Microsoft, Google, Amazon and Oracle. A full step-7 reconciliation is a session of its own and has been deferred repeatedly. Do not attempt it inside a refresh.",
     "The `microsoft`/`openai` and `mgx`/`openai` reciprocals both sit on the relationships accept list — the first as genuinely partner AND investor, the second retired at v04.85r when `portfolio` arrived. Check the current accept list before touching either."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "oracle",
@@ -1398,7 +1445,8 @@
     "First published M+ Series order or hyperscaler customer; Nebius's 'much larger' US CleanSource order (2026 delivery); Active Power's four-fold output",
     "Leadership: successor as President of Piller Power Systems Inc after Dean Richards' move; whether Jack Pearce now leads Bergen Engines Inc",
     "Competitor moves in the rotary niche: Hitec (Air Water), Rolls-Royce Solutions Liège (mtu Kinetic PowerPack), Hitzinger; ABB HiPerGuard MV UPS deployments"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "plus-power",
@@ -1409,7 +1457,8 @@
     "**A STANDING UNRESOLVED ATTRIBUTION**, flagged by F8 and left deliberately: Sierra Estrella is described as 'marketed as grid support for the adjacent Prime Data Centers campus', but SRP's own release does not name Prime and Plus Power's microsite is JavaScript-rendered and could not be read. Prime's dossier records the adjacency as `other` with that caveat. Settling it needs the microsite or a party statement.",
     "Prime Data Centers broke ground on its USD 3bn, 240 MW Avondale campus in May 2026 — the hyperscale load Sierra Estrella is marketed against. Watch whether either party ever names the other.",
     "Plus Power is queued for a `profiler prep` study-guide backfill among the IPPs in §5. Bat Cave and North Fork went to Broad Reach in 2020 and are now ENGIE's."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "powell-industries",
@@ -1445,7 +1494,8 @@
     "Whether the January 2027 overload capability on the PCSM UL datasheet ships. Footnote 8 marks the 166%/150%/120%/110% ladder 'Available from January 2027' — the only dated forward product commitment in any of the company's datasheets, and the capability that underwrites both grid-forming and ride-through claims",
     "Competitive consolidation. Flex's acquisition of EPC Power ($4.4bn, announced 3 September 2026) is expected to close in Q4 2026; ABB absorbed Gamesa Electric in December 2025; Hitachi Energy absorbed EKS Energy in 2023; Dynapower went to Sensata in 2022. Watch whether this company remains independent, and whether any analyst house begins publishing a conversion-supplier ranking",
     "Chesterton check, do not re-import: THE US HEADQUARTERS IS HOUSTON, TEXAS on the company's own contact page — not Phoenix; Phoenix/Gilbert AZ is the commercial base and Tampa FL is a third site, and one Spanish outlet's reference to 'a large plant in Arizona' is most likely a reporting error that no source resolves. The product names FREESUN and FREEMAQ are LEGACY — they survive only in datasheet footers; the live line-up is HEM, HEMK, PCSM/Multi PCSM, PCSK/Multi PCSK, DC/DC, MV Skid Compact, Twin Skid Compact, PPC PRO and AIPCS, and Freesun HEC is discontinued. POWER ELECTRONICS NZ IS A LOCALLY OWNED DISTRIBUTOR, not a subsidiary — its site is the source of the 'family owned business' and 'three factories / 120,000 m² / 30 GW' statements and of the claim that Sinexcel manufactures ITS power-quality range; none of those are first-party to the manufacturer and the Sinexcel supply link is the distributor's, not the manufacturer's. THE COMPANY IS NOT A BESS INTEGRATOR — it makes no cells and sells no turnkey system, which is why Wood Mackenzie's integrator ranking excludes it by scope rather than by performance, and why Sinexcel's dossier calling it an 'integrated-inverter giant' competing on 'full BESS supply' was corrected this session. NO INDEPENDENT RANKING OF US PCS SUPPLIERS EXISTS — the only independent US-leadership statement is Wood Mackenzie's calendar-2023 line naming it jointly with Sungrow in SOLAR CENTRAL INVERTERS, unquantified and not repeated in the calendar-2024 edition; the 2019 IHS Markit storage-inverter #1 reached the record through the company's own press release and has no successor edition; and '#1 World Storage Leader' is a self-claim with no analyst citation. FY2023 WAS REPORTED IN DOLLARS and FY2024/FY2025 in euros, so the published series is not directly comparable — FY2024 was approximately FLAT, not down. Do not confuse this company with the discipline, with the trade publication Power Electronics News, with Delta Electronics' own 'Power Electronics' business segment, or with EVE Energy's 'Power Electronics Lab'"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "powerhouse-data-centers",
@@ -1460,7 +1510,8 @@
     "Boilerplate counters (140 data centers / ~10 GW on the homepage, 118 / 8.1 GW in January 2026): read against delivered (one building) and leased (Arcola, Chesterfield) — do not import the counter as capacity",
     "Moratoria and rules: Louisville's proposed hyperscale moratorium (Rubbertown exempt), Merrillville IN moratorium to May 2027 (PowerHouse lists 750 MW there), ICC large-load deposit rules, Loudoun's posture on GIS substations",
     "Chesterton check: 'Brookfield-owned' and '1.8 GW delivered or under development on $16.1B planned' do NOT describe PowerHouse (AREP-owned; the figures are EdgeCore's); Joliet's 1.8 GW is a plan, not a build; HQ is McLean (not Reston/Herndon); the executive is Luke Kipfer (no 'Luke Kinney'); the brief's domains were wrong. Do not re-import any of these"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "prevalon",
@@ -1471,7 +1522,8 @@
     "**THE SINGLE MOST IMPORTANT UNVERIFIED NUMBER IN THAT DOSSIER**, in its own words: the 1.3 GW hyperscaler contract book. No customer is named, no third party has corroborated it, and the company's own website conflates figures. Corroboration or refutation is the priority at every refresh.",
     "Prevalon's differentiation is recorded as provenance engineering rather than product scale — US-built IEC 62443-certified controls, CSA large-scale fire testing, IEEE 693 seismic qualification. Watch whether FEOC rules make that a pricing advantage.",
     "Mitsubishi Power is Prevalon's former parent and the `mitsubishi-power`/`prevalon` pair sits on the relationships accept list as an `other`/`other` corporate-structure link, reported by design. Do not 'fix' it by re-typing."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "prime-data-centers",
@@ -1486,7 +1538,8 @@
     "Europe: Esbjerg EIA outcome and any tenant; Järvenpää EIA; Madrid construction start 'subject to customer demand'; Sæby status (page vs Baxtel 'cancelled')",
     "Pennsylvania: the UGI gas-fired campus — county, MW, permits, opposition",
     "Chesterton check: HQ is Dallas (founded in California; Sacramento was the first campus), the parent is Data Realty Holding Corp. (no 'Prime Group' exists in any source), there is no Northern Virginia, Kansas City or Denton site, and CoreWeave (Elk Grove) and Lambda (Vernon) are the only named tenants. Do not re-import any of these"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "primoris",
@@ -1512,7 +1565,8 @@
     "Trade press confirms a Crusoe delivery target of summer 2027. Watch delivery against it — bridge-power schedules in this corpus slip more often than they hold.",
     "ProEnergy is queued for a `profiler prep` study-guide backfill among the bridge-power suppliers in §5.",
     "Aeroderivative gas turbines are the product; watch the used-turbine supply chain, which is the constraint the dossier identifies."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "qts",
@@ -1527,7 +1581,8 @@
     "Further IG issuance after the $4.6B Baa2 green bond",
     "Microsoft 'superfactory' confirmations",
     "Greason/Robey co-CEO stability"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "quanta-services",
@@ -1557,7 +1612,8 @@
     "Desert Bloom Storage (150 MW / 600 MWh, APS toll, Primoris EPC): EIA Form 860M's July 2026 vintage still shows it construction-complete but not commercial with planned operation 8/2026, against a company-guided first half of 2026. Confirm commercial operation",
     "FEOC exposure. No independent analysis has stress-tested Recurrent's material-assistance cost ratio given e-STORAGE supply, and reported thresholds are stricter for storage than for standard installations. Citi named FEOC second of five reasons for cutting the parent to Sell (PT $11, 2025-10-21) and project-development leverage fourth",
     "Chesterton check, do not re-import: Recurrent is MAJORITY- not wholly-owned (e-STORAGE's own Papago page still says 'wholly-owned' and is wrong); Ismael Guerrero has NOT been CEO since 2026-07-06 (Dylan Marx) and Shawn Qu has NOT run the parent since 2026-05-14 (Colin Parkin); Crimson (1,400 MWh) is only 20% Recurrent-owned, Axium holds 80%; Mustang, Garland and Tranquility are development-services jobs on assets owned by MN8 Energy and Southern Power with AIP, NOT Recurrent's fleet, and Tranquility used POWIN batteries not e-STORAGE; Slate's owner is now MN8, not Goldman Sachs Renewable Power; and the 471 MWh of 3.7 GWh internal shipment figure measures e-STORAGE's internal exposure, NOT Recurrent's supplier share — do not invert it"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "rehlko",
@@ -1574,7 +1630,8 @@
     "Heila Technologies' status: the standalone site now redirects and it has been dropped from current boilerplate and the 'Who we are' business list, without explanation",
     "Any Tier 4 Final node in the 700-4000 kW KD range, which is published as Tier 2 only, against Rehlko's own warning that California, Florida, New York and Texas require exhaust conditioning regardless of tier",
     "Tariff exposure on the France-to-US supply chain (Liebherr Colmar engines, Cholet switchgear), on which the company publishes nothing"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "rolls-royce-power-systems",
@@ -1601,7 +1658,8 @@
    "watch": [
     "Data-center electrical scope awards",
     "Employee-ownership and revenue disclosures"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "rwe-clean-energy",
@@ -1617,7 +1675,8 @@
     "Siemens Gamesa's root-cause finding on the 7 November 2025 blade failure at Future Generation Wind, Plymouth, Massachusetts, and whether it reaches other turbines in the Con Edison-acquired fleet; plus the MassDEP and Plymouth reviews",
     "Whether RWE ever appears in an independent US storage owner ranking — it is absent from the S&P Global and Tamarindo top fives — which would settle the gap with its own 'third largest owner and operator of onshore wind, solar and battery storage' claim",
     "Chesterton check: the entity is now RWE Americas, LLC; there is NO Amazon equity stake in RWE (Qatar Holding 9.3%, BlackRock 5.9% at 12 March 2026) — the Amazon relationship is seven US PPAs totalling 1.1 GW plus an AWS cloud framework plus a UK data-centre site sale; the '931 MW of US storage under construction' figure is RWE's own from 2 October 2024 and is stale because all three underlying Texas projects were commissioned by end-2025; the 2025 US layoffs were 73 OFFSHORE roles in Massachusetts, not the onshore Clean Energy business; RWE's own '#3'/'#4' US rankings are boilerplate no independent source corroborates. Do not re-import any of these"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "samsung-ct",
@@ -1657,7 +1716,8 @@
     "Leadership: the 2026 executive appointments settling in; any succession signal around the CEO who won POWER's 2025 executive award",
     "Headquarters: the Chicago HQ expansion and hiring announced January 2026 — headcount is otherwise undisclosed",
     "Chesterton check: no litigation, debarment or NRC enforcement against the firm was found; the NRC vendor inspection 99900507/2025-201 closed with findings on procedure, not on design. Do not import the 'employee-owned' label — the firm does not use it"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "schneider-electric",
@@ -1746,7 +1806,8 @@
     "ERCOT revenue recovery signals Modo names (RTC+B, HB 1500 firming, load growth) against a fleet that is 100% merchant; any Spearmint revenue or dispatch disclosure",
     "Further Kyuden or utility stakes, or a whole-project sale, which would move the model toward develop-to-sell; the 'Nomadic' Cooke and Brazoria projects' status",
     "Chesterton check: no Blackstone or other sponsor is evidenced; the '15 GWh' is company boilerplate dropped in May 2026; no offtaker, hedge or revenue put is named for any project; FERC MBR/QSE records were unreadable, not absent. Do not re-import the brief's premises"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "stack-infrastructure",
@@ -1760,7 +1821,8 @@
     "Further stabilized-asset drop-downs into Blue Owl's perpetual REIT",
     "EMEA restructuring under founder Cox after the Apollo colo carve-out",
     "Americas master-trust ABS cadence"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "strata-clean-energy",
@@ -1775,7 +1837,8 @@
     "Any equity sponsor, stake sale or platform sale — none in the record — and the status of the 2021 Blackstone Credit USD 150 million",
     "Virginia siting outcomes after the Hanover (2024) and Culpeper (2026) denials, and the unverified DEQ stormwater citations on Dominion EPC jobs",
     "Chesterton check: Strata owns no battery in ERCOT or PJM; its owned CAISO battery is Inland Empire (70 MW / 280 MWh, PG&E RA); its Arizona assets are in APS territory outside any ISO; Blackstone's 2021 money was credit. Do not re-import the 2026-09-03 premise"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "sungrow",
@@ -1814,7 +1877,8 @@
     "Beaver County PA numbers and timeline",
     "Thomas Morton's status (absent from the March 2026 executive page with no announcement)",
     "Usage of the $3.5B performance-LC facility"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "talen-energy",
@@ -1859,7 +1923,8 @@
     "Alcazar (250 MW / 1,000 MWh, Town of Ulster, New York) submitted its draft environmental impact statement in August 2026 and town review is advancing. Watch the permitting track, which is the binding constraint in New York.",
     "**A QUALIFIED ATTRIBUTION TO KEEP QUALIFIED:** C7 established that Terra-Gen's Power Electronics PCS attribution rests on a TWO-LETTER ABBREVIATION ('PE') on a single EPC page. Step 7 qualified rather than deleted it. Do not harden it without a better source.",
     "Terra-Gen is queued for a `profiler prep` study-guide backfill among the IPPs in §5."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "tesla",
@@ -1886,7 +1951,8 @@
     "Litigation: the Switch easement trial (set March 2026; outcome not found)",
     "Leadership: whether the 2024 hires absent from the 2026 team page (CFO Stockard, Chief Energy Officer Sahlstrom, CIO Cox, Eubanks) have left; Tract Europe's first site",
     "Chesterton check: HQ is Denver, not Reno; there is no Georgia park and no Eloy/Pinal County project (La Osa is Vermaland's); Compass and Aligned are not TRIC neighbours in any source; the Fleet tenant is unnamed by the company. Do not re-import any of these"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "trane-technologies",
@@ -1915,7 +1981,8 @@
     "Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking (July 2026) placed Trina Storage tied #5 with Envision. That is one of the very few rankings in this corpus with a stated methodology — watch for the next edition and whether the position moves.",
     "The Houston 371 MWh deployment for SMT Energy with FlexGen as integrator and Macquarie/KeyBank as equity and tax partners — note that Macquarie's role there is TAX EQUITY on one project, not ownership. Keep consistent with the `macquarie` dossier.",
     "Trina Storage is queued for a `profiler prep` study-guide backfill among the integrators in §5. FEOC and Section 301 exposure applies."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "turner-construction",
@@ -1928,7 +1995,8 @@
     "Meta Richland Parish/Lebanon IN phases",
     "CoreWeave Lancaster; Stargate/Vantage WI",
     "SourceBlue expansion"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "vantage",
@@ -1943,7 +2011,8 @@
     "The Port Washington referendum litigation (MMAC suit) and Lighthouse TIF status",
     "Whether the customary January annual growth recap returns",
     "France/Altarea and Nebius CWL1 execution"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "vertiv",
@@ -2003,7 +2072,8 @@
     "**BLOOMBERG REPORTED (FEBRUARY 2026) THAT VOLTAGRID IS EXPLORING AN IPO OR SALE AT A >USD 10BN VALUATION.** If it lists, convert this row to `nextReport`. This is the clearest listing candidate on the private side of the desk.",
     "CHESTERTON CHECK from C10: Blackstone did NOT seed this company. It arrived at the fifth round, six years after founding, and the USD 225m secondary component is what proves it. `blackstone`→`voltagrid` is typed `portfolio` and `voltagrid`→`blackstone` `investor`; the pair coheres. Do not restate the round as a seeding.",
     "The Propell Energy Technology acquisition (definitive agreement, ~1,000 staff, QPac manufacturer) and a 7.5 GW order book through 2030. Watch closing and order-book conversion."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "wartsila",
@@ -2044,7 +2114,8 @@
     "NAACP litigation",
     "Turbine/Megapack procurement",
     "Anthropic agreements"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "xcel-energy",
@@ -2116,7 +2187,8 @@
     "INTELLISCALE3, announced as 'imminent' on 2025-09-30 and still with no product page, specification sheet or launch release a year later (checked against the full 334-URL sitemap). Also watch whether a named Intelliscale deployment ever appears — the company publishes design specs to 300 kW/rack and no customer",
     "Executive churn below the CEO. Three named C-suite officers left the leadership page with NO departure announcement — Fran Federman (Chief Investment Officer), Krupal Raval (Chief Strategy Officer, hired June 2025 into a newly created role) and Matthew Pullen (EVP Managing Director Europe). Rob Johnson's title changed from Chief Business Officer to Chief Operating Officer undated and unannounced. Eric Schwartz's post-CEO role is undisclosed. Detect these by page diff, not by release",
     "Chesterton check, do not re-import: THE COMPANY HAS NO 'FAIRFIELD CAMPUS' — it calls the site FREESTONE COUNTY, and the Fairfield address (1366 FM488, Fairfield TX 75840) belongs to CALPINE'S POWER PLANT, which the community page cites only as a landmark. '760 MW' APPEARS NOWHERE IN CYRUSONE'S OWN CORPUS (zero hits site-wide) — it is 380 + 380 summed by readers, and the two tranches are NOT equivalent: Phase 1 is signed, Phase 2 is an exclusive agreement to provide. 'THAD HILL' IS A REAL CALPINE PLANT (the Thad Hill Energy Center, Bosque County), not a mis-transcribed executive name — verified against the 2026-02-09 release. The colocation page's 'more than 350 data centers' is a SITE ERROR against 'over 60' everywhere else. The 77.8% carbon-free electricity figure is 52.9 POINTS CUSTOMER-PROCURED; CyrusOne's own procurement is about 24.8%. The FRA7 route to 126 MW BY 2029 IS CANCELLED — the 61 MW E.ON generation component was removed in May 2026, disclosed only as an update prepended to the 2025 release; the facility page still reads 81 MW. Pre-2022 issuer ratings ('BB-', 'BB+') describe the LISTED company that no longer exists. Microsoft and Oracle tenancy references are 2016-era and STALE. ATLANTA appears nowhere in the portfolio despite being commonly listed; 'Raleigh' on one page is DURHAM (DUR1-DUR2) on the navigation"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "blackstone",
@@ -2202,7 +2274,8 @@
     "LIGHTHOUSE — which of the four buildings Whiting-Turner holds, and its contract value, are both unpublished. Two buildings are about 719,000 sq ft and two about 560,000. CHESTERTON CHECK: Michels is a SUBCONTRACTOR, not a fourth general contractor — the local trade press names four GCs and lists Michels with Veit among subcontractors, and the site's OSHA Strategic Partnership names only the three GC entities. Do not restate the 'four-way split' framing. Separately, 902 MW is critical IT load (Vantage's own figure) and 1.3 GW is total facility power (ENR) — different metrics, do not merge.",
     "Federal work is the fastest-growing part of the book: USD 516.7m of Coast Guard awards in May 2026 alone, against a run-rate of USD 0.6–0.8bn a year and USD 8.44bn cumulative since FY2008. USASpending is authoritative and public and should be re-queried at each refresh.",
     "The new headquarters on the Goucher College campus in Towson — 150,000 sq ft under a 50-year ground lease, architect Gensler — completes late 2028. The company will build it itself and has never owned a building in its history."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "amd",
@@ -2251,7 +2324,8 @@
     "Any launch of the tax-credit insurance product announced January 2025 with an 18-month target (overdue), and a third Wind Proxy Hedge (Apex said it is evaluating more projects)",
     "Capacity-partner changes: Swiss Re/Everest on the Solar Revenue Put, Munich Re Trading on the wind hedge, the unnamed A-rated carrier (reportedly Lloyd's) on the USD 20 million excess layer",
     "Chesterton check: the company has never published revenue, GWP, claims paid or headcount — do not import LeadIQ's 'USD 25M–50M' or Owler's '100–250 employees' as facts; its own site contradicts itself on the Series A date, the Series B year, the property limit (70 vs 100) and the loss-data figure (100 vs 150), and third parties disagree on whether Kaminsky is a co-founder"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "csa-group",
@@ -2266,7 +2340,8 @@
     "The 27th Canadian Electrical Code (2027): Section 64 storage rules and provincial adoption dates",
     "Brecksville, Ohio headquarters and laboratory completion (early 2028) and the fate of the CCIC China joint venture under Kiwa",
     "Chesterton check: CSA publishes no revenue or surplus — do not import LeadIQ's USD 750M or 'USD 1B–10B' estimates; headcount figures (808 / ~2,100 / 3,538) count different entities; C22.2 No. 340 is a battery-management-system standard, not a BESS system standard"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "marsh-mclennan",
@@ -2432,7 +2507,8 @@
     "A Series C or project financing before end-2027 — about USD 243M of capital against a USD 100M-plus factory and USD 140.9M of committed investment",
     "GE Vernova's hyperscaler SST commitment (1,000 units from 2027 if spec is met) and any OCP LVDC SST specification milestone — the incumbent taking the tier before Heron ships",
     "Chesterton check: do not import Heatmap's April 2026 funding figures (Heron/DG Matrix transposed); Forge's USD 648M post-money and Axios's 'up to USD 1B' are vendor/paywalled estimates, not company figures; 'over 40 GW of interest' and '50 GW of orders' are uncorroborated company statements"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "habitat-energy",
@@ -2446,7 +2522,8 @@
     "PJM: a named customer or MW following the April 2026 market-participant registration; any CAISO or MISO entry (promised for 2023, never announced)",
     "Gresham House: Habitat's residual MW after the 2024 Octopus toll and the July 2025 Statkraft/Markel floors — undisclosed; the Nephila floor link is inference from the ESIA 2025 citation",
     "Chesterton check: the 5.5 GW figure is 'under contract' including pipeline and renewables — never restate it as operating; the GB operating fleet was 600 MW at January 2025 and ERCOT 'over 1.5 GW' at November 2025"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "gridmatic",
@@ -2461,7 +2538,8 @@
     "Retail: any regulator-disclosed customer count or load; new states beyond Texas, Ohio and Pennsylvania; PUCT complaint or enforcement dockets (none found at v05.39r)",
     "HQ: GLEIF, PUCT or LinkedIn address changes toward Houston; the Cupertino lease expires 2027-12-31 — 'HQ Houston' is true of the retail business only",
     "Chesterton check: Tracxn's 'Series D USD 40M' is a mis-tag of the two fund Form Ds; the 'most profitable participant in ERCOT' claim has no third-party test; Solar Builder's 'Palo Alto HQ' is a single-outlet error"
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "grid-united",
@@ -2476,7 +2554,8 @@
     "Southline: executed DOE Transmission Facilitation Program capacity contract (still 'Selected'), a named transmission customer, financial close, construction start (now 2027); Three Corners: Pueblo County 1041 and Baca County agreement, the follow-on OCC cost docket, a first customer; Pecos West and Wyoming Intertie: any regulatory filing",
     "Hitachi Energy: an equipment order under the 2024 capacity reservation; any second converter supplier",
     "Chesterton check: the 'wholly owned by Centaurus' statement is second-hand (OK Energy Today reporting the OCC filing) — confirm from the filing or a company statement before relying on it further"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "pattern-energy",
@@ -2492,7 +2571,8 @@
     "Silver Rock: BLM EIS scoping closes 2026-10-05; any data-centre offtaker; Puerto Rico: Amanecer construction and the gas-generation line on DOE's page that the company does not repeat",
     "Leadership: appointment releases (none) for COO Pinto, CLO Glasspool, CPO Sundar; Cordelio CEO Chris Hind's post-close role; the sustainability report due September 2026 for FY2025 capacity, ownership share and headcount",
     "Chesterton check: the 3,515 vs 3,650 MW SunZia capacity difference, the 25/30/40 GW pipeline figures, and the San Francisco-vs-Houston headquarters question are all unreconciled on the record — do not pick one silently"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "mitra-chem",
@@ -2507,7 +2587,8 @@
     "L&F'S STRUCTURE. L&F holds a reported 3.3% ($10M Series B-1, March 2025) and says a US plant's 'investment size and form are not finalized' (August 2026); Korean press calls Muskegon an L&F 'joint venture' with a 15,000 t line. A DART filing naming a US entity, a capital commitment, or a stake above 3.3% moves Judgment 1. Note L&F's own route to North America runs through its Korean 30,000→60,000 t line from 2026.",
     "A NAMED CUSTOMER, anywhere. Five years of 'tier 1', 'major global' and 'top EV and ESS customers' with no name; the nearest demand is LGES Holland (LFP storage cells, non-Chinese materials, since June 2025) and Ultium Cells Spring Hill's LFP conversion. A named offtake or qualification result is the first commercial evidence.",
     "Chesterton check: the 'JV' exists only in Korean headlines (etnews, Newspim) and never in a DART filing or any US record; the '2026-05 DOE confirmation' is MEDC's characterisation, no DOE document names AmPLIFI; the '$125 million project' (2024) and 'over $370 million' (2026) are different scopes, not a restatement; efts metadata tags the filings 'Palo Alto' while every filing's own address is Mountain View."
-   ]
+   ],
+   "tier": "watch"
   },
   {
    "slug": "cornex",
@@ -2522,7 +2603,8 @@
     "US EXPOSURE: Cornex is NOT on the DoD 1260H list (OpenSanctions 'no match' 2026-09-12; CATL, BYD, CALB, EVE are); Section 301 on non-EV Chinese cells 25% from 2026-01-01; PFE material-assistance ratio from 2026; China's export VAT rebate 6% for April–December 2026 and ZERO from 2027-01-01. Watch Q4-2026 overseas signings for pull-forward and any 1260H addition.",
     "THE OWNER'S CAR VENTURE: 楚能汽车 (RMB 2bn, 50/50 恒信汽车集团 / 代德明, outside Cornex) rolled out its ET prototype 2026-07-11, targets a mid-2027 launch and may take over the ex-威马 黄冈 plant; the company site is silent. All three Cornex operating subsidiaries carry 道路机动车辆生产 in their licensed scope (龙蟠 filing 2025-05-10). Watch for vehicle production inside a Cornex entity or a transfer of Cornex cash.",
     "Chesterton check: the M5 mass-production date is 2024-02-01 (release id 1237), not 2025; no CATL v 楚能 patent suit exists in the public record (six searches; the suits are v CALB, Hithium and others); the '2026-05-20 Hubei DRC approval adding 290 GWh' could not be found and no combination of known phases sums to 290; 武汉楚能新能源有限公司 was incorporated 2017-03-30 with 黄锋 as legal representative (龙蟠 filing) — four years before the 2021 founding date; the H1-2026 'over 40 GWh' is the company's via 海融网 against SNE's 30.2 GWh, unreconciled."
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "amperesand",
@@ -2537,7 +2619,8 @@
     "Leadership: no release ever recorded Gary Lawrence's exit or Brian Dow's elevation to CEO, and Phil Inagaki's chairmanship is unconfirmed since January 2025 — verify on the site and any new filing",
     "A datasheet or product page: per-unit MW, input kV range, DC outputs and lead time currently rest on PCIM 2026 trade-show reporting; reconcile the 10×/80% versus 5×/50% and 15+/20/20–30-year lifetime claims if the company restates them",
     "Chesterton check: do not import Tracxn/CB Insights valuation or revenue estimates as company figures; the 'Fortune 100 customers in 2026' and '500 MW in five years' lines are company statements no customer or filing corroborates"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "dg-matrix",
@@ -2552,7 +2635,8 @@
     "Morrisville factory: 'first production build', capacity (1,000 units/yr vs 400 MW work cell vs 10 GW by Q2 2027 — four incompatible statements), any NC/Wake County incentive filing with jobs and capex; status of the reported Lahore, Pakistan factory and any domestic-content statement",
     "Series B or strategic manufacturing partnership (ABB, Mitsubishi Heavy Industries, Infineon) — ~USD 80M equity + USD 25M debt against an MV product two years out; Form D amounts if sec.gov becomes reachable",
     "Chesterton check: do not import Heatmap 2026-04-10 (rounds transposed with Heron Power — DG Matrix's is the USD 60M Series A); quote the 400 kVA datasheet's 96–97% peak efficiency beside the 'up to 98.5%' platform claim; MHI's stake is Mitsubishi Heavy Industries, Ltd. — not linked to the mitsubishi-power slug unless a source names that entity"
-   ]
+   ],
+   "tier": "core"
   },
   {
    "slug": "novos-power",
@@ -2567,7 +2651,8 @@
     "Roster placement: any nvidia.com page, GTC 2027 list, OCP LVDC contributor list or trade-press SST roundup beyond SemiAnalysis naming Novos Power (absent from all as of 2026-09-19); the 2027 SDSU AI x Energy Summit (29–30 March 2027) sponsor and awardee pages",
     "A certification target (UL 2877 stops at 38 kV — the site's 48 kV bound is outside it; UL 1741/IEEE 1547) or NRTL engagement; headcount beyond LinkedIn '2-10'; whether the CEO or CTO leaves ChargePodX / SDSU roles (full-time signal); any Delaware record confirming the incorporation date",
     "Chesterton check: the 'incubated by LACI' claim is not on LACI's cohort pages (ChargePodX is) — do not import it as fact; the '50% footprint reduction' traces to a BigGo summary of SemiAnalysis, not to the SemiAnalysis text read; the 'DOE/NASA-funded' lineage is the CTO's portfolio, not an SST project; the Google and Silicon Valley AI Summit awards have no organiser page"
-   ]
+   ],
+   "tier": "core"
   }
  ]
 }
