@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06w] — 2026-09-21 03:36:02 AM EST — v06.85r
+
+### Changed
+- The photo buttons on a card are now **Front** and **Back**, sized to sit on one row with **Edit**
+- The “one side / two sides” label is gone — the Front and Back buttons already show how many sides were captured
 
 ## [v01.05w] — 2026-09-21 03:30:03 AM EST — v06.84r
 

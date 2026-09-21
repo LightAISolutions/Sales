@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 80/100`
+`Sections: 81/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.85r] — 2026-09-21 03:36:02 AM EST
+
+> **Prompt:** "Rename "front photo" and "back photo" to "front" and "back", respectively and resize the buttons as needed so that they are all on the same row. Also, hide "one side" and "two sides". The existence of the front and back pictures will tell me how many sides the card has."
+
+### Changed
+
+#### `live-site-pages/Network.html` — v01.06w
+- Held-card pills relabelled **Front** / **Back**; `.nw-strip-photos` is now a no-wrap row with each pill `flex: 1 1 0`, so Front, Back and ✎ Edit share one row at phone width (the Edit pill takes the same rule with an ink colour instead of its own)
+- The meta line drops "one side / two sides" — the pills say it; "from QR" and "edited" remain
+
+#### `scripts/verify-network-roles.py`
+- Strip assertion follows the relabel and checks the side count is gone
+
+### Notes
+- Still 2026-09-21 EST — 81 sections, three exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 80/100` → `81/100`
 
 ## [v06.84r] — 2026-09-21 03:30:03 AM EST
 

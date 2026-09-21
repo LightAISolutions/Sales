@@ -323,7 +323,7 @@ def run():
         extract_posts = [r for r in reqs if 'script.google.com' in r]
         if got['queued'] != '0' or got['strips'] != 1:
             failures.append('drain: expected queued=0 and one strip, got queued=%r strips=%d' % (got['queued'], got['strips']))
-        if 'Jane Doe' not in strip or 'Front photo' not in strip:
+        if 'Jane Doe' not in strip or 'Front' not in strip or 'one side' in strip:
             failures.append('drain: strip text unexpected: %r' % strip[:120])
         if 'c-0123456789abc' in strip or 'check:' in strip:
             failures.append('drain: the id or the raw confidence list is shown on the strip')

@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.05w">
+  <meta name="build-version" content="v01.06w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -448,8 +448,8 @@
     .nw-strip-head { cursor: pointer; }
     .nw-strip-head .nw-strip-name::after { content: ' ▸'; color: var(--nw-faint); font-size: 12px; }
     .nw-strip.nw-open .nw-strip-head .nw-strip-name::after { content: ' ▾'; }
-    .nw-strip-photos { display: flex; gap: 8px; margin: 6px 0 2px; flex-wrap: wrap; }
-    .nw-strip-photos a { font: 600 13px/1 var(--nw-serif); color: var(--nw-accent); border: 1px solid var(--nw-line2); border-radius: 999px; padding: 7px 12px; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; gap: 4px; }
+    .nw-strip-photos { display: flex; gap: 8px; margin: 6px 0 2px; flex-wrap: nowrap; }
+    .nw-strip-photos a { font: 600 13px/1 var(--nw-serif); color: var(--nw-accent); border: 1px solid var(--nw-line2); border-radius: 999px; padding: 7px 10px; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; justify-content: center; gap: 4px; flex: 1 1 0; white-space: nowrap; }
     .nw-strip-photos span { font: 12px/1 var(--nw-mono); color: var(--nw-faint); padding: 8px 0; }
     .nw-strip-detail { display: none; margin: 8px 0 2px; font-size: 13px; line-height: 1.6; color: var(--nw-ink); border-left: 3px solid var(--nw-line); padding-left: 10px; }
     .nw-strip.nw-open .nw-strip-detail { display: block; }
@@ -464,7 +464,7 @@
     .nw-note-check span, .nw-note-missing span { flex: 1 1 180px; }
     .nw-note-btn { font: 600 12px/1 var(--nw-serif); padding: 7px 11px; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; min-height: 30px; }
     .nw-note-dismiss { opacity: .8; }
-    .nw-edit-btn { font: 600 13px/1 var(--nw-serif); color: var(--nw-ink); border: 1px solid var(--nw-line2); border-radius: 999px; padding: 7px 12px; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; }
+    .nw-strip-photos a.nw-edit-btn { color: var(--nw-ink); }
     .nw-editor { margin: 8px 0 4px; padding: 10px 12px; border: 1px solid var(--nw-line2); border-radius: 8px; background: #fff; }
     .nw-editor label { display: block; font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); margin: 0 0 6px; }
     .nw-editor input { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); }
@@ -5003,15 +5003,16 @@ function nwRenderStrip(rec) {
   function photoLink(label, href) {
     var a = nwEl('a', null, '🖼 ' + label); a.href = href; a.target = '_blank'; a.rel = 'noopener'; return a;
   }
-  if (rec.frontLink) photos.appendChild(photoLink('Front photo', rec.frontLink));
-  if (rec.backLink) photos.appendChild(photoLink('Back photo', rec.backLink));
+  if (rec.frontLink) photos.appendChild(photoLink('Front', rec.frontLink));
+  if (rec.backLink) photos.appendChild(photoLink('Back', rec.backLink));
   if (!rec.frontLink && !rec.backLink) photos.appendChild(nwEl('span', null, rec.driveError ? 'photos not filed — retried on save' : 'no photos'));
   var editBtn = nwEl('a', 'nw-edit-btn', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
   editBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwEditCard(rec, null); });
   photos.appendChild(editBtn);
   strip.appendChild(photos);
   var meta = nwEl('div', 'nw-strip-meta');
-  meta.appendChild(document.createTextNode((rec.sides === 2 ? 'two sides' : 'one side') + (rec.viaQr ? ' · from QR' : '') + (rec.edited ? ' · edited' : '') + ' · '));
+  // The Front / Back pills already say how many sides there are.
+  meta.appendChild(document.createTextNode((rec.viaQr ? 'from QR · ' : '') + (rec.edited ? 'edited · ' : '')));
   meta.appendChild(nwEl('span', rec.driveError ? 'nw-bad' : null, rec.driveError ? 'photos not filed' : 'held on this phone'));
   strip.appendChild(meta);
   // Tap the name to see every field that was read (the editor changes them).
