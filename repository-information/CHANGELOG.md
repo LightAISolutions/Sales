@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.98r] — 2026-09-21 03:05:14 PM EST
+
+> A successful run costs $14? Where does that come out from? My claude console balance?
+
+### Changed
+
+#### `.claude/rules/profiler-app.md`
+- **v06.97r's "$14 a run" was true but readable as money out of pocket, which it is not. Corrected.** `get_session`'s `usage.cost_usd` is the **API list-price valuation of the tokens consumed**, not a charge against a balance. Verified rather than assumed: the 2026-09-21 run's 42,896,504 cache-read + 1,072,155 cache-write + 557,346 input + 138,201 output tokens at Claude Sonnet 5 rates ($2.00 / $10.00 per MTok, cache write 1.25×, cache read 0.1×) compute to **$13.76 against a reported $13.86 — 0.75% apart**, which identifies the field beyond reasonable doubt.
+- **On a Pro or Max plan that value is drawn from the plan allocation, not billed.** Limits are shared across Claude and Claude Code on a five-hour session window plus a weekly cap; Claude Code uses plan allocation only, and API credits are opt-in requiring explicit consent — so a scheduled Routine never silently spends money. The same run's `rate_limit_info` recorded **`isUsingOverage: false`**, confirming it independently.
+- **The scheduling-relevant line, added: cache reads were 62% of the cost** ($8.58 of $13.76, on 42.9M tokens) — the agentic loop re-reading its context every turn. Five committing Routines consume **plan allowance in five-hour windows shared with interactive work**, which is the real constraint to plan around, not a dollar figure.
+
+### Notes
+
+- **Why this correction was worth a version.** The distinction changes a decision that is live right now: four Routines are still to be rebuilt, and "five scheduled jobs at $14 each" reads very differently as a monthly invoice than as consumption of a shared five-hour allowance. Sources: [Use Claude Code with your Pro or Max plan](https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan), [Manage usage credits for paid Claude plans](https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans).
 
 ## [v06.97r] — 2026-09-21 12:04:57 PM EST
 

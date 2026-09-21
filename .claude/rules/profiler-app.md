@@ -198,7 +198,11 @@ Two consequences. **Anything a Routine must do belongs in its configured prompt*
 
 **That is the first commit a scheduled run has ever landed in this repository**, and the calendar moved with it: `updated` 2026-09-13 → 2026-09-21, four rows due → one, `iren` / `jinko` / `oracle` refreshed and archived at v4 / v5 / v4, `novonix` correctly left for the next run by the cap of three. **The `sources` / `outcomes` pair in the new session's record is the thing that was missing from every fired session since 2026-08** — it is exactly the shape an interactive session carries, and it appears only because the repository was selected on the New routine form.
 
-**Budget the real number.** A healthy three-company run costs about **$14** and a quarter of the context window; the fourteen months of "successful" 34-second runs cost eleven cents each and did nothing. The cheap runs were the broken ones.
+**Budget the real number — and know what it is a number OF.** A healthy three-company run values at about **$14** and a quarter of the context window; the run of "successful" 34-second runs valued at eleven cents each and did nothing. **The cheap runs were the broken ones.**
+
+`get_session`'s `usage.cost_usd` is the **API list-price valuation of the tokens consumed, not a charge against a balance.** Verified on the 2026-09-21 run: 42,896,504 cache-read + 1,072,155 cache-write + 557,346 input + 138,201 output tokens at Claude Sonnet 5 rates ($2.00 / $10.00 per MTok, cache write 1.25×, cache read 0.1×) computes to **$13.76 against a reported $13.86 — 0.75% apart.** On a Pro or Max plan that value is **drawn from the plan allocation**, not billed: limits are shared across Claude and Claude Code on a five-hour session window plus a weekly cap, and Claude Code uses plan allocation only — API credits are opt-in and require explicit consent, so a scheduled Routine never silently spends money. The same run's `rate_limit_info` recorded `isUsingOverage: false`, confirming it.
+
+**The line that actually matters for scheduling: cache reads were 62% of the cost** ($8.58 of $13.76, on 42.9M tokens) — the agentic loop re-reading its context every turn. Five committing Routines on regular cadences consume **plan allowance**, not dollars, but they consume it in five-hour windows shared with interactive work. The earnings desk alone is five runs a week at roughly this size.
 
 
 
