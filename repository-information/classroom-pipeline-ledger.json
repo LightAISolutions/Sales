@@ -1,6 +1,19 @@
 {
  "schemaVersion": 1,
- "coveredThrough": "2026-09-01",
+ "coveredThrough": "2026-09-21",
  "gateDigest": "sha256:3d09700026d28bff042a09580e0ebe126129eb7b7fefbb20584eff637f711a69",
- "lastRun": null
+ "lastRun": {
+  "date": "2026-09-21",
+  "repoVersion": "v07.03r",
+  "outcome": "COMMIT",
+  "wrote": [
+   "briefing-2026-09-21"
+  ],
+  "revised": [
+   "segment-neoclouds",
+   "segment-aidc-developers-and-landlords",
+   "segment-storage-integrators-and-containers"
+  ],
+  "frozen": []
+ }
 }

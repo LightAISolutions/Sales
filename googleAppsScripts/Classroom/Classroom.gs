@@ -1,4 +1,4 @@
-var VERSION = "v01.86g";
+var VERSION = "v01.87g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -6240,7 +6240,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
  "title": "Storage integrators and containers",
  "short": "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-21",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -6349,7 +6349,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "profile:jinko",
-    "date": "2026-09-05",
+    "date": "2026-09-21",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -6439,7 +6439,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-21",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -8468,74 +8468,74 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-10 — Jinko ESS signs SunGiga G2 liquid-cooling ESS distribution agreement with Innovative Efficient Solutions (IES) for the Middle East",
+     "sub": "Jinko · partnership"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-09 — Board proposes renaming the company 'Jinko Holdings Limited' (晶科控股有限公司); AGM set for October 21, 2026",
+     "sub": "Jinko · corporate"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-09-09 — Hefei Research Institute project signed",
      "sub": "CALB · corporate"
     },
     {
-     "x": 2,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-08 — Full-scale UL 9540A:2026 fire test on the MAX-20HC-5000 container certified by TUV Rheinland",
      "sub": "Great Power · product-launch"
     },
     {
-     "x": 3,
+     "x": 5,
      "lane": "record",
      "label": "2026-09-08 — BYD confirmed a specified foreign entity for OBBBA §45X/§48E purposes, on two independent statutory prongs",
      "sub": "BYD · regulatory"
     },
     {
-     "x": 4,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-07 — Partial cancellation of granted 2025 share options completed",
      "sub": "Great Power · corporate"
     },
     {
-     "x": 5,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-04 — Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
      "sub": "Sungrow · regulatory"
     },
     {
-     "x": 6,
+     "x": 8,
      "lane": "record",
      "label": "2026-09-04 — Awarded the 10th Changjiang Quality Award (长江质量奖), Hubei's top quality prize, presented by the vice-governor",
      "sub": "Cornex · other"
     },
     {
-     "x": 7,
+     "x": 9,
      "lane": "record",
      "label": "2026-09-04 — Xiaomi Auto publicly names CALB an official power-battery strategic partner",
      "sub": "CALB · customer"
     },
     {
-     "x": 8,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
      "sub": "Rolls-Royce Power Systems · product-launch"
     },
     {
-     "x": 9,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-31 — Sixth board of directors elected; Liu Ming replaces Song Xiaoning as independent director and Audit Committee chair",
      "sub": "Great Power · leadership"
     },
     {
-     "x": 10,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-30 — Xiangyang 70 GWh lithium-battery park starts production ten months after groundbreaking, 'two months ahead of plan'; 100Ah, 588Ah and 648Ah storage cells and fast-charge EV cells; about 400,000 cells a day at full run",
      "sub": "Cornex · capacity"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-29 — H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
-     "sub": "Sungrow · financial"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-28 — Four Latin American agreements in São Paulo, including a 1.5 GWh cell framework with Windey (运达) for its Camaçari, Bahia plant and MoUs with Intermepro, ION Energy and JSN Energia",
-     "sub": "Cornex · order-win"
     }
    ]
   },
@@ -8719,6 +8719,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "in-effect",
      "2026-01-01",
      "CALB, Cornex"
+    ],
+    [
+     "FEOC restrictions",
+     "in-effect",
+     "2026-06-01",
+     "Jinko"
     ],
     [
      "German grid code VDE-AR-N 4110",
@@ -9004,6 +9010,14 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": [
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-21",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-21; profile:jinko 2026-09-05→2026-09-21",
+   "changed": [
+    "the-fence",
+    "what-moved"
    ]
   }
  ]
@@ -25159,7 +25173,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
  "title": "AIDC developers and landlords",
  "short": "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-21",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -25268,7 +25282,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:iren",
-    "date": "2026-08-30",
+    "date": "2026-09-21",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -25346,7 +25360,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-21",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -25758,8 +25772,8 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     ],
     [
      "**IREN**",
-     "FY2025 · 2025-06-30",
-     "501",
+     "FY2026 · 2026-06-30",
+     "707",
      "as reported",
      "—",
      "—",
@@ -26928,7 +26942,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "custom-built data centres, Texas and New York and beyond"
     ]
    ],
-   "note": "Curated edges among members: 98 · to the neighbouring segments: 100 (the first 40 shown, by company) · derived-only mentions (no curated typing): 21 among members, 43 to the neighbours."
+   "note": "Curated edges among members: 98 · to the neighbouring segments: 100 (the first 40 shown, by company) · derived-only mentions (no curated typing): 22 among members, 43 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -26943,74 +26957,74 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-08 — 2GW Sweetwater Hub (SW1 1,400MW + SW2 600MW) conditionally included as Base Load in ERCOT's Batch Zero process; 300MW gross of Sweetwater 1 capacity under construction, delivery targeted Q4 2027; classification remains conditional pending further ERCOT verification",
+     "sub": "IREN · capacity"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-04 — Crunchbase News reports a USD 1.5 billion round led by Jane Street Capital at an USD 18 billion valuation, taking total funding to 'just over $2.6 billion'; the company has not announced it. SEC Form D filed 30 June 2026 shows a USD 1.5 billion offering with USD 730 million sold from 15 June",
      "sub": "Fluidstack · financial"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-03 — Rock River Current: ComEd has scrapped four transmission security agreements including 'Powerhouse Hillwood Holding in Joliet'; PowerHouse Hillwood 'filed suit in the U.S. District Court of Northern Illinois against ComEd over the termination'",
      "sub": "PowerHouse Data Centers · legal"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-03 — Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure",
      "sub": "Nscale · customer"
     },
     {
-     "x": 4,
+     "x": 5,
      "lane": "record",
      "label": "2026-09-03 — Guilherme Reis appointed Managing Director for Iberia",
      "sub": "Digital Realty · leadership"
     },
     {
-     "x": 5,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-03 — Begins developing lateral gas pipelines at multiple sites to enable on-site generation of up to 2.5 GW, targeting new power before the end of 2027",
      "sub": "Cipher Digital · capacity"
     },
     {
-     "x": 6,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-02 — Digi.no: contractor HENT (Sentia) signs for two more buildings at Narvik — 'three buildings with combined capacity of 100 MW', completion 2027",
      "sub": "Nscale · capacity"
     },
     {
-     "x": 7,
+     "x": 8,
      "lane": "record",
      "label": "2026-09-02 — Infrastructure for America launches — a 501(c)(4) co-founded by Compass, Digital Realty, QTS and Vantage; Crosby: 'There's a difference between building to last and building to exit'",
      "sub": "Compass Datacenters · corporate"
     },
     {
-     "x": 8,
+     "x": 9,
+     "lane": "record",
+     "label": "2026-09-01 — PUCT unanimously approves the northernmost of three proposed 765kV transmission routes (Dinosaur Switch to Drill Hole Switch, ~425 miles into the Permian Basin) — Oncor targets the Dinosaur-to-Longshore segment by end of 2028 and Longshore-to-Drill Hole by 2029; coverage names IREN's Sweetwater campuses as a direct beneficiary",
+     "sub": "IREN · regulatory"
+    },
+    {
+     "x": 10,
      "lane": "record",
      "label": "2026-09-01 — Company posts a 'Community Questions' FAQ stating Phase 1 is 'primarily natural gas'",
      "sub": "Fermi America · other"
     },
     {
-     "x": 9,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-31 — Leverage Shares' IPO risk note: 'roughly $3 billion of financing against a business generating only a few hundred million dollars in annual revenue'; GPU depreciation assumptions of five to six years; 'contracted demand is not necessarily guaranteed demand'",
      "sub": "Nscale · market"
     },
     {
-     "x": 10,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-31 — About USD 3 billion of senior secured delayed-draw term loans: up to USD 1.85 billion for Ward County, Texas (~200 MW IT, GB300 + VR200) and up to USD 1.2 billion for Madison, North Carolina (up to 40 MW); J.P. Morgan and Goldman Sachs joint lead arrangers; 'both facilities received investment-grade ratings with stable outlooks'",
      "sub": "Nscale · financial"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-31 — measuredai's tracker reports Anthropic's first TPU capacity under its 'colocation and managed services agreements with Fluidstack' came online at Lake Mariner on 5 July 2026 and tallies five Fluidstack campuses at about 1.4 GW critical IT",
-     "sub": "Fluidstack · other"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-31 — 8-K: first annual meeting set for 30 October 2026, record date 31 August, nomination and proposal deadline 10 September; Jeffrey Stein joins the Audit Committee",
-     "sub": "Fermi America · corporate"
     }
    ]
   },
@@ -27735,6 +27749,15 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-21",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-21; profile:iren 2026-08-30→2026-09-21",
+   "changed": [
+    "the-numbers",
+    "what-moved",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -28803,8 +28826,8 @@ function clLessonSegmentNeoclouds_() {
  "title": "Neoclouds",
  "short": "The GPU-cloud operators that sell contracted AI compute to labs and hyperscalers on leased or self-built capacity and thin balance sheets — faster than…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-21",
+ "reviewBy": "2027-03-21",
  "provenance": {
   "inputs": [
    {
@@ -28828,7 +28851,7 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "profile:iren",
-    "date": "2026-08-30",
+    "date": "2026-09-21",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -28852,7 +28875,7 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-21",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -29062,8 +29085,8 @@ function clLessonSegmentNeoclouds_() {
     ],
     [
      "**IREN**",
-     "FY2025 · 2025-06-30",
-     "501",
+     "FY2026 · 2026-06-30",
+     "707",
      "as reported",
      "—",
      "—",
@@ -29427,74 +29450,74 @@ function clLessonSegmentNeoclouds_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-08 — 2GW Sweetwater Hub (SW1 1,400MW + SW2 600MW) conditionally included as Base Load in ERCOT's Batch Zero process; 300MW gross of Sweetwater 1 capacity under construction, delivery targeted Q4 2027; classification remains conditional pending further ERCOT verification",
+     "sub": "IREN · capacity"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-04 — Crunchbase News reports a USD 1.5 billion round led by Jane Street Capital at an USD 18 billion valuation, taking total funding to 'just over $2.6 billion'; the company has not announced it. SEC Form D filed 30 June 2026 shows a USD 1.5 billion offering with USD 730 million sold from 15 June",
      "sub": "Fluidstack · financial"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-03 — Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure",
      "sub": "Nscale · customer"
     },
     {
-     "x": 3,
+     "x": 4,
      "lane": "record",
      "label": "2026-09-02 — Digi.no: contractor HENT (Sentia) signs for two more buildings at Narvik — 'three buildings with combined capacity of 100 MW', completion 2027",
      "sub": "Nscale · capacity"
     },
     {
-     "x": 4,
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-01 — PUCT unanimously approves the northernmost of three proposed 765kV transmission routes (Dinosaur Switch to Drill Hole Switch, ~425 miles into the Permian Basin) — Oncor targets the Dinosaur-to-Longshore segment by end of 2028 and Longshore-to-Drill Hole by 2029; coverage names IREN's Sweetwater campuses as a direct beneficiary",
+     "sub": "IREN · regulatory"
+    },
+    {
+     "x": 6,
      "lane": "record",
      "label": "2026-08-31 — Leverage Shares' IPO risk note: 'roughly $3 billion of financing against a business generating only a few hundred million dollars in annual revenue'; GPU depreciation assumptions of five to six years; 'contracted demand is not necessarily guaranteed demand'",
      "sub": "Nscale · market"
     },
     {
-     "x": 5,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-31 — About USD 3 billion of senior secured delayed-draw term loans: up to USD 1.85 billion for Ward County, Texas (~200 MW IT, GB300 + VR200) and up to USD 1.2 billion for Madison, North Carolina (up to 40 MW); J.P. Morgan and Goldman Sachs joint lead arrangers; 'both facilities received investment-grade ratings with stable outlooks'",
      "sub": "Nscale · financial"
     },
     {
-     "x": 6,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-31 — measuredai's tracker reports Anthropic's first TPU capacity under its 'colocation and managed services agreements with Fluidstack' came online at Lake Mariner on 5 July 2026 and tallies five Fluidstack campuses at about 1.4 GW critical IT",
      "sub": "Fluidstack · other"
     },
     {
-     "x": 7,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-28 — Semafor: Google and Microsoft were both in talks for the Monarch capacity that went to Anthropic — Microsoft 'withdrew from Monarch negotiations over the summer during a review of its data center portfolio and on-site power generation allocations'; Data Centre Review: Nscale's disclosure via Aker 'confirmed the contract exists but did not publicly name the customer'; West Virginia's governor calls it 'the reported $45 billion agreement'",
      "sub": "Nscale · customer"
     },
     {
-     "x": 8,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-28 — Blue Owl-managed funds lead a $2.4B AI-factory equipment financing ($2.8B total at 9.0% fixed, PIMCO advising) for the Mackenzie, BC Blackwell Ultra expansion",
      "sub": "IREN · financial"
     },
     {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-26 — Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on",
-     "sub": "Nscale · order-win"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-21 — Bloomberg: Nscale plans a US IPO that may raise as much as USD 3 billion, with Goldman Sachs and JPMorgan, filing as early as September 2026; Dealroom relays 'USD 51 billion in total contracted revenue', Q2 2026 revenue about USD 100 million, FY2025 about USD 33 million, '~289,000 active and contracted GPUs'",
-     "sub": "Nscale · financial"
-    },
-    {
      "x": 11,
      "lane": "record",
-     "label": "2026-08-20 — Hudson River Trading signs a multi-year, multi-billion-dollar AI cloud agreement — Vera Rubin NVL72 plus HGX B200 clusters with dedicated connectivity to HRT's on-prem environment",
-     "sub": "CoreWeave · order-win"
+     "label": "2026-08-27 — FY2026 full-year results: revenue $707.0M (+41% YoY, mining $578.2M / AI Cloud $128.8M) missed the $722.9M consensus by 2.2%; net loss $702.6M (incl. $638.8M non-cash Bitcoin-hardware impairments) and EPS -$2.06 missed the -$1.57 consensus; adj. EBITDA $245.7M; $4B contracted ARR for 2026 capacity (largely sold out) / $1B operating ARR as of Aug 26; new customer signings incl. Cohere, Prometheus, Fal AI and Higgsfield AI plus an unnamed multi-year contract with a 'leading frontier AI lab'; Horizon 2 commissioning, Horizons 3-4 in late-stage construction targeting Q4 2026; management guides Bitcoin mining 'effectively decommissioned' by end of December 2026",
+     "sub": "IREN · financial"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-19 — $5.0B convertible notes priced (upsized from $4.5B): $3.0B 0.50% due 2030 + $2.0B 4.50% due 2034, conversion premiums 40–45%; ~15.8M shares issued in concurrent exchanges of older converts",
-     "sub": "Nebius · financial"
+     "label": "2026-08-26 — Bloomberg, CNBC and TechCrunch report a roughly USD 45 billion, six-year contract with Anthropic for about 460 MW of Vera Rubin capacity at Monarch from late 2027 — the first of three planned buildings in the 1.35 GW phase Microsoft had held a letter of intent on",
+     "sub": "Nscale · order-win"
     }
    ]
   },
@@ -29690,6 +29713,14 @@ function clLessonSegmentNeoclouds_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-21",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-21; profile:iren 2026-08-30→2026-09-21",
+   "changed": [
+    "the-numbers",
+    "what-moved"
+   ]
   }
  ]
 };
@@ -52966,6 +52997,136 @@ function clLessonScenarioHyperscalersAndAiLabsDiscovery_() {
 };
 }
 
+function clLessonBriefing20260921_() {
+  return {
+ "schemaVersion": 1,
+ "id": "briefing-2026-09-21",
+ "type": "briefing",
+ "edition": "2026-09-21",
+ "title": "This week in BESS/AIDC — 2026-09-21",
+ "short": "Oracle's first quarter on the new backlog, IREN's 2GW Sweetwater cleared into ERCOT Base Load, and Jinko's two-engine rebrand.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-21",
+ "reviewBy": "2026-10-21",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "profile:oracle",
+    "date": "2026-09-21",
+    "note": "Q1 FY2027 results, the restructuring supplement, the New Mexico renewable RFP and generation mix, and the HPE networking agreement"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:iren",
+    "date": "2026-09-21",
+    "note": "the Sweetwater Hub's conditional ERCOT Batch Zero Base Load classification and its construction and delivery status"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:jinko",
+    "date": "2026-09-21",
+    "note": "the Middle East ESS distribution agreement and the proposed holding-company rename"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "id": "the-edition",
+   "title": "What this edition covers",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "Three dossiers moved in the window this edition closes, and between them they show the same pressure arriving at three different points in the chain: the **buyer** of compute capacity, the **owner** of the power behind it, and the **supplier** of storage hardware into it.",
+    "Nothing here changes what the segment lessons teach about how these businesses work. It is a feed of dated developments, each one stated by the dossier it came from — read it for what moved, not for what it means for a particular deal."
+   ]
+  },
+  {
+   "id": "oracle-q1-fy2027",
+   "title": "Oracle's first quarter on the new backlog",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Oracle reported Q1 FY2027 revenue of **$19.3B**, up 30%, with the OCI infrastructure line at **$7.4B**, up 121%. Remaining performance obligations — the contracted-but-not-yet-delivered backlog that has become the company's headline number — reached **$664B**, a quarter-on-quarter increase of **$26B**.",
+    "The number worth holding onto is the deceleration: RPO grew $26B this quarter against $85B the quarter before. Capital expenditure ran **$28.5B** and free cash flow was **negative $5.4B**, so the gap between what the buildout costs and what the business generates held roughly steady rather than closing. The company also reported delivering **850MW** of data-center capacity and more than **300,000 GPUs** in the quarter.",
+    "For anyone selling power or power equipment into this customer, the quarter did not settle the financing question — it restated it at a larger scale."
+   ]
+  },
+  {
+   "id": "oracle-restructuring",
+   "title": "Restructuring is running alongside the capex ramp, not after it",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "Oracle supplemented its 2026 Restructuring Plan by about **$700M**, taking the expected total cost to roughly **$2.8B**, with a further round of layoffs in the same week. Headcount is down roughly **21,000** — about 13% — from a year earlier.",
+    "The pattern to notice is the simultaneity: a company funding a very large infrastructure buildout through debt, equity and headcount reduction at the same time. That is a different risk profile from one funding it out of operating margin, and it is the kind of thing a supplier's credit team reads before a payment-terms conversation."
+   ]
+  },
+  {
+   "id": "oracle-renewables-rfp",
+   "title": "A 2GW renewable RFP in New Mexico",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "Oracle issued a request for proposals for up to **2GW** of new renewable capacity — solar, wind or geothermal — in New Mexico, prioritising projects deliverable between **2027 and 2031**, in support of matching Project Jupiter's consumption with carbon-free energy by **2031**.",
+    "This is the clearest first-party evidence so far of a hyperscale buyer procuring grid-scale renewables directly for a single campus, rather than relying only on on-site fuel cells or gas. A 2GW solicitation on a 2027–2031 delivery window is a developer-scale opportunity, and the delivery window is the part to read: it is a queue-and-construction timeline, not a procurement one."
+   ]
+  },
+  {
+   "id": "oracle-jupiter-solar-mix",
+   "title": "Generation mix as a permitting tool",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "Oracle and OpenAI are pursuing a solar-heavy generation mix for Project Jupiter in Doña Ana County, New Mexico — the roughly **$165B** campus — explicitly to reduce local opposition, alongside a public environmental dashboard and a **$1M** carbon-capture research commitment.",
+    "The dossier's reading is that power diversity has become a permitting and community-relations instrument rather than only an engineering choice. It was filed the same week New Mexico's land commissioner denied rights-of-way for the supporting gas pipeline, which is the concrete reason the mix matters: when the gas path is contested, the renewable path is what keeps the schedule."
+   ]
+  },
+  {
+   "id": "oracle-hpe-networking",
+   "title": "A supplier taking equity exposure to the buildout",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "Oracle expanded its collaboration with HPE, bringing HPE Juniper routing and switching into OCI's global data-center and edge networks under a multi-year support and financing arrangement. As part of it, **HPE issued Oracle warrants to purchase HPE common stock**.",
+    "Supplier-to-customer equity instruments are rare in infrastructure supply. Here it aligns HPE's upside with the pace of OCI's buildout — worth noting as a template, because the same logic applies to any supplier being asked to carry schedule risk on a gigawatt-scale program."
+   ]
+  },
+  {
+   "id": "iren-sweetwater-ercot",
+   "title": "IREN's 2GW Sweetwater Hub clears into ERCOT Base Load",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "IREN's **2GW** Sweetwater Hub — SW1 at 1,400MW and SW2 at 600MW — was conditionally included as Base Load in ERCOT's Batch Zero process. **300MW gross** of Sweetwater 1 is under construction with delivery targeted for **Q4 2027**. The classification remains conditional, pending further ERCOT verification.",
+    "Two things are true at once here, and the dossier is careful to keep them apart. The interconnection path is clearing, which is the hard, slow part of turning land into deliverable load. But the announcement names **no customer** — so this remains the largest uncontracted power block in the portfolio. Grid status is not a tenant, and the gap between the two is where the commercial risk sits."
+   ]
+  },
+  {
+   "id": "jinko-ess-middle-east",
+   "title": "Jinko ESS extends its liquid-cooled line into the Middle East",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "Jinko ESS signed a distribution agreement for its SunGiga G2 liquid-cooling storage product with Innovative Efficient Solutions, covering the Middle East, with a local partner handling project development and after-sales support.",
+    "Read this as channel expansion rather than scale: it extends an existing commercial-and-industrial liquid-cooling line into a region already flagged as a storage growth focus, through a distributor, and it does not change the company's position in the integrator rankings."
+   ]
+  },
+  {
+   "id": "jinko-holdings-rename",
+   "title": "A proposed rename — and why it is not yet a fact",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "Jinko's board has proposed renaming the company **Jinko Holdings Limited**, with the annual general meeting set for **21 October 2026**. The NYSE ticker JKS is unaffected.",
+    "The dossier reads the change as the group formalising a two-engine identity — industrial holdings alongside a strategic-investment portfolio — rather than a pure solar rebrand.",
+    "**This is pending a shareholder vote and is not yet effective.** Do not use the new name in any document until the AGM result is confirmed. The vote date is also why this edition's review date is 21 October: it is the nearest dated gate on anything taught here."
+   ]
+  }
+ ]
+};
+}
+
 // Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
 // Technology Foundations first, then the AI data-center wave. C2's pipeline
 // appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
@@ -53035,7 +53196,8 @@ function clLessons_() {
           clLessonScenarioNeocloudsDiscovery_(),
           clLessonScenarioInsuranceAndRiskTransferObjection_(),
           clLessonScenarioUtilitiesDiscoveryAidc_(),
-          clLessonScenarioHyperscalersAndAiLabsDiscovery_()];
+          clLessonScenarioHyperscalersAndAiLabsDiscovery_(),
+          clLessonBriefing20260921_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackElectricalFoundations_(),

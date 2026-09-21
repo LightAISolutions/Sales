@@ -3,11 +3,45 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.03r] — 2026-09-21 06:04:03 PM EST
+
+> **Prompt:** "You are one run of the Classroom curriculum pipeline (C2) in LightAISolutions/Sales. Nobody is watching this session and you cannot ask anyone anything. READ FIRST: `repository-information/CLASSROOM-COMMITTER-CONTRACT.md`, `repository-information/CLASSROOM-SCHEMA.md`, `.claude/rules/classroom-app.md`. Then run the contract's own pre-flight (§5.1) — repo identity, a clean tree, a fresh `claude/classroom-pipeline-<YYYY-MM-DD>` branch off a just-fetched `origin/main`, a green `check-classroom-content.py` baseline with its warning count recorded, the gate-surface digest matching the ledger's `gateDigest`, and schema versions still v1/v1. CORPUS TOKEN: <no corpus token> — per §5.1 step 5, skip corpus reads entirely; refresh only from the Pages-served and repo-resident layers, and do not author a briefing from memory in their place. BUDGET: 45 minutes wall-clock and 120 assistant turns. BEFORE COMMITTING, and again immediately before `git commit`, all of these must pass: `check-classroom-content.py` (zero errors, no new warnings), `check-classroom-pipeline.py --base origin/main` (zero findings), `node --check` on a `.js` copy of `Classroom.gs`, and `node scripts/check-gas-inner-scripts.js`. END THE RUN with the §5.4 report verbatim."
+
+### Added
+
+- **briefing-2026-09-21** (tracks) — the first registered briefing edition: eight dated developments across three refreshed dossiers, covering Oracle's Q1 FY2027 print and its restructuring, the Project Jupiter renewable procurement and generation mix, the HPE networking agreement with warrants, IREN's Sweetwater Hub clearing into ERCOT Batch Zero Base Load, and Jinko's Middle East ESS distribution agreement and proposed holding-company rename; inputs: profile:oracle@2026-09-21, profile:iren@2026-09-21, profile:jinko@2026-09-21. All-public stamp, so the edition folds to `tracks` — the analyst-visible public-only edition. `reviewBy` 2026-10-21, the Jinko AGM, which is the nearest dated gate among the items.
+
+### Changed
+
+- **segment-neoclouds** (tracks, unchanged) — IREN's latest normalized annual revenue moved from FY2025 $501m to FY2026 $707m, and the segment timeline picked up the Sweetwater ERCOT item; changed sections: the-numbers, what-moved; inputs re-pinned: profile:iren 2026-08-30→2026-09-21, graph:profiler-graph 2026-09-19→2026-09-21.
+- **segment-aidc-developers-and-landlords** (tracks, unchanged) — the same IREN figure moved in this segment's numbers table, its curated edges changed with the graph rebuild, and the timeline picked up Sweetwater; changed sections: the-numbers, what-moved, who-is-connected; inputs re-pinned: profile:iren 2026-08-30→2026-09-21, graph:profiler-graph 2026-09-19→2026-09-21.
+- **segment-storage-integrators-and-containers** (tracks, unchanged) — Jinko's policy-exposure row moved and the timeline picked up the Middle East agreement and the proposed rename; changed sections: the-fence, what-moved; inputs re-pinned: profile:jinko 2026-09-05→2026-09-21, graph:profiler-graph 2026-09-19→2026-09-21.
+
+All three revisions were produced by `scripts/build-classroom-segments.py --segment <id>`, the repo's own segment generator, so `revisions[].changed[]` is the generator's differs set rather than a hand-named one.
+
+### Notes
+
+```
+CLASSROOM PIPELINE — 2026-09-21 — COMMIT
+Covered through: 2026-09-01 → 2026-09-21
+Sources seen: 317 fetched · 299 unchanged · 18 moved · 0 unknown
+Wrote: briefing-2026-09-21 (tracks) — 8 qualifying items across 3 sources, bar is 3/2; segment-neoclouds (tracks) — IREN normalized revenue FY2025 $501m → FY2026 $707m; segment-aidc-developers-and-landlords (tracks) — same IREN figure plus curated-edge changes; segment-storage-integrators-and-containers (tracks) — Jinko policy exposure moved
+Skipped at caps: segment-hyperscalers-and-ai-labs — due on profile:oracle 2026-08-30→2026-09-21, sections differing: what-moved only
+Frozen (unknown source): none
+Blocked by: —
+Needs the developer: 15 segment lessons are due on graph:profiler-graph 2026-09-19→2026-09-21 with "sections differing: none" — left untouched, pins included, per G3; they will re-present next run
+Needs the developer: the corpus layer was not read this run (no token supplied), so no corpus: ref was written and no corpus item counted toward the briefing bar
+```
+
+Checkers: `check-classroom-content.py` 71 lessons, 8 tracks, 220 gate cases — 0 errors, 0 warnings (baseline 0/0). `check-classroom-pipeline.py --base origin/main` — 0 findings. `node --check` on a `.js` copy of `Classroom.gs` — clean. `node scripts/check-gas-inner-scripts.js` — clean.
+
+Classroom.gs VERSION v01.86g → v01.87g.
 
 ## [v07.02r] — 2026-09-21 05:36:22 PM EST
 
