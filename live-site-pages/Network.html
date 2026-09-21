@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.13w">
+  <meta name="build-version" content="v01.14w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -521,6 +521,19 @@
     .nw-tidy-row { margin: 0 0 8px; }
     .nw-list-status { margin: 0 0 10px; }
     .nw-list-status.nw-status-ok { font-size: 13px; font-weight: 400; }
+    /* PROJECT: N2 — the Accounts card, the Profiler deep link, the on-the-record line, the propose-a-dossier line */
+    .nw-row-detail dd a.nw-prof-link, .nw-row .nw-row-main a.nw-prof-link { color: var(--nw-accent); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--nw-line2); }
+    .nw-row .nw-row-main a.nw-prof-link { font: 600 11px/1 var(--nw-mono); margin-left: 6px; }
+    .nw-record { background: #eef2f7; border-left: 3px solid var(--nw-accent); padding: 6px 10px; border-radius: 0 6px 6px 0; margin: 2px 0 6px; font-size: 13px; }
+    .nw-record b { color: var(--nw-accent); }
+    .nw-record .nw-record-note { display: block; font: 12px/1.5 var(--nw-mono); color: var(--nw-gold); margin-top: 2px; }
+    .nw-copyline { display: flex; gap: 8px; align-items: center; margin: 4px 0 6px; }
+    .nw-copyline code { flex: 1 1 auto; font: 13px/1.6 var(--nw-mono); color: var(--nw-ink); background: #f7f4ee; border: 1px dashed var(--nw-line2); border-radius: 6px; padding: 6px 10px; user-select: all; -webkit-user-select: all; word-break: break-all; }
+    .nw-row-detail .nw-under { margin: 0 0 4px; padding-left: 0; list-style: none; }
+    .nw-row-detail .nw-under li { font-size: 13px; padding: 2px 0; }
+    .nw-row-detail .nw-under li small { color: var(--nw-faint); font-family: var(--nw-mono); font-size: 11px; margin-left: 6px; }
+    .nw-acct-status { margin: 0 0 10px; }
+    .nw-editor textarea { display: block; width: 100%; box-sizing: border-box; font: 15px/1.4 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 64px; margin-bottom: 8px; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -5552,18 +5565,24 @@ function nwSelect(group, value, id) {
   if (value && !sel.value) { var keep = document.createElement('option'); keep.value = value; keep.textContent = value; keep.selected = true; sel.appendChild(keep); }
   return sel;
 }
-// The review section appended to the editor (nwEditCard): role, the account
-// block, Source Event, Met Date, Consent, Do Not Contact. Returns a reader
-// that folds the inputs back into rec.review.
-function nwReviewSection(rec, form) {
-  var rv = nwReviewOf(rec), x = rec.extraction || {};
-  var h1 = nwEl('div', 'nw-editor-h', 'This person'); form.appendChild(h1);
-  var lr = nwEl('label', null, 'Role'); var role = nwSelect('role', rv.role, ''); role.setAttribute('data-review', 'role'); lr.appendChild(role); form.appendChild(lr);
+// The account block — shared by the review card (a held or saved contact's
+// editor; opts.id is the record id) and, since N2, the Accounts card's own
+// editor (opts.full: name, tags, HQ, newsroom URL and notes are editable too).
+// Reads: the covered / uncovered chip, the Profiler link checkbox, the
+// relationship + stage two-half row under the D5 rule, the segments.
+// Returns a reader that folds the inputs back into `rv`.
+function nwAccountBlock(rv, form, opts) {
+  opts = opts || {};
+  var full = !!opts.full;
   form.appendChild(nwEl('div', 'nw-editor-h', 'Account'));
-  var cov = nwEl('div', 'nw-covered'); cov.id = 'nw-covered-' + rec.id;
+  var nameInp = null;
+  if (full) {
+    var lname = nwEl('label', null, 'Name'); nameInp = document.createElement('input'); nameInp.type = 'text'; nameInp.value = rv.name || ''; nameInp.autocapitalize = 'words'; nameInp.setAttribute('data-account', 'name'); lname.appendChild(nameInp); form.appendChild(lname);
+  }
+  var cov = nwEl('div', 'nw-covered'); if (opts.id) cov.id = 'nw-covered-' + opts.id;
   function paintCovered() {
     cov.innerHTML = '';
-    var acc = rv.accountId && _nwAccountsById[rv.accountId];
+    var acc = !full && rv.accountId && _nwAccountsById[rv.accountId];
     if (rv.slug) {
       cov.className = 'nw-covered';
       cov.appendChild(document.createTextNode('In the Profiler record as '));
@@ -5572,7 +5591,7 @@ function nwReviewSection(rec, form) {
       if (acc) cov.appendChild(document.createTextNode(' · already an account of yours'));
     } else {
       cov.className = 'nw-covered nw-uncovered';
-      cov.appendChild(document.createTextNode(acc ? 'Already an account of yours (not in the Profiler record)' : 'Not in the Profiler record — saved as a new account'));
+      cov.appendChild(document.createTextNode(full ? 'Not in the Profiler record' : (acc ? 'Already an account of yours (not in the Profiler record)' : 'Not in the Profiler record — saved as a new account')));
     }
   }
   paintCovered();
@@ -5592,6 +5611,35 @@ function nwReviewSection(rec, form) {
   function gateStage() { var ok = ['target', 'customer'].indexOf(rel.value) >= 0; st.disabled = !ok; if (!ok) st.value = 'none'; }
   rel.addEventListener('change', gateStage); gateStage();
   var lseg = nwEl('label', null, 'Segments'); var seg = document.createElement('input'); seg.type = 'text'; seg.value = rv.segmentIds.join(', '); seg.placeholder = 'segment ids, comma-separated'; seg.autocapitalize = 'none'; seg.setAttribute('data-review', 'segmentIds'); lseg.appendChild(seg); form.appendChild(lseg);
+  var tags = null, hq = null, news = null, notes = null;
+  if (full) {
+    var ltag = nwEl('label', null, 'Tags'); tags = document.createElement('input'); tags.type = 'text'; tags.value = (rv.tags || []).join(', '); tags.placeholder = 'comma-separated, lowercase'; tags.autocapitalize = 'none'; tags.setAttribute('data-account', 'tags'); ltag.appendChild(tags); form.appendChild(ltag);
+    var two3 = nwEl('div', 'nw-two');
+    var lhq = nwEl('label', null, 'HQ'); hq = document.createElement('input'); hq.type = 'text'; hq.value = rv.hq || ''; hq.placeholder = 'City, Country'; hq.setAttribute('data-account', 'hq'); lhq.appendChild(hq);
+    var lnews = nwEl('label', null, 'Newsroom URL'); news = document.createElement('input'); news.type = 'text'; news.inputMode = 'url'; news.autocapitalize = 'none'; news.value = rv.newsroomUrl || ''; news.placeholder = 'events / meet-us page'; news.setAttribute('data-account', 'newsroomUrl'); lnews.appendChild(news);
+    two3.appendChild(lhq); two3.appendChild(lnews); form.appendChild(two3);
+    var lnotes = nwEl('label', null, 'Notes'); notes = document.createElement('textarea'); notes.value = rv.notes || ''; notes.setAttribute('data-account', 'notes'); lnotes.appendChild(notes); form.appendChild(lnotes);
+  }
+  return function read() {
+    if (nameInp) rv.name = nwStdField(nameInp.value.trim(), false);
+    rv.relationship = rel.value; rv.stage = st.disabled ? 'none' : st.value;
+    rv.linkSlug = link ? link.checked : rv.linkSlug;
+    rv.segmentIds = seg.value.split(',').map(function(s) { return s.trim().toLowerCase(); }).filter(Boolean);
+    if (tags) rv.tags = tags.value.split(',').map(function(s) { return s.trim().toLowerCase(); }).filter(Boolean);
+    if (hq) rv.hq = hq.value.trim();
+    if (news) rv.newsroomUrl = news.value.trim();
+    if (notes) rv.notes = notes.value.trim();
+    return rv;
+  };
+}
+// The review section appended to the editor (nwEditCard): role, the account
+// block, Source Event, Met Date, Consent, Do Not Contact. Returns a reader
+// that folds the inputs back into rec.review.
+function nwReviewSection(rec, form) {
+  var rv = nwReviewOf(rec), x = rec.extraction || {};
+  var h1 = nwEl('div', 'nw-editor-h', 'This person'); form.appendChild(h1);
+  var lr = nwEl('label', null, 'Role'); var role = nwSelect('role', rv.role, ''); role.setAttribute('data-review', 'role'); lr.appendChild(role); form.appendChild(lr);
+  var readAccount = nwAccountBlock(rv, form, { id: rec.id });
   form.appendChild(nwEl('div', 'nw-editor-h', 'Where and when'));
   var two2 = nwEl('div', 'nw-two');
   var lev = nwEl('label', null, 'Source event'); var ev = document.createElement('input'); ev.type = 'text'; ev.value = rv.sourceEvent; ev.placeholder = 'e.g. re-plus-2026'; ev.autocapitalize = 'none'; ev.setAttribute('data-review', 'sourceEvent'); lev.appendChild(ev);
@@ -5603,9 +5651,7 @@ function nwReviewSection(rec, form) {
   ld.appendChild(dnc); ld.appendChild(document.createTextNode('Do not contact')); form.appendChild(ld);
   var ln = nwEl('label', null, 'Notes'); var notes = document.createElement('input'); notes.type = 'text'; notes.value = rv.notes; notes.setAttribute('data-review', 'notes'); ln.appendChild(notes); form.appendChild(ln);
   return function read() {
-    rv.role = role.value; rv.relationship = rel.value; rv.stage = st.disabled ? 'none' : st.value;
-    rv.linkSlug = link ? link.checked : rv.linkSlug;
-    rv.segmentIds = seg.value.split(',').map(function(s) { return s.trim().toLowerCase(); }).filter(Boolean);
+    rv.role = role.value; readAccount();
     rv.sourceEvent = ev.value.trim(); rv.metDate = md.value || rv.metDate; rv.consent = cons.value; rv.dnc = dnc.checked; rv.notes = notes.value.trim();
     rec.review = rv;
     return rv;
@@ -5704,7 +5750,7 @@ function nwSafeFolderName(name) { return String(name || '').replace(/[\\\/:*?"<>
 // and parked through nop=setfolders `accounts` so the next save finds it.
 function nwEnsureAccountFolder(tok, accountId, accountName) {
   var have = _nwFolders && _nwFolders.accounts && _nwFolders.accounts[accountId];
-  if (have) return Promise.resolve(have);
+  if (have) return nwFolderRenameIfDrifted(tok, have, accountName).then(function() { return have; });
   return nwEnsureFolders(tok).then(function(f) {
     return nwDriveCreateFolder(tok, nwSafeFolderName(accountName), f.root).then(function(folderId) {
       return new Promise(function(resolve) {
@@ -5717,6 +5763,20 @@ function nwEnsureAccountFolder(tok, accountId, accountName) {
       });
     });
   });
+}
+// N2 (§6): a rename of the Account renames its <Company>/ folder browser-side
+// on the next save — one files.get for the current name, one files.update
+// when it drifted (a Tidy or an account edit changed the name after the
+// folder was made). Soft: a Drive error here never blocks the save.
+function nwFolderRenameIfDrifted(tok, folderId, accountName) {
+  var want = nwSafeFolderName(accountName);
+  if (!accountName || !folderId) return Promise.resolve(false);
+  return nwDriveFetch(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(folderId) + '?fields=name')
+    .then(function(f) {
+      if (!f || f.name === want) return false;
+      return nwDriveFetch(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(folderId) + '?fields=id,name',
+        { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: want }) }).then(function() { return true; });
+    }).catch(function() { return false; });
 }
 // files.update with addParents / removeParents — the move of §4.2. Resolves
 // to the file's link in its new home.
@@ -5905,7 +5965,7 @@ function nwRowDetail(row, id) {
     function line(label, value) { if (!value) return; det.appendChild(nwEl('dt', null, label)); det.appendChild(nwEl('dd', null, value)); }
     function linkLine(label, href, text) { if (!href) return; det.appendChild(nwEl('dt', null, label)); var dd = nwEl('dd'); var an = nwEl('a', null, text || href); an.href = href; an.target = '_blank'; an.rel = 'noopener'; dd.appendChild(an); det.appendChild(dd); }
     line('Name', c.fullName); line('Title', [c.title, c.department].filter(Boolean).join(' · ')); line('Role', nwLabel('role', c.role));
-    line('Account', [a.name, nwLabel('relationship', a.relationship), a.stage && a.stage !== 'none' ? nwLabel('stage', a.stage) : ''].filter(Boolean).join(' · ') + (a.slug ? ' · Profiler: ' + a.slug : ''));
+    nwAccountLine(det, a);
     line('Email', (c.emails || []).map(function(e) { return e.value; }).join(', ')); line('Phone', (c.phones || []).map(function(p) { return p.number; }).join(', '));
     line('Address', c.address); linkLine('Website', /^https?:/i.test(c.website || '') ? c.website : (c.website ? 'https://' + c.website : ''), c.website); linkLine('LinkedIn', c.linkedin, c.linkedin);
     line('Met', [c.metDate, c.sourceEvent].filter(Boolean).join(' at ')); line('Consent', nwLabel('consent', c.consent) + (c.dnc ? ' · do not contact' : ''));
@@ -5913,6 +5973,9 @@ function nwRowDetail(row, id) {
     linkLine('Front', c.frontLink, '🖼 Front'); linkLine('Back', c.backLink, '🖼 Back');
     line('History', (res.interactions || []).map(function(ix) { return ix.date + ' ' + nwLabel('interactionKind', ix.kind); }).join(' · '));
     var acts = nwEl('div', 'nw-strip-photos');
+    // N2: the on-the-record check — only now, when the detail is open, is the
+    // dossier fetched (never on the list paint).
+    nwRecordCheck(det, acts, c, a);
     var editBtn = nwEl('a', 'nw-edit-btn nw-row-edit', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
     editBtn.addEventListener('click', function(ev) {
       ev.preventDefault(); ev.stopPropagation();
@@ -6036,7 +6099,14 @@ function nwRowMark(row, deleted) {
     ev.preventDefault(); ev.stopPropagation();
     var id = row.getAttribute('data-id');
     nwApi(deleted ? 'restore' : 'delete', { id: id }, function(res) {
-      if (!(res && res.success)) { nwCaptureStatus('Could not ' + (deleted ? 'restore' : 'delete') + ' (' + nwErrText(res && res.error) + ')', 'err'); return; }
+      if (!(res && res.success)) {
+        var isAcct = id.charAt(0) === 'a';
+        var text = (res && res.error === 'account_has_contacts')
+          ? 'Not deleted — this account still has ' + (res.count || 0) + ' contact' + (res.count === 1 ? '' : 's') + '. Move or delete them first; nothing is removed for you.'
+          : 'Could not ' + (deleted ? 'restore' : 'delete') + ' (' + nwErrText(res && res.error) + ')';
+        if (isAcct) nwAcctStatus(text, 'err'); else nwCaptureStatus(text, 'err');
+        return;
+      }
       nwRowMark(row, !deleted);
       if (deleted) nwAfterWrite();   // restored — the list is the record again
     });
@@ -6054,6 +6124,264 @@ function nwContactRow(c) {
   nwRowMark(row, false);
   row.addEventListener('click', function() { nwRowDetail(row, c.id); });
   return row;
+}
+
+// PROJECT: ── N2 — accounts and the corpus attachment (§4.1, D4) ───────────
+// The Accounts card under the Contacts list, the Profiler deep link, the
+// propose-a-dossier hook and the on-the-record check. The dossier file is
+// public and fetched ONLY when a detail opens (never on the list paint),
+// cached for the page's lifetime per slug; the segments file is fetched
+// once like the companies registry. Nothing here is generated in-app — the
+// hook hands the developer the exact `profiler <Company>` line to paste.
+var NW_SEGMENTS_URL = 'profiler-data/profiler-segments.json';   // relative — public Pages
+var NW_PROFILE_URL = 'profiler-data/';                          // + <slug>.profile.json
+var NW_DOSSIER_TAG = 'dossier-proposed';
+var _nwSegments = null, _nwSegmentsP = null;   // id → name once fetched
+var _nwProfiles = {};                           // slug → Promise<profile|null>
+function nwSegments() {
+  if (_nwSegments) return Promise.resolve(_nwSegments);
+  if (_nwSegmentsP) return _nwSegmentsP;
+  _nwSegmentsP = fetch(NW_SEGMENTS_URL, { cache: 'no-store' }).then(function(r) { return r.ok ? r.json() : null; })
+    .then(function(d) { var m = {}; ((d && d.segments) || []).forEach(function(sg) { if (sg && sg.id) m[sg.id] = sg.name || sg.id; }); _nwSegments = m; return m; })
+    .catch(function() { _nwSegments = {}; return _nwSegments; });
+  return _nwSegmentsP;
+}
+// Registry labels for segment ids (an id the file does not know is shown as itself).
+function nwSegmentLabels(ids) {
+  return nwSegments().then(function(m) { return (ids || []).map(function(id) { return m[id] || id; }); });
+}
+// Relative, same origin — Profiler.html's ovRoute() reads the hash as a slug.
+function nwProfilerHref(slug) { return 'Profiler.html#' + String(slug || '').replace(/[^a-z0-9-]/g, ''); }
+// The client mirror of nwNameKey_ (Network.gs): romanised part only, lowercase, letters and spaces.
+function nwNameKey(name) {
+  return String(name || '').trim().replace(/\([^)]*\)/g, '').toLowerCase().replace(/[^a-zÀ-ɏ ]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function nwProfile(slug) {
+  slug = String(slug || '').replace(/[^a-z0-9-]/g, '');
+  if (!slug) return Promise.resolve(null);
+  if (!_nwProfiles[slug]) {
+    _nwProfiles[slug] = fetch(NW_PROFILE_URL + slug + '.profile.json', { cache: 'no-store' })
+      .then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; });
+  }
+  return _nwProfiles[slug];
+}
+// The decision-maker entry whose name key equals the contact's, or null.
+function nwOnRecord(name, profile) {
+  var k = nwNameKey(name);
+  if (!k || !profile) return null;
+  var dms = profile.decisionMakers || [];
+  for (var i = 0; i < dms.length; i++) if (dms[i] && nwNameKey(dms[i].name) === k) return dms[i];
+  return null;
+}
+// The Account line of a contact detail: name · relationship · stage, the
+// Profiler link when covered, the segments as their registry labels.
+function nwAccountLine(det, a) {
+  if (!a || !a.name) return;
+  det.appendChild(nwEl('dt', null, 'Account'));
+  var dd = nwEl('dd');
+  dd.appendChild(document.createTextNode([a.name, nwLabel('relationship', a.relationship), a.stage && a.stage !== 'none' ? nwLabel('stage', a.stage) : ''].filter(Boolean).join(' · ')));
+  if (a.slug) {
+    dd.appendChild(document.createTextNode(' · '));
+    var an = nwEl('a', 'nw-prof-link', 'Profiler ↗'); an.href = nwProfilerHref(a.slug); an.target = '_blank'; an.rel = 'noopener'; dd.appendChild(an);
+  }
+  det.appendChild(dd);
+  if ((a.segmentIds || []).length) {
+    var sdt = nwEl('dt', null, 'Segments'), sdd = nwEl('dd', null, (a.segmentIds || []).join(', '));
+    det.appendChild(sdt); det.appendChild(sdd);
+    nwSegmentLabels(a.segmentIds).then(function(labels) { sdd.textContent = labels.join(', '); });
+  }
+}
+// The on-the-record check for a contact at a covered account: the dossier's
+// decisionMakers[] by name key. A match shows the record's title and the
+// dossier's source line; a title that differs from the card's is surfaced as
+// a note — read, never written anywhere.
+function nwRecordCheck(det, before, c, a) {
+  if (!(a && a.slug)) return;
+  nwProfile(a.slug).then(function(profile) {
+    var dm = profile && nwOnRecord(c.fullName, profile);
+    if (!dm || !det.parentNode) return;
+    var box = nwEl('dd', 'nw-record'); box.setAttribute('data-record', 'match');
+    box.appendChild(document.createTextNode('On the record as '));
+    box.appendChild(nwEl('b', null, dm.title || '(no title)'));
+    var src = dm.source || ('dossier of ' + (profile.lastUpdated || 'unknown date'));
+    box.appendChild(document.createTextNode(' — Profiler, ' + src));
+    var cardTitle = String(c.title || '').trim(), recTitle = String(dm.title || '').trim();
+    if (cardTitle && recTitle && nwNameKey(cardTitle) !== nwNameKey(recTitle)) {
+      box.appendChild(nwEl('span', 'nw-record-note', 'The card reads "' + cardTitle + '" — the record differs. Nothing was changed.'));
+    }
+    var dt = nwEl('dt', null, 'Profiler record');
+    det.insertBefore(dt, before); det.insertBefore(box, before);
+  });
+}
+// The Accounts card's own status line (a delete refusal, a saved edit) —
+// kept across the list re-render that follows every write, as the Contacts
+// card's line is (v01.13w), so a result is never wiped by its own refresh.
+var _nwAcctStatus = null;     // { text, level }
+function nwAcctStatus(text, level) {
+  _nwAcctStatus = text ? { text: text, level: level || '' } : null;
+  var el = document.getElementById('nw-acct-status');
+  if (!el) return;
+  el.textContent = text || '';
+  el.style.display = text ? '' : 'none';
+  el.className = 'nw-status nw-acct-status' + (level === 'warn' ? ' nw-status-warn' : level === 'err' ? ' nw-status-err' : level === 'ok' ? ' nw-status-ok' : '');
+}
+// The propose-a-dossier hook (D4): the exact command text for a Profiler
+// session. Copied to the clipboard when the browser allows; the line is
+// always shown so it can be selected by hand.
+function nwProposeLine(name) { return 'profiler ' + String(name || '').trim(); }
+function nwCopyText(text) {
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text).then(function() { return true; }, function() { return false; });
+  } catch (e) {}
+  return Promise.resolve(false);
+}
+function nwAccountErrText(err) {
+  if (err === 'account_name_taken') return 'Another of your accounts already has that name.';
+  if (err === 'not_found') return 'That account is no longer there.';
+  return nwSaveErrText(err);
+}
+// nop=account with the full row — the account payload plus tags, newsroom
+// URL and notes. `a` is the full account object from nop=get (or the edited
+// copy of it).
+function nwAccountEditPayload(a) {
+  return { id: a.id, name: (a.name || '').trim(), relationship: a.relationship || 'target', stage: a.stage || 'none',
+    slug: a.linkSlug === false ? '' : (a.slug || ''), segmentIds: a.linkSlug === false ? [] : (a.segmentIds || []),
+    domain: a.domain || '', hq: a.hq || '', tags: a.tags || [], newsroomUrl: a.newsroomUrl || '', notes: a.notes || '' };
+}
+function nwSaveAccount(a, cb) {
+  nwApiBody('account', { accountId: a.id, account: JSON.stringify(nwAccountEditPayload(a)) }, cb);
+}
+function nwProposeDossier(a, det, row) {
+  var line = nwProposeLine(a.name);
+  var box = det.querySelector('.nw-copyline');
+  if (!box) {
+    box = nwEl('div', 'nw-copyline'); box.setAttribute('data-propose', a.id);
+    var code = nwEl('code', null, line); box.appendChild(code);
+    det.appendChild(box);
+  }
+  nwCopyText(line).then(function(copied) {
+    nwAcctStatus(copied ? 'Copied "' + line + '" — paste it into a Profiler session.' : 'Select and copy the line below, then paste it into a Profiler session.', copied ? 'ok' : 'warn');
+    if ((a.tags || []).indexOf(NW_DOSSIER_TAG) >= 0) return;
+    var edited = JSON.parse(JSON.stringify(a)); edited.tags = (a.tags || []).concat([NW_DOSSIER_TAG]);
+    nwSaveAccount(edited, function(res) {
+      if (!(res && res.success)) { nwAcctStatus('Copied, but the account could not be marked (' + nwAccountErrText(res && res.error) + ')', 'warn'); return; }
+      a.tags = edited.tags;
+      var tagLine = det.querySelector('[data-line="tags"]');
+      if (tagLine) tagLine.textContent = a.tags.join(', ');
+      else { det.appendChild(nwEl('dt', null, 'Tags')); var td = nwEl('dd', null, a.tags.join(', ')); td.setAttribute('data-line', 'tags'); det.appendChild(td); }
+    });
+  });
+}
+// Edit an account from its row: the same account block as the review card,
+// in full, writing back through nop=account. A rename re-resolves the slug
+// against the registry when the account is not yet linked.
+function nwEditAccount(a, det, row) {
+  if (det.querySelector('.nw-editor')) return;
+  var rv = { name: a.name || '', relationship: a.relationship || 'target', stage: a.stage || 'none', slug: a.slug || '', linkSlug: !!a.slug,
+    segmentIds: (a.segmentIds || []).slice(), tags: (a.tags || []).slice(), hq: a.hq || '', newsroomUrl: a.newsroomUrl || '', notes: a.notes || '', registryName: '' };
+  function build() {
+    var form = nwEl('form', 'nw-editor');
+    var read = nwAccountBlock(rv, form, { full: true });
+    var actions = nwEl('div', 'nw-editor-actions');
+    var save = nwEl('button', 'nw-btn nw-btn-primary', 'Save account'); save.type = 'submit';
+    var cancel = nwEl('button', 'nw-btn nw-btn-quiet', 'Cancel'); cancel.type = 'button';
+    cancel.addEventListener('click', function() { form.remove(); });
+    actions.appendChild(save); actions.appendChild(cancel); form.appendChild(actions);
+    form.addEventListener('submit', function(ev) {
+      ev.preventDefault();
+      read();
+      if (!rv.name) { nwAcctStatus('The account needs a name.', 'warn'); return; }
+      var edited = { id: a.id, name: rv.name, relationship: rv.relationship, stage: rv.stage, slug: rv.slug, linkSlug: rv.linkSlug, segmentIds: rv.segmentIds,
+        domain: a.domain || '', hq: rv.hq, tags: rv.tags, newsroomUrl: rv.newsroomUrl, notes: rv.notes };
+      nwAcctStatus('Saving ' + rv.name + '…', '');
+      nwSaveAccount(edited, function(res) {
+        if (!(res && res.success)) { nwAcctStatus('Could not save the account (' + nwAccountErrText(res && res.error) + ')', 'err'); return; }
+        form.remove();
+        nwAcctStatus('✓ Saved ' + (res.name || rv.name) + (res.renamed ? ' — the Drive folder follows on the next save.' : '.'), 'ok');
+        nwAfterWrite();
+      });
+    });
+    det.appendChild(form);
+    try { form.querySelector('input[data-account="name"]').focus(); } catch (e) {}
+  }
+  // An unlinked account is offered the registry match for its current name.
+  if (!rv.slug) nwResolveCompany(rv.name, a.domain || '').then(function(hit) { if (hit) { rv.slug = hit.slug; rv.linkSlug = false; rv.registryName = hit.name; if (!rv.segmentIds.length) rv.segmentIds = hit.segmentIds.slice(); } build(); });
+  else build();
+}
+// Tap an account row: the full row (nop=get with the a- id) with its live
+// contacts beneath; Edit, and Propose a dossier when uncovered.
+function nwAccountDetail(row, id) {
+  var det = row.querySelector('.nw-row-detail');
+  if (!det) { det = nwEl('dl', 'nw-row-detail'); det.addEventListener('click', function(ev) { ev.stopPropagation(); }); row.appendChild(det); }
+  if (row.classList.contains('nw-open')) { row.classList.remove('nw-open'); return; }
+  row.classList.add('nw-open');
+  det.innerHTML = ''; det.appendChild(nwEl('dd', null, 'Loading…'));
+  nwApi('get', { id: id }, function(res) {
+    det.innerHTML = '';
+    if (!(res && res.success && res.account)) { det.appendChild(nwEl('dd', 'nw-bad', nwErrText(res && res.error))); return; }
+    var a = res.account, under = res.contacts || [];
+    _nwAccountsById[a.id] = _nwAccountsById[a.id] || a;
+    function line(label, value, key) { if (!value) return; det.appendChild(nwEl('dt', null, label)); var dd = nwEl('dd', null, value); if (key) dd.setAttribute('data-line', key); det.appendChild(dd); }
+    function linkLine(label, href, text) { if (!href) return; det.appendChild(nwEl('dt', null, label)); var dd = nwEl('dd'); var an = nwEl('a', null, text || href); an.href = href; an.target = '_blank'; an.rel = 'noopener'; dd.appendChild(an); det.appendChild(dd); }
+    line('Relationship', [nwLabel('relationship', a.relationship), a.stage && a.stage !== 'none' ? nwLabel('stage', a.stage) : ''].filter(Boolean).join(' · '));
+    if (a.slug) {
+      det.appendChild(nwEl('dt', null, 'Profiler'));
+      var pd = nwEl('dd'); var pl = nwEl('a', 'nw-prof-link', 'Open the ' + a.name + ' dossier ↗'); pl.href = nwProfilerHref(a.slug); pl.target = '_blank'; pl.rel = 'noopener'; pd.appendChild(pl); det.appendChild(pd);
+      if ((a.segmentIds || []).length) { var sdd = nwEl('dd', null, (a.segmentIds || []).join(', ')); det.appendChild(nwEl('dt', null, 'Segments')); det.appendChild(sdd); nwSegmentLabels(a.segmentIds).then(function(l) { sdd.textContent = l.join(', '); }); }
+    } else {
+      line('Profiler', (a.tags || []).indexOf(NW_DOSSIER_TAG) >= 0 ? 'Dossier proposed — not covered yet' : 'Not covered');
+    }
+    line('Tags', (a.tags || []).join(', '), 'tags'); line('HQ', a.hq); linkLine('Newsroom', a.newsroomUrl, a.newsroomUrl); line('Notes', a.notes);
+    det.appendChild(nwEl('dt', null, under.length ? 'Contacts (' + under.length + ')' : 'Contacts'));
+    if (under.length) {
+      var ul = nwEl('ul', 'nw-under');
+      under.forEach(function(c) { var li = nwEl('li', null, c.name || '(unnamed)'); if (c.title) li.appendChild(nwEl('small', null, c.title)); ul.appendChild(li); });
+      var udd = nwEl('dd'); udd.appendChild(ul); det.appendChild(udd);
+    } else det.appendChild(nwEl('dd', null, 'None — this account can be deleted.'));
+    var acts = nwEl('div', 'nw-strip-photos');
+    var editBtn = nwEl('a', 'nw-edit-btn nw-acct-edit', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
+    editBtn.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); nwEditAccount(a, det, row); });
+    acts.appendChild(editBtn);
+    if (!a.slug) {
+      var prop = nwEl('a', 'nw-edit-btn nw-propose-btn', '📄 Propose a dossier'); prop.href = '#'; prop.setAttribute('role', 'button');
+      prop.title = 'Copies the command for a Profiler session';
+      prop.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); nwProposeDossier(a, det, row); });
+      acts.appendChild(prop);
+    }
+    det.appendChild(acts);
+  });
+}
+// One row per live Account: name · relationship · stage · contact count, the
+// Profiler link on the row when covered; Delete → Restore on the side.
+function nwAccountRow(a) {
+  var row = nwEl('div', 'nw-row nw-acct-row'); row.setAttribute('data-id', a.id);
+  var main = nwEl('div', 'nw-row-main');
+  main.appendChild(document.createTextNode(a.name || '(unnamed)'));
+  if (a.slug) { var pl = nwEl('a', 'nw-prof-link', 'Profiler ↗'); pl.href = nwProfilerHref(a.slug); pl.target = '_blank'; pl.rel = 'noopener'; pl.addEventListener('click', function(ev) { ev.stopPropagation(); }); main.appendChild(pl); }
+  var n = Number(a.contactCount) || 0;
+  main.appendChild(nwEl('small', null, [nwLabel('relationship', a.relationship), a.stage && a.stage !== 'none' ? nwLabel('stage', a.stage) : '', n + ' contact' + (n === 1 ? '' : 's')].filter(Boolean).join(' · ')));
+  row.appendChild(main);
+  row.appendChild(nwEl('div', 'nw-row-side'));
+  nwRowMark(row, false);
+  row.addEventListener('click', function() { nwAccountDetail(row, a.id); });
+  return row;
+}
+function nwAccountsCard(accounts) {
+  var card = nwEl('div', 'nw-card'); card.id = 'nw-accounts';
+  card.appendChild(nwEl('h2', null, 'Accounts'));
+  var status = nwEl('div', 'nw-status nw-acct-status', _nwAcctStatus ? _nwAcctStatus.text : ''); status.id = 'nw-acct-status';
+  if (_nwAcctStatus) { var lv = _nwAcctStatus.level; status.className += lv === 'warn' ? ' nw-status-warn' : lv === 'err' ? ' nw-status-err' : lv === 'ok' ? ' nw-status-ok' : ''; }
+  else status.style.display = 'none';
+  card.appendChild(status);
+  if (!accounts.length) {
+    var empty = nwEl('div', 'nw-empty');
+    empty.appendChild(nwEl('b', null, 'No accounts yet'));
+    empty.appendChild(document.createTextNode('Every saved contact adds its company here.'));
+    card.appendChild(empty);
+    return card;
+  }
+  accounts.slice().sort(function(x, y) { return String(x.name || '').localeCompare(String(y.name || '')); }).forEach(function(a) { card.appendChild(nwAccountRow(a)); });
+  return card;
 }
 
 // PROJECT: ── Masthead + mount ─────────────────────────────────────────────
@@ -6140,6 +6468,7 @@ function nwLoadList() {
       contacts.forEach(function(c) { list.appendChild(nwContactRow(c)); });
     }
     wrap.appendChild(list);
+    wrap.appendChild(nwAccountsCard(accounts));
     var note = nwEl('p', 'nw-note', 'Refreshed on open, on return to this tab and after every save — no background polling.');
     wrap.appendChild(note);
   });

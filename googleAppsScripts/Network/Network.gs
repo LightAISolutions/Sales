@@ -1,4 +1,4 @@
-var VERSION = "v01.06g";
+var VERSION = "v01.07g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -976,6 +976,12 @@ function handleNetworkOp_(e) {
       var accounts = nwListRows_(tabs.accounts, scope.set, {
         id: 'Account ID', name: 'Name', slug: 'Profiler Slug', relationship: 'Relationship', stage: 'Stage',
         updatedAt: 'Updated At' });
+      // N2: the live-contact count per account rides on the list row (the
+      // Accounts card shows it; the delete refusal names it). Nothing else
+      // widens — tags, HQ, notes and the newsroom URL stay detail-only.
+      var perAccount = {};
+      for (var ci = 0; ci < contacts.length; ci++) perAccount[contacts[ci].accountId] = (perAccount[contacts[ci].accountId] || 0) + 1;
+      for (var ai = 0; ai < accounts.length; ai++) accounts[ai].contactCount = perAccount[accounts[ai].id] || 0;
       auditLog('data_read', sess.email, 'network_list', { contacts: contacts.length, accounts: accounts.length });
       return { success: true, role: nwRoleOf_(sess), caps: NW_ROLE_CAPS[nwRoleOf_(sess)] || [],
                contacts: contacts, accounts: accounts, folders: nwFoldersGet_() };
@@ -1026,6 +1032,10 @@ function handleNetworkOp_(e) {
     if (op === 'links') {
       nwRequire_(sess, 'contacts', 'network_links');
       return nwLinksOp_(sess, p);
+    }
+    if (op === 'account') {
+      nwRequire_(sess, 'contacts', 'network_account');
+      return nwAccountOp_(sess, p);
     }
     if (op === 'get') {
       nwRequire_(sess, 'contacts', 'network_get');
@@ -1185,7 +1195,7 @@ function nwContactPublic_(o) {
 function nwAccountPublic_(o) {
   return { id: o['Account ID'], name: o['Name'], normalisedName: o['Normalised Name'], domain: o['Domain'], slug: o['Profiler Slug'],
     relationship: o['Relationship'], stage: o['Stage'], segmentIds: nwArr_(o['Segment IDs']), tags: nwArr_(o['Tags']),
-    hq: o['HQ'], notes: o['Notes'], createdAt: o['Created At'], updatedAt: o['Updated At'], deletedAt: o['Deleted At'] };
+    hq: o['HQ'], newsroomUrl: o['Newsroom URL'], notes: o['Notes'], createdAt: o['Created At'], updatedAt: o['Updated At'], deletedAt: o['Deleted At'] };
 }
 
 // The dedupe (§7): normalised email → E.164 phone → normalised name + Account.
@@ -1477,8 +1487,14 @@ function nwGetOp_(sess, p) {
   if (id.charAt(0) === 'a') {
     var af = nwFindRow_(nwSheetRead_(tabs.accounts), id);
     if (!af || !scope.set[String(af.obj['Owner'] || '').toLowerCase()]) return { success: false, error: 'not_found' };
-    auditLog('data_read', sess.email, 'network_get', { accountId: id });
-    return { success: true, account: nwAccountPublic_(af.obj) };
+    var act = nwSheetRead_(tabs.contacts), under = [];
+    for (var cr = 1; cr < act.vals.length; cr++) {
+      if (String(act.vals[cr][act.idx['Account ID']] || '') !== id || String(act.vals[cr][act.idx['Deleted At']] || '')) continue;
+      var co = nwRowObj_(act, cr);
+      under.push({ id: co['Contact ID'], name: co['Full Name'], title: co['Title'], role: co['Role'] });
+    }
+    auditLog('data_read', sess.email, 'network_get', { accountId: id, contacts: under.length });
+    return { success: true, account: nwAccountPublic_(af.obj), contacts: under };
   }
   if (id.charAt(0) !== 'c') return { success: false, error: 'bad_id' };
   var found = nwFindRow_(nwSheetRead_(tabs.contacts), id);
@@ -1494,6 +1510,59 @@ function nwGetOp_(sess, p) {
   }
   auditLog('data_read', sess.email, 'network_get', { contactId: id, interactions: interactions.length });
   return { success: true, contact: contact, account: acc ? nwAccountPublic_(acc.obj) : null, interactions: interactions };
+}
+
+// PROJECT: ── N2 — accounts and the corpus attachment (§4.1, D4; NETWORK-SCHEMA.md §3 `Accounts`, §12, §13)
+// The account block's full payload: the save-path validator (relationship /
+// stage enums, the D5 stage rule, the slug shape) plus the three columns only
+// the Accounts surface edits — Tags, Newsroom URL, Notes. `dossier-proposed`
+// is an ordinary tag: the propose-a-dossier hook sets it through this op.
+function nwAccountFullFromPayload_(a) {
+  a = nwObj_(a);
+  var base = nwAccountFromPayload_(a);
+  var tags = nwStrList_(a.tags, 30).map(function(t) { return t.toLowerCase(); });
+  var news = nwStr_(a.newsroomUrl, 500);
+  if (news && !/^https?:\/\//i.test(news)) news = 'https://' + news;
+  base.tags = tags; base.newsroomUrl = news; base.notes = nwStr_(a.notes, 4000);
+  return base;
+}
+// nop=account — body-POST; edits one Account row the developer owns: the same
+// enum + stage validation as a save, then the row is rewritten with Updated
+// At. A rename rewrites Normalised Name (the dedupe key); the Drive folder is
+// renamed browser-side on the next save (§6). Audit: ids and counts only.
+function nwAccountOp_(sess, p) {
+  var aid = nwStr_(p.accountId);
+  if (!NW_ID_RE.test(aid) || aid.charAt(0) !== 'a') return { success: false, error: 'bad_account_id' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var a;
+  try { a = nwAccountFullFromPayload_(p.account); }
+  catch (vErr) { return { success: false, error: String((vErr && vErr.message) || 'INVALID_INPUT') }; }
+  if (!a.name) return { success: false, error: 'account_name_required' };
+  var tabs = ensureNetworkTabs_(), now = nwNow_();
+  var t = nwSheetRead_(tabs.accounts), found = nwFindRow_(t, aid);
+  if (!nwOwned_(found, scopeRes.owner)) return { success: false, error: 'not_found' };
+  var obj = found.obj, norm = nwNormaliseCompany_(a.name);
+  var renamed = obj['Name'] !== a.name ? 1 : 0;
+  if (renamed && norm) {
+    // The dedupe key must stay unique among the owner's live accounts.
+    for (var r = 1; r < t.vals.length; r++) {
+      if (String(t.vals[r][0] || '') === aid) continue;
+      if (String(t.vals[r][t.idx['Owner']] || '').toLowerCase() !== scopeRes.owner) continue;
+      if (String(t.vals[r][t.idx['Deleted At']] || '')) continue;
+      if (String(t.vals[r][t.idx['Normalised Name']] || '') === norm) return { success: false, error: 'account_name_taken' };
+    }
+  }
+  obj['Name'] = a.name; obj['Normalised Name'] = norm;
+  if (a.domain) obj['Domain'] = a.domain;
+  obj['Profiler Slug'] = a.slug; obj['Relationship'] = a.relationship; obj['Stage'] = a.stage;
+  obj['Segment IDs'] = JSON.stringify(a.segmentIds); obj['Tags'] = JSON.stringify(a.tags);
+  obj['HQ'] = a.hq; obj['Newsroom URL'] = a.newsroomUrl; obj['Notes'] = a.notes;
+  obj['Updated At'] = now;
+  nwWriteRow_(tabs.accounts, t.headers, obj, found.row);
+  bumpDataRev();
+  auditLog('data_write', sess.email, 'network_account', { accountId: aid, renamed: renamed, tags: a.tags.length });
+  return { success: true, accountId: aid, name: a.name, renamed: !!renamed, account: nwAccountPublic_(obj) };
 }
 
 // nop=delete / nop=restore — soft delete sets Deleted At, restore clears it

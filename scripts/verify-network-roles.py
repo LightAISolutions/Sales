@@ -53,6 +53,17 @@ contact is editable from its row (nop=update). v01.12w: the developer's
 own casing calls (RAI, the "Director, X" comma form) and the Tidy button
 that re-cases every saved contact through nop=get → nop=update.
 
+N2 — accounts and the corpus attachment (§4.1, D4) against the stub: the
+Accounts card is present for admin only; a row tap fetches the full account
+(nop=get with the a- id) with its live contacts beneath; Edit flips the
+relationship to partner and the stage select resets to none (D5), written
+through nop=account; a covered account (stub slug `abb`) renders the relative
+Profiler.html#abb deep link; the on-the-record check reads the SERVED
+profiler-data/abb.profile.json and shows the record's title for a matching
+decision-maker name; an uncovered account's Propose a dossier shows the exact
+`profiler <Company>` line and marks the account `dossier-proposed`; deleting
+an account with live contacts is refused with the count shown.
+
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
 executable_path. Do NOT run `playwright install`.
@@ -123,9 +134,22 @@ def gas_stub(role, counter, state=None):
             if role != 'admin':
                 body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
             elif 'nop=list' in url:
+                live = [c for c in state['contacts'] if not c.get('deletedAt')]
+                accts = [dict(a, contactCount=len([c for c in live if c['accountId'] == a['id']])) for a in state['accounts'] if not a.get('deletedAt')]
                 body = {'success': True, 'role': 'admin', 'caps': ['contacts'],
-                        'contacts': [c for c in state['contacts'] if not c.get('deletedAt')],
-                        'accounts': state['accounts'], 'folders': state['folders']}
+                        'contacts': live, 'accounts': accts, 'folders': state['folders']}
+            elif 'nop=account' in post:
+                state['posts'].append(('account', post))
+                a = json.loads(q(post, 'account') or '{}')
+                acc = next((x for x in state['accounts'] if x['id'] == q(post, 'accountId')), None)
+                if acc is None:
+                    body = {'success': False, 'error': 'not_found'}
+                elif a.get('stage', 'none') != 'none' and a.get('relationship') not in ('target', 'customer'):
+                    body = {'success': False, 'error': 'STAGE_NEEDS_TARGET_OR_CUSTOMER'}
+                else:
+                    renamed = acc['name'] != a.get('name')
+                    acc.update({k: a.get(k) for k in ('name', 'relationship', 'stage', 'slug', 'segmentIds', 'tags', 'hq', 'newsroomUrl', 'notes')})
+                    body = {'success': True, 'accountId': acc['id'], 'name': acc['name'], 'renamed': renamed, 'account': acc}
             elif 'nop=newid' in url:
                 body = {'success': True, 'id': 'c-0123456789abc'}
             elif 'nop=folders' in url:
@@ -183,12 +207,29 @@ def gas_stub(role, counter, state=None):
                 body = {'success': True, 'contactId': row['id'], 'accountId': acc['id'], 'accountName': acc['name'], 'accountCreated': False, 'accountChanged': changed}
             elif 'nop=links' in url:
                 body = {'success': True}
+            elif 'nop=get' in url and 'id=a-' in url:
+                aid = url.split('id=')[1].split('&')[0]
+                acc = next((x for x in state['accounts'] if x['id'] == aid), None)
+                body = ({'success': True, 'account': acc,
+                         'contacts': [{'id': c['id'], 'name': c['name'], 'title': c['title'], 'role': c['role']}
+                                      for c in state['contacts'] if c['accountId'] == aid and not c.get('deletedAt')]}
+                        if acc else {'success': False, 'error': 'not_found'})
             elif 'nop=get' in url:
                 cid = url.split('id=')[1].split('&')[0]
                 row = next((x for x in state['contacts'] if x['id'] == cid), None)
                 body = ({'success': True, 'contact': row['full'], 'account': next(x for x in state['accounts'] if x['id'] == row['accountId']),
                          'interactions': [{'id': 'i-0000000000002', 'kind': 'scan', 'date': '2026-09-21', 'summary': 'Card scanned'}]}
                         if row else {'success': False, 'error': 'not_found'})
+            elif ('nop=delete' in url or 'nop=restore' in url) and 'id=a-' in url:
+                aid = url.split('id=')[1].split('&')[0]
+                acc = next((x for x in state['accounts'] if x['id'] == aid), None)
+                live = len([c for c in state['contacts'] if c['accountId'] == aid and not c.get('deletedAt')])
+                if 'nop=delete' in url and live:
+                    body = {'success': False, 'error': 'account_has_contacts', 'count': live}
+                else:
+                    if acc:
+                        acc['deletedAt'] = '' if 'nop=restore' in url else '2026-09-21T00:00:00Z'
+                    body = {'success': True, 'id': aid, 'deletedAt': acc and acc['deletedAt']}
             elif 'nop=delete' in url or 'nop=restore' in url:
                 cid = url.split('id=')[1].split('&')[0]
                 row = next((x for x in state['contacts'] if x['id'] == cid), None)
@@ -271,6 +312,7 @@ def probe(page):
         header:  vis('#nw-header'),
         denied:  !!document.querySelector('#nw-app .nw-denied'),
         list:    !!document.querySelector('#nw-app #nw-list'),
+        accounts: !!document.querySelector('#nw-app #nw-accounts'),
         empty:   !!document.querySelector('#nw-app .nw-empty'),
         err:     !!document.querySelector('#nw-app .nw-err'),
         wall:    vis('#auth-wall'),
@@ -309,6 +351,10 @@ def load_as(browser, base, role, query='', state=None):
     ctx.route('**://script.google.com/**', gas_stub(role, counter, state))
     ctx.route('**://www.googleapis.com/**', drive_stub(counter))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
+    try:
+        ctx.grant_permissions(['clipboard-read', 'clipboard-write'], origin=base.split('/Network.html')[0])
+    except Exception:
+        pass
     ctx.add_init_script(seed_script(role))
     page = ctx.new_page()
     page.on('pageerror', lambda e: errors.append('PAGEERROR: ' + str(e)))
@@ -355,6 +401,8 @@ def run():
                                     % (role, got['list'], got['empty'], got['err']))
                 if got['denied']:
                     failures.append('%s: turned-away card rendered for the admitted tier' % role)
+                if not got['accounts']:
+                    failures.append('%s: the Accounts card is missing under the Contacts list' % role)
                 if len(data_reqs) != 1:
                     failures.append('%s: expected exactly one list request, saw %d' % (role, len(data_reqs)))
                 if got['rowOrder'] != 'scan,extract,sides' or not got['halves'] or not got['stacked']:
@@ -372,8 +420,8 @@ def run():
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
-                if got['list'] or got['empty']:
-                    failures.append('%s: list surface rendered for a turned-away tier' % role)
+                if got['list'] or got['empty'] or got['accounts']:
+                    failures.append('%s: list / accounts surface rendered for a turned-away tier' % role)
                 if got['capture'] or got['inputs']:
                     failures.append('%s: capture card / inputs in the DOM for a turned-away tier' % role)
                 if data_reqs:
@@ -682,6 +730,90 @@ def run():
             failures.append('delete: no Drive delete request for the card photo')
         if order[:1] != ['newid'] or 'upload' not in order or order.index('newid') > order.index('upload'):
             failures.append('drain: expected the id minted BEFORE the Drive upload (D8), saw %r' % order)
+        # ── N2 — accounts and the corpus attachment (§4.1, D4) ──────────────
+        # A covered account (slug abb — its dossier is SERVED from live-site-pages/profiler-data/, the shipped shape)
+        # with a decision-maker contact whose card title differs from the record.
+        state['accounts'].append({'id': 'a-0000000000002', 'name': 'ABB', 'slug': 'abb', 'relationship': 'partner', 'stage': 'none',
+                                  'segmentIds': ['grid-equipment'], 'tags': [], 'hq': 'Zurich, Switzerland', 'newsroomUrl': '', 'notes': '', 'updatedAt': '2026-09-21T00:00:00Z'})
+        state['contacts'].append({'id': 'c-6666666666666', 'accountId': 'a-0000000000002', 'name': 'Morten Wierod', 'title': 'Chief Executive', 'role': 'decision-maker',
+                                  'sourceEvent': '', 'metDate': today, 'updatedAt': '2026-09-21T00:00:09Z', 'email': 'mw@abb.example',
+                                  'full': {'id': 'c-6666666666666', 'accountId': 'a-0000000000002', 'fullName': 'Morten Wierod', 'title': 'Chief Executive', 'role': 'decision-maker',
+                                           'emails': [{'value': 'mw@abb.example', 'kind': 'work'}], 'phones': [], 'metDate': today, 'consent': 'unknown', 'dnc': False, 'tags': [], 'notes': ''}})
+        page.evaluate("() => nwAfterWrite()")
+        page.wait_for_function("() => document.querySelectorAll('#nw-accounts .nw-acct-row').length === 2", timeout=8000)
+        acct_rows = page.evaluate("() => [...document.querySelectorAll('#nw-accounts .nw-acct-row .nw-row-main')].map(r => r.textContent)")
+        if not any('Acme Energy' in t and 'Target' in t and 'Discovery' in t and '4 contacts' in t for t in acct_rows) \
+           or not any('ABB' in t and 'Partner' in t and '1 contact' in t for t in acct_rows):
+            failures.append('accounts: rows should read name · relationship · stage · contact count, got %r' % (acct_rows,))
+        href = page.evaluate("() => { const a = document.querySelector('#nw-accounts .nw-acct-row[data-id=\"a-0000000000002\"] a.nw-prof-link'); return a ? a.getAttribute('href') : ''; }")
+        if href != 'Profiler.html#abb':
+            failures.append('deep link: the covered account row should link Profiler.html#abb, got %r' % href)
+        if page.evaluate("() => Object.keys(_nwProfiles).length") != 0:
+            failures.append('on the record: a dossier was fetched on the list paint')
+        # Row tap → the full account (nop=get with the a- id) with its live contacts beneath.
+        page.click('#nw-accounts .nw-acct-row[data-id="a-0000000000002"] .nw-row-main')
+        page.wait_for_function("() => /Morten Wierod/.test((document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-row-detail') || {}).textContent || '')", timeout=8000)
+        page.wait_for_function("() => /Grid equipment/.test((document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-row-detail') || {}).textContent || '')", timeout=8000)
+        adet = page.evaluate("() => document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-row-detail').textContent")
+        ahref = page.evaluate("() => { const a = document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-row-detail a.nw-prof-link'); return a ? a.getAttribute('href') : ''; }")
+        if 'Open the ABB dossier' not in adet or 'Contacts (1)' not in adet or 'Zurich' not in adet or ahref != 'Profiler.html#abb' or not [u for u in reqs if 'nop=get' in u and 'id=a-0000000000002' in u]:
+            failures.append('account detail: wrong — text=%r href=%r' % (adet[:160], ahref))
+        page.screenshot(path=str(SHOTS / 'network-accounts.png'), full_page=False)
+        page.click('#nw-accounts .nw-acct-row[data-id="a-0000000000002"] .nw-row-main')   # close
+        # Edit: Acme (target · discovery) flipped to partner — the stage select resets to none (D5) and nop=account carries it.
+        page.click('#nw-accounts .nw-acct-row[data-id="a-0000000000001"] .nw-row-main')
+        page.wait_for_selector('#nw-accounts .nw-acct-row.nw-open .nw-acct-edit', timeout=8000)
+        page.click('#nw-accounts .nw-acct-row.nw-open .nw-acct-edit')
+        page.wait_for_selector('#nw-accounts .nw-row-detail .nw-editor input[data-account="name"]', timeout=5000)
+        pre = page.evaluate("""() => { const f = document.querySelector('#nw-accounts .nw-row-detail .nw-editor');
+            return [f.querySelector('input[data-account="name"]').value, f.querySelector('[data-review="relationship"]').value, f.querySelector('[data-review="stage"]').value,
+                    f.querySelector('[data-review="stage"]').disabled, !!f.querySelector('input[data-account="tags"]'), !!f.querySelector('textarea[data-account="notes"]')]; }""")
+        if pre != ['Acme Energy', 'target', 'discovery', False, True, True]:
+            failures.append('account edit: editor not pre-filled from the row: %r' % (pre,))
+        page.select_option('#nw-accounts .nw-row-detail .nw-editor select[data-review="relationship"]', 'partner')
+        gated = page.evaluate("() => { const s = document.querySelector('#nw-accounts .nw-row-detail .nw-editor select[data-review=\"stage\"]'); return [s.disabled, s.value]; }")
+        if gated != [True, 'none']:
+            failures.append('account edit: stage should be disabled and reset to none for partner, got %r' % (gated,))
+        page.fill('#nw-accounts .nw-row-detail .nw-editor input[data-account="hq"]', 'Austin, USA')
+        page.click('#nw-accounts .nw-row-detail .nw-editor button[type="submit"]')
+        page.wait_for_function("() => /Saved Acme Energy/.test((document.getElementById('nw-acct-status') || {}).textContent || '')", timeout=10000)
+        ap = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        aa = json.loads(ap.get('account', '{}'))
+        if state['posts'][-1][0] != 'account' or ap.get('accountId') != 'a-0000000000001' or aa.get('relationship') != 'partner' or aa.get('stage') != 'none' or aa.get('hq') != 'Austin, USA' or aa.get('name') != 'Acme Energy':
+            failures.append('account edit: nop=account payload wrong: %r' % ({k: aa.get(k) for k in ('name', 'relationship', 'stage', 'hq')},))
+        page.wait_for_function("() => /Partner/.test((document.querySelector('#nw-accounts .nw-acct-row[data-id=\"a-0000000000001\"]') || {}).textContent || '')", timeout=8000)
+        # The on-the-record check: the contact detail at the covered account fetches the served dossier only now.
+        page.click('#nw-list .nw-row[data-id="c-6666666666666"] .nw-row-main')
+        page.wait_for_selector('#nw-list .nw-row[data-id="c-6666666666666"] .nw-record', timeout=10000)
+        rec = page.evaluate("() => document.querySelector('#nw-list .nw-row[data-id=\"c-6666666666666\"] .nw-row-detail').textContent")
+        chref = page.evaluate("() => { const a = document.querySelector('#nw-list .nw-row[data-id=\"c-6666666666666\"] .nw-row-detail a.nw-prof-link'); return a ? a.getAttribute('href') : ''; }")
+        if 'On the record as' not in rec or 'CEO (since August 2024)' not in rec or 'Profiler, dossier of' not in rec or 'The card reads "Chief Executive"' not in rec or 'Grid equipment' not in rec or chref != 'Profiler.html#abb':
+            failures.append('on the record: wrong — text=%r href=%r' % (rec[:220], chref))
+        if page.evaluate("() => Object.keys(_nwProfiles).join(',')") != 'abb':
+            failures.append('on the record: expected exactly the abb dossier fetched, got %r' % page.evaluate("() => Object.keys(_nwProfiles)"))
+        page.screenshot(path=str(SHOTS / 'network-on-record.png'), full_page=False)
+        # Propose a dossier on the uncovered account: the exact `profiler <Company>` line, and the dossier-proposed tag through nop=account.
+        page.click('#nw-accounts .nw-acct-row[data-id="a-0000000000001"] .nw-row-main')
+        page.wait_for_selector('#nw-accounts .nw-acct-row.nw-open .nw-propose-btn', timeout=8000)
+        page.click('#nw-accounts .nw-acct-row.nw-open .nw-propose-btn')
+        page.wait_for_function("() => (document.querySelector('#nw-accounts .nw-row-detail .nw-copyline code') || {}).textContent === 'profiler Acme Energy'", timeout=8000)
+        page.wait_for_function("() => /profiler Acme Energy/.test((document.getElementById('nw-acct-status') || {}).textContent || '')", timeout=8000)
+        page.wait_for_function("() => /dossier-proposed/.test((document.querySelector('#nw-accounts .nw-row-detail [data-line=\"tags\"]') || {}).textContent || '')", timeout=8000)
+        pp = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        pa = json.loads(pp.get('account', '{}'))
+        if state['posts'][-1][0] != 'account' or 'dossier-proposed' not in (pa.get('tags') or []) or pa.get('relationship') != 'partner':
+            failures.append('propose: expected nop=account carrying the dossier-proposed tag on the unchanged row, got %r' % (pa.get('tags'),))
+        try:
+            clip = page.evaluate("() => navigator.clipboard.readText()")
+            if clip != 'profiler Acme Energy':
+                failures.append('propose: clipboard holds %r' % clip)
+        except Exception:
+            pass   # the visible line is the guaranteed fallback; the clipboard is best-effort in headless
+        # Delete an account with live contacts: refused with the count, nothing cascades.
+        page.click('#nw-accounts .nw-acct-row[data-id="a-0000000000001"] .nw-row-del')
+        page.wait_for_function("() => /still has 4 contacts/.test((document.getElementById('nw-acct-status') || {}).textContent || '')", timeout=8000)
+        if page.query_selector('#nw-accounts .nw-acct-row[data-id="a-0000000000001"].nw-deleted') or state['accounts'][0].get('deletedAt') or len([c for c in state['contacts'] if not c.get('deletedAt')]) != 5:
+            failures.append('account delete: the refusal should leave the account and its contacts untouched')
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
         if real_errs:
             failures.append('capture: %d page error(s): %s' % (len(real_errs), real_errs[0][:100]))
@@ -697,7 +829,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-8s %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['list']),
                                                   mark(g['empty']), mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png (%dx%d)'
+    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png (%dx%d)'
           % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
@@ -706,7 +838,10 @@ def run():
         return 1
     print('\nALL CHECKS PASSED — admin sees the capture card and the empty list; contributor, analyst and viewer are turned away '
           'with zero requests and no capture inputs; preview only subtracts; an offline capture queues and drains on reconnect; '
-          'review → save → Drive move → list row, merge on a duplicate, delete → restore and Save all round-trip against the stub.')
+          'review → save → Drive move → list row, merge on a duplicate, delete → restore and Save all round-trip against the stub; '
+          'N2: the Accounts card (admin only), the account detail with its contacts, the partner → stage-none edit through nop=account, '
+          'the Profiler.html#abb deep link, the on-the-record title from the served abb dossier, the profiler <Company> line and the '
+          'account_has_contacts refusal with its count.')
     return 0
 
 

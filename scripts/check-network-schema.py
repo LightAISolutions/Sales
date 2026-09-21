@@ -61,7 +61,8 @@ COUNT_SHAPES = [r'\b[A-Za-z_$][\w$]*\.(?:id|length|created)\b', r'\bnwFieldCount
                 r'\(?\b[A-Za-z_$][\w$]*\s*\?\s*\d+\s*:\s*\d+\)?']
 ALLOWED_KEYS = {'contactId', 'accountId', 'absorbedId', 'duplicateOf', 'interactionId', 'id', 'accounts', 'contacts',
                 'interactions', 'fields', 'sides', 'duplicate', 'accountCreated', 'count', 'error', 'operation', 'role',
-                'capability', 'op', 'ids', 'rows', 'signals', 'drafts', 'mailings', 'purged', 'retried', 'accountChanged'}
+                'capability', 'op', 'ids', 'rows', 'signals', 'drafts', 'mailings', 'purged', 'retried', 'accountChanged',
+                'renamed', 'tags'}   # N2: nop=account logs a rename flag and the tag COUNT, never a tag
 
 
 def schema_enums(text):
@@ -223,6 +224,22 @@ def run():
         findings.append('D5 stage rule: Network.html gateStage does not test target · customer (found %r)' % hr)
     if 'STAGE_NEEDS_TARGET_OR_CUSTOMER' not in gs:
         findings.append('D5 stage rule: Network.gs save validator does not refuse a stage without target · customer')
+    # N2: the same validator on both write paths — nop=save and nop=account
+    # must each reach the function that throws STAGE_NEEDS_TARGET_OR_CUSTOMER.
+    vm = re.search(r'function (nw\w+)\([^)]*\)\s*\{[^}]*?STAGE_NEEDS_TARGET_OR_CUSTOMER', gs)
+    validator = vm.group(1) if vm else None
+    if not validator:
+        findings.append('D5 stage rule: no Network.gs function throws STAGE_NEEDS_TARGET_OR_CUSTOMER')
+    for op, fn in (('save', 'nwSaveOp_'), ('account', 'nwAccountOp_')):
+        if not re.search(r"op === '%s'" % op, gs):
+            findings.append("nop=%s: handleNetworkOp_ does not dispatch op === '%s'" % (op, op)); continue
+        fm = re.search(r'function %s\(' % fn, gs)
+        if not fm:
+            findings.append('nop=%s: Network.gs has no %s' % (op, fn)); continue
+        fn_src = enclosing_function(gs, fm.start() + 9)
+        reach = validator and (validator + '(' in fn_src or ('nwAccountFullFromPayload_(' in fn_src and validator + '(' in enclosing_function(gs, gs.index('function nwAccountFullFromPayload_(') + 9)))
+        if not reach:
+            findings.append('nop=%s: %s does not validate the account through %s (D5 stage rule)' % (op, fn, validator or 'the stage validator'))
     # 2 — test ids
     for tf in TESTS:
         for n, line in enumerate(tf.read_text(encoding='utf-8').splitlines(), 1):
@@ -268,7 +285,7 @@ def run():
         for f in findings:
             print('  ✗', f)
         return 1
-    print('OK — enum mirrors identical, test ids opaque, id generation name- and date-free, audit rows ids and counts only.')
+    print('OK — enum mirrors identical, D5 validator on both nop=save and nop=account, test ids opaque, id generation name- and date-free, audit rows ids and counts only.')
     return 0
 
 

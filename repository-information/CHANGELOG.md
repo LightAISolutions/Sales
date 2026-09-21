@@ -3,14 +3,54 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
+*(No changes yet)*
+
+## [v06.94r] — 2026-09-21 06:47:37 AM EST
+
+> **Prompt:** "Run N2 — accounts and the corpus attachment — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.6 is the brief (follow its reading list in order, then its five build steps exactly), §4.1 and D4 the design, and repository-information/NETWORK-SCHEMA.md §3 (Accounts), §4, §12, §13 the shapes. N1 is done (v06.90r; Network.html v01.10w, Network.gs v01.05g): every saved contact already has an Account, the review card already resolves the company against the public registry and the D5 stage rule is enforced on both sides — build the Accounts surface, nop=account, the Profiler.html#<slug> deep links, the propose-a-dossier hook and the on-the-record check against decisionMakers[] on top of that, in the PROJECT regions of Network.gs and Network.html only. Keep every UI rule N1 set (no ids or confidence numbers on a card, the pill rows, the two-half control rows, the paper-and-ink family) and never touch the IndexedDB name, version or pending store. List ops stay minimum-necessary (§12); audit rows carry ids and counts only; the dossier file is fetched only when a detail opens. Verify with node --check on a .js copy of Network.gs, scripts/check-gas-inner-scripts.js, python3 scripts/check-readme-tree.py, scripts/verify-network-roles.py (zero page errors at phone width) and scripts/check-network-schema.py (exit 0). Page + GAS bumps with changelogs, CHANGELOG entry, flip §11's N2 row to Done with the versions and write the E1 brief as §13.7 (or the next free number) before closing — then hand off in chat what to check on the phone: an account row for every company saved from the 20 cards, the Profiler link on a covered one, the profiler <Company> line copied from an uncovered one, and the on-the-record title for any contact who is in a dossier's decision-makers. Do not touch Events, the bridge (B), the list's filters or exports (N3), or any interval (Q). Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG stands at Sections: 86/100 with eight sections dated 2026-09-21 EST — no rotation is due on any later date either (86 < 100), so expect none. One push."
+
+### Added
+
+#### `googleAppsScripts/Network/Network.gs` — v01.07g
+- **N2 — `nop=account`** (body-POST, `nwAccountOp_`): edits one owned Account row through `nwAccountFullFromPayload_` — the save-path validator (`nwAccountFromPayload_`: relationship / stage enums, the D5 `STAGE_NEEDS_TARGET_OR_CUSTOMER` rule, the slug shape) plus `Tags`, `Newsroom URL` (a bare host prefixed `https://`) and `Notes`; the row is rewritten with `Updated At`, a rename rewrites `Normalised Name` and is refused with `account_name_taken` when another live account of the owner holds the key; audit row `{ accountId, renamed, tags: <count> }`
+- **The list op's one widening** (§12): `contactCount` per account, counted server-side from the live contacts already in the payload — tags, HQ, notes and the newsroom URL stay detail-only
+- **`nop=get` on an `a-` id** answers the live contacts beneath the account (`contacts[] { id, name, title, role }`); `nwAccountPublic_` now carries `newsroomUrl`
+
+#### `live-site-pages/Network.html` — v01.14w
+- **The Accounts card** under the Contacts list (`nwAccountsCard` / `nwAccountRow`): one row per live account — name · relationship · stage · contact count, the `Profiler ↗` link on the row when covered, Delete → Restore on the side; tap → `nwAccountDetail` (`nop=get` with the `a-` id): relationship, the dossier link or the propose state, segments as registry labels, tags, HQ, newsroom, notes, the contacts beneath, **Edit** and **Propose a dossier**. The card's own status line (`nwAcctStatus`, kept across the post-write re-render like the Contacts card's) shows the `account_has_contacts` refusal with its count — nothing cascades
+- **`nwAccountBlock`** — the account block lifted out of `nwReviewSection` (covered / uncovered chip, the Profiler link checkbox, the relationship + stage two-half row under the D5 `gateStage`, the segments) and shared: the review card calls it as before; `nwEditAccount` calls it in full (name, tags, HQ, newsroom URL, notes) and writes back through `nop=account`; an unlinked account is offered the registry match for its name
+- **The Profiler deep link** (`nwProfilerHref` → relative `Profiler.html#<slug>`, same origin) on the account row, the account detail and the contact detail's account line (`nwAccountLine`); segments as their labels from `profiler-segments.json` (`nwSegments`, fetched once like the companies file)
+- **Propose a dossier** (D4, `nwProposeDossier`): the exact `profiler <Company Name>` line copied to the clipboard when the browser allows and always shown in a selectable `<code>` line; the account marked `dossier-proposed` through `nop=account`. Nothing is generated in-app
+- **The on-the-record check** (`nwRecordCheck`): for a contact at a covered account, `profiler-data/<slug>.profile.json` is fetched only when the detail opens (cached per slug for the page's lifetime — never on the list paint) and the contact's romanised name is compared with `decisionMakers[].name` through `nwNameKey` (the client mirror of `nwNameKey_`); a match shows "On the record as <title> — Profiler, <source or dossier date>", and a differing card title is a note under it, never written anywhere
+- **§6 folder rename on the next save** (`nwFolderRenameIfDrifted` in `nwEnsureAccountFolder`): one `files.get` for the folder's name, one `files.update` when it drifted from `nwSafeFolderName(accountName)` — a Tidy or an account edit that renamed the company now renames its Drive folder when the next card is filed there; soft on any Drive error
+
 ### Changed
 
+#### `scripts/check-network-schema.py`
+- Asserts the D5 validator is reached by **both** write paths — `op === 'save'` → `nwSaveOp_` and `op === 'account'` → `nwAccountOp_` must each call the function that throws `STAGE_NEEDS_TARGET_OR_CUSTOMER` (directly or through `nwAccountFullFromPayload_`); `renamed` (a flag) and `tags` (a count) join the audit-row allow-list
+
+#### `scripts/verify-network-roles.py`
+- The stub answers `nop=account`, `nop=get` for an `a-` id (with the contacts beneath), `contactCount` on the list and the `account_has_contacts` refusal with its count; the probe reports the Accounts card and every turned-away tier asserts its absence; the accounts round-trip — rows read name · relationship · stage · count, the `Profiler.html#abb` href on the covered row, no dossier fetched on the list paint, the account detail with its contacts and the segment label, Edit flipping Acme to `partner` with the stage select disabled and reset to `none` and the `nop=account` payload asserted, the on-the-record line from the **served** `abb.profile.json` (a real covered slug, the shipped shape) with the differing-title note, the `profiler Acme Energy` line and the `dossier-proposed` tag, the refusal with the count leaving the rows untouched; two new screenshots. Clipboard permission granted to the stub origin (best-effort)
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+- §11 N2 row → **Done — v06.94r**; **§13.7 written** — the E1 brief (Events scaffold + calendar, two sessions, E0 as a stated prerequisite) and its paste-in prompt
+
+#### `repository-information/NETWORK-SCHEMA.md`
+- §3: the `dossier-proposed` tag and the Accounts-card edit of `Newsroom URL` recorded; §12: `contactCount` named as the list op's one widening and the `a-` detail's contacts; §14: the checker's both-paths assertion
+
 #### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten at the close of the session (four pushes v06.90r–v06.93r; Tidy confirmed working on the phone; N2 next); the earlier entry moved to Previous Sessions under the two-session cap
+- Latest Session rewritten at the close of the previous session (four pushes v06.90r–v06.93r; Tidy confirmed working on the phone; N2 next); the earlier entry moved to Previous Sessions under the two-session cap
+
+#### `README.md`
+- Display v01.14w / v01.07g; the two checkers' descriptions carry N2
+
+### Notes
+- Still 2026-09-21 EST — 90 sections, twelve dated today and exempt; no rotation. CHANGELOG `Sections: 89/100` → `90/100`
+- The brief's numbers were a session behind: the repo stood at v06.93r (`Network.html` v01.13w, `Network.gs` v01.06g, CHANGELOG 89/100) when N2 started, not v06.90r / v01.10w / v01.05g / 86 — nothing in the build depended on them
 
 ## [v06.93r] — 2026-09-21 06:25:15 AM EST
 

@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 13/50`
+`Sections: 14/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.14w] — 2026-09-21 06:47:37 AM EST — v06.94r
+
+### Added
+- **Accounts.** A new card under Contacts lists every company you have saved a contact at — name, relationship, stage and how many contacts are there. Tap a row for the full account with its contacts beneath; **Edit** opens the same account block the review card uses, now in full (name, relationship, stage, segments, tags, HQ, newsroom page, notes) and saves it back. Renaming a company renames its photo folder in Drive the next time a card is filed there. Deleting an account that still has contacts is refused and tells you how many — nothing is removed for you; a deleted account can be restored with one tap
+- **Profiler link.** A company that has a Profiler dossier shows a **Profiler ↗** link on its account row, in the account detail and on the contact's account line, opening straight to that dossier; its segments are shown by name
+- **Propose a dossier.** An account with no dossier yet gets a one-tap **Propose a dossier** that copies the exact line to paste into a Profiler session (the line is also shown so it can be selected by hand) and marks the account as proposed
+- **On the record.** Opening a contact at a covered company checks the dossier's decision-makers: a matching name shows the title the dossier records and which revision it comes from; if the card's title differs, that is noted — nothing is changed on either side. The dossier is only read when the detail opens, never while the list loads
 
 ## [v01.13w] — 2026-09-21 06:25:15 AM EST — v06.93r
 

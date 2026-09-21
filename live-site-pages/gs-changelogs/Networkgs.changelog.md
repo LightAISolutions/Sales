@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07g] — 2026-09-21 06:47:37 AM EST — v06.94r
+
+### Added
+- **Editing an account.** An account's name, relationship, stage, segments, tags, HQ, newsroom page and notes can be changed from the app; the same checks as saving a contact apply (a stage other than None still needs a Target or Customer), and a rename is refused when another of your accounts already has that name
+- The account list now carries each account's contact count, and looking up an account also returns the contacts at it. Recorded as events with identifiers and counts only
 
 ## [v01.06g] — 2026-09-21 05:39:58 AM EST — v06.91r
 

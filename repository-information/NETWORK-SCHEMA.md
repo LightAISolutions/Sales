@@ -61,9 +61,9 @@ All timestamps are ISO-8601 UTC strings written by the server; dates the develop
 | Relationship | enum | §4 — single-valued |
 | Stage | enum | §4 — `none` unless Relationship ∈ `target` · `customer` (checker rule) |
 | Segment IDs | JSON string[] | Segment ids from `profiler-segments.json`, pre-filled from the registry's `segments[]` mirror when covered, editable |
-| Tags | JSON string[] | Freeform lowercase tags; the place a secondary relationship facet goes (D5) |
+| Tags | JSON string[] | Freeform lowercase tags; the place a secondary relationship facet goes (D5). `dossier-proposed` is set by the Accounts card's **Propose a dossier** hook (N2, D4) when the `profiler <Name>` line is handed to the developer — an ordinary tag, cleared by hand once the dossier exists and the account is linked |
 | HQ | string | City, Country |
-| Newsroom URL | string | Optional — the company's "events / meet us at" page (§5.5.1 row 4), fetched monthly by Events in E4 s2 |
+| Newsroom URL | string | Optional — the company's "events / meet us at" page (§5.5.1 row 4), fetched monthly by Events in E4 s2. Edited from the Accounts card (`nop=account`, N2); a bare host is prefixed `https://` |
 | Notes | string | Developer's own notes |
 | Created At · Updated At · Deleted At | ISO / ISO / ISO-or-empty | Soft delete per §13 |
 
@@ -268,7 +268,7 @@ Line folding at 75 octets and `\,` / `\;` / `\n` escaping per RFC 2426. The deve
 
 ## 12 · Audit-row rule and disclosure rows (D9)
 
-`auditLog(event, user, result, details)` is the template's function and is called on every data op. **`details` may carry ids (`a-`, `c-`, `i-`, `s-`, `d-`), counts, and the op name — never a card field**: no name, email, phone, company, address, note, or draft body, ever. The reviewer's test is `grep -n 'auditLog(' Network.gs` and reading each `details` argument. Every export and every share grant writes a **disclosure row** through the template's §164.528 machinery (`logDisclosure` or its equivalent in the auth template) naming the op, the row count and the ids exported — again never the contents. List ops return the minimum-necessary subset (`id`, name, company, title, role, relationship, stage, warmth, last touch, source event); detail ops return the full row.
+`auditLog(event, user, result, details)` is the template's function and is called on every data op. **`details` may carry ids (`a-`, `c-`, `i-`, `s-`, `d-`), counts, and the op name — never a card field**: no name, email, phone, company, address, note, or draft body, ever. The reviewer's test is `grep -n 'auditLog(' Network.gs` and reading each `details` argument. Every export and every share grant writes a **disclosure row** through the template's §164.528 machinery (`logDisclosure` or its equivalent in the auth template) naming the op, the row count and the ids exported — again never the contents. List ops return the minimum-necessary subset (`id`, name, company, title, role, relationship, stage, warmth, last touch, source event — and, since N2, the live `contactCount` per account); detail ops return the full row (`nop=get` on an `a-` id also answers the live contacts beneath as id · name · title · role).
 
 ## 13 · Soft delete, restore, purge (D8)
 
@@ -280,7 +280,7 @@ Line folding at 75 octets and `\,` / `\;` / `\n` escaping per RFC 2426. The deve
 ## 14 · Checkers
 
 - `scripts/verify-network-roles.py` (N0) — the four-tier door check against the live page, the `verify-profiler-roles.py` shape
-- `scripts/check-network-schema.py` (N1) — reads `Network.gs` and `Network.html`, asserts the three enum mirrors are identical to this file's lists, that every id literal in tests matches `NW_ID_RE`, that no id-generating function takes a name or a date as input, and that every `auditLog(` call's `details` argument is built from ids and counts only (a lexical check on the argument expression). Exit 1 on any finding
+- `scripts/check-network-schema.py` (N1; N2) — reads `Network.gs` and `Network.html`, asserts the three enum mirrors are identical to this file's lists, that the D5 stage validator (`STAGE_NEEDS_TARGET_OR_CUSTOMER`) is reached by **both** write paths — `nop=save` and `nop=account` — that every id literal in tests matches `NW_ID_RE`, that no id-generating function takes a name or a date as input, and that every `auditLog(` call's `details` argument is built from ids and counts only (a lexical check on the argument expression). Exit 1 on any finding
 - `node --check` on the `.gs` copy and `scripts/check-gas-inner-scripts.js`, as for every project
 
 Developed by: LightAISolutions
