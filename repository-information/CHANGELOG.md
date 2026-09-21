@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.97r] — 2026-09-21 12:04:57 PM EST
+
+> *(Scheduled check-in, fired by the Routine armed at v06.70r: "Monday's two earnings-desk runs should both be finished by now. Close out the 'Repo access denied' issue.")*
+
+### Fixed
+
+- **THE "REPO ACCESS DENIED" ISSUE IS CLOSED. THE REBUILD WORKS, AND A CONTROLLED A/B PROVED IT.** Both desks were deliberately left live for one Monday firing, identical in every respect except the attached repository. The OLD desk (`trig_01UyH77BMKJnxzBUZJ11ej6A`, no repository) fired 13:05:18Z and stood down in **33 seconds** — 48,101 context tokens, 1,200 output tokens, $0.11, no commit. The NEW desk (`trig_01HkrwpCULei8Gje6RGqcp1B`, `LightAISolutions/Sales` attached) fired 13:15:53Z and landed **`cdfafb36` — v06.96r, 13 files, +2,020 lines**: IREN, JinkoSolar and Oracle refreshed, archived at v4 / v5 / v4, registry and graph updated. **That is the first commit a scheduled run has ever landed in this repository.**
+- **THE MECHANISM IS VISIBLE IN THE SESSION RECORDS, not merely inferred.** The old run's `session_context` carries **neither `sources` nor `outcomes`**; the new run's carries `sources: [{git_repository: …/Sales}]` and `outcomes: [{… branches: ["claude/funny-shannon-0mrb4f"]}]` — exactly the shape an interactive session has, and exactly what has been missing from every fired session since August. It appears only because the repository was selected on the New routine form.
+- **The queue moved as designed.** `profiler-refresh-calendar.json` `updated` 2026-09-13 → 2026-09-21, four rows due → **one**: `iren` (due 2026-08-27) and `jinko` (2026-08-27) and `oracle` (2026-09-10) taken oldest-first, `novonix` (2026-09-14) correctly left for the next run by the cap of three. `iren` and `jinko` had been overdue since 27 August.
+
+### Changed
+
+#### `.claude/rules/profiler-app.md`
+- **The A/B recorded as a table beside the 2026-09-18 "cannot push" finding it confirms**, with both sessions' `session_context`, durations, token counts, costs and outcomes, so the proof sits next to the claim rather than in a changelog entry alone.
+- **The real cost of a working run recorded: about $14 and a quarter of the context window** for three companies, against eleven cents for each of the 34-second runs that did nothing. **The cheap runs were the broken ones** — a line worth keeping, because cost is the one signal that looked healthy throughout the failure.
+
+### Notes
+
+- **The old earnings desk can now be deleted.** It has served both purposes it was kept for: fallback, and control arm. Left for the developer to do — deletion loses its run history and is assumed irreversible, so it is not something a session should do unasked.
+- **C2 is the next rebuild and it fires Wednesday 2026-09-23 04:00 PDT.** Then the two Routines due 1 October and Industry Guidance on 15 October. The ACL health check stays as it is — read-only, working, nothing to gain.
+- **The reminder in `REMINDERS.md` is deliberately NOT marked complete.** It is the developer's note; per the User-Owned Content rule a session surfaces and answers it but does not close it.
+- **No rotation needed** — another session rotated the archive over the weekend, so the counter stands at **93 raw / 78 non-exempt** against a 100 trigger with fifteen sections dated 2026-09-21 EST.
 
 ## [v06.96r] — 2026-09-21 09:28:13 AM EST
 

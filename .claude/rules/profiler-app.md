@@ -185,6 +185,23 @@ Two consequences. **Anything a Routine must do belongs in its configured prompt*
 
 **SETTLED 2026-09-18: A ROUTINE-FIRED SESSION CAN CLONE BUT CANNOT PUSH. THE CLONE WORKAROUND IS NOT A FIX — ATTACHING THE REPOSITORY AT CREATION IS.** The earnings desk fired on Thursday 17 and Friday 18 September with the corrected STEP 0. Friday's run: **34 seconds, 47,441 context tokens, 1,315 output tokens, $0.11, no commit.** The token count proves it cloned — a session with no checkout spends near-zero — and the 34 seconds prove it stopped at the dry-run push rather than researching. `profiler-refresh-calendar.json` is untouched, still `updated: 2026-09-13` with `iren`, `jinko`, `oracle` and `novonix` due. So the two halves of repository access are **separable**, and only one of them is reachable from a prompt: **`git clone` over the session's git proxy authenticates for READ; WRITE is denied and no prompt instruction can grant it.** That is why the read-only ACL detector has run green all week while every committing Routine lands nothing.
 
+**PROVEN 2026-09-21 BY A CONTROLLED A/B, AND THE MECHANISM IS VISIBLE IN THE SESSION RECORDS.** Both desks were deliberately left live for one Monday firing, identical in every respect except the attached repository. The result:
+
+| | OLD `trig_01UyH77BMKJnxzBUZJ11ej6A` | NEW `trig_01HkrwpCULei8Gje6RGqcp1B` |
+|---|---|---|
+| `session_context` | `sources` and `outcomes` **both absent** | `sources: [{git_repository: …/Sales}]`, `outcomes: […branches: [claude/funny-shannon-0mrb4f]]` |
+| Duration | **33 s** | **4 m 24 s** first turn, ~14 m total |
+| Context tokens | 48,101 | **335,058** |
+| Output tokens | 1,200 | **138,201** |
+| Cost | $0.11 | **$13.86** |
+| Result | no commit | **`cdfafb36` — v06.96r, 13 files, +2,020 lines** |
+
+**That is the first commit a scheduled run has ever landed in this repository**, and the calendar moved with it: `updated` 2026-09-13 → 2026-09-21, four rows due → one, `iren` / `jinko` / `oracle` refreshed and archived at v4 / v5 / v4, `novonix` correctly left for the next run by the cap of three. **The `sources` / `outcomes` pair in the new session's record is the thing that was missing from every fired session since 2026-08** — it is exactly the shape an interactive session carries, and it appears only because the repository was selected on the New routine form.
+
+**Budget the real number.** A healthy three-company run costs about **$14** and a quarter of the context window; the fourteen months of "successful" 34-second runs cost eleven cents each and did nothing. The cheap runs were the broken ones.
+
+
+
 **The comparison that shows STEP 0 earned its place anyway.** On 2026-09-16 the same Routine spent about an hour researching IREN, Jinko and Oracle, committed locally, hit the denial at the last step, and lost everything — with the queue left in the dark. On 2026-09-18 it spent **34 seconds and eleven cents**, wrote nothing, advanced no row, and said exactly why. STEP 0 did not fix the access problem and was never going to; what it fixed is the **cost and the silence** of the failure. Keep it after the rebuild for exactly that reason: it is the thing that makes a future loss of write access cheap and loud instead of expensive and invisible.
 
 **THE REBUILD'S PRICE, MEASURED 2026-09-19: A UI-CREATED ROUTINE CAN NEVER BE EDITED BY AN AGENT AGAIN.** The rebuilt earnings desk carries `created_via: "http_api"`, and `update_trigger` refuses it outright: *"this routine was created via http_api, not by an agent. Agents can only update routines they created (via create_trigger)."* A Routine's own session may still set `enabled=false`; nothing else. **This retires, for every rebuilt Routine, the whole apparatus this repo has built around `update_trigger`** — the C3 session 3 rule, design §12 item 2, and the (rr66)/(rr68)/(rr69) sequence that spent three sessions getting one prompt amendment applied with the developer's approval. After a rebuild that path does not exist: a prompt change is a developer pasting into the UI, full stop. Write it down in the annex as before if you like, but no session will apply it.
