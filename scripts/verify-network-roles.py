@@ -585,7 +585,17 @@ def run():
         page.evaluate("() => nwAfterWrite()")
         page.wait_for_function("() => /SR\\. DIRECTOR/.test((document.getElementById('nw-list') || {}).textContent || '')", timeout=8000)
         page.click('#nw-list .nw-tidy-btn')
-        page.wait_for_function("() => /Tidy — 1 of 1/.test((document.getElementById('nw-cap-status') || {}).textContent || '')", timeout=15000)
+        # progress and the result are written INSIDE the Contacts card (v01.13w — the capture status is off-screen from the list on a phone)
+        try:
+            page.wait_for_function("() => /Tidy — 1 of 1/.test((document.getElementById('nw-list-status') || {}).textContent || '')", timeout=15000)
+        except Exception:
+            failures.append('tidy: no result line — status=%r cap=%r errors=%r' % (
+                page.evaluate("() => (document.getElementById('nw-list-status') || {}).textContent"),
+                page.evaluate("() => (document.getElementById('nw-cap-status') || {}).textContent"), errs[-3:]))
+        if not page.evaluate("() => { const el = document.getElementById('nw-list-status'); return el && el.style.display !== 'none' && el.classList.contains('nw-status-ok'); }"):
+            failures.append('tidy: the result line is not shown inside the Contacts card')
+        if page.evaluate("() => (document.getElementById('nw-tidy-btn') || {}).textContent") != '✨ Tidy titles & companies':
+            failures.append('tidy: the button did not return to its label after the run')
         page.wait_for_function("() => /Sr\\. Director, Storage Engineering/.test((document.getElementById('nw-list') || {}).textContent || '')", timeout=8000)
         tp = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
         if state['posts'][-1][0] != 'update' or json.loads(tp.get('contact', '{}')).get('title') != 'Sr. Director, Storage Engineering':

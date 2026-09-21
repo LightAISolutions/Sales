@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.93r] — 2026-09-21 06:25:15 AM EST
+
+> **Prompt:** "I tapped "Tidy titles and companies" and nothing happened. Fix it."
+
+### Fixed
+
+#### `live-site-pages/Network.html` — v01.13w
+- **Tidy gave no feedback where the developer was looking.** `nwTidySaved` reported only through `nwCaptureStatus` (the capture card's line at the top of the page — off-screen from the Contacts card on a phone) and called `nwAfterWrite()` only after the whole run, which takes 30–60 s against the real backend at one `nop=get` (+ one `nop=update`) per contact; from the list, nothing visibly changed. Now: the pill (`#nw-tidy-btn`) reads "Tidying N of M…" and is marked busy while it runs; a status line inside the Contacts card (`#nw-list-status`, `nwListStatus`, kept in `_nwListStatus` so it survives the list re-render — built directly into the new card rather than looked up, because the card is not in the DOM yet when it is assembled) carries progress and the result, including "everything was already in the standard form"; each changed row re-cases in place as its update lands (`nwRowRecase`); the per-contact work is wrapped so an exception or a failed `get` / `update` is counted and named in the result instead of ending the run silently
+
+### Changed
+
+#### `scripts/verify-network-roles.py`
+- The Tidy round-trip now asserts the result line inside the Contacts card (shown, ok-styled) and the button back at its label; a timeout on that wait reports the two status texts and the last page errors
+
+#### `README.md`
+- Display v01.13w
+
+### Notes
+- Still 2026-09-21 EST — 89 sections, eleven dated today and exempt; no rotation. CHANGELOG `Sections: 88/100` → `89/100`
+- Verified: `check-gas-inner-scripts.js`, `check-readme-tree.py` (0 findings), `verify-network-roles.py` (all checks passed), `check-network-schema.py` (exit 0). `Network.gs` untouched
 
 ## [v06.92r] — 2026-09-21 05:53:43 AM EST
 

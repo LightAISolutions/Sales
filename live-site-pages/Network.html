@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.12w">
+  <meta name="build-version" content="v01.13w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -518,6 +518,9 @@
     .nw-row-detail dt { font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); }
     .nw-row-detail dd { margin: 0 0 4px; word-break: break-word; }
     .nw-row-detail dd a { color: var(--nw-accent); }
+    .nw-tidy-row { margin: 0 0 8px; }
+    .nw-list-status { margin: 0 0 10px; }
+    .nw-list-status.nw-status-ok { font-size: 13px; font-weight: 400; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -5949,35 +5952,78 @@ function nwUpdateContact(rec, row) {
 // One tap; the status line reports what moved. A renamed account renames
 // for every contact on it (the row is shared).
 var _nwTidyBusy = false;
+var _nwListStatus = null;     // { text, level } — the Contacts card's own status line, kept across list re-renders
+// The Contacts card's status line: Tidy runs for 30–60 s against the real
+// backend, and the capture card's status is off-screen from the list on a
+// phone, so progress and the result are written HERE, beside the button.
+function nwListStatus(text, level) {
+  _nwListStatus = text ? { text: text, level: level || '' } : null;
+  var el = document.getElementById('nw-list-status');
+  if (!el) return;
+  el.textContent = text || '';
+  el.className = 'nw-status nw-list-status' + (level === 'warn' ? ' nw-status-warn' : level === 'err' ? ' nw-status-err' : level === 'ok' ? ' nw-status-ok' : '');
+  el.style.display = text ? '' : 'none';
+}
+function nwTidyButton(text, busy) {
+  var b = document.getElementById('nw-tidy-btn');
+  if (!b) return;
+  b.textContent = text; b.setAttribute('aria-busy', busy ? 'true' : 'false'); b.style.opacity = busy ? '.6' : '';
+}
+// Re-case one row in place as soon as its update lands, so the list moves
+// while the run is still going.
+function nwRowRecase(id, x, accountName) {
+  var row = document.querySelector('#nw-list .nw-row[data-id="' + id + '"] .nw-row-main');
+  if (!row) return;
+  row.innerHTML = '';
+  row.appendChild(document.createTextNode(x.fullName || '(unnamed)'));
+  row.appendChild(nwEl('small', null, [x.title, accountName || x.company].filter(Boolean).join(' · ')));
+}
 function nwTidySaved(contacts) {
-  if (_nwTidyBusy || !contacts.length) return;
+  if (_nwTidyBusy) return;
+  if (!contacts.length) { nwListStatus('No saved contacts to tidy yet.', 'warn'); return; }
   _nwTidyBusy = true;
-  var i = 0, changed = 0, failed = 0, changes = [];
+  var i = 0, changed = 0, failed = 0, changes = [], errs = [];
+  nwTidyButton('Tidying…', true);
+  nwListStatus('Tidying 0 of ' + contacts.length + '…', '');
+  function finish() {
+    _nwTidyBusy = false;
+    nwTidyButton('✨ Tidy titles & companies', false);
+    var text = '✓ Tidy — ' + changed + ' of ' + contacts.length + ' contact' + (contacts.length === 1 ? '' : 's') + ' changed'
+      + (failed ? ', ' + failed + ' failed' + (errs.length ? ' (' + errs[0] + ')' : '') : '')
+      + (changes.length ? ': ' + changes.slice(0, 6).join('; ') + (changes.length > 6 ? ' …' : '') : ' — everything was already in the standard form') + '.';
+    nwListStatus(text, failed ? 'warn' : 'ok');
+    nwCaptureStatus(text, failed ? 'warn' : 'ok', 0);
+    if (changed) nwAfterWrite();
+  }
+  function fail(why) { failed++; if (why && errs.length < 3) errs.push(String(why).slice(0, 60)); }
   function next() {
-    if (i >= contacts.length) {
-      _nwTidyBusy = false;
-      nwCaptureStatus('✓ Tidy — ' + changed + ' of ' + contacts.length + ' contact' + (contacts.length === 1 ? '' : 's') + ' changed' + (failed ? ', ' + failed + ' failed' : '') + (changes.length ? ': ' + changes.slice(0, 6).join('; ') + (changes.length > 6 ? ' …' : '') : '') + '.', failed ? 'warn' : 'ok', 0);
-      if (changed) nwAfterWrite();
-      return;
-    }
+    if (i >= contacts.length) { finish(); return; }
     var c0 = contacts[i++];
-    nwCaptureStatus('Tidying ' + i + ' of ' + contacts.length + '…', '', 0);
-    nwApi('get', { id: c0.id }, function(res) {
-      if (!(res && res.success && res.contact)) { failed++; next(); return; }
-      var rec = nwRecFromRow(res.contact, res.account);
-      var before = [rec.extraction.title, rec.extraction.department, rec.extraction.company];
-      rec.review.resolvedFor = '';
-      nwResolveCard(rec).then(function() {
-        nwTidyNames(rec.extraction);
-        var after = [rec.extraction.title, rec.extraction.department, rec.extraction.company];
-        if (before.join('|') === after.join('|')) { next(); return; }
-        nwApiBody('update', { contactId: rec.id, contact: JSON.stringify(nwContactPayload(rec)), account: JSON.stringify(nwAccountPayload(rec)) }, function(up) {
-          if (up && up.success) { changed++; changes.push((rec.extraction.fullName || rec.id) + ': ' + before.filter(function(v, k) { return v !== after[k]; }).join(' / ') + ' → ' + after.filter(function(v, k) { return v !== before[k]; }).join(' / ')); }
-          else failed++;
-          next();
-        });
-      }).catch(function() { failed++; next(); });
-    });
+    nwTidyButton('Tidying ' + i + ' of ' + contacts.length + '…', true);
+    nwListStatus('Tidying ' + i + ' of ' + contacts.length + '…' + (changed ? ' (' + changed + ' changed so far)' : ''), '');
+    try {
+      nwApi('get', { id: c0.id }, function(res) {
+        try {
+          if (!(res && res.success && res.contact)) { fail((res && res.error) || 'get_failed'); next(); return; }
+          var rec = nwRecFromRow(res.contact, res.account);
+          var before = [rec.extraction.title, rec.extraction.department, rec.extraction.company];
+          rec.review.resolvedFor = '';
+          nwResolveCard(rec).then(function() {
+            nwTidyNames(rec.extraction);
+            var after = [rec.extraction.title, rec.extraction.department, rec.extraction.company];
+            if (before.join('|') === after.join('|')) { next(); return; }
+            nwApiBody('update', { contactId: rec.id, contact: JSON.stringify(nwContactPayload(rec)), account: JSON.stringify(nwAccountPayload(rec)) }, function(up) {
+              if (up && up.success) {
+                changed++;
+                changes.push((rec.extraction.fullName || rec.id) + ': ' + before.filter(function(v, k) { return v !== after[k]; }).join(' / ') + ' → ' + after.filter(function(v, k) { return v !== before[k]; }).join(' / '));
+                nwRowRecase(rec.id, rec.extraction, up.accountName);
+              } else fail((up && up.error) || 'update_failed');
+              next();
+            });
+          }).catch(function(e) { fail(e && e.message); next(); });
+        } catch (inner) { fail(inner && inner.message); next(); }
+      });
+    } catch (outer) { fail(outer && outer.message); next(); }
   }
   next();
 }
@@ -6073,11 +6119,16 @@ function nwLoadList() {
     list.appendChild(nwEl('h2', null, 'Contacts'));
     if (contacts.length) {
       var tidyRow = nwEl('div', 'nw-strip-photos nw-tidy-row');
-      var tidyBtn = nwEl('a', 'nw-edit-btn nw-tidy-btn', '✨ Tidy titles & companies'); tidyBtn.href = '#'; tidyBtn.setAttribute('role', 'button');
+      var tidyBtn = nwEl('a', 'nw-edit-btn nw-tidy-btn', _nwTidyBusy ? 'Tidying…' : '✨ Tidy titles & companies'); tidyBtn.href = '#'; tidyBtn.id = 'nw-tidy-btn'; tidyBtn.setAttribute('role', 'button');
       tidyBtn.title = 'Apply the standard casing to every saved contact and account';
-      tidyBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwTidySaved(contacts.slice()); });
+      tidyBtn.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); nwTidySaved(contacts.slice()); });
       tidyRow.appendChild(tidyBtn);
       list.appendChild(tidyRow);
+      // Built directly — the card is not in the DOM yet, so nwListStatus's lookup could not find it.
+      var listStatus = nwEl('div', 'nw-status nw-list-status', _nwListStatus ? _nwListStatus.text : ''); listStatus.id = 'nw-list-status';
+      if (_nwListStatus) { var lv = _nwListStatus.level; listStatus.className += lv === 'warn' ? ' nw-status-warn' : lv === 'err' ? ' nw-status-err' : lv === 'ok' ? ' nw-status-ok' : ''; }
+      else listStatus.style.display = 'none';
+      list.appendChild(listStatus);
     }
     if (!contacts.length) {
       var empty = nwEl('div', 'nw-empty');

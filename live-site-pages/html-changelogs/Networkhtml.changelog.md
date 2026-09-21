@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 12/50`
+`Sections: 13/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.13w] — 2026-09-21 06:25:15 AM EST — v06.93r
+
+### Fixed
+- **Tidy titles & companies looked like it did nothing.** It was running — but its progress and result were written on the capture card at the top of the page, and the list only redrew once every contact had been checked (half a minute or more). Now the button itself reads "Tidying 3 of 20…" while it runs, a line inside the Contacts list shows progress and then the result (what changed, or that everything was already in the standard form), and each corrected row re-cases as soon as its change lands. A contact that cannot be read or saved is counted and named instead of stopping the run silently
 
 ## [v01.12w] — 2026-09-21 05:53:43 AM EST — v06.92r
 

@@ -7,7 +7,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 ## Latest Session
 
 **Date:** 2026-09-21 05:01:07 AM EST
-**Repo version:** v06.92r — three pushes this session (`96f04a5` v06.90r the session-2 build, `39dc362` v06.91r titles / departments / company standardised + saved contacts editable, this one — the developer's fourteen casing calls encoded, the Tidy pill), on `claude/youthful-ride-75oah0` (restarted from `origin/main` f1abee3)
+**Repo version:** v06.93r — four pushes this session (`44cacfb` v06.92r, then this v01.13w Tidy-feedback fix) (`96f04a5` v06.90r the session-2 build, `39dc362` v06.91r titles / departments / company standardised + saved contacts editable, this one — the developer's fourteen casing calls encoded, the Tidy pill), on `claude/youthful-ride-75oah0` (restarted from `origin/main` f1abee3)
 **Branch:** `claude/youthful-ride-75oah0`
 **Model:** Fable 5.1 (N1 session 2 brief)
 
@@ -24,7 +24,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ### Where we left off
 
-**The 20 cards are saved** (the developer corrected fourteen titles / companies by name at v06.92r). Next on the phone: tap **✨ Tidy titles & companies** once so the rule lands on the rows saved before it (Avantus, RAI Energy, the Director/Sr. Director titles). N2 (§13.6) is next; E0 (§13.4) can still run beside it.
+**The 20 cards are saved** (the developer corrected fourteen titles / companies by name at v06.92r). Tidy was tapped at v01.12w and "nothing happened" (feedback was off-screen; fixed at v01.13w with in-card progress). Next on the phone: tap **✨ Tidy titles & companies** once more so the rule lands on the rows saved before it (Avantus, RAI Energy, the Director/Sr. Director titles). N2 (§13.6) is next; E0 (§13.4) can still run beside it.
 
 ### Key decisions made
 
@@ -37,8 +37,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ### Active context
 
-- **Repo version v06.92r.** `CHANGELOG.md` at `Sections: 88/100`, ten dated 2026-09-21 — 78 non-exempt today, 88 on any later date: **no rotation due**. Archive at 504 sections.
-- Network page changelog `Sections: 12/50`, GAS `6/50`. Screenshots in `.playwright-screenshots/` (`network-save-list.png`, `network-save-merge.png`). `pip install playwright` is needed in a fresh container; Chromium under `/opt/pw-browsers`.
+- **Repo version v06.93r.** `CHANGELOG.md` at `Sections: 89/100`, eleven dated 2026-09-21 — 78 non-exempt today, 89 on any later date: **no rotation due**. Archive at 504 sections.
+- Network page changelog `Sections: 13/50`, GAS `6/50`. Screenshots in `.playwright-screenshots/` (`network-save-list.png`, `network-save-merge.png`). `pip install playwright` is needed in a fresh container; Chromium under `/opt/pw-browsers`.
 - **Untested live:** the real Drive `files.update` move, `nop=save` against the real spreadsheet (first rows ever written to `Contacts` / `Accounts` / `Interactions`), the registry fetch from Pages. The stub exercised the request order and payloads only.
 - **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()`.
 - **§13 numbering:** N2 brief is §13.6; N2 writes the E1 brief as §13.7 (or the next free number if E0 adds one).
