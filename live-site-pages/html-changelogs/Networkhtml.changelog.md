@@ -3,11 +3,25 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10w] — 2026-09-21 05:01:07 AM EST — v06.90r
+
+### Added
+- **Review and save a card.** Edit on a held card now opens the full review: the person's role, the account block (company, relationship — Target by default for a card from a show — and stage, which can leave None only for a Target or Customer account), the source event, the date you met (the day the card was scanned, editable), marketing consent and a do-not-contact switch. **Save** files the card as a contact; **Save all** files the whole stack in order
+- **Companies are recognised.** When the company on a card is one the Profiler record covers, the review says so and proposes the link and its segments; you confirm or untick it. Any other company becomes a new account of yours, and a company you already have is reused
+- **Duplicates are offered a merge, never dropped.** When a card matches a contact you already have — by email, then phone, then name at the same company — the card shows both side by side, one row per detail that differs, with the new card chosen by default. Merge keeps the existing contact and both cards' photos; "Keep as a separate contact" is there for two people who genuinely match
+- **Photos move to the company folder** in your own Drive when a card is saved — from the inbox folder into a folder named after the company, created on the first save for that company
+- **Retry** reads the card again from the same photos; **Swap** turns a two-sided card's front and back around
+- **The contacts list** shows name, title and company; tap a row for every detail and the card's history; **Delete** hides a contact and a one-tap **Restore** brings it back
+- A detail the reading was unsure of is outlined in the editor until you change or accept it
+
+### Changed
+- The held-card notes and the empty-list text no longer say saving arrives later — it is here
 
 ## [v01.09w] — 2026-09-21 04:12:37 AM EST — v06.88r
 

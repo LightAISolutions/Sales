@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.09w">
+  <meta name="build-version" content="v01.10w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -477,6 +477,47 @@
     .nw-editor label { display: block; font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); margin: 0 0 6px; }
     .nw-editor input { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); }
     .nw-editor-actions { display: flex; gap: 8px; margin-top: 4px; }
+    /* PROJECT: N1 s2 — review fields on the editor, the merge sheet, the list rows */
+    .nw-editor select, .nw-editor input[type="date"] { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 44px; }
+    .nw-editor select:disabled { opacity: .5; }
+    .nw-editor .nw-editor-h { font: 600 12px/1.6 var(--nw-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--nw-accent); margin: 12px 0 6px; padding-top: 10px; border-top: 1px solid var(--nw-line); }
+    .nw-editor .nw-editor-h:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+    .nw-editor .nw-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .nw-editor label.nw-check { display: flex; align-items: center; gap: 10px; text-transform: none; letter-spacing: 0; font: 14px/1.4 var(--nw-serif); color: var(--nw-ink); min-height: 44px; }
+    .nw-editor label.nw-check input { width: 22px; height: 22px; display: inline-block; margin: 0; }
+    .nw-covered { font: 12px/1.6 var(--nw-mono); color: var(--nw-muted); background: #eef2f7; border-left: 3px solid var(--nw-accent); padding: 6px 10px; border-radius: 0 6px 6px 0; margin: 0 0 8px; }
+    .nw-covered b { color: var(--nw-accent); }
+    .nw-covered.nw-uncovered { background: #f7f4ee; border-left-color: var(--nw-line2); }
+    .nw-editor input.nw-low, .nw-editor .nw-low input { border-color: var(--nw-gold); box-shadow: 0 0 0 2px rgba(201,138,46,.25); }
+    .nw-strip-photos a.nw-save-btn { background: var(--nw-accent); border-color: var(--nw-accent); color: #fff; }
+    .nw-strip-photos a.nw-retry-btn, .nw-strip-photos a.nw-swap-btn { color: var(--nw-muted); }
+    .nw-strip.nw-saving { opacity: .6; pointer-events: none; }
+    .nw-saveall { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--nw-line); padding: 10px 0 6px; }
+    .nw-saveall span { font: 12px/1.6 var(--nw-mono); color: var(--nw-faint); }
+    .nw-saveall .nw-btn { flex: 0 0 auto; min-width: 46%; }
+    .nw-sheet { margin: 8px 0 4px; padding: 12px; border: 1px solid var(--nw-gold); border-radius: 8px; background: #fffaf0; }
+    .nw-sheet h3 { margin: 0 0 4px; font: 600 15px/1.4 var(--nw-serif); color: var(--nw-ink); }
+    .nw-sheet p { margin: 0 0 8px; font-size: 13px; color: var(--nw-muted); }
+    .nw-merge-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 0 0 6px; }
+    .nw-merge-row .nw-merge-f { grid-column: 1 / -1; font: 11px/1.4 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); }
+    .nw-merge-row label { display: flex; gap: 6px; align-items: flex-start; font: 13px/1.4 var(--nw-serif); color: var(--nw-ink); border: 1px solid var(--nw-line2); border-radius: 6px; padding: 7px 8px; background: var(--nw-card); word-break: break-word; cursor: pointer; }
+    .nw-merge-row label input { margin: 2px 0 0; flex: 0 0 auto; }
+    .nw-merge-row label.nw-same { grid-column: 1 / -1; color: var(--nw-muted); }
+    .nw-sheet .nw-editor-actions { flex-wrap: wrap; }
+    .nw-sheet .nw-editor-actions .nw-btn { min-width: 46%; }
+    .nw-row { flex-wrap: wrap; cursor: pointer; }
+    .nw-row .nw-row-main { flex: 1 1 60%; }
+    .nw-row .nw-row-main small { display: block; }
+    .nw-row.nw-deleted { opacity: .7; }
+    .nw-row.nw-deleted .nw-row-main { text-decoration: line-through; }
+    .nw-row .nw-row-side { flex: 0 0 auto; display: flex; gap: 6px; align-items: center; }
+    .nw-row .nw-row-side a { font: 600 12px/1 var(--nw-serif); color: var(--nw-accent); border: 1px solid var(--nw-line2); border-radius: 999px; padding: 7px 10px; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; white-space: nowrap; }
+    .nw-row .nw-row-side a.nw-row-del { color: var(--nw-dis); }
+    .nw-row-detail { flex: 1 1 100%; display: none; margin: 6px 0 2px; font-size: 13px; line-height: 1.6; border-left: 3px solid var(--nw-line); padding-left: 10px; cursor: default; }
+    .nw-row.nw-open .nw-row-detail { display: block; }
+    .nw-row-detail dt { font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); }
+    .nw-row-detail dd { margin: 0 0 4px; word-break: break-word; }
+    .nw-row-detail dd a { color: var(--nw-accent); }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4322,8 +4363,8 @@ function ovDocVersion() {
 // PROJECT: ── Network — N0 scaffold ──────────────────────────────────────
 // Design: repository-information/NETWORK-EVENTS-DESIGN-PLAN.md; shapes:
 // NETWORK-SCHEMA.md. This page paints the door, the masthead, the capture
-// card (N1 session 1 — below) and the list; the review card, dedupe and
-// save are N1 session 2. Everything below is
+// card (N1 session 1), the review card, dedupe, save and the list rows
+// (N1 session 2). Everything below is
 // page-side and reads over action=network; nwRequire_ on the server is the
 // real boundary — the client mirror only decides what to paint and, for a
 // turned-away tier, guarantees that NOT ONE data request is issued.
@@ -4428,7 +4469,7 @@ function nwEl(tag, cls, text) {
 
 // PROJECT: ── N1 session 1 — capture → offline queue → own-Drive → extraction
 // The pipeline of NETWORK-EVENTS-DESIGN-PLAN.md §4.2 up to the extraction;
-// the review card, dedupe and save are session 2. Every step is page-side
+// the review card, dedupe and save follow (session 2). Every step is page-side
 // except the model call: the c- id is minted by nop=newid BEFORE the photos
 // are uploaded (D8 — the Drive filename is opaque from the first byte), the
 // photos go to the signed-in user's OWN Drive with their drive.file token
@@ -4460,7 +4501,7 @@ function nwSetBatchSides(n) {
 var _nwBusy = false;
 var _nwDraining = false;
 var _nwLastExtractAt = 0;
-var _nwPending = [];          // extracted, not yet saved — session 2's review card reads these
+var _nwPending = [];          // extracted, not yet saved — the review card and Save read these
 
 // ── Transport for image bytes ─────────────────────────────────────────────
 // _gasPost puts the params on the URL; two 2,000 px JPEGs do not fit there,
@@ -4749,8 +4790,9 @@ function nwProcessPair(pair, onStatus) {
           frontLink: (up.front && up.front.link) || '', backLink: (up.back && up.back.link) || '',
           driveError: up.error || '', createdAt: new Date().toISOString() };
         _nwPending.push(rec);
+        _nwHeldB64[cid] = { front: pair.front, back: pair.back || null };
         return nwPendingPut(rec).catch(function() {}).then(function() {
-          nwRenderStrip(rec);
+          nwRenderStrip(rec); nwSaveAllRefresh();
           if (up.error) onStatus('Read — but the photos could not be filed in Drive (' + up.error + '); they will be retried on save.', 'warn', 4);
           else onStatus('Read and filed in Drive.', 'ok', 4);
           return rec;
@@ -5010,13 +5052,7 @@ function nwDriveIdFromLink(link) { var m = /\/d\/([A-Za-z0-9_-]{10,})/.exec(Stri
 // user's Drive (created by this app, so the drive.file token may delete them).
 function nwDeleteCard(rec, quiet) {
   if (!quiet && !window.confirm('Delete this card and its photos? This cannot be undone.')) return Promise.resolve(false);
-  _nwPending = _nwPending.filter(function(o) { return o.id !== rec.id; });
-  var box = document.getElementById('nw-extracted');
-  var strip = box && box.querySelector('.nw-strip[data-id="' + rec.id + '"]');
-  if (strip) strip.remove();
-  if (box && !box.querySelector('.nw-strip') && !box.querySelector('.nw-empty')) {
-    box.appendChild(nwEl('div', 'nw-empty', 'Cards you read are held here — tap a name for the fields, Edit to correct them, or open the photos. Saving to Contacts arrives in the next release.'));
-  }
+  nwRemoveStrip(rec);
   var ids = [nwDriveIdFromLink(rec.frontLink), nwDriveIdFromLink(rec.backLink)].filter(Boolean);
   if (ids.length) {
     nwDriveToken(function(tok) {
@@ -5089,6 +5125,20 @@ function nwRenderStrip(rec) {
   delBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwDeleteCard(rec, false); });
   photos.appendChild(delBtn);
   strip.appendChild(photos);
+  // Session 2: the second pill row — Retry extraction, Swap front / back, Save.
+  var acts = nwEl('div', 'nw-strip-photos nw-strip-acts');
+  var retryBtn = nwEl('a', 'nw-edit-btn nw-retry-btn', '↻ Retry'); retryBtn.href = '#'; retryBtn.setAttribute('role', 'button'); retryBtn.title = 'Read the card again';
+  retryBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwRetryExtraction(rec); });
+  acts.appendChild(retryBtn);
+  if (rec.backLink) {
+    var swapBtn = nwEl('a', 'nw-edit-btn nw-swap-btn', '⇄ Swap'); swapBtn.href = '#'; swapBtn.setAttribute('role', 'button'); swapBtn.title = 'Swap front and back';
+    swapBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwSwapSides(rec); });
+    acts.appendChild(swapBtn);
+  }
+  var saveBtn = nwEl('a', 'nw-edit-btn nw-save-btn', '💾 Save'); saveBtn.href = '#'; saveBtn.setAttribute('role', 'button');
+  saveBtn.addEventListener('click', function(ev) { ev.preventDefault(); if (!_nwSaveAllBusy) nwSaveCard(rec); });
+  acts.appendChild(saveBtn);
+  strip.appendChild(acts);
   var meta = nwEl('div', 'nw-strip-meta');
   // The Front / Back pills already say how many sides there are.
   meta.appendChild(document.createTextNode((rec.viaQr ? 'from QR · ' : '') + (rec.edited ? 'edited · ' : '')));
@@ -5107,6 +5157,11 @@ function nwRenderStrip(rec) {
   row('Phone', (x.phones || []).map(function(p) { return p.number + (p.kind ? ' (' + p.kind + ')' : ''); }).join(', '), 'phones');
   row('Address', x.address, 'address'); row('Website', x.website, 'website'); row('LinkedIn', x.linkedin);
   row('Other', (x.socials || []).join(', ')); row('Languages', (x.languages || []).join(', '));
+  var rv0 = nwReviewOf(rec);
+  row('Role', nwLabel('role', rv0.role));
+  row('Account', [nwLabel('relationship', rv0.relationship), rv0.stage !== 'none' ? nwLabel('stage', rv0.stage) : '', rv0.linkSlug && rv0.slug ? 'Profiler: ' + rv0.slug : ''].filter(Boolean).join(' · '));
+  row('Met', [rv0.metDate, rv0.sourceEvent].filter(Boolean).join(' at '));
+  row('Consent', nwLabel('consent', rv0.consent) + (rv0.dnc ? ' · do not contact' : ''));
   row('Captured', String(rec.createdAt || '').replace('T', ' ').slice(0, 16));
   strip.appendChild(dl);
   var empty = box.querySelector('.nw-empty');
@@ -5134,7 +5189,18 @@ function nwEditCard(rec, focusField) {
     inp.autocomplete = 'off'; inp.autocapitalize = (f === 'emails' || f === 'website' || f === 'linkedin') ? 'none' : 'words';
     if (f === 'emails') inp.inputMode = 'email'; if (f === 'phones') inp.inputMode = 'tel'; if (f === 'website' || f === 'linkedin') inp.inputMode = 'url';
     if (f === 'emails' || f === 'phones') inp.placeholder = 'comma-separated';
+    // Session 2: a field the model was unsure of is outlined until it is
+    // edited or accepted (the same reading nwUnclearFields gives the note).
+    if (NW_CONFIDENCE_FIELDS.indexOf(f) >= 0 && nwUnclearFields(rec).indexOf(f) >= 0) inp.className = 'nw-low';
     label.appendChild(inp); form.appendChild(label); inputs[f] = inp;
+  });
+  // Session 2: the review block — role, the account block, source event,
+  // met date, consent, do-not-contact — after the company is resolved.
+  var readReview = null;
+  nwResolveCard(rec).then(function() {
+    if (!form.parentNode) return;
+    readReview = nwReviewSection(rec, form);
+    form.insertBefore(actions, null);
   });
   var actions = nwEl('div', 'nw-editor-actions');
   var save = nwEl('button', 'nw-btn nw-btn-primary', 'Save changes'); save.type = 'submit';
@@ -5162,6 +5228,8 @@ function nwEditCard(rec, focusField) {
     });
     rec.extraction = nx;
     if (changed) rec.edited = true;
+    if (readReview) readReview();
+    if (changed && rec.review) rec.review.resolvedFor = '';   // the company may have changed — resolve again
     nwPendingSave(rec).then(function() {
       nwRenderStrip(rec);
     });
@@ -5248,8 +5316,14 @@ function nwCaptureMount(app) {
   drain.addEventListener('click', function(ev) { ev.preventDefault(); nwQueueDrain(); });
   queue.appendChild(drain);
   card.appendChild(queue);
+  var saveAll = nwEl('div', 'nw-saveall'); saveAll.id = 'nw-saveall'; saveAll.style.display = 'none';
+  var saveAllN = nwEl('span', null, ''); saveAllN.id = 'nw-saveall-n'; saveAll.appendChild(saveAllN);
+  var saveAllBtn = nwEl('button', 'nw-btn nw-btn-primary', '💾 Save all'); saveAllBtn.id = 'nw-saveall-btn'; saveAllBtn.type = 'button';
+  saveAllBtn.addEventListener('click', nwSaveAll);
+  saveAll.appendChild(saveAllBtn);
+  card.appendChild(saveAll);
   var box = nwEl('div'); box.id = 'nw-extracted';
-  var none = nwEl('div', 'nw-empty', 'Cards you read are held here — tap a name for the fields, Edit to correct them, or open the photos. Saving to Contacts arrives in the next release.');
+  var none = nwEl('div', 'nw-empty', NW_HELD_EMPTY);
   box.appendChild(none);
   card.appendChild(box);
   app.appendChild(card);
@@ -5260,8 +5334,525 @@ function nwCaptureMount(app) {
       if (nwTidyNames(rec.extraction)) nwPendingPut(rec).catch(function() {});
       _nwPending.push(rec); nwRenderStrip(rec);
     });
+    nwSaveAllRefresh();
   }).catch(function() {});
   if (navigator.onLine !== false) setTimeout(nwQueueDrain, 1500);
+}
+
+// PROJECT: ── N1 session 2 — review → company resolution → dedupe → save ──
+// The rest of the §4.2 pipeline, on the held card's editor. Company
+// resolution reads the public Profiler registry once per page; the dedupe
+// is answered by the server BEFORE any write (nop=dupcheck) so a match is
+// laid beside the held card for a field-by-field merge; nop=save writes the
+// three rows; then the pair MOVES in the user's own Drive from _inbox/ to
+// <Company>/ (files.update addParents/removeParents), the new links are
+// written back (nop=links), the held record leaves IndexedDB and the list
+// refreshes through nwAfterWrite() (D14 — no poll).
+var NW_REGISTRY_URL = 'profiler-data/profiler-companies.json';   // relative — public Pages, never a GitHub API URL
+var _nwRegistry = null;       // { byName: {norm → company}, byDomain: {domain → company} } once fetched
+var _nwRegistryP = null;
+var _nwHeldB64 = {};          // c- id → { front, back } for cards scanned in THIS tab (retry without a Drive read)
+var _nwAccountsById = {};     // from the list payload — id → { id, name, slug, relationship, stage }
+var _nwSaveAllBusy = false;
+
+// The client half of nwNormaliseCompany_ (Network.gs) — the same dedupe key,
+// so a company the registry lists under another legal form still resolves.
+var NW_LEGAL_SUFFIX_RE = /\b(inc|incorporated|llc|l\.l\.c|ltd|limited|gmbh|ag|sa|s\.a|srl|bv|b\.v|nv|plc|co|corp|corporation|company|holdings?|group|pty|pte|kk|k\.k|oy|ab|as|spa|s\.p\.a)\b\.?/g;
+function nwNormaliseCompany(name) {
+  return String(name || '').toLowerCase().replace(/&/g, ' and ').replace(NW_LEGAL_SUFFIX_RE, ' ')
+    .replace(/[^a-z0-9À-ɏ぀-ヿ㐀-鿿가-힯 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function nwDomainOf(website, emails) {
+  var w = String(website || '').trim().toLowerCase().replace(/^[a-z]+:\/\//, '').replace(/^www\./, '').split(/[\/?#]/)[0];
+  if (w && w.indexOf('.') > 0) return w;
+  var es = emails || [];
+  for (var i = 0; i < es.length; i++) {
+    var v = String((es[i] && es[i].value) || '').toLowerCase(), at = v.indexOf('@');
+    if (at > 0) return v.slice(at + 1).replace(/^www\./, '');
+  }
+  return '';
+}
+// One public fetch, cached for the page's lifetime. A registry that cannot be
+// read (offline in the hall) resolves to an empty index — every company is
+// then a local Account, which is the right fallback.
+function nwRegistry() {
+  if (_nwRegistry) return Promise.resolve(_nwRegistry);
+  if (_nwRegistryP) return _nwRegistryP;
+  _nwRegistryP = fetch(NW_REGISTRY_URL, { cache: 'no-store' }).then(function(r) { return r.ok ? r.json() : null; })
+    .then(function(d) {
+      var byName = {}, byDomain = {};
+      ((d && d.companies) || []).forEach(function(c) {
+        if (!c || !c.slug) return;
+        var entry = { slug: c.slug, name: c.name || c.slug, segmentIds: (c.segments || []).map(function(sg) { return sg && sg.id; }).filter(Boolean), hq: c.hq || '' };
+        [c.name].concat(c.aka || []).forEach(function(n) { var k = nwNormaliseCompany(n); if (k && !byName[k]) byName[k] = entry; });
+        (c.domains || []).forEach(function(dm) { var k = String(dm || '').toLowerCase().replace(/^www\./, ''); if (k && !byDomain[k]) byDomain[k] = entry; });
+      });
+      _nwRegistry = { byName: byName, byDomain: byDomain };
+      return _nwRegistry;
+    }).catch(function() { _nwRegistry = { byName: {}, byDomain: {} }; return _nwRegistry; });
+  return _nwRegistryP;
+}
+// name / aka[] first, then the card's domain against domains[] (a subdomain
+// of a listed domain counts). Resolves to the registry entry or null.
+function nwResolveCompany(name, domain) {
+  return nwRegistry().then(function(reg) {
+    var k = nwNormaliseCompany(name);
+    if (k && reg.byName[k]) return reg.byName[k];
+    var d = String(domain || '').toLowerCase();
+    while (d) {
+      if (reg.byDomain[d]) return reg.byDomain[d];
+      var dot = d.indexOf('.');
+      if (dot < 0 || d.indexOf('.', dot + 1) < 0) break;   // stop before a bare TLD
+      d = d.slice(dot + 1);
+    }
+    return null;
+  });
+}
+// An existing Account of the developer's with the same dedupe key — from the
+// accounts the list payload carried (id, name, slug, relationship, stage).
+function nwExistingAccount(name) {
+  var k = nwNormaliseCompany(name);
+  if (!k) return null;
+  for (var id in _nwAccountsById) if (_nwAccountsById.hasOwnProperty(id) && nwNormaliseCompany(_nwAccountsById[id].name) === k) return _nwAccountsById[id];
+  return null;
+}
+// The review choices on a held card, with the defaults of §13.5 step 6:
+// role other, relationship target (a card scanned at a show), stage none,
+// Met Date from the record's createdAt, Consent unknown, Do Not Contact off.
+function nwReviewOf(rec) {
+  var x = rec.extraction || {};
+  var rv = rec.review || {};
+  var out = {
+    role: rv.role || 'other', relationship: rv.relationship || 'target', stage: rv.stage || 'none',
+    slug: rv.slug != null ? rv.slug : '', segmentIds: rv.segmentIds || [], linkSlug: rv.linkSlug !== false,
+    accountId: rv.accountId || '', sourceEvent: rv.sourceEvent || '',
+    metDate: rv.metDate || String(rec.createdAt || new Date().toISOString()).slice(0, 10),
+    consent: rv.consent || 'unknown', dnc: !!rv.dnc, notes: rv.notes || '', resolvedFor: rv.resolvedFor || ''
+  };
+  if (out.stage !== 'none' && ['target', 'customer'].indexOf(out.relationship) < 0) out.stage = 'none';
+  return out;
+}
+// Company resolution for a held card: the registry match (slug + segments),
+// then the developer's own existing Account (whose relationship / stage /
+// slug win, since they were confirmed once already). Re-run only when the
+// company name changed since the last resolution.
+function nwResolveCard(rec) {
+  var x = rec.extraction || {}, rv = nwReviewOf(rec);
+  var key = nwNormaliseCompany(x.company) + '|' + nwDomainOf(x.website, x.emails);
+  if (rv.resolvedFor === key) return Promise.resolve(rv);
+  return nwResolveCompany(x.company, nwDomainOf(x.website, x.emails)).then(function(hit) {
+    rv.slug = hit ? hit.slug : '';
+    rv.segmentIds = hit ? hit.segmentIds.slice() : [];
+    rv.registryName = hit ? hit.name : '';
+    rv.hq = hit ? hit.hq : '';
+    var acc = nwExistingAccount(x.company);
+    rv.accountId = acc ? acc.id : '';
+    if (acc) { rv.relationship = acc.relationship || rv.relationship; rv.stage = acc.stage || 'none'; if (acc.slug) rv.slug = acc.slug; }
+    rv.resolvedFor = key;
+    rec.review = rv;
+    return rv;
+  });
+}
+function nwSelect(group, value, id) {
+  var sel = document.createElement('select');
+  if (id) sel.id = id;
+  (NW_ENUMS[group] || []).forEach(function(pair) {
+    var o = document.createElement('option'); o.value = pair[0]; o.textContent = pair[1];
+    if (pair[0] === value) o.selected = true;
+    sel.appendChild(o);
+  });
+  if (value && !sel.value) { var keep = document.createElement('option'); keep.value = value; keep.textContent = value; keep.selected = true; sel.appendChild(keep); }
+  return sel;
+}
+// The review section appended to the editor (nwEditCard): role, the account
+// block, Source Event, Met Date, Consent, Do Not Contact. Returns a reader
+// that folds the inputs back into rec.review.
+function nwReviewSection(rec, form) {
+  var rv = nwReviewOf(rec), x = rec.extraction || {};
+  var h1 = nwEl('div', 'nw-editor-h', 'This person'); form.appendChild(h1);
+  var lr = nwEl('label', null, 'Role'); var role = nwSelect('role', rv.role, ''); role.setAttribute('data-review', 'role'); lr.appendChild(role); form.appendChild(lr);
+  form.appendChild(nwEl('div', 'nw-editor-h', 'Account'));
+  var cov = nwEl('div', 'nw-covered'); cov.id = 'nw-covered-' + rec.id;
+  function paintCovered() {
+    cov.innerHTML = '';
+    var acc = rv.accountId && _nwAccountsById[rv.accountId];
+    if (rv.slug) {
+      cov.className = 'nw-covered';
+      cov.appendChild(document.createTextNode('In the Profiler record as '));
+      cov.appendChild(nwEl('b', null, rv.registryName || rv.slug));
+      cov.appendChild(document.createTextNode(rv.segmentIds.length ? ' · ' + rv.segmentIds.length + ' segment' + (rv.segmentIds.length === 1 ? '' : 's') : ''));
+      if (acc) cov.appendChild(document.createTextNode(' · already an account of yours'));
+    } else {
+      cov.className = 'nw-covered nw-uncovered';
+      cov.appendChild(document.createTextNode(acc ? 'Already an account of yours (not in the Profiler record)' : 'Not in the Profiler record — saved as a new account'));
+    }
+  }
+  paintCovered();
+  form.appendChild(cov);
+  var link = null;
+  if (rv.slug) {
+    var ll = nwEl('label', 'nw-check'); link = document.createElement('input'); link.type = 'checkbox'; link.checked = rv.linkSlug; link.setAttribute('data-review', 'linkSlug');
+    ll.appendChild(link); ll.appendChild(document.createTextNode('Link this account to the Profiler record')); form.appendChild(ll);
+  }
+  var two = nwEl('div', 'nw-two');
+  var lrel = nwEl('label', null, 'Relationship'); var rel = nwSelect('relationship', rv.relationship, ''); rel.setAttribute('data-review', 'relationship'); lrel.appendChild(rel);
+  var lst = nwEl('label', null, 'Stage'); var st = nwSelect('stage', rv.stage, ''); st.setAttribute('data-review', 'stage'); lst.appendChild(st);
+  two.appendChild(lrel); two.appendChild(lst); form.appendChild(two);
+  // D5: stage may leave `none` only for target · customer — the select is
+  // disabled (and reset) for every other relationship, and the server
+  // refuses the row if it ever arrives otherwise.
+  function gateStage() { var ok = ['target', 'customer'].indexOf(rel.value) >= 0; st.disabled = !ok; if (!ok) st.value = 'none'; }
+  rel.addEventListener('change', gateStage); gateStage();
+  var lseg = nwEl('label', null, 'Segments'); var seg = document.createElement('input'); seg.type = 'text'; seg.value = rv.segmentIds.join(', '); seg.placeholder = 'segment ids, comma-separated'; seg.autocapitalize = 'none'; seg.setAttribute('data-review', 'segmentIds'); lseg.appendChild(seg); form.appendChild(lseg);
+  form.appendChild(nwEl('div', 'nw-editor-h', 'Where and when'));
+  var two2 = nwEl('div', 'nw-two');
+  var lev = nwEl('label', null, 'Source event'); var ev = document.createElement('input'); ev.type = 'text'; ev.value = rv.sourceEvent; ev.placeholder = 'e.g. re-plus-2026'; ev.autocapitalize = 'none'; ev.setAttribute('data-review', 'sourceEvent'); lev.appendChild(ev);
+  var lmd = nwEl('label', null, 'Met date'); var md = document.createElement('input'); md.type = 'date'; md.value = rv.metDate; md.setAttribute('data-review', 'metDate'); lmd.appendChild(md);
+  two2.appendChild(lev); two2.appendChild(lmd); form.appendChild(two2);
+  form.appendChild(nwEl('div', 'nw-editor-h', 'Consent'));
+  var lc = nwEl('label', null, 'Consent to marketing'); var cons = nwSelect('consent', rv.consent, ''); cons.setAttribute('data-review', 'consent'); lc.appendChild(cons); form.appendChild(lc);
+  var ld = nwEl('label', 'nw-check'); var dnc = document.createElement('input'); dnc.type = 'checkbox'; dnc.checked = rv.dnc; dnc.setAttribute('data-review', 'dnc');
+  ld.appendChild(dnc); ld.appendChild(document.createTextNode('Do not contact')); form.appendChild(ld);
+  var ln = nwEl('label', null, 'Notes'); var notes = document.createElement('input'); notes.type = 'text'; notes.value = rv.notes; notes.setAttribute('data-review', 'notes'); ln.appendChild(notes); form.appendChild(ln);
+  return function read() {
+    rv.role = role.value; rv.relationship = rel.value; rv.stage = st.disabled ? 'none' : st.value;
+    rv.linkSlug = link ? link.checked : rv.linkSlug;
+    rv.segmentIds = seg.value.split(',').map(function(s) { return s.trim().toLowerCase(); }).filter(Boolean);
+    rv.sourceEvent = ev.value.trim(); rv.metDate = md.value || rv.metDate; rv.consent = cons.value; rv.dnc = dnc.checked; rv.notes = notes.value.trim();
+    rec.review = rv;
+    return rv;
+  };
+}
+
+// ── Retry extraction and Swap front / back ────────────────────────────────
+// Retry re-runs nop=extract with the SAME c- id: from the base64 this tab
+// still holds, else by reading the two files back from the user's Drive
+// with their own token. The review choices and any accepted notes survive;
+// the fields are replaced by the fresh read.
+function nwDriveDownloadB64(tok, fileId) {
+  return fetch('https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fileId) + '?alt=media', { headers: { 'Authorization': 'Bearer ' + tok } })
+    .then(function(r) { if (r.status === 401) { _nwDriveToken = null; throw new Error('drive_auth'); } if (!r.ok) throw new Error('drive_http_' + r.status); return r.blob(); })
+    .then(function(blob) { return new Promise(function(res, rej) { var fr = new FileReader(); fr.onload = function() { res(String(fr.result).split(',')[1] || ''); }; fr.onerror = function() { rej(new Error('read_failed')); }; fr.readAsDataURL(blob); }); });
+}
+function nwHeldImages(rec) {
+  var held = _nwHeldB64[rec.id];
+  if (held && held.front) return Promise.resolve(held);
+  var fid = nwDriveIdFromLink(rec.frontLink), bid = nwDriveIdFromLink(rec.backLink);
+  if (!fid) return Promise.reject(new Error('no_photos'));
+  return new Promise(function(resolve, reject) {
+    nwDriveToken(function(tok) {
+      if (!tok) { reject(new Error('drive_consent')); return; }
+      Promise.all([nwDriveDownloadB64(tok, fid), bid ? nwDriveDownloadB64(tok, bid) : Promise.resolve(null)])
+        .then(function(r) { _nwHeldB64[rec.id] = { front: r[0], back: r[1] }; resolve(_nwHeldB64[rec.id]); }).catch(reject);
+    });
+  });
+}
+function nwRetryExtraction(rec) {
+  if (_nwBusy) return;
+  var strip = document.querySelector('#nw-extracted .nw-strip[data-id="' + rec.id + '"]');
+  if (strip) strip.classList.add('nw-saving');
+  nwCaptureStatus('Reading the card again…', '', 3);
+  nwHeldImages(rec).then(function(imgs) {
+    return new Promise(function(resolve) {
+      var params = { contactId: rec.id, front: imgs.front, mime: 'image/jpeg' };
+      if (imgs.back) params.back = imgs.back;
+      _nwLastExtractAt = Date.now();
+      nwApiBody('extract', params, resolve);
+    });
+  }).then(function(res) {
+    if (!(res && res.success)) throw new Error((res && res.error) || 'extract_failed');
+    nwTidyNames(res.extraction);
+    rec.extraction = res.extraction; rec.viaQr = false; rec.dismissed = {}; rec.edited = false; rec.retried = (rec.retried || 0) + 1;
+    if (rec.review) rec.review.resolvedFor = '';
+    return nwPendingSave(rec).then(function() { nwRenderStrip(rec); nwCaptureStatus('Read again.', 'ok', 4); });
+  }).catch(function(e) {
+    if (strip) strip.classList.remove('nw-saving');
+    nwCaptureStatus('Could not read the card again (' + nwErrText(String((e && e.message) || e)) + ')', 'err');
+  });
+}
+// Swap: the links (and the held base64) change places; the Drive files are
+// renamed best-effort so <c-id>-front.jpg is the front again.
+function nwSwapSides(rec) {
+  var f = rec.frontLink, b = rec.backLink;
+  if (!b) { nwCaptureStatus('This card has one side only.', 'warn'); return; }
+  rec.frontLink = b; rec.backLink = f;
+  var held = _nwHeldB64[rec.id]; if (held) _nwHeldB64[rec.id] = { front: held.back, back: held.front };
+  nwPendingSave(rec).then(function() { nwRenderStrip(rec); });
+  var fid = nwDriveIdFromLink(rec.frontLink), bid = nwDriveIdFromLink(rec.backLink);
+  if (fid && bid) nwDriveToken(function(tok) {
+    if (!tok) return;
+    [[fid, '-front.jpg'], [bid, '-back.jpg']].forEach(function(pair) {
+      nwDriveFetch(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(pair[0]) + '?fields=id', {
+        method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: rec.id + pair[1] }) }).catch(function() {});
+    });
+  });
+}
+
+// ── Save ──────────────────────────────────────────────────────────────────
+function nwContactPayload(rec) {
+  var x = rec.extraction || {}, rv = nwReviewOf(rec);
+  return { fullName: x.fullName || '', firstName: x.firstName || '', lastName: x.lastName || '', title: x.title || '',
+    department: x.department || '', role: rv.role, emails: x.emails || [], phones: x.phones || [], address: x.address || '',
+    linkedin: x.linkedin || '', website: x.website || '', socials: x.socials || [], languages: x.languages || [],
+    sourceEvent: rv.sourceEvent, metDate: rv.metDate, consent: rv.consent, dnc: rv.dnc, tags: [], notes: rv.notes,
+    frontLink: rec.frontLink || '', backLink: rec.backLink || '' };
+}
+function nwAccountPayload(rec) {
+  var x = rec.extraction || {}, rv = nwReviewOf(rec);
+  return { id: rv.accountId || '', name: (x.company || '').trim(), relationship: rv.relationship, stage: rv.stage,
+    slug: rv.linkSlug ? (rv.slug || '') : '', segmentIds: rv.linkSlug ? rv.segmentIds : [], domain: nwDomainOf(x.website, x.emails), hq: rv.hq || '' };
+}
+function nwSaveErrText(err) {
+  if (err === 'STAGE_NEEDS_TARGET_OR_CUSTOMER') return 'A stage other than None needs the relationship to be Target or Customer.';
+  if (err === 'INVALID_ENUM') return 'One of the choices is not a value the list accepts.';
+  if (err === 'name_required') return 'The card needs a name before it can be saved.';
+  if (err === 'account_name_required') return 'The card needs a company before it can be saved.';
+  if (err === 'already_saved') return 'This card was already saved.';
+  if (err === 'drive_consent') return 'Drive access was not granted — the photos stay in _inbox for now.';
+  return nwErrText(err);
+}
+function nwSafeFolderName(name) { return String(name || '').replace(/[\\\/:*?"<>|]+/g, '-').replace(/\s+/g, ' ').trim().slice(0, 100) || 'Unknown'; }
+// <Company>/ under Network App/, created on the first save for that Account
+// and parked through nop=setfolders `accounts` so the next save finds it.
+function nwEnsureAccountFolder(tok, accountId, accountName) {
+  var have = _nwFolders && _nwFolders.accounts && _nwFolders.accounts[accountId];
+  if (have) return Promise.resolve(have);
+  return nwEnsureFolders(tok).then(function(f) {
+    return nwDriveCreateFolder(tok, nwSafeFolderName(accountName), f.root).then(function(folderId) {
+      return new Promise(function(resolve) {
+        var add = {}; add[accountId] = folderId;
+        nwApi('setfolders', { root: f.root, inbox: f.inbox, accounts: JSON.stringify(add) }, function(res) {
+          if (res && res.success && res.folders) _nwFolders = res.folders;
+          else { _nwFolders = _nwFolders || { root: f.root, inbox: f.inbox, accounts: {} }; _nwFolders.accounts = _nwFolders.accounts || {}; _nwFolders.accounts[accountId] = folderId; }
+          resolve(folderId);
+        });
+      });
+    });
+  });
+}
+// files.update with addParents / removeParents — the move of §4.2. Resolves
+// to the file's link in its new home.
+function nwDriveMove(tok, fileId, toFolder, fromFolder) {
+  var url = 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fileId) + '?addParents=' + encodeURIComponent(toFolder)
+    + (fromFolder ? '&removeParents=' + encodeURIComponent(fromFolder) : '') + '&fields=id,webViewLink';
+  return nwDriveFetch(tok, url, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: '{}' })
+    .then(function(f) { return f.webViewLink || ('https://drive.google.com/file/d/' + fileId + '/view'); });
+}
+// After the rows are written: move both files, write the links back. A Drive
+// failure here is soft — the contact is saved, the photos stay in _inbox/
+// and the status says so.
+function nwFileCard(rec, saved) {
+  var fid = nwDriveIdFromLink(rec.frontLink), bid = nwDriveIdFromLink(rec.backLink);
+  if (!fid && !bid) return Promise.resolve({ moved: 0 });
+  return new Promise(function(resolve) {
+    nwDriveToken(function(tok) {
+      if (!tok) { resolve({ moved: 0, error: 'drive_consent' }); return; }
+      nwEnsureAccountFolder(tok, saved.accountId, saved.accountName).then(function(folderId) {
+        var inbox = (_nwFolders && _nwFolders.inbox) || '';
+        return nwDriveMove(tok, fid, folderId, inbox).then(function(fl) {
+          return (bid ? nwDriveMove(tok, bid, folderId, inbox) : Promise.resolve('')).then(function(bl) { return { front: fl, back: bl }; });
+        });
+      }).then(function(links) {
+        var params = { contactId: saved.contactId, frontLink: links.front, backLink: links.back || '' };
+        var m = /^interaction:(i-[0-9a-z]{13})$/.exec(saved.linksTarget || '');
+        if (m) params.interactionId = m[1];
+        nwApi('links', params, function() { resolve({ moved: bid ? 2 : 1 }); });
+      }).catch(function(e) { resolve({ moved: 0, error: String((e && e.message) || 'drive_failed') }); });
+    });
+  });
+}
+function nwStripBusy(rec, on) {
+  var strip = document.querySelector('#nw-extracted .nw-strip[data-id="' + rec.id + '"]');
+  if (strip) strip.classList.toggle('nw-saving', !!on);
+}
+function nwRemoveStrip(rec) {
+  _nwPending = _nwPending.filter(function(o) { return o.id !== rec.id; });
+  var box = document.getElementById('nw-extracted');
+  var strip = box && box.querySelector('.nw-strip[data-id="' + rec.id + '"]');
+  if (strip) strip.remove();
+  delete _nwHeldB64[rec.id];
+  nwSaveAllRefresh();
+}
+// The save of one held card. `decision` — undefined for the first attempt;
+// { mergeInto } or { distinct } after the merge sheet. Resolves to
+// 'saved' | 'duplicate' (sheet shown, waiting) | 'failed'.
+function nwSaveCard(rec, decision, quiet) {
+  var x = rec.extraction || {};
+  if (!(x.fullName || '').trim()) { nwCaptureStatus('Add a name before saving.', 'warn'); nwEditCard(rec, 'fullName'); return Promise.resolve('failed'); }
+  if (!(x.company || '').trim()) { nwCaptureStatus('Add a company before saving.', 'warn'); nwEditCard(rec, 'company'); return Promise.resolve('failed'); }
+  nwStripBusy(rec, true);
+  return nwResolveCard(rec).then(function() {
+    var contact = nwContactPayload(rec), account = nwAccountPayload(rec);
+    var params = { contactId: rec.id, contact: JSON.stringify(contact), account: JSON.stringify(account), raw: JSON.stringify(x) };
+    if (decision && decision.mergeInto) { params.mergeInto = decision.mergeInto; params.contact = JSON.stringify(decision.contact || contact); }
+    if (decision && decision.distinct) params.distinct = decision.distinct;
+    var pre = decision ? Promise.resolve(null) : new Promise(function(resolve) {
+      nwApiBody('dupcheck', { contactId: rec.id, contact: params.contact, account: params.account }, function(res) { resolve(res && res.success ? res.duplicate : null); });
+    });
+    return pre.then(function(dup) {
+      if (dup) { nwStripBusy(rec, false); nwMergeSheet(rec, dup); return 'duplicate'; }
+      return new Promise(function(resolve) { nwApiBody('save', params, resolve); }).then(function(res) {
+        if (!(res && res.success)) {
+          if (res && res.error === 'duplicate' && res.duplicate) { nwStripBusy(rec, false); nwMergeSheet(rec, res.duplicate); return 'duplicate'; }
+          throw new Error((res && res.error) || 'save_failed');
+        }
+        if (!quiet) nwCaptureStatus('Saved — filing the photos…', '', 4);
+        return nwFileCard(rec, res).then(function(filed) {
+          return nwPendingDelete(rec.id).then(function() {
+            nwRemoveStrip(rec);
+            var who = (x.fullName || 'the contact');
+            if (filed.error) nwCaptureStatus((res.merged ? 'Merged ' : 'Saved ') + who + ' — but the photos could not be moved (' + nwSaveErrText(filed.error) + ').', 'warn', 4);
+            else if (!quiet) nwCaptureStatus('✓ ' + (res.merged ? 'Merged ' : 'Saved ') + who + (res.accountCreated ? ' and created the ' + (res.accountName || '') + ' account' : '') + '.', 'ok', 4);
+            nwAfterWrite();
+            return 'saved';
+          });
+        });
+      });
+    });
+  }).catch(function(e) {
+    nwStripBusy(rec, false);
+    nwCaptureStatus('Could not save (' + nwSaveErrText(String((e && e.message) || e)) + ')', 'err');
+    return 'failed';
+  });
+}
+// The merge sheet: the held card beside the existing contact, one row per
+// field that differs, newest (the held card) chosen by default; unchanged
+// fields are listed once. Merge keeps the survivor's id; "Keep as a separate
+// contact" is a considered choice that names the match it declines.
+var NW_MERGE_FIELDS = [['fullName', 'Name'], ['title', 'Title'], ['department', 'Department'], ['emails', 'Email(s)'], ['phones', 'Phone(s)'],
+  ['address', 'Address'], ['website', 'Website'], ['linkedin', 'LinkedIn']];
+function nwMergeSheet(rec, dup) {
+  var strip = document.querySelector('#nw-extracted .nw-strip[data-id="' + rec.id + '"]');
+  if (!strip) return;
+  var old = strip.querySelector('.nw-sheet'); if (old) old.remove();
+  var x = rec.extraction || {};
+  var sheet = nwEl('div', 'nw-sheet'); sheet.setAttribute('data-dup', dup.id);
+  sheet.appendChild(nwEl('h3', null, 'Looks like ' + (dup.fullName || 'a contact you already have')));
+  sheet.appendChild(nwEl('p', null, 'Matched on the ' + (dup.matchedOn === 'email' ? 'email address' : dup.matchedOn === 'phone' ? 'phone number' : 'name and company') + '. Choose which value to keep for each detail — the new card is selected by default. Both cards’ photos are kept either way.'));
+  var choice = {};
+  NW_MERGE_FIELDS.forEach(function(pair) {
+    var f = pair[0], nv = nwFieldText(x, f), ov = nwFieldText(dup, f);
+    var row = nwEl('div', 'nw-merge-row');
+    row.appendChild(nwEl('div', 'nw-merge-f', pair[1]));
+    if (nv === ov) { row.appendChild(nwEl('label', 'nw-same', nv || '—')); choice[f] = 'new'; sheet.appendChild(row); return; }
+    choice[f] = nv ? 'new' : 'old';
+    [['new', 'New card', nv], ['old', 'Existing', ov]].forEach(function(opt) {
+      var lab = nwEl('label'); var r = document.createElement('input'); r.type = 'radio'; r.name = 'nw-merge-' + rec.id + '-' + f; r.value = opt[0]; r.checked = choice[f] === opt[0];
+      r.addEventListener('change', function() { if (r.checked) choice[f] = opt[0]; });
+      lab.appendChild(r); lab.appendChild(document.createTextNode(opt[1] + ': ' + (opt[2] || '—')));
+      row.appendChild(lab);
+    });
+    sheet.appendChild(row);
+  });
+  var actions = nwEl('div', 'nw-editor-actions');
+  var merge = nwEl('button', 'nw-btn nw-btn-primary', 'Merge into ' + (dup.fullName || 'existing')); merge.type = 'button'; merge.className += ' nw-merge-go';
+  var keep = nwEl('button', 'nw-btn', 'Keep as a separate contact'); keep.type = 'button'; keep.className += ' nw-merge-keep';
+  var cancel = nwEl('button', 'nw-btn nw-btn-quiet', 'Cancel'); cancel.type = 'button';
+  merge.addEventListener('click', function() {
+    var merged = nwContactPayload(rec);
+    NW_MERGE_FIELDS.forEach(function(pair) { var f = pair[0]; if (choice[f] === 'old') merged[f] = dup[f] || (f === 'emails' || f === 'phones' ? [] : ''); });
+    // Union of the two contact lists so nothing reachable is lost.
+    ['emails', 'phones'].forEach(function(f) {
+      var key = f === 'emails' ? 'value' : 'number', seen = {}, out = [];
+      (merged[f] || []).concat(dup[f] || []).forEach(function(it) { var k = String(it[key] || '').toLowerCase(); if (k && !seen[k]) { seen[k] = 1; out.push(it); } });
+      merged[f] = out;
+    });
+    if (!merged.sourceEvent) merged.sourceEvent = dup.sourceEvent || '';
+    sheet.remove();
+    nwSaveCard(rec, { mergeInto: dup.id, contact: merged });
+  });
+  keep.addEventListener('click', function() { sheet.remove(); nwSaveCard(rec, { distinct: dup.id }); });
+  cancel.addEventListener('click', function() { sheet.remove(); });
+  actions.appendChild(merge); actions.appendChild(keep); actions.appendChild(cancel);
+  sheet.appendChild(actions);
+  strip.classList.add('nw-open');
+  strip.insertBefore(sheet, strip.querySelector('.nw-strip-photos'));
+  nwCaptureStatus('This card looks like a contact you already have — see the card below.', 'warn');
+}
+// Save all: the stack in order; a card that needs a merge decision is left
+// open with its sheet and the run goes on to the next.
+function nwSaveAll() {
+  if (_nwSaveAllBusy || _nwBusy) return;
+  var items = _nwPending.slice().sort(function(a, b) { return String(a.createdAt || '').localeCompare(String(b.createdAt || '')); });
+  if (!items.length) return;
+  _nwSaveAllBusy = true;
+  var i = 0, saved = 0, waiting = 0, failed = 0;
+  nwSaveAllRefresh();
+  function next() {
+    if (i >= items.length) {
+      _nwSaveAllBusy = false; nwSaveAllRefresh();
+      nwCaptureStatus('✓ Save all — ' + saved + ' saved' + (waiting ? ', ' + waiting + ' waiting for a merge decision' : '') + (failed ? ', ' + failed + ' failed' : '') + '.', failed ? 'warn' : 'ok', 4);
+      return;
+    }
+    var rec = items[i++];
+    if (!_nwPending.some(function(o) { return o.id === rec.id; })) { next(); return; }
+    nwCaptureStatus('Saving ' + i + ' of ' + items.length + '…', '', 4);
+    nwSaveCard(rec, undefined, true).then(function(r) { if (r === 'saved') saved++; else if (r === 'duplicate') waiting++; else failed++; next(); });
+  }
+  next();
+}
+function nwSaveAllRefresh() {
+  var bar = document.getElementById('nw-saveall'), n = document.getElementById('nw-saveall-n'), btn = document.getElementById('nw-saveall-btn');
+  if (!bar) return;
+  var count = _nwPending.length;
+  bar.style.display = count ? '' : 'none';
+  if (n) n.textContent = count + ' card' + (count === 1 ? '' : 's') + ' held on this phone';
+  if (btn) btn.disabled = _nwSaveAllBusy || !count;
+  var box = document.getElementById('nw-extracted');
+  if (box && !count && !box.querySelector('.nw-empty')) box.appendChild(nwEl('div', 'nw-empty', NW_HELD_EMPTY));
+}
+var NW_HELD_EMPTY = 'Cards you read are held here — tap a name for the fields, Edit to review and correct them, then Save. Save all files the whole stack.';
+
+// ── The list rows — name · title · company, tap for the full row ──────────
+function nwRowDetail(row, id) {
+  var det = row.querySelector('.nw-row-detail');
+  if (!det) { det = nwEl('dl', 'nw-row-detail'); det.addEventListener('click', function(ev) { ev.stopPropagation(); }); row.appendChild(det); }
+  if (row.classList.contains('nw-open')) { row.classList.remove('nw-open'); return; }
+  row.classList.add('nw-open');
+  det.innerHTML = ''; det.appendChild(nwEl('dd', null, 'Loading…'));
+  nwApi('get', { id: id }, function(res) {
+    det.innerHTML = '';
+    if (!(res && res.success && res.contact)) { det.appendChild(nwEl('dd', 'nw-bad', nwErrText(res && res.error))); return; }
+    var c = res.contact, a = res.account || {};
+    function line(label, value) { if (!value) return; det.appendChild(nwEl('dt', null, label)); det.appendChild(nwEl('dd', null, value)); }
+    function linkLine(label, href, text) { if (!href) return; det.appendChild(nwEl('dt', null, label)); var dd = nwEl('dd'); var an = nwEl('a', null, text || href); an.href = href; an.target = '_blank'; an.rel = 'noopener'; dd.appendChild(an); det.appendChild(dd); }
+    line('Name', c.fullName); line('Title', [c.title, c.department].filter(Boolean).join(' · ')); line('Role', nwLabel('role', c.role));
+    line('Account', [a.name, nwLabel('relationship', a.relationship), a.stage && a.stage !== 'none' ? nwLabel('stage', a.stage) : ''].filter(Boolean).join(' · ') + (a.slug ? ' · Profiler: ' + a.slug : ''));
+    line('Email', (c.emails || []).map(function(e) { return e.value; }).join(', ')); line('Phone', (c.phones || []).map(function(p) { return p.number; }).join(', '));
+    line('Address', c.address); linkLine('Website', /^https?:/i.test(c.website || '') ? c.website : (c.website ? 'https://' + c.website : ''), c.website); linkLine('LinkedIn', c.linkedin, c.linkedin);
+    line('Met', [c.metDate, c.sourceEvent].filter(Boolean).join(' at ')); line('Consent', nwLabel('consent', c.consent) + (c.dnc ? ' · do not contact' : ''));
+    line('Notes', c.notes);
+    linkLine('Front', c.frontLink, '🖼 Front'); linkLine('Back', c.backLink, '🖼 Back');
+    line('History', (res.interactions || []).map(function(ix) { return ix.date + ' ' + nwLabel('interactionKind', ix.kind); }).join(' · '));
+  });
+}
+function nwRowMark(row, deleted) {
+  row.classList.toggle('nw-deleted', !!deleted);
+  var side = row.querySelector('.nw-row-side'); if (!side) return;
+  side.innerHTML = '';
+  var a = nwEl('a', deleted ? 'nw-row-restore' : 'nw-row-del', deleted ? '↺ Restore' : '🗑 Delete'); a.href = '#'; a.setAttribute('role', 'button');
+  a.addEventListener('click', function(ev) {
+    ev.preventDefault(); ev.stopPropagation();
+    var id = row.getAttribute('data-id');
+    nwApi(deleted ? 'restore' : 'delete', { id: id }, function(res) {
+      if (!(res && res.success)) { nwCaptureStatus('Could not ' + (deleted ? 'restore' : 'delete') + ' (' + nwErrText(res && res.error) + ')', 'err'); return; }
+      nwRowMark(row, !deleted);
+      if (deleted) nwAfterWrite();   // restored — the list is the record again
+    });
+  });
+  side.appendChild(a);
+}
+function nwContactRow(c) {
+  var row = nwEl('div', 'nw-row'); row.setAttribute('data-id', c.id);
+  var main = nwEl('div', 'nw-row-main');
+  main.appendChild(document.createTextNode(c.name || '(unnamed)'));
+  var acc = _nwAccountsById[c.accountId];
+  main.appendChild(nwEl('small', null, [c.title, acc && acc.name].filter(Boolean).join(' · ') || nwLabel('role', c.role)));
+  row.appendChild(main);
+  row.appendChild(nwEl('div', 'nw-row-side'));
+  nwRowMark(row, false);
+  row.addEventListener('click', function() { nwRowDetail(row, c.id); });
+  return row;
 }
 
 // PROJECT: ── Masthead + mount ─────────────────────────────────────────────
@@ -5316,6 +5907,8 @@ function nwLoadList() {
     }
     if (res.folders) _nwFolders = res.folders;   // the Drive folder registry, read back on load
     var contacts = res.contacts || [], accounts = res.accounts || [];
+    _nwAccountsById = {};
+    accounts.forEach(function(a) { if (a && a.id) _nwAccountsById[a.id] = a; });
     var counts = nwEl('div', 'nw-count');
     var c1 = nwEl('div'); c1.appendChild(nwEl('b', null, String(contacts.length))); c1.appendChild(nwEl('span', null, 'contacts'));
     var c2 = nwEl('div'); c2.appendChild(nwEl('b', null, String(accounts.length))); c2.appendChild(nwEl('span', null, 'accounts'));
@@ -5326,15 +5919,11 @@ function nwLoadList() {
     if (!contacts.length) {
       var empty = nwEl('div', 'nw-empty');
       empty.appendChild(nwEl('b', null, 'No contacts yet'));
-      empty.appendChild(document.createTextNode('Capture a card above. Saving a reviewed card arrives in the next release.'));
+      empty.appendChild(document.createTextNode('Capture a card above, review it, and Save.'));
       list.appendChild(empty);
     } else {
-      contacts.forEach(function(c) {
-        var row = nwEl('div', 'nw-row');
-        row.appendChild(nwEl('span', null, c.name || '(unnamed)'));
-        row.appendChild(nwEl('small', null, [c.title, nwLabel('role', c.role)].filter(Boolean).join(' · ')));
-        list.appendChild(row);
-      });
+      contacts.sort(function(a, b) { return String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')); });
+      contacts.forEach(function(c) { list.appendChild(nwContactRow(c)); });
     }
     wrap.appendChild(list);
     var note = nwEl('p', 'nw-note', 'Refreshed on open, on return to this tab and after every save — no background polling.');

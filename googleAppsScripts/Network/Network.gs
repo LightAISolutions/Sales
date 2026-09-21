@@ -1,4 +1,4 @@
-var VERSION = "v01.04g";
+var VERSION = "v01.05g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -322,7 +322,8 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // every D row decided 2026-09-20). Data shapes: NETWORK-SCHEMA.md — edit that
 // file first, then this one. N0 builds the door, the tabs, the ids, the folder
 // registry and the quota counter; N1 session 1 adds the card extraction
-// (nop=newid + nop=extract, below); session 2 adds review, dedupe and save.
+// (nop=newid + nop=extract, below); session 2 (v01.05g) adds the write path —
+// nop=dupcheck, nop=save, nop=links, nop=get, nop=delete / nop=restore.
 
 // PROJECT: ── Role + Access matrix (D7 — admin-only, decided 2026-09-20) ──
 // NETWORK-SCHEMA.md §2. All four tier keys are kept so that widening later is
@@ -1010,6 +1011,30 @@ function handleNetworkOp_(e) {
       nwRequire_(sess, 'contacts', 'network_extract');
       return nwExtractOp_(sess, p);
     }
+    if (op === 'dupcheck') {
+      nwRequire_(sess, 'contacts', 'network_dupcheck');
+      return nwDupCheckOp_(sess, p);
+    }
+    if (op === 'save') {
+      nwRequire_(sess, 'contacts', 'network_save');
+      return nwSaveOp_(sess, p);
+    }
+    if (op === 'links') {
+      nwRequire_(sess, 'contacts', 'network_links');
+      return nwLinksOp_(sess, p);
+    }
+    if (op === 'get') {
+      nwRequire_(sess, 'contacts', 'network_get');
+      return nwGetOp_(sess, p);
+    }
+    if (op === 'delete') {
+      nwRequire_(sess, 'contacts', 'network_delete');
+      return nwDeleteRestoreOp_(sess, p, false);
+    }
+    if (op === 'restore') {
+      nwRequire_(sess, 'contacts', 'network_restore');
+      return nwDeleteRestoreOp_(sess, p, true);
+    }
     return { success: false, error: 'unknown_network_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -1043,6 +1068,417 @@ function nwListRows_(sheet, ownerSet, pick) {
     out.push(o);
   }
   return out;
+}
+
+// PROJECT: ── N1 session 2 — review, dedupe, save (§4.2; NETWORK-SCHEMA.md §3, §7, §12, §13)
+// The write path. Every op is body-POST-capable (Raw Extraction rides in the
+// body), scoped to the session user's own rows (resolveOwnerScope_), and
+// audited with ids and counts only (§12). The Drive files are NOT touched
+// here — they live in the user's Drive and move browser-side after the row
+// is written (nop=links writes the new links back).
+function nwStr_(v, max) { var s = (v == null) ? '' : String(v).trim(); return max ? s.slice(0, max) : s; }
+function nwArr_(v) {
+  if (Object.prototype.toString.call(v) === '[object Array]') return v;
+  if (typeof v === 'string' && v) { try { var p = JSON.parse(v); return Object.prototype.toString.call(p) === '[object Array]' ? p : []; } catch (e) { return []; } }
+  return [];
+}
+function nwObj_(v) {
+  if (v && typeof v === 'object') return v;
+  if (typeof v === 'string' && v) { try { var p = JSON.parse(v); return (p && typeof p === 'object') ? p : {}; } catch (e) { return {}; } }
+  return {};
+}
+// An enum value against its flat list; empty falls back to the default,
+// anything off-list is refused (the save-time validator of §4).
+function nwEnum_(list, v, dflt) {
+  var s = nwStr_(v).toLowerCase();
+  if (!s) return dflt;
+  if (list.indexOf(s) < 0) throw new Error('INVALID_ENUM');
+  return s;
+}
+function nwStrList_(v, max) {
+  var out = [], a = nwArr_(v);
+  for (var i = 0; i < a.length && out.length < (max || 20); i++) { var s = nwStr_(a[i], 200); if (s) out.push(s); }
+  return out;
+}
+// The two dedupe keys. Email: lowercase. Phone: E.164-shaped — digits only,
+// a leading + or 00 kept as +, a bare 10-digit number read as North American
+// (the developer's own market) and anything else taken as printed with its
+// country code. A key, not a display value: Phones are stored as printed.
+function nwEmailKey_(e) { return nwStr_(e && typeof e === 'object' ? e.value : e).toLowerCase(); }
+function nwPhoneKey_(p) {
+  var raw = nwStr_(p && typeof p === 'object' ? p.number : p);
+  var plus = /^\s*(\+|00)/.test(raw);
+  var d = raw.replace(/\D+/g, '');
+  if (!d) return '';
+  if (/^00/.test(raw.replace(/\s+/g, ''))) d = d.replace(/^00/, '');
+  if (plus) return '+' + d;
+  if (d.length === 10) return '+1' + d;
+  if (d.length === 11 && d.charAt(0) === '1') return '+' + d;
+  return '+' + d;
+}
+// The name key for the third dedupe leg: romanised part only (the native
+// script in parentheses is dropped), lowercase, letters and spaces.
+function nwNameKey_(name) {
+  return nwStr_(name).replace(/\([^)]*\)/g, '').toLowerCase().replace(/[^a-zÀ-ɏ ]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function nwDomainOf_(website, emails) {
+  var w = nwStr_(website).toLowerCase().replace(/^[a-z]+:\/\//, '').replace(/^www\./, '').split(/[\/?#]/)[0];
+  if (w && w.indexOf('.') > 0) return w;
+  var es = nwArr_(emails);
+  for (var i = 0; i < es.length; i++) {
+    var v = nwEmailKey_(es[i]), at = v.indexOf('@');
+    if (at > 0) return v.slice(at + 1).replace(/^www\./, '');
+  }
+  return '';
+}
+function nwNow_() { return new Date().toISOString(); }
+// A whole tab as header index + rows; the read every write op starts from.
+function nwSheetRead_(sheet) {
+  var last = sheet.getLastRow(), width = sheet.getLastColumn();
+  var vals = (last >= 1 && width >= 1) ? sheet.getRange(1, 1, last, width).getValues() : [[]];
+  var headers = vals[0] || [], idx = {};
+  for (var h = 0; h < headers.length; h++) idx[String(headers[h])] = h;
+  return { headers: headers, idx: idx, vals: vals };
+}
+function nwRowObj_(t, r) {
+  var o = {}, row = t.vals[r];
+  for (var h = 0; h < t.headers.length; h++) {
+    var v = row[h];
+    o[String(t.headers[h])] = (v instanceof Date) ? v.toISOString() : String(v == null ? '' : v);
+  }
+  return o;
+}
+// Row number (1-based) + object for an id, or null; ownership is checked by
+// the caller so an unowned row answers not-found (never forbidden).
+function nwFindRow_(t, id) {
+  for (var r = 1; r < t.vals.length; r++) if (String(t.vals[r][0] || '') === id) return { row: r + 1, obj: nwRowObj_(t, r) };
+  return null;
+}
+function nwOwned_(found, ownerEmail) {
+  return !!(found && String(found.obj['Owner'] || '').toLowerCase() === ownerEmail);
+}
+// Write an object keyed by header into a tab row (existing rowNum, or append).
+function nwWriteRow_(sheet, headers, obj, rowNum) {
+  var row = [];
+  for (var h = 0; h < headers.length; h++) { var v = obj[String(headers[h])]; row.push(v == null ? '' : v); }
+  if (rowNum) sheet.getRange(rowNum, 1, 1, headers.length).setValues([row]);
+  else sheet.appendRow(row);
+}
+// A tab's rows as parsed objects (owner + not deleted), the §3 JSON columns
+// parsed, for the dedupe scan and the detail op.
+function nwContactPublic_(o) {
+  var c = {
+    id: o['Contact ID'], accountId: o['Account ID'], fullName: o['Full Name'], firstName: o['First'], lastName: o['Last'],
+    title: o['Title'], department: o['Department'], role: o['Role'], emails: nwArr_(o['Emails']), phones: nwArr_(o['Phones']),
+    address: o['Address'], linkedin: o['LinkedIn'], website: o['Website'], socials: nwArr_(o['Socials']),
+    languages: nwArr_(o['Languages']), sourceEvent: o['Source Event'], metDate: String(o['Met Date'] || '').slice(0, 10),
+    consent: o['Consent Marketing'], dnc: String(o['Do Not Contact']).toLowerCase() === 'true', tags: nwArr_(o['Tags']),
+    notes: o['Notes'], frontLink: o['Card Front Link'], backLink: o['Card Back Link'],
+    createdAt: o['Created At'], updatedAt: o['Updated At'], deletedAt: o['Deleted At']
+  };
+  return c;
+}
+function nwAccountPublic_(o) {
+  return { id: o['Account ID'], name: o['Name'], normalisedName: o['Normalised Name'], domain: o['Domain'], slug: o['Profiler Slug'],
+    relationship: o['Relationship'], stage: o['Stage'], segmentIds: nwArr_(o['Segment IDs']), tags: nwArr_(o['Tags']),
+    hq: o['HQ'], notes: o['Notes'], createdAt: o['Created At'], updatedAt: o['Updated At'], deletedAt: o['Deleted At'] };
+}
+
+// The dedupe (§7): normalised email → E.164 phone → normalised name + Account.
+// Scoped to the owner set; soft-deleted rows do not count; the candidate's
+// own id (a re-save) is skipped. Answers the matching contact in full so the
+// client can lay the two side by side — or null.
+function nwFindDuplicate_(t, ownerSet, cand) {
+  var idx = t.idx, want = {};
+  var emails = nwArr_(cand.emails).map(nwEmailKey_).filter(Boolean);
+  var phones = nwArr_(cand.phones).map(nwPhoneKey_).filter(Boolean);
+  var nameKey = nwNameKey_(cand.fullName), accId = nwStr_(cand.accountId);
+  var byEmail = null, byPhone = null, byName = null;
+  for (var r = 1; r < t.vals.length; r++) {
+    var row = t.vals[r];
+    if (String(row[idx['Contact ID']] || '') === cand.id) continue;
+    if (!ownerSet[String(row[idx['Owner']] || '').toLowerCase()]) continue;
+    if (String(row[idx['Deleted At']] || '')) continue;
+    var rowEmails = nwArr_(row[idx['Emails']]).map(nwEmailKey_), rowPhones = nwArr_(row[idx['Phones']]).map(nwPhoneKey_);
+    var e, ph;
+    if (!byEmail) for (e = 0; e < emails.length; e++) if (rowEmails.indexOf(emails[e]) >= 0) { byEmail = r; break; }
+    if (!byPhone) for (ph = 0; ph < phones.length; ph++) if (rowPhones.indexOf(phones[ph]) >= 0) { byPhone = r; break; }
+    if (!byName && nameKey && accId && String(row[idx['Account ID']] || '') === accId
+        && nwNameKey_(row[idx['Full Name']]) === nameKey) byName = r;
+  }
+  var hit = byEmail ? { r: byEmail, on: 'email' } : byPhone ? { r: byPhone, on: 'phone' } : byName ? { r: byName, on: 'name' } : null;
+  if (!hit) return null;
+  var c = nwContactPublic_(nwRowObj_(t, hit.r));
+  c.matchedOn = hit.on;
+  return c;
+}
+
+// The contact fields of a save payload, validated (§3 Contacts; §4 enums).
+function nwContactFromPayload_(c) {
+  c = nwObj_(c);
+  var emails = [], phones = [];
+  nwArr_(c.emails).forEach(function(e) { var v = nwEmailKey_(e); if (v && emails.length < 10) emails.push({ value: v, kind: nwEnum_(NW_EMAIL_KINDS, e && e.kind, 'work') }); });
+  nwArr_(c.phones).forEach(function(p) { var n = nwStr_(p && typeof p === 'object' ? p.number : p, 40); if (n && phones.length < 10) phones.push({ number: n, kind: nwEnum_(NW_PHONE_KINDS, p && p.kind, 'other') }); });
+  var metDate = nwStr_(c.metDate, 10);
+  if (metDate && !/^\d{4}-\d{2}-\d{2}$/.test(metDate)) throw new Error('INVALID_INPUT');
+  return {
+    fullName: nwStr_(c.fullName, 200), firstName: nwStr_(c.firstName, 100), lastName: nwStr_(c.lastName, 100),
+    title: nwStr_(c.title, 200), department: nwStr_(c.department, 200), role: nwEnum_(NW_ROLES, c.role, 'other'),
+    emails: emails, phones: phones, address: nwStr_(c.address, 500), linkedin: nwStr_(c.linkedin, 300),
+    website: nwStr_(c.website, 300), socials: nwStrList_(c.socials, 10), languages: nwStrList_(c.languages, 10),
+    sourceEvent: nwStr_(c.sourceEvent, 120), metDate: metDate || Utilities.formatDate(new Date(), 'UTC', 'yyyy-MM-dd'),
+    consent: nwEnum_(NW_CONSENT, c.consent, 'unknown'), dnc: !!(c.dnc === true || String(c.dnc) === 'true' || String(c.dnc) === '1'),
+    tags: nwStrList_(c.tags, 20).map(function(s) { return s.toLowerCase(); }), notes: nwStr_(c.notes, 2000),
+    frontLink: nwStr_(c.frontLink, 500), backLink: nwStr_(c.backLink, 500)
+  };
+}
+// The account block of a save payload: an existing a- id, or a name to
+// resolve. Relationship + stage under the D5 rule (§4).
+function nwAccountFromPayload_(a) {
+  a = nwObj_(a);
+  var relationship = nwEnum_(NW_RELATIONSHIPS, a.relationship, 'target');
+  var stage = nwEnum_(NW_STAGES, a.stage, 'none');
+  if (stage !== 'none' && NW_STAGE_RELATIONSHIPS.indexOf(relationship) < 0) throw new Error('STAGE_NEEDS_TARGET_OR_CUSTOMER');
+  var id = nwStr_(a.id);
+  if (id && !(NW_ID_RE.test(id) && id.charAt(0) === 'a')) throw new Error('INVALID_INPUT');
+  var slug = nwStr_(a.slug, 80).toLowerCase();
+  if (slug && !/^[a-z0-9-]+$/.test(slug)) throw new Error('INVALID_INPUT');
+  return { id: id, name: nwStr_(a.name, 200), relationship: relationship, stage: stage, slug: slug,
+    segmentIds: nwStrList_(a.segmentIds, 20), domain: nwStr_(a.domain, 120).toLowerCase(), hq: nwStr_(a.hq, 120) };
+}
+// New-or-existing Account for a save: by id when the client resolved one, else
+// by Normalised Name among the owner's live accounts, else a fresh a- row. An
+// existing account takes the block's relationship / stage / slug / segments —
+// the developer confirmed them on the card. Returns { id, name, created }.
+function nwAccountResolve_(tabs, ownerEmail, acc, now) {
+  var sheet = tabs.accounts, t = nwSheetRead_(sheet), idx = t.idx;
+  var norm = nwNormaliseCompany_(acc.name);
+  var found = null;
+  if (acc.id) {
+    found = nwFindRow_(t, acc.id);
+    if (!nwOwned_(found, ownerEmail) || found.obj['Deleted At']) throw new Error('account_not_found');
+  } else {
+    if (!norm) throw new Error('account_name_required');
+    for (var r = 1; r < t.vals.length; r++) {
+      if (String(t.vals[r][idx['Owner']] || '').toLowerCase() !== ownerEmail) continue;
+      if (String(t.vals[r][idx['Deleted At']] || '')) continue;
+      if (String(t.vals[r][idx['Normalised Name']] || '') === norm) { found = { row: r + 1, obj: nwRowObj_(t, r) }; break; }
+    }
+  }
+  var obj;
+  if (found) {
+    obj = found.obj;
+    if (acc.name) { obj['Name'] = acc.name; obj['Normalised Name'] = norm; }
+    if (acc.domain) obj['Domain'] = acc.domain;
+    obj['Profiler Slug'] = acc.slug || obj['Profiler Slug'];
+    obj['Relationship'] = acc.relationship; obj['Stage'] = acc.stage;
+    if (acc.segmentIds.length) obj['Segment IDs'] = JSON.stringify(acc.segmentIds);
+    if (acc.hq) obj['HQ'] = acc.hq;
+    obj['Updated At'] = now;
+    nwWriteRow_(sheet, t.headers, obj, found.row);
+    return { id: obj['Account ID'], name: obj['Name'], created: false };
+  }
+  var id = nwNewId_('a');
+  obj = { 'Account ID': id, 'Owner': ownerEmail, 'Name': acc.name, 'Normalised Name': norm, 'Domain': acc.domain,
+    'Profiler Slug': acc.slug, 'Relationship': acc.relationship, 'Stage': acc.stage,
+    'Segment IDs': JSON.stringify(acc.segmentIds), 'Tags': '[]', 'HQ': acc.hq, 'Newsroom URL': '', 'Notes': '',
+    'Created At': now, 'Updated At': now, 'Deleted At': '' };
+  nwWriteRow_(sheet, t.headers, obj, 0);
+  return { id: id, name: acc.name, created: true };
+}
+function nwContactRowObj_(id, ownerEmail, accountId, c, raw, created, now) {
+  return { 'Contact ID': id, 'Owner': ownerEmail, 'Account ID': accountId, 'Full Name': c.fullName, 'First': c.firstName,
+    'Last': c.lastName, 'Title': c.title, 'Department': c.department, 'Role': c.role, 'Emails': JSON.stringify(c.emails),
+    'Phones': JSON.stringify(c.phones), 'Address': c.address, 'LinkedIn': c.linkedin, 'Website': c.website,
+    'Socials': JSON.stringify(c.socials), 'Languages': JSON.stringify(c.languages), 'Source Event': c.sourceEvent,
+    'Met Date': c.metDate, 'Consent Marketing': c.consent, 'Do Not Contact': c.dnc ? 'true' : 'false',
+    'Tags': JSON.stringify(c.tags), 'Notes': c.notes, 'Card Front Link': c.frontLink, 'Card Back Link': c.backLink,
+    'Raw Extraction': raw, 'Created At': created, 'Updated At': now, 'Deleted At': '' };
+}
+function nwInteractionAdd_(tabs, ownerEmail, contactId, accountId, kind, date, summary, evidence, eventSlug, now, taken) {
+  var id = nwNewId_('i', taken);
+  var t = nwSheetRead_(tabs.interactions);
+  nwWriteRow_(tabs.interactions, t.headers, { 'Interaction ID': id, 'Owner': ownerEmail, 'Contact ID': contactId,
+    'Account ID': accountId, 'Kind': kind, 'Date': date, 'Summary': nwStr_(summary, 500), 'Evidence Link': nwStr_(evidence, 500),
+    'Event Slug': nwStr_(eventSlug, 120), 'Created At': now }, 0);
+  return id;
+}
+
+// nop=dupcheck — the §7 dedupe answered BEFORE any write, so the client can
+// lay the held card beside the existing contact and offer a field-by-field
+// merge. Body-POST; audit carries the c- id and whether a match was found.
+function nwDupCheckOp_(sess, p) {
+  var cid = nwStr_(p.contactId);
+  if (!NW_ID_RE.test(cid) || cid.charAt(0) !== 'c') return { success: false, error: 'bad_contact_id' };
+  var scope = resolveOwnerSet_(sess, '*');
+  if (scope.error) return { success: false, error: scope.error };
+  var c = nwObj_(p.contact), a = nwObj_(p.account);
+  var tabs = ensureNetworkTabs_();
+  var accountId = nwStr_(a.id);
+  if (!accountId && a.name) {
+    // Not yet an Account row: the name-leg matches against the account the
+    // company name WOULD resolve to, so a re-scan before the first save still dedupes.
+    var at = nwSheetRead_(tabs.accounts), norm = nwNormaliseCompany_(a.name);
+    for (var r = 1; r < at.vals.length; r++) {
+      if (!scope.set[String(at.vals[r][at.idx['Owner']] || '').toLowerCase()]) continue;
+      if (String(at.vals[r][at.idx['Deleted At']] || '')) continue;
+      if (String(at.vals[r][at.idx['Normalised Name']] || '') === norm) { accountId = String(at.vals[r][0]); break; }
+    }
+  }
+  var dup = nwFindDuplicate_(nwSheetRead_(tabs.contacts), scope.set, {
+    id: cid, emails: c.emails, phones: c.phones, fullName: c.fullName, accountId: accountId });
+  auditLog('data_read', sess.email, 'network_dupcheck', { contactId: cid, duplicate: dup ? 1 : 0 });
+  return { success: true, contactId: cid, duplicate: dup, accountId: accountId };
+}
+
+// nop=save — validates every enum and the D5 stage rule, then writes the
+// Contact + the new-or-existing Account + one `scan` Interaction. With
+// `mergeInto=<c-id>` the held card is folded into that existing contact
+// (the client resolved the fields; the survivor keeps its id; the absorbed
+// c- id goes into a `merge` Interaction whose Summary carries the card pair
+// that did not win the row — so both pairs are kept, §7). With
+// `distinct=<c-id>` the developer has seen that match and chosen to keep
+// two people; any other duplicate refuses with the row for the merge sheet —
+// never a silent reject, never a bare "save anyway".
+function nwSaveOp_(sess, p) {
+  var cid = nwStr_(p.contactId);
+  if (!NW_ID_RE.test(cid) || cid.charAt(0) !== 'c') return { success: false, error: 'bad_contact_id' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var ownerEmail = scopeRes.owner;
+  var c, a;
+  try { c = nwContactFromPayload_(p.contact); a = nwAccountFromPayload_(p.account); }
+  catch (vErr) { return { success: false, error: String((vErr && vErr.message) || 'INVALID_INPUT') }; }
+  if (!c.fullName) return { success: false, error: 'name_required' };
+  if (!a.id && !a.name) return { success: false, error: 'account_name_required' };
+  var raw = nwStr_(p.raw, 40000);
+  var mergeInto = nwStr_(p.mergeInto), distinct = nwStr_(p.distinct);
+  if (mergeInto && !(NW_ID_RE.test(mergeInto) && mergeInto.charAt(0) === 'c')) return { success: false, error: 'bad_contact_id' };
+  var tabs = ensureNetworkTabs_(), now = nwNow_();
+  var ct = nwSheetRead_(tabs.contacts);
+  if (nwFindRow_(ct, cid)) return { success: false, error: 'already_saved', contactId: cid };
+  var ownerSet = {}; ownerSet[ownerEmail] = 'own';
+  var account;
+  try { account = nwAccountResolve_(tabs, ownerEmail, a, now); }
+  catch (aErr) { return { success: false, error: String((aErr && aErr.message) || 'account_failed') }; }
+  var dup = nwFindDuplicate_(ct, ownerSet, { id: cid, emails: c.emails, phones: c.phones, fullName: c.fullName, accountId: account.id });
+  if (mergeInto) {
+    var target = nwFindRow_(ct, mergeInto);
+    if (!nwOwned_(target, ownerEmail) || target.obj['Deleted At']) return { success: false, error: 'contact_not_found' };
+    var old = nwContactPublic_(target.obj);
+    var linksTarget = 'contact', keptPair = '';
+    if (!c.frontLink && !c.backLink) { c.frontLink = old.frontLink; c.backLink = old.backLink; linksTarget = 'interaction'; }
+    else if (old.frontLink && old.frontLink !== c.frontLink) keptPair = old.frontLink + (old.backLink ? ' · ' + old.backLink : '');
+    var merged = nwContactRowObj_(mergeInto, ownerEmail, account.id, c, raw || target.obj['Raw Extraction'], target.obj['Created At'] || now, now);
+    nwWriteRow_(tabs.contacts, ct.headers, merged, target.row);
+    var taken = {};
+    var mergeIx = nwInteractionAdd_(tabs, ownerEmail, mergeInto, account.id, 'merge', c.metDate,
+      'Merged a second card' + (keptPair ? '; previous card: ' + keptPair : ''), cid, c.sourceEvent, now, taken);
+    var scanIx = nwInteractionAdd_(tabs, ownerEmail, mergeInto, account.id, 'scan', c.metDate,
+      'Card scanned' + (c.sourceEvent ? ' at ' + c.sourceEvent : ''), linksTarget === 'contact' ? c.frontLink : '', c.sourceEvent, now, taken);
+    if (old.accountId && old.accountId !== account.id) {
+      nwInteractionAdd_(tabs, ownerEmail, mergeInto, account.id, 'account-change', c.metDate, 'Changed employer', old.accountId, '', now, taken);
+    }
+    bumpDataRev();
+    auditLog('data_write', sess.email, 'network_merge', { contactId: mergeInto, absorbedId: cid, accountId: account.id, interactions: 2 });
+    return { success: true, contactId: mergeInto, absorbedId: cid, merged: true, accountId: account.id, accountName: account.name,
+             accountCreated: account.created, linksTarget: linksTarget === 'contact' ? 'contact' : 'interaction:' + scanIx, mergeInteractionId: mergeIx };
+  }
+  if (dup && dup.id !== distinct) {
+    auditLog('data_read', sess.email, 'network_save_duplicate', { contactId: cid, duplicateOf: dup.id });
+    return { success: false, error: 'duplicate', contactId: cid, duplicate: dup, accountId: account.id };
+  }
+  nwWriteRow_(tabs.contacts, ct.headers, nwContactRowObj_(cid, ownerEmail, account.id, c, raw, now, now), 0);
+  var ix = nwInteractionAdd_(tabs, ownerEmail, cid, account.id, 'scan', c.metDate,
+    'Card scanned' + (c.sourceEvent ? ' at ' + c.sourceEvent : ''), c.frontLink, c.sourceEvent, now, {});
+  bumpDataRev();
+  auditLog('data_write', sess.email, 'network_save', { contactId: cid, accountId: account.id, accountCreated: account.created ? 1 : 0, interactions: 1 });
+  return { success: true, contactId: cid, accountId: account.id, accountName: account.name, accountCreated: account.created,
+           interactionId: ix, linksTarget: 'contact' };
+}
+
+// nop=links — after the browser moved the pair from _inbox/ to <Company>/ the
+// new Drive links are written back: to the contact row, or (a merge where the
+// older pair kept the row) to the scan Interaction's evidence.
+function nwLinksOp_(sess, p) {
+  var cid = nwStr_(p.contactId), front = nwStr_(p.frontLink, 500), back = nwStr_(p.backLink, 500), ixId = nwStr_(p.interactionId);
+  if (!NW_ID_RE.test(cid) || cid.charAt(0) !== 'c') return { success: false, error: 'bad_contact_id' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var tabs = ensureNetworkTabs_(), now = nwNow_();
+  if (ixId) {
+    if (!NW_ID_RE.test(ixId) || ixId.charAt(0) !== 'i') return { success: false, error: 'bad_interaction_id' };
+    var it = nwSheetRead_(tabs.interactions), ix = nwFindRow_(it, ixId);
+    if (!nwOwned_(ix, scopeRes.owner) || ix.obj['Contact ID'] !== cid) return { success: false, error: 'contact_not_found' };
+    ix.obj['Evidence Link'] = front; ix.obj['Summary'] = nwStr_(ix.obj['Summary'], 300) + (back ? ' · back: ' + back : '');
+    nwWriteRow_(tabs.interactions, it.headers, ix.obj, ix.row);
+  } else {
+    var ct = nwSheetRead_(tabs.contacts), found = nwFindRow_(ct, cid);
+    if (!nwOwned_(found, scopeRes.owner)) return { success: false, error: 'contact_not_found' };
+    found.obj['Card Front Link'] = front; found.obj['Card Back Link'] = back; found.obj['Updated At'] = now;
+    nwWriteRow_(tabs.contacts, ct.headers, found.obj, found.row);
+  }
+  auditLog('data_write', sess.email, 'network_links', { contactId: cid, sides: (front ? 1 : 0) + (back ? 1 : 0) });
+  return { success: true, contactId: cid };
+}
+
+// nop=get — the full row (detail ops return everything, §12), its account and
+// its interactions. Soft-deleted rows still answer, so a just-deleted row can
+// show its Restore.
+function nwGetOp_(sess, p) {
+  var id = nwStr_(p.id);
+  if (!NW_ID_RE.test(id)) return { success: false, error: 'bad_id' };
+  var scope = resolveOwnerSet_(sess, '*');
+  if (scope.error) return { success: false, error: scope.error };
+  var tabs = ensureNetworkTabs_();
+  if (id.charAt(0) === 'a') {
+    var af = nwFindRow_(nwSheetRead_(tabs.accounts), id);
+    if (!af || !scope.set[String(af.obj['Owner'] || '').toLowerCase()]) return { success: false, error: 'not_found' };
+    auditLog('data_read', sess.email, 'network_get', { accountId: id });
+    return { success: true, account: nwAccountPublic_(af.obj) };
+  }
+  if (id.charAt(0) !== 'c') return { success: false, error: 'bad_id' };
+  var found = nwFindRow_(nwSheetRead_(tabs.contacts), id);
+  if (!found || !scope.set[String(found.obj['Owner'] || '').toLowerCase()]) return { success: false, error: 'not_found' };
+  var contact = nwContactPublic_(found.obj);
+  var acc = contact.accountId ? nwFindRow_(nwSheetRead_(tabs.accounts), contact.accountId) : null;
+  var it = nwSheetRead_(tabs.interactions), interactions = [];
+  for (var r = 1; r < it.vals.length; r++) {
+    if (String(it.vals[r][it.idx['Contact ID']] || '') !== id) continue;
+    var o = nwRowObj_(it, r);
+    interactions.push({ id: o['Interaction ID'], kind: o['Kind'], date: String(o['Date'] || '').slice(0, 10), summary: o['Summary'],
+      evidence: o['Evidence Link'], eventSlug: o['Event Slug'], createdAt: o['Created At'] });
+  }
+  auditLog('data_read', sess.email, 'network_get', { contactId: id, interactions: interactions.length });
+  return { success: true, contact: contact, account: acc ? nwAccountPublic_(acc.obj) : null, interactions: interactions };
+}
+
+// nop=delete / nop=restore — soft delete sets Deleted At, restore clears it
+// (§13; one tap, no confirmation dance). An Account with live Contacts cannot
+// be deleted: nothing cascades silently.
+function nwDeleteRestoreOp_(sess, p, restore) {
+  var id = nwStr_(p.id);
+  if (!NW_ID_RE.test(id) || 'ac'.indexOf(id.charAt(0)) < 0) return { success: false, error: 'bad_id' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var tabs = ensureNetworkTabs_(), now = nwNow_();
+  var sheet = id.charAt(0) === 'a' ? tabs.accounts : tabs.contacts;
+  var t = nwSheetRead_(sheet), found = nwFindRow_(t, id);
+  if (!nwOwned_(found, scopeRes.owner)) return { success: false, error: 'not_found' };
+  if (!restore && id.charAt(0) === 'a') {
+    var ct = nwSheetRead_(tabs.contacts), live = 0;
+    for (var r = 1; r < ct.vals.length; r++) {
+      if (String(ct.vals[r][ct.idx['Account ID']] || '') === id && !String(ct.vals[r][ct.idx['Deleted At']] || '')) live++;
+    }
+    if (live) return { success: false, error: 'account_has_contacts', count: live };
+  }
+  found.obj['Deleted At'] = restore ? '' : now;
+  found.obj['Updated At'] = now;
+  nwWriteRow_(sheet, t.headers, found.obj, found.row);
+  bumpDataRev();
+  var details = {}; details[id.charAt(0) === 'a' ? 'accountId' : 'contactId'] = id;
+  auditLog('data_write', sess.email, restore ? 'network_restore' : 'network_delete', details);
+  return { success: true, id: id, deletedAt: found.obj['Deleted At'] };
 }
 
 // PROJECT END

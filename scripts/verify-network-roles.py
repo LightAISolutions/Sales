@@ -35,6 +35,20 @@ Filed signal, with its photo link and, on a tap, its field detail (network-captu
 the low-confidence note's Fix opens the editor, and saving clears the note, marks the field verified
 and persists the edit in IndexedDB (network-capture-edited.png).
 
+N1 session 2 — review, dedupe, save (§4.2, steps 6–10) against the stub: the
+editor carries the review block (role, the account block with the D5 stage
+gate, source event, met date, consent, do-not-contact) and the company
+resolver reads the public Profiler registry (ABB resolves by name and by a
+subdomain; Acme Energy does not); Save runs nop=dupcheck → nop=save → the
+<Company>/ folder creation → nop=setfolders (accounts) → the Drive MOVE
+(files.update addParents/removeParents) → nop=links, in that order, and the
+held record leaves IndexedDB while the list row (name · title · company)
+appears (network-save-list.png); a second card with the same email gets the
+merge sheet, never a silent reject (network-save-merge.png), and Merge sends
+mergeInto=<the survivor>; "Keep as a separate contact" sends distinct=; a
+row tap fetches the full row (nop=get); Delete → Restore round-trips
+(nop=delete / nop=restore) and Save all files the stack.
+
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
 executable_path. Do NOT run `playwright install`.
@@ -84,9 +98,14 @@ def serve(directory):
     return httpd, httpd.server_address[1]
 
 
-def gas_stub(role, counter):
+def gas_stub(role, counter, state=None):
     """Stand in for the deployed Network GAS: counts every data request and
-    answers nop=list the way handleNetworkOp_ does for the tier."""
+    answers nop=list the way handleNetworkOp_ does for the tier. `state`
+    (session 2) holds the rows the save ops wrote so the list answers them."""
+    state = state if state is not None else {'contacts': [], 'accounts': [], 'posts': [], 'folders': None}
+    def q(post, key):
+        import urllib.parse
+        return dict(urllib.parse.parse_qsl(post)).get(key, '')
     def handle(route, request):
         url = request.url
         counter.append(url)
@@ -101,13 +120,64 @@ def gas_stub(role, counter):
                 body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
             elif 'nop=list' in url:
                 body = {'success': True, 'role': 'admin', 'caps': ['contacts'],
-                        'contacts': [], 'accounts': [], 'folders': None}
+                        'contacts': [c for c in state['contacts'] if not c.get('deletedAt')],
+                        'accounts': state['accounts'], 'folders': state['folders']}
             elif 'nop=newid' in url:
                 body = {'success': True, 'id': 'c-0123456789abc'}
             elif 'nop=folders' in url:
                 body = {'success': True, 'folders': None}
             elif 'nop=setfolders' in url:
-                body = {'success': True, 'folders': {'root': 'ROOTFOLDERID000001', 'inbox': 'INBOXFOLDERID00001', 'accounts': {}}}
+                import urllib.parse
+                qs = dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query))
+                accts = (state['folders'] or {}).get('accounts', {}) if state['folders'] else {}
+                accts = dict(accts, **json.loads(qs.get('accounts') or '{}'))
+                state['folders'] = {'root': 'ROOTFOLDERID000001', 'inbox': 'INBOXFOLDERID00001', 'accounts': accts}
+                body = {'success': True, 'folders': state['folders']}
+            elif 'nop=dupcheck' in post:
+                state['posts'].append(('dupcheck', post))
+                c = json.loads(q(post, 'contact') or '{}')
+                emails = [e.get('value') for e in c.get('emails', [])]
+                dup = next((s for s in state['contacts'] if not s.get('deletedAt') and s['email'] in emails and s['id'] != q(post, 'contactId')), None)
+                body = {'success': True, 'contactId': q(post, 'contactId'), 'duplicate': dup and dict(dup['full'], matchedOn='email')}
+            elif 'nop=save' in post:
+                state['posts'].append(('save', post))
+                c = json.loads(q(post, 'contact') or '{}'); a = json.loads(q(post, 'account') or '{}')
+                cid = q(post, 'contactId'); merge = q(post, 'mergeInto')
+                if a.get('stage', 'none') != 'none' and a.get('relationship') not in ('target', 'customer'):
+                    body = {'success': False, 'error': 'STAGE_NEEDS_TARGET_OR_CUSTOMER'}
+                else:
+                    acc = next((x for x in state['accounts'] if x['name'].lower() == a.get('name', '').lower()), None)
+                    created = acc is None
+                    if created:
+                        acc = {'id': 'a-%013d' % (len(state['accounts']) + 1), 'name': a.get('name', ''), 'slug': a.get('slug', ''),
+                               'relationship': a.get('relationship'), 'stage': a.get('stage'), 'updatedAt': '2026-09-21T00:00:00Z'}
+                        state['accounts'].append(acc)
+                    if merge:
+                        surv = next(x for x in state['contacts'] if x['id'] == merge)
+                        surv['full'].update(c)
+                        body = {'success': True, 'contactId': merge, 'absorbedId': cid, 'merged': True, 'accountId': acc['id'],
+                                'accountName': acc['name'], 'accountCreated': created, 'linksTarget': 'contact', 'mergeInteractionId': 'i-0000000000001'}
+                    else:
+                        state['contacts'].append({'id': cid, 'accountId': acc['id'], 'name': c.get('fullName'), 'title': c.get('title'),
+                                                  'role': c.get('role'), 'sourceEvent': c.get('sourceEvent'), 'metDate': c.get('metDate'),
+                                                  'updatedAt': '2026-09-21T00:00:%02dZ' % len(state['contacts']),
+                                                  'email': (c.get('emails') or [{}])[0].get('value', ''), 'full': dict(c, id=cid, accountId=acc['id'])})
+                        body = {'success': True, 'contactId': cid, 'accountId': acc['id'], 'accountName': acc['name'],
+                                'accountCreated': created, 'interactionId': 'i-0000000000002', 'linksTarget': 'contact'}
+            elif 'nop=links' in url:
+                body = {'success': True}
+            elif 'nop=get' in url:
+                cid = url.split('id=')[1].split('&')[0]
+                row = next((x for x in state['contacts'] if x['id'] == cid), None)
+                body = ({'success': True, 'contact': row['full'], 'account': next(x for x in state['accounts'] if x['id'] == row['accountId']),
+                         'interactions': [{'id': 'i-0000000000002', 'kind': 'scan', 'date': '2026-09-21', 'summary': 'Card scanned'}]}
+                        if row else {'success': False, 'error': 'not_found'})
+            elif 'nop=delete' in url or 'nop=restore' in url:
+                cid = url.split('id=')[1].split('&')[0]
+                row = next((x for x in state['contacts'] if x['id'] == cid), None)
+                if row:
+                    row['deletedAt'] = '' if 'nop=restore' in url else '2026-09-21T00:00:00Z'
+                body = {'success': True, 'id': cid, 'deletedAt': row and row['deletedAt']}
             elif 'nop=extract' in post:
                 # body-POST only: the images travel in the form body, not the URL
                 assert 'front=' in post and 'contactId=c-0123456789abc' in post
@@ -131,10 +201,14 @@ def drive_stub(counter):
         counter.append(request.url)
         if request.method == 'DELETE':
             route.fulfill(status=204, body=''); return
-        if '/upload/drive/v3/files' in request.url:
+        if request.method == 'PATCH' and 'addParents=' in request.url:
+            fid = request.url.split('/files/')[1].split('?')[0]
+            body = {'id': fid, 'webViewLink': 'https://drive.google.com/file/d/%s/view?moved=1' % fid}
+        elif '/upload/drive/v3/files' in request.url:
             body = {'id': 'FILEID00000000000001', 'webViewLink': 'https://drive.google.com/file/d/FILEID00000000000001/view'}
         elif '/drive/v3/files' in request.url:
-            body = {'id': 'ROOTFOLDERID000001' if '"Network App"' in (request.post_data or '') else 'INBOXFOLDERID00001'}
+            post = request.post_data or ''
+            body = {'id': 'ROOTFOLDERID000001' if '"Network App"' in post else 'INBOXFOLDERID00001' if '"_inbox"' in post else 'ACCTFOLDERID000001'}
         else:
             body = {'error': 'unsupported_in_test'}
         route.fulfill(status=200, content_type='application/json',
@@ -212,10 +286,10 @@ def probe(page):
     }""")
 
 
-def load_as(browser, base, role, query=''):
+def load_as(browser, base, role, query='', state=None):
     counter, errors = [], []
     ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True)
-    ctx.route('**://script.google.com/**', gas_stub(role, counter))
+    ctx.route('**://script.google.com/**', gas_stub(role, counter, state))
     ctx.route('**://www.googleapis.com/**', drive_stub(counter))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
     ctx.add_init_script(seed_script(role))
@@ -305,7 +379,8 @@ def run():
         ctx.close()
 
         # N1 s1 — offline capture queues; reconnect drains through the pipeline.
-        ctx, page, reqs, errs = load_as(browser, base, 'admin')
+        state = {'contacts': [], 'accounts': [], 'posts': [], 'folders': None}
+        ctx, page, reqs, errs = load_as(browser, base, 'admin', '', state)
         jpeg_b64 = page.evaluate("""() => {
           const c = document.createElement('canvas'); c.width = 700; c.height = 400;
           const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, 700, 400);
@@ -379,23 +454,162 @@ def run():
         if stored != [['https://acme.example', 1, True]]:
             failures.append('edit: held record not updated in IndexedDB: %r' % (stored,))
         page.screenshot(path=str(SHOTS / 'network-capture-edited.png'), full_page=False)
-        # Delete: confirm, the strip goes, the held record goes, the Drive file is deleted.
-        page.once('dialog', lambda d: d.accept())
-        page.click('#nw-extracted .nw-strip .nw-del-btn')
-        page.wait_for_timeout(600)
-        left = page.evaluate("""() => new Promise(res => { const r = indexedDB.open('nw-capture', 1); r.onsuccess = () => {
+        # ── N1 s2 — review, dedupe, save ─────────────────────────────────
+        idb_count = """() => new Promise(res => { const r = indexedDB.open('nw-capture', 1); r.onsuccess = () => {
             const tx = r.result.transaction('pending', 'readonly'); const g = tx.objectStore('pending').count();
-            g.onsuccess = () => res(g.result); }; })""")
+            g.onsuccess = () => res(g.result); }; })"""
+        # Company resolution against the public registry: name, aka and a subdomain of a listed domain.
+        resolved = page.evaluate("""() => Promise.all([nwResolveCompany('ABB Ltd', ''), nwResolveCompany('', 'new.global.abb'),
+            nwResolveCompany('Advanced Micro Devices, Inc.', ''), nwResolveCompany('Acme Energy', 'acme.example')])
+            .then(r => r.map(x => x && [x.slug, x.segmentIds.length > 0]))""")
+        if resolved[0] != ['abb', True] or resolved[1] != ['abb', True] or resolved[2] != ['amd', True] or resolved[3] is not None:
+            failures.append('resolve: registry resolution gave %r' % (resolved,))
+        # The review block on the editor: defaults, the D5 stage gate, the choices persisted to the held record.
+        page.click('#nw-extracted .nw-strip .nw-edit-btn')
+        page.wait_for_selector('#nw-extracted .nw-editor select[data-review="role"]', timeout=5000)
+        rv = page.evaluate("""() => { const f = document.querySelector('#nw-extracted .nw-editor');
+            const v = k => (f.querySelector('[data-review="' + k + '"]') || {}).value;
+            const st = f.querySelector('[data-review="stage"]');
+            return { role: v('role'), rel: v('relationship'), stage: st.value, stageOn: !st.disabled, consent: v('consent'),
+                     dnc: f.querySelector('[data-review="dnc"]').checked, met: v('metDate'), covered: (document.querySelector('#nw-extracted .nw-covered') || {}).textContent || '',
+                     lastIsActions: !!(f.lastElementChild && f.lastElementChild.classList.contains('nw-editor-actions')) }; }""")
+        today = page.evaluate("() => new Date().toISOString().slice(0, 10)")
+        if not (rv['role'] == 'other' and rv['rel'] == 'target' and rv['stage'] == 'none' and rv['stageOn'] and rv['consent'] == 'unknown'
+                and rv['dnc'] is False and rv['met'] == today and 'Not in the Profiler record' in rv['covered'] and rv['lastIsActions']):
+            failures.append('review: defaults wrong — %r (today %s)' % (rv, today))
+        page.select_option('#nw-extracted .nw-editor select[data-review="relationship"]', 'partner')
+        if page.evaluate("() => !document.querySelector('#nw-extracted .nw-editor select[data-review=\"stage\"]').disabled"):
+            failures.append('review: stage stayed enabled for relationship=partner (D5)')
+        page.select_option('#nw-extracted .nw-editor select[data-review="relationship"]', 'target')
+        page.select_option('#nw-extracted .nw-editor select[data-review="stage"]', 'discovery')
+        page.select_option('#nw-extracted .nw-editor select[data-review="role"]', 'decision-maker')
+        page.fill('#nw-extracted .nw-editor input[data-review="sourceEvent"]', 're-plus-2026')
+        page.select_option('#nw-extracted .nw-editor select[data-review="consent"]', 'yes')
+        page.click('#nw-extracted .nw-editor button[type="submit"]')
+        page.wait_for_timeout(400)
+        held = page.evaluate("""() => new Promise(res => { const r = indexedDB.open('nw-capture', 1); r.onsuccess = () => {
+            const tx = r.result.transaction('pending', 'readonly'); const g = tx.objectStore('pending').getAll();
+            g.onsuccess = () => res(g.result.map(o => o.review && [o.review.role, o.review.relationship, o.review.stage, o.review.sourceEvent, o.review.consent])); }; })""")
+        if held != [['decision-maker', 'target', 'discovery', 're-plus-2026', 'yes']]:
+            failures.append('review: choices not persisted to the held record: %r' % (held,))
+        strip = page.evaluate("() => (document.querySelector('#nw-extracted .nw-strip') || {}).textContent || ''")
+        if 'Decision maker' not in strip or 'Discovery' not in strip or 're-plus-2026' not in strip:
+            failures.append('review: the strip detail does not show the review choices: %r' % strip[:160])
+        # Retry extraction re-runs nop=extract with the SAME c- id from the base64 this tab still holds.
+        n_extract = len([x for x in state['posts']]) ; before = len([u for u in reqs if 'script.google.com' in u])
+        page.click('#nw-extracted .nw-strip .nw-retry-btn')
+        page.wait_for_function("() => /Read again/.test((document.getElementById('nw-cap-status') || {}).textContent || '')", timeout=15000)
+        if not [u for u in reqs[before:] if 'script.google.com' in u]:
+            failures.append('retry: no extract request was issued')
+        # Save: dupcheck → save → <Company>/ folder → setfolders(accounts) → the MOVE → links, then the list row.
+        mark = len(reqs)
+        page.click('#nw-extracted .nw-strip .nw-save-btn')
+        page.wait_for_function("() => document.querySelectorAll('#nw-extracted .nw-strip').length === 0", timeout=20000)
+        page.wait_for_function("() => document.querySelectorAll('#nw-list .nw-row').length === 1", timeout=10000)
+        page.wait_for_timeout(400)
+        page.screenshot(path=str(SHOTS / 'network-save-list.png'), full_page=False)
+        seq = []
+        for u in reqs[mark:]:
+            if 'nop=setfolders' in u: seq.append('setfolders')
+            elif 'nop=links' in u: seq.append('links')
+            elif 'nop=list' in u: seq.append('list')
+            elif 'addParents=ACCTFOLDERID000001' in u and 'removeParents=INBOXFOLDERID00001' in u: seq.append('move')
+            elif '/drive/v3/files?' in u: seq.append('folder')
+        kinds = [k for k, _ in state['posts']]
+        if kinds[-2:] != ['dupcheck', 'save'] or seq != ['folder', 'setfolders', 'move', 'links', 'list']:
+            failures.append('save: expected dupcheck, save, then folder → setfolders → move → links → list; posts=%r seq=%r' % (kinds, seq))
+        save_post = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        sc, sa = json.loads(save_post.get('contact', '{}')), json.loads(save_post.get('account', '{}'))
+        if not (sc.get('role') == 'decision-maker' and sc.get('sourceEvent') == 're-plus-2026' and sc.get('consent') == 'yes' and sc.get('metDate') == today
+                and sa.get('name') == 'Acme Energy' and sa.get('relationship') == 'target' and sa.get('stage') == 'discovery' and sa.get('slug') == ''
+                and 'confidence' in save_post.get('raw', '')):
+            failures.append('save: payload wrong — contact=%r account=%r raw=%s' % (sc, sa, 'confidence' in save_post.get('raw', '')))
+        if page.evaluate(idb_count) != 0:
+            failures.append('save: the held record is still in IndexedDB after save')
+        if (state['folders'] or {}).get('accounts') != {'a-0000000000001': 'ACCTFOLDERID000001'}:
+            failures.append('save: the account folder id was not parked through setfolders: %r' % (state['folders'],))
+        row = page.evaluate("() => (document.querySelector('#nw-list .nw-row') || {}).textContent || ''")
+        if 'Jane O’Doe-Smith' not in row or 'Director of Grid Services' not in row or 'Acme Energy' not in row:
+            failures.append('list: row should read name · title · company, got %r' % row[:120])
+        # The row: tap → the full row (nop=get); Delete → Restore.
+        page.click('#nw-list .nw-row .nw-row-main')
+        page.wait_for_function("() => /Profiler|Target/.test((document.querySelector('#nw-list .nw-row-detail') || {}).textContent || '')", timeout=8000)
+        det = page.evaluate("() => document.querySelector('#nw-list .nw-row.nw-open .nw-row-detail').textContent")
+        if 'jane@acme.example' not in det or 'Target' not in det or 're-plus-2026' not in det or not [u for u in reqs if 'nop=get' in u]:
+            failures.append('get: the full row did not open on tap: %r' % det[:160])
+        page.click('#nw-list .nw-row .nw-row-del')
+        page.wait_for_selector('#nw-list .nw-row.nw-deleted .nw-row-restore', timeout=8000)
+        if not [u for u in reqs if 'nop=delete' in u] or state['contacts'][0].get('deletedAt') == '':
+            failures.append('delete: nop=delete not issued or the stub row not marked deleted')
+        page.click('#nw-list .nw-row .nw-row-restore')
+        page.wait_for_function("() => !document.querySelector('#nw-list .nw-row.nw-deleted') && document.querySelectorAll('#nw-list .nw-row').length === 1", timeout=8000)
+        if not [u for u in reqs if 'nop=restore' in u] or state['contacts'][0].get('deletedAt'):
+            failures.append('restore: nop=restore not issued or the stub row still deleted')
+        # A second card with the same email: the merge sheet, never a silent reject; Merge sends mergeInto.
+        def seed(cid, name, email, back=False):
+            page.evaluate("""([cid, name, email, back]) => { const rec = { id: cid, sides: back ? 2 : 1, createdAt: new Date().toISOString(),
+                frontLink: 'https://drive.google.com/file/d/FILE' + cid.slice(2) + 'F/view', backLink: back ? 'https://drive.google.com/file/d/FILE' + cid.slice(2) + 'B/view' : '',
+                driveError: '', viaQr: false, dismissed: {}, extraction: { fullName: name, firstName: name.split(' ')[0], lastName: name.split(' ')[1] || '',
+                title: 'Director of Grid Services', company: 'Acme Energy', department: '', emails: [{ value: email, kind: 'work' }], phones: [], address: '',
+                website: 'acme.example', linkedin: '', socials: [], languages: ['en'], rawText: name,
+                confidence: { fullName: 0.99, title: 0.9, company: 0.95, emails: 0.97, phones: 0, address: 0, website: 0.9 } } };
+                _nwPending.push(rec); return nwPendingPut(rec).then(() => { nwRenderStrip(rec); nwSaveAllRefresh(); }); }""", [cid, name, email, back])
+        seed('c-1111111111111', 'Jane Doe', 'jane@acme.example', True)
+        page.wait_for_selector('#nw-extracted .nw-strip[data-id="c-1111111111111"] .nw-save-btn', timeout=5000)
+        if not page.query_selector('#nw-extracted .nw-strip[data-id="c-1111111111111"] .nw-swap-btn'):
+            failures.append('swap: a two-sided card has no Swap pill')
+        page.click('#nw-extracted .nw-strip[data-id="c-1111111111111"] .nw-save-btn')
+        page.wait_for_selector('#nw-extracted .nw-sheet', timeout=10000)
+        page.screenshot(path=str(SHOTS / 'network-save-merge.png'), full_page=False)
+        sheet = page.evaluate("() => document.querySelector('#nw-extracted .nw-sheet').textContent")
+        radios = page.evaluate("() => [...document.querySelectorAll('#nw-extracted .nw-sheet input[type=radio]:checked')].map(r => r.value)")
+        if 'Looks like Jane O’Doe-Smith' not in sheet or 'email address' not in sheet or not page.query_selector('#nw-extracted .nw-sheet .nw-merge-keep') or radios != ['new']:
+            failures.append('merge: sheet wrong — text=%r checked=%r' % (sheet[:120], radios))
+        page.click('#nw-extracted .nw-sheet .nw-merge-go')
+        page.wait_for_function("() => !document.querySelector('#nw-extracted .nw-strip[data-id=\"c-1111111111111\"]')", timeout=15000)
+        page.wait_for_timeout(300)
+        mp = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        if state['posts'][-1][0] != 'save' or mp.get('mergeInto') != 'c-0123456789abc' or json.loads(mp['contact']).get('fullName') != 'Jane Doe':
+            failures.append('merge: expected save with mergeInto=c-0123456789abc carrying the chosen fields, got %r' % (mp.get('mergeInto'),))
+        if len([x for x in state['contacts'] if not x.get('deletedAt')]) != 1 or state['contacts'][0]['full'].get('fullName') != 'Jane Doe':
+            failures.append('merge: the survivor was not updated with the merged fields')
+        moved = [u for u in reqs if 'addParents=ACCTFOLDERID000001' in u]
+        if len(moved) != 3:
+            failures.append('merge: both sides of the second card should move too (3 moves in all), saw %d' % len(moved))
+        # "Keep as a separate contact" sends distinct=<the declined match>.
+        seed('c-2222222222222', 'Jane Two', 'jane@acme.example')
+        page.wait_for_selector('#nw-extracted .nw-strip[data-id="c-2222222222222"] .nw-save-btn', timeout=5000)
+        page.click('#nw-extracted .nw-strip[data-id="c-2222222222222"] .nw-save-btn')
+        page.wait_for_selector('#nw-extracted .nw-sheet .nw-merge-keep', timeout=10000)
+        page.click('#nw-extracted .nw-sheet .nw-merge-keep')
+        page.wait_for_function("() => document.querySelectorAll('#nw-list .nw-row').length === 2", timeout=15000)
+        kp = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        if kp.get('distinct') != 'c-0123456789abc' or kp.get('mergeInto'):
+            failures.append('keep: expected save with distinct=c-0123456789abc, got %r' % (kp.get('distinct'),))
+        # Save all: the stack, in order.
+        seed('c-3333333333333', 'Ann Three', 'ann@acme.example'); seed('c-4444444444444', 'Bob Four', 'bob@acme.example')
+        page.wait_for_selector('#nw-extracted .nw-strip[data-id="c-4444444444444"]', timeout=5000)
+        page.click('#nw-saveall-btn')
+        page.wait_for_function("() => document.querySelectorAll('#nw-list .nw-row').length === 4 && document.querySelectorAll('#nw-extracted .nw-strip').length === 0", timeout=25000)
+        if page.evaluate(idb_count) != 0 or 'Save all' not in page.evaluate("() => document.getElementById('nw-cap-status').textContent"):
+            failures.append('save all: held records left=%d' % page.evaluate(idb_count))
+        # Delete a held card: confirm, the strip goes, the held record goes, the Drive file is deleted.
+        seed('c-5555555555555', 'Del Five', 'del@acme.example')
+        page.wait_for_selector('#nw-extracted .nw-strip[data-id="c-5555555555555"] .nw-del-btn', timeout=5000)
+        page.once('dialog', lambda d: d.accept())
+        page.click('#nw-extracted .nw-strip[data-id="c-5555555555555"] .nw-del-btn')
+        page.wait_for_timeout(600)
+        left = page.evaluate(idb_count)
         if probe(page)['strips'] != 0 or left != 0:
             failures.append('delete: strip or held record still present (strips=%d records=%d)' % (probe(page)['strips'], left))
-        if not [u for u in reqs if '/drive/v3/files/FILEID' in u]:
+        if not [u for u in reqs if '/drive/v3/files/FILE5555555555555F' in u]:
             failures.append('delete: no Drive delete request for the card photo')
         if order[:1] != ['newid'] or 'upload' not in order or order.index('newid') > order.index('upload'):
             failures.append('drain: expected the id minted BEFORE the Drive upload (D8), saw %r' % order)
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
         if real_errs:
             failures.append('capture: %d page error(s): %s' % (len(real_errs), real_errs[0][:100]))
-        rows.append(('admin+capture', got, len([u for u in reqs if 'action=network' in u or 'op=network' in u]), len(real_errs)))
+        rows.append(('admin+s1+s2', got, len([u for u in reqs if 'action=network' in u or 'op=network' in u]), len(real_errs)))
         ctx.close()
         browser.close()
     httpd.shutdown()
@@ -407,7 +621,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-8s %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['list']),
                                                   mark(g['empty']), mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-queued.png, network-capture-extracted.png (%dx%d)'
+    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png (%dx%d)'
           % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
@@ -415,7 +629,8 @@ def run():
             print('  ✗', f)
         return 1
     print('\nALL CHECKS PASSED — admin sees the capture card and the empty list; contributor, analyst and viewer are turned away '
-          'with zero requests and no capture inputs; preview only subtracts; an offline capture queues and drains on reconnect.')
+          'with zero requests and no capture inputs; preview only subtracts; an offline capture queues and drains on reconnect; '
+          'review → save → Drive move → list row, merge on a duplicate, delete → restore and Save all round-trip against the stub.')
     return 0
 
 

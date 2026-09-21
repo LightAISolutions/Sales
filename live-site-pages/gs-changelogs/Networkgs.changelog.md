@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05g] — 2026-09-21 05:01:07 AM EST — v06.90r
+
+### Added
+- **Saving a contact.** A reviewed card is written as a contact, its company as a new or existing account, and the scan as the first entry in that contact's history. Every choice on the card — role, relationship, stage, consent — is checked against the allowed values, and a stage other than None is refused unless the account is a Target or Customer
+- **Duplicate check before the write.** The app asks whether a card matches an existing contact — by email, then phone, then name at the same company — and receives the matching contact so it can offer a merge. A merge keeps the existing contact, updates the chosen details, records which card was folded in and keeps a link to both cards' photos
+- **Full-row lookup**, **delete** and **restore** for contacts and accounts; a deleted contact can be restored with one tap, and an account that still has contacts cannot be deleted
+- After the photos move to the company folder, the new photo links are written back to the contact
+- Every one of these events is recorded with identifiers and counts only — never a name, email, phone or any other detail from the card
 
 ## [v01.04g] — 2026-09-20 09:55:33 PM EST — v06.82r
 
