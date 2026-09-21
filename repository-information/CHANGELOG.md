@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.80r] — 2026-09-20 09:11:43 PM EST
+
+> **Prompt:** *(same Q0 prompt as v06.79r — the post-merge step: "after the merge, run `bash scripts/check-quota.sh` and paste its table into the CHANGELOG entry's Notes")*
+
+### Changed
+
+#### `repository-information/CHANGELOG.md`
+- The v06.79r section's Notes now carry the first `check-quota.sh` table: six deployed projects answered on their new GAS versions, three placeholder-id projects skipped, 27 executions today (Network 26, Profiler 1) against 20,000/day
+
+#### `README.md`
+- `Last updated` and `Repo version` refreshed
+
+### Notes
+
+- Q0 is complete end to end: op rolled out, script verified live, §11 row Done. Still 2026-09-20 EST — 102 sections, six exempt, 96 non-exempt, no rotation. CHANGELOG `Sections: 101/100` → `102/100`.
 
 ## [v06.79r] — 2026-09-20 09:06:03 PM EST
 
@@ -37,6 +53,22 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 - **No page bumps** — no HTML changed. Events is untouched (E1 inherits the op from the shared template region); no interval changed (that is Q); the probe carries no auth (counts only, never a user or a details cell — aclhealth's trust model).
 - **Verified** with `node --check` on all nine `.gs` copies (copied to `.js` in the scratchpad, since Node refuses the `.gs` extension), `scripts/check-gas-inner-scripts.js` (10 files, 96 inner blocks clean) and `scripts/check-readme-tree.py` (0 findings).
 - **The three placeholder-id projects** — Globalacl, Testauthgas1, Testauthhtml1 — never deploy, so their copies are repo-only bookkeeping and the script skips them; the deployed six plus Network answer. The first `bash scripts/check-quota.sh` table lands in the follow-up push once this merge has deployed the nine scripts.
+- **First `bash scripts/check-quota.sh` run, after the merge deployed the nine scripts** (2026-09-20 09:10:55 PM EDT, exit 0) — every deployed project answers on its new GAS version, which is the deploy confirmation:
+
+  ```
+          page          gas      date       executions  top events
+    OK    Classroom     v01.86g  2026-09-20          0  -
+    SKIP  globalacl     not deployed (no deployment id)
+    OK    MasterACL     v01.15g  2026-09-20          0  -
+    OK    Network       v01.03g  2026-09-20         26  security_alert 12, data_read 8, login_success 3
+    OK    Profiler      v01.40g  2026-09-20          1  security_alert 1
+    OK    Receipts      v01.30g  2026-09-20          0  -
+    OK    Scraper       v02.21g  2026-09-20          0  -
+    SKIP  testauthgas1  not deployed (no deployment id)
+    SKIP  testauthhtml1 not deployed (no deployment id)
+
+  TOTAL — 27 execution(s) today across 6 probed project(s) = 0% of the 20000/day account quota.
+  ```
 - **No rotation fired.** The push lands on 2026-09-20 EST: 101 sections total, five dated today exempt, 96 non-exempt → below the 100 trigger. The first push dated 2026-09-21 EST or later rotates the oldest date group (2026-09-15). CHANGELOG `Sections: 100/100` → `101/100`.
 
 ## [v06.78r] — 2026-09-20 08:53:15 PM EST
