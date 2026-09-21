@@ -49,7 +49,9 @@ mergeInto=<the survivor>; "Keep as a separate contact" sends distinct=; a
 row tap fetches the full row (nop=get); Delete → Restore round-trips
 (nop=delete / nop=restore) and Save all files the stack. v01.11w: titles,
 departments and company names are standardised (nwStdField) and a saved
-contact is editable from its row (nop=update).
+contact is editable from its row (nop=update). v01.12w: the developer's
+own casing calls (RAI, the "Director, X" comma form) and the Tidy button
+that re-cases every saved contact through nop=get → nop=update.
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -544,7 +546,7 @@ def run():
         if (state['folders'] or {}).get('accounts') != {'a-0000000000001': 'ACCTFOLDERID000001'}:
             failures.append('save: the account folder id was not parked through setfolders: %r' % (state['folders'],))
         row = page.evaluate("() => (document.querySelector('#nw-list .nw-row') || {}).textContent || ''")
-        if 'Jane O’Doe-Smith' not in row or 'Director of Grid Services' not in row or 'Acme Energy' not in row:
+        if 'Jane O’Doe-Smith' not in row or 'Director, Grid Services' not in row or 'Acme Energy' not in row:
             failures.append('list: row should read name · title · company, got %r' % row[:120])
         # The row: tap → the full row (nop=get); Delete → Restore.
         page.click('#nw-list .nw-row .nw-row-main')
@@ -565,11 +567,29 @@ def run():
             ['vice president of business development', true], ['SVP Sales', true], ['HEAD OF IT', true], ['CEO', true], ['Sr Engineer, R&D', true],
             ['Key Account Manager (亚太区)', true], ['AVANTUS', false], ['acme energy', false], ['ABB', false], ['TSMC', false], ['McKinsey & Company', false],
             ['SUNGROW POWER SUPPLY CO., LTD.', false], ['Siemens Energy GMBH', false], ['SALES & MARKETING', false]].map(c => nwStdField(c[0], c[1]))""")
-        want_std = ['Director of Grid Services', 'Sr. VP, Sales', 'EVP', 'VP of Business Development', 'Sr. VP Sales', 'Head of IT', 'CEO', 'Sr. Engineer, R&D',
+        want_std = ['Director, Grid Services', 'Sr. VP, Sales', 'EVP', 'VP, Business Development', 'Sr. VP Sales', 'Head of IT', 'CEO', 'Sr. Engineer, R&D',
                     'Key Account Manager (亚太区)', 'Avantus', 'Acme Energy', 'ABB', 'TSMC', 'McKinsey & Company', 'Sungrow Power Supply Co., Ltd.',
                     'Siemens Energy GmbH', 'Sales & Marketing']
         if std != want_std:
             failures.append('standardise: nwStdField gave %r' % (std,))
+        dev = page.evaluate("""() => [['VICE PRESIDENT, PRE-CONSTRUCTION', 1], ['Vice President', 1], ['Director of Onshore Renewables', 1], ['Senior Manager', 1],
+            ['DIRECTOR, STORAGE ENGINEERING', 1], ['AVANTUS', 0], ['SR. MANAGER, STORAGE ENGINEERING', 1], ['DEVELOPMENT COORDINATOR', 1], ['Jupiter POWER', 0],
+            ['CYPRESS CREEK RENEWABLES', 0], ['DEPUTY DIRECTOR', 1], ['SR. DIRECTOR, STORAGE ENGINEERING', 1], ['RAI ENERGY', 0], ['Head of IT', 1], ['Chief of Staff', 1]]
+            .map(c => nwStdField(c[0], !!c[1]))""")
+        want_dev = ['VP, Pre-Construction', 'VP', 'Director, Onshore Renewables', 'Sr. Manager', 'Director, Storage Engineering', 'Avantus', 'Sr. Manager, Storage Engineering',
+                    'Development Coordinator', 'Jupiter Power', 'Cypress Creek Renewables', 'Deputy Director', 'Sr. Director, Storage Engineering', 'RAI Energy', 'Head of IT', 'Chief of Staff']
+        if dev != want_dev:
+            failures.append('standardise: the developer\'s 2026-09-21 cases gave %r' % (dev,))
+        # Tidy saved contacts: a row saved with an un-tidied title is re-cased through nop=get → nop=update.
+        state['contacts'][0]['full']['title'] = 'SR. DIRECTOR, STORAGE ENGINEERING'; state['contacts'][0]['title'] = 'SR. DIRECTOR, STORAGE ENGINEERING'
+        page.evaluate("() => nwAfterWrite()")
+        page.wait_for_function("() => /SR\\. DIRECTOR/.test((document.getElementById('nw-list') || {}).textContent || '')", timeout=8000)
+        page.click('#nw-list .nw-tidy-btn')
+        page.wait_for_function("() => /Tidy — 1 of 1/.test((document.getElementById('nw-cap-status') || {}).textContent || '')", timeout=15000)
+        page.wait_for_function("() => /Sr\\. Director, Storage Engineering/.test((document.getElementById('nw-list') || {}).textContent || '')", timeout=8000)
+        tp = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        if state['posts'][-1][0] != 'update' or json.loads(tp.get('contact', '{}')).get('title') != 'Sr. Director, Storage Engineering':
+            failures.append('tidy: expected one nop=update carrying the re-cased title, got %r' % (state['posts'][-1][0],))
         # Edit a saved contact from its row: the editor opens in the detail pre-filled, the review block too; save → nop=update → the row re-renders.
         page.click('#nw-list .nw-row .nw-row-main')
         page.wait_for_selector('#nw-list .nw-row.nw-open .nw-row-edit', timeout=8000)

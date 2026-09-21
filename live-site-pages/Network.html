@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.11w">
+  <meta name="build-version" content="v01.12w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -5054,7 +5054,14 @@ var NW_ACRONYMS = {};
 NW_CSUITE.concat(['VP', 'EVP', 'AVP', 'GM', 'MD', 'IT', 'HR', 'PR', 'QA', 'QC', 'BD', 'RD', 'R&D', 'EMEA', 'APAC', 'LATAM', 'NA', 'US', 'USA', 'UK', 'EU',
   'LLC', 'PLC', 'LTD', 'INC', 'AG', 'SA', 'NV', 'BV', 'PTE', 'PTY', 'EPC', 'HV', 'MV', 'LV', 'AC', 'DC', 'UPS', 'BESS', 'PV', 'EV', 'AI', 'ML', 'IoT', 'OEM', 'ODM',
   'KAM', 'NAM', 'GAM', 'SDR', 'BDR', 'AE', 'PM', 'PMO', 'SVP', 'CTO', 'RF', 'HVAC', 'DER', 'ESS', 'IPP', 'EPCM', 'O&M', 'AVP', 'JD', 'CPA', 'PE', 'MBA', 'PHD']).forEach(function(a) { NW_ACRONYMS[a] = true; });
-var NW_CASE_FIXES = { gmbh: 'GmbH', llc: 'LLC', plc: 'PLC', ltd: 'Ltd', inc: 'Inc', co: 'Co', corp: 'Corp', phd: 'PhD', mba: 'MBA', 'p.e': 'P.E', iot: 'IoT', ohsa: 'OSHA' };
+var NW_CASE_FIXES = { gmbh: 'GmbH', llc: 'LLC', plc: 'PLC', ltd: 'Ltd', inc: 'Inc', co: 'Co', corp: 'Corp', phd: 'PhD', mba: 'MBA', 'p.e': 'P.E', iot: 'IoT', ohsa: 'OSHA',
+  // Words the developer has ruled on by hand (2026-09-21) — kept here so
+  // every new card follows the same call. Add to this list, never special-case a card.
+  rai: 'RAI' };
+// "Director of Storage Engineering" → "Director, Storage Engineering": a rank
+// title followed by "of" takes the comma form (the developer's style,
+// 2026-09-21). Ranks only — "Head of IT" and "Chief of Staff" keep their "of".
+var NW_RANK_OF_RE = /\b((?:sr\.\s+|deputy\s+|assistant\s+|associate\s+|executive\s+)?(?:director|manager|vp|evp|coordinator|engineer|analyst|specialist|lead|supervisor|officer))\s+of\s+(?=\S)/gi;
 var NW_CONNECTORS = { of: 1, and: 1, the: 1, for: 1, at: 1, in: 1, on: 1, to: 1, 'a': 1, an: 1, de: 1, du: 1, del: 1, della: 1, von: 1, van: 1, der: 1, den: 1, la: 1, le: 1, y: 1, e: 1, '&': 1 };
 function nwTitleAbbrev(s) {
   return String(s || '')
@@ -5066,7 +5073,8 @@ function nwTitleAbbrev(s) {
     .replace(/\bv\.\s*p\.?(?=\W|$)/gi, 'VP')
     .replace(/\bsenior(?=\W|$)/gi, 'Sr.')
     .replace(/\bsr\.?(?=\s|,|$)/gi, 'Sr.')
-    .replace(/Sr\.\./g, 'Sr.');
+    .replace(/Sr\.\./g, 'Sr.')
+    .replace(NW_RANK_OF_RE, '$1, ');
 }
 function nwStdField(s, isTitle) {
   var str = String(s || '').replace(/\s+/g, ' ').trim();
@@ -5935,6 +5943,44 @@ function nwUpdateContact(rec, row) {
     nwAfterWrite();
   });
 }
+// Tidy saved contacts: the standardisation rule over every saved contact
+// and its account (title, department, company), through nop=get →
+// nop=update, so a rule that changed after a save still reaches the rows.
+// One tap; the status line reports what moved. A renamed account renames
+// for every contact on it (the row is shared).
+var _nwTidyBusy = false;
+function nwTidySaved(contacts) {
+  if (_nwTidyBusy || !contacts.length) return;
+  _nwTidyBusy = true;
+  var i = 0, changed = 0, failed = 0, changes = [];
+  function next() {
+    if (i >= contacts.length) {
+      _nwTidyBusy = false;
+      nwCaptureStatus('✓ Tidy — ' + changed + ' of ' + contacts.length + ' contact' + (contacts.length === 1 ? '' : 's') + ' changed' + (failed ? ', ' + failed + ' failed' : '') + (changes.length ? ': ' + changes.slice(0, 6).join('; ') + (changes.length > 6 ? ' …' : '') : '') + '.', failed ? 'warn' : 'ok', 0);
+      if (changed) nwAfterWrite();
+      return;
+    }
+    var c0 = contacts[i++];
+    nwCaptureStatus('Tidying ' + i + ' of ' + contacts.length + '…', '', 0);
+    nwApi('get', { id: c0.id }, function(res) {
+      if (!(res && res.success && res.contact)) { failed++; next(); return; }
+      var rec = nwRecFromRow(res.contact, res.account);
+      var before = [rec.extraction.title, rec.extraction.department, rec.extraction.company];
+      rec.review.resolvedFor = '';
+      nwResolveCard(rec).then(function() {
+        nwTidyNames(rec.extraction);
+        var after = [rec.extraction.title, rec.extraction.department, rec.extraction.company];
+        if (before.join('|') === after.join('|')) { next(); return; }
+        nwApiBody('update', { contactId: rec.id, contact: JSON.stringify(nwContactPayload(rec)), account: JSON.stringify(nwAccountPayload(rec)) }, function(up) {
+          if (up && up.success) { changed++; changes.push((rec.extraction.fullName || rec.id) + ': ' + before.filter(function(v, k) { return v !== after[k]; }).join(' / ') + ' → ' + after.filter(function(v, k) { return v !== before[k]; }).join(' / ')); }
+          else failed++;
+          next();
+        });
+      }).catch(function() { failed++; next(); });
+    });
+  }
+  next();
+}
 function nwRowMark(row, deleted) {
   row.classList.toggle('nw-deleted', !!deleted);
   var side = row.querySelector('.nw-row-side'); if (!side) return;
@@ -6025,6 +6071,14 @@ function nwLoadList() {
     wrap.appendChild(counts);
     var list = nwEl('div', 'nw-card'); list.id = 'nw-list';
     list.appendChild(nwEl('h2', null, 'Contacts'));
+    if (contacts.length) {
+      var tidyRow = nwEl('div', 'nw-strip-photos nw-tidy-row');
+      var tidyBtn = nwEl('a', 'nw-edit-btn nw-tidy-btn', '✨ Tidy titles & companies'); tidyBtn.href = '#'; tidyBtn.setAttribute('role', 'button');
+      tidyBtn.title = 'Apply the standard casing to every saved contact and account';
+      tidyBtn.addEventListener('click', function(ev) { ev.preventDefault(); nwTidySaved(contacts.slice()); });
+      tidyRow.appendChild(tidyBtn);
+      list.appendChild(tidyRow);
+    }
     if (!contacts.length) {
       var empty = nwEl('div', 'nw-empty');
       empty.appendChild(nwEl('b', null, 'No contacts yet'));

@@ -7,7 +7,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 ## Latest Session
 
 **Date:** 2026-09-21 05:01:07 AM EST
-**Repo version:** v06.91r — two pushes this session (`96f04a5` v06.90r the session-2 build, this one — titles / departments / company standardised, saved contacts editable), on `claude/youthful-ride-75oah0` (restarted from `origin/main` f1abee3)
+**Repo version:** v06.92r — three pushes this session (`96f04a5` v06.90r the session-2 build, `39dc362` v06.91r titles / departments / company standardised + saved contacts editable, this one — the developer's fourteen casing calls encoded, the Tidy pill), on `claude/youthful-ride-75oah0` (restarted from `origin/main` f1abee3)
 **Branch:** `claude/youthful-ride-75oah0`
 **Model:** Fable 5.1 (N1 session 2 brief)
 
@@ -19,11 +19,12 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **`Network.html` v01.10w** — the review block on the existing editor (`nwReviewSection`: role, account block with the covered/uncovered chip and the D5 `gateStage`, source event, met date from `createdAt`, consent, DNC, notes → `rec.review`), Retry (`_nwHeldB64` or Drive read-back) and Swap pills, Save + Save all, registry resolution (`nwRegistry` / `nwResolveCompany` over `profiler-data/profiler-companies.json`, `nwExistingAccount` from the list payload), `nwSaveCard` → dupcheck → merge sheet (`nwMergeSheet`) or save → `nwFileCard` (account folder created + parked via `setfolders`, `nwDriveMove` addParents/removeParents) → links → pending deleted → `nwAfterWrite()`; list rows name · title · company, `nwRowDetail` (`nop=get`), delete → restore.
 - **`scripts/check-network-schema.py`** (new, §14) — enum mirrors, D5 mirror, test ids, id generation, audit-row lexical check; exit 0. **`scripts/verify-network-roles.py`** extended with the stateful stub and the full save round-trip (order asserted: dupcheck, save, folder → setfolders → move → links → list; merge sheet, keep-separate, Save all, delete/restore). All checks pass at 390 × 844 with zero page errors.
 - **v06.91r (v01.11w / v01.06g)** — `nwStdField` standardises titles, departments and company names (First-letter caps; C-suite and acronyms kept; Vice President → VP, Executive Vice President → EVP, Senior → Sr.; registry name wins for a covered company); a saved contact is editable from its row through `nop=update` (account re-resolved, `account-change` Interaction on a move).
+- **v06.92r (v01.12w)** — the developer's corrections to the first saved contacts encoded as rule (`NW_RANK_OF_RE` "Director of X" → "Director, X"; `NW_CASE_FIXES.rai` → RAI) and **Tidy titles & companies** on the Contacts card re-cases every saved row through `nop=get` → `nop=update`. The 20 cards ARE saved on the phone now (the developer listed the contacts by name).
 - Plan §11 N1 row → Done; §13.6 written — the N2 brief + paste-in prompt (Fable 5.1 High). README tree entry for the checker; CHANGELOG `Sections: 86/100`, no rotation.
 
 ### Where we left off
 
-**The 20 held cards have NOT yet been saved on the phone** — that is the developer's next action after this push deploys (v01.10w auto-refreshes the page; the `pending` store was not touched). Hand-off order given in chat: a two-sided card first (Save → check the Drive move of both sides), a Chinese-script one (romanised name + native script in parentheses, Retry if the read is poor), then the two Avantus cards (same title, different names/emails → no merge sheet; if one appears, use **Keep as a separate contact**). Then **Save all** for the rest. N2 (§13.6) is next; E0 (§13.4) can still run beside it.
+**The 20 cards are saved** (the developer corrected fourteen titles / companies by name at v06.92r). Next on the phone: tap **✨ Tidy titles & companies** once so the rule lands on the rows saved before it (Avantus, RAI Energy, the Director/Sr. Director titles). N2 (§13.6) is next; E0 (§13.4) can still run beside it.
 
 ### Key decisions made
 
@@ -36,8 +37,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ### Active context
 
-- **Repo version v06.91r.** `CHANGELOG.md` at `Sections: 87/100`, nine dated 2026-09-21 — 78 non-exempt today, 87 on any later date: **no rotation due**. Archive at 504 sections.
-- Network page changelog `Sections: 11/50`, GAS `6/50`. Screenshots in `.playwright-screenshots/` (`network-save-list.png`, `network-save-merge.png`). `pip install playwright` is needed in a fresh container; Chromium under `/opt/pw-browsers`.
+- **Repo version v06.92r.** `CHANGELOG.md` at `Sections: 88/100`, ten dated 2026-09-21 — 78 non-exempt today, 88 on any later date: **no rotation due**. Archive at 504 sections.
+- Network page changelog `Sections: 12/50`, GAS `6/50`. Screenshots in `.playwright-screenshots/` (`network-save-list.png`, `network-save-merge.png`). `pip install playwright` is needed in a fresh container; Chromium under `/opt/pw-browsers`.
 - **Untested live:** the real Drive `files.update` move, `nop=save` against the real spreadsheet (first rows ever written to `Contacts` / `Accounts` / `Interactions`), the registry fetch from Pages. The stub exercised the request order and payloads only.
 - **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()`.
 - **§13 numbering:** N2 brief is §13.6; N2 writes the E1 brief as §13.7 (or the next free number if E0 adds one).
@@ -46,7 +47,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ### Recommendation for next session
 
-- **Save the 20 held cards on the phone first (two-sided → Chinese-script → the Avantus pair → Save all), then open a Fable 5.1 High session and paste the N2 prompt block under §13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the Accounts surface, `nop=account`, the `Profiler.html#<slug>` deep links, the propose-a-dossier hook and the on-the-record check. If a save misbehaves on the phone, bring the status line text and the card's state (held / saved / photos moved) to a session before N2.
+- **Tap Tidy titles & companies once on the phone, then open a Fable 5.1 High session and paste the N2 prompt block under §13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the Accounts surface, `nop=account`, the `Profiler.html#<slug>` deep links, the propose-a-dossier hook and the on-the-record check. If a save misbehaves on the phone, bring the status line text and the card's state (held / saved / photos moved) to a session before N2.
 - **To continue:** type `run N2`
 
 ## Previous Sessions

@@ -95,6 +95,8 @@ All timestamps are ISO-8601 UTC strings written by the server; dates the develop
 | Raw Extraction | JSON | The model's full response including `confidence{}`, kept for re-review; never exported |
 | Created At · Updated At · Deleted At | ISO | Soft delete per §13 |
 
+**Display casing of Title · Department · Account Name (developer's rule, 2026-09-21; `nwStdField` in `Network.html`)** — every word First-letter-capitalised, the rest lower; C-suite titles and acronyms stay in capitals (a listed abbreviation always; in a mixed-case string any 2–4-letter capital token; in an ALL-CAPS string a vowel-less 2–4-letter token or a lone name of ≤3 letters); mixed-case words (McKinsey, PhD) as printed; parentheses never touched; a covered company takes the registry's `name`. Titles: Vice President → VP, Executive Vice President → EVP, Senior → Sr., and a rank followed by "of" takes the comma form ("Director, Storage Engineering"; Head / Chief keep "of"). Words the developer has ruled on live in `NW_CASE_FIXES` (`rai` → RAI) — add there, never special-case a row. Applied at extraction, on load, on edit, and to saved rows by the Tidy pill (`nop=get` → `nop=update`).
+
 ### `Interactions`
 
 | Column | Type | Meaning |

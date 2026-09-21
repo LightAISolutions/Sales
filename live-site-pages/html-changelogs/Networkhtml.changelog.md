@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12w] — 2026-09-21 05:53:43 AM EST — v06.92r
+
+### Added
+- **Tidy titles & companies** — one tap at the top of the Contacts list applies the standard casing to every saved contact and account and reports what changed. Use it once after an update to the rule; a company renamed this way renames for everyone at it
+
+### Changed
+- **The casing rule follows your calls**: a rank title followed by "of" takes the comma form ("Director of Onshore Renewables" → "Director, Onshore Renewables"; also Manager, VP, EVP, Coordinator, Engineer, Analyst, Specialist, Lead, Supervisor, Officer — "Head of IT" and "Chief of Staff" keep their "of"), and words you have ruled on are remembered (RAI stays in capitals: "RAI ENERGY" → "RAI Energy"). Confirmed on your list: "VICE PRESIDENT, PRE-CONSTRUCTION" → "VP, Pre-Construction", "Senior Manager" → "Sr. Manager", "SR. DIRECTOR, STORAGE ENGINEERING" → "Sr. Director, Storage Engineering", "AVANTUS" → "Avantus", "Jupiter POWER" → "Jupiter Power", "CYPRESS CREEK RENEWABLES" → "Cypress Creek Renewables", "DEPUTY DIRECTOR" → "Deputy Director", "DEVELOPMENT COORDINATOR" → "Development Coordinator"
 
 ## [v01.11w] — 2026-09-21 05:39:58 AM EST — v06.91r
 

@@ -3,11 +3,65 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.92r] — 2026-09-21 05:53:43 AM EST
+
+> **Prompt:** "A few changes to the saved contacts that I want you to remember and use for new entries:
+>
+> * Justin Garver:
+>    * VICE PRESIDENT, PRE-CONSTRUCTION -> VP, Pre-Construction
+> * David Jeon:
+>    * Vice President -> VP
+> * Ryan De La Cruz:
+>    * Vice President -> VP
+> * Rubin Sidhu, Ph.D.:
+>    * Director of Onshore Renewables -> Director, Onshore Renewables
+> * Keith Allen:
+>    * Senior Manager -> Sr. Manager
+> * Mark Christensen:
+>    * DIRECTOR, STORAGE ENGINEERING -> Director, Storage Engineering
+>    * AVANTUS -> Avantus (apply this change to all "AVANTUS" employees)
+> * David Olmos:
+>    * SR. MANAGER, STORAGE ENGINEERING -> Sr. Manager, Storage Engineering
+> * Austin York:
+>    * DEVELOPMENT COORDINATOR -> Development Coordinator
+>    * Jupiter POWER -> Jupiter Power
+> * Chris Page:
+>    * CYPRESS CREEK RENEWABLES -> Cypress Creek Renewables
+> * Randi Tveitaraas Jack:
+>    * DEPUTY DIRECTOR -> Deputy Director
+> * Kamran Moradi, Ph.D.:
+>    * SR. DIRECTOR, STORAGE ENGINEERING -> Sr. Director, Storage Engineering
+> * Brian Grummel, Ph.D.:
+>    * SR. DIRECTOR, STORAGE ENGINEERING -> Sr. Director, Storage Engineering
+> * Mohammed S. Alrai:
+>    * RAI ENERGY -> RAI Energy"
+
+### Added
+
+#### `live-site-pages/Network.html` — v01.12w
+- **Tidy saved contacts** (`nwTidySaved`): a pill at the top of the Contacts card runs the standardisation over every saved row — `nop=get` → `nwRecFromRow` → `nwResolveCard` (registry casing) → `nwTidyNames` → `nop=update` only when title / department / company moved — and reports "N of M changed" with the first changes named. The spreadsheet is not reachable from a session, so this is how the fourteen corrections land on the phone (and how any later rule change reaches rows saved before it)
+- `NW_CASE_FIXES` carries the developer's ruled-on words (`rai` → `RAI`); `NW_RANK_OF_RE` turns "<rank> of <dept>" into "<rank>, <dept>" for Director / Manager / VP / EVP / Coordinator / Engineer / Analyst / Specialist / Lead / Supervisor / Officer (with Sr. / Deputy / Assistant / Associate / Executive prefixes) — "Head of IT" and "Chief of Staff" are untouched. All fourteen of the developer's cases assert in Node and in the verifier
+
+### Changed
+
+#### `scripts/verify-network-roles.py`
+- The developer's fifteen cases (the fourteen plus the two "of" exceptions) asserted; a Tidy round-trip (a row seeded with "SR. DIRECTOR, STORAGE ENGINEERING" re-cased through one `nop=update`); the two earlier expectations that carried "of" updated to the comma form
+
+#### `repository-information/NETWORK-SCHEMA.md`
+- §3 Contacts: the display-casing rule for Title / Department / Account Name recorded with a pointer to `nwStdField` and the remembered word list
+
+#### `README.md`
+- Tree: `Network.html` description; display v01.12w
+
+### Notes
+- Still 2026-09-21 EST — 88 sections, ten dated today and exempt; no rotation. CHANGELOG `Sections: 87/100` → `88/100`
+- Verified: `check-gas-inner-scripts.js`, `check-readme-tree.py` (0 findings), `verify-network-roles.py` (all checks passed, 0 page errors), `check-network-schema.py` (exit 0). `Network.gs` untouched
 
 ## [v06.91r] — 2026-09-21 05:39:58 AM EST
 
