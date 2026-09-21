@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04w] — 2026-09-21 03:17:50 AM EST — v06.83r
+
+### Added
+- **A progress bar for every card** — four steps (Id, Upload, Read, Filed) fill as the card moves through them, with a “card 3 of 12” title during a batch; a problem turns the bar red at the step it stopped
+- **A clear “go on” signal** — when a card is filed, a green “ready for the next card” line appears, the phone buzzes briefly and the Photograph button pulses so the next shot is one tap away
+- **Open the original photo** — every card you have read shows a Front photo (and Back photo) button that opens the picture in your Drive
+- **See what was read** — tap a card's name to expand every field found, with the uncertain ones highlighted; editing and saving still arrive in the next release
 
 ## [v01.03w] — 2026-09-20 09:55:33 PM EST — v06.82r
 

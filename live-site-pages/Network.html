@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.03w">
+  <meta name="build-version" content="v01.04w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -419,6 +419,21 @@
     .nw-status { font: 13px/1.55 var(--nw-serif); color: var(--nw-muted); min-height: 20px; margin: 0 0 6px; }
     .nw-status.nw-status-warn { color: var(--nw-gold); }
     .nw-status.nw-status-err { color: var(--nw-dis); }
+    .nw-status.nw-status-ok { color: #2e7d4f; font-weight: 600; font-size: 15px; }
+    /* Progress: four steps the pipeline reports — Id → Upload → Read → Filed */
+    .nw-progress { display: none; margin: 2px 0 10px; }
+    .nw-progress.nw-on { display: block; }
+    .nw-progress-bar { height: 8px; border-radius: 999px; background: #eae5da; overflow: hidden; }
+    .nw-progress-bar i { display: block; height: 100%; width: 0; background: var(--nw-accent); border-radius: 999px; transition: width .35s ease; }
+    .nw-progress.nw-ok .nw-progress-bar i { background: #2e7d4f; }
+    .nw-progress.nw-err .nw-progress-bar i { background: var(--nw-dis); }
+    .nw-progress-steps { display: flex; justify-content: space-between; margin-top: 5px; font: 11px/1.4 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); }
+    .nw-progress-steps span.nw-done { color: var(--nw-ink); }
+    .nw-progress-steps span.nw-now { color: var(--nw-accent); font-weight: 600; }
+    .nw-progress.nw-ok .nw-progress-steps span { color: #2e7d4f; }
+    .nw-progress-title { font: 12px/1.5 var(--nw-mono); color: var(--nw-muted); margin: 0 0 4px; }
+    @keyframes nwPulse { 0% { box-shadow: 0 0 0 0 rgba(46,125,79,.55); } 100% { box-shadow: 0 0 0 14px rgba(46,125,79,0); } }
+    .nw-btn.nw-pulse { animation: nwPulse 1.1s ease-out 2; background: #2e7d4f; border-color: #2e7d4f; }
     .nw-queue { font: 12px/1.6 var(--nw-mono); color: var(--nw-faint); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .nw-queue b { font-weight: 600; color: var(--nw-ink); background: #eee9df; border-radius: 999px; padding: 1px 9px; }
     .nw-queue.nw-queue-live b { background: var(--nw-gold); color: #fff; }
@@ -430,6 +445,17 @@
     .nw-strip .nw-strip-meta { font: 11px/1.7 var(--nw-mono); color: var(--nw-faint); }
     .nw-strip .nw-low { color: var(--nw-gold); }
     .nw-strip .nw-strip-meta .nw-bad { color: var(--nw-dis); }
+    .nw-strip-head { cursor: pointer; }
+    .nw-strip-head .nw-strip-name::after { content: ' ▸'; color: var(--nw-faint); font-size: 12px; }
+    .nw-strip.nw-open .nw-strip-head .nw-strip-name::after { content: ' ▾'; }
+    .nw-strip-photos { display: flex; gap: 8px; margin: 6px 0 2px; flex-wrap: wrap; }
+    .nw-strip-photos a { font: 600 13px/1 var(--nw-serif); color: var(--nw-accent); border: 1px solid var(--nw-line2); border-radius: 999px; padding: 7px 12px; text-decoration: none; min-height: 32px; display: inline-flex; align-items: center; gap: 4px; }
+    .nw-strip-photos span { font: 12px/1 var(--nw-mono); color: var(--nw-faint); padding: 8px 0; }
+    .nw-strip-detail { display: none; margin: 8px 0 2px; font-size: 13px; line-height: 1.6; color: var(--nw-ink); border-left: 3px solid var(--nw-line); padding-left: 10px; }
+    .nw-strip.nw-open .nw-strip-detail { display: block; }
+    .nw-strip-detail dt { font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); }
+    .nw-strip-detail dd { margin: 0 0 4px; word-break: break-word; }
+    .nw-strip-detail dd.nw-low { color: var(--nw-gold); }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4663,13 +4689,13 @@ function nwProcessPair(pair, onStatus) {
       .then(function() { nwQueueRefresh(); onStatus('Offline — the card is queued and will be sent when the connection returns.', 'warn'); return { queued: true }; });
   }
   return new Promise(function(resolve, reject) {
-    onStatus('Reserving an id…');
+    onStatus('Reserving an id…', '', 1);
     nwApi('newid', { prefix: 'c' }, function(res) {
       if (!(res && res.success && res.id)) { reject(new Error((res && res.error) || 'newid_failed')); return; }
       resolve(res.id);
     });
   }).then(function(cid) {
-    onStatus('Uploading to your Drive…');
+    onStatus(pair.back ? 'Uploading both sides to your Drive…' : 'Uploading to your Drive…', '', 2);
     return nwUploadPair(cid, pair, mime).then(function(up) {
       var qr = pair.qr || null;
       var extractP;
@@ -4680,7 +4706,7 @@ function nwProcessPair(pair, onStatus) {
           var wait = Math.max(0, _nwLastExtractAt + NW_EXTRACT_SPACING_MS - Date.now());
           setTimeout(function() {
             _nwLastExtractAt = Date.now();
-            onStatus(pair.back ? 'Reading both sides…' : 'Reading the card…');
+            onStatus(pair.back ? 'Reading both sides…' : 'Reading the card…', '', 3);
             var params = { contactId: cid, front: pair.front, mime: mime };
             if (pair.back) params.back = pair.back;
             if (qr) params.qr = JSON.stringify(qr);
@@ -4696,7 +4722,8 @@ function nwProcessPair(pair, onStatus) {
         _nwPending.push(rec);
         return nwPendingPut(rec).catch(function() {}).then(function() {
           nwRenderStrip(rec);
-          onStatus(up.error ? 'Read — but the photos could not be filed in Drive (' + up.error + '); they will be retried on save.' : 'Read and filed in Drive.', up.error ? 'warn' : '');
+          if (up.error) onStatus('Read — but the photos could not be filed in Drive (' + up.error + '); they will be retried on save.', 'warn', 4);
+          else onStatus('Read and filed in Drive.', 'ok', 4);
           return rec;
         });
       });
@@ -4714,10 +4741,11 @@ function nwQueueDrain() {
     items.sort(function(a, b) { return (a.qid || 0) - (b.qid || 0); });
     var i = 0;
     function next() {
-      if (i >= items.length) { _nwDraining = false; nwQueueRefresh(); nwCaptureStatus(items.length ? 'Queued cards sent.' : ''); return; }
+      if (i >= items.length) { _nwDraining = false; nwQueueRefresh(); if (items.length) nwCaptureDone('✓ Queued cards sent. Ready for the next card.'); return; }
       var it = items[i++];
-      nwCaptureStatus('Sending queued card ' + i + ' of ' + items.length + '…');
-      nwProcessPair({ front: it.front, back: it.back, qr: it.qr }, function() {})
+      nwProgressSet(1, '', 'Queued: card ' + i + ' of ' + items.length);
+      nwCaptureStatus('Sending queued card ' + i + ' of ' + items.length + '…', '', 1);
+      nwProcessPair({ front: it.front, back: it.back, qr: it.qr }, function(t, lv, st) { nwCaptureStatus('Queued card ' + i + ': ' + t, lv, st); })
         .then(function() { return nwQueueDelete(it.qid); })
         .then(function() { nwQueueRefresh(); next(); })
         .catch(function(e) { _nwDraining = false; nwQueueRefresh(); nwCaptureStatus('Queued card could not be sent (' + String((e && e.message) || e) + ') — will retry when the connection returns.', 'err'); });
@@ -4735,11 +4763,41 @@ window.addEventListener('offline', function() { nwQueueRefresh(); });
 // of up to NW_MAX_BATCH; the front / back toggle stages a pair so one review
 // holds both sides. Nothing here issues a request on mount — the folder ids
 // arrive with the list, the queue count is local.
-function nwCaptureStatus(text, level) {
+var NW_PROGRESS_STEPS = ['Id', 'Upload', 'Read', 'Filed'];
+// status text + level ('' | 'warn' | 'err' | 'ok') + the pipeline step
+// (1–4) it belongs to; the step drives the progress bar so the user sees
+// where a card is without reading the text. Step 0 leaves the bar alone.
+function nwCaptureStatus(text, level, step) {
   var el = document.getElementById('nw-cap-status');
-  if (!el) return;
-  el.textContent = text || '';
-  el.className = 'nw-status' + (level === 'warn' ? ' nw-status-warn' : level === 'err' ? ' nw-status-err' : '');
+  if (el) {
+    el.textContent = text || '';
+    el.className = 'nw-status' + (level === 'warn' ? ' nw-status-warn' : level === 'err' ? ' nw-status-err' : level === 'ok' ? ' nw-status-ok' : '');
+  }
+  if (step) nwProgressSet(step, level);
+  else if (level === 'err') nwProgressSet(-1, 'err');
+}
+function nwProgressSet(step, level, title) {
+  var box = document.getElementById('nw-progress');
+  if (!box) return;
+  var bar = box.querySelector('.nw-progress-bar i'), spans = box.querySelectorAll('.nw-progress-steps span');
+  var t = document.getElementById('nw-progress-title');
+  if (step === 0) { box.className = 'nw-progress'; if (bar) bar.style.width = '0'; if (t) t.textContent = ''; return; }
+  if (step > 0) {
+    var pct = Math.round(step / NW_PROGRESS_STEPS.length * 100);
+    if (bar) bar.style.width = (level === 'err' ? Math.max(pct - 25, 5) : pct) + '%';
+    for (var i = 0; i < spans.length; i++) spans[i].className = i < step - 1 ? 'nw-done' : i === step - 1 ? 'nw-now' : '';
+  }
+  box.className = 'nw-progress nw-on' + (level === 'ok' ? ' nw-ok' : level === 'err' ? ' nw-err' : '');
+  if (title !== undefined && t) t.textContent = title || '';
+}
+// The "go on" signal after a card is filed: green line, a short buzz where
+// the phone allows it, and the Photograph button pulses so the thumb knows
+// where to go next. Nothing modal — scanning a stack should feel continuous.
+function nwCaptureDone(text) {
+  nwCaptureStatus(text || '✓ Filed — ready for the next card. Tap Photograph.', 'ok', NW_PROGRESS_STEPS.length);
+  try { if (navigator.vibrate) navigator.vibrate([40, 60, 40]); } catch (e) {}
+  var btn = document.getElementById('nw-cap-btn');
+  if (btn) { btn.classList.add('nw-pulse'); setTimeout(function() { btn.classList.remove('nw-pulse'); }, 2400); }
 }
 function nwQueueRefresh() {
   var wrap = document.getElementById('nw-queue'), n = document.getElementById('nw-queue-count');
@@ -4818,8 +4876,9 @@ function nwExtractStaged() {
   if (_nwBusy || !_nwPair.front) return;
   var pair = { front: _nwPair.front, back: _nwPair.back, qr: _nwPair.qr };
   nwSetBusy(true);
+  nwProgressSet(1, '', 'This card');
   nwProcessPair(pair, nwCaptureStatus)
-    .then(function() { nwPairReset(); nwSetBusy(false); })
+    .then(function(rec) { nwPairReset(); nwSetBusy(false); if (rec && !rec.queued && !rec.driveError) nwCaptureDone(); })
     .catch(function(e) { nwSetBusy(false); nwCaptureStatus('Could not read the card (' + nwErrText(String((e && e.message) || e)) + ')', 'err'); });
 }
 // A batch: each file is its own single-sided card, processed one at a time
@@ -4835,14 +4894,17 @@ function nwRunBatch(files) {
   function next() {
     if (i >= files.length) {
       nwSetBusy(false);
-      nwCaptureStatus('Batch finished — ' + done + ' read' + (queued ? ', ' + queued + ' queued' : '') + (failed ? ', ' + failed + ' failed' : '') + '.', failed ? 'warn' : '');
+      var summary = 'Batch finished — ' + done + ' read' + (queued ? ', ' + queued + ' queued' : '') + (failed ? ', ' + failed + ' failed' : '') + '.';
+      if (failed) nwCaptureStatus(summary, 'warn', NW_PROGRESS_STEPS.length); else nwCaptureDone('✓ ' + summary + ' Ready for the next batch.');
+      nwProgressSet(NW_PROGRESS_STEPS.length, failed ? 'warn' : 'ok', 'Batch: ' + files.length + ' of ' + files.length);
       return;
     }
     var file = files[i++];
     var label = 'Card ' + i + ' of ' + files.length + ': ';
-    nwCaptureStatus(label + 'preparing…');
+    nwProgressSet(1, '', 'Batch: card ' + i + ' of ' + files.length);
+    nwCaptureStatus(label + 'preparing…', '', 1);
     Promise.all([nwCompressImage(file), nwQrDecode(file)]).then(function(r) {
-      return nwProcessPair({ front: r[0], back: null, qr: nwParseQr(r[1]) }, function(t, lv) { nwCaptureStatus(label + t, lv); });
+      return nwProcessPair({ front: r[0], back: null, qr: nwParseQr(r[1]) }, function(t, lv, st) { nwCaptureStatus(label + t, lv, st); });
     }).then(function(res) { if (res && res.queued) queued++; else done++; next(); })
       .catch(function() { failed++; next(); });
   }
@@ -4857,8 +4919,21 @@ function nwRenderStrip(rec) {
   var x = rec.extraction || {}, conf = x.confidence || {};
   var strip = nwEl('div', 'nw-strip');
   strip.setAttribute('data-id', rec.id);
-  strip.appendChild(nwEl('div', 'nw-strip-name', x.fullName || '(no name read)'));
-  strip.appendChild(nwEl('div', 'nw-strip-sub', [x.title, x.company].filter(Boolean).join(' · ') || '—'));
+  var head = nwEl('div', 'nw-strip-head');
+  head.appendChild(nwEl('div', 'nw-strip-name', x.fullName || '(no name read)'));
+  head.appendChild(nwEl('div', 'nw-strip-sub', [x.title, x.company].filter(Boolean).join(' · ') || '—'));
+  head.addEventListener('click', function() { strip.classList.toggle('nw-open'); });
+  strip.appendChild(head);
+  // The original photos — the Drive links the upload returned, opened in
+  // the Drive viewer where the signed-in account owns the files.
+  var photos = nwEl('div', 'nw-strip-photos');
+  function photoLink(label, href) {
+    var a = nwEl('a', null, '🖼 ' + label); a.href = href; a.target = '_blank'; a.rel = 'noopener'; return a;
+  }
+  if (rec.frontLink) photos.appendChild(photoLink('Front photo', rec.frontLink));
+  if (rec.backLink) photos.appendChild(photoLink('Back photo', rec.backLink));
+  if (!rec.frontLink && !rec.backLink) photos.appendChild(nwEl('span', null, rec.driveError ? 'photos not filed — retried on save' : 'no photos'));
+  strip.appendChild(photos);
   var low = [];
   for (var i = 0; i < NW_CONFIDENCE_FIELDS.length; i++) {
     if (Number(conf[NW_CONFIDENCE_FIELDS[i]] || 0) < NW_CONFIDENCE_FLOOR) low.push(NW_CONFIDENCE_FIELDS[i]);
@@ -4871,6 +4946,22 @@ function nwRenderStrip(rec) {
     meta.appendChild(nwEl('span', 'nw-low', 'check: ' + low.join(', ')));
   }
   strip.appendChild(meta);
+  // Tap the name to see every field that was read (view only — editing and
+  // saving are the review card, next release).
+  var dl = nwEl('dl', 'nw-strip-detail');
+  function row(label, value, key) {
+    if (!value) return;
+    dl.appendChild(nwEl('dt', null, label));
+    dl.appendChild(nwEl('dd', (key && Number(conf[key] || 0) < NW_CONFIDENCE_FLOOR) ? 'nw-low' : null, value));
+  }
+  row('Name', x.fullName, 'fullName'); row('Title', x.title, 'title'); row('Company', x.company, 'company');
+  row('Department', x.department);
+  row('Email', (x.emails || []).map(function(e) { return e.value + (e.kind ? ' (' + e.kind + ')' : ''); }).join(', '), 'emails');
+  row('Phone', (x.phones || []).map(function(p) { return p.number + (p.kind ? ' (' + p.kind + ')' : ''); }).join(', '), 'phones');
+  row('Address', x.address, 'address'); row('Website', x.website, 'website'); row('LinkedIn', x.linkedin);
+  row('Other', (x.socials || []).join(', ')); row('Languages', (x.languages || []).join(', '));
+  row('Captured', String(rec.createdAt || '').replace('T', ' ').slice(0, 16));
+  strip.appendChild(dl);
   var empty = box.querySelector('.nw-empty');
   if (empty) empty.remove();
   box.insertBefore(strip, box.firstChild);
@@ -4906,9 +4997,16 @@ function nwCaptureMount(app) {
   capBtn.addEventListener('click', function() { if (!_nwBusy) capInput.click(); });
   batchBtn.addEventListener('click', function() { if (!_nwBusy) batchInput.click(); });
   exBtn.addEventListener('click', nwExtractStaged);
-  clrBtn.addEventListener('click', function() { if (!_nwBusy) { nwPairReset(); nwCaptureStatus(''); } });
+  clrBtn.addEventListener('click', function() { if (!_nwBusy) { nwPairReset(); nwCaptureStatus(''); nwProgressSet(0); } });
   actions.appendChild(capBtn); actions.appendChild(batchBtn); actions.appendChild(exBtn); actions.appendChild(clrBtn);
   card.appendChild(actions);
+  var prog = nwEl('div', 'nw-progress'); prog.id = 'nw-progress';
+  var progTitle = nwEl('div', 'nw-progress-title'); progTitle.id = 'nw-progress-title'; prog.appendChild(progTitle);
+  var progBar = nwEl('div', 'nw-progress-bar'); progBar.appendChild(document.createElement('i')); prog.appendChild(progBar);
+  var progSteps = nwEl('div', 'nw-progress-steps');
+  NW_PROGRESS_STEPS.forEach(function(st) { progSteps.appendChild(nwEl('span', null, st)); });
+  prog.appendChild(progSteps);
+  card.appendChild(prog);
   capInput.addEventListener('change', function() {
     var file = capInput.files && capInput.files[0];
     capInput.value = '';
@@ -4933,7 +5031,7 @@ function nwCaptureMount(app) {
   queue.appendChild(drain);
   card.appendChild(queue);
   var box = nwEl('div'); box.id = 'nw-extracted';
-  var none = nwEl('div', 'nw-empty', 'Cards you read are held here until review and save arrive in the next release.');
+  var none = nwEl('div', 'nw-empty', 'Cards you read are held here — tap a name for the fields, or open its photos. Review and save arrive in the next release.');
   box.appendChild(none);
   card.appendChild(box);
   app.appendChild(card);

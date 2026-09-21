@@ -30,7 +30,8 @@ context offline, a generated card photo is staged and Extract is tapped — the
 pair lands in the IndexedDB queue and the count reads 1 (screenshot
 network-capture-queued.png). Back online, the drain runs the same pipeline
 against the stub (nop=newid → Drive upload → nop=extract) and the extracted
-strip appears with the count back at 0 (network-capture-extracted.png).
+strip appears with the count back at 0 (network-capture-extracted.png) under the green
+Filed signal, with its photo link and, on a tap, its field detail (network-capture-detail.png).
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -184,6 +185,12 @@ def probe(page):
         toggle:  !!document.querySelector('#nw-capture #nw-side-front[aria-pressed]'),
         queued:  (document.getElementById('nw-queue-count') || {}).textContent || '',
         strips:  document.querySelectorAll('#nw-extracted .nw-strip').length,
+        progress: !!document.querySelector('#nw-capture #nw-progress .nw-progress-bar'),
+        progressOn: !!document.querySelector('#nw-progress.nw-on'),
+        progressOk: !!document.querySelector('#nw-progress.nw-ok'),
+        statusOk: !!document.querySelector('#nw-cap-status.nw-status-ok'),
+        photoLinks: document.querySelectorAll('#nw-extracted .nw-strip .nw-strip-photos a[href]').length,
+        detailRows: document.querySelectorAll('#nw-extracted .nw-strip .nw-strip-detail dd').length,
         stored:  sessionStorage.getItem('Network_gas_user_role'),
         admitted: typeof nwAdmitted === 'function' ? nwAdmitted() : null
       };
@@ -249,6 +256,8 @@ def run():
                                     % (role, got['capture'], got['inputs'], got['toggle']))
                 if got['queued'] != '0':
                     failures.append('%s: queued count reads %r on a fresh profile, expected 0' % (role, got['queued']))
+                if not got['progress'] or got['progressOn']:
+                    failures.append('%s: progress bar missing or already showing on an idle card' % role)
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
@@ -310,8 +319,17 @@ def run():
         extract_posts = [r for r in reqs if 'script.google.com' in r]
         if got['queued'] != '0' or got['strips'] != 1:
             failures.append('drain: expected queued=0 and one strip, got queued=%r strips=%d' % (got['queued'], got['strips']))
-        if 'Jane Doe' not in strip or 'c-0123456789abc' not in strip or 'filed' not in strip:
+        if 'Jane Doe' not in strip or 'c-0123456789abc' not in strip or 'Front photo' not in strip:
             failures.append('drain: strip text unexpected: %r' % strip[:120])
+        if not (got['progressOk'] and got['statusOk']):
+            failures.append('drain: expected the green Filed signal (progress=%s status=%s)' % (got['progressOk'], got['statusOk']))
+        if got['photoLinks'] != 1 or got['detailRows'] < 4:
+            failures.append('drain: expected one photo link and the field detail, got links=%d rows=%d' % (got['photoLinks'], got['detailRows']))
+        page.click('#nw-extracted .nw-strip .nw-strip-head')
+        page.wait_for_timeout(200)
+        if not page.evaluate("() => !!document.querySelector('#nw-extracted .nw-strip.nw-open')"):
+            failures.append('drain: tapping the strip did not open the field detail')
+        page.screenshot(path=str(SHOTS / 'network-capture-detail.png'), full_page=False)
         if order[:1] != ['newid'] or 'upload' not in order or order.index('newid') > order.index('upload'):
             failures.append('drain: expected the id minted BEFORE the Drive upload (D8), saw %r' % order)
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
