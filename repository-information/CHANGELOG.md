@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 82/100`
+`Sections: 83/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.87r] — 2026-09-21 04:03:50 AM EST
+
+> **Prompt:** "If a scanned card shows fully capitalized names like MOHAMMED S. ALRAI, then change that to a standard first-letter-capitalized-rest-not standard. However, do not automatically change anything other than these two use cases (fully capitalized and fully uncapitalized)."
+
+### Changed
+
+#### `live-site-pages/Network.html` — v01.08w
+- `nwCapName` now handles exactly two cases: a name whose letters are ALL upper-case or all lower-case (judged on the romanised part, parentheses excluded) becomes First-letter-capitalised, the rest lower-cased, with a capital after each space, hyphen, apostrophe or period ("MOHAMMED S. ALRAI" → "Mohammed S. Alrai", "austin york" → "Austin York", "MARY-ANNE LEE" → "Mary-Anne Lee"); any mixed-case name is returned untouched ("Kamran Moradi, PhD", "Ronald McDonald"); a parenthesised native script is never changed. Applied on receipt, on edit and once to held cards, as before
+
+#### `scripts/verify-network-roles.py`
+- Seven `nwCapName` cases asserted in the page context: both conversions, mixed-case pass-through, hyphen and apostrophe handling, and the native-script parenthesis
+
+### Notes
+- Still 2026-09-21 EST — 83 sections, five exempt, 78 non-exempt, no rotation. CHANGELOG `Sections: 82/100` → `83/100`
 
 ## [v06.86r] — 2026-09-21 03:59:29 AM EST
 

@@ -346,6 +346,12 @@ def run():
         if not page.evaluate("() => !!document.querySelector('#nw-extracted .nw-strip.nw-open')"):
             failures.append('drain: tapping the strip did not open the field detail')
         page.screenshot(path=str(SHOTS / 'network-capture-detail.png'), full_page=False)
+        # Name case rule: ALL CAPS and all lower-case become First-letter caps; mixed case is left alone.
+        cases = page.evaluate("""() => ['MOHAMMED S. ALRAI', 'austin york', 'Kamran Moradi, PhD', 'Ronald McDonald', "o'brien-smith",
+            'WEI ZHANG (张伟)', 'MARY-ANNE LEE'].map(nwCapName)""")
+        want = ['Mohammed S. Alrai', 'Austin York', 'Kamran Moradi, PhD', 'Ronald McDonald', "O'Brien-Smith", 'Wei Zhang (张伟)', 'Mary-Anne Lee']
+        if cases != want:
+            failures.append('names: nwCapName gave %r' % (cases,))
         # The note's Fix opens the editor on that field; saving a value marks it verified and clears the note.
         page.click('#nw-extracted .nw-note-check button.nw-note-fix')
         page.wait_for_timeout(200)

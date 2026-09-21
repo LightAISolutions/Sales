@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.07w">
+  <meta name="build-version" content="v01.08w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -4973,11 +4973,23 @@ function nwUnclearFields(rec) {
     return !dismissed[f] && nwFieldHas(x, f) && Number(conf[f] || 0) < NW_CONFIDENCE_FLOOR;
   });
 }
-// "austin york" → "Austin York": the first letter of every word (and of
-// each part after a hyphen or apostrophe) is upper-cased; nothing else is
-// touched, so "McDonald", "PhD" and a native script in parentheses survive.
+// Two cases and only two: a name printed ALL CAPS ("MOHAMMED S. ALRAI") or
+// all lower-case ("austin york") becomes First-letter-capitalised
+// ("Mohammed S. Alrai", "Austin York") — the first letter of every word and
+// of each part after a hyphen or apostrophe up, the rest down. A name with
+// mixed case is left exactly as printed ("McDonald", "Kamran Moradi, PhD"),
+// and anything in parentheses (a native script) is never touched.
 function nwCapName(s) {
-  return String(s || '').replace(/(^|[\s\-'’])([a-z\u00e0-\u00ff])/g, function(m, pre, ch) { return pre + ch.toUpperCase(); });
+  var str = String(s || '');
+  var latin = str.replace(/\([^)]*\)/g, '');           // judge the case on the romanised part only
+  var letters = latin.replace(/[^A-Za-z\u00c0-\u024f]/g, '');
+  if (!letters) return str;
+  var allUpper = letters === letters.toUpperCase(), allLower = letters === letters.toLowerCase();
+  if (!allUpper && !allLower) return str;
+  return str.replace(/[^()]+|\([^)]*\)/g, function(seg) {
+    if (seg.charAt(0) === '(') return seg;
+    return seg.toLowerCase().replace(/(^|[\s\-'’.])([a-z\u00e0-\u024f])/g, function(m, pre, ch) { return pre + ch.toUpperCase(); });
+  });
 }
 function nwTidyNames(x) {
   if (!x) return false;

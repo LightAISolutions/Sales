@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08w] — 2026-09-21 04:03:50 AM EST — v06.87r
+
+### Changed
+- **Name capitalisation is now two-case only** — a name printed entirely in capitals (MOHAMMED S. ALRAI) or entirely in lower case (austin york) becomes Mohammed S. Alrai / Austin York; a name with mixed case is kept exactly as printed, and a name in another script is never changed
 
 ## [v01.07w] — 2026-09-21 03:59:29 AM EST — v06.86r
 
