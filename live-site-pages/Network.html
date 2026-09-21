@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.02w">
+  <meta name="build-version" content="v01.03w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -399,6 +399,37 @@
     .nw-row { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--nw-line); font-size: 14px; }
     .nw-row small { color: var(--nw-faint); font-family: var(--nw-mono); font-size: 11px; }
     .nw-note { font: 12px/1.6 var(--nw-mono); color: var(--nw-faint); margin: 12px 0 0; }
+    /* PROJECT: N1 s1 — the capture card (phone-first; used one-handed in a hall) */
+    #nw-capture .nw-seg { display: inline-flex; border: 1px solid var(--nw-line2); border-radius: 999px; overflow: hidden; margin: 2px 0 10px; }
+    #nw-capture .nw-seg button { font: 600 13px/1 var(--nw-serif); padding: 9px 16px; border: 0; background: transparent; color: var(--nw-muted); cursor: pointer; }
+    #nw-capture .nw-seg button[aria-pressed="true"] { background: var(--nw-accent); color: #fff; }
+    .nw-thumbs { display: flex; gap: 10px; margin: 0 0 12px; }
+    .nw-thumb { flex: 1 1 0; aspect-ratio: 7 / 4; border: 1.5px dashed var(--nw-line2); border-radius: 8px; background: #f7f4ee;
+      display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .nw-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .nw-thumb span { font: 11px/1.4 var(--nw-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--nw-faint); }
+    .nw-thumb.nw-thumb-set { border-style: solid; border-color: var(--nw-accent); }
+    .nw-thumb.nw-thumb-set span { position: absolute; left: 6px; bottom: 5px; background: rgba(35,32,27,.72); color: #fff; padding: 2px 6px; border-radius: 4px; }
+    .nw-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+    .nw-btn { font: 600 14px/1 var(--nw-serif); padding: 11px 16px; border-radius: 8px; border: 1px solid var(--nw-line2);
+      background: var(--nw-card); color: var(--nw-ink); cursor: pointer; flex: 1 1 auto; min-height: 44px; }
+    .nw-btn:disabled { opacity: .45; cursor: default; }
+    .nw-btn-primary { background: var(--nw-accent); border-color: var(--nw-accent); color: #fff; }
+    .nw-btn-quiet { flex: 0 0 auto; background: transparent; }
+    .nw-status { font: 13px/1.55 var(--nw-serif); color: var(--nw-muted); min-height: 20px; margin: 0 0 6px; }
+    .nw-status.nw-status-warn { color: var(--nw-gold); }
+    .nw-status.nw-status-err { color: var(--nw-dis); }
+    .nw-queue { font: 12px/1.6 var(--nw-mono); color: var(--nw-faint); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .nw-queue b { font-weight: 600; color: var(--nw-ink); background: #eee9df; border-radius: 999px; padding: 1px 9px; }
+    .nw-queue.nw-queue-live b { background: var(--nw-gold); color: #fff; }
+    .nw-queue a { color: var(--nw-accent); cursor: pointer; text-decoration: underline; }
+    .nw-queue.nw-offline b { background: var(--nw-dis); color: #fff; }
+    .nw-strip { border-top: 1px solid var(--nw-line); padding: 10px 0 8px; }
+    .nw-strip .nw-strip-name { font: 600 15px/1.3 var(--nw-serif); color: var(--nw-ink); }
+    .nw-strip .nw-strip-sub { font-size: 13px; color: var(--nw-muted); }
+    .nw-strip .nw-strip-meta { font: 11px/1.7 var(--nw-mono); color: var(--nw-faint); }
+    .nw-strip .nw-low { color: var(--nw-gold); }
+    .nw-strip .nw-strip-meta .nw-bad { color: var(--nw-dis); }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4243,8 +4274,9 @@ function ovDocVersion() {
 
 // PROJECT: ── Network — N0 scaffold ──────────────────────────────────────
 // Design: repository-information/NETWORK-EVENTS-DESIGN-PLAN.md; shapes:
-// NETWORK-SCHEMA.md. This page paints the door, the masthead and the (empty)
-// list; capture, extraction and the review card are N1. Everything below is
+// NETWORK-SCHEMA.md. This page paints the door, the masthead, the capture
+// card (N1 session 1 — below) and the list; the review card, dedupe and
+// save are N1 session 2. Everything below is
 // page-side and reads over action=network; nwRequire_ on the server is the
 // real boundary — the client mirror only decides what to paint and, for a
 // turned-away tier, guarantees that NOT ONE data request is issued.
@@ -4347,6 +4379,572 @@ function nwEl(tag, cls, text) {
   return el;
 }
 
+// PROJECT: ── N1 session 1 — capture → offline queue → own-Drive → extraction
+// The pipeline of NETWORK-EVENTS-DESIGN-PLAN.md §4.2 up to the extraction;
+// the review card, dedupe and save are session 2. Every step is page-side
+// except the model call: the c- id is minted by nop=newid BEFORE the photos
+// are uploaded (D8 — the Drive filename is opaque from the first byte), the
+// photos go to the signed-in user's OWN Drive with their drive.file token
+// (never through the script), the QR code on a card is decoded here with
+// BarcodeDetector and merged before the model call, and nop=extract carries
+// both sides to Gemini in one call (D6). Offline, the compressed pair waits
+// in IndexedDB and drains on `online` through the same function.
+var NW_MAX_BATCH = 15;                 // the Receipts batch size — keeps a run inside Gemini's rate limit
+var NW_EXTRACT_SPACING_MS = 6500;      // ≥6.5 s between model calls in a batch / drain
+var NW_DRIVE_SCOPE = 'openid email https://www.googleapis.com/auth/drive.file';
+var NW_DRIVE_ROOT_NAME = 'Network App';
+var NW_DRIVE_INBOX_NAME = '_inbox';
+var NW_IDB_NAME = 'nw-capture';
+var NW_IDB_VERSION = 1;
+var NW_CONFIDENCE_FLOOR = 0.7;         // mirror of Network.gs — below this a field is outlined on the review card
+var NW_CONFIDENCE_FIELDS = ['fullName', 'title', 'company', 'emails', 'phones', 'address', 'website'];
+
+var _nwFolders = null;        // { root, inbox, accounts } — from the list payload, or nop=folders on demand
+var _nwDriveToken = null;     // the user's drive.file access token, in memory only
+var _nwPair = { front: null, back: null, qr: null };   // the staged pair (base64, no data: prefix)
+var _nwSide = 'front';
+var _nwBusy = false;
+var _nwDraining = false;
+var _nwLastExtractAt = 0;
+var _nwPending = [];          // extracted, not yet saved — session 2's review card reads these
+
+// ── Transport for image bytes ─────────────────────────────────────────────
+// _gasPost puts the params on the URL; two 2,000 px JPEGs do not fit there,
+// so nop=extract goes as a form-urlencoded BODY (the Receipts _gasPostBody
+// idiom: three attempts, Google's transient HTML failure page fails json()
+// and is retried, and no GET fallback — a GET could never carry the images).
+function nwApiBody(nop, params, cb) {
+  var session = (loadSession() || {}).token || '';
+  if (!session) { cb({ success: false, error: 'SESSION_EXPIRED' }); return; }
+  var gasApp = document.getElementById('gas-app');
+  var baseUrl = (gasApp && gasApp.dataset.baseUrl) || '';
+  if (!baseUrl) { cb({ success: false, error: 'no_base_url' }); return; }
+  var qp = { action: 'network', nop: nop, session: session };
+  for (var k in params) if (params.hasOwnProperty(k)) qp[k] = params[k];
+  var body = Object.keys(qp).map(function(k2) { return encodeURIComponent(k2) + '=' + encodeURIComponent(qp[k2]); }).join('&');
+  var left = 3;
+  function attempt() {
+    return fetch(baseUrl, { method: 'POST', redirect: 'follow',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+      .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
+      .catch(function(err) {
+        left -= 1;
+        if (left <= 0) throw err;
+        return new Promise(function(res) { setTimeout(res, (3 - left) * 800); }).then(attempt);
+      });
+  }
+  attempt().then(function(res) { cb(res || { success: false, error: 'empty_response' }); })
+    .catch(function(e) { cb({ success: false, error: String((e && e.message) || 'network_failed') }); });
+}
+
+// ── IndexedDB — the offline queue and the unsaved extractions ─────────────
+// No Worker is needed for IndexedDB, so this is allowed under the repo's
+// worker-src 'none' rule (D2). `queue` holds compressed pairs captured while
+// navigator.onLine was false; `pending` holds extracted-but-unsaved cards so
+// a reload before save (session 2) loses nothing.
+function nwDb() {
+  return new Promise(function(resolve, reject) {
+    if (!window.indexedDB) { reject(new Error('no_indexeddb')); return; }
+    var req = indexedDB.open(NW_IDB_NAME, NW_IDB_VERSION);
+    req.onupgradeneeded = function() {
+      var db = req.result;
+      if (!db.objectStoreNames.contains('queue')) db.createObjectStore('queue', { keyPath: 'qid', autoIncrement: true });
+      if (!db.objectStoreNames.contains('pending')) db.createObjectStore('pending', { keyPath: 'id' });
+    };
+    req.onsuccess = function() { resolve(req.result); };
+    req.onerror = function() { reject(req.error || new Error('idb_open_failed')); };
+  });
+}
+function nwIdb(store, mode, fn) {
+  return nwDb().then(function(db) {
+    return new Promise(function(resolve, reject) {
+      var tx = db.transaction(store, mode);
+      var os = tx.objectStore(store);
+      var r = fn(os);
+      tx.oncomplete = function() { resolve(r && r.result !== undefined ? r.result : r); db.close(); };
+      tx.onerror = function() { reject(tx.error || new Error('idb_tx_failed')); db.close(); };
+    });
+  });
+}
+function nwQueueAdd(rec) { return nwIdb('queue', 'readwrite', function(os) { return os.add(rec); }); }
+function nwQueueAll() { return nwIdb('queue', 'readonly', function(os) { return os.getAll(); }).then(function(r) { return r || []; }); }
+function nwQueueDelete(qid) { return nwIdb('queue', 'readwrite', function(os) { return os.delete(qid); }); }
+function nwQueueCount() { return nwIdb('queue', 'readonly', function(os) { return os.count(); }).then(function(n) { return Number(n) || 0; }); }
+function nwPendingPut(rec) { return nwIdb('pending', 'readwrite', function(os) { return os.put(rec); }); }
+function nwPendingAll() { return nwIdb('pending', 'readonly', function(os) { return os.getAll(); }).then(function(r) { return r || []; }); }
+
+// ── Image compression (Receipts compressImage, unchanged at 2,000 px) ─────
+// Cards are small but Chinese-script cards are dense, so the ceiling stays
+// where the invoices put it. createImageBitmap honours EXIF orientation.
+function nwCompressImage(file) {
+  var loadBitmap = (window.createImageBitmap)
+    ? createImageBitmap(file)
+    : new Promise(function(resolve, reject) {
+        var url = URL.createObjectURL(file);
+        var img = new Image();
+        img.onload = function() { URL.revokeObjectURL(url); resolve(img); };
+        img.onerror = function() { URL.revokeObjectURL(url); reject(new Error('image_load_failed')); };
+        img.src = url;
+      });
+  return loadBitmap.then(function(img) {
+    var w = img.width, h = img.height;
+    var scale = Math.min(1, 2000 / Math.max(w, h));
+    var canvas = document.createElement('canvas');
+    canvas.width = Math.round(w * scale);
+    canvas.height = Math.round(h * scale);
+    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+    var dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+    return dataUrl.substring(dataUrl.indexOf(',') + 1);
+  });
+}
+
+// ── QR decode (BarcodeDetector where the browser has it; no Worker) ───────
+// Returns the decoded text or null — never throws, so a browser without the
+// API (Firefox, older Safari) simply goes straight to the model call.
+function nwQrDecode(file) {
+  if (!('BarcodeDetector' in window) || !window.createImageBitmap) return Promise.resolve(null);
+  try {
+    var det = new BarcodeDetector({ formats: ['qr_code'] });
+    return createImageBitmap(file)
+      .then(function(bmp) { return det.detect(bmp); })
+      .then(function(codes) { return (codes && codes.length && codes[0].rawValue) ? String(codes[0].rawValue) : null; })
+      .catch(function() { return null; });
+  } catch (e) { return Promise.resolve(null); }
+}
+// A vCard (BEGIN:VCARD) or a bare URL → the §7 fields it carries. Anything
+// else (a wifi string, an app deep link) is ignored.
+function nwParseQr(text) {
+  var t = String(text || '').trim();
+  if (!t) return null;
+  if (/^BEGIN:VCARD/i.test(t)) {
+    var out = { emails: [], phones: [], rawText: t };
+    var lines = t.replace(/\r\n[ \t]/g, '').split(/\r?\n/);
+    for (var i = 0; i < lines.length; i++) {
+      var m = /^([^:;]+)((?:;[^:]*)?):(.*)$/.exec(lines[i]);
+      if (!m) continue;
+      var key = m[1].toUpperCase(), attrs = (m[2] || '').toUpperCase(), val = m[3].trim();
+      if (!val) continue;
+      if (key === 'FN') out.fullName = val;
+      else if (key === 'N') { var n = val.split(';'); out.lastName = (n[0] || '').trim(); out.firstName = (n[1] || '').trim(); }
+      else if (key === 'ORG') out.company = val.split(';')[0].trim();
+      else if (key === 'TITLE') out.title = val;
+      else if (key === 'EMAIL') out.emails.push({ value: val.toLowerCase(), kind: /HOME/.test(attrs) ? 'personal' : 'work' });
+      else if (key === 'TEL') out.phones.push({ number: val, kind: /CELL|MOBILE/.test(attrs) ? 'mobile' : /FAX/.test(attrs) ? 'fax' : /WORK/.test(attrs) ? 'office' : 'other' });
+      else if (key === 'ADR') out.address = val.split(';').filter(Boolean).join(', ');
+      else if (key === 'URL' || key === 'X-SOCIALPROFILE') {
+        if (/linkedin\.com/i.test(val)) out.linkedin = val; else if (key === 'URL' && !out.website) out.website = val;
+      }
+    }
+    return out;
+  }
+  if (/^https?:\/\//i.test(t)) return /linkedin\.com/i.test(t) ? { linkedin: t, rawText: t } : { website: t, rawText: t };
+  return null;
+}
+// A vCard that names the person and gives one way to reach them fills the
+// card WITHOUT a model round-trip (§7); absent fields stay empty with
+// confidence 0, so the review card outlines them for a retry.
+function nwQrSufficient(q) { return !!(q && q.fullName && ((q.emails || []).length || (q.phones || []).length)); }
+function nwQrExtraction(q) {
+  var out = { fullName: q.fullName || '', firstName: q.firstName || '', lastName: q.lastName || '', title: q.title || '',
+    company: q.company || '', department: '', emails: q.emails || [], phones: q.phones || [], address: q.address || '',
+    website: q.website || '', linkedin: q.linkedin || '', socials: [], languages: [], rawText: q.rawText || '', confidence: {} };
+  for (var i = 0; i < NW_CONFIDENCE_FIELDS.length; i++) {
+    var f = NW_CONFIDENCE_FIELDS[i];
+    var has = (f === 'emails' || f === 'phones') ? out[f].length > 0 : !!out[f];
+    out.confidence[f] = has ? 1 : 0;
+  }
+  return out;
+}
+
+// ── Own-Drive upload (the Receipts pattern: drive.file, browser-side) ─────
+// The token client below is separate from the sign-in one: sign-in asks for
+// openid/email/profile only, so the first upload asks the user for the
+// drive.file consent once. The token lives in memory for the tab; a 401
+// drops it and the next upload asks again.
+function nwDriveToken(cb) {
+  if (_nwDriveToken) { cb(_nwDriveToken); return; }
+  try {
+    var c = google.accounts.oauth2.initTokenClient({
+      client_id: CLIENT_ID,
+      scope: NW_DRIVE_SCOPE,
+      prompt: '',
+      login_hint: (loadSession() || {}).email || '',
+      callback: function(resp) {
+        if (resp && resp.access_token) { _nwDriveToken = resp.access_token; cb(resp.access_token); }
+        else cb(null);
+      },
+      error_callback: function() { cb(null); }
+    });
+    c.requestAccessToken();
+  } catch (tErr) { cb(null); }
+}
+function nwDriveFetch(tok, url, opts) {
+  opts = opts || {};
+  opts.headers = opts.headers || {};
+  opts.headers['Authorization'] = 'Bearer ' + tok;
+  return fetch(url, opts).then(function(resp) {
+    if (resp.status === 401) { _nwDriveToken = null; throw new Error('drive_auth'); }
+    if (!resp.ok) throw new Error('drive_http_' + resp.status);
+    return resp.json();
+  });
+}
+function nwDriveCreateFolder(tok, name, parentId) {
+  var meta = { name: name, mimeType: 'application/vnd.google-apps.folder' };
+  if (parentId) meta.parents = [parentId];
+  return nwDriveFetch(tok, 'https://www.googleapis.com/drive/v3/files?fields=id', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(meta)
+  }).then(function(f) { return f.id; });
+}
+// `Network App/` and `_inbox/` — created once, browser-side, and their ids
+// parked on the backend (nop=setfolders) because drive.file cannot re-find
+// a folder it created in an earlier session. Read back from the list
+// payload on load; nop=folders only when the page has not seen them yet.
+function nwEnsureFolders(tok) {
+  function have(f) { return f && f.root && f.inbox; }
+  if (have(_nwFolders)) return Promise.resolve(_nwFolders);
+  var fetched = _nwFolders ? Promise.resolve(_nwFolders)
+    : new Promise(function(resolve) { nwApi('folders', {}, function(res) { resolve((res && res.success && res.folders) || null); }); });
+  return fetched.then(function(f) {
+    if (have(f)) { _nwFolders = f; return f; }
+    var rootP = (f && f.root) ? Promise.resolve(f.root) : nwDriveCreateFolder(tok, NW_DRIVE_ROOT_NAME, null);
+    return rootP.then(function(rootId) {
+      return nwDriveCreateFolder(tok, NW_DRIVE_INBOX_NAME, rootId).then(function(inboxId) {
+        return new Promise(function(resolve, reject) {
+          nwApi('setfolders', { root: rootId, inbox: inboxId }, function(res) {
+            if (!(res && res.success)) { reject(new Error((res && res.error) || 'setfolders_failed')); return; }
+            _nwFolders = res.folders || { root: rootId, inbox: inboxId, accounts: {} };
+            nwAfterWrite();   // D14: a write happened — refresh, no poll
+            resolve(_nwFolders);
+          });
+        });
+      });
+    });
+  });
+}
+function nwDriveUpload(tok, folderId, b64, name, mime) {
+  var boundary = 'nwc' + Date.now().toString(36);
+  var meta = { name: name, parents: [folderId] };
+  var body = '--' + boundary + '\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n' + JSON.stringify(meta)
+    + '\r\n--' + boundary + '\r\nContent-Type: ' + (mime || 'image/jpeg') + '\r\nContent-Transfer-Encoding: base64\r\n\r\n'
+    + b64 + '\r\n--' + boundary + '--';
+  return nwDriveFetch(tok, 'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
+    method: 'POST', headers: { 'Content-Type': 'multipart/related; boundary=' + boundary }, body: body
+  }).then(function(f) {
+    return { id: f.id, link: f.webViewLink || ('https://drive.google.com/file/d/' + f.id + '/view') };
+  });
+}
+// Both sides into _inbox/ as <c-id>-front.jpg / <c-id>-back.jpg. Resolves to
+// { front, back } links, or to { error } — the upload is a SOFT failure for
+// the capture (the extraction still runs and the card is held for review;
+// the pending record remembers that Drive is owed the files).
+function nwUploadPair(cid, pair, mime) {
+  return new Promise(function(resolve) {
+    nwDriveToken(function(tok) {
+      if (!tok) { resolve({ error: 'drive_consent' }); return; }
+      nwEnsureFolders(tok).then(function(f) {
+        return nwDriveUpload(tok, f.inbox, pair.front, cid + '-front.jpg', mime).then(function(fr) {
+          if (!pair.back) return { front: fr, back: null };
+          return nwDriveUpload(tok, f.inbox, pair.back, cid + '-back.jpg', mime).then(function(bk) { return { front: fr, back: bk }; });
+        });
+      }).then(resolve).catch(function(e) { resolve({ error: String((e && e.message) || 'drive_failed') }); });
+    });
+  });
+}
+
+// ── The pipeline — one pair in, one extracted card out ────────────────────
+// Offline → queue (the same function drains it later). Online → mint the
+// c- id → upload both sides → QR fields (sufficient vCard: no model call) or
+// nop=extract → hold the result for the review card (session 2).
+function nwProcessPair(pair, onStatus) {
+  onStatus = onStatus || function() {};
+  var mime = 'image/jpeg';
+  if (navigator.onLine === false) {
+    return nwQueueAdd({ front: pair.front, back: pair.back || null, qr: pair.qr || null, mime: mime, queuedAt: new Date().toISOString() })
+      .then(function() { nwQueueRefresh(); onStatus('Offline — the card is queued and will be sent when the connection returns.', 'warn'); return { queued: true }; });
+  }
+  return new Promise(function(resolve, reject) {
+    onStatus('Reserving an id…');
+    nwApi('newid', { prefix: 'c' }, function(res) {
+      if (!(res && res.success && res.id)) { reject(new Error((res && res.error) || 'newid_failed')); return; }
+      resolve(res.id);
+    });
+  }).then(function(cid) {
+    onStatus('Uploading to your Drive…');
+    return nwUploadPair(cid, pair, mime).then(function(up) {
+      var qr = pair.qr || null;
+      var extractP;
+      if (nwQrSufficient(qr)) {
+        extractP = Promise.resolve({ success: true, extraction: nwQrExtraction(qr), viaQr: true });
+      } else {
+        extractP = new Promise(function(resolve) {
+          var wait = Math.max(0, _nwLastExtractAt + NW_EXTRACT_SPACING_MS - Date.now());
+          setTimeout(function() {
+            _nwLastExtractAt = Date.now();
+            onStatus(pair.back ? 'Reading both sides…' : 'Reading the card…');
+            var params = { contactId: cid, front: pair.front, mime: mime };
+            if (pair.back) params.back = pair.back;
+            if (qr) params.qr = JSON.stringify(qr);
+            nwApiBody('extract', params, resolve);
+          }, wait);
+        });
+      }
+      return extractP.then(function(res) {
+        if (!(res && res.success)) throw new Error((res && res.error) || 'extract_failed');
+        var rec = { id: cid, extraction: res.extraction, viaQr: !!res.viaQr, sides: pair.back ? 2 : 1,
+          frontLink: (up.front && up.front.link) || '', backLink: (up.back && up.back.link) || '',
+          driveError: up.error || '', createdAt: new Date().toISOString() };
+        _nwPending.push(rec);
+        return nwPendingPut(rec).catch(function() {}).then(function() {
+          nwRenderStrip(rec);
+          onStatus(up.error ? 'Read — but the photos could not be filed in Drive (' + up.error + '); they will be retried on save.' : 'Read and filed in Drive.', up.error ? 'warn' : '');
+          return rec;
+        });
+      });
+    });
+  });
+}
+
+// Drain on `online`: every queued pair through the same pipeline, oldest
+// first; the record leaves the queue only after the pipeline succeeded, and
+// the first failure stops the drain (the next `online` event retries).
+function nwQueueDrain() {
+  if (_nwDraining || navigator.onLine === false || !nwAdmitted()) return;
+  _nwDraining = true;
+  nwQueueAll().then(function(items) {
+    items.sort(function(a, b) { return (a.qid || 0) - (b.qid || 0); });
+    var i = 0;
+    function next() {
+      if (i >= items.length) { _nwDraining = false; nwQueueRefresh(); nwCaptureStatus(items.length ? 'Queued cards sent.' : ''); return; }
+      var it = items[i++];
+      nwCaptureStatus('Sending queued card ' + i + ' of ' + items.length + '…');
+      nwProcessPair({ front: it.front, back: it.back, qr: it.qr }, function() {})
+        .then(function() { return nwQueueDelete(it.qid); })
+        .then(function() { nwQueueRefresh(); next(); })
+        .catch(function(e) { _nwDraining = false; nwQueueRefresh(); nwCaptureStatus('Queued card could not be sent (' + String((e && e.message) || e) + ') — will retry when the connection returns.', 'err'); });
+    }
+    next();
+  }).catch(function() { _nwDraining = false; });
+}
+window.addEventListener('online', function() { nwQueueRefresh(); setTimeout(nwQueueDrain, 800); });
+window.addEventListener('offline', function() { nwQueueRefresh(); });
+
+// ── The capture card ──────────────────────────────────────────────────────
+// Mounted once for the admitted tier only (the turned-away tiers never get
+// the inputs into the DOM — verify-network-roles.py asserts it). The
+// Receipts inputs: capture="environment" for one photo, multiple for a batch
+// of up to NW_MAX_BATCH; the front / back toggle stages a pair so one review
+// holds both sides. Nothing here issues a request on mount — the folder ids
+// arrive with the list, the queue count is local.
+function nwCaptureStatus(text, level) {
+  var el = document.getElementById('nw-cap-status');
+  if (!el) return;
+  el.textContent = text || '';
+  el.className = 'nw-status' + (level === 'warn' ? ' nw-status-warn' : level === 'err' ? ' nw-status-err' : '');
+}
+function nwQueueRefresh() {
+  var wrap = document.getElementById('nw-queue'), n = document.getElementById('nw-queue-count');
+  if (!wrap || !n) return;
+  nwQueueCount().then(function(count) {
+    n.textContent = String(count);
+    wrap.className = 'nw-queue' + (count ? ' nw-queue-live' : '') + (navigator.onLine === false ? ' nw-offline' : '');
+    var drain = document.getElementById('nw-drain');
+    if (drain) drain.style.display = (count && navigator.onLine !== false) ? '' : 'none';
+    var off = document.getElementById('nw-offline-note');
+    if (off) off.textContent = navigator.onLine === false ? '· offline' : '';
+  }).catch(function() { n.textContent = '–'; });
+}
+function nwSetSide(side) {
+  _nwSide = side === 'back' ? 'back' : 'front';
+  var f = document.getElementById('nw-side-front'), b = document.getElementById('nw-side-back');
+  if (f) f.setAttribute('aria-pressed', _nwSide === 'front' ? 'true' : 'false');
+  if (b) b.setAttribute('aria-pressed', _nwSide === 'back' ? 'true' : 'false');
+}
+function nwThumbSet(side, b64) {
+  var slot = document.getElementById('nw-thumb-' + side);
+  if (!slot) return;
+  slot.innerHTML = '';
+  if (b64) {
+    var img = document.createElement('img');
+    img.alt = side + ' of the card';
+    img.src = 'data:image/jpeg;base64,' + b64;
+    slot.appendChild(img);
+    slot.className = 'nw-thumb nw-thumb-set';
+  } else {
+    slot.className = 'nw-thumb';
+  }
+  slot.appendChild(nwEl('span', null, side));
+}
+function nwPairReset() {
+  _nwPair = { front: null, back: null, qr: null };
+  nwThumbSet('front', null); nwThumbSet('back', null);
+  nwSetSide('front');
+  var ex = document.getElementById('nw-extract-btn');
+  if (ex) ex.disabled = true;
+}
+function nwSetBusy(on) {
+  _nwBusy = !!on;
+  ['nw-cap-btn', 'nw-batch-btn', 'nw-extract-btn', 'nw-clear-btn'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (id === 'nw-extract-btn') el.disabled = on || !_nwPair.front; else el.disabled = !!on;
+  });
+}
+// One chosen file → compressed base64 + any QR it carries, staged on the
+// current side. After the front, the toggle flips to the back by itself so
+// the second photo is one tap away; "Extract" works with the front alone.
+function nwStageFile(file, side) {
+  return Promise.all([nwCompressImage(file), nwQrDecode(file)]).then(function(r) {
+    var b64 = r[0], qrText = r[1];
+    _nwPair[side] = b64;
+    var q = nwParseQr(qrText);
+    if (q) {
+      var merged = _nwPair.qr || {};
+      for (var k in q) if (q.hasOwnProperty(k) && q[k] && !(merged[k] && merged[k].length !== 0)) merged[k] = q[k];
+      _nwPair.qr = merged;
+    }
+    nwThumbSet(side, b64);
+    var ex = document.getElementById('nw-extract-btn');
+    if (ex) ex.disabled = false;
+    if (side === 'front') {
+      nwSetSide('back');
+      nwCaptureStatus((q ? 'QR code read. ' : '') + 'Front captured — photograph the back, or Extract now.');
+    } else {
+      nwSetSide('front');
+      nwCaptureStatus((q ? 'QR code read. ' : '') + 'Back captured — Extract when ready.');
+    }
+  });
+}
+function nwExtractStaged() {
+  if (_nwBusy || !_nwPair.front) return;
+  var pair = { front: _nwPair.front, back: _nwPair.back, qr: _nwPair.qr };
+  nwSetBusy(true);
+  nwProcessPair(pair, nwCaptureStatus)
+    .then(function() { nwPairReset(); nwSetBusy(false); })
+    .catch(function(e) { nwSetBusy(false); nwCaptureStatus('Could not read the card (' + nwErrText(String((e && e.message) || e)) + ')', 'err'); });
+}
+// A batch: each file is its own single-sided card, processed one at a time
+// (compress → pipeline), spaced by NW_EXTRACT_SPACING_MS inside the pipeline.
+function nwRunBatch(files) {
+  if (_nwBusy) { nwCaptureStatus('Finish the current card first.', 'warn'); return; }
+  if (files.length > NW_MAX_BATCH) {
+    nwCaptureStatus('Up to ' + NW_MAX_BATCH + ' photos per batch — taking the first ' + NW_MAX_BATCH + '.', 'warn');
+    files = files.slice(0, NW_MAX_BATCH);
+  }
+  nwSetBusy(true);
+  var i = 0, done = 0, failed = 0, queued = 0;
+  function next() {
+    if (i >= files.length) {
+      nwSetBusy(false);
+      nwCaptureStatus('Batch finished — ' + done + ' read' + (queued ? ', ' + queued + ' queued' : '') + (failed ? ', ' + failed + ' failed' : '') + '.', failed ? 'warn' : '');
+      return;
+    }
+    var file = files[i++];
+    var label = 'Card ' + i + ' of ' + files.length + ': ';
+    nwCaptureStatus(label + 'preparing…');
+    Promise.all([nwCompressImage(file), nwQrDecode(file)]).then(function(r) {
+      return nwProcessPair({ front: r[0], back: null, qr: nwParseQr(r[1]) }, function(t, lv) { nwCaptureStatus(label + t, lv); });
+    }).then(function(res) { if (res && res.queued) queued++; else done++; next(); })
+      .catch(function() { failed++; next(); });
+  }
+  next();
+}
+// The extracted-not-yet-saved strip: what was read, which fields need a
+// second look, where the photos went. Session 2 turns this into the review
+// card; until then the card is held on this device (IndexedDB) and in memory.
+function nwRenderStrip(rec) {
+  var box = document.getElementById('nw-extracted');
+  if (!box) return;
+  var x = rec.extraction || {}, conf = x.confidence || {};
+  var strip = nwEl('div', 'nw-strip');
+  strip.setAttribute('data-id', rec.id);
+  strip.appendChild(nwEl('div', 'nw-strip-name', x.fullName || '(no name read)'));
+  strip.appendChild(nwEl('div', 'nw-strip-sub', [x.title, x.company].filter(Boolean).join(' · ') || '—'));
+  var low = [];
+  for (var i = 0; i < NW_CONFIDENCE_FIELDS.length; i++) {
+    if (Number(conf[NW_CONFIDENCE_FIELDS[i]] || 0) < NW_CONFIDENCE_FLOOR) low.push(NW_CONFIDENCE_FIELDS[i]);
+  }
+  var meta = nwEl('div', 'nw-strip-meta');
+  meta.appendChild(document.createTextNode(rec.id + ' · ' + (rec.sides === 2 ? 'two sides' : 'one side') + (rec.viaQr ? ' · from QR' : '') + ' · Drive '));
+  meta.appendChild(nwEl('span', rec.driveError ? 'nw-bad' : null, rec.driveError ? 'not filed' : 'filed'));
+  if (low.length) {
+    meta.appendChild(document.createTextNode(' · '));
+    meta.appendChild(nwEl('span', 'nw-low', 'check: ' + low.join(', ')));
+  }
+  strip.appendChild(meta);
+  var empty = box.querySelector('.nw-empty');
+  if (empty) empty.remove();
+  box.insertBefore(strip, box.firstChild);
+}
+function nwCaptureMount(app) {
+  if (document.getElementById('nw-capture')) return;
+  var card = nwEl('div', 'nw-card'); card.id = 'nw-capture';
+  card.appendChild(nwEl('h2', null, 'Capture a card'));
+  card.appendChild(nwEl('p', null, 'Photograph the front, then the back if it has one, and Extract. The photos are filed in your own Drive; the card is read on both sides in one pass.'));
+  var seg = nwEl('div', 'nw-seg'); seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Which side the next photo is');
+  var bf = nwEl('button', null, 'Front'); bf.id = 'nw-side-front'; bf.type = 'button'; bf.setAttribute('aria-pressed', 'true');
+  var bb = nwEl('button', null, 'Back'); bb.id = 'nw-side-back'; bb.type = 'button'; bb.setAttribute('aria-pressed', 'false');
+  bf.addEventListener('click', function() { nwSetSide('front'); });
+  bb.addEventListener('click', function() { nwSetSide('back'); });
+  seg.appendChild(bf); seg.appendChild(bb);
+  card.appendChild(seg);
+  var thumbs = nwEl('div', 'nw-thumbs');
+  var tf = nwEl('div', 'nw-thumb'); tf.id = 'nw-thumb-front'; tf.appendChild(nwEl('span', null, 'front'));
+  var tb = nwEl('div', 'nw-thumb'); tb.id = 'nw-thumb-back'; tb.appendChild(nwEl('span', null, 'back'));
+  thumbs.appendChild(tf); thumbs.appendChild(tb);
+  card.appendChild(thumbs);
+  // The Receipts inputs, hidden; the buttons proxy the taps.
+  var capInput = document.createElement('input');
+  capInput.type = 'file'; capInput.id = 'nw-cap-input'; capInput.accept = 'image/*'; capInput.setAttribute('capture', 'environment'); capInput.style.display = 'none';
+  var batchInput = document.createElement('input');
+  batchInput.type = 'file'; batchInput.id = 'nw-batch-input'; batchInput.accept = 'image/*'; batchInput.multiple = true; batchInput.style.display = 'none';
+  card.appendChild(capInput); card.appendChild(batchInput);
+  var actions = nwEl('div', 'nw-actions');
+  var capBtn = nwEl('button', 'nw-btn nw-btn-primary', '📷 Photograph'); capBtn.id = 'nw-cap-btn'; capBtn.type = 'button';
+  var batchBtn = nwEl('button', 'nw-btn', '🖼 Choose up to ' + NW_MAX_BATCH); batchBtn.id = 'nw-batch-btn'; batchBtn.type = 'button';
+  var exBtn = nwEl('button', 'nw-btn', 'Extract'); exBtn.id = 'nw-extract-btn'; exBtn.type = 'button'; exBtn.disabled = true;
+  var clrBtn = nwEl('button', 'nw-btn nw-btn-quiet', 'Clear'); clrBtn.id = 'nw-clear-btn'; clrBtn.type = 'button';
+  capBtn.addEventListener('click', function() { if (!_nwBusy) capInput.click(); });
+  batchBtn.addEventListener('click', function() { if (!_nwBusy) batchInput.click(); });
+  exBtn.addEventListener('click', nwExtractStaged);
+  clrBtn.addEventListener('click', function() { if (!_nwBusy) { nwPairReset(); nwCaptureStatus(''); } });
+  actions.appendChild(capBtn); actions.appendChild(batchBtn); actions.appendChild(exBtn); actions.appendChild(clrBtn);
+  card.appendChild(actions);
+  capInput.addEventListener('change', function() {
+    var file = capInput.files && capInput.files[0];
+    capInput.value = '';
+    if (!file || _nwBusy) return;
+    var side = _nwSide;
+    nwCaptureStatus('Preparing the ' + side + '…');
+    nwStageFile(file, side).catch(function(e) { nwCaptureStatus('Could not read that photo (' + String((e && e.message) || e) + ')', 'err'); });
+  });
+  batchInput.addEventListener('change', function() {
+    var files = Array.prototype.slice.call(batchInput.files || []);
+    batchInput.value = '';
+    if (files.length) nwRunBatch(files);
+  });
+  var status = nwEl('div', 'nw-status'); status.id = 'nw-cap-status';
+  card.appendChild(status);
+  var queue = nwEl('div', 'nw-queue'); queue.id = 'nw-queue';
+  queue.appendChild(document.createTextNode('Queued for upload: '));
+  var qn = nwEl('b', null, '0'); qn.id = 'nw-queue-count'; queue.appendChild(qn);
+  var offNote = nwEl('span', null, ''); offNote.id = 'nw-offline-note'; queue.appendChild(offNote);
+  var drain = nwEl('a', null, 'send now'); drain.id = 'nw-drain'; drain.style.display = 'none';
+  drain.addEventListener('click', function(ev) { ev.preventDefault(); nwQueueDrain(); });
+  queue.appendChild(drain);
+  card.appendChild(queue);
+  var box = nwEl('div'); box.id = 'nw-extracted';
+  var none = nwEl('div', 'nw-empty', 'Cards you read are held here until review and save arrive in the next release.');
+  box.appendChild(none);
+  card.appendChild(box);
+  app.appendChild(card);
+  nwQueueRefresh();
+  nwPendingAll().then(function(items) {
+    items.sort(function(a, b) { return String(a.createdAt || '').localeCompare(String(b.createdAt || '')); });
+    items.forEach(function(rec) { _nwPending.push(rec); nwRenderStrip(rec); });
+  }).catch(function() {});
+  if (navigator.onLine !== false) setTimeout(nwQueueDrain, 1500);
+}
+
 // PROJECT: ── Masthead + mount ─────────────────────────────────────────────
 function nwHeaderShow() {
   var head = document.getElementById('nw-header');
@@ -4381,29 +4979,35 @@ function nwLoadList() {
   var app = document.getElementById('nw-app');
   if (!app || _nwLoading) return;
   _nwLoading = true;
-  if (!app.childNodes.length) app.appendChild(nwEl('div', 'nw-empty', 'Loading…'));
+  // The capture card is mounted once and stays; only the list below it is
+  // re-rendered on each refresh, so a staged pair survives a list reload.
+  nwCaptureMount(app);
+  var wrap = document.getElementById('nw-listwrap');
+  if (!wrap) { wrap = nwEl('div'); wrap.id = 'nw-listwrap'; app.appendChild(wrap); }
+  if (!wrap.childNodes.length) wrap.appendChild(nwEl('div', 'nw-empty', 'Loading…'));
   nwApi('list', {}, function(res) {
     _nwLoading = false;
-    app.innerHTML = '';
+    wrap.innerHTML = '';
     if (!(res && res.success)) {
       var card = nwEl('div', 'nw-card');
       card.appendChild(nwEl('h2', null, 'Contacts'));
       card.appendChild(nwEl('div', 'nw-err', nwErrText(res && res.error)));
-      app.appendChild(card);
+      wrap.appendChild(card);
       return;
     }
+    if (res.folders) _nwFolders = res.folders;   // the Drive folder registry, read back on load
     var contacts = res.contacts || [], accounts = res.accounts || [];
     var counts = nwEl('div', 'nw-count');
     var c1 = nwEl('div'); c1.appendChild(nwEl('b', null, String(contacts.length))); c1.appendChild(nwEl('span', null, 'contacts'));
     var c2 = nwEl('div'); c2.appendChild(nwEl('b', null, String(accounts.length))); c2.appendChild(nwEl('span', null, 'accounts'));
     counts.appendChild(c1); counts.appendChild(c2);
-    app.appendChild(counts);
+    wrap.appendChild(counts);
     var list = nwEl('div', 'nw-card'); list.id = 'nw-list';
     list.appendChild(nwEl('h2', null, 'Contacts'));
     if (!contacts.length) {
       var empty = nwEl('div', 'nw-empty');
       empty.appendChild(nwEl('b', null, 'No contacts yet'));
-      empty.appendChild(document.createTextNode('Card capture arrives in the next release. The spreadsheet tabs are ready.'));
+      empty.appendChild(document.createTextNode('Capture a card above. Saving a reviewed card arrives in the next release.'));
       list.appendChild(empty);
     } else {
       contacts.forEach(function(c) {
@@ -4413,9 +5017,9 @@ function nwLoadList() {
         list.appendChild(row);
       });
     }
-    app.appendChild(list);
+    wrap.appendChild(list);
     var note = nwEl('p', 'nw-note', 'Refreshed on open, on return to this tab and after every save — no background polling.');
-    app.appendChild(note);
+    wrap.appendChild(note);
   });
 }
 // After every write (N1 onward) the list refreshes through this hook — the

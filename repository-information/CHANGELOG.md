@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.82r] — 2026-09-20 09:55:33 PM EST
+
+> **Prompt:** "Run N1 session 1 — capture and extraction — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.5 is the brief (follow its reading list in order, then steps 1–5 of Session 1 exactly; do not start session 2's steps 6–10 — the review card, dedupe, save and the schema checker are the next session's), §4.2 is the pipeline it implements, and repository-information/NETWORK-SCHEMA.md §1, §3, §6, §7, §12, §13 are the shapes you build against. D6 is Gemini only (the Receipts geminiExtractFromBase64_ idiom with the §7 responseSchema, GEMINI_API_KEY from this project's Script Properties, no second vendor), D8 opaque ids (nop=newid mints the c- id before upload so the filename is opaque from the first byte), D9 the privacy posture (audit rows carry the c- id and a field count only — never a card field), D14 no data poll (fetch on load, on visibilitychange, after writes; nwAfterWrite() is the refresh). Build in the PROJECT regions of Network.gs and Network.html only — never edit a TEMPLATE region. Verify with node --check on a .js copy of Network.gs (Node refuses the .gs extension), scripts/check-gas-inner-scripts.js, python3 scripts/check-readme-tree.py, scripts/verify-network-roles.py (the capture card present for admin, absent for the other three tiers, at phone width, zero page errors) and served Playwright screenshots of the capture card with a queued count. Page + GAS bumps with changelogs, CHANGELOG entry, no §11 flip (N1 closes at session 2) — then write my hand-off in chat: the GEMINI_API_KEY Script Property to set, the drive.file consent the first upload will ask for, and what to photograph for the session-2 done-when (20 real cards, three Chinese-script, two two-sided). Do not touch Events, the list's filters or exports (N3), accounts beyond what capture needs (N2), or any interval (Q). Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG stands at Sections: 103/100 with seven sections dated 2026-09-20 EST exempt (96 non-exempt): if your push lands on 2026-09-21 EST or later, the exemption lifts and 103 non-exempt is over the 100 trigger, so the oldest date group (2026-09-15) rotates into the archive with SHA enrichment on every header — read the counter and CHANGELOG-archive.md §"Rotation Logic" before assuming otherwise. One push."
+
+### Added
+
+#### `googleAppsScripts/Network/Network.gs` — v01.04g
+- **N1 session 1 — extraction (D6 Gemini only, NETWORK-SCHEMA.md §7).** `GEMINI_MODEL` / `GEMINI_FALLBACK_MODEL` pinned as in Receipts; `nwExtractionSchema_()` is the §7 `responseSchema` verbatim (`fullName … languages[], rawText, confidence{}` with the seven confidence keys required); `NW_EXTRACTION_PROMPT` carries the §7 rules (romanise CJK and keep the native script in parentheses, a second image is the back of the same card, never invent a field, honest per-field confidence); `nwExtractFromBase64_(frontB64, backB64, mime)` is `geminiExtractFromBase64_` with both images as `inline_data` parts in one call, the key from this project's `GEMINI_API_KEY` Script Property, the three-leg retry plan (primary, primary after 2 s, fallback after 1 s) and an error that is a code only (`gemini_http_<n>`, `gemini_parse_failed`, `gemini_key_missing`) so it can be audited
+- `nwNormaliseExtraction_(raw, qr)` coerces the answer into the §7 shape (kinds validated against `NW_EMAIL_KINDS` / `NW_PHONE_KINDS`, confidence clamped 0–1, absent → 0) and merges QR-decoded fields over the model's with confidence 1; `nwFieldCount_()` is the only per-extraction number an audit row may carry
+- `nop=newid` (D8: mints the `c-` id through `nwNewId_` before the upload so the Drive filename is opaque from the first byte; `c` prefix only) and `nop=extract` (`nwExtractOp_`: body-POST only, `contactId` validated against `NW_ID_RE`, both images ≤ 7,000,000 chars, MD5-digest cache of the pair for 600 s, audit rows `network_extract` / `network_extract_failed` carrying `{ contactId, fields, sides }` / `{ contactId, error }` — never a card field, §12) on `handleNetworkOp_`
+
+#### `live-site-pages/Network.html` — v01.03w
+- **The capture card** (`nwCaptureMount`, admin only — the inputs never enter the DOM for a turned-away tier): the Receipts inputs (`capture="environment"` single, `multiple` batch of `NW_MAX_BATCH` = 15) behind two buttons, a Front / Back segmented toggle that stages a pair (`_nwPair`) with thumbnails and flips to Back after the front is captured, Extract / Clear, a status line and the queued count with a "send now" link; `nwCompressImage` unchanged at 2,000 px / 0.82
+- **IndexedDB offline queue** (`nw-capture` db, stores `queue` + `pending`, no Worker): when `navigator.onLine` is false the compressed pair is queued and the count shows on the card; `nwQueueDrain()` runs on `online` (and once on mount) through the same `nwProcessPair` pipeline, oldest first, deleting each record only after success and stopping at the first failure; `pending` holds extracted-but-unsaved cards across a reload for session 2's review card
+- **Own-Drive upload** with the user's `drive.file` token from a separate token client (`NW_DRIVE_SCOPE`; the sign-in scope is untouched, so the first upload asks the consent once): `nwEnsureFolders` creates `Network App/` and `_inbox/` browser-side on first use and parks the ids through `nop=setfolders` (read back from the list payload on load, `nop=folders` on demand), `nwUploadPair` files `<c-id>-front.jpg` / `-back.jpg` by multipart upload; a Drive failure is soft — the extraction still runs and the pending record remembers `driveError`
+- **QR decode** with `BarcodeDetector` where present (`nwQrDecode` → `nwParseQr`: vCard FN/N/ORG/TITLE/EMAIL/TEL/ADR/URL, or a bare URL), merged before the model call; a vCard naming the person with an email or phone (`nwQrSufficient`) fills the card without a model round-trip (`nwQrExtraction`, confidence 1 on carried fields, 0 elsewhere)
+- `nwApiBody()` — the `_gasPostBody` idiom (form-urlencoded body, three attempts, no GET fallback) for `nop=extract`; `nwProcessPair` orders newid → upload → QR-or-extract → pending → strip, spacing model calls ≥ 6.5 s in a batch or drain; `nwRenderStrip` shows the name / title · company / id · sides · Drive filed / "check:" fields below `NW_CONFIDENCE_FLOOR`
+- `nwLoadList` keeps the capture card and re-renders only `#nw-listwrap`, and reads `folders` from the list payload into `_nwFolders`; `nwEnsureFolders` calls `nwAfterWrite()` after `setfolders` (D14)
+
+### Changed
+
+#### `scripts/verify-network-roles.py`
+- Asserts the capture card (card, both inputs, the toggle, a queued count of 0) for admin and its absence for contributor / analyst / viewer; a new scenario takes the context offline, stages a canvas-generated card photo, taps Extract and checks the queue reads 1 with no request issued (`network-capture-queued.png`), then reconnects and checks the drain mints the id before the Drive upload, the strip renders and the count returns to 0 (`network-capture-extracted.png`); the GAS stub answers `nop=newid` / `folders` / `setfolders` and a body-POST `nop=extract`, and a Drive stub answers folder creation and the multipart upload
+
+### Notes
+- Still 2026-09-20 EST at the push (09:55 PM) — 104 sections, eight exempt, 96 non-exempt, no rotation. CHANGELOG `Sections: 103/100` → `104/100`. The first push dated 2026-09-21 EST or later rotates the 2026-09-15 date group (unshallow first)
+- §11's N1 row is unchanged (Proposed) — it flips at the close of session 2, which also writes the N2 brief as §13.6
 
 ## [v06.81r] — 2026-09-20 09:14:47 PM EST
 

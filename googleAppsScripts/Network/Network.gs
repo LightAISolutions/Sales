@@ -1,4 +1,4 @@
-var VERSION = "v01.03g";
+var VERSION = "v01.04g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -321,7 +321,8 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // Design: repository-information/NETWORK-EVENTS-DESIGN-PLAN.md (gate NE0,
 // every D row decided 2026-09-20). Data shapes: NETWORK-SCHEMA.md — edit that
 // file first, then this one. N0 builds the door, the tabs, the ids, the folder
-// registry and the quota counter; capture, extraction and the list are N1.
+// registry and the quota counter; N1 session 1 adds the card extraction
+// (nop=newid + nop=extract, below); session 2 adds review, dedupe and save.
 
 // PROJECT: ── Role + Access matrix (D7 — admin-only, decided 2026-09-20) ──
 // NETWORK-SCHEMA.md §2. All four tier keys are kept so that widening later is
@@ -549,6 +550,221 @@ function nwFoldersSet_(ids) {
   return clean;
 }
 
+// PROJECT: ── Card extraction (N1 — D6 Gemini only, NETWORK-SCHEMA.md §7) ──
+// The Receipts geminiExtractFromBase64_ idiom with the card responseSchema:
+// one call per card carrying BOTH sides as inline_data parts, the model
+// pinned by constant, the key ONLY in this project's Script Properties under
+// GEMINI_API_KEY (never in the repo), and the same three-leg retry plan on
+// transient errors (503 overload / 429 rate limit / 500): primary, primary
+// after 2 s, fallback model after 1 s. No second vendor and no
+// ANTHROPIC_API_KEY (D6): a low-confidence field is outlined on the review
+// card with "Retry extraction", never sent elsewhere automatically.
+var GEMINI_MODEL = "gemini-3.6-flash";
+var GEMINI_FALLBACK_MODEL = "gemini-3.5-flash";
+
+// The seven fields that carry a per-field confidence (§7). The client
+// outlines any of them below NW_CONFIDENCE_FLOOR on the review card (N1 s2).
+var NW_CONFIDENCE_FIELDS = ['fullName', 'title', 'company', 'emails', 'phones', 'address', 'website'];
+var NW_CONFIDENCE_FLOOR = 0.7;
+var NW_EMAIL_KINDS = ['work', 'personal', 'other'];
+var NW_PHONE_KINDS = ['mobile', 'office', 'fax', 'other'];
+
+// The strict-JSON responseSchema — NETWORK-SCHEMA.md §7 verbatim. Every
+// string is required so the model answers "" rather than omitting a key.
+function nwExtractionSchema_() {
+  var confProps = {};
+  for (var i = 0; i < NW_CONFIDENCE_FIELDS.length; i++) {
+    confProps[NW_CONFIDENCE_FIELDS[i]] = { type: "number", description: "0 to 1 — how sure you are of this field; 0 when absent" };
+  }
+  return {
+    type: "object",
+    properties: {
+      fullName:   { type: "string", description: "Full name as printed, romanised; native script kept in parentheses after it" },
+      firstName:  { type: "string" },
+      lastName:   { type: "string" },
+      title:      { type: "string", description: "Job title as printed" },
+      company:    { type: "string", description: "Company name as printed, romanised; native script in parentheses" },
+      department: { type: "string" },
+      emails: { type: "array", items: { type: "object",
+        properties: { value: { type: "string" }, kind: { type: "string", enum: NW_EMAIL_KINDS } },
+        required: ["value", "kind"] } },
+      phones: { type: "array", items: { type: "object",
+        properties: { number: { type: "string", description: "As printed, with country code when printed" },
+                      kind: { type: "string", enum: NW_PHONE_KINDS } },
+        required: ["number", "kind"] } },
+      address:  { type: "string", description: "Postal address as printed, one line" },
+      website:  { type: "string" },
+      linkedin: { type: "string", description: "LinkedIn URL or handle printed on the card; empty if none" },
+      socials:  { type: "array", items: { type: "string" }, description: "Other handles printed on the card" },
+      languages: { type: "array", items: { type: "string" }, description: "ISO 639-1 codes of the scripts seen, e.g. en, zh, ja, ko" },
+      rawText:  { type: "string", description: "Every printed string on both sides, in reading order, separated by newlines" },
+      confidence: { type: "object", properties: confProps, required: NW_CONFIDENCE_FIELDS }
+    },
+    required: ["fullName", "firstName", "lastName", "title", "company", "department", "emails", "phones",
+               "address", "website", "linkedin", "socials", "languages", "rawText", "confidence"]
+  };
+}
+
+var NW_EXTRACTION_PROMPT =
+  "Extract the contact details printed on this business card. " +
+  "When a second image is present it is the BACK of the same card — read both sides as one card; " +
+  "a bilingual card prints the same person on each side, so merge, never duplicate. " +
+  "Romanise Chinese, Japanese and Korean names and company names and keep the native script in parentheses " +
+  "immediately after the romanised form, e.g. \"Wei Zhang (张伟)\"; for a name printed only in Latin script, copy it as printed. " +
+  "firstName and lastName are the given and family names in the person's own convention. " +
+  "Never invent a field: when something is not printed, answer an empty string or an empty array. " +
+  "Copy emails, phone numbers and web addresses exactly as printed. Classify each phone as mobile, office, fax or other " +
+  "from its label or icon; classify each email as work, personal or other. " +
+  "languages lists the ISO 639-1 codes of every script seen on the card. " +
+  "rawText is every printed string from both sides, one per line. " +
+  "confidence is per field, from 0 to 1, and honest: 1 only for text you read clearly, low for a guess, 0 when absent.";
+
+// Both images as inline_data parts in ONE call (back optional). Returns
+// { success, data } or { success:false, error } — the error is a code, never
+// card text, because the caller writes it to the audit row.
+function nwExtractFromBase64_(frontB64, backB64, mime) {
+  var apiKey = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || '';
+  if (!apiKey) return { success: false, error: 'gemini_key_missing' };
+  var parts = [{ text: NW_EXTRACTION_PROMPT }, { inline_data: { mime_type: mime, data: frontB64 } }];
+  if (backB64) parts.push({ inline_data: { mime_type: mime, data: backB64 } });
+  var payload = {
+    contents: [{ parts: parts }],
+    generationConfig: { responseMimeType: "application/json", responseSchema: nwExtractionSchema_(), temperature: 0 }
+  };
+  var fetchOpts = { method: 'post', contentType: 'application/json',
+    headers: { 'x-goog-api-key': apiKey },
+    payload: JSON.stringify(payload), muteHttpExceptions: true };
+  var plan = [
+    { model: GEMINI_MODEL, wait: 0 },
+    { model: GEMINI_MODEL, wait: 2000 },
+    { model: GEMINI_FALLBACK_MODEL, wait: 1000 }
+  ];
+  var resp = null, code = 0;
+  for (var a = 0; a < plan.length; a++) {
+    if (!plan[a].model || plan[a].model === 'YOUR_GEMINI_MODEL') continue;
+    if (plan[a].wait) Utilities.sleep(plan[a].wait);
+    var r = UrlFetchApp.fetch(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + plan[a].model + ':generateContent',
+      fetchOpts);
+    code = r.getResponseCode();
+    if (code === 200) { resp = r; break; }
+    if (code !== 503 && code !== 429 && code !== 500) break;
+  }
+  if (!resp) return { success: false, error: 'gemini_http_' + code };
+  var extracted;
+  try {
+    extracted = JSON.parse(JSON.parse(resp.getContentText()).candidates[0].content.parts[0].text);
+  } catch (xErr) {
+    return { success: false, error: 'gemini_parse_failed' };
+  }
+  return { success: true, data: extracted };
+}
+
+// Coerce the model's answer (or a QR-only answer) into the §7 shape: every
+// string a string, every list a list of the right objects, every confidence
+// a number clamped to 0–1. `qr` — fields decoded client-side from a QR code
+// on the card — are merged OVER the model's fields with confidence 1: a
+// machine-readable vCard beats a read of the print.
+function nwNormaliseExtraction_(raw, qr) {
+  raw = (raw && typeof raw === 'object') ? raw : {};
+  qr = (qr && typeof qr === 'object') ? qr : {};
+  function str(v) { return (v == null) ? '' : String(v).trim(); }
+  function pick(k) { return str(qr[k]) || str(raw[k]); }
+  function list(v, build) {
+    var out = [];
+    if (Object.prototype.toString.call(v) === '[object Array]') {
+      for (var i = 0; i < v.length; i++) { var b = build(v[i]); if (b) out.push(b); }
+    }
+    return out;
+  }
+  function emailItem(e) {
+    var value = str(e && typeof e === 'object' ? e.value : e).toLowerCase();
+    if (!value) return null;
+    var kind = str(e && e.kind).toLowerCase();
+    return { value: value, kind: NW_EMAIL_KINDS.indexOf(kind) >= 0 ? kind : 'work' };
+  }
+  function phoneItem(p) {
+    var number = str(p && typeof p === 'object' ? p.number : p);
+    if (!number) return null;
+    var kind = str(p && p.kind).toLowerCase();
+    return { number: number, kind: NW_PHONE_KINDS.indexOf(kind) >= 0 ? kind : 'other' };
+  }
+  function strList(v) { return list(v, function(s) { return str(s) || null; }); }
+  var qrEmails = list(qr.emails, emailItem), qrPhones = list(qr.phones, phoneItem);
+  var out = {
+    fullName: pick('fullName'), firstName: pick('firstName'), lastName: pick('lastName'),
+    title: pick('title'), company: pick('company'), department: pick('department'),
+    emails: qrEmails.length ? qrEmails : list(raw.emails, emailItem),
+    phones: qrPhones.length ? qrPhones : list(raw.phones, phoneItem),
+    address: pick('address'), website: pick('website'), linkedin: pick('linkedin'),
+    socials: strList(raw.socials), languages: strList(raw.languages),
+    rawText: str(raw.rawText) || str(qr.rawText),
+    confidence: {}
+  };
+  var rc = (raw.confidence && typeof raw.confidence === 'object') ? raw.confidence : {};
+  for (var i = 0; i < NW_CONFIDENCE_FIELDS.length; i++) {
+    var f = NW_CONFIDENCE_FIELDS[i];
+    var has = (f === 'emails' || f === 'phones') ? out[f].length > 0 : !!out[f];
+    var fromQr = (f === 'emails') ? qrEmails.length > 0 : (f === 'phones') ? qrPhones.length > 0 : !!str(qr[f]);
+    var c = Number(rc[f]);
+    if (isNaN(c)) c = has ? 0.5 : 0;
+    if (fromQr) c = 1;
+    if (!has) c = 0;
+    out.confidence[f] = Math.max(0, Math.min(1, c));
+  }
+  return out;
+}
+
+// How many top-level fields came back non-empty — the ONLY thing about an
+// extraction that an audit row may carry, beside the c- id (§12, D9).
+function nwFieldCount_(data) {
+  var keys = ['fullName', 'firstName', 'lastName', 'title', 'company', 'department', 'emails', 'phones',
+              'address', 'website', 'linkedin', 'socials', 'languages'];
+  var n = 0;
+  for (var i = 0; i < keys.length; i++) {
+    var v = data[keys[i]];
+    if (Object.prototype.toString.call(v) === '[object Array]' ? v.length > 0 : !!v) n++;
+  }
+  return n;
+}
+
+// nop=extract — body-POST only (two images exceed any GET URL). The client
+// mints the c- id with nop=newid BEFORE it uploads the photos (D8: the Drive
+// filename is opaque from the first byte), so the id arrives here already
+// known and is the only thing the audit row names. Cached 10 minutes by a
+// digest of both images so a transport retry never re-runs Gemini.
+function nwExtractOp_(sess, p) {
+  var cid = String(p.contactId || '');
+  if (!NW_ID_RE.test(cid) || cid.charAt(0) !== 'c') return { success: false, error: 'bad_contact_id' };
+  var front = String(p.front || ''), back = String(p.back || '');
+  if (!front) return { success: false, error: 'no_image' };
+  if (front.length > 7000000 || back.length > 7000000) return { success: false, error: 'image_too_large' };
+  var mime = String(p.mime || 'image/jpeg');
+  if (mime.indexOf('image/') !== 0) return { success: false, error: 'not_an_image' };
+  var qr = null;
+  if (p.qr) { try { qr = JSON.parse(String(p.qr)); } catch (eQr) { qr = null; } }
+  var digest = Utilities.base64EncodeWebSafe(
+    Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, front + '|' + back));
+  var exCache = CacheService.getScriptCache();
+  var hit = exCache.get('nwextract_' + digest);
+  var result = null;
+  if (hit) { try { result = JSON.parse(hit); } catch (cErr) { result = null; } }
+  if (!result) {
+    result = nwExtractFromBase64_(front, back, mime);
+    if (result.success) {
+      try { exCache.put('nwextract_' + digest, JSON.stringify(result), 600); } catch (pErr) { /* >100KB — skip caching */ }
+    }
+  }
+  if (!result.success) {
+    auditLog('data_read', sess.email, 'network_extract_failed', { contactId: cid, error: String(result.error || '').slice(0, 40) });
+    return { success: false, error: result.error, contactId: cid };
+  }
+  var data = nwNormaliseExtraction_(result.data, qr);
+  // §12 / D9: the id, the field count and whether a back was read — never a card field.
+  auditLog('data_read', sess.email, 'network_extract', { contactId: cid, fields: nwFieldCount_(data), sides: back ? 2 : 1 });
+  return { success: true, contactId: cid, extraction: data, model: GEMINI_MODEL };
+}
+
 // PROJECT: ── Ownership — copied verbatim from Receipts.gs (the widening path, D7)
 // Sharing — the Shares tab holds one row per grant (Owner → Grantee, scope
 // "view" or "edit"). Dormant in v1 (no UI — NETWORK-SCHEMA.md §2) but the
@@ -729,12 +945,14 @@ function quotaProbe_() {
   return out;
 }
 
-// PROJECT: ── Network ops (action=network, nop=list|folders|setfolders) ────
+// PROJECT: ── Network ops (action=network, nop=list|folders|setfolders|newid|extract)
 // Over the same cookie-less fetch transport as Classroom's ops, with a GET
-// mirror on action=api&op=network. Order of checks: session → the app door
+// mirror on action=api&op=network (small params only — nop=extract carries
+// two images and is body-POST only). Order of checks: session → the app door
 // (nwRequire_ — admin only under D7; every other tier is turned away with an
-// audit entry before any tab is opened) → the op. N0 ships the empty list and
-// the folder registry; N1 adds capture and save on the same handler.
+// audit entry before any tab is opened) → the op. N0 shipped the empty list
+// and the folder registry; N1 session 1 adds newid + extract (capture), and
+// session 2 adds save / delete / restore on the same handler.
 function handleNetworkOp_(e) {
   var p = (e && e.parameter) || {};
   var op = String(p.nop || '');
@@ -775,6 +993,22 @@ function handleNetworkOp_(e) {
           { accounts: Object.keys(saved.accounts || {}).length });
         return { success: true, folders: saved };
       } catch (sf) { return { success: false, error: 'bad_folder_ids' }; }
+    }
+    if (op === 'newid') {
+      // D8: the c- id is minted BEFORE the photos are uploaded so the Drive
+      // filename is opaque from the first byte. Nothing is written to a tab —
+      // the id is reserved by its randomness (8 bytes) and collision-checked
+      // against the tab at mint time; the row itself arrives with nop=save.
+      nwRequire_(sess, 'contacts', 'network_newid');
+      var prefix = String(p.prefix || 'c').toLowerCase();
+      if (prefix !== 'c') return { success: false, error: 'bad_prefix' };
+      var minted = nwNewId_(prefix);
+      auditLog('data_read', sess.email, 'network_newid', { id: minted });
+      return { success: true, id: minted };
+    }
+    if (op === 'extract') {
+      nwRequire_(sess, 'contacts', 'network_extract');
+      return nwExtractOp_(sess, p);
     }
     return { success: false, error: 'unknown_network_op' };
   } catch (err) {

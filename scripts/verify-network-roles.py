@@ -4,11 +4,11 @@
 Serves live-site-pages/ over localhost, seeds a session for each ACL tier,
 stubs the Network GAS backend (action=network) and asserts, per tier:
 
-    tier         admitted   surface                  data requests
-    admin         yes       the (empty) contact list  1 (nop=list)
-    contributor    no       the turned-away card      0
-    analyst        no       the turned-away card      0
-    viewer         no       the turned-away card      0
+    tier         admitted   surface                                 data requests
+    admin         yes       the capture card + the (empty) list     1 (nop=list)
+    contributor    no       the turned-away card, no capture inputs  0
+    analyst        no       the turned-away card, no capture inputs  0
+    viewer         no       the turned-away card, no capture inputs  0
 
 The page is an auth-template page: the session lives in sessionStorage under
 the page-scoped keys, and on load the fetch transport validates the stored
@@ -22,6 +22,16 @@ Also checked: the ?as=<tier> preview keeps only-subtracting semantics — an
 admin previewing as viewer is turned away; a viewer previewing as admin stays
 turned away and still issues zero requests.
 
+N1 session 1 — the capture card (design plan §4.2, steps 1–5): for the admin
+the card is mounted with its front / back toggle, the two hidden inputs
+(capture="environment" single, multiple batch) and the queued count; for the
+other three tiers none of it is in the DOM. Then the offline path: with the
+context offline, a generated card photo is staged and Extract is tapped — the
+pair lands in the IndexedDB queue and the count reads 1 (screenshot
+network-capture-queued.png). Back online, the drain runs the same pipeline
+against the stub (nop=newid → Drive upload → nop=extract) and the extracted
+strip appears with the count back at 0 (network-capture-extracted.png).
+
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
 executable_path. Do NOT run `playwright install`.
@@ -34,7 +44,7 @@ taken at phone width (390 × 844) because the app is used on a phone.
 Exit code is non-zero if any tier's rendered surface disagrees with the matrix
 or a turned-away tier issued a data request, so it can gate CI.
 """
-import glob, json, threading, functools, http.server, socketserver, sys
+import base64, glob, json, threading, functools, http.server, socketserver, sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -82,12 +92,46 @@ def gas_stub(role, counter):
             # The page validates a stored session with a heartbeat on load and
             # only then calls showApp — answer as the real backend would.
             body = {'type': 'gas-heartbeat-ok', 'expiresIn': 7200, 'absoluteTimeout': 28800}
-        elif 'action=network' in url or 'op=network' in url:
+        elif 'action=network' in url or 'op=network' in url or 'action=network' in (request.post_data or ''):
+            post = request.post_data or ''
             if role != 'admin':
                 body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
             elif 'nop=list' in url:
                 body = {'success': True, 'role': 'admin', 'caps': ['contacts'],
                         'contacts': [], 'accounts': [], 'folders': None}
+            elif 'nop=newid' in url:
+                body = {'success': True, 'id': 'c-0123456789abc'}
+            elif 'nop=folders' in url:
+                body = {'success': True, 'folders': None}
+            elif 'nop=setfolders' in url:
+                body = {'success': True, 'folders': {'root': 'ROOTFOLDERID000001', 'inbox': 'INBOXFOLDERID00001', 'accounts': {}}}
+            elif 'nop=extract' in post:
+                # body-POST only: the images travel in the form body, not the URL
+                assert 'front=' in post and 'contactId=c-0123456789abc' in post
+                body = {'success': True, 'contactId': 'c-0123456789abc', 'model': 'stub',
+                        'extraction': {'fullName': 'Jane Doe', 'firstName': 'Jane', 'lastName': 'Doe',
+                                       'title': 'Director of Grid Services', 'company': 'Acme Energy',
+                                       'department': '', 'emails': [{'value': 'jane@acme.example', 'kind': 'work'}],
+                                       'phones': [], 'address': '', 'website': '', 'linkedin': '', 'socials': [],
+                                       'languages': ['en'], 'rawText': 'Jane Doe',
+                                       'confidence': {'fullName': 0.98, 'title': 0.9, 'company': 0.95, 'emails': 0.97,
+                                                      'phones': 0, 'address': 0, 'website': 0}}}
+        route.fulfill(status=200, content_type='application/json',
+                      headers={'Access-Control-Allow-Origin': '*'}, body=json.dumps(body))
+    return handle
+
+
+def drive_stub(counter):
+    """Stand in for the Drive API the browser calls with the user's own
+    drive.file token: folder creation and the multipart upload."""
+    def handle(route, request):
+        counter.append(request.url)
+        if '/upload/drive/v3/files' in request.url:
+            body = {'id': 'FILEID00000000000001', 'webViewLink': 'https://drive.google.com/file/d/FILEID00000000000001/view'}
+        elif '/drive/v3/files' in request.url:
+            body = {'id': 'ROOTFOLDERID000001' if '"Network App"' in (request.post_data or '') else 'INBOXFOLDERID00001'}
+        else:
+            body = {'error': 'unsupported_in_test'}
         route.fulfill(status=200, content_type='application/json',
                       headers={'Access-Control-Allow-Origin': '*'}, body=json.dumps(body))
     return handle
@@ -135,6 +179,11 @@ def probe(page):
         err:     !!document.querySelector('#nw-app .nw-err'),
         wall:    vis('#auth-wall'),
         role:    (document.getElementById('nw-role') || {}).textContent || '',
+        capture: !!document.querySelector('#nw-app #nw-capture'),
+        inputs:  document.querySelectorAll('#nw-cap-input, #nw-batch-input').length,
+        toggle:  !!document.querySelector('#nw-capture #nw-side-front[aria-pressed]'),
+        queued:  (document.getElementById('nw-queue-count') || {}).textContent || '',
+        strips:  document.querySelectorAll('#nw-extracted .nw-strip').length,
         stored:  sessionStorage.getItem('Network_gas_user_role'),
         admitted: typeof nwAdmitted === 'function' ? nwAdmitted() : null
       };
@@ -145,6 +194,7 @@ def load_as(browser, base, role, query=''):
     counter, errors = [], []
     ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True)
     ctx.route('**://script.google.com/**', gas_stub(role, counter))
+    ctx.route('**://www.googleapis.com/**', drive_stub(counter))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
     ctx.add_init_script(seed_script(role))
     page = ctx.new_page()
@@ -194,11 +244,18 @@ def run():
                     failures.append('%s: turned-away card rendered for the admitted tier' % role)
                 if len(data_reqs) != 1:
                     failures.append('%s: expected exactly one list request, saw %d' % (role, len(data_reqs)))
+                if not (got['capture'] and got['inputs'] == 2 and got['toggle']):
+                    failures.append('%s: capture card incomplete — card=%s inputs=%s toggle=%s'
+                                    % (role, got['capture'], got['inputs'], got['toggle']))
+                if got['queued'] != '0':
+                    failures.append('%s: queued count reads %r on a fresh profile, expected 0' % (role, got['queued']))
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
                 if got['list'] or got['empty']:
                     failures.append('%s: list surface rendered for a turned-away tier' % role)
+                if got['capture'] or got['inputs']:
+                    failures.append('%s: capture card / inputs in the DOM for a turned-away tier' % role)
                 if data_reqs:
                     failures.append('%s: turned-away tier issued %d data request(s)' % (role, len(data_reqs)))
             if real_errs:
@@ -217,6 +274,51 @@ def run():
         if not got['denied'] or got['list'] or [u for u in reqs if 'op=network' in u or 'action=network' in u]:
             failures.append('preview: viewer ?as=admin gained a surface (or issued a request)')
         ctx.close()
+
+        # N1 s1 — offline capture queues; reconnect drains through the pipeline.
+        ctx, page, reqs, errs = load_as(browser, base, 'admin')
+        jpeg_b64 = page.evaluate("""() => {
+          const c = document.createElement('canvas'); c.width = 700; c.height = 400;
+          const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, 700, 400);
+          x.fillStyle = '#222'; x.font = '600 34px Georgia'; x.fillText('Jane Doe', 40, 120);
+          x.font = '22px Georgia'; x.fillText('Director of Grid Services', 40, 165); x.fillText('Acme Energy', 40, 205);
+          x.font = '18px monospace'; x.fillText('jane@acme.example', 40, 300);
+          return c.toDataURL('image/jpeg', 0.85).split(',')[1]; }""")
+        photo = {'name': 'card.jpg', 'mimeType': 'image/jpeg', 'buffer': base64.b64decode(jpeg_b64)}
+        ctx.set_offline(True)
+        page.set_input_files('#nw-cap-input', photo)
+        page.wait_for_function("() => /Front captured/.test((document.getElementById('nw-cap-status') || {}).textContent || '')", timeout=10000)
+        page.click('#nw-extract-btn')
+        page.wait_for_function("() => (document.getElementById('nw-queue-count') || {}).textContent === '1'", timeout=10000)
+        page.wait_for_timeout(300)
+        page.screenshot(path=str(SHOTS / 'network-capture-queued.png'), full_page=False)
+        got = probe(page)
+        if got['queued'] != '1' or got['strips']:
+            failures.append('offline: expected queued=1 and no strip, got queued=%r strips=%d' % (got['queued'], got['strips']))
+        if [u for u in reqs if 'nop=newid' in u]:
+            failures.append('offline: the pipeline issued a request while offline')
+        page.evaluate("() => { _nwDriveToken = 'test-drive-token'; }")   # the drive.file consent, already given
+        ctx.set_offline(False)
+        page.wait_for_function("() => document.querySelectorAll('#nw-extracted .nw-strip').length === 1", timeout=20000)
+        page.wait_for_function("() => (document.getElementById('nw-queue-count') || {}).textContent === '0'", timeout=10000)
+        page.wait_for_timeout(600)
+        page.screenshot(path=str(SHOTS / 'network-capture-extracted.png'), full_page=False)
+        got = probe(page)
+        strip = page.evaluate("() => (document.querySelector('#nw-extracted .nw-strip') || {}).textContent || ''")
+        order = [('newid' if 'nop=newid' in u else 'upload' if '/upload/drive' in u else 'folder' if '/drive/v3/files' in u else None) for u in reqs]
+        order = [o for o in order if o]
+        extract_posts = [r for r in reqs if 'script.google.com' in r]
+        if got['queued'] != '0' or got['strips'] != 1:
+            failures.append('drain: expected queued=0 and one strip, got queued=%r strips=%d' % (got['queued'], got['strips']))
+        if 'Jane Doe' not in strip or 'c-0123456789abc' not in strip or 'filed' not in strip:
+            failures.append('drain: strip text unexpected: %r' % strip[:120])
+        if order[:1] != ['newid'] or 'upload' not in order or order.index('newid') > order.index('upload'):
+            failures.append('drain: expected the id minted BEFORE the Drive upload (D8), saw %r' % order)
+        real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
+        if real_errs:
+            failures.append('capture: %d page error(s): %s' % (len(real_errs), real_errs[0][:100]))
+        rows.append(('admin+capture', got, len([u for u in reqs if 'action=network' in u or 'op=network' in u]), len(real_errs)))
+        ctx.close()
         browser.close()
     httpd.shutdown()
 
@@ -227,13 +329,15 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-8s %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['list']),
                                                   mark(g['empty']), mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/network-role-<tier>.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
+    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-queued.png, network-capture-extracted.png (%dx%d)'
+          % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
         for f in failures:
             print('  ✗', f)
         return 1
-    print('\nALL CHECKS PASSED — admin sees the empty list; contributor, analyst and viewer are turned away with zero requests; preview only subtracts.')
+    print('\nALL CHECKS PASSED — admin sees the capture card and the empty list; contributor, analyst and viewer are turned away '
+          'with zero requests and no capture inputs; preview only subtracts; an offline capture queues and drains on reconnect.')
     return 0
 
 
