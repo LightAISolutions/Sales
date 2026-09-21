@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.99r] — 2026-09-21 03:18:20 PM EST
+
+> Also, is it using up any of my weekly Fable usage limit?
+
+### Changed
+
+#### `.claude/rules/profiler-app.md`
+- **No — and the reason is worth writing down, because "weekly Fable limit" is not the shape the limit actually has.** Verified on the run's own session record rather than inferred: the 2026-09-21 earnings-desk run shows `last_served_model: "claude-sonnet-5"`. All five committing Routines carry `"model": ""`, so a fired session takes the platform default and not whatever model the developer happens to be authoring in.
+- **Fable has no separate weekly bucket.** Per Anthropic's help centre, Fable models *"draw from your plan's regular weekly usage limits and use them faster than other Claude models"*; on Max *"you can use up to 50% of your weekly usage limits on Fable models at no extra cost,"* after which Fable alone moves to usage credits while the rest of the weekly limit stays spendable elsewhere. A desk run therefore spends the **shared weekly all-model limit and none of the Fable half**.
+- **Recorded the scheduling consequence, which points the opposite way from intuition:** interactive authoring sessions over 2026-09-19..21 valued at **$27-$179 each** against the desk's $14, and the only `seven_day` / `allowed_warning` rate-limit state in this account's session data sat on a **Fable 5.1 interactive session**, never on a scheduled run. Thinning the desk cadence would not protect Fable headroom. The actionable corollary is the inverse: **pinning a Routine to Fable would start drawing the 50% sub-allocation** - leave a Routine's model unset unless there is a reason.
 
 ## [v06.98r] — 2026-09-21 03:05:14 PM EST
 
