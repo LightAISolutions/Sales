@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.01r] — 2026-09-21 04:43:23 PM EST
+
+> **Prompt:** "Regarding the Edit shortcut, I successfully clicked "Edit" on "Classroom curriculum pipeline (C2) - weekly", but there was no interactable repositories field. Thus, the shortcut doesn't functionally work.\n\nRegarding the Routines and AI model, you mentioned that the Profiler earnings desk only goes through 3 companies and the Profiler quarterly check only reads 21 dossiers and refreshes those that move. However, my current Profiler has 177 dossiers. Shouldn't my routines cover all of them? Even if not all of them, I would like you to consider which dossiers are important from Megmeet's point of view (I will most likely join them as a "Senior Sales Manager - SST Solutions" soon) and make sure these relevant dossiers are updated. Also, I would like you to specify Opus 5 as the AI model for Industry Guidance Quarterly and Classroom C2 pipeline as you recommended.\n\nRegarding the cache-read cost, I would like to apply both lever 1 and 2. However, I am not sure how to implement them myself. Can you implement both yourself?\n\nRegarding deleting the old desk, I would like you to delete the old desk that failed earlier today and keep the new desk that successfully pushed. I give permission.\n\nI will tackle rebuilding the Routines afterwards."
+
+### Added
+
+#### `scripts/profiler-queue.py` (new)
+- **Lever 1, implemented as a script rather than an inline snippet so it is testable and version-controlled.** `--desk` returns the ≤3 due earnings rows oldest-first, carry-over, the unconfirmed-within-7-days set and the counts the stand-down report quotes; `--quarterly [--tier core|watch]` returns cadence rows past their tier interval. **5,075 bytes against the calendar’s 384,240** — a 76× reduction in what enters a run’s context. Carries an explicit sandbox fallback for the “Code from External” denial observed 2026-09-16.
+
+#### `repository-information/ROUTINES-OPERATIONS.md` (new)
+- **Lever 2.** The `## Scheduled Refreshes` section was **186 of `profiler-app.md`’s 347 lines** — Routine wiring, repo-access post-mortems, the A/B proof, cost and model analysis, rebuild prompts. All developer-session material that **no run consumes and every run re-read on every turn**. Moved here; `profiler-app.md` drops **82,893 → 51,571 bytes (−38%)**, leaving a pointer plus the only two facts a run needs.
+- Both rebuild prompts rewritten against the script and the tiers, ready to paste.
+
+#### `repository-information/profiler-refresh-calendar.json`
+- **A `tier` on every cadence row: 52 `core` (90-day sweep), 33 `watch` (180-day), 0 untiered.** Verified non-destructive — 177 rows before and after, no pre-existing field altered.
+
+### Fixed
+
+#### Coverage — 64 of 177 dossiers were covered by no Routine at all
+- **The earnings desk covers the 92 public rows; the quarterly sweep named 21 companies inline; that left 64 cadence rows (36% of the corpus) with no refresh path.** Worst segments: `storage-developers-and-ipps` 26 of 34 uncovered, `aidc-developers-and-landlords` 12 of 30.
+- **31 of the 64 sit in Megmeet-adjacent segments**, including the four closest SST peers — `amperesand`, `dg-matrix`, `heron-power`, `novos-power` — all refreshed by hand in named developer sessions on 2026-09-12/19, which is the evidence the gap was being absorbed manually rather than noticed.
+- **Root cause was the hardcoded list, not the cadence**: a company list inside a Routine prompt cannot be diffed against the corpus and cannot be edited after a rebuild. Coverage is now read from calendar tiers, so it changes by commit.
+
+#### `repository-information/ROUTINES-OPERATIONS.md`
+- **Resolved the v07.00r amendment against a live re-test: the documentation is wrong and the original 2026-09-16 finding stands.** Edit opens without an interactable repositories field; the **Runs with** card shows only environment and model. **Rebuild is mandatory**, and this is not to be re-litigated from the docs a third time.
+
+### Changed
+
+#### Routine configuration (API state, not repo files)
+- `Classroom curriculum pipeline (C2)` and `Industry Guidance quarterly review` set to **`claude-opus-5`** per the v07.00r analysis.
+- **Old earnings desk `trig_01UyH77BMKJnxzBUZJ11ej6A` deleted** on explicit developer permission — created 2026-09-02, no repository, every run ~30s, no commit ever. The repo-attached desk created 2026-09-19 is retained.
 
 ## [v07.00r] — 2026-09-21 03:39:15 PM EST
 
