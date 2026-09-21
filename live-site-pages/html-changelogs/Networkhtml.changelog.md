@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 1/50`
+`Sections: 2/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.02w] — 2026-09-20 08:38:53 PM EST — v06.77r
+
+### Changed
+- **The app is now connected to its backend.** Signing in reaches the live service, so administrators see the contacts view and the spreadsheet is prepared on first use. Nothing else changed on the page
 
 ## [v01.01w] — 2026-09-20 12:56:34 AM EST — v06.76r
 

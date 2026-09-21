@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v06.77r] — 2026-09-20 08:38:53 PM EST
+
+> **Prompt:** "set Network DEPLOYMENT_ID to AKfycbxuayBnl0pM0upSFEoqUkaW4bbXbVCKGKeGVdcgKiBM5FBj_ykQn30BINHyJMvc0_U8"
+
+### Changed
+
+#### `googleAppsScripts/Network/Network.config.json`
+- `DEPLOYMENT_ID` set to the developer's first Web-app deployment (`AKfycbxu…c0_U8`) — the workflow's `Deploy Network` step now fires the self-update webhook on every `Network.gs` merge
+
+#### `googleAppsScripts/Network/Network.gs` — v01.02g
+- `DEPLOYMENT_ID` synced from the config per [PC-GAS-CONFIG] #14
+
+#### `live-site-pages/Network.html` — v01.02w
+- `var _e` set to the base64 of the reversed `/exec` URL (decoded and round-trip-checked), so the page now creates its GAS iframe and the fetch transport has a base URL; sign-in reaches the live backend
+
+#### `README.md`
+- Network version displays v01.02w · v01.02g; `Last updated` and `Repo version` refreshed
+
+### Notes
+- **Deploy hand-off status**: Part A (project, manifest, GCP link, `GITHUB_TOKEN`, grant — `diagnoseAuthorization` reported all seven declared scopes granted, nothing outstanding) and Part B (deployment + this sync) are done. **Next for the developer — Part C**: once this merges, load `Network.html` once so `registerSelfProject()` creates the `Network` column in the Master ACL Access tab, tick TRUE on your row (role `admin`), run `clearAllAccessCache` from the editor, then sign in; the first admin list call creates the eight tabs. Then Part D: `?action=api&op=deploy` → `Already up to date (v01.02g)`, `op=aclhealth` → `acl_ok`, `op=quota`, `bash scripts/check-acl-health.sh`
+- **The webhook's first real run is this merge**: `Network.gs` changed, so the `Deploy Network` step calls `doPost(action=deploy)` against the new id and the live script pulls v01.02g from `main` — the GET probe above confirms it
+- **No rotation.** 99 sections, four dated today (exempt) → 95 non-exempt against the 100 trigger
 
 ## [v06.76r] — 2026-09-20 12:56:34 AM EST
 

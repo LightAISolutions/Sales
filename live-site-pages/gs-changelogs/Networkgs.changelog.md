@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 1/50`
+`Sections: 2/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.02g] — 2026-09-20 08:38:53 PM EST — v06.77r
+
+### Changed
+- **First live deployment.** The backend now knows its own deployment, so it can update itself automatically whenever a new release is published
 
 ## [v01.01g] — 2026-09-20 12:56:34 AM EST — v06.76r
 

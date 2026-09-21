@@ -1,10 +1,10 @@
-var VERSION = "v01.01g";
+var VERSION = "v01.02g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
 var GITHUB_BRANCH = "main";
 var FILE_PATH     = "googleAppsScripts/Network/Network.gs";
-var DEPLOYMENT_ID = "YOUR_DEPLOYMENT_ID";
+var DEPLOYMENT_ID = "AKfycbxuayBnl0pM0upSFEoqUkaW4bbXbVCKGKeGVdcgKiBM5FBj_ykQn30BINHyJMvc0_U8";
 var EMBED_PAGE_URL = "https://lightaisolutions.github.io/Sales/Network.html";
 
 // Derive the parent page's origin from EMBED_PAGE_URL for postMessage targeting.

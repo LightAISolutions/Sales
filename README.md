@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-20 12:56:34 AM EST` · Repo version: `v06.76r`
+Last updated: `2026-09-20 08:38:53 PM EST` · Repo version: `v06.77r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -63,7 +63,7 @@ Last updated: `2026-09-20 12:56:34 AM EST` · Repo version: `v06.76r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Classroom.html">Classroom.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Classroom.html">🌐</a>🟢 · ◽ · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">v01.16w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">v01.85g</a> | [template] Classroom — BESS/AIDC Curriculum page
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Network.html">Network.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Network.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1YjY3XMXDGwhW4U-lf3aKxGTJz5JvMyQcdCyVWdptBiQ/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Network/Network.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Networkhtml.changelog.md">v01.01w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Networkgs.changelog.md">v01.01g</a> | [template] Network — business-card capture and the account-centric contact layer (N0 scaffold: admin-only door, schema tabs, Drive folder registry, PWA)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Network.html">Network.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Network.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1YjY3XMXDGwhW4U-lf3aKxGTJz5JvMyQcdCyVWdptBiQ/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Network/Network.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Networkhtml.changelog.md">v01.02w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Networkgs.changelog.md">v01.02g</a> | [template] Network — business-card capture and the account-centric contact layer (N0 scaffold: admin-only door, schema tabs, Drive folder registry, PWA)
 │   │
 │   <b>│ ─ External Sites (Placeholder) ────────────────────────────────────────────</b>
 │   │   <i>(No external-site pages yet)</i>
