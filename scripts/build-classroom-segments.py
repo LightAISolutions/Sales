@@ -882,13 +882,19 @@ def main():
         segs = [corpus.by_id[s] for s in args.segment]
 
     # Decide per segment: new / due / current.
-    plan, due_report = [], []
+    #
+    # `due_report` lines keep their exact historical wording — CLAUDE.md quotes
+    # the format, and the shallow-clone symptom it documents is recognised by it.
+    # `real` separates the two kinds of due, which is a reporting split only:
+    # what counts as due, and the exit code, are unchanged.
+    plan, due_report, real = [], [], {}
     for seg in segs:
         fn = fn_name(seg["id"])
         old = lessons.get(fn)
         if old is None:
             plan.append((seg, fn, None, "new"))
             due_report.append("%s: no lesson yet" % seg["id"])
+            real[seg["id"]] = True
             continue
         probe = builder.build(seg, old.get("updated") or today)
         if canon(strip_dates(probe)) != canon(strip_dates(old)):
@@ -897,6 +903,7 @@ def main():
             plan.append((seg, fn, old, "due"))
             due_report.append("%s: due — inputs moved: %s; sections differing: %s"
                               % (seg["id"], ", ".join(why) or "none", ", ".join(secs) or "none"))
+            real[seg["id"]] = bool(secs)
         elif args.all:
             plan.append((seg, fn, old, "forced"))
         else:
@@ -904,9 +911,23 @@ def main():
 
     if args.check:
         due = [r for r in due_report]
-        print("build-classroom-segments --check: %d segment(s), %d due" % (len(segs), len(due)))
-        for r in due:
-            print("  " + r)
+        changed_r = [r for r in due if real.get(r.split(":", 1)[0], True)]
+        pin_only = [r for r in due if not real.get(r.split(":", 1)[0], True)]
+        # The leading clause must keep matching check-classroom-curriculum.py's
+        # r"(\d+)\s+segment\(s\),\s*(\d+)\s+due" — anything added goes after it.
+        head = "build-classroom-segments --check: %d segment(s), %d due" % (len(segs), len(due))
+        if due:
+            head += " — %d with section changes, %d pin-only" % (len(changed_r), len(pin_only))
+        print(head)
+        if changed_r:
+            print("  section changes — real work:")
+            for r in changed_r:
+                print("    " + r)
+        if pin_only:
+            print("  pin-only — an input moved but no section differs; regenerating these "
+                  "would rewrite dates and nothing else, and G3 leaves them alone:")
+            for r in pin_only:
+                print("    " + r)
         return 1 if due else 0
 
     log, written = [], 0

@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.04r] — 2026-09-21 06:26:05 PM EST
+
+> **Prompt:** "make the --check fix. Then, recommend me to either start the three remaining rebuilds now or wait and why."
+
+### Changed
+
+#### `scripts/build-classroom-segments.py`
+- **`--check` now separates the two kinds of due.** The 2026-09-21 pipeline run reported 16 of 19 segments due; **15 were `sections differing: none`** — pure pin churn from one rebuilt `profiler-graph`, with a real workload of one. That is a 1:15 signal-to-noise ratio that does not self-clear, and it is the same false-staleness class CLAUDE.md already documents for shallow clones, arriving through a different door.
+- Output now groups **section changes — real work** separately from **pin-only**, and the summary carries both counts.
+- **Strictly additive, because the format is a contract between two scripts.** `check-classroom-curriculum.py` line 539 parses the summary with `r"(\d+)\s+segment\(s\),\s*(\d+)\s+due"`, so the leading clause is unchanged and the new counts are appended after it; each per-segment line keeps its exact historical wording, which CLAUDE.md quotes. Verified end-to-end: the regex still matches (19, 16) and the consumer renders the new grouping verbatim.
+- **What did not change:** what counts as due, the exit code (1 when any are due), and the generation path — confirmed with `--dry-run` leaving `Classroom.gs` untouched. The split is reporting only; `G3` already declines to revise a segment whose sections do not differ, so the behaviour was right and only the report was misleading.
+
+### Fixed
+
+#### A finding the pipeline could not act on itself
+- The run that surfaced this closed with *"type `continue with your recommendation`"*, but **`scripts/` appears zero times in the committer contract’s §3 write set, which is closed.** A pipeline run editing the generator would be a P1 violation. Recorded because the report reads as actionable inside that session and is not — a fix here needs a developer session.
+
+### Verified
+
+#### The 2026-09-21 pipeline commit `70a0c488`, audited independently
+- Merged to `main`; **7 changed paths, all inside §3**; nothing forbidden touched (no `SESSION-CONTEXT.md`, no `REMINDERS.md`/`TODO.md`, no `Classroom.html`, nothing under `profiler-data/`); ledger watermark advanced off `null`; content checker 0 errors / 0 warnings; pipeline checker **0 findings against the pipeline commit alone**.
+- A P1 seen on a first pass was an artefact of testing against current `main`, which includes the auto-merge workflow’s own `.github/last-processed-commit.sha` bookkeeping commit — not the run’s write.
+
+**No rotation:** 100 raw but **79 non-exempt** (21 sections dated 2026-09-21 EST are same-day exempt), and the trigger is 100 non-exempt. The counter reading `100/100` is expected and is not a rotation signal on its own.
 
 ## [v07.03r] — 2026-09-21 06:04:03 PM EST
 
