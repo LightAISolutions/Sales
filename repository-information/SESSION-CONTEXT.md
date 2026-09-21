@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-21 06:30:03 AM EST
+**Repo version:** v06.93r — four pushes this session, all on `claude/youthful-ride-75oah0` restarted from `origin/main` before each: `96f04a5` v06.90r (N1 session 2 — review, dedupe, save), `39dc362` v06.91r (title / department / company standardisation + edit saved contacts), `44cacfb` v06.92r (the developer's fourteen casing calls + the Tidy pill), `1a3a6a0` v06.93r (Tidy feedback fix)
+**Branch:** `claude/youthful-ride-75oah0`
+**Model:** Fable 5.1 (N1 session 2 brief, then three follow-ups)
+
+### What was done
+
+**N1 is Done and used: the 20 cards are saved, corrected and tidied on the phone.**
+
+- **v06.90r — N1 session 2** (`Network.gs` v01.05g, `Network.html` v01.10w): `nop=dupcheck` (`nwFindDuplicate_` email → E.164 phone → romanised name + Account, answered before the write), `nop=save` (enum + D5 stage validation, new-or-existing Account, Contact + `scan` Interaction; `mergeInto=` with a `merge` Interaction carrying the absorbed `c-` id and the non-winning card pair; `distinct=` the considered keep-separate; any other duplicate refuses with the row), `nop=links`, `nop=get`, `nop=delete` / `nop=restore` (`account_has_contacts`). Page: review block on the editor (role, account block with registry resolution and the `gateStage` D5 rule, source event, met date, consent, DNC), Retry / Swap, Save + Save all, merge sheet, browser-side Drive move `_inbox/` → `<Company>/` parked through `setfolders`, list rows with `nop=get` detail and delete / restore. `scripts/check-network-schema.py` (§14) new; verifier's save round-trip. Plan §11 N1 → Done; §13.6 N2 brief written.
+- **v06.91r** (v01.11w / v01.06g): `nwStdField` / `nwTitleAbbrev` — titles, departments, company names word-wise First-letter caps, C-suite and acronyms kept, Vice President → VP, Executive Vice President → EVP, Senior → Sr.; registry casing wins for a covered company; **edit a saved contact** from its row (`nwRecFromRow` → shared editor → `nop=update`, `account-change` Interaction on a move).
+- **v06.92r** (v01.12w): the developer's fourteen corrections encoded as rule — `NW_RANK_OF_RE` ("Director of X" → "Director, X" for rank titles; Head / Chief keep "of"), `NW_CASE_FIXES.rai` → RAI; **✨ Tidy titles & companies** on the Contacts card (`nwTidySaved`: `nop=get` → rule → `nop=update` per changed row). Rule recorded in `NETWORK-SCHEMA.md` §3.
+- **v06.93r** (v01.13w): Tidy's feedback moved into the Contacts card (`#nw-list-status`, `_nwListStatus` across re-renders, built into the card directly), the pill counts "Tidying N of M…", rows re-case as they land, failures counted and named. **The developer confirmed Tidy works as intended on the phone.**
+
+### Where we left off
+
+**N1 closed for real: 20 contacts saved with the corrected titles and companies.** Next is **N2** (§13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`) — the Accounts surface, `nop=account`, `Profiler.html#<slug>` deep links, the propose-a-dossier hook, the on-the-record check against `decisionMakers[]`. E0 (§13.4, Opus 5 xhigh) can run beside it on another branch. The `Avantus` Drive folder still carries the pre-tidy name `AVANTUS` (a folder rename on account rename is on N2's list, step 1).
+
+### Key decisions made
+
+- **Duplicate handling has three outcomes and no fourth**: Merge (survivor keeps its id), Keep as a separate contact (`distinct=<declined id>`, only after seeing the match), Cancel. Never a bare "save anyway".
+- **Both card pairs are kept on a merge** — the non-winning pair goes into the `merge` Interaction's Summary (or the scan Interaction's Evidence Link via `nop=links` `interactionId`).
+- **Casing is a page-side rule, not a server one** — `nwStdField` runs at extraction, on load, on Retry, on edit, and over saved rows through Tidy. Words the developer rules on go in `NW_CASE_FIXES` (never a per-row special case); a rank followed by "of" takes the comma form; "Sr." carries the period; the comma form also applies to VP ("VP, Business Development").
+- **Corrections to saved data are made from the page** (Tidy / Edit), because the spreadsheet is not reachable from a session.
+- **Registry fetch is relative** (`profiler-data/profiler-companies.json`), never a GitHub endpoint; offline every company is local.
+- Session-1 UI rules kept: no ids / confidence numbers on a card, no missing-field cues, the name-case rule, the pill rows, the two-half control rows.
+
+### Active context
+
+- **Repo version v06.93r.** `CHANGELOG.md` at `Sections: 89/100`, eleven dated 2026-09-21 — 78 non-exempt today, 89 on any later date: **no rotation due**. Archive at 504 sections.
+- Network page changelog `Sections: 13/50`, GAS `6/50`. Verifier: `scripts/verify-network-roles.py` (door, capture, queue/drain, notes/edit, review, save, merge, keep-separate, Save all, delete/restore, standardisation cases incl. the developer's fourteen, saved-row edit, Tidy) — all passing at 390 × 844; `scripts/check-network-schema.py` exit 0. `pip install playwright` needed in a fresh container; Chromium under `/opt/pw-browsers`.
+- **Live and exercised on the phone:** save, merge sheet, the Drive move, list rows, Edit, Tidy. **Not yet exercised live:** Retry from Drive read-back, Swap, delete → restore on a real row.
+- **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()`.
+- **§13 numbering:** N2 brief is §13.6 (versions inside it read v06.91r / v01.11w / v01.06g — still accurate for the GAS; the page is at v01.13w); N2 writes the E1 brief as §13.7 or the next free number.
+- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Open a Fable 5.1 High session and paste the N2 prompt block under §13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the Accounts surface with edit and the folder rename, `nop=account`, the `Profiler.html#<slug>` deep links, the propose-a-dossier hook and the on-the-record check; its done-when runs against the 20 saved contacts and their accounts.
+- **To continue:** type `run N2`
+
+## Previous Sessions
+
 **Date:** 2026-09-21 05:01:07 AM EST
 **Repo version:** v06.93r — four pushes this session (`44cacfb` v06.92r, then this v01.13w Tidy-feedback fix) (`96f04a5` v06.90r the session-2 build, `39dc362` v06.91r titles / departments / company standardised + saved contacts editable, this one — the developer's fourteen casing calls encoded, the Tidy pill), on `claude/youthful-ride-75oah0` (restarted from `origin/main` f1abee3)
 **Branch:** `claude/youthful-ride-75oah0`
@@ -49,49 +93,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Tap Tidy titles & companies once on the phone, then open a Fable 5.1 High session and paste the N2 prompt block under §13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the Accounts surface, `nop=account`, the `Profiler.html#<slug>` deep links, the propose-a-dossier hook and the on-the-record check. If a save misbehaves on the phone, bring the status line text and the card's state (held / saved / photos moved) to a session before N2.
 - **To continue:** type `run N2`
-
-## Previous Sessions
-
-**Date:** 2026-09-21 04:38:22 AM EST
-**Repo version:** v06.89r — seven pushes this session (`ee6a82b` v06.82r the N1 session-1 build, `14003f5` v06.83r, `e75c5e8` v06.84r, `ad698c6` v06.85r, `f6edad9` v06.86r, `3b0ea8a` v06.87r, `c06546e` v06.88r the UX passes while the developer scanned, this one), all on `claude/epic-dirac-gbh9bk`, restarted from `origin/main` before each
-**Branch:** `claude/epic-dirac-gbh9bk`
-**Model:** Fable 5.1 (N1 session 1 brief)
-
-### What was done
-
-**N1 session 1 — capture → extraction — built, live, and used: 20 real cards scanned.**
-
-- **v06.82r** — `Network.gs` v01.04g: `nop=newid` (opaque `c-` id before upload, D8), `nop=extract` (`nwExtractFromBase64_` on the Receipts Gemini idiom with the §7 `responseSchema`, both sides as `inline_data` parts, three-leg retry, `GEMINI_API_KEY` from Script Properties, digest cache, audit rows with id + field count + side count only). `Network.html` v01.03w: capture card (single + batch of 15, front/back pair), IndexedDB offline queue drained on `online`, own-Drive upload into `Network App/_inbox/` with a separate `drive.file` token client, BarcodeDetector QR merge, body-POST transport (`nwApiBody`). Verifier: capture card admin-only, offline capture queues (1) and drains.
-- **v06.83r–v06.88r (v01.04w → v01.09w)** — while the developer scanned: four-step progress bar + green "ready for the next card" signal; Front / Back photo links and tap-to-expand field detail; the `c-` id and `check:` list hidden; removable "unclear in the scan" notes (Rescan / Enter manually / Looks right) and an inline editor writing back to the held record; "Missing" cues added then removed at the developer's request; name-case rule (ALL CAPS / all-lower → First-letter caps, mixed case untouched, parentheses never); One-/Two-sided batch toggle (pairs consecutive photos); Photograph → Scan beside Front/Back; Delete on every held card (record + Drive photos); control rows as equal halves with Extract/Clear above the sides row.
-- **v06.83r also fired the first CHANGELOG rotation on the new EST day** — the 2026-09-15 date group (26 sections, v05.79r–v06.04r) archived with SHA enrichment (v05.90r's push commit has no version prefix; matched by its 04:43 timestamp).
-- **Live**: `GEMINI_API_KEY` set on the Network project by the developer; the first card read and filed (Rai Energy); the Android "low memory" tab kill diagnosed (close background apps / gallery path); 20 cards now held in the phone's IndexedDB `pending` store with photos in `_inbox/`.
-- **v06.89r** — the N1 session-2 paste-in prompt written under §13.5 (Fable 5.1 High); this session context.
-
-### Where we left off
-
-**N1 session 1 closed; session 2 (review, dedupe, save, checker, §11 flip, N2 brief) is next** — paste the block under §13.5. §11's N1 row stays *Proposed* until session 2. E0 (§13.4) can still run beside it.
-
-### Key decisions made
-
-- **Held cards live in IndexedDB `pending` until save** (record shape in §13.5's session-2 prompt); session 2 must not rename the db or drop the store — the developer's 20 cards are in it.
-- **Drive access is a second token client in the PROJECT region** (`NW_DRIVE_SCOPE`), not a change to the template's sign-in scope; the first upload asks the consent once per tab.
-- **Folder ids come from the list payload on load**; `nop=folders` only on demand, so the admin's first paint stays at exactly one request (the verifier asserts it).
-- **Drive upload failure is soft** — extraction runs, `driveError` is kept on the record for save to retry.
-- **UX rules the developer set** (keep in session 2): no id / confidence numbers on a card; no missing-field cues; names rule two-case only; Rescan removes the held card and its photos; Delete confirms.
-- The QR vCard path (`nwQrSufficient` → no model call) is unexercised on a real card so far.
-
-### Active context
-
-- **Repo version v06.89r.** `CHANGELOG.md` at `Sections: 85/100`, seven dated 2026-09-21 — 78 non-exempt today, 85 on any later date: **no rotation due**. Archive at 504 sections.
-- Network page changelog `Sections: 9/50`, GAS `4/50`. Verifier: `scripts/verify-network-roles.py` (door + capture + queue/drain + note/edit/delete round-trips; five screenshots in `.playwright-screenshots/`). `pip install playwright` is needed in a fresh container; Chromium is under `/opt/pw-browsers`.
-- **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()` (dead route).
-- **§13 numbering:** N1 session 2 writes the N2 brief as §13.6 (or §13.7 if E0 took 13.6 first).
-- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Open a Fable 5.1 High session and paste the N1 session-2 prompt block under §13.5 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the review card on the existing editor, company resolution, `nwFindDuplicate_` with merge, `nop=save` with the browser-side Drive move, soft delete / restore, `check-network-schema.py`, the §11 flip and the N2 brief — and save the 20 held cards as its done-when.
-- **To continue:** type `run N1 session 2`
 
 Developed by: LightAISolutions
