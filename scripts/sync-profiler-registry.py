@@ -41,6 +41,7 @@ import json, sys, re
 REG_PATH = 'live-site-pages/profiler-data/profiler-companies.json'
 PROFILE_PATH = 'live-site-pages/profiler-data/{slug}.profile.json'
 CALENDAR_PATH = 'repository-information/profiler-refresh-calendar.json'
+NOTES_PATH = 'repository-information/profiler-refresh-notes.json'
 SEGMENTS_PATH = 'live-site-pages/profiler-data/profiler-segments.json'
 
 WIRE_HOSTS = ['prnewswire.com', 'businesswire.com', 'globenewswire.com', 'newswire.ca',
@@ -140,9 +141,29 @@ def check_calendar(reg):
                 out.append('%s: nextReport %r is not YYYY-MM-DD' % (slug, r.get('nextReport')))
         if has_cadence and r.get('cadence') != 'quarterly':
             out.append('%s: cadence must be "quarterly", got %r' % (slug, r.get('cadence')))
-        for f in ('source', 'lastRefreshed', 'watch'):
-            if not r.get(f):
-                out.append('%s: missing or empty `%s`' % (slug, f))
+        if not r.get('lastRefreshed'):
+            out.append('%s: missing or empty `lastRefreshed`' % slug)
+
+    # `source` and `watch` moved to profiler-refresh-notes.json at v07.02r —
+    # they were 98% of the calendar's bytes and the queue logic reads neither,
+    # so a Routine reading the queue no longer pays for them. The bijection and
+    # the non-empty check simply moved here with them.
+    try:
+        notes = json.load(open(NOTES_PATH)).get('notes') or {}
+    except FileNotFoundError:
+        return out + ['notes not found at %s — source/watch not checked' % NOTES_PATH]
+    except (ValueError, OSError) as e:
+        return out + ['notes unreadable (%s) — source/watch not checked' % e]
+    for slug in sorted(listed_set & covered):
+        n = notes.get(slug)
+        if n is None:
+            out.append('%s: calendar row has no entry in the refresh notes' % slug)
+            continue
+        for f in ('source', 'watch'):
+            if not n.get(f):
+                out.append('%s: missing or empty `%s` in the refresh notes' % (slug, f))
+    for slug in sorted(set(notes) - listed_set):
+        out.append('%s: refresh-notes entry has no calendar row' % slug)
     return out
 
 def main():

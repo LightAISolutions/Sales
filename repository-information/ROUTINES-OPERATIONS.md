@@ -110,6 +110,12 @@ print(json.dumps({'today':t,'totalRows':len(rows),
 
 Writing a row back edits the file in place and never needs the whole thing in context.
 
+**SUPERSEDED 2026-09-21 (v07.02r) — the lever no longer depends on any prompt.** The snippet above and the script both work, but they were a workaround for a file that did not need to be that big. Measuring where the 375 KB actually sat: **`watch` was 66.4% of it and `source` 31.6% — 98% between them — while the queue logic (due-date comparison, tier selection, the cap of three) reads neither.** The scheduling fields are ~7 KB of values. So the payload moved to `repository-information/profiler-refresh-notes.json` and the calendar went **384,240 → 21,576 bytes (−94%) and 2,573 → 1,069 lines**, which also puts it back under the Read tool's 2,000-line default and retires the truncation bug structurally rather than by instruction.
+
+**Why that matters more than the script:** a Routine prompt cannot be edited after the Routine is created, so any lever that lives in a prompt is one rebuild away from being lost and cannot be applied to an already-rebuilt Routine at all. A lever that lives in the *data* applies to every Routine, immediately, with no prompt change and no rebuild. **The already-rebuilt earnings desk gets ~94% of the saving on its next fire with nothing done to it**, because its prompt still says "read the calendar" and the calendar is now 21 KB. `profiler-queue.py` remains the better path — it returns ~5 KB, joins the notes per-slug and gives the stand-down counts directly — and rides along free with the rebuilds already planned. **Never read `profiler-refresh-notes.json` whole; that is the mistake the split exists to prevent.**
+
+**The general rule this is an instance of:** before writing a prompt instruction to work around a file, measure the file. A data fix outlives every prompt that would have worked around it.
+
 **Second item: the rules a run must read.** CLAUDE.md ≈23K tokens, `PROFILER-SCHEMA.md` ≈21K and this file ≈19K are ~63K re-read every turn — ≈8.2M cache-read tokens, **≈$1.64 a run**. Said plainly: **this file is now 74,675 bytes, seven of those edits made during this one investigation, and every line is a per-turn tax on every desk run.** It is why the failures stopped repeating and it is not free — when it next grows, split the post-mortem history a run never needs from the operating procedure it does. **Third: keep the dual-agent research** — a subagent gets its own context window, so fetched pages never enter the parent's per-turn re-read. Levers one and two together plausibly take a run from $13.76 to $9–10 without touching the work product.
 
 
@@ -196,7 +202,7 @@ due; the commit SHA or "no commit".
 
 ## The rebuild prompts, current as of v07.01r
 
-Paste these verbatim at rebuild. Both now read the queue through `scripts/profiler-queue.py` instead of reading the 384 KB calendar whole — see the cost analysis above for why, and note the sandbox fallback.
+Paste these verbatim at rebuild. Both read the queue through `scripts/profiler-queue.py` — see the cost analysis above, and note the sandbox fallback. **Neither is urgent any more**: since v07.02r the calendar itself is 21 KB, so a Routine still running the old "read the calendar" wording already gets most of the saving. The script is the better path, not a required one.
 
 ### Earnings desk — replaces the "Read the calendar" instruction
 
@@ -204,9 +210,10 @@ Keep STEP 0 exactly as it is above, then replace the queue paragraph with:
 
 ```text
 Read the queue with:  python3 scripts/profiler-queue.py --desk
-Do NOT read repository-information/profiler-refresh-calendar.json whole: it is ~384 KB across
-2,573 lines against a 2,000-line Read default, so a plain Read silently truncates the tail of
-the queue, and it costs ~29% of the run's token bill to re-read every turn. The script returns
+Do NOT read repository-information/profiler-refresh-notes.json whole: it is ~369 KB of research
+payload and the script joins the handful of entries you need per-slug. (The calendar itself is
+~21 KB since the v07.02r split, so reading THAT whole is merely wasteful rather than harmful.)
+The script returns
 take[] (at most three due rows, oldest first), carryOver[], due[] with the full rows,
 unconfirmedWithin7d[], and the totalRows / publicRows / quarterlyRows counts your stand-down
 report must quote. If the sandbox refuses to run a repo script ("Code from External" policy

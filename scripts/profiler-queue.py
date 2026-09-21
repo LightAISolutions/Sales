@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """Print only the calendar rows a Profiler Routine actually needs.
 
-Why this exists: repository-information/profiler-refresh-calendar.json is ~384 KB
-(~96,000 tokens) across 177 rows. A run acts on a handful of them. Reading the file
-whole parks ~96K tokens in context for the life of the run and is re-read on every
-turn, which measured at ~29% of the 2026-09-21 run's cache-read bill. It is also
-2,573 lines against the Read tool's 2,000-line default, so a plain Read silently
-truncates the tail of the queue.
+Why this exists: a run acts on a handful of the 177 rows but used to read all of
+them. At v07.01r the calendar was 384 KB / 2,573 lines — past the Read tool's
+2,000-line default, so a plain Read truncated the tail of the queue, and re-reading
+it every turn was ~29% of the 2026-09-21 run's cache-read bill. At v07.02r the
+`source`/`watch` payload moved to profiler-refresh-notes.json, taking the calendar
+to ~21 KB, and this script joins the notes per-slug for the due rows only. Reading
+the notes file whole is the mistake the split exists to prevent.
 
   --desk        the earnings desk's queue: <=3 due rows oldest first, carry-over,
                 the unconfirmed-within-7-days set, and the counts the stand-down
-                report requires.
+                report requires, each due row already joined to its source/watch notes.
   --quarterly   the quarterly sweep's queue: cadence rows (no nextReport) whose
                 tier is due, so coverage is a property of the DATA and not of a
                 hardcoded company list inside a Routine prompt.
@@ -19,13 +20,37 @@ Developed by: LightAISolutions
 """
 import argparse, datetime, json, pathlib, sys
 
-CAL = pathlib.Path(__file__).resolve().parent.parent / "repository-information" / "profiler-refresh-calendar.json"
+ROOT = pathlib.Path(__file__).resolve().parent.parent / "repository-information"
+CAL = ROOT / "profiler-refresh-calendar.json"
+NOTES = ROOT / "profiler-refresh-notes.json"
 TIER_DAYS = {"core": 90, "watch": 180}
 
 
 def load():
     with CAL.open(encoding="utf-8") as fh:
         return json.load(fh)["companies"]
+
+
+def notes_for(slugs):
+    """Pull source/watch for just the rows a run will work on.
+
+    The payload is ~369 KB across 177 companies. A run needs it for at most
+    three of them, so it is joined here per-slug and never loaded into a
+    Routine's context whole. A missing entry is returned empty rather than
+    raised: sync-profiler-registry.py owns that bijection, and a queue read
+    should not die because a note is absent.
+    """
+    try:
+        with NOTES.open(encoding="utf-8") as fh:
+            all_notes = json.load(fh)["notes"]
+    except (OSError, ValueError, KeyError):
+        return {s: {} for s in slugs}
+    return {s: all_notes.get(s, {}) for s in slugs}
+
+
+def attach(rows):
+    n = notes_for([r["slug"] for r in rows])
+    return [{**r, **n.get(r["slug"], {})} for r in rows]
 
 
 def desk(rows, today):
@@ -38,8 +63,8 @@ def desk(rows, today):
         "dueCount": len(due),
         "take": [r["slug"] for r in due[:3]],
         "carryOver": [r["slug"] for r in due[3:]],
-        "due": due[:3],
-        "unconfirmedWithin7d": [r for r in public if t <= r["nextReport"] <= horizon and not r.get("confirmed")],
+        "due": attach(due[:3]),
+        "unconfirmedWithin7d": attach([r for r in public if t <= r["nextReport"] <= horizon and not r.get("confirmed")]),
         "nextUpcoming": min([r["nextReport"] for r in public if r["nextReport"] >= t] or ["-"]),
     }
 
@@ -63,7 +88,7 @@ def quarterly(rows, today, tier=None):
         "mode": "quarterly", "today": today.isoformat(), "tierFilter": tier,
         "cadenceRows": len(cadence), "dueCount": len(out),
         "untieredRows": untiered,
-        "due": out,
+        "due": attach(out),
     }
 
 

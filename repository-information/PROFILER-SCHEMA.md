@@ -412,7 +412,7 @@ Why the file date rather than a per-entry `updated`:
 
 ## Refresh calendar — `repository-information/profiler-refresh-calendar.json`
 
-**Not a deployed file.** It lives in `repository-information/`, not `live-site-pages/`, because it is operational state for the **Profiler earnings desk** Routine rather than site content. One row per covered company; the desk reads it on every fire and writes back the row it advanced. See "Scheduled Refreshes" in `.claude/rules/profiler-app.md` for how the desk consumes it.
+**Not a deployed file.** It lives in `repository-information/`, not `live-site-pages/`, because it is operational state for the **Profiler earnings desk** Routine rather than site content. One row per covered company; the desk reads it on every fire and writes back the row it advanced. **Read it with `scripts/profiler-queue.py`, never whole** — and note that the per-company research payload (`source`, `watch`) moved to the sibling **Refresh notes** file at v07.02r, because those two fields were 98% of this file's bytes while the scheduling logic reads neither. The calendar is ~21 KB; the notes are ~369 KB and are joined per-slug for only the rows a run actually works on.
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
@@ -424,9 +424,8 @@ Why the file date rather than a per-entry `updated`:
 | `companies[].nextReport` | string | public only | `YYYY-MM-DD` of the **next report this dossier owes** — the date the desk compares against. A date in the past means the row is **due**: either the report just published, or it published earlier and was never folded in |
 | `companies[].confirmed` | boolean | public only | `true` when `nextReport` comes from the company itself (IR calendar, press release, regulatory deadline); `false` when it is a tracker estimate or a cadence inference. Unconfirmed rows within seven days are the desk's confirm-the-date work |
 | `companies[].cadence` | string | private only | `"quarterly"` — the row has no earnings clock and is carried by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Mutually exclusive with `nextReport`/`confirmed` |
-| `companies[].source` | string | yes | URL or note establishing where `nextReport` came from, and any caveat the desk's verify step needs (conflicting trackers, unannounced dates, rebrands, overdue history) |
+| `companies[].tier` | string | private only | `"core"` or `"watch"` — the sweep interval, 90 and 180 days respectively. `core` is the Megmeet/SST-adjacent segments plus the named private/unit-level set. **The quarterly Routine selects on this field instead of carrying a company list in its prompt**, so widening coverage is a commit rather than a Routine rebuild. A cadence row without a tier is covered by nothing; `profiler-queue.py` reports it in `untieredRows[]` |
 | `companies[].lastRefreshed` | string | yes | `YYYY-MM-DD` the dossier was last revised — mirrors the registry's `lastUpdated` for the slug |
-| `companies[].watch[]` | string[] | yes | Research focus items for the next refresh, in priority order. This is where the per-company judgment that used to live inside 22 separate trigger prompts is kept |
 
 **Names and tickers are deliberately absent.** They resolve against `profiler-companies.json` by slug. Duplicating them here would create a second place for them to drift.
 
@@ -435,6 +434,22 @@ Why the file date rather than a per-entry `updated`:
 **The roster and the calendar are in bijection, and it is enforced.** Every **active** company in `profiler-companies.json` has exactly one row here, and every row resolves to a covered company. `scripts/sync-profiler-registry.py` asserts this: under `--check` a missing row, an orphan row, a duplicate, or a row that breaks the field rules above is an **error and exits 1**; in write mode the same finding is a **warning**, because during authoring a company is legitimately registered before its row is added later in the same session. Archived companies may keep a row but are not required to have one. The check lives in the sync script rather than in a checker of its own for one reason: it is the script that already runs after every profile write, and an unscheduled company is a defect that **hides itself** — it simply never enters the desk's queue. The gap reached **38 of 151 companies** before anyone noticed (found by accident at v04.88r, enforced from v04.89r).
 
 **Adding a company.** Add the row in the same commit that adds the dossier. A public company with no announced date gets `confirmed: false` and a cadence-inferred `nextReport`; the desk confirms it when the date comes within seven days.
+
+
+## Refresh notes — `repository-information/profiler-refresh-notes.json`
+
+**Not a deployed file**, and split out of the refresh calendar at v07.02r. `source` and `watch` were **98% of the calendar's 375 KB** while none of the queue logic — due-date comparison, tier selection, the cap of three — reads either one. Keeping them in the calendar meant every Routine that read the queue paid ~96,000 tokens per turn for a payload it needed on at most three rows. Splitting them took the calendar to ~21 KB and 1,069 lines, which also puts it back under the Read tool's 2,000-line default, so a whole-file read no longer silently truncates the queue.
+
+| Field | Type | Required | Meaning |
+|-------|------|----------|---------|
+| `schemaVersion` | number | yes | Notes schema version (currently `1`) |
+| `updated` | string | yes | `YYYY-MM-DD` the file was last written |
+| `description` | string | yes | One-paragraph orientation, including why the split exists |
+| `notes` | object | yes | Map of slug → note object. **Exactly one entry per calendar row**, both directions enforced by `scripts/sync-profiler-registry.py` |
+| `notes.<slug>.source` | string | yes | URL or note establishing where `nextReport` came from, and any caveat the desk's verify step needs (conflicting trackers, unannounced dates, rebrands, overdue history) |
+| `notes.<slug>.watch[]` | string[] | yes | Research focus items for the next refresh, in priority order. This is where the per-company judgment that used to live inside 22 separate trigger prompts is kept |
+
+**Never read this file whole in a Routine.** `scripts/profiler-queue.py` joins it per-slug onto the due rows only; the joined row is shaped exactly as the pre-split calendar row was, so anything written against the old shape still works.
 
 ## Extending the schema
 

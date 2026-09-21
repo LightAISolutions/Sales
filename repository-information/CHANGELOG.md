@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.02r] — 2026-09-21 05:36:22 PM EST
+
+> **Prompt:** "Regarding coverage, I approve of your fix and appreciate that the sweet prompt now reads tiers instead of specific companies so that widening coverage does not force me to rebuild the Routines every time. If I wanted to refresh the relevant dossiers now, how much work would that be?\n\nRegarding the cache levers, is there any way you can automate the process? If not and I need to do some manual work, then give me step by step instructions on what to do."
+
+### Changed
+
+#### `repository-information/profiler-refresh-calendar.json` — 384,240 → 21,576 bytes (−94%)
+- **Asked whether lever 1 could be automated, measured the file instead of answering, and found the lever did not need a prompt at all.** `watch` was **66.4%** of the calendar and `source` **31.6%** — **98% between them** — while the queue logic (due-date comparison, tier selection, the cap of three) reads neither. The scheduling fields are ~7 KB of values.
+- Payload moved to the new `profiler-refresh-notes.json`; the calendar went to **21,576 bytes and 1,069 lines**, back under the Read tool’s 2,000-line default. **The truncation bug is now retired structurally rather than by instruction.**
+- **This makes lever 1 automatic.** A prompt cannot be edited after its Routine is created, so a lever living in a prompt cannot reach an already-rebuilt Routine; a lever living in the data reaches every Routine on its next fire. **The rebuilt earnings desk gets ~94% of the saving with nothing done to it.**
+- Verified non-destructive: 177 rows in and out, 177 note entries, every field round-trips byte-for-byte.
+
+### Added
+
+#### `repository-information/profiler-refresh-notes.json` (new)
+- Per-company `source` and `watch`, keyed by slug, one entry per calendar row. `profiler-queue.py` joins it per-slug onto the due rows so a run never loads the 369 KB payload whole.
+
+#### `scripts/sync-profiler-registry.py`
+- The non-empty check on `source`/`watch` followed them into the notes file, plus a **two-way bijection check** between calendar rows and note entries. Both directions were tested by deliberately breaking them and confirming the checker fires; it is back to 0 findings.
+
+#### `repository-information/PROFILER-SCHEMA.md`
+- New **Refresh notes** section; `companies[].tier` documented on the calendar (the field the sweep now selects on); `source`/`watch` rows moved across.
+
+### Fixed
+
+#### Stale figures left behind by the split
+- Every "~384 KB / 2,573 lines" claim in `profiler-app.md`, `ROUTINES-OPERATIONS.md`, `profiler-queue.py` and the README tree corrected, and the warning re-pointed at the file that is now the large one. **The general rule was recorded with it: before writing a prompt instruction to work around a file, measure the file — a data fix outlives every prompt that would have worked around it.**
 
 ## [v07.01r] — 2026-09-21 04:43:23 PM EST
 
