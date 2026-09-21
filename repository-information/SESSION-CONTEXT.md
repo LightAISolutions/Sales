@@ -6,6 +6,49 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-21 07:23:55 AM EST
+**Repo version:** v06.94r — one push this session: `a840bf6` v06.94r (N2 — accounts and the corpus attachment) on `claude/zen-heisenberg-426g6h` restarted from `origin/main`; merged to `main` (`040f6a1`)
+**Branch:** `claude/zen-heisenberg-426g6h`
+**Model:** Fable 5.1 (N2 brief, §13.6)
+
+### What was done
+
+**N2 is Done (§11 flipped, v06.94r) — `Network.gs` v01.07g, `Network.html` v01.14w.**
+
+- **`Network.gs`**: `nop=account` (body-POST, `nwAccountOp_` → `nwAccountFullFromPayload_` = the save-path validator + Tags / Newsroom URL / Notes; a rename rewrites `Normalised Name`, refused with `account_name_taken` when another live account holds the key; audit `{ accountId, renamed, tags: count }`); the list op's one widening, `contactCount` per account; `nop=get` on an `a-` id lists the live contacts beneath; `nwAccountPublic_` carries `newsroomUrl`.
+- **`Network.html`**: the **Accounts card** under Contacts (`nwAccountsCard` / `nwAccountRow` / `nwAccountDetail`; its own status line `nwAcctStatus` kept across re-renders), **Edit** through the shared `nwAccountBlock` (lifted out of `nwReviewSection`; the review card is unchanged in appearance), Delete refused with the count via `nwRowMark`, the relative `Profiler.html#<slug>` link (`nwProfilerHref`) on the row / account detail / contact account line (`nwAccountLine`), segments by label (`nwSegments` from `profiler-segments.json`), **Propose a dossier** (`nwProposeDossier`: exact `profiler <Company>` line copied + shown, `dossier-proposed` tag through `nop=account`), the **on-the-record** check (`nwRecordCheck` → `nwProfile(slug)` fetched only on detail open, `nwNameKey` mirror; title mismatch shown as a note), and `nwFolderRenameIfDrifted` inside `nwEnsureAccountFolder` (§6 rename on the next save — also repairs the `AVANTUS` folder once a card is filed under Avantus).
+- **Checkers**: `check-network-schema.py` asserts the D5 validator on both `nop=save` and `nop=account` (allow-list gained `renamed`, `tags`); `verify-network-roles.py` runs the accounts round-trip against the stub and the **served** `abb.profile.json` (two new screenshots). All five checks green.
+- **Docs**: plan §11 N2 → Done; **§13.7 = the E1 brief** (Events scaffold + calendar, two sessions, E0 a stated prerequisite) with its paste-in prompt; schema §3 / §12 / §14; README tree descriptions; CHANGELOG `Sections: 90/100`.
+- The E0 paste-in prompt was handed to the developer in chat at the close (Opus 5 xhigh; §13.4 with its stale "write E1 as §13.6" line corrected — E1 is already §13.7).
+
+### Where we left off
+
+**N2 built and verified on the stub; not yet exercised on the phone.** The phone check to run at v01.14w / v01.07g: an Accounts row for every company from the 20 cards, the Profiler link on a covered account, the `profiler <Company>` line from an uncovered one, the on-the-record title for a contact in a dossier's `decisionMakers[]`, and an account Edit (relationship away from Target/Customer greys the stage). **Next phase is E0** (§13.4, Opus 5 xhigh) — the developer asked for the prompt; then E1 (§13.7).
+
+### Key decisions made
+
+- **The account block is one function** (`nwAccountBlock`): the review card and the account editor must never diverge; `opts.full` adds name / tags / HQ / newsroom / notes.
+- **The dossier is read only when a detail opens** — never on the list paint; cached per slug (`_nwProfiles`) for the page's lifetime. Decision-maker entries carry no `source` field in any shipped profile, so the line cites the dossier's `lastUpdated`.
+- **Folder rename is drift-based**: every filing does one `files.get` and renames when the name differs — stateless, so a Tidy or an edit made in another tab still lands.
+- **The propose hook writes a tag, nothing else**; the clipboard is best-effort and the line is always visible.
+- Meta tag and `html.version.txt` bump together — bumping the meta first caused a one-time reload that doubled the list request in the verifier (caught, fixed).
+
+### Active context
+
+- **Repo version v06.94r**, `CHANGELOG.md` `Sections: 90/100`, twelve dated 2026-09-21 — no rotation due. Network page changelog `14/50`, GAS `7/50`.
+- `pip install playwright` needed in a fresh container; Chromium under `/opt/pw-browsers`. `verify-network-roles.py` ≈ 2 min.
+- **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()`.
+- **§13 numbering:** §13.6 = N2 brief (done), **§13.7 = E1 brief**; E0's §13.4 says "write E1 as §13.6" — stale, E0 writes nothing new in §13; the next free number is §13.8 (the B brief, written by E1 session 2).
+- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Open an Opus 5 xhigh session and paste the E0 prompt** (§13.4 of `NETWORK-EVENTS-DESIGN-PLAN.md`; the version handed over in chat at the close of N2, which notes E1's brief already exists as §13.7) — the registry and roster are E1's hard prerequisite.
+- **To continue:** type `run E0`
+
+## Previous Sessions
+
 **Date:** 2026-09-21 06:30:03 AM EST
 **Repo version:** v06.93r — four pushes this session, all on `claude/youthful-ride-75oah0` restarted from `origin/main` before each: `96f04a5` v06.90r (N1 session 2 — review, dedupe, save), `39dc362` v06.91r (title / department / company standardisation + edit saved contacts), `44cacfb` v06.92r (the developer's fourteen casing calls + the Tidy pill), `1a3a6a0` v06.93r (Tidy feedback fix)
 **Branch:** `claude/youthful-ride-75oah0`
@@ -48,50 +91,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Open a Fable 5.1 High session and paste the N2 prompt block under §13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the Accounts surface with edit and the folder rename, `nop=account`, the `Profiler.html#<slug>` deep links, the propose-a-dossier hook and the on-the-record check; its done-when runs against the 20 saved contacts and their accounts.
 - **To continue:** type `run N2`
 
-## Previous Sessions
-
-**Date:** 2026-09-21 05:01:07 AM EST
-**Repo version:** v06.93r — four pushes this session (`44cacfb` v06.92r, then this v01.13w Tidy-feedback fix) (`96f04a5` v06.90r the session-2 build, `39dc362` v06.91r titles / departments / company standardised + saved contacts editable, this one — the developer's fourteen casing calls encoded, the Tidy pill), on `claude/youthful-ride-75oah0` (restarted from `origin/main` f1abee3)
-**Branch:** `claude/youthful-ride-75oah0`
-**Model:** Fable 5.1 (N1 session 2 brief)
-
-### What was done
-
-**N1 session 2 — review, dedupe, save — built and verified against the stub; N1 flipped to Done (v06.90r).**
-
-- **`Network.gs` v01.05g** — the write path in the PROJECT region: `nop=dupcheck` (`nwFindDuplicate_`: normalised email → E.164 phone → romanised-name + Account, answered before the write with the full matching row), `nop=save` (body-POST; enum + D5 stage validation, `nwAccountResolve_` new-or-existing Account, Contact row, `scan` Interaction; `mergeInto=` folds into the survivor with a `merge` Interaction carrying the absorbed `c-` id and the non-winning card pair; `distinct=` is the considered "two people"; any other duplicate refuses with the row), `nop=links` (post-move Drive links back to the row or the scan Interaction), `nop=get`, `nop=delete` / `nop=restore` (`account_has_contacts` + count). Audit rows ids and counts only.
-- **`Network.html` v01.10w** — the review block on the existing editor (`nwReviewSection`: role, account block with the covered/uncovered chip and the D5 `gateStage`, source event, met date from `createdAt`, consent, DNC, notes → `rec.review`), Retry (`_nwHeldB64` or Drive read-back) and Swap pills, Save + Save all, registry resolution (`nwRegistry` / `nwResolveCompany` over `profiler-data/profiler-companies.json`, `nwExistingAccount` from the list payload), `nwSaveCard` → dupcheck → merge sheet (`nwMergeSheet`) or save → `nwFileCard` (account folder created + parked via `setfolders`, `nwDriveMove` addParents/removeParents) → links → pending deleted → `nwAfterWrite()`; list rows name · title · company, `nwRowDetail` (`nop=get`), delete → restore.
-- **`scripts/check-network-schema.py`** (new, §14) — enum mirrors, D5 mirror, test ids, id generation, audit-row lexical check; exit 0. **`scripts/verify-network-roles.py`** extended with the stateful stub and the full save round-trip (order asserted: dupcheck, save, folder → setfolders → move → links → list; merge sheet, keep-separate, Save all, delete/restore). All checks pass at 390 × 844 with zero page errors.
-- **v06.91r (v01.11w / v01.06g)** — `nwStdField` standardises titles, departments and company names (First-letter caps; C-suite and acronyms kept; Vice President → VP, Executive Vice President → EVP, Senior → Sr.; registry name wins for a covered company); a saved contact is editable from its row through `nop=update` (account re-resolved, `account-change` Interaction on a move).
-- **v06.92r (v01.12w)** — the developer's corrections to the first saved contacts encoded as rule (`NW_RANK_OF_RE` "Director of X" → "Director, X"; `NW_CASE_FIXES.rai` → RAI) and **Tidy titles & companies** on the Contacts card re-cases every saved row through `nop=get` → `nop=update`. The 20 cards ARE saved on the phone now (the developer listed the contacts by name).
-- Plan §11 N1 row → Done; §13.6 written — the N2 brief + paste-in prompt (Fable 5.1 High). README tree entry for the checker; CHANGELOG `Sections: 86/100`, no rotation.
-
-### Where we left off
-
-**The 20 cards are saved** (the developer corrected fourteen titles / companies by name at v06.92r). Tidy was tapped at v01.12w and "nothing happened" (feedback was off-screen; fixed at v01.13w with in-card progress). Next on the phone: tap **✨ Tidy titles & companies** once more so the rule lands on the rows saved before it (Avantus, RAI Energy, the Director/Sr. Director titles). N2 (§13.6) is next; E0 (§13.4) can still run beside it.
-
-### Key decisions made
-
-- **Duplicate handling has three outcomes and no fourth**: Merge (survivor keeps its id), Keep as a separate contact (`distinct=<the declined id>` — only after seeing the match), or Cancel. The server refuses any other duplicate with the row; the stub and the real path agree.
-- **Both card pairs are kept on a merge** by putting the pair that did not win the row into the `merge` Interaction's Summary (and the scan Interaction's Evidence Link when the older pair keeps the row via `nop=links` `interactionId`).
-- **The company folder name** is the Account name with filesystem-unsafe characters replaced by `-`; its id is parked under `setfolders.accounts[<a-id>]` and read back from the list payload.
-- **Registry fetch is relative** (`profiler-data/profiler-companies.json`) — public Pages, never a GitHub endpoint ([PC-PRIVATE-REPO] #18); offline it resolves to "no registry" and every company is local.
-- **Retry uses the in-tab base64 when this tab scanned the card**, else reads the two files back from Drive with the user's `drive.file` token — the pending record shape is unchanged (no base64 stored).
-- Session-1 UI rules kept: no ids / confidence numbers on a card, no missing-field cues, the name-case rule, the pill rows.
-
-### Active context
-
-- **Repo version v06.93r.** `CHANGELOG.md` at `Sections: 89/100`, eleven dated 2026-09-21 — 78 non-exempt today, 89 on any later date: **no rotation due**. Archive at 504 sections.
-- Network page changelog `Sections: 13/50`, GAS `6/50`. Screenshots in `.playwright-screenshots/` (`network-save-list.png`, `network-save-merge.png`). `pip install playwright` is needed in a fresh container; Chromium under `/opt/pw-browsers`.
-- **Untested live:** the real Drive `files.update` move, `nop=save` against the real spreadsheet (first rows ever written to `Contacts` / `Accounts` / `Interactions`), the registry fetch from Pages. The stub exercised the request order and payloads only.
-- **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()`.
-- **§13 numbering:** N2 brief is §13.6; N2 writes the E1 brief as §13.7 (or the next free number if E0 adds one).
-- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Tap Tidy titles & companies once on the phone, then open a Fable 5.1 High session and paste the N2 prompt block under §13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the Accounts surface, `nop=account`, the `Profiler.html#<slug>` deep links, the propose-a-dossier hook and the on-the-record check. If a save misbehaves on the phone, bring the status line text and the card's state (held / saved / photos moved) to a session before N2.
-- **To continue:** type `run N2`
-
-Developed by: LightAISolutions

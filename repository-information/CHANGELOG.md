@@ -7,7 +7,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 
 ## [Unreleased]
 
-*(No changes yet)*
+### Changed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Latest Session rewritten at the close of N2 (v06.94r; the phone check pending; E0 next with its prompt handed over in chat); the earlier entry moved to Previous Sessions under the two-session cap
 
 ## [v06.94r] — 2026-09-21 06:47:37 AM EST
 
