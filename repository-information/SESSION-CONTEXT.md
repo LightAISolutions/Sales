@@ -6,6 +6,36 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 09:27:50 AM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v07.16r
+**Branch:** a scheduled fresh session (Profiler earnings desk, `trig_01HkrwpCULei8Gje6RGqcp1B`, fired 2026-09-22T13:09:04Z)
+
+### What was done
+
+- Refreshed the NOVONIX (`novonix`) dossier to `profileVersion` 2, v1 archived — the sole due row on the earnings-desk queue (`nextReport` 2026-09-14, a Nasdaq minimum-bid-price compliance deadline). The cure deadline passed with the outcome **unconfirmed by any primary source**; a Yorkville amortisation event triggered 2026-09-10 (US$7.0m redemption due 2026-09-21, payment unconfirmed); a non-binding ACP Technologies MOU (2026-09-16); Panasonic C-sample feedback — 12 of 14 parameters met; a 2026-09-18 closure claim publicly denied by the CEO. 8 new sources; registered-office discrepancy resolved (v07.16r)
+- `profiler-companies.json` re-synced (`srcTotal` 69 → 76), `profiler-graph.json` rebuilt (1,482 edges), `archive-index.json` updated (v07.16r)
+- `profiler-refresh-calendar.json` — the `novonix` row returned to the quarterly cadence: `nextReport` → 2026-10-29, `confirmed: false`, `watch[]` rewritten (v07.16r)
+
+### Where we left off
+
+All changes committed and merged to main. **This run is the evidence the open "Repo access denied" reminder was waiting on** — the repository-attached earnings desk cloned, researched, committed and pushed successfully, which is the first time a scheduled run has landed a commit in this repo. The reminder's follow-on work (deleting the old control-arm desk, then rebuilding the four committing Routines — **C2 first, before it fires Wednesday 2026-09-23 04:00 PDT**) is still open and is the developer's call.
+
+### Active context
+
+- **Repo version v07.16r.** `CHANGELOG.md` `Sections: 87/100` — no rotation due
+- **Reminders still open:** close out the "Repo access denied" issue (the evidence is now in — see above); the Megmeet briefing prompt runs after the Network/Events build, before 2026-10-07
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run E3 from the design plan's §13.11 — unchanged from the E2 session's recommendation, which this automated run did not displace.
+- **To continue:** type `run E3 from §13.11`
+
+## Previous Sessions
+### Session — 2026-09-22 07:40:08 AM EST (E2, v07.15r)
+
+
 **Date:** 2026-09-22 07:40:08 AM EST (the session ran ~07:24 → 07:50 AM EST)
 **Repo version:** v07.15r — one push (this commit) on `claude/dazzling-edison-hia1w7` restarted from `origin/main` at `ee52d79d`; the session-context write rides in the same commit.
 **Branch:** `claude/dazzling-edison-hia1w7`
@@ -46,44 +76,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run E3 from §13.11: `eop=recommend` with the six §6 terms, `Tuning` seeded once, the Recommended pill and the *why* panel, `scripts/check-events-score.js`, the verifier pass; flip §11's E3 row to Done and write the E4 brief as §13.12. Fable 5.1 High, one push. Before it, run the first live poller cycle so the E3 session can read a real `Proposed` queue if it wants one.
 - **To continue:** type `run E3 from §13.11`
 
-## Previous Sessions
-
-**Date:** 2026-09-22 07:15:53 AM EST (the session ran ~06:53 → 07:25 AM EST)
-**Repo version:** v07.14r — one push (this commit) on `claude/amazing-hypatia-06t8r5` restarted from `origin/main` at `47d83190`; the session-context write rides in the same commit.
-**Branch:** `claude/amazing-hypatia-06t8r5`
-**Model:** Fable 5.1 High (N3 brief, §13.9, session 2 of two)
-
-### What was done
-
-**N3 session 2 — the exports, the drafts and the QR card (§13.9 steps 5–8); §11's N3 row now reads Done.** `Network.gs` v01.10g / `Network.html` v01.19w.
-
-- **`Network.gs`**: `nwExportOp_` gathers once (`nwExportRows_`) and answers `csv` · `xlsx` (`nwExportXlsx_`, the Receipts temp-spreadsheet path, Contacts / Accounts / Interactions) · `vcard` (`nwVcard_`, hand-rolled 3.0, `cards[]` + `vcf`); `nop=mailings` / `nop=drafts` / `nop=draftstatus` (D15 — the app never sends; sent = an `email-out` Interaction with the d- id as evidence); `nop=mycard` on the Profiles row (Title · Phone columns added)
-- **`Network.html`**: the Export menu with the "include card image" tick (the PHOTO spliced client-side from the user's own Drive, folded at 75 octets), `nwZip` (store-only zip) for the per-contact vCards and the `.eml` bundle, the follow-up drafts panel (recipients → template → review list edited in place → `.eml` / CSV / `.txt` / Copy / `mailto:` → Mark sent / Discard), the Drafts and My card masthead pills, the My card panel and the full-screen QR from `nwQrMatrix` (byte mode, v1–10, level M, no library)
-- **`scripts/verify-network-roles.py`**: the session-2 stub ops and tests — ALL CHECKS PASSED, zero page errors; the page's QR matrix equals python-qrcode's at the same version and mask; the D15 grep over the served page and the `.gs` PROJECT region
-- **Docs**: `NETWORK-SCHEMA.md` §3 / §10 / §11 / §12 / §14; the design plan's §11 N3 row Done and §13.10 (the E2 brief + paste-in prompt); `check-network-schema.py` allow-list; README; changelogs
-
-### Where we left off
-
-**E2 is next — §13.10**: the weekly no-AI poller in `Events.gs`, the admin `Proposed` panel on `Events.html`, the `events sync` session command in a new `.claude/rules/events-app.md`, `eop=installpoller`, and `scripts/check-events-poller.js`. The paste-in prompt for E2 was given in chat at the close of this session. **Reported, not asserted**: the vCard bundle importing on iOS / Android Contacts and the QR resolving on a second phone — the developer's live check after redeploying Network.gs (v01.10g) and opening My card.
-
-### Key decisions made
-
-- **The vCard PHOTO is spliced by the page, not the server** — the card front lives in the user's own Drive under `drive.file`, which `DriveApp` cannot read, so the page fetches it with its own token and folds the base64 at 75 octets; the server's vCard is complete without it
-- **The template's `sendHipaaEmail` (MailApp) stays** — it is the auth template's security-alert helper outside the PROJECT region (Chesterton's fence, [PC-TEMPLATE-PROP] #19); the D15 assertion is scoped to the served page and the `.gs` PROJECT region, and the schema says so
-- **A named template is saved on render, an unnamed one is still a Mailings row** — every render writes the Mailings row (template + list filter) so drafts group by mailing; only named rows appear as saved templates
-- **Audit expressions must read as counts to the checker** — `saved: (!tplRow && name) ? 1 : 0` was flagged for the identifier `name`; the count is computed into `savedCount` first
-- **The QR encoder is proven, not eyeballed** — the verifier compares the page's matrix against python-qrcode at the same version and mask (skipped gracefully when the library is absent)
-
-### Active context
-
-- **Repo version v07.14r.** `CHANGELOG.md` `Sections: 85/100` — no rotation due
-- **Playwright** is `pip install playwright` + the pre-installed Chromium at `/opt/pw-browsers`; `pip install qrcode` enables the QR cross-check. Per-container
-- **Reminders still open:** close out the "Repo access denied" issue after Monday's two earnings-desk runs (C2 must be rebuilt before Wednesday 2026-09-23 04:00 PDT); the Megmeet briefing prompt runs after the Network/Events build, before 2026-10-07
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run E2 from §13.10: the poller, the `Proposed` panel, `events sync` and the Node harness; flip §11's E2 row to Done and write the E3 brief as §13.11. Fable 5.1 High, one push. Before it, check `Events.config.json` carries a real `DEPLOYMENT_ID` / `SPREADSHEET_ID`.
-- **To continue:** type `run E2 from §13.10`
-
-Developed by: LightAISolutions
