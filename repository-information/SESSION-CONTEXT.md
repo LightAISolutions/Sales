@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 06:55 PM EST (the session ran ~05:55 → 07:05 PM EST)
+**Repo version:** v07.18r — no version bump; one housekeeping push on `claude/ecstatic-maxwell-oticzd` (this session-context write only)
+**Branch:** `claude/ecstatic-maxwell-oticzd`
+**Model:** Fable 5.1 (E3 live-judgment session between E3 and E4)
+
+### What was done
+
+**No code changed.** This was the developer's E3 hand-off, judged live, plus the pre-E4 checks.
+
+- **The seats' two segment lists are confirmed by the developer (2026-09-22).** `profiler-segments.json` → `seats` stands as written: storage-seller = developers and IPPs · utilities · capital · assurance · insurance; aidc-power-seller = landlords · hyperscalers · EPC · neoclouds · utilities (union of nine). The reasoning the developer endorsed: all five demand-tier segments plus capital, assurance and insurance from services, plus EPC and construction from build; the ten left out are the three supply, six build and software-and-optimization. The two borderline calls (software out, EPC in) were named and accepted. Sensitivity was measured: EPC touches 33 upcoming events, software 10, insurance 3. No file edit was needed
+- **E3 judged live.** The Recommended list was accurate to the developer's own history (has attended DCD>Connect, RE+ and PTC; contacts go to Infocast). The developer changed `relevancePrior` in the Events spreadsheet's `Tuning` tab from 0.05 to **0.2** — live state, not in the repo — because WEF Davos ranked first on a perfect 3-tag segment fit despite relevance 1
+- **Peer tokens** — the developer set both and believes them correct; this session could not verify them (script properties, and the session never calls the app). The page's own evidence: after pressing Recommended the status line reads `Ranked N upcoming events · X accounts · Y signals` when linked, or `Network not connected — scored without your accounts` when not; the sheet's Recommendation block shows the gold "Connect Network…" line when not. Told the developer exactly that
+- **Routines rebuilt.** `list_triggers` shows six: earnings desk (weekdays 13:00 UTC), C2 weekly (Wed 11:00 UTC), Industry Guidance quarterly (15 Jan/Apr/Jul/Oct), Profiler quarterly (1 Jan/Apr/Jul/Oct), monthly opportunity-report drift check (1st 17:00 UTC), ACL health daily. The old earnings desk (`trig_01Uy…`) is gone. The API does not expose the attached repository, so the tie to `LightAISolutions/Sales` was confirmed by outcome, not by field: the new desk landed v06.96r on 2026-09-21 (IREN / Jinko / Oracle rows `lastRefreshed` 2026-09-21) and v07.16r (NOVONIX) on 2026-09-22 — the first commits a scheduled run has ever landed in this repo
+- **E4 session 1 prompt** revised in chat with the two developer-approved extras: the poller's past-date guard (`evPollSource_`, kinds `new-event` / `new-edition`, plus a harness case) and a seats-block id check in `scripts/check-events-registry.py`. §13.12 in the design plan was NOT edited — the pasted prompt carries the extras and the E4 session records them when it flips §11
+
+### Where we left off
+
+**E4 session 1 is next**, in a fresh session, with the revised prompt given in chat at the close of this session (§13.12's paste-in plus the two extras above). Before it runs the developer should (1) press Recommended once more and read the status line — DCD>Connect and RE+ should now sit near 0.55 with WEF down near 0.41 if the 0.2 weight took; a `default weight used for relevancePrior` note means the Tuning cell did not parse; (2) confirm the status line does not say `Network not connected`. **C2 fires Wednesday 2026-09-23 11:00 UTC (04:00 PDT)** — its rebuilt Routine is armed; an E4 session running across that time must check `git ls-remote` before pushing (already in the prompt).
+
+### Open findings carried forward
+
+- **The poller proposes past editions** — now folded into the E4 session 1 prompt by developer approval (no longer deferred)
+- **No checker validates `seats` ids** — folded into the E4 session 1 prompt likewise
+- **`pullAndDeployFromGitHub` never logs its outcome** — fleet-wide TEMPLATE papercut, still deliberately unfixed
+- **Segment fit rewards narrow audiences** (three matching tags score the same 1.0 as nine; a mega-show is penalised per supply-side tag — RE+ scores 0.57). A formula change, E5 scope if it still bothers the developer after the weight change
+
+### Key decisions made
+
+- Seats lists confirmed as-is; no tier rule
+- `relevancePrior` 0.05 → 0.2 (live Tuning tab; the repo's `EV_TUNING_DEFAULTS` seed stays 0.05 — it is only the seed for an empty tab)
+- The two E2-scope extras ride E4 session 1 rather than a separate session
+- The "Repo access denied" reminder was **left active** — its evidence has now landed (v06.96r, old desk deleted) but it is the developer's note to close
+
+### Active context
+
+- **Repo version v07.18r.** `CHANGELOG.md` `Sections: 89/100` — no rotation due
+- **Live versions:** `Events.html` v01.06w · `Events.gs` v01.05g · `Network.html` v01.20w · `Network.gs` v01.10g
+- **Reminders still open** (developer's own — untouched): close out "Repo access denied" (evidence now exists; the old desk is already deleted); the Megmeet briefing after the Network/Events build, before 2026-10-07
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run E4 session 1 with the revised prompt (Fable 5.1 High, one session, one push): the weekly signals sweep, the manual signal form, the "Signals only" pill, `scripts/check-events-signals.js`, plus the poller past-date guard and the seats-id check; flip §11's E4 row to In progress — session 1 and write §13.13.
+- **To continue:** type `run E4 session 1 from §13.12 with the two extras`
+
+## Previous Sessions
+
+### Session — 2026-09-22 05:30 PM EST (E3 build)
+
 **Date:** 2026-09-22 05:30 PM EST (the session ran ~05:12 → 05:35 PM EST)
 **Repo version:** v07.18r — one push on `claude/festive-noether-7wb1zr`, one commit (this session-context write rides in it)
 **Branch:** `claude/festive-noether-7wb1zr`
@@ -54,55 +103,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Judge E3 live first (redeploy, press Recommended, the top five line by line, one weight change) — then run E4 session 1 from §13.12: the weekly signals sweep (Map Your Show / a2z exhibitor diff, speaker roster, the three newswire feeds), the manual signal form, the "Signals only" pill, `scripts/check-events-signals.js` and the verifier's signals pass; flip §11's E4 row to In progress — session 1 and write §13.13. **Fable 5.1 High, one session, one push.**
 - **To continue:** type `run E4 session 1 from §13.12`
 
-## Previous Sessions
-### Session — 2026-09-22 05:00 PM EST (close-out: the vCard fold fix, E2 confirmed live, v07.17r)
 
-**Date:** 2026-09-22 05:00 PM EST (the session ran ~04:15 → 05:00 PM EST)
-**Repo version:** v07.17r — one push on `claude/focused-thompson-zjh7pn`, two commits (the stale-context reconstruction rode along); this session-context write is a second push.
-**Branch:** `claude/focused-thompson-zjh7pn`
-**Model:** Opus 5 (close-out session between N3 s2 / E2 and E3 — not a build session)
-
-### What was done
-
-**A close-out session, not a build.** Four open items from the previous two sessions, plus one live defect found and fixed.
-
-- **`Network.html` v01.20w — fixed the vCard PHOTO splice crashing mobile Chrome ("Aw, Snap!").** Root cause was `nwVcardFold`, **not** the Drive-consent flash the symptom pointed at. It folded by re-slicing a shrinking `line` (`line = ' ' + line.slice(75)`), forcing the engine to flatten the previous pass's cons string every iteration — quadratic in line length. Property lines are short and were never affected; a PHOTO line is the whole card front in base64. The stored front is the 2,000 px capture (~600 KB) → a single ~800 KB line → ~11,000 passes: **measured 18,329 ms and multiple GB of allocation churn per card** on desktop-class V8. Desktop absorbed it (which is why the PC "worked" — it was surviving, frozen, ~37 s for two cards); a phone renderer answered with an OOM kill. Three fixes: the fold is now flat (index the source, `join` once — **verified byte-for-byte identical** to the old output for every length 0–1,200 and at 200,000 chars; **1,679× faster**, 18,329 ms → 10.9 ms); `nwCardFrontBytes` → `nwCardFrontPhoto` (fetch as Blob, redraw at 720 px / q 0.8, base64 straight out of the canvas — **the full-size bytes are never turned into a string**; fallback to raw bytes only without `createImageBitmap` and only under 512 KB); `nwBytesToB64` batches at 8 KB not 32 KB. Plus a progress line through the serial photo fetches. A `PROJECT OVERRIDE` comment in the fold records why it must never go back to a loop
-- **Answered three questions in chat** (no code): what `NW_POSTAL_ADDRESS` should hold (a one-line CAN-SPAM physical postal address; Script Property, read live by `PropertiesService`, no redeploy); how to redeploy `Events.gs` from the editor (`pullAndDeployFromGitHub` from the Run dropdown — never **Deploy → New deployment**, which mints a new id and orphans `Events.config.json`); and how to read that function's execution log
-- **`NETWORK-SCHEMA.md` §11** — the PHOTO row records the 720 px re-encode; the N3 s2 paragraph states the flat-fold requirement as a rule, not an implementation detail
-- **Session-start reconstruction** — `SESSION-CONTEXT.md` recorded v07.15r against a repo at v07.16r (the Profiler earnings desk's scheduled NOVONIX refresh landed without a "remember session"). Recovered from CHANGELOG, committed separately as prescribed
-
-### Where we left off
-
-**E2 is live and confirmed.** The developer ran the first cycle: `pullAndDeployFromGitHub` returned "Already up to date (v01.04g)" — the workflow had already deployed it — the GAS pill on Events.html reads **v01.04g**, the weekly trigger is installed, and **Poll now** returned *"Polled 10 sources (48 skipped, 0 failed): 33 new proposals, 0 already known."* Queue: 33 pending · 0 approved · 0 rejected · 0 applied. **10 + 48 = 58 = the roster exactly**, and `0 already known` is correct for a first run. **E3 is next — §13.11**; its paste-in prompt was given in chat at the close of this session.
-
-### Open finding — the poller proposes editions that have already happened (NOT yet fixed, NOT E3's job)
-
-**`evPollSource_`'s item loop has no past-date guard.** Every item a feed publishes is matched and diffed, so a finished edition yields a `new-edition` / `new-event` proposal. **Demonstrated on the live queue:** `ai-infra-summit`'s feed is 2 items, newest **2026-09-15** (a week past); the registry already holds `ai-infra-summit-2027` (San Jose, 2027-08-31); the poller proposed **NEW-EDITION `ai-infra-summit-2026`** (Santa Clara) — i.e. adding backwards. The two 12-item ICS feeds (`esig-events`, `imasons-events`) very likely contribute more of the same, so an unknown share of the 33 is history.
-
-**Not corruption** — the approve gate stops it and nothing reaches `events.json` without `events sync`. It is **queue noise that recurs every Monday** and that the developer has to hand-reject. Registry context: 100 events, **exactly 1 already ended**, and the agenda has a deliberate "Past editions" group — so the calendar keeps a small tail of history on purpose and is not meant to accumulate past editions wholesale.
-
-**Shape of the fix** (~5 lines + a harness case, E2 scope): in `evPollSource_`'s `for (var i = 0; i < items.length; i++)` loop, skip an item whose `end || start` is before today **for the `new-event` / `new-edition` kinds only** — `cancelled`, `moved-dates`, `changed-venue` and `changed-url` must still fire on rows already in the registry, because an organiser can cancel or move a row the calendar already carries. Bump `Events.gs`, add the case to `scripts/check-events-poller.js`, redeploy.
-
-**Deliberately not done this session and deliberately kept out of E3** — §13.11 says "no new scope", and folding a poller fix into a scoring session is what that guard exists to prevent.
-
-### Key decisions made
-
-- **The fold fix is byte-for-byte equivalence, not "close enough"** — proven across every length 0–1,200 and at 200,000 chars before it was accepted, because the old output is what already-exported `.vcf` files contain
-- **Downscaling the PHOTO is fidelity-neutral, not a compromise** — Contacts on both platforms renders it at avatar size regardless, and oversized PHOTO values are a known iOS import failure; the `.vcf` also gets ~10× smaller
-- **No `Network.gs` change and no redeploy for the vCard fix** — the splice is page-side by design, because the card front lives in the developer's own Drive under `drive.file`, which the script cannot read
-- **`pullAndDeployFromGitHub` returns its outcome and never logs it**, and the editor's Run button does not print return values — so the success path is invisible in the editor on all **10** projects that carry the template copy. Noted as a fleet-wide papercut; **not fixed**, because it is TEMPLATE code and [PC-TEMPLATE-PROP] #19 would make it a 10-project push
-- **"June 2028" in the masthead is not a bug** — the sticky month indicator falls back to "the last month whose top is above the fold" when nothing intersects (over-scrolled, or the Agenda hidden behind another tab); the registry's last event is 2028-06-04
-
-### Active context
-
-- **Repo version v07.17r.** `CHANGELOG.md` `Sections: 88/100` — no rotation due (rotation at >100)
-- **Live versions:** `Network.html` v01.20w · `Network.gs` v01.10g · `Events.html` v01.05w · `Events.gs` v01.04g (deploy confirmed by the GAS pill)
-- **Before E3 can score by account, both peer tokens must be set on the live deployments** — `EVENTS_PEER_TOKEN` and `NETWORK_PEER_TOKEN`, the same value on both. Unverified this session. E3's panel must degrade to "connect Network to score by account", never fail, so the build is not blocked either way
-- **Playwright** is `pip install playwright` + the pre-installed Chromium at `/opt/pw-browsers`. Per-container
-- **Reminders still open** (developer's own — untouched): close out the "Repo access denied" issue — **the evidence is in**, the v07.16r run cloned, researched, committed and pushed; C2 must be rebuilt before **Wednesday 2026-09-23 04:00 PDT**, which is tomorrow. The Megmeet briefing runs after the Network/Events build, before 2026-10-07
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run E3 from §13.11 — `eop=recommend` with the six §6 terms, `Tuning` seeded once, the Recommended pill with score chips and the *why* panel, `scripts/check-events-score.js`, the verifier's Recommended pass; flip §11's E3 row to Done and write the E4 brief as §13.12. **Fable 5.1 High, one session, one push.** The CHANGELOG counter has moved to 88/100 since §13.11 was written — read the live counter, not the one in the stored prompt.
-- **To continue:** type `run E3 from §13.11`
