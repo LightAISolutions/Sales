@@ -1,10 +1,10 @@
-var VERSION = "v01.01g";
+var VERSION = "v01.02g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
 var GITHUB_BRANCH = "main";
 var FILE_PATH     = "googleAppsScripts/Events/Events.gs";
-var DEPLOYMENT_ID = "YOUR_DEPLOYMENT_ID";
+var DEPLOYMENT_ID = "AKfycbyI_SRS7Q3msirnY_UDx6Dz0jK75Onr9P0yocHGovnuIQlpHLIiSmvrpeyruhP3QaG_EQ";
 var EMBED_PAGE_URL = "https://lightaisolutions.github.io/Sales/Events.html";
 
 // Derive the parent page's origin from EMBED_PAGE_URL for postMessage targeting.
@@ -23,7 +23,7 @@ var PARENT_ORIGIN = EMBED_PAGE_URL.replace(/^(https?:\/\/[^\/]+).*$/, '$1').toLo
 // AUTH CONFIG
 // ══════════════
 // Spreadsheet ID for project data (the GAS app reads/writes user data here).
-var SPREADSHEET_ID = "YOUR_SPREADSHEET_ID";
+var SPREADSHEET_ID = "1MhaF8mdVyOljcswv_vwJ82ZW4Co-U9UHNXG39i5tCOw";
 var SHEET_NAME     = "Live_Sheet";
 // Master ACL spreadsheet — centralized access control for all GAS-powered pages.
 // Two tabs:

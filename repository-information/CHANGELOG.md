@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 79/100`
+`Sections: 80/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.09r] — 2026-09-22 04:14:18 AM EST
+
+> **Prompt:** "record the Events ids:
+> SPREADSHEET_ID=<1MhaF8mdVyOljcswv_vwJ82ZW4Co-U9UHNXG39i5tCOw>
+> DEPLOYMENT_ID=<AKfycbyI_SRS7Q3msirnY_UDx6Dz0jK75Onr9P0yocHGovnuIQlpHLIiSmvrpeyruhP3QaG_EQ>"
+
+### Changed
+- **Events is deployed — the two ids are recorded the N0 way.** `googleAppsScripts/Events/Events.config.json` now carries the real `SPREADSHEET_ID` and `DEPLOYMENT_ID` (the angle brackets in the prompt were delimiters, not part of the values), synced per [PC-GAS-CONFIG] #14: `Events.gs` v01.02g (`SPREADSHEET_ID` / `DEPLOYMENT_ID` vars — `ensureEventsTabs_()` no longer throws `SPREADSHEET_NOT_CONFIGURED`, and `registerSelfProject()` now writes the real deployment URL into the Global ACL), `Events.html` v01.03w (`var _e` is the reversed-then-base64 `https://script.google.com/macros/s/<DEPLOYMENT_ID>/exec`, so the GAS iframe mounts and the Stars ops reach the backend). The `Deploy Events` workflow step reads the id from the config at merge time — no workflow edit — so this push's merge fires the first self-update webhook against the live deployment
+- README tree: the Events page line reads v01.03w · v01.02g
+- **B (the bridge, §13.8) is unblocked** — its brief stops on placeholder ids; both are real from this push
+
+### Notes
+- The N0 bootstrap lesson still applies: the code deployed by hand before this push cannot repoint its own deployment on the first webhook run — if the merge's `Deploy Events` step warns "self-update unconfirmed", do Manage deployments → Edit → New version once by hand, then later merges self-update
+- §13.7 step 8 (the real-phone Calendar / `.ics` check) remains the developer's to report; nothing in this push asserts it
 
 ## [v07.08r] — 2026-09-22 02:00:16 AM EST
 

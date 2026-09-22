@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 1/50`
+`Sections: 2/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.02g] — 2026-09-22 04:14:18 AM EST — v07.09r
+
+### Changed
+- The backend now points at its own spreadsheet and web-app deployment: first use prepares the data tabs, stars and notes are stored, and the self-update route is live
+- Minor internal improvements
 
 ## [v01.01g] — 2026-09-22 01:08:08 AM EST — v07.07r
 

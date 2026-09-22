@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 2/50`
+`Sections: 3/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.03w] — 2026-09-22 04:14:18 AM EST — v07.09r
+
+### Changed
+- The page is now connected to its own backend: stars, attending state and notes save and reload from your account instead of the "Stars are not connected yet" notice, and the Day plan fills from the events you have starred
+- Minor internal improvements
 
 ## [v01.02w] — 2026-09-22 02:00:16 AM EST — v07.08r
 
