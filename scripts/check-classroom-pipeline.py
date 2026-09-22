@@ -991,9 +991,31 @@ def mutate_p8(base, head, changed):
 
 
 def mutate_p9(base, head, changed):
-    """A briefing dated on or before the watermark, with the ledger left behind."""
+    """A briefing dated on or before the watermark, with the ledger left behind.
+
+    The edition must land on a date that has NO briefing in base. P9's
+    per-briefing checks key on `new` — the briefings at head absent from base —
+    so a fixture whose id already exists is not new, P9 is never exercised, and
+    the selftest fails with P5/P7 on the section mismatch instead. Deriving the
+    date straight from `coveredThrough` was safe only while the watermark sat on
+    a date with no briefing; the first real pipeline commit (2026-09-21, the
+    first watermark advance) moved it onto one and broke this fixture. The
+    fixture only needs to be AT OR BEHIND the watermark, never exactly on it, so
+    walk back to a free date.
+    """
     led = json.loads(head.ledger_text)
     stale = led.get("coveredThrough") or "2026-09-01"
+    day = datetime.date.fromisoformat(stale)
+    for _ in range(400):
+        if ("briefing-%s" % day.isoformat()) not in base.lessons:
+            break
+        day -= datetime.timedelta(days=1)
+    else:
+        raise AssertionError(
+            "mutate_p9 found no briefing-free date in the 400 days before the "
+            "watermark %s — the fixture cannot construct a NEW briefing, so P9 "
+            "would go unexercised rather than fail loudly" % stale)
+    stale = day.isoformat()
     lesson = {
         "schemaVersion": 1, "id": "briefing-%s" % stale, "type": "briefing",
         "edition": stale, "title": "This week", "short": "A week.",

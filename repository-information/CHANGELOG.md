@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.06r] — 2026-09-22 12:08:08 AM EST
+
+> **Prompt:** "fix P9"
+
+### Fixed
+
+#### `scripts/check-classroom-pipeline.py` — the P9 fixture broke on the pipeline’s first watermark advance
+- **`--selftest` went 15 fixtures / 1 failure the moment C2 landed its first commit**, and the cause was the fixture, not the check. `mutate_p9` derived its briefing id straight from the ledger: `"briefing-%s" % coveredThrough`. P9’s per-briefing checks key on `new` — the briefings at head absent from base — so once `70a0c488` advanced `coveredThrough` to **2026-09-21**, a date that now carries a **real** `briefing-2026-09-21`, the fixture’s lesson stopped being new. P9’s branch never executed and P5/P7 fired on the section mismatch instead.
+- **The fixture had never been wrong before because `lastRun` was `null`** — no run had ever moved the watermark, so the derivation had never landed on an occupied date.
+- **Fixed the date derivation, not the assertion.** The fixture only needs to be *at or behind* the watermark, never exactly on it, so it now walks back to a briefing-free date (`2026-09-20` today) under a bounded loop that raises a named `AssertionError` rather than looping forever. Loosening what P9 expects would have retired the check instead of repairing it.
+- **Checked whether this was a class rather than an instance:** `mutate_p9` is the only fixture that reads live ledger state, so a targeted fix is the right scope.
+
+### Verified
+
+- `--selftest`: **15 fixture(s), 0 failure(s)** — `ok P9  a briefing at or behind the watermark`, and the positive fixture plus P1–P8 and P10–P13 all still pass.
+- C2’s own gates: `check-classroom-content.py` 0 errors / 0 warnings, `node --check`, `check-gas-inner-scripts.js` — all clean, so Wednesday’s run is unaffected.
+- `check-classroom-pipeline.py --base origin/main` reports P1 against this working tree, which is **correct**: a developer session edited a path the committer may never touch (§3). A pipeline run diffs its own changes against a `main` that already carries this commit and will not see it — the same shape as the `.github/last-processed-commit.sha` artefact seen while auditing `70a0c488`.
+
+**No rotation:** 102 raw but 78 non-exempt (24 sections dated 2026-09-21 EST).
 
 ## [v07.05r] — 2026-09-21 11:16:23 PM EST
 
