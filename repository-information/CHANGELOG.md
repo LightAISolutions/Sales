@@ -7,7 +7,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 
 ## [Unreleased]
 
-*(No changes yet)*
+### Changed
+
+#### `repository-information/SESSION-CONTEXT.md`
+- Latest Session rewritten at the close of E0 (v06.95r, merged; the repo has since advanced to v07.06r beside it), recording that E1's prerequisite is satisfied and that the CHANGELOG now sits at 101 non-exempt sections with a 25-section 2026-09-16 group due to rotate on the next versioned push; the parallel Opus 5 routines session moved to Previous Sessions and the N2 entry dropped under the two-session cap
 
 ## [v07.06r] — 2026-09-22 12:08:08 AM EST
 

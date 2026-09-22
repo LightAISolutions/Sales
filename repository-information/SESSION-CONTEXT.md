@@ -6,6 +6,53 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 12:43:01 AM EST
+**Repo version:** v06.95r at the time of the push — **the repo is now at v07.06r**; a parallel Opus 5 session (`claude/repo-access-denied-339rna`) landed eleven versions beside this one. One push here: `5b1c9e5` v06.95r (E0 — the Events registry and source roster) on `claude/ecstatic-cannon-ilvoq2` restarted from `origin/main`; merged to `main`.
+**Branch:** `claude/ecstatic-cannon-ilvoq2`
+**Model:** Opus 5 xhigh (E0 brief, §13.4)
+
+### What was done
+
+**E0 is Done (§11 flipped, v06.95r) — research and data only; nothing under `Events.html` / `Events.gs`, which is E1.**
+
+- **`live-site-pages/events-data/events.json` — 100 events: 72 `confirmed`, 27 `tentative`, 1 `past`.** `confirmed` means an organiser page was read this session (WebFetch, or organiser-host JSON-LD); the `past` row (NAATBatt 2026) was organiser-read too and the checker flipped its status. No row is ever `confirmed` on a third-party listing. Every `tentative` row carries a `manual` source and a `tierNote` saying exactly why — eleven because the organiser blocks non-browser clients, the rest because the organiser publishes no dates for that edition.
+- **`events-sources.json` — 58 roster rows, every one probed live before it was written** (HTTP status, `Event`/`VEVENT` count, newest item, robots for the fetched path). **24 blocked**, each with reason + date: `cloudflare-challenge` on OCP, DCD, Enlit, 10times, SEMI and Gartner; `403-akamai-non-browser` on CERAWeek; `403-datadome` on Reuters; `403-azure-waf` on GCPA and NAATBatt; `no-feed` on Uptime, Hannover, Ignite, EEI, NARUC, Hot Chips; 404/503/DNS on Solar & Storage Live, SNEC, CIBF, ESIE, IDEE, Battery Japan, AMD. **11 live JSON-LD feeds**, two of them new to the plan — **iMasons (11 `Event` objects) and ESIG (12)**, which between them carry the whole sub-mega/social tier.
+- **`scripts/extract-corpus-events.py`** — 33 corpus events (not 31; §1's count was measured at v06.70r), **256 `mentions[]` rows across 90 dossiers onto 32 registry rows**, every corpus event with ≥ 1 mention. Idempotent, `--check` / `--report`.
+- **`scripts/check-events-registry.py`** — every `EVENTS-SCHEMA.md` §12 assertion plus two earned here: a `confirmed` row needs a source whose `kind` is not `manual`, and no event source may have a LinkedIn / 10times / Google-News host. Exits 0. `--fix-past` flips status only; it fired once, on NAATBatt.
+- **Appendix A caveats resolved**: the DCD New York 2027 conflict is recorded *unresolved by design* (Clocate's JSON-LD says 17–18 Mar at the NY Marriott Marquis, a second listing says 17–18 May, DCD is Cloudflare-blocked); NAATBatt's weak Aug 2027 row is **dropped** (organiser publishes only Feb 9–12 2026); **Wood Mackenzie NA Power & Renewables (Apr 28–29 2027, Omni Interlocken) and Datacloud USA (Aug 31–Sep 2 2027, Fairmont Austin) are now dated and confirmed**. Three seed errors corrected: ACP Siting + Permitting and ACP PEAK are two events, not one; Energy Storage Summit USA 2027 moves to the Renaissance Dallas at Plano; six third-party-sourced rows (GTC 2027, InterBattery 2027, CIGRE, IEEE PES GM 2027, Battery Show Europe 2027, AWS re:Invent 2026) are now organiser-read.
+- **Docs**: §11's E0 row → Done with all three count sets; README tree entries for `events-data/`, both files and both scripts; CHANGELOG `Sections: 91/100` at the time. **Nothing new written in §13** — §13.4's closing line asks for an E1 brief as §13.6, but N2 already wrote E1 as §13.7, so the line is stale and was not acted on.
+
+### Where we left off
+
+**E0 is merged to `main` and E1's prerequisite is satisfied**: `events.json`, `events-sources.json` and `check-events-registry.py` are all on `main`, the checker exits 0, and §11's E0 row reads Done. §11's E1 row is still **Proposed** — nothing in the Network/Events plan moved between v06.96r and v07.06r; those eleven versions were the parallel session's Routine-fleet work, the Classroom C2 pipeline and the cache levers.
+
+The developer asked for the E1 paste-in prompt, which was handed over in chat at the close of this session (Fable 5.1 High, session 1 of two, §13.7's own prompt refreshed with the current repo version and the rotation arithmetic below).
+
+### Key decisions made
+
+- **A third-party listing can never confirm a row.** Eleven organisers block non-browser clients, so eleven shows the corpus cares about will never be organiser-verified from a server. Rather than soften `confirmed`, the checker now asserts it: a `confirmed` row must carry a source whose `kind` is not `manual`.
+- **Blocked ≠ unusable event.** GCPA and NAATBatt serve a 403 Azure WAF to `curl` but are readable by a browser-class fetch — so their *events* are `confirmed` while their *roster rows* are `blocked`. That split is deliberate; the checker tolerates it; it means the E2 poller will never cover those shows.
+- **Dates that are patterns are labelled as patterns.** CERAWeek 2027, ESIE 2027, Hot Chips 39, IDEE and AMD Advancing AI carry dates inferred from a prior edition's slot, and each says so in its own `tierNote`. These are the rows most likely to be wrong and the first to re-check when E2 runs.
+- **The 10times row exists only as a never-re-propose marker** — cited by no event, and the checker rejects any event source on a LinkedIn / 10times / Google-News host. Same for COMPUTEX, which is on the roster with `robots: disallowed` so the poller must skip it.
+- **`REPO-ARCHITECTURE.md` was deliberately not touched.** The brief said to mirror `profiler-data/`'s treatment *if it appears there* — it does not, and neither does any project checker. Adding `events-data/` would have made it inconsistent with its own sibling.
+- Two seed-calendar feed flags did not survive the probe: 7x24 Exchange and the International Battery Seminar are **not** ICS, and Intersolar is **not** JSON-LD `BusinessEvent`. All three are recorded as `html` with the probe that says so, rather than as a feed E2 would fail on.
+
+### Active context
+
+- **Repo version v07.06r.** `CHANGELOG.md` `Sections: 102/100` — **one section is dated today (2026-09-22), so 101 are non-exempt and rotation IS due on the next push that creates a version section.** The oldest date group is **2026-09-16 with 25 sections**; rotating it leaves 77 raw / 76 non-exempt, under 100, so **one rotation suffices**. Run `git fetch --unshallow origin main` before any SHA lookup — the sections due are the oldest and are exactly the ones beyond a shallow horizon.
+- This session's own push did **not** rotate: "Remember Session" is housekeeping with no version bump, so no version section was created and [PC-CHANGELOG] #6's rotation step never fired.
+- **E0 artefacts on `main`**: `live-site-pages/events-data/{events.json,events-sources.json}`, `scripts/{extract-corpus-events.py,check-events-registry.py}`. Re-run before trusting: `python3 scripts/check-events-registry.py` (expect `OK 100 events … 58 roster rows`) and `python3 scripts/extract-corpus-events.py --check`.
+- **Parallel sessions are live.** `claude/adoring-brown-mvddj2` was on the remote throughout this session and still is; a second Opus 5 session pushed ten times beside this one. `MULTI_SESSION_MODE` is `Off`, so every session must restart its branch from `origin/main` and check `git ls-remote` before pushing.
+- **Megmeet briefing deferred** to after the Network/Events build, prompt preserved at `repository-information/megmeet-briefing-prompt.md` (the parallel session's decision, carried forward).
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Open a Fable 5.1 High session and run E1 session 1** — the Events scaffold and agenda (§13.7; the prompt was handed over in chat at the close of this session). E0's artefacts are on `main` with the checker at 0, so the prerequisite the brief names is satisfied, and D16 puts a hard date on it: the calendar has to be live **before 2026-11-16**, which is RE+ week.
+- **To continue:** type `run E1 session 1`
+
+## Previous Sessions
+
 **Date:** 2026-09-22 12:29:48 AM EST
 **Repo version:** v07.06r — ten pushes this session on `claude/repo-access-denied-339rna`, rebased onto `origin/main` before each: `66f18297` v06.97r, `2cd6348b` v06.98r, `1ed61dc0` v06.99r, `4f9fca6c` v07.00r, `e7ed2c5e` + `c347b37e` v07.01r, `ea5f52f7` v07.02r, `afb26ada` v07.04r, `814c7281` v07.05r, `38c8da9d` v07.06r. `70a0c488` v07.03r is **not mine** — it is the Classroom C2 pipeline's own first commit.
 **Branch:** `claude/repo-access-denied-339rna`
@@ -50,46 +97,3 @@ Everything is committed, pushed and merged. The repo is green: all four C2 gates
 
 - **Resume the Network and Events build** — E0 is done (`events.json`, `events-sources.json`, the checker, 73 events), so E1 is next, with its brief already written as §13.7 of `NETWORK-EVENTS-DESIGN-PLAN.md`. That is the developer's stated priority, and the Megmeet briefing is explicitly queued behind it.
 - **To continue:** type `run E1`
-
-## Previous Sessions
-
-**Date:** 2026-09-21 07:23:55 AM EST
-**Repo version:** v06.94r — one push this session: `a840bf6` v06.94r (N2 — accounts and the corpus attachment) on `claude/zen-heisenberg-426g6h` restarted from `origin/main`; merged to `main` (`040f6a1`)
-**Branch:** `claude/zen-heisenberg-426g6h`
-**Model:** Fable 5.1 (N2 brief, §13.6)
-
-### What was done
-
-**N2 is Done (§11 flipped, v06.94r) — `Network.gs` v01.07g, `Network.html` v01.14w.**
-
-- **`Network.gs`**: `nop=account` (body-POST, `nwAccountOp_` → `nwAccountFullFromPayload_` = the save-path validator + Tags / Newsroom URL / Notes; a rename rewrites `Normalised Name`, refused with `account_name_taken` when another live account holds the key; audit `{ accountId, renamed, tags: count }`); the list op's one widening, `contactCount` per account; `nop=get` on an `a-` id lists the live contacts beneath; `nwAccountPublic_` carries `newsroomUrl`.
-- **`Network.html`**: the **Accounts card** under Contacts (`nwAccountsCard` / `nwAccountRow` / `nwAccountDetail`; its own status line `nwAcctStatus` kept across re-renders), **Edit** through the shared `nwAccountBlock` (lifted out of `nwReviewSection`; the review card is unchanged in appearance), Delete refused with the count via `nwRowMark`, the relative `Profiler.html#<slug>` link (`nwProfilerHref`) on the row / account detail / contact account line (`nwAccountLine`), segments by label (`nwSegments` from `profiler-segments.json`), **Propose a dossier** (`nwProposeDossier`: exact `profiler <Company>` line copied + shown, `dossier-proposed` tag through `nop=account`), the **on-the-record** check (`nwRecordCheck` → `nwProfile(slug)` fetched only on detail open, `nwNameKey` mirror; title mismatch shown as a note), and `nwFolderRenameIfDrifted` inside `nwEnsureAccountFolder` (§6 rename on the next save — also repairs the `AVANTUS` folder once a card is filed under Avantus).
-- **Checkers**: `check-network-schema.py` asserts the D5 validator on both `nop=save` and `nop=account` (allow-list gained `renamed`, `tags`); `verify-network-roles.py` runs the accounts round-trip against the stub and the **served** `abb.profile.json` (two new screenshots). All five checks green.
-- **Docs**: plan §11 N2 → Done; **§13.7 = the E1 brief** (Events scaffold + calendar, two sessions, E0 a stated prerequisite) with its paste-in prompt; schema §3 / §12 / §14; README tree descriptions; CHANGELOG `Sections: 90/100`.
-- The E0 paste-in prompt was handed to the developer in chat at the close (Opus 5 xhigh; §13.4 with its stale "write E1 as §13.6" line corrected — E1 is already §13.7).
-
-### Where we left off
-
-**N2 built and verified on the stub; not yet exercised on the phone.** The phone check to run at v01.14w / v01.07g: an Accounts row for every company from the 20 cards, the Profiler link on a covered account, the `profiler <Company>` line from an uncovered one, the on-the-record title for a contact in a dossier's `decisionMakers[]`, and an account Edit (relationship away from Target/Customer greys the stage). **Next phase is E0** (§13.4, Opus 5 xhigh) — the developer asked for the prompt; then E1 (§13.7).
-
-### Key decisions made
-
-- **The account block is one function** (`nwAccountBlock`): the review card and the account editor must never diverge; `opts.full` adds name / tags / HQ / newsroom / notes.
-- **The dossier is read only when a detail opens** — never on the list paint; cached per slug (`_nwProfiles`) for the page's lifetime. Decision-maker entries carry no `source` field in any shipped profile, so the line cites the dossier's `lastUpdated`.
-- **Folder rename is drift-based**: every filing does one `files.get` and renames when the name differs — stateless, so a Tidy or an edit made in another tab still lands.
-- **The propose hook writes a tag, nothing else**; the clipboard is best-effort and the line is always visible.
-- Meta tag and `html.version.txt` bump together — bumping the meta first caused a one-time reload that doubled the list request in the verifier (caught, fixed).
-
-### Active context
-
-- **Repo version v06.94r**, `CHANGELOG.md` `Sections: 90/100`, twelve dated 2026-09-21 — no rotation due. Network page changelog `14/50`, GAS `7/50`.
-- `pip install playwright` needed in a fresh container; Chromium under `/opt/pw-browsers`. `verify-network-roles.py` ≈ 2 min.
-- **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()`.
-- **§13 numbering:** §13.6 = N2 brief (done), **§13.7 = E1 brief**; E0's §13.4 says "write E1 as §13.6" — stale, E0 writes nothing new in §13; the next free number is §13.8 (the B brief, written by E1 session 2).
-- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Open an Opus 5 xhigh session and paste the E0 prompt** (§13.4 of `NETWORK-EVENTS-DESIGN-PLAN.md`; the version handed over in chat at the close of N2, which notes E1's brief already exists as §13.7) — the registry and roster are E1's hard prerequisite.
-- **To continue:** type `run E0`
