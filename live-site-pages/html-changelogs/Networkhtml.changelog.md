@@ -3,12 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 20/50`
+`Sections: 21/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.21w] — 2026-09-22 07:50:15 PM EST — v07.19r
+
+### Added
+- A **Will be at** line on the account and contact details: the attendance signals Events found or you added, each with its event, kind, confidence and evidence link
 ## [v01.20w] — 2026-09-22 04:20:59 PM EST — v07.17r
 
 ### Fixed

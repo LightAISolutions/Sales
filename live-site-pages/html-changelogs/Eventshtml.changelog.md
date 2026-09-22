@@ -3,12 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.07w] — 2026-09-22 07:50:15 PM EST — v07.19r
+
+### Added
+- **Add a signal** on an event's sheet: pick the account, the kind (a LinkedIn post you read, or a registrant mail from the organiser), paste the link, write one line and rate the confidence — it is saved to the account in Network and shows in the event's recommendation right away. The link is kept as evidence and never opened by the app
+- The **Signals only** pill on the Mine row now works: it narrows the calendar to the upcoming events where one of your accounts has an attendance signal
+- The recommendation's account list names the person where a signal carries one (a speaker, or the person you noted)
+- An **Attendance signals** card on the Proposed tab: whether the weekly sweep is installed, Install signals, Signals now, and a last-swept line
+
+### Changed
+- Clearer messages when a signal cannot be saved (a missing link, a LinkedIn link under the wrong kind, an account that is no longer live)
 ## [v01.06w] — 2026-09-22 05:29:45 PM EST — v07.18r
 
 ### Added

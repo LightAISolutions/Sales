@@ -219,6 +219,8 @@ Only Accounts with `Deleted At` empty and `relationship` ∈ `target` · `custom
 
 Upsert key: (`accountId`, `eventSlug`, `kind`, `evidenceUrl`) — a re-run of the weekly diff refreshes `Last Seen` instead of duplicating the row. `kind` must be in `NW_SIGNAL_KINDS`, `accountId` must exist and be live, `evidenceUrl` must not be a LinkedIn host (rejected with `reason:'linkedin_not_fetched'` — the manual path is the only LinkedIn entry). Rows are written with `Source = events`.
 
+**E4 s1 (`Network.gs` v01.11g):** a LinkedIn host is **accepted when `kind = linkedin-manual`** — Events' manual form is that entry, pasted by the developer and never fetched by either app; every other kind is still rejected. The GET read leg carries `personName` / `personTitle` when the row names a person (a speaker from a roster, a manual row) and omits the keys otherwise, so a company-level row stays ids and evidence. A **session** read exists beside the peer one: `nop=signals` (GET, after `validateSessionForData` + `nwRequire_(sess, 'signals')`) with `accountId`, or `contactId` resolved to its account → `{ success, accountId, contactId, signals:[ { id, accountId, contactId, eventSlug, kind, evidenceUrl, confidence, firstSeen, lastSeen, source, note, personName?, personTitle? } ] }`, newest `Last Seen` first — the account and contact details' one "Will be at" line (`Network.html` v01.21w); the chips with event names over Events' `eop=signals` are N4's. Audit: ids and counts only.
+
 **`nop=today` is not a Network op** — the scan card's Source Event default is read from Events (`eop=today`, `EVENTS-SCHEMA.md` §8) through Network's own proxy after `validateSessionForData`.
 
 ## 9 · The Scraper people route (D17 — decided 2026-09-20)

@@ -6,6 +6,57 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 07:55 PM EST (the session ran ~07:15 → 07:55 PM EST)
+**Repo version:** v07.19r — one push on `claude/dreamy-ride-lt8z21` (E4 session 1 + this session-context write, one commit)
+**Branch:** `claude/dreamy-ride-lt8z21`
+**Model:** Fable 5.1 (E4 session 1 — attendance signals)
+
+### What was done
+
+- **E4 session 1 landed** (`Events.gs` v01.06g · `Events.html` v01.07w · `Network.gs` v01.11g · `Network.html` v01.21w; §11's E4 row → In progress — session 1; §13.13 written with the session-2 paste-in prompt): the weekly sweep `evSignalsRun_` (Tuesday 06:00 ET trigger, `eop=installsignals` / `signalsnow`) over every starred event plus the top ten recommended — Map Your Show through the gallery's JSON proxy (needs only `X-Requested-With: XMLHttpRequest`; RE+ 2026 answers all 1,214 exhibitors in one call, probed live from the session), a2z (fixture-only — no a2z URL in the registry today), the speaker roster (JSON-LD `performer` / HTML cards), the three newswires once per run; every hit matched by the exact normalised-name key (Network's `nwNormaliseCompany_` byte for byte) or the Profiler slug as words, written over the bridge's write leg with kind · confidence · evidence · `firstSeen` (+ the person for a speaker); a failed page one audit row; counts parked in `EV_SIGNALS_LAST`
+- **The manual path** `eop=signal` on the event sheet (account · `linkedin-manual` / `registrant-mail` · link · one line · confidence), the **"Signals only" pill** over the cached score, the person named in the why, the **Attendance signals card** on the Proposed tab
+- **Network's minimal leg (per the brief):** `nwPeerSignalsWrite_` now accepts a LinkedIn host on `linkedin-manual` only (before this it rejected every kind — the manual path could not have landed), the read leg carries the person, `nop=signals` session GET by account or contact, one "Will be at" line on both details
+- **The two developer-approved extras:** the poller's past-date guard (`pastSkipped`; harness case, 67 checks) and `check-events-registry.py`'s `seats` validation (proved to fail on tampered copies)
+- **Harnesses / verifiers:** `scripts/check-events-signals.js` (76 checks; Network's real far side in a second VM context; zero live calls), `check-events-score.js` 70, `check-peer-bridge.js` 61, `check-events-poller.js` 67, `check-events-registry.py` exit 0, `check-readme-tree.py` 0 findings, `verify-events-roles.py` and `verify-network-roles.py` ALL CHECKS PASSED at 390 × 844, zero page errors; the host grep clean on the served page and the `.gs`
+
+### Where we left off
+
+**The developer's live check is next** (§8's done-when, reported not asserted): redeploy Events and Network (both `.gs` changed), open the Proposed tab → Install signals (first `ScriptApp.newTrigger` may ask for the script's own authorisation — accept in the editor and tap again) → Signals now → read the status line (`Swept N events … signals found — written / updated`; `feeds[]` names each feed's status — **GlobeNewswire is unverified from this session's egress**), open RE+ 2026 → the why's "Accounts with a signal" should name every tagged account exhibiting there; then add one manual signal on the sheet and find it on the contact in Network (the "Will be at" line on the contact's detail). **Then E4 session 2** with the §13.13 paste-in prompt (given in chat at the close of this session) — fill in the two live-state brackets first.
+
+### Open findings carried forward
+
+- **RE+ 2026's speaker roster is a Swapcard iframe widget** (`connect.re-plus.events/widget/…/people/…`) — the sweep reads it as `no_roster_found`; reading Swapcard's API would be new scope (a decision, §13.13 says so)
+- **GlobeNewswire's feed URL could not be reached from the session** (HTTP/2 reset / timeout at the proxy) — landed unverified; the first live Signals now answer says whether Google's egress reaches it
+- **Business Wire's "home" channel is broken** on the site's side; the all-news channel parameter `G1QFDERJXkJeEFpRXg==` was found by probing the last byte of the channel value — if it ever answers an error document, re-probe the same way
+- The series key for `RE+` normalises to two letters and is filtered (`< 3` chars) — press matches need the edition name ("RE+ 2026"), which the name key covers
+- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
+- Segment fit rewards narrow audiences — E5 scope if it still bothers the developer
+
+### Key decisions made
+
+- The brief's "minimal Network session leg" was built (four files bumped, not two) because the done-when's "shows on the contact" has no other surface — and because Network's write leg rejected a LinkedIn host on every kind, which would have refused the manual path outright
+- The sweep's last-run state is a script property (counts only), not a tab — §5 says no Events tab for signals
+- The matcher uses exact keys only (normalised name + Profiler slug as words) — "Tesla" never claims "Tesla Power Equipments"
+- Signals now sweeps the pressing admin only; the trigger sweeps every owner with a Stars row
+- Recording-by-manual-link (row 6) left to session 2's brief to decide the kind
+
+### Active context
+
+- **Repo version v07.19r.** `CHANGELOG.md` `Sections: 90/100` — no rotation due
+- **Live versions:** `Events.html` v01.07w · `Events.gs` v01.06g · `Network.html` v01.21w · `Network.gs` v01.11g
+- **Reminders still open** (developer's own — untouched): close out "Repo access denied" (the evidence exists; the old desk is deleted); the Megmeet briefing after the Network/Events build, before 2026-10-07
+- **C2 Routine** fires Wednesday 2026-09-23 11:00 UTC — parallel pushes possible; check `git ls-remote` before pushing
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Do the live check first (redeploy both apps, Install signals, Signals now, read RE+ 2026's accounts, one manual signal found on the contact in Network), then run E4 session 2 with the §13.13 paste-in prompt — its two bracketed live-state fields filled from the panel's Signals now line.
+- **To continue:** type `run E4 session 2 from §13.13`
+
+## Previous Sessions
+
+### Session — 2026-09-22 06:55 PM EST (E3 live judgment, pre-E4 checks)
+
 **Date:** 2026-09-22 06:55 PM EST (the session ran ~05:55 → 07:05 PM EST)
 **Repo version:** v07.18r — no version bump; one housekeeping push on `claude/ecstatic-maxwell-oticzd` (this session-context write only)
 **Branch:** `claude/ecstatic-maxwell-oticzd`
@@ -51,56 +102,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run E4 session 1 with the revised prompt (Fable 5.1 High, one session, one push): the weekly signals sweep, the manual signal form, the "Signals only" pill, `scripts/check-events-signals.js`, plus the poller past-date guard and the seats-id check; flip §11's E4 row to In progress — session 1 and write §13.13.
 - **To continue:** type `run E4 session 1 from §13.12 with the two extras`
 
-## Previous Sessions
-
-### Session — 2026-09-22 05:30 PM EST (E3 build)
-
-**Date:** 2026-09-22 05:30 PM EST (the session ran ~05:12 → 05:35 PM EST)
-**Repo version:** v07.18r — one push on `claude/festive-noether-7wb1zr`, one commit (this session-context write rides in it)
-**Branch:** `claude/festive-noether-7wb1zr`
-**Model:** Fable 5.1 (E3 build session, §13.11)
-
-### What was done
-
-**E3 — the recommendation score — built end to end, one push (v07.18r; `Events.html` v01.06w, `Events.gs` v01.05g).**
-
-- **`Events.gs` `eop=recommend`** (`evRecommend_`, behind `recommend`): the six §6 terms computed server-side over the upcoming registry from Network's scored accounts once over the bridge, each account's signals over the read leg (capped at 40, `signalsCapped`), the seats' segment sets from `profiler-segments.json` → `seats`, the dossier `lastUpdated` dates from `profiler-companies.json` for the salience decay (calendar months, 12-month half-life), `mentions[]`, and the owner's registered / attended stars for the conflict term (an event's own star never conflicts with itself). `evTuning_` seeds the empty `Tuning` tab once (six weights + a `regions` row, a Note each) and reads it on every score; a malformed or missing weight defaults and is named. `not_configured` degrades (`notConfigured: true`, `accountPresence` 0, everything else computed); an unreadable Pages file zeroes its term and is named under `unavailable[]`. Audit counts only
-- **`Events.html`**: the **Recommended** pill on the Mine row (every press fetches — a Tuning edit needs no deploy) ranks the agenda into one "Recommended" section with rank + score chip per row; the sheet's placeholder became the **why panel** — score and rank, six term bars with weights and signed contributions, accounts by name (relationship, stage, stage weight, signal kind, confidence, evidence link), matched segments, mention chips into Profiler, starred conflicts as links, the Tuning line. Fetched on demand only: the pill, a sheet opened before any score, return to the tab or a star write while ranked
-- **`profiler-segments.json` gained a `seats` block** — the one judgment call of the session. §12.6 says the seats' segments are "read from `profiler-segments.json` at run time, never a copy", but the file carried no seat → segment mapping; the two seats' buyer segments are taken from `C5-SALES-SIMULATIONS-DESIGN.md` §9's inventory (storage-seller: developers and IPPs, utilities, capital, assurance, insurance; aidc-power-seller: landlords, hyperscalers, EPC, neoclouds, utilities — union of nine). Documented in `PROFILER-SCHEMA.md`. **The developer should confirm the two sets** — a segment added or removed there changes `segmentFit` for every event
-- **`scripts/check-events-score.js`** — 70 checks, every term hand-computed on three fixture events; **`scripts/verify-events-roles.py`** — the Recommended pass (one request, re-ordered rows with chips, the why names the stub account and its evidence link, unpress restores the months); zero page errors at 390 × 844
-- Docs: `EVENTS-SCHEMA.md` §5 / §6 / §12, `PROFILER-SCHEMA.md` seats row, design plan §11 E3 → **Done — v07.18r**, **§13.12 written** (the E4 brief, three sessions, with session 1's paste-in prompt), README tree, the three changelogs
-
-### Where we left off
-
-**E3 is built and verified offline; it is NOT yet judged live.** The hand-off the brief asks for is the developer's: redeploy `Events.gs` (`pullAndDeployFromGitHub` from the editor's Run dropdown — never Deploy → New deployment), open Events, press **Recommended**, open the top five and judge each *why* line by line against their own account list, then change one weight in the `Tuning` tab of the Events spreadsheet and press again. Until both peer tokens are set on the live deployments the panel reads "connect Network to score by account" and `accountPresence` is 0 — the list still ranks on the other five terms. **`accountPresence` is mostly 0 until E4 lands** (only Network's manual signals feed it) — this is expected, not a defect. **E4 session 1 is next — §13.12**; its paste-in prompt was given in chat at the close of this session.
-
-### Open findings carried forward (not E3's, not fixed)
-
-- **The poller proposes editions that have already happened** (from the v07.17r session): `evPollSource_`'s item loop has no past-date guard for the `new-event` / `new-edition` kinds; ~5 lines + a harness case in E2 scope. The 33-row queue very likely holds history to hand-reject. Fix in a small E2-scope session or fold into E4 session 1 only if the developer says so
-- **`pullAndDeployFromGitHub` returns its outcome and never logs it** — fleet-wide TEMPLATE papercut, deliberately not fixed ([PC-TEMPLATE-PROP] #19 would make it a 10-project push)
-
-### Key decisions made
-
-- **The seat → segment map lives in `profiler-segments.json`, not in Events** — §12.6 forbids a copy; the alternative (a tier rule: demand + services) differs from the C5 inventory by two segments (adds software, drops EPC) and was rejected as a silent substitution
-- **`monthsSinceNewestMention` is calendar months from the newest mentioning dossier's `lastUpdated`** — `mentions[]` carries no date; the companies registry is the only dated public layer that maps a slug to a revision
-- **Same-country for `proximity` is derived from the registry** (the country of every event carrying a preferred region) rather than a second Tuning row — an empty `regions` row scores 0 everywhere, per §5.4's "optional"
-- **One account counts once, at its strongest signal**, in `accountPresence` — otherwise an exhibitor + speaker pair for one account would double-count
-- **`channel` scores as a partner (0.5)**; a `target` past `none` (`post-award` / `won` / `lost`) scores 0.4 — the §6 table named neither; both are now written into §6
-- **Every press of the pill fetches** — the done-when is "changing a weight reorders them without a deploy", so caching across presses would hide the change
-- **Session context folded into the single push** — the prompt said "one push … and remember session"; a second push would have had to wait for the auto-merge to delete the branch
-
-### Active context
-
-- **Repo version v07.18r.** `CHANGELOG.md` `Sections: 89/100` — no rotation due (rotation at >100)
-- **Live versions after deploy:** `Events.html` v01.06w · `Events.gs` v01.05g · `Network.html` v01.20w · `Network.gs` v01.10g
-- **Peer tokens** `EVENTS_PEER_TOKEN` / `NETWORK_PEER_TOKEN` — same value on both deployments; still unverified by any session. E3 degrades without them; E4 session 1's write leg needs them
-- **Playwright** is `pip install playwright` + the pre-installed Chromium at `/opt/pw-browsers`. Per-container
-- **Reminders still open** (developer's own — untouched): close out the "Repo access denied" issue and rebuild C2 before **Wednesday 2026-09-23 04:00 PDT**; the Megmeet briefing after the Network/Events build, before 2026-10-07
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Judge E3 live first (redeploy, press Recommended, the top five line by line, one weight change) — then run E4 session 1 from §13.12: the weekly signals sweep (Map Your Show / a2z exhibitor diff, speaker roster, the three newswire feeds), the manual signal form, the "Signals only" pill, `scripts/check-events-signals.js` and the verifier's signals pass; flip §11's E4 row to In progress — session 1 and write §13.13. **Fable 5.1 High, one session, one push.**
-- **To continue:** type `run E4 session 1 from §13.12`
-
-
+Developed by: LightAISolutions

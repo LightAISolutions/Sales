@@ -4,7 +4,10 @@
 Checks `live-site-pages/events-data/events.json` against
 `events-sources.json`, `profiler-data/profiler-segments.json` and
 `profiler-data/profiler-companies.json`, and walks the published `events.ics`
-(built by `scripts/build-events-ics.py`) against the registry.
+(built by `scripts/build-events-ics.py`) against the registry. Since E4 s1 it
+also validates `profiler-segments.json` -> `seats` (the score's seat segments):
+both seat keys present, every seat segment id in `segments[].id`, no
+duplicate id within a seat.
 
   python3 scripts/check-events-registry.py              # exit 1 on any finding
   python3 scripts/check-events-registry.py --fix-past    # flip stale status only
@@ -91,9 +94,44 @@ def company_slugs():
     return {p.name[: -len(".profile.json")] for p in PROFILER.glob("*.profile.json")}
 
 
-def segment_ids():
-    data = load(SEGMENTS)
+def segment_ids(data=None):
+    data = load(SEGMENTS) if data is None else data
     return {s["id"] for s in data.get("segments", [])}
+
+
+SEAT_KEYS = ("storage-seller", "aidc-power-seller")
+
+
+def check_seats(segments_doc, ids, f):
+    """`seats` rules (E4 s1, developer-approved 2026-09-22): both seat keys
+    present, each with a non-empty `segments[]`; every id in `segments[].id`;
+    no duplicate id within one seat. Returns the count of seat segment ids."""
+    seats = segments_doc.get("seats")
+    if not isinstance(seats, dict):
+        f("profiler-segments.json:seats", "missing or not an object — the score reads its seat segments here")
+        return 0
+    n = 0
+    for key in SEAT_KEYS:
+        at = f"profiler-segments.json:seats.{key}"
+        if key not in seats:
+            f(at, "seat missing")
+            continue
+        segs = (seats[key] or {}).get("segments") if isinstance(seats[key], dict) else None
+        if not isinstance(segs, list) or not segs:
+            f(at, "segments[] missing or empty")
+            continue
+        seen = set()
+        for s in segs:
+            if s not in ids:
+                f(at, f"segment id {s!r} is not in segments[].id")
+            if s in seen:
+                f(at, f"duplicate segment id {s!r} within the seat")
+            seen.add(s)
+            n += 1
+    for key in seats:
+        if key not in SEAT_KEYS:
+            f(f"profiler-segments.json:seats.{key}", "unknown seat key (the score reads storage-seller and aidc-power-seller)")
+    return n
 
 
 def check_roster(roster, f):
@@ -333,8 +371,11 @@ def main():
     today = datetime.date.today().isoformat()
     f = Findings()
     check_roster(roster, f)
-    fixed = check_events(registry, roster, segment_ids(), company_slugs(), today, f, args.fix_past)
+    segments_doc = load(SEGMENTS)
+    ids = segment_ids(segments_doc)
+    fixed = check_events(registry, roster, ids, company_slugs(), today, f, args.fix_past)
     vevents = check_ics(registry, f)
+    seat_ids = check_seats(segments_doc, ids, f)
 
     # orphan roster rows are a warning surface, not a finding: a blocked row is
     # kept on purpose so it is never re-proposed, even with no event citing it.
@@ -366,6 +407,8 @@ def main():
               f"{len([e for e in ev if e.get('mentions')])} events")
         print(f"OK  events.ics parses and agrees with the registry: {vevents} VEVENT(s), "
               f"one per confirmed event")
+        print(f"OK  profiler-segments.json seats: both seats present, {seat_ids} segment ids, "
+              f"all in segments[].id, none duplicated within a seat")
         if orphans:
             print(f"note  {len(orphans)} roster row(s) cited by no event "
                   f"(expected for blocked rows kept so they are not re-proposed): "

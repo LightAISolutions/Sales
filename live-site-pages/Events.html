@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.06w">
+  <meta name="build-version" content="v01.07w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -522,6 +522,10 @@
     .ev-btn[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
     #ev-sheet .ev-own { border-top: 1px solid var(--ev-line); padding-top: 12px; }
     #ev-sheet .ev-own .ev-lbl { display: block; font: 11px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); margin: 0 0 4px; }
+    #ev-sheet .ev-sigform { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--ev-line); }   /* E4: the manual signal form */
+    #ev-sheet .ev-sigform .ev-input { margin-bottom: 8px; }
+    #ev-sheet .ev-why-person { color: var(--ev-ink); }
+    .ev-sig-last { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 8px 0 0; }
     .ev-pills.ev-scroll { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
     #ev-header .ev-nowmonth { font: 12px/1.4 var(--ev-mono); color: var(--ev-accent); letter-spacing: .06em; }
     .ev-month.is-current { color: var(--ev-gold); }
@@ -4547,6 +4551,13 @@ function evErrText(err) {
   if (err === 'already_applied') return 'That row was already marked applied — it cannot be changed.';
   if (err === 'bad_version') return 'The version must look like v07.15r — the one the sync printed.';
   if (err === 'not_found') return 'That proposal is no longer in the queue. Refresh.';
+  if (err === 'bad_account_id') return 'Pick the account the signal is about.';
+  if (err === 'bad_kind') return 'Pick the kind of signal.';
+  if (err === 'evidence_required') return 'Paste the link the signal comes from (https://…).';
+  if (err === 'bad_confidence') return 'Rate the confidence between 0 and 1.';
+  if (err === 'linkedin_not_fetched') return 'A LinkedIn link is accepted only as a LinkedIn post you read yourself — pick that kind.';
+  if (err === 'account_not_found') return 'That account is no longer live in Network. Reopen the sheet to refresh the list.';
+  if (err === 'upstream_unreachable' || err === 'upstream_empty' || /^upstream_/.test(String(err || ''))) return 'Network did not answer (' + err + '). Try again in a moment.';
   return 'Could not complete that (' + (err || 'unknown') + ').';
 }
 function evEl(tag, cls, text) {
@@ -4643,8 +4654,9 @@ function evStarred(slug) { return !!_evStars[slug]; }
 // ── Filters (§5.3): kind, region, audience segment, starred, "signals only" ──
 // Region pills are built from the registry itself (the state codes that carry
 // three or more events, plus "Abroad" for anything outside the US); the
-// segment pills read profiler-segments.json. "Signals only" is PRESENT BUT
-// DISABLED — it needs the attendance signals E4 writes, so the pill says so.
+// segment pills read profiler-segments.json. "Signals only" (E4) filters to
+// the events whose cached score names an account with a signal — it fetches
+// the score once when none is cached and never adds an op of its own.
 function evRegionOptions() {
   var count = {}, abroad = 0;
   _evEvents.forEach(function(e) {
@@ -4664,6 +4676,7 @@ function evMatches(e) {
   else if (f.region && e.region !== f.region) return false;
   if (f.segment && (e.audience || []).indexOf(f.segment) < 0) return false;
   if (f.starred && !evStarred(e.slug)) return false;
+  if (f.signals && !evHasSignal(e.slug)) return false;   // E4: over the cached score's why.accounts[] — no new op
   return true;
 }
 function evPill(label, pressed, onTap, opts) {
@@ -4702,7 +4715,11 @@ function evFiltersCard() {
     rec.id = 'ev-f-rec'; rec.title = 'Rank the upcoming events by the recommendation score — open one for the why';
     mine.appendChild(rec);
   }
-  mine.appendChild(evPill('Signals only', false, function() {}, { disabled: true, note: 'from E4', title: 'Attendance signals arrive with E4 — this filter is switched on then' }));
+  if (evRecAllowed()) {   // E4 — filters to the events whose cached score names an account with a signal; fetches the score once when none is cached
+    var sig = evPill('Signals only', _evFilters.signals, function() { evSignalsToggle(sig); });
+    sig.id = 'ev-f-signals'; sig.title = 'Only the upcoming events where a Network account has an attendance signal';
+    mine.appendChild(sig);
+  }
   var today = evPill('Today', false, function() { evScrollToToday(); });
   today.id = 'ev-f-today';
   mine.appendChild(today);
@@ -4909,6 +4926,31 @@ function evRecStatusLine() {
   if ((r.unavailable || []).length) parts.push('could not read: ' + r.unavailable.join(', '));
   return parts.join(' · ');
 }
+// E4 — "Signals only": the cached score's why.accounts[] is the signal set
+// (one fetch when nothing is cached; a Tuning edit or a manual signal
+// refetches through the same path). Never a poll, never a new op.
+function evHasSignal(slug) { var s = _evRecBySlug[slug]; return !!(s && s.why && s.why.accounts && s.why.accounts.length); }
+function evSignalsStatusLine() {
+  var n = 0; (_evRec && _evRec.events || []).forEach(function(s) { if (s.why && s.why.accounts && s.why.accounts.length) n++; });
+  return 'Signals on ' + n + ' upcoming event' + (n === 1 ? '' : 's') + (_evRec && _evRec.notConfigured ? ' · Network not connected' : '');
+}
+function evSignalsToggle(btn) {
+  _evFilters.signals = !_evFilters.signals;
+  if (btn) btn.setAttribute('aria-pressed', _evFilters.signals ? 'true' : 'false');
+  if (!_evFilters.signals || _evRec) { if (_evFilters.signals) evSetStarsStatus(evSignalsStatusLine(), _evRec.notConfigured ? '' : 'ok'); evRender(); return; }
+  if (btn) btn.dataset.busy = '1';
+  evSetStarsStatus('Reading the signals…', '');
+  evLoadRecommend(function(okay) {
+    if (btn) delete btn.dataset.busy;
+    if (!okay) {
+      evSetStarsStatus(evErrText(_evRecState), _evRecState === 'not_configured' ? '' : 'err');
+      _evFilters.signals = false; if (btn) btn.setAttribute('aria-pressed', 'false');
+      evRender(); return;
+    }
+    evSetStarsStatus(evSignalsStatusLine(), _evRec.notConfigured ? '' : 'ok');
+    evRender();
+  });
+}
 function evScoreChip(e) {
   var s = _evRecBySlug[e.slug];
   if (!s) return null;
@@ -4978,11 +5020,12 @@ function evPaintWhy(box, e) {
       li.appendChild(document.createTextNode(' · ' + (a.relationship || '') + (a.stage ? ' · ' + a.stage : '') + ' (× ' + Number(a.stageWeight || 0).toFixed(1) + ') · '));
       var sig = a.signal || {};
       li.appendChild(document.createTextNode((sig.kind || 'signal') + ' ' + Number(sig.confidence || 0).toFixed(2) + ' '));
+      if (sig.personName) li.appendChild(evEl('span', 'ev-why-person', sig.personName + (sig.personTitle ? ', ' + sig.personTitle : '') + ' '));   // E4: the person a roster or manual signal names
       if (sig.evidenceUrl) li.appendChild(evLink(sig.evidenceUrl, 'evidence ↗'));
       ul.appendChild(li);
     });
     box.appendChild(ul);
-  } else if (!_evRec.notConfigured) box.appendChild(evEl('div', 'ev-netnote', 'No Network account has a signal for this event yet — signals arrive with E4 and through Network\'s manual capture.'));
+  } else if (!_evRec.notConfigured) box.appendChild(evEl('div', 'ev-netnote', 'No Network account has a signal for this event yet — the weekly sweep and the signal form above add them.'));
   if ((why.segments || []).length) {
     box.appendChild(evEl('div', 'ev-lbl', 'Segments in your seats'));
     box.appendChild(evEl('div', 'ev-why-segs', why.segments.map(function(id) { return _evSegmentName[id] || id; }).join(' · ')));
@@ -5274,7 +5317,89 @@ function evOwnBlock(e) {
   });
   own.appendChild(save);
   own.appendChild(status);
+  if (evCan('signals')) own.appendChild(evSignalForm(e));   // E4: the manual path
   return own;
+}
+// E4 — the manual signal form (design plan §5.5.1 rows 11 and 13): the
+// developer's own LinkedIn read or an organiser's registrant mail, typed in —
+// account (from eop=netaccounts, fetched once and cached), kind, the link,
+// one line, a rated confidence — and written through eop=signal over the
+// bridge's write leg. Nothing here fetches the link. While the two apps are
+// not linked the form says so and stays disabled (degrades, never fails).
+var EV_SIGNAL_MANUAL_KINDS = [['linkedin-manual', 'LinkedIn post you read'], ['registrant-mail', 'Registrant mail from the organiser']];
+var EV_SIGNAL_CONFIDENCES = [['0.9', '0.9 — they said so themselves'], ['0.8', '0.8 — a reliable second-hand read'], ['0.7', '0.7 — likely'], ['0.6', '0.6 — a hint'], ['0.5', '0.5 — a guess']];
+var _evNetAccounts = null;   // the last eop=netaccounts answer, kept for the session
+function evLoadNetAccounts(cb) {
+  if (_evNetAccounts) { cb(_evNetAccounts); return; }
+  evApi('netaccounts', {}, function(res) { if (res && res.success) _evNetAccounts = res; cb(res); });
+}
+function evSignalForm(e) {
+  var box = evEl('div', 'ev-sigform'); box.id = 'ev-sigform';
+  box.appendChild(evEl('span', 'ev-lbl', 'Add a signal'));
+  box.appendChild(evEl('p', 'ev-note', 'Something you read or received that says a Network account will be at this show — a LinkedIn post you saw, or a registrant mail from the organiser. Paste the link, write one line, rate it. The link is kept as evidence and never fetched.'));
+  var row = evEl('div', 'ev-controls');
+  var h1 = evEl('div', 'ev-half'); h1.appendChild(evEl('span', 'ev-lbl', 'Account'));
+  var acc = evEl('select', 'ev-select'); acc.id = 'ev-sig-account';
+  var op0 = evEl('option', null, 'Loading accounts…'); op0.value = ''; acc.appendChild(op0);
+  h1.appendChild(acc);
+  var h2 = evEl('div', 'ev-half'); h2.appendChild(evEl('span', 'ev-lbl', 'Kind'));
+  var kind = evEl('select', 'ev-select'); kind.id = 'ev-sig-kind';
+  EV_SIGNAL_MANUAL_KINDS.forEach(function(k) { var op = evEl('option', null, k[1]); op.value = k[0]; kind.appendChild(op); });
+  h2.appendChild(kind);
+  row.appendChild(h1); row.appendChild(h2); box.appendChild(row);
+  box.appendChild(evEl('span', 'ev-lbl', 'Link'));
+  var url = evEl('input', 'ev-input'); url.id = 'ev-sig-url'; url.type = 'url'; url.maxLength = 500; url.placeholder = 'https://… the post, or the mail\'s web copy'; url.autocomplete = 'off';
+  box.appendChild(url);
+  box.appendChild(evEl('span', 'ev-lbl', 'One line'));
+  var note = evEl('input', 'ev-input'); note.id = 'ev-sig-note'; note.type = 'text'; note.maxLength = 500; note.placeholder = 'What it said — who is going, the booth, the session…'; note.autocomplete = 'off';
+  box.appendChild(note);
+  var row2 = evEl('div', 'ev-controls');
+  var h3 = evEl('div', 'ev-half'); h3.appendChild(evEl('span', 'ev-lbl', 'Confidence'));
+  var conf = evEl('select', 'ev-select'); conf.id = 'ev-sig-conf';
+  EV_SIGNAL_CONFIDENCES.forEach(function(c) { var op = evEl('option', null, c[1]); op.value = c[0]; if (c[0] === '0.8') op.selected = true; conf.appendChild(op); });
+  h3.appendChild(conf);
+  var h4 = evEl('div', 'ev-half'); h4.appendChild(evEl('span', 'ev-lbl', 'Then'));
+  var add = evEl('button', 'ev-btn ev-btn-primary', 'Add signal'); add.type = 'button'; add.id = 'ev-sig-add';
+  h4.appendChild(add);
+  row2.appendChild(h3); row2.appendChild(h4); box.appendChild(row2);
+  var status = evEl('div', 'ev-status'); status.id = 'ev-sig-status'; box.appendChild(status);
+  var setStatus = function(text, level) { status.textContent = text || ''; status.className = 'ev-status' + (level ? ' ev-status-' + level : ''); };
+  evLoadNetAccounts(function(res) {
+    acc.innerHTML = '';
+    if (!(res && res.success)) {
+      var opx = evEl('option', null, res && res.error === 'not_configured' ? 'Network not connected' : 'Accounts unavailable'); opx.value = ''; acc.appendChild(opx);
+      add.setAttribute('aria-disabled', 'true');
+      setStatus(res && res.error === 'not_configured' ? 'Connect Network to add signals — the two apps are not linked yet.' : evErrText(res && res.error), res && res.error === 'not_configured' ? '' : 'err');
+      return;
+    }
+    var list = (res.accounts || []).slice().sort(function(a, b) { return String(a.name || '').toLowerCase() < String(b.name || '').toLowerCase() ? -1 : 1; });
+    var opp = evEl('option', null, list.length ? '— pick an account —' : 'No accounts in Network yet'); opp.value = ''; acc.appendChild(opp);
+    list.forEach(function(a) { var op = evEl('option', null, (a.name || a.id) + (a.relationship ? ' · ' + a.relationship : '') + (a.stage && a.stage !== 'none' ? ' · ' + a.stage : '')); op.value = a.id; acc.appendChild(op); });
+    if (!list.length) add.setAttribute('aria-disabled', 'true');
+  });
+  add.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    if (add.getAttribute('aria-disabled') === 'true') return;
+    if (!acc.value) { setStatus(evErrText('bad_account_id'), 'err'); acc.focus(); return; }
+    if (!/^https?:\/\/\S+$/i.test(url.value.trim())) { setStatus(evErrText('evidence_required'), 'err'); url.focus(); return; }
+    var params = { slug: e.slug, accountId: acc.value, kind: kind.value, evidenceUrl: url.value.trim(), note: note.value.trim(), confidence: conf.value };
+    add.textContent = 'Adding…'; add.setAttribute('aria-disabled', 'true'); setStatus('Writing the signal to Network…');
+    evApiBody('signal', params, function(res) {
+      add.textContent = 'Add signal'; add.removeAttribute('aria-disabled');
+      if (!(res && res.success)) { setStatus(evErrText(res && res.error), 'err'); return; }
+      if ((res.rejected || []).length) { setStatus(evErrText(res.rejected[0].reason), 'err'); return; }
+      var name = (acc.options[acc.selectedIndex] || {}).textContent || acc.value;
+      setStatus((res.updated ? 'Updated the existing signal' : 'Saved') + ' — ' + name.split(' · ')[0] + ' · ' + kind.value + ' · ' + conf.value + '. It shows on the account and its contacts in Network, and in this event\'s why.', 'ok');
+      url.value = ''; note.value = '';
+      // the score reads the new row back: refetch while ranked or filtered, and repaint this sheet's why
+      evLoadRecommend(function() {
+        if (_evRecMode || _evFilters.signals) evRender();
+        var w = document.getElementById('ev-why');
+        if (w && _evSheetSlug === e.slug) { w.innerHTML = ''; w.appendChild(evEl('div', 'ev-lbl', 'Recommendation')); evPaintWhy(w, e); }
+      });
+    });
+  });
+  return box;
 }
 
 // PROJECT: ── Subscribe — the published calendar (session 2, §13.7 step 5) ──
@@ -5549,7 +5674,7 @@ function evPropRow(p) {
   row.appendChild(status);
   return row;
 }
-function evPollButton(id, label, eop, statusEl, busyText, doneText) {
+function evPollButton(id, label, eop, statusEl, busyText, doneText, statusId) {
   var b = evEl('button', 'ev-btn', label); b.type = 'button'; b.id = id;
   b.addEventListener('click', function(ev) {
     ev.preventDefault();
@@ -5558,10 +5683,44 @@ function evPollButton(id, label, eop, statusEl, busyText, doneText) {
     evApiBody(eop, {}, function(res) {
       b.removeAttribute('aria-disabled');
       if (!(res && res.success)) { evPropStatus(statusEl, evErrText(res && res.error), 'err'); return; }
-      evReloadWith('ev-poll-status', doneText(res), 'ok');
+      evReloadWith(statusId || 'ev-poll-status', doneText(res), 'ok');
     });
   });
   return b;
+}
+// E4 — the sweep's card on the Proposed tab: trigger state, Install signals,
+// Signals now and the last-swept line (counts only — the rows themselves live
+// in Network). Rendered from the same eop=proposed answer as the poller card.
+function evSignalsCard(d) {
+  var sc = evEl('div', 'ev-card'); sc.id = 'ev-sigcard';
+  sc.appendChild(evEl('h2', null, 'Attendance signals'));
+  var st = d ? d.signals : null, inst = st ? st.installed : null;
+  sc.appendChild(evEl('p', null, 'Once a week, the day after the poller, the backend reads the exhibitor directory and the speaker roster of every starred event and the top ten recommended, and watches the three newswires for your target, customer and partner accounts. Every hit becomes a signal on the account in Network — the score and each event\'s why read them back. Nothing is fetched from a professional network or a registrant list; those come in by hand on the event sheet.'));
+  var line = evEl('div', 'ev-statusline');
+  line.appendChild(evEl('span', 'ev-badge' + (inst === true ? ' ev-badge-confirmed' : inst === false ? ' ev-badge-tentative' : ''),
+    inst === true ? 'weekly sweep installed' : inst === false ? 'sweep not installed' : 'sweep state unknown'));
+  sc.appendChild(line);
+  var sst = evEl('div', 'ev-status'); sst.id = 'ev-sig-cardstatus';
+  var sa = evEl('div', 'ev-actions');
+  sa.appendChild(evPollButton('ev-sig-install', inst === true ? 'Reinstall signals' : 'Install signals', 'installsignals', sst, 'Installing…',
+    function(res) { return 'Installed — ' + (res.schedule || 'weekly') + (res.removed ? ' (replaced ' + res.removed + ')' : '') + '.'; }, 'ev-sig-cardstatus'));
+  sa.appendChild(evPollButton('ev-sig-now', 'Signals now', 'signalsnow', sst, 'Sweeping the starred and recommended events — up to a few minutes…',
+    function(res) {
+      if (res.notConfigured) return 'Network is not connected — nothing could be written. Set the peer tokens on both apps and try again.';
+      return 'Swept ' + res.events + ' event' + (res.events === 1 ? '' : 's') + ' (' + res.pages + ' page' + (res.pages === 1 ? '' : 's') + ' read, ' + res.pagesFailed + ' failed, ' + (res.feeds || []).length + ' feed' + ((res.feeds || []).length === 1 ? '' : 's') + '): '
+        + res.found + ' signal' + (res.found === 1 ? '' : 's') + ' found — ' + res.written + ' written, ' + res.updated + ' updated, ' + res.rejected + ' rejected'
+        + (res.writeError ? ' · write failed: ' + res.writeError : '') + (res.stopped ? ' — stopped at the time budget, the rest next run' : '') + '.';
+    }, 'ev-sig-cardstatus'));
+  sc.appendChild(sa);
+  sc.appendChild(sst);
+  var last = st && st.last, ll = evEl('div', 'ev-sig-last'); ll.id = 'ev-sig-last';
+  if (last && last.ranAt) {
+    ll.textContent = 'Last swept ' + String(last.ranAt).slice(0, 10) + ' · ' + last.events + ' event' + (last.events === 1 ? '' : 's') + ' · ' + last.found + ' signal' + (last.found === 1 ? '' : 's') + ' found · '
+      + last.written + ' written · ' + last.updated + ' updated' + (last.rejected ? ' · ' + last.rejected + ' rejected' : '') + (last.pagesFailed ? ' · ' + last.pagesFailed + ' page' + (last.pagesFailed === 1 ? '' : 's') + ' failed' : '')
+      + (last.notConfigured ? ' · Network not connected' : '') + (last.writeError ? ' · write failed: ' + last.writeError : '') + (last.stopped ? ' · stopped at the time budget' : '') + '.';
+  } else ll.textContent = d ? 'Not swept yet — tap Signals now for the first sweep.' : '';
+  sc.appendChild(ll);
+  return sc;
 }
 function evRenderProposed() {
   var wrap = document.getElementById('ev-proposed');
@@ -5605,6 +5764,7 @@ function evRenderProposed() {
     pc.appendChild(ul);
   } else if (d) pc.appendChild(evEl('p', 'ev-note', 'No poll has run yet — tap Poll now for the first walk.'));
   wrap.appendChild(pc);
+  wrap.appendChild(evSignalsCard(d));   // E4
   if (!d) return;
   var rows = d.proposals || [];
   var approved = rows.filter(function(p) { return p.status === 'approved'; }), pending = rows.filter(function(p) { return p.status === 'pending'; });
@@ -5754,7 +5914,7 @@ function evAfterWrite() {
   evLoadStars(function() {
     // E3: a star can change the conflict term — refetch while the list is
     // ranked, otherwise drop the cache so the next sheet fetches afresh
-    if (_evRecMode) evLoadRecommend(function() { evRender(); if (_evSheetSlug) evOpenSheet(_evSheetSlug); });
+    if (_evRecMode || _evFilters.signals) evLoadRecommend(function() { evRender(); if (_evSheetSlug) evOpenSheet(_evSheetSlug); });
     else { _evRec = null; _evRecBySlug = {}; _evRecState = 'idle'; evRender(); }
   });
 }

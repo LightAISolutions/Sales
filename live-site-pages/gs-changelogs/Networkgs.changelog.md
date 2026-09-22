@@ -3,12 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.11g] — 2026-09-22 07:50:15 PM EST — v07.19r
+
+### Added
+- Reading an account's (or a contact's account's) attendance signals for the detail cards
+
+### Changed
+- A LinkedIn link is accepted as an attendance signal only as a post you read yourself; every other kind of signal still refuses one
+- Signal reads carry the person's name and title where a signal names one
 ## [v01.10g] — 2026-09-22 07:15:53 AM EST — v07.14r
 
 ### Added

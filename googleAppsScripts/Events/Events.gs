@@ -1,4 +1,4 @@
-var VERSION = "v01.05g";
+var VERSION = "v01.06g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -719,6 +719,14 @@ function handleEventsOp_(e) {
     // E3 — the recommendation score, behind the `recommend` capability
     // (EVENTS-SCHEMA.md §6); computed here from bridge data, never in the page.
     if (op === 'recommend') { evRequire_(sess, 'recommend', 'events_recommend'); return evRecommend_(sess); }
+    // E4 session 1 — the weekly sweep's controls and the manual signal, all
+    // behind the `signals` capability (design plan D7: on both sides).
+    // signalsnow runs the sweep as the admin who pressed it, for that admin
+    // only; installsignals is idempotent; signal writes one typed row over
+    // the bridge's write leg.
+    if (op === 'installsignals') { evRequire_(sess, 'signals', 'events_installsignals'); return evInstallSignals_(sess); }
+    if (op === 'signalsnow') { evRequire_(sess, 'signals', 'events_signalsnow'); return evSignalsRun_(sess.email, [sess.email]); }
+    if (op === 'signal') { evRequire_(sess, 'signals', 'events_signal'); return evSignalManual_(sess, p); }
     return { success: false, error: 'unknown_events_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -2749,8 +2757,10 @@ function evPeerSignals_(p) {
   for (var i = 0; i < rows.length; i++) {
     var s = rows[i] || {};
     var ev = (!reg.error && reg.bySlug[String(s.eventSlug || '')]) || null;
-    out.push({ eventSlug: String(s.eventSlug || ''), name: ev ? String(ev.name || '') : '', start: ev ? String(ev.start || '') : '',
-               kind: String(s.kind || ''), confidence: Number(s.confidence) || 0, evidenceUrl: String(s.evidenceUrl || '') });
+    var o = { eventSlug: String(s.eventSlug || ''), name: ev ? String(ev.name || '') : '', start: ev ? String(ev.start || '') : '',
+              kind: String(s.kind || ''), confidence: Number(s.confidence) || 0, evidenceUrl: String(s.evidenceUrl || '') };
+    if (s.personName) { o.personName = String(s.personName); if (s.personTitle) o.personTitle = String(s.personTitle); }
+    out.push(o);
   }
   auditLog('data_read', owner, 'peer_signals', { accountId: accountId, signals: out.length });
   return { success: true, signals: out };
@@ -3144,7 +3154,8 @@ function evPollSource_(row, reg, tabs, existing, taken, seenAt) {
     var srcs = reg.bySlug[s].sources || [];
     for (var k = 0; k < srcs.length; k++) if (String(srcs[k].sourceKey || '') === key) { citing.push(reg.bySlug[s]); break; }
   }
-  var toWrite = [];
+  var toWrite = [], today = evTodayIn_('');
+  res.pastSkipped = 0;
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
     if (item.start > res.newest) res.newest = item.start;
@@ -3153,6 +3164,11 @@ function evPollSource_(row, reg, tabs, existing, taken, seenAt) {
     for (var d = 0; d < diffs.length; d++) {
       var diff = diffs[d];
       if (!EV_SLUG_RE.test(diff.slug)) continue;
+      // E4 s1 (developer-approved 2026-09-22): an edition or event whose dates
+      // have already passed is never proposed — a feed that still lists last
+      // year's show would otherwise queue a row the developer can only reject.
+      if ((diff.change === 'new-event' || diff.change === 'new-edition')
+          && String((diff.after && (diff.after.end || diff.after.start)) || '') < today) { res.pastSkipped++; continue; }
       var afterJson = evCanonical_(diff.after);
       var dk = evProposedKey_(key, diff.slug, diff.change, afterJson);
       if (existing[dk]) { res.duplicates++; continue; }
@@ -3205,7 +3221,8 @@ function evPollRun_(who) {
       out.proposed += res.proposed; out.duplicates += res.duplicates;
     }
     pollRows.push([res.key, seenAt, res.error ? (res.status || res.error) : res.status, res.items, res.newest]);
-    out.results.push({ sourceKey: res.key, status: res.status, error: res.error, items: res.items, newest: res.newest, proposed: res.proposed, duplicates: res.duplicates });
+    out.pastSkipped = (out.pastSkipped || 0) + (res.pastSkipped || 0);
+    out.results.push({ sourceKey: res.key, status: res.status, error: res.error, items: res.items, newest: res.newest, proposed: res.proposed, duplicates: res.duplicates, pastSkipped: res.pastSkipped || 0 });
   }
   if (pollRows.length) {
     var ps = tabs.polls, at = ps.getLastRow() + 1;
@@ -3275,7 +3292,7 @@ function evProposedList_(sess) {
   }
   var polls = evPollsLatest_(tabs.polls);
   auditLog('data_read', sess.email, 'events_proposed', { pending: counts.pending, approved: counts.approved, polls: polls.length });
-  return { success: true, proposals: rows, counts: counts, polls: polls, pollerInstalled: evPollerInstalled_() };
+  return { success: true, proposals: rows, counts: counts, polls: polls, pollerInstalled: evPollerInstalled_(), signals: evSignalsState_() };
 }
 // The newest Polls row per source key.
 function evPollsLatest_(sheet) {
@@ -3477,7 +3494,8 @@ function evScoreEvent_(ev, ctx, weights) {
     if (!acct) continue;
     var conf = Math.max(0, Math.min(1, Number(sg.confidence) || 0));
     if (!best[sg.accountId] || conf > best[sg.accountId].confidence) {
-      best[sg.accountId] = { account: acct, confidence: conf, kind: String(sg.kind || ''), evidenceUrl: String(sg.evidenceUrl || '') };
+      best[sg.accountId] = { account: acct, confidence: conf, kind: String(sg.kind || ''), evidenceUrl: String(sg.evidenceUrl || ''),
+                             personName: String(sg.personName || ''), personTitle: String(sg.personTitle || '') };
     }
   }
   var presence = 0, ids = Object.keys(best).sort();
@@ -3487,6 +3505,10 @@ function evScoreEvent_(ev, ctx, weights) {
     why.accounts.push({ id: ids[b], name: String(hit.account.name || ''), stage: String(hit.account.stage || ''),
       relationship: String(hit.account.relationship || ''), stageWeight: w,
       signal: { kind: hit.kind, confidence: hit.confidence, evidenceUrl: hit.evidenceUrl } });
+    if (hit.personName) {   // E4: named where the signal carries a person (a speaker, a manual row)
+      var lastWhy = why.accounts[why.accounts.length - 1].signal;
+      lastWhy.personName = hit.personName; if (hit.personTitle) lastWhy.personTitle = hit.personTitle;
+    }
   }
   terms.accountPresence = Math.min(1, presence);
   // corpusSalience — the distinct mentioning dossiers, decayed from the newest
@@ -3555,7 +3577,9 @@ function evRecommend_(sess) {
       var es = String((sg && sg.eventSlug) || '');
       if (!upSet[es]) return;
       signalsRead++;
-      (signalsBySlug[es] = signalsBySlug[es] || []).push({ accountId: accountIds[i], kind: sg.kind, confidence: sg.confidence, evidenceUrl: sg.evidenceUrl });
+      var sgRow = { accountId: accountIds[i], kind: sg.kind, confidence: sg.confidence, evidenceUrl: sg.evidenceUrl };
+      if (sg.personName) { sgRow.personName = String(sg.personName); if (sg.personTitle) sgRow.personTitle = String(sg.personTitle); }   // E4: the person a roster signal carries
+      (signalsBySlug[es] = signalsBySlug[es] || []).push(sgRow);
     });
   }
   // the Pages inputs
@@ -3595,6 +3619,527 @@ function evRecommend_(sess) {
     unavailable: unavailable, starred: starred.length, events: events };
   if (networkError) res.networkError = networkError;
   return res;
+}
+
+// PROJECT: ── E4 session 1 — attendance signals (design plan §5.5, catalogue §5.5.1 rows 1 · 2 · 3 · 11 · 13; NETWORK-SCHEMA.md §3 Signals, §8 nop=signals)
+// A weekly, no-AI, time-driven SWEEP over the events the owner cares about —
+// every starred event plus the top EV_SIGNALS_TOP_N of evRecommend_'s ranked
+// list, upcoming only — that reads three public sources and writes what it
+// finds as Signals rows IN NETWORK'S SPREADSHEET over the bridge's existing
+// write leg (evNetworkProxy_('signals', { owner }, { owner, signals })).
+// Events keeps no copy: the score reads the rows back through the read leg
+// and the page sees them in a scored event's why.accounts[].
+//   1 · exhibitor directory at exhibitorListUrl — Map Your Show (the 8_0
+//       gallery loads its exhibitors from the site's own JSON proxy; the
+//       gallery URL is rewritten to that endpoint, which answers when the
+//       request carries the XMLHttpRequest header the page's app sends) and
+//       a2z (server-rendered exhibitor lists), one parser per host, company
+//       names only; any other host is skipped and named (unknown_host)
+//   2 · speaker roster at speakersUrl — JSON-LD `performer` where present,
+//       an HTML name · title · company read otherwise; a roster served by a
+//       third-party widget (an iframe) yields nothing and says so
+//   3 · the three newswire RSS feeds, fetched once per run and searched for
+//       <account name> AND (booth OR exhibit OR "will present") with the
+//       event's name or series in the item, per target / customer / partner
+//       account
+// Every hit is matched to a Network account by its NORMALISED name (the
+// mirror of Network's nwNormaliseCompany_ below — byte-identical, asserted by
+// scripts/check-events-signals.js) or by its Profiler slug, and written with
+// kind (exhibitor · speaker · press-release), confidence (0.9 · 0.9 · 0.8),
+// evidenceUrl (the page or item URL), firstSeen (now) and, for a speaker, the
+// person's name and title. Network upserts on (accountId · eventSlug · kind ·
+// evidenceUrl), so a weekly re-run refreshes Last Seen instead of duplicating.
+// A page that fails (non-2xx, throw, no parse) writes ONE audit row and
+// nothing else — no signal, no retry, no fallback host. Budgets are the
+// poller's (EV_POLL_SOURCE_BUDGET_MS per fetch, EV_POLL_TOTAL_BUDGET_MS per
+// run, EV_POLL_MAX_BODY per body); a run that would overrun stops cleanly
+// and says so. Nothing here ever fetches a professional network, a
+// third-party listing site or an organiser's registrant list — the only
+// LinkedIn entry is the manual kind below, and Network's write leg refuses a
+// LinkedIn host on every other kind.
+// The MANUAL path (rows 11 and 13): eop=signal writes one signal the
+// developer typed on the sheet — account, kind ∈ linkedin-manual ·
+// registrant-mail, the URL, one line, a rated confidence — through the same
+// leg. The sweep and the manual op both degrade to not_configured, never
+// fail, while either peer token is unset.
+// The trigger handler is public (a time-driven trigger cannot target a `_`
+// function); eop=installsignals is idempotent and schedules the sweep for
+// Tuesday 06:00 America/New_York — the day after the poller, so a new edition
+// is scored before it is swept; eop=signalsnow runs it as the admin who
+// pressed it. The last outcome (counts only) is parked in a script property
+// for the poller card's "last swept" line; there is no Events tab for
+// signals (EVENTS-SCHEMA.md §5 — by design).
+var EV_SIGNALS_TRIGGER_FN = 'evSignalsTick';          // the trigger handler (a public wrapper)
+var EV_SIGNALS_TOP_N = 10;                             // ranked events swept beside the starred ones
+var EV_SIGNALS_LAST_PROP = 'EV_SIGNALS_LAST';          // the last run's counts, for the panel — never a name
+var EV_SIGNALS_BATCH = 500;                            // Network's per-call cap on nop=signals
+var EV_SIGNAL_CONFIDENCE = { exhibitor: 0.9, speaker: 0.9, 'press-release': 0.8 };   // NETWORK-SCHEMA.md §3
+var EV_SIGNAL_MANUAL_KINDS = ['linkedin-manual', 'registrant-mail'];                 // the manual path's kinds
+var EV_SIGNAL_RELATIONSHIPS = ['target', 'customer', 'partner'];                     // §5.5: the accounts watched
+var EV_SIGNALS_MAX_NAMES = 5000;                       // exhibitor names / roster rows / feed items read per page
+// Key · Name · URL — the newswire roster (§5.5.1 row 3). Probed 2026-09-22
+// from the session: PR Newswire's all-releases feed and Business Wire's
+// all-news channel (the `rss=` value is the channel; the site's "home"
+// channel answered an error document that day) both answer RSS 2.0;
+// GlobeNewswire's public-companies feed could not be reached from the
+// session's egress (transport reset) and is landed unverified — the run
+// reports every feed's status, so the first Signals now says whether Google's
+// egress reaches it.
+var EV_NEWSWIRE_FEEDS = [
+  ['prnewswire', 'PR Newswire', 'https://www.prnewswire.com/rss/news-releases-list.rss'],
+  ['businesswire', 'Business Wire', 'https://feed.businesswire.com/rss/home/?rss=G1QFDERJXkJeEFpRXg=='],
+  ['globenewswire', 'GlobeNewswire', 'https://www.globenewswire.com/RssFeed/orgclass/1/feedTitle/GlobeNewswire%20-%20News%20about%20Public%20Companies']
+];
+var EV_NEWSWIRE_CUE_RE = /\b(booth|exhibit|exhibits|exhibiting|exhibitor|exhibition|will present|to present|presenting)\b/i;
+var EV_MYS_URL_RE = /^(https?:\/\/[a-z0-9-]+\.mapyourshow\.com)\/(\d+_\d+)\//i;
+var EV_A2Z_HOST_RE = /(^|\.)a2zinc\.net$/i;
+var EV_SIGNAL_PERSON_MAX = 200;
+
+// ── The company matcher ───────────────────────────────────────────────────
+// A byte-identical mirror of Network's NW_LEGAL_SUFFIX_RE / nwNormaliseCompany_
+// (NETWORK-SCHEMA.md §3 Normalised Name): lowercase, legal suffixes stripped,
+// punctuation removed, whitespace collapsed. Kept as a mirror, not a copy with
+// improvements — a match here must be the key Network dedupes on, and the
+// harness diffs the two function bodies.
+var EV_LEGAL_SUFFIX_RE = /\b(inc|incorporated|llc|l\.l\.c|ltd|limited|gmbh|ag|sa|s\.a|srl|bv|b\.v|nv|plc|co|corp|corporation|company|holdings?|group|pty|pte|kk|k\.k|oy|ab|as|spa|s\.p\.a)\b\.?/g;
+function evNormaliseCompany_(name) {
+  return String(name || '').toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(EV_LEGAL_SUFFIX_RE, ' ')
+    .replace(/[^a-z0-9À-ɏ぀-ヿ㐀-鿿가-힯 ]+/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+// The keys one account answers to: its normalised name and, when it is
+// covered, its Profiler slug read as words ("fluence-energy" → "fluence
+// energy"). Two exact keys, never a prefix — "Tesla" must not claim "Tesla
+// Power Equipments".
+function evAccountKeys_(account) {
+  var keys = [], n = evNormaliseCompany_(account && account.name);
+  if (n) keys.push(n);
+  var s = evNormaliseCompany_(String((account && account.slug) || '').replace(/-/g, ' '));
+  if (s && keys.indexOf(s) < 0) keys.push(s);
+  return keys;
+}
+// accounts → { byKey: normalised key → account, list: the watched accounts }
+// — only target · customer · partner rows (§5.5), each key claimed once (the
+// first account wins; a second account with the same key is named).
+function evSignalsMatcher_(accounts) {
+  var byKey = {}, list = [], collisions = 0;
+  (accounts || []).forEach(function(a) {
+    if (!a || !a.id || EV_SIGNAL_RELATIONSHIPS.indexOf(String(a.relationship || '').toLowerCase()) < 0) return;
+    list.push(a);
+    evAccountKeys_(a).forEach(function(k) { if (byKey[k]) { if (byKey[k].id !== a.id) collisions++; return; } byKey[k] = a; });
+  });
+  return { byKey: byKey, list: list, collisions: collisions };
+}
+// Whole-word containment of a key in normalised text.
+function evTextHasKey_(normText, key) {
+  return !!key && (' ' + normText + ' ').indexOf(' ' + key + ' ') >= 0;
+}
+
+// ── One fetch, one status ─────────────────────────────────────────────────
+// { status, body } or { status, error } — never a throw. The body is capped
+// at EV_POLL_MAX_BODY like the poller's.
+function evSignalsFetch_(url, headers) {
+  var resp;
+  try {
+    resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true, validateHttpsCertificates: true, headers: headers || {} });
+  } catch (fErr) { return { status: 0, error: 'fetch_failed' }; }
+  var status = resp.getResponseCode();
+  if (status < 200 || status > 299) return { status: status, error: 'http_' + status };
+  var body = String(resp.getContentText() || '');
+  if (body.length > EV_POLL_MAX_BODY) body = body.slice(0, EV_POLL_MAX_BODY);
+  return { status: status, body: body };
+}
+// Which parser an exhibitorListUrl gets, and what is actually fetched:
+//   mys — the gallery's own JSON proxy on the same host and app version
+//         (…/8_0/ajax/remote-proxy.cfm?action=search&searchtype=exhibitorgallery),
+//         which answers only to the header the page's app sends
+//   a2z — the page itself
+//   ''  — an unknown host: skipped, named, never fetched
+function evExhibitorSource_(url) {
+  var u = String(url || '').trim();
+  var m = EV_MYS_URL_RE.exec(u);
+  if (m) {
+    return { kind: 'mys', fetchUrl: m[1] + '/' + m[2] + '/ajax/remote-proxy.cfm?action=search&searchtype=exhibitorgallery&searchsize=' + EV_SIGNALS_MAX_NAMES + '&start=0',
+             headers: { 'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'Referer': u } };
+  }
+  var h = /^https?:\/\/([^\/?#]+)/i.exec(u);
+  if (h && EV_A2Z_HOST_RE.test(h[1])) return { kind: 'a2z', fetchUrl: u, headers: { 'Accept': 'text/html, */*;q=0.5' } };
+  return { kind: '', fetchUrl: '', headers: null };
+}
+function evStripTags_(s) {
+  return evHtmlDecode_(String(s || '').replace(/<[^>]*>/g, ' ')).replace(/&#?[a-z0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();   // any entity the decoder does not name reads as a space
+}
+// Map Your Show — the proxy's JSON: DATA.results.exhibitor.hit[].fields.exhname_t.
+// A gallery page (HTML) reaches here only from a fixture: its server-rendered
+// cards are read by their card-Title anchors so the parser is provable offline.
+function evParseMysExhibitors_(text) {
+  var out = [], seen = {}, t = String(text || '');
+  var push = function(name) { var n = evHtmlDecode_(String(name || '')).replace(/\s+/g, ' ').trim(); if (n && !seen[n] && out.length < EV_SIGNALS_MAX_NAMES) { seen[n] = true; out.push(n); } };
+  if (/^\s*\x7b/.test(t)) {   // \x7b = an opening brace (keeps the sandbox extractor's brace count honest)
+    var data = null;
+    try { data = JSON.parse(t); } catch (pErr) { throw new Error('mys_not_json'); }
+    var hits = (((((data || {}).DATA || {}).results || {}).exhibitor || {}).hit) || [];
+    for (var i = 0; i < hits.length; i++) push(hits[i] && hits[i].fields && hits[i].fields.exhname_t);
+    return out;
+  }
+  var re = /<(a|h\d|div|span)\b[^>]*class=\x22[^\x22]*card-Title[^\x22]*\x22[^>]*>([\s\S]*?)<\/\1>/gi, m;   // the title element, whichever tag carries the class
+  while ((m = re.exec(t)) !== null) push(evStripTags_(m[2]));
+  var re2 = /<a\b[^>]*href=\x22[^\x22]*exhibitor-details\.cfm\?exhid=\d+[^\x22]*\x22[^>]*>([\s\S]*?)<\/a>/gi;
+  while ((m = re2.exec(t)) !== null) push(evStripTags_(m[1]));
+  return out;
+}
+// a2z — the exhibitor list page: the anchor or cell each exhibitor's name is
+// printed in (class exhibitorName / companyName, or the eBooth.aspx link).
+function evParseA2zExhibitors_(html) {
+  var out = [], seen = {}, t = String(html || ''), m;
+  var push = function(name) { var n = evStripTags_(name); if (n && !seen[n] && out.length < EV_SIGNALS_MAX_NAMES) { seen[n] = true; out.push(n); } };
+  var re = /<(?:a|td|div|span|h\d)\b[^>]*class=\x22[^\x22]*(?:exhibitorName|companyName|exhibitor-name|company-name)[^\x22]*\x22[^>]*>([\s\S]*?)<\/(?:a|td|div|span|h\d)>/gi;
+  while ((m = re.exec(t)) !== null) push(m[1]);
+  if (!out.length) {
+    var re2 = /<a\b[^>]*href=\x22[^\x22]*eBooth\.aspx[^\x22]*\x22[^>]*>([\s\S]*?)<\/a>/gi;
+    while ((m = re2.exec(t)) !== null) push(m[1]);
+  }
+  return out;
+}
+// The speaker roster → [ { name, title, company } ]. JSON-LD first: every
+// Event's performer[] (and any Person node carrying worksFor / affiliation);
+// the HTML read otherwise — each element whose class names a speaker, its
+// first heading or name-classed element as the name, a title- and a
+// company-classed element, or a "Title, Company" / "Title at Company" line.
+function evPersonOrg_(v) {
+  if (!v) return '';
+  if (Array.isArray(v)) v = v[0];
+  if (v && typeof v === 'object') return String(v.name || v.legalName || '').trim();
+  return String(v).trim();
+}
+function evPersonFromLd_(node, out, seen) {
+  if (!node || typeof node !== 'object') return;
+  var name = String(node.name || '').replace(/\s+/g, ' ').trim();
+  if (!name) return;
+  var company = evPersonOrg_(node.worksFor) || evPersonOrg_(node.affiliation) || evPersonOrg_(node.memberOf);
+  var title = String(node.jobTitle || node.roleName || '').replace(/\s+/g, ' ').trim();
+  var key = name.toLowerCase() + '|' + company.toLowerCase();
+  if (seen[key]) return;
+  seen[key] = true;
+  out.push({ name: name.slice(0, EV_SIGNAL_PERSON_MAX), title: title.slice(0, EV_SIGNAL_PERSON_MAX), company: company });
+}
+function evCollectPersons_(node, out, seen, depth) {
+  if (!node || depth > 8 || out.length >= EV_SIGNALS_MAX_NAMES) return;
+  if (Array.isArray(node)) { for (var i = 0; i < node.length; i++) evCollectPersons_(node[i], out, seen, depth + 1); return; }
+  if (typeof node !== 'object') return;
+  var t = node['@type'], isPerson = false;
+  (Array.isArray(t) ? t : [t]).forEach(function(x) {
+    if (String(x || '').replace(/^https?:\/\/schema\.org\/?/i, '') === 'Person') isPerson = true;   // \/? — keeps the sandbox extractor's comment scan honest
+  });
+  if (isPerson && (node.worksFor || node.affiliation || node.memberOf || node.jobTitle)) evPersonFromLd_(node, out, seen);
+  if (node.performer) { var ps = Array.isArray(node.performer) ? node.performer : [node.performer]; for (var p = 0; p < ps.length; p++) evPersonFromLd_(ps[p], out, seen); }
+  ['@graph', 'subEvent', 'itemListElement', 'item', 'mainEntity'].forEach(function(k) { if (node[k]) evCollectPersons_(node[k], out, seen, depth + 1); });
+}
+function evParseSpeakers_(html) {
+  var out = [], seen = {}, blocks = evJsonLdBlocks_(html);
+  for (var b = 0; b < blocks.length; b++) evCollectPersons_(blocks[b], out, seen, 0);
+  if (out.length) return out;
+  var t = String(html || '');
+  var re = /<(div|li|article|section)\b[^>]*class=\x22[^\x22]*speaker[^\x22]*\x22[^>]*>/gi, m, starts = [];
+  while ((m = re.exec(t)) !== null) starts.push(m.index);
+  for (var s = 0; s < starts.length && out.length < EV_SIGNALS_MAX_NAMES; s++) {
+    var seg = t.slice(starts[s], Math.min(starts[s] + 4000, s + 1 < starts.length ? starts[s + 1] : t.length));
+    var nm = /<(?:h[1-6]|[a-z]+)\b[^>]*class=\x22[^\x22]*(?:name|title)[^\x22]*\x22[^>]*>([\s\S]*?)<\/(?:h[1-6]|[a-z]+)>/i.exec(seg)
+          || /<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/i.exec(seg);
+    if (!nm) continue;
+    var name = evStripTags_(nm[1]);
+    if (!name || name.length > EV_SIGNAL_PERSON_MAX) continue;
+    var rest = seg.slice(nm.index + nm[0].length);
+    var tm = /class=\x22[^\x22]*(?:job|role|position|speaker-title|title)[^\x22]*\x22[^>]*>([\s\S]*?)<\//i.exec(rest);
+    var cm = /class=\x22[^\x22]*(?:company|organi[sz]ation|affiliation|employer|firm)[^\x22]*\x22[^>]*>([\s\S]*?)<\//i.exec(rest);
+    var title = tm ? evStripTags_(tm[1]) : '', company = cm ? evStripTags_(cm[1]) : '';
+    if (!company) {
+      var line = evStripTags_(rest.split(/<\/(?:p|div|li|span|h[1-6])>/i)[0] || '');
+      var at = /^(.*?)\s+(?:at|@)\s+(.+)$/.exec(line) || /^(.*?),\s*(.+)$/.exec(line);
+      if (at) { title = title || at[1].trim(); company = at[2].trim(); }
+    }
+    var key = name.toLowerCase() + '|' + company.toLowerCase();
+    if (seen[key]) continue;
+    seen[key] = true;
+    out.push({ name: name, title: title.slice(0, EV_SIGNAL_PERSON_MAX), company: company });
+  }
+  return out;
+}
+// RSS 2.0 → [ { title, link, text, date } ]; CDATA and tags stripped, text
+// normalised the way company keys are so containment is exact.
+function evParseRss_(xml) {
+  var out = [], t = String(xml || ''), re = /<item\b[^>]*>([\s\S]*?)<\/item>/gi, m;
+  var field = function(body, tag) {
+    var fm = new RegExp('<' + tag + '(?:\\s[^>]*)?>([\\s\\S]*?)<\\/' + tag + '>', 'i').exec(body);
+    if (!fm) return '';
+    return evStripTags_(String(fm[1]).replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1'));
+  };
+  while ((m = re.exec(t)) !== null && out.length < EV_SIGNALS_MAX_NAMES) {
+    var body = m[1], title = field(body, 'title'), link = field(body, 'link') || field(body, 'guid'), desc = field(body, 'description');
+    if (!title && !desc) continue;
+    if (!/^https?:\/\//i.test(link)) continue;
+    out.push({ title: title, link: link, text: evNormaliseCompany_(title + ' ' + desc), date: field(body, 'pubDate') });
+  }
+  return out;
+}
+
+// ── The target set ────────────────────────────────────────────────────────
+// The owner's starred events (every Attending state) plus the top
+// EV_SIGNALS_TOP_N of the ranked list, upcoming only, starred first. The score
+// is asked as the owner (it reads the accounts and their signals over the
+// bridge — its answer also tells us whether Network is configured).
+function evSignalsTargets_(owner, reg, today, tabs) {
+  var own = {}; own[owner] = 'own';
+  var stars = evListRows_(tabs.stars, own, { slug: 'Event Slug' });
+  var list = [], seen = {}, starred = 0, ranked = 0;
+  var add = function(slug, from) {
+    var ev = reg.bySlug[slug];
+    if (!ev || seen[slug]) return;
+    var status = String(ev.status || '');
+    if (status === 'cancelled' || status === 'past') return;
+    if (String(ev.end || ev.start || '') < today) return;
+    seen[slug] = true; list.push(ev);
+    if (from === 'star') starred++; else ranked++;
+  };
+  for (var i = 0; i < stars.length; i++) add(String(stars[i].slug || ''), 'star');
+  var rec = evRecommend_({ email: owner });
+  if (rec && rec.success) {
+    var top = (rec.events || []).slice(0, EV_SIGNALS_TOP_N);
+    for (var r = 0; r < top.length; r++) add(String(top[r].slug || ''), 'rank');
+  }
+  return { events: list, starred: starred, ranked: ranked, rec: rec };
+}
+
+// ── One event, its two pages ──────────────────────────────────────────────
+// Returns the per-event line for the run's results; pushes matched signals
+// into `sink`. A failed page is one audit row (slug · source · status) and
+// nothing else.
+function evSweepEvent_(ev, matcher, who, sink, seenAt) {
+  var line = { slug: String(ev.slug), exhibitors: null, speakers: null, press: 0 };
+  var xUrl = String(ev.exhibitorListUrl || '').trim(), sUrl = String(ev.speakersUrl || '').trim();
+  if (xUrl) {
+    var src = evExhibitorSource_(xUrl);
+    if (!src.kind) line.exhibitors = { status: 0, skipped: 'unknown_host', names: 0, matched: 0 };
+    else {
+      var got = evSignalsFetch_(src.fetchUrl, src.headers), names = null;
+      if (!got.error) {
+        try { names = src.kind === 'mys' ? evParseMysExhibitors_(got.body) : evParseA2zExhibitors_(got.body); }
+        catch (pErr) { got.error = 'parse_failed'; }
+      }
+      if (got.error) {
+        line.exhibitors = { status: got.status, error: got.error, names: 0, matched: 0 };
+        auditLog('data_read', who, 'events_signals_page_failed', { slug: line.slug, source: 'exhibitors', status: got.status, error: got.error });
+      } else {
+        var matched = 0, hitIds = {};
+        for (var n = 0; n < names.length; n++) {
+          var a = matcher.byKey[evNormaliseCompany_(names[n])];
+          if (!a || hitIds[a.id]) continue;
+          hitIds[a.id] = true; matched++;
+          sink.push({ accountId: a.id, eventSlug: line.slug, kind: 'exhibitor', confidence: EV_SIGNAL_CONFIDENCE.exhibitor,
+                      evidenceUrl: xUrl, firstSeen: seenAt, note: 'Listed as an exhibitor: ' + String(names[n]).slice(0, 120) });
+        }
+        line.exhibitors = { status: got.status, kind: src.kind, names: names.length, matched: matched };
+      }
+    }
+  }
+  if (sUrl) {
+    var sg = evSignalsFetch_(sUrl, { 'Accept': 'text/html, application/ld+json;q=0.9, */*;q=0.5' }), people = null;
+    if (!sg.error) { try { people = evParseSpeakers_(sg.body); } catch (sErr) { sg.error = 'parse_failed'; } }
+    if (sg.error) {
+      line.speakers = { status: sg.status, error: sg.error, people: 0, matched: 0 };
+      auditLog('data_read', who, 'events_signals_page_failed', { slug: line.slug, source: 'speakers', status: sg.status, error: sg.error });
+    } else {
+      var pm = 0, seenP = {};
+      for (var p = 0; p < people.length; p++) {
+        var acct = matcher.byKey[evNormaliseCompany_(people[p].company)];
+        if (!acct) continue;
+        var pk = acct.id + '|' + people[p].name.toLowerCase();
+        if (seenP[pk]) continue;
+        seenP[pk] = true; pm++;
+        sink.push({ accountId: acct.id, eventSlug: line.slug, kind: 'speaker', confidence: EV_SIGNAL_CONFIDENCE.speaker,
+                    evidenceUrl: sUrl, firstSeen: seenAt, personName: people[p].name, personTitle: people[p].title });
+      }
+      line.speakers = { status: sg.status, people: people.length, matched: pm, note: people.length ? '' : 'no_roster_found' };
+    }
+  }
+  return line;
+}
+
+// ── The newswires, once per run ───────────────────────────────────────────
+function evSweepFeeds_(who) {
+  var feeds = [], items = [];
+  for (var f = 0; f < EV_NEWSWIRE_FEEDS.length; f++) {
+    var row = EV_NEWSWIRE_FEEDS[f], got = evSignalsFetch_(row[2], { 'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.5' }), parsed = null;
+    if (!got.error) { try { parsed = evParseRss_(got.body); } catch (rErr) { got.error = 'parse_failed'; } }
+    if (got.error) {
+      feeds.push({ key: row[0], status: got.status, error: got.error, items: 0 });
+      auditLog('data_read', who, 'events_signals_feed_failed', { feed: row[0], status: got.status, error: got.error });
+      continue;
+    }
+    for (var i = 0; i < parsed.length; i++) { parsed[i].feed = row[0]; items.push(parsed[i]); }
+    feeds.push({ key: row[0], status: got.status, items: parsed.length });
+  }
+  return { feeds: feeds, items: items };
+}
+// <account> AND (booth OR exhibit OR "will present") AND the event named —
+// one signal per (account, event, item).
+function evMatchPress_(items, targets, matcher, sink, seenAt, lines) {
+  var found = 0;
+  var evKeys = targets.map(function(ev) {
+    return { slug: String(ev.slug), keys: [evNormaliseCompany_(ev.name), evNormaliseCompany_(ev.series)].filter(function(k) { return k.length >= 3; }) };
+  });
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i];
+    if (!EV_NEWSWIRE_CUE_RE.test(it.title + ' ' + it.text)) continue;
+    for (var a = 0; a < matcher.list.length; a++) {
+      var acct = matcher.list[a], keys = evAccountKeys_(acct), hit = false;
+      for (var k = 0; k < keys.length && !hit; k++) hit = evTextHasKey_(it.text, keys[k]);
+      if (!hit) continue;
+      for (var e = 0; e < evKeys.length; e++) {
+        var named = false;
+        for (var ek = 0; ek < evKeys[e].keys.length && !named; ek++) named = evTextHasKey_(it.text, evKeys[e].keys[ek]);
+        if (!named) continue;
+        found++;
+        if (lines[evKeys[e].slug]) lines[evKeys[e].slug].press++;
+        sink.push({ accountId: acct.id, eventSlug: evKeys[e].slug, kind: 'press-release', confidence: EV_SIGNAL_CONFIDENCE['press-release'],
+                    evidenceUrl: it.link, firstSeen: seenAt, note: String(it.title || '').slice(0, 200) });
+      }
+    }
+  }
+  return found;
+}
+
+// ── The write, in batches ─────────────────────────────────────────────────
+function evSignalsWrite_(owner, signals, out) {
+  for (var i = 0; i < signals.length; i += EV_SIGNALS_BATCH) {
+    var chunk = signals.slice(i, i + EV_SIGNALS_BATCH);
+    var res = evNetworkProxy_('signals', { owner: owner }, { owner: owner, signals: chunk });
+    if (!(res && res.success)) { out.writeError = String((res && res.error) || 'upstream_empty'); return; }
+    out.written += Number(res.written) || 0; out.updated += Number(res.updated) || 0; out.rejected += ((res.rejected || []).length);
+  }
+}
+
+// ── The run ───────────────────────────────────────────────────────────────
+// `who` is the audit user (the trigger runs as 'signals', eop=signalsnow as
+// the admin who pressed it); `owners` the owners swept — the trigger sweeps
+// every owner with a Stars row, signalsnow the presser only. Counts only in
+// the audit row and in the parked last-run state.
+function evSignalsRun_(who, owners) {
+  var t0 = Date.now();
+  var out = { success: true, ranAt: new Date().toISOString(), owners: 0, events: 0, starred: 0, ranked: 0, pages: 0, pagesFailed: 0,
+              feeds: [], found: 0, written: 0, updated: 0, rejected: 0, notConfigured: false, stopped: false, results: [] };
+  var reg = evRegistry_();
+  if (reg.error) return { success: false, error: reg.error };
+  var tabs = ensureEventsTabs_();
+  var today = evTodayIn_('');
+  var list = owners && owners.length ? owners : evSignalsOwners_(tabs);
+  out.owners = list.length;
+  var feedsRead = null;
+  for (var o = 0; o < list.length; o++) {
+    var owner = String(list[o] || '').toLowerCase();
+    if (!owner) continue;
+    var acct = evNetworkProxy_('accounts', { owner: owner });
+    if (!(acct && acct.success)) {
+      if (acct && acct.error === 'not_configured') out.notConfigured = true;
+      else out.networkError = String((acct && acct.error) || 'upstream_empty');
+      continue;
+    }
+    var matcher = evSignalsMatcher_(acct.accounts || []);
+    var targets = evSignalsTargets_(owner, reg, today, tabs);
+    out.events += targets.events.length; out.starred += targets.starred; out.ranked += targets.ranked;
+    var sink = [], seenAt = new Date().toISOString(), lines = {};
+    for (var i = 0; i < targets.events.length; i++) {
+      if (Date.now() - t0 + EV_POLL_SOURCE_BUDGET_MS > EV_POLL_TOTAL_BUDGET_MS) { out.stopped = true; break; }
+      var line;
+      try { line = evSweepEvent_(targets.events[i], matcher, who, sink, seenAt); }
+      catch (eErr) { line = { slug: String(targets.events[i].slug), error: 'event_threw' }; auditLog('data_read', who, 'events_signals_page_failed', { slug: line.slug, source: 'event', status: 0, error: 'event_threw' }); }
+      ['exhibitors', 'speakers'].forEach(function(k) { if (line[k]) { if (line[k].error) out.pagesFailed++; else if (!line[k].skipped) out.pages++; } });
+      lines[line.slug] = line; out.results.push(line);
+    }
+    if (!out.stopped && matcher.list.length && targets.events.length) {
+      if (!feedsRead) { feedsRead = evSweepFeeds_(who); out.feeds = feedsRead.feeds; }
+      evMatchPress_(feedsRead.items, targets.events, matcher, sink, seenAt, lines);
+    }
+    out.found += sink.length;
+    if (sink.length) evSignalsWrite_(owner, sink, out);
+  }
+  out.elapsedMs = Date.now() - t0;
+  var last = { ranAt: out.ranAt, owners: out.owners, events: out.events, pages: out.pages, pagesFailed: out.pagesFailed,
+               feeds: out.feeds.length, found: out.found, written: out.written, updated: out.updated, rejected: out.rejected,
+               stopped: out.stopped, notConfigured: out.notConfigured, writeError: out.writeError || '' };
+  try { PropertiesService.getScriptProperties().setProperty(EV_SIGNALS_LAST_PROP, JSON.stringify(last)); } catch (pErr) { /* the panel line is best-effort */ }
+  auditLog('data_write', who || 'signals', 'events_signals_run', { owners: out.owners, events: out.events, pages: out.pages, pagesFailed: out.pagesFailed,
+    feeds: out.feeds.length, found: out.found, written: out.written, updated: out.updated, rejected: out.rejected, stopped: out.stopped ? 1 : 0,
+    notConfigured: out.notConfigured ? 1 : 0 });
+  return out;
+}
+// Every owner with a Stars row — under D7 that is the one admin.
+function evSignalsOwners_(tabs) {
+  var sh = tabs.stars, last = sh.getLastRow();
+  if (last < 2) return [];
+  var vals = sh.getRange(2, 2, last - 1, 1).getValues(), seen = {}, out = [];
+  for (var i = 0; i < vals.length; i++) { var o = String(vals[i][0] || '').toLowerCase(); if (o && !seen[o]) { seen[o] = true; out.push(o); } }
+  return out;
+}
+// The time-driven trigger's handler — public because a trigger cannot target
+// a `_` function; it does nothing but call the run as 'signals'.
+function evSignalsTick() { return evSignalsRun_('signals', null); }
+
+// eop=installsignals — idempotent: every trigger on the handler (either name)
+// is deleted before one weekly trigger is created, Tuesday 06:00
+// America/New_York (the day after the poller).
+function evInstallSignals_(sess) {
+  var removed = 0, triggers = ScriptApp.getProjectTriggers();
+  for (var i = 0; i < triggers.length; i++) {
+    var fn = triggers[i].getHandlerFunction();
+    if (fn === EV_SIGNALS_TRIGGER_FN || fn === 'evSignalsRun_') { ScriptApp.deleteTrigger(triggers[i]); removed++; }
+  }
+  ScriptApp.newTrigger(EV_SIGNALS_TRIGGER_FN).timeBased().onWeekDay(ScriptApp.WeekDay.TUESDAY).atHour(6).inTimezone(EV_POLL_TZ).create();
+  auditLog('data_write', sess.email, 'events_installsignals', { removed: removed, installed: 1 });
+  return { success: true, installed: true, removed: removed, schedule: 'weekly, Tuesday 06:00 ' + EV_POLL_TZ };
+}
+function evSignalsInstalled_() {
+  try {
+    var triggers = ScriptApp.getProjectTriggers();
+    for (var i = 0; i < triggers.length; i++) {
+      var fn = triggers[i].getHandlerFunction();
+      if (fn === EV_SIGNALS_TRIGGER_FN || fn === 'evSignalsRun_') return true;
+    }
+    return false;
+  } catch (tErr) { return null; }
+}
+// The panel's state: whether the sweep is installed and the last run's counts.
+function evSignalsState_() {
+  var last = null;
+  try { var raw = PropertiesService.getScriptProperties().getProperty(EV_SIGNALS_LAST_PROP); if (raw) last = JSON.parse(raw); } catch (sErr) { last = null; }
+  return { installed: evSignalsInstalled_(), last: last, schedule: 'weekly, Tuesday 06:00 ' + EV_POLL_TZ };
+}
+
+// eop=signal — the manual path (§5.5.1 rows 11 and 13): one signal the
+// developer typed, validated here and written over the same leg. Network
+// accepts a LinkedIn host on linkedin-manual only; nothing here fetches the
+// URL. Audit counts and the kind, never the URL or the note.
+function evSignalManual_(sess, p) {
+  var accountId = evStr_(p.accountId, 20), slug = evStr_(p.slug, 64).toLowerCase(), kind = evStr_(p.kind, 40).toLowerCase();
+  var url = evStr_(p.evidenceUrl, 500), note = evStr_(p.note, 500).replace(/\s+/g, ' ');
+  if (!EV_ACCOUNT_ID_RE.test(accountId)) return { success: false, error: 'bad_account_id' };
+  if (!EV_SLUG_RE.test(slug)) return { success: false, error: 'bad_slug' };
+  if (EV_SIGNAL_MANUAL_KINDS.indexOf(kind) < 0) return { success: false, error: 'bad_kind' };
+  if (!/^https?:\/\/[^\s]+$/i.test(url)) return { success: false, error: 'evidence_required' };
+  var conf = Number(p.confidence);
+  if (!isFinite(conf) || conf < 0 || conf > 1) return { success: false, error: 'bad_confidence' };
+  var row = { accountId: accountId, eventSlug: slug, kind: kind, evidenceUrl: url, confidence: conf, firstSeen: new Date().toISOString() };
+  if (note) row.note = note;
+  var personName = evStr_(p.personName, EV_SIGNAL_PERSON_MAX), personTitle = evStr_(p.personTitle, EV_SIGNAL_PERSON_MAX);
+  if (personName) row.personName = personName;
+  if (personTitle) row.personTitle = personTitle;
+  var res = evNetworkProxy_('signals', { owner: sess.email }, { owner: sess.email, signals: [row] });
+  auditLog('data_write', sess.email, 'events_signal_manual', { kind: kind, ok: res && res.success ? 1 : 0,
+    written: (res && res.written) || 0, updated: (res && res.updated) || 0, rejected: (res && res.rejected && res.rejected.length) || 0 });
+  if (!(res && res.success)) return res || { success: false, error: 'upstream_empty' };
+  return { success: true, written: res.written || 0, updated: res.updated || 0, rejected: res.rejected || [], kind: kind, slug: slug };
 }
 
 // PROJECT START — Add your project-specific code here

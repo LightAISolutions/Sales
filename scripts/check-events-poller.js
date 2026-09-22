@@ -14,6 +14,8 @@
 //   · a second run writes ZERO new rows (dedup on source · slug · change · after)
 //   · the blocked, manual, html and robots-disallowed rows are NEVER fetched
 //   · the 403 writes no proposal — one Polls row with the status and one audit row
+//   · a new-event and a new-edition whose dates have already passed are never
+//     proposed (E4 s1's developer-approved guard) — counted, not queued
 //   · pollnow / decide / applied / installpoller are refused to a non-admin
 //     session with zero fetches and zero tab opens
 //   · decide → approved with Decided At, applied → the version, an applied
@@ -109,7 +111,10 @@ const JSONLD_PAGE = '<!doctype html><html><head><title>Events</title>\n'
       ld('Gone Con 2026', '2026-11-02', '2026-11-04', 'Austin Convention Center', 'Austin', 'https://a.example/gone-con-2026', 'https://schema.org/EventCancelled'),
       ld('Old Venue Summit 2026', '2026-10-05', '2026-10-06', 'Hilton Austin', 'Austin', 'https://a.example/old-venue-2026'),
       ld('URL Change Expo 2026', '2026-10-19', '2026-10-21', 'Austin Convention Center', 'Austin', 'https://a.example/expo/2026/new-home'),
-      ld('Grid Futures Forum 2027', '2027-05-04', '2027-05-05', 'Omni Houston', 'Houston', 'https://a.example/grid-futures-2027')
+      ld('Grid Futures Forum 2027', '2027-05-04', '2027-05-05', 'Omni Houston', 'Houston', 'https://a.example/grid-futures-2027'),
+      // two rows a feed that still lists last year's show would propose — both dated in the past, both skipped by the guard
+      ld('Bygone Expo 2025', '2025-05-06', '2025-05-07', 'Omni Houston', 'Houston', 'https://a.example/bygone-2025'),
+      Object.assign(ld('DISTRIBUTECH International 2025', '2025-02-11', '2025-02-13', 'Kay Bailey Hutchison Convention Center', 'Dallas', 'https://a.example/distributech-2025'), { '@type': 'ExhibitionEvent' })
     ] }) + '</script>\n<script type="application/ld+json">{not json</script></head><body></body></html>';
 // The ICS feed comes from the writer: build-events-ics.py's calendar() over
 // a moved Seven Summit row, so the reader is proved against the real emitter.
@@ -164,15 +169,15 @@ vm.runInContext(
   'var EMBED_PAGE_URL = "' + SITE + 'Events.html";\nvar SPREADSHEET_ID = "stub";\n' + [
     'EV_ROLE_CAPS', 'EV_ATTENDING', 'EV_SLUG_RE', 'EV_ID_RE', 'EV_ID_PREFIXES', 'EV_TABS', 'EV_REGISTRY_URL', '_evRegistryCache',
     'EV_ROSTER_URL', 'EV_POLL_FEED_KINDS', 'EV_POLL_CHANGES', 'EV_PROPOSED_STATUS', 'EV_POLL_SOURCE_BUDGET_MS', 'EV_POLL_TOTAL_BUDGET_MS',
-    'EV_POLL_MAX_BODY', 'EV_POLL_TRIGGER_FN', 'EV_POLL_TZ', 'EV_VERSION_RE', '_evRosterCache'
+    'EV_POLL_MAX_BODY', 'EV_POLL_TRIGGER_FN', 'EV_POLL_TZ', 'EV_VERSION_RE', '_evRosterCache', 'EV_SIGNALS_TRIGGER_FN', 'EV_SIGNALS_LAST_PROP'
   ].map((n) => constant(src, n)).join('\n') + '\n' + [
     'evRoleOf_', 'evAdmitted_', 'evCan_', 'evRequire_', 'evRandomBase36_', 'evNewId_', 'ensureEventsTabs_', 'evListRows_', 'evStr_', 'evCell_',
-    'evStarOp_', 'handleEventsOp_', 'evRegistry_',
+    'evStarOp_', 'handleEventsOp_', 'evRegistry_', 'evTodayIn_',
     'evPagesJson_', 'evRoster_', 'evPollSkipReason_', 'evSlugify_', 'evSeriesBase_', 'evDeriveSlug_', 'evSlugBase_', 'evDateOnly_', 'evAddDaysStr_',
     'evNormUrl_', 'evNormText_', 'evHtmlDecode_', 'evJsonLdBlocks_', 'evIsEventType_', 'evCollectEvents_', 'evAddressField_', 'evNormaliseJsonLd_',
     'evParseJsonLd_', 'evIcsUnescape_', 'evParseIcs_', 'evMatchRegistry_', 'evProposedRow_', 'evDiffItem_', 'evCanonical_', 'evProposedKey_',
     'evProposedKeys_', 'evPollSource_', 'evPollRun_', 'evPollTick', 'evInstallPoller_', 'evPollerInstalled_', 'evProposedRowObj_', 'evProposedList_',
-    'evPollsLatest_', 'evPollDecide_', 'evPollApplied_'
+    'evPollsLatest_', 'evPollDecide_', 'evPollApplied_', 'evSignalsInstalled_', 'evSignalsState_'   // E4: the panel's answer carries the sweep's state
   ].map((n) => extract(src, n)).join('\n'), ctx, { filename: 'Events.poller.js' });
 
 let failures = 0, checks = 0;
@@ -185,7 +190,7 @@ ok(call('evDeriveSlug_', 'RE+ 2026', '2026-09-08') === 're-plus-2026', 'slug rul
 ok(call('evDeriveSlug_', 'DISTRIBUTECH International', '2027-02-09') === 'distributech-international-2027', 'slug rule: a name without a year gets the start year');
 ok(call('evSlugBase_', 'imasons-texas-energy-update-2026-11') === 'imasons-texas-energy-update', 'slug base strips a -YYYY-MM suffix');
 const ldItems = call('evParseJsonLd_', JSONLD_PAGE, 'https://a.example/events');
-ok(ldItems.length === 6, 'JSON-LD: six Event objects across an array block, a @graph and a subtype; the Organization and the broken block ignored (' + ldItems.length + ')');
+ok(ldItems.length === 8, 'JSON-LD: eight Event objects across an array block, a @graph and a subtype; the Organization and the broken block ignored (' + ldItems.length + ')');
 ok(ldItems[0].name === 'RE+ 2026' && ldItems[0].start === '2026-09-08' && ldItems[0].end === '2026-09-10' && ldItems[0].venue === 'Austin Convention Center' && ldItems[0].city === 'Austin', 'JSON-LD: dates are the local calendar date, venue and city from the Place');
 ok(ldItems.some((i) => i.cancelled && i.name === 'Gone Con 2026'), 'JSON-LD: EventCancelled is read');
 const icsItems = call('evParseIcs_', ICS_FEED, 'https://b.example/cal.ics');
@@ -211,6 +216,10 @@ prop.rows.slice(1).forEach((r) => { byChange[r[3]] = byChange[r[3]] || []; byCha
 const kinds = ['new-edition', 'moved-dates', 'changed-venue', 'changed-url', 'cancelled', 'new-event'];
 ok(kinds.every((k) => (byChange[k] || []).length === 1), 'run 1: exactly one row per diff kind (' + JSON.stringify(Object.keys(byChange).map((k) => k + ':' + byChange[k].length)) + ')');
 ok(run.proposed === 6, 'run 1: the summary counts six proposals');
+// E4 s1 — the past-date guard: the 2025 new-event and the 2025 new-edition are counted and never queued
+ok(run.pastSkipped === 2 && run.results.find((x) => x.sourceKey === 'src-a').pastSkipped === 2, 'past-date guard: two past rows skipped and counted (' + run.pastSkipped + ')');
+ok(!prop.rows.slice(1).some((r) => /2025/.test(r[2]) || /bygone/.test(r[2])), 'past-date guard: no Proposed row for a 2025 edition or event');
+ok(!prop.rows.slice(1).some((r) => { try { const a = JSON.parse(r[5]); return (a.end || a.start || '9999') < '2026-09-22'; } catch (e) { return false; } }), 'past-date guard: no proposed After carries a past date');
 const J = (s) => JSON.parse(s);
 const r1 = (k) => (byChange[k] || [])[0] || [];
 ok(r1('moved-dates')[1] === 'src-b' && r1('moved-dates')[2] === 'seven-summit-2026' && JSON.stringify(J(r1('moved-dates')[4])) === '{"end":"2026-12-03","start":"2026-12-01"}' && JSON.stringify(J(r1('moved-dates')[5])) === '{"end":"2026-12-09","start":"2026-12-07"}',
@@ -237,7 +246,7 @@ ok(!prop.rows.slice(1).some((r) => r[1] === 'src-403'), 'the 403 source: no prop
 const failAudit = counters.audit.filter((a) => a.op === 'events_poll_source_failed');
 ok(failAudit.length === 1 && failAudit[0].details.sourceKey === 'src-403' && failAudit[0].details.status === 403, 'the 403 source: exactly one audit row naming the status');
 const pa = polls.rows.find((r) => r[0] === 'src-a'), pb = polls.rows.find((r) => r[0] === 'src-b');
-ok(pa && pa[2] === 200 && pa[3] === 6 && pa[4] === '2027-05-04' && pb && pb[2] === 200 && pb[3] === 1 && pb[4] === '2026-12-07', 'Polls: status 200, item counts and the newest start per source');
+ok(pa && pa[2] === 200 && pa[3] === 8 && pa[4] === '2027-05-04' && pb && pb[2] === 200 && pb[3] === 1 && pb[4] === '2026-12-07', 'Polls: status 200, item counts (the two past items still counted as read) and the newest start per source');
 const runAudit = counters.audit.filter((a) => a.op === 'events_poll_run');
 ok(runAudit.length === 1 && runAudit[0].user === 'poller' && runAudit[0].details.proposed === 6 && Object.values(runAudit[0].details).every((v) => typeof v === 'number'), 'the run audit row: counts only, as poller');
 
@@ -261,6 +270,7 @@ ok(op('admin-token-000000000000000000000000', 'nosuchop').error === 'unknown_eve
 // ── 4. The queue ops as the admin ─────────────────────────────────────────
 let list = op('admin-token-000000000000000000000000', 'proposed');
 ok(list.success && list.proposals.length === 6 && list.counts.pending === 6 && list.polls.length === 3 && list.pollerInstalled === false, 'proposed: six pending rows, the latest Polls outcome per source, trigger not installed (' + JSON.stringify(list.counts) + ')');
+ok(list.signals && list.signals.installed === false && list.signals.last === null, 'proposed: the E4 sweep state rides the same answer (not installed, never run)');
 ok(list.proposals.every((p) => typeof p.before === 'object' && typeof p.after === 'object' && p.status === 'pending' && p.decidedAt === ''), 'proposed: Before / After parsed to objects');
 const id1 = list.proposals.find((p) => p.change === 'moved-dates').id, id2 = list.proposals.find((p) => p.change === 'cancelled').id;
 let d = op('admin-token-000000000000000000000000', 'decide', { id: id1, status: 'approved' });
@@ -299,6 +309,6 @@ console.log('check-events-poller: ' + checks + ' checks, ' + failures + ' failur
 if (failures) process.exit(1);
 console.log('ALL CHECKS PASSED — the six diff kinds each write one Proposed row with the right Before · After; a second run writes zero; '
   + 'the blocked, manual, html and robots-disallowed rows are never fetched; the 403 writes one Polls row and one audit row and no proposal; '
-  + 'pollnow / decide / applied / installpoller / proposed are refused to a non-admin with zero reads; installpoller is idempotent. Zero live calls.');
+  + 'a past-dated new-event and new-edition are skipped and counted; pollnow / decide / applied / installpoller / proposed are refused to a non-admin with zero reads; installpoller is idempotent. Zero live calls.');
 
 // Developed by: LightAISolutions

@@ -221,6 +221,13 @@ def gas_stub(role, counter, state=None):
                     body = {'success': True, 'accountId': acc['id'], 'name': acc['name'], 'renamed': renamed, 'account': acc}
             elif 'nop=newid' in url:
                 body = {'success': True, 'id': 'c-0123456789abc'}
+            elif 'nop=signals' in url or 'nop=signals' in post:
+                # E4 s1: the minimal session read of the Signals tab — one row on the account
+                # (or the contact's account) so the detail's "Will be at" line renders
+                body = {'success': True, 'accountId': q(post, 'accountId') or 'a-0000000000001', 'contactId': q(post, 'contactId'),
+                        'signals': [{'id': 's-0000000000001', 'accountId': 'a-0000000000001', 'contactId': '', 'eventSlug': 're-plus-2026', 'kind': 'exhibitor',
+                                     'evidenceUrl': 'https://example.com/exhibitors/stub', 'confidence': 0.9, 'firstSeen': '2026-09-22T00:00:00Z',
+                                     'lastSeen': '2026-09-22T00:00:00Z', 'source': 'events', 'note': ''}]}
             elif 'nop=folders' in url:
                 body = {'success': True, 'folders': None}
             elif 'nop=setfolders' in url:

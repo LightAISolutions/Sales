@@ -154,7 +154,7 @@ POLLS_STUB = [{'sourceKey': 'ai-infra-summit', 'ranAt': '2026-09-22T06:00:00.000
               {'sourceKey': 'esig-events', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '403', 'items': 0, 'newest': ''}]
 
 
-def gas_stub(role, counter, stars, proposed=None):
+def gas_stub(role, counter, stars, proposed=None, signals=None):
     """Stand in for the deployed Events GAS: records every data request as
     'events:<eop>' and answers the four Stars ops the way handleEventsOp_ /
     evStarOp_ do for the tier, against an in-memory Stars set so a star
@@ -162,6 +162,7 @@ def gas_stub(role, counter, stars, proposed=None):
     an in-memory queue and applies decide / applied / pollnow / installpoller
     to it the way the poller ops do."""
     proposed = [] if proposed is None else proposed
+    signals = [] if signals is None else signals     # E4: every eop=signal write the page sends
     def params_of(request):
         q = dict(parse_qsl(urlparse(request.url).query))
         if request.method == 'POST' and request.post_data:
@@ -199,7 +200,8 @@ def gas_stub(role, counter, stars, proposed=None):
             elif eop == 'proposed':
                 counts = {k: len([r for r in proposed if r['status'] == k]) for k in ('pending', 'approved', 'rejected', 'applied')}
                 body = {'success': True, 'proposals': [dict(r) for r in proposed if r['status'] in ('pending', 'approved')],
-                        'counts': counts, 'polls': POLLS_STUB, 'pollerInstalled': False}
+                        'counts': counts, 'polls': POLLS_STUB, 'pollerInstalled': False,
+                        'signals': {'installed': False, 'last': None, 'schedule': 'weekly, Tuesday 06:00 America/New_York'}}
             elif eop == 'decide':
                 row = next((r for r in proposed if r['id'] == p.get('id')), None)
                 if row is None or p.get('status') not in ('approved', 'rejected'):
@@ -221,6 +223,20 @@ def gas_stub(role, counter, stars, proposed=None):
                 body = {'success': True, 'installed': True, 'removed': 0, 'schedule': 'weekly, Monday 06:00 America/New_York'}
             elif eop == 'recommend':
                 body = recommend_stub()
+            # E4 session 1 — the manual signal form, the pill and the sweep controls
+            elif eop == 'netaccounts':
+                body = {'success': True, 'built': '2026-09-22T00:00:00Z', 'accounts': [
+                    {'id': 'a-0000000000001', 'name': 'Stub Account Co', 'slug': 'stub-account', 'relationship': 'target', 'stage': 'shortlist', 'segments': [], 'tags': []},
+                    {'id': 'a-0000000000002', 'name': 'Other Partner', 'slug': '', 'relationship': 'partner', 'stage': 'none', 'segments': [], 'tags': []}]}
+            elif eop == 'signal':
+                signals.append({k: p.get(k, '') for k in ('accountId', 'slug', 'kind', 'evidenceUrl', 'note', 'confidence')})
+                body = {'success': True, 'written': 1, 'updated': 0, 'rejected': [], 'kind': p.get('kind', ''), 'slug': p.get('slug', '')}
+            elif eop == 'installsignals':
+                body = {'success': True, 'installed': True, 'removed': 0, 'schedule': 'weekly, Tuesday 06:00 America/New_York'}
+            elif eop == 'signalsnow':
+                body = {'success': True, 'ranAt': '2026-09-22T07:10:00.000Z', 'owners': 1, 'events': 3, 'starred': 1, 'ranked': 2, 'pages': 4, 'pagesFailed': 1,
+                        'feeds': [{'key': 'prnewswire', 'status': 200, 'items': 20}, {'key': 'businesswire', 'status': 200, 'items': 812}, {'key': 'globenewswire', 'status': 0, 'error': 'fetch_failed', 'items': 0}],
+                        'found': 2, 'written': 2, 'updated': 0, 'rejected': 0, 'notConfigured': False, 'stopped': False, 'results': []}
         else:
             counter.append('other')
         route.fulfill(status=200, content_type='application/json',
@@ -257,7 +273,7 @@ def probe(page):
       const vis = sel => { const el = document.querySelector(sel); if (!el) return false;
         const cs = getComputedStyle(el); return cs.display !== 'none' && cs.visibility !== 'hidden'; };
       const months = [...document.querySelectorAll('#ev-agenda .ev-month')].map(h => h.textContent);
-      const sig = document.querySelector('#ev-f-mine .ev-pill[aria-disabled="true"]');
+      const sig = document.getElementById('ev-f-signals');
       return {
         header:  vis('#ev-header'),
         denied:  !!document.querySelector('#ev-app .ev-denied'),
@@ -269,7 +285,7 @@ def probe(page):
         tentative: document.querySelectorAll('#ev-agenda .ev-row .ev-tent').length,
         strayDot: [...document.querySelectorAll('#ev-agenda .ev-meta')].filter(m => /·\\s*$/.test(m.textContent) || /^\\s*·/.test(m.textContent)).length,
         filters: !!document.querySelector('#ev-f-kind') && !!document.querySelector('#ev-f-region') && !!document.querySelector('#ev-f-segment'),
-        signalsPill: sig ? sig.textContent : '',
+        signalsPill: sig ? sig.textContent + (sig.getAttribute('aria-disabled') === 'true' ? ' (disabled)' : '') : '',
         nowmonth: (document.getElementById('ev-nowmonth') || {}).textContent || '',
         err:     !!document.querySelector('#ev-app .ev-err'),
         wall:    vis('#auth-wall'),
@@ -280,11 +296,11 @@ def probe(page):
     }""")
 
 
-def load_as(browser, base, role, query='', stars=None, proposed=None):
+def load_as(browser, base, role, query='', stars=None, proposed=None, signals=None):
     counter, errors, registry = [], [], []
     stars = {} if stars is None else stars
     ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True)
-    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars, proposed))
+    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars, proposed, signals))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
     ctx.add_init_script(seed_script(role))
     page = ctx.new_page()
@@ -691,6 +707,108 @@ def recommended_pass(page, reqs, failures):
         failures.append('%s: unpressing did not restore the month groups without a request: %r' % (tag, back))
 
 
+def signals_pass(page, reqs, signals, failures):
+    """E4 session 1 — the manual signal form on the sheet (one eop=netaccounts,
+    the write through eop=signal), the "Signals only" pill over the cached
+    score, and the sweep card's controls on the Proposed tab."""
+    tag = 'signals'
+    page.evaluate("() => { if (typeof evShowTab === 'function') evShowTab('agenda'); window.scrollTo(0, 0); }")
+    page.wait_for_timeout(200)
+    stub = recommend_stub()
+    top = stub['events'][0]                       # the one event whose why names the stub account
+    # the form, on the top event's sheet
+    page.evaluate("(slug) => evOpenSheet(slug)", top['slug'])
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-sig-account option').length >= 3", timeout=6000)
+    except Exception:
+        failures.append('%s: the account list did not fill from eop=netaccounts' % tag)
+    page.wait_for_timeout(200)
+    form = page.evaluate("""() => ({
+        form: !!document.getElementById('ev-sigform'),
+        accounts: [...document.querySelectorAll('#ev-sig-account option')].map(o => o.value + ':' + o.textContent),
+        kinds: [...document.querySelectorAll('#ev-sig-kind option')].map(o => o.value),
+        conf: (document.getElementById('ev-sig-conf') || {}).value,
+        url: !!document.getElementById('ev-sig-url'), note: !!document.getElementById('ev-sig-note'), add: !!document.getElementById('ev-sig-add')
+    })""")
+    if not form['form'] or not form['url'] or not form['note'] or not form['add']:
+        failures.append('%s: the signal form is incomplete on the sheet: %r' % (tag, form)); return
+    if form['kinds'] != ['linkedin-manual', 'registrant-mail'] or form['conf'] != '0.8':
+        failures.append('%s: kinds / default confidence wrong: %r %r' % (tag, form['kinds'], form['conf']))
+    if not any(a.startswith('a-0000000000001:Stub Account Co') for a in form['accounts']):
+        failures.append('%s: the stub account is not in the picker: %r' % (tag, form['accounts']))
+    if len([r for r in reqs if r == 'events:netaccounts']) != 1:
+        failures.append('%s: expected exactly one eop=netaccounts, saw %d' % (tag, len([r for r in reqs if r == 'events:netaccounts'])))
+    page.select_option('#ev-sig-account', 'a-0000000000001')
+    page.select_option('#ev-sig-kind', 'linkedin-manual')
+    page.fill('#ev-sig-url', 'https://www.linkedin.com/posts/stub-account-at-the-show-1')
+    page.fill('#ev-sig-note', 'Their VP posted the booth number')
+    page.select_option('#ev-sig-conf', '0.9')
+    page.click('#ev-sig-add')
+    try:
+        page.wait_for_function("() => /Saved/.test((document.getElementById('ev-sig-status') || {}).textContent || '')", timeout=6000)
+    except Exception:
+        failures.append('%s: the signal did not report Saved (%r)' % (tag, page.evaluate("() => (document.getElementById('ev-sig-status') || {}).textContent")))
+    page.wait_for_timeout(300)
+    if len(signals) != 1 or signals[0]['accountId'] != 'a-0000000000001' or signals[0]['kind'] != 'linkedin-manual' or signals[0]['slug'] != top['slug'] \
+            or signals[0]['evidenceUrl'] != 'https://www.linkedin.com/posts/stub-account-at-the-show-1' or signals[0]['confidence'] != '0.9' or 'booth' not in signals[0]['note']:
+        failures.append('%s: eop=signal did not reach the stub with the typed row: %r' % (tag, signals))
+    cleared = page.evaluate("() => ({ url: document.getElementById('ev-sig-url').value, note: document.getElementById('ev-sig-note').value, why: !!document.getElementById('ev-why') })")
+    if cleared['url'] or cleared['note']:
+        failures.append('%s: the form did not clear after the write: %r' % (tag, cleared))
+    page.evaluate("() => { const f = document.getElementById('ev-sigform'); if (f) f.scrollIntoView({ block: 'start' }); }")
+    page.wait_for_timeout(150)
+    page.screenshot(path=str(SHOTS / 'events-signals.png'), full_page=False)
+    page.keyboard.press('Escape')
+    page.wait_for_timeout(200)
+    # the pill — filters to the events whose cached why names an account
+    if not page.evaluate("() => !!document.getElementById('ev-f-signals') && document.getElementById('ev-f-signals').getAttribute('aria-disabled') !== 'true'"):
+        failures.append('%s: the Signals only pill is missing or still disabled' % tag); return
+    before = len([r for r in reqs if r == 'events:recommend'])
+    page.click('#ev-f-signals')
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-agenda .ev-row').length === 1", timeout=6000)
+    except Exception:
+        failures.append('%s: the pill did not narrow the agenda to the signalled event (%d rows)' % (tag, page.evaluate("() => document.querySelectorAll('#ev-agenda .ev-row').length")))
+    got = page.evaluate("""() => ({
+        pressed: document.getElementById('ev-f-signals').getAttribute('aria-pressed'),
+        rows: [...document.querySelectorAll('#ev-agenda .ev-row')].map(r => r.dataset.slug),
+        status: (document.getElementById('ev-stars-status') || {}).textContent || '' })""")
+    if got['pressed'] != 'true' or got['rows'] != [top['slug']] or 'Signals on 1' not in got['status']:
+        failures.append('%s: the filtered agenda is wrong: %r' % (tag, got))
+    if len([r for r in reqs if r == 'events:recommend']) - before > 1:
+        failures.append('%s: the pill issued more than one eop=recommend' % tag)
+    page.click('#ev-f-signals')
+    page.wait_for_timeout(300)
+    if page.evaluate("() => document.querySelectorAll('#ev-agenda .ev-row').length") < 2 or page.evaluate("() => document.getElementById('ev-f-signals').getAttribute('aria-pressed')") != 'false':
+        failures.append('%s: unpressing the pill did not restore the agenda' % tag)
+    # the sweep card on the Proposed tab
+    page.click('#ev-tab-proposed')
+    try:
+        page.wait_for_function("() => !!document.getElementById('ev-sigcard') && /Not swept yet/.test((document.getElementById('ev-sig-last') || {}).textContent || '')", timeout=6000)
+    except Exception:
+        failures.append('%s: the sweep card or its last-swept line did not render' % tag); return
+    card = page.evaluate("() => ({ badge: (document.querySelector('#ev-sigcard .ev-badge') || {}).textContent || '', install: !!document.getElementById('ev-sig-install'), now: !!document.getElementById('ev-sig-now') })")
+    if card['badge'] != 'sweep not installed' or not card['install'] or not card['now']:
+        failures.append('%s: the sweep card is incomplete: %r' % (tag, card))
+    page.click('#ev-sig-install')
+    try:
+        page.wait_for_function("() => /Installed/.test((document.getElementById('ev-sig-cardstatus') || {}).textContent || '')", timeout=6000)
+    except Exception:
+        failures.append('%s: Install signals did not report back' % tag)
+    page.click('#ev-sig-now')
+    try:
+        page.wait_for_function("() => /Swept 3 events/.test((document.getElementById('ev-sig-cardstatus') || {}).textContent || '')", timeout=6000)
+    except Exception:
+        failures.append('%s: Signals now did not report the sweep (%r)' % (tag, page.evaluate("() => (document.getElementById('ev-sig-cardstatus') || {}).textContent")))
+    if 'events:installsignals' not in reqs or 'events:signalsnow' not in reqs:
+        failures.append('%s: Install signals / Signals now did not reach the stub' % tag)
+    page.evaluate("() => { const c = document.getElementById('ev-sigcard'); if (c) c.scrollIntoView({ block: 'start' }); }")
+    page.wait_for_timeout(150)
+    page.screenshot(path=str(SHOTS / 'events-signals-card.png'), full_page=False)
+    page.evaluate("() => { if (typeof evShowTab === 'function') evShowTab('agenda'); }")
+    page.wait_for_timeout(200)
+
+
 def run():
     chrome = find_chrome()
     if not chrome:
@@ -704,7 +822,8 @@ def run():
         for role in TIERS:
             stars = {}
             proposed = [dict(r) for r in PROPOSED_STUB]
-            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars, proposed=proposed)
+            signals = []
+            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars, proposed=proposed, signals=signals)
             got = probe(page)
             page.screenshot(path=str(SHOTS / ('events-role-%s.png' % role)), full_page=False)
             real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
@@ -722,7 +841,7 @@ def run():
                                     % (role, got['agenda'], got['rows'], got['days'], got['months'], got['err']))
                 if got['sticky'] != 'sticky':
                     failures.append('%s: month header is not position: sticky (%r)' % (role, got['sticky']))
-                if not got['filters'] or 'from E4' not in got['signalsPill']:
+                if not got['filters'] or got['signalsPill'] != 'Signals only':
                     failures.append('%s: filter card incomplete (filters=%s signals=%r)' % (role, got['filters'], got['signalsPill']))
                 if got['strayDot']:
                     failures.append('%s: %d row(s) print a stray separator for an empty place' % (role, got['strayDot']))
@@ -758,6 +877,8 @@ def run():
                 proposed_pass(page, reqs, proposed, failures)
                 # §13.11 step 5 — the Recommended pill and the why panel (E3)
                 recommended_pass(page, reqs, failures)
+                # §13.12 step 5 — the signal form, the Signals only pill, the sweep card (E4 s1)
+                signals_pass(page, reqs, signals, failures)
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
@@ -795,7 +916,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-6d %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['agenda']),
                                                   g['rows'], mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed / events-recommended.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
+    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed / events-recommended / events-signals / events-signals-card.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
         for f in failures:
@@ -805,7 +926,8 @@ def run():
           'contributor, analyst and viewer are turned away with zero requests; preview only subtracts; the sheet opens with the Calendar link and the .ics; '
           'the phone pass held: the month header sticks and changes across a boundary, a star round-trips, the ICS parses and matches the published file, the day plan and the Subscribe pill work; '
           'the Proposed tab is admin-only, opens with one request, groups the rows by source with Before → After, approves through decide, its JSON parses back, Mark applied / Install poller / Poll now reach the backend; '
-          'the Recommended pill issues one eop=recommend and ranks the agenda by the stub\'s scores with a chip per row, the why panel names the stub account with its stage and evidence link, unpressing restores the month groups.')
+          'the Recommended pill issues one eop=recommend and ranks the agenda by the stub\'s scores with a chip per row, the why panel names the stub account with its stage and evidence link, unpressing restores the month groups; '
+          'the signal form fills its accounts with one eop=netaccounts and writes the typed row through eop=signal, the Signals only pill narrows the agenda to the signalled event over the cached score, Install signals and Signals now reach the backend.')
     return 0
 
 

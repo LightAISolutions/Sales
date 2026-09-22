@@ -3,12 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.06g] — 2026-09-22 07:50:15 PM EST — v07.19r
+
+### Added
+- A weekly **attendance sweep**: for every starred event and the top ten recommended, the exhibitor directory and the speaker roster are read and the three newswires are watched for your target, customer and partner accounts; every hit is saved as a signal on the account in Network with its kind, confidence, evidence link and the date it was first seen. Install it once; run it any time with Signals now. Nothing is read from a professional network or an attendee list
+- Saving a signal you typed on an event's sheet
+
+### Changed
+- The organiser poller no longer proposes an edition or event whose dates have already passed
+- The recommendation carries the person a signal names, so the event sheet can show them
 ## [v01.05g] — 2026-09-22 05:29:45 PM EST — v07.18r
 
 ### Added

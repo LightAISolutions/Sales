@@ -1,4 +1,4 @@
-var VERSION = "v01.10g";
+var VERSION = "v01.11g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1057,6 +1057,15 @@ function handleNetworkOp_(e) {
       nwRequire_(sess, 'contacts', 'network_mycard');
       return nwMyCardOp_(sess, p);
     }
+    if (op === 'signals') {
+      // E4 session 1 — the minimal session-side read of the Signals tab
+      // (design plan §13.12): the live signals for one account, or for a
+      // contact's account, behind the `signals` capability. Mirrors the peer
+      // read leg's shape; the "will be at" chips over Events' eop=signals are
+      // N4's. Reads only — the rows are written by Events over the bridge.
+      nwRequire_(sess, 'signals', 'network_signals');
+      return nwSignalsOp_(sess, p);
+    }
     if (op === 'eventstoday') {
       // B: the scan card's Source Event default — the signed-in user's starred
       // events dated today, asked of Events' server through the near side.
@@ -1241,13 +1250,18 @@ function nwPeerSignalsRead_(tabs, owner, p) {
   var set = {}; set[owner] = 'own';
   var rows = nwListRows_(tabs.signals, set, {
     id: 'Signal ID', accountId: 'Account ID', contactId: 'Contact ID', eventSlug: 'Event Slug', kind: 'Kind',
-    evidenceUrl: 'Evidence URL', confidence: 'Confidence', firstSeen: 'First Seen', lastSeen: 'Last Seen', source: 'Source' });
+    evidenceUrl: 'Evidence URL', confidence: 'Confidence', firstSeen: 'First Seen', lastSeen: 'Last Seen', source: 'Source',
+    personName: 'Person Name', personTitle: 'Person Title' });
   var out = [];
   for (var i = 0; i < rows.length; i++) {
     if (rows[i].accountId !== accountId) continue;
-    out.push({ id: rows[i].id, accountId: accountId, contactId: rows[i].contactId, eventSlug: rows[i].eventSlug,
-               kind: rows[i].kind, evidenceUrl: rows[i].evidenceUrl, confidence: Number(rows[i].confidence) || 0,
-               firstSeen: rows[i].firstSeen, lastSeen: rows[i].lastSeen, source: rows[i].source });
+    var o = { id: rows[i].id, accountId: accountId, contactId: rows[i].contactId, eventSlug: rows[i].eventSlug,
+              kind: rows[i].kind, evidenceUrl: rows[i].evidenceUrl, confidence: Number(rows[i].confidence) || 0,
+              firstSeen: rows[i].firstSeen, lastSeen: rows[i].lastSeen, source: rows[i].source };
+    // E4: the person a roster or manual signal names — public roster data,
+    // carried only when present so a company-level row stays ids and evidence
+    if (rows[i].personName) { o.personName = rows[i].personName; if (rows[i].personTitle) o.personTitle = rows[i].personTitle; }
+    out.push(o);
   }
   auditLog('data_read', owner, 'peer_signals_read', { accountId: accountId, signals: out.length });
   return { success: true, built: nwNow_(), signals: out };
@@ -1294,7 +1308,7 @@ function nwPeerSignalsWrite_(tabs, owner, body) {
     else if (!NW_PEER_SLUG_RE.test(slug)) reason = 'bad_slug';
     else if (NW_SIGNAL_KINDS.indexOf(kind) < 0) reason = 'bad_kind';
     else if (!evidence || !/^https?:\/\//i.test(evidence)) reason = 'evidence_required';
-    else if (nwPeerLinkedIn_(evidence)) reason = 'linkedin_not_fetched';
+    else if (nwPeerLinkedIn_(evidence) && kind !== 'linkedin-manual') reason = 'linkedin_not_fetched';   // E4: the manual kind is the ONLY LinkedIn entry (D9) — pasted by the developer, never fetched
     else if (contactId && !(NW_ID_RE.test(contactId) && contactId.charAt(0) === 'c')) reason = 'bad_contact_id';
     if (reason) { rejected.push({ index: i, reason: reason }); continue; }
     var conf = Number(x.confidence);
@@ -1323,6 +1337,41 @@ function nwPeerSignalsWrite_(tabs, owner, body) {
   if (written) bumpDataRev();
   auditLog('data_write', owner, 'peer_signals_write', { written: written, updated: updated, rejected: rejected.length });
   return { success: true, written: written, updated: updated, rejected: rejected };
+}
+
+// nop=signals (session, GET) — accountId or contactId. A contact resolves
+// to its account; the answer is every live Signals row on that account
+// (the contact's own rows carry contactId), newest Last Seen first, with
+// the person where the row names one. Audit: ids and counts only.
+function nwSignalsOp_(sess, p) {
+  var accountId = nwStr_(p.accountId), contactId = nwStr_(p.contactId);
+  var scope = resolveOwnerSet_(sess, '*');
+  if (scope.error) return { success: false, error: scope.error };
+  var tabs = ensureNetworkTabs_();
+  if (contactId) {
+    if (!NW_ID_RE.test(contactId) || contactId.charAt(0) !== 'c') return { success: false, error: 'bad_contact_id' };
+    var found = nwFindRow_(nwSheetRead_(tabs.contacts), contactId);
+    if (!found || !scope.set[String(found.obj['Owner'] || '').toLowerCase()]) return { success: false, error: 'not_found' };
+    accountId = String(found.obj['Account ID'] || '');
+    if (!accountId) { auditLog('data_read', sess.email, 'network_signals', { contactId: contactId, signals: 0 }); return { success: true, accountId: '', contactId: contactId, signals: [] }; }
+  }
+  if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') return { success: false, error: 'bad_account_id' };
+  var rows = nwListRows_(tabs.signals, scope.set, {
+    id: 'Signal ID', accountId: 'Account ID', contactId: 'Contact ID', eventSlug: 'Event Slug', kind: 'Kind',
+    evidenceUrl: 'Evidence URL', confidence: 'Confidence', firstSeen: 'First Seen', lastSeen: 'Last Seen', source: 'Source',
+    personName: 'Person Name', personTitle: 'Person Title', note: 'Note' });
+  var out = [];
+  for (var i = 0; i < rows.length; i++) {
+    var r = rows[i];
+    if (r.accountId !== accountId) continue;
+    var o = { id: r.id, accountId: accountId, contactId: r.contactId, eventSlug: r.eventSlug, kind: r.kind, evidenceUrl: r.evidenceUrl,
+              confidence: Number(r.confidence) || 0, firstSeen: r.firstSeen, lastSeen: r.lastSeen, source: r.source, note: r.note };
+    if (r.personName) { o.personName = r.personName; if (r.personTitle) o.personTitle = r.personTitle; }
+    out.push(o);
+  }
+  out.sort(function(a, b) { return a.lastSeen < b.lastSeen ? 1 : a.lastSeen > b.lastSeen ? -1 : 0; });
+  auditLog('data_read', sess.email, 'network_signals', { accountId: accountId, contactId: contactId, signals: out.length });
+  return { success: true, accountId: accountId, contactId: contactId, signals: out };
 }
 
 // The near side — this app asking Events' server. guidanceMentionsProxy_
