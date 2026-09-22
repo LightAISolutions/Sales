@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.05w">
+  <meta name="build-version" content="v01.06w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -488,6 +488,31 @@
     #ev-sheet .ev-chip { font: 12px/1 var(--ev-mono); padding: 6px 9px; border-radius: 999px; border: 1px solid var(--ev-line2); color: var(--ev-accent); text-decoration: none; background: var(--ev-paper); }
     #ev-sheet .ev-sources { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 0 0 12px; }
     #ev-sheet .ev-netnote { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 12px 0 0; padding-top: 10px; border-top: 1px dashed var(--ev-line); }
+    /* ── E3: the score chip on a row, the ranked section, the why panel ── */
+    .ev-score { display: inline-block; font: 600 11px/1 var(--ev-mono); color: var(--ev-accent); border: 1px solid var(--ev-accent); border-radius: 999px; padding: 4px 7px; margin-left: 6px; vertical-align: middle; }
+    .ev-ranked .ev-row::before { content: attr(data-rank); flex: 0 0 22px; font: 600 12px/38px var(--ev-mono); color: var(--ev-faint); text-align: right; margin-right: 2px; }
+    .ev-pill[data-busy="1"] { opacity: .6; }
+    #ev-sheet .ev-why { border-top: 1px solid var(--ev-line); padding-top: 12px; margin-top: 12px; }
+    #ev-sheet .ev-why > .ev-lbl { display: block; font: 11px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); margin: 10px 0 4px; }
+    #ev-sheet .ev-why > .ev-lbl:first-child { margin-top: 0; }
+    #ev-sheet .ev-why .ev-netnote { margin: 4px 0 8px; padding: 0; border: 0; }
+    #ev-sheet .ev-why .ev-connect { color: var(--ev-gold); }
+    #ev-sheet .ev-why-score { font: 13px/1.5 var(--ev-mono); color: var(--ev-muted); margin: 0 0 8px; }
+    #ev-sheet .ev-why-score b { font: 600 24px/1.1 var(--ev-serif); color: var(--ev-accent); margin-right: 6px; }
+    #ev-sheet .ev-bars { display: grid; gap: 5px; margin: 0 0 6px; }
+    #ev-sheet .ev-bar { display: grid; grid-template-columns: 108px 1fr 92px; align-items: center; gap: 8px; font: 11px/1.25 var(--ev-mono); color: var(--ev-muted); }
+    #ev-sheet .ev-bar-lab { color: var(--ev-ink); }
+    #ev-sheet .ev-bar-lab small { display: block; color: var(--ev-faint); font-size: 10px; }
+    #ev-sheet .ev-bar-track { display: block; height: 8px; background: var(--ev-paper); border: 1px solid var(--ev-line2); border-radius: 4px; overflow: hidden; }
+    #ev-sheet .ev-bar-fill { display: block; height: 100%; background: var(--ev-accent); }
+    #ev-sheet .ev-bar-neg .ev-bar-fill { background: var(--ev-gold); }
+    #ev-sheet .ev-bar-val { text-align: right; white-space: nowrap; }
+    #ev-sheet .ev-why-list { margin: 0 0 6px; padding: 0 0 0 16px; font-size: 13px; line-height: 1.55; }
+    #ev-sheet .ev-why-list li { margin: 0 0 3px; overflow-wrap: anywhere; }
+    #ev-sheet .ev-why-list a { color: var(--ev-accent); }
+    #ev-sheet .ev-why-segs { font-size: 13px; line-height: 1.5; margin: 0 0 6px; }
+    #ev-sheet .ev-linkbtn { background: none; border: 0; padding: 0; font: inherit; color: var(--ev-accent); text-decoration: underline; cursor: pointer; }
+    #ev-sheet .ev-why-foot { font: 11px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 8px 0 0; }
     #ev-sheet .ev-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
     .ev-btn {
       display: inline-block; font: 13px/1 var(--ev-mono); padding: 10px 14px; border-radius: 8px; text-decoration: none; cursor: pointer;
@@ -4672,6 +4697,11 @@ function evFiltersCard() {
   var h4 = evEl('div', 'ev-half'); h4.appendChild(evEl('span', 'ev-lbl', 'Mine'));
   var mine = evEl('div', 'ev-pills'); mine.id = 'ev-f-mine';
   mine.appendChild(evPill('★ Starred', _evFilters.starred, function() { _evFilters.starred = !_evFilters.starred; evRender(); }));
+  if (evRecAllowed()) {   // E3 — ranks the agenda by the server-side score; every press fetches (a Tuning edit needs no deploy)
+    var rec = evPill('Recommended', _evRecMode, function() { evRecToggle(rec); });
+    rec.id = 'ev-f-rec'; rec.title = 'Rank the upcoming events by the recommendation score — open one for the why';
+    mine.appendChild(rec);
+  }
   mine.appendChild(evPill('Signals only', false, function() {}, { disabled: true, note: 'from E4', title: 'Attendance signals arrive with E4 — this filter is switched on then' }));
   var today = evPill('Today', false, function() { evScrollToToday(); });
   today.id = 'ev-f-today';
@@ -4696,6 +4726,8 @@ function evRow(e) {
   var main = evEl('div', 'ev-main');
   var name = evEl('div', 'ev-name', e.name);
   name.appendChild(evEl('span', 'ev-kind', evLabel(EV_KINDS, e.kind)));
+  var chip = evScoreChip(e);   // E3 — only once a score is loaded
+  if (chip) name.appendChild(chip);
   main.appendChild(name);
   var meta = evEl('div', 'ev-meta');
   meta.appendChild(document.createTextNode(evFmtRange(e.start, e.end)));
@@ -4744,10 +4776,12 @@ function evRender() {
     empty.appendChild(document.createTextNode(_evEvents.length ? 'Clear a pill above to widen the list.' : 'The registry is empty.'));
     wrap.appendChild(empty);
   }
-  // month → day → rows, in registry order (start then slug)
+  // month → day → rows, in registry order (start then slug) — or, with the
+  // Recommended pill pressed, one ranked section by score (E3)
   var monthKey = '', dayKey = '', dayRows = [], monthEl = null;
   var flushDay = function() { if (dayRows.length && monthEl) monthEl.appendChild(evDayGroup(dayKey, dayRows, dayKey === today)); dayRows = []; };
-  upcoming.forEach(function(e) {
+  if (_evRecMode && _evRec && upcoming.length) evRenderRanked(wrap, upcoming);
+  else upcoming.forEach(function(e) {
     var mk = evMonthKey(e.start);
     if (mk !== monthKey) {
       flushDay();
@@ -4817,6 +4851,174 @@ function evScrollToToday() {
   if (!target) return;
   var y = target.getBoundingClientRect().top + window.pageYOffset - 108;   // clear the user pill + the sticky month header
   window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+}
+
+// PROJECT: ── E3 — the recommendation (design plan §5.4; EVENTS-SCHEMA.md §6) ──
+// The score is computed in Events.gs from data fetched over the bridge and
+// arrives as one eop=recommend answer, fetched ON DEMAND only (D14): when the
+// Recommended pill is pressed (every press — the admin edits a weight in the
+// Tuning tab and presses again), when a sheet opens with no score loaded, and
+// again on return to the tab while the pill is pressed. Never polled. A
+// not_configured answer paints the "connect Network" line — the score is
+// still computed without the account term and the list still ranks.
+var _evRec = null;             // the last eop=recommend answer
+var _evRecBySlug = {};         // slug → the scored row
+var _evRecState = 'idle';      // idle | loading | ok | <error code>
+var _evRecMode = false;        // the Recommended pill is pressed — the agenda ranks by score
+var EV_TERM_LABELS = [['segmentFit', 'Segment fit'], ['accountPresence', 'Account presence'], ['corpusSalience', 'Corpus salience'],
+                      ['proximity', 'Proximity'], ['conflict', 'Conflict'], ['relevancePrior', 'Relevance prior']];
+function evRecAllowed() { return evAdmitted() && evCan('recommend'); }
+function evLoadRecommend(cb) {
+  if (!evRecAllowed()) { if (cb) cb(false); return; }
+  _evRecState = 'loading';
+  evApi('recommend', {}, function(res) {
+    if (!(res && res.success)) {
+      _evRecState = (res && res.error) || 'failed';
+      _evRec = null; _evRecBySlug = {};
+      if (cb) cb(false); return;
+    }
+    _evRec = res; _evRecBySlug = {};
+    (res.events || []).forEach(function(e) { if (e && e.slug) _evRecBySlug[e.slug] = e; });
+    _evRecState = 'ok';
+    if (cb) cb(true);
+  });
+}
+function evRecToggle(btn) {
+  _evRecMode = !_evRecMode;
+  if (btn) btn.setAttribute('aria-pressed', _evRecMode ? 'true' : 'false');
+  if (!_evRecMode) { evRender(); return; }
+  if (btn) btn.dataset.busy = '1';
+  evSetStarsStatus('Scoring the calendar…', '');
+  evLoadRecommend(function(okay) {
+    if (btn) delete btn.dataset.busy;
+    if (!okay) {
+      evSetStarsStatus(evErrText(_evRecState), _evRecState === 'not_configured' ? '' : 'err');
+      _evRecMode = false; if (btn) btn.setAttribute('aria-pressed', 'false');
+      evRender(); return;
+    }
+    evSetStarsStatus(evRecStatusLine(), _evRec.notConfigured ? '' : 'ok');
+    evRender();
+  });
+}
+function evRecStatusLine() {
+  var r = _evRec || {};
+  var parts = ['Ranked ' + (r.events || []).length + ' upcoming events'];
+  if (r.notConfigured) parts.push('Network not connected — scored without your accounts');
+  else parts.push((r.accounts || 0) + ' accounts · ' + (r.signals || 0) + ' signals' + (r.signalsCapped ? ' (capped)' : ''));
+  if ((r.defaulted || []).length) parts.push('default weight used for ' + r.defaulted.join(', '));
+  if ((r.unavailable || []).length) parts.push('could not read: ' + r.unavailable.join(', '));
+  return parts.join(' · ');
+}
+function evScoreChip(e) {
+  var s = _evRecBySlug[e.slug];
+  if (!s) return null;
+  var chip = evEl('span', 'ev-score', s.score.toFixed(2));
+  chip.title = 'Recommendation score — open the event for the why';
+  return chip;
+}
+// The agenda in Recommended mode: one ranked section in place of the month
+// groups; the month-in-view label reads "Recommended".
+function evRenderRanked(wrap, upcoming) {
+  var sec = evEl('section', 'ev-monthgroup ev-ranked'); sec.dataset.month = 'Recommended';
+  var h = evEl('h3', 'ev-month', 'Recommended'); h.dataset.month = 'Recommended';
+  sec.appendChild(h);
+  var ranked = upcoming.filter(function(e) { return !!_evRecBySlug[e.slug]; });
+  ranked.sort(function(a, b) { var sa = _evRecBySlug[a.slug].score, sb = _evRecBySlug[b.slug].score; return sb - sa || (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0); });
+  ranked.forEach(function(e, i) { var row = evRow(e); row.dataset.rank = String(i + 1); sec.appendChild(row); });
+  if (!ranked.length) sec.appendChild(evEl('div', 'ev-empty', 'No upcoming event matches these filters.'));
+  wrap.appendChild(sec);
+}
+// The why panel on the sheet — replaces the E1/B placeholder line. Paints
+// from the cached answer, else fetches once (a sheet whose score is not yet
+// loaded is one of D14's on-demand moments).
+function evWhyPanel(e) {
+  var box = evEl('div', 'ev-why'); box.id = 'ev-why';
+  box.appendChild(evEl('div', 'ev-lbl', 'Recommendation'));
+  if (_evRec) evPaintWhy(box, e);
+  else {
+    box.appendChild(evEl('div', 'ev-netnote', _evRecState === 'loading' ? 'Scoring…' : 'Scoring this event…'));
+    if (_evRecState !== 'loading') {
+      evLoadRecommend(function() { if (_evSheetSlug === e.slug && box.parentNode) { box.innerHTML = ''; box.appendChild(evEl('div', 'ev-lbl', 'Recommendation')); evPaintWhy(box, e); } });
+    }
+  }
+  return box;
+}
+function evPaintWhy(box, e) {
+  if (!_evRec) {
+    var msg = _evRecState === 'not_configured' ? evErrText('not_configured') : evErrText(_evRecState);
+    box.appendChild(evEl('div', 'ev-netnote', msg));
+    return;
+  }
+  if (_evRec.notConfigured) box.appendChild(evEl('div', 'ev-netnote ev-connect', 'Connect Network to score by account — the two apps are not linked yet, so the account term is 0.'));
+  var s = _evRecBySlug[e.slug];
+  if (!s) { box.appendChild(evEl('div', 'ev-netnote', 'Not scored — past, cancelled or already over.')); return; }
+  var head = evEl('div', 'ev-why-score');
+  head.appendChild(evEl('b', null, s.score.toFixed(2)));
+  head.appendChild(document.createTextNode(' of 1.00 · ranked ' + evRecRank(e.slug) + ' of ' + (_evRec.events || []).length));
+  box.appendChild(head);
+  var bars = evEl('div', 'ev-bars');
+  EV_TERM_LABELS.forEach(function(t) {
+    var key = t[0], w = Number((_evRec.weights || {})[key]) || 0, v = Number(s.terms[key]) || 0, contrib = w * v;
+    var row = evEl('div', 'ev-bar' + (v < 0 ? ' ev-bar-neg' : '')); row.dataset.term = key;
+    var lab = evEl('span', 'ev-bar-lab', t[1]); lab.appendChild(evEl('small', null, ' × ' + w.toFixed(2)));
+    row.appendChild(lab);
+    var track = evEl('span', 'ev-bar-track'); var fill = evEl('span', 'ev-bar-fill'); fill.style.width = Math.round(Math.min(1, Math.abs(v)) * 100) + '%'; track.appendChild(fill);
+    row.appendChild(track);
+    row.appendChild(evEl('span', 'ev-bar-val', (v < 0 ? '−' : '') + Math.abs(v).toFixed(2) + ' → ' + (contrib < 0 ? '−' : '+') + Math.abs(contrib).toFixed(2)));
+    bars.appendChild(row);
+  });
+  box.appendChild(bars);
+  var why = s.why || {};
+  if ((why.accounts || []).length) {
+    box.appendChild(evEl('div', 'ev-lbl', 'Accounts with a signal'));
+    var ul = evEl('ul', 'ev-why-list ev-why-accounts');
+    why.accounts.forEach(function(a) {
+      var li = evEl('li'); li.dataset.account = a.id;
+      li.appendChild(evEl('b', null, a.name || a.id));
+      li.appendChild(document.createTextNode(' · ' + (a.relationship || '') + (a.stage ? ' · ' + a.stage : '') + ' (× ' + Number(a.stageWeight || 0).toFixed(1) + ') · '));
+      var sig = a.signal || {};
+      li.appendChild(document.createTextNode((sig.kind || 'signal') + ' ' + Number(sig.confidence || 0).toFixed(2) + ' '));
+      if (sig.evidenceUrl) li.appendChild(evLink(sig.evidenceUrl, 'evidence ↗'));
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+  } else if (!_evRec.notConfigured) box.appendChild(evEl('div', 'ev-netnote', 'No Network account has a signal for this event yet — signals arrive with E4 and through Network\'s manual capture.'));
+  if ((why.segments || []).length) {
+    box.appendChild(evEl('div', 'ev-lbl', 'Segments in your seats'));
+    box.appendChild(evEl('div', 'ev-why-segs', why.segments.map(function(id) { return _evSegmentName[id] || id; }).join(' · ')));
+  }
+  if ((why.mentions || []).length) {
+    box.appendChild(evEl('div', 'ev-lbl', 'Dossiers that name the show'));
+    var chips = evEl('div', 'ev-chips ev-why-mentions');
+    why.mentions.forEach(function(slug) {
+      var chip = evEl('a', 'ev-chip', _evCompanyName[slug] || slug);
+      chip.href = 'Profiler.html#' + encodeURIComponent(slug);
+      chips.appendChild(chip);
+    });
+    box.appendChild(chips);
+  }
+  if ((why.conflicts || []).length) {
+    box.appendChild(evEl('div', 'ev-lbl', 'Conflicts with a starred event'));
+    var cl = evEl('ul', 'ev-why-list ev-why-conflicts');
+    why.conflicts.forEach(function(slug) {
+      var c = _evBySlug[slug], li = evEl('li');
+      var b = evEl('button', 'ev-linkbtn', c ? c.name : slug); b.type = 'button';
+      b.addEventListener('click', function(ev) { ev.preventDefault(); evOpenSheet(slug); });
+      li.appendChild(b);
+      if (c) li.appendChild(document.createTextNode(' · ' + evFmtRange(c.start, c.end)));
+      cl.appendChild(li);
+    });
+    box.appendChild(cl);
+  }
+  var foot = evEl('div', 'ev-why-foot', 'Tuning: the weights and the preferred regions live in the Tuning tab of the Events spreadsheet — edit a cell and press Recommended again; no deploy.'
+    + ((_evRec.defaulted || []).length ? ' Default used for: ' + _evRec.defaulted.join(', ') + '.' : '')
+    + ((_evRec.regions || []).length ? ' Preferred regions: ' + _evRec.regions.join(', ') + '.' : ' No preferred regions set.'));
+  box.appendChild(foot);
+}
+function evRecRank(slug) {
+  var list = (_evRec && _evRec.events) || [];
+  for (var i = 0; i < list.length; i++) if (list[i].slug === slug) return i + 1;
+  return '—';
 }
 
 // ── Stars — the owner's rows over action=events (D14: no poll) ─────────────
@@ -5022,11 +5224,9 @@ function evOpenSheet(slug) {
   actions.appendChild(ics);
   sh.appendChild(actions);
   if (evAdmitted()) sh.appendChild(evOwnBlock(e));
-  // B: the one-line placeholder E3 replaces with the recommendation panel.
-  // It issues no request — the panel's input (eop=netaccounts through the
-  // bridge) is E3's to wire; until then this is where a not_configured
-  // answer will land (evErrText knows the word already).
-  if (evAdmitted()) sh.appendChild(evEl('div', 'ev-netnote', 'Connect Network to score by account — the recommendation panel arrives with E3.'));
+  // E3: the why panel — the score, the six terms, the contributing rows by
+  // name; painted from the cached answer or fetched once on demand (D14).
+  if (evRecAllowed()) sh.appendChild(evWhyPanel(e));
   back.style.display = 'block';
   sh.style.display = 'block';
   sh.scrollTop = 0;
@@ -5551,7 +5751,12 @@ function evLoadAll() {
 // replacement for a data poll. The registry is not refetched (it only
 // changes with a deploy, and the version poll reloads the page then).
 function evAfterWrite() {
-  evLoadStars(function() { evRender(); });
+  evLoadStars(function() {
+    // E3: a star can change the conflict term — refetch while the list is
+    // ranked, otherwise drop the cache so the next sheet fetches afresh
+    if (_evRecMode) evLoadRecommend(function() { evRender(); if (_evSheetSlug) evOpenSheet(_evSheetSlug); });
+    else { _evRec = null; _evRecBySlug = {}; _evRecState = 'idle'; evRender(); }
+  });
 }
 // Mounted from the showApp wrapper below, so the surface appears only after a
 // validated session; the door decides which surface.

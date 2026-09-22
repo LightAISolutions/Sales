@@ -89,24 +89,37 @@ All owner-scoped; timestamps ISO-8601 UTC; every list op filters `Deleted At` em
 | `Meetings` | Meeting ID (`mt-`) · Owner · Event Slug · Contact ID (`c-`, Network) · Account ID (`a-`) · Start · End (ISO, event tz) · Place · Note · ICS UID · Network Interaction ID (the `i-` written over the bridge) · Created At |
 | `Proposed` | §7 |
 | `Polls` | Source Key · Ran At (ISO) · Status (the HTTP status, or the failure word `fetch_failed` / `parse_failed` / `source_threw`) · Items (`Event` objects or `VEVENT`s read) · Newest Start — **appended by the poller, one row per fetched source per run** (E2); the panel shows the newest row per source as the roster's last outcome, and `events sync` carries the same rows into the roster's `lastProbe`. Not owner-scoped — the poller has no owner |
-| `Tuning` | Term · Weight · Note — one row per §6 term; admin-edited; read on every score |
+| `Tuning` | Term · Weight · Note — one row per §6 term plus a `regions` row; created empty by E1, **seeded once by the first score** (`evTuning_`, E3) with the §6 default weights — `segmentFit` 0.35 · `accountPresence` 0.35 · `corpusSalience` 0.15 · `proximity` 0.10 · `conflict` 0.25 · `relevancePrior` 0.05 — and `regions` = `` (a comma list of preferred region codes, e.g. `TX,CA,NV`; empty scores `proximity` 0 for every event), each with a Note that says what the term measures; admin-edited in the sheet (no editor UI in v1); **read on every score**, so a change reorders the list on the next fetch without a deploy. A weight that is not a finite number in 0..1, or a term row deleted by hand, falls back to its default and is named under the answer's `defaulted[]`; a partially edited tab is never re-seeded. Not owner-scoped — one admin, one tuning |
 | `Signals` | **Not an Events tab.** Attendance signals are written into **Network's** `Signals` tab over `nop=signals` (`NETWORK-SCHEMA.md` §3, §8); Events keeps no copy, and reads them back over `eop=signals` |
 | `Shares` · `Profiles` | Verbatim from Receipts; dormant in v1 |
 
 ## 6 · The recommendation score (E3)
 
-Computed **in `Events.gs`** from data fetched over the bridge, never in the page from a public file, because the "why" panel names Network contacts. For each upcoming event with `status` ≠ `cancelled`:
+Computed **in `Events.gs`** (`evRecommend_`, `eop=recommend` behind the `recommend` capability) from data fetched over the bridge, never in the page from a public file, because the "why" panel names Network accounts. For each upcoming event — `status` ∉ `cancelled` · `past` and `end` (or `start`) not before today:
 
 | Term | Formula | Default weight (`Tuning`) |
 |---|---|---|
-| `segmentFit` | `|audience ∩ seatSegments| / |audience|`, where `seatSegments` is the union of both seats' segments (§12.6: both seats weigh equally) | 0.35 |
-| `accountPresence` | Σ over Network accounts with a live Signal for this event of `stageWeight × confidence`, capped at 1; `stageWeight`: `negotiation` / `shortlist` 1.0 · `rfp` / `discovery` 0.8 · `prospecting` 0.6 · `none` at a `target` 0.4 · `customer` / `partner` any stage 0.5 | 0.35 |
-| `corpusSalience` | `min(1, |mentions| / 8) × 0.5^(monthsSinceNewestMention / 12)` | 0.15 |
-| `proximity` | 1 if the event's `region` is in the developer's preferred regions (`Tuning` row `regions`), 0.5 for the same country, else 0 | 0.10 |
-| `conflict` | −1 if the dates overlap a starred event with `Attending` ∈ `registered` · `attended`, else 0 | 0.25 (subtracted) |
+| `segmentFit` | `|audience ∩ seatSegments| / |audience|`, where `seatSegments` is the union of both seats' `segments[]` read from `profiler-segments.json` → `seats` at run time (§12.6: both seats weigh equally; `PROFILER-SCHEMA.md` → Segments registry). 0 when the file cannot be read (`unavailable[]` says so) | 0.35 |
+| `accountPresence` | Σ over Network accounts with a live Signal for this event of `stageWeight × confidence`, capped at 1; **one account counts once, at its strongest signal**. `stageWeight`: `negotiation` / `shortlist` 1.0 · `rfp` / `discovery` 0.8 · `prospecting` 0.6 · `none` at a `target` 0.4 (a `target` at `post-award` / `won` / `lost` also 0.4) · `customer` / `partner` / `channel` any stage 0.5. A signal is live when its event is upcoming; signals are read per scored account over Network's `nop=signals` read leg, **capped at 40 accounts** per score (`signalsCapped` says when it stopped) | 0.35 |
+| `corpusSalience` | `min(1, |mentions| / 8) × 0.5^(monthsSinceNewestMention / 12)` — `mentions[]` counted as distinct dossier slugs; `monthsSinceNewestMention` is the calendar months from the newest `lastUpdated` among the mentioning dossiers in `profiler-companies.json` (a mention carries no date of its own) to today; an unreadable companies file counts 0 months (no decay) and is named under `unavailable[]` | 0.15 |
+| `proximity` | 1 if the event's `region` is in the developer's preferred regions (`Tuning` row `regions`), 0.5 if its `country` is the country of any preferred region (derived from the registry — the country of every event carrying a preferred region), else 0. An empty `regions` row scores 0 everywhere (the term is optional, §5.4) | 0.10 |
+| `conflict` | −1 if the dates overlap **another** starred event with `Attending` ∈ `registered` · `attended` (inclusive calendar dates; the event's own star never conflicts with itself), else 0 | 0.25 (subtracted — the weight is positive, the term negative) |
 | `relevancePrior` | `relevance / 5` | 0.05 |
 
-`score = Σ weight × term`, shown to two decimals with every contributing row listed under "why" — the accounts by name, their stage and the signal that put them there, the segments matched, the dossiers that mention the show. Changing a weight in `Tuning` reorders the list on the next fetch without a deploy. The seat segments come from `profiler-segments.json` at run time, never from a copy in Events.
+`score = Σ weight × term`, rounded to two decimals (never −0), the list sorted by score then slug. Changing a weight in `Tuning` reorders the list on the next fetch without a deploy. The seat segments come from `profiler-segments.json` at run time, never from a copy in Events.
+
+**The answer.** Fetched on demand only (D14 — the Recommended pill, a sheet whose score is not yet loaded, return to the tab while ranked); never polled.
+
+```
+→ action=events&eop=recommend&session=<token>
+← { success:true, today, weights:{ segmentFit, accountPresence, corpusSalience, proximity, conflict, relevancePrior },
+    regions:[…], defaulted:[terms that fell back], seeded:bool, notConfigured:bool, networkError?:"upstream_…",
+    accounts:N, accountsRead:N, signals:N, signalsCapped:bool, seatSegments:[ids], unavailable:[…], starred:N,
+    events:[ { slug, score, terms:{ the six }, why:{ segments:[ids matched], accounts:[ { id, name, stage, relationship, stageWeight,
+              signal:{ kind, confidence, evidenceUrl } } ], mentions:[dossier slugs], conflicts:[starred slugs] } } ] }
+```
+
+**Degrades, never fails.** A Network side that answers `not_configured` (either peer token unset) zeroes `accountPresence`, sets `notConfigured: true` and still computes every other term — the panel paints "connect Network to score by account" and the list still ranks; any other upstream failure is named in `networkError` with the same degrade. A refused session (`ROLE_DENIED`) issues zero fetches and opens zero tabs. Audit rows carry counts only — events, accounts, signals, the flags — never an account name or id. Proved offline by `scripts/check-events-score.js` (§12).
 
 ## 7 · The `Proposed` diff row and `events sync` (E2)
 
@@ -194,6 +207,7 @@ The registry's counts (how many events, how many mentions) are **never** lesson 
 - `scripts/extract-corpus-events.py` (E0) — walks every dossier's `recentDevelopments[]`, `productsAndServices[]`, `technicalSpecs[]`, `strategyRead[]` and `sources[]` for the known event strings (a table in the script, one row per corpus event with its regex and slug), emits `mentions[]` and a seed row per event not yet in the registry; idempotent
 - `scripts/verify-events-roles.py` (E1) — the four-tier door check
 - `scripts/check-events-poller.js` (E2) — the poller in a Node sandbox (stubbed `UrlFetchApp` / `SpreadsheetApp` / `ScriptApp`; the ICS fixture built by `build-events-ics.py`'s own `calendar()`): the six diff kinds one row each with the right Before · After, a second run zero rows, the blocked / manual / html / robots-disallowed rows never fetched, a 403 one `Polls` row and one audit row and no proposal, the five ops refused to a non-admin with zero reads, `installpoller` idempotent. Zero live calls
+- `scripts/check-events-score.js` (E3) — the score in a Node sandbox (stubbed `UrlFetchApp` / `SpreadsheetApp` / `PropertiesService`; a fixture registry, segments file with `seats`, companies file and Network far side): every §6 term against a hand-computed value on three fixture events and the score to two decimals, sorted by score then slug; `Tuning` seeded once and read on every score; a weight change reorders the answer; a malformed weight falls back and is named; `not_configured` degrades with `notConfigured: true` and no network fetch; the signal reads stop at the cap; `recommend` refused to a non-admin with zero fetches and zero tab opens; no audit row names an account. Zero live calls
 - `node --check` on the `.gs` copy and `scripts/check-gas-inner-scripts.js`, as for every project
 
 Developed by: LightAISolutions

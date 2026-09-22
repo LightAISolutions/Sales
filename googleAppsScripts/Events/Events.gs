@@ -1,4 +1,4 @@
-var VERSION = "v01.04g";
+var VERSION = "v01.05g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -716,6 +716,9 @@ function handleEventsOp_(e) {
     if (op === 'applied') { evRequire_(sess, 'roster', 'events_applied'); return evPollApplied_(sess, p); }
     if (op === 'pollnow') { evRequire_(sess, 'roster', 'events_pollnow'); return evPollRun_(sess.email); }
     if (op === 'installpoller') { evRequire_(sess, 'roster', 'events_installpoller'); return evInstallPoller_(sess); }
+    // E3 — the recommendation score, behind the `recommend` capability
+    // (EVENTS-SCHEMA.md §6); computed here from bridge data, never in the page.
+    if (op === 'recommend') { evRequire_(sess, 'recommend', 'events_recommend'); return evRecommend_(sess); }
     return { success: false, error: 'unknown_events_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -3330,6 +3333,268 @@ function evPollApplied_(sess, p) {
   }
   auditLog('data_write', sess.email, 'events_applied', { applied: applied.length, skipped: skipped.length });
   return { success: true, applied: applied, skipped: skipped, version: version };
+}
+
+// PROJECT: ── E3 — the recommendation score (design plan §5.4; EVENTS-SCHEMA.md §5 Tuning, §6)
+// A score per upcoming event, computed HERE from data fetched over the
+// bridge and never in the page from a public file, because the `why` panel
+// names Network accounts. Six terms, each 0..1 (conflict is 0 or −1),
+// weighted by the admin-edited `Tuning` tab and summed to two decimals:
+//   segmentFit       |audience ∩ seatSegments| / |audience| — the seats' segment
+//                    sets are read from profiler-segments.json `seats` at run
+//                    time (§12.6: both seats weigh equally, the union), never
+//                    from a copy kept here
+//   accountPresence  Σ over Network accounts with a live Signal for the event
+//                    of stageWeight × confidence, capped at 1; one account
+//                    counts once, at its strongest signal
+//   corpusSalience   min(1, |mentions| / 8) × 0.5^(months / 12), months being
+//                    the calendar months since the newest mentioning dossier's
+//                    lastUpdated in profiler-companies.json (mentions[] itself
+//                    carries no date)
+//   proximity        1 in a preferred region (`Tuning` row `regions`), 0.5 in
+//                    the same country as a preferred region, else 0 — an empty
+//                    regions row scores 0 everywhere (§5.4: optional)
+//   conflict         −1 when the dates overlap ANOTHER starred event with
+//                    Attending ∈ registered · attended, else 0 (weight subtracted)
+//   relevancePrior   relevance / 5
+// The answer degrades and never fails: a Network side that is not configured
+// zeroes accountPresence and says notConfigured; a segments or companies file
+// that cannot be read zeroes its term and names it under `unavailable`; a
+// malformed Tuning weight falls back to the default and is named under
+// `defaulted`. Signal reads are capped at EV_SCORE_SIGNAL_CAP accounts so one
+// score stays well inside an execution; the answer says when it stopped.
+// Audit rows carry counts only — never an account name.
+var EV_SEGMENTS_URL = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'profiler-data/profiler-segments.json';
+var EV_COMPANIES_URL = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'profiler-data/profiler-companies.json';
+var EV_SCORE_TERMS = ['segmentFit', 'accountPresence', 'corpusSalience', 'proximity', 'conflict', 'relevancePrior'];
+// Term · Weight · Note — the rows evTuning_ seeds once into an empty Tuning tab (EVENTS-SCHEMA.md §5, §6)
+var EV_TUNING_DEFAULTS = [
+  ['segmentFit', 0.35, 'share of the event audience inside your two seats\' segments (profiler-segments.json seats, the union)'],
+  ['accountPresence', 0.35, 'Network accounts with a live signal for the event: stage weight × confidence, summed, capped at 1'],
+  ['corpusSalience', 0.15, 'min(1, dossiers mentioning the show / 8), halved for every 12 months since the newest of them was updated'],
+  ['proximity', 0.10, '1 in a preferred region, 0.5 in the same country as one, else 0'],
+  ['conflict', 0.25, 'SUBTRACTED in full when the dates overlap another starred event you are registered for or attended'],
+  ['relevancePrior', 0.05, 'the registry\'s relevance / 5'],
+  ['regions', '', 'comma list of preferred region codes, e.g. TX,CA,NV — empty scores proximity 0 for every event']
+];
+var EV_STAGE_WEIGHT = { negotiation: 1.0, shortlist: 1.0, rfp: 0.8, discovery: 0.8, prospecting: 0.6, none: 0.4 };
+var EV_STAGE_DEFAULT_WEIGHT = 0.4;             // a target at a stage the table does not name (post-award · won · lost)
+var EV_RELATIONSHIP_WEIGHT = { customer: 0.5, partner: 0.5, channel: 0.5 };   // any stage; `channel` scored as a partner
+var EV_SCORE_SIGNAL_CAP = 40;                  // accounts whose signals are read per score
+var EV_SCORE_CONFLICT_ATTENDING = ['registered', 'attended'];
+
+// The Tuning tab read on every score: weights per term, the preferred
+// regions, which rows fell back to their default (malformed or missing) and
+// whether this read seeded the tab. A weight is malformed when it is not a
+// finite number in 0..1; regions is a comma list of codes, upper-cased.
+function evTuning_(sheet) {
+  var out = { weights: {}, regions: [], defaulted: [], seeded: false };
+  var last = sheet.getLastRow();
+  if (last < 2) {
+    var rows = EV_TUNING_DEFAULTS.map(function(d) { return [d[0], d[1], d[2]]; });
+    sheet.getRange(2, 1, rows.length, 3).setValues(rows);
+    out.seeded = true;
+    last = rows.length + 1;
+  }
+  var vals = sheet.getRange(2, 1, last - 1, 3).getValues(), byTerm = {};
+  for (var i = 0; i < vals.length; i++) byTerm[String(vals[i][0] || '').trim()] = vals[i][1];
+  for (var t = 0; t < EV_TUNING_DEFAULTS.length; t++) {
+    var term = EV_TUNING_DEFAULTS[t][0], dflt = EV_TUNING_DEFAULTS[t][1];
+    if (term === 'regions') {
+      out.regions = String(byTerm.hasOwnProperty(term) ? byTerm[term] : '').split(',')
+        .map(function(s) { return s.trim().toUpperCase(); }).filter(function(s) { return !!s; });
+      continue;
+    }
+    var raw = byTerm.hasOwnProperty(term) ? byTerm[term] : null;
+    var w = (raw === null || raw === '') ? NaN : Number(raw);
+    if (!isFinite(w) || w < 0 || w > 1) { out.weights[term] = dflt; out.defaulted.push(term); }
+    else out.weights[term] = w;
+  }
+  return out;
+}
+
+// The seats' segment sets from profiler-segments.json (`seats`, PROFILER-SCHEMA.md
+// → Segments registry) — the union of every seat's `segments[]`, read from the
+// Pages site at run time. { set, list } or { error }.
+function evSeatSegments_() {
+  var got = evPagesJson_(EV_SEGMENTS_URL, 'segments_unavailable');
+  if (got.error) return got;
+  var seats = (got.data && got.data.seats) || {}, set = {}, list = [];
+  for (var k in seats) if (seats.hasOwnProperty(k)) {
+    var segs = (seats[k] && seats[k].segments) || [];
+    for (var i = 0; i < segs.length; i++) { var id = String(segs[i] || ''); if (id && !set[id]) { set[id] = true; list.push(id); } }
+  }
+  if (!list.length) return { error: 'seats_missing' };
+  list.sort();
+  return { set: set, list: list };
+}
+// slug → lastUpdated for every covered company (the corpusSalience decay
+// input). { dates } or { error }.
+function evMentionDates_() {
+  var got = evPagesJson_(EV_COMPANIES_URL, 'companies_unavailable');
+  if (got.error) return got;
+  var list = (got.data && got.data.companies) || [], dates = {};
+  for (var i = 0; i < list.length; i++) if (list[i] && list[i].slug) dates[String(list[i].slug)] = String(list[i].lastUpdated || '');
+  return { dates: dates };
+}
+// The stage weight of one scored account (EVENTS-SCHEMA.md §6's table).
+function evStageWeight_(account) {
+  var rel = String((account && account.relationship) || '').toLowerCase();
+  if (EV_RELATIONSHIP_WEIGHT.hasOwnProperty(rel)) return EV_RELATIONSHIP_WEIGHT[rel];
+  if (rel !== 'target') return 0;
+  var stage = String((account && account.stage) || 'none').toLowerCase();
+  return EV_STAGE_WEIGHT.hasOwnProperty(stage) ? EV_STAGE_WEIGHT[stage] : EV_STAGE_DEFAULT_WEIGHT;
+}
+// Two inclusive calendar-date ranges overlap.
+function evDatesOverlap_(aStart, aEnd, bStart, bEnd) {
+  return !!aStart && !!bStart && aStart <= (bEnd || bStart) && bStart <= (aEnd || aStart);
+}
+// Calendar months from an ISO date to today (YYYY-MM-…), never negative;
+// a date that does not parse counts as 0 months (no decay, named nowhere —
+// an undated dossier is the registry's problem, not the score's).
+function evMonthsSince_(iso, today) {
+  var a = /^(\d{4})-(\d{2})/.exec(String(iso || '')), b = /^(\d{4})-(\d{2})/.exec(String(today || ''));
+  if (!a || !b) return 0;
+  return Math.max(0, (Number(b[1]) * 12 + Number(b[2])) - (Number(a[1]) * 12 + Number(a[2])));
+}
+function evRound2_(x) { var r = Math.round(x * 100) / 100; return r === 0 ? 0 : r; }
+
+// One event's six terms and its why. ctx: { today, seatSet, seatsOk, accountsById,
+// signalsBySlug: slug → [ { accountId, kind, confidence, evidenceUrl } ],
+// mentionDates, datesOk, regions, countries, starred: [ { slug, name, start, end } ] }
+function evScoreEvent_(ev, ctx, weights) {
+  var terms = {}, why = { segments: [], accounts: [], mentions: [], conflicts: [] };
+  // segmentFit
+  var audience = (ev.audience || []).map(String);
+  if (ctx.seatsOk && audience.length) {
+    for (var a = 0; a < audience.length; a++) if (ctx.seatSet[audience[a]]) why.segments.push(audience[a]);
+    terms.segmentFit = why.segments.length / audience.length;
+  } else terms.segmentFit = 0;
+  // accountPresence — one entry per account, its strongest signal
+  var best = {}, sigs = ctx.signalsBySlug[String(ev.slug)] || [];
+  for (var s = 0; s < sigs.length; s++) {
+    var sg = sigs[s], acct = ctx.accountsById[sg.accountId];
+    if (!acct) continue;
+    var conf = Math.max(0, Math.min(1, Number(sg.confidence) || 0));
+    if (!best[sg.accountId] || conf > best[sg.accountId].confidence) {
+      best[sg.accountId] = { account: acct, confidence: conf, kind: String(sg.kind || ''), evidenceUrl: String(sg.evidenceUrl || '') };
+    }
+  }
+  var presence = 0, ids = Object.keys(best).sort();
+  for (var b = 0; b < ids.length; b++) {
+    var hit = best[ids[b]], w = evStageWeight_(hit.account);
+    presence += w * hit.confidence;
+    why.accounts.push({ id: ids[b], name: String(hit.account.name || ''), stage: String(hit.account.stage || ''),
+      relationship: String(hit.account.relationship || ''), stageWeight: w,
+      signal: { kind: hit.kind, confidence: hit.confidence, evidenceUrl: hit.evidenceUrl } });
+  }
+  terms.accountPresence = Math.min(1, presence);
+  // corpusSalience — the distinct mentioning dossiers, decayed from the newest
+  var seen = {}, newest = '';
+  (ev.mentions || []).forEach(function(m) {
+    var slug = m && m.slug ? String(m.slug) : '';
+    if (!slug || seen[slug]) return;
+    seen[slug] = true; why.mentions.push(slug);
+    var d = ctx.datesOk ? (ctx.mentionDates[slug] || '') : '';
+    if (d > newest) newest = d;
+  });
+  terms.corpusSalience = why.mentions.length
+    ? Math.min(1, why.mentions.length / 8) * Math.pow(0.5, evMonthsSince_(newest, ctx.today) / 12) : 0;
+  // proximity
+  var region = String(ev.region || '').toUpperCase(), country = String(ev.country || '').toUpperCase();
+  terms.proximity = (region && ctx.regions.indexOf(region) >= 0) ? 1 : (country && ctx.countries[country]) ? 0.5 : 0;
+  // conflict — another starred registered/attended event on overlapping dates
+  for (var c = 0; c < ctx.starred.length; c++) {
+    var st = ctx.starred[c];
+    if (st.slug === ev.slug) continue;
+    if (evDatesOverlap_(String(ev.start || ''), String(ev.end || ''), st.start, st.end)) why.conflicts.push(st.slug);
+  }
+  terms.conflict = why.conflicts.length ? -1 : 0;
+  // relevancePrior
+  terms.relevancePrior = Math.max(0, Math.min(1, (Number(ev.relevance) || 0) / 5));
+  var score = 0;
+  for (var t = 0; t < EV_SCORE_TERMS.length; t++) score += (weights[EV_SCORE_TERMS[t]] || 0) * terms[EV_SCORE_TERMS[t]];
+  return { slug: String(ev.slug), score: evRound2_(score), terms: terms, why: why };
+}
+
+// eop=recommend — the whole score for the signed-in owner. Reads, in order:
+// the Tuning tab (seeding it once), the registry, Network's scored accounts
+// over the bridge ONCE, each scored account's signals over the read leg
+// (capped), the seats' segments and the dossier dates from the Pages site,
+// the owner's Stars for the conflict term. Sorted by score then slug.
+function evRecommend_(sess) {
+  var tabs = ensureEventsTabs_();
+  var tuning = evTuning_(tabs.tuning);
+  var reg = evRegistry_();
+  if (reg.error) return { success: false, error: reg.error };
+  var today = evTodayIn_('');
+  var upcoming = [], upSet = {};
+  for (var slug in reg.bySlug) if (reg.bySlug.hasOwnProperty(slug)) {
+    var row = reg.bySlug[slug], status = String(row.status || '');
+    if (status === 'cancelled' || status === 'past') continue;
+    if (String(row.end || row.start || '') < today) continue;
+    upcoming.push(row); upSet[slug] = true;
+  }
+  // Network's scored accounts — once; the signals per account, capped
+  var accountsById = {}, accountIds = [], notConfigured = false, networkError = '';
+  var up = evNetworkProxy_('accounts', { owner: sess.email });
+  if (up && up.success) {
+    (up.accounts || []).forEach(function(a) {
+      if (!a || !a.id) return;
+      accountsById[String(a.id)] = a; accountIds.push(String(a.id));
+    });
+  } else if (up && up.error === 'not_configured') notConfigured = true;
+  else networkError = String((up && up.error) || 'upstream_empty');
+  var signalsBySlug = {}, signalsRead = 0, signalsCapped = false, accountsRead = 0;
+  for (var i = 0; i < accountIds.length; i++) {
+    if (i >= EV_SCORE_SIGNAL_CAP) { signalsCapped = true; break; }
+    var sres = evNetworkProxy_('signals', { owner: sess.email, accountId: accountIds[i] });
+    accountsRead++;
+    if (!(sres && sres.success)) continue;
+    (sres.signals || []).forEach(function(sg) {
+      var es = String((sg && sg.eventSlug) || '');
+      if (!upSet[es]) return;
+      signalsRead++;
+      (signalsBySlug[es] = signalsBySlug[es] || []).push({ accountId: accountIds[i], kind: sg.kind, confidence: sg.confidence, evidenceUrl: sg.evidenceUrl });
+    });
+  }
+  // the Pages inputs
+  var unavailable = [];
+  var seats = evSeatSegments_();
+  if (seats.error) unavailable.push(seats.error);
+  var dates = evMentionDates_();
+  if (dates.error) unavailable.push(dates.error);
+  // the owner's stars for the conflict term
+  var own = {}; own[String(sess.email || '').toLowerCase()] = 'own';
+  var stars = evListRows_(tabs.stars, own, { slug: 'Event Slug', attending: 'Attending' }), starred = [];
+  for (var k = 0; k < stars.length; k++) {
+    if (EV_SCORE_CONFLICT_ATTENDING.indexOf(String(stars[k].attending || '')) < 0) continue;
+    var sev = reg.bySlug[stars[k].slug];
+    if (!sev) continue;
+    starred.push({ slug: String(sev.slug), name: String(sev.name || ''), start: String(sev.start || ''), end: String(sev.end || sev.start || '') });
+  }
+  // the preferred regions' countries (same-country = 0.5)
+  var countries = {};
+  if (tuning.regions.length) {
+    for (var rs in reg.bySlug) if (reg.bySlug.hasOwnProperty(rs)) {
+      var rr = reg.bySlug[rs];
+      if (rr.region && tuning.regions.indexOf(String(rr.region).toUpperCase()) >= 0 && rr.country) countries[String(rr.country).toUpperCase()] = true;
+    }
+  }
+  var ctx = { today: today, seatSet: seats.error ? {} : seats.set, seatsOk: !seats.error, accountsById: accountsById,
+              signalsBySlug: signalsBySlug, mentionDates: dates.error ? {} : dates.dates, datesOk: !dates.error,
+              regions: tuning.regions, countries: countries, starred: starred };
+  var events = upcoming.map(function(ev) { return evScoreEvent_(ev, ctx, tuning.weights); });
+  events.sort(function(a, b) { return b.score - a.score || (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0); });
+  auditLog('data_read', sess.email, 'events_recommend', { events: events.length, accounts: accountIds.length,
+    accountsRead: accountsRead, signals: signalsRead, notConfigured: notConfigured ? 1 : 0, capped: signalsCapped ? 1 : 0,
+    defaulted: tuning.defaulted.length, unavailable: unavailable.length, seeded: tuning.seeded ? 1 : 0 });
+  var res = { success: true, today: today, weights: tuning.weights, regions: tuning.regions, defaulted: tuning.defaulted,
+    seeded: tuning.seeded, notConfigured: notConfigured, accounts: accountIds.length, accountsRead: accountsRead,
+    signals: signalsRead, signalsCapped: signalsCapped, seatSegments: seats.error ? [] : seats.list,
+    unavailable: unavailable, starred: starred.length, events: events };
+  if (networkError) res.networkError = networkError;
+  return res;
 }
 
 // PROJECT START — Add your project-specific code here

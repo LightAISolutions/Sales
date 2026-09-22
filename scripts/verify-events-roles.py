@@ -55,6 +55,17 @@ applied with a bad version is refused on the page (no request), with a good
 one sends eop=applied; Install poller sends eop=installpoller and Poll now
 eop=pollnow. Screenshot: events-proposed.png.
 
+E3 (design plan §13.11 step 5) — the Recommended pill on the Mine row, for
+the admin: pressing it issues exactly one eop=recommend; the stub answers a
+score for three upcoming events (the last of them highest) and the agenda
+re-orders into one "Recommended" section by the stub's scores with a score
+chip on every scored row and the month-in-view label reading Recommended;
+opening the top event shows the why panel — the score, six term bars with
+their weights, the stub account by name with its stage and the evidence link,
+the matched segments, the mention chips and the starred conflict; pressing
+the pill again restores the month groups. The other tiers never reach the
+agenda, so they still issue zero requests. Screenshot: events-recommended.png.
+
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
 executable_path. Do NOT run `playwright install`.
@@ -113,6 +124,31 @@ PROPOSED_STUB = [
      'before': {'slug': 'ai-infra-summit-2026'}, 'after': {'slug': 'ai-infra-summit-2027', 'name': 'AI Infra Summit 2027', 'start': '2027-09-14', 'end': '2027-09-16', 'status': 'tentative'},
      'evidenceUrl': 'https://ai-infra-summit.com/events/ai-infra-summit', 'seenAt': '2026-09-22T06:00:00.000Z', 'status': 'approved', 'decidedAt': '2026-09-22T06:30:00.000Z', 'appliedIn': ''},
 ]
+def recommend_stub():
+    """E3 — eop=recommend over the served registry: the first three upcoming
+    confirmed events scored 0.42 / 0.77 / 0.91 in that order (so the ranked
+    list is the REVERSE of date order), each with a why; the third carries the
+    stub account, a starred conflict and a mention."""
+    reg = json.loads((LIVE / 'events-data' / 'events.json').read_text(encoding='utf-8'))
+    today = '2026-09-22'
+    up = [e for e in reg['events'] if e.get('status') == 'confirmed' and (e.get('end') or e.get('start')) >= today][:3]
+    scores = [0.42, 0.77, 0.91]
+    events = []
+    for i, e in enumerate(up):
+        terms = {'segmentFit': 0.5, 'accountPresence': 0.9 if i == 2 else 0, 'corpusSalience': 0.25, 'proximity': 1 if i else 0,
+                 'conflict': -1 if i == 2 else 0, 'relevancePrior': (e.get('relevance') or 3) / 5}
+        why = {'segments': (e.get('audience') or [])[:1], 'accounts': [], 'mentions': [m['slug'] for m in (e.get('mentions') or [])][:2], 'conflicts': []}
+        if i == 2:
+            why['accounts'] = [{'id': 'a-0000000000001', 'name': 'Stub Account Co', 'stage': 'shortlist', 'relationship': 'target', 'stageWeight': 1.0,
+                                'signal': {'kind': 'exhibitor', 'confidence': 0.9, 'evidenceUrl': 'https://example.com/exhibitors/stub-account'}}]
+            why['conflicts'] = [up[0]['slug']]
+        events.append({'slug': e['slug'], 'score': scores[i], 'terms': terms, 'why': why})
+    events.sort(key=lambda x: (-x['score'], x['slug']))
+    return {'success': True, 'today': today, 'weights': {'segmentFit': 0.35, 'accountPresence': 0.35, 'corpusSalience': 0.15, 'proximity': 0.10, 'conflict': 0.25, 'relevancePrior': 0.05},
+            'regions': ['TX'], 'defaulted': [], 'seeded': False, 'notConfigured': False, 'accounts': 1, 'accountsRead': 1, 'signals': 1, 'signalsCapped': False,
+            'seatSegments': [], 'unavailable': [], 'starred': 1, 'events': events}
+
+
 POLLS_STUB = [{'sourceKey': 'ai-infra-summit', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 2, 'newest': '2027-09-14'},
               {'sourceKey': 'clarion-powergen', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 1, 'newest': '2027-01-25'},
               {'sourceKey': 'esig-events', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '403', 'items': 0, 'newest': ''}]
@@ -183,6 +219,8 @@ def gas_stub(role, counter, stars, proposed=None):
                         'proposed': 0, 'duplicates': 2, 'stopped': False, 'results': []}
             elif eop == 'installpoller':
                 body = {'success': True, 'installed': True, 'removed': 0, 'schedule': 'weekly, Monday 06:00 America/New_York'}
+            elif eop == 'recommend':
+                body = recommend_stub()
         else:
             counter.append('other')
         route.fulfill(status=200, content_type='application/json',
@@ -567,6 +605,92 @@ IGNORE = ('Failed to load resource', 'accounts.google.com', 'gsi/', 'GSI_LOGGER'
           'version.txt', 'changelog', 'favicon', 'net::ERR', 'sounds/')
 
 
+def recommended_pass(page, reqs, failures):
+    """E3 — the Recommended pill, the ranked agenda and the why panel, on the admin's page."""
+    tag = 'recommended'
+    page.evaluate("() => { if (typeof evShowTab === 'function') evShowTab('agenda'); window.scrollTo(0, 0); }")
+    page.wait_for_timeout(200)
+    stub = recommend_stub()
+    want = [e['slug'] for e in stub['events']]
+    if not page.evaluate("() => !!document.getElementById('ev-f-rec')"):
+        failures.append('%s: the Recommended pill is not on the Mine row for the admin' % tag); return
+    before = len([r for r in reqs if r == 'events:recommend'])
+    page.click('#ev-f-rec')
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-agenda .ev-ranked .ev-row').length >= 3", timeout=6000)
+    except Exception:
+        failures.append('%s: the ranked section did not render after pressing the pill' % tag)
+    page.wait_for_timeout(300)
+    seen = len([r for r in reqs if r == 'events:recommend']) - before
+    if seen != 1:
+        failures.append('%s: expected exactly one eop=recommend on pressing the pill, saw %d' % (tag, seen))
+    got = page.evaluate("""() => ({
+        pressed: (document.getElementById('ev-f-rec') || {}).getAttribute('aria-pressed'),
+        order: [...document.querySelectorAll('#ev-agenda .ev-ranked .ev-row')].map(r => r.dataset.slug),
+        chips: [...document.querySelectorAll('#ev-agenda .ev-ranked .ev-row')].map(r => (r.querySelector('.ev-score') || {}).textContent || ''),
+        ranks: [...document.querySelectorAll('#ev-agenda .ev-ranked .ev-row')].map(r => r.dataset.rank),
+        months: document.querySelectorAll('#ev-agenda .ev-monthgroup').length,
+        header: (document.querySelector('#ev-agenda .ev-ranked .ev-month') || {}).textContent || '',
+        nowmonth: (document.getElementById('ev-nowmonth') || {}).textContent || '',
+        status: (document.getElementById('ev-stars-status') || {}).textContent || ''
+    })""")
+    if got['pressed'] != 'true' or got['order'] != want:
+        failures.append('%s: the agenda did not re-order by the stub\'s scores: %r (wanted %r)' % (tag, got['order'], want))
+    if got['chips'] != ['0.91', '0.77', '0.42'] or got['ranks'] != ['1', '2', '3']:
+        failures.append('%s: score chips / ranks wrong: %r %r' % (tag, got['chips'], got['ranks']))
+    if got['months'] != 1 or got['header'] != 'Recommended' or got['nowmonth'] != 'Recommended':
+        failures.append('%s: expected one "Recommended" section and label, got months=%s header=%r label=%r' % (tag, got['months'], got['header'], got['nowmonth']))
+    if 'Ranked 3' not in got['status']:
+        failures.append('%s: the status line does not report the ranking: %r' % (tag, got['status']))
+    # the top event's why panel
+    page.click('#ev-agenda .ev-ranked .ev-row >> nth=0')
+    page.wait_for_timeout(400)
+    why = page.evaluate("""() => {
+        const w = document.getElementById('ev-why'); if (!w) return null;
+        return { score: (w.querySelector('.ev-why-score b') || {}).textContent || '',
+                 bars: [...w.querySelectorAll('.ev-bar')].map(b => b.dataset.term + ':' + (b.querySelector('.ev-bar-lab small') || {}).textContent),
+                 widths: [...w.querySelectorAll('.ev-bar-fill')].map(f => f.style.width),
+                 account: (w.querySelector('.ev-why-accounts li b') || {}).textContent || '',
+                 accountLine: (w.querySelector('.ev-why-accounts li') || {}).textContent || '',
+                 evidence: (w.querySelector('.ev-why-accounts li a') || {}).href || '',
+                 segs: (w.querySelector('.ev-why-segs') || {}).textContent || '',
+                 mentions: w.querySelectorAll('.ev-why-mentions .ev-chip').length,
+                 conflicts: w.querySelectorAll('.ev-why-conflicts li').length,
+                 foot: (w.querySelector('.ev-why-foot') || {}).textContent || '',
+                 placeholder: [...document.querySelectorAll('#ev-sheet .ev-netnote')].some(n => /arrives with E3/.test(n.textContent)) };
+    }""")
+    page.evaluate("() => { const w = document.getElementById('ev-why'); if (w) w.scrollIntoView({ block: 'start' }); }")
+    page.wait_for_timeout(150)
+    page.screenshot(path=str(SHOTS / 'events-recommended.png'), full_page=False)
+    top = stub['events'][0]
+    if not why:
+        failures.append('%s: no why panel on the top event\'s sheet' % tag)
+    else:
+        if why['score'] != '0.91' or why['placeholder']:
+            failures.append('%s: the panel does not lead with the score (or the E3 placeholder is still there): %r' % (tag, why['score']))
+        if [b.split(':')[0] for b in why['bars']] != ['segmentFit', 'accountPresence', 'corpusSalience', 'proximity', 'conflict', 'relevancePrior'] \
+                or why['bars'][0] != 'segmentFit: × 0.35' or why['bars'][4] != 'conflict: × 0.25':
+            failures.append('%s: six term bars with weights expected, got %r' % (tag, why['bars']))
+        if why['widths'][1] != '90%' or why['widths'][4] != '100%':
+            failures.append('%s: bar widths do not follow the terms (presence 0.9 → 90%%, conflict −1 → 100%%): %r' % (tag, why['widths']))
+        if why['account'] != 'Stub Account Co' or 'shortlist' not in why['accountLine'] or 'exhibitor' not in why['accountLine'] \
+                or why['evidence'] != 'https://example.com/exhibitors/stub-account':
+            failures.append('%s: the account line does not name the stub account with its stage, signal and evidence link: %r / %r' % (tag, why['accountLine'], why['evidence']))
+        if not why['segs'] or why['mentions'] != len(top['why']['mentions']) or why['conflicts'] != 1:
+            failures.append('%s: segments / mention chips / conflicts incomplete: %r' % (tag, {k: why[k] for k in ('segs', 'mentions', 'conflicts')}))
+        if 'Tuning' not in why['foot'] or 'TX' not in why['foot']:
+            failures.append('%s: the Tuning line is missing or lacks the preferred regions: %r' % (tag, why['foot']))
+    page.keyboard.press('Escape')
+    page.wait_for_timeout(200)
+    # unpress → the month groups come back, no request
+    before = len([r for r in reqs if r == 'events:recommend'])
+    page.click('#ev-f-rec')
+    page.wait_for_timeout(300)
+    back = page.evaluate("() => ({ months: document.querySelectorAll('#ev-agenda .ev-monthgroup').length, ranked: !!document.querySelector('#ev-agenda .ev-ranked'), pressed: document.getElementById('ev-f-rec').getAttribute('aria-pressed') })")
+    if back['months'] < 2 or back['ranked'] or back['pressed'] != 'false' or len([r for r in reqs if r == 'events:recommend']) != before:
+        failures.append('%s: unpressing did not restore the month groups without a request: %r' % (tag, back))
+
+
 def run():
     chrome = find_chrome()
     if not chrome:
@@ -632,6 +756,8 @@ def run():
                 phone_pass(page, base, reqs, stars, failures)
                 # §13.10 step 6 — the Proposed tab (E2)
                 proposed_pass(page, reqs, proposed, failures)
+                # §13.11 step 5 — the Recommended pill and the why panel (E3)
+                recommended_pass(page, reqs, failures)
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
@@ -669,7 +795,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-6d %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['agenda']),
                                                   g['rows'], mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
+    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed / events-recommended.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
         for f in failures:
@@ -678,7 +804,8 @@ def run():
     print('\nALL CHECKS PASSED — admin sees the agenda over the registry with exactly one list request and one registry fetch; '
           'contributor, analyst and viewer are turned away with zero requests; preview only subtracts; the sheet opens with the Calendar link and the .ics; '
           'the phone pass held: the month header sticks and changes across a boundary, a star round-trips, the ICS parses and matches the published file, the day plan and the Subscribe pill work; '
-          'the Proposed tab is admin-only, opens with one request, groups the rows by source with Before → After, approves through decide, its JSON parses back, Mark applied / Install poller / Poll now reach the backend.')
+          'the Proposed tab is admin-only, opens with one request, groups the rows by source with Before → After, approves through decide, its JSON parses back, Mark applied / Install poller / Poll now reach the backend; '
+          'the Recommended pill issues one eop=recommend and ranks the agenda by the stub\'s scores with a chip per row, the why panel names the stub account with its stage and evidence link, unpressing restores the month groups.')
     return 0
 
 

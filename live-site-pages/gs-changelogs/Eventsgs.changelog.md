@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05g] — 2026-09-22 05:29:45 PM EST — v07.18r
+
+### Added
+- **The recommendation score** — every upcoming event is scored from six inputs: how much of its audience sits in your two selling seats, which of your accounts show a sign of attending and how far along each is, how many company dossiers name the show and how recently, whether it is in a region you prefer, whether it clashes with an event you are registered for, and the calendar's own relevance rating. Each input is weighted and the weights are yours to change in the Tuning tab — the first score fills the tab with the defaults and a note per row explaining each one; a weight that is not a number falls back to its default and the answer says so
+- The score explains itself: every event comes back with each input's value and the rows behind it, so the page can show why
+- If the two apps are not yet linked, the score still runs without the account input and says so rather than failing; the reads stop after forty accounts so a score never runs long
 
 ## [v01.04g] — 2026-09-22 07:40:08 AM EST — v07.15r
 

@@ -3,11 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06w] — 2026-09-22 05:29:45 PM EST — v07.18r
+
+### Added
+- **A Recommended pill** on the Mine row — press it and the agenda ranks every upcoming event by how worth attending it looks, with a score on each row; press it again to go back to the calendar order. The ranking is worked out afresh on every press, so a change to the weights takes effect immediately
+- **A "why" panel on every event** — the score, the six things it is made of as bars with their weights, the accounts that have a sign of attending (with the stage, the kind of sign and a link to the evidence), the audience segments that match your seats, the dossiers that name the show, and any clash with an event you are already registered for
+- A note on the panel saying where the weights and the preferred regions are edited, and which ones are in use
+
+### Changed
+- The "connect Network" line on the event sheet now appears only when the two apps are not yet linked; the score still works without the account term in that case
+- The score is fetched only when you ask for it — on the pill, when an event is opened for the first time, or when you return to the tab while ranked — never in the background
 
 ## [v01.05w] — 2026-09-22 07:40:08 AM EST — v07.15r
 

@@ -13,6 +13,30 @@
   "services": "finances, assures, optimises or insures it"
  },
  "floorRule": "A landscape module is authored for a segment only when it holds at least three members with a dossier, including at least one incumbent and one challenger (CLASSROOM-CURRICULUM-PLAN.md §10.2). Adjacent members count toward the three but not toward the roles.",
+ "seats": {
+  "storage-seller": {
+   "label": "The storage seller",
+   "segments": [
+    "storage-developers-and-ipps",
+    "utilities",
+    "capital",
+    "assurance",
+    "insurance-and-risk-transfer"
+   ],
+   "basis": "C5-SALES-SIMULATIONS-DESIGN.md §9 inventory — the buyer segments the storage seat sells into (developers and IPPs, utilities, capital, assurance, insurance)"
+  },
+  "aidc-power-seller": {
+   "label": "The AI-data-centre power seller",
+   "segments": [
+    "aidc-developers-and-landlords",
+    "hyperscalers-and-ai-labs",
+    "epc-and-construction",
+    "neoclouds",
+    "utilities"
+   ],
+   "basis": "C5-SALES-SIMULATIONS-DESIGN.md §9 inventory — the buyer segments the AIDC power seat sells into (landlords, hyperscalers, EPC, neoclouds, utilities)"
+  }
+ },
  "segments": [
   {
    "id": "cells-and-chemistry",
