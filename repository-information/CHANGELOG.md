@@ -3,11 +3,18 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 82/100`
+`Sections: 83/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.12r] — 2026-09-22 06:05:50 AM EST
+
+> **Prompt:** "I see the "Starred today - tap to use" pill underneath "Save Changes". Is that the most logical place to put that? What is it supposed to do or mean?"
+
+### Fixed
+- **`Network.html` v01.17w — the Source Event row lands under its field.** `nwSourceEventDefault` appended the row to the form when the `nop=eventstoday` answer arrived, and by then `nwEditCard` had already re-inserted the Save / Cancel actions as the form's last child, so the row rendered below the buttons (the developer's screenshot). `nwReviewSection` now passes the Where-and-when grid as an anchor and the row is inserted directly after it; the `.nw-evdef` rule drops the `grid-column` span (the editor is not a grid) for a plain block with a bottom margin
 
 ## [v07.11r] — 2026-09-22 05:56:25 AM EST
 

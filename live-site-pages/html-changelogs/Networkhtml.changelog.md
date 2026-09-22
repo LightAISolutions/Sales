@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17w] — 2026-09-22 06:05:50 AM EST — v07.12r
+
+### Fixed
+- The "Starred today" row now sits directly under the Source event field, where the choice applies, instead of below the Save and Cancel buttons
 
 ## [v01.16w] — 2026-09-22 05:56:25 AM EST — v07.11r
 

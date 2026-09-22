@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.16w">
+  <meta name="build-version" content="v01.17w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -480,7 +480,7 @@
     /* PROJECT: N1 s2 — review fields on the editor, the merge sheet, the list rows */
     .nw-editor select, .nw-editor input[type="date"] { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 44px; }
     .nw-editor select:disabled { opacity: .5; }
-    .nw-editor .nw-evdef { grid-column: 1 / -1; font: 12px/1.6 var(--nw-mono); color: var(--nw-faint); margin: -4px 0 6px; }
+    .nw-editor .nw-evdef { display: block; font: 12px/1.6 var(--nw-mono); color: var(--nw-faint); margin: 0 0 10px; }
     .nw-editor .nw-evdef button { font: inherit; color: var(--nw-accent); background: none; border: 1px solid var(--nw-line); border-radius: 999px; padding: 2px 10px; margin: 2px 6px 2px 0; cursor: pointer; }
     .nw-editor .nw-evdef button[aria-pressed="true"] { background: var(--nw-accent); color: #fff; border-color: var(--nw-accent); }
     .nw-editor .nw-editor-h { font: 600 12px/1.6 var(--nw-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--nw-accent); margin: 12px 0 6px; padding-top: 10px; border-top: 1px solid var(--nw-line); }
@@ -4513,13 +4513,17 @@ function nwTodayEvents(cb) {
 // editor (host.dataset.saved): never prefill — the row is always an offer,
 // one pill per starred event, tapped deliberately. A value the user has
 // already typed is never overwritten — the answer arrives asynchronously.
-function nwSourceEventDefault(input, host) {
+function nwSourceEventDefault(input, host, anchor) {
   nwTodayEvents(function(list) {
     if (!input || !input.isConnected || !list.length) return;
     var saved = !!(host && host.dataset && host.dataset.saved);
+    // The answer arrives after the form is complete, so a plain append would
+    // land below Save / Cancel (v01.16w did). Place the row directly after
+    // the Source event / Met date grid instead.
+    var place = function(el) { if (anchor && anchor.parentNode === host) host.insertBefore(el, anchor.nextSibling); else host.appendChild(el); };
     if (list.length === 1 && !saved) {
       if (!input.value.trim()) { input.value = list[0].slug; input.dispatchEvent(new Event('input', { bubbles: true })); }
-      host.appendChild(nwEl('div', 'nw-evdef', 'From your starred events today: ' + (list[0].name || list[0].slug)));
+      place(nwEl('div', 'nw-evdef', 'From your starred events today: ' + (list[0].name || list[0].slug)));
       return;
     }
     var row = nwEl('div', 'nw-evdef', saved ? 'Starred today — tap to use: ' : 'Starred today: ');
@@ -4532,7 +4536,7 @@ function nwSourceEventDefault(input, host) {
       });
       row.appendChild(b);
     });
-    host.appendChild(row);
+    place(row);
   });
 }
 
@@ -5702,7 +5706,7 @@ function nwReviewSection(rec, form) {
   var lev = nwEl('label', null, 'Source event'); var ev = document.createElement('input'); ev.type = 'text'; ev.value = rv.sourceEvent; ev.placeholder = 'e.g. re-plus-2026'; ev.autocapitalize = 'none'; ev.setAttribute('data-review', 'sourceEvent'); lev.appendChild(ev);
   var lmd = nwEl('label', null, 'Met date'); var md = document.createElement('input'); md.type = 'date'; md.value = rv.metDate; md.setAttribute('data-review', 'metDate'); lmd.appendChild(md);
   two2.appendChild(lev); two2.appendChild(lmd); form.appendChild(two2);
-  nwSourceEventDefault(ev, form);   // B: the bridge's default — silent while not configured
+  nwSourceEventDefault(ev, form, two2);   // B: the bridge's default, placed under the field — silent while not configured
   form.appendChild(nwEl('div', 'nw-editor-h', 'Consent'));
   var lc = nwEl('label', null, 'Consent to marketing'); var cons = nwSelect('consent', rv.consent, ''); cons.setAttribute('data-review', 'consent'); lc.appendChild(cons); form.appendChild(lc);
   var ld = nwEl('label', 'nw-check'); var dnc = document.createElement('input'); dnc.type = 'checkbox'; dnc.checked = rv.dnc; dnc.setAttribute('data-review', 'dnc');
