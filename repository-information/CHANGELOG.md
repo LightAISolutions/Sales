@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 81/100`
+`Sections: 82/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.11r] — 2026-09-22 05:56:25 AM EST
+
+> **Prompt:** "pills read v01.08g and v01.03g. However, I am confused about how Step 4: the live check is supposed to happen. I starred an event in Events whose dates include today, but am not sure what to do in Network. Should I click on one of my saved contacts or do I have to scan a new card? If I must scan a new card, that seems illogical and I would like you to resolve that. If my understanding is completely wrong, then give me step by step instructions on what to do here."
+
+### Fixed
+- **`Network.html` v01.16w — the Source Event default no longer fills a saved contact's editor.** The developer's question exposed a real flaw in v07.10r: `nwEditCard` serves both a held (freshly scanned) card and a saved contact opened from its detail (`opts.host`), and `nwReviewSection` runs the same default for both — so editing an old contact whose Source event was empty would have had it silently filled with today's show. `nwEditCard` now stamps `form.dataset.saved` when it opens with a host, and `nwSourceEventDefault` reads it: a fresh scan keeps the prefill (one event) / pills (several); a saved contact's editor always gets the offer row ("Starred today — tap to use") with one pill per event and never a fill. This also gives the live check a path that needs no new card: open any saved contact → Edit → the row appears under Source event
+
+### Notes
+- Verified with `node scripts/check-gas-inner-scripts.js`, `python3 scripts/check-readme-tree.py` and `scripts/verify-network-roles.py` (the stub still answers `not_configured`, so the editor flow is unchanged); the bridge harness is untouched (no `.gs` change)
 
 ## [v07.10r] — 2026-09-22 05:05:03 AM EST
 

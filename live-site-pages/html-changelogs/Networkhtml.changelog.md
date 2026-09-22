@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16w] — 2026-09-22 05:56:25 AM EST — v07.11r
+
+### Fixed
+- **Editing a saved contact no longer fills an empty Source event with today's show.** A contact was met when it was met. On a saved contact's editor the starred events on today are now offered as tap-to-use pills under the field, never filled in for you; a freshly scanned card still gets the prefill
 
 ## [v01.15w] — 2026-09-22 05:05:03 AM EST — v07.10r
 

@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.15w">
+  <meta name="build-version" content="v01.16w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -4508,19 +4508,21 @@ function nwTodayEvents(cb) {
     waiting.forEach(function(fn) { try { fn(list); } catch (e) {} });
   });
 }
-// Prefill when exactly one starred event is on today; offer a pill row when
-// several; leave the field alone when none. A value the user has already
-// typed is never overwritten — the answer arrives asynchronously.
+// A fresh scan: prefill when exactly one starred event is on today, offer a
+// pill row when several, leave the field alone when none. A saved contact's
+// editor (host.dataset.saved): never prefill — the row is always an offer,
+// one pill per starred event, tapped deliberately. A value the user has
+// already typed is never overwritten — the answer arrives asynchronously.
 function nwSourceEventDefault(input, host) {
   nwTodayEvents(function(list) {
     if (!input || !input.isConnected || !list.length) return;
-    if (list.length === 1) {
+    var saved = !!(host && host.dataset && host.dataset.saved);
+    if (list.length === 1 && !saved) {
       if (!input.value.trim()) { input.value = list[0].slug; input.dispatchEvent(new Event('input', { bubbles: true })); }
-      var one = nwEl('div', 'nw-evdef', 'From your starred events today: ' + (list[0].name || list[0].slug));
-      host.appendChild(one);
+      host.appendChild(nwEl('div', 'nw-evdef', 'From your starred events today: ' + (list[0].name || list[0].slug)));
       return;
     }
-    var row = nwEl('div', 'nw-evdef', 'Starred today: ');
+    var row = nwEl('div', 'nw-evdef', saved ? 'Starred today — tap to use: ' : 'Starred today: ');
     list.forEach(function(ev) {
       var b = nwEl('button', null, ev.name || ev.slug); b.type = 'button'; b.title = ev.slug;
       b.setAttribute('aria-pressed', input.value.trim() === ev.slug ? 'true' : 'false');
@@ -5330,6 +5332,10 @@ function nwEditCard(rec, focusField, opts) {
   if (!strip || strip.querySelector('.nw-editor')) return;
   var x = rec.extraction || {};
   var form = nwEl('form', 'nw-editor');
+  // B: a saved contact's editor (opened from its detail with a host) must never
+  // have an empty Source event filled by today's show — the card was met when
+  // it was met. The default reads this and offers instead of filling.
+  if (opts.host) form.dataset.saved = '1';
   var inputs = {};
   NW_EDIT_FIELDS.forEach(function(pair) {
     var f = pair[0], label = nwEl('label', null, pair[1]);
