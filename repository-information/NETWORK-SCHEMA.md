@@ -265,12 +265,12 @@ The template's own `sendHipaaEmail` (MailApp, the HIPAA security-alert helper ev
 | `URL:` · `X-SOCIALPROFILE;TYPE=linkedin:` | Website · LinkedIn |
 | `NOTE:` | `Met at <Source Event> on <Met Date>` + Notes |
 | `CATEGORIES:` | Tags + `relationship:<value>` + `role:<value>` |
-| `PHOTO;ENCODING=b;TYPE=JPEG:` | Card front, **only when the developer ticks "include card image"** (re-fetched from Drive client-side) |
+| `PHOTO;ENCODING=b;TYPE=JPEG:` | Card front, **only when the developer ticks "include card image"** (re-fetched from Drive client-side, then redrawn at 720 px / JPEG q 0.8 before it is encoded — the stored front is the 2,000 px capture, which is far more than a contact avatar needs and more than iOS reliably imports) |
 | `REV:` · `UID:` | Updated At · `c-` id |
 
 Line folding at 75 octets and `\,` / `\;` / `\n` escaping per RFC 2426. The developer's **own card** QR encodes the same vCard built from `Profiles`.
 
-**N3 s2:** `nop=export&format=csv|xlsx|vcard` — one gather (`nwExportRows_`), then the CSV text, the `.xlsx` base64 (Contacts / Accounts / Interactions sheets; Signals stay out until N4 gives them a surface), or `cards[]` (`id`, `filename`, `vcard`, `frontLink`) plus the `vcf` bundle. The per-contact download is a client-side zip of the `cards[]`; the PHOTO splice is client-side too (`nwCardFrontBytes` → `nwVcardWithPhoto`, folded at 75 octets). The QR (`nwQrMatrix`) is a hand-rolled byte-mode encoder, versions 1–10 at level M, cross-checked module for module against python-qrcode by the verifier.
+**N3 s2:** `nop=export&format=csv|xlsx|vcard` — one gather (`nwExportRows_`), then the CSV text, the `.xlsx` base64 (Contacts / Accounts / Interactions sheets; Signals stay out until N4 gives them a surface), or `cards[]` (`id`, `filename`, `vcard`, `frontLink`) plus the `vcf` bundle. The per-contact download is a client-side zip of the `cards[]`; the PHOTO splice is client-side too (`nwCardFrontPhoto` — fetch, downscale to 720 px, base64 straight out of the canvas → `nwVcardWithPhoto`, folded at 75 octets by `nwVcardFold`, which indexes the source string and joins once; **the full-size front is never turned into a string**, and the fold is never written as a loop that re-slices a shrinking line — that form is quadratic on a PHOTO line and crashed the mobile renderer in v01.19w). The QR (`nwQrMatrix`) is a hand-rolled byte-mode encoder, versions 1–10 at level M, cross-checked module for module against python-qrcode by the verifier.
 
 ## 12 · Audit-row rule and disclosure rows (D9)
 

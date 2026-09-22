@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 19/50`
+`Sections: 20/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.20w] — 2026-09-22 04:20:59 PM EST — v07.17r
+
+### Fixed
+- **Exporting vCards with the card image no longer crashes the browser on a phone.** Ticking "include card image" and exporting a vCard bundle or a per-contact zip could freeze the tab for tens of seconds and, on a phone, end in the browser's "Aw, Snap!" crash page. The card image is now prepared in a way that costs a fraction of the memory and time, so the export finishes in about a second either way.
+
+### Changed
+- **The card image embedded in a vCard is now sized for a contact photo.** Cards are stored at full capture size for reading; the copy that rides along in the vCard is redrawn smaller before it is attached. Contacts apps on both phone platforms show it at avatar size regardless, the resulting `.vcf` is roughly ten times smaller and easier to send, and very large photos — which some phones quietly refuse to import — no longer occur.
+- **The export now says which card image it is on** while it collects them, instead of sitting silently on "Building…".
 
 ## [v01.19w] — 2026-09-22 07:15:53 AM EST — v07.14r
 

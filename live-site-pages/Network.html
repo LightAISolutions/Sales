@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.19w">
+  <meta name="build-version" content="v01.20w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -6965,9 +6965,12 @@ function nwB64ToBytes(b64) {
   return out;
 }
 function nwBytesToB64(bytes) {
-  var s = '';
-  for (var i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
-  return btoa(s);
+  // 8 KB batches, not 32 KB: String.fromCharCode.apply spreads the batch onto
+  // the call stack, and a mobile renderer under memory pressure is where that
+  // limit is actually met.
+  var parts = [];
+  for (var i = 0; i < bytes.length; i += 0x2000) parts.push(String.fromCharCode.apply(null, bytes.subarray(i, i + 0x2000)));
+  return btoa(parts.join(''));
 }
 var _nwCrcTable = null;
 function nwCrc32(bytes) {
@@ -6995,27 +6998,72 @@ function nwZip(entries) {
   var end = new Uint8Array([].concat([0x50, 0x4B, 0x05, 0x06], u16(0), u16(0), u16(entries.length), u16(entries.length), u32(cdSize), u32(offset), u16(0)));
   return new Blob(parts.concat(central, [end]), { type: 'application/zip' });
 }
-// A vCard 3.0 line folded at 75 octets (ASCII here — base64 and property names).
+// A vCard 3.0 line folded at 75 octets (ASCII here — base64 and property
+// names): the first line carries 75, every continuation a leading space plus
+// 74, exactly as RFC 2426 unfolds them.
+// PROJECT OVERRIDE: written flat on purpose. The first form of this function
+// re-sliced a shrinking `line` on every pass — fine for the short property
+// lines, quadratic on a PHOTO line, because each pass had to flatten the
+// cons string the previous pass had built. A ~600 KB card front folds in
+// ~11,000 passes; desktop Chrome absorbed the allocation churn and a phone
+// renderer did not, which is the Aw-Snap in v01.19w. Index into the source
+// string and join once — do not "simplify" this back into a while loop.
 function nwVcardFold(line) {
-  var out = '';
-  while (line.length > 75) { out += line.slice(0, 75) + '\r\n'; line = ' ' + line.slice(75); }
-  return out + line + '\r\n';
+  line = String(line == null ? '' : line);
+  if (line.length <= 75) return line + '\r\n';
+  var parts = [line.slice(0, 75)];
+  for (var i = 75; i < line.length; i += 74) parts.push(' ' + line.slice(i, i + 74));
+  return parts.join('\r\n') + '\r\n';
 }
-function nwVcardWithPhoto(vcard, jpegBytes) {
-  if (!jpegBytes || !jpegBytes.length) return vcard;
-  return vcard.replace(/END:VCARD\r?\n?$/, nwVcardFold('PHOTO;ENCODING=b;TYPE=JPEG:' + nwBytesToB64(jpegBytes)) + 'END:VCARD\r\n');
+function nwVcardWithPhoto(vcard, photoB64) {
+  if (!photoB64) return vcard;
+  return vcard.replace(/END:VCARD\r?\n?$/, nwVcardFold('PHOTO;ENCODING=b;TYPE=JPEG:' + photoB64) + 'END:VCARD\r\n');
 }
-// The card front's bytes from the user's own Drive — null when there is no
-// front, no token or the fetch fails; the vCard then ships without PHOTO.
-function nwCardFrontBytes(frontLink) {
+// The card front, re-encoded for the vCard PHOTO — base64 with no data: prefix,
+// or null when there is no front, no token, the fetch fails or the image will
+// not decode; the vCard then ships without PHOTO.
+// The front in Drive is the 2,000 px capture (nwCompressImage) — ~600 KB, and
+// base64 of that is a megabyte of string spliced into ONE folded line. A
+// contact photo needs nothing like it: Contacts on both platforms shows it at
+// avatar size, and iOS has been seen to drop oversized PHOTO values outright.
+// So the front is drawn down to NW_VCARD_PHOTO_MAX px and taken straight out
+// of the canvas as base64 — the full-size bytes are never turned into a string.
+// ~40–90 KB per card, and the phone stops crashing.
+var NW_VCARD_PHOTO_MAX = 720;              // px, longest side
+var NW_VCARD_PHOTO_Q = 0.8;                // JPEG quality out of the canvas
+var NW_VCARD_PHOTO_RAW_MAX = 512 * 1024;   // fallback only: bytes we will ship undecoded
+function nwPhotoB64FromBlob(blob) {
+  if (!window.createImageBitmap) return Promise.resolve(null);
+  return createImageBitmap(blob).then(function(img) {
+    var w = img.width, h = img.height, scale = Math.min(1, NW_VCARD_PHOTO_MAX / Math.max(w, h));
+    var canvas = document.createElement('canvas');
+    canvas.width = Math.max(1, Math.round(w * scale));
+    canvas.height = Math.max(1, Math.round(h * scale));
+    canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+    if (img.close) img.close();
+    var dataUrl = canvas.toDataURL('image/jpeg', NW_VCARD_PHOTO_Q);
+    canvas.width = canvas.height = 0;       // drop the backing store before the string is held
+    return dataUrl.substring(dataUrl.indexOf(',') + 1);
+  }).catch(function() { return null; });
+}
+function nwCardFrontPhoto(frontLink) {
   var fid = nwDriveIdFromLink(frontLink);
   if (!fid) return Promise.resolve(null);
   return new Promise(function(resolve) {
     nwDriveToken(function(tok) {
       if (!tok) { resolve(null); return; }
       fetch('https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fid) + '?alt=media', { headers: { Authorization: 'Bearer ' + tok } })
-        .then(function(r) { return r.ok ? r.arrayBuffer() : null; })
-        .then(function(buf) { resolve(buf ? new Uint8Array(buf) : null); })
+        .then(function(r) { return r.ok ? r.blob() : null; })
+        .then(function(blob) {
+          if (!blob) { resolve(null); return; }
+          nwPhotoB64FromBlob(blob).then(function(b64) {
+            if (b64) { resolve(b64); return; }
+            // No createImageBitmap, or the front would not decode: ship it as it
+            // came, but only while it is small enough to encode without hurting.
+            if (blob.size > NW_VCARD_PHOTO_RAW_MAX || !blob.arrayBuffer) { resolve(null); return; }
+            blob.arrayBuffer().then(function(buf) { resolve(nwBytesToB64(new Uint8Array(buf))); }).catch(function() { resolve(null); });
+          });
+        })
         .catch(function() { resolve(null); });
     });
   });
@@ -7035,7 +7083,10 @@ function nwBulkExport(format, perContact, photo) {
     }
     var cards = res.cards || [];
     var chain = Promise.resolve();
-    if (photo) cards.forEach(function(card) { chain = chain.then(function() { return nwCardFrontBytes(card.frontLink).then(function(bytes) { card.vcard = nwVcardWithPhoto(card.vcard, bytes); card.photo = !!bytes; }); }); });
+    if (photo) cards.forEach(function(card, ci) { chain = chain.then(function() {
+      nwBarStatus('Adding the card image ' + (ci + 1) + ' of ' + cards.length + '\u2026');
+      return nwCardFrontPhoto(card.frontLink).then(function(b64) { card.vcard = nwVcardWithPhoto(card.vcard, b64); card.photo = !!b64; });
+    }); });
     chain.then(function() {
       var withPhoto = cards.filter(function(c) { return c.photo; }).length;
       var suffix = photo ? ' · ' + withPhoto + ' with the card image' : '';

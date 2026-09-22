@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.17r] — 2026-09-22 04:20:59 PM EST
+
+> **Prompt:** "Before I start on E3, I want to close a couple open items:\n\n* I can confirm that \"My Card\" works as intended on Network.\n* When I try to export 2 cards in a vCard bundle (.vcf) with card images included, it works on my PC, but fails on my phone. On my phone, it looks like it's about to ask me to log into my Gmail to verify permissions, but then it quickly switches back to Network and then shows an \"Aw Snap\" error (see attached screenshot). What's going on? Fix it.\n* What should I set \"NW_POSTAL_ADDRESS\" to in my Network Apps Script?\n* How do I redeploy Events.gs from the Apps Script editor?" *(two screenshots attached: the previous session's close-out, and Chrome's "Aw, Snap!" page on Android at the moment of the crash)*
+
+### Fixed
+- **`Network.html` v01.20w — the vCard PHOTO splice crashed the mobile renderer (the reported "Aw, Snap!").** Root cause is `nwVcardFold`, not the Drive consent flash the symptom suggested: the original folded by re-slicing a shrinking `line` (`line = ' ' + line.slice(75)`), so every pass had to flatten the cons string the previous pass built — quadratic in the line's length. Property lines are short and were never affected; a PHOTO line is not. The stored card front is the 2,000 px capture (~600 KB), whose base64 is a ~800 KB single line, i.e. ~11,000 passes: **measured at 18.3 s and multiple GB of allocation churn per card on desktop-class V8**, which desktop Chrome absorbs and a phone renderer answers with an OOM kill. Two cards doubled it. `nwVcardFold` is now flat — it indexes the source string and `join`s once — verified byte-for-byte identical to the old output for every length 0–1,200 and at 200,000 chars, and **1,679× faster** on the 800 KB line (18,329 ms → 10.9 ms). A `PROJECT OVERRIDE` comment records why it must not be written back as a loop
+- **`Network.html` v01.20w — the front is no longer base64-encoded at capture size.** `nwCardFrontBytes` (raw `arrayBuffer` → `nwBytesToB64`) is replaced by `nwCardFrontPhoto`: fetch as a Blob, `createImageBitmap` → canvas at `NW_VCARD_PHOTO_MAX` 720 px / `NW_VCARD_PHOTO_Q` 0.8, and base64 taken straight out of `toDataURL` — the full-size bytes are never turned into a string, and the canvas backing store is released before it is held. Typical PHOTO line ~40–90 KB (0.2 ms to fold). Falls back to the undecoded bytes only where `createImageBitmap` is absent or the image will not decode, and only under `NW_VCARD_PHOTO_RAW_MAX` (512 KB). Contacts on iOS and Android render the PHOTO at avatar size either way, and oversized PHOTO values are a known iOS import failure, so this is a fidelity-neutral fix
+- **`Network.html` v01.20w — `nwBytesToB64` batches at 8 KB, not 32 KB.** `String.fromCharCode.apply` spreads its batch onto the call stack; 32,768 arguments is close enough to the engine limit to fail on a mobile renderer under memory pressure. Also builds through an array rather than `+=`
+
+### Changed
+- **`Network.html` v01.20w — the export reports progress through the photo fetches** (`Adding the card image N of M…`), which are serial and were silent
+- **`NETWORK-SCHEMA.md` §11** — the PHOTO row records the 720 px re-encode; the N3 s2 paragraph names `nwCardFrontPhoto` and states the fold's flat-form requirement as a rule rather than an implementation detail
+
+### Notes
+- **No `Network.gs` change and no redeploy needed** — the PHOTO splice is entirely page-side by design (the card front lives in the developer's own Drive under `drive.file`, which the script cannot read), so the fix ships with the Pages deploy
+- **The Gmail-permission flash the report describes is not the fault** and is unchanged: `nwDriveToken` calls the GIS token client with `prompt: ''`, which on an already-granted account opens and closes an auth window without interaction. On Android Chrome that window is full-screen for a moment. The crash followed it because the fold ran immediately after the token returned
+- `scripts/verify-network-roles.py` — ALL CHECKS PASSED, zero page errors, 55 requests on the admin+s1+s2 pass, with the PHOTO splice exercised; `check-gas-inner-scripts.js`, `check-network-schema.py` and `check-readme-tree.py` clean; every inline `<script>` in the page re-checked with `node --check`
 
 ## [v07.16r] — 2026-09-22 09:27:50 AM EST
 
