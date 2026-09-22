@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10g] — 2026-09-22 07:15:53 AM EST — v07.14r
+
+### Added
+- Exports in three formats from one gather: CSV, an Excel workbook built through a temporary spreadsheet, and vCard 3.0 text per contact and as a bundle; every export records a disclosure entry
+- Follow-up drafts: saved templates, one rendered draft per recipient with merge fields, edits, and marking a draft sent (which records an "Email sent" interaction) or discarded; the script never sends mail
+- The developer's own card details (name, title, company, phone) saved on the profile row and answered as a vCard
+
+### Changed
+- Recipients marked do-not-contact or without marketing consent are skipped from a mailing and reported by reason
 
 ## [v01.09g] — 2026-09-22 06:46:16 AM EST — v07.13r
 

@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.18w">
+  <meta name="build-version" content="v01.19w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -584,6 +584,36 @@
     .nw-bar-form button { flex: 0 0 auto; background: #fff; color: var(--nw-accent); }
     .nw-bar-status { font: 12px/1.5 var(--nw-mono); margin-top: 8px; opacity: .92; word-break: break-word; }
     body.nw-bar-on #nw-app { padding-bottom: 240px; }
+    /* N3 s2 — the Export menu, the follow-up drafts panel, My card and the QR overlay */
+    .nw-bar-form label.nw-tick { flex: 1 1 100%; display: flex; align-items: center; gap: 6px; font: 13px/1.3 var(--nw-serif); color: #fff; cursor: pointer; }
+    .nw-bar-form label.nw-tick input { flex: 0 0 auto; width: 18px; height: 18px; min-height: 0; padding: 0; }
+    .nw-pill { display: inline-block; font: 600 12px/1 var(--nw-serif); color: var(--nw-accent); border: 1px solid var(--nw-line2); border-radius: 999px; padding: 7px 11px; margin: 4px 6px 0 0; text-decoration: none; background: var(--nw-card); }
+    .nw-mail-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .nw-mail-close { font: 13px/1 var(--nw-serif); color: var(--nw-muted); text-decoration: underline; white-space: nowrap; }
+    .nw-mail-recipients { font: 13px/1.5 var(--nw-serif); color: var(--nw-muted); margin: 0 0 10px; }
+    .nw-mail-recipients b { display: block; color: var(--nw-ink); }
+    .nw-mail-form { display: flex; flex-direction: column; gap: 8px; }
+    .nw-mail-form input, .nw-mail-form select, .nw-mail-form textarea, .nw-mail-handoff input, .nw-draft input, .nw-draft textarea {
+      width: 100%; box-sizing: border-box; font: 15px/1.4 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: #fff; min-height: 44px; }
+    .nw-mail-form textarea, .nw-draft textarea { resize: vertical; font-family: var(--nw-mono); font-size: 13px; }
+    .nw-mail-form input[readonly], .nw-mail-form textarea[readonly] { background: #f7f4ee; color: var(--nw-muted); }
+    .nw-mail-hint { font: 12px/1.9 var(--nw-mono); color: var(--nw-faint); }
+    .nw-chip { font: 11px/1 var(--nw-mono); color: var(--nw-accent); background: transparent; border: 1px solid var(--nw-line2); border-radius: 999px; padding: 4px 7px; margin: 0 4px 4px 0; cursor: pointer; }
+    .nw-btn-primary { background: var(--nw-accent); color: #fff; border-color: var(--nw-accent); }
+    .nw-mail-status { margin-top: 8px; }
+    .nw-mail-handoff { display: flex; flex-direction: column; gap: 8px; margin: 12px 0 4px; padding-top: 12px; border-top: 1px solid var(--nw-line); }
+    .nw-mail-handoff-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .nw-drafts h3 { font: 600 15px/1.3 var(--nw-serif); margin: 12px 0 6px; }
+    .nw-draft { border: 1px solid var(--nw-line); border-radius: 8px; padding: 10px; margin: 0 0 10px; background: #fff; display: flex; flex-direction: column; gap: 6px; }
+    .nw-draft.nw-draft-done { opacity: .55; }
+    .nw-draft-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; font: 14px/1.3 var(--nw-serif); }
+    .nw-draft-head span { font: 12px/1.3 var(--nw-mono); color: var(--nw-faint); overflow-wrap: anywhere; }
+    .nw-draft-acts { display: flex; gap: 6px; flex-wrap: wrap; }
+    .nw-draft-acts .nw-btn { font-size: 13px; padding: 9px 10px; min-height: 40px; text-decoration: none; text-align: center; }
+    .nw-qr-preview { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 10px; }
+    .nw-qr-preview small { font: 11px/1.4 var(--nw-mono); color: var(--nw-faint); }
+    .nw-qr-overlay { position: fixed; inset: 0; z-index: 9; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #fff; cursor: pointer; }
+    .nw-qr-caption { font: 600 15px/1.3 var(--nw-serif); color: var(--nw-ink); }
 /* PROJECT END */
 /* ══════════════ */
   </style>
@@ -6253,7 +6283,7 @@ function nwContactRow(c) {
 // (validated per row, rejected[] read back), the CSV export through
 // nop=export (a disclosure row is written server-side), delete through the
 // existing nop=delete one request per row with the count in the confirm;
-// "Start a mailing" is session 2 and stays disabled. Every write refreshes
+// "Start a mailing" opens the follow-up drafts panel (session 2, below). Every write refreshes
 // the list (D14). Selection survives a refresh and is pruned to the rows shown.
 var _nwFilter = { q: '', relationship: '', stage: '', role: '', segment: '', event: '', tag: '', from: '', to: '', consent: '' };
 var _nwFilterOpen = false;
@@ -6416,8 +6446,8 @@ function nwBar() {
   var forms = {};
   function openForm(name) { for (var k in forms) if (forms.hasOwnProperty(k)) { forms[k].form.classList.toggle('nw-open', k === name && !forms[k].form.classList.contains('nw-open')); forms[k].btn.setAttribute('aria-pressed', forms[k].form.classList.contains('nw-open') ? 'true' : 'false'); } }
   function btn(id, text, cls) { var b = nwEl('button', cls || '', text); b.type = 'button'; b.id = id; row.appendChild(b); return b; }
-  var bTag = btn('nw-bar-tag', '🏷 Tag'); var bAcct = btn('nw-bar-account', '🤝 Relationship'); var bCsv = btn('nw-bar-csv', '⬇ CSV');
-  var bMail = btn('nw-bar-mail', '✉ Mailing'); bMail.disabled = true; bMail.title = 'Follow-up drafts arrive in the next session';
+  var bTag = btn('nw-bar-tag', '🏷 Tag'); var bAcct = btn('nw-bar-account', '🤝 Relationship'); var bExport = btn('nw-bar-export', '⬇ Export');
+  var bMail = btn('nw-bar-mail', '✉ Start a mailing');   // N3 s2: the follow-up drafts (D15 — nothing is sent)
   var bDel = btn('nw-bar-delete', '🗑 Delete', 'nw-bar-danger');
   inner.appendChild(row);
   // Tag form
@@ -6439,9 +6469,20 @@ function nwBar() {
   fAcct.appendChild(relSel); fAcct.appendChild(stSel); fAcct.appendChild(acctGo);
   fAcct.addEventListener('submit', function(ev) { ev.preventDefault(); if (!relSel.value && !stSel.value) { nwBarStatus('Choose a relationship, a stage, or both.', 'err'); return; } nwBulkAccount(relSel.value, stSel.value); });
   inner.appendChild(fAcct); forms.account = { form: fAcct, btn: bAcct };
+  // N3 s2: the Export menu — CSV, the .xlsx workbook, the vCard bundle or one vCard per contact (zipped); the card image rides on the vCards only when ticked
+  var fExp = nwEl('form', 'nw-bar-form'); fExp.id = 'nw-bar-export-form';
+  function expBtn(id, text, fn) { var b = nwEl('button', null, text); b.type = 'button'; b.id = id; b.addEventListener('click', fn); fExp.appendChild(b); return b; }
+  var tick = nwEl('label', 'nw-tick'); var tickIn = document.createElement('input'); tickIn.type = 'checkbox'; tickIn.id = 'nw-export-photo'; tick.appendChild(tickIn); tick.appendChild(document.createTextNode('include card image in the vCards (fetched from your Drive)'));
+  expBtn('nw-bar-csv', 'CSV', function() { nwBulkExport('csv', false, false); });
+  expBtn('nw-bar-xlsx', 'Excel (.xlsx)', function() { nwBulkExport('xlsx', false, false); });
+  expBtn('nw-bar-vcf', 'vCard bundle (.vcf)', function() { nwBulkExport('vcard', false, tickIn.checked); });
+  expBtn('nw-bar-vcf-each', 'vCards, one per contact (.zip)', function() { nwBulkExport('vcard', true, tickIn.checked); });
+  fExp.appendChild(tick);
+  inner.appendChild(fExp); forms.export = { form: fExp, btn: bExport };
   bTag.addEventListener('click', function() { openForm('tag'); if (fTag.classList.contains('nw-open')) tagIn.focus(); });
   bAcct.addEventListener('click', function() { openForm('account'); });
-  bCsv.addEventListener('click', function() { openForm(''); nwBulkExportCsv(); });
+  bExport.addEventListener('click', function() { openForm('export'); });
+  bMail.addEventListener('click', function() { openForm(''); nwMailOpen(nwSelectedIds()); });
   bDel.addEventListener('click', function() { openForm(''); nwBulkDelete(); });
   var status = nwEl('div', 'nw-bar-status', ''); status.id = 'nw-bar-status'; status.style.display = 'none'; inner.appendChild(status);
   bar.appendChild(inner);
@@ -6456,7 +6497,7 @@ function nwBarRefresh() {
   if (c) c.textContent = n + ' selected';
   if (!n) { bar.querySelectorAll('.nw-bar-form').forEach(function(f) { f.classList.remove('nw-open'); }); bar.querySelectorAll('.nw-bar-row button').forEach(function(b) { b.setAttribute('aria-pressed', 'false'); }); if (!_nwBarStatus) nwBarStatus(''); }
 }
-function nwBarBusy(on) { var bar = document.getElementById('nw-bar'); if (!bar) return; bar.querySelectorAll('button').forEach(function(b) { if (b.id !== 'nw-bar-mail') b.disabled = !!on; }); }
+function nwBarBusy(on) { var bar = document.getElementById('nw-bar'); if (!bar) return; bar.querySelectorAll('button').forEach(function(b) { b.disabled = !!on; }); }
 function nwBulkTag(tag) {
   var ids = nwSelectedIds(); if (!ids.length) return;
   nwBarBusy(true); nwBarStatus('Tagging ' + ids.length + '…');
@@ -6490,16 +6531,7 @@ function nwDownloadText(text, filename, mime) {
   document.body.appendChild(a); a.click();
   setTimeout(function() { document.body.removeChild(a); URL.revokeObjectURL(url); }, 2000);
 }
-function nwBulkExportCsv() {
-  var ids = nwSelectedIds(); if (!ids.length) return;
-  nwBarBusy(true); nwBarStatus('Building the CSV for ' + ids.length + '…');
-  nwApiBody('export', { format: 'csv', ids: JSON.stringify(ids) }, function(res) {
-    nwBarBusy(false);
-    if (!(res && res.success)) { nwBarStatus('Could not export (' + nwErrText(res && res.error) + ')', 'err'); return; }
-    nwDownloadText(res.csv || '', res.filename || 'network-contacts.csv');
-    nwBarStatus('✓ CSV with ' + res.rows + ' contact' + (res.rows === 1 ? '' : 's') + (res.excluded ? ' · ' + res.excluded + ' marked do-not-contact left out' : '') + ' — saved to your downloads.');
-  });
-}
+function nwBulkExportCsv() { nwBulkExport('csv', false, false); }   // N3 s2: every format goes through nwBulkExport below
 // Soft delete, one request per row (the existing nop=delete); each can be
 // restored from its row afterwards. The count is in the confirm.
 function nwBulkDelete() {
@@ -6887,6 +6919,7 @@ function nwAppMount() {
   nwHeaderShow();
   app.style.display = 'block';
   if (!nwAdmitted()) { nwRenderDenied(app); _nwMounted = true; return; }
+  nwPillsMount();   // N3 s2: Drafts and My card, admin only
   if (_nwMounted) { nwLoadList(); return; }
   _nwMounted = true;
   nwLoadList();
@@ -6909,6 +6942,511 @@ if (typeof showApp === 'function') {
     try { nwAppMount(); } catch (e) { /* the app surface must never block auth */ }
     return r;
   };
+}
+
+// PROJECT: ── N3 session 2 — the exports, the follow-up drafts and the QR card (§4.3, D15) ──
+// Exports: the server gathers the selection once (Do Not Contact rows left
+// out, a disclosure row written) and answers the asked shape — CSV text, the
+// .xlsx workbook base64 through the Receipts temp-spreadsheet path, or the
+// vCard 3.0 texts. The vCard PHOTO is spliced HERE when "include card image"
+// is ticked: the card front lives in the user's own Drive (drive.file), so
+// the page fetches it with its own token, base64-encodes it and folds the
+// line at 75 octets. Bundles (.eml, per-contact .vcf) are one hand-rolled
+// store-only zip — no library.
+function nwDownloadBlob(blob, filename) {
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a'); a.href = url; a.download = filename; a.style.display = 'none';
+  document.body.appendChild(a); a.click();
+  setTimeout(function() { document.body.removeChild(a); URL.revokeObjectURL(url); }, 2000);
+}
+function nwB64ToBytes(b64) {
+  var bin = atob(String(b64 || '').replace(/\s+/g, '')), out = new Uint8Array(bin.length);
+  for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+function nwBytesToB64(bytes) {
+  var s = '';
+  for (var i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  return btoa(s);
+}
+var _nwCrcTable = null;
+function nwCrc32(bytes) {
+  if (!_nwCrcTable) { _nwCrcTable = []; for (var n = 0; n < 256; n++) { var c = n; for (var k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1); _nwCrcTable[n] = c >>> 0; } }
+  var crc = 0xFFFFFFFF;
+  for (var i = 0; i < bytes.length; i++) crc = _nwCrcTable[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8);
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+// entries: [{ name, text }] → a store-only zip Blob (local headers, central directory, end record).
+function nwZip(entries) {
+  var enc = new TextEncoder(), parts = [], central = [], offset = 0;
+  function u16(v) { return [v & 0xFF, (v >>> 8) & 0xFF]; }
+  function u32(v) { return [v & 0xFF, (v >>> 8) & 0xFF, (v >>> 16) & 0xFF, (v >>> 24) & 0xFF]; }
+  var d = new Date(), dosTime = ((d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1)) & 0xFFFF;
+  var dosDate = (((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate()) & 0xFFFF;
+  entries.forEach(function(e) {
+    var name = enc.encode(e.name), data = e.bytes || enc.encode(e.text || ''), crc = nwCrc32(data);
+    var local = [].concat([0x50, 0x4B, 0x03, 0x04], u16(20), u16(0x0800), u16(0), u16(dosTime), u16(dosDate), u32(crc), u32(data.length), u32(data.length), u16(name.length), u16(0));
+    parts.push(new Uint8Array(local), name, data);
+    central.push(new Uint8Array([].concat([0x50, 0x4B, 0x01, 0x02], u16(20), u16(20), u16(0x0800), u16(0), u16(dosTime), u16(dosDate), u32(crc), u32(data.length), u32(data.length),
+      u16(name.length), u16(0), u16(0), u16(0), u16(0), u32(0), u32(offset))), name);
+    offset += local.length + name.length + data.length;
+  });
+  var cdSize = 0; central.forEach(function(c) { cdSize += c.length; });
+  var end = new Uint8Array([].concat([0x50, 0x4B, 0x05, 0x06], u16(0), u16(0), u16(entries.length), u16(entries.length), u32(cdSize), u32(offset), u16(0)));
+  return new Blob(parts.concat(central, [end]), { type: 'application/zip' });
+}
+// A vCard 3.0 line folded at 75 octets (ASCII here — base64 and property names).
+function nwVcardFold(line) {
+  var out = '';
+  while (line.length > 75) { out += line.slice(0, 75) + '\r\n'; line = ' ' + line.slice(75); }
+  return out + line + '\r\n';
+}
+function nwVcardWithPhoto(vcard, jpegBytes) {
+  if (!jpegBytes || !jpegBytes.length) return vcard;
+  return vcard.replace(/END:VCARD\r?\n?$/, nwVcardFold('PHOTO;ENCODING=b;TYPE=JPEG:' + nwBytesToB64(jpegBytes)) + 'END:VCARD\r\n');
+}
+// The card front's bytes from the user's own Drive — null when there is no
+// front, no token or the fetch fails; the vCard then ships without PHOTO.
+function nwCardFrontBytes(frontLink) {
+  var fid = nwDriveIdFromLink(frontLink);
+  if (!fid) return Promise.resolve(null);
+  return new Promise(function(resolve) {
+    nwDriveToken(function(tok) {
+      if (!tok) { resolve(null); return; }
+      fetch('https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fid) + '?alt=media', { headers: { Authorization: 'Bearer ' + tok } })
+        .then(function(r) { return r.ok ? r.arrayBuffer() : null; })
+        .then(function(buf) { resolve(buf ? new Uint8Array(buf) : null); })
+        .catch(function() { resolve(null); });
+    });
+  });
+}
+function nwBulkExport(format, perContact, photo) {
+  var ids = nwSelectedIds(); if (!ids.length) return;
+  var word = format === 'csv' ? 'the CSV' : format === 'xlsx' ? 'the Excel workbook' : perContact ? 'one vCard per contact' : 'the vCard bundle';
+  nwBarBusy(true); nwBarStatus('Building ' + word + ' for ' + ids.length + '…');
+  nwApiBody('export', { format: format, ids: JSON.stringify(ids) }, function(res) {
+    if (!(res && res.success)) { nwBarBusy(false); nwBarStatus('Could not export (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    var left = res.excluded ? ' · ' + res.excluded + ' marked do-not-contact left out' : '';
+    function done(text, extra) { nwBarBusy(false); nwBarStatus('✓ ' + text + ' with ' + res.rows + ' contact' + (res.rows === 1 ? '' : 's') + (extra || '') + left + ' — saved to your downloads.'); }
+    if (format === 'csv') { nwDownloadText(res.csv || '', res.filename || 'network-contacts.csv'); done('CSV'); return; }
+    if (format === 'xlsx') {
+      nwDownloadBlob(new Blob([nwB64ToBytes(res.base64 || '')], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }), res.filename || 'network-contacts.xlsx');
+      done('Excel workbook (Contacts · Accounts · Interactions)'); return;
+    }
+    var cards = res.cards || [];
+    var chain = Promise.resolve();
+    if (photo) cards.forEach(function(card) { chain = chain.then(function() { return nwCardFrontBytes(card.frontLink).then(function(bytes) { card.vcard = nwVcardWithPhoto(card.vcard, bytes); card.photo = !!bytes; }); }); });
+    chain.then(function() {
+      var withPhoto = cards.filter(function(c) { return c.photo; }).length;
+      var suffix = photo ? ' · ' + withPhoto + ' with the card image' : '';
+      if (perContact) { nwDownloadBlob(nwZip(cards.map(function(c) { return { name: c.filename, text: c.vcard }; })), (res.filename || 'network-contacts.vcf').replace(/\.vcf$/, '') + '-vcards.zip'); done('vCards (one .vcf per contact, zipped)', suffix); }
+      else { nwDownloadBlob(new Blob([cards.map(function(c) { return c.vcard; }).join('')], { type: 'text/vcard;charset=utf-8' }), res.filename || 'network-contacts.vcf'); done('vCard bundle', suffix); }
+    });
+  });
+}
+
+// ── The follow-up drafts (D15) ───────────────────────────────────────────
+// Recipients come from the selection (the server drops Do Not Contact and
+// Consent Marketing = no rows and says why); a template — saved on the
+// Mailings tab or written now with the merge fields — is rendered by
+// nop=drafts into one editable draft per recipient (Drafts tab, status =
+// draft). Each draft is edited in place and handed off from here: the .eml
+// bundle (one RFC 5322 file per draft, zipped), CSV / .txt, a per-draft copy
+// or a mailto: link. Marking a draft sent (nop=draftstatus) writes the
+// email-out Interaction; nothing on this page or the server ever sends.
+var NW_MAIL_FROM_KEY = 'nw_mail_from';
+var NW_MAILTO_MAX = 1800;   // over this the URL is not reliable — fall back to Copy
+var NW_MERGE_HINT = ['{{first}}', '{{last}}', '{{company}}', '{{title}}', '{{metAt}}', '{{metDate}}', '{{lastTopic}}', '{{myName}}', '{{myCompany}}', '{{myAddress}}'];
+var NW_DEFAULT_TEMPLATE = {
+  name: '', subject: 'Good to meet you, {{first}}',
+  body: 'Hi {{first}},\n\nThank you for the conversation at {{metAt}} on {{metDate}}. I enjoyed hearing about {{lastTopic}} and would like to keep the thread going — would a short call next week suit you?\n\nBest regards,\n{{myName}}\n{{myCompany}}\n\nIf you would rather not hear from me again, reply "unsubscribe" and I will remove you from my list.\n{{myAddress}}'
+};
+var _nwMail = { ids: [], templates: [], drafts: [], me: null };
+function nwMailFrom() { try { return localStorage.getItem(NW_MAIL_FROM_KEY) || ''; } catch (e) { return ''; } }
+function nwMailFromSet(v) { try { localStorage.setItem(NW_MAIL_FROM_KEY, v); } catch (e) {} }
+function nwMailStatus(text, level) {
+  var el = document.getElementById('nw-mail-status'); if (!el) return;
+  el.textContent = text || ''; el.style.display = text ? '' : 'none';
+  el.className = 'nw-status nw-mail-status' + (level === 'err' ? ' nw-status-err' : level === 'warn' ? ' nw-status-warn' : level === 'ok' ? ' nw-status-ok' : '');
+}
+function nwSkipText(reason) {
+  return { do_not_contact: 'marked do not contact', no_consent: 'no marketing consent', no_email: 'no email address', not_found: 'not found', deleted: 'deleted', duplicate: 'listed twice', bad_id: 'not a contact id' }[reason] || reason;
+}
+function nwMailPanel() {
+  var panel = document.getElementById('nw-mail');
+  if (panel) return panel;
+  var app = document.getElementById('nw-app'), wrap = document.getElementById('nw-listwrap');
+  panel = nwEl('div', 'nw-card nw-mail'); panel.id = 'nw-mail'; panel.style.display = 'none';
+  var head = nwEl('div', 'nw-mail-head'); head.appendChild(nwEl('h2', null, '✉ Follow-up drafts'));
+  var close = nwEl('a', 'nw-mail-close', '× Close'); close.href = '#'; close.id = 'nw-mail-close'; close.setAttribute('role', 'button');
+  close.addEventListener('click', function(ev) { ev.preventDefault(); panel.style.display = 'none'; });
+  head.appendChild(close); panel.appendChild(head);
+  panel.appendChild(nwEl('p', null, 'Nothing is sent from here. Render one draft per recipient, edit each in place, then hand them to your own mail client and mark them sent.'));
+  var rec = nwEl('div', 'nw-mail-recipients'); rec.id = 'nw-mail-recipients'; panel.appendChild(rec);
+  // The template
+  var form = nwEl('form', 'nw-mail-form'); form.id = 'nw-mail-form';
+  var tplSel = document.createElement('select'); tplSel.id = 'nw-mail-tpl'; form.appendChild(tplSel);
+  var nameIn = document.createElement('input'); nameIn.type = 'text'; nameIn.id = 'nw-mail-name'; nameIn.placeholder = 'Save as template (optional name)'; nameIn.maxLength = 80; nameIn.autocomplete = 'off'; form.appendChild(nameIn);
+  var subIn = document.createElement('input'); subIn.type = 'text'; subIn.id = 'nw-mail-subject'; subIn.placeholder = 'Subject'; subIn.maxLength = 200; subIn.autocomplete = 'off'; form.appendChild(subIn);
+  var bodyIn = document.createElement('textarea'); bodyIn.id = 'nw-mail-body'; bodyIn.rows = 9; bodyIn.placeholder = 'Body'; bodyIn.maxLength = 5000; form.appendChild(bodyIn);
+  var hint = nwEl('div', 'nw-mail-hint'); hint.appendChild(document.createTextNode('Merge fields: '));
+  NW_MERGE_HINT.forEach(function(f) { var chip = nwEl('button', 'nw-chip', f); chip.type = 'button'; chip.addEventListener('click', function() { var s = bodyIn.selectionStart || bodyIn.value.length; bodyIn.value = bodyIn.value.slice(0, s) + f + bodyIn.value.slice(s); bodyIn.focus(); }); hint.appendChild(chip); });
+  form.appendChild(hint);
+  var go = nwEl('button', 'nw-btn nw-btn-primary', 'Render drafts'); go.type = 'submit'; go.id = 'nw-mail-render'; form.appendChild(go);
+  form.addEventListener('submit', function(ev) { ev.preventDefault(); nwMailRender(); });
+  tplSel.addEventListener('change', function() {
+    var v = tplSel.value, t = v === 'default' ? NW_DEFAULT_TEMPLATE : v === 'new' ? { subject: '', body: '' } : _nwMail.templates.filter(function(m) { return m.id === v; })[0];
+    if (!t) return; subIn.value = t.subject || ''; bodyIn.value = t.body || ''; nameIn.value = '';
+    subIn.readOnly = bodyIn.readOnly = !!(v !== 'default' && v !== 'new'); nameIn.style.display = subIn.readOnly ? 'none' : '';
+  });
+  panel.appendChild(form);
+  var status = nwEl('div', 'nw-status nw-mail-status', ''); status.id = 'nw-mail-status'; status.style.display = 'none'; panel.appendChild(status);
+  // The review list and the hand-off row
+  var handoff = nwEl('div', 'nw-mail-handoff'); handoff.id = 'nw-mail-handoff'; handoff.style.display = 'none';
+  var fromIn = document.createElement('input'); fromIn.type = 'email'; fromIn.id = 'nw-mail-from'; fromIn.placeholder = 'From (your address, for the .eml files)'; fromIn.value = nwMailFrom(); fromIn.autocomplete = 'email';
+  fromIn.addEventListener('change', function() { nwMailFromSet(fromIn.value.trim()); });
+  handoff.appendChild(fromIn);
+  var hrow = nwEl('div', 'nw-mail-handoff-row');
+  function hb(id, text, fn) { var b = nwEl('button', 'nw-btn', text); b.type = 'button'; b.id = id; b.addEventListener('click', fn); hrow.appendChild(b); return b; }
+  hb('nw-mail-eml', '⬇ .eml bundle', nwMailEmlBundle); hb('nw-mail-csv', '⬇ CSV', function() { nwMailTable('csv'); }); hb('nw-mail-txt', '⬇ .txt', function() { nwMailTable('txt'); });
+  handoff.appendChild(hrow); panel.appendChild(handoff);
+  var list = nwEl('div', 'nw-drafts'); list.id = 'nw-drafts'; panel.appendChild(list);
+  if (wrap) app.insertBefore(panel, wrap); else app.appendChild(panel);
+  return panel;
+}
+function nwMailTemplates() {
+  var sel = document.getElementById('nw-mail-tpl'); if (!sel) return;
+  sel.innerHTML = '';
+  function opt(v, text) { var o = document.createElement('option'); o.value = v; o.textContent = text; sel.appendChild(o); }
+  opt('default', 'Default follow-up (edit freely)');
+  _nwMail.templates.forEach(function(m) { opt(m.id, 'Saved: ' + m.name); });
+  opt('new', 'Write a new one');
+  sel.value = 'default'; sel.dispatchEvent(new Event('change'));
+}
+// Open from the bar (ids = the selection) or from the masthead pill (no ids —
+// the open drafts only). Either way nop=mailings brings the templates, the
+// open drafts and the "me" fields.
+function nwMailOpen(ids) {
+  var panel = nwMailPanel(); panel.style.display = '';
+  _nwMail.ids = ids || [];
+  var rec = document.getElementById('nw-mail-recipients'), form = document.getElementById('nw-mail-form');
+  rec.innerHTML = '';
+  if (_nwMail.ids.length) {
+    var names = _nwMail.ids.map(function(id) { var r = _nwRows.filter(function(x) { return x.id === id; })[0]; return r ? r.name : id; });
+    rec.appendChild(nwEl('b', null, _nwMail.ids.length + ' recipient' + (_nwMail.ids.length === 1 ? '' : 's') + ' from the selection'));
+    rec.appendChild(nwEl('span', null, names.slice(0, 6).join(', ') + (names.length > 6 ? ' +' + (names.length - 6) + ' more' : '')));
+    form.style.display = '';
+  } else { rec.appendChild(nwEl('span', null, 'Select contacts in the list and tap Start a mailing to render new drafts. Open drafts are below.')); form.style.display = 'none'; }
+  nwMailStatus('Loading templates and open drafts…');
+  nwApi('mailings', {}, function(res) {
+    if (!(res && res.success)) { nwMailStatus('Could not load (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    _nwMail.templates = res.templates || []; _nwMail.me = res.me || null;
+    nwMailTemplates();
+    nwMailStatus(res.me && !res.me.name ? 'Tip: fill My card (masthead) so {{myName}} and {{myCompany}} render; set the postal address on the server for {{myAddress}}.' : '', 'warn');
+    nwDraftsPaint(res.drafts || [], []);
+  });
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function nwMailRender() {
+  var sel = document.getElementById('nw-mail-tpl'), params = { ids: JSON.stringify(_nwMail.ids), filter: JSON.stringify(nwFilterParams()) };
+  if (!_nwMail.ids.length) { nwMailStatus('Select recipients in the list first.', 'err'); return; }
+  if (sel.value !== 'default' && sel.value !== 'new') params.mailingId = sel.value;
+  else {
+    params.subject = document.getElementById('nw-mail-subject').value.trim(); params.body = document.getElementById('nw-mail-body').value.trim();
+    var name = document.getElementById('nw-mail-name').value.trim(); if (name) params.name = name;
+    if (!params.subject || !params.body) { nwMailStatus('A subject and a body are needed.', 'err'); return; }
+  }
+  var go = document.getElementById('nw-mail-render'); go.disabled = true; nwMailStatus('Rendering ' + _nwMail.ids.length + ' draft' + (_nwMail.ids.length === 1 ? '' : 's') + '…');
+  nwApiBody('drafts', params, function(res) {
+    go.disabled = false;
+    if (!(res && res.success)) { nwMailStatus('Could not render (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    var skipped = res.skipped || [], why = {};
+    skipped.forEach(function(s) { var w = nwSkipText(s.reason); why[w] = (why[w] || 0) + 1; });
+    nwMailStatus('✓ ' + (res.drafts || []).length + ' draft' + ((res.drafts || []).length === 1 ? '' : 's') + ' rendered' + (res.saved ? ' · template saved' : '') +
+      (skipped.length ? ' · ' + skipped.length + ' skipped: ' + Object.keys(why).map(function(w) { return w + (why[w] > 1 ? ' ×' + why[w] : ''); }).join('; ') : '') + '. Edit each below, then hand off.', skipped.length ? 'warn' : 'ok');
+    if (res.saved) nwApi('mailings', {}, function(r2) { if (r2 && r2.success) { _nwMail.templates = r2.templates || []; nwMailTemplates(); } });
+    nwDraftsPaint((res.drafts || []).concat(_nwMail.drafts), []);
+    _nwSelected = {}; nwBarRefresh();
+  });
+}
+function nwDraftsPaint(drafts, keep) {
+  _nwMail.drafts = drafts.filter(function(d) { return d && d.status === 'draft'; });
+  var list = document.getElementById('nw-drafts'), handoff = document.getElementById('nw-mail-handoff');
+  list.innerHTML = '';
+  handoff.style.display = _nwMail.drafts.length ? '' : 'none';
+  if (!_nwMail.drafts.length) { list.appendChild(nwEl('div', 'nw-empty', 'No open drafts.')); return; }
+  list.appendChild(nwEl('h3', null, _nwMail.drafts.length + ' open draft' + (_nwMail.drafts.length === 1 ? '' : 's')));
+  _nwMail.drafts.forEach(function(d) { list.appendChild(nwDraftBlock(d)); });
+}
+function nwDraftBlock(d) {
+  var box = nwEl('div', 'nw-draft'); box.setAttribute('data-id', d.id);
+  var head = nwEl('div', 'nw-draft-head'); head.appendChild(nwEl('b', null, d.name || d.contactId)); head.appendChild(nwEl('span', null, d.to)); box.appendChild(head);
+  var sub = document.createElement('input'); sub.type = 'text'; sub.className = 'nw-draft-subject'; sub.value = d.subject || ''; sub.maxLength = 200; sub.setAttribute('aria-label', 'Subject'); box.appendChild(sub);
+  var body = document.createElement('textarea'); body.className = 'nw-draft-body'; body.value = d.body || ''; body.rows = 8; body.maxLength = 6000; body.setAttribute('aria-label', 'Body'); box.appendChild(body);
+  var acts = nwEl('div', 'nw-draft-acts');
+  function b(cls, text, fn) { var el = nwEl('button', 'nw-btn ' + cls, text); el.type = 'button'; el.addEventListener('click', fn); acts.appendChild(el); return el; }
+  var save = b('nw-draft-save', '💾 Save edit', function() { nwDraftUpdate(d, sub.value.trim(), body.value.trim(), box); }); save.style.display = 'none';
+  function dirty() { save.style.display = (sub.value.trim() !== (d.subject || '') || body.value.trim() !== (d.body || '')) ? '' : 'none'; }
+  sub.addEventListener('input', dirty); body.addEventListener('input', dirty);
+  b('nw-draft-copy', '📋 Copy', function() { nwCopyText(d.subject + '\n\n' + d.body).then(function(ok) { nwDraftNote(box, ok ? 'Copied subject + body.' : 'Copy failed — select the text and copy it by hand.', ok ? 'ok' : 'err'); }); });
+  var mailto = nwEl('a', 'nw-btn nw-draft-mailto', '✉ Mail app'); mailto.setAttribute('role', 'button'); mailto.href = nwMailtoHref(d); mailto.setAttribute('data-len', String((d.body || '').length));
+  if ((d.body || '').length > NW_MAILTO_MAX) { mailto.href = '#'; mailto.title = 'This body is too long for a mailto: link — use Copy'; mailto.addEventListener('click', function(ev) { ev.preventDefault(); nwCopyText(d.subject + '\n\n' + d.body).then(function() { nwDraftNote(box, 'Body too long for a mailto: link — subject + body copied instead.', 'warn'); }); }); }
+  acts.appendChild(mailto);
+  b('nw-draft-sent', '✓ Mark sent', function() { nwDraftStatus(d, 'sent', box); });
+  b('nw-draft-discard', '🗑 Discard', function() { nwDraftStatus(d, 'discarded', box); });
+  box.appendChild(acts);
+  var note = nwEl('div', 'nw-status nw-draft-note', ''); note.style.display = 'none'; box.appendChild(note);
+  return box;
+}
+function nwDraftNote(box, text, level) { var n = box.querySelector('.nw-draft-note'); if (!n) return; n.textContent = text; n.style.display = text ? '' : 'none'; n.className = 'nw-status nw-draft-note' + (level === 'err' ? ' nw-status-err' : level === 'warn' ? ' nw-status-warn' : level === 'ok' ? ' nw-status-ok' : ''); }
+function nwMailtoHref(d) { return 'mailto:' + encodeURIComponent(d.to || '') + '?subject=' + encodeURIComponent(d.subject || '') + '&body=' + encodeURIComponent(d.body || ''); }
+function nwDraftUpdate(d, subject, body, box) {
+  if (!subject || !body) { nwDraftNote(box, 'A subject and a body are needed.', 'err'); return; }
+  nwDraftNote(box, 'Saving…');
+  nwApiBody('draftstatus', { id: d.id, status: 'draft', subject: subject, body: body }, function(res) {
+    if (!(res && res.success)) { nwDraftNote(box, 'Could not save (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    d.subject = subject; d.body = body; d.updatedAt = res.updatedAt || d.updatedAt;
+    var s = box.querySelector('.nw-draft-save'); if (s) s.style.display = 'none';
+    var m = box.querySelector('.nw-draft-mailto'); if (m && body.length <= NW_MAILTO_MAX) m.href = nwMailtoHref(d);
+    nwDraftNote(box, '✓ Saved.', 'ok');
+  });
+}
+function nwDraftStatus(d, status, box) {
+  if (status === 'sent' && !window.confirm('Mark this draft as sent? An "Email sent" interaction is recorded for ' + (d.name || d.to) + ' — nothing is sent from here.')) return;
+  nwDraftNote(box, status === 'sent' ? 'Recording…' : 'Discarding…');
+  nwApiBody('draftstatus', { id: d.id, status: status }, function(res) {
+    if (!(res && res.success)) { nwDraftNote(box, 'Could not update (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    d.status = status;
+    box.classList.add('nw-draft-done');
+    nwDraftNote(box, status === 'sent' ? '✓ Marked sent — the email-out interaction is on the contact.' : 'Discarded.', 'ok');
+    setTimeout(function() { nwDraftsPaint(_nwMail.drafts, []); }, 900);
+    if (status === 'sent') nwAfterWrite();
+  });
+}
+// ── Hand-off formats (all client-side) ──
+function nwRfc2047(s) { return /[^\x20-\x7e]/.test(s) ? '=?utf-8?B?' + nwBytesToB64(new TextEncoder().encode(s)) + '?=' : s; }
+function nwEmlText(d, from) {
+  var date = new Date().toUTCString().replace(/GMT$/, '+0000');
+  return ['From: ' + from, 'To: ' + d.to, 'Subject: ' + nwRfc2047(d.subject || ''), 'Date: ' + date, 'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=utf-8', 'Content-Transfer-Encoding: 8bit', 'X-Unsent: 1', '', String(d.body || '').replace(/\r?\n/g, '\r\n')].join('\r\n') + '\r\n';
+}
+function nwMailEmlBundle() {
+  var from = (document.getElementById('nw-mail-from').value || '').trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(from)) { nwMailStatus('Type your From address once — it is kept on this device for the .eml files.', 'err'); document.getElementById('nw-mail-from').focus(); return; }
+  nwMailFromSet(from);
+  var stamp = new Date().toISOString().slice(0, 10);
+  var entries = _nwMail.drafts.map(function(d, i) { return { name: (String(i + 1).length < 2 ? '0' : '') + (i + 1) + '-' + String(d.to || 'draft').replace(/[^A-Za-z0-9@.-]+/g, '-') + '.eml', text: nwEmlText(d, from) }; });
+  nwDownloadBlob(nwZip(entries), 'network-drafts-' + stamp + '.zip');
+  nwMailStatus('✓ ' + entries.length + ' .eml file' + (entries.length === 1 ? '' : 's') + ' zipped — drag them into your mail client, send from there, then mark each sent.', 'ok');
+}
+function nwMailTable(kind) {
+  var stamp = new Date().toISOString().slice(0, 10), text;
+  if (kind === 'csv') text = ['"to","subject","body"'].concat(_nwMail.drafts.map(function(d) { return [d.to, d.subject, d.body].map(function(v) { return '"' + String(v || '').replace(/"/g, '""') + '"'; }).join(','); })).join('\r\n') + '\r\n';
+  else text = _nwMail.drafts.map(function(d) { return '--- ' + d.to + ' ---\r\nSubject: ' + d.subject + '\r\n\r\n' + String(d.body || '').replace(/\r?\n/g, '\r\n') + '\r\n'; }).join('\r\n');
+  if (kind === 'csv') nwDownloadText(text, 'network-drafts-' + stamp + '.csv');
+  else nwDownloadBlob(new Blob([text], { type: 'text/plain;charset=utf-8' }), 'network-drafts-' + stamp + '.txt');
+  nwMailStatus('✓ ' + _nwMail.drafts.length + ' draft' + (_nwMail.drafts.length === 1 ? '' : 's') + ' saved as ' + kind.toUpperCase() + '.', 'ok');
+}
+
+// ── The developer's own card as a QR (§4.3) ─────────────────────────────
+// The repo has QR *decoders* (BarcodeDetector) but no generator, so this is
+// a minimal byte-mode encoder — versions 1–10, error level M, the eight
+// masks scored by the four penalty rules, format and version information
+// per ISO/IEC 18004 — rendered as an SVG. No library. The text is the vCard
+// the server builds from the Profiles row (nop=mycard).
+var NW_QR_M = [[26, 10, [[1, 16]]], [44, 16, [[1, 28]]], [70, 26, [[1, 44]]], [100, 18, [[2, 32]]], [134, 24, [[2, 43]]],
+  [172, 16, [[4, 27]]], [196, 18, [[4, 31]]], [242, 22, [[2, 38], [2, 39]]], [292, 22, [[3, 36], [2, 37]]], [346, 26, [[4, 43], [1, 44]]]];
+var NW_QR_ALIGN = [[], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46], [6, 28, 50]];
+var NW_QR_CAP = [14, 26, 42, 62, 84, 106, 122, 152, 180, 213];   // byte-mode capacity per version at level M
+var _nwGf = null;
+function nwGf() {
+  if (_nwGf) return _nwGf;
+  var exp = new Array(512), log = new Array(256), x = 1;
+  for (var i = 0; i < 255; i++) { exp[i] = x; log[x] = i; x <<= 1; if (x & 0x100) x ^= 0x11d; }
+  for (var j = 255; j < 512; j++) exp[j] = exp[j - 255];
+  return (_nwGf = { exp: exp, log: log });
+}
+function nwGfMul(a, b) { if (!a || !b) return 0; var g = nwGf(); return g.exp[g.log[a] + g.log[b]]; }
+function nwRsEncode(data, ecLen) {
+  var gen = [1];
+  for (var i = 0; i < ecLen; i++) {
+    var next = new Array(gen.length + 1).fill(0);
+    for (var j = 0; j < gen.length; j++) { next[j] ^= gen[j]; next[j + 1] ^= nwGfMul(gen[j], nwGf().exp[i]); }
+    gen = next;
+  }
+  var res = new Array(ecLen).fill(0);
+  for (var d = 0; d < data.length; d++) {
+    var factor = data[d] ^ res.shift(); res.push(0);
+    if (factor) for (var k = 0; k < ecLen; k++) res[k] ^= nwGfMul(gen[k + 1], factor);
+  }
+  return res;
+}
+// The module matrix for a UTF-8 text: { version, mask, size, modules } or null when it does not fit version 10.
+function nwQrMatrix(text) {
+  var bytes = new TextEncoder().encode(String(text || '')), version = 0;
+  for (var v = 1; v <= 10; v++) if (bytes.length <= NW_QR_CAP[v - 1]) { version = v; break; }
+  if (!version) return null;
+  var spec = NW_QR_M[version - 1], total = spec[0], ecLen = spec[1], blocks = spec[2];
+  var dataLen = 0; blocks.forEach(function(b) { dataLen += b[0] * b[1]; });
+  var bits = [];
+  function push(val, n) { for (var i = n - 1; i >= 0; i--) bits.push((val >>> i) & 1); }
+  push(4, 4); push(bytes.length, version >= 10 ? 16 : 8);
+  for (var b = 0; b < bytes.length; b++) push(bytes[b], 8);
+  push(0, Math.min(4, dataLen * 8 - bits.length));
+  while (bits.length % 8) bits.push(0);
+  for (var pad = 0xEC; bits.length < dataLen * 8; pad ^= 0xEC ^ 0x11) push(pad, 8);
+  var data = [];
+  for (var i = 0; i < bits.length; i += 8) { var byte = 0; for (var j = 0; j < 8; j++) byte = (byte << 1) | bits[i + j]; data.push(byte); }
+  var dBlocks = [], eBlocks = [], pos = 0;
+  blocks.forEach(function(bl) { for (var n = 0; n < bl[0]; n++) { var chunk = data.slice(pos, pos + bl[1]); pos += bl[1]; dBlocks.push(chunk); eBlocks.push(nwRsEncode(chunk, ecLen)); } });
+  var codewords = [], maxD = 0; dBlocks.forEach(function(d) { maxD = Math.max(maxD, d.length); });
+  for (var ci = 0; ci < maxD; ci++) dBlocks.forEach(function(d) { if (ci < d.length) codewords.push(d[ci]); });
+  for (var ei = 0; ei < ecLen; ei++) eBlocks.forEach(function(e) { codewords.push(e[ei]); });
+  if (codewords.length !== total) return null;
+  var size = 17 + 4 * version, m = [], fn = [];
+  for (var r = 0; r < size; r++) { m.push(new Array(size).fill(0)); fn.push(new Array(size).fill(false)); }
+  function set(x, y, dark) { m[y][x] = dark ? 1 : 0; fn[y][x] = true; }
+  function finder(x0, y0) { for (var dy = -4; dy <= 4; dy++) for (var dx = -4; dx <= 4; dx++) { var x = x0 + dx, y = y0 + dy; if (x < 0 || y < 0 || x >= size || y >= size) continue; var d = Math.max(Math.abs(dx), Math.abs(dy)); set(x, y, d !== 2 && d !== 4); } }
+  finder(3, 3); finder(size - 4, 3); finder(3, size - 4);
+  for (var t = 8; t < size - 8; t++) { set(t, 6, t % 2 === 0); set(6, t, t % 2 === 0); }
+  var al = NW_QR_ALIGN[version - 1];
+  for (var ai = 0; ai < al.length; ai++) for (var aj = 0; aj < al.length; aj++) {
+    if ((ai === 0 && aj === 0) || (ai === 0 && aj === al.length - 1) || (ai === al.length - 1 && aj === 0)) continue;
+    for (var dy2 = -2; dy2 <= 2; dy2++) for (var dx2 = -2; dx2 <= 2; dx2++) set(al[ai] + dx2, al[aj] + dy2, Math.max(Math.abs(dx2), Math.abs(dy2)) !== 1);
+  }
+  function formatInfo(mask) {
+    var fd = mask, rem = fd; for (var k = 0; k < 10; k++) rem = (rem << 1) ^ ((rem >>> 9) * 0x537);
+    var fb = ((fd << 10) | rem) ^ 0x5412;
+    function bit(i) { return ((fb >>> i) & 1) === 1; }
+    for (var a = 0; a <= 5; a++) set(8, a, bit(a));
+    set(8, 7, bit(6)); set(8, 8, bit(7)); set(7, 8, bit(8));
+    for (var c = 9; c < 15; c++) set(14 - c, 8, bit(c));
+    for (var e = 0; e < 8; e++) set(size - 1 - e, 8, bit(e));
+    for (var f = 8; f < 15; f++) set(8, size - 15 + f, bit(f));
+    set(8, size - 8, true);
+  }
+  formatInfo(0);
+  if (version >= 7) {
+    var vr = version; for (var vk = 0; vk < 12; vk++) vr = (vr << 1) ^ ((vr >>> 11) * 0x1F25);
+    var vb = (version << 12) | vr;
+    for (var vi = 0; vi < 18; vi++) { var vbit = ((vb >>> vi) & 1) === 1, va = size - 11 + (vi % 3), vbb = Math.floor(vi / 3); set(va, vbb, vbit); set(vbb, va, vbit); }
+  }
+  // Data placement — the zigzag, right to left, skipping the timing column.
+  var bi = 0, all = [];
+  codewords.forEach(function(cw) { for (var q = 7; q >= 0; q--) all.push((cw >>> q) & 1); });
+  for (var right = size - 1; right >= 1; right -= 2) {
+    if (right === 6) right = 5;
+    for (var vert = 0; vert < size; vert++) for (var jx = 0; jx < 2; jx++) {
+      var x = right - jx, upward = ((right + 1) & 2) === 0, y = upward ? size - 1 - vert : vert;
+      if (!fn[y][x] && bi < all.length) { m[y][x] = all[bi++]; }
+    }
+  }
+  var masks = [function(r, c) { return (r + c) % 2 === 0; }, function(r) { return r % 2 === 0; }, function(r, c) { return c % 3 === 0; }, function(r, c) { return (r + c) % 3 === 0; },
+    function(r, c) { return (Math.floor(r / 2) + Math.floor(c / 3)) % 2 === 0; }, function(r, c) { return (r * c) % 2 + (r * c) % 3 === 0; },
+    function(r, c) { return ((r * c) % 2 + (r * c) % 3) % 2 === 0; }, function(r, c) { return ((r + c) % 2 + (r * c) % 3) % 2 === 0; }];
+  function applyMask(k, grid) { var out = grid.map(function(row) { return row.slice(); }); for (var y = 0; y < size; y++) for (var x = 0; x < size; x++) if (!fn[y][x] && masks[k](y, x)) out[y][x] ^= 1; return out; }
+  function penalty(g) {
+    var p = 0, dark = 0;
+    function runs(get) { for (var a = 0; a < size; a++) { var run = 1; for (var b = 1; b < size; b++) { if (get(a, b) === get(a, b - 1)) { run++; if (b === size - 1 && run >= 5) p += run - 2; } else { if (run >= 5) p += run - 2; run = 1; } } } }
+    runs(function(a, b) { return g[a][b]; }); runs(function(a, b) { return g[b][a]; });
+    for (var y = 0; y < size - 1; y++) for (var x = 0; x < size - 1; x++) { var s = g[y][x] + g[y][x + 1] + g[y + 1][x] + g[y + 1][x + 1]; if (s === 0 || s === 4) p += 3; }
+    var pat1 = [1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], pat2 = [0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1];
+    function finderLike(get) { for (var a = 0; a < size; a++) for (var b = 0; b + 11 <= size; b++) { var ok1 = true, ok2 = true; for (var k = 0; k < 11; k++) { var v2 = get(a, b + k); if (v2 !== pat1[k]) ok1 = false; if (v2 !== pat2[k]) ok2 = false; } if (ok1 || ok2) p += 40; } }
+    finderLike(function(a, b) { return g[a][b]; }); finderLike(function(a, b) { return g[b][a]; });
+    for (var yy = 0; yy < size; yy++) for (var xx = 0; xx < size; xx++) dark += g[yy][xx];
+    p += 10 * Math.floor(Math.abs(dark * 100 / (size * size) - 50) / 5);
+    return p;
+  }
+  var best = null, bestMask = 0, bestScore = Infinity;
+  for (var mk = 0; mk < 8; mk++) { formatInfo(mk); var g = applyMask(mk, m); var sc = penalty(g); if (sc < bestScore) { bestScore = sc; bestMask = mk; best = g; } }
+  formatInfo(bestMask);
+  for (var fy = 0; fy < size; fy++) for (var fx = 0; fx < size; fx++) if (fn[fy][fx]) best[fy][fx] = m[fy][fx];
+  return { version: version, mask: bestMask, size: size, modules: best };
+}
+function nwQrSvg(q, px) {
+  var quiet = 4, dim = q.size + quiet * 2, d = '';
+  for (var y = 0; y < q.size; y++) for (var x = 0; x < q.size; x++) if (q.modules[y][x]) d += 'M' + (x + quiet) + ' ' + (y + quiet) + 'h1v1h-1z';
+  var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 ' + dim + ' ' + dim); svg.setAttribute('width', px); svg.setAttribute('height', px); svg.setAttribute('shape-rendering', 'crispEdges');
+  svg.setAttribute('data-modules', String(q.size)); svg.setAttribute('data-version', String(q.version)); svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'QR code of my card');
+  var bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect'); bg.setAttribute('width', dim); bg.setAttribute('height', dim); bg.setAttribute('fill', '#fff'); svg.appendChild(bg);
+  var path = document.createElementNS('http://www.w3.org/2000/svg', 'path'); path.setAttribute('d', d); path.setAttribute('fill', '#000'); svg.appendChild(path);
+  return svg;
+}
+var _nwMyCard = null;
+function nwMyCardPanel() {
+  var panel = document.getElementById('nw-mycard');
+  if (panel) return panel;
+  var app = document.getElementById('nw-app'), wrap = document.getElementById('nw-listwrap');
+  panel = nwEl('div', 'nw-card nw-mycard'); panel.id = 'nw-mycard'; panel.style.display = 'none';
+  var head = nwEl('div', 'nw-mail-head'); head.appendChild(nwEl('h2', null, '🪪 My card'));
+  var close = nwEl('a', 'nw-mail-close', '× Close'); close.href = '#'; close.id = 'nw-mycard-close'; close.setAttribute('role', 'button');
+  close.addEventListener('click', function(ev) { ev.preventDefault(); panel.style.display = 'none'; });
+  head.appendChild(close); panel.appendChild(head);
+  panel.appendChild(nwEl('p', null, 'Your own details, entered once and kept on your profile row. Show the QR full-screen in the hall — a phone camera reads it straight into Contacts.'));
+  var form = nwEl('form', 'nw-mail-form'); form.id = 'nw-mycard-form';
+  function input(id, ph, max, type) { var i = document.createElement('input'); i.type = type || 'text'; i.id = id; i.placeholder = ph; i.maxLength = max; i.autocomplete = 'off'; form.appendChild(i); return i; }
+  var name = input('nw-mycard-name', 'Full name', 120), title = input('nw-mycard-title', 'Title', 120), company = input('nw-mycard-company', 'Company', 120), phone = input('nw-mycard-phone', 'Phone (with country code)', 40, 'tel');
+  var email = nwEl('div', 'nw-mail-hint', ''); email.id = 'nw-mycard-email'; form.appendChild(email);
+  var row = nwEl('div', 'nw-mail-handoff-row');
+  var save = nwEl('button', 'nw-btn nw-btn-primary', '💾 Save'); save.type = 'submit'; save.id = 'nw-mycard-save'; row.appendChild(save);
+  var show = nwEl('button', 'nw-btn', '⛶ Show QR full-screen'); show.type = 'button'; show.id = 'nw-mycard-qr'; show.disabled = true; show.addEventListener('click', function() { if (_nwMyCard && _nwMyCard.vcard) nwQrShow(_nwMyCard.vcard, _nwMyCard.card.name); }); row.appendChild(show);
+  form.appendChild(row);
+  form.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    if (!name.value.trim()) { nwMyCardStatus('A name is needed.', 'err'); name.focus(); return; }
+    save.disabled = true; nwMyCardStatus('Saving…');
+    nwApiBody('mycard', { set: '1', name: name.value.trim(), title: title.value.trim(), company: company.value.trim(), phone: phone.value.trim() }, function(res) {
+      save.disabled = false;
+      if (!(res && res.success)) { nwMyCardStatus('Could not save (' + nwErrText(res && res.error) + ')', 'err'); return; }
+      nwMyCardFill(res); nwMyCardStatus('✓ Saved — the QR is ready.', 'ok');
+    });
+  });
+  panel.appendChild(form);
+  var status = nwEl('div', 'nw-status', ''); status.id = 'nw-mycard-status'; status.style.display = 'none'; panel.appendChild(status);
+  var preview = nwEl('div', 'nw-qr-preview'); preview.id = 'nw-qr-preview'; panel.appendChild(preview);
+  if (wrap) app.insertBefore(panel, wrap); else app.appendChild(panel);
+  return panel;
+}
+function nwMyCardStatus(text, level) { var el = document.getElementById('nw-mycard-status'); if (!el) return; el.textContent = text || ''; el.style.display = text ? '' : 'none'; el.className = 'nw-status' + (level === 'err' ? ' nw-status-err' : level === 'ok' ? ' nw-status-ok' : ''); }
+function nwMyCardFill(res) {
+  _nwMyCard = res; var c = res.card || {};
+  document.getElementById('nw-mycard-name').value = c.name || ''; document.getElementById('nw-mycard-title').value = c.title || '';
+  document.getElementById('nw-mycard-company').value = c.company || ''; document.getElementById('nw-mycard-phone').value = c.phone || '';
+  document.getElementById('nw-mycard-email').textContent = 'Email: ' + (c.email || (loadSession() || {}).email || '') + ' (your sign-in address)';
+  var preview = document.getElementById('nw-qr-preview'); preview.innerHTML = '';
+  var q = c.name && res.vcard ? nwQrMatrix(res.vcard) : null;
+  document.getElementById('nw-mycard-qr').disabled = !q;
+  if (q) { preview.appendChild(nwQrSvg(q, 168)); preview.appendChild(nwEl('small', null, 'vCard · ' + q.size + ' × ' + q.size + ' modules · tap Show QR full-screen')); }
+  else if (c.name) preview.appendChild(nwEl('small', null, 'The card is too long for a QR — shorten the title or company.'));
+}
+function nwMyCardOpen() {
+  var panel = nwMyCardPanel(); panel.style.display = '';
+  nwMyCardStatus('Loading…');
+  nwApi('mycard', {}, function(res) {
+    if (!(res && res.success)) { nwMyCardStatus('Could not load (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    nwMyCardFill(res); nwMyCardStatus(res.card && res.card.name ? '' : 'Fill in your details and Save.');
+  });
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+// Full-screen: the largest square that fits, white on the page's own overlay; any tap or Escape closes it.
+function nwQrShow(text, caption) {
+  var q = nwQrMatrix(text); if (!q) return;
+  var ov = document.getElementById('nw-qr-overlay');
+  if (!ov) { ov = nwEl('div', 'nw-qr-overlay'); ov.id = 'nw-qr-overlay'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-label', 'My card QR'); document.body.appendChild(ov);
+    ov.addEventListener('click', function() { ov.style.display = 'none'; }); document.addEventListener('keydown', function(ev) { if (ev.key === 'Escape') ov.style.display = 'none'; }); }
+  ov.innerHTML = '';
+  var px = Math.min(window.innerWidth, window.innerHeight) - 32;
+  var svg = nwQrSvg(q, px); svg.id = 'nw-qr-svg'; ov.appendChild(svg);
+  ov.appendChild(nwEl('div', 'nw-qr-caption', (caption || 'My card') + ' · tap to close'));
+  ov.style.display = 'flex';
+}
+// The masthead pills — admin only (the door has already admitted the user when this runs).
+function nwPillsMount() {
+  var links = document.getElementById('nw-links'); if (!links || document.getElementById('nw-pill-drafts')) return;
+  function pill(id, text, fn) { var a = nwEl('a', 'nw-pill', text); a.href = '#'; a.id = id; a.setAttribute('role', 'button'); a.addEventListener('click', function(ev) { ev.preventDefault(); fn(); }); links.appendChild(a); }
+  pill('nw-pill-drafts', '✉ Drafts', function() { nwMailOpen([]); });
+  pill('nw-pill-mycard', '🪪 My card', nwMyCardOpen);
 }
 
 // PROJECT END

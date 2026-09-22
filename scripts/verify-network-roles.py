@@ -80,6 +80,29 @@ BOM, header, two CRLF rows), and delete through nop=delete one request per
 row after a confirm that names the count. Screenshots network-list-filters.png
 and network-list-bar.png.
 
+N3 session 2 — the exports, the drafts and the QR card (§4.3, D15): the
+Export menu on the bar — the vCard bundle parses under a minimal
+BEGIN:VCARD walker (N / FN / EMAIL per card, no PHOTO until "include card
+image" is ticked, then Ann's front is fetched from the Drive stub with the
+page's own token and spliced in as PHOTO;ENCODING=b;TYPE=JPEG with every
+line ≤ 75 octets), one vCard per contact as a valid store-only zip, the
+.xlsx workbook bytes the stub answered base64; Start a mailing with three
+recipients → the default template (merge fields, an unsubscribe line,
+{{myAddress}}) saved under a name → nop=drafts renders three drafts with no
+{{ left; one edited draft round-trips through nop=draftstatus status=draft;
+mailto: carries the edited subject; Copy puts subject + body on the
+clipboard; the .eml bundle is three RFC 5322 files with From / To / Subject
+and a body, the From kept in localStorage; the .txt has three blocks;
+marking sent writes the email-out Interaction the stub records with the d-
+id as evidence after a confirm that says nothing is sent; discarding
+writes none; the Drafts pill reopens the open drafts; My card saves the
+four fields through nop=mycard and renders the vCard as a QR — the preview
+SVG and the full-screen SVG (≥ 29 × 29 modules), the page's matrix equal to
+python-qrcode's at the same version and mask when that library is
+importable; then the D15 grep — the served page and the .gs PROJECT region
+call neither MailApp nor GmailApp and name no Gmail scope. Screenshots
+network-export-menu.png, network-drafts.png, network-my-card-qr.png.
+
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
 executable_path. Do NOT run `playwright install`.
@@ -105,6 +128,8 @@ TIERS = ('admin', 'contributor', 'analyst', 'viewer')
 EXPECT = {'admin': True, 'contributor': False, 'analyst': False, 'viewer': False}
 STUB_BASE = 'https://script.google.com/macros/s/VERIFY-NETWORK-STUB/exec'
 PHONE = {'width': 390, 'height': 844}
+XLSX_STUB = b'PK\x03\x04' + b'NETWORK-XLSX-STUB' * 8      # what the stub's nop=export format=xlsx answers, base64
+JPEG_STUB = b'\xff\xd8\xff\xe0' + b'JPEGSTUB' * 40 + b'\xff\xd9'   # the card front the drive stub serves for the vCard PHOTO
 
 
 def find_chrome():
@@ -314,11 +339,13 @@ def gas_stub(role, counter, state=None):
                         'accounts': len([v for v in verdict.values() if v == 'ok']), 'rejected': rejected}
             elif 'nop=export' in post:
                 # N3 s1: nwExportOp_'s CSV — every field quoted, CRLF rows, do-not-contact rows left out.
+                # N3 s2: the same gather answers xlsx (the workbook bytes, base64) and vcard (one text per
+                # contact + the bundle; the PHOTO line is the page's, spliced from the Drive front).
                 state['posts'].append(('export', post))
-                ids = json.loads(q(post, 'ids') or '[]')
+                ids = json.loads(q(post, 'ids') or '[]'); fmt = q(post, 'format')
                 cell = lambda v: '"' + str(v if v is not None else '').replace('"', '""') + '"'
                 lines = [','.join(cell(h) for h in ('Contact ID', 'Full Name', 'Title', 'Company', 'Email', 'Tags', 'Last Touch'))]
-                excluded = 0
+                cards, excluded = [], 0
                 for cid in ids:
                     row = next((x for x in state['contacts'] if x['id'] == cid and not x.get('deletedAt')), None)
                     if row is None: continue
@@ -326,8 +353,85 @@ def gas_stub(role, counter, state=None):
                     acc = next((x for x in state['accounts'] if x['id'] == row['accountId']), {})
                     lines.append(','.join(cell(v) for v in (cid, row['name'], row['title'], acc.get('name', ''), row.get('email', ''),
                                                              '; '.join(row['full'].get('tags') or []), row.get('touch') or row.get('metDate') or '')))
-                body = {'success': True, 'format': 'csv', 'rows': len(lines) - 1, 'excluded': excluded,
-                        'csv': '\r\n'.join(lines) + '\r\n', 'filename': 'network-contacts-test.csv'}
+                    full = row['full']; last = (full.get('lastName') or row['name'].split()[-1]); first = (full.get('firstName') or row['name'].split()[0])
+                    vc = 'BEGIN:VCARD\r\nVERSION:3.0\r\nN:%s;%s;;;\r\nFN:%s\r\nORG:%s\r\nTITLE:%s\r\n' % (last, first, row['name'], acc.get('name', ''), row['title'] or '')
+                    vc += ''.join('EMAIL;TYPE=WORK,INTERNET:%s\r\n' % e.get('value') for e in (full.get('emails') or []) if e.get('value'))
+                    vc += 'UID:%s\r\nEND:VCARD\r\n' % cid
+                    cards.append({'id': cid, 'filename': '%s-%s-%s.vcf' % (last, first, cid), 'vcard': vc, 'frontLink': full.get('frontLink', '')})
+                body = {'success': True, 'format': fmt, 'rows': len(lines) - 1, 'excluded': excluded}
+                if fmt == 'csv':
+                    body.update(csv='\r\n'.join(lines) + '\r\n', filename='network-contacts-test.csv')
+                elif fmt == 'xlsx':
+                    body.update(base64=base64.b64encode(XLSX_STUB).decode('ascii'), filename='network-contacts-test.xlsx', accounts=1, interactions=2)
+                else:
+                    body.update(cards=cards, vcf=''.join(c['vcard'] for c in cards), filename='network-contacts-test.vcf')
+            elif 'nop=mailings' in url:
+                # N3 s2: the saved templates, the open drafts (with the contact's name) and the "me" fields.
+                me = state.setdefault('me', {})
+                named, seen = [], set()
+                for m in reversed(state.setdefault('mailings', [])):
+                    if m['name'] and m['name'].lower() not in seen: seen.add(m['name'].lower()); named.append(m)
+                drafts = [dict(d, name=next((c['name'] for c in state['contacts'] if c['id'] == d['contactId']), '')) for d in reversed(state.setdefault('drafts', [])) if d['status'] == 'draft']
+                body = {'success': True, 'templates': named, 'drafts': drafts,
+                        'me': {'name': me.get('name', ''), 'company': me.get('company', ''), 'email': 'admin@example.com', 'hasAddress': 0}}
+            elif 'nop=draftstatus' in post:
+                # N3 s2: draft (an edit) · sent (the email-out Interaction, the d- id as evidence) · discarded.
+                state['posts'].append(('draftstatus', post))
+                d = next((x for x in state.setdefault('drafts', []) if x['id'] == q(post, 'id')), None); st = q(post, 'status')
+                if d is None: body = {'success': False, 'error': 'not_found'}
+                elif d['status'] == 'sent': body = {'success': False, 'error': 'already_sent'}
+                else:
+                    iid = ''
+                    if st == 'draft':
+                        if 'subject=' in post: d['subject'] = q(post, 'subject')
+                        if 'body=' in post: d['body'] = q(post, 'body')
+                    elif st == 'sent':
+                        iid = 'i-%013d' % (100 + len(state.setdefault('interactions', [])))
+                        state['interactions'].append({'id': iid, 'contactId': d['contactId'], 'kind': 'email-out', 'evidence': d['id'], 'summary': 'Follow-up sent: ' + d['subject']})
+                        d['sentAt'] = '2026-09-22T12:00:00Z'
+                    d['status'] = st; d['updatedAt'] = '2026-09-22T12:00:00Z'
+                    body = {'success': True, 'id': d['id'], 'status': st, 'interactionId': iid, 'sentAt': d.get('sentAt', ''), 'updatedAt': d['updatedAt']}
+            elif 'nop=drafts' in post:
+                # N3 s2: nwDraftsOp_'s shape — one rendered draft per recipient, skipped[] with the reason.
+                state['posts'].append(('drafts', post))
+                ids = json.loads(q(post, 'ids') or '[]'); mid = 'm-%013d' % (len(state.setdefault('mailings', [])) + 1)
+                if q(post, 'mailingId'):
+                    tpl = next(m for m in state['mailings'] if m['id'] == q(post, 'mailingId')); subject, tbody, name = tpl['subject'], tpl['body'], ''
+                else:
+                    subject, tbody, name = q(post, 'subject'), q(post, 'body'), q(post, 'name')
+                me = state.setdefault('me', {}); drafts, skipped = [], []
+                for cid in ids:
+                    row = next((x for x in state['contacts'] if x['id'] == cid), None)
+                    if row is None or row.get('deletedAt'): skipped.append({'id': cid, 'reason': 'not_found'}); continue
+                    full = row['full']
+                    if full.get('dnc'): skipped.append({'id': cid, 'reason': 'do_not_contact'}); continue
+                    if full.get('consent') == 'no': skipped.append({'id': cid, 'reason': 'no_consent'}); continue
+                    to = next((e['value'] for e in (full.get('emails') or []) if e.get('value')), '')
+                    if not to: skipped.append({'id': cid, 'reason': 'no_email'}); continue
+                    acc = next((x for x in state['accounts'] if x['id'] == row['accountId']), {})
+                    fmap = {'first': full.get('firstName') or row['name'].split()[0], 'last': full.get('lastName') or '', 'company': acc.get('name', ''), 'title': row['title'] or '',
+                            'metAt': row.get('sourceEvent') or '', 'metDate': row.get('metDate') or '', 'lastTopic': 'Card scanned', 'myName': me.get('name', ''), 'myCompany': me.get('company', ''), 'myAddress': ''}
+                    import re as _re
+                    render = lambda t: _re.sub(r'\{\{\s*(\w+)\s*\}\}', lambda m: fmap.get(m.group(1), ''), t)
+                    d = {'id': 'd-%013d' % (len(state.setdefault('drafts', [])) + 1), 'mailingId': mid, 'contactId': cid, 'name': row['name'], 'to': to,
+                         'subject': render(subject), 'body': render(tbody), 'status': 'draft', 'createdAt': '2026-09-22T11:00:00Z', 'updatedAt': '2026-09-22T11:00:00Z'}
+                    state['drafts'].append(d); drafts.append(d)
+                state['mailings'].append({'id': mid, 'name': name, 'subject': subject, 'body': tbody, 'createdAt': '2026-09-22T11:00:00Z'})
+                body = {'success': True, 'mailingId': mid, 'drafts': drafts, 'skipped': skipped, 'saved': 1 if name else 0}
+            elif 'nop=mycard' in url or 'nop=mycard' in post:
+                # N3 s2: the developer's own card — the Profiles row's name · title · company · phone and its vCard.
+                me = state.setdefault('me', {})
+                if 'set=1' in post:
+                    state['posts'].append(('mycard', post))
+                    me.update({k: q(post, k) for k in ('name', 'title', 'company', 'phone')})
+                parts = (me.get('name') or '').split(); last = parts[-1] if len(parts) > 1 else ''; first = ' '.join(parts[:-1]) if len(parts) > 1 else (parts[0] if parts else '')
+                vc = 'BEGIN:VCARD\r\nVERSION:3.0\r\nN:%s;%s;;;\r\nFN:%s\r\n' % (last, first, me.get('name', ''))
+                if me.get('company'): vc += 'ORG:%s\r\n' % me['company']
+                if me.get('title'): vc += 'TITLE:%s\r\n' % me['title']
+                vc += 'EMAIL;TYPE=WORK,INTERNET:admin@example.com\r\n'
+                if me.get('phone'): vc += 'TEL;TYPE=CELL:%s\r\n' % me['phone']
+                vc += 'END:VCARD\r\n'
+                body = {'success': True, 'card': {'name': me.get('name', ''), 'title': me.get('title', ''), 'company': me.get('company', ''), 'email': 'admin@example.com', 'phone': me.get('phone', '')}, 'vcard': vc}
             elif 'nop=extract' in post:
                 # body-POST only: the images travel in the form body, not the URL
                 assert 'front=' in post and 'contactId=c-0123456789abc' in post
@@ -351,6 +455,9 @@ def drive_stub(counter):
         counter.append(request.url)
         if request.method == 'DELETE':
             route.fulfill(status=204, body=''); return
+        if request.method == 'GET' and 'alt=media' in request.url:
+            # N3 s2: the vCard PHOTO — the page fetches the card front with its own drive.file token
+            route.fulfill(status=200, content_type='image/jpeg', headers={'Access-Control-Allow-Origin': '*'}, body=JPEG_STUB); return
         if request.method == 'PATCH' and 'addParents=' in request.url:
             fid = request.url.split('/files/')[1].split('?')[0]
             body = {'id': fid, 'webViewLink': 'https://drive.google.com/file/d/%s/view?moved=1' % fid}
@@ -986,8 +1093,8 @@ def run():
         page.wait_for_function("() => document.getElementById('nw-bar').classList.contains('nw-open') && document.getElementById('nw-bar-count').textContent === '2 selected'", timeout=5000)
         if not page.query_selector('#nw-rows .nw-row[data-id="c-2222222222222"].nw-open') or page.evaluate("() => document.querySelectorAll('#nw-rows .nw-row.nw-selected').length") != 2:
             failures.append('select: ticking two rows should keep the open detail open and mark two rows selected')
-        if not page.query_selector('#nw-bar-mail[disabled]'):
-            failures.append('bar: Start a mailing must be present and disabled (session 2)')
+        if not page.query_selector('#nw-bar-mail:not([disabled])') or not page.query_selector('#nw-bar-export'):
+            failures.append('bar: Start a mailing must be present and enabled, beside the Export menu (session 2)')
         # Tag both: nop=bulk op=tag with both ids; the stub tags both; the selection clears; the tag filter finds them.
         page.click('#nw-bar-tag')
         page.fill('#nw-bar-tag-in', 'Hot')
@@ -1034,6 +1141,8 @@ def run():
         page.check('#nw-rows .nw-row[data-id="c-3333333333333"] .nw-row-check')
         page.check('#nw-rows .nw-row[data-id="c-6666666666666"] .nw-row-check')
         page.wait_for_function("() => document.getElementById('nw-bar-count').textContent === '2 selected'", timeout=5000)
+        page.click('#nw-bar-export')   # N3 s2: the CSV sits in the Export menu
+        page.wait_for_selector('#nw-bar-export-form.nw-open', timeout=5000)
         with page.expect_download(timeout=10000) as dl:
             page.click('#nw-bar-csv')
         data = open(dl.value.path(), 'rb').read()
@@ -1058,6 +1167,171 @@ def run():
             failures.append('bulk delete: expected one confirm naming the count and one nop=delete for the row, got %r' % (dialogs,))
         if not state['contacts'][3].get('deletedAt') or page.query_selector('#nw-bar.nw-open'):
             failures.append('bulk delete: the stub row should be soft-deleted and the bar closed')
+        # ── N3 session 2 — the exports, the follow-up drafts and the QR card (§4.3, D15) ──
+        import zipfile, io, urllib.request
+        live = [c for c in state['contacts'] if not c.get('deletedAt')]
+        ann = next(c for c in live if c['name'] == 'Ann Three'); morten = next(c for c in live if c['id'] == 'c-6666666666666')
+        ann['full']['frontLink'] = 'https://drive.google.com/file/d/FRONTFILEID000001/view'   # Ann has a card front on Drive; Morten has none
+        def vcards(text):
+            """A minimal BEGIN:VCARD walker: unfold the 75-octet continuations, then one dict of property → [values] per card."""
+            text = text.replace('\r\n ', '').replace('\n ', '')
+            cards, cur = [], None
+            for line in text.split('\r\n'):
+                if line == 'BEGIN:VCARD': cur = {}
+                elif line == 'END:VCARD': cards.append(cur); cur = None
+                elif cur is not None and ':' in line:
+                    k, v = line.split(':', 1); cur.setdefault(k.split(';')[0], []).append(v)
+            return cards
+        def export_click(btn):
+            page.evaluate("() => nwSelectClear()"); page.check('#nw-rows .nw-row[data-id="%s"] .nw-row-check' % ann['id']); page.check('#nw-rows .nw-row[data-id="%s"] .nw-row-check' % morten['id'])
+            page.wait_for_function("() => document.getElementById('nw-bar-count').textContent === '2 selected'", timeout=5000)
+            page.click('#nw-bar-export'); page.wait_for_selector('#nw-bar-export-form.nw-open', timeout=5000)
+            with page.expect_download(timeout=15000) as dl2:
+                page.click(btn)
+            return dl2.value.suggested_filename, open(dl2.value.path(), 'rb').read()
+        # vCard bundle without the image
+        page.uncheck('#nw-export-photo') if page.is_checked('#nw-export-photo') else None
+        fname, data = export_click('#nw-bar-vcf')
+        cards = vcards(data.decode('utf-8'))
+        if not fname.endswith('.vcf') or len(cards) != 2 or any(not (c.get('N') and c.get('FN') and c.get('EMAIL')) for c in cards) or any('PHOTO' in c for c in cards) \
+           or sorted(c['FN'][0] for c in cards) != ['Ann Three', 'Morten Wierod']:
+            failures.append('vcard: expected a 2-card bundle with N / FN / EMAIL and no PHOTO, got %r' % ([sorted(c.keys()) for c in cards],))
+        # "include card image": Ann's front is fetched from Drive (alt=media) and spliced in as PHOTO;ENCODING=b;TYPE=JPEG, folded at 75 octets
+        page.check('#nw-export-photo')
+        n_media = len([u for u in reqs if 'alt=media' in u])
+        fname, data = export_click('#nw-bar-vcf')
+        raw = data.decode('utf-8'); cards = vcards(raw)
+        ann_card = next((c for c in cards if c['FN'][0] == 'Ann Three'), {}); photo = (ann_card.get('PHOTO') or [''])[0]
+        photo_line = next((l for l in raw.split('\r\n') if l.startswith('PHOTO;')), '')
+        if len([u for u in reqs if 'alt=media' in u]) != n_media + 1 or not photo_line.startswith('PHOTO;ENCODING=b;TYPE=JPEG:') or base64.b64decode(photo) != JPEG_STUB \
+           or max(len(l.encode('utf-8')) for l in raw.split('\r\n')) > 75 or 'PHOTO' in next(c for c in cards if c['FN'][0] == 'Morten Wierod'):
+            failures.append('vcard photo: expected one Drive alt=media fetch and Ann\'s PHOTO line (base64 of the stub JPEG, every line ≤ 75 octets), got line=%r max=%d' % (photo_line[:40], max(len(l.encode('utf-8')) for l in raw.split('\r\n'))))
+        page.wait_for_function("() => /vCard bundle with 2 contacts · 1 with the card image/.test(document.getElementById('nw-bar-status').textContent)", timeout=5000)
+        # one vCard per contact → a store-only zip with two .vcf entries
+        fname, data = export_click('#nw-bar-vcf-each')
+        zf = zipfile.ZipFile(io.BytesIO(data)); entries = zf.namelist()
+        if not fname.endswith('.zip') or len(entries) != 2 or not all(n.endswith('.vcf') for n in entries) or any(len(vcards(zf.read(n).decode('utf-8'))) != 1 for n in entries) or zf.testzip() is not None:
+            failures.append('vcard zip: expected two .vcf entries in a valid zip, got %r' % (entries,))
+        # .xlsx: the base64 workbook the stub answered lands byte for byte
+        fname, data = export_click('#nw-bar-xlsx')
+        if not fname.endswith('.xlsx') or data != XLSX_STUB or dict(_up.parse_qsl(state['posts'][-1][1])).get('format') != 'xlsx':
+            failures.append('xlsx: expected the stub workbook bytes as a .xlsx download, got %r (%d bytes)' % (fname, len(data)))
+        page.screenshot(path=str(SHOTS / 'network-export-menu.png'), full_page=False)
+        # The follow-up drafts (D15): three recipients → Start a mailing → the default template → three editable drafts
+        three = [c for c in live if c['full'].get('emails')][:3]
+        page.evaluate("() => nwSelectClear()")   # the bar is closed when nothing is selected
+        for c in three: page.check('#nw-rows .nw-row[data-id="%s"] .nw-row-check' % c['id'])
+        page.wait_for_function("() => document.getElementById('nw-bar-count').textContent === '3 selected'", timeout=5000)
+        page.click('#nw-bar-mail')
+        page.wait_for_function("() => document.getElementById('nw-mail') && document.getElementById('nw-mail').style.display !== 'none' && document.querySelectorAll('#nw-mail-tpl option').length >= 2", timeout=8000)
+        rec = page.text_content('#nw-mail-recipients')
+        if '3 recipients' not in rec or not [u for u in reqs if 'nop=mailings' in u]:
+            failures.append('mailing: expected "3 recipients" and a nop=mailings request, got %r' % rec[:80])
+        body_tpl = page.input_value('#nw-mail-body')
+        if '{{first}}' not in body_tpl or 'unsubscribe' not in body_tpl or '{{myAddress}}' not in body_tpl:
+            failures.append('mailing: the default template must carry {{first}}, an unsubscribe line and {{myAddress}}')
+        page.fill('#nw-mail-name', 'Hall follow-up')
+        page.click('#nw-mail-render')
+        page.wait_for_function("() => document.querySelectorAll('#nw-drafts .nw-draft').length === 3", timeout=10000)
+        dp = dict(_up.parse_qsl(next(p for k, p in reversed(state['posts']) if k == 'drafts')))
+        first_body = page.input_value('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-body')
+        if sorted(json.loads(dp.get('ids', '[]'))) != sorted(c['id'] for c in three) or dp.get('name') != 'Hall follow-up' or '{{' in first_body or 'Hi ' not in first_body \
+           or len(state['drafts']) != 3 or not state['mailings'] or state['mailings'][-1]['name'] != 'Hall follow-up':
+            failures.append('drafts: expected nop=drafts with the three ids and the template saved, three rendered drafts with no {{ left, got ids=%r body=%r' % (dp.get('ids'), first_body[:60]))
+        page.wait_for_function("() => /3 drafts rendered · template saved/.test(document.getElementById('nw-mail-status').textContent)", timeout=5000)
+        page.wait_for_function("() => [...document.querySelectorAll('#nw-mail-tpl option')].some(o => /Saved: Hall follow-up/.test(o.textContent))", timeout=8000)
+        # One edited draft round-trips: a new subject → Save edit → nop=draftstatus status=draft → the stub row carries it
+        first_id = page.get_attribute('#nw-drafts .nw-draft:nth-of-type(1)', 'data-id')
+        page.fill('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-subject', 'Edited subject for the hall')
+        page.wait_for_function("() => getComputedStyle(document.querySelector('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-save')).display !== 'none'", timeout=5000)
+        page.click('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-save')
+        page.wait_for_function("() => /Saved/.test(document.querySelector('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-note').textContent)", timeout=8000)
+        ep = dict(_up.parse_qsl(state['posts'][-1][1]))
+        if state['posts'][-1][0] != 'draftstatus' or ep.get('status') != 'draft' or ep.get('id') != first_id or next(d for d in state['drafts'] if d['id'] == first_id)['subject'] != 'Edited subject for the hall':
+            failures.append('draft edit: expected nop=draftstatus status=draft with the new subject on %s, got %r' % (first_id, {k: ep.get(k) for k in ('id', 'status', 'subject')}))
+        # mailto: and Copy
+        href = page.get_attribute('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-mailto', 'href')
+        if not href.startswith('mailto:') or 'subject=Edited%20subject' not in href:
+            failures.append('mailto: expected a mailto: link carrying the edited subject, got %r' % href[:80])
+        page.click('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-copy')
+        page.wait_for_function("() => /Copied|Copy failed/.test(document.querySelector('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-note').textContent)", timeout=5000)
+        try:
+            clip = page.evaluate("() => navigator.clipboard.readText()")
+            if not clip.startswith('Edited subject for the hall\n\n'):
+                failures.append('copy: expected subject + blank line + body on the clipboard, got %r' % clip[:50])
+        except Exception:
+            pass   # headless clipboard read is not always granted; the note above already proved the path ran
+        # The .eml bundle: From typed once (kept in localStorage), one RFC 5322 file per draft with From / To / Subject and a body
+        page.fill('#nw-mail-from', 'me@example.com'); page.dispatch_event('#nw-mail-from', 'change')
+        with page.expect_download(timeout=10000) as dl3:
+            page.click('#nw-mail-eml')
+        zf = zipfile.ZipFile(io.BytesIO(open(dl3.value.path(), 'rb').read())); emls = [zf.read(n).decode('utf-8') for n in zf.namelist()]
+        def eml_ok(t):
+            head, _, body = t.partition('\r\n\r\n')
+            h = dict(l.split(': ', 1) for l in head.split('\r\n') if ': ' in l)
+            return h.get('From') == 'me@example.com' and '@' in h.get('To', '') and h.get('Subject') and 'MIME-Version' in h and body.strip()
+        if len(emls) != 3 or not all(eml_ok(t) for t in emls) or not any('Subject: Edited subject for the hall' in t for t in emls) or not dl3.value.suggested_filename.endswith('.zip') \
+           or page.evaluate("() => localStorage.getItem('nw_mail_from')") != 'me@example.com':
+            failures.append('eml: expected three RFC 5322 files with From / To / Subject and a body and the From kept in localStorage, got %d files' % len(emls))
+        with page.expect_download(timeout=10000) as dl4:
+            page.click('#nw-mail-txt')
+        txt = open(dl4.value.path(), 'rb').read().decode('utf-8')
+        if txt.count('--- ') != 3 or 'Subject: Edited subject for the hall' not in txt:
+            failures.append('txt: expected three --- <to> --- blocks, got %r' % txt[:80])
+        page.screenshot(path=str(SHOTS / 'network-drafts.png'), full_page=False)
+        # Marking sent writes the email-out Interaction the stub records, with the d- id as evidence; discarding closes without one
+        dialogs2 = []
+        page.once('dialog', lambda d: (dialogs2.append(d.message), d.accept()))
+        n_ix = len(state.setdefault('interactions', []))
+        page.click('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-sent')
+        page.wait_for_function("() => document.querySelectorAll('#nw-drafts .nw-draft').length === 2", timeout=10000)
+        ix = state['interactions'][-1] if len(state['interactions']) > n_ix else {}
+        if len(state['interactions']) != n_ix + 1 or ix.get('kind') != 'email-out' or ix.get('evidence') != first_id or ix.get('contactId') != next(d for d in state['drafts'] if d['id'] == first_id)['contactId'] \
+           or next(d for d in state['drafts'] if d['id'] == first_id)['status'] != 'sent' or not dialogs2 or 'nothing is sent from here' not in dialogs2[0]:
+            failures.append('mark sent: expected one email-out interaction with evidence %s and the confirm saying nothing is sent, got %r' % (first_id, ix))
+        page.click('#nw-drafts .nw-draft:nth-of-type(1) .nw-draft-discard')
+        page.wait_for_function("() => document.querySelectorAll('#nw-drafts .nw-draft').length === 1", timeout=10000)
+        if len(state['interactions']) != n_ix + 1 or sorted(d['status'] for d in state['drafts']) != ['discarded', 'draft', 'sent']:
+            failures.append('discard: expected no new interaction and statuses discarded / draft / sent, got %r' % (sorted(d['status'] for d in state['drafts']),))
+        # The masthead Drafts pill reopens the open drafts through nop=mailings
+        page.click('#nw-mail-close'); page.click('#nw-pill-drafts')
+        page.wait_for_function("() => document.getElementById('nw-mail').style.display !== 'none' && document.querySelectorAll('#nw-drafts .nw-draft').length === 1", timeout=8000)
+        # My card: name · title · company · phone saved through nop=mycard, the QR preview and the full-screen SVG with a real module count
+        page.click('#nw-pill-mycard')
+        page.wait_for_function("() => document.getElementById('nw-mycard') && document.getElementById('nw-mycard').style.display !== 'none' && /Fill in your details/.test(document.getElementById('nw-mycard-status').textContent)", timeout=8000)
+        page.fill('#nw-mycard-name', 'Jon Yang'); page.fill('#nw-mycard-title', 'Senior Sales Manager'); page.fill('#nw-mycard-company', 'LightAISolutions'); page.fill('#nw-mycard-phone', '+1 555 010 0100')
+        page.click('#nw-mycard-save')
+        page.wait_for_function("() => /Saved/.test(document.getElementById('nw-mycard-status').textContent) && document.querySelector('#nw-qr-preview svg')", timeout=8000)
+        mp = dict(_up.parse_qsl(next(p for k, p in reversed(state['posts']) if k == 'mycard')))
+        if mp.get('name') != 'Jon Yang' or mp.get('phone') != '+1 555 010 0100' or state['me'].get('company') != 'LightAISolutions':
+            failures.append('mycard: expected nop=mycard set=1 with the four fields, got %r' % ({k: mp.get(k) for k in ('name', 'title', 'company', 'phone')},))
+        page.click('#nw-mycard-qr')
+        page.wait_for_function("() => document.getElementById('nw-qr-overlay') && getComputedStyle(document.getElementById('nw-qr-overlay')).display === 'flex' && document.getElementById('nw-qr-svg')", timeout=5000)
+        qr = page.evaluate("() => ({ modules: +document.getElementById('nw-qr-svg').getAttribute('data-modules'), version: +document.getElementById('nw-qr-svg').getAttribute('data-version'), w: document.getElementById('nw-qr-svg').getBoundingClientRect().width, paths: document.querySelectorAll('#nw-qr-svg path').length })")
+        if not (qr['modules'] >= 29 and qr['version'] >= 3 and qr['w'] >= 300 and qr['paths'] == 1):
+            failures.append('qr: expected a full-screen SVG of at least 29 × 29 modules (version ≥ 3), got %r' % (qr,))
+        page.screenshot(path=str(SHOTS / 'network-my-card-qr.png'), full_page=False)
+        # The encoder cross-checked against python-qrcode at the same version and mask, when the library is importable
+        try:
+            import qrcode, qrcode.util as _qu
+            mine = page.evaluate("() => { const q = nwQrMatrix(_nwMyCard.vcard); return { text: _nwMyCard.vcard, version: q.version, mask: q.mask, modules: q.modules }; }")
+            ref = qrcode.QRCode(version=mine['version'], error_correction=qrcode.constants.ERROR_CORRECT_M, mask_pattern=mine['mask'], border=0)
+            ref.add_data(_qu.QRData(mine['text'].encode('utf-8'), mode=_qu.MODE_8BIT_BYTE)); ref.make(fit=False)
+            if [[1 if c else 0 for c in row] for row in ref.get_matrix()] != mine['modules']:
+                failures.append('qr: the page\'s matrix differs from python-qrcode at version %d mask %d' % (mine['version'], mine['mask']))
+            qr_checked = True
+        except ImportError:
+            qr_checked = False
+        page.mouse.click(10, 10)
+        page.wait_for_function("() => getComputedStyle(document.getElementById('nw-qr-overlay')).display === 'none'", timeout=5000)
+        # D15: nothing sends. The served page and the .gs PROJECT region call neither MailApp nor GmailApp and name no Gmail scope.
+        import re as _re2
+        served = urllib.request.urlopen(base).read().decode('utf-8')
+        gs_src = (REPO / 'googleAppsScripts' / 'Network' / 'Network.gs').read_text(encoding='utf-8')
+        region = gs_src[gs_src.index('// PROJECT START'):gs_src.index('// PROJECT END')]
+        send_re = _re2.compile(r'\b(MailApp|GmailApp)\s*\.|gmail\.(send|compose|modify|readonly)|sendHipaaEmail\s*\(|mail\.google\.com')
+        if send_re.search(served) or send_re.search(region) or _re2.search(r'\bgmail\b', served, _re2.I):
+            failures.append('D15: a send path or a Gmail scope is referenced by the served page or the .gs PROJECT region')
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
         if real_errs:
             failures.append('capture: %d page error(s): %s' % (len(real_errs), real_errs[0][:100]))
@@ -1073,7 +1347,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-8s %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['list']),
                                                   mark(g['empty']), mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png, network-list-filters.png, network-list-bar.png (%dx%d)'
+    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png, network-list-filters.png, network-list-bar.png, network-export-menu.png, network-drafts.png, network-my-card-qr.png (%dx%d)'
           % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
@@ -1087,7 +1361,10 @@ def run():
           'the Profiler.html#abb deep link, the on-the-record title from the served abb dossier, the profiler <Company> line and the '
           'account_has_contacts refusal with its count; N3 s1: the search and the eight filters narrow the stub\'s five contacts server-side, '
           'the Name sort flips without a request, a two-row selection tags both through nop=bulk, a stage on two Partner accounts is refused per row '
-          'and Target · Discovery lands on both, the CSV downloads with a BOM and two rows, one row is deleted after a confirm naming the count.')
+          'and Target · Discovery lands on both, the CSV downloads with a BOM and two rows, one row is deleted after a confirm naming the count; '
+          'N3 s2: the vCard bundle, the PHOTO splice from Drive, the per-contact zip and the .xlsx download, three drafts from the default template, '
+          'an edited draft round-trip, mailto: / Copy / the .eml bundle / .txt, sent → the email-out Interaction, discard, the Drafts pill, My card → the QR '
+          '(%s), and no send path in the served page or the .gs PROJECT region.' % ('matrix equal to python-qrcode' if qr_checked else 'python-qrcode not importable — module count only'))
     return 0
 
 

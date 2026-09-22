@@ -3,11 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 18/50`
+`Sections: 19/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.19w] — 2026-09-22 07:15:53 AM EST — v07.14r
+
+### Added
+- Export menu on the selection bar: CSV, an Excel workbook (Contacts, Accounts and Interactions sheets), a vCard bundle, or one vCard per contact as a zip; an "include card image" tick adds each contact's card front to its vCard
+- Start a mailing: pick recipients from the selection, choose a saved template or write one with merge fields (first name, company, where and when you met, the last topic), then review one editable draft per recipient
+- Draft hand-off: an .eml bundle for any mail client (your From address remembered on this device), CSV or .txt, per-draft Copy and Mail app; Mark sent records an "Email sent" interaction, Discard closes a draft — nothing is sent by the app
+- Drafts and My card pills in the masthead; My card keeps your own name, title, company and phone and shows them as a full-screen QR code that a phone camera reads straight into Contacts
+
+### Changed
+- Contacts marked do-not-contact are left out of every export; recipients without marketing consent or an email address are skipped from a mailing with the reason shown
 
 ## [v01.18w] — 2026-09-22 06:46:16 AM EST — v07.13r
 

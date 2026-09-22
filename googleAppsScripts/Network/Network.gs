@@ -1,4 +1,4 @@
-var VERSION = "v01.09g";
+var VERSION = "v01.10g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -469,7 +469,7 @@ var NW_TABS = {
     'Draft ID', 'Owner', 'Mailing ID', 'Contact ID', 'To', 'Subject', 'Body', 'Status', 'Created At',
     'Updated At', 'Sent At']],
   shares: ['Shares', ['Owner', 'Grantee', 'Scope', 'Created At']],
-  profiles: ['Profiles', ['Email', 'Drive Folder ID', 'Display Name', 'Created At', 'Company Name']]
+  profiles: ['Profiles', ['Email', 'Drive Folder ID', 'Display Name', 'Created At', 'Company Name', 'Title', 'Phone']]   // Title · Phone: N3 s2, the "My card" panel
 };
 
 function ensureNetworkTabs_() {
@@ -1037,6 +1037,25 @@ function handleNetworkOp_(e) {
     if (op === 'export') {
       nwRequire_(sess, 'contacts', 'network_export');
       return nwExportOp_(sess, p);
+    }
+    if (op === 'mailings') {
+      // N3 s2 — D15: the drafts flow never sends; these three ops only read
+      // and write the Mailings / Drafts tabs. The 'drafts' capability is the
+      // one bulk surface and stays admin-only (D7).
+      nwRequire_(sess, 'drafts', 'network_mailings');
+      return nwMailingsOp_(sess, p);
+    }
+    if (op === 'drafts') {
+      nwRequire_(sess, 'drafts', 'network_drafts');
+      return nwDraftsOp_(sess, p);
+    }
+    if (op === 'draftstatus') {
+      nwRequire_(sess, 'drafts', 'network_draftstatus');
+      return nwDraftStatusOp_(sess, p);
+    }
+    if (op === 'mycard') {
+      nwRequire_(sess, 'contacts', 'network_mycard');
+      return nwMyCardOp_(sess, p);
     }
     if (op === 'eventstoday') {
       // B: the scan card's Source Event default — the signed-in user's starred
@@ -2036,26 +2055,38 @@ function nwBulkOp_(sess, p) {
   return { success: true, op: op, applied: applied, unchanged: unchanged, accounts: accountsWritten, rejected: rejected };
 }
 
-// nop=export — format=csv in session 1 (.xlsx and vCard are session 2). The
-// selection's ids (or, with none, every live contact in scope) as one RFC 4180
-// text: every field quoted, CRLF rows, one contact per row with its account's
-// name / relationship / stage and its newest touch. A Do Not Contact row is
-// left out (D9) and Raw Extraction is never exported. D9: every export writes
-// a disclosure row through the template's §164.528 machinery — the op, the
-// row count and the ids, never a field — and the audit row carries counts
-// only. The page prepends the UTF-8 BOM when it builds the download, so Excel
-// reads the accents.
+// nop=export — format=csv (session 1) · xlsx · vcard (session 2). The
+// selection's ids (or, with none, every live contact in scope) gathered once
+// by nwExportRows_ — a Do Not Contact row is left out (D9), a soft-deleted
+// row never counts, Raw Extraction is never exported — then written in the
+// asked shape:
+//   csv    one RFC 4180 text, every field quoted, CRLF rows; the page
+//          prepends the UTF-8 BOM so Excel reads the accents
+//   xlsx   the Receipts temp-spreadsheet path — a temporary spreadsheet with
+//          Contacts / Accounts / Interactions sheets for the selection,
+//          exported as a real .xlsx through the Drive export endpoint,
+//          trashed, answered base64 for the page to save
+//   vcard  vCard 3.0 hand-rolled (no library — the _buildJpegPdf house
+//          style): one text per contact and one .vcf bundle, lines folded
+//          at 75 octets, \, \; \n escaped per RFC 2426. The PHOTO line is the
+//          PAGE's: the card front lives in the user's own Drive (drive.file),
+//          which this script cannot read, so when the developer ticks
+//          "include card image" the page fetches the front with its own
+//          token and splices PHOTO;ENCODING=b;TYPE=JPEG in before END:VCARD
+// D9: every export writes a disclosure row through the template's §164.528
+// machinery — the op, the row count and the ids, never a field — and the
+// audit row carries counts only.
 var NW_CSV_COLUMNS = ['Contact ID', 'Full Name', 'First', 'Last', 'Title', 'Department', 'Role', 'Company', 'Relationship', 'Stage',
   'Email', 'Emails', 'Phone', 'Phones', 'Address', 'LinkedIn', 'Website', 'Source Event', 'Met Date', 'Consent Marketing', 'Tags',
   'Notes', 'Last Touch', 'Created At'];
+var NW_EXPORT_FORMATS = ['csv', 'xlsx', 'vcard'];
 function nwCsvCell_(v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; }
-function nwExportOp_(sess, p) {
-  var format = nwStr_(p.format, 10).toLowerCase();
-  if (format !== 'csv') return { success: false, error: 'bad_format' };
+// The rows an export covers: { rows: [{ c, a }], ids: [c- …], excluded, touch, tabs }
+function nwExportRows_(sess, p) {
   var ids = nwArr_(p.ids);
-  if (ids.length > 2000) return { success: false, error: 'too_many_ids' };
+  if (ids.length > 2000) return { error: 'too_many_ids' };
   var scope = resolveOwnerSet_(sess, p.owner || '');
-  if (scope.error) return { success: false, error: scope.error };
+  if (scope.error) return { error: scope.error };
   var wanted = null;
   if (ids.length) {
     wanted = {};
@@ -2065,7 +2096,7 @@ function nwExportOp_(sess, p) {
   var ct = nwSheetRead_(tabs.contacts), at = nwSheetRead_(tabs.accounts), touch = nwLastTouch_(tabs);
   var byAccount = {};
   for (var r = 1; r < at.vals.length; r++) { var ao = nwRowObj_(at, r); byAccount[ao['Account ID']] = ao; }
-  var lines = [NW_CSV_COLUMNS.map(nwCsvCell_).join(',')], exported = [], excluded = 0;
+  var rows = [], exported = [], excluded = 0;
   for (var c = 1; c < ct.vals.length; c++) {
     var row = ct.vals[c], cid = String(row[0] || '');
     if (wanted && !wanted[cid]) continue;
@@ -2073,23 +2104,361 @@ function nwExportOp_(sess, p) {
     if (String(row[ct.idx['Deleted At']] || '')) continue;
     var o = nwContactPublic_(nwRowObj_(ct, c));
     if (o.dnc) { excluded++; continue; }
-    var a = byAccount[o.accountId] || {};
-    lines.push([o.id, o.fullName, o.firstName, o.lastName, o.title, o.department, o.role, a['Name'] || '', a['Relationship'] || '', a['Stage'] || '',
-      (o.emails[0] || {}).value || '', o.emails.map(function(e) { return e.value; }).join('; '),
-      (o.phones[0] || {}).number || '', o.phones.map(function(ph) { return ph.number; }).join('; '),
-      o.address, o.linkedin, o.website, o.sourceEvent, o.metDate, o.consent, o.tags.join('; '), o.notes, touch[o.id] || '', o.createdAt]
-      .map(nwCsvCell_).join(','));
+    rows.push({ c: o, a: byAccount[o.accountId] || {} });
     exported.push(o.id);
   }
-  if (exported.length) {
-    // D9: the disclosure row names the op, the count and the ids exported — never a field.
-    recordDisclosure({ sessionToken: p.session, recipientName: sess.email, recipientType: 'Self', individualEmail: sess.email,
-      phiDescription: 'network_export_csv rows=' + exported.length + ' ids=' + exported.join(' '), purpose: 'network_export_csv',
-      isExempt: true, exemptionType: 'IndividualAccess', dataCategory: 'Network', source: 'Network' });
+  return { rows: rows, ids: exported, excluded: excluded, asked: ids.length, touch: touch, tabs: tabs, scope: scope };
+}
+function nwExportDisclose_(sess, p, format, ids) {
+  if (!ids.length) return;
+  // D9: the disclosure row names the op, the count and the ids exported — never a field.
+  recordDisclosure({ sessionToken: p.session, recipientName: sess.email, recipientType: 'Self', individualEmail: sess.email,
+    phiDescription: 'network_export_' + format + ' rows=' + ids.length + ' ids=' + ids.join(' '), purpose: 'network_export_' + format,
+    isExempt: true, exemptionType: 'IndividualAccess', dataCategory: 'Network', source: 'Network' });
+}
+function nwExportOp_(sess, p) {
+  var format = nwStr_(p.format, 10).toLowerCase();
+  if (NW_EXPORT_FORMATS.indexOf(format) < 0) return { success: false, error: 'bad_format' };
+  var g = nwExportRows_(sess, p);
+  if (g.error) return { success: false, error: g.error };
+  var stamp = Utilities.formatDate(new Date(), 'UTC', 'yyyy-MM-dd');
+  var out = { success: true, format: format, rows: g.ids.length, excluded: g.excluded };
+  if (format === 'csv') {
+    var lines = [NW_CSV_COLUMNS.map(nwCsvCell_).join(',')];
+    for (var i = 0; i < g.rows.length; i++) {
+      var o = g.rows[i].c, a = g.rows[i].a;
+      lines.push([o.id, o.fullName, o.firstName, o.lastName, o.title, o.department, o.role, a['Name'] || '', a['Relationship'] || '', a['Stage'] || '',
+        (o.emails[0] || {}).value || '', o.emails.map(function(e) { return e.value; }).join('; '),
+        (o.phones[0] || {}).number || '', o.phones.map(function(ph) { return ph.number; }).join('; '),
+        o.address, o.linkedin, o.website, o.sourceEvent, o.metDate, o.consent, o.tags.join('; '), o.notes, g.touch[o.id] || '', o.createdAt]
+        .map(nwCsvCell_).join(','));
+    }
+    out.csv = lines.join('\r\n') + '\r\n';
+    out.filename = 'network-contacts-' + stamp + '.csv';
+  } else if (format === 'xlsx') {
+    var x = nwExportXlsx_(g, stamp);
+    if (x.error) return { success: false, error: x.error };
+    out.base64 = x.base64; out.filename = x.filename; out.accounts = x.accounts; out.interactions = x.interactions;
+  } else {
+    var cards = [];
+    for (var v = 0; v < g.rows.length; v++) {
+      var vc = nwVcard_(g.rows[v].c, g.rows[v].a);
+      cards.push({ id: g.rows[v].c.id, filename: nwVcardFilename_(g.rows[v].c), vcard: vc, frontLink: g.rows[v].c.frontLink || '' });
+    }
+    out.cards = cards;
+    out.vcf = cards.map(function(k) { return k.vcard; }).join('');
+    out.filename = 'network-contacts-' + stamp + '.vcf';
   }
-  auditLog('data_export', sess.email, 'network_export_csv', { rows: exported.length, excluded: excluded, ids: ids.length });
-  return { success: true, format: 'csv', rows: exported.length, excluded: excluded, csv: lines.join('\r\n') + '\r\n',
-           filename: 'network-contacts-' + Utilities.formatDate(new Date(), 'UTC', 'yyyy-MM-dd') + '.csv' };
+  nwExportDisclose_(sess, p, format, g.ids);
+  auditLog('data_export', sess.email, 'network_export_' + format, { rows: g.ids.length, excluded: g.excluded, ids: g.asked });
+  return out;
+}
+
+// The .xlsx workbook: Contacts / Accounts / Interactions for the selection.
+// Column set = the tab columns minus Raw Extraction, Owner, Deleted At and the
+// Drive links (§11); the JSON columns are flattened (Emails → email1 … email3,
+// Phones → phone1 … phone3, the list columns joined with "; ").
+var NW_XLSX_MAX_EMAILS = 3, NW_XLSX_MAX_PHONES = 3;
+function nwExportXlsx_(g, stamp) {
+  var contactIds = {}, accountIds = {};
+  for (var i = 0; i < g.rows.length; i++) { contactIds[g.rows[i].c.id] = true; if (g.rows[i].c.accountId) accountIds[g.rows[i].c.accountId] = true; }
+  var cHead = ['Contact ID', 'Account ID', 'Full Name', 'First', 'Last', 'Title', 'Department', 'Role', 'Company', 'Relationship', 'Stage'];
+  for (var e = 1; e <= NW_XLSX_MAX_EMAILS; e++) cHead.push('email' + e, 'email' + e + ' kind');
+  for (var ph = 1; ph <= NW_XLSX_MAX_PHONES; ph++) cHead.push('phone' + ph, 'phone' + ph + ' kind');
+  cHead = cHead.concat(['Address', 'LinkedIn', 'Website', 'Socials', 'Languages', 'Source Event', 'Met Date', 'Consent Marketing', 'Tags', 'Notes',
+    'Last Touch', 'Created At', 'Updated At']);
+  var cRows = [cHead];
+  for (var r = 0; r < g.rows.length; r++) {
+    var o = g.rows[r].c, a = g.rows[r].a;
+    var line = [o.id, o.accountId, o.fullName, o.firstName, o.lastName, o.title, o.department, o.role, a['Name'] || '', a['Relationship'] || '', a['Stage'] || ''];
+    for (var ei = 0; ei < NW_XLSX_MAX_EMAILS; ei++) { var em = o.emails[ei] || {}; line.push(em.value || '', em.kind || ''); }
+    for (var pi = 0; pi < NW_XLSX_MAX_PHONES; pi++) { var pn = o.phones[pi] || {}; line.push(pn.number || '', pn.kind || ''); }
+    line = line.concat([o.address, o.linkedin, o.website, o.socials.map(function(s) { return typeof s === 'object' ? [s.network, s.url].filter(Boolean).join(' ') : String(s); }).join('; '),
+      o.languages.join('; '), o.sourceEvent, o.metDate, o.consent, o.tags.join('; '), o.notes, g.touch[o.id] || '', o.createdAt, o.updatedAt]);
+    cRows.push(line);
+  }
+  var aHead = ['Account ID', 'Name', 'Domain', 'Profiler Slug', 'Relationship', 'Stage', 'Segment IDs', 'Tags', 'HQ', 'Newsroom URL', 'Notes', 'Created At', 'Updated At'];
+  var aRows = [aHead], at = nwSheetRead_(g.tabs.accounts);
+  for (var ar = 1; ar < at.vals.length; ar++) {
+    var ao = nwRowObj_(at, ar);
+    if (!accountIds[ao['Account ID']]) continue;
+    var ap = nwAccountPublic_(ao);
+    aRows.push([ap.id, ap.name, ap.domain, ap.slug, ap.relationship, ap.stage, ap.segmentIds.join('; '), ap.tags.join('; '), ap.hq, ap.newsroomUrl, ap.notes, ap.createdAt, ap.updatedAt]);
+  }
+  var iHead = ['Interaction ID', 'Contact ID', 'Account ID', 'Kind', 'Date', 'Summary', 'Evidence', 'Event Slug', 'Created At'];
+  var iRows = [iHead], it = nwSheetRead_(g.tabs.interactions);
+  for (var ir = 1; ir < it.vals.length; ir++) {
+    var io = nwRowObj_(it, ir);
+    if (!contactIds[io['Contact ID']]) continue;
+    var ev = String(io['Evidence Link'] || ''); if (/drive\.google\.com/i.test(ev)) ev = '';   // the Drive links stay out
+    iRows.push([io['Interaction ID'], io['Contact ID'], io['Account ID'], io['Kind'], String(io['Date'] || '').slice(0, 10), io['Summary'], ev, io['Event Slug'], io['Created At']]);
+  }
+  var temp = SpreadsheetApp.create('Network Export ' + stamp);
+  try {
+    var first = true;
+    function sheet_(name, rows) {
+      var sh;
+      if (first) { first = false; sh = temp.getSheets()[0]; sh.setName(name); } else sh = temp.insertSheet(name);
+      sh.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
+      sh.setFrozenRows(1);
+      sh.getRange(1, 1, 1, rows[0].length).setFontWeight('bold');
+    }
+    sheet_('Contacts', cRows); sheet_('Accounts', aRows); sheet_('Interactions', iRows);
+    SpreadsheetApp.flush();
+    var resp = UrlFetchApp.fetch('https://docs.google.com/spreadsheets/d/' + temp.getId() + '/export?format=xlsx',
+      { headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken() }, muteHttpExceptions: true });
+    if (resp.getResponseCode() !== 200) return { error: 'export_http_' + resp.getResponseCode() };
+    return { base64: Utilities.base64Encode(resp.getBlob().getBytes()), filename: 'network-contacts-' + stamp + '.xlsx',
+             accounts: aRows.length - 1, interactions: iRows.length - 1 };
+  } finally {
+    try { DriveApp.getFileById(temp.getId()).setTrashed(true); } catch (delErr) { /* temp cleanup best-effort */ }
+  }
+}
+
+// vCard 3.0 — the §11 mapping Android and iOS both import. Text only, no
+// library. Values escaped per RFC 2426 (\\ \; \, \n) and every line folded at
+// 75 octets with a single-space continuation; CRLF line ends.
+function nwVcardEsc_(v) { return String(v == null ? '' : v).replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+function nwVcardFold_(line) {
+  var out = '', cur = '', bytes = 0;
+  for (var i = 0; i < line.length; i++) {
+    var ch = line.charAt(i), code = line.charCodeAt(i), n = code < 0x80 ? 1 : code < 0x800 ? 2 : (code >= 0xD800 && code <= 0xDBFF) ? 4 : 3;
+    if (n === 4) { ch = line.substr(i, 2); i++; }
+    var limit = out ? 74 : 75;   // continuation lines start with one space
+    if (bytes + n > limit) { out += cur + '\r\n'; cur = ' ' + ch; bytes = 1 + n; }
+    else { cur += ch; bytes += n; }
+  }
+  return out + cur + '\r\n';
+}
+function nwVcardLine_(name, value) { return nwVcardFold_(name + ':' + value); }
+function nwVcard_(c, a) {
+  var s = 'BEGIN:VCARD\r\nVERSION:3.0\r\n';
+  s += nwVcardLine_('N', nwVcardEsc_(c.lastName) + ';' + nwVcardEsc_(c.firstName) + ';;;');
+  s += nwVcardLine_('FN', nwVcardEsc_(c.fullName || [c.firstName, c.lastName].filter(Boolean).join(' ')));
+  if (a['Name'] || c.department) s += nwVcardLine_('ORG', nwVcardEsc_(a['Name'] || '') + (c.department ? ';' + nwVcardEsc_(c.department) : ''));
+  if (c.title) s += nwVcardLine_('TITLE', nwVcardEsc_(c.title));
+  for (var e = 0; e < c.emails.length; e++) { var em = c.emails[e] || {}; if (em.value) s += nwVcardLine_('EMAIL;TYPE=' + (em.kind === 'personal' ? 'HOME' : 'WORK') + ',INTERNET', nwVcardEsc_(em.value)); }
+  for (var p = 0; p < c.phones.length; p++) { var pn = c.phones[p] || {}; if (pn.number) s += nwVcardLine_('TEL;TYPE=' + (pn.kind === 'mobile' ? 'CELL' : pn.kind === 'fax' ? 'FAX' : 'WORK'), nwVcardEsc_(pn.number)); }
+  if (c.address) s += nwVcardLine_('ADR;TYPE=WORK', ';;' + nwVcardEsc_(c.address) + ';;;;');
+  if (c.website) s += nwVcardLine_('URL', nwVcardEsc_(/^https?:/i.test(c.website) ? c.website : 'https://' + c.website));
+  if (c.linkedin) s += nwVcardLine_('X-SOCIALPROFILE;TYPE=linkedin', nwVcardEsc_(c.linkedin));
+  var met = c.sourceEvent || c.metDate ? 'Met' + (c.sourceEvent ? ' at ' + c.sourceEvent : '') + (c.metDate ? ' on ' + c.metDate : '') : '';
+  var note = [met, c.notes].filter(Boolean).join('\n');
+  if (note) s += nwVcardLine_('NOTE', nwVcardEsc_(note));
+  var cats = c.tags.slice(); if (a['Relationship']) cats.push('relationship:' + a['Relationship']); if (c.role) cats.push('role:' + c.role);
+  if (cats.length) s += nwVcardLine_('CATEGORIES', cats.map(nwVcardEsc_).join(','));
+  if (c.updatedAt) s += nwVcardLine_('REV', String(c.updatedAt).replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z'));
+  s += nwVcardLine_('UID', c.id);
+  return s + 'END:VCARD\r\n';
+}
+function nwVcardFilename_(c) {
+  var base = [c.lastName, c.firstName].filter(Boolean).join('-') || c.fullName || 'contact';
+  return base.replace(/[^A-Za-z0-9-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) + '-' + c.id + '.vcf';
+}
+
+// PROJECT: ── N3 session 2 — the follow-up drafts and the developer's own card (§4.3, D15; NETWORK-SCHEMA.md §3 `Drafts` / `Mailings` / `Profiles`, §10)
+// D15: the app never sends. Nothing here — and nothing in the PROJECT region
+// of this file — calls MailApp, GmailApp or a Gmail scope; a draft is text in
+// the Drafts tab that the developer hands off from the page (.eml bundle,
+// CSV / .txt, the clipboard, mailto:) and marks sent by hand. Sent-ness is
+// the developer's word, recorded as an `email-out` Interaction whose
+// Evidence Link is the d- id. The audit rows carry ids and counts only.
+var NW_MERGE_FIELDS = ['first', 'last', 'company', 'title', 'metAt', 'metDate', 'lastTopic', 'myName', 'myCompany', 'myAddress'];
+var NW_POSTAL_PROP = 'NW_POSTAL_ADDRESS';   // Script Property — the developer's postal line for the unsubscribe footer
+var NW_DRAFT_LIMIT = 200;
+// {{field}} → its value; an unknown field renders empty rather than leaking the braces.
+function nwMerge_(tpl, map) {
+  return String(tpl || '').replace(/\{\{\s*([A-Za-z]+)\s*\}\}/g, function(m, k) {
+    for (var i = 0; i < NW_MERGE_FIELDS.length; i++) if (NW_MERGE_FIELDS[i].toLowerCase() === k.toLowerCase()) return map[NW_MERGE_FIELDS[i]] || '';
+    return '';
+  });
+}
+// The newest Interaction per contact as { date, summary } — {{lastTopic}}.
+function nwLastInteraction_(tabs) {
+  var it = nwSheetRead_(tabs.interactions), last = {};
+  var cCol = it.idx['Contact ID'], dCol = it.idx['Date'], sCol = it.idx['Summary'];
+  if (cCol === undefined || dCol === undefined) return last;
+  for (var r = 1; r < it.vals.length; r++) {
+    var cid = String(it.vals[r][cCol] || '');
+    if (!cid) continue;
+    var d = it.vals[r][dCol];
+    d = (d instanceof Date) ? d.toISOString().slice(0, 10) : String(d || '').slice(0, 10);
+    if (d && (!last[cid] || d >= last[cid].date)) last[cid] = { date: d, summary: sCol === undefined ? '' : String(it.vals[r][sCol] || '') };
+  }
+  return last;
+}
+// The developer's Profiles row (Email is the key column) as the "me" fields.
+function nwProfileMe_(tabs, email) {
+  var pt = nwSheetRead_(tabs.profiles), found = nwFindRow_(pt, email);
+  var o = found ? found.obj : {};
+  var addr = '';
+  try { addr = String(PropertiesService.getScriptProperties().getProperty(NW_POSTAL_PROP) || '').trim(); } catch (e) { addr = ''; }
+  return { email: email, name: nwStr_(o['Display Name'], 120), company: nwStr_(o['Company Name'], 120), title: nwStr_(o['Title'], 120),
+           phone: nwStr_(o['Phone'], 40), address: addr, row: found ? found.row : 0, headers: pt.headers, obj: o };
+}
+function nwMailingRows_(tabs, owner) {
+  var mt = nwSheetRead_(tabs.mailings), out = [];
+  for (var r = mt.vals.length - 1; r >= 1; r--) {
+    var o = nwRowObj_(mt, r);
+    if (String(o['Owner'] || '').toLowerCase() !== owner) continue;
+    out.push({ id: o['Mailing ID'], name: o['Template Name'], subject: o['Subject Template'], body: o['Body Template'], createdAt: o['Created At'] });
+  }
+  return out;   // newest first
+}
+// nop=mailings — GET: the saved templates (named Mailings rows, newest per
+// name), the open drafts (status = draft, newest first, at most 200) with the
+// contact's name for the review list, and the "me" fields. Audit: counts.
+function nwMailingsOp_(sess, p) {
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', false);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var owner = scopeRes.owner, tabs = ensureNetworkTabs_();
+  var seen = {}, templates = [];
+  nwMailingRows_(tabs, owner).forEach(function(m) { if (m.name && !seen[m.name.toLowerCase()]) { seen[m.name.toLowerCase()] = true; templates.push(m); } });
+  var ct = nwSheetRead_(tabs.contacts), nameOf = {};
+  for (var c = 1; c < ct.vals.length; c++) nameOf[String(ct.vals[c][0] || '')] = String(ct.vals[c][ct.idx['Full Name']] || '');
+  var dt = nwSheetRead_(tabs.drafts), drafts = [];
+  for (var r = dt.vals.length - 1; r >= 1 && drafts.length < NW_DRAFT_LIMIT; r--) {
+    var d = nwRowObj_(dt, r);
+    if (String(d['Owner'] || '').toLowerCase() !== owner || d['Status'] !== 'draft') continue;
+    drafts.push({ id: d['Draft ID'], mailingId: d['Mailing ID'], contactId: d['Contact ID'], name: nameOf[d['Contact ID']] || '', to: d['To'],
+      subject: d['Subject'], body: d['Body'], status: d['Status'], createdAt: d['Created At'], updatedAt: d['Updated At'] });
+  }
+  var me = nwProfileMe_(tabs, owner);
+  auditLog('data_read', sess.email, 'network_mailings', { templates: templates.length, drafts: drafts.length });
+  return { success: true, templates: templates, drafts: drafts,
+           me: { name: me.name, company: me.company, email: me.email, hasAddress: me.address ? 1 : 0 } };
+}
+// nop=drafts — body-POST: ids (the recipients), then EITHER mailingId (a saved
+// template's m- id) OR subject + body (a template written now; with `name`
+// it is saved as a template too). One Mailings row is written per render —
+// the template used and the list filter that picked the recipients — and
+// one editable draft per recipient into the Drafts tab (status = draft). A
+// recipient is judged on its own and answered in skipped[] with its reason:
+// bad_id, duplicate, not_found, deleted, do_not_contact (always), no_consent
+// (Consent Marketing = no; unknown is allowed — §10), no_email. Audit: the
+// mailing id and counts only — never a subject, a body or an address.
+function nwDraftsOp_(sess, p) {
+  var ids = nwArr_(p.ids);
+  if (!ids.length) return { success: false, error: 'ids_required' };
+  if (ids.length > NW_DRAFT_LIMIT) return { success: false, error: 'too_many_ids' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var owner = scopeRes.owner, tabs = ensureNetworkTabs_(), now = nwNow_();
+  var mailingId = nwStr_(p.mailingId, 20), subject = nwStr_(p.subject, 200), body = nwStr_(p.body, 5000), templateName = nwStr_(p.name, 80);
+  var mt = nwSheetRead_(tabs.mailings), tplRow = null;
+  if (mailingId) {
+    if (!NW_ID_RE.test(mailingId) || mailingId.charAt(0) !== 'm') return { success: false, error: 'bad_id' };
+    tplRow = nwFindRow_(mt, mailingId);
+    if (!nwOwned_(tplRow, owner)) return { success: false, error: 'not_found' };
+    subject = nwStr_(tplRow.obj['Subject Template'], 200); body = nwStr_(tplRow.obj['Body Template'], 5000); templateName = nwStr_(tplRow.obj['Template Name'], 80);
+  }
+  if (!subject || !body) return { success: false, error: 'template_required' };
+  var filter = '';
+  if (p.filter) { try { filter = JSON.stringify(nwObj_(p.filter)).slice(0, 2000); } catch (fe) { filter = ''; } }
+  var me = nwProfileMe_(tabs, owner);
+  var ct = nwSheetRead_(tabs.contacts), at = nwSheetRead_(tabs.accounts), last = nwLastInteraction_(tabs);
+  var rowOf = {}, accName = {};
+  for (var r = 1; r < ct.vals.length; r++) rowOf[String(ct.vals[r][0] || '')] = r;
+  for (var ar = 1; ar < at.vals.length; ar++) accName[String(at.vals[ar][0] || '')] = String(at.vals[ar][at.idx['Name']] || '');
+  var dt = nwSheetRead_(tabs.drafts), taken = {};
+  for (var dr = 1; dr < dt.vals.length; dr++) taken[String(dt.vals[dr][0] || '')] = true;
+  for (var mr = 1; mr < mt.vals.length; mr++) taken[String(mt.vals[mr][0] || '')] = true;
+  var newMailingId = nwNewId_('m', taken); taken[newMailingId] = true;
+  var drafts = [], skipped = [], seen = {};
+  for (var i = 0; i < ids.length; i++) {
+    var id = nwStr_(ids[i]), reason = '';
+    if (!NW_ID_RE.test(id) || id.charAt(0) !== 'c') reason = 'bad_id';
+    else if (seen[id]) reason = 'duplicate';
+    else if (rowOf[id] === undefined || String(ct.vals[rowOf[id]][ct.idx['Owner']] || '').toLowerCase() !== owner) reason = 'not_found';
+    else if (String(ct.vals[rowOf[id]][ct.idx['Deleted At']] || '')) reason = 'deleted';
+    if (reason) { skipped.push({ id: id, reason: reason }); continue; }
+    seen[id] = true;
+    var c = nwContactPublic_(nwRowObj_(ct, rowOf[id]));
+    if (c.dnc) { skipped.push({ id: id, reason: 'do_not_contact' }); continue; }
+    if (String(c.consent || '').toLowerCase() === 'no') { skipped.push({ id: id, reason: 'no_consent' }); continue; }
+    var to = '';
+    for (var e = 0; e < c.emails.length; e++) { var em = c.emails[e] || {}; if (em.value && (!to || em.kind === 'work')) { to = em.value; if (em.kind === 'work') break; } }
+    if (!to) { skipped.push({ id: id, reason: 'no_email' }); continue; }
+    var lastIx = last[c.id] || {};
+    var map = { first: c.firstName || (c.fullName || '').split(' ')[0] || '', last: c.lastName || '', company: accName[c.accountId] || '', title: c.title || '',
+      metAt: c.sourceEvent || '', metDate: c.metDate || '', lastTopic: lastIx.summary || '', myName: me.name, myCompany: me.company, myAddress: me.address };
+    var did = nwNewId_('d', taken); taken[did] = true;
+    var d = { 'Draft ID': did, 'Owner': owner, 'Mailing ID': newMailingId, 'Contact ID': c.id, 'To': to, 'Subject': nwMerge_(subject, map).slice(0, 200),
+      'Body': nwMerge_(body, map).slice(0, 6000), 'Status': 'draft', 'Created At': now, 'Updated At': now, 'Sent At': '' };
+    nwWriteRow_(tabs.drafts, dt.headers, d, 0);
+    drafts.push({ id: did, mailingId: newMailingId, contactId: c.id, name: c.fullName, to: to, subject: d['Subject'], body: d['Body'], status: 'draft', createdAt: now, updatedAt: now });
+  }
+  var savedCount = tplRow ? 0 : templateName.length ? 1 : 0;   // a template written now and named is saved for next time
+  nwWriteRow_(tabs.mailings, mt.headers, { 'Mailing ID': newMailingId, 'Owner': owner, 'Template Name': tplRow ? '' : templateName,
+    'Subject Template': subject, 'Body Template': body, 'Filter': filter, 'Created At': now }, 0);
+  if (drafts.length) bumpDataRev();
+  auditLog('data_write', sess.email, 'network_drafts', { mailingId: newMailingId, drafts: drafts.length, skipped: skipped.length, ids: ids.length, saved: savedCount });
+  return { success: true, mailingId: newMailingId, drafts: drafts, skipped: skipped, saved: savedCount };
+}
+
+// nop=draftstatus — body-POST: id (d-) and status ∈ draft · sent · discarded.
+//   draft      an edit — subject / body replace the draft's, Updated At set
+//   sent       the developer's word that the draft went out from their own
+//              client: an `email-out` Interaction is written with the d- id
+//              as its Evidence Link, Sent At is set; a sent draft is final
+//   discarded  the draft is closed without an Interaction
+// Audit: the draft id, the interaction id and flags only.
+function nwDraftStatusOp_(sess, p) {
+  var id = nwStr_(p.id, 20), status = nwStr_(p.status, 12).toLowerCase();
+  if (!NW_ID_RE.test(id) || id.charAt(0) !== 'd') return { success: false, error: 'bad_id' };
+  if (NW_DRAFT_STATUS.indexOf(status) < 0) return { success: false, error: 'bad_status' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var owner = scopeRes.owner, tabs = ensureNetworkTabs_(), now = nwNow_();
+  var dt = nwSheetRead_(tabs.drafts), found = nwFindRow_(dt, id);
+  if (!nwOwned_(found, owner)) return { success: false, error: 'not_found' };
+  var d = found.obj;
+  if (d['Status'] === 'sent') return { success: false, error: 'already_sent' };
+  var interactionId = '';
+  if (status === 'draft') {
+    if (p.subject !== undefined) d['Subject'] = nwStr_(p.subject, 200);
+    if (p.body !== undefined) d['Body'] = nwStr_(p.body, 6000);
+    if (!d['Subject'] || !d['Body']) return { success: false, error: 'template_required' };
+  } else if (status === 'sent') {
+    var ct = nwSheetRead_(tabs.contacts), cf = nwFindRow_(ct, String(d['Contact ID'] || ''));
+    var accountId = cf ? String(cf.obj['Account ID'] || '') : '';
+    interactionId = nwInteractionAdd_(tabs, owner, String(d['Contact ID'] || ''), accountId, 'email-out', now.slice(0, 10),
+      'Follow-up sent: ' + String(d['Subject'] || ''), id, '', now, {});
+    d['Sent At'] = now;
+  }
+  d['Status'] = status; d['Updated At'] = now;
+  nwWriteRow_(tabs.drafts, dt.headers, d, found.row);
+  bumpDataRev();
+  auditLog('data_write', sess.email, 'network_draftstatus', { draftId: id, interactionId: interactionId, sent: status === 'sent' ? 1 : 0,
+    discarded: status === 'discarded' ? 1 : 0, edited: status === 'draft' ? 1 : 0 });
+  return { success: true, id: id, status: status, interactionId: interactionId, sentAt: d['Sent At'] || '', updatedAt: now };
+}
+
+// nop=mycard — the developer's own card (§4.3): GET answers the Profiles
+// row's name · title · company · email · phone and the vCard the page shows
+// as a QR; POST with set=1 writes them (Display Name and Company Name are
+// the row's existing columns; Title and Phone were added for the card).
+function nwMyCardOp_(sess, p) {
+  var tabs = ensureNetworkTabs_(), me = nwProfileMe_(tabs, sess.email), now = nwNow_();
+  if (String(p.set || '') === '1') {
+    var obj = me.obj;
+    obj['Email'] = sess.email;
+    obj['Display Name'] = nwStr_(p.name, 120); obj['Company Name'] = nwStr_(p.company, 120);
+    obj['Title'] = nwStr_(p.title, 120); obj['Phone'] = nwStr_(p.phone, 40);
+    if (!obj['Display Name']) return { success: false, error: 'name_required' };
+    if (!me.row) obj['Created At'] = now;
+    nwWriteRow_(tabs.profiles, me.headers, obj, me.row);
+    me = nwProfileMe_(tabs, sess.email);
+    auditLog('data_write', sess.email, 'network_mycard', { saved: 1 });
+  } else {
+    auditLog('data_read', sess.email, 'network_mycard', { saved: me.name ? 1 : 0 });
+  }
+  var parts = String(me.name || '').trim().split(/\s+/), lastName = parts.length > 1 ? parts.pop() : '', firstName = parts.join(' ');
+  var vcard = nwVcard_({ id: '', fullName: me.name, firstName: firstName, lastName: lastName, title: me.title, department: '',
+    emails: me.email ? [{ value: me.email, kind: 'work' }] : [], phones: me.phone ? [{ number: me.phone, kind: 'mobile' }] : [],
+    address: '', website: '', linkedin: '', socials: [], languages: [], tags: [], notes: '', sourceEvent: '', metDate: '', role: '', updatedAt: '' },
+    { 'Name': me.company }).replace(/^UID:.*\r\n/m, '');
+  return { success: true, card: { name: me.name, title: me.title, company: me.company, email: me.email, phone: me.phone }, vcard: vcard };
 }
 
 // PROJECT END

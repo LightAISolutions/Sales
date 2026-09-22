@@ -135,7 +135,7 @@ All timestamps are ISO-8601 UTC strings written by the server; dates the develop
 
 ### `Shares` · `Profiles`
 
-Verbatim from Receipts: `Shares` = Owner · Grantee · Scope (`view` \| `edit`) · Created At (20 per owner; dormant in v1); `Profiles` = Email · Drive Folder ID · Display Name · Created At · Company Name (the developer's own "My card" panel reads Display Name and Company Name).
+Verbatim from Receipts: `Shares` = Owner · Grantee · Scope (`view` \| `edit`) · Created At (20 per owner; dormant in v1); `Profiles` = Email · Drive Folder ID · Display Name · Created At · Company Name · **Title · Phone** (the two added in N3 s2 — the developer's own "My card" panel reads and writes Display Name, Company Name, Title and Phone through `nop=mycard`; the vCard its QR encodes is built from them plus the sign-in email).
 
 ## 4 · Enums (D5 — decided 2026-09-20)
 
@@ -239,12 +239,16 @@ A mailing picks recipients from the filtered list (`Do Not Contact` rows are exc
 
 | Format | Shape |
 |---|---|
-| `.eml` bundle | One RFC 5322 file per draft (`To`, `Subject`, `Date`, `MIME-Version`, `Content-Type: text/plain; charset=utf-8`, body), zipped client-side with the same hand-rolled store-only zip the `.xlsx` export uses; drag into any mail client |
+| `.eml` bundle | One RFC 5322 file per draft (`From` — typed once, kept in `localStorage` — `To`, `Subject` (RFC 2047 when non-ASCII), `Date`, `MIME-Version`, `Content-Type: text/plain; charset=utf-8`, `X-Unsent: 1`, body), zipped client-side with the page's hand-rolled store-only zip (`nwZip`, also the per-contact vCards' container); drag into any mail client |
 | CSV / `.txt` | One row per recipient: `to, subject, body` (CSV) or `--- <to> ---` blocks (`.txt`) |
 | Copy | Per draft: subject + blank line + body to the clipboard |
 | `mailto:` | `mailto:<to>?subject=<enc>&body=<enc>` — opens the default client; bodies over ~1,800 characters fall back to Copy (URL length) |
 
 No `gmail.*` scope, no `MailApp`, no Gmail API anywhere in either app. Sent-ness is recorded by the developer marking the draft sent.
+
+**The ops (N3 s2, all behind the `drafts` capability):** `nop=mailings` (GET — the named templates, newest per name; the open drafts with the contact's name, at most 200; the `me` fields) · `nop=drafts` (POST — `ids` + either `mailingId` or `subject` + `body`, with `name` to save the template; one Mailings row per render carrying the template and the list `filter`; answers `mailingId`, `drafts[]` and `skipped[]` with `do_not_contact` · `no_consent` · `no_email` · `not_found` · `deleted` · `duplicate` · `bad_id`) · `nop=draftstatus` (POST — `id`, `status` ∈ `draft` (an edit: `subject` / `body`) · `sent` (the `email-out` Interaction, `Sent At`) · `discarded`; a sent draft answers `already_sent` to any further change). The `To` is the first `work` email, else the first email. `{{myAddress}}` reads the `NW_POSTAL_ADDRESS` Script Property; the page's default template ends with the unsubscribe line and `{{myAddress}}`.
+
+The template's own `sendHipaaEmail` (MailApp, the HIPAA security-alert helper every auth project carries) lives outside the PROJECT region and is never reached from it; the verifier's D15 grep covers the served page and the PROJECT region.
 
 ## 11 · Exports — CSV, `.xlsx`, vCard 3.0
 
@@ -266,9 +270,11 @@ No `gmail.*` scope, no `MailApp`, no Gmail API anywhere in either app. Sent-ness
 
 Line folding at 75 octets and `\,` / `\;` / `\n` escaping per RFC 2426. The developer's **own card** QR encodes the same vCard built from `Profiles`.
 
+**N3 s2:** `nop=export&format=csv|xlsx|vcard` — one gather (`nwExportRows_`), then the CSV text, the `.xlsx` base64 (Contacts / Accounts / Interactions sheets; Signals stay out until N4 gives them a surface), or `cards[]` (`id`, `filename`, `vcard`, `frontLink`) plus the `vcf` bundle. The per-contact download is a client-side zip of the `cards[]`; the PHOTO splice is client-side too (`nwCardFrontBytes` → `nwVcardWithPhoto`, folded at 75 octets). The QR (`nwQrMatrix`) is a hand-rolled byte-mode encoder, versions 1–10 at level M, cross-checked module for module against python-qrcode by the verifier.
+
 ## 12 · Audit-row rule and disclosure rows (D9)
 
-`auditLog(event, user, result, details)` is the template's function and is called on every data op. **`details` may carry ids (`a-`, `c-`, `i-`, `s-`, `d-`), counts, and the op name — never a card field**: no name, email, phone, company, address, note, or draft body, ever. The reviewer's test is `grep -n 'auditLog(' Network.gs` and reading each `details` argument. Every export and every share grant writes a **disclosure row** through the template's §164.528 machinery (`logDisclosure` or its equivalent in the auth template) naming the op, the row count and the ids exported — again never the contents. List ops return the minimum-necessary subset (`id`, name, company, title, role, relationship, stage, warmth, last touch, source event — and, since N2, the live `contactCount` per account); detail ops return the full row (`nop=get` on an `a-` id also answers the live contacts beneath as id · name · title · role). **Since N3 s1** the list row also carries `lastTouch` (the newest Interaction date, computed server-side once per list) — the columns the search and the eight filters read (Emails, Tags, Consent Marketing) are read by the list op and dropped before the answer; `nop=bulk` audits the op name and the id / applied / unchanged / accounts / rejected counts; `nop=export` writes the disclosure row through `recordDisclosure` with the op, the row count and the ids, and audits rows / excluded / ids.
+`auditLog(event, user, result, details)` is the template's function and is called on every data op. **`details` may carry ids (`a-`, `c-`, `i-`, `s-`, `d-`), counts, and the op name — never a card field**: no name, email, phone, company, address, note, or draft body, ever. The reviewer's test is `grep -n 'auditLog(' Network.gs` and reading each `details` argument. Every export and every share grant writes a **disclosure row** through the template's §164.528 machinery (`logDisclosure` or its equivalent in the auth template) naming the op, the row count and the ids exported — again never the contents. List ops return the minimum-necessary subset (`id`, name, company, title, role, relationship, stage, warmth, last touch, source event — and, since N2, the live `contactCount` per account); detail ops return the full row (`nop=get` on an `a-` id also answers the live contacts beneath as id · name · title · role). **Since N3 s1** the list row also carries `lastTouch` (the newest Interaction date, computed server-side once per list) — the columns the search and the eight filters read (Emails, Tags, Consent Marketing) are read by the list op and dropped before the answer; `nop=bulk` audits the op name and the id / applied / unchanged / accounts / rejected counts; `nop=export` writes the disclosure row through `recordDisclosure` with the op, the row count and the ids, and audits rows / excluded / ids. **Since N3 s2** every export format writes the same disclosure row and audit; `nop=drafts` audits the m- id and the drafts / skipped / ids / saved counts; `nop=draftstatus` the d- id, the i- id and sent / discarded / edited flags; `nop=mailings` the template and draft counts; `nop=mycard` a saved flag — a draft's subject, body and address never reach an audit row, and `check-network-schema.py`'s allow-list carries exactly these keys.
 
 ## 13 · Soft delete, restore, purge (D8)
 
@@ -279,7 +285,7 @@ Line folding at 75 octets and `\,` / `\;` / `\n` escaping per RFC 2426. The deve
 
 ## 14 · Checkers
 
-- `scripts/verify-network-roles.py` (N0) — the four-tier door check against the live page, the `verify-profiler-roles.py` shape
+- `scripts/verify-network-roles.py` (N0) — the four-tier door check against the live page, the `verify-profiler-roles.py` shape; extended each phase through N3 s2 — the exports (the vCard walker, the PHOTO splice, the zip, the `.xlsx` bytes), the drafts flow end to end, the QR encoder against python-qrcode, and the D15 grep (no `MailApp` / `GmailApp` / Gmail scope in the served page or the PROJECT region)
 - `scripts/check-network-schema.py` (N1; N2) — reads `Network.gs` and `Network.html`, asserts the three enum mirrors are identical to this file's lists, that the D5 stage validator (`STAGE_NEEDS_TARGET_OR_CUSTOMER`) is reached by **both** write paths — `nop=save` and `nop=account` — that every id literal in tests matches `NW_ID_RE`, that no id-generating function takes a name or a date as input, and that every `auditLog(` call's `details` argument is built from ids and counts only (a lexical check on the argument expression). Exit 1 on any finding
 - `node --check` on the `.gs` copy and `scripts/check-gas-inner-scripts.js`, as for every project
 

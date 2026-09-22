@@ -64,7 +64,8 @@ ALLOWED_KEYS = {'contactId', 'accountId', 'absorbedId', 'duplicateOf', 'interact
                 'capability', 'op', 'ids', 'rows', 'signals', 'drafts', 'mailings', 'purged', 'retried', 'accountChanged',
                 'renamed', 'tags',   # N2: nop=account logs a rename flag and the tag COUNT, never a tag
                 'written', 'updated', 'rejected', 'events', 'ok',   # B: the peer signals upsert logs three counts; eventstoday an event count + a success flag
-                'total', 'filtered', 'applied', 'unchanged', 'excluded'}   # N3 s1: the list logs matched / total / a filtered flag; nop=bulk applied / unchanged; nop=export the rows left out
+                'total', 'filtered', 'applied', 'unchanged', 'excluded',   # N3 s1: the list logs matched / total / a filtered flag; nop=bulk applied / unchanged; nop=export the rows left out
+                'mailingId', 'draftId', 'skipped', 'saved', 'sent', 'discarded', 'edited', 'templates'}   # N3 s2: nop=drafts the m- id + counts; nop=draftstatus the d- / i- ids + flags; nop=mailings counts; nop=mycard a saved flag
 
 
 def schema_enums(text):
