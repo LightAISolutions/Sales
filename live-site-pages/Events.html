@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.01w">
+  <meta name="build-version" content="v01.02w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -386,6 +386,7 @@
     }
     .ev-card h2 { margin: 0 0 6px; font-size: 18px; font-weight: 600; }
     .ev-card p { margin: 0 0 8px; font-size: 14px; line-height: 1.55; color: var(--ev-muted); }
+    .ev-card .ev-note { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 12px 0 0; }
     .ev-empty { font: 13px/1.6 var(--ev-mono); color: var(--ev-muted); padding: 14px 0 4px; text-align: center; }
     .ev-empty b { display: block; font: 600 15px/1.4 var(--ev-serif); color: var(--ev-ink); margin-bottom: 4px; }
     .ev-denied { border-left: 4px solid var(--ev-dis); background: #fdf5f6; }
@@ -424,9 +425,12 @@
     /* ── The agenda scroller: sticky month header over day groups ── */
     #ev-agenda { position: relative; }
     .ev-month {
+      /* pinned at the top; the 40px top padding is paper that covers the strip the
+         template's fixed user pill floats over, so scrolled rows never show through
+         beside the pill and the month name sits just below it */
       position: sticky; top: 0; z-index: 4; background: var(--ev-paper);
       font: 600 15px/1.2 var(--ev-serif); color: var(--ev-accent); letter-spacing: .02em;
-      padding: 10px 0 8px; margin: 0; border-bottom: 1px solid var(--ev-line2);
+      padding: 40px 0 8px; margin: 0; border-bottom: 1px solid var(--ev-line2);
     }
     .ev-month small { font: 11px/1 var(--ev-mono); color: var(--ev-faint); letter-spacing: .1em; text-transform: uppercase; margin-left: 8px; }
     .ev-day { padding: 8px 0 2px; }
@@ -495,6 +499,38 @@
     .ev-pills.ev-scroll { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
     #ev-header .ev-nowmonth { font: 12px/1.4 var(--ev-mono); color: var(--ev-accent); letter-spacing: .06em; }
     .ev-month.is-current { color: var(--ev-gold); }
+
+    /* ── Session 2: the tab strip, the Subscribe pill's card, the day-plan timeline ── */
+    #ev-header .ev-subscribe { font: 12px/1 var(--ev-mono); padding: 7px 10px; border-radius: 999px; border: 1px solid var(--ev-accent);
+      background: var(--ev-card); color: var(--ev-accent); cursor: pointer; text-decoration: none; }
+    #ev-header .ev-subscribe[aria-expanded="true"] { background: var(--ev-accent); color: #fff; }
+    .ev-subcard { border-left: 4px solid var(--ev-accent); }
+    .ev-subcard .ev-url { display: block; width: 100%; box-sizing: border-box; font: 12px/1.5 var(--ev-mono); color: var(--ev-ink);
+      background: var(--ev-paper); border: 1px solid var(--ev-line2); border-radius: 8px; padding: 8px 10px; margin: 6px 0 10px; }
+    .ev-subcard .ev-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+    .ev-subcard .ev-how { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 8px 0 0; }
+    .ev-tabs { display: flex; gap: 0; margin: 0 0 12px; border-bottom: 1px solid var(--ev-line2); }
+    .ev-tab { flex: 1 1 0; font: 12px/1 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint);
+      background: none; border: 0; border-bottom: 3px solid transparent; padding: 10px 6px 9px; cursor: pointer; margin-bottom: -1px; }
+    .ev-tab[aria-selected="true"] { color: var(--ev-accent); border-bottom-color: var(--ev-accent); }
+    #ev-dayplan { display: none; }
+    .ev-dayhead { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 0 0 8px; }
+    .ev-dayhead b { font: 600 18px/1.2 var(--ev-serif); color: var(--ev-ink); }
+    .ev-dayhead .ev-daysub { font: 12px/1.4 var(--ev-mono); color: var(--ev-faint); }
+    .ev-daypick { display: flex; gap: 8px; align-items: center; margin: 0 0 10px; }
+    .ev-daypick .ev-input { flex: 1 1 auto; font-family: var(--ev-mono); font-size: 13px; }
+    .ev-tl { list-style: none; margin: 6px 0 0; padding: 0 0 0 22px; border-left: 2px solid var(--ev-line2); }
+    .ev-tl-item { position: relative; padding: 0 0 16px; cursor: pointer; }
+    .ev-tl-item:last-child { padding-bottom: 4px; }
+    .ev-tl-item::before { content: ''; position: absolute; left: -29px; top: 5px; width: 12px; height: 12px; border-radius: 50%;
+      background: var(--ev-gold); border: 2px solid var(--ev-card); box-shadow: 0 0 0 1px var(--ev-gold); }
+    .ev-tl-time { font: 11px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); }
+    .ev-tl-name { font: 600 15px/1.3 var(--ev-serif); color: var(--ev-ink); margin: 1px 0 2px; }
+    .ev-tl-meta { font: 12px/1.5 var(--ev-mono); color: var(--ev-muted); }
+    .ev-tl-meta .ev-sep { color: var(--ev-line2); margin: 0 5px; }
+    .ev-tl-note { font: 13px/1.5 var(--ev-serif); color: var(--ev-muted); border-left: 3px solid var(--ev-line); padding: 2px 10px; margin: 6px 0 0; white-space: pre-wrap; }
+    .ev-tl-att { display: inline-block; font: 10px/1 var(--ev-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ev-ok);
+      border: 1px solid var(--ev-ok); border-radius: 4px; padding: 3px 5px; margin-left: 6px; vertical-align: middle; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4340,7 +4376,7 @@ function ovDocVersion() {
 // ══════════════
 // PROJECT START — Add your project-specific JavaScript here
 // ══════════════
-// PROJECT: ── Events — E1 scaffold + agenda (session 1) ────────────────────
+// PROJECT: ── Events — E1 scaffold + agenda (session 1) + the published calendar and the day plan (session 2)
 // Design: repository-information/NETWORK-EVENTS-DESIGN-PLAN.md §5.3; shapes:
 // EVENTS-SCHEMA.md. This page paints the door, the masthead, the agenda
 // scroller over the PUBLIC registry (events-data/events.json, fetched by a
@@ -4707,6 +4743,7 @@ function evRender() {
     }
   }
   evObserveMonths();
+  if (_evTab === 'day') evRenderDay();
   var note = document.getElementById('ev-foot');
   if (note) note.textContent = 'Registry built ' + (_evRegistryBuilt ? _evRegistryBuilt.slice(0, 10) : '—') + ' · ' + _evEvents.length + ' events · refreshed on open, on return to this tab and after every change — no background polling.';
 }
@@ -4796,7 +4833,7 @@ function evToggleStar(slug, btn) {
 // are escaped (\\ \; \, \n), lines are folded at 75 octets and end in CRLF.
 var EV_ICS_UID_HOST = 'events.lightaisolutions.github.io';
 function evIcsEscape(s) {
-  return String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+  return String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
 }
 function evIcsDate(s) { return String(s || '').replace(/-/g, ''); }
 function evIcsStamp(d) {
@@ -5003,6 +5040,178 @@ function evOwnBlock(e) {
   return own;
 }
 
+// PROJECT: ── Subscribe — the published calendar (session 2, §13.7 step 5) ──
+// events-data/events.ics is every confirmed event as one calendar, rebuilt
+// from the registry by scripts/build-events-ics.py and byte-compatible with
+// the per-event text above. The masthead offers it as a webcal:// URL
+// derived from the page's own location (the same Pages site, a relative
+// path — never a GitHub host), so it is right on the live site and on a
+// local harness alike. Copy goes through the clipboard when the browser
+// allows; the URL is always shown in a field so it can be selected by hand
+// (Android's Google Calendar has no webcal handler — it wants the URL pasted
+// under "From URL" on the web).
+var EV_ICS_PATH = 'events-data/events.ics';
+function evIcsPublishedUrl() {
+  try { return new URL(EV_ICS_PATH, location.href).href; } catch (e) { return EV_ICS_PATH; }
+}
+function evWebcalUrl() { return evIcsPublishedUrl().replace(/^https?:/, 'webcal:'); }
+function evCopyText(text) {
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(text).then(function() { return true; }, function() { return false; });
+  } catch (e) {}
+  return Promise.resolve(false);
+}
+function evToggleSubscribe() {
+  var app = document.getElementById('ev-app'), btn = document.getElementById('ev-subscribe');
+  var card = document.getElementById('ev-subcard');
+  if (card) { card.parentNode.removeChild(card); if (btn) btn.setAttribute('aria-expanded', 'false'); return; }
+  if (!app) return;
+  card = evEl('div', 'ev-card ev-subcard'); card.id = 'ev-subcard';
+  card.appendChild(evEl('h2', null, 'Subscribe to the calendar'));
+  card.appendChild(evEl('p', null, 'Every confirmed event in the registry as one calendar that keeps itself current — subscribe once in Google Calendar, Apple Calendar or Outlook and new editions and moved dates arrive on their own.'));
+  var url = evEl('input', 'ev-url'); url.id = 'ev-webcal-url'; url.type = 'text'; url.readOnly = true; url.value = evWebcalUrl();
+  url.setAttribute('aria-label', 'Calendar subscription URL');
+  url.addEventListener('focus', function() { url.select(); });
+  card.appendChild(url);
+  var actions = evEl('div', 'ev-actions');
+  var open = evEl('a', 'ev-btn ev-btn-primary', 'Subscribe'); open.id = 'ev-webcal'; open.href = evWebcalUrl();
+  actions.appendChild(open);
+  var copy = evEl('button', 'ev-btn', 'Copy URL'); copy.type = 'button'; copy.id = 'ev-copy-webcal';
+  var status = evEl('div', 'ev-status'); status.id = 'ev-subscribe-status';
+  copy.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    evCopyText(url.value).then(function(ok) {
+      status.textContent = ok ? 'Copied — paste it into your calendar app under “subscribe” or “from URL”.'
+                              : 'Copying is blocked here — tap the field above and copy it by hand.';
+      status.className = 'ev-status' + (ok ? ' ev-status-ok' : '');
+      if (!ok) { url.focus(); url.select(); }
+    });
+  });
+  actions.appendChild(copy);
+  var dl = evEl('a', 'ev-btn', 'Download all (.ics)'); dl.id = 'ev-ics-all'; dl.href = EV_ICS_PATH; dl.download = 'events.ics';
+  actions.appendChild(dl);
+  card.appendChild(actions);
+  card.appendChild(status);
+  card.appendChild(evEl('p', 'ev-how', 'Google Calendar on the web: Other calendars → + → From URL → paste. iPhone: tap Subscribe. ' +
+    'Google refreshes a subscribed calendar every few hours to a day; the download is a one-time copy that will not update.'));
+  app.insertBefore(card, app.firstChild);
+  if (btn) btn.setAttribute('aria-expanded', 'true');
+  window.scrollTo({ top: 0 });
+}
+
+// PROJECT: ── The tab strip and the day-plan tab (session 2, §13.7 step 6) ──
+// Agenda | Day plan. The day plan is a timeline of the starred events that
+// span a chosen day — read-only in E1: it lists what the owner starred, with
+// the venue's published hours for that day when the registry carries them,
+// the attending state and the note. Meetings, booth routes and plans arrive
+// with E5 and fill this tab; nothing here writes.
+var _evTab = 'agenda';
+var _evDay = '';                // the chosen day, YYYY-MM-DD (today until picked)
+function evTab(key, label) {
+  var b = evEl('button', 'ev-tab', label); b.type = 'button'; b.id = 'ev-tab-' + key; b.setAttribute('role', 'tab');
+  b.setAttribute('aria-selected', _evTab === key ? 'true' : 'false');
+  b.addEventListener('click', function(ev) { ev.preventDefault(); evShowTab(key); });
+  return b;
+}
+function evShowTab(key) {
+  _evTab = key === 'day' ? 'day' : 'agenda';
+  ['agenda', 'day'].forEach(function(k) { var b = document.getElementById('ev-tab-' + k); if (b) b.setAttribute('aria-selected', _evTab === k ? 'true' : 'false'); });
+  ['ev-counts', 'ev-filters', 'ev-agenda', 'ev-foot'].forEach(function(id) { var el = document.getElementById(id); if (el) el.style.display = _evTab === 'agenda' ? '' : 'none'; });
+  var day = document.getElementById('ev-dayplan');
+  if (day) day.style.display = _evTab === 'day' ? 'block' : 'none';
+  if (_evTab === 'day') evRenderDay(); else evObserveMonths();
+  window.scrollTo({ top: 0 });
+}
+function evStarredOn(day) {
+  return _evEvents.filter(function(e) { return evStarred(e.slug) && e.start <= day && (e.end || e.start) >= day; });
+}
+// The upcoming days that carry a starred event, nearest first (capped so the
+// strip stays a strip).
+function evStarredDays() {
+  var today = evToday(), days = {};
+  _evEvents.forEach(function(e) {
+    if (!evStarred(e.slug)) return;
+    var d = e.start < today ? today : e.start, end = e.end || e.start, n = 0;
+    while (d <= end && n < 14) { days[d] = 1; d = evAddDays(d, 1); n++; }
+  });
+  return Object.keys(days).sort().slice(0, 12);
+}
+function evHoursOn(e, day) {
+  var h = (e.hours || []).filter(function(x) { return x && x.date === day; })[0];
+  return h && h.open ? h.open + (h.close ? '–' + h.close : '') : '';
+}
+function evDayOf(e, day) {
+  var a = evParseDate(e.start), b = evParseDate(e.end || e.start), d = evParseDate(day);
+  if (!a || !b || !d) return '';
+  var total = Math.round((b - a) / 864e5) + 1, n = Math.round((d - a) / 864e5) + 1;
+  return total > 1 ? 'day ' + n + ' of ' + total : 'one day';
+}
+function evRenderDay() {
+  var wrap = document.getElementById('ev-dayplan');
+  if (!wrap) return;
+  if (!_evDay) _evDay = evToday();
+  var now = document.getElementById('ev-nowmonth');
+  if (now) now.textContent = evMonthLabel(evMonthKey(_evDay));
+  wrap.innerHTML = '';
+  var card = evEl('div', 'ev-card'); card.id = 'ev-daycard';
+  var head = evEl('div', 'ev-dayhead');
+  head.appendChild(evEl('b', null, evFmtLong(_evDay, _evDay)));
+  head.appendChild(evEl('span', 'ev-daysub', _evDay === evToday() ? 'today' : ''));
+  card.appendChild(head);
+  var pick = evEl('div', 'ev-daypick');
+  var input = evEl('input', 'ev-input'); input.type = 'date'; input.id = 'ev-day-pick'; input.value = _evDay;
+  input.setAttribute('aria-label', 'Choose a day');
+  input.addEventListener('change', function() { if (/^\d{4}-\d{2}-\d{2}$/.test(input.value)) { _evDay = input.value; evRenderDay(); } });
+  pick.appendChild(input);
+  pick.appendChild(evPill('Today', _evDay === evToday(), function() { _evDay = evToday(); evRenderDay(); }));
+  card.appendChild(pick);
+  var days = evStarredDays();
+  if (days.length) {
+    card.appendChild(evEl('span', 'ev-lbl', 'Starred days'));
+    var strip = evEl('div', 'ev-pills ev-scroll'); strip.id = 'ev-day-strip';
+    days.forEach(function(d) {
+      var pd = evParseDate(d);
+      strip.appendChild(evPill(evDayLabel(d) + (pd ? ' ' + EV_MON[pd.getMonth()] : ''), d === _evDay, function() { _evDay = d; evRenderDay(); }));
+    });
+    card.appendChild(strip);
+  }
+  var rows = evStarredOn(_evDay);
+  if (!rows.length) {
+    var empty = evEl('div', 'ev-empty');
+    empty.appendChild(evEl('b', null, 'Nothing starred on this day'));
+    empty.appendChild(document.createTextNode(Object.keys(_evStars).length
+      ? 'Pick another day above, or star more events on the agenda.'
+      : 'Star events on the agenda and they appear here as a timeline for the day.'));
+    card.appendChild(empty);
+  } else {
+    rows.sort(function(a, b) {
+      var ha = evHoursOn(a, _evDay) || '~', hb = evHoursOn(b, _evDay) || '~';
+      return ha < hb ? -1 : ha > hb ? 1 : (a.name < b.name ? -1 : a.name > b.name ? 1 : 0);
+    });
+    var tl = evEl('ol', 'ev-tl'); tl.id = 'ev-tl';
+    rows.forEach(function(e) {
+      var li = evEl('li', 'ev-tl-item'); li.dataset.slug = e.slug;
+      li.appendChild(evEl('div', 'ev-tl-time', (evHoursOn(e, _evDay) || 'All day') + ' · ' + evDayOf(e, _evDay)));
+      var name = evEl('div', 'ev-tl-name', e.name);
+      var star = _evStars[e.slug];
+      if (star && star.attending) name.appendChild(evEl('span', 'ev-tl-att', evLabel(EV_ATTENDING, star.attending)));
+      li.appendChild(name);
+      var meta = evEl('div', 'ev-tl-meta');
+      meta.appendChild(document.createTextNode(evPlace(e, true) || evFmtRange(e.start, e.end)));
+      meta.appendChild(evEl('span', 'ev-sep', '·'));
+      meta.appendChild(document.createTextNode(evLabel(EV_KINDS, e.kind)));
+      if (e.status === 'tentative') { meta.appendChild(evEl('span', 'ev-sep', '·')); meta.appendChild(evEl('span', 'ev-tent', 'tentative')); }
+      li.appendChild(meta);
+      if (star && star.note) li.appendChild(evEl('div', 'ev-tl-note', star.note));
+      li.addEventListener('click', function() { evOpenSheet(e.slug); });
+      tl.appendChild(li);
+    });
+    card.appendChild(tl);
+  }
+  card.appendChild(evEl('p', 'ev-note', 'Read-only in this release: the day plan lists what you starred. Meetings, booth routes and plans arrive with E5.'));
+  wrap.appendChild(card);
+}
+
 // PROJECT: ── Masthead + mount ─────────────────────────────────────────────
 function evHeaderShow() {
   var head = document.getElementById('ev-header');
@@ -5013,6 +5222,12 @@ function evHeaderShow() {
   if (!links.childNodes.length) {
     var now = evEl('span', 'ev-nowmonth', ''); now.id = 'ev-nowmonth';
     links.appendChild(now);
+    if (evAdmitted()) {
+      var sub = evEl('button', 'ev-subscribe', 'Subscribe'); sub.type = 'button'; sub.id = 'ev-subscribe';
+      sub.setAttribute('aria-expanded', 'false'); sub.title = 'Subscribe to every confirmed event as a calendar (webcal)';
+      sub.addEventListener('click', function(ev) { ev.preventDefault(); evToggleSubscribe(); });
+      links.appendChild(sub);
+    }
     var role = evEl('span', 'ev-role', evEffectiveRole() + (evPreviewRole() ? ' (preview)' : ''));
     role.id = 'ev-role';
     links.appendChild(role);
@@ -5040,12 +5255,16 @@ function evLoadAll() {
   _evLoading = true;
   if (!document.getElementById('ev-agenda')) {
     app.innerHTML = '';
+    var tabs = evEl('div', 'ev-tabs'); tabs.id = 'ev-tabs'; tabs.setAttribute('role', 'tablist');
+    tabs.appendChild(evTab('agenda', 'Agenda')); tabs.appendChild(evTab('day', 'Day plan'));
+    app.appendChild(tabs);
     var counts = evEl('div', 'ev-count'); counts.id = 'ev-counts'; app.appendChild(counts);
     app.appendChild(evFiltersCard());
     var agenda = evEl('div'); agenda.id = 'ev-agenda';
     agenda.appendChild(evEl('div', 'ev-empty', 'Loading the registry…'));
     app.appendChild(agenda);
     var foot = evEl('p', 'ev-note', ''); foot.id = 'ev-foot'; app.appendChild(foot);
+    var dayplan = evEl('div'); dayplan.id = 'ev-dayplan'; app.appendChild(dayplan);
     document.getElementById('ev-sheet-back').addEventListener('click', evCloseSheet);
     document.addEventListener('keydown', function(ev) { if (ev.key === 'Escape' && _evSheetSlug) evCloseSheet(); });
   }

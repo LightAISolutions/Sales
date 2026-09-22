@@ -1,0 +1,1151 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//LightAISolutions//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:BESS/AIDC events
+BEGIN:VEVENT
+UID:acp-recharge-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260925
+SUMMARY:ACP RECHARGE 2026
+LOCATION:Aurora\, CO\, US
+URL:https://cleanpower.org/events/
+DESCRIPTION:American Clean Power Association\nConference\nACP's dedicated s
+ torage conference — the single highest-density US storage buyer week out
+ side RE+.
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,utilities,capit
+ al
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bisnow-ireland-dc-investment-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:Bisnow Ireland Data Centre Investment Conference & Expo 2026
+LOCATION:Dublin\, IE
+URL:https://www.bisnow.com/events
+DESCRIPTION:Bisnow Media\nRegional\nOne-day regional format — a breakfast
+ -to-late-afternoon room of local developers\, GCs and utility staff. Speak
+ er rosters are published\; there is no exhibitor directory.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-innovation-incubator-2026-09@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:iMasons Innovation Incubator: Meet the Startups (Sep 2026)
+LOCATION:
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nWebinar\nVirtual\, members-first\; usefu
+ l for named-startup intelligence rather than meetings.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-women-powered-2026-09@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260923
+SUMMARY:iMasons Women Powered\, Part 1 (Sep 2026)
+LOCATION:
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nWebinar\nVirtual\, members-first\; usefu
+ l for named-startup intelligence rather than meetings.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:esig-large-loads-workshop-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:ESIG Large Loads Workshop 2026
+LOCATION:Pestana Douro Riverside\, Porto\, PT
+URL:https://www.esig.energy/events/
+DESCRIPTION:Energy Systems Integration Group\nConference\nThe large-load in
+ terconnection question that every AIDC sale runs into\, argued by the plan
+ ners who set the rules.
+CATEGORIES:grid-equipment,utilities,aidc-developers-and-landlords
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gcpa-fall-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20261001
+SUMMARY:GCPA 2026 Annual Fall Conference & Exhibition
+LOCATION:AT&T Hotel and Conference Center\, Austin\, TX\, US
+URL:https://www.gulfcoastpower.org/events/
+DESCRIPTION:Gulf Coast Power Association\nRegional\nTheme: 'Building the Gr
+ id of 2050: One Decision at a Time'. ERCOT-centric regional audience — t
+ he sub-mega tier the corpus names only through a sponsor page.
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-at-yotta-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20261001
+SUMMARY:iMasons at Yotta 2026
+LOCATION:Las Vegas\, NV\, US
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nSocial\nChapter-level social — no exhi
+ bitor list and no badge scan\; the value is the room. This is the sub-mega
+  tier the dossier corpus never names.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:yotta-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20261001
+SUMMARY:Yotta 2026
+LOCATION:Caesars Forum\, Las Vegas\, NV\, US
+URL:https://www.yotta-event.com/
+DESCRIPTION:Yotta (Bisnow Media)\nMega\n6\,500+ attendees at the AI/energy/
+ infrastructure intersection\; moved from the MGM Grand to Caesars Forum fo
+ r 2026. iMasons runs a parallel programme on site.\nRegister: https://www.
+ yotta-event.com/2026-passes/
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,storage-integrators-and-containers,neocl
+ ouds,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bisnow-central-dc-construction-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261007
+SUMMARY:Bisnow Central Region Data Center Construction\, Design & Developme
+ nt 2026
+LOCATION:Dallas\, TX\, US
+URL:https://www.bisnow.com/events
+DESCRIPTION:Bisnow Media\nRegional\nOne-day regional format — a breakfast
+ -to-late-afternoon room of local developers\, GCs and utility staff. Speak
+ er rosters are published\; there is no exhibitor directory.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-denver-power-up-poker-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:iMWomen Denver Power Up Poker Night 2026
+LOCATION:Denver\, CO\, US
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nSocial\nChapter-level social — no exhi
+ bitor list and no badge scan\; the value is the room. This is the sub-mega
+  tier the dossier corpus never names.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:battery-show-na-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261016
+SUMMARY:The Battery Show North America 2026
+LOCATION:Huntington Place\, Detroit\, MI\, US
+URL:https://www.thebatteryshow.com/en/home.html
+DESCRIPTION:Informa Markets\nMega\n1\,300+ exhibitors across the cell\, pac
+ k and manufacturing chain\; the densest single week for cell and container
+  supply-chain conversations in North America.\nRegister: https://www.xpres
+ sreg.net/register/BATT1026/start.asp
+CATEGORIES:cells-and-chemistry,storage-integrators-and-containers,compute-a
+ nd-the-rack,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-innovation-exchange-2026-10@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261013
+DTEND;VALUE=DATE:20261014
+SUMMARY:iMasons Innovation Exchange: Thought Leadership (Oct 2026)
+LOCATION:
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nWebinar\nVirtual\, members-first\; usefu
+ l for named-startup intelligence rather than meetings.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-cascadia-digital-frontier-2026@events.lightaisolutions.github.i
+ o
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:iMasons Cascadia Chapter: The Digital Frontier 2026
+LOCATION:Vancouver\, BC\, CA
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nSocial\nChapter-level social — no exhi
+ bitor list and no badge scan\; the value is the room. This is the sub-mega
+  tier the dossier corpus never names.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bisnow-national-dc-connectivity-ai-2026@events.lightaisolutions.github.
+ io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Bisnow National Data Center Connectivity & AI Infrastructure Confer
+ ence & Expo 2026
+LOCATION:US
+URL:https://www.bisnow.com/events
+DESCRIPTION:Bisnow Media\nRegional\nOne-day regional format — a breakfast
+ -to-late-afternoon room of local developers\, GCs and utility staff. Speak
+ er rosters are published\; there is no exhibitor directory. The organiser'
+ s calendar prints 'National' in place of a city for this edition.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:nvidia-gtc-berlin-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261023
+SUMMARY:NVIDIA GTC Berlin 2026
+LOCATION:Berlin\, DE
+URL:https://www.nvidia.com/en-eu/gtc/
+DESCRIPTION:NVIDIA\nCorporate summit\nEuropean GTC\; the seed calendar did 
+ not carry it.
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,in-hall-
+ power,cooling
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bisnow-west-coast-dc-ops-cooling-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Bisnow West Coast Data Center Operations & Cooling Conference 2026
+LOCATION:US
+URL:https://www.bisnow.com/events
+DESCRIPTION:Bisnow Media\nRegional\nOne-day regional format — a breakfast
+ -to-late-afternoon room of local developers\, GCs and utility staff. Speak
+ er rosters are published\; there is no exhibitor directory. The organiser'
+ s calendar prints 'National' in place of a city for this edition.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7x24-exchange-fall-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261029
+SUMMARY:7x24 Exchange Fall 2026
+LOCATION:JW Marriott San Antonio Hill Country\, San Antonio\, TX\, US
+URL:https://www.7x24exchange.org/conferences/future-national-conferences/
+DESCRIPTION:7x24 Exchange International\nConference\nEnd-user-heavy: owners
+  and operators of mission-critical facilities\, not a trade-show floor. Th
+ eme: The Intersection of AI & Traditional Data Centers.\nRegister: https:/
+ /conferences.7x24exchange.org/fall2026/
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,assurance
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cigre-grid-of-the-future-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261030
+SUMMARY:CIGRE US Grid of the Future Symposium 2026
+LOCATION:Greater Richmond Convention Center\, Richmond\, VA\, US
+URL:https://na.eventscloud.com/website/87912/home/
+DESCRIPTION:CIGRE US National Committee\nConference\nTransmission-engineeri
+ ng audience. cigre-usnc.org now 301s to the EventsCloud site.\nRegister: h
+ ttps://na.eventscloud.com/website/87912/registration/
+CATEGORIES:grid-equipment,utilities,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:esig-fall-technical-workshop-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261030
+SUMMARY:ESIG Fall Technical Workshop 2026
+LOCATION:Hyatt Regency Reston\, Reston\, VA\, US
+URL:https://www.esig.energy/events/
+DESCRIPTION:Energy Systems Integration Group\nConference\nEngineers and pla
+ nners\, not buyers — attend to be credible on interconnection\, not to s
+ ell. The Oscillations Workshop runs alongside it at the same venue.
+CATEGORIES:grid-equipment,utilities,software-and-optimization,storage-devel
+ opers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-powerup-data-centers-investment-2026@events.lightaisolutions.g
+ ithub.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261030
+SUMMARY:Infocast PowerUp Data Centers: Investment 2026
+LOCATION:McLean\, VA\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nConference\nHybrid deal structures f
+ inancing data-center and generation build — capital-side room.
+CATEGORIES:capital,storage-developers-and-ipps,aidc-developers-and-landlord
+ s,bridge-and-on-site-generation
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-texas-energy-update-2026-11@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:iMasons Data Center Energy Industry Update (Texas\, Nov 2026)
+LOCATION:TX\, US
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nSocial\nChapter-level social — no exhi
+ bitor list and no badge scan\; the value is the room. This is the sub-mega
+  tier the dossier corpus never names.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-innovation-incubator-2026-11@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:iMasons Innovation Incubator: Meet the Startups (Nov 2026)
+LOCATION:
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nWebinar\nVirtual\, members-first\; usefu
+ l for named-startup intelligence rather than meetings.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-southeast-power-next-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261107
+SUMMARY:Infocast Southeast Power NEXT 2026
+LOCATION:Charlotte\, NC\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nRegional\nRegional: the whole Southe
+ ast interconnection cast in one room.
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bisnow-carolinas-dc-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Bisnow Carolinas Data Center Conference & Expo 2026
+LOCATION:Charlotte\, NC\, US
+URL:https://www.bisnow.com/events
+DESCRIPTION:Bisnow Media\nRegional\nOne-day regional format — a breakfast
+ -to-late-afternoon room of local developers\, GCs and utility staff. Speak
+ er rosters are published\; there is no exhibitor directory.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bisnow-european-dc-investment-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Bisnow European Data Centre Investment Conference & Expo 2026
+LOCATION:London\, GB
+URL:https://www.bisnow.com/events
+DESCRIPTION:Bisnow Media\nRegional\nOne-day regional format — a breakfast
+ -to-late-afternoon room of local developers\, GCs and utility staff. Speak
+ er rosters are published\; there is no exhibitor directory.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gcpa-empowering-leadership-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261114
+SUMMARY:GCPA emPOWERing Leadership Conference 2026
+LOCATION:Hyatt Regency Lost Pines\, Cedar Creek\, TX\, US
+URL:https://www.gulfcoastpower.org/events/
+DESCRIPTION:Gulf Coast Power Association\nRegional\nLeadership-development 
+ format\, not a selling venue.
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:sc26@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261121
+SUMMARY:SC26 — International Conference for HPC\, Networking\, Storage an
+ d Analysis
+LOCATION:McCormick Place\, Chicago\, IL\, US
+URL:https://sc26.supercomputing.org/
+DESCRIPTION:ACM / IEEE Computer Society\nMega\nHPC centres and rack-scale l
+ iquid-cooling buyers\; adjacent to AIDC rather than in it.\nRegister: http
+ s://sc26.supercomputing.org/registration/
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,cooling,
+ in-hall-power
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:re-plus-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261120
+SUMMARY:RE+ 2026
+LOCATION:Las Vegas Convention Center\, Las Vegas\, NV\, US
+URL:https://www.re-plus.com/
+DESCRIPTION:SEIA / SEPA (RE+ Events)\nMega\nNorth America's largest clean-e
+ nergy show\; the storage hall is where integrators\, cell makers and IPPs 
+ all appear in one week. Conference education Nov 16-18\, exhibits Nov 17-1
+ 9 — the organiser prints the two ranges separately.\nRegister: https://w
+ ww.re-plus.com/register/
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,utilities,capit
+ al,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:imasons-innovation-exchange-2026-11@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:iMasons Innovation Exchange: Thought Leadership (Nov 2026)
+LOCATION:
+URL:https://imasons.org/events/
+DESCRIPTION:Infrastructure Masons\nWebinar\nVirtual\, members-first\; usefu
+ l for named-startup intelligence rather than meetings.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:aws-reinvent-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261205
+SUMMARY:AWS re:Invent 2026
+LOCATION:Las Vegas\, NV\, US
+URL:https://aws.amazon.com/events/reinvent
+DESCRIPTION:Amazon Web Services\nCorporate summit\nCloud-platform audience\
+ ; relevant only through the silicon and cooling sessions. The organiser na
+ mes the city but not the venues.
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,hypersca
+ lers-and-ai-labs
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:nvidia-gtc-dc-2026@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261204
+SUMMARY:NVIDIA GTC Washington\, D.C. 2026
+LOCATION:Washington\, DC\, US
+URL:https://www.nvidia.com/gtc/dc/
+DESCRIPTION:NVIDIA\nCorporate summit\nThe policy-and-federal edition\; part
+ ial exhibitor presence\, speaker roster published.
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,in-hall-
+ power,cooling,power-conversion-and-rack-power-silicon
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ces-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270110
+SUMMARY:CES 2027
+LOCATION:Las Vegas\, NV\, US
+URL:https://www.ces.tech/
+DESCRIPTION:Consumer Technology Association\nMega\nSilicon and platform lau
+ nches land here\; the corpus names it for product announcements\, not for 
+ buyer meetings.\nRegister: https://registration.experientevent.com/showCES
+ 271/Wizard/Landing
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,power-co
+ nversion-and-rack-power-silicon
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ptc-27@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270117
+DTEND;VALUE=DATE:20270121
+SUMMARY:PTC'27
+LOCATION:Hilton Hawaiian Village Waikiki Beach Resort\, Honolulu\, HI\, US
+URL:https://www.ptc.org/ptc27/
+DESCRIPTION:Pacific Telecommunications Council\nConference\nSubsea\, carrie
+ r and colo dealmaking week — the January calendar's capacity market.\nRe
+ gister: https://council.ptc.org/register-for-ptc27
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,neoclouds
+ ,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:powergen-international-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270118
+DTEND;VALUE=DATE:20270122
+SUMMARY:POWERGEN International 2027
+LOCATION:Salt Palace Convention Center\, Salt Lake City\, UT\, US
+URL:https://www.powergen.com/
+DESCRIPTION:Clarion Events\nMega\nGeneration-side buyers: utilities\, IPPs\
+ , EPCs and OEMs. The load-growth framing makes it the bridge-generation an
+ d gen-set venue.
+CATEGORIES:grid-equipment,utilities,bridge-and-on-site-generation,clean-fir
+ m-and-nuclear,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-projects-money-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270119
+DTEND;VALUE=DATE:20270122
+SUMMARY:Infocast Projects & Money 2027
+LOCATION:New Orleans\, LA\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nConference\nProject-finance dealmaki
+ ng.
+CATEGORIES:capital,storage-developers-and-ipps,aidc-developers-and-landlord
+ s
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-ercot-power-next-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270128
+SUMMARY:Infocast ERCOT Power NEXT 2027
+LOCATION:Austin\, TX\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nRegional\nThe ERCOT storage room —
+  the densest regional venue for Texas BESS offtake and interconnection.
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps,storage-int
+ egrators-and-containers
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:intersolar-esna-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270209
+DTEND;VALUE=DATE:20270212
+SUMMARY:Intersolar & Energy Storage North America 2027
+LOCATION:San Diego Convention Center\, San Diego\, CA\, US
+URL:https://www.iesna.com/
+DESCRIPTION:Solar Promotion International / Diversified Communications\nMeg
+ a\nThe flagship edition\; intersolar.us now redirects to iesna.com.\nRegis
+ ter: https://www.iesna.com/flagship/attendee-inquiry/
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,utilities,capit
+ al
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gcpa-miso-spp-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270220
+SUMMARY:GCPA MISO/SPP Regional Conference 2027
+LOCATION:US
+URL:https://www.gulfcoastpower.org/events/
+DESCRIPTION:Gulf Coast Power Association\nRegional\nListed as 'Save the Dat
+ e' — the organiser has not published a city or venue.
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:acp-oms-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270226
+SUMMARY:ACP Operations\, Maintenance & Safety Conference 2027
+LOCATION:Long Beach\, CA\, US
+URL:https://cleanpower.org/events/
+DESCRIPTION:American Clean Power Association\nConference\nO&M and asset-man
+ agement audience — service contracts rather than new-build sales.
+CATEGORIES:storage-developers-and-ipps,assurance,software-and-optimization,
+ insurance-and-risk-transfer
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:distributech-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270305
+SUMMARY:DISTRIBUTECH International 2027
+LOCATION:Georgia World Congress Center\, Atlanta\, GA\, US
+URL:https://www.distributech.com/
+DESCRIPTION:Clarion Events\nMega\n18\,000+ attendees with 3\,800+ from util
+ ities — the one week a seller reaches interconnection and T&D decision-m
+ akers at scale. Host utility: Southern Company.
+CATEGORIES:grid-equipment,utilities,software-and-optimization,storage-devel
+ opers-and-ipps,power-conversion-and-rack-power-silicon
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mwc-barcelona-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270301
+DTEND;VALUE=DATE:20270305
+SUMMARY:MWC Barcelona 2027
+LOCATION:Fira Gran Via\, Barcelona\, ES
+URL:https://www.mwcbarcelona.com/
+DESCRIPTION:GSMA\nMega\nEdge and AI-RAN power is the only thread that touch
+ es this brief\; the corpus names it for a product launch.
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,power-co
+ nversion-and-rack-power-silicon
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:interbattery-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270310
+DTEND;VALUE=DATE:20270313
+SUMMARY:InterBattery 2027
+LOCATION:COEX Halls A-D\, the Platz\, Grand Ballroom\, Seoul\, KR
+URL:https://www.interbattery.or.kr/
+DESCRIPTION:Korea Battery Industry Association / COEX\nMega\n667 exhibitors
+  / 2\,382 booths / 77\,000 visitors per the organiser. The seed calendar h
+ ad it third-party sourced\; the organiser's own page prints the dates.
+CATEGORIES:cells-and-chemistry,storage-integrators-and-containers
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-solar-wind-finance-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270318
+SUMMARY:Infocast Solar + Wind Finance & Investment 2027
+LOCATION:Phoenix\, AZ\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nConference\nRenewables dealmaking.
+CATEGORIES:capital,storage-developers-and-ipps,aidc-developers-and-landlord
+ s
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:international-battery-seminar-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270319
+SUMMARY:International Battery Seminar & Exhibit 2027
+LOCATION:Orlando\, FL\, US
+URL:https://www.internationalbatteryseminar.com/
+DESCRIPTION:Cambridge EnerTech\nConference\nCell chemistry and safety resea
+ rch\; the technical counterpart to The Battery Show. The organiser publish
+ es the city but not the venue.\nRegister: https://www.internationalbattery
+ seminar.com/register-group
+CATEGORIES:cells-and-chemistry,storage-integrators-and-containers,assurance
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:nvidia-gtc-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270319
+SUMMARY:NVIDIA GTC 2027
+LOCATION:San Jose\, CA\, US
+URL:https://www.nvidia.com/gtc/
+DESCRIPTION:NVIDIA\nCorporate summit\nThe rack-power and 800 VDC architectu
+ re announcements land here\; the single most cited event in the dossier co
+ rpus after DCD. The seed calendar had it third-party sourced — nvidia.co
+ m now prints the dates.
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,in-hall-
+ power,cooling,power-conversion-and-rack-power-silicon,aidc-developers-and-
+ landlords
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:acp-clean-power-on-the-hill-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270406
+DTEND;VALUE=DATE:20270408
+SUMMARY:ACP Clean Power on The Hill 2027
+LOCATION:Washington\, DC\, US
+URL:https://cleanpower.org/events/
+DESCRIPTION:American Clean Power Association\nConference\nPolicy advocacy d
+ ay\, not a sales venue.
+CATEGORIES:utilities,capital,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:acp-siting-permitting-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270413
+DTEND;VALUE=DATE:20270416
+SUMMARY:ACP Siting + Permitting Conference 2027
+LOCATION:New Orleans\, LA\, US
+URL:https://cleanpower.org/events/
+DESCRIPTION:American Clean Power Association\nConference\nDevelopment-stage
+  audience. Listed separately from PEAK on the organiser's events index —
+  the seed calendar merged the two into one Apr 13-17 row.
+CATEGORIES:storage-developers-and-ipps,epc-and-construction,assurance
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:acp-peak-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270418
+SUMMARY:ACP PEAK: Performance\, Modeling & Assessment Conference 2027
+LOCATION:New Orleans\, LA\, US
+URL:https://cleanpower.org/events/
+DESCRIPTION:American Clean Power Association\nConference\nModelling and per
+ formance engineers\; overlaps Siting + Permitting by one day.
+CATEGORIES:software-and-optimization,assurance,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:gcpa-spring-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270419
+DTEND;VALUE=DATE:20270422
+SUMMARY:GCPA Spring Conference 2027
+LOCATION:US
+URL:https://www.gulfcoastpower.org/events/
+DESCRIPTION:Gulf Coast Power Association\nRegional\nListed as 'Save the Dat
+ e' — the organiser has not published a city or venue.
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:energy-storage-summit-usa-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270420
+DTEND;VALUE=DATE:20270422
+SUMMARY:Energy Storage Summit USA 2027
+LOCATION:Renaissance Dallas at Plano Legacy West Hotel\, Dallas\, TX\, US
+URL:https://storageusa.solarenergyevents.com/
+DESCRIPTION:Solar Media (Informa Markets)\nConference\nTwo days\, all stora
+ ge\, Texas-weighted. The 2027 venue moves to Plano — the seed calendar's
+  Hilton Dallas Lincoln Centre was the 2026 venue.\nRegister: https://info.
+ informamanufacturing.com/essus-2027
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,capital,softwar
+ e-and-optimization,insurance-and-risk-transfer
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:woodmac-na-power-renewables-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270430
+SUMMARY:Wood Mackenzie North American Power & Renewables Forum 2027
+LOCATION:Omni Interlocken Hotel\, Denver\, CO\, US
+URL:https://www.woodmac.com/events/
+DESCRIPTION:Wood Mackenzie\nConference\nAnalyst-led forecast forum. The see
+ d calendar listed this as 'not yet dated for 2027' — the organiser now p
+ ublishes April 28-29.
+CATEGORIES:utilities,capital,storage-developers-and-ipps,software-and-optim
+ ization
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bisnow-dice-national-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270504
+DTEND;VALUE=DATE:20270507
+SUMMARY:Bisnow National Data Center Investment Conference and Expo (DICE) 2
+ 027
+LOCATION:US
+URL:https://www.bisnow.com/events
+DESCRIPTION:Bisnow Media\nConference\nBisnow's three-day national investmen
+ t conference — the 'DICE' brand. The organiser's calendar prints it as '
+ National Data Center Investment Conference And Expo'\; 'DICE South' and 'D
+ ICE West' are not on the calendar for 2027.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-tax-credits-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270504
+DTEND;VALUE=DATE:20270506
+SUMMARY:Infocast Tax Credits & Transferability 2027
+LOCATION:US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nConference\nTax-equity and transfera
+ bility\; city not yet published by the organiser.
+CATEGORIES:capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:dcf-trends-microgrid-knowledge-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270505
+DTEND;VALUE=DATE:20270508
+SUMMARY:Data Center Frontier Trends Summit + Microgrid Knowledge 2027
+LOCATION:Renaissance Phoenix Glendale Hotel & Spa\, Glendale\, AZ\, US
+URL:https://www.dcftrends.com/
+DESCRIPTION:Endeavor Business Media\nConference\nFourth edition\, moved fro
+ m Reston to Glendale and co-located with Microgrid Knowledge for the first
+  time — shared show floor\, separate programmes. The behind-the-meter ge
+ neration conversation and the data-center one in one room.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,storage-integrators-and-containers,bridg
+ e-and-on-site-generation,software-and-optimization
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cleanpower-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270528
+SUMMARY:CLEANPOWER 2027
+LOCATION:Anaheim\, CA\, US
+URL:https://cleanpower.org/events/cleanpower-2027/
+DESCRIPTION:American Clean Power Association\nMega\nACP's flagship. The org
+ aniser's own 2027 landing page still carries a 'CLEANPOWER 2026 will be he
+ ld May 24-27\, 2027' typo in its body copy\; the header and the events ind
+ ex both print May 24-27 2027 — dates taken from those.\nRegister: https:
+ //cleanpower.org/expo/
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,utilities,epc-a
+ nd-construction,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:data-center-world-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270528
+SUMMARY:Data Center World 2027
+LOCATION:Music City Center\, Nashville\, TN\, US
+URL:https://www.datacenterworld.com/
+DESCRIPTION:AFCOM / Informa\nMega\nAFCOM's operator audience — facility a
+ nd critical-power buyers rather than IT. Call for proposals closes 2026-10
+ -09.\nRegister: https://info.datacenterworld.com/datacenterusa_reginterest
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,storage-integrators-and-containers
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:computex-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270601
+DTEND;VALUE=DATE:20270605
+SUMMARY:COMPUTEX 2027
+LOCATION:Taipei Nangang Exhibition Center Halls 1 & 2\, TWTC Hall 1\, TICC\
+ , Taipei\, TW
+URL:https://www.computextaipei.com.tw/en/index.html
+DESCRIPTION:TAITRA / TCA\nMega\nWhere the rack-power and cooling supply cha
+ in shows silicon. Note: the organiser's robots.txt disallows the fetched p
+ ath\, so the poller must not read it.
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,power-co
+ nversion-and-rack-power-silicon,cooling
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7x24-exchange-spring-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270606
+DTEND;VALUE=DATE:20270610
+SUMMARY:7x24 Exchange Spring 2027
+LOCATION:JW Marriott Grande Lakes\, Orlando\, FL\, US
+URL:https://www.7x24exchange.org/conferences/future-national-conferences/
+DESCRIPTION:7x24 Exchange International\nConference\nEnd-user-heavy: owners
+  and operators of mission-critical facilities\, not a trade-show floor. Th
+ eme: Powering the AI Surge.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,assurance
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:the-smarter-e-europe-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270608
+DTEND;VALUE=DATE:20270611
+SUMMARY:The smarter E Europe 2027 (with ees Europe and Intersolar Europe)
+LOCATION:Messe München\, Munich\, DE
+URL:https://www.thesmarterE.de/
+DESCRIPTION:Solar Promotion GmbH / FWTM\nMega\nOne ticket across Intersolar
+  Europe\, ees Europe\, Power2Drive and EM-Power. The corpus names 'ees Eur
+ ope' and 'The smarter E' as the same week — they are. Exhibitions Jun 8-
+ 10\; the conferences run Jun 7-8 at the ICM.
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,utilities,grid-
+ equipment
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:intersolar-esna-midwest-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270617
+SUMMARY:Intersolar & Energy Storage North America Midwest 2027
+LOCATION:Rosemont\, IL\, US
+URL:https://www.iesna.com/midwest/
+DESCRIPTION:Solar Promotion International / Diversified Communications\nReg
+ ional\nRegional edition the seed calendar did not carry.\nRegister: https:
+ //www.iesna.com/midwest/attend/
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,utilities
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:battery-show-europe-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270622
+DTEND;VALUE=DATE:20270625
+SUMMARY:The Battery Show Europe 2027
+LOCATION:Messe Stuttgart\, Stuttgart\, DE
+URL:https://www.thebatteryshow.eu/en/home.html
+DESCRIPTION:Informa Markets\nMega\nThe seed calendar had this third-party s
+ ourced\; the organiser's own page prints the dates\, the venue and the hou
+ rs.\nRegister: https://www.thebatteryshow.eu/battery-registration-inquiry/
+CATEGORIES:cells-and-chemistry,storage-integrators-and-containers
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-transmission-interconnection-2027@events.lightaisolutions.gith
+ ub.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270622
+DTEND;VALUE=DATE:20270625
+SUMMARY:Infocast Transmission & Interconnection Summit 2027
+LOCATION:VA\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nConference\nInterconnection queue an
+ d transmission build\; the organiser lists 'Virginia' without a city.
+CATEGORIES:grid-equipment,utilities
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-powerup-data-centers-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270720
+DTEND;VALUE=DATE:20270723
+SUMMARY:Infocast PowerUp Data Centers 2027
+LOCATION:US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nConference\nCity not yet published b
+ y the organiser.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,bridge-and-on-site-generation,capital
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ieee-pes-general-meeting-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270725
+DTEND;VALUE=DATE:20270730
+SUMMARY:IEEE PES General Meeting 2027
+LOCATION:Hilton San Francisco Union Square\, San Francisco\, CA\, US
+URL:https://pes-gm.org/
+DESCRIPTION:IEEE Power & Energy Society\nConference\nTheme: 'Grid Moderniza
+ tion: Scaling the Grid for Emerging Demand'. Academic and utility-planning
+  audience\; paper submissions opened 2026-10-06.
+CATEGORIES:grid-equipment,utilities,software-and-optimization,assurance
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ai-infra-summit-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270831
+DTEND;VALUE=DATE:20270903
+SUMMARY:AI Infra Summit 2027
+LOCATION:San Jose McEnery Convention Center\, San Jose\, CA\, US
+URL:https://ai-infra-summit.com/events/ai-infra-summit
+DESCRIPTION:Kisaco Research\nConference\nThe corpus names the Beijing editi
+ on\; this is the US one. The organiser's own header prints an impossible '
+ Sept 31 - Aug 2\, 2027' — the body's Aug 31 - Sep 2 is the coherent read
+ ing and is what is recorded here.
+CATEGORIES:compute-and-the-rack,hyperscalers-and-ai-labs,neoclouds,in-hall-
+ power,cooling,neoclouds
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:datacloud-usa-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270831
+DTEND;VALUE=DATE:20270903
+SUMMARY:Datacloud USA 2027 x Metro Connect Fall
+LOCATION:Fairmont Austin\, Austin\, TX\, US
+URL:https://www.datacloud-usa.com/
+DESCRIPTION:Datacloud (techoraco / BroadGroup)\nConference\n~3\,000 senior 
+ leaders with the fiber and capital side present\; co-located with Metro Co
+ nnect Fall. The seed calendar listed Datacloud USA as 'not yet dated for 2
+ 027' — the organiser now publishes 31 Aug - 2 Sep with a 30 Aug pre-even
+ t day.\nRegister: https://events.datacloudseries.com/GVWmeQ
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,capital,neoclouds
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-energy-storage-finance-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20270908
+DTEND;VALUE=DATE:20270910
+SUMMARY:Infocast Energy Storage Finance & Investment 2027
+LOCATION:San Diego\, CA\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nConference\nStorage-specific capital
+ : the room where offtake and financing terms are set.
+CATEGORIES:capital,storage-developers-and-ipps,storage-integrators-and-cont
+ ainers,insurance-and-risk-transfer
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7x24-exchange-fall-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20271003
+DTEND;VALUE=DATE:20271007
+SUMMARY:7x24 Exchange Fall 2027
+LOCATION:JW Marriott Desert Ridge\, Phoenix\, AZ\, US
+URL:https://www.7x24exchange.org/conferences/future-national-conferences/
+DESCRIPTION:7x24 Exchange International\nConference\nEnd-user-heavy: owners
+  and operators of mission-critical facilities\, not a trade-show floor. Th
+ eme: Operational Excellence in the Age of Automation.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,assurance
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-southeast-power-next-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20271013
+DTEND;VALUE=DATE:20271016
+SUMMARY:Infocast Southeast Power NEXT 2027
+LOCATION:Charlotte\, NC\, US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nRegional
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:infocast-western-power-next-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20271026
+DTEND;VALUE=DATE:20271029
+SUMMARY:Infocast Western Power NEXT 2027
+LOCATION:US
+URL:https://www.infocastinc.com/events/
+DESCRIPTION:Infocast (Clarion Events)\nRegional\n'Western U.S. Region' — 
+ the organiser has not named the city.
+CATEGORIES:grid-equipment,utilities,storage-developers-and-ipps
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:re-plus-2027@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20271115
+DTEND;VALUE=DATE:20271119
+SUMMARY:RE+ 2027
+LOCATION:Las Vegas\, NV\, US
+URL:https://www.re-plus.com/
+DESCRIPTION:RE+ Events\nMega\nDates published on the RE+ 2026 site\; venue 
+ not yet named.
+CATEGORIES:storage-integrators-and-containers,storage-developers-and-ipps,c
+ ells-and-chemistry,power-conversion-and-rack-power-silicon,utilities,capit
+ al
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7x24-exchange-spring-2028@events.lightaisolutions.github.io
+DTSTAMP:20260922T055047Z
+LAST-MODIFIED:20260921T000000Z
+DTSTART;VALUE=DATE:20280604
+DTEND;VALUE=DATE:20280608
+SUMMARY:7x24 Exchange Spring 2028
+LOCATION:JW Marriott Orlando Grande Lakes\, Orlando\, FL\, US
+URL:https://www.7x24exchange.org/conferences/future-national-conferences/
+DESCRIPTION:7x24 Exchange International\nConference\nEnd-user-heavy: owners
+  and operators of mission-critical facilities\, not a trade-show floor. Th
+ eme: Power\, Cooling & Compute for AI.
+CATEGORIES:aidc-developers-and-landlords,hyperscalers-and-ai-labs,in-hall-p
+ ower,cooling,epc-and-construction,assurance
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

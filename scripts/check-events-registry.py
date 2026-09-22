@@ -3,8 +3,8 @@
 
 Checks `live-site-pages/events-data/events.json` against
 `events-sources.json`, `profiler-data/profiler-segments.json` and
-`profiler-data/profiler-companies.json`, plus `events.ics` when E1 has
-published one.
+`profiler-data/profiler-companies.json`, and walks the published `events.ics`
+(built by `scripts/build-events-ics.py`) against the registry.
 
   python3 scripts/check-events-registry.py              # exit 1 on any finding
   python3 scripts/check-events-registry.py --fix-past    # flip stale status only
@@ -238,25 +238,46 @@ def check_events(registry, roster, segments, companies, today, f, fix_past):
     return fixed
 
 
-def check_ics(f):
-    """Minimal VEVENT walker — E1 publishes events.ics; absent is not a finding."""
+UID_HOST = "events.lightaisolutions.github.io"
+
+
+def check_ics(registry, f):
+    """The .ics walk (E1 session 2). The published calendar is required, must
+    parse as RFC 5545 text — CRLF line ends, no line over 75 octets, one
+    VEVENT per `confirmed` event with UID / DTSTART / SUMMARY — and must agree
+    with the registry: the UID set equals the confirmed slugs (stable
+    `<slug>@` + UID_HOST), and each VEVENT's DTSTART and STATUS match its row.
+    Rebuild with `python3 scripts/build-events-ics.py` after any registry write."""
     if not ICS.exists():
+        f("events.ics", "missing — run python3 scripts/build-events-ics.py")
         return 0
-    text = ICS.read_text(encoding="utf-8", errors="replace")
+    raw = ICS.read_bytes()
+    text = raw.decode("utf-8", errors="replace")
+    if b"\n" in raw and b"\r\n" not in raw:
+        f("events.ics", "line ends are LF — RFC 5545 wants CRLF")
+    bare = raw.replace(b"\r\n", b"").count(b"\n")
+    if bare:
+        f("events.ics", f"{bare} bare LF line end(s) — every line must end in CRLF")
+    for n, line in enumerate(raw.split(b"\r\n"), 1):
+        if len(line) > 75:
+            f("events.ics", f"line {n} is {len(line)} octets — fold at 75")
+            break
     # unfold RFC 5545 continuation lines before walking
     lines = re.sub(r"\r?\n[ \t]", "", text).splitlines()
     if not lines or lines[0].strip() != "BEGIN:VCALENDAR":
         f("events.ics", "does not begin with BEGIN:VCALENDAR")
     if lines and lines[-1].strip() != "END:VCALENDAR":
         f("events.ics", "does not end with END:VCALENDAR")
+    if not any(l.startswith("X-WR-CALNAME:") for l in lines):
+        f("events.ics", "no X-WR-CALNAME (the calendar-level name)")
     depth, count, uids = 0, 0, set()
-    fields = set()
-    for n, raw in enumerate(lines, 1):
-        line = raw.strip()
+    fields, events = {}, {}
+    for n, raw_line in enumerate(lines, 1):
+        line = raw_line.strip()
         if line == "BEGIN:VEVENT":
             if depth:
                 f("events.ics", f"line {n}: nested BEGIN:VEVENT")
-            depth, fields = 1, set()
+            depth, fields = 1, {}
             continue
         if line == "END:VEVENT":
             if not depth:
@@ -264,18 +285,31 @@ def check_ics(f):
             for required in ("UID", "DTSTART", "SUMMARY"):
                 if required not in fields:
                     f("events.ics", f"VEVENT ending at line {n} has no {required}")
+            uid = fields.get("UID", "")
+            if uid in uids:
+                f("events.ics", f"VEVENT ending at line {n}: duplicate UID {uid}")
+            uids.add(uid)
+            events[uid] = fields
             depth, count = 0, count + 1
             continue
         if depth and ":" in line:
             name = line.split(":", 1)[0].split(";", 1)[0].upper()
-            fields.add(name)
-            if name == "UID":
-                uid = line.split(":", 1)[1]
-                if uid in uids:
-                    f("events.ics", f"line {n}: duplicate UID {uid}")
-                uids.add(uid)
+            fields[name] = line.split(":", 1)[1]
     if depth:
         f("events.ics", "a VEVENT is never closed")
+    # agreement with the registry
+    confirmed = {e["slug"]: e for e in registry.get("events", []) if e.get("status") == "confirmed"}
+    expected = {f"{slug}@{UID_HOST}" for slug in confirmed}
+    for uid in sorted(expected - uids):
+        f("events.ics", f"confirmed event {uid.split('@')[0]} has no VEVENT — rebuild")
+    for uid in sorted(uids - expected):
+        f("events.ics", f"VEVENT {uid} is not a confirmed registry event — rebuild")
+    for uid in sorted(expected & uids):
+        row, ve = confirmed[uid.split("@")[0]], events[uid]
+        if ve.get("DTSTART") != str(row.get("start", "")).replace("-", ""):
+            f("events.ics", f"{uid}: DTSTART {ve.get('DTSTART')} ≠ registry start {row.get('start')}")
+        if ve.get("STATUS", "CONFIRMED") != "CONFIRMED":
+            f("events.ics", f"{uid}: STATUS {ve.get('STATUS')} on a confirmed row")
     return count
 
 
@@ -300,7 +334,7 @@ def main():
     f = Findings()
     check_roster(roster, f)
     fixed = check_events(registry, roster, segment_ids(), company_slugs(), today, f, args.fix_past)
-    vevents = check_ics(f)
+    vevents = check_ics(registry, f)
 
     # orphan roster rows are a warning surface, not a finding: a blocked row is
     # kept on purpose so it is never re-proposed, even with no event citing it.
@@ -330,8 +364,8 @@ def main():
               f"{len(blocked)} blocked: {', '.join(sorted(blocked))}")
         print(f"OK  {mentions} corpus mentions across "
               f"{len([e for e in ev if e.get('mentions')])} events")
-        if vevents:
-            print(f"OK  events.ics parses: {vevents} VEVENT(s)")
+        print(f"OK  events.ics parses and agrees with the registry: {vevents} VEVENT(s), "
+              f"one per confirmed event")
         if orphans:
             print(f"note  {len(orphans)} roster row(s) cited by no event "
                   f"(expected for blocked rows kept so they are not re-proposed): "

@@ -30,8 +30,19 @@ toggle, a tentative row says so, the filter card carries the kind / region /
 segment / starred pills and the disabled "Signals only (from E4)" pill, and a
 row tap opens the detail sheet with the Google Calendar link (dates= / ctz=)
 and the .ics download. The stub answers eop=list with an empty Stars set.
-The star round-trip, the ICS walk and the month-boundary scroll are session
-2's Playwright pass (§13.7 step 7).
+E1 session 2 — the phone pass (§13.7 step 7), for the admin: the month header
+sticks while its month scrolls, scrolling past a month boundary changes the
+month-in-view label, the sheet opens and closes, a star round-trips through a
+STATEFUL stub (eop=star → the refetched eop=list carries it → the row and the
+Starred count show it → eop=unstar clears it), one event's .ics text parses
+under a minimal VEVENT walker and is byte-identical (DTSTAMP aside) to that
+event's VEVENT in the published events-data/events.ics, the Google Calendar
+href carries dates= / ctz=, the day-plan tab lists the starred event on its
+day, the Subscribe pill offers the webcal:// URL of the published file and the
+file itself serves as text/calendar. Screenshots: events-month.png,
+events-agenda.png, events-detail.png, events-dayplan.png. Zero page errors.
+The real-phone Calendar / .ics import is the developer's check, reported in
+the hand-off — never asserted here.
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -45,7 +56,8 @@ taken at phone width (390 × 844) because the app is used on a phone.
 Exit code is non-zero if any tier's rendered surface disagrees with the matrix
 or a turned-away tier issued a data request, so it can gate CI.
 """
-import glob, json, threading, functools, http.server, socketserver, sys
+import glob, json, re, threading, functools, http.server, socketserver, sys
+from urllib.parse import urlparse, parse_qsl
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -82,20 +94,47 @@ def serve(directory):
     return httpd, httpd.server_address[1]
 
 
-def gas_stub(role, counter):
-    """Stand in for the deployed Events GAS: counts every data request and
-    answers eop=list the way handleEventsOp_ does for the tier."""
+def gas_stub(role, counter, stars):
+    """Stand in for the deployed Events GAS: records every data request as
+    'events:<eop>' and answers the four Stars ops the way handleEventsOp_ /
+    evStarOp_ do for the tier, against an in-memory Stars set so a star
+    round-trips (star → list → unstar → list)."""
+    def params_of(request):
+        q = dict(parse_qsl(urlparse(request.url).query))
+        if request.method == 'POST' and request.post_data:
+            q.update(dict(parse_qsl(request.post_data)))
+        return q
+
     def handle(route, request):
-        url = request.url
-        counter.append(url)
+        p = params_of(request)
+        action, op = p.get('action', ''), p.get('op', '')
         body = {'success': False, 'error': 'unsupported_in_test'}
-        if 'action=heartbeat' in url or 'op=heartbeat' in url:
+        if action == 'heartbeat' or op == 'heartbeat':
+            counter.append('heartbeat')
             body = {'type': 'gas-heartbeat-ok', 'expiresIn': 7200, 'absoluteTimeout': 28800}
-        elif 'action=events' in url or 'op=events' in url:
+        elif action == 'events' or op == 'events':
+            eop = p.get('eop', '')
+            counter.append('events:' + eop)
             if role != 'admin':
                 body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
-            elif 'eop=list' in url:
-                body = {'success': True, 'role': 'admin', 'caps': ['calendar'], 'stars': []}
+            elif eop == 'list':
+                body = {'success': True, 'role': 'admin', 'caps': ['calendar'], 'stars': list(stars.values())}
+            elif eop in ('star', 'note'):
+                slug = p.get('slug', '')
+                row = stars.get(slug) or {'id': 'st-' + ('%013d' % (len(stars) + 1)), 'slug': slug, 'attending': 'planning',
+                                          'note': '', 'updatedAt': '2026-09-22T00:00:00.000Z'}
+                if p.get('attending'):
+                    row['attending'] = p['attending']
+                if eop == 'note' and 'note' in p:
+                    row['note'] = p['note']
+                stars[slug] = row
+                body = {'success': True, 'created': True, 'star': dict(row)}
+            elif eop == 'unstar':
+                removed = p.get('slug', '') in stars
+                stars.pop(p.get('slug', ''), None)
+                body = {'success': True, 'removed': removed, 'slug': p.get('slug', '')}
+        else:
+            counter.append('other')
         route.fulfill(status=200, content_type='application/json',
                       headers={'Access-Control-Allow-Origin': '*'}, body=json.dumps(body))
     return handle
@@ -153,10 +192,11 @@ def probe(page):
     }""")
 
 
-def load_as(browser, base, role, query=''):
+def load_as(browser, base, role, query='', stars=None):
     counter, errors, registry = [], [], []
+    stars = {} if stars is None else stars
     ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True)
-    ctx.route('**://script.google.com/**', gas_stub(role, counter))
+    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
     ctx.add_init_script(seed_script(role))
     page = ctx.new_page()
@@ -168,6 +208,221 @@ def load_as(browser, base, role, query=''):
                            "document.getElementById('auth-wall').classList.contains('hidden')", timeout=15000)
     page.wait_for_timeout(1200)
     return ctx, page, counter, errors, registry
+
+
+def walk_vevent(text):
+    """Minimal RFC 5545 walker for one calendar: CRLF line ends, no line over
+    75 octets, unfold, one VCALENDAR with ≥ 1 VEVENT carrying UID / DTSTART /
+    DTEND / SUMMARY. Returns (findings, [vevent field dicts])."""
+    findings, events = [], []
+    if '\r\n' not in text or text.replace('\r\n', '').count('\n'):
+        findings.append('line ends are not all CRLF')
+    for n, line in enumerate(text.split('\r\n'), 1):
+        if len(line.encode('utf-8')) > 75:
+            findings.append('line %d is %d octets' % (n, len(line.encode('utf-8'))))
+            break
+    lines = re.sub(r'\r?\n[ \t]', '', text).split('\r\n')
+    lines = [l for l in lines if l != '']
+    if not lines or lines[0] != 'BEGIN:VCALENDAR' or lines[-1] != 'END:VCALENDAR':
+        findings.append('not wrapped in BEGIN:VCALENDAR … END:VCALENDAR')
+    depth, fields = 0, None
+    for line in lines:
+        if line == 'BEGIN:VEVENT':
+            if depth:
+                findings.append('nested VEVENT')
+            depth, fields = 1, {}
+        elif line == 'END:VEVENT':
+            if not depth:
+                findings.append('END:VEVENT without BEGIN')
+            for req in ('UID', 'DTSTART', 'DTEND', 'SUMMARY'):
+                if req not in (fields or {}):
+                    findings.append('VEVENT without ' + req)
+            events.append(fields or {})
+            depth, fields = 0, None
+        elif depth and ':' in line:
+            name, value = line.split(':', 1)
+            fields[name.split(';', 1)[0].upper()] = value
+    if depth:
+        findings.append('a VEVENT is never closed')
+    if not events:
+        findings.append('no VEVENT')
+    return findings, events
+
+
+def published_vevent(uid):
+    """The VEVENT block for a UID in the published events-data/events.ics, DTSTAMP line dropped."""
+    path = LIVE / 'events-data' / 'events.ics'
+    if not path.exists():
+        return None
+    text = path.read_bytes().decode('utf-8')
+    for block in re.findall(r'BEGIN:VEVENT\r\n.*?END:VEVENT', text, flags=re.S):
+        if ('UID:' + uid + '\r\n') in block:
+            return '\r\n'.join(l for l in block.split('\r\n') if not l.startswith('DTSTAMP:'))
+    return None
+
+
+def phone_pass(page, base, reqs, stars, failures):
+    """§13.7 step 7 — the phone pass, on the admin's already-loaded page."""
+    tag = 'phone'
+    nowmonth = lambda: page.evaluate("() => (document.getElementById('ev-nowmonth') || {}).textContent || ''")
+
+    # ── the sticky month header and the month boundary ─────────────────────
+    groups = page.evaluate("""() => [...document.querySelectorAll('#ev-agenda .ev-monthgroup')].map(g => {
+        const r = g.getBoundingClientRect();
+        return { month: g.dataset.month, top: r.top + window.pageYOffset, height: r.height, label: g.querySelector('.ev-month').textContent }; })""")
+    if len(groups) < 2:
+        failures.append('%s: fewer than two month groups (%d) — no boundary to cross' % (tag, len(groups)))
+        return
+    first_label = nowmonth()
+    page.evaluate("() => window.scrollTo(0, 0)")
+    page.wait_for_timeout(300)
+    page.screenshot(path=str(SHOTS / 'events-month.png'), full_page=False)
+    tall = max(groups, key=lambda g: g['height'])
+    if tall['height'] < 200:
+        failures.append('%s: no month group tall enough (%.0fpx) to scroll within' % (tag, tall['height']))
+    else:
+        page.evaluate("y => window.scrollTo(0, y)", tall['top'] + 160)
+        page.wait_for_timeout(500)
+        st = page.evaluate("""m => { const h = document.querySelector('#ev-agenda .ev-monthgroup[data-month="' + m + '"] .ev-month');
+            const r = h.getBoundingClientRect(), cs = getComputedStyle(h);
+            return { top: r.top, pin: parseFloat(cs.top) || 0, clear: (parseFloat(cs.top) || 0) + (parseFloat(cs.paddingTop) || 0),
+                     position: cs.position, label: h.textContent, now: (document.getElementById('ev-nowmonth') || {}).textContent }; }""", tall['month'])
+        # pinned at its declared `top`, not scrolled away, and the month name clears the template's fixed user pill (≈ 30px)
+        if st['position'] != 'sticky' or abs(st['top'] - st['pin']) > 1 or st['clear'] < 30:
+            failures.append('%s: the month header did not stick clear of the user pill while its month scrolled (top=%.1f, pin=%.0f, clear=%.0f)' % (tag, st['top'], st['pin'], st['clear']))
+        if st['now'] != tall['label']:
+            failures.append('%s: month-in-view label %r while %r is pinned' % (tag, st['now'], tall['label']))
+    second = groups[1]
+    page.evaluate("y => window.scrollTo(0, y)", second['top'] + 24)
+    page.wait_for_timeout(600)
+    after = nowmonth()
+    if after != second['label'] or after == groups[0]['label']:
+        failures.append('%s: scrolling past the month boundary left the label at %r (expected %r, started %r)'
+                        % (tag, after, second['label'], first_label))
+    page.screenshot(path=str(SHOTS / 'events-agenda.png'), full_page=False)
+    page.evaluate("() => window.scrollTo(0, 0)")
+    page.wait_for_timeout(300)
+
+    # ── one confirmed, upcoming event: the sheet, the ICS text, the Calendar href ──
+    slug = page.evaluate("() => (_evEvents.filter(e => e.status === 'confirmed' && !evIsPast(e))[0] || {}).slug || ''")
+    if not slug:
+        failures.append('%s: no confirmed upcoming event to test with' % tag)
+        return
+    row_sel = '#ev-agenda .ev-row[data-slug="%s"]' % slug
+    page.evaluate("s => document.querySelector('#ev-agenda .ev-row[data-slug=\"' + s + '\"]').scrollIntoView({ block: 'center' })", slug)
+    page.wait_for_timeout(200)
+    page.click(row_sel)
+    page.wait_for_timeout(400)
+    sheet = page.evaluate("""() => {
+        const g = document.getElementById('ev-gcal'), i = document.getElementById('ev-ics');
+        return { open: getComputedStyle(document.getElementById('ev-sheet')).display !== 'none',
+                 title: (document.getElementById('ev-sheet-title') || {}).textContent || '',
+                 gcal: g ? g.href : '', ics: i ? (i.getAttribute('download') || '') : '' }; }""")
+    if not sheet['open']:
+        failures.append('%s: the sheet did not open for %s' % (tag, slug))
+    m = re.search(r'[?&]dates=(\d{8})/(\d{8})', sheet['gcal'])
+    if not m or 'ctz=' not in sheet['gcal'] or not sheet['gcal'].startswith('https://calendar.google.com/calendar/render?action=TEMPLATE'):
+        failures.append('%s: Google Calendar href lacks dates= / ctz= or the template action: %r' % (tag, sheet['gcal'][:120]))
+    page.screenshot(path=str(SHOTS / 'events-detail.png'), full_page=False)
+    ics_text = page.evaluate("s => evIcs(_evBySlug[s])", slug)
+    findings, vevents = walk_vevent(ics_text)
+    if findings:
+        failures.append('%s: the per-event .ics text does not parse: %s' % (tag, '; '.join(findings[:3])))
+    else:
+        ve = vevents[0]
+        if ve.get('UID') != slug + '@events.lightaisolutions.github.io' or ve.get('DTSTART') != m.group(1) or ve.get('DTEND') != m.group(2):
+            failures.append('%s: VEVENT fields disagree with the Calendar href: %r vs %r' % (tag, ve, m.groups()))
+    page_block = page.evaluate("s => evVevent(_evBySlug[s], 'X')", slug)
+    page_block = '\r\n'.join(l for l in page_block.split('\r\n') if not l.startswith('DTSTAMP:'))
+    pub_block = published_vevent(slug + '@events.lightaisolutions.github.io')
+    if pub_block is None:
+        failures.append('%s: %s has no VEVENT in the published events.ics' % (tag, slug))
+    elif pub_block != page_block:
+        failures.append('%s: the published VEVENT for %s is not byte-identical to the page\'s evVevent()' % (tag, slug))
+    page.keyboard.press('Escape')
+    page.wait_for_timeout(200)
+    if page.evaluate("() => getComputedStyle(document.getElementById('ev-sheet')).display") != 'none':
+        failures.append('%s: Escape did not close the sheet' % tag)
+
+    # ── the star round-trip through the stateful stub ──────────────────────
+    lists_before = len([r for r in reqs if r == 'events:list'])
+    page.click(row_sel + ' .ev-star')
+    try:
+        page.wait_for_function("s => { const b = document.querySelector('#ev-agenda .ev-row[data-slug=\"' + s + '\"] .ev-star');"
+                               " return b && b.getAttribute('aria-pressed') === 'true' && !b.dataset.busy; }", arg=slug, timeout=6000)
+    except Exception:
+        failures.append('%s: the star did not light after eop=star' % tag)
+    page.wait_for_timeout(500)
+    if slug not in stars:
+        failures.append('%s: eop=star never reached the stub (stub holds %r)' % (tag, sorted(stars)))
+    if 'events:star' not in reqs or len([r for r in reqs if r == 'events:list']) <= lists_before:
+        failures.append('%s: star did not round-trip (ops seen: %r)' % (tag, [r for r in reqs if r.startswith('events:')]))
+    count = page.evaluate("() => { const c = document.querySelectorAll('#ev-counts div b'); return c.length > 1 ? c[1].textContent : ''; }")
+    if count != '1':
+        failures.append('%s: the Starred count reads %r after one star' % (tag, count))
+
+    # ── the day-plan tab: the starred event on its first day ───────────────
+    start = page.evaluate("s => _evBySlug[s].start", slug)
+    page.click('#ev-tab-day')
+    page.wait_for_timeout(300)
+    page.evaluate("d => { const i = document.getElementById('ev-day-pick'); i.value = d; i.dispatchEvent(new Event('change')); }", start)
+    page.wait_for_timeout(300)
+    day = page.evaluate("""s => ({
+        agendaHidden: getComputedStyle(document.getElementById('ev-agenda')).display === 'none',
+        shown: getComputedStyle(document.getElementById('ev-dayplan')).display !== 'none',
+        item: !!document.querySelector('#ev-tl .ev-tl-item[data-slug="' + s + '"]'),
+        items: document.querySelectorAll('#ev-tl .ev-tl-item').length,
+        strip: document.querySelectorAll('#ev-day-strip .ev-pill').length,
+        selected: (document.getElementById('ev-tab-day') || {}).getAttribute('aria-selected') })""", slug)
+    if not (day['agendaHidden'] and day['shown'] and day['item'] and day['strip'] and day['selected'] == 'true'):
+        failures.append('%s: day-plan tab incomplete: %r' % (tag, day))
+    page.screenshot(path=str(SHOTS / 'events-dayplan.png'), full_page=False)
+    page.click('#ev-tab-agenda')
+    page.wait_for_timeout(300)
+    if page.evaluate("() => getComputedStyle(document.getElementById('ev-agenda')).display") == 'none':
+        failures.append('%s: the Agenda tab did not come back' % tag)
+
+    # ── unstar ─────────────────────────────────────────────────────────────
+    page.evaluate("s => document.querySelector('#ev-agenda .ev-row[data-slug=\"' + s + '\"]').scrollIntoView({ block: 'center' })", slug)
+    page.click(row_sel + ' .ev-star')
+    try:
+        page.wait_for_function("s => { const b = document.querySelector('#ev-agenda .ev-row[data-slug=\"' + s + '\"] .ev-star');"
+                               " return b && b.getAttribute('aria-pressed') === 'false' && !b.dataset.busy; }", arg=slug, timeout=6000)
+    except Exception:
+        failures.append('%s: the star did not clear after eop=unstar' % tag)
+    page.wait_for_timeout(400)
+    if slug in stars or 'events:unstar' not in reqs:
+        failures.append('%s: eop=unstar did not reach the stub' % tag)
+    count = page.evaluate("() => { const c = document.querySelectorAll('#ev-counts div b'); return c.length > 1 ? c[1].textContent : ''; }")
+    if count != '0':
+        failures.append('%s: the Starred count reads %r after unstar' % (tag, count))
+
+    # ── the Subscribe pill and the published file ──────────────────────────
+    page.evaluate("() => window.scrollTo(0, 0)")
+    page.click('#ev-subscribe')
+    page.wait_for_timeout(300)
+    sub = page.evaluate("""() => { const a = document.getElementById('ev-webcal'), u = document.getElementById('ev-webcal-url');
+        return { href: a ? a.getAttribute('href') : '', value: u ? u.value : '', expanded: document.getElementById('ev-subscribe').getAttribute('aria-expanded') }; }""")
+    expect_tail = '/events-data/events.ics'
+    if not (sub['href'].startswith('webcal://') and sub['href'].endswith(expect_tail) and sub['value'] == sub['href'] and sub['expanded'] == 'true'):
+        failures.append('%s: Subscribe pill did not offer the webcal:// URL: %r' % (tag, sub))
+    page.click('#ev-copy-webcal')
+    page.wait_for_timeout(300)
+    status = page.evaluate("() => (document.getElementById('ev-subscribe-status') || {}).textContent || ''")
+    if not status:
+        failures.append('%s: Copy URL left no status line (neither copied nor the by-hand fallback)' % tag)
+    resp = page.request.get(sub['href'].replace('webcal://', 'http://', 1))
+    body = resp.text() if resp.ok else ''
+    if not resp.ok or not body.startswith('BEGIN:VCALENDAR') or 'X-WR-CALNAME:' not in body:
+        failures.append('%s: the published events.ics did not serve (%s)' % (tag, resp.status))
+    else:
+        pf, pv = walk_vevent(body)
+        if pf:
+            failures.append('%s: the published events.ics does not parse: %s' % (tag, '; '.join(pf[:3])))
+    page.click('#ev-subscribe')
+    page.wait_for_timeout(200)
+    if page.evaluate("() => !!document.getElementById('ev-subcard')"):
+        failures.append('%s: the Subscribe card did not close on a second tap' % tag)
 
 
 IGNORE = ('Failed to load resource', 'accounts.google.com', 'gsi/', 'GSI_LOGGER', 'FedCM',
@@ -185,11 +440,12 @@ def run():
     with sync_playwright() as pw:
         browser = pw.chromium.launch(executable_path=chrome, args=['--no-sandbox'])
         for role in TIERS:
-            ctx, page, reqs, errs, reg = load_as(browser, base, role)
+            stars = {}
+            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars)
             got = probe(page)
             page.screenshot(path=str(SHOTS / ('events-role-%s.png' % role)), full_page=False)
             real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
-            data_reqs = [u for u in reqs if 'action=events' in u or 'op=events' in u]
+            data_reqs = [u for u in reqs if u.startswith('events:')]
             exp = EXPECT[role]
             if got['wall']:
                 failures.append('%s: sign-in wall still covering the app' % role)
@@ -233,6 +489,8 @@ def run():
                 page.wait_for_timeout(200)
                 if page.evaluate("() => getComputedStyle(document.getElementById('ev-sheet')).display") != 'none':
                     failures.append('%s: Escape did not close the sheet' % role)
+                # §13.7 step 7 — the phone pass (session 2)
+                phone_pass(page, base, reqs, stars, failures)
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
@@ -250,12 +508,12 @@ def run():
         # Preview semantics — only subtracting.
         ctx, page, reqs, errs, reg = load_as(browser, base, 'admin', '?as=viewer')
         got = probe(page)
-        if not got['denied'] or got['agenda'] or [u for u in reqs if 'op=events' in u or 'action=events' in u] or reg:
+        if not got['denied'] or got['agenda'] or [u for u in reqs if u.startswith('events:')] or reg:
             failures.append('preview: admin ?as=viewer was not turned away (or issued a request)')
         ctx.close()
         ctx, page, reqs, errs, reg = load_as(browser, base, 'viewer', '?as=admin')
         got = probe(page)
-        if not got['denied'] or got['agenda'] or [u for u in reqs if 'op=events' in u or 'action=events' in u] or reg:
+        if not got['denied'] or got['agenda'] or [u for u in reqs if u.startswith('events:')] or reg:
             failures.append('preview: viewer ?as=admin gained a surface (or issued a request)')
         ctx.close()
         browser.close()
@@ -268,14 +526,15 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-6d %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['agenda']),
                                                   g['rows'], mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/events-role-<tier>.png + events-detail.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
+    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
         for f in failures:
             print('  ✗', f)
         return 1
     print('\nALL CHECKS PASSED — admin sees the agenda over the registry with exactly one list request and one registry fetch; '
-          'contributor, analyst and viewer are turned away with zero requests; preview only subtracts; the sheet opens with the Calendar link and the .ics.')
+          'contributor, analyst and viewer are turned away with zero requests; preview only subtracts; the sheet opens with the Calendar link and the .ics; '
+          'the phone pass held: the month header sticks and changes across a boundary, a star round-trips, the ICS parses and matches the published file, the day plan and the Subscribe pill work.')
     return 0
 
 

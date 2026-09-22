@@ -3,11 +3,24 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 1/50`
+`Sections: 2/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.02w] — 2026-09-22 02:00:16 AM EST — v07.08r
+
+### Added
+- **Subscribe** on the masthead: one tap offers the whole calendar — every event the organiser has confirmed — as a subscription link for Google Calendar, Apple Calendar or Outlook, so new editions and moved dates arrive on their own. The link can be copied with a button or selected by hand, and a one-time download of the same calendar file is beside it
+- **Day plan** tab: pick a day and see the events you starred that fall on it as a timeline — the venue's opening hours where the organiser publishes them, which day of the show it is, your attending state and your note. A strip of your starred days makes hopping between them a tap; tapping an entry opens its detail sheet. Read-only in this release — meetings and plans arrive later
+- The month named at the top of the page follows the chosen day while the day plan is showing
+
+### Changed
+- The pinned month header now sits clear of the account bar at the top of the screen while you scroll, and rows no longer show through beside it
+
+### Fixed
+- Semicolons in an event's name, venue or description are now written correctly in the downloaded calendar file, so the per-event download and the subscribed calendar read identically in every calendar app
 
 ## [v01.01w] — 2026-09-22 01:08:08 AM EST — v07.07r
 

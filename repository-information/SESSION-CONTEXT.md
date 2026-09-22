@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 02:00:16 AM EST (push timestamp; the session ran ~01:45 → 02:10 AM EST)
+**Repo version:** v07.08r — one push (this commit) v07.08r (E1 session 2 — the published calendar and the phone pass) on `claude/e1-session-2-events-869dv0` restarted from `origin/main` at `425066cc`; the session-context write rides in the same commit (one push, as asked).
+**Branch:** `claude/e1-session-2-events-869dv0`
+**Model:** Fable 5.1 High (E1 brief, §13.7, session 2 of two)
+
+### What was done
+
+**E1 is Done — §11's row flipped (two sessions, v07.07r + v07.08r); steps 5–8 of §13.7 landed; the B brief is written as §13.8.**
+
+- **`scripts/build-events-ics.py`** → `live-site-pages/events-data/events.ics`: 72 confirmed of 100 events, byte-compatible with the page's `evIcs()` / `evVevent()` (same header, field order, escaping, 75-octet folding, CRLF, stable `<slug>@events.lightaisolutions.github.io` UIDs); `--check` / `--stamp`. **`.gitattributes` gained `*.ics -text`** so the repo's LF normalisation does not rewrite the CRLF — check `git ls-files --eol` reads `attr/-text` if the file is ever touched again.
+- **`check-events-registry.py`'s `.ics` walk is live**: the file is required, must be CRLF with no line over 75 octets, carry `X-WR-CALNAME`, and its UID set must equal the confirmed slugs with DTSTART / STATUS matching each row. Exit 0.
+- **`Events.html` v01.02w**: the **Subscribe** pill on the masthead (admitted tier only — a card with the `webcal://` URL derived from `location`, Copy via the clipboard, a read-only field as the by-hand fallback, a one-time download, the how-to line); the **Agenda | Day plan** tab strip and the read-only **day-plan timeline** (date picker, Today, a strip of starred days, hours from `hours[]` where present, *day N of M*, attending badge, note; E5 fills it); the **semicolon escape fixed** (`'\;'` was `';'`); the **sticky month header carries 40px of top padding** so it pins clear of the template's fixed user pill with no rows showing through beside it; `.ev-card .ev-note` so a footnote inside a card keeps the mono note style.
+- **`verify-events-roles.py` — the phone pass** (ALL CHECKS PASSED, three runs): sticky header pinned clear of the pill while its tallest month scrolls, the month-in-view label changes across the boundary, the sheet opens / Escape closes, Calendar href `action=TEMPLATE` + `dates=` / `ctz=`, the per-event ICS parses under the verifier's VEVENT walker and its `evVevent()` block is byte-identical (DTSTAMP aside) to the published file's, a star round-trips through a **stateful stub** (POST body parsed; star → list → row lit + count 1 → Day plan lists it → unstar → 0), the Subscribe pill's URL, Copy status, and the served file; screenshots month / agenda / detail / dayplan; zero page errors.
+- **`Events.gs` untouched** (v01.01g) — no server change in steps 5–8; the brief's rule is bump only what you edit.
+- **Docs**: CHANGELOG v07.08r (`Sections: 79/100`); page changelog v01.02w; README tree (Events line, `events.ics`, `build-events-ics.py`, refreshed checker / verifier descriptions); §11 E1 → Done; **§13.8 the B brief + paste-in prompt**.
+
+### Where we left off
+
+**E1 is merged on this push; B is next (D16 order: … E1 → B → N3 …).** The developer's two steps are unchanged from session 1 and now gate B: **`SPREADSHEET_ID` and `DEPLOYMENT_ID`** in `googleAppsScripts/Events/Events.config.json` are still `YOUR_…` placeholders. Step-by-step deploy instructions were given in chat this session (create the sheet → Apps Script project → `appsscript.json` → GCP link → deploy → record both ids the N0 way → `GITHUB_TOKEN` → consent → load the page once so `registerSelfProject()` adds the `Events` column → tick TRUE → `clearAllAccessCache` → Manage deployments → New version once). When the ids arrive: paste them into `Events.config.json`, sync the `.gs` and the page's `_e` per [PC-GAS-CONFIG] #14 (bump both files), then the real-phone check of §13.7 step 8 is the developer's to report.
+
+### Key decisions made
+
+- **The published file's byte-compatibility is asserted, not assumed**: the verifier compares the page's `evVevent()` for a confirmed event with the published block for that UID, byte for byte with DTSTAMP dropped. That check is what made the semicolon-escape bug worth fixing now rather than on the first row with a `;`.
+- **`*.ics -text` in `.gitattributes`** — the alternative (LF in the repo, CRLF written by a build step on deploy) would have made the served file differ from the committed one; keeping the bytes is simpler and the checker asserts CRLF.
+- **The Subscribe pill is painted for the admitted tier only** — the file is public and the pill issues no request, but the turned-away card stays the whole of a denied load (the verifier's zero-request assertion for those tiers is untouched).
+- **The day plan is derived, not stored** — it reads the Stars the page already holds plus the registry; no new op, no new tab column, nothing for E5 to migrate.
+- **The sticky header's clearance is padding on the header, not a `top` offset** — a `top: 40px` offset left a 40px strip beside the pill through which rows scrolled (seen in the second screenshot); paper-coloured padding covers it.
+
+### Active context
+
+- **Repo version v07.08r.** `CHANGELOG.md` `Sections: 79/100` — no rotation due for a while.
+- **Placeholders in `Events.config.json` / `Events.gs`**: `SPREADSHEET_ID`, `DEPLOYMENT_ID` (page `_e = ''`). The Deploy Events workflow step no-ops until they are real; `ensureEventsTabs_()` throws `SPREADSHEET_NOT_CONFIGURED`; the live page shows the calendar, Subscribe and the day plan with "Stars are not connected yet".
+- **Parallel sessions push** — `MULTI_SESSION_MODE` is `Off`; every session restarts its branch from `origin/main` and checks `git ls-remote` before pushing.
+- **Reminders still open**: close out the "Repo access denied" issue after Monday's two earnings-desk runs (C2 must be rebuilt before Wednesday 2026-09-23 04:00 PDT); the Megmeet briefing prompt runs after the Network/Events build, before 2026-10-07 (`repository-information/megmeet-briefing-prompt.md`).
+- **Playwright** is `pip install playwright` + the pre-installed Chromium at `/opt/pw-browsers` (no `playwright install`). Per-container.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Deploy Events first (the two ids), then open a Fable 5.1 High session and run B — the bridge — from §13.8.** B writes a peer URL for Events, so it needs `DEPLOYMENT_ID` real; its prompt (§13.8) stops and asks for both ids if they are still placeholders, and records them the N0 way before building the far sides in `Network.gs` / `Events.gs`, the near-side proxies, the scan card's Source Event default and the `scripts/check-peer-bridge.js` harness. The paste-in prompt was handed over in chat at the close of this session and sits under §13.8.
+- **To continue:** type `run B`
+
+## Previous Sessions
+
 **Date:** 2026-09-22 01:08:08 AM EST (push timestamp; the session ran ~12:50 → 01:20 AM EST)
 **Repo version:** v07.07r — one push: `5169babd` v07.07r (E1 session 1 — the Events scaffold and the agenda) on `claude/ecstatic-mayer-qe6sgq` restarted from `origin/main` at `6884a411`; auto-merged to `main`.
 **Branch:** `claude/ecstatic-mayer-qe6sgq`
@@ -50,52 +94,5 @@ The chat hand-off named what to check on the phone once deployed: the agenda ope
 
 - **Open a Fable 5.1 High session and run E1 session 2** — §13.7 steps 5–8: `scripts/build-events-ics.py` writing `live-site-pages/events-data/events.ics` (every `confirmed` event, `X-WR-CALNAME`, stable UIDs) wired into `check-events-registry.py`'s `.ics` walk, the Subscribe pill with the `webcal://` URL, the read-only day-plan tab, the Playwright phone pass (month header sticks across a month boundary, sheet opens/closes, a star round-trips through the stub, one event's ICS parses, the Calendar href carries `dates=` / `ctz=`, screenshots of month / agenda / detail, zero page errors), then flip §11's E1 row to Done and write the B brief as §13.8. The prompt was handed over in chat at the close of this session. If the developer has created the spreadsheet and deployed by then, record both ids in that session (the N0 way) before the phone pass.
 - **To continue:** type `run E1 session 2`
-
-## Previous Sessions
-
-**Date:** 2026-09-22 12:43:01 AM EST
-**Repo version:** v06.95r at the time of the push — **the repo is now at v07.06r**; a parallel Opus 5 session (`claude/repo-access-denied-339rna`) landed eleven versions beside this one. One push here: `5b1c9e5` v06.95r (E0 — the Events registry and source roster) on `claude/ecstatic-cannon-ilvoq2` restarted from `origin/main`; merged to `main`.
-**Branch:** `claude/ecstatic-cannon-ilvoq2`
-**Model:** Opus 5 xhigh (E0 brief, §13.4)
-
-### What was done
-
-**E0 is Done (§11 flipped, v06.95r) — research and data only; nothing under `Events.html` / `Events.gs`, which is E1.**
-
-- **`live-site-pages/events-data/events.json` — 100 events: 72 `confirmed`, 27 `tentative`, 1 `past`.** `confirmed` means an organiser page was read this session (WebFetch, or organiser-host JSON-LD); the `past` row (NAATBatt 2026) was organiser-read too and the checker flipped its status. No row is ever `confirmed` on a third-party listing. Every `tentative` row carries a `manual` source and a `tierNote` saying exactly why — eleven because the organiser blocks non-browser clients, the rest because the organiser publishes no dates for that edition.
-- **`events-sources.json` — 58 roster rows, every one probed live before it was written** (HTTP status, `Event`/`VEVENT` count, newest item, robots for the fetched path). **24 blocked**, each with reason + date: `cloudflare-challenge` on OCP, DCD, Enlit, 10times, SEMI and Gartner; `403-akamai-non-browser` on CERAWeek; `403-datadome` on Reuters; `403-azure-waf` on GCPA and NAATBatt; `no-feed` on Uptime, Hannover, Ignite, EEI, NARUC, Hot Chips; 404/503/DNS on Solar & Storage Live, SNEC, CIBF, ESIE, IDEE, Battery Japan, AMD. **11 live JSON-LD feeds**, two of them new to the plan — **iMasons (11 `Event` objects) and ESIG (12)**, which between them carry the whole sub-mega/social tier.
-- **`scripts/extract-corpus-events.py`** — 33 corpus events (not 31; §1's count was measured at v06.70r), **256 `mentions[]` rows across 90 dossiers onto 32 registry rows**, every corpus event with ≥ 1 mention. Idempotent, `--check` / `--report`.
-- **`scripts/check-events-registry.py`** — every `EVENTS-SCHEMA.md` §12 assertion plus two earned here: a `confirmed` row needs a source whose `kind` is not `manual`, and no event source may have a LinkedIn / 10times / Google-News host. Exits 0. `--fix-past` flips status only; it fired once, on NAATBatt.
-- **Appendix A caveats resolved**: the DCD New York 2027 conflict is recorded *unresolved by design* (Clocate's JSON-LD says 17–18 Mar at the NY Marriott Marquis, a second listing says 17–18 May, DCD is Cloudflare-blocked); NAATBatt's weak Aug 2027 row is **dropped** (organiser publishes only Feb 9–12 2026); **Wood Mackenzie NA Power & Renewables (Apr 28–29 2027, Omni Interlocken) and Datacloud USA (Aug 31–Sep 2 2027, Fairmont Austin) are now dated and confirmed**. Three seed errors corrected: ACP Siting + Permitting and ACP PEAK are two events, not one; Energy Storage Summit USA 2027 moves to the Renaissance Dallas at Plano; six third-party-sourced rows (GTC 2027, InterBattery 2027, CIGRE, IEEE PES GM 2027, Battery Show Europe 2027, AWS re:Invent 2026) are now organiser-read.
-- **Docs**: §11's E0 row → Done with all three count sets; README tree entries for `events-data/`, both files and both scripts; CHANGELOG `Sections: 91/100` at the time. **Nothing new written in §13** — §13.4's closing line asks for an E1 brief as §13.6, but N2 already wrote E1 as §13.7, so the line is stale and was not acted on.
-
-### Where we left off
-
-**E0 is merged to `main` and E1's prerequisite is satisfied**: `events.json`, `events-sources.json` and `check-events-registry.py` are all on `main`, the checker exits 0, and §11's E0 row reads Done. §11's E1 row is still **Proposed** — nothing in the Network/Events plan moved between v06.96r and v07.06r; those eleven versions were the parallel session's Routine-fleet work, the Classroom C2 pipeline and the cache levers.
-
-The developer asked for the E1 paste-in prompt, which was handed over in chat at the close of this session (Fable 5.1 High, session 1 of two, §13.7's own prompt refreshed with the current repo version and the rotation arithmetic below).
-
-### Key decisions made
-
-- **A third-party listing can never confirm a row.** Eleven organisers block non-browser clients, so eleven shows the corpus cares about will never be organiser-verified from a server. Rather than soften `confirmed`, the checker now asserts it: a `confirmed` row must carry a source whose `kind` is not `manual`.
-- **Blocked ≠ unusable event.** GCPA and NAATBatt serve a 403 Azure WAF to `curl` but are readable by a browser-class fetch — so their *events* are `confirmed` while their *roster rows* are `blocked`. That split is deliberate; the checker tolerates it; it means the E2 poller will never cover those shows.
-- **Dates that are patterns are labelled as patterns.** CERAWeek 2027, ESIE 2027, Hot Chips 39, IDEE and AMD Advancing AI carry dates inferred from a prior edition's slot, and each says so in its own `tierNote`. These are the rows most likely to be wrong and the first to re-check when E2 runs.
-- **The 10times row exists only as a never-re-propose marker** — cited by no event, and the checker rejects any event source on a LinkedIn / 10times / Google-News host. Same for COMPUTEX, which is on the roster with `robots: disallowed` so the poller must skip it.
-- **`REPO-ARCHITECTURE.md` was deliberately not touched.** The brief said to mirror `profiler-data/`'s treatment *if it appears there* — it does not, and neither does any project checker. Adding `events-data/` would have made it inconsistent with its own sibling.
-- Two seed-calendar feed flags did not survive the probe: 7x24 Exchange and the International Battery Seminar are **not** ICS, and Intersolar is **not** JSON-LD `BusinessEvent`. All three are recorded as `html` with the probe that says so, rather than as a feed E2 would fail on.
-
-### Active context
-
-- **Repo version v07.06r.** `CHANGELOG.md` `Sections: 102/100` — **one section is dated today (2026-09-22), so 101 are non-exempt and rotation IS due on the next push that creates a version section.** The oldest date group is **2026-09-16 with 25 sections**; rotating it leaves 77 raw / 76 non-exempt, under 100, so **one rotation suffices**. Run `git fetch --unshallow origin main` before any SHA lookup — the sections due are the oldest and are exactly the ones beyond a shallow horizon.
-- This session's own push did **not** rotate: "Remember Session" is housekeeping with no version bump, so no version section was created and [PC-CHANGELOG] #6's rotation step never fired.
-- **E0 artefacts on `main`**: `live-site-pages/events-data/{events.json,events-sources.json}`, `scripts/{extract-corpus-events.py,check-events-registry.py}`. Re-run before trusting: `python3 scripts/check-events-registry.py` (expect `OK 100 events … 58 roster rows`) and `python3 scripts/extract-corpus-events.py --check`.
-- **Parallel sessions are live.** `claude/adoring-brown-mvddj2` was on the remote throughout this session and still is; a second Opus 5 session pushed ten times beside this one. `MULTI_SESSION_MODE` is `Off`, so every session must restart its branch from `origin/main` and check `git ls-remote` before pushing.
-- **Megmeet briefing deferred** to after the Network/Events build, prompt preserved at `repository-information/megmeet-briefing-prompt.md` (the parallel session's decision, carried forward).
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Open a Fable 5.1 High session and run E1 session 1** — the Events scaffold and agenda (§13.7; the prompt was handed over in chat at the close of this session). E0's artefacts are on `main` with the checker at 0, so the prerequisite the brief names is satisfied, and D16 puts a hard date on it: the calendar has to be live **before 2026-11-16**, which is RE+ week.
-- **To continue:** type `run E1 session 1`
 
 Developed by: LightAISolutions

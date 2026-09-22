@@ -6,5 +6,8 @@
 *.mp3 binary
 *.pdf binary
 
+# RFC 5545 text — CRLF line ends are part of the format; never normalised
+*.ics -text
+
 # Developed by: LightAISolutions
 
