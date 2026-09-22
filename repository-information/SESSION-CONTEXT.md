@@ -6,6 +6,53 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 12:29:48 AM EST
+**Repo version:** v07.06r — ten pushes this session on `claude/repo-access-denied-339rna`, rebased onto `origin/main` before each: `66f18297` v06.97r, `2cd6348b` v06.98r, `1ed61dc0` v06.99r, `4f9fca6c` v07.00r, `e7ed2c5e` + `c347b37e` v07.01r, `ea5f52f7` v07.02r, `afb26ada` v07.04r, `814c7281` v07.05r, `38c8da9d` v07.06r. `70a0c488` v07.03r is **not mine** — it is the Classroom C2 pipeline's own first commit.
+**Branch:** `claude/repo-access-denied-339rna`
+**Model:** Opus 5
+
+### What was done
+
+**The "Repo access denied" issue is closed, and the whole Routine fleet is rebuilt and proven.**
+
+- **Root cause**: `create_trigger` has no `sources` parameter, so every agent-created Routine fired into a session with no checkout and could never push. Proved by a controlled A/B on 2026-09-21 — two live earnings desks, identical but for the attached repository: the old one 33s / $0.11 / no commit, the new one ~14m / $13.86 / commit `cdfafb36` with 13 files and +2,020 lines.
+- **The UI's Edit form does NOT expose repositories**, despite the current documentation saying it does. Re-tested by the developer on C2: Edit opens, no repositories field, and **Runs with** shows only environment and model. Rebuild is mandatory; recorded so it is not re-litigated from the docs a third time.
+- **All five committing Routines rebuilt** (developer, via the claude.ai form) with `LightAISolutions/Sales` attached and **zero connectors**. C2 and Industry Guidance set to **Opus 5**; the two Profiler ones to **Sonnet 5**. The ACL health check is read-only and was deliberately **not** rebuilt.
+- **Four old `meta_mcp` copies deleted** — after archiving their prompts verbatim to `repository-information/routine-prompts-archive.md`, because a pre-delete check found `crusoe`'s research priorities had only partly survived the move into `watch[]`.
+- **Coverage gap found and closed**: 64 of 177 dossiers (36%) were covered by no Routine at all, 31 of them in Megmeet-adjacent segments including the four SST peers. Root cause was the hardcoded 21-company list in the sweep prompt. Every cadence row now carries a `tier` — 52 `core` (90d), 33 `watch` (180d), 0 untiered — and the sweep reads tiers, so coverage changes by commit.
+- **Both cache levers implemented, and lever 1 made automatic.** Measured where the calendar's bytes were: `watch` 66.4% + `source` 31.6% = 98%, none of it read by the queue logic. Split to `profiler-refresh-notes.json`; the calendar went **384,240 → 21,576 bytes (−94%)** and 2,573 → 1,069 lines, back under the Read tool's 2,000-line default. Lever 2 split 186 lines out of `profiler-app.md` (**−38%**). Net ≈ **−$2.49/run on the desk, ~$55/month**.
+- **Two checker fixes**: `build-classroom-segments.py --check` now separates real work from pin churn (was 16 due with 15 pin-only), and the P9 fixture in `check-classroom-pipeline.py` was repaired — it derived its briefing id from `coveredThrough` and collided with the real briefing the moment the pipeline's first commit advanced the watermark. `--selftest` back to **15 fixtures / 0 failures**.
+- **C2 landed its first-ever commit** (`70a0c488`), audited independently: 7 paths all inside contract §3, nothing forbidden touched, ledger watermark advanced off `null`, all gates clean.
+
+### Where we left off
+
+Everything is committed, pushed and merged. The repo is green: all four C2 gates pass, `--selftest` is 15/0, `check-readme-tree.py` is 0 findings, `sync-profiler-registry.py` is 0 findings. Six Routines live, all enabled, all with zero connectors.
+
+**The Megmeet briefing was deliberately deferred** — the developer wants it after the Network and Events build plan and closer to the 2026-10-07 start date. The prompt is preserved at `repository-information/megmeet-briefing-prompt.md` and a reminder is in `REMINDERS.md`.
+
+### Key decisions made
+
+- **Sonnet 5 stays the default for Routines; Opus 5 only where a checker cannot see the failure.** Every failure in the saga was infrastructural, not a run reasoning badly. C2 and Industry Guidance write curriculum whose correctness a structural checker cannot verify — a fabricated provenance pin passes every gate — so they get Opus 5. Haiku is disqualified by arithmetic (200K context vs runs of 335K and 361K). Fable is wrong for unattended work because it alone draws the 50% weekly sub-allocation.
+- **`usage.cost_usd` is API list-price valuation, not a balance charge** — verified by reconstruction to 0.75%. Drawn from plan allocation; `isUsingOverage: false`.
+- **Before writing a prompt instruction to work around a file, measure the file.** A data fix outlives every prompt that would have worked around it — and a prompt cannot be edited after its Routine is created.
+- **`created_via` alone is not a safe delete filter** — the ACL check is `meta_mcp` and must survive. The rule is `meta_mcp` minus the ACL check.
+- **The API's `sources` field is not evidence of repository attachment** — it reads empty even on Routines that have demonstrably committed. The **Runs with** card is the only reliable check (v06.70r trap, held again).
+
+### Active context
+
+- **Branch:** `claude/repo-access-denied-339rna` · **repo version** v07.06r · CHANGELOG `Sections: 102/100` raw but **78 non-exempt** (24 dated 2026-09-21 EST) — a counter reading over 100 is expected here and is **not** a rotation signal.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Routines (6, all enabled, all zero connectors):** earnings desk weekdays 13:00Z (default model) · C2 Wednesdays 11:00Z (Opus 5) · quarterly check 1 Jan/Apr/Jul/Oct 13:00Z (Sonnet 5) · opportunity report 1st monthly 17:00Z (Sonnet 5) · Industry Guidance 15 Jan/Apr/Jul/Oct 13:00Z (Opus 5) · ACL health check daily 10:00Z.
+- **Open, none blocking:** (1) the Megmeet briefing, deferred by choice; (2) the sweep lag — core rows come due **2026-11-27** but the sweep next fires **2027-01-01**, a 35-day gap, and a monthly cadence with the tier gate would close it cheaply; (3) Receipts' ACL grace snapshot may still be unarmed — the daily ACL run reports it as a warning, and one successful Receipts sign-in arms it.
+- **Reminders:** the 2026-09-19 repo-access reminder is now fully satisfied by this session's work but was **left open deliberately** — it is developer-owned and only the developer closes it.
+
+### Recommendation for next session
+
+- **Resume the Network and Events build** — E0 is done (`events.json`, `events-sources.json`, the checker, 73 events), so E1 is next, with its brief already written as §13.7 of `NETWORK-EVENTS-DESIGN-PLAN.md`. That is the developer's stated priority, and the Megmeet briefing is explicitly queued behind it.
+- **To continue:** type `run E1`
+
+## Previous Sessions
+
 **Date:** 2026-09-21 07:23:55 AM EST
 **Repo version:** v06.94r — one push this session: `a840bf6` v06.94r (N2 — accounts and the corpus attachment) on `claude/zen-heisenberg-426g6h` restarted from `origin/main`; merged to `main` (`040f6a1`)
 **Branch:** `claude/zen-heisenberg-426g6h`
@@ -46,48 +93,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Open an Opus 5 xhigh session and paste the E0 prompt** (§13.4 of `NETWORK-EVENTS-DESIGN-PLAN.md`; the version handed over in chat at the close of N2, which notes E1's brief already exists as §13.7) — the registry and roster are E1's hard prerequisite.
 - **To continue:** type `run E0`
-
-## Previous Sessions
-
-**Date:** 2026-09-21 06:30:03 AM EST
-**Repo version:** v06.93r — four pushes this session, all on `claude/youthful-ride-75oah0` restarted from `origin/main` before each: `96f04a5` v06.90r (N1 session 2 — review, dedupe, save), `39dc362` v06.91r (title / department / company standardisation + edit saved contacts), `44cacfb` v06.92r (the developer's fourteen casing calls + the Tidy pill), `1a3a6a0` v06.93r (Tidy feedback fix)
-**Branch:** `claude/youthful-ride-75oah0`
-**Model:** Fable 5.1 (N1 session 2 brief, then three follow-ups)
-
-### What was done
-
-**N1 is Done and used: the 20 cards are saved, corrected and tidied on the phone.**
-
-- **v06.90r — N1 session 2** (`Network.gs` v01.05g, `Network.html` v01.10w): `nop=dupcheck` (`nwFindDuplicate_` email → E.164 phone → romanised name + Account, answered before the write), `nop=save` (enum + D5 stage validation, new-or-existing Account, Contact + `scan` Interaction; `mergeInto=` with a `merge` Interaction carrying the absorbed `c-` id and the non-winning card pair; `distinct=` the considered keep-separate; any other duplicate refuses with the row), `nop=links`, `nop=get`, `nop=delete` / `nop=restore` (`account_has_contacts`). Page: review block on the editor (role, account block with registry resolution and the `gateStage` D5 rule, source event, met date, consent, DNC), Retry / Swap, Save + Save all, merge sheet, browser-side Drive move `_inbox/` → `<Company>/` parked through `setfolders`, list rows with `nop=get` detail and delete / restore. `scripts/check-network-schema.py` (§14) new; verifier's save round-trip. Plan §11 N1 → Done; §13.6 N2 brief written.
-- **v06.91r** (v01.11w / v01.06g): `nwStdField` / `nwTitleAbbrev` — titles, departments, company names word-wise First-letter caps, C-suite and acronyms kept, Vice President → VP, Executive Vice President → EVP, Senior → Sr.; registry casing wins for a covered company; **edit a saved contact** from its row (`nwRecFromRow` → shared editor → `nop=update`, `account-change` Interaction on a move).
-- **v06.92r** (v01.12w): the developer's fourteen corrections encoded as rule — `NW_RANK_OF_RE` ("Director of X" → "Director, X" for rank titles; Head / Chief keep "of"), `NW_CASE_FIXES.rai` → RAI; **✨ Tidy titles & companies** on the Contacts card (`nwTidySaved`: `nop=get` → rule → `nop=update` per changed row). Rule recorded in `NETWORK-SCHEMA.md` §3.
-- **v06.93r** (v01.13w): Tidy's feedback moved into the Contacts card (`#nw-list-status`, `_nwListStatus` across re-renders, built into the card directly), the pill counts "Tidying N of M…", rows re-case as they land, failures counted and named. **The developer confirmed Tidy works as intended on the phone.**
-
-### Where we left off
-
-**N1 closed for real: 20 contacts saved with the corrected titles and companies.** Next is **N2** (§13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`) — the Accounts surface, `nop=account`, `Profiler.html#<slug>` deep links, the propose-a-dossier hook, the on-the-record check against `decisionMakers[]`. E0 (§13.4, Opus 5 xhigh) can run beside it on another branch. The `Avantus` Drive folder still carries the pre-tidy name `AVANTUS` (a folder rename on account rename is on N2's list, step 1).
-
-### Key decisions made
-
-- **Duplicate handling has three outcomes and no fourth**: Merge (survivor keeps its id), Keep as a separate contact (`distinct=<declined id>`, only after seeing the match), Cancel. Never a bare "save anyway".
-- **Both card pairs are kept on a merge** — the non-winning pair goes into the `merge` Interaction's Summary (or the scan Interaction's Evidence Link via `nop=links` `interactionId`).
-- **Casing is a page-side rule, not a server one** — `nwStdField` runs at extraction, on load, on Retry, on edit, and over saved rows through Tidy. Words the developer rules on go in `NW_CASE_FIXES` (never a per-row special case); a rank followed by "of" takes the comma form; "Sr." carries the period; the comma form also applies to VP ("VP, Business Development").
-- **Corrections to saved data are made from the page** (Tidy / Edit), because the spreadsheet is not reachable from a session.
-- **Registry fetch is relative** (`profiler-data/profiler-companies.json`), never a GitHub endpoint; offline every company is local.
-- Session-1 UI rules kept: no ids / confidence numbers on a card, no missing-field cues, the name-case rule, the pill rows, the two-half control rows.
-
-### Active context
-
-- **Repo version v06.93r.** `CHANGELOG.md` at `Sections: 89/100`, eleven dated 2026-09-21 — 78 non-exempt today, 89 on any later date: **no rotation due**. Archive at 504 sections.
-- Network page changelog `Sections: 13/50`, GAS `6/50`. Verifier: `scripts/verify-network-roles.py` (door, capture, queue/drain, notes/edit, review, save, merge, keep-separate, Save all, delete/restore, standardisation cases incl. the developer's fourteen, saved-row edit, Tidy) — all passing at 390 × 844; `scripts/check-network-schema.py` exit 0. `pip install playwright` needed in a fresh container; Chromium under `/opt/pw-browsers`.
-- **Live and exercised on the phone:** save, merge sheet, the Drive move, list rows, Edit, Tidy. **Not yet exercised live:** Retry from Drive read-back, Swap, delete → restore on a real row.
-- **Pre-existing, not this session's:** `verify-profiler-roles.py`'s guidance-progress check fails identically on `origin/main`; the template's `action=getData` route calls an undefined `processDataPoll()`.
-- **§13 numbering:** N2 brief is §13.6 (versions inside it read v06.91r / v01.11w / v01.06g — still accurate for the GAS; the page is at v01.13w); N2 writes the E1 brief as §13.7 or the next free number.
-- **Monday 2026-09-21's earnings-desk A/B** (see `REMINDERS.md`) is unchanged and gates phase R only.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- **Open a Fable 5.1 High session and paste the N2 prompt block under §13.6 of `NETWORK-EVENTS-DESIGN-PLAN.md`** — the Accounts surface with edit and the folder rename, `nop=account`, the `Profiler.html#<slug>` deep links, the propose-a-dossier hook and the on-the-record check; its done-when runs against the 20 saved contacts and their accounts.
-- **To continue:** type `run N2`
-
