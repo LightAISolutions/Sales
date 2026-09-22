@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-21",
+ "built": "2026-09-22",
  "companies": 177,
  "edges": [
   {
@@ -47144,7 +47144,7 @@
     "a": {
      "type": "customer",
      "note": "Panasonic Energy is NOVONIX's lead customer under a binding offtake for at least 10,000 tonnes of anode active material for its US plants; the half-year report names it as \"our lead customer\".",
-     "context": "The offtake was signed on 8 February 2024 for at least 10,000 tonnes of synthetic graphite anode active material for Panasonic Energy's United States plants. The volume commitment was conditioned on NOVONIX achieving mass-production qualification milestones before the fourth quarter of 2025; if missed, Panasonic may reduce the volume by up to 20%, or terminate if the delay is substantial.\n\nThat milestone was not met. Panasonic mass production was pushed from 2026 to the second half of 2027 on 16 January 2026 and reaffirmed at that date since. NOVONIX delivered a C-sample on 11 June 2026 — the first known synthetic graphite AAM C-sample produced in North America — and states that its own internal testing indicates the material meets Panasonic's specifications, with formal validation by Panasonic still outstanding as at 31 August 2026. No public exercise of Panasonic's reduction or termination rights has been announced.\n\nThe dependency runs deeper than a supply contract. The first of the four conditions the directors list in their going-concern assessment is \"the Company achieving qualification status (being able to mass produce qualifying products for Panasonic and other future offtake customers and achieve the respective customer's quality standards)\". Panasonic's validation decision is therefore a solvency input, not merely a commercial one.",
+     "context": "The offtake was signed on 8 February 2024 for at least 10,000 tonnes of synthetic graphite anode active material for Panasonic Energy's United States plants. The volume commitment was conditioned on NOVONIX achieving mass-production qualification milestones before the fourth quarter of 2025; if missed, Panasonic may reduce the volume by up to 20%, or terminate if the delay is substantial.\n\nThat milestone was not met. Panasonic mass production was pushed from 2026 to the second half of 2027 on 16 January 2026 and reaffirmed at that date since. NOVONIX delivered a C-sample on 11 June 2026 — the first known synthetic graphite AAM C-sample produced in North America — and states that its own internal testing indicates the material meets Panasonic's specifications. On 10 September 2026 the customer's own testing feedback arrived: 12 of 14 specification parameters met, one gap within roughly 1% of requirement and the other failing the customer's pass/fail criterion, against NOVONIX's internal testing which had indicated all specifications were met. The company states it has identified corrective actions but discloses no specifics or timeline, and no next validation date is public. No public exercise of Panasonic's reduction or termination rights has been announced.\n\nThe dependency runs deeper than a supply contract. The first of the four conditions the directors list in their going-concern assessment is \"the Company achieving qualification status (being able to mass produce qualifying products for Panasonic and other future offtake customers and achieve the respective customer's quality standards)\". Panasonic's validation decision is therefore a solvency input, not merely a commercial one.",
      "source": "https://www.novonixgroup.com/wp-content/uploads/2025/09/Panasonic-Energy-and-NOVONIX-Sign-Binding-Off-Take-Agreement.pdf",
      "status": "active",
      "since": "2024-02",
@@ -47184,8 +47184,15 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "*Panasonic's formal validation of the June C-sample:* the single event that would convert the qualification record from three failures to one success, expected on a six-to-twelve-month feedback cycle.",
+     "text": "*Panasonic's formal validation of the June C-sample, now sharpened by interim feedback:* the 10 September 2026 customer testing update found 12 of 14 specification parameters met, with no corrective-action timeline or next validation date disclosed — the milestone to watch is the next qualification update, not a fixed calendar date.",
      "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-10",
+     "text": "Lead customer (Panasonic) testing feedback on the June C-sample: the material meets 12 of 14 specification parameters — one gap within roughly 1% of requirement, the other failed the customer's pass/fail criterion — against NOVONIX's own internal testing, which had indicated all specifications were met — The company states it \"has identified actions which will address the remaining specification parameters\" but discloses no specific corrective actions, no corrective-action timeline, and no next validation milestone or date — sharpening the qualification picture from \"formal validation outstanding\" to a named, partial gap, without resolving it. Mass production is still targeted for the second half of 2027, contingent on completing qualification. The announcement does not name Panasonic explicitly, referring only to \"lead customer\"; the identification follows the existing offtake relationship recorded in this dossier.",
+     "src": "https://www.sec.gov/Archives/edgar/data/0001859795/000119312526389773/nvx-ex99_2.htm",
      "from": "a"
     },
     {
@@ -47203,7 +47210,7 @@
      "from": "a"
     }
    ],
-   "last": "2026-06-11"
+   "last": "2026-09-10"
   },
   {
    "a": "novos-power",

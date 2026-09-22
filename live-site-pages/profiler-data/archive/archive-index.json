@@ -2630,5 +2630,13 @@
       "archivedAt": "2026-09-19",
       "supersededBy": 2
     }
+  ],
+  "novonix": [
+    {
+      "file": "novonix.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-22",
+      "supersededBy": 2
+    }
   ]
 }

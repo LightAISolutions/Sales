@@ -989,9 +989,9 @@
   },
   {
    "slug": "novonix",
-   "nextReport": "2026-09-14",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-09"
+   "nextReport": "2026-10-29",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-22"
   },
   {
    "slug": "calb",
