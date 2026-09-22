@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.14w">
+  <meta name="build-version" content="v01.15w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -480,6 +480,9 @@
     /* PROJECT: N1 s2 — review fields on the editor, the merge sheet, the list rows */
     .nw-editor select, .nw-editor input[type="date"] { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 44px; }
     .nw-editor select:disabled { opacity: .5; }
+    .nw-editor .nw-evdef { grid-column: 1 / -1; font: 12px/1.6 var(--nw-mono); color: var(--nw-faint); margin: -4px 0 6px; }
+    .nw-editor .nw-evdef button { font: inherit; color: var(--nw-accent); background: none; border: 1px solid var(--nw-line); border-radius: 999px; padding: 2px 10px; margin: 2px 6px 2px 0; cursor: pointer; }
+    .nw-editor .nw-evdef button[aria-pressed="true"] { background: var(--nw-accent); color: #fff; border-color: var(--nw-accent); }
     .nw-editor .nw-editor-h { font: 600 12px/1.6 var(--nw-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--nw-accent); margin: 12px 0 6px; padding-top: 10px; border-top: 1px solid var(--nw-line); }
     .nw-editor .nw-editor-h:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
     .nw-editor .nw-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -4474,6 +4477,7 @@ function nwErrText(err) {
   if (err === 'SESSION_EXPIRED') return 'Your session has expired. Sign in again to continue.';
   if (err === 'ROLE_DENIED') return 'Your account does not have access to Network.';
   if (err === 'SPREADSHEET_NOT_CONFIGURED') return 'The Network spreadsheet is not configured yet.';
+  if (err === 'not_configured') return 'Events is not connected to Network yet.';
   return 'Could not load Network (' + (err || 'unknown') + ').';
 }
 function nwEl(tag, cls, text) {
@@ -4481,6 +4485,53 @@ function nwEl(tag, cls, text) {
   if (cls) el.className = cls;
   if (text != null) el.textContent = text;
   return el;
+}
+
+// PROJECT: ── B — the bridge's first use: the scan card's Source Event default.
+// The signed-in user's starred events dated today, asked of Network's server
+// (nop=eventstoday → its near-side proxy → Events). Fetched once per page
+// load and only when a review section opens — never on load, never polled
+// (D14). Every non-success answer (not_configured while the peer tokens are
+// unset, an upstream_* fault, a stale session) means "no default": the card
+// stays exactly as N1 built it, with the free-text field as the fallback
+// and the override. Nothing here is required for a save.
+var _nwTodayEvents = null;   // { events: [...] } once answered; null until then
+var _nwTodayPending = null;  // callbacks waiting on the one in-flight request
+function nwTodayEvents(cb) {
+  if (_nwTodayEvents) { cb(_nwTodayEvents.events); return; }
+  if (_nwTodayPending) { _nwTodayPending.push(cb); return; }
+  _nwTodayPending = [cb];
+  nwApi('eventstoday', {}, function(res) {
+    var list = (res && res.success && res.events) ? res.events.filter(function(x) { return x && x.slug; }) : [];
+    _nwTodayEvents = { events: list };
+    var waiting = _nwTodayPending || []; _nwTodayPending = null;
+    waiting.forEach(function(fn) { try { fn(list); } catch (e) {} });
+  });
+}
+// Prefill when exactly one starred event is on today; offer a pill row when
+// several; leave the field alone when none. A value the user has already
+// typed is never overwritten — the answer arrives asynchronously.
+function nwSourceEventDefault(input, host) {
+  nwTodayEvents(function(list) {
+    if (!input || !input.isConnected || !list.length) return;
+    if (list.length === 1) {
+      if (!input.value.trim()) { input.value = list[0].slug; input.dispatchEvent(new Event('input', { bubbles: true })); }
+      var one = nwEl('div', 'nw-evdef', 'From your starred events today: ' + (list[0].name || list[0].slug));
+      host.appendChild(one);
+      return;
+    }
+    var row = nwEl('div', 'nw-evdef', 'Starred today: ');
+    list.forEach(function(ev) {
+      var b = nwEl('button', null, ev.name || ev.slug); b.type = 'button'; b.title = ev.slug;
+      b.setAttribute('aria-pressed', input.value.trim() === ev.slug ? 'true' : 'false');
+      b.addEventListener('click', function() {
+        input.value = ev.slug; input.dispatchEvent(new Event('input', { bubbles: true }));
+        row.querySelectorAll('button').forEach(function(x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      });
+      row.appendChild(b);
+    });
+    host.appendChild(row);
+  });
 }
 
 // PROJECT: ── N1 session 1 — capture → offline queue → own-Drive → extraction
@@ -5645,6 +5696,7 @@ function nwReviewSection(rec, form) {
   var lev = nwEl('label', null, 'Source event'); var ev = document.createElement('input'); ev.type = 'text'; ev.value = rv.sourceEvent; ev.placeholder = 'e.g. re-plus-2026'; ev.autocapitalize = 'none'; ev.setAttribute('data-review', 'sourceEvent'); lev.appendChild(ev);
   var lmd = nwEl('label', null, 'Met date'); var md = document.createElement('input'); md.type = 'date'; md.value = rv.metDate; md.setAttribute('data-review', 'metDate'); lmd.appendChild(md);
   two2.appendChild(lev); two2.appendChild(lmd); form.appendChild(two2);
+  nwSourceEventDefault(ev, form);   // B: the bridge's default — silent while not configured
   form.appendChild(nwEl('div', 'nw-editor-h', 'Consent'));
   var lc = nwEl('label', null, 'Consent to marketing'); var cons = nwSelect('consent', rv.consent, ''); cons.setAttribute('data-review', 'consent'); lc.appendChild(cons); form.appendChild(lc);
   var ld = nwEl('label', 'nw-check'); var dnc = document.createElement('input'); dnc.type = 'checkbox'; dnc.checked = rv.dnc; dnc.setAttribute('data-review', 'dnc');

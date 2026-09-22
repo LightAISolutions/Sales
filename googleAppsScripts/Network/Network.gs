@@ -1,4 +1,4 @@
-var VERSION = "v01.07g";
+var VERSION = "v01.08g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1049,6 +1049,17 @@ function handleNetworkOp_(e) {
       nwRequire_(sess, 'contacts', 'network_restore');
       return nwDeleteRestoreOp_(sess, p, true);
     }
+    if (op === 'eventstoday') {
+      // B: the scan card's Source Event default — the signed-in user's starred
+      // events dated today, asked of Events' server through the near side.
+      // Reached only past validateSessionForData and the admin door; a
+      // not_configured answer is passed through so the card can stay silent.
+      nwRequire_(sess, 'contacts', 'network_eventstoday');
+      var todayRes = nwEventsProxy_('today', { owner: sess.email });
+      auditLog('data_read', sess.email, 'network_eventstoday',
+        { events: (todayRes && todayRes.events && todayRes.events.length) || 0, ok: todayRes && todayRes.success ? 1 : 0 });
+      return todayRes;
+    }
     return { success: false, error: 'unknown_network_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -1082,6 +1093,263 @@ function nwListRows_(sheet, ownerSet, pick) {
     out.push(o);
   }
   return out;
+}
+
+// PROJECT: ── B — the bridge, Network's side (design plan §6; NETWORK-SCHEMA.md §8)
+// Two halves, both copies of Profiler's guidanceMentionsProxy_ pattern.
+//
+// The FAR side answers Events' server: ?action=peer&t=<NETWORK_PEER_TOKEN>&nop=…
+// It is token-gated, not session-gated, because the caller is a peer backend
+// holding a shared Script Property, not a browser. It runs BEFORE session
+// validation in doGet / doPost. Every token-boundary case — property unset,
+// property shorter than 16 characters, `t` absent, `t` empty, `t` wrong, an
+// unknown op — answers the same flat { success:false, error:'denied' } with
+// zero spreadsheet reads: the tab handle is not opened until the token has
+// matched. The refusals are deliberately identical so a probe cannot tell an
+// unconfigured project from a wrong guess; `not_configured` is reported by
+// the CALLING side, which knows its own property is missing without asking.
+// The token and the property are never echoed, logged or audited.
+//
+// The NEAR side (nwEventsProxy_) asks Events' server on the signed-in user's
+// behalf and is called only after this app has decided the user may ask —
+// validateSessionForData + nwRequire_ in handleNetworkOp_. Its invariants are
+// guidanceMentionsProxy_'s verbatim: the property .trim()-ed, not_configured
+// under 16 characters, muteHttpExceptions with upstream_http_<code>,
+// upstream_unreachable on a throw, and upstream_not_json with a 160-character
+// snippet because Apps Script serves its own exception pages as HTML at 200.
+var NW_PEER_TOKEN_PROP = 'NETWORK_PEER_TOKEN';   // gates THIS far side; Events holds the same value
+var NW_EVENTS_TOKEN_PROP = 'EVENTS_PEER_TOKEN';  // gates Events' far side; read by the near side below
+// Events' /exec — from googleAppsScripts/Events/Events.config.json DEPLOYMENT_ID,
+// pasted as a constant the way Profiler pastes CLASSROOM_GUIDANCE_EXEC.
+var EVENTS_PEER_EXEC =
+  'https://script.google.com/macros/s/AKfycbyI_SRS7Q3msirnY_UDx6Dz0jK75Onr9P0yocHGovnuIQlpHLIiSmvrpeyruhP3QaG_EQ/exec';
+// The relationships the recommendation score reads (§8); the rest are not
+// returned at all rather than returned and ignored.
+var NW_PEER_RELATIONSHIPS = ['target', 'customer', 'partner', 'channel'];
+var NW_PEER_SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;   // mirror of Events' EV_SLUG_RE
+
+function nwPeerAuthorised_(p) {
+  // Trimmed on both sides: the property is pasted into two projects by hand
+  // and a trailing newline is invisible in the Script Properties UI.
+  var want = String(PropertiesService.getScriptProperties()
+    .getProperty(NW_PEER_TOKEN_PROP) || '').trim();
+  return want.length >= 16 && String((p && p.t) || '').trim() === want;
+}
+
+function nwHandlePeer_(e) {
+  var p = (e && e.parameter) || {};
+  if (!nwPeerAuthorised_(p)) return { success: false, error: 'denied' };
+  var op = String(p.nop || '');
+  try {
+    if (op === 'accounts') return nwPeerAccounts_(p);
+    if (op === 'signals') return nwPeerSignals_(e, p);
+  } catch (err) {
+    // Answer as JSON so the caller can relay something true instead of
+    // parsing Apps Script's HTML exception page (guidancepeer's lesson).
+    return { success: false, error: 'peer_failed',
+             detail: String((err && err.message) || err).slice(0, 200) };
+  }
+  return { success: false, error: 'denied' };
+}
+
+// The owner the peer asks on behalf of. There is no session here, so the
+// owner IS the scope: the same single-entry map resolveOwnerSet_ answers a
+// signed-in user asking for their own rows. Combined views ('*') are not
+// offered to a peer.
+function nwPeerOwner_(p) {
+  var owner = String((p && p.owner) || '').trim().toLowerCase();
+  if (!owner || owner.indexOf('@') < 1) return null;
+  return owner;
+}
+
+// nop=accounts (GET) — live Accounts with a scored relationship, minimum
+// necessary: id, name, slug, relationship, stage, segments, tags. No
+// contacts, no emails, no notes, no HQ — and the owner column is not echoed.
+function nwPeerAccounts_(p) {
+  var owner = nwPeerOwner_(p);
+  if (!owner) return { success: false, error: 'owner_required' };
+  var set = {}; set[owner] = 'own';
+  var tabs = ensureNetworkTabs_();
+  var rows = nwListRows_(tabs.accounts, set, {
+    id: 'Account ID', name: 'Name', slug: 'Profiler Slug', relationship: 'Relationship', stage: 'Stage',
+    segments: 'Segment IDs', tags: 'Tags' });
+  var out = [];
+  for (var i = 0; i < rows.length; i++) {
+    var r = rows[i];
+    if (NW_PEER_RELATIONSHIPS.indexOf(String(r.relationship || '').toLowerCase()) < 0) continue;
+    out.push({ id: r.id, name: r.name, slug: r.slug, relationship: r.relationship, stage: r.stage,
+               segments: nwArr_(r.segments), tags: nwArr_(r.tags) });
+  }
+  auditLog('data_read', owner, 'peer_accounts', { accounts: out.length });
+  return { success: true, built: nwNow_(), accounts: out };
+}
+
+// nop=signals — two legs on one op.
+//   POST with a JSON body { owner, signals:[…] } — the upsert Events' weekly
+//   diff (E4) writes: key (accountId, eventSlug, kind, evidenceUrl); a re-run
+//   refreshes Last Seen (and Confidence / Note when carried) instead of
+//   duplicating the row; rows are written Source = events. `kind` must be in
+//   NW_SIGNAL_KINDS, the account must exist, be live and be the owner's, and a
+//   LinkedIn evidence URL is rejected with linkedin_not_fetched — the manual
+//   path is the only LinkedIn entry (D17). Every rejection is per-row and
+//   indexed; one bad row never fails the batch.
+//   GET with accountId — the read leg Events' eop=signals proxies (its
+//   read-through exists so Network's later "will be at" chips need one proxy,
+//   not two): the live signal rows for that one account, ids and evidence only.
+function nwPeerSignals_(e, p) {
+  var owner = nwPeerOwner_(p);
+  if (!owner) return { success: false, error: 'owner_required' };
+  var body = nwPeerJsonBody_(e, p);
+  if (body && body.owner) {
+    var bodyOwner = String(body.owner).trim().toLowerCase();
+    if (bodyOwner !== owner) return { success: false, error: 'owner_mismatch' };
+  }
+  if (body && body.parseError) return { success: false, error: 'bad_json' };
+  var tabs = ensureNetworkTabs_();
+  if (!body || !body.signals) return nwPeerSignalsRead_(tabs, owner, p);
+  return nwPeerSignalsWrite_(tabs, owner, body);
+}
+
+// The JSON body of a peer POST. Apps Script hands a JSON payload as
+// e.postData.contents; a form-encoded caller may instead put the JSON in a
+// `signals` field. Neither is trusted beyond JSON.parse — every row is
+// validated field by field in the write leg.
+function nwPeerJsonBody_(e, p) {
+  var raw = '';
+  if (e && e.postData && e.postData.contents) raw = String(e.postData.contents);
+  else if (p && p.signals) raw = String(p.signals);
+  if (!raw) return null;
+  try {
+    var parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object') return null;
+    if (Object.prototype.toString.call(parsed) === '[object Array]') return { signals: parsed };
+    return parsed;
+  } catch (jErr) { return { parseError: true }; }
+}
+
+function nwPeerSignalsRead_(tabs, owner, p) {
+  var accountId = nwStr_(p.accountId);
+  if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') return { success: false, error: 'bad_account_id' };
+  var set = {}; set[owner] = 'own';
+  var rows = nwListRows_(tabs.signals, set, {
+    id: 'Signal ID', accountId: 'Account ID', contactId: 'Contact ID', eventSlug: 'Event Slug', kind: 'Kind',
+    evidenceUrl: 'Evidence URL', confidence: 'Confidence', firstSeen: 'First Seen', lastSeen: 'Last Seen', source: 'Source' });
+  var out = [];
+  for (var i = 0; i < rows.length; i++) {
+    if (rows[i].accountId !== accountId) continue;
+    out.push({ id: rows[i].id, accountId: accountId, contactId: rows[i].contactId, eventSlug: rows[i].eventSlug,
+               kind: rows[i].kind, evidenceUrl: rows[i].evidenceUrl, confidence: Number(rows[i].confidence) || 0,
+               firstSeen: rows[i].firstSeen, lastSeen: rows[i].lastSeen, source: rows[i].source });
+  }
+  auditLog('data_read', owner, 'peer_signals_read', { accountId: accountId, signals: out.length });
+  return { success: true, built: nwNow_(), signals: out };
+}
+
+function nwPeerLinkedIn_(url) {
+  var m = /^https?:\/\/([^\/?#]+)/i.exec(String(url || ''));
+  if (!m) return false;
+  var host = m[1].toLowerCase();
+  return host === 'linkedin.com' || /\.linkedin\.com$/.test(host) || host === 'lnkd.in';
+}
+
+function nwPeerSignalsWrite_(tabs, owner, body) {
+  if (body.parseError) return { success: false, error: 'bad_json' };
+  var list = nwArr_(body.signals);
+  if (!list.length) return { success: false, error: 'signals_required' };
+  if (list.length > 500) return { success: false, error: 'too_many_signals' };
+  var accounts = nwSheetRead_(tabs.accounts);
+  var liveAccounts = {};
+  for (var r = 1; r < accounts.vals.length; r++) {
+    var row = accounts.vals[r];
+    if (String(row[accounts.idx['Owner']] || '').toLowerCase() !== owner) continue;
+    if (String(row[accounts.idx['Deleted At']] || '')) continue;
+    liveAccounts[String(row[accounts.idx['Account ID']] || '')] = true;
+  }
+  var sig = nwSheetRead_(tabs.signals);
+  var byKey = {}, taken = {};
+  for (var s = 1; s < sig.vals.length; s++) {
+    var sr = sig.vals[s];
+    taken[String(sr[sig.idx['Signal ID']] || '')] = true;
+    if (String(sr[sig.idx['Owner']] || '').toLowerCase() !== owner) continue;
+    byKey[[String(sr[sig.idx['Account ID']] || ''), String(sr[sig.idx['Event Slug']] || ''),
+           String(sr[sig.idx['Kind']] || ''), String(sr[sig.idx['Evidence URL']] || '')].join('\u0001')] = s + 1;
+  }
+  var now = nwNow_(), written = 0, updated = 0, rejected = [];
+  for (var i = 0; i < list.length; i++) {
+    var x = list[i] && typeof list[i] === 'object' ? list[i] : {};
+    var accountId = nwStr_(x.accountId), slug = nwStr_(x.eventSlug, 64).toLowerCase();
+    var kind = nwStr_(x.kind, 40).toLowerCase(), evidence = nwStr_(x.evidenceUrl, 500);
+    var contactId = nwStr_(x.contactId);
+    var reason = '';
+    if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') reason = 'bad_account_id';
+    else if (!liveAccounts[accountId]) reason = 'account_not_found';
+    else if (!NW_PEER_SLUG_RE.test(slug)) reason = 'bad_slug';
+    else if (NW_SIGNAL_KINDS.indexOf(kind) < 0) reason = 'bad_kind';
+    else if (!evidence || !/^https?:\/\//i.test(evidence)) reason = 'evidence_required';
+    else if (nwPeerLinkedIn_(evidence)) reason = 'linkedin_not_fetched';
+    else if (contactId && !(NW_ID_RE.test(contactId) && contactId.charAt(0) === 'c')) reason = 'bad_contact_id';
+    if (reason) { rejected.push({ index: i, reason: reason }); continue; }
+    var conf = Number(x.confidence);
+    if (isNaN(conf)) conf = 0; if (conf < 0) conf = 0; if (conf > 1) conf = 1;
+    var note = nwStr_(x.note, 500);
+    var key = [accountId, slug, kind, evidence].join('\u0001');
+    if (byKey[key]) {
+      var rowNum = byKey[key];
+      tabs.signals.getRange(rowNum, sig.idx['Last Seen'] + 1).setValue(now);
+      tabs.signals.getRange(rowNum, sig.idx['Confidence'] + 1).setValue(conf);
+      if (note) tabs.signals.getRange(rowNum, sig.idx['Note'] + 1).setValue(note);
+      updated++;
+      continue;
+    }
+    var firstSeen = nwStr_(x.firstSeen, 40);
+    if (!firstSeen || isNaN(new Date(firstSeen).getTime())) firstSeen = now;
+    var id = nwNewId_('s', taken); taken[id] = true;
+    nwWriteRow_(tabs.signals, sig.headers, {
+      'Signal ID': id, 'Owner': owner, 'Account ID': accountId, 'Contact ID': contactId, 'Event Slug': slug,
+      'Kind': kind, 'Person Name': nwStr_(x.personName, 200), 'Person Title': nwStr_(x.personTitle, 200),
+      'Evidence URL': evidence, 'First Seen': firstSeen, 'Last Seen': now, 'Confidence': conf, 'Note': note,
+      'Source': 'events' }, 0);
+    byKey[key] = true;
+    written++;
+  }
+  if (written) bumpDataRev();
+  auditLog('data_write', owner, 'peer_signals_write', { written: written, updated: updated, rejected: rejected.length });
+  return { success: true, written: written, updated: updated, rejected: rejected };
+}
+
+// The near side — this app asking Events' server. guidanceMentionsProxy_
+// verbatim, parameterised on the op and its query params. GET only: every
+// Events peer op is a read. Called only from handleNetworkOp_ after
+// validateSessionForData + nwRequire_ — never from a token-gated route.
+function nwEventsProxy_(eop, params) {
+  var token = String(PropertiesService.getScriptProperties()
+    .getProperty(NW_EVENTS_TOKEN_PROP) || '').trim();
+  if (token.length < 16) return { success: false, error: 'not_configured' };
+  var url = EVENTS_PEER_EXEC + '?action=peer&eop=' + encodeURIComponent(String(eop || ''))
+    + '&t=' + encodeURIComponent(token);
+  var qp = params || {};
+  for (var k in qp) if (qp.hasOwnProperty(k) && qp[k] != null && qp[k] !== '') {
+    url += '&' + encodeURIComponent(k) + '=' + encodeURIComponent(String(qp[k]));
+  }
+  var body;
+  try {
+    var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true });
+    if (resp.getResponseCode() !== 200) {
+      return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
+    }
+    body = resp.getContentText();
+  } catch (fErr) {
+    return { success: false, error: 'upstream_unreachable' };
+  }
+  // A parse failure is NOT a transport failure: Apps Script serves its own
+  // exception pages as HTML at HTTP 200, so a throw upstream arrives here
+  // looking like a dead network. Name it, and carry a short snippet.
+  try {
+    return JSON.parse(body);
+  } catch (pErr) {
+    return { success: false, error: 'upstream_not_json',
+             detail: String(body || '').replace(/\s+/g, ' ').slice(0, 160) };
+  }
 }
 
 // PROJECT: ── N1 session 2 — review, dedupe, save (§4.2; NETWORK-SCHEMA.md §3, §7, §12, §13)
@@ -2110,6 +2378,14 @@ function doPost(e) {
       soResult = { type: 'gas-signed-out', success: false, error: String((soErr && soErr.message) || soErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(soResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: B — the peer far side (Events' server calling in). Token-gated
+  // by NETWORK_PEER_TOKEN, before any session validation; every boundary
+  // case is a flat `denied` with zero reads (see nwHandlePeer_).
+  if (action === "peer") {
+    return ContentService.createTextOutput(JSON.stringify(nwHandlePeer_(e)))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3677,6 +3953,13 @@ function doGet(e) {
   // the op Q0 copies into the other eight projects.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'quota') {
     return ContentService.createTextOutput(JSON.stringify(quotaProbe_()))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: B — the peer far side on GET (nop=accounts, the signals read leg).
+  // Same handler and the same flat refusals as the doPost route.
+  if (action === 'peer') {
+    return ContentService.createTextOutput(JSON.stringify(nwHandlePeer_(e)))
       .setMimeType(ContentService.MimeType.JSON);
   }
 

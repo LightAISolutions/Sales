@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15w] — 2026-09-22 05:05:03 AM EST — v07.10r
+
+### Added
+- **Source event fills itself in** when you review a scanned card: if exactly one of your starred events is on today, the field is prefilled with it; if several are, they are offered as pills under the field; if none are, nothing changes. The field stays editable as before, and the default arrives quietly — it never overwrites something you have already typed
+- A short, plain message when the two apps are not yet linked
 
 ## [v01.14w] — 2026-09-21 06:47:37 AM EST — v06.94r
 

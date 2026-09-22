@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 2/50`
+`Sections: 3/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.03g] — 2026-09-22 05:05:03 AM EST — v07.10r
+
+### Added
+- **The backend can now talk to the Network backend, and answer it** — the same shared-secret route as Network's: a missing, short or wrong secret is refused with one flat answer before any data is opened, and nothing about the secret is ever logged
+- Answers the peer with your starred events that are on today (in each event's own time zone) and, separately, every starred event with your attending state — read from your stars and the public registry, never anything about people
+- Relays one account's attendance signals from the Network backend, with each event's name and dates attached
+- A signed-in administrator's request for Network's scored accounts is passed through, reporting "not connected" rather than an error while the link is unset
 
 ## [v01.02g] — 2026-09-22 04:14:18 AM EST — v07.09r
 

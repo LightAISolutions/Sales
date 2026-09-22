@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.03w">
+  <meta name="build-version" content="v01.04w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -487,6 +487,7 @@
     #ev-sheet .ev-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
     #ev-sheet .ev-chip { font: 12px/1 var(--ev-mono); padding: 6px 9px; border-radius: 999px; border: 1px solid var(--ev-line2); color: var(--ev-accent); text-decoration: none; background: var(--ev-paper); }
     #ev-sheet .ev-sources { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 0 0 12px; }
+    #ev-sheet .ev-netnote { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 12px 0 0; padding-top: 10px; border-top: 1px dashed var(--ev-line); }
     #ev-sheet .ev-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
     .ev-btn {
       display: inline-block; font: 13px/1 var(--ev-mono); padding: 10px 14px; border-radius: 8px; text-decoration: none; cursor: pointer;
@@ -4490,6 +4491,7 @@ function evErrText(err) {
   if (err === 'ROLE_DENIED') return 'Your account does not have access to Events.';
   if (err === 'SPREADSHEET_NOT_CONFIGURED') return 'The Events spreadsheet is not configured yet — the calendar works, stars do not.';
   if (err === 'registry_unavailable') return 'The event registry could not be loaded. Check the connection and reopen the app.';
+  if (err === 'not_configured') return 'Connect Network to score by account — the two apps are not linked yet.';
   return 'Could not complete that (' + (err || 'unknown') + ').';
 }
 function evEl(tag, cls, text) {
@@ -4990,6 +4992,11 @@ function evOpenSheet(slug) {
   actions.appendChild(ics);
   sh.appendChild(actions);
   if (evAdmitted()) sh.appendChild(evOwnBlock(e));
+  // B: the one-line placeholder E3 replaces with the recommendation panel.
+  // It issues no request — the panel's input (eop=netaccounts through the
+  // bridge) is E3's to wire; until then this is where a not_configured
+  // answer will land (evErrText knows the word already).
+  if (evAdmitted()) sh.appendChild(evEl('div', 'ev-netnote', 'Connect Network to score by account — the recommendation panel arrives with E3.'));
   back.style.display = 'block';
   sh.style.display = 'block';
   sh.scrollTop = 0;

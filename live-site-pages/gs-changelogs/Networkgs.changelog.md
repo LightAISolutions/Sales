@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08g] — 2026-09-22 05:05:03 AM EST — v07.10r
+
+### Added
+- **The backend can now talk to the Events backend, and answer it** — the first private server-to-server route between the two apps. Every request from the peer must carry a shared secret; a missing, short or wrong secret is refused with one flat answer before any data is opened, and nothing about the secret is ever written to a log
+- Answers the peer with your live accounts that carry a scored relationship — names, slugs, relationship, stage, segments and tags only; never contacts, emails or notes
+- Accepts attendance signals from the peer for your accounts, one per account × event × kind × evidence link, refreshing an existing row instead of duplicating it; a signal that cites LinkedIn is refused row by row
+- Asks the Events backend which of your starred events is on today, for the scan card's default — only for a signed-in administrator, and reporting "not connected" rather than an error while the link is unset
 
 ## [v01.07g] — 2026-09-21 06:47:37 AM EST — v06.94r
 

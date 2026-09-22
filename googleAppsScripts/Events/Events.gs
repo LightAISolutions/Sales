@@ -1,4 +1,4 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -694,6 +694,17 @@ function handleEventsOp_(e) {
       evRequire_(sess, 'calendar', 'events_' + op);
       return evStarOp_(sess, p, op);
     }
+    if (op === 'netaccounts') {
+      // B: the recommendation panel's input (E3 paints it) — Network's live
+      // scored accounts for the signed-in user, through the near side. Gated
+      // by the `recommend` capability; not_configured passes through so the
+      // sheet's placeholder can say so.
+      evRequire_(sess, 'recommend', 'events_netaccounts');
+      var acctRes = evNetworkProxy_('accounts', { owner: sess.email });
+      auditLog('data_read', sess.email, 'events_netaccounts',
+        { accounts: (acctRes && acctRes.accounts && acctRes.accounts.length) || 0, ok: acctRes && acctRes.success ? 1 : 0 });
+      return acctRes;
+    }
     return { success: false, error: 'unknown_events_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -1313,6 +1324,14 @@ function doPost(e) {
       soResult = { type: 'gas-signed-out', success: false, error: String((soErr && soErr.message) || soErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(soResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: B — the peer far side (Network's server calling in). Token-gated
+  // by EVENTS_PEER_TOKEN, before any session validation; every boundary case
+  // is a flat `denied` with zero reads (see evHandlePeer_).
+  if (action === "peer") {
+    return ContentService.createTextOutput(JSON.stringify(evHandlePeer_(e)))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2585,6 +2604,183 @@ function checkSpreadsheetAccess(email, opt_ss) {
   return denied;
 }
 
+// PROJECT: ── B — the bridge, Events' side (design plan §6; EVENTS-SCHEMA.md §8)
+// The mirror of Network's B block: a token-gated FAR side answering Network's
+// server (?action=peer&t=<EVENTS_PEER_TOKEN>&eop=today|starred|signals) that
+// runs before session validation and answers every token-boundary case —
+// property unset or under 16 characters, `t` absent, empty or wrong, an
+// unknown op — with one flat { success:false, error:'denied' } and zero
+// spreadsheet reads; and a NEAR side (evNetworkProxy_) that asks Network's
+// server only after this app's own door has admitted the user
+// (validateSessionForData + evRequire_(sess, 'recommend')). Tokens and
+// properties are never echoed, logged or audited. `not_configured` is the
+// calling side's word for its own missing property.
+var EV_PEER_TOKEN_PROP = 'EVENTS_PEER_TOKEN';     // gates THIS far side; Network holds the same value
+var EV_NETWORK_TOKEN_PROP = 'NETWORK_PEER_TOKEN'; // gates Network's far side; read by the near side
+// Network's /exec — from googleAppsScripts/Network/Network.config.json
+// DEPLOYMENT_ID, pasted as a constant the way Profiler pastes CLASSROOM_GUIDANCE_EXEC.
+var NETWORK_PEER_EXEC =
+  'https://script.google.com/macros/s/AKfycbxuayBnl0pM0upSFEoqUkaW4bbXbVCKGKeGVdcgKiBM5FBj_ykQn30BINHyJMvc0_U8/exec';
+// The public registry, fetched by the server once per execution. A relative
+// fetch is not available server-side, so the Pages URL is derived from
+// EMBED_PAGE_URL — the same site the page reads it from, never a GitHub API
+// host ([PC-PRIVATE-REPO] #18 holds for the server too: the repo may be
+// private while Pages stays public).
+var EV_REGISTRY_URL = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'events-data/events.json';
+var _evRegistryCache = null;
+var EV_ACCOUNT_ID_RE = /^a-[0-9a-z]{13}$/;        // mirror of Network's NW_ID_RE, the a- prefix only
+
+function evPeerAuthorised_(p) {
+  var want = String(PropertiesService.getScriptProperties()
+    .getProperty(EV_PEER_TOKEN_PROP) || '').trim();
+  return want.length >= 16 && String((p && p.t) || '').trim() === want;
+}
+
+function evHandlePeer_(e) {
+  var p = (e && e.parameter) || {};
+  if (!evPeerAuthorised_(p)) return { success: false, error: 'denied' };
+  var op = String(p.eop || '');
+  try {
+    if (op === 'today') return evPeerToday_(p, true);
+    if (op === 'starred') return evPeerToday_(p, false);
+    if (op === 'signals') return evPeerSignals_(p);
+  } catch (err) {
+    return { success: false, error: 'peer_failed',
+             detail: String((err && err.message) || err).slice(0, 200) };
+  }
+  return { success: false, error: 'denied' };
+}
+
+function evPeerOwner_(p) {
+  var owner = String((p && p.owner) || '').trim().toLowerCase();
+  if (!owner || owner.indexOf('@') < 1) return null;
+  return owner;
+}
+
+// The registry rows keyed by slug. Fetched once per execution; a bad
+// response or a parse failure is one named error, never a throw, so the
+// caller's proxy relays `registry_unavailable` rather than an HTML page.
+function evRegistry_() {
+  if (_evRegistryCache) return _evRegistryCache;
+  var resp;
+  try { resp = UrlFetchApp.fetch(EV_REGISTRY_URL, { muteHttpExceptions: true, followRedirects: true }); }
+  catch (fErr) { return { error: 'registry_unavailable' }; }
+  if (resp.getResponseCode() !== 200) return { error: 'registry_unavailable' };
+  var data;
+  try { data = JSON.parse(resp.getContentText()); } catch (pErr) { return { error: 'registry_unavailable' }; }
+  var list = (data && data.events) || [];
+  var bySlug = {};
+  for (var i = 0; i < list.length; i++) if (list[i] && list[i].slug) bySlug[String(list[i].slug)] = list[i];
+  _evRegistryCache = { bySlug: bySlug };
+  return _evRegistryCache;
+}
+
+// The calendar date "now" in a zone — the event's own tz where the registry
+// has one (EVENTS-SCHEMA.md §1: IANA names), else the script's.
+function evTodayIn_(tz) {
+  var zone = String(tz || '').trim() || Session.getScriptTimeZone() || 'America/New_York';
+  try { return Utilities.formatDate(new Date(), zone, 'yyyy-MM-dd'); }
+  catch (zErr) { return Utilities.formatDate(new Date(), 'America/New_York', 'yyyy-MM-dd'); }
+}
+
+// eop=today (onlyToday) — the owner's starred events whose dates contain
+// today in the event's own tz; eop=starred — the same rows on every date,
+// with the attending state. Both join the Stars tab to the public registry
+// and carry only what the registry already publishes plus the owner's own
+// attending state; a star on a slug the registry no longer carries is
+// skipped, not invented.
+function evPeerToday_(p, onlyToday) {
+  var owner = evPeerOwner_(p);
+  if (!owner) return { success: false, error: 'owner_required' };
+  var set = {}; set[owner] = 'own';
+  var tabs = ensureEventsTabs_();
+  var stars = evListRows_(tabs.stars, set, { slug: 'Event Slug', attending: 'Attending' });
+  var reg = evRegistry_();
+  if (reg.error) return { success: false, error: reg.error };
+  var out = [];
+  for (var i = 0; i < stars.length; i++) {
+    var ev = reg.bySlug[stars[i].slug];
+    if (!ev) continue;
+    var start = String(ev.start || ''), end = String(ev.end || ev.start || '');
+    if (onlyToday) {
+      var today = evTodayIn_(ev.tz);
+      if (!(start && start <= today && today <= end)) continue;
+    }
+    var row = { slug: String(ev.slug), name: String(ev.name || ''), start: start, end: end, city: String(ev.city || '') };
+    if (!onlyToday) row.attending = String(stars[i].attending || '');
+    out.push(row);
+  }
+  out.sort(function(a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : (a.slug < b.slug ? -1 : 1); });
+  auditLog('data_read', owner, onlyToday ? 'peer_today' : 'peer_starred', { events: out.length });
+  var res = { success: true, events: out };
+  if (onlyToday) res.today = evTodayIn_('');
+  return res;
+}
+
+// eop=signals — read-through only. Events asks Network's far side for one
+// account's Signals (Network's nop=signals GET leg) through the near side,
+// then joins each row's slug to the registry for the name and start. Exists
+// so Network's later "will be at" chips need one proxy, not two; a
+// not_configured or upstream_* answer from the near side is passed through.
+function evPeerSignals_(p) {
+  var owner = evPeerOwner_(p);
+  if (!owner) return { success: false, error: 'owner_required' };
+  var accountId = String((p && p.accountId) || '').trim();
+  if (!EV_ACCOUNT_ID_RE.test(accountId)) return { success: false, error: 'bad_account_id' };
+  var up = evNetworkProxy_('signals', { owner: owner, accountId: accountId });
+  if (!(up && up.success)) return up || { success: false, error: 'upstream_empty' };
+  var reg = evRegistry_();
+  var out = [];
+  var rows = up.signals || [];
+  for (var i = 0; i < rows.length; i++) {
+    var s = rows[i] || {};
+    var ev = (!reg.error && reg.bySlug[String(s.eventSlug || '')]) || null;
+    out.push({ eventSlug: String(s.eventSlug || ''), name: ev ? String(ev.name || '') : '', start: ev ? String(ev.start || '') : '',
+               kind: String(s.kind || ''), confidence: Number(s.confidence) || 0, evidenceUrl: String(s.evidenceUrl || '') });
+  }
+  auditLog('data_read', owner, 'peer_signals', { accountId: accountId, signals: out.length });
+  return { success: true, signals: out };
+}
+
+// The near side — this app asking Network's server. guidanceMentionsProxy_
+// verbatim, parameterised on the op and its params; `body` (an object)
+// turns the call into a JSON POST for Network's nop=signals write leg. Called
+// from evPeerSignals_ (on a token the far side already matched) and, for the
+// session ops, only after evRequire_(sess, 'recommend').
+function evNetworkProxy_(nop, params, body) {
+  var token = String(PropertiesService.getScriptProperties()
+    .getProperty(EV_NETWORK_TOKEN_PROP) || '').trim();
+  if (token.length < 16) return { success: false, error: 'not_configured' };
+  var url = NETWORK_PEER_EXEC + '?action=peer&nop=' + encodeURIComponent(String(nop || ''))
+    + '&t=' + encodeURIComponent(token);
+  var qp = params || {};
+  for (var k in qp) if (qp.hasOwnProperty(k) && qp[k] != null && qp[k] !== '') {
+    url += '&' + encodeURIComponent(k) + '=' + encodeURIComponent(String(qp[k]));
+  }
+  var opts = { muteHttpExceptions: true, followRedirects: true };
+  if (body && typeof body === 'object') {
+    opts.method = 'post'; opts.contentType = 'application/json'; opts.payload = JSON.stringify(body);
+  }
+  var text;
+  try {
+    var resp = UrlFetchApp.fetch(url, opts);
+    if (resp.getResponseCode() !== 200) {
+      return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
+    }
+    text = resp.getContentText();
+  } catch (fErr) {
+    return { success: false, error: 'upstream_unreachable' };
+  }
+  // A parse failure is NOT a transport failure: Apps Script serves its own
+  // exception pages as HTML at HTTP 200. Name it, with a short snippet.
+  try {
+    return JSON.parse(text);
+  } catch (pErr) {
+    return { success: false, error: 'upstream_not_json',
+             detail: String(text || '').replace(/\s+/g, ' ').slice(0, 160) };
+  }
+}
+
 // PROJECT START — Add your project-specific code here
 // PROJECT END
 // =============================================
@@ -2879,6 +3075,13 @@ function doGet(e) {
   // only, never a user or a details cell (details on quotaProbe_).
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'quota') {
     return ContentService.createTextOutput(JSON.stringify(quotaProbe_()))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: B — the peer far side on GET (eop=today | starred | signals).
+  // Same handler and the same flat refusals as the doPost route.
+  if (action === 'peer') {
+    return ContentService.createTextOutput(JSON.stringify(evHandlePeer_(e)))
       .setMimeType(ContentService.MimeType.JSON);
   }
 

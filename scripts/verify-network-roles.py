@@ -236,6 +236,11 @@ def gas_stub(role, counter, state=None):
                 if row:
                     row['deletedAt'] = '' if 'nop=restore' in url else '2026-09-21T00:00:00Z'
                 body = {'success': True, 'id': cid, 'deletedAt': row and row['deletedAt']}
+            elif 'nop=eventstoday' in url:
+                # B: the bridge's Source Event default. The stub has no peer, so
+                # it answers what the real backend answers while the peer tokens
+                # are unset — the card must stay exactly as N1 built it.
+                body = {'success': False, 'error': 'not_configured'}
             elif 'nop=extract' in post:
                 # body-POST only: the images travel in the form body, not the URL
                 assert 'front=' in post and 'contactId=c-0123456789abc' in post

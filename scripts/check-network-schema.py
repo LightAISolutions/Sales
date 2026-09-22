@@ -62,7 +62,8 @@ COUNT_SHAPES = [r'\b[A-Za-z_$][\w$]*\.(?:id|length|created)\b', r'\bnwFieldCount
 ALLOWED_KEYS = {'contactId', 'accountId', 'absorbedId', 'duplicateOf', 'interactionId', 'id', 'accounts', 'contacts',
                 'interactions', 'fields', 'sides', 'duplicate', 'accountCreated', 'count', 'error', 'operation', 'role',
                 'capability', 'op', 'ids', 'rows', 'signals', 'drafts', 'mailings', 'purged', 'retried', 'accountChanged',
-                'renamed', 'tags'}   # N2: nop=account logs a rename flag and the tag COUNT, never a tag
+                'renamed', 'tags',   # N2: nop=account logs a rename flag and the tag COUNT, never a tag
+                'written', 'updated', 'rejected', 'events', 'ok'}   # B: the peer signals upsert logs three counts; eventstoday an event count + a success flag
 
 
 def schema_enums(text):
