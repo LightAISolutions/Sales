@@ -6,6 +6,53 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 01:08:08 AM EST (push timestamp; the session ran ~12:50 → 01:20 AM EST)
+**Repo version:** v07.07r — one push: `5169babd` v07.07r (E1 session 1 — the Events scaffold and the agenda) on `claude/ecstatic-mayer-qe6sgq` restarted from `origin/main` at `6884a411`; auto-merged to `main`.
+**Branch:** `claude/ecstatic-mayer-qe6sgq`
+**Model:** Fable 5.1 High (E1 brief, §13.7, session 1 of two)
+
+### What was done
+
+**E1 session 1 is landed — §11's E1 row reads *In progress — session 1, v07.07r*; steps 1–4 of §13.7 done, steps 5–8 (session 2) untouched.**
+
+- **`Events.html` v01.01w / `Events.gs` v01.01g** scaffolded by `scripts/setup-gas-project.sh` from the auth template (`hipaa`, fleet `CLIENT_ID`, `ACL_PAGE_NAME: Events`, `PORTAL_ICON: 📅`), then the N0-style hand edits: `events.webmanifest` + `images/events-icon-192/512.png`, the `manifest-src 'self'` PROJECT OVERRIDE on both CSP tags, no service worker, `HEARTBEAT_INTERVAL` 600 s and `DATA_POLL_INTERVAL: 0` on both sides, `op=quota` + `op=aclhealth` ported verbatim from `Network.gs`. The fleet Master ACL id (`1kG2K…UvE`) was set by hand — the Global ACL config the script defaults from still carries its placeholder.
+- **The door, both sides** (`EV_ROLE_CAPS` admin: `calendar` · `recommend` · `plans` · `signals` · `roster` · `tuning`; the other three tiers empty; `evAdmitted_` / `evAdmitted()`), `scripts/verify-events-roles.py` passing at 390 × 844 — admin: the agenda (99 rows), exactly one `eop=list` and one registry fetch; contributor / analyst / viewer: the turned-away card, zero requests, **no registry fetch either**; `?as=` only subtracts; zero page errors; the sheet opens with `dates=` / `ctz=` and the `.ics` download, Escape closes it.
+- **`ensureEventsTabs_()`** creating all five §5 tabs (`Stars` · `Plans` · `Meetings` · `Proposed` · `Tuning`) plus `Shares` · `Profiles`; `EV_ID_RE` / `evNewId_` (`st-` `pl-` `mt-` `pr-`); ownership helpers verbatim from Receipts via Network; `eop=list|star|unstar|note` in the PROJECT regions only, body-POST for the writes, Attending enum-validated, audit rows ids + counts only.
+- **The agenda**: relative fetch of `events-data/events.json` (+ `profiler-segments.json` and `profiler-companies.json` for labels), month → day groups under a sticky month header, an IntersectionObserver month-in-view label in the masthead, a Today pill, past editions behind a fold; rows name · dates · place · kind + star toggle, no ids or numbers on a card; `evPlace()` tolerates empty city / region / venue (18 / 31 / 68 rows) without a stray separator; tentative rows say so. Filters: kind, region (state codes with ≥ 3 events + Abroad), audience segment (scrolling pill strip), ★ Starred, and **"Signals only" present but disabled, noted "from E4"**.
+- **The detail sheet**: organiser, venue, where, status badge (tentative rows are said to be tentative — 27 rows, 11 of them permanently unverifiable from a server), tierNote, the links, audience by name, `mentions[]` chips → `Profiler.html#<slug>`, the sources line with `lastConfirmed`; **Add to Google Calendar** (§9 template URL) and **Download .ics** (hand-rolled RFC 5545, 75-octet folding, CRLF, escaping, stable `UID:<slug>@events.lightaisolutions.github.io`); star / attending / note through `eop=note`.
+- **Docs**: CHANGELOG v07.07r (the previous session's `[Unreleased]` SESSION-CONTEXT entry absorbed), **rotation fired** — the 2026-09-16 group (25 sections, v06.05r–v06.29r) archived with all 25 SHAs resolved, `Sections: 78/100`; README tree (page description, `events.webmanifest`, `verify-events-roles.py`, v01.01w · v01.01g); REPO-ARCHITECTURE flowchart nodes + URL regenerated and verified (9,569 chars); `diagrams/Events-diagram.md`, the GAS Projects row and the `Deploy Events` workflow step by the script.
+
+### Where we left off
+
+**Session 1 is merged; session 2 has not started.** Two ids are still placeholders and are the developer's step, not a session's: **`SPREADSHEET_ID`** (the "own spreadsheet" — N0 had one supplied up front; this session ran unattended with none) and **`DEPLOYMENT_ID`** (recorded the N0 way after the deploy). Until both are real the live page shows the calendar with "Stars are not connected yet" and `ensureEventsTabs_()` throws `SPREADSHEET_NOT_CONFIGURED`. The deploy hand-off steps are in the v07.07r CHANGELOG Notes (the N0 list, including the Manage deployments → New version bootstrap lesson).
+
+The chat hand-off named what to check on the phone once deployed: the agenda opens at today's month with the month named in the masthead; a starred event shows ★ on its row and in the Starred count; the Calendar link opens Google Calendar prefilled with the dates and the event's time zone; the `.ics` imports.
+
+### Key decisions made
+
+- **The note rides on the `eop=list` row** (id · slug · attending · **note** · updatedAt) rather than behind a separate detail op — the sheet shows it, there is no `eop=get` in the brief's four ops, and a per-open detail request would cost an execution each time under D14. Nothing about people is in this app, so the minimum-necessary principle is not strained.
+- **`eop=unstar` hard-deletes the row** — `Stars` has no `Deleted At` column in §5, and a star is not a record about a person (the D8 soft-delete reasoning does not apply). **`eop=note` on an unstarred event stars it** — a note implies interest.
+- **A turned-away tier fetches nothing, not even the public registry** — the denied card is the whole of a denied load; the verifier asserts it.
+- **Region pills are derived from the registry** (state codes with ≥ 3 events + "Abroad") rather than a hand-kept list, so E2's `events sync` never has to touch the page for a new state.
+- **`op=quota` / `op=aclhealth` were copied from `Network.gs`**, not inherited from the template file — the auth template in `live-site-pages/templates/` still lacks them; the brief's "shared template region" is the region N0 defined in Network. The template itself was not edited ([PC-TEMPLATE-PROP] #19 not triggered).
+- **A JS comment naming the two GitHub hosts was reworded** so a grep-based [PC-PRIVATE-REPO] #18 audit never matches `Events.html`.
+
+### Active context
+
+- **Repo version v07.07r.** `CHANGELOG.md` `Sections: 78/100` after the rotation — no rotation is due for a while.
+- **Placeholders in `Events.config.json` / `Events.gs`**: `SPREADSHEET_ID`, `DEPLOYMENT_ID` (page `_e = ''`). The Deploy Events workflow step no-ops until the deployment id is real.
+- **Parallel sessions were live** (`claude/adoring-brown-mvddj2` on the remote at session start). `MULTI_SESSION_MODE` is `Off` — every session restarts its branch from `origin/main` and checks `git ls-remote` before pushing.
+- **Reminders still open**: close out the "Repo access denied" issue after Monday's two earnings-desk runs (C2 must be rebuilt before Wednesday 2026-09-23 04:00 PDT); the Megmeet briefing prompt runs after the Network/Events build, before 2026-10-07 (`repository-information/megmeet-briefing-prompt.md`).
+- **Playwright** is `pip install playwright` + the pre-installed Chromium at `/opt/pw-browsers` (no `playwright install`); Pillow was `pip install pillow`. Both are per-container.
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- **Open a Fable 5.1 High session and run E1 session 2** — §13.7 steps 5–8: `scripts/build-events-ics.py` writing `live-site-pages/events-data/events.ics` (every `confirmed` event, `X-WR-CALNAME`, stable UIDs) wired into `check-events-registry.py`'s `.ics` walk, the Subscribe pill with the `webcal://` URL, the read-only day-plan tab, the Playwright phone pass (month header sticks across a month boundary, sheet opens/closes, a star round-trips through the stub, one event's ICS parses, the Calendar href carries `dates=` / `ctz=`, screenshots of month / agenda / detail, zero page errors), then flip §11's E1 row to Done and write the B brief as §13.8. The prompt was handed over in chat at the close of this session. If the developer has created the spreadsheet and deployed by then, record both ids in that session (the N0 way) before the phone pass.
+- **To continue:** type `run E1 session 2`
+
+## Previous Sessions
+
 **Date:** 2026-09-22 12:43:01 AM EST
 **Repo version:** v06.95r at the time of the push — **the repo is now at v07.06r**; a parallel Opus 5 session (`claude/repo-access-denied-339rna`) landed eleven versions beside this one. One push here: `5b1c9e5` v06.95r (E0 — the Events registry and source roster) on `claude/ecstatic-cannon-ilvoq2` restarted from `origin/main`; merged to `main`.
 **Branch:** `claude/ecstatic-cannon-ilvoq2`
@@ -51,49 +98,4 @@ The developer asked for the E1 paste-in prompt, which was handed over in chat at
 - **Open a Fable 5.1 High session and run E1 session 1** — the Events scaffold and agenda (§13.7; the prompt was handed over in chat at the close of this session). E0's artefacts are on `main` with the checker at 0, so the prerequisite the brief names is satisfied, and D16 puts a hard date on it: the calendar has to be live **before 2026-11-16**, which is RE+ week.
 - **To continue:** type `run E1 session 1`
 
-## Previous Sessions
-
-**Date:** 2026-09-22 12:29:48 AM EST
-**Repo version:** v07.06r — ten pushes this session on `claude/repo-access-denied-339rna`, rebased onto `origin/main` before each: `66f18297` v06.97r, `2cd6348b` v06.98r, `1ed61dc0` v06.99r, `4f9fca6c` v07.00r, `e7ed2c5e` + `c347b37e` v07.01r, `ea5f52f7` v07.02r, `afb26ada` v07.04r, `814c7281` v07.05r, `38c8da9d` v07.06r. `70a0c488` v07.03r is **not mine** — it is the Classroom C2 pipeline's own first commit.
-**Branch:** `claude/repo-access-denied-339rna`
-**Model:** Opus 5
-
-### What was done
-
-**The "Repo access denied" issue is closed, and the whole Routine fleet is rebuilt and proven.**
-
-- **Root cause**: `create_trigger` has no `sources` parameter, so every agent-created Routine fired into a session with no checkout and could never push. Proved by a controlled A/B on 2026-09-21 — two live earnings desks, identical but for the attached repository: the old one 33s / $0.11 / no commit, the new one ~14m / $13.86 / commit `cdfafb36` with 13 files and +2,020 lines.
-- **The UI's Edit form does NOT expose repositories**, despite the current documentation saying it does. Re-tested by the developer on C2: Edit opens, no repositories field, and **Runs with** shows only environment and model. Rebuild is mandatory; recorded so it is not re-litigated from the docs a third time.
-- **All five committing Routines rebuilt** (developer, via the claude.ai form) with `LightAISolutions/Sales` attached and **zero connectors**. C2 and Industry Guidance set to **Opus 5**; the two Profiler ones to **Sonnet 5**. The ACL health check is read-only and was deliberately **not** rebuilt.
-- **Four old `meta_mcp` copies deleted** — after archiving their prompts verbatim to `repository-information/routine-prompts-archive.md`, because a pre-delete check found `crusoe`'s research priorities had only partly survived the move into `watch[]`.
-- **Coverage gap found and closed**: 64 of 177 dossiers (36%) were covered by no Routine at all, 31 of them in Megmeet-adjacent segments including the four SST peers. Root cause was the hardcoded 21-company list in the sweep prompt. Every cadence row now carries a `tier` — 52 `core` (90d), 33 `watch` (180d), 0 untiered — and the sweep reads tiers, so coverage changes by commit.
-- **Both cache levers implemented, and lever 1 made automatic.** Measured where the calendar's bytes were: `watch` 66.4% + `source` 31.6% = 98%, none of it read by the queue logic. Split to `profiler-refresh-notes.json`; the calendar went **384,240 → 21,576 bytes (−94%)** and 2,573 → 1,069 lines, back under the Read tool's 2,000-line default. Lever 2 split 186 lines out of `profiler-app.md` (**−38%**). Net ≈ **−$2.49/run on the desk, ~$55/month**.
-- **Two checker fixes**: `build-classroom-segments.py --check` now separates real work from pin churn (was 16 due with 15 pin-only), and the P9 fixture in `check-classroom-pipeline.py` was repaired — it derived its briefing id from `coveredThrough` and collided with the real briefing the moment the pipeline's first commit advanced the watermark. `--selftest` back to **15 fixtures / 0 failures**.
-- **C2 landed its first-ever commit** (`70a0c488`), audited independently: 7 paths all inside contract §3, nothing forbidden touched, ledger watermark advanced off `null`, all gates clean.
-
-### Where we left off
-
-Everything is committed, pushed and merged. The repo is green: all four C2 gates pass, `--selftest` is 15/0, `check-readme-tree.py` is 0 findings, `sync-profiler-registry.py` is 0 findings. Six Routines live, all enabled, all with zero connectors.
-
-**The Megmeet briefing was deliberately deferred** — the developer wants it after the Network and Events build plan and closer to the 2026-10-07 start date. The prompt is preserved at `repository-information/megmeet-briefing-prompt.md` and a reminder is in `REMINDERS.md`.
-
-### Key decisions made
-
-- **Sonnet 5 stays the default for Routines; Opus 5 only where a checker cannot see the failure.** Every failure in the saga was infrastructural, not a run reasoning badly. C2 and Industry Guidance write curriculum whose correctness a structural checker cannot verify — a fabricated provenance pin passes every gate — so they get Opus 5. Haiku is disqualified by arithmetic (200K context vs runs of 335K and 361K). Fable is wrong for unattended work because it alone draws the 50% weekly sub-allocation.
-- **`usage.cost_usd` is API list-price valuation, not a balance charge** — verified by reconstruction to 0.75%. Drawn from plan allocation; `isUsingOverage: false`.
-- **Before writing a prompt instruction to work around a file, measure the file.** A data fix outlives every prompt that would have worked around it — and a prompt cannot be edited after its Routine is created.
-- **`created_via` alone is not a safe delete filter** — the ACL check is `meta_mcp` and must survive. The rule is `meta_mcp` minus the ACL check.
-- **The API's `sources` field is not evidence of repository attachment** — it reads empty even on Routines that have demonstrably committed. The **Runs with** card is the only reliable check (v06.70r trap, held again).
-
-### Active context
-
-- **Branch:** `claude/repo-access-denied-339rna` · **repo version** v07.06r · CHANGELOG `Sections: 102/100` raw but **78 non-exempt** (24 dated 2026-09-21 EST) — a counter reading over 100 is expected here and is **not** a rotation signal.
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Routines (6, all enabled, all zero connectors):** earnings desk weekdays 13:00Z (default model) · C2 Wednesdays 11:00Z (Opus 5) · quarterly check 1 Jan/Apr/Jul/Oct 13:00Z (Sonnet 5) · opportunity report 1st monthly 17:00Z (Sonnet 5) · Industry Guidance 15 Jan/Apr/Jul/Oct 13:00Z (Opus 5) · ACL health check daily 10:00Z.
-- **Open, none blocking:** (1) the Megmeet briefing, deferred by choice; (2) the sweep lag — core rows come due **2026-11-27** but the sweep next fires **2027-01-01**, a 35-day gap, and a monthly cadence with the tier gate would close it cheaply; (3) Receipts' ACL grace snapshot may still be unarmed — the daily ACL run reports it as a warning, and one successful Receipts sign-in arms it.
-- **Reminders:** the 2026-09-19 repo-access reminder is now fully satisfied by this session's work but was **left open deliberately** — it is developer-owned and only the developer closes it.
-
-### Recommendation for next session
-
-- **Resume the Network and Events build** — E0 is done (`events.json`, `events-sources.json`, the checker, 73 events), so E1 is next, with its brief already written as §13.7 of `NETWORK-EVENTS-DESIGN-PLAN.md`. That is the developer's stated priority, and the Megmeet briefing is explicitly queued behind it.
-- **To continue:** type `run E1`
+Developed by: LightAISolutions
