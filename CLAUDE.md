@@ -347,6 +347,13 @@ If the user says **"reconcile"** (or similar: "reconcile multi-session", "end mu
 > **--- END OF INDUSTRY GUIDANCE COMMAND ---**
 ---
 
+## Events Sync Command
+*If the user says **"events sync"** (or similar: "sync events", "apply the approved proposals", "apply the events JSON"): see `.claude/rules/events-app.md` — auto-injects when working on the Events app or its data (`live-site-pages/Events.html`, `googleAppsScripts/Events/Events.gs`, `live-site-pages/events-data/**`, `repository-information/EVENTS-SCHEMA.md`), and the full command body (the approved-proposals JSON from the app's Proposed tab → applied to `events.json` per change kind → `lastConfirmed` and the roster's `lastProbe` advanced → `events.ics` rebuilt → `scripts/check-events-registry.py` exit 0 as the gate, reverted on any finding → the `pr-` ids and the version reported for "Mark applied") is always available for on-demand invocation. The session never calls the deployed app and never widens a peer token; the poller in `Events.gs` proposes, the session applies (design plan §5.3, E2). Data schema single source of truth: `repository-information/EVENTS-SCHEMA.md`.*
+
+---
+> **--- END OF EVENTS SYNC COMMAND ---**
+---
+
 ## Behavioral Rules
 *Full rules in `.claude/rules/behavioral-rules.md` (always-loaded, no path scope). Covers: Execution Style, Plan Mode Visibility, AskUserQuestion Visibility, Page-Scope Commands, Think Before Asserting, Chesterton's Fence, Rule Placement Autonomy, Backups Before Major Changes, Incremental Writing, Confidence Disclosure, User-Perspective Reasoning, Section Placement Guide, Web Search Confidence, Provenance Markers.*
 
@@ -376,6 +383,7 @@ Path-scoped rules files — loaded automatically when working on matching files.
 | `.claude/rules/industry-guidance.md` | Industry Guidance Command (document ingest → verified analysis → role-gated in-app study module), module JSON section kinds, access model, versioning (path-scoped to guidance data + Classroom app since C3; user-triggered by "industry guidance: \<document\>" phrasing) | #1, #2 |
 | `.claude/rules/scraper-sources.md` | Scraper source roster — unavailable-outlet memory (blocked vs offline), mandatory live feed probe before adding any outlet, rejected workarounds (path-scoped to `Scraper.gs` / `Scraper.html`) | — |
 | `.claude/rules/profiler-app.md` | Profiler Command (company dossier research + profile generation), archival procedure, scheduled refreshes, data-vs-page versioning, recall design (path-scoped to Profiler app files + user-triggered by "profiler \<Company\>" phrasing) | — |
+| `.claude/rules/events-app.md` | Events Sync Command (the approved `Proposed` JSON → `events.json` per change kind, `lastConfirmed` / roster `lastProbe`, `events.ics` rebuild, the registry checker as the gate, the `pr-` ids to stamp), the never-list (no app call, no roster row, no `mentions[]`, no peer-token widening), the first-live-cycle hand-off (path-scoped to `Events.html` / `Events.gs` / `events-data/**` / `EVENTS-SCHEMA.md` + user-triggered by "events sync") | — |
 | `.claude/rules/classroom-app.md` | Classroom content authoring — where lessons/tracks live (strict-JSON literals in `Classroom.gs`), the provenance stamp rule (never fabricate an input, no `note:` prefix, never a parallel gate), freshness pins, the `// CONTENT START` / `// CONTENT END` content fence, verification via `scripts/check-classroom-content.py` and the diff-aware `scripts/check-classroom-pipeline.py`, the `gateDigest` refresh obligation; pointer to the unattended-committer contract for C2 pipeline sessions; the "Authoring a pipeline lesson" decision procedure (C2c — the G3 contradiction test, naming `changed[]` to P8, the G9/G11 briefing bar, the unseen G2/G7/§5.2 obligations, the write order, an assertion → rule table) (path-scoped to Classroom app files + `CLASSROOM-SCHEMA.md` + `CLASSROOM-COMMITTER-CONTRACT.md`) | #1, #2 |
 
 ---

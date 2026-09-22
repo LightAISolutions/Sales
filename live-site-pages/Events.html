@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.04w">
+  <meta name="build-version" content="v01.05w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -532,6 +532,32 @@
     .ev-tl-note { font: 13px/1.5 var(--ev-serif); color: var(--ev-muted); border-left: 3px solid var(--ev-line); padding: 2px 10px; margin: 6px 0 0; white-space: pre-wrap; }
     .ev-tl-att { display: inline-block; font: 10px/1 var(--ev-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ev-ok);
       border: 1px solid var(--ev-ok); border-radius: 4px; padding: 3px 5px; margin-left: 6px; vertical-align: middle; }
+
+    /* ── E2: the Proposed tab — the poller card, the approved set, the rows ── */
+    #ev-proposed { display: none; }
+    .ev-propgroup h3 { margin: 0 0 6px; font: 12px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); }
+    .ev-prop { border-top: 1px solid var(--ev-line); padding: 12px 0 10px; }
+    .ev-prop-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 6px; }
+    .ev-prop-slug { font: 600 15px/1.3 var(--ev-serif); color: var(--ev-ink); overflow-wrap: anywhere; }
+    .ev-change { display: inline-block; font: 10px/1 var(--ev-mono); letter-spacing: .08em; text-transform: uppercase; padding: 4px 6px; border-radius: 4px;
+      border: 1px solid var(--ev-line2); color: var(--ev-muted); }
+    .ev-change-new-edition, .ev-change-new-event { color: var(--ev-ok); border-color: var(--ev-ok); }
+    .ev-change-moved-dates, .ev-change-changed-venue, .ev-change-changed-url { color: var(--ev-gold); border-color: var(--ev-gold); background: #fff8ea; }
+    .ev-change-cancelled { color: var(--ev-dis); border-color: var(--ev-dis); background: #fdf5f6; }
+    .ev-diff { margin: 0 0 8px; display: grid; grid-template-columns: 92px 1fr; gap: 3px 10px; font: 13px/1.5 var(--ev-serif); }
+    .ev-diff dt { font: 11px/1.7 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); }
+    .ev-diff dd { margin: 0; overflow-wrap: anywhere; }
+    .ev-diff-before { color: var(--ev-faint); text-decoration: line-through; }
+    .ev-diff-arrow { color: var(--ev-line2); }
+    .ev-diff-after { color: var(--ev-ink); }
+    .ev-prop-meta { font: 12px/1.6 var(--ev-mono); color: var(--ev-faint); margin: 0 0 8px; }
+    .ev-prop-meta a { color: var(--ev-accent); }
+    .ev-prop .ev-actions { margin: 0 0 6px; }
+    .ev-polls { list-style: none; margin: 4px 0 0; padding: 0; font: 12px/1.7 var(--ev-mono); color: var(--ev-muted); }
+    .ev-polls li { border-top: 1px dashed var(--ev-line); padding: 4px 0; overflow-wrap: anywhere; }
+    .ev-polls li b { font-weight: 600; color: var(--ev-ink); margin-right: 6px; }
+    .ev-poll-st { font-weight: 600; }
+    .ev-jsonbox { font: 11px/1.5 var(--ev-mono); min-height: 84px; max-height: 180px; background: var(--ev-paper); margin: 4px 0 10px; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4492,6 +4518,10 @@ function evErrText(err) {
   if (err === 'SPREADSHEET_NOT_CONFIGURED') return 'The Events spreadsheet is not configured yet — the calendar works, stars do not.';
   if (err === 'registry_unavailable') return 'The event registry could not be loaded. Check the connection and reopen the app.';
   if (err === 'not_configured') return 'Connect Network to score by account — the two apps are not linked yet.';
+  if (err === 'roster_unavailable') return 'The source roster could not be read from the site. Check the deployment and try again.';
+  if (err === 'already_applied') return 'That row was already marked applied — it cannot be changed.';
+  if (err === 'bad_version') return 'The version must look like v07.15r — the one the sync printed.';
+  if (err === 'not_found') return 'That proposal is no longer in the queue. Refresh.';
   return 'Could not complete that (' + (err || 'unknown') + ').';
 }
 function evEl(tag, cls, text) {
@@ -5121,12 +5151,16 @@ function evTab(key, label) {
   return b;
 }
 function evShowTab(key) {
-  _evTab = key === 'day' ? 'day' : 'agenda';
-  ['agenda', 'day'].forEach(function(k) { var b = document.getElementById('ev-tab-' + k); if (b) b.setAttribute('aria-selected', _evTab === k ? 'true' : 'false'); });
+  _evTab = key === 'day' ? 'day' : (key === 'proposed' && evProposedAllowed()) ? 'proposed' : 'agenda';
+  ['agenda', 'day', 'proposed'].forEach(function(k) { var b = document.getElementById('ev-tab-' + k); if (b) b.setAttribute('aria-selected', _evTab === k ? 'true' : 'false'); });
   ['ev-counts', 'ev-filters', 'ev-agenda', 'ev-foot'].forEach(function(id) { var el = document.getElementById(id); if (el) el.style.display = _evTab === 'agenda' ? '' : 'none'; });
   var day = document.getElementById('ev-dayplan');
   if (day) day.style.display = _evTab === 'day' ? 'block' : 'none';
-  if (_evTab === 'day') evRenderDay(); else evObserveMonths();
+  var prop = document.getElementById('ev-proposed');
+  if (prop) prop.style.display = _evTab === 'proposed' ? 'block' : 'none';
+  if (_evTab === 'day') evRenderDay();
+  else if (_evTab === 'proposed') { if (!_evProposed) { evRenderProposed(); evLoadProposed(); } }   // E2: fetched on open, never polled
+  else evObserveMonths();
   window.scrollTo({ top: 0 });
 }
 function evStarredOn(day) {
@@ -5219,6 +5253,228 @@ function evRenderDay() {
   wrap.appendChild(card);
 }
 
+// PROJECT: ── E2 — the Proposed panel (admin · `roster`; design plan §5.3, EVENTS-SCHEMA.md §7)
+// The poller's queue, as a third tab. It paints what eop=proposed answers —
+// the pending rows grouped by source with Before → After, the approved rows
+// awaiting `events sync`, the last Polls outcome per source and whether the
+// weekly trigger is installed — and writes through eop=decide (Approve /
+// Reject), eop=applied ("Mark applied" with the version the sync printed),
+// eop=pollnow and eop=installpoller. "Copy as JSON" puts the approved rows
+// and the Polls data on the clipboard in the exact shape the sync command
+// reads (schemaVersion 1 · proposals[] · polls[]); the same text sits in a
+// field so it can be selected by hand. Nothing here polls (D14): the panel
+// loads when the tab is opened, on Refresh and after every write.
+var _evProposed = null;          // the last eop=proposed answer
+var _evProposedState = 'idle';   // idle | loading | ok | <error>
+function evProposedAllowed() { return evAdmitted() && evCan('roster'); }
+function evLoadProposed(cb) {
+  if (!evProposedAllowed()) return;
+  _evProposedState = 'loading';
+  evApi('proposed', {}, function(res) {
+    if (!(res && res.success)) { _evProposedState = (res && res.error) || 'unknown'; _evProposed = null; }
+    else { _evProposedState = 'ok'; _evProposed = res; }
+    evRenderProposed();
+    if (cb) cb(res);
+  });
+}
+// The sync command's input — approved rows only, plus every source's last
+// outcome so the roster's lastProbe can be advanced in the same apply.
+function evSyncJson() {
+  var d = _evProposed || { proposals: [], polls: [] };
+  var approved = (d.proposals || []).filter(function(p) { return p.status === 'approved'; }).map(function(p) {
+    return { id: p.id, sourceKey: p.sourceKey, slug: p.slug, change: p.change, before: p.before, after: p.after, evidenceUrl: p.evidenceUrl, seenAt: p.seenAt, decidedAt: p.decidedAt };
+  });
+  return JSON.stringify({ schemaVersion: 1, exported: new Date().toISOString(), proposals: approved, polls: d.polls || [] }, null, 2);
+}
+function evDiffList(before, after) {
+  var dl = evEl('dl', 'ev-diff'), keys = {}, k;
+  for (k in (before || {})) if (before.hasOwnProperty(k)) keys[k] = 1;
+  for (k in (after || {})) if (after.hasOwnProperty(k)) keys[k] = 1;
+  var names = Object.keys(keys).sort(function(a, b) { var oa = a === 'slug' ? 0 : 1, ob = b === 'slug' ? 0 : 1; return oa - ob || (a < b ? -1 : 1); });
+  var fmt = function(v) { if (v === undefined) return '—'; if (v === null || v === '') return '(empty)'; return typeof v === 'object' ? JSON.stringify(v) : String(v); };
+  names.forEach(function(name) {
+    var b = before ? before[name] : undefined, a = after ? after[name] : undefined;
+    dl.appendChild(evEl('dt', null, name));
+    var dd = evEl('dd');
+    if (b !== undefined) { dd.appendChild(evEl('span', 'ev-diff-before', fmt(b))); dd.appendChild(evEl('span', 'ev-diff-arrow', ' → ')); }
+    dd.appendChild(evEl('span', 'ev-diff-after', fmt(a)));
+    dl.appendChild(dd);
+  });
+  return dl;
+}
+function evPropStatus(el, text, level) { if (!el) return; el.textContent = text || ''; el.className = 'ev-status' + (level ? ' ev-status-' + level : ''); }
+// A write's outcome survives the reload that follows it: the panel is rebuilt
+// from the fresh eop=proposed answer, so the status is written by id after.
+function evReloadWith(statusId, text, level) {
+  evLoadProposed(function() { evPropStatus(document.getElementById(statusId), text, level); });
+}
+function evDecide(row, id, status, statusEl) {
+  var btns = row.querySelectorAll('button');
+  for (var i = 0; i < btns.length; i++) btns[i].setAttribute('aria-disabled', 'true');
+  evPropStatus(statusEl, status === 'approved' ? 'Approving…' : 'Rejecting…');
+  evApiBody('decide', { id: id, status: status }, function(res) {
+    if (!(res && res.success)) {
+      for (var j = 0; j < btns.length; j++) btns[j].removeAttribute('aria-disabled');
+      evPropStatus(statusEl, evErrText(res && res.error), 'err');
+      return;
+    }
+    (_evProposed && _evProposed.proposals || []).forEach(function(p) { if (p.id === id) { p.status = res.status; p.decidedAt = res.decidedAt; } });
+    if (_evProposed && _evProposed.counts) { /* refreshed from the server below */ }
+    evLoadProposed();
+  });
+}
+function evPropRow(p) {
+  var row = evEl('div', 'ev-prop'); row.dataset.id = p.id; row.dataset.change = p.change; row.dataset.status = p.status;
+  var head = evEl('div', 'ev-prop-head');
+  head.appendChild(evEl('span', 'ev-change ev-change-' + p.change, p.change));
+  head.appendChild(evEl('b', 'ev-prop-slug', p.slug));
+  if (p.status === 'approved') head.appendChild(evEl('span', 'ev-badge ev-badge-confirmed', 'approved'));
+  row.appendChild(head);
+  row.appendChild(evDiffList(p.before, p.after));
+  var meta = evEl('div', 'ev-prop-meta');
+  if (p.evidenceUrl) meta.appendChild(evLink(p.evidenceUrl, 'evidence ↗'));
+  meta.appendChild(document.createTextNode((p.evidenceUrl ? ' · ' : '') + 'seen ' + String(p.seenAt || '').slice(0, 10) + (p.decidedAt ? ' · decided ' + String(p.decidedAt).slice(0, 10) : '')));
+  row.appendChild(meta);
+  var actions = evEl('div', 'ev-actions');
+  var status = evEl('div', 'ev-status');
+  if (p.status !== 'approved') {
+    var ap = evEl('button', 'ev-btn ev-btn-primary ev-prop-approve', 'Approve'); ap.type = 'button';
+    ap.addEventListener('click', function(ev) { ev.preventDefault(); if (ap.getAttribute('aria-disabled') === 'true') return; evDecide(row, p.id, 'approved', status); });
+    actions.appendChild(ap);
+  }
+  var rj = evEl('button', 'ev-btn ev-prop-reject', p.status === 'approved' ? 'Undo — reject' : 'Reject'); rj.type = 'button';
+  rj.addEventListener('click', function(ev) { ev.preventDefault(); if (rj.getAttribute('aria-disabled') === 'true') return; evDecide(row, p.id, 'rejected', status); });
+  actions.appendChild(rj);
+  row.appendChild(actions);
+  row.appendChild(status);
+  return row;
+}
+function evPollButton(id, label, eop, statusEl, busyText, doneText) {
+  var b = evEl('button', 'ev-btn', label); b.type = 'button'; b.id = id;
+  b.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    if (b.getAttribute('aria-disabled') === 'true') return;
+    b.setAttribute('aria-disabled', 'true'); evPropStatus(statusEl, busyText);
+    evApiBody(eop, {}, function(res) {
+      b.removeAttribute('aria-disabled');
+      if (!(res && res.success)) { evPropStatus(statusEl, evErrText(res && res.error), 'err'); return; }
+      evReloadWith('ev-poll-status', doneText(res), 'ok');
+    });
+  });
+  return b;
+}
+function evRenderProposed() {
+  var wrap = document.getElementById('ev-proposed');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  var d = _evProposed;
+  // ── the poller card ──
+  var pc = evEl('div', 'ev-card'); pc.id = 'ev-pollcard';
+  pc.appendChild(evEl('h2', null, 'The poller'));
+  var inst = d ? d.pollerInstalled : null;
+  pc.appendChild(evEl('p', null, 'Once a week the backend reads every organiser feed on the roster (JSON-LD and ICS only — never a blocked, manual or robots-disallowed source) and proposes what changed. Nothing is written to the calendar until you approve it here and run events sync in a session.'));
+  var line = evEl('div', 'ev-statusline');
+  line.appendChild(evEl('span', 'ev-badge' + (inst === true ? ' ev-badge-confirmed' : inst === false ? ' ev-badge-tentative' : ''),
+    inst === true ? 'weekly trigger installed' : inst === false ? 'trigger not installed' : 'trigger state unknown'));
+  pc.appendChild(line);
+  var pst = evEl('div', 'ev-status'); pst.id = 'ev-poll-status';
+  var pa = evEl('div', 'ev-actions');
+  pa.appendChild(evPollButton('ev-poll-install', inst === true ? 'Reinstall poller' : 'Install poller', 'installpoller', pst, 'Installing…',
+    function(res) { return 'Installed — ' + (res.schedule || 'weekly') + (res.removed ? ' (replaced ' + res.removed + ')' : '') + '.'; }));
+  pa.appendChild(evPollButton('ev-poll-now', 'Poll now', 'pollnow', pst, 'Polling every readable source — up to a few minutes…',
+    function(res) { return 'Polled ' + res.fetched + ' source' + (res.fetched === 1 ? '' : 's') + ' (' + res.skipped + ' skipped, ' + res.failed + ' failed): ' + res.proposed + ' new proposal' + (res.proposed === 1 ? '' : 's') + ', ' + res.duplicates + ' already known' + (res.stopped ? ' — stopped at the time budget, the rest next run' : '') + '.'; }));
+  var rf = evEl('button', 'ev-btn', 'Refresh'); rf.type = 'button'; rf.id = 'ev-poll-refresh';
+  rf.addEventListener('click', function(ev) { ev.preventDefault(); evPropStatus(pst, 'Refreshing…'); evLoadProposed(function() { evPropStatus(document.getElementById('ev-poll-status'), ''); }); });
+  pa.appendChild(rf);
+  pc.appendChild(pa);
+  pc.appendChild(pst);
+  if (_evProposedState === 'loading') pc.appendChild(evEl('div', 'ev-empty', 'Loading the queue…'));
+  else if (_evProposedState !== 'ok') pc.appendChild(evEl('div', 'ev-err', evErrText(_evProposedState)));
+  var polls = (d && d.polls) || [];
+  if (polls.length) {
+    pc.appendChild(evEl('span', 'ev-lbl', 'Last outcome per source'));
+    var ul = evEl('ul', 'ev-polls'); ul.id = 'ev-polls';
+    polls.forEach(function(p) {
+      var li = evEl('li'); li.dataset.source = p.sourceKey;
+      var okStatus = /^2\d\d$/.test(String(p.status));
+      li.appendChild(evEl('b', null, p.sourceKey));
+      li.appendChild(evEl('span', 'ev-poll-st' + (okStatus ? ' ev-status-ok' : ' ev-status-err'), String(p.status)));
+      li.appendChild(document.createTextNode(' · ' + String(p.ranAt || '').slice(0, 10) + ' · ' + p.items + ' item' + (p.items === 1 ? '' : 's') + (p.newest ? ' · newest ' + p.newest : '')));
+      ul.appendChild(li);
+    });
+    pc.appendChild(ul);
+  } else if (d) pc.appendChild(evEl('p', 'ev-note', 'No poll has run yet — tap Poll now for the first walk.'));
+  wrap.appendChild(pc);
+  if (!d) return;
+  var rows = d.proposals || [];
+  var approved = rows.filter(function(p) { return p.status === 'approved'; }), pending = rows.filter(function(p) { return p.status === 'pending'; });
+  var c = d.counts || {};
+  // ── the approved set → events sync ──
+  var ac = evEl('div', 'ev-card ev-subcard'); ac.id = 'ev-approved-card';
+  ac.appendChild(evEl('h2', null, 'Approved — waiting for events sync (' + approved.length + ')'));
+  ac.appendChild(evEl('p', null, approved.length
+    ? 'Copy the JSON, paste it to a fresh session with “events sync”, then come back and stamp the version it printed.'
+    : 'Approve rows below and they collect here for the next events sync.'));
+  var ta = evEl('textarea', 'ev-textarea ev-jsonbox'); ta.id = 'ev-prop-json'; ta.readOnly = true; ta.value = evSyncJson(); ta.setAttribute('aria-label', 'Approved proposals as JSON');
+  ta.addEventListener('focus', function() { ta.select(); });
+  ac.appendChild(ta);
+  var aa = evEl('div', 'ev-actions');
+  var cp = evEl('button', 'ev-btn ev-btn-primary', 'Copy as JSON'); cp.type = 'button'; cp.id = 'ev-prop-copy';
+  var ast = evEl('div', 'ev-status'); ast.id = 'ev-applied-status';
+  cp.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    ta.value = evSyncJson();
+    evCopyText(ta.value).then(function(ok) {
+      evPropStatus(ast, ok ? 'Copied ' + approved.length + ' approved row' + (approved.length === 1 ? '' : 's') + ' — paste it to the session.' : 'Copying is blocked here — tap the field above and copy it by hand.', ok ? 'ok' : '');
+      if (!ok) { ta.focus(); ta.select(); }
+    });
+  });
+  aa.appendChild(cp);
+  ac.appendChild(aa);
+  var ar = evEl('div', 'ev-controls');
+  var h1 = evEl('div', 'ev-half'); h1.appendChild(evEl('span', 'ev-lbl', 'Version the sync printed'));
+  var vin = evEl('input', 'ev-input'); vin.id = 'ev-prop-version'; vin.type = 'text'; vin.placeholder = 'vXX.XXr'; vin.maxLength = 12; vin.autocomplete = 'off';
+  h1.appendChild(vin);
+  var h2 = evEl('div', 'ev-half'); h2.appendChild(evEl('span', 'ev-lbl', 'Then'));
+  var ma = evEl('button', 'ev-btn', 'Mark applied'); ma.type = 'button'; ma.id = 'ev-prop-applied';
+  if (!approved.length) ma.setAttribute('aria-disabled', 'true');
+  ma.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    if (ma.getAttribute('aria-disabled') === 'true') return;
+    var v = vin.value.trim();
+    if (!/^v\d{2}\.\d{2}r$/.test(v)) { evPropStatus(ast, 'Type the repo version the sync printed, like v07.15r.', 'err'); vin.focus(); return; }
+    ma.setAttribute('aria-disabled', 'true'); evPropStatus(ast, 'Stamping…');
+    evApiBody('applied', { ids: approved.map(function(p) { return p.id; }).join(','), version: v }, function(res) {
+      ma.removeAttribute('aria-disabled');
+      if (!(res && res.success)) { evPropStatus(ast, evErrText(res && res.error), 'err'); return; }
+      evReloadWith('ev-applied-status', 'Marked ' + res.applied.length + ' row' + (res.applied.length === 1 ? '' : 's') + ' applied in ' + res.version + (res.skipped.length ? ' (' + res.skipped.length + ' skipped)' : '') + '.', 'ok');
+    });
+  });
+  h2.appendChild(ma);
+  ar.appendChild(h1); ar.appendChild(h2);
+  ac.appendChild(ar);
+  ac.appendChild(ast);
+  ac.appendChild(evEl('p', 'ev-note', 'Queue: ' + (c.pending || 0) + ' pending · ' + (c.approved || 0) + ' approved · ' + (c.rejected || 0) + ' rejected · ' + (c.applied || 0) + ' applied.'));
+  wrap.appendChild(ac);
+  // ── the rows, grouped by source ──
+  var groups = {}, order = [];
+  approved.concat(pending).forEach(function(p) { if (!groups[p.sourceKey]) { groups[p.sourceKey] = []; order.push(p.sourceKey); } groups[p.sourceKey].push(p); });
+  if (!order.length) {
+    var empty = evEl('div', 'ev-card'); var e2 = evEl('div', 'ev-empty'); e2.id = 'ev-prop-empty';
+    e2.appendChild(evEl('b', null, 'Nothing proposed'));
+    e2.appendChild(document.createTextNode(polls.length ? 'The last poll found no change the calendar does not already carry.' : 'Install the poller, or tap Poll now, and the organisers’ changes appear here for approval.'));
+    empty.appendChild(e2); wrap.appendChild(empty);
+    return;
+  }
+  order.sort().forEach(function(key) {
+    var g = evEl('div', 'ev-card ev-propgroup'); g.dataset.source = key;
+    g.appendChild(evEl('h3', null, key));
+    groups[key].sort(function(a, b) { return a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : (a.change < b.change ? -1 : 1); })
+      .forEach(function(p) { g.appendChild(evPropRow(p)); });
+    wrap.appendChild(g);
+  });
+}
+
 // PROJECT: ── Masthead + mount ─────────────────────────────────────────────
 function evHeaderShow() {
   var head = document.getElementById('ev-header');
@@ -5264,6 +5520,7 @@ function evLoadAll() {
     app.innerHTML = '';
     var tabs = evEl('div', 'ev-tabs'); tabs.id = 'ev-tabs'; tabs.setAttribute('role', 'tablist');
     tabs.appendChild(evTab('agenda', 'Agenda')); tabs.appendChild(evTab('day', 'Day plan'));
+    if (evProposedAllowed()) tabs.appendChild(evTab('proposed', 'Proposed'));   // E2 — the poller's queue, admin · roster
     app.appendChild(tabs);
     var counts = evEl('div', 'ev-count'); counts.id = 'ev-counts'; app.appendChild(counts);
     app.appendChild(evFiltersCard());
@@ -5272,6 +5529,7 @@ function evLoadAll() {
     app.appendChild(agenda);
     var foot = evEl('p', 'ev-note', ''); foot.id = 'ev-foot'; app.appendChild(foot);
     var dayplan = evEl('div'); dayplan.id = 'ev-dayplan'; app.appendChild(dayplan);
+    var proposed = evEl('div'); proposed.id = 'ev-proposed'; app.appendChild(proposed);
     document.getElementById('ev-sheet-back').addEventListener('click', evCloseSheet);
     document.addEventListener('keydown', function(ev) { if (ev.key === 'Escape' && _evSheetSlug) evCloseSheet(); });
   }

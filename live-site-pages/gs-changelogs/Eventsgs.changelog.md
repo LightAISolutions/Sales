@@ -3,12 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.04g] — 2026-09-22 07:40:08 AM EST — v07.15r
+
+### Added
+- **The weekly poller** — once a week (and on demand from the Proposed tab) the backend reads every organiser feed on the public roster that can be read, compares what the organiser publishes against the calendar, and proposes the differences for approval: a new edition, moved dates, a changed venue, a changed web address, a cancellation, or a show the calendar has never carried. It never changes the calendar itself — an approved change is applied in a session
+- A source that is blocked, hand-maintained or asks not to be crawled is never fetched; a source that cannot be read records its status and proposes nothing — nothing is ever guessed or filled from another feed
+- The same proposal is never raised twice, however many weeks it stays pending or was already decided
+- Approve, reject and "mark applied" for the queue, a "poll now" for the first run, and a one-tap install of the weekly schedule that replaces any earlier one rather than adding to it
+- A per-run outcome per source (status, items read, newest date) the Proposed tab shows
 ## [v01.03g] — 2026-09-22 05:05:03 AM EST — v07.10r
 
 ### Added

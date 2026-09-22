@@ -44,6 +44,17 @@ events-agenda.png, events-detail.png, events-dayplan.png. Zero page errors.
 The real-phone Calendar / .ics import is the developer's check, reported in
 the hand-off — never asserted here.
 
+E2 (design plan §13.10 step 6) — the Proposed tab: painted for the admin only
+(the other tiers still issue zero requests — they never reach the tab strip);
+opening it issues exactly one eop=proposed; the stub answers one pending and
+one approved row from two sources plus a Polls outcome; the rows group by
+source with Before → After; Approve on the pending row sends eop=decide with
+status=approved and the panel refreshes; the copy-as-JSON field parses back to
+{ schemaVersion: 1, proposals: [the approved rows], polls: [...] }; Mark
+applied with a bad version is refused on the page (no request), with a good
+one sends eop=applied; Install poller sends eop=installpoller and Poll now
+eop=pollnow. Screenshot: events-proposed.png.
+
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
 executable_path. Do NOT run `playwright install`.
@@ -94,11 +105,27 @@ def serve(directory):
     return httpd, httpd.server_address[1]
 
 
-def gas_stub(role, counter, stars):
+PROPOSED_STUB = [
+    {'id': 'pr-0000000000001', 'sourceKey': 'clarion-powergen', 'slug': 'powergen-2027', 'change': 'moved-dates',
+     'before': {'start': '2027-01-18', 'end': '2027-01-20'}, 'after': {'start': '2027-01-25', 'end': '2027-01-27'},
+     'evidenceUrl': 'https://www.powergen.com/', 'seenAt': '2026-09-22T06:00:00.000Z', 'status': 'pending', 'decidedAt': '', 'appliedIn': ''},
+    {'id': 'pr-0000000000002', 'sourceKey': 'ai-infra-summit', 'slug': 'ai-infra-summit-2027', 'change': 'new-edition',
+     'before': {'slug': 'ai-infra-summit-2026'}, 'after': {'slug': 'ai-infra-summit-2027', 'name': 'AI Infra Summit 2027', 'start': '2027-09-14', 'end': '2027-09-16', 'status': 'tentative'},
+     'evidenceUrl': 'https://ai-infra-summit.com/events/ai-infra-summit', 'seenAt': '2026-09-22T06:00:00.000Z', 'status': 'approved', 'decidedAt': '2026-09-22T06:30:00.000Z', 'appliedIn': ''},
+]
+POLLS_STUB = [{'sourceKey': 'ai-infra-summit', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 2, 'newest': '2027-09-14'},
+              {'sourceKey': 'clarion-powergen', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 1, 'newest': '2027-01-25'},
+              {'sourceKey': 'esig-events', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '403', 'items': 0, 'newest': ''}]
+
+
+def gas_stub(role, counter, stars, proposed=None):
     """Stand in for the deployed Events GAS: records every data request as
     'events:<eop>' and answers the four Stars ops the way handleEventsOp_ /
     evStarOp_ do for the tier, against an in-memory Stars set so a star
-    round-trips (star → list → unstar → list)."""
+    round-trips (star → list → unstar → list). E2: answers eop=proposed from
+    an in-memory queue and applies decide / applied / pollnow / installpoller
+    to it the way the poller ops do."""
+    proposed = [] if proposed is None else proposed
     def params_of(request):
         q = dict(parse_qsl(urlparse(request.url).query))
         if request.method == 'POST' and request.post_data:
@@ -133,6 +160,29 @@ def gas_stub(role, counter, stars):
                 removed = p.get('slug', '') in stars
                 stars.pop(p.get('slug', ''), None)
                 body = {'success': True, 'removed': removed, 'slug': p.get('slug', '')}
+            elif eop == 'proposed':
+                counts = {k: len([r for r in proposed if r['status'] == k]) for k in ('pending', 'approved', 'rejected', 'applied')}
+                body = {'success': True, 'proposals': [dict(r) for r in proposed if r['status'] in ('pending', 'approved')],
+                        'counts': counts, 'polls': POLLS_STUB, 'pollerInstalled': False}
+            elif eop == 'decide':
+                row = next((r for r in proposed if r['id'] == p.get('id')), None)
+                if row is None or p.get('status') not in ('approved', 'rejected'):
+                    body = {'success': False, 'error': 'not_found' if row is None else 'bad_status'}
+                else:
+                    row['status'] = p['status']; row['decidedAt'] = '2026-09-22T07:00:00.000Z'
+                    body = {'success': True, 'id': row['id'], 'status': row['status'], 'decidedAt': row['decidedAt']}
+            elif eop == 'applied':
+                ids = [x for x in p.get('ids', '').split(',') if x]
+                done = [r['id'] for r in proposed if r['id'] in ids and r['status'] == 'approved']
+                for r in proposed:
+                    if r['id'] in done:
+                        r['status'] = 'applied'; r['appliedIn'] = p.get('version', '')
+                body = {'success': True, 'applied': done, 'skipped': [], 'version': p.get('version', '')}
+            elif eop == 'pollnow':
+                body = {'success': True, 'ranAt': '2026-09-22T07:05:00.000Z', 'sources': 58, 'fetched': 11, 'skipped': 47, 'failed': 1,
+                        'proposed': 0, 'duplicates': 2, 'stopped': False, 'results': []}
+            elif eop == 'installpoller':
+                body = {'success': True, 'installed': True, 'removed': 0, 'schedule': 'weekly, Monday 06:00 America/New_York'}
         else:
             counter.append('other')
         route.fulfill(status=200, content_type='application/json',
@@ -192,11 +242,11 @@ def probe(page):
     }""")
 
 
-def load_as(browser, base, role, query='', stars=None):
+def load_as(browser, base, role, query='', stars=None, proposed=None):
     counter, errors, registry = [], [], []
     stars = {} if stars is None else stars
     ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True)
-    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars))
+    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars, proposed))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
     ctx.add_init_script(seed_script(role))
     page = ctx.new_page()
@@ -425,6 +475,94 @@ def phone_pass(page, base, reqs, stars, failures):
         failures.append('%s: the Subscribe card did not close on a second tap' % tag)
 
 
+def proposed_pass(page, reqs, proposed, failures):
+    """E2 — the Proposed tab on the admin's page, against the stateful stub."""
+    tag = 'proposed'
+    page.evaluate("() => window.scrollTo(0, 0)")
+    before = len([r for r in reqs if r == 'events:proposed'])
+    if not page.evaluate("() => !!document.getElementById('ev-tab-proposed')"):
+        failures.append('%s: the Proposed tab is not in the strip for the admin' % tag); return
+    page.click('#ev-tab-proposed')
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-proposed .ev-prop').length >= 2", timeout=6000)
+    except Exception:
+        failures.append('%s: the queue did not render after opening the tab' % tag)
+    page.wait_for_timeout(300)
+    if len([r for r in reqs if r == 'events:proposed']) - before != 1:
+        failures.append('%s: expected exactly one eop=proposed on opening the tab, saw %d' % (tag, len([r for r in reqs if r == 'events:proposed']) - before))
+    got = page.evaluate("""() => ({
+        shown: getComputedStyle(document.getElementById('ev-proposed')).display !== 'none',
+        agendaHidden: getComputedStyle(document.getElementById('ev-agenda')).display === 'none',
+        groups: [...document.querySelectorAll('#ev-proposed .ev-propgroup')].map(g => g.dataset.source),
+        rows: [...document.querySelectorAll('#ev-proposed .ev-prop')].map(r => r.dataset.id + ':' + r.dataset.change + ':' + r.dataset.status),
+        diff: [...document.querySelectorAll('#ev-proposed .ev-prop[data-id="pr-0000000000001"] .ev-diff dd')].map(d => d.textContent.replace(/\\s+/g, ' ').trim()),
+        polls: document.querySelectorAll('#ev-polls li').length,
+        pollFail: !!document.querySelector('#ev-polls li[data-source="esig-events"] .ev-status-err'),
+        install: !!document.getElementById('ev-poll-install'), now: !!document.getElementById('ev-poll-now'),
+        approveBtns: document.querySelectorAll('#ev-proposed .ev-prop-approve').length,
+        json: (document.getElementById('ev-prop-json') || {}).value || '' })""")
+    if not (got['shown'] and got['agendaHidden']):
+        failures.append('%s: the tab did not swap the agenda for the panel: %r' % (tag, {k: got[k] for k in ('shown', 'agendaHidden')}))
+    if sorted(got['groups']) != ['ai-infra-summit', 'clarion-powergen'] or len(got['rows']) != 2 or 'pr-0000000000001:moved-dates:pending' not in got['rows']:
+        failures.append('%s: rows not grouped by source as expected: groups=%r rows=%r' % (tag, got['groups'], got['rows']))
+    if not any('2027-01-18' in d and '2027-01-25' in d for d in got['diff']):
+        failures.append('%s: the moved-dates row does not show Before → After: %r' % (tag, got['diff']))
+    if got['polls'] != 3 or not got['pollFail'] or not got['install'] or not got['now']:
+        failures.append('%s: poller card incomplete (polls=%s fail-marked=%s install=%s now=%s)' % (tag, got['polls'], got['pollFail'], got['install'], got['now']))
+    if got['approveBtns'] != 1:
+        failures.append('%s: expected one Approve button (the pending row), saw %d' % (tag, got['approveBtns']))
+    try:
+        doc = json.loads(got['json'])
+        ids = [p['id'] for p in doc.get('proposals', [])]
+        if doc.get('schemaVersion') != 1 or ids != ['pr-0000000000002'] or len(doc.get('polls', [])) != 3 or doc['proposals'][0]['after'].get('slug') != 'ai-infra-summit-2027':
+            failures.append('%s: the JSON field does not carry the approved rows and the polls: %r' % (tag, {k: doc.get(k) for k in ('schemaVersion', 'polls')} | {'ids': ids}))
+    except (ValueError, KeyError, IndexError, TypeError) as exc:
+        failures.append('%s: the JSON field does not parse (%s): %r' % (tag, exc, got['json'][:80]))
+    page.screenshot(path=str(SHOTS / 'events-proposed.png'), full_page=False)
+    # Approve the pending row → eop=decide, the panel refreshes, the JSON now carries two ids
+    page.click('#ev-proposed .ev-prop[data-id="pr-0000000000001"] .ev-prop-approve')
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-proposed .ev-prop-approve').length === 0", timeout=6000)
+    except Exception:
+        failures.append('%s: the Approve button did not clear after eop=decide' % tag)
+    page.wait_for_timeout(300)
+    row = next((r for r in proposed if r['id'] == 'pr-0000000000001'), {})
+    if 'events:decide' not in reqs or row.get('status') != 'approved':
+        failures.append('%s: Approve did not reach the stub as decide/approved (stub row: %r)' % (tag, row.get('status')))
+    after = page.evaluate("() => JSON.parse(document.getElementById('ev-prop-json').value).proposals.map(p => p.id)")
+    if sorted(after) != ['pr-0000000000001', 'pr-0000000000002']:
+        failures.append('%s: after approval the JSON does not carry both approved rows: %r' % (tag, after))
+    # Mark applied — a bad version is refused on the page, a good one is stamped
+    applied_before = len([r for r in reqs if r == 'events:applied'])
+    page.fill('#ev-prop-version', '7.15')
+    page.click('#ev-prop-applied')
+    page.wait_for_timeout(300)
+    if len([r for r in reqs if r == 'events:applied']) != applied_before:
+        failures.append('%s: a bad version reached the server' % tag)
+    page.fill('#ev-prop-version', 'v07.15r')
+    page.click('#ev-prop-applied')
+    try:
+        page.wait_for_function("() => /Marked 2 rows applied/.test((document.getElementById('ev-applied-status') || {}).textContent || '')", timeout=6000)
+    except Exception:
+        failures.append('%s: Mark applied did not report two rows stamped (%r)' % (tag, page.evaluate("() => (document.getElementById('ev-applied-status') || {}).textContent")))
+    page.wait_for_timeout(300)
+    if 'events:applied' not in reqs or any(r['status'] != 'applied' or r['appliedIn'] != 'v07.15r' for r in proposed):
+        failures.append('%s: eop=applied did not stamp the stub rows: %r' % (tag, [(r['status'], r['appliedIn']) for r in proposed]))
+    if not page.evaluate("() => !!document.getElementById('ev-prop-empty')"):
+        failures.append('%s: the empty state did not appear once every row was applied' % tag)
+    # Install poller and Poll now
+    page.click('#ev-poll-install'); page.wait_for_timeout(500)
+    page.click('#ev-poll-now'); page.wait_for_timeout(500)
+    if 'events:installpoller' not in reqs or 'events:pollnow' not in reqs:
+        failures.append('%s: Install poller / Poll now did not reach the stub (ops: %r)' % (tag, sorted(set(r for r in reqs if r.startswith('events:')))))
+    st = page.evaluate("() => (document.getElementById('ev-poll-status') || {}).textContent || ''")
+    if 'Polled 11 sources' not in st:
+        failures.append('%s: Poll now did not report the run (%r)' % (tag, st))
+    page.click('#ev-tab-agenda'); page.wait_for_timeout(200)
+    if page.evaluate("() => getComputedStyle(document.getElementById('ev-proposed')).display") != 'none':
+        failures.append('%s: the panel did not hide on the Agenda tab' % tag)
+
+
 IGNORE = ('Failed to load resource', 'accounts.google.com', 'gsi/', 'GSI_LOGGER', 'FedCM',
           'version.txt', 'changelog', 'favicon', 'net::ERR', 'sounds/')
 
@@ -441,7 +579,8 @@ def run():
         browser = pw.chromium.launch(executable_path=chrome, args=['--no-sandbox'])
         for role in TIERS:
             stars = {}
-            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars)
+            proposed = [dict(r) for r in PROPOSED_STUB]
+            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars, proposed=proposed)
             got = probe(page)
             page.screenshot(path=str(SHOTS / ('events-role-%s.png' % role)), full_page=False)
             real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
@@ -491,6 +630,8 @@ def run():
                     failures.append('%s: Escape did not close the sheet' % role)
                 # §13.7 step 7 — the phone pass (session 2)
                 phone_pass(page, base, reqs, stars, failures)
+                # §13.10 step 6 — the Proposed tab (E2)
+                proposed_pass(page, reqs, proposed, failures)
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
@@ -500,6 +641,8 @@ def run():
                     failures.append('%s: turned-away tier issued %d data request(s)' % (role, len(data_reqs)))
                 if reg:
                     failures.append('%s: turned-away tier fetched the registry' % role)
+                if page.evaluate("() => !!document.getElementById('ev-tab-proposed') || !!document.getElementById('ev-proposed')"):
+                    failures.append('%s: the Proposed tab or panel exists for a turned-away tier' % role)
             if real_errs:
                 failures.append('%s: %d page error(s): %s' % (role, len(real_errs), real_errs[0][:100]))
             rows.append((role, got, len(data_reqs), len(real_errs)))
@@ -526,7 +669,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-6d %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['agenda']),
                                                   g['rows'], mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
+    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
         for f in failures:
@@ -534,7 +677,8 @@ def run():
         return 1
     print('\nALL CHECKS PASSED — admin sees the agenda over the registry with exactly one list request and one registry fetch; '
           'contributor, analyst and viewer are turned away with zero requests; preview only subtracts; the sheet opens with the Calendar link and the .ics; '
-          'the phone pass held: the month header sticks and changes across a boundary, a star round-trips, the ICS parses and matches the published file, the day plan and the Subscribe pill work.')
+          'the phone pass held: the month header sticks and changes across a boundary, a star round-trips, the ICS parses and matches the published file, the day plan and the Subscribe pill work; '
+          'the Proposed tab is admin-only, opens with one request, groups the rows by source with Before → After, approves through decide, its JSON parses back, Mark applied / Install poller / Poll now reach the backend.')
     return 0
 
 

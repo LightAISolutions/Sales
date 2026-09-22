@@ -1,4 +1,4 @@
-var VERSION = "v01.03g";
+var VERSION = "v01.04g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -321,9 +321,9 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // Design: repository-information/NETWORK-EVENTS-DESIGN-PLAN.md §5.3 (gate NE0,
 // every D row decided 2026-09-20). Data shapes: EVENTS-SCHEMA.md — edit that
 // file first, then this one. E1 session 1 builds the door, the five §5 tabs,
-// the ids and the four Stars ops (eop=list|star|unstar|note). The poller and
-// `events sync` (E2), the score (E3), signals (E4), plans (E5) and the peer
-// ops of the bridge (B) are NOT here — no EVENTS_PEER_TOKEN exists yet.
+// the ids and the four Stars ops (eop=list|star|unstar|note). B added the
+// peer ops of the bridge; E2 added the poller and its queue ops (the block
+// after the bridge). The score (E3), signals (E4) and plans (E5) are NOT here.
 
 // PROJECT: ── Role + Access matrix (D7 — admin-only, decided 2026-09-20) ──
 // EVENTS-SCHEMA.md §2. All four tier keys are kept so that widening later is
@@ -437,6 +437,7 @@ function evNewId_(prefix, takenIds) {
 // Safe to call on every op; the first admin list call is what bootstraps the
 // spreadsheet. All five §5 tabs are created NOW so that E2 (Proposed), E3
 // (Tuning) and E5 (Plans, Meetings) edit against them; E1 writes only Stars.
+// E2 added Polls (the poller's per-source outcome, EVENTS-SCHEMA.md §5).
 // Column order is the schema's, verbatim — a change belongs in
 // EVENTS-SCHEMA.md §5 (or §7 for Proposed) first.
 var EV_TABS = {
@@ -447,6 +448,7 @@ var EV_TABS = {
   proposed: ['Proposed', ['Proposed ID', 'Source Key', 'Event Slug', 'Change', 'Before', 'After', 'Evidence URL',
     'Seen At', 'Status', 'Decided At', 'Applied In']],
   tuning: ['Tuning', ['Term', 'Weight', 'Note']],
+  polls: ['Polls', ['Source Key', 'Ran At', 'Status', 'Items', 'Newest Start']],
   shares: ['Shares', ['Owner', 'Grantee', 'Scope', 'Created At']],
   profiles: ['Profiles', ['Email', 'Drive Folder ID', 'Display Name', 'Created At', 'Company Name']]
 };
@@ -705,6 +707,15 @@ function handleEventsOp_(e) {
         { accounts: (acctRes && acctRes.accounts && acctRes.accounts.length) || 0, ok: acctRes && acctRes.success ? 1 : 0 });
       return acctRes;
     }
+    // E2 — the poller's queue and controls, all behind the `roster`
+    // capability (EVENTS-SCHEMA.md §2: the poller controls and Proposed
+    // approval). pollnow runs the same walk the weekly trigger runs, as the
+    // admin who pressed it; installpoller is idempotent.
+    if (op === 'proposed') { evRequire_(sess, 'roster', 'events_proposed'); return evProposedList_(sess); }
+    if (op === 'decide') { evRequire_(sess, 'roster', 'events_decide'); return evPollDecide_(sess, p); }
+    if (op === 'applied') { evRequire_(sess, 'roster', 'events_applied'); return evPollApplied_(sess, p); }
+    if (op === 'pollnow') { evRequire_(sess, 'roster', 'events_pollnow'); return evPollRun_(sess.email); }
+    if (op === 'installpoller') { evRequire_(sess, 'roster', 'events_installpoller'); return evInstallPoller_(sess); }
     return { success: false, error: 'unknown_events_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -2779,6 +2790,546 @@ function evNetworkProxy_(nop, params, body) {
     return { success: false, error: 'upstream_not_json',
              detail: String(text || '').replace(/\s+/g, ' ').slice(0, 160) };
   }
+}
+
+// PROJECT: ── E2 — the poller (design plan §5.3; EVENTS-SCHEMA.md §7, §5 Polls)
+// A weekly, no-AI, time-driven walk of the public roster: every `jsonld` or
+// `ics` row that is not blocked, not manual and not robots-disallowed is
+// fetched with UrlFetchApp, its Event objects / VEVENTs normalised to the §3
+// shape, and the result DIFFED against the public registry. The poller
+// PROPOSES — one `Proposed` row per diff, deduplicated on (Source Key, Event
+// Slug, Change, After) so a weekly re-run never repeats a pending or decided
+// row — and never writes the registry: a GAS trigger cannot commit, and the
+// `events sync` session command (.claude/rules/events-app.md) applies the
+// approved rows to events.json. A source that fails or answers a non-2xx
+// writes NO proposal — one Polls row with the status and one audit row, no
+// hand-typed events, no fallback feed. Both Pages files are read from the
+// site the page reads them from (EMBED_PAGE_URL), never a GitHub API host.
+var EV_ROSTER_URL = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'events-data/events-sources.json';
+var EV_POLL_FEED_KINDS = ['jsonld', 'ics'];           // the only kinds the poller reads (§4)
+var EV_POLL_CHANGES = ['new-edition', 'moved-dates', 'changed-venue', 'changed-url', 'cancelled', 'new-event'];
+var EV_PROPOSED_STATUS = ['pending', 'approved', 'rejected', 'applied'];
+var EV_POLL_SOURCE_BUDGET_MS = 15000;                 // what one source is allowed to cost
+var EV_POLL_TOTAL_BUDGET_MS = 270000;                 // stop cleanly well under the 6-minute cap
+var EV_POLL_MAX_BODY = 2000000;                       // bytes of a fetched page the parsers will read
+var EV_POLL_TRIGGER_FN = 'evPollTick';                // the trigger handler (a public wrapper — a trigger cannot target a `_` function)
+var EV_POLL_TZ = 'America/New_York';
+var EV_VERSION_RE = /^v\d{2}\.\d{2}r$/;               // the repo version the developer stamps with "Mark applied"
+
+// A Pages JSON file, fetched once per execution (the registry keeps its own
+// cache in evRegistry_). A bad response or a parse failure is one named
+// error, never a throw.
+function evPagesJson_(url, errorName) {
+  var resp;
+  try { resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true }); }
+  catch (fErr) { return { error: errorName }; }
+  if (resp.getResponseCode() !== 200) return { error: errorName };
+  try { return { data: JSON.parse(resp.getContentText()) }; } catch (pErr) { return { error: errorName }; }
+}
+var _evRosterCache = null;
+function evRoster_() {
+  if (_evRosterCache) return _evRosterCache;
+  var got = evPagesJson_(EV_ROSTER_URL, 'roster_unavailable');
+  if (got.error) return got;
+  _evRosterCache = { sources: (got.data && got.data.sources) || [] };
+  return _evRosterCache;
+}
+
+// The never-fetched set (§4 and the E0 roster notes): a blocked row, a manual
+// cadence, an html / manual feed, a robots-disallowed path or a non-http URL.
+// Returns '' when the row may be fetched, else the one-word reason.
+function evPollSkipReason_(row) {
+  if (!row || typeof row !== 'object') return 'bad_row';
+  if (String(row.blocked || '').trim()) return 'blocked';
+  if (String(row.cadence || '') === 'manual') return 'manual';
+  if (EV_POLL_FEED_KINDS.indexOf(String(row.feedKind || '')) < 0) return 'feed_kind';
+  if (String(row.robots || '') === 'disallowed') return 'robots';
+  if (!/^https?:\/\//i.test(String(row.url || ''))) return 'no_url';
+  return '';
+}
+
+// ── Text helpers ──────────────────────────────────────────────────────────
+function evSlugify_(s) {
+  return String(s || '').toLowerCase()
+    .replace(/&/g, ' and ').replace(/\+/g, ' plus ')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 64).replace(/-+$/, '');
+}
+// The §1 rule reproduced: the series name plus the edition's year. A year
+// already in the name is not doubled ("RE+ 2026" → re-plus-2026); a name
+// without one gets the start year appended ("DISTRIBUTECH" + 2027 →
+// distributech-2027). The series base is the name with every year removed.
+function evSeriesBase_(name) { return evSlugify_(String(name || '').replace(/\b(19|20)\d{2}\b/g, ' ')); }
+function evDeriveSlug_(name, start) {
+  var year = String(start || '').slice(0, 4);
+  var base = evSeriesBase_(name);
+  if (!base) base = 'event';
+  var slug = year ? (base + '-' + year) : base;
+  return slug.slice(0, 64).replace(/-+$/, '');
+}
+// A registry slug with its edition suffix removed (`-2027`, `-2026-11`).
+function evSlugBase_(slug) { return String(slug || '').replace(/-(19|20)\d{2}(-\d{2})?$/, ''); }
+function evDateOnly_(v) {
+  var m = /^(\d{4})-?(\d{2})-?(\d{2})/.exec(String(v || '').trim());
+  return m ? (m[1] + '-' + m[2] + '-' + m[3]) : '';
+}
+function evAddDaysStr_(s, n) {
+  var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s || ''));
+  if (!m) return s;
+  var d = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]) + n));
+  return d.toISOString().slice(0, 10);
+}
+function evNormUrl_(u) { return String(u || '').trim().replace(/^http:/i, 'https:').replace(/\/+$/, '').toLowerCase(); }
+function evNormText_(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function evHtmlDecode_(s) {
+  return String(s || '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'").replace(/&nbsp;/g, ' ');
+}
+
+// ── JSON-LD ───────────────────────────────────────────────────────────────
+// Every <script type="application/ld+json"> block on the page; each is parsed
+// on its own so one broken block does not lose the others. Arrays and
+// @graph are walked; an object whose @type is Event or a schema.org subtype
+// (BusinessEvent, ExhibitionEvent, EducationEvent …) is an event.
+function evJsonLdBlocks_(html) {
+  var out = [];
+  var re = /<script\b[^>]*type\s*=\s*[\x22\x27]?application\/ld\+json[\x22\x27]?[^>]*>([\s\S]*?)<\/script>/gi;   // \x22 \x27 = the two quote marks (keeps the sandbox extractor's string scan honest)
+  var m;
+  while ((m = re.exec(String(html || ''))) !== null) {
+    var raw = m[1].replace(/^\s*<!--/, '').replace(/-->\s*$/, '').trim();
+    if (!raw) continue;
+    try { out.push(JSON.parse(raw)); } catch (pErr) { /* one broken block */ }
+  }
+  return out;
+}
+function evIsEventType_(t) {
+  var types = Array.isArray(t) ? t : [t];
+  for (var i = 0; i < types.length; i++) {
+    var s = String(types[i] || '').replace(/^https?:\/\/schema\.org\//i, '');
+    if (s === 'Event' || /Event$/.test(s)) return true;
+  }
+  return false;
+}
+function evCollectEvents_(node, out, depth) {
+  if (!node || depth > 6) return;
+  if (Array.isArray(node)) { for (var i = 0; i < node.length; i++) evCollectEvents_(node[i], out, depth + 1); return; }
+  if (typeof node !== 'object') return;
+  if (node['@type'] && evIsEventType_(node['@type'])) out.push(node);
+  if (node['@graph']) evCollectEvents_(node['@graph'], out, depth + 1);
+  if (node.subEvent) evCollectEvents_(node.subEvent, out, depth + 1);
+}
+function evAddressField_(addr, key) {
+  if (!addr) return '';
+  if (typeof addr === 'string') return key === 'addressLocality' ? addr : '';
+  var v = addr[key];
+  if (v && typeof v === 'object') v = v.name || '';
+  return String(v || '').trim();
+}
+// Normalise one JSON-LD Event to the §3 fields the diff reads. Dates are the
+// first ten characters of startDate / endDate — a schema.org date-time
+// carries the organiser's own offset, so that is the local calendar date.
+function evNormaliseJsonLd_(ev, pageUrl) {
+  var loc = ev.location;
+  if (Array.isArray(loc)) loc = loc[0];
+  var venue = '', city = '', region = '', country = '';
+  if (loc && typeof loc === 'object') {
+    var addr = loc.address;
+    if (Array.isArray(addr)) addr = addr[0];
+    venue = String(loc.name || '').trim();
+    city = evAddressField_(addr, 'addressLocality');
+    region = evAddressField_(addr, 'addressRegion');
+    country = evAddressField_(addr, 'addressCountry');
+    if (!city && typeof addr === 'string') city = addr;
+  } else if (typeof loc === 'string') { venue = loc.trim(); }
+  var status = String(ev.eventStatus || '').replace(/^https?:\/\/schema\.org\//i, '');
+  var start = evDateOnly_(ev.startDate), end = evDateOnly_(ev.endDate) || start;
+  return {
+    name: evHtmlDecode_(String(ev.name || '')).replace(/\s+/g, ' ').trim(),
+    start: start, end: end && end >= start ? end : start,
+    venue: venue, city: city, region: region, country: country,
+    url: String(ev.url || pageUrl || '').trim(),
+    cancelled: status === 'EventCancelled'
+  };
+}
+function evParseJsonLd_(html, pageUrl) {
+  var blocks = evJsonLdBlocks_(html), found = [], out = [];
+  for (var i = 0; i < blocks.length; i++) evCollectEvents_(blocks[i], found, 0);
+  for (var j = 0; j < found.length; j++) {
+    var n = evNormaliseJsonLd_(found[j], pageUrl);
+    if (n.name && n.start) out.push(n);
+  }
+  return out;
+}
+
+// ── ICS — a minimal RFC 5545 walker that accepts what evVevent() emits ────
+// Unfold (CRLF or LF followed by a space or tab), then walk VEVENTs:
+// DTSTART / DTEND with VALUE=DATE or a date-time (TZID ignored — the date
+// part is the event's own local date, which is what §3 stores), SUMMARY,
+// LOCATION, URL, UID, STATUS. A VALUE=DATE DTEND is exclusive and is moved
+// back one day. Text values are unescaped (\, \; \n \\).
+function evIcsUnescape_(s) {
+  return String(s || '').replace(/\\n/gi, '\n').replace(/\\,/g, ',').replace(/\;/g, ';').replace(/\\\\/g, '\\');
+}
+function evParseIcs_(text, pageUrl) {
+  var unfolded = String(text || '').replace(/\r?\n[ \t]/g, '');
+  var lines = unfolded.split(/\r?\n/);
+  var out = [], cur = null;
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i];
+    if (line === 'BEGIN:VEVENT') { cur = {}; continue; }
+    if (line === 'END:VEVENT') {
+      if (cur) {
+        var start = evDateOnly_(cur.DTSTART), end = evDateOnly_(cur.DTEND) || start;
+        if (cur.DTEND_DATE && end && end > start) end = evAddDaysStr_(end, -1);
+        if (end < start) end = start;
+        var loc = evIcsUnescape_(cur.LOCATION || '');
+        var parts = loc ? loc.split(',').map(function(p) { return p.trim(); }).filter(Boolean) : [];
+        var n = {
+          name: evIcsUnescape_(cur.SUMMARY || '').replace(/\s+/g, ' ').trim(),
+          start: start, end: end,
+          venue: parts.length > 1 ? parts[0] : '', city: parts.length > 1 ? parts[1] : (parts[0] || ''),
+          region: parts.length > 2 ? parts[2] : '', country: parts.length > 3 ? parts[3] : '',
+          url: String(cur.URL || pageUrl || '').trim(), uid: String(cur.UID || ''),
+          cancelled: String(cur.STATUS || '').toUpperCase() === 'CANCELLED'
+        };
+        if (n.name && n.start) out.push(n);
+      }
+      cur = null; continue;
+    }
+    if (!cur) continue;
+    var colon = line.indexOf(':');
+    if (colon < 1) continue;
+    var head = line.slice(0, colon), value = line.slice(colon + 1);
+    var name = head.split(';')[0].toUpperCase();
+    cur[name] = value;
+    if (name === 'DTEND' && /;VALUE=DATE(;|$)/i.test(head)) cur.DTEND_DATE = true;
+  }
+  return out;
+}
+
+// ── The diff against the registry ─────────────────────────────────────────
+// Match a normalised item to the registry: (1) the derived slug exists; (2) a
+// row citing this source key has the same name or the same URL; (3) a row
+// citing this source key is the same series (its series base equals or
+// contains the item's, or vice versa, at ≥ 6 characters) in a different year
+// → a new edition of a known series, its slug the known slug's base plus the
+// item's year; (4) nothing → a new event. `citing` is the subset of registry
+// rows that cite the source key, built once per source.
+function evMatchRegistry_(item, reg, citing) {
+  var derived = evDeriveSlug_(item.name, item.start);
+  if (reg.bySlug[derived]) return { kind: 'known', event: reg.bySlug[derived], slug: derived };
+  var itemName = evNormText_(item.name), itemUrl = evNormUrl_(item.url), itemBase = evSeriesBase_(item.name);
+  var i, e;
+  for (i = 0; i < citing.length; i++) {
+    e = citing[i];
+    if (itemName && evNormText_(e.name) === itemName) return { kind: 'known', event: e, slug: e.slug };
+    if (itemUrl && (evNormUrl_(e.website) === itemUrl)) return { kind: 'known', event: e, slug: e.slug };
+  }
+  var year = String(item.start || '').slice(0, 4);
+  for (i = 0; i < citing.length; i++) {
+    e = citing[i];
+    var bases = [evSeriesBase_(e.series), evSlugBase_(e.slug)];
+    for (var b = 0; b < bases.length; b++) {
+      var kb = bases[b];
+      if (!kb || !itemBase) continue;
+      var shorter = kb.length <= itemBase.length ? kb : itemBase, longer = shorter === kb ? itemBase : kb;
+      var same = kb === itemBase || (shorter.length >= 6 && longer.indexOf(shorter) === 0);
+      if (!same) continue;
+      var knownYear = (/-((?:19|20)\d{2})(?:-\d{2})?$/.exec(e.slug) || [])[1] || String(e.start || '').slice(0, 4);
+      if (knownYear && year && knownYear !== year) {
+        return { kind: 'edition', event: e, slug: (evSlugBase_(e.slug) + '-' + year).slice(0, 64) };
+      }
+    }
+  }
+  return { kind: 'new', event: null, slug: derived };
+}
+// The §3-shaped row a new edition / new event proposes. The session fills
+// audience, relevance, kind and tz from the previous edition (new-edition) or
+// by hand (new-event) — the poller never invents them.
+function evProposedRow_(item, slug, sourceKey, prev) {
+  var row = { slug: slug, name: item.name, start: item.start, end: item.end || item.start };
+  if (prev) { row.series = prev.series || ''; row.organiser = prev.organiser || ''; row.kind = prev.kind || ''; row.tz = prev.tz || ''; }
+  if (item.venue) row.venue = item.venue;
+  if (item.city) row.city = item.city;
+  if (item.region) row.region = item.region;
+  if (item.country) row.country = item.country;
+  if (item.url) row.website = item.url;
+  row.sources = [{ sourceKey: sourceKey, kind: '', url: item.url || '', lastConfirmed: '' }];
+  row.status = 'tentative';
+  return row;
+}
+// The diffs one item yields against its match: zero or more of the six kinds,
+// each { slug, change, before, after }.
+function evDiffItem_(item, match, sourceKey, feedKind) {
+  var out = [];
+  if (match.kind === 'new') {
+    out.push({ slug: match.slug, change: 'new-event', before: {}, after: evProposedRow_(item, match.slug, sourceKey, null) });
+    return out;
+  }
+  if (match.kind === 'edition') {
+    var row = evProposedRow_(item, match.slug, sourceKey, match.event);
+    row.sources[0].kind = feedKind;
+    out.push({ slug: match.slug, change: 'new-edition', before: { slug: match.event.slug, start: match.event.start, end: match.event.end }, after: row });
+    return out;
+  }
+  var e = match.event;
+  if (item.cancelled && e.status !== 'cancelled') {
+    out.push({ slug: e.slug, change: 'cancelled', before: { status: e.status }, after: { status: 'cancelled' } });
+    return out;   // a cancelled edition's dates and venue are moot
+  }
+  var eEnd = e.end || e.start, iEnd = item.end || item.start;
+  if (item.start && (item.start !== e.start || iEnd !== eEnd)) {
+    out.push({ slug: e.slug, change: 'moved-dates', before: { start: e.start, end: eEnd }, after: { start: item.start, end: iEnd } });
+  }
+  if (item.venue && evNormText_(item.venue) !== evNormText_(e.venue || '')) {
+    var beforeV = { venue: e.venue || '', city: e.city || '' }, afterV = { venue: item.venue, city: item.city || e.city || '' };
+    out.push({ slug: e.slug, change: 'changed-venue', before: beforeV, after: afterV });
+  }
+  if (item.url && evNormUrl_(item.url) !== evNormUrl_(e.website || '')) {
+    out.push({ slug: e.slug, change: 'changed-url', before: { website: e.website || '' }, after: { website: item.url } });
+  }
+  return out;
+}
+// Canonical JSON (sorted keys, recursively) so the dedup key and the After
+// cell do not depend on insertion order.
+function evCanonical_(v) {
+  if (Array.isArray(v)) return '[' + v.map(evCanonical_).join(',') + ']';
+  if (v && typeof v === 'object') {
+    var keys = Object.keys(v).sort();
+    return '{' + keys.map(function(k) { return JSON.stringify(k) + ':' + evCanonical_(v[k]); }).join(',') + '}';
+  }
+  return JSON.stringify(v === undefined ? null : v);
+}
+function evProposedKey_(sourceKey, slug, change, afterJson) { return sourceKey + '|' + slug + '|' + change + '|' + afterJson; }
+// Every existing (Source Key, Event Slug, Change, After) — whatever its
+// status — so a decided row is never re-proposed either.
+function evProposedKeys_(sheet) {
+  var keys = {}, last = sheet.getLastRow();
+  if (last < 2) return keys;
+  var vals = sheet.getRange(2, 1, last - 1, 6).getValues();
+  for (var i = 0; i < vals.length; i++) {
+    var after = String(vals[i][5] || '');
+    try { after = evCanonical_(JSON.parse(after)); } catch (pErr) { /* keep as written */ }
+    keys[evProposedKey_(String(vals[i][1] || ''), String(vals[i][2] || ''), String(vals[i][3] || ''), after)] = true;
+  }
+  return keys;
+}
+
+// ── One source ────────────────────────────────────────────────────────────
+// Fetch, parse, diff, write. Returns the Polls row's fields plus the count of
+// proposals written. A throw or a non-2xx is a status and nothing else.
+function evPollSource_(row, reg, tabs, existing, taken, seenAt) {
+  var key = String(row.key || ''), url = String(row.url || ''), feedKind = String(row.feedKind || '');
+  var res = { key: key, status: 0, items: 0, newest: '', proposed: 0, duplicates: 0, error: '' };
+  var resp;
+  try {
+    resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true, validateHttpsCertificates: true,
+      headers: { 'Accept': feedKind === 'ics' ? 'text/calendar, text/plain;q=0.8, */*;q=0.5' : 'text/html, application/ld+json;q=0.9, */*;q=0.5' } });
+  } catch (fErr) {
+    res.error = 'fetch_failed';
+    return res;
+  }
+  res.status = resp.getResponseCode();
+  if (res.status < 200 || res.status > 299) { res.error = 'http_' + res.status; return res; }
+  var body = String(resp.getContentText() || '');
+  if (body.length > EV_POLL_MAX_BODY) body = body.slice(0, EV_POLL_MAX_BODY);
+  var items;
+  try { items = feedKind === 'ics' ? evParseIcs_(body, url) : evParseJsonLd_(body, url); }
+  catch (pErr) { res.error = 'parse_failed'; return res; }
+  res.items = items.length;
+  var citing = [];
+  for (var s in reg.bySlug) if (reg.bySlug.hasOwnProperty(s)) {
+    var srcs = reg.bySlug[s].sources || [];
+    for (var k = 0; k < srcs.length; k++) if (String(srcs[k].sourceKey || '') === key) { citing.push(reg.bySlug[s]); break; }
+  }
+  var toWrite = [];
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    if (item.start > res.newest) res.newest = item.start;
+    var match = evMatchRegistry_(item, reg, citing);
+    var diffs = evDiffItem_(item, match, key, feedKind);
+    for (var d = 0; d < diffs.length; d++) {
+      var diff = diffs[d];
+      if (!EV_SLUG_RE.test(diff.slug)) continue;
+      var afterJson = evCanonical_(diff.after);
+      var dk = evProposedKey_(key, diff.slug, diff.change, afterJson);
+      if (existing[dk]) { res.duplicates++; continue; }
+      existing[dk] = true;
+      toWrite.push([evNewId_('pr', taken), key, diff.slug, diff.change, evCanonical_(diff.before), afterJson, url, seenAt, 'pending', '', '']);
+    }
+  }
+  if (toWrite.length) {
+    var sh = tabs.proposed, start = sh.getLastRow() + 1;
+    sh.getRange(start, 1, toWrite.length, toWrite[0].length).setValues(toWrite);
+  }
+  res.proposed = toWrite.length;
+  return res;
+}
+
+// ── The run ───────────────────────────────────────────────────────────────
+// Walks the roster within the budget: before each source the run asks
+// whether one more source could overrun the total budget and, if so, stops
+// cleanly — the next weekly run starts from the top again (the roster is
+// small and every write is deduplicated, so a resumed walk costs nothing).
+// `who` is the audit user: the trigger runs as 'poller', eop=pollnow as the
+// admin who pressed it. Counts only in the audit row.
+function evPollRun_(who) {
+  var t0 = Date.now();
+  var out = { success: true, ranAt: new Date().toISOString(), sources: 0, fetched: 0, skipped: 0, failed: 0,
+              proposed: 0, duplicates: 0, stopped: false, results: [] };
+  var roster = evRoster_();
+  if (roster.error) return { success: false, error: roster.error };
+  var reg = evRegistry_();
+  if (reg.error) return { success: false, error: reg.error };
+  var tabs = ensureEventsTabs_();
+  var existing = evProposedKeys_(tabs.proposed), taken = {};
+  var rows = roster.sources || [];
+  out.sources = rows.length;
+  var pollRows = [];
+  for (var i = 0; i < rows.length; i++) {
+    var row = rows[i];
+    var why = evPollSkipReason_(row);
+    if (why) { out.skipped++; continue; }
+    if (Date.now() - t0 + EV_POLL_SOURCE_BUDGET_MS > EV_POLL_TOTAL_BUDGET_MS) { out.stopped = true; break; }
+    var seenAt = new Date().toISOString();
+    var res;
+    try { res = evPollSource_(row, reg, tabs, existing, taken, seenAt); }
+    catch (sErr) { res = { key: String(row.key || ''), status: 0, items: 0, newest: '', proposed: 0, duplicates: 0, error: 'source_threw' }; }
+    out.fetched++;
+    if (res.error) {
+      out.failed++;
+      auditLog('data_read', who || 'poller', 'events_poll_source_failed', { sourceKey: res.key, status: res.status, error: res.error });
+    } else {
+      out.proposed += res.proposed; out.duplicates += res.duplicates;
+    }
+    pollRows.push([res.key, seenAt, res.error ? (res.status || res.error) : res.status, res.items, res.newest]);
+    out.results.push({ sourceKey: res.key, status: res.status, error: res.error, items: res.items, newest: res.newest, proposed: res.proposed, duplicates: res.duplicates });
+  }
+  if (pollRows.length) {
+    var ps = tabs.polls, at = ps.getLastRow() + 1;
+    ps.getRange(at, 1, pollRows.length, pollRows[0].length).setValues(pollRows);
+  }
+  out.elapsedMs = Date.now() - t0;
+  auditLog('data_write', who || 'poller', 'events_poll_run', { sources: out.sources, fetched: out.fetched, skipped: out.skipped,
+    failed: out.failed, proposed: out.proposed, duplicates: out.duplicates, stopped: out.stopped ? 1 : 0 });
+  return out;
+}
+// The time-driven trigger's handler — public because a trigger cannot target
+// a `_` function; it does nothing but call the run as 'poller'.
+function evPollTick() { return evPollRun_('poller'); }
+
+// eop=installpoller — idempotent: every trigger on the handler (either name)
+// is deleted before one weekly trigger is created, Monday 06:00
+// America/New_York. ScriptApp.newTrigger needs the script's own
+// authorisation on first run (the hand-off says so).
+function evInstallPoller_(sess) {
+  var removed = 0;
+  var triggers = ScriptApp.getProjectTriggers();
+  for (var i = 0; i < triggers.length; i++) {
+    var fn = triggers[i].getHandlerFunction();
+    if (fn === EV_POLL_TRIGGER_FN || fn === 'evPollRun_') { ScriptApp.deleteTrigger(triggers[i]); removed++; }
+  }
+  ScriptApp.newTrigger(EV_POLL_TRIGGER_FN).timeBased().onWeekDay(ScriptApp.WeekDay.MONDAY).atHour(6).inTimezone(EV_POLL_TZ).create();
+  auditLog('data_write', sess.email, 'events_installpoller', { removed: removed, installed: 1 });
+  return { success: true, installed: true, removed: removed, schedule: 'weekly, Monday 06:00 ' + EV_POLL_TZ };
+}
+// Whether a poller trigger exists — read for the panel; a missing scope on a
+// fresh deployment answers null rather than failing the list.
+function evPollerInstalled_() {
+  try {
+    var triggers = ScriptApp.getProjectTriggers();
+    for (var i = 0; i < triggers.length; i++) {
+      var fn = triggers[i].getHandlerFunction();
+      if (fn === EV_POLL_TRIGGER_FN || fn === 'evPollRun_') return true;
+    }
+    return false;
+  } catch (tErr) { return null; }
+}
+
+// ── The Proposed queue ops ────────────────────────────────────────────────
+function evProposedRowObj_(vals, r) {
+  var row = vals[r];
+  var before = String(row[4] || ''), after = String(row[5] || '');
+  try { before = JSON.parse(before); } catch (bErr) { before = {}; }
+  try { after = JSON.parse(after); } catch (aErr) { after = {}; }
+  return { id: String(row[0] || ''), sourceKey: String(row[1] || ''), slug: String(row[2] || ''), change: String(row[3] || ''),
+           before: before, after: after, evidenceUrl: String(row[6] || ''), seenAt: evCell_(row[7]), status: String(row[8] || ''),
+           decidedAt: evCell_(row[9]), appliedIn: String(row[10] || '') };
+}
+// eop=proposed — every pending and approved row (the panel's working set),
+// counts by status, the last Polls outcome per source and whether the
+// trigger is installed. Nothing about people is in any of it.
+function evProposedList_(sess) {
+  var tabs = ensureEventsTabs_();
+  var sh = tabs.proposed, last = sh.getLastRow();
+  var rows = [], counts = { pending: 0, approved: 0, rejected: 0, applied: 0 };
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 11).getValues();
+    for (var r = 0; r < vals.length; r++) {
+      var o = evProposedRowObj_(vals, r);
+      if (counts.hasOwnProperty(o.status)) counts[o.status]++;
+      if (o.status === 'pending' || o.status === 'approved') rows.push(o);
+    }
+  }
+  var polls = evPollsLatest_(tabs.polls);
+  auditLog('data_read', sess.email, 'events_proposed', { pending: counts.pending, approved: counts.approved, polls: polls.length });
+  return { success: true, proposals: rows, counts: counts, polls: polls, pollerInstalled: evPollerInstalled_() };
+}
+// The newest Polls row per source key.
+function evPollsLatest_(sheet) {
+  var last = sheet.getLastRow();
+  if (last < 2) return [];
+  var vals = sheet.getRange(2, 1, last - 1, 5).getValues(), latest = {};
+  for (var i = 0; i < vals.length; i++) {
+    var key = String(vals[i][0] || '');
+    latest[key] = { sourceKey: key, ranAt: evCell_(vals[i][1]), status: evCell_(vals[i][2]), items: Number(vals[i][3]) || 0, newest: evCell_(vals[i][4]) };
+  }
+  var out = [];
+  for (var k in latest) if (latest.hasOwnProperty(k)) out.push(latest[k]);
+  out.sort(function(a, b) { return a.sourceKey < b.sourceKey ? -1 : 1; });
+  return out;
+}
+// eop=decide — id + status ∈ approved · rejected on a row that is not yet
+// applied; sets Decided At. A decision can be reversed until it is applied.
+function evPollDecide_(sess, p) {
+  var id = evStr_(p.id, 20), status = evStr_(p.status, 12).toLowerCase();
+  if (!/^pr-[0-9a-z]{13}$/.test(id)) return { success: false, error: 'bad_id' };
+  if (status !== 'approved' && status !== 'rejected') return { success: false, error: 'bad_status' };
+  var sh = ensureEventsTabs_().proposed, last = sh.getLastRow();
+  if (last < 2) return { success: false, error: 'not_found' };
+  var ids = sh.getRange(2, 1, last - 1, 1).getValues();
+  for (var i = 0; i < ids.length; i++) {
+    if (String(ids[i][0] || '') !== id) continue;
+    var rowN = i + 2, current = String(sh.getRange(rowN, 9).getValue() || '');
+    if (current === 'applied') return { success: false, error: 'already_applied' };
+    var now = new Date().toISOString();
+    sh.getRange(rowN, 9, 1, 2).setValues([[status, now]]);
+    auditLog('data_write', sess.email, 'events_decide', { proposedId: id, status: status });
+    return { success: true, id: id, status: status, decidedAt: now };
+  }
+  return { success: false, error: 'not_found' };
+}
+// eop=applied — the developer's "Mark applied" after `events sync`: every
+// listed approved id → applied, Applied In = the repo version typed.
+function evPollApplied_(sess, p) {
+  var version = evStr_(p.version, 12);
+  if (!EV_VERSION_RE.test(version)) return { success: false, error: 'bad_version' };
+  var want = {}, n = 0;
+  String(p.ids || '').split(',').forEach(function(s) { s = s.trim(); if (/^pr-[0-9a-z]{13}$/.test(s)) { want[s] = true; n++; } });
+  if (!n) return { success: false, error: 'no_ids' };
+  var sh = ensureEventsTabs_().proposed, last = sh.getLastRow();
+  var applied = [], skipped = [];
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 11).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      var id = String(vals[i][0] || '');
+      if (!want[id]) continue;
+      if (String(vals[i][8] || '') !== 'approved') { skipped.push({ id: id, reason: 'not_approved' }); continue; }
+      sh.getRange(i + 2, 9, 1, 3).setValues([['applied', evCell_(vals[i][9]) || new Date().toISOString(), version]]);
+      applied.push(id);
+    }
+  }
+  auditLog('data_write', sess.email, 'events_applied', { applied: applied.length, skipped: skipped.length });
+  return { success: true, applied: applied, skipped: skipped, version: version };
 }
 
 // PROJECT START — Add your project-specific code here

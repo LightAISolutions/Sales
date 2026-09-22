@@ -3,12 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.05w] — 2026-09-22 07:40:08 AM EST — v07.15r
+
+### Added
+- **A Proposed tab for administrators** — the weekly poller's queue: every change it found on an organiser's own feed (a new edition, moved dates, a changed venue or web address, a cancellation, a show the calendar has never seen) as a card with what the calendar says today and what the organiser now publishes, grouped by source, with Approve and Reject on each
+- The approved changes collect as one block of text with a Copy button, ready to hand to the session that applies them to the calendar, and a "Mark applied" box for the version that session reports
+- Poller controls on the same tab: install the weekly run once, run it now, refresh, and the last outcome for each source (status, how many items, the newest date seen)
+
+### Changed
+- The Agenda and Day plan tabs are unchanged; the new tab loads only when opened and never polls in the background
 ## [v01.04w] — 2026-09-22 05:05:03 AM EST — v07.10r
 
 ### Added

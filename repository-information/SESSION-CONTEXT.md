@@ -6,6 +6,48 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 07:40:08 AM EST (the session ran ~07:24 → 07:50 AM EST)
+**Repo version:** v07.15r — one push (this commit) on `claude/dazzling-edison-hia1w7` restarted from `origin/main` at `ee52d79d`; the session-context write rides in the same commit.
+**Branch:** `claude/dazzling-edison-hia1w7`
+**Model:** Fable 5.1 High (E2 brief, §13.10, one session)
+
+### What was done
+
+**E2 — the poller and `events sync` (§13.10, all six steps); §11's E2 row now reads Done.** `Events.gs` v01.04g / `Events.html` v01.05w.
+
+- **`Events.gs`**: the weekly no-AI poller `evPollRun_` (trigger handler `evPollTick`; `eop=installpoller` idempotent — Monday 06:00 America/New_York; `eop=pollnow`), the roster and the registry read once per run from their Pages URLs, `evPollSkipReason_` keeping blocked / manual / html / robots-disallowed rows from ever being fetched, a 15 s per-source allowance against a 270 s run budget, the JSON-LD reader (`evParseJsonLd_`) and the RFC 5545 walker (`evParseIcs_` — reads `build-events-ics.py`'s own output), the §1 slug reproduced, the match (`evMatchRegistry_`) and the six diffs (`evDiffItem_`) as `Proposed` rows deduplicated on (Source Key, Event Slug, Change, After) whatever their status, a failed source one `Polls` row + one audit row and no proposal; `eop=proposed` / `decide` / `applied` behind `roster`; the `Polls` tab
+- **`Events.html`**: the admin-only **Proposed** tab — the poller card (Install poller, Poll now, Refresh, the last outcome per source), the approved set as the sync JSON (Copy as JSON, Mark applied with the version), the rows grouped by source with Before → After and Approve / Reject; loaded on open, never polled
+- **`.claude/rules/events-app.md`** — the `events sync` command (registered in CLAUDE.md); **`scripts/check-events-poller.js`** — 63 checks, zero live calls; **`scripts/verify-events-roles.py`** — the E2 pass, ALL CHECKS PASSED, zero page errors
+- **Docs**: `EVENTS-SCHEMA.md` §5 / §7 / §12; the design plan's §11 E2 row Done and §13.11 (the E3 brief + paste-in prompt); README; changelogs
+
+### Where we left off
+
+**The first live cycle is the developer's** (reported, not asserted): redeploy `Events.gs` (v01.04g), open the Proposed tab, tap **Install poller** (the first `ScriptApp.newTrigger` asks for the script's own authorisation — accept in the editor if the panel reports a scope error, then tap again), tap **Poll now**, approve one row, copy the JSON and run `events sync` in a fresh session. **E3 is next — §13.11**: `eop=recommend`, `Tuning`, the Recommended pill and the *why* panel, `scripts/check-events-score.js`. The paste-in prompt for E3 was given in chat at the close of this session.
+
+### Key decisions made
+
+- **The trigger handler is a public wrapper** (`evPollTick`) — a time-driven trigger cannot target a `_` function; `installpoller` removes triggers on either name so an older install is never doubled
+- **`robots: disallowed` joins the never-fetched set** — the E0 roster note on COMPUTEX demanded it; the schema's blocked / manual rule alone would have fetched it
+- **Dedup covers every existing row, whatever its status** — a rejected proposal must not come back next Monday, so the key is read over the whole tab, not the pending rows
+- **A cancelled edition yields only the `cancelled` diff** — its dates and venue are moot once the organiser has cancelled
+- **`new-edition` / `new-event` rows are proposed `tentative` with nothing invented** — the poller seeds `series` / `organiser` / `kind` / `tz` from the previous edition for a new edition and leaves `audience` / `relevance` to the session; a new event carries only what the feed said
+- **The sandbox extractor cannot see through a quote inside a regex literal** — the `ld+json` regex uses `\x22` / `\x27` for the two quote marks so `check-events-poller.js`'s brace walk stays honest
+- **A write's status survives the panel reload** — the panel is rebuilt from the fresh `eop=proposed` answer, so the outcome is written by id after the reload (`evReloadWith`); the verifier caught the blank line
+
+### Active context
+
+- **Repo version v07.15r.** `CHANGELOG.md` `Sections: 86/100` — no rotation due
+- **Playwright** is `pip install playwright` + the pre-installed Chromium at `/opt/pw-browsers`. Per-container
+- **Reminders still open:** close out the "Repo access denied" issue after Monday's two earnings-desk runs (C2 must be rebuilt before Wednesday 2026-09-23 04:00 PDT); the Megmeet briefing prompt runs after the Network/Events build, before 2026-10-07
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run E3 from §13.11: `eop=recommend` with the six §6 terms, `Tuning` seeded once, the Recommended pill and the *why* panel, `scripts/check-events-score.js`, the verifier pass; flip §11's E3 row to Done and write the E4 brief as §13.12. Fable 5.1 High, one push. Before it, run the first live poller cycle so the E3 session can read a real `Proposed` queue if it wants one.
+- **To continue:** type `run E3 from §13.11`
+
+## Previous Sessions
+
 **Date:** 2026-09-22 07:15:53 AM EST (the session ran ~06:53 → 07:25 AM EST)
 **Repo version:** v07.14r — one push (this commit) on `claude/amazing-hypatia-06t8r5` restarted from `origin/main` at `47d83190`; the session-context write rides in the same commit.
 **Branch:** `claude/amazing-hypatia-06t8r5`
@@ -43,44 +85,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - Run E2 from §13.10: the poller, the `Proposed` panel, `events sync` and the Node harness; flip §11's E2 row to Done and write the E3 brief as §13.11. Fable 5.1 High, one push. Before it, check `Events.config.json` carries a real `DEPLOYMENT_ID` / `SPREADSHEET_ID`.
 - **To continue:** type `run E2 from §13.10`
-
-## Previous Sessions
-
-**Date:** 2026-09-22 06:46:16 AM EST (the session ran ~06:29 → 07:00 AM EST)
-**Repo version:** v07.13r — one push (this commit) on `claude/hopeful-bardeen-8gaw0o` restarted from `origin/main` at `836a5856`; the session-context write rides in the same commit (one push, as asked).
-**Branch:** `claude/hopeful-bardeen-8gaw0o`
-**Model:** Fable 5.1 High (N3 brief, §13.9, session 1 of two)
-
-### What was done
-
-**N3 session 1 — the list, the filters and the bulk actions (§13.9 steps 1–4); §11's N3 row reads In progress — session 1.** `Network.gs` v01.09g / `Network.html` v01.18w.
-
-- **`Network.gs`**: `nwListOp_` replaces the inline list branch — search (`q`) over name / title / account name / every email, the eight filters (`relationship`, `stage`, `role`, `segment`, `event`, `tag`, `from` / `to`, `consent`) applied server-side (the columns they read are picked under `_`-keys and dropped before the answer), `lastTouch` from one read of the Interactions tab (`nwLastTouch_`) — the one §12 widening; `bad_filter` on an off-list enum or a malformed date; `total` / `filtered` on the response. `nop=bulk` (`nwBulkOp_`): `op=tag` and `op=account`, every id judged on its own with `rejected[]` reasons (B's signals-upsert shape), the D5 rule reached through `nwAccountFromPayload_` per account and memoised across its contacts, a relationship moved off Target / Customer resetting the stage to None. `nop=export` (`nwExportOp_`, `format=csv` only — `.xlsx` / vCard are session 2): RFC 4180, CRLF, 24 columns, do-not-contact rows left out, a disclosure row through `recordDisclosure` (op, count, ids), audit counts only
-- **`Network.html`**: `nwListTools` (search box, the Filters drawer collapsed until opened with the "N on: …" hint, segment options from `profiler-segments.json`, a source-event `datalist`, Apply / Clear), the sort strip (Last touch · Name · Company · Warmth-disabled + flip; page-side, no request), select-all; `nwContactRow` gains the checkbox and the `last touch` line; the action bar `nwBar` fixed to the bottom (Tag, Relationship with the D5 gate mirrored, CSV → a Blob download with the BOM, Mailing disabled, Delete after a count confirm one `nop=delete` per row); `nwSelectSync` keeps an open detail open while the selection changes; the bar's content keeps clear of the template's fixed pills (`padding: 0 132px 30px 0`, dropped ≥ 1120px)
-- **`scripts/verify-network-roles.py`**: the stub applies the filters and answers `nop=bulk` / `nop=export`; tests for the search, the drawer, the sort flip, the two-row tag, the per-row refusal then Target · Discovery, a real CSV download, a bulk delete — ALL CHECKS PASSED, zero page errors. `check-network-schema.py` allow-list + five count keys. `check-readme-tree.py` 0 findings
-
-### Where we left off
-
-**N3 session 2 is next — §13.9 steps 5–8**: `.xlsx` through the Receipts temp-spreadsheet path, vCard 3.0 per contact and as a bundle (PHOTO only when ticked), the follow-up drafts flow (`nop=drafts` / `nop=draftstatus`, the `.eml` bundle, CSV / `.txt`, clipboard, `mailto:`, the `email-out` Interaction on "sent"), the "My card" QR panel (check the repo for an inline QR generator first), the verifier's session-2 checks, the MailApp / GmailApp grep, then flip §11's N3 row to Done and write the E2 brief as §13.10. The paste-in prompt for session 2 was given in chat at the close of this session. `nop=export` already exists with `format=csv` — session 2 adds `xlsx` and `vcard` to the same op and the bar's CSV button becomes an Export menu.
-
-### Key decisions made
-
-- **Filters are server-side, sorts are page-side.** The eight filters read Emails / Tags / Consent, which §12 keeps off the list payload, so `nop=list` carries the filter params and answers only the subset; the four sorts need nothing beyond the row (name, title, account, `lastTouch`), so a sort issues no request (D14)
-- **A bad filter value is refused (`bad_filter`), never silently ignored** — an ignored filter would show a wider list than the developer asked for
-- **`nop=bulk op=account` memoises the verdict per account** and mirrors the editor's reset (relationship off Target / Customer with no stage asked → None), so a bulk change and an editor change agree
-- **The bar is `position: fixed`** (the phone-app pattern) rather than `sticky` inside the list card, so it stays visible while the developer scrolls to the Accounts card; its content is padded clear of the template's fixed bottom-right pills, which Playwright proved would intercept the clicks
-- **The version pair lesson re-confirmed**: bumping `<meta build-version>` before `Networkhtml.version.txt` makes the page reload once on first load — the verifier's "exactly one list request" caught it
-
-### Active context
-
-- **Repo version v07.13r.** `CHANGELOG.md` `Sections: 84/100` — no rotation due
-- **Playwright** is `pip install playwright` + the pre-installed Chromium at `/opt/pw-browsers`. Per-container
-- **Reminders still open:** close out the "Repo access denied" issue after Monday's two earnings-desk runs (C2 must be rebuilt before Wednesday 2026-09-23 04:00 PDT); the Megmeet briefing prompt runs after the Network/Events build, before 2026-10-07
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run N3 session 2 from §13.9 (steps 5–8): the `.xlsx` and vCard exports on the existing `nop=export`, the drafts flow with the `.eml` bundle, the QR card; flip §11's N3 row to Done and write the E2 brief as §13.10. Fable 5.1 High, one push.
-- **To continue:** type `run N3 session 2 from §13.9`
 
 Developed by: LightAISolutions
