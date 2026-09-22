@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.05r] — 2026-09-21 11:16:23 PM EST
+
+> **Prompt:** "I have rebuilt all my routines; verify them and then delete the old ones."
+
+### Added
+
+#### `repository-information/routine-prompts-archive.md` (new)
+- **Verbatim prompt text of the four agent-created Routines, archived immediately before deleting them.** A Routine prompt has no export and no version history — delete the Routine and the text is gone.
+- **Written because a pre-delete check found the claim "the 21 companies’ priorities live on in `watch[]`" was only mostly true.** All 21 do carry a non-empty `watch[]`, and most match the old prompt almost verbatim, but `crusoe` had been summarised to three short phrases, dropping Abilene, the ~900 MW Microsoft deal, GE Vernova, Bergen and Form Energy. Deleting without archiving would have lost that detail irreversibly.
+- **Credential-guarded.** The four prompts were machine-scanned before writing and the written file independently re-scanned; the earnings desk is excluded because its prompt carries a real corpus token and the repo is public via Pages. The first scan fired on C2’s `CORPUS TOKEN: none is supplied` — a false positive, confirmed by inspection and by the absence of any key-shaped run, and the guard was narrowed rather than dropped.
+
+### Verified
+
+#### All ten Routines audited against the live API before any deletion
+- Five rebuilt Routines confirmed `created_via: http_api` with the right cron, model and **zero connectors on every one**: earnings desk (weekdays), C2 (Wed, Opus 5), Industry Guidance (quarterly 15th, Opus 5), quarterly check (quarterly 1st, Sonnet 5), opportunity report (monthly 1st, Sonnet 5).
+- **The ACL health check is `meta_mcp` and must not be deleted** — it is read-only, never pushes, and was deliberately never rebuilt. `created_via` alone is therefore not a safe delete filter; the rule is `meta_mcp` **minus** the ACL check.
+- The repository attachment itself remains unverifiable from the API — `sources` reads empty even on Routines that have demonstrably committed (v06.70r). The **Runs with** card is still the only reliable check.
 
 ## [v07.04r] — 2026-09-21 06:26:05 PM EST
 
