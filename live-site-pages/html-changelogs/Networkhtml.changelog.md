@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18w] — 2026-09-22 06:46:16 AM EST — v07.13r
+
+### Added
+- **The Contacts list can now be searched, filtered and sorted.** Search by name, company, title or email address; a Filters drawer narrows the list by relationship, stage, role, industry segment, source event, tag, met-date range and consent to marketing — the count tile reads "3 of 40" while a filter is on, and Clear brings everything back
+- **Sort by last touch, name or company** — each starts in its natural order (newest touch first; names and companies A to Z) and a button flips it. Last touch is the date of the newest interaction with each contact and now shows on every row. A Warmth sort is shown but stays off until relationship intelligence arrives
+- **Select several contacts at once.** Tick the box on any row (or "all" for every row shown) and a bar appears at the bottom of the screen with what you can do with the selection: **Tag** them, **set their companies' relationship and stage** (a stage still needs a Target or Customer relationship — any company that cannot take it is reported by name count, the rest are set), **download a CSV** of the selection (opens cleanly in Excel with accents intact; anyone marked do-not-contact is left out), or **Delete** them after a confirm that says how many — each can still be restored from its row. Start a mailing is on the bar but not yet live
+- Ticking rows never closes a contact you have open; the selection survives a refresh and is trimmed to the rows still shown
 
 ## [v01.17w] — 2026-09-22 06:05:50 AM EST — v07.12r
 

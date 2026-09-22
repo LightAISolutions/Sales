@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 8/50`
+`Sections: 9/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.09g] — 2026-09-22 06:46:16 AM EST — v07.13r
+
+### Added
+- **The contact list answers a search and eight filters** (relationship, stage, role, segment, source event, tag, met-date range, consent) and carries each contact's most recent interaction date — the one new field on a list row. The columns the search and filters read never leave the server; an unknown filter value is refused rather than ignored
+- **Bulk changes over a selection of contacts**: add a tag to each, or set the relationship and stage of their companies — every row is checked on its own (a stage still needs a Target or Customer relationship; a relationship moved off those resets the stage to None, as the editor does) and the rows that could not be changed are answered back with the reason, the rest applied. Recorded as events with counts only
+- **CSV export of a selection** (or of every contact): one quoted row per contact with their company, relationship, stage and last touch; contacts marked do-not-contact are left out; a disclosure record is written naming the count and the identifiers, never a field
 
 ## [v01.08g] — 2026-09-22 05:05:03 AM EST — v07.10r
 

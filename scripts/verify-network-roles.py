@@ -64,6 +64,22 @@ decision-maker name; an uncovered account's Propose a dossier shows the exact
 `profiler <Company>` line and marks the account `dossier-proposed`; deleting
 an account with live contacts is refused with the count shown.
 
+N3 session 1 — the list (design plan §4.3): the stub's nop=list applies the
+search and the eight filters the way nwListOp_ does and carries lastTouch on
+every row; the tests drive the search box (the request carries q=, the tile
+reads "1 of 5"), the drawer (role, role + consent with the hint counting
+them, segment, source event, tag, Clear), the sort strip (Name A → Z, the
+flip reverses it, no request issued, Warmth disabled until N4), the
+multi-select (two rows ticked while a third's detail stays open, the bar's
+count), and the bulk actions: tag through nop=bulk (both ids, the stub tags
+both, the selection clears, the tag filter finds them), relationship / stage
+through nop=bulk (a stage alone on two Partner accounts refused per row with
+the D5 word, then Target · Discovery on both; the bar's own gate pins the
+stage to None for a Supplier), the CSV through nop=export (a real download:
+BOM, header, two CRLF rows), and delete through nop=delete one request per
+row after a confirm that names the count. Screenshots network-list-filters.png
+and network-list-bar.png.
+
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
 executable_path. Do NOT run `playwright install`.
@@ -117,7 +133,7 @@ def gas_stub(role, counter, state=None):
     """Stand in for the deployed Network GAS: counts every data request and
     answers nop=list the way handleNetworkOp_ does for the tier. `state`
     (session 2) holds the rows the save ops wrote so the list answers them."""
-    state = state if state is not None else {'contacts': [], 'accounts': [], 'posts': [], 'folders': None}
+    state = state if state is not None else {'contacts': [], 'accounts': [], 'posts': [], 'folders': None, 'list_filters': []}
     def q(post, key):
         import urllib.parse
         return dict(urllib.parse.parse_qsl(post)).get(key, '')
@@ -134,10 +150,38 @@ def gas_stub(role, counter, state=None):
             if role != 'admin':
                 body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
             elif 'nop=list' in url:
+                # N3 s1: the search and the eight filters are applied HERE, as nwListOp_ does — the
+                # columns they read (emails, tags, consent) never reach the page; lastTouch rides
+                # on every row; `total` / `filtered` let the page say "2 of 5".
+                import urllib.parse
+                qs = dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query))
+                f = {k: qs.get(k, '').strip().lower() for k in ('q', 'relationship', 'stage', 'role', 'segment', 'event', 'tag', 'consent')}
+                f['from'], f['to'] = qs.get('from', ''), qs.get('to', '')
+                state['list_filters'].append(dict((k, v) for k, v in f.items() if v))
                 live = [c for c in state['contacts'] if not c.get('deletedAt')]
                 accts = [dict(a, contactCount=len([c for c in live if c['accountId'] == a['id']])) for a in state['accounts'] if not a.get('deletedAt')]
-                body = {'success': True, 'role': 'admin', 'caps': ['contacts'],
-                        'contacts': live, 'accounts': accts, 'folders': state['folders']}
+                by_acc = dict((a['id'], a) for a in state['accounts'])
+                def keep(c):
+                    a, full = by_acc.get(c['accountId'], {}), c.get('full', {})
+                    if f['relationship'] and a.get('relationship') != f['relationship']: return False
+                    if f['stage'] and a.get('stage', 'none') != f['stage']: return False
+                    if f['role'] and c.get('role') != f['role']: return False
+                    if f['segment'] and f['segment'] not in (a.get('segmentIds') or []): return False
+                    if f['event'] and (c.get('sourceEvent') or '').lower() != f['event']: return False
+                    if f['tag'] and f['tag'] not in [t.lower() for t in (full.get('tags') or [])]: return False
+                    if f['from'] and (c.get('metDate') or '') < f['from']: return False
+                    if f['to'] and (c.get('metDate') or '') > f['to']: return False
+                    if f['consent'] and (full.get('consent') or 'unknown') != f['consent']: return False
+                    if f['q']:
+                        hay = '\n'.join([c.get('name') or '', c.get('title') or '', a.get('name') or ''] + [e.get('value', '') for e in (full.get('emails') or [])]).lower()
+                        if f['q'] not in hay: return False
+                    return True
+                rows = [dict((k, v) for k, v in c.items() if k not in ('full', 'email', 'touch')) for c in live if keep(c)]
+                for r in rows:
+                    src = next(c for c in live if c['id'] == r['id'])
+                    r['lastTouch'] = src.get('touch') or src.get('metDate') or ''
+                body = {'success': True, 'role': 'admin', 'caps': ['contacts'], 'contacts': rows, 'accounts': accts,
+                        'folders': state['folders'], 'total': len(live), 'filtered': any(f.values())}
             elif 'nop=account' in post:
                 state['posts'].append(('account', post))
                 a = json.loads(q(post, 'account') or '{}')
@@ -241,6 +285,49 @@ def gas_stub(role, counter, state=None):
                 # it answers what the real backend answers while the peer tokens
                 # are unset — the card must stay exactly as N1 built it.
                 body = {'success': False, 'error': 'not_configured'}
+            elif 'nop=bulk' in post:
+                # N3 s1: nwBulkOp_'s shape — every id judged on its own, rejected[] read back.
+                state['posts'].append(('bulk', post))
+                ids = json.loads(q(post, 'ids') or '[]'); op = q(post, 'op')
+                applied, unchanged, rejected, verdict = 0, 0, [], {}
+                for cid in ids:
+                    row = next((x for x in state['contacts'] if x['id'] == cid), None)
+                    if row is None: rejected.append({'id': cid, 'reason': 'not_found'}); continue
+                    if row.get('deletedAt'): rejected.append({'id': cid, 'reason': 'deleted'}); continue
+                    if op == 'tag':
+                        tags = row['full'].setdefault('tags', [])
+                        if q(post, 'tag') in tags: unchanged += 1
+                        else: tags.append(q(post, 'tag')); applied += 1
+                    else:
+                        want = json.loads(q(post, 'account') or '{}'); aid = row['accountId']
+                        if aid not in verdict:
+                            acc = next(x for x in state['accounts'] if x['id'] == aid)
+                            rel = want.get('relationship') or acc['relationship']; st = want.get('stage') or acc.get('stage', 'none')
+                            if want.get('relationship') and not want.get('stage') and rel not in ('target', 'customer'): st = 'none'
+                            if st != 'none' and rel not in ('target', 'customer'): verdict[aid] = 'STAGE_NEEDS_TARGET_OR_CUSTOMER'
+                            elif rel == acc['relationship'] and st == acc.get('stage', 'none'): verdict[aid] = 'unchanged'
+                            else: acc['relationship'], acc['stage'] = rel, st; verdict[aid] = 'ok'
+                        if verdict[aid] == 'ok': applied += 1
+                        elif verdict[aid] == 'unchanged': unchanged += 1
+                        else: rejected.append({'id': cid, 'reason': verdict[aid]})
+                body = {'success': True, 'op': op, 'applied': applied, 'unchanged': unchanged,
+                        'accounts': len([v for v in verdict.values() if v == 'ok']), 'rejected': rejected}
+            elif 'nop=export' in post:
+                # N3 s1: nwExportOp_'s CSV — every field quoted, CRLF rows, do-not-contact rows left out.
+                state['posts'].append(('export', post))
+                ids = json.loads(q(post, 'ids') or '[]')
+                cell = lambda v: '"' + str(v if v is not None else '').replace('"', '""') + '"'
+                lines = [','.join(cell(h) for h in ('Contact ID', 'Full Name', 'Title', 'Company', 'Email', 'Tags', 'Last Touch'))]
+                excluded = 0
+                for cid in ids:
+                    row = next((x for x in state['contacts'] if x['id'] == cid and not x.get('deletedAt')), None)
+                    if row is None: continue
+                    if row['full'].get('dnc'): excluded += 1; continue
+                    acc = next((x for x in state['accounts'] if x['id'] == row['accountId']), {})
+                    lines.append(','.join(cell(v) for v in (cid, row['name'], row['title'], acc.get('name', ''), row.get('email', ''),
+                                                             '; '.join(row['full'].get('tags') or []), row.get('touch') or row.get('metDate') or '')))
+                body = {'success': True, 'format': 'csv', 'rows': len(lines) - 1, 'excluded': excluded,
+                        'csv': '\r\n'.join(lines) + '\r\n', 'filename': 'network-contacts-test.csv'}
             elif 'nop=extract' in post:
                 # body-POST only: the images travel in the form body, not the URL
                 assert 'front=' in post and 'contactId=c-0123456789abc' in post
@@ -449,7 +536,7 @@ def run():
         ctx.close()
 
         # N1 s1 — offline capture queues; reconnect drains through the pipeline.
-        state = {'contacts': [], 'accounts': [], 'posts': [], 'folders': None}
+        state = {'contacts': [], 'accounts': [], 'posts': [], 'folders': None, 'list_filters': []}
         ctx, page, reqs, errs = load_as(browser, base, 'admin', '', state)
         jpeg_b64 = page.evaluate("""() => {
           const c = document.createElement('canvas'); c.width = 700; c.height = 400;
@@ -819,6 +906,158 @@ def run():
         page.wait_for_function("() => /still has 4 contacts/.test((document.getElementById('nw-acct-status') || {}).textContent || '')", timeout=8000)
         if page.query_selector('#nw-accounts .nw-acct-row[data-id="a-0000000000001"].nw-deleted') or state['accounts'][0].get('deletedAt') or len([c for c in state['contacts'] if not c.get('deletedAt')]) != 5:
             failures.append('account delete: the refusal should leave the account and its contacts untouched')
+        # ── N3 session 1 — the list: search, the eight filters, the sorts, multi-select and the bulk actions (§4.3) ──
+        import urllib.parse as _up
+        state['contacts'][-1]['touch'] = '2026-09-15'   # Morten: an older last touch than the four saved today
+        page.evaluate("() => nwAfterWrite()")
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 5 && /last touch 2026-09-15/.test(document.getElementById('nw-rows').textContent)", timeout=8000)
+        names = lambda: page.evaluate("() => [...document.querySelectorAll('#nw-rows .nw-row .nw-row-main')].map(r => r.firstChild.textContent)")
+        if names()[-1] != 'Morten Wierod':
+            failures.append('sort: the default order is last touch, newest first — Morten (2026-09-15) should be last, got %r' % (names(),))
+        # The sort strip: Name ascending, the flip reverses it; Warmth is disabled until N4.
+        page.click('#nw-sort button[data-sort="name"]')
+        page.wait_for_timeout(200)
+        asc = names()
+        if asc != sorted(asc) or len(asc) != 5:
+            failures.append('sort: Name should order the five rows A → Z, got %r' % (asc,))
+        page.click('#nw-sort-dir')
+        page.wait_for_timeout(200)
+        if names() != list(reversed(asc)):
+            failures.append('sort: the flip should reverse the order, got %r' % (names(),))
+        if not page.query_selector('#nw-sort button[data-sort="warmth"][disabled]'):
+            failures.append('sort: the Warmth sort must be present and disabled until N4')
+        page.click('#nw-sort-dir')   # back to A → Z (a key starts in its natural order; the flip reverses it)
+        page.wait_for_timeout(200)
+        if names() != asc:
+            failures.append('sort: a second flip should restore A → Z, got %r' % (names(),))
+        n_list = len([u for u in reqs if 'nop=list' in u])
+        if len([u for u in reqs if 'nop=list' in u]) != n_list:
+            failures.append('sort: a sort must not issue a list request')
+        # Search narrows server-side: the request carries q=, the count tile reads "1 of 5".
+        page.fill('#nw-q', 'ann@acme')
+        page.press('#nw-q', 'Enter')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 1", timeout=8000)
+        if state['list_filters'][-1] != {'q': 'ann@acme'} or names() != ['Ann Three'] or '1 of 5' not in page.evaluate("() => document.querySelector('.nw-count').textContent"):
+            failures.append('search: expected q=ann@acme to narrow to Ann Three with "1 of 5", got %r / %r' % (state['list_filters'][-1], names()))
+        page.fill('#nw-q', '')
+        page.press('#nw-q', 'Enter')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 5", timeout=8000)
+        # The filter drawer: role, then role + consent (the hint counts them), then Clear.
+        state['contacts'][0]['role'] = 'decision-maker'; state['contacts'][0]['full']['consent'] = 'yes'   # Jane: the merge sheet took the new card's review (consent unknown) — set both for a deterministic pair
+        page.click('#nw-filter-head')
+        page.wait_for_selector('#nw-filter-body.nw-open', timeout=3000)
+        page.select_option('#nw-filter-body select[data-filter="role"]', 'decision-maker')
+        page.click('#nw-filter-apply')
+        want_dm = sorted(c['name'] for c in state['contacts'] if not c.get('deletedAt') and c.get('role') == 'decision-maker')
+        page.wait_for_function("(n) => document.querySelectorAll('#nw-rows .nw-row').length === n", arg=len(want_dm), timeout=8000)
+        hint = page.evaluate("() => document.querySelector('.nw-filter-hint').textContent")
+        if names() != want_dm or state['list_filters'][-1] != {'role': 'decision-maker'} or '1 on: role' not in hint:
+            failures.append('filter role: expected %r with the hint "1 on: role", got %r / %r / %r' % (want_dm, names(), state['list_filters'][-1], hint))
+        page.select_option('#nw-filter-body select[data-filter="consent"]', 'yes')
+        page.click('#nw-filter-apply')
+        want_both = sorted(c['name'] for c in state['contacts'] if not c.get('deletedAt') and c.get('role') == 'decision-maker' and c['full'].get('consent') == 'yes')
+        page.wait_for_function("(n) => document.querySelectorAll('#nw-rows .nw-row').length === n", arg=len(want_both), timeout=8000)
+        hint = page.evaluate("() => document.querySelector('.nw-filter-hint').textContent")
+        if names() != want_both or want_both != ['Jane O’Doe-Smith'] or state['list_filters'][-1] != {'role': 'decision-maker', 'consent': 'yes'} or '2 on: role, consent' not in hint:
+            failures.append('filter role+consent: expected %r with "2 on: role, consent", got %r / %r' % (want_both, names(), hint))
+        page.screenshot(path=str(SHOTS / 'network-list-filters.png'), full_page=False)
+        page.click('#nw-filter-clear')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 5 && document.querySelector('.nw-filter-hint').textContent === ''", timeout=8000)
+        # Segment (an account's registry segment) and source event (the contact's) each narrow to one row.
+        page.select_option('#nw-filter-body select[data-filter="segment"]', 'grid-equipment')
+        page.click('#nw-filter-apply')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 1", timeout=8000)
+        if names() != ['Morten Wierod'] or state['list_filters'][-1] != {'segment': 'grid-equipment'}:
+            failures.append('filter segment: expected Morten alone, got %r / %r' % (names(), state['list_filters'][-1]))
+        page.click('#nw-filter-clear')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 5", timeout=8000)
+        page.fill('#nw-filter-body input[data-filter="event"]', 're-plus-2026')
+        page.click('#nw-filter-apply')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 1", timeout=8000)
+        if names() != ['Jane O’Doe-Smith'] or state['list_filters'][-1] != {'event': 're-plus-2026'}:
+            failures.append('filter event: expected Jane alone, got %r / %r' % (names(), state['list_filters'][-1]))
+        page.click('#nw-filter-clear')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 5", timeout=8000)
+        # Multi-select: two rows ticked while a third's detail is open — the detail stays open, the bar shows "2 selected".
+        page.click('#nw-rows .nw-row[data-id="c-2222222222222"] .nw-row-main')
+        page.wait_for_selector('#nw-rows .nw-row[data-id="c-2222222222222"].nw-open', timeout=8000)
+        page.check('#nw-rows .nw-row[data-id="c-3333333333333"] .nw-row-check')
+        page.check('#nw-rows .nw-row[data-id="c-4444444444444"] .nw-row-check')
+        page.wait_for_function("() => document.getElementById('nw-bar').classList.contains('nw-open') && document.getElementById('nw-bar-count').textContent === '2 selected'", timeout=5000)
+        if not page.query_selector('#nw-rows .nw-row[data-id="c-2222222222222"].nw-open') or page.evaluate("() => document.querySelectorAll('#nw-rows .nw-row.nw-selected').length") != 2:
+            failures.append('select: ticking two rows should keep the open detail open and mark two rows selected')
+        if not page.query_selector('#nw-bar-mail[disabled]'):
+            failures.append('bar: Start a mailing must be present and disabled (session 2)')
+        # Tag both: nop=bulk op=tag with both ids; the stub tags both; the selection clears; the tag filter finds them.
+        page.click('#nw-bar-tag')
+        page.fill('#nw-bar-tag-in', 'Hot')
+        page.click('#nw-bar-tag-go')
+        page.wait_for_function("() => /Tagged 2 with \"hot\"/.test(document.getElementById('nw-bar-status').textContent)", timeout=10000)
+        bp = dict(_up.parse_qsl(state['posts'][-1][1]))
+        if state['posts'][-1][0] != 'bulk' or bp.get('op') != 'tag' or bp.get('tag') != 'hot' or sorted(json.loads(bp.get('ids', '[]'))) != ['c-3333333333333', 'c-4444444444444']:
+            failures.append('bulk tag: nop=bulk payload wrong: %r' % ({k: bp.get(k) for k in ('op', 'tag', 'ids')},))
+        if [c['id'] for c in state['contacts'] if 'hot' in (c['full'].get('tags') or [])] != ['c-3333333333333', 'c-4444444444444']:
+            failures.append('bulk tag: the stub rows were not both tagged')
+        page.wait_for_function("() => !document.getElementById('nw-bar').classList.contains('nw-open') && document.querySelectorAll('#nw-rows .nw-row.nw-selected').length === 0", timeout=8000)
+        page.fill('#nw-filter-body input[data-filter="tag"]', 'hot')
+        page.click('#nw-filter-apply')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 2", timeout=8000)
+        if names() != ['Ann Three', 'Bob Four'] or state['list_filters'][-1] != {'tag': 'hot'}:
+            failures.append('filter tag: expected the two tagged rows, got %r / %r' % (names(), state['list_filters'][-1]))
+        page.click('#nw-filter-clear')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 5", timeout=8000)
+        # Relationship / stage: a stage on two Partner accounts is refused per row (D5), then Target · Discovery lands on both accounts.
+        page.check('#nw-rows .nw-row[data-id="c-0123456789abc"] .nw-row-check')
+        page.check('#nw-rows .nw-row[data-id="c-6666666666666"] .nw-row-check')
+        page.wait_for_function("() => document.getElementById('nw-bar-count').textContent === '2 selected'", timeout=5000)
+        page.click('#nw-bar-account')
+        page.wait_for_selector('#nw-bar-account-form.nw-open', timeout=3000)
+        page.select_option('#nw-bar-rel', 'supplier')
+        gate = page.evaluate("() => { const s = document.getElementById('nw-bar-stage'); return [s.disabled, s.value]; }")
+        if gate != [True, 'none']:
+            failures.append('bar: a Supplier relationship should pin the stage select to None, got %r' % (gate,))
+        page.select_option('#nw-bar-rel', '')
+        page.select_option('#nw-bar-stage', 'discovery')
+        page.click('#nw-bar-account-go')
+        page.wait_for_function("() => /2 rejected: a stage needs a Target or Customer relationship ×2/.test(document.getElementById('nw-bar-status').textContent)", timeout=10000)
+        bp = dict(_up.parse_qsl(state['posts'][-1][1]))
+        if bp.get('op') != 'account' or json.loads(bp.get('account', '{}')) != {'stage': 'discovery'} or [a['stage'] for a in state['accounts']] != ['none', 'none']:
+            failures.append('bulk account: a stage alone on two Partner accounts should be refused per row and change nothing: %r / %r' % (bp.get('account'), [a['stage'] for a in state['accounts']]))
+        page.select_option('#nw-bar-rel', 'target')
+        page.select_option('#nw-bar-stage', 'discovery')
+        page.click('#nw-bar-account-go')
+        page.wait_for_function("() => /Set on 2 accounts \\(2 contacts\\)/.test(document.getElementById('nw-bar-status').textContent)", timeout=10000)
+        if [(a['relationship'], a['stage']) for a in state['accounts']] != [('target', 'discovery'), ('target', 'discovery')]:
+            failures.append('bulk account: Target · Discovery should land on both accounts, got %r' % ([(a['relationship'], a['stage']) for a in state['accounts']],))
+        page.wait_for_function("() => [...document.querySelectorAll('#nw-accounts .nw-acct-row .nw-row-main')].every(r => /Target/.test(r.textContent) && /Discovery/.test(r.textContent))", timeout=8000)
+        # CSV: two rows selected → nop=export format=csv with the ids → a download that starts with the BOM and holds the header + two rows.
+        page.check('#nw-rows .nw-row[data-id="c-3333333333333"] .nw-row-check')
+        page.check('#nw-rows .nw-row[data-id="c-6666666666666"] .nw-row-check')
+        page.wait_for_function("() => document.getElementById('nw-bar-count').textContent === '2 selected'", timeout=5000)
+        with page.expect_download(timeout=10000) as dl:
+            page.click('#nw-bar-csv')
+        data = open(dl.value.path(), 'rb').read()
+        bp = dict(_up.parse_qsl(state['posts'][-1][1]))
+        lines = data.decode('utf-8-sig').split('\r\n')
+        if state['posts'][-1][0] != 'export' or bp.get('format') != 'csv' or sorted(json.loads(bp.get('ids', '[]'))) != ['c-3333333333333', 'c-6666666666666']:
+            failures.append('csv: nop=export payload wrong: %r' % ({k: bp.get(k) for k in ('format', 'ids')},))
+        if not data.startswith(b'\xef\xbb\xbf') or len(lines) != 4 or lines[-1] != '' or '"Ann Three"' not in lines[1] or '"Morten Wierod"' not in lines[2] or '"hot"' not in lines[1]:
+            failures.append('csv: expected a BOM, a header and two CRLF rows, got %r' % (lines[:4],))
+        page.wait_for_function("() => /CSV with 2 contacts/.test(document.getElementById('nw-bar-status').textContent)", timeout=5000)
+        page.screenshot(path=str(SHOTS / 'network-list-bar.png'), full_page=False)
+        # Delete: the confirm names the count; accepted → nop=delete once per row; the row is gone; the bar closes.
+        page.click('#nw-bar-clear')
+        page.check('#nw-rows .nw-row[data-id="c-4444444444444"] .nw-row-check')
+        page.wait_for_function("() => document.getElementById('nw-bar-count').textContent === '1 selected'", timeout=5000)
+        dialogs = []
+        page.once('dialog', lambda d: (dialogs.append(d.message), d.accept()))
+        n_del = len([u for u in reqs if 'nop=delete' in u])
+        page.click('#nw-bar-delete')
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row').length === 4", timeout=10000)
+        if dialogs != ['Delete 1 contact? Each can be restored from its row afterwards.'] or len([u for u in reqs if 'nop=delete' in u and 'id=c-4444444444444' in u]) != 1 or len([u for u in reqs if 'nop=delete' in u]) != n_del + 1:
+            failures.append('bulk delete: expected one confirm naming the count and one nop=delete for the row, got %r' % (dialogs,))
+        if not state['contacts'][3].get('deletedAt') or page.query_selector('#nw-bar.nw-open'):
+            failures.append('bulk delete: the stub row should be soft-deleted and the bar closed')
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
         if real_errs:
             failures.append('capture: %d page error(s): %s' % (len(real_errs), real_errs[0][:100]))
@@ -834,7 +1073,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-8s %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['list']),
                                                   mark(g['empty']), mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png (%dx%d)'
+    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png, network-list-filters.png, network-list-bar.png (%dx%d)'
           % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
@@ -846,7 +1085,9 @@ def run():
           'review → save → Drive move → list row, merge on a duplicate, delete → restore and Save all round-trip against the stub; '
           'N2: the Accounts card (admin only), the account detail with its contacts, the partner → stage-none edit through nop=account, '
           'the Profiler.html#abb deep link, the on-the-record title from the served abb dossier, the profiler <Company> line and the '
-          'account_has_contacts refusal with its count.')
+          'account_has_contacts refusal with its count; N3 s1: the search and the eight filters narrow the stub\'s five contacts server-side, '
+          'the Name sort flips without a request, a two-row selection tags both through nop=bulk, a stage on two Partner accounts is refused per row '
+          'and Target · Discovery lands on both, the CSV downloads with a BOM and two rows, one row is deleted after a confirm naming the count.')
     return 0
 
 

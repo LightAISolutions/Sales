@@ -1,4 +1,4 @@
-var VERSION = "v01.08g";
+var VERSION = "v01.09g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -963,28 +963,9 @@ function handleNetworkOp_(e) {
   try {
     sess = validateSessionForData(session, 'network_' + op);
     if (op === 'list') {
+      // N3: search, the eight filters and lastTouch live in nwListOp_ (below the delete op).
       nwRequire_(sess, 'contacts', 'network_list');
-      var scope = resolveOwnerSet_(sess, p.owner || '');
-      if (scope.error) return { success: false, error: scope.error };
-      var tabs = ensureNetworkTabs_();
-      // Minimum-necessary subset (NETWORK-SCHEMA.md §12); Deleted At rows
-      // are filtered. N0 has no writes, so this answers empty on a fresh
-      // spreadsheet — the point is that the tabs now exist.
-      var contacts = nwListRows_(tabs.contacts, scope.set, {
-        id: 'Contact ID', accountId: 'Account ID', name: 'Full Name', title: 'Title', role: 'Role',
-        sourceEvent: 'Source Event', metDate: 'Met Date', updatedAt: 'Updated At' });
-      var accounts = nwListRows_(tabs.accounts, scope.set, {
-        id: 'Account ID', name: 'Name', slug: 'Profiler Slug', relationship: 'Relationship', stage: 'Stage',
-        updatedAt: 'Updated At' });
-      // N2: the live-contact count per account rides on the list row (the
-      // Accounts card shows it; the delete refusal names it). Nothing else
-      // widens — tags, HQ, notes and the newsroom URL stay detail-only.
-      var perAccount = {};
-      for (var ci = 0; ci < contacts.length; ci++) perAccount[contacts[ci].accountId] = (perAccount[contacts[ci].accountId] || 0) + 1;
-      for (var ai = 0; ai < accounts.length; ai++) accounts[ai].contactCount = perAccount[accounts[ai].id] || 0;
-      auditLog('data_read', sess.email, 'network_list', { contacts: contacts.length, accounts: accounts.length });
-      return { success: true, role: nwRoleOf_(sess), caps: NW_ROLE_CAPS[nwRoleOf_(sess)] || [],
-               contacts: contacts, accounts: accounts, folders: nwFoldersGet_() };
+      return nwListOp_(sess, p);
     }
     if (op === 'folders') {
       nwRequire_(sess, 'contacts', 'network_folders');
@@ -1048,6 +1029,14 @@ function handleNetworkOp_(e) {
     if (op === 'restore') {
       nwRequire_(sess, 'contacts', 'network_restore');
       return nwDeleteRestoreOp_(sess, p, true);
+    }
+    if (op === 'bulk') {
+      nwRequire_(sess, 'contacts', 'network_bulk');
+      return nwBulkOp_(sess, p);
+    }
+    if (op === 'export') {
+      nwRequire_(sess, 'contacts', 'network_export');
+      return nwExportOp_(sess, p);
     }
     if (op === 'eventstoday') {
       // B: the scan card's Source Event default — the signed-in user's starred
@@ -1859,6 +1848,248 @@ function nwDeleteRestoreOp_(sess, p, restore) {
   var details = {}; details[id.charAt(0) === 'a' ? 'accountId' : 'contactId'] = id;
   auditLog('data_write', sess.email, restore ? 'network_restore' : 'network_delete', details);
   return { success: true, id: id, deletedAt: found.obj['Deleted At'] };
+}
+
+// PROJECT: ── N3 session 1 — the list, the filters and the bulk actions (§4.3; NETWORK-SCHEMA.md §12, §13)
+// The list op grown from N0's: search over name, company, title and email;
+// the eight filters (relationship, stage, role, segment, source event, tag,
+// met-date range, consent); and `lastTouch` — the newest Interaction date per
+// contact, computed ONCE per list from a single read of the Interactions tab
+// and carried on the row. lastTouch is the one widening of the list payload
+// (§12): the columns the search and the filters read (emails, tags, consent)
+// are read here and dropped before the answer, which is why the filtering is
+// server-side — those columns never leave the server. Sorting is the page's:
+// every row already carries what the sorts need (name, title, account,
+// lastTouch). An off-list enum or a malformed date is refused as bad_filter,
+// never silently ignored.
+var NW_LIST_FILTER_KEYS = ['q', 'relationship', 'stage', 'role', 'segment', 'event', 'tag', 'from', 'to', 'consent'];
+var NW_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+function nwListFilters_(p) {
+  var f = {
+    q: nwStr_(p.q, 120).toLowerCase(), relationship: nwStr_(p.relationship, 40).toLowerCase(), stage: nwStr_(p.stage, 40).toLowerCase(),
+    role: nwStr_(p.role, 40).toLowerCase(), segment: nwStr_(p.segment, 80).toLowerCase(), event: nwStr_(p.event, 120).toLowerCase(),
+    tag: nwStr_(p.tag, 40).toLowerCase(), from: nwStr_(p.from, 10), to: nwStr_(p.to, 10), consent: nwStr_(p.consent, 10).toLowerCase()
+  };
+  if (f.relationship && NW_RELATIONSHIPS.indexOf(f.relationship) < 0) return { error: 'bad_filter' };
+  if (f.stage && NW_STAGES.indexOf(f.stage) < 0) return { error: 'bad_filter' };
+  if (f.role && NW_ROLES.indexOf(f.role) < 0) return { error: 'bad_filter' };
+  if (f.consent && NW_CONSENT.indexOf(f.consent) < 0) return { error: 'bad_filter' };
+  if ((f.from && !NW_DATE_RE.test(f.from)) || (f.to && !NW_DATE_RE.test(f.to))) return { error: 'bad_filter' };
+  f.active = false;
+  for (var i = 0; i < NW_LIST_FILTER_KEYS.length; i++) if (f[NW_LIST_FILTER_KEYS[i]]) f.active = true;
+  return f;
+}
+// The newest Interaction Date per contact id — one read of the tab.
+function nwLastTouch_(tabs) {
+  var it = nwSheetRead_(tabs.interactions), touch = {};
+  var cCol = it.idx['Contact ID'], dCol = it.idx['Date'];
+  if (cCol === undefined || dCol === undefined) return touch;
+  for (var r = 1; r < it.vals.length; r++) {
+    var cid = String(it.vals[r][cCol] || '');
+    if (!cid) continue;
+    var d = it.vals[r][dCol];
+    d = (d instanceof Date) ? d.toISOString().slice(0, 10) : String(d || '').slice(0, 10);
+    if (d && (!touch[cid] || d > touch[cid])) touch[cid] = d;
+  }
+  return touch;
+}
+function nwListMatch_(c, a, f) {
+  if (!f.active) return true;
+  if (f.relationship && String(a.relationship || '') !== f.relationship) return false;
+  if (f.stage && String(a.stage || '') !== f.stage) return false;
+  if (f.role && String(c.role || '') !== f.role) return false;
+  if (f.segment && nwArr_(a._segments).map(String).indexOf(f.segment) < 0) return false;
+  if (f.event && String(c.sourceEvent || '').toLowerCase() !== f.event) return false;
+  if (f.tag && nwArr_(c._tags).map(function(t) { return String(t).toLowerCase(); }).indexOf(f.tag) < 0) return false;
+  if (f.from && (!c.metDate || c.metDate < f.from)) return false;
+  if (f.to && (!c.metDate || c.metDate > f.to)) return false;
+  if (f.consent && String(c._consent || 'unknown') !== f.consent) return false;
+  if (f.q) {
+    var hay = [c.name, c.title, a.name].concat(nwArr_(c._emails).map(nwEmailKey_)).join('\n').toLowerCase();
+    if (hay.indexOf(f.q) < 0) return false;
+  }
+  return true;
+}
+// nop=list — the minimum-necessary subset (§12) plus lastTouch, the accounts
+// with their live-contact count (over every live contact, whatever the
+// filter — the Accounts card is not filtered), `total` so the page can say
+// "12 of 40", and `filtered` so it knows a narrowed list is showing.
+function nwListOp_(sess, p) {
+  var scope = resolveOwnerSet_(sess, p.owner || '');
+  if (scope.error) return { success: false, error: scope.error };
+  var f = nwListFilters_(p);
+  if (f.error) return { success: false, error: f.error };
+  var tabs = ensureNetworkTabs_();
+  var contacts = nwListRows_(tabs.contacts, scope.set, {
+    id: 'Contact ID', accountId: 'Account ID', name: 'Full Name', title: 'Title', role: 'Role',
+    sourceEvent: 'Source Event', metDate: 'Met Date', updatedAt: 'Updated At',
+    // read for the search and the filters only — dropped below, never answered
+    _emails: 'Emails', _tags: 'Tags', _consent: 'Consent Marketing' });
+  var accounts = nwListRows_(tabs.accounts, scope.set, {
+    id: 'Account ID', name: 'Name', slug: 'Profiler Slug', relationship: 'Relationship', stage: 'Stage',
+    updatedAt: 'Updated At', _segments: 'Segment IDs' });
+  var byAccount = {}, perAccount = {};
+  for (var ai = 0; ai < accounts.length; ai++) byAccount[accounts[ai].id] = accounts[ai];
+  for (var ci = 0; ci < contacts.length; ci++) perAccount[contacts[ci].accountId] = (perAccount[contacts[ci].accountId] || 0) + 1;
+  var touch = nwLastTouch_(tabs);
+  var total = contacts.length, out = [];
+  for (var i = 0; i < contacts.length; i++) {
+    var c = contacts[i];
+    c.metDate = String(c.metDate || '').slice(0, 10);
+    c.lastTouch = touch[c.id] || '';
+    if (nwListMatch_(c, byAccount[c.accountId] || {}, f)) out.push(c);
+  }
+  for (var k = 0; k < out.length; k++) { delete out[k]._emails; delete out[k]._tags; delete out[k]._consent; }
+  for (var aj = 0; aj < accounts.length; aj++) { accounts[aj].contactCount = perAccount[accounts[aj].id] || 0; delete accounts[aj]._segments; }
+  auditLog('data_read', sess.email, 'network_list', { contacts: out.length, total: total, accounts: accounts.length, filtered: f.active ? 1 : 0 });
+  return { success: true, role: nwRoleOf_(sess), caps: NW_ROLE_CAPS[nwRoleOf_(sess)] || [],
+           contacts: out, accounts: accounts, folders: nwFoldersGet_(), total: total, filtered: f.active };
+}
+
+// nop=bulk — body-POST; one of two ops over a list of contact ids:
+//   op=tag      tag=<tag>                        → the tag added to each contact's Tags
+//   op=account  account={relationship?, stage?}  → the relationship / stage of the
+//               contacts' accounts, each account validated through the save
+//               path's validator (the D5 rule) — a stage on a Partner is
+//               refused for that account, never applied half-way; a relation-
+//               ship moved off Target / Customer with no stage asked for
+//               resets the stage to None, as the editor does
+// Every id is validated on its own — bad_id, duplicate, not_found (an unowned
+// row answers not-found, never forbidden), deleted, too_many_tags, or the
+// validator's word — and answered in rejected[] with its reason, the shape of
+// B's signals upsert; the rest are applied. One contact whose tag is already
+// there, or whose account already reads as asked, counts as unchanged. Audit:
+// the op name and counts only.
+function nwBulkOp_(sess, p) {
+  var op = nwStr_(p.op, 20).toLowerCase();
+  if (op !== 'tag' && op !== 'account') return { success: false, error: 'bad_bulk_op' };
+  var ids = nwArr_(p.ids);
+  if (!ids.length) return { success: false, error: 'ids_required' };
+  if (ids.length > 500) return { success: false, error: 'too_many_ids' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var owner = scopeRes.owner, tag = '', want = null;
+  if (op === 'tag') {
+    tag = nwStr_(p.tag, 40).toLowerCase();
+    if (!tag) return { success: false, error: 'tag_required' };
+  } else {
+    var w = nwObj_(p.account);
+    want = { relationship: nwStr_(w.relationship, 40).toLowerCase(), stage: nwStr_(w.stage, 40).toLowerCase() };
+    if (!want.relationship && !want.stage) return { success: false, error: 'account_fields_required' };
+    if (want.relationship && NW_RELATIONSHIPS.indexOf(want.relationship) < 0) return { success: false, error: 'bad_relationship' };
+    if (want.stage && NW_STAGES.indexOf(want.stage) < 0) return { success: false, error: 'bad_stage' };
+  }
+  var tabs = ensureNetworkTabs_(), now = nwNow_();
+  var ct = nwSheetRead_(tabs.contacts), at = op === 'account' ? nwSheetRead_(tabs.accounts) : null;
+  var rowOf = {};
+  for (var r = 1; r < ct.vals.length; r++) rowOf[String(ct.vals[r][0] || '')] = r;
+  var applied = 0, unchanged = 0, rejected = [], seen = {}, verdicts = {};
+  for (var i = 0; i < ids.length; i++) {
+    var id = nwStr_(ids[i]), reason = '';
+    if (!NW_ID_RE.test(id) || id.charAt(0) !== 'c') reason = 'bad_id';
+    else if (seen[id]) reason = 'duplicate';
+    else if (rowOf[id] === undefined || String(ct.vals[rowOf[id]][ct.idx['Owner']] || '').toLowerCase() !== owner) reason = 'not_found';
+    else if (String(ct.vals[rowOf[id]][ct.idx['Deleted At']] || '')) reason = 'deleted';
+    if (reason) { rejected.push({ id: id, reason: reason }); continue; }
+    seen[id] = true;
+    var obj = nwRowObj_(ct, rowOf[id]);
+    if (op === 'tag') {
+      var tags = nwStrList_(obj['Tags'], 20).map(function(t) { return t.toLowerCase(); });
+      if (tags.indexOf(tag) >= 0) { unchanged++; continue; }
+      if (tags.length >= 20) { rejected.push({ id: id, reason: 'too_many_tags' }); continue; }
+      tags.push(tag);
+      tabs.contacts.getRange(rowOf[id] + 1, ct.idx['Tags'] + 1).setValue(JSON.stringify(tags));
+      tabs.contacts.getRange(rowOf[id] + 1, ct.idx['Updated At'] + 1).setValue(now);
+      applied++;
+      continue;
+    }
+    // op=account — validated and written once per account, memoised across its contacts
+    var aid = String(obj['Account ID'] || ''), verdict = verdicts[aid];
+    if (!verdict) {
+      var af = nwFindRow_(at, aid);
+      if (!nwOwned_(af, owner) || String(af.obj['Deleted At'] || '')) verdict = 'account_not_found';
+      else {
+        var eff = { relationship: want.relationship || String(af.obj['Relationship'] || ''), stage: want.stage || String(af.obj['Stage'] || 'none') };
+        if (want.relationship && !want.stage && NW_STAGE_RELATIONSHIPS.indexOf(eff.relationship) < 0) eff.stage = 'none';
+        var checked = null;
+        try { checked = nwAccountFromPayload_({ id: aid, relationship: eff.relationship, stage: eff.stage }); }
+        catch (vErr) { verdict = String((vErr && vErr.message) || 'INVALID_INPUT'); }
+        if (checked) {
+          if (checked.relationship === af.obj['Relationship'] && checked.stage === af.obj['Stage']) verdict = 'unchanged';
+          else {
+            af.obj['Relationship'] = checked.relationship; af.obj['Stage'] = checked.stage; af.obj['Updated At'] = now;
+            nwWriteRow_(tabs.accounts, at.headers, af.obj, af.row);
+            verdict = 'ok';
+          }
+        }
+      }
+      verdicts[aid] = verdict;
+    }
+    if (verdict === 'ok') applied++;
+    else if (verdict === 'unchanged') unchanged++;
+    else rejected.push({ id: id, reason: verdict });
+  }
+  var accountsWritten = 0;
+  for (var v in verdicts) if (verdicts[v] === 'ok') accountsWritten++;
+  if (applied) bumpDataRev();
+  auditLog('data_write', sess.email, 'network_bulk_' + op, { ids: ids.length, applied: applied, unchanged: unchanged, accounts: accountsWritten, rejected: rejected.length });
+  return { success: true, op: op, applied: applied, unchanged: unchanged, accounts: accountsWritten, rejected: rejected };
+}
+
+// nop=export — format=csv in session 1 (.xlsx and vCard are session 2). The
+// selection's ids (or, with none, every live contact in scope) as one RFC 4180
+// text: every field quoted, CRLF rows, one contact per row with its account's
+// name / relationship / stage and its newest touch. A Do Not Contact row is
+// left out (D9) and Raw Extraction is never exported. D9: every export writes
+// a disclosure row through the template's §164.528 machinery — the op, the
+// row count and the ids, never a field — and the audit row carries counts
+// only. The page prepends the UTF-8 BOM when it builds the download, so Excel
+// reads the accents.
+var NW_CSV_COLUMNS = ['Contact ID', 'Full Name', 'First', 'Last', 'Title', 'Department', 'Role', 'Company', 'Relationship', 'Stage',
+  'Email', 'Emails', 'Phone', 'Phones', 'Address', 'LinkedIn', 'Website', 'Source Event', 'Met Date', 'Consent Marketing', 'Tags',
+  'Notes', 'Last Touch', 'Created At'];
+function nwCsvCell_(v) { return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; }
+function nwExportOp_(sess, p) {
+  var format = nwStr_(p.format, 10).toLowerCase();
+  if (format !== 'csv') return { success: false, error: 'bad_format' };
+  var ids = nwArr_(p.ids);
+  if (ids.length > 2000) return { success: false, error: 'too_many_ids' };
+  var scope = resolveOwnerSet_(sess, p.owner || '');
+  if (scope.error) return { success: false, error: scope.error };
+  var wanted = null;
+  if (ids.length) {
+    wanted = {};
+    for (var i = 0; i < ids.length; i++) { var id = nwStr_(ids[i]); if (NW_ID_RE.test(id) && id.charAt(0) === 'c') wanted[id] = true; }
+  }
+  var tabs = ensureNetworkTabs_();
+  var ct = nwSheetRead_(tabs.contacts), at = nwSheetRead_(tabs.accounts), touch = nwLastTouch_(tabs);
+  var byAccount = {};
+  for (var r = 1; r < at.vals.length; r++) { var ao = nwRowObj_(at, r); byAccount[ao['Account ID']] = ao; }
+  var lines = [NW_CSV_COLUMNS.map(nwCsvCell_).join(',')], exported = [], excluded = 0;
+  for (var c = 1; c < ct.vals.length; c++) {
+    var row = ct.vals[c], cid = String(row[0] || '');
+    if (wanted && !wanted[cid]) continue;
+    if (!scope.set[String(row[ct.idx['Owner']] || '').toLowerCase()]) continue;
+    if (String(row[ct.idx['Deleted At']] || '')) continue;
+    var o = nwContactPublic_(nwRowObj_(ct, c));
+    if (o.dnc) { excluded++; continue; }
+    var a = byAccount[o.accountId] || {};
+    lines.push([o.id, o.fullName, o.firstName, o.lastName, o.title, o.department, o.role, a['Name'] || '', a['Relationship'] || '', a['Stage'] || '',
+      (o.emails[0] || {}).value || '', o.emails.map(function(e) { return e.value; }).join('; '),
+      (o.phones[0] || {}).number || '', o.phones.map(function(ph) { return ph.number; }).join('; '),
+      o.address, o.linkedin, o.website, o.sourceEvent, o.metDate, o.consent, o.tags.join('; '), o.notes, touch[o.id] || '', o.createdAt]
+      .map(nwCsvCell_).join(','));
+    exported.push(o.id);
+  }
+  if (exported.length) {
+    // D9: the disclosure row names the op, the count and the ids exported — never a field.
+    recordDisclosure({ sessionToken: p.session, recipientName: sess.email, recipientType: 'Self', individualEmail: sess.email,
+      phiDescription: 'network_export_csv rows=' + exported.length + ' ids=' + exported.join(' '), purpose: 'network_export_csv',
+      isExempt: true, exemptionType: 'IndividualAccess', dataCategory: 'Network', source: 'Network' });
+  }
+  auditLog('data_export', sess.email, 'network_export_csv', { rows: exported.length, excluded: excluded, ids: ids.length });
+  return { success: true, format: 'csv', rows: exported.length, excluded: excluded, csv: lines.join('\r\n') + '\r\n',
+           filename: 'network-contacts-' + Utilities.formatDate(new Date(), 'UTC', 'yyyy-MM-dd') + '.csv' };
 }
 
 // PROJECT END

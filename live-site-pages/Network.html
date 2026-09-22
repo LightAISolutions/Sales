@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.17w">
+  <meta name="build-version" content="v01.18w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -538,6 +538,52 @@
     .nw-acct-status { margin: 0 0 10px; }
     .nw-editor textarea { display: block; width: 100%; box-sizing: border-box; font: 15px/1.4 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 64px; margin-bottom: 8px; }
 /* ══════════════ */
+    /* N3 s1 — the Contacts list's search, filter drawer, sort strip, row selection and the action bar */
+    .nw-search { display: flex; gap: 6px; margin: 0 0 8px; }
+    .nw-search input { flex: 1 1 auto; min-width: 0; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 44px; }
+    .nw-search .nw-btn { flex: 0 0 auto; padding: 9px 14px; }
+    .nw-filter-head { display: flex; align-items: center; gap: 8px; font: 11px/1.6 var(--nw-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--nw-faint); cursor: pointer; min-height: 36px; user-select: none; -webkit-user-select: none; }
+    .nw-filter-head .nw-filter-tog { font: 600 16px/1 var(--nw-serif); color: var(--nw-accent); width: 24px; text-align: center; }
+    .nw-filter-head .nw-filter-hint { flex: 1 1 auto; text-align: right; text-transform: none; letter-spacing: 0; color: var(--nw-gold); font-style: italic; }
+    .nw-filter-body { display: none; padding: 4px 0 8px; border-bottom: 1px solid var(--nw-line); margin-bottom: 8px; }
+    .nw-filter-body.nw-open { display: block; }
+    .nw-filter-body label { display: block; font: 11px/1.6 var(--nw-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--nw-faint); margin: 0 0 6px; }
+    .nw-filter-body select, .nw-filter-body input { display: block; width: 100%; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 8px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 44px; }
+    .nw-filter-body .nw-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .nw-filter-actions { display: flex; gap: 8px; margin-top: 2px; }
+    .nw-filter-actions .nw-btn { flex: 1 1 0; }
+    .nw-sort-row { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; }
+    .nw-sort-row .nw-sort-seg { flex: 1 1 auto; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--nw-line2); border-radius: 999px; overflow: hidden; min-height: 36px; }
+    .nw-sort-row .nw-sort-seg button { font: 600 12px/1 var(--nw-serif); padding: 8px 4px; border: 0; background: transparent; color: var(--nw-muted); cursor: pointer; white-space: nowrap; }
+    .nw-sort-row .nw-sort-seg button[aria-pressed="true"] { background: var(--nw-accent); color: #fff; }
+    .nw-sort-row .nw-sort-seg button:disabled { opacity: .4; cursor: default; }
+    .nw-sort-dir { flex: 0 0 auto; font: 600 14px/1 var(--nw-serif); color: var(--nw-accent); border: 1px solid var(--nw-line2); background: var(--nw-card); border-radius: 999px; padding: 0 12px; min-height: 36px; cursor: pointer; }
+    .nw-sort-row label.nw-all { flex: 0 0 auto; display: flex; align-items: center; gap: 4px; font: 11px/1 var(--nw-mono); color: var(--nw-faint); text-transform: uppercase; letter-spacing: .06em; cursor: pointer; }
+    .nw-sort-row label.nw-all input, .nw-row .nw-row-check { width: 22px; height: 22px; margin: 0; accent-color: var(--nw-accent); flex: 0 0 auto; }
+    .nw-row .nw-row-check { margin-top: 1px; }
+    .nw-row.nw-selected { background: #eef2f7; }
+    .nw-row .nw-row-main small.nw-touch { color: var(--nw-faint); }
+    .nw-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 4; display: none; background: var(--nw-accent); color: #fff; font-family: var(--nw-serif);
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); box-shadow: 0 -4px 16px rgba(0,0,0,.22); }
+    .nw-bar.nw-open { display: block; }
+    /* The template's fixed pills (version, GAS, timers — bottom-right, ~130px wide) and the layer toggles (bottom-left, ~25px tall)
+       sit above everything; the bar's content keeps clear of them so no button is ever under a pill. */
+    .nw-bar-in { max-width: var(--nw-measure); margin: 0 auto; padding: 0 132px 30px 0; }
+    @media (min-width: 1120px) { .nw-bar-in { padding: 0; } }
+    .nw-bar-count { display: flex; justify-content: space-between; align-items: center; font: 600 14px/1.2 var(--nw-serif); margin: 0 0 8px; }
+    .nw-bar-count a { color: #fff; opacity: .85; font-size: 13px; text-decoration: underline; }
+    .nw-bar-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .nw-bar button { font: 600 13px/1 var(--nw-serif); color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.45); border-radius: 999px; padding: 9px 10px; min-height: 36px; cursor: pointer; flex: 1 1 auto; white-space: nowrap; }
+    .nw-bar button[aria-pressed="true"] { background: #fff; color: var(--nw-accent); }
+    .nw-bar button:disabled { opacity: .45; cursor: default; }
+    .nw-bar button.nw-bar-danger { border-color: #f4b6c0; color: #ffd9df; }
+    .nw-bar-form { display: none; gap: 6px; margin-top: 8px; flex-wrap: wrap; align-items: center; }
+    .nw-bar-form.nw-open { display: flex; }
+    .nw-bar-form input, .nw-bar-form select { flex: 1 1 110px; min-width: 0; box-sizing: border-box; font: 15px/1.3 var(--nw-serif); color: var(--nw-ink); padding: 8px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: #fff; min-height: 40px; }
+    .nw-bar-form select:disabled { opacity: .6; }
+    .nw-bar-form button { flex: 0 0 auto; background: #fff; color: var(--nw-accent); }
+    .nw-bar-status { font: 12px/1.5 var(--nw-mono); margin-top: 8px; opacity: .92; word-break: break-word; }
+    body.nw-bar-on #nw-app { padding-bottom: 240px; }
 /* PROJECT END */
 /* ══════════════ */
   </style>
@@ -6177,15 +6223,303 @@ function nwRowMark(row, deleted) {
 }
 function nwContactRow(c) {
   var row = nwEl('div', 'nw-row'); row.setAttribute('data-id', c.id);
+  // N3: the multi-select — a checkbox per row; the row tap still opens the detail.
+  var chk = document.createElement('input'); chk.type = 'checkbox'; chk.className = 'nw-row-check'; chk.setAttribute('aria-label', 'Select ' + (c.name || 'this contact'));
+  chk.checked = !!_nwSelected[c.id];
+  if (chk.checked) row.classList.add('nw-selected');
+  chk.addEventListener('click', function(ev) { ev.stopPropagation(); });
+  chk.addEventListener('change', function() { nwSelectToggle(c.id, chk.checked); row.classList.toggle('nw-selected', chk.checked); });
+  row.appendChild(chk);
   var main = nwEl('div', 'nw-row-main');
   main.appendChild(document.createTextNode(c.name || '(unnamed)'));
   var acc = _nwAccountsById[c.accountId];
   main.appendChild(nwEl('small', null, [c.title, acc && acc.name].filter(Boolean).join(' · ') || nwLabel('role', c.role)));
+  if (c.lastTouch) main.appendChild(nwEl('small', 'nw-touch', 'last touch ' + c.lastTouch));
   row.appendChild(main);
   row.appendChild(nwEl('div', 'nw-row-side'));
   nwRowMark(row, false);
   row.addEventListener('click', function() { nwRowDetail(row, c.id); });
   return row;
+}
+
+// PROJECT: ── N3 session 1 — the list, the filters and the bulk actions (§4.3) ──
+// The Receipts History card generalised. Search and the eight filters are
+// answered by the server (nop=list carries them — the columns they read never
+// leave the server, §12); the four sorts are the page's over what every row
+// already carries (name, title, account, lastTouch — the newest Interaction
+// date, computed server-side once per list). Warmth is N4 and its sort sits
+// disabled until then. Multi-select is a checkbox per row and a bar fixed to
+// the bottom of the screen: tag and relationship / stage go through nop=bulk
+// (validated per row, rejected[] read back), the CSV export through
+// nop=export (a disclosure row is written server-side), delete through the
+// existing nop=delete one request per row with the count in the confirm;
+// "Start a mailing" is session 2 and stays disabled. Every write refreshes
+// the list (D14). Selection survives a refresh and is pruned to the rows shown.
+var _nwFilter = { q: '', relationship: '', stage: '', role: '', segment: '', event: '', tag: '', from: '', to: '', consent: '' };
+var _nwFilterOpen = false;
+var _nwSort = { key: 'lastTouch', dir: 'desc' };
+var _nwSelected = {};        // contact id → true
+var _nwRows = [];            // the rows of this paint, as the list answered them
+var _nwTotal = 0;
+var _nwBarStatus = '';
+var NW_SORTS = [['lastTouch', 'Last touch'], ['name', 'Name'], ['company', 'Company'], ['warmth', 'Warmth']];   // warmth: N4, disabled
+var NW_STAGE_RELS = ['target', 'customer'];   // mirror of NW_STAGE_RELATIONSHIPS (the D5 rule)
+var NW_FILTER_WORDS = { q: 'search', relationship: 'relationship', stage: 'stage', role: 'role', segment: 'segment', event: 'event', tag: 'tag', from: 'met from', to: 'met to', consent: 'consent' };
+
+function nwFilterParams() { var p = {}; for (var k in _nwFilter) if (_nwFilter.hasOwnProperty(k) && _nwFilter[k]) p[k] = _nwFilter[k]; return p; }
+function nwFilterActive() { var n = []; for (var k in _nwFilter) if (_nwFilter.hasOwnProperty(k) && _nwFilter[k]) n.push(NW_FILTER_WORDS[k] || k); return n; }
+function nwFilterClear() { for (var k in _nwFilter) if (_nwFilter.hasOwnProperty(k)) _nwFilter[k] = ''; }
+function nwCompanyOf(c) { var a = _nwAccountsById[c.accountId]; return (a && a.name) || ''; }
+function nwSortRows(rows) {
+  var key = _nwSort.key, dir = _nwSort.dir === 'asc' ? 1 : -1;
+  function cmp(x, y) {
+    if (key === 'name') return String(x.name || '').localeCompare(String(y.name || ''));
+    if (key === 'company') return nwCompanyOf(x).localeCompare(nwCompanyOf(y)) || String(x.name || '').localeCompare(String(y.name || ''));
+    // lastTouch (and warmth until N4): newest first when desc; a contact with no touch sorts last either way
+    var tx = x.lastTouch || '', ty = y.lastTouch || '';
+    if (!tx && ty) return 1 * dir; if (tx && !ty) return -1 * dir;
+    return tx.localeCompare(ty) || String(y.updatedAt || '').localeCompare(String(x.updatedAt || '')) * dir;
+  }
+  return rows.slice().sort(function(x, y) { return cmp(x, y) * dir; });
+}
+function nwPaintRows() {
+  var box = document.getElementById('nw-rows');
+  if (!box) return;
+  box.innerHTML = '';
+  nwSortRows(_nwRows).forEach(function(c) { box.appendChild(nwContactRow(c)); });
+  nwSelectSync();
+}
+// The tools above the rows: search, the filter drawer (collapsed until opened,
+// its state kept across refreshes), the sort strip and the select-all.
+function nwListTools(contacts) {
+  var wrap = nwEl('div', 'nw-list-tools');
+  var search = nwEl('div', 'nw-search');
+  var q = document.createElement('input'); q.type = 'search'; q.id = 'nw-q'; q.placeholder = 'Search name, company, title, email…'; q.value = _nwFilter.q; q.autocomplete = 'off';
+  var go = nwEl('button', 'nw-btn', 'Search'); go.type = 'button'; go.id = 'nw-q-go';
+  function runSearch() { _nwFilter.q = q.value.trim(); nwLoadList(); }
+  go.addEventListener('click', runSearch);
+  q.addEventListener('keydown', function(ev) { if (ev.key === 'Enter') { ev.preventDefault(); runSearch(); } });
+  q.addEventListener('search', function() { if (!q.value && _nwFilter.q) runSearch(); });
+  search.appendChild(q); search.appendChild(go); wrap.appendChild(search);
+  var head = nwEl('div', 'nw-filter-head'); head.id = 'nw-filter-head'; head.setAttribute('role', 'button');
+  var tog = nwEl('span', 'nw-filter-tog', _nwFilterOpen ? '−' : '+');
+  head.appendChild(tog); head.appendChild(nwEl('span', null, 'Filters'));
+  var active = nwFilterActive().filter(function(w) { return w !== 'search'; });
+  head.appendChild(nwEl('span', 'nw-filter-hint', active.length ? active.length + ' on: ' + active.join(', ') : ''));
+  var body = nwEl('div', 'nw-filter-body' + (_nwFilterOpen ? ' nw-open' : '')); body.id = 'nw-filter-body';
+  head.addEventListener('click', function() { _nwFilterOpen = !_nwFilterOpen; body.classList.toggle('nw-open', _nwFilterOpen); tog.textContent = _nwFilterOpen ? '−' : '+'; });
+  var inputs = {};
+  function sel(key, label, group, anyText) {
+    var l = nwEl('label', null, label); var s = document.createElement('select'); s.setAttribute('data-filter', key);
+    var any = document.createElement('option'); any.value = ''; any.textContent = anyText; s.appendChild(any);
+    (NW_ENUMS[group] || []).forEach(function(pair) { var o = document.createElement('option'); o.value = pair[0]; o.textContent = pair[1]; s.appendChild(o); });
+    s.value = _nwFilter[key] || ''; inputs[key] = s; l.appendChild(s); return l;
+  }
+  function txt(key, label, placeholder, type, listId) {
+    var l = nwEl('label', null, label); var i = document.createElement('input'); i.type = type || 'text'; i.setAttribute('data-filter', key);
+    if (placeholder) i.placeholder = placeholder; if (listId) i.setAttribute('list', listId); i.autocapitalize = 'none'; i.autocomplete = 'off';
+    i.value = _nwFilter[key] || ''; inputs[key] = i; l.appendChild(i); return l;
+  }
+  var g1 = nwEl('div', 'nw-two'); g1.appendChild(sel('relationship', 'Relationship', 'relationship', 'Any relationship')); g1.appendChild(sel('stage', 'Stage', 'stage', 'Any stage')); body.appendChild(g1);
+  var g2 = nwEl('div', 'nw-two'); g2.appendChild(sel('role', 'Role', 'role', 'Any role'));
+  var lseg = nwEl('label', null, 'Segment'); var seg = document.createElement('select'); seg.setAttribute('data-filter', 'segment');
+  var anySeg = document.createElement('option'); anySeg.value = ''; anySeg.textContent = 'Any segment'; seg.appendChild(anySeg);
+  if (_nwFilter.segment) { var keep = document.createElement('option'); keep.value = _nwFilter.segment; keep.textContent = _nwFilter.segment; keep.selected = true; seg.appendChild(keep); }
+  nwSegments().then(function(m) {
+    var cur = seg.value; while (seg.options.length > 1) seg.remove(1);
+    Object.keys(m).sort(function(a, b) { return m[a].localeCompare(m[b]); }).forEach(function(id) { var o = document.createElement('option'); o.value = id; o.textContent = m[id]; seg.appendChild(o); });
+    if (cur && !seg.value) { var k2 = document.createElement('option'); k2.value = cur; k2.textContent = cur; seg.appendChild(k2); }
+    seg.value = cur;
+  });
+  inputs.segment = seg; lseg.appendChild(seg); g2.appendChild(lseg); body.appendChild(g2);
+  var g3 = nwEl('div', 'nw-two');
+  g3.appendChild(txt('event', 'Source event', 'e.g. re-plus-2026', 'text', 'nw-event-list'));
+  var dl = document.createElement('datalist'); dl.id = 'nw-event-list'; var seen = {};
+  contacts.forEach(function(c) { var e = String(c.sourceEvent || '').trim(); if (e && !seen[e]) { seen[e] = true; var o = document.createElement('option'); o.value = e; dl.appendChild(o); } });
+  g3.appendChild(dl);
+  g3.appendChild(txt('tag', 'Tag', 'e.g. follow-up')); body.appendChild(g3);
+  var g4 = nwEl('div', 'nw-two'); g4.appendChild(txt('from', 'Met from', '', 'date')); g4.appendChild(txt('to', 'Met to', '', 'date')); body.appendChild(g4);
+  body.appendChild(sel('consent', 'Consent to marketing', 'consent', 'Any — has consent or not'));
+  var acts = nwEl('div', 'nw-filter-actions');
+  var apply = nwEl('button', 'nw-btn nw-btn-primary', 'Apply filters'); apply.type = 'button'; apply.id = 'nw-filter-apply';
+  apply.addEventListener('click', function() { for (var k in inputs) if (inputs.hasOwnProperty(k)) _nwFilter[k] = String(inputs[k].value || '').trim(); nwLoadList(); });
+  var clear = nwEl('button', 'nw-btn nw-btn-quiet', 'Clear'); clear.type = 'button'; clear.id = 'nw-filter-clear';
+  clear.addEventListener('click', function() { nwFilterClear(); nwLoadList(); });
+  acts.appendChild(apply); acts.appendChild(clear); body.appendChild(acts);
+  wrap.appendChild(head); wrap.appendChild(body);
+  var sort = nwEl('div', 'nw-sort-row');
+  var lall = nwEl('label', 'nw-all'); var all = document.createElement('input'); all.type = 'checkbox'; all.id = 'nw-select-all'; all.setAttribute('aria-label', 'Select every contact shown');
+  all.addEventListener('change', function() { _nwRows.forEach(function(c) { if (all.checked) _nwSelected[c.id] = true; else delete _nwSelected[c.id]; }); nwSelectSync(); nwBarRefresh(); });
+  lall.appendChild(all); lall.appendChild(document.createTextNode('all')); sort.appendChild(lall);
+  var dirBtn = nwEl('button', 'nw-sort-dir', _nwSort.dir === 'asc' ? '↑' : '↓'); dirBtn.type = 'button'; dirBtn.id = 'nw-sort-dir'; dirBtn.title = 'Flip the order';
+  dirBtn.setAttribute('aria-label', 'Flip the sort order');
+  dirBtn.addEventListener('click', function() { _nwSort.dir = _nwSort.dir === 'asc' ? 'desc' : 'asc'; dirBtn.textContent = _nwSort.dir === 'asc' ? '↑' : '↓'; nwPaintRows(); });
+  var segs = nwEl('div', 'nw-sort-seg'); segs.setAttribute('role', 'group'); segs.setAttribute('aria-label', 'Sort by'); segs.id = 'nw-sort';
+  NW_SORTS.forEach(function(pair) {
+    var b = nwEl('button', null, pair[1]); b.type = 'button'; b.setAttribute('data-sort', pair[0]); b.setAttribute('aria-pressed', _nwSort.key === pair[0] ? 'true' : 'false');
+    if (pair[0] === 'warmth') { b.disabled = true; b.title = 'Warmth arrives with relationship intelligence (N4)'; }
+    b.addEventListener('click', function() {
+      _nwSort.key = pair[0]; _nwSort.dir = pair[0] === 'lastTouch' ? 'desc' : 'asc';   // a key starts in its natural order; the flip reverses it
+      segs.querySelectorAll('button').forEach(function(x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      dirBtn.textContent = _nwSort.dir === 'asc' ? '↑' : '↓'; nwPaintRows();
+    });
+    segs.appendChild(b);
+  });
+  sort.appendChild(segs);
+  sort.appendChild(dirBtn);
+  wrap.appendChild(sort);
+  return wrap;
+}
+
+// ── Multi-select and the action bar ────────────────────────────────────────
+function nwSelectedIds() { var out = []; for (var k in _nwSelected) if (_nwSelected.hasOwnProperty(k) && _nwSelected[k]) out.push(k); return out; }
+// The rows' checkboxes and the select-all, synced in place — never a repaint,
+// so an open detail stays open while the selection changes around it.
+function nwSelectSync() {
+  document.querySelectorAll('#nw-rows .nw-row').forEach(function(row) {
+    var on = !!_nwSelected[row.getAttribute('data-id')], chk = row.querySelector('.nw-row-check');
+    if (chk) chk.checked = on; row.classList.toggle('nw-selected', on);
+  });
+  var all = document.getElementById('nw-select-all');
+  if (all) { var n = nwSelectedIds().length; all.checked = !!_nwRows.length && n === _nwRows.length; all.indeterminate = n > 0 && n < _nwRows.length; }
+}
+function nwSelectToggle(id, on) { if (on) _nwSelected[id] = true; else delete _nwSelected[id]; nwSelectSync(); nwBarRefresh(); }
+function nwSelectClear() { _nwSelected = {}; nwSelectSync(); nwBarRefresh(); }
+function nwBarStatus(text, level) {
+  _nwBarStatus = text || '';
+  var el = document.getElementById('nw-bar-status');
+  if (el) { el.textContent = _nwBarStatus; el.style.display = _nwBarStatus ? '' : 'none'; el.style.color = level === 'err' ? '#ffd9df' : ''; }
+}
+function nwBulkErrText(err) {
+  if (err === 'STAGE_NEEDS_TARGET_OR_CUSTOMER') return 'a stage needs a Target or Customer relationship';
+  if (err === 'not_found' || err === 'account_not_found') return 'not found';
+  if (err === 'deleted') return 'already deleted';
+  if (err === 'too_many_tags') return 'already has 20 tags';
+  if (err === 'duplicate') return 'listed twice';
+  if (err === 'bad_id') return 'not a contact id';
+  return nwErrText(err);
+}
+function nwRejectedText(rejected) {
+  if (!rejected || !rejected.length) return '';
+  var why = {}; rejected.forEach(function(r) { var w = nwBulkErrText(r.reason); why[w] = (why[w] || 0) + 1; });
+  return ' · ' + rejected.length + ' rejected: ' + Object.keys(why).map(function(w) { return w + (why[w] > 1 ? ' ×' + why[w] : ''); }).join('; ');
+}
+function nwBar() {
+  var bar = document.getElementById('nw-bar');
+  if (bar) return bar;
+  bar = nwEl('div', 'nw-bar'); bar.id = 'nw-bar'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Selected contacts');
+  var inner = nwEl('div', 'nw-bar-in');
+  var count = nwEl('div', 'nw-bar-count'); var ctext = nwEl('span', null, ''); ctext.id = 'nw-bar-count'; count.appendChild(ctext);
+  var clear = nwEl('a', null, 'Clear'); clear.href = '#'; clear.id = 'nw-bar-clear'; clear.addEventListener('click', function(ev) { ev.preventDefault(); nwSelectClear(); });
+  count.appendChild(clear); inner.appendChild(count);
+  var row = nwEl('div', 'nw-bar-row');
+  var forms = {};
+  function openForm(name) { for (var k in forms) if (forms.hasOwnProperty(k)) { forms[k].form.classList.toggle('nw-open', k === name && !forms[k].form.classList.contains('nw-open')); forms[k].btn.setAttribute('aria-pressed', forms[k].form.classList.contains('nw-open') ? 'true' : 'false'); } }
+  function btn(id, text, cls) { var b = nwEl('button', cls || '', text); b.type = 'button'; b.id = id; row.appendChild(b); return b; }
+  var bTag = btn('nw-bar-tag', '🏷 Tag'); var bAcct = btn('nw-bar-account', '🤝 Relationship'); var bCsv = btn('nw-bar-csv', '⬇ CSV');
+  var bMail = btn('nw-bar-mail', '✉ Mailing'); bMail.disabled = true; bMail.title = 'Follow-up drafts arrive in the next session';
+  var bDel = btn('nw-bar-delete', '🗑 Delete', 'nw-bar-danger');
+  inner.appendChild(row);
+  // Tag form
+  var fTag = nwEl('form', 'nw-bar-form'); fTag.id = 'nw-bar-tag-form';
+  var tagIn = document.createElement('input'); tagIn.type = 'text'; tagIn.id = 'nw-bar-tag-in'; tagIn.placeholder = 'tag, e.g. follow-up'; tagIn.autocapitalize = 'none'; tagIn.autocomplete = 'off'; tagIn.maxLength = 40;
+  var tagGo = nwEl('button', null, 'Add tag'); tagGo.type = 'submit'; tagGo.id = 'nw-bar-tag-go';
+  fTag.appendChild(tagIn); fTag.appendChild(tagGo);
+  fTag.addEventListener('submit', function(ev) { ev.preventDefault(); var t = tagIn.value.trim().toLowerCase(); if (!t) { tagIn.focus(); return; } nwBulkTag(t); });
+  inner.appendChild(fTag); forms.tag = { form: fTag, btn: bTag };
+  // Relationship / stage form — the D5 gate mirrored: a relationship off Target / Customer pins the stage to None
+  var fAcct = nwEl('form', 'nw-bar-form'); fAcct.id = 'nw-bar-account-form';
+  var relSel = document.createElement('select'); relSel.id = 'nw-bar-rel'; var keepRel = document.createElement('option'); keepRel.value = ''; keepRel.textContent = 'Relationship — keep'; relSel.appendChild(keepRel);
+  NW_ENUMS.relationship.forEach(function(pair) { var o = document.createElement('option'); o.value = pair[0]; o.textContent = pair[1]; relSel.appendChild(o); });
+  var stSel = document.createElement('select'); stSel.id = 'nw-bar-stage'; var keepSt = document.createElement('option'); keepSt.value = ''; keepSt.textContent = 'Stage — keep'; stSel.appendChild(keepSt);
+  NW_ENUMS.stage.forEach(function(pair) { var o = document.createElement('option'); o.value = pair[0]; o.textContent = pair[1]; stSel.appendChild(o); });
+  function gateBarStage() { var off = relSel.value && NW_STAGE_RELS.indexOf(relSel.value) < 0; if (off) stSel.value = 'none'; stSel.disabled = !!off; }
+  relSel.addEventListener('change', gateBarStage);
+  var acctGo = nwEl('button', null, 'Apply'); acctGo.type = 'submit'; acctGo.id = 'nw-bar-account-go';
+  fAcct.appendChild(relSel); fAcct.appendChild(stSel); fAcct.appendChild(acctGo);
+  fAcct.addEventListener('submit', function(ev) { ev.preventDefault(); if (!relSel.value && !stSel.value) { nwBarStatus('Choose a relationship, a stage, or both.', 'err'); return; } nwBulkAccount(relSel.value, stSel.value); });
+  inner.appendChild(fAcct); forms.account = { form: fAcct, btn: bAcct };
+  bTag.addEventListener('click', function() { openForm('tag'); if (fTag.classList.contains('nw-open')) tagIn.focus(); });
+  bAcct.addEventListener('click', function() { openForm('account'); });
+  bCsv.addEventListener('click', function() { openForm(''); nwBulkExportCsv(); });
+  bDel.addEventListener('click', function() { openForm(''); nwBulkDelete(); });
+  var status = nwEl('div', 'nw-bar-status', ''); status.id = 'nw-bar-status'; status.style.display = 'none'; inner.appendChild(status);
+  bar.appendChild(inner);
+  document.body.appendChild(bar);
+  return bar;
+}
+function nwBarRefresh() {
+  var n = nwSelectedIds().length, bar = nwBar();
+  bar.classList.toggle('nw-open', n > 0);
+  document.body.classList.toggle('nw-bar-on', n > 0);
+  var c = document.getElementById('nw-bar-count');
+  if (c) c.textContent = n + ' selected';
+  if (!n) { bar.querySelectorAll('.nw-bar-form').forEach(function(f) { f.classList.remove('nw-open'); }); bar.querySelectorAll('.nw-bar-row button').forEach(function(b) { b.setAttribute('aria-pressed', 'false'); }); if (!_nwBarStatus) nwBarStatus(''); }
+}
+function nwBarBusy(on) { var bar = document.getElementById('nw-bar'); if (!bar) return; bar.querySelectorAll('button').forEach(function(b) { if (b.id !== 'nw-bar-mail') b.disabled = !!on; }); }
+function nwBulkTag(tag) {
+  var ids = nwSelectedIds(); if (!ids.length) return;
+  nwBarBusy(true); nwBarStatus('Tagging ' + ids.length + '…');
+  nwApiBody('bulk', { op: 'tag', ids: JSON.stringify(ids), tag: tag }, function(res) {
+    nwBarBusy(false);
+    if (!(res && res.success)) { nwBarStatus('Could not tag (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    nwBarStatus('✓ Tagged ' + res.applied + ' with "' + tag + '"' + (res.unchanged ? ' · ' + res.unchanged + ' already had it' : '') + nwRejectedText(res.rejected), res.rejected && res.rejected.length ? 'err' : '');
+    nwListStatus('Tagged ' + res.applied + ' contact' + (res.applied === 1 ? '' : 's') + ' "' + tag + '".', 'ok');
+    _nwSelected = {}; nwBarRefresh(); nwAfterWrite();
+  });
+}
+function nwBulkAccount(relationship, stage) {
+  var ids = nwSelectedIds(); if (!ids.length) return;
+  var acct = {}; if (relationship) acct.relationship = relationship; if (stage) acct.stage = stage;
+  nwBarBusy(true); nwBarStatus('Setting ' + [relationship && nwLabel('relationship', relationship), stage && nwLabel('stage', stage)].filter(Boolean).join(' · ') + ' on ' + ids.length + '…');
+  nwApiBody('bulk', { op: 'account', ids: JSON.stringify(ids), account: JSON.stringify(acct) }, function(res) {
+    nwBarBusy(false);
+    if (!(res && res.success)) { nwBarStatus('Could not set (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    var n = res.accounts || 0;
+    nwBarStatus('✓ Set on ' + n + ' account' + (n === 1 ? '' : 's') + ' (' + res.applied + ' contact' + (res.applied === 1 ? '' : 's') + ')' + (res.unchanged ? ' · ' + res.unchanged + ' unchanged' : '') + nwRejectedText(res.rejected), res.rejected && res.rejected.length ? 'err' : '');
+    nwAcctStatus('Set ' + [relationship && nwLabel('relationship', relationship), stage && nwLabel('stage', stage)].filter(Boolean).join(' · ') + ' on ' + n + ' account' + (n === 1 ? '' : 's') + '.', res.rejected && res.rejected.length ? 'warn' : 'ok');
+    if (res.applied) { _nwSelected = {}; nwBarRefresh(); nwAfterWrite(); }
+  });
+}
+// The CSV: the server builds the text (RFC 4180, CRLF, Do Not Contact rows left
+// out) and writes the disclosure row; the page adds the UTF-8 BOM and saves it.
+function nwDownloadText(text, filename, mime) {
+  var blob = new Blob(['﻿' + text], { type: mime || 'text/csv;charset=utf-8' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a'); a.href = url; a.download = filename; a.style.display = 'none';
+  document.body.appendChild(a); a.click();
+  setTimeout(function() { document.body.removeChild(a); URL.revokeObjectURL(url); }, 2000);
+}
+function nwBulkExportCsv() {
+  var ids = nwSelectedIds(); if (!ids.length) return;
+  nwBarBusy(true); nwBarStatus('Building the CSV for ' + ids.length + '…');
+  nwApiBody('export', { format: 'csv', ids: JSON.stringify(ids) }, function(res) {
+    nwBarBusy(false);
+    if (!(res && res.success)) { nwBarStatus('Could not export (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    nwDownloadText(res.csv || '', res.filename || 'network-contacts.csv');
+    nwBarStatus('✓ CSV with ' + res.rows + ' contact' + (res.rows === 1 ? '' : 's') + (res.excluded ? ' · ' + res.excluded + ' marked do-not-contact left out' : '') + ' — saved to your downloads.');
+  });
+}
+// Soft delete, one request per row (the existing nop=delete); each can be
+// restored from its row afterwards. The count is in the confirm.
+function nwBulkDelete() {
+  var ids = nwSelectedIds(); if (!ids.length) return;
+  if (!window.confirm('Delete ' + ids.length + ' contact' + (ids.length === 1 ? '' : 's') + '? Each can be restored from its row afterwards.')) return;
+  nwBarBusy(true);
+  var i = 0, done = 0, failed = 0;
+  function next() {
+    if (i >= ids.length) {
+      nwBarBusy(false);
+      nwBarStatus((failed ? '' : '✓ ') + 'Deleted ' + done + ' of ' + ids.length + (failed ? ' · ' + failed + ' failed' : ''), failed ? 'err' : '');
+      nwListStatus('Deleted ' + done + ' contact' + (done === 1 ? '' : 's') + (failed ? ' (' + failed + ' failed)' : '') + ' — Restore from a row if one was a mistake.', failed ? 'warn' : 'ok');
+      _nwSelected = {}; nwBarRefresh(); nwAfterWrite();
+      return;
+    }
+    var id = ids[i++];
+    nwBarStatus('Deleting ' + i + ' of ' + ids.length + '…');
+    nwApi('delete', { id: id }, function(res) { if (res && res.success) done++; else failed++; next(); });
+  }
+  next();
 }
 
 // PROJECT: ── N2 — accounts and the corpus attachment (§4.1, D4) ───────────
@@ -6486,7 +6820,7 @@ function nwLoadList() {
   var wrap = document.getElementById('nw-listwrap');
   if (!wrap) { wrap = nwEl('div'); wrap.id = 'nw-listwrap'; app.appendChild(wrap); }
   if (!wrap.childNodes.length) wrap.appendChild(nwEl('div', 'nw-empty', 'Loading…'));
-  nwApi('list', {}, function(res) {
+  nwApi('list', nwFilterParams(), function(res) {   // N3: the search and the filters ride on the request
     _nwLoading = false;
     wrap.innerHTML = '';
     if (!(res && res.success)) {
@@ -6500,13 +6834,17 @@ function nwLoadList() {
     var contacts = res.contacts || [], accounts = res.accounts || [];
     _nwAccountsById = {};
     accounts.forEach(function(a) { if (a && a.id) _nwAccountsById[a.id] = a; });
+    _nwRows = contacts; _nwTotal = typeof res.total === 'number' ? res.total : contacts.length;
+    var shown = {}; contacts.forEach(function(c) { shown[c.id] = true; });
+    for (var sid in _nwSelected) if (_nwSelected.hasOwnProperty(sid) && !shown[sid]) delete _nwSelected[sid];   // pruned to the rows shown
     var counts = nwEl('div', 'nw-count');
-    var c1 = nwEl('div'); c1.appendChild(nwEl('b', null, String(contacts.length))); c1.appendChild(nwEl('span', null, 'contacts'));
+    var c1 = nwEl('div'); c1.appendChild(nwEl('b', null, res.filtered ? contacts.length + ' of ' + _nwTotal : String(contacts.length))); c1.appendChild(nwEl('span', null, res.filtered ? 'contacts match' : 'contacts'));
     var c2 = nwEl('div'); c2.appendChild(nwEl('b', null, String(accounts.length))); c2.appendChild(nwEl('span', null, 'accounts'));
     counts.appendChild(c1); counts.appendChild(c2);
     wrap.appendChild(counts);
     var list = nwEl('div', 'nw-card'); list.id = 'nw-list';
     list.appendChild(nwEl('h2', null, 'Contacts'));
+    if (contacts.length || res.filtered || _nwTotal) list.appendChild(nwListTools(contacts));   // N3: search, filters, sort
     if (contacts.length) {
       var tidyRow = nwEl('div', 'nw-strip-photos nw-tidy-row');
       var tidyBtn = nwEl('a', 'nw-edit-btn nw-tidy-btn', _nwTidyBusy ? 'Tidying…' : '✨ Tidy titles & companies'); tidyBtn.href = '#'; tidyBtn.id = 'nw-tidy-btn'; tidyBtn.setAttribute('role', 'button');
@@ -6514,6 +6852,8 @@ function nwLoadList() {
       tidyBtn.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); nwTidySaved(contacts.slice()); });
       tidyRow.appendChild(tidyBtn);
       list.appendChild(tidyRow);
+    }
+    if (contacts.length || res.filtered) {
       // Built directly — the card is not in the DOM yet, so nwListStatus's lookup could not find it.
       var listStatus = nwEl('div', 'nw-status nw-list-status', _nwListStatus ? _nwListStatus.text : ''); listStatus.id = 'nw-list-status';
       if (_nwListStatus) { var lv = _nwListStatus.level; listStatus.className += lv === 'warn' ? ' nw-status-warn' : lv === 'err' ? ' nw-status-err' : lv === 'ok' ? ' nw-status-ok' : ''; }
@@ -6522,14 +6862,14 @@ function nwLoadList() {
     }
     if (!contacts.length) {
       var empty = nwEl('div', 'nw-empty');
-      empty.appendChild(nwEl('b', null, 'No contacts yet'));
-      empty.appendChild(document.createTextNode('Capture a card above, review it, and Save.'));
+      empty.appendChild(nwEl('b', null, res.filtered ? 'No contacts match' : 'No contacts yet'));
+      empty.appendChild(document.createTextNode(res.filtered ? 'Loosen the search or the filters above, or Clear them.' : 'Capture a card above, review it, and Save.'));
       list.appendChild(empty);
     } else {
-      contacts.sort(function(a, b) { return String(b.updatedAt || '').localeCompare(String(a.updatedAt || '')); });
-      contacts.forEach(function(c) { list.appendChild(nwContactRow(c)); });
+      var rowsBox = nwEl('div'); rowsBox.id = 'nw-rows'; list.appendChild(rowsBox);
     }
     wrap.appendChild(list);
+    nwPaintRows(); nwBarRefresh();   // N3: the sorted rows, the selection bar
     wrap.appendChild(nwAccountsCard(accounts));
     var note = nwEl('p', 'nw-note', 'Refreshed on open, on return to this tab and after every save — no background polling.');
     wrap.appendChild(note);
