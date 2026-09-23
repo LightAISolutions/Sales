@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.27r] — 2026-09-23 06:45:15 AM EST
+
+> **Prompt:** "Run X — the Classroom hook — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.19 is the brief (follow its reading list in order; decide before you build, and the written decision is the deliverable either way), §3's D13 and D16 the design, repository-information/CLASSROOM-SCHEMA.md (the ref-prefix table and the stamp-fixes-the-gate section) and .claude/rules/classroom-app.md (the stamp rule, the freshness pins, the content fence, the gateDigest obligation) the shapes, and repository-information/EVENTS-SCHEMA.md §3 / §11 for what the public registry carries and what is never taught from it. E5 is Done in §11 (v07.25r; Events.gs v01.09g, Events.html v01.10w, Network.gs v01.17g) and D13's deferral condition is met — verify it yourself in live-site-pages/events-data/events-sources.json rather than taking the brief's word. Decide whether an event:<slug> provenance prefix earns its gate-surface cost; a reasoned no that names what would change the answer is a complete X. If yes: event: 'public' in CL_PROVENANCE_REF_KINDS, the CLASSROOM-SCHEMA.md mirror and a recomputed gateDigest in one commit, plus the first pre-event briefing lesson inside the content fence, folding to tracks or guidance and never briefing. Never a contact: prefix, never a Network signal or contact as an input, never a registry count as a taught fact, never a fabricated input, never an edit to check-classroom-pipeline.py or its fixtures. Write the decision and the date into §11's X row and §3's D13 row either way, and say what remains outside this plan once X closes — it is D16's last row. Verify with check-classroom-content.py, check-classroom-curriculum.py, check-classroom-pipeline.py, check-events-plan.js, check-events-registry.py and check-readme-tree.py. Bump per [PC-GS-VERSION] #1 with a changelog entry naming nothing gated; CHANGELOG entry; README tree if a file is added. Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first — a shallow clone writes a wrong provenance pin that no checker can see; parallel sessions push, so check git ls-remote before pushing. Read the live CHANGELOG counter; no rotation is due unless it reads 100. One push. Then remember session."
+
+X — the Classroom hook (design plan §3 D13, §13.19): **decided no.** Nothing built, no gate surface touched, no GAS bump, no file added. **D16's build order is complete** — Gate → N0 → Q0 → N1 → N2 → E0–E1 → B → N3 → E2–E3 → E4 → N4 → E5 → X, every row Done or decided.
+
+### Changed
+
+#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
+
+- **§3 D13** carries the decision: `event:` declined, not deferred again; `contact:` stays never. One-line reasoning with a pointer to the §11 row.
+- **§11's X row** flipped from *Proposed — deferred behind E0 stability* to **Decided — no, v07.27r, 2026-09-23**: the deferral condition as verified (below), the three reasons, the four reopen conditions, the statement that D16's order is complete, and what remains outside it (R and Q inside the ledger; the E0 verification pass for `hours[]` / `venueLatLng` / `agendaUrl`, the `Network.html` hash router, `check-guidance-migration.js` and the Megmeet briefing outside the plan).
+
+#### `repository-information/CLASSROOM-SCHEMA.md`
+
+- One paragraph after the *no `note:` prefix* rule recording that there is no `event:` prefix either — declined at X with the date, the reason and the pointer to the reopen conditions — so the absence is a decision on the record rather than an omission a later session re-proposes. The prefix table itself is untouched and still mirrors `CL_PROVENANCE_REF_KINDS` byte for byte.
+
+#### `repository-information/EVENTS-SCHEMA.md`
+
+- §11's D13 sentence updated from *stays deferred until the registry has survived one poller cycle* to *declined at X (2026-09-23)*, pointing at the design plan's reopen conditions.
+
+### Notes
+
+- **The deferral condition, verified on the live file.** All 58 rows of `events-sources.json` carry `lastProbe.at = 2026-09-21`, but `git log` shows the roster written once (v06.95r, E0) and never since — those stamps are E0's own build-time probes, not the poller's. `events.json` has been touched only by E4 session 2's manual agenda rows (v07.20r). The poller's first live cycle ran (33 `Proposed` rows pending at E3's start) and no `events sync` has ever applied a diff, so the registry has stood under one poller cycle rather than survived a change from one. Recorded because the brief's evidence is not what it looks like; it did not decide X.
+- **Why no, in three lines.** The pre-event briefing already exists as E5's `events plan <event>` narrative, private half included, and its public half is dossier material Classroom already stamps as `profile:` / `study:`. The fact with teaching value — who exhibits — is a Network `Signals` row that never crosses, and `mentions[]` is not attendance; what a registry row adds on its own is calendar, not mechanism, and expires with the edition, which a permanent `tracks` lesson cannot. The true cost of a tenth prefix is the map + mirror + `gateDigest` **plus** a G7 resolution rule (else every weekly run freezes the lesson as unknown), the committer contract's "exactly the nine prefixes", and the P11 guard in `check-classroom-pipeline.py` whose prefix tuple is hard-coded to the nine and which X may not edit; P4 would fire on the adding commit itself.
+- **What would change the answer:** a series-level evergreen lesson once `hours[]` (2 of 96 upcoming rows), `editions[]` and the agenda structure are filled; a G7 resolution rule for `event:` written first; one applied `events sync` cycle; or the developer asking for it.
+- **R's stated blocker has evidence:** the Profiler earnings desk Routine's 2026-09-22 fire committed v07.16r, so a scheduled Routine has landed a commit; the rebuilt C2 Routine's first fire on 2026-09-23 11:07Z is the next proof to read. R's row is the developer's to flip.
+- **Checkers, all on the untouched code:** `check-classroom-content.py` 71 lessons · 8 tracks · 220 gate cases, 0 errors / 0 warnings; `check-classroom-curriculum.py` no structural findings; `check-classroom-pipeline.py --base origin/main` nothing to judge and `--selftest` 15 / 0; `check-events-plan.js` 151 / 0; `check-events-registry.py` OK; `check-readme-tree.py` 22 displays match, 0 findings.
 
 ## [v07.26r] — 2026-09-23 05:58:28 AM EST
 

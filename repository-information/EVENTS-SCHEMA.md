@@ -237,7 +237,7 @@ Proved offline by `scripts/check-events-plan.js` (§12).
 
 ## 11 · The corpus-count corollary and what is never taught
 
-The registry's counts (how many events, how many mentions) are **never** lesson content and never a dossier fact — the corpus-wide-count corollary from `CLASSROOM-CURRICULUM-PLAN.md` applies. `mentions[]` is a derived index of where a name appears, not evidence that a company attends; attendance is only ever a Signal with an evidence URL. Under D13 the `event:` provenance prefix stays deferred until the registry has survived one poller cycle, and there is never a `contact:` prefix.
+The registry's counts (how many events, how many mentions) are **never** lesson content and never a dossier fact — the corpus-wide-count corollary from `CLASSROOM-CURRICULUM-PLAN.md` applies. `mentions[]` is a derived index of where a name appears, not evidence that a company attends; attendance is only ever a Signal with an evidence URL. Under D13 the `event:` provenance prefix was **declined at X (2026-09-23; `NETWORK-EVENTS-DESIGN-PLAN.md` §11's X row names what would reopen it)** — the registry is public, but a row is calendar rather than mechanism, attendance is a private signal, and a tenth prefix costs more than the map and its mirror — and there is never a `contact:` prefix.
 
 ## 12 · Checkers
 
