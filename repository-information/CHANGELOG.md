@@ -3,11 +3,47 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.20r] — 2026-09-22 10:38:40 PM EST
+
+> **Prompt:** "Run E4 session 2 — newsroom pages, agendas and the FERC docket watch — from `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`: §13.13 is the brief (follow its reading list in order, then its five build steps exactly; session 3 is not this session), §5.5 and the §5.5.1 catalogue rows 4 · 6 · 7 the design, `repository-information/EVENTS-SCHEMA.md` §3 / §8 and `repository-information/NETWORK-SCHEMA.md` §3 / §8 the shapes. E4 session 1 is done in §11 (v07.19r; `Events.gs` v01.06g, `Events.html` v01.07w, `Network.gs` v01.11g, `Network.html` v01.21w) — the sweep `evSignalsRun_`, its parsers and matcher, the manual form, the "Signals only" pill and `scripts/check-events-signals.js` exist; extend them, do not fork them. Live state you cannot see from the repo: both peer tokens are set, the weekly sweep [is / is not] installed and the first live sweep's Signals now answer read [paste the status line here]. Build the monthly newsroom / "meet us at" read per target account over the Account row's Newsroom URL (`kind = newsroom`, 0.7), the agenda read at `agendaUrl` with the roster parser reused (`kind = agenda`, 0.9, the person), recordings by manual link as the brief decides, and the FERC eLibrary RSS watch per utility / IPP account over the Scraper roster's existing feed (`kind = docket`, 0.7, no event slug — check Network's slug rule and the score's indifference); each with a fixture and a harness section in `scripts/check-events-signals.js`; the verifier only if the sheet's form gains a kind. No Scraper `people[]` or `cop=people` (session 3), no plans (E5), no discovery Routine (R), no Swapcard API; no new scope; never widen a peer token — the session never calls the app. Verify with the E4 session 1 list plus `scripts/verify-network-roles.py` if Network changes, and grep the served page and the `.gs` for `linkedin.com`, `10times` and `attendee`. Bump `Events.gs` (and `Events.html` / `Network.gs` only if touched) per [PC-GS-VERSION] #1 / [PC-HTML-VERSION] #2 with changelog entries that name no token, account or person; CHANGELOG entry; `EVENTS-SCHEMA.md` §8; flip §11's E4 row to In progress — session 2 with the versions and write the session-3 brief as §13.14. Then hand off in chat: redeploy, Signals now, read the newsroom and docket rows on an account in Network. Normal Session Start, Pre-Commit and Pre-Push checklists on a `claude/*` branch restarted from `origin/main`; run `git fetch --unshallow origin main` first; parallel sessions push, so check `git ls-remote` before pushing. Read the live CHANGELOG counter; no rotation is due unless it reads 100. One push. Then give me a prompt to paste into a new session for E4 session 3, and remember session."
+
+### Added
+- **E4 session 2 — newsroom pages, agendas and the docket watch** (design plan §5.5, catalogue §5.5.1 rows 4 · 6 · 7; §11's E4 row flipped to In progress — session 2; the session-3 brief written as §13.14 with its paste-in prompt) on session 1's run, never a fork
+- `EVENTS-SCHEMA.md` §8: the session-2 paragraph (the monthly newsroom read and its `EV_SIGNALS_NEWSROOM` skip state, the agenda read, recordings as manual `agenda` rows, the docket watch over the Federal Register FERC feed with no event slug, the run answer's new fields); §3's `agendaUrl` note. `NETWORK-SCHEMA.md` §3 (`Newsroom URL` carried on `nop=accounts`; `Event Slug` empty for a `docket` row), §8 (`newsroomUrl?` on the accounts answer; the empty-slug rule for `docket` only; the upsert refreshing Confidence / Note)
+- `scripts/check-events-signals.js` grew from 76 to **103 checks**: a newsroom page naming a show by its edition name and another by its series with the year nearby, a 404 page audited without an account id and retried, the monthly skip (read today → skipped; aged 33 days → read again, rows updated never duplicated), customer and supplier pages never read, an agenda page and the same-URL skip, the Federal Register FERC feed (the URL asserted equal to the Scraper roster's `fedreg-ferc` row) with two watched filers, an unwatched filer and a non-filer, the docket rows through Network's real write leg with the empty slug and `bad_slug` on every other kind, the score ignoring them, `nop=accounts` carrying `newsroomUrl` only when set, the recording rows and their `Recording:` note
+
+### Changed
+- **The docket source is the Federal Register's FERC feed, not a FERC eLibrary RSS** — the Scraper roster carries none: FERC's own site is retired there as `blocked` (a browser challenge no server-side reader passes) and the roster's FERC row is the Federal Register feed, where an order or notice takes legal effect and whose item titles name the filer. Live-probed from the session (never the app): 200, 129 items, empty descriptions. Recorded in §11 and §13.14
+- `verify-events-roles.py`: the signal form's kinds are `linkedin-manual` · `registrant-mail` · `agenda`
+- `live-site-pages/events-data/events.json` / `events.ics`: two iMasons rows that ended 2026-09-22 flipped to `past` by `check-events-registry.py --fix-past` (the checker's own remedy; today is 2026-09-23 UTC) and the `.ics` rebuilt — 69 confirmed of 100
+
+#### `Events.gs` — v01.07g
+
+##### Added
+- `evSweepNewsrooms_` / `evParseNewsroom_` / `evNewsroomState_` · `evNewsroomSave_` · `evNewsroomFresh_` (row 4): per `target` account with `newsroomUrl`, read unless read within `EV_NEWSROOM_DAYS` = 28 (the day parked per account id in `EV_NEWSROOM_READ_PROP`), the page text (scripts and styles stripped) matched on each target event's name, or its series with the edition's year within `EV_NEWSROOM_NEAR` = 400 characters → `newsroom` 0.7, the page as evidence, the person the page names (the roster parser over the same page); a failed page one audit row with no account id, retried next run
+- `evSweepEvent_`: the agenda at `agendaUrl` through `evParseSpeakers_` → `agenda` 0.9 with the person; `same_as_speakers` when it equals the roster URL
+- `EV_DOCKET_FEEDS` (the Scraper roster's `fedreg-ferc` URL), `EV_DOCKET_SEGMENT_RE`, `evDocketSegments_` (the docket segment ids found by name in `profiler-segments.json` — never hard-coded), `evSweepDockets_` (once per run, reported in `feeds[]`), `evMatchDockets_` (every watched account with a docket segment named in an item's title or text → `docket` 0.7, the item link, `eventSlug` empty)
+- `EV_SIGNAL_CONFIDENCE` gains `newsroom` 0.7 · `agenda` 0.9 · `docket` 0.7; `EV_SIGNAL_MANUAL_KINDS` gains `agenda` — `evSignalManual_` prefixes the note with `Recording:` on that kind (a note already starting with "Recording" is kept; no line → `Recording`)
+
+##### Changed
+- `evSignalsRun_`: the newsroom sweep after the press match, the docket watch after it (event-independent), `pages` / `pagesFailed` counting the agenda and newsroom reads, `newsrooms{}` and `dockets{}` on the answer, `newsrooms` · `newsroomsSkipped` · `dockets` in the parked `EV_SIGNALS_LAST` and the run's audit counts
+
+#### `Events.html` — v01.08w
+
+##### Added
+- The signal form's third kind, "Recording of a talk you watched"; the form's note and the link placeholder mention it
+
+#### `Network.gs` — v01.12g
+
+##### Changed
+- `nwPeerAccounts_`: `newsroomUrl` on the row when it is an `https?://` value
+- `nwPeerSignalsWrite_`: an empty `eventSlug` is accepted for `kind = docket` only; a malformed slug on `docket`, or an empty slug on any other kind, is still `bad_slug`
 
 ## [v07.19r] — 2026-09-22 07:50:15 PM EST
 

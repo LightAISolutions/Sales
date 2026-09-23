@@ -6,6 +6,54 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-22 10:45 PM EST (the session ran ~10:26 → 10:45 PM EST)
+**Repo version:** v07.20r — one push on `claude/relaxed-mayer-lbrzvz` (E4 session 2 + this session-context write, one commit)
+**Branch:** `claude/relaxed-mayer-lbrzvz`
+**Model:** Fable 5.1 (E4 session 2 — newsroom pages, agendas, the docket watch)
+
+### What was done
+
+- **E4 session 2 landed** (`Events.gs` v01.07g · `Events.html` v01.08w · `Network.gs` v01.12g; `Network.html` v01.21w untouched; §11's E4 row → In progress — session 2; §13.14 written with the session-3 paste-in prompt): on session 1's run, never a fork — **newsroom / "meet us at" pages** per `target` account with a `newsroomUrl` (now carried on `nop=accounts` when set), read monthly (the day parked per account id in the script property `EV_SIGNALS_NEWSROOM`, 28-day skip, a failed page retried), matched on each target event's name or its series with the year within 400 characters → `newsroom` 0.7 with the person the page names; **agendas** at `agendaUrl` through the roster parser → `agenda` 0.9 with the person (same-URL-as-roster read once); **recordings decided as a manual row of `kind = agenda`** (the form's third option, the note prefixed `Recording:`); **the docket watch** once per run over the Federal Register's FERC feed (the Scraper roster's `fedreg-ferc` row byte for byte) per watched account whose segments name a docket segment found by name in `profiler-segments.json` → `docket` 0.7, the filing as evidence, **no event slug** — Network's write leg accepts the empty slug for `docket` only, the score never counts it
+- `scripts/check-events-signals.js` 76 → **103 checks**, zero live calls; `check-events-score.js` / `check-peer-bridge.js` / `check-events-poller.js` / `check-gas-inner-scripts.js` still pass; `check-events-registry.py` exit 0 after its own `--fix-past` flipped two iMasons rows that ended 2026-09-22 (the `.ics` rebuilt, 69 confirmed); `check-readme-tree.py` 0 findings; `verify-events-roles.py` and `verify-network-roles.py` ALL CHECKS PASSED at 390 × 844, zero page errors; the host grep clean (the only `linkedin.com` is Network's manual-kind rule)
+- `EVENTS-SCHEMA.md` §3 / §8 and `NETWORK-SCHEMA.md` §3 / §8 updated; CHANGELOG `Sections: 91/100`
+
+### Where we left off
+
+**The developer's live check is next** (reported, not asserted): redeploy Events and Network (both `.gs` changed), open the Proposed tab → Signals now → read the status line (`Swept N events (P pages read …)`; the answer's `newsrooms{}` and `dockets{}` and `feeds[]` now carry a `fedreg-ferc` row), then open a target account with a Newsroom URL in Network and read its "Will be at" line — a newsroom row names the show, a docket row reads `? — docket 0.7` with the filing link (the `?` stands until N4's chips). Add a recording on an event sheet (the third kind) and find it on the account. **The two live-state brackets in this session's prompt were left unfilled** by the developer (whether the weekly sweep is installed and what the first Signals now line read) — session 3's prompt carries three brackets; fill them before pasting. **Then E4 session 3** with the §13.14 paste-in prompt (given in chat at the close of this session).
+
+### Open findings carried forward
+
+- **The Scraper roster carries no FERC eLibrary RSS** — FERC's own site is `blocked` (Cloudflare challenge); the docket watch reads the roster's Federal Register FERC feed, whose item titles name the filer. "Combined Notice of Filings" items name their applicants only in the document body — a per-item fetch would be new scope (a decision)
+- **RE+ 2026's speaker roster is a Swapcard iframe widget** — reads as `no_roster_found`; its agenda URL (`re-plus.com/schedule/`) is likely the same widget — reading Swapcard's API would be new scope (a decision)
+- **GlobeNewswire's feed** landed unverified in session 1 — read the first live sweep's `feeds[]`
+- A docket row shows as `? — docket 0.7` on Network's "Will be at" line (no event to name) until N4's chips
+- The series key for `RE+` normalises to two letters and is filtered — newsroom and press matches on that show need the edition name ("RE+ 2026"), which the name key covers
+- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
+
+### Key decisions made
+
+- Recordings enter as a manual `agenda` row (the brief's least-scope answer) — no recording kind in Network; the form gained the option, so `Events.html` bumped and the verifier's kinds list changed
+- The docket watch reads the Federal Register FERC feed (the roster's row) — no outlet added, FERC's own site never fetched
+- Newsroom pages are read for `target` accounts only (the brief's wording); customer and partner pages are never fetched (asserted)
+- The newsroom skip state is a script property keyed by account id (ids only), not a tab — §5 says no Events tab for signals
+- The docket segment ids are found by segment name at run time (`utilit` · `ipp` · `developer`), never hard-coded
+- `check-events-registry.py --fix-past` was run because the checker prescribes it and exit 0 is a required verification — two rows that ended 2026-09-22 are now `past`
+
+### Active context
+
+- **Repo version v07.20r.** `CHANGELOG.md` `Sections: 91/100` — no rotation due
+- **Live versions:** `Events.html` v01.08w · `Events.gs` v01.07g · `Network.html` v01.21w · `Network.gs` v01.12g
+- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07
+- **C2 Routine** fires Wednesday 2026-09-23 11:00 UTC — parallel pushes possible; check `git ls-remote` before pushing
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Do the live check first (redeploy both apps, Signals now, read a newsroom row and a docket row on an account in Network, add one recording), then run E4 session 3 with the §13.14 paste-in prompt — its three bracketed live-state fields filled from the panel and from Network.
+- **To continue:** type `run E4 session 3 from §13.14`
+
+## Previous Sessions
+
 **Date:** 2026-09-22 07:55 PM EST (the session ran ~07:15 → 07:55 PM EST)
 **Repo version:** v07.19r — one push on `claude/dreamy-ride-lt8z21` (E4 session 1 + this session-context write, one commit)
 **Branch:** `claude/dreamy-ride-lt8z21`
@@ -52,54 +100,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - Do the live check first (redeploy both apps, Install signals, Signals now, read RE+ 2026's accounts, one manual signal found on the contact in Network), then run E4 session 2 with the §13.13 paste-in prompt — its two bracketed live-state fields filled from the panel's Signals now line.
 - **To continue:** type `run E4 session 2 from §13.13`
-
-## Previous Sessions
-
-### Session — 2026-09-22 06:55 PM EST (E3 live judgment, pre-E4 checks)
-
-**Date:** 2026-09-22 06:55 PM EST (the session ran ~05:55 → 07:05 PM EST)
-**Repo version:** v07.18r — no version bump; one housekeeping push on `claude/ecstatic-maxwell-oticzd` (this session-context write only)
-**Branch:** `claude/ecstatic-maxwell-oticzd`
-**Model:** Fable 5.1 (E3 live-judgment session between E3 and E4)
-
-### What was done
-
-**No code changed.** This was the developer's E3 hand-off, judged live, plus the pre-E4 checks.
-
-- **The seats' two segment lists are confirmed by the developer (2026-09-22).** `profiler-segments.json` → `seats` stands as written: storage-seller = developers and IPPs · utilities · capital · assurance · insurance; aidc-power-seller = landlords · hyperscalers · EPC · neoclouds · utilities (union of nine). The reasoning the developer endorsed: all five demand-tier segments plus capital, assurance and insurance from services, plus EPC and construction from build; the ten left out are the three supply, six build and software-and-optimization. The two borderline calls (software out, EPC in) were named and accepted. Sensitivity was measured: EPC touches 33 upcoming events, software 10, insurance 3. No file edit was needed
-- **E3 judged live.** The Recommended list was accurate to the developer's own history (has attended DCD>Connect, RE+ and PTC; contacts go to Infocast). The developer changed `relevancePrior` in the Events spreadsheet's `Tuning` tab from 0.05 to **0.2** — live state, not in the repo — because WEF Davos ranked first on a perfect 3-tag segment fit despite relevance 1
-- **Peer tokens** — the developer set both and believes them correct; this session could not verify them (script properties, and the session never calls the app). The page's own evidence: after pressing Recommended the status line reads `Ranked N upcoming events · X accounts · Y signals` when linked, or `Network not connected — scored without your accounts` when not; the sheet's Recommendation block shows the gold "Connect Network…" line when not. Told the developer exactly that
-- **Routines rebuilt.** `list_triggers` shows six: earnings desk (weekdays 13:00 UTC), C2 weekly (Wed 11:00 UTC), Industry Guidance quarterly (15 Jan/Apr/Jul/Oct), Profiler quarterly (1 Jan/Apr/Jul/Oct), monthly opportunity-report drift check (1st 17:00 UTC), ACL health daily. The old earnings desk (`trig_01Uy…`) is gone. The API does not expose the attached repository, so the tie to `LightAISolutions/Sales` was confirmed by outcome, not by field: the new desk landed v06.96r on 2026-09-21 (IREN / Jinko / Oracle rows `lastRefreshed` 2026-09-21) and v07.16r (NOVONIX) on 2026-09-22 — the first commits a scheduled run has ever landed in this repo
-- **E4 session 1 prompt** revised in chat with the two developer-approved extras: the poller's past-date guard (`evPollSource_`, kinds `new-event` / `new-edition`, plus a harness case) and a seats-block id check in `scripts/check-events-registry.py`. §13.12 in the design plan was NOT edited — the pasted prompt carries the extras and the E4 session records them when it flips §11
-
-### Where we left off
-
-**E4 session 1 is next**, in a fresh session, with the revised prompt given in chat at the close of this session (§13.12's paste-in plus the two extras above). Before it runs the developer should (1) press Recommended once more and read the status line — DCD>Connect and RE+ should now sit near 0.55 with WEF down near 0.41 if the 0.2 weight took; a `default weight used for relevancePrior` note means the Tuning cell did not parse; (2) confirm the status line does not say `Network not connected`. **C2 fires Wednesday 2026-09-23 11:00 UTC (04:00 PDT)** — its rebuilt Routine is armed; an E4 session running across that time must check `git ls-remote` before pushing (already in the prompt).
-
-### Open findings carried forward
-
-- **The poller proposes past editions** — now folded into the E4 session 1 prompt by developer approval (no longer deferred)
-- **No checker validates `seats` ids** — folded into the E4 session 1 prompt likewise
-- **`pullAndDeployFromGitHub` never logs its outcome** — fleet-wide TEMPLATE papercut, still deliberately unfixed
-- **Segment fit rewards narrow audiences** (three matching tags score the same 1.0 as nine; a mega-show is penalised per supply-side tag — RE+ scores 0.57). A formula change, E5 scope if it still bothers the developer after the weight change
-
-### Key decisions made
-
-- Seats lists confirmed as-is; no tier rule
-- `relevancePrior` 0.05 → 0.2 (live Tuning tab; the repo's `EV_TUNING_DEFAULTS` seed stays 0.05 — it is only the seed for an empty tab)
-- The two E2-scope extras ride E4 session 1 rather than a separate session
-- The "Repo access denied" reminder was **left active** — its evidence has now landed (v06.96r, old desk deleted) but it is the developer's note to close
-
-### Active context
-
-- **Repo version v07.18r.** `CHANGELOG.md` `Sections: 89/100` — no rotation due
-- **Live versions:** `Events.html` v01.06w · `Events.gs` v01.05g · `Network.html` v01.20w · `Network.gs` v01.10g
-- **Reminders still open** (developer's own — untouched): close out "Repo access denied" (evidence now exists; the old desk is already deleted); the Megmeet briefing after the Network/Events build, before 2026-10-07
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run E4 session 1 with the revised prompt (Fable 5.1 High, one session, one push): the weekly signals sweep, the manual signal form, the "Signals only" pill, `scripts/check-events-signals.js`, plus the poller past-date guard and the seats-id check; flip §11's E4 row to In progress — session 1 and write §13.13.
-- **To continue:** type `run E4 session 1 from §13.12 with the two extras`
-
-Developed by: LightAISolutions

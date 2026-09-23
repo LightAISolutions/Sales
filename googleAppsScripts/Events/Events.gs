@@ -1,4 +1,4 @@
-var VERSION = "v01.06g";
+var VERSION = "v01.07g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3669,12 +3669,31 @@ function evRecommend_(sess) {
 // pressed it. The last outcome (counts only) is parked in a script property
 // for the poller card's "last swept" line; there is no Events tab for
 // signals (EVENTS-SCHEMA.md §5 — by design).
+// SESSION 2 (catalogue rows 4 · 6 · 7): per target account whose Network row
+// carries a Newsroom URL, the company's "events / meet us at" page is read on
+// a MONTHLY cadence (a page read in the last EV_NEWSROOM_DAYS days is not
+// re-read — the day is parked per account id in a script property, never a
+// tab) and searched for the target events' names, or their series with the
+// edition's year nearby → kind newsroom 0.7, the page as evidence, the person
+// where the page names one; the AGENDA at agendaUrl is read with the roster
+// parser (an agenda names speakers months ahead) → kind agenda 0.9 with the
+// person; a RECORDING of a talk enters by hand as a manual row of kind agenda
+// (the recording's link as evidence, the note prefixed "Recording:") — no
+// recording kind exists in Network; and the DOCKET watch reads, once per run
+// like the newswires, the Federal Register's FERC feed the Scraper roster
+// already carries (FERC's own site is blocked to server-side readers — see
+// Scraper.gs SCRAPER_RETIRED_SOURCES; the Federal Register is where an order
+// or a notice takes legal effect, and its item titles name the filer) for
+// every watched account whose segments name a utility, IPP or developer
+// segment → kind docket 0.7, the item link as evidence and NO event slug — a
+// docket is not about an event; Network's write leg accepts the empty slug
+// for docket only and the score, which keys on the slug, never counts it.
 var EV_SIGNALS_TRIGGER_FN = 'evSignalsTick';          // the trigger handler (a public wrapper)
 var EV_SIGNALS_TOP_N = 10;                             // ranked events swept beside the starred ones
 var EV_SIGNALS_LAST_PROP = 'EV_SIGNALS_LAST';          // the last run's counts, for the panel — never a name
 var EV_SIGNALS_BATCH = 500;                            // Network's per-call cap on nop=signals
-var EV_SIGNAL_CONFIDENCE = { exhibitor: 0.9, speaker: 0.9, 'press-release': 0.8 };   // NETWORK-SCHEMA.md §3
-var EV_SIGNAL_MANUAL_KINDS = ['linkedin-manual', 'registrant-mail'];                 // the manual path's kinds
+var EV_SIGNAL_CONFIDENCE = { exhibitor: 0.9, speaker: 0.9, 'press-release': 0.8, newsroom: 0.7, agenda: 0.9, docket: 0.7 };   // NETWORK-SCHEMA.md §3
+var EV_SIGNAL_MANUAL_KINDS = ['linkedin-manual', 'registrant-mail', 'agenda'];       // the manual path's kinds — agenda is a recording's link (session 2)
 var EV_SIGNAL_RELATIONSHIPS = ['target', 'customer', 'partner'];                     // §5.5: the accounts watched
 var EV_SIGNALS_MAX_NAMES = 5000;                       // exhibitor names / roster rows / feed items read per page
 // Key · Name · URL — the newswire roster (§5.5.1 row 3). Probed 2026-09-22
@@ -3691,6 +3710,16 @@ var EV_NEWSWIRE_FEEDS = [
   ['globenewswire', 'GlobeNewswire', 'https://www.globenewswire.com/RssFeed/orgclass/1/feedTitle/GlobeNewswire%20-%20News%20about%20Public%20Companies']
 ];
 var EV_NEWSWIRE_CUE_RE = /\b(booth|exhibit|exhibits|exhibiting|exhibitor|exhibition|will present|to present|presenting)\b/i;
+// Session 2 — the docket feed (catalogue row 7): the Scraper roster's
+// fedreg-ferc row, byte for byte (scripts/check-events-signals.js asserts the
+// URL against Scraper.gs); FERC's own feed is retired there as blocked.
+var EV_DOCKET_FEEDS = [
+  ['fedreg-ferc', 'Federal Register — FERC', 'https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=federal-energy-regulatory-commission&order=newest']
+];
+var EV_DOCKET_SEGMENT_RE = /\b(utilit|ipp|developer)/i;   // which profiler-segments.json rows make an account a filer to watch — by name, never a hard-coded id
+var EV_NEWSROOM_READ_PROP = 'EV_SIGNALS_NEWSROOM';     // { accountId: 'YYYY-MM-DD' } — the day each newsroom page was last read; ids only
+var EV_NEWSROOM_DAYS = 28;                             // a page read within this many days is not re-read (monthly)
+var EV_NEWSROOM_NEAR = 400;                            // characters of page text around a series match that must carry the edition's year
 var EV_MYS_URL_RE = /^(https?:\/\/[a-z0-9-]+\.mapyourshow\.com)\/(\d+_\d+)\//i;
 var EV_A2Z_HOST_RE = /(^|\.)a2zinc\.net$/i;
 var EV_SIGNAL_PERSON_MAX = 200;
@@ -3964,6 +3993,33 @@ function evSweepEvent_(ev, matcher, who, sink, seenAt) {
       line.speakers = { status: sg.status, people: people.length, matched: pm, note: people.length ? '' : 'no_roster_found' };
     }
   }
+  // Session 2 — the agenda (catalogue row 6): the roster parser over the
+  // agenda page, the people and their companies only (sessions and times are
+  // E5's). The same URL as the roster is not read twice.
+  var aUrl = String(ev.agendaUrl || '').trim();
+  if (aUrl) {
+    if (aUrl === sUrl) line.agenda = { status: 0, skipped: 'same_as_speakers', people: 0, matched: 0 };
+    else {
+      var ag = evSignalsFetch_(aUrl, { 'Accept': 'text/html, application/ld+json;q=0.9, */*;q=0.5' }), agenda = null;
+      if (!ag.error) { try { agenda = evParseSpeakers_(ag.body); } catch (aErr) { ag.error = 'parse_failed'; } }
+      if (ag.error) {
+        line.agenda = { status: ag.status, error: ag.error, people: 0, matched: 0 };
+        auditLog('data_read', who, 'events_signals_page_failed', { slug: line.slug, source: 'agenda', status: ag.status, error: ag.error });
+      } else {
+        var am = 0, seenA = {};
+        for (var q = 0; q < agenda.length; q++) {
+          var acctA = matcher.byKey[evNormaliseCompany_(agenda[q].company)];
+          if (!acctA) continue;
+          var ak = acctA.id + '|' + agenda[q].name.toLowerCase();
+          if (seenA[ak]) continue;
+          seenA[ak] = true; am++;
+          sink.push({ accountId: acctA.id, eventSlug: line.slug, kind: 'agenda', confidence: EV_SIGNAL_CONFIDENCE.agenda,
+                      evidenceUrl: aUrl, firstSeen: seenAt, personName: agenda[q].name, personTitle: agenda[q].title });
+        }
+        line.agenda = { status: ag.status, people: agenda.length, matched: am, note: agenda.length ? '' : 'no_agenda_people' };
+      }
+    }
+  }
   return line;
 }
 
@@ -4011,6 +4067,145 @@ function evMatchPress_(items, targets, matcher, sink, seenAt, lines) {
   return found;
 }
 
+// ── Session 2 · the newsroom pages, monthly (catalogue row 4) ─────────────
+// { accountId: 'YYYY-MM-DD' } — the day each account's page was last read;
+// ids only, parked in a script property (no tab for signals, §5).
+function evNewsroomState_() {
+  try { var raw = PropertiesService.getScriptProperties().getProperty(EV_NEWSROOM_READ_PROP); var st = raw ? JSON.parse(raw) : null; return st && typeof st === 'object' ? st : {}; }
+  catch (nErr) { return {}; }
+}
+function evNewsroomSave_(state) {
+  try { PropertiesService.getScriptProperties().setProperty(EV_NEWSROOM_READ_PROP, JSON.stringify(state || {})); } catch (sErr) { /* the skip is best-effort */ }
+}
+// Was this page read within EV_NEWSROOM_DAYS of `today` (both YYYY-MM-DD)?
+function evNewsroomFresh_(day, today) {
+  if (!day || !/^\d{4}-\d{2}-\d{2}$/.test(String(day))) return false;
+  var d = new Date(String(day) + 'T00:00:00Z').getTime(), t = new Date(String(today) + 'T00:00:00Z').getTime();
+  if (isNaN(d) || isNaN(t)) return false;
+  return t - d < EV_NEWSROOM_DAYS * 86400000 && t >= d;
+}
+// The page's text, normalised like the company keys, searched for each
+// target event: its name (which carries the year) anywhere, or its series
+// with the edition's year within EV_NEWSROOM_NEAR characters — "a date near
+// the edition". Returns [ { slug, key } ] — one hit per event.
+function evParseNewsroom_(html, targets) {
+  var text = evNormaliseCompany_(evStripTags_(String(html || '').replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<style\b[\s\S]*?<\/style>/gi, ' ')));
+  var padded = ' ' + text + ' ', hits = [];
+  for (var i = 0; i < targets.length; i++) {
+    var ev = targets[i], nameKey = evNormaliseCompany_(ev.name), seriesKey = evNormaliseCompany_(ev.series);
+    var year = String(ev.start || '').slice(0, 4);
+    if (nameKey.length >= 3 && evTextHasKey_(text, nameKey)) { hits.push({ slug: String(ev.slug), key: nameKey }); continue; }
+    if (seriesKey.length < 3 || !year) continue;
+    var at = padded.indexOf(' ' + seriesKey + ' '), found = false;
+    while (at >= 0 && !found) {
+      var near = padded.slice(Math.max(0, at - EV_NEWSROOM_NEAR), at + seriesKey.length + EV_NEWSROOM_NEAR);
+      if (evTextHasKey_(near.trim(), year)) found = true;
+      at = padded.indexOf(' ' + seriesKey + ' ', at + 1);
+    }
+    if (found) hits.push({ slug: String(ev.slug), key: seriesKey });
+  }
+  return hits;
+}
+// Per target account with a Newsroom URL (nop=accounts carries it since
+// Network v01.12g): read the page unless it was read in the last
+// EV_NEWSROOM_DAYS days, match the target events, write kind newsroom 0.7
+// with the page as evidence and the person where the page names one (the
+// roster parser over the same page — a person at this account, or one with
+// no company named). A failed page is one audit row (source only — never the
+// account) and is retried next run; a read page is marked for the month.
+function evSweepNewsrooms_(matcher, targets, who, sink, seenAt, today, t0) {
+  var line = { accounts: 0, read: 0, skipped: 0, failed: 0, matched: 0, stopped: false };
+  var state = evNewsroomState_(), changed = false;
+  for (var a = 0; a < matcher.list.length; a++) {
+    var acct = matcher.list[a], url = String(acct.newsroomUrl || '').trim();
+    if (String(acct.relationship || '').toLowerCase() !== 'target' || !/^https?:\/\//i.test(url)) continue;
+    line.accounts++;
+    if (evNewsroomFresh_(state[acct.id], today)) { line.skipped++; continue; }
+    if (Date.now() - t0 + EV_POLL_SOURCE_BUDGET_MS > EV_POLL_TOTAL_BUDGET_MS) { line.stopped = true; break; }
+    var got = evSignalsFetch_(url, { 'Accept': 'text/html, application/ld+json;q=0.9, */*;q=0.5' }), hits = null, people = [];
+    if (!got.error) {
+      try { hits = evParseNewsroom_(got.body, targets); people = evParseSpeakers_(got.body); } catch (pErr) { got.error = 'parse_failed'; }
+    }
+    if (got.error) {
+      line.failed++;
+      auditLog('data_read', who, 'events_signals_page_failed', { slug: '', source: 'newsroom', status: got.status, error: got.error });
+      continue;
+    }
+    line.read++;
+    state[acct.id] = today; changed = true;
+    var keys = evAccountKeys_(acct), person = null;
+    for (var p = 0; p < people.length && !person; p++) {
+      var ck = evNormaliseCompany_(people[p].company);
+      if (!ck || keys.indexOf(ck) >= 0) person = people[p];
+    }
+    for (var h = 0; h < hits.length; h++) {
+      line.matched++;
+      var row = { accountId: acct.id, eventSlug: hits[h].slug, kind: 'newsroom', confidence: EV_SIGNAL_CONFIDENCE.newsroom,
+                  evidenceUrl: url, firstSeen: seenAt, note: 'Named on the company\'s events page: ' + hits[h].key.slice(0, 120) };
+      if (person) { row.personName = person.name; if (person.title) row.personTitle = person.title; }
+      sink.push(row);
+    }
+  }
+  if (changed) evNewsroomSave_(state);
+  return line;
+}
+
+// ── Session 2 · the docket watch, once per run (catalogue row 7) ──────────
+// The segment ids that make an account a filer to watch — read from
+// profiler-segments.json by the segment's name (utilities, IPPs, developers
+// — the large-load applicants), never hard-coded. { set } or { error }.
+function evDocketSegments_() {
+  var got = evPagesJson_(EV_SEGMENTS_URL, 'segments_unavailable');
+  if (got.error) return got;
+  var list = (got.data && got.data.segments) || [], set = {}, n = 0;
+  for (var i = 0; i < list.length; i++) {
+    var seg = list[i] || {}, id = String(seg.id || '');
+    if (id && EV_DOCKET_SEGMENT_RE.test(String(seg.name || '') + ' ' + String(seg.label || ''))) { set[id] = true; n++; }
+  }
+  if (!n) return { error: 'docket_segments_missing' };
+  return { set: set };
+}
+// The docket feed(s), fetched like the newswires: [ { key, status, items | error } ] and the items.
+function evSweepDockets_(who) {
+  var feeds = [], items = [];
+  for (var f = 0; f < EV_DOCKET_FEEDS.length; f++) {
+    var row = EV_DOCKET_FEEDS[f], got = evSignalsFetch_(row[2], { 'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.5' }), parsed = null;
+    if (!got.error) { try { parsed = evParseRss_(got.body); } catch (rErr) { got.error = 'parse_failed'; } }
+    if (got.error) {
+      feeds.push({ key: row[0], status: got.status, error: got.error, items: 0 });
+      auditLog('data_read', who, 'events_signals_feed_failed', { feed: row[0], status: got.status, error: got.error });
+      continue;
+    }
+    for (var i = 0; i < parsed.length; i++) { parsed[i].feed = row[0]; items.push(parsed[i]); }
+    feeds.push({ key: row[0], status: got.status, items: parsed.length });
+  }
+  return { feeds: feeds, items: items };
+}
+// The account named in a docket item's title or text — as the filer, a
+// witness or a signatory — for every watched account with a docket segment:
+// kind docket 0.7, the item link as evidence, NO event slug. One signal per
+// (account, item). Returns { accounts, found }.
+function evMatchDockets_(items, matcher, segSet, sink, seenAt) {
+  var watched = [], found = 0;
+  for (var a = 0; a < matcher.list.length; a++) {
+    var segs = matcher.list[a].segments || [], on = false;
+    for (var g = 0; g < segs.length && !on; g++) on = !!segSet[String(segs[g])];
+    if (on) watched.push(matcher.list[a]);
+  }
+  for (var i = 0; i < items.length && watched.length; i++) {
+    var it = items[i];
+    for (var w = 0; w < watched.length; w++) {
+      var keys = evAccountKeys_(watched[w]), hit = false;
+      for (var k = 0; k < keys.length && !hit; k++) hit = evTextHasKey_(it.text, keys[k]);
+      if (!hit) continue;
+      found++;
+      sink.push({ accountId: watched[w].id, eventSlug: '', kind: 'docket', confidence: EV_SIGNAL_CONFIDENCE.docket,
+                  evidenceUrl: it.link, firstSeen: seenAt, note: String(it.title || '').slice(0, 200) });
+    }
+  }
+  return { accounts: watched.length, found: found };
+}
+
 // ── The write, in batches ─────────────────────────────────────────────────
 function evSignalsWrite_(owner, signals, out) {
   for (var i = 0; i < signals.length; i += EV_SIGNALS_BATCH) {
@@ -4029,14 +4224,15 @@ function evSignalsWrite_(owner, signals, out) {
 function evSignalsRun_(who, owners) {
   var t0 = Date.now();
   var out = { success: true, ranAt: new Date().toISOString(), owners: 0, events: 0, starred: 0, ranked: 0, pages: 0, pagesFailed: 0,
-              feeds: [], found: 0, written: 0, updated: 0, rejected: 0, notConfigured: false, stopped: false, results: [] };
+              feeds: [], found: 0, written: 0, updated: 0, rejected: 0, notConfigured: false, stopped: false, results: [],
+              newsrooms: { accounts: 0, read: 0, skipped: 0, failed: 0, matched: 0 }, dockets: { accounts: 0, items: 0, found: 0, note: '' } };
   var reg = evRegistry_();
   if (reg.error) return { success: false, error: reg.error };
   var tabs = ensureEventsTabs_();
   var today = evTodayIn_('');
   var list = owners && owners.length ? owners : evSignalsOwners_(tabs);
   out.owners = list.length;
-  var feedsRead = null;
+  var feedsRead = null, docketsRead = null, docketSegs = null;
   for (var o = 0; o < list.length; o++) {
     var owner = String(list[o] || '').toLowerCase();
     if (!owner) continue;
@@ -4055,12 +4251,29 @@ function evSignalsRun_(who, owners) {
       var line;
       try { line = evSweepEvent_(targets.events[i], matcher, who, sink, seenAt); }
       catch (eErr) { line = { slug: String(targets.events[i].slug), error: 'event_threw' }; auditLog('data_read', who, 'events_signals_page_failed', { slug: line.slug, source: 'event', status: 0, error: 'event_threw' }); }
-      ['exhibitors', 'speakers'].forEach(function(k) { if (line[k]) { if (line[k].error) out.pagesFailed++; else if (!line[k].skipped) out.pages++; } });
+      ['exhibitors', 'speakers', 'agenda'].forEach(function(k) { if (line[k]) { if (line[k].error) out.pagesFailed++; else if (!line[k].skipped) out.pages++; } });
       lines[line.slug] = line; out.results.push(line);
     }
     if (!out.stopped && matcher.list.length && targets.events.length) {
       if (!feedsRead) { feedsRead = evSweepFeeds_(who); out.feeds = feedsRead.feeds; }
       evMatchPress_(feedsRead.items, targets.events, matcher, sink, seenAt, lines);
+    }
+    // session 2 — the newsroom pages (monthly, per target account) …
+    if (!out.stopped && matcher.list.length && targets.events.length) {
+      var nr = evSweepNewsrooms_(matcher, targets.events, who, sink, seenAt, today, t0);
+      ['accounts', 'read', 'skipped', 'failed', 'matched'].forEach(function(k) { out.newsrooms[k] += nr[k]; });
+      out.pages += nr.read; out.pagesFailed += nr.failed;
+      if (nr.stopped) out.stopped = true;
+    }
+    // … and the docket watch (event-independent: every watched account, whether or not an event is targeted)
+    if (!out.stopped && matcher.list.length) {
+      if (!docketSegs) docketSegs = evDocketSegments_();
+      if (docketSegs.error) out.dockets.note = docketSegs.error;
+      else {
+        if (!docketsRead) { docketsRead = evSweepDockets_(who); out.feeds = out.feeds.concat(docketsRead.feeds); out.dockets.items = docketsRead.items.length; }
+        var dk = evMatchDockets_(docketsRead.items, matcher, docketSegs.set, sink, seenAt);
+        out.dockets.accounts += dk.accounts; out.dockets.found += dk.found;
+      }
     }
     out.found += sink.length;
     if (sink.length) evSignalsWrite_(owner, sink, out);
@@ -4068,11 +4281,12 @@ function evSignalsRun_(who, owners) {
   out.elapsedMs = Date.now() - t0;
   var last = { ranAt: out.ranAt, owners: out.owners, events: out.events, pages: out.pages, pagesFailed: out.pagesFailed,
                feeds: out.feeds.length, found: out.found, written: out.written, updated: out.updated, rejected: out.rejected,
-               stopped: out.stopped, notConfigured: out.notConfigured, writeError: out.writeError || '' };
+               stopped: out.stopped, notConfigured: out.notConfigured, writeError: out.writeError || '',
+               newsrooms: out.newsrooms.read, newsroomsSkipped: out.newsrooms.skipped, dockets: out.dockets.found };
   try { PropertiesService.getScriptProperties().setProperty(EV_SIGNALS_LAST_PROP, JSON.stringify(last)); } catch (pErr) { /* the panel line is best-effort */ }
   auditLog('data_write', who || 'signals', 'events_signals_run', { owners: out.owners, events: out.events, pages: out.pages, pagesFailed: out.pagesFailed,
     feeds: out.feeds.length, found: out.found, written: out.written, updated: out.updated, rejected: out.rejected, stopped: out.stopped ? 1 : 0,
-    notConfigured: out.notConfigured ? 1 : 0 });
+    notConfigured: out.notConfigured ? 1 : 0, newsrooms: out.newsrooms.read, dockets: out.dockets.found });
   return out;
 }
 // Every owner with a Stars row — under D7 that is the one admin.
@@ -4117,10 +4331,12 @@ function evSignalsState_() {
   return { installed: evSignalsInstalled_(), last: last, schedule: 'weekly, Tuesday 06:00 ' + EV_POLL_TZ };
 }
 
-// eop=signal — the manual path (§5.5.1 rows 11 and 13): one signal the
-// developer typed, validated here and written over the same leg. Network
-// accepts a LinkedIn host on linkedin-manual only; nothing here fetches the
-// URL. Audit counts and the kind, never the URL or the note.
+// eop=signal — the manual path (§5.5.1 rows 11 and 13, and row 6's
+// recordings since session 2 — kind agenda, the recording's link as evidence,
+// the note prefixed "Recording:"): one signal the developer typed, validated
+// here and written over the same leg. Network accepts a LinkedIn host on
+// linkedin-manual only; nothing here fetches the URL. Audit counts and the
+// kind, never the URL or the note.
 function evSignalManual_(sess, p) {
   var accountId = evStr_(p.accountId, 20), slug = evStr_(p.slug, 64).toLowerCase(), kind = evStr_(p.kind, 40).toLowerCase();
   var url = evStr_(p.evidenceUrl, 500), note = evStr_(p.note, 500).replace(/\s+/g, ' ');
@@ -4130,6 +4346,7 @@ function evSignalManual_(sess, p) {
   if (!/^https?:\/\/[^\s]+$/i.test(url)) return { success: false, error: 'evidence_required' };
   var conf = Number(p.confidence);
   if (!isFinite(conf) || conf < 0 || conf > 1) return { success: false, error: 'bad_confidence' };
+  if (kind === 'agenda' && !/^recording\b/i.test(note)) note = ('Recording: ' + note).replace(/:\s*$/, '').slice(0, 500);
   var row = { accountId: accountId, eventSlug: slug, kind: kind, evidenceUrl: url, confidence: conf, firstSeen: new Date().toISOString() };
   if (note) row.note = note;
   var personName = evStr_(p.personName, EV_SIGNAL_PERSON_MAX), personTitle = evStr_(p.personTitle, EV_SIGNAL_PERSON_MAX);

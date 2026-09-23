@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08w] — 2026-09-22 10:38:40 PM EST — v07.20r
+
+### Added
+- **Add a signal** on an event's sheet offers a third kind: a recording of a talk you watched — paste the recording's link, write one line, rate it
+
+### Changed
+- Minor internal improvements
 
 ## [v01.07w] — 2026-09-22 07:50:15 PM EST — v07.19r
 

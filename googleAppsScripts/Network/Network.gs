@@ -1,4 +1,4 @@
-var VERSION = "v01.11g";
+var VERSION = "v01.12g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1189,13 +1189,18 @@ function nwPeerAccounts_(p) {
   var tabs = ensureNetworkTabs_();
   var rows = nwListRows_(tabs.accounts, set, {
     id: 'Account ID', name: 'Name', slug: 'Profiler Slug', relationship: 'Relationship', stage: 'Stage',
-    segments: 'Segment IDs', tags: 'Tags' });
+    segments: 'Segment IDs', tags: 'Tags', newsroomUrl: 'Newsroom URL' });
   var out = [];
   for (var i = 0; i < rows.length; i++) {
     var r = rows[i];
     if (NW_PEER_RELATIONSHIPS.indexOf(String(r.relationship || '').toLowerCase()) < 0) continue;
-    out.push({ id: r.id, name: r.name, slug: r.slug, relationship: r.relationship, stage: r.stage,
-               segments: nwArr_(r.segments), tags: nwArr_(r.tags) });
+    var a = { id: r.id, name: r.name, slug: r.slug, relationship: r.relationship, stage: r.stage,
+              segments: nwArr_(r.segments), tags: nwArr_(r.tags) };
+    // E4 s2: the company's public "events / meet us at" page the developer
+    // typed on the Accounts card — Events reads it monthly; carried only when set
+    var news = nwStr_(r.newsroomUrl, 500);
+    if (/^https?:\/\//i.test(news)) a.newsroomUrl = news;
+    out.push(a);
   }
   auditLog('data_read', owner, 'peer_accounts', { accounts: out.length });
   return { success: true, built: nwNow_(), accounts: out };
@@ -1209,7 +1214,9 @@ function nwPeerAccounts_(p) {
 //   NW_SIGNAL_KINDS, the account must exist, be live and be the owner's, and a
 //   LinkedIn evidence URL is rejected with linkedin_not_fetched — the manual
 //   path is the only LinkedIn entry (D17). Every rejection is per-row and
-//   indexed; one bad row never fails the batch.
+//   indexed; one bad row never fails the batch. An empty eventSlug is
+//   accepted for kind docket only (E4 s2 — a regulatory filing names no
+//   event; the score keys on the slug and never counts such a row).
 //   GET with accountId — the read leg Events' eop=signals proxies (its
 //   read-through exists so Network's later "will be at" chips need one proxy,
 //   not two): the live signal rows for that one account, ids and evidence only.
@@ -1305,7 +1312,7 @@ function nwPeerSignalsWrite_(tabs, owner, body) {
     var reason = '';
     if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') reason = 'bad_account_id';
     else if (!liveAccounts[accountId]) reason = 'account_not_found';
-    else if (!NW_PEER_SLUG_RE.test(slug)) reason = 'bad_slug';
+    else if (slug ? !NW_PEER_SLUG_RE.test(slug) : kind !== 'docket') reason = 'bad_slug';   // E4 s2: a docket is not about an event — the empty slug is accepted for that kind only
     else if (NW_SIGNAL_KINDS.indexOf(kind) < 0) reason = 'bad_kind';
     else if (!evidence || !/^https?:\/\//i.test(evidence)) reason = 'evidence_required';
     else if (nwPeerLinkedIn_(evidence) && kind !== 'linkedin-manual') reason = 'linkedin_not_fetched';   // E4: the manual kind is the ONLY LinkedIn entry (D9) — pasted by the developer, never fetched

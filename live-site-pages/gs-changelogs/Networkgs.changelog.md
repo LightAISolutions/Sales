@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12g] — 2026-09-22 10:38:40 PM EST — v07.20r
+
+### Added
+- The account's saved events page is shared with Events so its monthly read can find the shows the company names
+- A regulatory-filing signal can be saved on an account without an event — it shows on the account's "Will be at" line with the filing as evidence
+
+### Changed
+- Minor internal improvements
 
 ## [v01.11g] — 2026-09-22 07:50:15 PM EST — v07.19r
 

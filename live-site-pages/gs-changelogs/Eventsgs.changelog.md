@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07g] — 2026-09-22 10:38:40 PM EST — v07.20r
+
+### Added
+- The weekly sweep now also reads each **target account's own events page** once a month (the "events / meet us at" page saved on the account in Network) and notes the shows it names — with the person, where the page names one
+- The sweep reads each event's **agenda** for the people speaking and their companies, months ahead of the roster
+- A **regulatory-filing watch**: the Federal Register's FERC notices are checked once a run for your utility, storage-developer and data-centre-developer accounts named as filers; a hit is saved on the account as a docket signal with the notice as evidence (it is not tied to an event, so it never moves an event's score)
+- A **recording of a talk** can be saved as a signal from the event sheet — the link is kept as evidence and never fetched
+
+### Changed
+- The Signals now answer and the last-swept line count the events pages and filings read; a failed page is retried on the next run
+- Minor internal improvements
 
 ## [v01.06g] — 2026-09-22 07:50:15 PM EST — v07.19r
 

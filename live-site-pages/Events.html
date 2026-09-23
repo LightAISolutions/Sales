@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.07w">
+  <meta name="build-version" content="v01.08w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -5326,7 +5326,7 @@ function evOwnBlock(e) {
 // one line, a rated confidence — and written through eop=signal over the
 // bridge's write leg. Nothing here fetches the link. While the two apps are
 // not linked the form says so and stays disabled (degrades, never fails).
-var EV_SIGNAL_MANUAL_KINDS = [['linkedin-manual', 'LinkedIn post you read'], ['registrant-mail', 'Registrant mail from the organiser']];
+var EV_SIGNAL_MANUAL_KINDS = [['linkedin-manual', 'LinkedIn post you read'], ['registrant-mail', 'Registrant mail from the organiser'], ['agenda', 'Recording of a talk you watched']];   // E4 s2: a recording enters as an agenda row, its link the evidence
 var EV_SIGNAL_CONFIDENCES = [['0.9', '0.9 — they said so themselves'], ['0.8', '0.8 — a reliable second-hand read'], ['0.7', '0.7 — likely'], ['0.6', '0.6 — a hint'], ['0.5', '0.5 — a guess']];
 var _evNetAccounts = null;   // the last eop=netaccounts answer, kept for the session
 function evLoadNetAccounts(cb) {
@@ -5336,7 +5336,7 @@ function evLoadNetAccounts(cb) {
 function evSignalForm(e) {
   var box = evEl('div', 'ev-sigform'); box.id = 'ev-sigform';
   box.appendChild(evEl('span', 'ev-lbl', 'Add a signal'));
-  box.appendChild(evEl('p', 'ev-note', 'Something you read or received that says a Network account will be at this show — a LinkedIn post you saw, or a registrant mail from the organiser. Paste the link, write one line, rate it. The link is kept as evidence and never fetched.'));
+  box.appendChild(evEl('p', 'ev-note', 'Something you read, received or watched that says a Network account will be at this show — a LinkedIn post you saw, a registrant mail from the organiser, or a recording of one of their talks. Paste the link, write one line, rate it. The link is kept as evidence and never fetched.'));
   var row = evEl('div', 'ev-controls');
   var h1 = evEl('div', 'ev-half'); h1.appendChild(evEl('span', 'ev-lbl', 'Account'));
   var acc = evEl('select', 'ev-select'); acc.id = 'ev-sig-account';
@@ -5348,7 +5348,7 @@ function evSignalForm(e) {
   h2.appendChild(kind);
   row.appendChild(h1); row.appendChild(h2); box.appendChild(row);
   box.appendChild(evEl('span', 'ev-lbl', 'Link'));
-  var url = evEl('input', 'ev-input'); url.id = 'ev-sig-url'; url.type = 'url'; url.maxLength = 500; url.placeholder = 'https://… the post, or the mail\'s web copy'; url.autocomplete = 'off';
+  var url = evEl('input', 'ev-input'); url.id = 'ev-sig-url'; url.type = 'url'; url.maxLength = 500; url.placeholder = 'https://… the post, the mail\'s web copy, or the recording'; url.autocomplete = 'off';
   box.appendChild(url);
   box.appendChild(evEl('span', 'ev-lbl', 'One line'));
   var note = evEl('input', 'ev-input'); note.id = 'ev-sig-note'; note.type = 'text'; note.maxLength = 500; note.placeholder = 'What it said — who is going, the booth, the session…'; note.autocomplete = 'off';

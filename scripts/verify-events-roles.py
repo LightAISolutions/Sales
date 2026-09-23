@@ -732,7 +732,7 @@ def signals_pass(page, reqs, signals, failures):
     })""")
     if not form['form'] or not form['url'] or not form['note'] or not form['add']:
         failures.append('%s: the signal form is incomplete on the sheet: %r' % (tag, form)); return
-    if form['kinds'] != ['linkedin-manual', 'registrant-mail'] or form['conf'] != '0.8':
+    if form['kinds'] != ['linkedin-manual', 'registrant-mail', 'agenda'] or form['conf'] != '0.8':   # E4 s2: the recording's kind
         failures.append('%s: kinds / default confidence wrong: %r %r' % (tag, form['kinds'], form['conf']))
     if not any(a.startswith('a-0000000000001:Stub Account Co') for a in form['accounts']):
         failures.append('%s: the stub account is not in the picker: %r' % (tag, form['accounts']))

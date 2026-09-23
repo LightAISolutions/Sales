@@ -63,7 +63,7 @@ All timestamps are ISO-8601 UTC strings written by the server; dates the develop
 | Segment IDs | JSON string[] | Segment ids from `profiler-segments.json`, pre-filled from the registry's `segments[]` mirror when covered, editable |
 | Tags | JSON string[] | Freeform lowercase tags; the place a secondary relationship facet goes (D5). `dossier-proposed` is set by the Accounts card's **Propose a dossier** hook (N2, D4) when the `profiler <Name>` line is handed to the developer — an ordinary tag, cleared by hand once the dossier exists and the account is linked |
 | HQ | string | City, Country |
-| Newsroom URL | string | Optional — the company's "events / meet us at" page (§5.5.1 row 4), fetched monthly by Events in E4 s2. Edited from the Accounts card (`nop=account`, N2); a bare host is prefixed `https://` |
+| Newsroom URL | string | Optional — the company's "events / meet us at" page (§5.5.1 row 4), fetched monthly by Events since E4 s2 (carried on `nop=accounts` as `newsroomUrl` when set — §8). Edited from the Accounts card (`nop=account`, N2); a bare host is prefixed `https://` |
 | Notes | string | Developer's own notes |
 | Created At · Updated At · Deleted At | ISO / ISO / ISO-or-empty | Soft delete per §13 |
 
@@ -120,7 +120,7 @@ All timestamps are ISO-8601 UTC strings written by the server; dates the develop
 | Owner | email | |
 | Account ID | `a-` id | Required |
 | Contact ID | `c-` id | Optional — set when the signal names a known contact |
-| Event Slug | slug | The event the signal is about; empty for a press quote with no event |
+| Event Slug | slug | The event the signal is about; empty for a press quote with no event and for a `docket` row (E4 s2 — a regulatory filing names no event; the peer write leg accepts the empty slug for `docket` only) |
 | Kind | enum | §4 |
 | Person Name · Person Title | string | For roster / press-quote / manual signals that name someone not yet a Contact |
 | Evidence URL | URL or `corpus:<key>` | Never a LinkedIn fetch; the article `key` for press quotes |
@@ -204,8 +204,10 @@ Every peer op is a copy of `guidanceMentionsProxy_()`'s far side: the token is r
 
 ```
 → ?action=peer&t=<token>&nop=accounts&owner=<email>
-← { success:true, built:"<ISO>", accounts:[ { id:"a-…", name, slug, relationship, stage, segments:[…], tags:[…] } ] }
+← { success:true, built:"<ISO>", accounts:[ { id:"a-…", name, slug, relationship, stage, segments:[…], tags:[…], newsroomUrl? } ] }
 ```
+
+**E4 s2 (`Network.gs` v01.12g):** `newsroomUrl` rides the row **only when set** to an `https?://` value — the public "events / meet us at" page the developer typed on the Accounts card, which Events reads monthly (`EVENTS-SCHEMA.md` §8); still no contacts, no emails, no notes.
 
 Only Accounts with `Deleted At` empty and `relationship` ∈ `target` · `customer` · `partner` · `channel` are returned (the score ignores the rest). `owner` scopes the rows exactly as `resolveOwnerScope_` would for a signed-in user.
 
@@ -217,7 +219,7 @@ Only Accounts with `Deleted At` empty and `relationship` ∈ `target` · `custom
 ← { success:true, written:N, updated:M, rejected:[ { index, reason } ] }
 ```
 
-Upsert key: (`accountId`, `eventSlug`, `kind`, `evidenceUrl`) — a re-run of the weekly diff refreshes `Last Seen` instead of duplicating the row. `kind` must be in `NW_SIGNAL_KINDS`, `accountId` must exist and be live, `evidenceUrl` must not be a LinkedIn host (rejected with `reason:'linkedin_not_fetched'` — the manual path is the only LinkedIn entry). Rows are written with `Source = events`.
+Upsert key: (`accountId`, `eventSlug`, `kind`, `evidenceUrl`) — a re-run of the weekly diff refreshes `Last Seen` (and `Confidence` / `Note` when carried) instead of duplicating the row. `kind` must be in `NW_SIGNAL_KINDS`, `accountId` must exist and be live, `evidenceUrl` must not be a LinkedIn host (rejected with `reason:'linkedin_not_fetched'` — the manual path is the only LinkedIn entry). `eventSlug` must match `NW_PEER_SLUG_RE` — **or be empty when `kind = docket`** (E4 s2, `Network.gs` v01.12g: a filing names no event; an empty slug on any other kind, or a malformed slug on `docket`, is `bad_slug`). Rows are written with `Source = events`.
 
 **E4 s1 (`Network.gs` v01.11g):** a LinkedIn host is **accepted when `kind = linkedin-manual`** — Events' manual form is that entry, pasted by the developer and never fetched by either app; every other kind is still rejected. The GET read leg carries `personName` / `personTitle` when the row names a person (a speaker from a roster, a manual row) and omits the keys otherwise, so a company-level row stays ids and evidence. A **session** read exists beside the peer one: `nop=signals` (GET, after `validateSessionForData` + `nwRequire_(sess, 'signals')`) with `accountId`, or `contactId` resolved to its account → `{ success, accountId, contactId, signals:[ { id, accountId, contactId, eventSlug, kind, evidenceUrl, confidence, firstSeen, lastSeen, source, note, personName?, personTitle? } ] }`, newest `Last Seen` first — the account and contact details' one "Will be at" line (`Network.html` v01.21w); the chips with event names over Events' `eop=signals` are N4's. Audit: ids and counts only.
 
