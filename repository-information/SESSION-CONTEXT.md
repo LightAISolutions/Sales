@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 06:50 AM EST (the session ran ~06:34 → 06:50 AM EST)
+**Repo version:** v07.27r — one push on `claude/classroom-event-provenance-1gehnk` (the X decision), plus a second push for this session-context write
+**Branch:** `claude/classroom-event-provenance-1gehnk`
+**Model:** Fable 5.1 xhigh (X — the Classroom hook: **decided no**; **D16's build order is complete**)
+
+### What was done
+
+- **X decided — no** (v07.27r). Nothing built, no gate surface touched, no GAS bump, no file added. The decision is written into `NETWORK-EVENTS-DESIGN-PLAN.md` §3's D13 row and §11's X row (flipped from *Proposed — deferred behind E0 stability* to **Decided — no, v07.27r, 2026-09-23**), with the three reasons, the four reopen conditions, and what remains outside the plan
+- **Why no, in three lines:** the pre-event briefing already exists as E5's `events plan <event>` narrative (private half included; `repository-information/plans/re-plus-2026-narrative-plan.md`) and its public half is dossier material Classroom already stamps as `profile:` / `study:`; the fact with teaching value — who exhibits — is a Network `Signals` row that never crosses, `mentions[]` is not attendance, and what a registry row adds on its own is calendar, not mechanism, expiring with the edition, which a permanent `tracks` lesson (P5) cannot; the true cost of a tenth prefix is the map + mirror + `gateDigest` **plus** a G7 resolution rule (else every weekly run freezes the lesson as unknown), the committer contract's "exactly the nine prefixes", and the P11 guard in `check-classroom-pipeline.py` whose prefix tuple is hard-coded to the nine and which X may not edit — P4 would fire on the adding commit itself
+- **What would change the answer** (any one reopens X): a *series-level* evergreen lesson once E0's next verification pass fills `hours[]` (2 of 96 upcoming rows), `editions[]` and the agenda structure; a G7 resolution rule for `event:` written into `classroom-app.md` first; one applied `events sync` cycle; or the developer asking for it. `contact:` stays never
+- **The deferral condition, verified on the live file:** all 58 roster rows carry `lastProbe.at = 2026-09-21`, **but those are E0's own build-time probes** — `git log` shows `events-sources.json` written once (v06.95r) and never since, `events.json` touched only by E4 s2's manual agenda rows (v07.20r), and **no `events sync` has ever applied a diff**. The registry has stood under one poller cycle, not survived a change from one. Recorded in the X row and the CHANGELOG; it did not decide X
+- `CLASSROOM-SCHEMA.md` gained one paragraph beside the *no `note:` prefix* rule recording that there is no `event:` prefix either (declined, dated, with the pointer); `EVENTS-SCHEMA.md` §11's D13 sentence updated. The prefix table still mirrors `CL_PROVENANCE_REF_KINDS` byte for byte
+- **All six checkers passed on the untouched code** before and after: content 71 / 8 / 220 with 0 / 0, curriculum no structural findings, pipeline `--selftest` 15 / 0 (and 3 × P1 on the diff — the expected developer-commit noise, no P3 / P4), events-plan 151 / 0, registry OK, README tree 22 / 0
+
+### Where we left off
+
+**X is closed and D16's order is complete** — Gate → N0 → Q0 → N1 → N2 → E0–E1 → B → N3 → E2–E3 → E4 → N4 → E5 → X, every row Done or decided. Nothing from X is pending. **The Megmeet briefing's sequencing condition (the Network / Events build) is now met.**
+
+### What remains — outside D16's order
+
+- **Inside the ledger:** **R**, the discovery Routine — not started; its stated blocker (a scheduled Routine landing a commit) has evidence since the earnings desk's 2026-09-22 fire committed v07.16r, and the rebuilt C2 Routine's first fire today at 11:07Z is the next proof to read. The developer flips the row. **Q**, the quota review — one Fable 5.1 Medium session with a month of counter data
+- **Outside the plan:** the E0 verification pass that fills `hours[]` / `venueLatLng` / `agendaUrl` (the biggest lever left on the Plan tab — coverage 2 / 26 / 16 of 96 upcoming rows per v07.26r); a hash router in `Network.html` for the post-event `#drafts?sourceEvent=` deep link; `scripts/check-guidance-migration.js` failing on clean `origin/main` ("expected 9 modules, got 28"); the standing E4 / E5 papercuts (no booth numbers on the day plan, RE+ 2026's Swapcard roster, the ROI line written once, `pullAndDeployFromGitHub` never logging its outcome)
+
+### Key decisions made
+
+- **A reasoned no is the deliverable.** The brief said so, the developer said not to force it, and the analysis found the teaching value already delivered elsewhere at the right gate (E5's narrative, admin-only) with the only novel input (attendance) forbidden by D9 / D13
+- **The cost was measured, not taken from the brief** — three items became six (G7 rule, contract count, P11 guard), and the P11 point is decisive on its own: the one prefix the deployed-changelog leak guard cannot see would be the one X added, and X may not edit the checker
+- **The brief's evidence was checked and corrected in writing** — the `lastProbe` stamps are E0's, not the poller's. That did not change the answer but is on the record so the next reader does not inherit it
+- **Housekeeping commits take no version bump** (the reminders / session-context precedent) — only the X push bumped `repository.version.txt`, to v07.27r
+
+### Active context
+
+- **Repo version v07.27r.** `CHANGELOG.md` **`Sections: 98/100`** — **rotation becomes mandatory above 100**, two pushes away; read the live counter rather than this line
+- **Live versions unchanged:** `Classroom.gs` v01.87g · `Classroom.html` v01.16w · `Events.html` v01.11w · `Events.gs` v01.09g · `Network.html` v01.24w · `Network.gs` v01.17g · `Scraper.gs` v02.22g. **No `.gs` changed this session — no redeploy needed**
+- **The Routine fleet is six, all enabled** (verified last session): the C2 Classroom weekly `0 11 * * 3` **fired today at 11:07Z — its report is the first of the rebuilt Routine and worth reading**; Profiler earnings desk weekdays; Profiler quarterly and monthly drift (next 2026-10-01); Industry Guidance quarterly (next 2026-10-15); ACL health daily
+- **One reminder remains active** — the **Megmeet SST briefing** before the 2026-10-07 start; its sequencing condition is now met, so it is the next thing to run, in a **new Opus 5 xhigh session** per the reminder
+- **Playwright is not preinstalled in a fresh container** — `pip install playwright` only; the Chromium is already there, never run `playwright install`
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run the **Megmeet SST briefing** from the active reminder in a **new Opus 5 xhigh session** — X closing D16's order was its sequencing condition, the 2026-10-07 start date is two weeks out, and it is the one deliverable with an external deadline; run its two pre-flight checks (dossier freshness on the scoped slugs, whether the monthly drift check superseded `aidc-power-conversion--competitive--2026-09-08`) before the research.
+- **To continue:** type `run the Megmeet briefing`
+
+
+## Previous Sessions
+
+### Session — 2026-09-23 06:30 AM EST (Events filter-pill fix + reminder close-out, v07.26r)
+
 **Date:** 2026-09-23 06:30 AM EST (the session ran ~05:50 → 06:30 AM EST)
 **Repo version:** v07.26r — three pushes on `claude/gracious-archimedes-57nfn5` (the Events filter-pill fix; the reminder close-out; this session-context write)
 **Branch:** `claude/gracious-archimedes-57nfn5`
@@ -61,61 +110,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run **X** with the §13.19 paste-in prompt on Fable 5.1 xhigh — it is D16's last row, its deferral condition is met, and closing it also clears the Megmeet briefing's sequencing condition with two weeks of slack before the 2026-10-07 start date.
 - **To continue:** type `run X from §13.19`
 
-
-
-## Previous Sessions
-
-### Session — 2026-09-23 03:15 AM EST (E5 session 2, v07.25r)
-
-
-**Date:** 2026-09-23 03:15 AM EST (the session ran ~02:40 → 03:15 AM EST)
-**Repo version:** v07.25r — one push on `claude/compassionate-ritchie-q8bgj1` (E5 session 2), plus a second push for this session-context write and the X brief
-**Branch:** `claude/compassionate-ritchie-q8bgj1`
-**Model:** Opus 5 (E5 session 2 — the post-event checklist, the ROI line and the `events plan` command; **E5 is Done**)
-
-### What was done
-
-- **E5 session 2 landed, closing E5** (`Network.gs` v01.17g · `Events.gs` v01.09g · `Events.html` v01.10w; §11's E5 row → **Done**; §13.19 written — the X brief with its paste-in prompt):
-  - `Network.gs`: `nop=interaction`'s read leg widened with **`eventSlug=`** — the live contacts whose `Source Event` is the slug (with `accountName`, the account's `stage` at read time and **one** `mailable` boolean instead of the two consent columns) and the `meeting` Interactions on the slug, each carrying an inferred `held` (a later `note` / `email-out` on the same contact within 14 days) and the developer's explicit `mark`. Both derived on Network's side — a boolean and a three-value word are strictly less data than the rows behind them. Mark rows are excluded from the touches that feed the inference, or a "not held" mark would read as a later touch and invert itself. `NW_PEER_INTERACTION_KINDS` gained `note` for the mark write; the two mark phrases are mirrored byte for byte in `Events.gs` and the mirror is asserted
-  - `Events.gs`: `eop=postevent` (the checklist + the ROI line written **once** into the event's `Plans` row; `not_over` before the day after `end`; the booth accounts from the score run once with the past slug's signals kept via a new `extraSlug` argument — no dossier read, no agenda, no Overpass), `eop=posteventmark` (the verdict as a `note` Interaction with the `mt-` id as evidence; an explicit mark beats the inference both ways; refreshes the row over one read-leg call, never a second score), `eop=plannarrative` (the Drive URL onto the row; the audit carries a flag, never the URL), and the score's seventh term **`priorRoi`** — `min(1, (cards + 3·held + 5·moves) / 40)` from an earlier edition of the same series, seeded at 0.05
-  - `Events.html`: the **Post-event** section at the top of the Plan tab once today > `end`, with Mark held / not held per meeting, the follow-up link, the ROI line as recorded, a Narrative link field, and **Copy plan as JSON**
-  - The **`events plan <event>` command rule** in `.claude/rules/events-app.md` + its CLAUDE.md pointer, and the **first narrative plan** for **RE+ 2026** at `repository-information/plans/re-plus-2026-narrative-plan.md` and in the developer's Drive
-- **A real bug caught by a sibling harness**: the new past-slug filter kept rows with an **empty** event slug (a docket, a press quote) when no extra slug was named. `check-events-signals.js` failed on it; fixed with an explicit guard and an assertion added
-- `scripts/check-events-plan.js` **100 → 151 checks**; `verify-events-roles.py` gained a post-event pass (screenshot `events-postevent.png`, 390×844, zero page errors); `check-events-score.js` / `check-events-signals.js` updated for the seventh term; `check-network-schema.py`'s audit allow-list gained two count keys
-- `EVENTS-SCHEMA.md` §5 / §6 / §8 / §10 and `NETWORK-SCHEMA.md` §8 updated; CHANGELOG `Sections: 96/100`
-
-### Where we left off
-
-**The developer's live check is next** (reported, not asserted): redeploy Events (`v01.09g`) and Network (`v01.17g`), open a **past** starred event's Plan tab, read the checklist and the ROI line, mark one meeting held and find the note on that contact in Network, then press **Copy plan as JSON** and paste it back with `events plan <slug>` for a real narrative plan (the RE+ one was written from the public half only). **Then X** with the §13.19 paste-in prompt — Fable 5.1 xhigh, decide before building.
-
-### Open findings carried forward
-
-- **`Network.html` has no hash router**, so the checklist's `Network.html#drafts?sourceEvent=<slug>` deep link opens the app without pre-filtering. The page says so beside the link; a small Network-side route would close it — left out rather than widen this session into `Network.html`
-- **The four live-state brackets in the §13.18 prompt were pasted unfilled**, so E5 session 1's live check remains unconfirmed by a session. This is now the second prompt in a row where that happened
-- **`scripts/check-guidance-migration.js` fails on clean `origin/main`** ("expected 9 modules, got 28") — pre-existing, unrelated to this session, and nobody has picked it up
-- `check-classroom-pipeline.py` reports P1 findings against any non-Classroom diff; by its own docstring it is "the judge a C2 pipeline run is held to", so that is correct behaviour and not a defect
-- The ROI line is **written once** and only a *mark* refreshes it — cards scanned after the first close-out open never raise the recorded `cards`. Faithful to the brief; worth revisiting if it bites
-- Carried from E5 s1: no booth numbers on the day plan (an E4 parser follow-up); only two registry rows carry `hours[]`; a plan build costs the full score and the close-out costs another
-- From E4: RE+ 2026's roster is a Swapcard widget (`no_roster_found`); GlobeNewswire's feed unverified until a live sweep is read
-- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
-
-### Key decisions made
-
-- **`lost` is not a stage move** although `NW_STAGES` orders it past `prospecting` — a terminal negative would let a show that produced only losses read as productive in next year's prior. `EV_ROI_STAGES_MOVED` is an explicit list and the departure is documented in `EVENTS-SCHEMA.md` §6
-- **`held` and `mark` are computed on Network's side**, not shipped as rows — the minimum-necessary reading of D9, and the only way the checklist counts cards *and* meetings without a second op
-- **Copy plan as JSON sits in the plan head as well as the Post-event section.** The brief placed it only in the close-out, but the narrative plan is most use *before* a show — and the brief's own step 4 asks for a plan for RE+ 2026, which is upcoming and has no Post-event section
-- **Network's audit rows stay counts-only** — the slug was dropped from `peer_interaction_event_read` to match the app's own convention; the Events side already audits it
-- The narrative plan was written from the **public half** because no JSON was pasted, and says so throughout rather than guessing at booths
-
-### Active context
-
-- **Repo version v07.25r.** `CHANGELOG.md` `Sections: 96/100` — no rotation due until 100
-- **Live versions:** `Events.html` v01.10w · `Events.gs` v01.09g · `Network.html` v01.24w · `Network.gs` v01.17g · `Scraper.gs` v02.22g
-- **D13's deferral condition is met** — all 58 rows of `events-sources.json` carry a `lastProbe` dated 2026-09-21, so X is runnable
-- **Reminders still open** (developer's own — untouched): close out "Repo access denied" and rebuild the committing Routines (**C2 fires today, Wed 2026-09-23 04:00 PDT**); the Megmeet briefing before 2026-10-07 — **the Network/Events build is now down to X, so its sequencing condition is nearly met**
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **X** with the §13.19 paste-in prompt on Fable 5.1 xhigh — it is D16's last row, it is a decision before it is a build, and a reasoned "no" closes it just as completely as a build does.
-- **To continue:** type `run X from §13.19`
+Developed by: LightAISolutions
