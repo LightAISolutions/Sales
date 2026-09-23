@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 07:35 AM EST (the session ran ~07:15 → 07:35 AM EST)
+**Repo version:** v07.28r — one push on `claude/busy-hawking-cfdvqk` (the v2 briefing plan), plus a second push for this session-context write
+**Branch:** `claude/busy-hawking-cfdvqk`
+**Model:** Fable 5.1 (a **planning** session — nothing was built or researched beyond the plan itself)
+
+### What was done
+
+- **The Megmeet SST briefing plan was rewritten as v2** (v07.28r) at `repository-information/megmeet-briefing-prompt.md` (110 → 383 lines). The developer widened the deferred v1 scope to: the SST in its entirety (term system, lineage and adjacent technologies), the 800 V DC value case from every player's perspective, limitations and who is working them, **who is testing at which service voltage (34.5 kV vs 12.47/13.8 kV)**, the adoption obstacles including **operation and maintenance**, Megmeet against its competitors on SST **and** in its six adjacent business units, what NVIDIA's and Oracle's engineering programmes will ask (the developer's "Megmeet is talking to their engineers" is **unverified hearsay** — the plan rules it may steer emphasis and is never stated or cited), figures/tables/timelines throughout, interactive widgets, and one downloadable PDF — all as an **overnight unattended run** in one new session
+- **The corpus finding that shaped everything:** a 20,000-word, 14-figure SST primer already exists (`SOLID-STATE-TRANSFORMERS-PRIMER.pdf` / `sst-primer-print.html`, v05.36r–v05.38r, 2026-09-12) with its own matplotlib figure script and Chromium-CDP PDF script. The plan **extends it and cites its figure numbers** rather than rebuilding it. Its thin spot is O&M (one mention of maintenance); its watch-list of 12 September is the first thing the run updates
+- **Pre-flight run today, results in §0:** `profiler-queue.py --quarterly --tier core` → `dueCount: 0`; the SST four at v1/v2 dated 2026-09-12 → 09-19; Megmeet v7 (2026-09-08); Oracle v5 (2026-09-21) and NVIDIA v10 carry **no SST content** (that material is in the NVIDIA guidance module and the primer); `aidc-power-conversion--competitive--2026-09-08` still `current`; **Megmeet's own SST discloses no voltage class anywhere**; matplotlib and Playwright absent from a fresh container; CHANGELOG counter one push from rotation
+- **§2 the ask-by-ask delta** (ten rows: covered where / missing what / corpus or web) · **§3 deliverables** — D1 a Profiler competitive report on the SST hall-edge contest (dossiers-only, builds on and does not supersede the 2026-09-08 edition); D2 `study-prep/megmeet/MEGMEET-SST-BRIEFING.pdf` from print HTML on the primer's skin (`mmsst-fig-` figures, copies of the primer's two build scripts); D3 `megmeet-sst-briefing-companion.html` with seven prioritised widgets (ship ≥5), Playwright-tested from `file://`; a shared `megmeet-sst-briefing-data.json` as the single source for every plotted number; the brief's five-part table of contents and minimum figure set
+- **§4 the model recommendation — Opus 5 `xhigh`, one session, subagents on the same model.** Reasons: the repo's Xcel head-to-head (Opus deeper on long first-party documents; judgments inconclusive; Fable narrowly ahead only on sourcing discipline — which the citation-tier rule and the rubric enforce model-independently); half Fable's price and none of the Fable weekly sub-allocation; `xhigh` is the level the repo's Opus evidence was built at; `max` buys nothing the checkers do not; overnight makes latency free. Set aside with reasons: Fable 5.1, Sonnet 5 (offered only as the Phase B subagent cost lever), Opus 5.5, `max`, a two-session split. Estimate stated as judgment: 3–5 hours, ~4–6× v1's spend (~$120–250 API-equivalent)
+- **§5 the run:** phases 0 (pre-flight) · A (corpus read into two scratchpad ledgers) · B (five bounded web subagents: pilots by kV class; obstacles/O&M/standards/policy; NVIDIA + Oracle programmes; adjacent-BU competitors; Megmeet's own SST) · C (D1, **push 1**) · D (data → figures → brief chapter by chapter → PDF with proof PNGs, **push 2**) · E (companion) · F (a fresh subagent audits the PDF against a **twelve-line rubric**, fixes, README tree, CHANGELOG, remember session, **push 3**); failure handling decided in advance
+- **§6 the paste-in prompt** (also handed over in chat at 07:30), **§7 a resume prompt** for a dead container, **§8 the developer's night-of checklist**
+- Housekeeping: v07.28r CHANGELOG section (counter **99/100**), README timestamp and tree description; **`REMINDERS.md` untouched** (developer-owned — its v1 budget line "~35–50 minutes and ~$25–40" is now superseded by §4)
+
+### Where we left off
+
+**The plan is on `main`; the briefing itself has NOT been run.** The developer has the prompt (chat, and §6 of the plan file) and the model/effort recommendation. The next action is theirs: a **new session on Claude Opus 5 at `xhigh`**, paste §6, walk away for 3–5 hours. Nothing from this session is pending.
+
+### Key decisions made
+
+- **Extend the primer, do not rebuild it** — the brief summarises each primer chapter in a page and cites its figures; new figures only where the primer has none
+- **HTML-first PDF** on the primer's skin, not the Markdown study-prep renderer (`build-study-prep-pdf.mjs` has no image support) — and **not Classroom** (personal job context is not public-safe, and the C2 gate surface is the wrong cost for a one-off study document)
+- **Everything personal stays under `repository-information/study-prep/megmeet/`**; only D1 is public Pages data and it is dossiers-only by construction. The existing interview brief, lesson plan and study guide are **not edited** — the brief lists what dossier v7 now contradicts in them
+- **One data file feeds both the figures and the widgets**, byte-identical, so they cannot drift
+- **Three checkpoint pushes** so a container dying at 3 AM loses at most one phase (allowed: each push after the prior one has merged)
+- **Opus 5 over Fable 5.1** for an unattended run; **`xhigh` over `max` and `high`**; Sonnet 5 only as an optional subagent lever
+- **The hearsay rule** for the NVIDIA/Oracle chapter mirrors the Report Command's field-notes rule: steers emphasis, never stated, never cited
+
+### Active context
+
+- **Repo version v07.28r.** `CHANGELOG.md` **`Sections: 99/100`** — **archive rotation falls due on the next push that takes the counter to 100** (changelogs.md: "reaches 100"), i.e. the overnight run's first push unless another push comes first; unshallow first, SHA enrichment mandatory
+- **Live versions unchanged:** `Classroom.gs` v01.87g · `Classroom.html` v01.16w · `Events.html` v01.11w · `Events.gs` v01.09g · `Network.html` v01.24w · `Network.gs` v01.17g · `Scraper.gs` v02.22g · `Profiler.html` v01.91w. **No `.gs` changed — no redeploy needed**
+- **The Routine fleet is six, all enabled** (verified 2026-09-23 06:06); the rebuilt C2 Classroom weekly fired today at 11:07Z — **its first report has not been read**
+- **One reminder remains active** — the Megmeet SST briefing before Wednesday 2026-10-07. Sequencing condition met (X closed D16 at v07.27r); pre-flight done today; the plan is v2
+- **Toolchain in a fresh container:** Node 22 and Chromium (`/opt/pw-browsers`) present; **`pip install matplotlib playwright` needed** — never `playwright install`
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Start a **new session on Claude Opus 5 at effort `xhigh`** and paste §6 of `repository-information/megmeet-briefing-prompt.md` — the plan is complete, the corpus is fresh as of today, and the 2026-10-07 start date leaves two weeks for a second pass if the Phase F audit turns up gaps. Check the usage meter first; if the run happens after 2026-10-01, glance at `reports/reports-index.json` for a newer AIDC power-conversion edition.
+- **To continue:** type `run the Megmeet briefing from §6 of megmeet-briefing-prompt.md`
+
+
+## Previous Sessions
+
+### Session — 2026-09-23 06:50 AM EST (X decided no — D16 complete, v07.27r)
+
 **Date:** 2026-09-23 06:50 AM EST (the session ran ~06:34 → 06:50 AM EST)
 **Repo version:** v07.27r — one push on `claude/classroom-event-provenance-1gehnk` (the X decision), plus a second push for this session-context write
 **Branch:** `claude/classroom-event-provenance-1gehnk`
@@ -49,65 +98,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - Run the **Megmeet SST briefing** from the active reminder in a **new Opus 5 xhigh session** — X closing D16's order was its sequencing condition, the 2026-10-07 start date is two weeks out, and it is the one deliverable with an external deadline; run its two pre-flight checks (dossier freshness on the scoped slugs, whether the monthly drift check superseded `aidc-power-conversion--competitive--2026-09-08`) before the research.
 - **To continue:** type `run the Megmeet briefing`
-
-
-## Previous Sessions
-
-### Session — 2026-09-23 06:30 AM EST (Events filter-pill fix + reminder close-out, v07.26r)
-
-**Date:** 2026-09-23 06:30 AM EST (the session ran ~05:50 → 06:30 AM EST)
-**Repo version:** v07.26r — three pushes on `claude/gracious-archimedes-57nfn5` (the Events filter-pill fix; the reminder close-out; this session-context write)
-**Branch:** `claude/gracious-archimedes-57nfn5`
-**Model:** Opus 5 (a short maintenance session between E5 and X — **no design-plan row moved**)
-
-### What was done
-
-- **The Events filter pills now paint the state they filter on** (`Events.html` v01.10w → **v01.11w**, v07.26r). The developer reported that **★ Starred** filtered the agenda but stayed unfilled. Root cause: `evRender()` rebuilds `#ev-agenda` and `#ev-counts` but **deliberately leaves the filters card alone** — rebuilding it would drop the segment row's horizontal scroll position and the `data-busy` flag an in-flight score fetch sets — and `aria-pressed` is the whole of what paints a pill accent-filled (`.ev-pill[aria-pressed="true"]`). E3's **Recommended** and E4's **Signals only** each set their own pill by hand inside their toggle and so looked right; **Starred** and the three option rows never got that treatment and went on filtering while reading `false`
-  - New **`evSyncPills()` / `evSyncPillRow()`** re-derive every filter pill's `aria-pressed` from `_evFilters` / `_evRecMode` **in place**, called at the top of `evRender()`. The two hand-set calls in `evRecToggle` / `evSignalsToggle` **stay** — they are the immediate feedback before their fetch returns and the rollback on a failed one, not duplication
-  - **A second, latent bug from the same root cause**: `evPillRow()` captured `current` at build time, and since the card is built once that snapshot never moved — so pressing an option pill a second time **re-picked** the same value instead of clearing it, and only **All** could undo a choice. The row now takes the `_evFilters` **key** and reads the live value for both the pressed state and the un-toggle; each pill carries `data-ev-val` for the sync to match on. Fixed in the same commit because the new blue fill would otherwise have made a dead second press visible
-- **`scripts/verify-events-roles.py` gained a filter-pill pass** (+43 lines, after the star round-trip): Starred presses to `aria-pressed="true"` with a **computed background that differs from an untouched pill's** and the agenda down to the one starred row, presses again to clear; a Kind pill paints pressed with `_evFilters.kind` agreeing with its `data-ev-val`, and a second press clears it back to All. The assertion is on the **paint**, not the attribute alone. **Verified both ways** — with `evSyncPills()` commented out it fails with `pressed: 'false'`, the untouched background and `rows: 1` (the reported symptom exactly) and passes with it restored
-- **The Plan-tab screenshots were diagnosed, not fixed** — see "Open findings"
-- **The "Repo access denied" reminder was closed out** at the developer's explicit dismissal: moved to `## Completed Reminders` with a `2026-09-23 06:06:46 AM EST` completion stamp. The Routine fleet was **listed and verified against the reminder's plan before the entry moved**, and the evidence written into the completed entry
-
-### Where we left off
-
-**Both of the developer's items are closed and all three pushes merged.** The developer confirmed live that the Starred pill now fills blue. **Next is X** — D16's last row — with the §13.19 paste-in prompt; it is a decision before it is a build, and a reasoned "no" closes it as completely as a build does. Nothing from this session is pending.
-
-### Open findings carried forward
-
-- **The registry is thin, and that is what the Plan tab was showing.** Both events the developer screenshotted (`acp-recharge-2026`, `ocp-global-summit-2026`) read `0 booths · 0 sessions · 0 venues` because **neither row carries `venueLatLng`, `agendaUrl` or `hours[]`** and no Network signal names either slug. Coverage across the **96 upcoming rows: `venueLatLng` 26, `agendaUrl` 16, `hours[]` 2** (also `venue` 31, `exhibitorListUrl` 13, `speakersUrl` 10, `floorPlanUrl` 3). Every empty line names the input it is missing, so the tab renders a thin row faithfully rather than failing — **no code change**; the counts are recorded in CHANGELOG v07.26r under **Notes** so the next enrichment pass has them. This is an **E0/E4 parser pass**, the single biggest lever left on the Plan tab's usefulness
-- **A dossier mention is not an attendance signal.** `ocp-global-summit-2026` carries nine Profiler `mentions[]` (amd, amperesand, flex, heron-power, megmeet, nvidia, vicor) and still lists no booths: `evPlanBooths_` reads only `rec.signalsBySlug[slug]`, i.e. Network signals. Behaving as designed under D9 / D16 — recorded because it reads as a bug and is not
-- **E5's live check is now confirmed by the screenshots** — the Plan tab renders, the day plan frames each day, the open slots and **Book a meeting** are present, and ACP RECHARGE (Sep 22–24, today Sep 23) correctly shows **no Post-event section** because `not_over` holds until the day after `end`. The §13.18 brackets were never filled, but the tab has now been seen working
-- **`Network.html` has no hash router**, so the post-event checklist's `Network.html#drafts?sourceEvent=<slug>` deep link opens the app without pre-filtering (the page says so beside the link)
-- **`scripts/check-guidance-migration.js` fails on clean `origin/main`** ("expected 9 modules, got 28") — pre-existing, unrelated, still unpicked-up
-- `check-classroom-pipeline.py` reports P1 findings against any non-Classroom diff — correct behaviour by its own docstring, not a defect
-- The ROI line is **written once**; only a *mark* refreshes it — cards scanned after the first close-out never raise the recorded `cards`
-- From E5 s1: no booth numbers on the day plan (an E4 parser follow-up); a plan build costs the full score and the close-out costs another
-- From E4: RE+ 2026's roster is a Swapcard widget (`no_roster_found`); GlobeNewswire's feed unverified until a live sweep is read
-- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
-
-### Key decisions made
-
-- **Fixed the root cause, not the reported symptom.** Copying the hand-set `aria-pressed` onto the Starred pill would have closed the ticket and left Kind / Region / Segment broken plus a fourth hand-maintained copy of the same logic. One `evSyncPills()` called from `evRender()` covers all five controls from one source of truth
-- **The two hand-set calls were kept** (Chesterton's Fence): they are not redundant with the sync — they paint the pill *before* the async score fetch returns, and un-paint it when the fetch fails
-- **The un-toggle bug was fixed in the same commit** even though it was not reported: with the pill now visibly filled, a dead second press would have become a *new* visible defect
-- **The harness asserts the computed background, not `aria-pressed` alone** — the attribute is only a proxy for what the developer sees, and the pre-existing coverage gap was exactly that only `ev-f-rec` and `ev-f-signals` were ever asserted (which is why those two never drifted)
-- **The reminder was moved to `## Completed Reminders`, not deleted** — the repo's documented form for a dismissal, which keeps the trail; the developer was told and can ask for a hard delete
-- **Housekeeping commits take no version bump** (the reminders / session-context precedent): only the Events fix bumped `repository.version.txt`, to v07.26r
-
-### Active context
-
-- **Repo version v07.26r.** `CHANGELOG.md` **`Sections: 97/100`** — **rotation becomes mandatory above 100**, so it is roughly three pushes away; read the live counter rather than this line
-- **Live versions:** `Events.html` **v01.11w** · `Events.gs` v01.09g · `Network.html` v01.24w · `Network.gs` v01.17g · `Scraper.gs` v02.22g. **No `.gs` changed this session — no redeploy needed**
-- **The Routine fleet is six, all enabled, and was verified this session**: `trig_01TiCXzEjowZGbS7aB2e6gQS` Classroom C2 weekly `0 11 * * 3` (**fires 2026-09-23 11:07Z — first fire of the rebuilt Routine, its report is worth reading**); `trig_01HkrwpCULei8Gje6RGqcp1B` Profiler earnings desk weekdays (ran SUCCEEDED 2026-09-22); `trig_01FB8gN2Lb1cKqqq2rpnxJez` Profiler quarterly and `trig_01NCMufdiV7WcsXodUoimi7H` Profiler monthly drift, both next 2026-10-01; `trig_014KXj2GeUt9b46ycfZnffkj` Industry Guidance quarterly, next 2026-10-15; `trig_01GeTqB8xp5nG8FCC139Bgr9` ACL health daily (read-only, not rebuilt by design). The old desk `trig_01UyH77BMKJnxzBUZJ11ej6A` is **deleted**
-- **One reminder remains active** — the **Megmeet SST briefing** before 2026-10-07. Its sequencing condition is the Network/Events build, which is **down to X alone**, so running X clears the last gate on the one deliverable with an external deadline
-- **D13's deferral condition is still met** — all 58 rows of `events-sources.json` carry a `lastProbe` of 2026-09-21, so X is runnable
-- **Playwright is not preinstalled in a fresh container** — `pip install playwright` only; the Chromium is already there, never run `playwright install`
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run **X** with the §13.19 paste-in prompt on Fable 5.1 xhigh — it is D16's last row, its deferral condition is met, and closing it also clears the Megmeet briefing's sequencing condition with two weeks of slack before the 2026-10-07 start date.
-- **To continue:** type `run X from §13.19`
 
 Developed by: LightAISolutions
