@@ -193,12 +193,44 @@ def plan_stub(slug, meetings):
             'venuesCached': False, 'venuesError': '', 'meetings': [dict((k, m[k]) for k in m if k != 'slug') | {'accountName': 'Stub Account Co'} for m in meetings]}
 
 
+# E5 s2 — the close-out of a show that is over. One booked meeting so Mark
+# held / not held can be exercised without depending on the plan pass's
+# booking; `post` carries the marks and the narrative link across requests.
+POST_SLUG = 'naatbatt-annual-2026'
+POST_MEETING_ID = 'mt-0000000000077'
+
+
+def postevent_stub(slug, post):
+    reg = json.loads((LIVE / 'events-data' / 'events.json').read_text(encoding='utf-8'))
+    e = next((x for x in reg['events'] if x['slug'] == slug), None) or {}
+    day = e.get('start') or '2026-02-09'
+    mark = post['marks'].get(POST_MEETING_ID, '')
+    m = {'id': POST_MEETING_ID, 'contactId': 'c-0000000000001', 'accountId': 'a-0000000000001',
+         'start': day + 'T11:00', 'end': day + 'T11:30', 'place': 'Hall B cafe', 'interactionId': 'i-0000000000077',
+         'contactName': 'Jane Doe', 'accountName': 'Stub Account Co', 'mark': mark, 'inferred': False,
+         'held': mark if mark else 'unconfirmed'}
+    held = 1 if m['held'] == 'yes' else 0
+    moves = [{'id': 'a-0000000000001', 'name': 'Stub Account Co', 'stage': 'shortlist'}]
+    return {'success': True, 'slug': slug, 'built': '2026-09-23T00:00:00.000Z', 'today': '2026-09-23',
+            'event': {'name': e.get('name', slug), 'start': day, 'end': e.get('end') or day, 'tz': e.get('tz', ''), 'city': e.get('city', ''), 'series': e.get('series', '')},
+            'attending': 'attended', 'notConfigured': False,
+            'checklist': {'cards': 3, 'meetingsBooked': 1, 'meetingsHeld': held, 'meetingsUnconfirmed': 1 - held,
+                          'followUp': {'count': 2, 'href': 'Network.html#drafts?sourceEvent=' + slug}},
+            'cards': [{'id': 'c-000000000000%d' % i, 'name': n, 'title': 'Buyer', 'role': 'peer', 'accountId': 'a-0000000000001',
+                       'accountName': 'Stub Account Co', 'stage': 'shortlist', 'mailable': i < 3}
+                      for i, n in enumerate(['Jane Doe', 'Sam Park', 'Kit Ray'], start=1)],
+            'meetings': [m], 'boothAccounts': 5, 'stageMoves': moves,
+            'roi': {'cards': 3, 'meetingsBooked': 1, 'meetingsHeld': held, 'stageMoves': 1},
+            'plan': {'id': 'pl-0000000000077', 'day': '2026-09-23', 'recordedAt': '2026-09-23T00:00:00.000Z',
+                     'narrativeLink': post['link'], 'written': False}}
+
+
 POLLS_STUB = [{'sourceKey': 'ai-infra-summit', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 2, 'newest': '2027-09-14'},
               {'sourceKey': 'clarion-powergen', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 1, 'newest': '2027-01-25'},
               {'sourceKey': 'esig-events', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '403', 'items': 0, 'newest': ''}]
 
 
-def gas_stub(role, counter, stars, proposed=None, signals=None, meetings=None):
+def gas_stub(role, counter, stars, proposed=None, signals=None, meetings=None, post=None):
     """Stand in for the deployed Events GAS: records every data request as
     'events:<eop>' and answers the four Stars ops the way handleEventsOp_ /
     evStarOp_ do for the tier, against an in-memory Stars set so a star
@@ -208,6 +240,7 @@ def gas_stub(role, counter, stars, proposed=None, signals=None, meetings=None):
     proposed = [] if proposed is None else proposed
     signals = [] if signals is None else signals     # E4: every eop=signal write the page sends
     meetings = [] if meetings is None else meetings  # E5: the booked meetings (planmeeting appends, planunbook removes)
+    post = {'marks': {}, 'link': ''} if post is None else post   # E5 s2: the close-out's marks and narrative link
     def params_of(request):
         q = dict(parse_qsl(urlparse(request.url).query))
         if request.method == 'POST' and request.post_data:
@@ -300,6 +333,18 @@ def gas_stub(role, counter, stars, proposed=None, signals=None, meetings=None):
                 gone = [m for m in meetings if m['id'] == p.get('id', '')]
                 meetings[:] = [m for m in meetings if m['id'] != p.get('id', '')]
                 body = {'success': bool(gone), 'removed': bool(gone), 'id': p.get('id', ''), 'interactionId': gone[0]['interactionId'] if gone else ''} if gone else {'success': False, 'error': 'not_found'}
+            # E5 session 2 — the close-out: the checklist, a mark, the narrative link
+            elif eop == 'postevent':
+                body = postevent_stub(p.get('slug', ''), post)
+            elif eop == 'posteventmark':
+                post['marks'][p.get('id', '')] = p.get('held', '')
+                fresh = postevent_stub(POST_SLUG, post)
+                body = {'success': True, 'id': p.get('id', ''), 'slug': POST_SLUG, 'held': p.get('held', ''),
+                        'interactionId': 'i-0000000000078', 'notConfigured': False,
+                        'meetingsHeld': fresh['checklist']['meetingsHeld'], 'meetings': fresh['meetings'], 'roi': fresh['roi']}
+            elif eop == 'plannarrative':
+                post['link'] = p.get('link', '')
+                body = {'success': True, 'slug': p.get('slug', ''), 'planId': 'pl-0000000000077', 'link': post['link']}
             elif eop == 'signalsnow':
                 body = {'success': True, 'ranAt': '2026-09-22T07:10:00.000Z', 'owners': 1, 'events': 3, 'starred': 1, 'ranked': 2, 'pages': 4, 'pagesFailed': 1,
                         'feeds': [{'key': 'prnewswire', 'status': 200, 'items': 20}, {'key': 'businesswire', 'status': 200, 'items': 812}, {'key': 'globenewswire', 'status': 0, 'error': 'fetch_failed', 'items': 0}],
@@ -363,11 +408,11 @@ def probe(page):
     }""")
 
 
-def load_as(browser, base, role, query='', stars=None, proposed=None, signals=None, meetings=None):
+def load_as(browser, base, role, query='', stars=None, proposed=None, signals=None, meetings=None, post=None):
     counter, errors, registry = [], [], []
     stars = {} if stars is None else stars
     ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True, accept_downloads=True)
-    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars, proposed, signals, meetings))
+    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars, proposed, signals, meetings, post))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
     ctx.add_init_script(seed_script(role))
     page = ctx.new_page()
@@ -996,6 +1041,92 @@ def plan_pass(page, reqs, meetings, failures):
     page.wait_for_timeout(200)
 
 
+def postevent_pass(page, reqs, post, failures):
+    """E5 session 2 — the Post-event section at the top of a past show's Plan
+    tab at phone width: one eop=postevent on first open, the four checklist
+    lines, the follow-up deep link into Network's drafts flow, the ROI line
+    as recorded, Mark held → eop=posteventmark and the state repainted, the
+    narrative link saved through eop=plannarrative, and Copy plan as JSON
+    parsing back to an object carrying both the plan and the close-out.
+    Screenshot: events-postevent.png."""
+    tag = 'postevent'
+    page.keyboard.press('Escape')
+    page.wait_for_timeout(200)
+    page.evaluate("(slug) => { _evStars[slug] = { id: 'st-0000000000077', slug: slug, attending: 'attended', note: '' }; delete _evPlans[slug]; delete _evPost[slug]; evOpenSheet(slug); }", POST_SLUG)
+    page.wait_for_timeout(300)
+    if not page.evaluate("() => !!document.getElementById('ev-sheet-tab-plan')"):
+        failures.append('%s: the Plan tab is missing on a past show\'s sheet' % tag); return
+    before = len([r for r in reqs if r == 'events:postevent'])
+    page.click('#ev-sheet-tab-plan')
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-post-list li').length === 4 && !!document.getElementById('ev-post-roi')", timeout=8000)
+    except Exception:
+        failures.append('%s: the Post-event section did not paint (%s)' % (tag, page.evaluate("() => (document.getElementById('ev-post') || {}).textContent || 'no section'")[:160])); return
+    if len([r for r in reqs if r == 'events:postevent']) - before != 1:
+        failures.append('%s: the close-out was fetched %d times on one open — it is fetched once and never polled' % (tag, len([r for r in reqs if r == 'events:postevent']) - before))
+    got = page.evaluate("""() => ({
+        lines: [...document.querySelectorAll('#ev-post-list li')].map(li => li.textContent.trim()),
+        roi: (document.getElementById('ev-post-roi') || {}).textContent || '',
+        follow: (document.getElementById('ev-post-followup') || {}).getAttribute('href') || '',
+        meets: document.querySelectorAll('#ev-post-meets .ev-post-meet').length,
+        chip: (document.querySelector('#ev-post-meets .ev-post-meet .ev-badge') || {}).textContent || '',
+        marks: document.querySelectorAll('#ev-post-meets .ev-post-marks button').length,
+        before: !!document.getElementById('ev-plan-booths')
+      })""")
+    if '3 cards scanned' not in got['lines'][0]:
+        failures.append('%s: the cards line reads %r' % (tag, got['lines'][0]))
+    if '1 meeting booked' not in got['lines'][1] or '0 held' not in got['lines'][1]:
+        failures.append('%s: the meetings line reads %r' % (tag, got['lines'][1]))
+    if '2 contacts' not in got['lines'][2]:
+        failures.append('%s: the follow-up line counts the wrong number of mailable contacts (%r)' % (tag, got['lines'][2]))
+    if got['follow'] != 'Network.html#drafts?sourceEvent=' + POST_SLUG:
+        failures.append('%s: the follow-up deep link is %r' % (tag, got['follow']))
+    if 'past prospecting' not in got['lines'][3] or 'Stub Account Co' not in got['lines'][3]:
+        failures.append('%s: the stage-move line reads %r' % (tag, got['lines'][3]))
+    if '3 cards' not in got['roi'] or '1 stage move' not in got['roi'] or 'Recorded' not in got['roi']:
+        failures.append('%s: the ROI line reads %r' % (tag, got['roi'][:140]))
+    if got['meets'] != 1 or got['chip'] != 'unconfirmed' or got['marks'] != 2:
+        failures.append('%s: the meeting row is %r' % (tag, got))
+    if not got['before']:
+        failures.append('%s: the booth list is missing — the close-out replaced the plan instead of sitting above it' % tag)
+    # Mark held → the op, the repaint, the ROI line following it
+    page.click("#ev-post-meets .ev-post-meet .ev-post-marks button[data-mark='yes']")
+    try:
+        page.wait_for_function("() => (document.querySelector('#ev-post-meets .ev-post-meet .ev-badge') || {}).textContent === 'held'", timeout=6000)
+    except Exception:
+        failures.append('%s: Mark held did not repaint the meeting' % tag)
+    if 'events:posteventmark' not in reqs or post['marks'].get(POST_MEETING_ID) != 'yes':
+        failures.append('%s: eop=posteventmark did not reach the stub (%r)' % (tag, post['marks']))
+    if '1 held' not in page.evaluate("() => (document.getElementById('ev-post-roi') || {}).textContent || ''"):
+        failures.append('%s: the recorded ROI line did not follow the mark' % tag)
+    # the narrative link
+    page.fill('#ev-post-link', 'https://drive.google.com/file/d/stub/view')
+    page.click('#ev-post-savelink')
+    try:
+        page.wait_for_function("() => /Saved on the plan/.test((document.getElementById('ev-post-narrstatus') || {}).textContent || '')", timeout=6000)
+    except Exception:
+        failures.append('%s: the narrative link was not saved' % tag)
+    if post['link'] != 'https://drive.google.com/file/d/stub/view':
+        failures.append('%s: eop=plannarrative did not reach the stub (%r)' % (tag, post['link']))
+    # Copy plan as JSON — the narrative command's input parses back
+    page.click("#ev-post .ev-post-narr button.ev-pill")
+    try:
+        page.wait_for_selector('#ev-plan-json-text', timeout=4000)
+    except Exception:
+        failures.append('%s: Copy plan as JSON did not open the field' % tag); return
+    parsed = page.evaluate("""() => { try { const o = JSON.parse(document.getElementById('ev-plan-json-text').value);
+        return { ok: true, slug: o.slug, kind: o.kind, booths: (o.plan && o.plan.booths || []).length, cards: o.postEvent && o.postEvent.checklist && o.postEvent.checklist.cards,
+                 held: o.postEvent && o.postEvent.checklist && o.postEvent.checklist.meetingsHeld, len: document.getElementById('ev-plan-json-text').value.length }; }
+        catch (e) { return { ok: false, err: String(e) }; } }""")
+    if not parsed.get('ok'):
+        failures.append('%s: the copied plan is not JSON (%r)' % (tag, parsed.get('err')))
+    elif not (parsed['slug'] == POST_SLUG and parsed['kind'] == 'events-plan' and parsed['booths'] == 5 and parsed['cards'] == 3 and parsed['held'] == 1):
+        failures.append('%s: the copied plan does not carry both the plan and the close-out (%r)' % (tag, parsed))
+    page.screenshot(path=str(SHOTS / 'events-postevent.png'), full_page=False)
+    page.keyboard.press('Escape')
+    page.wait_for_timeout(200)
+
+
 def run():
     chrome = find_chrome()
     if not chrome:
@@ -1011,7 +1142,8 @@ def run():
             proposed = [dict(r) for r in PROPOSED_STUB]
             signals = []
             meetings = []
-            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars, proposed=proposed, signals=signals, meetings=meetings)
+            post = {'marks': {}, 'link': ''}
+            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars, proposed=proposed, signals=signals, meetings=meetings, post=post)
             got = probe(page)
             page.screenshot(path=str(SHOTS / ('events-role-%s.png' % role)), full_page=False)
             real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
@@ -1069,6 +1201,8 @@ def run():
                 signals_pass(page, reqs, signals, failures)
                 # §13.17 step 5 — the Plan tab, a booking's ICS downloaded and read (E5 s1)
                 plan_pass(page, reqs, meetings, failures)
+                # §13.18 step 5 — the Post-event section on a past show's Plan tab (E5 s2)
+                postevent_pass(page, reqs, post, failures)
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
@@ -1106,7 +1240,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-6d %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['agenda']),
                                                   g['rows'], mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed / events-recommended / events-signals / events-signals-card / events-plan.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
+    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed / events-recommended / events-signals / events-signals-card / events-plan / events-postevent.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
         for f in failures:
@@ -1118,7 +1252,8 @@ def run():
           'the Proposed tab is admin-only, opens with one request, groups the rows by source with Before → After, approves through decide, its JSON parses back, Mark applied / Install poller / Poll now reach the backend; '
           'the Recommended pill issues one eop=recommend and ranks the agenda by the stub\'s scores with a chip per row, the why panel names the stub account with its stage and evidence link, unpressing restores the month groups; '
           'the signal form fills its accounts with one eop=netaccounts and writes the typed row through eop=signal, the Signals only pill narrows the agenda to the signalled event over the cached score, Install signals and Signals now reach the backend; '
-          'the Plan tab opens with one eop=plan — five ranked booths with verbatim dossier lines and stage chips, the sessions with their why chips, a day card per event day with open slots, three OpenStreetMap venue links — a booking fills its contacts with one eop=plancontacts, writes the typed row through eop=planmeeting, downloads an .ics that reads back with DTSTART and the UID, fixes the meeting on the timeline with the slot split, and Unbook clears it.')
+          'the Plan tab opens with one eop=plan — five ranked booths with verbatim dossier lines and stage chips, the sessions with their why chips, a day card per event day with open slots, three OpenStreetMap venue links — a booking fills its contacts with one eop=plancontacts, writes the typed row through eop=planmeeting, downloads an .ics that reads back with DTSTART and the UID, fixes the meeting on the timeline with the slot split, and Unbook clears it; '
+          'a past show\'s Plan tab opens with one eop=postevent above the booths — the four checklist lines, the follow-up deep link into Network\'s drafts flow, the ROI line as recorded, Mark held writing eop=posteventmark and the recorded line following it, the narrative link saved through eop=plannarrative, and Copy plan as JSON parsing back to the plan and the close-out together.')
     return 0
 
 

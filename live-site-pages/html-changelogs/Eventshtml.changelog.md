@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10w] — 2026-09-23 03:09:19 AM EST — v07.25r
+
+### Added
+
+- **After the show** — once an event you starred has ended, its Plan tab opens with a close-out above the booth list: how many cards you scanned there, how many meetings you booked and how many of those actually happened, and how many of the companies with a booth have moved past early-stage since
+- **Mark held / not held** on each meeting you booked, so the count reflects what really happened rather than a guess. The page makes a sensible guess on its own — a follow-up note or email to that person within a fortnight reads as "held" — and your own mark always wins over it
+- **A follow-up link** that opens the contacts app ready to draft to everyone you met at that show, counting only the people who may be mailed. Nothing is ever sent from here
+- **An ROI line** — cards, meetings booked, meetings held, stage moves — recorded once for the event and refreshed whenever you mark a meeting. Next year's edition of the same show reads it as a small nudge in its recommendation score; this year's list never changes because of it
+- **Copy plan as JSON**, on every plan and again in the close-out: the whole plan on your clipboard, ready to paste into a session that writes it up as a narrative brief — a page per day, who to see and why. A field for that write-up's link sits beside it
 
 ## [v01.09w] — 2026-09-23 02:19:54 AM EST — v07.24r
 

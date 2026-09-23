@@ -1,4 +1,4 @@
-var VERSION = "v01.16g";
+var VERSION = "v01.17g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1437,8 +1437,32 @@ function nwPeerSignalsWrite_(tabs, owner, body, source) {
 //   (bad_slug). Answers { written, rejected[], ids[] } — the i- ids in row
 //   order so Events can store the record's id on its Meetings row. Never
 //   trusted beyond JSON.parse; audit rows carry counts and the account id.
-var NW_PEER_INTERACTION_KINDS = ['meeting', 'calendar'];
+//   E5 s2 — the READ leg is widened with eventSlug (design plan §13.18 step
+//   1; §5.6 item 5). GET with eventSlug and no accountId answers what the
+//   post-event checklist counts, so Events needs no second op: the live
+//   contacts whose `Source Event` is that slug (the cards handed over at the
+//   show) with their account and its stage at read time, and the `meeting`
+//   Interactions carrying that slug. Minimum necessary holds — no emails, no
+//   phones, no notes, and consent is answered as one boolean (`mailable`:
+//   `Consent Marketing` ≠ no AND not `Do Not Contact`, D9) rather than the
+//   column, because the checklist only ever needs the count.
+//   Each meeting row carries the two things Events cannot see from its own
+//   Meetings tab: `held` — the INFERENCE (a later `note` / `email-out`
+//   Interaction on the same contact within NW_MEETING_HELD_DAYS of the
+//   meeting, the mark rows themselves excluded) — and `mark` (''·yes·no),
+//   read from a `note` Interaction whose Evidence Link IS that meeting's
+//   mt- id and whose Summary is one of the two mark phrases below. The mark
+//   is computed here rather than shipping every note's text over the bridge:
+//   a boolean and a three-value word are strictly less than the rows they
+//   are derived from. An explicit mark always beats the inference — without
+//   it a "not held" mark would itself read as a later touch and invert.
+//   The kind list gains `note` for that mark write (Events' eop=posteventmark).
+var NW_PEER_INTERACTION_KINDS = ['meeting', 'calendar', 'note'];
 var NW_PEER_EVIDENCE_RE = /^(mt|pl|p)-[0-9a-z]{13}$/;   // an Events plan / meeting id (EVENTS-SCHEMA.md §1)
+var NW_MEETING_MARK_HELD = 'Meeting held';              // mirrored byte for byte in Events.gs (EV_MEETING_MARK_HELD)
+var NW_MEETING_MARK_NOT = 'Meeting not held';           // mirrored byte for byte in Events.gs (EV_MEETING_MARK_NOT)
+var NW_MEETING_HELD_DAYS = 14;                          // the window a later touch confirms a meeting in
+var NW_MEETING_HELD_KINDS = ['note', 'email-out'];      // the touches that confirm one
 
 function nwPeerInteraction_(e, p) {
   var owner = nwPeerOwner_(p);
@@ -1447,8 +1471,84 @@ function nwPeerInteraction_(e, p) {
   if (body && body.parseError) return { success: false, error: 'bad_json' };
   if (body && body.owner && String(body.owner).trim().toLowerCase() !== owner) return { success: false, error: 'owner_mismatch' };
   var tabs = ensureNetworkTabs_();
-  if (!body || !body.interactions) return nwPeerContactsRead_(tabs, owner, p);
+  if (!body || !body.interactions) {
+    if (nwStr_(p.eventSlug)) return nwPeerEventRead_(tabs, owner, p);   // E5 s2 — the post-event read
+    return nwPeerContactsRead_(tabs, owner, p);
+  }
   return nwPeerInteractionWrite_(tabs, owner, body);
+}
+
+// E5 s2 — the post-event read leg. Two passes over rows already in memory:
+// the owner's live Contacts whose Source Event is the slug (joined to their
+// Account for the name and the stage), and the owner's `meeting`
+// Interactions on the slug (each with its mark and its inferred held).
+function nwPeerEventRead_(tabs, owner, p) {
+  var slug = nwStr_(p.eventSlug, 64).toLowerCase();
+  if (!NW_PEER_SLUG_RE.test(slug)) return { success: false, error: 'bad_slug' };
+  var at = nwSheetRead_(tabs.accounts), accounts = {};
+  for (var a = 1; a < at.vals.length; a++) {
+    var arow = at.vals[a];
+    if (String(arow[at.idx['Owner']] || '').toLowerCase() !== owner || String(arow[at.idx['Deleted At']] || '')) continue;
+    accounts[String(arow[at.idx['Account ID']] || '')] = { name: String(arow[at.idx['Name']] || ''), stage: String(arow[at.idx['Stage']] || '') };
+  }
+  var ct = nwSheetRead_(tabs.contacts), contacts = [];
+  for (var r = 1; r < ct.vals.length; r++) {
+    var row = ct.vals[r];
+    if (String(row[ct.idx['Owner']] || '').toLowerCase() !== owner || String(row[ct.idx['Deleted At']] || '')) continue;
+    if (String(row[ct.idx['Source Event']] || '').toLowerCase() !== slug) continue;
+    var accountId = String(row[ct.idx['Account ID']] || ''), acct = accounts[accountId] || null;
+    var consent = String(row[ct.idx['Consent Marketing']] || '').toLowerCase();
+    var dnc = String(row[ct.idx['Do Not Contact']] || '').toLowerCase();
+    contacts.push({ id: String(row[ct.idx['Contact ID']] || ''), name: String(row[ct.idx['Full Name']] || ''), title: String(row[ct.idx['Title']] || ''),
+      role: String(row[ct.idx['Role']] || ''), accountId: accountId, accountName: acct ? acct.name : '', stage: acct ? acct.stage : '',
+      mailable: consent !== 'no' && dnc !== 'true' && dnc !== 'yes' && dnc !== '1' });
+  }
+  contacts.sort(function(x, y) { return x.name.toLowerCase() < y.name.toLowerCase() ? -1 : x.name.toLowerCase() > y.name.toLowerCase() ? 1 : 0; });
+  // the Interactions — the meetings on the slug, then the touches that confirm them
+  var it = nwSheetRead_(tabs.interactions), meetings = [], touches = [], marks = {};
+  for (var i = 1; i < it.vals.length; i++) {
+    var ix = it.vals[i];
+    if (String(ix[it.idx['Owner']] || '').toLowerCase() !== owner) continue;
+    var kind = String(ix[it.idx['Kind']] || ''), evidence = String(ix[it.idx['Evidence Link']] || '');
+    var date = String(nwCellDate_(ix[it.idx['Date']])).slice(0, 10), contactId = String(ix[it.idx['Contact ID']] || '');
+    var summary = String(ix[it.idx['Summary']] || '');
+    if (kind === 'meeting' && String(ix[it.idx['Event Slug']] || '').toLowerCase() === slug) {
+      meetings.push({ id: String(ix[it.idx['Interaction ID']] || ''), contactId: contactId, date: date, evidence: evidence });
+      continue;
+    }
+    if (NW_MEETING_HELD_KINDS.indexOf(kind) < 0) continue;
+    if (kind === 'note' && NW_PEER_EVIDENCE_RE.test(evidence) && (summary === NW_MEETING_MARK_HELD || summary === NW_MEETING_MARK_NOT)) {
+      var prev = marks[evidence];   // the newest mark on that meeting id wins
+      if (!prev || date >= prev.date) marks[evidence] = { date: date, held: summary === NW_MEETING_MARK_HELD ? 'yes' : 'no' };
+      continue;                     // a mark is never also a confirming touch
+    }
+    touches.push({ contactId: contactId, date: date });
+  }
+  for (var m = 0; m < meetings.length; m++) {
+    var mt = meetings[m], mark = marks[mt.evidence] || null;
+    mt.mark = mark ? mark.held : '';
+    mt.held = false;
+    for (var t = 0; t < touches.length; t++) {
+      if (touches[t].contactId !== mt.contactId || touches[t].date < mt.date) continue;
+      if (nwDayGap_(mt.date, touches[t].date) > NW_MEETING_HELD_DAYS) continue;
+      mt.held = true; break;
+    }
+  }
+  meetings.sort(function(x, y) { return x.date < y.date ? -1 : x.date > y.date ? 1 : 0; });
+  var markedCount = 0;
+  for (var q = 0; q < meetings.length; q++) if (meetings[q].mark) markedCount++;
+  auditLog('data_read', owner, 'peer_interaction_event_read', { contacts: contacts.length, meetings: meetings.length, marked: markedCount });   // counts only — never the slug, never a card field (D9, §12)
+  return { success: true, built: nwNow_(), eventSlug: slug, contacts: contacts, meetings: meetings };
+}
+// A Date cell Sheets coerced back to a day string (the Interactions Date
+// column is written as text but a hand edit can leave a Date).
+function nwCellDate_(v) { return (v instanceof Date) ? Utilities.formatDate(v, 'UTC', 'yyyy-MM-dd') : String(v == null ? '' : v); }
+// Whole days between two YYYY-MM-DD strings; -1 when either is not a day.
+function nwDayGap_(from, to) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(from) || !/^\d{4}-\d{2}-\d{2}$/.test(to)) return -1;
+  var a = new Date(from + 'T00:00:00Z').getTime(), b = new Date(to + 'T00:00:00Z').getTime();
+  if (isNaN(a) || isNaN(b)) return -1;
+  return Math.round((b - a) / 86400000);
 }
 
 function nwPeerContactsRead_(tabs, owner, p) {

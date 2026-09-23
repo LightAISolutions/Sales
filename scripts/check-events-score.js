@@ -178,10 +178,11 @@ vm.runInContext(
   'var EMBED_PAGE_URL = "' + SITE + 'Events.html";\nvar SPREADSHEET_ID = "stub";\n' + [
     'EV_ROLE_CAPS', 'EV_TABS', 'EV_REGISTRY_URL', '_evRegistryCache', 'EV_PEER_TOKEN_PROP', 'EV_NETWORK_TOKEN_PROP', 'NETWORK_PEER_EXEC',
     'EV_SEGMENTS_URL', 'EV_COMPANIES_URL', 'EV_SCORE_TERMS', 'EV_TUNING_DEFAULTS', 'EV_STAGE_WEIGHT', 'EV_STAGE_DEFAULT_WEIGHT',
-    'EV_RELATIONSHIP_WEIGHT', 'EV_SCORE_SIGNAL_CAP', 'EV_SCORE_CONFLICT_ATTENDING'
+    'EV_RELATIONSHIP_WEIGHT', 'EV_SCORE_SIGNAL_CAP', 'EV_SCORE_CONFLICT_ATTENDING',
+    'EV_PRIOR_ROI_DIVISOR', 'EV_PRIOR_ROI_MEETING', 'EV_PRIOR_ROI_STAGE'   // E5 s2 — the priorRoi term
   ].map((n) => constant(src, n)).join('\n') + '\n' + [
     'evRoleOf_', 'evAdmitted_', 'evCan_', 'evRequire_', 'ensureEventsTabs_', 'evListRows_', 'evStr_', 'evCell_', 'handleEventsOp_',
-    'evRegistry_', 'evTodayIn_', 'evPagesJson_', 'evNetworkProxy_',
+    'evRegistry_', 'evTodayIn_', 'evPagesJson_', 'evNetworkProxy_', 'evSlugify_', 'evSeriesBase_', 'evPlansRoi_',
     'evTuning_', 'evSeatSegments_', 'evMentionDates_', 'evStageWeight_', 'evDatesOverlap_', 'evMonthsSince_', 'evRound2_', 'evScoreEvent_', 'evRecommend_'
   ].map((n) => extract(src, n)).join('\n'), ctx, { filename: 'Events.score.js' });
 
@@ -223,11 +224,13 @@ const fetchBefore = counters.fetch;
 r = op(ADMIN, 'recommend');
 ok(r.success === true && r.seeded === true, 'recommend: the first score seeds Tuning (' + JSON.stringify({ success: r.success, seeded: r.seeded, error: r.error }) + ')');
 const tun = ss.sheets['Tuning'];
-ok(tun.rows.length === 8 && tun.rows.slice(1).map((x) => x[0]).join(',') === 'segmentFit,accountPresence,corpusSalience,proximity,conflict,relevancePrior,regions'
-   && tun.rows[1][1] === 0.35 && tun.rows[2][1] === 0.35 && tun.rows[3][1] === 0.15 && tun.rows[4][1] === 0.10 && tun.rows[5][1] === 0.25 && tun.rows[6][1] === 0.05 && tun.rows[7][1] === '' && tun.rows.slice(1).every((x) => String(x[2]).length > 10),
-   'Tuning: seeded with the six §6 weights, the regions row (empty) and a Note per row');
-ok(JSON.stringify(r.weights) === JSON.stringify({ segmentFit: 0.35, accountPresence: 0.35, corpusSalience: 0.15, proximity: 0.1, conflict: 0.25, relevancePrior: 0.05 }) && r.regions.length === 0 && r.defaulted.length === 0,
+ok(tun.rows.length === 9 && tun.rows.slice(1).map((x) => x[0]).join(',') === 'segmentFit,accountPresence,corpusSalience,proximity,conflict,relevancePrior,priorRoi,regions'
+   && tun.rows[1][1] === 0.35 && tun.rows[2][1] === 0.35 && tun.rows[3][1] === 0.15 && tun.rows[4][1] === 0.10 && tun.rows[5][1] === 0.25 && tun.rows[6][1] === 0.05 && tun.rows[7][1] === 0.05 && tun.rows[8][1] === '' && tun.rows.slice(1).every((x) => String(x[2]).length > 10),
+   'Tuning: seeded with the seven §6 weights (priorRoi since E5 s2), the regions row (empty) and a Note per row');
+ok(JSON.stringify(r.weights) === JSON.stringify({ segmentFit: 0.35, accountPresence: 0.35, corpusSalience: 0.15, proximity: 0.1, conflict: 0.25, relevancePrior: 0.05, priorRoi: 0.05 }) && r.regions.length === 0 && r.defaulted.length === 0,
    'recommend: the answer carries the weights, an empty regions list, nothing defaulted (' + JSON.stringify(r.weights) + ')');
+ok(Object.keys(byslug(r)).every((k) => byslug(r)[k].terms.priorRoi === 0) && Object.keys(byslug(r)).every((k) => byslug(r)[k].why.priorRoi === null),
+   'priorRoi: zero with no ROI line recorded anywhere — an empty Plans tab never nudges the list');
 ok(r.events.length === 3 && !byslug(r)['delta-2026'] && !byslug(r)['epsilon-2027'] && !byslug(r)['zeta-2026'], 'recommend: past, cancelled and already-ended rows are not scored (' + r.events.map((e) => e.slug).join(',') + ')');
 ok(r.notConfigured === false && r.accounts === 4 && r.accountsRead === 4 && r.signals === 5 && r.signalsCapped === false && r.starred === 1,
    'recommend: four accounts read, five in-scope signals (the past one dropped), one registered star (' + JSON.stringify({ a: r.accounts, ar: r.accountsRead, s: r.signals, st: r.starred }) + ')');
@@ -238,10 +241,10 @@ ok(r.seatSegments.join(',') === 'aidc-developers-and-landlords,assurance,capital
 let got = byslug(r);
 ok(near(got['alpha-2026'].terms.proximity, 0) && near(got['beta-2027'].terms.proximity, 0) && near(got['gamma-2026'].terms.proximity, 0), 'proximity: an empty regions row scores 0 for every event');
 // now the admin types TX into the regions row and presses again
-tun.rows[7][1] = ' tx ';
+tun.rows[8][1] = ' tx ';
 const fetchBefore2 = counters.fetch;
 r = op(ADMIN, 'recommend');
-ok(r.success && r.seeded === false && tun.rows.length === 8, 'Tuning: the second score does not re-seed');
+ok(r.success && r.seeded === false && tun.rows.length === 9, 'Tuning: the second score does not re-seed');
 ok(r.regions.join(',') === 'TX', 'Tuning: the regions row is trimmed and upper-cased (' + JSON.stringify(r.regions) + ')');
 ok(counters.fetch - fetchBefore2 === 7, 'recommend: the registry is cached per execution — 7 fetches on the second score (saw ' + (counters.fetch - fetchBefore2) + ')');
 got = byslug(r);
@@ -284,7 +287,7 @@ tun.rows.splice(6, 1);     // relevancePrior row deleted by hand
 r = op(ADMIN, 'recommend');
 ok(r.success && r.defaulted.join(',') === 'corpusSalience,conflict,relevancePrior' && r.weights.corpusSalience === 0.15 && r.weights.conflict === 0.25 && r.weights.relevancePrior === 0.05,
    'Tuning: a non-number, an out-of-range weight and a missing row each fall back to the default and are named (' + JSON.stringify(r.defaulted) + ')');
-ok(tun.rows.length === 7, 'Tuning: a partial tab is not re-seeded (the admin\'s rows are theirs)');
+ok(tun.rows.length === 8, 'Tuning: a partial tab is not re-seeded (the admin\'s rows are theirs)');
 tun.rows.splice(6, 0, ['relevancePrior', 0.05, 'restored']); tun.rows[3][1] = 0.15; tun.rows[5][1] = 0.25; tun.rows[2][1] = 0.35; tun.rows[4][1] = 0.10;
 
 // ── 5. Ties break on slug ─────────────────────────────────────────────────
@@ -347,7 +350,7 @@ ok(counters.urls.every((u) => u.indexOf(SITE) === 0 || u.indexOf(NW_EXEC) === 0)
 
 console.log('check-events-score: ' + checks + ' checks, ' + failures + ' failure(s)');
 if (failures) process.exit(1);
-console.log('ALL CHECKS PASSED — the six terms match their hand-computed values and the score its two decimals on three fixture events; Tuning seeds once and is read on every score; '
+console.log('ALL CHECKS PASSED — the seven terms match their hand-computed values and the score its two decimals on three fixture events; Tuning seeds once and is read on every score; '
   + 'a weight change reorders the answer; a malformed weight falls back and is named; not_configured degrades with notConfigured true and no network fetch; the signal reads stop at the cap; '
   + 'recommend is refused to a non-admin with zero fetches and zero tab opens; no audit row names an account. Zero live calls.');
 

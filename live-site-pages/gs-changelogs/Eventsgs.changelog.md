@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 8/50`
+`Sections: 9/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.09g] — 2026-09-23 03:09:19 AM EST — v07.25r
+
+### Added
+
+- The close-out for an event that has ended: how many cards were collected there, how many meetings were booked and how many of those happened, how many companies with a booth have moved past early-stage, and how many of the people met may still be mailed
+- A meeting counts as held when a note or an email follows on the same person within a fortnight — and whatever you mark by hand always wins over that guess, in either direction
+- The result is recorded once for the event and read back next year as a small nudge in the recommendation score for the same show. A show that has never been closed out nudges nothing
+- A place to keep the link to the written-up plan for an event
+
+### Changed
+
+- The checklist reads everything it needs from the contacts app in one request instead of two
 
 ## [v01.08g] — 2026-09-23 02:19:54 AM EST — v07.24r
 

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-// E5 session 1 — the deterministic plan, proved offline.
+// E5 — the deterministic plan (session 1) and the post-event close-out
+// (session 2), proved offline.
 //
 // NETWORK-EVENTS-DESIGN-PLAN.md §13.17 step 4: the REAL plan functions are
 // lifted out of Events.gs (the check-events-signals.js idiom) and run in one
@@ -42,6 +43,28 @@
 //   · not_configured degrades the plan (booths empty, notConfigured true) and
 //     the booking (the row written with no interaction id); a non-admin is
 //     refused with zero fetches; zero live calls; the D12 / D15 greps
+//
+// Session 2 adds (§13.18 step 5):
+//   · nop=interaction widened with eventSlug= — the live cards whose Source
+//     Event is the slug with their account and stage and ONE consent
+//     boolean, the deleted card never, a malformed slug bad_slug, never an
+//     email or a phone; the two mark phrases mirrored across the bridge
+//   · eop=postevent — not_over before the day after `end`, not_starred,
+//     bad_slug; the checklist's four counts against a hand-built fixture,
+//     the follow-up count over the D9 consent rule and its relative deep
+//     link; the booth accounts and the ONE stage move past prospecting;
+//     the ROI line written ONCE into a Plans row with the series and the
+//     year and re-read (never rewritten) afterwards; audit counts only
+//   · the held inference — a later note within 14 days says held; an
+//     explicit mark (either way) beats it; the mark row is a `note`
+//     Interaction carrying the mt- id as evidence; the newest mark wins;
+//     the Plans row's meetings refreshed and its cards / moves left alone
+//   · eop=plannarrative — the Drive URL onto the row, cleared by an empty
+//     link, every refusal by name, the URL never in an audit row
+//   · the priorRoi term — 0.275 hand-computed for next year's edition of
+//     the same series, 0 for every series with no earlier edition, `lost`
+//     never a stage move, the weight seeded at 0.05
+//   · not_configured degrades the close-out to this app's own Meetings rows
 //
 // Usage:  node scripts/check-events-plan.js
 // Exit:   0 when every assertion holds, 1 on the first that does not.
@@ -123,7 +146,10 @@ const REGISTRY = { schemaVersion: 1, built: '2026-09-23T00:00:00Z', events: [
   ev('alpha-2026', 'Alpha Show 2026', 'Alpha Show', '2026-11-16', '2026-11-17', { venue: 'Austin Convention Center', venueLatLng: [30.2635, -97.7393], agendaUrl: AGENDA_ALPHA,
       hours: [{ date: '2026-11-16', open: '09:00', close: '16:00' }] }),   // starred; hours on day 1 only
   ev('beta-2027', 'Beta Summit 2027', 'Beta Summit', '2027-03-01', '2027-03-03', { audience: ['neoclouds'] }),   // not starred
-  ev('delta-2026', 'Delta (past)', 'Delta', '2026-02-09', '2026-02-12', { status: 'past' })
+  ev('delta-2026', 'Delta (past)', 'Delta', '2026-02-09', '2026-02-12', { status: 'past' }),
+  // E5 s2 — the show that is over (starred, closed out below) and next year's edition of the SAME series
+  ev('omega-2026', 'Omega Expo 2026', 'Omega Expo', '2026-09-01', '2026-09-03', { venue: 'Omega Hall' }),
+  ev('omega-2027', 'Omega Expo 2027', 'Omega Expo', '2027-09-01', '2027-09-03', { venue: 'Omega Hall' })
 ] };
 const SEGMENTS = { schemaVersion: 1, seats: {
   'storage-seller': { label: 'The storage seller', segments: ['storage-developers-and-ipps', 'utilities', 'capital', 'assurance'] },
@@ -143,11 +169,15 @@ const ACCOUNTS = [
   { id: 'a-0000000000003', name: 'Bolt Supply', slug: '', relationship: 'supplier', stage: 'none', segments: ['utilities'] },
   { id: 'a-0000000000004', name: 'Acme Storage', slug: 'acme-storage', relationship: 'partner', stage: 'none', segments: ['utilities'] }
 ];
-const C_JANE = 'c-0000000000001', C_OLD = 'c-0000000000002', C_ANN = 'c-0000000000003';
+const C_JANE = 'c-0000000000001', C_OLD = 'c-0000000000002', C_ANN = 'c-0000000000003', C_DNC = 'c-0000000000004', C_GONE = 'c-0000000000005';
+// E5 s2 — `metAt` is the Source Event the post-event read leg keys on; the
+// three postures decide `mailable` (D9: consent ≠ no AND not Do Not Contact)
 const CONTACTS = [
-  { id: C_JANE, accountId: 'a-0000000000001', name: 'Jane Doe', title: 'VP Storage', role: 'decision-maker', deleted: '' },
+  { id: C_JANE, accountId: 'a-0000000000001', name: 'Jane Doe', title: 'VP Storage', role: 'decision-maker', deleted: '', metAt: 'omega-2026', consent: 'unknown', dnc: '' },
   { id: C_OLD, accountId: 'a-0000000000001', name: 'Old Timer', title: 'Retired', role: 'other', deleted: '2026-01-01T00:00:00Z' },
-  { id: C_ANN, accountId: 'a-0000000000004', name: 'Ann Lee', title: 'Director of Grid', role: 'influencer', deleted: '' }
+  { id: C_ANN, accountId: 'a-0000000000004', name: 'Ann Lee', title: 'Director of Grid', role: 'influencer', deleted: '', metAt: 'omega-2026', consent: 'no', dnc: '' },
+  { id: C_DNC, accountId: 'a-0000000000002', name: 'Do Not Mail', title: 'Buyer', role: 'procurement', deleted: '', metAt: 'omega-2026', consent: 'yes', dnc: 'TRUE' },
+  { id: C_GONE, accountId: 'a-0000000000002', name: 'Deleted Card', title: 'Analyst', role: 'other', deleted: '2026-09-10T00:00:00Z', metAt: 'omega-2026', consent: 'yes', dnc: '' }
 ];
 const SIGNALS = [   // written through Network's REAL write leg below
   { accountId: 'a-0000000000001', eventSlug: 'alpha-2026', kind: 'exhibitor', evidenceUrl: 'https://alpha.example/exhibitors', confidence: 0.9, firstSeen: TODAY },
@@ -156,7 +186,11 @@ const SIGNALS = [   // written through Network's REAL write leg below
   { accountId: 'a-0000000000004', eventSlug: 'alpha-2026', kind: 'exhibitor', evidenceUrl: 'https://alpha.example/exhibitors', confidence: 0.9, firstSeen: TODAY },
   { accountId: 'a-0000000000002', eventSlug: 'alpha-2026', kind: 'agenda', evidenceUrl: AGENDA_ALPHA, confidence: 0.9, firstSeen: TODAY, personName: 'Tom Fox', personTitle: 'Head of Sales' },
   { accountId: 'a-0000000000003', eventSlug: 'alpha-2026', kind: 'exhibitor', evidenceUrl: 'https://alpha.example/exhibitors', confidence: 0.9, firstSeen: TODAY },   // a supplier — the score never reads it
-  { accountId: 'a-0000000000002', eventSlug: 'beta-2027', kind: 'exhibitor', evidenceUrl: 'https://beta.example/exhibitors', confidence: 0.9, firstSeen: TODAY }     // another event
+  { accountId: 'a-0000000000002', eventSlug: 'beta-2027', kind: 'exhibitor', evidenceUrl: 'https://beta.example/exhibitors', confidence: 0.9, firstSeen: TODAY },     // another event
+  // E5 s2 — the booth accounts of the show that is over: Fluence is shortlist (a stage move), the other two are not
+  { accountId: 'a-0000000000001', eventSlug: 'omega-2026', kind: 'exhibitor', evidenceUrl: 'https://omega.example/exhibitors', confidence: 0.9, firstSeen: '2026-08-01' },
+  { accountId: 'a-0000000000004', eventSlug: 'omega-2026', kind: 'exhibitor', evidenceUrl: 'https://omega.example/exhibitors', confidence: 0.9, firstSeen: '2026-08-01' },
+  { accountId: 'a-0000000000002', eventSlug: 'omega-2026', kind: 'exhibitor', evidenceUrl: 'https://omega.example/exhibitors', confidence: 0.9, firstSeen: '2026-08-01' }
 ];
 const ldEvent = (name, start, end, performer, extra) => Object.assign({ '@type': 'Event', name, startDate: start, endDate: end, performer, location: { '@type': 'Place', name: 'Hall B' } }, extra || {});
 const AGENDA_HTML = '<html><head><script type="application/ld+json">' + JSON.stringify({ '@context': 'https://schema.org', '@type': 'Event', name: 'Alpha Show 2026', startDate: '2026-11-16', subEvent: [
@@ -192,19 +226,22 @@ vm.createContext(NW);
 vm.runInContext([
   'NW_RELATIONSHIPS', 'NW_STAGES', 'NW_SIGNAL_KINDS', 'NW_INTERACTION_KINDS', 'NW_ID_RE', 'NW_ID_PREFIXES', 'NW_TABS', 'NW_LEGAL_SUFFIX_RE',
   'NW_PEER_TOKEN_PROP', 'NW_EVENTS_TOKEN_PROP', 'EVENTS_PEER_EXEC', 'NW_PEER_RELATIONSHIPS', 'NW_PEER_SLUG_RE', 'NW_CORPUS_KEY_RE',
-  'NW_PEER_INTERACTION_KINDS', 'NW_PEER_EVIDENCE_RE'
+  'NW_PEER_INTERACTION_KINDS', 'NW_PEER_EVIDENCE_RE',
+  'NW_MEETING_MARK_HELD', 'NW_MEETING_MARK_NOT', 'NW_MEETING_HELD_DAYS', 'NW_MEETING_HELD_KINDS'   // E5 s2
 ].map((n) => constant(nwSrc, n)).join('\n') + '\nvar SPREADSHEET_ID = "stub";\n' + [
   'ensureNetworkTabs_', 'nwListRows_', 'nwSheetRead_', 'nwRowObj_', 'nwFindRow_', 'nwOwned_', 'nwWriteRow_', 'nwArr_', 'nwStr_', 'nwNow_', 'nwNewId_', 'nwRandomBase36_',
   'nwNormaliseCompany_', 'nwPeerAuthorised_', 'nwHandlePeer_', 'nwPeerOwner_', 'nwPeerAccounts_', 'nwPeerSignals_', 'nwPeerJsonBody_',
   'nwPeerSignalsRead_', 'nwPeerLinkedIn_', 'nwPeerSignalsWrite_', 'nwSignalKey_', 'nwNameKey_', 'nwInteractionAdd_',
-  'nwPeerInteraction_', 'nwPeerContactsRead_', 'nwPeerInteractionWrite_'
+  'nwPeerInteraction_', 'nwPeerContactsRead_', 'nwPeerInteractionWrite_',
+  'nwPeerEventRead_', 'nwCellDate_', 'nwDayGap_'   // E5 s2 — the post-event read leg
 ].map((n) => extract(nwSrc, n)).join('\n'), NW, { filename: 'Network.peer.js' });
 const nwTabs = vm.runInContext('ensureNetworkTabs_', NW)();
 const nwWrite = (sheet, obj) => { const headers = sheet.rows[0], row = {}; headers.forEach((h) => { row[h] = ''; }); Object.assign(row, obj); vm.runInContext('nwWriteRow_', NW)(sheet, headers, row, 0); };
 ACCOUNTS.forEach((a) => nwWrite(nwSs.sheets['Accounts'], { 'Account ID': a.id, 'Owner': OWNER, 'Name': a.name, 'Normalised Name': vm.runInContext('nwNormaliseCompany_', NW)(a.name), 'Profiler Slug': a.slug,
   'Relationship': a.relationship, 'Stage': a.stage, 'Segment IDs': JSON.stringify(a.segments || []), 'Tags': '[]', 'Created At': TODAY, 'Updated At': TODAY }));
 CONTACTS.forEach((c) => nwWrite(nwSs.sheets['Contacts'], { 'Contact ID': c.id, 'Owner': OWNER, 'Account ID': c.accountId, 'Full Name': c.name, 'Title': c.title, 'Role': c.role,
-  'Emails': '["private@example.com"]', 'Phones': '["+15550000000"]', 'Created At': TODAY, 'Updated At': TODAY, 'Deleted At': c.deleted }));
+  'Emails': '["private@example.com"]', 'Phones': '["+15550000000"]', 'Source Event': c.metAt || '', 'Consent Marketing': c.consent || 'unknown', 'Do Not Contact': c.dnc || '',
+  'Created At': TODAY, 'Updated At': TODAY, 'Deleted At': c.deleted }));
 const nwPeer = (e) => vm.runInContext('nwHandlePeer_', NW)(e);
 const seeded = nwPeer({ parameter: { t: TOKEN, nop: 'signals', owner: OWNER }, postData: { contents: JSON.stringify({ owner: OWNER, signals: SIGNALS }), type: 'application/json' } });
 if (!(seeded.success && seeded.written === SIGNALS.length)) { console.log('  FAIL  fixture: Network did not accept the seed signals: ' + JSON.stringify(seeded)); process.exit(1); }
@@ -266,7 +303,9 @@ vm.runInContext(
     'EV_SIGNALS_MAX_NAMES', 'EV_SIGNAL_PERSON_MAX',
     'EV_PLAN_VENUES_PROP', 'EV_PLAN_VENUES_DAYS', 'EV_PLAN_VENUE_RADIUS_M', 'EV_PLAN_VENUES_MAX', 'EV_OVERPASS_URL', 'EV_OVERPASS_TIMEOUT_S', 'EV_PLAN_BOOTH_MAX', 'EV_PLAN_DOSSIER_MAX',
     'EV_PLAN_SESSIONS_MAX', 'EV_PLAN_AGENDA_CACHE_S', 'EV_PLAN_DEFAULT_HOURS', 'EV_PLAN_VISIT_MIN', 'EV_PLAN_SLOT_MIN', 'EV_PLAN_VISITS_PER_DAY', 'EV_PLAN_MEETING_MAX_MIN',
-    'EV_PLAN_SIGNAL_KINDS', 'EV_PLAN_STOPWORDS', 'EV_PROFILE_URL', 'EV_MEETING_ID_RE', 'EV_CONTACT_ID_RE', 'EV_HHMM_RE', '_evProfileCache'
+    'EV_PLAN_SIGNAL_KINDS', 'EV_PLAN_STOPWORDS', 'EV_PROFILE_URL', 'EV_MEETING_ID_RE', 'EV_CONTACT_ID_RE', 'EV_HHMM_RE', '_evProfileCache',
+    'EV_ROI_STAGES_MOVED', 'EV_PRIOR_ROI_DIVISOR', 'EV_PRIOR_ROI_MEETING', 'EV_PRIOR_ROI_STAGE',   // E5 s2 — the post-event block
+    'EV_MEETING_MARK_HELD', 'EV_MEETING_MARK_NOT', 'EV_NARRATIVE_LINK_MAX', 'EV_DRAFTS_DEEP_LINK'
   ].map((n) => constant(src, n)).join('\n') + '\n' + [
     'evRoleOf_', 'evAdmitted_', 'evCan_', 'evRequire_', 'evRandomBase36_', 'evNewId_', 'ensureEventsTabs_', 'evListRows_', 'evStr_', 'evCell_', 'handleEventsOp_',
     'evRegistry_', 'evTodayIn_', 'evPagesJson_', 'evNetworkProxy_', 'evHtmlDecode_', 'evJsonLdBlocks_', 'evIsEventType_', 'evAddDaysStr_', 'evStripTags_',
@@ -275,11 +314,14 @@ vm.runInContext(
     'evMinutes_', 'evHhmm_', 'evNameKey_', 'evDayList_', 'evLocalToUtc_', 'evIcsEsc_', 'evIcsUtc_', 'evIcsFold_', 'evIcsHost_',
     'evDistanceM_', 'evOverpassQuery_', 'evParseOverpass_', 'evPlanVenues_', 'evProfile_', 'evDossierWhy_', 'evDecisionMakers_',
     'evSessionTime_', 'evSessionsFromLd_', 'evParseSessions_', 'evPlanSessions_', 'evPlanBooths_', 'evSegmentKeywords_', 'evPlanSessionsFilter_',
-    'evPlanHours_', 'evPlanDays_', 'evWallCell_', 'evPlanMeetings_', 'evPlanMeetingNames_', 'evPlanOp_', 'evPlanContactsOp_', 'evMeetingIcs_', 'evPlanMeetingOp_', 'evPlanUnbookOp_'
+    'evPlanHours_', 'evPlanDays_', 'evWallCell_', 'evPlanMeetings_', 'evPlanMeetingNames_', 'evPlanOp_', 'evPlanContactsOp_', 'evMeetingIcs_', 'evPlanMeetingOp_', 'evPlanUnbookOp_',
+    'evSlugify_', 'evSeriesBase_', 'evPlansRoi_', 'evPlanRowFind_', 'evRoiBoothAccounts_', 'evPostMeetings_',   // E5 s2
+    'evPostEventOp_', 'evPostEventMarkOp_', 'evPlanNarrativeOp_'
   ].map((n) => extract(src, n)).join('\n'), ctx, { filename: 'Events.plan.js' });
 // The Stars tab: alpha-2026 starred by the owner (the plan is for a starred event)
 const evTabs = vm.runInContext('ensureEventsTabs_', ctx)();
 evTabs.stars.appendRow(['st-0000000000001', OWNER, 'alpha-2026', '', 'registered', TODAY, TODAY]);
+evTabs.stars.appendRow(['st-0000000000002', OWNER, 'omega-2026', '', 'attended', TODAY, TODAY]);   // E5 s2 — the show that is over
 
 let failures = 0, checks = 0;
 function ok(cond, msg) { checks++; if (!cond) { failures++; console.log('  FAIL  ' + msg); } }
@@ -482,10 +524,129 @@ ok(op(ADMIN, 'plancontacts', { accountId: 'a-0000000000001' }).error === 'not_co
 op(ADMIN, 'planunbook', { id: mRows()[0][0] });
 props.NETWORK_PEER_TOKEN = TOKEN;
 
+// ── 8. E5 s2 — the post-event checklist, the ROI line and the narrative ───
+// omega-2026 is starred, `attended`, and ended 2026-09-03 — twenty days
+// before TODAY. Three accounts had a booth there (Fluence at `shortlist`,
+// Acme and Sungrow at `none`), three live cards carry it as their Source
+// Event (one of them Do Not Contact, one consent `no`, a fourth deleted),
+// and a meeting is booked against Jane below.
+['postevent', 'posteventmark', 'plannarrative'].forEach((k) => ok(op(ANALYST, k, {}).error === 'ROLE_DENIED', k + ': refused to a non-admin'));
+ok(op(ADMIN, 'postevent', { slug: 'Nope Slug!' }).error === 'bad_slug', 'postevent: a malformed slug is bad_slug');
+ok(op(ADMIN, 'postevent', { slug: 'delta-2026' }).error === 'not_starred', 'postevent: an unstarred event is not_starred');
+const notOver = op(ADMIN, 'postevent', { slug: 'alpha-2026' });
+ok(notOver.success === false && notOver.error === 'not_over' && notOver.end === '2026-11-17' && notOver.today === TODAY,
+   'postevent: a show that has not ended is not_over, with the end date and today said (' + JSON.stringify([notOver.error, notOver.end]) + ')');
+
+// the widened read leg on its own, straight at Network's far side
+const legRaw = nwPeer({ parameter: { t: TOKEN, nop: 'interaction', owner: OWNER, eventSlug: 'omega-2026' } });
+ok(legRaw.success === true && legRaw.eventSlug === 'omega-2026' && legRaw.contacts.length === 3 && legRaw.contacts.map((c) => c.name).join(' | ') === 'Ann Lee | Do Not Mail | Jane Doe',
+   'nop=interaction&eventSlug: the live cards whose Source Event is the slug, by name; the deleted one never (' + JSON.stringify(legRaw.contacts && legRaw.contacts.map((c) => c.name)) + ')');
+ok(legRaw.contacts.every((c) => Object.keys(c).sort().join(',') === 'accountId,accountName,id,mailable,name,role,stage,title'),
+   'nop=interaction&eventSlug: the row is id · name · title · role · account · stage · mailable and nothing else — no email, no phone, no consent column (D9)');
+const jane = legRaw.contacts.filter((c) => c.id === C_JANE)[0];
+ok(jane && jane.accountName === 'Fluence Energy' && jane.stage === 'shortlist' && jane.mailable === true, 'nop=interaction&eventSlug: the card carries its account name and the stage at read time');
+ok(legRaw.contacts.filter((c) => c.id === C_ANN)[0].mailable === false && legRaw.contacts.filter((c) => c.id === C_DNC)[0].mailable === false,
+   'nop=interaction&eventSlug: consent `no` and Do Not Contact each make the card unmailable (D9)');
+ok(nwPeer({ parameter: { t: TOKEN, nop: 'interaction', owner: OWNER, eventSlug: 'Not A Slug' } }).error === 'bad_slug', 'nop=interaction&eventSlug: a malformed slug is bad_slug');
+ok(!JSON.stringify(legRaw).includes('private@example.com') && !JSON.stringify(legRaw).includes('+15550000000'), 'D9: the read leg never answers an email or a phone');
+ok(vm.runInContext('EV_MEETING_MARK_HELD', ctx) === vm.runInContext('NW_MEETING_MARK_HELD', NW)
+   && vm.runInContext('EV_MEETING_MARK_NOT', ctx) === vm.runInContext('NW_MEETING_MARK_NOT', NW), 'the two mark phrases are mirrored byte for byte across the bridge');
+
+// the first close-out — the checklist and the ROI line written once
+const omegaBook = op(ADMIN, 'planmeeting', { slug: 'omega-2026', contactId: C_JANE, accountId: 'a-0000000000001', date: '2026-09-02', start: '11:00', end: '11:30', place: 'Omega Hall', note: 'Gridstack pricing', contactName: 'Jane Doe', accountName: 'Fluence Energy' });
+ok(omegaBook.success === true, 'postevent fixture: a meeting is booked at the show that is over');
+const pe1 = op(ADMIN, 'postevent', { slug: 'omega-2026' });
+ok(pe1.success === true && pe1.slug === 'omega-2026' && pe1.attending === 'attended' && pe1.notConfigured === false && pe1.event.series === 'Omega Expo',
+   'postevent: answers for the closed-out show (' + JSON.stringify([pe1.success, pe1.error]) + ')');
+ok(pe1.checklist.cards === 3 && pe1.checklist.meetingsBooked === 1 && pe1.checklist.meetingsHeld === 0 && pe1.checklist.meetingsUnconfirmed === 1,
+   'checklist: three cards, one meeting booked, none held yet — no later touch on the contact (' + JSON.stringify(pe1.checklist) + ')');
+ok(pe1.checklist.followUp.count === 1 && pe1.checklist.followUp.href === 'Network.html#drafts?sourceEvent=omega-2026',
+   'checklist: the follow-up counts only the mailable cards and deep-links into Network\'s drafts flow, relative (' + JSON.stringify(pe1.checklist.followUp) + ')');
+ok(pe1.boothAccounts === 3 && pe1.stageMoves.length === 1 && pe1.stageMoves[0].name === 'Fluence Energy' && pe1.stageMoves[0].stage === 'shortlist',
+   'ROI: three booth accounts, one past prospecting at read time (' + JSON.stringify(pe1.stageMoves) + ')');
+ok(JSON.stringify(pe1.roi) === JSON.stringify({ cards: 3, meetingsBooked: 1, meetingsHeld: 0, stageMoves: 1 }) && pe1.plan.written === true && /^pl-[0-9a-z]{13}$/.test(pe1.plan.id) && pe1.plan.day === TODAY,
+   'ROI: the line is written once into a Plans row with a pl- id and the read date (' + JSON.stringify([pe1.roi, pe1.plan]) + ')');
+const planRows = () => ss.sheets['Plans'].rows.slice(1);
+ok(planRows().length === 1 && planRows()[0][2] === 'omega-2026' && JSON.parse(planRows()[0][4]).kind === 'roi' && JSON.parse(planRows()[0][4]).series === 'Omega Expo' && JSON.parse(planRows()[0][4]).year === 2026 && planRows()[0][5] === '',
+   'ROI: the Plans row carries the ROI JSON with the series and the year; Narrative Link is untouched');
+ok(pe1.meetings.length === 1 && pe1.meetings[0].held === 'unconfirmed' && pe1.meetings[0].mark === '' && pe1.meetings[0].contactName === 'Jane Doe' && pe1.meetings[0].accountName === 'Fluence Energy',
+   'checklist: the booked meeting is unconfirmed until a touch or a mark, named from the read leg (' + JSON.stringify(pe1.meetings[0]) + ')');
+ok(!JSON.stringify(pe1).includes('private@example.com') && !JSON.stringify(pe1).includes('+15550000000'), 'D9: no email or phone anywhere in the checklist');
+const peAudit = counters.audit.filter((a) => a.op === 'events_postevent').pop();
+ok(peAudit && peAudit.details.cards === 3 && !JSON.stringify(peAudit).includes('Jane Doe') && !JSON.stringify(peAudit).includes('Fluence'),
+   'audit: the post-event row carries counts and the slug — never a card field or an account name (D9)');
+
+// a later ordinary touch within 14 days infers `held`
+const touch = nwPeer({ parameter: { t: TOKEN, nop: 'interaction', owner: OWNER }, postData: { type: 'application/json', contents: JSON.stringify({ owner: OWNER, interactions: [
+  { contactId: C_JANE, accountId: 'a-0000000000001', kind: 'note', date: '2026-09-05', summary: 'Sent the Gridstack deck', evidence: 'https://drive.example/deck', eventSlug: 'omega-2026' } ] }) } });
+ok(touch.success && touch.written === 1, 'the write leg accepts a `note` interaction (the kind list gained it for the mark)');
+const pe2 = op(ADMIN, 'postevent', { slug: 'omega-2026' });
+ok(pe2.meetings[0].held === 'yes' && pe2.meetings[0].inferred === true && pe2.meetings[0].mark === '' && pe2.checklist.meetingsHeld === 1,
+   'held: a later note on the same contact within 14 days infers the meeting was held (' + JSON.stringify(pe2.meetings[0]) + ')');
+ok(pe2.plan.written === false && planRows().length === 1 && JSON.stringify(pe2.roi) === JSON.stringify({ cards: 3, meetingsBooked: 1, meetingsHeld: 0, stageMoves: 1 }),
+   'ROI: a later open re-reads the row and never rewrites it — the recorded line still says 0 held until a mark (' + JSON.stringify(pe2.roi) + ')');
+
+// the explicit mark beats the inference, in both directions
+const markNo = op(ADMIN, 'posteventmark', { id: omegaBook.meeting.id, held: 'no' });
+ok(markNo.success === true && markNo.held === 'no' && /^i-[0-9a-z]{13}$/.test(markNo.interactionId) && markNo.meetingsHeld === 0,
+   'posteventmark: `no` writes the note Interaction and the count drops back to zero (' + JSON.stringify([markNo.error, markNo.meetingsHeld]) + ')');
+const markRow = iRows().filter((x) => icol(x, 'Evidence Link') === omegaBook.meeting.id && icol(x, 'Kind') === 'note')[0];
+ok(markRow && icol(markRow, 'Summary') === 'Meeting not held' && icol(markRow, 'Contact ID') === C_JANE && icol(markRow, 'Event Slug') === 'omega-2026',
+   'posteventmark: the mark is a `note` Interaction on the contact with the mt- id as evidence and the event slug');
+ok(markNo.meetings[0].mark === 'no' && markNo.meetings[0].held === 'no' && markNo.meetings[0].inferred === true,
+   'posteventmark: an explicit `no` beats the inference — the later touch is still there and still ignored');
+ok(JSON.stringify(JSON.parse(planRows()[0][4]).roi) === JSON.stringify({ cards: 3, meetingsBooked: 1, meetingsHeld: 0, stageMoves: 1 }), 'posteventmark: the Plans row\'s meetings are refreshed, cards and stage moves left as recorded');
+const markYes = op(ADMIN, 'posteventmark', { id: omegaBook.meeting.id, held: 'yes' });
+ok(markYes.success && markYes.meetingsHeld === 1 && markYes.meetings[0].mark === 'yes' && JSON.parse(planRows()[0][4]).roi.meetingsHeld === 1,
+   'posteventmark: the newest mark wins and the recorded line follows it (' + JSON.stringify([markYes.meetingsHeld, JSON.parse(planRows()[0][4]).roi]) + ')');
+ok(op(ADMIN, 'posteventmark', { id: 'mt-nope', held: 'yes' }).error === 'bad_meeting_id'
+   && op(ADMIN, 'posteventmark', { id: omegaBook.meeting.id, held: 'maybe' }).error === 'bad_held'
+   && op(ADMIN, 'posteventmark', { id: 'mt-0000000000009', held: 'yes' }).error === 'not_found', 'posteventmark: every refusal by name');
+ok(op(ADMIN, 'postevent', { slug: 'omega-2026' }).checklist.meetingsHeld === 1, 'checklist: the mark survives the next open');
+
+// the narrative link
+ok(op(ADMIN, 'plannarrative', { slug: 'omega-2026', link: 'not a url' }).error === 'bad_link'
+   && op(ADMIN, 'plannarrative', { slug: 'Nope!' }).error === 'bad_slug'
+   && op(ADMIN, 'plannarrative', { slug: 'alpha-2026', link: 'https://drive.example/x' }).error === 'not_found', 'plannarrative: every refusal by name');
+const narr = op(ADMIN, 'plannarrative', { slug: 'omega-2026', link: 'https://drive.google.com/file/d/abc/view' });
+ok(narr.success === true && narr.planId === pe1.plan.id && planRows()[0][5] === 'https://drive.google.com/file/d/abc/view', 'plannarrative: the Drive URL lands on the Plans row');
+const narrAudit = counters.audit.filter((a) => a.op === 'events_plannarrative').pop();
+ok(narrAudit && narrAudit.details.linked === 1 && !JSON.stringify(narrAudit).includes('drive.google.com'), 'audit: the narrative row carries the plan id and a flag — never the URL');
+ok(op(ADMIN, 'postevent', { slug: 'omega-2026' }).plan.narrativeLink === 'https://drive.google.com/file/d/abc/view', 'plannarrative: the link is read back on the next open');
+ok(op(ADMIN, 'plannarrative', { slug: 'omega-2026', link: '' }).success === true && planRows()[0][5] === '', 'plannarrative: an empty link clears it');
+
+// the priorRoi term — next year's edition of the same series, and nothing else
+const recAfter = op(ADMIN, 'recommend');
+const bySlugAfter = {}; (recAfter.events || []).forEach((x) => { bySlugAfter[x.slug] = x; });
+ok(recAfter.weights.priorRoi === 0.05, 'priorRoi: seeded into Tuning at 0.05 — a nudge, not a reordering (§5.4)');
+ok(bySlugAfter['omega-2027'] && bySlugAfter['omega-2027'].terms.priorRoi === 0.275 && bySlugAfter['omega-2027'].why.priorRoi
+   && bySlugAfter['omega-2027'].why.priorRoi.slug === 'omega-2026' && bySlugAfter['omega-2027'].why.priorRoi.year === 2026,
+   'priorRoi: (3 cards + 3x1 held + 5x1 move) / 40 = 0.275 for next year\'s edition, the earlier edition named in the why (' + JSON.stringify(bySlugAfter['omega-2027'] && bySlugAfter['omega-2027'].terms.priorRoi) + ')');
+ok(bySlugAfter['alpha-2026'].terms.priorRoi === 0 && bySlugAfter['alpha-2026'].why.priorRoi === null && bySlugAfter['beta-2027'].terms.priorRoi === 0,
+   'priorRoi: zero for a series with no earlier edition on record — every event until a show is closed out');
+ok(recAfter.signals === 5, 'extraSlug: an ordinary score keeps only the upcoming rows — the past show\'s three and the empty-slug docket row all dropped (' + recAfter.signals + ')');
+ok(vm.runInContext('EV_ROI_STAGES_MOVED', ctx).indexOf('lost') < 0 && vm.runInContext('EV_ROI_STAGES_MOVED', ctx).indexOf('won') >= 0,
+   'ROI: `lost` is never a stage move although it is past prospecting in the enum — a terminal negative would inflate next year\'s prior');
+
+// not_configured degrades the close-out — never fails
+delete props.NETWORK_PEER_TOKEN;
+counters.urls = [];
+const peNc = op(ADMIN, 'postevent', { slug: 'omega-2026' });
+ok(peNc.success === true && peNc.notConfigured === true && peNc.checklist.cards === 0 && peNc.checklist.meetingsBooked === 1 && peNc.boothAccounts === 0
+   && peNc.checklist.followUp.count === 0 && !counters.urls.some((u) => u.indexOf(NW_EXEC) === 0),
+   'not_configured: the checklist still answers from this app\'s own Meetings rows — no cards, no booths, zero Network calls (' + JSON.stringify([peNc.success, peNc.notConfigured, peNc.checklist]) + ')');
+ok(op(ADMIN, 'posteventmark', { id: omegaBook.meeting.id, held: 'yes' }).notConfigured === true, 'not_configured: a mark says so rather than failing');
+props.NETWORK_PEER_TOKEN = TOKEN;
+
 // ── 7. Zero live calls; the D12 / D15 greps ───────────────────────────────
 ok(counters.escaped === 0 && nwCounters.fetch === 0, 'zero live calls: every fetch answered by a fixture, the Network far side never fetched');
 const planBlock = src.slice(src.indexOf('// PROJECT: ── E5 session 1 — the deterministic plan'), src.indexOf('// PROJECT START — Add your project-specific code here\n// PROJECT END'));
 const page = P('live-site-pages/Events.html');
+// E5 s2 — the same greps over Network.gs's widened leg and the whole served page
+const nwLeg = extract(nwSrc, 'nwPeerEventRead_');
+['maps.googleapis', 'places', 'GmailApp', 'CalendarApp', 'MailApp', 'linkedin.com'].forEach((needle) => {
+  ok(nwLeg.indexOf(needle) < 0, 'D12 / D15 grep: the widened read leg never names ' + needle);
+});
 ['maps.googleapis', 'places.googleapis', 'PLACES_API_KEY', 'GmailApp', 'CalendarApp', 'MailApp', 'linkedin.com'].forEach((needle) => {
   ok(planBlock.indexOf(needle) < 0, 'D12 / D15 grep: the plan block never names ' + needle);
 });
@@ -497,11 +658,13 @@ ok(extract(nwSrc, 'nwPeerInteractionWrite_').indexOf('nwInteractionAdd_(') > 0, 
 
 console.log('check-events-plan: ' + checks + ' checks, ' + failures + ' failure(s)');
 if (failures) process.exit(1);
-console.log('ALL CHECKS PASSED — the booth list ranks by the score\'s own account and segment terms against hand-computed values with the dossier line verbatim; '
+console.log('ALL CHECKS PASSED (E5 sessions 1 and 2) — the booth list ranks by the score\'s own account and segment terms against hand-computed values with the dossier line verbatim; '
   + 'the sessions filter keeps a segment title, a Network contact and a dossier decision maker and drops the rest, the agenda read once and cached; '
   + 'the day plan frames each day from the registry (a default frame said so), fixes the sessions and the meeting, places the ranked visits and offers the open slots; '
   + 'Overpass answers three venues within 600 m, the cache serves the second plan with zero fetches, a failure is empty and uncached; '
   + 'a booking writes the meeting Interaction through Network\'s real nop=interaction leg with the mt- id as evidence and answers the ICS with the right DTSTART; unbook keeps the record; '
-  + 'the six token-boundary cases are flat denied with zero reads; not_configured degrades every read and write. Zero live calls.');
+  + 'the six token-boundary cases are flat denied with zero reads; not_configured degrades every read and write. '
+  + 'The close-out refuses a show that is not over, counts three cards, one booking and one stage move past prospecting, writes the ROI line once into the Plans row and re-reads it, '
+  + 'infers a held meeting from a later touch inside 14 days and lets an explicit mark beat it either way, carries the narrative link, and reads the whole line back as next year\'s priorRoi at 0.275. Zero live calls.');
 
 // Developed by: LightAISolutions

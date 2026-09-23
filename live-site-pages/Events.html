@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.09w">
+  <meta name="build-version" content="v01.10w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -498,6 +498,22 @@
     #ev-sheet .ev-sheet-tab[aria-selected="true"] { color: var(--ev-accent); border-bottom-color: var(--ev-accent); }
     #ev-sheet .ev-plan > .ev-lbl { display: block; font: 11px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); margin: 16px 0 6px; }
     #ev-sheet .ev-plan-head { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+    /* E5 s2 — the Post-event close-out at the top of the Plan tab */
+    #ev-sheet .ev-post { border: 1px solid var(--ev-line); border-radius: 10px; padding: 10px 12px; margin: 12px 0 4px; background: var(--ev-tint, transparent); }
+    #ev-sheet .ev-post > .ev-lbl:first-child { margin-top: 0; }
+    #ev-sheet .ev-post-list { list-style: none; margin: 0 0 8px; padding: 0; }
+    #ev-sheet .ev-post-list li { padding: 5px 0; border-bottom: 1px dashed var(--ev-line); font: 14px/1.5 var(--ev-serif); color: var(--ev-ink); }
+    #ev-sheet .ev-post-list li:last-child { border-bottom: 0; }
+    #ev-sheet .ev-post-roi { padding: 8px 0; border-top: 1px solid var(--ev-line); }
+    #ev-sheet .ev-post-roi b { font: 600 15px/1.4 var(--ev-mono); color: var(--ev-ink); }
+    #ev-sheet .ev-post-meets { list-style: none; margin: 8px 0 0; padding: 0; }
+    #ev-sheet .ev-post-meet { padding: 8px 0; border-top: 1px dashed var(--ev-line); }
+    #ev-sheet .ev-post-marks { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    #ev-sheet .ev-post-narr { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 6px; }
+    #ev-sheet .ev-post-narr .ev-url { flex: 1 1 200px; min-width: 0; }
+    #ev-sheet .ev-post-json { margin: 8px 0; }
+    #ev-sheet .ev-post-ta { width: 100%; box-sizing: border-box; font: 11px/1.5 var(--ev-mono); color: var(--ev-ink); background: transparent;
+      border: 1px solid var(--ev-line); border-radius: 8px; padding: 6px 8px; resize: vertical; }
     #ev-sheet .ev-plan-src, #ev-sheet .ev-plan-terms { font: 11px/1.6 var(--ev-mono); color: var(--ev-faint); }
     #ev-sheet .ev-plan-booths, #ev-sheet .ev-plan-sessions, #ev-sheet .ev-plan-venues, #ev-sheet .ev-plan-meetings { list-style: none; margin: 0; padding: 0; }
     #ev-sheet .ev-plan-booth, #ev-sheet .ev-plan-session, #ev-sheet .ev-plan-meetings li { padding: 8px 0; border-bottom: 1px dashed var(--ev-line); }
@@ -5513,10 +5529,17 @@ function evRenderPlan(e, box) {
   var head = evEl('div', 'ev-plan-head'); head.id = 'ev-plan-head';
   head.appendChild(evEl('span', 'ev-plan-src', 'Built ' + new Date(d.built).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' · ' + d.booths.length + ' booth' + (d.booths.length === 1 ? '' : 's')
     + ' · ' + d.sessions.length + ' session' + (d.sessions.length === 1 ? '' : 's') + ' · ' + d.venues.length + ' venue' + (d.venues.length === 1 ? '' : 's') + (d.score ? ' · score ' + Number(d.score.score).toFixed(2) : '')));
-  head.appendChild(evPill('Rebuild', false, function() { delete _evPlans[e.slug]; evRenderPlan(e, box); }));
+  head.appendChild(evPill('Rebuild', false, function() { delete _evPlans[e.slug]; delete _evPost[e.slug]; evRenderPlan(e, box); }));
+  // E5 s2 — the narrative command's input. The brief puts this pill in the
+  // Post-event section; it also lives here because the narrative plan is
+  // most use BEFORE the show, and a plan that is not over yet has no
+  // Post-event section to carry it.
+  head.appendChild(evPill('Copy plan as JSON', false, function() { evPlanCopyCard(e, d, box); }));
   box.appendChild(head);
   if (d.notConfigured) box.appendChild(evEl('div', 'ev-netnote ev-connect', 'Connect Network to plan by account — the two apps are not linked yet, so there are no booths, no contacts and no meetings to book.'));
   else if (d.networkError) box.appendChild(evEl('div', 'ev-netnote', evErrText(d.networkError)));
+  // 0 · the close-out, once the show is over (E5 s2)
+  if (evIsOver(d.event.end)) evRenderPost(e, d, box);
   // 1 · booths
   box.appendChild(evEl('div', 'ev-lbl', 'Booths worth visiting'));
   if (!d.booths.length) box.appendChild(evEl('div', 'ev-netnote', d.notConfigured ? 'No booths without Network.' : 'No Network account has a signal for this event yet — the weekly sweep and the signal form on Details add them.'));
@@ -5753,6 +5776,165 @@ function evPlanUnbook(e, id, btn, box) {
   evApiBody('planunbook', { id: id }, function(res) {
     if (!(res && res.success)) { btn.textContent = 'Unbook'; btn.removeAttribute('aria-disabled'); var st = document.getElementById('ev-plan-head'); if (st) st.appendChild(evEl('div', 'ev-status ev-status-err', evErrText(res && res.error))); return; }
     var p = _evPlans[e.slug]; if (p && p.data) evPlanRemoveMeeting(p.data, id);
+    evRenderPlan(e, box);
+  });
+}
+
+// PROJECT: ── E5 session 2 — the Post-event section on the Plan tab (design plan §5.6 item 5; D9 · D12 · D15) ──
+// Once today is past the event's `end`, the Plan tab opens with the
+// close-out: the checklist (cards scanned, meetings booked and held, the
+// follow-up mailing), the ROI line as it was recorded, Mark held / not held
+// per meeting, the Drive link of the session-authored narrative plan, and
+// Copy plan as JSON — the input the `events plan <event>` command reads.
+// Fetched once per sheet open (D14: on demand, never polled); Rebuild
+// refetches it with the plan. Nothing here sends anything (D15).
+var _evPost = {};             // slug → { state: loading | ok | <error>, data }
+function evTodayLocal() { try { return new Date().toLocaleDateString('en-CA'); } catch (e) { return new Date().toISOString().slice(0, 10); } }
+function evIsOver(endDay) { return !!endDay && evTodayLocal() > String(endDay); }
+function evLoadPostEvent(slug, cb) {
+  _evPost[slug] = { state: 'loading', data: null };
+  evApi('postevent', { slug: slug }, function(res) {
+    if (!(res && res.success)) { _evPost[slug] = { state: (res && res.error) || 'empty_response', data: null }; cb(_evPost[slug]); return; }
+    _evPost[slug] = { state: 'ok', data: res };
+    cb(_evPost[slug]);
+  });
+}
+// The narrative command's input: the whole deterministic plan plus the
+// close-out when there is one. Copied to the clipboard and shown in a field
+// so it can be selected by hand when the clipboard is refused.
+function evPlanJson(d, post) {
+  return JSON.stringify({ schemaVersion: 1, kind: 'events-plan', exported: new Date().toISOString(),
+    slug: d.slug, plan: d, postEvent: post || null }, null, 2);
+}
+function evPlanCopyCard(e, d, host) {
+  var card = document.getElementById('ev-plan-json');
+  if (card) { card.parentNode.removeChild(card); return; }
+  card = evEl('div', 'ev-post-json'); card.id = 'ev-plan-json';
+  card.appendChild(evEl('div', 'ev-plan-src', 'Paste this into a session and say “events plan ' + d.slug + '” — the session writes the narrative plan from it and from the repo’s own dossiers. Nothing here is sent anywhere.'));
+  var ta = evEl('textarea', 'ev-post-ta'); ta.id = 'ev-plan-json-text'; ta.readOnly = true; ta.rows = 6;
+  ta.value = evPlanJson(d, (_evPost[d.slug] && _evPost[d.slug].state === 'ok') ? _evPost[d.slug].data : null);
+  ta.setAttribute('aria-label', 'The plan as JSON');
+  card.appendChild(ta);
+  var note = evEl('div', 'ev-status'); card.appendChild(note);
+  var copy = evEl('button', 'ev-btn', 'Copy to clipboard'); copy.type = 'button';
+  copy.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    evCopyText(ta.value).then(function(done) {
+      note.textContent = done ? '✓ Copied — ' + ta.value.length.toLocaleString() + ' characters.' : 'The clipboard was refused — select the text above and copy it by hand.';
+      note.className = 'ev-status' + (done ? ' ev-status-ok' : '');
+      if (!done) { ta.focus(); ta.select(); }
+    });
+  });
+  card.appendChild(copy);
+  host.appendChild(card);
+  ta.focus(); ta.select();
+}
+function evPostCount(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+function evRenderPost(e, d, box) {
+  var wrap = evEl('div', 'ev-post'); wrap.id = 'ev-post'; box.appendChild(wrap);
+  wrap.appendChild(evEl('div', 'ev-lbl', 'After the show'));
+  var p = _evPost[e.slug];
+  if (!p || p.state === 'loading') {
+    wrap.appendChild(evEl('div', 'ev-netnote', 'Counting the cards, the meetings and the stage moves…'));
+    if (!p) evLoadPostEvent(e.slug, function() { if (_evSheetSlug === e.slug && box.parentNode && _evSheetTab === 'plan') evRenderPlan(e, box); });
+    return;
+  }
+  if (p.state !== 'ok') {
+    wrap.appendChild(evEl('div', 'ev-netnote', p.state === 'not_over' ? 'The checklist opens the day after the show ends.' : evErrText(p.state)));
+    return;
+  }
+  var post = p.data, c = post.checklist;
+  if (post.notConfigured) wrap.appendChild(evEl('div', 'ev-netnote ev-connect', 'Connect Network to count the cards and the stage moves — only the meetings you booked here are counted.'));
+  else if (post.networkError) wrap.appendChild(evEl('div', 'ev-netnote', evErrText(post.networkError)));
+  // the checklist
+  var ul = evEl('ul', 'ev-post-list'); ul.id = 'ev-post-list';
+  ul.appendChild(evEl('li', null, evPostCount(c.cards, 'card scanned', 'cards scanned') + ' at the show'));
+  ul.appendChild(evEl('li', null, evPostCount(c.meetingsBooked, 'meeting', 'meetings') + ' booked · ' + c.meetingsHeld + ' held'
+    + (c.meetingsUnconfirmed ? ' · ' + c.meetingsUnconfirmed + ' still unconfirmed' : '')));
+  var liF = evEl('li');
+  var a = evEl('a', null, 'Draft the follow-up to ' + evPostCount(c.followUp.count, 'contact', 'contacts'));
+  a.href = c.followUp.href; a.id = 'ev-post-followup';
+  liF.appendChild(a);
+  liF.appendChild(evEl('span', 'ev-plan-src', ' — opens Network; set the Source Event filter to this show there, then Start a mailing. Nothing is ever sent from either app.'));
+  ul.appendChild(liF);
+  ul.appendChild(evEl('li', null, post.boothAccounts + ' booth account' + (post.boothAccounts === 1 ? '' : 's') + ' · '
+    + evPostCount(post.stageMoves.length, 'is', 'are') + ' past prospecting'
+    + (post.stageMoves.length ? ' — ' + post.stageMoves.map(function(x) { return x.name + ' (' + x.stage + ')'; }).join(', ') : '')));
+  wrap.appendChild(ul);
+  // the ROI line as recorded
+  var roi = post.roi;
+  var roiBox = evEl('div', 'ev-post-roi'); roiBox.id = 'ev-post-roi';
+  roiBox.appendChild(evEl('b', null, 'ROI · ' + roi.cards + ' cards · ' + roi.meetingsBooked + ' booked · ' + roi.meetingsHeld + ' held · ' + roi.stageMoves + ' stage move' + (roi.stageMoves === 1 ? '' : 's')));
+  roiBox.appendChild(evEl('div', 'ev-plan-src', 'Recorded ' + String(post.plan.day || '') + (post.plan.written ? ' — just now' : '') + '. It is written once and refreshed when you mark a meeting, and it is read back as a small prior for the next edition of this series — never for this year’s list.'));
+  wrap.appendChild(roiBox);
+  // the meetings, each markable
+  if (post.meetings.length) {
+    var ol = evEl('ul', 'ev-post-meets'); ol.id = 'ev-post-meets';
+    post.meetings.forEach(function(m) {
+      var li = evEl('li', 'ev-post-meet'); li.dataset.meetingId = m.id;
+      var top = evEl('div');
+      top.appendChild(evEl('b', null, m.contactName || m.contactId));
+      if (m.accountName) top.appendChild(evEl('span', 'ev-plan-src', ' · ' + m.accountName));
+      top.appendChild(evEl('span', 'ev-plan-src', ' · ' + evDayLabel(m.start.slice(0, 10)) + ' ' + evPlanTime(m.start.slice(11, 16)) + '–' + evPlanTime(m.end.slice(11, 16)) + (m.place ? ' · ' + m.place : '')));
+      li.appendChild(top);
+      var state = evEl('div', 'ev-chips');
+      state.appendChild(evPlanChip(m.held === 'yes' ? 'held' : m.held === 'no' ? 'not held' : 'unconfirmed', m.held === 'yes' ? 'ev-badge-confirmed' : ''));
+      if (!m.mark && m.held === 'yes') state.appendChild(evEl('span', 'ev-plan-src', 'inferred from a later touch on the contact'));
+      if (!m.interactionId) state.appendChild(evEl('span', 'ev-plan-src', 'not recorded in Network'));
+      li.appendChild(state);
+      var row = evEl('div', 'ev-post-marks');
+      ['yes', 'no'].forEach(function(v) {
+        var b = evPill(v === 'yes' ? 'Mark held' : 'Mark not held', m.mark === v, function() { evPostMark(e, box, m.id, v, b); });
+        b.dataset.mark = v; row.appendChild(b);
+      });
+      li.appendChild(row);
+      ol.appendChild(li);
+    });
+    wrap.appendChild(ol);
+  }
+  // the narrative plan
+  wrap.appendChild(evEl('div', 'ev-lbl', 'Narrative plan'));
+  var nf = evEl('div', 'ev-post-narr');
+  var link = evEl('input', 'ev-url'); link.id = 'ev-post-link'; link.type = 'url'; link.placeholder = 'https://drive.google.com/…';
+  link.value = post.plan.narrativeLink || ''; link.setAttribute('aria-label', 'Narrative plan link');
+  nf.appendChild(link);
+  var nstat = evEl('div', 'ev-status'); nstat.id = 'ev-post-narrstatus';
+  var save = evEl('button', 'ev-btn', 'Save link'); save.type = 'button'; save.id = 'ev-post-savelink';
+  save.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    var v = link.value.trim();
+    if (v && !/^https?:\/\/\S+$/i.test(v)) { nstat.textContent = 'That is not a link — paste the Drive URL, or clear the field to remove it.'; nstat.className = 'ev-status ev-status-err'; link.focus(); return; }
+    save.textContent = 'Saving…'; save.setAttribute('aria-disabled', 'true');
+    evApiBody('plannarrative', { slug: e.slug, link: v }, function(res) {
+      save.textContent = 'Save link'; save.removeAttribute('aria-disabled');
+      if (!(res && res.success)) { nstat.textContent = evErrText(res && res.error); nstat.className = 'ev-status ev-status-err'; return; }
+      post.plan.narrativeLink = v;
+      nstat.textContent = v ? '✓ Saved on the plan.' : '✓ Cleared.'; nstat.className = 'ev-status ev-status-ok';
+    });
+  });
+  nf.appendChild(save);
+  nf.appendChild(evPill('Copy plan as JSON', false, function() { evPlanCopyCard(e, d, wrap); }));
+  nf.appendChild(nstat);
+  wrap.appendChild(nf);
+  wrap.appendChild(evEl('div', 'ev-plan-src', 'The narrative plan is written by a session from the JSON above — not by this page and not by any model inside it. Paste the JSON, say “events plan ' + e.slug + '”, then put the Drive link here.'));
+}
+function evPostMark(e, box, id, held, btn) {
+  var was = btn.textContent;
+  btn.textContent = 'Saving…'; btn.setAttribute('aria-disabled', 'true');
+  evApiBody('posteventmark', { id: id, held: held }, function(res) {
+    btn.textContent = was; btn.removeAttribute('aria-disabled');
+    if (!(res && res.success)) {
+      var st = document.getElementById('ev-post-roi');
+      if (st) { var er = evEl('div', 'ev-status ev-status-err', evErrText(res && res.error)); st.appendChild(er); }
+      return;
+    }
+    var p = _evPost[e.slug];
+    if (p && p.data) {
+      p.data.meetings = res.meetings || p.data.meetings;
+      p.data.checklist.meetingsHeld = res.meetingsHeld;
+      p.data.checklist.meetingsUnconfirmed = (res.meetings || []).filter(function(m) { return m.held === 'unconfirmed'; }).length;
+      if (res.roi) p.data.roi = res.roi;
+    }
     evRenderPlan(e, box);
   });
 }

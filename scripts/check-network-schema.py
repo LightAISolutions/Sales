@@ -67,7 +67,8 @@ ALLOWED_KEYS = {'contactId', 'accountId', 'absorbedId', 'duplicateOf', 'interact
                 'total', 'filtered', 'applied', 'unchanged', 'excluded',   # N3 s1: the list logs matched / total / a filtered flag; nop=bulk applied / unchanged; nop=export the rows left out
                 'mailingId', 'draftId', 'skipped', 'saved', 'sent', 'discarded', 'edited', 'templates',   # N3 s2: nop=drafts the m- id + counts; nop=draftstatus the d- / i- ids + flags; nop=mailings counts; nop=mycard a saved flag
                 'items', 'people', 'covered',   # E4 s3: nop=people logs the article COUNT, the person COUNT and a covered flag — never a name, a slug or a key
-                'matched', 'unmatched'}   # N4 s1: nop=import logs the row / matched / unmatched COUNTS; nop=reconnect contacts / total / excluded; nop=importconfirm rows / written / rejected — never an address, a name, a line or the reference
+                'matched', 'unmatched',   # N4 s1: nop=import logs the row / matched / unmatched COUNTS; nop=reconnect contacts / total / excluded; nop=importconfirm rows / written / rejected — never an address, a name, a line or the reference
+                'meetings', 'marked'}   # E5 s2: nop=interaction's eventSlug read logs the contact / meeting / marked COUNTS — never the slug, a name or a card field
 
 
 def schema_enums(text):

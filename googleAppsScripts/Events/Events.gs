@@ -1,4 +1,4 @@
-var VERSION = "v01.08g";
+var VERSION = "v01.09g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -735,6 +735,12 @@ function handleEventsOp_(e) {
     if (op === 'plancontacts') { evRequire_(sess, 'recommend', 'events_plancontacts'); return evPlanContactsOp_(sess, p); }
     if (op === 'planmeeting') { evRequire_(sess, 'recommend', 'events_planmeeting'); return evPlanMeetingOp_(sess, p); }
     if (op === 'planunbook') { evRequire_(sess, 'recommend', 'events_planunbook'); return evPlanUnbookOp_(sess, p); }
+    // E5 session 2 — closing a starred event out, behind the same capability.
+    // postevent is a read (and writes the ROI line once); posteventmark and
+    // plannarrative are body-POST writes. Nothing here sends anything.
+    if (op === 'postevent') { evRequire_(sess, 'recommend', 'events_postevent'); return evPostEventOp_(sess, p); }
+    if (op === 'posteventmark') { evRequire_(sess, 'recommend', 'events_posteventmark'); return evPostEventMarkOp_(sess, p); }
+    if (op === 'plannarrative') { evRequire_(sess, 'recommend', 'events_plannarrative'); return evPlanNarrativeOp_(sess, p); }
     return { success: false, error: 'unknown_events_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -3391,7 +3397,7 @@ function evPollApplied_(sess, p) {
 // Audit rows carry counts only — never an account name.
 var EV_SEGMENTS_URL = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'profiler-data/profiler-segments.json';
 var EV_COMPANIES_URL = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'profiler-data/profiler-companies.json';
-var EV_SCORE_TERMS = ['segmentFit', 'accountPresence', 'corpusSalience', 'proximity', 'conflict', 'relevancePrior'];
+var EV_SCORE_TERMS = ['segmentFit', 'accountPresence', 'corpusSalience', 'proximity', 'conflict', 'relevancePrior', 'priorRoi'];
 // Term · Weight · Note — the rows evTuning_ seeds once into an empty Tuning tab (EVENTS-SCHEMA.md §5, §6)
 var EV_TUNING_DEFAULTS = [
   ['segmentFit', 0.35, 'share of the event audience inside your two seats\' segments (profiler-segments.json seats, the union)'],
@@ -3400,6 +3406,7 @@ var EV_TUNING_DEFAULTS = [
   ['proximity', 0.10, '1 in a preferred region, 0.5 in the same country as one, else 0'],
   ['conflict', 0.25, 'SUBTRACTED in full when the dates overlap another starred event you are registered for or attended'],
   ['relevancePrior', 0.05, 'the registry\'s relevance / 5'],
+  ['priorRoi', 0.05, 'what an EARLIER edition of this series returned — cards + 3 x meetings held + 5 x stage moves, over 40, capped at 1; 0 with no earlier edition'],
   ['regions', '', 'comma list of preferred region codes, e.g. TX,CA,NV — empty scores proximity 0 for every event']
 ];
 var EV_STAGE_WEIGHT = { negotiation: 1.0, shortlist: 1.0, rfp: 0.8, discovery: 0.8, prospecting: 0.6, none: 0.4 };
@@ -3488,7 +3495,7 @@ function evRound2_(x) { var r = Math.round(x * 100) / 100; return r === 0 ? 0 : 
 // signalsBySlug: slug → [ { accountId, kind, confidence, evidenceUrl } ],
 // mentionDates, datesOk, regions, countries, starred: [ { slug, name, start, end } ] }
 function evScoreEvent_(ev, ctx, weights) {
-  var terms = {}, why = { segments: [], accounts: [], mentions: [], conflicts: [] };
+  var terms = {}, why = { segments: [], accounts: [], mentions: [], conflicts: [], priorRoi: null };
   // segmentFit
   var audience = (ev.audience || []).map(String);
   if (ctx.seatsOk && audience.length) {
@@ -3542,6 +3549,24 @@ function evScoreEvent_(ev, ctx, weights) {
   terms.conflict = why.conflicts.length ? -1 : 0;
   // relevancePrior
   terms.relevancePrior = Math.max(0, Math.min(1, (Number(ev.relevance) || 0) / 5));
+  // priorRoi (E5 s2) — what an EARLIER edition of this series actually
+  // returned, recorded by eop=postevent in its Plans row. A small prior by
+  // design (default weight 0.05, §5.4): the ROI line is recorded this
+  // session and read by the score only as a nudge, so nothing reorders
+  // until the developer has a year of data. Zero for a series with no
+  // earlier edition on record — which is every event until the first show
+  // is closed out.
+  terms.priorRoi = 0;
+  var priors = ctx.priorRoi ? (ctx.priorRoi[evSeriesBase_(ev.series || ev.name)] || []) : [];
+  var thisYear = Number(String(ev.start || '').slice(0, 4)) || 0;
+  for (var pr = 0; pr < priors.length; pr++) {          // newest first — the most recent earlier edition wins
+    if (!(priors[pr].year && thisYear && priors[pr].year < thisYear)) continue;
+    terms.priorRoi = Math.min(1, (priors[pr].cards + EV_PRIOR_ROI_MEETING * priors[pr].meetingsHeld
+      + EV_PRIOR_ROI_STAGE * priors[pr].stageMoves) / EV_PRIOR_ROI_DIVISOR);
+    why.priorRoi = { slug: priors[pr].slug, year: priors[pr].year, cards: priors[pr].cards,
+      meetingsHeld: priors[pr].meetingsHeld, stageMoves: priors[pr].stageMoves };
+    break;
+  }
   var score = 0;
   for (var t = 0; t < EV_SCORE_TERMS.length; t++) score += (weights[EV_SCORE_TERMS[t]] || 0) * terms[EV_SCORE_TERMS[t]];
   return { slug: String(ev.slug), score: evRound2_(score), terms: terms, why: why };
@@ -3555,7 +3580,11 @@ function evScoreEvent_(ev, ctx, weights) {
 // E5: `keep` attaches the signal rows and the account map to the answer
 // (signalsBySlug, accountsById) for the plan's booth list — the score read
 // once, its rows reused; the page's eop=recommend never passes it.
-function evRecommend_(sess, keep) {
+// E5 s2: `extraSlug` names ONE event whose signals survive the upcoming
+// filter although it is over — the post-event checklist needs the booth
+// accounts of a show that has already happened, and this is the only way to
+// get them without a second pass over every account.
+function evRecommend_(sess, keep, extraSlug) {
   var tabs = ensureEventsTabs_();
   var tuning = evTuning_(tabs.tuning);
   var reg = evRegistry_();
@@ -3568,6 +3597,7 @@ function evRecommend_(sess, keep) {
     if (String(row.end || row.start || '') < today) continue;
     upcoming.push(row); upSet[slug] = true;
   }
+  var keepSlug = String(extraSlug || '');   // E5 s2 — a past event's rows kept for the post-event read, never scored
   // Network's scored accounts — once; the signals per account, capped
   var accountsById = {}, accountIds = [], notConfigured = false, networkError = '';
   var up = evNetworkProxy_('accounts', { owner: sess.email });
@@ -3586,7 +3616,7 @@ function evRecommend_(sess, keep) {
     if (!(sres && sres.success)) continue;
     (sres.signals || []).forEach(function(sg) {
       var es = String((sg && sg.eventSlug) || '');
-      if (!upSet[es]) return;
+      if (!upSet[es] && !(keepSlug && es === keepSlug)) return;   // an empty slug (a docket, a press quote) is never kept
       signalsRead++;
       var sgRow = { accountId: accountIds[i], kind: sg.kind, confidence: sg.confidence, evidenceUrl: sg.evidenceUrl };
       if (sg.personName) { sgRow.personName = String(sg.personName); if (sg.personTitle) sgRow.personTitle = String(sg.personTitle); }   // E4: the person a roster signal carries
@@ -3617,9 +3647,12 @@ function evRecommend_(sess, keep) {
       if (rr.region && tuning.regions.indexOf(String(rr.region).toUpperCase()) >= 0 && rr.country) countries[String(rr.country).toUpperCase()] = true;
     }
   }
+  // E5 s2 — the ROI lines an earlier edition left behind (the Plans tab),
+  // keyed by series. One sheet read per score, no fetch.
+  var priorRoi = evPlansRoi_(tabs, String(sess.email || '').toLowerCase());
   var ctx = { today: today, seatSet: seats.error ? {} : seats.set, seatsOk: !seats.error, accountsById: accountsById,
               signalsBySlug: signalsBySlug, mentionDates: dates.error ? {} : dates.dates, datesOk: !dates.error,
-              regions: tuning.regions, countries: countries, starred: starred };
+              regions: tuning.regions, countries: countries, starred: starred, priorRoi: priorRoi };
   var events = upcoming.map(function(ev) { return evScoreEvent_(ev, ctx, tuning.weights); });
   events.sort(function(a, b) { return b.score - a.score || (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0); });
   auditLog('data_read', sess.email, 'events_recommend', { events: events.length, accounts: accountIds.length,
@@ -4803,12 +4836,17 @@ function evPlanMeetings_(tabs, owner, slug) {
 }
 // The contacts' names for the booked meetings — one read per account over
 // Network's pick-list leg; degrades to ids when Network is not configured.
-function evPlanMeetingNames_(meetings, owner, accountsById) {
-  var byAccount = {}, calls = 0;
+// E5 s2: `known` is an optional contactId → name map the caller already
+// holds (the post-event read leg answers every card it met at the show), so
+// an account whose meetings are all named already costs no call at all.
+// With no map the behaviour is exactly session 1's.
+function evPlanMeetingNames_(meetings, owner, accountsById, known) {
+  var byAccount = {}, calls = 0, seed = known || {};
   meetings.forEach(function(m) {
     var acct = accountsById[m.accountId];
-    m.accountName = acct ? String(acct.name || '') : '';
-    if (!byAccount[m.accountId]) { byAccount[m.accountId] = null; }
+    m.accountName = acct ? String(acct.name || '') : String(m.accountName || '');
+    m.contactName = String(seed[m.contactId] || '');
+    if (!m.contactName) byAccount[m.accountId] = null;
   });
   for (var id in byAccount) if (byAccount.hasOwnProperty(id) && EV_ACCOUNT_ID_RE.test(id)) {
     var res = evNetworkProxy_('interaction', { owner: owner, accountId: id }); calls++;
@@ -4816,7 +4854,7 @@ function evPlanMeetingNames_(meetings, owner, accountsById) {
     if (res && res.success) (res.contacts || []).forEach(function(c) { map[String(c.id)] = String(c.name || ''); });
     byAccount[id] = map;
   }
-  meetings.forEach(function(m) { m.contactName = (byAccount[m.accountId] && byAccount[m.accountId][m.contactId]) || ''; });
+  meetings.forEach(function(m) { if (!m.contactName) m.contactName = (byAccount[m.accountId] && byAccount[m.accountId][m.contactId]) || ''; });
   return calls;
 }
 
@@ -4954,6 +4992,254 @@ function evPlanUnbookOp_(sess, p) {
     return { success: true, removed: true, id: id, interactionId: String(vals[r][idx['Network Interaction ID']] || '') };
   }
   return { success: false, error: 'not_found' };
+}
+
+
+// PROJECT: ── E5 session 2 — the post-event checklist, the ROI line and the narrative link (design plan §5.6 item 5, D9 · D12 · D15 · D16; EVENTS-SCHEMA.md §5 Plans, §6, §8, §10) ──
+// The day after a starred event's `end`, three ops close it out. None of
+// them sends anything, none reads a card field, and none calls an AI.
+//   eop=postevent   — the CHECKLIST and the ROI line. Reads Network's
+//                     widened nop=interaction leg once (eventSlug=) for the
+//                     cards handed over at the show and the `meeting`
+//                     Interactions on the slug with their held state, joins
+//                     them to this app's own Meetings rows, and runs the
+//                     score ONCE with the past slug's signals kept so the
+//                     booth accounts' stages can be counted. Costs what a
+//                     plan build costs; fetched on demand, never polled.
+//   eop=posteventmark — the developer's verdict on one meeting, written as
+//                     a `note` Interaction (`Meeting held` / `Meeting not
+//                     held`, the mt- id as evidence) over the same write
+//                     leg. An explicit mark always beats the 14-day
+//                     inference. Refreshes meetingsHeld on the Plans row —
+//                     one read-leg call, no second score.
+//   eop=plannarrative — the Drive URL of the session-authored narrative
+//                     plan (the `events plan <event>` command, D12) onto
+//                     the Plans row's Narrative Link. An empty link clears
+//                     it. The audit row carries the plan id and a flag,
+//                     never the URL.
+// The ROI line is written ONCE into the event's Plans row (Day = the read
+// date, Items = the ROI JSON with the series and the year) and re-read on
+// later opens; a mark refreshes its meetings. It is read back by the score
+// as the `priorRoi` term for the SAME SERIES' next edition at the default
+// weight 0.05 — recorded now, barely acting until there is a year of data
+// (§5.4). Nothing here reorders this year's list.
+var EV_ROI_STAGES_MOVED = ['discovery', 'rfp', 'shortlist', 'negotiation', 'post-award', 'won'];
+// `lost` is past `prospecting` in NW_STAGES' order and is deliberately NOT
+// on that list: it is a terminal negative, and counting it would let a show
+// that produced only losses read as a productive one in next year's prior.
+// Under-counting is the safe error for a term that feeds a recommendation.
+var EV_PRIOR_ROI_DIVISOR = 40;                       // (cards + 3 × held + 5 × moves) / 40, capped at 1
+var EV_PRIOR_ROI_MEETING = 3;
+var EV_PRIOR_ROI_STAGE = 5;
+var EV_MEETING_MARK_HELD = 'Meeting held';           // mirrored byte for byte in Network.gs (NW_MEETING_MARK_HELD)
+var EV_MEETING_MARK_NOT = 'Meeting not held';        // mirrored byte for byte in Network.gs (NW_MEETING_MARK_NOT)
+var EV_NARRATIVE_LINK_MAX = 500;
+var EV_DRAFTS_DEEP_LINK = 'Network.html#drafts?sourceEvent=';   // relative, same Pages site — never a host in this file
+
+// The ROI lines already recorded, keyed by the series base, newest edition
+// first — the score's priorRoi input. One sheet read, no fetch. A row whose
+// Items is not an `roi` object is skipped in silence (the tab also holds
+// whatever a future plan writer puts there).
+function evPlansRoi_(tabs, owner) {
+  var sheet = tabs.plans, last = sheet.getLastRow(), width = sheet.getLastColumn();
+  if (last < 2 || width < 1) return {};
+  var vals = sheet.getRange(1, 1, last, width).getValues(), idx = {};
+  for (var h = 0; h < vals[0].length; h++) idx[String(vals[0][h])] = h;
+  var out = {};
+  for (var r = 1; r < vals.length; r++) {
+    var row = vals[r];
+    if (String(row[idx['Owner']] || '').toLowerCase() !== owner) continue;
+    var items = null;
+    try { items = JSON.parse(String(row[idx['Items']] || '')); } catch (err) { continue; }
+    if (!items || items.kind !== 'roi' || !items.roi) continue;
+    var key = evSeriesBase_(String(items.series || ''));
+    if (!key) continue;
+    (out[key] = out[key] || []).push({ slug: String(items.slug || row[idx['Event Slug']] || ''), year: Number(items.year) || 0,
+      cards: Number(items.roi.cards) || 0, meetingsBooked: Number(items.roi.meetingsBooked) || 0,
+      meetingsHeld: Number(items.roi.meetingsHeld) || 0, stageMoves: Number(items.roi.stageMoves) || 0 });
+  }
+  for (var k in out) if (out.hasOwnProperty(k)) out[k].sort(function(a, b) { return b.year - a.year; });
+  return out;
+}
+// The owner's ROI Plans row for one slug, with its sheet row number.
+function evPlanRowFind_(tabs, owner, slug) {
+  var sheet = tabs.plans, last = sheet.getLastRow(), width = Math.max(sheet.getLastColumn(), 1);
+  if (last < 2) return null;
+  var vals = sheet.getRange(1, 1, last, width).getValues(), idx = {};
+  for (var h = 0; h < vals[0].length; h++) idx[String(vals[0][h])] = h;
+  for (var r = 1; r < vals.length; r++) {
+    var row = vals[r];
+    if (String(row[idx['Owner']] || '').toLowerCase() !== owner || String(row[idx['Event Slug']] || '') !== slug) continue;
+    var items = null;
+    try { items = JSON.parse(String(row[idx['Items']] || '')); } catch (err) { items = null; }
+    if (!items || items.kind !== 'roi') continue;
+    return { rowNumber: r + 1, idx: idx, id: String(row[idx['Plan ID']] || ''), day: String(evCell_(row[idx['Day']])).slice(0, 10),
+      items: items, narrativeLink: String(row[idx['Narrative Link']] || ''), createdAt: evCell_(row[idx['Created At']]), updatedAt: evCell_(row[idx['Updated At']]) };
+  }
+  return null;
+}
+// The booth accounts of one event from the score's kept rows — the same
+// account set evPlanBooths_ builds, without the dossier reads the checklist
+// has no use for. Zero fetches beyond the score.
+function evRoiBoothAccounts_(slug, rec) {
+  var rows = (rec.signalsBySlug && rec.signalsBySlug[String(slug)]) || [], seen = {}, out = [];
+  for (var i = 0; i < rows.length; i++) {
+    var sg = rows[i], acct = rec.accountsById[sg.accountId];
+    if (!acct || EV_PLAN_SIGNAL_KINDS.indexOf(String(sg.kind || '')) < 0) continue;
+    if (seen[sg.accountId]) continue;
+    seen[sg.accountId] = true;
+    out.push({ id: String(sg.accountId), name: String(acct.name || ''), stage: String(acct.stage || '') });
+  }
+  out.sort(function(a, b) { return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : a.name.toLowerCase() > b.name.toLowerCase() ? 1 : 0; });
+  return out;
+}
+// The meetings this app booked, joined to Network's record of them. `held`
+// is the explicit mark where there is one, the 14-day inference otherwise,
+// and `unconfirmed` when neither says so.
+function evPostMeetings_(booked, record) {
+  var byEvidence = {};
+  (record || []).forEach(function(x) { byEvidence[String((x && x.evidence) || '')] = x; });
+  return booked.map(function(m) {
+    var rec = byEvidence[m.id] || null, mark = rec ? String(rec.mark || '') : '';
+    return { id: m.id, contactId: m.contactId, accountId: m.accountId, start: m.start, end: m.end, place: m.place,
+      interactionId: m.interactionId || (rec ? String(rec.id || '') : ''), contactName: m.contactName || '', accountName: m.accountName || '',
+      mark: mark, inferred: !!(rec && rec.held), held: mark ? mark : ((rec && rec.held) ? 'yes' : 'unconfirmed') };
+  });
+}
+
+// ── eop=postevent — the checklist and the ROI line ────────────────────────
+function evPostEventOp_(sess, p) {
+  var slug = evStr_(p.slug, 64).toLowerCase();
+  if (!EV_SLUG_RE.test(slug)) return { success: false, error: 'bad_slug' };
+  var tabs = ensureEventsTabs_(), owner = String(sess.email || '').toLowerCase();
+  var own = {}; own[owner] = 'own';
+  var stars = evListRows_(tabs.stars, own, { slug: 'Event Slug', attending: 'Attending' }), star = null;
+  for (var i = 0; i < stars.length; i++) if (stars[i].slug === slug) star = stars[i];
+  if (!star) return { success: false, error: 'not_starred', slug: slug };
+  var reg = evRegistry_();
+  if (reg.error) return { success: false, error: reg.error };
+  var ev = reg.bySlug[slug];
+  if (!ev) return { success: false, error: 'unknown_slug', slug: slug };
+  var endDay = String(ev.end || ev.start || ''), today = evTodayIn_(String(ev.tz || ''));
+  if (!endDay || today <= endDay) return { success: false, error: 'not_over', slug: slug, end: endDay, today: today };
+  // Network — the cards and the meeting record, one call
+  var contacts = [], record = [], notConfigured = false, networkError = '';
+  var up = evNetworkProxy_('interaction', { owner: owner, eventSlug: slug });
+  if (up && up.success) { contacts = up.contacts || []; record = up.meetings || []; }
+  else if (up && up.error === 'not_configured') notConfigured = true;
+  else networkError = String((up && up.error) || 'upstream_empty');
+  // the score once, the past slug's signals kept, for the booth accounts' stages
+  var rec = notConfigured ? { success: true, accountsById: {}, signalsBySlug: {}, notConfigured: true }
+                          : evRecommend_(sess, true, slug);
+  if (!(rec && rec.success)) return rec || { success: false, error: 'score_failed' };
+  if (rec.networkError && !networkError) networkError = String(rec.networkError);
+  var boothAccounts = evRoiBoothAccounts_(slug, rec);
+  var moved = boothAccounts.filter(function(a) { return EV_ROI_STAGES_MOVED.indexOf(String(a.stage || '')) >= 0; });
+  // the meetings — this app's rows, Network's record, the names
+  var booked = evPlanMeetings_(tabs, owner, slug), known = {};
+  contacts.forEach(function(c) { if (c && c.id) known[String(c.id)] = String(c.name || ''); });
+  var nameCalls = notConfigured ? 0 : evPlanMeetingNames_(booked, owner, rec.accountsById, known);
+  var meetings = evPostMeetings_(booked, record);
+  var held = meetings.filter(function(m) { return m.held === 'yes'; }).length;
+  var mailable = contacts.filter(function(c) { return c && c.mailable; }).length;
+  // the ROI line — written once, re-read afterwards
+  var row = evPlanRowFind_(tabs, owner, slug), now = new Date().toISOString(), wrote = false;
+  if (!row) {
+    var roi = { cards: contacts.length, meetingsBooked: booked.length, meetingsHeld: held, stageMoves: moved.length };
+    var items = { kind: 'roi', slug: slug, series: String(ev.series || ev.name || ''), year: Number(String(ev.start || '').slice(0, 4)) || 0, readAt: now, roi: roi };
+    var planId = evNewId_('pl');
+    tabs.plans.appendRow([planId, owner, slug, today, JSON.stringify(items), '', now, now]);
+    row = { id: planId, day: today, items: items, narrativeLink: '', createdAt: now, updatedAt: now };
+    wrote = true;
+  }
+  auditLog('data_read', sess.email, 'events_postevent', { slug: slug, cards: contacts.length, booked: booked.length, held: held,
+    booths: boothAccounts.length, moves: moved.length, mailable: mailable, wrote: wrote ? 1 : 0, calls: nameCalls,
+    notConfigured: notConfigured ? 1 : 0 });
+  var res = { success: true, slug: slug, built: now, today: today,
+    event: { name: String(ev.name || ''), start: String(ev.start || ''), end: endDay, tz: String(ev.tz || ''), city: String(ev.city || ''), series: String(ev.series || '') },
+    attending: String(star.attending || ''), notConfigured: notConfigured,
+    checklist: { cards: contacts.length, meetingsBooked: booked.length, meetingsHeld: held,
+      meetingsUnconfirmed: meetings.filter(function(m) { return m.held === 'unconfirmed'; }).length,
+      followUp: { count: mailable, href: EV_DRAFTS_DEEP_LINK + slug } },
+    cards: contacts, meetings: meetings, boothAccounts: boothAccounts.length, stageMoves: moved,
+    roi: row.items.roi, plan: { id: row.id, day: row.day, recordedAt: String(row.items.readAt || row.createdAt || ''), narrativeLink: row.narrativeLink, written: wrote } };
+  if (networkError) res.networkError = networkError;
+  return res;
+}
+
+// ── eop=posteventmark — the developer's verdict on one meeting ────────────
+function evPostEventMarkOp_(sess, p) {
+  var id = evStr_(p.id, 20);
+  if (!EV_MEETING_ID_RE.test(id)) return { success: false, error: 'bad_meeting_id' };
+  var held = evStr_(p.held, 8).toLowerCase();
+  if (held !== 'yes' && held !== 'no') return { success: false, error: 'bad_held' };
+  var scope = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scope.error) return { success: false, error: scope.error };
+  var owner = scope.owner, tabs = ensureEventsTabs_();
+  var sheet = tabs.meetings, last = sheet.getLastRow(), width = Math.max(sheet.getLastColumn(), 1);
+  if (last < 2) return { success: false, error: 'not_found' };
+  var vals = sheet.getRange(1, 1, last, width).getValues(), idx = {};
+  for (var h = 0; h < vals[0].length; h++) idx[String(vals[0][h])] = h;
+  var found = null;
+  for (var r = 1; r < vals.length; r++) {
+    if (String(vals[r][idx['Meeting ID']] || '') !== id) continue;
+    if (String(vals[r][idx['Owner']] || '').toLowerCase() !== owner) return { success: false, error: 'not_found' };
+    found = { slug: String(vals[r][idx['Event Slug']] || ''), contactId: String(vals[r][idx['Contact ID']] || ''), accountId: String(vals[r][idx['Account ID']] || '') };
+    break;
+  }
+  if (!found) return { success: false, error: 'not_found' };
+  var summary = held === 'yes' ? EV_MEETING_MARK_HELD : EV_MEETING_MARK_NOT;
+  var write = evNetworkProxy_('interaction', { owner: owner }, { owner: owner, interactions: [
+    { contactId: found.contactId, accountId: found.accountId, kind: 'note', date: evTodayIn_(''), summary: summary, evidence: id, eventSlug: found.slug } ] });
+  var interactionId = '', notConfigured = false;
+  if (write && write.success) {
+    if ((write.rejected || []).length) {
+      auditLog('data_write', sess.email, 'events_posteventmark', { meetingId: id, ok: 0, rejected: write.rejected.length });
+      return { success: false, error: String(write.rejected[0].reason || 'rejected'), rejected: write.rejected };
+    }
+    interactionId = String((write.ids && write.ids[0]) || '');
+  } else if (write && write.error === 'not_configured') notConfigured = true;
+  else {
+    auditLog('data_write', sess.email, 'events_posteventmark', { meetingId: id, ok: 0 });
+    return write || { success: false, error: 'upstream_empty' };
+  }
+  // the held states re-read over the same leg — one call, never a second score
+  var record = [], booked = evPlanMeetings_(tabs, owner, found.slug);
+  if (!notConfigured) {
+    var back = evNetworkProxy_('interaction', { owner: owner, eventSlug: found.slug });
+    if (back && back.success) record = back.meetings || [];
+  }
+  var meetings = evPostMeetings_(booked, record);
+  var heldNow = meetings.filter(function(m) { return m.held === 'yes'; }).length;
+  // refresh the Plans row's meetings (the brief: a mark refreshes meetingsHeld)
+  var row = evPlanRowFind_(tabs, owner, found.slug), roi = null;
+  if (row) {
+    row.items.roi.meetingsHeld = heldNow;
+    row.items.roi.meetingsBooked = booked.length;
+    tabs.plans.getRange(row.rowNumber, row.idx['Items'] + 1).setValue(JSON.stringify(row.items));
+    tabs.plans.getRange(row.rowNumber, row.idx['Updated At'] + 1).setValue(new Date().toISOString());
+    roi = row.items.roi;
+  }
+  auditLog('data_write', sess.email, 'events_posteventmark', { meetingId: id, slug: found.slug, held: held === 'yes' ? 1 : 0,
+    interactionId: interactionId, meetingsHeld: heldNow, ok: 1, notConfigured: notConfigured ? 1 : 0 });
+  return { success: true, id: id, slug: found.slug, held: held, interactionId: interactionId, notConfigured: notConfigured,
+    meetingsHeld: heldNow, meetings: meetings, roi: roi };
+}
+
+// ── eop=plannarrative — the Drive URL of the session-authored plan ────────
+function evPlanNarrativeOp_(sess, p) {
+  var slug = evStr_(p.slug, 64).toLowerCase();
+  if (!EV_SLUG_RE.test(slug)) return { success: false, error: 'bad_slug' };
+  var link = evStr_(p.link, EV_NARRATIVE_LINK_MAX);
+  if (link && !/^https?:\/\/\S+$/i.test(link)) return { success: false, error: 'bad_link' };
+  var scope = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scope.error) return { success: false, error: scope.error };
+  var tabs = ensureEventsTabs_(), row = evPlanRowFind_(tabs, scope.owner, slug);
+  if (!row) return { success: false, error: 'not_found', slug: slug };
+  tabs.plans.getRange(row.rowNumber, row.idx['Narrative Link'] + 1).setValue(link);
+  tabs.plans.getRange(row.rowNumber, row.idx['Updated At'] + 1).setValue(new Date().toISOString());
+  auditLog('data_write', sess.email, 'events_plannarrative', { slug: slug, planId: row.id, linked: link ? 1 : 0, ok: 1 });
+  return { success: true, slug: slug, planId: row.id, link: link };
 }
 
 

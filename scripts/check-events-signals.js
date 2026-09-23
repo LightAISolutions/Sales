@@ -297,14 +297,14 @@ vm.runInContext(
   'var EMBED_PAGE_URL = "' + SITE + 'Events.html";\nvar SPREADSHEET_ID = "stub";\n' + [
     'EV_ROLE_CAPS', 'EV_ATTENDING', 'EV_SLUG_RE', 'EV_ID_RE', 'EV_ID_PREFIXES', 'EV_TABS', 'EV_REGISTRY_URL', '_evRegistryCache', 'EV_ACCOUNT_ID_RE',
     'EV_PEER_TOKEN_PROP', 'EV_NETWORK_TOKEN_PROP', 'NETWORK_PEER_EXEC', 'EV_POLL_SOURCE_BUDGET_MS', 'EV_POLL_TOTAL_BUDGET_MS', 'EV_POLL_MAX_BODY', 'EV_POLL_TRIGGER_FN', 'EV_POLL_TZ',
-    'EV_SEGMENTS_URL', 'EV_COMPANIES_URL', 'EV_SCORE_TERMS', 'EV_TUNING_DEFAULTS', 'EV_STAGE_WEIGHT', 'EV_STAGE_DEFAULT_WEIGHT', 'EV_RELATIONSHIP_WEIGHT', 'EV_SCORE_SIGNAL_CAP', 'EV_SCORE_CONFLICT_ATTENDING',
+    'EV_SEGMENTS_URL', 'EV_COMPANIES_URL', 'EV_SCORE_TERMS', 'EV_TUNING_DEFAULTS', 'EV_STAGE_WEIGHT', 'EV_STAGE_DEFAULT_WEIGHT', 'EV_RELATIONSHIP_WEIGHT', 'EV_SCORE_SIGNAL_CAP', 'EV_SCORE_CONFLICT_ATTENDING', 'EV_PRIOR_ROI_DIVISOR', 'EV_PRIOR_ROI_MEETING', 'EV_PRIOR_ROI_STAGE',   // E5 s2
     'EV_SIGNALS_TRIGGER_FN', 'EV_SIGNALS_TOP_N', 'EV_SIGNALS_LAST_PROP', 'EV_SIGNALS_BATCH', 'EV_SIGNAL_CONFIDENCE', 'EV_SIGNAL_MANUAL_KINDS', 'EV_SIGNAL_RELATIONSHIPS', 'EV_SIGNALS_MAX_NAMES',
     'EV_NEWSWIRE_FEEDS', 'EV_NEWSWIRE_CUE_RE', 'EV_MYS_URL_RE', 'EV_A2Z_HOST_RE', 'EV_SIGNAL_PERSON_MAX', 'EV_LEGAL_SUFFIX_RE',
     'EV_DOCKET_FEEDS', 'EV_DOCKET_SEGMENT_RE', 'EV_NEWSROOM_READ_PROP', 'EV_NEWSROOM_DAYS', 'EV_NEWSROOM_NEAR'
   ].map((n) => constant(src, n)).join('\n') + '\n' + [
     'evRoleOf_', 'evAdmitted_', 'evCan_', 'evRequire_', 'evRandomBase36_', 'evNewId_', 'ensureEventsTabs_', 'evListRows_', 'evStr_', 'evCell_', 'handleEventsOp_',
     'evRegistry_', 'evTodayIn_', 'evPagesJson_', 'evNetworkProxy_', 'evHtmlDecode_', 'evJsonLdBlocks_',
-    'evTuning_', 'evSeatSegments_', 'evMentionDates_', 'evStageWeight_', 'evDatesOverlap_', 'evMonthsSince_', 'evRound2_', 'evScoreEvent_', 'evRecommend_',
+    'evTuning_', 'evSeatSegments_', 'evMentionDates_', 'evStageWeight_', 'evDatesOverlap_', 'evMonthsSince_', 'evRound2_', 'evScoreEvent_', 'evRecommend_', 'evSlugify_', 'evSeriesBase_', 'evPlansRoi_',   // E5 s2 — the priorRoi input
     'evPollerInstalled_', 'evProposedRowObj_', 'evProposedList_', 'evPollsLatest_',
     'evNormaliseCompany_', 'evAccountKeys_', 'evSignalsMatcher_', 'evTextHasKey_', 'evSignalsFetch_', 'evExhibitorSource_', 'evStripTags_',
     'evParseMysExhibitors_', 'evParseA2zExhibitors_', 'evPersonOrg_', 'evPersonFromLd_', 'evCollectPersons_', 'evParseSpeakers_', 'evParseRss_',

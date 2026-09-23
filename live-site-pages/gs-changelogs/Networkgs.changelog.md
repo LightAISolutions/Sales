@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17g] — 2026-09-23 03:09:19 AM EST — v07.25r
+
+### Added
+
+- The events app can now ask, in one request, who was met at a particular show and which meetings there are on record — enough to tally the follow-up without asking twice, and without an email address or a phone number ever crossing over
+- A meeting can be recorded as held or not held from the events app; the verdict is kept as an ordinary note on that person's timeline, so it reads naturally alongside everything else
 
 ## [v01.16g] — 2026-09-23 02:19:54 AM EST — v07.24r
 
