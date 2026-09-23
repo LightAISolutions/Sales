@@ -728,6 +728,11 @@
      "slug": "dg-matrix",
      "role": "adjacent",
      "basis": "productsAndServices › Interport Cell-LV Series: the three-port sidecar 'located next to the IT load' puts galvanic isolation, rack-proximate storage and sub-millisecond pulse-load buffering in the white space — the 'built-in UPS functionality' sold against the UPS; conversion is the primary business"
+    },
+    {
+     "slug": "megmeet",
+     "role": "adjacent",
+     "basis": "productsAndServices › Power Products: the energy-storage compensation layer named in the H1 2026 interim — 16.5 kW BBU shelves, 15 kW and 33 kW capacitor shelves and a DC-centre BESS — beside 800 VDC side racks rated to 1 MW per rack"
     }
    ]
   },

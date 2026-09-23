@@ -2,6 +2,18 @@
  "schemaVersion": 1,
  "reports": [
   {
+   "id": "sst-hall-edge-block-rev2--competitive--2026-09-23",
+   "title": "Solid-State Transformers and the Medium-Voltage Hall Edge — Megmeet’s Competitive Position",
+   "type": "competitive",
+   "topic": "Who is positioned to win the medium-voltage-to-800 V DC hall-edge block, measured by the service-voltage class each vendor has actually specified and by what has actually been sold — and where Megmeet stands in it",
+   "date": "2026-09-23",
+   "scopeLabel": "18 SST and hall-edge vendors",
+   "companies": 18,
+   "citations": 59,
+   "status": "current",
+   "supersedes": "sst-hall-edge-block--competitive--2026-09-23"
+  },
+  {
    "id": "sst-hall-edge-block--competitive--2026-09-23",
    "title": "Solid-State Transformers and the Medium-Voltage Hall Edge — Megmeet’s Competitive Position",
    "type": "competitive",
@@ -10,7 +22,7 @@
    "scopeLabel": "18 SST and hall-edge vendors",
    "companies": 18,
    "citations": 46,
-   "status": "current"
+   "status": "superseded"
   },
   {
    "id": "aidc-power-conversion--competitive--2026-09-08",

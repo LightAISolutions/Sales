@@ -3,11 +3,70 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.33r] — 2026-09-23 06:59:05 PM EST
+
+> **Prompt:** "[Image attached: the briefing's "The Citation Contract" page — the five colour-coded source tiers (PRIMER, DOSSIER, GUIDANCE, REPORT, WEB) and the ANALYSIS label]
+> I want all of the six contradictions to be reflected in briefing chapter 9.4 and want you to issue a superseding edition of the 9/23 report. I also want you to push the in-hall-power adjacent membership by regenerating segment-in-hall-power in Classroom.gs. I also want you to remove the reminder to "paste the Megmeet SST briefing prompt".
+>
+> Also, I want you to review the entire Megmeet SST brief with [model name withheld] and rewrite anything that could be more concise or clearer since I heard [model name withheld] writes the most like a human. I also want you to simply number the attached Citation sources and add the superscript number after the cited statement. That way, we can cut down on repeated letters and shorten the overall report. It also looks cleaner. I like the color-coded sources though, so keep that. While you are evaluating how to rewrite parts of the report, keep in mind that I will be the one reading the report and my goal is to learn, so write concisely but prioritize explaining concepts thoroughly over concision. I would like this review/rewrite task to be in a separate [model name withheld] session, so give me a prompt to paste into a new [model name withheld] session and recommend an effort level for me to set [model name withheld] to."
+
+Follow-through on dossier v8. Chapter 9.4 of the briefing now records the six contradictions, the 23 September report is superseded by a second edition, Megmeet's `in-hall-power` adjacent membership is restored with its Classroom lesson regenerated, the briefing reminder is closed, and a paste-in prompt is written for a separate clarity-and-citation rewrite of the briefing.
+
+### Added
+
+- **`live-site-pages/profiler-data/reports/sst-hall-edge-block-rev2--competitive--2026-09-23.report.json`** — the superseding edition.
+  - The id changes the topic slug rather than the date, because today's date already names the morning edition and the id format is `<topic>--<type>--<date>`.
+  - It re-pins Megmeet v8, Delta Electronics v6 and LITEON v7; the other fifteen pins are unchanged.
+  - A new first section, "What changed since the morning edition", lists the changes.
+  - Key judgement 3 (Megmeet's class) now rests on the full filing search and bounds the 10 kV / 35 kV press lead against the filed IR record.
+  - Key judgement 4 corrects "the only segment with an expanding gross margin" to "the only one of the three largest", and replaces the contested number-two account with its rumour origin and the third-source estimate.
+  - Key judgement 8 adds the Richardson base.
+  - The Megmeet rows in the class and Asia-set tables are updated, and the Megmeet section gains the company's own two-to-three-year SST timing.
+  - 13 citations added (c47–c59), copied verbatim from Megmeet v8's `sources[]`, for 59 in total.
+- **`repository-information/megmeet-briefing-rewrite-prompt.md`** — the prompt for the separate rewrite session:
+  - clarity-first editing for a reader who is learning;
+  - one number per distinct citation source (about 89), shown as tier-coloured superscripts, with a gold `A` for inline analysis;
+  - a new C.0 numbered reference list, and a legend replacing the citation-contract table;
+  - the dossier-v8 corrections applied to the body;
+  - a scratchpad fact-preservation checker, PNG proofing and a fresh-subagent audit.
+  
+  The file names no model.
+
+### Changed
+
+- **`repository-information/study-prep/megmeet/megmeet-sst-briefing-print.html`** and the rebuilt **`MEGMEET-SST-BRIEFING.pdf`** (71 → 72 pages):
+  - Chapter 9.4 is retitled "What the dossier now contradicts — v7 in the older prep documents, v8 in this briefing" and gains a second table of seven rows:
+    1. The Q1 2026 date covers AIDC delivery generally; North America's batch delivery is H1 2026.
+    2. The greenfield-versus-Q1 tension resolves: volume, but no named reference win.
+    3. Consensus is RMB 787M, not 832M.
+    4. Chapter 13's footprint line overclaims: manufacturing is in China and Thailand, with contract manufacturing in India and R&D in Germany.
+    5. The US base is located in Richardson, Texas, but not in the filings.
+    6. The LITEON story is closed as rumour, with Megmeet a prospective third source.
+    7. The D.2 10 kV / 35 kV lead is now read and bounded.
+  - The colophon gains a dated amendment note. The body is otherwise unchanged; the rewrite session applies the corrections to it.
+  - The data file and the companion are not touched.
+- **`live-site-pages/profiler-data/reports/reports-index.json`** — the new edition is added as `current`, and the morning edition is flipped to `superseded`.
+- **`live-site-pages/profiler-data/profiler-segments.json`** — Megmeet is restored to `in-hall-power` as `adjacent`. The basis is the storage-compensation layer named in the H1 2026 interim: BBU and capacitor shelves, and a DC-centre BESS. The registry mirror is synced.
+- **`googleAppsScripts/Classroom/Classroom.gs` v01.87g → v01.88g** — `segment-in-hall-power` regenerated with `build-classroom-segments.py --segment in-hall-power`. Seven sections changed: players, connections, numbers, fence, where-it-sits, what-moved and read-next. `power-conversion-and-rack-power-silicon` is still due from the v8 basis-line change and was left for a separate regeneration.
+- **`repository-information/REMINDERS.md`** — "Paste the Megmeet SST briefing prompt" moved to Completed Reminders at the developer's instruction; Active Reminders is now `*(none)*`.
+- **`README.md`** — tree entries added for the rev2 report and the rewrite prompt; the Classroom GAS version display is updated.
+
+### Notes
+
+- **Checks:**
+  - `check-profiler-reports.py`: 0 errors. The morning edition's three aged-pin warnings are gone now that it is superseded.
+  - `check-classroom-content.py`: 0 errors.
+  - `check-classroom-pipeline.py --selftest`: 15 of 15 pass.
+  - Gate digest: `check-classroom-pipeline.py --base origin/main` shows no P3 finding, so `gateDigest` is unchanged. Its P1 write-set findings bind only unattended pipeline runs, not a developer session.
+  - `node --check` and `check-gas-inner-scripts.js` pass, and the Profiler registry, relationship and cross-reference checks are clean.
+- **Prompt blockquote:** the model name in the prompt is replaced with `[model name withheld]`, because this environment forbids model identifiers in repository files. Everything else is verbatim.
+- **Archive rotation not performed:** 92 non-exempt sections, and today's are exempt. The Classroom GAS changelog reaches `50/50`, which matches the Profiler page changelog's precedent of rotating only when it exceeds 50.
 
 ## [v07.32r] — 2026-09-23 03:51:59 PM EST
 

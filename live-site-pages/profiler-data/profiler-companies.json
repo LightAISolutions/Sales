@@ -2452,6 +2452,10 @@
         {
           "id": "power-conversion-and-rack-power-silicon",
           "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
         }
       ]
     },

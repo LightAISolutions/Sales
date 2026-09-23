@@ -1,4 +1,4 @@
-var VERSION = "v01.87g";
+var VERSION = "v01.88g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -13203,7 +13203,7 @@ function clLessonSegmentInHallPower_() {
  "title": "In-hall power",
  "short": "Everything between the service entrance and the rack whip that keeps a hall up when the grid drops: static, rotary and modular UPS, the switchgear, busway and…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-23",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -13234,7 +13234,7 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "profile:delta-electronics",
-    "date": "2026-09-04",
+    "date": "2026-09-23",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -13296,6 +13296,12 @@ function clLessonSegmentInHallPower_() {
     "ref": "profile:lg-energy-solution",
     "date": "2026-09-05",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:megmeet",
+    "date": "2026-09-23",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
@@ -13384,7 +13390,7 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-23",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -13397,7 +13403,7 @@ function clLessonSegmentInHallPower_() {
  },
  "tiles": [
   {
-   "k": "29",
+   "k": "30",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -13409,10 +13415,10 @@ function clLessonSegmentInHallPower_() {
   {
    "k": "7",
    "v": "challengers",
-   "sub": "contesting that set; 12 adjacent"
+   "sub": "contesting that set; 13 adjacent"
   },
   {
-   "k": "110",
+   "k": "119",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -13461,7 +13467,7 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Assurance (8 edges) · Cells and chemistry (7 edges) · Storage integrators and containers (7 edges) · Power conversion and rack-power silicon (6 edges) · Software and optimization (6 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · EPC and construction (1 edge) · Insurance and risk transfer (1 edge)",
+     "Assurance (8 edges) · Cells and chemistry (7 edges) · Storage integrators and containers (7 edges) · Power conversion and rack-power silicon (7 edges) · Software and optimization (6 edges) · Grid equipment (1 edge) · Bridge and on-site generation (1 edge) · EPC and construction (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -13658,6 +13664,12 @@ function clLessonSegmentInHallPower_() {
      "heron-power",
      "adjacent",
      "productsAndServices › Heron Link for Data Centers with SuperBBU: the battery on the 800 V bus gives 30 seconds of full-load backup and takes the UPS's job; the 12 MW block eliminates twelve UPS, four PDUs and twenty RPPs — conversion is the primary business"
+    ],
+    [
+     "**Megmeet**",
+     "megmeet",
+     "adjacent",
+     "productsAndServices › Power Products: the energy-storage compensation layer named in the H1 2026 interim — 16.5 kW BBU shelves, 15 kW and 33 kW capacitor shelves and a DC-centre BESS — beside 800 VDC side racks rated to 1 MW per rack"
     ],
     [
      "**Prevalon**",
@@ -13863,6 +13875,16 @@ function clLessonSegmentInHallPower_() {
      "FY2025 · 2025-12-31",
      "17,801.8",
      "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "FY2025 · 2025-12-31",
+     "1,308.3",
+     "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)",
      "—",
      "—",
      "—",
@@ -14123,6 +14145,14 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "**Delta Electronics**",
+     "**Megmeet**",
+     "competitor",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "**Delta Electronics**",
      "**Vertiv**",
      "competitor",
      "—",
@@ -14232,6 +14262,14 @@ function clLessonSegmentInHallPower_() {
      "active",
      "—",
      "Data-centre switchgear and liquid cooling"
+    ],
+    [
+     "**Flex**",
+     "**Megmeet**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power system components"
     ],
     [
      "**Flex**",
@@ -14411,6 +14449,14 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "**Huawei Digital Power**",
+     "**Megmeet**",
+     "other",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Huawei Digital Power**",
      "**Vertiv**",
      "competitor",
      "active",
@@ -14428,6 +14474,38 @@ function clLessonSegmentInHallPower_() {
     [
      "**LG Energy Solution**",
      "**Hithium**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "**Delta Electronics**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "**Flex**",
+     "competitor",
+     "active",
+     "—",
+     "800 VDC power system components"
+    ],
+    [
+     "**Megmeet**",
+     "**Vertiv**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Megmeet**",
+     "**Zhonhen Electric**",
      "competitor",
      "active",
      "—",
@@ -14755,6 +14833,14 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "**Vertiv**",
+     "**Megmeet**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Vertiv**",
      "**Mitsubishi Electric**",
      "competitor",
      "active",
@@ -14776,6 +14862,14 @@ function clLessonSegmentInHallPower_() {
      "active",
      "—",
      "HVDC / 800V DC"
+    ],
+    [
+     "**Zhonhen Electric**",
+     "**Megmeet**",
+     "competitor",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**Zhonhen Electric**",
@@ -15106,7 +15200,7 @@ function clLessonSegmentInHallPower_() {
      "Medium-voltage switchgear"
     ]
    ],
-   "note": "Curated edges among members: 110 · to the neighbouring segments: 52 (the first 40 shown, by company) · derived-only mentions (no curated typing): 17 among members, 19 to the neighbours."
+   "note": "Curated edges among members: 119 · to the neighbouring segments: 52 (the first 40 shown, by company) · derived-only mentions (no curated typing): 18 among members, 19 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -15121,74 +15215,74 @@ function clLessonSegmentInHallPower_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-22 — Agreed to buy the 46.30% minority of its welding subsidiary for RMB 663.64M cash",
+     "sub": "Megmeet · ma"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-16 — Daniel Doimo (MGE UPS Systems co-founder, ex-Schneider Electric EVP Power, partner at Series A investor Helios) joins the Executive Advisory Board as the company 'accelerates pilot deployments … with hyperscale, neocloud and colocation customers'",
      "sub": "DG Matrix · leadership"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-10 — USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board",
      "sub": "Heron Power · financial"
     },
     {
-     "x": 3,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-09 — 54 V→12 V quarter-brick DC-DC modules (1.6 kW continuous / 2.4 kW peak, and 2 kW), up to 98.3% peak efficiency",
+     "sub": "Megmeet · product-launch"
+    },
+    {
+     "x": 5,
      "lane": "record",
      "label": "2026-09-08 — Hiring for a Head of Service to stand up field service, commissioning, spares and warranty from scratch, and a Director of Product Compliance naming UL 2877 and UL 1741 as the governing standards",
      "sub": "Amperesand · corporate"
     },
     {
-     "x": 4,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
      "sub": "Flex · ma"
     },
     {
-     "x": 5,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
      "sub": "Rolls-Royce Power Systems · product-launch"
     },
     {
-     "x": 6,
+     "x": 8,
      "lane": "record",
      "label": "2026-08-28 — New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant",
      "sub": "Piller · regulatory"
     },
     {
-     "x": 7,
+     "x": 9,
+     "lane": "record",
+     "label": "2026-08-28 — IR record: SST demand not expected to ramp for 1–2 years; sales for 2–3 years to come from the existing product matrix",
+     "sub": "Megmeet · other"
+    },
+    {
+     "x": 10,
      "lane": "record",
      "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
      "sub": "Caterpillar · capacity"
     },
     {
-     "x": 8,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 9,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-27 — Rehlko joined the Wisconsin Data Center Coalition as an energy-resilience member, stating a track record of 14-plus GW of deployed data-center capacity, more than 90 percent of it custom-engineered",
      "sub": "Rehlko · corporate"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-26 — Website relaunch: leadership roster now Dow (CEO), Joyner (SVP Engineering), Reznik (CFO), Bouchet (Chief of Staff); headline claims moderated from 'up to 10x' faster time to power and '>80%' footprint reduction to '5×' and '50%'; 'deploying … to Fortune 100 customers in 2026'",
-     "sub": "Amperesand · corporate"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-25 — Volkswagen-nominated director Olaf Korzinovski resigns; Jörg Fenstermann nominated to replace him, pending an extraordinary general meeting",
-     "sub": "Gotion High-Tech · leadership"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-25 — H1 2026 results — revenue RMB 27,775.5m (+43.22%), net profit attributable RMB 1,386.0m (+278.05%), but profit excluding non-recurring items of only RMB 106.9m",
-     "sub": "Gotion High-Tech · financial"
     }
    ]
   },
@@ -15581,7 +15675,7 @@ function clLessonSegmentInHallPower_() {
      "US import tariffs",
      "in-effect",
      "—",
-     "Panasonic, Rolls-Royce Power Systems, Schneider Electric"
+     "Megmeet, Panasonic, Rolls-Royce Power Systems, Schneider Electric"
     ],
     [
      "US import tariffs",
@@ -15665,7 +15759,7 @@ function clLessonSegmentInHallPower_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The AI Data-Center Power Chain* · *The UPS Room: Static, Rotary, and the Battery Under Each* · *The Ten-Second Race* · *N+1, 2N, and Six Nines* · *Where BESS Plugs In: The Three Sockets*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-in-hall-power-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Amperesand, Caterpillar, Cummins, Delta Electronics, DG Matrix, FlexGen, Heron Power, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
+    "**Study guides:** ABB, Eaton, Huawei Digital Power, Mitsubishi Electric, Narada, Panasonic, Piller, Schneider Electric, Vertiv, Zhonhen Electric, EVE Energy, Flex, Gotion High-Tech, Hithium, LG Energy Solution, ON.energy, Samsung SDI, Amperesand, Caterpillar, Cummins, Delta Electronics, DG Matrix, FlexGen, Heron Power, Megmeet, Prevalon, Rehlko, Rolls-Royce Power Systems, Rosendin, Sunwoda — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -15771,6 +15865,19 @@ function clLessonSegmentInHallPower_() {
   {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; profile:dg-matrix added@2026-09-19",
+   "changed": [
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-23; profile:delta-electronics 2026-09-04→2026-09-23; profile:megmeet added@2026-09-23",
    "changed": [
     "read-next",
     "the-fence",

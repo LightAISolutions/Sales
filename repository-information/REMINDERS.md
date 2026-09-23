@@ -4,14 +4,16 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
 
 ## Active Reminders
 
-- `2026-09-22 12:29:48 AM EST` — **Paste the Megmeet SST briefing prompt — after the Network and Events build plan, before the 2026-10-07 start date** — the prompt is preserved verbatim at `repository-information/megmeet-briefing-prompt.md`; it is not in any chat transcript that will survive. Deliberately deferred on 2026-09-22 so the research lands closer to the start date and the tokens go to the Network/Events build first.
+*(none)*
+
+## Completed Reminders
+
+- ~~`2026-09-22 12:29:48 AM EST` — **Paste the Megmeet SST briefing prompt — after the Network and Events build plan, before the 2026-10-07 start date** — the prompt is preserved verbatim at `repository-information/megmeet-briefing-prompt.md`; it is not in any chat transcript that will survive. Deliberately deferred on 2026-09-22 so the research lands closer to the start date and the tokens go to the Network/Events build first.~~ — completed `2026-09-23 06:47:20 PM EST` (dismissed by the developer; the briefing it points to ran on 2026-09-23 as v07.29r–v07.31r, and its chapter 9.4 was amended the same evening after Megmeet dossier v8)
   - **The anchor is the start date, not a fixed day.** Senior Sales Manager — SST Solutions at Megmeet, expected **Wednesday 2026-10-07** (15 days out when this was written). Run it with enough slack to read the output and act on the week-one questions before day one — a few days, not the night before.
   - **The sequencing condition is the Network and Events build**, not a date: run this once that plan is finished, or once it is clearly not going to finish before early October, whichever comes first. If the build is still running in the first days of October, run the briefing anyway — it is the one deliverable with an external deadline.
   - **Run it in a NEW session on Opus 5 / `xhigh`**, ~35–50 minutes and ~$25–40 of plan allowance. Not Fable: it would draw the 50% weekly Fable sub-allocation that the interactive authoring sessions live on, for no capability this task needs.
   - **Two pre-flight checks are written into the file and both will have moved by October**: dossier freshness on the scoped slugs (the SST four are the heart of the brief), and whether the monthly drift check has superseded `aidc-power-conversion--competitive--2026-09-08`, which the prompt tells the run to build on rather than duplicate.
   - **To resume:** type `run the Megmeet briefing` in a fresh Opus 5 xhigh session, or `give me the briefing prompt` to have it re-pasted for copying.
-
-## Completed Reminders
 
 - ~~`2026-09-19 07:43:09 PM EST` — **Close out the "Repo access denied" issue after Monday's two earnings-desk runs** — the A/B between the old repository-less earnings desk and the new one with `LightAISolutions/Sales` attached, then the rebuild of the four remaining committing Routines.~~ — completed `2026-09-23 06:06:46 AM EST` (dismissed by the developer, who closed out the issue, rebuilt the four Routines and had the old ones deleted; the fleet was listed and matched the plan before this entry was moved)
   - **Verified at close-out** — the old desk `trig_01UyH77BMKJnxzBUZJ11ej6A` is gone from the fleet. The new desk `trig_01HkrwpCULei8Gje6RGqcp1B` is enabled and its 2026-09-22 13:09Z run SUCCEEDED.
