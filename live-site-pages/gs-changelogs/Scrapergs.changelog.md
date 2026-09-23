@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.22g] — 2026-09-22 11:02:50 PM EST — v07.21r
+
+### Added
+- **The people an article names are now kept with it.** When an article is summarised, the people it quotes, bylines or mentions — with their title, company and a phrase on what they said — are stored alongside the summary, in the same pass and at no extra model cost. Articles summarised before this version are not re-read
+- A partner application can now read those people for one covered company over its own private channel, secured by a separate key that never opens the existing corpus feeds
+
+### Changed
+- Minor internal improvements
 
 ## [v02.21g] — 2026-09-20 09:06:03 PM EST — v06.79r
 

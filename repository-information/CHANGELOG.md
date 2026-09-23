@@ -3,11 +3,56 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.21r] — 2026-09-22 11:02:50 PM EST
+
+> **Prompt:** "Run E4 session 3 — the Scraper-side `people[]` extraction, the `cop=people` route and Network's proxy — from `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`: §13.14 is the brief (follow its reading list in order, then its five build steps exactly; E4 closes with this session), §3's D17 and D9 and §5.5.1 row 5 the design, `repository-information/NETWORK-SCHEMA.md` §3 / §8 / §9 the shapes. E4 sessions 1 and 2 are done in §11 (v07.20r; `Events.gs` v01.07g, `Events.html` v01.08w, `Network.gs` v01.12g, `Network.html` v01.21w) — the sweep, its six kinds, the manual form, the docket watch and `scripts/check-events-signals.js` (103 checks) exist; extend, do not fork. Live state you cannot see from the repo: both peer tokens are set, the weekly sweep [is / is not] installed, the first live sweep's Signals now answer read [paste the status line here], and the newsroom and docket rows [did / did not] show on an account in Network. Build `people[]` in the Scraper's summarisation schema and stored items (no second model call, no backfill), the `cop=people&slug=&since=` far side behind a new `NETWORK_CORPUS_TOKEN` (`nwHandlePeer_`'s token idiom; never `CORPUS_TOKEN`, never Profiler's proxy), Network's `nwPeopleProxy_` behind `signals`, the account detail's "People in the press" list with an Accept step that writes a `press-quote` signal at 0.7 with `Evidence URL = corpus:<key>` and `Source = scraper` (the write leg gains a `corpus:` branch for that kind only), and `scripts/check-scraper-people.js` on the two-VM idiom with zero live calls. No plans (E5), no discovery Routine (R), no new scope, never widen an existing peer token — the new token is set by hand in both projects and never committed; the session never calls any app. Verify with the E4 session 2 list plus `scripts/verify-network-roles.py`, and grep the served pages and the `.gs` files for `linkedin.com`, `10times` and `attendee`. Bump every `.gs` and page touched per [PC-GS-VERSION] #1 / [PC-HTML-VERSION] #2 with changelog entries that name no token, account or person; CHANGELOG entry; `NETWORK-SCHEMA.md` §8 / §9; flip §11's E4 row to Done with the versions and write the next brief as §13.15. Then hand off in chat: set the new token in both projects, redeploy Scraper and Network, summarise one article, read its people on the account and accept one. Normal Session Start, Pre-Commit and Pre-Push checklists on a `claude/*` branch restarted from `origin/main`; run `git fetch --unshallow origin main` first; parallel sessions push, so check `git ls-remote` before pushing. Read the live CHANGELOG counter; no rotation is due unless it reads 100. One push. Then give me a prompt to paste into a new session for whatever §11 says is next, and remember session."
+
+### Added
+- **E4 session 3 — the people route** (design plan D17, catalogue §5.5.1 row 5; §11's E4 row flipped to **Done** with the three sessions' versions; the N4 session-1 brief written as §13.15 with its paste-in prompt): the Scraper names the people its summarise pass reads, the `cop=people` route answers them behind a **third token namespace**, Network reads them through its own proxy and the developer accepts each one as a `press-quote` signal
+- `scripts/check-scraper-people.js` — the two-VM harness (Scraper's real far side in one context, Network's real proxy, people ops and write leg in the other, the Network fetch routed into the Scraper context): **62 checks**, zero live calls
+- `NETWORK-SCHEMA.md` §8 (the write leg's `corpus:` branch, the empty slug for `press-quote`, the person in the press-quote upsert key, `Source = scraper`; the session ops `nop=people` and `nop=peopleaccept`), §9 (the route as built — `since`, the default window, no back-fill, the `accepted` flag, the accept step's row) and §14 (the new harness)
+
+### Changed
+- **No back-fill** (the brief's decision over D17's "one-time admin job"): only items summarised from `Scraper.gs` v02.22g onward carry people; older items are never re-read and never answered on the route
+- `scripts/check-peer-bridge.js` / `scripts/check-events-signals.js`: the Network context extracts the upsert-key helper and the name key it uses, and the corpus-key constant; both still pass (61 · 103 checks)
+- `scripts/check-network-schema.py`: `items` · `people` · `covered` join the audit-detail allow-list (counts and a flag — the checker still refuses a name, a slug or a key); `scripts/verify-network-roles.py`: the people pass — read on demand only, the two-person list with the accepted one ticked, Accept posting the key and the person, the "Will be at" line re-read once, the uncovered account's line; ALL CHECKS PASSED at 390 × 844
+
+#### `Scraper.gs` — v02.22g
+
+##### Added
+- `people[]` in the summarise call's output schema (`SCRAPER_PEOPLE_MAX` = 5 per item; role ∈ quoted · author · named; name, title, company, one-phrase context) — the same single model call, a few output tokens more, **no second call**; `scPeopleParse_` shapes and bounds the reply, `scSignalsMerge_` stores it as `ppl` in the item's Signals blob beside `evt` and `figs`
+- `scHandlePeople_` / `scPeopleScan_` — `cop=people&slug=&since=[&limit=]` behind `NETWORK_CORPUS_TOKEN` (`SCRAPER_NETWORK_CORPUS_TOKEN_PROP`; the property trimmed, sub-16 refuses, every boundary case flat `denied` with zero reads, nothing audited on a refusal): rows whose blob carries `ppl`, the slug's rows, `since` honoured, one row per article key, corpus-only rows counted, ≤ 200; the audit row carries the slug, the window and counts
+
+##### Changed
+- `scHandleCorpus_`: `cop=people` is routed to the new gate **before** the `CORPUS_TOKEN` check — Profiler's token never opens it and the Network token never reaches `timeline` or `candidates`
+- `SCRAPER_SIGNALS_CELL_MAX` 1500 → 2500 so the people list fits the blob in the common case; `scSignalsJson_`'s drop order gains `ppl` after `figs`
+
+#### `Network.gs` — v01.13g
+
+##### Added
+- `NW_CORPUS_TOKEN_PROP` (`NETWORK_CORPUS_TOKEN`), `SCRAPER_CORPUS_EXEC` (the Scraper config's deployment), `NW_CORPUS_KEY_RE`, `NW_PRESS_QUOTE_CONFIDENCE` = 0.7, `NW_PEOPLE_DEFAULT_DAYS` = 90
+- `nwPeopleProxy_` — `nwEventsProxy_` (and so `guidanceMentionsProxy_`) verbatim with the Scraper URL and the corpus token: `not_configured` under 16 characters with no fetch, `upstream_http_<code>`, `upstream_unreachable`, `upstream_not_json` with a snippet
+- `nop=people` (session GET, behind `signals`) — the account's slug names the route; an uncovered account answers `covered:false` with no fetch; each person carries `accepted` and its signal id when the Signals tab already holds the row; audit: the account id and counts
+- `nop=peopleaccept` (behind `signals`) — one `press-quote` row through the bridge's own upsert with `Source = scraper`: 0.7, `corpus:<key>`, the person's name and title, no event slug, the item's date as First Seen, the context as the note, `Contact ID` set when a live contact at that account has the same name; `read_only_scope` on a view-only share; `nwScopedAccount_` resolves the account inside the session's scope
+- `nwSignalKey_` — the upsert key adds the person's name key for `press-quote` only (one article quotes several people at one account; each is its own row)
+
+##### Changed
+- `nwPeerSignalsWrite_`: a `source` argument (`events` by default, `scraper` from the accept step — never from the body); the empty `eventSlug` accepted for `docket` **and** `press-quote`; `corpus:<key>` evidence accepted for `press-quote` only (`evidence_required` on any other kind); a press quote with no person is `person_required`; the audit op names the writer
+
+#### `Network.html` — v01.22w
+
+##### Added
+- **People in the press** on the account detail — read on a tap (never on the detail open, never a poll): per article the title, outlet, date and link; per person the name, title, company, role and context with **Accept**, or the tick when already accepted; an uncovered account's line says the route needs a dossier slug; the error text names a missing token, an unreachable corpus or a non-JSON answer
+- Accept → `nop=peopleaccept`, the row flips to accepted, the status line says whether the person matched a contact, and the "Will be at" line re-reads in place (`nwSignalsFill`, split out of `nwSignalsLine`)
+
+##### Changed
+- The "Will be at" line labels a press quote `press` instead of `?` when the row has no event
 
 ## [v07.20r] — 2026-09-22 10:38:40 PM EST
 

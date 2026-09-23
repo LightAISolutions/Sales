@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.21w">
+  <meta name="build-version" content="v01.22w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -535,6 +535,17 @@
     .nw-row-detail .nw-under { margin: 0 0 4px; padding-left: 0; list-style: none; }
     .nw-row-detail .nw-under li { font-size: 13px; padding: 2px 0; }
     .nw-row-detail .nw-under li small { color: var(--nw-faint); font-family: var(--nw-mono); font-size: 11px; margin-left: 6px; }
+    /* E4 s3 — the people the trade press names at a covered account (read on demand from the Scraper through the backend; Accept writes one press-quote signal) */
+    .nw-row-detail .nw-people-list { margin: 4px 0 6px; padding-left: 0; list-style: none; }
+    .nw-row-detail .nw-people-list > li { padding: 6px 0 4px; border-top: 1px dashed var(--nw-line2); }
+    .nw-row-detail .nw-people-list > li:first-child { border-top: 0; padding-top: 0; }
+    .nw-row-detail .nw-people-item { font-size: 12px; color: var(--nw-faint); }
+    .nw-row-detail .nw-people-item b { color: var(--nw-ink); font-weight: 600; }
+    .nw-row-detail .nw-people-person { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: 13px; padding: 3px 0 3px 8px; border-left: 2px solid var(--nw-line2); margin-top: 4px; }
+    .nw-row-detail .nw-people-person .nw-people-ctx { flex: 1 1 100%; color: var(--nw-faint); font-size: 12px; }
+    .nw-row-detail .nw-people-person small { color: var(--nw-faint); font-family: var(--nw-mono); font-size: 11px; }
+    .nw-row-detail .nw-people-person .nw-accept-btn { margin-left: auto; font-size: 12px; }
+    .nw-row-detail .nw-people-person .nw-accepted { margin-left: auto; color: var(--nw-accent); font-size: 12px; white-space: nowrap; }
     .nw-acct-status { margin: 0 0 10px; }
     .nw-editor textarea { display: block; width: 100%; box-sizing: border-box; font: 15px/1.4 var(--nw-serif); color: var(--nw-ink); padding: 9px 10px; border: 1px solid var(--nw-line2); border-radius: 6px; background: var(--nw-card); min-height: 64px; margin-bottom: 8px; }
 /* ══════════════ */
@@ -6613,6 +6624,12 @@ function nwSignalsLine(det, params) {
   if (!nwCan('signals')) return;
   det.appendChild(nwEl('dt', null, 'Will be at'));
   var dd = nwEl('dd', 'nw-signals', 'Loading…'); det.appendChild(dd);
+  nwSignalsFill(dd, params);
+}
+// The line's rows — split out (E4 s3) so an accepted press quote can refresh
+// the line in place without a second dt.
+function nwSignalsFill(dd, params) {
+  dd.textContent = 'Loading…';
   nwApi('signals', params, function(res) {
     dd.textContent = '';
     if (!(res && res.success)) { dd.className = 'nw-signals nw-bad'; dd.textContent = nwErrText(res && res.error); return; }
@@ -6621,7 +6638,7 @@ function nwSignalsLine(det, params) {
     rows.forEach(function(s, i) {
       if (i) dd.appendChild(document.createTextNode(' · '));
       var span = nwEl('span', 'nw-signal'); span.setAttribute('data-kind', s.kind || ''); span.setAttribute('data-slug', s.eventSlug || '');
-      span.appendChild(document.createTextNode((s.eventSlug || '?') + ' — ' + (s.kind || 'signal') + ' ' + Number(s.confidence || 0).toFixed(1)
+      span.appendChild(document.createTextNode((s.eventSlug || (s.kind === 'press-quote' ? 'press' : '?')) + ' — ' + (s.kind || 'signal') + ' ' + Number(s.confidence || 0).toFixed(1)
         + (s.personName ? ' (' + s.personName + (s.personTitle ? ', ' + s.personTitle : '') + ')' : '')));
       if (/^https?:\/\//i.test(s.evidenceUrl || '')) {
         span.appendChild(document.createTextNode(' '));
@@ -6630,6 +6647,80 @@ function nwSignalsLine(det, params) {
       dd.appendChild(span);
     });
   });
+}
+// E4 session 3 (design plan D17, §13.14) — "People in the press": the people
+// the trade press Scraper already ingests names at this account, read ON
+// DEMAND (a tap, never on the detail open and never a poll) through the
+// backend's own proxy (nop=people — the backend holds the token, the page
+// never sees it). An uncovered account has no route and the line says so.
+// Accept writes one press-quote signal (0.7, the article key as evidence,
+// the person's name and title) through nop=peopleaccept and refreshes the
+// "Will be at" line in place; an accepted person shows the tick.
+function nwPeopleLine(det, a) {
+  if (!nwCan('signals')) return;
+  det.appendChild(nwEl('dt', null, 'People in the press'));
+  var dd = nwEl('dd', 'nw-people'); dd.setAttribute('data-people', a.slug ? 'covered' : 'uncovered'); det.appendChild(dd);
+  if (!a.slug) { dd.textContent = 'Not covered by Profiler — the press route needs a dossier slug (propose one below).'; return; }
+  var btn = nwEl('a', 'nw-edit-btn nw-people-btn', '📰 Read the press'); btn.href = '#'; btn.setAttribute('role', 'button');
+  btn.title = 'Quoted and bylined people the trade press names at ' + a.name + ' — read from the news corpus';
+  dd.appendChild(btn);
+  btn.addEventListener('click', function(ev) {
+    ev.preventDefault(); ev.stopPropagation();
+    dd.textContent = 'Reading the press…';
+    nwApi('people', { accountId: a.id }, function(res) {
+      dd.textContent = '';
+      if (!(res && res.success)) { dd.className = 'nw-people nw-bad'; dd.textContent = nwPeopleErrText(res && res.error); dd.appendChild(document.createTextNode(' ')); dd.appendChild(btn); return; }
+      if (!res.covered) { dd.textContent = 'Not covered by Profiler — the press route needs a dossier slug.'; return; }
+      var items = res.items || [];
+      if (!items.length) { dd.textContent = 'Nobody named in the press for this account since ' + (res.since || 'the window began') + ' — the list fills as new articles are summarised.'; return; }
+      var ul = nwEl('ul', 'nw-people-list');
+      items.forEach(function(it) {
+        var li = nwEl('li'); li.setAttribute('data-key', it.key);
+        var head = nwEl('div', 'nw-people-item');
+        head.appendChild(nwEl('b', null, it.title || '(untitled)'));
+        head.appendChild(document.createTextNode(' — ' + [it.source, String(it.publishedAt || '').slice(0, 10)].filter(Boolean).join(' · ')));
+        if (it.url) { head.appendChild(document.createTextNode(' ')); var an = nwEl('a', null, '↗'); an.href = it.url; an.target = '_blank'; an.rel = 'noopener'; an.title = 'Open the article'; head.appendChild(an); }
+        li.appendChild(head);
+        (it.people || []).forEach(function(person) {
+          var row = nwEl('div', 'nw-people-person'); row.setAttribute('data-person', person.name); row.setAttribute('data-accepted', person.accepted ? '1' : '0');
+          row.appendChild(nwEl('b', null, person.name));
+          var meta = [person.title, person.company].filter(Boolean).join(', ');
+          if (meta) row.appendChild(document.createTextNode(meta));
+          row.appendChild(nwEl('small', null, person.role || 'named'));
+          if (person.context) row.appendChild(nwEl('span', 'nw-people-ctx', person.context));
+          function tick() { row.setAttribute('data-accepted', '1'); var old = row.querySelector('.nw-accept-btn'); if (old) old.remove(); row.appendChild(nwEl('span', 'nw-accepted', '✓ Accepted')); }
+          if (person.accepted) tick();
+          else {
+            var acc = nwEl('a', 'nw-edit-btn nw-accept-btn', 'Accept'); acc.href = '#'; acc.setAttribute('role', 'button');
+            acc.title = 'Save as a press-quote signal (0.7) on this account';
+            acc.addEventListener('click', function(ev2) {
+              ev2.preventDefault(); ev2.stopPropagation();
+              acc.textContent = 'Saving…';
+              nwApi('peopleaccept', { accountId: a.id, key: it.key, name: person.name, title: person.title || '', company: person.company || '',
+                                      context: person.context || '', publishedAt: it.publishedAt || '' }, function(w) {
+                if (!(w && w.success)) { acc.textContent = 'Accept'; nwAcctStatus('Could not save the signal (' + (w && w.error || 'unknown') + ').', 'err'); return; }
+                tick();
+                nwAcctStatus('Saved a press-quote signal for ' + person.name + (w.contactId ? ' — matched to a contact' : '') + '.', 'ok');
+                var line = det.querySelector('dd.nw-signals');
+                if (line) nwSignalsFill(line, { accountId: a.id });
+              });
+            });
+            row.appendChild(acc);
+          }
+          li.appendChild(row);
+        });
+        ul.appendChild(li);
+      });
+      dd.appendChild(ul);
+    });
+  });
+}
+function nwPeopleErrText(err) {
+  if (err === 'not_configured') return 'The press route is not connected yet — the corpus token is not set on both projects.';
+  if (err === 'upstream_unreachable') return 'The news corpus could not be reached.';
+  if (/^upstream_http_/.test(err || '')) return 'The news corpus answered an error (' + err.replace('upstream_http_', 'HTTP ') + ').';
+  if (err === 'upstream_not_json') return 'The news corpus answered something other than data — redeploy it and try again.';
+  return nwErrText(err);
 }
 function nwAccountLine(det, a) {
   if (!a || !a.name) return;
@@ -6795,6 +6886,7 @@ function nwAccountDetail(row, id) {
       var udd = nwEl('dd'); udd.appendChild(ul); det.appendChild(udd);
     } else det.appendChild(nwEl('dd', null, 'None — this account can be deleted.'));
     nwSignalsLine(det, { accountId: a.id });   // E4: the attendance signals Events wrote
+    nwPeopleLine(det, a);                       // E4 s3: the people the press names, on demand
     var acts = nwEl('div', 'nw-strip-photos');
     var editBtn = nwEl('a', 'nw-edit-btn nw-acct-edit', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
     editBtn.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); nwEditAccount(a, det, row); });

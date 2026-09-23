@@ -114,12 +114,13 @@ const nwProps = {};
 const NW = makeCtx(nwProps);
 vm.runInContext([
   'NW_RELATIONSHIPS', 'NW_STAGES', 'NW_SIGNAL_KINDS', 'NW_ID_RE', 'NW_ID_PREFIXES', 'NW_TABS',
-  'NW_PEER_TOKEN_PROP', 'NW_EVENTS_TOKEN_PROP', 'EVENTS_PEER_EXEC', 'NW_PEER_RELATIONSHIPS', 'NW_PEER_SLUG_RE'
+  'NW_PEER_TOKEN_PROP', 'NW_EVENTS_TOKEN_PROP', 'EVENTS_PEER_EXEC', 'NW_PEER_RELATIONSHIPS', 'NW_PEER_SLUG_RE',
+  'NW_CORPUS_KEY_RE'   // E4 s3: the write leg's corpus: branch reads it
 ].map((n) => constant(nwSrc, n)).join('\n') + '\nvar SPREADSHEET_ID = "stub";\n' + [
   'ensureNetworkTabs_', 'nwListRows_', 'nwSheetRead_', 'nwRowObj_', 'nwFindRow_', 'nwOwned_', 'nwWriteRow_', 'nwArr_',
   'nwStr_', 'nwNow_', 'nwNewId_', 'nwRandomBase36_',
   'nwPeerAuthorised_', 'nwHandlePeer_', 'nwPeerOwner_', 'nwPeerAccounts_', 'nwPeerSignals_', 'nwPeerJsonBody_',
-  'nwPeerSignalsRead_', 'nwPeerLinkedIn_', 'nwPeerSignalsWrite_', 'nwEventsProxy_'
+  'nwPeerSignalsRead_', 'nwPeerLinkedIn_', 'nwPeerSignalsWrite_', 'nwSignalKey_', 'nwNameKey_'   /* E4 s3: the upsert key helper and the name key it uses for press-quote rows */, 'nwEventsProxy_'
 ].map((n) => extract(nwSrc, n)).join('\n'), NW, { filename: 'Network.peer.js' });
 
 // ── Events context ────────────────────────────────────────────────────────

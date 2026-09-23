@@ -1,4 +1,4 @@
-var VERSION = "v01.12g";
+var VERSION = "v01.13g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1066,6 +1066,20 @@ function handleNetworkOp_(e) {
       nwRequire_(sess, 'signals', 'network_signals');
       return nwSignalsOp_(sess, p);
     }
+    if (op === 'people') {
+      // E4 session 3 — the people the trade press names at one account, read
+      // from the Scraper over this app's own proxy (design plan D17, §13.14);
+      // behind `signals`, reached only past validateSessionForData and the
+      // admin door. An uncovered account has no route and says so.
+      nwRequire_(sess, 'signals', 'network_people');
+      return nwPeopleOp_(sess, p);
+    }
+    if (op === 'peopleaccept') {
+      // E4 session 3 — the accept step: one press-quote signal per accepted
+      // person, written through the same upsert Events uses, Source = scraper.
+      nwRequire_(sess, 'signals', 'network_peopleaccept');
+      return nwPeopleAcceptOp_(sess, p);
+    }
     if (op === 'eventstoday') {
       // B: the scan card's Source Event default — the signed-in user's starred
       // events dated today, asked of Events' server through the near side.
@@ -1144,6 +1158,23 @@ var EVENTS_PEER_EXEC =
 // returned at all rather than returned and ignored.
 var NW_PEER_RELATIONSHIPS = ['target', 'customer', 'partner', 'channel'];
 var NW_PEER_SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;   // mirror of Events' EV_SLUG_RE
+// E4 s3 (design plan D17, NETWORK-SCHEMA.md §9): the people route. A THIRD
+// token namespace — NETWORK_CORPUS_TOKEN is set by hand in Scraper's and this
+// project's Script Properties, never committed, never quoted back; it is not
+// CORPUS_TOKEN (Profiler ↔ Scraper) and not NETWORK_PEER_TOKEN / EVENTS_PEER_TOKEN
+// (this app ↔ Events). "Different peers, different secret."
+var NW_CORPUS_TOKEN_PROP = 'NETWORK_CORPUS_TOKEN';
+// Scraper's /exec — from googleAppsScripts/Scraper/Scraper.config.json
+// DEPLOYMENT_ID, pasted as a constant the way EVENTS_PEER_EXEC is.
+var SCRAPER_CORPUS_EXEC =
+  'https://script.google.com/macros/s/AKfycby8nOR0AqLsDlZPcrTX9dWIInY48R9Jrl8oBDtN5t0emC06j7iwidEMdXttrD1zXnjUIg/exec';
+// The evidence of an accepted press quote is the article's corpus key, not a
+// URL: `corpus:<key>` with the key in Classroom's CL_REF_RE charset (the
+// Scraper's base36 article key always fits). Accepted for kind press-quote
+// only — every other kind still needs an https?:// evidence URL.
+var NW_CORPUS_KEY_RE = /^corpus:[A-Za-z0-9][A-Za-z0-9._-]{0,127}$/;
+var NW_PRESS_QUOTE_CONFIDENCE = 0.7;   // §5.5 — press-quote 0.7
+var NW_PEOPLE_DEFAULT_DAYS = 90;       // the people read's default window when the page sends no `since`
 
 function nwPeerAuthorised_(p) {
   // Trimmed on both sides: the property is pasted into two projects by hand
@@ -1281,8 +1312,12 @@ function nwPeerLinkedIn_(url) {
   return host === 'linkedin.com' || /\.linkedin\.com$/.test(host) || host === 'lnkd.in';
 }
 
-function nwPeerSignalsWrite_(tabs, owner, body) {
+function nwPeerSignalsWrite_(tabs, owner, body, source) {
   if (body.parseError) return { success: false, error: 'bad_json' };
+  // E4 s3: the writer's name on the row — Events over the bridge (the
+  // default) or this app's own accept step ('scraper'); never trusted from
+  // the body.
+  source = source === 'scraper' ? 'scraper' : 'events';
   var list = nwArr_(body.signals);
   if (!list.length) return { success: false, error: 'signals_required' };
   if (list.length > 500) return { success: false, error: 'too_many_signals' };
@@ -1300,8 +1335,8 @@ function nwPeerSignalsWrite_(tabs, owner, body) {
     var sr = sig.vals[s];
     taken[String(sr[sig.idx['Signal ID']] || '')] = true;
     if (String(sr[sig.idx['Owner']] || '').toLowerCase() !== owner) continue;
-    byKey[[String(sr[sig.idx['Account ID']] || ''), String(sr[sig.idx['Event Slug']] || ''),
-           String(sr[sig.idx['Kind']] || ''), String(sr[sig.idx['Evidence URL']] || '')].join('\u0001')] = s + 1;
+    byKey[nwSignalKey_(String(sr[sig.idx['Account ID']] || ''), String(sr[sig.idx['Event Slug']] || ''),
+           String(sr[sig.idx['Kind']] || ''), String(sr[sig.idx['Evidence URL']] || ''), String(sr[sig.idx['Person Name']] || ''))] = s + 1;
   }
   var now = nwNow_(), written = 0, updated = 0, rejected = [];
   for (var i = 0; i < list.length; i++) {
@@ -1312,16 +1347,18 @@ function nwPeerSignalsWrite_(tabs, owner, body) {
     var reason = '';
     if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') reason = 'bad_account_id';
     else if (!liveAccounts[accountId]) reason = 'account_not_found';
-    else if (slug ? !NW_PEER_SLUG_RE.test(slug) : kind !== 'docket') reason = 'bad_slug';   // E4 s2: a docket is not about an event — the empty slug is accepted for that kind only
+    else if (slug ? !NW_PEER_SLUG_RE.test(slug) : (kind !== 'docket' && kind !== 'press-quote')) reason = 'bad_slug';   // E4 s2: a docket is not about an event — the empty slug is accepted for that kind; E4 s3: and for a press quote (§3 — "empty for a press quote with no event")
     else if (NW_SIGNAL_KINDS.indexOf(kind) < 0) reason = 'bad_kind';
-    else if (!evidence || !/^https?:\/\//i.test(evidence)) reason = 'evidence_required';
+    else if (!evidence || !(/^https?:\/\//i.test(evidence) || (kind === 'press-quote' && NW_CORPUS_KEY_RE.test(evidence)))) reason = 'evidence_required';   // E4 s3: the corpus: branch — an article key is evidence for press-quote only
+    else if (kind === 'press-quote' && !nwStr_(x.personName, 200)) reason = 'person_required';   // a press quote is about a person
     else if (nwPeerLinkedIn_(evidence) && kind !== 'linkedin-manual') reason = 'linkedin_not_fetched';   // E4: the manual kind is the ONLY LinkedIn entry (D9) — pasted by the developer, never fetched
     else if (contactId && !(NW_ID_RE.test(contactId) && contactId.charAt(0) === 'c')) reason = 'bad_contact_id';
     if (reason) { rejected.push({ index: i, reason: reason }); continue; }
     var conf = Number(x.confidence);
     if (isNaN(conf)) conf = 0; if (conf < 0) conf = 0; if (conf > 1) conf = 1;
     var note = nwStr_(x.note, 500);
-    var key = [accountId, slug, kind, evidence].join('\u0001');
+    var personName = nwStr_(x.personName, 200);
+    var key = nwSignalKey_(accountId, slug, kind, evidence, personName);
     if (byKey[key]) {
       var rowNum = byKey[key];
       tabs.signals.getRange(rowNum, sig.idx['Last Seen'] + 1).setValue(now);
@@ -1335,14 +1372,15 @@ function nwPeerSignalsWrite_(tabs, owner, body) {
     var id = nwNewId_('s', taken); taken[id] = true;
     nwWriteRow_(tabs.signals, sig.headers, {
       'Signal ID': id, 'Owner': owner, 'Account ID': accountId, 'Contact ID': contactId, 'Event Slug': slug,
-      'Kind': kind, 'Person Name': nwStr_(x.personName, 200), 'Person Title': nwStr_(x.personTitle, 200),
+      'Kind': kind, 'Person Name': personName, 'Person Title': nwStr_(x.personTitle, 200),
       'Evidence URL': evidence, 'First Seen': firstSeen, 'Last Seen': now, 'Confidence': conf, 'Note': note,
-      'Source': 'events' }, 0);
+      'Source': source }, 0);
     byKey[key] = true;
     written++;
   }
   if (written) bumpDataRev();
-  auditLog('data_write', owner, 'peer_signals_write', { written: written, updated: updated, rejected: rejected.length });
+  auditLog('data_write', owner, source === 'events' ? 'peer_signals_write' : 'signals_write_' + source,
+    { written: written, updated: updated, rejected: rejected.length });
   return { success: true, written: written, updated: updated, rejected: rejected };
 }
 
@@ -1379,6 +1417,166 @@ function nwSignalsOp_(sess, p) {
   out.sort(function(a, b) { return a.lastSeen < b.lastSeen ? 1 : a.lastSeen > b.lastSeen ? -1 : 0; });
   auditLog('data_read', sess.email, 'network_signals', { accountId: accountId, contactId: contactId, signals: out.length });
   return { success: true, accountId: accountId, contactId: contactId, signals: out };
+}
+
+// The upsert key of a Signals row (§8): account, event slug, kind and
+// evidence — plus the person for a press quote (E4 s3), because one article
+// (one `corpus:<key>` evidence) can quote several people at the same account
+// and each is its own row; on every other kind the person is not part of the
+// key, so a roster re-run still refreshes rather than duplicates.
+function nwSignalKey_(accountId, slug, kind, evidence, personName) {
+  var parts = [accountId, slug, kind, evidence];
+  if (kind === 'press-quote') parts.push(nwNameKey_(personName));
+  return parts.join('\u0001');
+}
+
+// PROJECT: ── E4 session 3 — the people route (design plan D17, §13.14; NETWORK-SCHEMA.md §9) ──
+// The near side — this app asking the Scraper's corpus route for the people
+// the trade press names at one covered company. nwEventsProxy_ (and so
+// guidanceMentionsProxy_) verbatim with a different URL and token: the
+// property .trim()-ed, not_configured under 16 characters and no fetch,
+// muteHttpExceptions with upstream_http_<code>, upstream_unreachable on a
+// throw, upstream_not_json with a 160-character snippet. GET only, a read.
+// Called only from handleNetworkOp_ after validateSessionForData +
+// nwRequire_(sess, 'signals') — never from a token-gated route, never
+// through Profiler's corpus proxy, never with CORPUS_TOKEN.
+function nwPeopleProxy_(slug, since) {
+  var token = String(PropertiesService.getScriptProperties()
+    .getProperty(NW_CORPUS_TOKEN_PROP) || '').trim();
+  if (token.length < 16) return { success: false, error: 'not_configured' };
+  var url = SCRAPER_CORPUS_EXEC + '?action=corpus&cop=people'
+    + '&t=' + encodeURIComponent(token)
+    + '&slug=' + encodeURIComponent(String(slug || ''));
+  if (since) url += '&since=' + encodeURIComponent(String(since));
+  var body;
+  try {
+    var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true });
+    if (resp.getResponseCode() !== 200) {
+      return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
+    }
+    body = resp.getContentText();
+  } catch (fErr) {
+    return { success: false, error: 'upstream_unreachable' };
+  }
+  try {
+    return JSON.parse(body);
+  } catch (pErr) {
+    return { success: false, error: 'upstream_not_json',
+             detail: String(body || '').replace(/\s+/g, ' ').slice(0, 160) };
+  }
+}
+
+// The live account row for an a- id inside the session's scope, or null.
+function nwScopedAccount_(sess, tabs, accountId) {
+  if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') return { error: 'bad_account_id' };
+  var scope = resolveOwnerSet_(sess, '*');
+  if (scope.error) return { error: scope.error };
+  var found = nwFindRow_(nwSheetRead_(tabs.accounts), accountId);
+  if (!found || String(found.obj['Deleted At'] || '')) return { error: 'not_found' };
+  var owner = String(found.obj['Owner'] || '').toLowerCase();
+  if (!scope.set[owner]) return { error: 'not_found' };
+  return { account: found.obj, owner: owner, access: scope.set[owner] };
+}
+
+// nop=people (session, GET) — accountId [, since=YYYY-MM-DD]. The account's
+// Profiler slug names the route; an uncovered account (no slug) has no route
+// and the answer says so (covered:false, no fetch). Each item is the
+// Scraper's answer (key · publishedAt · source · title · url · people[])
+// with `accepted` on every person the Signals tab already holds for this
+// account (a press-quote row with that corpus key and that name) — so the
+// page can show the tick without a second op. Audit: ids and counts only.
+function nwPeopleOp_(sess, p) {
+  var accountId = nwStr_(p.accountId);
+  var tabs = ensureNetworkTabs_();
+  var got = nwScopedAccount_(sess, tabs, accountId);
+  if (got.error) return { success: false, error: got.error };
+  var slug = String(got.account['Profiler Slug'] || '').trim().toLowerCase();
+  if (!slug) {
+    auditLog('data_read', sess.email, 'network_people', { accountId: accountId, covered: 0, items: 0, people: 0 });
+    return { success: true, accountId: accountId, slug: '', covered: false, items: [] };
+  }
+  var since = nwStr_(p.since, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(since)) {
+    since = new Date(Date.now() - NW_PEOPLE_DEFAULT_DAYS * 86400000).toISOString().slice(0, 10);
+  }
+  var res = nwPeopleProxy_(slug, since);
+  if (!(res && res.success)) {
+    auditLog('data_read', sess.email, 'network_people', { accountId: accountId, covered: 1, items: 0, people: 0, error: String((res && res.error) || 'upstream') });
+    return { success: false, error: String((res && res.error) || 'upstream_failed'), detail: res && res.detail, accountId: accountId, slug: slug, covered: true };
+  }
+  // The rows already accepted on this account: corpus key + person name key.
+  var accepted = {};
+  var rows = nwListRows_(tabs.signals, (function() { var one = {}; one[got.owner] = 'own'; return one; })(),
+    { accountId: 'Account ID', kind: 'Kind', evidenceUrl: 'Evidence URL', personName: 'Person Name', id: 'Signal ID' });
+  for (var r = 0; r < rows.length; r++) {
+    if (rows[r].accountId !== accountId || rows[r].kind !== 'press-quote') continue;
+    accepted[rows[r].evidenceUrl + '\u0001' + nwNameKey_(rows[r].personName)] = rows[r].id;
+  }
+  var items = nwArr_(res.items), out = [], people = 0;
+  for (var i = 0; i < items.length; i++) {
+    var it = items[i] && typeof items[i] === 'object' ? items[i] : {};
+    var key = nwStr_(it.key, 128);
+    if (!NW_CORPUS_KEY_RE.test('corpus:' + key)) continue;
+    var ppl = nwArr_(it.people), keep = [];
+    for (var q = 0; q < ppl.length; q++) {
+      var person = ppl[q] && typeof ppl[q] === 'object' ? ppl[q] : {};
+      var name = nwStr_(person.name, 200);
+      if (!name) continue;
+      var sid = accepted['corpus:' + key + '\u0001' + nwNameKey_(name)] || '';
+      keep.push({ name: name, title: nwStr_(person.title, 200), company: nwStr_(person.company, 200),
+                  role: nwStr_(person.role, 20), context: nwStr_(person.context, 300), accepted: !!sid, signalId: sid });
+    }
+    if (!keep.length) continue;
+    people += keep.length;
+    out.push({ key: key, publishedAt: nwStr_(it.publishedAt, 40), source: nwStr_(it.source, 120),
+               title: nwStr_(it.title, 300), url: /^https?:\/\//i.test(nwStr_(it.url, 500)) ? nwStr_(it.url, 500) : '',
+               people: keep });
+  }
+  auditLog('data_read', sess.email, 'network_people', { accountId: accountId, covered: 1, items: out.length, people: people });
+  return { success: true, accountId: accountId, slug: slug, covered: true, since: since, items: out };
+}
+
+// nop=peopleaccept (session) — accountId, key, name [, title, company,
+// context, publishedAt]. One press-quote row through the same upsert Events
+// writes over the bridge (nwPeerSignalsWrite_, Source = scraper): kind
+// press-quote, confidence 0.7, Evidence URL = corpus:<key>, the person's
+// name and title, no event slug, the item's date as First Seen, the context
+// as the note, and Contact ID set when the name matches a live Contact at
+// this account (§9). A second accept of the same person on the same article
+// refreshes the row (updated:1) rather than duplicating it. The scope must
+// allow a write (own or edit). Audit: ids and counts only.
+function nwPeopleAcceptOp_(sess, p) {
+  var accountId = nwStr_(p.accountId);
+  var tabs = ensureNetworkTabs_();
+  var got = nwScopedAccount_(sess, tabs, accountId);
+  if (got.error) return { success: false, error: got.error };
+  if (got.access === 'view') return { success: false, error: 'read_only_scope' };
+  var key = nwStr_(p.key, 128);
+  if (!key || !NW_CORPUS_KEY_RE.test('corpus:' + key)) return { success: false, error: 'bad_key' };
+  var name = nwStr_(p.name, 200);
+  if (!name) return { success: false, error: 'name_required' };
+  // The contact match — the person's name key against the live contacts at this account.
+  var contactId = '', nameKey = nwNameKey_(name);
+  var ct = nwSheetRead_(tabs.contacts);
+  for (var r = 1; r < ct.vals.length; r++) {
+    var row = ct.vals[r];
+    if (String(row[ct.idx['Account ID']] || '') !== accountId) continue;
+    if (String(row[ct.idx['Deleted At']] || '')) continue;
+    if (String(row[ct.idx['Owner']] || '').toLowerCase() !== got.owner) continue;
+    if (nwNameKey_(row[ct.idx['Full Name']]) === nameKey) { contactId = String(row[ct.idx['Contact ID']] || ''); break; }
+  }
+  var publishedAt = nwStr_(p.publishedAt, 40);
+  var context = nwStr_(p.context, 300), company = nwStr_(p.company, 200);
+  var note = context ? context : '';
+  if (company && company.toLowerCase() !== String(got.account['Name'] || '').toLowerCase()) note = (note ? note + ' ' : '') + '(' + company + ')';
+  var res = nwPeerSignalsWrite_(tabs, got.owner, { signals: [{
+    accountId: accountId, contactId: contactId, eventSlug: '', kind: 'press-quote',
+    personName: name, personTitle: nwStr_(p.title, 200), evidenceUrl: 'corpus:' + key,
+    confidence: NW_PRESS_QUOTE_CONFIDENCE, note: nwStr_(note, 500), firstSeen: publishedAt }] }, 'scraper');
+  if (!(res && res.success)) return res;
+  if (res.rejected && res.rejected.length) return { success: false, error: res.rejected[0].reason };
+  auditLog('data_write', sess.email, 'network_peopleaccept', { accountId: accountId, contactId: contactId, written: res.written, updated: res.updated });
+  return { success: true, accountId: accountId, contactId: contactId, written: res.written, updated: res.updated };
 }
 
 // The near side — this app asking Events' server. guidanceMentionsProxy_

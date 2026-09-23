@@ -228,6 +228,25 @@ def gas_stub(role, counter, state=None):
                         'signals': [{'id': 's-0000000000001', 'accountId': 'a-0000000000001', 'contactId': '', 'eventSlug': 're-plus-2026', 'kind': 'exhibitor',
                                      'evidenceUrl': 'https://example.com/exhibitors/stub', 'confidence': 0.9, 'firstSeen': '2026-09-22T00:00:00Z',
                                      'lastSeen': '2026-09-22T00:00:00Z', 'source': 'events', 'note': ''}]}
+            elif 'nop=peopleaccept' in url or 'nop=peopleaccept' in post:
+                # E4 s3: the accept step — one press-quote signal; the params (GET query or POST body — the page's
+                # transport falls back to GET against this stub) are recorded so the pass can read what the page sent
+                import urllib.parse
+                sent = post if 'nop=peopleaccept' in post else urllib.parse.urlsplit(url).query
+                state['posts'].append(('peopleaccept', sent))
+                body = {'success': True, 'accountId': q(sent, 'accountId'), 'contactId': 'c-0000000000002' if q(sent, 'name') == 'Morten Wierod' else '', 'written': 1, 'updated': 0}
+            elif 'nop=people' in url or 'nop=people' in post:
+                # E4 s3: the people the press names at the account — the covered account answers two people on one
+                # article (one already accepted), the uncovered one has no route
+                import urllib.parse
+                aid = q(post, 'accountId') or dict(urllib.parse.parse_qsl(urllib.parse.urlsplit(url).query)).get('accountId', '')
+                if aid == 'a-0000000000002':
+                    body = {'success': True, 'accountId': aid, 'slug': 'abb', 'covered': True, 'since': '2026-06-24',
+                            'items': [{'key': 'k3j9x1-2f', 'publishedAt': '2026-09-20T09:00:00Z', 'source': 'Stub Wire', 'title': 'ABB opens a storage line', 'url': 'https://example.com/news/abb',
+                                       'people': [{'name': 'Morten Wierod', 'title': 'CEO', 'company': 'ABB', 'role': 'quoted', 'context': 'said the line doubles capacity', 'accepted': False, 'signalId': ''},
+                                                  {'name': 'Ada Byline', 'title': 'Reporter', 'company': 'Stub Wire', 'role': 'author', 'context': '', 'accepted': True, 'signalId': 's-0000000000009'}]}]}
+                else:
+                    body = {'success': True, 'accountId': aid, 'slug': '', 'covered': False, 'items': []}
             elif 'nop=folders' in url:
                 body = {'success': True, 'folders': None}
             elif 'nop=setfolders' in url:
@@ -964,6 +983,32 @@ def run():
         ahref = page.evaluate("() => { const a = document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-row-detail a.nw-prof-link'); return a ? a.getAttribute('href') : ''; }")
         if 'Open the ABB dossier' not in adet or 'Contacts (1)' not in adet or 'Zurich' not in adet or ahref != 'Profiler.html#abb' or not [u for u in reqs if 'nop=get' in u and 'id=a-0000000000002' in u]:
             failures.append('account detail: wrong — text=%r href=%r' % (adet[:160], ahref))
+        # E4 s3: "People in the press" on the covered account — read on demand (no nop=people before the tap),
+        # two people on one article, the accepted one ticked; Accept posts nop=peopleaccept with the key and the
+        # person and the row flips to Accepted; the "Will be at" line re-reads.
+        if [u for u in reqs if 'nop=people' in u and 'nop=peopleaccept' not in u]:
+            failures.append('people: nop=people was called on the detail open — it must wait for the tap')
+        page.wait_for_selector('#nw-accounts .nw-acct-row.nw-open .nw-people-btn', timeout=8000)
+        page.click('#nw-accounts .nw-acct-row.nw-open .nw-people-btn')
+        page.wait_for_function("() => document.querySelectorAll('#nw-accounts .nw-acct-row.nw-open .nw-people-person').length === 2", timeout=8000)
+        ppl = page.evaluate("() => [...document.querySelectorAll('#nw-accounts .nw-acct-row.nw-open .nw-people-person')].map(r => [r.getAttribute('data-person'), r.getAttribute('data-accepted'), !!r.querySelector('.nw-accept-btn'), r.textContent])")
+        if ppl[0][0] != 'Morten Wierod' or ppl[0][1] != '0' or not ppl[0][2] or 'CEO, ABB' not in ppl[0][3] or 'quoted' not in ppl[0][3] or 'doubles capacity' not in ppl[0][3] \
+           or ppl[1][0] != 'Ada Byline' or ppl[1][1] != '1' or ppl[1][2] or 'Accepted' not in ppl[1][3]:
+            failures.append('people: the list should show the quoted person with Accept and the accepted author ticked, got %r' % (ppl,))
+        item = page.evaluate("() => (document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-people-item') || {}).textContent || ''")
+        if 'ABB opens a storage line' not in item or 'Stub Wire' not in item or '2026-09-20' not in item:
+            failures.append('people: the article line should read title — source · date, got %r' % (item,))
+        sig_reads = len([u for u in reqs if 'nop=signals' in u])
+        page.click('#nw-accounts .nw-acct-row.nw-open .nw-people-person[data-person="Morten Wierod"] .nw-accept-btn')
+        page.wait_for_function("() => (document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-people-person[data-person=\"Morten Wierod\"]') || {}).getAttribute('data-accepted') === '1'", timeout=8000)
+        page.wait_for_function("() => /matched to a contact/.test((document.getElementById('nw-acct-status') || {}).textContent || '')", timeout=8000)
+        ap = dict(__import__('urllib.parse').parse.parse_qsl(state['posts'][-1][1]))
+        if state['posts'][-1][0] != 'peopleaccept' or ap.get('accountId') != 'a-0000000000002' or ap.get('key') != 'k3j9x1-2f' or ap.get('name') != 'Morten Wierod' or ap.get('title') != 'CEO' or ap.get('publishedAt') != '2026-09-20T09:00:00Z':
+            failures.append('people: Accept should post nop=peopleaccept with the account, the article key, the person and the date, got %r' % (ap,))
+        page.wait_for_function("() => document.querySelectorAll('#nw-accounts .nw-acct-row.nw-open .nw-people-person .nw-accept-btn').length === 0", timeout=8000)
+        if len([u for u in reqs if 'nop=signals' in u]) != sig_reads + 1:
+            failures.append('people: the "Will be at" line should re-read once after an accept')
+        page.screenshot(path=str(SHOTS / 'network-people.png'), full_page=False)
         page.screenshot(path=str(SHOTS / 'network-accounts.png'), full_page=False)
         page.click('#nw-accounts .nw-acct-row[data-id="a-0000000000002"] .nw-row-main')   # close
         # Edit: Acme (target · discovery) flipped to partner — the stage select resets to none (D5) and nop=account carries it.
@@ -1001,6 +1046,10 @@ def run():
         # Propose a dossier on the uncovered account: the exact `profiler <Company>` line, and the dossier-proposed tag through nop=account.
         page.click('#nw-accounts .nw-acct-row[data-id="a-0000000000001"] .nw-row-main')
         page.wait_for_selector('#nw-accounts .nw-acct-row.nw-open .nw-propose-btn', timeout=8000)
+        # E4 s3: an uncovered account has no press route and says so — with no nop=people call
+        unc = page.evaluate("() => (document.querySelector('#nw-accounts .nw-acct-row.nw-open dd.nw-people') || {}).textContent || ''")
+        if 'Not covered by Profiler' not in unc or page.evaluate("() => !!document.querySelector('#nw-accounts .nw-acct-row.nw-open .nw-people-btn')"):
+            failures.append('people: the uncovered account should say it has no press route, got %r' % (unc,))
         page.click('#nw-accounts .nw-acct-row.nw-open .nw-propose-btn')
         page.wait_for_function("() => (document.querySelector('#nw-accounts .nw-row-detail .nw-copyline code') || {}).textContent === 'profiler Acme Energy'", timeout=8000)
         page.wait_for_function("() => /profiler Acme Energy/.test((document.getElementById('nw-acct-status') || {}).textContent || '')", timeout=8000)

@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 12/50`
+`Sections: 13/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.13g] — 2026-09-22 11:02:50 PM EST — v07.21r
+
+### Added
+- The people the trade press names at an account can be read from the news corpus, for accounts with a dossier — accounts without one are told so rather than searched
+- Accepting a person saves a press-quote signal on the account (confidence 0.7) with the article as its evidence, the person's name and title, and a link to your contact when the name matches one at that account; accepting the same person twice refreshes the row rather than duplicating it
+
+### Changed
+- Minor internal improvements
 
 ## [v01.12g] — 2026-09-22 10:38:40 PM EST — v07.20r
 

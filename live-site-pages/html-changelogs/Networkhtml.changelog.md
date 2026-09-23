@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 21/50`
+`Sections: 22/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.22w] — 2026-09-22 11:02:50 PM EST — v07.21r
+
+### Added
+- A **People in the press** section on the account detail — tap **Read the press** to list who the trade press has quoted or bylined at the account, then **Accept** anyone worth tracking; accepted people show a tick and appear on the "Will be at" line straight away
+
+### Changed
+- Minor internal improvements
 
 ## [v01.21w] — 2026-09-22 07:50:15 PM EST — v07.19r
 

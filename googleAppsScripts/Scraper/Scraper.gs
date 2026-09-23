@@ -1,4 +1,4 @@
-var VERSION = "v02.21g";
+var VERSION = "v02.22g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1981,7 +1981,14 @@ var SCRAPER_COLDSTORE_FOLDER = 'Scraper Archive';
 // stats, candidate mining). Bounds what used to be unbounded getDataRange()
 // scans — the same fix "Why thin?" and listDigests already received.
 var SCRAPER_ARCHIVE_SCAN_ROWS = 8000;
-var SCRAPER_SIGNALS_CELL_MAX = 1500;   // intake Signals JSON cap (was a raw 1200 slice)
+var SCRAPER_SIGNALS_CELL_MAX = 2500;   // intake Signals JSON cap (was a raw 1200 slice; 1500 until E4 s3 — the `ppl` list needs the room)
+// E4 s3 (design plan D17): the people the summarise pass names, stored in the
+// same Signals blob as `ppl` and read only by the cop=people route. Bounded
+// per item so the blob stays inside SCRAPER_SIGNALS_CELL_MAX in the common case.
+var SCRAPER_PEOPLE_MAX = 5;            // people kept per item
+var SCRAPER_PEOPLE_ROLES = ['quoted', 'author', 'named'];
+var SCRAPER_PEOPLE_SCAN_MAX = 200;     // cop=people answer ceiling (limit param, default 60)
+var SCRAPER_NETWORK_CORPUS_TOKEN_PROP = 'NETWORK_CORPUS_TOKEN';   // gates cop=people only — Network holds the same value; never CORPUS_TOKEN
 var SCRAPER_CLICKLOG_KEEP = 20000;     // scoring reads 30 days; beyond this is dead weight
 var SCRAPER_EDGE_CAND_KEEP_DAYS = 60;  // pending candidates expire after this
 var SCRAPER_EDGE_CAND_MAX_PER_RUN = 25;
@@ -4825,11 +4832,20 @@ function scReconcileEdgeCandidates_(ss) {
     property is unset (no default token ever ships in code). */
 function scHandleCorpus_(e) {
   var p = (e && e.parameter) || {};
+  var cop = String(p.cop || '');
+  // E4 s3 (design plan D17 — "different peers, different secret"): cop=people
+  // is Network's route and is gated by NETWORK_CORPUS_TOKEN ALONE. A caller
+  // holding CORPUS_TOKEN (Profiler) is refused here exactly like a stranger,
+  // and a NETWORK_CORPUS_TOKEN holder never reaches timeline or candidates
+  // below. The idiom is Network's nwHandlePeer_: the property .trim()-ed, a
+  // property under 16 characters refuses even a matching t, every boundary
+  // case the same flat denied with zero sheet reads, nothing echoed or
+  // audited on a refusal.
+  if (cop === 'people') return scHandlePeople_(p);
   var want = PropertiesService.getScriptProperties().getProperty('CORPUS_TOKEN') || '';
   if (want.length < 16 || String(p.t || '') !== want) {
     return { success: false, error: 'denied' };
   }
-  var cop = String(p.cop || '');
   var limit = Math.max(1, Math.min(200, Number(p.limit) || 60));
   if (cop === 'timeline') {
     // Every item carries `key` — scArticleKey_'s base36 digest of the
@@ -4864,6 +4880,68 @@ function scHandleCorpus_(e) {
     return { success: true, candidates: out, count: out.length };
   }
   return { success: false, error: 'unknown_cop' };
+}
+
+/** E4 s3 — the far side of the people route (NETWORK-SCHEMA.md §9):
+    ?action=corpus&cop=people&t=<NETWORK_CORPUS_TOKEN>&slug=<registry slug>&since=<YYYY-MM-DD>[&limit=]
+    → { success, slug, since, items:[ { key, publishedAt, source, title, url, people:[…] } ], count }
+    Only items whose summarise pass stored a people list are answered (no
+    back-fill: an item summarised before E4 s3 carries none and is skipped);
+    newest first, one row per article key, bounded by `limit` (≤ 200).
+    Audit: the slug, the counts and the window — never a name. */
+function scHandlePeople_(p) {
+  var want = String(PropertiesService.getScriptProperties()
+    .getProperty(SCRAPER_NETWORK_CORPUS_TOKEN_PROP) || '').trim();
+  if (want.length < 16 || String((p && p.t) || '').trim() !== want) {
+    return { success: false, error: 'denied' };
+  }
+  var slug = String(p.slug || '').trim().toLowerCase();
+  if (!slug) return { success: false, error: 'slug_required' };
+  var sinceMs = p.since ? new Date(String(p.since)).getTime() : 0;
+  if (isNaN(sinceMs)) sinceMs = 0;
+  var limit = Math.max(1, Math.min(SCRAPER_PEOPLE_SCAN_MAX, Number(p.limit) || 60));
+  var items = scPeopleScan_(slug, sinceMs, limit);
+  var people = 0;
+  for (var i = 0; i < items.length; i++) people += items[i].people.length;
+  try {
+    auditLog('data_read', 'peer:network', 'corpus_people',
+      { slug: slug, since: sinceMs ? new Date(sinceMs).toISOString().slice(0, 10) : '', items: items.length, people: people });
+  } catch (aErr) {}
+  return { success: true, slug: slug, since: sinceMs ? new Date(sinceMs).toISOString().slice(0, 10) : '',
+           items: items, count: items.length };
+}
+
+/** scTimelineScan_'s walk, narrowed to rows whose Signals blob carries `ppl`
+    and answering the minimum the people route needs: the article key, its
+    date, outlet, title, URL and the people list. Corpus-only (archive) rows
+    count — a sub-floor item that names a covered company is exactly where
+    a quiet quote lives. */
+function scPeopleScan_(want, sinceMs, max) {
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var last = sheet.getLastRow();
+  var n = Math.min(Math.max(0, last - 1), SCRAPER_ARCHIVE_SCAN_ROWS);
+  var data = n ? sheet.getRange(last - n + 1, 1, n, 12).getValues() : [];
+  var out = [], seenAk = {};
+  for (var i = data.length - 1; i >= 0 && out.length < max; i--) {
+    var sig = {};
+    try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
+    var ppl = Object.prototype.toString.call(sig.ppl) === '[object Array]' ? sig.ppl : [];
+    if (!ppl.length) continue;
+    var mcs = (sig.mcs || []).map(function(x) { return String(x).toLowerCase(); });
+    var mc = (sig.mc || []).map(function(x) { return String(x).toLowerCase(); });
+    if (mcs.indexOf(want) === -1 && mc.indexOf(want) === -1) continue;
+    if (sinceMs) {
+      var ts = new Date(String(data[i][4])).getTime();
+      if (ts && ts < sinceMs) continue;
+    }
+    var ak = String(sig.ak || scArticleKey_(String(data[i][1])));
+    if (seenAk[ak]) continue;
+    seenAk[ak] = true;
+    out.push({ key: ak, publishedAt: String(data[i][4]), source: String(data[i][3]),
+      title: String(data[i][2]), url: String(data[i][1]), people: scPeopleParse_(ppl) });
+  }
+  return out;
 }
 
 /** Drop intake rows whose digest no longer has a Digests row — exactly what an
@@ -4953,7 +5031,7 @@ function scRunCtx_(ss, model) {
     cell silently loses mc/mcs for search, the timeline, and candidate
     mining. Drop whole fields, least important first, until it fits. */
 function scSignalsJson_(o) {
-  var drop = ['xs', 'ms', 'figs', 'mt', 's'];
+  var drop = ['xs', 'ms', 'figs', 'ppl', 'mt', 's'];   // E4 s3: `ppl` (the people list) is dropped after figs, before the rubric detail
   var out = JSON.stringify(o);
   for (var i = 0; i < drop.length && out.length > SCRAPER_SIGNALS_CELL_MAX; i++) {
     if (o[drop[i]] === undefined) continue;
@@ -4977,6 +5055,31 @@ function scSignalsMerge_(intake, row, extra) {
     }
     cell.setValue(scSignalsJson_(sig));
   } catch (e) {}
+}
+
+/** E4 s3 — the summarise reply's `people` field, validated to the stored
+    shape: at most SCRAPER_PEOPLE_MAX entries, each a bounded name (required),
+    title, company, a role from SCRAPER_PEOPLE_ROLES (an off-list word
+    collapses to 'named') and a short context. Never throws — a malformed
+    field yields [] and the item is stored without people. Pure: no sheet,
+    no property, so the harness proves it directly. */
+function scPeopleParse_(raw) {
+  if (Object.prototype.toString.call(raw) !== '[object Array]') return [];
+  var out = [], seen = {};
+  for (var i = 0; i < raw.length && out.length < SCRAPER_PEOPLE_MAX; i++) {
+    var p = raw[i];
+    if (!p || typeof p !== 'object') continue;
+    var name = scStr_(p.name, 80).replace(/\s+/g, ' ');
+    if (!name || name.length < 2) continue;
+    var key = name.toLowerCase();
+    if (seen[key]) continue;
+    seen[key] = true;
+    var role = String(p.role || '').toLowerCase().trim();
+    if (SCRAPER_PEOPLE_ROLES.indexOf(role) === -1) role = 'named';
+    out.push({ name: name, title: scStr_(p.title, 80), company: scStr_(p.company, 80),
+               role: role, context: scStr_(p.context, 120) });
+  }
+  return out;
 }
 
 /** Stable cross-edition identity for one article: the same story stored by
@@ -5663,13 +5766,23 @@ function scDigestSummarizeStep_(ss, state, t0) {
       + '"figs" — up to 6 concrete figures copied VERBATIM from the item text '
       + '("212 MW", "$4.3B", "4-hour"); [] when it states none. Never invent or restate '
       + 'a figure in different units.\n\n'
+      // E4 s3 (design plan D17, catalogue §5.5.1 row 5): the people the item
+      // names, asked for in the same call — the model has already read the
+      // item, so this costs a few output tokens and never a second call.
+      // Only people the text actually names; a role from the closed list.
+      + '"people" — up to ' + SCRAPER_PEOPLE_MAX + ' PEOPLE the item text actually names, each '
+      + '{"name":"...","title":"...","company":"...","role":"...","context":"..."}: role is exactly '
+      + 'one of quoted (the item quotes them), author (the byline), named (mentioned without a quote); '
+      + 'title and company as the item gives them ("" when it does not); context is one short '
+      + 'phrase on what they said or did. Never invent a person, a title or a company; '
+      + '[] when the item names nobody.\n\n'
       // Same reasoning as before: the closing thought is specified by what it
       // must achieve, never by a sentence pattern.
       + 'Vary how you write the analysis across the items — do not open it with the same '
       + 'construction every time, and do not use a standard phrase like "For X, this…" on '
       + 'more than one item in this batch.\n\n'
       + 'Reply ONLY with a JSON array like '
-      + '[{"i":0,"summary":"...","analysis":"...","event":"...","figs":["..."]}] '
+      + '[{"i":0,"summary":"...","analysis":"...","event":"...","figs":["..."],"people":[]}] '
       + 'covering every item.\n\nItems:\n'
       + JSON.stringify(batch.map(function(it, n) {
           return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
@@ -5691,7 +5804,7 @@ function scDigestSummarizeStep_(ss, state, t0) {
           }
           byIdx[p.i] = { summary: scStr_(p.summary, SCRAPER_DIGEST_SUMMARY_MAX),
                          analysis: scStr_(p.analysis, SCRAPER_DIGEST_ANALYSIS_MAX),
-                         event: ev, figs: figs };
+                         event: ev, figs: figs, people: scPeopleParse_(p.people) };
         }
       });
       batch.forEach(function(it, n) {
@@ -5711,9 +5824,11 @@ function scDigestSummarizeStep_(ss, state, t0) {
         // Corpus metadata rides into the row's Signals JSON — the digest
         // never renders it, but the timeline, corpus API and edge-candidate
         // mining all read it.
-        if (got.event || (got.figs && got.figs.length)) {
+        if (got.event || (got.figs && got.figs.length) || (got.people && got.people.length)) {
           scSignalsMerge_(intake, it.row,
-            { evt: got.event || undefined, figs: (got.figs && got.figs.length) ? got.figs : undefined });
+            { evt: got.event || undefined, figs: (got.figs && got.figs.length) ? got.figs : undefined,
+              // E4 s3: the people list rides the same merge; absent when the item names nobody
+              ppl: (got.people && got.people.length) ? got.people : undefined });
         }
         it.summary = got.summary;
         it.analysis = got.analysis || '';
