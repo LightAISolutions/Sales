@@ -1,4 +1,4 @@
-var VERSION = "v01.14g";
+var VERSION = "v01.15g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1098,6 +1098,19 @@ function handleNetworkOp_(e) {
       nwRequire_(sess, 'contacts', 'network_importconfirm');
       return nwImportConfirmOp_(sess, p);
     }
+    if (op === 'brief') {
+      // N4 s2 — the pre-meeting brief: the contact's own rows assembled here
+      // (the dossier pieces are the page's read of Profiler's served JSON);
+      // an export, so a disclosure row is written (D9).
+      nwRequire_(sess, 'contacts', 'network_brief');
+      return nwBriefOp_(sess, p);
+    }
+    if (op === 'promote') {
+      // N4 s2 — one Interaction copied into Profiler's intake through its
+      // existing note op as a sourceType: contact field note (D16); one-way.
+      nwRequire_(sess, 'contacts', 'network_promote');
+      return nwPromoteOp_(sess, p);
+    }
     if (op === 'eventstoday') {
       // B: the scan card's Source Event default — the signed-in user's starred
       // events dated today, asked of Events' server through the near side.
@@ -1416,25 +1429,17 @@ function nwSignalsOp_(sess, p) {
     var found = nwFindRow_(nwSheetRead_(tabs.contacts), contactId);
     if (!found || !scope.set[String(found.obj['Owner'] || '').toLowerCase()]) return { success: false, error: 'not_found' };
     accountId = String(found.obj['Account ID'] || '');
-    if (!accountId) { auditLog('data_read', sess.email, 'network_signals', { contactId: contactId, signals: 0 }); return { success: true, accountId: '', contactId: contactId, signals: [] }; }
+    if (!accountId) { auditLog('data_read', sess.email, 'network_signals', { contactId: contactId, signals: 0 }); return { success: true, accountId: '', contactId: contactId, signals: [], events: {}, eventsConfigured: true }; }
   }
   if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') return { success: false, error: 'bad_account_id' };
-  var rows = nwListRows_(tabs.signals, scope.set, {
-    id: 'Signal ID', accountId: 'Account ID', contactId: 'Contact ID', eventSlug: 'Event Slug', kind: 'Kind',
-    evidenceUrl: 'Evidence URL', confidence: 'Confidence', firstSeen: 'First Seen', lastSeen: 'Last Seen', source: 'Source',
-    personName: 'Person Name', personTitle: 'Person Title', note: 'Note' });
-  var out = [];
-  for (var i = 0; i < rows.length; i++) {
-    var r = rows[i];
-    if (r.accountId !== accountId) continue;
-    var o = { id: r.id, accountId: accountId, contactId: r.contactId, eventSlug: r.eventSlug, kind: r.kind, evidenceUrl: r.evidenceUrl,
-              confidence: Number(r.confidence) || 0, firstSeen: r.firstSeen, lastSeen: r.lastSeen, source: r.source, note: r.note };
-    if (r.personName) { o.personName = r.personName; if (r.personTitle) o.personTitle = r.personTitle; }
-    out.push(o);
-  }
-  out.sort(function(a, b) { return a.lastSeen < b.lastSeen ? 1 : a.lastSeen > b.lastSeen ? -1 : 0; });
-  auditLog('data_read', sess.email, 'network_signals', { accountId: accountId, contactId: contactId, signals: out.length });
-  return { success: true, accountId: accountId, contactId: contactId, signals: out };
+  var out = nwSignalRows_(tabs, scope.set, accountId);
+  // N4 s2: the event names for the "will be at" chips — Events' eop=signals,
+  // once per read, only when a row names an event; a slug stays a slug when
+  // Events is not configured or cannot be reached.
+  var ev = nwSignalEvents_(sess.email, accountId, out);
+  nwSignalsNamed_(out, ev);
+  auditLog('data_read', sess.email, 'network_signals', { accountId: accountId, contactId: contactId, signals: out.length, events: Object.keys(ev.events).length });
+  return { success: true, accountId: accountId, contactId: contactId, signals: out, events: ev.events, eventsConfigured: ev.configured };
 }
 
 // The upsert key of a Signals row (§8): account, event slug, kind and
@@ -3100,6 +3105,201 @@ function nwImportConfirmOp_(sess, p) {
   auditLog('data_write', sess.email, 'network_importconfirm', { rows: rows.length, written: written, rejected: rejected.length });
   return { success: true, written: written, rejected: rejected, interactionIds: ids };
 }
+// PROJECT: ── N4 session 2 — the pre-meeting brief, promote to field note, the "will be at" names (§4.4; D4 · D9 · D15 · D16; NETWORK-SCHEMA.md §8 · §11 · §12)
+// nop=brief assembles ONE contact's own rows server-side — the contact, its
+// account, its Interactions, the account's live Signals (with the event
+// names Events answers over eop=signals), the warmth block and the stage —
+// and writes a disclosure row (D9: an export is a disclosure). The dossier
+// pieces (strategyRead[], recentDevelopments[]) are fetched by the page from
+// Profiler's served JSON as N2 does — never through a proxy, never written.
+// nop=promote copies one Interaction into Profiler's intake as a
+// sourceType: contact note through Profiler's EXISTING note op (D16) — the
+// developer's own Profiler session, read by the page from the shared origin
+// and relayed once, never stored, never audited; one-way, developer-
+// triggered, never a dossier edit. The promotion is recorded as a `note`
+// Interaction on the contact (§3 keeps the source row's Evidence Link for
+// its own evidence), which is also the duplicate guard.
+// Profiler's /exec — from googleAppsScripts/Profiler/Profiler.config.json
+// DEPLOYMENT_ID, pasted as a constant the way EVENTS_PEER_EXEC is.
+var PROFILER_INTAKE_EXEC =
+  'https://script.google.com/macros/s/AKfycbwnpv-PYXK_7Wvp5ZAtnhZawcTWgc-8Df_1qKKoLsg9gGawIukAzU7H14aw9DOrVSJ3Tw/exec';
+var NW_PROMOTE_NOTE_MAX = 4000;        // Profiler's submitFieldNote text ceiling
+var NW_PROMOTE_MARK = 'promoted:';     // the note Interaction's Evidence Link prefix: promoted:<i- id>:<intake id>
+var NW_BRIEF_SIGNALS_MAX = 50;         // signal rows carried on a brief
+
+// The live Signals rows of one account in scope, newest Last Seen first —
+// the read nop=signals and nop=brief share (ids and evidence only, the
+// person where the row names one).
+function nwSignalRows_(tabs, scopeSet, accountId) {
+  var rows = nwListRows_(tabs.signals, scopeSet, {
+    id: 'Signal ID', accountId: 'Account ID', contactId: 'Contact ID', eventSlug: 'Event Slug', kind: 'Kind',
+    evidenceUrl: 'Evidence URL', confidence: 'Confidence', firstSeen: 'First Seen', lastSeen: 'Last Seen', source: 'Source',
+    personName: 'Person Name', personTitle: 'Person Title', note: 'Note' });
+  var out = [];
+  for (var i = 0; i < rows.length; i++) {
+    var r = rows[i];
+    if (r.accountId !== accountId) continue;
+    var o = { id: r.id, accountId: accountId, contactId: r.contactId, eventSlug: r.eventSlug, kind: r.kind, evidenceUrl: r.evidenceUrl,
+              confidence: Number(r.confidence) || 0, firstSeen: r.firstSeen, lastSeen: r.lastSeen, source: r.source, note: r.note };
+    if (r.personName) { o.personName = r.personName; if (r.personTitle) o.personTitle = r.personTitle; }
+    out.push(o);
+  }
+  out.sort(function(a, b) { return a.lastSeen < b.lastSeen ? 1 : a.lastSeen > b.lastSeen ? -1 : 0; });
+  return out;
+}
+// The event names for the "will be at" chips — Events' eop=signals for the
+// account (the near side; Events joins each slug to its registry), asked
+// ONCE per read and only when a row names an event. Answers
+// { configured, events:{ slug:{ name, start } } }; a not_configured or
+// upstream_* answer leaves the chips on their slugs — never a failure.
+function nwSignalEvents_(ownerEmail, accountId, rows) {
+  var any = false;
+  for (var i = 0; i < rows.length; i++) if (rows[i].eventSlug) { any = true; break; }
+  if (!any) return { configured: true, events: {} };
+  var res = nwEventsProxy_('signals', { owner: ownerEmail, accountId: accountId });
+  if (!(res && res.success)) return { configured: !(res && res.error === 'not_configured'), events: {}, error: (res && res.error) || 'upstream_empty' };
+  var events = {}, list = res.signals || [];
+  for (var k = 0; k < list.length; k++) {
+    var s = list[k] || {}, slug = String(s.eventSlug || '');
+    if (!slug || events[slug] || !s.name) continue;
+    events[slug] = { name: String(s.name), start: String(s.start || '') };
+  }
+  return { configured: true, events: events };
+}
+function nwSignalsNamed_(rows, ev) {
+  for (var i = 0; i < rows.length; i++) {
+    var e = rows[i].eventSlug && ev.events[rows[i].eventSlug];
+    if (e) { rows[i].eventName = e.name; if (e.start) rows[i].eventStart = e.start; }
+  }
+  return rows;
+}
+
+// nop=brief (session, GET) — contactId. The contact's own rows and nothing
+// beyond its account: the contact (the detail's full row minus the raw
+// extraction and the card links), the account (tags, notes, slug, stage),
+// every Interaction newest first, the account's live Signals named by
+// Events, the warmth block, the stage. Writes the D9 disclosure row (an
+// export names the op, the count and the id — never a field) and audits
+// ids and counts only. Read-only for a view share.
+function nwBriefOp_(sess, p) {
+  var id = nwStr_(p.contactId || p.id);
+  if (!NW_ID_RE.test(id) || id.charAt(0) !== 'c') return { success: false, error: 'bad_contact_id' };
+  var scope = resolveOwnerSet_(sess, '*');
+  if (scope.error) return { success: false, error: scope.error };
+  var tabs = ensureNetworkTabs_();
+  var found = nwFindRow_(nwSheetRead_(tabs.contacts), id);
+  if (!found || !scope.set[String(found.obj['Owner'] || '').toLowerCase()]) return { success: false, error: 'not_found' };
+  if (String(found.obj['Deleted At'] || '')) return { success: false, error: 'deleted' };
+  var c = nwContactPublic_(found.obj);
+  var acc = c.accountId ? nwFindRow_(nwSheetRead_(tabs.accounts), c.accountId) : null;
+  var a = acc ? nwAccountPublic_(acc.obj) : null;
+  var it = nwSheetRead_(tabs.interactions), interactions = [];
+  for (var r = 1; r < it.vals.length; r++) {
+    if (String(it.vals[r][it.idx['Contact ID']] || '') !== id) continue;
+    var o = nwRowObj_(it, r);
+    interactions.push({ id: o['Interaction ID'], kind: o['Kind'], date: String(o['Date'] || '').slice(0, 10), summary: o['Summary'],
+      evidence: o['Evidence Link'], eventSlug: o['Event Slug'], createdAt: o['Created At'] });
+  }
+  interactions.sort(function(x, y) { return x.date < y.date ? 1 : x.date > y.date ? -1 : 0; });
+  var warmth = nwWarmthDetail_(interactions, c.role, a ? a.relationship : '', c.metDate, Date.now());
+  var signals = a ? nwSignalRows_(tabs, scope.set, a.id).slice(0, NW_BRIEF_SIGNALS_MAX) : [];
+  var ev = a ? nwSignalEvents_(sess.email, a.id, signals) : { configured: true, events: {} };
+  nwSignalsNamed_(signals, ev);
+  var contact = { id: c.id, accountId: c.accountId, fullName: c.fullName, firstName: c.firstName, lastName: c.lastName, title: c.title, department: c.department,
+    role: c.role, emails: c.emails, phones: c.phones, linkedin: c.linkedin, website: c.website, languages: c.languages, sourceEvent: c.sourceEvent,
+    metDate: c.metDate, consent: c.consent, dnc: c.dnc, tags: c.tags, notes: c.notes, createdAt: c.createdAt, updatedAt: c.updatedAt };
+  var account = a ? { id: a.id, name: a.name, slug: a.slug, relationship: a.relationship, stage: a.stage, segmentIds: a.segmentIds, tags: a.tags, hq: a.hq, newsroomUrl: a.newsroomUrl, notes: a.notes } : null;
+  // D9: the disclosure row names the op, the count and the id — never a field.
+  recordDisclosure({ sessionToken: p.session, recipientName: sess.email, recipientType: 'Self', individualEmail: sess.email,
+    phiDescription: 'network_brief rows=1 ids=' + id, purpose: 'network_brief',
+    isExempt: true, exemptionType: 'IndividualAccess', dataCategory: 'Network', source: 'Network' });
+  auditLog('data_export', sess.email, 'network_brief', { contactId: id, interactions: interactions.length, signals: signals.length, events: Object.keys(ev.events).length });
+  return { success: true, built: nwNow_(), contact: contact, account: account, interactions: interactions, signals: signals,
+           events: ev.events, eventsConfigured: ev.configured, warmth: warmth, stage: a ? a.stage : 'none' };
+}
+
+// The field note's text — the Interaction in one paragraph the intake can
+// triage: the kind, the person and their account, the day, the summary, the
+// event when there is one, and the i- id (plus the row's own evidence) as
+// the note's evidence. Bounded at Profiler's ceiling.
+function nwPromoteText_(c, a, ix) {
+  var kind = String(ix.kind || 'note'), label = kind.charAt(0).toUpperCase() + kind.slice(1).replace(/-/g, ' ');
+  var who = [c.fullName, [c.title, a && a.name].filter(Boolean).join(', ')].filter(Boolean);
+  var head = label + ' with ' + who[0] + (who[1] ? ' (' + who[1] + ')' : '') + (ix.date ? ' on ' + ix.date : '');
+  var body = nwStr_(ix.summary, 2000);
+  var tail = 'Network interaction ' + ix.id + (ix.evidence ? ' · evidence ' + nwStr_(ix.evidence, 300) : '') + (ix.eventSlug ? ' · event ' + ix.eventSlug : '');
+  return nwStr_((head + (body ? ' — ' + body : '') + '. [' + tail + ']'), NW_PROMOTE_NOTE_MAX);
+}
+// The one call into Profiler — its existing note op (action=note, nop=submit),
+// exactly as the developer's note form calls it, with the developer's own
+// Profiler session relayed once. guidanceMentionsProxy_'s failure names.
+function nwProfilerIntake_(profilerSession, payload) {
+  var form = { action: 'note', nop: 'submit', session: profilerSession, slug: payload.slug, sourceType: payload.sourceType,
+               note: payload.note, confidence: String(payload.confidence) };
+  var body;
+  try {
+    var resp = UrlFetchApp.fetch(PROFILER_INTAKE_EXEC, { method: 'post', payload: form, muteHttpExceptions: true, followRedirects: true });
+    if (resp.getResponseCode() !== 200) return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
+    body = resp.getContentText();
+  } catch (fErr) {
+    return { success: false, error: 'upstream_unreachable' };
+  }
+  try { return JSON.parse(body); }
+  catch (pErr) { return { success: false, error: 'upstream_not_json', detail: String(body || '').replace(/\s+/g, ' ').slice(0, 160) }; }
+}
+// nop=promote (body-POST) — interactionId, confidence (0–100), profilerSession.
+// Refused by name before any call: bad_interaction_id, bad_confidence,
+// profiler_session_required, not_found (unowned rows answer not-found),
+// deleted (the contact), duplicate (already promoted — the note Interaction
+// carrying promoted:<i- id> exists), view_only. Profiler's own refusals are
+// relayed: profiler_session_expired, profiler_admin_only, profiler_rejected.
+function nwPromoteOp_(sess, p) {
+  var iid = nwStr_(p.interactionId, 20);
+  if (!NW_ID_RE.test(iid) || iid.charAt(0) !== 'i') return { success: false, error: 'bad_interaction_id' };
+  // A number typed as one: an empty string would round to 0 and pass.
+  var confRaw = nwStr_(p.confidence, 10);
+  if (!/^-?\d+(\.\d+)?$/.test(confRaw)) return { success: false, error: 'bad_confidence' };
+  var confidence = Math.round(Number(confRaw));
+  if (!(confidence >= 0 && confidence <= 100)) return { success: false, error: 'bad_confidence' };
+  var profilerSession = nwStr_(p.profilerSession, 200);
+  if (!profilerSession || profilerSession.length < 32) return { success: false, error: 'profiler_session_required' };
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var owner = scopeRes.owner, tabs = ensureNetworkTabs_();
+  var it = nwSheetRead_(tabs.interactions), found = nwFindRow_(it, iid);
+  if (!nwOwned_(found, owner)) return { success: false, error: 'not_found' };
+  var ix = found.obj, cid = String(ix['Contact ID'] || '');
+  var cf = cid ? nwFindRow_(nwSheetRead_(tabs.contacts), cid) : null;
+  if (!nwOwned_(cf, owner)) return { success: false, error: 'not_found' };
+  if (String(cf.obj['Deleted At'] || '')) return { success: false, error: 'deleted' };
+  var mark = NW_PROMOTE_MARK + iid + ':';
+  for (var r = 1; r < it.vals.length; r++) {
+    if (String(it.vals[r][it.idx['Contact ID']] || '') !== cid) continue;
+    if (String(it.vals[r][it.idx['Evidence Link']] || '').indexOf(mark) === 0) return { success: false, error: 'duplicate', intakeId: String(it.vals[r][it.idx['Evidence Link']] || '').slice(mark.length) };
+  }
+  var c = nwContactPublic_(cf.obj);
+  var af = c.accountId ? nwFindRow_(nwSheetRead_(tabs.accounts), c.accountId) : null;
+  var a = af ? nwAccountPublic_(af.obj) : null;
+  var slug = (a && NW_PEER_SLUG_RE.test(String(a.slug || ''))) ? String(a.slug) : 'general';
+  var row = { id: ix['Interaction ID'], kind: ix['Kind'], date: String(ix['Date'] || '').slice(0, 10), summary: ix['Summary'], evidence: ix['Evidence Link'], eventSlug: ix['Event Slug'] };
+  var payload = { slug: slug, sourceType: 'contact', note: nwPromoteText_(c, a, row), confidence: confidence };
+  var res = nwProfilerIntake_(profilerSession, payload);
+  if (!(res && res.success)) {
+    var why = String((res && res.error) || 'upstream_empty');
+    if (why === 'SESSION_EXPIRED') why = 'profiler_session_expired';
+    else if (why === 'ADMIN_ONLY') why = 'profiler_admin_only';
+    else if (!/^upstream_/.test(why)) why = 'profiler_rejected';
+    auditLog('data_write', sess.email, 'network_promote', { interactionId: iid, contactId: cid, ok: 0, error: why });
+    return { success: false, error: why, detail: String((res && res.error) || '').slice(0, 80) };
+  }
+  var intakeId = nwStr_(res.id, 60), now = nwNow_();
+  var noteId = nwInteractionAdd_(tabs, owner, cid, c.accountId, 'note', now.slice(0, 10),
+    'Promoted to a Profiler field note (confidence ' + confidence + '/100)', NW_PROMOTE_MARK + iid + ':' + intakeId, row.eventSlug, now, {});
+  bumpDataRev();
+  auditLog('data_write', sess.email, 'network_promote', { interactionId: iid, contactId: cid, ok: 1 });
+  return { success: true, interactionId: iid, contactId: cid, intakeId: intakeId, slug: slug, confidence: confidence, noteInteractionId: noteId };
+}
+
 // PROJECT END
 // ══════════════
 

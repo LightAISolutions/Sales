@@ -6,6 +6,54 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 01:20 AM EST (the session ran ~12:54 → 01:25 AM EST)
+**Repo version:** v07.23r — one push on `claude/exciting-knuth-3pb083` (N4 session 2 + this session-context write, one commit)
+**Branch:** `claude/exciting-knuth-3pb083`
+**Model:** Fable 5.1 (N4 session 2 — the pre-meeting brief, promote to field note, the network map and the "Will be at" chips; **N4 is Done**)
+
+### What was done
+
+- **N4 session 2 landed** (`Network.gs` v01.15g · `Network.html` v01.24w; §11's N4 row → **Done** with both sessions' versions; §13.17 written — the E5 session-1 brief with its paste-in prompt): `nop=brief` (session GET, behind `contacts`) assembles the contact's own rows server-side — the contact minus the raw extraction and card links, the account, every Interaction newest first, the account's Signals named by Events, the warmth block, the stage — and writes the D9 disclosure row (`network_brief rows=1 ids=<c- id>`) + a `data_export` audit; the page builds a **real `.docx`** (three-part OOXML over the existing store-only zip) adding the served dossier's `strategyRead[]` and last five `recentDevelopments[]` when covered. `nop=promote` (body-POST) copies one Interaction into Profiler's intake **through Profiler's existing note op** (`action=note` · `nop=submit` at `PROFILER_INTAKE_EXEC`) as a `sourceType: contact` note with the developer's 0–100 confidence, the i- id as evidence in the text, the account's slug or `general`; the developer's own Profiler session is read by the page from the shared origin (`localStorage` `ov_note_session`) and relayed once, never stored or audited; the promotion is recorded as a `note` Interaction (`promoted:<i- id>:<intake id>` — the duplicate guard; the source row untouched). `nop=signals` gains `eventName` / `eventStart` / `events` / `eventsConfigured` from one `eop=signals` call per read, degrading to slugs. The page: the 📄 Brief button and the ⇈ Promote box on the detail, the "Will be at" chips (press quotes as "Quoted in press", filings as "Regulatory filing"), the 🕸 Map masthead card (vanilla SVG over the list payload; pan, tap-to-focus, a second tap opens the row — the tap decided on `pointerup`, because a captured pointer's click never reaches the node)
+- `scripts/check-network-brief.js` (58 checks, zero live calls — it caught the empty-string confidence that rounded to 0 and passed the bound; fixed); `verify-network-roles.py` gained the chips · brief (the `.docx` unzipped and read back) · promote · map passes and the D17 grep — ALL CHECKS PASSED at 390 × 844, zero page errors; `check-scraper-people.js` extracts the three new signal helpers; every sibling harness passes; `check-readme-tree.py` 0 findings
+- `NETWORK-SCHEMA.md` §8 / §11 / §12 / §14 updated; CHANGELOG `Sections: 94/100`
+
+### Where we left off
+
+**The developer's live check is next** (reported, not asserted): confirm the Network redeploy (`?action=api&op=deploy` → `Already up to date (v01.15g)`, else run `pullAndDeployFromGitHub` once), open a contact detail → **📄 Brief** → open the `.docx` in Word (a covered and an uncovered contact per §8's done-when), sign in to Profiler in the same browser → **⇈** on one touch → Promote at a confidence → find `note-<date>-NN` in Profiler's intake Manage panel, read the **Will be at** chips on an account with signals (the event names need `EVENTS_PEER_TOKEN` on Network and `NETWORK_PEER_TOKEN` on Events — both are set), open **🕸 Map**. **The three live-state brackets in this session's prompt were left unfilled** (the warmth chips, the reconnect list, the confirmed `.ics` row) — do both checks together. **Then E5 session 1** with the §13.17 paste-in prompt (given in chat at the close of this session); its four brackets are the brief, the promotion, the chips and the map.
+
+### Open findings carried forward
+
+- The `.docx` carries no `styles.xml` — headings are bold runs; Word, Pages and LibreOffice open such a package, but a corporate template will not style it. Add a styles part only if the developer asks
+- A promote needs the developer signed in to Profiler in the same browser — the page reads Profiler's own `ov_note_session` key (same origin); an expired Profiler session is relayed as `profiler_session_expired` with nothing written
+- The chips' event names ride Events' `eop=signals`, which round-trips through Network's peer read leg — one detail open is one Events call plus one Network peer read; with either token unset the chips show slugs
+- The map draws the list **as filtered** — a contact outside the current filter is not a node; the status line says "of N (the list is filtered)"
+- From N4 s1: the `.ics` DESCRIPTION is never read; do-not-contact contacts are excluded from the reconnect list; two `.gs` regex literals use `\x22` / `\x27` for quote marks (the shared extractor reads a quote inside a regex as a string opener — keep that convention)
+- From E4: the Scraper roster carries no FERC eLibrary RSS; RE+ 2026's roster is a Swapcard widget; GlobeNewswire's feed unverified until a live sweep is read; no back-fill of `people[]`
+- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
+
+### Key decisions made
+
+- The `promoted:<i- id>:<intake id>` marker lives on a **new `note` Interaction**, never on the source row's Evidence Link (§3 gives that column to the row's own evidence); the marker is also the duplicate guard
+- The promote relays the developer's Profiler session server-side in one call (the page reads it from the shared origin) rather than posting from the page — one op, the duplicate refused before any call, the note Interaction written in the same op; the session is never stored, logged or audited
+- An uncovered account promotes to the intake's `general` slug with the company named in the text; a slug not matching `NW_PEER_SLUG_RE` also falls back to `general`
+- The brief is a real `.docx` (not the `.doc` HTML-in-Word of the Profiler precedent) so the verifier can unzip and read its paragraphs; built over the existing store-only zip, no library
+- The map tap is decided on `pointerup` (a captured pointer's `click` lands on the svg, not the node); a drag under 6 px is a tap
+
+### Active context
+
+- **Repo version v07.23r.** `CHANGELOG.md` `Sections: 94/100` — no rotation due
+- **Live versions:** `Network.html` v01.24w · `Network.gs` v01.15g · `Events.html` v01.08w · `Events.gs` v01.07g · `Scraper.gs` v02.22g
+- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07 (the Network/Events build now stands at E5 + X + Q remaining)
+- **A parallel branch `claude/adoring-brown-mvddj2` was on the remote during this session** — not this session's; check `git ls-remote` before pushing
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Do the live check first (the redeploy, one brief in Word for a covered and an uncovered contact, one promotion found in Profiler's intake, the chips on an account with signals, the map), then run E5 session 1 with the §13.17 paste-in prompt — its four bracketed live-state fields filled from Network.
+- **To continue:** type `run E5 session 1 from §13.17`
+
+## Previous Sessions
+
 **Date:** 2026-09-23 12:53 AM EST (the session ran ~12:21 → 12:55 AM EST)
 **Repo version:** v07.22r — one push on `claude/amazing-cerf-xlaqav` (N4 session 1); this session-context write is a second, no-bump push on the same branch name restarted from `origin/main`
 **Branch:** `claude/amazing-cerf-xlaqav`
@@ -51,51 +99,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Do the live check first (confirm the redeploy, the warmth chips against three known contacts, Reconnect → Draft, one `.ics` row confirmed), then run N4 session 2 with the §13.16 paste-in prompt — its three bracketed live-state fields filled from Network.
 - **To continue:** type `run N4 session 2 from §13.16`
 
-## Previous Sessions
 
-
-**Date:** 2026-09-22 11:02 PM EST (the session ran ~10:45 → 11:05 PM EST)
-**Repo version:** v07.21r — one push on `claude/loving-einstein-yepfer` (E4 session 3 + this session-context write, one commit)
-**Branch:** `claude/loving-einstein-yepfer`
-**Model:** Fable 5.1 (E4 session 3 — the people route; **E4 is Done**)
-
-### What was done
-
-- **E4 session 3 landed** (`Scraper.gs` v02.22g · `Network.gs` v01.13g · `Network.html` v01.22w; §11's E4 row → **Done** with the three sessions' versions; §13.15 written — the N4 session-1 brief with its paste-in prompt): the Scraper's summarise call asks for `people[]` in the same single model call (≤ 5 per item, role ∈ quoted · author · named; `scPeopleParse_` bounds it; stored as `ppl` in the item's Signals blob; `SCRAPER_SIGNALS_CELL_MAX` 1500 → 2500) — **no second call, no back-fill**; `cop=people&slug=&since=` behind `NETWORK_CORPUS_TOKEN` alone (routed before the `CORPUS_TOKEN` gate; every boundary case flat `denied` with zero reads); Network's `nwPeopleProxy_`, `nop=people` (an uncovered account answers `covered:false` with no fetch; `accepted` per person) and `nop=peopleaccept` (one `press-quote` row at 0.7 with `corpus:<key>`, `Source = scraper`, the person, the contact match); the write leg's `corpus:` branch for `press-quote` only, the empty slug for `press-quote`, the person's name key in the press-quote upsert key; the page's **People in the press** list (read on a tap) with Accept per person and the "Will be at" line re-read in place
-- `scripts/check-scraper-people.js` (62 checks, two VM contexts, zero live calls); `check-peer-bridge.js` / `check-events-signals.js` extract the new key helper (61 · 103 pass); `check-network-schema.py` allows `items` · `people` · `covered`; `verify-network-roles.py` gained the people pass — ALL CHECKS PASSED at 390 × 844; `check-events-registry.py` exit 0; `check-readme-tree.py` 0 findings; the host grep clean (the only `linkedin.com` is Network's manual-kind rule)
-- `NETWORK-SCHEMA.md` §8 / §9 / §14 updated; CHANGELOG `Sections: 92/100`
-
-### Where we left off
-
-**The developer's live check is next** (reported, not asserted): set `NETWORK_CORPUS_TOKEN` to the same random 16+ character value in **both** Scraper's and Network's Script Properties (never committed), redeploy Scraper and Network (both `.gs` changed), let one digest build summarise an article (or run the summarise step) so an item carries people, open that company's account in Network → **Read the press** → accept one person → the "Will be at" line reads `press — press-quote 0.7 (Name, Title)`. **The three live-state brackets in this session's prompt were left unfilled** by the developer (the weekly sweep, the first Signals now line, the newsroom / docket rows) — carry them into the next live check. **Then N4 session 1** with the §13.15 paste-in prompt (given in chat at the close of this session); its two brackets are the corpus token and the first people read.
-
-### Open findings carried forward
-
-- **Back-fill is none by decision** — items summarised before `Scraper.gs` v02.22g never carry people; the route answers only new items (D17 had proposed a one-time admin job; the brief overrode it)
-- An accept on an uncovered account with a pasted key is not refused server-side (the route is the guard — the page never offers Accept there); harmless, noted
-- The `press` label on the "Will be at" line stands until N4's chips (as `?` does for a docket row)
-- From session 2: the Scraper roster carries no FERC eLibrary RSS; RE+ 2026's roster is a Swapcard widget; "Combined Notice of Filings" items name applicants only in the body; GlobeNewswire's feed unverified until a live sweep is read
-- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
-
-### Key decisions made
-
-- No back-fill (the brief's wording over D17's "one-time admin job")
-- The empty event slug is accepted for `press-quote` (§3 already said "empty for a press quote with no event"); a fake slug was the worse alternative
-- The press-quote upsert key includes the person's name key — one article quotes several people at one account; every other kind's key is unchanged
-- `SCRAPER_SIGNALS_CELL_MAX` raised to 2500 and `ppl` dropped after `figs` in the blob's drop order — so the people list survives on rich articles without displacing the corpus metadata Profiler reads
-- The people list is read on a tap, never on the detail open — one UrlFetch per tap, no poll (E3's on-demand pattern)
-- `cop=people` is routed before the `CORPUS_TOKEN` gate so Profiler's token never opens it and the Network token never reaches the other cops
-
-### Active context
-
-- **Repo version v07.21r.** `CHANGELOG.md` `Sections: 92/100` — no rotation due
-- **Live versions:** `Scraper.gs` v02.22g · `Network.html` v01.22w · `Network.gs` v01.13g · `Events.html` v01.08w · `Events.gs` v01.07g
-- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07
-- **C2 Routine** fires Wednesday 2026-09-23 11:00 UTC — parallel pushes possible; check `git ls-remote` before pushing
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Do the live check first (the corpus token in both projects, redeploy Scraper and Network, one article summarised, its people read on the account and one accepted), then run N4 session 1 with the §13.15 paste-in prompt — its two bracketed live-state fields filled from Network.
-- **To continue:** type `run N4 session 1 from §13.15`
-
+Developed by: LightAISolutions

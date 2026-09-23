@@ -3,11 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 23/50`
+`Sections: 24/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.24w] — 2026-09-23 01:20:11 AM EST — v07.23r
+
+### Added
+- A **📄 Brief** button on every contact detail — one tap exports a pre-meeting brief as a Word document: the warmth line, the contact, the account, the full timeline of touches, where the account will be, the dossier's strategy read and its last five developments when the company is covered, and the pipeline stage. The dossier is read, never changed, and the export is recorded like every other
+- A **⇈ Promote** action on each touch in a contact's history — copies that touch into Profiler's field-note intake as a contact note with the confidence you give it (0–100), one way; the dossier is never edited and a note on the contact records the promotion. Needs a Profiler sign-in in the same browser; a second promote of the same touch is refused
+- The **"Will be at"** line is now chips — one per event, named as Events knows it, with the kinds and confidences beneath and a link into Events; press quotes appear as a "Quoted in press" chip and regulatory filings as a "Regulatory filing" chip
+- A **🕸 Map** in the masthead — your accounts, the contacts at each and the events you met them at, drawn from the list as filtered; drag to pan, tap a node to focus it, tap a focused contact to open their row
+
+### Changed
+- Minor internal improvements
 
 ## [v01.23w] — 2026-09-23 12:41:01 AM EST — v07.22r
 

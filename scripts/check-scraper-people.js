@@ -230,7 +230,7 @@ vm.runInContext('var SPREADSHEET_ID = "stub";\n' + [
   // The session scope: the test session owns its rows; a `view` session sees another owner's read-only
   + 'function resolveOwnerSet_(user, forOwner) { var set = {}; set[String(user.email).toLowerCase()] = user.scope || "own"; if (user.also) set[user.also] = "view"; return { set: set }; }\n'
   + ['ensureNetworkTabs_', 'nwListRows_', 'nwSheetRead_', 'nwRowObj_', 'nwFindRow_', 'nwOwned_', 'nwWriteRow_', 'nwArr_', 'nwStr_', 'nwNow_', 'nwNewId_', 'nwRandomBase36_', 'nwNameKey_',
-     'nwPeerLinkedIn_', 'nwPeerSignalsWrite_', 'nwSignalKey_', 'nwPeopleProxy_', 'nwScopedAccount_', 'nwPeopleOp_', 'nwPeopleAcceptOp_', 'nwSignalsOp_'
+     'nwPeerLinkedIn_', 'nwPeerSignalsWrite_', 'nwSignalKey_', 'nwPeopleProxy_', 'nwScopedAccount_', 'nwPeopleOp_', 'nwPeopleAcceptOp_', 'nwSignalsOp_', 'nwEventsProxy_', 'nwSignalRows_', 'nwSignalEvents_', 'nwSignalsNamed_'
     ].map((n) => extract(nwSrc, n)).join('\n'), NW, { filename: 'Network.people.js' });
 const nw = (name) => vm.runInContext(name, NW);
 const SESS = { email: OWNER, role: 'admin', permissions: ['admin'] };

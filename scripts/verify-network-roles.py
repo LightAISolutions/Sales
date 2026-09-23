@@ -101,7 +101,7 @@ SVG and the full-screen SVG (≥ 29 × 29 modules), the page's matrix equal to
 python-qrcode's at the same version and mask when that library is
 importable; then the D15 grep — the served page and the .gs PROJECT region
 call neither MailApp nor GmailApp and name no Gmail scope. Screenshots
-network-export-menu.png, network-drafts.png, network-my-card-qr.png, network-reconnect.png, network-import.png.
+network-export-menu.png, network-drafts.png, network-my-card-qr.png, network-reconnect.png, network-import.png, network-map.png.
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -225,10 +225,43 @@ def gas_stub(role, counter, state=None):
             elif 'nop=signals' in url or 'nop=signals' in post:
                 # E4 s1: the minimal session read of the Signals tab — one row on the account
                 # (or the contact's account) so the detail's "Will be at" line renders
+                # N4 s2: the rows carry the event name Events answered over eop=signals; a press quote with no event stays a "quoted in press" chip
                 body = {'success': True, 'accountId': q(post, 'accountId') or 'a-0000000000001', 'contactId': q(post, 'contactId'),
                         'signals': [{'id': 's-0000000000001', 'accountId': 'a-0000000000001', 'contactId': '', 'eventSlug': 're-plus-2026', 'kind': 'exhibitor',
                                      'evidenceUrl': 'https://example.com/exhibitors/stub', 'confidence': 0.9, 'firstSeen': '2026-09-22T00:00:00Z',
-                                     'lastSeen': '2026-09-22T00:00:00Z', 'source': 'events', 'note': ''}]}
+                                     'lastSeen': '2026-09-22T00:00:00Z', 'source': 'events', 'note': '', 'eventName': 'RE+ 2026', 'eventStart': '2026-09-08'},
+                                    {'id': 's-0000000000002', 'accountId': 'a-0000000000001', 'contactId': '', 'eventSlug': '', 'kind': 'press-quote', 'personName': 'Morten Wierod', 'personTitle': 'CEO',
+                                     'evidenceUrl': 'corpus:stubkey', 'confidence': 0.7, 'firstSeen': '2026-09-22T00:00:00Z', 'lastSeen': '2026-09-21T00:00:00Z', 'source': 'scraper', 'note': ''}],
+                        'events': {'re-plus-2026': {'name': 'RE+ 2026', 'start': '2026-09-08'}}, 'eventsConfigured': True}
+            elif 'nop=brief' in url:
+                # N4 s2: the contact's own rows in one answer — the page fetches the dossier itself and builds the .docx
+                cid = url.split('contactId=')[1].split('&')[0]
+                row = next((x for x in state['contacts'] if x['id'] == cid and not x.get('deletedAt')), None)
+                if row is None:
+                    body = {'success': False, 'error': 'not_found'}
+                else:
+                    acc = next((x for x in state['accounts'] if x['id'] == row['accountId']), {})
+                    ixs = [{'id': 'i-0000000000002', 'kind': 'scan', 'date': '2026-09-21', 'summary': 'Card scanned', 'evidence': '', 'eventSlug': row.get('sourceEvent') or ''}] + \
+                          [{'id': i['id'], 'kind': i.get('kind'), 'date': i.get('date') or '2026-09-22', 'summary': i.get('summary'), 'evidence': i.get('evidence', ''), 'eventSlug': ''} for i in state.setdefault('interactions', []) if i.get('contactId') == cid]
+                    state['briefs'] = state.get('briefs', 0) + 1
+                    body = {'success': True, 'built': '2026-09-23T00:00:00Z', 'contact': dict(row['full'], id=cid, fullName=row['full'].get('fullName') or row['name']), 'account': acc, 'interactions': ixs,
+                            'signals': [{'id': 's-0000000000001', 'accountId': acc.get('id'), 'contactId': '', 'eventSlug': 're-plus-2026', 'kind': 'exhibitor', 'evidenceUrl': 'https://example.com/exhibitors/stub', 'confidence': 0.9, 'eventName': 'RE+ 2026', 'eventStart': '2026-09-08'}],
+                            'events': {'re-plus-2026': {'name': 'RE+ 2026', 'start': '2026-09-08'}}, 'eventsConfigured': True, 'stage': acc.get('stage', 'none'),
+                            'warmth': {'score': row.get('warmth', 0), 'band': row.get('warmthBand', 'cold'), 'lastTouch': row.get('touch') or '2026-09-21', 'cadenceDays': 30, 'sinceDays': 8, 'overdueDays': -22}}
+            elif 'nop=promote' in post:
+                # N4 s2: one Interaction → Profiler's intake through its existing note op (relayed server-side); the note Interaction records it; a second promote is a duplicate
+                state['posts'].append(('promote', post))
+                iid, conf, ps = q(post, 'interactionId'), q(post, 'confidence'), q(post, 'profilerSession')
+                done = state.setdefault('promoted', {})
+                if not ps or len(ps) < 32:
+                    body = {'success': False, 'error': 'profiler_session_required'}
+                elif iid in done:
+                    body = {'success': False, 'error': 'duplicate', 'intakeId': done[iid]}
+                else:
+                    done[iid] = 'note-20260923-%02d' % (len(done) + 1)
+                    nid = 'i-%013d' % (900 + len(done))
+                    state.setdefault('interactions', []).append({'id': nid, 'contactId': 'c-0000000000001', 'kind': 'note', 'date': '2026-09-23', 'summary': 'Promoted to a Profiler field note (confidence %s/100)' % conf, 'evidence': 'promoted:%s:%s' % (iid, done[iid])})
+                    body = {'success': True, 'interactionId': iid, 'contactId': 'c-0000000000001', 'intakeId': done[iid], 'slug': 'abb', 'confidence': int(float(conf)), 'noteInteractionId': nid}
             elif 'nop=peopleaccept' in url or 'nop=peopleaccept' in post:
                 # E4 s3: the accept step — one press-quote signal; the params (GET query or POST body — the page's
                 # transport falls back to GET against this stub) are recorded so the pass can read what the page sent
@@ -1489,6 +1522,77 @@ def run():
             failures.append('importconfirm: the recorded row should be marked done')
         page.screenshot(path=str(SHOTS / 'network-import.png'), full_page=False)
         page.click('#nw-import-close')
+        # ── N4 session 2 — the "Will be at" chips, the brief, promote and the map (§4.4; D4 · D9 · D16) ──
+        # The chips: a detail opens, nop=signals answers one event row (named by Events) and one press quote → two chips, the event's name on the first
+        page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-main' % warm['id'])
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row[data-id=\"%s\"] .nw-row-detail dd.nw-signals .nw-chip').length === 2" % warm['id'], timeout=8000)
+        chips = page.evaluate("() => [...document.querySelectorAll('#nw-rows .nw-row[data-id=\"%s\"] .nw-row-detail dd.nw-signals .nw-chip')].map(c => [c.getAttribute('data-slug'), c.getAttribute('data-named'), c.querySelector('b').textContent, c.textContent])" % warm['id'])
+        if chips[0][0] != 're-plus-2026' or chips[0][1] != '1' or chips[0][2] != 'RE+ 2026' or 'exhibitor 0.9' not in chips[0][3] or '2026-09-08' not in chips[0][3] \
+           or chips[1][0] != '' or chips[1][2] != 'Quoted in press' or 'Morten Wierod, CEO' not in chips[1][3] or 're-plus-2026 —' in chips[0][3] or ' — ?' in chips[1][3]:
+            failures.append('chips: expected an "RE+ 2026" chip (named, exhibitor 0.9, the start) and a "Quoted in press" chip with the person — no slug or ? label, got %r' % (chips,))
+        # The brief: 📄 Brief → nop=brief (a GET) → the served dossier (when covered) → a real .docx whose paragraphs read back
+        n_brief_req = len([u for u in reqs if 'nop=brief' in u])
+        with page.expect_download(timeout=15000) as dlb:
+            page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-detail .nw-row-brief' % warm['id'])
+        bpath = dlb.value.path(); bname = dlb.value.suggested_filename
+        import zipfile as _zf, io as _io, re as _re3
+        try:
+            zb = _zf.ZipFile(_io.BytesIO(open(bpath, 'rb').read()))
+            bnames = zb.namelist(); bdoc = zb.read('word/document.xml').decode('utf-8')
+        except Exception as e:
+            bnames, bdoc = [], ''
+            failures.append('brief: the download is not a readable .docx package (%s)' % e)
+        paras = [''.join(_re3.findall(r'<w:t[^>]*>([^<]*)</w:t>', pxml)) for pxml in _re3.findall(r'<w:p>(.*?)</w:p>', bdoc)]
+        warm_acc = next(a for a in state['accounts'] if a['id'] == warm['accountId'])
+        wanted = [warm['name'], 'Warmth:', 'CONTACT', 'ACCOUNT', 'TIMELINE', 'WILL BE AT', 'STRATEGY READ', 'PIPELINE STAGE']
+        missing = [w for w in wanted if not any(w in p for p in paras)]
+        if not bname.endswith('.docx') or sorted(bnames) != ['[Content_Types].xml', '_rels/.rels', 'word/document.xml'] or missing or not any('RE+ 2026' in p and 'exhibitor 0.9' in p for p in paras) \
+           or not any('Card scanned' in p for p in paras) or len([u for u in reqs if 'nop=brief' in u]) != n_brief_req + 1 or state.get('briefs') != 1:
+            failures.append('brief: expected a .docx with three parts whose paragraphs carry the name, the warmth line, every section, the RE+ 2026 chip and the scan, after one nop=brief — got %s parts=%r missing=%r' % (bname, bnames, missing))
+        if warm_acc.get('slug') == 'abb':
+            if not any('RECENT DEVELOPMENTS' in p for p in paras) or not any('Dossier ABB' in p for p in paras) or len([p for p in paras if p.startswith('\u2022 20')]) < 3:
+                failures.append('brief: a covered contact should carry the ABB dossier\'s strategy read and dated developments, got %r' % ([p[:60] for p in paras if 'ABB' in p or p.startswith('\u2022')],))
+        elif not any('Not covered by Profiler' in p for p in paras):
+            failures.append('brief: an uncovered contact should say the dossier is not there')
+        if ('/' + warm_acc.get('slug', '') + '.profile.json') not in ''.join(reqs) and warm_acc.get('slug'):
+            pass   # the dossier may be cached from the on-record check earlier in this session — a fresh fetch is not required
+        # Promote: ⇈ on a History row → the confidence box → without a Profiler sign-in the box says so and posts nothing → with one, nop=promote carries the id, the confidence and the session
+        n_posts = len(state['posts'])
+        page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-detail dd.nw-history .nw-ix .nw-promote-btn' % warm['id'])
+        page.wait_for_selector('#nw-rows .nw-row[data-id="%s"] .nw-row-detail .nw-promote .nw-promote-go' % warm['id'], timeout=5000)
+        page.evaluate("() => { try { localStorage.removeItem('ov_note_session'); } catch (e) {} }")
+        page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-detail .nw-promote .nw-promote-go' % warm['id'])
+        page.wait_for_function("() => /Sign in to Profiler/.test((document.querySelector('.nw-promote .nw-promote-status') || {}).textContent || '')", timeout=5000)
+        if len(state['posts']) != n_posts or not page.query_selector('.nw-promote .nw-promote-status a[href="Profiler.html"]'):
+            failures.append('promote: without a Profiler sign-in nothing should be posted and the box should link to Profiler')
+        page.evaluate("() => localStorage.setItem('ov_note_session', 'x'.repeat(40))")
+        page.fill('.nw-promote .nw-promote-conf', '80'); page.click('.nw-promote .nw-promote-go')
+        page.wait_for_function("() => /Promoted — note note-20260923-01/.test((document.querySelector('.nw-promote .nw-promote-status') || {}).textContent || '')", timeout=8000)
+        pp = dict(_up.parse_qsl(state['posts'][-1][1])) if state['posts'][-1][0] == 'promote' else {}
+        if pp.get('interactionId') != 'i-0000000000002' or pp.get('confidence') != '80' or pp.get('profilerSession') != 'x' * 40 or 'promoted:i-0000000000002:note-20260923-01' != state['interactions'][-1].get('evidence') \
+           or page.get_attribute('.nw-promote', 'data-promoted') != 'note-20260923-01' or page.query_selector('.nw-promote .nw-promote-go'):
+            failures.append('promote: expected one nop=promote post with the i- id, confidence 80 and the Profiler session, the note interaction recorded and the box closed to its result, got %r / %r' % (pp, state['interactions'][-1]))
+        page.evaluate("() => { try { localStorage.removeItem('ov_note_session'); } catch (e) {} }")
+        # The map: vanilla SVG over the list payload — one node per account, contact and source event; tap to focus, tap again to open the row
+        page.click('#nw-pill-map')
+        page.wait_for_selector('#nw-map-svg .nw-map-node', timeout=8000)
+        mp = page.evaluate("""() => { const rows = _nwRows.filter(c => c && !c.deletedAt), accts = Object.keys(_nwAccountsById).filter(k => _nwAccountsById[k] && !_nwAccountsById[k].deletedAt);
+            const evs = {}; rows.forEach(c => { if (c.sourceEvent) evs[c.sourceEvent] = 1; });
+            const n = t => document.querySelectorAll('#nw-map-svg .nw-map-node[data-type="' + t + '"]').length;
+            return { rows: rows.length, accts: accts.length, evs: Object.keys(evs).length, nc: n('contact'), na: n('account'), ne: n('event'), edges: document.querySelectorAll('#nw-map-svg .nw-map-edge').length, status: document.getElementById('nw-map-status').textContent }; }""")
+        live_now = [c for c in state['contacts'] if not c.get('deletedAt')]
+        if mp['nc'] != mp['rows'] or mp['na'] != mp['accts'] or mp['ne'] != mp['evs'] or mp['rows'] != len(live_now) or mp['edges'] < mp['rows'] or ('%d contact' % len(live_now)) not in mp['status']:
+            failures.append('map: expected one node per list row, account and source event and an edge per contact, got %r (fixture live=%d)' % (mp, len(live_now)))
+        page.click('#nw-map-svg .nw-map-node[data-id="%s"]' % warm['id'])
+        page.wait_for_function("() => document.querySelector('#nw-map-svg .nw-map-node[data-id=\"%s\"].nw-map-focus') && document.querySelectorAll('#nw-map-svg .nw-map-node.nw-map-dim').length > 0" % warm['id'], timeout=5000)
+        cap = page.text_content('#nw-map-caption')
+        if warm['name'] not in cap or 'contact' not in cap:
+            failures.append('map: the caption should name the focused contact, got %r' % (cap,))
+        page.screenshot(path=str(SHOTS / 'network-map.png'), full_page=False)
+        page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-main' % warm['id'])   # close the detail opened above so the second tap re-opens it
+        page.click('#nw-map-svg .nw-map-node[data-id="%s"]' % warm['id'])
+        page.wait_for_function("() => document.querySelector('#nw-rows .nw-row[data-id=\"%s\"].nw-open')" % warm['id'], timeout=8000)
+        page.click('#nw-map-close')
         # D15: nothing sends. The served page and the .gs PROJECT region call neither MailApp, GmailApp nor CalendarApp and name no Gmail or Calendar scope.
         import re as _re2
         served = urllib.request.urlopen(base).read().decode('utf-8')
@@ -1497,6 +1601,8 @@ def run():
         send_re = _re2.compile(r'\b(MailApp|GmailApp|CalendarApp)\s*\.|gmail\.(send|compose|modify|readonly)|calendar\.(readonly|events)|sendHipaaEmail\s*\(|mail\.google\.com')   # N4 s1: CalendarApp and the calendar scopes join the grep
         if send_re.search(served) or send_re.search(region) or _re2.search(r'\bgmail\b', served, _re2.I):
             failures.append('D15: a send path or a Gmail scope is referenced by the served page or the .gs PROJECT region')
+        if _re2.search(r'linkedin\.com', served, _re2.I) or len(_re2.findall(r'linkedin\.com', region, _re2.I)) > 1:
+            failures.append('D17: linkedin.com is named by the served page, or by the .gs beyond the manual-kind rule')
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
         if real_errs:
             failures.append('capture: %d page error(s): %s' % (len(real_errs), real_errs[0][:100]))
@@ -1512,7 +1618,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-8s %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['list']),
                                                   mark(g['empty']), mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png, network-list-filters.png, network-list-bar.png, network-export-menu.png, network-drafts.png, network-my-card-qr.png, network-reconnect.png, network-import.png (%dx%d)'
+    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png, network-list-filters.png, network-list-bar.png, network-export-menu.png, network-drafts.png, network-my-card-qr.png, network-reconnect.png, network-import.png, network-map.png (%dx%d)'
           % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
@@ -1529,7 +1635,7 @@ def run():
           'and Target · Discovery lands on both, the CSV downloads with a BOM and two rows, one row is deleted after a confirm naming the count; '
           'N3 s2: the vCard bundle, the PHOTO splice from Drive, the per-contact zip and the .xlsx download, three drafts from the default template, '
           'an edited draft round-trip, mailto: / Copy / the .eml bundle / .txt, sent → the email-out Interaction, discard, the Drafts pill, My card → the QR '
-          '(%s), and no send path in the served page or the .gs PROJECT region; N4 s1: every list row carries the server\'s warmth band as a chip, the Warmth sort orders hottest first without a request, the detail shows the cadence and the lapse, the Reconnect card lists the lapsed rows most overdue first and hands one to the drafts flow, and a pasted .ics proposes one matched and one unmatched row and records only the ticked one with the reference as evidence; no CalendarApp or calendar scope anywhere.' % ('matrix equal to python-qrcode' if qr_checked else 'python-qrcode not importable — module count only'))
+          '(%s), and no send path in the served page or the .gs PROJECT region; N4 s1: every list row carries the server\'s warmth band as a chip, the Warmth sort orders hottest first without a request, the detail shows the cadence and the lapse, the Reconnect card lists the lapsed rows most overdue first and hands one to the drafts flow, and a pasted .ics proposes one matched and one unmatched row and records only the ticked one with the reference as evidence; no CalendarApp or calendar scope anywhere. N4 s2: the "Will be at" line is chips named by Events (a press quote as "Quoted in press"), 📄 Brief downloads a real .docx whose paragraphs carry every section and the dossier when covered after one nop=brief, ⇈ Promote refuses without a Profiler sign-in and posts the i- id, the confidence and the session with one, and the map draws one node per row, account and event with tap-to-focus and a second tap opening the row; no linkedin.com in the served page.' % ('matrix equal to python-qrcode' if qr_checked else 'python-qrcode not importable — module count only'))
     return 0
 
 

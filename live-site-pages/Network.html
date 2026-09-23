@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.23w">
+  <meta name="build-version" content="v01.24w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -643,6 +643,34 @@
     .nw-import-row.nw-done { opacity: .55; }
     .nw-import-row.nw-rejected .nw-import-main { color: #b3261e; }
     #nw-reconnect-bar, #nw-import-bar { margin: 8px 0 4px; }
+    /* N4 s2 — the chips, the history line + promote box, the map */
+    .nw-chip { display: inline-block; vertical-align: top; margin: 0 6px 6px 0; padding: 6px 9px; border: 1px solid var(--nw-line2); border-radius: 10px; background: #fff; font: 13px/1.3 var(--nw-serif); color: var(--nw-ink); max-width: 100%; }
+    .nw-chip b { display: block; font-weight: 600; overflow-wrap: anywhere; }
+    .nw-chip small { display: block; font-size: 11px; color: var(--nw-muted); }
+    .nw-chip a { margin-left: 6px; text-decoration: none; font-size: 12px; }
+    .nw-chip-press { background: #f3f1ec; } .nw-chip-docket { background: #fff7e6; }
+    .nw-chip-note { display: block; font-size: 11px; color: var(--nw-faint); }
+    .nw-history .nw-ix { white-space: nowrap; }
+    .nw-history .nw-ix .nw-promote-btn { margin-left: 3px; text-decoration: none; font-weight: 600; color: var(--nw-ink); }
+    .nw-promote { display: block; white-space: normal; margin: 8px 0 4px; padding: 10px 12px; border: 1px solid var(--nw-line2); border-radius: 10px; background: #f8f6f1; font: 13px/1.4 var(--nw-serif); }
+    .nw-promote b { display: block; margin-bottom: 4px; } .nw-promote > small { display: block; color: var(--nw-muted); font-size: 12px; margin-bottom: 8px; }
+    .nw-promote-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .nw-promote-row label { font-size: 12px; color: var(--nw-muted); }
+    .nw-promote-conf { width: 72px; min-height: 36px; font: 14px/1.3 var(--nw-mono); padding: 4px 6px; border: 1px solid var(--nw-line2); border-radius: 6px; }
+    .nw-promote-status { margin-top: 8px; }
+    .nw-map-wrap { border: 1px solid var(--nw-line); border-radius: 10px; background: #fbfaf7; overflow: hidden; touch-action: none; }
+    .nw-map-svg { display: block; width: 100%; height: auto; max-height: 70vh; cursor: grab; font: 13px var(--nw-serif); }
+    .nw-map-svg:active { cursor: grabbing; }
+    .nw-map-edge { stroke: #b9b2a3; stroke-width: 1.2; } .nw-map-edge-ev { stroke: #9fc8e8; stroke-dasharray: 4 3; }
+    .nw-map-node { cursor: pointer; } .nw-map-node:focus { outline: none; }
+    .nw-map-node .nw-map-dot { stroke: #fff; stroke-width: 1.5; }
+    .nw-map-account .nw-map-dot { fill: #8a6d1f; } .nw-map-contact .nw-map-dot { fill: #305a8a; } .nw-map-event .nw-map-dot { fill: #2e8b57; }
+    .nw-map-label { fill: var(--nw-ink); pointer-events: none; }
+    .nw-map-dim { opacity: .18; } .nw-map-focus .nw-map-dot { stroke: #b3261e; stroke-width: 3; }
+    .nw-map-caption { margin: 8px 0 4px; font: 14px/1.4 var(--nw-serif); color: var(--nw-ink); }
+    .nw-map-legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--nw-muted); }
+    .nw-map-key i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+    .nw-map-key-account i { background: #8a6d1f; } .nw-map-key-contact i { background: #305a8a; } .nw-map-key-event i { background: #2e8b57; }
 /* PROJECT END */
 /* ══════════════ */
   </style>
@@ -6138,13 +6166,17 @@ function nwRowDetail(row, id) {
     line('Met', [c.metDate, c.sourceEvent].filter(Boolean).join(' at ')); line('Consent', nwLabel('consent', c.consent) + (c.dnc ? ' · do not contact' : ''));
     line('Notes', c.notes);
     linkLine('Front', c.frontLink, '🖼 Front'); linkLine('Back', c.backLink, '🖼 Back');
-    line('History', (res.interactions || []).map(function(ix) { return ix.date + ' ' + nwLabel('interactionKind', ix.kind); }).join(' · '));
+    nwHistoryLine(det, res.interactions);   // N4 s2: one span per touch with the ⇈ Promote affordance
     nwWarmthLine(det, res.warmth);   // N4 s1: the score, the cadence and the lapse — computed on the server
     nwSignalsLine(det, { contactId: c.id });   // E4: the account's attendance signals, read on open
     var acts = nwEl('div', 'nw-strip-photos');
     // N2: the on-the-record check — only now, when the detail is open, is the
     // dossier fetched (never on the list paint).
     nwRecordCheck(det, acts, c, a);
+    // N4 s2: the pre-meeting brief — one tap, the .docx built from nop=brief + the served dossier
+    var briefBtn = nwEl('a', 'nw-edit-btn nw-row-brief', '📄 Brief'); briefBtn.href = '#'; briefBtn.setAttribute('role', 'button'); briefBtn.title = 'Export a pre-meeting brief (.docx) for ' + (c.fullName || 'this contact');
+    briefBtn.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); nwBriefExport(c, a, briefBtn); });
+    acts.appendChild(briefBtn);
     var editBtn = nwEl('a', 'nw-edit-btn nw-row-edit', '✎ Edit'); editBtn.href = '#'; editBtn.setAttribute('role', 'button');
     editBtn.addEventListener('click', function(ev) {
       ev.preventDefault(); ev.stopPropagation();
@@ -6648,28 +6680,7 @@ function nwSignalsLine(det, params) {
   var dd = nwEl('dd', 'nw-signals', 'Loading…'); det.appendChild(dd);
   nwSignalsFill(dd, params);
 }
-// The line's rows — split out (E4 s3) so an accepted press quote can refresh
-// the line in place without a second dt.
-function nwSignalsFill(dd, params) {
-  dd.textContent = 'Loading…';
-  nwApi('signals', params, function(res) {
-    dd.textContent = '';
-    if (!(res && res.success)) { dd.className = 'nw-signals nw-bad'; dd.textContent = nwErrText(res && res.error); return; }
-    var rows = res.signals || [];
-    if (!rows.length) { dd.textContent = 'No attendance signals yet — Events adds them from its weekly sweep and from the event sheet.'; return; }
-    rows.forEach(function(s, i) {
-      if (i) dd.appendChild(document.createTextNode(' · '));
-      var span = nwEl('span', 'nw-signal'); span.setAttribute('data-kind', s.kind || ''); span.setAttribute('data-slug', s.eventSlug || '');
-      span.appendChild(document.createTextNode((s.eventSlug || (s.kind === 'press-quote' ? 'press' : '?')) + ' — ' + (s.kind || 'signal') + ' ' + Number(s.confidence || 0).toFixed(1)
-        + (s.personName ? ' (' + s.personName + (s.personTitle ? ', ' + s.personTitle : '') + ')' : '')));
-      if (/^https?:\/\//i.test(s.evidenceUrl || '')) {
-        span.appendChild(document.createTextNode(' '));
-        var a = nwEl('a', null, '↗'); a.href = s.evidenceUrl; a.target = '_blank'; a.rel = 'noopener'; a.title = 'Evidence'; span.appendChild(a);
-      }
-      dd.appendChild(span);
-    });
-  });
-}
+// The line's rows — since N4 s2 the chips (nwSignalsFill, in the N4 s2 section below); split out (E4 s3) so an accepted press quote refreshes the line in place.
 // E4 session 3 (design plan D17, §13.14) — "People in the press": the people
 // the trade press Scraper already ingests names at this account, read ON
 // DEMAND (a tap, never on the detail open and never a poll) through the
@@ -7643,6 +7654,7 @@ function nwPillsMount() {
   pill('nw-pill-mycard', '🪪 My card', nwMyCardOpen);
   pill('nw-pill-reconnect', '🔥 Reconnect', nwReconnectOpen);     // N4 s1
   pill('nw-pill-import', '⇪ Import touches', nwImportOpen);      // N4 s1
+  pill('nw-pill-map', '🕸 Map', nwMapOpen);                       // N4 s2
 }
 
 // PROJECT: ── N4 session 1 — warmth, the reconnect card and the import panel (§4.4; NETWORK-SCHEMA.md §5) ──
@@ -7857,6 +7869,372 @@ function nwImportConfirm() {
     if (res.written) nwAfterWrite();
   });
 }
+
+// PROJECT: ── N4 session 2 — the pre-meeting brief, promote to field note, the "Will be at" chips and the Network map (§4.4; D4 · D9 · D15 · D16) ──
+// The brief is assembled on the server from the contact's own rows
+// (nop=brief — an export, so a disclosure row is written) and the dossier
+// pieces are THIS page's read of Profiler's served JSON, as the on-the-record
+// check does — read, never written. The .docx is built here (the Word-export
+// precedent: the fetched pieces stitched client-side and handed to the
+// browser as a download) as a real OOXML package over the existing
+// store-only zip. Promote copies one Interaction into Profiler's intake
+// through Profiler's EXISTING note op (nop=promote relays the developer's own
+// Profiler session, read from this origin's storage — Profiler.html keeps it
+// there — and never stores it); the row's ⇈ opens a confidence box. The chips
+// replace the slug / press / ? labels with the event names Events answers.
+// The map is vanilla SVG over the list payload already on the page — no
+// request: accounts → contacts, the shared source events as edges.
+
+// ── Promote to field note (nop=promote) ───────────────────────────────────
+var NW_PROFILER_SESSION_KEY = 'ov_note_session';   // Profiler.html's OV_NOTE_SESSION_KEY — the same origin, the developer's own sign-in
+function nwProfilerSession() { try { return localStorage.getItem(NW_PROFILER_SESSION_KEY) || ''; } catch (e) { return ''; } }
+function nwPromoteErrText(err, res) {
+  return { bad_interaction_id: 'That interaction could not be identified.', bad_confidence: 'Confidence must be a whole number from 0 to 100.',
+    profiler_session_required: 'Sign in to Profiler in this browser first.', duplicate: 'Already promoted' + (res && res.intakeId ? ' (' + res.intakeId + ')' : '') + ' — one note per interaction.',
+    profiler_session_expired: 'Your Profiler sign-in has expired — open Profiler, sign in again, then tap ⇈ again.', profiler_admin_only: 'Profiler admits only its administrator to the intake.',
+    profiler_rejected: 'Profiler refused the note' + (res && res.detail ? ' (' + res.detail + ')' : '') + '.', upstream_unreachable: 'Profiler could not be reached.',
+    upstream_not_json: 'Profiler answered with something other than a note.', view_only: 'This view is read-only.', not_found: 'That interaction is not yours to promote.',
+    deleted: 'That contact is deleted — restore it first.' }[err] || (/^upstream_http_/.test(err || '') ? 'Profiler answered ' + err.replace('upstream_http_', 'HTTP ') + '.' : nwErrText(err));
+}
+// The detail's History line — one span per Interaction (the day, the kind,
+// the summary) with the ⇈ Promote affordance; the box opens under the line.
+function nwHistoryLine(det, interactions) {
+  var list = interactions || [];
+  if (!list.length) return;
+  det.appendChild(nwEl('dt', null, 'History'));
+  var dd = nwEl('dd', 'nw-history'); det.appendChild(dd);
+  list.forEach(function(ix, i) {
+    if (i) dd.appendChild(document.createTextNode(' · '));
+    var span = nwEl('span', 'nw-ix'); span.setAttribute('data-id', ix.id || ''); span.setAttribute('data-kind', ix.kind || '');
+    span.appendChild(document.createTextNode(ix.date + ' ' + nwLabel('interactionKind', ix.kind)));
+    if (ix.summary) span.title = ix.summary;
+    if (ix.id && ix.kind !== 'merge' && ix.kind !== 'account-change' && nwCan('contacts')) {
+      var up = nwEl('a', 'nw-promote-btn', '⇈'); up.href = '#'; up.setAttribute('role', 'button'); up.title = 'Promote to a Profiler field note';
+      up.setAttribute('aria-label', 'Promote the ' + nwLabel('interactionKind', ix.kind).toLowerCase() + ' of ' + ix.date + ' to a Profiler field note');
+      up.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); nwPromoteBox(dd, ix); });
+      span.appendChild(up);
+    }
+    dd.appendChild(span);
+  });
+}
+function nwPromoteBox(host, ix) {
+  var old = host.querySelector('.nw-promote'); if (old) old.remove();
+  var box = nwEl('div', 'nw-promote'); box.setAttribute('data-id', ix.id);
+  box.appendChild(nwEl('b', null, '⇈ Promote to a Profiler field note'));
+  box.appendChild(nwEl('small', null, (ix.date + ' ' + nwLabel('interactionKind', ix.kind) + (ix.summary ? ' — ' + ix.summary : '')) + '. Copied one-way into Profiler’s intake as a contact note with your confidence; the dossier is never edited and nothing here changes.'));
+  var row = nwEl('div', 'nw-promote-row');
+  var lbl = nwEl('label', null, 'Confidence'); lbl.setAttribute('for', 'nw-promote-conf');
+  var inp = document.createElement('input'); inp.type = 'number'; inp.min = '0'; inp.max = '100'; inp.step = '1'; inp.value = '70'; inp.id = 'nw-promote-conf'; inp.className = 'nw-promote-conf'; inp.setAttribute('aria-label', 'Confidence, 0 to 100');
+  var go = nwEl('button', 'nw-btn nw-btn-primary', 'Promote'); go.type = 'button'; go.className += ' nw-promote-go';
+  var cancel = nwEl('a', 'nw-mail-close', '× Cancel'); cancel.href = '#'; cancel.setAttribute('role', 'button');
+  cancel.addEventListener('click', function(ev) { ev.preventDefault(); ev.stopPropagation(); box.remove(); });
+  row.appendChild(lbl); row.appendChild(inp); row.appendChild(go); row.appendChild(cancel); box.appendChild(row);
+  var status = nwEl('div', 'nw-status nw-promote-status', ''); status.style.display = 'none'; box.appendChild(status);
+  function say(text, level) { status.textContent = text || ''; status.style.display = text ? '' : 'none'; status.className = 'nw-status nw-promote-status' + (level === 'err' ? ' nw-status-err' : level === 'ok' ? ' nw-status-ok' : level === 'warn' ? ' nw-status-warn' : ''); }
+  go.addEventListener('click', function(ev) {
+    ev.preventDefault(); ev.stopPropagation();
+    var conf = Math.round(Number(inp.value));
+    if (!(conf >= 0 && conf <= 100)) { say(nwPromoteErrText('bad_confidence'), 'err'); return; }
+    var tok = nwProfilerSession();
+    if (!tok) {
+      say('Sign in to Profiler in this browser first — open Profiler, sign in, then come back and tap Promote again.', 'warn');
+      var a = nwEl('a', null, 'Open Profiler ↗'); a.href = 'Profiler.html'; a.target = '_blank'; a.rel = 'noopener'; status.appendChild(document.createTextNode(' ')); status.appendChild(a);
+      return;
+    }
+    go.disabled = true; say('Promoting…');
+    nwApiBody('promote', { interactionId: ix.id, confidence: String(conf), profilerSession: tok }, function(res) {
+      go.disabled = false;
+      if (!(res && res.success)) { say('Not promoted — ' + nwPromoteErrText(res && res.error, res), res && res.error === 'duplicate' ? 'warn' : 'err'); return; }
+      say('✓ Promoted — note ' + res.intakeId + ' in Profiler’s intake (' + (res.slug === 'general' ? 'General' : res.slug) + ', confidence ' + res.confidence + '/100). A note interaction records it here.', 'ok');
+      go.remove(); inp.disabled = true;
+      box.setAttribute('data-promoted', res.intakeId || '1');
+    });
+  });
+  host.appendChild(box);
+  inp.focus();
+}
+
+// ── The pre-meeting brief (nop=brief → a .docx) ───────────────────────────
+function nwXml(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+// One OOXML paragraph: runs are [text, { b, i, size, color }] pairs; a plain string is one run.
+function nwDocxPara(runs, opts) {
+  var o = opts || {}, out = '<w:p>';
+  var ppr = [];
+  if (o.spacingAfter != null) ppr.push('<w:spacing w:after="' + o.spacingAfter + '"/>');
+  if (o.bullet) ppr.push('<w:ind w:left="360" w:hanging="200"/>');
+  if (ppr.length) out += '<w:pPr>' + ppr.join('') + '</w:pPr>';
+  (typeof runs === 'string' ? [[runs, {}]] : runs).forEach(function(r) {
+    var t = String(r[0] == null ? '' : r[0]), p = r[1] || {}, rpr = [];
+    if (o.font || p.font) rpr.push('<w:rFonts w:ascii="' + (p.font || o.font) + '" w:hAnsi="' + (p.font || o.font) + '"/>');
+    if (p.b) rpr.push('<w:b/>'); if (p.i) rpr.push('<w:i/>');
+    if (p.color) rpr.push('<w:color w:val="' + p.color + '"/>');
+    if (p.size || o.size) rpr.push('<w:sz w:val="' + ((p.size || o.size) * 2) + '"/>');
+    out += '<w:r>' + (rpr.length ? '<w:rPr>' + rpr.join('') + '</w:rPr>' : '') + '<w:t xml:space="preserve">' + nwXml((o.bullet ? '• ' : '') + t) + '</w:t></w:r>';
+  });
+  return out + '</w:p>';
+}
+// A real .docx: [Content_Types].xml, the package rels and word/document.xml
+// over the store-only zip the vCard bundle already uses — no library.
+function nwDocx(paragraphsXml) {
+  var types = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+    + '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/>'
+    + '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>';
+  var rels = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+    + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';
+  var doc = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>'
+    + paragraphsXml + '<w:sectPr><w:pgSz w:w="12240" w:h="15840"/><w:pgMar w:top="1080" w:right="1080" w:bottom="1080" w:left="1080"/></w:sectPr></w:body></w:document>';
+  var blob = nwZip([{ name: '[Content_Types].xml', text: types }, { name: '_rels/.rels', text: rels }, { name: 'word/document.xml', text: doc }]);
+  return new Blob([blob], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+}
+// The brief's sections, as paragraph XML: the heading, the warmth line, the
+// contact, the account, the timeline, the "will be at" chips as text, the
+// dossier's strategy read and last five developments (when covered and the
+// served JSON answered), the pipeline stage.
+var NW_BRIEF_DEVS = 5;
+function nwBriefParagraphs(b, profile) {
+  var c = b.contact || {}, a = b.account || {}, w = b.warmth || {}, P = [], H = { font: 'Georgia' };
+  function h1(t) { P.push(nwDocxPara([[t, { b: true, size: 18 }]], { font: 'Georgia', spacingAfter: 60 })); }
+  function h2(t) { P.push(nwDocxPara([[t.toUpperCase(), { b: true, size: 9, color: '8A6D1F' }]], { font: 'Georgia', spacingAfter: 60 })); }
+  function meta(t) { P.push(nwDocxPara([[t, { size: 8, color: '6D6758', font: 'Consolas' }]], { spacingAfter: 80 })); }
+  function line(label, value) { if (!value) return; P.push(nwDocxPara([[label + ': ', { b: true, size: 11 }], [String(value), { size: 11 }]], { font: 'Georgia', spacingAfter: 40 })); }
+  function para(t, o) { P.push(nwDocxPara([[t, { size: 11 }]], { font: 'Georgia', spacingAfter: 60, bullet: !!(o && o.bullet) })); }
+  function note(t) { P.push(nwDocxPara([[t, { i: true, size: 9.5, color: '6D6758' }]], { font: 'Georgia', spacingAfter: 60 })); }
+  var today = new Date().toISOString().slice(0, 10);
+  h1((c.fullName || '(unnamed)') + ' — pre-meeting brief');
+  meta('Generated ' + today + ' · ' + [c.title, a.name].filter(Boolean).join(', ') + (a.relationship ? ' · ' + nwLabel('relationship', a.relationship) : '') + (a.stage && a.stage !== 'none' ? ' · ' + nwLabel('stage', a.stage) : '') + ' · Network');
+  P.push(nwDocxPara([['Warmth: ', { b: true, size: 11 }], [(w.band || 'cold') + ' ' + Number(w.score || 0).toFixed(2), { b: true, size: 11, color: { hot: 'B3261E', warm: '7A3B00', cool: '0D4C73' }[w.band] || '6D6758' }],
+    [(w.lastTouch ? ' · last touch ' + w.lastTouch + (w.sinceDays != null ? ' (' + w.sinceDays + ' days ago)' : '') : '') + ' · cadence ' + w.cadenceDays + ' days' + (w.overdueDays != null ? (w.overdueDays > 0 ? ' · ' + w.overdueDays + ' days overdue' : ' · due in ' + (-w.overdueDays) + ' days') : ''), { size: 11 }]], { font: 'Georgia', spacingAfter: 120 }));
+  h2('Contact');
+  line('Title', [c.title, c.department].filter(Boolean).join(' · ')); line('Role', nwLabel('role', c.role));
+  line('Email', (c.emails || []).map(function(e) { return e.value; }).join(', ')); line('Phone', (c.phones || []).map(function(p) { return p.number; }).join(', '));
+  line('LinkedIn', c.linkedin); line('Met', [c.metDate, c.sourceEvent].filter(Boolean).join(' at '));
+  line('Consent', nwLabel('consent', c.consent) + (c.dnc ? ' · DO NOT CONTACT' : '')); line('Tags', (c.tags || []).join(', ')); line('Notes', c.notes);
+  h2('Account');
+  if (a.name) {
+    line('Company', [a.name, a.hq].filter(Boolean).join(' · ')); line('Relationship', nwLabel('relationship', a.relationship)); line('Stage', nwLabel('stage', a.stage || 'none'));
+    line('Segments', (a.segmentIds || []).join(', ')); line('Tags', (a.tags || []).join(', ')); line('Notes', a.notes);
+    line('Profiler', a.slug ? 'covered — ' + a.slug : 'not covered');
+  } else para('No account on this contact.');
+  h2('Timeline');
+  var ixs = b.interactions || [];
+  if (!ixs.length) para('No touches recorded yet.');
+  ixs.forEach(function(ix) { para(ix.date + ' · ' + nwLabel('interactionKind', ix.kind) + (ix.summary ? ' — ' + ix.summary : '') + (ix.eventSlug ? ' (' + ix.eventSlug + ')' : ''), { bullet: true }); });
+  h2('Will be at');
+  var chips = nwSignalChips(b.signals || [], b.events || {});
+  if (!chips.length) para('No attendance signals on this account yet.');
+  chips.forEach(function(ch) { para(ch.label + (ch.start ? ' (' + ch.start + ')' : '') + ' — ' + ch.detail, { bullet: true }); });
+  h2('Strategy read');
+  if (!a.slug) note('Not covered by Profiler — no dossier to read.');
+  else if (!profile) note('The dossier for ' + a.slug + ' could not be read.');
+  else {
+    var sr = profile.strategyRead || [];
+    if (!sr.length) note('The dossier carries no strategy read.');
+    sr.forEach(function(s) { para(typeof s === 'string' ? s : (s && (s.text || s.read || JSON.stringify(s))) || '', { bullet: true }); });
+    h2('Recent developments');
+    var devs = (profile.recentDevelopments || []).slice().sort(function(x, y) { return String(y.date || '') < String(x.date || '') ? -1 : 1; }).slice(0, NW_BRIEF_DEVS);
+    if (!devs.length) note('The dossier carries no recent developments.');
+    devs.forEach(function(d) { para([d.date, d.headline].filter(Boolean).join(' · ') + (d.read ? ' — ' + d.read : ''), { bullet: true }); });
+    meta('Dossier ' + (profile.name || a.slug) + ' v' + (profile.profileVersion || '?') + ', updated ' + (profile.lastUpdated || '—') + ' — read from Profiler, never written.');
+  }
+  h2('Pipeline stage');
+  para(a.name ? nwLabel('stage', a.stage || 'none') + ' — ' + nwLabel('relationship', a.relationship) + (a.stage && a.stage !== 'none' ? '' : ' (not in the pipeline)') : 'No account.');
+  meta('Network brief · built ' + (b.built || today) + ' · contact ' + (c.id || '') + ' · the dossier is read, never written; a disclosure row records this export.');
+  return P.join('');
+}
+function nwBriefFilename(c) {
+  var base = String(c.fullName || c.id || 'contact').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'contact';
+  return base + '-brief-' + new Date().toISOString().slice(0, 10) + '.docx';
+}
+function nwBriefExport(c, a, btn) {
+  var label = btn.textContent; btn.textContent = 'Building the brief…'; btn.setAttribute('aria-busy', 'true');
+  function done(text, level) { btn.textContent = label; btn.removeAttribute('aria-busy'); if (text) nwListStatus(text, level); }
+  nwApi('brief', { contactId: c.id }, function(res) {
+    if (!(res && res.success)) { done('Could not build the brief (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    var slug = res.account && res.account.slug;
+    (slug ? nwProfile(slug) : Promise.resolve(null)).then(function(profile) {
+      var blob = nwDocx(nwBriefParagraphs(res, profile));
+      nwDownloadBlob(blob, nwBriefFilename(res.contact || c));
+      done('✓ Brief exported for ' + ((res.contact || c).fullName || 'the contact') + (slug ? (profile ? ' with the ' + slug + ' dossier' : ' — the dossier could not be read') : ' (not covered by Profiler)') + '. A disclosure row records the export.', profile || !slug ? 'ok' : 'warn');
+    });
+  });
+}
+
+// ── The "Will be at" chips ────────────────────────────────────────────────
+// One chip per event the account's signals name (the event's name from
+// Events, else its slug), the kinds and confidences beneath with the person
+// where a row names one; press-quote rows with no event are one "Quoted in
+// press" chip, docket rows one "Regulatory filing" chip.
+function nwSignalChips(rows, events) {
+  var order = [], by = {};
+  (rows || []).forEach(function(s) {
+    var key = s.eventSlug ? 'ev:' + s.eventSlug : (s.kind === 'press-quote' ? 'press' : s.kind === 'docket' ? 'docket' : 'other');
+    if (!by[key]) {
+      var ev = s.eventSlug ? ((events || {})[s.eventSlug] || {}) : {};
+      by[key] = { key: key, slug: s.eventSlug || '', label: s.eventSlug ? (s.eventName || ev.name || s.eventSlug) : (key === 'press' ? 'Quoted in press' : key === 'docket' ? 'Regulatory filing' : 'Other signal'),
+                  start: s.eventStart || ev.start || '', named: !!(s.eventSlug && (s.eventName || ev.name)), items: [], links: [] };
+      order.push(key);
+    }
+    var ch = by[key];
+    ch.items.push(nwLabel('signalKind', s.kind || 'other').toLowerCase() + ' ' + Number(s.confidence || 0).toFixed(1) + (s.personName ? ' (' + s.personName + (s.personTitle ? ', ' + s.personTitle : '') + ')' : ''));
+    if (/^https?:\/\//i.test(s.evidenceUrl || '')) ch.links.push(s.evidenceUrl);
+  });
+  return order.map(function(k) { var ch = by[k]; ch.detail = ch.items.join(' · '); return ch; });
+}
+function nwSignalsFill(dd, params) {
+  dd.textContent = 'Loading…';
+  nwApi('signals', params, function(res) {
+    dd.textContent = '';
+    if (!(res && res.success)) { dd.className = 'nw-signals nw-bad'; dd.textContent = nwErrText(res && res.error); return; }
+    var chips = nwSignalChips(res.signals || [], res.events || {});
+    if (!chips.length) { dd.textContent = 'No attendance signals yet — Events adds them from its weekly sweep and from the event sheet.'; return; }
+    chips.forEach(function(ch) {
+      var chip = nwEl('span', 'nw-chip nw-signal' + (ch.slug ? '' : ' nw-chip-' + ch.key)); chip.setAttribute('data-slug', ch.slug); chip.setAttribute('data-named', ch.named ? '1' : '0'); chip.setAttribute('data-kinds', ch.items.length);
+      chip.appendChild(nwEl('b', null, ch.label));
+      if (ch.start) chip.appendChild(nwEl('small', null, ch.start));
+      chip.appendChild(nwEl('small', null, ch.detail));
+      ch.links.slice(0, 3).forEach(function(href) { var a = nwEl('a', null, '↗'); a.href = href; a.target = '_blank'; a.rel = 'noopener'; a.title = 'Evidence'; chip.appendChild(a); });
+      if (ch.slug) { var ev = nwEl('a', null, '📅'); ev.href = 'Events.html#' + ch.slug; ev.target = '_blank'; ev.rel = 'noopener'; ev.title = 'Open in Events'; chip.appendChild(ev); }
+      dd.appendChild(chip);
+    });
+    if (res.eventsConfigured === false) dd.appendChild(nwEl('small', 'nw-chip-note', 'Events is not connected — the chips show slugs until the peer token is set.'));
+  });
+}
+
+// ── The Network map — vanilla SVG over the list payload ───────────────────
+var NW_SVG_NS = 'http://www.w3.org/2000/svg';
+var _nwMap = { focus: '', pan: null, vb: null };
+function nwSvgEl(tag, attrs) { var el = document.createElementNS(NW_SVG_NS, tag); for (var k in attrs) if (attrs.hasOwnProperty(k)) el.setAttribute(k, attrs[k]); return el; }
+function nwMapPanel() {
+  var panel = document.getElementById('nw-map');
+  if (panel) return panel;
+  var app = document.getElementById('nw-app'), wrap = document.getElementById('nw-listwrap');
+  panel = nwEl('div', 'nw-card nw-map'); panel.id = 'nw-map'; panel.style.display = 'none';
+  var head = nwEl('div', 'nw-mail-head'); head.appendChild(nwEl('h2', null, '🕸 Network map'));
+  var close = nwEl('a', 'nw-mail-close', '× Close'); close.href = '#'; close.id = 'nw-map-close'; close.setAttribute('role', 'button');
+  close.addEventListener('click', function(ev) { ev.preventDefault(); panel.style.display = 'none'; });
+  head.appendChild(close); panel.appendChild(head);
+  panel.appendChild(nwEl('p', null, 'Your accounts, the contacts at each, and the events you met them at — drawn from the list as it is filtered now. Drag to pan; tap a node to focus it, tap a focused contact to open their row.'));
+  var status = nwEl('div', 'nw-status nw-mail-status', ''); status.id = 'nw-map-status'; status.style.display = 'none'; panel.appendChild(status);
+  var wrapEl = nwEl('div', 'nw-map-wrap'); wrapEl.id = 'nw-map-wrap'; panel.appendChild(wrapEl);
+  var cap = nwEl('div', 'nw-map-caption'); cap.id = 'nw-map-caption'; panel.appendChild(cap);
+  var legend = nwEl('div', 'nw-map-legend'); legend.id = 'nw-map-legend';
+  [['account', 'Account'], ['contact', 'Contact'], ['event', 'Event met at']].forEach(function(l) { var s = nwEl('span', 'nw-map-key nw-map-key-' + l[0]); s.appendChild(nwEl('i')); s.appendChild(document.createTextNode(l[1])); legend.appendChild(s); });
+  panel.appendChild(legend);
+  if (wrap) app.insertBefore(panel, wrap); else app.appendChild(panel);
+  return panel;
+}
+function nwMapStatus(text, level) { var el = document.getElementById('nw-map-status'); if (!el) return; el.textContent = text || ''; el.style.display = text ? '' : 'none'; el.className = 'nw-status nw-mail-status' + (level === 'warn' ? ' nw-status-warn' : level === 'ok' ? ' nw-status-ok' : ''); }
+// The model: every live account the list carried, the contacts shown, the
+// distinct source events — and the two edge sets.
+function nwMapModel() {
+  var accounts = [], contacts = [], events = [], evSeen = {}, aSeen = {};
+  for (var id in _nwAccountsById) if (_nwAccountsById.hasOwnProperty(id) && _nwAccountsById[id] && !_nwAccountsById[id].deletedAt) { accounts.push(_nwAccountsById[id]); aSeen[id] = true; }
+  accounts.sort(function(x, y) { return String(x.name || '').localeCompare(String(y.name || '')); });
+  (_nwRows || []).forEach(function(c) {
+    if (!c || c.deletedAt) return;
+    contacts.push(c);
+    var ev = String(c.sourceEvent || '').trim();
+    if (ev && !evSeen[ev]) { evSeen[ev] = true; events.push(ev); }
+  });
+  events.sort();
+  return { accounts: accounts, contacts: contacts, events: events };
+}
+function nwMapShort(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n - 1) + '…' : s; }
+function nwMapPaint() {
+  var wrap = document.getElementById('nw-map-wrap'); if (!wrap) return;
+  wrap.innerHTML = '';
+  var m = nwMapModel();
+  if (!m.contacts.length && !m.accounts.length) { wrap.appendChild(nwEl('div', 'nw-recon-empty', 'Nothing to draw yet — save a contact first.')); nwMapStatus(''); return; }
+  var W = 720, H = 560, cx = W / 2, cy = H / 2, Ra = Math.min(W, H) * 0.31, Rc = Ra + 92, Re = Math.min(60, Ra * 0.4);
+  var svg = nwSvgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, 'class': 'nw-map-svg', role: 'img', 'aria-label': 'Network map — ' + m.accounts.length + ' accounts, ' + m.contacts.length + ' contacts, ' + m.events.length + ' events' });
+  svg.id = 'nw-map-svg';
+  var pos = {}, edges = nwSvgEl('g', { 'class': 'nw-map-edges' }), nodes = nwSvgEl('g', { 'class': 'nw-map-nodes' });
+  svg.appendChild(edges); svg.appendChild(nodes);
+  var byAcc = {}; m.contacts.forEach(function(c) { (byAcc[c.accountId] = byAcc[c.accountId] || []).push(c); });
+  var nA = m.accounts.length, nE = m.events.length;
+  m.events.forEach(function(ev, i) { var a = -Math.PI / 2 + i * 2 * Math.PI / Math.max(nE, 1); pos['ev:' + ev] = nE === 1 ? { x: cx, y: cy } : { x: cx + Re * Math.cos(a), y: cy + Re * Math.sin(a) }; });
+  m.accounts.forEach(function(acc, i) {
+    var a = -Math.PI / 2 + i * 2 * Math.PI / Math.max(nA, 1);
+    pos[acc.id] = { x: cx + Ra * Math.cos(a), y: cy + Ra * Math.sin(a), a: a };
+    var kids = byAcc[acc.id] || [], span = Math.min(2 * Math.PI / Math.max(nA, 1) * 0.85, 0.28 * Math.max(kids.length - 1, 0) + 0.001);
+    kids.forEach(function(c, k) {
+      var ang = a + (kids.length === 1 ? 0 : -span / 2 + k * span / (kids.length - 1));
+      pos[c.id] = { x: cx + Rc * Math.cos(ang), y: cy + Rc * Math.sin(ang), a: ang };
+    });
+  });
+  m.contacts.forEach(function(c) { if (!pos[c.id]) pos[c.id] = { x: cx + Rc, y: cy, a: 0 }; });
+  function edge(p, q, cls, from, to) { if (!p || !q) return; var l = nwSvgEl('line', { x1: p.x, y1: p.y, x2: q.x, y2: q.y, 'class': 'nw-map-edge ' + cls }); l.setAttribute('data-from', from); l.setAttribute('data-to', to); edges.appendChild(l); }
+  m.contacts.forEach(function(c) { edge(pos[c.accountId], pos[c.id], 'nw-map-edge-acc', c.accountId, c.id); if (c.sourceEvent && pos['ev:' + c.sourceEvent]) edge(pos[c.id], pos['ev:' + c.sourceEvent], 'nw-map-edge-ev', c.id, 'ev:' + c.sourceEvent); });
+  function node(id, type, label, p, r, sub) {
+    var g = nwSvgEl('g', { 'class': 'nw-map-node nw-map-' + type, role: 'button', tabindex: '0', 'aria-label': (type === 'contact' ? 'Contact ' : type === 'account' ? 'Account ' : 'Event ') + label });
+    g.setAttribute('data-id', id); g.setAttribute('data-type', type);
+    g.appendChild(nwSvgEl('circle', { cx: p.x, cy: p.y, r: r + 14, fill: 'transparent' }));
+    g.appendChild(nwSvgEl('circle', { cx: p.x, cy: p.y, r: r, 'class': 'nw-map-dot' }));
+    var c = Math.cos(p.a == null ? 0 : p.a), s = Math.sin(p.a == null ? 0 : p.a);
+    var anchor = p.a == null ? 'middle' : (c > 0.35 ? 'start' : c < -0.35 ? 'end' : 'middle');
+    var t = nwSvgEl('text', { x: p.x + (anchor === 'start' ? r + 6 : anchor === 'end' ? -(r + 6) : 0), y: p.y + (p.a == null ? r + 14 : (s > 0.75 ? r + 14 : s < -0.75 ? -(r + 6) : 4)), 'text-anchor': anchor, 'class': 'nw-map-label' });
+    t.textContent = nwMapShort(label, 22); g.appendChild(t);
+    var ti = nwSvgEl('title', {}); ti.textContent = label + (sub ? ' — ' + sub : ''); g.appendChild(ti);
+    function tap() { nwMapFocus(id, type, label, sub); }
+    g.__nwTap = tap;   // fired from the svg's pointerup — with pointer capture on the svg a click never reaches the node
+    g.addEventListener('keydown', function(ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); tap(); } });
+    nodes.appendChild(g);
+  }
+  m.events.forEach(function(ev) { node('ev:' + ev, 'event', ev, pos['ev:' + ev], 9, 'event'); });
+  m.accounts.forEach(function(acc) { node(acc.id, 'account', acc.name || acc.id, pos[acc.id], 10, [nwLabel('relationship', acc.relationship), (byAcc[acc.id] || []).length + ' contact' + ((byAcc[acc.id] || []).length === 1 ? '' : 's')].filter(Boolean).join(' · ')); });
+  m.contacts.forEach(function(c) { node(c.id, 'contact', c.name || '(unnamed)', pos[c.id], 6, [c.title, (_nwAccountsById[c.accountId] || {}).name].filter(Boolean).join(' · ')); });
+  // Pan: drag moves the viewBox; a drag of under 6 px is a tap on the node
+  // under the pointer (or on the background, which clears the focus). The
+  // tap is decided on pointerup, not click: the svg captures the pointer
+  // for the drag, and a captured pointer's click lands on the svg, not the node.
+  _nwMap.vb = { x: 0, y: 0, w: W, h: H };
+  svg.addEventListener('pointerdown', function(ev) {
+    var n = ev.target && ev.target.closest ? ev.target.closest('.nw-map-node') : null;
+    _nwMap.pan = { x: ev.clientX, y: ev.clientY, vx: _nwMap.vb.x, vy: _nwMap.vb.y, moved: false, node: n };
+    try { svg.setPointerCapture(ev.pointerId); } catch (e) {}
+  });
+  svg.addEventListener('pointermove', function(ev) {
+    if (!_nwMap.pan) return;
+    var dx = ev.clientX - _nwMap.pan.x, dy = ev.clientY - _nwMap.pan.y;
+    if (Math.abs(dx) + Math.abs(dy) > 6) _nwMap.pan.moved = true;
+    if (!_nwMap.pan.moved) return;
+    var scale = W / Math.max(svg.clientWidth || W, 1);
+    _nwMap.vb.x = _nwMap.pan.vx - dx * scale; _nwMap.vb.y = _nwMap.pan.vy - dy * scale;
+    svg.setAttribute('viewBox', _nwMap.vb.x + ' ' + _nwMap.vb.y + ' ' + W + ' ' + H);
+  });
+  svg.addEventListener('pointerup', function() {
+    var pan = _nwMap.pan; _nwMap.pan = null;
+    if (!pan || pan.moved) return;
+    if (pan.node && pan.node.__nwTap) pan.node.__nwTap(); else nwMapFocus('', '', '', '');
+  });
+  svg.addEventListener('pointercancel', function() { _nwMap.pan = null; });
+  wrap.appendChild(svg);
+  nwMapStatus(m.accounts.length + ' account' + (m.accounts.length === 1 ? '' : 's') + ' · ' + m.contacts.length + ' contact' + (m.contacts.length === 1 ? '' : 's') + (_nwTotal > m.contacts.length ? ' of ' + _nwTotal + ' (the list is filtered)' : '') + ' · ' + m.events.length + ' event' + (m.events.length === 1 ? '' : 's'), 'ok');
+  if (_nwMap.focus) nwMapFocus(_nwMap.focus, '', '', '');
+}
+// Focus: the node's own edges and neighbours stay lit, the rest dim; the
+// caption names it. A second tap on a focused contact opens its row.
+function nwMapFocus(id, type, label, sub) {
+  var svg = document.getElementById('nw-map-svg'), cap = document.getElementById('nw-map-caption'); if (!svg) return;
+  if (id && _nwMap.focus === id && type === 'contact') { nwMapOpenRow(id); return; }
+  _nwMap.focus = id;
+  var keep = {}; if (id) { keep[id] = true; Array.prototype.forEach.call(svg.querySelectorAll('.nw-map-edge'), function(l) { var f = l.getAttribute('data-from'), t = l.getAttribute('data-to'); if (f === id) keep[t] = true; if (t === id) keep[f] = true; }); }
+  Array.prototype.forEach.call(svg.querySelectorAll('.nw-map-node'), function(g) { var nid = g.getAttribute('data-id'); g.classList.toggle('nw-map-dim', !!id && !keep[nid]); g.classList.toggle('nw-map-focus', nid === id); });
+  Array.prototype.forEach.call(svg.querySelectorAll('.nw-map-edge'), function(l) { var on = !id || l.getAttribute('data-from') === id || l.getAttribute('data-to') === id; l.classList.toggle('nw-map-dim', !on); });
+  if (!cap) return;
+  cap.innerHTML = '';
+  if (!id) { cap.textContent = 'Tap a node to focus it.'; return; }
+  if (!label) { var g0 = svg.querySelector('.nw-map-node[data-id="' + id + '"]'); if (g0) { type = g0.getAttribute('data-type'); label = (g0.querySelector('title') || {}).textContent || id; } }
+  cap.appendChild(nwEl('b', null, label)); cap.appendChild(document.createTextNode(' — ' + (type === 'contact' ? 'contact' : type === 'account' ? 'account' : 'event') + (sub ? ' · ' + sub : '')));
+  if (type === 'contact') { var open = nwEl('a', 'nw-edit-btn nw-map-open', 'Open row'); open.href = '#'; open.setAttribute('role', 'button'); open.addEventListener('click', function(ev) { ev.preventDefault(); nwMapOpenRow(id); }); cap.appendChild(document.createTextNode(' ')); cap.appendChild(open); }
+  else cap.appendChild(nwEl('small', null, type === 'account' ? ' Its contacts stay lit — tap one to focus it.' : ' The contacts met there stay lit.'));
+}
+function nwMapOpenRow(id) {
+  var row = document.querySelector('#nw-rows .nw-row[data-id="' + id + '"]'); if (!row) { nwMapStatus('That contact is not in the list as filtered.', 'warn'); return; }
+  if (!row.classList.contains('nw-open')) nwRowDetail(row, id);
+  row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function nwMapOpen() { var panel = nwMapPanel(); panel.style.display = ''; _nwMap.focus = ''; nwMapPaint(); panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
 
 // PROJECT END
 // ══════════════

@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15g] — 2026-09-23 01:20:11 AM EST — v07.23r
+
+### Added
+- A pre-meeting brief is assembled here from one contact's own rows — the contact, its account, every touch, the account's attendance signals with their event names, the warmth block and the stage — and answered in one read; each brief is recorded as an export
+- A touch can be promoted into Profiler's field-note intake as a contact note with your confidence, through Profiler's existing note path and your own Profiler sign-in; a note on the contact records the promotion and a second promote of the same touch is refused
+- Attendance signals now carry the event's name and start date, asked of Events once per read; when Events is not connected the rows still answer on their slugs
+
+### Changed
+- Minor internal improvements
 
 ## [v01.14g] — 2026-09-23 12:41:01 AM EST — v07.22r
 
