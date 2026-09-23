@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.29r] — 2026-09-23 08:03:13 AM EST
+
+> **Prompt:** "Run the Megmeet SST onboarding briefing — the v2 plan in repository-information/megmeet-briefing-prompt.md. Read that file end to end first: §2 is the scope, §3 the deliverables and the table of contents, §5 the phases, the checkpoint pushes and the Phase F rubric you will be checked against. This is an unattended overnight run: no AskUserQuestion, no plan mode — resolve every ambiguity with a stated assumption and record it in the colophon. [CONTEXT, READ FIRST, SCOPE, DELIVERABLES, HARD RULES, PHASES AND PUSHES and FINAL MESSAGE sections follow in the full prompt, which is §6 of the plan file verbatim plus the developer's start-date and hearsay context.]"
+
+Phase C of the Megmeet SST onboarding briefing run: **D1, the Profiler competitive report on the solid-state-transformer and medium-voltage hall-edge block**, authored from covered dossiers only and cut on the axis the 8 September AIDC edition could not score — the service-voltage class each vendor has actually specified. Eighteen dossiers in scope, 46 citations copied verbatim from their `sources[]`, `check-profiler-reports.py` clean. Phases 0, A and B (pre-flight, the corpus read into two scratchpad ledgers, and five bounded web-research subagents) ran before it; the briefing PDF and the study companion follow in later pushes.
+
+### Added
+
+#### `live-site-pages/profiler-data/reports/sst-hall-edge-block--competitive--2026-09-23.report.json`
+
+- **A competitive report scoring eighteen vendors on disclosed service-voltage class** — `megmeet`, the four venture SST vendors (`heron-power`, `amperesand`, `dg-matrix`, `novos-power`), the Asia-headquartered set (`sungrow`, `zhonhen`, `sinexcel`, `delta-electronics`, `liteon`), the incumbents that have declared an 800 V DC position (`abb`, `ge-vernova`, `eaton`, `schneider-electric`, `vertiv`, `hitachi-energy`, `siemens-energy`) and the silicon layer (`infineon`). It **builds on and does not supersede** `aidc-power-conversion--competitive--2026-09-08`: different cut, different question, both current.
+- **The finding the cut exists to expose** — the commercial leader and the specification leader are different companies, and the class is why. The only covered vendor a filing describes as supplying an MV-to-800 V DC solid-state transformer is specified 10–13.8 kV and stops there; the two most completely specified 34.5 kV-class products belong to the two smallest balance sheets in the report and neither has shipped; the only orderable solid-state medium-voltage product from an incumbent is a UPS, not a transformer; and the one venture vendor shipping hardware ships a 480 V AC skid whose own datasheet reads 96–97% peak, two to three points below its platform claim.
+- **Megmeet's row is the report's own subject and it reads `undisclosed`** — across the thirty-eight sources pinned in its dossier no kV figure appears anywhere for its solid-state transformer. Its disclosed position is the rack and the sidecar (which converts 380–480 VAC, not medium voltage), where the H1 2026 interim measures the power-products group growing 60.92% at the company's only expanding gross margin. The report states the competitive risk as structural rather than commercial: the block above the rack may consolidate before Megmeet's converter has a class to quote.
+- **Eight confidence-tagged key judgments, seven sections** (a what-this-adds prose section, the service-voltage class table, the venture-set table, the Asia-set table, a normalized-revenue bars figure and a labelled analysis section on Megmeet's position), **seven indicators** and **ten limitations**, in the registry's active `intel-briefing` style.
+- **The honesty block carries eight gaps**, led by Megmeet's undisclosed class and by the fact that the four venture vendors closest to the block carry no normalized revenue at all — so the scale chart omits precisely the companies whose products are nearest to it. That is stated as the finding rather than left as a hole.
+
+### Changed
+
+#### `live-site-pages/profiler-data/reports/reports-index.json`
+
+- Registered the new report newest-first as `current`. No `supersedes` and no status flip on any existing entry — this edition does not replace one.
+
+#### `README.md`
+
+- Tree entry for the new report, and the **missing entry for `aidc-power-conversion--competitive--2026-09-08.report.json`** restored — the current AIDC edition had never been listed, only its superseded 2026-08-29 predecessor. `check-readme-tree.py` is clean.
+- `Last updated:` and `Repo version:` refreshed.
+
+### Notes
+
+- **Archive rotation was evaluated and is not due.** The counter reads `Sections: 100/100`, but the threshold in `CHANGELOG-archive.md` steps 1–3 tests the **non-exempt** count, and 8 of the 100 sections carry today's date (2026-09-23) and are exempt: 92 non-exempt is below the trigger. This is Scenario A in the rotation examples — a total at or above 100 does not by itself rotate. The clone was deepened at session start regardless, so a rotation on a later push in this run will resolve its SHAs.
+- No Profiler page bump: report JSONs and the index are data-only, so the Profiler page is an indirect affect ([PC-HTML-VERSION] #2 does not fire).
 
 ## [v07.28r] — 2026-09-23 07:30:03 AM EST
 

@@ -1,0 +1,1212 @@
+{
+ "schemaVersion": 1,
+ "id": "sst-hall-edge-block--competitive--2026-09-23",
+ "title": "Solid-State Transformers and the Medium-Voltage Hall Edge — Megmeet’s Competitive Position",
+ "type": "competitive",
+ "topic": "Who is positioned to win the medium-voltage-to-800 V DC hall-edge block, measured by the service-voltage class each vendor has actually specified and by what has actually been sold — and where Megmeet stands in it",
+ "generated": "2026-09-23",
+ "style": "intel-briefing",
+ "scope": {
+  "kind": "slugs",
+  "value": [
+   "megmeet",
+   "heron-power",
+   "amperesand",
+   "dg-matrix",
+   "novos-power",
+   "sungrow",
+   "zhonhen",
+   "sinexcel",
+   "delta-electronics",
+   "liteon",
+   "abb",
+   "ge-vernova",
+   "eaton",
+   "schneider-electric",
+   "vertiv",
+   "hitachi-energy",
+   "siemens-energy",
+   "infineon"
+  ],
+  "rationale": "The hall-edge block cut as a single layer rather than as the four-layer roster of the 2026-09-08 edition. Eighteen dossiers: the company the report is written for (megmeet); the four venture solid-state-transformer vendors (heron-power, amperesand, dg-matrix, novos-power — the last three of which entered coverage after that edition); the Asia-headquartered vendors with a published medium-voltage or 800 V DC conversion product (sungrow, zhonhen, sinexcel, delta-electronics, liteon); and the incumbents that have declared an 800 V DC position at or above the block (abb, ge-vernova, eaton, schneider-electric, vertiv, hitachi-energy, siemens-energy) plus the silicon layer that gates all of them (infineon). vicor, flex, huawei-digital-power, oracle and nvidia are covered but out of scope — the first three sit at layers this cut does not score, and the last two are buyers and architecture-setters rather than competitors in it."
+ },
+ "coverage": {
+  "companies": [
+   {
+    "slug": "megmeet",
+    "name": "Megmeet",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 38,
+    "srcFirstPct": 58,
+    "kpiNorm": true
+   },
+   {
+    "slug": "heron-power",
+    "name": "Heron Power",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-12",
+    "srcTotal": 52,
+    "srcFirstPct": 37,
+    "kpiNorm": false
+   },
+   {
+    "slug": "amperesand",
+    "name": "Amperesand",
+    "profileVersion": 2,
+    "lastUpdated": "2026-09-19",
+    "srcTotal": 63,
+    "srcFirstPct": 10,
+    "kpiNorm": false
+   },
+   {
+    "slug": "dg-matrix",
+    "name": "DG Matrix",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-19",
+    "srcTotal": 84,
+    "srcFirstPct": 44,
+    "kpiNorm": false
+   },
+   {
+    "slug": "novos-power",
+    "name": "Novos Power",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-19",
+    "srcTotal": 38,
+    "srcFirstPct": 8,
+    "kpiNorm": false
+   },
+   {
+    "slug": "sungrow",
+    "name": "Sungrow",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-07",
+    "srcTotal": 62,
+    "srcFirstPct": 45,
+    "kpiNorm": true
+   },
+   {
+    "slug": "zhonhen",
+    "name": "Zhonhen Electric",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 50,
+    "srcFirstPct": 44,
+    "kpiNorm": true
+   },
+   {
+    "slug": "sinexcel",
+    "name": "Sinexcel",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-08",
+    "srcTotal": 52,
+    "srcFirstPct": 56,
+    "kpiNorm": true
+   },
+   {
+    "slug": "delta-electronics",
+    "name": "Delta Electronics",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 16,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "liteon",
+    "name": "LITEON",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 15,
+    "srcFirstPct": 53,
+    "kpiNorm": true
+   },
+   {
+    "slug": "abb",
+    "name": "ABB",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 19,
+    "srcFirstPct": 68,
+    "kpiNorm": true
+   },
+   {
+    "slug": "ge-vernova",
+    "name": "GE Vernova",
+    "profileVersion": 6,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 14,
+    "srcFirstPct": 57,
+    "kpiNorm": true
+   },
+   {
+    "slug": "eaton",
+    "name": "Eaton",
+    "profileVersion": 8,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 17,
+    "srcFirstPct": 65,
+    "kpiNorm": true
+   },
+   {
+    "slug": "schneider-electric",
+    "name": "Schneider Electric",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-06",
+    "srcTotal": 18,
+    "srcFirstPct": 67,
+    "kpiNorm": true
+   },
+   {
+    "slug": "vertiv",
+    "name": "Vertiv",
+    "profileVersion": 9,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 16,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "hitachi-energy",
+    "name": "Hitachi Energy",
+    "profileVersion": 5,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 16,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "siemens-energy",
+    "name": "Siemens Energy",
+    "profileVersion": 7,
+    "lastUpdated": "2026-09-05",
+    "srcTotal": 19,
+    "srcFirstPct": 47,
+    "kpiNorm": true
+   },
+   {
+    "slug": "infineon",
+    "name": "Infineon Technologies",
+    "profileVersion": 1,
+    "lastUpdated": "2026-09-04",
+    "srcTotal": 77,
+    "srcFirstPct": 53,
+    "kpiNorm": true
+   }
+  ],
+  "gaps": [
+   "Megmeet's solid-state transformer has no disclosed service-voltage class anywhere in its 38 pinned sources — the single largest collection gap in this report, and the one that keeps it out of the hall-edge comparison.",
+   "Heron Power, Amperesand, DG Matrix and Novos Power are private and carry no normalized revenue, so the scale chart omits the four companies whose products are closest to the block being scored.",
+   "Amperesand publishes no datasheet: per-unit MW, dimensions, DC output voltage and input class all rest on third-party reporting.",
+   "Novos Power's record is a website, two pitch-competition wins and one analyst citation. No datasheet, patent, paper, funding round or customer is visible, so it is named rather than scored.",
+   "No vendor in this scope publishes an overload curve, a part-load efficiency curve, a mean-time-between-failures figure for a complete medium-voltage converter, or a spares and service model. The layer's operations-and-maintenance record is empty.",
+   "Siemens Energy carries no solid-state-transformer programme in its pinned sources; the development work reported elsewhere in the trade record sits with a different corporate entity and is therefore outside this coverage.",
+   "Eaton's ownership of solid-state-transformer intellectual property is carried in its dossier as an assessment of its acquisition record rather than as a cited product fact, so it appears in this report's analysis section and not in the class table.",
+   "No company in the scope discloses a US utility qualification, an approved-equipment-list entry, or a named host utility for a medium-voltage converter."
+  ],
+  "dataWindow": {
+   "oldest": "2026-09-04",
+   "newest": "2026-09-19"
+  }
+ },
+ "bluf": "BOTTOM LINE UP FRONT: The hall-edge contest is not being decided on efficiency — every serious vendor claims 98.5% and none publishes the boundary — but on two things the corpus can actually measure: the service-voltage class a vendor has specified, and whether anything has been sold. On the first test the field inverts. The only covered vendor whose filing describes an MV-to-800 V DC solid-state transformer as supplying the market, Sungrow, is specified at 10–13.8 kV and stops there; the two most completely specified 34.5 kV-class products belong to the two smallest balance sheets in this report, neither of which has shipped a unit; the only orderable solid-state medium-voltage product from an incumbent is a UPS, not a transformer; and the one venture vendor actually shipping hardware is shipping a 480 V AC skid, not the medium-voltage unit its marketing rates at 15 MW. Megmeet sits outside this table on the one axis that defines it: across thirty-eight sources its dossier discloses no service-voltage class for its solid-state transformer at all. Its disclosed position is the rack and the sidecar, where it is measurably growing, and its exposure is that the block above it consolidates before its own converter has a class to quote.",
+ "keyJudgments": [
+  {
+   "text": "We assess the service-voltage class, not efficiency, is the discriminator in this layer, and that on that test the commercial leader and the specification leader are different companies. Sungrow's EnerNeo is specified 10 kV–13.8 kV medium-voltage AC in, 800 V DC out, 3 MW standard and 1.5–4.5 MW configurable at 98.5% system efficiency [c:c26], and its H1 2026 interim describes the product as launched and supplying the market [c:c25]. Heron Link is specified to connect directly to 34.5 kV at 4.2 MW and over 98.5% [c:c10], with thirty 140 kW cells ten in series per phase and an integrated disconnect rated 40 kA at 34.5 kV [c:c9] — and has not shipped. The class that hyperscale campuses actually take is the class the shipping product cannot serve.",
+   "confidence": "high",
+   "cites": [
+    "c26",
+    "c25",
+    "c10",
+    "c9"
+   ]
+  },
+  {
+   "text": "We assess DG Matrix's shipping product is not the product its medium-voltage marketing describes, and that the company's own datasheet is the evidence. The Interport Flex Series 400 kVA specification sheet rates the AC port at 400–480 VAC three-phase and the DC port at 300–850 VDC with a peak efficiency of 96–97% [c:c19] — a low-voltage skid two to three points below the platform's headline figure — while the medium-voltage Interport Cell Series that would transform 12–34.5 kV AC to high-voltage DC is described on the data-centre page rather than on a datasheet [c:c20]. The May 2026 reveal into the NVIDIA MGX ecosystem [c:c21] and the Infineon silicon-carbide supply agreement [c:c22] are real; neither is a medium-voltage unit in the field.",
+   "confidence": "high",
+   "cites": [
+    "c19",
+    "c20",
+    "c21",
+    "c22"
+   ]
+  },
+  {
+   "text": "We assess Megmeet is the only company in this report whose solid-state transformer carries no disclosed service-voltage class, and that this is a collection fact rather than an inference: across the thirty-eight sources pinned in its dossier the string 'kV' does not appear once, and the converter is described only as taking grid high-voltage input to 800 V DC. Its disclosed medium-voltage-adjacent hardware is the sidecar, which converts a building's existing 380–480 VAC — not medium voltage — to 800 V DC at over 1 MW per rack [c:c1], and the 800 V / 570 kW side rack that integrates battery-backup and power-conversion functions [c:c4]. Until a class is published, the correct cell for Megmeet in every table in this report is 'undisclosed'.",
+   "confidence": "high",
+   "cites": [
+    "c1",
+    "c4"
+   ]
+  },
+  {
+   "text": "We assess Megmeet's disclosed evidence strengthened exactly where a filing can measure it and stayed silent exactly where one cannot. The H1 2026 interim reports the power-products group growing 60.92% to RMB 1.841 billion as the only segment with an expanding gross margin, and states in the company's own words that it is one of NVIDIA's designated recommended data-centre power suppliers participating in the Blackwell and Vera Rubin power and HVDC programmes — while naming no competitor across 238 pages, claiming no rank, disclosing no AI-data-centre revenue line at any granularity, and stating order backlog only as 'ample' with no figure [c:c3]. The trade account that placed Megmeet second in NVIDIA power shelves is not supported by the one contemporaneous supplier account in the dossier, which names LITEON as the second supplier and Megmeet as the mainland entrant [c:c7].",
+   "confidence": "moderate",
+   "cites": [
+    "c3",
+    "c7"
+   ]
+  },
+  {
+   "text": "We assess the venture set is separated by certification distance rather than by topology, and that none of the four has closed it. Heron has selected a 286,000 sq ft first factory for up to 10,000 units a year [c:c11] and added a USD 60 million credit facility in September 2026 [c:c12]; Amperesand's platform is built on 3.3 kV Wolfspeed full-bridge modules [c:c16] and was shown at PCIM Europe 2026 as a modular medium-voltage unit [c:c17] after an USD 80 million Series A [c:c18]; DG Matrix's datasheet states 'Designed for Compliance to' rather than a listing [c:c19]; and Novos Power's entire product record is a company page claiming a Variable Airgap Solid State Transformer on 13–48 kV utility feeds [c:c23] plus one analyst citation [c:c24]. Four topologies, four funding positions, and no listed medium-voltage unit among them.",
+   "confidence": "high",
+   "cites": [
+    "c11",
+    "c12",
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c23",
+    "c24"
+   ]
+  },
+  {
+   "text": "We assess the incumbents have converged on one hedge — own the block around the converter, defer the converter — and that the only orderable solid-state medium-voltage product in the set is not a transformer. ABB's HiPerGuard is a static medium-voltage UPS at 2.5 MW per unit to 25 MW paralleled, 98% efficiency, with voltage classes now extended by a 34.5 kV direct-grid-connect class [c:c36][c:c37]. GE Vernova publishes 800 V DC AI-factory reference designs rather than a dated product [c:c38]; Eaton published an 800 V DC reference architecture at OCP 2025 [c:c39] after a July 2025 NVIDIA collaboration [c:c40]; Schneider's 800 V DC contribution is a sidecar and a set of reference designs [c:c41]; Vertiv declared engineering readiness rather than a medium-voltage product [c:c42]; Hitachi Energy co-designed a grid-to-rack architecture [c:c43] while committing USD 1 billion of US transformer manufacturing including a USD 457 million Virginia plant [c:c44].",
+   "confidence": "moderate",
+   "cites": [
+    "c36",
+    "c37",
+    "c38",
+    "c39",
+    "c40",
+    "c41",
+    "c42",
+    "c43",
+    "c44"
+   ]
+  },
+  {
+   "text": "We assess whole-company scale is the wrong ranking for this layer and that the corpus demonstrates it in both directions. Siemens Energy carries a EUR 162 billion group backlog [c:c45] and Infineon publishes a solid-state-transformer position inside a power-semiconductor franchise [c:c46], yet neither sells a hall-edge converter; Zhonhen's Panama-800VDC lineage is a transformer-rectifier architecture converting 10 kV in one stage [c:c28] and its H1 2026 interim carries no order, backlog or customer for it [c:c29]; Sinexcel's management records state that its AI-data-centre critical-power products are samples in development with formal sales not yet realised [c:c31], and the string '800V' does not appear in its 212-page interim [c:c30]. The two most specified 34.5 kV-class products in this report belong to the two smallest balance sheets in it.",
+   "confidence": "moderate",
+   "cites": [
+    "c45",
+    "c46",
+    "c28",
+    "c29",
+    "c31",
+    "c30"
+   ]
+  },
+  {
+   "text": "We assess Megmeet's competitive risk in this report is not Delta and not LITEON, but the possibility that the block above the rack consolidates before its own converter has a class to quote. Delta publishes the deepest 800 V DC architecture in the set including a medium-voltage front end [c:c32] and is the named primary beneficiary of a 2026 volume-shipment call [c:c33]; LITEON has committed to a McKinney, Texas plant [c:c34] and showed a liquid-cooled 800 V rack at Computex 2026 [c:c35]. Megmeet competes with both at the shelf, where it publishes a 110 kW liquid-cooled MGX shelf [c:c6], a 27.5 kW N+1 shelf [c:c8] and an OCP-stage 800 V DC collaboration [c:c2], and has placed a test lab on US soil [c:c5]. None of that is a hall-edge position.",
+   "confidence": "moderate",
+   "cites": [
+    "c32",
+    "c33",
+    "c34",
+    "c35",
+    "c6",
+    "c8",
+    "c2",
+    "c5"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "what-this-adds",
+   "kind": "prose",
+   "title": "What this edition adds to the 8 September edition",
+   "ps": [
+    "**This report builds on `aidc-power-conversion--competitive--2026-09-08` and does not supersede it.** That edition cut the covered roster by layer — silicon, the rack, the sidecar and hall-edge block, the facility and grid tier — and scored fifteen companies across all four. This one takes a single layer, the medium-voltage-to-800 V DC hall-edge block, and re-cuts it on the axis that edition could not: **the service-voltage class each vendor has actually specified**. The two reports answer different questions and both remain current.",
+    "**Three dossiers landed after that edition and they change the layer's shape.** Amperesand moved to profileVersion 2, and DG Matrix and Novos Power entered coverage for the first time, all on 19 September 2026. The hall-edge set the September edition scored as three names (Zhonhen, Sungrow, Sinexcel, with Delta reaching down from the rack) is now a set of nine once the venture SST vendors and the incumbents' declared programmes are counted at the same layer.",
+    "**Where this edition contradicts the earlier one, it is on DG Matrix and it is a correction of placement, not of judgement.** The September edition did not scope DG Matrix. Its dossier now establishes that the product on the market is the Interport Flex Series — a low-voltage skid whose own specification sheet states a 400–480 VAC port and 96–97% peak efficiency [c:c19] — while the medium-voltage Cell Series that would compete at the hall edge is described on the data-centre page without a datasheet [c:c20]. Any reading that places DG Matrix among the shipping medium-voltage vendors is placing the wrong product.",
+    "**Where it extends the earlier one, it is on the class question.** The September edition's final indicator was 'a second covered vendor stating in a filing that a 34.5 kV-class or MV-direct SST is supplying the market'. This edition makes the first half of that indicator measurable: it records, per vendor, what class has been specified, on whose authority, and whether anything at that class has been sold. The answer is that **no covered vendor has both**.",
+    "**What has not changed is the disclosure asymmetry the earlier edition named.** No company in this scope discloses an audited AI-data-centre power-conversion revenue line. Every share figure in circulation for this layer is a trade or brokerage estimate produced by a party that sells research or sells equipment, and this report states none of them as fact."
+   ],
+   "cites": [
+    "c19",
+    "c20",
+    "c25",
+    "c26"
+   ]
+  },
+  {
+   "id": "class-table",
+   "kind": "table",
+   "title": "The service-voltage question — what class each vendor has actually specified",
+   "intro": "One row per covered vendor with a declared or absent medium-voltage position. **'Undisclosed' means the dossier's pinned sources do not state a class** — it is not an inference about what the vendor can build. Status words are the fixed set: announced · lab demo · factory test · field pilot · supplying · undisclosed. The layer is not unanimous that the top class is ready: engineers at an incumbent transformer maker are quoted cautioning that compact 34.5 kV solid-state transformers present significant design challenges and that the technology is not fully mature for every use case [c:c14].",
+   "cols": [
+    "",
+    "MV input class, as specified",
+    "Rating",
+    "Output",
+    "Disclosed status",
+    "Where the class comes from"
+   ],
+   "rows": [
+    [
+     "Heron Power",
+     "34.5 kV, direct",
+     "4.2 MW per Link",
+     "800 V DC",
+     "announced",
+     "Company product page and Blueprint: \"connects directly to 34.5 kV\", thirty 140 kW cells ten in series per phase, disconnect rated 40 kA at 34.5 kV [c:c10][c:c9]"
+    ],
+    [
+     "Amperesand",
+     "3.3 kV device class; modular MV platform",
+     "200 kW modules; \"6+ MW\" system engineered; 5–10 MW modular",
+     "Configurable MV AC and LV DC for 800 V DC AI factories",
+     "announced",
+     "Supplier case study and module release (3.3 kV Wolfspeed full-bridge modules) [c:c15][c:c16]; trade-show reporting for the modular range [c:c17]. **No company datasheet publishes a kV input figure**"
+    ],
+    [
+     "DG Matrix",
+     "12–34.5 kV claimed for the unshipped Cell Series; **the shipping unit is 400–480 VAC**",
+     "Flex 200 / 400 kVA shipping",
+     "300–850 VDC (800 V nominal) on the shipping unit",
+     "announced (MV) · supplying (LV)",
+     "Company specification sheet for the shipping unit [c:c19]; data-centre page for the MV claim [c:c20]"
+    ],
+    [
+     "Novos Power",
+     "13–48 kV claimed",
+     "1–50 MW claimed",
+     "DC 400–1,500 V claimed",
+     "announced",
+     "Company About page [c:c23]; one analyst citation [c:c24]. **No datasheet, no patent and no customer on the record**"
+    ],
+    [
+     "Sungrow (EnerNeo)",
+     "10 kV–13.8 kV",
+     "3 MW standard; 1.5–4.5 MW configurable",
+     "800 V DC",
+     "supplying",
+     "Launch coverage [c:c26] and the H1 2026 interim [c:c25]"
+    ],
+    [
+     "Zhonhen (Panama)",
+     "10 kV, one stage — **a transformer-rectifier architecture, not an SST**",
+     "2.5 MW IT load per system; SuperX to 3.6 MW",
+     "240 / 400 / 800 V DC",
+     "supplying (China)",
+     "Company launch news [c:c28]; the H1 2026 interim carries no order, backlog or customer for it [c:c29]"
+    ],
+    [
+     "Sinexcel",
+     "undisclosed for any SST",
+     "undisclosed",
+     "undisclosed",
+     "undisclosed",
+     "Management states the AI-data-centre critical-power products are samples in development with formal sales not yet realised [c:c31]; the string \"800V\" does not appear in the 212-page interim [c:c30]"
+    ],
+    [
+     "Delta Electronics",
+     "undisclosed in the pinned sources",
+     "undisclosed for the SST",
+     "800 V DC",
+     "announced",
+     "The 800 V DC architecture deep-dive publishes the portfolio position [c:c32]; the volume-shipment call is a research-house estimate [c:c33]"
+    ],
+    [
+     "ABB (HiPerGuard)",
+     "6–24 kV classes plus a 34.5 kV direct-grid-connect class",
+     "2.5 MW per unit, paralleled to 25 MW",
+     "**Medium-voltage AC — it is a UPS, not an MV-to-800 V DC converter**",
+     "supplying",
+     "Product and technical data pages [c:c36]; the 34.5 kV class in the Q2 2026 release [c:c37]"
+    ],
+    [
+     "GE Vernova",
+     "undisclosed — reference designs, not a product",
+     "undisclosed",
+     "800 V DC",
+     "announced",
+     "AI-factory 800 V DC reference-design whitepaper [c:c38]"
+    ],
+    [
+     "Eaton",
+     "undisclosed",
+     "undisclosed",
+     "800 V DC",
+     "announced",
+     "OCP 2025 reference architecture [c:c39]; the July 2025 NVIDIA collaboration [c:c40]"
+    ],
+    [
+     "Schneider Electric",
+     "undisclosed — no MV SST programme in the pinned sources",
+     "1.2 MW per rack (sidecar)",
+     "800 V DC",
+     "announced",
+     "The 800 V DC sidecar announcement [c:c41]"
+    ],
+    [
+     "Vertiv",
+     "undisclosed",
+     "400–900 kW sidecar class",
+     "800 V DC",
+     "announced",
+     "Engineering-readiness release with NVIDIA [c:c42]"
+    ],
+    [
+     "Hitachi Energy",
+     "undisclosed for any data-centre SST",
+     "undisclosed",
+     "800 V DC racks (co-designed architecture)",
+     "announced",
+     "NVIDIA collaboration release [c:c43]; the manufacturing commitment is transformers, not converters [c:c44]"
+    ],
+    [
+     "Siemens Energy",
+     "undisclosed",
+     "undisclosed",
+     "undisclosed",
+     "undisclosed",
+     "No SST programme appears in the pinned sources; the record is grid equipment and the group backlog [c:c45]"
+    ],
+    [
+     "LITEON",
+     "not an MV vendor",
+     "660 kW rack class",
+     "800 V DC",
+     "announced",
+     "Computex 2026 liquid-cooled 800 V rack [c:c35]; McKinney, Texas capacity [c:c34]"
+    ],
+    [
+     "Infineon",
+     "silicon, not a converter",
+     "n/a",
+     "1.2–3.3 kV class devices",
+     "supplying",
+     "Divisional update deck naming solid-state transformers in the portfolio [c:c46]"
+    ],
+    [
+     "**Megmeet**",
+     "**undisclosed — no kV figure appears anywhere in the pinned dossier**",
+     "\"MW-class centralised supply\" for the SST; >1 MW per rack for the sidecar",
+     "800 V DC",
+     "announced",
+     "The sidecar converts **380–480 VAC**, not medium voltage [c:c1]; the 570 kW side rack is an 800 V DC output product [c:c4]. The SST itself is described only as grid high-voltage input to 800 V DC"
+    ]
+   ],
+   "cites": [
+    "c1",
+    "c4",
+    "c9",
+    "c10",
+    "c14",
+    "c15",
+    "c16",
+    "c17",
+    "c19",
+    "c20",
+    "c23",
+    "c24",
+    "c25",
+    "c26",
+    "c28",
+    "c29",
+    "c30",
+    "c31",
+    "c32",
+    "c33",
+    "c34",
+    "c35",
+    "c36",
+    "c37",
+    "c38",
+    "c39",
+    "c40",
+    "c41",
+    "c42",
+    "c43",
+    "c44",
+    "c45",
+    "c46"
+   ]
+  },
+  {
+   "id": "venture-set",
+   "kind": "table",
+   "title": "The venture set — separated by certification distance, not by topology",
+   "intro": "Four venture-backed vendors, four different answers to the same block. Like-for-like within the group: none is listed, none discloses revenue, and none has a medium-voltage unit in commercial service. The column that separates them is how far each is from a listing and a shipped unit.",
+   "cols": [
+    "",
+    "The device",
+    "Capital and capacity on the record",
+    "How far from a listed, shipped MV unit"
+   ],
+   "rows": [
+    [
+     "Heron Power",
+     "The most completely specified hall-edge SST in the corpus: 34.5 kV to 800 V DC, 4.2 MW, over 98.5%, thirty 140 kW cells with ten in series per phase, tolerance of two cell failures per phase with sub-cycle bypass, UL-listed current-limiting fuses and a disconnect rated 40 kA at 34.5 kV, a 40-channel DC distribution panel and a per-rack solid-state breaker [c:c9][c:c10]",
+     "A 286,000 sq ft first factory selected for up to 10,000 units a year [c:c11]; a USD 60 million credit facility and an ex-Tesla CFO on the board, September 2026 [c:c12]",
+     "Farthest along on specification, and nothing shipped. Described in trade coverage as the only SST startup on NVIDIA's published list [c:c13]"
+    ],
+    [
+     "Amperesand",
+     "A modular medium-voltage platform built on 3.3 kV silicon-carbide full-bridge modules, engineered as a \"6+ MW\" system and marketed as 5–10 MW of modular conversion for the 800 V DC ecosystem [c:c15][c:c16], shown at PCIM Europe 2026 as the faster-available alternative to a line transformer [c:c17]",
+     "USD 80 million Series A co-led by Walden Catalyst Ventures and Temasek, November 2025 [c:c18]",
+     "**No company datasheet exists**, so the unit rating and the input class rest on a supplier case study and trade-show reporting rather than on the vendor's own specification"
+    ],
+    [
+     "DG Matrix",
+     "Two products under one name. The shipping one is a low-voltage six-port skid at 400–480 VAC in and 300–850 VDC out, 96–97% peak, \"Designed for Compliance to\" rather than listed [c:c19]. The medium-voltage Cell Series that would transform 12–34.5 kV is described on the data-centre page [c:c20]",
+     "Revealed into the NVIDIA MGX ecosystem, May 2026 [c:c21]; Infineon named as a silicon-carbide supplier, March 2026 [c:c22]",
+     "**Closest to a shipped product and furthest from the product that matters at this layer** — the unit in the field is not a medium-voltage converter"
+    ],
+    [
+     "Novos Power",
+     "A name and a set of claims: a Variable Airgap Solid State Transformer taking 13–48 kV utility feeds and bypassing 480 V step-down transformers [c:c23], reported by one analyst house as achieving peak efficiencies over 98% on direct medium-voltage input [c:c24]",
+     "None disclosed",
+     "Not yet a competitor. The reason to know the name is that a buyer may raise it; the reason not to price it is that no datasheet, patent, paper or customer is on the record"
+    ]
+   ],
+   "cites": [
+    "c9",
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c15",
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c20",
+    "c21",
+    "c22",
+    "c23",
+    "c24"
+   ]
+  },
+  {
+   "id": "asia-set",
+   "kind": "table",
+   "title": "The Asia-headquartered set — where the commerce is, and what it is commerce in",
+   "intro": "Six vendors, of which three are Chinese mainland, two Taiwanese and one is the subject of this report. Like-for-like within the group: all six publish an 800 V DC product and all six are measured here on what their own filings and product pages disclose, not on what trade coverage attributes to them.",
+   "cols": [
+    "",
+    "What is disclosed",
+    "What the filing or datasheet does not say"
+   ],
+   "rows": [
+    [
+     "Sungrow",
+     "The only MV-to-800 V DC solid-state transformer in this report described in a filing as launched and supplying the market [c:c25], specified at 10–13.8 kV, 3 MW standard, 1.5–4.5 MW configurable, 98.5% system efficiency and 312 kW/m² [c:c26]",
+     "The class stops at 13.8 kV. Asked directly on the exchange's investor-interaction platform about the North American route, the company's published answers address the FCC action and the certification question rather than a hyperscaler sampling or a UL pathway [c:c27]"
+    ],
+    [
+     "Zhonhen",
+     "A one-stage 10 kV conversion architecture with a 2.5 MW-per-system IT load and an 800 V DC variant, launched with a joint-venture 800 V DC line in October 2025 [c:c28]",
+     "**It is a transformer-rectifier architecture, not a solid-state transformer**, and the 187-page H1 2026 interim carries no order, no backlog, no named customer and no capacity commitment for it [c:c29]"
+    ],
+    [
+     "Sinexcel",
+     "An AI-data-centre critical-power roadmap read off the published 800 V DC deployment staging, with management stating the products are samples in the development stage and formal sales are not yet realised [c:c31]",
+     "The string \"800V\" does not appear in the 212-page interim [c:c30]. There is no SST product, rating or class on the record"
+    ],
+    [
+     "Delta Electronics",
+     "The deepest published 800 V DC architecture in the set, spanning the front end to the rack [c:c32]",
+     "The medium-voltage front end carries no disclosed class or general-availability date in the pinned sources. The volume-shipment timing in circulation is a research house's call, not a company statement [c:c33]"
+    ],
+    [
+     "LITEON",
+     "A liquid-cooled 800 V rack shown at Computex 2026 [c:c35] and a committed McKinney, Texas plant for high-voltage DC power racks [c:c34]",
+     "No medium-voltage product and no SST. US capacity is committed, not producing"
+    ],
+    [
+     "**Megmeet**",
+     "A full published rack-and-sidecar chain: an 800 V HVDC sidecar converting **380–480 VAC** at over 1 MW per rack [c:c1], an 800 V / 570 kW side rack integrating battery-backup and power-conversion functions [c:c4], a 110 kW liquid-cooled MGX shelf [c:c6], a 27.5 kW N+1 shelf [c:c8], an OCP-stage 800 V DC collaboration [c:c2], a US test lab [c:c5], and a filing stating membership of NVIDIA's recommended data-centre power supplier set with power products up 60.92% at an expanding margin [c:c3]",
+     "**The solid-state transformer's service-voltage class.** No kV figure appears anywhere in the pinned dossier. Nor does an AI-data-centre revenue line, an order figure, a named data-centre customer, or a competitor — across 238 pages [c:c3]"
+    ]
+   ],
+   "cites": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c8",
+    "c25",
+    "c26",
+    "c27",
+    "c28",
+    "c29",
+    "c30",
+    "c31",
+    "c32",
+    "c33",
+    "c34",
+    "c35"
+   ]
+  },
+  {
+   "id": "scale",
+   "kind": "bars",
+   "title": "Whole-company scale — and why it does not rank this layer",
+   "unit": "USD millions, latest full fiscal year, normalized",
+   "intro": "Fourteen of the eighteen companies in scope carry a normalized revenue figure. **The four that do not are the four venture SST vendors — Heron Power, Amperesand, DG Matrix and Novos Power — and they are precisely the companies whose products are specified closest to the block this report is about.** That is the finding, not a gap in the chart.",
+   "note": "Denominator: whole-company revenue for the latest full fiscal year in each dossier's normalized-KPI overlay, converted at the rate each dossier records. Fiscal years are not aligned — Infineon's and Siemens Energy's FY2025 ended 30 September 2025, Hitachi Energy's ended 31 March 2026, the rest are calendar 2025 — and no company here discloses an AI-data-centre power-conversion revenue line, so this is a scale indicator and not a position in the contest. Read the ordering, not the gaps.",
+   "items": [
+    {
+     "label": "Schneider Electric",
+     "slug": "schneider-electric",
+     "kpi": "revenue",
+     "v": 45393.6
+    },
+    {
+     "label": "Siemens Energy (FY2025, Sep)",
+     "slug": "siemens-energy",
+     "kpi": "revenue",
+     "v": 44180.5
+    },
+    {
+     "label": "GE Vernova",
+     "slug": "ge-vernova",
+     "kpi": "revenue",
+     "v": 38100
+    },
+    {
+     "label": "ABB",
+     "slug": "abb",
+     "kpi": "revenue",
+     "v": 33200
+    },
+    {
+     "label": "Eaton",
+     "slug": "eaton",
+     "kpi": "revenue",
+     "v": 27400
+    },
+    {
+     "label": "Hitachi Energy (FY2025, Mar)",
+     "slug": "hitachi-energy",
+     "kpi": "revenue",
+     "v": 19800
+    },
+    {
+     "label": "Delta Electronics",
+     "slug": "delta-electronics",
+     "kpi": "revenue",
+     "v": 17801.8
+    },
+    {
+     "label": "Infineon (FY2025, Sep)",
+     "slug": "infineon",
+     "kpi": "revenue",
+     "v": 4851.6
+    },
+    {
+     "label": "Sungrow",
+     "slug": "sungrow",
+     "kpi": "revenue",
+     "v": 12408
+    },
+    {
+     "label": "Vertiv",
+     "slug": "vertiv",
+     "kpi": "revenue",
+     "v": 10230
+    },
+    {
+     "label": "LITEON",
+     "slug": "liteon",
+     "kpi": "revenue",
+     "v": 5328.7
+    },
+    {
+     "label": "Megmeet",
+     "slug": "megmeet",
+     "kpi": "revenue",
+     "v": 1308.3
+    },
+    {
+     "label": "Sinexcel",
+     "slug": "sinexcel",
+     "kpi": "revenue",
+     "v": 481.8
+    },
+    {
+     "label": "Zhonhen",
+     "slug": "zhonhen",
+     "kpi": "revenue",
+     "v": 297.3
+    }
+   ]
+  },
+  {
+   "id": "megmeet-position",
+   "kind": "prose",
+   "analysis": true,
+   "title": "Where Megmeet actually stands in this layer",
+   "ps": [
+    "**The honest statement of Megmeet's position at the hall edge is that it does not have one yet, and that this is a disclosure fact before it is a capability judgement.** The company publishes a chain that runs from an AC compensator through backup shelves and a solid-state transformer to a megawatt-class sidecar and on to the point of load. Everything in that chain below the converter is specified, priced into product pages and shipping. The converter itself is described by output and efficiency and by nothing else. A buyer's electrical engineer asks the input class in the first ten minutes, and the published record has no answer.",
+    "**What Megmeet does hold is the layer where money is moving first, and the interim measures it.** The power-products group grew 60.92% to RMB 1.841 billion in H1 2026 and was the only segment whose gross margin expanded. That is the rack and the sidecar — Options A and B in the deployment staging the industry is building to — and it is a real, growing, margin-positive business that two of the three largest incumbents in this report do not have at all.",
+    "**The competitive risk is structural rather than commercial.** If the hall-edge block consolidates around a small number of certified medium-voltage converters before Megmeet publishes a class, the company's addressable content per megawatt is capped at the rack while the conversion stage above it is captured by someone else. That is the same arithmetic the facility incumbents face from below, arriving at Megmeet from above. It is not a Delta problem or a LITEON problem: both of those are shelf competitors, and Megmeet is measurably competitive with them.",
+    "**Against the venture set the comparison runs the other way and favours Megmeet.** Heron, Amperesand, DG Matrix and Novos have, between them, no revenue, no listed medium-voltage unit and one shipped product that is not a medium-voltage unit. Megmeet has a manufacturing base, a filed financial record, named Western network-power customers of long standing, and a test facility on US soil. What it lacks is the one specification they lead with. In a procurement conversation those are not symmetric weaknesses — a specification can be published in a quarter; a manufacturing record cannot be acquired in one.",
+    "**The single most useful thing that could change this assessment is a published service-voltage class.** Until then every comparison in this report places Megmeet in the rack layer with an undisclosed option on the layer above, and any statement that puts it in the hall-edge contest is an assertion the record does not support."
+   ]
+  }
+ ],
+ "indicators": [
+  {
+   "date": "by 2026-10-31",
+   "text": "Q3 2026 reports from Megmeet, Zhonhen and Sinexcel, at the CSRC statutory deadline",
+   "confirms": "Whether any of the three converts published 800 VDC capability into a disclosed order, a named customer or a segment revenue line — and, for Megmeet specifically, whether a service-voltage class appears anywhere in the filing"
+  },
+  {
+   "date": "Q4 2026",
+   "text": "Any Megmeet product page, exhibition datasheet or filing stating a kV input class for its solid-state transformer",
+   "confirms": "Would move Megmeet from the rack layer into the hall-edge comparison for the first time, and would decide which of the two US service-voltage classes it is competing for"
+  },
+  {
+   "date": "end-2026",
+   "text": "Sungrow's stated EnerNeo roadmap milestone — field trials in 2026 ahead of batch orders in 2027",
+   "confirms": "Whether the only vendor described in a filing as supplying converts a domestic launch into repeatable orders, and whether a 13.8 kV-class product finds demand outside China"
+  },
+  {
+   "date": "early 2027",
+   "text": "Heron Power's first pilot unit energised, against a stated late-2027 mass-production date",
+   "confirms": "Whether a 34.5 kV-class solid-state transformer works on a live feeder at rating — the specification leader's first evidence of anything beyond a document"
+  },
+  {
+   "date": "2027",
+   "text": "A listing or certification announcement for any medium-voltage unit in the venture set",
+   "confirms": "Certification distance is the discriminator this report names; the first listing collapses it and re-ranks the group"
+  },
+  {
+   "date": "~2027-02",
+   "text": "DG Matrix's Interport Cell-MV Series appearing as a datasheet rather than a page description",
+   "confirms": "Would convert the only 12–34.5 kV claim held by a shipping company into a specified product, and would test whether the 96–97% datasheet efficiency of the low-voltage unit carries up to the medium-voltage one"
+  },
+  {
+   "date": "2027",
+   "text": "Any incumbent in this scope — ABB, GE Vernova, Eaton, Schneider, Vertiv, Hitachi Energy, Siemens Energy — publishing a dated medium-voltage-to-800 V DC converter product rather than a reference design",
+   "confirms": "The incumbents' hedge is to defer the converter; the first dated product ends the deferral and closes the window the venture set is funded against"
+  }
+ ],
+ "limitations": [
+  "This report is built from covered dossiers only and cites their sources verbatim. It does not re-research, and it is therefore silent on anything that entered the public record after each pinned dossier's lastUpdated date — the oldest pin here is 4 September 2026 and the newest 21 September 2026.",
+  "No company in this scope discloses an audited AI-data-centre power-conversion revenue line. Every market-share figure in circulation for this layer originates with a research house, a brokerage or a vendor, and none is stated as fact here.",
+  "'Undisclosed' in the class table is a statement about the pinned sources, not about the vendor's engineering. A company may hold a class it has not published, and several almost certainly do.",
+  "Efficiency figures are not comparable across rows. Every vendor in this report claims 98.5% or better, none publishes the measurement boundary, and the one datasheet figure in the set — DG Matrix's 96–97% peak — is two to three points below its own platform claim precisely because it is a datasheet rather than a marketing page.",
+  "The four venture SST vendors carry no normalized-KPI figure, so the scale chart cannot include them. Heron Power, Amperesand, DG Matrix and Novos Power are private, disclose no revenue, and are compared here on specification and certification distance instead.",
+  "Amperesand's unit rating and input class rest on a supplier case study and trade-show reporting rather than on a company datasheet, because the company publishes none. The figures are attributed to those parties in the rows that use them.",
+  "Megmeet's H1 2026 items rest on a Chinese-language exchange filing read in the original. The single most consequential fact drawn from it here is a negative — that no service-voltage class, order figure, customer name or AI-data-centre revenue line appears in 238 pages — and a negative finding in a long filing is inherently weaker evidence than a positive one.",
+  "Zhonhen's Panama architecture is a transformer-rectifier lineup and is scored as one. It is in scope because buyers and trade coverage place it against solid-state transformers, not because it is one.",
+  "ABB's HiPerGuard is a static medium-voltage UPS, not a medium-voltage-to-800 V DC converter. It appears in the class table because it is the only orderable solid-state medium-voltage product in the scope, and the distinction is stated in its row rather than left to the reader.",
+  "vicor, huawei-digital-power, flex, oracle and nvidia are covered but out of scope: the first three sit at layers this report does not score, and the last two are buyers and architecture-setters rather than competitors in it."
+ ],
+ "citations": [
+  {
+   "id": "c1",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "800V HVDC Sidecar for NVIDIA Kyber (EN release, 2025-05-21)",
+   "url": "https://en.megmeet.com/news/info/2335.html",
+   "date": "2025-05-21",
+   "party": "company"
+  },
+  {
+   "id": "c2",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "NVIDIA 800VDC collaboration at OCP Summit (EN release, 2025-10-13)",
+   "url": "https://en.megmeet.com/news/info/2336.html",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c3",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "Megmeet — 2026年半年度报告 (H1 2026 interim report, SZSE 002851, 238pp): the full segment, margin and geography split, the non-recurring reconciliation, the 800 VDC product architecture and the NVIDIA recommended-supplier language",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522762.PDF",
+   "date": "2026-08-27",
+   "party": "disclosure"
+  },
+  {
+   "id": "c4",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "Megmeet — 800V/570kW side rack product page: 800 V DC output, up to 1 MW per rack, integrated BBU and PCS functions",
+   "url": "https://www.megmeet.com/products/info.html?id=326",
+   "date": "2026-09-08",
+   "party": "company"
+  },
+  {
+   "id": "c5",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "Dallas AI-DC power test lab (EN release, 2026-06-26)",
+   "url": "https://en.megmeet.com/news/info/2343.html",
+   "date": "2026-06-26",
+   "party": "company"
+  },
+  {
+   "id": "c6",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "NVIDIA MGX 110 kW liquid-cooled shelf (EN release, 2026-05-29)",
+   "url": "https://en.megmeet.com/news/info/2342.html",
+   "date": "2026-05-29",
+   "party": "company"
+  },
+  {
+   "id": "c7",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "36Kr / Zhike — NVIDIA's displayed power suppliers are Delta, Lite-On and Megmeet, with Lite-On named the second supplier and Megmeet the only mainland entrant",
+   "url": "https://eu.36kr.com/en/p/3130828011132937",
+   "date": "2025-01-20",
+   "party": "independent"
+  },
+  {
+   "id": "c8",
+   "slug": "megmeet",
+   "company": "Megmeet",
+   "label": "Megmeet — power shelf product page (IPU433K-AA1616): 27.5 kW N+1 / 16.5 kW N+N, six 5.5 kW rectifier slots, 1U, 19-inch with 21-inch compatibility",
+   "url": "https://www.megmeet.com/products/info.html?id=323",
+   "date": "2026-09-08",
+   "party": "company"
+  },
+  {
+   "id": "c9",
+   "slug": "heron-power",
+   "company": "Heron Power",
+   "label": "Heron Power — Blueprint for 800 VDC (Heron Link specification, 12 MW block, cost and loss models)",
+   "url": "https://heronpower.com/blueprint-for-800-vdc",
+   "date": null,
+   "party": "company"
+  },
+  {
+   "id": "c10",
+   "slug": "heron-power",
+   "company": "Heron Power",
+   "label": "Heron Power — Heron Link for Data Centers (product page: 800V Power 4.2 MW, 98.5%, 70% smaller footprint)",
+   "url": "https://heronpower.com/product/data-centers",
+   "date": null,
+   "party": "company"
+  },
+  {
+   "id": "c11",
+   "slug": "heron-power",
+   "company": "Heron Power",
+   "label": "Heron Power — Factory release (company copy)",
+   "url": "https://heronpower.com/news-stories/press-release-heron-power-selects-first-factory-location-to-build-next-generation-power-electronics-in-the-united-states",
+   "date": "2026-08-13",
+   "party": "company"
+  },
+  {
+   "id": "c12",
+   "slug": "heron-power",
+   "company": "Heron Power",
+   "label": "PR Newswire — Heron Power secures $60 million credit facility and adds ex-Tesla CFO Zach Kirkhorn to its board",
+   "url": "https://www.prnewswire.com/news-releases/heron-power-secures-60-million-credit-facility-and-adds-ex-tesla-cfo-zach-kirkhorn-to-its-board-302874549.html",
+   "date": "2026-09-10",
+   "party": "disclosure"
+  },
+  {
+   "id": "c13",
+   "slug": "heron-power",
+   "company": "Heron Power",
+   "label": "Power Electronics News — NVIDIA GTC 2026: 800 VDC power partnerships from grid to processor ('the only SST startup on Nvidia's list')",
+   "url": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+   "date": "2026-03-19",
+   "party": "independent"
+  },
+  {
+   "id": "c14",
+   "slug": "heron-power",
+   "company": "Heron Power",
+   "label": "Data Center Knowledge — Solid-state transformers power next-gen AI data centers (Hitachi Energy and SPOC Energy cautions on SST maturity)",
+   "url": "https://www.datacenterknowledge.com/energy-power-supply/solid-state-transformers-power-next-gen-ai-data-centers",
+   "date": "2026-08-31",
+   "party": "independent"
+  },
+  {
+   "id": "c15",
+   "slug": "amperesand",
+   "company": "Amperesand",
+   "label": "Wolfspeed — A new foundation for critical power conversion: Amperesand case study",
+   "url": "https://www.wolfspeed.com/knowledge-center/article/amperesand-case-study/",
+   "date": "2026-05-21",
+   "party": "independent"
+  },
+  {
+   "id": "c16",
+   "slug": "amperesand",
+   "company": "Amperesand",
+   "label": "Wolfspeed — Introduces new 3.3 kV SiC power modules in two industry-standard footprints (Brian Dow quote; 6+ MW system)",
+   "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-introduces-new-3-3-kv-sic-power-modules-in-two-industry-standard-footprints-to-address-the-surging-demand-for-energy/",
+   "date": "2026-05-21",
+   "party": "independent"
+  },
+  {
+   "id": "c17",
+   "slug": "amperesand",
+   "company": "Amperesand",
+   "label": "all-about-industries (Vogel) — The faster-available alternative to the traditional line transformer (PCIM Europe 2026 showcase)",
+   "url": "https://www.all-about-industries.com/the-faster-available-alternative-to-the-traditional-line-transformer-a-20e822e9ab4e2a4ca661191834c73a44/",
+   "date": "2026-06-16",
+   "party": "independent"
+  },
+  {
+   "id": "c18",
+   "slug": "amperesand",
+   "company": "Amperesand",
+   "label": "Business Wire via Yahoo Finance — Amperesand raises $80M Series A co-led by Walden Catalyst Ventures and Temasek",
+   "url": "https://finance.yahoo.com/news/amperesand-raises-80m-series-co-140000819.html",
+   "date": "2025-11-18",
+   "party": "independent"
+  },
+  {
+   "id": "c19",
+   "slug": "dg-matrix",
+   "company": "DG Matrix",
+   "label": "DG Matrix — Interport Flex Series 400 kVA Specification Sheet (Rev C)",
+   "url": "https://pub-603db131244d4898a25e35ad020f3bf9.r2.dev/dgmv4/assets/documents/Interport_Flex_Series_400_kVA_Specification_Sheet.pdf",
+   "date": null,
+   "party": "company"
+  },
+  {
+   "id": "c20",
+   "slug": "dg-matrix",
+   "company": "DG Matrix",
+   "label": "DG Matrix — Interport Data Center Solutions (LV skid, SideCar, MV skid; TCO and loss claims; spec-sheet links)",
+   "url": "https://www.dgmatrix.com/sst/interport/data-center-solutions",
+   "date": null,
+   "party": "company"
+  },
+  {
+   "id": "c21",
+   "slug": "dg-matrix",
+   "company": "DG Matrix",
+   "label": "DG Matrix — Reveals Interport SST for the NVIDIA MGX Ecosystem (Business Wire release via Yahoo Finance)",
+   "url": "https://finance.yahoo.com/sectors/technology/articles/dg-matrix-reveals-interport-sst-120000871.html",
+   "date": "2026-05-28",
+   "party": "independent"
+  },
+  {
+   "id": "c22",
+   "slug": "dg-matrix",
+   "company": "DG Matrix",
+   "label": "Semiconductor Today — Infineon to supply SiC MOSFETs for DG Matrix's multi-port SST platform",
+   "url": "https://www.semiconductor-today.com/news_items/2026/mar/infineon-240326.shtml",
+   "date": "2026-03-24",
+   "party": "independent"
+  },
+  {
+   "id": "c23",
+   "slug": "novos-power",
+   "company": "Novos Power",
+   "label": "Novos Power — website About ('We invented Variable Airgap Solid State Transformer (VASST) to bypass 480 V transformers with direct 13–48 kV utility feed interconnects')",
+   "url": "https://www.novospower.com/about",
+   "date": "2026-03-20",
+   "party": "company"
+  },
+  {
+   "id": "c24",
+   "slug": "novos-power",
+   "company": "Novos Power",
+   "label": "SemiAnalysis — Inside the 800VDC Revolution, Part 1 (Novos Power 'reports peak efficiencies over 98%', 'direct MV-input units', 'air cooling through proprietary insulation'; acknowledgments)",
+   "url": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+   "date": "2026-05-26",
+   "party": "independent"
+  },
+  {
+   "id": "c25",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "Sungrow — 2026年半年度报告 (H1 2026 interim report, SZSE 300274, 205pp): EnerNeo SST launched and supplying the market, the AIDC power business unit's SST + 800 V HVDC routes, and the full segment, margin and geographic split",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
+   "date": "2026-08-29",
+   "party": "disclosure"
+  },
+  {
+   "id": "c26",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "pv magazine — Sungrow launches the 3 MW EnerNeo solid-state transformer at an AIDC product event in Hefei (Vincent Shaw)",
+   "url": "https://www.pv-magazine.com/2026/07/10/sungrow-launches-3-mw-solid-state-transformer/",
+   "date": "2026-07-10",
+   "party": "independent"
+  },
+  {
+   "id": "c27",
+   "slug": "sungrow",
+   "company": "Sungrow",
+   "label": "SZSE 互动易 investor-interaction platform (300274) — Sungrow's own answers on the FCC action: the 12 July 2026 \"no remote-upgrade and no remote-communication function\" reply, the 8 August new-certification-only line repeated across eight questions, and the 4 September reply stating that wired-only remote communication IS within the FCC's scope and that off-grid inverters are outside it, plus the EO 14420 reply; also the 12 July EnerNeo specification answer",
+   "url": "https://irm.cninfo.com.cn/ssgsfb/index.html?stockcode=300274",
+   "date": "2026-09-04",
+   "party": "disclosure"
+  },
+  {
+   "id": "c28",
+   "slug": "zhonhen",
+   "company": "Zhonhen Electric",
+   "label": "Company news — SuperX Panama-800VDC / Aurora-800VDC launches",
+   "url": "https://www.hzzh.com/news/detail/id/206.html",
+   "date": "2025-10-31",
+   "party": "company"
+  },
+  {
+   "id": "c29",
+   "slug": "zhonhen",
+   "company": "Zhonhen Electric",
+   "label": "Zhonhen Electric — 2026年半年度报告 (H1 2026 interim report, SZSE 002364, 187pp): the segment and product split, the data-centre power line, and the complete absence of any order, backlog, NVIDIA, SST or TRU disclosure",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225514125.PDF",
+   "date": "2026-08-27",
+   "party": "disclosure"
+  },
+  {
+   "id": "c30",
+   "slug": "sinexcel",
+   "company": "Sinexcel",
+   "label": "Sinexcel — 2026年半年度报告 (H1 2026 interim report, SZSE ChiNext 300693, 212pp): the complete four-line segment and gross-margin table, the AIDC critical-power business unit, and the #3 cumulative ranking in >250kW charging guns. The string '800V' does not appear in the document",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-11/1225466306.PDF",
+   "date": "2026-08-11",
+   "party": "disclosure"
+  },
+  {
+   "id": "c31",
+   "slug": "sinexcel",
+   "company": "Sinexcel",
+   "label": "Sinexcel — 投资者关系活动记录表 2026-016 (2026-08-14): the three-tier 800 VDC deployment roadmap read off NVIDIA's OCP white paper 2.0, and management's statement that AIDC samples are in development with no formal sales realised",
+   "url": "http://file.finance.sina.com.cn/211.154.219.97:9494/MRGG/CNSESZ_STOCK/2026/2026-8/2026-08-14/12496921.PDF",
+   "date": "2026-08-14",
+   "party": "independent"
+  },
+  {
+   "id": "c32",
+   "slug": "delta-electronics",
+   "company": "Delta Electronics",
+   "label": "800 VDC architecture deep-dive",
+   "url": "https://www.deltaww.com/en-US/press/40334",
+   "date": "2026-05-28",
+   "party": "company"
+  },
+  {
+   "id": "c33",
+   "slug": "delta-electronics",
+   "company": "Delta Electronics",
+   "label": "TrendForce — 800V HVDC adoption timeline",
+   "url": "https://www.trendforce.com/news/2026/06/15/news-nvidia-google-may-be-first-to-adopt-800v-hvdc-initial-3q26-shipments-may-boost-delta-and-infrastructure-suppliers/",
+   "date": "2026-06-15",
+   "party": "independent"
+  },
+  {
+   "id": "c34",
+   "slug": "liteon",
+   "company": "LITEON",
+   "label": "McKinney, Texas investment",
+   "url": "https://www.liteon.com/en/news/press-center/content/liteon-mckinney-investment",
+   "date": "2026-07-13",
+   "party": "company"
+  },
+  {
+   "id": "c35",
+   "slug": "liteon",
+   "company": "LITEON",
+   "label": "Computex 2026 (liquid-cooled 800V rack)",
+   "url": "https://www.liteon.com/en/news/press-center/content/liteon-computex-2026",
+   "date": "2026-06-02",
+   "party": "company"
+  },
+  {
+   "id": "c36",
+   "slug": "abb",
+   "company": "ABB",
+   "label": "ABB — HiPerGuard MV UPS product and technical data pages",
+   "url": "https://new.abb.com/ups/systems/medium-voltage-ups/hiperguard",
+   "date": null,
+   "party": "company"
+  },
+  {
+   "id": "c37",
+   "slug": "abb",
+   "company": "ABB",
+   "label": "ABB — Q2 2026 press release (record orders, Rotork offer, HiPerGuard 34.5 kV)",
+   "url": "https://resources.news.e.abb.com/attachments/published/137496/en-US/9123465FF532/ABB_Q2_2026_Press_release_English.pdf",
+   "date": "2026-07-16",
+   "party": "company"
+  },
+  {
+   "id": "c38",
+   "slug": "ge-vernova",
+   "company": "GE Vernova",
+   "label": "AI Factory 800 VDC reference designs whitepaper",
+   "url": "https://library.grid.gevernova.com/white-papers-case-studies/ai-factory-800vdc-reference-designs",
+   "date": "2025-10-24",
+   "party": "company"
+  },
+  {
+   "id": "c39",
+   "slug": "eaton",
+   "company": "Eaton",
+   "label": "800 VDC reference architecture (OCP)",
+   "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-unveils-next-generation-architecture.html",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c40",
+   "slug": "eaton",
+   "company": "Eaton",
+   "label": "NVIDIA collaboration announcement",
+   "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-accelerates-data-center-infrastrructure-in-ai-era-with-nvidia.html",
+   "date": "2025-07-15",
+   "party": "company"
+  },
+  {
+   "id": "c41",
+   "slug": "schneider-electric",
+   "company": "Schneider Electric",
+   "label": "800 VDC sidecar announcement",
+   "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-innovation-in-800-vdc-power-systems-in-support-of-nvidia%E2%80%99s-next-generation-gpus-68ecb631098fd4ea49024353/",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c42",
+   "slug": "vertiv",
+   "company": "Vertiv",
+   "label": "800 VDC engineering readiness with NVIDIA",
+   "url": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/from-vision-to-readiness-vertiv-collaborates-with-nvidia-to-advance-800-vdc-platform-designs-to-power-the-next-generation-of-ai-factories/",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c43",
+   "slug": "hitachi-energy",
+   "company": "Hitachi Energy",
+   "label": "Hitachi Energy — NVIDIA 800 VDC collaboration press release",
+   "url": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/nvidia-800-vdc-collaboration",
+   "date": "2025-10-13",
+   "party": "company"
+  },
+  {
+   "id": "c44",
+   "slug": "hitachi-energy",
+   "company": "Hitachi Energy",
+   "label": "Hitachi Energy — $1B US manufacturing investment ($457M South Boston VA plant)",
+   "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2025/09/hitachi-announces-historic-1-billion-usd-manufacturing-investment-to-power-america-s-energy-future-through-production-of-critical-grid-infrastructure",
+   "date": "2025-09-04",
+   "party": "company"
+  },
+  {
+   "id": "c45",
+   "slug": "siemens-energy",
+   "company": "Siemens Energy",
+   "label": "Siemens Energy — Q3 FY26 earnings release (record orders/revenue/margin, backlog €162B)",
+   "url": "https://assets.siemens-energy.com/dam/30018eed-275d-4e73-811e-b49d004cdc3d/2026-08-05-Earnings_Release_Q3_FY26_EN-pdf_Original%20file.pdf",
+   "date": "2026-08-05",
+   "party": "company"
+  },
+  {
+   "id": "c46",
+   "slug": "infineon",
+   "company": "Infineon Technologies",
+   "label": "Infineon — \"We Power AI\" divisional update deck: solid-state transformers, SSCBs, vertical power delivery, PSU roadmap (PDF)",
+   "url": "https://www.infineon.com/assets/row/public/documents/corporate/investors/presentations/2025/2025-11-26-power-roadshow-v01-00-en.pdf",
+   "date": "2025-11-26",
+   "party": "company"
+  }
+ ]
+}
