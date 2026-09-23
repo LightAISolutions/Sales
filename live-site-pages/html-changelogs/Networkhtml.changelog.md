@@ -3,11 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 22/50`
+`Sections: 23/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.23w] — 2026-09-23 12:41:01 AM EST — v07.22r
+
+### Added
+- A **warmth** chip on every contact row and on the detail — hot, warm, cool or cold from a decayed sum of your touches (meetings count most, notes least, everything halving over 90 days); the detail also shows the contact's cadence and how far past it they are
+- The **Warmth** sort is now live — hottest first
+- A **Reconnect** card in the masthead listing the contacts whose last touch is older than their cadence, most overdue first, with a one-tap draft into the follow-up drafts flow (per row or for the ticked)
+- An **Import touches** panel in the masthead — paste a calendar export (.ics) or a sent-mail / inbox CSV from your own mail client, review the proposed touches matched to your contacts by email, tick the ones to keep and record them with your own reference; nothing is read from any mailbox or calendar and nothing is recorded until you confirm
+
+### Changed
+- Minor internal improvements
 
 ## [v01.22w] — 2026-09-22 11:02:50 PM EST — v07.21r
 

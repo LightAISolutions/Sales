@@ -1,4 +1,4 @@
-var VERSION = "v01.13g";
+var VERSION = "v01.14g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1080,6 +1080,24 @@ function handleNetworkOp_(e) {
       nwRequire_(sess, 'signals', 'network_peopleaccept');
       return nwPeopleAcceptOp_(sess, p);
     }
+    if (op === 'reconnect') {
+      // N4 s1 — the contacts whose last touch is older than their cadence
+      // (§4.4, NETWORK-SCHEMA.md §5); computed on read, the minimum row.
+      nwRequire_(sess, 'contacts', 'network_reconnect');
+      return nwReconnectOp_(sess, p);
+    }
+    if (op === 'import') {
+      // N4 s1 — the pasted .ics / CSV parsed server-side into a proposal
+      // list; nothing is written here (D15: no mail or calendar scope).
+      nwRequire_(sess, 'contacts', 'network_import');
+      return nwImportOp_(sess, p);
+    }
+    if (op === 'importconfirm') {
+      // N4 s1 — the ticked proposals written as email-in / email-out /
+      // calendar Interactions with the developer's reference as evidence.
+      nwRequire_(sess, 'contacts', 'network_importconfirm');
+      return nwImportConfirmOp_(sess, p);
+    }
     if (op === 'eventstoday') {
       // B: the scan card's Source Event default — the signed-in user's starred
       // events dated today, asked of Events' server through the near side.
@@ -2038,8 +2056,10 @@ function nwGetOp_(sess, p) {
     interactions.push({ id: o['Interaction ID'], kind: o['Kind'], date: String(o['Date'] || '').slice(0, 10), summary: o['Summary'],
       evidence: o['Evidence Link'], eventSlug: o['Event Slug'], createdAt: o['Created At'] });
   }
+  // N4 s1 (§5): the warmth block from the rows just read — never stored
+  var warmth = nwWarmthDetail_(interactions, contact.role, acc ? acc.obj['Relationship'] : '', contact.metDate, Date.now());
   auditLog('data_read', sess.email, 'network_get', { contactId: id, interactions: interactions.length });
-  return { success: true, contact: contact, account: acc ? nwAccountPublic_(acc.obj) : null, interactions: interactions };
+  return { success: true, contact: contact, account: acc ? nwAccountPublic_(acc.obj) : null, interactions: interactions, warmth: warmth };
 }
 
 // PROJECT: ── N2 — accounts and the corpus attachment (§4.1, D4; NETWORK-SCHEMA.md §3 `Accounts`, §12, §13)
@@ -2152,20 +2172,10 @@ function nwListFilters_(p) {
   for (var i = 0; i < NW_LIST_FILTER_KEYS.length; i++) if (f[NW_LIST_FILTER_KEYS[i]]) f.active = true;
   return f;
 }
-// The newest Interaction Date per contact id — one read of the tab.
-function nwLastTouch_(tabs) {
-  var it = nwSheetRead_(tabs.interactions), touch = {};
-  var cCol = it.idx['Contact ID'], dCol = it.idx['Date'];
-  if (cCol === undefined || dCol === undefined) return touch;
-  for (var r = 1; r < it.vals.length; r++) {
-    var cid = String(it.vals[r][cCol] || '');
-    if (!cid) continue;
-    var d = it.vals[r][dCol];
-    d = (d instanceof Date) ? d.toISOString().slice(0, 10) : String(d || '').slice(0, 10);
-    if (d && (!touch[cid] || d > touch[cid])) touch[cid] = d;
-  }
-  return touch;
-}
+// The newest Interaction Date per contact id — since N4 s1 one read of the tab
+// serves lastTouch AND warmth (nwTouchPass_, below the N3 s2 section); this
+// name stays for its callers.
+function nwLastTouch_(tabs) { return nwTouchPass_(tabs).touch; }
 function nwListMatch_(c, a, f) {
   if (!f.active) return true;
   if (f.relationship && String(a.relationship || '') !== f.relationship) return false;
@@ -2204,12 +2214,14 @@ function nwListOp_(sess, p) {
   var byAccount = {}, perAccount = {};
   for (var ai = 0; ai < accounts.length; ai++) byAccount[accounts[ai].id] = accounts[ai];
   for (var ci = 0; ci < contacts.length; ci++) perAccount[contacts[ci].accountId] = (perAccount[contacts[ci].accountId] || 0) + 1;
-  var touch = nwLastTouch_(tabs);
+  var pass = nwTouchPass_(tabs, Date.now()), touch = pass.touch;   // N4 s1: lastTouch and warmth from one read
   var total = contacts.length, out = [];
   for (var i = 0; i < contacts.length; i++) {
     var c = contacts[i];
     c.metDate = String(c.metDate || '').slice(0, 10);
     c.lastTouch = touch[c.id] || '';
+    c.warmth = pass.warmth[c.id] || 0;              // N4 s1 (§5): computed, never stored
+    c.warmthBand = nwWarmthBand_(c.warmth);
     if (nwListMatch_(c, byAccount[c.accountId] || {}, f)) out.push(c);
   }
   for (var k = 0; k < out.length; k++) { delete out[k]._emails; delete out[k]._tags; delete out[k]._consent; }
@@ -2715,6 +2727,379 @@ function nwMyCardOp_(sess, p) {
   return { success: true, card: { name: me.name, title: me.title, company: me.company, email: me.email, phone: me.phone }, vcard: vcard };
 }
 
+
+// PROJECT: ── N4 session 1 — warmth, the reconnect list and the import panel (§4.4; NETWORK-SCHEMA.md §5, §12)
+// Warmth and cadence are COMPUTED on every read and never stored (§5): a
+// decayed sum of the contact's Interactions weighted by kind, halving every
+// NW_WARMTH_HALF_LIFE_DAYS, carried on the list row beside lastTouch (from
+// the same single read of the Interactions tab) and on the detail. The
+// reconnect list is every contact whose last touch is older than its
+// cadence — the contact's role × the account's relationship. The import
+// panel takes an .ics export or a sent-mail CSV pasted in, parses it HERE,
+// matches attendees / addresses to live contacts by email and answers a
+// proposal list; nothing is written until nop=importconfirm carries the
+// rows the developer ticked, each as an email-in / email-out / calendar
+// Interaction with the developer's own reference as evidence and one line
+// as the summary — never a body. D15: no mail or calendar scope, no
+// trigger, no consent prompt. The constants below are the only tuning
+// surface (not a tab) and are mirrored in the page's chip legend.
+var NW_WARMTH_WEIGHTS = { meeting: 2.0, call: 1.5, 'email-out': 1.0, 'email-in': 1.2, calendar: 1.5, scan: 1.0, note: 0.3, linkedin: 0.5, 'account-change': 0, merge: 0 };
+var NW_WARMTH_HALF_LIFE_DAYS = 90;
+var NW_WARMTH_BANDS = [['hot', 2.0], ['warm', 0.75], ['cool', 0.2]];   // below the last → cold
+// cadence(role, relationship) in days — the relationship picks the row, the
+// role the column; '*' is every other role. No relationship reads as other.
+var NW_CADENCE_DAYS = {
+  target:     { champion: 30, 'decision-maker': 30, '*': 60 },
+  customer:   { champion: 30, 'decision-maker': 30, '*': 60 },
+  partner:    { '*': 90 },
+  channel:    { '*': 90 },
+  supplier:   { '*': 180 },
+  competitor: { '*': 180 },
+  other:      { '*': 180 }
+};
+var NW_IMPORT_KINDS = ['email-in', 'email-out', 'calendar'];   // the only kinds the import panel writes (§4 — import-only)
+var NW_IMPORT_TEXT_MAX = 400000;   // characters of paste parsed per call
+var NW_IMPORT_ROWS_MAX = 500;      // proposals answered / rows confirmed per call
+var NW_RECONNECT_MAX = 200;        // reconnect rows answered
+
+function nwCadenceDays_(role, relationship) {
+  var row = NW_CADENCE_DAYS[String(relationship || '').toLowerCase()] || NW_CADENCE_DAYS.other;
+  var r = String(role || '').toLowerCase();
+  return Object.prototype.hasOwnProperty.call(row, r) ? row[r] : row['*'];
+}
+// A cell or string as a YYYY-MM-DD day, or '' when it is not one.
+function nwDayKey_(v) {
+  if (v instanceof Date) return isNaN(v.getTime()) ? '' : v.toISOString().slice(0, 10);
+  var s = String(v == null ? '' : v).slice(0, 10);
+  return NW_DATE_RE.test(s) ? s : '';
+}
+function nwDaysBetween_(dayKey, nowMs) {
+  return Math.floor((nowMs - new Date(dayKey + 'T00:00:00Z').getTime()) / 86400000);
+}
+// warmth([{ kind, date }], nowMs) = Σ weight(kind) × 0.5^(ageDays / half-life),
+// rounded to two places. A future-dated touch counts at full weight (age
+// clamped at 0); an off-list kind, or a row with no day, weighs nothing.
+function nwWarmth_(touches, nowMs) {
+  var sum = 0, list = touches || [], now = nowMs || Date.now();
+  for (var i = 0; i < list.length; i++) {
+    var w = NW_WARMTH_WEIGHTS[String((list[i] && list[i].kind) || '')] || 0;
+    if (!w) continue;
+    var d = nwDayKey_(list[i].date);
+    if (!d) continue;
+    sum += w * Math.pow(0.5, Math.max(0, nwDaysBetween_(d, now)) / NW_WARMTH_HALF_LIFE_DAYS);
+  }
+  return Math.round(sum * 100) / 100;
+}
+function nwWarmthBand_(score) {
+  for (var i = 0; i < NW_WARMTH_BANDS.length; i++) if (score >= NW_WARMTH_BANDS[i][1]) return NW_WARMTH_BANDS[i][0];
+  return 'cold';
+}
+// One read of the Interactions tab → per contact id the newest Date
+// (lastTouch, N3 s1) and the warmth score (N4) — the list op's single pass.
+function nwTouchPass_(tabs, nowMs) {
+  var it = nwSheetRead_(tabs.interactions), touch = {}, per = {}, warmth = {};
+  var cCol = it.idx['Contact ID'], dCol = it.idx['Date'], kCol = it.idx['Kind'];
+  if (cCol === undefined || dCol === undefined) return { touch: touch, warmth: warmth };
+  for (var r = 1; r < it.vals.length; r++) {
+    var cid = String(it.vals[r][cCol] || '');
+    if (!cid) continue;
+    var d = nwDayKey_(it.vals[r][dCol]);
+    if (!d) continue;
+    if (!touch[cid] || d > touch[cid]) touch[cid] = d;
+    (per[cid] = per[cid] || []).push({ kind: kCol === undefined ? '' : String(it.vals[r][kCol] || ''), date: d });
+  }
+  var now = nowMs || Date.now();
+  for (var id in per) if (per.hasOwnProperty(id)) warmth[id] = nwWarmth_(per[id], now);
+  return { touch: touch, warmth: warmth };
+}
+// The detail's warmth block for one contact from the interactions the
+// detail op already read: the score and band, the last touch, the cadence
+// its role × relationship sets and how far past it the contact is.
+function nwWarmthDetail_(interactions, role, relationship, metDate, nowMs) {
+  var now = nowMs || Date.now(), last = '';
+  for (var i = 0; i < interactions.length; i++) { var d = nwDayKey_(interactions[i].date); if (d && d > last) last = d; }
+  if (!last) last = nwDayKey_(metDate);
+  var score = nwWarmth_(interactions, now), cadence = nwCadenceDays_(role, relationship);
+  var since = last ? nwDaysBetween_(last, now) : null;
+  return { score: score, band: nwWarmthBand_(score), lastTouch: last, cadenceDays: cadence,
+           sinceDays: since, overdueDays: since === null ? null : since - cadence };
+}
+
+// nop=reconnect (session, GET) — every contact whose last touch is older
+// than cadence(role, relationship) days, most overdue first, the minimum-
+// necessary row (§12) plus the lapse itself. Do-not-contact rows are left
+// out: a reconnect nudge is a draft, and D9 excludes them from every draft.
+// A contact with no Interaction at all is measured from its met date (the
+// scan writes one, so that is the rare hand-entered row); one with neither
+// cannot be measured and is skipped. Audit: counts only.
+function nwReconnectOp_(sess, p) {
+  var scope = resolveOwnerSet_(sess, p.owner || '');
+  if (scope.error) return { success: false, error: scope.error };
+  var tabs = ensureNetworkTabs_(), nowMs = Date.now();
+  var contacts = nwListRows_(tabs.contacts, scope.set, {
+    id: 'Contact ID', accountId: 'Account ID', name: 'Full Name', title: 'Title', role: 'Role', metDate: 'Met Date', _dnc: 'Do Not Contact' });
+  var accounts = nwListRows_(tabs.accounts, scope.set, { id: 'Account ID', name: 'Name', relationship: 'Relationship', stage: 'Stage' });
+  var byAccount = {};
+  for (var ai = 0; ai < accounts.length; ai++) byAccount[accounts[ai].id] = accounts[ai];
+  var pass = nwTouchPass_(tabs, nowMs), out = [], skipped = 0;
+  for (var i = 0; i < contacts.length; i++) {
+    var c = contacts[i];
+    if (String(c._dnc || '').toLowerCase() === 'true') { skipped++; continue; }
+    var a = byAccount[c.accountId] || {};
+    var last = pass.touch[c.id] || nwDayKey_(c.metDate);
+    if (!last) continue;
+    var cadence = nwCadenceDays_(c.role, a.relationship), since = nwDaysBetween_(last, nowMs);
+    if (since - cadence <= 0) continue;
+    var score = pass.warmth[c.id] || 0;
+    out.push({ id: c.id, accountId: c.accountId, name: c.name, title: c.title, role: c.role,
+      accountName: a.name || '', relationship: a.relationship || '', stage: a.stage || '',
+      lastTouch: last, sinceDays: since, cadenceDays: cadence, overdueDays: since - cadence,
+      warmth: score, warmthBand: nwWarmthBand_(score) });
+  }
+  out.sort(function(x, y) { return (y.overdueDays - x.overdueDays) || String(x.name || '').localeCompare(String(y.name || '')); });
+  var total = out.length;
+  out = out.slice(0, NW_RECONNECT_MAX);
+  auditLog('data_read', sess.email, 'network_reconnect', { contacts: out.length, total: contacts.length, excluded: skipped });
+  return { success: true, contacts: out, count: out.length, lapsed: total, total: contacts.length,
+           today: new Date(nowMs).toISOString().slice(0, 10) };
+}
+
+// ── The import panel's parsers — pure functions over the pasted text ──────
+// .ics: lines unfolded (a CRLF or LF followed by one space or tab continues
+// the line), VEVENT blocks walked; per event UID · SUMMARY · DTSTART (DATE
+// or DATE-TIME with any TZID — the day part is what an Interaction stores)
+// and every ATTENDEE / ORGANIZER mailto:. DESCRIPTION is never read.
+function nwIcsUnfold_(text) { return String(text || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n').replace(/\n[ \t]/g, ''); }
+function nwIcsUnescape_(s) { return String(s || '').replace(/\\n/gi, ' ').replace(/\\,/g, ',').replace(/\;/g, ';').replace(/\\\\/g, '\\'); }
+function nwIcsDay_(v) {
+  var m = /^(\d{4})(\d{2})(\d{2})/.exec(String(v || '').trim());
+  return m ? m[1] + '-' + m[2] + '-' + m[3] : '';
+}
+function nwIcsParse_(text) {
+  var lines = nwIcsUnfold_(text).split('\n'), events = [], cur = null;
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i], nm = /^([A-Za-z][A-Za-z0-9-]*)/.exec(line);
+    if (!nm) continue;
+    var name = nm[1].toUpperCase();
+    if (name === 'BEGIN' && /^BEGIN:VEVENT\s*$/i.test(line)) { cur = { uid: '', summary: '', date: '', emails: [] }; continue; }
+    if (name === 'END' && /^END:VEVENT\s*$/i.test(line)) { if (cur) events.push(cur); cur = null; continue; }
+    if (!cur) continue;
+    if (name === 'ATTENDEE' || name === 'ORGANIZER') {
+      var em = /mailto:([^\s;,>\x22\x27]+)/i.exec(line);   // \x22 \x27 = the two quote marks (kept out of the literal for the harness extractor)
+      if (em) cur.emails.push(em[1].toLowerCase());
+      continue;
+    }
+    var colon = line.indexOf(':');
+    if (colon < 0) continue;
+    var value = line.slice(colon + 1);
+    if (name === 'UID') cur.uid = nwStr_(value, 120);
+    else if (name === 'SUMMARY') cur.summary = nwStr_(nwIcsUnescape_(value), 120);
+    else if (name === 'DTSTART') cur.date = nwIcsDay_(value);
+  }
+  return events;
+}
+// The .ics events as import rows: one `calendar` row per event carrying the
+// day, the summary as the one line, the UID as the row's own reference and
+// the attendees' addresses — the matcher below turns each address into a
+// proposal.
+function nwIcsRows_(text) {
+  var ev = nwIcsParse_(text), out = [];
+  for (var i = 0; i < ev.length; i++) {
+    var seen = {}, emails = [];
+    for (var j = 0; j < ev[i].emails.length; j++) if (!seen[ev[i].emails[j]]) { seen[ev[i].emails[j]] = 1; emails.push(ev[i].emails[j]); }
+    out.push({ kind: 'calendar', date: ev[i].date, line: ev[i].summary, ref: ev[i].uid, emails: emails });
+  }
+  return out;
+}
+// CSV (RFC 4180 quoting; a tab-separated paste is read the same way when
+// its header carries tabs and no commas) → rows of fields.
+function nwCsvParse_(text) {
+  var s = String(text || '').replace(/^﻿/, ''), first = s.split(/\r?\n/)[0] || '';
+  var sep = (first.indexOf('\t') >= 0 && first.indexOf(',') < 0) ? '\t' : ',';
+  var rows = [], row = [], field = '', q = false;
+  function endRow() { row.push(field); field = ''; if (row.length > 1 || String(row[0]).trim() !== '') rows.push(row); row = []; }
+  for (var i = 0; i < s.length; i++) {
+    var ch = s.charAt(i);
+    if (q) {
+      if (ch === '"') { if (s.charAt(i + 1) === '"') { field += '"'; i++; } else q = false; }
+      else field += ch;
+      continue;
+    }
+    if (ch === '"') { q = true; continue; }
+    if (ch === sep) { row.push(field); field = ''; continue; }
+    if (ch === '\n' || ch === '\r') { if (ch === '\r' && s.charAt(i + 1) === '\n') i++; endRow(); continue; }
+    field += ch;
+  }
+  if (field !== '' || row.length) endRow();
+  return rows;
+}
+// The sent-mail / inbox CSV columns, matched by header name (case and
+// punctuation ignored). A row's addresses come from To for an outgoing row
+// and From for an incoming one; the direction column decides when present,
+// else the kind the panel asked for (email-out by default), else From-only
+// files read as incoming. Subject is the one line; a Message-ID column is
+// the row's own reference. Bodies are never read — no body column is mapped.
+var NW_CSV_COLS = {
+  date: ['date', 'sent', 'received', 'date sent', 'date received', 'when', 'datetime', 'time', 'date/time'],
+  to: ['to', 'to address', 'to addresses', 'to email', 'recipient', 'recipients', 'to: (address)'],
+  from: ['from', 'from address', 'from email', 'sender', 'from: (address)'],
+  subject: ['subject', 'title'],
+  direction: ['direction', 'folder', 'kind', 'type', 'mailbox'],
+  ref: ['message-id', 'message id', 'messageid', 'id', 'ref', 'reference', 'conversation id']
+};
+function nwCsvHeaderKey_(h) { return String(h || '').toLowerCase().replace(/[^a-z0-9:()\/ -]+/g, ' ').replace(/\s+/g, ' ').trim(); }
+function nwCsvColumns_(header) {
+  var map = {}, keys = header.map(nwCsvHeaderKey_);
+  for (var role in NW_CSV_COLS) if (NW_CSV_COLS.hasOwnProperty(role)) {
+    for (var i = 0; i < NW_CSV_COLS[role].length && map[role] === undefined; i++) {
+      var at = keys.indexOf(NW_CSV_COLS[role][i]);
+      if (at >= 0) map[role] = at;
+    }
+  }
+  return map;
+}
+// A date cell as a day: ISO first, then M/D/YYYY (the developer's own
+// market), then YYYY/MM/DD, then whatever Date.parse accepts.
+function nwCsvDay_(v) {
+  var s = nwStr_(v, 40), m;
+  if ((m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s))) return m[1] + '-' + m[2] + '-' + m[3];
+  if ((m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})/.exec(s))) return m[3] + '-' + ('0' + m[1]).slice(-2) + '-' + ('0' + m[2]).slice(-2);
+  if ((m = /^(\d{4})\/(\d{1,2})\/(\d{1,2})/.exec(s))) return m[1] + '-' + ('0' + m[2]).slice(-2) + '-' + ('0' + m[3]).slice(-2);
+  var t = s ? Date.parse(s) : NaN;
+  return isNaN(t) ? '' : new Date(t).toISOString().slice(0, 10);
+}
+function nwCsvEmails_(v) {
+  var out = [], seen = {}, m, re = /[^\s<>,;\x22\x27()]+@[^\s<>,;\x22\x27()]+/g;
+  while ((m = re.exec(String(v || '')))) { var e = m[0].toLowerCase().replace(/[.]+$/, ''); if (!seen[e]) { seen[e] = 1; out.push(e); } }
+  return out;
+}
+function nwCsvDirection_(v, dflt) {
+  var s = nwStr_(v, 40).toLowerCase();
+  if (/\b(sent|out|outgoing|outbox)\b/.test(s)) return 'email-out';
+  if (/\b(inbox|in|received|incoming)\b/.test(s)) return 'email-in';
+  return dflt;
+}
+function nwCsvRows_(text, kindAsked) {
+  var rows = nwCsvParse_(text);
+  if (rows.length < 2) return { error: rows.length ? 'csv_no_rows' : 'csv_empty', rows: [] };
+  var col = nwCsvColumns_(rows[0]);
+  if (col.date === undefined || (col.to === undefined && col.from === undefined)) return { error: 'csv_columns', rows: [] };
+  var dflt = kindAsked === 'email-in' || kindAsked === 'email-out' ? kindAsked : (col.to === undefined ? 'email-in' : 'email-out');
+  var out = [];
+  for (var r = 1; r < rows.length && out.length < NW_IMPORT_ROWS_MAX; r++) {
+    var row = rows[r], kind = col.direction === undefined ? dflt : nwCsvDirection_(row[col.direction], dflt);
+    var addr = kind === 'email-in' ? (col.from === undefined ? '' : row[col.from]) : (col.to === undefined ? '' : row[col.to]);
+    out.push({ kind: kind, date: nwCsvDay_(row[col.date]), line: nwStr_(col.subject === undefined ? '' : row[col.subject], 120),
+               ref: nwStr_(col.ref === undefined ? '' : row[col.ref], 120), emails: nwCsvEmails_(addr) });
+  }
+  return { rows: out };
+}
+// Live contacts in scope by email key → { id, name, accountId }; the first
+// contact carrying an address wins (the dedupe keeps addresses unique).
+function nwEmailIndex_(tabs, ownerSet) {
+  var rows = nwListRows_(tabs.contacts, ownerSet, { id: 'Contact ID', accountId: 'Account ID', name: 'Full Name', _emails: 'Emails' }), idx = {};
+  for (var i = 0; i < rows.length; i++) {
+    var es = nwArr_(rows[i]._emails);
+    for (var j = 0; j < es.length; j++) { var k = nwEmailKey_(es[j]); if (k && !idx[k]) idx[k] = { id: rows[i].id, name: rows[i].name, accountId: rows[i].accountId }; }
+  }
+  return idx;
+}
+// The Interactions already recorded, keyed contact · kind · day · line, so a
+// re-pasted export proposes its rows as already recorded and a re-confirm
+// refuses them as duplicate.
+function nwImportExisting_(tabs) {
+  var it = nwSheetRead_(tabs.interactions), have = {};
+  var cCol = it.idx['Contact ID'], kCol = it.idx['Kind'], dCol = it.idx['Date'], sCol = it.idx['Summary'];
+  if (cCol === undefined || kCol === undefined || dCol === undefined) return have;
+  for (var r = 1; r < it.vals.length; r++) {
+    have[String(it.vals[r][cCol] || '') + '|' + String(it.vals[r][kCol] || '') + '|' + nwDayKey_(it.vals[r][dCol]) + '|' + nwStr_(sCol === undefined ? '' : it.vals[r][sCol], 120)] = 1;
+  }
+  return have;
+}
+// nop=import (body-POST) — text (the paste), format ∈ auto · ics · csv,
+// kind (CSV only: email-in | email-out when the file has no direction
+// column). Answers the proposal list and writes NOTHING: one proposal per
+// matched address per row (matched: true, the contact, `duplicate` when an
+// identical Interaction already exists), and one per address that matches
+// no live contact (matched: false, reason no_contact) or per row with no
+// usable address or day — so the developer sees what the file held and
+// what was left out. The session user's own address is never a proposal.
+// Audit: counts only — never an address, a name or a line.
+function nwImportOp_(sess, p) {
+  var scope = resolveOwnerSet_(sess, p.owner || '');
+  if (scope.error) return { success: false, error: scope.error };
+  var text = String(p.text || '');
+  if (!text.trim()) return { success: false, error: 'text_required' };
+  if (text.length > NW_IMPORT_TEXT_MAX) return { success: false, error: 'text_too_long' };
+  var format = nwStr_(p.format, 10).toLowerCase();
+  if (!format || format === 'auto') format = /BEGIN:VCALENDAR|BEGIN:VEVENT/i.test(text) ? 'ics' : 'csv';
+  if (format !== 'ics' && format !== 'csv') return { success: false, error: 'bad_format' };
+  var parsed = format === 'ics' ? { rows: nwIcsRows_(text) } : nwCsvRows_(text, nwStr_(p.kind, 12).toLowerCase());
+  if (parsed.error) return { success: false, error: parsed.error, format: format };
+  if (format === 'ics' && !parsed.rows.length) return { success: false, error: 'ics_no_events', format: format };
+  var tabs = ensureNetworkTabs_(), index = nwEmailIndex_(tabs, scope.set), existing = nwImportExisting_(tabs);
+  var me = String(sess.email || '').toLowerCase(), proposals = [], matched = 0, unmatched = 0, seen = {};
+  for (var i = 0; i < parsed.rows.length && proposals.length < NW_IMPORT_ROWS_MAX; i++) {
+    var r = parsed.rows[i], base = { kind: r.kind, date: r.date, line: r.line, ref: r.ref }, others = 0;
+    if (!r.date) { proposals.push({ matched: false, reason: 'no_date', email: r.emails[0] || '', kind: r.kind, date: '', line: r.line, ref: r.ref }); unmatched++; continue; }
+    for (var j = 0; j < r.emails.length && proposals.length < NW_IMPORT_ROWS_MAX; j++) {
+      var email = r.emails[j];
+      if (email === me) continue;
+      others++;
+      var c = index[email];
+      if (!c) { proposals.push({ matched: false, reason: 'no_contact', email: email, kind: r.kind, date: r.date, line: r.line, ref: r.ref }); unmatched++; continue; }
+      var key = c.id + '|' + r.kind + '|' + r.date + '|' + r.ref;
+      if (seen[key]) continue;
+      seen[key] = 1;
+      proposals.push({ matched: true, contactId: c.id, contactName: c.name, accountId: c.accountId, email: email, kind: r.kind, date: r.date, line: r.line, ref: r.ref,
+                       duplicate: !!existing[c.id + '|' + r.kind + '|' + r.date + '|' + r.line] });
+      matched++;
+    }
+    if (!others) { proposals.push({ matched: false, reason: 'no_email', email: '', kind: r.kind, date: r.date, line: r.line, ref: r.ref }); unmatched++; }
+  }
+  auditLog('data_read', sess.email, 'network_import', { rows: parsed.rows.length, matched: matched, unmatched: unmatched });
+  return { success: true, format: format, proposals: proposals, matched: matched, unmatched: unmatched, rows: parsed.rows.length };
+}
+// nop=importconfirm (body-POST) — reference (the developer's own, required:
+// the export's name, a folder, a Message-ID scheme — whatever lets them find
+// the source again) and rows[] = { contactId, kind, date, line, ref } as the
+// panel ticked them. Each row is judged on its own (bad_contact_id ·
+// bad_kind — only email-in, email-out and calendar · bad_date · not_found ·
+// deleted · duplicate) and answered in rejected[]; the rest are written as
+// Interactions through the same helper the drafts flow uses: Evidence Link
+// = the reference (· the row's own ref when it has one), Summary = the one
+// line, Event Slug empty. The scope must allow a write. Audit: counts only.
+function nwImportConfirmOp_(sess, p) {
+  var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var owner = scopeRes.owner, reference = nwStr_(p.reference, 200);
+  if (!reference) return { success: false, error: 'reference_required' };
+  var rows = nwArr_(p.rows);
+  if (!rows.length) return { success: false, error: 'rows_required' };
+  if (rows.length > NW_IMPORT_ROWS_MAX) return { success: false, error: 'too_many_rows' };
+  var tabs = ensureNetworkTabs_(), now = nwNow_(), ct = nwSheetRead_(tabs.contacts), existing = nwImportExisting_(tabs), taken = {};
+  var written = 0, rejected = [], ids = [];
+  for (var i = 0; i < rows.length; i++) {
+    var r = rows[i] && typeof rows[i] === 'object' ? rows[i] : {};
+    var cid = nwStr_(r.contactId, 20), kind = nwStr_(r.kind, 12).toLowerCase(), date = nwStr_(r.date, 10), line = nwStr_(r.line, 120), ref = nwStr_(r.ref, 120);
+    var why = '';
+    if (!NW_ID_RE.test(cid) || cid.charAt(0) !== 'c') why = 'bad_contact_id';
+    else if (NW_IMPORT_KINDS.indexOf(kind) < 0) why = 'bad_kind';
+    else if (!NW_DATE_RE.test(date)) why = 'bad_date';
+    var found = why ? null : nwFindRow_(ct, cid);
+    if (!why && (!found || String(found.obj['Owner'] || '').toLowerCase() !== owner)) why = 'not_found';
+    else if (!why && String(found.obj['Deleted At'] || '')) why = 'deleted';
+    else if (!why && existing[cid + '|' + kind + '|' + date + '|' + line]) why = 'duplicate';
+    if (why) { rejected.push({ index: i, reason: why }); continue; }
+    existing[cid + '|' + kind + '|' + date + '|' + line] = 1;
+    ids.push(nwInteractionAdd_(tabs, owner, cid, String(found.obj['Account ID'] || ''), kind, date,
+      line || 'Imported ' + kind + ' touch', ref ? reference + ' · ' + ref : reference, '', now, taken));
+    written++;
+  }
+  if (written) bumpDataRev();
+  auditLog('data_write', sess.email, 'network_importconfirm', { rows: rows.length, written: written, rejected: rejected.length });
+  return { success: true, written: written, rejected: rejected, interactionIds: ids };
+}
 // PROJECT END
 // ══════════════
 

@@ -101,7 +101,7 @@ SVG and the full-screen SVG (≥ 29 × 29 modules), the page's matrix equal to
 python-qrcode's at the same version and mask when that library is
 importable; then the D15 grep — the served page and the .gs PROJECT region
 call neither MailApp nor GmailApp and name no Gmail scope. Screenshots
-network-export-menu.png, network-drafts.png, network-my-card-qr.png.
+network-export-menu.png, network-drafts.png, network-my-card-qr.png, network-reconnect.png, network-import.png.
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -205,6 +205,7 @@ def gas_stub(role, counter, state=None):
                 for r in rows:
                     src = next(c for c in live if c['id'] == r['id'])
                     r['lastTouch'] = src.get('touch') or src.get('metDate') or ''
+                    r['warmth'] = src.get('warmth', 0); r['warmthBand'] = src.get('warmthBand', 'cold')   # N4 s1: computed server-side, carried on the row
                 body = {'success': True, 'role': 'admin', 'caps': ['contacts'], 'contacts': rows, 'accounts': accts,
                         'folders': state['folders'], 'total': len(live), 'filtered': any(f.values())}
             elif 'nop=account' in post:
@@ -313,7 +314,9 @@ def gas_stub(role, counter, state=None):
                 cid = url.split('id=')[1].split('&')[0]
                 row = next((x for x in state['contacts'] if x['id'] == cid), None)
                 body = ({'success': True, 'contact': row['full'], 'account': next(x for x in state['accounts'] if x['id'] == row['accountId']),
-                         'interactions': [{'id': 'i-0000000000002', 'kind': 'scan', 'date': '2026-09-21', 'summary': 'Card scanned'}]}
+                         'interactions': [{'id': 'i-0000000000002', 'kind': 'scan', 'date': '2026-09-21', 'summary': 'Card scanned'}],
+                         # N4 s1: the detail's warmth block — score, band, last touch, cadence, since, overdue (computed, never stored)
+                         'warmth': {'score': row.get('warmth', 0), 'band': row.get('warmthBand', 'cold'), 'lastTouch': row.get('touch') or '2026-09-21', 'cadenceDays': 30, 'sinceDays': 8, 'overdueDays': -22}}
                         if row else {'success': False, 'error': 'not_found'})
             elif ('nop=delete' in url or 'nop=restore' in url) and 'id=a-' in url:
                 aid = url.split('id=')[1].split('&')[0]
@@ -458,6 +461,44 @@ def gas_stub(role, counter, state=None):
                 if me.get('phone'): vc += 'TEL;TYPE=CELL:%s\r\n' % me['phone']
                 vc += 'END:VCARD\r\n'
                 body = {'success': True, 'card': {'name': me.get('name', ''), 'title': me.get('title', ''), 'company': me.get('company', ''), 'email': 'admin@example.com', 'phone': me.get('phone', '')}, 'vcard': vc}
+            elif 'nop=reconnect' in url:
+                # N4 s1: the lapsed contacts most overdue first — the stub answers every live contact whose
+                # fixture carries `overdue`, with the minimum row nwReconnectOp_ answers
+                live = [c for c in state['contacts'] if not c.get('deletedAt') and c.get('overdue')]
+                rows = []
+                for c in sorted(live, key=lambda c: -c['overdue']):
+                    acc = next((x for x in state['accounts'] if x['id'] == c['accountId']), {})
+                    rows.append({'id': c['id'], 'accountId': c['accountId'], 'name': c['name'], 'title': c['title'], 'role': c['role'], 'accountName': acc.get('name', ''),
+                                 'relationship': acc.get('relationship', ''), 'stage': acc.get('stage', 'none'), 'lastTouch': c.get('touch') or c.get('metDate') or '',
+                                 'sinceDays': c['overdue'] + 30, 'cadenceDays': 30, 'overdueDays': c['overdue'], 'warmth': c.get('warmth', 0), 'warmthBand': c.get('warmthBand', 'cold')})
+                body = {'success': True, 'contacts': rows, 'count': len(rows), 'lapsed': len(rows), 'total': len([c for c in state['contacts'] if not c.get('deletedAt')]), 'today': '2026-09-23'}
+            elif 'nop=importconfirm' in post:
+                # N4 s1: the ticked rows written as Interactions with the reference as evidence; the post is recorded so the pass can read what the page sent
+                state['posts'].append(('importconfirm', post))
+                rows = json.loads(q(post, 'rows') or '[]'); ref = q(post, 'reference'); ids = []
+                for r in rows:
+                    iid = 'i-%013d' % (100 + len(state.setdefault('interactions', [])))
+                    state['interactions'].append({'id': iid, 'contactId': r.get('contactId'), 'kind': r.get('kind'), 'date': r.get('date'), 'summary': r.get('line'), 'evidence': ref + (' · ' + r['ref'] if r.get('ref') else '')})
+                    ids.append(iid)
+                body = {'success': True, 'written': len(ids), 'rejected': [], 'interactionIds': ids}
+            elif 'nop=import' in post:
+                # N4 s1: the pasted .ics parsed server-side into a proposal list — the stub matches mailto: addresses to the fixture contacts by email
+                # and proposes the rest as unmatched; nothing is written
+                state['posts'].append(('import', post))
+                import re as _re
+                text = q(post, 'text'); props = []
+                for ev in _re.findall(r'BEGIN:VEVENT(.*?)END:VEVENT', text, _re.S):
+                    uid = (_re.search(r'^UID:(.*)$', ev, _re.M) or [None, ''])[1].strip(); summ = (_re.search(r'^SUMMARY:(.*)$', ev, _re.M) or [None, ''])[1].strip().replace('\\,', ',')   # the real parser unescapes the SUMMARY
+                    dt = (_re.search(r'^DTSTART[^:]*:(\d{4})(\d{2})(\d{2})', ev, _re.M))
+                    day = '%s-%s-%s' % (dt.group(1), dt.group(2), dt.group(3)) if dt else ''
+                    for em in _re.findall(r'mailto:([^\s;,>]+)', ev, _re.I):
+                        em = em.lower()
+                        if em == 'admin@example.com': continue
+                        c = next((x for x in state['contacts'] if not x.get('deletedAt') and (x.get('email') or '').lower() == em), None)
+                        if c: props.append({'matched': True, 'contactId': c['id'], 'contactName': c['name'], 'accountId': c['accountId'], 'email': em, 'kind': 'calendar', 'date': day, 'line': summ, 'ref': uid, 'duplicate': False})
+                        else: props.append({'matched': False, 'reason': 'no_contact', 'email': em, 'kind': 'calendar', 'date': day, 'line': summ, 'ref': uid})
+                m = len([x for x in props if x['matched']])
+                body = {'success': True, 'format': 'ics', 'proposals': props, 'matched': m, 'unmatched': len(props) - m, 'rows': len(_re.findall(r'BEGIN:VEVENT', text))}
             elif 'nop=extract' in post:
                 # body-POST only: the images travel in the form body, not the URL
                 assert 'front=' in post and 'contactId=c-0123456789abc' in post
@@ -1077,7 +1118,7 @@ def run():
         names = lambda: page.evaluate("() => [...document.querySelectorAll('#nw-rows .nw-row .nw-row-main')].map(r => r.firstChild.textContent)")
         if names()[-1] != 'Morten Wierod':
             failures.append('sort: the default order is last touch, newest first — Morten (2026-09-15) should be last, got %r' % (names(),))
-        # The sort strip: Name ascending, the flip reverses it; Warmth is disabled until N4.
+        # The sort strip: Name ascending, the flip reverses it; Warmth is live (N4 s1, tested below with the chips).
         page.click('#nw-sort button[data-sort="name"]')
         page.wait_for_timeout(200)
         asc = names()
@@ -1087,8 +1128,8 @@ def run():
         page.wait_for_timeout(200)
         if names() != list(reversed(asc)):
             failures.append('sort: the flip should reverse the order, got %r' % (names(),))
-        if not page.query_selector('#nw-sort button[data-sort="warmth"][disabled]'):
-            failures.append('sort: the Warmth sort must be present and disabled until N4')
+        if page.query_selector('#nw-sort button[data-sort="warmth"][disabled]'):
+            failures.append('sort: the Warmth sort is live since N4 s1 — it must not be disabled')
         page.click('#nw-sort-dir')   # back to A → Z (a key starts in its natural order; the flip reverses it)
         page.wait_for_timeout(200)
         if names() != asc:
@@ -1380,12 +1421,80 @@ def run():
             qr_checked = False
         page.mouse.click(10, 10)
         page.wait_for_function("() => getComputedStyle(document.getElementById('nw-qr-overlay')).display === 'none'", timeout=5000)
-        # D15: nothing sends. The served page and the .gs PROJECT region call neither MailApp nor GmailApp and name no Gmail scope.
+        # ── N4 session 1 — warmth, the reconnect card and the import panel (§4.4, D15) ──
+        # The chips: the stub carries the server's warmth + band on every list row; three fixture contacts get a band each
+        live = [c for c in state['contacts'] if not c.get('deletedAt')]
+        hot = live[0]
+        warm = next(c for c in live if c.get('email') and c is not hot and len([x for x in live if (x.get('email') or '').lower() == c['email'].lower()]) == 1)   # a unique address — the import matches by email
+        cold = next(c for c in live if c is not hot and c is not warm)
+        hot.update(warmth=2.31, warmthBand='hot'); warm.update(warmth=0.93, warmthBand='warm', overdue=70); cold.update(warmth=0.06, warmthBand='cold', overdue=110)
+        page.evaluate("() => nwAfterWrite()")
+        page.wait_for_function("() => document.querySelectorAll('#nw-rows .nw-row .nw-warm').length === %d && !!document.querySelector('#nw-rows .nw-row[data-id=\"%s\"] .nw-warm[data-band=\"hot\"]')" % (len(live), hot['id']), timeout=8000)   # the NEW paint — every row already carried a cold chip
+        bands = dict(page.evaluate("() => [...document.querySelectorAll('#nw-rows .nw-row')].map(r => [r.getAttribute('data-id'), (r.querySelector('.nw-warm') || {}).getAttribute('data-band')])"))
+        if bands.get(hot['id']) != 'hot' or bands.get(warm['id']) != 'warm' or bands.get(cold['id']) != 'cold' or len([b for b in bands.values() if b == 'cold']) != len(live) - 2:
+            failures.append('warmth: every row should carry the server\'s band as a chip (hot / warm / cold, the rest cold), got %r' % (bands,))
+        # The Warmth sort: hottest first, no request
+        n_list = len([u for u in reqs if 'nop=list' in u])
+        page.click('#nw-sort button[data-sort="warmth"]'); page.wait_for_timeout(200)
+        ids = page.evaluate("() => [...document.querySelectorAll('#nw-rows .nw-row')].map(r => r.getAttribute('data-id'))")
+        if ids[:3] != [hot['id'], warm['id'], cold['id']] or len([u for u in reqs if 'nop=list' in u]) != n_list or page.text_content('#nw-sort-dir') != '↓':
+            failures.append('warmth sort: expected hottest first without a request, got %r' % (ids[:3],))
+        # The detail's Warmth line — the score chip, the cadence and the lapse from the server's block
+        page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-main' % hot['id'])
+        page.wait_for_selector('#nw-rows .nw-row[data-id="%s"] .nw-row-detail dd.nw-warmth-line .nw-warm' % hot['id'], timeout=8000)
+        wl = page.text_content('#nw-rows .nw-row[data-id="%s"] .nw-row-detail dd.nw-warmth-line' % hot['id'])
+        if 'hot 2.31' not in wl or 'cadence 30 days' not in wl or 'due in 22 days' not in wl:
+            failures.append('warmth detail: expected the chip, the cadence and the lapse, got %r' % (wl,))
+        page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-main' % hot['id'])
+        # The Reconnect card: the lapsed contacts most overdue first, the lapse on each row, Draft hands one to the drafts flow
+        page.click('#nw-pill-reconnect')
+        page.wait_for_function("() => document.getElementById('nw-reconnect') && document.getElementById('nw-reconnect').style.display !== 'none' && document.querySelectorAll('#nw-reconnect-list .nw-recon-row').length === 2", timeout=8000)
+        rec_rows = page.evaluate("() => [...document.querySelectorAll('#nw-reconnect-list .nw-recon-row')].map(r => [r.getAttribute('data-id'), r.getAttribute('data-overdue'), r.textContent])")
+        if [r[0] for r in rec_rows] != [cold['id'], warm['id']] or '110 days overdue' not in rec_rows[0][2] or 'cadence 30 days' not in rec_rows[0][2] or not [u for u in reqs if 'nop=reconnect' in u] \
+           or '2 of %d contacts past their cadence' % len(live) not in page.text_content('#nw-reconnect-status'):
+            failures.append('reconnect: expected the two lapsed rows most overdue first with the lapse and the cadence, got %r' % (rec_rows,))
+        if not page.is_disabled('#nw-reconnect-draft'):
+            failures.append('reconnect: the bulk Draft button must wait for a tick')
+        page.click('#nw-reconnect-all')
+        page.wait_for_function("() => !document.getElementById('nw-reconnect-draft').disabled", timeout=5000)
+        page.screenshot(path=str(SHOTS / 'network-reconnect.png'), full_page=False)
+        page.click('#nw-reconnect-list .nw-recon-row[data-id="%s"] .nw-recon-draft' % cold['id'])
+        page.wait_for_function("() => document.getElementById('nw-mail') && document.getElementById('nw-mail').style.display !== 'none' && /1 recipient/.test(document.getElementById('nw-mail-recipients').textContent)", timeout=8000)
+        if cold['name'] not in page.text_content('#nw-mail-recipients'):
+            failures.append('reconnect: Draft should open the drafts panel with that one contact as the recipient')
+        page.click('#nw-mail-close'); page.click('#nw-reconnect-close')
+        # The Import touches panel: an .ics pasted → a proposal per attendee (matched with a checkbox and a kind, unmatched without) → only the ticked row confirmed with the reference
+        page.click('#nw-pill-import')
+        page.wait_for_function("() => document.getElementById('nw-import') && document.getElementById('nw-import').style.display !== 'none'", timeout=8000)
+        ics = ('BEGIN:VCALENDAR\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nUID:evt-77@stub\r\nDTSTART;TZID=America/New_York:20260921T140000\r\nSUMMARY:Site visit\\, hall B\r\n'
+               'ORGANIZER:mailto:admin@example.com\r\nATTENDEE;CN=Someone:mailto:%s\r\nATTENDEE:mailto:stranger@nowhere.example\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n' % warm['email'])
+        page.fill('#nw-import-text', ics); page.click('#nw-import-propose')
+        page.wait_for_function("() => document.querySelectorAll('#nw-import-list .nw-import-row').length === 2", timeout=8000)
+        prop = page.evaluate("() => [...document.querySelectorAll('#nw-import-list .nw-import-row')].map(r => [r.getAttribute('data-matched'), !!r.querySelector('.nw-import-check'), (r.querySelector('.nw-import-kind') || {}).value || '', r.textContent])")
+        if prop[0][0] != '1' or not prop[0][1] or prop[0][2] != 'calendar' or warm['name'] not in prop[0][3] or prop[1][0] != '0' or prop[1][1] or 'no contact with this email' not in prop[1][3]:
+            failures.append('import: expected one matched proposal with a checkbox and a kind and one unmatched without, got %r' % (prop,))
+        if 'Nothing is recorded yet' not in page.text_content('#nw-import-status') or state['posts'][-1][0] != 'import':
+            failures.append('import: expected the status to say nothing is recorded yet after a nop=import post, got %r / %r' % (page.text_content('#nw-import-status'), state['posts'][-1][0]))
+        n_ix2 = len(state.setdefault('interactions', []))
+        page.click('#nw-import-confirm')
+        page.wait_for_function("() => /Type your reference first/.test(document.getElementById('nw-import-status').textContent)", timeout=5000)
+        page.fill('#nw-import-ref', 'Outlook calendar export, Sep 2026'); page.click('#nw-import-confirm')
+        page.wait_for_function("() => /1 touch recorded/.test(document.getElementById('nw-import-status').textContent)", timeout=8000)
+        cp = dict(_up.parse_qsl(state['posts'][-1][1])) if state['posts'][-1][0] == 'importconfirm' else {}
+        crows = json.loads(cp.get('rows', '[]')); cix = state['interactions'][-1]
+        if len(crows) != 1 or crows[0].get('contactId') != warm['id'] or crows[0].get('kind') != 'calendar' or crows[0].get('date') != '2026-09-21' or crows[0].get('ref') != 'evt-77@stub' or crows[0].get('line') != 'Site visit, hall B' \
+           or cp.get('reference') != 'Outlook calendar export, Sep 2026' or cix.get('kind') != 'calendar' or cix.get('evidence') != 'Outlook calendar export, Sep 2026 · evt-77@stub' or len(state['interactions']) != n_ix2 + 1:
+            failures.append('importconfirm: expected only the ticked row with the reference, the UID and the one line, one calendar interaction written, got rows=%r ref=%r ix=%r' % (crows, cp.get('reference'), cix))
+        if not page.query_selector('#nw-import-list .nw-import-row.nw-done .nw-import-check[disabled]'):
+            failures.append('importconfirm: the recorded row should be marked done')
+        page.screenshot(path=str(SHOTS / 'network-import.png'), full_page=False)
+        page.click('#nw-import-close')
+        # D15: nothing sends. The served page and the .gs PROJECT region call neither MailApp, GmailApp nor CalendarApp and name no Gmail or Calendar scope.
         import re as _re2
         served = urllib.request.urlopen(base).read().decode('utf-8')
         gs_src = (REPO / 'googleAppsScripts' / 'Network' / 'Network.gs').read_text(encoding='utf-8')
         region = gs_src[gs_src.index('// PROJECT START'):gs_src.index('// PROJECT END')]
-        send_re = _re2.compile(r'\b(MailApp|GmailApp)\s*\.|gmail\.(send|compose|modify|readonly)|sendHipaaEmail\s*\(|mail\.google\.com')
+        send_re = _re2.compile(r'\b(MailApp|GmailApp|CalendarApp)\s*\.|gmail\.(send|compose|modify|readonly)|calendar\.(readonly|events)|sendHipaaEmail\s*\(|mail\.google\.com')   # N4 s1: CalendarApp and the calendar scopes join the grep
         if send_re.search(served) or send_re.search(region) or _re2.search(r'\bgmail\b', served, _re2.I):
             failures.append('D15: a send path or a Gmail scope is referenced by the served page or the .gs PROJECT region')
         real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
@@ -1403,7 +1512,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-8s %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['list']),
                                                   mark(g['empty']), mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png, network-list-filters.png, network-list-bar.png, network-export-menu.png, network-drafts.png, network-my-card-qr.png (%dx%d)'
+    print('\nScreenshots: %s/network-role-<tier>.png, network-capture-*.png, network-save-list.png, network-save-merge.png, network-accounts.png, network-on-record.png, network-list-filters.png, network-list-bar.png, network-export-menu.png, network-drafts.png, network-my-card-qr.png, network-reconnect.png, network-import.png (%dx%d)'
           % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
@@ -1420,7 +1529,7 @@ def run():
           'and Target · Discovery lands on both, the CSV downloads with a BOM and two rows, one row is deleted after a confirm naming the count; '
           'N3 s2: the vCard bundle, the PHOTO splice from Drive, the per-contact zip and the .xlsx download, three drafts from the default template, '
           'an edited draft round-trip, mailto: / Copy / the .eml bundle / .txt, sent → the email-out Interaction, discard, the Drafts pill, My card → the QR '
-          '(%s), and no send path in the served page or the .gs PROJECT region.' % ('matrix equal to python-qrcode' if qr_checked else 'python-qrcode not importable — module count only'))
+          '(%s), and no send path in the served page or the .gs PROJECT region; N4 s1: every list row carries the server\'s warmth band as a chip, the Warmth sort orders hottest first without a request, the detail shows the cadence and the lapse, the Reconnect card lists the lapsed rows most overdue first and hands one to the drafts flow, and a pasted .ics proposes one matched and one unmatched row and records only the ticked one with the reference as evidence; no CalendarApp or calendar scope anywhere.' % ('matrix equal to python-qrcode' if qr_checked else 'python-qrcode not importable — module count only'))
     return 0
 
 

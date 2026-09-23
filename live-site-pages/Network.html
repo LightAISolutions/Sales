@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.22w">
+  <meta name="build-version" content="v01.23w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -625,6 +625,24 @@
     .nw-qr-preview small { font: 11px/1.4 var(--nw-mono); color: var(--nw-faint); }
     .nw-qr-overlay { position: fixed; inset: 0; z-index: 9; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #fff; cursor: pointer; }
     .nw-qr-caption { font: 600 15px/1.3 var(--nw-serif); color: var(--nw-ink); }
+    /* N4 s1 — the warmth chip, the reconnect card and the import panel */
+    .nw-warm { display: inline-block; font: 600 11px/1 var(--nw-mono); border-radius: 999px; padding: 4px 7px; margin: 0 6px 2px 0; border: 1px solid var(--nw-line2); color: var(--nw-muted); background: #fff; vertical-align: middle; white-space: nowrap; }
+    .nw-warm-hot { color: #fff; background: #b3261e; border-color: #b3261e; }
+    .nw-warm-warm { color: #7a3b00; background: #ffe2c2; border-color: #f0b070; }
+    .nw-warm-cool { color: #0d4c73; background: #dbeefb; border-color: #9fc8e8; }
+    .nw-warm-cold { color: var(--nw-faint); background: #f3f1ec; }
+    .nw-row .nw-row-main .nw-warm { margin-left: 6px; }
+    .nw-warmth-line small { display: block; font: 12px/1.5 var(--nw-serif); color: var(--nw-muted); margin-top: 4px; }
+    .nw-recon-row, .nw-import-row { display: flex; gap: 8px; align-items: flex-start; padding: 10px 0; border-top: 1px solid var(--nw-line); }
+    .nw-recon-row input[type=checkbox], .nw-import-row input[type=checkbox] { width: 18px; height: 18px; min-height: 0; margin-top: 3px; padding: 0; flex: 0 0 auto; }
+    .nw-recon-main, .nw-import-main { flex: 1 1 auto; min-width: 0; font: 15px/1.35 var(--nw-serif); color: var(--nw-ink); overflow-wrap: anywhere; }
+    .nw-recon-main small, .nw-import-main small { display: block; font-size: 12px; color: var(--nw-muted); }
+    .nw-recon-main small.nw-touch { color: var(--nw-faint); }
+    .nw-import-row.nw-unmatched .nw-import-main { color: var(--nw-faint); }
+    .nw-import-row select.nw-import-kind { flex: 0 0 auto; font: 13px/1.3 var(--nw-serif); color: var(--nw-ink); min-height: 36px; padding: 4px 6px; border: 1px solid var(--nw-line2); border-radius: 6px; background: #fff; }
+    .nw-import-row.nw-done { opacity: .55; }
+    .nw-import-row.nw-rejected .nw-import-main { color: #b3261e; }
+    #nw-reconnect-bar, #nw-import-bar { margin: 8px 0 4px; }
 /* PROJECT END */
 /* ══════════════ */
   </style>
@@ -6121,6 +6139,7 @@ function nwRowDetail(row, id) {
     line('Notes', c.notes);
     linkLine('Front', c.frontLink, '🖼 Front'); linkLine('Back', c.backLink, '🖼 Back');
     line('History', (res.interactions || []).map(function(ix) { return ix.date + ' ' + nwLabel('interactionKind', ix.kind); }).join(' · '));
+    nwWarmthLine(det, res.warmth);   // N4 s1: the score, the cadence and the lapse — computed on the server
     nwSignalsLine(det, { contactId: c.id });   // E4: the account's attendance signals, read on open
     var acts = nwEl('div', 'nw-strip-photos');
     // N2: the on-the-record check — only now, when the detail is open, is the
@@ -6274,6 +6293,7 @@ function nwContactRow(c) {
   row.appendChild(chk);
   var main = nwEl('div', 'nw-row-main');
   main.appendChild(document.createTextNode(c.name || '(unnamed)'));
+  if (c.warmthBand) main.appendChild(nwWarmthChip(c.warmth, c.warmthBand));   // N4 s1: computed server-side, carried on the row
   var acc = _nwAccountsById[c.accountId];
   main.appendChild(nwEl('small', null, [c.title, acc && acc.name].filter(Boolean).join(' · ') || nwLabel('role', c.role)));
   if (c.lastTouch) main.appendChild(nwEl('small', 'nw-touch', 'last touch ' + c.lastTouch));
@@ -6289,8 +6309,8 @@ function nwContactRow(c) {
 // answered by the server (nop=list carries them — the columns they read never
 // leave the server, §12); the four sorts are the page's over what every row
 // already carries (name, title, account, lastTouch — the newest Interaction
-// date, computed server-side once per list). Warmth is N4 and its sort sits
-// disabled until then. Multi-select is a checkbox per row and a bar fixed to
+// date, computed server-side once per list; since N4 s1 warmth rides the same
+// row and its sort is live). Multi-select is a checkbox per row and a bar fixed to
 // the bottom of the screen: tag and relationship / stage go through nop=bulk
 // (validated per row, rejected[] read back), the CSV export through
 // nop=export (a disclosure row is written server-side), delete through the
@@ -6304,7 +6324,7 @@ var _nwSelected = {};        // contact id → true
 var _nwRows = [];            // the rows of this paint, as the list answered them
 var _nwTotal = 0;
 var _nwBarStatus = '';
-var NW_SORTS = [['lastTouch', 'Last touch'], ['name', 'Name'], ['company', 'Company'], ['warmth', 'Warmth']];   // warmth: N4, disabled
+var NW_SORTS = [['lastTouch', 'Last touch'], ['name', 'Name'], ['company', 'Company'], ['warmth', 'Warmth']];   // warmth: N4 s1 — the server's score on every row
 var NW_STAGE_RELS = ['target', 'customer'];   // mirror of NW_STAGE_RELATIONSHIPS (the D5 rule)
 var NW_FILTER_WORDS = { q: 'search', relationship: 'relationship', stage: 'stage', role: 'role', segment: 'segment', event: 'event', tag: 'tag', from: 'met from', to: 'met to', consent: 'consent' };
 
@@ -6317,7 +6337,9 @@ function nwSortRows(rows) {
   function cmp(x, y) {
     if (key === 'name') return String(x.name || '').localeCompare(String(y.name || ''));
     if (key === 'company') return nwCompanyOf(x).localeCompare(nwCompanyOf(y)) || String(x.name || '').localeCompare(String(y.name || ''));
-    // lastTouch (and warmth until N4): newest first when desc; a contact with no touch sorts last either way
+    // warmth (N4 s1): the server's score, hottest first when desc; ties by last touch
+    if (key === 'warmth') return (Number(x.warmth || 0) - Number(y.warmth || 0)) || String(x.lastTouch || '').localeCompare(String(y.lastTouch || ''));
+    // lastTouch: newest first when desc; a contact with no touch sorts last either way
     var tx = x.lastTouch || '', ty = y.lastTouch || '';
     if (!tx && ty) return 1 * dir; if (tx && !ty) return -1 * dir;
     return tx.localeCompare(ty) || String(y.updatedAt || '').localeCompare(String(x.updatedAt || '')) * dir;
@@ -6399,9 +6421,9 @@ function nwListTools(contacts) {
   var segs = nwEl('div', 'nw-sort-seg'); segs.setAttribute('role', 'group'); segs.setAttribute('aria-label', 'Sort by'); segs.id = 'nw-sort';
   NW_SORTS.forEach(function(pair) {
     var b = nwEl('button', null, pair[1]); b.type = 'button'; b.setAttribute('data-sort', pair[0]); b.setAttribute('aria-pressed', _nwSort.key === pair[0] ? 'true' : 'false');
-    if (pair[0] === 'warmth') { b.disabled = true; b.title = 'Warmth arrives with relationship intelligence (N4)'; }
+    if (pair[0] === 'warmth') b.title = 'Hottest first — a decayed sum of touches weighted by kind';
     b.addEventListener('click', function() {
-      _nwSort.key = pair[0]; _nwSort.dir = pair[0] === 'lastTouch' ? 'desc' : 'asc';   // a key starts in its natural order; the flip reverses it
+      _nwSort.key = pair[0]; _nwSort.dir = (pair[0] === 'lastTouch' || pair[0] === 'warmth') ? 'desc' : 'asc';   // a key starts in its natural order; the flip reverses it
       segs.querySelectorAll('button').forEach(function(x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
       dirBtn.textContent = _nwSort.dir === 'asc' ? '↑' : '↓'; nwPaintRows();
     });
@@ -7619,6 +7641,221 @@ function nwPillsMount() {
   function pill(id, text, fn) { var a = nwEl('a', 'nw-pill', text); a.href = '#'; a.id = id; a.setAttribute('role', 'button'); a.addEventListener('click', function(ev) { ev.preventDefault(); fn(); }); links.appendChild(a); }
   pill('nw-pill-drafts', '✉ Drafts', function() { nwMailOpen([]); });
   pill('nw-pill-mycard', '🪪 My card', nwMyCardOpen);
+  pill('nw-pill-reconnect', '🔥 Reconnect', nwReconnectOpen);     // N4 s1
+  pill('nw-pill-import', '⇪ Import touches', nwImportOpen);      // N4 s1
+}
+
+// PROJECT: ── N4 session 1 — warmth, the reconnect card and the import panel (§4.4; NETWORK-SCHEMA.md §5) ──
+// Warmth is computed on the server (never stored) and carried on every list
+// row beside lastTouch and on the detail; the page never computes a score.
+// The two constants below MIRROR Network.gs's NW_WARMTH_WEIGHTS and
+// NW_WARMTH_HALF_LIFE_DAYS for the chip's legend only — a change belongs in
+// NETWORK-SCHEMA.md §5, the .gs and here in one commit. The reconnect card
+// lists the server's lapsed contacts (nop=reconnect) and hands a draft to
+// the existing follow-up drafts flow; the import panel pastes an .ics export
+// or a sent-mail CSV to nop=import, shows the proposal list with a checkbox
+// per matched row and confirms the ticked rows through nop=importconfirm.
+// Nothing is read from any mailbox or calendar (D15): no scope, no trigger.
+var NW_WARMTH_WEIGHTS = { meeting: 2.0, call: 1.5, 'email-out': 1.0, 'email-in': 1.2, calendar: 1.5, scan: 1.0, note: 0.3, linkedin: 0.5, 'account-change': 0, merge: 0 };
+var NW_WARMTH_HALF_LIFE_DAYS = 90;
+var NW_WARMTH_BANDS = [['hot', 2.0], ['warm', 0.75], ['cool', 0.2]];
+function nwWarmthLegend() {
+  var parts = [];
+  for (var k in NW_WARMTH_WEIGHTS) if (NW_WARMTH_WEIGHTS.hasOwnProperty(k) && NW_WARMTH_WEIGHTS[k]) parts.push(nwLabel('interactionKind', k).toLowerCase() + ' ' + NW_WARMTH_WEIGHTS[k]);
+  return 'A decayed sum of touches — ' + parts.join(' · ') + ' — halving every ' + NW_WARMTH_HALF_LIFE_DAYS + ' days. '
+    + NW_WARMTH_BANDS.map(function(b) { return b[0] + ' ≥ ' + b[1]; }).join(', ') + ', cold below.';
+}
+function nwWarmthChip(score, band) {
+  var s = Number(score || 0), b = band || 'cold';
+  var el = nwEl('span', 'nw-warm nw-warm-' + b, b + ' ' + s.toFixed(2));
+  el.setAttribute('data-warmth', String(s)); el.setAttribute('data-band', b);
+  el.title = 'Warmth ' + s.toFixed(2) + ' (' + b + '). ' + nwWarmthLegend();
+  return el;
+}
+// The detail's Warmth line: the chip, the cadence its role × relationship
+// sets, and how far past it the contact is (or how long until it lapses).
+function nwWarmthLine(det, w) {
+  if (!w) return;
+  det.appendChild(nwEl('dt', null, 'Warmth'));
+  var dd = nwEl('dd', 'nw-warmth-line'); dd.appendChild(nwWarmthChip(w.score, w.band));
+  var bits = [];
+  if (w.lastTouch) bits.push('last touch ' + w.lastTouch + (w.sinceDays != null ? ' (' + w.sinceDays + ' day' + (w.sinceDays === 1 ? '' : 's') + ' ago)' : ''));
+  bits.push('cadence ' + w.cadenceDays + ' days');
+  if (w.overdueDays != null) bits.push(w.overdueDays > 0 ? w.overdueDays + ' day' + (w.overdueDays === 1 ? '' : 's') + ' overdue — reconnect' : 'due in ' + (-w.overdueDays) + ' day' + (w.overdueDays === -1 ? '' : 's'));
+  dd.appendChild(nwEl('small', null, bits.join(' · ')));
+  det.appendChild(dd);
+}
+
+// ── The Reconnect card (nop=reconnect) ────────────────────────────────────
+var _nwReconnect = { rows: [], ticked: {} };
+function nwReconnectPanel() {
+  var panel = document.getElementById('nw-reconnect');
+  if (panel) return panel;
+  var app = document.getElementById('nw-app'), wrap = document.getElementById('nw-listwrap');
+  panel = nwEl('div', 'nw-card nw-reconnect'); panel.id = 'nw-reconnect'; panel.style.display = 'none';
+  var head = nwEl('div', 'nw-mail-head'); head.appendChild(nwEl('h2', null, '🔥 Reconnect'));
+  var close = nwEl('a', 'nw-mail-close', '× Close'); close.href = '#'; close.id = 'nw-reconnect-close'; close.setAttribute('role', 'button');
+  close.addEventListener('click', function(ev) { ev.preventDefault(); panel.style.display = 'none'; });
+  head.appendChild(close); panel.appendChild(head);
+  panel.appendChild(nwEl('p', null, 'Contacts whose last touch is older than their cadence — champions and decision makers at a target or customer every 30 days, anyone else there every 60, partners and channels every 90, the rest every 180. Tick a few and draft follow-ups; nothing is sent from here.'));
+  var bar = nwEl('div', 'nw-mail-handoff-row'); bar.id = 'nw-reconnect-bar';
+  var draft = nwEl('button', 'nw-btn nw-btn-primary', '✉ Draft follow-ups for the ticked'); draft.type = 'button'; draft.id = 'nw-reconnect-draft'; draft.disabled = true;
+  draft.addEventListener('click', function() { var ids = Object.keys(_nwReconnect.ticked).filter(function(k) { return _nwReconnect.ticked[k]; }); if (ids.length) nwMailOpen(ids); });
+  var all = nwEl('button', 'nw-btn', 'Tick all'); all.type = 'button'; all.id = 'nw-reconnect-all';
+  all.addEventListener('click', function() { _nwReconnect.rows.forEach(function(r) { _nwReconnect.ticked[r.id] = true; }); nwReconnectPaint(); });
+  bar.appendChild(draft); bar.appendChild(all); panel.appendChild(bar);
+  var status = nwEl('div', 'nw-status nw-mail-status', ''); status.id = 'nw-reconnect-status'; status.style.display = 'none'; panel.appendChild(status);
+  var list = nwEl('div', 'nw-reconnect-list'); list.id = 'nw-reconnect-list'; panel.appendChild(list);
+  if (wrap) app.insertBefore(panel, wrap); else app.appendChild(panel);
+  return panel;
+}
+function nwReconnectStatus(text, level) {
+  var el = document.getElementById('nw-reconnect-status'); if (!el) return;
+  el.textContent = text || ''; el.style.display = text ? '' : 'none';
+  el.className = 'nw-status nw-mail-status' + (level === 'err' ? ' nw-status-err' : level === 'warn' ? ' nw-status-warn' : level === 'ok' ? ' nw-status-ok' : '');
+}
+function nwReconnectPaint() {
+  var list = document.getElementById('nw-reconnect-list'), draft = document.getElementById('nw-reconnect-draft');
+  if (!list) return;
+  list.innerHTML = '';
+  var n = 0;
+  _nwReconnect.rows.forEach(function(r) {
+    var row = nwEl('div', 'nw-recon-row'); row.setAttribute('data-id', r.id); row.setAttribute('data-overdue', String(r.overdueDays));
+    var chk = document.createElement('input'); chk.type = 'checkbox'; chk.className = 'nw-recon-check'; chk.checked = !!_nwReconnect.ticked[r.id]; chk.setAttribute('aria-label', 'Tick ' + (r.name || 'this contact'));
+    chk.addEventListener('change', function() { _nwReconnect.ticked[r.id] = chk.checked; nwReconnectBar(); });
+    if (chk.checked) n++;
+    row.appendChild(chk);
+    var main = nwEl('div', 'nw-recon-main');
+    main.appendChild(document.createTextNode(r.name || '(unnamed)')); main.appendChild(document.createTextNode(' ')); main.appendChild(nwWarmthChip(r.warmth, r.warmthBand));
+    main.appendChild(nwEl('small', null, [r.title, r.accountName].filter(Boolean).join(' · ') + (r.role ? ' · ' + nwLabel('role', r.role) : '') + (r.relationship ? ' at a ' + nwLabel('relationship', r.relationship).toLowerCase() : '')));
+    main.appendChild(nwEl('small', 'nw-touch', 'last touch ' + r.lastTouch + ' · cadence ' + r.cadenceDays + ' days · ' + r.overdueDays + ' day' + (r.overdueDays === 1 ? '' : 's') + ' overdue'));
+    row.appendChild(main);
+    var side = nwEl('div', 'nw-row-side');
+    var one = nwEl('a', 'nw-edit-btn nw-recon-draft', '✉ Draft'); one.href = '#'; one.setAttribute('role', 'button'); one.title = 'Open a follow-up draft for ' + (r.name || 'this contact');
+    one.addEventListener('click', function(ev) { ev.preventDefault(); nwMailOpen([r.id]); });
+    side.appendChild(one); row.appendChild(side);
+    list.appendChild(row);
+  });
+  if (!_nwReconnect.rows.length) list.appendChild(nwEl('div', 'nw-recon-empty', 'Nobody has lapsed — every contact is inside their cadence.'));
+  if (draft) draft.disabled = n === 0;
+}
+function nwReconnectBar() { var draft = document.getElementById('nw-reconnect-draft'); if (!draft) return; draft.disabled = !Object.keys(_nwReconnect.ticked).some(function(k) { return _nwReconnect.ticked[k]; }); }
+function nwReconnectOpen() {
+  var panel = nwReconnectPanel(); panel.style.display = '';
+  nwReconnectStatus('Reading who has lapsed…');
+  nwApi('reconnect', {}, function(res) {
+    if (!(res && res.success)) { nwReconnectStatus('Could not load (' + nwErrText(res && res.error) + ')', 'err'); return; }
+    _nwReconnect.rows = res.contacts || []; _nwReconnect.ticked = {};
+    nwReconnectPaint();
+    nwReconnectStatus(res.count + ' of ' + res.total + ' contact' + (res.total === 1 ? '' : 's') + ' past their cadence' + (res.lapsed > res.count ? ' (showing the ' + res.count + ' most overdue)' : '') + ' as of ' + res.today, res.count ? 'warn' : 'ok');
+  });
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── The Import touches panel (nop=import → nop=importconfirm) ─────────────
+var _nwImport = { proposals: [], format: '' };
+var NW_IMPORT_KINDS = [['email-out', 'Email sent'], ['email-in', 'Email received'], ['calendar', 'Calendar']];
+function nwImportPanel() {
+  var panel = document.getElementById('nw-import');
+  if (panel) return panel;
+  var app = document.getElementById('nw-app'), wrap = document.getElementById('nw-listwrap');
+  panel = nwEl('div', 'nw-card nw-import'); panel.id = 'nw-import'; panel.style.display = 'none';
+  var head = nwEl('div', 'nw-mail-head'); head.appendChild(nwEl('h2', null, '⇪ Import touches'));
+  var close = nwEl('a', 'nw-mail-close', '× Close'); close.href = '#'; close.id = 'nw-import-close'; close.setAttribute('role', 'button');
+  close.addEventListener('click', function(ev) { ev.preventDefault(); panel.style.display = 'none'; });
+  head.appendChild(close); panel.appendChild(head);
+  panel.appendChild(nwEl('p', null, 'Paste a calendar export (.ics) or a sent-mail / inbox CSV from your own mail client. Rows are matched to contacts by email and nothing is recorded until you confirm — only the day, the kind and one line are kept, never a message body. The app reads no mailbox or calendar.'));
+  var form = nwEl('form', 'nw-mail-form'); form.id = 'nw-import-form';
+  var fmt = document.createElement('select'); fmt.id = 'nw-import-format';
+  [['auto', 'Detect the format'], ['ics', 'Calendar export (.ics)'], ['csv', 'Mail CSV (To / From, Date, Subject)']].forEach(function(o) { var op = document.createElement('option'); op.value = o[0]; op.textContent = o[1]; fmt.appendChild(op); });
+  form.appendChild(fmt);
+  var text = document.createElement('textarea'); text.id = 'nw-import-text'; text.rows = 8; text.placeholder = 'Paste the file contents here (BEGIN:VCALENDAR … or a CSV with a header row)'; text.maxLength = 400000; form.appendChild(text);
+  var ref = document.createElement('input'); ref.type = 'text'; ref.id = 'nw-import-ref'; ref.placeholder = 'Your reference for these rows (e.g. "Outlook sent items, Sep 2026") — recorded as the evidence'; ref.maxLength = 200; ref.autocomplete = 'off'; form.appendChild(ref);
+  var go = nwEl('button', 'nw-btn nw-btn-primary', 'Propose touches'); go.type = 'submit'; go.id = 'nw-import-propose'; form.appendChild(go);
+  form.addEventListener('submit', function(ev) { ev.preventDefault(); nwImportPropose(); });
+  panel.appendChild(form);
+  var status = nwEl('div', 'nw-status nw-mail-status', ''); status.id = 'nw-import-status'; status.style.display = 'none'; panel.appendChild(status);
+  var list = nwEl('div', 'nw-import-list'); list.id = 'nw-import-list'; panel.appendChild(list);
+  var bar = nwEl('div', 'nw-mail-handoff-row'); bar.id = 'nw-import-bar'; bar.style.display = 'none';
+  var confirm = nwEl('button', 'nw-btn nw-btn-primary', 'Record the ticked touches'); confirm.type = 'button'; confirm.id = 'nw-import-confirm';
+  confirm.addEventListener('click', nwImportConfirm); bar.appendChild(confirm); panel.appendChild(bar);
+  if (wrap) app.insertBefore(panel, wrap); else app.appendChild(panel);
+  return panel;
+}
+function nwImportStatus(text, level) {
+  var el = document.getElementById('nw-import-status'); if (!el) return;
+  el.textContent = text || ''; el.style.display = text ? '' : 'none';
+  el.className = 'nw-status nw-mail-status' + (level === 'err' ? ' nw-status-err' : level === 'warn' ? ' nw-status-warn' : level === 'ok' ? ' nw-status-ok' : '');
+}
+function nwImportOpen() { var panel = nwImportPanel(); panel.style.display = ''; panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+function nwImportErrText(err) {
+  return { text_required: 'Paste the file contents first.', text_too_long: 'That paste is too long — split the export.', bad_format: 'Choose .ics or CSV.',
+    csv_empty: 'The CSV is empty.', csv_no_rows: 'The CSV has a header but no rows.', csv_columns: 'The CSV needs a Date column and a To or From column in its header row.',
+    ics_no_events: 'No VEVENT blocks found in the paste.', reference_required: 'Type your reference first.', rows_required: 'Tick at least one row.',
+    view_only: 'This view is read-only.' }[err] || nwErrText(err);
+}
+function nwImportPropose() {
+  var text = document.getElementById('nw-import-text').value, format = document.getElementById('nw-import-format').value;
+  if (!text.trim()) { nwImportStatus(nwImportErrText('text_required'), 'err'); return; }
+  nwImportStatus('Parsing and matching…');
+  document.getElementById('nw-import-list').innerHTML = ''; document.getElementById('nw-import-bar').style.display = 'none';
+  nwApiBody('import', { text: text, format: format }, function(res) {
+    if (!(res && res.success)) { nwImportStatus(nwImportErrText(res && res.error), 'err'); return; }
+    _nwImport.proposals = res.proposals || []; _nwImport.format = res.format;
+    nwImportPaint();
+    var dup = _nwImport.proposals.filter(function(p) { return p.matched && p.duplicate; }).length;
+    nwImportStatus(res.rows + ' row' + (res.rows === 1 ? '' : 's') + ' read as ' + (res.format === 'ics' ? '.ics' : 'CSV') + ' · ' + res.matched + ' matched a contact' + (dup ? ' (' + dup + ' already recorded)' : '') + ' · ' + res.unmatched + ' did not. Nothing is recorded yet.', res.matched ? 'warn' : 'err');
+  });
+}
+function nwImportPaint() {
+  var list = document.getElementById('nw-import-list'), bar = document.getElementById('nw-import-bar');
+  list.innerHTML = '';
+  var any = false;
+  _nwImport.proposals.forEach(function(p, i) {
+    var row = nwEl('div', 'nw-import-row' + (p.matched ? '' : ' nw-unmatched')); row.setAttribute('data-index', String(i)); row.setAttribute('data-matched', p.matched ? '1' : '0');
+    if (p.matched) {
+      any = true;
+      var chk = document.createElement('input'); chk.type = 'checkbox'; chk.className = 'nw-import-check'; chk.checked = !p.duplicate; chk.setAttribute('aria-label', 'Record this touch for ' + p.contactName);
+      row.appendChild(chk);
+      var main = nwEl('div', 'nw-import-main');
+      main.appendChild(document.createTextNode(p.contactName || p.contactId));
+      main.appendChild(nwEl('small', null, p.email + ' · ' + p.date + (p.line ? ' · ' + p.line : '') + (p.duplicate ? ' · already recorded' : '')));
+      row.appendChild(main);
+      var sel = document.createElement('select'); sel.className = 'nw-import-kind'; sel.setAttribute('aria-label', 'Kind of touch');
+      NW_IMPORT_KINDS.forEach(function(k) { var op = document.createElement('option'); op.value = k[0]; op.textContent = k[1]; if (k[0] === p.kind) op.selected = true; sel.appendChild(op); });
+      row.appendChild(sel);
+    } else {
+      var why = { no_contact: 'no contact with this email', no_date: 'no usable date', no_email: 'no address on the row' }[p.reason] || p.reason;
+      var um = nwEl('div', 'nw-import-main');
+      um.appendChild(document.createTextNode(p.email || '(no address)'));
+      um.appendChild(nwEl('small', null, [p.date, p.line].filter(Boolean).join(' · ') + ' · ' + why + ' — not recorded'));
+      row.appendChild(um);
+    }
+    list.appendChild(row);
+  });
+  bar.style.display = any ? '' : 'none';
+}
+function nwImportConfirm() {
+  var reference = document.getElementById('nw-import-ref').value.trim();
+  if (!reference) { nwImportStatus(nwImportErrText('reference_required'), 'err'); document.getElementById('nw-import-ref').focus(); return; }
+  var rows = [], rowEls = [];
+  document.querySelectorAll('#nw-import-list .nw-import-row[data-matched="1"]').forEach(function(el) {
+    var chk = el.querySelector('.nw-import-check'); if (!chk || !chk.checked || el.classList.contains('nw-done')) return;
+    var p = _nwImport.proposals[Number(el.getAttribute('data-index'))]; if (!p) return;
+    rows.push({ contactId: p.contactId, kind: el.querySelector('.nw-import-kind').value, date: p.date, line: p.line || '', ref: p.ref || '' }); rowEls.push(el);
+  });
+  if (!rows.length) { nwImportStatus(nwImportErrText('rows_required'), 'err'); return; }
+  nwImportStatus('Recording ' + rows.length + ' touch' + (rows.length === 1 ? '' : 'es') + '…');
+  nwApiBody('importconfirm', { rows: JSON.stringify(rows), reference: reference }, function(res) {
+    if (!(res && res.success)) { nwImportStatus('Could not record (' + nwImportErrText(res && res.error) + ')', 'err'); return; }
+    var rejectedAt = {}; (res.rejected || []).forEach(function(r) { rejectedAt[r.index] = r.reason; });
+    rowEls.forEach(function(el, i) {
+      if (rejectedAt[i] !== undefined) { el.classList.add('nw-rejected'); el.querySelector('.nw-import-main small').textContent += ' · not recorded (' + ({ duplicate: 'already recorded', not_found: 'contact not found', deleted: 'contact deleted', bad_kind: 'kind not importable', bad_date: 'bad date' }[rejectedAt[i]] || rejectedAt[i]) + ')'; return; }
+      el.classList.add('nw-done'); var chk = el.querySelector('.nw-import-check'); chk.checked = true; chk.disabled = true;
+    });
+    nwImportStatus('✓ ' + res.written + ' touch' + (res.written === 1 ? '' : 'es') + ' recorded' + ((res.rejected || []).length ? ' · ' + res.rejected.length + ' not recorded' : '') + '.', res.written ? 'ok' : 'err');
+    if (res.written) nwAfterWrite();
+  });
 }
 
 // PROJECT END

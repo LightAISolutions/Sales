@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.22r] — 2026-09-23 12:41:01 AM EST
+
+> **Prompt:** "Run N4 session 1 — warmth, the reconnect list and the import panel — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.15 is the brief (follow its reading list in order, then its five build steps exactly; session 2 is not this session), §4.4's first two bullets and §3's D15 / D9 the design, repository-information/NETWORK-SCHEMA.md §3 / §4 / §5 / §12 the shapes. E4 is Done in §11 (v07.21r; Network.gs v01.13g, Network.html v01.22w, Events.gs v01.07g, Events.html v01.08w, Scraper.gs v02.22g). Live state you cannot see from the repo: NETWORK_CORPUS_TOKEN [is / is not] set in both projects, and one article's people [did / did not] read on an account in Network with one accepted. Build the warmth score and the cadence table in Network.gs (computed, never stored; carried on the list row beside lastTouch and on the detail), nop=reconnect, the server-side .ics / CSV parse → proposal list → nop=importconfirm writing only the ticked rows as email-in / email-out / calendar Interactions with the developer's own reference as evidence — no Gmail or Calendar scope, no trigger, no consent prompt; the Warmth chip and sort, the Reconnect card and the Import touches panel in Network.html; scripts/check-network-warmth.js on the sandbox idiom with zero live calls; the verifier's three passes. No E5, no Routine, no new scope, never a gmail.* scope; the session never calls any app. Verify with the E4 session 3 list plus node scripts/check-network-warmth.js, and grep the served page and the .gs for GmailApp, CalendarApp, gmail. and linkedin.com. Bump Network.gs / Network.html per [PC-GS-VERSION] #1 / [PC-HTML-VERSION] #2 with changelog entries that name no account or person; CHANGELOG entry; README tree entry for the harness; NETWORK-SCHEMA.md §5; flip §11's N4 row to In progress — session 1 with the versions and write the session-2 brief as §13.16. Then hand off in chat: redeploy Network, read the warmth chips against three contacts you know, open Reconnect, paste one .ics and confirm one row. Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first; parallel sessions push, so check git ls-remote before pushing. Read the live CHANGELOG counter; no rotation is due unless it reads 100. One push."
+
+### Added
+- **N4 session 1 — warmth, the reconnect list and the import panel** (design plan §4.4's first two bullets, D15 / D9; §11's N4 row flipped to **In progress — session 1 done** with the versions; the session-2 brief written as §13.16 with its paste-in prompt). Warmth and cadence are computed on every read and stored nowhere — `NETWORK-SCHEMA.md` §5 rewritten as built (the kind weights, the 90-day half-life, hot ≥ 2 · warm ≥ 0.75 · cool ≥ 0.2, the cadence table per role × relationship, the reconnect list, the import panel's request / answer / refusal shapes); §12 names the three ops' audit keys; §14 the new checker
+- `scripts/check-network-warmth.js` — the sandbox harness (the real warmth and cadence helpers, the list op's single touch pass, `nwListOp_` / `nwGetOp_`, `nwReconnectOp_`, the `.ics` and CSV parsers, `nwImportOp_` / `nwImportConfirmOp_` with the real `nwInteractionAdd_` in one VM context): warmth against hand-computed values and every band edge, every cadence cell, warmth on the row and the detail from one read and stored in no tab, the reconnect order and its exclusions, the parsers on fixtures, a proposal that writes nothing with the unmatched address never written, a confirm that writes only the ticked rows with the reference · ref as evidence and refuses the rest per row, the duplicate on a re-confirm, no mail or calendar scope in the PROJECT region or the page, the page's byte-for-byte mirror of the legend constants — 66 checks, zero live calls; README tree entry
+- `scripts/verify-network-roles.py` — the warmth · reconnect · import passes (the chip on every row, the Warmth sort hottest first without a request, the detail's cadence and lapse, the Reconnect card most overdue first and its Draft into the drafts flow, a pasted `.ics` → one matched and one unmatched proposal → only the ticked row confirmed with the reference); the D15 grep now names `CalendarApp` and the calendar scopes; two screenshots
+
+### Changed
+- `scripts/check-network-schema.py`: `matched` · `unmatched` join the audit-detail allow-list (counts — the checker still refuses an address, a name, a line or the reference)
+- The verifier's N3 s1 sort test expects the Warmth sort live (it asserted the disabled placeholder until now)
+
+#### `Network.gs` — v01.14g
+
+##### Added
+- `NW_WARMTH_WEIGHTS` · `NW_WARMTH_HALF_LIFE_DAYS` · `NW_WARMTH_BANDS` · `NW_CADENCE_DAYS` (§5; the only tuning surface, not a tab); `nwWarmth_` / `nwWarmthBand_` / `nwCadenceDays_` / `nwWarmthDetail_`; `nwTouchPass_` — one read of the Interactions tab answers `lastTouch` AND warmth (`nwLastTouch_` delegates to it; the export op still reads it)
+- `nop=list` rows carry `warmth` + `warmthBand` beside `lastTouch`; `nop=get` answers the `warmth` block (score, band, last touch, cadence, since, overdue)
+- `nop=reconnect` — the contacts past their cadence, most overdue first, the minimum row plus the lapse; do-not-contact rows left out; capped at 200; audit counts only
+- `nop=import` (body-POST) — the pasted `.ics` (unfolded, VEVENT · UID · SUMMARY · DTSTART · ATTENDEE / ORGANIZER `mailto:`; DESCRIPTION never read) or CSV (RFC 4180, a header matched by name, a direction column, a Message-ID column, tab-separated accepted) parsed server-side, matched to live contacts by email, answered as a proposal list with the unmatched addresses and the already-recorded rows marked — nothing written; `nop=importconfirm` (body-POST) — the ticked rows judged per row and written as `email-in` / `email-out` / `calendar` Interactions with the developer's reference (· the UID or Message-ID) as Evidence Link and the one line as Summary; a write scope required
+
+#### `Network.html` — v01.23w
+
+##### Added
+- The warmth chip on every list row and on the detail (with the cadence and the lapse) — the legend from `NW_WARMTH_WEIGHTS` / `NW_WARMTH_HALF_LIFE_DAYS` / `NW_WARMTH_BANDS` mirrored from the `.gs`; the Warmth sort switched on (hottest first)
+- The 🔥 **Reconnect** masthead card — the lapsed contacts with the lapse and the cadence, Draft per row and for the ticked into the N3 drafts flow
+- The ⇪ **Import touches** masthead panel — format select, the paste, the reference, Propose → the proposal list (a checkbox and a kind select per matched row, unmatched rows shown greyed with the reason) → Record the ticked touches → the list refreshes
 
 ## [v07.21r] — 2026-09-22 11:02:50 PM EST
 

@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 13/50`
+`Sections: 14/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.14g] — 2026-09-23 12:41:01 AM EST — v07.22r
+
+### Added
+- Warmth is computed for every contact on each read — a decayed sum of touches weighted by kind, halving over 90 days — and answered with the list and the detail; nothing is stored
+- A cadence per role and relationship, and a reconnect list of the contacts whose last touch is older than it, most overdue first; contacts marked do not contact are left out
+- A calendar export or a mail CSV pasted into the app is parsed here into a list of proposed touches matched to contacts by email; only the rows you confirm are recorded, each with your own reference as its evidence and one line as its summary — never a message body
+
+### Changed
+- Minor internal improvements
 
 ## [v01.13g] — 2026-09-22 11:02:50 PM EST — v07.21r
 
