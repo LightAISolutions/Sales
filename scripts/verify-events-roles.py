@@ -577,6 +577,49 @@ def phone_pass(page, base, reqs, stars, failures):
     if count != '1':
         failures.append('%s: the Starred count reads %r after one star' % (tag, count))
 
+    # ── the filter pills paint the state they are filtering on ───────
+    # evRender() does not rebuild the filters card, so a pill's aria-pressed
+    # — the whole of what paints it accent-filled — has to be re-derived in
+    # place on every render. Recommended and Signals only set their own by
+    # hand and were covered below; Starred and the three option rows were
+    # not, and went on reading 'false' while they filtered. Assert the paint
+    # against an untouched pill's background, not just the attribute, since
+    # the attribute is only a proxy for what the developer actually sees.
+    plain = page.evaluate("() => getComputedStyle(document.getElementById('ev-f-today')).backgroundColor")
+    page.click('#ev-f-starred')
+    page.wait_for_timeout(250)
+    st = page.evaluate("""() => ({ pressed: document.getElementById('ev-f-starred').getAttribute('aria-pressed'),
+        bg: getComputedStyle(document.getElementById('ev-f-starred')).backgroundColor,
+        rows: document.querySelectorAll('#ev-agenda .ev-row').length })""")
+    if st['pressed'] != 'true' or st['bg'] == plain:
+        failures.append('%s: the Starred pill filtered but never painted pressed: %r (unpressed %r)' % (tag, st, plain))
+    if st['rows'] != 1:
+        failures.append('%s: the Starred pill left %r rows, expected the one starred event' % (tag, st['rows']))
+    page.click('#ev-f-starred')
+    page.wait_for_timeout(250)
+    st2 = page.evaluate("""() => ({ pressed: document.getElementById('ev-f-starred').getAttribute('aria-pressed'),
+        bg: getComputedStyle(document.getElementById('ev-f-starred')).backgroundColor,
+        rows: document.querySelectorAll('#ev-agenda .ev-row').length })""")
+    if st2['pressed'] != 'false' or st2['bg'] != plain or st2['rows'] < 2:
+        failures.append('%s: the Starred pill did not clear: %r' % (tag, st2))
+    # An option row, pressed and pressed again: the second press read a
+    # build-time snapshot of the filter, so it re-picked the same value
+    # instead of clearing it — only 'All' could undo a pill.
+    page.evaluate("() => document.querySelectorAll('#ev-f-kind .ev-pill')[1].click()")
+    page.wait_for_timeout(250)
+    k1 = page.evaluate("""() => { const r = document.getElementById('ev-f-kind').children;
+        return { one: r[1].getAttribute('aria-pressed'), all: r[0].getAttribute('aria-pressed'),
+                 bg: getComputedStyle(r[1]).backgroundColor, filter: _evFilters.kind,
+                 val: r[1].getAttribute('data-ev-val') }; }""")
+    if k1['one'] != 'true' or k1['all'] != 'false' or k1['bg'] == plain or k1['filter'] != k1['val']:
+        failures.append('%s: the Kind pill did not paint pressed: %r' % (tag, k1))
+    page.evaluate("() => document.querySelectorAll('#ev-f-kind .ev-pill')[1].click()")
+    page.wait_for_timeout(250)
+    k2 = page.evaluate("""() => { const r = document.getElementById('ev-f-kind').children;
+        return { one: r[1].getAttribute('aria-pressed'), all: r[0].getAttribute('aria-pressed'), filter: _evFilters.kind }; }""")
+    if k2['one'] != 'false' or k2['all'] != 'true' or k2['filter'] != '':
+        failures.append('%s: a second press on the Kind pill did not clear it: %r' % (tag, k2))
+
     # ── the day-plan tab: the starred event on its first day ───────────────
     start = page.evaluate("s => _evBySlug[s].start", slug)
     page.click('#ev-tab-day')

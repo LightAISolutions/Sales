@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11w] — 2026-09-23 05:58:28 AM EST — v07.26r
+
+### Fixed
+
+- **The filter pills now fill in when you press one.** Pressing **★ Starred** narrowed the list but the pill stayed unfilled, so nothing on screen said the list was narrowed — it now fills accent-blue for as long as the filter is on, and clears when you press it again
+- The same fix reaches **Kind**, **Region** and **Audience segment**: those pills also filtered without filling in, and pressing one a second time re-picked it instead of clearing it — only **All** could undo a choice. A second press now clears the pill, as it always looked like it should
 
 ## [v01.10w] — 2026-09-23 03:09:19 AM EST — v07.25r
 

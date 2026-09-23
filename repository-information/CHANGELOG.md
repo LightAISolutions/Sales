@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.26r] — 2026-09-23 05:58:28 AM EST
+
+> **Prompt:** "Picking up from my last session, before I continue on to run phase X, I noticed that I did not fill in the brackets when I pasted the prompt to run E5 session 2. See attached screenshots for what I see in two different starred events' "Plan" tab. I also noticed that when I toggle on the "Starred" filter, it does filter out non-starred events, but does not fill in the button blue - Fix that." (with five screenshots: the Plan tab of `acp-recharge-2026` and `ocp-global-summit-2026`, and the filter card with the Starred pill and the Starred count ringed)
+
+### Fixed
+
+#### `live-site-pages/Events.html`
+
+- The filter pills never repainted their pressed state after a press. `evRender()` rebuilds the agenda and the counts but deliberately leaves the filters card alone — rebuilding it would drop the segment row's horizontal scroll position and the `data-busy` flag an in-flight score fetch sets — and `aria-pressed` is the whole of what paints a pill accent-filled (`.ev-pill[aria-pressed="true"]`). E3's **Recommended** and E4's **Signals only** each set their own pill by hand and so looked right; **★ Starred** and the three option rows never got that treatment and filtered while reading `false`. New `evSyncPills()` re-derives every filter pill's `aria-pressed` from `_evFilters` / `_evRecMode` in place, called at the top of `evRender()`. The two hand-set calls stay — they are the immediate feedback before their fetch returns, including the rollback on a failed one
+- A second, latent bug from the same root cause: `evPillRow()` captured `current` at build time, and since the card is built once that snapshot never moved — so pressing an option pill a second time re-picked the same value instead of clearing it, and only **All** could undo a choice. The row now takes the `_evFilters` key and reads the live value for both the pressed state and the un-toggle; each pill carries `data-ev-val` for the sync to match on
+
+#### `scripts/verify-events-roles.py`
+
+- A filter-pill pass in the phone section, after the star round-trip: **★ Starred** presses to `aria-pressed="true"` with a computed background that differs from an untouched pill's and the agenda down to the one starred row, presses again to clear; a **Kind** pill paints pressed with `_evFilters.kind` agreeing with its `data-ev-val`, and a second press clears it back to **All**. The assertion is on the paint, not the attribute alone, because the attribute is only a proxy for what the developer sees. Verified both ways: with `evSyncPills()` commented out it fails with `pressed: 'false'`, the untouched background and `rows: 1` — the reported symptom exactly — and passes with it restored
+
+### Notes
+
+- The two starred events in the screenshots (`acp-recharge-2026`, `ocp-global-summit-2026`) show `0 booths · 0 sessions · 0 venues` because **neither registry row carries `venueLatLng`, `agendaUrl` or `hours[]`**, and no Network signal names either slug. Registry coverage across the 96 upcoming rows: `venueLatLng` 26, `agendaUrl` 16, `hours[]` 2. Every empty line in the Plan tab names the input it is missing, so the tab is rendering a thin row faithfully rather than failing. No code change — recorded so the next enrichment pass has the counts
+- `ocp-global-summit-2026` carries nine Profiler `mentions[]` and still lists no booths: booths come only from `rec.signalsBySlug[slug]` — Network attendance signals — and a dossier mention is not attendance evidence (D9 / D16). Behaving as designed
 
 ## [v07.25r] — 2026-09-23 03:09:19 AM EST
 

@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.10w">
+  <meta name="build-version" content="v01.11w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -4740,28 +4740,70 @@ function evPill(label, pressed, onTap, opts) {
   b.addEventListener('click', function(ev) { ev.preventDefault(); if (opts && opts.disabled) return; onTap(); });
   return b;
 }
-function evPillRow(id, options, current, onPick, scroll) {
+// `key` names the _evFilters field this row drives. The filters card is
+// built once and never rebuilt (evSyncPills below repaints it in place), so
+// a snapshot of the current value would freeze at its build-time reading:
+// the pressed state would never move and a second press on an option would
+// re-pick it instead of clearing it. Both read through cur() instead, and
+// data-ev-val is what evSyncPillRow matches against.
+function evPillRow(id, options, key, onPick, scroll) {
   var row = evEl('div', 'ev-pills' + (scroll ? ' ev-scroll' : '')); row.id = id;
-  row.appendChild(evPill('All', !current, function() { onPick(''); }));
-  options.forEach(function(o) { row.appendChild(evPill(o[1], current === o[0], function() { onPick(current === o[0] ? '' : o[0]); })); });
+  var cur = function() { return _evFilters[key]; };
+  var all = evPill('All', !cur(), function() { onPick(''); });
+  all.setAttribute('data-ev-val', '');
+  row.appendChild(all);
+  options.forEach(function(o) {
+    var p = evPill(o[1], cur() === o[0], function() { onPick(cur() === o[0] ? '' : o[0]); });
+    p.setAttribute('data-ev-val', o[0]);
+    row.appendChild(p);
+  });
   return row;
+}
+// PROJECT: ── Keeping the filter pills' pressed state true after a render ──
+// evRender() rebuilds the agenda and the counts but deliberately leaves the
+// filters card alone: rebuilding it would drop the segment row's horizontal
+// scroll position and the data-busy flag an in-flight score fetch sets. So
+// aria-pressed — which is the whole of what paints a pill accent-filled
+// (.ev-pill[aria-pressed="true"]) — has to be re-derived in place instead.
+// E3's Recommended and E4's Signals only each set their own pill by hand for
+// the immediate feedback before their fetch returns; those calls stay. This
+// is the one place that corrects *every* pill from state afterwards, which
+// is what Starred and the three option rows were missing.
+function evSyncPillRow(id, current) {
+  var row = document.getElementById(id);
+  if (!row) return;
+  Array.prototype.forEach.call(row.children, function(p) {
+    if (!p.hasAttribute('data-ev-val')) return;   // an action pill (Today), not a state one
+    p.setAttribute('aria-pressed', p.getAttribute('data-ev-val') === String(current || '') ? 'true' : 'false');
+  });
+}
+function evSyncPills() {
+  evSyncPillRow('ev-f-kind', _evFilters.kind);
+  evSyncPillRow('ev-f-region', _evFilters.region);
+  evSyncPillRow('ev-f-segment', _evFilters.segment);
+  var press = function(id, on) { var b = document.getElementById(id); if (b) b.setAttribute('aria-pressed', on ? 'true' : 'false'); };
+  press('ev-f-starred', _evFilters.starred);
+  press('ev-f-rec', _evRecMode);
+  press('ev-f-signals', _evFilters.signals);
 }
 function evFiltersCard() {
   var card = evEl('div', 'ev-card'); card.id = 'ev-filters';
   var head = evEl('div', 'ev-controls');
   var h1 = evEl('div', 'ev-half'); h1.appendChild(evEl('span', 'ev-lbl', 'Kind'));
-  h1.appendChild(evPillRow('ev-f-kind', EV_KINDS, _evFilters.kind, function(v) { _evFilters.kind = v; evRender(); }));
+  h1.appendChild(evPillRow('ev-f-kind', EV_KINDS, 'kind', function(v) { _evFilters.kind = v; evRender(); }));
   var h2 = evEl('div', 'ev-half'); h2.appendChild(evEl('span', 'ev-lbl', 'Region'));
-  h2.appendChild(evPillRow('ev-f-region', evRegionOptions(), _evFilters.region, function(v) { _evFilters.region = v; evRender(); }));
+  h2.appendChild(evPillRow('ev-f-region', evRegionOptions(), 'region', function(v) { _evFilters.region = v; evRender(); }));
   head.appendChild(h1); head.appendChild(h2);
   card.appendChild(head);
   var row2 = evEl('div', 'ev-controls');
   var h3 = evEl('div', 'ev-half'); h3.appendChild(evEl('span', 'ev-lbl', 'Audience segment'));
   var segs = Object.keys(_evSegmentName).map(function(id) { return [id, _evSegmentName[id]]; });
-  h3.appendChild(evPillRow('ev-f-segment', segs, _evFilters.segment, function(v) { _evFilters.segment = v; evRender(); }, true));
+  h3.appendChild(evPillRow('ev-f-segment', segs, 'segment', function(v) { _evFilters.segment = v; evRender(); }, true));
   var h4 = evEl('div', 'ev-half'); h4.appendChild(evEl('span', 'ev-lbl', 'Mine'));
   var mine = evEl('div', 'ev-pills'); mine.id = 'ev-f-mine';
-  mine.appendChild(evPill('★ Starred', _evFilters.starred, function() { _evFilters.starred = !_evFilters.starred; evRender(); }));
+  var star = evPill('★ Starred', _evFilters.starred, function() { _evFilters.starred = !_evFilters.starred; evRender(); });
+  star.id = 'ev-f-starred'; star.title = 'Only the events you starred';
+  mine.appendChild(star);
   if (evRecAllowed()) {   // E3 — ranks the agenda by the server-side score; every press fetches (a Tuning edit needs no deploy)
     var rec = evPill('Recommended', _evRecMode, function() { evRecToggle(rec); });
     rec.id = 'ev-f-rec'; rec.title = 'Rank the upcoming events by the recommendation score — open one for the why';
@@ -4827,6 +4869,7 @@ function evRender() {
   var app = document.getElementById('ev-app');
   var wrap = document.getElementById('ev-agenda');
   if (!app || !wrap) return;
+  evSyncPills();
   wrap.innerHTML = '';
   var today = evToday();
   var upcoming = [], past = [];
