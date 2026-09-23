@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.28r] — 2026-09-23 07:30:03 AM EST
+
+> **Prompt:** "I want to run the Megmeet SST briefing overnight and wake up to a very robust comprehensive downloadable PDF that carefully considered what information I should know prior to starting a job as their "Senior Sales Manager - SST Solutions". I heard that they are in active communication with NVIDIA and Oracle's engineering teams, so I need to understand SSTs in their entirety: technical terminology, comparison with previous and adjacent technology, value in 800Vdc power infrastructure (shown from different players' perspectives), limitations and what relevant players are doing about it, which players are testing SSTs (preferably 34.5kVac instead of 12.47kVac), what obstacles are blocking its adoption (technical limitations, infrastructure issues, operation & maintenance issues, etc.), and anything else you can think of. I also want to have a good understanding of Megmeet's competitors and how we compare to them (specifically on SSTs, but I also want to know our relative positions in adjacent business units too). I want you to use as many tables, graphs, timelines, charts, diagrams, pictures, and other mechanisms to ensure I properly understand and can memorize this information. If you think interactive widgets would be useful for me to understand a specific concept, feel free to build it and present the widget(s) to me in whichever format you think would be most convenient for me. Fold this context in with the original briefing plan and carefully consider how to plan, execute, and check a comprehensive report for me - I will want you to give me a prompt to paste into a new session. Also consider which AI model and effort level I should use to generate the most cost effective report with practical usefulness and recommend it to me with reasoning. Then, give me the prompt with recommended model/effort level."
+
+The Megmeet SST onboarding briefing plan rewritten as **v2** — the developer's widened scope folded into the deferred v1 prompt: a pre-flight run today, a corpus inventory, an ask-by-ask delta, the deliverables, a model and effort recommendation (Opus 5 `xhigh`, with the alternatives set aside and why), a phased overnight run with three checkpoint pushes and a twelve-line check rubric, the paste-in prompt, a resume prompt and a night-of checklist. Nothing was built or researched beyond the plan; the reminder in `REMINDERS.md` is untouched (developer-owned — its v1 budget line is now superseded by the plan's §4).
+
+### Changed
+
+#### `repository-information/megmeet-briefing-prompt.md`
+
+- **§0 Pre-flight results as of 2026-09-23** — both v1 checks run while writing: the quarterly core queue reads `dueCount: 0`; the SST four are at v1/v2 dated 2026-09-12 → 09-19; Megmeet is v7 (2026-09-08); Oracle v5 (2026-09-21) and NVIDIA v10 carry no SST content (that material lives in the NVIDIA guidance module and the primer); `aidc-power-conversion--competitive--2026-09-08` is still `current`; matplotlib and Playwright are absent from a fresh container; the CHANGELOG counter is one push from the rotation threshold, so the rotation falls due during the overnight run.
+- **§1 What the repo already holds** — the 20,000-word, 14-figure SST primer (v05.36r–v05.38r, 2026-09-12) is the technical spine the run extends rather than rebuilds; the 2026-09-08 report, the NVIDIA guidance module, the Megmeet dossier / study guide / interview brief / lesson plan (the last three five dossier versions stale), the SST four's 34.5 kV material (Heron ×12, DG Matrix ×17, Amperesand ×10, Novos ×2; Megmeet's own SST discloses no voltage class), and why neither the Markdown PDF renderer (no image support) nor Classroom (public-safety and the C2 gate surface) is used.
+- **§2 The delta** — ten rows, one per ask: the term system with memorisation tables; the lineage and adjacency matrix; the value-by-perspective matrix; limitation → mitigation → who → status; the pilot-and-test ledger by service-voltage class with the 34.5 kV argument and an explicit *undisclosed* rule; the O&M, standards, utility-acceptance and procurement obstacles (the primer's thin spot — one mention of maintenance, none of spares or MTBF); the SST competitor matrix plus the adjacent-BU position table; the NVIDIA / Oracle engineering chapter with the hearsay rule; the figure and widget mechanisms; the "anything else" row.
+- **§3 Deliverables** — D1 the Profiler competitive report (dossiers-only, public Pages data, builds on and does not supersede the 2026-09-08 edition); D2 the PDF from a print-HTML source on the primer's skin with `mmsst-fig-` figures and copies of the primer's two build scripts under `study-prep/megmeet/`; D3 the self-contained study companion with seven prioritised widgets, Playwright-tested from `file://`; the shared data file as the single source for every plotted number; the brief's five-part table of contents and the minimum figure set.
+- **§4 Model and effort** — Opus 5 `xhigh`, one session, subagents on the same model: the repo's Xcel head-to-head (reading depth is where Opus led), the citation-tier rule and the rubric as the discipline mechanism, half Fable's per-token price and none of the Fable weekly sub-allocation, `xhigh` over `high` and `max`, latency free overnight; Fable 5.1, Sonnet 5 (offered as the Phase B subagent cost lever), Opus 5.5, effort `max` and a two-session split set aside with reasons; a ~3–5 hour, ~$120–250 API-equivalent estimate stated as judgment, not measurement.
+- **§5 The run** — phases 0 · A (corpus read into two scratchpad ledgers) · B (five bounded web subagents) · C (D1, push 1) · D (data file → figures → brief chapter by chapter → PDF with proof pages, push 2) · E (companion) · F (a fresh subagent audits the PDF against the twelve-line rubric, push 3); failure handling decided in advance for a stuck branch, a failed PDF build, missing matplotlib, blocked hosts, context pressure and a dead container.
+- **§6 The paste-in prompt** (new session, Opus 5, `xhigh`), **§7 the resume prompt**, **§8 the developer's night-of checklist**.
+
+#### `README.md`
+
+- The tree description of `megmeet-briefing-prompt.md` now describes the v2 run plan; timestamp and repo version.
 
 ## [v07.27r] — 2026-09-23 06:45:15 AM EST
 
