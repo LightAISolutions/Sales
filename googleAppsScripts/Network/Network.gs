@@ -1,4 +1,4 @@
-var VERSION = "v01.15g";
+var VERSION = "v01.16g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1222,6 +1222,7 @@ function nwHandlePeer_(e) {
   try {
     if (op === 'accounts') return nwPeerAccounts_(p);
     if (op === 'signals') return nwPeerSignals_(e, p);
+    if (op === 'interaction') return nwPeerInteraction_(e, p);   // E5 s1: the pick list (GET) and the meeting write (POST)
   } catch (err) {
     // Answer as JSON so the caller can relay something true instead of
     // parsing Apps Script's HTML exception page (guidancepeer's lesson).
@@ -1300,15 +1301,16 @@ function nwPeerSignals_(e, p) {
 // e.postData.contents; a form-encoded caller may instead put the JSON in a
 // `signals` field. Neither is trusted beyond JSON.parse — every row is
 // validated field by field in the write leg.
-function nwPeerJsonBody_(e, p) {
+function nwPeerJsonBody_(e, p, field) {
+  var key = field || 'signals';   // E5 s1: nop=interaction reads its rows under `interactions`
   var raw = '';
   if (e && e.postData && e.postData.contents) raw = String(e.postData.contents);
-  else if (p && p.signals) raw = String(p.signals);
+  else if (p && p[key]) raw = String(p[key]);
   if (!raw) return null;
   try {
     var parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== 'object') return null;
-    if (Object.prototype.toString.call(parsed) === '[object Array]') return { signals: parsed };
+    if (Object.prototype.toString.call(parsed) === '[object Array]') { var wrapped = {}; wrapped[key] = parsed; return wrapped; }
     return parsed;
   } catch (jErr) { return { parseError: true }; }
 }
@@ -1413,6 +1415,92 @@ function nwPeerSignalsWrite_(tabs, owner, body, source) {
   auditLog('data_write', owner, source === 'events' ? 'peer_signals_write' : 'signals_write_' + source,
     { written: written, updated: updated, rejected: rejected.length });
   return { success: true, written: written, updated: updated, rejected: rejected };
+}
+
+// nop=interaction — two legs on one op (E5 s1, design plan §5.6 item 4,
+// D15; the one bridge widening of that session).
+//   GET with accountId — the PICK LIST a meeting is booked against: the live
+//   contacts under one of the owner's accounts, minimum necessary (id · name
+//   · title · role — what nop=get answers beneath an account; no emails, no
+//   phones, no notes).
+//   POST with a JSON body { owner, interactions:[ { contactId, accountId?,
+//   kind ∈ meeting · calendar, date, summary, evidence, eventSlug? } ] } —
+//   Events' booking writes ONE `meeting` Interaction per booked slot through
+//   the same nwInteractionAdd_ every session op uses. Each row is validated
+//   field by field and rejected by index (one bad row never fails the
+//   batch): the contact must exist, be live and be the owner's
+//   (contact_not_found), the account named must be the contact's
+//   (account_mismatch), the kind on the short list (bad_kind), the day a day
+//   (bad_date), the summary one line (summary_required — collapsed, capped
+//   at 500; never a body), the evidence an Events mt- / pl- id or an
+//   https?:// URL (bad_evidence), the slug the peer shape or empty
+//   (bad_slug). Answers { written, rejected[], ids[] } — the i- ids in row
+//   order so Events can store the record's id on its Meetings row. Never
+//   trusted beyond JSON.parse; audit rows carry counts and the account id.
+var NW_PEER_INTERACTION_KINDS = ['meeting', 'calendar'];
+var NW_PEER_EVIDENCE_RE = /^(mt|pl|p)-[0-9a-z]{13}$/;   // an Events plan / meeting id (EVENTS-SCHEMA.md §1)
+
+function nwPeerInteraction_(e, p) {
+  var owner = nwPeerOwner_(p);
+  if (!owner) return { success: false, error: 'owner_required' };
+  var body = nwPeerJsonBody_(e, p, 'interactions');
+  if (body && body.parseError) return { success: false, error: 'bad_json' };
+  if (body && body.owner && String(body.owner).trim().toLowerCase() !== owner) return { success: false, error: 'owner_mismatch' };
+  var tabs = ensureNetworkTabs_();
+  if (!body || !body.interactions) return nwPeerContactsRead_(tabs, owner, p);
+  return nwPeerInteractionWrite_(tabs, owner, body);
+}
+
+function nwPeerContactsRead_(tabs, owner, p) {
+  var accountId = nwStr_(p.accountId);
+  if (!NW_ID_RE.test(accountId) || accountId.charAt(0) !== 'a') return { success: false, error: 'bad_account_id' };
+  var at = nwSheetRead_(tabs.accounts), af = nwFindRow_(at, accountId);
+  if (!af || !nwOwned_(af, owner) || String(af.obj['Deleted At'] || '')) return { success: false, error: 'account_not_found' };
+  var ct = nwSheetRead_(tabs.contacts), out = [];
+  for (var r = 1; r < ct.vals.length; r++) {
+    var row = ct.vals[r];
+    if (String(row[ct.idx['Owner']] || '').toLowerCase() !== owner) continue;
+    if (String(row[ct.idx['Account ID']] || '') !== accountId || String(row[ct.idx['Deleted At']] || '')) continue;
+    out.push({ id: String(row[ct.idx['Contact ID']] || ''), name: String(row[ct.idx['Full Name']] || ''), title: String(row[ct.idx['Title']] || ''), role: String(row[ct.idx['Role']] || '') });
+  }
+  out.sort(function(a, b) { return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : a.name.toLowerCase() > b.name.toLowerCase() ? 1 : 0; });
+  auditLog('data_read', owner, 'peer_interaction_read', { accountId: accountId, contacts: out.length });
+  return { success: true, built: nwNow_(), accountId: accountId, contacts: out };
+}
+
+function nwPeerInteractionWrite_(tabs, owner, body) {
+  var list = nwArr_(body.interactions);
+  if (!list.length) return { success: false, error: 'interactions_required' };
+  if (list.length > 100) return { success: false, error: 'too_many_interactions' };
+  var ct = nwSheetRead_(tabs.contacts), live = {};
+  for (var r = 1; r < ct.vals.length; r++) {
+    var row = ct.vals[r];
+    if (String(row[ct.idx['Owner']] || '').toLowerCase() !== owner || String(row[ct.idx['Deleted At']] || '')) continue;
+    live[String(row[ct.idx['Contact ID']] || '')] = String(row[ct.idx['Account ID']] || '');
+  }
+  var it = nwSheetRead_(tabs.interactions), taken = {};
+  for (var t = 1; t < it.vals.length; t++) taken[String(it.vals[t][0] || '')] = true;
+  var now = nwNow_(), written = 0, rejected = [], ids = [];
+  for (var i = 0; i < list.length; i++) {
+    var x = list[i] && typeof list[i] === 'object' ? list[i] : {};
+    var contactId = nwStr_(x.contactId), accountId = nwStr_(x.accountId), kind = nwStr_(x.kind, 40).toLowerCase();
+    var date = nwStr_(x.date, 10), summary = nwStr_(x.summary, 500).replace(/\s+/g, ' '), evidence = nwStr_(x.evidence, 500), slug = nwStr_(x.eventSlug, 64).toLowerCase();
+    var reason = '';
+    if (!NW_ID_RE.test(contactId) || contactId.charAt(0) !== 'c') reason = 'bad_contact_id';
+    else if (!live.hasOwnProperty(contactId)) reason = 'contact_not_found';
+    else if (accountId && accountId !== live[contactId]) reason = 'account_mismatch';
+    else if (NW_PEER_INTERACTION_KINDS.indexOf(kind) < 0) reason = 'bad_kind';
+    else if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || isNaN(new Date(date + 'T00:00:00Z').getTime())) reason = 'bad_date';
+    else if (!summary) reason = 'summary_required';
+    else if (!(NW_PEER_EVIDENCE_RE.test(evidence) || /^https?:\/\/\S+$/i.test(evidence))) reason = 'bad_evidence';
+    else if (slug && !NW_PEER_SLUG_RE.test(slug)) reason = 'bad_slug';
+    if (reason) { rejected.push({ index: i, reason: reason }); ids.push(''); continue; }
+    var id = nwInteractionAdd_(tabs, owner, contactId, live[contactId], kind, date, summary, evidence, slug, now, taken);
+    taken[id] = true; ids.push(id); written++;
+  }
+  if (written) bumpDataRev();
+  auditLog('data_write', owner, 'peer_interaction_write', { written: written, rejected: rejected.length });
+  return { success: true, written: written, rejected: rejected, ids: ids };
 }
 
 // nop=signals (session, GET) — accountId or contactId. A contact resolves

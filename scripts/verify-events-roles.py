@@ -149,12 +149,56 @@ def recommend_stub():
             'seatSegments': [], 'unavailable': [], 'starred': 1, 'events': events}
 
 
+def plan_stub(slug, meetings):
+    """E5 s1 — eop=plan for the top scored event: five ranked booths each with
+    a verbatim dossier line and a stage, two sessions, one day per event day
+    (the first with registry hours, the rest the default frame) carrying two
+    visits, a session, the booked meetings and open slots, three venues within
+    600 m, and the meetings booked so far through the stateful stub."""
+    reg = json.loads((LIVE / 'events-data' / 'events.json').read_text(encoding='utf-8'))
+    e = next((x for x in reg['events'] if x['slug'] == slug), None) or {'name': slug, 'start': '2026-11-16', 'end': '2026-11-17', 'tz': 'America/Chicago'}
+    names = ['Stub Account Co', 'Beta Storage', 'Gamma Grid', 'Delta Power', 'Epsilon Cells']
+    stages = ['shortlist', 'discovery', 'none', 'prospecting', 'none']
+    rels = ['target', 'target', 'partner', 'target', 'customer']
+    booths = []
+    for i, n in enumerate(names):
+        booths.append({'accountId': 'a-%013d' % (i + 1), 'name': n, 'slug': n.lower().replace(' ', '-'), 'relationship': rels[i], 'stage': stages[i], 'stageWeight': 1.0 - i * 0.1,
+                       'confidence': 0.9, 'accountTerm': round(0.9 - i * 0.09, 2), 'segmentTerm': 0.5, 'rank': round(0.49 - i * 0.05, 2), 'segments': ['utilities'], 'seatSegments': ['utilities'],
+                       'signals': [{'kind': 'exhibitor', 'confidence': 0.9, 'evidenceUrl': 'https://example.com/exhibitors/%d' % i}],
+                       'why': {'text': '(High confidence) %s is the reference bidder in its segment this year — line %d.' % (n, i + 1), 'source': 'strategyRead'} if i < 4 else None, 'covered': i < 4})
+    days = []
+    d0 = e.get('start') or '2026-11-16'
+    import datetime as _dt
+    start = _dt.date.fromisoformat(d0); end = _dt.date.fromisoformat(e.get('end') or d0)
+    day = start
+    while day <= end and len(days) < 4:
+        ds = day.isoformat()
+        items = [{'kind': 'visit', 'start': '09:00', 'end': '09:30', 'title': names[0], 'accountId': 'a-0000000000001', 'rank': 1, 'stage': 'shortlist', 'booth': ''},
+                 {'kind': 'visit', 'start': '09:30', 'end': '10:00', 'title': names[1], 'accountId': 'a-0000000000002', 'rank': 2, 'stage': 'discovery', 'booth': ''},
+                 {'kind': 'session', 'start': '10:00', 'end': '11:00', 'title': 'Grid-scale storage for utilities', 'room': 'Hall B'},
+                 {'kind': 'open', 'start': '11:00', 'end': '14:00', 'title': 'Open slot'}, {'kind': 'open', 'start': '14:00', 'end': '17:00', 'title': 'Open slot'}]
+        for m in meetings:
+            if m['start'][:10] == ds:
+                items.append({'kind': 'meeting', 'start': m['start'][11:16], 'end': m['end'][11:16], 'title': 'Meeting · ' + m['contactName'], 'meetingId': m['id'], 'accountId': m['accountId'], 'contactId': m['contactId'], 'place': m['place']})
+        days.append({'date': ds, 'open': '09:00', 'close': '17:00', 'hoursSource': 'registry' if day == start else 'default', 'items': items})
+        day += _dt.timedelta(days=1)
+    sessions = [{'title': 'Grid-scale storage for utilities', 'date': d0, 'start': '10:00', 'end': '11:00', 'room': 'Hall B', 'speakers': [{'name': 'Rita Ng', 'title': 'Grid Lead', 'company': 'Tesla'}], 'why': [{'kind': 'segment', 'id': 'utilities', 'name': 'Utilities'}]},
+                {'title': 'Financing the fleet', 'date': d0, 'start': '14:00', 'end': '15:00', 'room': '', 'speakers': [{'name': 'Jane Doe', 'title': 'VP Storage', 'company': 'Stub Account Co'}], 'why': [{'kind': 'contact', 'name': 'Jane Doe', 'account': 'Stub Account Co', 'accountId': 'a-0000000000001', 'contactId': 'c-0000000000001'}]}]
+    return {'success': True, 'slug': slug, 'built': '2026-09-23T00:00:00.000Z',
+            'event': {'name': e.get('name', slug), 'start': d0, 'end': e.get('end') or d0, 'tz': e.get('tz', ''), 'venue': e.get('venue') or 'Stub Hall', 'city': e.get('city') or '', 'venueLatLng': [30.2635, -97.7393], 'hasHours': True, 'agendaUrl': ''},
+            'attending': 'registered', 'score': {'score': 0.91, 'terms': {}}, 'weights': {'segmentFit': 0.35, 'accountPresence': 0.35}, 'notConfigured': False,
+            'booths': booths, 'dossiersRead': 5, 'keywords': [{'id': 'utilities', 'name': 'Utilities'}], 'sessions': sessions, 'agenda': {'read': 4, 'status': 200, 'cached': False, 'skipped': '', 'error': ''},
+            'days': days, 'venues': [{'name': 'Second Street Cafe', 'kind': 'cafe', 'lat': 30.265, 'lng': -97.74, 'distanceM': 180}, {'name': 'Brazos Grill', 'kind': 'restaurant', 'lat': 30.262, 'lng': -97.737, 'distanceM': 277},
+                                     {'name': 'Hotel Cesar', 'kind': 'hotel', 'lat': 30.266, 'lng': -97.742, 'distanceM': 380}],
+            'venuesCached': False, 'venuesError': '', 'meetings': [dict((k, m[k]) for k in m if k != 'slug') | {'accountName': 'Stub Account Co'} for m in meetings]}
+
+
 POLLS_STUB = [{'sourceKey': 'ai-infra-summit', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 2, 'newest': '2027-09-14'},
               {'sourceKey': 'clarion-powergen', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '200', 'items': 1, 'newest': '2027-01-25'},
               {'sourceKey': 'esig-events', 'ranAt': '2026-09-22T06:00:00.000Z', 'status': '403', 'items': 0, 'newest': ''}]
 
 
-def gas_stub(role, counter, stars, proposed=None, signals=None):
+def gas_stub(role, counter, stars, proposed=None, signals=None, meetings=None):
     """Stand in for the deployed Events GAS: records every data request as
     'events:<eop>' and answers the four Stars ops the way handleEventsOp_ /
     evStarOp_ do for the tier, against an in-memory Stars set so a star
@@ -163,6 +207,7 @@ def gas_stub(role, counter, stars, proposed=None, signals=None):
     to it the way the poller ops do."""
     proposed = [] if proposed is None else proposed
     signals = [] if signals is None else signals     # E4: every eop=signal write the page sends
+    meetings = [] if meetings is None else meetings  # E5: the booked meetings (planmeeting appends, planunbook removes)
     def params_of(request):
         q = dict(parse_qsl(urlparse(request.url).query))
         if request.method == 'POST' and request.post_data:
@@ -233,6 +278,28 @@ def gas_stub(role, counter, stars, proposed=None, signals=None):
                 body = {'success': True, 'written': 1, 'updated': 0, 'rejected': [], 'kind': p.get('kind', ''), 'slug': p.get('slug', '')}
             elif eop == 'installsignals':
                 body = {'success': True, 'installed': True, 'removed': 0, 'schedule': 'weekly, Tuesday 06:00 America/New_York'}
+            # E5 session 1 — the plan tab: the plan, the pick list, a booking, an unbook
+            elif eop == 'plan':
+                body = plan_stub(p.get('slug', ''), meetings)
+            elif eop == 'plancontacts':
+                body = {'success': True, 'accountId': p.get('accountId', ''), 'contacts': [
+                    {'id': 'c-0000000000001', 'name': 'Jane Doe', 'title': 'VP Storage', 'role': 'decision-maker'},
+                    {'id': 'c-0000000000002', 'name': 'Sam Park', 'title': 'Grid Lead', 'role': 'influencer'}]}
+            elif eop == 'planmeeting':
+                mid = 'mt-%013d' % (len(meetings) + 1)
+                m = {'id': mid, 'contactId': p.get('contactId', ''), 'accountId': p.get('accountId', ''), 'start': p.get('date', '') + 'T' + p.get('start', ''),
+                     'end': p.get('date', '') + 'T' + p.get('end', ''), 'place': p.get('place', ''), 'note': p.get('note', ''), 'icsUid': mid + '@events.test',
+                     'interactionId': 'i-%013d' % (len(meetings) + 1), 'createdAt': '2026-09-23T00:00:00.000Z', 'contactName': p.get('contactName', '')}
+                meetings.append(dict(m, slug=p.get('slug', '')))
+                ics = '\r\n'.join(['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Events//Meeting//EN', 'BEGIN:VEVENT', 'UID:' + m['icsUid'], 'DTSTAMP:20260923T000000Z',
+                                    'DTSTART:' + p.get('date', '').replace('-', '') + 'T' + p.get('start', '').replace(':', '') + '00Z',
+                                    'DTEND:' + p.get('date', '').replace('-', '') + 'T' + p.get('end', '').replace(':', '') + '00Z',
+                                    'SUMMARY:Meeting with ' + p.get('contactName', '') + ' — stub', 'END:VEVENT', 'END:VCALENDAR']) + '\r\n'
+                body = {'success': True, 'slug': p.get('slug', ''), 'meeting': m, 'interactionId': m['interactionId'], 'notConfigured': False, 'ics': ics, 'filename': mid + '.ics'}
+            elif eop == 'planunbook':
+                gone = [m for m in meetings if m['id'] == p.get('id', '')]
+                meetings[:] = [m for m in meetings if m['id'] != p.get('id', '')]
+                body = {'success': bool(gone), 'removed': bool(gone), 'id': p.get('id', ''), 'interactionId': gone[0]['interactionId'] if gone else ''} if gone else {'success': False, 'error': 'not_found'}
             elif eop == 'signalsnow':
                 body = {'success': True, 'ranAt': '2026-09-22T07:10:00.000Z', 'owners': 1, 'events': 3, 'starred': 1, 'ranked': 2, 'pages': 4, 'pagesFailed': 1,
                         'feeds': [{'key': 'prnewswire', 'status': 200, 'items': 20}, {'key': 'businesswire', 'status': 200, 'items': 812}, {'key': 'globenewswire', 'status': 0, 'error': 'fetch_failed', 'items': 0}],
@@ -296,11 +363,11 @@ def probe(page):
     }""")
 
 
-def load_as(browser, base, role, query='', stars=None, proposed=None, signals=None):
+def load_as(browser, base, role, query='', stars=None, proposed=None, signals=None, meetings=None):
     counter, errors, registry = [], [], []
     stars = {} if stars is None else stars
-    ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True)
-    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars, proposed, signals))
+    ctx = browser.new_context(viewport=PHONE, device_scale_factor=2, is_mobile=True, has_touch=True, accept_downloads=True)
+    ctx.route('**://script.google.com/**', gas_stub(role, counter, stars, proposed, signals, meetings))
     ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
     ctx.add_init_script(seed_script(role))
     page = ctx.new_page()
@@ -809,6 +876,126 @@ def signals_pass(page, reqs, signals, failures):
     page.wait_for_timeout(200)
 
 
+def plan_pass(page, reqs, meetings, failures):
+    """E5 session 1 — the Plan tab on a starred event's sheet at phone width:
+    one eop=plan on first open, five ranked booths each with a verbatim
+    dossier line and a stage chip, the sessions with their why chips, one day
+    card per event day with open slots that offer Book a meeting, three venues
+    with OpenStreetMap links and no tile fetched, a booking through the form
+    (the account, the contact from one eop=plancontacts, the times inside the
+    slot) → eop=planmeeting with the typed row, the .ics DOWNLOADED and read
+    back (DTSTART, the UID), the meeting on the timeline and in the list,
+    Unbook → eop=planunbook. Screenshot: events-plan.png."""
+    tag = 'plan'
+    stub = recommend_stub()
+    top = stub['events'][0]
+    reg = json.loads((LIVE / 'events-data' / 'events.json').read_text(encoding='utf-8'))
+    top['start'] = next(x for x in reg['events'] if x['slug'] == top['slug'])['start']   # the day the stub plan's first card carries
+    page.evaluate("(slug) => { _evStars[slug] = { id: 'st-0000000000009', slug: slug, attending: 'registered', note: '' }; evOpenSheet(slug); }", top['slug'])
+    page.wait_for_timeout(300)
+    if not page.evaluate("() => !!document.getElementById('ev-sheet-tab-plan') && !!document.getElementById('ev-sheet-details') && getComputedStyle(document.getElementById('ev-plan')).display === 'none'"):
+        failures.append('%s: the Details | Plan strip is missing on the sheet, or the plan panel is showing before its tab' % tag); return
+    before = len([r for r in reqs if r == 'events:plan'])
+    page.click('#ev-sheet-tab-plan')
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-plan-booths li').length === 5", timeout=8000)
+    except Exception:
+        failures.append('%s: the booth list did not render five booths (%r)' % (tag, page.evaluate("() => (document.getElementById('ev-plan') || {}).textContent")[:160])); return
+    if len([r for r in reqs if r == 'events:plan']) - before != 1:
+        failures.append('%s: expected exactly one eop=plan on first open, saw %d' % (tag, len([r for r in reqs if r == 'events:plan']) - before))
+    got = page.evaluate("""() => ({
+        details: getComputedStyle(document.getElementById('ev-sheet-details')).display,
+        booths: [...document.querySelectorAll('#ev-plan-booths li')].map(li => ({
+            name: (li.querySelector('b') || {}).textContent, why: (li.querySelector('.ev-plan-why') || {}).textContent || '',
+            chips: [...li.querySelectorAll('.ev-plan-boothtop .ev-badge')].map(c => c.textContent), terms: (li.querySelector('.ev-plan-terms') || {}).textContent || '',
+            sig: (li.querySelector('.ev-chip') || {}).href || '' })),
+        sessions: [...document.querySelectorAll('#ev-plan-sessions li')].map(li => ({ title: (li.querySelector('.ev-tl-name') || {}).textContent, chips: [...li.querySelectorAll('.ev-badge')].map(c => c.textContent) })),
+        days: [...document.querySelectorAll('#ev-plan-days .ev-plan-day')].map(d => ({ date: d.dataset.date, head: (d.querySelector('.ev-plan-dayhead') || {}).textContent,
+            items: [...d.querySelectorAll('.ev-tl-item')].map(i => i.dataset.kind + ' ' + i.dataset.start + '-' + i.dataset.end), books: d.querySelectorAll('.ev-plan-book').length })),
+        venues: [...document.querySelectorAll('#ev-plan-venues a')].map(a => a.href),
+        meetings: (document.getElementById('ev-plan-meetings') || {}).textContent || ''
+    })""")
+    if got['details'] != 'none':
+        failures.append('%s: Details still showing under the Plan tab' % tag)
+    names = [b['name'] for b in got['booths']]
+    if names != ['Stub Account Co', 'Beta Storage', 'Gamma Grid', 'Delta Power', 'Epsilon Cells']:
+        failures.append('%s: the booths are not in rank order: %r' % (tag, names))
+    for i, b in enumerate(got['booths'][:4]):
+        if ('line %d.' % (i + 1)) not in b['why'] or not b['why'].startswith('\u201c') or 'is the reference bidder' not in b['why']:
+            failures.append('%s: booth %d lacks its verbatim dossier line: %r' % (tag, i + 1, b['why'])); break
+    if got['booths'][4]['why'] or 'no dossier' not in page.evaluate("() => document.querySelectorAll('#ev-plan-booths li')[4].textContent"):
+        failures.append('%s: the uncovered fifth booth should say it has no dossier' % tag)
+    if 'shortlist' not in got['booths'][0]['chips'] or 'target' not in got['booths'][0]['chips'] or 'account 0.90' not in got['booths'][0]['terms'] or '0.49' not in got['booths'][0]['terms']:
+        failures.append('%s: the top booth lacks its stage chip or its terms: %r %r' % (tag, got['booths'][0]['chips'], got['booths'][0]['terms']))
+    if 'example.com/exhibitors/0' not in got['booths'][0]['sig']:
+        failures.append('%s: the top booth\'s signal chip does not link its evidence' % tag)
+    if [s['title'] for s in got['sessions']] != ['Grid-scale storage for utilities', 'Financing the fleet'] or 'Utilities' not in got['sessions'][0]['chips'] or not any('Jane Doe' in c for c in got['sessions'][1]['chips']):
+        failures.append('%s: the sessions or their why chips are wrong: %r' % (tag, got['sessions']))
+    if not got['days'] or got['days'][0]['items'][:3] != ['visit 09:00-09:30', 'visit 09:30-10:00', 'session 10:00-11:00'] or got['days'][0]['books'] != 2 or 'show hours' not in got['days'][0]['head']:
+        failures.append('%s: the first day card is wrong: %r' % (tag, got['days'][:1]))
+    if len(got['days']) > 1 and 'default hours' not in got['days'][1]['head']:
+        failures.append('%s: the second day should say it runs on default hours' % tag)
+    if len(got['venues']) != 4 or not all('openstreetmap.org' in u for u in got['venues']) or any('tile' in u for u in got['venues']):
+        failures.append('%s: expected the venue link plus three OpenStreetMap venue links: %r' % (tag, got['venues']))
+    if 'None yet' not in got['meetings']:
+        failures.append('%s: the meetings list should be empty before a booking' % tag)
+    # book a meeting on the first open slot
+    page.click('#ev-plan-days .ev-plan-book >> nth=0')
+    page.wait_for_timeout(200)
+    if not page.evaluate("() => !!document.getElementById('ev-plan-form') && document.getElementById('ev-plan-start').value === '11:00' && document.getElementById('ev-plan-end').value === '11:30'"):
+        failures.append('%s: the booking form did not open with the slot\'s times' % tag); return
+    page.select_option('#ev-plan-account', 'a-0000000000001')
+    try:
+        page.wait_for_function("() => document.querySelectorAll('#ev-plan-contact option').length === 3", timeout=6000)
+    except Exception:
+        failures.append('%s: the contact list did not fill from eop=plancontacts' % tag); return
+    if len([r for r in reqs if r == 'events:plancontacts']) != 1:
+        failures.append('%s: expected exactly one eop=plancontacts, saw %d' % (tag, len([r for r in reqs if r == 'events:plancontacts'])))
+    page.select_option('#ev-plan-contact', 'c-0000000000001')
+    page.fill('#ev-plan-place', 'Their booth')
+    page.fill('#ev-plan-note', 'Gridstack Pro pricing')
+    try:
+        with page.expect_download(timeout=8000) as dl:
+            page.click('#ev-plan-bookbtn')
+        download = dl.value
+        ics = Path(download.path()).read_text(encoding='utf-8')
+        if not download.suggested_filename.endswith('.ics') or 'DTSTART:' + top['start'].replace('-', '') + 'T110000Z' not in ics or 'UID:mt-' not in ics or 'BEGIN:VEVENT' not in ics:
+            failures.append('%s: the downloaded .ics is wrong (%s): %r' % (tag, download.suggested_filename, ics[:200]))
+    except Exception as exc:
+        failures.append('%s: the booking did not download an .ics (%s)' % (tag, str(exc)[:120])); return
+    try:
+        page.wait_for_function("() => !!document.getElementById('ev-plan-booked')", timeout=6000)
+    except Exception:
+        failures.append('%s: the booking did not report back' % tag)
+    if len(meetings) != 1 or meetings[0]['contactId'] != 'c-0000000000001' or meetings[0]['accountId'] != 'a-0000000000001' or meetings[0]['start'] != top['start'] + 'T11:00' \
+            or meetings[0]['end'] != top['start'] + 'T11:30' or meetings[0]['place'] != 'Their booth' or meetings[0]['note'] != 'Gridstack Pro pricing' or meetings[0]['contactName'] != 'Jane Doe':
+        failures.append('%s: eop=planmeeting did not reach the stub with the typed row: %r' % (tag, meetings))
+    after = page.evaluate("""() => ({
+        tl: [...document.querySelectorAll('#ev-plan-days .ev-plan-day')][0] ? [...document.querySelectorAll('#ev-plan-days .ev-plan-day')[0].querySelectorAll('.ev-tl-item')].map(i => i.dataset.kind + ' ' + i.dataset.start + '-' + i.dataset.end) : [],
+        list: [...document.querySelectorAll('#ev-plan-meetings li[data-meeting-id]')].map(li => li.textContent), unbook: !!document.querySelector('.ev-plan-unbook') })""")
+    if 'meeting 11:00-11:30' not in after['tl'] or 'open 11:00-14:00' in after['tl'] or 'open 11:30-14:00' not in after['tl']:
+        failures.append('%s: the meeting is not fixed on the timeline with the slot split: %r' % (tag, after['tl']))
+    if len(after['list']) != 1 or 'Jane Doe' not in after['list'][0] or 'recorded in Network' not in after['list'][0] or not after['unbook']:
+        failures.append('%s: the meetings list is wrong after the booking: %r' % (tag, after['list']))
+    page.evaluate("() => { const p = document.getElementById('ev-plan-days'); if (p) p.scrollIntoView({ block: 'start' }); }")
+    page.wait_for_timeout(150)
+    page.screenshot(path=str(SHOTS / 'events-plan.png'), full_page=False)
+    page.click('.ev-plan-unbook')
+    try:
+        page.wait_for_function("() => /None yet/.test((document.getElementById('ev-plan-meetings') || {}).textContent || '')", timeout=6000)
+    except Exception:
+        failures.append('%s: Unbook did not clear the meeting' % tag)
+    if 'events:planunbook' not in reqs or meetings:
+        failures.append('%s: eop=planunbook did not reach the stub (%r)' % (tag, meetings))
+    # D12 / D15 on the served page: no Google map or Places endpoint, no mail or calendar scope
+    src = (LIVE / 'Events.html').read_text(encoding='utf-8')
+    for needle in ('maps.googleapis', 'places.googleapis', 'GmailApp', 'CalendarApp', 'gmail.send', 'gmail.compose', 'linkedin.com'):
+        if needle in src:
+            failures.append('%s: the served page names %s' % (tag, needle))
+    page.keyboard.press('Escape')
+    page.wait_for_timeout(200)
+
+
 def run():
     chrome = find_chrome()
     if not chrome:
@@ -823,7 +1010,8 @@ def run():
             stars = {}
             proposed = [dict(r) for r in PROPOSED_STUB]
             signals = []
-            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars, proposed=proposed, signals=signals)
+            meetings = []
+            ctx, page, reqs, errs, reg = load_as(browser, base, role, stars=stars, proposed=proposed, signals=signals, meetings=meetings)
             got = probe(page)
             page.screenshot(path=str(SHOTS / ('events-role-%s.png' % role)), full_page=False)
             real_errs = [e for e in errs if not any(s in e for s in IGNORE)]
@@ -879,6 +1067,8 @@ def run():
                 recommended_pass(page, reqs, failures)
                 # §13.12 step 5 — the signal form, the Signals only pill, the sweep card (E4 s1)
                 signals_pass(page, reqs, signals, failures)
+                # §13.17 step 5 — the Plan tab, a booking's ICS downloaded and read (E5 s1)
+                plan_pass(page, reqs, meetings, failures)
             else:
                 if not got['denied']:
                     failures.append('%s: turned-away card not rendered' % role)
@@ -888,7 +1078,7 @@ def run():
                     failures.append('%s: turned-away tier issued %d data request(s)' % (role, len(data_reqs)))
                 if reg:
                     failures.append('%s: turned-away tier fetched the registry' % role)
-                if page.evaluate("() => !!document.getElementById('ev-tab-proposed') || !!document.getElementById('ev-proposed')"):
+                if page.evaluate("() => !!document.getElementById('ev-tab-proposed') || !!document.getElementById('ev-proposed') || !!document.getElementById('ev-sheet-tabs')"):
                     failures.append('%s: the Proposed tab or panel exists for a turned-away tier' % role)
             if real_errs:
                 failures.append('%s: %d page error(s): %s' % (role, len(real_errs), real_errs[0][:100]))
@@ -916,7 +1106,7 @@ def run():
     for role, g, n, ne in rows:
         print('%-12s %-9s %-8s %-6d %-8s %-9d %d' % (role, mark(g['admitted']), mark(g['agenda']),
                                                   g['rows'], mark(g['denied']), n, ne))
-    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed / events-recommended / events-signals / events-signals-card.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
+    print('\nScreenshots: %s/events-role-<tier>.png + events-month / events-agenda / events-detail / events-dayplan / events-proposed / events-recommended / events-signals / events-signals-card / events-plan.png (%dx%d)' % (SHOTS, PHONE['width'], PHONE['height']))
     if failures:
         print('\nFAILURES (%d):' % len(failures))
         for f in failures:
@@ -927,7 +1117,8 @@ def run():
           'the phone pass held: the month header sticks and changes across a boundary, a star round-trips, the ICS parses and matches the published file, the day plan and the Subscribe pill work; '
           'the Proposed tab is admin-only, opens with one request, groups the rows by source with Before → After, approves through decide, its JSON parses back, Mark applied / Install poller / Poll now reach the backend; '
           'the Recommended pill issues one eop=recommend and ranks the agenda by the stub\'s scores with a chip per row, the why panel names the stub account with its stage and evidence link, unpressing restores the month groups; '
-          'the signal form fills its accounts with one eop=netaccounts and writes the typed row through eop=signal, the Signals only pill narrows the agenda to the signalled event over the cached score, Install signals and Signals now reach the backend.')
+          'the signal form fills its accounts with one eop=netaccounts and writes the typed row through eop=signal, the Signals only pill narrows the agenda to the signalled event over the cached score, Install signals and Signals now reach the backend; '
+          'the Plan tab opens with one eop=plan — five ranked booths with verbatim dossier lines and stage chips, the sessions with their why chips, a day card per event day with open slots, three OpenStreetMap venue links — a booking fills its contacts with one eop=plancontacts, writes the typed row through eop=planmeeting, downloads an .ics that reads back with DTSTART and the UID, fixes the meeting on the timeline with the slot split, and Unbook clears it.')
     return 0
 
 

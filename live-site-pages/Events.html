@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.08w">
+  <meta name="build-version" content="v01.09w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -492,6 +492,33 @@
     .ev-score { display: inline-block; font: 600 11px/1 var(--ev-mono); color: var(--ev-accent); border: 1px solid var(--ev-accent); border-radius: 999px; padding: 4px 7px; margin-left: 6px; vertical-align: middle; }
     .ev-ranked .ev-row::before { content: attr(data-rank); flex: 0 0 22px; font: 600 12px/38px var(--ev-mono); color: var(--ev-faint); text-align: right; margin-right: 2px; }
     .ev-pill[data-busy="1"] { opacity: .6; }
+    /* E5: the Details | Plan strip and the plan panel */
+    #ev-sheet .ev-sheet-tabs { display: flex; gap: 4px; margin: 0 0 12px; border-bottom: 1px solid var(--ev-line); }
+    #ev-sheet .ev-sheet-tab { font: 12px/1 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; padding: 8px 10px; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; color: var(--ev-muted); cursor: pointer; }
+    #ev-sheet .ev-sheet-tab[aria-selected="true"] { color: var(--ev-accent); border-bottom-color: var(--ev-accent); }
+    #ev-sheet .ev-plan > .ev-lbl { display: block; font: 11px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); margin: 16px 0 6px; }
+    #ev-sheet .ev-plan-head { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+    #ev-sheet .ev-plan-src, #ev-sheet .ev-plan-terms { font: 11px/1.6 var(--ev-mono); color: var(--ev-faint); }
+    #ev-sheet .ev-plan-booths, #ev-sheet .ev-plan-sessions, #ev-sheet .ev-plan-venues, #ev-sheet .ev-plan-meetings { list-style: none; margin: 0; padding: 0; }
+    #ev-sheet .ev-plan-booth, #ev-sheet .ev-plan-session, #ev-sheet .ev-plan-meetings li { padding: 8px 0; border-bottom: 1px dashed var(--ev-line); }
+    #ev-sheet .ev-plan-boothtop { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    #ev-sheet .ev-plan-boothtop b { font: 600 15px/1.3 var(--ev-serif); color: var(--ev-ink); }
+    #ev-sheet .ev-plan-rank { font: 11px/1 var(--ev-mono); color: var(--ev-faint); min-width: 24px; }
+    #ev-sheet .ev-plan-why { font: 13px/1.55 var(--ev-serif); color: var(--ev-muted); border-left: 3px solid var(--ev-line2); padding: 2px 10px; margin: 6px 0 2px; }
+    #ev-sheet .ev-plan .ev-chips { margin: 4px 0 2px; }
+    #ev-sheet .ev-plan-venues li { font: 13px/1.7 var(--ev-serif); color: var(--ev-muted); }
+    #ev-sheet .ev-plan-venues a, #ev-sheet .ev-plan-day .ev-daysub { color: var(--ev-accent); }
+    #ev-sheet .ev-plan-day { margin: 6px 0 14px; }
+    #ev-sheet .ev-plan-dayhead { font: 600 14px/1.5 var(--ev-serif); color: var(--ev-ink); }
+    #ev-sheet .ev-plan-dayhead .ev-daysub { font: 11px/1.4 var(--ev-mono); color: var(--ev-faint); }
+    #ev-sheet .ev-plan-tl .ev-tl-item { cursor: default; }
+    #ev-sheet .ev-tl-open::before { background: var(--ev-card); border: 2px dashed var(--ev-line2); box-shadow: none; }
+    #ev-sheet .ev-tl-visit::before { background: var(--ev-accent); box-shadow: 0 0 0 1px var(--ev-accent); }
+    #ev-sheet .ev-tl-session::before { background: var(--ev-ok); box-shadow: 0 0 0 1px var(--ev-ok); }
+    #ev-sheet .ev-btn-sm { padding: 5px 9px; font-size: 12px; margin-top: 4px; }
+    #ev-sheet .ev-plan-form { border: 1px solid var(--ev-line); border-radius: 8px; padding: 10px; margin: 8px 0 6px; background: var(--ev-card); }
+    #ev-sheet .ev-plan-form > .ev-lbl { display: block; font: 11px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); margin: 8px 0 4px; }
+    #ev-sheet .ev-plan-form > .ev-lbl:first-child { margin-top: 0; }
     #ev-sheet .ev-why { border-top: 1px solid var(--ev-line); padding-top: 12px; margin-top: 12px; }
     #ev-sheet .ev-why > .ev-lbl { display: block; font: 11px/1.4 var(--ev-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ev-faint); margin: 10px 0 4px; }
     #ev-sheet .ev-why > .ev-lbl:first-child { margin-top: 0; }
@@ -4557,6 +4584,15 @@ function evErrText(err) {
   if (err === 'bad_confidence') return 'Rate the confidence between 0 and 1.';
   if (err === 'linkedin_not_fetched') return 'A LinkedIn link is accepted only as a LinkedIn post you read yourself — pick that kind.';
   if (err === 'account_not_found') return 'That account is no longer live in Network. Reopen the sheet to refresh the list.';
+  if (err === 'not_starred') return 'Star this event first — the plan is built for starred events.';
+  if (err === 'unknown_slug') return 'That event is no longer in the registry.';
+  if (err === 'bad_date') return 'Pick a day of the event.';
+  if (err === 'bad_time') return 'The end must come after the start, within four hours.';
+  if (err === 'bad_contact_id') return 'Pick the contact the meeting is with.';
+  if (err === 'contact_not_found') return 'That contact is no longer live in Network. Reopen the plan to refresh.';
+  if (err === 'account_mismatch') return 'That contact belongs to a different account in Network.';
+  if (err === 'bad_meeting_id' || err === 'summary_required') return 'That meeting could not be found. Rebuild the plan.';
+  if (err === 'profile_unavailable') return 'The dossier could not be read from the site.';
   if (err === 'upstream_unreachable' || err === 'upstream_empty' || /^upstream_/.test(String(err || ''))) return 'Network did not answer (' + err + '). Try again in a moment.';
   return 'Could not complete that (' + (err || 'unknown') + ').';
 }
@@ -5270,6 +5306,21 @@ function evOpenSheet(slug) {
   // E3: the why panel — the score, the six terms, the contributing rows by
   // name; painted from the cached answer or fetched once on demand (D14).
   if (evRecAllowed()) sh.appendChild(evWhyPanel(e));
+  // E5: the Details | Plan strip — everything after the status line moves
+  // under Details; the Plan tab builds the deterministic plan on first open
+  // (a starred event; eop=plan, never polled). The strip is the recommend
+  // capability's, like the why panel.
+  if (evRecAllowed()) {
+    var det = evEl('div'); det.id = 'ev-sheet-details';
+    var after = false;
+    Array.prototype.slice.call(sh.childNodes).forEach(function(k) { if (after) det.appendChild(k); if (k === line) after = true; });
+    var strip = evEl('div', 'ev-sheet-tabs'); strip.id = 'ev-sheet-tabs'; strip.setAttribute('role', 'tablist');
+    var plan = evEl('div', 'ev-plan'); plan.id = 'ev-plan';
+    _evSheetTab = 'details';
+    strip.appendChild(evSheetTab('details', 'Details', det, plan, e)); strip.appendChild(evSheetTab('plan', 'Plan', det, plan, e));
+    plan.style.display = 'none';
+    sh.appendChild(strip); sh.appendChild(det); sh.appendChild(plan);
+  }
   back.style.display = 'block';
   sh.style.display = 'block';
   sh.scrollTop = 0;
@@ -5400,6 +5451,310 @@ function evSignalForm(e) {
     });
   });
   return box;
+}
+
+// PROJECT: ── E5 session 1 — the Plan tab on a starred event's sheet (design plan §5.6 items 1–4; D9 · D12 · D15) ──
+// Fetched once per sheet open through eop=plan (D14: on demand, never
+// polled; Rebuild refetches). Paints the booth list with its why lines and
+// stage chips, the sessions, the day plan as a timeline with open slots, the
+// venues as a list with an OpenStreetMap link (a link — no tiles are ever
+// fetched by this page), the booked meetings; Book a meeting on an open slot
+// picks a Network contact from the account's contacts (eop=plancontacts —
+// Network's nop=interaction read leg over the bridge), writes through
+// eop=planmeeting and downloads the answered .ics; Unbook through
+// eop=planunbook. Nothing here sends anything (D15).
+var _evPlans = {};            // slug → { state: loading | ok | <error>, data }
+var _evSheetTab = 'details';
+function evSheetTab(key, label, det, plan, e) {
+  var b = evEl('button', 'ev-sheet-tab', label); b.type = 'button'; b.id = 'ev-sheet-tab-' + key;
+  b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', _evSheetTab === key ? 'true' : 'false');
+  b.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    _evSheetTab = key;
+    ['details', 'plan'].forEach(function(k) { var t = document.getElementById('ev-sheet-tab-' + k); if (t) t.setAttribute('aria-selected', k === key ? 'true' : 'false'); });
+    det.style.display = key === 'details' ? 'block' : 'none';
+    plan.style.display = key === 'plan' ? 'block' : 'none';
+    if (key === 'plan') evRenderPlan(e, plan);
+    var sh = document.getElementById('ev-sheet'); if (sh) sh.scrollTop = 0;
+  });
+  return b;
+}
+function evLoadPlan(slug, cb) {
+  _evPlans[slug] = { state: 'loading', data: null };
+  evApi('plan', { slug: slug }, function(res) {
+    if (!(res && res.success)) { _evPlans[slug] = { state: (res && res.error) || 'empty_response', data: null }; cb(_evPlans[slug]); return; }
+    _evPlans[slug] = { state: 'ok', data: res };
+    cb(_evPlans[slug]);
+  });
+}
+function evPlanChip(text, cls) { return evEl('span', 'ev-badge' + (cls ? ' ' + cls : ''), text); }
+function evOsmHref(lat, lng) { return 'https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng; }
+function evPlanTime(hhmm) { return String(hhmm || '').replace(/^0/, ''); }
+function evRenderPlan(e, box) {
+  box.innerHTML = '';
+  if (!_evStars[e.slug]) {
+    var st = evEl('div', 'ev-empty'); st.appendChild(evEl('b', null, 'Star this event to build its plan'));
+    st.appendChild(document.createTextNode('The plan is computed for starred events — the booths worth visiting from the score, the sessions worth sitting in, a day plan with open slots and nearby venues, and the meetings you book.'));
+    box.appendChild(st); return;
+  }
+  var p = _evPlans[e.slug];
+  if (!p || p.state === 'loading') {
+    box.appendChild(evEl('div', 'ev-netnote', 'Building the plan — the score, the agenda, the dossiers and the venues are read once…'));
+    if (!p) evLoadPlan(e.slug, function() { if (_evSheetSlug === e.slug && box.parentNode && _evSheetTab === 'plan') evRenderPlan(e, box); });
+    return;
+  }
+  if (p.state !== 'ok') {
+    box.appendChild(evEl('div', 'ev-netnote', evErrText(p.state)));
+    var again = evEl('button', 'ev-btn', 'Try again'); again.type = 'button';
+    again.addEventListener('click', function(ev) { ev.preventDefault(); delete _evPlans[e.slug]; evRenderPlan(e, box); });
+    box.appendChild(again); return;
+  }
+  var d = p.data;
+  var head = evEl('div', 'ev-plan-head'); head.id = 'ev-plan-head';
+  head.appendChild(evEl('span', 'ev-plan-src', 'Built ' + new Date(d.built).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' · ' + d.booths.length + ' booth' + (d.booths.length === 1 ? '' : 's')
+    + ' · ' + d.sessions.length + ' session' + (d.sessions.length === 1 ? '' : 's') + ' · ' + d.venues.length + ' venue' + (d.venues.length === 1 ? '' : 's') + (d.score ? ' · score ' + Number(d.score.score).toFixed(2) : '')));
+  head.appendChild(evPill('Rebuild', false, function() { delete _evPlans[e.slug]; evRenderPlan(e, box); }));
+  box.appendChild(head);
+  if (d.notConfigured) box.appendChild(evEl('div', 'ev-netnote ev-connect', 'Connect Network to plan by account — the two apps are not linked yet, so there are no booths, no contacts and no meetings to book.'));
+  else if (d.networkError) box.appendChild(evEl('div', 'ev-netnote', evErrText(d.networkError)));
+  // 1 · booths
+  box.appendChild(evEl('div', 'ev-lbl', 'Booths worth visiting'));
+  if (!d.booths.length) box.appendChild(evEl('div', 'ev-netnote', d.notConfigured ? 'No booths without Network.' : 'No Network account has a signal for this event yet — the weekly sweep and the signal form on Details add them.'));
+  else {
+    var ol = evEl('ol', 'ev-plan-booths'); ol.id = 'ev-plan-booths';
+    d.booths.forEach(function(b, i) {
+      var li = evEl('li', 'ev-plan-booth'); li.dataset.accountId = b.accountId;
+      var top = evEl('div', 'ev-plan-boothtop');
+      top.appendChild(evEl('span', 'ev-plan-rank', '#' + (i + 1)));
+      top.appendChild(evEl('b', null, b.name));
+      if (b.relationship) top.appendChild(evPlanChip(b.relationship));
+      if (b.stage && b.stage !== 'none') top.appendChild(evPlanChip(b.stage, 'ev-badge-confirmed'));
+      li.appendChild(top);
+      li.appendChild(evEl('div', 'ev-plan-terms', 'account ' + Number(b.accountTerm).toFixed(2) + ' · segment ' + Number(b.segmentTerm).toFixed(2) + ' → ' + Number(b.rank).toFixed(2)
+        + (b.seatSegments && b.seatSegments.length ? ' · ' + b.seatSegments.map(function(id) { return _evSegmentName[id] || id; }).join(', ') : '')));
+      if (b.why && b.why.text) {
+        var why = evEl('p', 'ev-plan-why', '“' + b.why.text + '”'); why.className = 'ev-plan-why';
+        li.appendChild(why);
+        li.appendChild(evEl('div', 'ev-plan-src', (b.why.source === 'strategyRead' ? 'the dossier’s strategy read' : 'the dossier’s newest development' + (b.why.date ? ' · ' + b.why.date : '')) + ' · verbatim'));
+      } else li.appendChild(evEl('div', 'ev-plan-src', b.covered ? 'the dossier carries no strategy read or development yet' : 'no dossier — propose one in Network'));
+      var sig = evEl('div', 'ev-chips');
+      (b.signals || []).forEach(function(s) {
+        var a = evEl('a', 'ev-chip', s.kind + ' ' + Number(s.confidence).toFixed(1) + (s.personName ? ' · ' + s.personName : '') + ' ↗');
+        a.href = s.evidenceUrl; a.target = '_blank'; a.rel = 'noopener'; sig.appendChild(a);
+      });
+      li.appendChild(sig);
+      ol.appendChild(li);
+    });
+    box.appendChild(ol);
+    if (d.dossiersRead < d.booths.length) box.appendChild(evEl('div', 'ev-plan-src', 'Dossier lines are read for the top ' + d.dossiersRead + ' booths.'));
+  }
+  // 2 · sessions
+  box.appendChild(evEl('div', 'ev-lbl', 'Sessions worth sitting in'));
+  if (!d.sessions.length) box.appendChild(evEl('div', 'ev-netnote', d.agenda.skipped === 'no_agenda' ? 'The registry carries no agenda page for this event.' : d.agenda.error ? 'The agenda page could not be read (' + d.agenda.error + ').' : d.agenda.read ? 'None of the ' + d.agenda.read + ' sessions on the agenda names a seat segment, a Network contact or a dossier decision maker.' : 'The agenda page lists no sessions yet.'));
+  else {
+    var ul = evEl('ul', 'ev-plan-sessions'); ul.id = 'ev-plan-sessions';
+    d.sessions.forEach(function(s) {
+      var li = evEl('li', 'ev-plan-session');
+      li.appendChild(evEl('div', 'ev-tl-time', (s.date ? evDayLabel(s.date) + ' · ' : '') + (s.start ? evPlanTime(s.start) + (s.end ? '–' + evPlanTime(s.end) : '') : 'time not listed') + (s.room ? ' · ' + s.room : '')));
+      li.appendChild(evEl('div', 'ev-tl-name', s.title));
+      var why = evEl('div', 'ev-chips');
+      s.why.forEach(function(w) { why.appendChild(evPlanChip(w.kind === 'segment' ? w.name : (w.kind === 'contact' ? 'contact · ' : 'decision maker · ') + w.name + (w.account ? ' (' + w.account + ')' : ''))); });
+      li.appendChild(why);
+      if (s.speakers.length) li.appendChild(evEl('div', 'ev-tl-meta', s.speakers.map(function(sp) { return sp.name + (sp.title ? ', ' + sp.title : '') + (sp.company ? ' — ' + sp.company : ''); }).join(' · ')));
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+  }
+  // 3 · the day plan
+  box.appendChild(evEl('div', 'ev-lbl', 'Day plan'));
+  var dp = evEl('div', 'ev-plan-days'); dp.id = 'ev-plan-days';
+  d.days.forEach(function(day) { dp.appendChild(evPlanDay(e, d, day, box)); });
+  box.appendChild(dp);
+  // 3b · nearby
+  box.appendChild(evEl('div', 'ev-lbl', 'Nearby — within 600 m of the venue'));
+  var ven = evEl('ul', 'ev-plan-venues'); ven.id = 'ev-plan-venues';
+  if (d.event.venueLatLng) { var vl = evEl('li'); vl.appendChild(evLink(evOsmHref(d.event.venueLatLng[0], d.event.venueLatLng[1]), (d.event.venue || 'The venue') + ' on OpenStreetMap ↗')); ven.appendChild(vl); }
+  if (!d.venues.length) { var vn = evEl('li', 'ev-plan-src', d.venuesError === 'no_coordinates' ? 'The registry carries no coordinates for this venue.' : d.venuesError ? 'OpenStreetMap did not answer (' + d.venuesError + ') — Rebuild to try again.' : 'Nothing within 600 m on OpenStreetMap.'); ven.appendChild(vn); }
+  d.venues.forEach(function(v) {
+    var li = evEl('li'); li.appendChild(evLink(evOsmHref(v.lat, v.lng), v.name)); li.appendChild(document.createTextNode(' · ' + v.kind + ' · ' + v.distanceM + ' m')); ven.appendChild(li);
+  });
+  box.appendChild(ven);
+  box.appendChild(evEl('div', 'ev-plan-src', d.venuesCached ? 'Venues from OpenStreetMap, cached for this event.' : 'Venues from OpenStreetMap Overpass, now cached for this event for 30 days.'));
+  // 4 · meetings
+  box.appendChild(evEl('div', 'ev-lbl', 'Meetings booked'));
+  var ml = evEl('ul', 'ev-plan-meetings'); ml.id = 'ev-plan-meetings';
+  if (!d.meetings.length) ml.appendChild(evEl('li', 'ev-plan-src', 'None yet — pick an open slot above and book one.'));
+  d.meetings.forEach(function(m) {
+    var li = evEl('li'); li.dataset.meetingId = m.id;
+    li.appendChild(evEl('div', 'ev-tl-name', (m.contactName || m.contactId) + (m.accountName ? ' — ' + m.accountName : '')));
+    li.appendChild(evEl('div', 'ev-tl-meta', evDayLabel(String(m.start).slice(0, 10)) + ' · ' + evPlanTime(String(m.start).slice(11, 16)) + '–' + evPlanTime(String(m.end).slice(11, 16)) + (m.place ? ' · ' + m.place : '') + (m.interactionId ? ' · recorded in Network' : ' · not recorded in Network (not connected when booked)')));
+    if (m.note) li.appendChild(evEl('div', 'ev-tl-note', m.note));
+    var un = evEl('button', 'ev-btn ev-btn-sm', 'Unbook'); un.type = 'button'; un.className = 'ev-btn ev-btn-sm ev-plan-unbook';
+    un.addEventListener('click', function(ev) { ev.preventDefault(); evPlanUnbook(e, m.id, un, box); });
+    li.appendChild(un);
+    ml.appendChild(li);
+  });
+  box.appendChild(ml);
+  box.appendChild(evEl('div', 'ev-netnote', 'A booking writes a meeting on the contact in Network and downloads an invite for your own calendar — nothing is sent to anyone. The narrative plan is a session command (E5 session 2).'));
+}
+// One day of the plan: the frame, the timeline, Book a meeting on an open slot.
+function evPlanDay(e, d, day, box) {
+  var card = evEl('div', 'ev-plan-day'); card.dataset.date = day.date;
+  var hd = evEl('div', 'ev-plan-dayhead');
+  hd.appendChild(evEl('b', null, evFmtLong(day.date, day.date)));
+  hd.appendChild(evEl('span', 'ev-daysub', ' ' + evPlanTime(day.open) + '–' + evPlanTime(day.close) + (day.hoursSource === 'default' ? ' · default hours, the registry lists none' : ' · show hours')));
+  card.appendChild(hd);
+  var tl = evEl('ol', 'ev-tl ev-plan-tl');
+  day.items.forEach(function(it) {
+    var li = evEl('li', 'ev-tl-item ev-tl-' + it.kind); li.style.cursor = 'default';
+    li.dataset.kind = it.kind; li.dataset.start = it.start; li.dataset.end = it.end;
+    if (it.meetingId) li.dataset.meetingId = it.meetingId;
+    li.appendChild(evEl('div', 'ev-tl-time', evPlanTime(it.start) + '–' + evPlanTime(it.end) + ' · ' + (it.kind === 'visit' ? 'booth #' + it.rank : it.kind === 'session' ? 'session' : it.kind === 'meeting' ? 'meeting' : 'open')));
+    li.appendChild(evEl('div', 'ev-tl-name', it.title));
+    if (it.kind === 'visit' && it.stage && it.stage !== 'none') li.appendChild(evEl('div', 'ev-tl-meta', it.stage + (it.booth ? ' · booth ' + it.booth : '')));
+    if (it.kind === 'session' && it.room) li.appendChild(evEl('div', 'ev-tl-meta', it.room));
+    if (it.kind === 'meeting' && it.place) li.appendChild(evEl('div', 'ev-tl-meta', it.place));
+    if (it.kind === 'open' && !d.notConfigured) {
+      var bk = evEl('button', 'ev-btn ev-btn-sm ev-plan-book', 'Book a meeting'); bk.type = 'button';
+      bk.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        var open = card.querySelector('.ev-plan-form'); if (open) open.parentNode.removeChild(open);
+        li.appendChild(evPlanBookForm(e, d, day, it, box));
+      });
+      li.appendChild(bk);
+    }
+    tl.appendChild(li);
+  });
+  card.appendChild(tl);
+  return card;
+}
+// The booking form under an open slot — the account (the booths first, then
+// every scored Network account), the contact from eop=plancontacts, the
+// times inside the slot, a place, one line — written through eop=planmeeting.
+function evPlanBookForm(e, d, day, slot, box) {
+  var f = evEl('div', 'ev-plan-form'); f.id = 'ev-plan-form';
+  f.appendChild(evEl('span', 'ev-lbl', 'Book a meeting · ' + evDayLabel(day.date) + ' ' + evPlanTime(slot.start) + '–' + evPlanTime(slot.end)));
+  var row = evEl('div', 'ev-controls');
+  var h1 = evEl('div', 'ev-half'); h1.appendChild(evEl('span', 'ev-lbl', 'Account'));
+  var acc = evEl('select', 'ev-select'); acc.id = 'ev-plan-account';
+  var op0 = evEl('option', null, '— pick an account —'); op0.value = ''; acc.appendChild(op0);
+  var seen = {};
+  d.booths.forEach(function(b) { var o = evEl('option', null, b.name + ' · booth #' + (d.booths.indexOf(b) + 1)); o.value = b.accountId; o.dataset.name = b.name; acc.appendChild(o); seen[b.accountId] = true; });
+  h1.appendChild(acc);
+  var h2 = evEl('div', 'ev-half'); h2.appendChild(evEl('span', 'ev-lbl', 'Contact'));
+  var con = evEl('select', 'ev-select'); con.id = 'ev-plan-contact';
+  var c0 = evEl('option', null, 'Pick an account first'); c0.value = ''; con.appendChild(c0);
+  h2.appendChild(con);
+  row.appendChild(h1); row.appendChild(h2); f.appendChild(row);
+  evLoadNetAccounts(function(res) {
+    if (!(res && res.success)) return;
+    (res.accounts || []).slice().sort(function(a, b) { return String(a.name || '').toLowerCase() < String(b.name || '').toLowerCase() ? -1 : 1; }).forEach(function(a) {
+      if (seen[a.id]) return;
+      var o = evEl('option', null, (a.name || a.id) + (a.relationship ? ' · ' + a.relationship : '')); o.value = a.id; o.dataset.name = a.name || ''; acc.appendChild(o);
+    });
+  });
+  var row2 = evEl('div', 'ev-controls');
+  var h3 = evEl('div', 'ev-half'); h3.appendChild(evEl('span', 'ev-lbl', 'From'));
+  var from = evEl('input', 'ev-input'); from.id = 'ev-plan-start'; from.type = 'time'; from.step = 300; from.value = slot.start; from.min = slot.start; from.max = slot.end;
+  h3.appendChild(from);
+  var h4 = evEl('div', 'ev-half'); h4.appendChild(evEl('span', 'ev-lbl', 'To'));
+  var to = evEl('input', 'ev-input'); to.id = 'ev-plan-end'; to.type = 'time'; to.step = 300; to.min = slot.start; to.max = slot.end;
+  var endMins = Math.min(evPlanMins(slot.start) + 30, evPlanMins(slot.end)); to.value = evPlanHhmm(endMins);
+  h4.appendChild(to);
+  row2.appendChild(h3); row2.appendChild(h4); f.appendChild(row2);
+  f.appendChild(evEl('span', 'ev-lbl', 'Where'));
+  var place = evEl('input', 'ev-input'); place.id = 'ev-plan-place'; place.type = 'text'; place.maxLength = 200; place.autocomplete = 'off';
+  place.placeholder = d.venues.length ? 'Their booth, or ' + d.venues[0].name + ' (' + d.venues[0].distanceM + ' m)' : 'Their booth, a meeting room, a café…';
+  f.appendChild(place);
+  f.appendChild(evEl('span', 'ev-lbl', 'One line'));
+  var note = evEl('input', 'ev-input'); note.id = 'ev-plan-note'; note.type = 'text'; note.maxLength = 500; note.autocomplete = 'off'; note.placeholder = 'What to cover — stays in the invite and this plan, never crosses to Network';
+  f.appendChild(note);
+  var row3 = evEl('div', 'ev-controls');
+  var book = evEl('button', 'ev-btn ev-btn-primary', 'Book and download the invite'); book.type = 'button'; book.id = 'ev-plan-bookbtn';
+  var cancel = evEl('button', 'ev-btn', 'Cancel'); cancel.type = 'button';
+  cancel.addEventListener('click', function(ev) { ev.preventDefault(); f.parentNode.removeChild(f); });
+  row3.appendChild(book); row3.appendChild(cancel); f.appendChild(row3);
+  var status = evEl('div', 'ev-status'); status.id = 'ev-plan-status'; f.appendChild(status);
+  var setStatus = function(text, level) { status.textContent = text || ''; status.className = 'ev-status' + (level ? ' ev-status-' + level : ''); };
+  acc.addEventListener('change', function() {
+    con.innerHTML = '';
+    if (!acc.value) { var c1 = evEl('option', null, 'Pick an account first'); c1.value = ''; con.appendChild(c1); return; }
+    var cl = evEl('option', null, 'Loading contacts…'); cl.value = ''; con.appendChild(cl);
+    evApi('plancontacts', { accountId: acc.value }, function(res) {
+      con.innerHTML = '';
+      if (!(res && res.success)) { var cx = evEl('option', null, res && res.error === 'not_configured' ? 'Network not connected' : 'Contacts unavailable'); cx.value = ''; con.appendChild(cx); setStatus(evErrText(res && res.error), 'err'); return; }
+      var list = res.contacts || [];
+      var cp = evEl('option', null, list.length ? '— pick a contact —' : 'No contacts at this account in Network yet'); cp.value = ''; con.appendChild(cp);
+      list.forEach(function(c) { var o = evEl('option', null, c.name + (c.title ? ' · ' + c.title : '') + (c.role ? ' · ' + c.role : '')); o.value = c.id; o.dataset.name = c.name; con.appendChild(o); });
+      if (list.length === 1) con.value = list[0].id;
+    });
+  });
+  book.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    if (book.getAttribute('aria-disabled') === 'true') return;
+    if (!acc.value) { setStatus('Pick the account.', 'err'); acc.focus(); return; }
+    if (!con.value) { setStatus('Pick the contact the meeting is with.', 'err'); con.focus(); return; }
+    var s = evPlanMins(from.value), t = evPlanMins(to.value);
+    if (s < 0 || t < 0 || t <= s || s < evPlanMins(slot.start) || t > evPlanMins(slot.end)) { setStatus('Keep the times inside the open slot, the end after the start.', 'err'); return; }
+    var accName = (acc.options[acc.selectedIndex] || {}).dataset ? (acc.options[acc.selectedIndex].dataset.name || '') : '';
+    var conName = (con.options[con.selectedIndex] || {}).dataset ? (con.options[con.selectedIndex].dataset.name || '') : '';
+    var params = { slug: e.slug, accountId: acc.value, contactId: con.value, date: day.date, start: from.value, end: to.value, place: place.value.trim(), note: note.value.trim(), contactName: conName, accountName: accName };
+    book.textContent = 'Booking…'; book.setAttribute('aria-disabled', 'true'); setStatus('Writing the meeting on the contact in Network…');
+    evApiBody('planmeeting', params, function(res) {
+      book.textContent = 'Book and download the invite'; book.removeAttribute('aria-disabled');
+      if (!(res && res.success)) { setStatus(evErrText(res && res.error), 'err'); return; }
+      if (res.ics) evPlanDownload(res.ics, res.filename || (res.meeting.id + '.ics'));
+      var m = res.meeting; m.accountName = accName; m.contactName = m.contactName || conName;
+      evPlanApplyMeeting(d, m);
+      evRenderPlan(e, box);
+      var st = document.getElementById('ev-plan-head');
+      if (st) { var note2 = evEl('div', 'ev-status ev-status-ok', 'Booked ' + (m.contactName || m.contactId) + ' · ' + evDayLabel(day.date) + ' ' + evPlanTime(m.start.slice(11, 16)) + '–' + evPlanTime(m.end.slice(11, 16))
+        + (res.interactionId ? ' · recorded on the contact in Network · ' : ' · Network not connected, not recorded · ') + 'the invite downloaded.'); note2.id = 'ev-plan-booked'; st.parentNode.insertBefore(note2, st.nextSibling); }
+    });
+  });
+  return f;
+}
+function evPlanMins(hhmm) { var m = /^(\d{2}):(\d{2})$/.exec(String(hhmm || '')); return m ? Number(m[1]) * 60 + Number(m[2]) : -1; }
+function evPlanHhmm(mins) { var h = Math.floor(mins / 60), m = mins % 60; return (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m; }
+function evPlanDownload(text, filename) {
+  var blob = new Blob([text], { type: 'text/calendar;charset=utf-8' });
+  var url = URL.createObjectURL(blob), a = evEl('a'); a.href = url; a.download = filename; a.id = 'ev-plan-ics'; a.style.display = 'none';
+  document.body.appendChild(a); a.click();
+  setTimeout(function() { URL.revokeObjectURL(url); if (a.parentNode) a.parentNode.removeChild(a); }, 4000);
+}
+// The plan kept in step locally after a booking or an unbook — the meeting
+// fixed on its day, the open slot split around it (a remainder under 30
+// minutes is not offered); Rebuild shows the server's view.
+function evPlanApplyMeeting(d, m) {
+  d.meetings.push(m); d.meetings.sort(function(a, b) { return a.start < b.start ? -1 : 1; });
+  var day = null; d.days.forEach(function(x) { if (x.date === m.start.slice(0, 10)) day = x; });
+  if (!day) return;
+  var s = evPlanMins(m.start.slice(11, 16)), t = evPlanMins(m.end.slice(11, 16)), items = [];
+  day.items.forEach(function(it) {
+    if (it.kind !== 'open' || evPlanMins(it.end) <= s || evPlanMins(it.start) >= t) { items.push(it); return; }
+    var os = evPlanMins(it.start), oe = evPlanMins(it.end);
+    if (s - os >= 30) items.push({ kind: 'open', start: it.start, end: evPlanHhmm(s), title: 'Open slot' });
+    if (oe - t >= 30) items.push({ kind: 'open', start: evPlanHhmm(t), end: it.end, title: 'Open slot' });
+  });
+  items.push({ kind: 'meeting', start: m.start.slice(11, 16), end: m.end.slice(11, 16), title: 'Meeting · ' + (m.contactName || m.contactId), meetingId: m.id, accountId: m.accountId, contactId: m.contactId, place: m.place || '' });
+  items.sort(function(a, b) { return evPlanMins(a.start) - evPlanMins(b.start) || (a.kind === 'open' ? 1 : b.kind === 'open' ? -1 : 0); });
+  day.items = items;
+}
+function evPlanRemoveMeeting(d, id) {
+  var gone = null;
+  d.meetings = d.meetings.filter(function(m) { if (m.id === id) gone = m; return m.id !== id; });
+  d.days.forEach(function(day) {
+    day.items = day.items.map(function(it) { return it.meetingId === id ? { kind: 'open', start: it.start, end: it.end, title: 'Open slot' } : it; });
+  });
+  return gone;
+}
+function evPlanUnbook(e, id, btn, box) {
+  btn.textContent = 'Unbooking…'; btn.setAttribute('aria-disabled', 'true');
+  evApiBody('planunbook', { id: id }, function(res) {
+    if (!(res && res.success)) { btn.textContent = 'Unbook'; btn.removeAttribute('aria-disabled'); var st = document.getElementById('ev-plan-head'); if (st) st.appendChild(evEl('div', 'ev-status ev-status-err', evErrText(res && res.error))); return; }
+    var p = _evPlans[e.slug]; if (p && p.data) evPlanRemoveMeeting(p.data, id);
+    evRenderPlan(e, box);
+  });
 }
 
 // PROJECT: ── Subscribe — the published calendar (session 2, §13.7 step 5) ──

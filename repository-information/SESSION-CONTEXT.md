@@ -6,6 +6,60 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 02:20 AM EST (the session ran ~01:53 → 02:25 AM EST)
+**Repo version:** v07.24r — one push on `claude/focused-gauss-6h8jcd` (E5 session 1 + this session-context write, one commit)
+**Branch:** `claude/focused-gauss-6h8jcd`
+**Model:** Fable 5.1 (E5 session 1 — the deterministic plan: booth list, sessions, day plan and meetings; **E5 is In progress — session 1 done**)
+
+### What was done
+
+- **E5 session 1 landed** (`Events.gs` v01.08g · `Events.html` v01.09w · `Network.gs` v01.16g; §11's E5 row → In progress — session 1 done; §13.18 written — the E5 session-2 brief with its paste-in prompt): `eop=plan` (session GET, behind `recommend`) for one starred event — the score run once with its rows kept (`evRecommend_(sess, true)`) → the booth list ranked by the score's account term × strongest signal + a per-account segment term with the `Tuning` weights, the *why* line verbatim from the served dossier (`strategyRead[0]`, else the newest development headline; top 15; never Profiler's exec), the sessions from the agenda page (read once, cached six hours; kept for a seat-segment title, a Network-contact speaker or a dossier decision maker), the day plan (a frame per day from `hours[]` or the default 09:00–17:00 said so; sessions and meetings fixed, ranked visits 30 min × 6 a day, open slots ≥ 30 min), the venues (one Overpass POST, cached per slug in a script property 30 days, a failure empty + one audit row + uncached), the meetings (`Meetings` tab, `mt-` ids). `eop=plancontacts` (the pick list), `eop=planmeeting` (the `meeting` Interaction written first over Network's new `nop=interaction` POST leg — the mt- id as evidence, one line, never the note — then the `Meetings` row, the invite answered as RFC 5545 text with UTC `DTSTART` from the event's zone), `eop=planunbook` (the row removed, the Interaction kept). `Network.gs`: `nop=interaction` — GET the live contacts under an account (id · name · title · role), POST rows through the same `nwInteractionAdd_`, seven per-row rejections by index. `Events.html`: the Details | Plan strip on the sheet, the Plan tab fetched once and never polled, Book a meeting on an open slot with the `.ics` download, Unbook, Rebuild
+- `scripts/check-events-plan.js` (100 checks, two VMs, zero live calls); `verify-events-roles.py` gained the plan pass (the strip, the booths, a booking with the `.ics` downloaded and read back, Unbook) — ALL CHECKS PASSED at 390 × 844, zero page errors; every sibling harness passes; `check-readme-tree.py` 0 findings
+- `EVENTS-SCHEMA.md` §3 / §5 / §8 / §9 / §10 / §12 and `NETWORK-SCHEMA.md` §8 / §14 updated; CHANGELOG `Sections: 95/100`
+
+### Where we left off
+
+**The developer's live check is next** (reported, not asserted): redeploy Events (`?action=api&op=deploy` → `Already up to date (v01.08g)`) and Network (`v01.16g`), open a starred event's sheet → **Plan** tab, judge the top five booths line by line (the *why* line, the stage, the terms), book one meeting on an open slot and find it on the contact in Network (a `meeting` touch whose evidence is the mt- id) and in the downloaded `.ics` (DTSTART in UTC — the calendar shows it in the event's local time). **The four N4 s2 brackets and this session's four brackets were both left unfilled** in the prompts — do both live checks together. **Then E5 session 2** with the §13.18 paste-in prompt (given in chat at the close of this session) — Opus 5 xhigh.
+
+### Open findings carried forward
+
+- **No booth numbers on the day plan** — the E4 exhibitor parsers keep company names only; the visits are ordered by rank. A parser that stores the booth (Map Your Show's JSON carries it) is a small E4 follow-up, not E5's
+- **The `Plans` tab is still unused** — the brief's "new Plans tab with p- ids" was superseded by the `Meetings` tab E1 created (mt- ids); `Plans` waits for session 2's ROI line and narrative link
+- Only two registry rows carry `hours[]` — most plans run on the default frame until E0's next verification fills them
+- A plan build costs the full score (up to 41 Network calls) plus the agenda, the dossiers and Overpass on first open — 10–30 s; the tab says "Building the plan…" and never polls
+- An unbook leaves the `meeting` Interaction in Network (D15: the record); the developer deletes it there if the meeting never happened
+- A booking made while Network was not configured has no interaction id — the meetings list says "not recorded in Network"
+- From N4 s2: the `.docx` carries no `styles.xml`; a promote needs a Profiler sign-in in the same browser; the map draws the list as filtered
+- From E4: the Scraper roster carries no FERC eLibrary RSS; RE+ 2026's roster is a Swapcard widget; GlobeNewswire's feed unverified until a live sweep is read
+- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
+
+### Key decisions made
+
+- The bookings live in the **`Meetings` tab** (§5, `mt-` ids) that E1 already created, not the brief's "new `Plans` tab with `p-` ids"; the mt- id is the Interaction's evidence and the ICS UID's stem
+- `nop=interaction` is **two legs on one op** (the `nop=signals` pattern) — the read leg is the pick list, so the session's one bridge widening stays one op; `eop=plancontacts` is the page's way to it
+- The meeting invite carries **UTC `DTSTART` / `DTEND`** computed from the event's zone instead of `DTSTART;TZID` + a hand-rolled `VTIMEZONE` (§9 amended as built)
+- The venue cache is a **per-slug script property** `EV_PLAN_VENUES:<slug>` for 30 days (the brief's decision over §10's CacheService 7 days); a failed Overpass answer is never cached
+- The agenda page is read once per plan build and cached six hours in `CacheService` — the sweep and the plan each read it on their own cadence (never twice in one run)
+- The ranked visits take the morning (30 min × 6) so the afternoon stays open for meetings; open slots under 30 minutes are not offered
+- The two regex-literal conventions hold: `\x22` for quotes inside the plan block's regexes (the shared extractor reads a quote inside a regex as a string opener)
+
+### Active context
+
+- **Repo version v07.24r.** `CHANGELOG.md` `Sections: 95/100` — no rotation due
+- **Live versions:** `Events.html` v01.09w · `Events.gs` v01.08g · `Network.html` v01.24w · `Network.gs` v01.16g · `Scraper.gs` v02.22g
+- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07 (the build now stands at E5 s2 + X + Q remaining)
+- **A parallel branch `claude/adoring-brown-mvddj2` was on the remote during this session** — not this session's; check `git ls-remote` before pushing
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Do the live check first (redeploy both apps, a starred event's Plan tab, the top five booths line by line, one meeting booked and found on the contact in Network and in the `.ics`), then run E5 session 2 with the §13.18 paste-in prompt on Opus 5 xhigh — its four bracketed live-state fields filled from that check.
+- **To continue:** type `run E5 session 2 from §13.18`
+
+## Previous Sessions
+
+### Session — 2026-09-23 01:20 AM EST (N4 session 2, v07.23r)
+
 **Date:** 2026-09-23 01:20 AM EST (the session ran ~12:54 → 01:25 AM EST)
 **Repo version:** v07.23r — one push on `claude/exciting-knuth-3pb083` (N4 session 2 + this session-context write, one commit)
 **Branch:** `claude/exciting-knuth-3pb083`
@@ -51,53 +105,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - Do the live check first (the redeploy, one brief in Word for a covered and an uncovered contact, one promotion found in Profiler's intake, the chips on an account with signals, the map), then run E5 session 1 with the §13.17 paste-in prompt — its four bracketed live-state fields filled from Network.
 - **To continue:** type `run E5 session 1 from §13.17`
-
-## Previous Sessions
-
-**Date:** 2026-09-23 12:53 AM EST (the session ran ~12:21 → 12:55 AM EST)
-**Repo version:** v07.22r — one push on `claude/amazing-cerf-xlaqav` (N4 session 1); this session-context write is a second, no-bump push on the same branch name restarted from `origin/main`
-**Branch:** `claude/amazing-cerf-xlaqav`
-**Model:** Fable 5.1 (N4 session 1 — warmth, the reconnect list and the import panel; **N4 is In progress — session 1 done**)
-
-### What was done
-
-- **N4 session 1 landed** (`Network.gs` v01.14g · `Network.html` v01.23w; §11's N4 row → **In progress — session 1 done**; §13.16 written — the N4 session-2 brief with its paste-in prompt): warmth and cadence **computed on every read, stored nowhere** (`NETWORK-SCHEMA.md` §5 rewritten as built — weights meeting 2 · call 1.5 · email-in 1.2 · calendar 1.5 · email-out 1 · scan 1 · linkedin 0.5 · note 0.3, halving every 90 days; hot ≥ 2 · warm ≥ 0.75 · cool ≥ 0.2; cadence 30 / 60 / 90 / 180 per role × relationship); `warmth` + `warmthBand` on every list row from the same single read of the Interactions tab as `lastTouch` (`nwTouchPass_`), the `warmth` block on the detail; `nop=reconnect` (most overdue first, do-not-contact rows left out); `nop=import` (a pasted `.ics` or mail CSV parsed **server-side** into a proposal list matched by email — unmatched addresses proposed and never written, the developer's own address skipped, already-recorded rows marked duplicate) and `nop=importconfirm` (only the ticked rows as `email-in` / `email-out` / `calendar` Interactions; Evidence = the developer's reference · the UID or Message-ID; one line as Summary, never a body). The page: the warmth chip with legend on rows and the detail, the Warmth sort live, the 🔥 Reconnect card (Draft per row / for the ticked → the N3 drafts flow), the ⇪ Import touches panel
-- `scripts/check-network-warmth.js` (66 checks, zero live calls); `verify-network-roles.py` gained the warmth · reconnect · import passes, the D15 grep names `CalendarApp` — ALL CHECKS PASSED at 390 × 844, zero page errors; `check-network-schema.py` allows `matched` · `unmatched`; every sibling harness still passes; `check-readme-tree.py` 0 findings
-- `NETWORK-SCHEMA.md` §5 / §12 / §14 updated; CHANGELOG `Sections: 93/100`
-
-### Where we left off
-
-**The developer's live check is next** (reported, not asserted): confirm the Network redeploy (`?action=api&op=deploy` → `Already up to date (v01.14g)`, else run `pullAndDeployFromGitHub` once), read the warmth chips against three known contacts and the Warmth sort, open 🔥 Reconnect and tap Draft on one row (the drafts panel opens with that recipient), paste one `.ics` into ⇪ Import touches → Propose → type a reference → Record → `✓ 1 touch recorded`. **The two live-state brackets in this session's prompt were left unfilled** (the corpus token, the first people read) — the E4 s3 check may still be pending; do both checks together. **Then N4 session 2** with the §13.16 paste-in prompt (given in chat at the close of this session); its three brackets are the chips, the reconnect list and the confirmed `.ics` row.
-
-### Open findings carried forward
-
-- The `.ics` DESCRIPTION is never read and no CSV body column is ever mapped — by design (D15 / D9); a CSV whose header lacks a Date column or a To / From column is refused by name (`csv_columns`)
-- Do-not-contact contacts are excluded from the reconnect list (a nudge is a draft; D9 excludes them from every draft) — recorded in §5
-- The `press —` / `?` labels on the "Will be at" line stand until N4 session 2's chips
-- Two regex literals in the N4 `.gs` code use `\x22` / `\x27` for the quote marks — the shared harness extractor reads a quote inside a regex as a string opener; keep that convention in new `.gs` regexes
-- From E4: the Scraper roster carries no FERC eLibrary RSS; RE+ 2026's roster is a Swapcard widget; GlobeNewswire's feed unverified until a live sweep is read; no back-fill of `people[]` for items summarised before `Scraper.gs` v02.22g
-- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
-
-### Key decisions made
-
-- Warmth rides the list op's existing single read of the Interactions tab (`nwLastTouch_` now delegates to `nwTouchPass_`) — no second read, no column
-- The reconnect list measures a contact with no Interaction from its met date and skips one with neither
-- The import's duplicate key is contact · kind · day · line — a re-paste proposes those rows as already recorded, a re-confirm refuses them
-- The three import kinds only (`email-in` · `email-out` · `calendar`) — a `scan` or `meeting` through the import path is refused as `bad_kind`
-- The page mirrors the three legend constants byte for byte (asserted by the harness) and never computes a score
-
-### Active context
-
-- **Repo version v07.22r.** `CHANGELOG.md` `Sections: 93/100` — no rotation due
-- **Live versions:** `Network.html` v01.23w · `Network.gs` v01.14g · `Events.html` v01.08w · `Events.gs` v01.07g · `Scraper.gs` v02.22g
-- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07
-- **C2 Routine** fires Wednesday 2026-09-23 11:00 UTC — parallel pushes possible; check `git ls-remote` before pushing
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Do the live check first (confirm the redeploy, the warmth chips against three known contacts, Reconnect → Draft, one `.ics` row confirmed), then run N4 session 2 with the §13.16 paste-in prompt — its three bracketed live-state fields filled from Network.
-- **To continue:** type `run N4 session 2 from §13.16`
-
 
 Developed by: LightAISolutions

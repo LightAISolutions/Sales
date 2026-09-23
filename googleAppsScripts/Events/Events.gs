@@ -1,4 +1,4 @@
-var VERSION = "v01.07g";
+var VERSION = "v01.08g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -727,6 +727,14 @@ function handleEventsOp_(e) {
     if (op === 'installsignals') { evRequire_(sess, 'signals', 'events_installsignals'); return evInstallSignals_(sess); }
     if (op === 'signalsnow') { evRequire_(sess, 'signals', 'events_signalsnow'); return evSignalsRun_(sess.email, [sess.email]); }
     if (op === 'signal') { evRequire_(sess, 'signals', 'events_signal'); return evSignalManual_(sess, p); }
+    // E5 session 1 — the deterministic plan for one starred event, all behind
+    // the `recommend` capability (the booth list is the score's own rows).
+    // plan is a read; planmeeting / planunbook are body-POST writes;
+    // plancontacts is the pick list over Network's nop=interaction read leg.
+    if (op === 'plan') { evRequire_(sess, 'recommend', 'events_plan'); return evPlanOp_(sess, p); }
+    if (op === 'plancontacts') { evRequire_(sess, 'recommend', 'events_plancontacts'); return evPlanContactsOp_(sess, p); }
+    if (op === 'planmeeting') { evRequire_(sess, 'recommend', 'events_planmeeting'); return evPlanMeetingOp_(sess, p); }
+    if (op === 'planunbook') { evRequire_(sess, 'recommend', 'events_planunbook'); return evPlanUnbookOp_(sess, p); }
     return { success: false, error: 'unknown_events_op' };
   } catch (err) {
     var msg = String((err && err.message) || err);
@@ -3544,7 +3552,10 @@ function evScoreEvent_(ev, ctx, weights) {
 // over the bridge ONCE, each scored account's signals over the read leg
 // (capped), the seats' segments and the dossier dates from the Pages site,
 // the owner's Stars for the conflict term. Sorted by score then slug.
-function evRecommend_(sess) {
+// E5: `keep` attaches the signal rows and the account map to the answer
+// (signalsBySlug, accountsById) for the plan's booth list — the score read
+// once, its rows reused; the page's eop=recommend never passes it.
+function evRecommend_(sess, keep) {
   var tabs = ensureEventsTabs_();
   var tuning = evTuning_(tabs.tuning);
   var reg = evRegistry_();
@@ -3579,6 +3590,7 @@ function evRecommend_(sess) {
       signalsRead++;
       var sgRow = { accountId: accountIds[i], kind: sg.kind, confidence: sg.confidence, evidenceUrl: sg.evidenceUrl };
       if (sg.personName) { sgRow.personName = String(sg.personName); if (sg.personTitle) sgRow.personTitle = String(sg.personTitle); }   // E4: the person a roster signal carries
+      if (sg.contactId) sgRow.contactId = String(sg.contactId);   // E5: the Network contact a row names — the plan's sessions filter and booth rows read it
       (signalsBySlug[es] = signalsBySlug[es] || []).push(sgRow);
     });
   }
@@ -3618,6 +3630,7 @@ function evRecommend_(sess) {
     signals: signalsRead, signalsCapped: signalsCapped, seatSegments: seats.error ? [] : seats.list,
     unavailable: unavailable, starred: starred.length, events: events };
   if (networkError) res.networkError = networkError;
+  if (keep) { res.signalsBySlug = signalsBySlug; res.accountsById = accountsById; }
   return res;
 }
 
@@ -4358,6 +4371,591 @@ function evSignalManual_(sess, p) {
   if (!(res && res.success)) return res || { success: false, error: 'upstream_empty' };
   return { success: true, written: res.written || 0, updated: res.updated || 0, rejected: res.rejected || [], kind: kind, slug: slug };
 }
+
+// PROJECT: ── E5 session 1 — the deterministic plan (design plan §5.6 items 1–4, D4 · D9 · D12 · D15; EVENTS-SCHEMA.md §10; NETWORK-SCHEMA.md §8 nop=interaction)
+// For ONE starred event, computed on demand from data already on hand and
+// answered in one read (eop=plan, behind `recommend`; never polled):
+//   1 · the BOOTH LIST — every exhibitor / speaker / agenda / press / newsroom
+//       / manual signal on the event joined to its Network account (the
+//       score's own read of the signals — evRecommend_ run once, its rows
+//       kept; never a second score), one row per account ranked by the
+//       score's account term (stageWeight × the strongest signal's
+//       confidence, the accountPresence weight) plus a per-account segment
+//       term (the account's segments ∩ the event's audience, the segmentFit
+//       weight), with a WHY line lifted verbatim from the served dossier —
+//       strategyRead[0], else the newest recentDevelopments[].headline — read
+//       server-side from the public Pages site (never Profiler's exec, D16)
+//       for the top EV_PLAN_DOSSIER_MAX booths, and the account's stage
+//   2 · the SESSIONS — the agenda page at agendaUrl read ONCE (cached six
+//       hours) and parsed for sessions (JSON-LD Event / subEvent nodes, else
+//       HTML session blocks), kept when the title names a seat segment, a
+//       speaker is a Network contact (a signal row carrying contactId) or a
+//       speaker is a decision maker in a booth account's dossier
+//   3 · the DAY PLAN — one frame per event day from the registry's hours[]
+//       (a default frame, said so, when the row carries none), the booked
+//       meetings and the matched timed sessions fixed, the ranked visits
+//       placed in rank order in the morning, and the OPEN SLOTS between them;
+//       the NEARBY VENUES from OpenStreetMap Overpass (cafés · restaurants ·
+//       bars · hotels within EV_PLAN_VENUE_RADIUS_M of venueLatLng) — one
+//       query per event, cached in a script property for 30 days; a failed
+//       or slow answer is an empty list and one audit row (D12: Overpass
+//       only, never Places, never a key)
+//   4 · the MEETINGS — the owner's Meetings rows on the event (§5); a booking
+//       (eop=planmeeting) writes ONE `meeting` Interaction over Network's new
+//       nop=interaction far-side leg (the mt- id as evidence, the event slug),
+//       then one Meetings row, and answers the invite as .ics TEXT for the
+//       page to download — nothing is sent (D15); eop=planunbook removes the
+//       row (the Interaction stays: it is the record); eop=plancontacts is the
+//       pick list (nop=interaction's read leg — id · name · title · role).
+// Booth numbers: the E4 exhibitor parsers keep company names only, so a
+// visit carries no booth until a parser stores one — the visits are ordered
+// by rank. A plan carries ids, names and the dossier line — never a
+// contact's emails or phones (D9). notConfigured degrades every Network read
+// and write, never fails. Audit rows: ids and counts only.
+var EV_PLAN_VENUES_PROP = 'EV_PLAN_VENUES:';      // + slug — one property per event (a value is capped at 9 KB)
+var EV_PLAN_VENUES_DAYS = 30;                       // the cache's life
+var EV_PLAN_VENUE_RADIUS_M = 600;                   // D12
+var EV_PLAN_VENUES_MAX = 40;
+var EV_OVERPASS_URL = 'https://overpass-api.de/api/interpreter';
+var EV_OVERPASS_TIMEOUT_S = 25;
+var EV_PLAN_BOOTH_MAX = 60;                         // booth rows answered
+var EV_PLAN_DOSSIER_MAX = 15;                       // booths whose dossier is read for the why line
+var EV_PLAN_SESSIONS_MAX = 40;
+var EV_PLAN_AGENDA_CACHE_S = 21600;                 // the parsed agenda, six hours — the page is read once per plan build at most
+var EV_PLAN_DEFAULT_HOURS = ['09:00', '17:00'];     // the frame when the registry row carries no hours[]
+var EV_PLAN_VISIT_MIN = 30;                         // minutes per booth visit
+var EV_PLAN_SLOT_MIN = 30;                          // an open slot shorter than this is not offered
+var EV_PLAN_VISITS_PER_DAY = 6;                     // the morning block — the afternoon is left open for meetings
+var EV_PLAN_MEETING_MAX_MIN = 240;
+var EV_PLAN_SIGNAL_KINDS = ['exhibitor', 'speaker', 'agenda', 'press-release', 'newsroom', 'luma', 'linkedin-manual', 'registrant-mail', 'directory', 'other'];   // booth evidence — a docket or a press quote names no event
+var EV_PLAN_STOPWORDS = ['and', 'the', 'of', 'for', 'to', 'in', 'on', 'a', 'an', 'with', 'by', 'or', 'at'];
+var EV_PROFILE_URL = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'profiler-data/';   // + <slug>.profile.json — the served dossier
+var EV_MEETING_ID_RE = /^mt-[0-9a-z]{13}$/;
+var EV_CONTACT_ID_RE = /^c-[0-9a-z]{13}$/;           // mirror of Network's NW_ID_RE, the c- prefix only
+var EV_HHMM_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
+var _evProfileCache = {};
+
+// ── Small helpers ─────────────────────────────────────────────────────────
+function evMinutes_(hhmm) { var m = EV_HHMM_RE.exec(String(hhmm || '')); return m ? Number(hhmm.slice(0, 2)) * 60 + Number(hhmm.slice(3, 5)) : -1; }
+function evHhmm_(mins) { var h = Math.floor(mins / 60), m = mins % 60; return (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m; }
+function evNameKey_(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); }
+function evDayList_(start, end) {
+  var out = [], d = String(start || ''), last = String(end || start || '');
+  for (var i = 0; i < 31 && d && d <= last; i++) { out.push(d); d = evAddDaysStr_(d, 1); }
+  return out;
+}
+// Wall time in a zone → UTC. Utilities.formatDate answers what the zone
+// reads at a UTC instant; the offset at the guess is applied, then checked
+// once more so a DST edge lands on the right side.
+function evLocalToUtc_(day, hhmm, tz) {
+  var want = day + 'T' + hhmm, guess = new Date(want + ':00Z');
+  if (isNaN(guess.getTime())) return null;
+  var zone = String(tz || '').trim() || 'America/New_York';
+  var readAt = function(d) { return Utilities.formatDate(d, zone, "yyyy-MM-dd'T'HH:mm"); };
+  var off = new Date(readAt(guess) + ':00Z').getTime() - guess.getTime();
+  var once = new Date(guess.getTime() - off);
+  if (readAt(once) === want) return once;
+  var off2 = new Date(readAt(once) + ':00Z').getTime() - once.getTime();
+  return new Date(guess.getTime() - off2);
+}
+function evIcsEsc_(s) { return String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+function evIcsUtc_(d) { return Utilities.formatDate(d, 'UTC', "yyyyMMdd'T'HHmmss'Z'"); }
+// Fold at 75 octets (RFC 5545 §3.1) — a continuation line starts with one space.
+function evIcsFold_(line) {
+  var out = [], cur = '', bytes = 0;
+  for (var i = 0; i < line.length; i++) {
+    var ch = line.charAt(i), code = line.charCodeAt(i);
+    if (code >= 0xD800 && code <= 0xDBFF && i + 1 < line.length) { ch += line.charAt(i + 1); i++; }
+    var n = Utilities.newBlob(ch).getBytes().length, limit = out.length ? 74 : 75;
+    if (bytes + n > limit) { out.push(cur); cur = ch; bytes = n; } else { cur += ch; bytes += n; }
+  }
+  out.push(cur);
+  return out.map(function(l, k) { return (k ? ' ' : '') + l; }).join('\r\n');
+}
+function evIcsHost_() { var m = /^https?:\/\/([^\/]+)/i.exec(EMBED_PAGE_URL); return m ? m[1].toLowerCase() : 'events.local'; }
+
+// ── Venues — Overpass, cached per event (D12; EVENTS-SCHEMA.md §10) ───────
+// { venues:[ { name, kind, lat, lng, distanceM } ], cached:bool, error? }.
+// One POST per event per EV_PLAN_VENUES_DAYS; a failure is never cached, so
+// the next plan build tries again. The property holds ids of nothing — it is
+// public map data.
+function evDistanceM_(lat1, lng1, lat2, lng2) {
+  var R = 6371000, toRad = Math.PI / 180;
+  var dLat = (lat2 - lat1) * toRad, dLng = (lng2 - lng1) * toRad;
+  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(lat1 * toRad) * Math.cos(lat2 * toRad) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+  return Math.round(2 * R * Math.asin(Math.sqrt(a)));
+}
+function evOverpassQuery_(lat, lng) {
+  var around = '(around:' + EV_PLAN_VENUE_RADIUS_M + ',' + lat + ',' + lng + ')';
+  return '[out:json][timeout:' + EV_OVERPASS_TIMEOUT_S + '];(node[\x22amenity\x22~\x22cafe|restaurant|bar\x22]' + around
+    + ';node[\x22tourism\x22=\x22hotel\x22]' + around + ';);out body ' + EV_PLAN_VENUES_MAX + ';';
+}
+function evParseOverpass_(text, lat, lng) {
+  var data = JSON.parse(text), out = [], seen = {};
+  var els = (data && data.elements) || [];
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i] || {}, tags = el.tags || {};
+    var name = String(tags.name || '').replace(/\s+/g, ' ').trim().slice(0, 80);
+    if (!name || typeof el.lat !== 'number' || typeof el.lon !== 'number') continue;
+    var kind = tags.tourism === 'hotel' ? 'hotel' : String(tags.amenity || '');
+    if (['cafe', 'restaurant', 'bar', 'hotel'].indexOf(kind) < 0) continue;
+    var d = evDistanceM_(lat, lng, el.lat, el.lon);
+    if (d > EV_PLAN_VENUE_RADIUS_M) continue;
+    var key = kind + '|' + name.toLowerCase();
+    if (seen[key]) continue;
+    seen[key] = true;
+    out.push({ name: name, kind: kind, lat: Math.round(el.lat * 1e5) / 1e5, lng: Math.round(el.lon * 1e5) / 1e5, distanceM: d });
+  }
+  out.sort(function(a, b) { return a.distanceM - b.distanceM || (a.name < b.name ? -1 : 1); });
+  return out.slice(0, EV_PLAN_VENUES_MAX);
+}
+function evPlanVenues_(ev, who) {
+  var ll = ev && ev.venueLatLng;
+  if (!ll || ll.length !== 2 || typeof ll[0] !== 'number' || typeof ll[1] !== 'number') return { venues: [], cached: false, error: 'no_coordinates' };
+  var props = PropertiesService.getScriptProperties(), key = EV_PLAN_VENUES_PROP + String(ev.slug);
+  var raw = props.getProperty(key), now = Date.now();
+  if (raw) {
+    try {
+      var hit = JSON.parse(raw);
+      if (hit && hit.at && (now - new Date(hit.at).getTime()) < EV_PLAN_VENUES_DAYS * 86400000 && hit.venues) return { venues: hit.venues, cached: true, at: hit.at };
+    } catch (cErr) { /* a malformed cache is rebuilt */ }
+  }
+  var resp, status = 0;
+  try {
+    resp = UrlFetchApp.fetch(EV_OVERPASS_URL, { method: 'post', contentType: 'application/x-www-form-urlencoded', payload: 'data=' + encodeURIComponent(evOverpassQuery_(ll[0], ll[1])),
+      muteHttpExceptions: true, followRedirects: true, validateHttpsCertificates: true });
+    status = resp.getResponseCode();
+  } catch (fErr) {
+    auditLog('data_read', who, 'events_plan_venues_failed', { slug: String(ev.slug), status: 0, error: 'fetch_failed' });
+    return { venues: [], cached: false, error: 'fetch_failed' };
+  }
+  if (status < 200 || status > 299) {
+    auditLog('data_read', who, 'events_plan_venues_failed', { slug: String(ev.slug), status: status, error: 'http_' + status });
+    return { venues: [], cached: false, error: 'http_' + status };
+  }
+  var venues;
+  try { venues = evParseOverpass_(resp.getContentText(), ll[0], ll[1]); }
+  catch (pErr) {
+    auditLog('data_read', who, 'events_plan_venues_failed', { slug: String(ev.slug), status: status, error: 'parse_failed' });
+    return { venues: [], cached: false, error: 'parse_failed' };
+  }
+  var at = new Date(now).toISOString();
+  try { props.setProperty(key, JSON.stringify({ at: at, venues: venues })); } catch (sErr) { /* over the property cap — answered, not cached */ }
+  return { venues: venues, cached: false, at: at };
+}
+
+// ── The dossier line — the served JSON, never Profiler's exec (D4, D16) ───
+// { text, source ∈ strategyRead · recentDevelopments, date? } or null; the
+// decision makers ride the same read for the sessions filter.
+function evProfile_(slug) {
+  var s = String(slug || '').trim().toLowerCase();
+  if (!EV_SLUG_RE.test(s)) return null;
+  if (_evProfileCache.hasOwnProperty(s)) return _evProfileCache[s];
+  var got = evPagesJson_(EV_PROFILE_URL + encodeURIComponent(s) + '.profile.json', 'profile_unavailable');
+  _evProfileCache[s] = got.error ? null : (got.data || null);
+  return _evProfileCache[s];
+}
+function evDossierWhy_(profile) {
+  if (!profile) return null;
+  var sr = profile.strategyRead;
+  if (Array.isArray(sr) && sr.length && typeof sr[0] === 'string' && sr[0].trim()) return { text: sr[0].trim(), source: 'strategyRead' };
+  var devs = Array.isArray(profile.recentDevelopments) ? profile.recentDevelopments.slice() : [];
+  devs = devs.filter(function(d) { return d && typeof d.headline === 'string' && d.headline.trim(); });
+  if (!devs.length) return null;
+  devs.sort(function(a, b) { return String(b.date || '') < String(a.date || '') ? -1 : String(b.date || '') > String(a.date || '') ? 1 : 0; });
+  return { text: devs[0].headline.trim(), source: 'recentDevelopments', date: String(devs[0].date || '') };
+}
+function evDecisionMakers_(profile) {
+  var out = [], list = (profile && Array.isArray(profile.decisionMakers)) ? profile.decisionMakers : [];
+  for (var i = 0; i < list.length; i++) if (list[i] && list[i].name) out.push({ name: String(list[i].name), key: evNameKey_(list[i].name), title: String(list[i].title || '') });
+  return out;
+}
+
+// ── The agenda — sessions from the page the sweep already reads ───────────
+// [ { title, date?, start?, end?, room?, speakers:[ { name, title, company } ] } ].
+// JSON-LD first (Event nodes and their subEvent[] with startDate / performer),
+// else HTML blocks whose class names a session (a heading for the title, a
+// time in the block, the roster parser for its speakers).
+function evSessionTime_(iso) {
+  var m = /^(\d{4}-\d{2}-\d{2})(?:T(\d{2}:\d{2}))?/.exec(String(iso || '').trim());
+  return m ? { date: m[1], time: m[2] || '' } : { date: '', time: '' };
+}
+function evSessionsFromLd_(node, out, depth) {
+  if (!node || depth > 8 || out.length >= EV_PLAN_SESSIONS_MAX) return;
+  if (Array.isArray(node)) { for (var i = 0; i < node.length; i++) evSessionsFromLd_(node[i], out, depth + 1); return; }
+  if (typeof node !== 'object') return;
+  if (evIsEventType_(node['@type']) && node.startDate && node.name) {
+    var st = evSessionTime_(node.startDate), en = evSessionTime_(node.endDate);
+    var people = [], seen = {};
+    if (node.performer) { var ps = Array.isArray(node.performer) ? node.performer : [node.performer]; for (var p = 0; p < ps.length; p++) evPersonFromLd_(ps[p], people, seen); }
+    var loc = node.location && typeof node.location === 'object' ? String(node.location.name || '') : String(node.location || '');
+    if (st.time || node.subEvent === undefined) {
+      out.push({ title: String(node.name).replace(/\s+/g, ' ').trim().slice(0, 200), date: st.date, start: st.time, end: en.time, room: loc.slice(0, 80), speakers: people });
+    }
+  }
+  ['subEvent', '@graph', 'itemListElement', 'item', 'mainEntity'].forEach(function(k) { if (node[k]) evSessionsFromLd_(node[k], out, depth + 1); });
+}
+function evParseSessions_(html) {
+  var out = [], blocks = evJsonLdBlocks_(html);
+  for (var b = 0; b < blocks.length; b++) evSessionsFromLd_(blocks[b], out, 0);
+  if (out.length) return out.slice(0, EV_PLAN_SESSIONS_MAX);
+  var t = String(html || '');
+  var re = /<(div|li|article|section|tr)\b[^>]*class=\x22[^\x22]*session[^\x22]*\x22[^>]*>/gi, m, starts = [];
+  while ((m = re.exec(t)) !== null) starts.push(m.index);
+  for (var s = 0; s < starts.length && out.length < EV_PLAN_SESSIONS_MAX; s++) {
+    var seg = t.slice(starts[s], Math.min(starts[s] + 6000, s + 1 < starts.length ? starts[s + 1] : t.length));
+    var hm = /<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/i.exec(seg) || /class=\x22[^\x22]*(?:session-title|title)[^\x22]*\x22[^>]*>([\s\S]*?)<\//i.exec(seg);
+    if (!hm) continue;
+    var title = evStripTags_(hm[1]).replace(/^\d{1,2}:\d{2}\s*(?:[ap]m)?\s*[-–—]?\s*/i, '').slice(0, 200);
+    if (!title) continue;
+    var text = evStripTags_(seg.slice(0, hm.index + hm[0].length + 400));
+    var tm = /\b(\d{1,2}):(\d{2})\s*([ap]m)?(?:\s*[-–—]\s*(\d{1,2}):(\d{2})\s*([ap]m)?)?/i.exec(text);
+    var toHm = function(h, mm, ap) { var hh = Number(h); if (ap) { if (/p/i.test(ap) && hh < 12) hh += 12; if (/a/i.test(ap) && hh === 12) hh = 0; } return hh > 23 ? '' : evHhmm_(hh * 60 + Number(mm)); };
+    var dm = /\b(\d{4}-\d{2}-\d{2})\b/.exec(text) || /datetime=\x22(\d{4}-\d{2}-\d{2})/i.exec(seg);
+    var rm = /class=\x22[^\x22]*(?:room|location|venue|track)[^\x22]*\x22[^>]*>([\s\S]*?)<\//i.exec(seg);
+    out.push({ title: title, date: dm ? dm[1] : '', start: tm ? toHm(tm[1], tm[2], tm[3] || tm[6]) : '', end: tm && tm[4] ? toHm(tm[4], tm[5], tm[6]) : '',
+               room: rm ? evStripTags_(rm[1]).slice(0, 80) : '', speakers: evParseSpeakers_(seg) });
+  }
+  return out;
+}
+// The parsed agenda, six hours in the script cache — one fetch per plan
+// build at most; a failed page is one audit row and an empty list.
+function evPlanSessions_(ev, who) {
+  var url = String(ev.agendaUrl || '').trim();
+  if (!/^https?:\/\//i.test(url)) return { sessions: [], status: 0, skipped: 'no_agenda' };
+  var cache = CacheService.getScriptCache(), key = 'ev_plan_agenda:' + String(ev.slug);
+  var hit = cache.get(key);
+  if (hit) { try { return { sessions: JSON.parse(hit), status: 200, cached: true }; } catch (cErr) { /* rebuilt */ } }
+  var got = evSignalsFetch_(url, { 'Accept': 'text/html, application/ld+json;q=0.9, */*;q=0.5' }), sessions = null;
+  if (!got.error) { try { sessions = evParseSessions_(got.body); } catch (pErr) { got.error = 'parse_failed'; } }
+  if (got.error) {
+    auditLog('data_read', who, 'events_signals_page_failed', { slug: String(ev.slug), source: 'agenda-sessions', status: got.status, error: got.error });
+    return { sessions: [], status: got.status, error: got.error };
+  }
+  try { cache.put(key, JSON.stringify(sessions), EV_PLAN_AGENDA_CACHE_S); } catch (sErr) { /* over the cache cap — answered, not cached */ }
+  return { sessions: sessions, status: got.status, cached: false };
+}
+
+// ── The booth list — the score's rows, ranked per account ─────────────────
+// `rec` is evRecommend_'s answer with its signal rows kept (signalsBySlug,
+// accountsById); the event's audience and the seat segments give the segment
+// term. One row per account with a plan-kind signal on the event.
+function evPlanBooths_(ev, rec, weights) {
+  var rows = (rec.signalsBySlug && rec.signalsBySlug[String(ev.slug)]) || [], byAccount = {};
+  var audience = (ev.audience || []).map(String), seatSet = {};
+  (rec.seatSegments || []).forEach(function(id) { seatSet[String(id)] = true; });
+  for (var i = 0; i < rows.length; i++) {
+    var sg = rows[i], acct = rec.accountsById[sg.accountId];
+    if (!acct || EV_PLAN_SIGNAL_KINDS.indexOf(String(sg.kind || '')) < 0) continue;
+    var conf = Math.max(0, Math.min(1, Number(sg.confidence) || 0));
+    var b = byAccount[sg.accountId];
+    if (!b) {
+      var segs = (acct.segments || []).map(String).filter(function(id) { return audience.indexOf(id) >= 0; });
+      var segTerm = audience.length ? segs.length / audience.length : 0;
+      b = byAccount[sg.accountId] = { accountId: String(sg.accountId), name: String(acct.name || ''), slug: String(acct.slug || ''),
+        relationship: String(acct.relationship || ''), stage: String(acct.stage || ''), stageWeight: evStageWeight_(acct),
+        confidence: 0, accountTerm: 0, segmentTerm: evRound2_(segTerm), segments: segs, seatSegments: segs.filter(function(id) { return seatSet[id]; }),
+        signals: [], why: null, covered: false };
+    }
+    if (conf > b.confidence) b.confidence = conf;
+    var srow = { kind: String(sg.kind || ''), confidence: conf, evidenceUrl: String(sg.evidenceUrl || '') };
+    if (sg.personName) { srow.personName = String(sg.personName); if (sg.personTitle) srow.personTitle = String(sg.personTitle); }
+    if (sg.contactId) srow.contactId = String(sg.contactId);
+    b.signals.push(srow);
+  }
+  var wa = Number(weights.accountPresence) || 0, ws = Number(weights.segmentFit) || 0, list = [];
+  for (var id in byAccount) if (byAccount.hasOwnProperty(id)) {
+    var x = byAccount[id];
+    x.accountTerm = evRound2_(x.stageWeight * x.confidence);
+    x.rank = evRound2_(wa * x.stageWeight * x.confidence + ws * x.segmentTerm);
+    x.signals.sort(function(p, q) { return q.confidence - p.confidence || (p.kind < q.kind ? -1 : p.kind > q.kind ? 1 : 0); });
+    list.push(x);
+  }
+  list.sort(function(p, q) { return q.rank - p.rank || q.accountTerm - p.accountTerm || (p.name.toLowerCase() < q.name.toLowerCase() ? -1 : 1); });
+  list = list.slice(0, EV_PLAN_BOOTH_MAX);
+  // the why line from the served dossier, top booths only
+  var dossiers = 0, decisionMakers = [];
+  for (var k = 0; k < list.length; k++) {
+    var row = list[k];
+    if (k >= EV_PLAN_DOSSIER_MAX || !row.slug) continue;
+    var profile = evProfile_(row.slug);
+    dossiers++;
+    if (!profile) continue;
+    row.covered = true;
+    row.why = evDossierWhy_(profile);
+    evDecisionMakers_(profile).forEach(function(dm) { decisionMakers.push({ name: dm.name, key: dm.key, title: dm.title, accountId: row.accountId, account: row.name }); });
+  }
+  return { booths: list, dossiersRead: dossiers, decisionMakers: decisionMakers };
+}
+
+// ── The sessions filter ───────────────────────────────────────────────────
+// A session is kept when its title names a seat segment the event serves,
+// a speaker is a Network contact (a signal row on the event carrying
+// contactId), or a speaker is a decision maker in a booth account's dossier.
+function evSegmentKeywords_(ev, rec) {
+  var names = {}, seats = {};
+  (rec.seatSegments || []).forEach(function(id) { seats[String(id)] = true; });
+  var segs = evPagesJson_(EV_SEGMENTS_URL, 'segments_unavailable');
+  var list = (!segs.error && segs.data && segs.data.segments) || [];
+  for (var i = 0; i < list.length; i++) if (list[i] && list[i].id) names[String(list[i].id)] = String(list[i].name || '');
+  var out = [];
+  (ev.audience || []).map(String).forEach(function(id) {
+    if (!seats[id]) return;
+    var words = (names[id] || id).toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(' ').filter(function(w) { return w.length > 2 && EV_PLAN_STOPWORDS.indexOf(w) < 0; });
+    out.push({ id: id, name: names[id] || id, words: words });
+  });
+  return out;
+}
+function evPlanSessionsFilter_(sessions, keywords, booths, decisionMakers) {
+  var contactKeys = {}, dmKeys = {};
+  booths.forEach(function(b) { b.signals.forEach(function(s) { if (s.contactId && s.personName) contactKeys[evNameKey_(s.personName)] = { account: b.name, accountId: b.accountId, contactId: s.contactId }; }); });
+  decisionMakers.forEach(function(d) { dmKeys[d.key] = d; });
+  var out = [];
+  for (var i = 0; i < sessions.length; i++) {
+    var s = sessions[i], why = [], titleWords = ' ' + String(s.title || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ') + ' ';
+    keywords.forEach(function(k) {
+      var hit = k.words.some(function(w) { return titleWords.indexOf(' ' + w + ' ') >= 0; });
+      if (hit) why.push({ kind: 'segment', id: k.id, name: k.name });
+    });
+    (s.speakers || []).forEach(function(p) {
+      var key = evNameKey_(p.name);
+      if (contactKeys[key]) why.push({ kind: 'contact', name: p.name, account: contactKeys[key].account, accountId: contactKeys[key].accountId, contactId: contactKeys[key].contactId });
+      else if (dmKeys[key]) why.push({ kind: 'decision-maker', name: p.name, account: dmKeys[key].account, accountId: dmKeys[key].accountId });
+    });
+    if (!why.length) continue;
+    out.push({ title: s.title, date: s.date || '', start: s.start || '', end: s.end || '', room: s.room || '', speakers: (s.speakers || []).map(function(p) { return { name: p.name, title: p.title || '', company: p.company || '' }; }), why: why });
+  }
+  out.sort(function(a, b) { return (a.date + a.start) < (b.date + b.start) ? -1 : (a.date + a.start) > (b.date + b.start) ? 1 : 0; });
+  return out;
+}
+
+// ── The day plan — frames, fixed items, ranked visits, open slots ─────────
+function evPlanHours_(ev, day) {
+  var hrs = Array.isArray(ev.hours) ? ev.hours : [];
+  for (var i = 0; i < hrs.length; i++) {
+    var h = hrs[i] || {};
+    if (String(h.date || '') === day && evMinutes_(h.open) >= 0 && evMinutes_(h.close) > evMinutes_(h.open)) return { open: String(h.open), close: String(h.close), source: 'registry' };
+  }
+  return { open: EV_PLAN_DEFAULT_HOURS[0], close: EV_PLAN_DEFAULT_HOURS[1], source: 'default' };
+}
+function evPlanDays_(ev, booths, sessions, meetings) {
+  var days = evDayList_(ev.start, ev.end), out = [], nextVisit = 0;
+  for (var d = 0; d < days.length; d++) {
+    var day = days[d], frame = evPlanHours_(ev, day), open = evMinutes_(frame.open), close = evMinutes_(frame.close);
+    var fixed = [];
+    meetings.forEach(function(m) {
+      if (String(m.start || '').slice(0, 10) !== day) return;
+      var s = evMinutes_(String(m.start).slice(11, 16)), e = evMinutes_(String(m.end).slice(11, 16));
+      if (s < 0 || e <= s) return;
+      fixed.push({ kind: 'meeting', start: evHhmm_(s), end: evHhmm_(e), title: m.contactName ? 'Meeting · ' + m.contactName : 'Meeting', meetingId: m.id, accountId: m.accountId, contactId: m.contactId, place: m.place || '' });
+    });
+    sessions.forEach(function(s) {
+      if (s.date !== day || !s.start) return;
+      var st = evMinutes_(s.start), en = s.end ? evMinutes_(s.end) : st + 60;
+      if (st < 0 || en <= st) return;
+      fixed.push({ kind: 'session', start: evHhmm_(st), end: evHhmm_(en), title: s.title, room: s.room || '' });
+    });
+    fixed.sort(function(a, b) { return evMinutes_(a.start) - evMinutes_(b.start); });
+    // free intervals inside the frame, around the fixed items
+    var free = [], cursor = open;
+    fixed.forEach(function(f) { var fs = Math.max(open, evMinutes_(f.start)), fe = Math.min(close, evMinutes_(f.end)); if (fs > cursor) free.push([cursor, fs]); cursor = Math.max(cursor, fe); });
+    if (close > cursor) free.push([cursor, close]);
+    // the ranked visits, EV_PLAN_VISITS_PER_DAY at most, in the earliest free time
+    var items = fixed.slice(), placed = 0;
+    for (var f = 0; f < free.length && placed < EV_PLAN_VISITS_PER_DAY && nextVisit < booths.length; f++) {
+      var at = free[f][0];
+      while (at + EV_PLAN_VISIT_MIN <= free[f][1] && placed < EV_PLAN_VISITS_PER_DAY && nextVisit < booths.length) {
+        var b = booths[nextVisit++];
+        items.push({ kind: 'visit', start: evHhmm_(at), end: evHhmm_(at + EV_PLAN_VISIT_MIN), title: b.name, accountId: b.accountId, rank: nextVisit, stage: b.stage, booth: '' });
+        at += EV_PLAN_VISIT_MIN; placed++;
+      }
+      free[f][0] = at;
+    }
+    free.forEach(function(iv) { if (iv[1] - iv[0] >= EV_PLAN_SLOT_MIN) items.push({ kind: 'open', start: evHhmm_(iv[0]), end: evHhmm_(iv[1]), title: 'Open slot' }); });
+    items.sort(function(a, b) { return evMinutes_(a.start) - evMinutes_(b.start) || (a.kind === 'open' ? 1 : b.kind === 'open' ? -1 : 0); });
+    out.push({ date: day, open: frame.open, close: frame.close, hoursSource: frame.source, items: items });
+  }
+  return out;
+}
+
+// ── The meetings — the owner's rows on the event (§5 Meetings) ────────────
+function evWallCell_(v, tz) {
+  if (v instanceof Date) { try { return Utilities.formatDate(v, tz, "yyyy-MM-dd'T'HH:mm"); } catch (zErr) { return v.toISOString().slice(0, 16); } }
+  return String(v == null ? '' : v).slice(0, 16);
+}
+function evPlanMeetings_(tabs, owner, slug) {
+  var sheet = tabs.meetings, last = sheet.getLastRow(), width = sheet.getLastColumn();
+  if (last < 2 || width < 1) return [];
+  var tz = 'America/New_York';
+  try { tz = sheet.getParent().getSpreadsheetTimeZone() || tz; } catch (tErr) { /* the script zone */ }
+  var vals = sheet.getRange(1, 1, last, width).getValues(), idx = {};
+  for (var h = 0; h < vals[0].length; h++) idx[String(vals[0][h])] = h;
+  var out = [];
+  for (var r = 1; r < vals.length; r++) {
+    var row = vals[r];
+    if (String(row[idx['Owner']] || '').toLowerCase() !== owner || String(row[idx['Event Slug']] || '') !== slug) continue;
+    out.push({ id: String(row[idx['Meeting ID']] || ''), contactId: String(row[idx['Contact ID']] || ''), accountId: String(row[idx['Account ID']] || ''),
+      start: evWallCell_(row[idx['Start']], tz), end: evWallCell_(row[idx['End']], tz), place: String(row[idx['Place']] || ''), note: String(row[idx['Note']] || ''),
+      icsUid: String(row[idx['ICS UID']] || ''), interactionId: String(row[idx['Network Interaction ID']] || ''), createdAt: evCell_(row[idx['Created At']]) });
+  }
+  out.sort(function(a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+  return out;
+}
+// The contacts' names for the booked meetings — one read per account over
+// Network's pick-list leg; degrades to ids when Network is not configured.
+function evPlanMeetingNames_(meetings, owner, accountsById) {
+  var byAccount = {}, calls = 0;
+  meetings.forEach(function(m) {
+    var acct = accountsById[m.accountId];
+    m.accountName = acct ? String(acct.name || '') : '';
+    if (!byAccount[m.accountId]) { byAccount[m.accountId] = null; }
+  });
+  for (var id in byAccount) if (byAccount.hasOwnProperty(id) && EV_ACCOUNT_ID_RE.test(id)) {
+    var res = evNetworkProxy_('interaction', { owner: owner, accountId: id }); calls++;
+    var map = {};
+    if (res && res.success) (res.contacts || []).forEach(function(c) { map[String(c.id)] = String(c.name || ''); });
+    byAccount[id] = map;
+  }
+  meetings.forEach(function(m) { m.contactName = (byAccount[m.accountId] && byAccount[m.accountId][m.contactId]) || ''; });
+  return calls;
+}
+
+// ── eop=plan ──────────────────────────────────────────────────────────────
+function evPlanOp_(sess, p) {
+  var slug = evStr_(p.slug, 64).toLowerCase();
+  if (!EV_SLUG_RE.test(slug)) return { success: false, error: 'bad_slug' };
+  var tabs = ensureEventsTabs_();
+  var own = {}; own[String(sess.email || '').toLowerCase()] = 'own';
+  var stars = evListRows_(tabs.stars, own, { slug: 'Event Slug', attending: 'Attending' }), star = null;
+  for (var i = 0; i < stars.length; i++) if (stars[i].slug === slug) star = stars[i];
+  if (!star) return { success: false, error: 'not_starred', slug: slug };
+  var reg = evRegistry_();
+  if (reg.error) return { success: false, error: reg.error };
+  var ev = reg.bySlug[slug];
+  if (!ev) return { success: false, error: 'unknown_slug', slug: slug };
+  // the score once, its rows kept (never a second score)
+  var rec = evRecommend_(sess, true);
+  if (!(rec && rec.success)) return rec || { success: false, error: 'score_failed' };
+  var scored = null;
+  (rec.events || []).forEach(function(x) { if (x.slug === slug) scored = x; });
+  var bl = evPlanBooths_(ev, rec, rec.weights || {});
+  var ag = evPlanSessions_(ev, sess.email);
+  var keywords = evSegmentKeywords_(ev, rec);
+  var sessions = evPlanSessionsFilter_(ag.sessions, keywords, bl.booths, bl.decisionMakers);
+  var meetings = evPlanMeetings_(tabs, String(sess.email || '').toLowerCase(), slug);
+  var nameCalls = rec.notConfigured ? 0 : evPlanMeetingNames_(meetings, sess.email, rec.accountsById);
+  var days = evPlanDays_(ev, bl.booths, sessions, meetings);
+  var venues = evPlanVenues_(ev, sess.email);
+  auditLog('data_read', sess.email, 'events_plan', { slug: slug, booths: bl.booths.length, dossiers: bl.dossiersRead, sessions: sessions.length, agenda: ag.sessions.length,
+    days: days.length, meetings: meetings.length, venues: venues.venues.length, venuesCached: venues.cached ? 1 : 0, notConfigured: rec.notConfigured ? 1 : 0, calls: nameCalls });
+  var res = { success: true, slug: slug, built: new Date().toISOString(), event: { name: String(ev.name || ''), start: String(ev.start || ''), end: String(ev.end || ''), tz: String(ev.tz || ''),
+      venue: String(ev.venue || ''), city: String(ev.city || ''), venueLatLng: Array.isArray(ev.venueLatLng) ? ev.venueLatLng : null, hasHours: Array.isArray(ev.hours) && ev.hours.length > 0, agendaUrl: String(ev.agendaUrl || '') },
+    attending: String(star.attending || ''), score: scored ? { score: scored.score, terms: scored.terms } : null, weights: rec.weights, notConfigured: !!rec.notConfigured,
+    booths: bl.booths, dossiersRead: bl.dossiersRead, keywords: keywords.map(function(k) { return { id: k.id, name: k.name }; }),
+    sessions: sessions, agenda: { read: ag.sessions.length, status: ag.status, cached: !!ag.cached, skipped: ag.skipped || '', error: ag.error || '' },
+    days: days, venues: venues.venues, venuesCached: !!venues.cached, venuesError: venues.error || '', meetings: meetings };
+  if (rec.networkError) res.networkError = rec.networkError;
+  return res;
+}
+
+// ── eop=plancontacts — the pick list (nop=interaction, read leg) ──────────
+function evPlanContactsOp_(sess, p) {
+  var accountId = evStr_(p.accountId, 20);
+  if (!EV_ACCOUNT_ID_RE.test(accountId)) return { success: false, error: 'bad_account_id' };
+  var res = evNetworkProxy_('interaction', { owner: sess.email, accountId: accountId });
+  auditLog('data_read', sess.email, 'events_plan_contacts', { accountId: accountId, ok: res && res.success ? 1 : 0, contacts: (res && res.contacts && res.contacts.length) || 0 });
+  if (!(res && res.success)) return res || { success: false, error: 'upstream_empty' };
+  return { success: true, accountId: accountId, contacts: (res.contacts || []).map(function(c) { return { id: String(c.id || ''), name: String(c.name || ''), title: String(c.title || ''), role: String(c.role || '') }; }) };
+}
+
+// ── The invite — RFC 5545 text, UTC times from the event's zone (§9) ──────
+function evMeetingIcs_(m, ev, contactName, accountName) {
+  var tz = String(ev.tz || ''), day = String(m.start).slice(0, 10);
+  var s = evLocalToUtc_(day, String(m.start).slice(11, 16), tz), e = evLocalToUtc_(String(m.end).slice(0, 10), String(m.end).slice(11, 16), tz);
+  if (!s || !e) return '';
+  var summary = 'Meeting' + (contactName ? ' with ' + contactName : '') + (accountName ? ' (' + accountName + ')' : '') + ' — ' + String(ev.name || '');
+  var loc = [m.place, ev.venue, ev.city].filter(Boolean).join(', ');
+  var desc = [m.note, 'Booked in Events for ' + String(ev.name || '') + ' (' + day + ')', 'Plan ' + m.id + (m.interactionId ? ' · Network interaction ' + m.interactionId : '')].filter(Boolean).join('\n');
+  var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Events//Meeting//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
+    'UID:' + m.icsUid, 'DTSTAMP:' + evIcsUtc_(new Date()), 'DTSTART:' + evIcsUtc_(s), 'DTEND:' + evIcsUtc_(e),
+    'SUMMARY:' + evIcsEsc_(summary), 'LOCATION:' + evIcsEsc_(loc), 'DESCRIPTION:' + evIcsEsc_(desc)];
+  if (ev.website) lines.push('URL:' + evIcsEsc_(String(ev.website)));
+  lines.push('STATUS:CONFIRMED', 'END:VEVENT', 'END:VCALENDAR');
+  return lines.map(evIcsFold_).join('\r\n') + '\r\n';
+}
+
+// ── eop=planmeeting — book a slot against a Network contact ───────────────
+// Validates every field, writes the `meeting` Interaction FIRST over
+// Network's write leg (the mt- id as evidence, the event slug — refused rows
+// book nothing), then the Meetings row, and answers the .ics text. Network
+// not configured: the row is written with no interaction id, said so.
+function evPlanMeetingOp_(sess, p) {
+  var slug = evStr_(p.slug, 64).toLowerCase(), contactId = evStr_(p.contactId, 20), accountId = evStr_(p.accountId, 20);
+  var day = evStr_(p.date, 10), start = evStr_(p.start, 5), end = evStr_(p.end, 5);
+  var place = evStr_(p.place, 200).replace(/\s+/g, ' '), note = evStr_(p.note, 500).replace(/\s+/g, ' ');
+  var contactName = evStr_(p.contactName, 200).replace(/\s+/g, ' ');
+  if (!EV_SLUG_RE.test(slug)) return { success: false, error: 'bad_slug' };
+  if (!EV_CONTACT_ID_RE.test(contactId)) return { success: false, error: 'bad_contact_id' };
+  if (!EV_ACCOUNT_ID_RE.test(accountId)) return { success: false, error: 'bad_account_id' };
+  var reg = evRegistry_();
+  if (reg.error) return { success: false, error: reg.error };
+  var ev = reg.bySlug[slug];
+  if (!ev) return { success: false, error: 'unknown_slug' };
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day) || evDayList_(ev.start, ev.end).indexOf(day) < 0) return { success: false, error: 'bad_date' };
+  var sm = evMinutes_(start), em = evMinutes_(end);
+  if (sm < 0 || em < 0 || em <= sm || em - sm > EV_PLAN_MEETING_MAX_MIN) return { success: false, error: 'bad_time' };
+  var scope = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scope.error) return { success: false, error: scope.error };
+  var owner = scope.owner;
+  var own = {}; own[owner] = 'own';
+  var tabs = ensureEventsTabs_();
+  var starred = evListRows_(tabs.stars, own, { slug: 'Event Slug' }).some(function(s) { return s.slug === slug; });
+  if (!starred) return { success: false, error: 'not_starred' };
+  var id = evNewId_('mt'), now = new Date().toISOString();
+  var summary = ('Meeting at ' + String(ev.name || slug) + ' · ' + start + '–' + end + (place ? ' · ' + place : '')).slice(0, 500);
+  var write = evNetworkProxy_('interaction', { owner: owner }, { owner: owner, interactions: [
+    { contactId: contactId, accountId: accountId, kind: 'meeting', date: day, summary: summary, evidence: id, eventSlug: slug } ] });
+  var interactionId = '', notConfigured = false;
+  if (write && write.success) {
+    if ((write.rejected || []).length) {
+      auditLog('data_write', sess.email, 'events_planmeeting', { slug: slug, contactId: contactId, ok: 0, rejected: write.rejected.length });
+      return { success: false, error: String(write.rejected[0].reason || 'rejected'), rejected: write.rejected };
+    }
+    interactionId = String((write.ids && write.ids[0]) || '');
+  } else if (write && write.error === 'not_configured') notConfigured = true;
+  else {
+    auditLog('data_write', sess.email, 'events_planmeeting', { slug: slug, contactId: contactId, ok: 0 });
+    return write || { success: false, error: 'upstream_empty' };
+  }
+  var m = { id: id, contactId: contactId, accountId: accountId, start: day + 'T' + start, end: day + 'T' + end, place: place, note: note,
+            icsUid: id + '@events.' + evIcsHost_(), interactionId: interactionId, createdAt: now };
+  tabs.meetings.appendRow([id, owner, slug, contactId, accountId, m.start, m.end, place, note, m.icsUid, interactionId, now]);
+  var ics = evMeetingIcs_(m, ev, contactName, evStr_(p.accountName, 200).replace(/\s+/g, ' '));
+  auditLog('data_write', sess.email, 'events_planmeeting', { slug: slug, meetingId: id, contactId: contactId, interactionId: interactionId, ok: 1, notConfigured: notConfigured ? 1 : 0 });
+  m.contactName = contactName;
+  return { success: true, slug: slug, meeting: m, interactionId: interactionId, notConfigured: notConfigured, ics: ics, filename: id + '.ics' };
+}
+
+// ── eop=planunbook — remove the Meetings row (the Interaction stays) ──────
+function evPlanUnbookOp_(sess, p) {
+  var id = evStr_(p.id, 20);
+  if (!EV_MEETING_ID_RE.test(id)) return { success: false, error: 'bad_meeting_id' };
+  var scope = resolveOwnerScope_(sess, p.owner || '', true);
+  if (scope.error) return { success: false, error: scope.error };
+  var sheet = ensureEventsTabs_().meetings, last = sheet.getLastRow(), width = Math.max(sheet.getLastColumn(), 1);
+  if (last < 2) return { success: false, error: 'not_found' };
+  var vals = sheet.getRange(1, 1, last, width).getValues(), idx = {};
+  for (var h = 0; h < vals[0].length; h++) idx[String(vals[0][h])] = h;
+  for (var r = 1; r < vals.length; r++) {
+    if (String(vals[r][idx['Meeting ID']] || '') !== id) continue;
+    if (String(vals[r][idx['Owner']] || '').toLowerCase() !== scope.owner) return { success: false, error: 'not_found' };
+    sheet.deleteRow(r + 1);
+    auditLog('data_write', sess.email, 'events_planunbook', { meetingId: id, interactionId: String(vals[r][idx['Network Interaction ID']] || ''), ok: 1 });
+    return { success: true, removed: true, id: id, interactionId: String(vals[r][idx['Network Interaction ID']] || '') };
+  }
+  return { success: false, error: 'not_found' };
+}
+
 
 // PROJECT START — Add your project-specific code here
 // PROJECT END

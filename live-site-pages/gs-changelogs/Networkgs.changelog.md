@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16g] — 2026-09-23 02:19:54 AM EST — v07.24r
+
+### Added
+- Events can now record a **meeting** on a contact when you book one from an event's plan — written through the same path every touch uses, with the booking as its evidence and the event named; each row is checked before it is written (the contact must be live and yours, the account its own, the day a day, the summary one line) and a rejected row never blocks the others. Events can also read the live contacts under one of your accounts — name, title and role only — to offer the pick list
+
+### Changed
+- Minor internal improvements
 
 ## [v01.15g] — 2026-09-23 01:20:11 AM EST — v07.23r
 

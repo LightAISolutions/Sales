@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08g] — 2026-09-23 02:19:54 AM EST — v07.24r
+
+### Added
+- A **plan** for one starred event, answered in one read: the booths ranked from the recommendation's own account and segment terms with a line quoted verbatim from each covered company's dossier (read from the public site, never from Profiler's app) and its stage; the agenda page read once and its sessions kept when the title names one of your segments, a speaker is one of your contacts or a speaker is a dossier decision maker; a day plan per show day with the registry's hours or a default frame, the ranked visits, the sessions, the booked meetings and the open slots between them; the nearby venues within 600 m from OpenStreetMap, fetched once per event and kept for 30 days — a failed lookup is an empty list, never a failure
+- **Booking a meeting** against a Network contact: the meeting is written on the contact in Network first, then kept here with its record's id, and the calendar invite is answered as a download; unbooking removes the meeting here and leaves the record in Network; the contacts of an account are read from Network for the pick list
+- When Network is not connected, the plan and a booking still answer — without booths, contacts or a Network record — and say so
+
+### Changed
+- Minor internal improvements
 
 ## [v01.07g] — 2026-09-22 10:38:40 PM EST — v07.20r
 

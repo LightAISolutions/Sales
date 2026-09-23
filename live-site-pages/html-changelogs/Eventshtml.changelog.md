@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 8/50`
+`Sections: 9/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.09w] — 2026-09-23 02:19:54 AM EST — v07.24r
+
+### Added
+- A **Plan** tab on every event's sheet, built on demand for a starred event: the **booths worth visiting** ranked from the recommendation's own account and segment terms, each with a line quoted verbatim from the company's dossier and its pipeline stage; the **sessions worth sitting in** — an agenda title that names one of your segments, a speaker who is one of your contacts, or a speaker who is a decision maker in a dossier; a **day plan** per show day with the show hours (or a default frame when the registry lists none), the ranked visits, the sessions and the open slots; **nearby cafés, restaurants, bars and hotels** within 600 m of the venue from OpenStreetMap, each a map link
+- **Book a meeting** on any open slot — pick the account and one of its contacts, the times inside the slot, a place and one line; the meeting is recorded on the contact in Network and an invite downloads for your own calendar (nothing is sent to anyone); the meeting shows on the timeline and in the sheet's meetings list, and can be unbooked
+
+### Changed
+- The event sheet is now two tabs, Details and Plan, for accounts that can see the recommendation
+- Minor internal improvements
 
 ## [v01.08w] — 2026-09-22 10:38:40 PM EST — v07.20r
 
