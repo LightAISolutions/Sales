@@ -6,6 +6,62 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 03:15 AM EST (the session ran ~02:40 → 03:15 AM EST)
+**Repo version:** v07.25r — one push on `claude/compassionate-ritchie-q8bgj1` (E5 session 2), plus a second push for this session-context write and the X brief
+**Branch:** `claude/compassionate-ritchie-q8bgj1`
+**Model:** Opus 5 (E5 session 2 — the post-event checklist, the ROI line and the `events plan` command; **E5 is Done**)
+
+### What was done
+
+- **E5 session 2 landed, closing E5** (`Network.gs` v01.17g · `Events.gs` v01.09g · `Events.html` v01.10w; §11's E5 row → **Done**; §13.19 written — the X brief with its paste-in prompt):
+  - `Network.gs`: `nop=interaction`'s read leg widened with **`eventSlug=`** — the live contacts whose `Source Event` is the slug (with `accountName`, the account's `stage` at read time and **one** `mailable` boolean instead of the two consent columns) and the `meeting` Interactions on the slug, each carrying an inferred `held` (a later `note` / `email-out` on the same contact within 14 days) and the developer's explicit `mark`. Both derived on Network's side — a boolean and a three-value word are strictly less data than the rows behind them. Mark rows are excluded from the touches that feed the inference, or a "not held" mark would read as a later touch and invert itself. `NW_PEER_INTERACTION_KINDS` gained `note` for the mark write; the two mark phrases are mirrored byte for byte in `Events.gs` and the mirror is asserted
+  - `Events.gs`: `eop=postevent` (the checklist + the ROI line written **once** into the event's `Plans` row; `not_over` before the day after `end`; the booth accounts from the score run once with the past slug's signals kept via a new `extraSlug` argument — no dossier read, no agenda, no Overpass), `eop=posteventmark` (the verdict as a `note` Interaction with the `mt-` id as evidence; an explicit mark beats the inference both ways; refreshes the row over one read-leg call, never a second score), `eop=plannarrative` (the Drive URL onto the row; the audit carries a flag, never the URL), and the score's seventh term **`priorRoi`** — `min(1, (cards + 3·held + 5·moves) / 40)` from an earlier edition of the same series, seeded at 0.05
+  - `Events.html`: the **Post-event** section at the top of the Plan tab once today > `end`, with Mark held / not held per meeting, the follow-up link, the ROI line as recorded, a Narrative link field, and **Copy plan as JSON**
+  - The **`events plan <event>` command rule** in `.claude/rules/events-app.md` + its CLAUDE.md pointer, and the **first narrative plan** for **RE+ 2026** at `repository-information/plans/re-plus-2026-narrative-plan.md` and in the developer's Drive
+- **A real bug caught by a sibling harness**: the new past-slug filter kept rows with an **empty** event slug (a docket, a press quote) when no extra slug was named. `check-events-signals.js` failed on it; fixed with an explicit guard and an assertion added
+- `scripts/check-events-plan.js` **100 → 151 checks**; `verify-events-roles.py` gained a post-event pass (screenshot `events-postevent.png`, 390×844, zero page errors); `check-events-score.js` / `check-events-signals.js` updated for the seventh term; `check-network-schema.py`'s audit allow-list gained two count keys
+- `EVENTS-SCHEMA.md` §5 / §6 / §8 / §10 and `NETWORK-SCHEMA.md` §8 updated; CHANGELOG `Sections: 96/100`
+
+### Where we left off
+
+**The developer's live check is next** (reported, not asserted): redeploy Events (`v01.09g`) and Network (`v01.17g`), open a **past** starred event's Plan tab, read the checklist and the ROI line, mark one meeting held and find the note on that contact in Network, then press **Copy plan as JSON** and paste it back with `events plan <slug>` for a real narrative plan (the RE+ one was written from the public half only). **Then X** with the §13.19 paste-in prompt — Fable 5.1 xhigh, decide before building.
+
+### Open findings carried forward
+
+- **`Network.html` has no hash router**, so the checklist's `Network.html#drafts?sourceEvent=<slug>` deep link opens the app without pre-filtering. The page says so beside the link; a small Network-side route would close it — left out rather than widen this session into `Network.html`
+- **The four live-state brackets in the §13.18 prompt were pasted unfilled**, so E5 session 1's live check remains unconfirmed by a session. This is now the second prompt in a row where that happened
+- **`scripts/check-guidance-migration.js` fails on clean `origin/main`** ("expected 9 modules, got 28") — pre-existing, unrelated to this session, and nobody has picked it up
+- `check-classroom-pipeline.py` reports P1 findings against any non-Classroom diff; by its own docstring it is "the judge a C2 pipeline run is held to", so that is correct behaviour and not a defect
+- The ROI line is **written once** and only a *mark* refreshes it — cards scanned after the first close-out open never raise the recorded `cards`. Faithful to the brief; worth revisiting if it bites
+- Carried from E5 s1: no booth numbers on the day plan (an E4 parser follow-up); only two registry rows carry `hours[]`; a plan build costs the full score and the close-out costs another
+- From E4: RE+ 2026's roster is a Swapcard widget (`no_roster_found`); GlobeNewswire's feed unverified until a live sweep is read
+- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
+
+### Key decisions made
+
+- **`lost` is not a stage move** although `NW_STAGES` orders it past `prospecting` — a terminal negative would let a show that produced only losses read as productive in next year's prior. `EV_ROI_STAGES_MOVED` is an explicit list and the departure is documented in `EVENTS-SCHEMA.md` §6
+- **`held` and `mark` are computed on Network's side**, not shipped as rows — the minimum-necessary reading of D9, and the only way the checklist counts cards *and* meetings without a second op
+- **Copy plan as JSON sits in the plan head as well as the Post-event section.** The brief placed it only in the close-out, but the narrative plan is most use *before* a show — and the brief's own step 4 asks for a plan for RE+ 2026, which is upcoming and has no Post-event section
+- **Network's audit rows stay counts-only** — the slug was dropped from `peer_interaction_event_read` to match the app's own convention; the Events side already audits it
+- The narrative plan was written from the **public half** because no JSON was pasted, and says so throughout rather than guessing at booths
+
+### Active context
+
+- **Repo version v07.25r.** `CHANGELOG.md` `Sections: 96/100` — no rotation due until 100
+- **Live versions:** `Events.html` v01.10w · `Events.gs` v01.09g · `Network.html` v01.24w · `Network.gs` v01.17g · `Scraper.gs` v02.22g
+- **D13's deferral condition is met** — all 58 rows of `events-sources.json` carry a `lastProbe` dated 2026-09-21, so X is runnable
+- **Reminders still open** (developer's own — untouched): close out "Repo access denied" and rebuild the committing Routines (**C2 fires today, Wed 2026-09-23 04:00 PDT**); the Megmeet briefing before 2026-10-07 — **the Network/Events build is now down to X, so its sequencing condition is nearly met**
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **X** with the §13.19 paste-in prompt on Fable 5.1 xhigh — it is D16's last row, it is a decision before it is a build, and a reasoned "no" closes it just as completely as a build does.
+- **To continue:** type `run X from §13.19`
+
+## Previous Sessions
+
+### Session — 2026-09-23 02:20 AM EST (E5 session 1, v07.24r)
+
 **Date:** 2026-09-23 02:20 AM EST (the session ran ~01:53 → 02:25 AM EST)
 **Repo version:** v07.24r — one push on `claude/focused-gauss-6h8jcd` (E5 session 1 + this session-context write, one commit)
 **Branch:** `claude/focused-gauss-6h8jcd`
@@ -55,55 +111,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - Do the live check first (redeploy both apps, a starred event's Plan tab, the top five booths line by line, one meeting booked and found on the contact in Network and in the `.ics`), then run E5 session 2 with the §13.18 paste-in prompt on Opus 5 xhigh — its four bracketed live-state fields filled from that check.
 - **To continue:** type `run E5 session 2 from §13.18`
-
-## Previous Sessions
-
-### Session — 2026-09-23 01:20 AM EST (N4 session 2, v07.23r)
-
-**Date:** 2026-09-23 01:20 AM EST (the session ran ~12:54 → 01:25 AM EST)
-**Repo version:** v07.23r — one push on `claude/exciting-knuth-3pb083` (N4 session 2 + this session-context write, one commit)
-**Branch:** `claude/exciting-knuth-3pb083`
-**Model:** Fable 5.1 (N4 session 2 — the pre-meeting brief, promote to field note, the network map and the "Will be at" chips; **N4 is Done**)
-
-### What was done
-
-- **N4 session 2 landed** (`Network.gs` v01.15g · `Network.html` v01.24w; §11's N4 row → **Done** with both sessions' versions; §13.17 written — the E5 session-1 brief with its paste-in prompt): `nop=brief` (session GET, behind `contacts`) assembles the contact's own rows server-side — the contact minus the raw extraction and card links, the account, every Interaction newest first, the account's Signals named by Events, the warmth block, the stage — and writes the D9 disclosure row (`network_brief rows=1 ids=<c- id>`) + a `data_export` audit; the page builds a **real `.docx`** (three-part OOXML over the existing store-only zip) adding the served dossier's `strategyRead[]` and last five `recentDevelopments[]` when covered. `nop=promote` (body-POST) copies one Interaction into Profiler's intake **through Profiler's existing note op** (`action=note` · `nop=submit` at `PROFILER_INTAKE_EXEC`) as a `sourceType: contact` note with the developer's 0–100 confidence, the i- id as evidence in the text, the account's slug or `general`; the developer's own Profiler session is read by the page from the shared origin (`localStorage` `ov_note_session`) and relayed once, never stored or audited; the promotion is recorded as a `note` Interaction (`promoted:<i- id>:<intake id>` — the duplicate guard; the source row untouched). `nop=signals` gains `eventName` / `eventStart` / `events` / `eventsConfigured` from one `eop=signals` call per read, degrading to slugs. The page: the 📄 Brief button and the ⇈ Promote box on the detail, the "Will be at" chips (press quotes as "Quoted in press", filings as "Regulatory filing"), the 🕸 Map masthead card (vanilla SVG over the list payload; pan, tap-to-focus, a second tap opens the row — the tap decided on `pointerup`, because a captured pointer's click never reaches the node)
-- `scripts/check-network-brief.js` (58 checks, zero live calls — it caught the empty-string confidence that rounded to 0 and passed the bound; fixed); `verify-network-roles.py` gained the chips · brief (the `.docx` unzipped and read back) · promote · map passes and the D17 grep — ALL CHECKS PASSED at 390 × 844, zero page errors; `check-scraper-people.js` extracts the three new signal helpers; every sibling harness passes; `check-readme-tree.py` 0 findings
-- `NETWORK-SCHEMA.md` §8 / §11 / §12 / §14 updated; CHANGELOG `Sections: 94/100`
-
-### Where we left off
-
-**The developer's live check is next** (reported, not asserted): confirm the Network redeploy (`?action=api&op=deploy` → `Already up to date (v01.15g)`, else run `pullAndDeployFromGitHub` once), open a contact detail → **📄 Brief** → open the `.docx` in Word (a covered and an uncovered contact per §8's done-when), sign in to Profiler in the same browser → **⇈** on one touch → Promote at a confidence → find `note-<date>-NN` in Profiler's intake Manage panel, read the **Will be at** chips on an account with signals (the event names need `EVENTS_PEER_TOKEN` on Network and `NETWORK_PEER_TOKEN` on Events — both are set), open **🕸 Map**. **The three live-state brackets in this session's prompt were left unfilled** (the warmth chips, the reconnect list, the confirmed `.ics` row) — do both checks together. **Then E5 session 1** with the §13.17 paste-in prompt (given in chat at the close of this session); its four brackets are the brief, the promotion, the chips and the map.
-
-### Open findings carried forward
-
-- The `.docx` carries no `styles.xml` — headings are bold runs; Word, Pages and LibreOffice open such a package, but a corporate template will not style it. Add a styles part only if the developer asks
-- A promote needs the developer signed in to Profiler in the same browser — the page reads Profiler's own `ov_note_session` key (same origin); an expired Profiler session is relayed as `profiler_session_expired` with nothing written
-- The chips' event names ride Events' `eop=signals`, which round-trips through Network's peer read leg — one detail open is one Events call plus one Network peer read; with either token unset the chips show slugs
-- The map draws the list **as filtered** — a contact outside the current filter is not a node; the status line says "of N (the list is filtered)"
-- From N4 s1: the `.ics` DESCRIPTION is never read; do-not-contact contacts are excluded from the reconnect list; two `.gs` regex literals use `\x22` / `\x27` for quote marks (the shared extractor reads a quote inside a regex as a string opener — keep that convention)
-- From E4: the Scraper roster carries no FERC eLibrary RSS; RE+ 2026's roster is a Swapcard widget; GlobeNewswire's feed unverified until a live sweep is read; no back-fill of `people[]`
-- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
-
-### Key decisions made
-
-- The `promoted:<i- id>:<intake id>` marker lives on a **new `note` Interaction**, never on the source row's Evidence Link (§3 gives that column to the row's own evidence); the marker is also the duplicate guard
-- The promote relays the developer's Profiler session server-side in one call (the page reads it from the shared origin) rather than posting from the page — one op, the duplicate refused before any call, the note Interaction written in the same op; the session is never stored, logged or audited
-- An uncovered account promotes to the intake's `general` slug with the company named in the text; a slug not matching `NW_PEER_SLUG_RE` also falls back to `general`
-- The brief is a real `.docx` (not the `.doc` HTML-in-Word of the Profiler precedent) so the verifier can unzip and read its paragraphs; built over the existing store-only zip, no library
-- The map tap is decided on `pointerup` (a captured pointer's `click` lands on the svg, not the node); a drag under 6 px is a tap
-
-### Active context
-
-- **Repo version v07.23r.** `CHANGELOG.md` `Sections: 94/100` — no rotation due
-- **Live versions:** `Network.html` v01.24w · `Network.gs` v01.15g · `Events.html` v01.08w · `Events.gs` v01.07g · `Scraper.gs` v02.22g
-- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07 (the Network/Events build now stands at E5 + X + Q remaining)
-- **A parallel branch `claude/adoring-brown-mvddj2` was on the remote during this session** — not this session's; check `git ls-remote` before pushing
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Do the live check first (the redeploy, one brief in Word for a covered and an uncovered contact, one promotion found in Profiler's intake, the chips on an account with signals, the map), then run E5 session 1 with the §13.17 paste-in prompt — its four bracketed live-state fields filled from Network.
-- **To continue:** type `run E5 session 1 from §13.17`
-
-Developed by: LightAISolutions
