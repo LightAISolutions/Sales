@@ -3,11 +3,145 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.32r] — 2026-09-23 03:51:59 PM EST
+
+> **Prompt:** "profiler Megmeet
+>
+> This is a **revision**, not a new profile: `live-site-pages/profiler-data/megmeet.profile.json` is at
+> profileVersion 7, dated 2026-09-08, 38 sources. Cut **v8**. Follow the Profiler Command in
+> `.claude/rules/profiler-app.md` end to end — archive v7 first, then research, write, register, sync,
+> reconcile. Read `repository-information/PROFILER-SCHEMA.md` before writing.
+>
+> WHY NOW: Megmeet's Q3 2026 report is due at the CSRC statutory deadline **by 31 October 2026**. Cut v8
+> before it lands so the delta is legible when it does, and so the September briefing's open questions are
+> carried into the dossier rather than living only in a study-prep document.
+>
+> IDENTITY FIRST (step 1a — do not skip, and do not take these from the registry row):
+> - Ticker/exchange: the registry says `SZSE: 002851`. Confirm off a filing cover or an exchange notice
+>   dated within twelve months.
+> - Legal name vs operating brand: v7's `name` field carries both the English and the native-script name
+>   but `legalName` is **null**. Establish the registered legal name and set it.
+> - `aka[]` is **null** and must be populated before step 7's reconciliation grep, which consumes it.
+>   At minimum: 麦格米特 · Shenzhen Megmeet Electrical Co., Ltd. · Megmeet Welding (megmeet-welding.com) ·
+>   Megmeet USA. Add any others you establish.
+> - Still independent? Check for any transaction in the last eighteen months, and specifically the status
+>   of the **pending Hong Kong listing** — v7 records it as pending and it may have moved.
+>
+> THE OPEN QUESTIONS TO GO AT. These are the holes the 23 September onboarding briefing named as
+> unclosable from the then-current record. Each is a research target, not an assumption — if the record is
+> still silent, record the silence and bound it:
+> 1. **The SST's service-voltage class.** Zero "kV" mentions across all 38 sources pinned in v7 and zero
+>    hits in a four-filing text scan (FY2025 annual, H1 2026 interim, two IR records) for kV, 千伏 or 中压.
+>    The converter is described only as "grid HV input to 800 V DC", and the most recent filing narrowed
+>    the efficiency claim to *expected*. This is the single most valuable fact in the dossier.
+> 2. **What Q1 2026 "volume delivery to North American majors" actually consisted of, and who they were.**
+>    v7 records it; the August 2026 interview brief says North America is greenfield with no reference win.
+>    Both statements are in the corpus and they are not obviously reconcilable.
+> 3. **Whether the US plant Megmeet confirmed in November 2024 is the Dallas facility.** The company
+>    confirmed a US factory and never named location, capacity or timeline. The Dallas *laboratory*
+>    (360 kW active, 1.5 MW roadmap, June 2026) is separately and firmly evidenced by Megmeet's own
+>    English release — the two are not confirmed to be the same thing.
+> 4. **Any AI-data-centre revenue line at any granularity.** None is disclosed; the power-products group
+>    is the closest published proxy (+60.92% to RMB 1.841bn in H1 2026 at a 25.06% gross margin).
+> 5. **FY2025 gross margin by segment beyond the appliance line**, and **absolute R&D spend** for FY2025
+>    and H1 2026. Neither was located.
+> 6. **Any named US customer for any product line.** None located. (Ericsson, Cisco, Juniper, Arista and
+>    Accton are recorded as buying Megmeet power — establish whether any is a *US-entity* relationship.)
+> 7. **OCP membership and any role in the LVDC SST specification work.** Not found, but opencompute.org
+>    returned HTTP 403 to every attempt, so this is an unverified negative rather than a confirmed one.
+>    If the host is reachable from your session, settle it.
+> 8. **Any UL or ETL listing number for a data-centre product.** None disclosed; the company claims UL,
+>    TÜV and CNAS *laboratory accreditations*, which are an in-house testing credential and not a listed
+>    product. Do not let the two be conflated in the prose.
+> 9. **The "displaced LITEON as the number-two NVIDIA power-shelf source" claim.** No supporting source was
+>    located, the company has never claimed it, and two research houses covering the same market in
+>    mid-2026 name Delta and LITEON without mentioning Megmeet. If v8 finds nothing either, say so
+>    explicitly rather than omitting it.
+>
+> SOURCING:
+> - Run `python3 scripts/check-source-reachability.py` before planning Stage 2.
+> - **v7 has zero sources marked first-party** (`party` is absent on all 38) even though the registry
+>   reports 58% first-party. Stage 1 is therefore genuinely under-served: exhaust megmeet.com,
+>   megmeet-welding.com, the IR archive, cninfo filings and the product/datasheet pages before any
+>   third-party source, and set `party` on every entry so the registry's coverage line means something.
+> - Two parallel general-purpose subagents (A first-party, B third-party), ~50–70 evaluated sources.
+>
+> RECONCILIATION (step 7 — 13 other dossiers mention Megmeet with word boundaries):
+> delta-electronics · dg-matrix · flex · huawei-digital-power · infineon · liteon · nvidia ·
+> power-electronics · sinexcel · sungrow · vertiv · vicor · zhonhen. Read each hit, classify it, and act.
+> Then run `check-profiler-crossrefs.py`, `sync-profiler-registry.py`, `build-profiler-graph.py` and
+> `check-profiler-relationships.py`. Re-read the segment membership
+> (`power-conversion-and-rack-power-silicon`, role `challenger`) against the revised `ecosystemRole` and
+> product lines and move it if the record moved.
+>
+> DO NOT EDIT the September study-prep files — `MEGMEET-SST-BRIEFING.pdf`, its print HTML, the companion,
+> the data file, or `sst-hall-edge-block--competitive--2026-09-23.report.json`. They are dated documents.
+> If v8 contradicts any of them, say so in your response summary and let me decide; the briefing's
+> chapter 9.4 is where that list belongs, not in this commit.
+>
+> Normal Pre-Commit and Pre-Push checklists. Note that the repo CHANGELOG counter is at 102/100 with 92
+> non-exempt — **archive rotation fires on the first push that is not dated 23 September**, so expect to
+> perform it, SHA-enriched, and deepen the clone first with `git fetch --unshallow origin main`."
+
+Megmeet dossier cut to **profileVersion 8** under the Profiler Command, ahead of the Q3 2026 report due by 31 October. Two parallel research agents (A first-party, B third-party) evaluated about 100 sources; v8 cites 81, each with an explicit `party` (29 company · 20 disclosure · 32 independent — 60% first-party). Reconciliation revised the Delta Electronics and LITEON dossiers, where the "Megmeet displaced LITEON at #2" claim had been carried as corroborated.
+
+### Changed
+
+#### `live-site-pages/profiler-data/megmeet.profile.json` — v7 → v8 (v7 archived)
+
+- **Identity verified off filings dated within twelve months.** SZSE: 002851 from the H1 2026 interim cover; registered names 深圳麦格米特电气股份有限公司 / "Shenzhen Megmeet Electrical Co.,Ltd." from the FY2025 annual report and the HKEX A1; former name "Shenzhen Megmeet Electrical Technology Co., Ltd." The legal name stays in `name` — the schema's canonical field, which the renderer already treats as the legal line when it differs from `shortName` — rather than adding the `legalName` variant shape the schema says to normalise away
+- **Still independent.** No merger or sale. On **22 September 2026** the board agreed to buy the 46.30% minority of Shenzhen Megmeet Welding Technology for RMB 663.64M cash (announcement 2026-085). The **H-share A1** (filed 26 June; Huatai International and Citi; CICC HK and CMBI added 8 July) has **no hearing and no CSRC filing notice** on record as of 23 September
+- **The nine open questions:**
+  1. **SST voltage class — still undisclosed, now bounded.** No kV figure appears in any filing, IR record, product page (neither site has an SST page) or the April 2026 brochure. The efficiency wording went from an unqualified "超98.5%" (FY2025 annual) to "expected" (HKEX A1, H1 interim), and the SST is 预研 / 研发中. One press lead, ifeng (1 July 2026), reports "国内10kV/海外35kV" and attributes it to the 20 May call, but **the exchange-filed record of that call contains no kV**. In August the company said SST demand will not ramp for 1–2 years and that sales for 2–3 years will come from existing products
+  2. **North America — the v7 wording was imprecise.** The interim dates the start of AIDC batch delivery to Q1 2026 **across its customer chain**. The North America sentence is separate: batch delivery to "部分北美大客户" in **H1 2026**, and by the 29 April annual-report date. No customer is named (NDA). The company says it was **late on GB200** with limited orders and won GB300 batch orders; Goldman (via Sina) says the first GB300 order ran through a US-headquartered ODM. That reconciles the two corpus statements: there is volume but no named reference win
+  3. **US plant — located, but not in the filings.** The company's own About pages place a 35,000 sq ft "U.S. manufacturing base" in the Fujitsu Industrial Park in Richardson, Texas, and a Texas TDLR record shows a 39,200 sq ft Megmeet renovation at 2821 Telecom Parkway, Richardson (2024). The HKEX A1 lists six manufacturing bases and none in the US, and the Dallas lab release does not say it is on the same site
+  4. **AI-data-centre revenue — none disclosed.** The closest statement is the August IR record: data-centre and network power grew most within the +60.92%
+  5. **Found.** FY2025 segment gross margins are appliance controls 22.24% · power 22.33% · NEV 15.30% · automation 27.96% · equipment 38.51% · connection 5.06%. R&D was RMB 1,122.34M in FY2025 and RMB 621.38M in H1 2026 (the latter was already in v7)
+  6. **No US-entity customer relationship is disclosed.** The Ericsson/Cisco/Juniper/Arista/Accton list originates in the company's periodic reports and its reply to the exchange inquiry, with no entity or geography given
+  7. **OCP — exhibitor only.** The company exhibited at OCP Summit 2024 and 2025 and describes its products as "aligned with ORv3". Membership remains unverifiable because opencompute.org and web.archive.org both returned 403
+  8. **UL — marks and lab programmes only.** The datasheets carry UL marks. UL-WTDP and UL-CTF are in-house lab programmes and stay separate from product listings in the prose. No UL or ETL file number is published for any data-centre product
+  9. **The "#2 behind LITEON" claim is not supported, and v8 says so explicitly.** It traces to two early-2025 pieces that label it rumour (Sohu 2025-02-10; 产业家 2025-03-13). The company deflected the question in December 2024. Soochow (April 2026) expects Megmeet to be the **third** NVL72 PSU source, and the "~41% Delta" figure appears in no source
+- **NVIDIA status sharpened:** the exchange inquiry reply defines it as a place on NVIDIA's recommended list to its downstream customers; NVIDIA's October 2025 post puts Megmeet in power-system components, not in the data-centre power-systems tier where the SST vendors sit
+- **Errors in v7 corrected:**
+  - The summary said power products was "the only segment with an expanding gross margin". Three of six expanded; it is the only one of the **three largest** to do so
+  - The FY2024 commentary carried "~¥8.66B" FY2026 consensus. Current consensus is RMB 787M (15 institutions, 同花顺, 23 Sept), not the RMB 832M v7 recorded
+  - The H1 period type `interim` is not a schema value and is now `half`
+  - The footprint claim that manufacturing covers Germany is removed. Germany is R&D, and India is contract manufacturing
+- **Rewritten in intel-briefing style:** products (FY2025 and H1 2026 segment margins, the three-layer AIDC framing, the welding buy-out); 24 recent developments (+9 new); technical specs (a new SST-status group and a new DC-DC brick group); leadership (shareholdings; Zhang Zhi as COO; Han Longfei as power-BG CTO); financials; strategy read (five judgments, with rank, SST, US footprint and H2 weighting); relationships (NVIDIA, LITEON and Delta re-sourced; Infineon, Vertiv and Zhonhen added); policy exposure (the filed tariff mitigation is Thailand)
+- **Sources: 38 → 81**, with `party` on every entry. All 38 v7 URLs are kept with their v7 labels and dates, because the 23 September report copies them verbatim
+
+#### Corpus reconciliation (Profiler Command step 7)
+
+- **13 inbound dossiers reviewed and 2 changed.** The alias grep over the new `aka[]` found no additional dossiers
+- **`delta-electronics.profile.json` v5 → v6 (v5 archived):** `ecosystemRole`, `strategyRead[2]` and the Megmeet relationship no longer carry the #2 claim as "directionally corroborated". They now state its rumour origin and Soochow's third-source estimate, with sources added
+- **`liteon.profile.json` v6 → v7 (v6 archived):** the same correction to `ecosystemRole`, `strategyRead[2]` and the Megmeet relationship
+- The other 11 mentions are roster, tier or contrast statements that v8 leaves accurate, so they are unchanged
+
+#### Registry, segments, calendar
+
+- **`profiler-companies.json`:** Megmeet gains `aka[]` (12 names: 麦格米特 · 深圳麦格米特电气股份有限公司 · Shenzhen Megmeet Electrical · Shenzhen Megmeet Electrical Technology · 麦米电气 · Megmeet Welding · Megmeet Welding Technology · 麦格米特焊接 · MEGMEET USA · Megmeet USA · Altatronic · MEGMEET), `megmeet-welding.com` in `domains`, and a new tagline. Sync: srcTotal 38 → 81, srcFirstPct 58 → 60; Delta 16 → 20 sources; LITEON 15 → 19
+- **`profiler-segments.json`:** the `power-conversion-and-rack-power-silicon` membership stays `challenger`, now on the v8 basis line
+  - An `in-hall-power` adjacent membership (BBU and capacitor shelves, DC-centre BESS) was drafted and then withdrawn. It would have required regenerating the `segment-in-hall-power` literal in `Classroom.gs`, and that is left for the developer to decide
+- **`profiler-graph.json`** rebuilt (1482 edges, 1108 curated)
+- **Refresh calendar:** megmeet, delta-electronics and liteon set to `lastRefreshed` 2026-09-23. Megmeet's `nextReport` stays 2026-10-30, unconfirmed: no appointment date is on record, and Q3 2025 was published 2025-10-30
+- **Refresh notes:** Megmeet's watch list rewritten around v8's open items
+
+#### `README.md`
+
+- Archive entries added to the tree for `delta-electronics.profile.v5.json`, `liteon.profile.v6.json` and `megmeet.profile.v7.json`, plus the missing `megmeet.profile.v6.json`, which was on disk but absent from the tree
+
+### Notes
+
+- **Checks:** `check-profiler-crossrefs.py` 0 candidates · `check-profiler-relationships.py` 0 findings · `sync-profiler-registry.py --check` in sync, calendar in bijection · `check-classroom-content.py` 0 errors · `check-profiler-study.py` 0/0 · `check-profiler-reports.py` 0 errors (the six new warnings are the expected aged-pin notices on the 8 and 23 September reports)
+- **Source reachability:** the SEC hosts, opencompute.org, web.archive.org and UL Product iQ returned 403, and szse.cn failed TLS; cninfo and hkexnews answered. A null from a blocked host bounds that host only
+- **Archive rotation not performed:** 92 non-exempt sections against a trigger of 100. This push is dated 23 September, so today's sections are exempt
+- **The September study-prep files and the 23 September report were not edited.** The contradictions v8 introduces are listed in the session summary for the developer
 
 ## [v07.31r] — 2026-09-23 10:28:38 AM EST
 

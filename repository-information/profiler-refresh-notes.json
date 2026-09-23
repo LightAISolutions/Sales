@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "updated": "2026-09-21",
+ "updated": "2026-09-23",
  "description": "Research payload for repository-information/profiler-refresh-calendar.json, keyed by slug. `source` says where to verify the next report; `watch` is the research priority list a refresh works from. Split out of the calendar on 2026-09-21 (v07.02r) because these two fields were 98% of that file's 375 KB while the scheduling logic needs none of them: a Routine reading the queue now reads ~20 KB instead of ~375 KB, and pulls notes only for the handful of rows it actually works on. One entry per calendar row, enforced by scripts/sync-profiler-registry.py.",
  "notes": {
   "abb": {
@@ -831,14 +831,17 @@
    ]
   },
   "megmeet": {
-   "source": "PUBLIC COMPANY — SZSE: 002851 (Shenzhen Megmeet Electrical Co., Ltd.). NOT an SEC registrant; use cninfo and the company's investor site. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice located. Cadence basis: the H1 2026 interim was filed 2026-08-27 (posted 2026-08-28) and folded into the dossier at v7 on 2026-09-08 by the Phase 6 session-3 preflight; Chinese A-share issuers must publish Q3 reports by 31 October. HOW TO CONFIRM: cninfo (www.cninfo.com.cn), which was reachable from the 2026-09-08 session's egress. NOTE: www.szse.cn was NOT reachable from that egress (TLS handshake fails) — a null from that host bounds the host, not the filing route.",
+   "source": "PUBLIC COMPANY — SZSE: 002851 (Shenzhen Megmeet Electrical Co., Ltd.). NOT an SEC registrant; use cninfo and the company's investor site. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice located. Cadence basis: the H1 2026 interim was filed 2026-08-27 (posted 2026-08-28) and folded into the dossier at v7 on 2026-09-08; v8 (2026-09-23) found no Q3 appointment date or 业绩预告 on cninfo or the Eastmoney appointment API; Q3 2025 was published 2025-10-30; Chinese A-share issuers must publish Q3 reports by 31 October. HOW TO CONFIRM: cninfo (www.cninfo.com.cn), which was reachable from the 2026-09-08 session's egress. NOTE: www.szse.cn was NOT reachable from that egress (TLS handshake fails) — a null from that host bounds the host, not the filing route.",
    "watch": [
-    "THE CLAIM TO TEST, NOW WEAKER: trade reporting that Megmeet displaced LITEON as the #2 NVIDIA power-shelf source. The H1 2026 interim names no competitor in 238 pages and claims no rank — it says only that Megmeet is 'one of NVIDIA's designated recommended data-centre power suppliers'. 36Kr names LITEON as the second supplier; TrendForce (Jun 2026) and DigiTimes (Jun 2026) frame the field as Delta and LITEON without Megmeet. Watch for any ranked, sourced supplier study.",
-    "QUALITY OF EARNINGS: H1 2026 headline net profit +45.21% but ex-non-recurring −16.13%, the gap being RMB 133.88M of non-recurring items dominated by fair-value gains on the wealth-management products holding the placement proceeds; operating cash flow −84.62%. Watch whether H2 converts the power-segment growth into operating cash.",
-    "AI-DC revenue is still not disclosed at any granularity — the finest line is power products (RMB 1.841B, +60.92%, margin +2.62pp). Watch for a data-centre revenue line, or a named North American customer; the interim names none.",
-    "H-share listing: A1 filed with HKEX 2026-06-26 (sponsors Huatai International and Citi). An A1 lapses after six months, so an updated PHIP carrying the H1 numbers is due before ~2026-12-26.",
-    "Thailand phase 2 (RMB 804.77M, the largest placement project) drew ZERO placement funds in H1 2026 while the MD&A says phases 2 and 3 are progressing as planned. Watch whether the two reconcile — do not infer a delay from the zero drawdown alone.",
-    "The 2026-08-27 project deferral is the Shenzhen Nanshan HEADQUARTERS base (government-run build, 2019 convertible-bond funded), pushed to 2027-12. It is not an AIDC or capacity slip; do not read it as one."
+    "SST VOLUME: no voltage class is disclosed anywhere first-party (v8 searched every 2024-09→2026-08 filing, IR record, product page and the April 2026 brochure). One press lead — ifeng 2026-07-01, '国内10kV/海外35kV' — cites the 2026-05-20 earnings call, whose filed IR record carries no kV. Watch the Q3 report, IR records and any SST product page for a kV figure; the company says SST demand will not ramp for 1–2 years.",
+    "RANK CLAIM, RESOLVED AT v8: the 'displaced LITEON as #2' story traces to Feb–Mar 2025 rumour pieces (Sohu 2025-02-10, 产业家 2025-03-13); Soochow (2026-04-08) expects Megmeet as the THIRD NVL72 PSU source; the company says it was late on GB200. Delta and LITEON dossiers were reconciled the same day. Re-open only on a ranked, sourced supplier study.",
+    "EXPECTATIONS: 15-institution FY2026 consensus mean RMB 787M (同花顺, 2026-09-23) vs H1 RMB 252.1M (of which 133.9M non-recurring) — implies ~RMB 535M in H2. Guosen cut to RMB 652M on 2026-09-09. Q3 is the first test; check ex-non-recurring profit and operating cash, not the headline.",
+    "NORTH AMERICA: the interim says batch delivery to 'some North American major customers' began in H1 2026 (the Q1 2026 start is for AIDC delivery generally). Goldman (via Sina, 2026-04-03) says the first GB300 order ran through a US-headquartered ODM. Watch for a named customer or ODM.",
+    "US SITE: the company website names a 35,000 sq ft 'U.S. manufacturing base' in Richardson, Texas (TDLR TABS2024018464: 2821 Telecom Parkway, 39,200 sq ft renovation, 2024); filings list no US production base. Watch the PHIP/H-share prospectus for whether it is disclosed, and whether the Dallas test lab is at the same site.",
+    "H-share listing: A1 filed 2026-06-26 (Huatai International, Citi; CICC HK and CMBI added 2026-07-08). No hearing or CSRC filing notice as of 2026-09-23. An A1 lapses after six months, so a refreshed filing carrying the H1 numbers is due before ~2026-12-26.",
+    "WELDING BUY-OUT: 2026-09-22 agreement to buy the 46.30% minority of Shenzhen Megmeet Welding Technology for RMB 663.64M, with a 2026–28 profit commitment ≥ RMB 405M. Watch completion and the first commitment-year result.",
+    "QUALITY OF EARNINGS: H1 2026 fair-value gains of RMB 137.35M and operating cash flow −84.62%. Watch whether H2 converts the power-segment growth into operating cash.",
+    "Thailand phase 2 (RMB 804.77M, the largest placement project, target 2029-01) drew little placement money by 2026-06-30 while the MD&A says phases 2 and 3 are progressing. Do not infer a delay from the drawdown alone."
    ]
   },
   "meta": {

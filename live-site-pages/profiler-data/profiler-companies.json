@@ -964,13 +964,13 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2308",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-23",
       "domains": [
         "deltaww.com",
         "delta-americas.com"
       ],
-      "srcTotal": 16,
-      "srcFirstPct": 50,
+      "srcTotal": 20,
+      "srcFirstPct": 45,
       "kpiNorm": true,
       "segments": [
         {
@@ -2267,12 +2267,12 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2301",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-23",
       "domains": [
         "liteon.com"
       ],
-      "srcTotal": 15,
-      "srcFirstPct": 53,
+      "srcTotal": 19,
+      "srcFirstPct": 47,
       "kpiNorm": true,
       "segments": [
         {
@@ -2422,16 +2422,31 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "Power-electronics platform converting to AI data-center power — the only mainland vendor NVIDIA named for GB200; the H1 2026 report is the test.",
+      "tagline": "Power-electronics platform converting to AI data-center power — NVIDIA-recommended rack-power supplier in batch delivery on GB300; its SST is still in R&D with no disclosed voltage class.",
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002851",
       "status": "active",
-      "lastUpdated": "2026-09-08",
-      "domains": [
-        "megmeet.com"
+      "aka": [
+        "麦格米特",
+        "深圳麦格米特电气股份有限公司",
+        "Shenzhen Megmeet Electrical",
+        "Shenzhen Megmeet Electrical Technology",
+        "麦米电气",
+        "Megmeet Welding",
+        "Megmeet Welding Technology",
+        "麦格米特焊接",
+        "MEGMEET USA",
+        "Megmeet USA",
+        "Altatronic",
+        "MEGMEET"
       ],
-      "srcTotal": 38,
-      "srcFirstPct": 58,
+      "lastUpdated": "2026-09-23",
+      "domains": [
+        "megmeet.com",
+        "megmeet-welding.com"
+      ],
+      "srcTotal": 81,
+      "srcFirstPct": 60,
       "kpiNorm": true,
       "segments": [
         {

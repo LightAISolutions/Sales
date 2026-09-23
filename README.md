@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-23 10:28:38 AM EST` · Repo version: `v07.31r`
+Last updated: `2026-09-23 03:51:59 PM EST` · Repo version: `v07.32r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -523,6 +523,7 @@ Last updated: `2026-09-23 10:28:38 AM EST` · Repo version: `v07.31r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v1.json">delta-electronics.profile.v1.json</a> — Archived v1 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v3.json">delta-electronics.profile.v3.json</a> — Archived v3 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v4.json">delta-electronics.profile.v4.json</a> — Archived v4 dossier (Delta Electronics)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v5.json">delta-electronics.profile.v5.json</a> — Archived v5 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v1.json">dpr.profile.v1.json</a> — Archived v1 dossier (DPR Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v3.json">dpr.profile.v3.json</a> — Archived v3 dossier (DPR Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v4.json">dpr.profile.v4.json</a> — Archived v4 dossier (DPR Construction)
@@ -629,6 +630,7 @@ Last updated: `2026-09-23 10:28:38 AM EST` · Repo version: `v07.31r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/liteon.profile.v3.json">liteon.profile.v3.json</a> — Archived v3 dossier (LITEON)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/liteon.profile.v4.json">liteon.profile.v4.json</a> — Archived v4 dossier (LITEON)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/liteon.profile.v5.json">liteon.profile.v5.json</a> — Archived v5 dossier (LITEON)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/liteon.profile.v6.json">liteon.profile.v6.json</a> — Archived v6 dossier (LITEON)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/ls-energy-solutions.profile.v2.json">ls-energy-solutions.profile.v2.json</a> — Archived v2 dossier (LS Energy Solutions)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mainspring-energy.profile.v2.json">mainspring-energy.profile.v2.json</a> — Archived v2 dossier (Mainspring Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mainspring-energy.profile.v3.json">mainspring-energy.profile.v3.json</a> — Archived v3 dossier (Mainspring Energy)
@@ -639,6 +641,8 @@ Last updated: `2026-09-23 10:28:38 AM EST` · Repo version: `v07.31r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v2.json">megmeet.profile.v2.json</a> — Archived v2 dossier (Megmeet)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v4.json">megmeet.profile.v4.json</a> — Archived v4 dossier (Megmeet)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v5.json">megmeet.profile.v5.json</a> — Archived v5 dossier (Megmeet)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v6.json">megmeet.profile.v6.json</a> — Archived v6 dossier (Megmeet)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/megmeet.profile.v7.json">megmeet.profile.v7.json</a> — Archived v7 dossier (Megmeet)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v1.json">meta.profile.v1.json</a> — Archived v1 dossier (Meta)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v2.json">meta.profile.v2.json</a> — Archived v2 dossier (Meta)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v3.json">meta.profile.v3.json</a> — Archived v3 dossier (Meta)

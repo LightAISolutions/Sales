@@ -13,7 +13,7 @@
  "employees": "~85,000+ (group)",
  "website": "https://www.deltaww.com",
  "summary": "BOTTOM LINE UP FRONT: Delta Electronics is the volume leader in AI server power — #1 global power supply vendor (WAWT), reported at over half of AI-server AC/DC supply (CommonWealth) with brokerage estimates above 60% — and AI data-center power plus cooling crossed 50% of company revenue for the first time in Q2 2026, a quarter that printed record revenue NT$183.2B (+48%) and H1 EPS (NT$17.59) already above any prior full year. BACKGROUND: Founded 1971 by Bruce Cheng; chairman/CEO Ping Cheng; four segments (Power Electronics, Infrastructure, Automation, Mobility) with Power Electronics + Infrastructure now 87% of sales. The 800 VDC portfolio is the deepest published: 660 kW in-row power racks with 480 kW of embedded BBU, 18.5 kW PSUs at 98%, solid-state transformers at 98.5%, supercapacitor shelves, SiC e-fuses, and 3 MW CDUs now shipping. FY2025 revenue NT$554.9B (+32%), net income +71%. Capex guided to NT$70B (+50%) for 2026; a reported $2B SiC supply deal with Infineon underpins the 800V ramp. Thai-listed subsidiary DELTA TH is Thailand's largest listed company.",
- "ecosystemRole": "We assess Delta as the incumbent standard inside the NVIDIA rack — the first-qualified power-shelf supplier for GB200/GB300 NVL72 and TrendForce's named primary beneficiary of the 800V HVDC shift — making it the direct competitive ceiling for Megmeet, LITEON, and every rack-power challenger in this file. Basis: qualified supplier sets reported as Delta first, LITEON and Megmeet behind; the only vendor publishing a complete grid-to-chip 800 VDC stack (SST through DC-DC brick through liquid-cooled busbar); and Goldman-attributed modeling that 800 VDC raises BOM-per-watt ~43% with Delta capturing the largest share. The contested variable is the new sidecar power-rack segment, where Megmeet holds first-mover position among mainland vendors. Chinese-press reporting from early 2025 that Megmeet displaced LITEON at #2 traces to pieces that label it market rumour (Sohu, 10 February 2025), was never confirmed by Megmeet, and is contradicted by 2026 research: Soochow (April 2026) expects Megmeet to become the third NVL72 PSU source after Delta and LITEON, and TrendForce (March 2026) names Delta and LITEON as the leading suppliers; Megmeet itself says it was late on GB200 and won limited orders there (IR record, 29 April 2026).",
+ "ecosystemRole": "We assess Delta as the incumbent standard inside the NVIDIA rack — the first-qualified power-shelf supplier for GB200/GB300 NVL72 and TrendForce's named primary beneficiary of the 800V HVDC shift — making it the direct competitive ceiling for Megmeet, LITEON, and every rack-power challenger in this file. Basis: qualified supplier sets reported as Delta first, LITEON and Megmeet behind; the only vendor publishing a complete grid-to-chip 800 VDC stack (SST through DC-DC brick through liquid-cooled busbar); and Goldman-attributed modeling that 800 VDC raises BOM-per-watt ~43% with Delta capturing the largest share. The contested variable is the new sidecar power-rack segment, where Chinese press reports Megmeet displacing LITEON at #2 and holding first-mover position — the sharpest supplier fight in the AIDC power chain.",
  "productsAndServices": [
   {
    "name": "800 VDC rack power (In-Row Power Racks, power shelves, PSUs)",
@@ -138,7 +138,7 @@
  "strategyRead": [
   "(High confidence) We assess Delta's AI-power leadership is real, current, and structurally advantaged into the 800V generation. Basis: #1 power-supply vendor globally (WAWT), first-qualified across GB200/GB300 shelf sets, the reported NVIDIA DC-DC exclusive, the deepest published 800 VDC stack, and a reported $2B SiC supply lock with Infineon; TrendForce independently names Delta the primary 800V beneficiary.",
   "(High confidence) We assess the margin narrative has peaked in the near term. Basis: management's own guidance that H2 2026 gross margins will not exceed ~35.6% (versus Q1's record 37.0%), the 3-year AI-equipment depreciation change, memory/MOSFET cost inflation described as 'fully constrained,' and Q4 2025's 0.7pp gross-margin miss showing consensus already prices aggressive margins.",
-  "(Moderate confidence) We assess the sidecar power-rack segment is the one field where Delta's dominance is genuinely contested, but the contest is over the next architecture rather than current shelf share. Basis: Megmeet's first-mover position in the power-rack segment Morgan Stanley sizes at >RMB30B for 2026, and Delta was pressed on Megmeet, Vertiv, and Flex by analysts on its own Q2 call. On current NVL72 shelf share the record now points the other way: Soochow (April 2026) estimates Delta above 70% of NVIDIA's 2025 power supply and places Megmeet as a prospective third source behind LITEON, and the early-2025 report of Megmeet displacing LITEON at #2 traces to market rumour with no supporting source (reconciled against the Megmeet dossier v8, 2026-09-23).",
+  "(Moderate confidence) We assess the sidecar power-rack segment is the one field where Delta's dominance is genuinely contested. Basis: Chinese-press reporting that Megmeet displaced LITEON as the #2 NVL72 shelf supplier and holds first-mover position in the power-rack segment Morgan Stanley sizes at >RMB30B for 2026; Delta was pressed on Megmeet, Vertiv, and Flex by analysts on its own Q2 call. Unverified precision, but directionally corroborated across sources.",
   "(Moderate confidence) We assess customer and architecture concentration is the structural risk the diversification no longer offsets. Basis: AI data center >50% of revenue concentrates exposure on NVIDIA rack cadence and a handful of hyperscalers (NVIDIA's own top-2 customers were 39% of its revenue); no third-party source quantifies NVIDIA as a share of Delta revenue — itself a transparency gap.",
   "(Low confidence) We assess the valuation dispersion signals genuine disagreement rather than consensus conviction. Basis: sell-side targets span NT$1,330 to NT$4,500 (the top being a secondary-sourced Goldman figure), DCF-style fair values sit ~45% below market, and the Goldman 2028 model runs ~95% above consensus EPS — the widest bull-bear spread among the incumbents in this file."
  ],
@@ -156,9 +156,8 @@
   {
    "slug": "megmeet",
    "type": "competitor",
-   "note": "The mainland challenger in NVIDIA rack power — first-mover among mainland vendors on the 800 VDC sidecar, a prospective third NVL72 PSU source behind Delta and LITEON.",
-   "context": "Morgan Stanley sizes the power-rack segment at >RMB 30B for 2026; Delta was pressed on Megmeet by analysts on its own Q2 call. Soochow (April 2026) estimates Delta above 70% of NVIDIA's 2025 power supply and expects Megmeet to become the third NVL72 PSU source after Delta and LITEON; the early-2025 report of Megmeet displacing LITEON at #2 is market rumour with no supporting source, and Megmeet says it was late on GB200.\n\nDelta's moat claims: the only complete published grid-to-chip 800 VDC stack, and Goldman-attributed modeling that 800 VDC raises BOM-per-watt ~43% with Delta capturing the largest share.",
-   "source": "https://pdf.dfcfw.com/pdf/H3_AP202604081821073827_1.pdf"
+   "note": "The sharpest supplier fight in the AIDC power chain — Chinese press reports Megmeet displacing LITEON at #2 in NVL72 power shelves and holding first-mover position in sidecar power racks, behind first-qualified Delta.",
+   "context": "Morgan Stanley sizes the power-rack segment at >RMB 30B for 2026; Delta was pressed on Megmeet by analysts on its own Q2 call. Delta's moat claims: the only complete published grid-to-chip 800 VDC stack, and Goldman-attributed modeling that 800 VDC raises BOM-per-watt ~43% with Delta capturing the largest share."
   },
   {
    "slug": "liteon",
@@ -412,21 +411,6 @@
  },
  "sources": [
   {
-   "label": "Megmeet — IR activity record, 29 April 2026: 「针对第一代GB200电源产品，公司布局进度较晚，获取订单数量有限」; GB300 batch orders; Vera Rubin 'narrowing the gap with the leading peers'",
-   "url": "http://static.cninfo.com.cn/finalpage/2026-04-29/1225267346.PDF",
-   "date": "2026-04-29"
-  },
-  {
-   "label": "Soochow Securities — Megmeet deep-dive: Delta estimated above 70% of NVIDIA's 2025 power supply; Megmeet expected to become the third NVL72 PSU source after Delta and LITEON",
-   "url": "https://pdf.dfcfw.com/pdf/H3_AP202604081821073827_1.pdf",
-   "date": "2026-04-08"
-  },
-  {
-   "label": "TrendForce — 'Delta Electronics and Lite-On remain leading suppliers'; Megmeet's share 'still expected to take time to build'",
-   "url": "https://www.trendforce.com/news/2026/03/02/insights-ai-power-demand-drives-hvdc-shift-in-data-centers-full-stack-integration-emerges-as-key/",
-   "date": "2026-03-02"
-  },
-  {
    "label": "Infineon — collaboration with Delta Electronics on high-density power modules for vertical power delivery",
    "url": "https://www.infineon.com/technology-news/2025/INFPSS202508-138",
    "date": "2025-08-28"
@@ -497,19 +481,14 @@
    "date": "2025-04-14"
   },
   {
-   "label": "Sohu — 'Megmeet replacing Lite-On' as NVL72 supplier, attributed to 市场传闻 (market rumour)",
-   "url": "https://www.sohu.com/a/857370735_122004016",
-   "date": "2025-02-10"
-  },
-  {
    "label": "CommonWealth — >50% AI-server AC/DC share",
    "url": "https://english.cw.com.tw/article/article.action?id=3691"
   },
   {
-   "label": "LongPort — Megmeet power-shelf order reports (February 2025, market speculation; the displacement claim has no confirming source)",
+   "label": "LongPort — Megmeet power-shelf displacement report",
    "url": "https://longportapp.com/en/news/227685286"
   }
  ],
- "lastUpdated": "2026-09-23",
- "profileVersion": 6
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 5
 }
