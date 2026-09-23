@@ -6,6 +6,54 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 12:53 AM EST (the session ran ~12:21 → 12:55 AM EST)
+**Repo version:** v07.22r — one push on `claude/amazing-cerf-xlaqav` (N4 session 1); this session-context write is a second, no-bump push on the same branch name restarted from `origin/main`
+**Branch:** `claude/amazing-cerf-xlaqav`
+**Model:** Fable 5.1 (N4 session 1 — warmth, the reconnect list and the import panel; **N4 is In progress — session 1 done**)
+
+### What was done
+
+- **N4 session 1 landed** (`Network.gs` v01.14g · `Network.html` v01.23w; §11's N4 row → **In progress — session 1 done**; §13.16 written — the N4 session-2 brief with its paste-in prompt): warmth and cadence **computed on every read, stored nowhere** (`NETWORK-SCHEMA.md` §5 rewritten as built — weights meeting 2 · call 1.5 · email-in 1.2 · calendar 1.5 · email-out 1 · scan 1 · linkedin 0.5 · note 0.3, halving every 90 days; hot ≥ 2 · warm ≥ 0.75 · cool ≥ 0.2; cadence 30 / 60 / 90 / 180 per role × relationship); `warmth` + `warmthBand` on every list row from the same single read of the Interactions tab as `lastTouch` (`nwTouchPass_`), the `warmth` block on the detail; `nop=reconnect` (most overdue first, do-not-contact rows left out); `nop=import` (a pasted `.ics` or mail CSV parsed **server-side** into a proposal list matched by email — unmatched addresses proposed and never written, the developer's own address skipped, already-recorded rows marked duplicate) and `nop=importconfirm` (only the ticked rows as `email-in` / `email-out` / `calendar` Interactions; Evidence = the developer's reference · the UID or Message-ID; one line as Summary, never a body). The page: the warmth chip with legend on rows and the detail, the Warmth sort live, the 🔥 Reconnect card (Draft per row / for the ticked → the N3 drafts flow), the ⇪ Import touches panel
+- `scripts/check-network-warmth.js` (66 checks, zero live calls); `verify-network-roles.py` gained the warmth · reconnect · import passes, the D15 grep names `CalendarApp` — ALL CHECKS PASSED at 390 × 844, zero page errors; `check-network-schema.py` allows `matched` · `unmatched`; every sibling harness still passes; `check-readme-tree.py` 0 findings
+- `NETWORK-SCHEMA.md` §5 / §12 / §14 updated; CHANGELOG `Sections: 93/100`
+
+### Where we left off
+
+**The developer's live check is next** (reported, not asserted): confirm the Network redeploy (`?action=api&op=deploy` → `Already up to date (v01.14g)`, else run `pullAndDeployFromGitHub` once), read the warmth chips against three known contacts and the Warmth sort, open 🔥 Reconnect and tap Draft on one row (the drafts panel opens with that recipient), paste one `.ics` into ⇪ Import touches → Propose → type a reference → Record → `✓ 1 touch recorded`. **The two live-state brackets in this session's prompt were left unfilled** (the corpus token, the first people read) — the E4 s3 check may still be pending; do both checks together. **Then N4 session 2** with the §13.16 paste-in prompt (given in chat at the close of this session); its three brackets are the chips, the reconnect list and the confirmed `.ics` row.
+
+### Open findings carried forward
+
+- The `.ics` DESCRIPTION is never read and no CSV body column is ever mapped — by design (D15 / D9); a CSV whose header lacks a Date column or a To / From column is refused by name (`csv_columns`)
+- Do-not-contact contacts are excluded from the reconnect list (a nudge is a draft; D9 excludes them from every draft) — recorded in §5
+- The `press —` / `?` labels on the "Will be at" line stand until N4 session 2's chips
+- Two regex literals in the N4 `.gs` code use `\x22` / `\x27` for the quote marks — the shared harness extractor reads a quote inside a regex as a string opener; keep that convention in new `.gs` regexes
+- From E4: the Scraper roster carries no FERC eLibrary RSS; RE+ 2026's roster is a Swapcard widget; GlobeNewswire's feed unverified until a live sweep is read; no back-fill of `people[]` for items summarised before `Scraper.gs` v02.22g
+- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
+
+### Key decisions made
+
+- Warmth rides the list op's existing single read of the Interactions tab (`nwLastTouch_` now delegates to `nwTouchPass_`) — no second read, no column
+- The reconnect list measures a contact with no Interaction from its met date and skips one with neither
+- The import's duplicate key is contact · kind · day · line — a re-paste proposes those rows as already recorded, a re-confirm refuses them
+- The three import kinds only (`email-in` · `email-out` · `calendar`) — a `scan` or `meeting` through the import path is refused as `bad_kind`
+- The page mirrors the three legend constants byte for byte (asserted by the harness) and never computes a score
+
+### Active context
+
+- **Repo version v07.22r.** `CHANGELOG.md` `Sections: 93/100` — no rotation due
+- **Live versions:** `Network.html` v01.23w · `Network.gs` v01.14g · `Events.html` v01.08w · `Events.gs` v01.07g · `Scraper.gs` v02.22g
+- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07
+- **C2 Routine** fires Wednesday 2026-09-23 11:00 UTC — parallel pushes possible; check `git ls-remote` before pushing
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Do the live check first (confirm the redeploy, the warmth chips against three known contacts, Reconnect → Draft, one `.ics` row confirmed), then run N4 session 2 with the §13.16 paste-in prompt — its three bracketed live-state fields filled from Network.
+- **To continue:** type `run N4 session 2 from §13.16`
+
+## Previous Sessions
+
+
 **Date:** 2026-09-22 11:02 PM EST (the session ran ~10:45 → 11:05 PM EST)
 **Repo version:** v07.21r — one push on `claude/loving-einstein-yepfer` (E4 session 3 + this session-context write, one commit)
 **Branch:** `claude/loving-einstein-yepfer`
@@ -51,50 +99,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Do the live check first (the corpus token in both projects, redeploy Scraper and Network, one article summarised, its people read on the account and one accepted), then run N4 session 1 with the §13.15 paste-in prompt — its two bracketed live-state fields filled from Network.
 - **To continue:** type `run N4 session 1 from §13.15`
 
-## Previous Sessions
-
-**Date:** 2026-09-22 10:45 PM EST (the session ran ~10:26 → 10:45 PM EST)
-**Repo version:** v07.20r — one push on `claude/relaxed-mayer-lbrzvz` (E4 session 2 + this session-context write, one commit)
-**Branch:** `claude/relaxed-mayer-lbrzvz`
-**Model:** Fable 5.1 (E4 session 2 — newsroom pages, agendas, the docket watch)
-
-### What was done
-
-- **E4 session 2 landed** (`Events.gs` v01.07g · `Events.html` v01.08w · `Network.gs` v01.12g; `Network.html` v01.21w untouched; §11's E4 row → In progress — session 2; §13.14 written with the session-3 paste-in prompt): on session 1's run, never a fork — **newsroom / "meet us at" pages** per `target` account with a `newsroomUrl` (now carried on `nop=accounts` when set), read monthly (the day parked per account id in the script property `EV_SIGNALS_NEWSROOM`, 28-day skip, a failed page retried), matched on each target event's name or its series with the year within 400 characters → `newsroom` 0.7 with the person the page names; **agendas** at `agendaUrl` through the roster parser → `agenda` 0.9 with the person (same-URL-as-roster read once); **recordings decided as a manual row of `kind = agenda`** (the form's third option, the note prefixed `Recording:`); **the docket watch** once per run over the Federal Register's FERC feed (the Scraper roster's `fedreg-ferc` row byte for byte) per watched account whose segments name a docket segment found by name in `profiler-segments.json` → `docket` 0.7, the filing as evidence, **no event slug** — Network's write leg accepts the empty slug for `docket` only, the score never counts it
-- `scripts/check-events-signals.js` 76 → **103 checks**, zero live calls; `check-events-score.js` / `check-peer-bridge.js` / `check-events-poller.js` / `check-gas-inner-scripts.js` still pass; `check-events-registry.py` exit 0 after its own `--fix-past` flipped two iMasons rows that ended 2026-09-22 (the `.ics` rebuilt, 69 confirmed); `check-readme-tree.py` 0 findings; `verify-events-roles.py` and `verify-network-roles.py` ALL CHECKS PASSED at 390 × 844, zero page errors; the host grep clean (the only `linkedin.com` is Network's manual-kind rule)
-- `EVENTS-SCHEMA.md` §3 / §8 and `NETWORK-SCHEMA.md` §3 / §8 updated; CHANGELOG `Sections: 91/100`
-
-### Where we left off
-
-**The developer's live check is next** (reported, not asserted): redeploy Events and Network (both `.gs` changed), open the Proposed tab → Signals now → read the status line (`Swept N events (P pages read …)`; the answer's `newsrooms{}` and `dockets{}` and `feeds[]` now carry a `fedreg-ferc` row), then open a target account with a Newsroom URL in Network and read its "Will be at" line — a newsroom row names the show, a docket row reads `? — docket 0.7` with the filing link (the `?` stands until N4's chips). Add a recording on an event sheet (the third kind) and find it on the account. **The two live-state brackets in this session's prompt were left unfilled** by the developer (whether the weekly sweep is installed and what the first Signals now line read) — session 3's prompt carries three brackets; fill them before pasting. **Then E4 session 3** with the §13.14 paste-in prompt (given in chat at the close of this session).
-
-### Open findings carried forward
-
-- **The Scraper roster carries no FERC eLibrary RSS** — FERC's own site is `blocked` (Cloudflare challenge); the docket watch reads the roster's Federal Register FERC feed, whose item titles name the filer. "Combined Notice of Filings" items name their applicants only in the document body — a per-item fetch would be new scope (a decision)
-- **RE+ 2026's speaker roster is a Swapcard iframe widget** — reads as `no_roster_found`; its agenda URL (`re-plus.com/schedule/`) is likely the same widget — reading Swapcard's API would be new scope (a decision)
-- **GlobeNewswire's feed** landed unverified in session 1 — read the first live sweep's `feeds[]`
-- A docket row shows as `? — docket 0.7` on Network's "Will be at" line (no event to name) until N4's chips
-- The series key for `RE+` normalises to two letters and is filtered — newsroom and press matches on that show need the edition name ("RE+ 2026"), which the name key covers
-- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
-
-### Key decisions made
-
-- Recordings enter as a manual `agenda` row (the brief's least-scope answer) — no recording kind in Network; the form gained the option, so `Events.html` bumped and the verifier's kinds list changed
-- The docket watch reads the Federal Register FERC feed (the roster's row) — no outlet added, FERC's own site never fetched
-- Newsroom pages are read for `target` accounts only (the brief's wording); customer and partner pages are never fetched (asserted)
-- The newsroom skip state is a script property keyed by account id (ids only), not a tab — §5 says no Events tab for signals
-- The docket segment ids are found by segment name at run time (`utilit` · `ipp` · `developer`), never hard-coded
-- `check-events-registry.py --fix-past` was run because the checker prescribes it and exit 0 is a required verification — two rows that ended 2026-09-22 are now `past`
-
-### Active context
-
-- **Repo version v07.20r.** `CHANGELOG.md` `Sections: 91/100` — no rotation due
-- **Live versions:** `Events.html` v01.08w · `Events.gs` v01.07g · `Network.html` v01.21w · `Network.gs` v01.12g
-- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07
-- **C2 Routine** fires Wednesday 2026-09-23 11:00 UTC — parallel pushes possible; check `git ls-remote` before pushing
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Do the live check first (redeploy both apps, Signals now, read a newsroom row and a docket row on an account in Network, add one recording), then run E4 session 3 with the §13.14 paste-in prompt — its three bracketed live-state fields filled from the panel and from Network.
-- **To continue:** type `run E4 session 3 from §13.14`
