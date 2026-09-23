@@ -6,7 +6,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
-**Date:** 2026-09-23 (the run: 07:36 → 10:30 AM EST, unattended)
+**Date:** 2026-09-23 (the run: 07:36 → 10:30 AM EST, unattended; a short attended tail to 2:40 PM EST for the v8 hand-off)
 **Repo version:** v07.31r — three pushes on `claude/fervent-lovelace-sk1c5s` (v07.29r, v07.30r, v07.31r)
 **Branch:** `claude/fervent-lovelace-sk1c5s`
 
@@ -27,6 +27,8 @@ The hall-edge contest is not being decided on efficiency — every serious vendo
 
 **The run is complete and all three pushes merged.** Nothing is pending. Phase F's audit (a fresh subagent against the twelve-line rubric) returned 35 findings; all 35 were worked and the PDF rebuilt. The rubric re-check passes on every line.
 
+After the run the developer asked for a **paste-in prompt for a fresh session to cut Megmeet dossier v8**, rather than running it in this session. That prompt was written and handed over in chat; its substance is the Recommendation below. Nothing else is outstanding.
+
 ### Key decisions made
 
 - **Archive rotation was not performed**, three times, because the rule tests the **non-exempt** section count with the current day exempt: 92 non-exempt against a trigger of 100. The plan's summary said rotation falls due at 100 raw; the rule won, and the reasoning is in the colophon and in each CHANGELOG section.
@@ -43,7 +45,15 @@ The hall-edge contest is not being decided on efficiency — every serious vendo
 
 ### Recommendation for next session
 
-- Run **`profiler megmeet`** to cut a v8 dossier before the Q3 filing lands on 31 October: the briefing's week-one question 1 (the SST's service-voltage class) and question 6 (what Q1 2026 volume delivery to North American majors actually was) are both dossier questions, and both are named in chapter 16 as holes the current record cannot close.
+- Run **`profiler megmeet`** to cut **dossier v8** (v7 is dated 2026-09-08, 38 sources) **before Megmeet's Q3 2026 report lands at the CSRC statutory deadline on 31 October**. It is a revision: archive v7, then work the nine open questions the briefing's chapter 16 named as unclosable from the then-current record — above all **the SST's service-voltage class** (zero kV mentions across all 38 pinned sources and a four-filing scan) and **what Q1 2026 "volume delivery to North American majors" actually consisted of** (which contradicts the August interview brief's "North America is greenfield").
+
+Three things a fresh session will not know and must be told:
+
+- **`aka[]` and `legalName` are both null on v7.** `aka[]` is the input to the Profiler Command's step-7 reconciliation grep, so it must be populated first — 麦格米特 · Shenzhen Megmeet Electrical Co., Ltd. · Megmeet Welding · Megmeet USA.
+- **Not one of v7's 38 sources carries a `party` field**, although the registry reports 58% first-party. Stage 1 is genuinely under-served: exhaust megmeet.com, megmeet-welding.com, the IR archive and cninfo before any third-party source, and set `party` on every entry.
+- **Thirteen other dossiers mention Megmeet** with word boundaries — delta-electronics, dg-matrix, flex, huawei-digital-power, infineon, liteon, nvidia, power-electronics, sinexcel, sungrow, vertiv, vicor, zhonhen. A normal step-7 reconciliation load, not the NVIDIA-scale case that has to be deferred.
+
+The September study-prep files — the briefing PDF, its print HTML, the companion, the data file and the 23 September competitive report — are **dated documents and are not edited**. If v8 contradicts them, say so and let the developer decide.
 
 **To continue:** type `profiler megmeet`
 
