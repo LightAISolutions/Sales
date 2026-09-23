@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-23 09:27:04 AM EST` · Repo version: `v07.30r`
+Last updated: `2026-09-23 10:28:38 AM EST` · Repo version: `v07.31r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -1305,6 +1305,7 @@ Last updated: `2026-09-23 09:27:04 AM EST` · Repo version: `v07.30r`
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-sst-briefing-print.html">megmeet-sst-briefing-print.html</a> — Source for the SST onboarding briefing — sixteen chapters in five parts on the primer&#8217;s print skin, every factual sentence carrying one of five tier tags
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-sst-briefing-data.json">megmeet-sst-briefing-data.json</a> — The single source for every number in a figure or a widget — 214 tagged records across the ledger, obstacles, timelines, terms, perspectives and the week-one list
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-SST-BRIEFING.pdf">MEGMEET-SST-BRIEFING.pdf</a> — The briefing typeset for print/download, primer skin, sixty-nine pages with fourteen figures
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-sst-briefing-companion.html">megmeet-sst-briefing-companion.html</a> — The study companion: seven drill widgets (conversion chain, cell-count calculator, loss-boundary comparator, competitor map, programme timeline, spaced-repetition flashcards, objection drill) over the same data file, inlined byte for byte so it opens from disk with no network
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet/megmeet-sst-briefing-figures">megmeet-sst-briefing-figures/</a> — The briefing&#8217;s fourteen figures as SVG, generated from the data file
 │   │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-sst-briefing-figures/mmsst-fig-watchlist-delta.svg">mmsst-fig-watchlist-delta.svg</a> — Figure M1 — the five things that moved between the primer's 12 September watch-list and 23 September
 │   │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-sst-briefing-figures/mmsst-fig-calendar.svg">mmsst-fig-calendar.svg</a> — Figure M2 — the run-in to day one and the first ninety days, as a dated list

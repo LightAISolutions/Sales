@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 (the run: 07:36 → 10:30 AM EST, unattended)
+**Repo version:** v07.31r — three pushes on `claude/fervent-lovelace-sk1c5s` (v07.29r, v07.30r, v07.31r)
+**Branch:** `claude/fervent-lovelace-sk1c5s`
+
+### What was done
+
+**The Megmeet SST onboarding briefing ran end to end, unattended, from §6 of `repository-information/megmeet-briefing-prompt.md`.** All three deliverables shipped.
+
+- **D1 — `live-site-pages/profiler-data/reports/sst-hall-edge-block--competitive--2026-09-23.report.json`** (v07.29r, push 1). A Profiler competitive report on the SST and medium-voltage hall-edge block, dossiers only, cut on the axis the 8 September AIDC edition could not score: **the service-voltage class each vendor has actually specified**. Eighteen dossiers, 46 citations copied verbatim from their `sources[]`, eight key judgments, ten limitations, eight gaps. Builds on and does **not** supersede the 8 September edition. `check-profiler-reports.py` clean.
+- **D2 — `repository-information/study-prep/megmeet/MEGMEET-SST-BRIEFING.pdf`** (v07.30r push 2, corrected in v07.31r push 3). **71 pages, 14 figures, five parts plus a four-part appendix**, on the SST primer's print skin. Source `megmeet-sst-briefing-print.html`; figures from `scripts/build-megmeet-sst-briefing-figures.py`; PDF from `scripts/build-megmeet-sst-briefing-pdf.mjs` (Chromium over DevTools, running header and page numbers).
+- **D3 — `repository-information/study-prep/megmeet/megmeet-sst-briefing-companion.html`** (v07.31r, push 3). Seven drill widgets, data inlined byte for byte, no network, zero console errors under Playwright. Also published as a **private Claude artifact**: https://claude.ai/artifact/D8zZrSo8Y88XPrbThLEFMx
+- **`megmeet-sst-briefing-data.json`** is the single source for every plotted or displayed number — **215 tagged records**, each carrying one of six fixed tags. The figures read it and the companion inlines it, so the two cannot drift.
+
+### The finding the document exists to carry
+
+The hall-edge contest is not being decided on efficiency — every serious vendor claims 98.5% and none publishes the boundary, and NVIDIA rates the transformer-rectifier unit and the SST identically. It is being decided on **disclosed service-voltage class** and **disclosed commerce**. On that test the field inverts: the only SST a filing describes as supplying the market stops at 13.8 kV; the best-specified 34.5 kV designs belong to venture balance sheets and have not shipped; the only orderable solid-state MV product from an incumbent is a UPS; nobody holds a UL listing for the 800 V DC bus. **Megmeet's own SST class is genuinely `undisclosed`** — zero kV mentions across 38 pinned dossier sources and a four-filing scan — while its rack-and-sidecar chain is published, shipping and growing 60.92%.
+
+### Where we left off
+
+**The run is complete and all three pushes merged.** Nothing is pending. Phase F's audit (a fresh subagent against the twelve-line rubric) returned 35 findings; all 35 were worked and the PDF rebuilt. The rubric re-check passes on every line.
+
+### Key decisions made
+
+- **Archive rotation was not performed**, three times, because the rule tests the **non-exempt** section count with the current day exempt: 92 non-exempt against a trigger of 100. The plan's summary said rotation falls due at 100 raw; the rule won, and the reasoning is in the colophon and in each CHANGELOG section.
+- **The reader's hearsay** about NVIDIA/Oracle engineering contact steered chapter 8's depth and nothing else. It is boxed once, labelled unverified, and cited nowhere.
+- **`undisclosed` is a finding, not a hedge** — applied to Megmeet exactly as to Amperesand, GE Vernova, Hitachi Energy, Vertiv, Schneider and Sinexcel.
+- **The older Megmeet prep files were not edited.** Chapter 9.4 lists eleven things dossier v7 now contradicts in them and changes nothing.
+- **No model identifier appears in any repository artefact** — the colophon records effort and run window instead.
+
+### Active context
+
+- Toggles unchanged: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+- CHANGELOG counter `Sections: 102/100`, 92 non-exempt — **rotation fires on the next push that is not same-day**
+- Two pre-existing `check-profiler-reports.py` warnings on other reports (aged pins on `grid-scale-bess` and `named-project-bess-attach`) — untouched by this run
+
+### Recommendation for next session
+
+- Run **`profiler megmeet`** to cut a v8 dossier before the Q3 filing lands on 31 October: the briefing's week-one question 1 (the SST's service-voltage class) and question 6 (what Q1 2026 volume delivery to North American majors actually was) are both dossier questions, and both are named in chapter 16 as holes the current record cannot close.
+
+**To continue:** type `profiler megmeet`
+
+## Previous Sessions
+
+### Session — 2026-09-23 07:35 AM EST (planning)
+
 **Date:** 2026-09-23 07:35 AM EST (the session ran ~07:15 → 07:35 AM EST)
 **Repo version:** v07.28r — one push on `claude/busy-hawking-cfdvqk` (the v2 briefing plan), plus a second push for this session-context write
 **Branch:** `claude/busy-hawking-cfdvqk`
@@ -49,54 +94,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - Start a **new session on Claude Opus 5 at effort `xhigh`** and paste §6 of `repository-information/megmeet-briefing-prompt.md` — the plan is complete, the corpus is fresh as of today, and the 2026-10-07 start date leaves two weeks for a second pass if the Phase F audit turns up gaps. Check the usage meter first; if the run happens after 2026-10-01, glance at `reports/reports-index.json` for a newer AIDC power-conversion edition.
 - **To continue:** type `run the Megmeet briefing from §6 of megmeet-briefing-prompt.md`
-
-
-## Previous Sessions
-
-### Session — 2026-09-23 06:50 AM EST (X decided no — D16 complete, v07.27r)
-
-**Date:** 2026-09-23 06:50 AM EST (the session ran ~06:34 → 06:50 AM EST)
-**Repo version:** v07.27r — one push on `claude/classroom-event-provenance-1gehnk` (the X decision), plus a second push for this session-context write
-**Branch:** `claude/classroom-event-provenance-1gehnk`
-**Model:** Fable 5.1 xhigh (X — the Classroom hook: **decided no**; **D16's build order is complete**)
-
-### What was done
-
-- **X decided — no** (v07.27r). Nothing built, no gate surface touched, no GAS bump, no file added. The decision is written into `NETWORK-EVENTS-DESIGN-PLAN.md` §3's D13 row and §11's X row (flipped from *Proposed — deferred behind E0 stability* to **Decided — no, v07.27r, 2026-09-23**), with the three reasons, the four reopen conditions, and what remains outside the plan
-- **Why no, in three lines:** the pre-event briefing already exists as E5's `events plan <event>` narrative (private half included; `repository-information/plans/re-plus-2026-narrative-plan.md`) and its public half is dossier material Classroom already stamps as `profile:` / `study:`; the fact with teaching value — who exhibits — is a Network `Signals` row that never crosses, `mentions[]` is not attendance, and what a registry row adds on its own is calendar, not mechanism, expiring with the edition, which a permanent `tracks` lesson (P5) cannot; the true cost of a tenth prefix is the map + mirror + `gateDigest` **plus** a G7 resolution rule (else every weekly run freezes the lesson as unknown), the committer contract's "exactly the nine prefixes", and the P11 guard in `check-classroom-pipeline.py` whose prefix tuple is hard-coded to the nine and which X may not edit — P4 would fire on the adding commit itself
-- **What would change the answer** (any one reopens X): a *series-level* evergreen lesson once E0's next verification pass fills `hours[]` (2 of 96 upcoming rows), `editions[]` and the agenda structure; a G7 resolution rule for `event:` written into `classroom-app.md` first; one applied `events sync` cycle; or the developer asking for it. `contact:` stays never
-- **The deferral condition, verified on the live file:** all 58 roster rows carry `lastProbe.at = 2026-09-21`, **but those are E0's own build-time probes** — `git log` shows `events-sources.json` written once (v06.95r) and never since, `events.json` touched only by E4 s2's manual agenda rows (v07.20r), and **no `events sync` has ever applied a diff**. The registry has stood under one poller cycle, not survived a change from one. Recorded in the X row and the CHANGELOG; it did not decide X
-- `CLASSROOM-SCHEMA.md` gained one paragraph beside the *no `note:` prefix* rule recording that there is no `event:` prefix either (declined, dated, with the pointer); `EVENTS-SCHEMA.md` §11's D13 sentence updated. The prefix table still mirrors `CL_PROVENANCE_REF_KINDS` byte for byte
-- **All six checkers passed on the untouched code** before and after: content 71 / 8 / 220 with 0 / 0, curriculum no structural findings, pipeline `--selftest` 15 / 0 (and 3 × P1 on the diff — the expected developer-commit noise, no P3 / P4), events-plan 151 / 0, registry OK, README tree 22 / 0
-
-### Where we left off
-
-**X is closed and D16's order is complete** — Gate → N0 → Q0 → N1 → N2 → E0–E1 → B → N3 → E2–E3 → E4 → N4 → E5 → X, every row Done or decided. Nothing from X is pending. **The Megmeet briefing's sequencing condition (the Network / Events build) is now met.**
-
-### What remains — outside D16's order
-
-- **Inside the ledger:** **R**, the discovery Routine — not started; its stated blocker (a scheduled Routine landing a commit) has evidence since the earnings desk's 2026-09-22 fire committed v07.16r, and the rebuilt C2 Routine's first fire today at 11:07Z is the next proof to read. The developer flips the row. **Q**, the quota review — one Fable 5.1 Medium session with a month of counter data
-- **Outside the plan:** the E0 verification pass that fills `hours[]` / `venueLatLng` / `agendaUrl` (the biggest lever left on the Plan tab — coverage 2 / 26 / 16 of 96 upcoming rows per v07.26r); a hash router in `Network.html` for the post-event `#drafts?sourceEvent=` deep link; `scripts/check-guidance-migration.js` failing on clean `origin/main` ("expected 9 modules, got 28"); the standing E4 / E5 papercuts (no booth numbers on the day plan, RE+ 2026's Swapcard roster, the ROI line written once, `pullAndDeployFromGitHub` never logging its outcome)
-
-### Key decisions made
-
-- **A reasoned no is the deliverable.** The brief said so, the developer said not to force it, and the analysis found the teaching value already delivered elsewhere at the right gate (E5's narrative, admin-only) with the only novel input (attendance) forbidden by D9 / D13
-- **The cost was measured, not taken from the brief** — three items became six (G7 rule, contract count, P11 guard), and the P11 point is decisive on its own: the one prefix the deployed-changelog leak guard cannot see would be the one X added, and X may not edit the checker
-- **The brief's evidence was checked and corrected in writing** — the `lastProbe` stamps are E0's, not the poller's. That did not change the answer but is on the record so the next reader does not inherit it
-- **Housekeeping commits take no version bump** (the reminders / session-context precedent) — only the X push bumped `repository.version.txt`, to v07.27r
-
-### Active context
-
-- **Repo version v07.27r.** `CHANGELOG.md` **`Sections: 98/100`** — **rotation becomes mandatory above 100**, two pushes away; read the live counter rather than this line
-- **Live versions unchanged:** `Classroom.gs` v01.87g · `Classroom.html` v01.16w · `Events.html` v01.11w · `Events.gs` v01.09g · `Network.html` v01.24w · `Network.gs` v01.17g · `Scraper.gs` v02.22g. **No `.gs` changed this session — no redeploy needed**
-- **The Routine fleet is six, all enabled** (verified last session): the C2 Classroom weekly `0 11 * * 3` **fired today at 11:07Z — its report is the first of the rebuilt Routine and worth reading**; Profiler earnings desk weekdays; Profiler quarterly and monthly drift (next 2026-10-01); Industry Guidance quarterly (next 2026-10-15); ACL health daily
-- **One reminder remains active** — the **Megmeet SST briefing** before the 2026-10-07 start; its sequencing condition is now met, so it is the next thing to run, in a **new Opus 5 xhigh session** per the reminder
-- **Playwright is not preinstalled in a fresh container** — `pip install playwright` only; the Chromium is already there, never run `playwright install`
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Run the **Megmeet SST briefing** from the active reminder in a **new Opus 5 xhigh session** — X closing D16's order was its sequencing condition, the 2026-10-07 start date is two weeks out, and it is the one deliverable with an external deadline; run its two pre-flight checks (dossier freshness on the scoped slugs, whether the monthly drift check superseded `aidc-power-conversion--competitive--2026-09-08`) before the research.
-- **To continue:** type `run the Megmeet briefing`
-
-Developed by: LightAISolutions

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="424.44pt" height="705.40704pt" viewBox="0 0 424.44 705.40704" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="424.44pt" height="631.56096pt" viewBox="0 0 424.44 631.56096" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-23T13:15:57.729410</dc:date>
+    <dc:date>2026-09-23T14:27:48.665021</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,8 +21,8 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 705.40704 
-L 424.44 705.40704 
+   <path d="M 0 631.56096 
+L 424.44 631.56096 
 L 424.44 0 
 L 0 0 
 z
@@ -30,8 +30,8 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 5.76 699.64704 
-L 418.68 699.64704 
+    <path d="M 5.76 625.80096 
+L 418.68 625.80096 
 L 418.68 5.76 
 L 5.76 5.76 
 z
@@ -40,394 +40,442 @@ z
    <g id="matplotlib.axis_1"/>
    <g id="matplotlib.axis_2"/>
    <g id="patch_3">
-    <path d="M 5.76 18.15084 
-L 418.68 18.15084 
+    <path d="M 5.76 16.83216 
+L 418.68 16.83216 
 L 418.68 5.76 
 L 5.76 5.76 
 z
-" clip-path="url(#p5057109d50)" style="fill: #0b62a4; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #0b62a4; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 5.76 72.360765 
-L 418.68 72.360765 
-L 418.68 18.615497 
-L 5.76 18.615497 
+    <path d="M 5.76 65.27286 
+L 418.68 65.27286 
+L 418.68 17.247366 
+L 5.76 17.247366 
 z
-" clip-path="url(#p5057109d50)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 5.76 142.05924 
-L 418.68 142.05924 
-L 418.68 72.825422 
-L 5.76 72.825422 
+    <path d="M 5.76 127.55376 
+L 418.68 127.55376 
+L 418.68 65.688066 
+L 5.76 65.688066 
 z
-" clip-path="url(#p5057109d50)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
-    <path d="M 5.76 196.269165 
-L 418.68 196.269165 
-L 418.68 142.523896 
-L 5.76 142.523896 
+    <path d="M 5.76 175.99446 
+L 418.68 175.99446 
+L 418.68 127.968966 
+L 5.76 127.968966 
 z
-" clip-path="url(#p5057109d50)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
-    <path d="M 5.76 242.734815 
-L 418.68 242.734815 
-L 418.68 196.733822 
-L 5.76 196.733822 
+    <path d="M 5.76 217.51506 
+L 418.68 217.51506 
+L 418.68 176.409666 
+L 5.76 176.409666 
 z
-" clip-path="url(#p5057109d50)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 5.76 312.43329 
-L 418.68 312.43329 
-L 418.68 243.199471 
-L 5.76 243.199471 
+    <path d="M 5.76 279.79596 
+L 418.68 279.79596 
+L 418.68 217.930266 
+L 5.76 217.930266 
 z
-" clip-path="url(#p5057109d50)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
-    <path d="M 5.76 382.131765 
-L 418.68 382.131765 
-L 418.68 312.897946 
-L 5.76 312.897946 
+    <path d="M 5.76 342.07686 
+L 418.68 342.07686 
+L 418.68 280.211166 
+L 5.76 280.211166 
 z
-" clip-path="url(#p5057109d50)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
-    <path d="M 5.76 436.34169 
-L 418.68 436.34169 
-L 418.68 382.596421 
-L 5.76 382.596421 
+    <path d="M 5.76 390.51756 
+L 418.68 390.51756 
+L 418.68 342.492066 
+L 5.76 342.492066 
 z
-" clip-path="url(#p5057109d50)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
-    <path d="M 5.76 544.76154 
-L 418.68 544.76154 
-L 418.68 436.806346 
-L 5.76 436.806346 
+    <path d="M 5.76 487.39896 
+L 418.68 487.39896 
+L 418.68 390.932766 
+L 5.76 390.932766 
 z
-" clip-path="url(#p5057109d50)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
-    <path d="M 5.76 629.948565 
-L 418.68 629.948565 
-L 418.68 545.226197 
-L 5.76 545.226197 
+    <path d="M 5.76 563.52006 
+L 418.68 563.52006 
+L 418.68 487.814166 
+L 5.76 487.814166 
 z
-" clip-path="url(#p5057109d50)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_13">
-    <path d="M 5.76 699.64704 
-L 418.68 699.64704 
-L 418.68 630.413222 
-L 5.76 630.413222 
+    <path d="M 5.76 625.80096 
+L 418.68 625.80096 
+L 418.68 563.935266 
+L 5.76 563.935266 
 z
-" clip-path="url(#p5057109d50)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p01698b1f81)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="9.06336" y="13.818701" transform="rotate(-0 9.06336 13.818701)">Player</text>
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="9.06336" y="13.159361" transform="rotate(-0 9.06336 13.159361)">Player</text>
    </g>
    <g id="text_2">
-    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="87.51816" y="13.818701" transform="rotate(-0 87.51816 13.818701)">What 800 V DC buys them</text>
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="87.51816" y="13.159361" transform="rotate(-0 87.51816 13.159361)">What 800 V DC buys them</text>
    </g>
    <g id="text_3">
-    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="199.00656" y="13.818701" transform="rotate(-0 199.00656 13.818701)">What an SST adds over a TRU</text>
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="199.00656" y="13.159361" transform="rotate(-0 199.00656 13.159361)">What an SST adds over a TRU</text>
    </g>
    <g id="text_4">
-    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="310.49496" y="13.818701" transform="rotate(-0 310.49496 13.818701)">What they would need to see</text>
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #ffffff" x="310.49496" y="13.159361" transform="rotate(-0 310.49496 13.159361)">What they would need to see</text>
    </g>
    <g id="text_5">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="27.211568" transform="rotate(-0 9.06336 27.211568)">NVIDIA</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="25.152154" transform="rotate(-0 9.06336 25.152154)">NVIDIA</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 25.545742)">800 V DC carries 157% more power</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 32.482961)">through the same copper than 415 V</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 39.42018)">AC. The rack roadmap is what forces</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 46.357399)">it: NVLink pulls GPUs into copper</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 53.294617)">reach, density climbs, and 54 V</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 60.785274)">distribution runs out of road.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="9.06336" y="30.830836" transform="rotate(-0 9.06336 30.830836)">[PRIMER ch.2.2]</text>
    </g>
    <g id="text_7">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 25.545742)">Stage elimination, footprint and</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 32.482961)">control — not efficiency. NVIDIA</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 39.973617)">rates the MV rectifier and the SST</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 46.357399)">identically at 98.5% or better.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b8a6b" x="9.06336" y="35.121298" transform="rotate(-0 9.06336 35.121298)">[GUIDANCE nvidia-800vdc p7, p21-23]</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 25.545742)">ANALYSIS: a qualification category</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 32.482961)">that does not exist yet. DSX Ready</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 39.42018)">launched on 21 September 2026</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 46.357399)">covering BESS and CDUs only. The</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 53.294617)">first thing an SST vendor can</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 60.231836)">usefully offer NVIDIA is help</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 67.169055)">writing the category.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 23.65603)">800 V DC carries 157% more power</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 30.159673)">through the same copper than 415 V</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 36.663316)">AC. The rack roadmap is what forces</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 43.166958)">it: NVLink pulls GPUs into copper</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 49.670601)">reach, density climbs, and 54 V</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 56.693091)">distribution runs out of road.</text>
    </g>
    <g id="text_9">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="81.479172" transform="rotate(-0 9.06336 81.479172)">Oracle / OCI</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 23.65603)">Stage elimination, footprint and</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 30.159673)">control — not efficiency. NVIDIA</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 37.182163)">rates the MV rectifier and the SST</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 43.166958)">identically at 98.5% or better.</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 79.755667)">Nothing published. Oracle has said</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 86.692886)">nothing about 800 V DC, DC</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 93.852792)">distribution, MV conversion or</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 100.567324)">solid-state transformers anywhere in</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 107.504542)">its own material. Its published</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 114.441761)">power content is capacitance,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 121.37898)">advanced energy storage, hardware</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 128.316199)">GPU ramping and software ramp</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 135.806855)">control.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 23.65603)">ANALYSIS: a qualification category</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 30.159673)">that does not exist yet. DSX Ready</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 36.663316)">launched on 21 September 2026</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 43.166958)">covering BESS and CDUs only. The</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 49.670601)">first thing an SST vendor can</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 56.174243)">usefully offer NVIDIA is help</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 62.677886)">writing the category.</text>
    </g>
    <g id="text_11">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 79.978355)">ANALYSIS: unknown, because the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 86.692886)">question has never been put</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 93.630105)">publicly. The one place the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 100.567324)">conversation opens naturally is</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 107.504542)">Project Jupiter — up to 2.45 GW of</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 114.664449)">solid-oxide fuel cells, which are</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 121.601667)">DC-native, consolidated into one</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 128.316199)">microgrid campus.</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="73.646354" transform="rotate(-0 9.06336 73.646354)">Oracle / OCI</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 79.755667)">ANALYSIS: someone else's operating</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 87.246324)">hours. With no internal reference</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 93.630105)">and no published spec, the first</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 100.567324)">question a cautious operator asks is</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 107.504542)">who has one running and at what</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 114.995199)">scale.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="9.06336" y="79.271536" transform="rotate(-0 9.06336 79.271536)">[WEB, verified 2026-09-23]</text>
    </g>
    <g id="text_13">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 151.212686)">The other</text>
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 158.948907)">hyperscalers</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="9.06336" y="83.561998" transform="rotate(-0 9.06336 83.561998)">[WEB, verified 2026-09-23]</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 150.00758)">Microsoft states that solid-state</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 156.391361)">transformers are "the next step" in</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 163.32858)">its full-stack power transformation</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 170.488486)">after Mt Diablo — no vendor, no</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 177.203017)">site, no kV, no MW, no date. Google,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 184.140236)">Microsoft and NVIDIA jointly own the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 191.077455)">OCP specification work.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 72.09673)">Nothing published. Oracle has said</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 78.600373)">nothing about 800 V DC, DC</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 85.312785)">distribution, MV conversion or</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 91.607658)">solid-state transformers anywhere in</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 98.111301)">its own material. Its published</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 104.614943)">power content is capacitance,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 111.118586)">advanced energy storage, hardware</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 117.622229)">GPU ramping and software ramp</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 124.644719)">control.</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 149.454142)">ANALYSIS: the ability to standardise</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 156.944799)">a block across a fleet. A</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 163.32858)">hyperscaler that specifies one</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 170.265799)">converter for every campus buys</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 177.203017)">schedule certainty, not efficiency.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 72.3055)">ANALYSIS: unknown, because the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 78.600373)">question has never been put</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 85.104016)">publicly. The one place the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 91.607658)">conversation opens naturally is</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 98.111301)">Project Jupiter — up to 2.45 GW of</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 104.823713)">solid-oxide fuel cells, which are</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 111.327355)">DC-native, consolidated into one</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 117.622229)">microgrid campus.</text>
    </g>
    <g id="text_16">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 150.00758)">ANALYSIS: a second source. No</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 156.391361)">hyperscaler will single-source the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 163.32858)">hall edge, and today no two vendors</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 170.265799)">offer an interchangeable 34.5</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 177.756455)">kV-class unit.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 72.09673)">ANALYSIS: someone else's operating</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 79.119221)">hours. With no internal reference</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 85.104016)">and no published spec, the first</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 91.607658)">question a cautious operator asks is</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 98.111301)">who has one running and at what</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 105.133791)">scale.</text>
    </g>
    <g id="text_17">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="205.422611" transform="rotate(-0 9.06336 205.422611)">Neoclouds</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 135.959754)">The other</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 143.135379)">hyperscalers</text>
    </g>
    <g id="text_18">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 203.886755)">NVIDIA names CoreWeave, Lambda,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 210.823974)">Nebius, Oracle Cloud Infrastructure</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 217.538505)">and Together AI among providers</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 224.475724)">"designing for 800-volt data</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 231.96638)">centers" — NVIDIA's characterisation</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 238.572849)">of them, not their own statements.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="9.06336" y="148.610938" transform="rotate(-0 9.06336 148.610938)">[WEB, verified 2026-09-23]</text>
    </g>
    <g id="text_19">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 203.664067)">ANALYSIS: time to power. A</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 211.154724)">neocloud's constraint is</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 217.538505)">energisation date, and a 24-week</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 224.475724)">lead time against 46-48 for a</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 231.412942)">conventional lineup is the argument</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 238.350161)">that actually lands.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 134.896478)">Microsoft states that solid-state</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 140.881273)">transformers are "the next step" in</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 147.384916)">its full-stack power transformation</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 154.097328)">after Mt Diablo — no vendor, no</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 160.392201)">site, no kV, no MW, no date. Google,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 166.895843)">Microsoft and NVIDIA jointly own the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 173.399486)">OCP specification work.</text>
    </g>
    <g id="text_20">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 203.664067)">ANALYSIS: a bankable warranty and a</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 210.601286)">spares depot. Neither exists for any</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 217.538505)">MV SST today — only one vendor in</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 224.475724)">the whole research pass publishes a</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 231.412942)">warranty term at all.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 134.37763)">ANALYSIS: the ability to standardise</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 141.400121)">a block across a fleet. A</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 147.384916)">hyperscaler that specifies one</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 153.888558)">converter for every campus buys</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 160.392201)">schedule certainty, not efficiency.</text>
    </g>
    <g id="text_21">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 251.206347)">Colo developers and</text>
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 260.306396)">landlords</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 134.896478)">ANALYSIS: a second source. No</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 140.881273)">hyperscaler will single-source the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 147.384916)">hall edge, and today no two vendors</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 153.888558)">offer an interchangeable 34.5</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 160.911048)">kV-class unit.</text>
    </g>
    <g id="text_22">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 250.683155)">ANALYSIS: floor area and time to</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 257.066936)">revenue. The SST's published</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 264.004155)">footprint claims are the most</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 270.941374)">concrete thing on offer — Sungrow</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 278.43203)">claims 312 kW/m2 and one-third to</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 284.815811)">one-fifth of a conventional lineup,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 291.75303)">Heron claims a 70% smaller footprint</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 298.690249)">and an outdoor NEMA 3R siting that</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 306.180905)">removes the electrical room.</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="184.400454" transform="rotate(-0 9.06336 184.400454)">Neoclouds</text>
    </g>
    <g id="text_23">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 250.683155)">ANALYSIS: deletion of the electrical</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 257.289624)">room. For a landlord, converted</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 264.557592)">floor is leasable floor.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="9.06336" y="189.993136" transform="rotate(-0 9.06336 189.993136)">[WEB, verified 2026-09-23]</text>
    </g>
    <g id="text_24">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 250.129717)">ANALYSIS: a tenant who will sign for</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 257.066936)">it. Landlords do not specify</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 264.226842)">converters; anchor tenants do.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 183.0271)">NVIDIA names CoreWeave, Lambda,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 189.530743)">Nebius, Oracle Cloud Infrastructure</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 195.825616)">and Together AI among providers</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 202.329258)">"designing for 800-volt data</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 209.351748)">centers" — NVIDIA's characterisation</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 215.545313)">of them, not their own statements.</text>
    </g>
    <g id="text_25">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="321.586736" transform="rotate(-0 9.06336 321.586736)">Utilities</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 182.81833)">ANALYSIS: time to power. A</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 189.840821)">neocloud's constraint is</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 195.825616)">energisation date, and a 24-week</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 202.329258)">lead time against 46-48 for a</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 208.832901)">conventional lineup is the argument</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 215.336543)">that actually lands.</text>
    </g>
    <g id="text_26">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 319.828192)">Their published concern is not</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 326.988099)">conversion, it is load behaviour.</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 333.70263)">ERCOT NOGRR 282 turned ride-through</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 340.639849)">into a numeric acceptance test; NERC</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 347.577067)">Project 2026-02 will make</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 354.514286)">interconnection modelling,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 361.451505)">operational data and protection</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 368.388724)">coordination mandatory, with a FERC</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 375.325942)">filing deadline of 31 December 2026.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 182.81833)">ANALYSIS: a bankable warranty and a</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 189.321973)">spares depot. Neither exists for any</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 195.825616)">MV SST today — only one vendor in</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 202.329258)">the whole research pass publishes a</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 208.832901)">warranty term at all.</text>
    </g>
    <g id="text_27">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 319.828192)">ANALYSIS: one authoritative dynamic</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 326.765411)">model of the grid interface instead</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 333.70263)">of a composite of transformer, UPS,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 340.639849)">VFDs and protection. The converter</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 348.130505)">is the model.</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 225.288554)">Colo developers and</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 233.729179)">landlords</text>
    </g>
    <g id="text_28">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 319.828192)">ANALYSIS: an approved-equipment-list</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 326.765411)">entry, which nobody has. This is why</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 333.70263)">every announced US pilot sits behind</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 341.193286)">a customer-owned MV substation.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="9.06336" y="238.572238" transform="rotate(-0 9.06336 238.572238)">[DOSSIER sungrow v9]</text>
    </g>
    <g id="text_29">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="391.19411" transform="rotate(-0 9.06336 391.19411)">EPCs</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="9.06336" y="242.8627" transform="rotate(-0 9.06336 242.8627)">[DOSSIER heron-power v1]</text>
    </g>
    <g id="text_30">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 389.526667)">ANALYSIS: nothing in the published</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 396.463886)">record. EPCs do not publish</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 403.401105)">architecture positions.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 224.857778)">ANALYSIS: floor area and time to</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 230.842573)">revenue. The SST's published</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 237.346216)">footprint claims are the most</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 243.849858)">concrete thing on offer — Sungrow</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 250.872348)">claims 312 kW/m2 and one-third to</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 256.857143)">one-fifth of a conventional lineup,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 263.360786)">Heron claims a 70% smaller footprint</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 269.864429)">and an outdoor NEMA 3R siting that</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 276.886919)">removes the electrical room.</text>
    </g>
    <g id="text_31">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 390.080105)">ANALYSIS: fewer trades and a shorter</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 396.463886)">commissioning window. Heron's model</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 403.444855)">puts labour at $0.08M per MW against</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 410.382074)">$0.73M for the conventional lineup —</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 417.82898)">a vendor model with vendor-chosen</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 424.212761)">boundaries, and neither figure</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 431.14998)">audited on a delivered US project.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 224.857778)">ANALYSIS: deletion of the electrical</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 231.051343)">room. For a landlord, converted</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 237.865063)">floor is leasable floor.</text>
    </g>
    <g id="text_32">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 389.526667)">ANALYSIS: a factory-tested skid they</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 397.017324)">can set and terminate. The one</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 403.401105)">published NVIDIA-aligned reference</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 410.338324)">design is delivered as</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 417.275542)">pre-engineered, prefabricated,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 424.212761)">factory-tested MV and LV skids.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 224.33893)">ANALYSIS: a tenant who will sign for</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 230.842573)">it. Landlords do not specify</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 237.554985)">converters; anchor tenants do.</text>
    </g>
    <g id="text_33">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 445.495136)">Incumbent hall</text>
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 453.913271)">vendors</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="288.201954" transform="rotate(-0 9.06336 288.201954)">Utilities</text>
    </g>
    <g id="text_34">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 444.29003)">All six declared an 800 V DC</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 450.673811)">position in October 2025. ABB has</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 457.61103)">the only orderable solid-state MV</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 464.548249)">product and it is a UPS; Eaton</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 471.485467)">published a reference architecture</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 478.422686)">and bought SST intellectual</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 485.359905)">property; Schneider sells the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 492.297124)">reference design; Vertiv declared</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 499.234342)">engineering readiness; GE Vernova</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 506.171561)">publishes reference designs and</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 513.10878)">holds a hyperscaler commitment tied</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 520.045999)">to a specification milestone;</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 526.983217)">Hitachi Energy holds the transformer</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 534.473874)">calendar.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="9.06336" y="293.794636" transform="rotate(-0 9.06336 293.794636)">[PRIMER ch.6.3, ch.6.5]</text>
    </g>
    <g id="text_35">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 443.736592)">ANALYSIS: replacement content for a</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 450.673811)">shrinking centralised UPS franchise.</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 458.164467)">The architecture moves conversion</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 465.101686)">toward the rack and takes the UPS</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 472.044592)">with it.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 286.61983)">Their published concern is not</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 293.332243)">conversion, it is load behaviour.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 299.627116)">ERCOT NOGRR 282 turned ride-through</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 306.130758)">into a numeric acceptance test; NERC</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 312.634401)">Project 2026-02 will make</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 319.138043)">interconnection modelling,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 325.641686)">operational data and protection</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 332.145329)">coordination mandatory, with a FERC</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 338.648971)">filing deadline of 31 December 2026.</text>
    </g>
    <g id="text_36">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 444.29003)">ANALYSIS: evidence that the SST</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 450.673811)">market is larger than the UPS</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 458.164467)">revenue it cannibalises. GE Vernova</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 464.548249)">has priced the prize at 2-3x revenue</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 471.485467)">per gigawatt; Infineon sizes the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 478.466436)">whole SST slice at just above $1bn</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 485.403655)">of a $15bn-plus transformer market</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 492.297124)">by 2030.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 286.61983)">ANALYSIS: one authoritative dynamic</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 293.123473)">model of the grid interface instead</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 299.627116)">of a composite of transformer, UPS,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 306.130758)">VFDs and protection. The converter</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 313.153248)">is the model.</text>
    </g>
    <g id="text_37">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="553.914986" transform="rotate(-0 9.06336 553.914986)">Silicon</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 286.61983)">ANALYSIS: an approved-equipment-list</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 293.123473)">entry, which nobody has. This is why</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 299.627116)">every announced US pilot sits behind</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 306.649606)">a customer-owned MV substation.</text>
    </g>
    <g id="text_38">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 552.156442)">Infineon publishes a dedicated SST</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 559.093661)">application page and is one of</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 566.03088)">fourteen named silicon providers;</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 573.521536)">its AI data-centre revenue went from</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 580.458755)">EUR 250m in FY2024 to above EUR 700m</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 586.842536)">in FY2025 and is guided above EUR</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 594.333192)">1.6bn for FY2026. Vicor sells no</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 601.270411)">block at all and turned its</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 607.654192)">bus-converter patents into royalties</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 614.591411)">worth a fifth of a quarter's</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 621.559692)">revenue.</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="350.398354" transform="rotate(-0 9.06336 350.398354)">EPCs</text>
    </g>
    <g id="text_39">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 552.082505)">ANALYSIS: content per megawatt.</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 559.093661)">Every cell is a bill of materials,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 566.584317)">and a 34.5 kV unit has about 2.5</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 573.521536)">times the cells of a 13.8 kV one.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="9.06336" y="356.075536" transform="rotate(-0 9.06336 356.075536)">[DOSSIER heron-power v1]</text>
    </g>
    <g id="text_40">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 552.156442)">ANALYSIS: volume visibility.</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 559.093661)">Infineon's own market sizing is the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 566.03088)">most sober in the industry precisely</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 573.521536)">because it has no reason to inflate</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 579.905317)">a slice it already supplies.</text>
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="9.06336" y="360.365998" transform="rotate(-0 9.06336 360.365998)">[WEB, verified 2026-09-23]</text>
    </g>
    <g id="text_41">
-    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="638.278324" transform="rotate(-0 9.06336 638.278324)">Megmeet</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 348.90073)">ANALYSIS: nothing in the published</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 355.404373)">record. EPCs do not publish</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 361.908016)">architecture positions.</text>
    </g>
    <g id="text_42">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 637.343467)">Its published position is the rack</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 644.834124)">and the sidecar: an 800 V HVDC</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 651.217905)">sidecar converting 380-480 VAC at</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 658.155124)">over 1 MW per rack, a 570 kW side</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 665.31503)">rack, 33 kW and 110 kW shelves, BBU</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 672.029561)">and supercapacitor shelves, CRPS and</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 679.189467)">M-CRPS to 5.5 kW, and a Power Brick.</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 685.903999)">The SST is in the published chain</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 692.841217)">and is marked under development.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 349.419578)">ANALYSIS: fewer trades and a shorter</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 355.404373)">commissioning window. Heron's model</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 361.949031)">puts labour at $0.08M per MW against</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 368.452674)">$0.73M for the conventional lineup —</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 375.434148)">a vendor model with vendor-chosen</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 381.418943)">boundaries, and neither figure</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 387.922586)">audited on a delivered US project.</text>
    </g>
    <g id="text_43">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 637.343467)">ANALYSIS: the move from component</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 644.834124)">vendor to infrastructure vendor.</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 651.217905)">Everything below the converter is a</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 658.155124)">socket someone re-competes; the</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 665.64578)">converter is a block someone</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 672.029561)">specifies.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 348.90073)">ANALYSIS: a factory-tested skid they</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 355.923221)">can set and terminate. The one</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 361.908016)">published NVIDIA-aligned reference</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 368.411658)">design is delivered as</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 374.915301)">pre-engineered, prefabricated,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 381.418943)">factory-tested MV and LV skids.</text>
    </g>
    <g id="text_44">
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 637.343467)">ANALYSIS: a published</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 644.280686)">service-voltage class, and then a</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 651.440592)">listed unit. Until the first exists,</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 658.155124)">Megmeet is not in the hall-edge</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 665.092342)">comparison at all; until the second</text>
-    <text style="font-size: 5.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 672.029561)">exists, nobody in the layer is.</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 398.923555)">Incumbent hall</text>
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(9.06336 406.731679)">vendors</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #8a8f2a" x="9.06336" y="411.574738" transform="rotate(-0 9.06336 411.574738)">[REPORT 2026-09-08]</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="9.06336" y="415.8652" transform="rotate(-0 9.06336 415.8652)">[DOSSIER ge-vernova v6]</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 397.860278)">All six declared an 800 V DC</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 403.845073)">position in October 2025. ABB has</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 410.348716)">the only orderable solid-state MV</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 416.852358)">product and it is a UPS; Eaton</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 423.356001)">published a reference architecture</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 429.859643)">and bought SST intellectual</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 436.363286)">property; Schneider sells the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 442.866929)">reference design; Vertiv declared</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 449.370571)">engineering readiness; GE Vernova</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 455.874214)">publishes reference designs and</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 462.377856)">holds a hyperscaler commitment tied</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 468.881499)">to a specification milestone;</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 475.385141)">Hitachi Energy holds the transformer</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 482.407632)">calendar.</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 397.34143)">ANALYSIS: replacement content for a</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 403.845073)">shrinking centralised UPS franchise.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 410.867563)">The architecture moves conversion</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 417.371206)">toward the rack and takes the UPS</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 423.88018)">with it.</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 397.860278)">ANALYSIS: evidence that the SST</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 403.845073)">market is larger than the UPS</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 410.867563)">revenue it cannibalises. GE Vernova</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 416.852358)">has priced the prize at 2-3x revenue</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 423.356001)">per gigawatt; Infineon sizes the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 429.900659)">whole SST slice at just above $1bn</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 436.404302)">of a $15bn-plus transformer market</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 442.866929)">by 2030.</text>
+   </g>
+   <g id="text_50">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="495.804955" transform="rotate(-0 9.06336 495.804955)">Silicon</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="9.06336" y="501.397636" transform="rotate(-0 9.06336 501.397636)">[DOSSIER infineon v1]</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="9.06336" y="505.688098" transform="rotate(-0 9.06336 505.688098)">[DOSSIER vicor v2]</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 494.22283)">Infineon publishes a dedicated SST</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 500.726473)">application page and is one of</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 507.230116)">fourteen named silicon providers;</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 514.252606)">its AI data-centre revenue went from</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 520.756248)">EUR 250m in FY2024 to above EUR 700m</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 526.741043)">in FY2025 and is guided above EUR</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 533.763534)">1.6bn for FY2026. Vicor sells no</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 540.267176)">block at all and turned its</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 546.251971)">bus-converter patents into royalties</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 552.755614)">worth a fifth of a quarter's</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 559.288377)">revenue.</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 494.153514)">ANALYSIS: content per megawatt.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 500.726473)">Every cell is a bill of materials,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 507.748963)">and a 34.5 kV unit has about 2.5</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 514.252606)">times the cells of a 13.8 kV one.</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 494.22283)">ANALYSIS: volume visibility.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 500.726473)">Infineon's own market sizing is the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 507.230116)">most sober in the industry precisely</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 514.252606)">because it has no reason to inflate</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 520.237401)">a slice it already supplies.</text>
+   </g>
+   <g id="text_56">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="9.06336" y="571.162055" transform="rotate(-0 9.06336 571.162055)">Megmeet</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 4.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="9.06336" y="577.518736" transform="rotate(-0 9.06336 577.518736)">[DOSSIER megmeet v7]</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 570.34393)">Its published position is the rack</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 577.366421)">and the sidecar: an 800 V HVDC</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 583.351216)">sidecar converting 380-480 VAC at</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 589.854858)">over 1 MW per rack, a 570 kW side</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 596.56727)">rack, 33 kW and 110 kW shelves, BBU</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 602.862143)">and supercapacitor shelves, CRPS and</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 609.574555)">M-CRPS to 5.5 kW, and a Power Brick.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 615.869429)">The SST is in the published chain</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(87.51816 622.373071)">and is marked under development.</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 570.34393)">ANALYSIS: the move from component</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 577.366421)">vendor to infrastructure vendor.</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 583.351216)">Everything below the converter is a</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 589.854858)">socket someone re-competes; the</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 596.877348)">converter is a block someone</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(199.00656 602.862143)">specifies.</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 570.34393)">ANALYSIS: a published</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 576.847573)">service-voltage class, and then a</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 583.559985)">listed unit. Until the first exists,</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 589.854858)">Megmeet is not in the hall-edge</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 596.358501)">comparison at all; until the second</text>
+    <text style="font-size: 5.25px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(310.49496 602.862143)">exists, nobody in the layer is.</text>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p5057109d50">
-   <rect x="5.76" y="5.76" width="412.92" height="693.88704"/>
+  <clipPath id="p01698b1f81">
+   <rect x="5.76" y="5.76" width="412.92" height="620.04096"/>
   </clipPath>
  </defs>
 </svg>

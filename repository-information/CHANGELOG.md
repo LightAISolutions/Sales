@@ -3,11 +3,49 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.31r] — 2026-09-23 10:28:38 AM EST
+
+> **Prompt:** "Run the Megmeet SST onboarding briefing — the v2 plan in repository-information/megmeet-briefing-prompt.md. Read that file end to end first: §2 is the scope, §3 the deliverables and the table of contents, §5 the phases, the checkpoint pushes and the Phase F rubric you will be checked against. This is an unattended overnight run: no AskUserQuestion, no plan mode — resolve every ambiguity with a stated assumption and record it in the colophon. [CONTEXT, READ FIRST, SCOPE, DELIVERABLES, HARD RULES, PHASES AND PUSHES and FINAL MESSAGE sections follow in the full prompt, which is §6 of the plan file verbatim plus the developer's start-date and hearsay context.]"
+
+Phases E and F of the Megmeet SST onboarding briefing run: **D3, the study companion**, and the **audit pass**. A fresh subagent with none of the drafting context audited the finished PDF against the plan's twelve-line rubric and returned thirty-five findings. All thirty-five were worked, the PDF and the figures were rebuilt, and every checker re-run. This closes the run.
+
+### Added
+
+#### `repository-information/study-prep/megmeet/megmeet-sst-briefing-companion.html`
+
+- **The study companion: seven drill widgets in one self-contained file** — a conversion-chain explorer that adds up the published stage losses and says why the totals are not an efficiency delta; a service-voltage and cell-count calculator; a loss-chain comparator that **refuses to subtract two figures whose boundaries differ** and says so; a competitor map with four filters and a Megmeet-against-X card; a programme timeline on a date slider; a Leitner flashcard deck over the twenty-six terms and twenty-three numbers, kept in `localStorage` inside try/catch and working without it; and an objection drill.
+- **The data file is inlined byte for byte**, so the companion and the briefing's fourteen figures cannot disagree. No CDN, no network call of any kind, no external `src` or `href` — it opens from `file://`. Playwright-tested: every widget driven, **zero console errors, warnings, or failed requests**, screenshots kept in the session scratchpad.
+
+### Fixed
+
+*Thirty-five audit findings. The five that changed what the document says:*
+
+- **"The only expanding gross margin in the company" was false on the document's own data.** Three of Megmeet's six segments expanded their gross margin in H1 2026 — power products 22.2→25.06, magnetics 5.1→8.79 and intelligent equipment 36.0→39.67 — and two pages in Part IV said so in words while the claim was repeated five times elsewhere. It now reads *the only one of the three largest segments to expand*, in the data file and in every instance.
+- **The NC State / NYPA / EPRI unit was filed as class-undisclosed when the primer states its class.** The primer gives a 1 MVA unit on a **13.2 kV** feeder, June 2026, 15 kV SiC MOSFETs, energised more than ten times — so the strongest field evidence in the document was sitting in the undisclosed block with its evidence tier reading `undisclosed`, and the `field pilot` tier was empty across the whole ledger. It is now a ledger row at 13.2 kV / 1 MVA / `field pilot`, the ledger is regenerated from the data in the sort order its own intro claims, and the counts that depended on it are corrected.
+- **Three figures asserted per-row sourcing they did not print.** The perspective matrix, the calendar and the business-group board now render each row's tier tags, in the tier's colour, exactly as the data file stores them. The perspective matrix was resized so that it and its caption fit one printed page — its caption had been orphaned onto the next page.
+- **Part V's scope note promised a tier tag on every fact inside an answer**, which chapters 13 and 15 did not do. The note now states the convention actually used — a fact that appears only in Part V carries its tag there, a fact restated from Parts I–IV carries it where it is established — and the one fact that appeared only in Part V was tagged.
+- **The cell-count multiplier appeared as 2.5×, 2.3× and 2.7× on one page.** The primer's 2.5× is the round number for the class step; the counts computed on the primer's own assumptions give 2.3× from 13.8 kV and 2.7× from 12.47 kV. All three are now stated together with which is which, and the week-one question repeats the range rather than the round number.
+
+*And thirty more, including:* the cover's bottom-line-up-front carried fourteen untagged factual sentences on the page that promises every factual sentence carries a tier, and is now tagged sentence by sentence with its judgement moved into a labelled analysis block; four dossier versions listed in Appendix C were never cited and are now separated from the seventeen that are; the line-frequency transformer's efficiency was printed reversed and a point low as "99.0–98.5%"; "eight of the sixteen vendors share two cells" was seven of seventeen; "nine obstacles have no visible owner" was eight of the ten unsolved, with the family split restated; the lineage matrix promised ten scored attributes and scores nine; the calendar listed a quarter out of chronological order; the objection script implied US manufacturing that chapter 9 says is not claimed; the side rack borrowed the sidecar's 1 MW rating; a Heron dossier tag was covering an NVIDIA guidance fact and a single primer tag was covering four sources; a certification cost estimate named no source; `[ANALYSIS]` was used inline without being declared in the citation contract; and the colophon mis-located the hearsay box and overstated what the proof pages covered.
+
+### Changed
+
+#### `README.md`
+
+- Tree entry for the study companion. `check-readme-tree.py` clean.
+- `Last updated:` and `Repo version:` refreshed.
+
+### Notes
+
+- **Archive rotation is still not due.** The counter reads `Sections: 102/100` and nine sections carry today's date: 92 non-exempt against a trigger of 100, unchanged across all three pushes in this run.
+- The companion is also published as a **private Claude artifact**; the repository file remains the source of truth.
+- One CSS bug is worth recording because it was invisible: the companion's widget-panel class was `.w`, which collided with the WEB tier class `.t.w` and set `display:none` on **every** `[WEB, verified …]` tag on the page. The panel class is now `.panel`, and the Playwright test asserts that no tier tag is hidden by CSS.
 
 ## [v07.30r] — 2026-09-23 09:27:04 AM EST
 

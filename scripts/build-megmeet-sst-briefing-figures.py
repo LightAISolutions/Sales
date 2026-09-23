@@ -157,8 +157,9 @@ def fig_class_cost():
 # class. A high marker with a low tier is a specification without a product.
 # ---------------------------------------------------------------------------
 def fig_competitor_map():
-    """A grid, not a scatter: eight of the sixteen vendors share the announced /
-    35 kV cell, and a scatter overprints them however the markers are jittered."""
+    """A grid, not a scatter: seven of the seventeen vendors sit in just two cells —
+    five in 35 kV / announced and two in 35 kV / supplying — and a scatter
+    overprints them however the markers are jittered."""
     rows = list(D["classLedger"]["rows"])
     bands = [(38, 999, "above the 35 kV class"), (30, 38, "the 35 kV class"),
              (20, 30, "the 25 kV class"), (12, 20, "the 15 kV class"),
@@ -178,7 +179,10 @@ def fig_competitor_map():
             ax.add_patch(Rectangle((ei, y), 0.96, 0.96, facecolor=face,
                                    edgecolor="white", linewidth=1.8))
             if filled:
-                ax.annotate("\n".join(names), (ei + 0.48, y + 0.48), ha="center",
+                # a cell is about 1.3 in wide at this figure size, so a long vendor
+                # name has to wrap or it runs into the cells either side of it
+                ax.annotate("\n".join(_wrap(n, 22) for n in names),
+                            (ei + 0.48, y + 0.48), ha="center",
                             va="center", fontsize=6.0, color=INK, linespacing=1.36)
     ax.set_xlim(-0.04, ne); ax.set_ylim(-0.04, nb)
     ax.set_xticks([e + 0.48 for e in range(ne)])
@@ -440,7 +444,9 @@ def fig_bu_ladder():
         accent = S3 if gm >= 27 else (S2 if gm >= 18 else S6)
         head = r["unit"]
         right = f"{r['share']:.1f}% of revenue  \u00b7  {gm:.2f}% gross margin  \u00b7  {r['position']}"
-        blocks.append((head, "", _wrap(right, 116) + "\n" + _wrap(r["evidence"], 116),
+        tagtxt = "   ".join(_tier(t)[0] for t in _tiers(r))
+        blocks.append((head, "", _wrap(right, 116) + "\n" + _wrap(r["evidence"], 116)
+                       + ("\n" + tagtxt if tagtxt else ""),
                        accent, SEQ[0] if i % 2 == 0 else "#f7f4ec"))
     fig, ax = plt.subplots(figsize=(7.4, 0.142 * sum(b[2].count("\n") + 1.80 for b in blocks) + 0.6))
     _rows(ax, blocks)
@@ -466,10 +472,13 @@ def fig_voltage_map():
         ax.annotate(_wrap(c["usage"], 92), (0.4, i), xytext=(0, -11),
                     textcoords="offset points", va="top", fontsize=6.5, color=MUTED,
                     linespacing=1.3)
-    ax.barh([len(classes)], [69], color=TRACK, edgecolor="white", linewidth=1.6, height=0.5)
-    ax.annotate("69–345 kV transmission tie · gigawatt campuses with their own substation",
-                (69, len(classes)), xytext=(7, 0), textcoords="offset points", va="center",
-                fontsize=7.4, color=MUTED)
+    # the reference bar is data too: it lives in the data file with its own tag
+    tie = D["classCost"]["transmissionTie"]
+    ax.barh([len(classes)], [tie["kvLow"]], color=TRACK, edgecolor="white",
+            linewidth=1.6, height=0.5)
+    ax.annotate(f'{tie["label"]} \u00b7 {tie["usage"]}',
+                (tie["kvLow"], len(classes)), xytext=(7, 0), textcoords="offset points",
+                va="center", fontsize=7.4, color=MUTED)
     ax.set_yticks([]); ax.grid(axis="y", visible=False)
     ax.set_xlim(0, 150)
     ax.set_ylim(-1.15, len(classes) + 0.55)   # room for the wrapped note under the last bar
@@ -481,6 +490,34 @@ def fig_voltage_map():
 # ---------------------------------------------------------------------------
 # Figure M12 — what moved since the primer's 12 September watch-list.
 # ---------------------------------------------------------------------------
+TIER_COLOR = {"PRIMER": S1, "DOSSIER": S4, "GUIDANCE": S3,
+              "REPORT": S5, "WEB": S2, "ANALYSIS": "#8a6d1f"}
+
+
+def _tier(tag):
+    """(text, colour) for one tier tag, rendered exactly as the data file stores it."""
+    t = (tag or "").strip()
+    if not t:
+        return "", MUTED
+    return "[" + t + "]", TIER_COLOR.get(t.split(",")[0].split()[0], MUTED)
+
+
+def _tiers(o):
+    """All of a record's tier tags, in the order the data file lists them."""
+    parts = [o.get(k) for k in ("t", "tn", "t2", "tn2") if o.get(k)]
+    return parts
+
+
+def _tierline(ax, x, y, o, fontsize=4.6, sep="  "):
+    """Draw a record's tags left to right at (x, y) in axes coords, each in its colour.
+    Drawn as one string per tag so a tag is never split across two colours."""
+    cur = x
+    for tag in _tiers(o):
+        txt, col = _tier(tag)
+        ax.annotate(txt, (cur, y), va="center", ha="left", fontsize=fontsize,
+                    color=col, annotation_clip=False)
+        cur += 0.0062 * len(txt) + 0.004
+
 def _rows(ax, blocks, width=1.0, pad=0.80, lh=1.0, top=None):
     """Lay out (headL, headR, body, accent, shade) blocks bottom-up with heights
     computed from the wrapped line count. Returns the total height."""
@@ -556,7 +593,8 @@ def fig_calendar():
         c = col[r["kind"]]
         shade = "#f7f4ec" if r["kind"] == "external" else SEQ[0]
         day = f"day {r['day']:+d}" if r["day"] else "day one"
-        blocks.append((r["when"], day, _wrap(r["what"], 108), c, shade))
+        tagtxt = "   ".join(_tier(t)[0] for t in _tiers(r))
+        blocks.append((r["when"], day, _wrap(r["what"], 108) + ("\n" + tagtxt if tagtxt else ""), c, shade))
     fig, ax = plt.subplots(figsize=(7.4, 0.145 * sum(b[2].count("\n") + 1.80 for b in blocks) + 0.6))
     total = _rows(ax, blocks)
     # the day-one rule sits between the second and third rows
@@ -576,8 +614,10 @@ def fig_perspective_matrix():
     cells = [(_wrap(r["who"], 20), _wrap(r["buys"], WRAP), _wrap(r["adds"], WRAP),
               _wrap(r["need"], WRAP)) for r in rows]
     heights = [max(c.count("\n") + 1 for c in row) for row in cells]
+    # figure plus caption must fit one printed page (about 620pt of image),
+    # so this is sized down rather than allowed to grow past the page
     total = sum(heights)
-    fig, ax = plt.subplots(figsize=(7.4, 0.132 * total + 0.9))
+    fig, ax = plt.subplots(figsize=(7.4, 0.118 * total + 0.8))
     cols = [(0.00, "Player"), (0.19, "What 800 V DC buys them"),
             (0.46, "What an SST adds over a TRU"), (0.73, "What they would need to see")]
     hdr = 1.6
@@ -592,11 +632,19 @@ def fig_perspective_matrix():
         shade = SEQ[0] if i % 2 == 0 else "#f7f4ec"
         ax.add_patch(Rectangle((0, y), 1.0, h - 0.06, facecolor=shade,
                                edgecolor="white", linewidth=1.4))
-        ax.annotate(row[0], (0.008, y + h - 0.32), va="top", ha="left", fontsize=6.9,
+        ax.annotate(row[0], (0.008, y + h - 0.32), va="top", ha="left", fontsize=6.4,
                     color=INK, fontweight="bold", linespacing=1.3)
+        # the caption promises a tier per row, so the row prints it — stacked under the
+        # player name in the otherwise empty first column, which costs no row height
+        # one unit is 0.118 in here, so a 6.4pt name line at 1.3 spacing is ~0.98
+        ty = y + h - 0.32 - 1.02 * (row[0].count("\n") + 1) - 0.22
+        for tag in _tiers(rows[i]):
+            txt, col = _tier(tag)
+            ax.annotate(txt, (0.008, ty), va="top", ha="left", fontsize=4.4, color=col)
+            ty -= 0.62
         for (x, _), txt in zip(cols[1:], row[1:]):
             ax.annotate(txt, (x + 0.008, y + h - 0.32), va="top", ha="left",
-                        fontsize=5.6, color=INK, linespacing=1.32)
+                        fontsize=5.25, color=INK, linespacing=1.32)
     ax.set_xlim(0, 1); ax.set_ylim(0, total + hdr)
     ax.set_xticks([]); ax.set_yticks([]); ax.grid(False)
     for sp in ax.spines.values():

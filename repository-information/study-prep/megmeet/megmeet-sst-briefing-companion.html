@@ -1,4 +1,227 @@
-{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="build-version" content="companion-2026-09-23">
+<title>Megmeet SST Drill</title>
+<style>
+:root {
+  --ink:#23211c; --paper:#ffffff; --blue:#0b62a4; --blue-deep:#08496f;
+  --gold:#8a6d1f; --muted:#6d6758; --faint:#8b8577;
+  --rule:#cfc8b4; --rule-soft:#d8d2c0; --link:#305a8a; --track:#e9e5da;
+  --s1:#0b62a4; --s2:#c2622a; --s3:#1b8a6b; --s4:#7a3f7d; --s5:#8a8f2a; --s6:#b03a34;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,"Liberation Sans",sans-serif;
+  --mono:"DejaVu Sans Mono",Consolas,"Liberation Mono",Menlo,monospace;
+  --pull-bg:#f4f8fb; --warn-bg:#fbf3ea; --good-bg:#eef7f3; --an-bg:#f7f4ec;
+  --page:#fbfaf6;
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--page); color:var(--ink);
+       font:15px/1.55 var(--sans); }
+.wrap { max-width:1060px; margin:0 auto; padding:0 16px; }
+.top { background:var(--paper); border-bottom:2px solid var(--blue); padding:22px 0 18px; }
+.kicker { font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--faint); }
+h1 { font-size:28px; line-height:1.15; margin:4px 0 6px; }
+h2 { font-size:19px; margin:0 0 4px; }
+h3 { font-size:15px; margin:18px 0 6px; }
+.sub { color:var(--muted); margin:0; max-width:74ch; }
+nav#tabs { display:flex; flex-wrap:wrap; gap:6px; padding-top:14px; padding-bottom:4px; }
+nav#tabs button { font:600 13px/1 var(--sans); color:var(--blue-deep); background:var(--paper);
+  border:1px solid var(--rule); border-radius:999px; padding:8px 13px; cursor:pointer; }
+nav#tabs button:hover { border-color:var(--blue); }
+nav#tabs button[aria-selected="true"] { background:var(--blue); border-color:var(--blue); color:#fff; }
+main { padding:14px 16px 40px; }
+/* the panel class must not be a single letter: ".w" collided with the WEB tier
+   class and hid every [WEB, verified ...] tag on the page. */
+.panel { display:none; }
+.panel.on { display:block; }
+.card { background:var(--paper); border:1px solid var(--rule); border-radius:6px;
+        padding:14px 16px; margin:12px 0; }
+.boundary { font-size:12.5px; color:var(--muted); border-left:3px solid var(--rule);
+            padding:6px 0 6px 10px; margin:8px 0 0; }
+.t { font:700 10.5px/1 var(--mono); letter-spacing:.02em; white-space:nowrap;
+     vertical-align:1px; }
+.t.d{color:var(--s4)} .t.p{color:var(--s1)} .t.g{color:var(--s3)}
+.t.r{color:var(--s5)} .t.w{color:var(--s2)} .t.a{color:var(--gold)}
+.st { display:inline-block; font:700 10.5px/1.7 var(--sans); letter-spacing:.04em;
+      padding:0 6px; border-radius:3px; color:#fff; white-space:nowrap; }
+.st.unsolved{background:var(--s6)} .st.lab{background:var(--s2)} .st.pilot{background:var(--s5)}
+.st.product{background:var(--s3)} .st.standardised{background:var(--s1)}
+.st.announced{background:var(--s5)} .st.demo{background:var(--s2)} .st.ftest{background:var(--s4)}
+.st.fpilot{background:var(--s3)} .st.supplying{background:var(--s1)} .st.undisclosed{background:#8a8577}
+.row { display:flex; flex-wrap:wrap; gap:12px; }
+.col { flex:1 1 260px; min-width:0; }
+.stage { border:1px solid var(--rule); border-radius:5px; background:var(--paper);
+  padding:7px 9px; margin:0 0 6px; cursor:pointer; font-size:13px; text-align:left; width:100%;
+  font-family:var(--sans); color:var(--ink); }
+.stage:hover { border-color:var(--blue); }
+.stage[aria-pressed="true"] { border-color:var(--blue); background:var(--pull-bg); }
+.stage .nm { font-weight:700; }
+.stage .ls { float:right; color:var(--muted); font:600 12px/1.4 var(--mono); }
+.stage.gone { opacity:.45; text-decoration:line-through; }
+.detail { background:var(--pull-bg); border-left:3px solid var(--blue);
+          padding:9px 12px; margin:10px 0 0; font-size:13.5px; min-height:2.6em; }
+label { font-size:13px; color:var(--muted); display:block; margin:0 0 3px; }
+select, input[type=text] { font:14px var(--sans); padding:6px 8px; border:1px solid var(--rule);
+  border-radius:4px; background:var(--paper); color:var(--ink); max-width:100%; }
+input[type=range] { width:100%; }
+.big { font:700 30px/1 var(--sans); color:var(--blue); }
+.kpi { display:flex; gap:22px; flex-wrap:wrap; margin:10px 0 0; }
+.kpi div { min-width:110px; }
+.kpi .lb { font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint); }
+table { border-collapse:collapse; width:100%; font-size:13px; margin:10px 0 0; }
+th, td { text-align:left; vertical-align:top; padding:6px 8px; border-bottom:1px solid var(--rule-soft);
+         overflow-wrap:anywhere; }
+th { color:var(--blue-deep); border-bottom:1.5px solid var(--blue); font-size:12px;
+     letter-spacing:.03em; text-transform:uppercase; overflow-wrap:normal; word-break:normal; }
+tr.hi td { background:var(--warn-bg); }
+.bar { height:11px; border-radius:3px; background:var(--s1); display:inline-block; vertical-align:-1px; }
+.barwrap { display:flex; align-items:center; gap:7px; }
+.mini { font-size:12px; color:var(--muted); }
+.pill { display:inline-block; border:1px solid var(--rule); border-radius:999px;
+        padding:2px 9px; font-size:12px; margin:0 4px 4px 0; background:var(--paper); }
+button.act { font:600 13px var(--sans); background:var(--blue); color:#fff; border:0;
+             border-radius:5px; padding:8px 14px; cursor:pointer; }
+button.act.ghost { background:var(--paper); color:var(--blue-deep); border:1px solid var(--rule); }
+button.act:disabled { opacity:.45; cursor:default; }
+.cardface { background:var(--paper); border:1px solid var(--rule); border-radius:6px;
+            padding:18px; min-height:150px; }
+.cardface .term { font:700 20px/1.25 var(--sans); }
+.cardface .fam { font-size:12px; color:var(--faint); letter-spacing:.06em; text-transform:uppercase; }
+.hidden { display:none; }
+.an { background:var(--an-bg); border-left:3px solid var(--gold); padding:9px 12px; margin:10px 0;
+      font-size:13.5px; }
+.warn { background:var(--warn-bg); border-left:3px solid var(--s2); padding:9px 12px; margin:10px 0;
+        font-size:13.5px; }
+.legend { display:flex; flex-wrap:wrap; gap:10px; font-size:12px; color:var(--muted); margin:8px 0 0; }
+footer { border-top:1px solid var(--rule); margin-top:24px; padding:16px; font-size:12.5px;
+         color:var(--muted); }
+code { font:12.5px var(--mono); background:var(--track); padding:1px 4px; border-radius:3px; }
+@media (max-width:640px) { h1{font-size:23px} .big{font-size:24px} }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="kicker">Solid-State Transformers, End to End</div>
+    <h1>Study companion</h1>
+    <p class="sub">Seven widgets over the same data file that draws the briefing&rsquo;s fourteen figures. The PDF is the document; this is the drill. Works offline, no network calls.</p>
+  </div>
+</header>
+<nav id="tabs" class="wrap" aria-label="Widgets"></nav>
+<main class="wrap" id="main">
+<section class="panel" id="w-chains" role="tabpanel" aria-labelledby="tab-chains">
+  <h2>1 · Conversion-chain explorer</h2>
+  <p class="sub">Three ways from the utility feed to the rack, stage by stage. Click a stage for what it does, what it costs and where the figure comes from.</p>
+  <p><button class="act ghost" id="chains-del" aria-pressed="false">Add up the published stage losses</button></p>
+  <div class="an hidden" id="chains-sum"></div>
+  <div class="row" id="chains-cols"></div>
+  <div class="detail" id="chains-detail">Select a stage.</div>
+  <p class="boundary" id="chains-boundary"></p>
+</section>
+
+<section class="panel" id="w-cells" role="tabpanel" aria-labelledby="tab-cells">
+  <h2>2 · Service-voltage and cell-count calculator</h2>
+  <p class="sub">The 34.5&nbsp;kV argument as a count rather than an adjective. Pick the service class and the silicon-carbide device class.</p>
+  <div class="row">
+    <div class="col"><label for="cc-kv">Service voltage</label><select id="cc-kv"></select></div>
+    <div class="col"><label for="cc-dev">SiC device class</label><select id="cc-dev"></select></div>
+  </div>
+  <div class="card">
+    <div class="kpi">
+      <div><div class="lb">Cells per phase</div><div class="big" id="cc-cells">—</div></div>
+      <div><div class="lb">ANSI class</div><div class="big" id="cc-ansi">—</div></div>
+      <div><div class="lb">BIL</div><div class="big" id="cc-bil">—</div></div>
+      <div><div class="lb">Against 12.47 kV</div><div class="big" id="cc-ratio">—</div></div>
+    </div>
+    <p class="mini" id="cc-usage"></p>
+  </div>
+  <div class="an" id="cc-mult"></div>
+  <div class="card" id="cc-ins"></div>
+  <p class="boundary" id="cc-boundary"></p>
+</section>
+
+<section class="panel" id="w-loss" role="tabpanel" aria-labelledby="tab-loss">
+  <h2>3 · Loss-chain comparator</h2>
+  <p class="sub">Published grid-to-rack losses with the boundary attached to each one. Tick any two and the card below refuses to subtract them if the boundaries differ.</p>
+  <div id="loss-list"></div>
+  <div class="detail" id="loss-compare">Tick two rows to compare.</div>
+  <p class="boundary" id="loss-boundary"></p>
+</section>
+
+<section class="panel" id="w-map" role="tabpanel" aria-labelledby="tab-map">
+  <h2>4 · Competitor map</h2>
+  <p class="sub">Every vendor with a published medium-voltage position, plus the ones whose class is undisclosed. Filter, then pick one for the Megmeet-against card.</p>
+  <div class="row">
+    <div class="col"><label for="mp-ev">Evidence tier</label><select id="mp-ev"></select></div>
+    <div class="col"><label for="mp-hq">HQ region</label><select id="mp-hq"></select></div>
+    <div class="col"><label for="mp-cls">Service class</label><select id="mp-cls"></select></div>
+    <div class="col"><label for="mp-vs">Compare with Megmeet</label><select id="mp-vs"></select></div>
+  </div>
+  <div class="detail" id="mp-card">Pick a vendor to compare.</div>
+  <div id="mp-table"></div>
+  <p class="boundary" id="mp-boundary"></p>
+</section>
+
+<section class="panel" id="w-time" role="tabpanel" aria-labelledby="tab-time">
+  <h2>5 · Programme timeline</h2>
+  <p class="sub">NVIDIA&rsquo;s and Oracle&rsquo;s published milestones. Drag the slider to a date and the lanes show only what had been published by then.</p>
+  <label for="tl-slider">Cut-off date: <b id="tl-date">—</b></label>
+  <input type="range" id="tl-slider" min="0" max="1" value="1" step="1">
+  <div class="row" id="tl-lanes"></div>
+  <p class="boundary" id="tl-boundary"></p>
+</section>
+
+<section class="panel" id="w-cards" role="tabpanel" aria-labelledby="tab-cards">
+  <h2>6 · Flashcards and self-test</h2>
+  <p class="sub">Twenty-six terms and twenty-three numbers. Rate each card and the box it lands in decides how soon it comes back; the boxes are kept in this browser only.</p>
+  <div class="row">
+    <div class="col"><label for="fc-deck">Deck</label><select id="fc-deck">
+      <option value="terms">The term system (26)</option>
+      <option value="numbers">The numbers to know (23)</option>
+      <option value="both">Both (49)</option>
+    </select></div>
+    <div class="col"><label>Progress</label><div id="fc-prog" class="mini">—</div></div>
+  </div>
+  <div class="cardface" id="fc-face"></div>
+  <p>
+    <button class="act" id="fc-flip">Show the answer</button>
+    <button class="act ghost hidden" id="fc-again">Again</button>
+    <button class="act ghost hidden" id="fc-hard">Hard</button>
+    <button class="act ghost hidden" id="fc-good">Got it</button>
+    <button class="act ghost" id="fc-reset">Reset progress</button>
+  </p>
+  <p class="mini" id="fc-note"></p>
+</section>
+
+<section class="panel" id="w-obj" role="tabpanel" aria-labelledby="tab-obj">
+  <h2>7 · Objection drill</h2>
+  <p class="sub">The buyer says it, you answer it. Think first, then reveal &mdash; the answer is the honest one, not the reassuring one.</p>
+  <div id="obj-list"></div>
+  <p class="boundary" id="obj-boundary"></p>
+</section>
+</main>
+<footer class="wrap" id="foot"><p><b>Where the numbers come from.</b> Every value on this page is read at load time from
+<code>megmeet-sst-briefing-data.json</code>, inlined above byte for byte. That is the same file the
+briefing&rsquo;s fourteen figures are drawn from, so a figure and a widget cannot disagree. Nothing is
+computed here that is not computed there, with one exception, labelled where it appears: the
+cell-count calculator&rsquo;s ratio against the 12.47&nbsp;kV baseline.</p>
+<p><b>Reading the tags.</b> Each tag names the tier a statement comes from:
+<span class="t p">[PRIMER]</span> the repository&rsquo;s SST primer of 12 September 2026 ·
+<span class="t d">[DOSSIER]</span> a Profiler company dossier at the pinned version ·
+<span class="t g">[GUIDANCE]</span> the page-referenced ledger for NVIDIA&rsquo;s August 2026 execution paper ·
+<span class="t r">[REPORT]</span> the Profiler competitive report of 8 September 2026 ·
+<span class="t w">[WEB]</span> research performed for the briefing on 23 September 2026 ·
+<span class="t a">[ANALYSIS]</span> a reading of the evidence, not a source.
+Where a card is one claim assembled from one source the tag is written once and covers the card; where it draws on two tiers both tags appear, in the order the data file lists them, and neither covers the other. That is the same convention the briefing states on its contents page.</p>
+<p><b>What this is not.</b> It is a drill, not the document. The briefing PDF carries the argument,
+the boundaries and the honesty block; this page carries the parts worth repeating until they are
+automatic. Where the two differ, the PDF is right &mdash; and tell the author, because they are built
+from one file and should not be able to differ at all.</p>
+<p>Developed by: LightAISolutions</p></footer>
+<script type="application/json" id="mmsst-data">{
  "schemaVersion": 1,
  "title": "Megmeet SST onboarding briefing — figure and widget data",
  "generated": "2026-09-23",
@@ -2059,3 +2282,439 @@
  ],
  "developedBy": "LightAISolutions"
 }
+</script>
+<script>
+"use strict";
+var D = JSON.parse(document.getElementById("mmsst-data").textContent);
+
+/* ---------- helpers ------------------------------------------------------ */
+function esc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+function tierClass(tag) {
+  var t = String(tag || "");
+  if (t.indexOf("DOSSIER") === 0) return "d";
+  if (t.indexOf("PRIMER") === 0) return "p";
+  if (t.indexOf("GUIDANCE") === 0) return "g";
+  if (t.indexOf("REPORT") === 0) return "r";
+  if (t.indexOf("WEB") === 0) return "w";
+  return "a";
+}
+// One tag, rendered exactly as the data file stores it. The companion never
+// re-words a tag and never merges two of them into one span.
+function tag(t) {
+  if (!t) return "";
+  return ' <span class="t ' + tierClass(t) + '">[' + esc(t) + "]</span>";
+}
+function tags(o) {
+  return tag(o.t) + tag(o.tn) + tag(o.t2) + tag(o.tn2);
+}
+function el(id) { return document.getElementById(id); }
+function statusClass(w) {
+  var m = { "lab demo": "demo", "factory test": "ftest", "field pilot": "fpilot" };
+  return m[w] || String(w || "").replace(/[^a-z]/g, "");
+}
+function chip(w) {
+  return '<span class="st ' + statusClass(w) + '">' + esc(w) + "</span>";
+}
+function num(v) { return (Math.round(v * 100) / 100).toString(); }
+
+/* ---------- tabs --------------------------------------------------------- */
+var PANELS = [
+  ["chains", "Conversion chain"], ["cells", "Cell count"], ["loss", "Loss chains"],
+  ["map", "Competitor map"], ["time", "Timeline"], ["cards", "Flashcards"],
+  ["obj", "Objection drill"]
+];
+(function buildTabs() {
+  var nav = el("tabs"), html = "";
+  PANELS.forEach(function (p, i) {
+    html += '<button id="tab-' + p[0] + '" role="tab" aria-controls="w-' + p[0] +
+            '" aria-selected="' + (i === 0) + '">' + (i + 1) + " · " + esc(p[1]) + "</button>";
+  });
+  nav.innerHTML = html;
+  nav.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b) return;
+    PANELS.forEach(function (p) {
+      var on = ("tab-" + p[0]) === b.id;
+      el("tab-" + p[0]).setAttribute("aria-selected", String(on));
+      el("w-" + p[0]).classList.toggle("on", on);
+    });
+  });
+  el("w-" + PANELS[0][0]).classList.add("on");
+})();
+
+/* ---------- 1 · conversion-chain explorer -------------------------------- */
+(function chains() {
+  var rows = D.chains.rows, sel = null;
+  el("chains-boundary").innerHTML = esc(D.chains.boundary);
+
+  function total(c) {
+    return c.stages.reduce(function (a, s) { return a + (s.loss || 0); }, 0);
+  }
+  function render() {
+    el("chains-cols").innerHTML = rows.map(function (c, ci) {
+      var body = c.stages.map(function (s, si) {
+        var loss = (s.loss == null) ? "&mdash;" : num(s.loss) + "%";
+        return '<button class="stage" data-c="' + ci + '" data-s="' + si +
+               '" aria-pressed="' + (sel && sel[0] === ci && sel[1] === si) + '">' +
+               '<span class="ls">' + loss + "</span>" +
+               '<span class="nm">' + esc(s.n) + "</span></button>";
+      }).join("");
+      var withLoss = c.stages.filter(function (s) { return s.loss != null; }).length;
+      return '<div class="col"><h3>' + esc(c.name) + "</h3>" + body +
+             '<p class="mini">' + withLoss + " of " + c.stages.length +
+             " stages carry a published loss; they add to " + num(total(c)) + "%.</p></div>";
+    }).join("");
+  }
+  el("chains-cols").addEventListener("click", function (e) {
+    var b = e.target.closest(".stage");
+    if (!b) return;
+    sel = [+b.dataset.c, +b.dataset.s];
+    var s = rows[sel[0]].stages[sel[1]];
+    el("chains-detail").innerHTML =
+      "<b>" + esc(s.n) + "</b> &mdash; " + esc(s.what) + tag(s.t) +
+      (s.loss == null
+        ? '<br><span class="mini">No stage loss is published for this stage. That is the record, ' +
+          "not a zero.</span>"
+        : '<br><span class="mini">Published stage loss: ' + num(s.loss) + "%</span>");
+    render();
+  });
+  el("chains-del").addEventListener("click", function () {
+    var box = el("chains-sum"), open = !box.classList.contains("hidden");
+    box.classList.toggle("hidden", open);
+    this.setAttribute("aria-pressed", String(!open));
+    this.textContent = open ? "Add up the published stage losses" : "Hide the totals";
+    if (open) return;
+    var t = rows.map(total);
+    box.innerHTML = rows.map(function (c, i) {
+      return "<b>" + esc(c.name) + "</b> &mdash; " + num(t[i]) + "%";
+    }).join("<br>") +
+      '<br><br><span class="t a">[ANALYSIS]</span> These three totals are the sum of the stage ' +
+      "losses published for each chain and nothing more. The published stages do not cover the " +
+      "same span in each chain &mdash; some stages carry no figure at all &mdash; so the " +
+      num(t[0]) + "% against " + num(t[rows.length - 1]) +
+      "% gap is an indication of where the conversions went, not a measured efficiency delta. " +
+      "Widget 3 is the one that refuses to subtract figures whose boundaries differ.";
+  });
+  render();
+})();
+
+/* ---------- 2 · cell-count calculator ------------------------------------ */
+(function cells() {
+  var cs = D.classCost.cells, classes = D.classCost.classes, devs = D.classCost.devices;
+  el("cc-kv").innerHTML = cs.map(function (c, i) {
+    return '<option value="' + i + '">' + num(c.kv) + " kV &mdash; " + esc(c.ansi) + "</option>";
+  }).join("");
+  el("cc-dev").innerHTML = devs.map(function (d) {
+    return '<option value="' + d + '">' + num(d) + " kV SiC</option>";
+  }).join("");
+  el("cc-boundary").innerHTML = esc(D.classCost.boundary);
+  el("cc-mult").innerHTML = esc(D.classCost.multiplier.text) + tag(D.classCost.multiplier.t);
+  el("cc-ins").innerHTML = "<b>Insulation.</b> " + esc(D.classCost.insulationNote.text) +
+                           tag(D.classCost.insulationNote.t);
+
+  function key(d) { return (+d === 3.3) ? "cells3_3" : "cells1_7"; }
+  function paint() {
+    var c = cs[+el("cc-kv").value], k = key(el("cc-dev").value);
+    var base = cs[0][k];
+    el("cc-cells").textContent = c[k];
+    el("cc-ansi").textContent = c.ansi.replace(" class", "");
+    el("cc-bil").textContent = c.bilKv + " kV";
+    el("cc-ratio").textContent = (Math.round((c[k] / base) * 10) / 10) + "×";
+    var usage = "";
+    for (var i = 0; i < classes.length; i++) {
+      if (classes[i].kv === c.kv) { usage = esc(classes[i].usage) + tag(classes[i].t); break; }
+    }
+    el("cc-usage").innerHTML = usage +
+      '<br><span class="t a">[ANALYSIS]</span> The ratio against the 12.47 kV baseline is computed ' +
+      "on this page from the two cell counts above; both of those live in the data file." + tags(c);
+  }
+  el("cc-kv").addEventListener("change", paint);
+  el("cc-dev").addEventListener("change", paint);
+  paint();
+})();
+
+/* ---------- 3 · loss-chain comparator ------------------------------------ */
+(function loss() {
+  var ch = D.chains.publishedChains.slice().sort(function (a, b) { return b.v - a.v; });
+  var picked = [];
+  el("loss-boundary").innerHTML = esc(D.chains.boundary);
+  el("loss-list").innerHTML = ch.map(function (c, i) {
+    var w = Math.max(2, (c.v / 15) * 100);
+    var val = (c.lo != null) ? num(c.lo) + "–" + num(c.hi) + "%" : num(c.v) + "%";
+    return '<div class="card" style="padding:9px 12px;margin:7px 0">' +
+      '<label style="color:var(--ink);font-size:14px">' +
+      '<input type="checkbox" data-i="' + i + '"> <b>' + esc(c.label) + "</b></label>" +
+      '<div class="barwrap"><span class="bar" style="width:' + w.toFixed(1) + '%"></span>' +
+      "<b>" + val + "</b></div>" +
+      '<div class="mini">' + esc(c.note || "") + tags(c) + "</div></div>";
+  }).join("");
+  el("loss-list").addEventListener("change", function (e) {
+    var cb = e.target;
+    if (cb.type !== "checkbox") return;
+    var i = +cb.dataset.i;
+    if (cb.checked) { picked.push(i); } else { picked = picked.filter(function (x) { return x !== i; }); }
+    while (picked.length > 2) {
+      var drop = picked.shift();
+      var box = el("loss-list").querySelector('input[data-i="' + drop + '"]');
+      if (box) box.checked = false;
+    }
+    if (picked.length < 2) {
+      el("loss-compare").textContent = "Tick two rows to compare.";
+      return;
+    }
+    var a = ch[picked[0]], b = ch[picked[1]];
+    var sameTier = a.t === b.t;
+    el("loss-compare").innerHTML =
+      "<b>" + esc(a.label) + "</b> " + num(a.v) + "% &nbsp;vs&nbsp; <b>" + esc(b.label) + "</b> " +
+      num(b.v) + "%.<br>" +
+      (sameTier
+        ? '<span class="t a">[ANALYSIS]</span> Both figures come from the same source tier, so the ' +
+          "difference of " + num(Math.abs(a.v - b.v)) +
+          " points is at least arguable &mdash; ask for the load point before you use it."
+        : '<span class="t a">[ANALYSIS]</span> <b>These two are not subtractable.</b> They come from ' +
+          "different sources with different boundaries (" + esc(a.t) + " against " + esc(b.t) +
+          "), and the briefing&rsquo;s figure M4 exists to make exactly that point. Quote each with " +
+          "its own boundary or quote neither.");
+  });
+})();
+
+/* ---------- 4 · competitor map ------------------------------------------- */
+(function map() {
+  var rows = D.classLedger.rows, und = D.classLedger.undisclosed;
+  var MEG = null;
+  und.forEach(function (u) { if (u.vendor === "Megmeet") MEG = u; });
+  el("mp-boundary").innerHTML = esc(D.classLedger.boundary);
+
+  function band(r) {
+    if (r.kvHigh == null) return "undisclosed";
+    if (r.kvHigh > 34.5) return "above the 35 kV class";
+    if (r.kvHigh >= 34.5) return "the 35 kV class";
+    if (r.kvHigh >= 24.9) return "the 25 kV class";
+    if (r.kvHigh >= 12.47) return "the 15 kV class";
+    return "below the 15 kV class";
+  }
+  function opts(id, label, list) {
+    el(id).innerHTML = '<option value="">' + label + "</option>" +
+      list.map(function (v) { return '<option value="' + esc(v) + '">' + esc(v) + "</option>"; }).join("");
+  }
+  var bands = [];
+  rows.forEach(function (r) { if (bands.indexOf(band(r)) < 0) bands.push(band(r)); });
+  var hqs = [];
+  rows.forEach(function (r) { if (r.hq && hqs.indexOf(r.hq) < 0) hqs.push(r.hq); });
+  hqs.sort();
+  opts("mp-ev", "any evidence tier", D.competitorMap.evidenceOrder);
+  opts("mp-hq", "any HQ region", hqs);
+  opts("mp-cls", "any service class", bands);
+  el("mp-vs").innerHTML = '<option value="">choose a vendor</option>' +
+    rows.concat(und.filter(function (u) { return u.vendor !== "Megmeet"; }))
+        .map(function (r) { return '<option value="' + esc(r.vendor) + '">' + esc(r.vendor) + "</option>"; })
+        .join("");
+
+  function paint() {
+    var ev = el("mp-ev").value, hq = el("mp-hq").value, cl = el("mp-cls").value;
+    var keep = rows.filter(function (r) {
+      return (!ev || r.evidence === ev) && (!hq || r.hq === hq) && (!cl || band(r) === cl);
+    });
+    var body = keep.map(function (r) {
+      var kv = (r.kvLow === r.kvHigh) ? num(r.kvHigh) + " kV"
+                                      : num(r.kvLow) + "–" + num(r.kvHigh) + " kV";
+      return "<tr><td><b>" + esc(r.vendor) + "</b></td><td>" + kv + "</td><td>" +
+             (r.mw == null ? "n/d" : num(r.mw) + " MW") + "</td><td>" + esc(r.hq || "") +
+             "</td><td>" + chip(r.evidence) + "</td><td>" + esc(r.note || "") + tags(r) + "</td></tr>";
+    }).join("");
+    var undRows = (ev || hq || cl) ? "" : und.map(function (u) {
+      return '<tr class="hi"><td><b>' + esc(u.vendor) + "</b></td><td>" + chip("undisclosed") +
+             "</td><td>&mdash;</td><td></td><td>" + chip("undisclosed") + "</td><td>" +
+             esc(u.why) + tags(u) + "</td></tr>";
+    }).join("");
+    el("mp-table").innerHTML =
+      '<p class="mini">' + keep.length + " of " + rows.length + " vendors with a published class" +
+      (undRows ? ", plus the " + und.length + " whose class is undisclosed" : "") + ".</p>" +
+      "<table><thead><tr><th>Vendor</th><th>Class</th><th>Rating</th><th>HQ</th>" +
+      "<th>Evidence</th><th>What it rests on</th></tr></thead><tbody>" +
+      (body || '<tr><td colspan="6" class="mini">Nothing matches those filters.</td></tr>') +
+      undRows + "</tbody></table>";
+  }
+  function compare() {
+    var name = el("mp-vs").value;
+    if (!name) { el("mp-card").textContent = "Pick a vendor to compare."; return; }
+    var r = null;
+    rows.concat(und).forEach(function (x) { if (x.vendor === name) r = x; });
+    if (!r) { el("mp-card").textContent = "Pick a vendor to compare."; return; }
+    var theirs = (r.kvHigh == null)
+      ? "no published service-voltage class"
+      : ((r.kvLow === r.kvHigh) ? num(r.kvHigh) + " kV" : num(r.kvLow) + "–" + num(r.kvHigh) + " kV") +
+        ", evidence " + esc(r.evidence);
+    el("mp-card").innerHTML =
+      "<b>Megmeet</b> &mdash; " + chip("undisclosed") + " " + esc(MEG.why) + tags(MEG) +
+      "<br><br><b>" + esc(r.vendor) + "</b> &mdash; " + theirs + ". " + esc(r.why || r.note || "") + tags(r) +
+      '<br><br><span class="t a">[ANALYSIS]</span> ' +
+      (r.kvHigh == null
+        ? "Neither side has published a class, so this comparison is about disclosure, not about product: the honest sentence is that the record is silent on both."
+        : "The comparable is the class, not the claim. " + esc(r.vendor) + " has published one and Megmeet has not, which is a statement about the record rather than about what either can build.");
+  }
+  ["mp-ev", "mp-hq", "mp-cls"].forEach(function (id) {
+    el(id).addEventListener("change", paint);
+  });
+  el("mp-vs").addEventListener("change", compare);
+  paint();
+})();
+
+/* ---------- 5 · programme timeline --------------------------------------- */
+(function timeline() {
+  var lanes = D.timelines.lanes;
+  var all = [];
+  lanes.forEach(function (l) { l.items.forEach(function (it) { all.push(it.date); }); });
+  all = all.filter(function (d) { return /^\d{4}/.test(d); })
+           .sort()
+           .filter(function (d, i, a) { return i === 0 || a[i - 1] !== d; });
+  var sl = el("tl-slider");
+  sl.max = String(all.length - 1);
+  sl.value = String(all.length - 1);
+  el("tl-boundary").innerHTML = esc(D.timelines.boundary);
+
+  function paint() {
+    var cut = all[+sl.value];
+    el("tl-date").textContent = cut;
+    el("tl-lanes").innerHTML = lanes.map(function (l) {
+      var shown = 0, datedTotal = 0;
+      var body = l.items.map(function (it) {
+        // an item whose "date" is not a date (the lane's "not published" entry) is
+        // never counted as a milestone and is never dimmed by the cut-off
+        var dated = /^\d{4}/.test(it.date);
+        if (dated) datedTotal++;
+        var on = !dated || it.date <= cut;
+        if (dated && on) shown++;
+        return '<div class="stage" style="cursor:default;opacity:' + (on ? 1 : 0.28) + '">' +
+               "<b>" + esc(it.date) + "</b><br>" + esc(it.text) + tags(it) + "</div>";
+      }).join("");
+      return '<div class="col"><h3>' + esc(l.lane) + "</h3>" +
+             '<p class="mini">' + shown + " of " + datedTotal +
+             " dated milestones published by " + esc(cut) +
+             (datedTotal < l.items.length
+               ? "; the undated entry below is what the lane has never published."
+               : ".") + "</p>" + body + "</div>";
+    }).join("");
+  }
+  sl.addEventListener("input", paint);
+  paint();
+})();
+
+/* ---------- 6 · flashcards ----------------------------------------------- */
+(function cards() {
+  var KEY = "mmsst.boxes.v1";
+  // localStorage can throw in a private window or with site data blocked, and the
+  // deck must still work when it does: every read and write is wrapped and the
+  // in-memory copy is authoritative for this visit.
+  var boxes = {};
+  try {
+    var raw = window.localStorage.getItem(KEY);
+    if (raw) boxes = JSON.parse(raw) || {};
+  } catch (e) { boxes = {}; }
+  function save() {
+    try { window.localStorage.setItem(KEY, JSON.stringify(boxes)); } catch (e) { /* not fatal */ }
+  }
+
+  function deck() {
+    var which = el("fc-deck").value, out = [];
+    if (which !== "numbers") {
+      D.terms.forEach(function (t, i) {
+        out.push({
+          id: "t" + i, head: t.term, sub: t.family,
+          back: esc(t.def) + tag(t.t) +
+                (t.number && t.number !== "—"
+                  ? "<br><br><b>Number:</b> " + esc(t.number) + tag(t.tn) : "") +
+                (t.say ? '<br><br><i>' + esc(t.say.replace(/^"|"$/g, "")) + "</i>" : "")
+        });
+      });
+    }
+    if (which !== "terms") {
+      D.numbersToKnow.forEach(function (n, i) {
+        out.push({
+          id: "n" + i, head: n.label, sub: "A number to know",
+          back: '<span class="big">' + esc(num(n.v)) + " " + esc(n.unit || "") + "</span>" +
+                tag(n.t) + (n.note ? '<br><br class="mini">' + esc(n.note) : "")
+        });
+      });
+    }
+    return out;
+  }
+
+  var pool = [], cur = null, flipped = false;
+  function reorder() {
+    var d = deck();
+    // Leitner order: lowest box first, then never-seen, then the rest.
+    pool = d.slice().sort(function (a, b) {
+      return (boxes[a.id] || 0) - (boxes[b.id] || 0);
+    });
+    cur = pool.length ? pool[0] : null;
+    flipped = false;
+    paint();
+  }
+  function paint() {
+    var d = deck(), done = 0;
+    d.forEach(function (c) { if ((boxes[c.id] || 0) >= 3) done++; });
+    el("fc-prog").textContent = done + " of " + d.length + " cards in the last box";
+    if (!cur) { el("fc-face").textContent = "No cards in this deck."; return; }
+    el("fc-face").innerHTML =
+      '<div class="fam">' + esc(cur.sub) + "</div>" +
+      '<div class="term">' + esc(cur.head) + "</div>" +
+      (flipped ? '<div style="margin-top:12px">' + cur.back + "</div>"
+               : '<p class="mini" style="margin-top:12px">Say the answer out loud, then reveal.</p>');
+    el("fc-flip").classList.toggle("hidden", flipped);
+    ["fc-again", "fc-hard", "fc-good"].forEach(function (id) {
+      el(id).classList.toggle("hidden", !flipped);
+    });
+    el("fc-note").innerHTML = "Box " + (boxes[cur.id] || 0) +
+      " of 3. Progress is kept in this browser only and never leaves it; if storage is " +
+      "unavailable the deck still works for this visit.";
+  }
+  function grade(delta) {
+    if (!cur) return;
+    var b = (boxes[cur.id] || 0) + delta;
+    boxes[cur.id] = Math.max(0, Math.min(3, b));
+    save();
+    var i = pool.indexOf(cur);
+    pool.splice(i, 1);
+    if (delta <= 0) { pool.splice(Math.min(3, pool.length), 0, cur); } else { pool.push(cur); }
+    cur = pool.length ? pool[0] : null;
+    flipped = false;
+    paint();
+  }
+  el("fc-deck").addEventListener("change", reorder);
+  el("fc-flip").addEventListener("click", function () { flipped = true; paint(); });
+  el("fc-again").addEventListener("click", function () { grade(-1); });
+  el("fc-hard").addEventListener("click", function () { grade(0); });
+  el("fc-good").addEventListener("click", function () { grade(1); });
+  el("fc-reset").addEventListener("click", function () { boxes = {}; save(); reorder(); });
+  reorder();
+})();
+
+/* ---------- 7 · objection drill ------------------------------------------ */
+(function objections() {
+  var rows = D.objections.rows;
+  el("obj-boundary").innerHTML = esc(D.objections.caption);
+  el("obj-list").innerHTML = rows.map(function (o, i) {
+    return '<div class="card"><div style="font-weight:700">' + esc(o.says) + "</div>" +
+      '<p class="mini">What they are really asking: ' + esc(o.asks) + "</p>" +
+      '<button class="act ghost" data-i="' + i + '">Reveal the honest answer</button>' +
+      '<div class="detail hidden" id="obj-a-' + i + '">' + esc(o.answer) + tags(o) +
+      (o.never ? '<div class="warn" style="margin-bottom:0"><b>Never say:</b> ' +
+                 esc(o.never) + "</div>" : "") + "</div></div>";
+  }).join("");
+  el("obj-list").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-i]");
+    if (!b) return;
+    var box = el("obj-a-" + b.dataset.i), open = !box.classList.contains("hidden");
+    box.classList.toggle("hidden", open);
+    b.textContent = open ? "Reveal the honest answer" : "Hide the answer";
+  });
+})();
+</script>
+</body>
+</html>
+<!-- Developed by: LightAISolutions -->
