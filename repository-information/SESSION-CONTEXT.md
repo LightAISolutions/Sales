@@ -6,6 +6,68 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23 06:30 AM EST (the session ran ~05:50 → 06:30 AM EST)
+**Repo version:** v07.26r — three pushes on `claude/gracious-archimedes-57nfn5` (the Events filter-pill fix; the reminder close-out; this session-context write)
+**Branch:** `claude/gracious-archimedes-57nfn5`
+**Model:** Opus 5 (a short maintenance session between E5 and X — **no design-plan row moved**)
+
+### What was done
+
+- **The Events filter pills now paint the state they filter on** (`Events.html` v01.10w → **v01.11w**, v07.26r). The developer reported that **★ Starred** filtered the agenda but stayed unfilled. Root cause: `evRender()` rebuilds `#ev-agenda` and `#ev-counts` but **deliberately leaves the filters card alone** — rebuilding it would drop the segment row's horizontal scroll position and the `data-busy` flag an in-flight score fetch sets — and `aria-pressed` is the whole of what paints a pill accent-filled (`.ev-pill[aria-pressed="true"]`). E3's **Recommended** and E4's **Signals only** each set their own pill by hand inside their toggle and so looked right; **Starred** and the three option rows never got that treatment and went on filtering while reading `false`
+  - New **`evSyncPills()` / `evSyncPillRow()`** re-derive every filter pill's `aria-pressed` from `_evFilters` / `_evRecMode` **in place**, called at the top of `evRender()`. The two hand-set calls in `evRecToggle` / `evSignalsToggle` **stay** — they are the immediate feedback before their fetch returns and the rollback on a failed one, not duplication
+  - **A second, latent bug from the same root cause**: `evPillRow()` captured `current` at build time, and since the card is built once that snapshot never moved — so pressing an option pill a second time **re-picked** the same value instead of clearing it, and only **All** could undo a choice. The row now takes the `_evFilters` **key** and reads the live value for both the pressed state and the un-toggle; each pill carries `data-ev-val` for the sync to match on. Fixed in the same commit because the new blue fill would otherwise have made a dead second press visible
+- **`scripts/verify-events-roles.py` gained a filter-pill pass** (+43 lines, after the star round-trip): Starred presses to `aria-pressed="true"` with a **computed background that differs from an untouched pill's** and the agenda down to the one starred row, presses again to clear; a Kind pill paints pressed with `_evFilters.kind` agreeing with its `data-ev-val`, and a second press clears it back to All. The assertion is on the **paint**, not the attribute alone. **Verified both ways** — with `evSyncPills()` commented out it fails with `pressed: 'false'`, the untouched background and `rows: 1` (the reported symptom exactly) and passes with it restored
+- **The Plan-tab screenshots were diagnosed, not fixed** — see "Open findings"
+- **The "Repo access denied" reminder was closed out** at the developer's explicit dismissal: moved to `## Completed Reminders` with a `2026-09-23 06:06:46 AM EST` completion stamp. The Routine fleet was **listed and verified against the reminder's plan before the entry moved**, and the evidence written into the completed entry
+
+### Where we left off
+
+**Both of the developer's items are closed and all three pushes merged.** The developer confirmed live that the Starred pill now fills blue. **Next is X** — D16's last row — with the §13.19 paste-in prompt; it is a decision before it is a build, and a reasoned "no" closes it as completely as a build does. Nothing from this session is pending.
+
+### Open findings carried forward
+
+- **The registry is thin, and that is what the Plan tab was showing.** Both events the developer screenshotted (`acp-recharge-2026`, `ocp-global-summit-2026`) read `0 booths · 0 sessions · 0 venues` because **neither row carries `venueLatLng`, `agendaUrl` or `hours[]`** and no Network signal names either slug. Coverage across the **96 upcoming rows: `venueLatLng` 26, `agendaUrl` 16, `hours[]` 2** (also `venue` 31, `exhibitorListUrl` 13, `speakersUrl` 10, `floorPlanUrl` 3). Every empty line names the input it is missing, so the tab renders a thin row faithfully rather than failing — **no code change**; the counts are recorded in CHANGELOG v07.26r under **Notes** so the next enrichment pass has them. This is an **E0/E4 parser pass**, the single biggest lever left on the Plan tab's usefulness
+- **A dossier mention is not an attendance signal.** `ocp-global-summit-2026` carries nine Profiler `mentions[]` (amd, amperesand, flex, heron-power, megmeet, nvidia, vicor) and still lists no booths: `evPlanBooths_` reads only `rec.signalsBySlug[slug]`, i.e. Network signals. Behaving as designed under D9 / D16 — recorded because it reads as a bug and is not
+- **E5's live check is now confirmed by the screenshots** — the Plan tab renders, the day plan frames each day, the open slots and **Book a meeting** are present, and ACP RECHARGE (Sep 22–24, today Sep 23) correctly shows **no Post-event section** because `not_over` holds until the day after `end`. The §13.18 brackets were never filled, but the tab has now been seen working
+- **`Network.html` has no hash router**, so the post-event checklist's `Network.html#drafts?sourceEvent=<slug>` deep link opens the app without pre-filtering (the page says so beside the link)
+- **`scripts/check-guidance-migration.js` fails on clean `origin/main`** ("expected 9 modules, got 28") — pre-existing, unrelated, still unpicked-up
+- `check-classroom-pipeline.py` reports P1 findings against any non-Classroom diff — correct behaviour by its own docstring, not a defect
+- The ROI line is **written once**; only a *mark* refreshes it — cards scanned after the first close-out never raise the recorded `cards`
+- From E5 s1: no booth numbers on the day plan (an E4 parser follow-up); a plan build costs the full score and the close-out costs another
+- From E4: RE+ 2026's roster is a Swapcard widget (`no_roster_found`); GlobeNewswire's feed unverified until a live sweep is read
+- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
+
+### Key decisions made
+
+- **Fixed the root cause, not the reported symptom.** Copying the hand-set `aria-pressed` onto the Starred pill would have closed the ticket and left Kind / Region / Segment broken plus a fourth hand-maintained copy of the same logic. One `evSyncPills()` called from `evRender()` covers all five controls from one source of truth
+- **The two hand-set calls were kept** (Chesterton's Fence): they are not redundant with the sync — they paint the pill *before* the async score fetch returns, and un-paint it when the fetch fails
+- **The un-toggle bug was fixed in the same commit** even though it was not reported: with the pill now visibly filled, a dead second press would have become a *new* visible defect
+- **The harness asserts the computed background, not `aria-pressed` alone** — the attribute is only a proxy for what the developer sees, and the pre-existing coverage gap was exactly that only `ev-f-rec` and `ev-f-signals` were ever asserted (which is why those two never drifted)
+- **The reminder was moved to `## Completed Reminders`, not deleted** — the repo's documented form for a dismissal, which keeps the trail; the developer was told and can ask for a hard delete
+- **Housekeeping commits take no version bump** (the reminders / session-context precedent): only the Events fix bumped `repository.version.txt`, to v07.26r
+
+### Active context
+
+- **Repo version v07.26r.** `CHANGELOG.md` **`Sections: 97/100`** — **rotation becomes mandatory above 100**, so it is roughly three pushes away; read the live counter rather than this line
+- **Live versions:** `Events.html` **v01.11w** · `Events.gs` v01.09g · `Network.html` v01.24w · `Network.gs` v01.17g · `Scraper.gs` v02.22g. **No `.gs` changed this session — no redeploy needed**
+- **The Routine fleet is six, all enabled, and was verified this session**: `trig_01TiCXzEjowZGbS7aB2e6gQS` Classroom C2 weekly `0 11 * * 3` (**fires 2026-09-23 11:07Z — first fire of the rebuilt Routine, its report is worth reading**); `trig_01HkrwpCULei8Gje6RGqcp1B` Profiler earnings desk weekdays (ran SUCCEEDED 2026-09-22); `trig_01FB8gN2Lb1cKqqq2rpnxJez` Profiler quarterly and `trig_01NCMufdiV7WcsXodUoimi7H` Profiler monthly drift, both next 2026-10-01; `trig_014KXj2GeUt9b46ycfZnffkj` Industry Guidance quarterly, next 2026-10-15; `trig_01GeTqB8xp5nG8FCC139Bgr9` ACL health daily (read-only, not rebuilt by design). The old desk `trig_01UyH77BMKJnxzBUZJ11ej6A` is **deleted**
+- **One reminder remains active** — the **Megmeet SST briefing** before 2026-10-07. Its sequencing condition is the Network/Events build, which is **down to X alone**, so running X clears the last gate on the one deliverable with an external deadline
+- **D13's deferral condition is still met** — all 58 rows of `events-sources.json` carry a `lastProbe` of 2026-09-21, so X is runnable
+- **Playwright is not preinstalled in a fresh container** — `pip install playwright` only; the Chromium is already there, never run `playwright install`
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
+
+### Recommendation for next session
+
+- Run **X** with the §13.19 paste-in prompt on Fable 5.1 xhigh — it is D16's last row, its deferral condition is met, and closing it also clears the Megmeet briefing's sequencing condition with two weeks of slack before the 2026-10-07 start date.
+- **To continue:** type `run X from §13.19`
+
+
+
+## Previous Sessions
+
+### Session — 2026-09-23 03:15 AM EST (E5 session 2, v07.25r)
+
+
 **Date:** 2026-09-23 03:15 AM EST (the session ran ~02:40 → 03:15 AM EST)
 **Repo version:** v07.25r — one push on `claude/compassionate-ritchie-q8bgj1` (E5 session 2), plus a second push for this session-context write and the X brief
 **Branch:** `claude/compassionate-ritchie-q8bgj1`
@@ -57,57 +119,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - Run **X** with the §13.19 paste-in prompt on Fable 5.1 xhigh — it is D16's last row, it is a decision before it is a build, and a reasoned "no" closes it just as completely as a build does.
 - **To continue:** type `run X from §13.19`
-
-## Previous Sessions
-
-### Session — 2026-09-23 02:20 AM EST (E5 session 1, v07.24r)
-
-**Date:** 2026-09-23 02:20 AM EST (the session ran ~01:53 → 02:25 AM EST)
-**Repo version:** v07.24r — one push on `claude/focused-gauss-6h8jcd` (E5 session 1 + this session-context write, one commit)
-**Branch:** `claude/focused-gauss-6h8jcd`
-**Model:** Fable 5.1 (E5 session 1 — the deterministic plan: booth list, sessions, day plan and meetings; **E5 is In progress — session 1 done**)
-
-### What was done
-
-- **E5 session 1 landed** (`Events.gs` v01.08g · `Events.html` v01.09w · `Network.gs` v01.16g; §11's E5 row → In progress — session 1 done; §13.18 written — the E5 session-2 brief with its paste-in prompt): `eop=plan` (session GET, behind `recommend`) for one starred event — the score run once with its rows kept (`evRecommend_(sess, true)`) → the booth list ranked by the score's account term × strongest signal + a per-account segment term with the `Tuning` weights, the *why* line verbatim from the served dossier (`strategyRead[0]`, else the newest development headline; top 15; never Profiler's exec), the sessions from the agenda page (read once, cached six hours; kept for a seat-segment title, a Network-contact speaker or a dossier decision maker), the day plan (a frame per day from `hours[]` or the default 09:00–17:00 said so; sessions and meetings fixed, ranked visits 30 min × 6 a day, open slots ≥ 30 min), the venues (one Overpass POST, cached per slug in a script property 30 days, a failure empty + one audit row + uncached), the meetings (`Meetings` tab, `mt-` ids). `eop=plancontacts` (the pick list), `eop=planmeeting` (the `meeting` Interaction written first over Network's new `nop=interaction` POST leg — the mt- id as evidence, one line, never the note — then the `Meetings` row, the invite answered as RFC 5545 text with UTC `DTSTART` from the event's zone), `eop=planunbook` (the row removed, the Interaction kept). `Network.gs`: `nop=interaction` — GET the live contacts under an account (id · name · title · role), POST rows through the same `nwInteractionAdd_`, seven per-row rejections by index. `Events.html`: the Details | Plan strip on the sheet, the Plan tab fetched once and never polled, Book a meeting on an open slot with the `.ics` download, Unbook, Rebuild
-- `scripts/check-events-plan.js` (100 checks, two VMs, zero live calls); `verify-events-roles.py` gained the plan pass (the strip, the booths, a booking with the `.ics` downloaded and read back, Unbook) — ALL CHECKS PASSED at 390 × 844, zero page errors; every sibling harness passes; `check-readme-tree.py` 0 findings
-- `EVENTS-SCHEMA.md` §3 / §5 / §8 / §9 / §10 / §12 and `NETWORK-SCHEMA.md` §8 / §14 updated; CHANGELOG `Sections: 95/100`
-
-### Where we left off
-
-**The developer's live check is next** (reported, not asserted): redeploy Events (`?action=api&op=deploy` → `Already up to date (v01.08g)`) and Network (`v01.16g`), open a starred event's sheet → **Plan** tab, judge the top five booths line by line (the *why* line, the stage, the terms), book one meeting on an open slot and find it on the contact in Network (a `meeting` touch whose evidence is the mt- id) and in the downloaded `.ics` (DTSTART in UTC — the calendar shows it in the event's local time). **The four N4 s2 brackets and this session's four brackets were both left unfilled** in the prompts — do both live checks together. **Then E5 session 2** with the §13.18 paste-in prompt (given in chat at the close of this session) — Opus 5 xhigh.
-
-### Open findings carried forward
-
-- **No booth numbers on the day plan** — the E4 exhibitor parsers keep company names only; the visits are ordered by rank. A parser that stores the booth (Map Your Show's JSON carries it) is a small E4 follow-up, not E5's
-- **The `Plans` tab is still unused** — the brief's "new Plans tab with p- ids" was superseded by the `Meetings` tab E1 created (mt- ids); `Plans` waits for session 2's ROI line and narrative link
-- Only two registry rows carry `hours[]` — most plans run on the default frame until E0's next verification fills them
-- A plan build costs the full score (up to 41 Network calls) plus the agenda, the dossiers and Overpass on first open — 10–30 s; the tab says "Building the plan…" and never polls
-- An unbook leaves the `meeting` Interaction in Network (D15: the record); the developer deletes it there if the meeting never happened
-- A booking made while Network was not configured has no interaction id — the meetings list says "not recorded in Network"
-- From N4 s2: the `.docx` carries no `styles.xml`; a promote needs a Profiler sign-in in the same browser; the map draws the list as filtered
-- From E4: the Scraper roster carries no FERC eLibrary RSS; RE+ 2026's roster is a Swapcard widget; GlobeNewswire's feed unverified until a live sweep is read
-- `pullAndDeployFromGitHub` never logs its outcome — fleet-wide TEMPLATE papercut, still deliberately unfixed
-
-### Key decisions made
-
-- The bookings live in the **`Meetings` tab** (§5, `mt-` ids) that E1 already created, not the brief's "new `Plans` tab with `p-` ids"; the mt- id is the Interaction's evidence and the ICS UID's stem
-- `nop=interaction` is **two legs on one op** (the `nop=signals` pattern) — the read leg is the pick list, so the session's one bridge widening stays one op; `eop=plancontacts` is the page's way to it
-- The meeting invite carries **UTC `DTSTART` / `DTEND`** computed from the event's zone instead of `DTSTART;TZID` + a hand-rolled `VTIMEZONE` (§9 amended as built)
-- The venue cache is a **per-slug script property** `EV_PLAN_VENUES:<slug>` for 30 days (the brief's decision over §10's CacheService 7 days); a failed Overpass answer is never cached
-- The agenda page is read once per plan build and cached six hours in `CacheService` — the sweep and the plan each read it on their own cadence (never twice in one run)
-- The ranked visits take the morning (30 min × 6) so the afternoon stays open for meetings; open slots under 30 minutes are not offered
-- The two regex-literal conventions hold: `\x22` for quotes inside the plan block's regexes (the shared extractor reads a quote inside a regex as a string opener)
-
-### Active context
-
-- **Repo version v07.24r.** `CHANGELOG.md` `Sections: 95/100` — no rotation due
-- **Live versions:** `Events.html` v01.09w · `Events.gs` v01.08g · `Network.html` v01.24w · `Network.gs` v01.16g · `Scraper.gs` v02.22g
-- **Reminders still open** (developer's own — untouched): close out "Repo access denied"; the Megmeet briefing after the Network/Events build, before 2026-10-07 (the build now stands at E5 s2 + X + Q remaining)
-- **A parallel branch `claude/adoring-brown-mvddj2` was on the remote during this session** — not this session's; check `git ls-remote` before pushing
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-
-### Recommendation for next session
-
-- Do the live check first (redeploy both apps, a starred event's Plan tab, the top five booths line by line, one meeting booked and found on the contact in Network and in the `.ics`), then run E5 session 2 with the §13.18 paste-in prompt on Opus 5 xhigh — its four bracketed live-state fields filled from that check.
-- **To continue:** type `run E5 session 2 from §13.18`
