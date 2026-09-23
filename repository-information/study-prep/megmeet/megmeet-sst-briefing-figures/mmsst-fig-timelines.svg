@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="484.6464pt" height="393.37272pt" viewBox="0 0 484.6464 393.37272" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T13:15:56.830121</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 393.37272 
+L 484.6464 393.37272 
+L 484.6464 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 65.9664 387.61272 
+L 253.657309 387.61272 
+L 253.657309 57.24576 
+L 65.9664 57.24576 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 65.9664 93.180412 
+L 253.657309 93.180412 
+L 253.657309 58.018548 
+L 65.9664 58.018548 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 65.9664 93.180412 
+L 67.092545 93.180412 
+L 67.092545 58.018548 
+L 65.9664 58.018548 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 65.9664 120.227999 
+L 253.657309 120.227999 
+L 253.657309 94.725988 
+L 65.9664 94.725988 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 65.9664 120.227999 
+L 67.092545 120.227999 
+L 67.092545 94.725988 
+L 65.9664 94.725988 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 65.9664 176.255144 
+L 253.657309 176.255144 
+L 253.657309 121.773576 
+L 65.9664 121.773576 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 65.9664 176.255144 
+L 67.092545 176.255144 
+L 67.092545 121.773576 
+L 65.9664 121.773576 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 65.9664 203.302732 
+L 253.657309 203.302732 
+L 253.657309 177.800721 
+L 65.9664 177.800721 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 65.9664 203.302732 
+L 67.092545 203.302732 
+L 67.092545 177.800721 
+L 65.9664 177.800721 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 65.9664 240.010172 
+L 253.657309 240.010172 
+L 253.657309 204.848308 
+L 65.9664 204.848308 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 65.9664 240.010172 
+L 67.092545 240.010172 
+L 67.092545 204.848308 
+L 65.9664 204.848308 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 65.9664 276.717612 
+L 253.657309 276.717612 
+L 253.657309 241.555748 
+L 65.9664 241.555748 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 65.9664 276.717612 
+L 67.092545 276.717612 
+L 67.092545 241.555748 
+L 65.9664 241.555748 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 65.9664 303.765199 
+L 253.657309 303.765199 
+L 253.657309 278.263188 
+L 65.9664 278.263188 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 65.9664 303.765199 
+L 67.092545 303.765199 
+L 67.092545 278.263188 
+L 65.9664 278.263188 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 65.9664 340.472639 
+L 253.657309 340.472639 
+L 253.657309 305.310776 
+L 65.9664 305.310776 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 65.9664 340.472639 
+L 67.092545 340.472639 
+L 67.092545 305.310776 
+L 65.9664 305.310776 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 65.9664 386.839932 
+L 253.657309 386.839932 
+L 253.657309 342.018216 
+L 65.9664 342.018216 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 65.9664 386.839932 
+L 67.092545 386.839932 
+L 67.092545 342.018216 
+L 65.9664 342.018216 
+z
+" clip-path="url(#p897552d1f5)" style="fill: #0b62a4"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="63.500816" transform="rotate(-0 68.594073 63.500816)">2025-10-13</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 71.324969)">800 VDC ecosystem published; about 30 named partners;</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 78.88909)">MV input cited as "e.g. 35 kVAC"; conversion "at the</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 86.453211)">facility level"</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="100.208256" transform="rotate(-0 68.594073 100.208256)">2026-03</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 108.032409)">Joint NVIDIA / Google / Microsoft 800 VDC white paper</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 116.209265)">via OCP</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="127.255843" transform="rotate(-0 68.594073 127.255843)">2026-06-01</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 135.692731)">Siemens + NVIDIA + Fluence + nVent DSX Vera Rubin</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 142.644118)">reference design: nominal 34.5 kV utility, 136 MW</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 150.208239)">facility / 100 MW IT, factory-tested MV and LV skids,</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 157.77236)">UL-aligned, Tier III concurrent maintainability — and</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 165.949215)">no mention of 800 VDC or SSTs at all</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="183.282988" transform="rotate(-0 68.594073 183.282988)">2026-07</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 191.107142)">OCP LVDC Solid-State Transformer Specification v0.3</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 198.671263)">(Microsoft, Google, NVIDIA)</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="210.330576" transform="rotate(-0 68.594073 210.330576)">2026-08-11</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 218.154729)">Three-tier rollout stated: power rack H2 2026, row</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 225.71885)">power center 2 MW/row 2027, DC power block 2027+; more</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 233.282971)">than 80 manufacturers building to the spec</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="247.038016" transform="rotate(-0 68.594073 247.038016)">2026-09-21</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 254.862169)">NVIDIA DSX Ready qualification programme launches —</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 262.42629)">covering BESS and CDUs only. There is no NVIDIA</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 269.990411)">qualification path for an SST</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="283.745456" transform="rotate(-0 68.594073 283.745456)">2026-H2</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 291.569609)">800 VDC power rack enters production; Vera Rubin NVL72</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 299.13373)">ships</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="310.793043" transform="rotate(-0 68.594073 310.793043)">2027</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 318.617197)">Row power center, 2 MW per row, overhead 800 VDC</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 326.181318)">busway; full-scale 800 VDC production "coincides with</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 333.745439)">Kyber"</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="68.594073" y="347.500483" transform="rotate(-0 68.594073 347.500483)">2029</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 355.324637)">Next-generation SST and MV-direct conversion: 34.5 kV</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 362.888758)">AC to 800 V DC, blocks toward 10 MW — corpus-only,</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 370.452879)">page-referenced to the August 2026 execution paper,</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(68.594073 378.017)">not confirmed on a public NVIDIA page</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="65.9664" y="49.24576" transform="rotate(-0 65.9664 49.24576)">NVIDIA architecture</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_21">
+    <path d="M 291.195491 387.61272 
+L 478.8864 387.61272 
+L 478.8864 57.24576 
+L 291.195491 57.24576 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4"/>
+   <g id="patch_22">
+    <path d="M 291.195491 112.500117 
+L 478.8864 112.500117 
+L 478.8864 58.018548 
+L 291.195491 58.018548 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 291.195491 112.500117 
+L 292.321636 112.500117 
+L 292.321636 58.018548 
+L 291.195491 58.018548 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #7a3f7d"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 291.195491 149.207557 
+L 478.8864 149.207557 
+L 478.8864 114.045693 
+L 291.195491 114.045693 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 291.195491 149.207557 
+L 292.321636 149.207557 
+L 292.321636 114.045693 
+L 291.195491 114.045693 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #7a3f7d"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 291.195491 205.234702 
+L 478.8864 205.234702 
+L 478.8864 150.753133 
+L 291.195491 150.753133 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 291.195491 205.234702 
+L 292.321636 205.234702 
+L 292.321636 150.753133 
+L 291.195491 150.753133 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #7a3f7d"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 291.195491 232.28229 
+L 478.8864 232.28229 
+L 478.8864 206.780279 
+L 291.195491 206.780279 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 291.195491 232.28229 
+L 292.321636 232.28229 
+L 292.321636 206.780279 
+L 291.195491 206.780279 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #7a3f7d"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 291.195491 268.98973 
+L 478.8864 268.98973 
+L 478.8864 233.827866 
+L 291.195491 233.827866 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 291.195491 268.98973 
+L 292.321636 268.98973 
+L 292.321636 233.827866 
+L 291.195491 233.827866 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #7a3f7d"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 291.195491 344.33658 
+L 478.8864 344.33658 
+L 478.8864 270.535306 
+L 291.195491 270.535306 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 291.195491 344.33658 
+L 292.321636 344.33658 
+L 292.321636 270.535306 
+L 291.195491 270.535306 
+z
+" clip-path="url(#pe1bea4def1)" style="fill: #7a3f7d"/>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="293.823164" y="63.500816" transform="rotate(-0 293.823164 63.500816)">2025-10-14</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 71.324969)">"First Principles" — OCI's only engineering post on AI</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 78.88909)">power. Its entire power content is capacitance,</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 86.453211)">advanced energy storage, hardware-accelerated GPU</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 94.017332)">ramping and software ramp control. No voltage, no</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 101.581454)">kW/rack, no topology</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="293.823164" y="119.527961" transform="rotate(-0 293.823164 119.527961)">2026-01-26</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 127.352114)">Oracle states it is funding onsite transmission lines,</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 134.916236)">battery storage and dedicated substations so costs are</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 142.480357)">not passed to ratepayers</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="293.823164" y="156.235401" transform="rotate(-0 293.823164 156.235401)">2026-04-27</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 164.059554)">Project Jupiter (Dona Ana County, NM) to be fully</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 171.623676)">powered by up to 2.45 GW of Bloom fuel cells,</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 179.187797)">replacing planned gas turbines and diesel, as one</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 186.751918)">single microgrid campus — Oracle's boldest published</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 194.928773)">electrical decision</text>
+   </g>
+   <g id="text_26">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="293.823164" y="212.262546" transform="rotate(-0 293.823164 212.262546)">2026-09-15</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 220.699434)">Investment in more than 1.7 GW of carbon-free</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 227.650821)">electricity supplying ERCOT</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="293.823164" y="239.310134" transform="rotate(-0 293.823164 239.310134)">2026-09-16</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 247.134287)">Project Lighthouse: Oracle names American Transmission</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 254.698408)">Co. on the Ozaukee County interconnection — the only</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 262.262529)">host transmission utility Oracle names itself</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="293.823164" y="276.017574" transform="rotate(-0 293.823164 276.017574)">not published</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 283.841727)">Rack density, distribution voltage, where AC-to-DC</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 291.652395)">conversion sits, MV-direct conversion, solid-state</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 298.969969)">transformers, and any vendor-qualification programme.</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 306.53409)">The only Oracle-800 VDC link in existence is NVIDIA</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 314.098211)">naming OCI among providers "designing for 800-volt</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 321.908879)">data centers" — NVIDIA's characterisation, not</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(293.823164 329.839188)">Oracle's statement</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #7a3f7d" x="291.195491" y="49.24576" transform="rotate(-0 291.195491 49.24576)">Oracle / OCI</text>
+   </g>
+  </g>
+  <g id="text_33">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="5.76" y="13.040273" transform="rotate(-0 5.76 13.040273)">What each programme has actually committed to, and when</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p897552d1f5">
+   <rect x="65.9664" y="57.24576" width="187.690909" height="330.36696"/>
+  </clipPath>
+  <clipPath id="pe1bea4def1">
+   <rect x="291.195491" y="57.24576" width="187.690909" height="330.36696"/>
+  </clipPath>
+ </defs>
+</svg>
+<!-- Developed by: LightAISolutions -->

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="424.44pt" height="313.088273pt" viewBox="0 0 424.44 313.088273" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T13:15:57.477605</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 313.088273 
+L 424.44 313.088273 
+L 424.44 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 5.76 307.328273 
+L 418.68 307.328273 
+L 418.68 19.040273 
+L 5.76 19.040273 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 5.76 72.085265 
+L 179.1864 72.085265 
+L 179.1864 23.652881 
+L 5.76 23.652881 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 179.1864 72.085265 
+L 418.68 72.085265 
+L 418.68 23.652881 
+L 179.1864 23.652881 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 5.76 129.742865 
+L 179.1864 129.742865 
+L 179.1864 81.310481 
+L 5.76 81.310481 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 179.1864 129.742865 
+L 418.68 129.742865 
+L 418.68 81.310481 
+L 179.1864 81.310481 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 5.76 187.400465 
+L 179.1864 187.400465 
+L 179.1864 138.968081 
+L 5.76 138.968081 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 179.1864 187.400465 
+L 418.68 187.400465 
+L 418.68 138.968081 
+L 179.1864 138.968081 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 5.76 245.058065 
+L 179.1864 245.058065 
+L 179.1864 196.625681 
+L 5.76 196.625681 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 179.1864 245.058065 
+L 418.68 245.058065 
+L 418.68 196.625681 
+L 179.1864 196.625681 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 5.76 302.715665 
+L 179.1864 302.715665 
+L 179.1864 254.283281 
+L 5.76 254.283281 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 179.1864 302.715665 
+L 418.68 302.715665 
+L 418.68 254.283281 
+L 179.1864 254.283281 
+z
+" clip-path="url(#p97728d89d1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="14.84424" y="51.233331" transform="rotate(-0 14.84424 51.233331)">1</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 45.268595)">DG Matrix is not shipping the</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 54.296739)">product the primer implies</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 41.523663)">It is the sharpest single correction in this brief. Anyone placing</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 49.575792)">DG Matrix among the shipping medium-voltage vendors is placing the</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 57.627921)">wrong product.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="14.84424" y="108.890931" transform="rotate(-0 14.84424 108.890931)">2</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 103.657523)">A fifth SST name exists and the</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 111.954339)">primer does not carry it</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 99.181263)">Not a competitor. The reason to know the name is that a buyer may</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 107.233392)">raise it, and the reason not to price it is that there is nothing to</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 115.285521)">price.</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="14.84424" y="166.548531" transform="rotate(-0 14.84424 166.548531)">3</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 160.583795)">NVIDIA opened a qualification</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 169.611939)">programme and SSTs are not in it</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 156.838863)">The qualification path for an SST is unwritten. Which of the two</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 164.890992)">mechanics a future MV category adopts is the biggest open commercial</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 172.943121)">variable in the layer.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="14.84424" y="224.206131" transform="rotate(-0 14.84424 224.206131)">4</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 218.241395)">The ride-through case got a bigger</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 228.000868)">event and a harder number</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 214.496463)">These are two different events, two years apart, and should not be</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 222.548592)">conflated. Together they are why the SST's best US argument keeps</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 230.600721)">getting stronger.</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="14.84424" y="281.863731" transform="rotate(-0 14.84424 281.863731)">5</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 275.898995)">The policy fence moved twice and the</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 284.927139)">two regimes do not line up</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 268.127999)">A 34.5 kV behind-the-meter SST is probably outside EO 14421 and</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 276.180128)">inside the FCC list, which has no voltage threshold. A</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 284.232257)">unidirectional rectifier-only architecture may sit outside both. The</text>
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 292.284386)">asymmetry is the finding.</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="5.76" y="13.040273" transform="rotate(-0 5.76 13.040273)">Five things that moved between 12 and 23 September 2026</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p97728d89d1">
+   <rect x="5.76" y="19.040273" width="412.92" height="288.288"/>
+  </clipPath>
+ </defs>
+</svg>
+<!-- Developed by: LightAISolutions -->

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="424.44pt" height="315.305873pt" viewBox="0 0 424.44 315.305873" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T13:15:57.569182</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 315.305873 
+L 424.44 315.305873 
+L 424.44 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 5.76 309.545873 
+L 418.68 309.545873 
+L 418.68 19.040273 
+L 5.76 19.040273 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 5.76 43.733249 
+L 418.68 43.733249 
+L 418.68 19.766537 
+L 5.76 19.766537 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 5.76 43.733249 
+L 8.23752 43.733249 
+L 8.23752 19.766537 
+L 5.76 19.766537 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #6d6758"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 5.76 60.074189 
+L 418.68 60.074189 
+L 418.68 45.185777 
+L 5.76 45.185777 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 5.76 60.074189 
+L 8.23752 60.074189 
+L 8.23752 45.185777 
+L 5.76 45.185777 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 5.76 94.571729 
+L 418.68 94.571729 
+L 418.68 61.526717 
+L 5.76 61.526717 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 5.76 94.571729 
+L 8.23752 94.571729 
+L 8.23752 61.526717 
+L 5.76 61.526717 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #c2622a"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 5.76 129.069269 
+L 418.68 129.069269 
+L 418.68 96.024257 
+L 5.76 96.024257 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 5.76 129.069269 
+L 8.23752 129.069269 
+L 8.23752 96.024257 
+L 5.76 96.024257 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 5.76 154.488509 
+L 418.68 154.488509 
+L 418.68 130.521797 
+L 5.76 130.521797 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 5.76 154.488509 
+L 8.23752 154.488509 
+L 8.23752 130.521797 
+L 5.76 130.521797 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #c2622a"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 5.76 188.986049 
+L 418.68 188.986049 
+L 418.68 155.941037 
+L 5.76 155.941037 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 5.76 188.986049 
+L 8.23752 188.986049 
+L 8.23752 155.941037 
+L 5.76 155.941037 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #c2622a"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 5.76 223.483589 
+L 418.68 223.483589 
+L 418.68 190.438577 
+L 5.76 190.438577 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 5.76 223.483589 
+L 8.23752 223.483589 
+L 8.23752 190.438577 
+L 5.76 190.438577 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #c2622a"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 5.76 257.981129 
+L 418.68 257.981129 
+L 418.68 224.936117 
+L 5.76 224.936117 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 5.76 257.981129 
+L 8.23752 257.981129 
+L 8.23752 224.936117 
+L 5.76 224.936117 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #0b62a4"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 5.76 283.400369 
+L 418.68 283.400369 
+L 418.68 259.433657 
+L 5.76 259.433657 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 5.76 283.400369 
+L 8.23752 283.400369 
+L 8.23752 259.433657 
+L 5.76 259.433657 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #c2622a"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 5.76 308.819609 
+L 418.68 308.819609 
+L 418.68 284.852897 
+L 5.76 284.852897 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 5.76 308.819609 
+L 8.23752 308.819609 
+L 8.23752 284.852897 
+L 5.76 284.852897 
+z
+" clip-path="url(#pecfa8161a2)" style="fill: #c2622a"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="11.54088" y="25.027815" transform="rotate(-0 11.54088 25.027815)">2026-09-23 to 10-06</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="24.924299" transform="rotate(-0 88.344 24.924299)">day -14</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 32.596085)">Read this brief and the primer. Get the OCP LVDC SST Specification v0.3 from an unblocked network — it could</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 40.160206)">not be retrieved in this run. Re-read the ten week-one questions and decide which three you ask on day one.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="11.54088" y="50.447055" transform="rotate(-0 11.54088 50.447055)">2026-10-07</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="50.343539" transform="rotate(-0 88.344 50.343539)">day one</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="11.54088" y="58.015325" transform="rotate(-0 11.54088 58.015325)">Day one. Senior Sales Manager, SST Solutions.</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="66.787995" transform="rotate(-0 11.54088 66.787995)">by 2026-10-31</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="66.684479" transform="rotate(-0 88.344 66.684479)">day +24</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 74.356265)">Q3 2026 reports from Megmeet, Zhonhen and Sinexcel at the CSRC statutory deadline. Read Megmeet's for a</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 81.920386)">service-voltage class, an order figure and any AI-data-centre revenue line — the three things the H1 interim</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 90.097242)">did not contain.</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="11.54088" y="101.285535" transform="rotate(-0 11.54088 101.285535)">2026-Q4</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="101.182019" transform="rotate(-0 88.344 101.182019)">day +30</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 108.853805)">First thirty days: get the answers to week-one questions 1-5 written down and shared. The class, the</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 116.417926)">first-article date, the listing path, the FCC analysis and the lab ceiling are the five facts every</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 123.982047)">subsequent conversation depends on.</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="135.783075" transform="rotate(-0 11.54088 135.783075)">2026-11-01</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="135.679559" transform="rotate(-0 88.344 135.679559)">day +25</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 143.351345)">EU funding restrictions on high-risk-country inverters begin their phase-in: projects assessed under the</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 150.915466)">previous framework but may have to adopt extra cybersecurity measures or exclude high-risk suppliers.</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="161.202315" transform="rotate(-0 11.54088 161.202315)">2026-12-24</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="161.098799" transform="rotate(-0 88.344 161.098799)">day +78</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 168.770585)">DOE implementing regulations due under Executive Order 14421. Watch whether the 69 kV threshold and the</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 176.334706)">local-distribution exclusion survive into the regulations — that is what decides whether a 34.5 kV hall-edge</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 184.511562)">unit is inside or outside.</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="195.699855" transform="rotate(-0 11.54088 195.699855)">2026-12-31</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="195.596339" transform="rotate(-0 88.344 195.596339)">day +85</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 203.268125)">FERC deadline for NERC to file the new large-load reliability standards and registry criteria (Docket</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 210.832246)">RD26-7-000; CLO-001/002/003). This is the day ride-through stops being guidance — and it is the SST's</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 218.396367)">strongest US argument becoming enforceable.</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="11.54088" y="230.197395" transform="rotate(-0 11.54088 230.197395)">2027-01-05</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="230.093879" transform="rotate(-0 88.344 230.093879)">day +90</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 237.765665)">Ninety days: a written position on where Megmeet competes in the hall edge and where it does not, a named</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 245.329786)">target account list built on service-voltage class rather than on logo, and a one-page answer to each of the</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 252.893907)">sixteen questions an NVIDIA power engineer and the twelve an OCI electrical engineer would ask.</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="264.694935" transform="rotate(-0 11.54088 264.694935)">2027-Q1</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="264.591419" transform="rotate(-0 88.344 264.591419)">day +95</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 272.263205)">Heron Power pilot units targeted; LITEON GPU-side mass production and first McKinney output; Flex separation</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 279.827326)">of Cloud and Power Infrastructure. The quarter the US shelf capacity moves from announced to producing.</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="290.114175" transform="rotate(-0 11.54088 290.114175)">2027-02</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="88.344" y="290.010659" transform="rotate(-0 88.344 290.010659)">day +125</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 297.682445)">CATL's capital increase into Zhonhen's controlling holdco must close within six months of the 2026-08-14</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 305.246566)">signing. It decides whether the Panama TRU gets a balance sheet.</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="5.76" y="13.040273" transform="rotate(-0 5.76 13.040273)">The run-in and the first ninety days — blue is yours, orange is the market's</text>
+   </g>
+   <g id="line2d_1">
+    <path d="M 5.76 60.800453 
+L 418.68 60.800453 
+" clip-path="url(#pecfa8161a2)" style="fill: none; stroke-dasharray: 5.2,3.9; stroke-dashoffset: 0; stroke: #b03a34; stroke-width: 1.3"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pecfa8161a2">
+   <rect x="5.76" y="19.040273" width="412.92" height="290.5056"/>
+  </clipPath>
+ </defs>
+</svg>
+<!-- Developed by: LightAISolutions -->

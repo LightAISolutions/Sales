@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="424.44pt" height="308.409137pt" viewBox="0 0 424.44 308.409137" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T13:15:57.336143</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 308.409137 
+L 424.44 308.409137 
+L 424.44 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 5.76 302.649137 
+L 418.68 302.649137 
+L 418.68 19.040273 
+L 5.76 19.040273 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 5.76 78.972713 
+L 418.68 78.972713 
+L 418.68 19.753755 
+L 5.76 19.753755 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 5.76 78.972713 
+L 8.23752 78.972713 
+L 8.23752 19.753755 
+L 5.76 19.753755 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #1b8a6b"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 5.76 130.700115 
+L 418.68 130.700115 
+L 418.68 80.399675 
+L 5.76 80.399675 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 5.76 130.700115 
+L 8.23752 130.700115 
+L 8.23752 80.399675 
+L 5.76 80.399675 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #c2622a"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 5.76 173.509001 
+L 418.68 173.509001 
+L 418.68 132.127078 
+L 5.76 132.127078 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 5.76 173.509001 
+L 8.23752 173.509001 
+L 8.23752 132.127078 
+L 5.76 132.127078 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #1b8a6b"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 5.76 216.317886 
+L 418.68 216.317886 
+L 418.68 174.935963 
+L 5.76 174.935963 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 5.76 216.317886 
+L 8.23752 216.317886 
+L 8.23752 174.935963 
+L 5.76 174.935963 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #b03a34"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 5.76 259.126771 
+L 418.68 259.126771 
+L 418.68 217.744849 
+L 5.76 217.744849 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 5.76 259.126771 
+L 8.23752 259.126771 
+L 8.23752 217.744849 
+L 5.76 217.744849 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #c2622a"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 5.76 301.935656 
+L 418.68 301.935656 
+L 418.68 260.553734 
+L 5.76 260.553734 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #f7f4ec; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 5.76 301.935656 
+L 8.23752 301.935656 
+L 8.23752 260.553734 
+L 5.76 260.553734 
+z
+" clip-path="url(#p3b291fab53)" style="fill: #b03a34"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b8a6b" x="11.54088" y="24.949325" transform="rotate(-0 11.54088 24.949325)">Intelligent equipment — welding power sources</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 32.452281)">4.6% of revenue · 39.67% gross margin · Strongest in the company</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 40.016402)">Megmeet claims the top share of China's robotic gas-shielded arc-welding power-source market for ten consecutive</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 47.580523)">years since 2014 and about 30% share in 2020-21 — company claims on the company's own site, not an audited ranking.</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 55.144644)">What is checkable is commercial: repeat framework deals with Honglu for 1,500 and then 1,800 robotic welding</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 62.708766)">machines, integration with FANUC, ABB and KUKA, exports to 60+ countries. Highest gross margin in the company at</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 70.272887)">39.67% and rising.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="85.600236" transform="rotate(-0 11.54088 85.600236)">Power products — AI data centre and network power</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 93.098202)">30.4% of revenue · 25.06% gross margin · Real, growing, and unranked</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 100.662323)">The only mainland vendor NVIDIA named for GB200 NVL72 power and on both published rosters; the company's own H1 2026</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 108.226444)">wording is "one of NVIDIA's designated recommended data-centre power suppliers" — membership of a set, not a rank.</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 115.790565)">+60.92% at the only expanding gross margin in the company. No AI-data-centre revenue line is disclosed at any</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 123.354686)">granularity.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b8a6b" x="11.54088" y="137.327639" transform="rotate(-0 11.54088 137.327639)">Industrial automation</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 144.825605)">7.4% of revenue · 27.78% gross margin · Credible, small, well behind the leader</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 152.389726)">+39.85% in FY2025, the second-highest margin pool in the company at 27.78%. The company's own scope statement leads</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 159.953847)">with servo and VFD drives, not PLC and HMI. The market is genuinely unconcentrated — across ten listed Chinese</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 167.517968)">players, CR3 is reported around 9% and CR10 around 12%.</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #b03a34" x="11.54088" y="180.131533" transform="rotate(-0 11.54088 180.131533)">New-energy transportation (NEV and rail)</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 187.63449)">9.3% of revenue · 13.46% gross margin · Volume land-grab, margin-dilutive</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 195.198611)">Revenue doubled in FY2025 (+108.65%) at the lowest gross margin of the major segments; 13.46% in H1 2026. More than</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 202.762732)">a million combined OBC plus DC-DC units shipped in 2025. Named OEMs: Geely, BAIC New Energy, Leapmotor, Changan,</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 210.323462)">Dongfeng, FAW, Seres.</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #c2622a" x="11.54088" y="222.940419" transform="rotate(-0 11.54088 222.940419)">Smart living (appliance controls, smart bathroom)</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 230.443375)">42.2% of revenue · 18.39% gross margin · Biggest unit, weakest position, deteriorating</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 238.007496)">42.19% of revenue at 18.39% gross margin, down about 4.2 points in a year. It was the only segment that shrank in</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 245.571617)">FY2025 (-4.8%). Named customers: Xiaomi, Haier, Hisense, Changhong, Skyworth. The smart-bathroom line is genuinely</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 253.135738)">distinctive rather than a controller commodity.</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #b03a34" x="11.54088" y="265.749304" transform="rotate(-0 11.54088 265.749304)">Magnetics and precision manufacturing</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 273.25226)">5.0% of revenue · 8.79% gross margin · Vertical integration rather than a merchant business</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 280.816381)">8.79% gross margin, up from 5.1% but still the lowest in the company. The company describes it as an</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 288.380502)">investment-and-integration period. Shaped magnet wire, coaxial cable, ultra-fine flat wire, FFC/FPC feeding internal</text>
+    <text style="font-size: 6.2px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(11.54088 295.944623)">magnetics supply plus external sales.</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="5.76" y="13.040273" transform="rotate(-0 5.76 13.040273)">The six business groups, ranked by how defensible the position is</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3b291fab53">
+   <rect x="5.76" y="19.040273" width="412.92" height="283.608864"/>
+  </clipPath>
+ </defs>
+</svg>
+<!-- Developed by: LightAISolutions -->

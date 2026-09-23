@@ -3,11 +3,55 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.30r] — 2026-09-23 09:27:04 AM EST
+
+> **Prompt:** "Run the Megmeet SST onboarding briefing — the v2 plan in repository-information/megmeet-briefing-prompt.md. Read that file end to end first: §2 is the scope, §3 the deliverables and the table of contents, §5 the phases, the checkpoint pushes and the Phase F rubric you will be checked against. This is an unattended overnight run: no AskUserQuestion, no plan mode — resolve every ambiguity with a stated assumption and record it in the colophon. [CONTEXT, READ FIRST, SCOPE, DELIVERABLES, HARD RULES, PHASES AND PUSHES and FINAL MESSAGE sections follow in the full prompt, which is §6 of the plan file verbatim plus the developer's start-date and hearsay context.]"
+
+Phase D of the same run: **D2, the sixty-nine-page onboarding briefing PDF**, its source HTML, the data file every figure reads from, fourteen new figures and the two build scripts. The `--png` proof pages were rendered and read page by page before the PDF was called done, and eight defects they exposed were fixed — the largest being a term table blown off the page by an unbreakable URL inside a tier tag. The study companion (D3) and the Phase F audit follow in the next push.
+
+### Added
+
+#### `repository-information/study-prep/megmeet/MEGMEET-SST-BRIEFING.pdf`
+
+- **Sixty-nine pages in five parts with fourteen figures**, on the SST primer's print skin with a running header and page numbers. Part I is the cheat sheet, the twenty-three numbers, the five things that moved since the primer's 12 September watch-list and the calendar to day one; Part II is the technology (the term system, lineage and adjacency, what NVIDIA specifies, the value case as a perspective matrix, and limitations with a mitigation, an owner and a status word); Part III is the market (the pilot-and-test ledger with the 34.5 kV argument in cells and BIL, twenty-five obstacles each with a named owner, and what NVIDIA's and Oracle's engineers will actually ask); Part IV is Megmeet against the field; Part V is the sales layer, analysis throughout, ending with the ten week-one questions ranked by decision leverage and everything that could not be determined named rather than smoothed over.
+- **A citation contract enforced sentence by sentence.** Every factual sentence carries exactly one of `[DOSSIER <slug> v<n>]`, `[PRIMER ch.x / fig.n]`, `[REPORT 2026-09-08]`, `[GUIDANCE nvidia-800vdc p<n>]` or `[WEB, verified 2026-09-23]`, or sits inside a block labelled analysis. The reader's hearsay about NVIDIA and Oracle engineering contact is boxed once on the contents page, labelled unverified, and cited nowhere.
+
+#### `repository-information/study-prep/megmeet/megmeet-sst-briefing-data.json`
+
+- **The single source for every number in a figure or a widget** — 214 tagged records across the class ledger, the cell-count arithmetic, the business mix, twenty-five obstacles, two programme timelines, the watch-list delta, the conversion chains, the competitor map, the six business groups, twenty-six terms, ten perspectives, the lineage matrix, seven objections, ten things not to say, the ten week-one questions, the calendar and twenty-three numbers to know. Written before the figures and before the companion so the two cannot drift.
+
+#### `repository-information/study-prep/megmeet/megmeet-sst-briefing-figures/`
+
+- **Fourteen figures, `mmsst-fig-` prefixed**, generated from the data file on the primer's palette (re-validated against the dataviz skill's six checks on the white print surface — all six pass). No primer figure was copied; where one exists it is referenced by number.
+
+#### `scripts/build-megmeet-sst-briefing-figures.py` and `scripts/build-megmeet-sst-briefing-pdf.mjs`
+
+- Copies of the primer's two build scripts with the paths, the figure prefix and the DevTools port changed. The figure script's one structural difference is that it reads the data file rather than carrying numbers inline.
+
+### Fixed
+
+- **A term table was silently blown off the page by a URL inside a tier tag.** Four tags in chapter 1 carried a full source URL, which has no break opportunity, so the table's minimum width exceeded the page and the fourth column rendered off-paper while the rows grew to half a page each. URLs were moved to Appendix C (all forty-seven were already listed there), `overflow-wrap` was added as a safety net for every table cell, and the status chips were pinned `nowrap` so the net could not break them mid-word instead.
+- **Every blended tier tag was split.** Eighty-five tags in the data file and twelve sites in the document carried two tiers; each now carries one tag per sentence, and the two scripted columns — *the sentence to say it in* in chapter 1 and *the one sentence* in chapter 10 — are labelled analysis in their chapter rather than tagged per cell. The convention for the wide reference tables is stated on the contents page.
+- **Six figure defects the proof pages exposed**: text overrunning both panels of the watch-list figure; the day-one rule drawn through the next row's heading in the calendar; the class guides crossing the value labels of the 10–13 kV vendors in the class ledger; the 34.5 kV usage note truncated mid-word in the voltage ladder; a falling-margin label printed on top of its own start marker in the business-mix panel; and the two programme lanes bottom-aligned instead of top-aligned in the timelines.
+- **A fourteenth figure had been generated and never placed.** The published-chain-loss chart is now Figure M4 in chapter 3, where the efficiency boundary argument is made, and the figures that followed it were renumbered.
+
+### Changed
+
+#### `README.md`
+
+- Tree entries for the PDF, the source HTML, the data file, the figures directory with all fourteen SVGs listed individually, and the two build scripts. `check-readme-tree.py` is clean.
+- `Last updated:` and `Repo version:` refreshed.
+
+### Notes
+
+- **Archive rotation was evaluated again and is still not due.** The counter now reads `Sections: 101/100`, but the threshold tests the **non-exempt** count and nine sections carry today's date: 92 non-exempt, unchanged from the previous push and below the trigger. Scenario A in the rotation examples.
+- The model identifier was removed from the briefing's colophon; repository artefacts carry the effort and the run window, not the model name.
 
 ## [v07.29r] — 2026-09-23 08:03:13 AM EST
 

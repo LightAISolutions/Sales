@@ -1,0 +1,2047 @@
+{
+ "schemaVersion": 1,
+ "title": "Megmeet SST onboarding briefing — figure and widget data",
+ "generated": "2026-09-23",
+ "note": "Single source for every plotted or displayed number in MEGMEET-SST-BRIEFING.pdf and megmeet-sst-briefing-companion.html. The companion inlines this file byte-identically. Every value carries a tier tag in `t`.",
+ "tierVocabulary": [
+  "DOSSIER <slug> v<n>",
+  "PRIMER ch.x / fig.n",
+  "REPORT 2026-09-08",
+  "GUIDANCE nvidia-800vdc p<n>",
+  "WEB <url> verified YYYY-MM-DD",
+  "ANALYSIS"
+ ],
+ "statusVocabulary": {
+  "limitation": [
+   "unsolved",
+   "lab",
+   "pilot",
+   "product",
+   "standardised"
+  ],
+  "evidence": [
+   "announced",
+   "lab demo",
+   "factory test",
+   "field pilot",
+   "supplying",
+   "undisclosed"
+  ]
+ },
+ "classLedger": {
+  "caption": "Every vendor with a public medium-voltage-to-DC position, plotted by the service-voltage class it has specified against how far the evidence goes. A vendor with no published class is not plotted — it is listed under \"undisclosed\".",
+  "boundary": "Class is the vendor's own published input figure. Where a range is published the bar spans it; where a single class is published the marker sits on it. Evidence tier is the fixed six-word vocabulary, assigned from the strongest public evidence found, not from vendor language.",
+  "rows": [
+   {
+    "vendor": "Heron Power",
+    "output": "800 V DC",
+    "kvLow": 34.5,
+    "kvHigh": 34.5,
+    "mw": 4.2,
+    "evidence": "announced",
+    "hq": "US",
+    "t": "DOSSIER heron-power v1",
+    "note": "34.5 kV is the headline spec, not a range; 4.2 MW is the data-centre configuration (5 MW is the solar/storage configuration of the same platform)"
+   },
+   {
+    "vendor": "Siemens + Reinhausen",
+    "output": "800 V DC",
+    "kvLow": 34.5,
+    "kvHigh": 36.0,
+    "mw": null,
+    "evidence": "announced",
+    "hq": "EU",
+    "t": "WEB, verified 2026-09-23",
+    "note": "\"up to 36 kV\" — 36 kV is the IEC class containing 34.5 kV; no MW rating, no date",
+    "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-reinhausen-develop-direct-current-power-solutions-ai-data"
+   },
+   {
+    "vendor": "Delta Electronics",
+    "output": "800 V DC",
+    "kvLow": 6.6,
+    "kvHigh": 35.0,
+    "mw": null,
+    "evidence": "supplying",
+    "hq": "TW",
+    "t": "WEB, verified 2026-09-23",
+    "note": "widest published incumbent range; Delta states \"dozens of units in Asia, customer pilots underway in the US\" — a vendor claim relayed by trade press",
+    "url": "https://www.datacenterknowledge.com/energy-power-supply/solid-state-transformers-power-next-gen-ai-data-centers"
+   },
+   {
+    "vendor": "SolarEdge",
+    "output": "800–1,500 V DC",
+    "kvLow": 13.8,
+    "kvHigh": 34.5,
+    "mw": 5.0,
+    "evidence": "announced",
+    "hq": "IL/US",
+    "t": "WEB, verified 2026-09-23",
+    "note": "2–5 MW modular, Infineon SiC, >99% claimed; customer testing targeted 2027",
+    "url": "https://www.powerelectronicsnews.com/real-world-solid-state-transformers-overcome-barriers-to-meet-adoption-needs-of-ac-and-dc-networks/"
+   },
+   {
+    "vendor": "Enphase",
+    "output": "800 V (±400 V) DC",
+    "kvLow": 13.8,
+    "kvHigh": 34.5,
+    "mw": 1.25,
+    "evidence": "announced",
+    "hq": "US",
+    "t": "WEB, verified 2026-09-23",
+    "note": "distributed architecture: 342 x 4 kW GaN modules per 1.25 MW rack; demo late 2026, pilots 2027, volume 2028",
+    "url": "https://enphase.com/iq-solid-state-transformer"
+   },
+   {
+    "vendor": "DG Matrix (Cell-MV, roadmap)",
+    "output": "800 V DC — the MV unit is unshipped",
+    "kvLow": 12.0,
+    "kvHigh": 34.5,
+    "mw": 15.0,
+    "evidence": "announced",
+    "hq": "US",
+    "t": "DOSSIER dg-matrix v1",
+    "note": "the 15 MW is a marketing rating for an unshipped unit; the CFO deck dates the multi-port MV SST to \"2028+\""
+   },
+   {
+    "vendor": "Novos Power",
+    "output": "400–1,500 V DC (claimed)",
+    "kvLow": 13.0,
+    "kvHigh": 48.0,
+    "mw": 10.0,
+    "evidence": "announced",
+    "hq": "US",
+    "t": "DOSSIER novos-power v1",
+    "note": "stated three ways (13-48 kV on the site, 35 kV in a July 2026 post); 48 kV is above the 38 kV ceiling of UL 2877"
+   },
+   {
+    "vendor": "Eaton (Resilient Power)",
+    "output": "800 V DC (trade press)",
+    "kvLow": 12.47,
+    "kvHigh": 15.0,
+    "mw": 2.0,
+    "evidence": "announced",
+    "hq": "US",
+    "t": "WEB, verified 2026-09-23",
+    "note": "\"2 MW, 15 kV class\" is trade-press only; eaton.com returned HTTP 503 to the research pass, so no vendor spec sheet was obtained",
+    "url": "https://mgrid.org/2025/08/15/eaton-closes-acquisition-of-resilient-power-systems-to-bring-medium-voltage-solid-state-transformers-in-house/"
+   },
+   {
+    "vendor": "Sungrow (EnerNeo)",
+    "output": "800 V DC",
+    "kvLow": 10.0,
+    "kvHigh": 13.8,
+    "mw": 3.0,
+    "evidence": "supplying",
+    "hq": "CN",
+    "t": "DOSSIER sungrow v9",
+    "note": "the only unit a filing describes as supplying the market — and it stops at 13.8 kV"
+   },
+   {
+    "vendor": "Hyosung",
+    "output": "undisclosed",
+    "kvLow": 22.9,
+    "kvHigh": 22.9,
+    "mw": 1.05,
+    "evidence": "lab demo",
+    "hq": "KR",
+    "t": "WEB, verified 2026-09-23",
+    "note": "22.9 kV is a Korean class; the nearest US analogue is 24.9 kV, not 34.5 kV",
+    "url": "https://interestingengineering.com/energy/worlds-first-22-9kv-solid-state-transformer"
+   },
+   {
+    "vendor": "Alderbuck Energy",
+    "output": "800 V DC",
+    "kvLow": 12.0,
+    "kvHigh": 12.0,
+    "mw": null,
+    "evidence": "factory test",
+    "hq": "US",
+    "t": "WEB, verified 2026-09-23",
+    "note": "the only named US AI-compute site with a disclosed class attached to an SST — San Diego Supercomputer Center, host utility SDG&E, CEC-funded. It is 12 kV",
+    "url": "https://alderbuck.com/alderbuck-energy-to-deploy-800-vdc-solid-state-transformer-platform-at-san-diego-supercomputer-center/"
+   },
+   {
+    "vendor": "Zhonhen (Panama)",
+    "output": "240 / 400 / 800 V DC",
+    "kvLow": 10.0,
+    "kvHigh": 10.0,
+    "mw": 2.5,
+    "evidence": "supplying",
+    "hq": "CN",
+    "t": "DOSSIER zhonhen v8",
+    "note": "a transformer-rectifier architecture, not an SST; plotted because buyers place it against SSTs"
+   },
+   {
+    "vendor": "JST Power Equipment",
+    "output": "800 V DC",
+    "kvLow": 10.0,
+    "kvHigh": 10.0,
+    "mw": 2.4,
+    "evidence": "factory test",
+    "hq": "CN",
+    "t": "WEB, verified 2026-09-23",
+    "note": "10 kV is a China class",
+    "url": "https://en.cnesa.org/latest-news/2025/11/25/nvidias-800v-architecture-reshapes-ai-data-centers-31-core-industry-chain-companies-unveiled"
+   },
+   {
+    "vendor": "ETH Zurich (research)",
+    "output": "800 V DC",
+    "kvLow": 13.2,
+    "kvHigh": 13.2,
+    "mw": 0.4,
+    "evidence": "lab demo",
+    "hq": "CH",
+    "t": "WEB, verified 2026-09-23",
+    "note": "400 kW at 98% measured — the best-instrumented efficiency figure in the set, and it is a laboratory unit",
+    "url": "https://www.ams-publications.ee.ethz.ch/uploads/tx_ethpublications/INTELEC_2025_-_2_30PM_Kolar_99___Efficient_SSTs_for_Future_Datacenters_Keynote_231025.pdf"
+   },
+   {
+    "vendor": "EPFL + Navitas",
+    "output": "800 V DC → 12 V",
+    "kvLow": 3.3,
+    "kvHigh": 3.3,
+    "mw": 0.25,
+    "evidence": "lab demo",
+    "hq": "CH",
+    "t": "WEB, verified 2026-09-23",
+    "note": "3.3 kV is not a US service class at all",
+    "url": "https://www.powerelectronicsnews.com/real-world-solid-state-transformers-overcome-barriers-to-meet-adoption-needs-of-ac-and-dc-networks/"
+   },
+   {
+    "vendor": "ABB (HiPerGuard, MV UPS)",
+    "output": "MEDIUM-VOLTAGE AC — a UPS, not a converter",
+    "kvLow": 4.16,
+    "kvHigh": 34.5,
+    "mw": 2.5,
+    "evidence": "supplying",
+    "hq": "CH/SE",
+    "t": "DOSSIER abb v7",
+    "note": "output is medium-voltage AC — it is a UPS, not an MV-to-800 V DC converter. Plotted because it is the only orderable solid-state MV product"
+   }
+  ],
+  "undisclosed": [
+   {
+    "vendor": "Megmeet",
+    "why": "The SST is described only as \"grid HV input to 800 V DC\". Across the 38 sources pinned in dossier v7 the string \"kV\" does not appear once, and a four-filing text scan of the FY2025 annual report, the H1 2026 interim and two investor-relations records found zero hits for kV, 千伏 or 中压.",
+    "t": "DOSSIER megmeet v7",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522762.PDF"
+   },
+   {
+    "vendor": "Amperesand",
+    "why": "No kV figure appears anywhere on the company's own site — \"configurable MV AC and LV DC\" only. The 10-34.5 kV figure in September 2026 reporting is third-party. Job postings cite \"medium-voltage (5 kV to 36 kV) systems\".",
+    "t": "DOSSIER amperesand v2"
+   },
+   {
+    "vendor": "GE Vernova",
+    "why": "Reference designs cite 13.8 kV AC to 800 V DC at the perimeter, but no SST product class, rating or date is published. A first delivery to an unnamed hyperscaler was stated for fall 2026.",
+    "t": "DOSSIER ge-vernova v6"
+   },
+   {
+    "vendor": "Hitachi Energy",
+    "why": "No SST product is named at all. Its engineers are separately quoted cautioning that compact 34.5 kV designs present significant design challenges.",
+    "t": "DOSSIER hitachi-energy v5"
+   },
+   {
+    "vendor": "Vertiv",
+    "why": "34.5 kV to 800 V DC at 3-5 MW is stated by an engineering director as a goal, not a product. The shipping sidecar is 400-900 kW and is not an SST.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://www.powerelectronicsnews.com/the-evolution-in-data-center-power-distribution-panel-part-2-ssts/"
+   },
+   {
+    "vendor": "Schneider Electric",
+    "why": "No MV SST programme was found in the pinned sources. The 1.2 MW/rack 800 V DC sidecar was still a prototype at GTC 2026 with no commercial date.",
+    "t": "DOSSIER schneider-electric v9"
+   },
+   {
+    "vendor": "Sinexcel",
+    "why": "Management states four times that the AIDC critical-power products are samples in development with formal sales not yet realised; the string \"800V\" does not appear in its 212-page interim.",
+    "t": "DOSSIER sinexcel v8"
+   },
+   {
+    "vendor": "NC State / NYPA / EPRI (1 MW research unit)",
+    "why": "The only independently verified megawatt-class SST validated on a live utility distribution feeder — and the feeder voltage class is not stated in any coverage found.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://news.ncsu.edu/2026/08/solid-state-transformer-success/"
+   }
+  ]
+ },
+ "classCost": {
+  "caption": "What the step from the 15 kV class to the 35 kV class costs inside the converter. Cells per phase drive every other count: each cell is a complete converter with its own DC-link capacitor, medium-frequency transformer, gate drivers and sensors.",
+  "boundary": "Cell counts computed for this briefing on the primer's stated assumptions (PRIMER fig.5): cell DC link = 0.55 x device rating, phase peak = V_LL x sqrt2 / sqrt3 x 1.10 grid overvoltage, plus one redundant cell per phase. Real designs vary the derating and the redundancy; the ratios between classes are what matter, not the absolute counts. BIL is the ANSI C84.1 equipment class, not a vendor figure.",
+  "devices": [
+   1.7,
+   3.3
+  ],
+  "classes": [
+   {
+    "kv": 12.47,
+    "ansi": "15 kV class",
+    "bilKv": 95,
+    "usage": "the most common US service class nationally; the design point most SST vendors quote",
+    "t": "PRIMER ch.6.1"
+   },
+   {
+    "kv": 13.8,
+    "ansi": "15 kV class",
+    "bilKv": 95,
+    "usage": "the other half of the 15 kV class; Sungrow's EnerNeo tops out here",
+    "t": "PRIMER ch.6.1"
+   },
+   {
+    "kv": 24.9,
+    "ansi": "25 kV class",
+    "bilKv": 125,
+    "usage": "parts of the Midwest, Mountain West and cooperatives",
+    "t": "PRIMER ch.6.1"
+   },
+   {
+    "kv": 34.5,
+    "ansi": "35 kV class",
+    "bilKv": 150,
+    "usage": "large Texas, Southeast and Mid-Atlantic campuses; Northern Virginia runs 34.5 kV distribution behind 230 kV ties",
+    "t": "PRIMER ch.6.1"
+   }
+  ],
+  "insulationNote": {
+   "text": "A 35 kV interface needs roughly 100 kV of insulation in the medium-frequency transformer — \"three times the insulation\", in TDK's assessment. NC State targets 50 kV BIL as the requirement and reaches 100 kV BIL at >99.5% transformer efficiency at 40 kHz.",
+   "t": "PRIMER ch.5.3"
+  },
+  "multiplier": {
+   "text": "Because cell count scales roughly linearly with input voltage, the 13.8 to 34.5 kV step multiplies cells, medium-frequency transformers, gate drivers and control channels by about 2.5x. A 13.8 kV SST is a different product from a 34.5 kV SST.",
+   "v": 2.5,
+   "t": "PRIMER ch.6.1"
+  },
+  "cells": [
+   {
+    "kv": 12.47,
+    "ansi": "15 kV class",
+    "bilKv": 95,
+    "cells1_7": 13,
+    "cells3_3": 8,
+    "t": "ANALYSIS computed on PRIMER fig.5 assumptions"
+   },
+   {
+    "kv": 13.8,
+    "ansi": "15 kV class",
+    "bilKv": 95,
+    "cells1_7": 15,
+    "cells3_3": 8,
+    "t": "ANALYSIS computed on PRIMER fig.5 assumptions"
+   },
+   {
+    "kv": 24.9,
+    "ansi": "25 kV class",
+    "bilKv": 125,
+    "cells1_7": 25,
+    "cells3_3": 14,
+    "t": "ANALYSIS computed on PRIMER fig.5 assumptions"
+   },
+   {
+    "kv": 34.5,
+    "ansi": "35 kV class",
+    "bilKv": 150,
+    "cells1_7": 35,
+    "cells3_3": 19,
+    "t": "ANALYSIS computed on PRIMER fig.5 assumptions"
+   }
+  ]
+ },
+ "megmeetMix": {
+  "caption": "Megmeet's six business groups, H1 2026: revenue share against gross margin. The biggest unit carries the worst margin and is getting worse; the unit carrying the AI-data-centre business is the only one whose margin expanded.",
+  "boundary": "H1 2026 interim, six months to 30 June 2026, RMB. Rows sum to the reported RMB 6.061bn total. Segment revenue and the margin column come from a data aggregator restating the filing; the reconciliation to the reported total is the reason it is used. Note the unit: Chinese filings quote 亿元 = 100 million RMB, and machine summarisers routinely render it as \"billion\". FY2025 group revenue is RMB 9.403bn, about USD 1.3bn — not USD 13bn.",
+  "currency": "RMB",
+  "rows": [
+   {
+    "label": "Smart living (appliance controls, smart bathroom)",
+    "v": 2557198965,
+    "t": "WEB, verified 2026-09-23",
+    "share": 42.19,
+    "gm": 18.39,
+    "gmPrior": 22.6,
+    "cn": "智慧生活产品",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   },
+   {
+    "label": "Power products (incl. data centre and server)",
+    "v": 1841320280,
+    "t": "DOSSIER megmeet v7",
+    "share": 30.38,
+    "gm": 25.06,
+    "gmPrior": 22.2,
+    "cn": "电源产品",
+    "yoy": 60.92
+   },
+   {
+    "label": "New-energy transportation (NEV and rail)",
+    "v": 562715449,
+    "t": "WEB, verified 2026-09-23",
+    "share": 9.28,
+    "gm": 13.46,
+    "gmPrior": 14.0,
+    "cn": "新能源交通",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   },
+   {
+    "label": "Industrial automation",
+    "v": 448410888,
+    "t": "WEB, verified 2026-09-23",
+    "share": 7.4,
+    "gm": 27.78,
+    "gmPrior": 28.4,
+    "cn": "工业自动化",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   },
+   {
+    "label": "Magnetics and precision manufacturing",
+    "v": 302365213,
+    "t": "WEB, verified 2026-09-23",
+    "share": 4.99,
+    "gm": 8.79,
+    "gmPrior": 5.1,
+    "cn": "磁电精造",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   },
+   {
+    "label": "Intelligent equipment (welding, microwave, oil)",
+    "v": 279872344,
+    "t": "WEB, verified 2026-09-23",
+    "share": 4.62,
+    "gm": 39.67,
+    "gmPrior": 36.0,
+    "cn": "智能装备",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   },
+   {
+    "label": "Other",
+    "v": 69121482,
+    "t": "WEB, verified 2026-09-23",
+    "share": 1.14,
+    "gm": 23.44,
+    "gmPrior": null,
+    "cn": "其他",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   }
+  ],
+  "groupTotals": [
+   {
+    "label": "H1 2026 revenue",
+    "v": 6061004621,
+    "t": "DOSSIER megmeet v7",
+    "unit": "RMB",
+    "yoy": 29.68
+   },
+   {
+    "label": "H1 2026 attributable net profit",
+    "v": 252070400,
+    "t": "DOSSIER megmeet v7",
+    "unit": "RMB",
+    "yoy": 45.21
+   },
+   {
+    "label": "H1 2026 ex-non-recurring net profit",
+    "v": 118000000,
+    "t": "WEB, verified 2026-09-23",
+    "unit": "RMB",
+    "yoy": -16.13,
+    "url": "https://news.qq.com/rain/a/20260828A04BC400"
+   },
+   {
+    "label": "H1 2026 operating cash flow change",
+    "v": -84.62,
+    "t": "DOSSIER megmeet v7",
+    "unit": "% YoY"
+   },
+   {
+    "label": "FY2025 revenue",
+    "v": 9403000000,
+    "t": "DOSSIER megmeet v7",
+    "unit": "RMB",
+    "yoy": 15.05
+   },
+   {
+    "label": "FY2025 attributable net profit",
+    "v": 145800000,
+    "t": "DOSSIER megmeet v7",
+    "unit": "RMB",
+    "yoy": -66.58
+   },
+   {
+    "label": "H1 2026 direct overseas revenue",
+    "v": 2180000000,
+    "t": "DOSSIER megmeet v7",
+    "unit": "RMB",
+    "yoy": 45.49,
+    "share": 35.97
+   }
+  ]
+ },
+ "obstacles": {
+  "caption": "Every obstacle between an SST and a US data hall, grouped by family, with the named owner of the work and a status word from the fixed set. Bars are counts of obstacles at each status within a family — the shape of the stack, not a severity score.",
+  "boundary": "Status vocabulary is fixed: unsolved · lab · pilot · product · standardised. One row per obstacle; a row with no named owner is counted as unsolved regardless of how close the engineering looks.",
+  "rows": [
+   {
+    "family": "Technical",
+    "item": "Overload / short-time rating",
+    "owner": "Nobody owns it as a published rating. Vendors claim thermal margin as a design property.",
+    "status": "unsolved",
+    "t": "PRIMER ch.5.1",
+    "mech": "An oil transformer carries 150-200% of rated kVA for minutes on thermal mass alone; a converter's overload is bounded by junction temperature and must be bought as silicon. No first-party SST vendor publishes an overload curve.",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://www.wolfspeed.com/knowledge-center/article/amperesand-case-study/"
+   },
+   {
+    "family": "Technical",
+    "item": "Inrush",
+    "owner": "This one goes the SST's way — energisation is a power-electronics soft start.",
+    "status": "product",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "No magnetising inrush, so no reactive-power step at close-in.",
+    "url": "https://gridtechpedia.inl.gov/technology/solid-state-devices-ssds-and-the-power-grid/"
+   },
+   {
+    "family": "Technical",
+    "item": "DC fault current, no natural zero crossing",
+    "owner": "ABB (claims the first fully IEC-certified SSCB in production); Eaton (1500 V / 1250 A hybrid SSCB).",
+    "status": "product",
+    "t": "PRIMER ch.5.2",
+    "mech": "DC-link capacitors discharge into a fault at 200 A/us; Siemens measured that interruption at that rise rate \"was only possible with solid-state circuit breakers\". Fused clearing took about 20 ms.",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://www.abb.com/global/en/areas/electrification/campaigns/infinitus-dc-portfolio"
+   },
+   {
+    "family": "Technical",
+    "item": "SiC cosmic-ray single-event burnout and derating",
+    "owner": "NASA NEPP on the device physics; device vendors on the FIT budget.",
+    "status": "lab",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "Atmospheric neutrons cause burnout at 50% or less of rated breakdown, so MV cells must be derated — which is where the 0.55 factor in the cell-count arithmetic comes from.",
+    "url": "https://nepp.nasa.gov/files/29832/NEPP-CP-2018-Lauenstein-Galloway-Paper-HEART-TN65899-NEPPweb-reuse-TN54861.pdf"
+   },
+   {
+    "family": "Technical",
+    "item": "Cell failure, redundancy and bypass",
+    "owner": "Heron (two cell failures per phase, sub-cycle bypass); Amperesand (proprietary redundancy); ORNL flags the open problem.",
+    "status": "pilot",
+    "t": "PRIMER ch.5.4",
+    "mech": "ORNL: series-stacked designs need a failed die to fail short and keep conducting for months. Press-pack silicon does; SiC's thermal stability, small die area and short short-circuit withstand make it \"an open research challenge\"."
+   },
+   {
+    "family": "Technical",
+    "item": "Insulation coordination and partial discharge",
+    "owner": "Georgia Tech (Divan, Graber et al.); NC State on BIL; MFT insulation is an active academic area.",
+    "status": "lab",
+    "t": "PRIMER ch.5.3",
+    "mech": "Georgia Tech identify the mismatch between MOV protective levels and SST insulation strength, and \"the incompatibility of standard impulse test on SST protective structures\" — the standard BIL test does not apply cleanly to an SST.",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://www.osti.gov/biblio/1892478"
+   },
+   {
+    "family": "Infrastructure",
+    "item": "Interconnection queue and transmission build",
+    "owner": "FERC (RM26-4-000); nobody can shorten it with power electronics.",
+    "status": "unsolved",
+    "t": "PRIMER ch.6.1",
+    "mech": "ERCOT: about 410 GW queued against 9.0 GW approved to energise and a 3.9 GW observed large-load peak. 888 miles of 345 kV-and-above built in a year against a benchmark near 5,000."
+   },
+   {
+    "family": "Infrastructure",
+    "item": "Transformer and switchgear lead times",
+    "owner": "Hitachi Energy, Siemens Energy, GE Vernova/Prolec — all building capacity, all arriving late.",
+    "status": "pilot",
+    "t": "PRIMER ch.6.2",
+    "mech": "Standard units about 128 weeks, generator step-ups about 144, worst cases near four years. One flagship US plant at 57 units a year is about 6% of national demand, arriving 2027."
+   },
+   {
+    "family": "Infrastructure",
+    "item": "Ride-through and large-load standards",
+    "owner": "NERC Project 2026-02 (CLO-001/002/003); FERC deadline 31 December 2026; ERCOT NOGRR 282 already numeric.",
+    "status": "standardised",
+    "t": "PRIMER ch.6.3",
+    "mech": "This is the one constraint an SST genuinely relieves: a converter-fronted load is the only kind that can be programmed to a curve and modelled as one device.",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://rmsenergy.com/tdec-post/after-3-8-gw-dropped-in-virginia-nercs-computational-load-standards-move-from-draft-to-deadline/"
+   },
+   {
+    "family": "O&M",
+    "item": "Mean time to repair and hot-swap",
+    "owner": "Amperesand claims a power stage swaps in under 20 minutes, two people with a lift. The claim is published in a case study by the company that sells it the silicon.",
+    "status": "product",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "The swap-in-minutes claim is not novel to SSTs — GE Vernova markets the same property for its MM7 modular multilevel drive, which has two decades of field service behind it.",
+    "url": "https://www.wolfspeed.com/knowledge-center/article/amperesand-case-study/"
+   },
+   {
+    "family": "O&M",
+    "item": "MTBF or FIT for a complete MV converter",
+    "owner": "Nobody. No vendor publishes one.",
+    "status": "unsolved",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "The one independent number available: N+1 raises the MTBF of a modular multilevel drive by a factor of about 1.7 — a long way from the step change implied by \"five nines\".",
+    "url": "https://pro-etic.com/which-medium-voltage-drive-topology-could-meet-my-reliability-availability-requirements/"
+   },
+   {
+    "family": "O&M",
+    "item": "Service life against an oil transformer",
+    "owner": "Nobody. No standards body has set a life class for an MV SST.",
+    "status": "unsolved",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "The published SST design target found is \"15+ years\". An oil transformer is financed against 30-40. The owner is buying a mid-life silicon replacement into the capital plan, and nobody has costed it.",
+    "url": "https://www.wolfspeed.com/knowledge-center/article/amperesand-case-study/"
+   },
+   {
+    "family": "O&M",
+    "item": "Spares strategy, spares cost and warranty",
+    "owner": "Nobody, with one exception: Enphase publishes 10% module redundancy and a 10-year limited warranty.",
+    "status": "unsolved",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "An oil transformer's spares strategy is a bushing and a fan. A several-hundred-module SST's spares strategy is an inventory of power electronics with its own obsolescence clock.",
+    "url": "https://enphase.com/iq-solid-state-transformer"
+   },
+   {
+    "family": "O&M",
+    "item": "Part-load efficiency",
+    "owner": "Nobody publishes a curve.",
+    "status": "unsolved",
+    "t": "ANALYSIS on the research pass",
+    "mech": "Every efficiency figure in the market — 98%, >98.5%, 98.5-99% — is a peak or nominal number. A data hall does not run at rated load."
+   },
+   {
+    "family": "O&M",
+    "item": "Firmware update and cyber exposure",
+    "owner": "ISA/IEC 62443 as the framework; the FCC as the unexpected regulator of the update channel itself.",
+    "status": "standardised",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "A companion FCC waiver preserves qualifying firmware updates on already-authorised covered devices only through at least 1 January 2029 — the right to patch is now a time-limited regulatory grant. Whether NERC CIP attaches to a behind-the-meter hall-edge SST is unaddressed anywhere.",
+    "url": "https://www.morganlewis.com/pubs/2026/08/fcc-adds-foreign-produced-advanced-robotic-devices-and-power-inverters-to-covered-list-opens-conditional-approval-process"
+   },
+   {
+    "family": "O&M",
+    "item": "Technicians",
+    "owner": "Google/NECA/Electrical Training Alliance are funding training; the arithmetic does not close on the relevant timescale.",
+    "status": "pilot",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "A reported shortfall of more than 300,000 electricians against roughly 20,000 retiring a year; an apprentice starting a five-year IBEW programme in 2025 qualifies in 2030.",
+    "url": "https://tradecareerpath.com/blog/electricians-ai-data-centers/"
+   },
+   {
+    "family": "Standards",
+    "item": "DC arc-flash incident-energy model",
+    "owner": "NFPA Fire Protection Research Foundation — project open, seeking $3-4M, results aimed at NFPA 70E 2030.",
+    "status": "unsolved",
+    "t": "PRIMER ch.6.4",
+    "mech": "NFPA 70E 2027 adds a new Article 310 naming DC thresholds; the calculation method is aimed at 2030. The hazard is named three years before the method exists.",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://www.ecmweb.com/safety/arc-flash/news/55356294/fire-protection-research-foundation-seeks-sponsors-for-dc-arc-flash-hazard-study"
+   },
+   {
+    "family": "Standards",
+    "item": "Listing of an MV power-conversion unit",
+    "owner": "UL (1741 +SA/SB, 347A, 2877); IEC SC 22E for 62477-2 Edition 2, CDV vote closed 2026-03-13.",
+    "status": "standardised",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "The envelope exists. What does not exist is a listed data-centre SST: no vendor had completed UL certification for data-centre SST deployment as of May 2026, per an analyst house that sells the newsletter the claim appears in.",
+    "url": "https://www.standards.iteh.ai/catalog/standards/clc/787271b2-55a0-44a2-b650-c6a67ef7bdd6/pren-iec-62477-2-2025"
+   },
+   {
+    "family": "Standards",
+    "item": "The 800 V DC specification itself",
+    "owner": "OCP — Google, Microsoft and NVIDIA. LVDC Solid-State Transformer Specification v0.3, July 2026; more than 80 manufacturers building to it.",
+    "status": "standardised",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "This is the vocabulary a buyer's engineer will use. The specification document itself could not be retrieved in this run — opencompute.org returned HTTP 403 to every attempt.",
+    "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+   },
+   {
+    "family": "Utility",
+    "item": "Acceptance of a converter at the service point",
+    "owner": "ERCOT/PUCT (NOGRR 282; 16 TAC 25.194, Project 58481); NERC Project 2026-02.",
+    "status": "standardised",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "NOGRR 282 is now a numeric test: ride through 2 s at 0.85 pu and 150 ms below 0.35 pu, draw no more than 150% current, recover to 90% of consumption within 2 s, survive six sags in 90 s.",
+    "url": "https://rmsenergy.com/tdec-post/after-3-8-gw-dropped-in-virginia-nercs-computational-load-standards-move-from-draft-to-deadline/"
+   },
+   {
+    "family": "Utility",
+    "item": "Approved-equipment-list qualification",
+    "owner": "Nobody visible. No covered vendor discloses a US utility qualification.",
+    "status": "unsolved",
+    "t": "PRIMER ch.6.5",
+    "mech": "At 12.47-34.5 kV the service transformer is commonly utility-owned. An SST displacing it must be accepted onto a utility's approved-equipment list — a multi-year qualification with no visible US precedent, which is why every announced US pilot sits behind a customer-owned MV substation."
+   },
+   {
+    "family": "Utility",
+    "item": "MV equipment inside an operating data hall",
+    "owner": "Nobody. No US AHJ precedent was located.",
+    "status": "unsolved",
+    "t": "PRIMER ch.6.4",
+    "mech": "An SST terminating 34.5 kV at the row turns white space into MV-classified space, with vault, access, ventilation and qualified-person rules. Probably the largest permitting unknown for facility-level SSTs."
+   },
+   {
+    "family": "Policy",
+    "item": "FCC Covered List",
+    "owner": "FCC PSHSB (DA 26-786, 28 July 2026); DoW/DHS conditional approval, applications due 1 January 2028.",
+    "status": "standardised",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "Two prongs, both required: a bidirectional AC-DC converter, and components enabling remote communication. No voltage or power threshold. \"Foreign-produced\" is the Buy American content test at 48 CFR 25.101(a), not a nationality test — so a US-headquartered vendor building offshore is captured.",
+    "url": "https://www.morganlewis.com/pubs/2026/08/fcc-adds-foreign-produced-advanced-robotic-devices-and-power-inverters-to-covered-list-opens-conditional-approval-process"
+   },
+   {
+    "family": "Policy",
+    "item": "Executive Order 14421",
+    "owner": "DOE — implementing regulations due 24 December 2026, FAR recommendations 22 February 2027.",
+    "status": "standardised",
+    "t": "WEB, verified 2026-09-23",
+    "mech": "Signed 26 August 2026. Covers transformers, inverters, breakers, turbines and storage — but applies at 69 kV and above and excludes local distribution. A 34.5 kV hall-edge SST is probably outside it and inside the FCC list.",
+    "url": "https://www.hklaw.com/en/insights/publications/2026/09/executive-order-declares-national-emergency-to-secure-us"
+   },
+   {
+    "family": "Policy",
+    "item": "Insurance and bankability of a novel MV asset",
+    "owner": "Nobody visible.",
+    "status": "unsolved",
+    "t": "ANALYSIS on the research pass",
+    "mech": "No insurer, reinsurer, broker or owner's-engineer standard naming solid-state transformers was found. For a first-of-a-kind MV asset this is the largest single information gap on the commercial side."
+   }
+  ]
+ },
+ "timelines": {
+  "caption": "What NVIDIA's and Oracle's published programmes actually commit to, on one axis. NVIDIA publishes an architecture with dates; Oracle publishes power procurement and says nothing about conversion.",
+  "boundary": "Milestones are dated from the named source only. The Gen 1-4 rack ladder and the 4.8 MW / 2029 block are page-referenced in the repo's guidance module (the August 2026 execution paper held in the repo) but could NOT be confirmed on any public NVIDIA page in this run — they are marked corpus-only.",
+  "lanes": [
+   {
+    "lane": "NVIDIA architecture",
+    "items": [
+     {
+      "date": "2025-10-13",
+      "text": "800 VDC ecosystem published; about 30 named partners; MV input cited as \"e.g. 35 kVAC\"; conversion \"at the facility level\"",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/"
+     },
+     {
+      "date": "2026-03",
+      "text": "Joint NVIDIA / Google / Microsoft 800 VDC white paper via OCP",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+     },
+     {
+      "date": "2026-06-01",
+      "text": "Siemens + NVIDIA + Fluence + nVent DSX Vera Rubin reference design: nominal 34.5 kV utility, 136 MW facility / 100 MW IT, factory-tested MV and LV skids, UL-aligned, Tier III concurrent maintainability — and no mention of 800 VDC or SSTs at all",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-partners-develop-reference-architecture-purpose-built-nvidia-ai-data"
+     },
+     {
+      "date": "2026-07",
+      "text": "OCP LVDC Solid-State Transformer Specification v0.3 (Microsoft, Google, NVIDIA)",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+     },
+     {
+      "date": "2026-08-11",
+      "text": "Three-tier rollout stated: power rack H2 2026, row power center 2 MW/row 2027, DC power block 2027+; more than 80 manufacturers building to the spec",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+     },
+     {
+      "date": "2026-09-21",
+      "text": "NVIDIA DSX Ready qualification programme launches — covering BESS and CDUs only. There is no NVIDIA qualification path for an SST",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/"
+     },
+     {
+      "date": "2026-H2",
+      "text": "800 VDC power rack enters production; Vera Rubin NVL72 ships",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://developer.nvidia.com/blog/nvidia-vera-rubin-pod-seven-chips-five-rack-scale-systems-one-ai-supercomputer/"
+     },
+     {
+      "date": "2027",
+      "text": "Row power center, 2 MW per row, overhead 800 VDC busway; full-scale 800 VDC production \"coincides with Kyber\"",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+     },
+     {
+      "date": "2029",
+      "text": "Next-generation SST and MV-direct conversion: 34.5 kV AC to 800 V DC, blocks toward 10 MW — corpus-only, page-referenced to the August 2026 execution paper, not confirmed on a public NVIDIA page",
+      "t": "GUIDANCE nvidia-800vdc p22-23"
+     }
+    ]
+   },
+   {
+    "lane": "Oracle / OCI",
+    "items": [
+     {
+      "date": "2025-10-14",
+      "text": "\"First Principles\" — OCI's only engineering post on AI power. Its entire power content is capacitance, advanced energy storage, hardware-accelerated GPU ramping and software ramp control. No voltage, no kW/rack, no topology",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://blogs.oracle.com/cloud-infrastructure/first-principles-data-center-innovations"
+     },
+     {
+      "date": "2026-01-26",
+      "text": "Oracle states it is funding onsite transmission lines, battery storage and dedicated substations so costs are not passed to ratepayers",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://www.oracle.com/news/announcement/blog/oracle-ai-infrastructure-in-2026-and-our-commitment-to-local-communities-2026-01-26/"
+     },
+     {
+      "date": "2026-04-27",
+      "text": "Project Jupiter (Dona Ana County, NM) to be fully powered by up to 2.45 GW of Bloom fuel cells, replacing planned gas turbines and diesel, as one single microgrid campus — Oracle's boldest published electrical decision",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/"
+     },
+     {
+      "date": "2026-09-15",
+      "text": "Investment in more than 1.7 GW of carbon-free electricity supplying ERCOT",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://www.oracle.com/data-centers/"
+     },
+     {
+      "date": "2026-09-16",
+      "text": "Project Lighthouse: Oracle names American Transmission Co. on the Ozaukee County interconnection — the only host transmission utility Oracle names itself",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://www.oracle.com/data-centers/"
+     },
+     {
+      "date": "not published",
+      "text": "Rack density, distribution voltage, where AC-to-DC conversion sits, MV-direct conversion, solid-state transformers, and any vendor-qualification programme. The only Oracle-800 VDC link in existence is NVIDIA naming OCI among providers \"designing for 800-volt data centers\" — NVIDIA's characterisation, not Oracle's statement",
+      "t": "WEB, verified 2026-09-23",
+      "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/"
+     }
+    ]
+   }
+  ]
+ },
+ "watchlistDelta": {
+  "caption": "The five things that moved between the primer's 12 September watch-list and 23 September.",
+  "boundary": "Movement is measured against the primer as published on 2026-09-12. Three dossiers landed 2026-09-19 and one 2026-09-21; two web findings are dated after the primer.",
+  "items": [
+   {
+    "n": 1,
+    "headline": "DG Matrix is not shipping the product the primer implies",
+    "was": "The primer places DG Matrix at \"PILOTS\" in the hall-edge layer with \"a 12-34.5 kV AC MV skid to 400-1,500 V DC … paid pilots since Q1 2025\".",
+    "now": "The shipping unit is the Interport Flex: a 480 V AC in / 800 V DC out low-voltage six-port skid at 96-97% peak on its own specification sheet. The CFO's own deck dates the multi-port MV SST to \"2028+\".",
+    "why": "It is the sharpest single correction in this brief. Anyone placing DG Matrix among the shipping medium-voltage vendors is placing the wrong product.",
+    "t": "DOSSIER dg-matrix v1"
+   },
+   {
+    "n": 2,
+    "headline": "A fifth SST name exists and the primer does not carry it",
+    "was": "The primer's SST roster is Sungrow, Heron, DG Matrix, Amperesand, Siemens/Reinhausen, Zhonhen's TRU.",
+    "now": "Novos Power — San Diego, registered in California 7 November 2025, 2-10 people, no disclosed round, no Form D, no patent or paper visible, no customer — with an input range stated three ways and one of those figures, 48 kV, above the 38 kV ceiling of UL 2877.",
+    "why": "Not a competitor. The reason to know the name is that a buyer may raise it, and the reason not to price it is that there is nothing to price.",
+    "t": "DOSSIER novos-power v1"
+   },
+   {
+    "n": 3,
+    "headline": "NVIDIA opened a qualification programme and SSTs are not in it",
+    "was": "No published NVIDIA qualification path existed; roster membership was the only signal.",
+    "now": "DSX Ready launched 2026-09-21 covering exactly two categories — BESS (Hitachi Energy, LG Energy Solution, Tesla) and CDUs (LG Electronics, LiquidStack, Vertiv) — with two different mechanics: BESS partners submit test data for NVIDIA review, CDU partners self-qualify. MV conversion is not a category and no timeline is published.",
+    "why": "The qualification path for an SST is unwritten. Which of the two mechanics a future MV category adopts is the biggest open commercial variable in the layer.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/"
+   },
+   {
+    "n": 4,
+    "headline": "The ride-through case got a bigger event and a harder number",
+    "was": "The primer's anchor is 10 July 2024 in Virginia: six faults in 82 seconds, about 1,500 MW of data-centre load dropped on customer-side protection.",
+    "now": "A second, larger event is reported on 22 July 2026 in Dominion's territory — 3.8 GW of data-centre load dropped on a normally cleared fault — and ERCOT's NOGRR 282 is now a numeric acceptance test: ride through 2 s at 0.85 pu and 150 ms below 0.35 pu, draw no more than 150% current, recover to 90% within 2 s, survive six sags in 90 s.",
+    "why": "These are two different events, two years apart, and should not be conflated. Together they are why the SST's best US argument keeps getting stronger.",
+    "t": "PRIMER ch.6.3",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://rmsenergy.com/tdec-post/after-3-8-gw-dropped-in-virginia-nercs-computational-load-standards-move-from-draft-to-deadline/"
+   },
+   {
+    "n": 5,
+    "headline": "The policy fence moved twice and the two regimes do not line up",
+    "was": "The primer records the FCC's 28 July 2026 Covered List action on foreign-produced connected power inverters.",
+    "now": "Executive Order 14421 followed on 26 August 2026 covering transformers, inverters, breakers, turbines and storage — but only at 69 kV and above, explicitly excluding local distribution. An August FCC update removed pure AC-to-DC rectifiers and off-grid inverters from the list and added a 45X safe harbour.",
+    "why": "A 34.5 kV behind-the-meter SST is probably outside EO 14421 and inside the FCC list, which has no voltage threshold. A unidirectional rectifier-only architecture may sit outside both. The asymmetry is the finding.",
+    "t": "WEB, verified 2026-09-23",
+    "t2": "WEB, verified 2026-09-23",
+    "url": [
+     "https://www.hklaw.com/en/insights/publications/2026/09/executive-order-declares-national-emergency-to-secure-us",
+     "https://pv-magazine-usa.com/2026/08/21/fcc-updates-foreign-inverter-ban-to-include-wired-devices-adds-45x-safe-harbor/"
+    ]
+   }
+  ]
+ },
+ "chains": {
+  "caption": "Three ways from the utility feed to the rack, stage by stage, with the loss each stage contributes and what the next architecture deletes.",
+  "boundary": "Stage losses are indicative and drawn from the published chain figures in PRIMER ch.4.3 and fig.8; they are NOT like-for-like between rows because each author publishes a different boundary and load point. That incomparability is the lesson, not a defect in the chart. Percentages are of input power at each stage.",
+  "rows": [
+   {
+    "id": "ac",
+    "name": "A — the AC hall today",
+    "stages": [
+     {
+      "n": "Utility MV feed",
+      "what": "12.47-34.5 kV AC arrives at a customer or utility substation",
+      "loss": null,
+      "t": "PRIMER ch.2.1"
+     },
+     {
+      "n": "60 Hz step-down transformer",
+      "what": "MV to 480 V AC. Tonnes of iron and oil; 200% overload for 30 minutes on thermal mass",
+      "loss": 0.7,
+      "t": "PRIMER ch.3.5"
+     },
+     {
+      "n": "Double-conversion UPS",
+      "what": "AC to DC to charge the battery, DC back to AC. Two conversions to survive a grid blip",
+      "loss": 3.0,
+      "t": "PRIMER ch.4.3"
+     },
+     {
+      "n": "PDU / RPP",
+      "what": "480 to 415 V AC distribution and regulation",
+      "loss": 0.5,
+      "t": "PRIMER ch.2.1"
+     },
+     {
+      "n": "Rack PSU",
+      "what": "415 V AC to 54 V DC inside each rack. At 54 V, one megawatt is 18.5 kA",
+      "loss": 2.4,
+      "t": "PRIMER ch.2.1"
+     },
+     {
+      "n": "Point of load",
+      "what": "54 V to about 1 V at hundreds of amps beside the silicon",
+      "loss": null,
+      "t": "PRIMER ch.2.1"
+     }
+    ]
+   },
+   {
+    "id": "tru",
+    "name": "B — the 2027 TRU hall",
+    "stages": [
+     {
+      "n": "Utility MV feed",
+      "what": "Unchanged",
+      "loss": null,
+      "t": "PRIMER ch.4.1"
+     },
+     {
+      "n": "Step-down transformer",
+      "what": "Still a 60 Hz iron-core transformer — this is what makes it a TRU and not an SST",
+      "loss": 1.0,
+      "t": "PRIMER ch.4.1"
+     },
+     {
+      "n": "Rectification",
+      "what": "Multi-pulse diode or thyristor rectifier, or an active front end, on the LV side. NVIDIA rates the MV rectifier at 98.5% or better and calls it \"a faster and proven path\"",
+      "loss": 1.5,
+      "t": "PRIMER ch.4.1"
+     },
+     {
+      "n": "800 V DC switchboard and busway",
+      "what": "6000 A-class board, parallel 1250 A busways, 125 A tap cans with MCCB or SSCB",
+      "loss": 0.3,
+      "t": "GUIDANCE nvidia-800vdc p18-21"
+     },
+     {
+      "n": "Rack DC-DC",
+      "what": "800 V to 54 V, or 800 V straight to 12 V with a 64:1 LLC and matrix transformer",
+      "loss": 1.5,
+      "t": "PRIMER ch.2.2"
+     },
+     {
+      "n": "Point of load",
+      "what": "Unchanged",
+      "loss": null,
+      "t": "PRIMER ch.2.2"
+     }
+    ]
+   },
+   {
+    "id": "sst",
+    "name": "C — the SST hall",
+    "stages": [
+     {
+      "n": "Utility MV feed",
+      "what": "Unchanged — and this is the point: the SST changes how conversion is done, not how many megawatts arrive",
+      "loss": null,
+      "t": "PRIMER ch.6"
+     },
+     {
+      "n": "Cascaded H-bridge active front end",
+      "what": "N cells in series per phase so each sees a fraction of the line voltage. 13.8 kV needs 14-15 cells per phase with 1.7 kV devices; 34.5 kV needs about 2.5x as many",
+      "loss": null,
+      "t": "PRIMER ch.3.2"
+     },
+     {
+      "n": "Dual active bridge + medium-frequency transformer",
+      "what": "Each cell chops its DC into a 5-50 kHz square wave through a suitcase-sized nanocrystalline or ferrite core. Raising f from 60 Hz to 10 kHz shrinks the core area by roughly 170x",
+      "loss": null,
+      "t": "PRIMER ch.3.3"
+     },
+     {
+      "n": "Paralleled cell outputs",
+      "what": "One stiff 800 V DC bus. The same box has now replaced the transformer, the UPS rectifier and the PDU regulation",
+      "loss": 1.5,
+      "t": "PRIMER ch.3.4"
+     },
+     {
+      "n": "800 V DC busway",
+      "what": "Same interface as row B",
+      "loss": 0.3,
+      "t": "GUIDANCE nvidia-800vdc p18-21"
+     },
+     {
+      "n": "Rack DC-DC",
+      "what": "Unchanged from row B",
+      "loss": 1.2,
+      "t": "PRIMER ch.4.3"
+     }
+    ]
+   }
+  ],
+  "publishedChains": [
+   {
+    "label": "Legacy AC hall, NVIDIA's figure",
+    "v": 10.0,
+    "t": "PRIMER ch.4.3",
+    "note": "NVIDIA puts a legacy AC hall's end-to-end efficiency at \"less than 90%\" — this is the baseline the \"up to 5%\" claim is made against"
+   },
+   {
+    "label": "UPS chain, RTDS study",
+    "v": 10.0,
+    "t": "PRIMER ch.4.3",
+    "lo": 7.0,
+    "hi": 13.0,
+    "note": "7-13% loss with \"stronger sensitivity to load level\""
+   },
+   {
+    "label": "SST, RTDS study",
+    "v": 2.0,
+    "t": "PRIMER ch.4.3",
+    "note": "about 2% \"with only minor fluctuations as the load varies\" — the partial-load property, from a real-time-simulator study, not a field measurement"
+   },
+   {
+    "label": "Traditional path, Heron's model",
+    "v": 6.4,
+    "t": "DOSSIER heron-power v1",
+    "note": "transformer 1.0% + UPS 3.0% + rack PSU 2.4%; a vendor model with vendor-chosen boundaries"
+   },
+   {
+    "label": "Heron Link model",
+    "v": 3.0,
+    "t": "DOSSIER heron-power v1",
+    "note": "SST plus SuperBBU 1.5% + DC-DC PSU 1.5%, \"or 3.4 MW more electricity at 100 MW\""
+   },
+   {
+    "label": "Transformer-plus-rectifier path, trade estimate",
+    "v": 2.7,
+    "t": "PRIMER ch.4.3",
+    "note": "about 97.3% grid-to-rack"
+   },
+   {
+    "label": "ETH Zurich 400 kW laboratory unit",
+    "v": 2.0,
+    "t": "WEB, verified 2026-09-23",
+    "note": "13.2 kV to 800 V DC, 98% measured — the best-instrumented number available, and it is a laboratory unit at 400 kW",
+    "url": "https://www.ams-publications.ee.ethz.ch/uploads/tx_ethpublications/INTELEC_2025_-_2_30PM_Kolar_99___Efficient_SSTs_for_Future_Datacenters_Keynote_231025.pdf"
+   }
+  ]
+ },
+ "competitorMap": {
+  "caption": "Every vendor with a hall-edge position, placed by the highest service-voltage class it has published against how far the evidence goes. Marker shape is headquarters region; a vendor with no published class cannot be placed and is listed beside the plot.",
+  "boundary": "x = evidence tier as an ordinal (announced < lab demo < factory test < field pilot < supplying), y = the highest published kV class. Neither axis is a quality score. A high y with a low x is a specification without a product; a high x with a low y is a product that cannot serve a 35 kV campus.",
+  "evidenceOrder": [
+   "announced",
+   "lab demo",
+   "factory test",
+   "field pilot",
+   "supplying"
+  ]
+ },
+ "buLadder": {
+  "caption": "Megmeet's position in each of its six business groups, ranked by how defensible the position is on the evidence rather than by revenue.",
+  "boundary": "Position is a judgement, stated as analysis; the revenue, share and margin figures beside it are sourced. \"Company claim\" means the only support located is Megmeet's own marketing. Market-share figures from consultancies are excluded entirely: two consultancies give the same appliance-controls competitor 13% and 77% of the same market.",
+  "rows": [
+   {
+    "unit": "Intelligent equipment — welding power sources",
+    "cn": "智能装备",
+    "share": 4.62,
+    "gm": 39.67,
+    "position": "Strongest in the company",
+    "evidence": "Megmeet claims the top share of China's robotic gas-shielded arc-welding power-source market for ten consecutive years since 2014 and about 30% share in 2020-21 — company claims on the company's own site, not an audited ranking. What is checkable is commercial: repeat framework deals with Honglu for 1,500 and then 1,800 robotic welding machines, integration with FANUC, ABB and KUKA, exports to 60+ countries. Highest gross margin in the company at 39.67% and rising.",
+    "rivals": "Jasic, Riland, Shanghai Hugong domestically; Panasonic and Lincoln Electric among global brands present in Chinese rankings",
+    "t": "DOSSIER megmeet v7",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://www.megmeet-welding.com/en/about"
+   },
+   {
+    "unit": "Power products — AI data centre and network power",
+    "cn": "电源产品",
+    "share": 30.38,
+    "gm": 25.06,
+    "position": "Real, growing, and unranked",
+    "evidence": "The only mainland vendor NVIDIA named for GB200 NVL72 power and on both published rosters; the company's own H1 2026 wording is \"one of NVIDIA's designated recommended data-centre power suppliers\" — membership of a set, not a rank. +60.92% at the only expanding gross margin in the company. No AI-data-centre revenue line is disclosed at any granularity.",
+    "rivals": "Delta (the benchmark), LITEON (the second source), Flex, Bizlink, Lead Wealth at the shelf; Sungrow, Zhonhen, Sinexcel and the incumbents at the block above",
+    "t": "DOSSIER megmeet v7"
+   },
+   {
+    "unit": "Industrial automation",
+    "cn": "工业自动化",
+    "share": 7.4,
+    "gm": 27.78,
+    "position": "Credible, small, well behind the leader",
+    "evidence": "+39.85% in FY2025, the second-highest margin pool in the company at 27.78%. The company's own scope statement leads with servo and VFD drives, not PLC and HMI. The market is genuinely unconcentrated — across ten listed Chinese players, CR3 is reported around 9% and CR10 around 12%.",
+    "rivals": "Inovance is the reference point and is far larger with a much broader portfolio; INVT also named. No source places Megmeet on a ranked share table against Siemens, Schneider, Mitsubishi Electric, Yaskawa or Estun",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://finance.sina.com.cn/roll/2025-02-19/doc-inekytki4968102.shtml"
+   },
+   {
+    "unit": "New-energy transportation (NEV and rail)",
+    "cn": "新能源交通",
+    "share": 9.28,
+    "gm": 13.46,
+    "position": "Volume land-grab, margin-dilutive",
+    "evidence": "Revenue doubled in FY2025 (+108.65%) at the lowest gross margin of the major segments; 13.46% in H1 2026. More than a million combined OBC plus DC-DC units shipped in 2025. Named OEMs: Geely, BAIC New Energy, Leapmotor, Changan, Dongfeng, FAW, Seres.",
+    "rivals": "VMAX, Enpower, Shinry, Fute lead the published OBC rankings — Megmeet appears on none of them",
+    "t": "DOSSIER megmeet v7",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   },
+   {
+    "unit": "Smart living (appliance controls, smart bathroom)",
+    "cn": "智慧生活产品",
+    "share": 42.19,
+    "gm": 18.39,
+    "position": "Biggest unit, weakest position, deteriorating",
+    "evidence": "42.19% of revenue at 18.39% gross margin, down about 4.2 points in a year. It was the only segment that shrank in FY2025 (-4.8%). Named customers: Xiaomi, Haier, Hisense, Changhong, Skyworth. The smart-bathroom line is genuinely distinctive rather than a controller commodity.",
+    "rivals": "Topband at RMB 11.08bn of FY2025 revenue and H&T at roughly RMB 9.7bn are each about three times Megmeet's whole appliance unit, and are the acknowledged duopoly. Megmeet is third tier",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://finance.sina.cn/2026-04-29/detail-inhweskv0849280.d.html"
+   },
+   {
+    "unit": "Magnetics and precision manufacturing",
+    "cn": "磁电精造",
+    "share": 4.99,
+    "gm": 8.79,
+    "position": "Vertical integration rather than a merchant business",
+    "evidence": "8.79% gross margin, up from 5.1% but still the lowest in the company. The company describes it as an investment-and-integration period. Shaped magnet wire, coaxial cable, ultra-fine flat wire, FFC/FPC feeding internal magnetics supply plus external sales.",
+    "rivals": "No ranked competitor set located",
+    "t": "DOSSIER megmeet v7",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://stock.qianzhan.com/hs/zhuyingchanpin_002851.SZ.html"
+   }
+  ]
+ },
+ "terms": [
+  {
+   "family": "Topology",
+   "term": "SST — solid-state transformer",
+   "def": "A power-electronic converter providing a transformer's voltage change and galvanic isolation through medium-frequency magnetics, with controllable AC-DC and DC-DC stages either side.",
+   "t": "PRIMER ch.3, ch.9",
+   "number": "97-98.5% for MV-to-DC units; 99.0-99.5% for a good 60 Hz distribution transformer alone",
+   "tn": "PRIMER ch.3.5",
+   "say": "\"It is a converter, not a transformer — which is why it can also rectify, regulate and ride through, and why it has the overload manners of a computer rather than of a block of iron.\""
+  },
+  {
+   "family": "Topology",
+   "term": "ISOP — input-series, output-parallel",
+   "def": "The connection pattern of an SST: cells stacked in series on the medium-voltage input, tied in parallel on the low-voltage output.",
+   "t": "PRIMER ch.3.1, fig.4",
+   "number": "—",
+   "say": "\"Series on the MV side so each cell sees a fraction of the line; parallel on the LV side so they make one stiff bus.\""
+  },
+  {
+   "family": "Topology",
+   "term": "CHB — cascaded H-bridge",
+   "def": "A multilevel converter built from series-connected single-phase full bridges; the standard way to face medium voltage with low-voltage semiconductors.",
+   "t": "PRIMER ch.3.2, fig.5",
+   "number": "13.8 kV needs 14-15 cells per phase with 1.7 kV devices; 34.5 kV needs about 2.5x as many",
+   "tn": "PRIMER ch.3.2, ch.6.1",
+   "say": "\"The cell count is the cost driver — each cell is a complete converter with its own capacitor, transformer, gate drivers and sensors.\""
+  },
+  {
+   "family": "Topology",
+   "term": "DAB — dual active bridge",
+   "def": "An isolated DC-DC converter with an active full bridge on each side of the transformer; power flow is set by the phase shift between the two square waves, so it is bidirectional by construction.",
+   "t": "PRIMER ch.3.3, fig.6",
+   "number": "5-50 kHz switching",
+   "tn": "PRIMER ch.3.3",
+   "say": "\"Both bridges are active, so power can go back to the grid — a passive rectifier can never do that.\""
+  },
+  {
+   "family": "Topology",
+   "term": "CLLC / LLC",
+   "def": "Resonant isolated DC-DC topologies whose tank circuit lets the switches turn on and off at zero voltage or current; CLLC is the bidirectional form.",
+   "t": "PRIMER ch.3.3",
+   "number": "NVIDIA specifies a 64:1 LLC with a matrix transformer for 800 V straight to 12 V in-rack",
+   "tn": "PRIMER ch.2.2",
+   "say": "\"Resonant variants trade control range for soft switching and lower loss — and tend to lose soft switching at light load.\""
+  },
+  {
+   "family": "Topology",
+   "term": "MMC — modular multilevel converter",
+   "def": "A half-bridge-cell multilevel converter used in HVDC; an alternative front end to the CHB at higher voltages.",
+   "t": "PRIMER ch.9",
+   "number": "N+1 raises a modular multilevel drive's MTBF by about 1.7x — the one independent redundancy number available",
+   "tn": "WEB, verified 2026-09-23",
+   "say": "\"It is also where the SST's service model comes from: MV drives have been swapping cells in minutes for two decades.\"",
+   "url": "https://pro-etic.com/which-medium-voltage-drive-topology-could-meet-my-reliability-availability-requirements/"
+  },
+  {
+   "family": "Topology",
+   "term": "TRU / MV rectifier",
+   "def": "A conventional MV/LV transformer feeding a rectifier — diode, thyristor or active — to produce 800 V DC.",
+   "t": "PRIMER ch.4.1",
+   "number": "NVIDIA's named near-term path, mature from electrolysis, rail and mining; it rates the MV rectifier and the SST identically at 98.5% or better, as large as 7.5 MVA",
+   "tn": "GUIDANCE nvidia-800vdc p21–23",
+   "say": "\"NVIDIA's own paper calls the TRU a faster and proven path and reserves the SST for the next generation. Do not sell against the TRU on efficiency — they are rated the same.\""
+  },
+  {
+   "family": "Magnetics",
+   "term": "MFT — medium-frequency transformer",
+   "def": "The kilohertz transformer inside each SST cell. Small because volt-seconds per cycle fall with frequency; demanding because it must hold medium-voltage insulation in that small volume under PWM stress.",
+   "t": "PRIMER ch.3.1, ch.3.3, ch.5.5",
+   "number": "Raising f from 60 Hz to 10 kHz shrinks core area by roughly 170x; a 4 MW unit weighs about a fortieth of its 60 Hz equivalent — Infineon's comparison is 20 tonnes to about 500 kg",
+   "tn": "PRIMER ch.3.1, ch.5.5",
+   "say": "\"The magnetics are the part with the fewest suppliers — a low-loss nanocrystalline or ferrite core, MV insulation between windings, and a cooling path for losses in a small volume.\""
+  },
+  {
+   "family": "Magnetics",
+   "term": "BIL — basic insulation level",
+   "def": "The lightning or switching impulse a piece of equipment must withstand. Set by the ANSI C84.1 equipment class, not by the vendor.",
+   "t": "PRIMER ch.6.1, ch.9",
+   "number": "15 kV class = 95 kV BIL; 25 kV class = 125 kV; 35 kV class = 150 kV",
+   "tn": "PRIMER ch.6.1",
+   "say": "\"The class sets the insulation, the BIL and the cell count — which is why a 13.8 kV SST is a different product from a 34.5 kV one.\""
+  },
+  {
+   "family": "Magnetics",
+   "term": "PD — partial discharge",
+   "def": "Localised breakdown inside insulation that does not bridge the electrodes but erodes them over time. Fast dv/dt from wide-bandgap devices drives it.",
+   "t": "PRIMER ch.5.3",
+   "number": "A 35 kV interface needs roughly 100 kV of insulation — \"three times\", in TDK's assessment",
+   "tn": "PRIMER ch.5.3",
+   "say": "\"ORNL's point is that IEEE C62.82.1 was written for iron: localised overstress can occur even when terminal-level clamping looks adequate, and impulse tests may not reflect internal stress.\""
+  },
+  {
+   "family": "Devices",
+   "term": "SiC — silicon carbide",
+   "def": "The wide-bandgap semiconductor that makes 1.2-3.3 kV MOSFETs practical at kilohertz switching. The enabling device of the SST.",
+   "t": "PRIMER ch.3.2, ch.6.6",
+   "number": "Production classes 1.2, 1.7 and (from few suppliers) 3.3 kV; 6.5 and 10 kV exist as samples. SiC fell from over $10/A in 2018 to $2-3/A in 2025",
+   "tn": "PRIMER ch.3.2, ch.6.6",
+   "say": "\"Moving from 1.7 kV to 3.3 kV devices roughly halves the cell count — which is why Amperesand builds on 3.3 kV parts and why Wolfspeed's wafer capacity is a supply question for the whole layer.\""
+  },
+  {
+   "family": "Devices",
+   "term": "Cosmic-ray derating",
+   "def": "Atmospheric neutrons cause single-event burnout in high-field power devices, so the cell DC link is set well below the device rating.",
+   "t": "PRIMER fig.5",
+   "number": "The customary derating is about 0.55 x device rating — the factor that drives every cell-count figure in this brief",
+   "tn": "WEB, verified 2026-09-23",
+   "say": "\"Burnout can occur at 50% or less of rated breakdown, so the derating is not conservatism, it is the design rule.\"",
+   "url": "https://nepp.nasa.gov/files/29832/NEPP-CP-2018-Lauenstein-Galloway-Paper-HEART-TN65899-NEPPweb-reuse-TN54861.pdf"
+  },
+  {
+   "family": "Devices",
+   "term": "Fail-short",
+   "def": "The property a series-stacked die needs: when it fails it must keep conducting so the stack stays up until the cell can be bypassed.",
+   "t": "PRIMER ch.5.4",
+   "number": "ORNL calls SiC fail-short in series stacks \"an open research challenge\"",
+   "tn": "PRIMER ch.5.4",
+   "say": "\"Press-pack silicon fails short and keeps conducting for months. SiC's thermal stability, small die area and short short-circuit withstand make that hard — and it is the reliability question a careful buyer will actually ask.\""
+  },
+  {
+   "family": "Protection",
+   "term": "SSCB — solid-state circuit breaker",
+   "def": "A semiconductor switch that interrupts DC fault current in microseconds, because DC has no natural current zero for a mechanical contact to exploit.",
+   "t": "PRIMER ch.5.2",
+   "number": "NVIDIA targets 125 A air-cooled and 1250 A liquid-cooled solid-state breakers, with MCCBs as the Day-1 branch device",
+   "tn": "GUIDANCE nvidia-800vdc p27–30",
+   "say": "\"Siemens measured it: at a 200 A/us rise rate, capacitor-discharge interruption was only possible with solid-state breakers. Fuses peaked near 9.4 kA at about 3 ms.\""
+  },
+  {
+   "family": "Protection",
+   "term": "HRMG / HRRG",
+   "def": "High-resistance midpoint grounding and high-resistance return grounding — two of the four schemes under evaluation for a two-wire 800 V DC bus, alongside floating and solid.",
+   "t": "GUIDANCE nvidia-800vdc p24–26",
+   "number": "Four candidates; the paper leans HRMG",
+   "tn": "GUIDANCE nvidia-800vdc p24–26",
+   "say": "\"HRMG grounds both conductors symmetrically through a midpoint resistor network: balanced conductor-to-ground voltages, uniform fault detection on both conductors, and it keeps operating after the first fault.\""
+  },
+  {
+   "family": "Protection",
+   "term": "IMD / RCM",
+   "def": "Insulation monitoring device and residual current monitor. The facility zone uses IMD/IRM and alarms without shutting down; the rack interface zone prefers RCM for fast leakage detection.",
+   "t": "GUIDANCE nvidia-800vdc p26–27",
+   "number": "Two protection zones",
+   "tn": "GUIDANCE nvidia-800vdc p26–27",
+   "say": "\"The 125 A whip stays de-energised during install and removal — the mechanical lock must engage before an enable signal closes the contactor. That is EV-charging lineage, and they will expect you to know it.\""
+  },
+  {
+   "family": "Control",
+   "term": "AFE — active front end",
+   "def": "A rectifier built from controlled switches rather than diodes. Draws sinusoidal current at unity power factor, can supply reactive power, and can be programmed to a ride-through curve.",
+   "t": "PRIMER ch.5.5, ch.6.3",
+   "number": "IEEE 519 sets 5% total voltage distortion at the point of common coupling with no individual harmonic above 3%",
+   "tn": "PRIMER ch.6.3",
+   "say": "\"This is the SST's real US argument: the converter is the model. A transformer cannot be programmed to a ride-through curve; an active front end is the curve.\""
+  },
+  {
+   "family": "Control",
+   "term": "Grid-forming",
+   "def": "A converter that establishes voltage and frequency rather than following them; includes black start.",
+   "t": "DOSSIER heron-power v1",
+   "number": "Heron claims IEEE 2800 and ERCOT NOGRR 282 compliance with under 1% ripple injected at MV",
+   "tn": "DOSSIER heron-power v1",
+   "say": "\"Grid-forming is what turns a gigawatt load into a grid citizen rather than a grid problem.\""
+  },
+  {
+   "family": "Control",
+   "term": "Ride-through",
+   "def": "A load's ability to stay connected through a voltage or frequency disturbance instead of tripping.",
+   "t": "PRIMER ch.6.3",
+   "number": "NOGRR 282: 2 s at 0.85 pu, 150 ms below 0.35 pu, no more than 150% current, 90% recovery within 2 s, six sags in 90 s",
+   "tn": "WEB, verified 2026-09-23",
+   "say": "\"The July 2024 Virginia root cause was not the transformer — it was a disturbance-counting scheme and manual retransfer. An SST does not override downstream customer logic, and cooling plant is usually not behind the critical bus.\"",
+   "url": "https://rmsenergy.com/tdec-post/after-3-8-gw-dropped-in-virginia-nercs-computational-load-standards-move-from-draft-to-deadline/"
+  },
+  {
+   "family": "Grid interface",
+   "term": "Service-voltage class",
+   "def": "The ANSI C84.1 equipment class of the utility feed. It sets insulation, BIL and cell count — and therefore the product.",
+   "t": "PRIMER ch.6.1, fig.11",
+   "number": "12.47/13.2/13.8 kV = 15 kV class; 24.9 kV = 25 kV class; 34.5 kV = 35 kV class; gigawatt campuses tie in at 69-345 kV",
+   "tn": "PRIMER ch.6.1",
+   "say": "\"Large greenfield campuses in Texas and the Southeast trend to 34.5 kV because it moves more power on fewer, smaller feeders. Northern Virginia runs 34.5 kV distribution behind 230 kV ties.\""
+  },
+  {
+   "family": "Grid interface",
+   "term": "PCC — point of common coupling",
+   "def": "Where the customer's installation meets the utility's system, and where IEEE 519 harmonic limits are assessed.",
+   "t": "PRIMER ch.6.5",
+   "number": "Limits tighten at higher voltage and lower short-circuit ratio",
+   "tn": "PRIMER ch.6.5",
+   "say": "\"For an SST-fed hall the PCC is usually the utility's MV side — so your harmonic signature is measured at 34.5 kV, not at the rack.\""
+  },
+  {
+   "family": "Grid interface",
+   "term": "The 4.8 MW block",
+   "def": "NVIDIA's standardised data-hall DC power block: MV in, a 6000 A-class DC switchboard, parallel 1250 A busways, 4+1 catcher redundancy through a DC static transfer switch.",
+   "t": "GUIDANCE nvidia-800vdc p17–21",
+   "number": "4.8 MW per block, 20 MW deployment units of four scalable units",
+   "tn": "GUIDANCE nvidia-800vdc p17–21",
+   "say": "\"Every vendor now has to answer how it composes to 4.8 MW blocks and 1250 A busways with the tap-can interface — paralleling, busway compatibility, and catcher participation are the three concrete questions.\""
+  },
+  {
+   "family": "Standards",
+   "term": "UL 1741 / 347A / 2877",
+   "def": "The US listing routes. UL 1741 with supplements SA/SB is the dominant inverter/converter path; UL 347A and 2877 cover MV power conversion from 1 kV up to 38 kV.",
+   "t": "WEB, verified 2026-09-23",
+   "number": "1 kV to 38 kV is the listed medium-voltage range; 38 kV is the ceiling",
+   "tn": "WEB, verified 2026-09-23",
+   "say": "\"Know your listing status precisely. The most quotable line from PCIM Europe 2026 is that there is no UL certification for the 800 VDC bus and that this is a major gap.\"",
+   "url": "https://www.intertek.com/blog/2026/06-01-solid-state-transformers-evaluation-and-certification/"
+  },
+  {
+   "family": "Standards",
+   "term": "IEC 62477-2",
+   "def": "The international envelope for MV converters: 1 kV AC / 1.5 kV DC up to 36 kV AC / 54 kV DC. Edition 2 went to CDV with voting closing 13 March 2026.",
+   "t": "WEB, verified 2026-09-23",
+   "number": "36 kV AC ceiling",
+   "tn": "WEB, verified 2026-09-23",
+   "say": "\"The envelope exists internationally. What does not exist anywhere is a listed data-centre SST.\"",
+   "url": "https://www.standards.iteh.ai/catalog/standards/clc/787271b2-55a0-44a2-b650-c6a67ef7bdd6/pren-iec-62477-2-2025"
+  },
+  {
+   "family": "Standards",
+   "term": "DC arc flash",
+   "def": "The hazard NFPA 70E 2027 names and no standard can yet calculate. IEEE 1584-2018 is AC only.",
+   "t": "PRIMER ch.6.4",
+   "number": "70E 2027 adds Article 310 with DC thresholds; the NFPA research project aims its model at 70E 2030 — a three-year gap",
+   "tn": "WEB, verified 2026-09-23",
+   "say": "\"Operators will energise 800 V DC busway for years with no validated way to compute incident energy. The interim answer is conservative table-based PPE, de-energised-work rules and per-project AHJ negotiation.\"",
+   "url": "https://www.ecmweb.com/safety/arc-flash/news/55356294/fire-protection-research-foundation-seeks-sponsors-for-dc-arc-flash-hazard-study"
+  },
+  {
+   "family": "Standards",
+   "term": "OCP LVDC SST Specification v0.3",
+   "def": "The specification the layer is being built to — Microsoft, Google and NVIDIA, July 2026. More than 80 manufacturers reported building to it.",
+   "t": "WEB, verified 2026-09-23",
+   "number": "v0.3, July 2026",
+   "tn": "WEB, verified 2026-09-23",
+   "say": "\"This is the vocabulary your counterparties will use. Read it before the first meeting — and note that it could not be retrieved in this run, because opencompute.org refused every request.\"",
+   "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+  }
+ ],
+ "perspectives": {
+  "caption": "What 800 V DC buys each player, what an SST adds on top of a transformer-rectifier unit, what it costs them, and what they would need to see before specifying one.",
+  "boundary": "The \"what they have said\" column is sourced. The \"what they would need to see\" column is analysis throughout and is labelled as such — it is inference from each player's published position, not a statement any of them has made.",
+  "rows": [
+   {
+    "who": "NVIDIA",
+    "buys": "800 V DC carries 157% more power through the same copper than 415 V AC. The rack roadmap is what forces it: NVLink pulls GPUs into copper reach, density climbs, and 54 V distribution runs out of road.",
+    "adds": "Stage elimination, footprint and control — not efficiency. NVIDIA rates the MV rectifier and the SST identically at 98.5% or better.",
+    "loses": "Nothing it owns. NVIDIA does not sell power; it sets the architecture and lets the ecosystem carry the risk.",
+    "need": "ANALYSIS: a qualification category that does not exist yet. DSX Ready launched on 21 September 2026 covering BESS and CDUs only. The first thing an SST vendor can usefully offer NVIDIA is help writing the category.",
+    "t": "PRIMER ch.2.2",
+    "t2": "GUIDANCE nvidia-800vdc p7, p21-23",
+    "url": "https://blogs.nvidia.com/blog/dsx-ready-ai-factories-power-cooling/"
+   },
+   {
+    "who": "Oracle / OCI",
+    "buys": "Nothing published. Oracle has said nothing about 800 V DC, DC distribution, MV conversion or solid-state transformers anywhere in its own material. Its published power content is capacitance, advanced energy storage, hardware GPU ramping and software ramp control.",
+    "adds": "ANALYSIS: unknown, because the question has never been put publicly. The one place the conversation opens naturally is Project Jupiter — up to 2.45 GW of solid-oxide fuel cells, which are DC-native, consolidated into one microgrid campus.",
+    "loses": "ANALYSIS: nothing yet. Oracle is frequently the tenant rather than the owner — Abilene is developed by a Crusoe / Blue Owl / Primary Digital joint venture and leased to Oracle.",
+    "need": "ANALYSIS: someone else's operating hours. With no internal reference and no published spec, the first question a cautious operator asks is who has one running and at what scale.",
+    "t": "WEB, verified 2026-09-23",
+    "t2": "WEB, verified 2026-09-23",
+    "url": [
+     "https://blogs.oracle.com/cloud-infrastructure/first-principles-data-center-innovations",
+     "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/"
+    ]
+   },
+   {
+    "who": "The other hyperscalers",
+    "buys": "Microsoft states that solid-state transformers are \"the next step\" in its full-stack power transformation after Mt Diablo — no vendor, no site, no kV, no MW, no date. Google, Microsoft and NVIDIA jointly own the OCP specification work.",
+    "adds": "ANALYSIS: the ability to standardise a block across a fleet. A hyperscaler that specifies one converter for every campus buys schedule certainty, not efficiency.",
+    "loses": "ANALYSIS: the option value of a mature, multi-sourced TRU supply base they already know how to buy.",
+    "need": "ANALYSIS: a second source. No hyperscaler will single-source the hall edge, and today no two vendors offer an interchangeable 34.5 kV-class unit.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/"
+   },
+   {
+    "who": "Neoclouds",
+    "buys": "NVIDIA names CoreWeave, Lambda, Nebius, Oracle Cloud Infrastructure and Together AI among providers \"designing for 800-volt data centers\" — NVIDIA's characterisation of them, not their own statements.",
+    "adds": "ANALYSIS: time to power. A neocloud's constraint is energisation date, and a 24-week lead time against 46-48 for a conventional lineup is the argument that actually lands.",
+    "loses": "ANALYSIS: balance-sheet tolerance for first-of-a-kind risk. These are the least able to absorb a failed first article.",
+    "need": "ANALYSIS: a bankable warranty and a spares depot. Neither exists for any MV SST today — only one vendor in the whole research pass publishes a warranty term at all.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/"
+   },
+   {
+    "who": "Colo developers and landlords",
+    "buys": "ANALYSIS: floor area and time to revenue. The SST's published footprint claims are the most concrete thing on offer — Sungrow claims 312 kW/m2 and one-third to one-fifth of a conventional lineup, Heron claims a 70% smaller footprint and an outdoor NEMA 3R siting that removes the electrical room.",
+    "adds": "ANALYSIS: deletion of the electrical room. For a landlord, converted floor is leasable floor.",
+    "loses": "ANALYSIS: tenant-agnosticism. A 34.5 kV DC block is a bet on the tenant's rack architecture, and a landlord normally avoids those.",
+    "need": "ANALYSIS: a tenant who will sign for it. Landlords do not specify converters; anchor tenants do.",
+    "t": "DOSSIER sungrow v9",
+    "t2": "DOSSIER heron-power v1"
+   },
+   {
+    "who": "Utilities",
+    "buys": "Their published concern is not conversion, it is load behaviour. ERCOT NOGRR 282 turned ride-through into a numeric acceptance test; NERC Project 2026-02 will make interconnection modelling, operational data and protection coordination mandatory, with a FERC filing deadline of 31 December 2026.",
+    "adds": "ANALYSIS: one authoritative dynamic model of the grid interface instead of a composite of transformer, UPS, VFDs and protection. The converter is the model.",
+    "loses": "ANALYSIS: familiarity. At 12.47-34.5 kV the service transformer is commonly utility-owned, and an SST displacing it must be accepted onto an approved-equipment list — a multi-year qualification with no visible US precedent.",
+    "need": "ANALYSIS: an approved-equipment-list entry, which nobody has. This is why every announced US pilot sits behind a customer-owned MV substation.",
+    "t": "PRIMER ch.6.3, ch.6.5"
+   },
+   {
+    "who": "EPCs",
+    "buys": "ANALYSIS: nothing in the published record. EPCs do not publish architecture positions.",
+    "adds": "ANALYSIS: fewer trades and a shorter commissioning window. Heron's model puts labour at $0.08M per MW against $0.73M for the conventional lineup — a vendor model with vendor-chosen boundaries, and neither figure audited on a delivered US project.",
+    "loses": "ANALYSIS: scope. Deleting the electrical room deletes EPC scope.",
+    "need": "ANALYSIS: a factory-tested skid they can set and terminate. The one published NVIDIA-aligned reference design is delivered as pre-engineered, prefabricated, factory-tested MV and LV skids.",
+    "t": "DOSSIER heron-power v1",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-partners-develop-reference-architecture-purpose-built-nvidia-ai-data"
+   },
+   {
+    "who": "Incumbent hall vendors",
+    "buys": "All six declared an 800 V DC position in October 2025. ABB has the only orderable solid-state MV product and it is a UPS; Eaton published a reference architecture and bought SST intellectual property; Schneider sells the reference design; Vertiv declared engineering readiness; GE Vernova publishes reference designs and holds a hyperscaler commitment tied to a specification milestone; Hitachi Energy holds the transformer calendar.",
+    "adds": "ANALYSIS: replacement content for a shrinking centralised UPS franchise. The architecture moves conversion toward the rack and takes the UPS with it.",
+    "loses": "ANALYSIS: the UPS franchise itself, and the installed base that goes with it.",
+    "need": "ANALYSIS: evidence that the SST market is larger than the UPS revenue it cannibalises. GE Vernova has priced the prize at 2-3x revenue per gigawatt; Infineon sizes the whole SST slice at just above $1bn of a $15bn-plus transformer market by 2030.",
+    "t": "REPORT 2026-09-08",
+    "t2": "DOSSIER ge-vernova v6"
+   },
+   {
+    "who": "Silicon",
+    "buys": "Infineon publishes a dedicated SST application page and is one of fourteen named silicon providers; its AI data-centre revenue went from EUR 250m in FY2024 to above EUR 700m in FY2025 and is guided above EUR 1.6bn for FY2026. Vicor sells no block at all and turned its bus-converter patents into royalties worth a fifth of a quarter's revenue.",
+    "adds": "ANALYSIS: content per megawatt. Every cell is a bill of materials, and a 34.5 kV unit has about 2.5 times the cells of a 13.8 kV one.",
+    "loses": "ANALYSIS: nothing. Silicon wins under every architecture; only the mix changes.",
+    "need": "ANALYSIS: volume visibility. Infineon's own market sizing is the most sober in the industry precisely because it has no reason to inflate a slice it already supplies.",
+    "t": "DOSSIER infineon v1",
+    "t2": "DOSSIER vicor v2"
+   },
+   {
+    "who": "Megmeet",
+    "buys": "Its published position is the rack and the sidecar: an 800 V HVDC sidecar converting 380-480 VAC at over 1 MW per rack, a 570 kW side rack, 33 kW and 110 kW shelves, BBU and supercapacitor shelves, CRPS and M-CRPS to 5.5 kW, and a Power Brick. The SST is in the published chain and is marked under development.",
+    "adds": "ANALYSIS: the move from component vendor to infrastructure vendor. Everything below the converter is a socket someone re-competes; the converter is a block someone specifies.",
+    "loses": "ANALYSIS: nothing it currently sells. The SST is additive to the rack business, not a substitute for it.",
+    "need": "ANALYSIS: a published service-voltage class, and then a listed unit. Until the first exists, Megmeet is not in the hall-edge comparison at all; until the second exists, nobody in the layer is.",
+    "t": "DOSSIER megmeet v7"
+   }
+  ]
+ },
+ "lineage": {
+  "caption": "The SST against the technologies it descends from and competes with, on the ten attributes a buyer's engineer scores.",
+  "boundary": "Cells are qualitative rankings on a five-step scale (poor / fair / good / strong / best) except where a number is given, and the number carries its own tag in the notes. The scale is a reading aid; it is analysis, not measurement.",
+  "cols": [
+   "Efficiency",
+   "Footprint",
+   "Overload / inrush",
+   "Fault behaviour",
+   "Isolation",
+   "Controllability",
+   "Cost",
+   "Maturity",
+   "Standards path",
+   "Who sells it"
+  ],
+  "rows": [
+   {
+    "name": "Line-frequency transformer (LFT)",
+    "eff": "best",
+    "footprint": "poor",
+    "overload": "best",
+    "fault": "best",
+    "isolation": "best",
+    "control": "poor",
+    "cost": "best",
+    "maturity": "best",
+    "standards": "best",
+    "who": "Hitachi Energy, Siemens Energy, GE Vernova/Prolec, ABB heritage"
+   },
+   {
+    "name": "LFT + rectifier (TRU / MV rectifier)",
+    "eff": "strong",
+    "footprint": "fair",
+    "overload": "strong",
+    "fault": "strong",
+    "isolation": "best",
+    "control": "fair",
+    "cost": "strong",
+    "maturity": "strong",
+    "standards": "strong",
+    "who": "Zhonhen (Panama), Power Electronics, Vertiv, Eaton, Delta"
+   },
+   {
+    "name": "MV UPS (solid-state)",
+    "eff": "strong",
+    "footprint": "fair",
+    "overload": "fair",
+    "fault": "good",
+    "isolation": "best",
+    "control": "strong",
+    "cost": "fair",
+    "maturity": "good",
+    "standards": "good",
+    "who": "ABB HiPerGuard (the only orderable one), ON.energy"
+   },
+   {
+    "name": "Hybrid LFT + solid-state breaker",
+    "eff": "strong",
+    "footprint": "fair",
+    "overload": "best",
+    "fault": "strong",
+    "isolation": "best",
+    "control": "fair",
+    "cost": "strong",
+    "maturity": "good",
+    "standards": "good",
+    "who": "ABB (SACE Infinitus), Eaton"
+   },
+   {
+    "name": "MVDC collection",
+    "eff": "good",
+    "footprint": "good",
+    "overload": "fair",
+    "fault": "fair",
+    "isolation": "good",
+    "control": "strong",
+    "cost": "fair",
+    "maturity": "fair",
+    "standards": "fair",
+    "who": "Hitachi Energy, GE Vernova, Siemens Energy (HVDC heritage)"
+   },
+   {
+    "name": "SST (ISOP CHB + DAB)",
+    "eff": "good",
+    "footprint": "best",
+    "overload": "poor",
+    "fault": "fair",
+    "isolation": "strong",
+    "control": "best",
+    "cost": "poor",
+    "maturity": "poor",
+    "standards": "poor",
+    "who": "Heron, Amperesand, DG Matrix, Novos, Sungrow, Delta, Siemens+Reinhausen"
+   }
+  ],
+  "notes": [
+   {
+    "row": "Line-frequency transformer (LFT)",
+    "note": "99.0-99.5% at rated load. 200% for 30 minutes on thermal mass. Lead time 128-210 weeks is the reason the whole category exists.",
+    "t": "PRIMER ch.3.5, ch.5.1, ch.6.2"
+   },
+   {
+    "row": "LFT + rectifier (TRU / MV rectifier)",
+    "note": "NVIDIA rates it 98.5% or better and calls it \"a faster and proven path for quick 800 VDC deployment\", \"highly practical for approximately 5 MW-class power block deployment\", with strong fault isolation and 34.5 kV compatibility. It inherits the transformer's thermal mass — which is the single biggest engineering advantage over an SST.",
+    "t": "PRIMER ch.4.1",
+    "t2": "GUIDANCE nvidia-800vdc p21–22"
+   },
+   {
+    "row": "MV UPS (solid-state)",
+    "note": "ABB HiPerGuard: 2.5 MW per unit hard-paralleled to 25 MW, 4.16-34.5 kV, 98%, UL 1741 and the first of its kind to achieve UL 9540. It is NOT an SST — the output is medium-voltage AC. Its installed base includes Applied Digital's 400 MW and 300 MW North Dakota campuses.",
+    "t": "DOSSIER abb v7"
+   },
+   {
+    "row": "Hybrid LFT + solid-state breaker",
+    "note": "The cheapest way to get most of the SST's fault performance without the converter. ABB's SACE Infinitus is the first IEC-certified solid-state circuit breaker.",
+    "t": "DOSSIER abb v7"
+   },
+   {
+    "row": "MVDC collection",
+    "note": "The adjacent lineage most SST vendors actually come from, along with MV drives, STATCOMs and traction. ABB's SST heritage runs to the 2012 PETT railway unit — 15 kV, 1.2 MW, about 96%.",
+    "t": "DOSSIER abb v7",
+    "t2": "PRIMER ch.7.4"
+   },
+   {
+    "row": "SST (ISOP CHB + DAB)",
+    "note": "97-98.5% for MV-to-DC units; about one third the weight and volume of an LFT-based chain per ORNL, and 40x lighter and 14x smaller per Infineon. Continuous rating sits near 1.0-1.2x nameplate and no first-party vendor publishes an overload curve. Trade reporting prices SSTs at roughly twice a conventional transformer.",
+    "t": "PRIMER ch.3.5, ch.5.1, ch.5.5, ch.5.6"
+   }
+  ],
+  "borrowedFrom": [
+   {
+    "from": "MV drives (cascaded H-bridge)",
+    "what": "The CHB topology itself, the cell-swap service model, and two decades of field history on modular converters. GE Vernova markets the same swap-in-minutes property for its MM7 modular multilevel drive.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://www.gevernova.com/power-conversion/product-solutions/medium-voltage-drives/mm7"
+   },
+   {
+    "from": "STATCOMs",
+    "what": "The four-quadrant active front end — unity power factor, reactive support, and the grid-forming control that lets a converter behave as a grid citizen rather than a passive load.",
+    "t": "PRIMER ch.5.5"
+   },
+   {
+    "from": "Traction",
+    "what": "The original SST. ABB's PETT railway unit of 2012 ran 15 kV at 1.2 MW and about 96% — the first megawatt-class SST anyone energised.",
+    "t": "DOSSIER abb v7"
+   },
+   {
+    "from": "EV charging",
+    "what": "The interlocked connector discipline NVIDIA specifies for the 125 A DC whip: hardwired behind a normally-open contactor, mechanical lock before enable, release opens the contactor before unlocking.",
+    "t": "GUIDANCE nvidia-800vdc p26-27"
+   },
+   {
+    "from": "PV and storage inverters",
+    "what": "The manufacturing base. Sungrow, SolarEdge, Enphase and Power Electronics are all inverter houses reaching up into the hall edge — which is also why the FCC's inverter action lands on this layer rather than on the rack.",
+    "t": "DOSSIER sungrow v9",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://www.morganlewis.com/pubs/2026/08/fcc-adds-foreign-produced-advanced-robotic-devices-and-power-inverters-to-covered-list-opens-conditional-approval-process"
+   }
+  ]
+ },
+ "objections": {
+  "caption": "The objections a US data-centre buyer raises about a China-headquartered SST vendor, and the strongest honest answer to each. Analysis throughout — none of these is a Megmeet position.",
+  "rows": [
+   {
+    "says": "\"You are a Chinese supplier — will procurement or legal block this after I have spent a qualification cycle?\"",
+    "asks": "Am I going to waste six months?",
+    "answer": "Answer with the actual regime, not with reassurance. The binding US rule for this product class is the FCC Covered List of 28 July 2026, and it has two prongs that must both be met: a bidirectional AC-DC converter, and components enabling remote communication. It is a content test, not a nationality test — \"foreign-produced\" means failing the Buy American standard at 48 CFR 25.101(a), so a US-headquartered vendor building offshore is captured too. Then give the footprint: manufacturing across China, Thailand, India, the US and Germany, a Dallas-area test lab on US soil, a pending Hong Kong listing. Then the proof that actually lands: Ericsson, Cisco, Juniper, Arista and Accton already buy Megmeet power and have already run their supplier audits.",
+    "never": "Never promise a regulatory outcome, and never say the rule does not apply. Say which prong you think you fall outside of and why, and say it is a question for counsel and the certification body."
+   },
+   {
+    "says": "\"What is your input voltage class?\"",
+    "asks": "Can you even serve my campus?",
+    "answer": "This is the one you cannot talk your way around, and pretending otherwise is the fastest way to lose an engineer. The published record carries no class for Megmeet's SST. The honest answer on day one is: the sidecar and the rack products are specified and shipping, the converter is under development and the class is not published yet — and then ask what class their campus takes, because that is the answer you need to bring back internally.",
+    "never": "Never infer a class from Chinese grid norms. A third-party report circulating a 10 kV domestic / 35 kV international split is exactly that inference, it is unread behind a 403, and 35 kV is not a US class."
+   },
+   {
+    "says": "\"We have never deployed you at this scale.\"",
+    "asks": "Am I the guinea pig?",
+    "answer": "Concede the specific and redirect to the general: new to hyperscale MV conversion, not new to high-volume power manufacturing. Then make the structural point — standardised form factors let a buyer take a limited, low-risk slot first. At the rack that is literally true: a CRPS module fits any compliant chassis.",
+    "never": "Never claim an installed base at the hall edge. Nobody in the industry has one — no covered vendor has an energised, named-site, hyperscaler MV SST, and saying so is more credible than implying otherwise."
+   },
+   {
+    "says": "\"Delta already has this socket.\"",
+    "asks": "Why re-open a qualification that works?",
+    "answer": "Never attack Delta — they are good and the buyer knows it. Sell the second source: the concentration is a risk they already manage elsewhere in the bill of materials. Then sell timing: the architecture change forces re-qualification anyway, so the switching cost you are asking them to absorb is one they are already absorbing.",
+    "never": "Never use a share number. Every server-power share figure in circulation is a trade or brokerage estimate, and the buyer will know which ones are contested."
+   },
+   {
+    "says": "\"Your financials look shaky.\"",
+    "asks": "Will you still be here mid-programme?",
+    "answer": "Do not flinch — it is public and they have read it. Profit fell because the company chose to spend ahead of revenue; H1 2026 power products grew 60.92% at the only expanding gross margin in the company; the diversified base across six business groups is why the AI bet does not have to work on the first try. Then give them the number that is genuinely uncomfortable and let them see you know it: ex-non-recurring profit fell 16.13% in the same half, and operating cash flow fell 84.62%.",
+    "never": "Never quote the headline +45.21% without the ex-non-recurring -16.13% beside it. An analyst will have both, and offering only the first one costs more credibility than the second one costs goodwill."
+   },
+   {
+    "says": "\"What if 800 V DC slips?\"",
+    "asks": "Am I buying a roadmap?",
+    "answer": "Point at the bridge. The sidecar exists because buildings on 380-480 VAC need megawatt racks now, and the near-term catalogue sells into today's architecture regardless. NVIDIA's own staging has the power rack in production in H2 2026 and the row power center in 2027 — neither needs an SST. The roadmap is upside, not the thesis.",
+    "never": "Never cite the 2029 SST date as if it were a commitment to buy one. It is a date attached to a next-generation architecture in a paper that names no vendors."
+   },
+   {
+    "says": "\"Who else has one running?\"",
+    "asks": "Show me operating hours.",
+    "answer": "The honest answer is that at megawatt scale on a US feeder there is essentially one: a 1 MW research unit from NC State with the New York Power Authority and EPRI, validated on a real distribution feeder, announced August 2026. Everything else is a pilot, a framework agreement or a claim. Say that, and then say what your own first article would look like and who would witness it.",
+    "never": "Never let a framework purchase agreement be described as a deployment. Sungrow's 30 MW and 100 MW frameworks are the largest committed volumes anywhere and no unit has been evidenced energised."
+   }
+  ]
+ },
+ "dontSay": {
+  "caption": "What not to say in the first month. Each line is something that sounds knowledgeable and is wrong, with the correction.",
+  "rows": [
+   {
+    "dont": "\"An SST is about 5% more efficient.\"",
+    "why": "That is NVIDIA's claim for the 800 V DC architecture against a legacy AC hall it puts at under 90% — and NVIDIA rates the SST and the MV rectifier identically at 98.5% or better. The SST's case is stage elimination, footprint and control.",
+    "t": "PRIMER ch.1, ch.4.3"
+   },
+   {
+    "dont": "\"The bus is plus-minus 400 volts.\"",
+    "why": "NVIDIA specified single-ended 800 V — positive, return, protective earth — and rejected bipolar for lack of three-pole DC breakers. Plus-minus 400 V is the OCP variant the rack can also accept. The published architectures genuinely diverge, and a vendor without a side fails the first five minutes.",
+    "t": "PRIMER ch.2.2",
+    "t2": "WEB, verified 2026-09-23",
+    "url": "https://www.powerelectronicsnews.com/the-evolution-in-data-center-power-distribution-pcim-panel-part-1-the-transition-to-800-v/"
+   },
+   {
+    "dont": "\"Zhonhen's Panama / ABB's HiPerGuard / Vertiv's PowerDirect is a solid-state transformer.\"",
+    "why": "They are a transformer-rectifier lineup, a solid-state medium-voltage UPS and a rack DC shelf respectively. NVIDIA's own paper names the Panama Architecture as a TRU implementation — as an architecture, not as a company.",
+    "t": "PRIMER ch.1",
+    "t2": "GUIDANCE nvidia-800vdc p22"
+   },
+   {
+    "dont": "\"Abilene is served at 34.5 kV.\"",
+    "why": "Abilene's Oncor interconnection is 345 kV transmission and the campus distribution class is undisclosed. One decimal point turns a transmission fact into a fabricated service-class finding, and it is the single most likely error to introduce.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-abilene"
+   },
+   {
+    "dont": "\"Oracle is designing for 800 V DC.\"",
+    "why": "That is NVIDIA's characterisation of OCI, not an Oracle statement. Oracle has published nothing on 800 V DC, DC distribution, MV conversion or solid-state transformers. Quoting it back to an OCI engineer as an Oracle position would be a mistake.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/"
+   },
+   {
+    "dont": "\"We are NVIDIA's named SST partner.\" (or anyone is)",
+    "why": "NVIDIA's ecosystem page names no vendor as an SST vendor and does not break the roster into rectifier or SST sub-categories. Megmeet's own filing says \"one of NVIDIA's designated recommended data-centre power suppliers\" — membership of a set.",
+    "t": "WEB, verified 2026-09-23",
+    "t2": "DOSSIER megmeet v7",
+    "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/"
+   },
+   {
+    "dont": "\"Megmeet displaced LITEON as the number-two NVIDIA power-shelf source.\"",
+    "why": "No supporting source has been located. The company has never claimed it, the H1 interim names no competitor across 238 pages, the one contemporaneous supplier account names LITEON second, and two research houses covering the same market in mid-2026 name Delta and LITEON without mentioning Megmeet.",
+    "t": "DOSSIER megmeet v7",
+    "t2": "REPORT 2026-09-08"
+   },
+   {
+    "dont": "\"Megmeet's revenue is about thirteen billion dollars.\"",
+    "why": "FY2025 revenue is RMB 9.403bn, about USD 1.3bn. Chinese filings quote 亿元 — hundreds of millions — and machine translation renders it as \"billion\" with depressing regularity. Getting a company's own revenue wrong by 10x in the first month is not recoverable.",
+    "t": "DOSSIER megmeet v7"
+   },
+   {
+    "dont": "\"The SST relieves the transformer shortage.\"",
+    "why": "Partially at best. It removes the 480 V layer, but not the utility service transformer where the utility owns it, nor the MV switchgear, cable or substation — and it trades grain-oriented-electrical-steel iron for medium-frequency cores and hundreds of SiC modules, on a supply base a fraction of the transformer industry's scale.",
+    "t": "PRIMER ch.6.2"
+   },
+   {
+    "dont": "\"It is UL listed.\" (of anything at the 800 V DC bus)",
+    "why": "As of the most recent analyst survey no vendor had completed UL certification for data-centre SST deployment, and the most quotable line from PCIM Europe 2026 is that there is no specification and no UL certification for the 800 VDC bus, and that this is a major gap.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://www.powerelectronicsnews.com/the-evolution-in-data-center-power-distribution-pcim-panel-part-1-the-transition-to-800-v/"
+   }
+  ]
+ },
+ "weekOne": {
+  "caption": "The ten questions to ask inside Megmeet in week one, ranked by how much the answer changes the picture.",
+  "criterion": "Ranked by decision leverage: how many of the other answers in this brief would have to be rewritten if the answer came back other than expected. Not by how interesting the question is.",
+  "rows": [
+   {
+    "n": 1,
+    "q": "What service-voltage class is the SST being designed to, and is it one product or two?",
+    "changes": "Everything. It decides whether Megmeet is in the hall-edge contest at all, which US campuses are addressable, and whether the cell count is a 15 kV-class or a 35 kV-class bill of materials — a factor of about 2.5 in cells, magnetics, gate drivers and control channels."
+   },
+   {
+    "n": 2,
+    "q": "Is there a target date for a first article, and is there a witness — a customer, a lab, or an NRTL?",
+    "changes": "It separates a product programme from a roadmap slide. Nobody in the industry has a listed unit; the first vendor with a witnessed first article at a named class takes the layer's narrative."
+   },
+   {
+    "n": 3,
+    "q": "Which listing path are we on — UL 1741 with supplements, UL 347A, UL 2877, IEC 62477-2 — and who is the NRTL?",
+    "changes": "Certification is 6-18 months and mid-six figures per product on the best available estimate, and each variant recertifies. It sets the earliest possible US revenue date more firmly than any engineering milestone."
+   },
+   {
+    "n": 4,
+    "q": "Where does the FCC Covered List analysis land for the sidecar, the shelves and the SST — and who has written it down?",
+    "changes": "The rule has no voltage threshold and two prongs. A unidirectional rectifier with wired management plausibly sits outside; a bidirectional, telemetered SST plausibly sits inside. If nobody has written the analysis, that is the first thing to cause to happen."
+   },
+   {
+    "n": 5,
+    "q": "What is the Dallas lab actually for, and what is its ceiling?",
+    "changes": "It is 360 kW today with a 1.5 MW roadmap — which is a shelf and sidecar validation facility, not somewhere an MV converter can be energised. If the SST is to be proved in the US, the question is where."
+   },
+   {
+    "n": 6,
+    "q": "What did volume delivery to North American majors in Q1 2026 actually consist of, and who were they?",
+    "changes": "The dossier records it; the older prep documents say North America is greenfield with no reference win. Both cannot be the shape of the territory. The answer decides whether the job is building a first proof case or scaling an existing book."
+   },
+   {
+    "n": 7,
+    "q": "What is the overload specification, the part-load efficiency curve, and the MTBF or FIT number for the converter?",
+    "changes": "Nobody in the industry publishes any of the three. Whoever publishes first owns the engineering conversation — and if we cannot answer internally, we cannot answer an NVIDIA or OCI engineer either."
+   },
+   {
+    "n": 8,
+    "q": "What is the service model — vendor field engineers or the owner's electricians — and what is the spares strategy and the warranty term?",
+    "changes": "Only one vendor in the entire research pass publishes a warranty at all. For a first-of-a-kind MV asset the commercial terms are the product, and an owner's engineer will ask before an electrical engineer does."
+   },
+   {
+    "n": 9,
+    "q": "Are we in the OCP LVDC SST specification work, and do we have v0.3?",
+    "changes": "It is the vocabulary every counterparty will use and more than 80 manufacturers are reported to be building to it. It could not be retrieved in this run because opencompute.org refused every request — so the first practical task is to get the document."
+   },
+   {
+    "n": 10,
+    "q": "What is the internal position on the displaced-LITEON story, and has anyone ever been asked to repeat it?",
+    "changes": "Least leverage on the market, most on personal credibility. The company has never claimed it and the record points the other way; knowing that the internal answer matches the external one is worth confirming before the first customer meeting."
+   }
+  ]
+ },
+ "calendar": {
+  "caption": "The run-in to 7 October 2026 and the first ninety days, against the dated milestones the market will hand you.",
+  "boundary": "Start date 2026-10-07 is a Wednesday (verified). External milestones are dated from their own sources; internal actions are analysis. Day counts run from the start date.",
+  "rows": [
+   {
+    "when": "2026-09-23 to 10-06",
+    "day": -14,
+    "kind": "prep",
+    "what": "Read this brief and the primer. Get the OCP LVDC SST Specification v0.3 from an unblocked network — it could not be retrieved in this run. Re-read the ten week-one questions and decide which three you ask on day one.",
+    "t": "ANALYSIS"
+   },
+   {
+    "when": "2026-10-07",
+    "day": 0,
+    "kind": "internal",
+    "what": "Day one. Senior Sales Manager, SST Solutions.",
+    "t": "ANALYSIS"
+   },
+   {
+    "when": "by 2026-10-31",
+    "day": 24,
+    "kind": "external",
+    "what": "Q3 2026 reports from Megmeet, Zhonhen and Sinexcel at the CSRC statutory deadline. Read Megmeet's for a service-voltage class, an order figure and any AI-data-centre revenue line — the three things the H1 interim did not contain.",
+    "t": "REPORT 2026-09-08"
+   },
+   {
+    "when": "2026-Q4",
+    "day": 30,
+    "kind": "internal",
+    "what": "First thirty days: get the answers to week-one questions 1-5 written down and shared. The class, the first-article date, the listing path, the FCC analysis and the lab ceiling are the five facts every subsequent conversation depends on.",
+    "t": "ANALYSIS"
+   },
+   {
+    "when": "2026-11-01",
+    "day": 25,
+    "kind": "external",
+    "what": "EU funding restrictions on high-risk-country inverters begin their phase-in: projects assessed under the previous framework but may have to adopt extra cybersecurity measures or exclude high-risk suppliers.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://www.pv-magazine.com/2026/04/23/eu-moves-to-restrict-funding-for-projects-using-inverters-from-high-risk-suppliers/"
+   },
+   {
+    "when": "2026-12-24",
+    "day": 78,
+    "kind": "external",
+    "what": "DOE implementing regulations due under Executive Order 14421. Watch whether the 69 kV threshold and the local-distribution exclusion survive into the regulations — that is what decides whether a 34.5 kV hall-edge unit is inside or outside.",
+    "t": "WEB, verified 2026-09-23",
+    "url": "https://www.hklaw.com/en/insights/publications/2026/09/executive-order-declares-national-emergency-to-secure-us"
+   },
+   {
+    "when": "2026-12-31",
+    "day": 85,
+    "kind": "external",
+    "what": "FERC deadline for NERC to file the new large-load reliability standards and registry criteria (Docket RD26-7-000; CLO-001/002/003). This is the day ride-through stops being guidance — and it is the SST's strongest US argument becoming enforceable.",
+    "t": "PRIMER ch.6.3"
+   },
+   {
+    "when": "2027-01-05",
+    "day": 90,
+    "kind": "internal",
+    "what": "Ninety days: a written position on where Megmeet competes in the hall edge and where it does not, a named target account list built on service-voltage class rather than on logo, and a one-page answer to each of the sixteen questions an NVIDIA power engineer and the twelve an OCI electrical engineer would ask.",
+    "t": "ANALYSIS"
+   },
+   {
+    "when": "2027-Q1",
+    "day": 95,
+    "kind": "external",
+    "what": "Heron Power pilot units targeted; LITEON GPU-side mass production and first McKinney output; Flex separation of Cloud and Power Infrastructure. The quarter the US shelf capacity moves from announced to producing.",
+    "t": "REPORT 2026-09-08",
+    "t2": "DOSSIER heron-power v1"
+   },
+   {
+    "when": "2027-02",
+    "day": 125,
+    "kind": "external",
+    "what": "CATL's capital increase into Zhonhen's controlling holdco must close within six months of the 2026-08-14 signing. It decides whether the Panama TRU gets a balance sheet.",
+    "t": "DOSSIER zhonhen v8"
+   }
+  ]
+ },
+ "numbersToKnow": [
+  {
+   "label": "Power per mm2 of copper: 800 V DC against 415 V AC",
+   "v": 157,
+   "t": "PRIMER ch.2.2, fig.2",
+   "unit": "% more",
+   "note": "480 V AC buys only +16%; 1500 V DC would buy +382% but has no indoor US component base"
+  },
+  {
+   "label": "Current for one megawatt at 54 V DC",
+   "v": 18500,
+   "t": "PRIMER ch.2.1, fig.1",
+   "unit": "A",
+   "note": "the number that ended 54 V distribution"
+  },
+  {
+   "label": "Cells per phase, 13.8 kV with 1.7 kV SiC",
+   "v": 15,
+   "t": "PRIMER ch.3.2, fig.5",
+   "unit": "cells",
+   "note": "42-45 across three phases"
+  },
+  {
+   "label": "Cell multiplier, 13.8 kV to 34.5 kV",
+   "v": 2.5,
+   "t": "PRIMER ch.6.1",
+   "unit": "x",
+   "note": "cells, MFTs, gate drivers and control channels all scale with it"
+  },
+  {
+   "label": "Core-area shrink, 60 Hz to 10 kHz",
+   "v": 170,
+   "t": "PRIMER ch.3.1",
+   "unit": "x",
+   "note": "V = 4.44 f N B A — the whole reason an SST exists"
+  },
+  {
+   "label": "SST mass against its 60 Hz equivalent, Infineon's comparison",
+   "v": 40,
+   "t": "PRIMER ch.1",
+   "unit": "x lighter",
+   "note": "about 20 tonnes down to about 500 kg, and 14x smaller"
+  },
+  {
+   "label": "SST efficiency band, MV to DC",
+   "v": 98.0,
+   "t": "PRIMER ch.3.5",
+   "lo": 97.0,
+   "hi": 98.5,
+   "unit": "%",
+   "note": "against 99.0-99.5% for a good 60 Hz distribution transformer alone. NVIDIA rates the MV rectifier and the SST identically"
+  },
+  {
+   "label": "LFT overload",
+   "v": 200,
+   "t": "PRIMER ch.5.1",
+   "unit": "% for 30 min",
+   "note": "an SST sits near 1.0-1.2x continuous and no vendor publishes a curve"
+  },
+  {
+   "label": "DC fault current rise rate Siemens measured",
+   "v": 200,
+   "t": "PRIMER ch.5.2",
+   "unit": "A/us",
+   "note": "interruption at that rate was only possible with solid-state breakers"
+  },
+  {
+   "label": "Insulation a 35 kV interface needs",
+   "v": 100,
+   "t": "PRIMER ch.5.3",
+   "unit": "kV",
+   "note": "\"three times the insulation\", TDK"
+  },
+  {
+   "label": "Largest independently validated SST on a live US feeder",
+   "v": 1,
+   "t": "PRIMER ch.5.6",
+   "unit": "MVA",
+   "note": "13.2 kV, NC State with NYPA and EPRI. Vendors quote 3-7.5 MVA — the gap is the risk the buyer carries"
+  },
+  {
+   "label": "ERCOT large-load queue against approvals",
+   "v": 410,
+   "t": "PRIMER ch.6.1",
+   "unit": "GW queued",
+   "note": "against 9.0 GW approved to energise and a 3.9 GW observed peak"
+  },
+  {
+   "label": "US transformer lead time, standard units",
+   "v": 128,
+   "t": "PRIMER ch.6.2",
+   "unit": "weeks",
+   "note": "144 for generator step-ups; worst cases near four years"
+  },
+  {
+   "label": "Data-centre load dropped, 10 July 2024 Virginia",
+   "v": 1500,
+   "t": "PRIMER ch.6.3",
+   "unit": "MW",
+   "note": "six faults in 82 s; none of it disconnected by utility equipment"
+  },
+  {
+   "label": "Data-centre load dropped, 22 July 2026 Dominion territory",
+   "v": 3800,
+   "t": "WEB, verified 2026-09-23",
+   "unit": "MW",
+   "note": "a second, larger event on a normally cleared fault — not the same event as 2024",
+   "url": "https://rmsenergy.com/tdec-post/after-3-8-gw-dropped-in-virginia-nercs-computational-load-standards-move-from-draft-to-deadline/"
+  },
+  {
+   "label": "NVIDIA standardised DC power block",
+   "v": 4.8,
+   "t": "GUIDANCE nvidia-800vdc p17-21",
+   "unit": "MW",
+   "note": "6000 A switchboard, parallel 1250 A busways, 4+1 catcher through a DC static transfer switch, 20 MW deployment units"
+  },
+  {
+   "label": "Rack power ladder, Gen 1 to Gen 4",
+   "v": 1000,
+   "t": "GUIDANCE nvidia-800vdc p7",
+   "unit": "kW at Gen 4",
+   "note": "145 to 330 to 570 to about 1,000 kW. Page-referenced in the repo's copy of the August 2026 paper; not confirmed on any public NVIDIA page"
+  },
+  {
+   "label": "Megmeet H1 2026 power products growth",
+   "v": 60.92,
+   "t": "DOSSIER megmeet v7",
+   "unit": "%",
+   "note": "to RMB 1.841bn, the only segment with an expanding gross margin at 25.06%"
+  },
+  {
+   "label": "Megmeet H1 2026 ex-non-recurring net profit",
+   "v": -16.13,
+   "t": "WEB, verified 2026-09-23",
+   "unit": "%",
+   "note": "against a headline attributable net profit of +45.21%. Always quote both",
+   "url": "https://news.qq.com/rain/a/20260828A04BC400"
+  },
+  {
+   "label": "Megmeet FY2025 revenue",
+   "v": 9.403,
+   "t": "DOSSIER megmeet v7",
+   "unit": "RMB bn",
+   "note": "about USD 1.3bn. Not USD 13bn — 亿元 is 100 million"
+  },
+  {
+   "label": "Megmeet SST service-voltage class",
+   "v": null,
+   "t": "DOSSIER megmeet v7",
+   "unit": "undisclosed",
+   "note": "zero kV mentions across 38 pinned sources and a four-filing text scan"
+  },
+  {
+   "label": "Sungrow EnerNeo class ceiling",
+   "v": 13.8,
+   "t": "DOSSIER sungrow v9",
+   "unit": "kV",
+   "note": "the only SST a filing describes as supplying the market, and it cannot serve a 35 kV campus"
+  },
+  {
+   "label": "Heron Link class and rating",
+   "v": 34.5,
+   "t": "DOSSIER heron-power v1",
+   "unit": "kV at 4.2 MW",
+   "note": "the most completely specified hall-edge SST in the public record, and nothing shipped"
+  }
+ ],
+ "developedBy": "LightAISolutions"
+}

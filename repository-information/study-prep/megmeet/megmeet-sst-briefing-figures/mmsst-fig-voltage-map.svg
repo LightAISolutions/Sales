@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="452.805716pt" height="246.732852pt" viewBox="0 0 452.805716 246.732852" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T13:15:57.414260</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 246.732852 
+L 452.805716 246.732852 
+L 452.805716 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 8.262422 213.080273 
+L 421.182422 213.080273 
+L 421.182422 19.040273 
+L 8.262422 19.040273 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 8.262422 213.080273 
+L 8.262422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mdbd472a8a2" d="M 0 0 
+L 0 3.5 
+" style="stroke: #6d6758; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="8.262422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="8.262422" y="226.63252" transform="rotate(-0 8.262422 226.63252)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 63.318422 213.080273 
+L 63.318422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="63.318422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="63.318422" y="226.63252" transform="rotate(-0 63.318422 226.63252)">20</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 118.374422 213.080273 
+L 118.374422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="118.374422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="118.374422" y="226.63252" transform="rotate(-0 118.374422 226.63252)">40</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 173.430422 213.080273 
+L 173.430422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="173.430422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="173.430422" y="226.63252" transform="rotate(-0 173.430422 226.63252)">60</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 228.486422 213.080273 
+L 228.486422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="228.486422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="228.486422" y="226.63252" transform="rotate(-0 228.486422 226.63252)">80</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 283.542422 213.080273 
+L 283.542422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="283.542422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="283.542422" y="226.63252" transform="rotate(-0 283.542422 226.63252)">100</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 338.598422 213.080273 
+L 338.598422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="338.598422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="338.598422" y="226.63252" transform="rotate(-0 338.598422 226.63252)">120</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 393.654422 213.080273 
+L 393.654422 19.040273 
+" clip-path="url(#pa69932e528)" style="fill: none; stroke: #e9e5da; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#mdbd472a8a2" x="393.654422" y="213.080273" style="fill: #6d6758; stroke: #6d6758; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="393.654422" y="226.63252" transform="rotate(-0 393.654422 226.63252)">140</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 9px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #6d6758" x="214.722422" y="239.078809" transform="rotate(-0 214.722422 239.078809)">Nominal voltage (kV)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 8.262422 80.316063 
+L 42.589838 80.316063 
+L 42.589838 63.29501 
+L 8.262422 63.29501 
+z
+" clip-path="url(#pa69932e528)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 8.262422 114.358168 
+L 46.251062 114.358168 
+L 46.251062 97.337116 
+L 8.262422 97.337116 
+z
+" clip-path="url(#pa69932e528)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 8.262422 148.400273 
+L 76.807142 148.400273 
+L 76.807142 131.379221 
+L 8.262422 131.379221 
+z
+" clip-path="url(#pa69932e528)" style="fill: #7fb0d4; stroke: #ffffff; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 8.262422 182.442379 
+L 103.234022 182.442379 
+L 103.234022 165.421326 
+L 8.262422 165.421326 
+z
+" clip-path="url(#pa69932e528)" style="fill: #0b62a4; stroke: #ffffff; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 8.262422 46.273958 
+L 198.205622 46.273958 
+L 198.205622 29.252905 
+L 8.262422 29.252905 
+z
+" clip-path="url(#pa69932e528)" style="fill: #e9e5da; stroke: #ffffff; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 8.262422 213.080273 
+L 8.262422 19.040273 
+" style="fill: none; stroke: #cfc8b4; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 8.262422 213.080273 
+L 421.182422 213.080273 
+" style="fill: none; stroke: #cfc8b4; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="49.589838" y="73.720576" transform="rotate(-0 49.589838 73.720576)">12.47 kV · 15 kV class · 95 kV BIL</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="9.363542" y="88.451459" transform="rotate(-0 9.363542 88.451459)">the most common US service class nationally; the design point most SST vendors quote</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="53.251062" y="107.762681" transform="rotate(-0 53.251062 107.762681)">13.8 kV · 15 kV class · 95 kV BIL</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="9.363542" y="122.493565" transform="rotate(-0 9.363542 122.493565)">the other half of the 15 kV class; Sungrow's EnerNeo tops out here</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="83.807142" y="141.804786" transform="rotate(-0 83.807142 141.804786)">24.9 kV · 25 kV class · 125 kV BIL</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="9.363542" y="156.53567" transform="rotate(-0 9.363542 156.53567)">parts of the Midwest, Mountain West and cooperatives</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="110.234022" y="175.846891" transform="rotate(-0 110.234022 175.846891)">34.5 kV · 35 kV class · 150 kV BIL</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(9.363542 190.577775)">large Texas, Southeast and Mid-Atlantic campuses; Northern Virginia runs 34.5 kV</text>
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(9.363542 199.150285)">distribution behind 230 kV ties</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #6d6758" x="205.205622" y="39.67847" transform="rotate(-0 205.205622 39.67847)">69–345 kV transmission tie · gigawatt campuses with their own substation</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #23211c" x="8.262422" y="13.040273" transform="rotate(-0 8.262422 13.040273)">The US ladder — the class sets the product, not a configuration option</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa69932e528">
+   <rect x="8.262422" y="19.040273" width="412.92" height="194.04"/>
+  </clipPath>
+ </defs>
+</svg>
+<!-- Developed by: LightAISolutions -->
