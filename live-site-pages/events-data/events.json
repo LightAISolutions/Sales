@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "built": "2026-09-21T11:47:42Z",
+  "built": "2026-09-24T23:48:40Z",
   "events": [
     {
       "slug": "naatbatt-annual-2026",
@@ -208,7 +208,7 @@
           "lastConfirmed": "2026-09-21"
         }
       ],
-      "status": "tentative",
+      "status": "past",
       "lastUpdated": "2026-09-21"
     },
     {
@@ -224,7 +224,7 @@
       "region": "",
       "country": "PT",
       "venue": "Pestana Douro Riverside",
-      "website": "https://www.esig.energy/events/",
+      "website": "https://www.esig.energy/event/esig-large-loads-workshop/",
       "audience": [
         "grid-equipment",
         "utilities",
@@ -237,11 +237,11 @@
           "sourceKey": "esig-events",
           "kind": "jsonld",
           "url": "https://www.esig.energy/events/",
-          "lastConfirmed": "2026-09-21"
+          "lastConfirmed": "2026-09-22"
         }
       ],
       "status": "confirmed",
-      "lastUpdated": "2026-09-21"
+      "lastUpdated": "2026-09-24"
     },
     {
       "slug": "gcpa-fall-2026",
@@ -293,7 +293,7 @@
       "city": "Las Vegas",
       "region": "NV",
       "country": "US",
-      "website": "https://imasons.org/events/",
+      "website": "https://imasons.org/activity/2026-28-09_yotta-2026/",
       "audience": [
         "aidc-developers-and-landlords",
         "hyperscalers-and-ai-labs",
@@ -308,11 +308,11 @@
           "sourceKey": "imasons-events",
           "kind": "jsonld",
           "url": "https://imasons.org/events/",
-          "lastConfirmed": "2026-09-21"
+          "lastConfirmed": "2026-09-22"
         }
       ],
       "status": "confirmed",
-      "lastUpdated": "2026-09-21"
+      "lastUpdated": "2026-09-24"
     },
     {
       "slug": "yotta-2026",
@@ -358,6 +358,37 @@
       ],
       "status": "confirmed",
       "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "webinar-stability-and-dynamics-studies-of-ders-in-weak-distribut",
+      "name": "Webinar: Stability and Dynamics Studies of DERs in Weak Distribution Systems: Best Practices for EMT Studies and Utility Applications",
+      "series": "Webinar: Stability and Dynamics Studies of DERs in Weak Distribution Systems: Best Practices for EMT Studies and Utility Applications",
+      "organiser": "Energy Systems Integration Group",
+      "kind": "webinar",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "",
+      "audience": [
+        "grid-equipment",
+        "utilities",
+        "software-and-optimization"
+      ],
+      "relevance": 2,
+      "tierNote": "Online (WebEx), 4-5 PM ET; stability screening and EMT studies for inverter-based DERs on weak feeders. Engineers and planners, not buyers.",
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "website": "https://www.esig.energy/event/webinar-stability-and-dynamics-studies-of-ders-in-weak-distribution-systems-best-practices-for-emt-studies-and-utility-applications/",
+      "sources": [
+        {
+          "sourceKey": "esig-events",
+          "kind": "jsonld",
+          "url": "https://www.esig.energy/event/webinar-stability-and-dynamics-studies-of-ders-in-weak-distribution-systems-best-practices-for-emt-studies-and-utility-applications/",
+          "lastConfirmed": "2026-09-22"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-24"
     },
     {
       "slug": "bisnow-central-dc-construction-2026",
@@ -656,6 +687,37 @@
       ],
       "status": "confirmed",
       "lastUpdated": "2026-09-21"
+    },
+    {
+      "slug": "webinar-a-quantitative-assessment-of-the-impacts-of-large-loads",
+      "name": "Webinar: A Quantitative Assessment of the Impacts of Large Loads on Electricity Rate",
+      "series": "Webinar: A Quantitative Assessment of the Impacts of Large Loads on Electricity Rate",
+      "organiser": "Energy Systems Integration Group",
+      "kind": "webinar",
+      "tz": "America/New_York",
+      "city": "",
+      "region": "",
+      "country": "",
+      "audience": [
+        "utilities",
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs"
+      ],
+      "relevance": 3,
+      "tierNote": "Online (WebEx), 4-5 PM ET; how data-centre and manufacturing load growth moves rates for existing customers, the argument behind every large-load tariff.",
+      "start": "2026-10-15",
+      "end": "2026-10-15",
+      "website": "https://www.esig.energy/event/webinar-a-quantitative-assessment-of-the-impacts-of-large-loads-on-electricity-rate/",
+      "sources": [
+        {
+          "sourceKey": "esig-events",
+          "kind": "jsonld",
+          "url": "https://www.esig.energy/event/webinar-a-quantitative-assessment-of-the-impacts-of-large-loads-on-electricity-rate/",
+          "lastConfirmed": "2026-09-22"
+        }
+      ],
+      "status": "tentative",
+      "lastUpdated": "2026-09-24"
     },
     {
       "slug": "bisnow-national-dc-connectivity-ai-2026",
@@ -3476,7 +3538,7 @@
         36.158,
         -86.776
       ],
-      "website": "https://www.datacenterworld.com/",
+      "website": "https://datacenterworld.com/",
       "registrationUrl": "https://info.datacenterworld.com/datacenterusa_reginterest",
       "exhibitorListUrl": "https://exhibitors.datacenterworld.com/",
       "agendaUrl": "https://schedule.datacenterworld.com/",
@@ -3496,11 +3558,11 @@
           "sourceKey": "informa-data-center-world",
           "kind": "jsonld",
           "url": "https://www.datacenterworld.com/",
-          "lastConfirmed": "2026-09-21"
+          "lastConfirmed": "2026-09-22"
         }
       ],
       "status": "confirmed",
-      "lastUpdated": "2026-09-21",
+      "lastUpdated": "2026-09-24",
       "mentions": [
         {
           "slug": "delta-electronics",
@@ -4319,6 +4381,52 @@
       ]
     },
     {
+      "slug": "datacloud-usa-2027",
+      "name": "Datacloud USA 2027 x Metro Connect Fall",
+      "series": "Datacloud USA",
+      "organiser": "Datacloud (techoraco / BroadGroup)",
+      "kind": "conference",
+      "start": "2027-08-30",
+      "end": "2027-09-02",
+      "tz": "America/Chicago",
+      "city": "Austin",
+      "region": "TX",
+      "country": "US",
+      "venue": "Austin Marriott Downtown",
+      "website": "https://www.datacloud-usa.com/",
+      "registrationUrl": "https://events.datacloudseries.com/GVWmeQ",
+      "agendaUrl": "https://www.datacloud-usa.com/agenda",
+      "audience": [
+        "aidc-developers-and-landlords",
+        "hyperscalers-and-ai-labs",
+        "in-hall-power",
+        "cooling",
+        "capital",
+        "neoclouds"
+      ],
+      "relevance": 4,
+      "tierNote": "~3,000 senior leaders with the fiber and capital side present; co-located with Metro Connect Fall. The seed calendar listed Datacloud USA as 'not yet dated for 2027' — the organiser now publishes 31 Aug - 2 Sep with a 30 Aug pre-event day.",
+      "editions": [
+        {
+          "year": 2026,
+          "start": "2026-09-02",
+          "end": "2026-09-03",
+          "city": "Austin",
+          "venue": ""
+        }
+      ],
+      "sources": [
+        {
+          "sourceKey": "datacloud-usa",
+          "kind": "jsonld",
+          "url": "https://www.datacloud-usa.com/",
+          "lastConfirmed": "2026-09-22"
+        }
+      ],
+      "status": "confirmed",
+      "lastUpdated": "2026-09-24"
+    },
+    {
       "slug": "ai-infra-summit-2027",
       "name": "AI Infra Summit 2027",
       "series": "AI Infra Summit",
@@ -4363,56 +4471,6 @@
           "where": "developments"
         }
       ]
-    },
-    {
-      "slug": "datacloud-usa-2027",
-      "name": "Datacloud USA 2027 x Metro Connect Fall",
-      "series": "Datacloud USA",
-      "organiser": "Datacloud (techoraco / BroadGroup)",
-      "kind": "conference",
-      "start": "2027-08-31",
-      "end": "2027-09-02",
-      "tz": "America/Chicago",
-      "city": "Austin",
-      "region": "TX",
-      "country": "US",
-      "venue": "Fairmont Austin",
-      "venueLatLng": [
-        30.2626,
-        -97.7395
-      ],
-      "website": "https://www.datacloud-usa.com/",
-      "registrationUrl": "https://events.datacloudseries.com/GVWmeQ",
-      "agendaUrl": "https://www.datacloud-usa.com/agenda",
-      "audience": [
-        "aidc-developers-and-landlords",
-        "hyperscalers-and-ai-labs",
-        "in-hall-power",
-        "cooling",
-        "capital",
-        "neoclouds"
-      ],
-      "relevance": 4,
-      "tierNote": "~3,000 senior leaders with the fiber and capital side present; co-located with Metro Connect Fall. The seed calendar listed Datacloud USA as 'not yet dated for 2027' — the organiser now publishes 31 Aug - 2 Sep with a 30 Aug pre-event day.",
-      "editions": [
-        {
-          "year": 2026,
-          "start": "2026-09-02",
-          "end": "2026-09-03",
-          "city": "Austin",
-          "venue": ""
-        }
-      ],
-      "sources": [
-        {
-          "sourceKey": "datacloud-usa",
-          "kind": "jsonld",
-          "url": "https://www.datacloud-usa.com/",
-          "lastConfirmed": "2026-09-21"
-        }
-      ],
-      "status": "confirmed",
-      "lastUpdated": "2026-09-21"
     },
     {
       "slug": "infocast-energy-storage-finance-2027",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "built": "2026-09-21T11:47:42Z",
+  "built": "2026-09-24T23:48:40Z",
   "sources": [
     {
       "key": "10times-listings",
@@ -56,7 +56,7 @@
       "robots": "allowed",
       "cadence": "monthly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 2,
         "newestItem": "2026-09-15"
@@ -195,7 +195,7 @@
       "robots": "allowed",
       "cadence": "weekly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 1,
         "newestItem": "2027-01-18"
@@ -255,7 +255,7 @@
       "robots": "allowed",
       "cadence": "monthly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 1,
         "newestItem": "2027-08-30"
@@ -349,10 +349,10 @@
       "robots": "allowed",
       "cadence": "weekly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 12,
-        "newestItem": "2027-01-14"
+        "newestItem": "2027-01-26"
       },
       "notes": "12 Event objects; a tribe-style calendar that publishes workshops months ahead."
     },
@@ -489,10 +489,10 @@
       "robots": "allowed",
       "cadence": "weekly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
-        "itemCount": 11,
-        "newestItem": "2026-11-24"
+        "itemCount": 12,
+        "newestItem": "2026-11-12"
       },
       "notes": "The richest feed found: 11 Event objects covering chapter socials and webinars — the sub-mega tier no other roster row carries."
     },
@@ -519,7 +519,7 @@
       "robots": "allowed",
       "cadence": "weekly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 1,
         "newestItem": "2026-10-12"
@@ -549,7 +549,7 @@
       "robots": "allowed",
       "cadence": "weekly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 1,
         "newestItem": "2027-05-24"
@@ -564,7 +564,7 @@
       "robots": "allowed",
       "cadence": "weekly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 1,
         "newestItem": "2027-03-01"
@@ -625,9 +625,9 @@
       "robots": "allowed",
       "cadence": "monthly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
-        "itemCount": 2,
+        "itemCount": 1,
         "newestItem": "2027-03-01"
       },
       "notes": "Event JSON-LD with 2027 dates."
@@ -889,7 +889,7 @@
       "robots": "allowed",
       "cadence": "weekly",
       "lastProbe": {
-        "at": "2026-09-21",
+        "at": "2026-09-22",
         "status": 200,
         "itemCount": 1,
         "newestItem": "2026-09-28"

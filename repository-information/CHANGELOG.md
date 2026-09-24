@@ -3,11 +3,480 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.42r] — 2026-09-24 07:50:01 PM EST
+
+> **Prompt:** "Picking up from my open action items review, I want to sync my Events registry. Run events sync with the following JSON:
+>
+> ```json
+> {
+>   "schemaVersion": 1,
+>   "exported": "2026-09-24T23:39:44.059Z",
+>   "proposals": [
+>     {
+>       "id": "pr-011alu3fbhzxh",
+>       "sourceKey": "ai-infra-summit",
+>       "slug": "ai-infra-summit-2026",
+>       "change": "new-edition",
+>       "before": {
+>         "end": "2027-09-02",
+>         "slug": "ai-infra-summit-2027",
+>         "start": "2027-08-31"
+>       },
+>       "after": {
+>         "city": "Santa Clara",
+>         "country": "US",
+>         "end": "2026-09-17",
+>         "kind": "conference",
+>         "name": "AI Infra Summit 2026",
+>         "organiser": "Kisaco Research",
+>         "region": "CA",
+>         "series": "AI Infra Summit",
+>         "slug": "ai-infra-summit-2026",
+>         "sources": [
+>           {
+>             "kind": "jsonld",
+>             "lastConfirmed": "",
+>             "sourceKey": "ai-infra-summit",
+>             "url": "https://www.ai-infra-summit.com"
+>           }
+>         ],
+>         "start": "2026-09-15",
+>         "status": "tentative",
+>         "tz": "America/Los_Angeles",
+>         "venue": "Santa Clara Convention Center",
+>         "website": "https://www.ai-infra-summit.com"
+>       },
+>       "evidenceUrl": "https://ai-infra-summit.com/events/ai-infra-summit",
+>       "seenAt": "2026-09-22T20:48:51.918Z",
+>       "decidedAt": "2026-09-22T20:56:52.474Z"
+>     },
+>     {
+>       "id": "pr-0wf4qdswu9qm4",
+>       "sourceKey": "ai-infra-summit",
+>       "slug": "ai-infra-summit-2027",
+>       "change": "moved-dates",
+>       "before": {
+>         "end": "2027-09-02",
+>         "start": "2027-08-31"
+>       },
+>       "after": {
+>         "end": "2026-09-17",
+>         "start": "2026-09-15"
+>       },
+>       "evidenceUrl": "https://ai-infra-summit.com/events/ai-infra-summit",
+>       "seenAt": "2026-09-22T20:48:51.918Z",
+>       "decidedAt": "2026-09-24T20:55:35.146Z"
+>     },
+>     {
+>       "id": "pr-1ifa3czd71l9h",
+>       "sourceKey": "ai-infra-summit",
+>       "slug": "ai-infra-summit-2027",
+>       "change": "changed-venue",
+>       "before": {
+>         "city": "San Jose",
+>         "venue": "San Jose McEnery Convention Center"
+>       },
+>       "after": {
+>         "city": "5001 Great America Parkway, Santa Clara, CA 95054, United States",
+>         "venue": "Santa Clara Convention Center"
+>       },
+>       "evidenceUrl": "https://ai-infra-summit.com/events/ai-infra-summit",
+>       "seenAt": "2026-09-22T20:48:51.918Z",
+>       "decidedAt": "2026-09-24T20:55:34.788Z"
+>     },
+>     {
+>       "id": "pr-01iw6y3n1ltpd",
+>       "sourceKey": "datacloud-usa",
+>       "slug": "datacloud-usa-2027",
+>       "change": "moved-dates",
+>       "before": {
+>         "end": "2027-09-02",
+>         "start": "2027-08-31"
+>       },
+>       "after": {
+>         "end": "2027-09-02",
+>         "start": "2027-08-30"
+>       },
+>       "evidenceUrl": "https://www.datacloud-usa.com/",
+>       "seenAt": "2026-09-22T20:49:06.174Z",
+>       "decidedAt": "2026-09-24T20:55:43.747Z"
+>     },
+>     {
+>       "id": "pr-0r71bryoebnp2",
+>       "sourceKey": "datacloud-usa",
+>       "slug": "datacloud-usa-2027",
+>       "change": "changed-venue",
+>       "before": {
+>         "city": "Austin",
+>         "venue": "Fairmont Austin"
+>       },
+>       "after": {
+>         "city": "304 E Cesar Chavez St, Austin, Texas, 78701, United Kingdom",
+>         "venue": "Austin Marriott Downtown"
+>       },
+>       "evidenceUrl": "https://www.datacloud-usa.com/",
+>       "seenAt": "2026-09-22T20:49:06.174Z",
+>       "decidedAt": "2026-09-24T20:55:41.098Z"
+>     },
+>     {
+>       "id": "pr-2f8kg1rgvynrk",
+>       "sourceKey": "esig-events",
+>       "slug": "esig-large-loads-workshop-2026",
+>       "change": "changed-url",
+>       "before": {
+>         "website": "https://www.esig.energy/events/"
+>       },
+>       "after": {
+>         "website": "https://www.esig.energy/event/esig-large-loads-workshop/"
+>       },
+>       "evidenceUrl": "https://www.esig.energy/events/",
+>       "seenAt": "2026-09-22T20:49:12.076Z",
+>       "decidedAt": "2026-09-24T20:56:15.848Z"
+>     },
+>     {
+>       "id": "pr-174qj4to6col2",
+>       "sourceKey": "esig-events",
+>       "slug": "webinar-stability-and-dynamics-studies-of-ders-in-weak-distribut",
+>       "change": "new-event",
+>       "before": {},
+>       "after": {
+>         "end": "2026-10-01",
+>         "name": "Webinar: Stability and Dynamics Studies of DERs in Weak Distribution Systems: Best Practices for EMT Studies and Utility Applications",
+>         "slug": "webinar-stability-and-dynamics-studies-of-ders-in-weak-distribut",
+>         "sources": [
+>           {
+>             "kind": "",
+>             "lastConfirmed": "",
+>             "sourceKey": "esig-events",
+>             "url": "https://www.esig.energy/event/webinar-stability-and-dynamics-studies-of-ders-in-weak-distribution-systems-best-practices-for-emt-studies-and-utility-applications/"
+>           }
+>         ],
+>         "start": "2026-10-01",
+>         "status": "tentative",
+>         "website": "https://www.esig.energy/event/webinar-stability-and-dynamics-studies-of-ders-in-weak-distribution-systems-best-practices-for-emt-studies-and-utility-applications/"
+>       },
+>       "evidenceUrl": "https://www.esig.energy/events/",
+>       "seenAt": "2026-09-22T20:49:12.076Z",
+>       "decidedAt": "2026-09-24T20:57:41.179Z"
+>     },
+>     {
+>       "id": "pr-0imzbnq3kfo98",
+>       "sourceKey": "esig-events",
+>       "slug": "webinar-a-quantitative-assessment-of-the-impacts-of-large-loads",
+>       "change": "new-event",
+>       "before": {},
+>       "after": {
+>         "end": "2026-10-15",
+>         "name": "Webinar: A Quantitative Assessment of the Impacts of Large Loads on Electricity Rate",
+>         "slug": "webinar-a-quantitative-assessment-of-the-impacts-of-large-loads",
+>         "sources": [
+>           {
+>             "kind": "",
+>             "lastConfirmed": "",
+>             "sourceKey": "esig-events",
+>             "url": "https://www.esig.energy/event/webinar-a-quantitative-assessment-of-the-impacts-of-large-loads-on-electricity-rate/"
+>           }
+>         ],
+>         "start": "2026-10-15",
+>         "status": "tentative",
+>         "website": "https://www.esig.energy/event/webinar-a-quantitative-assessment-of-the-impacts-of-large-loads-on-electricity-rate/"
+>       },
+>       "evidenceUrl": "https://www.esig.energy/events/",
+>       "seenAt": "2026-09-22T20:49:12.076Z",
+>       "decidedAt": "2026-09-24T20:57:39.101Z"
+>     },
+>     {
+>       "id": "pr-2xy3g1xojf4wm",
+>       "sourceKey": "esig-events",
+>       "slug": "fall-technical-workshop-2026",
+>       "change": "new-event",
+>       "before": {},
+>       "after": {
+>         "city": "Reston",
+>         "country": "United States",
+>         "end": "2026-10-29",
+>         "name": "2026 Fall Technical Workshop",
+>         "region": "VA",
+>         "slug": "fall-technical-workshop-2026",
+>         "sources": [
+>           {
+>             "kind": "",
+>             "lastConfirmed": "",
+>             "sourceKey": "esig-events",
+>             "url": "https://www.esig.energy/event/2026-fall-technical-workshop/"
+>           }
+>         ],
+>         "start": "2026-10-26",
+>         "status": "tentative",
+>         "venue": "Hyatt Regency Reston, VA",
+>         "website": "https://www.esig.energy/event/2026-fall-technical-workshop/"
+>       },
+>       "evidenceUrl": "https://www.esig.energy/events/",
+>       "seenAt": "2026-09-22T20:49:12.076Z",
+>       "decidedAt": "2026-09-24T20:56:54.181Z"
+>     },
+>     {
+>       "id": "pr-1fwilm8tj67sn",
+>       "sourceKey": "imasons-events",
+>       "slug": "imasons-at-yotta-2026",
+>       "change": "changed-url",
+>       "before": {
+>         "website": "https://imasons.org/events/"
+>       },
+>       "after": {
+>         "website": "https://imasons.org/activity/2026-28-09_yotta-2026/"
+>       },
+>       "evidenceUrl": "https://imasons.org/events/",
+>       "seenAt": "2026-09-22T20:49:41.817Z",
+>       "decidedAt": "2026-09-24T20:58:04.031Z"
+>     },
+>     {
+>       "id": "pr-10w2gwwavrkfb",
+>       "sourceKey": "imasons-events",
+>       "slug": "imasons-cascadia-local-chapter-the-digital-frontier-building-the",
+>       "change": "new-event",
+>       "before": {},
+>       "after": {
+>         "end": "2026-10-15",
+>         "name": "iMasons Cascadia Local Chapter | The Digital Frontier: Building the Infrastructure of Tomorrow",
+>         "slug": "imasons-cascadia-local-chapter-the-digital-frontier-building-the",
+>         "sources": [
+>           {
+>             "kind": "",
+>             "lastConfirmed": "",
+>             "sourceKey": "imasons-events",
+>             "url": "https://imasons.org/activity/2026-10-15_digitalfrontier_cas/"
+>           }
+>         ],
+>         "start": "2026-10-15",
+>         "status": "tentative",
+>         "website": "https://imasons.org/activity/2026-10-15_digitalfrontier_cas/"
+>       },
+>       "evidenceUrl": "https://imasons.org/events/",
+>       "seenAt": "2026-09-22T20:49:41.817Z",
+>       "decidedAt": "2026-09-24T20:58:34.714Z"
+>     },
+>     {
+>       "id": "pr-1rz0m71444icd",
+>       "sourceKey": "imasons-events",
+>       "slug": "data-center-energy-industry-update-2026",
+>       "change": "new-event",
+>       "before": {},
+>       "after": {
+>         "end": "2026-11-02",
+>         "name": "Data Center Energy Industry Update",
+>         "slug": "data-center-energy-industry-update-2026",
+>         "sources": [
+>           {
+>             "kind": "",
+>             "lastConfirmed": "",
+>             "sourceKey": "imasons-events",
+>             "url": "https://imasons.org/activity/2026-11-02_datacenterenergyindustryupdate_tx/"
+>           }
+>         ],
+>         "start": "2026-11-02",
+>         "status": "tentative",
+>         "website": "https://imasons.org/activity/2026-11-02_datacenterenergyindustryupdate_tx/"
+>       },
+>       "evidenceUrl": "https://imasons.org/events/",
+>       "seenAt": "2026-09-22T20:49:41.817Z",
+>       "decidedAt": "2026-09-24T20:57:42.089Z"
+>     },
+>     {
+>       "id": "pr-2wpsbsoc5z7j5",
+>       "sourceKey": "informa-battery-show",
+>       "slug": "the-battery-show-north-america-2026",
+>       "change": "new-event",
+>       "before": {},
+>       "after": {
+>         "city": "Detroit",
+>         "country": "US",
+>         "end": "2026-10-15",
+>         "name": "The Battery Show North America",
+>         "slug": "the-battery-show-north-america-2026",
+>         "sources": [
+>           {
+>             "kind": "",
+>             "lastConfirmed": "",
+>             "sourceKey": "informa-battery-show",
+>             "url": "https://www.thebatteryshow.com/"
+>           }
+>         ],
+>         "start": "2026-10-12",
+>         "status": "tentative",
+>         "venue": "Huntington Place",
+>         "website": "https://www.thebatteryshow.com/"
+>       },
+>       "evidenceUrl": "https://www.thebatteryshow.com/en/home.html",
+>       "seenAt": "2026-09-22T20:50:09.948Z",
+>       "decidedAt": "2026-09-24T20:58:44.533Z"
+>     },
+>     {
+>       "id": "pr-19f00es616r74",
+>       "sourceKey": "informa-data-center-world",
+>       "slug": "data-center-world-2027",
+>       "change": "changed-url",
+>       "before": {
+>         "website": "https://www.datacenterworld.com/"
+>       },
+>       "after": {
+>         "website": "https://datacenterworld.com/"
+>       },
+>       "evidenceUrl": "https://www.datacenterworld.com/",
+>       "seenAt": "2026-09-22T20:50:13.570Z",
+>       "decidedAt": "2026-09-24T20:58:45.815Z"
+>     },
+>     {
+>       "id": "pr-0bywe4src8ygp",
+>       "sourceKey": "mwc-barcelona",
+>       "slug": "mwc-barcelona-2027",
+>       "change": "changed-venue",
+>       "before": {
+>         "city": "Barcelona",
+>         "venue": "Fira Gran Via"
+>       },
+>       "after": {
+>         "city": "Fira Gran Via, Av. Joan Carles I, 64 08908 L'Hospitalet de Llobregat Barcelona",
+>         "venue": "Fira Gran Via, Barcelona, Spain"
+>       },
+>       "evidenceUrl": "https://www.mwcbarcelona.com/",
+>       "seenAt": "2026-09-22T20:50:18.044Z",
+>       "decidedAt": "2026-09-24T20:58:50.558Z"
+>     },
+>     {
+>       "id": "pr-0gt5wnjye4xvd",
+>       "sourceKey": "yotta-event",
+>       "slug": "yotta-2026",
+>       "change": "changed-venue",
+>       "before": {
+>         "city": "Las Vegas",
+>         "venue": "Caesars Forum"
+>       },
+>       "after": {
+>         "city": "Las Vegas",
+>         "venue": "Yotta 2026"
+>       },
+>       "evidenceUrl": "https://www.yotta-event.com/",
+>       "seenAt": "2026-09-22T20:50:22.007Z",
+>       "decidedAt": "2026-09-24T20:58:48.048Z"
+>     }
+>   ],
+>   "polls": [
+>     {
+>       "sourceKey": "ai-infra-summit",
+>       "ranAt": "2026-09-22T20:48:51.918Z",
+>       "status": "200",
+>       "items": 2,
+>       "newest": "2026-09-15T07:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "clarion-powergen",
+>       "ranAt": "2026-09-22T20:49:05.599Z",
+>       "status": "200",
+>       "items": 1,
+>       "newest": "2027-01-18T08:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "datacloud-usa",
+>       "ranAt": "2026-09-22T20:49:06.174Z",
+>       "status": "200",
+>       "items": 1,
+>       "newest": "2027-08-30T07:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "esig-events",
+>       "ranAt": "2026-09-22T20:49:12.076Z",
+>       "status": "200",
+>       "items": 12,
+>       "newest": "2027-01-26T08:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "imasons-events",
+>       "ranAt": "2026-09-22T20:49:41.817Z",
+>       "status": "200",
+>       "items": 12,
+>       "newest": "2026-11-12T08:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "informa-battery-show",
+>       "ranAt": "2026-09-22T20:50:09.948Z",
+>       "status": "200",
+>       "items": 1,
+>       "newest": "2026-10-12T07:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "informa-data-center-world",
+>       "ranAt": "2026-09-22T20:50:13.570Z",
+>       "status": "200",
+>       "items": 1,
+>       "newest": "2027-05-24T07:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "informa-distributech",
+>       "ranAt": "2026-09-22T20:50:17.382Z",
+>       "status": "200",
+>       "items": 1,
+>       "newest": "2027-03-01T08:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "mwc-barcelona",
+>       "ranAt": "2026-09-22T20:50:18.044Z",
+>       "status": "200",
+>       "items": 1,
+>       "newest": "2027-03-01T08:00:00.000Z"
+>     },
+>     {
+>       "sourceKey": "yotta-event",
+>       "ranAt": "2026-09-22T20:50:22.007Z",
+>       "status": "200",
+>       "items": 1,
+>       "newest": "2026-09-28T07:00:00.000Z"
+>     }
+>   ]
+> }
+> ```
+> "
+
+The first `events sync` to reach the registry. Of the 16 proposals the developer approved in the Proposed tab, **7 were applied and 9 were skipped** at the developer's choice. The skipped rows are poller misreads (listed below), and the registry checker could not have caught them, because it checks only for duplicate slugs. All 10 polled roster rows had their `lastProbe` advanced. No app file changed, so no page or GAS version bump.
+
+### Changed
+
+#### `live-site-pages/events-data/events.json`
+- **`datacloud-usa-2027`**:
+  - Start moved from 31 Aug to **30 Aug 2027**, the organiser's JSON-LD start, which includes the pre-event day the row's tierNote already names (`pr-01iw6y3n1ltpd`).
+  - Venue **Fairmont Austin → Austin Marriott Downtown** (`pr-0r71bryoebnp2`). `city` stays "Austin", because the poller wrote a street address ending "United Kingdom". `venueLatLng` was removed because it pinned the old venue; the next E0 verification pass should set it again.
+- **Three website updates**: `esig-large-loads-workshop-2026` → the workshop's own ESIG page (`pr-2f8kg1rgvynrk`), `imasons-at-yotta-2026` → its iMasons activity page (`pr-1fwilm8tj67sn`), `data-center-world-2027` → `datacenterworld.com` without the `www` (`pr-19f00es616r74`).
+- **Two new ESIG webinars, both tentative**. The session read their evidence pages on 2026-09-24: both are online on WebEx, 4–5 PM ET, organised by ESIG.
+  - `webinar-stability-and-dynamics-studies-of-ders-in-weak-distribut` (1 Oct): DER stability and EMT studies. Audience: grid equipment, utilities, software. Relevance 2 (`pr-174qj4to6col2`).
+  - `webinar-a-quantitative-assessment-of-the-impacts-of-large-loads` (15 Oct): how large loads move electricity rates. Audience: utilities, AIDC developers, hyperscalers. Relevance 3 (`pr-0imzbnq3kfo98`).
+- On every applied row: `lastUpdated` 2026-09-24, and the matching source's `lastConfirmed` set to 2026-09-22 (the poll date).
+- `uptime-network-americas-fall-2026` flipped from tentative to **past** through the checker's own `--fix-past`, which changes only status. It ended 23 Sep, and it was the only finding the gate reported before the sync.
+
+#### `live-site-pages/events-data/events-sources.json`
+- `lastProbe` advanced to the 2026-09-22 poll on 10 roster rows (all HTTP 200): ai-infra-summit, clarion-powergen, datacloud-usa, esig-events, imasons-events, informa-battery-show, informa-data-center-world, informa-distributech, mwc-barcelona, yotta-event. No row was added, unblocked or re-kinded.
+
+#### `live-site-pages/events-data/events.ics`
+- Rebuilt: 69 confirmed of 102 events.
+
+### Skipped — reject these in the Proposed panel
+- `pr-011alu3fbhzxh` (new-edition `ai-infra-summit-2026`), `pr-0wf4qdswu9qm4` (moved-dates) and `pr-1ifa3czd71l9h` (changed-venue) on `ai-infra-summit-2027`. The organiser page's JSON-LD still carries the finished Sep 15–17 2026 Santa Clara edition. The poller read it as a new edition whose *previous* edition is 2027, and as a move of the 2027 row back to 2026 dates and the 2026 venue, with a street address in `city`.
+- `pr-0bywe4src8ygp` (`mwc-barcelona-2027`): the venue is unchanged; the proposal only puts a street address in `city`.
+- `pr-0gt5wnjye4xvd` (`yotta-2026`): the proposed venue "Yotta 2026" is the event's own name.
+- Four duplicates of existing rows under new slugs:
+  - `pr-2wpsbsoc5z7j5` duplicates `battery-show-na-2026`.
+  - `pr-2xy3g1xojf4wm` duplicates `esig-fall-technical-workshop-2026`.
+  - `pr-10w2gwwavrkfb` duplicates `imasons-cascadia-digital-frontier-2026`.
+  - `pr-1rz0m71444icd` duplicates `imasons-texas-energy-update-2026-11`.
+
+### Verified
+- `scripts/check-events-registry.py` exit 0: 102 events (69 confirmed, 5 past, 28 tentative), 58 roster rows, 256 mentions across 32 events; the ICS agrees with the registry.
+- `mentions[]` is byte-identical to before the sync. `extract-corpus-events.py --check` reports the file stale **on `main` before this sync as well**, from recent dossier edits. This command never writes `mentions[]`, so that refresh is left to its own script.
 
 ## [v07.41r] — 2026-09-24 06:55:02 PM EST
 
