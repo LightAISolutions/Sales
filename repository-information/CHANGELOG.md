@@ -3,11 +3,65 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.39r] — 2026-09-24 05:05:10 PM EST
+
+> **Prompt:** "[attached: Powering_the_Next_Era_of_AI_-_How_Google_Microsoft_and_NVIDIA_Are_Standardizing_and_Accelereating_the_Industry_Transition_to_LVDC.pdf] [attached: OCP_SST_Design_Specification_v0.3_FINAL.pdf] Per the Priority 1 list: 1. See attached for the OCP LVDC SST Spec v03 and the accompanying press release that announced it. Now that you have the spec, make sure to update my Megmeet SST Briefing accordingly and output a downloadable copy for me to read. Highlight all the changes made. Then, give me a prompt to paste into a new Opus 5.5 Medium or High session to recheck the 3 Classroom landscape modules."
+
+The Megmeet SST briefing is updated from the OCP SST Specification, Revision 0.3.0, and OCP's announcement of 11 August 2026. The developer supplied both on 24 September; `opencompute.org` had refused them to this environment. Both were read in full, figures included. Every change in the briefing is highlighted in place, and a new Appendix E indexes them. The PDF goes from 76 to 84 pages.
+
+### Changed
+
+#### `repository-information/study-prep/megmeet/megmeet-sst-briefing-print.html` and the rebuilt `MEGMEET-SST-BRIEFING.pdf` (76 → 84 pages)
+- **New chapter 3.5, "What the OCP specification actually says"** — the scope (an MV SST coupled with storage functions as an MV UPS); a fifteen-row requirements table with what each row asks of a vendor; what Revision 0.3.0 leaves TBD; what the announcement adds; and an analysis box on what it changes for Megmeet.
+- **Corrected second-hand claims** (old text struck through beside the new):
+  - The specification's title, dates and authors: *Solid State Transformer (SST) Specification — Medium Voltage to 800 VDC Power Conversion Platform*, effective 22 June 2026, announced 11 August 2026. The first edition had "LVDC SST Specification, July 2026".
+  - "More than 80 manufacturers building to it" is corrected to the announcement's wording: more than 80 partners developing 800 VDC-compatible infrastructure.
+  - Chapter 8, NVIDIA question 13: the specification names Modbus TCP/IP.
+  - Chapter 8, NVIDIA question 15: the specification does set harmonic and power-factor requirements (IEEE 519, IEC 61800-3 C4, IEC 61000-6-2/-4).
+  - Week-one question 9 is rewritten around commenting on Revision 0.4.
+  - Chapter 16.4 marks the OCP block as resolved.
+  - The glossary entry, the flashcard and the chapter 1 term row are rewritten.
+- **Added from the specification**:
+  - Two SKUs: 13.8 kV at 5 MW, and 34.5 kV at 5 or 10 MW.
+  - At least 98% efficiency between 50% and 100% load, counting power-train losses only.
+  - Recommended overload of 120% for 5 s and 150% for 150 ms.
+  - BIL of at least 110 kV at 13.8 kV and 150–200 kV at 34.5 kV.
+  - 800 V DC unipolar output; IT ground floating or high-resistance grounded.
+  - A cap of 10 mF of DC-link capacitance per 4 MW.
+  - Siting in conditioned grey space or outdoors, NEMA 3R, with a 15+ year design life.
+  - The ride-through bands and the state machine.
+  - The compliance list, which includes no UL 9540.
+  - These are placed on the cover, in I.1, I.2 (twenty-three numbers become twenty-seven), chapters 1, 3, 5, 6, 7, 8 and 13–16.
+- **Two new items in chapter 16.3:** the specification plots ERCOT's NOGRR 282 curve with different corner points from the briefing's web-sourced test, and the specification carries three different dates.
+- **New Spec citation tier**, references 85–89. They are appended rather than renumbering the document. New highlight CSS: `mark.chg`, `del.chg`, `tr.chg`, `.chg-block`.
+
+#### `repository-information/study-prep/megmeet/megmeet-sst-briefing-data.json`
+- The same stale statements are corrected in `obstacles`, `timelines`, `terms`, `weekOne` and `calendar`, and the `dontSay` ±400 V row gains a note.
+- Three OCP numbers are added to `numbersToKnow`, a `SPEC` entry is added to `tierVocabulary`, and there is a new `updated` field.
+
+#### `repository-information/study-prep/megmeet/megmeet-sst-briefing-figures/`
+- `mmsst-fig-calendar.svg` (M2) and `mmsst-fig-timelines.svg` (M11) are regenerated from the data file. The other twelve came out identical apart from timestamps and clip ids, and were left as they were.
+
+#### `repository-information/study-prep/megmeet/megmeet-sst-briefing-companion.html`
+- The data file is re-inlined byte-identically. `tierClass()` learns the `SPEC` prefix, with a matching `.t.s` colour, so Spec tags do not render as analysis.
+
+#### `README.md`
+- The `Last updated:` line and the briefing PDF's page count in the tree.
+
+### Notes
+
+- **Neither source PDF is stored in the repository.** The briefing's references 85–89 name them, and chapter 3.5 records what they say.
+- **Verification:**
+  - Every scripted replacement matched exactly once.
+  - The PDF was built with `node scripts/build-megmeet-sst-briefing-pdf.mjs`, and the cover, I.2, I.4, figure M2, 3.5 (both pages), the chapter 8 question table and Appendix E were rendered and read.
+  - The companion loads headless from `file://` with no console errors.
+- **Not changed:** the chapter 6 ledger and figures M6, M7 and M12 record what vendors have *shown*, and the specification changes none of that. Megmeet's class stays undisclosed.
 
 ## [v07.38r] — 2026-09-24 09:08:52 AM EST
 

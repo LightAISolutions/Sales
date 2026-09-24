@@ -44,7 +44,7 @@ main { padding:14px 16px 40px; }
 .t { font:700 10.5px/1 var(--mono); letter-spacing:.02em; white-space:nowrap;
      vertical-align:1px; }
 .t.d{color:var(--s4)} .t.p{color:var(--s1)} .t.g{color:var(--s3)}
-.t.r{color:var(--s5)} .t.w{color:var(--s2)} .t.a{color:var(--gold)}
+.t.r{color:var(--s5)} .t.w{color:var(--s2)} .t.a{color:var(--gold)} .t.s{color:#00708a}
 .st { display:inline-block; font:700 10.5px/1.7 var(--sans); letter-spacing:.04em;
       padding:0 6px; border-radius:3px; color:#fff; white-space:nowrap; }
 .st.unsolved{background:var(--s6)} .st.lab{background:var(--s2)} .st.pilot{background:var(--s5)}
@@ -232,7 +232,8 @@ from one file and should not be able to differ at all.</p>
   "REPORT 2026-09-08",
   "GUIDANCE nvidia-800vdc p<n>",
   "WEB <url> verified YYYY-MM-DD",
-  "ANALYSIS"
+  "ANALYSIS",
+  "SPEC ocp-sst-v0.3 §<n> | SPEC ocp-blog 2026-08-11"
  ],
  "statusVocabulary": {
   "limitation": [
@@ -882,12 +883,12 @@ from one file and should not be able to differ at all.</p>
    },
    {
     "family": "Standards",
-    "item": "The 800 V DC specification itself",
-    "owner": "OCP — Google, Microsoft and NVIDIA. LVDC Solid-State Transformer Specification v0.3, July 2026; more than 80 manufacturers building to it.",
+    "item": "The SST specification itself",
+    "owner": "OCP — Google, Microsoft and NVIDIA, effective 22 June 2026; announced 11 August 2026 beside more than 80 partners developing 800 VDC-compatible infrastructure, which is the architecture, not this specification.",
     "status": "standardised",
-    "t": "WEB, verified 2026-09-23",
-    "mech": "This is the vocabulary a buyer's engineer will use. The specification document itself could not be retrieved in this run — opencompute.org returned HTTP 403 to every attempt.",
-    "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+    "t": "SPEC ocp-sst-v0.3 cover, §1",
+    "mech": "Obtained on 24 September 2026 and read in full: Revision 0.3.0, marked as a first draft for the OCP community. Its grounding section is headings only, and the redundancy voltage bands, conveyance losses, verification load profiles and non-utility ramp rates are all TBD.",
+    "t2": "SPEC ocp-blog 2026-08-11"
    },
    {
     "family": "Utility",
@@ -968,10 +969,9 @@ from one file and should not be able to differ at all.</p>
       "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-partners-develop-reference-architecture-purpose-built-nvidia-ai-data"
      },
      {
-      "date": "2026-07",
-      "text": "OCP LVDC Solid-State Transformer Specification v0.3 (Microsoft, Google, NVIDIA)",
-      "t": "WEB, verified 2026-09-23",
-      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+      "date": "2026-06-22",
+      "text": "OCP SST Specification Rev. 0.3.0 effective (Google, Microsoft, NVIDIA): a 13.8 kV / 5 MW SKU and a 34.5 kV / 5 or 10 MW SKU, 800 V DC out — announced by OCP on 11 August 2026",
+      "t": "SPEC ocp-sst-v0.3 cover, §1"
      },
      {
       "date": "2026-08-11",
@@ -1598,13 +1598,12 @@ from one file and should not be able to differ at all.</p>
   },
   {
    "family": "Standards",
-   "term": "OCP LVDC SST Specification v0.3",
-   "def": "The specification the layer is being built to — Microsoft, Google and NVIDIA, July 2026. More than 80 manufacturers reported building to it.",
-   "t": "WEB, verified 2026-09-23",
-   "number": "v0.3, July 2026",
-   "tn": "WEB, verified 2026-09-23",
-   "say": "\"This is the vocabulary your counterparties will use. Read it before the first meeting — and note that it could not be retrieved in this run, because opencompute.org refused every request.\"",
-   "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+   "term": "OCP SST Specification, Rev. 0.3.0",
+   "def": "The buyers’ black-box specification for a megawatt-class converter from MV AC to 800 V DC, by Google, Microsoft and NVIDIA, effective 22 June 2026.",
+   "t": "SPEC ocp-sst-v0.3 cover, §1",
+   "number": "SKU A 13.8 kV / 5 MW; SKU B 34.5 kV / 5 or 10 MW; at least 98% from 50–100% load",
+   "tn": "SPEC ocp-sst-v0.3 §3–4",
+   "say": "\"Your own specification has a 34.5 kV SKU at 5 and 10 MW. Tell me which SKU this site needs, and I will tell you exactly where we stand against it.\""
   }
  ],
  "perspectives": {
@@ -1924,10 +1923,11 @@ from one file and should not be able to differ at all.</p>
    },
    {
     "dont": "\"The bus is plus-minus 400 volts.\"",
-    "why": "NVIDIA specified single-ended 800 V — positive, return, protective earth — and rejected bipolar for lack of three-pole DC breakers. Plus-minus 400 V is the OCP variant the rack can also accept. The published architectures genuinely diverge, and a vendor without a side fails the first five minutes.",
+    "why": "NVIDIA specified single-ended 800 V — positive, return, protective earth — and rejected bipolar for lack of three-pole DC breakers. Plus-minus 400 V is the OCP variant the rack can also accept. The published architectures genuinely diverge, and a vendor without a side fails the first five minutes. The OCP SST specification itself is 800 V DC unipolar at the converter’s output.",
     "t": "PRIMER ch.2.2",
     "t2": "WEB, verified 2026-09-23",
-    "url": "https://www.powerelectronicsnews.com/the-evolution-in-data-center-power-distribution-pcim-panel-part-1-the-transition-to-800-v/"
+    "url": "https://www.powerelectronicsnews.com/the-evolution-in-data-center-power-distribution-pcim-panel-part-1-the-transition-to-800-v/",
+    "tn2": "SPEC ocp-sst-v0.3 §3–4"
    },
    {
     "dont": "\"Zhonhen's Panama / ABB's HiPerGuard / Vertiv's PowerDirect is a solid-state transformer.\"",
@@ -1985,7 +1985,7 @@ from one file and should not be able to differ at all.</p>
    {
     "n": 1,
     "q": "What service-voltage class is the SST being designed to, and is it one product or two?",
-    "changes": "Everything. It decides whether Megmeet is in the hall-edge contest at all, which US campuses are addressable, and whether the cell count is a 15 kV-class or a 35 kV-class bill of materials — a factor of about 2.5 in cells, magnetics, gate drivers and control channels."
+    "changes": "Everything. It decides whether Megmeet is in the hall-edge contest at all, which US campuses are addressable, and whether the cell count is a 15 kV-class or a 35 kV-class bill of materials — a factor of about 2.5 in cells, magnetics, gate drivers and control channels. The buyers’ half of the answer is now published: the OCP specification has a 13.8 kV SKU and a 34.5 kV SKU, so the internal question is which of the two Megmeet is building, or both."
    },
    {
     "n": 2,
@@ -2015,7 +2015,7 @@ from one file and should not be able to differ at all.</p>
    {
     "n": 7,
     "q": "What is the overload specification, the part-load efficiency curve, and the MTBF or FIT number for the converter?",
-    "changes": "Nobody in the industry publishes any of the three. Whoever publishes first owns the engineering conversation — and if we cannot answer internally, we cannot answer an NVIDIA or OCI engineer either."
+    "changes": "Nobody in the industry publishes any of the three. Whoever publishes first owns the engineering conversation — and if we cannot answer internally, we cannot answer an NVIDIA or OCI engineer either. The OCP specification now sets the buyers’ numbers for two of them: 120% for 5 s and 150% for 150 ms, and at least 98% from 50% to 100% load."
    },
    {
     "n": 8,
@@ -2024,8 +2024,8 @@ from one file and should not be able to differ at all.</p>
    },
    {
     "n": 9,
-    "q": "Are we in the OCP LVDC SST specification work, and do we have v0.3?",
-    "changes": "It is the vocabulary every counterparty will use and more than 80 manufacturers are reported to be building to it. It could not be retrieved in this run because opencompute.org refused every request — so the first practical task is to get the document."
+    "q": "Are we in OCP’s MV AC to 800 V DC workstream, and have we commented on Revision 0.3.0?",
+    "changes": "The document is in hand as of 24 September. Revision 0.3.0 is marked as a first draft for the OCP community, and the announcement invites suppliers to get involved, so the question is whether Megmeet will shape Revision 0.4 or only read it."
    },
    {
     "n": 10,
@@ -2042,7 +2042,7 @@ from one file and should not be able to differ at all.</p>
     "when": "2026-09-23 to 10-06",
     "day": -14,
     "kind": "prep",
-    "what": "Read this brief and the primer. Get the OCP LVDC SST Specification v0.3 from an unblocked network — it could not be retrieved in this run. Re-read the ten week-one questions and decide which three you ask on day one.",
+    "what": "Read this brief, the primer and the OCP SST Specification v0.3 (obtained 24 September) — know its two SKUs by heart. Re-read the ten week-one questions and decide which three you ask on day one.",
     "t": "ANALYSIS"
    },
    {
@@ -2278,9 +2278,31 @@ from one file and should not be able to differ at all.</p>
    "t": "DOSSIER heron-power v1",
    "unit": "kV at 4.2 MW",
    "note": "the most completely specified hall-edge SST in the public record, and nothing shipped"
+  },
+  {
+   "label": "OCP SST efficiency floor (power-train losses, 50–100% load)",
+   "v": 98,
+   "t": "SPEC ocp-sst-v0.3 §3–4",
+   "unit": "% minimum",
+   "note": "below the 98.5% vendors claim, but on a stated boundary"
+  },
+  {
+   "label": "OCP SKU B rating at 34.5 kV",
+   "v": 10,
+   "t": "SPEC ocp-sst-v0.3 §3–4",
+   "unit": "MW (or 5 MW)",
+   "note": "SKU A is 13.8 kV at 5 MW"
+  },
+  {
+   "label": "OCP recommended overload, constant-voltage mode",
+   "v": 120,
+   "t": "SPEC ocp-sst-v0.3 §3–4",
+   "unit": "% for 5 s",
+   "note": "plus 150% for 150 ms in constant-current mode, then the SST may trip"
   }
  ],
- "developedBy": "LightAISolutions"
+ "developedBy": "LightAISolutions",
+ "updated": "2026-09-24 — OCP specification pass: stale second-hand statements about the specification corrected"
 }
 </script>
 <script>
@@ -2300,6 +2322,7 @@ function tierClass(tag) {
   if (t.indexOf("GUIDANCE") === 0) return "g";
   if (t.indexOf("REPORT") === 0) return "r";
   if (t.indexOf("WEB") === 0) return "w";
+  if (t.indexOf("SPEC") === 0) return "s";
   return "a";
 }
 // One tag, rendered exactly as the data file stores it. The companion never
