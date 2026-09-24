@@ -6,6 +6,88 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-24, 06:18 PM → 07:08 PM EST (attended; four turns)
+**Repo version:** v07.41r — three pushes on `claude/session-reminders-classroom-review-0g2lqj` (two reminder commits, then v07.41r; all merged), plus this session-context write
+**Branch:** `claude/session-reminders-classroom-review-0g2lqj`
+
+### What was done
+
+- **Three reminders added to `REMINDERS.md`**, in date order:
+  - Recheck `landscape-cooling-2026-09` after the CoolIT CDU launch, **Mon 28 Sep**.
+  - The neoclouds Profiler pass, on or after **Thu 1 Oct**, in a fresh Opus 5.5 High session, once Fluidstack's 30 Sep accounts filing has landed or been missed.
+  - Reframe the Dominion rehearsal (`scenario-utilities-objection`) **Fri 2 – Tue 6 Oct**, after the 1 Oct purchase solicitation issues and before Megmeet on 7 Oct. It carries the unverified Dominion "all-stock" check.
+- **v07.41r — the three facts flagged at v07.40r, verified and closed:**
+  - **AEP "six of eight": verified, no change.** The 30 Jul Q2 deck said five; the "Aug & Sep 2026 Investor Meetings" handout says six, after Michigan approved in between. Oklahoma (PSO) and SWEPCO Texas are still pending. The AEP bullet in the cooling reminder is struck through as closed.
+  - **Trane: dossier v1 → v2, v1 archived.** Checked against Federal Register 2026-10387 and 40 CFR 84.54:
+    - The 2030 date covers only semiconductor-manufacturing chillers of 100 lb charge or less; data-centre cooling keeps its 700-GWP limit from 1 Jan 2027.
+    - The amendment took effect 27 Jul, not 26 May.
+    - policyExposure[1], strategyRead #5 and the development entry were corrected, and the conclusion reversed: Trane's data-centre line keeps its transition tailwind.
+  - **Narada: dossier v4 → v5, v4 archived.** The H1 2026 report was read first-hand from cninfo (filed 29 Aug):
+    - Revenue RMB 1.699B (−56.7%) and net loss RMB 1.111B; every segment sold below cost.
+    - Equity attributable to shareholders RMB 290M; total equity RMB 25M; liabilities 99.8% of assets; about RMB 410M of the RMB 465M cash frozen.
+    - SR1 lowered from High to Moderate, because the comms/DC segment fell 44.8% in H1 after growing through FY2025.
+  - **Classroom GAS v01.90g → v01.91g:**
+    - Five "grew through the collapse" passages corrected across `landscape-cells-and-chemistry-2026-09` and `landscape-in-hall-power-2026-09`, with Narada ledger rows re-pinned at v5 and revision notes added.
+    - `segment-in-hall-power` and `segment-cooling` regenerated. They were the only segments with section changes.
+    - Analysis markdown mirrored, plus an inline correction in `CLASSROOM-CURRICULUM-PLAN.md` §10.6.
+  - **Checks, all clean:**
+    - Profiler relationships: 0 findings. Cross-references: 0 candidates. Inbound reconciliation: 3 Narada mentions, none changed.
+    - Classroom content: 0 errors. Pipeline self-test: 15/15. `node --check` and inner scripts: clean.
+    - Pipeline checker: P1/P2 only, with no P3, so no `gateDigest` refresh.
+
+### Where we left off
+
+- Everything is committed and merged to main. No flagged fact from v07.40r is still open.
+- **Active reminders (the developer's):** the cooling recheck from 28 Sep, the neoclouds pass from 1 Oct, and the Dominion reframe 2–6 Oct.
+- **Due for the C2 pipeline (Wed 30 Sep 11:00 UTC), not a developer task:**
+  - 17 pin-only segment lessons (the graph rebuild moved its date).
+  - 14 stale hand-authored pins.
+- **Curriculum review dates in the next 30 days:**
+  - cooling module 9/28
+  - neoclouds module and scenario 9/30
+  - utilities-objection scenario 10/1
+  - capital-objection scenario 10/14
+  - briefing-2026-09-21 on 10/21
+
+### Key decisions made
+
+- **A fact that's right at two different dates is closed without an edit.** AEP's five and six are both correct; the repo already dated "six" to August.
+- **A primary source that contradicts a strategy judgment revises the judgment and its confidence**, not just the numbers (Narada SR1, Trane SR5). Each correction is marked in-line as "(Corrected at vN …)".
+- **No USD overlay without a citable FX basis.** The Narada interim carries `kpi: revenue` but no `usdMillions`.
+- **Developer sessions regenerate segments whose sections change** (G3). Pin-only segments are left to the pipeline.
+- **Reminder-only commits stay housekeeping:** no version bump and no CHANGELOG entry, following the `bb8892c4` precedent.
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Classroom GAS is at v01.91g.** Profiler page v01.91w is unchanged (data-only edits).
+- **Retrieval recipes that worked from this container:**
+  - **cninfo:** POST `http://www.cninfo.com.cn/new/hisAnnouncement/query` with `searchkey=<name>&category=category_bndbg_szsh;&column=szse&seDate=…`. PDFs are at `static.cninfo.com.cn/finalpage/…`.
+  - **Federal Register:** the site is bot-blocked, but the API (`/api/v1/documents/<id>.json`) gives the govinfo PDF URL, and that downloads.
+  - **eCFR:** the versioner API needs `curl --compressed`.
+  - **PDF text:** `pip install pymupdf`.
+- **Gotcha:** `open(p,'w').write(open(p).read()…)` truncates the file before the read. It emptied `repository.version.txt` once this session; it was caught and restored.
+- **Corpus drift noticed, not fixed:** 4 older dossiers use `periodType: "interim"`, which is not a schema value (`half` / `quarter` / `annual` / `other`).
+- **Dates:**
+  - CoolIT launch 9/28
+  - Fluidstack accounts 9/30
+  - C2 Routine 9/30 11:00 UTC
+  - Dominion solicitation 10/1
+  - Profiler quarterly and drift checks 10/1
+  - Megmeet start 10/7
+  - Guidance quarterly review 10/15
+  - RE+ 11/16–19
+
+### Recommendation for next session
+
+- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
+
+**To continue:** type `recheck the cooling module after CoolIT`
+
+## Previous Sessions
+
+### Session — 2026-09-24 05:50 PM EST (Classroom landscape review, v07.40r)
+
 **Date:** 2026-09-24, 05:13 PM → 05:50 PM EST (attended; two turns)
 **Repo version:** v07.40r — one push on `claude/classroom-landscape-modules-review-kf1rsn` (v07.40r, merged), plus this session-context write
 **Branch:** `claude/classroom-landscape-modules-review-kf1rsn`
@@ -79,66 +161,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run the neoclouds Profiler pass (the prompt from this session's last response) in a fresh Opus 5.5 High session on or after 1 October 2026. Fluidstack's 30 September accounts filing is then settled one way or the other.
 
 **To continue:** paste the neoclouds Profiler-pass prompt into a new session (or type `give me the neoclouds Profiler-pass prompt` to have it re-pasted)
-
-## Previous Sessions
-
-### Session — 2026-09-24 05:12 PM EST (Megmeet SST briefing from the OCP spec)
-
-**Date:** 2026-09-24, 02:57 AM → 05:12 PM EST (attended; two working turns)
-**Repo version:** v07.39r — one push on `claude/focused-bell-41xh5d` (v07.39r), plus this session-context write
-**Branch:** `claude/focused-bell-41xh5d`
-
-### What was done
-
-- **Open-items audit across Scraper, Profiler, Classroom, Network and Events** (research only, no commit).
-  - Three parallel readers covered the plan docs and CHANGELOG; the live Routine fleet was checked directly.
-  - It returned a ranked plan: Priority 1 due 9/28–10/7, Priority 2 in October before RE+ on 11/16, Priority 3 housekeeping.
-  - All six Routines are enabled and their last runs succeeded. The rebuilt Guidance Routine still carries step 3a.
-  - The 9/23 C2 run ended in 9 minutes with no commit and no BLOCKED title, so it was almost certainly a stand-down. Its report is unread.
-- **v07.39r — the Megmeet SST briefing updated from the OCP SST Specification Rev. 0.3.0 and OCP's 11 Aug 2026 announcement** (the developer supplied both PDFs).
-  - New chapter 3.5, "What the OCP specification actually says".
-  - Every second-hand spec claim corrected in place, with the old text struck through: the title and dates, "80 manufacturers building to it", NVIDIA questions 13 (Modbus) and 15 (harmonics), and week-one question 9.
-  - The spec's numbers added across 15 chapters.
-  - New Spec citation tier (refs 85–89) and a new Appendix E indexing every change.
-  - PDF 76 → 84 pages.
-  - Data file, figures M2 and M11 and the companion updated to match; the companion learned the `SPEC` tag prefix.
-
-### Where we left off
-
-- v07.39r is merged and its branch deleted. The developer has the PDF.
-- **Not yet run:** the paste-ready prompt for rechecking the four Classroom landscape modules due this week. It is in this session's last CODING COMPLETE response.
-  - The four: `landscape-cooling-2026-09` (reviewBy 9/28), `landscape-neoclouds-2026-09` (9/30), `landscape-utilities-2026-09` (10/1) and `landscape-in-hall-power-2026-09` (10/1).
-  - The developer said "3"; the prompt covers 4 because in-hall-power is also due 10/1 and the OCP spec bears on it.
-  - It also covers re-judging the rehearsal scenarios, including scenario-neoclouds-discovery (9/30) and the three utilities scenarios (10/1).
-- **Still-open Priority 1 items from the audit** (the developer's to action):
-  - Read the 9/23 C2 run report before 9/30.
-  - Approve the ~33 Events proposals and run `events sync`; Yotta, GCPA and ESIG start 9/28.
-  - Decide before the 10/1 quarterly sweep whether to move Habitat Energy and Gridmatic to the core tier or refresh them by hand.
-
-### Key decisions made
-
-- **Highlighting convention for document updates:** `mark.chg` (yellow) for new or corrected text, `del.chg` (struck through) beside anything replaced, `tr.chg` / `.chg-block` for new rows and sections, and an appendix indexing every change.
-- **New sources get their own tier** rather than sharing the web "1". Numbers were appended (85–89), not renumbered.
-- **"July 2026" was not called an error.** The spec PDF's creation date is 2 July; the briefing records the spec's own dates instead.
-- **Figures whose data didn't change are not committed.** A regeneration run rewrites all 14 SVGs with new timestamps and clip ids; the unchanged 12 were restored.
-- **The source PDFs are not stored in the repo.**
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Container quirk:** `pypdf` and `pdfminer` failed on a broken `cryptography` binding until `pip install cffi`. PyMuPDF (`pip install pymupdf`) renders PDF pages to PNG for the Read tool; `apt` poppler returned 404.
-- **Spec facts worth remembering:** SKU A is 13.8 kV at 5 MW and SKU B is 34.5 kV at 5 or 10 MW. The rest:
-  - 800 V DC unipolar output
-  - at least 98% efficiency from 50–100% load, power-train losses only
-  - overload of 120% for 5 s and 150% for 150 ms
-  - BIL of at least 110 kV at 13.8 kV and 150–200 kV at 34.5 kV
-  - Modbus TCP/IP as the only communications requirement
-  - no UL 9540 in the compliance list
-  - the plotted NOGRR 282 corner points differ from the briefing's web figures (chapter 16.3)
-- **Dates:** the developer starts at Megmeet on 2026-10-07. The C2 Routine fires 2026-09-30 11:00 UTC. The Profiler quarterly check and drift check fire 10/1. The Guidance review fires 10/15. The Megmeet Q3 report is due by 10/31. RE+ runs 11/16–19.
-
-### Recommendation for next session
-
-- Run the four-module Classroom landscape recheck in a fresh Opus 5.5 High session before Sunday 2026-09-28, using the prompt from this session's last response.
-
-**To continue:** paste the Classroom landscape recheck prompt into a new Opus 5.5 High session (or type `give me the landscape recheck prompt` to have it re-pasted)
