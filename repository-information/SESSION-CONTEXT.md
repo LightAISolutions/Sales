@@ -6,6 +6,84 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-24, 05:13 PM → 05:50 PM EST (attended; two turns)
+**Repo version:** v07.40r — one push on `claude/classroom-landscape-modules-review-kf1rsn` (v07.40r, merged), plus this session-context write
+**Branch:** `claude/classroom-landscape-modules-review-kf1rsn`
+
+### What was done
+
+- **v07.40r — the four Classroom landscape modules due this week were rechecked and updated**, and the four rehearsal scenarios resting on two of them were re-judged.
+  - Four parallel research agents rechecked the dated claims. Every changed fact was re-read first-hand before it went in.
+  - **cooling:** reviewBy stays 9/28, because the CoolIT launch is still ahead.
+    - Schneider's 3.5 MW WCDU now tops the CDU ladder.
+    - The EPA 2030 relief is narrowed to small semiconductor chillers, plus the data-centre 700-GWP limit from 1 Jan 2027.
+    - The Texas freeze now includes the 21 Sep TCEQ permit halt.
+  - **neoclouds:** reviewBy stays 9/30, because Fluidstack's accounts are not filed. This module needs a deeper refresh.
+    - ClusterMAX 3.0 (23 Sep) puts Nebius at Platinum beside CoreWeave, drops Crusoe to Bronze, and marks Fluidstack and Nscale Unavailable.
+    - Nscale's S-1 (18 Sep) confirms revenue, the Anthropic contract at up to about $44.6bn, and about 1 GW of 1.37 GW at owned sites.
+    - Fluidstack names its own end customer.
+  - **utilities:** reviewBy 10/1 → 2027-01-01.
+    - Texas behind-the-meter asymmetry corrected for the 21 Sep permit halt.
+    - Merger dates split between Virginia (17 Nov) and South Carolina (8 Dec; 29 Jan order).
+  - **in-hall power:** reviewBy 10/1 → 10/31.
+    - The OCP SST Spec Rev 0.3.0 is added, citing the spec only, as far as briefing chapter 3.5 records.
+    - Flex Form 10 revenue line corrected.
+  - **Scenarios:** every beat holds in all four.
+    - Fluidstack: the room, beat 3, ledger and gap 7 revised.
+    - Dominion: the merger calendar revised.
+    - AEP: the Texas premise revised.
+    - Southern: pin re-stamped only.
+  - Checks: all passed. The pipeline checker showed only P1/P2/P10/P13 developer noise, with no P3.
+- **Turn 2:** the developer was handed a paste-ready prompt for the neoclouds Profiler pass, plus the remaining heads-up list below.
+
+### Where we left off
+
+- v07.40r is merged. The neoclouds Profiler-pass prompt is in this session's last response, for a new Opus 5.5 session on or after 1 Oct, once Fluidstack's 30 Sep accounts deadline has passed.
+- **Gates this week:**
+  - CoolIT CDU launch 9/28 (cooling)
+  - Fluidstack accounts 9/30 (neoclouds and its scenario)
+  - Dominion purchase solicitation 10/1 (scenario-utilities-objection)
+- **Open heads-up items (the developer's):**
+  - The Dominion room is framed two weeks before the 1 Oct solicitation and needs reframing once it issues.
+  - Unverified: AEP's "six of eight" tariff states (its 30 Jul release says five), and Dominion's "all-stock" deal description.
+  - Narada's H1 2026 collapse is not yet in its v4 dossier.
+  - The Trane dossier's policyExposure[1] reads the EPA 2030 relief too broadly.
+
+### Key decisions made
+
+- **A review date moves only when its gate is certain or already passed.** A gate whose outcome is still uncertain stays the review date: CoolIT 9/28, Fluidstack 9/30, Dominion 10/1. A certain gate moves it (the Alabama statute's effective date), and so does a month-level gate that can only be tested at month-end (Samsung SDI "October" → 10/31).
+- **Scenario pins were re-stamped where beats hold**, per the developer's brief. A scenario pin records a re-judgment. This departs from the G3 choice made at (rr70), which governs lesson pins.
+- **The utilities review date skips hearings, elections and deliverables**, following the module's own rule, and lands on the next effective date (1 Jan 2027).
+- **A fact that could not be verified was left alone and flagged** rather than changed (AEP five-versus-six, "all-stock", Narada H1).
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Classroom GAS v01.90g.** Curriculum due-for-review is 6. There are 0 scenarios on moved landscapes and 13 pin-only segments, which are intended under G3.
+- **Render recipe that worked:**
+  - Serve a copy of `Classroom.html` with `_e=''` and `AUTO_REFRESH=false`.
+  - After load, seed the four sessionStorage keys (`SESSION_KEY`, `EMAIL_KEY`, `ROLE_KEY`=contributor, `PERMISSIONS_KEY`='[]') and override `window._gasPost` to answer `gop=index|doc` from the parsed `guidanceDoc*_` literals.
+  - Then run `clHeaderShow(); clAppMount();`.
+  - Copy `profiler-concepts.json` to the served `profiler-data/`.
+- **Editing trick:** `json.dumps(obj, indent=1, ensure_ascii=False)` reproduces the `Classroom.gs` literals byte for byte, except the indentation of the closing brace. Keep the original last line.
+- **`check-classroom-pipeline.py --selftest` takes minutes.** Run it in the background.
+- **Dates:**
+  - The C2 Routine fires 9/30 11:00 UTC.
+  - The Profiler quarterly check and drift check fire 10/1.
+  - The Guidance quarterly review fires 10/15.
+  - The developer starts at Megmeet 10/7.
+  - RE+ runs 11/16–19.
+
+### Recommendation for next session
+
+- Run the neoclouds Profiler pass (the prompt from this session's last response) in a fresh Opus 5.5 High session on or after 1 October 2026. Fluidstack's 30 September accounts filing is then settled one way or the other.
+
+**To continue:** paste the neoclouds Profiler-pass prompt into a new session (or type `give me the neoclouds Profiler-pass prompt` to have it re-pasted)
+
+## Previous Sessions
+
+### Session — 2026-09-24 05:12 PM EST (Megmeet SST briefing from the OCP spec)
+
 **Date:** 2026-09-24, 02:57 AM → 05:12 PM EST (attended; two working turns)
 **Repo version:** v07.39r — one push on `claude/focused-bell-41xh5d` (v07.39r), plus this session-context write
 **Branch:** `claude/focused-bell-41xh5d`
@@ -64,44 +142,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run the four-module Classroom landscape recheck in a fresh Opus 5.5 High session before Sunday 2026-09-28, using the prompt from this session's last response.
 
 **To continue:** paste the Classroom landscape recheck prompt into a new Opus 5.5 High session (or type `give me the landscape recheck prompt` to have it re-pasted)
-
-## Previous Sessions
-
-### Session — 2026-09-24 12:45 AM EST (Classroom segment regeneration)
-
-**Date:** 2026-09-23 10:33 PM → 2026-09-24 12:45 AM EST (attended)
-**Repo version:** v07.37r — one push on `claude/quirky-fermat-21bvyi` (v07.37r), plus this session-context write
-**Branch:** `claude/quirky-fermat-21bvyi`
-
-### What was done
-
-**v07.37r — the Classroom segment regeneration left open at v07.36r, plus both changelog rotations.**
-- **Five segments regenerated** with `build-classroom-segments.py --segment <id>` (generation date 2026-09-23). `Classroom.gs` went from v01.88g to v01.89g. Each lesson got one appended revision whose `changed[]` exactly matches the differing sections:
-  - `power-conversion-and-rack-power-silicon`: the-players, what-moved, who-is-connected. This carries Megmeet v8, Delta v6 and LITEON v7.
-  - `cells-and-chemistry` and `hyperscalers-and-ai-labs`: what-moved.
-  - `storage-integrators-and-containers` and `grid-equipment`: who-is-connected.
-- **The 13 pin-only segments were left alone**, as the developer asked and G3 requires. `--check` now reads 13 due, all pin-only, with 0 section changes.
-- **Repo CHANGELOG rotated:** the 2026-09-17 date group (19 sections, v06.30r–v06.48r) moved to `CHANGELOG-archive.md`. Counter `107/100` → `89/100`.
-- **Classroom GAS changelog rotated:** the 2026-09-15 date group (10 sections, v01.39g–v01.48g) moved to its archive. Counter `50/50` → `41/50`.
-- **SHA enrichment:** 29 of 29 resolved on the deepened clone.
-- **Checks:** content 0 errors / 0 warnings, selftest 15/15, `node --check`, the inner-scripts check, the curriculum check and the README tree check all pass. The pipeline check shows only P10 (5 revisions against a cap of 3), which binds unattended runs only. There was no P3 finding, so `gateDigest` is unchanged.
-
-### Where we left off
-
-The v07.37r push is merged into main and the branch is deleted. Nothing is pending: TODO is empty, there are no active reminders, and no section-changing segment is due.
-
-### Key decisions made
-
-- **Both rotations ran at the developer's instruction before the rules required them.** At 2026-09-23 EST, today's sections were exempt, leaving 92 non-exempt in the repo CHANGELOG (trigger 100) and 49 in the GAS changelog (cap 50). One whole date group was moved from each, the oldest, which leaves both files under their caps even after midnight.
-- **Each archive keeps its existing SHA link style:** 8-character short SHAs in the repo archive, 7 in the Classroom GAS archive.
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **The 13 pin-only segments will keep showing as due in `--check`.** That's the intended G3 behaviour, not work. They become real work only when a section differs.
-- **`check-classroom-pipeline.py --selftest` takes several minutes of CPU time** in this container. Run it in the background.
-- **Dates:** the developer starts at Megmeet on 2026-10-07. The Megmeet Q3 2026 report is due by 31 October.
-
-### Recommendation for next session
-
-- Session fully complete — no deferred work; future sessions can pick any new task.
