@@ -6,6 +6,77 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-23, 08:16 → 10:35 PM EST (attended)
+**Repo version:** v07.36r — three pushes on `claude/magical-volta-6wttez` (v07.34r, v07.35r, v07.36r), plus this session-context write
+**Branch:** `claude/magical-volta-6wttez`
+
+### What was done
+
+**v07.34r — the Megmeet SST briefing rewrite**, run from `repository-information/megmeet-briefing-rewrite-prompt.md`.
+- **What was rewritten:** `megmeet-sst-briefing-print.html`, for clarity and learning. Every term is now defined at first use.
+- **Expanded explanations:**
+  - a four-step walk through one SST in chapter 1;
+  - the transformer equation and the I = P ÷ V arithmetic in I.2;
+  - a worked cell count in 6.2.
+- **Citations:** 588 tags became **84 numbered, tier-coloured superscripts**, and inline analysis became a gold A.
+  - The citation-contract table is now a legend.
+  - A new **Appendix C.0** lists the numbered references, generated from the same mapping as the superscripts.
+- **Dossier v8 corrections:** applied at the seven places 9.4 lists, plus four places that repeat them. Both 9.4 tables are kept as the record.
+- **Other:** Appendices A and B were regenerated from chapter 1, and Appendix D has a rewrite note that names no AI model. The PDF went from 72 to 76 pages.
+
+**v07.35r — the fresh-subagent audit's 15 findings, all worked:**
+- 14 fixed and 1 verified correct;
+- most were in the v8 corrections (FCC citation, the 9.3/16.2 record links, the Goldman attribution in question 6, the chapter 14 verdict, and the chapter 10 Heron row).
+
+**v07.36r — the six looks-wrong items**, each researched independently and fixed; none needed the developer's call.
+- Chapter 7 now names both unsolved obstacles that have an owner (FERC and NFPA FPRF).
+- The 16.2 NC State feeder-voltage bullet is gone: POWER Magazine reports 13.2 kV.
+- The 16.4 box no longer claims low-confidence markings that never existed.
+- The Novos Power "fifth"/"sixth" ordinal is gone: primer 7.3 names eight developers.
+- The Appendix D page counts now say which build each describes.
+- The data file's footprint answer matches v8: the companion copy was re-inlined and Figure M1 regenerated.
+
+**Closing:** the finished PDF was sent to the developer as a download.
+
+### Where we left off
+
+All three pushes are merged, and the briefing is finished at 76 pages with 84 references. Nothing in it is known to be wrong.
+
+**Open item:** Classroom segment regeneration. `build-classroom-segments.py --check` on a deep clone reads **18 of 19 due: 5 with real section changes, 13 pin-only.** The five with section changes:
+- `power-conversion-and-rack-power-silicon`: the-players, what-moved and who-is-connected, from Megmeet v8, Delta v6 and LITEON v7;
+- `cells-and-chemistry`: what-moved;
+- `storage-integrators-and-containers`: who-is-connected;
+- `grid-equipment`: who-is-connected;
+- `hyperscalers-and-ai-labs`: what-moved.
+
+### Key decisions made
+
+- **One citation number per distinct source string.** All web research shares one number, because which sentence used which URL was never recorded.
+- **Data file edits (item 6).** The rewrite prompt put the data file, companion and figures off limits. Item 6 of the looks-wrong list was a data-file error, so its fix was taken to cover them. Only Figure M1 changed: the other 13 SVGs differed only in their embedded date and IDs and were restored.
+- **The 16.2 bullet was removed, not rewritten.** Its claim was false, and the fact it pointed at already lives in the primer.
+- **The page-count records were kept, not collapsed.** Both were true at their moment, so each now names that moment.
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Repo CHANGELOG rotation is due on the first push dated 24 September or later.** The counter reads `Sections: 107/100`, and 15 of those sections are dated 2026-09-23, so all 107 stop being exempt at midnight. Deepen the clone first, rotate the oldest date groups until fewer than 100 remain, and SHA-enrich.
+- **The Classroom GAS changelog is at `50/50`.** Any segment regeneration bumps `Classroom.gs`, which triggers its rotation in the same push.
+- **The scratchpad checker and converter were session-only.** They are not in the repo; the briefing needs no further tooling.
+- **Dates:** the developer starts at Megmeet on 2026-10-07. The Megmeet Q3 2026 report is due by 31 October.
+
+### Recommendation for next session
+
+- Regenerate the five Classroom segments with real section changes: `power-conversion-and-rack-power-silicon`, `cells-and-chemistry`, `storage-integrators-and-containers`, `grid-equipment` and `hyperscalers-and-ai-labs`.
+  - Run `build-classroom-segments.py --segment <name>` on a deep clone.
+  - Leave the 13 pin-only segments alone, per G3.
+  - In the same push, rotate the repo CHANGELOG and the Classroom GAS changelog.
+
+**To continue:** type `regenerate the five due Classroom segments`
+
+## Previous Sessions
+
+### Session — 2026-09-23 07:13 PM EST (Megmeet dossier v8 and follow-through)
+
 **Date:** 2026-09-23, 02:58 → 07:13 PM EST (attended)
 **Repo version:** v07.33r — two pushes on `claude/confident-ride-rrxpw3` (v07.32r, v07.33r), plus this session-context write
 **Branch:** `claude/confident-ride-rrxpw3`
@@ -69,59 +140,3 @@ All pushes are merged and nothing is uncommitted. Two things are open:
 - Run the Megmeet briefing rewrite. Open a fresh session at `xhigh` effort and paste everything below the line in `repository-information/megmeet-briefing-rewrite-prompt.md`. It edits only the print HTML and the PDF, runs its own fact-preservation checker and a fresh-subagent audit, and must land before the 2026-10-07 start date.
 
 **To continue:** type `run the Megmeet briefing rewrite from repository-information/megmeet-briefing-rewrite-prompt.md`
-
-## Previous Sessions
-
-### Session — 2026-09-23 10:30 AM EST (Megmeet SST briefing run)
-
-**Date:** 2026-09-23 (the run: 07:36 → 10:30 AM EST, unattended; a short attended tail to 2:40 PM EST for the v8 hand-off)
-**Repo version:** v07.31r — three pushes on `claude/fervent-lovelace-sk1c5s` (v07.29r, v07.30r, v07.31r)
-**Branch:** `claude/fervent-lovelace-sk1c5s`
-
-### What was done
-
-**The Megmeet SST onboarding briefing ran end to end, unattended, from §6 of `repository-information/megmeet-briefing-prompt.md`.** All three deliverables shipped.
-
-- **D1 — `live-site-pages/profiler-data/reports/sst-hall-edge-block--competitive--2026-09-23.report.json`** (v07.29r, push 1). A Profiler competitive report on the SST and medium-voltage hall-edge block, dossiers only, cut on the axis the 8 September AIDC edition could not score: **the service-voltage class each vendor has actually specified**. Eighteen dossiers, 46 citations copied verbatim from their `sources[]`, eight key judgments, ten limitations, eight gaps. Builds on and does **not** supersede the 8 September edition. `check-profiler-reports.py` clean.
-- **D2 — `repository-information/study-prep/megmeet/MEGMEET-SST-BRIEFING.pdf`** (v07.30r push 2, corrected in v07.31r push 3). **71 pages, 14 figures, five parts plus a four-part appendix**, on the SST primer's print skin. Source `megmeet-sst-briefing-print.html`; figures from `scripts/build-megmeet-sst-briefing-figures.py`; PDF from `scripts/build-megmeet-sst-briefing-pdf.mjs` (Chromium over DevTools, running header and page numbers).
-- **D3 — `repository-information/study-prep/megmeet/megmeet-sst-briefing-companion.html`** (v07.31r, push 3). Seven drill widgets, data inlined byte for byte, no network, zero console errors under Playwright. Also published as a **private Claude artifact**: https://claude.ai/artifact/D8zZrSo8Y88XPrbThLEFMx
-- **`megmeet-sst-briefing-data.json`** is the single source for every plotted or displayed number — **215 tagged records**, each carrying one of six fixed tags. The figures read it and the companion inlines it, so the two cannot drift.
-
-### The finding the document exists to carry
-
-The hall-edge contest is not being decided on efficiency — every serious vendor claims 98.5% and none publishes the boundary, and NVIDIA rates the transformer-rectifier unit and the SST identically. It is being decided on **disclosed service-voltage class** and **disclosed commerce**. On that test the field inverts: the only SST a filing describes as supplying the market stops at 13.8 kV; the best-specified 34.5 kV designs belong to venture balance sheets and have not shipped; the only orderable solid-state MV product from an incumbent is a UPS; nobody holds a UL listing for the 800 V DC bus. **Megmeet's own SST class is genuinely `undisclosed`** — zero kV mentions across 38 pinned dossier sources and a four-filing scan — while its rack-and-sidecar chain is published, shipping and growing 60.92%.
-
-### Where we left off
-
-**The run is complete and all three pushes merged.** Nothing is pending. Phase F's audit (a fresh subagent against the twelve-line rubric) returned 35 findings; all 35 were worked and the PDF rebuilt. The rubric re-check passes on every line.
-
-After the run the developer asked for a **paste-in prompt for a fresh session to cut Megmeet dossier v8**, rather than running it in this session. That prompt was written and handed over in chat; its substance is the Recommendation below. Nothing else is outstanding.
-
-### Key decisions made
-
-- **Archive rotation was not performed**, three times, because the rule tests the **non-exempt** section count with the current day exempt: 92 non-exempt against a trigger of 100. The plan's summary said rotation falls due at 100 raw; the rule won, and the reasoning is in the colophon and in each CHANGELOG section.
-- **The reader's hearsay** about NVIDIA/Oracle engineering contact steered chapter 8's depth and nothing else. It is boxed once, labelled unverified, and cited nowhere.
-- **`undisclosed` is a finding, not a hedge** — applied to Megmeet exactly as to Amperesand, GE Vernova, Hitachi Energy, Vertiv, Schneider and Sinexcel.
-- **The older Megmeet prep files were not edited.** Chapter 9.4 lists eleven things dossier v7 now contradicts in them and changes nothing.
-- **No model identifier appears in any repository artefact** — the colophon records effort and run window instead.
-
-### Active context
-
-- Toggles unchanged: `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off
-- CHANGELOG counter `Sections: 102/100`, 92 non-exempt — **rotation fires on the next push that is not same-day**
-- Two pre-existing `check-profiler-reports.py` warnings on other reports (aged pins on `grid-scale-bess` and `named-project-bess-attach`) — untouched by this run
-
-### Recommendation for next session
-
-- Run **`profiler megmeet`** to cut **dossier v8** (v7 is dated 2026-09-08, 38 sources) **before Megmeet's Q3 2026 report lands at the CSRC statutory deadline on 31 October**. It is a revision: archive v7, then work the nine open questions the briefing's chapter 16 named as unclosable from the then-current record — above all **the SST's service-voltage class** (zero kV mentions across all 38 pinned sources and a four-filing scan) and **what Q1 2026 "volume delivery to North American majors" actually consisted of** (which contradicts the August interview brief's "North America is greenfield").
-
-Three things a fresh session will not know and must be told:
-
-- **`aka[]` and `legalName` are both null on v7.** `aka[]` is the input to the Profiler Command's step-7 reconciliation grep, so it must be populated first — 麦格米特 · Shenzhen Megmeet Electrical Co., Ltd. · Megmeet Welding · Megmeet USA.
-- **Not one of v7's 38 sources carries a `party` field**, although the registry reports 58% first-party. Stage 1 is genuinely under-served: exhaust megmeet.com, megmeet-welding.com, the IR archive and cninfo before any third-party source, and set `party` on every entry.
-- **Thirteen other dossiers mention Megmeet** with word boundaries — delta-electronics, dg-matrix, flex, huawei-digital-power, infineon, liteon, nvidia, power-electronics, sinexcel, sungrow, vertiv, vicor, zhonhen. A normal step-7 reconciliation load, not the NVIDIA-scale case that has to be deferred.
-
-The September study-prep files — the briefing PDF, its print HTML, the companion, the data file and the 23 September competitive report — are **dated documents and are not edited**. If v8 contradicts them, say so and let the developer decide.
-
-**To continue:** type `profiler megmeet`
-
