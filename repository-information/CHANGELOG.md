@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.43r] — 2026-09-24 07:55:58 PM EST
+
+> **Prompt:** "Run python3 scripts/extract-corpus-events.py to refresh the stale mentions[] in events.json, confirm with check-events-registry.py (exit 0) and --check, and push it as a data-only commit. It feeds the score's corpusSalience term, and it has been stale since the recent dossier revisions."
+
+### Fixed
+
+- **`events.json` `mentions[]` refreshed from the dossier corpus** — `scripts/extract-corpus-events.py` rewrote the derived index. Only the Megmeet dossier had drifted, which dates to its v8 cut (v07.32r):
+  - `computex-2027` loses `megmeet` / `strategy`. The dossier's strategy read no longer names Computex.
+  - `ai-infra-summit-2027` gains `megmeet` / `sources`.
+  - Totals are unchanged: 256 mention rows across 33 corpus events. The score's `corpusSalience` term reads the corrected counts on the next page load.
+  - Verified: `extract-corpus-events.py --check` went from exit 1 to "OK: mentions[] current", and `check-events-registry.py` exits 0 (102 events, 69 confirmed, 256 mentions across 32 events, `events.ics` agrees). This is a data-only change: no page, GAS or schema file touched.
 
 ## [v07.42r] — 2026-09-24 07:50:01 PM EST
 

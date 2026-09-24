@@ -3682,10 +3682,6 @@
           "where": "specs"
         },
         {
-          "slug": "megmeet",
-          "where": "strategy"
-        },
-        {
           "slug": "nvidia",
           "where": "developments"
         },
@@ -4469,6 +4465,10 @@
         {
           "slug": "megmeet",
           "where": "developments"
+        },
+        {
+          "slug": "megmeet",
+          "where": "sources"
         }
       ]
     },
