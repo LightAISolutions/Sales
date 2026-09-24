@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.35r] — 2026-09-23 08:57:20 PM EST
+
+> **Prompt:** *(no new prompt — this version works the fresh-subagent audit that the v07.34r prompt required; that prompt is quoted in full under v07.34r)*
+
+The fresh audit of the Megmeet SST briefing rewrite returned fifteen findings. Most sat in the dossier-v8 corrections. All fifteen were worked: fourteen fixed and one verified correct. The PDF stays at 76 pages with 84 numbered references.
+
+### Fixed
+
+- **`repository-information/study-prep/megmeet/megmeet-sst-briefing-print.html`**
+  - **Chapter 13, first objection.** The FCC Covered List sentences carry their web number again. The v8 rewrite had left them in front of a dossier-v8 number, which made them read as v8's. The Dallas-lab and San Jose sentence is also cited to the web again.
+  - **Chapter 9.3.** The unsourced lead "larger than the filings show" becomes "the website and the filings differ". The closing line no longer merges the website's 35,000 sq ft base and the licensed 39,200 sq ft renovation into one site.
+  - **Chapter 16.2.** The US-plant item keeps its original question: whether the November 2024 plant, the Richardson base and the Dallas lab are the same thing. It no longer implies the plant is the Richardson base, and it restores the caveat that capacity and timeline are unpublished.
+  - **Week-one question 6.** The GB300/ODM fact is attributed again to the Goldman Sachs note relayed by Sina, with "neither named".
+  - **Chapter 14.** "The story is settled, and it is wrong" becomes "the question is now closed, and the record does not support the story".
+  - **Chapter 9.4.** The note above the v8 table now says two things were not rewritten: the first table is annotated rather than changed, and the data file still lists "the US" among the manufacturing locations.
+  - **Smaller fixes:**
+    - 9.2's added "read from the grid down" is dropped;
+    - the Power Brick gloss is dropped;
+    - the 6.2 analysis passage carries its gold A;
+    - I.2's NOGRR row is back to "meets it by design";
+    - question 13 no longer calls DMTF a protocol;
+    - chapter 2's EV-charging order is explicit again.
+  - **Chapter 10, Heron row.** Megmeet's "manufacturing base across five countries" contradicted the corrected footprint. It is now six bases, five in China and one in Thailand, citing v8.
+  - **Appendix D.** The rewrite note lists every extension of the v8 corrections and the one attribution change: the 60.92% growth now belongs to the power-products segment. It also records that figure captions carry numbers and summarises the audit.
+  - **Cover.** "overnight" is restored.
+- **`repository-information/study-prep/megmeet/MEGMEET-SST-BRIEFING.pdf`** — rebuilt: 76 pages.
+
+### Notes
+
+- **Verified, not changed:** audit finding 7. The chapter 1 walkthrough's DAB/CLLC/MFT bullet cites primer figure 4, which sits in §3.1 and whose caption states exactly that stage.
+- **Archive rotation is not due.** The counter reads `106/100`, but 14 sections carry today's date, leaving 92 non-exempt.
 
 ## [v07.34r] — 2026-09-23 08:50:50 PM EST
 
