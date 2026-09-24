@@ -6,6 +6,69 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-24, 02:57 AM → 05:12 PM EST (attended; two working turns)
+**Repo version:** v07.39r — one push on `claude/focused-bell-41xh5d` (v07.39r), plus this session-context write
+**Branch:** `claude/focused-bell-41xh5d`
+
+### What was done
+
+- **Open-items audit across Scraper, Profiler, Classroom, Network and Events** (research only, no commit).
+  - Three parallel readers covered the plan docs and CHANGELOG; the live Routine fleet was checked directly.
+  - It returned a ranked plan: Priority 1 due 9/28–10/7, Priority 2 in October before RE+ on 11/16, Priority 3 housekeeping.
+  - All six Routines are enabled and their last runs succeeded. The rebuilt Guidance Routine still carries step 3a.
+  - The 9/23 C2 run ended in 9 minutes with no commit and no BLOCKED title, so it was almost certainly a stand-down. Its report is unread.
+- **v07.39r — the Megmeet SST briefing updated from the OCP SST Specification Rev. 0.3.0 and OCP's 11 Aug 2026 announcement** (the developer supplied both PDFs).
+  - New chapter 3.5, "What the OCP specification actually says".
+  - Every second-hand spec claim corrected in place, with the old text struck through: the title and dates, "80 manufacturers building to it", NVIDIA questions 13 (Modbus) and 15 (harmonics), and week-one question 9.
+  - The spec's numbers added across 15 chapters.
+  - New Spec citation tier (refs 85–89) and a new Appendix E indexing every change.
+  - PDF 76 → 84 pages.
+  - Data file, figures M2 and M11 and the companion updated to match; the companion learned the `SPEC` tag prefix.
+
+### Where we left off
+
+- v07.39r is merged and its branch deleted. The developer has the PDF.
+- **Not yet run:** the paste-ready prompt for rechecking the four Classroom landscape modules due this week. It is in this session's last CODING COMPLETE response.
+  - The four: `landscape-cooling-2026-09` (reviewBy 9/28), `landscape-neoclouds-2026-09` (9/30), `landscape-utilities-2026-09` (10/1) and `landscape-in-hall-power-2026-09` (10/1).
+  - The developer said "3"; the prompt covers 4 because in-hall-power is also due 10/1 and the OCP spec bears on it.
+  - It also covers re-judging the rehearsal scenarios, including scenario-neoclouds-discovery (9/30) and the three utilities scenarios (10/1).
+- **Still-open Priority 1 items from the audit** (the developer's to action):
+  - Read the 9/23 C2 run report before 9/30.
+  - Approve the ~33 Events proposals and run `events sync`; Yotta, GCPA and ESIG start 9/28.
+  - Decide before the 10/1 quarterly sweep whether to move Habitat Energy and Gridmatic to the core tier or refresh them by hand.
+
+### Key decisions made
+
+- **Highlighting convention for document updates:** `mark.chg` (yellow) for new or corrected text, `del.chg` (struck through) beside anything replaced, `tr.chg` / `.chg-block` for new rows and sections, and an appendix indexing every change.
+- **New sources get their own tier** rather than sharing the web "1". Numbers were appended (85–89), not renumbered.
+- **"July 2026" was not called an error.** The spec PDF's creation date is 2 July; the briefing records the spec's own dates instead.
+- **Figures whose data didn't change are not committed.** A regeneration run rewrites all 14 SVGs with new timestamps and clip ids; the unchanged 12 were restored.
+- **The source PDFs are not stored in the repo.**
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Container quirk:** `pypdf` and `pdfminer` failed on a broken `cryptography` binding until `pip install cffi`. PyMuPDF (`pip install pymupdf`) renders PDF pages to PNG for the Read tool; `apt` poppler returned 404.
+- **Spec facts worth remembering:** SKU A is 13.8 kV at 5 MW and SKU B is 34.5 kV at 5 or 10 MW. The rest:
+  - 800 V DC unipolar output
+  - at least 98% efficiency from 50–100% load, power-train losses only
+  - overload of 120% for 5 s and 150% for 150 ms
+  - BIL of at least 110 kV at 13.8 kV and 150–200 kV at 34.5 kV
+  - Modbus TCP/IP as the only communications requirement
+  - no UL 9540 in the compliance list
+  - the plotted NOGRR 282 corner points differ from the briefing's web figures (chapter 16.3)
+- **Dates:** the developer starts at Megmeet on 2026-10-07. The C2 Routine fires 2026-09-30 11:00 UTC. The Profiler quarterly check and drift check fire 10/1. The Guidance review fires 10/15. The Megmeet Q3 report is due by 10/31. RE+ runs 11/16–19.
+
+### Recommendation for next session
+
+- Run the four-module Classroom landscape recheck in a fresh Opus 5.5 High session before Sunday 2026-09-28, using the prompt from this session's last response.
+
+**To continue:** paste the Classroom landscape recheck prompt into a new Opus 5.5 High session (or type `give me the landscape recheck prompt` to have it re-pasted)
+
+## Previous Sessions
+
+### Session — 2026-09-24 12:45 AM EST (Classroom segment regeneration)
+
 **Date:** 2026-09-23 10:33 PM → 2026-09-24 12:45 AM EST (attended)
 **Repo version:** v07.37r — one push on `claude/quirky-fermat-21bvyi` (v07.37r), plus this session-context write
 **Branch:** `claude/quirky-fermat-21bvyi`
@@ -42,74 +105,3 @@ The v07.37r push is merged into main and the branch is deleted. Nothing is pendi
 ### Recommendation for next session
 
 - Session fully complete — no deferred work; future sessions can pick any new task.
-
-## Previous Sessions
-
-### Session — 2026-09-23 10:35 PM EST (Megmeet SST briefing rewrite)
-
-**Date:** 2026-09-23, 08:16 → 10:35 PM EST (attended)
-**Repo version:** v07.36r — three pushes on `claude/magical-volta-6wttez` (v07.34r, v07.35r, v07.36r), plus this session-context write
-**Branch:** `claude/magical-volta-6wttez`
-
-### What was done
-
-**v07.34r — the Megmeet SST briefing rewrite**, run from `repository-information/megmeet-briefing-rewrite-prompt.md`.
-- **What was rewritten:** `megmeet-sst-briefing-print.html`, for clarity and learning. Every term is now defined at first use.
-- **Expanded explanations:**
-  - a four-step walk through one SST in chapter 1;
-  - the transformer equation and the I = P ÷ V arithmetic in I.2;
-  - a worked cell count in 6.2.
-- **Citations:** 588 tags became **84 numbered, tier-coloured superscripts**, and inline analysis became a gold A.
-  - The citation-contract table is now a legend.
-  - A new **Appendix C.0** lists the numbered references, generated from the same mapping as the superscripts.
-- **Dossier v8 corrections:** applied at the seven places 9.4 lists, plus four places that repeat them. Both 9.4 tables are kept as the record.
-- **Other:** Appendices A and B were regenerated from chapter 1, and Appendix D has a rewrite note that names no AI model. The PDF went from 72 to 76 pages.
-
-**v07.35r — the fresh-subagent audit's 15 findings, all worked:**
-- 14 fixed and 1 verified correct;
-- most were in the v8 corrections (FCC citation, the 9.3/16.2 record links, the Goldman attribution in question 6, the chapter 14 verdict, and the chapter 10 Heron row).
-
-**v07.36r — the six looks-wrong items**, each researched independently and fixed; none needed the developer's call.
-- Chapter 7 now names both unsolved obstacles that have an owner (FERC and NFPA FPRF).
-- The 16.2 NC State feeder-voltage bullet is gone: POWER Magazine reports 13.2 kV.
-- The 16.4 box no longer claims low-confidence markings that never existed.
-- The Novos Power "fifth"/"sixth" ordinal is gone: primer 7.3 names eight developers.
-- The Appendix D page counts now say which build each describes.
-- The data file's footprint answer matches v8: the companion copy was re-inlined and Figure M1 regenerated.
-
-**Closing:** the finished PDF was sent to the developer as a download.
-
-### Where we left off
-
-All three pushes are merged, and the briefing is finished at 76 pages with 84 references. Nothing in it is known to be wrong.
-
-**Open item:** Classroom segment regeneration. `build-classroom-segments.py --check` on a deep clone reads **18 of 19 due: 5 with real section changes, 13 pin-only.** The five with section changes:
-- `power-conversion-and-rack-power-silicon`: the-players, what-moved and who-is-connected, from Megmeet v8, Delta v6 and LITEON v7;
-- `cells-and-chemistry`: what-moved;
-- `storage-integrators-and-containers`: who-is-connected;
-- `grid-equipment`: who-is-connected;
-- `hyperscalers-and-ai-labs`: what-moved.
-
-### Key decisions made
-
-- **One citation number per distinct source string.** All web research shares one number, because which sentence used which URL was never recorded.
-- **Data file edits (item 6).** The rewrite prompt put the data file, companion and figures off limits. Item 6 of the looks-wrong list was a data-file error, so its fix was taken to cover them. Only Figure M1 changed: the other 13 SVGs differed only in their embedded date and IDs and were restored.
-- **The 16.2 bullet was removed, not rewritten.** Its claim was false, and the fact it pointed at already lives in the primer.
-- **The page-count records were kept, not collapsed.** Both were true at their moment, so each now names that moment.
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Repo CHANGELOG rotation is due on the first push dated 24 September or later.** The counter reads `Sections: 107/100`, and 15 of those sections are dated 2026-09-23, so all 107 stop being exempt at midnight. Deepen the clone first, rotate the oldest date groups until fewer than 100 remain, and SHA-enrich.
-- **The Classroom GAS changelog is at `50/50`.** Any segment regeneration bumps `Classroom.gs`, which triggers its rotation in the same push.
-- **The scratchpad checker and converter were session-only.** They are not in the repo; the briefing needs no further tooling.
-- **Dates:** the developer starts at Megmeet on 2026-10-07. The Megmeet Q3 2026 report is due by 31 October.
-
-### Recommendation for next session
-
-- Regenerate the five Classroom segments with real section changes: `power-conversion-and-rack-power-silicon`, `cells-and-chemistry`, `storage-integrators-and-containers`, `grid-equipment` and `hyperscalers-and-ai-labs`.
-  - Run `build-classroom-segments.py --segment <name>` on a deep clone.
-  - Leave the 13 pin-only segments alone, per G3.
-  - In the same push, rotate the repo CHANGELOG and the Classroom GAS changelog.
-
-**To continue:** type `regenerate the five due Classroom segments`
