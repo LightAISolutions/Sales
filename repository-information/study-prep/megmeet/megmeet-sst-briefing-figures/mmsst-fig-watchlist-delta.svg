@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-23T14:27:48.366591</dc:date>
+    <dc:date>2026-09-24T01:25:11.794995</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -45,7 +45,7 @@ L 179.1864 72.085265
 L 179.1864 23.652881 
 L 5.76 23.652881 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 179.1864 72.085265 
@@ -53,7 +53,7 @@ L 418.68 72.085265
 L 418.68 23.652881 
 L 179.1864 23.652881 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 5.76 129.742865 
@@ -61,7 +61,7 @@ L 179.1864 129.742865
 L 179.1864 81.310481 
 L 5.76 81.310481 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 179.1864 129.742865 
@@ -69,7 +69,7 @@ L 418.68 129.742865
 L 418.68 81.310481 
 L 179.1864 81.310481 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 5.76 187.400465 
@@ -77,7 +77,7 @@ L 179.1864 187.400465
 L 179.1864 138.968081 
 L 5.76 138.968081 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
     <path d="M 179.1864 187.400465 
@@ -85,7 +85,7 @@ L 418.68 187.400465
 L 418.68 138.968081 
 L 179.1864 138.968081 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
     <path d="M 5.76 245.058065 
@@ -93,7 +93,7 @@ L 179.1864 245.058065
 L 179.1864 196.625681 
 L 5.76 196.625681 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
     <path d="M 179.1864 245.058065 
@@ -101,7 +101,7 @@ L 418.68 245.058065
 L 418.68 196.625681 
 L 179.1864 196.625681 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
     <path d="M 5.76 302.715665 
@@ -109,7 +109,7 @@ L 179.1864 302.715665
 L 179.1864 254.283281 
 L 5.76 254.283281 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #e4eef6; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
     <path d="M 179.1864 302.715665 
@@ -117,7 +117,7 @@ L 418.68 302.715665
 L 418.68 254.283281 
 L 179.1864 254.283281 
 z
-" clip-path="url(#p2bcb16cbd5)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
+" clip-path="url(#p9a29186fc1)" style="fill: #b9d3e8; stroke: #ffffff; stroke-width: 1.4; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="14.84424" y="51.233331" transform="rotate(-0 14.84424 51.233331)">1</text>
@@ -135,8 +135,8 @@ z
     <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #0b62a4" x="14.84424" y="108.890931" transform="rotate(-0 14.84424 108.890931)">2</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 103.657523)">A fifth SST name exists and the</text>
-    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 111.954339)">primer does not carry it</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 102.926195)">A new SST name exists and the primer</text>
+    <text style="font-size: 7.4px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #23211c" transform="translate(31.36104 111.954339)">does not carry it</text>
    </g>
    <g id="text_6">
     <text style="font-size: 6.6px; font-family: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif; fill: #6d6758" transform="translate(190.74816 99.181263)">Not a competitor. The reason to know the name is that a buyer may</text>
@@ -186,7 +186,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p2bcb16cbd5">
+  <clipPath id="p9a29186fc1">
    <rect x="5.76" y="19.040273" width="412.92" height="288.288"/>
   </clipPath>
  </defs>

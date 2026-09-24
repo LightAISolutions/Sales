@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.36r] — 2026-09-23 09:28:35 PM EST
+
+> **Prompt:** fix the looks-wrong list. Do your own independent research and/or cross-check to determine a conclusion. If you cannot make the call, explain the context and decision to me and I will decide.
+
+The v07.34r rewrite listed six things in the Megmeet SST briefing that looked wrong but left them alone. Each was checked against the primer, the document's own tables, git history or the primary sources, and all six were decided and fixed. None needed the developer's call. The PDF stays at 76 pages with 84 numbered references.
+
+### Fixed
+
+- **`repository-information/study-prep/megmeet/megmeet-sst-briefing-print.html`**
+  - **Chapter 7 intro.** It named one owned unsolved obstacle, but its own table has two. The sentence now names both: FERC for the interconnection queue and the NFPA Fire Protection Research Foundation for the DC arc-flash model.
+  - **Chapter 16.2.** The bullet saying the NC State / NYPA / EPRI 1 MW feeder voltage was undisclosed is removed. NC State's releases of 18 August give only "up to 1 MW", but POWER Magazine of 8 September, which the primer cites, reports a live 13.2 kV feeder.
+  - **Chapter 16.4 box.** It said chapter 7's newsletter-sourced claims were "marked low confidence where they appear". Git history shows no such marking in any version, and the NEC Article 706 "100 V DC default" it warned about appears nowhere in the document. The box now says what can be said: the claims cannot be told apart one by one, so check a web-sourced standards claim against the standard before quoting it.
+  - **I.3 item 2.** Primer 7.3 names eight SST developers, so calling Novos Power the "sixth" name was wrong. The heading drops the ordinal and a new first sentence lists the eight.
+  - **Appendix D.** The D.3 PDF row and the colophon statistics now say which moment each page count describes: 69 at the first build, 71 after the audit pass, 72 after the v8 amendment and 76 after the rewrite. A follow-up note records the six corrections.
+  - **Chapter 9.4.** The note above the v8 table no longer says the data file still lists "the US".
+- **`repository-information/study-prep/megmeet/megmeet-sst-briefing-data.json`**
+  - Watchlist item 2's headline drops "fifth". Its "was" field now lists primer 7.3's full roster.
+  - The footprint objection answer now matches dossier v8: manufacturing in China and Thailand, contract manufacturing in India, R&D in Germany, and a Richardson base that only the company's website describes.
+- **`repository-information/study-prep/megmeet/megmeet-sst-briefing-companion.html`** — the data file is inlined again, byte-identically.
+- **`repository-information/study-prep/megmeet/megmeet-sst-briefing-figures/mmsst-fig-watchlist-delta.svg`** — Figure M1 is regenerated with the new headline. The other thirteen figures regenerated identically and were left as they were.
+- **`repository-information/study-prep/megmeet/MEGMEET-SST-BRIEFING.pdf`** — rebuilt: 76 pages.
+
+### Notes
+
+- **Scope.** The v07.34r prompt put the data file, the companion and the figures out of bounds for the rewrite. This prompt asked for the looks-wrong list to be fixed, and item 6 sits in the data file.
+- **Archive rotation is not due.** The counter reads `107/100`, but 15 sections carry today's date, leaving 92 non-exempt.
 
 ## [v07.35r] — 2026-09-23 08:57:20 PM EST
 
