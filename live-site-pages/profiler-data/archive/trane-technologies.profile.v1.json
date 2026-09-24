@@ -511,9 +511,9 @@
   {
    "date": "2026-05-26",
    "category": "policy",
-   "headline": "EPA publishes amendments loosening the Technology Transitions rule (effective 27 July 2026) — the residential installation deadline is removed, and semiconductor-manufacturing chillers of 100 lb charge or less move to 1 January 2030; data-centre cooling keeps its 1 January 2027 700-GWP limit",
-   "read": "A demand-timing negative in residential for a company that had already completed its transition. The applied line most exposed to data centres is untouched: the data-centre 700-GWP limit still bites from 1 January 2027. (Corrected at v2: v1 read the chiller extension as general and the data-centre catalyst as slipping by up to four years.)",
-   "source": "https://www.govinfo.gov/content/pkg/FR-2026-05-26/pdf/2026-10387.pdf"
+   "headline": "EPA finalises amendments loosening the Technology Transitions rule — the residential installation deadline is removed and industrial process chillers move to 1 January 2030",
+   "read": "A demand-timing negative for a company that had already completed its transition: the forced-replacement catalyst in the applied line most exposed to data centres slips by up to four years.",
+   "source": "Holland & Knight — EPA finalizes changes to Technology Transitions provisions, 2026-05-26"
   },
   {
    "date": "2026-05-18",
@@ -691,9 +691,9 @@
   {
    "regime": "EPA Technology Transitions rule (as amended)",
    "status": "in-effect",
-   "effectiveDate": "2026-07-27",
-   "exposure": "The original rule took effect on 1 January 2025. EPA published amendments on 26 May 2026, effective 27 July 2026, that loosened it selectively: the installation deadline for residential and light-commercial systems using refrigerant of 700 GWP or above manufactured before 1 January 2025 was removed entirely, supermarket refrigeration and cold-storage warehouses were extended to 1 January 2032, and only industrial process refrigeration equipment and chillers with a charge of 100 lb or less used in semiconductor manufacturing moved from 2026 and 2028 to 1 January 2030 — every other industrial process chiller keeps 1 January 2026 or 1 January 2028. Data-centre, IT-equipment and computer-room cooling systems were not amended and keep a 700-GWP limit from 1 January 2027 (40 CFR 84.54). For Trane the residential change is a demand-timing negative rather than a compliance problem, because it reduces stranded-inventory risk for competitors still holding legacy stock. The applied line most exposed to data centres keeps its near-term forced-transition catalyst: new data-centre cooling systems must use fluids below 700 GWP from 1 January 2027, which the company's commercial portfolio already ships.",
-   "source": "Federal Register 2026-10387 (published 2026-05-26, effective 2026-07-27); eCFR 40 CFR 84.54 as amended; Holland & Knight — EPA finalizes changes to Technology Transitions provisions (2026-05-26)"
+   "effectiveDate": "2026-05-26",
+   "exposure": "The original rule took effect on 1 January 2025. EPA finalised amendments on 26 May 2026 that materially loosened it: the installation deadline for residential and light-commercial systems using refrigerant of 700 GWP or above manufactured before 1 January 2025 was removed entirely, supermarket refrigeration and cold-storage warehouses were extended to 1 January 2032, and semiconductor-manufacturing refrigeration and industrial process chillers moved from 2026 and 2028 to 1 January 2030. For Trane both changes are demand-timing negatives rather than compliance problems: the residential change reduces stranded-inventory risk for competitors still holding legacy stock, and the industrial-chiller delay removes a near-term forced-transition catalyst in the applied line most exposed to data centres.",
+   "source": "Holland & Knight — EPA finalizes changes to Technology Transitions provisions (2026-05-26)"
   },
   {
    "regime": "A2L refrigerants and building codes (ASHRAE 15 and 34)",
@@ -1138,20 +1138,11 @@
   "2. **(High confidence)** We assess the reference design, not the product catalogue, is now the company's principal go-to-market instrument in data centres. Basis: three published designs in ten months — NVIDIA in October 2025, an optimisation in March 2026 quantified as 22 MW of cooling capacity freed for IT power, and the Eaton power-and-thermal integration in August 2026 claiming 80% less copper and 30% lower installation cost. Selling a validated chain rather than a machine is how a vendor gets specified before the procurement starts, and it is the same pattern the power OEMs run.",
   "3. **(Moderate confidence)** We assess the backlog is genuinely strong and partly mis-read. Basis: $12.1bn at Q2 2026 is 70% growth and about 57% of FY2025 revenue, against Carrier's $8bn at about 37% — a materially better coverage ratio. But roughly $1bn of the Q1 step was acquired rather than booked, about half the backlog is scheduled for 2027 and beyond, and backlog excludes residential product built in advance of order. The variable is conversion timing and capacity, not demand. We found no published analyst work questioning backlog durability, cancellation terms or the organic-versus-acquired split, and that absence is itself worth noting.",
   "4. **(Moderate confidence)** We assess the company is running two businesses on opposite cycles and that this is under-appreciated in any single headline number. Basis: Americas commercial HVAC bookings up 50% in Q2 2026 against residential markets the company itself describes as having 'weakened considerably throughout 2025', AHRI industry shipments down 29.2% year on year in January 2026 on an eighth consecutive monthly decline, and transport refrigeration explicitly weak with ACT Research reporting US trailer orders down 35% month on month in June 2026. Trane's own Q2 residential commentary — bookings up in the high twenties percent — is sharply at odds with the industry data, and that divergence is unreconciled.",
-  "5. **(Moderate confidence)** We assess the refrigerant transition has become a timing headwind in residential but remains a tailwind in data-centre cooling. Basis: the company completed its commercial migration to ultra-low-GWP fluids and its residential migration to R-454B ahead of the schedule. EPA's May 2026 amendments then removed the residential installation deadline entirely, so a company that transitioned early loses the forced-replacement catalyst it had priced in there while competitors holding legacy inventory gain relief. The amendments' 2030 chiller extension is confined to semiconductor-manufacturing equipment of 100 lb charge or less; data-centre cooling systems keep a 700-GWP limit from 1 January 2027, which Trane's applied line already meets and which competitors still on higher-GWP fluids must design to. (Corrected at v2: v1 read the chiller extension as covering industrial process chillers generally.) Against that, the January 2026 leak-repair rule for appliances with 15 lb or more of charge enlarges the recurring-service base, which is the higher-margin revenue.",
+  "5. **(Moderate confidence)** We assess the refrigerant transition has flipped from a tailwind to a timing headwind. Basis: the company completed its commercial migration to ultra-low-GWP fluids and its residential migration to R-454B ahead of the schedule, and then EPA's May 2026 amendments removed the residential installation deadline entirely and pushed industrial process chillers from 2026 and 2028 to 2030. A company that transitioned early loses the forced-replacement catalyst it had priced in, while competitors holding legacy inventory gain relief. Against that, the January 2026 leak-repair rule for appliances with 15 lb or more of charge enlarges the recurring-service base, which is the higher-margin revenue.",
   "6. **(Low confidence)** We assess the most conspicuous gap in the public record is the absence of a single named data-centre customer. Basis: across an exhaustive check of hyperscalers, colocation operators, AIDC developers and the general contractors that build for them, no source states a commercial relationship between Trane Technologies and any of them; the only two publicly stated relationships in this ecosystem are the NVIDIA and Eaton reference designs. For a company whose backlog growth is attributed to data-centre orders, that is either exceptional customer confidentiality or a sign that the orders route through contractors and developers rather than through named end users. Both readings are consistent with the evidence and neither is established.",
   "7. **(Low confidence)** We assess the asbestos structure remains the largest single unquantified liability in the file. Basis: Aldrich Pump and Murray Boiler have been in Chapter 11 since June 2020 on pre-petition costs reported at about $100M a year; the Fourth Circuit affirmed in August 2025 but with a dissent and an en banc denial on a six-vote split; Phase 1 of the liability-estimation trial was scheduled for the week of 10 August 2026 and no outcome was found; and a Supreme Court petition in the related Bestwall line is live. An adverse ruling on the divisive-merger structure would reach this company directly."
  ],
  "sources": [
-  {
-   "label": "Federal Register 2026-10387 — Phasedown of Hydrofluorocarbons: reconsideration of Technology Transitions requirements (final rule, effective 2026-07-27)",
-   "url": "https://www.govinfo.gov/content/pkg/FR-2026-05-26/pdf/2026-10387.pdf",
-   "date": "2026-05-26"
-  },
-  {
-   "label": "eCFR — 40 CFR 84.54, restrictions on the use of hydrofluorocarbons (as amended)",
-   "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-84/subpart-B/section-84.54"
-  },
   {
    "label": "Trane Technologies and Eaton collaborate on an industry-first reference design for AI data centres",
    "url": "https://investors.tranetechnologies.com/news-and-events/news-releases/news-release-details/2026/Trane-Technologies-and-Eaton-Collaborate-on-Industry-First-Reference-Design-to-Help-Boost-AI-Data-Center-Efficiency-and-Cut-Installation-Costs/default.aspx",
@@ -1516,6 +1507,6 @@
    "url": "https://taxsummaries.pwc.com/ireland/corporate/taxes-on-corporate-income"
   }
  ],
- "lastUpdated": "2026-09-24",
- "profileVersion": 2
+ "lastUpdated": "2026-09-04",
+ "profileVersion": 1
 }

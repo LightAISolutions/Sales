@@ -1,4 +1,4 @@
-var VERSION = "v01.90g";
+var VERSION = "v01.91g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -13249,7 +13249,7 @@ function clLessonSegmentInHallPower_() {
  "title": "In-hall power",
  "short": "Everything between the service entrance and the rack whip that keeps a hall up when the grid drops: static, rotary and modular UPS, the switchgear, busway and…",
  "group": "The Value Chain",
- "updated": "2026-09-23",
+ "updated": "2026-09-24",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -13358,7 +13358,7 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "profile:narada",
-    "date": "2026-09-05",
+    "date": "2026-09-24",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -13436,7 +13436,7 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-23",
+    "date": "2026-09-24",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -15303,32 +15303,32 @@ function clLessonSegmentInHallPower_() {
     {
      "x": 8,
      "lane": "record",
+     "label": "2026-08-29 — H1 2026 report: revenue RMB 1.699B (−56.7%); net loss RMB 1.111B; grid-storage revenue down 80.6% and every segment at a negative gross margin; equity attributable to shareholders down to RMB 290M; reorganization petition still not accepted by the court",
+     "sub": "Narada · financial"
+    },
+    {
+     "x": 9,
+     "lane": "record",
      "label": "2026-08-28 — New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant",
      "sub": "Piller · regulatory"
     },
     {
-     "x": 9,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-28 — IR record: SST demand not expected to ramp for 1–2 years; sales for 2–3 years to come from the existing product matrix",
      "sub": "Megmeet · other"
     },
     {
-     "x": 10,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-28 — Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
      "sub": "Caterpillar · capacity"
     },
     {
-     "x": 11,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-27 — Rehlko joined the Wisconsin Data Center Coalition as an energy-resilience member, stating a track record of 14-plus GW of deployed data-center capacity, more than 90 percent of it custom-engineered",
-     "sub": "Rehlko · corporate"
     }
    ]
   },
@@ -15932,6 +15932,13 @@ function clLessonSegmentInHallPower_() {
     "what-moved",
     "where-it-sits",
     "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-24",
+   "note": "regenerated: graph:profiler-graph 2026-09-23→2026-09-24; profile:narada 2026-09-05→2026-09-24",
+   "changed": [
+    "what-moved"
    ]
   }
  ]
@@ -19185,7 +19192,7 @@ function clLessonSegmentCooling_() {
  "title": "Cooling",
  "short": "The thermal chain from the cold plate to the cooling tower — chillers and economisers, coolant distribution units, cold plates and rack manifolds, rear-door…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-24",
  "reviewBy": "2026-11-09",
  "provenance": {
   "inputs": [
@@ -19204,7 +19211,7 @@ function clLessonSegmentCooling_() {
    {
     "kind": "public",
     "ref": "profile:delta-electronics",
-    "date": "2026-09-04",
+    "date": "2026-09-23",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -19222,7 +19229,7 @@ function clLessonSegmentCooling_() {
    {
     "kind": "public",
     "ref": "profile:liteon",
-    "date": "2026-09-05",
+    "date": "2026-09-23",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -19246,7 +19253,7 @@ function clLessonSegmentCooling_() {
    {
     "kind": "public",
     "ref": "profile:trane-technologies",
-    "date": "2026-09-04",
+    "date": "2026-09-24",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -19258,7 +19265,7 @@ function clLessonSegmentCooling_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-24",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -20226,7 +20233,7 @@ function clLessonSegmentCooling_() {
     [
      "EPA Technology Transitions rule (as amended)",
      "in-effect",
-     "2026-05-26",
+     "2026-07-27",
      "Trane Technologies"
     ],
     [
@@ -20470,6 +20477,13 @@ function clLessonSegmentCooling_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-24",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-24; profile:delta-electronics 2026-09-04→2026-09-23; profile:liteon 2026-09-05→2026-09-23; profile:trane-technologies 2026-09-04→2026-09-24",
+   "changed": [
+    "the-fence"
+   ]
   }
  ]
 };
@@ -61232,12 +61246,16 @@ function guidanceDocLandscapeCellsAndChemistry_() {
   "series": "Industry Guidance — landscape module",
   "repo": "repository-information/industry-guidance/landscape-cells-and-chemistry-analysis.md"
  },
- "updated": "2026-09-14",
+ "updated": "2026-09-24",
  "reviewBy": "2027-01-01",
  "revisions": [
   {
    "date": "2026-09-14",
    "note": "First authoring, and the second landscape module of the segment layer. Corpus synthesis over the 22 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. Composed against the public segment lesson rather than restating it: the roster, the normalized figures, the graph edges and the policy fence stay where they are generated. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis, and is labelled as analysis rather than blended with fact. The review date is set from a gate stated inside a policy entry's prose rather than in its date field, and the reasoning is written out in the analysis file rather than left to a sort."
+  },
+  {
+   "date": "2026-09-24",
+   "note": "Narada re-read at v5 (2026-09-24), which adds the H1 2026 interim filed on 29 August. The claim that the communications and data-centre segment grew through the collapse held for FY2025 only: in H1 2026 it fell 44.8% to RMB 1.044B at a −4.0% gross margin, and every reported segment sold below cost. The indicator row and the ledger row are corrected and every Narada row is re-pinned at v5; the counterparty-risk and US-position rows hold. reviewBy is unchanged — the court's acceptance of the reorganisation petition, still pending, is undated."
   }
  ],
  "tiles": [
@@ -61492,7 +61510,7 @@ function guidanceDocLandscapeCellsAndChemistry_() {
      "**The creditor reorganisation's outcome, and who takes the backup franchise**",
      "Narada",
      "ongoing",
-     "The communications and data-centre segment grew through the collapse; it is the asset a restructuring preserves or a buyer wants — and the accounts, channel partners and talent it frees are in play for everyone else"
+     "The communications and data-centre segment grew through FY2025, then fell 44.8% and sold below cost in H1 2026; it is still the asset a restructuring preserves or a buyer wants, at a lower value — and the accounts, channel partners and talent it frees are in play for everyone else"
     ],
     [
      "**The next full-year ESS share figure**",
@@ -61688,11 +61706,11 @@ function guidanceDocLandscapeCellsAndChemistry_() {
     ],
     [
      "Narada's counterparty risk the dominant fact — a creditor reorganisation petition, a going-concern-qualified audit, an adverse internal-controls opinion, a distressed listing designation, 163 frozen accounts and roughly 80 to 92% leverage — breaking the bankability a ten-to-twenty-year warranty requires",
-     "profile:narada @ v4 — strategyRead[0]; ecosystemRole"
+     "profile:narada @ v5 — strategyRead[0]; ecosystemRole"
     ],
     [
-     "Narada's real moat the thirty-year backup franchise — second in a domestic body's 2024 base-station and data-centre backup shipments, a customer list spanning telecom carriers and Chinese cloud operators, the segment growing through the collapse; semi-solid and the self-made 314 Ah cell as genuine differentiation; the US position blocked for credit-linked grid sales but open for backup",
-     "profile:narada @ v4 — strategyRead[1], [2], [3]; technicalSpecs[]"
+     "Narada's real moat the thirty-year backup franchise — second in a domestic body's 2024 base-station and data-centre backup shipments, a customer list spanning telecom carriers and Chinese cloud operators, the segment growing through FY2025 and then falling 44.8% at a negative gross margin in H1 2026; semi-solid and the self-made 314 Ah cell as genuine differentiation; the US position blocked for credit-linked grid sales but open for backup",
+     "profile:narada @ v5 — strategyRead[1], [2], [3]; technicalSpecs[]; financials.periods[0]"
     ],
     [
      "Panasonic the incumbent of data-centre backup power rather than grid-scale storage, claiming about 80% of the distributed-power backup market, and placed adjacent in this segment",
@@ -64946,6 +64964,10 @@ function guidanceDocLandscapeInHallPower_() {
   {
    "date": "2026-09-24",
    "note": "Freshness review ahead of the 1 October gate, and the first primary document this module cites. (1) The buyers' own SST specification — OCP, Revision 0.3.0 by Google, Microsoft and NVIDIA, effective 22 June 2026 and announced 11 August 2026 — defines an SST coupled with storage as a medium-voltage UPS, fixes two SKUs (13.8 kV at 5 MW; 34.5 kV at 5 or 10 MW) with a unipolar 800 V DC output, at least 98 per cent efficiency from 50 to 100 per cent load on power-train losses only, a recommended overload of 120 per cent for 5 s and 150 per cent for 150 ms, Modbus TCP/IP as its only communications requirement, and a compliance list with no UL 9540. It is added as one paragraph under the deletion routes, one indicator row and seven ledger rows, all citing the specification itself. (2) The Flex spin-off's Form 10 (15 September 2026) reports a combined Power segment of about USD 2.1 bn for fiscal 2026, so 'no revenue line has ever been published' is corrected to 'none on their own'. (3) The Samsung SDI gate: the company restated on its second-quarter call that US cell production begins in October; a month-level start is testable only at the month's end, so reviewBy moves from 1 October to 31 October. Delta Electronics re-read at v6; the claims this module takes from it hold."
+  },
+  {
+   "date": "2026-09-24",
+   "note": "Narada re-read at v5, closing the item this module flagged earlier the same day. The backup segment grew through FY2025 and then fell 44.8% at a −4.0% gross margin in H1 2026, so the group-three paragraph, the bets row and the ledger row are corrected and re-pinned at v5. reviewBy is unchanged."
   }
  ],
  "tiles": [
@@ -64987,7 +65009,7 @@ function guidanceDocLandscapeInHallPower_() {
     "**Mitsubishi Electric is the one whose marketing and whose revenue point in different directions, and it answers a buying criterion by refusing it.** It is consistently named in the leading vendor set for data-centre UPS, power transformers and gas-insulated switchgear — and **no firm reachable in the research publishes a market-share percentage for it in any of the three**. Its own quarterly numbers put the AI exposure in transmission and distribution rather than in the UPS line its data-centre marketing leads with: energy-systems orders up **eighty per cent** year on year, while the sub-segment containing UPS saw full-year orders **fall nine per cent**. And on {{eco-mode}} it publishes no figure for any model, states that silicon carbide makes the mode and its switching event unnecessary, and publishes ninety-eight point two per cent {{double conversion}} efficiency instead. **That is criterion two answered by declining the question**, and it is the clearest instance in the segment of an incumbency made of something other than share.",
     "**Piller is the only vendor in the corpus that answers the room's question with a rotating machine** rather than power electronics and a battery — rotary, {{DRUPS}} and {{flywheel}} machines, and the isolated-parallel bus. Its own franchise moved: its parent states plainly that hyperscale *moved away from Piller rotary technology in recent years in favour of battery-static UPS*, and the relevance now runs through the fence line, where its stabiliser ships **one unit per twelve-megawatt gen-set** into behind-the-meter plants. **Its binding constraint is factory capacity, not demand** — a twenty-million-euro programme lifts output from about a hundred to about four hundred large systems a year only by the **end of 2027**, with build slots already being released for 2028.",
     "**Zhonhen holds the architecture and not the market, and the gap between the two is the most instructive single fact in this segment.** It is China's data-centre {{HVDC}} leader at **thirty-one per cent share** with the top three at seventy-two, lead author of the national direct-current standard, and its one-stage ten-kilovolt-to-DC conversion predates the Western 800 VDC push by six years. The architecture buyer's own August 2026 execution paper **names that architecture** as an implementation of its own data-hall block. And the company's H1 2026 interim converts none of it into commercial traction: **no order, no backlog, no named data-centre customer, no 800-volt revenue**, exports at four point one per cent, and absence from every published partner roster. **Architectural endorsement and commercial inclusion are separate questions, and only the first has been answered** — which is criterion five returning an answer the role label does not predict.",
-    "**And the two who build the store.** *Panasonic* claims about **eighty per cent of the data-centre distributed-power market** — the {{BBU}} layer — self-reported and verified by no third party, behind three hundred and fifty billion yen of dedicated capital expenditure and a chief executive calling an eight-hundred-billion-yen FY2029 target *a minimum commitment*; its most recent quarter put data-centre storage sales at a hundred and thirteen billion yen, one point nine times the year before. *Narada* is the cautionary comparable: **second in base-station and data-centre backup shipments** on a thirty-year franchise, carrying a creditor reorganisation petition, a going-concern-qualified audit, an adverse internal-controls opinion and a hundred and sixty-three frozen accounts. **Its backup segment grew through the collapse**, which is what makes it an asset map rather than an obituary — the distress is actively freeing accounts, channel partners and experienced people.",
+    "**And the two who build the store.** *Panasonic* claims about **eighty per cent of the data-centre distributed-power market** — the {{BBU}} layer — self-reported and verified by no third party, behind three hundred and fifty billion yen of dedicated capital expenditure and a chief executive calling an eight-hundred-billion-yen FY2029 target *a minimum commitment*; its most recent quarter put data-centre storage sales at a hundred and thirteen billion yen, one point nine times the year before. *Narada* is the cautionary comparable: **second in base-station and data-centre backup shipments** on a thirty-year franchise, carrying a creditor reorganisation petition, a going-concern-qualified audit, an adverse internal-controls opinion and a hundred and sixty-three frozen accounts. **Its backup segment grew through FY2025 and then broke**: in the first half of 2026 the communications and data-centre line fell forty-five per cent and sold below cost. It is still an asset map rather than an obituary — the distress is actively freeing accounts, channel partners and experienced people — but the franchise a buyer would take is now shrinking.",
     "**The honesty note this section owes the reader.** Those are not measures of one thing. A design franchise is a procurement fact; a tenth of a share point is a market fact; a published refusal of eco-mode is an engineering position; a national standard authored for one country is a regulatory fact; and a backup-market share stated by the company that holds it is a company's own statement. **Flattening them into an ordering would misrepresent all of them.** The module's own assessment, stated as analysis rather than as a finding of the record: **in this segment the useful question is not who is biggest but what each incumbency is made of — because that is what decides what can take it away, and the answer differs for all three groups.**"
    ],
    "sales": "Before the first call, work out which of the three groups you are talking to. A machine maker buys a component inside a design it owns. An architecture vendor buys a standard. A store maker buys a cell specification. Three different conversations, and no ranking connects them — the two at the top of this segment are a tenth of a point apart, and three of the ten would never meet in a bid."
@@ -65065,7 +65087,7 @@ function guidanceDocLandscapeInHallPower_() {
     [
      "Narada",
      "incumbent",
-     "That a thirty-year backup franchise survives the balance sheet carrying it: the segment grew through a creditor reorganisation, and the product differentiation is real enough that a restructuring would preserve it or a buyer would want it"
+     "That a thirty-year backup franchise survives the balance sheet carrying it: the segment grew through FY2025 but fell 44.8% and sold below cost in H1 2026 under a creditor reorganisation petition, so the bet now rests on the product differentiation being real enough that a restructuring would preserve it or a buyer would want it"
     ],
     [
      "Panasonic",
@@ -65280,8 +65302,8 @@ function guidanceDocLandscapeInHallPower_() {
      "profile:panasonic @ v4 — ecosystemRole, strategyRead[0], strategyRead[1]"
     ],
     [
-     "Narada is #2 in base-station and data-centre backup shipments on a 30-year franchise, carries a creditor reorganization petition, a going-concern-qualified audit, an adverse internal-controls opinion and 163 frozen accounts — and the comms/DC segment grew through the collapse",
-     "profile:narada @ v4 — ecosystemRole, strategyRead[0], strategyRead[1]"
+     "Narada is #2 in base-station and data-centre backup shipments on a 30-year franchise, carries a creditor reorganization petition, a going-concern-qualified audit, an adverse internal-controls opinion and 163 frozen accounts — and the comms/DC segment, which grew through FY2025, fell 44.8% at a −4.0% gross margin in H1 2026",
+     "profile:narada @ v5 — ecosystemRole, strategyRead[0], strategyRead[1], financials.periods[0]"
     ],
     [
      "Samsung SDI's UPS and BBU lines are guided to grow >70 % in 2026; it holds a world-first UL indoor large-scale fire test pass for UPS batteries; its global ESS share is 1.4 % (#12, H1 2026)",

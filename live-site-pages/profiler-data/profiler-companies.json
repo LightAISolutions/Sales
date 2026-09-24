@@ -2631,13 +2631,13 @@
       "hq": "Hangzhou, China",
       "ticker": "SZSE: 300068 (ST Nandu)",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-24",
       "domains": [
         "en.naradapower.com",
         "mpinarada.com"
       ],
-      "srcTotal": 25,
-      "srcFirstPct": 32,
+      "srcTotal": 27,
+      "srcFirstPct": 37,
       "kpiNorm": true,
       "segments": [
         {
@@ -4023,7 +4023,7 @@
       "hq": "Swords, Ireland / Davidson, USA",
       "ticker": "NYSE: TT",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-24",
       "domains": [
         "tranetechnologies.com",
         "trane.com",
@@ -4031,8 +4031,8 @@
         "elibrary.tranetechnologies.com",
         "media.tranetechnologies.com"
       ],
-      "srcTotal": 77,
-      "srcFirstPct": 51,
+      "srcTotal": 79,
+      "srcFirstPct": 49,
       "kpiNorm": true,
       "segments": [
         {

@@ -3,11 +3,47 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.41r] — 2026-09-24 06:55:02 PM EST
+
+> **Prompt:** "Verify and close out the attached three facts that are still unverified" *(with a screenshot of the three facts flagged at v07.40r: AEP's "six of eight" tariff states against its 30 Jul release's five; Narada's H1 2026 collapse not yet in its v4 dossier; the Trane dossier's policyExposure[1] reading the EPA 2030 relief too broadly)*
+
+All three facts flagged at v07.40r were verified against primary sources and closed. AEP needed no change. Trane and Narada were revised, and the corrections were carried into the two Guidance landscape modules and two segment lessons that repeated them.
+
+### Verified — no change
+
+- **AEP "six of eight"** — both figures are right at their own dates. The 30 Jul 2026 Q2 earnings deck (p. 8) says five of the eight states; the "Aug & Sep 2026 Investor Meetings" handout (p. 7, and the p. 12 table) says six, after Michigan approved in between, with Oklahoma (PSO) and SWEPCO Texas still pending. Every repo mention already dates "six" to the August handout. The matching bullet in the cooling-recheck reminder is struck through as closed.
+
+### Changed
+
+#### `live-site-pages/profiler-data/trane-technologies.profile.json` — profileVersion 1 → 2 (v1 archived)
+- **policyExposure[1]** (EPA Technology Transitions rule) corrected from Federal Register 2026-10387 and 40 CFR 84.54 as amended. The 2030 extension covers only chillers and process refrigeration of **100 lb charge or less used in semiconductor manufacturing**; every other industrial process chiller keeps 1 Jan 2026 or 1 Jan 2028. Data-centre, IT-equipment and computer-room cooling keeps its **700-GWP limit from 1 Jan 2027**. The amendments were published 26 May but took effect **27 July 2026**, so `effectiveDate` is corrected too.
+- The exposure's conclusion is reversed for data centres: the applied line keeps its near-term forced-transition catalyst. strategyRead #5 and the 26 May development entry are corrected to match, each marked as a v2 correction.
+- Two primary sources added: the Federal Register PDF and the eCFR section.
+
+#### `live-site-pages/profiler-data/narada.profile.json` — profileVersion 4 → 5 (v4 archived)
+- The **H1 2026 interim** (filed 29 Aug on cninfo) added as its own financial period, read first-hand:
+  - Revenue RMB 1.699B (−56.7%). Grid storage RMB 183.8M (−80.6%, gross margin −31.6%), comms and data-centre storage RMB 1.044B (−44.8%, gross margin −4.0%), recycling RMB 470.7M (−56.7%).
+  - Net loss RMB 1.111B.
+  - Equity attributable to shareholders RMB 290.2M (−79.5%), and total equity RMB 25.1M after negative minority interests. Liabilities are 99.8% of assets.
+  - Cash RMB 465.3M, of which about RMB 409.6M is frozen.
+  - The court had still not accepted the reorganisation petition.
+- **strategyRead[1] revised and its confidence lowered from High to Moderate**: the comms/DC segment grew through FY2025 but not through H1 2026. strategyRead[0], strategyRead[2], the summary, the commentary and a new 29 Aug development updated. No USD overlay is stored for the interim, because no citable FX basis was established.
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — v01.90g → v01.91g
+- **`landscape-cells-and-chemistry-2026-09`** (updated → 2026-09-24) and **`landscape-in-hall-power-2026-09`** — every "the segment grew through the collapse" claim is corrected (five passages across indicators, bets, the group-three paragraph and the claims ledgers). The Narada ledger rows are re-pinned at v5 and a dated revision note is added. `reviewBy` is unchanged in both.
+- **`segment-in-hall-power`** and **`segment-cooling`** regenerated. These were the only two segments whose sections changed ("what-moved" gains Narada's H1 event; "the-fence" reads Trane's corrected EPA entry). The other pin-only segments were left alone under G3.
+
+#### Other files
+- `repository-information/industry-guidance/landscape-cells-and-chemistry-analysis.md` and `landscape-in-hall-power-analysis.md` — mirrored corrections and revision notes. The in-hall-power "flagged, not changed" Narada item is struck through as closed.
+- `repository-information/CLASSROOM-CURRICULUM-PLAN.md` — inline correction on the §10.6 cooling-row history that carried the same broad EPA reading and the 26 May date.
+- `profiler-companies.json` synced; `profiler-graph.json` rebuilt.
+- Profiler checks: relationship checker 0 findings; cross-reference checker 0 candidates. Inbound reconciliation: 3 dossiers mention Narada, none with a financial claim, 0 changed. No other dossier cites the EPA rule.
 
 ## [v07.40r] — 2026-09-24 05:34:30 PM EST
 

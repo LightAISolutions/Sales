@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.91g] — 2026-09-24 06:55:02 PM EST — v07.41r
+
+### Changed
+
+- Guidance library updated
+- Two market-structure lessons updated with the latest company coverage
 
 ## [v01.90g] — 2026-09-24 05:34:30 PM EST — v07.40r
 

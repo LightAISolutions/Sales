@@ -16,7 +16,7 @@
   "ticker": "SZSE: 300068",
   "notes": "Trades as 'ST Nandu' after an other-risk-warning designation on Apr 30, 2026. No stable controlling shareholder — a Dec 2025 control-transfer attempt collapsed within a week; chairman Zhu Baoyi is the 2nd-largest holder at 6.32% with 90.4% of his shares pledged."
  },
- "summary": "BOTTOM LINE UP FRONT: Narada is the distressed incumbent of the field — a 30-year telecom/data-center backup-power specialist (#2 globally among Chinese vendors in base-station/DC backup batteries, CNESA 2024) that built a genuinely differentiated grid BESS line (Center L family; GWh-scale semi-solid 314 Ah deployments; an AC/DC-integrated 6.25 MWh 20-ft block; NFPA 855 on a 5 MWh container) and then hit the wall financially: FY2025 net loss RMB 2.64B, then an H1 2026 in which revenue fell 57% to RMB 1.70B, every segment sold below cost, the net loss reached RMB 1.11B and equity attributable to shareholders shrank to RMB 290M; a going-concern-qualified audit with an adverse internal-controls opinion, ST designation, 163 frozen bank accounts, and a creditor bankruptcy-reorganization petition filed July 8, 2026. Its US channel (MPI Narada, Dallas — rebranded 'MPI Energy' in May 2026) still sells VRLA and LFP UPS into US data centers, and the company claims top-US-internet end customers. Every commercial read on Narada now starts and ends with counterparty risk.",
+ "summary": "BOTTOM LINE UP FRONT: Narada is the distressed incumbent of the field — a 30-year telecom/data-center backup-power specialist (#2 globally among Chinese vendors in base-station/DC backup batteries, CNESA 2024) that built a genuinely differentiated grid BESS line (Center L family; GWh-scale semi-solid 314 Ah deployments; an AC/DC-integrated 6.25 MWh 20-ft block; NFPA 855 on a 5 MWh container) and then hit the wall financially: FY2025 net loss RMB 2.64B, a going-concern-qualified audit with an adverse internal-controls opinion, ST designation, 163 frozen bank accounts, and a creditor bankruptcy-reorganization petition filed July 8, 2026. Its US channel (MPI Narada, Dallas — rebranded 'MPI Energy' in May 2026) still sells VRLA and LFP UPS into US data centers, and the company claims top-US-internet end customers. Every commercial read on Narada now starts and ends with counterparty risk.",
  "ecosystemRole": "We assess Narada as a cautionary comparable rather than a live US containerized-BESS rival: FEOC status forecloses ITC-linked grid sales from 2026, and the balance sheet forecloses the 10-20-year warranty and O&M promises utility buyers require — but its backup-power heritage matters to the AIDC map. Narada is one of the few vendors with both legs of the AIDC energy stack (inside-the-fence VRLA→lithium UPS→10C AIOn X-Rate→800V HVDC, plus outside-the-fence grid-forming BESS), its MPI Energy channel is a working example of the 'de-branded US beachhead' play, and its distress is actively freeing up backup-power accounts, channel partners, and talent that competitors — including a US-entering Hithium — can pick up.",
  "productsAndServices": [
   {
@@ -134,13 +134,6 @@
  ],
  "recentDevelopments": [
   {
-   "date": "2026-08-29",
-   "category": "financial",
-   "headline": "H1 2026 report: revenue RMB 1.699B (−56.7%); net loss RMB 1.111B; grid-storage revenue down 80.6% and every segment at a negative gross margin; equity attributable to shareholders down to RMB 290M; reorganization petition still not accepted by the court",
-   "read": "The comms and data-center line — the franchise a restructuring was expected to preserve — fell 44.8% and sold below cost. The collapse has moved from the balance sheet into operations.",
-   "source": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225525865.PDF"
-  },
-  {
    "date": "2026-08-05",
    "category": "project",
    "headline": "Dunhuang 200 MW/800 MWh standalone grid-side station completed — Narada as developer + supplier (160× 5 MWh containers, RMB 760M)",
@@ -233,9 +226,9 @@
   }
  ],
  "strategyRead": [
-  "(High confidence) We assess counterparty risk as the dominant fact about Narada: a creditor reorganization petition, going-concern-qualified audit, adverse internal-controls opinion, ST designation, 163 frozen accounts, ~80-92% leverage, and an H1 2026 that cut equity attributable to shareholders to RMB 290M with almost all remaining cash frozen, together break the bankability required for 10-20-year warranty and O&M commitments — Western procurement will treat Narada as high supplier-credit risk despite the BNEF Tier 1 listing, and rightly so.",
-  "(Moderate confidence — lowered from High at v5) We assess the real moat as the 30-year backup-power franchise, not grid BESS: #2 in CNESA's 2024 base-station/DC backup shipments, a customer list spanning China Tower/Mobile/Telecom, GDS, ByteDance, and Alibaba, and a claimed (unverified) foothold in top US data centers via MPI. The comms/DC segment grew through FY2025 (+7.4%) but not through H1 2026, when it fell 44.8% to RMB 1.044B at a −4.0% gross margin — the franchise is now shrinking and selling below cost, though it is still 61% of revenue. It remains the asset a restructuring would preserve or a buyer would want; what it is worth has fallen.",
-  "(Moderate confidence) We assess the semi-solid GWh-scale deployments and the AC/DC-integrated Center L Ultra as genuine product differentiation — Narada out-innovated its balance sheet. If the 1.6 GWh 2026 semi-solid deliveries land on spec, the technology story survives whatever happens to the corporate entity. H1 2026 grid-storage revenue of RMB 183.8M (−80.6%, gross margin −31.6%) is not consistent with GWh-scale deliveries in the half; whether they slipped or were never booked is not stated in the report.",
+  "(High confidence) We assess counterparty risk as the dominant fact about Narada: a creditor reorganization petition, going-concern-qualified audit, adverse internal-controls opinion, ST designation, 163 frozen accounts, and ~80-92% leverage together break the bankability required for 10-20-year warranty and O&M commitments — Western procurement will treat Narada as high supplier-credit risk despite the BNEF Tier 1 listing, and rightly so.",
+  "(High confidence) We assess the real moat as the 30-year backup-power franchise, not grid BESS: #2 in CNESA's 2024 base-station/DC backup shipments, a customer list spanning China Tower/Mobile/Telecom, GDS, ByteDance, and Alibaba, and a claimed (unverified) foothold in top US data centers via MPI. The comms/DC segment grew through the collapse — it is the asset a restructuring would preserve or a buyer would want.",
+  "(Moderate confidence) We assess the semi-solid GWh-scale deployments and the AC/DC-integrated Center L Ultra as genuine product differentiation — Narada out-innovated its balance sheet. If the 1.6 GWh 2026 semi-solid deliveries land on spec, the technology story survives whatever happens to the corporate entity.",
   "(High confidence) We assess Narada's US position as FEOC-blocked for ITC-linked grid BESS but still shippable for UPS/backup (tariff-burdened): backup batteries inside data centers generally don't claim ITC, so the binding constraints are Section 301 tariffs, DoD-adjacent NDAA restrictions, and voluntary hyperscaler de-risking. The MPI Energy rebrand is the observable adaptation to that last force.",
   "(Moderate confidence) For the Hithium lens: Narada is the cautionary comp — differentiated product, real channel, dead balance sheet — and simultaneously an opportunity map. Its distress puts backup-power accounts, US channel relationships (MPI-style partners), and experienced storage/backup talent in play; a US-entering competitor should track the reorganization outcome for exactly those assets."
  ],
@@ -305,35 +298,6 @@
   "type": "public filings (SZSE 300068; ST designation) — figures via SZSE filings and Chinese financial press",
   "periods": [
    {
-    "period": "H1 2026 (reported Aug 29, 2026)",
-    "metrics": [
-     {
-      "name": "Revenue",
-      "actual": "RMB 1.699B (−56.7% from RMB 3.923B). Power (grid) storage RMB 183.8M (−80.6%, gross margin −31.6%); comms and data-center storage RMB 1.044B (−44.8%, gross margin −4.0%); recycling RMB 470.7M (−56.7%, gross margin −22.2%). By product: lithium-ion batteries RMB 956.5M (−52.0%), lead-acid RMB 271.3M (−67.8%). Overseas battery sales RMB 586.2M (−24.9%)",
-      "expected": "n/a",
-      "verdict": "n/a",
-      "result": "Every reported segment ran a negative gross margin, including the comms and data-center line that had grown through FY2025. Q2 alone was about RMB 728M against Q1's RMB 970.6M",
-      "kpi": "revenue"
-     },
-     {
-      "name": "Profit",
-      "actual": "Net loss attributable to shareholders RMB 1.111B (H1 2025: −RMB 232.5M); loss before non-recurring items RMB 1.116B; basic EPS −RMB 1.24. Operating cash flow +RMB 171.3M (−71.0%)",
-      "expected": "n/a",
-      "verdict": "n/a",
-      "result": "Half a year's loss equals about 42% of FY2025's full-year loss, with no disclosed guidance to measure it against"
-     },
-     {
-      "name": "Balance sheet (30 Jun 2026)",
-      "actual": "Equity attributable to shareholders RMB 290.2M (−79.5% from RMB 1.413B at year-end); total assets RMB 13.142B (−11.8%) against total liabilities RMB 13.117B; total equity including minority interests (−RMB 265.2M) RMB 25.1M. Cash RMB 465.3M (from RMB 1.634B), of which RMB 336.2M is frozen as bill and guarantee margin and RMB 73.4M judicially frozen. Short-term borrowings RMB 3.565B; long-term borrowings RMB 2.057B; contract liabilities (customer advances) up to RMB 998.3M from RMB 548.5M",
-      "expected": "n/a",
-      "verdict": "n/a",
-      "result": "About RMB 56M of the reported cash is unencumbered against RMB 3.6B of short-term debt, and liabilities are 99.8% of total assets"
-     }
-    ],
-    "periodType": "half",
-    "periodEnd": "2026-06-30"
-   },
-   {
     "period": "FY2025 (reported Apr 29-30, 2026)",
     "metrics": [
      {
@@ -365,24 +329,14 @@
       "actual": "FY2024: revenue RMB 7.98B (−45.6%), net loss RMB 1.497B. Q1 2026: revenue RMB 970.6M (−14.8%)",
       "expected": "n/a",
       "verdict": "n/a",
-      "result": "Two consecutive multi-billion-RMB loss years; the H1 2026 report (filed Aug 29, 2026) is recorded as its own period above"
+      "result": "Two consecutive multi-billion-RMB loss years; H1 2026 report not yet located (due ~end-Aug 2026)"
      }
     ]
    }
   ],
-  "commentary": "As of 30 June 2026, per the H1 report: cash RMB 465.3M, of which about RMB 409.6M is frozen (bill and guarantee margin plus judicial freezes), against short-term borrowings of RMB 3.565B; equity attributable to shareholders RMB 290.2M. The creditor's pre-reorganization and reorganization petition had not been accepted by the Hangzhou Intermediate Court as of the report's release; the company states it had received no court document starting either process. Earlier aggregator figures (near-term obligations ~RMB 6.35B vs cash ~RMB 1.86B; 163 accounts frozen) describe the position before the H1 report and are kept for the trajectory. A March 2026 investor-blog turnaround target (net profit RMB 572-620M, ~RMB 8.9B backlog) pre-dates the April collapse — low confidence, and contradicted by H1. Backlog per Sept 2025 IR record: ~7.8 GWh utility orders. US hyperscaler customer identities remain unverified."
+  "commentary": "Liquidity per aggregators: near-term obligations ~RMB 6.35B vs cash ~RMB 1.86B; 163 accounts frozen; reorganization petition pending (court acceptance unconfirmed). A March 2026 investor-blog turnaround target (net profit RMB 572-620M, ~RMB 8.9B backlog) pre-dates the April collapse — low confidence. Backlog per Sept 2025 IR record: ~7.8 GWh utility orders. US hyperscaler customer identities remain unverified."
  },
  "sources": [
-  {
-   "label": "Narada (浙江南都电源动力股份有限公司) — 2026 half-year report, full text (SZSE 300068, via cninfo)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225525865.PDF",
-   "date": "2026-08-29"
-  },
-  {
-   "label": "Narada — 2026 half-year report summary (SZSE 300068, via cninfo)",
-   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225525864.PDF",
-   "date": "2026-08-29"
-  },
   {
    "label": "Narada EN — Dunhuang 800 MWh completion",
    "url": "https://en.naradapower.com/news/detail/id/10317.html",
@@ -507,6 +461,6 @@
    "url": "https://mpinarada.com/critical-power-ups/"
   }
  ],
- "lastUpdated": "2026-09-24",
- "profileVersion": 5
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 4
 }

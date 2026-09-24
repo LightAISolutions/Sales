@@ -15,7 +15,7 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **To resume:** type `reframe the Dominion rehearsal`.
 - `2026-09-24 06:34:55 PM EST` — **Recheck the cooling landscape module (`landscape-cooling-2026-09`) after the CoolIT CDU launch on Monday 2026-09-28** — the module's reviewBy stayed at 2026-09-28 at v07.40r for this launch alone. From Monday it shows as due in the curriculum report. Neither the neoclouds pass nor the Dominion reframe covers it, and no Routine does either.
   - **What to check:** what CoolIT actually launched — capacity, ship date and form factor. Then decide where it sits on the CDU ladder, which Schneider's 3.5 MW WCDU (23 Sep) now tops. Move reviewBy only if the gate has passed or is certain, per the v07.40r rule; if the launch slips, keep reviewBy on the new launch date.
-  - **Fold in while there:** AEP's "six of eight" large-load tariff states, which AEP's 30 Jul release puts at five. It sits in the utilities scenarios, was flagged at v07.40r, and was left unchanged.
+  - ~~**Fold in while there:** AEP's "six of eight" large-load tariff states, which AEP's 30 Jul release puts at five.~~ Closed 2026-09-24 (v07.41r), no change needed: the 30 Jul Q2 deck said five and the August investor handout says six, after Michigan approved in between. Both are right at their dates, and every repo mention dates "six" to August.
   - **Small session:** a Classroom guidance recheck under `.claude/rules/industry-guidance.md` (Freshness discipline) and `.claude/rules/classroom-app.md`. It can run on or after 28 Sep, and before the 7 Oct Megmeet start is best.
   - **To resume:** type `recheck the cooling module after CoolIT`.
 
