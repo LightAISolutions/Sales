@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "updated": "2026-09-23",
+ "updated": "2026-09-24",
  "description": "Refresh queue for the Profiler Routines. One row per covered company: slug, the next report date (public companies) or cadence+tier (private/unit-level), confirmation status and lastRefreshed. Read it with scripts/profiler-queue.py, never whole. The per-company research payload (source, watch) lives alongside in profiler-refresh-notes.json — see that file's description for why. Cadence rows carry a tier: core = Megmeet/SST-adjacent segments plus the named private/unit-level set, swept every 90 days; watch = the rest, every 180. The quarterly Routine reads these tiers instead of a hardcoded company list, so coverage is changed by a commit, not a prompt paste.",
  "companies": [
   {
@@ -978,8 +978,8 @@
   {
    "slug": "intertek",
    "nextReport": "2026-10-01",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
+   "confirmed": true,
+   "lastRefreshed": "2026-09-24"
   },
   {
    "slug": "albemarle",

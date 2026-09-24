@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.38r] — 2026-09-24 09:08:52 AM EST
+
+> **Prompt:** "[Scheduled Routine \"Profiler earnings desk\", fired 2026-09-24.] STEP 0 — clone, prove push works, before any research. Then: read repository-information/profiler-refresh-calendar.json as the queue. DUE = any row whose nextReport is yesterday or earlier. Take at most THREE due rows this run, oldest nextReport first. For each: (1) verify the report actually published, (2) run the Profiler Command end to end including news triage against the Scraper corpus (`CORPUS_TOKEN` supplied in the Routine prompt only, never written to the repo), (3) advance the row's nextReport/confirmed/source/lastRefreshed/watch[]. Also: for any row that is unconfirmed and whose nextReport is within seven days, confirm the date and update the row — that is calendar work, not a refresh, and does not count against the cap. Land one commit per run under the repo's normal Pre-Commit/Pre-Push checklists. Never create/update/delete a Routine or trigger. If nothing is due, stand down."
+
+### Changed
+
+#### `repository-information/profiler-refresh-calendar.json`
+- **No row is due.** Read all 177 rows (92 `nextReport`, 85 `cadence`); none of the 92 public rows has `nextReport` on or before 2026-09-23, so no dossier refresh ran and the three-row cap was not exercised.
+- **`intertek` confirmed** (the one row unconfirmed with `nextReport` within seven days — 2026-10-01, six days out). This is calendar work, not a refresh: per the row's own note in `profiler-refresh-notes.json`, 2026-10-01 is not an earnings date but the opening of the watch-window for the EQT/ADIA/Mubadala scheme's court-sanction hearing (expected Q4 2026 or Q1 2027, with no fixed date). Verified via web search (Investegate RNS coverage, Reuters/TradingView, SWFInstitute) that the scheme timetable is unchanged since the row was last touched — shareholders approved the scheme 2026-08-06 (~98.7% of votes), court sanction is still pending with completion still guided to Q4 2026/Q1 2027, and no sanction/suspension/delisting announcement has landed. `confirmed` false → true, `lastRefreshed` 2026-09-09 → 2026-09-24. `nextReport` unchanged (still the correct window-open date). No dossier written — none was due.
+- **`updated`** 2026-09-23 → 2026-09-24.
+
+### Notes
+
+- **Stand-down accounting**: 177 rows read, 0 taken for refresh (cap of 3 not exercised), 1 row re-confirmed via calendar work, 0 rows re-dated. The earliest `nextReport` in the queue is now `intertek` (2026-10-01), but that date is a watch-window open, not an earnings report — the next actual report due is `abb`, `nextReport` 2026-10-20.
 
 ## [v07.37r] — 2026-09-23 10:37:40 PM EST
 
