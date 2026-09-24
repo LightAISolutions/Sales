@@ -4,7 +4,15 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
 
 ## Active Reminders
 
-*(none)*
+- `2026-09-24 06:19:25 PM EST` — **Run the neoclouds Profiler pass on or after Thursday 2026-10-01, in a fresh Opus 5.5 High session** — the paste-ready prompt is in the last response of the 2026-09-24 "Classroom review pass" session (v07.40r). Wait until Fluidstack's accounts, due Wednesday 30 September, have either been filed or visibly missed. Either outcome is the answer the pass needs.
+  - **Why it waits:** the `landscape-neoclouds-2026-09` module and `scenario-neoclouds-discovery` both keep reviewBy 2026-09-30 for this one gate. The filing decides how the Fluidstack figures and the scenario's gap 7 read.
+  - **If the prompt is lost:** it is not in the repo. In the new session, type `give me the neoclouds Profiler-pass prompt`; it can be rebuilt from `SESSION-CONTEXT.md` and the v07.40r CHANGELOG entry. The prompt's inputs include ClusterMAX 3.0 of 23 Sep, Nscale's S-1 of 18 Sep, and Fluidstack naming its end customer.
+- `2026-09-24 06:19:25 PM EST` — **Reframe the Dominion rehearsal (`scenario-utilities-objection`) between Friday 2026-10-02 and Tuesday 2026-10-06** — the room is framed ahead of Dominion's Virginia and North Carolina storage purchase solicitation, which is due to issue Thursday 1 October. Once it has issued, the pre-issue framing is out of date: *"You are not bidding anything today"*, *"issues on 1 October 2026"*, and the premise *"the solicitation opens"*.
+  - **Why this window:** starting on 2 Oct gives the solicitation a day to post, and the capacity, dates and eligibility can then be read from the document itself. Finishing by 6 Oct puts it before the Megmeet start on 7 Oct. The scenario's reviewBy is 2026-10-01, so it shows as due in the curriculum report until the reframe lands.
+  - **If the solicitation slips:** re-date the framing and move reviewBy to the new issue date rather than rewriting the room.
+  - **While in the scenario:** check the unverified "all-stock" description of Dominion's merger, which was flagged but left unchanged at v07.40r.
+  - **Run it in its own session**, not inside the neoclouds pass. The two draw on different rule files: Classroom authoring versus the Profiler command.
+  - **To resume:** type `reframe the Dominion rehearsal`.
 
 ## Completed Reminders
 
