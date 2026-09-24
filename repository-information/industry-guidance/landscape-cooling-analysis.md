@@ -735,4 +735,14 @@ Both standing reservation debts re-checked against all 482 and **both still open
 | Real serving path | **analyst → `ROLE_DENIED`**; token < 32 chars → `SESSION_EXPIRED` |
 
 
+## Revision — 24 September 2026 review
+
+A freshness review ahead of the 28 September gate. The gate itself (the CoolIT next-generation CDU launch) has not resolved, so `reviewBy` stays **2026-09-28**. Three taught claims had moved, and each was corrected against a primary source now cited directly in the claims ledger:
+
+- **The CDU ladder.** Schneider launched the Motivair WCDU on 23 September 2026, a single unit rated up to **3.5 MW at 1.5 L/min per kW** (2.5 MW at 2.0 L/min per kW), with an approach as low as 2 °C, shipping in select regions from October 2026 (Schneider Electric release, 23 September 2026). The adjacent member now sits above **two** of the four incumbents, not three. The review gate's test is restated: a CoolIT figure above 2 MW is now the floor, not the whole test.
+- **The refrigerant row.** Only industrial-process chillers of **100 lb charge or less in semiconductor equipment** moved to 1 January 2030. Other process chillers keep 1 January 2026 and 1 January 2028, and **data-centre and IT cooling carries a 700-GWP limit from 1 January 2027** (US EPA sector table, read 24 September 2026). The Trane dossier's `policyExposure[1]` reads the 2030 move too broadly and is flagged for a dossier refresh.
+- **The Texas freeze.** On 21 September 2026 the governor directed TCEQ to halt all permits sought by data centres until the ERCOT audit completes, tying approval to the TWDB water audit too. A compliance update is due 19 October, and there is still no end date.
+- Ecolab's first quarter with CoolIT inside it is now day-level: results on **27 October 2026**.
+- Delta Electronics v6 and LITEON v7 (both 2026-09-23) were re-read. Every claim this module takes from them holds, and the ledger tags were moved.
+
 Developed by: LightAISolutions

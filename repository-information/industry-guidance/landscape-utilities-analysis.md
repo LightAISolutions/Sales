@@ -305,4 +305,18 @@ All eight terms were checked individually against the 381 and all eight are abse
 
 **Two sub-layers considered and deliberately left out**, so a later session does not re-litigate them: `retail electricity provider` and `restructured market` (the challenger layer's own vocabulary — real, unscored, but the digest already reaches those companies through `seg-aidc` and the covered-company signal, and a seed for two companies is a poor trade), and `build-own-transfer` / `ownership slice` (Route 2's vocabulary — genuinely unscored, but it names a transaction shape rather than a filing class, and no ranking table or docket series stands behind it). Both are recorded here and left for a session that touches `Scraper.gs` for its own reason.
 
+## 12. Revision — 24 September 2026 review
+
+A freshness review ahead of the 1 October gate. The Alabama threshold statute is enacted and takes effect on 1 October 2026 as taught, so it no longer bounds the module. `reviewBy` moves to the next effective date in the record, **2027-01-01** (Dominion's new large-load class). That is the date the fence sort returns, and it keeps §10's rule that a hearing, an election or a deliverable is not a review date. Two taught claims had moved:
+
+- **The Texas asymmetry.** The August pause did exempt behind-the-meter generation. On 21 September 2026, though, the governor directed TCEQ to halt all permits sought by data centres until the ERCOT audit completes, with a compliance update due 19 October (Office of the Texas Governor). TCEQ is the body that issues the air permits on-site generation needs, so the route around the grid now waits on a permit. The difference between the routes is timing rather than exemption. These were corrected: route one, the sales line, seller's play 3, the NRG bet row and quiz item 3. A new indicator row was added.
+- **The merger calendar.** 17 November is **Virginia's** evidentiary hearing (SCC case PUR-2026-00112). 8 December and the final order expected 29 January 2027 are **South Carolina's**.
+- **Not changed, and flagged:**
+  - AEP's own 30 July release counts **five** approved large-load tariffs with three pending, while the dossier's "six of eight" rests on an August investor handout this review could not reach. It is unverified rather than contradicted, and left for the AEP dossier.
+  - The "all-stock" description of the Dominion combination was not re-verified.
+- **Scenarios re-judged**, and all nine beats hold:
+  - `scenario-utilities-objection`: merger calendar corrected; review date stays 1 October.
+  - `scenario-utilities-discovery`: pin only; review date 3 November.
+  - `scenario-utilities-discovery-aidc`: Texas premise corrected; review date 10 December.
+
 Developed by: LightAISolutions

@@ -3,11 +3,61 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.40r] — 2026-09-24 05:34:30 PM EST
+
+> **Prompt:** "Recheck four Classroom Industry Guidance landscape modules whose reviewBy dates fall this week. Read first: .claude/rules/industry-guidance.md (especially the Freshness discipline section and step 7's render recipe), .claude/rules/classroom-app.md, repository-information/CLASSROOM-SCHEMA.md and repository-information/C5-SALES-SIMULATIONS-DESIGN.md §3, §6 and §12. The modules, in guidanceDocs_() in googleAppsScripts/Classroom/Classroom.gs, below the // CONTENT END fence: 1. landscape-cooling-2026-09: reviewBy 2026-09-28 2. landscape-neoclouds-2026-09: reviewBy 2026-09-30 3. landscape-utilities-2026-09: reviewBy 2026-10-01 4. landscape-in-hall-power-2026-09: reviewBy 2026-10-01 For each module: (a) List its dated gates and load-bearing claims: regulatory dates, tariffs, market shares, deployment calendars, capacity numbers, named programmes. (b) Re-check every claim whose gate has passed or is close, using targeted web research against primary sources. Also check which covered dossiers (live-site-pages/profiler-data/<slug>.profile.json) have been revised since the module's `updated` date. (c) Update content that has gone stale. Keep the content-scope rule: the landscape-* modules are the approved exception that may name companies. Bump `updated` and set a new `reviewBy` from the module's next dated gate. A module that is still accurate gets a refreshed `reviewBy` only. Never change a module id. For landscape-in-hall-power specifically: the OCP Solid State Transformer (SST) Specification, Revision 0.3.0 (Google, Microsoft and NVIDIA; effective 22 June 2026; announced by OCP 11 August 2026) is summarised first-hand in repository-information/study-prep/megmeet/megmeet-sst-briefing-print.html, chapter 3.5 and Appendix E. Check the module against it: - two SKUs: 13.8 kV at 5 MW, and 34.5 kV at 5 or 10 MW - 800 V DC unipolar output - at least 98% efficiency from 50–100% load, power-train losses only - recommended overload of 120% for 5 s and 150% for 150 ms - an SST coupled with storage defined as an MV UPS - Modbus TCP/IP as the only communications requirement - BIL of at least 110 kV at 13.8 kV and 150–200 kV at 34.5 kV - the compliance list, with no UL 9540 The source PDF is not in the repo. Cite the specification itself, never the briefing, and state nothing about it beyond what chapter 3.5 records. Rehearsal scenarios: this is an attended developer session, so under design D6 you may re-judge scenario beats. Before editing each landscape, list the type:"scenario" lessons whose provenance names it as a guidance:landscape-* input. Read them off Classroom.gs using the check-classroom-content.py loader (parse_literals(src, 'clLesson')), not from memory. After editing, for every landscape whose `updated` moved: - re-judge each resting scenario's beats against the revised facts - revise the scenario where a beat no longer holds, or re-stamp its pin where it still holds - keep every scenario's `reviewBy` no later than its landscape's new `reviewBy` Two scenarios fall due this week regardless and need the same review: scenario-neoclouds-discovery (9/30) and the three utilities scenarios (10/1). The "6 · Rehearsal coverage" block of check-classroom-curriculum.py must show nothing left under "landscape moved under it" for these four modules. If build-classroom-segments.py --check then shows section changes caused by these edits, regenerate those segments in the same push per G3. Leave pin-only segments alone. Verify, all must pass: - node --check on a .js copy of Classroom.gs - node scripts/check-gas-inner-scripts.js - python3 scripts/check-classroom-content.py (0 errors, no new warnings) - python3 scripts/check-classroom-curriculum.py --strict - python3 scripts/check-classroom-pipeline.py --base origin/main (if it reports P3, meet the gateDigest refresh obligation in classroom-app.md) - python3 scripts/check-readme-tree.py - a Playwright render of each edited module at Classroom.html#guidance/<id> with zero page errors (pip install playwright; use the pre-installed Chromium; never run playwright install) Bookkeeping: bump Classroom.gs VERSION and live-site-pages/gs-versions/Classroomgs.version.txt. Add a generic Classroomgs.changelog.md entry that never names an analysed document. Add a CHANGELOG entry, bump the repo version and update the README timestamp. Use the normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main. Run git fetch --unshallow origin main first. The C2 pipeline Routine fires Wednesday 2026-09-30 11:00 UTC, so push well before it and check git ls-remote first. One push. Close with a per-module verdict table (current / updated / needs deeper refresh), the scenarios you re-judged and what changed in each, and anything left for me."
+
+All four landscape modules due this week were re-verified against primary sources. Four parallel research passes were run, and every changed fact was re-read first-hand before it went in. All four modules were updated. The four scenarios resting on the two modules that carry them were re-judged, and every beat's correct answer holds. Segment lessons pin no guidance input, so `build-classroom-segments.py --check` is unchanged at 13 pin-only and 0 with section changes, and nothing was regenerated.
+
+### Changed
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — guidance modules (below the fence)
+- **`landscape-cooling-2026-09`** — `updated` 2026-09-17 → 2026-09-24; `reviewBy` **stays 2026-09-28**, because the CoolIT launch gate is still ahead.
+  - The CDU ladder now leads with Schneider's 3.5 MW WCDU (23 Sep), so the adjacent member sits above two of four incumbents, not three.
+  - The refrigerant row is narrowed to semiconductor chillers of 100 lb or less for 2030, plus the data-centre 700-GWP limit from 1 Jan 2027 (EPA).
+  - The Texas freeze is widened to the 21 Sep TCEQ permit halt.
+  - The Ecolab date is now 27 Oct.
+  - Delta and LITEON tags are moved to v6 and v7.
+- **`landscape-neoclouds-2026-09`** — `updated` 2026-09-16 → 2026-09-24; `reviewBy` **stays 2026-09-30**, because Fluidstack's accounts are not filed. This module needs a deeper refresh.
+  - The rating basis is rewritten to ClusterMAX 3.0 (23 Sep): Nebius is Platinum beside CoreWeave, Crusoe drops to Bronze, and Fluidstack and Nscale are Unavailable.
+  - Nscale's S-1 (18 Sep) moves the revenue-disclosure count to 3 of 7, confirms the Anthropic contract at up to about USD 44.6 bn, and puts about 1 GW of 1.37 GW at owned sites.
+  - Fluidstack names its end customer.
+  - IREN is re-pinned at v5.
+- **`landscape-utilities-2026-09`** — `updated` 2026-09-14 → 2026-09-24; `reviewBy` 2026-10-01 → **2027-01-01**. The Alabama statute is confirmed, so the date moves to the next effective date.
+  - The Texas behind-the-meter asymmetry is corrected for the 21 Sep permit halt, with a new indicator row for the 19 Oct TCEQ update.
+  - Merger dates are attributed to Virginia (17 Nov) and South Carolina (8 Dec; 29 Jan order).
+- **`landscape-in-hall-power-2026-09`** — `updated` 2026-09-15 → 2026-09-24; `reviewBy` 2026-10-01 → **2026-10-31**, because Samsung SDI's start is month-level.
+  - Adds the OCP SST Specification Rev. 0.3.0 in one paragraph, one indicator row and seven ledger rows, each citing the specification.
+  - Flex's revenue claim is corrected from its Form 10.
+  - Delta is moved to v6.
+
+#### `googleAppsScripts/Classroom/Classroom.gs` — rehearsal scenarios (developer session, design D6)
+- **`scenario-neoclouds-discovery`** — changed: `the-room`, `beat-3`, `claims-ledger`, `what-the-record-does-not-say`. The end user is now named by the counterparty itself, the disclosure count is 3 of 7, and beat 3's day count is made date-stable. Pin: `guidance:landscape-neoclouds-2026-09` 2026-09-16 → 2026-09-24. `reviewBy` stays 2026-09-30.
+- **`scenario-utilities-objection`** — changed: `what-the-record-says`, `beat-3`, `claims-ledger`. The merger calendar is corrected. Pin: `guidance:landscape-utilities-2026-09` 2026-09-14 → 2026-09-24. `reviewBy` stays 2026-10-01.
+- **`scenario-utilities-discovery`** — changed: none. It is re-judged and re-stamped only. Pin 2026-09-14 → 2026-09-24. `reviewBy` 2026-10-01 → 2026-11-03.
+- **`scenario-utilities-discovery-aidc`** — changed: `the-position`, `beat-2`, `claims-ledger`. The Texas premise is corrected, and beat 2's answer holds. Pin 2026-09-14 → 2026-09-24. `reviewBy` 2026-10-01 → 2026-12-10.
+
+#### `repository-information/industry-guidance/landscape-{cooling,neoclouds,utilities,in-hall-power}-analysis.md`
+- A revision section on each records what moved, the source, and what was flagged but not changed.
+
+#### Versions
+- Classroom GAS v01.89g → v01.90g (`Classroom.gs` `VERSION` and `Classroomgs.version.txt`), with generic `Classroomgs.changelog.md` lines.
+
+### Notes
+- **Checkers:**
+  - `check-classroom-content.py`: 71 lessons / 8 tracks / 220 gate cases — 0 errors, 0 warnings.
+  - `check-classroom-curriculum.py --strict`: no structural findings; 0 scenarios whose landscape moved under them; due-for-review 10 → 6.
+  - `node --check`: clean.
+  - `check-gas-inner-scripts.js`: all blocks parse.
+  - `check-readme-tree.py`: 0 findings.
+  - Playwright render of all four modules: 0 page errors.
+- **`check-classroom-pipeline.py --base origin/main`** reports P1, P2, P10 and P13 only. All are expected on a developer commit: the four analysis files are outside the committer's write set, the modules sit below the fence, the caps bind the unattended committer, and D6 reserves scenario revisions for exactly this session. **No P3, so `gateDigest` is untouched.**
 
 ## [v07.39r] — 2026-09-24 05:05:10 PM EST
 

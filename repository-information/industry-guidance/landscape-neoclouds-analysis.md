@@ -688,4 +688,29 @@ Run before the push commit, all from a **pristine HEAD baseline captured before 
 closing `}` on its own line, **never** the literal's `};`. Verified by counting unbalanced braces
 immediately before the new definition and getting **0**.
 
+## 13. Revision — 24 September 2026 review
+
+A freshness review ahead of the 30 September gate. The gate itself, Fluidstack's statutory accounts at Companies House, has not resolved; the filing history still shows 2024 accounts only. So `reviewBy` stays **2026-09-30**. Two primary documents published after authoring overturned taught claims, and both were read first-hand:
+
+- **ClusterMAX 3.0** (SemiAnalysis, 23 September 2026) now covers all seven members:
+  - Platinum: CoreWeave and **Nebius**.
+  - Silver: Lambda (all three cycles).
+  - Bronze: **Crusoe**, down from Gold.
+  - Not Recommended – Underperforming: IREN, re-tested.
+  - Not Recommended – Unavailable: **Fluidstack**, which claims no spare capacity or declines testing, and **Nscale**, which the rater lists among providers that market managed clusters while offering bare metal.
+  - The incumbent is still the only member at Platinum in all three cycles, but it no longer holds the tier alone. **The one-incumbent reading weakens, and the registry's role labels do not yet reflect a challenger at the top tier.** That is a registry and dossier question for a Profiler session.
+- **Nscale's S-1** (filed 18 September 2026, NYSE: NSCL) is the second primary document:
+  - Revenue: 2025 USD 33.0 M; H1 2026 USD 140.6 M; H1 2026 net loss USD 1,020.1 M.
+  - The Anthropic agreements were signed 25 August 2026 at the Monarch Compute Campus, for up to about USD 44.6 bn. No MW or term is stated.
+  - About **1 GW of 1.37 GW at seven owned sites**, which reverses the v1 dossier's "majority on other people's campuses".
+  - Private members publishing no revenue fall from four to three, and the registration-statement indicator is resolved.
+- **Fluidstack's own press page** names Anthropic for its New York and Texas campuses.
+- **IREN v5** (2026-09-21) was re-read. The consensus-miss run now covers all of FY2026, with the full-year print missing on both lines, and Sweetwater's first 300 MW is targeted for Q4 2027.
+- **Unchanged:** the four-route structure and the four-of-seven purchasing-authority count.
+- **Left for a dossier refresh:** figures that are dated but not contradicted:
+  - CoreWeave's backlog and contracted power (the Q2 2026 print reports about USD 104 bn and about 3.7 GW).
+  - Crusoe's contracted figure (its Series F release cites 6 GW+ gross).
+  - Fluidstack's equity (press reports a Series B that the company has not announced).
+  - The segment registry's roles.
+
 Developed by: LightAISolutions

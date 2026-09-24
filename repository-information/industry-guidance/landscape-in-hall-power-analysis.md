@@ -350,4 +350,29 @@ That gap is not incidental. **It is buying criteria 2, 3 and 4** — efficiency 
 
 This touches `Scraper.gs`, so the Scraper GAS version bumps with it ([PC-GS-VERSION] #1) and **two deploy lines are expected in the merge workflow rather than one**.
 
+## Revision — 24 September 2026 review
+
+A freshness review ahead of the 1 October gate, and the first time this module cites a primary document.
+
+- **The buyers' SST specification.** *OCP, Solid State Transformer (SST) Specification — Medium Voltage to 800 VDC Power Conversion Platform*, Revision 0.3.0 (Google, Microsoft, NVIDIA; effective 22 June 2026; announced by OCP 11 August 2026). It was checked against the first-hand summary in `study-prep/megmeet/megmeet-sst-briefing-print.html` chapter 3.5, and nothing beyond that chapter is stated. The module now carries:
+  - the definition of an SST coupled with storage as a medium-voltage UPS;
+  - two SKUs: 13.8 kV at 5 MW, and 34.5 kV at 5 or 10 MW;
+  - a unipolar 800 V DC output;
+  - at least 98% efficiency from 50–100% load, on power-train losses only;
+  - a recommended overload of 120% for 5 s and 150% for 150 ms;
+  - Modbus TCP/IP as the only communications requirement;
+  - BIL of at least 110 kV at 13.8 kV and 150–200 kV at 34.5 kV;
+  - ride-through written as SST-plus-storage;
+  - the compliance list, with no UL 9540;
+  - the sections the draft leaves open.
+
+  This is one paragraph under the deletion routes, one undated indicator row and seven ledger rows, each citing the specification itself. The module's own reading, stated as analysis, is that route two's storage-as-MV-UPS category is now a buyer's definition.
+- **Flex.** The spin-off's Form 10 (15 September 2026) reports a combined Power segment of about USD 2.1 bn for FY2026, without breaking out critical power. "No revenue line has ever been published" is corrected to "none on their own". The spin-off name (Axiom Solutions International, AXM) and the EPC Power outside date (31 December 2026 plus two automatic three-month extensions) are added.
+- **The gate.** Samsung SDI restated on its Q2 call that StarPlus Indiana cell production begins in October. That is a month-level start, testable only at the month's end, so `reviewBy` moves from 2026-10-01 to **2026-10-31**.
+- **Delta Electronics.** Re-read at v6 (2026-09-23); the catalogue and the 6.5 GW UPS claims hold.
+- **Flagged, not changed:**
+  - Narada's H1 2026 interim (reported revenue −57%) is not yet in the v4 dossier, so "the backup segment grew through the collapse" rests on FY2025.
+  - Vertiv's backlog and book-to-bill come from different quarters.
+  - Heron and RWE signed a grid-battery pilot on 21 September, which is not a data-centre campus.
+
 Developed by: LightAISolutions
