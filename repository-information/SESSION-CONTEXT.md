@@ -6,6 +6,74 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-24, 07:42 PM → 07:53 PM EST (attended; two turns)
+**Repo version:** v07.42r, one push on `claude/optimistic-mccarthy-plgmod` (merged), plus this session-context write
+**Branch:** `claude/optimistic-mccarthy-plgmod`
+
+### What was done
+
+- **The first `events sync` to reach the registry (v07.42r).** The developer pasted the Proposed tab's export: 16 approved proposals and 10 polls.
+  - **7 applied:**
+    - `datacloud-usa-2027`: start moved to 30 Aug 2027; venue changed to Austin Marriott Downtown with `city` kept as "Austin"; the stale `venueLatLng` removed.
+    - Three website updates: ESIG Large Loads, iMasons at Yotta, Data Center World.
+    - Two new ESIG webinars (1 Oct, 15 Oct), both `tentative`. Their remaining fields came from the evidence pages, read 2026-09-24.
+  - **9 skipped, at the developer's choice**, because they were poller misreads:
+    - AI Infra Summit ×3: the organiser's JSON-LD still carries the finished 2026 edition.
+    - MWC: street address in `city`.
+    - Yotta: the event name read as the venue.
+    - Four duplicates of existing rows under new slugs: Battery Show NA, ESIG Fall Workshop, iMasons Cascadia, iMasons Texas.
+  - `lastProbe` updated on 10 roster rows. `uptime-network-americas-fall-2026` flipped to `past` with `--fix-past`.
+  - `events.ics` rebuilt. `check-events-registry.py` exit 0: 102 events, 69 confirmed.
+  - The CHANGELOG section lists every applied and skipped `pr-` id.
+
+### Where we left off
+
+- Everything is committed and merged to main.
+- **The developer's panel follow-up, not a session task:**
+  - Enter `v07.42r` in **Mark applied** for the 7 applied ids.
+  - **Reject** the 9 skipped ids.
+- **`mentions[]` is stale on main.** `extract-corpus-events.py --check` fails, and it failed before this sync too, after recent dossier edits (v07.41r's Trane and Narada revisions, among others). The sync never writes `mentions[]`, so it was left alone.
+- **Active reminders (the developer's):**
+  - Cooling recheck from 28 Sep.
+  - Neoclouds pass from 1 Oct.
+  - Dominion reframe 2–6 Oct.
+
+### Key decisions made
+
+- **An approved proposal is not applied blindly.** When a row would write data that is visibly wrong and the checker cannot see it (street address in `city`, event name as venue, a duplicate under a new slug, a year-crossed edition), the session names the rows and asks. The developer chose "apply the good ones, skip the rest, list the ids to reject".
+- **A partly-right `changed-venue` keeps the good half.** Datacloud's venue name was taken and the address-in-city was not. `venueLatLng` is dropped when the venue changes, rather than left pinned to the old venue.
+- **A `new-event` row's `series` is its name**, because the name carries no year (the rule's "name without its year").
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Events page unchanged:** Events.html v01.11w; only the data changed.
+- **Poller weaknesses seen:**
+  - It writes a JSON-LD `address` string into `city`.
+  - It takes `location.name` as the venue even when that is the event name.
+  - It proposes `new-event` rows for events the registry already holds under a different slug, with no name/date match.
+  - It diffs an organiser page's stale previous edition against the current-edition row.
+- **The checker's duplicate test is slug-only.**
+- **Dates:**
+  - CoolIT launch 9/28
+  - Fluidstack accounts and C2 Routine 9/30
+  - Dominion solicitation 10/1
+  - ESIG DER webinar 10/1
+  - Megmeet start 10/7
+  - Battery Show NA 10/12–15
+  - ESIG large-loads webinar 10/15
+  - RE+ 11/16–19
+
+### Recommendation for next session
+
+- Run `python3 scripts/extract-corpus-events.py` to refresh the stale `mentions[]` in `events.json`, then `python3 scripts/check-events-registry.py` (exit 0) and `--check`. Commit it as a data-only push: it feeds the score's `corpusSalience` term, and it has been stale since the recent dossier revisions.
+
+**To continue:** type `refresh the events mentions index`
+
+## Previous Sessions
+
+### Session — 2026-09-24 07:08 PM EST (Fact verification close-out, v07.41r)
+
 **Date:** 2026-09-24, 06:18 PM → 07:08 PM EST (attended; four turns)
 **Repo version:** v07.41r — three pushes on `claude/session-reminders-classroom-review-0g2lqj` (two reminder commits, then v07.41r; all merged), plus this session-context write
 **Branch:** `claude/session-reminders-classroom-review-0g2lqj`
@@ -83,81 +151,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
 
 **To continue:** type `recheck the cooling module after CoolIT`
-
-## Previous Sessions
-
-### Session — 2026-09-24 05:50 PM EST (Classroom landscape review, v07.40r)
-
-**Date:** 2026-09-24, 05:13 PM → 05:50 PM EST (attended; two turns)
-**Repo version:** v07.40r — one push on `claude/classroom-landscape-modules-review-kf1rsn` (v07.40r, merged), plus this session-context write
-**Branch:** `claude/classroom-landscape-modules-review-kf1rsn`
-
-### What was done
-
-- **v07.40r — the four Classroom landscape modules due this week were rechecked and updated**, and the four rehearsal scenarios resting on two of them were re-judged.
-  - Four parallel research agents rechecked the dated claims. Every changed fact was re-read first-hand before it went in.
-  - **cooling:** reviewBy stays 9/28, because the CoolIT launch is still ahead.
-    - Schneider's 3.5 MW WCDU now tops the CDU ladder.
-    - The EPA 2030 relief is narrowed to small semiconductor chillers, plus the data-centre 700-GWP limit from 1 Jan 2027.
-    - The Texas freeze now includes the 21 Sep TCEQ permit halt.
-  - **neoclouds:** reviewBy stays 9/30, because Fluidstack's accounts are not filed. This module needs a deeper refresh.
-    - ClusterMAX 3.0 (23 Sep) puts Nebius at Platinum beside CoreWeave, drops Crusoe to Bronze, and marks Fluidstack and Nscale Unavailable.
-    - Nscale's S-1 (18 Sep) confirms revenue, the Anthropic contract at up to about $44.6bn, and about 1 GW of 1.37 GW at owned sites.
-    - Fluidstack names its own end customer.
-  - **utilities:** reviewBy 10/1 → 2027-01-01.
-    - Texas behind-the-meter asymmetry corrected for the 21 Sep permit halt.
-    - Merger dates split between Virginia (17 Nov) and South Carolina (8 Dec; 29 Jan order).
-  - **in-hall power:** reviewBy 10/1 → 10/31.
-    - The OCP SST Spec Rev 0.3.0 is added, citing the spec only, as far as briefing chapter 3.5 records.
-    - Flex Form 10 revenue line corrected.
-  - **Scenarios:** every beat holds in all four.
-    - Fluidstack: the room, beat 3, ledger and gap 7 revised.
-    - Dominion: the merger calendar revised.
-    - AEP: the Texas premise revised.
-    - Southern: pin re-stamped only.
-  - Checks: all passed. The pipeline checker showed only P1/P2/P10/P13 developer noise, with no P3.
-- **Turn 2:** the developer was handed a paste-ready prompt for the neoclouds Profiler pass, plus the remaining heads-up list below.
-
-### Where we left off
-
-- v07.40r is merged. The neoclouds Profiler-pass prompt is in this session's last response, for a new Opus 5.5 session on or after 1 Oct, once Fluidstack's 30 Sep accounts deadline has passed.
-- **Gates this week:**
-  - CoolIT CDU launch 9/28 (cooling)
-  - Fluidstack accounts 9/30 (neoclouds and its scenario)
-  - Dominion purchase solicitation 10/1 (scenario-utilities-objection)
-- **Open heads-up items (the developer's):**
-  - The Dominion room is framed two weeks before the 1 Oct solicitation and needs reframing once it issues.
-  - Unverified: AEP's "six of eight" tariff states (its 30 Jul release says five), and Dominion's "all-stock" deal description.
-  - Narada's H1 2026 collapse is not yet in its v4 dossier.
-  - The Trane dossier's policyExposure[1] reads the EPA 2030 relief too broadly.
-
-### Key decisions made
-
-- **A review date moves only when its gate is certain or already passed.** A gate whose outcome is still uncertain stays the review date: CoolIT 9/28, Fluidstack 9/30, Dominion 10/1. A certain gate moves it (the Alabama statute's effective date), and so does a month-level gate that can only be tested at month-end (Samsung SDI "October" → 10/31).
-- **Scenario pins were re-stamped where beats hold**, per the developer's brief. A scenario pin records a re-judgment. This departs from the G3 choice made at (rr70), which governs lesson pins.
-- **The utilities review date skips hearings, elections and deliverables**, following the module's own rule, and lands on the next effective date (1 Jan 2027).
-- **A fact that could not be verified was left alone and flagged** rather than changed (AEP five-versus-six, "all-stock", Narada H1).
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Classroom GAS v01.90g.** Curriculum due-for-review is 6. There are 0 scenarios on moved landscapes and 13 pin-only segments, which are intended under G3.
-- **Render recipe that worked:**
-  - Serve a copy of `Classroom.html` with `_e=''` and `AUTO_REFRESH=false`.
-  - After load, seed the four sessionStorage keys (`SESSION_KEY`, `EMAIL_KEY`, `ROLE_KEY`=contributor, `PERMISSIONS_KEY`='[]') and override `window._gasPost` to answer `gop=index|doc` from the parsed `guidanceDoc*_` literals.
-  - Then run `clHeaderShow(); clAppMount();`.
-  - Copy `profiler-concepts.json` to the served `profiler-data/`.
-- **Editing trick:** `json.dumps(obj, indent=1, ensure_ascii=False)` reproduces the `Classroom.gs` literals byte for byte, except the indentation of the closing brace. Keep the original last line.
-- **`check-classroom-pipeline.py --selftest` takes minutes.** Run it in the background.
-- **Dates:**
-  - The C2 Routine fires 9/30 11:00 UTC.
-  - The Profiler quarterly check and drift check fire 10/1.
-  - The Guidance quarterly review fires 10/15.
-  - The developer starts at Megmeet 10/7.
-  - RE+ runs 11/16–19.
-
-### Recommendation for next session
-
-- Run the neoclouds Profiler pass (the prompt from this session's last response) in a fresh Opus 5.5 High session on or after 1 October 2026. Fluidstack's 30 September accounts filing is then settled one way or the other.
-
-**To continue:** paste the neoclouds Profiler-pass prompt into a new session (or type `give me the neoclouds Profiler-pass prompt` to have it re-pasted)
