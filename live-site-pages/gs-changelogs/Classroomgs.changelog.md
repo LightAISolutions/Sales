@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.89g] — 2026-09-23 10:37:40 PM EST — v07.37r
+
+### Changed
+
+- Curriculum updated
+- Five market-structure lessons now reflect the latest company coverage in their rosters, connections and recent developments
 
 ## [v01.88g] — 2026-09-23 06:59:05 PM EST — v07.33r
 
@@ -403,93 +410,6 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - New lesson added to a track
 
 ### Changed
-- Curriculum updated
-
-## [v01.48g] — 2026-09-15 11:26:20 PM EST — v06.03r
-
-### Added
-- Guidance library updated
-
-### Changed
-- Curriculum updated
-
-## [v01.47g] — 2026-09-15 09:43:03 PM EST — v05.99r
-
-### Added
-- New lesson added to a track
-
-### Changed
-- Curriculum updated
-
-## [v01.46g] — 2026-09-15 09:08:13 PM EST — v05.97r
-
-### Added
-- Guidance library updated — one new module in the Value Chain lane
-
-### Changed
-- Curriculum updated
-
-## [v01.45g] — 2026-09-15 08:08:36 PM EST — v05.95r
-
-### Added
-
-- A new lesson in the BESS Foundations track, on how long a battery is worth building for and what takes over past that point — what each extra hour of storage actually costs, how newer cell chemistries change the answer, and where other kinds of generating equipment become the better fit
-
-## [v01.44g] — 2026-09-15 06:47:49 PM EST — v05.93r
-
-### Added
-
-- A new module in the Value Chain library, covering the equipment that keeps a data hall running when the grid drops — who leads and on what basis, who is contesting the field and on which route, and what each is betting. Available to the tiers that hold guidance access
-
-### Changed
-
-- One curriculum page's reading list and its summary of what buyers decide on have been refreshed against the current company records
-
-## [v01.43g] — 2026-09-15 05:08:34 AM EST — v05.91r
-
-### Added
-
-- A new lesson in the Market Access & Bankability track, on the contract forms a power or compute asset is financed on and which party each one hands the risk to
-
-### Changed
-
-- One track's reading list now includes the new lesson in its teaching order
-
-## [v01.42g] — 2026-09-15 04:21:39 AM EST — v05.88r
-
-### Added
-
-- A new module in the Value Chain library, covering the companies that build and lease AI data-centre campuses — who leads and on what basis, who is contesting the field and how, and what each is betting. Available to the tiers that hold guidance access
-
-### Changed
-
-- One curriculum page's reading list now points to that module, and its onward reading names two lessons that have since been written
-
-## [v01.41g] — 2026-09-15 03:32:29 AM EST — v05.85r
-
-### Added
-
-- A new lesson in the Market Access & Bankability track, on how a project reaches the point where equipment is chosen
-
-### Changed
-
-- One track's reading list now includes the new lesson in its teaching order
-
-## [v01.40g] — 2026-09-15 02:37:11 AM EST — v05.83r
-
-### Added
-
-- A new module in the guidance library, covering another part of the market
-
-### Changed
-
-- One reading list now points to the new module instead of saying none exists yet
-
-## [v01.39g] — 2026-09-15 01:36:51 AM EST — v05.80r
-
-### Added
-
-- New lesson added to a track
 - Curriculum updated
 
 Developed by: LightAISolutions

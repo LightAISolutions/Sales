@@ -8,6 +8,93 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.48g] — 2026-09-15 11:26:20 PM EST — v06.03r — [5b9f283](https://github.com/LightAISolutions/Sales/commit/5b9f283d0cca0f7c559e0f7db36337bb8b28a765)
+
+### Added
+- Guidance library updated
+
+### Changed
+- Curriculum updated
+
+## [v01.47g] — 2026-09-15 09:43:03 PM EST — v05.99r — [1c44b4e](https://github.com/LightAISolutions/Sales/commit/1c44b4eacf7a520f55a04615d585d4f106fd633e)
+
+### Added
+- New lesson added to a track
+
+### Changed
+- Curriculum updated
+
+## [v01.46g] — 2026-09-15 09:08:13 PM EST — v05.97r — [38e445d](https://github.com/LightAISolutions/Sales/commit/38e445db15fe89b888083f4420318037bc6c9639)
+
+### Added
+- Guidance library updated — one new module in the Value Chain lane
+
+### Changed
+- Curriculum updated
+
+## [v01.45g] — 2026-09-15 08:08:36 PM EST — v05.95r — [b8c64b2](https://github.com/LightAISolutions/Sales/commit/b8c64b2b7796b3a1a932c4a80933a68b7f73e6ae)
+
+### Added
+
+- A new lesson in the BESS Foundations track, on how long a battery is worth building for and what takes over past that point — what each extra hour of storage actually costs, how newer cell chemistries change the answer, and where other kinds of generating equipment become the better fit
+
+## [v01.44g] — 2026-09-15 06:47:49 PM EST — v05.93r — [7799e63](https://github.com/LightAISolutions/Sales/commit/7799e638228b068fd716f801ff72f58b9dc9414c)
+
+### Added
+
+- A new module in the Value Chain library, covering the equipment that keeps a data hall running when the grid drops — who leads and on what basis, who is contesting the field and on which route, and what each is betting. Available to the tiers that hold guidance access
+
+### Changed
+
+- One curriculum page's reading list and its summary of what buyers decide on have been refreshed against the current company records
+
+## [v01.43g] — 2026-09-15 05:08:34 AM EST — v05.91r — [1195cea](https://github.com/LightAISolutions/Sales/commit/1195ceab5f3dbd676427116116a8e2a178838744)
+
+### Added
+
+- A new lesson in the Market Access & Bankability track, on the contract forms a power or compute asset is financed on and which party each one hands the risk to
+
+### Changed
+
+- One track's reading list now includes the new lesson in its teaching order
+
+## [v01.42g] — 2026-09-15 04:21:39 AM EST — v05.88r — [e09eca4](https://github.com/LightAISolutions/Sales/commit/e09eca4af1f63abd8f02074954a10bac776ce34c)
+
+### Added
+
+- A new module in the Value Chain library, covering the companies that build and lease AI data-centre campuses — who leads and on what basis, who is contesting the field and how, and what each is betting. Available to the tiers that hold guidance access
+
+### Changed
+
+- One curriculum page's reading list now points to that module, and its onward reading names two lessons that have since been written
+
+## [v01.41g] — 2026-09-15 03:32:29 AM EST — v05.85r — [a7b867a](https://github.com/LightAISolutions/Sales/commit/a7b867a1f40056154cd2d3a9df7f6b3d6418b4c2)
+
+### Added
+
+- A new lesson in the Market Access & Bankability track, on how a project reaches the point where equipment is chosen
+
+### Changed
+
+- One track's reading list now includes the new lesson in its teaching order
+
+## [v01.40g] — 2026-09-15 02:37:11 AM EST — v05.83r — [a2c7933](https://github.com/LightAISolutions/Sales/commit/a2c7933889e08f1e078a15400a5a82b9a59c8aec)
+
+### Added
+
+- A new module in the guidance library, covering another part of the market
+
+### Changed
+
+- One reading list now points to the new module instead of saying none exists yet
+
+## [v01.39g] — 2026-09-15 01:36:51 AM EST — v05.80r — [3178a8e](https://github.com/LightAISolutions/Sales/commit/3178a8e1079726faaa97e9806703e14b16a4a7a1)
+
+### Added
+
+- New lesson added to a track
+- Curriculum updated
+
 ## [v01.38g] — 2026-09-14 11:10:40 PM EST — v05.78r — [e0035f8](https://github.com/LightAISolutions/Sales/commit/e0035f8069bfed0caca2f5c2e5d4e363fc890e41)
 
 ### Added

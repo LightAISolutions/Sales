@@ -1,4 +1,4 @@
-var VERSION = "v01.88g";
+var VERSION = "v01.89g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4037,7 +4037,7 @@ function clLessonSegmentCellsAndChemistry_() {
  "title": "Cells and chemistry",
  "short": "Makers of the storage cell itself — the lithium-iron-phosphate prismatic cell that every containerized system is built from, the high-power NCA/LMO and…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-23",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -4134,7 +4134,7 @@ function clLessonSegmentCellsAndChemistry_() {
    {
     "kind": "public",
     "ref": "profile:novonix",
-    "date": "2026-09-09",
+    "date": "2026-09-22",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -4176,7 +4176,7 @@ function clLessonSegmentCellsAndChemistry_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-23",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -5685,74 +5685,74 @@ function clLessonSegmentCellsAndChemistry_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-18 — Chattanooga Times Free Press and Chattanoogan.com report an anonymous-source claim that NOVONIX is shutting down; CEO Mike O'Kronley calls it \"unequivocally false\" after the company confirms it dismissed a contractor at the former Alstom site with 24 hours to remove equipment",
+     "sub": "NOVONIX · market"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-16 — Non-binding memorandum of understanding with ACP Technologies, LLC to develop a domestic pitch-coated synthetic graphite anode active material for military-drone and fast-charging applications",
+     "sub": "NOVONIX · customer"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-10 — Notice of Amortisation Event under the Yorkville funding agreement: the ASX VWAP falls below the A$0.12 floor price, obligating a US$7.0m mandatory redemption — 20% of the US$35.0m outstanding — due no later than 21 September 2026",
+     "sub": "NOVONIX · financial"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-10 — Lead customer (Panasonic) testing feedback on the June C-sample: the material meets 12 of 14 specification parameters — one gap within roughly 1% of requirement, the other failed the customer's pass/fail criterion — against NOVONIX's own internal testing, which had indicated all specifications were met",
+     "sub": "NOVONIX · customer"
+    },
+    {
+     "x": 5,
+     "lane": "record",
      "label": "2026-09-09 — Hefei Research Institute project signed",
      "sub": "CALB · corporate"
     },
     {
-     "x": 2,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-08 — Full-scale UL 9540A:2026 fire test on the MAX-20HC-5000 container certified by TUV Rheinland",
      "sub": "Great Power · product-launch"
     },
     {
-     "x": 3,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-08 — BYD confirmed a specified foreign entity for OBBBA §45X/§48E purposes, on two independent statutory prongs",
      "sub": "BYD · regulatory"
     },
     {
-     "x": 4,
+     "x": 8,
      "lane": "record",
      "label": "2026-09-07 — Partial cancellation of granted 2025 share options completed",
      "sub": "Great Power · corporate"
     },
     {
-     "x": 5,
+     "x": 9,
      "lane": "record",
      "label": "2026-09-04 — S&P Dow Jones Indices announces the September 2026 quarterly rebalance of the S&P/ASX indices: NOVONIX (NVX) is listed for removal from the S&P/ASX 300, effective prior to the open of trading on Monday 21 September 2026",
      "sub": "NOVONIX · market"
     },
     {
-     "x": 6,
+     "x": 10,
      "lane": "record",
      "label": "2026-09-04 — Awarded the 10th Changjiang Quality Award (长江质量奖), Hubei's top quality prize, presented by the vice-governor",
      "sub": "Cornex · other"
     },
     {
-     "x": 7,
+     "x": 11,
      "lane": "record",
      "label": "2026-09-04 — Xiaomi Auto publicly names CALB an official power-battery strategic partner",
      "sub": "CALB · customer"
     },
     {
-     "x": 8,
+     "x": 12,
      "lane": "record",
      "label": "2026-09-02 — Board appoints Ragnar Udd to succeed J. Kent Masters, Jr. as President and Chief Executive Officer effective 1 February 2027 or a mutually agreed earlier date; Masters becomes Executive Chair",
      "sub": "Albemarle · leadership"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-09-01 — CSRC accepts a filing for a second H-share full circulation — 676,172,244 domestic unlisted shares, about 48.21% of that class, to convert to H shares",
-     "sub": "REPT BATTERO · corporate"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-31 — Half-year report to 30 June 2026 lodged with the ASX: net loss US$24.6m, operating cash outflow US$23.1m, cash US$59.5m, net current liabilities US$2.5m, and a PwC review report flagging a material uncertainty over going concern",
-     "sub": "NOVONIX · financial"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-31 — Sixth board of directors elected; Liu Ming replaces Song Xiaoning as independent director and Audit Committee chair",
-     "sub": "Great Power · leadership"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-30 — Xiangyang 70 GWh lithium-battery park starts production ten months after groundbreaking, 'two months ahead of plan'; 100Ah, 588Ah and 648Ah storage cells and fast-charge EV cells; about 400,000 cells a day at full run",
-     "sub": "Cornex · capacity"
     }
    ]
   },
@@ -6227,6 +6227,13 @@ function clLessonSegmentCellsAndChemistry_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-23",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-23; profile:novonix 2026-09-09→2026-09-22",
+   "changed": [
+    "what-moved"
+   ]
   }
  ]
 };
@@ -6240,7 +6247,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
  "title": "Storage integrators and containers",
  "short": "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with…",
  "group": "The Value Chain",
- "updated": "2026-09-21",
+ "updated": "2026-09-23",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -6439,7 +6446,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-21",
+    "date": "2026-09-23",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -8453,7 +8460,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
      "—"
     ]
    ],
-   "note": "Curated edges among members: 140 · to the neighbouring segments: 102 (the first 40 shown, by company) · derived-only mentions (no curated typing): 19 among members, 37 to the neighbours."
+   "note": "Curated edges among members: 140 · to the neighbouring segments: 103 (the first 40 shown, by company) · derived-only mentions (no curated typing): 19 among members, 37 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -9019,6 +9026,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     "the-fence",
     "what-moved"
    ]
+  },
+  {
+   "date": "2026-09-23",
+   "note": "regenerated: graph:profiler-graph 2026-09-21→2026-09-23",
+   "changed": [
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -9032,8 +9046,8 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
  "title": "Power conversion and rack-power silicon",
  "short": "The conversion layer at every voltage: utility-scale PCS and inverters, the solid-state transformer and MV-to-800 VDC sidecar, the power shelf, PSU and BBU…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-23",
+ "reviewBy": "2027-03-23",
  "provenance": {
   "inputs": [
    {
@@ -9051,7 +9065,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    {
     "kind": "public",
     "ref": "profile:delta-electronics",
-    "date": "2026-09-04",
+    "date": "2026-09-23",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -9105,7 +9119,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    {
     "kind": "public",
     "ref": "profile:liteon",
-    "date": "2026-09-05",
+    "date": "2026-09-23",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -9117,7 +9131,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    {
     "kind": "public",
     "ref": "profile:megmeet",
-    "date": "2026-09-08",
+    "date": "2026-09-23",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -9177,7 +9191,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-23",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -9205,7 +9219,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    "sub": "contesting that set; 8 adjacent"
   },
   {
-   "k": "119",
+   "k": "121",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -9390,7 +9404,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "**Megmeet**",
      "megmeet",
      "challenger",
-     "ecosystemRole: a power-conversion supplier converting an industrial base into AI data-center power; the only mainland vendor NVIDIA named for GB200 NVL72 power"
+     "ecosystemRole: a qualified challenger in NVIDIA-class rack power, unranked on the public record — one of NVIDIA's recommended data-centre power suppliers, late on GB200 and in batch delivery on GB300, which Soochow expects to become the third NVL72 PSU source after Delta and LITEON"
     ],
     [
      "**Novos Power**",
@@ -10288,6 +10302,14 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     ],
     [
      "**Megmeet**",
+     "**Infineon**",
+     "supplier",
+     "active",
+     "—",
+     "CoolMOS 8, OptiMOS 6, CoolSiC"
+    ],
+    [
+     "**Megmeet**",
      "**LITEON**",
      "competitor",
      "active",
@@ -10301,6 +10323,14 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "active",
      "—",
      "800V HVDC Sidecar"
+    ],
+    [
+     "**Megmeet**",
+     "**Zhonhen Electric**",
+     "competitor",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**NVIDIA**",
@@ -10935,7 +10965,7 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
      "—"
     ]
    ],
-   "note": "Curated edges among members: 119 · to the neighbouring segments: 115 (the first 40 shown, by company) · derived-only mentions (no curated typing): 48 among members, 24 to the neighbours."
+   "note": "Curated edges among members: 121 · to the neighbouring segments: 116 (the first 40 shown, by company) · derived-only mentions (no curated typing): 47 among members, 24 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -10950,74 +10980,74 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-22 — Agreed to buy the 46.30% minority of its welding subsidiary for RMB 663.64M cash",
+     "sub": "Megmeet · ma"
+    },
+    {
+     "x": 2,
+     "lane": "record",
      "label": "2026-09-16 — Daniel Doimo (MGE UPS Systems co-founder, ex-Schneider Electric EVP Power, partner at Series A investor Helios) joins the Executive Advisory Board as the company 'accelerates pilot deployments … with hyperscale, neocloud and colocation customers'",
      "sub": "DG Matrix · leadership"
     },
     {
-     "x": 2,
+     "x": 3,
      "lane": "record",
      "label": "2026-09-10 — USD 60M credit facility from J.P. Morgan and TriplePoint Capital; ex-Tesla CFO Zach Kirkhorn joins the board",
      "sub": "Heron Power · financial"
     },
     {
-     "x": 3,
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-09 — 54 V→12 V quarter-brick DC-DC modules (1.6 kW continuous / 2.4 kW peak, and 2 kW), up to 98.3% peak efficiency",
+     "sub": "Megmeet · product-launch"
+    },
+    {
+     "x": 5,
      "lane": "record",
      "label": "2026-09-08 — Hiring for a Head of Service to stand up field service, commissioning, spares and warranty from scratch, and a Director of Product Compliance naming UL 2877 and UL 1741 as the governing standards",
      "sub": "Amperesand · corporate"
     },
     {
-     "x": 4,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-04 — Sungrow tells SZSE investors that the FCC's updated definition covers devices whose remote communication runs over wired links such as Ethernet, and that off-grid inverters without grid-interactive capability sit outside the ban",
      "sub": "Sungrow · regulatory"
     },
     {
-     "x": 5,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-04 — Flex agrees to acquire the US conversion manufacturer EPC Power for $4.4bn",
      "sub": "Power Electronics · market"
     },
     {
-     "x": 6,
+     "x": 8,
      "lane": "record",
      "label": "2026-09-03 — Consensus for the 10 or 11 November Q4 FY2026 print stands at €4,704m of revenue and a 23.2% Segment Result margin",
      "sub": "Infineon · corporate"
     },
     {
-     "x": 7,
+     "x": 9,
      "lane": "record",
      "label": "2026-09-03 — Agreement to acquire EPC Power for $4.4bn, into the Cloud and Power Infrastructure segment, closing in Q4 calendar 2026",
      "sub": "Flex · ma"
     },
     {
-     "x": 8,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-29 — H1 2026 interim report: revenue RMB 30.912B (-28.99%), attributable net profit RMB 5.259B (-32.01%), gross margin 35.92% (+1.56pp), operating cash flow RMB 3.735B (+8.75%); ESS reached exactly 50.00% of revenue and overtook PV inverters for the first time; overseas revenue rose to 73.40% of the total as mainland revenue more than halved",
      "sub": "Sungrow · financial"
     },
     {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
-     "sub": "Zhonhen Electric · financial"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-27 — Board approves a $150 million share-repurchase authorization with no expiration, replacing the prior program (8-K, event date August 25, 2026)",
-     "sub": "Vicor · corporate"
-    },
-    {
      "x": 11,
      "lane": "record",
-     "label": "2026-08-27 — Headquarters-base project deferred from September 2026 to December 2027",
-     "sub": "Megmeet · corporate"
+     "label": "2026-08-28 — IR record: SST demand not expected to ramp for 1–2 years; sales for 2–3 years to come from the existing product matrix",
+     "sub": "Megmeet · other"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-27 — H1 2026 interim: revenue +29.68%, headline profit +45.21%, ex-non-recurring profit −16.13%",
-     "sub": "Megmeet · financial"
+     "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
+     "sub": "Zhonhen Electric · financial"
     }
    ]
   },
@@ -11444,6 +11474,15 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     "the-players",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-09-23",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-23; profile:delta-electronics 2026-09-04→2026-09-23; profile:liteon 2026-09-05→2026-09-23; profile:megmeet 2026-09-08→2026-09-23",
+   "changed": [
+    "the-players",
+    "what-moved",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -11457,8 +11496,8 @@ function clLessonSegmentGridEquipment_() {
  "title": "Grid equipment",
  "short": "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-23",
+ "reviewBy": "2027-03-23",
  "provenance": {
   "inputs": [
    {
@@ -11554,7 +11593,7 @@ function clLessonSegmentGridEquipment_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-23",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -12738,7 +12777,7 @@ function clLessonSegmentGridEquipment_() {
      "800 VDC power shelves"
     ]
    ],
-   "note": "Curated edges among members: 62 · to the neighbouring segments: 81 (the first 40 shown, by company) · derived-only mentions (no curated typing): 5 among members, 35 to the neighbours."
+   "note": "Curated edges among members: 62 · to the neighbouring segments: 82 (the first 40 shown, by company) · derived-only mentions (no curated typing): 5 among members, 35 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -13187,6 +13226,13 @@ function clLessonSegmentGridEquipment_() {
   {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
+   "changed": [
+    "who-is-connected"
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-23",
    "changed": [
     "who-is-connected"
    ]
@@ -27878,7 +27924,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
  "title": "Hyperscalers and AI labs",
  "short": "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-23",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -27921,7 +27967,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "profile:oracle",
-    "date": "2026-08-30",
+    "date": "2026-09-21",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -27933,7 +27979,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-23",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
@@ -28662,73 +28708,73 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-14 — 2026 Restructuring Plan supplemented by ~$700M (to ~$2.8B expected total cost); a further round of layoffs hit staff the same week with same-day termination notices",
+     "sub": "Oracle · financial"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-11 — Oracle and OpenAI pursue a solar-heavy generation mix for Project Jupiter (Doña Ana, NM) to blunt local opposition to the ~$165B campus, alongside a public environmental dashboard and a $1M carbon-capture research commitment",
+     "sub": "Oracle · policy"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-10 — Q1 FY2027 results: revenue $19.3B (+30%), OCI infrastructure revenue $7.4B (+121%), RPO $664B (+$26B q/q), free cash flow -$5.4B on $28.5B capex; 850MW datacenter capacity and 300,000+ GPUs delivered in the quarter",
+     "sub": "Oracle · financial"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-08 — RFP issued for up to 2GW of new renewable capacity (solar/wind/geothermal) in New Mexico, prioritizing projects deliverable 2027-2031, to support 100% carbon-free energy matching at Project Jupiter by 2031",
+     "sub": "Oracle · capacity"
+    },
+    {
+     "x": 5,
+     "lane": "record",
+     "label": "2026-09-04 — Expanded HPE collaboration: HPE Juniper Networking (PTX/MX routing, QFX/EX switching) to scale OCI's global data-center and edge networks, with multi-year support and financing; HPE issued Oracle warrants to purchase HPE common stock",
+     "sub": "Oracle · partnership"
+    },
+    {
+     "x": 6,
+     "lane": "record",
      "label": "2026-09-03 — Fluidstack — the tenant Google's whole backstop programme stands behind — valued at USD 18B, explicitly on the strength of building Google's and Anthropic's data centres",
      "sub": "Google · market"
     },
     {
-     "x": 2,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-02 — Bloomberg (via TechXplore and Dealroom): a six-year, USD 35 billion compute deal with NVIDIA-backed Lambda, with capacity at Hut 8's Beacon Point campus in Nueces County, Texas where NVIDIA holds the lease; NVIDIA's CFO: 'we know some will call this circular financing. We see it differently'",
      "sub": "Anthropic · order-win"
     },
     {
-     "x": 3,
+     "x": 8,
      "lane": "record",
      "label": "2026-09-01 — Claude Fable 5.1 and Mythos 5.1 released (USD 10/50 per million tokens; cache reads cut 75%); Enterprise Frontier Safeguards announced with Goldman Sachs, Morgan Stanley, Citi, Visa and Mastercard among customers",
      "sub": "Anthropic · product-launch"
     },
     {
-     "x": 4,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-31 — 'Improving our alignment and security efforts': the company discloses evaluation incidents including unauthorised internet access and sandbox escapes, and that about 150 engineers were redirected to security hardening in April 2026",
      "sub": "Anthropic · incident"
     },
     {
-     "x": 5,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-29 — Sony Music and Warner Music sue Anthropic in the Northern District of California over training data, naming Dario Amodei and Ben Mann — the third music-industry case after Concord I (2024) and Concord II (January 2026, about USD 3 billion sought)",
      "sub": "Anthropic · legal"
     },
     {
-     "x": 6,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-28 — Judge Rita Lin (N.D. Cal.) rules the Department of War's supply-chain-risk designation 'unlawful retaliation' under the First Amendment and 'arbitrary and capricious' — 'The empty invocation of national security is not a blank check to punish and retaliate against government critics'; the D.C. Circuit case is pending",
      "sub": "Anthropic · legal"
     },
     {
-     "x": 7,
-     "lane": "record",
-     "label": "2026-08-26 — Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent",
-     "sub": "Anthropic · order-win"
-    },
-    {
-     "x": 8,
-     "lane": "record",
-     "label": "2026-08-18 — Northwest Louisiana program raised from $12B to $18B — three STACK-developed campuses across Caddo Parish, Bossier Parish and Shreveport",
-     "sub": "Amazon · capacity"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-08-17 — Bloomberg: run-rate revenue reached USD 65 billion at the end of July, up from USD 47 billion in May and USD 9 billion at year-end; the FT reports investors expect USD 100–120 billion by December and a USD 2 trillion-plus IPO",
-     "sub": "Anthropic · financial"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-08-11 — ERock Q2 2026: 'Executed a 470 MW equipment purchase order with Anthropic', backlog to about USD 1.7 billion, production commitments into 2028; no sites or dates disclosed; ERock shares rose about 23%",
-     "sub": "Anthropic · procurement"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-10 — Theseus Infrastructure: Macquarie Asset Management funds and GIC 'jointly own the platform and provide majority equity funding for each project' to 'develop, own, operate, and lease' data centres to Anthropic as anchor tenant; no capital, capacity, sites or timeline disclosed",
-     "sub": "Anthropic · partnership"
-    },
-    {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-10 — Riot Platforms discloses a 20-year, 191 MW build-to-suit lease at Rockdale, Texas worth USD 9.1 billion (USD 16.1 billion with options) with 'one of the world's leading frontier AI labs' — Anthropic per Bloomberg; 96 MW December 2027, 191 MW June 2028; Morgan Stanley USD 573 million interim facility; 'IG-Backstop in Finalization'",
+     "label": "2026-08-26 — Bloomberg, CNBC and TechCrunch: about USD 45 billion over six years to Nscale for about 460 MW of Vera Rubin capacity at the Monarch campus in West Virginia from late 2027, after Microsoft walked away from its 1.35 GW letter of intent; Aker's disclosure confirms a contract without a name; Anthropic silent",
      "sub": "Anthropic · order-win"
     }
    ]
@@ -28920,6 +28966,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-23",
+   "note": "regenerated: graph:profiler-graph 2026-09-19→2026-09-23; profile:oracle 2026-08-30→2026-09-21",
+   "changed": [
+    "what-moved"
+   ]
   }
  ]
 };
