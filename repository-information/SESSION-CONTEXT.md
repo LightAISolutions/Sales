@@ -6,6 +6,63 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-24, 07:55 PM → 08:31 PM EST (attended; six turns)
+**Repo version:** v07.45r, three pushes on `claude/awesome-brahmagupta-7cmzsc` (v07.43r, v07.44r, v07.45r; all merged), plus this session-context write
+**Branch:** `claude/awesome-brahmagupta-7cmzsc`
+
+### What was done
+
+- **`mentions[]` refreshed (v07.43r).** Ran `extract-corpus-events.py`. Only the Megmeet dossier had drifted, since its v8 cut at v07.32r:
+  - `computex-2027` lost megmeet/strategy.
+  - `ai-infra-summit-2027` gained megmeet/sources.
+  - Still 256 rows across 33 corpus events. `--check` and `check-events-registry.py` both exit 0.
+- **Events Sync hand-off fixed (v07.44r).** The v07.42r "mark 7 applied, reject 9" instruction could not be carried out in the panel:
+  - **Mark applied** stamps every approved row at once (`Events.html` `ev-prop-applied`).
+  - An applied row can't be rejected afterwards (`already_applied`).
+  - The queue now reads 0 pending · 0 approved · 17 rejected · 16 applied, so the 9 skipped misreads carry `applied`.
+  - Step 8 of `.claude/rules/events-app.md` now orders it: Reject the skipped rows first, then Mark applied. `EVENTS-SCHEMA.md` §7 has a one-line note.
+- **ACP RECHARGE 2026 flipped to `past` (v07.45r).** The registry check failed once the UTC date rolled to 25 Sep. Fixed with `--fix-past` and an `events.ics` rebuild (68 confirmed). Registry check exit 0.
+
+### Where we left off
+
+- Everything is committed and merged to main. The Events registry action item is closed: the registry check passes, `mentions[]` is current and the Proposed queue is empty.
+- **Optional, the developer's:** in the Events spreadsheet's Proposed tab, relabel the 9 skipped rows' Status from `applied` to `rejected`. The ids are in the v07.42r CHANGELOG under "Skipped". This only fixes the labels: the poller's dedup counts every row whatever its status, so the misreads won't be re-proposed either way.
+- **Active reminders (the developer's):**
+  - Cooling recheck from 28 Sep.
+  - Neoclouds pass from 1 Oct.
+  - Dominion reframe 2–6 Oct.
+
+### Key decisions made
+
+- **No per-id Mark applied.** The session describes the panel as it is, with no per-id marking, and never hands off an order the panel can't carry out. I verified the claims against `Events.gs` `evPollApplied_` / `evPollDecide_` / `evProposedKeys_`.
+- **A past-date flip is data-only.** It gets its own push (repo version, CHANGELOG, README) with no page or GAS bump, following the v07.42r precedent.
+- **The earlier heads-up was retracted.** I had said the AI Infra Summit misread would recur on the next poll. It won't: dedup blocks the identical proposal, and past-dated editions are skipped.
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Events page unchanged:** Events.html v01.11w; only data and the rule text changed.
+- **The UTC rollover will recur:** `check-events-registry.py` compares against the UTC date, so each confirmed event trips it at 8 PM Eastern on its last day. The fix is a one-line `--fix-past` push, and no Routine automates it.
+- **Dates:**
+  - CoolIT launch 9/28
+  - Fluidstack accounts 9/30
+  - Dominion solicitation 10/1
+  - ESIG DER webinar 10/1
+  - Megmeet start 10/7
+  - Battery Show NA 10/12–15
+  - ESIG large-loads webinar 10/15
+  - RE+ 11/16–19
+
+### Recommendation for next session
+
+- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
+
+**To continue:** type `recheck the cooling module after CoolIT`
+
+## Previous Sessions
+
+### Session — 2026-09-24 07:53 PM EST (Events sync, v07.42r)
+
 **Date:** 2026-09-24, 07:42 PM → 07:53 PM EST (attended; two turns)
 **Repo version:** v07.42r, one push on `claude/optimistic-mccarthy-plgmod` (merged), plus this session-context write
 **Branch:** `claude/optimistic-mccarthy-plgmod`
@@ -69,85 +126,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run `python3 scripts/extract-corpus-events.py` to refresh the stale `mentions[]` in `events.json`, then `python3 scripts/check-events-registry.py` (exit 0) and `--check`. Commit it as a data-only push: it feeds the score's `corpusSalience` term, and it has been stale since the recent dossier revisions.
 
 **To continue:** type `refresh the events mentions index`
-
-## Previous Sessions
-
-### Session — 2026-09-24 07:08 PM EST (Fact verification close-out, v07.41r)
-
-**Date:** 2026-09-24, 06:18 PM → 07:08 PM EST (attended; four turns)
-**Repo version:** v07.41r — three pushes on `claude/session-reminders-classroom-review-0g2lqj` (two reminder commits, then v07.41r; all merged), plus this session-context write
-**Branch:** `claude/session-reminders-classroom-review-0g2lqj`
-
-### What was done
-
-- **Three reminders added to `REMINDERS.md`**, in date order:
-  - Recheck `landscape-cooling-2026-09` after the CoolIT CDU launch, **Mon 28 Sep**.
-  - The neoclouds Profiler pass, on or after **Thu 1 Oct**, in a fresh Opus 5.5 High session, once Fluidstack's 30 Sep accounts filing has landed or been missed.
-  - Reframe the Dominion rehearsal (`scenario-utilities-objection`) **Fri 2 – Tue 6 Oct**, after the 1 Oct purchase solicitation issues and before Megmeet on 7 Oct. It carries the unverified Dominion "all-stock" check.
-- **v07.41r — the three facts flagged at v07.40r, verified and closed:**
-  - **AEP "six of eight": verified, no change.** The 30 Jul Q2 deck said five; the "Aug & Sep 2026 Investor Meetings" handout says six, after Michigan approved in between. Oklahoma (PSO) and SWEPCO Texas are still pending. The AEP bullet in the cooling reminder is struck through as closed.
-  - **Trane: dossier v1 → v2, v1 archived.** Checked against Federal Register 2026-10387 and 40 CFR 84.54:
-    - The 2030 date covers only semiconductor-manufacturing chillers of 100 lb charge or less; data-centre cooling keeps its 700-GWP limit from 1 Jan 2027.
-    - The amendment took effect 27 Jul, not 26 May.
-    - policyExposure[1], strategyRead #5 and the development entry were corrected, and the conclusion reversed: Trane's data-centre line keeps its transition tailwind.
-  - **Narada: dossier v4 → v5, v4 archived.** The H1 2026 report was read first-hand from cninfo (filed 29 Aug):
-    - Revenue RMB 1.699B (−56.7%) and net loss RMB 1.111B; every segment sold below cost.
-    - Equity attributable to shareholders RMB 290M; total equity RMB 25M; liabilities 99.8% of assets; about RMB 410M of the RMB 465M cash frozen.
-    - SR1 lowered from High to Moderate, because the comms/DC segment fell 44.8% in H1 after growing through FY2025.
-  - **Classroom GAS v01.90g → v01.91g:**
-    - Five "grew through the collapse" passages corrected across `landscape-cells-and-chemistry-2026-09` and `landscape-in-hall-power-2026-09`, with Narada ledger rows re-pinned at v5 and revision notes added.
-    - `segment-in-hall-power` and `segment-cooling` regenerated. They were the only segments with section changes.
-    - Analysis markdown mirrored, plus an inline correction in `CLASSROOM-CURRICULUM-PLAN.md` §10.6.
-  - **Checks, all clean:**
-    - Profiler relationships: 0 findings. Cross-references: 0 candidates. Inbound reconciliation: 3 Narada mentions, none changed.
-    - Classroom content: 0 errors. Pipeline self-test: 15/15. `node --check` and inner scripts: clean.
-    - Pipeline checker: P1/P2 only, with no P3, so no `gateDigest` refresh.
-
-### Where we left off
-
-- Everything is committed and merged to main. No flagged fact from v07.40r is still open.
-- **Active reminders (the developer's):** the cooling recheck from 28 Sep, the neoclouds pass from 1 Oct, and the Dominion reframe 2–6 Oct.
-- **Due for the C2 pipeline (Wed 30 Sep 11:00 UTC), not a developer task:**
-  - 17 pin-only segment lessons (the graph rebuild moved its date).
-  - 14 stale hand-authored pins.
-- **Curriculum review dates in the next 30 days:**
-  - cooling module 9/28
-  - neoclouds module and scenario 9/30
-  - utilities-objection scenario 10/1
-  - capital-objection scenario 10/14
-  - briefing-2026-09-21 on 10/21
-
-### Key decisions made
-
-- **A fact that's right at two different dates is closed without an edit.** AEP's five and six are both correct; the repo already dated "six" to August.
-- **A primary source that contradicts a strategy judgment revises the judgment and its confidence**, not just the numbers (Narada SR1, Trane SR5). Each correction is marked in-line as "(Corrected at vN …)".
-- **No USD overlay without a citable FX basis.** The Narada interim carries `kpi: revenue` but no `usdMillions`.
-- **Developer sessions regenerate segments whose sections change** (G3). Pin-only segments are left to the pipeline.
-- **Reminder-only commits stay housekeeping:** no version bump and no CHANGELOG entry, following the `bb8892c4` precedent.
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Classroom GAS is at v01.91g.** Profiler page v01.91w is unchanged (data-only edits).
-- **Retrieval recipes that worked from this container:**
-  - **cninfo:** POST `http://www.cninfo.com.cn/new/hisAnnouncement/query` with `searchkey=<name>&category=category_bndbg_szsh;&column=szse&seDate=…`. PDFs are at `static.cninfo.com.cn/finalpage/…`.
-  - **Federal Register:** the site is bot-blocked, but the API (`/api/v1/documents/<id>.json`) gives the govinfo PDF URL, and that downloads.
-  - **eCFR:** the versioner API needs `curl --compressed`.
-  - **PDF text:** `pip install pymupdf`.
-- **Gotcha:** `open(p,'w').write(open(p).read()…)` truncates the file before the read. It emptied `repository.version.txt` once this session; it was caught and restored.
-- **Corpus drift noticed, not fixed:** 4 older dossiers use `periodType: "interim"`, which is not a schema value (`half` / `quarter` / `annual` / `other`).
-- **Dates:**
-  - CoolIT launch 9/28
-  - Fluidstack accounts 9/30
-  - C2 Routine 9/30 11:00 UTC
-  - Dominion solicitation 10/1
-  - Profiler quarterly and drift checks 10/1
-  - Megmeet start 10/7
-  - Guidance quarterly review 10/15
-  - RE+ 11/16–19
-
-### Recommendation for next session
-
-- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
-
-**To continue:** type `recheck the cooling module after CoolIT`
