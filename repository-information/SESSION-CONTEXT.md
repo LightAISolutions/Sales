@@ -6,6 +6,65 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-24, 08:34 PM → 08:50 PM EST (attended; four turns)
+**Repo version:** v07.46r (one push), plus a reminder push and this session-context write, all on `claude/dazzling-mayer-r2n493` and all merged
+**Branch:** `claude/dazzling-mayer-r2n493`
+
+### What was done
+
+- **Habitat Energy and Gridmatic dossiers refreshed to profileVersion 2 (v07.46r).** Source: the developer's open-action-items Priority 1 list. Both v1 files are archived. Both dossiers were only 13 days old, so the pass focused on what had changed and re-read ownership, using two parallel research agents (about 32 sources each).
+  - **Habitat: the Quinbrook sale is unchanged.** No buyer, bidder, signing or withdrawal is on the record through 2026-09-24; New Project Media's 17 March report is still the only source. FY2025 accounts (for Habitat and its parent) are due 9/30 and were not filed.
+  - **Habitat additions:**
+    - The parent's May 2026 PSC07/PSC08 register correction (not a transfer).
+    - General Counsel Jason Dillingham and Chief People Officer Lois Stamps.
+    - Quinbrook's "Operational & Expanding" page, re-weighted as weak evidence because it has not been edited since August 2025.
+  - **Gridmatic: no raise found.** There is no Form D, named investor or credit facility, and the "upcoming debt and equity raises" posting is still live. Ownership now reads "founder-led": the company has existing investors, a board and stock options.
+  - **Gridmatic additions:**
+    - The company's own claim of ~$100M retail revenue for 2026.
+    - Amperical data showing the ERCOT book is 2 sites / 110 MW (Endurance Park 11th of 312, Cross Trails 38th).
+    - Energy Vault's lenders waiving Cross Trails' debt-service-coverage test for Q1 and Q2 2026.
+    - The CCO's interview, the Ohio residential add-on amendment, and VP Finance Yojna Verma.
+  - **Also updated:** registry tagline and synced fields, the graph, calendar `lastRefreshed` (both stay `watch` tier) and the watch notes.
+  - **Checks:** all clean (sync, relationships, cross-references 0, study guides). Five inbound mentions reviewed; none changed.
+- **Reminder added:** re-run `profiler Habitat Energy` on or after Thu 10/1, once its FY2025 accounts post.
+
+### Where we left off
+
+- Everything is committed and merged to main. The screenshot's action item 4 ("decide before 10/1") is closed for Gridmatic. For Habitat, only the FY2025 accounts remain, and they are now tracked by a reminder.
+- **Active reminders (the developer's):**
+  - Cooling recheck from 9/28.
+  - Neoclouds pass and Habitat re-run from 10/1. Both wait on 9/30 accounts filings, so they can share one Profiler session.
+  - Dominion reframe 10/2–10/6.
+
+### Key decisions made
+
+- **Manual run over tier promotion.** The developer chose `profiler <Company>` by hand rather than moving either company to the `core` tier, so both stay `watch`. The consequence, spelled out in Habitat's refresh notes: the 10/1 sweep skips them, and the accounts must be folded in by hand.
+- **Research-prompt hints are not findings.** The Habitat agent's "CEO is Luers, not Irons" came from a wrong hint in my own research prompt. The dossier was already right, so nothing changed.
+- **Change-focused revision.** A dossier under a month old gets a pass on what changed (plus the identity re-check), not a full rebuild.
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Profiler page unchanged:** v01.91w; data-only changes.
+- **sec.gov is still blocked from this environment.** efts.sec.gov full-text search works; Companies House works.
+- **Dates:**
+  - CoolIT launch 9/28
+  - Habitat and Fluidstack accounts 9/30
+  - Dominion solicitation 10/1
+  - quarterly sweep 10/1
+  - Megmeet start 10/7
+  - Energy Vault Q3 10-Q in November (Cross Trails waivers)
+
+### Recommendation for next session
+
+- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
+
+**To continue:** type `recheck the cooling module after CoolIT`
+
+## Previous Sessions
+
+### Session — 2026-09-24 08:31 PM EST (Events mentions refresh + sync fixes, v07.43r–v07.45r)
+
 **Date:** 2026-09-24, 07:55 PM → 08:31 PM EST (attended; six turns)
 **Repo version:** v07.45r, three pushes on `claude/awesome-brahmagupta-7cmzsc` (v07.43r, v07.44r, v07.45r; all merged), plus this session-context write
 **Branch:** `claude/awesome-brahmagupta-7cmzsc`
@@ -58,71 +117,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
 
 **To continue:** type `recheck the cooling module after CoolIT`
-
-## Previous Sessions
-
-### Session — 2026-09-24 07:53 PM EST (Events sync, v07.42r)
-
-**Date:** 2026-09-24, 07:42 PM → 07:53 PM EST (attended; two turns)
-**Repo version:** v07.42r, one push on `claude/optimistic-mccarthy-plgmod` (merged), plus this session-context write
-**Branch:** `claude/optimistic-mccarthy-plgmod`
-
-### What was done
-
-- **The first `events sync` to reach the registry (v07.42r).** The developer pasted the Proposed tab's export: 16 approved proposals and 10 polls.
-  - **7 applied:**
-    - `datacloud-usa-2027`: start moved to 30 Aug 2027; venue changed to Austin Marriott Downtown with `city` kept as "Austin"; the stale `venueLatLng` removed.
-    - Three website updates: ESIG Large Loads, iMasons at Yotta, Data Center World.
-    - Two new ESIG webinars (1 Oct, 15 Oct), both `tentative`. Their remaining fields came from the evidence pages, read 2026-09-24.
-  - **9 skipped, at the developer's choice**, because they were poller misreads:
-    - AI Infra Summit ×3: the organiser's JSON-LD still carries the finished 2026 edition.
-    - MWC: street address in `city`.
-    - Yotta: the event name read as the venue.
-    - Four duplicates of existing rows under new slugs: Battery Show NA, ESIG Fall Workshop, iMasons Cascadia, iMasons Texas.
-  - `lastProbe` updated on 10 roster rows. `uptime-network-americas-fall-2026` flipped to `past` with `--fix-past`.
-  - `events.ics` rebuilt. `check-events-registry.py` exit 0: 102 events, 69 confirmed.
-  - The CHANGELOG section lists every applied and skipped `pr-` id.
-
-### Where we left off
-
-- Everything is committed and merged to main.
-- **The developer's panel follow-up, not a session task:**
-  - Enter `v07.42r` in **Mark applied** for the 7 applied ids.
-  - **Reject** the 9 skipped ids.
-- **`mentions[]` is stale on main.** `extract-corpus-events.py --check` fails, and it failed before this sync too, after recent dossier edits (v07.41r's Trane and Narada revisions, among others). The sync never writes `mentions[]`, so it was left alone.
-- **Active reminders (the developer's):**
-  - Cooling recheck from 28 Sep.
-  - Neoclouds pass from 1 Oct.
-  - Dominion reframe 2–6 Oct.
-
-### Key decisions made
-
-- **An approved proposal is not applied blindly.** When a row would write data that is visibly wrong and the checker cannot see it (street address in `city`, event name as venue, a duplicate under a new slug, a year-crossed edition), the session names the rows and asks. The developer chose "apply the good ones, skip the rest, list the ids to reject".
-- **A partly-right `changed-venue` keeps the good half.** Datacloud's venue name was taken and the address-in-city was not. `venueLatLng` is dropped when the venue changes, rather than left pinned to the old venue.
-- **A `new-event` row's `series` is its name**, because the name carries no year (the rule's "name without its year").
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Events page unchanged:** Events.html v01.11w; only the data changed.
-- **Poller weaknesses seen:**
-  - It writes a JSON-LD `address` string into `city`.
-  - It takes `location.name` as the venue even when that is the event name.
-  - It proposes `new-event` rows for events the registry already holds under a different slug, with no name/date match.
-  - It diffs an organiser page's stale previous edition against the current-edition row.
-- **The checker's duplicate test is slug-only.**
-- **Dates:**
-  - CoolIT launch 9/28
-  - Fluidstack accounts and C2 Routine 9/30
-  - Dominion solicitation 10/1
-  - ESIG DER webinar 10/1
-  - Megmeet start 10/7
-  - Battery Show NA 10/12–15
-  - ESIG large-loads webinar 10/15
-  - RE+ 11/16–19
-
-### Recommendation for next session
-
-- Run `python3 scripts/extract-corpus-events.py` to refresh the stale `mentions[]` in `events.json`, then `python3 scripts/check-events-registry.py` (exit 0) and `--check`. Commit it as a data-only push: it feeds the score's `corpusSalience` term, and it has been stale since the recent dossier revisions.
-
-**To continue:** type `refresh the events mentions index`
