@@ -36,6 +36,16 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **Still open from 9/23 (optional):** no Scraper corpus token is supplied, so that layer is skipped. Adding one to the Routine prompt is allowed, but the token would then appear in every run's transcript.
   - **To resume:** type `check the 9/30 Classroom run`.
 
+- `2026-09-25 07:05:46 PM EST` — **Re-run the AIDC power-conversion report once Megmeet's Q3 2026 report is filed (due by Saturday 2026-10-31)** — this supersedes the current edition, `aidc-power-conversion-rev2--competitive--2026-09-25`. **Refresh the Megmeet dossier first** under `profiler Megmeet`; it is at v8, pinned 9/23. Zhonhen and Sinexcel report by the same deadline.
+  - **When:** the refresh calendar has Megmeet's `nextReport` at 2026-10-30, unconfirmed; Q3 2025 was published 2025-10-30. Check cninfo first — if the filing is late, the late filing is itself the finding.
+  - **What the re-run tests:**
+    - Megmeet's H2 against the RMB 787M FY2026 consensus, which implies about RMB 535M in H2.
+    - Whether power products keeps outgrowing the group.
+    - Whether any SST input voltage class appears.
+    - Whether Zhonhen or Sinexcel convert 800 VDC capability into a disclosed order, customer or revenue line.
+  - **Scope for the re-run:** the 16 vendors of the rev2 edition (Power Electronics added 9/25). Mitsubishi Electric is the named candidate still outside scope.
+  - **To resume:** type `profiler Megmeet`, then `profiler report competitive: AIDC power conversion`.
+
 ## Completed Reminders
 
 - ~~`2026-09-22 12:29:48 AM EST` — **Paste the Megmeet SST briefing prompt — after the Network and Events build plan, before the 2026-10-07 start date** — the prompt is preserved verbatim at `repository-information/megmeet-briefing-prompt.md`; it is not in any chat transcript that will survive. Deliberately deferred on 2026-09-22 so the research lands closer to the start date and the tokens go to the Network/Events build first.~~ — completed `2026-09-23 06:47:20 PM EST` (dismissed by the developer; the briefing it points to ran on 2026-09-23 as v07.29r–v07.31r, and its chapter 9.4 was amended the same evening after Megmeet dossier v8)

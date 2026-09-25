@@ -2,6 +2,21 @@
  "schemaVersion": 1,
  "reports": [
   {
+   "id": "aidc-power-conversion-rev2--competitive--2026-09-25",
+   "title": "AIDC Power Conversion — The 800 VDC Race",
+   "type": "competitive",
+   "topic": "Who is winning the AI data-centre power-conversion transition, layer by layer — silicon, the rack, the sidecar and hall-edge block, and the facility and grid tier",
+   "date": "2026-09-25",
+   "scopeLabel": "16 covered 800 VDC vendors across four layers",
+   "companies": 16,
+   "citations": 66,
+   "status": "current",
+   "supersedes": "aidc-power-conversion--competitive--2026-09-25",
+   "overlayModules": [
+    "nvidia-800vdc-2026-08"
+   ]
+  },
+  {
    "id": "aidc-power-conversion--competitive--2026-09-25",
    "title": "AIDC Power Conversion — The 800 VDC Race",
    "type": "competitive",
@@ -10,7 +25,7 @@
    "scopeLabel": "15 covered 800 VDC vendors across four layers",
    "companies": 15,
    "citations": 60,
-   "status": "current",
+   "status": "superseded",
    "supersedes": "aidc-power-conversion--competitive--2026-09-08",
    "overlayModules": [
     "nvidia-800vdc-2026-08"

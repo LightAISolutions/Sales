@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.53r] — 2026-09-25 07:06:03 PM EST
+
+> **Prompt:** "Remind me to re-run this report after Megmeet's Q3'26 report (due by 10/31). Refresh the Megmeet dossier first. Zhonhen and Sinexcel report by the same deadline. 
+>
+> Add power-electronics to scope now unless you have a good reason to wait. If you do, explain the reason to me."
+
+Added `power-electronics` to the AIDC power-conversion report's scope as a same-day second edition. The developer's reminder for the post-Q3 re-run was recorded.
+
+### Added
+
+- **`live-site-pages/profiler-data/reports/aidc-power-conversion-rev2--competitive--2026-09-25.report.json`** — supersedes `aidc-power-conversion--competitive--2026-09-25`, which was published earlier the same day. Reports are immutable, so a scope change needs a new edition; the `-rev2` topic suffix follows the 9/23 SST precedent. The scope grows from 15 to 16 vendors and the citations from 60 to 66, with six new ones copied verbatim from the `power-electronics` v1 `sources[]`:
+  - **New Layer 3 row, Power Electronics.** AIPCS takes medium-voltage AC to an 800 VDC bus in one enclosure: up to 3,820 kVA, 98.00% maximum including the MV transformer. It is transformer-based, so it is a TRU-now product rather than an SST. No AIPCS order, customer or input voltage class is published. About 70% of FY2025 revenue comes from the US, and a Houston plant launches production in 2026.
+  - **Scale chart:** adds Power Electronics at USD 1,468M, verified against its KPI overlay.
+  - **FCC paragraph amended:** the carried "reaches no covered rack-power vendor" line now adds that the newly scoped vendor *is* reached. Its dossier records that its Spanish-built, SCADA-commanded storage inverters are covered, and says nothing about AIPCS.
+  - **Megmeet first-week section:** names Power Electronics as the US-footprint comparison a buyer will reach for at the hall edge.
+  - **Scope, coverage, gaps, limitations and cross-reference note updated.** Mitsubishi Electric stays a named candidate for the next edition.
+- **`repository-information/REMINDERS.md`** — new active reminder: re-run the report once Megmeet's Q3 2026 report is filed (due by Saturday 2026-10-31), refreshing the Megmeet dossier first. Zhonhen and Sinexcel report by the same deadline.
+
+### Changed
+
+- **`reports/reports-index.json`** — rev2 added as `current`; the morning 2026-09-25 edition flipped to `superseded`.
+- **`README.md`** — tree entry for rev2, and the morning edition's line now reads superseded.
+
+### Notes
+
+- **`check-profiler-reports.py`:** 0 errors, and no warning on the new edition. The two remaining warnings are the out-of-scope aged 9/8 BESS reports.
+- **Archive rotation not performed:** 105 total, of which seven are dated today and exempt, leaving 98 non-exempt against a trigger of 100.
 
 ## [v07.52r] — 2026-09-25 06:56:02 PM EST
 
