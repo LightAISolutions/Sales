@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.12w">
+  <meta name="build-version" content="v01.13w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -5982,6 +5982,16 @@ function evPostMark(e, box, id, held, btn) {
     }
     var p = _evPost[e.slug];
     if (p && p.data) {
+      // posteventmark answers the held states without the names (they cost a
+      // Network read per account) — carry the ones already on screen across
+      var named = {};
+      (p.data.meetings || []).forEach(function(m) { named[m.id] = m; });
+      (res.meetings || []).forEach(function(m) {
+        var was = named[m.id];
+        if (!was) return;
+        if (!m.contactName) m.contactName = was.contactName || '';
+        if (!m.accountName) m.accountName = was.accountName || '';
+      });
       p.data.meetings = res.meetings || p.data.meetings;
       p.data.checklist.meetingsHeld = res.meetingsHeld;
       p.data.checklist.meetingsUnconfirmed = (res.meetings || []).filter(function(m) { return m.held === 'unconfirmed'; }).length;

@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.48r] — 2026-09-25 05:59:25 AM EST
+
+> **Prompt:** "6.4 - see attached screenshot. Mark held seems to have worked, but produced something garbled called "c-1fa85fymc4iaj". What is that. Fix it. 6.2 - What's the point of promoting a contact interaction into a field note in Profiler if I can't input any information to the field note?"
+
+### Fixed
+
+#### `Events.html` (v01.13w)
+
+- **After Mark held / not held, the post-event meeting row showed the raw contact ID (`c-1fa85fymc4iaj`) in place of the name, and dropped the account.** `eop=posteventmark` returns `meetings` from `evPostMeetings_` without running `evPlanMeetingNames_`, which `eop=postevent` does. `evPostMark` replaced the cached list wholesale, and the renderer falls back to `contactId` when `contactName` is empty. `evPostMark` now carries `contactName` and `accountName` across from the list already on screen, matched by meeting id. That costs no extra Network reads per mark. Verified headless against a mocked backend whose mark answer has no names: the row reads "Austin York · Acme · … HELD".
 
 ## [v07.47r] — 2026-09-25 05:21:48 AM EST
 

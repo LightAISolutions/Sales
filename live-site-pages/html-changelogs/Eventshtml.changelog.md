@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 12/50`
+`Sections: 13/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.13w] — 2026-09-25 05:59:25 AM EST — v07.48r
+
+### Fixed
+
+- **Marking a meeting held or not held no longer replaces the person's name with a code.** After you pressed **Mark held**, the meeting in "After the show" showed an internal ID in place of the contact's name and lost its company. The name and company now stay put
 
 ## [v01.12w] — 2026-09-25 05:21:48 AM EST — v07.47r
 
