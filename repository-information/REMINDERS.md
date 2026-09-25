@@ -19,6 +19,17 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **Small session:** a Classroom guidance recheck under `.claude/rules/industry-guidance.md` (Freshness discipline) and `.claude/rules/classroom-app.md`. It can run on or after 28 Sep, and before the 7 Oct Megmeet start is best.
   - **To resume:** type `recheck the cooling module after CoolIT`.
 
+- `2026-09-24 08:48:57 PM EST` — **Re-run `profiler Habitat Energy` on or after Thursday 2026-10-01, once its FY2025 accounts are at Companies House** — Habitat Energy Limited (10923911) and its parent Renewable and Grid Services Limited (13250883) both owe accounts to 31 Dec 2025 by Wednesday 30 September. The v2 refresh (v07.46r) ran six days before that deadline, with neither filed.
+  - **Why it needs a hand:** the dossier is on the `watch` tier. The 10/1 quarterly Routine skips it, and its next scheduled pass is around March 2027. Nothing else will fold the accounts in.
+  - **What to pull:**
+    - The group "Optimisation services" line (FY2024 GBP 4.17M, +80%).
+    - The UK entity's turnover and loss (FY2024: GBP 1.99M and GBP 5.0M).
+    - Any directors'-report or post-balance-sheet mention of the Quinbrook sale process (JLL/BCG, reported March 2026, still unresolved).
+    - Recheck the PSC and officers pages for a change of control at the same time.
+  - **If the accounts are late:** record the late filing itself as the finding. The prior two years were filed in late December and early January, so a miss would be out of pattern.
+  - **Can share a session** with the neoclouds pass (also waiting on a 9/30 accounts filing, Fluidstack's), since both run under the Profiler command.
+  - **To resume:** type `profiler Habitat Energy`.
+
 ## Completed Reminders
 
 - ~~`2026-09-22 12:29:48 AM EST` — **Paste the Megmeet SST briefing prompt — after the Network and Events build plan, before the 2026-10-07 start date** — the prompt is preserved verbatim at `repository-information/megmeet-briefing-prompt.md`; it is not in any chat transcript that will survive. Deliberately deferred on 2026-09-22 so the research lands closer to the start date and the tokens go to the Network/Events build first.~~ — completed `2026-09-23 06:47:20 PM EST` (dismissed by the developer; the briefing it points to ran on 2026-09-23 as v07.29r–v07.31r, and its chapter 9.4 was amended the same evening after Megmeet dossier v8)
