@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.45r] — 2026-09-24 08:15:30 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+
+- **`acp-recharge-2026` flipped to `past`** — ACP RECHARGE 2026 (22–24 Sep, Aurora CO) ended on 24 Sep, and the registry gate failed once its UTC date rolled to 25 Sep.
+  - `check-events-registry.py --fix-past` changed that row's `status` and nothing else.
+  - `events.ics` was rebuilt: 68 confirmed VEVENTs, down from 69. The only content change is ACP's dropped VEVENT; the rest of the diff is regenerated DTSTAMPs.
+  - Verified: `check-events-registry.py` exits 0 (102 events: 68 confirmed, 6 past, 28 tentative), and `extract-corpus-events.py --check` reports `mentions[]` current.
+  - Data-only: no page, GAS or schema change.
 
 ## [v07.44r] — 2026-09-24 08:11:01 PM EST
 
