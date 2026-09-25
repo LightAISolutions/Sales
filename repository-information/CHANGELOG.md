@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.50r] — 2026-09-25 05:49:20 PM EST
+
+> **Prompt:** "6.2 done - everything worked as intended. However, I want to have the ability to delete field notes in Profiler."
+
+### Added
+
+#### `Profiler.html` (v01.92w)
+
+- **🗑 Delete on every note in the ⚙ → Field notes log.** The log (`ovPaintNotes`) offered Copy, Summarize and Recording but no Delete. The only delete was in a dossier's "Add a Field Note" → "Manage existing notes" list, which a `general` note, with no dossier to open, could never reach; that includes notes promoted from Network for an uncovered account. The new button confirms (naming an attached file when there is one), calls the existing `nop=delete` (`deleteFieldNote`: the same owner gate as `list`, the note removed from the Drive log and its attachment trashed, the audit carrying the id only), then drops the row locally and repaints, resetting the company filter to All when the filtered company has no notes left. A failure shows `✕ <error>` on the button and restores it. No backend change.
+  - **Verified headless** against a stubbed backend: three notes, three Delete buttons; one delete sends one `nop=delete` with the note's id and leaves two rows.
+
+### Changed
+
+- **`Profilerhtml.changelog.md` archive rotation.** This push took it to 51 sections, 50 of them non-exempt (the 50-section page trigger). The oldest date group, `v01.42w` (2026-08-24, a single section), moved to `Profilerhtml.changelog-archive.md` with its commit link (`v02.93r` → `6a3d0b3`), leaving it at `Sections: 50/50` with 49 non-exempt.
 
 ## [v07.49r] — 2026-09-25 06:08:32 AM EST
 

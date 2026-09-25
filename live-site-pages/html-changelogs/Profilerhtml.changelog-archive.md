@@ -2,6 +2,11 @@
 
 Archived changelog sections rotated from [Profilerhtml.changelog.md](Profilerhtml.changelog.md).
 
+## [v01.42w] — 2026-08-24 12:15:30 AM EST — v02.93r — [`6a3d0b3`](https://github.com/LightAISolutions/Sales/commit/6a3d0b3)
+
+### Added
+- New "IPP" company category — power producers that buy and operate battery systems now have their own colored tag and roster filter, alongside eight new company profiles in that category
+
 ## [v01.34w] — 2026-08-21 11:01:38 PM EST — v02.75r — [0f7c48b](https://github.com/LightAISolutions/Sales/commit/0f7c48b9e924ba72aafdbb37c23f4d1bf396013f)
 
 ### Added

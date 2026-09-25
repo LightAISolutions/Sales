@@ -9,6 +9,12 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
+## [v01.92w] — 2026-09-25 05:49:20 PM EST — v07.50r
+
+### Added
+
+- **Delete a field note straight from the Field notes log** (⚙ → Field notes). Each note now has a 🗑 Delete button that asks you to confirm, then removes the note along with any attached file. Before, a note could only be deleted from its company's own page, so notes filed under General had no delete button anywhere
+
 ## [v01.91w] — 2026-09-20 12:56:34 AM EST — v06.76r
 
 ### Changed
@@ -331,8 +337,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Changed
 - Minor internal improvements
-
-## [v01.42w] — 2026-08-24 12:15:30 AM EST — v02.93r
-
-### Added
-- New "IPP" company category — power producers that buy and operate battery systems now have their own colored tag and roster filter, alongside eight new company profiles in that category

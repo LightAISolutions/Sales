@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.91w">
+  <meta name="build-version" content="v01.92w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -5686,6 +5686,27 @@ function ovDocVersion() {
           rec.style.cssText = 'font-size:10px;padding:4px 8px;text-decoration:none;';
           acts.appendChild(rec);
         }
+        // Delete from the log itself (developer request 2026-09-25) — the same
+        // nop=delete the in-dossier "Manage existing notes" list uses, so a
+        // note on `general` (which has no dossier to open) can be removed too.
+        var del = ovEl('button', 'ov-btn ghost ov-note-del', '🗑 Delete');
+        del.type = 'button';
+        del.style.cssText = 'font-size:10px;padding:4px 8px;margin-left:auto;';
+        del.addEventListener('click', function() {
+          if (!confirm('Delete ' + n.id + (n.sourceFile ? ' and its attached file' : '') + '? This cannot be undone.')) return;
+          del.disabled = true; del.textContent = '… deleting';
+          ovNoteApi('delete', { id: n.id }, function(r) {
+            if (!r || !r.success) {
+              del.textContent = '✕ ' + ((r && r.error) || 'Failed');
+              setTimeout(function() { del.textContent = '🗑 Delete'; del.disabled = false; }, 2200);
+              return;
+            }
+            ovNotesData.notes = (ovNotesData.notes || []).filter(function(x) { return x.id !== n.id; });
+            if (ovNotesFilter !== 'all' && !ovNotesData.notes.some(function(x) { return x.slug === ovNotesFilter; })) ovNotesFilter = 'all';
+            ovPaintNotes();
+          });
+        });
+        acts.appendChild(del);
         row.appendChild(acts);
         body.appendChild(row);
       });
