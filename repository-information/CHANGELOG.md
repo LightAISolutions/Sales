@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.55r] — 2026-09-25 07:44:52 PM EST
+
+> **Prompt:** "I set the discovery cron in my local terminal. See attached screenshot for the run report. Let me know if this action #12R is closed or not; If not, recommend the next action. If 12R is complete, also confirm if I am completely done with all Phase A tasks."
+
+Closed phase R (#12R). The discovery Routine exists with the repository attached, its quarterly cron is set, and its first run stood down with a full report.
+
+### Changed
+
+- **`NETWORK-EVENTS-DESIGN-PLAN.md` §11, R row** — now **Done**. It records:
+  - the Routine as built: "Claude HQ · Sales", Sonnet 5, no connectors;
+  - the cron, `CRON_TZ=America/New_York 50 8 8 3,6,9,12 *`, set with `/schedule update` in a local terminal; next fire Tue 2026-12-08;
+  - the first run, a STAND-DOWN with 0 candidates and no commit, which §8 accepts;
+  - its near-misses: non-US/CA sub-mega shows, and organiser pages the sandbox could not read.
+- **`ROUTINES-OPERATIONS.md` → "Events discovery — quarterly"**:
+  - heading changed to "live since 2026-09-25";
+  - **corrected** the schedule step: the cron is set with `/schedule update` locally, not `update_trigger`;
+  - new settled finding, with the verbatim refusal: an agent cannot change a UI-created Routine, schedule included, because agents can only update Routines they created;
+  - an "as built" record of the trigger and its first run.
+
+### Notes
+
+- Phase A (#8 report refresh, #12R) is complete.
+- **Archive rotation not performed:** 107 sections in total, of which nine are dated today and exempt, leaving 98 non-exempt against a trigger of 100.
 
 ## [v07.54r] — 2026-09-25 07:20:11 PM EST
 

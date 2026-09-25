@@ -247,7 +247,7 @@ which a normal session can do; a prompt cannot be edited after this Routine is c
 
 Everything else in the quarterly prompt — the per-company research priorities, the archival procedure, the schema-v2 requirements, the Playwright check, the single commit — stays as written. The per-company `watch[]` arrays in the calendar rows already carry what the inline paragraph used to say, and unlike the prompt they can be updated by a commit.
 
-### Events discovery — quarterly (R, written 2026-09-25 — prompt written, awaiting UI creation)
+### Events discovery — quarterly (R — live since 2026-09-25)
 
 A new Routine, not a rebuild: phase **R** of `NETWORK-EVENTS-DESIGN-PLAN.md`. It proposes new events into a **repo-side queue**, `repository-information/events-discovery-queue.json` (`EVENTS-SCHEMA.md` §7.1), because a fired session cannot reach the Events spreadsheet's `Proposed` tab and must never call the app. A developer session promotes candidates with `events sync discovery`. The procedure lives in `.claude/rules/events-app.md` → "The discovery run (R)", not in this prompt, so it can change by commit. STEP 0 is copied verbatim from the desk's prompt above.
 
@@ -257,7 +257,9 @@ A new Routine, not a rebuild: phase **R** of `NETWORK-EVENTS-DESIGN-PLAN.md`. It
 - **Environment:** the one the earnings desk runs with.
 - **Model:** default, which is Sonnet 5 (evaluated 2026-09-21). Every candidate passes a human decision and a re-read of the organiser page before it reaches the registry, so a bad proposal is caught before it lands. That is the test for Sonnet over Opus. Never Fable.
 - **Connectors:** none. Remove every connector the form pre-loads.
-- **Schedule:** the form offers presets only (hourly, daily, weekdays, weekly). Create it on the **Weekly** preset, then set `CRON_TZ=America/New_York 50 8 8 3,6,9,12 *` with `update_trigger` from a developer session. That is the 8th of March, June, September and December at 08:50 ET, and the first scheduled fire is Tuesday 2026-12-08. The **Run now** at creation is the Q4 2026 pass.
+- **Schedule:** the form offers presets only (hourly, daily, weekdays, weekly). Create it on the **Weekly** preset, then set `CRON_TZ=America/New_York 50 8 8 3,6,9,12 *` with **`/schedule update` in a local terminal** — `/schedule` is unavailable in a cloud session. That is the 8th of March, June, September and December at 08:50 ET, and the first scheduled fire is Tuesday 2026-12-08. The **Run now** at creation is the Q4 2026 pass.
+- **Not `update_trigger`.** Tried 2026-09-25 and refused: *"this routine was created via \"http_api\", not by an agent. Agents can only update routines they created (via create_trigger)."* A UI-created Routine cannot be changed by any agent tool, schedule included — only its own fired session may set `enabled=false`. Together with the repository-only-at-creation finding above, every committing Routine on a custom cron needs one manual CLI step after the form.
+- **As built (2026-09-25):** `trig_01LdSJyaBJAmrEYr4Eq5Fq8c`, **Runs with** "Claude HQ · Sales", model `claude-sonnet-5`, `mcp_connections: []`, push + email on. First run (Run now, 23:34–23:39 UTC): STAND-DOWN, 0 candidates, no commit, full report.
 - **Run budget:** at most three Routine runs start on any 8th (the ACL check, the desk on a weekday, and this one), against four on the 1st of a quarter month.
 
 ```text
