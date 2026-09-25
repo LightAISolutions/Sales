@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.24w">
+  <meta name="build-version" content="v01.25w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -658,6 +658,8 @@
     .nw-promote-row label { font-size: 12px; color: var(--nw-muted); }
     .nw-promote-conf { width: 72px; min-height: 36px; font: 14px/1.3 var(--nw-mono); padding: 4px 6px; border: 1px solid var(--nw-line2); border-radius: 6px; }
     .nw-promote-status { margin-top: 8px; }
+    .nw-promote-lbl { display: block; font-size: 12px; color: var(--nw-muted); margin-bottom: 4px; }
+    .nw-promote-learned { display: block; box-sizing: border-box; width: 100%; min-height: 88px; margin-bottom: 8px; padding: 8px 10px; font: 14px/1.4 var(--nw-serif); border: 1px solid var(--nw-line2); border-radius: 6px; resize: vertical; background: #fff; }
     .nw-map-wrap { border: 1px solid var(--nw-line); border-radius: 10px; background: #fbfaf7; overflow: hidden; touch-action: none; }
     .nw-map-svg { display: block; width: 100%; height: auto; max-height: 70vh; cursor: grab; font: 13px var(--nw-serif); }
     .nw-map-svg:active { cursor: grabbing; }
@@ -7886,10 +7888,12 @@ function nwImportConfirm() {
 // request: accounts → contacts, the shared source events as edges.
 
 // ── Promote to field note (nop=promote) ───────────────────────────────────
+var NW_PROMOTE_LEARNED_MAX = 3000;   // Network.gs NW_PROMOTE_LEARNED_MAX — the server refuses longer
 var NW_PROFILER_SESSION_KEY = 'ov_note_session';   // Profiler.html's OV_NOTE_SESSION_KEY — the same origin, the developer's own sign-in
 function nwProfilerSession() { try { return localStorage.getItem(NW_PROFILER_SESSION_KEY) || ''; } catch (e) { return ''; } }
 function nwPromoteErrText(err, res) {
   return { bad_interaction_id: 'That interaction could not be identified.', bad_confidence: 'Confidence must be a whole number from 0 to 100.',
+    learned_required: 'Write what you learned — that is the note Profiler receives.', learned_too_long: 'Keep what you learned under ' + NW_PROMOTE_LEARNED_MAX.toLocaleString() + ' characters.',
     profiler_session_required: 'Sign in to Profiler in this browser first.', duplicate: 'Already promoted' + (res && res.intakeId ? ' (' + res.intakeId + ')' : '') + ' — one note per interaction.',
     profiler_session_expired: 'Your Profiler sign-in has expired — open Profiler, sign in again, then tap ⇈ again.', profiler_admin_only: 'Profiler admits only its administrator to the intake.',
     profiler_rejected: 'Profiler refused the note' + (res && res.detail ? ' (' + res.detail + ')' : '') + '.', upstream_unreachable: 'Profiler could not be reached.',
@@ -7921,7 +7925,13 @@ function nwPromoteBox(host, ix) {
   var old = host.querySelector('.nw-promote'); if (old) old.remove();
   var box = nwEl('div', 'nw-promote'); box.setAttribute('data-id', ix.id);
   box.appendChild(nwEl('b', null, '⇈ Promote to a Profiler field note'));
-  box.appendChild(nwEl('small', null, (ix.date + ' ' + nwLabel('interactionKind', ix.kind) + (ix.summary ? ' — ' + ix.summary : '')) + '. Copied one-way into Profiler’s intake as a contact note with your confidence; the dossier is never edited and nothing here changes.'));
+  box.appendChild(nwEl('small', null, (ix.date + ' ' + nwLabel('interactionKind', ix.kind) + (ix.summary ? ' — ' + ix.summary : '')) + '. What you write goes one-way into Profiler’s intake as a contact note, with this touch attached as context and your confidence; the dossier is never edited and nothing here changes.'));
+  var tl = nwEl('label', 'nw-promote-lbl', 'What did you learn?'); tl.setAttribute('for', 'nw-promote-learned');
+  box.appendChild(tl);
+  var learned = document.createElement('textarea'); learned.id = 'nw-promote-learned'; learned.className = 'nw-promote-learned'; learned.rows = 4;
+  learned.maxLength = NW_PROMOTE_LEARNED_MAX; learned.required = true;
+  learned.placeholder = 'e.g. Their 2027 BESS tender opens in Q1; procurement now sits with the Austin team, not Houston.';
+  box.appendChild(learned);
   var row = nwEl('div', 'nw-promote-row');
   var lbl = nwEl('label', null, 'Confidence'); lbl.setAttribute('for', 'nw-promote-conf');
   var inp = document.createElement('input'); inp.type = 'number'; inp.min = '0'; inp.max = '100'; inp.step = '1'; inp.value = '70'; inp.id = 'nw-promote-conf'; inp.className = 'nw-promote-conf'; inp.setAttribute('aria-label', 'Confidence, 0 to 100');
@@ -7933,6 +7943,9 @@ function nwPromoteBox(host, ix) {
   function say(text, level) { status.textContent = text || ''; status.style.display = text ? '' : 'none'; status.className = 'nw-status nw-promote-status' + (level === 'err' ? ' nw-status-err' : level === 'ok' ? ' nw-status-ok' : level === 'warn' ? ' nw-status-warn' : ''); }
   go.addEventListener('click', function(ev) {
     ev.preventDefault(); ev.stopPropagation();
+    var text = learned.value.replace(/\s+/g, ' ').trim();
+    if (!text) { say(nwPromoteErrText('learned_required'), 'err'); learned.focus(); return; }
+    if (text.length > NW_PROMOTE_LEARNED_MAX) { say(nwPromoteErrText('learned_too_long'), 'err'); learned.focus(); return; }
     var conf = Math.round(Number(inp.value));
     if (!(conf >= 0 && conf <= 100)) { say(nwPromoteErrText('bad_confidence'), 'err'); return; }
     var tok = nwProfilerSession();
@@ -7942,16 +7955,16 @@ function nwPromoteBox(host, ix) {
       return;
     }
     go.disabled = true; say('Promoting…');
-    nwApiBody('promote', { interactionId: ix.id, confidence: String(conf), profilerSession: tok }, function(res) {
+    nwApiBody('promote', { interactionId: ix.id, confidence: String(conf), learned: text, profilerSession: tok }, function(res) {
       go.disabled = false;
       if (!(res && res.success)) { say('Not promoted — ' + nwPromoteErrText(res && res.error, res), res && res.error === 'duplicate' ? 'warn' : 'err'); return; }
       say('✓ Promoted — note ' + res.intakeId + ' in Profiler’s intake (' + (res.slug === 'general' ? 'General' : res.slug) + ', confidence ' + res.confidence + '/100). A note interaction records it here.', 'ok');
-      go.remove(); inp.disabled = true;
+      go.remove(); inp.disabled = true; learned.readOnly = true;
       box.setAttribute('data-promoted', res.intakeId || '1');
     });
   });
   host.appendChild(box);
-  inp.focus();
+  learned.focus();
 }
 
 // ── The pre-meeting brief (nop=brief → a .docx) ───────────────────────────

@@ -251,16 +251,18 @@ def gas_stub(role, counter, state=None):
             elif 'nop=promote' in post:
                 # N4 s2: one Interaction → Profiler's intake through its existing note op (relayed server-side); the note Interaction records it; a second promote is a duplicate
                 state['posts'].append(('promote', post))
-                iid, conf, ps = q(post, 'interactionId'), q(post, 'confidence'), q(post, 'profilerSession')
+                iid, conf, ps, learned = q(post, 'interactionId'), q(post, 'confidence'), q(post, 'profilerSession'), q(post, 'learned')
                 done = state.setdefault('promoted', {})
-                if not ps or len(ps) < 32:
+                if not (learned or '').strip():
+                    body = {'success': False, 'error': 'learned_required'}
+                elif not ps or len(ps) < 32:
                     body = {'success': False, 'error': 'profiler_session_required'}
                 elif iid in done:
                     body = {'success': False, 'error': 'duplicate', 'intakeId': done[iid]}
                 else:
                     done[iid] = 'note-20260923-%02d' % (len(done) + 1)
                     nid = 'i-%013d' % (900 + len(done))
-                    state.setdefault('interactions', []).append({'id': nid, 'contactId': 'c-0000000000001', 'kind': 'note', 'date': '2026-09-23', 'summary': 'Promoted to a Profiler field note (confidence %s/100)' % conf, 'evidence': 'promoted:%s:%s' % (iid, done[iid])})
+                    state.setdefault('interactions', []).append({'id': nid, 'contactId': 'c-0000000000001', 'kind': 'note', 'date': '2026-09-23', 'summary': 'Promoted to a Profiler field note (confidence %s/100): %s' % (conf, learned), 'evidence': 'promoted:%s:%s' % (iid, done[iid])})
                     body = {'success': True, 'interactionId': iid, 'contactId': 'c-0000000000001', 'intakeId': done[iid], 'slug': 'abb', 'confidence': int(float(conf)), 'noteInteractionId': nid}
             elif 'nop=peopleaccept' in url or 'nop=peopleaccept' in post:
                 # E4 s3: the accept step — one press-quote signal; the params (GET query or POST body — the page's
@@ -1556,11 +1558,16 @@ def run():
             failures.append('brief: an uncovered contact should say the dossier is not there')
         if ('/' + warm_acc.get('slug', '') + '.profile.json') not in ''.join(reqs) and warm_acc.get('slug'):
             pass   # the dossier may be cached from the on-record check earlier in this session — a fresh fetch is not required
-        # Promote: ⇈ on a History row → the confidence box → without a Profiler sign-in the box says so and posts nothing → with one, nop=promote carries the id, the confidence and the session
+        # Promote: ⇈ on a History row → the learned + confidence box → an empty "What did you learn?" is refused and posts nothing → without a Profiler sign-in the box says so and posts nothing → with one, nop=promote carries the id, the confidence, the learned text and the session
         n_posts = len(state['posts'])
         page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-detail dd.nw-history .nw-ix .nw-promote-btn' % warm['id'])
         page.wait_for_selector('#nw-rows .nw-row[data-id="%s"] .nw-row-detail .nw-promote .nw-promote-go' % warm['id'], timeout=5000)
         page.evaluate("() => { try { localStorage.removeItem('ov_note_session'); } catch (e) {} }")
+        page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-detail .nw-promote .nw-promote-go' % warm['id'])
+        page.wait_for_function("() => /Write what you learned/.test((document.querySelector('.nw-promote .nw-promote-status') || {}).textContent || '')", timeout=5000)
+        if len(state['posts']) != n_posts:
+            failures.append('promote: an empty "What did you learn?" should be refused with nothing posted')
+        page.fill('.nw-promote .nw-promote-learned', '  Tender opens in Q1;\n procurement moved to Austin. ')
         page.click('#nw-rows .nw-row[data-id="%s"] .nw-row-detail .nw-promote .nw-promote-go' % warm['id'])
         page.wait_for_function("() => /Sign in to Profiler/.test((document.querySelector('.nw-promote .nw-promote-status') || {}).textContent || '')", timeout=5000)
         if len(state['posts']) != n_posts or not page.query_selector('.nw-promote .nw-promote-status a[href="Profiler.html"]'):
@@ -1569,9 +1576,9 @@ def run():
         page.fill('.nw-promote .nw-promote-conf', '80'); page.click('.nw-promote .nw-promote-go')
         page.wait_for_function("() => /Promoted — note note-20260923-01/.test((document.querySelector('.nw-promote .nw-promote-status') || {}).textContent || '')", timeout=8000)
         pp = dict(_up.parse_qsl(state['posts'][-1][1])) if state['posts'][-1][0] == 'promote' else {}
-        if pp.get('interactionId') != 'i-0000000000002' or pp.get('confidence') != '80' or pp.get('profilerSession') != 'x' * 40 or 'promoted:i-0000000000002:note-20260923-01' != state['interactions'][-1].get('evidence') \
+        if pp.get('interactionId') != 'i-0000000000002' or pp.get('confidence') != '80' or pp.get('learned') != 'Tender opens in Q1; procurement moved to Austin.' or pp.get('profilerSession') != 'x' * 40 or 'promoted:i-0000000000002:note-20260923-01' != state['interactions'][-1].get('evidence') \
            or page.get_attribute('.nw-promote', 'data-promoted') != 'note-20260923-01' or page.query_selector('.nw-promote .nw-promote-go'):
-            failures.append('promote: expected one nop=promote post with the i- id, confidence 80 and the Profiler session, the note interaction recorded and the box closed to its result, got %r / %r' % (pp, state['interactions'][-1]))
+            failures.append('promote: expected one nop=promote post with the i- id, confidence 80, the whitespace-collapsed learned text and the Profiler session, the note interaction recorded and the box closed to its result, got %r / %r' % (pp, state['interactions'][-1]))
         page.evaluate("() => { try { localStorage.removeItem('ov_note_session'); } catch (e) {} }")
         # The map: vanilla SVG over the list payload — one node per account, contact and source event; tap to focus, tap again to open the row
         page.click('#nw-pill-map')
@@ -1635,7 +1642,7 @@ def run():
           'and Target · Discovery lands on both, the CSV downloads with a BOM and two rows, one row is deleted after a confirm naming the count; '
           'N3 s2: the vCard bundle, the PHOTO splice from Drive, the per-contact zip and the .xlsx download, three drafts from the default template, '
           'an edited draft round-trip, mailto: / Copy / the .eml bundle / .txt, sent → the email-out Interaction, discard, the Drafts pill, My card → the QR '
-          '(%s), and no send path in the served page or the .gs PROJECT region; N4 s1: every list row carries the server\'s warmth band as a chip, the Warmth sort orders hottest first without a request, the detail shows the cadence and the lapse, the Reconnect card lists the lapsed rows most overdue first and hands one to the drafts flow, and a pasted .ics proposes one matched and one unmatched row and records only the ticked one with the reference as evidence; no CalendarApp or calendar scope anywhere. N4 s2: the "Will be at" line is chips named by Events (a press quote as "Quoted in press"), 📄 Brief downloads a real .docx whose paragraphs carry every section and the dossier when covered after one nop=brief, ⇈ Promote refuses without a Profiler sign-in and posts the i- id, the confidence and the session with one, and the map draws one node per row, account and event with tap-to-focus and a second tap opening the row; no linkedin.com in the served page.' % ('matrix equal to python-qrcode' if qr_checked else 'python-qrcode not importable — module count only'))
+          '(%s), and no send path in the served page or the .gs PROJECT region; N4 s1: every list row carries the server\'s warmth band as a chip, the Warmth sort orders hottest first without a request, the detail shows the cadence and the lapse, the Reconnect card lists the lapsed rows most overdue first and hands one to the drafts flow, and a pasted .ics proposes one matched and one unmatched row and records only the ticked one with the reference as evidence; no CalendarApp or calendar scope anywhere. N4 s2: the "Will be at" line is chips named by Events (a press quote as "Quoted in press"), 📄 Brief downloads a real .docx whose paragraphs carry every section and the dossier when covered after one nop=brief, ⇈ Promote refuses an empty "What did you learn?" and a missing Profiler sign-in, and posts the i- id, the confidence, the learned text and the session with one, and the map draws one node per row, account and event with tap-to-focus and a second tap opening the row; no linkedin.com in the served page.' % ('matrix equal to python-qrcode' if qr_checked else 'python-qrcode not importable — module count only'))
     return 0
 
 

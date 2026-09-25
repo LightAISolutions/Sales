@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.49r] — 2026-09-25 06:08:32 AM EST
+
+> **Prompt:** "add the learned-text box to Promote"
+
+### Added
+
+#### `Network.html` (v01.25w)
+
+- **A required "What did you learn?" box in the ⇈ Promote box.** It is a textarea of up to 3,000 characters (`NW_PROMOTE_LEARNED_MAX`), focused when the box opens, and it comes before the confidence field. The page collapses whitespace, refuses an empty or over-long entry before any request, and sends the text as `learned` on `nop=promote`. The box goes read-only once promoted.
+  - **Why:** Network has no free-text touch. Every History row's summary is machine-written ("Card scanned", "Meeting at …"), so a promotion sent Profiler's intake the fact of a touch and never the intel.
+
+#### `Network.gs` (v01.18g)
+
+- **`nop=promote` takes `learned`.** It is required, whitespace-collapsed and at most 3,000 characters; the new refusals are `learned_required` and `learned_too_long` (with `max`), both raised before any call.
+  - **`nwPromoteText_`** now opens the note with the learned text, then ` — Context: ` and the unchanged context paragraph (kind, person, account, day, summary, `[Network interaction <i- id> · evidence · event]`), still capped at 4,000.
+  - **The recording `note` Interaction's Summary** gains `: <excerpt>`, the first 300 characters (`NW_PROMOTE_EXCERPT_MAX`, cut with …), so the intel is visible in Network's History too.
+  - **The audit is unchanged:** ids and a flag only, never the text.
+
+### Changed
+
+- **`repository-information/NETWORK-SCHEMA.md`**: the `nop=promote` contract (the `learned` field, the note's order, the Summary excerpt, the two refusals) and the checker line (60 checks).
+- **`scripts/check-network-brief.js`**: the learned text is required, bounded and leads the note, and its excerpt is in the Summary. 58 → 60 checks, all passing.
+- **`scripts/verify-network-roles.py`**: the Promote pass refuses an empty box with nothing posted, then checks that the whitespace-collapsed text rides the post. Passes.
 
 ## [v07.48r] — 2026-09-25 05:59:25 AM EST
 

@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkhtml.changelog-archive.md](Networkhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 24/50`
+`Sections: 25/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.25w] — 2026-09-25 06:08:32 AM EST — v07.49r
+
+### Added
+
+- **"What did you learn?" in the Promote box.** Promoting a touch to a Profiler field note now asks what you actually learned, and that is what Profiler receives, with the touch (who, when, which company) attached as context. Before, only the automatic line such as "Card scanned" went across, so the note said you met someone but not what they told you. The box is required, and the start of what you wrote also appears in the contact's History
 
 ## [v01.24w] — 2026-09-23 01:20:11 AM EST — v07.23r
 

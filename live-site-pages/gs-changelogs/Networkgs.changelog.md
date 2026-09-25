@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Networkgs.changelog-archive.md](Networkgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18g] — 2026-09-25 06:08:32 AM EST — v07.49r
+
+### Added
+
+- Field notes promoted to Profiler now lead with what you learned, followed by the context of the touch. A promotion without it is refused, and very long text is refused rather than cut off
+- The contact's History entry for a promotion now shows the start of what you learned
 
 ## [v01.17g] — 2026-09-23 03:09:19 AM EST — v07.25r
 

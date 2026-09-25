@@ -1,4 +1,4 @@
-var VERSION = "v01.17g";
+var VERSION = "v01.18g";
 var TITLE = "Network";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3313,6 +3313,8 @@ var PROFILER_INTAKE_EXEC =
   'https://script.google.com/macros/s/AKfycbwnpv-PYXK_7Wvp5ZAtnhZawcTWgc-8Df_1qKKoLsg9gGawIukAzU7H14aw9DOrVSJ3Tw/exec';
 var NW_PROMOTE_NOTE_MAX = 4000;        // Profiler's submitFieldNote text ceiling
 var NW_PROMOTE_MARK = 'promoted:';     // the note Interaction's Evidence Link prefix: promoted:<i- id>:<intake id>
+var NW_PROMOTE_LEARNED_MAX = 3000;     // what the developer learned — leaves the context line room under the ceiling
+var NW_PROMOTE_EXCERPT_MAX = 300;      // the part of it the Network note Interaction's Summary keeps
 var NW_BRIEF_SIGNALS_MAX = 50;         // signal rows carried on a brief
 
 // The live Signals rows of one account in scope, newest Last Seen first —
@@ -3406,17 +3408,20 @@ function nwBriefOp_(sess, p) {
            events: ev.events, eventsConfigured: ev.configured, warmth: warmth, stage: a ? a.stage : 'none' };
 }
 
-// The field note's text — the Interaction in one paragraph the intake can
-// triage: the kind, the person and their account, the day, the summary, the
-// event when there is one, and the i- id (plus the row's own evidence) as
-// the note's evidence. Bounded at Profiler's ceiling.
-function nwPromoteText_(c, a, ix) {
+// The field note's text — what the developer learned FIRST (the intel the
+// intake triages; the History row alone is machine-written and says only that
+// a touch happened), then the Interaction as one context paragraph: the kind,
+// the person and their account, the day, the summary, the event when there
+// is one, and the i- id (plus the row's own evidence) as the note's evidence.
+// Bounded at Profiler's ceiling.
+function nwPromoteText_(c, a, ix, learned) {
   var kind = String(ix.kind || 'note'), label = kind.charAt(0).toUpperCase() + kind.slice(1).replace(/-/g, ' ');
   var who = [c.fullName, [c.title, a && a.name].filter(Boolean).join(', ')].filter(Boolean);
   var head = label + ' with ' + who[0] + (who[1] ? ' (' + who[1] + ')' : '') + (ix.date ? ' on ' + ix.date : '');
   var body = nwStr_(ix.summary, 2000);
   var tail = 'Network interaction ' + ix.id + (ix.evidence ? ' · evidence ' + nwStr_(ix.evidence, 300) : '') + (ix.eventSlug ? ' · event ' + ix.eventSlug : '');
-  return nwStr_((head + (body ? ' — ' + body : '') + '. [' + tail + ']'), NW_PROMOTE_NOTE_MAX);
+  var context = head + (body ? ' — ' + body : '') + '. [' + tail + ']';
+  return nwStr_((learned ? learned + ' — Context: ' : '') + context, NW_PROMOTE_NOTE_MAX);
 }
 // The one call into Profiler — its existing note op (action=note, nop=submit),
 // exactly as the developer's note form calls it, with the developer's own
@@ -3435,9 +3440,10 @@ function nwProfilerIntake_(profilerSession, payload) {
   try { return JSON.parse(body); }
   catch (pErr) { return { success: false, error: 'upstream_not_json', detail: String(body || '').replace(/\s+/g, ' ').slice(0, 160) }; }
 }
-// nop=promote (body-POST) — interactionId, confidence (0–100), profilerSession.
+// nop=promote (body-POST) — interactionId, confidence (0–100), learned (what
+// the developer learned, required, ≤ NW_PROMOTE_LEARNED_MAX), profilerSession.
 // Refused by name before any call: bad_interaction_id, bad_confidence,
-// profiler_session_required, not_found (unowned rows answer not-found),
+// learned_required, learned_too_long, profiler_session_required, not_found (unowned rows answer not-found),
 // deleted (the contact), duplicate (already promoted — the note Interaction
 // carrying promoted:<i- id> exists), view_only. Profiler's own refusals are
 // relayed: profiler_session_expired, profiler_admin_only, profiler_rejected.
@@ -3449,6 +3455,9 @@ function nwPromoteOp_(sess, p) {
   if (!/^-?\d+(\.\d+)?$/.test(confRaw)) return { success: false, error: 'bad_confidence' };
   var confidence = Math.round(Number(confRaw));
   if (!(confidence >= 0 && confidence <= 100)) return { success: false, error: 'bad_confidence' };
+  var learned = nwStr_(p.learned).replace(/\s+/g, ' ');
+  if (!learned) return { success: false, error: 'learned_required' };
+  if (learned.length > NW_PROMOTE_LEARNED_MAX) return { success: false, error: 'learned_too_long', max: NW_PROMOTE_LEARNED_MAX };
   var profilerSession = nwStr_(p.profilerSession, 200);
   if (!profilerSession || profilerSession.length < 32) return { success: false, error: 'profiler_session_required' };
   var scopeRes = resolveOwnerScope_(sess, p.owner || '', true);
@@ -3470,7 +3479,7 @@ function nwPromoteOp_(sess, p) {
   var a = af ? nwAccountPublic_(af.obj) : null;
   var slug = (a && NW_PEER_SLUG_RE.test(String(a.slug || ''))) ? String(a.slug) : 'general';
   var row = { id: ix['Interaction ID'], kind: ix['Kind'], date: String(ix['Date'] || '').slice(0, 10), summary: ix['Summary'], evidence: ix['Evidence Link'], eventSlug: ix['Event Slug'] };
-  var payload = { slug: slug, sourceType: 'contact', note: nwPromoteText_(c, a, row), confidence: confidence };
+  var payload = { slug: slug, sourceType: 'contact', note: nwPromoteText_(c, a, row, learned), confidence: confidence };
   var res = nwProfilerIntake_(profilerSession, payload);
   if (!(res && res.success)) {
     var why = String((res && res.error) || 'upstream_empty');
@@ -3482,7 +3491,8 @@ function nwPromoteOp_(sess, p) {
   }
   var intakeId = nwStr_(res.id, 60), now = nwNow_();
   var noteId = nwInteractionAdd_(tabs, owner, cid, c.accountId, 'note', now.slice(0, 10),
-    'Promoted to a Profiler field note (confidence ' + confidence + '/100)', NW_PROMOTE_MARK + iid + ':' + intakeId, row.eventSlug, now, {});
+    'Promoted to a Profiler field note (confidence ' + confidence + '/100): '
+      + (learned.length > NW_PROMOTE_EXCERPT_MAX ? learned.slice(0, NW_PROMOTE_EXCERPT_MAX - 1) + '…' : learned), NW_PROMOTE_MARK + iid + ':' + intakeId, row.eventSlug, now, {});
   bumpDataRev();
   auditLog('data_write', sess.email, 'network_promote', { interactionId: iid, contactId: cid, ok: 1 });
   return { success: true, interactionId: iid, contactId: cid, intakeId: intakeId, slug: slug, confidence: confidence, noteInteractionId: noteId };

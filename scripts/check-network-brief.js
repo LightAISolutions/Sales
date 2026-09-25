@@ -122,7 +122,7 @@ vm.runInContext('var SPREADSHEET_ID = "stub";\n' + [
   'NW_RELATIONSHIPS', 'NW_STAGES', 'NW_ROLES', 'NW_INTERACTION_KINDS', 'NW_SIGNAL_KINDS', 'NW_CONSENT', 'NW_ID_RE', 'NW_ID_PREFIXES', 'NW_TABS', 'NW_ROLE_CAPS',
   'NW_STAGE_RELATIONSHIPS', 'NW_DATE_RE', 'NW_WARMTH_WEIGHTS', 'NW_WARMTH_HALF_LIFE_DAYS', 'NW_WARMTH_BANDS', 'NW_CADENCE_DAYS',
   'NW_PEER_TOKEN_PROP', 'NW_EVENTS_TOKEN_PROP', 'EVENTS_PEER_EXEC', 'NW_PEER_SLUG_RE',
-  'PROFILER_INTAKE_EXEC', 'NW_PROMOTE_NOTE_MAX', 'NW_PROMOTE_MARK', 'NW_BRIEF_SIGNALS_MAX'
+  'PROFILER_INTAKE_EXEC', 'NW_PROMOTE_NOTE_MAX', 'NW_PROMOTE_MARK', 'NW_PROMOTE_LEARNED_MAX', 'NW_PROMOTE_EXCERPT_MAX', 'NW_BRIEF_SIGNALS_MAX'
 ].map((n) => constant(nwSrc, n)).join('\n') + '\n'
   + 'function resolveOwnerSet_(user, forOwner) { var set = {}; set[String(user.email).toLowerCase()] = "own"; if (user.also) set[user.also] = "view"; return { set: set }; }\n'
   + 'function resolveOwnerScope_(user, forOwner, needEdit) { var me = String(user.email).toLowerCase(); var t = String(forOwner || "").toLowerCase(); if (!t || t === me) return { owner: me, scope: "own" }; if (user.also === t) return needEdit ? { error: "view_only" } : { owner: t, scope: "view" }; return { error: "not_shared" }; }\n'
@@ -257,10 +257,13 @@ ok(NW.__counters.disclosures.length === dBefore + 1 && audits('network_brief').l
 
 // 3. nop=promote
 const PSESS = 'profiler-session-token-abcdefghijklmnop';
-const promote = (sess, p) => nw('nwPromoteOp_')(sess, p);
+const LEARNED = 'Their 2027 tender opens in Q1; procurement moved to Austin.';
+const promote = (sess, p) => nw('nwPromoteOp_')(sess, Object.assign({ learned: LEARNED }, p));
 f0 = NW.__counters.fetch; let n0 = ixRows();
 ok(promote(SESS, { interactionId: 'nope', confidence: 70, profilerSession: PSESS }).error === 'bad_interaction_id' && promote(SESS, { interactionId: 'c-0000000000001', confidence: 70, profilerSession: PSESS }).error === 'bad_interaction_id', 'promote: bad_interaction_id');
 ok(['-1', '101', 'x', ''].every((c) => promote(SESS, { interactionId: 'i-0000000000002', confidence: c, profilerSession: PSESS }).error === 'bad_confidence'), 'promote: the confidence is bounded 0–100 (−1, 101, x, empty refused)');
+ok(['', '   ', null].every((t) => promote(SESS, { interactionId: 'i-0000000000002', confidence: 70, learned: t, profilerSession: PSESS }).error === 'learned_required'), 'promote: what was learned is required (empty, blank and missing refused)');
+ok(promote(SESS, { interactionId: 'i-0000000000002', confidence: 70, learned: 'x'.repeat(3001), profilerSession: PSESS }).error === 'learned_too_long' && nw('NW_PROMOTE_LEARNED_MAX') === 3000, 'promote: what was learned is bounded at 3,000 characters');
 ok(promote(SESS, { interactionId: 'i-0000000000002', confidence: 70 }).error === 'profiler_session_required' && promote(SESS, { interactionId: 'i-0000000000002', confidence: 70, profilerSession: 'short' }).error === 'profiler_session_required', 'promote: no or a short Profiler session is refused by name');
 ok(promote(SESS, { interactionId: 'i-0000000000006', confidence: 70, profilerSession: PSESS }).error === 'not_found' && promote(SESS, { interactionId: 'i-0000000000009', confidence: 70, profilerSession: PSESS }).error === 'not_found', 'promote: another owner\'s row and an unknown id answer not_found');
 ok(promote(SESS, { interactionId: 'i-0000000000005', confidence: 70, profilerSession: PSESS }).error === 'deleted', 'promote: a row on a deleted contact is refused');
@@ -272,11 +275,11 @@ ok(r.success && r.intakeId === 'note-20260923-01' && r.interactionId === 'i-0000
 const call = stubs.profiler.calls[0];
 ok(stubs.profiler.calls.length === 1 && call.url === PROFILER_EXEC && call.method === 'post' && call.payload.action === 'note' && call.payload.nop === 'submit' && call.payload.session === PSESS && call.payload.sourceType === 'contact' && call.payload.slug === 'acme-storage' && call.payload.confidence === '72',
    'promote: ONE post to Profiler\'s existing note op — action=note · nop=submit · the developer\'s session · sourceType=contact · the slug · the confidence');
-ok(call.payload.note.indexOf('Meeting with Jane Doe (VP Storage, Acme Storage) on ' + ago(10)) === 0 && call.payload.note.indexOf('Booth chat — wants a 34.5 kV quote') > 0 && call.payload.note.indexOf('[Network interaction i-0000000000002 · event re-plus-2026]') > 0 && call.payload.note.length <= 4000,
-   'promote: the note text — the kind, the person and account, the day, the summary, the i- id as evidence and the event (' + JSON.stringify(call.payload.note) + ')');
+ok(call.payload.note.indexOf(LEARNED + ' — Context: Meeting with Jane Doe (VP Storage, Acme Storage) on ' + ago(10)) === 0 && call.payload.note.indexOf('Booth chat — wants a 34.5 kV quote') > 0 && call.payload.note.indexOf('[Network interaction i-0000000000002 · event re-plus-2026]') > 0 && call.payload.note.length <= 4000,
+   'promote: the note text — what was learned first, then the context: the kind, the person and account, the day, the summary, the i- id as evidence and the event (' + JSON.stringify(call.payload.note) + ')');
 ok(ixRows() === n0 + 1 && NW.__counters.revs === 1, 'promote: exactly one Interaction appended, the data revision bumped once');
 const last = tabs.interactions.rows[tabs.interactions.rows.length - 1], col = (n) => H('interactions').indexOf(n);
-ok(last[col('Kind')] === 'note' && last[col('Contact ID')] === 'c-0000000000001' && last[col('Account ID')] === 'a-0000000000001' && last[col('Evidence Link')] === 'promoted:i-0000000000002:note-20260923-01' && last[col('Summary')] === 'Promoted to a Profiler field note (confidence 72/100)' && last[col('Event Slug')] === 're-plus-2026' && last[col('Date')] === now.slice(0, 10),
+ok(last[col('Kind')] === 'note' && last[col('Contact ID')] === 'c-0000000000001' && last[col('Account ID')] === 'a-0000000000001' && last[col('Evidence Link')] === 'promoted:i-0000000000002:note-20260923-01' && last[col('Summary')] === 'Promoted to a Profiler field note (confidence 72/100): ' + LEARNED && last[col('Event Slug')] === 're-plus-2026' && last[col('Date')] === now.slice(0, 10),
    'promote: the note Interaction — kind note, the contact and account, promoted:<i- id>:<intake id> as its evidence, the source row\'s event');
 const src = tabs.interactions.rows.find((x) => x[0] === 'i-0000000000002');
 ok(src[col('Evidence Link')] === '' && src[col('Summary')] === 'Booth chat — wants a 34.5 kV quote', 'promote: the source Interaction is untouched (§3 — its Evidence Link keeps its own evidence)');
@@ -286,9 +289,9 @@ f0 = NW.__counters.fetch; n0 = ixRows();
 r = promote(SESS, { interactionId: 'i-0000000000002', confidence: 90, profilerSession: PSESS });
 ok(r.error === 'duplicate' && r.intakeId === 'note-20260923-01' && NW.__counters.fetch === f0 && ixRows() === n0, 'promote: a second promote of the same row is refused as duplicate with zero calls and nothing written');
 r = promote(SESS, { interactionId: 'i-0000000000003', confidence: 55, profilerSession: PSESS });
-ok(r.success && stubs.profiler.calls[1].payload.note.indexOf('Email out with Jane Doe') === 0 && stubs.profiler.calls[1].payload.note.indexOf('· evidence d-0000000000001') > 0 && !/· event/.test(stubs.profiler.calls[1].payload.note), 'promote: a row with its own evidence carries it into the note; no event when the row names none');
+ok(r.success && stubs.profiler.calls[1].payload.note.indexOf(LEARNED + ' — Context: Email out with Jane Doe') === 0 && stubs.profiler.calls[1].payload.note.indexOf('· evidence d-0000000000001') > 0 && !/· event/.test(stubs.profiler.calls[1].payload.note), 'promote: a row with its own evidence carries it into the note; no event when the row names none');
 r = promote(SESS, { interactionId: 'i-0000000000004', confidence: 40, profilerSession: PSESS });
-ok(r.success && r.slug === 'general' && stubs.profiler.calls[2].payload.slug === 'general' && stubs.profiler.calls[2].payload.note.indexOf('Note with Sam Pen (VP Storage, Bolt Supply)') === 0, 'promote: an uncovered account goes to the intake\'s general slug with the company named in the text');
+ok(r.success && r.slug === 'general' && stubs.profiler.calls[2].payload.slug === 'general' && stubs.profiler.calls[2].payload.note.indexOf(LEARNED + ' — Context: Note with Sam Pen (VP Storage, Bolt Supply)') === 0, 'promote: an uncovered account goes to the intake\'s general slug with the company named in the text');
 ix('i-0000000000010', OWNER, 'c-0000000000001', 'a-0000000000001', 'call', ago(1), 'Pricing call');
 n0 = ixRows();
 stubs.profiler.mode = 'expired'; r = promote(SESS, { interactionId: 'i-0000000000010', confidence: 70, profilerSession: PSESS });
