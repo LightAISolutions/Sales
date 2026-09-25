@@ -4,6 +4,7 @@ paths:
   - "googleAppsScripts/Events/Events.gs"
   - "live-site-pages/events-data/**"
   - "repository-information/EVENTS-SCHEMA.md"
+  - "repository-information/events-discovery-queue.json"
 ---
 
 # Events App — the `events sync` and `events plan` Commands
@@ -57,13 +58,49 @@ Only `approved` rows are exported. If the developer pastes nothing and the Drive
 
 - Never fetches an organiser page as a poll — it may read an evidence URL to fill a `new-event` row's fields, and says so in the SUMMARY with the date
 - Never writes `mentions[]` (only `scripts/extract-corpus-events.py` does)
-- Never adds a roster row, unblocks a blocked row or substitutes a feed
+- Never adds a roster row, unblocks a blocked row or substitutes a feed — the one exception is `events sync discovery` below, which writes a candidate's `rosterRow` only after re-probing it live
 - Never calls the deployed app — no `eop=…`, no peer token; `EVENTS_PEER_TOKEN` and `NETWORK_PEER_TOKEN` are never widened for a session
 - Never promotes a `new-edition` / `new-event` row to `confirmed`
 
 ## Hand-off after the first live cycle
 
 The poller's first live run is the developer's: redeploy `Events.gs`, open the **Proposed** tab, tap **Install poller** (the first `ScriptApp.newTrigger` asks for the script's own authorisation — accept it in the Apps Script editor if the panel reports a scope error, then tap again), tap **Poll now**, approve one row, then run `events sync` in a fresh session with the copied JSON. The registry's E0 note about COMPUTEX (`robots: disallowed`) holds: the poller skips that row, and this command never writes it.
+
+---
+
+# The discovery run (R) and `events sync discovery`
+
+*Design: `NETWORK-EVENTS-DESIGN-PLAN.md` §5.3 (Discovery Routine) and §8's R row; shape: `EVENTS-SCHEMA.md` §7.1; the Routine's prompt: `ROUTINES-OPERATIONS.md` → "Events discovery — quarterly". The procedure lives here, not in the prompt, because a Routine's prompt cannot be edited after it is created and this file can.*
+
+## The discovery run — what the quarterly Routine does
+
+The run **proposes**; it never writes `events.json`, `events-sources.json` or `events.ics`. Its only data write is appending candidates to `repository-information/events-discovery-queue.json` and setting its `updated`.
+
+1. **Read the ground** — `events.json` (slugs, `series`, `start`), `events-sources.json` (keys, hosts, `blocked` reasons), the queue (every candidate in every status — a `rejected` one is never re-proposed), `profiler-segments.json` (the segment ids) and `profiler-companies.json` (the covered companies).
+2. **Search the five source classes, in this order**, stopping once five candidates qualify:
+   1. `corpus-mention` — `grep -il` the dossiers (`live-site-pages/profiler-data/*.profile.json`) for `conference|summit|expo|forum|symposium|technical conference` in `recentDevelopments[]` and `sources[]`, and keep names that match no registry `series`
+   2. `roster-organiser` — each **unblocked** roster row's events page, for a series the registry does not carry
+   3. `covered-company` — the events / "meet us at" pages of covered companies in the `core` segments
+   4. `trade-body` — ACP, SEIA, ESA, NAATBatt, 7x24 Exchange, AFCOM, iMasons, Data Center Coalition, NEMA, IEEE PES
+   5. `grid-operator-regulator` — ERCOT, PJM, CAISO, MISO, SPP, NYISO, ISO-NE stakeholder forums; FERC and NERC technical conferences; state-commission large-load proceedings with a public hearing date
+3. **Read the organiser's own page for every candidate** (WebFetch). If it cannot be read, the candidate is **not proposed** — a date or venue from memory, a search snippet or an aggregator is never a candidate. Never LinkedIn, 10times, Google News or an attendee list; a blocked roster row may be the `sourceKey`, but the evidence must still be a page this run read.
+4. **Apply the bar** (`EVENTS-SCHEMA.md` §7.1): relevance ≥ 3, audience ≥ 1, not a webinar, start in [run date + 21 days, + 18 months], US/CA (or a `mega` at relevance ≥ 4 anywhere), grounded (a dossier names it, the organiser is on the roster, or ≥ 2 covered companies appear on the organiser's page), and no duplicate of the registry (slug, or series + year) or of any queue row.
+5. **Write each candidate** in the §7.1 shape with `status: "pending"`, `proposedBy: "discovery-routine"`, `proposedAt` = the run date. A candidate whose organiser is not on the roster carries a `rosterRow` with a live probe **this run** made: `curl -sS -o /dev/null -w '%{http_code}'` for the status, `/robots.txt` read for the path, `feedKind` from what the page actually serves (a JSON-LD `Event` → `jsonld`; else `html`), `cadence: manual` unless it is `jsonld`, `itemCount` / `newestItem` from the page. An organiser the sandbox refuses (a 403 / challenge) gets `blocked: "<reason> <date>"`, never a substituted feed.
+6. **The gate** — `python3 scripts/check-events-registry.py` exits 0. A finding on a candidate removes that candidate (report it and why); never edit the checker, never touch another file to pass it.
+7. **Commit only if at least one candidate was written** — one commit under the normal Pre-Commit and Pre-Push checklists: CHANGELOG entry naming the slugs proposed, repo version bump, README timestamp. No page, GAS or changelog-page bump: no app file changes.
+8. **Stand down otherwise** — no commit, no file changed, no branch pushed — and report why, by class.
+
+**The run never:** calls the deployed app, uses a peer token, reads either spreadsheet, writes `events.json` / `events-sources.json` / `events.ics`, writes `mentions[]`, promotes a candidate, or creates, updates or deletes a Routine.
+
+## `events sync discovery` — promoting candidates (a developer session)
+
+When the developer says **"events sync discovery"** with decisions ("approve `a`, `b`; reject `c` because …"), or asks to review the queue:
+
+1. With no decisions given, list every `pending` candidate (slug, name, dates, city, relevance, `why`, evidence URL) and stop — the developer decides.
+2. Set each named candidate's `status` (`approved` / `rejected`), `decidedAt` = today and, for a rejection, `decisionNote`.
+3. For each **approved** candidate: re-read the organiser page (dates, venue); a changed fact is corrected in the row and reported; an unreadable page leaves the candidate `approved` and unapplied, reported. If it carries a `rosterRow`, **re-probe it live** and append it to `events-sources.json` with that probe (this is the only path by which a session adds a roster row outside E0). Append the event to `events.json` by step 3's `new-event` rule above, `status: tentative`, `lastUpdated` = today, `sources[]` = one entry `{ sourceKey, kind: <the roster row's feedKind>, url: <the organiser evidence url>, lastConfirmed: today }`. Then set the candidate `applied` with `appliedIn` = the repo version this push becomes.
+4. Steps 5–7 of the sync procedure (sort, stamp, `build-events-ics.py`, the checker at exit 0 — revert all four files on any finding), then `python3 scripts/extract-corpus-events.py --check`.
+5. Commit and push under the normal checklists; the CHANGELOG names the slugs applied and rejected. The spreadsheet is not touched — there is nothing to mark applied in the app.
 
 ---
 

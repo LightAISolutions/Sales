@@ -12,7 +12,7 @@
 4. The source roster — `events-sources.json`
 5. Private tabs — `Stars`, `Plans`, `Meetings`, `Proposed`, `Tuning`
 6. The recommendation score (E3) — terms and default weights
-7. The `Proposed` diff row and `events sync` (E2)
+7. The `Proposed` diff row and `events sync` (E2) — 7.1 The discovery queue (R)
 8. Peer ops — `eop=today|starred|signals` (the bridge)
 9. ICS and Add-to-Google-Calendar mappings
 10. Venues (D12 — Overpass)
@@ -158,7 +158,33 @@ The trigger handler is the public `evPollTick()` (a time-driven trigger cannot t
 
 **The sync JSON** (the panel's "Copy as JSON"; `.claude/rules/events-app.md` reads it): `{ schemaVersion: 1, exported, proposals: [the approved rows above minus status / appliedIn], polls: [as above] }`.
 
-`events sync` (a session command, `.claude/rules/events-app.md`, written in E2) takes that JSON (or, when the Google Drive connector can read the Events spreadsheet, the `Proposed` tab's `approved` rows and the `Polls` tab directly — tried, reported, never depended on), applies each row to `events.json` (the field the Change names; `lastUpdated`; the matching `sources[].lastConfirmed` = Seen At's date; a `new-edition` / `new-event` row appended in the §3 shape with `status` `tentative`), advances the roster's `lastProbe` from `polls[]`, rebuilds `events.ics`, runs the checker (exit 0 is the gate — a failing apply is reverted, never committed half-way), and lists the `pr-` ids and the version for the developer to stamp with **Mark applied** — the session never calls the app. Mark applied stamps every approved row at once, so any approved row the sync skipped must be switched to Reject **before** it is clicked (the ordering is in the rule's step 8). The quarterly discovery Routine (phase R) proposes `new-event` rows the same way.
+`events sync` (a session command, `.claude/rules/events-app.md`, written in E2) takes that JSON (or, when the Google Drive connector can read the Events spreadsheet, the `Proposed` tab's `approved` rows and the `Polls` tab directly — tried, reported, never depended on), applies each row to `events.json` (the field the Change names; `lastUpdated`; the matching `sources[].lastConfirmed` = Seen At's date; a `new-edition` / `new-event` row appended in the §3 shape with `status` `tentative`), advances the roster's `lastProbe` from `polls[]`, rebuilds `events.ics`, runs the checker (exit 0 is the gate — a failing apply is reverted, never committed half-way), and lists the `pr-` ids and the version for the developer to stamp with **Mark applied** — the session never calls the app. Mark applied stamps every approved row at once, so any approved row the sync skipped must be switched to Reject **before** it is clicked (the ordering is in the rule's step 8). The quarterly discovery Routine (phase R) proposes into a repo-side queue instead — §7.1.
+
+### 7.1 · The discovery queue — `repository-information/events-discovery-queue.json` (R, 2026-09-25)
+
+The quarterly discovery Routine (phase **R**) cannot reach the `Proposed` tab: a fired session never calls the deployed app and never holds a peer token, and the spreadsheet is the app's. So R proposes into a **repo-side queue** instead — §8's "calendar-file-as-queue", the pattern of `profiler-refresh-calendar.json` — and a session promotes from it. It lives in `repository-information/`, **not** `live-site-pages/`: a pending candidate is unverified and must not deploy. The `Proposed` tab stays the poller's queue for feed diffs; the two never mix.
+
+`{ schemaVersion: 1, updated: "YYYY-MM-DD", candidates: [ … ] }` — candidates are appended, never deleted: a `rejected` row is the memory that stops the next run re-proposing it.
+
+| Field | Type | Meaning |
+|---|---|---|
+| `slug` | string | The §1 slug the event row would carry; unique in the queue; must **not** exist in `events.json` unless `status` is `applied` |
+| `status` | enum | `pending` (written by a run) · `approved` · `rejected` (the developer's decision) · `applied` (promoted into `events.json`) |
+| `proposedAt` · `proposedBy` | date · `discovery-routine` \| `session` | When and by what the candidate was written |
+| `sourceClass` | enum | Where the run found it: `corpus-mention` (a dossier names it) · `roster-organiser` (a roster organiser's events page) · `covered-company` (a covered company's own events / "meet us at" page) · `trade-body` (ACP, SEIA, ESA, 7x24, AFCOM, iMasons, NAATBatt, DCC …) · `grid-operator-regulator` (ISO/RTO stakeholder forums, FERC / NERC / state-commission technical conferences) |
+| `event` | object | The §3 row as it would be written, minus `sources[]` / `mentions[]` / `status` / `lastUpdated` (promotion adds them): `name`, `series`, `organiser`, `kind`, `start`, `end`, `tz`, `city`, `region`, `country`, `venue`?, `website`, `registrationUrl`? `exhibitorListUrl`? `agendaUrl`? `speakersUrl`?, `audience[]` (segment ids), `relevance` 1–5, `tierNote` |
+| `sourceKey` | string | The roster key the row will cite — an existing key, or the key of `rosterRow`. Never `10times-listings` |
+| `rosterRow` | object | Required only when `sourceKey` is not on the roster: a full §4 row with the run's own live probe in `lastProbe`. Promotion **re-probes** before writing it |
+| `evidence[]` | `[{ url, readAt, what }]` | ≥ 1; every page the run actually read, and at least one on the organiser's own site (`event.website`'s host). Never LinkedIn, 10times, Google News or an attendee list |
+| `corpus[]` | `[{ slug, why }]` | The dossiers that ground relevance — a dossier that names the event, or a covered company named as exhibitor / speaker / sponsor on the organiser's page; every `slug` must be a Profiler dossier |
+| `why` | string | One line: why a BESS / AIDC seller should care |
+| `decidedAt` · `decisionNote` · `appliedIn` | date · string · `vXX.XXr` | Set by the promoting session; `decidedAt` required once decided, `appliedIn` once applied |
+
+**The candidate bar** (the Routine applies it; `.claude/rules/events-app.md` → "The discovery run" is the procedure): `relevance` ≥ 3 · `audience[]` ≥ 1 · `kind` ≠ `webinar` · `start` between the run date + 21 days and + 18 months · `country` `US` or `CA`, or anywhere for `kind: mega` with `relevance` ≥ 4 · **grounded** by at least one of: a dossier naming it, an organiser already on the roster, or ≥ 2 covered companies named on the organiser's own page · not a duplicate of any registry row (slug, or series + year) or of any queue row in any status. **At most five new candidates per run.**
+
+**Promotion** is `events sync discovery` (`.claude/rules/events-app.md`): the developer names the slugs to approve and reject; the session re-reads each approved candidate's organiser page, re-probes any new roster row, appends the event by the `new-event` rule of the sync procedure (`status: tentative`, `sources[]` = `{ sourceKey, kind: the roster row's feedKind, url: the organiser evidence url, lastConfirmed: today }`), stamps the candidate `applied` with the repo version, and gates on the checker.
+
+**Checker:** `check-events-registry.py` validates the file when it exists — every rule in the table and the bar's mechanical half (dedup against the registry, no past `pending` candidate, the roster link, segment ids, dossier slugs, organiser-site evidence, forbidden hosts).
 
 ## 8 · Peer ops — the bridge (`?action=peer&t=<EVENTS_PEER_TOKEN>&eop=…`)
 
@@ -242,7 +268,7 @@ The registry's counts (how many events, how many mentions) are **never** lesson 
 
 ## 12 · Checkers
 
-- `scripts/check-events-registry.py` (E0) — asserts: every slug matches the rule and is unique; `start` ≤ `end`; `tz` is a known IANA name; every `audience[]` id exists in `profiler-segments.json`; every `sources[].sourceKey` exists in the roster and `sources[].url`'s host appears on that roster row; every `mentions[].slug` resolves to a registry company; every row has `lastUpdated` and ≥ 1 `sources[]` row with `lastConfirmed`; no roster row lacks a `lastProbe`; `status = past` iff `end` < today; the `.ics` parses (a minimal `VEVENT` walker in the script). Exit 1 on any finding; `--fix-past` flips `status` only
+- `scripts/check-events-registry.py` (E0) — asserts: every slug matches the rule and is unique; `start` ≤ `end`; `tz` is a known IANA name; every `audience[]` id exists in `profiler-segments.json`; every `sources[].sourceKey` exists in the roster and `sources[].url`'s host appears on that roster row; every `mentions[].slug` resolves to a registry company; every row has `lastUpdated` and ≥ 1 `sources[]` row with `lastConfirmed`; no roster row lacks a `lastProbe`; `status = past` iff `end` < today; the `.ics` parses (a minimal `VEVENT` walker in the script); since R (2026-09-25) the discovery queue per §7.1. Exit 1 on any finding; `--fix-past` flips `status` only
 - `scripts/extract-corpus-events.py` (E0) — walks every dossier's `recentDevelopments[]`, `productsAndServices[]`, `technicalSpecs[]`, `strategyRead[]` and `sources[]` for the known event strings (a table in the script, one row per corpus event with its regex and slug), emits `mentions[]` and a seed row per event not yet in the registry; idempotent
 - `scripts/verify-events-roles.py` (E1) — the four-tier door check
 - `scripts/check-events-poller.js` (E2) — the poller in a Node sandbox (stubbed `UrlFetchApp` / `SpreadsheetApp` / `ScriptApp`; the ICS fixture built by `build-events-ics.py`'s own `calendar()`): the six diff kinds one row each with the right Before · After, a second run zero rows, the blocked / manual / html / robots-disallowed rows never fetched, a 403 one `Polls` row and one audit row and no proposal, the five ops refused to a non-admin with zero reads, `installpoller` idempotent. Zero live calls

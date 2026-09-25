@@ -247,4 +247,95 @@ which a normal session can do; a prompt cannot be edited after this Routine is c
 
 Everything else in the quarterly prompt — the per-company research priorities, the archival procedure, the schema-v2 requirements, the Playwright check, the single commit — stays as written. The per-company `watch[]` arrays in the calendar rows already carry what the inline paragraph used to say, and unlike the prompt they can be updated by a commit.
 
+### Events discovery — quarterly (R, written 2026-09-25 — prompt written, awaiting UI creation)
+
+A new Routine, not a rebuild: phase **R** of `NETWORK-EVENTS-DESIGN-PLAN.md`. It proposes new events into a **repo-side queue**, `repository-information/events-discovery-queue.json` (`EVENTS-SCHEMA.md` §7.1), because a fired session cannot reach the Events spreadsheet's `Proposed` tab and must never call the app. A developer session promotes candidates with `events sync discovery`. The procedure lives in `.claude/rules/events-app.md` → "The discovery run (R)", not in this prompt, so it can change by commit. STEP 0 is copied verbatim from the desk's prompt above.
+
+**Creation settings**, all on the claude.ai **New routine** form. The repository must be attached there, because it cannot be added afterwards:
+- **Name:** `Events discovery — quarterly`
+- **Repository:** `LightAISolutions/Sales`. Confirm the **Runs with** card shows it before relying on a run.
+- **Environment:** the one the earnings desk runs with.
+- **Model:** default, which is Sonnet 5 (evaluated 2026-09-21). Every candidate passes a human decision and a re-read of the organiser page before it reaches the registry, so a bad proposal is caught before it lands. That is the test for Sonnet over Opus. Never Fable.
+- **Connectors:** none. Remove every connector the form pre-loads.
+- **Schedule:** the form offers presets only (hourly, daily, weekdays, weekly). Create it on the **Weekly** preset, then set `CRON_TZ=America/New_York 50 8 8 3,6,9,12 *` with `update_trigger` from a developer session. That is the 8th of March, June, September and December at 08:50 ET, and the first scheduled fire is Tuesday 2026-12-08. The **Run now** at creation is the Q4 2026 pass.
+- **Run budget:** at most three Routine runs start on any 8th (the ACL check, the desk on a weekday, and this one), against four on the 1st of a quarter month.
+
+```text
+STEP 0 — CLONE, THEN PROVE YOU CAN PUSH, BEFORE ANY RESEARCH. This Routine fires into a session
+with NO repository source. On 2026-09-16 a run completed a full IREN/Jinko/Oracle refresh, committed
+it locally as a378a96, and was DENIED on push — every minute of that work was thrown away. Do not
+repeat it. Establish the push path first, while it still costs nothing.
+  a. git clone https://github.com/LightAISolutions/Sales.git /home/user/Sales
+     The session's git proxy authenticates transparently — no token, no `gh`, no credentials.
+     If /home/user/Sales already exists with a clean `git status`, it is already cloned: just cd in.
+  b. cd /home/user/Sales && git fetch --unshallow origin main || true
+     Do this BEFORE reading any version pin, any `git log` date or any `--check` result — a shallow
+     clone reports false staleness.
+  c. PROVE PUSH WORKS NOW, before researching anything:
+       git push --dry-run origin HEAD:refs/heads/claude/pushprobe-$(date +%Y%m%d)
+     This authenticates against the remote without creating or changing anything.
+  d. IF THE DRY-RUN PUSH IS DENIED, STOP IMMEDIATELY. Do no research, verify no reports, write no
+     dossier, advance no calendar row, make no commit. Report the exact git error verbatim and end
+     the run. A queue row left due is recoverable; an hour of research that cannot be pushed is not.
+  e. Read CLAUDE.md and the rules files you need EXPLICITLY — they do NOT auto-load in this session,
+     so the Pre-Commit and Pre-Push checklists are not in your context until you read them yourself.
+
+  DO NOT look for `add_repo` or `register_repo_root`. Those tools do NOT exist in a Routine-fired
+  session — verified 2026-09-16, both return "No matching deferred tools found". Searching for them
+  only wastes turns. `git clone` is the supported path.
+
+Only once the clone exists AND the dry-run push succeeded, do the following:
+
+You are a fresh session in the LightAISolutions/Sales repo, running the Events discovery
+Routine (phase R of repository-information/NETWORK-EVENTS-DESIGN-PLAN.md). Nobody is watching
+and you cannot ask anyone anything.
+
+READ FIRST, explicitly, before any web research:
+  1. .claude/rules/events-app.md → "The discovery run (R) and `events sync discovery`". That
+     section is the procedure: the five source classes, the bar, the probe, the gate. Follow it.
+  2. repository-information/EVENTS-SCHEMA.md §7.1 (the queue's shape), §3 (the event row), §4
+     (the roster row).
+  3. .claude/rules/scraper-sources.md — probe live before proposing a source; never substitute a
+     feed for a blocked one.
+
+THE QUEUE: repository-information/events-discovery-queue.json. It is the ONLY data file this run
+writes. Append candidates with status "pending", proposedBy "discovery-routine", proposedAt =
+today, and set "updated" to today. Never edit or remove an existing candidate, whatever its
+status — a "rejected" row is what stops you re-proposing it.
+
+NEVER write live-site-pages/events-data/events.json, events-sources.json or events.ics. NEVER
+call the deployed Events or Network app, use or ask for a peer token, or read either spreadsheet.
+NEVER use LinkedIn, 10times, Google News or an attendee list as a source. NEVER propose an event
+whose organiser page you did not read in this run — no dates, venues or cities from memory.
+NEVER create, update or delete a Routine/trigger.
+
+CAP: at most FIVE new candidates per run, taken in the rules file's source-class order. If more
+qualify, name the overflow in the report; the next quarter will find them again.
+
+THE GATE: python3 scripts/check-events-registry.py must exit 0 before you commit. A finding on a
+candidate removes that candidate — report it and why. Never edit the checker. If the sandbox
+refuses to run it ("Code from External"), commit nothing and report the exact denial: an unrun
+checker is not a green checker.
+
+COMMIT only if at least one candidate was written: one commit under the repo's normal Pre-Commit
+and Pre-Push checklists (CHANGELOG entry naming the slugs proposed, repo version bump, README
+timestamp), pushed to your claude/* branch. No page or GAS version bump — no app file changes.
+
+IF NOTHING QUALIFIES: stand down. Make no commit, change no file, push no branch. Still report,
+because a stand-down that does not say what it read cannot be told apart from a session that
+never reached the repo.
+
+REPORT (every run, commit or not), titled
+"EVENTS DISCOVERY — <YYYY-MM-DD> — COMMIT <n> | STAND-DOWN | BLOCKED":
+  - whether the clone and the dry-run push succeeded;
+  - what you read: registry rows, roster rows (blocked count), queue rows by status;
+  - per source class: what you searched, how many names you looked at, and how many qualified;
+  - per candidate proposed: slug · name · dates · city · relevance · sourceClass · the organiser
+    URL you read · the one-line why;
+  - near-misses: names rejected by the bar, each with the rule that failed;
+  - overflow beyond the cap, if any;
+  - the checker's result;
+  - the commit SHA, or "no commit" and why.
+```
+
 Developed by: LightAISolutions

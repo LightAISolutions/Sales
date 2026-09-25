@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-25 07:12:25 PM EST` · Repo version: `v07.53r`
+Last updated: `2026-09-25 07:20:11 PM EST` · Repo version: `v07.54r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -1089,6 +1089,7 @@ Last updated: `2026-09-25 07:12:25 PM EST` · Repo version: `v07.53r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/DATA-POLL-ARCHITECTURE.md">DATA-POLL-ARCHITECTURE.md</a> — Data poll vs heartbeat architecture &amp; quota reference
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/ENTERPRISE-SETUP.md">ENTERPRISE-SETUP.md</a>     — Enterprise PAT policies, GAS auto-deploy token config, 404 troubleshooting, rotation
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/EVENTS-SCHEMA.md">EVENTS-SCHEMA.md</a>       — Events app data schema (single source of truth, written at the NE0 gate 2026-09-20): the public registry `events.json` and source roster `events-sources.json` shapes with the `kind`/`status` enums and the probe record, the private `Stars` / `Plans` / `Meetings` / `Proposed` / `Tuning` tabs, the E3 score terms and default weights, the `eop=today|starred|signals` peer ops, the ICS and Add-to-Google-Calendar mappings, Overpass venues, the corpus-count corollary, the checker assertions
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/events-discovery-queue.json">events-discovery-queue.json</a> — Repo-side queue of new-event candidates proposed by the quarterly Events discovery Routine (phase R); promoted into the registry by `events sync discovery` (schema: EVENTS-SCHEMA.md §7.1; validated by check-events-registry.py)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/GOVERNANCE.md">GOVERNANCE.md</a>           — [template · initialized] Project governance
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/HIPAA-CODING-REQUIREMENTS.md">HIPAA-CODING-REQUIREMENTS.md</a> — Complete HIPAA regulatory reference for coding (Security Rule, Privacy Rule, Breach Notification, 2025 NPRM, implementation checklist)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENTS.md">IMPROVEMENTS.md</a>         — [template · initialized] Potential improvements

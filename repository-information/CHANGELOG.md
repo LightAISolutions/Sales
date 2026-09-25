@@ -3,11 +3,80 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.54r] — 2026-09-25 07:20:11 PM EST
+
+> **Prompt:** "Run action #12R — draft the discovery Routine's prompt and give me step-by-step instructions to create it in the claude.ai UI (R in repository-information/NETWORK-EVENTS-DESIGN-PLAN.md).
+> Read first, in this order:
+>
+> 1. repository-information/SESSION-CONTEXT.md → Latest Session.
+> 2. `NETWORK-EVENTS-DESIGN-PLAN.md`: §5.3's Discovery Routine bullet, the R rows in §8 and §11, and the note headed "R — the developer." Its blocker, Monday's earnings-desk proof, is cleared: the desk landed the first Routine commit on 9/22 (v07.16r).
+> 3. repository-information/ROUTINES-OPERATIONS.md:
+>    * the current STEP 0 text — copy it verbatim, not from memory;
+>    * the settled findings that a fired session can push only when the repository is attached on the "New routine" form, and that a Routine's repository cannot be edited afterwards;
+>    * the 2026-09-21 model evaluation;
+>    * the prompts under "The rebuild prompts", as the shape to follow.
+> 4. .claude/rules/events-app.md (the Events Sync command and its never-list); repository-information/EVENTS-SCHEMA.md (the registry, the roster and the `Proposed` shape); and live-site-pages/events-data/events.json and `events-sources.json`.
+>
+> Settle these before drafting, and give me each answer with its reason:
+>
+> * Where proposals go. A fired session cannot write the Events spreadsheet's `Proposed` tab, and it must never call the deployed app or widen a peer token. Decide the repo-side queue a run writes candidates to (§8's "calendar-file-as-queue"), and how `events sync` or I promote a candidate out of it. If that file or its schema doesn't exist, create it in this session and make scripts/check-events-registry.py (or a sibling checker) validate it.
+> * What counts as a candidate: the source classes; the relevance bar against the segments and the dossier corpus; dedup against `events.json`; a per-run cap; and the stand-down rule (a quiet run commits nothing and reports why).
+> * Cadence and model: quarterly, with the cron written in `CRON_TZ=America/New_York` and a jittered minute. Give me the first fire date and recommend a model with the reason.
+> * Budget: list my existing Routines and say whether one more fits before the #12Q quota review (~10/21).
+>
+> Deliverables:
+>
+> 1. The complete Routine prompt in one copyable block: STEP 0 verbatim, then identity, the queue, the cap, the stand-down rule and the report shape.
+> 2. That prompt saved as a new subsection under "The rebuild prompts" in `ROUTINES-OPERATIONS.md`, so it can be recreated. Mark the plan's R row "prompt written — awaiting UI creation", add a CHANGELOG entry, and commit and push under the normal checklists.
+> 3. Numbered, click-by-click steps for claude.ai's "New routine" form: name, prompt, repository picker (confirm the Runs with card shows `LightAISolutions/Sales` before saving), environment, model, schedule, connectors (none unless the prompt needs one), notifications, then one Run now. Check the live docs with `read_documentation` rather than memory.
+> 4. What a good first run looks like (§8: it proposes at least one event and commits, or stands down with a report), and how I verify it: the session report, a commit on `main`, and the queue file.
+>
+> Do not create the Routine yourself. `create_trigger` cannot attach a repository, and a Routine without one cannot push.
+> Done when: the prompt is committed in `ROUTINES-OPERATIONS.md`, the push has merged, and I have the UI steps."
+
+Wrote phase R's discovery Routine prompt and built the repo-side queue it proposes into. The Routine itself is not created: that happens in the claude.ai UI, where the repository can be attached.
+
+### Added
+
+- **`repository-information/events-discovery-queue.json`** — the discovery queue, following the `profiler-refresh-calendar.json` "calendar-file-as-queue" pattern (§8). It starts empty. It lives outside `live-site-pages/` so that unverified candidates never deploy.
+- **`EVENTS-SCHEMA.md` §7.1** — the queue's shape (`slug`, `status` pending/approved/rejected/applied, `sourceClass`, `event`, `sourceKey` plus an optional probed `rosterRow`, `evidence[]`, `corpus[]`, `why`, the decision fields), the candidate bar, and promotion.
+- **`scripts/check-events-registry.py` → `check_queue()`** — validates the queue whenever the file exists:
+  - slug rule and uniqueness;
+  - no pending, approved or rejected candidate duplicates a registry slug, or a registry series and year;
+  - an applied candidate's slug is in the registry, and it carries `appliedIn`;
+  - no pending candidate starts before its `proposedAt`;
+  - enums, timezone, ISO country, 1–5 relevance, segment ids and dossier slugs;
+  - the roster link (an existing key, or a full probed `rosterRow`), and never `10times-listings`;
+  - at least one evidence URL on the organiser's own site, and no LinkedIn, 10times or Google News host.
+  - Fixture-tested: one well-formed candidate, and one candidate violating eight rules, which produced eight findings. It also caught a real duplicate (CLEANPOWER 2027 is already registered).
+- **`.claude/rules/events-app.md` → "The discovery run (R) and `events sync discovery`"**:
+  - **The run:** five source classes in order (corpus mention, roster organiser, covered company, trade body, grid operator/regulator). The organiser page must be read in the run. It applies the bar, writes candidates, gates on the checker, commits only when at least one candidate was written, and otherwise stands down.
+  - **Promotion:** the developer names approvals and rejections. The session re-reads the organiser page and re-probes any new roster row, then appends the event by the `new-event` rule as `tentative`. It stamps the candidate `applied` and gates on the checker.
+  - The file's `paths:` now include the queue.
+- **`ROUTINES-OPERATIONS.md` → "Events discovery — quarterly"**, under "The rebuild prompts":
+  - the full prompt: STEP 0 copied verbatim from the desk's prompt (checked byte-identical), then identity, the queue, the never-list, a cap of five, the gate, the commit rule, the stand-down and the report shape;
+  - the creation settings: name, repository, environment, default model (Sonnet 5), no connectors, and the schedule `CRON_TZ=America/New_York 50 8 8 3,6,9,12 *` (first scheduled fire Tue 2026-12-08, after a Run now at creation).
+
+### Changed
+
+- **`NETWORK-EVENTS-DESIGN-PLAN.md`:**
+  - §11's R row now reads "Prompt written — awaiting UI creation".
+  - §5.3's Discovery Routine bullet is amended: the Routine reads the repo queue, not the `Proposed` tab.
+  - The "R — the developer" note records that the blocker cleared at v07.16r.
+- **`EVENTS-SCHEMA.md` §7 and §12** — point to §7.1.
+- **`CLAUDE.md`, Events Sync Command** — names `events sync discovery`.
+- **`README.md`** — tree entry for the queue file.
+
+### Notes
+
+- `check-events-registry.py` exits 0: 102 events, 58 roster rows, 0 queue candidates.
+- **Archive rotation not performed:** 106 sections in total, of which eight are dated today and exempt, leaving 98 non-exempt against a trigger of 100.
 
 ## [v07.53r] — 2026-09-25 07:06:03 PM EST
 

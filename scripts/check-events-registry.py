@@ -7,7 +7,8 @@ Checks `live-site-pages/events-data/events.json` against
 (built by `scripts/build-events-ics.py`) against the registry. Since E4 s1 it
 also validates `profiler-segments.json` -> `seats` (the score's seat segments):
 both seat keys present, every seat segment id in `segments[].id`, no
-duplicate id within a seat.
+duplicate id within a seat. Since R (2026-09-25) it also validates
+`repository-information/events-discovery-queue.json` (EVENTS-SCHEMA.md §7.1).
 
   python3 scripts/check-events-registry.py              # exit 1 on any finding
   python3 scripts/check-events-registry.py --fix-past    # flip stale status only
@@ -360,6 +361,133 @@ def check_ics(registry, f):
     return count
 
 
+QUEUE = ROOT / "repository-information" / "events-discovery-queue.json"
+QUEUE_STATUSES = {"pending", "approved", "rejected", "applied"}
+QUEUE_BY = {"discovery-routine", "session"}
+QUEUE_CLASSES = {"corpus-mention", "roster-organiser", "covered-company", "trade-body",
+                 "grid-operator-regulator"}
+VERSION_RE = re.compile(r"^v\d{2}\.\d{2}r$")
+NEVER_SOURCE_KEYS = {"10times-listings"}
+
+
+def series_year_key(series, start):
+    """Normalised (series, year) — the dedup key between a candidate and the registry."""
+    return (re.sub(r"[^a-z0-9]", "", str(series).lower()), str(start)[:4])
+
+
+def check_queue(queue, registry, roster, segments, companies, f):
+    """EVENTS-SCHEMA.md §7.1 — the discovery queue written by the R Routine.
+
+    A candidate is a proposal, never a registry row: it is validated against the
+    registry (no duplicate), the roster (its source exists or it carries a
+    probed roster row), the segments and the dossier corpus, and the source
+    discipline (organiser evidence read by the run, no forbidden host).
+    Returns the count of candidates by status.
+    """
+    if queue.get("schemaVersion") != 1:
+        f("events-discovery-queue.json", "schemaVersion must be 1")
+        return {}
+    if not DATE_RE.match(str(queue.get("updated", ""))):
+        f("events-discovery-queue.json", "updated must be YYYY-MM-DD")
+    by_key = {r.get("key"): r for r in roster.get("sources", [])}
+    reg_slugs = {e.get("slug") for e in registry.get("events", [])}
+    reg_series = {series_year_key(e.get("series", ""), e.get("start", ""))
+                  for e in registry.get("events", [])}
+    seen, counts = set(), {}
+    for i, c in enumerate(queue.get("candidates", [])):
+        slug = c.get("slug", f"<candidate {i}>")
+        at = f"events-discovery-queue.json:{slug}"
+        status = c.get("status")
+        counts[status] = counts.get(status, 0) + 1
+        if not SLUG_RE.match(str(c.get("slug", ""))):
+            f(at, "slug does not match the §1 rule")
+        if slug in seen:
+            f(at, "duplicate candidate slug")
+        seen.add(slug)
+        if status not in QUEUE_STATUSES:
+            f(at, f"status {status!r} not in {sorted(QUEUE_STATUSES)}")
+        if c.get("proposedBy") not in QUEUE_BY:
+            f(at, f"proposedBy {c.get('proposedBy')!r} not in {sorted(QUEUE_BY)}")
+        if c.get("sourceClass") not in QUEUE_CLASSES:
+            f(at, f"sourceClass {c.get('sourceClass')!r} not in {sorted(QUEUE_CLASSES)}")
+        proposed = str(c.get("proposedAt", ""))
+        if not DATE_RE.match(proposed):
+            f(at, "proposedAt must be YYYY-MM-DD")
+        if not str(c.get("why", "")).strip():
+            f(at, "missing why — the one-line relevance reason")
+        if status in ("approved", "rejected", "applied") and not DATE_RE.match(str(c.get("decidedAt", ""))):
+            f(at, f"a candidate marked {status} needs decidedAt (YYYY-MM-DD)")
+        if status == "applied":
+            if not VERSION_RE.match(str(c.get("appliedIn", ""))):
+                f(at, "an applied candidate needs appliedIn = the repo version (vXX.XXr)")
+            if slug not in reg_slugs:
+                f(at, "applied, but no events.json row carries this slug")
+        elif slug in reg_slugs:
+            f(at, f"{status} candidate duplicates an existing events.json slug")
+
+        ev = c.get("event") or {}
+        for field in ("name", "series", "organiser", "kind", "start", "end", "tz", "city",
+                      "country", "website", "audience", "relevance", "tierNote"):
+            if field not in ev or ev.get(field) in ("", None, []):
+                f(at, f"event.{field} missing")
+        if ev.get("kind") not in KINDS:
+            f(at, f"event.kind {ev.get('kind')!r} not in {sorted(KINDS)}")
+        start, end = str(ev.get("start", "")), str(ev.get("end", ""))
+        if DATE_RE.match(start) and DATE_RE.match(end):
+            if start > end:
+                f(at, f"event.start {start} is after event.end {end}")
+            if status == "pending" and DATE_RE.match(proposed) and start < proposed:
+                f(at, "a pending candidate starts before it was proposed — past events are never proposed")
+            if status != "applied" and series_year_key(ev.get("series", ""), start) in reg_series:
+                f(at, f"series {ev.get('series')!r} already has a {start[:4]} edition in events.json")
+        else:
+            f(at, "event.start / event.end must be YYYY-MM-DD")
+        if ZoneInfo is not None:
+            try:
+                ZoneInfo(ev.get("tz", ""))
+            except (ZoneInfoNotFoundError, ValueError, KeyError):
+                f(at, f"event.tz {ev.get('tz')!r} is not a known IANA time-zone name")
+        if not re.match(r"^[A-Z]{2}$", str(ev.get("country", ""))):
+            f(at, "event.country must be ISO 3166-1 alpha-2")
+        if not isinstance(ev.get("relevance"), int) or not 1 <= ev.get("relevance", 0) <= 5:
+            f(at, "event.relevance must be an integer 1-5")
+        for seg in ev.get("audience") or []:
+            if seg not in segments:
+                f(at, f"event.audience {seg!r} is not a profiler-segments.json id")
+
+        key = c.get("sourceKey", "")
+        row = c.get("rosterRow")
+        if key in NEVER_SOURCE_KEYS:
+            f(at, f"sourceKey {key!r} is never usable as an event source")
+        if key in by_key:
+            if row is not None and status != "applied":
+                f(at, f"rosterRow given, but {key!r} is already on the roster")
+        elif isinstance(row, dict) and row.get("key") == key:
+            check_roster({"sources": [row]}, lambda w, m: f(at, "rosterRow: " + m))
+        else:
+            f(at, f"sourceKey {key!r} is not on the roster and no probed rosterRow with that key is given")
+
+        urls = [ev.get("website", "")] + [ev.get(k, "") for k in
+                ("registrationUrl", "exhibitorListUrl", "agendaUrl", "speakersUrl") if ev.get(k)]
+        evidence = c.get("evidence") or []
+        if not evidence:
+            f(at, "no evidence[] — a candidate is proposed only from a page the run read")
+        for j, item in enumerate(evidence):
+            urls.append(item.get("url", ""))
+            if not item.get("url") or not DATE_RE.match(str(item.get("readAt", ""))):
+                f(at, f"evidence[{j}] needs url and readAt (YYYY-MM-DD)")
+        if evidence and not any(same_site(host_of(x.get("url", "")), host_of(ev.get("website", "")))
+                                for x in evidence):
+            f(at, "no evidence[] url is on the organiser's own site (event.website's host)")
+        for u in urls:
+            if any(host_of(u) == h or host_of(u).endswith("." + h) for h in FORBIDDEN_HOSTS):
+                f(at, f"{u} is a forbidden source (LinkedIn, 10times, Google News)")
+        for link in c.get("corpus") or []:
+            if link.get("slug") not in companies:
+                f(at, f"corpus slug {link.get('slug')!r} is not a Profiler dossier")
+    return counts
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--fix-past", action="store_true",
@@ -385,6 +513,8 @@ def main():
     fixed = check_events(registry, roster, ids, company_slugs(), today, f, args.fix_past)
     vevents = check_ics(registry, f)
     seat_ids = check_seats(segments_doc, ids, f)
+    queue_counts = check_queue(load(QUEUE), registry, roster, ids, company_slugs(), f) \
+        if QUEUE.exists() else None
 
     # orphan roster rows are a warning surface, not a finding: a blocked row is
     # kept on purpose so it is never re-proposed, even with no event citing it.
@@ -418,6 +548,10 @@ def main():
               f"one per confirmed event")
         print(f"OK  profiler-segments.json seats: both seats present, {seat_ids} segment ids, "
               f"all in segments[].id, none duplicated within a seat")
+        if queue_counts is not None:
+            print("OK  events-discovery-queue.json: "
+                  + (", ".join(f"{n} {s}" for s, n in sorted(queue_counts.items(), key=str))
+                     or "0 candidates"))
         if orphans:
             print(f"note  {len(orphans)} roster row(s) cited by no event "
                   f"(expected for blocked rows kept so they are not re-proposed): "
