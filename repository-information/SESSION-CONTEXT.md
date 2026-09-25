@@ -6,6 +6,67 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-25, 07:14 PM → 07:52 PM EST (attended; four turns)
+**Repo version:** v07.55r (two pushes: v07.54r, v07.55r; this save is unversioned)
+**Branch:** `claude/wizardly-mendel-6o4h2e`
+
+### What was done
+
+- **#12R closed — the Events discovery Routine (phase R) is live:**
+  - **v07.54r:** the repo-side queue `repository-information/events-discovery-queue.json`, starting empty, with its schema in `EVENTS-SCHEMA.md` §7.1. `check-events-registry.py` → `check_queue()` validates it. `.claude/rules/events-app.md` gained "The discovery run (R) and `events sync discovery`", covering the five source classes, the bar, the cap of 5, the stand-down and promotion. The Routine prompt is in `ROUTINES-OPERATIONS.md` → "Events discovery — quarterly", with STEP 0 byte-identical to the desk's.
+  - **Developer, in the UI:** created "Events discovery - quarterly" (`trig_01LdSJyaBJAmrEYr4Eq5Fq8c`). Runs with "Claude HQ · Sales", Sonnet 5, no connectors, push and email on. The cron `CRON_TZ=America/New_York 50 8 8 3,6,9,12 *` was set with `/schedule update` in a local terminal; the next fire is Tue 2026-12-08 08:50 ET.
+  - **First run (Run now):** a STAND-DOWN with a full report, no commit and the queue untouched, which §8 accepts.
+  - **v07.55r:** the plan's §11 R row is Done. `ROUTINES-OPERATIONS.md` now has the schedule step corrected and a new settled finding.
+- **Phase A is complete** (#8 at v07.52r/v07.53r, #12R at v07.54r/v07.55r).
+
+### Where we left off
+
+- **Everything is merged; the tree is clean.** Next is Phase B (9/28–10/6): #9a, the registry pass, then the booth-number build.
+- **Dated reminders stand:**
+  - The cooling recheck, from 9/28.
+  - The 9/30 Classroom run.
+  - The neoclouds pass and Habitat Energy, from 10/1.
+  - The Dominion reframe, 10/2–10/6.
+  - The AIDC re-run, after 10/31.
+  - The Megmeet start is Wed 10/7.
+
+### Key decisions made
+
+- **Where the queue lives:** in the repo under `repository-information/`, not the `Proposed` tab, which a fired session cannot reach. It stays out of `live-site-pages/`, so unverified candidates never deploy. Rejected candidates stay in the file as dedup memory.
+- **Promotion is a session command, `events sync discovery`.** No app or GAS change is involved. It re-reads the organiser page, and it re-probes any new roster row before writing it.
+- **Candidate bar:**
+  - relevance of at least 3, not a webinar, starting 21 days to 18 months out;
+  - US or Canada, or a mega show at relevance 4 or higher anywhere;
+  - grounded: a dossier names it, the organiser is on the roster, or at least 2 covered companies appear on the organiser's page;
+  - the organiser's page must be read in the run.
+- **Schedule:** the 8th of Mar/Jun/Sep/Dec, which avoids a 10/8 fire twelve days after the Run now.
+- **Model:** Sonnet 5. Every candidate gets a human decision and a re-read before anything lands.
+- **Settled finding:** `update_trigger` refuses on UI-created Routines ("Agents can only update routines they created"). A custom cron on a committing Routine needs `/schedule update` from a local CLI.
+
+### Known issues
+
+- The first run could not read several organiser pages: AFCOM, SEIA and MISO returned 403, the DCC page is behind a login wall, and CAISO and SPP returned 404. The trade-body and grid-operator classes are therefore mostly dead from the sandbox. If December also stands down for this reason, add those organisers as hand-maintained roster rows. Do not loosen the read-the-page rule.
+- **Carried over:**
+  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition. Its own row says to re-check the index after 10/1.
+  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2, stale fixture dates).
+  - The two aged 9/8 reports still warn.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **CHANGELOG:** `Sections: 107/100` — 9 dated 9/25 are exempt. **The first push dated 9/26 or later must rotate** the oldest date groups (SHA-enriched, after `git fetch --unshallow`).
+- **Routines:** 7 in total. The busiest day is the 1st of a quarter month, with 4 runs.
+
+### Recommendation for next session
+
+- Start Phase B with **#9a, the registry pass**, in a fresh Opus 5.5 High session on or after Mon 9/28. It fills `hours[]`, `venueLatLng` and `agendaUrl` for RE+ 2026 and the 35 events through 11/30, verified against organiser pages. The booth-number build and `events plan re-plus-2026` both depend on those fields. Expect the CHANGELOG archive rotation on that push.
+
+**To continue:** type `write the #9a registry-pass prompt`
+
+## Previous Sessions
+
+### Session — 2026-09-25 06:47 PM → 07:20 PM EST (#8 closed — AIDC power-conversion report refresh and rev2, v07.53r)
+
 **Date:** 2026-09-25, 06:47 PM → 07:20 PM EST (attended; three turns)
 **Repo version:** v07.53r (two pushes: v07.52r, v07.53r; this save is unversioned)
 **Branch:** `claude/quirky-faraday-avb5pv`
@@ -82,88 +143,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > Done when: the prompt is committed in `ROUTINES-OPERATIONS.md`, the push has merged, and I have the UI steps.
 
 **To continue:** paste the #12R prompt above into a new Opus 5.5 Medium session
-
-## Previous Sessions
-
-### Session — 2026-09-25 04:30 AM → 06:40 PM EST (Priority 2 #6 and #7 closed, five live-test fixes, v07.51r)
-
-**Date:** 2026-09-25, 04:30 AM → 06:40 PM EST (attended; seven turns)
-**Repo version:** v07.51r (five pushes: v07.47r → v07.51r)
-**Branch:** `claude/wonderful-johnson-n5spaf`
-
-### What was done
-
-- **Priority 2 items #6 and #7 are closed.** The developer confirmed each live check:
-  - Warmth and Reconnect; the brief in Word; Promote to Profiler; booking a meeting; the post-event checklist and Mark held.
-  - The Google Calendar `webcal` subscription; the vCard bundle and the QR code.
-  - `NETWORK_CORPUS_TOKEN` and `NW_POSTAL_ADDRESS` are set; Script Properties need no redeploy.
-  - The E4 sweep is installed; it last ran 9/23 (11 events, 1 signal).
-- **Five fixes and features pushed from the live testing:**
-  - **v07.47r — Events v01.12w.** "After the show" hung on "Counting the cards…" when the sheet was rebuilt mid-load (a tab return or a reopen). The fix, `evRepaintPlan`, paints whichever Plan box is on screen.
-  - **v07.48r — Events v01.13w.** After Mark held, the meeting row showed the raw contact id `c-…`. `evPostMark` now carries the names across from the list already on screen.
-  - **v07.49r — Network v01.25w / GAS v01.18g.** The Promote box requires "What did you learn?", and the text leads the Profiler note (` — Context: …`), with a 300-character excerpt in Network's History. Before this, Network had no free-text touch.
-  - **v07.50r — Profiler v01.92w.** 🗑 Delete on every note in the ⚙ → Field notes log, so `general` notes can be deleted too. `Profilerhtml.changelog.md` rotated `v01.42w` into its archive.
-  - **v07.51r — Events GAS v01.10g.** The #9b decision (exhibitor-only): the registry field `speakersWidget` (`re-plus-2026` = `swapcard`) makes the sweep skip widget-served rosters. `events.ics` was rebuilt.
-- **#11 (Scraper versions):** the Project History screenshot shows Version 167 current, from the v07.21r deploy. That is 13 versions to the 180 cleanup line and 33 to the 200 cap. No cleanup is due; the count grows by one per push that changes `Scraper.gs`.
-- **Action plan for #8–#12, with Opus 5.5 effort levels:**
-  - **Phase A (now to 9/27):** #8 report refresh (High); #12R drafting the discovery Routine prompt (Medium), which the developer then creates in the UI.
-  - **Phase B (9/28–10/6):** #9a registry pass filling hours, coordinates and agendas for RE+ and the 35 events through 11/30 (High); the booth-number build (High); optionally the other two aged 9/8 reports.
-  - **Phase C (10/15–10/21):** #10 Classroom re-judging after the quarterly guidance Routine (`scenario-capital-objection` due 10/14, `briefing-2026-09-21` due 10/21) (High); #12Q quota review around 10/21 (Medium).
-  - **Phase D (11/2–11/9):** `events plan re-plus-2026` from the Plan-tab JSON (High). RE+ runs 11/16–11/19.
-
-### Where we left off
-
-- Everything is committed and pushed (v07.51r).
-- **Next is #8**, the refresh of the power-conversion report. Its paste-ready prompt is below.
-- **The developer's dated reminders still stand:**
-  - Cooling module recheck, from Monday 9/28.
-  - The 9/30 Classroom pipeline run check.
-  - The neoclouds Profiler pass and the Habitat Energy re-run, from Thursday 10/1.
-  - The Dominion reframe, 10/2–10/6.
-  - The Megmeet start date is Wednesday 10/7.
-- **Soft checks with no action needed:**
-  - The `webcal` subscription should pick up the next `events sync` on its own.
-  - Events v01.13w should show the contact's name after a mark.
-
-### Key decisions made
-
-- **#9b:** exhibitor-only signals for widget-served rosters. The Swapcard API is declined, and key speakers come in through the sheet's manual signal form.
-- **Promote:** a promotion must carry what the developer learned. A promotion that only relays the History summary has no value.
-- **Script Properties** take effect without a redeploy.
-- **#11:** no cleanup until the count nears 180. It can be computed as 167 plus the pushes changing `Scraper.gs` since v07.21r.
-- **R is unblocked:** a scheduled Routine has committed (the earnings desk, v07.16r on 9/22).
-
-### Known issues
-
-- **`scripts/verify-profiler-roles.py`:** 2 failures that predate this session, both in the study-progress checks ("admin tick did not persist" and "lost its own progress after the other account signed in"). They also fail on the code before this session's change.
-- **`scripts/check-events-plan.js`:** 2 failures from fixtures whose dates have gone stale (`not_over` for a Nov fixture, and the ROI read date). The logic is fine.
-- **`CHANGELOG.md` is at 103/100.** From 9/26, none of its sections are exempt, so the next push must rotate the oldest date groups into the archive.
-
-### Active context
-
-- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Versions:**
-  - Pages: Events v01.13w · Network v01.25w · Profiler v01.92w.
-  - Apps Script: Events v01.10g · Network v01.18g · Scraper v02.22g.
-- **Out-of-date reports:** `check-profiler-reports.py` warns on `aidc-power-conversion` (Megmeet v7→8, Delta v5→6, LITEON v6→7), `grid-scale-bess` (Jinko) and `named-project-bess-attach` (Oracle), all from 9/8.
-
-### Recommendation for next session
-
-- Run #8 in a fresh Opus 5.5 High session by pasting this prompt:
-
-> profiler report competitive: AIDC power conversion — refresh the 2026-09-08 edition against current dossiers (Priority 2 item #8).
->
-> Context:
-> - The current edition is `live-site-pages/profiler-data/reports/aidc-power-conversion--competitive--2026-09-08.report.json` ("AIDC Power Conversion — The 800 VDC Race"). `python3 scripts/check-profiler-reports.py` warns that it has aged: it pins megmeet v7, delta-electronics v5 and liteon v6, and those dossiers are now v8, v6 and v7 (all refreshed 2026-09-23). It turns "aging" on 2026-10-23 and no Routine watches it.
-> - This is a re-run of a prior topic, not an edit. Reports are immutable, so write a new edition `aidc-power-conversion--competitive--<today>.report.json` with `supersedes` set to the 9/8 edition's id, and flip the old entry in `reports-index.json` to `superseded`. Follow the Profiler report command in `.claude/rules/profiler-app.md`.
-> - Keep the 9/8 edition's company scope. If the preflight coverage table shows a covered company that belongs in this race but is missing, propose it in the preflight rather than widening silently.
-> - Synthesize from covered dossiers only and cite their sources with provenance tiers. Do not re-research. If a dossier is stale for this report's purpose, record that in `limitations` rather than refreshing it in this session.
-> - Read the two 2026-09-23 SST reports (`sst-hall-edge-block--competitive--2026-09-23` and `sst-hall-edge-block-rev2--competitive--2026-09-23`) and keep this report consistent with them where they overlap (Megmeet's position). Cross-reference them; don't duplicate them.
-> - Audience: I start at Megmeet on Wednesday 2026-10-07. Write the BLUF and key judgments so they are usable in my first week.
-> - Show me the preflight (type, scope, coverage table with freshness tiers), then proceed without waiting unless the scope is ambiguous.
-> - Out of scope: the other two aged 9/8 reports (grid-scale-bess: Jinko v5→v6; named-project-bess-attach: Oracle v4→v5). Mention them only if the refresh changes something they depend on.
-> - Heads-up for the push: `repository-information/CHANGELOG.md` sat at `Sections: 103/100` on 9/25 with 5 sections dated that day. From 9/26 onward none are exempt, so archive rotation will be due on this push (the oldest date groups, with SHA enrichment, after deepening the clone).
->
-> Done when: the new edition is registered, `python3 scripts/check-profiler-reports.py` reports no warning for it, and the push has merged.
-
-**To continue:** paste the #8 prompt above into a new Opus 5.5 High session
