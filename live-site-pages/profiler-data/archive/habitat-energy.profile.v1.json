@@ -12,9 +12,9 @@
   "employees": "'130 people' (company homepage and Who-we-are page, 2026); 147 listed on LinkedIn at 2026-09-12; the audited UK entity alone averaged 57 in FY2024 (54 in FY2023) — the US and Australian subsidiaries are not consolidated in that figure",
   "ownership": {
     "type": "subsidiary",
-    "ticker": "Private (Quinbrook Infrastructure Partners portfolio company; sale process reported March 2026, unresolved at 2026-09-24)"
+    "ticker": "Private (Quinbrook Infrastructure Partners portfolio company; sale process reported March 2026)"
   },
-  "summary": "**BOTTOM LINE UP FRONT:** Habitat Energy is the largest specialist third-party battery optimiser in ERCOT by its own count and the third-largest in Great Britain by independently measured megawatts, it is the one optimiser in this corpus whose ERCOT performance a third party has ranked first (Modo Energy, December 2025, 84% capture against a 35% median), and it is for sale: its owner Quinbrook engaged JLL and Boston Consulting Group in March 2026 to sell it, ten weeks after selling its sister platform Flexitricity to Drax for GBP 36 million, and as of 2026-09-24 no buyer, signing, completion or withdrawal is on the public record; its FY2025 accounts, due at Companies House by 30 September 2026, had not been filed. **BACKGROUND.** Founded in Oxford in 2017 by Andrew Luers, Ben Irons and Phil Robinson; wholly acquired by Quinbrook on 30 November 2021 (terms undisclosed; Canadian Solar's May 2021 minority stake exited into the deal). It sells one integrated service, branded EVOLVE, that combines probabilistic price forecasting, automated bid construction and a 24/7 human trading desk with the market registrations an owner would otherwise need itself — Balancing Mechanism Virtual Lead Party in Great Britain, Level 4 Qualified Scheduling Entity in ERCOT, NEM bidding in Australia — sold mainly on revenue share, and increasingly wrapped in floors, tolls and swaps. Company-stated scale: 5.5 GW under contract across the three markets (June 2026), 2 GW in the UK and over 1.8 GW in ERCOT, with PJM registration begun in April 2026. Audited scale is smaller than the headline: the UK entity booked GBP 1.99 million of turnover and a GBP 5.0 million loss in FY2024, and the Quinbrook group line that consolidates all three countries' optimisation fees was GBP 4.17 million, up 80% year on year.",
+  "summary": "**BOTTOM LINE UP FRONT:** Habitat Energy is the largest specialist third-party battery optimiser in ERCOT by its own count and the third-largest in Great Britain by independently measured megawatts, it is the one optimiser in this corpus whose ERCOT performance a third party has ranked first (Modo Energy, December 2025, 84% capture against a 35% median), and it is for sale: its owner Quinbrook engaged JLL and Boston Consulting Group in March 2026 to sell it, ten weeks after selling its sister platform Flexitricity to Drax for GBP 36 million, and as of 2026-09-12 no buyer, signing, completion or withdrawal is on the public record. **BACKGROUND.** Founded in Oxford in 2017 by Andrew Luers, Ben Irons and Phil Robinson; wholly acquired by Quinbrook on 30 November 2021 (terms undisclosed; Canadian Solar's May 2021 minority stake exited into the deal). It sells one integrated service, branded EVOLVE, that combines probabilistic price forecasting, automated bid construction and a 24/7 human trading desk with the market registrations an owner would otherwise need itself — Balancing Mechanism Virtual Lead Party in Great Britain, Level 4 Qualified Scheduling Entity in ERCOT, NEM bidding in Australia — sold mainly on revenue share, and increasingly wrapped in floors, tolls and swaps. Company-stated scale: 5.5 GW under contract across the three markets (June 2026), 2 GW in the UK and over 1.8 GW in ERCOT, with PJM registration begun in April 2026. Audited scale is smaller than the headline: the UK entity booked GBP 1.99 million of turnover and a GBP 5.0 million loss in FY2024, and the Quinbrook group line that consolidates all three countries' optimisation fees was GBP 4.17 million, up 80% year on year.",
   "ecosystemRole": "The pure-play merchant battery optimiser this corpus's software-and-optimization segment was missing. The segment's two incumbents reach it from adjacent businesses — FlexGen from integration and its HybridOS controls, Stem from solar asset-performance management — and its listed challenger, Fluence's Mosaic, is sold to protect a hardware franchise. Habitat sells nothing but the route to market: the QSE or Virtual Lead Party registration, the forecast, the bid and the trader, taken as a percentage of what the battery earns. That makes it the counterparty on the other side of the tolls and floors this corpus already records from the owners' side — Octopus Energy US's tolled 50 MW in ERCOT, the Nephila-backed revenue floor the 2025 award judges cited, the 'innovative contracting structure' behind Constantine's 171 MW — and the named competitor in the Fluence, Stem, Tesla and Hunt Energy Network dossiers. It is also the only member of the segment whose ranking rests on a third-party measurement rather than its own claim, and the only one currently in a sale process, so its next owner will decide whether the segment's leading independent stays independent.",
   "productsAndServices": [
     {
@@ -232,25 +232,11 @@
       "source": "https://habitat.energy/habitat-energy-to-optimise-solar-and-storage-for-octopus-australia/"
     },
     {
-      "date": "2026-07-17",
-      "category": "leadership",
-      "headline": "Jason Dillingham added to the leadership page as General Counsel — 'Jason leads Habitat's legal department'; JD, University of Houston Law Center (2018), admitted to the Texas Bar",
-      "read": "A first in-house general counsel, Texas-qualified, joins while the company is reported to be for sale and its US book is the growth engine; the company has not announced the hire.",
-      "source": "https://habitat.energy/who-we-are/"
-    },
-    {
       "date": "2026-06-24",
       "category": "customer",
       "headline": "AGR Renewables (Railpen-backed) signs 'an initial 7-year, fully merchant agreement' for 157 MW of 2.5-hour batteries co-located with 133 MWp of solar; UK portfolio reaches 2 GW and global 5.5 GW under contract",
       "read": "A seven-year merchant mandate on unbuilt assets is the longest tenor on record for the company and shows fund owners contracting the optimiser at financial close rather than at COD.",
       "source": "https://habitat.energy/habitat-energy-selected-by-agr-renewables/"
-    },
-    {
-      "date": "2026-05-19",
-      "category": "corporate",
-      "headline": "The immediate parent, Renewable and Grid Services Limited, files a PSC07 (18 May) recording Renewables Impact Holding Limited (Jersey) as ceasing to be a person with significant control, backdated to 29 November 2021, and a PSC08 (19 May) stating 'there is no registrable person or registrable relevant legal entity in relation to the company'",
-      "read": "A correction of the recorded control chain above Habitat's parent, not a transfer: Habitat Energy Limited's own PSC (Renewable and Grid Services, 75%+) is unchanged and no officer changed. Neither filing says why it was made; tidying a register is consistent with sale preparation but is not evidence of it.",
-      "source": "https://find-and-update.company-information.service.gov.uk/company/13250883/persons-with-significant-control"
     },
     {
       "date": "2026-04-17",
@@ -538,22 +524,6 @@
       ]
     },
     {
-      "name": "Jason Dillingham",
-      "title": "General Counsel",
-      "background": [
-        "General Counsel, Habitat Energy — 'leads Habitat's legal department' (company leadership page, added July 2026)",
-        "JD, University of Houston Law Center (2018); admitted to the Texas Bar"
-      ]
-    },
-    {
-      "name": "Lois Stamps",
-      "title": "Chief People Officer",
-      "background": [
-        "Chief People Officer, Habitat Energy (company leadership page, 2026); earlier captioned 'Director of People & Business Operations' on the careers page",
-        "Holds 25,000 management B ordinary shares (confirmation statement, 11 May 2026)"
-      ]
-    },
-    {
       "name": "Eleonora Pilla",
       "title": "Executive Director of Trading Performance",
       "photo": "images/execs/habitat-energy-pilla.jpg",
@@ -682,32 +652,25 @@
           },
           {
             "name": "Sale process",
-            "actual": "Quinbrook 'working with JLL and Boston Consulting Group' (New Project Media, March 2026); no price, bidder, shortlist, signing, completion or withdrawal reported at 2026-09-24 — the March report remains the only public source",
+            "actual": "Quinbrook 'working with JLL and Boston Consulting Group' (New Project Media, March 2026); no price, bidder, signing, completion or withdrawal reported at 2026-09-12",
             "expected": "",
             "verdict": "inline",
             "result": "Comparable: Flexitricity sold to Drax at GBP 36 million enterprise value, about GBP 42 million proceeds, for about 0.9 GW under management (signed 21 January 2026, completed by 1 April 2026)"
-          },
-          {
-            "name": "Registered control",
-            "actual": "Habitat Energy Limited: PSC Renewable and Grid Services Limited (75%+ shares and votes, right to appoint directors; notified 30 November 2021), unchanged; eight directors, none appointed or removed in 2026. Renewable and Grid Services Limited: PSC07 of 18 May 2026 and PSC08 of 19 May 2026 — no registrable person or legal entity above it",
-            "expected": "",
-            "verdict": "inline",
-            "result": "Companies House registers, read 2026-09-24; the site footer still reads 'a portfolio company of Quinbrook'"
           }
         ],
-        "commentary": "Collection gap: the JLL/BCG mandate rests on one subscriber-only report and neither company has confirmed it. Quinbrook's own site still lists Habitat as 'Operational & Expanding' while it updated Flexitricity to 'Exited' (June 2026); but Quinbrook's sitemap shows the Habitat page last modified on 29 August 2025, so its status line has not been touched since before the process began and is weaker evidence than a recent edit would be. The Companies House record of Habitat itself remains the stronger signal: no change of control recorded."
+        "commentary": "Collection gap: the JLL/BCG mandate rests on one subscriber-only report and neither company has confirmed it; Quinbrook's own site still lists Habitat as 'Operational & Expanding' while it updated Flexitricity to 'Exited', which is affirmative evidence that no exit has been recorded."
       }
     ],
-    "commentary": "Private subsidiary; the only audited figures are the UK entity's Companies House accounts and the parent group's consolidated line. Company-stated GW figures are the growth metric the market uses and none has been independently verified. No expectations exist, so the 'expected' fields are empty throughout. FY2025 accounts for both the UK entity and the parent group were due by 30 September 2026 and had not been filed at 2026-09-24; the prior two years were filed in the last days of December and early January."
+    "commentary": "Private subsidiary; the only audited figures are the UK entity's Companies House accounts and the parent group's consolidated line. Company-stated GW figures are the growth metric the market uses and none has been independently verified. No expectations exist, so the 'expected' fields are empty throughout."
   },
   "strategyRead": [
     "1. **(High confidence)** We assess that Habitat's commercial position rests on being a registered market participant with a desk, not on software, and that this is why it keeps winning mandates from owners who could buy software. Basis: every product page positions EVOLVE 'unlike a software only solution'; Ørsted — an owner with its own trading arm — still contracted Habitat for QSE services in November 2025; the company's turnover is booked as 'optimisation fees', a percentage of asset revenue, per the audited accounts; and Irons' stated threshold of about 2 GW before in-house optimisation pays means the segment's addressable owners are those below it.",
-    "2. **(High confidence)** We assess that the company is for sale and that the process had not concluded by 2026-09-24. Basis: the New Project Media report of the JLL/BCG mandate (March 2026); Quinbrook's sale of Flexitricity to Drax ten weeks earlier; two sponsor-side board appointments in the preceding six months including the UK deal lead; and, on the other side, the unchanged Habitat PSC and board, the unchanged 'portfolio company of Quinbrook' footer, and the absence of any release, trade report or registry filing recording a transaction. Quinbrook's 'Operational & Expanding' status is weaker evidence than it appeared at v1: the page has not been modified since August 2025. The parent's May 2026 PSC correction records no transfer. Collection gap: the mandate itself is single-outlet and unconfirmed, and six months of silence after 'sounding out the market over the coming weeks' is consistent with a slow process, a pause or a quiet withdrawal — the record cannot tell them apart.",
+    "2. **(High confidence)** We assess that the company is for sale and that the process had not concluded by 2026-09-12. Basis: the New Project Media report of the JLL/BCG mandate (March 2026); Quinbrook's sale of Flexitricity to Drax ten weeks earlier; two sponsor-side board appointments in the preceding six months including the UK deal lead; and, on the other side, the unchanged Companies House PSC, the unchanged 'portfolio company of Quinbrook' footer, Quinbrook's 'Operational & Expanding' status against Flexitricity's 'Exited', and the absence of any release from either party. Collection gap: the mandate itself is single-outlet and unconfirmed.",
     "3. **(Moderate confidence)** We assess that the ERCOT book, not Great Britain, is now the company's growth engine and the asset a buyer would price. Basis: ERCOT contracted capacity rose from 1 GW (May 2024) to over 1.8 GW (April 2026) on named mandates from UBS AM, Plenitude, Ørsted, Octopus and Birch Creek, while the GB fleet stood at 600 MW operating in January 2025 and the largest GB client moved 789 MW under third-party floors in July 2025; the group accounts show rest-of-world turnover nearly doubling in FY2024. Against this, the audited fee base is still overwhelmingly UK-booked and the US entity's own accounts were not retrieved.",
     "4. **(Moderate confidence)** We assess that the floors, tolls and swaps are the company's response to the same tolling wave that is shrinking third-party optimisers' role elsewhere, and that they raise its balance-sheet risk. Basis: the 2025 award citation for the Nephila floor and the Octopus toll, the Constantine 'contracting structure', and the January 2026 insight that the desk manages 'the risk in our own book'; the FY2024 accounts show an HSBC charge over cash deposits, GBP 18 million of other creditors and a client settlement provision. A revenue-share optimiser carries no market risk; a floor originator does. No source quantifies the book.",
     "5. **(Low confidence)** We assess that the Flexitricity comparable understates what a buyer would pay for Habitat but that no evidence supports a specific multiple. Basis: Flexitricity fetched about GBP 40,000 per MW under management for a single-market GB platform; Habitat has three markets, an independently ranked ERCOT desk and a larger contracted fleet, but a GBP 4 million audited fee line, GBP 12.7 million of net liabilities at the UK entity and a headline GW figure that mixes pipeline with operations. Trade-press valuation talk is absent, which is itself unusual six months into a process.",
-    "**Collection gaps.** No FY2025 financials (due 30 September 2026, not filed at 2026-09-24); no third-party verification of any GW figure; Modo's monthly optimiser rankings are paywalled beyond two months and no public 2026 table after April names Habitat; Habitat's current share of the Gresham House fleet after the 2024 toll and 2025 floors is undisclosed; the US and Australian subsidiaries' accounts were not retrieved; the LCP Enact leaderboard the company cites was not located; the live vacancy list (Workable) was rate-limited; subscriber-only M&A services (Infralogic, Mergermarket, PEI) were searched only through their public headlines.",
-    "**Indicators to watch.** *FY2025 accounts at Companies House (due by 30 September 2026)* — whether the group optimisation line kept growing at 2024's rate, and whether the directors' report or post-balance-sheet note mentions the sale process; a late filing would itself be notable after two years of year-end filing. *Any Companies House PSC02/PSC07 filing on Habitat Energy Limited or a TM01 for the Quinbrook directors* — a completed sale shows here before any release. *Quinbrook's portfolio page status changing from 'Operational & Expanding'* — the signal it gave for Flexitricity, though the page has not been edited since August 2025. *A named PJM customer* — the April 2026 announcement converting to a mandate. *Modo's 2026 ERCOT and GB tables* — whether December 2025's lead was a regime-change effect or a durable edge."
+    "**Collection gaps.** No FY2025 financials; no third-party verification of any GW figure; Modo's monthly optimiser rankings are paywalled beyond two months; Habitat's current share of the Gresham House fleet after the 2024 toll and 2025 floors is undisclosed; the US and Australian subsidiaries' accounts were not retrieved; the LCP Enact leaderboard the company cites was not located; the live vacancy list (Workable) was blocked.",
+    "**Indicators to watch.** *Any Companies House PSC02/PSC07 filing or TM01 for the Quinbrook directors* — a completed sale shows here before any release. *Quinbrook's portfolio page status changing from 'Operational & Expanding'* — the signal it gave for Flexitricity. *FY2025 accounts (due by 30 September 2026)* — whether the group optimisation line kept growing at 2024's rate and whether the directors' report finally mentions the process. *A named PJM customer* — the April 2026 announcement converting to a mandate. *Modo's 2026 ERCOT and GB tables* — whether December 2025's lead was a regime-change effect or a durable edge."
   ],
   "sources": [
     {
@@ -749,12 +712,6 @@
       "label": "Companies House — Habitat Energy Limited, confirmation statement made on 11 May 2026 with updates (shareholders)",
       "url": "https://find-and-update.company-information.service.gov.uk/company/10923911/filing-history/MzUyMzI3MjE0MGFkaXF6a2N4/document?format=pdf&download=0",
       "date": "2026-05-26",
-      "party": "disclosure"
-    },
-    {
-      "label": "Companies House — Renewable and Grid Services Limited, persons with significant control (PSC08 'no registrable person' statement, 19 May 2026; PSC07 cessation of Renewables Impact Holding Limited, 18 May 2026)",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/13250883/persons-with-significant-control",
-      "date": "2026-05-19",
       "party": "disclosure"
     },
     {
@@ -1040,7 +997,7 @@
       "url": "https://habitat.energy/case-studies/"
     },
     {
-      "label": "Quinbrook Infrastructure Partners — Portfolio: Habitat Energy ('Operational & Expanding'; page last modified 2025-08-29 per Quinbrook's sitemap)",
+      "label": "Quinbrook Infrastructure Partners — Portfolio: Habitat Energy ('Operational & Expanding')",
       "url": "https://www.quinbrook.com/portfolio/habitat-energy/"
     },
     {
@@ -1070,18 +1027,8 @@
     {
       "label": "LinkedIn — Habitat Energy company page",
       "url": "https://www.linkedin.com/company/habitat_energy"
-    },
-    {
-      "label": "Companies House — Renewable and Grid Services Limited, filing history",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/13250883/filing-history",
-      "party": "disclosure"
-    },
-    {
-      "label": "Companies House — Habitat Energy Limited, filing history (no FY2025 accounts at 2026-09-24)",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/10923911/filing-history",
-      "party": "disclosure"
     }
   ],
-  "lastUpdated": "2026-09-24",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-12",
+  "profileVersion": 1
 }

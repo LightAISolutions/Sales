@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.46r] — 2026-09-24 08:47:30 PM EST
+
+> **Prompt:** "Per the attached screenshot and my open action items Priority 1 list, profiler Habitat Energy and profiler Gridmatic."
+
+### Changed
+
+- **Habitat Energy dossier refreshed to profileVersion 2; v1 archived.** The Quinbrook sale is unchanged: no buyer, bidder, signing, completion or withdrawal is on the record through 2026-09-24. New Project Media's 17 March report is still the only public source.
+  - **FY2025 accounts not yet filed.** Neither Habitat Energy Limited nor its parent had filed by 2026-09-24; both are due 30 September. The summary, financials commentary, collection gaps and indicators now say so.
+  - **New development (19 May 2026):** a PSC07 and a PSC08 correct the control register above the parent, Renewable and Grid Services Limited. This is not a transfer: Habitat's own PSC and its board are unchanged.
+  - **New development (17 July 2026):** General Counsel Jason Dillingham joined the leadership page.
+  - **Evidence re-weighted.** Quinbrook's "Operational & Expanding" status page has not been modified since 29 August 2025, so key judgment 2 now treats it as weak evidence. The judgment now rests on the Companies House record.
+  - **Other edits:** decision makers gain Dillingham and Chief People Officer Lois Stamps; the ownership line is re-dated; three Companies House sources added (75 in total).
+- **Gridmatic dossier refreshed to profileVersion 2; v1 archived.** The raise is still only anticipated. No Gridmatic Inc. Form D, named investor or credit facility exists; the EDGAR full-text index was checked on 2026-09-24 and holds Form Ds as late as 2026-09-23. The Capital Markets posting describing "upcoming debt and equity raises" is still live.
+  - **Ownership now reads "founder-led", not "founder-owned".** The posting refers to "existing investors" and "board packages", every posting offers a stock-option loan programme, and a named angel invested before 2022.
+  - **Retail revenue claim added:** "on track to hit $100 million in revenue this year" (company LinkedIn, 18 Aug 2026). This is the first revenue figure the company has published, and it is unaudited.
+  - **Amperical ERCOT data updated (to 24 Jul):** Endurance Park ranks 11th of 312; Cross Trails moves from 43rd to 38th. The scheduling entity carries "2 sites, 110 MW".
+  - **Cross Trails loan waivers.** Energy Vault's lenders waived Cross Trails' debt-service-coverage defaults for Q1 and Q2 2026 (8-K of 1 July; Q2 10-Q). Neither filing names Gridmatic.
+  - **Other new developments:** the CCO's 16 September Energy-Storage.news interview, and the March 2026 Ohio residential add-on licence amendment.
+  - **Other edits:** VP Finance Yojna Verma added (no CFO is named); strategy read, collection gaps and indicators revised; 7 sources added (77 in total).
+- **Registry, calendar and notes.**
+  - `profiler-companies.json`: Gridmatic tagline revised; the sync script reconciled `lastUpdated` and source counts for both companies (Habitat 75 sources, 63% first-party; Gridmatic 77, 40%).
+  - `profiler-refresh-calendar.json`: `lastRefreshed` moved to 2026-09-24 for both rows. Both stay `watch` tier.
+  - `profiler-refresh-notes.json`: watch items updated. Habitat's second watch item flags that the 1 October sweep skips it, so the FY2025 accounts must be folded in by hand once filed.
+  - `profiler-graph.json`: rebuilt.
+- **Verification.**
+  - `sync-profiler-registry.py --check` and `check-profiler-relationships.py`: 0 findings.
+  - `check-profiler-crossrefs.py`: 0 candidates.
+  - `check-profiler-study.py`: 0 errors.
+  - Inbound reconciliation: five substantive mentions across the Fluence, Hunt Energy Network, Stem and Tesla dossiers reviewed, 0 changed.
+  - Segment memberships re-read and unchanged: Habitat is challenger in software and optimisation; Gridmatic is challenger there and adjacent in storage developers and IPPs.
 
 ## [v07.45r] — 2026-09-24 08:15:30 PM EST
 

@@ -2670,5 +2670,21 @@
       "archivedAt": "2026-09-24",
       "supersededBy": 2
     }
+  ],
+  "habitat-energy": [
+    {
+      "file": "habitat-energy.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-24",
+      "supersededBy": 2
+    }
+  ],
+  "gridmatic": [
+    {
+      "file": "gridmatic.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-09-24",
+      "supersededBy": 2
+    }
   ]
 }
