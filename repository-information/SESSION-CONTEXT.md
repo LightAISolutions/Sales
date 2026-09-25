@@ -6,6 +6,91 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-25, 04:30 AM → 06:40 PM EST (attended; seven turns)
+**Repo version:** v07.51r (five pushes: v07.47r → v07.51r)
+**Branch:** `claude/wonderful-johnson-n5spaf`
+
+### What was done
+
+- **Priority 2 items #6 and #7 are closed.** The developer confirmed each live check:
+  - Warmth and Reconnect; the brief in Word; Promote to Profiler; booking a meeting; the post-event checklist and Mark held.
+  - The Google Calendar `webcal` subscription; the vCard bundle and the QR code.
+  - `NETWORK_CORPUS_TOKEN` and `NW_POSTAL_ADDRESS` are set; Script Properties need no redeploy.
+  - The E4 sweep is installed; it last ran 9/23 (11 events, 1 signal).
+- **Five fixes and features pushed from the live testing:**
+  - **v07.47r — Events v01.12w.** "After the show" hung on "Counting the cards…" when the sheet was rebuilt mid-load (a tab return or a reopen). The fix, `evRepaintPlan`, paints whichever Plan box is on screen.
+  - **v07.48r — Events v01.13w.** After Mark held, the meeting row showed the raw contact id `c-…`. `evPostMark` now carries the names across from the list already on screen.
+  - **v07.49r — Network v01.25w / GAS v01.18g.** The Promote box requires "What did you learn?", and the text leads the Profiler note (` — Context: …`), with a 300-character excerpt in Network's History. Before this, Network had no free-text touch.
+  - **v07.50r — Profiler v01.92w.** 🗑 Delete on every note in the ⚙ → Field notes log, so `general` notes can be deleted too. `Profilerhtml.changelog.md` rotated `v01.42w` into its archive.
+  - **v07.51r — Events GAS v01.10g.** The #9b decision (exhibitor-only): the registry field `speakersWidget` (`re-plus-2026` = `swapcard`) makes the sweep skip widget-served rosters. `events.ics` was rebuilt.
+- **#11 (Scraper versions):** the Project History screenshot shows Version 167 current, from the v07.21r deploy. That is 13 versions to the 180 cleanup line and 33 to the 200 cap. No cleanup is due; the count grows by one per push that changes `Scraper.gs`.
+- **Action plan for #8–#12, with Opus 5.5 effort levels:**
+  - **Phase A (now to 9/27):** #8 report refresh (High); #12R drafting the discovery Routine prompt (Medium), which the developer then creates in the UI.
+  - **Phase B (9/28–10/6):** #9a registry pass filling hours, coordinates and agendas for RE+ and the 35 events through 11/30 (High); the booth-number build (High); optionally the other two aged 9/8 reports.
+  - **Phase C (10/15–10/21):** #10 Classroom re-judging after the quarterly guidance Routine (`scenario-capital-objection` due 10/14, `briefing-2026-09-21` due 10/21) (High); #12Q quota review around 10/21 (Medium).
+  - **Phase D (11/2–11/9):** `events plan re-plus-2026` from the Plan-tab JSON (High). RE+ runs 11/16–11/19.
+
+### Where we left off
+
+- Everything is committed and pushed (v07.51r).
+- **Next is #8**, the refresh of the power-conversion report. Its paste-ready prompt is below.
+- **The developer's dated reminders still stand:**
+  - Cooling module recheck, from Monday 9/28.
+  - The 9/30 Classroom pipeline run check.
+  - The neoclouds Profiler pass and the Habitat Energy re-run, from Thursday 10/1.
+  - The Dominion reframe, 10/2–10/6.
+  - The Megmeet start date is Wednesday 10/7.
+- **Soft checks with no action needed:**
+  - The `webcal` subscription should pick up the next `events sync` on its own.
+  - Events v01.13w should show the contact's name after a mark.
+
+### Key decisions made
+
+- **#9b:** exhibitor-only signals for widget-served rosters. The Swapcard API is declined, and key speakers come in through the sheet's manual signal form.
+- **Promote:** a promotion must carry what the developer learned. A promotion that only relays the History summary has no value.
+- **Script Properties** take effect without a redeploy.
+- **#11:** no cleanup until the count nears 180. It can be computed as 167 plus the pushes changing `Scraper.gs` since v07.21r.
+- **R is unblocked:** a scheduled Routine has committed (the earnings desk, v07.16r on 9/22).
+
+### Known issues
+
+- **`scripts/verify-profiler-roles.py`:** 2 failures that predate this session, both in the study-progress checks ("admin tick did not persist" and "lost its own progress after the other account signed in"). They also fail on the code before this session's change.
+- **`scripts/check-events-plan.js`:** 2 failures from fixtures whose dates have gone stale (`not_over` for a Nov fixture, and the ROI read date). The logic is fine.
+- **`CHANGELOG.md` is at 103/100.** From 9/26, none of its sections are exempt, so the next push must rotate the oldest date groups into the archive.
+
+### Active context
+
+- **Toggles:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Versions:**
+  - Pages: Events v01.13w · Network v01.25w · Profiler v01.92w.
+  - Apps Script: Events v01.10g · Network v01.18g · Scraper v02.22g.
+- **Out-of-date reports:** `check-profiler-reports.py` warns on `aidc-power-conversion` (Megmeet v7→8, Delta v5→6, LITEON v6→7), `grid-scale-bess` (Jinko) and `named-project-bess-attach` (Oracle), all from 9/8.
+
+### Recommendation for next session
+
+- Run #8 in a fresh Opus 5.5 High session by pasting this prompt:
+
+> profiler report competitive: AIDC power conversion — refresh the 2026-09-08 edition against current dossiers (Priority 2 item #8).
+>
+> Context:
+> - The current edition is `live-site-pages/profiler-data/reports/aidc-power-conversion--competitive--2026-09-08.report.json` ("AIDC Power Conversion — The 800 VDC Race"). `python3 scripts/check-profiler-reports.py` warns that it has aged: it pins megmeet v7, delta-electronics v5 and liteon v6, and those dossiers are now v8, v6 and v7 (all refreshed 2026-09-23). It turns "aging" on 2026-10-23 and no Routine watches it.
+> - This is a re-run of a prior topic, not an edit. Reports are immutable, so write a new edition `aidc-power-conversion--competitive--<today>.report.json` with `supersedes` set to the 9/8 edition's id, and flip the old entry in `reports-index.json` to `superseded`. Follow the Profiler report command in `.claude/rules/profiler-app.md`.
+> - Keep the 9/8 edition's company scope. If the preflight coverage table shows a covered company that belongs in this race but is missing, propose it in the preflight rather than widening silently.
+> - Synthesize from covered dossiers only and cite their sources with provenance tiers. Do not re-research. If a dossier is stale for this report's purpose, record that in `limitations` rather than refreshing it in this session.
+> - Read the two 2026-09-23 SST reports (`sst-hall-edge-block--competitive--2026-09-23` and `sst-hall-edge-block-rev2--competitive--2026-09-23`) and keep this report consistent with them where they overlap (Megmeet's position). Cross-reference them; don't duplicate them.
+> - Audience: I start at Megmeet on Wednesday 2026-10-07. Write the BLUF and key judgments so they are usable in my first week.
+> - Show me the preflight (type, scope, coverage table with freshness tiers), then proceed without waiting unless the scope is ambiguous.
+> - Out of scope: the other two aged 9/8 reports (grid-scale-bess: Jinko v5→v6; named-project-bess-attach: Oracle v4→v5). Mention them only if the refresh changes something they depend on.
+> - Heads-up for the push: `repository-information/CHANGELOG.md` sat at `Sections: 103/100` on 9/25 with 5 sections dated that day. From 9/26 onward none are exempt, so archive rotation will be due on this push (the oldest date groups, with SHA enrichment, after deepening the clone).
+>
+> Done when: the new edition is registered, `python3 scripts/check-profiler-reports.py` reports no warning for it, and the push has merged.
+
+**To continue:** paste the #8 prompt above into a new Opus 5.5 High session
+
+## Previous Sessions
+
+### Session — 2026-09-24 09:24 PM → 2026-09-25 03:01 AM EST (read the 9/23 C2 report, Priority 1 closed, v07.46r)
+
 **Date:** 2026-09-24, 09:24 PM → 2026-09-25, 03:01 AM EST (attended; nine turns)
 **Repo version:** v07.46r (unchanged; four housekeeping pushes, none version-bumped: the 9/30 reminder, this session context, the Events loose-end closure, and this refresh)
 **Branch:** `claude/vibrant-cray-r4spuo`
@@ -53,64 +138,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 ### Recommendation for next session
 
 - On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date. It's the first of the dated reminders; the 9/30 Classroom run check follows.
-
-**To continue:** type `recheck the cooling module after CoolIT`
-
-## Previous Sessions
-
-### Session — 2026-09-24 08:50 PM EST (Habitat Energy and Gridmatic v2, v07.46r)
-
-**Date:** 2026-09-24, 08:34 PM → 08:50 PM EST (attended; four turns)
-**Repo version:** v07.46r (one push), plus a reminder push and this session-context write, all on `claude/dazzling-mayer-r2n493` and all merged
-**Branch:** `claude/dazzling-mayer-r2n493`
-
-### What was done
-
-- **Habitat Energy and Gridmatic dossiers refreshed to profileVersion 2 (v07.46r).** Source: the developer's open-action-items Priority 1 list. Both v1 files are archived. Both dossiers were only 13 days old, so the pass focused on what had changed and re-read ownership, using two parallel research agents (about 32 sources each).
-  - **Habitat: the Quinbrook sale is unchanged.** No buyer, bidder, signing or withdrawal is on the record through 2026-09-24; New Project Media's 17 March report is still the only source. FY2025 accounts (for Habitat and its parent) are due 9/30 and were not filed.
-  - **Habitat additions:**
-    - The parent's May 2026 PSC07/PSC08 register correction (not a transfer).
-    - General Counsel Jason Dillingham and Chief People Officer Lois Stamps.
-    - Quinbrook's "Operational & Expanding" page, re-weighted as weak evidence because it has not been edited since August 2025.
-  - **Gridmatic: no raise found.** There is no Form D, named investor or credit facility, and the "upcoming debt and equity raises" posting is still live. Ownership now reads "founder-led": the company has existing investors, a board and stock options.
-  - **Gridmatic additions:**
-    - The company's own claim of ~$100M retail revenue for 2026.
-    - Amperical data showing the ERCOT book is 2 sites / 110 MW (Endurance Park 11th of 312, Cross Trails 38th).
-    - Energy Vault's lenders waiving Cross Trails' debt-service-coverage test for Q1 and Q2 2026.
-    - The CCO's interview, the Ohio residential add-on amendment, and VP Finance Yojna Verma.
-  - **Also updated:** registry tagline and synced fields, the graph, calendar `lastRefreshed` (both stay `watch` tier) and the watch notes.
-  - **Checks:** all clean (sync, relationships, cross-references 0, study guides). Five inbound mentions reviewed; none changed.
-- **Reminder added:** re-run `profiler Habitat Energy` on or after Thu 10/1, once its FY2025 accounts post.
-
-### Where we left off
-
-- Everything is committed and merged to main. The screenshot's action item 4 ("decide before 10/1") is closed for Gridmatic. For Habitat, only the FY2025 accounts remain, and they are now tracked by a reminder.
-- **Active reminders (the developer's):**
-  - Cooling recheck from 9/28.
-  - Neoclouds pass and Habitat re-run from 10/1. Both wait on 9/30 accounts filings, so they can share one Profiler session.
-  - Dominion reframe 10/2–10/6.
-
-### Key decisions made
-
-- **Manual run over tier promotion.** The developer chose `profiler <Company>` by hand rather than moving either company to the `core` tier, so both stay `watch`. The consequence, spelled out in Habitat's refresh notes: the 10/1 sweep skips them, and the accounts must be folded in by hand.
-- **Research-prompt hints are not findings.** The Habitat agent's "CEO is Luers, not Irons" came from a wrong hint in my own research prompt. The dossier was already right, so nothing changed.
-- **Change-focused revision.** A dossier under a month old gets a pass on what changed (plus the identity re-check), not a full rebuild.
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Profiler page unchanged:** v01.91w; data-only changes.
-- **sec.gov is still blocked from this environment.** efts.sec.gov full-text search works; Companies House works.
-- **Dates:**
-  - CoolIT launch 9/28
-  - Habitat and Fluidstack accounts 9/30
-  - Dominion solicitation 10/1
-  - quarterly sweep 10/1
-  - Megmeet start 10/7
-  - Energy Vault Q3 10-Q in November (Cross Trails waivers)
-
-### Recommendation for next session
-
-- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
 
 **To continue:** type `recheck the cooling module after CoolIT`

@@ -127,7 +127,7 @@ const ev = (slug, name, series, start, end, extra) => Object.assign({ slug, name
   city: 'Austin', region: 'TX', country: 'US', website: 'https://a.example/' + slug, audience: ['capital'], relevance: 3, status: 'confirmed', mentions: [],
   sources: [{ sourceKey: 'src-a', kind: 'manual', url: 'https://a.example/' + slug, lastConfirmed: '2026-09-01' }] }, extra || {});
 const REGISTRY = { schemaVersion: 1, built: '2026-09-22T00:00:00Z', events: [
-  ev('re-plus-2026', 'RE+ 2026', 'RE+', '2026-11-16', '2026-11-19', { audience: ['cells-and-chemistry'], relevance: 1, exhibitorListUrl: MYS_PAGE, speakersUrl: SPK_REPLUS }),   // starred, ranks last
+  ev('re-plus-2026', 'RE+ 2026', 'RE+', '2026-11-16', '2026-11-19', { audience: ['cells-and-chemistry'], relevance: 1, exhibitorListUrl: MYS_PAGE, speakersUrl: SPK_REPLUS, speakersWidget: 'swapcard' }),   // starred, ranks last
   ev('alpha-2026', 'Alpha Show 2026', 'Alpha Show', '2026-11-16', '2026-11-18', { audience: ['neoclouds'], relevance: 4, exhibitorListUrl: A2Z_ALPHA, speakersUrl: SPK_ALPHA, agendaUrl: SPK_ALPHA }),   // starred; agenda = roster → read once
   ev('omega-2026', 'Omega Expo 2026', 'Omega Expo', '2026-10-05', '2026-10-06', { audience: ['utilities'], relevance: 2, exhibitorListUrl: A2Z_OMEGA }),                          // starred; its page answers 503
   ev('beta-2027', 'Beta Summit 2027', 'Beta Summit', '2027-03-01', '2027-03-03', { audience: ['neoclouds'], relevance: 3, speakersUrl: SPK_BETA }),
@@ -395,7 +395,8 @@ const bySlug = Object.fromEntries((r.results || []).map((x) => [x.slug, x]));
 ok(r.results.length === 13 && r.results[0].slug === 're-plus-2026' && r.results[1].slug === 'alpha-2026' && r.results[3].slug === 'gamma-2026' && !bySlug['delta-2026'], 'sweep: starred first (in Stars order), the past edition never swept, the ranked ones after (gamma first)');
 ok(bySlug['re-plus-2026'].exhibitors.kind === 'mys' && bySlug['re-plus-2026'].exhibitors.names === 5 && bySlug['re-plus-2026'].exhibitors.matched === 2,
    'RE+: the Map Your Show proxy read — five names, two matched (Tesla, Fluence Energy) (' + JSON.stringify(bySlug['re-plus-2026'].exhibitors) + ')');
-ok(bySlug['re-plus-2026'].speakers.people === 0 && bySlug['re-plus-2026'].speakers.note === 'no_roster_found' && !bySlug['re-plus-2026'].speakers.error, 'RE+: the widget-served roster reads as no_roster_found, not a failure');
+ok(bySlug['re-plus-2026'].speakers.skipped === 'widget_roster' && bySlug['re-plus-2026'].speakers.widget === 'swapcard' && bySlug['re-plus-2026'].speakers.people === 0 && !bySlug['re-plus-2026'].speakers.error && counters.urls.indexOf(SPK_REPLUS) < 0,
+   'RE+: a row flagged speakersWidget (Swapcard) is exhibitor-only — the roster page is never fetched and the line says widget_roster (' + JSON.stringify(bySlug['re-plus-2026'].speakers) + ')');
 ok(bySlug['alpha-2026'].exhibitors.kind === 'a2z' && bySlug['alpha-2026'].exhibitors.matched === 2 && bySlug['alpha-2026'].speakers.people === 2 && bySlug['alpha-2026'].speakers.matched === 1,
    'Alpha: a2z two matched (Acme, Fluence), JSON-LD roster one matched (Jane Doe at Fluence) (' + JSON.stringify(bySlug['alpha-2026']) + ')');
 ok(bySlug['beta-2027'].speakers.people === 2 && bySlug['beta-2027'].speakers.matched === 1 && !bySlug['beta-2027'].exhibitors, 'Beta: the HTML roster — Ann Lee at Acme matched, Tom Fox at Sungrow Power Supply not');
@@ -403,7 +404,7 @@ ok(bySlug['omega-2026'].exhibitors.error === 'http_503' && bySlug['omega-2026'].
 ok(bySlug['gamma-2026'].exhibitors.skipped === 'unknown_host' && counters.attendee === 0, 'Gamma: the attendee-list host is skipped and named — never fetched');
 ok(bySlug['gamma-2026'].agenda.people === 2 && bySlug['gamma-2026'].agenda.matched === 1 && !bySlug['gamma-2026'].agenda.error, 'Gamma (s2): the agenda page read with the roster parser — two people, Rita Ng at Tesla matched (' + JSON.stringify(bySlug['gamma-2026'].agenda) + ')');
 ok(bySlug['alpha-2026'].agenda.skipped === 'same_as_speakers' && counters.urls.filter((u) => u === SPK_ALPHA).length === 1, 'Alpha (s2): an agenda URL equal to the roster URL is read once and marked same_as_speakers');
-ok(r.pages === 7 && r.pagesFailed === 2, 'sweep: seven pages read (five + the agenda + one newsroom), two failed (the 503 gallery, the 404 newsroom) (' + r.pages + ' / ' + r.pagesFailed + ')');
+ok(r.pages === 6 && r.pagesFailed === 2, 'sweep: six pages read (four + the agenda + one newsroom — RE+\'s widget roster is skipped, never read), two failed (the 503 gallery, the 404 newsroom) (' + r.pages + ' / ' + r.pagesFailed + ')');
 ok(r.feeds.length === 4 && r.feeds[0].key === 'prnewswire' && r.feeds[0].items === 5 && r.feeds[1].items === 0 && r.feeds[2].error === 'fetch_failed' && r.feeds[3].key === 'fedreg-ferc' && r.feeds[3].items === 5,
    'feeds: PR Newswire five items, Business Wire empty, GlobeNewswire unreachable and named, the FERC feed five items (' + JSON.stringify(r.feeds) + ')');
 ok(JSON.stringify(r.newsrooms) === JSON.stringify({ accounts: 2, read: 1, skipped: 0, failed: 1, matched: 2 }), 'newsrooms (s2): two targets with a URL — one read and matched twice, one failed; the customer and the partner never counted (' + JSON.stringify(r.newsrooms) + ')');

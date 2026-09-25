@@ -47,6 +47,7 @@ STATUSES = {"confirmed", "tentative", "cancelled", "past"}
 SOURCE_KINDS = {"jsonld", "ics", "html", "manual"}
 FEED_KINDS = {"jsonld", "ics", "html", "manual"}
 ROBOTS = {"allowed", "disallowed", "unknown"}
+SPEAKERS_WIDGETS = {"swapcard", "cvent", "bizzabo", "grip"}   # roster widgets the E4 sweep skips
 CADENCE = {"weekly", "monthly", "manual"}
 WHERE = {"developments", "products", "specs", "sources", "strategy"}
 
@@ -221,6 +222,14 @@ def check_events(registry, roster, segments, companies, today, f, fix_past):
         for seg in aud:
             if seg not in segments:
                 f(at, f"audience id {seg!r} is not in profiler-segments.json")
+
+        # speakersWidget — the roster at speakersUrl is a third-party widget
+        # the sweep cannot read, so the event is exhibitor-only (2026-09-25)
+        if "speakersWidget" in e:
+            if e.get("speakersWidget") not in SPEAKERS_WIDGETS:
+                f(at, f"speakersWidget {e.get('speakersWidget')!r} not in {sorted(SPEAKERS_WIDGETS)}")
+            if not e.get("speakersUrl"):
+                f(at, "speakersWidget without a speakersUrl — the flag names the page it skips")
 
         if not DATE_RE.match(str(e.get("lastUpdated", ""))):
             f(at, f"lastUpdated {e.get('lastUpdated')!r} is not YYYY-MM-DD")

@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.51r] — 2026-09-25 06:39:32 PM EST
+
+> **Prompt:** "See attached screenshot for action #11 (Scraper's Project History). Is this closed now? If not, what do I need to do? Regarding action #9b, I approve your recommendation of exhibitor-only signals. Implement it. Give me a prompt to paste into a new Opus 5.5 High session to run action #8 - Refresh the power conversion report, then remember session."
+
+### Changed
+
+#### `Events.gs` (v01.10g)
+
+- **Exhibitor-only signals for widget-served speaker rosters (the developer's #9b decision).** Some registry rows' `speakersUrl` serves its roster through a third-party widget (RE+ 2026: a Swapcard iframe), which every sweep parsed as `no_roster_found`. A row may now carry `speakersWidget` (`swapcard` · `cvent` · `bizzabo` · `grip`). When it does, `evSweepEvent_` never fetches the roster page, reports `speakers:{ skipped:'widget_roster', widget }` and leaves the page out of `pages`. The exhibitor gallery, agenda and newswire legs are unchanged, `speakersUrl` stays on the row as the sheet's Speakers link, and key speakers still come in through the sheet's manual signal form. The Swapcard API was declined.
+
+#### Registry
+
+- **`events.json`:** `re-plus-2026` carries `"speakersWidget": "swapcard"`, and its `lastUpdated` moves to 2026-09-25.
+- **`events.ics`:** rebuilt by `scripts/build-events-ics.py`. RE+'s `LAST-MODIFIED` advances, and every `DTSTAMP` takes the build time as the builder always stamps it. `--check` is OK.
+
+#### Checkers and schema
+
+- **`scripts/check-events-registry.py`:** `speakersWidget` must be one of the four widgets, and only on a row with a `speakersUrl` (`SPEAKERS_WIDGETS`). Exit 0.
+- **`scripts/check-events-signals.js`:** the RE+ fixture carries the flag. The RE+ line reads `widget_roster` with the roster URL never fetched, and the pages count drops from 7 to 6. All checks pass.
+- **`repository-information/EVENTS-SCHEMA.md`:** the `speakersWidget` row in the §3 field table, and the sweep's roster sentence.
+
+### Notes
+
+- **#11 (Scraper Apps Script versions):** the developer's Project History screenshot shows Version 167 current (22 Sep, the v07.21r deploy); `Scraper.gs` has not changed since. That leaves 13 versions to the 180 cleanup line and 33 to the 200 cap. No cleanup is due, and the count moves only when a push changes `Scraper.gs`.
 
 ## [v07.50r] — 2026-09-25 05:49:20 PM EST
 

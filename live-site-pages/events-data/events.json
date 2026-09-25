@@ -1536,6 +1536,7 @@
       "exhibitorListUrl": "https://re26.mapyourshow.com/8_0/explore/exhibitor-gallery.cfm?featured=false",
       "agendaUrl": "https://www.re-plus.com/schedule/",
       "speakersUrl": "https://www.re-plus.com/schedule/speakers/",
+      "speakersWidget": "swapcard",
       "floorPlanUrl": "https://re26.mapyourshow.com/8_0/floorplan/index.cfm",
       "audience": [
         "storage-integrators-and-containers",
@@ -1557,7 +1558,7 @@
         }
       ],
       "status": "confirmed",
-      "lastUpdated": "2026-09-21",
+      "lastUpdated": "2026-09-25",
       "mentions": [
         {
           "slug": "canadian-solar",

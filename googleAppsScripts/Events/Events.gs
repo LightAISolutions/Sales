@@ -1,4 +1,4 @@
-var VERSION = "v01.09g";
+var VERSION = "v01.10g";
 var TITLE = "Events";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4019,7 +4019,14 @@ function evSweepEvent_(ev, matcher, who, sink, seenAt) {
       }
     }
   }
-  if (sUrl) {
+  // A roster served by a third-party widget (the row's `speakersWidget`, e.g.
+  // RE+ 2026's Swapcard iframe) has nothing server-readable: the page parses
+  // as no_roster_found every week. The developer chose exhibitor-only signals
+  // for such events (2026-09-25), so the page is not fetched at all and the
+  // line says why; speakersUrl stays on the row as the sheet's link.
+  var sWidget = String(ev.speakersWidget || '').trim().toLowerCase();
+  if (sUrl && sWidget) line.speakers = { status: 0, skipped: 'widget_roster', widget: sWidget, people: 0, matched: 0 };
+  else if (sUrl) {
     var sg = evSignalsFetch_(sUrl, { 'Accept': 'text/html, application/ld+json;q=0.9, */*;q=0.5' }), people = null;
     if (!sg.error) { try { people = evParseSpeakers_(sg.body); } catch (sErr) { sg.error = 'parse_failed'; } }
     if (sg.error) {

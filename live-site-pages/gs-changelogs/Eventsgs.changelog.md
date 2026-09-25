@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventsgs.changelog-archive.md](Eventsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10g] — 2026-09-25 06:39:32 PM EST — v07.51r
+
+### Changed
+
+- For shows whose speaker list sits inside a third-party event app, the weekly attendance sweep now uses the exhibitor list only and skips the speaker page, which never had anything it could read. RE+ 2026 is the first show handled this way; its Speakers link on the event sheet is unchanged
 
 ## [v01.09g] — 2026-09-23 03:09:19 AM EST — v07.25r
 
