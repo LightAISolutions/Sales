@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.47r] — 2026-09-25 05:21:48 AM EST
+
+> **Prompt:** "6.2: See attached screenshot. Step 4) Before or after pressing "Promote", I never had a "note" box to input notes in. 6.3: I confirm that booking a meeting works as intended. 6.4: I booked a meeting on ACP's first day (9/22), but it doesn't show up in the "After the show" section. After I refresh the page and reopen the ACP event -> Plan tab, it keeps saying it's counting the cards and stuff but never shows a result. 6.5: I have sucessfully added my Events calendar to my Google calendar and can see the events. I will check events sync later. 7.3: I see a green badge "weekly sweep installed" and the line below reads "Last swept 2026-09-23 * 11 events * 1 signal found * 1 written * 0 updated * 1 page failed." See attached screenshot."
+
+### Fixed
+
+#### `Events.html` (v01.12w)
+
+- **The Plan tab's "After the show" close-out could stay on "Counting the cards…" forever.** The `eop=postevent` and `eop=plan` load callbacks repainted the Plan box they were started from, and did nothing if that box was gone. Two things rebuild the sheet while a load is in flight: returning to the tab (the `visibilitychange` → `evAfterWrite` → `evOpenSheet` path) and closing and reopening the event. Either one detached the box while the cached state still read `loading`, so the new box drew "Counting…" and never sent a request of its own. A new `evRepaintPlan(e)` repaints whichever `#ev-plan` box is on screen when the answer lands, provided the sheet is still on that event and the Plan tab is still selected. Reproduced and verified headless against a mocked backend: before the fix, a reopen during a 3-second load stayed on "Counting…" indefinitely; after it, the close-out fills in when the answer arrives.
 
 ## [v07.46r] — 2026-09-24 08:47:30 PM EST
 

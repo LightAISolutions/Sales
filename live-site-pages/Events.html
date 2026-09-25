@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.11w">
+  <meta name="build-version" content="v01.12w">
 
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above.
@@ -5549,6 +5549,15 @@ function evLoadPlan(slug, cb) {
 function evPlanChip(text, cls) { return evEl('span', 'ev-badge' + (cls ? ' ' + cls : ''), text); }
 function evOsmHref(lat, lng) { return 'https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lng + '#map=18/' + lat + '/' + lng; }
 function evPlanTime(hhmm) { return String(hhmm || '').replace(/^0/, ''); }
+// A load that finishes paints the Plan box on screen NOW, not the one it
+// started from: a tab return (evAfterWrite) or a close-and-reopen rebuilds
+// the sheet mid-flight, and the old box is detached while the cached state
+// still reads loading, so the new box would wait on "Counting…" forever.
+function evRepaintPlan(e) {
+  if (_evSheetSlug !== e.slug || _evSheetTab !== 'plan') return;
+  var box = document.getElementById('ev-plan');
+  if (box) evRenderPlan(_evBySlug[e.slug] || e, box);
+}
 function evRenderPlan(e, box) {
   box.innerHTML = '';
   if (!_evStars[e.slug]) {
@@ -5559,7 +5568,7 @@ function evRenderPlan(e, box) {
   var p = _evPlans[e.slug];
   if (!p || p.state === 'loading') {
     box.appendChild(evEl('div', 'ev-netnote', 'Building the plan — the score, the agenda, the dossiers and the venues are read once…'));
-    if (!p) evLoadPlan(e.slug, function() { if (_evSheetSlug === e.slug && box.parentNode && _evSheetTab === 'plan') evRenderPlan(e, box); });
+    if (!p) evLoadPlan(e.slug, function() { evRepaintPlan(e); });
     return;
   }
   if (p.state !== 'ok') {
@@ -5879,7 +5888,7 @@ function evRenderPost(e, d, box) {
   var p = _evPost[e.slug];
   if (!p || p.state === 'loading') {
     wrap.appendChild(evEl('div', 'ev-netnote', 'Counting the cards, the meetings and the stage moves…'));
-    if (!p) evLoadPostEvent(e.slug, function() { if (_evSheetSlug === e.slug && box.parentNode && _evSheetTab === 'plan') evRenderPlan(e, box); });
+    if (!p) evLoadPostEvent(e.slug, function() { evRepaintPlan(e); });
     return;
   }
   if (p.state !== 'ok') {

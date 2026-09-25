@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Eventshtml.changelog-archive.md](Eventshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12w] — 2026-09-25 05:21:48 AM EST — v07.47r
+
+### Fixed
+
+- **"After the show" no longer sticks on "Counting the cards…".** Switching to another tab or app while the close-out was loading, or closing and reopening the event, could leave it counting forever; the result now appears as soon as it arrives. The same fix covers "Building the plan…"
 
 ## [v01.11w] — 2026-09-23 05:58:28 AM EST — v07.26r
 
