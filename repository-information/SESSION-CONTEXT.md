@@ -6,6 +6,87 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-25, 06:47 PM → 07:20 PM EST (attended; three turns)
+**Repo version:** v07.53r (two pushes: v07.52r, v07.53r; this save is unversioned)
+**Branch:** `claude/quirky-faraday-avb5pv`
+
+### What was done
+
+- **#8 closed — the AIDC power-conversion report was refreshed twice on 9/25:**
+  - **v07.52r:** `aidc-power-conversion--competitive--2026-09-25` superseded the 9/8 edition. It re-pins Megmeet v8, Delta v6 and LITEON v7, and the rack order is now sourced: Delta, LITEON, Megmeet third. It dates Megmeet's SST as pre-research with no class, corrects the 9/8 reading of Sungrow ("supplying" by filing; batch orders from 2027), and adds a Megmeet first-week section and a cross-reference to the SST rev2 report.
+  - **v07.53r (developer decision):** `aidc-power-conversion-rev2--competitive--2026-09-25` added `power-electronics` to Layer 3 (AIPCS, medium voltage to 800 VDC, TRU-class). That makes 16 vendors and 66 citations. The FCC paragraph now says the inverter rule reaches Power Electronics' Spanish-built storage inverters. **rev2 is current.**
+  - `check-profiler-reports.py` reports 0 errors and no warning on rev2.
+- **New reminder:** re-run the report once Megmeet's Q3 is filed (due by Sat 10/31), refreshing the Megmeet dossier first. Zhonhen and Sinexcel report by the same deadline.
+- **The #12R prompt was drafted** (below). It hands the discovery Routine's prompt and the UI steps to a Medium session.
+
+### Where we left off
+
+- **Everything is merged; the tree is clean.** Next is #12R, then Phase B (#9a registry pass and the booth-number build, 9/28–10/6).
+- **Dated reminders stand:**
+  - The cooling recheck, from 9/28.
+  - The 9/30 Classroom run.
+  - The neoclouds pass and Habitat Energy, from 10/1.
+  - The Dominion reframe, 10/2–10/6.
+  - The AIDC re-run, after 10/31.
+  - The Megmeet start is Wed 10/7.
+
+### Key decisions made
+
+- **Power Electronics went in now rather than at the Q3 re-run.** It is a fresh dossier and a clear Layer 3 product, and it is the US-footprint comparison for the first week. The only cost was a same-day third edition, named with `-rev2` per the SST precedent.
+- **Mitsubishi Electric** stays a named candidate for the next edition.
+- **Archive rotation is not due on 9/25:** 105 sections, 7 exempt, 98 non-exempt. **The first push dated 9/26 or later rotates the 2026-09-18 group (8 sections), SHA-enriched after `git fetch --unshallow`.**
+
+### Known issues
+
+- The two older aged 9/8 reports still warn (grid-scale-bess: Jinko; named-project-bess-attach: Oracle). Nothing in this refresh touched what they depend on; they are optional Phase B work.
+- `repository-information/megmeet-briefing-prompt.md` still names the 9/8 edition as current. Its own row says to re-check the index after 10/1, which will find rev2.
+- From before this session: `verify-profiler-roles.py` (2) and `check-events-plan.js` (2, stale fixture dates).
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **CHANGELOG:** `Sections: 105/100`.
+- **Pages:** Profiler v01.92w (unchanged — reports are data-only).
+- **Working files:** the report builder scripts were scratchpad-only, not committed.
+
+### Recommendation for next session
+
+- Run #12R in a fresh Opus 5.5 Medium session by pasting this prompt:
+
+> Run action #12R — draft the discovery Routine's prompt and give me step-by-step instructions to create it in the claude.ai UI (**R** in `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`).
+>
+> Read first, in this order:
+> 1. `repository-information/SESSION-CONTEXT.md` → Latest Session.
+> 2. `NETWORK-EVENTS-DESIGN-PLAN.md`: §5.3's **Discovery Routine** bullet, the **R** rows in §8 and §11, and the note headed "**R — the developer.**" Its blocker, Monday's earnings-desk proof, is cleared: the desk landed the first Routine commit on 9/22 (v07.16r).
+> 3. `repository-information/ROUTINES-OPERATIONS.md`:
+>    - the current **STEP 0** text — copy it verbatim, not from memory;
+>    - the settled findings that a fired session can push only when the repository is attached on the "New routine" form, and that a Routine's repository cannot be edited afterwards;
+>    - the 2026-09-21 model evaluation;
+>    - the prompts under "The rebuild prompts", as the shape to follow.
+> 4. `.claude/rules/events-app.md` (the Events Sync command and its never-list); `repository-information/EVENTS-SCHEMA.md` (the registry, the roster and the `Proposed` shape); and `live-site-pages/events-data/events.json` and `events-sources.json`.
+>
+> Settle these before drafting, and give me each answer with its reason:
+> - **Where proposals go.** A fired session cannot write the Events spreadsheet's `Proposed` tab, and it must never call the deployed app or widen a peer token. Decide the repo-side queue a run writes candidates to (§8's "calendar-file-as-queue"), and how `events sync` or I promote a candidate out of it. If that file or its schema doesn't exist, create it in this session and make `scripts/check-events-registry.py` (or a sibling checker) validate it.
+> - **What counts as a candidate:** the source classes; the relevance bar against the segments and the dossier corpus; dedup against `events.json`; a per-run cap; and the stand-down rule (a quiet run commits nothing and reports why).
+> - **Cadence and model:** quarterly, with the cron written in `CRON_TZ=America/New_York` and a jittered minute. Give me the first fire date and recommend a model with the reason.
+> - **Budget:** list my existing Routines and say whether one more fits before the #12Q quota review (~10/21).
+>
+> Deliverables:
+> 1. The complete Routine prompt in one copyable block: STEP 0 verbatim, then identity, the queue, the cap, the stand-down rule and the report shape.
+> 2. That prompt saved as a new subsection under "The rebuild prompts" in `ROUTINES-OPERATIONS.md`, so it can be recreated. Mark the plan's R row "prompt written — awaiting UI creation", add a CHANGELOG entry, and commit and push under the normal checklists.
+> 3. Numbered, click-by-click steps for claude.ai's "New routine" form: name, prompt, repository picker (confirm the **Runs with** card shows `LightAISolutions/Sales` before saving), environment, model, schedule, connectors (none unless the prompt needs one), notifications, then one **Run now**. Check the live docs with `read_documentation` rather than memory.
+> 4. What a good first run looks like (§8: it proposes at least one event and commits, or stands down with a report), and how I verify it: the session report, a commit on `main`, and the queue file.
+>
+> Do not create the Routine yourself. `create_trigger` cannot attach a repository, and a Routine without one cannot push.
+>
+> Done when: the prompt is committed in `ROUTINES-OPERATIONS.md`, the push has merged, and I have the UI steps.
+
+**To continue:** paste the #12R prompt above into a new Opus 5.5 Medium session
+
+## Previous Sessions
+
+### Session — 2026-09-25 04:30 AM → 06:40 PM EST (Priority 2 #6 and #7 closed, five live-test fixes, v07.51r)
+
 **Date:** 2026-09-25, 04:30 AM → 06:40 PM EST (attended; seven turns)
 **Repo version:** v07.51r (five pushes: v07.47r → v07.51r)
 **Branch:** `claude/wonderful-johnson-n5spaf`
@@ -86,57 +167,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > Done when: the new edition is registered, `python3 scripts/check-profiler-reports.py` reports no warning for it, and the push has merged.
 
 **To continue:** paste the #8 prompt above into a new Opus 5.5 High session
-
-## Previous Sessions
-
-### Session — 2026-09-24 09:24 PM → 2026-09-25 03:01 AM EST (read the 9/23 C2 report, Priority 1 closed, v07.46r)
-
-**Date:** 2026-09-24, 09:24 PM → 2026-09-25, 03:01 AM EST (attended; nine turns)
-**Repo version:** v07.46r (unchanged; four housekeeping pushes, none version-bumped: the 9/30 reminder, this session context, the Events loose-end closure, and this refresh)
-**Branch:** `claude/vibrant-cray-r4spuo`
-
-### What was done
-
-- **Read the 9/23 Classroom pipeline run's report** (Priority 1 item 5). The transcript can't be read from a cloud session, so the repo was checked first and the developer then pasted the report.
-  - **Result: `STAND-DOWN`, correct.** It found 4 qualifying items from 1 source (`profile:novonix`), against a bar of 3 items from 2 sources. `coveredThrough` stays 2026-09-21, so the window stays open.
-  - **Pre-flight passed.** The gate digest matches the ledger (it still matches today), and schema is v1/v1. The checker found 19 segments due: 17 were pin-only and 2 had real section changes. Segments belong to developer sessions, and v07.37r regenerated five of them on 9/24.
-  - **Its two "Needs the developer" items:**
-    - No corpus token was supplied, so the Scraper layer was skipped. The contract (§10.6) intends this. It's optional to add one; the trade-off is that the token would appear in every run's transcript.
-    - `ups` was broadened to battery-or-flywheel. I checked, and no lesson glossary contradicts it: the only UPS entry is at `Classroom.gs:55772`. No fix is needed.
-- **Notifications:** the Routine has push and email on, but no email arrived for the 9/21 or 9/23 run. Other Claude emails do reach the inbox. The likely reason is that only noteworthy runs notify (unconfirmed). The 9/30 run is the first real test.
-- **Reminder added:** check the 9/30 Classroom run, including whether a notification arrives.
-- **Priority 1 (hard dates 9/28–10/7) is confirmed done:**
-  - Item 1: OCP SST v0.3 (v07.39r).
-  - Item 2: Classroom review dates (v07.40r/v07.41r). Cooling, neoclouds and the Dominion scenario are left in place on purpose and each has a reminder.
-  - Item 3: events sync (v07.42r).
-  - Item 4: Habitat and Gridmatic (v07.46r).
-  - Item 5: the 9/23 report (this session).
-
-### Where we left off
-
-- Everything is committed and merged to main.
-- **Item 3's loose end is closed (12:37 AM on 9/25).** The developer confirmed in the Events app's Proposed tab that no proposals are waiting and that the 7 v07.42r rows are marked applied. The other 17 of the poller's 33 were decided in the app, and no sync is outstanding. **Priority 1 is fully complete.**
-- **Active reminders (the developer's), in date order:**
-  - Cooling recheck from 9/28.
-  - 9/30 Classroom run check.
-  - Neoclouds pass and Habitat re-run from 10/1 (they can share a Profiler session).
-  - Dominion reframe 10/2–10/6.
-
-### Key decisions made
-
-- **A pin-only segment is not work for the run.** When a segment's inputs moved but no section differs, G3 leaves it alone, so "19 due" on 9/23 did not mean the run failed.
-- **The corpus token stays out for now.** The 9/30 window has three repo sources (NOVONIX, Gridmatic, Habitat), which should clear the bar without it.
-- **Notification silence isn't treated as a fault yet.** The first committing run (likely 9/30) decides it. If it commits and nothing arrives, raise it with Claude support rather than changing the Routine.
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Classroom ledger:** `coveredThrough` 2026-09-21. `lastRun` is 2026-09-21 COMMIT (v07.03r). The gate digest is `sha256:3d0970…`.
-- **Routine:** "Classroom curriculum pipeline (C2) - weekly", Wednesdays at 4:00 AM PDT, next run 9/30. Push and email are on. Runs as Claude HQ · Opus 5.
-- **Tooling gap:** this environment can't read another session's transcript (only `get_session` metadata is available), so a run's report has to be pasted in.
-
-### Recommendation for next session
-
-- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date. It's the first of the dated reminders; the 9/30 Classroom run check follows.
-
-**To continue:** type `recheck the cooling module after CoolIT`
