@@ -3,11 +3,51 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.52r] — 2026-09-25 06:56:02 PM EST
+
+> **Prompt:** "profiler report competitive: AIDC power conversion — refresh the 2026-09-08 edition against current dossiers (Priority 2 item #8).
+>
+> Context:
+> - The current edition is `live-site-pages/profiler-data/reports/aidc-power-conversion--competitive--2026-09-08.report.json` ("AIDC Power Conversion — The 800 VDC Race"). `python3 scripts/check-profiler-reports.py` warns that it has aged: it pins megmeet v7, delta-electronics v5 and liteon v6, and those dossiers are now v8, v6 and v7 (all refreshed 2026-09-23). It turns "aging" on 2026-10-23 and no Routine watches it.
+> - This is a re-run of a prior topic, not an edit. Reports are immutable, so write a new edition `aidc-power-conversion--competitive--<today>.report.json` with `supersedes` set to the 9/8 edition's id, and flip the old entry in `reports-index.json` to `superseded`. Follow the Profiler report command in `.claude/rules/profiler-app.md`.
+> - Keep the 9/8 edition's company scope. If the preflight coverage table shows a covered company that belongs in this race but is missing, propose it in the preflight rather than widening silently.
+> - Synthesize from covered dossiers only and cite their sources with provenance tiers. Do not re-research. If a dossier is stale for this report's purpose, record that in `limitations` rather than refreshing it in this session.
+> - Read the two 2026-09-23 SST reports (`sst-hall-edge-block--competitive--2026-09-23` and `sst-hall-edge-block-rev2--competitive--2026-09-23`) and keep this report consistent with them where they overlap (Megmeet's position). Cross-reference them; don't duplicate them.
+> - Audience: I start at Megmeet on Wednesday 2026-10-07. Write the BLUF and key judgments so they are usable in my first week.
+> - Show me the preflight (type, scope, coverage table with freshness tiers), then proceed without waiting unless the scope is ambiguous.
+> - Out of scope: the other two aged 9/8 reports (grid-scale-bess: Jinko v5→v6; named-project-bess-attach: Oracle v4→v5). Mention them only if the refresh changes something they depend on.
+> - Heads-up for the push: `repository-information/CHANGELOG.md` sat at `Sections: 103/100` on 9/25 with 5 sections dated that day. From 9/26 onward none are exempt, so archive rotation will be due on this push (the oldest date groups, with SHA enrichment, after deepening the clone).
+>
+> Done when: the new edition is registered, `python3 scripts/check-profiler-reports.py` reports no warning for it, and the push has merged."
+
+Generated the AIDC power-conversion competitive report, 2026-09-25 edition (`aidc-power-conversion--competitive--2026-09-25`), superseding the 9/8 edition. The scope stays at the same 15 vendors across four layers. Coverage is re-pinned to Megmeet v8, Delta Electronics v6 and LITEON v7; the other twelve pins are unchanged.
+
+### Added
+
+- **`live-site-pages/profiler-data/reports/aidc-power-conversion--competitive--2026-09-25.report.json`** — 10 key judgments, 9 sections, 9 indicators, 60 citations (31 carried from the 9/8 edition, 29 new, all copied verbatim from dossier `sources[]`). What moved:
+  - **The rack order is now sourced rather than contested:** Delta, then LITEON, then Megmeet as a qualified third source. The evidence is Megmeet's own account of being late on GB200 and winning GB300 batch orders, Soochow's third-source call, TrendForce naming Delta and LITEON as the leaders, and the rumour origin of the "#2" story.
+  - **Megmeet's SST is dated on its own word.** It is in pre-research, has no disclosed input class, and the company expects no volume sales for two to three years.
+  - **A correction to the 9/8 reading of Sungrow:** its dossier, unchanged at v9, carries a curve of small-batch trials through 2026, batch orders from 2027 and scale from 2028, which the 9/8 edition did not report. The "shipping" wording is replaced by "productised, not yet volume".
+  - **New `megmeet-first-week` section (analysis):** membership versus rank; what the H1 filing measures; how to place the SST; what the Q3 report must show against the RMB 787M consensus; the Richardson versus HKEX-proof footprint question.
+  - **New `sst-crossref` section:** points to `sst-hall-edge-block-rev2--competitive--2026-09-23` for the class-by-class hall-edge comparison. It is consistent with that report on Megmeet (rack and sidecar, third source, undisclosed SST class) and does not re-score its venture SST set.
+  - **Limitations corrected:** the 9/8 edition said `mitsubishi-electric` and `power-electronics` carried no dossiers. Both were covered before it was written (from 9/4 and 9/6), and Power Electronics' AIPCS is a medium-voltage-to-800 V DC unit. Both are named as next-edition scope candidates rather than added.
+  - **Admin-lens overlays** on `nvidia-800vdc-2026-08` (`options`, `trusst`, `suppliers`) carried forward and updated for the third-source and Sungrow-curve findings.
+
+### Changed
+
+- **`reports/reports-index.json`** — the new edition was added as `current` with `overlayModules`; `aidc-power-conversion--competitive--2026-09-08` flipped to `superseded`.
+- **`README.md`** — the tree gains the new report. The 9/8 edition's line now reads superseded, and the 23 September morning SST edition's line, which still said "current edition", now reads superseded by its rev2.
+
+### Notes
+
+- **`check-profiler-reports.py`:** 0 errors, and no warnings on the new edition. The two remaining warnings are the out-of-scope aged 9/8 BESS reports (Jinko, Oracle); nothing in this refresh touches what they depend on.
+- **Archive rotation not performed.** This push is dated 25 September, so today's six sections are exempt: 104 total, 98 non-exempt against a trigger of 100. The first push dated 26 September or later will rotate the 2026-09-18 group (8 sections).
 
 ## [v07.51r] — 2026-09-25 06:39:32 PM EST
 
