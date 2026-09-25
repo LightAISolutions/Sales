@@ -6,6 +6,60 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-24, 09:24 PM → 11:58 PM EST (attended; six turns)
+**Repo version:** v07.46r (unchanged; a reminder push and this session-context write, neither version-bumped)
+**Branch:** `claude/vibrant-cray-r4spuo`
+
+### What was done
+
+- **Read the 9/23 Classroom pipeline run's report** (Priority 1 item 5). The transcript can't be read from a cloud session, so the repo was checked first and the developer then pasted the report.
+  - **Result: `STAND-DOWN`, correct.** It found 4 qualifying items from 1 source (`profile:novonix`), against a bar of 3 items from 2 sources. `coveredThrough` stays 2026-09-21, so the window stays open.
+  - **Pre-flight passed.** The gate digest matches the ledger (it still matches today), and schema is v1/v1. The checker found 19 segments due: 17 were pin-only and 2 had real section changes. Segments belong to developer sessions, and v07.37r regenerated five of them on 9/24.
+  - **Its two "Needs the developer" items:**
+    - No corpus token was supplied, so the Scraper layer was skipped. The contract (§10.6) intends this. It's optional to add one; the trade-off is that the token would appear in every run's transcript.
+    - `ups` was broadened to battery-or-flywheel. I checked, and no lesson glossary contradicts it: the only UPS entry is at `Classroom.gs:55772`. No fix is needed.
+- **Notifications:** the Routine has push and email on, but no email arrived for the 9/21 or 9/23 run. Other Claude emails do reach the inbox. The likely reason is that only noteworthy runs notify (unconfirmed). The 9/30 run is the first real test.
+- **Reminder added:** check the 9/30 Classroom run, including whether a notification arrives.
+- **Priority 1 (hard dates 9/28–10/7) is confirmed done:**
+  - Item 1: OCP SST v0.3 (v07.39r).
+  - Item 2: Classroom review dates (v07.40r/v07.41r). Cooling, neoclouds and the Dominion scenario are left in place on purpose and each has a reminder.
+  - Item 3: events sync (v07.42r).
+  - Item 4: Habitat and Gridmatic (v07.46r).
+  - Item 5: the 9/23 report (this session).
+
+### Where we left off
+
+- Everything is committed and merged to main.
+- **One loose end in item 3:** the poller had 33 proposals, and the v07.42r sync covered 16 (7 applied, 9 skipped). The other 17 can't be seen from a session. The developer should confirm in the Events app's Proposed tab that nothing is still waiting for a decision and that the 7 are marked applied.
+- **Active reminders (the developer's), in date order:**
+  - Cooling recheck from 9/28.
+  - 9/30 Classroom run check.
+  - Neoclouds pass and Habitat re-run from 10/1 (they can share a Profiler session).
+  - Dominion reframe 10/2–10/6.
+
+### Key decisions made
+
+- **A pin-only segment is not work for the run.** When a segment's inputs moved but no section differs, G3 leaves it alone, so "19 due" on 9/23 did not mean the run failed.
+- **The corpus token stays out for now.** The 9/30 window has three repo sources (NOVONIX, Gridmatic, Habitat), which should clear the bar without it.
+- **Notification silence isn't treated as a fault yet.** The first committing run (likely 9/30) decides it. If it commits and nothing arrives, raise it with Claude support rather than changing the Routine.
+
+### Active context
+
+- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
+- **Classroom ledger:** `coveredThrough` 2026-09-21. `lastRun` is 2026-09-21 COMMIT (v07.03r). The gate digest is `sha256:3d0970…`.
+- **Routine:** "Classroom curriculum pipeline (C2) - weekly", Wednesdays at 4:00 AM PDT, next run 9/30. Push and email are on. Runs as Claude HQ · Opus 5.
+- **Tooling gap:** this environment can't read another session's transcript (only `get_session` metadata is available), so a run's report has to be pasted in.
+
+### Recommendation for next session
+
+- Open the Events app's Proposed tab before Yotta, GCPA and ESIG start on 9/28. Confirm no proposals are still waiting for a decision and that v07.42r's 7 applied rows are marked applied. If any are pending, approve them and paste the JSON for another sync.
+
+**To continue:** type `events sync` (with the approved JSON pasted)
+
+## Previous Sessions
+
+### Session — 2026-09-24 08:50 PM EST (Habitat Energy and Gridmatic v2, v07.46r)
+
 **Date:** 2026-09-24, 08:34 PM → 08:50 PM EST (attended; four turns)
 **Repo version:** v07.46r (one push), plus a reminder push and this session-context write, all on `claude/dazzling-mayer-r2n493` and all merged
 **Branch:** `claude/dazzling-mayer-r2n493`
@@ -54,63 +108,6 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   - quarterly sweep 10/1
   - Megmeet start 10/7
   - Energy Vault Q3 10-Q in November (Cross Trails waivers)
-
-### Recommendation for next session
-
-- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date.
-
-**To continue:** type `recheck the cooling module after CoolIT`
-
-## Previous Sessions
-
-### Session — 2026-09-24 08:31 PM EST (Events mentions refresh + sync fixes, v07.43r–v07.45r)
-
-**Date:** 2026-09-24, 07:55 PM → 08:31 PM EST (attended; six turns)
-**Repo version:** v07.45r, three pushes on `claude/awesome-brahmagupta-7cmzsc` (v07.43r, v07.44r, v07.45r; all merged), plus this session-context write
-**Branch:** `claude/awesome-brahmagupta-7cmzsc`
-
-### What was done
-
-- **`mentions[]` refreshed (v07.43r).** Ran `extract-corpus-events.py`. Only the Megmeet dossier had drifted, since its v8 cut at v07.32r:
-  - `computex-2027` lost megmeet/strategy.
-  - `ai-infra-summit-2027` gained megmeet/sources.
-  - Still 256 rows across 33 corpus events. `--check` and `check-events-registry.py` both exit 0.
-- **Events Sync hand-off fixed (v07.44r).** The v07.42r "mark 7 applied, reject 9" instruction could not be carried out in the panel:
-  - **Mark applied** stamps every approved row at once (`Events.html` `ev-prop-applied`).
-  - An applied row can't be rejected afterwards (`already_applied`).
-  - The queue now reads 0 pending · 0 approved · 17 rejected · 16 applied, so the 9 skipped misreads carry `applied`.
-  - Step 8 of `.claude/rules/events-app.md` now orders it: Reject the skipped rows first, then Mark applied. `EVENTS-SCHEMA.md` §7 has a one-line note.
-- **ACP RECHARGE 2026 flipped to `past` (v07.45r).** The registry check failed once the UTC date rolled to 25 Sep. Fixed with `--fix-past` and an `events.ics` rebuild (68 confirmed). Registry check exit 0.
-
-### Where we left off
-
-- Everything is committed and merged to main. The Events registry action item is closed: the registry check passes, `mentions[]` is current and the Proposed queue is empty.
-- **Optional, the developer's:** in the Events spreadsheet's Proposed tab, relabel the 9 skipped rows' Status from `applied` to `rejected`. The ids are in the v07.42r CHANGELOG under "Skipped". This only fixes the labels: the poller's dedup counts every row whatever its status, so the misreads won't be re-proposed either way.
-- **Active reminders (the developer's):**
-  - Cooling recheck from 28 Sep.
-  - Neoclouds pass from 1 Oct.
-  - Dominion reframe 2–6 Oct.
-
-### Key decisions made
-
-- **No per-id Mark applied.** The session describes the panel as it is, with no per-id marking, and never hands off an order the panel can't carry out. I verified the claims against `Events.gs` `evPollApplied_` / `evPollDecide_` / `evProposedKeys_`.
-- **A past-date flip is data-only.** It gets its own push (repo version, CHANGELOG, README) with no page or GAS bump, following the v07.42r precedent.
-- **The earlier heads-up was retracted.** I had said the AI Infra Summit misread would recur on the next poll. It won't: dedup blocks the identical proposal, and past-dated editions are skipped.
-
-### Active context
-
-- **Toggles unchanged:** `START_OF_RESPONSE_BLOCK` On · `CHAT_BOOKENDS` Off · `TIMING_ESTIMATES` On · `END_OF_RESPONSE_BLOCK` On · `MULTI_SESSION_MODE` Off.
-- **Events page unchanged:** Events.html v01.11w; only data and the rule text changed.
-- **The UTC rollover will recur:** `check-events-registry.py` compares against the UTC date, so each confirmed event trips it at 8 PM Eastern on its last day. The fix is a one-line `--fix-past` push, and no Routine automates it.
-- **Dates:**
-  - CoolIT launch 9/28
-  - Fluidstack accounts 9/30
-  - Dominion solicitation 10/1
-  - ESIG DER webinar 10/1
-  - Megmeet start 10/7
-  - Battery Show NA 10/12–15
-  - ESIG large-loads webinar 10/15
-  - RE+ 11/16–19
 
 ### Recommendation for next session
 
