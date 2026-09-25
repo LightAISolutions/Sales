@@ -30,6 +30,12 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **Can share a session** with the neoclouds pass (also waiting on a 9/30 accounts filing, Fluidstack's), since both run under the Profiler command.
   - **To resume:** type `profiler Habitat Energy`.
 
+- `2026-09-24 09:54:50 PM EST` — **Check the 9/30 Classroom pipeline run on or after Wednesday 2026-09-30** — the weekly Routine "Classroom curriculum pipeline (C2) - weekly" fires at 4:00 AM PDT. Open its session and read the final `CLASSROOM PIPELINE — 2026-09-30 — …` report.
+  - **What to expect:** likely a `COMMIT` of a briefing. The 9/23 run stood down with 4 qualifying items across 1 source (NOVONIX) against a bar of 3/2. The window stayed open at `coveredThrough` 2026-09-21, and the 9/24 Gridmatic and Habitat Energy v2 refreshes should supply the second source. A second `STAND-DOWN` is fine if the report explains it; a `BLOCKED —` title needs a look.
+  - **Also check whether a push or email notification arrived.** Push and email are both on, but no email came for the 9/21 or 9/23 run. Notifications likely go out only for noteworthy runs, which is unconfirmed. If 9/30 commits and nothing arrives, notifications aren't reaching you even for runs that change something. Raise it with Claude support rather than changing the Routine.
+  - **Still open from 9/23 (optional):** no Scraper corpus token is supplied, so that layer is skipped. Adding one to the Routine prompt is allowed, but the token would then appear in every run's transcript.
+  - **To resume:** type `check the 9/30 Classroom run`.
+
 ## Completed Reminders
 
 - ~~`2026-09-22 12:29:48 AM EST` — **Paste the Megmeet SST briefing prompt — after the Network and Events build plan, before the 2026-10-07 start date** — the prompt is preserved verbatim at `repository-information/megmeet-briefing-prompt.md`; it is not in any chat transcript that will survive. Deliberately deferred on 2026-09-22 so the research lands closer to the start date and the tokens go to the Network/Events build first.~~ — completed `2026-09-23 06:47:20 PM EST` (dismissed by the developer; the briefing it points to ran on 2026-09-23 as v07.29r–v07.31r, and its chapter 9.4 was amended the same evening after Megmeet dossier v8)
