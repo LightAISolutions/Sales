@@ -30,7 +30,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 ### Where we left off
 
 - Everything is committed and merged to main.
-- **One loose end in item 3:** the poller had 33 proposals, and the v07.42r sync covered 16 (7 applied, 9 skipped). The other 17 can't be seen from a session. The developer should confirm in the Events app's Proposed tab that nothing is still waiting for a decision and that the 7 are marked applied.
+- **Item 3's loose end is closed (12:37 AM on 9/25).** The developer confirmed in the Events app's Proposed tab that no proposals are waiting and that the 7 v07.42r rows are marked applied. The other 17 of the poller's 33 were decided in the app, and no sync is outstanding. **Priority 1 is fully complete.**
 - **Active reminders (the developer's), in date order:**
   - Cooling recheck from 9/28.
   - 9/30 Classroom run check.
@@ -52,9 +52,9 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ### Recommendation for next session
 
-- Open the Events app's Proposed tab before Yotta, GCPA and ESIG start on 9/28. Confirm no proposals are still waiting for a decision and that v07.42r's 7 applied rows are marked applied. If any are pending, approve them and paste the JSON for another sync.
+- On or after Monday 2026-09-28, recheck `landscape-cooling-2026-09` against what CoolIT actually launched (capacity, ship date, form factor) and place it on the CDU ladder, which Schneider's 3.5 MW WCDU now tops. Move `reviewBy` only if the gate has passed; if the launch slipped, set it to the new date. It's the first of the dated reminders; the 9/30 Classroom run check follows.
 
-**To continue:** type `events sync` (with the approved JSON pasted)
+**To continue:** type `recheck the cooling module after CoolIT`
 
 ## Previous Sessions
 
