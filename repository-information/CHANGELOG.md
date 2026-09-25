@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.44r] — 2026-09-24 08:11:01 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+
+- **Events Sync hand-off order** (`.claude/rules/events-app.md` step 8). The v07.42r hand-off told the developer to "mark 7 applied, reject 9", which the panel cannot do. **Mark applied** stamps every approved row at once, and an applied row can no longer be rejected (`already_applied`). All 16 rows ended up stamped `applied`.
+  - **The rule now requires the order the panel supports:** switch skipped rows to Reject first, then click Mark applied.
+  - **It also records the fallback:** a row that was stamped by mistake can only be relabelled in the spreadsheet, and the poller's dedup is unaffected by it.
+  - **`EVENTS-SCHEMA.md` §7** carries the same one-line ordering note.
+  - **Nothing else changed:** no page, GAS or data file.
 
 ## [v07.43r] — 2026-09-24 07:55:58 PM EST
 
