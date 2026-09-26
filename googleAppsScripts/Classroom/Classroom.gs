@@ -1,4 +1,4 @@
-var VERSION = "v01.91g";
+var VERSION = "v01.92g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4037,7 +4037,7 @@ function clLessonSegmentCellsAndChemistry_() {
  "title": "Cells and chemistry",
  "short": "Makers of the storage cell itself — the lithium-iron-phosphate prismatic cell that every containerized system is built from, the high-power NCA/LMO and…",
  "group": "The Value Chain",
- "updated": "2026-09-23",
+ "updated": "2026-09-26",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -4128,7 +4128,7 @@ function clLessonSegmentCellsAndChemistry_() {
    {
     "kind": "public",
     "ref": "profile:narada",
-    "date": "2026-09-05",
+    "date": "2026-09-24",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -4176,13 +4176,13 @@ function clLessonSegmentCellsAndChemistry_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-23",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -4248,12 +4248,12 @@ function clLessonSegmentCellsAndChemistry_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (33 edges) · Storage integrators and containers (15 edges) · Software and optimization (9 edges) · In-hall power (8 edges) · Clean firm and nuclear (8 edges) · Hyperscalers and AI labs (8 edges) · Utilities (8 edges) · AIDC developers and landlords (7 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Capital (3 edges) · Cooling (2 edges) · EPC and construction (2 edges) · Neoclouds (2 edges) · Bridge and on-site generation (1 edge)",
+     "Storage developers and IPPs (35 edges) · Storage integrators and containers (15 edges) · Utilities (10 edges) · Software and optimization (9 edges) · In-hall power (8 edges) · Clean firm and nuclear (8 edges) · Hyperscalers and AI labs (8 edges) · AIDC developers and landlords (7 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Capital (3 edges) · Cooling (2 edges) · EPC and construction (2 edges) · Neoclouds (2 edges) · Bridge and on-site generation (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Assurance (10 edges) · Software and optimization (6 edges) · Power conversion and rack-power silicon (5 edges) · Grid equipment (3 edges) · In-hall power (3 edges) · Storage integrators and containers (2 edges) · Bridge and on-site generation (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge) · Insurance and risk transfer (1 edge)",
+     "Assurance (10 edges) · Software and optimization (6 edges) · Power conversion and rack-power silicon (5 edges) · Grid equipment (3 edges) · In-hall power (3 edges) · Storage integrators and containers (2 edges) · Storage developers and IPPs (2 edges) · Utilities (2 edges) · Bridge and on-site generation (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -6234,6 +6234,13 @@ function clLessonSegmentCellsAndChemistry_() {
    "changed": [
     "what-moved"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-23→2026-09-26; profile:narada 2026-09-05→2026-09-24",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -6247,7 +6254,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
  "title": "Storage integrators and containers",
  "short": "The companies that turn cells into a factory-assembled DC or AC block — enclosure, thermal management, BMS, and usually PCS and EMS — and stand behind it with…",
  "group": "The Value Chain",
- "updated": "2026-09-23",
+ "updated": "2026-09-26",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -6374,7 +6381,7 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "profile:narada",
-    "date": "2026-09-05",
+    "date": "2026-09-24",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -6446,13 +6453,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-23",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -6518,12 +6525,12 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (49 edges) · AIDC developers and landlords (20 edges) · Utilities (13 edges) · Clean firm and nuclear (10 edges) · Hyperscalers and AI labs (10 edges) · Neoclouds (6 edges) · Capital (5 edges) · Grid equipment (4 edges) · EPC and construction (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
+     "Storage developers and IPPs (52 edges) · AIDC developers and landlords (20 edges) · Utilities (16 edges) · Clean firm and nuclear (10 edges) · Hyperscalers and AI labs (10 edges) · Neoclouds (6 edges) · Capital (5 edges) · Grid equipment (4 edges) · EPC and construction (3 edges) · In-hall power (2 edges) · Cooling (2 edges) · Software and optimization (2 edges) · Bridge and on-site generation (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Assurance (18 edges) · Software and optimization (10 edges) · In-hall power (8 edges) · Cells and chemistry (7 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
+     "Assurance (18 edges) · Software and optimization (10 edges) · In-hall power (8 edges) · Cells and chemistry (7 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Storage developers and IPPs (2 edges) · Utilities (2 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -9033,6 +9040,13 @@ function clLessonSegmentStorageIntegratorsAndContainers_() {
    "changed": [
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-23→2026-09-26; profile:narada 2026-09-05→2026-09-24",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -9046,8 +9060,8 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
  "title": "Power conversion and rack-power silicon",
  "short": "The conversion layer at every voltage: utility-scale PCS and inverters, the solid-state transformer and MV-to-800 VDC sidecar, the power shelf, PSU and BBU…",
  "group": "The Value Chain",
- "updated": "2026-09-23",
- "reviewBy": "2027-03-23",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -9191,13 +9205,13 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-23",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -9263,12 +9277,12 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (27 edges) · AIDC developers and landlords (22 edges) · Hyperscalers and AI labs (15 edges) · Utilities (9 edges) · Neoclouds (8 edges) · Storage integrators and containers (6 edges) · Clean firm and nuclear (6 edges) · Grid equipment (4 edges) · Cells and chemistry (3 edges) · In-hall power (3 edges) · Bridge and on-site generation (3 edges) · Cooling (3 edges) · Compute and the rack (2 edges) · EPC and construction (2 edges) · Capital (2 edges) · Software and optimization (1 edge)",
+     "Storage developers and IPPs (28 edges) · AIDC developers and landlords (22 edges) · Hyperscalers and AI labs (15 edges) · Utilities (10 edges) · Neoclouds (8 edges) · Storage integrators and containers (6 edges) · Clean firm and nuclear (6 edges) · Grid equipment (4 edges) · Cells and chemistry (3 edges) · In-hall power (3 edges) · Bridge and on-site generation (3 edges) · Cooling (3 edges) · Compute and the rack (2 edges) · EPC and construction (2 edges) · Capital (2 edges) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Cells and chemistry (16 edges) · In-hall power (14 edges) · Storage integrators and containers (12 edges) · Assurance (7 edges) · Software and optimization (5 edges) · Grid equipment (2 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Storage developers and IPPs (1 edge) · AIDC developers and landlords (1 edge) · Utilities (1 edge)",
+     "Cells and chemistry (16 edges) · In-hall power (14 edges) · Storage integrators and containers (12 edges) · Assurance (7 edges) · Software and optimization (5 edges) · Grid equipment (2 edges) · Storage developers and IPPs (2 edges) · Utilities (2 edges) · Bridge and on-site generation (1 edge) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · AIDC developers and landlords (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -11483,6 +11497,13 @@ function clLessonSegmentPowerConversionAndRackPowerSilicon_() {
     "what-moved",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-23→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -11496,8 +11517,8 @@ function clLessonSegmentGridEquipment_() {
  "title": "Grid equipment",
  "short": "The transformers, medium- and high-voltage switchgear, HVDC converters, protection relays and grid-stability machines (synchronous condensers, STATCOMs) that…",
  "group": "The Value Chain",
- "updated": "2026-09-23",
- "reviewBy": "2027-03-23",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -11593,13 +11614,13 @@ function clLessonSegmentGridEquipment_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-23",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -11665,7 +11686,7 @@ function clLessonSegmentGridEquipment_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (20 edges) · Hyperscalers and AI labs (12 edges) · Clean firm and nuclear (11 edges) · Utilities (10 edges) · Storage developers and IPPs (8 edges) · Storage integrators and containers (4 edges) · Cells and chemistry (3 edges) · Bridge and on-site generation (3 edges) · Neoclouds (3 edges) · Capital (3 edges) · Software and optimization (3 edges) · Power conversion and rack-power silicon (2 edges) · In-hall power (1 edge) · Compute and the rack (1 edge) · EPC and construction (1 edge)",
+     "AIDC developers and landlords (20 edges) · Utilities (14 edges) · Storage developers and IPPs (12 edges) · Hyperscalers and AI labs (12 edges) · Clean firm and nuclear (11 edges) · Storage integrators and containers (4 edges) · Cells and chemistry (3 edges) · Bridge and on-site generation (3 edges) · Neoclouds (3 edges) · Capital (3 edges) · Software and optimization (3 edges) · Power conversion and rack-power silicon (2 edges) · In-hall power (1 edge) · Compute and the rack (1 edge) · EPC and construction (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -13236,6 +13257,13 @@ function clLessonSegmentGridEquipment_() {
    "changed": [
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-23→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -13249,7 +13277,7 @@ function clLessonSegmentInHallPower_() {
  "title": "In-hall power",
  "short": "Everything between the service entrance and the rack whip that keeps a hall up when the grid drops: static, rotary and modular UPS, the switchgear, busway and…",
  "group": "The Value Chain",
- "updated": "2026-09-24",
+ "updated": "2026-09-26",
  "reviewBy": "2027-10-01",
  "provenance": {
   "inputs": [
@@ -13436,13 +13464,13 @@ function clLessonSegmentInHallPower_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-24",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -13508,7 +13536,7 @@ function clLessonSegmentInHallPower_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (24 edges) · Storage developers and IPPs (21 edges) · Storage integrators and containers (17 edges) · Power conversion and rack-power silicon (16 edges) · Utilities (16 edges) · Hyperscalers and AI labs (15 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (9 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Compute and the rack (3 edges) · Bridge and on-site generation (2 edges) · Grid equipment (1 edge)",
+     "AIDC developers and landlords (24 edges) · Storage developers and IPPs (22 edges) · Storage integrators and containers (17 edges) · Utilities (17 edges) · Power conversion and rack-power silicon (16 edges) · Hyperscalers and AI labs (15 edges) · Cells and chemistry (13 edges) · Software and optimization (13 edges) · Neoclouds (9 edges) · Clean firm and nuclear (6 edges) · Capital (4 edges) · Compute and the rack (3 edges) · Bridge and on-site generation (2 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -15940,6 +15968,13 @@ function clLessonSegmentInHallPower_() {
    "changed": [
     "what-moved"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-24→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -15953,8 +15988,8 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
  "title": "Bridge and on-site generation",
  "short": "The prime movers a campus buys when the grid cannot arrive in time or at all — heavy-frame and aeroderivative gas turbines, reciprocating engines, fuel cells…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -16062,13 +16097,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -16134,7 +16169,7 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (21 edges) · Hyperscalers and AI labs (20 edges) · Utilities (13 edges) · Clean firm and nuclear (11 edges) · Storage developers and IPPs (11 edges) · Neoclouds (10 edges) · Capital (4 edges) · Grid equipment (3 edges) · Storage integrators and containers (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Software and optimization (1 edge)",
+     "AIDC developers and landlords (21 edges) · Hyperscalers and AI labs (20 edges) · Utilities (16 edges) · Storage developers and IPPs (13 edges) · Clean firm and nuclear (11 edges) · Neoclouds (10 edges) · Capital (4 edges) · Grid equipment (3 edges) · Storage integrators and containers (2 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -17583,6 +17618,13 @@ function clLessonSegmentBridgeAndOnSiteGeneration_() {
    "changed": [
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -17596,7 +17638,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
  "title": "Clean firm and nuclear",
  "short": "Firm carbon-free power as a product — existing reactor output sold on long-term PPAs, restarts and uprates, the SMR vendors and their fuel, and the…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-26",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -17699,13 +17741,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -17771,7 +17813,7 @@ function clLessonSegmentCleanFirmAndNuclear_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (25 edges) · AIDC developers and landlords (21 edges) · Neoclouds (3 edges) · Utilities (3 edges) · Grid equipment (2 edges) · Bridge and on-site generation (2 edges) · Storage developers and IPPs (2 edges) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Capital (1 edge) · Software and optimization (1 edge)",
+     "Hyperscalers and AI labs (25 edges) · AIDC developers and landlords (21 edges) · Utilities (7 edges) · Storage developers and IPPs (5 edges) · Neoclouds (3 edges) · Grid equipment (2 edges) · Bridge and on-site generation (2 edges) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Capital (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -19179,6 +19221,13 @@ function clLessonSegmentCleanFirmAndNuclear_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -19192,7 +19241,7 @@ function clLessonSegmentCooling_() {
  "title": "Cooling",
  "short": "The thermal chain from the cold plate to the cooling tower — chillers and economisers, coolant distribution units, cold plates and rack manifolds, rear-door…",
  "group": "The Value Chain",
- "updated": "2026-09-24",
+ "updated": "2026-09-26",
  "reviewBy": "2026-11-09",
  "provenance": {
   "inputs": [
@@ -19265,13 +19314,13 @@ function clLessonSegmentCooling_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-24",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -19342,7 +19391,7 @@ function clLessonSegmentCooling_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (4 edges) · Power conversion and rack-power silicon (4 edges) · Compute and the rack (3 edges) · Cells and chemistry (2 edges) · In-hall power (2 edges) · Assurance (1 edge) · Software and optimization (1 edge)",
+     "Storage integrators and containers (4 edges) · Power conversion and rack-power silicon (4 edges) · Compute and the rack (3 edges) · Cells and chemistry (2 edges) · In-hall power (2 edges) · Utilities (1 edge) · Assurance (1 edge) · Software and optimization (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -20484,6 +20533,13 @@ function clLessonSegmentCooling_() {
    "changed": [
     "the-fence"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-24→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -21373,8 +21429,8 @@ function clLessonSegmentEpcAndConstruction_() {
  "title": "EPC and construction",
  "short": "The engineers, EPCs, general contractors and electrical contractors that turn a permit into commissioned megawatts — the data-hall builders, the storage and…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -21494,13 +21550,13 @@ function clLessonSegmentEpcAndConstruction_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -21566,7 +21622,7 @@ function clLessonSegmentEpcAndConstruction_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (33 edges) · AIDC developers and landlords (24 edges) · Hyperscalers and AI labs (18 edges) · Utilities (11 edges) · Capital (9 edges) · Clean firm and nuclear (8 edges) · Grid equipment (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Compute and the rack (1 edge) · Software and optimization (1 edge)",
+     "Storage developers and IPPs (35 edges) · AIDC developers and landlords (24 edges) · Hyperscalers and AI labs (18 edges) · Utilities (13 edges) · Capital (9 edges) · Clean firm and nuclear (8 edges) · Grid equipment (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Power conversion and rack-power silicon (1 edge) · In-hall power (1 edge) · Bridge and on-site generation (1 edge) · Compute and the rack (1 edge) · Software and optimization (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -22316,6 +22372,30 @@ function clLessonSegmentEpcAndConstruction_() {
      "Omniverse DSX"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "**Bechtel**",
+     "partner",
+     "announced",
+     "Natrium Kemmerer Unit 1 (345 MWe, 500 MWe with storage)",
+     "TerraPower's Natrium program with PacifiCorp offtake"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Kiewit**",
+     "supplier",
+     "active",
+     "—",
+     "PacifiCorp distribution program (≥350 miles a year over five years)"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**MasTec**",
+     "supplier",
+     "active",
+     "Greenlink West (525 kV, ~350 miles)",
+     "MasTec's T&D Power"
+    ],
+    [
      "**Blattner**",
      "Clearway Energy",
      "customer",
@@ -22586,33 +22666,9 @@ function clLessonSegmentEpcAndConstruction_() {
      "active",
      "Desert Bloom 150 MW / 600 MWh against Beehive 250 MW / 1,000 MWh",
      "Arizona Public Service storage procurement"
-    ],
-    [
-     "**Terra-Gen**",
-     "**Mortenson**",
-     "supplier",
-     "active",
-     "—",
-     "full EPC"
-    ],
-    [
-     "**Vistra**",
-     "**Burns & McDonnell**",
-     "supplier",
-     "historical",
-     "100 MW / 400 MWh Phase II",
-     "Moss Landing Phase II"
-    ],
-    [
-     "**esVolta**",
-     "**Quanta Services**",
-     "partner",
-     "active",
-     "Anole 240 MW / 480 MWh EPC",
-     "Quanta Infrastructure Solutions Group"
     ]
    ],
-   "note": "Curated edges among members: 57 · to the neighbouring segments: 40 · derived-only mentions (no curated typing): 8 among members, 4 to the neighbours."
+   "note": "Curated edges among members: 57 · to the neighbouring segments: 43 (the first 40 shown, by company) · derived-only mentions (no curated typing): 8 among members, 5 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -22910,6 +22966,14 @@ function clLessonSegmentEpcAndConstruction_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -22923,8 +22987,8 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
  "title": "Storage developers and IPPs",
  "short": "The owners and developers of grid-connected storage and merchant generation — standalone and hybrid battery fleets, the IPPs and yieldcos that hold them, and…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -22959,6 +23023,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    },
    {
     "kind": "public",
+    "ref": "profile:berkshire-hathaway-energy",
+    "date": "2026-09-26",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:clearway-energy",
     "date": "2026-09-06",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
@@ -22967,6 +23037,18 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     "kind": "public",
     "ref": "profile:constellation-energy",
     "date": "2026-09-06",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:dte-energy",
+    "date": "2026-09-26",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:duke-energy",
+    "date": "2026-09-26",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -22996,7 +23078,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    {
     "kind": "public",
     "ref": "profile:gridmatic",
-    "date": "2026-09-12",
+    "date": "2026-09-24",
     "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -23133,21 +23215,27 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    },
    {
     "kind": "public",
+    "ref": "profile:wec-energy",
+    "date": "2026-09-26",
+    "note": "member — adjacent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "34",
+   "k": "38",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
@@ -23159,10 +23247,10 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
   {
    "k": "8",
    "v": "challengers",
-   "sub": "contesting that set; 7 adjacent"
+   "sub": "contesting that set; 11 adjacent"
   },
   {
-   "k": "75",
+   "k": "85",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -23206,12 +23294,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (44 edges) · AIDC developers and landlords (13 edges) · Utilities (8 edges) · Clean firm and nuclear (5 edges) · Neoclouds (4 edges) · Cells and chemistry (1 edge) · Storage integrators and containers (1 edge) · Power conversion and rack-power silicon (1 edge) · Capital (1 edge) · Software and optimization (1 edge)",
+     "Hyperscalers and AI labs (58 edges) · AIDC developers and landlords (23 edges) · Utilities (10 edges) · Clean firm and nuclear (5 edges) · Neoclouds (5 edges) · Capital (4 edges) · Cells and chemistry (2 edges) · Storage integrators and containers (2 edges) · Power conversion and rack-power silicon (2 edges) · Software and optimization (2 edges)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (51 edges) · Cells and chemistry (33 edges) · EPC and construction (32 edges) · Power conversion and rack-power silicon (27 edges) · Software and optimization (23 edges) · In-hall power (21 edges) · Grid equipment (14 edges) · Bridge and on-site generation (12 edges) · Utilities (8 edges) · Assurance (5 edges) · Clean firm and nuclear (4 edges) · Insurance and risk transfer (3 edges)",
+     "Storage integrators and containers (54 edges) · Cells and chemistry (35 edges) · EPC and construction (34 edges) · Power conversion and rack-power silicon (28 edges) · Software and optimization (23 edges) · In-hall power (22 edges) · Grid equipment (16 edges) · Bridge and on-site generation (14 edges) · Utilities (8 edges) · Clean firm and nuclear (5 edges) · Assurance (5 edges) · Insurance and risk transfer (3 edges)",
      "who this segment buys from"
     ]
    ]
@@ -23428,10 +23516,28 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "ecosystemRole: originates a utility toll then sells the battery with the contract attached; about 1 GW of owned solar"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "berkshire-hathaway-energy",
+     "adjacent",
+     "productsAndServices › NV Energy 2026 IRP supply plan: the tolling counterparty on 5,405 MW of new battery PPAs plus owned Reid Gardner (220 MW / 440 MWh) and Sierra Solar (400 MW / 1,600 MWh); PacifiCorp's 4,154 MW of lithium and 523 MW of iron-air proxies by 2045 — a contracting buyer, not a developer"
+    ],
+    [
      "**Constellation Energy**",
      "constellation-energy",
      "adjacent",
      "productsAndServices › Nuclear fleet & long-term PPAs; Calpine gas & geothermal — a merchant generator with no storage fleet on the record"
+    ],
+    [
+     "**DTE Energy**",
+     "dte-energy",
+     "adjacent",
+     "productsAndServices › Battery storage: 1,383 MW of DTE-owned storage owed under the Oracle energy storage agreement; 2,292 MW approved in 2026; the counterparty on the tolling side for Key Capture Energy and Aypa"
+    ],
+    [
+     "**Duke Energy**",
+     "duke-energy",
+     "adjacent",
+     "productsAndServices › Battery storage: ~4.5 GW of utility-owned batteries online by 2031 (Allen, Riverbend, Knightdale, Powerline, Bartow) — a rate-based owner, not a developer"
     ],
     [
      "**Gridmatic**",
@@ -23468,6 +23574,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "stem",
      "adjacent",
      "productsAndServices › Project and Professional Services, and the DevCo storage-development joint ventures: since January 2022 Stem has run joint ventures through wholly-owned development subsidiaries 'with the purpose of originating potential battery storage facility projects', consolidated as variable interest entities with third-party minority owners as non-controlling interests; it also carried $34.0m of energy storage systems on its own balance sheet at 2026-06-30 earning Host Customer and merchant revenue. Both positions are in run-off — a $6.4m DevCo project-asset impairment in FY2025 and $2.8m of held-for-sale impairment in H1 2026 — but both are documented in the current filing."
+    ],
+    [
+     "**WEC Energy Group**",
+     "wec-energy",
+     "adjacent",
+     "productsAndServices › Utility-owned battery storage: 2,130 MW ($2.9B) in the 2026–2030 plan bought build-transfer from Invenergy — a rate-based owner"
     ]
    ]
   },
@@ -23549,6 +23661,36 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "FY2025 · 2025-12-31",
+     "26,200",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "11,000"
+    ],
+    [
+     "**DTE Energy**",
+     "FY2025 · 2025-12-31",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "1,400"
+    ],
+    [
+     "**Duke Energy**",
+     "FY2025 · 2025-12-31",
+     "32,237",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "4,500"
+    ],
+    [
      "**Stem**",
      "FY2025 · 2025-12-31",
      "156.3",
@@ -23557,6 +23699,16 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—",
      "—",
      "—"
+    ],
+    [
+     "**WEC Energy Group**",
+     "FY2025 · 2025-12-31",
+     "9,800.1",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "3,900"
     ],
     [
      "*No normalized figure on record*",
@@ -23698,6 +23850,38 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "**Clearway Energy**",
+     "supplier",
+     "active",
+     "Honeycomb 320 MW / 1,280 MWh; Utah Solar Portfolio 530 MW",
+     "20-year PacifiCorp tolling agreements to 2046"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Excelsior Energy Capital**",
+     "supplier",
+     "active",
+     "Faraday Solar 525 MWac; Faraday BESS Phase 1 150 MW / 733 MWh",
+     "PacifiCorp 20-year Schedule 34 PPA (Meta); Faraday BESS PPA"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**NextEra**",
+     "supplier",
+     "active",
+     "Dry Lake East 200 MW solar + 200 MW / 800 MWh, plus 400 MW standalone BESS",
+     "2024 IRP PPAs"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Pattern Energy**",
+     "supplier",
+     "active",
+     "Spring Valley 152 MW wind",
+     "NV Energy PPA"
+    ],
+    [
      "**Clearway Energy**",
      "**AES Clean Energy**",
      "competitor",
@@ -23728,6 +23912,30 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**DTE Energy**",
+     "**Apex Clean Energy**",
+     "supplier",
+     "active",
+     "190 MW (Isabella)",
+     "—"
+    ],
+    [
+     "**DTE Energy**",
+     "**Aypa Power**",
+     "supplier",
+     "announced",
+     "450 MW",
+     "20-year tolling agreement (Big Mitten Energy Center)"
+    ],
+    [
+     "**DTE Energy**",
+     "**Key Capture**",
+     "supplier",
+     "announced",
+     "100 MW",
+     "15-year tolling agreement (KCE MI 2, Calhoun County)"
     ],
     [
      "**ENGIE North America**",
@@ -24170,6 +24378,30 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "—"
     ],
     [
+     "**WEC Energy Group**",
+     "**Apex Clean Energy**",
+     "supplier",
+     "historical",
+     "Jayhawk Wind (190 MW)",
+     "—"
+    ],
+    [
+     "**WEC Energy Group**",
+     "**Invenergy**",
+     "supplier",
+     "active",
+     "~2,120 MW of gas sites and ~450 MW of batteries",
+     "Build-transfer solar, battery and wind projects; Foundry Ridge and Red Oak Ridge gas sites"
+    ],
+    [
+     "**WEC Energy Group**",
+     "**NextEra**",
+     "supplier",
+     "announced",
+     "~1 GW to 2050/2053",
+     "Point Beach nuclear purchase agreement"
+    ],
+    [
      "**esVolta**",
      "**GridStor**",
      "competitor",
@@ -24200,6 +24432,62 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "$600M project",
      "—"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "Bechtel",
+     "partner",
+     "announced",
+     "Natrium Kemmerer Unit 1 (345 MWe, 500 MWe with storage)",
+     "TerraPower's Natrium program with PacifiCorp offtake"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "EdgeCore",
+     "customer",
+     "active",
+     "—",
+     "NV Energy service at the Tahoe-Reno Industrial Center"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "Kiewit",
+     "supplier",
+     "active",
+     "—",
+     "PacifiCorp distribution program (≥350 miles a year over five years)"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "MasTec",
+     "supplier",
+     "active",
+     "Greenlink West (525 kV, ~350 miles)",
+     "MasTec's T&D Power"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "Switch",
+     "customer",
+     "active",
+     "—",
+     "Network integration transmission service agreement (NITSA 17-00004) with Nevada Power"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "Tract",
+     "customer",
+     "active",
+     "~5.5 GW stated across five Nevada sites; >3.3 GW of LLESAs across five customers",
+     "Rule 9 agreements with Reno Power; LLESA Docket 26-05027"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "Vantage Data Centers",
+     "customer",
+     "active",
+     "224 MW, $3B Storey County campus (EEI)",
+     "Sierra Pacific LLESA (26-05028)"
     ],
     [
      "**Blattner**",
@@ -24304,6 +24592,38 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "200 MW campus",
      "Chisholm Grid BESS"
+    ],
+    [
+     "**Duke Energy**",
+     "Compass Datacenters",
+     "customer",
+     "active",
+     "—",
+     "Electric service agreement (North Carolina)"
+    ],
+    [
+     "**Duke Energy**",
+     "Digital Realty",
+     "customer",
+     "active",
+     "—",
+     "Electric service agreement"
+    ],
+    [
+     "**Duke Energy**",
+     "Nscale",
+     "customer",
+     "announced",
+     "99 MW secured (Nscale)",
+     "—"
+    ],
+    [
+     "**Duke Energy**",
+     "QTS Data Centers",
+     "customer",
+     "active",
+     "—",
+     "Electric service agreement (York County, SC)"
     ],
     [
      "**ENGIE North America**",
@@ -24416,97 +24736,9 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "active",
      "Bright Arrow, 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
      "EPC construction on solar-plus-storage and utility-scale solar"
-    ],
-    [
-     "**NRG Energy**",
-     "Kiewit",
-     "supplier",
-     "active",
-     "up to 5.4 GW of combined-cycle EPC",
-     "TIC — The Industrial Company"
-    ],
-    [
-     "**ON.energy**",
-     "Crusoe",
-     "customer",
-     "active",
-     "5 GW",
-     "AI UPS"
-    ],
-    [
-     "**Pattern Energy**",
-     "Blattner",
-     "supplier",
-     "active",
-     "3,515 MW",
-     "SunZia Wind EPC"
-    ],
-    [
-     "**Pattern Energy**",
-     "Digital Realty",
-     "customer",
-     "active",
-     "65 MWac",
-     "Phoenix Solar"
-    ],
-    [
-     "**Pattern Energy**",
-     "Quanta Services",
-     "supplier",
-     "active",
-     "—",
-     "SunZia Transmission EPC"
-    ],
-    [
-     "**Prime Data Centers**",
-     "**Plus Power**",
-     "other",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**ProEnergy**",
-     "Crusoe",
-     "customer",
-     "active",
-     "650 MW (13 × PE6000)",
-     "PE6000"
-    ],
-    [
-     "**QTS Data Centers**",
-     "**ENGIE North America**",
-     "supplier",
-     "active",
-     "48 MWac (~150 GWh/year)",
-     "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar"
-    ],
-    [
-     "**RWE Clean Energy**",
-     "Blattner",
-     "supplier",
-     "active",
-     "Emily Solar, 273.6 MW",
-     "EPC construction on utility-scale solar"
-    ],
-    [
-     "**RWE Clean Energy**",
-     "MasTec",
-     "supplier",
-     "active",
-     "—",
-     "Wanzek Construction, a MasTec Renewables company — turbine decommissioning and repowering works"
-    ],
-    [
-     "**RWE Clean Energy**",
-     "McCarthy",
-     "supplier",
-     "active",
-     "Lafitte Solar 100 MW; Bright Arrow 300 MWac / 390 MWdc plus 100 MWac / 200 MWh",
-     "EPC construction on utility-scale solar and solar-plus-storage"
     ]
    ],
-   "note": "Curated edges among members: 75 · to the neighbouring segments: 58 (the first 40 shown, by company) · derived-only mentions (no curated typing): 33 among members, 9 to the neighbours."
+   "note": "Curated edges among members: 85 · to the neighbouring segments: 71 (the first 40 shown, by company) · derived-only mentions (no curated typing): 34 among members, 11 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -24521,74 +24753,74 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
     {
      "x": 1,
      "lane": "record",
-     "label": "2026-09-04 — Osgood Wind (up to 200 MW, Québec, with Connectif des Sommets and the W8banaki Nation) presented to local communities; to be bid into Hydro-Québec's 2026 call, construction 2030, operation 2032",
-     "sub": "Pattern Energy · project"
+     "label": "2026-09-25 — Joyce Mullen, former Insight Enterprises CEO, joins the board effective September 28 (audit; operations and nuclear oversight)",
+     "sub": "Duke Energy · leadership"
     },
     {
      "x": 2,
      "lane": "record",
-     "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
-     "sub": "Invenergy · project"
+     "label": "2026-09-25 — Wayne County executive Warren Evans vetoes Van Buren Township's $125M local tax break for the Google data center (Detroit News, Crain's — headlines only, articles paywalled)",
+     "sub": "DTE Energy · regulatory"
     },
     {
      "x": 3,
      "lane": "record",
-     "label": "2026-09-02 — California's Attorney General and Energy Commission serve a notice of intent to sue the Department of the Interior and RWE over the cancellation of the Humboldt floating-wind lease, alleging OCSLA violations including no pre-cancellation hearing, no five-year suspension, no governor notification, and compensation of US$121.3m exceeding statutory formulas",
-     "sub": "RWE Clean Energy · legal"
+     "label": "2026-09-24 — Amperical's ERCOT leaderboard (public settlements, 1 January–24 July 2026) ranks Endurance Park 11th of 312 at USD 3.41/kW-month against a USD 1.55 median and Cross Trails 38th; its scheduling-entity table lists Gridmatic Equisetum LLC with '2 sites, 110 MW'",
+     "sub": "Gridmatic · market"
     },
     {
      "x": 4,
      "lane": "record",
-     "label": "2026-09-02 — BLM opens EIS scoping for Silver Rock Transmission — up to two lines, up to 600 kV, Millard County, Utah to Clark County, Nevada — with comments to 5 October 2026, after FAST-41 coverage in December 2025",
-     "sub": "Pattern Energy · regulatory"
+     "label": "2026-09-24 — DOE selects Duke for a $50M SPARK award for advanced conductors and dynamic line ratings in Greenville and Spartanburg, SC and Henderson and Polk, NC ($201M total)",
+     "sub": "Duke Energy · policy"
     },
     {
      "x": 5,
      "lane": "record",
-     "label": "2026-09-01 — Available Infrastructure partners with EarthSpark International to host minigrid data on its SanQtum edge platform; CEO recalls the company's founding 'focus on the energy sector, including ... battery energy storage systems'",
-     "sub": "Available Power · partnership"
+     "label": "2026-09-24 — DTE Electric files its 2026 Integrated Resource Plan (Case U-22168): 15 GW of renewables, 4.5 GW of storage, certificates of necessity for ~1,400 MW (Livingston County, 2031, $3.9B) and ~700 MW (Monroe County, 2032, $2.5B) combined cycles, Fermi 2 +177 MW, coal exit 2032",
+     "sub": "DTE Energy · regulatory"
     },
     {
      "x": 6,
      "lane": "record",
-     "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
-     "sub": "Invenergy · project"
+     "label": "2026-09-24 — Abel calls AI data-center demand a 'significant opportunity' for BHE while repeating that energy and site preparation are the constraint and that hyperscalers will be served 'if there was no impact to the rates'",
+     "sub": "Berkshire Hathaway Energy · market"
     },
     {
      "x": 7,
      "lane": "record",
-     "label": "2026-08-27 — Q2 2026: Recurrent revenue $117.3m, operating loss $19.4m including a $24m impairment on a Latin America project sale; storage pipeline restated to 84.1 GWh and segment debt to $4.1bn",
-     "sub": "Recurrent Energy · financial"
+     "label": "2026-09-22 — Ozaukee County judge dismisses with prejudice the challenge to Port Washington's tax-increment district for the Vantage campus",
+     "sub": "WEC Energy Group · legal"
     },
     {
      "x": 8,
      "lane": "record",
-     "label": "2026-08-27 — CFIUS clears the Global Infrastructure Partners and EQT acquisition of The AES Corporation",
-     "sub": "AES Clean Energy · ma"
+     "label": "2026-09-19 — NCUC denies the certificate for the 255 MW Smith Energy Complex combustion turbine ($584M, Richmond County), 3–1, finding about 70 percent of the modeled load growth was data centers 'never tested in contested proceedings'; Duke may refile after the resource-plan order and must show compliance with the Ratepayer Protection Pledge",
+     "sub": "Duke Energy · regulatory"
     },
     {
      "x": 9,
      "lane": "record",
-     "label": "2026-08-24 — FERC approves extension of the Brandon Shores and H.A. Wagner reliability-must-run agreements through 2031",
-     "sub": "Talen Energy · regulatory"
+     "label": "2026-09-18 — ATC refiles the Port Washington transmission project at $2.48–2.72B, including about $1.1B of Oracle-funded stabilization at the Decker substation, after the PSCW revoked the completeness of its $1.39–1.67B application",
+     "sub": "WEC Energy Group · project"
     },
     {
      "x": 10,
      "lane": "record",
-     "label": "2026-08-24 — Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
-     "sub": "NRG Energy · market"
+     "label": "2026-09-18 — Warren Buffett becomes chairman emeritus of Berkshire Hathaway; Howard G. Buffett elected chairman; Greg Abel remains CEO with BHE under his direct oversight",
+     "sub": "Berkshire Hathaway Energy · leadership"
     },
     {
      "x": 11,
      "lane": "record",
-     "label": "2026-08-20 — Quincy Solar (120 MW, Grant County, Washington) breaks ground; Cupertino Electric named contractor; commercial late 2027",
-     "sub": "Invenergy · project"
+     "label": "2026-09-17 — PUCN conditionally approves Fleet Data Centers / Tract's temporary gas plants — Peru Ridge 218 MW (26-04027) and South Valley 144 MW (26-04026) — to run two to three years while NV Energy service is built; construction early 2027",
+     "sub": "Berkshire Hathaway Energy · regulatory"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-19 — Pennsylvania executive order conditions preferential permitting for data centres above 25 MW on new in-zone supply",
-     "sub": "Talen Energy · policy"
+     "label": "2026-09-17 — Governor Lombardo signs EO 2026-005, the 'Nevada Standard for Responsible Data Center Development': the PUCN is to set an instrument ensuring data centers bear full service costs and load-reduction duties in grid emergencies; a 'Responsible Speed to Power Plan' is due December 31, 2026",
+     "sub": "Berkshire Hathaway Energy · policy"
     }
    ]
   },
@@ -24858,6 +25090,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Spearmint Energy"
     ],
     [
+     "FERC large-load transmission cost allocation (ER26-3265; June 18, 2026 show-cause order; RM26-4)",
+     "proposed",
+     "2026-07-24",
+     "WEC Energy Group"
+    ],
+    [
      "FERC negotiated-rate authority and the CAISO Subscriber PTO model (merchant transmission)",
      "in-effect",
      "—",
@@ -24876,10 +25114,22 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "NRG Energy"
     ],
     [
+     "Florida SB 484 (large-load cost of service)",
+     "in-effect",
+     "2026-07",
+     "Duke Energy"
+    ],
+    [
      "IEEPA tariffs",
      "expired",
      "2026-02-20",
      "Recurrent Energy"
+    ],
+    [
+     "Illinois Commerce Commission — Peoples Gas System Modernization Program order",
+     "in-effect",
+     "2025-02-20",
+     "WEC Energy Group"
     ],
     [
      "Illinois ZEC program",
@@ -24903,7 +25153,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "ITC/45X",
      "in-effect",
      "—",
-     "Arevon, Eolian, Hunt Energy Network, Key Capture, Lightsource, NextEra, Plus Power"
+     "Arevon, Berkshire Hathaway Energy, DTE Energy, Duke Energy, Eolian, Hunt Energy Network, Key Capture, Lightsource, NextEra, Plus Power, WEC Energy Group"
     ],
     [
      "ITC/45X",
@@ -24972,16 +25222,52 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "AES Clean Energy"
     ],
     [
+     "Michigan data-center sales and use tax exemption (2024)",
+     "in-effect",
+     "2024-12",
+     "DTE Energy"
+    ],
+    [
+     "Michigan PA 235 of 2023 (clean energy standard and storage target)",
+     "in-effect",
+     "2024-02",
+     "DTE Energy"
+    ],
+    [
      "Minnesota PUC site permitting (first standalone BESS permits in the state)",
      "in-effect",
      "2025-08",
      "Spearmint Energy"
     ],
     [
+     "MISO capacity market",
+     "in-effect",
+     "2026-06",
+     "DTE Energy, WEC Energy Group"
+    ],
+    [
+     "MPSC reliability order (Liberty audit)",
+     "in-effect",
+     "2025-06-12",
+     "DTE Energy"
+    ],
+    [
+     "NC SB 266 (S.L. 2025-78)",
+     "in-effect",
+     "2025-07-29",
+     "Duke Energy"
+    ],
+    [
      "NDAA §154",
      "in-effect",
      "—",
      "Plus Power, Terra-Gen"
+    ],
+    [
+     "Nevada large-load framework — form LLESA (Docket 26-05007), Rule 9, EO 2026-005 and the RPS",
+     "proposed",
+     "2026-05-07",
+     "Berkshire Hathaway Energy"
     ],
     [
      "New York Public Service Commission consumer settlement (Case 25-M-0516)",
@@ -24994,6 +25280,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "in-effect",
      "2025-05-27",
      "Pattern Energy"
+    ],
+    [
+     "NRC subsequent license renewal",
+     "in-effect",
+     "2025-03-31",
+     "Duke Energy"
     ],
     [
      "Nuclear production tax credit (section 45U)",
@@ -25048,6 +25340,12 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "in-effect",
      "2026-08-19",
      "Talen Energy"
+    ],
+    [
+     "PJM capacity market",
+     "in-effect",
+     "2025-06",
+     "Duke Energy"
     ],
     [
      "PUCT Project 58379 — energy storage resource offer and scheduling rules ('small fish' exemption removal)",
@@ -25212,6 +25510,36 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "Arevon, NextEra"
     ],
     [
+     "Utah SB 132 (2025) and Oregon HB 3546 (POWER Act, 2025) — PacifiCorp large-load statutes",
+     "in-effect",
+     "2025-07",
+     "Berkshire Hathaway Energy"
+    ],
+    [
+     "Western markets — no capacity market; CAISO EDAM (PacifiCorp from May 1, 2026), WEIM (NV Energy), MISO (MidAmerican)",
+     "in-effect",
+     "2026-05-01",
+     "Berkshire Hathaway Energy"
+    ],
+    [
+     "White House Ratepayer Protection Pledge",
+     "in-effect",
+     "2026-07",
+     "Duke Energy"
+    ],
+    [
+     "Wildfire liability — PacifiCorp (Oregon James class action; state statutes)",
+     "in-effect",
+     "2020-09",
+     "Berkshire Hathaway Energy"
+    ],
+    [
+     "Wisconsin data-center legislation (2026 session)",
+     "proposed",
+     "—",
+     "WEC Energy Group"
+    ],
+    [
      "§45U nuclear PTC",
      "in-effect",
      "—",
@@ -25227,7 +25555,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "ps": [
     "**Mechanism lessons for this segment:** *Eleven Buyer Classes* · *From Site Control to Commercial Operation* · *Who Carries Which Risk* · *One Dollar, Four Names*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-storage-developers-and-ipps-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Constellation Energy, Gridmatic, ON.energy, Pattern Energy, ProEnergy, Samsung C&T, Stem — each member's dossier carries one in Profiler."
+    "**Study guides:** AES Clean Energy, Apex Clean Energy, Arevon, Aypa Power, Clearway Energy, ENGIE North America, Eolian, Intersect, Invenergy, Jupiter, Key Capture, Lightsource, NextEra, NRG Energy, Plus Power, RWE Clean Energy, Talen Energy, Terra-Gen, Vistra, Available Power, esVolta, Excelsior Energy Capital, GridStor, Hunt Energy Network, Recurrent Energy, Spearmint Energy, Strata Clean Energy, Berkshire Hathaway Energy, Constellation Energy, DTE Energy, Duke Energy, Gridmatic, ON.energy, Pattern Energy, ProEnergy, Samsung C&T, Stem, WEC Energy Group — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -25248,7 +25576,7 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
      "why": "The registry's basis line: registry tagline: third-largest US battery owner; ecosystemRole: one of the three largest storage buyers, procurement entangled with a 22 % Fluence stake"
     },
     {
-     "q": "What role does the registry give **Stem** in Storage developers and IPPs?",
+     "q": "What role does the registry give **WEC Energy Group** in Storage developers and IPPs?",
      "c": [
       "challenger",
       "incumbent",
@@ -25327,6 +25655,20 @@ function clLessonSegmentStorageDevelopersAndIpps_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26; profile:berkshire-hathaway-energy added@2026-09-26; profile:dte-energy added@2026-09-26; profile:duke-energy added@2026-09-26; profile:gridmatic 2026-09-12→2026-09-24; profile:wec-energy added@2026-09-26",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -25340,7 +25682,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
  "title": "AIDC developers and landlords",
  "short": "The wholesale and colocation developers, powered-land entitlers and converted miners that buy land and utility capacity, build the shell and the hall, and…",
  "group": "The Value Chain",
- "updated": "2026-09-21",
+ "updated": "2026-09-26",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -25461,7 +25803,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:powerhouse-data-centers",
-    "date": "2026-09-06",
+    "date": "2026-09-26",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -25515,7 +25857,7 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "profile:tract",
-    "date": "2026-09-07",
+    "date": "2026-09-26",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -25527,13 +25869,13 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-21",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -25599,12 +25941,12 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (35 edges) · Neoclouds (16 edges) · Clean firm and nuclear (2 edges) · Compute and the rack (2 edges) · Storage developers and IPPs (2 edges) · Power conversion and rack-power silicon (1 edge) · Utilities (1 edge)",
+     "Hyperscalers and AI labs (35 edges) · Neoclouds (16 edges) · Storage developers and IPPs (4 edges) · Utilities (4 edges) · Clean firm and nuclear (2 edges) · Compute and the rack (2 edges) · Power conversion and rack-power silicon (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Utilities (33 edges) · In-hall power (24 edges) · EPC and construction (24 edges) · Clean firm and nuclear (23 edges) · Power conversion and rack-power silicon (22 edges) · Bridge and on-site generation (21 edges) · Storage integrators and containers (20 edges) · Grid equipment (20 edges) · Software and optimization (18 edges) · Storage developers and IPPs (13 edges) · Cooling (11 edges) · Cells and chemistry (7 edges) · Compute and the rack (6 edges) · Insurance and risk transfer (1 edge)",
+     "Utilities (53 edges) · In-hall power (24 edges) · EPC and construction (24 edges) · Clean firm and nuclear (23 edges) · Storage developers and IPPs (23 edges) · Power conversion and rack-power silicon (22 edges) · Bridge and on-site generation (21 edges) · Storage integrators and containers (20 edges) · Grid equipment (20 edges) · Software and optimization (18 edges) · Cooling (11 edges) · Cells and chemistry (7 edges) · Compute and the rack (6 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -26925,6 +27267,38 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "late-stage project sales"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "**EdgeCore**",
+     "customer",
+     "active",
+     "—",
+     "NV Energy service at the Tahoe-Reno Industrial Center"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Switch**",
+     "customer",
+     "active",
+     "—",
+     "Network integration transmission service agreement (NITSA 17-00004) with Nevada Power"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Tract**",
+     "customer",
+     "active",
+     "~5.5 GW stated across five Nevada sites; >3.3 GW of LLESAs across five customers",
+     "Rule 9 agreements with Reno Power; LLESA Docket 26-05027"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Vantage Data Centers**",
+     "customer",
+     "active",
+     "224 MW, $3B Storey County campus (EEI)",
+     "Sierra Pacific LLESA (26-05028)"
+    ],
+    [
      "**Cipher Digital**",
      "Amazon",
      "customer",
@@ -27021,6 +27395,14 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "—"
     ],
     [
+     "**DTE Energy**",
+     "**Apex Clean Energy**",
+     "supplier",
+     "active",
+     "190 MW (Isabella)",
+     "—"
+    ],
+    [
      "**Digital Realty**",
      "Meta",
      "customer",
@@ -27045,71 +27427,31 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
      "—"
     ],
     [
-     "**ENGIE North America**",
-     "**Cipher Digital**",
+     "**Duke Energy**",
+     "**Compass Datacenters**",
+     "customer",
+     "active",
+     "—",
+     "Electric service agreement (North Carolina)"
+    ],
+    [
+     "**Duke Energy**",
+     "**Digital Realty**",
+     "customer",
+     "active",
+     "—",
+     "Electric service agreement"
+    ],
+    [
+     "**Duke Energy**",
+     "**Nscale**",
      "customer",
      "announced",
-     "up to 300 MW contemplated",
-     "Co-located data centre at an unnamed West Texas wind facility"
-    ],
-    [
-     "**ENGIE North America**",
-     "**Intersect**",
-     "competitor",
-     "active",
-     "—",
+     "99 MW secured (Nscale)",
      "—"
-    ],
-    [
-     "**ENGIE North America**",
-     "**QTS Data Centers**",
-     "customer",
-     "active",
-     "48 MWac (~150 GWh/year)",
-     "ENGIE Resources retail supply plus a back-to-back PPA on ABEI Energy's Lubio Solar"
-    ],
-    [
-     "**EdgeCore**",
-     "Amazon",
-     "competitor",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**EdgeCore**",
-     "Meta",
-     "other",
-     "historical",
-     "—",
-     "—"
-    ],
-    [
-     "**Eolian**",
-     "Jupiter",
-     "other",
-     "active",
-     "—",
-     "—"
-    ],
-    [
-     "**Fermi America**",
-     "Amazon",
-     "other",
-     "historical",
-     "—",
-     "—"
-    ],
-    [
-     "**Fluidstack**",
-     "Anthropic",
-     "customer",
-     "active",
-     "USD 50 billion programme; ~1.4 GW critical IT across five leased campuses",
-     "custom-built data centres, Texas and New York and beyond"
     ]
    ],
-   "note": "Curated edges among members: 98 · to the neighbouring segments: 100 (the first 40 shown, by company) · derived-only mentions (no curated typing): 22 among members, 43 to the neighbours."
+   "note": "Curated edges among members: 98 · to the neighbouring segments: 112 (the first 40 shown, by company) · derived-only mentions (no curated typing): 22 among members, 44 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -27124,74 +27466,74 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-22 — FERC rejects ComEd's notice of cancellation of the Joliet transmission security agreement (1.8 GW, ~USD 20 billion) but declines to decide whether PowerHouse Hillwood's USD 1 letter of credit satisfied the TSA's initial credit requirement — 'the interpretation of ambiguous contract terms involving credit support' goes to the Northern District of Illinois; LaCerte: 'an embarrassing legal fiction'",
+     "sub": "PowerHouse Data Centers · regulatory"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-17 — PUCN conditionally approves Fleet's temporary gas plants at a special meeting — Peru Ridge 218 MW (26-04027) and South Valley 144 MW (26-04026), 362 MW in total — with NDEP air permits and Storey County approvals as conditions; construction early 2027, operation two to three years while NV Energy service is built",
+     "sub": "Tract · regulatory"
+    },
+    {
+     "x": 3,
+     "lane": "record",
+     "label": "2026-09-17 — Governor Lombardo signs Executive Order 2026-005 directing the PUCN to set an instrument ensuring data centers 'bear full service costs with no burden on other ratepayers' and grid-emergency load-reduction duties — the same day as the gas-plant approval",
+     "sub": "Tract · policy"
+    },
+    {
+     "x": 4,
+     "lane": "record",
+     "label": "2026-09-16 — ComEd signs transmission security agreements with two more (unnamed) northern Illinois developers: six active TSAs backed by more than USD 1 billion of letters of credit, seven weeks after cancelling PowerHouse Hillwood's",
+     "sub": "PowerHouse Data Centers · market"
+    },
+    {
+     "x": 5,
+     "lane": "record",
      "label": "2026-09-08 — 2GW Sweetwater Hub (SW1 1,400MW + SW2 600MW) conditionally included as Base Load in ERCOT's Batch Zero process; 300MW gross of Sweetwater 1 capacity under construction, delivery targeted Q4 2027; classification remains conditional pending further ERCOT verification",
      "sub": "IREN · capacity"
     },
     {
-     "x": 2,
+     "x": 6,
      "lane": "record",
      "label": "2026-09-04 — Crunchbase News reports a USD 1.5 billion round led by Jane Street Capital at an USD 18 billion valuation, taking total funding to 'just over $2.6 billion'; the company has not announced it. SEC Form D filed 30 June 2026 shows a USD 1.5 billion offering with USD 730 million sold from 15 June",
      "sub": "Fluidstack · financial"
     },
     {
-     "x": 3,
+     "x": 7,
      "lane": "record",
      "label": "2026-09-03 — Rock River Current: ComEd has scrapped four transmission security agreements including 'Powerhouse Hillwood Holding in Joliet'; PowerHouse Hillwood 'filed suit in the U.S. District Court of Northern Illinois against ComEd over the termination'",
      "sub": "PowerHouse Data Centers · legal"
     },
     {
-     "x": 4,
+     "x": 8,
      "lane": "record",
      "label": "2026-09-03 — Figure: multi-year partnership — 'initial commitment: $3.5 billion in compute', intent to scale 'over $6 billion', up to 100,000 NVIDIA GPUs, first deployment at Barstow, Texas in H2 2027; Nscale takes a strategic stake in Figure",
      "sub": "Nscale · customer"
     },
     {
-     "x": 5,
+     "x": 9,
      "lane": "record",
      "label": "2026-09-03 — Guilherme Reis appointed Managing Director for Iberia",
      "sub": "Digital Realty · leadership"
     },
     {
-     "x": 6,
+     "x": 10,
      "lane": "record",
      "label": "2026-09-03 — Begins developing lateral gas pipelines at multiple sites to enable on-site generation of up to 2.5 GW, targeting new power before the end of 2027",
      "sub": "Cipher Digital · capacity"
     },
     {
-     "x": 7,
+     "x": 11,
      "lane": "record",
      "label": "2026-09-02 — Digi.no: contractor HENT (Sentia) signs for two more buildings at Narvik — 'three buildings with combined capacity of 100 MW', completion 2027",
      "sub": "Nscale · capacity"
     },
     {
-     "x": 8,
+     "x": 12,
      "lane": "record",
      "label": "2026-09-02 — Infrastructure for America launches — a 501(c)(4) co-founded by Compass, Digital Realty, QTS and Vantage; Crosby: 'There's a difference between building to last and building to exit'",
      "sub": "Compass Datacenters · corporate"
-    },
-    {
-     "x": 9,
-     "lane": "record",
-     "label": "2026-09-01 — PUCT unanimously approves the northernmost of three proposed 765kV transmission routes (Dinosaur Switch to Drill Hole Switch, ~425 miles into the Permian Basin) — Oncor targets the Dinosaur-to-Longshore segment by end of 2028 and Longshore-to-Drill Hole by 2029; coverage names IREN's Sweetwater campuses as a direct beneficiary",
-     "sub": "IREN · regulatory"
-    },
-    {
-     "x": 10,
-     "lane": "record",
-     "label": "2026-09-01 — Company posts a 'Community Questions' FAQ stating Phase 1 is 'primarily natural gas'",
-     "sub": "Fermi America · other"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-31 — Leverage Shares' IPO risk note: 'roughly $3 billion of financing against a business generating only a few hundred million dollars in annual revenue'; GPU depreciation assumptions of five to six years; 'contracted demand is not necessarily guaranteed demand'",
-     "sub": "Nscale · market"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-31 — About USD 3 billion of senior secured delayed-draw term loans: up to USD 1.85 billion for Ward County, Texas (~200 MW IT, GB300 + VR200) and up to USD 1.2 billion for Madison, North Carolina (up to 40 MW); J.P. Morgan and Goldman Sachs joint lead arrangers; 'both facilities received investment-grade ratings with stable outlooks'",
-     "sub": "Nscale · financial"
     }
    ]
   },
@@ -27925,6 +28267,15 @@ function clLessonSegmentAidcDevelopersAndLandlords_() {
     "what-moved",
     "who-is-connected"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-21→2026-09-26; profile:powerhouse-data-centers 2026-09-06→2026-09-26; profile:tract 2026-09-07→2026-09-26",
+   "changed": [
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -27938,7 +28289,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
  "title": "Hyperscalers and AI labs",
  "short": "The end demand: the cloud platforms and frontier labs whose capex and gigawatt-denominated compute commitments set every order book upstream — the largest and…",
  "group": "The Value Chain",
- "updated": "2026-09-23",
+ "updated": "2026-09-26",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -27993,13 +28344,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-23",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -28070,7 +28421,7 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (44 edges) · AIDC developers and landlords (35 edges) · Utilities (32 edges) · Neoclouds (28 edges) · Clean firm and nuclear (25 edges) · Bridge and on-site generation (20 edges) · EPC and construction (18 edges) · Compute and the rack (17 edges) · Power conversion and rack-power silicon (15 edges) · In-hall power (15 edges) · Grid equipment (12 edges) · Storage integrators and containers (10 edges) · Capital (10 edges) · Software and optimization (10 edges) · Cells and chemistry (8 edges) · Cooling (8 edges) · Insurance and risk transfer (1 edge)",
+     "Storage developers and IPPs (58 edges) · Utilities (47 edges) · AIDC developers and landlords (35 edges) · Neoclouds (28 edges) · Clean firm and nuclear (25 edges) · Bridge and on-site generation (20 edges) · EPC and construction (18 edges) · Compute and the rack (17 edges) · Power conversion and rack-power silicon (15 edges) · In-hall power (15 edges) · Grid equipment (12 edges) · Storage integrators and containers (10 edges) · Capital (10 edges) · Software and optimization (10 edges) · Cells and chemistry (8 edges) · Cooling (8 edges) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -28987,6 +29338,13 @@ function clLessonSegmentHyperscalersAndAiLabs_() {
    "changed": [
     "what-moved"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-23→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -29000,8 +29358,8 @@ function clLessonSegmentNeoclouds_() {
  "title": "Neoclouds",
  "short": "The GPU-cloud operators that sell contracted AI compute to labs and hyperscalers on leased or self-built capacity and thin balance sheets — faster than…",
  "group": "The Value Chain",
- "updated": "2026-09-21",
- "reviewBy": "2027-03-21",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -29049,13 +29407,13 @@ function clLessonSegmentNeoclouds_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-21",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -29126,7 +29484,7 @@ function clLessonSegmentNeoclouds_() {
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (21 edges) · Bridge and on-site generation (10 edges) · In-hall power (9 edges) · Power conversion and rack-power silicon (8 edges) · Storage integrators and containers (6 edges) · Compute and the rack (6 edges) · Capital (5 edges) · EPC and construction (4 edges) · Storage developers and IPPs (4 edges) · Grid equipment (3 edges) · Clean firm and nuclear (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges) · Cooling (2 edges) · Utilities (2 edges)",
+     "AIDC developers and landlords (21 edges) · Bridge and on-site generation (10 edges) · In-hall power (9 edges) · Power conversion and rack-power silicon (8 edges) · Storage integrators and containers (6 edges) · Compute and the rack (6 edges) · Storage developers and IPPs (5 edges) · Capital (5 edges) · EPC and construction (4 edges) · Grid equipment (3 edges) · Clean firm and nuclear (3 edges) · Utilities (3 edges) · Software and optimization (3 edges) · Cells and chemistry (2 edges) · Cooling (2 edges)",
      "who this segment buys from"
     ]
    ]
@@ -29425,6 +29783,14 @@ function clLessonSegmentNeoclouds_() {
      "—"
     ],
     [
+     "**Duke Energy**",
+     "**Nscale**",
+     "customer",
+     "announced",
+     "99 MW secured (Nscale)",
+     "—"
+    ],
+    [
      "**Fluidstack**",
      "AEP",
      "supplier",
@@ -29609,7 +29975,7 @@ function clLessonSegmentNeoclouds_() {
      "—"
     ]
    ],
-   "note": "Curated edges among members: 5 · to the neighbouring segments: 33 · derived-only mentions (no curated typing): 14 among members, 14 to the neighbours."
+   "note": "Curated edges among members: 5 · to the neighbouring segments: 34 · derived-only mentions (no curated typing): 14 among members, 14 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -29895,6 +30261,14 @@ function clLessonSegmentNeoclouds_() {
     "the-numbers",
     "what-moved"
    ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-21→2026-09-26",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -29908,7 +30282,7 @@ function clLessonSegmentUtilities_() {
  "title": "Utilities",
  "short": "The regulated wires-and-generation franchises whose IRP, certificate, rate case, large-load tariff and interconnection process decide whether AI load and the…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-26",
  "reviewBy": "2027-01-01",
  "provenance": {
   "inputs": [
@@ -29920,8 +30294,26 @@ function clLessonSegmentUtilities_() {
    },
    {
     "kind": "public",
+    "ref": "profile:berkshire-hathaway-energy",
+    "date": "2026-09-26",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:dominion-energy",
     "date": "2026-09-03",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:dte-energy",
+    "date": "2026-09-26",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:duke-energy",
+    "date": "2026-09-26",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -29934,6 +30326,12 @@ function clLessonSegmentUtilities_() {
     "kind": "public",
     "ref": "profile:entergy",
     "date": "2026-09-06",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:exelon",
+    "date": "2026-09-26",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -29992,6 +30390,12 @@ function clLessonSegmentUtilities_() {
    },
    {
     "kind": "public",
+    "ref": "profile:wec-energy",
+    "date": "2026-09-26",
+    "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
+   },
+   {
+    "kind": "public",
     "ref": "profile:xcel-energy",
     "date": "2026-09-06",
     "note": "member — incumbent; the basis line, developments, normalized figures and policy exposure"
@@ -29999,25 +30403,25 @@ function clLessonSegmentUtilities_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
  },
  "tiles": [
   {
-   "k": "14",
+   "k": "19",
    "v": "members on record",
    "sub": "companies with a dossier placed here"
   },
   {
-   "k": "6",
+   "k": "11",
    "v": "incumbents",
    "sub": "the established leading set, per the dossiers"
   },
@@ -30027,7 +30431,7 @@ function clLessonSegmentUtilities_() {
    "sub": "contesting that set; 6 adjacent"
   },
   {
-   "k": "27",
+   "k": "45",
    "v": "curated edges",
    "sub": "among the members, in the relationship graph"
   }
@@ -30071,12 +30475,12 @@ function clLessonSegmentUtilities_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "AIDC developers and landlords (33 edges) · Hyperscalers and AI labs (32 edges) · Storage developers and IPPs (8 edges) · Capital (3 edges) · Clean firm and nuclear (2 edges) · Neoclouds (2 edges) · EPC and construction (1 edge)",
+     "AIDC developers and landlords (53 edges) · Hyperscalers and AI labs (47 edges) · Storage developers and IPPs (8 edges) · Capital (6 edges) · Neoclouds (3 edges) · Clean firm and nuclear (2 edges) · Cooling (1 edge) · EPC and construction (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (21 edges) · Cells and chemistry (20 edges) · In-hall power (16 edges) · Grid equipment (14 edges) · Bridge and on-site generation (14 edges) · Clean firm and nuclear (12 edges) · EPC and construction (11 edges) · Power conversion and rack-power silicon (10 edges) · Assurance (9 edges) · Software and optimization (7 edges) · Storage developers and IPPs (4 edges) · Cooling (1 edge) · AIDC developers and landlords (1 edge) · Insurance and risk transfer (1 edge)",
+     "Storage integrators and containers (24 edges) · Cells and chemistry (22 edges) · In-hall power (17 edges) · Bridge and on-site generation (17 edges) · Grid equipment (16 edges) · Clean firm and nuclear (14 edges) · EPC and construction (13 edges) · Power conversion and rack-power silicon (11 edges) · Storage developers and IPPs (11 edges) · Assurance (10 edges) · Software and optimization (8 edges) · AIDC developers and landlords (4 edges) · Cooling (1 edge) · Capital (1 edge) · Insurance and risk transfer (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -30137,16 +30541,40 @@ function clLessonSegmentUtilities_() {
      "ecosystemRole: the utility whose competitive position is contractual — eight commission-approved large-load tariffs, 69 GW of contracted load, the largest transmission system"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "berkshire-hathaway-energy",
+     "incumbent",
+     "ecosystemRole: the corpus's PPA-side utility buyer — NV Energy's 5,405 MW of new batteries and 4,370 MW of solar all under PPAs; the 25 MW LLESA framework; MidAmerican's ten-year load commitment agreements; ~11,000 MW of contracted data-center load group-wide"
+    ],
+    [
      "**Dominion Energy**",
      "dominion-energy",
      "incumbent",
      "registry tagline: Data Center Alley's regulated gatekeeper — ~53.8 GW of data-center capacity contracted; the GS-5 large-load class"
     ],
     [
+     "**DTE Energy**",
+     "dte-energy",
+     "incumbent",
+     "ecosystemRole: the corpus's clearest example of a utility converting a hyperscale contract directly into battery purchase orders — 1,383 MW of customer-funded storage owed under the Oracle agreement"
+    ],
+    [
+     "**Duke Energy**",
+     "duke-energy",
+     "incumbent",
+     "registry tagline: the six-state regulated utility with ~7.8 GW of signed data-center ESAs; ecosystemRole: a self-build storage buyer with three procurement doors and GE Vernova's largest disclosed utility turbine customer"
+    ],
+    [
      "**Entergy**",
      "entergy",
      "incumbent",
      "ecosystemRole: the utility whose plants are decided by a customer's signature — Meta, AWS and Google generation certified by name"
+    ],
+    [
+     "**Exelon**",
+     "exelon",
+     "incumbent",
+     "ecosystemRole: the corpus's largest wires-only utility and the inventor of the transmission security agreement — six ComEd TSAs, >$1B of collateral, 4 GW under signed TSAs of an 11 GW high-probability book; owns no generation or storage today"
     ],
     [
      "**Oncor**",
@@ -30159,6 +30587,12 @@ function clLessonSegmentUtilities_() {
      "southern-company",
      "incumbent",
      "registry tagline: the Southeast's regulated AI-load gatekeeper — 17 GW of contracted large load; 9,885 MW certified in one December 2025 order"
+    ],
+    [
+     "**WEC Energy Group**",
+     "wec-energy",
+     "incumbent",
+     "ecosystemRole: the corpus's cleanest example of the bespoke-resource model — the data-center customer subscribes to specific new generation and the utility builds and owns it"
     ],
     [
      "**Xcel Energy**",
@@ -30244,6 +30678,16 @@ function clLessonSegmentUtilities_() {
      "56,000"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "FY2025 · 2025-12-31",
+     "26,200",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "11,000"
+    ],
+    [
      "**Dominion Energy**",
      "FY2025 · 2025-12-31",
      "16,506",
@@ -30254,6 +30698,26 @@ function clLessonSegmentUtilities_() {
      "—"
     ],
     [
+     "**DTE Energy**",
+     "FY2025 · 2025-12-31",
+     "—",
+     "",
+     "—",
+     "—",
+     "—",
+     "1,400"
+    ],
+    [
+     "**Duke Energy**",
+     "FY2025 · 2025-12-31",
+     "32,237",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "4,500"
+    ],
+    [
      "**Entergy**",
      "FY2025 · 2025-12-31",
      "12,947",
@@ -30262,6 +30726,16 @@ function clLessonSegmentUtilities_() {
      "—",
      "—",
      "—"
+    ],
+    [
+     "**Exelon**",
+     "FY2025 · 2025-12-31",
+     "24,258",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "18,000"
     ],
     [
      "**Oncor**",
@@ -30282,6 +30756,16 @@ function clLessonSegmentUtilities_() {
      "—",
      "—",
      "10,000"
+    ],
+    [
+     "**WEC Energy Group**",
+     "FY2025 · 2025-12-31",
+     "9,800.1",
+     "as reported",
+     "—",
+     "—",
+     "—",
+     "3,900"
     ],
     [
      "**Xcel Energy**",
@@ -30367,12 +30851,84 @@ function clLessonSegmentUtilities_() {
      "ERCOT Regional Planning Group project 25RPG025"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "**AEP**",
+     "partner",
+     "active",
+     "ETT 50/50; MISO Tranche 2.1 765 kV Wisconsin ~$1.2B",
+     "Electric Transmission Texas; Midcontinent Grid Solutions (Transource)"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Grid United**",
+     "partner",
+     "announced",
+     "10 percent / 300 MW of North Plains Connector",
+     "Non-binding MOU"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**NextEra**",
+     "supplier",
+     "active",
+     "Dry Lake East 200 MW solar + 200 MW / 800 MWh, plus 400 MW standalone BESS",
+     "2024 IRP PPAs"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Pattern Energy**",
+     "supplier",
+     "active",
+     "Spring Valley 152 MW wind",
+     "NV Energy PPA"
+    ],
+    [
+     "**DTE Energy**",
+     "**AEP**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**DTE Energy**",
+     "**Xcel Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Dominion Energy**",
      "**NextEra**",
      "other",
      "announced",
      "0.8138 NextEra shares plus a pro rata share of $360M cash per Dominion share; NextEra 74.5% / Dominion 25.5%",
      "NextEra Energy–Dominion Energy combination"
+    ],
+    [
+     "**Duke Energy**",
+     "**AEP**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Duke Energy**",
+     "**Dominion Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Duke Energy**",
+     "**Southern Company**",
+     "competitor",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**ENGIE North America**",
@@ -30389,6 +30945,38 @@ function clLessonSegmentUtilities_() {
      "active",
      "—",
      "Large-load contracting design"
+    ],
+    [
+     "**Exelon**",
+     "**AEP**",
+     "partner",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Exelon**",
+     "**Dominion Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**Exelon**",
+     "**Invenergy**",
+     "partner",
+     "announced",
+     "ACE 500 MW / 4-hr BESS (~$1B); ~$1.9B of MISO Tranche 2.1 bids",
+     "ACE Pittsgrove storage partnership; ComEd competitive transmission bids"
+    ],
+    [
+     "**Exelon**",
+     "**Vistra**",
+     "other",
+     "active",
+     "—",
+     "—"
     ],
     [
      "**Grid United**",
@@ -30551,6 +31139,46 @@ function clLessonSegmentUtilities_() {
      "—"
     ],
     [
+     "**WEC Energy Group**",
+     "**AEP**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
+     "**WEC Energy Group**",
+     "**Invenergy**",
+     "supplier",
+     "active",
+     "~2,120 MW of gas sites and ~450 MW of batteries",
+     "Build-transfer solar, battery and wind projects; Foundry Ridge and Red Oak Ridge gas sites"
+    ],
+    [
+     "**WEC Energy Group**",
+     "**NextEra**",
+     "supplier",
+     "announced",
+     "~1 GW to 2050/2053",
+     "Point Beach nuclear purchase agreement"
+    ],
+    [
+     "**WEC Energy Group**",
+     "**Tesla**",
+     "customer",
+     "active",
+     "—",
+     "WEC Infrastructure Delilah I solar PPA (with Honda, 15 years)"
+    ],
+    [
+     "**WEC Energy Group**",
+     "**Xcel Energy**",
+     "competitor",
+     "active",
+     "—",
+     "—"
+    ],
+    [
      "**Xcel Energy**",
      "**NextEra**",
      "partner",
@@ -30567,11 +31195,35 @@ function clLessonSegmentUtilities_() {
      "Renewable Battery Connect virtual power plant (Colorado)"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "Excelsior Energy Capital",
+     "supplier",
+     "active",
+     "Faraday Solar 525 MWac; Faraday BESS Phase 1 150 MW / 733 MWh",
+     "PacifiCorp 20-year Schedule 34 PPA (Meta); Faraday BESS PPA"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "Vantage Data Centers",
+     "customer",
+     "active",
+     "224 MW, $3B Storey County campus (EEI)",
+     "Sierra Pacific LLESA (26-05028)"
+    ],
+    [
      "**Blackstone**",
      "**Invenergy**",
      "portfolio",
      "active",
      "~USD 4bn of equity across 2022-2023",
+     "—"
+    ],
+    [
+     "**DTE Energy**",
+     "Blackstone",
+     "other",
+     "announced",
+     "—",
      "—"
     ],
     [
@@ -30581,6 +31233,30 @@ function clLessonSegmentUtilities_() {
      "active",
      "—",
      "Ashburn campuses"
+    ],
+    [
+     "**Duke Energy**",
+     "Brookfield",
+     "investor",
+     "active",
+     "19.7% of Florida Progress for $6B; 9.2% closed",
+     "—"
+    ],
+    [
+     "**Duke Energy**",
+     "Digital Realty",
+     "customer",
+     "active",
+     "—",
+     "Electric service agreement"
+    ],
+    [
+     "**Duke Energy**",
+     "Nscale",
+     "customer",
+     "announced",
+     "99 MW secured (Nscale)",
+     "—"
     ],
     [
      "**Excelsior Energy Capital**",
@@ -30653,9 +31329,17 @@ function clLessonSegmentUtilities_() {
      "active",
      "65 MWac",
      "Phoenix Solar"
+    ],
+    [
+     "**WEC Energy Group**",
+     "Vantage Data Centers",
+     "customer",
+     "active",
+     "1.3 GW forecast through 2030; up to 3.5 GW",
+     "Dedicated electricity rate (VLC tariff); payment-and-cancellation agreements"
     ]
    ],
-   "note": "Curated edges among members: 27 · to the neighbouring segments: 11 · derived-only mentions (no curated typing): 6 among members, 3 to the neighbours."
+   "note": "Curated edges among members: 45 · to the neighbouring segments: 18 · derived-only mentions (no curated typing): 8 among members, 3 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -30670,74 +31354,74 @@ function clLessonSegmentUtilities_() {
     {
      "x": 1,
      "lane": "record",
-     "label": "2026-09-04 — Osgood Wind (up to 200 MW, Québec, with Connectif des Sommets and the W8banaki Nation) presented to local communities; to be bid into Hydro-Québec's 2026 call, construction 2030, operation 2032",
-     "sub": "Pattern Energy · project"
+     "label": "2026-09-25 — Joyce Mullen, former Insight Enterprises CEO, joins the board effective September 28 (audit; operations and nuclear oversight)",
+     "sub": "Duke Energy · leadership"
     },
     {
      "x": 2,
      "lane": "record",
-     "label": "2026-09-03 — Invenergy takes over the 200 MW Seahawk (Minto Road) battery project in Santa Cruz County, California from New Leaf Energy",
-     "sub": "Invenergy · project"
+     "label": "2026-09-25 — Wayne County executive Warren Evans vetoes Van Buren Township's $125M local tax break for the Google data center (Detroit News, Crain's — headlines only, articles paywalled)",
+     "sub": "DTE Energy · regulatory"
     },
     {
      "x": 3,
      "lane": "record",
-     "label": "2026-09-03 — Arkansas Democrat-Gazette: APSC staff testified that 'Google is paying well below the full cost of this resource' on Cypress Solar; the November 17, 2026 hearing is mostly closed; Entergy sought to stop publication of the FOIA'd contract",
-     "sub": "Entergy · regulatory"
+     "label": "2026-09-24 — Exelon's 2c2i venture arm invests in Continuum Industries, whose Optioneer AI grid-planning platform is to be deployed across the six utilities (first-party release September 16)",
+     "sub": "Exelon · partnership"
     },
     {
      "x": 4,
      "lane": "record",
-     "label": "2026-09-03 — Special meeting of shareholders to vote on the NextEra Energy combination — 9:30 a.m. ET, virtual; joint proxy statement mailed July 28 after the S-4 went effective July 23",
-     "sub": "Dominion Energy · corporate"
+     "label": "2026-09-24 — DOE selects Duke for a $50M SPARK award for advanced conductors and dynamic line ratings in Greenville and Spartanburg, SC and Henderson and Polk, NC ($201M total)",
+     "sub": "Duke Energy · policy"
     },
     {
      "x": 5,
      "lane": "record",
-     "label": "2026-09-02 — BLM opens EIS scoping for Silver Rock Transmission — up to two lines, up to 600 kV, Millard County, Utah to Clark County, Nevada — with comments to 5 October 2026, after FAST-41 coverage in December 2025",
-     "sub": "Pattern Energy · regulatory"
+     "label": "2026-09-24 — DTE Electric files its 2026 Integrated Resource Plan (Case U-22168): 15 GW of renewables, 4.5 GW of storage, certificates of necessity for ~1,400 MW (Livingston County, 2031, $3.9B) and ~700 MW (Monroe County, 2032, $2.5B) combined cycles, Fermi 2 +177 MW, coal exit 2032",
+     "sub": "DTE Energy · regulatory"
     },
     {
      "x": 6,
      "lane": "record",
-     "label": "2026-09-01 — North Dakota PSC holds the technical hearing on North Plains Connector (Case PU-26-82) in Bismarck, with public hearings in Mandan and Regent on 2–3 September",
-     "sub": "Grid United · regulatory"
+     "label": "2026-09-24 — Abel calls AI data-center demand a 'significant opportunity' for BHE while repeating that energy and site preparation are the constraint and that hyperscalers will be served 'if there was no impact to the rates'",
+     "sub": "Berkshire Hathaway Energy · market"
     },
     {
      "x": 7,
      "lane": "record",
-     "label": "2026-08-31 — Minnesota Attorney General Ellison and the Citizens Utility Board file reconsideration petitions against the PUC's 3–2 verbal decision granting NSP-Minnesota ~$211 million over two years at a 9.6 percent ROE; the PUC's response is due mid-October",
-     "sub": "Xcel Energy · regulatory"
+     "label": "2026-09-22 — Ozaukee County judge dismisses with prejudice the challenge to Port Washington's tax-increment district for the Vantage campus",
+     "sub": "WEC Energy Group · legal"
     },
     {
      "x": 8,
      "lane": "record",
-     "label": "2026-08-31 — Engineering plans filed for two Wisconsin gas plants at Brillion — Union Depot 750 MW and Forest Junction 1,200 MW — for We Energies service by December 2031",
-     "sub": "Invenergy · project"
+     "label": "2026-09-22 — FERC rejects ComEd's notice of cancellation of the PowerHouse Hillwood Joliet TSA (1.8 GW, ~$20B), declining primary jurisdiction over 'ambiguous contract terms involving credit support' after PowerHouse posted a $1 letter of credit; the contract question goes to the Northern District of Illinois; LaCerte: 'an embarrassing legal fiction'",
+     "sub": "Exelon · regulatory"
     },
     {
      "x": 9,
      "lane": "record",
-     "label": "2026-08-31 — Arkansas Democrat-Gazette reads the Google contract: $526M ($443M accelerated, $83M minimum-demand) plus $190M for transmission, a 20-year term, 480 MW minimum against 600 MW maximum, a ~$2B termination fee declining after year 13",
-     "sub": "Entergy · customer"
+     "label": "2026-09-22 — Butler at the Atlantic Council blames the data-center backlash on 'lack of communication and community buy-in'; Argus cuts its EXC price target to $49 the same day",
+     "sub": "Exelon · market"
     },
     {
      "x": 10,
      "lane": "record",
-     "label": "2026-08-30 — Texas regulators approved 424 miles of Oncor 765 kV lines despite calls to wait — the Permian backbone AEP Texas's Howard–Solstice line connects to advances alongside it",
-     "sub": "AEP · regulatory"
+     "label": "2026-09-19 — NCUC denies the certificate for the 255 MW Smith Energy Complex combustion turbine ($584M, Richmond County), 3–1, finding about 70 percent of the modeled load growth was data centers 'never tested in contested proceedings'; Duke may refile after the resource-plan order and must show compliance with the Ratepayer Protection Pledge",
+     "sub": "Duke Energy · regulatory"
     },
     {
      "x": 11,
      "lane": "record",
-     "label": "2026-08-28 — DOE and Montana DEQ release the final environmental impact statement for North Plains Connector (DOE/EIS-0568); DOE's Office of Electricity calls connecting the grids 'a critical step toward ensuring long-term energy affordability and reliability'",
-     "sub": "Grid United · regulatory"
+     "label": "2026-09-18 — ATC refiles the Port Washington transmission project at $2.48–2.72B, including about $1.1B of Oracle-funded stabilization at the Decker substation, after the PSCW revoked the completeness of its $1.39–1.67B application",
+     "sub": "WEC Energy Group · project"
     },
     {
      "x": 12,
      "lane": "record",
-     "label": "2026-08-28 — Ohio Consumers' Counsel urged FERC to resolve its three-year-old local transmission complaint, noting Ohio utilities have since put more than $4.3B of local and supplemental projects into PJM's plan",
-     "sub": "AEP · regulatory"
+     "label": "2026-09-18 — Warren Buffett becomes chairman emeritus of Berkshire Hathaway; Howard G. Buffett elected chairman; Greg Abel remains CEO with BHE under his direct oversight",
+     "sub": "Berkshire Hathaway Energy · leadership"
     }
    ]
   },
@@ -30893,6 +31577,12 @@ function clLessonSegmentUtilities_() {
      "Dominion Energy"
     ],
     [
+     "FERC large-load transmission cost allocation (ER26-3265; June 18, 2026 show-cause order; RM26-4)",
+     "proposed",
+     "2026-07-24",
+     "WEC Energy Group"
+    ],
+    [
      "FERC negotiated-rate authority and the CAISO Subscriber PTO model (merchant transmission)",
      "in-effect",
      "—",
@@ -30911,6 +31601,18 @@ function clLessonSegmentUtilities_() {
      "NRG Energy"
     ],
     [
+     "FERC — transmission security agreements, large-load show-cause orders and co-location",
+     "in-effect",
+     "2026-06-18",
+     "Exelon"
+    ],
+    [
+     "Florida SB 484 (large-load cost of service)",
+     "in-effect",
+     "2026-07",
+     "Duke Energy"
+    ],
+    [
      "Georgia data-center sales-tax exemption and 2026 cost-shift bills",
      "in-effect",
      "—",
@@ -30923,6 +31625,18 @@ function clLessonSegmentUtilities_() {
      "Southern Company"
     ],
     [
+     "Illinois Commerce Commission — Peoples Gas System Modernization Program order",
+     "in-effect",
+     "2025-02-20",
+     "WEC Energy Group"
+    ],
+    [
+     "Illinois — CRGA (Public Act 104-0458), the ICC large-load order and the stalled POWER Act",
+     "in-effect",
+     "2026-01-08",
+     "Exelon"
+    ],
+    [
      "Indiana HEA 1007 and SEA 424",
      "in-effect",
      "2025-05-06",
@@ -30932,7 +31646,7 @@ function clLessonSegmentUtilities_() {
      "ITC/45X",
      "in-effect",
      "—",
-     "NextEra"
+     "Berkshire Hathaway Energy, DTE Energy, Duke Energy, Exelon, NextEra, WEC Energy Group"
     ],
     [
      "ITC/45X",
@@ -30965,10 +31679,34 @@ function clLessonSegmentUtilities_() {
      "Entergy"
     ],
     [
+     "Maryland — Next Generation Energy Act (2025) and Utility RELIEF Act (HB 1532, 2026)",
+     "in-effect",
+     "2026-07-01",
+     "Exelon"
+    ],
+    [
      "Merger approvals (NextEra Energy combination)",
      "announced",
      "2026-07-15",
      "Dominion Energy"
+    ],
+    [
+     "Michigan data-center sales and use tax exemption (2024)",
+     "in-effect",
+     "2024-12",
+     "DTE Energy"
+    ],
+    [
+     "Michigan PA 235 of 2023 (clean energy standard and storage target)",
+     "in-effect",
+     "2024-02",
+     "DTE Energy"
+    ],
+    [
+     "MISO capacity market",
+     "in-effect",
+     "2026-06",
+     "DTE Energy, WEC Energy Group"
     ],
     [
      "Mississippi pre-certification statute for facilities serving data-processing customers (SB 2001 of 2024)",
@@ -30977,10 +31715,28 @@ function clLessonSegmentUtilities_() {
      "Entergy"
     ],
     [
+     "MPSC reliability order (Liberty audit)",
+     "in-effect",
+     "2025-06-12",
+     "DTE Energy"
+    ],
+    [
+     "NC SB 266 (S.L. 2025-78)",
+     "in-effect",
+     "2025-07-29",
+     "Duke Energy"
+    ],
+    [
      "NEPA / Federal Power Act §216(h) coordinated permitting (CITAP-style)",
      "in-effect",
      "2024-10-25",
      "Grid United"
+    ],
+    [
+     "Nevada large-load framework — form LLESA (Docket 26-05007), Rule 9, EO 2026-005 and the RPS",
+     "proposed",
+     "2026-05-07",
+     "Berkshire Hathaway Energy"
     ],
     [
      "New York Public Service Commission consumer settlement (Case 25-M-0516)",
@@ -30993,6 +31749,12 @@ function clLessonSegmentUtilities_() {
      "in-effect",
      "2025-05-27",
      "Pattern Energy"
+    ],
+    [
+     "NRC subsequent license renewal",
+     "in-effect",
+     "2025-03-31",
+     "Duke Energy"
     ],
     [
      "Nuclear production tax credit (section 45U)",
@@ -31019,10 +31781,22 @@ function clLessonSegmentUtilities_() {
      "AEP"
     ],
     [
+     "Pennsylvania, Delaware and New Jersey large-load rules; affordability politics",
+     "proposed",
+     "2026-05-13",
+     "Exelon"
+    ],
+    [
      "PJM capacity market",
      "in-effect",
      "2025-06",
-     "Dominion Energy"
+     "Dominion Energy, Duke Energy"
+    ],
+    [
+     "PJM capacity market",
+     "in-effect",
+     "2026-07-14",
+     "Exelon"
     ],
     [
      "PJM capacity, cost allocation and the FERC co-location order",
@@ -31175,6 +31949,12 @@ function clLessonSegmentUtilities_() {
      "NextEra, Tesla"
     ],
     [
+     "Utah SB 132 (2025) and Oregon HB 3546 (POWER Act, 2025) — PacifiCorp large-load statutes",
+     "in-effect",
+     "2025-07",
+     "Berkshire Hathaway Energy"
+    ],
+    [
      "Virginia Clean Economy Act and the April 2026 storage statute",
      "in-effect",
      "2026-04",
@@ -31193,10 +31973,34 @@ function clLessonSegmentUtilities_() {
      "AEP"
     ],
     [
+     "Western markets — no capacity market; CAISO EDAM (PacifiCorp from May 1, 2026), WEIM (NV Energy), MISO (MidAmerican)",
+     "in-effect",
+     "2026-05-01",
+     "Berkshire Hathaway Energy"
+    ],
+    [
+     "White House Ratepayer Protection Pledge",
+     "in-effect",
+     "2026-07",
+     "Duke Energy"
+    ],
+    [
      "Wildfire liability law — Texas, North Dakota, South Dakota reforms; no Colorado statute; Colorado securitization",
      "in-effect",
      "2025",
      "Xcel Energy"
+    ],
+    [
+     "Wildfire liability — PacifiCorp (Oregon James class action; state statutes)",
+     "in-effect",
+     "2020-09",
+     "Berkshire Hathaway Energy"
+    ],
+    [
+     "Wisconsin data-center legislation (2026 session)",
+     "proposed",
+     "—",
+     "WEC Energy Group"
     ]
    ]
   },
@@ -31208,7 +32012,7 @@ function clLessonSegmentUtilities_() {
    "ps": [
     "**Mechanism lessons for this segment:** *The Regulated Machine* · *The Gatekeeper* · *The Fence Line: Interconnection and the Substation* · *The Rulebook Above the Fence*.",
     "**The landscape module** — the judgment layer for this segment — is *landscape-utilities-2026-09*, for the tiers that hold guidance access.",
-    "**Study guides:** AEP, Dominion Energy, Entergy, Oncor, Southern Company, Xcel Energy, NRG Energy, Vistra, ENGIE North America, Grid United, Invenergy, NextEra, Pattern Energy, Tesla — each member's dossier carries one in Profiler."
+    "**Study guides:** AEP, Berkshire Hathaway Energy, Dominion Energy, DTE Energy, Duke Energy, Entergy, Exelon, Oncor, Southern Company, WEC Energy Group, Xcel Energy, NRG Energy, Vistra, ENGIE North America, Grid United, Invenergy, NextEra, Pattern Energy, Tesla — each member's dossier carries one in Profiler."
    ]
   },
   {
@@ -31261,7 +32065,7 @@ function clLessonSegmentUtilities_() {
      "why": "Chain position 14 against this segment's 15."
     },
     {
-     "q": "The graph records a curated edge from **AEP** to **Dominion Energy**. How is it typed from AEP's side?",
+     "q": "The graph records a curated edge from **Berkshire Hathaway Energy** to **AEP**. How is it typed from Berkshire Hathaway Energy's side?",
      "c": [
       "partner",
       "supplier",
@@ -31269,7 +32073,7 @@ function clLessonSegmentUtilities_() {
       "competitor"
      ],
      "a": 0,
-     "why": "Dominion is AEP's joint-venture partner, with FirstEnergy Transmission, in Valley Link, the vehicle for PJM's 2024-window 765 kV backbone award."
+     "why": "BHE U.S. Transmission owns half of Electric Transmission Texas with AEP and, through the Transource / Midcontinent Grid Solutions venture with AEP and Evergy, won MISO Tranche 2.1's roughly 200-mile 765 kV Wisconsin segment (about $1.2B, 2034), with four more bids pending in 2026."
     }
    ]
   }
@@ -31307,6 +32111,20 @@ function clLessonSegmentUtilities_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26; profile:berkshire-hathaway-energy added@2026-09-26; profile:dte-energy added@2026-09-26; profile:duke-energy added@2026-09-26; profile:exelon added@2026-09-26; profile:wec-energy added@2026-09-26",
+   "changed": [
+    "check-yourself",
+    "read-next",
+    "the-fence",
+    "the-numbers",
+    "the-players",
+    "what-moved",
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -31320,7 +32138,7 @@ function clLessonSegmentCapital_() {
  "title": "Capital",
  "short": "The asset managers, infrastructure funds and sovereign vehicles that own the landlords and the storage platforms, lend across both, and decide what a…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
+ "updated": "2026-09-26",
  "reviewBy": "2027-12-31",
  "provenance": {
   "inputs": [
@@ -31375,13 +32193,13 @@ function clLessonSegmentCapital_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -31447,12 +32265,12 @@ function clLessonSegmentCapital_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Hyperscalers and AI labs (10 edges) · Neoclouds (5 edges)",
+     "Hyperscalers and AI labs (10 edges) · Neoclouds (5 edges) · Storage developers and IPPs (1 edge) · Utilities (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "EPC and construction (9 edges) · Storage integrators and containers (5 edges) · Software and optimization (5 edges) · In-hall power (4 edges) · Bridge and on-site generation (4 edges) · Cells and chemistry (3 edges) · Grid equipment (3 edges) · Utilities (3 edges) · Power conversion and rack-power silicon (2 edges) · Cooling (2 edges) · Clean firm and nuclear (1 edge) · Storage developers and IPPs (1 edge)",
+     "EPC and construction (9 edges) · Utilities (6 edges) · Storage integrators and containers (5 edges) · Software and optimization (5 edges) · In-hall power (4 edges) · Bridge and on-site generation (4 edges) · Storage developers and IPPs (4 edges) · Cells and chemistry (3 edges) · Grid equipment (3 edges) · Power conversion and rack-power silicon (2 edges) · Cooling (2 edges) · Clean firm and nuclear (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -31741,11 +32559,35 @@ function clLessonSegmentCapital_() {
      "—"
     ],
     [
+     "**Berkshire Hathaway Energy**",
+     "**Excelsior Energy Capital**",
+     "supplier",
+     "active",
+     "Faraday Solar 525 MWac; Faraday BESS Phase 1 150 MW / 733 MWh",
+     "PacifiCorp 20-year Schedule 34 PPA (Meta); Faraday BESS PPA"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "**Vantage Data Centers**",
+     "customer",
+     "active",
+     "224 MW, $3B Storey County campus (EEI)",
+     "Sierra Pacific LLESA (26-05028)"
+    ],
+    [
      "**Blackstone**",
      "Invenergy",
      "portfolio",
      "active",
      "~USD 4bn of equity across 2022-2023",
+     "—"
+    ],
+    [
+     "**DTE Energy**",
+     "**Blackstone**",
+     "other",
+     "announced",
+     "—",
      "—"
     ],
     [
@@ -31755,6 +32597,22 @@ function clLessonSegmentCapital_() {
      "active",
      "—",
      "Ashburn campuses"
+    ],
+    [
+     "**Duke Energy**",
+     "**Brookfield**",
+     "investor",
+     "active",
+     "19.7% of Florida Progress for $6B; 9.2% closed",
+     "—"
+    ],
+    [
+     "**Duke Energy**",
+     "**Digital Realty**",
+     "customer",
+     "active",
+     "—",
+     "Electric service agreement"
     ],
     [
      "**Excelsior Energy Capital**",
@@ -31819,9 +32677,17 @@ function clLessonSegmentCapital_() {
      "active",
      "—",
      "—"
+    ],
+    [
+     "**WEC Energy Group**",
+     "**Vantage Data Centers**",
+     "customer",
+     "active",
+     "1.3 GW forecast through 2030; up to 3.5 GW",
+     "Dedicated electricity rate (VLC tariff); payment-and-cancellation agreements"
     ]
    ],
-   "note": "Curated edges among members: 13 · to the neighbouring segments: 10 · derived-only mentions (no curated typing): 5 among members, 2 to the neighbours."
+   "note": "Curated edges among members: 13 · to the neighbouring segments: 16 · derived-only mentions (no curated typing): 5 among members, 2 to the neighbours."
   },
   {
    "id": "what-moved",
@@ -32181,6 +33047,14 @@ function clLessonSegmentCapital_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26",
+   "changed": [
+    "where-it-sits",
+    "who-is-connected"
+   ]
   }
  ]
 };
@@ -32194,8 +33068,8 @@ function clLessonSegmentAssurance_() {
  "title": "Assurance",
  "short": "The independent and owner's engineers, testing laboratories and certification bodies that make a project bankable and a product installable — the seat every…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -32243,13 +33117,13 @@ function clLessonSegmentAssurance_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -32315,7 +33189,7 @@ function clLessonSegmentAssurance_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage integrators and containers (18 edges) · Clean firm and nuclear (11 edges) · Cells and chemistry (10 edges) · Utilities (9 edges) · In-hall power (8 edges) · Power conversion and rack-power silicon (7 edges) · Software and optimization (6 edges) · Storage developers and IPPs (5 edges) · Grid equipment (3 edges) · Bridge and on-site generation (2 edges) · Cooling (1 edge)",
+     "Storage integrators and containers (18 edges) · Clean firm and nuclear (11 edges) · Cells and chemistry (10 edges) · Utilities (10 edges) · In-hall power (8 edges) · Power conversion and rack-power silicon (7 edges) · Software and optimization (6 edges) · Storage developers and IPPs (5 edges) · Grid equipment (3 edges) · Bridge and on-site generation (2 edges) · Cooling (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
@@ -33152,6 +34026,13 @@ function clLessonSegmentAssurance_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26",
+   "changed": [
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -33165,8 +34046,8 @@ function clLessonSegmentSoftwareAndOptimization_() {
  "title": "Software and optimization",
  "short": "The energy-management, controls, asset-performance and market-bidding software that decides what a storage plant earns — the site controller, the fleet…",
  "group": "The Value Chain",
- "updated": "2026-09-19",
- "reviewBy": "2027-03-19",
+ "updated": "2026-09-26",
+ "reviewBy": "2027-03-26",
  "provenance": {
   "inputs": [
    {
@@ -33214,13 +34095,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
    {
     "kind": "public",
     "ref": "profile:gridmatic",
-    "date": "2026-09-12",
+    "date": "2026-09-24",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
     "kind": "public",
     "ref": "profile:habitat-energy",
-    "date": "2026-09-12",
+    "date": "2026-09-24",
     "note": "member — challenger; the basis line, developments, normalized figures and policy exposure"
    },
    {
@@ -33292,13 +34173,13 @@ function clLessonSegmentSoftwareAndOptimization_() {
    {
     "kind": "public",
     "ref": "graph:profiler-graph",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "curated edges among members and to the neighbouring segments"
    },
    {
     "kind": "public",
     "ref": "concepts:profiler-concepts",
-    "date": "2026-09-19",
+    "date": "2026-09-26",
     "note": "term resolution for the {{term}} tooltips"
    }
   ]
@@ -33364,12 +34245,12 @@ function clLessonSegmentSoftwareAndOptimization_() {
     ],
     [
      "Buyers on the record (curated customer / supplier edges)",
-     "Storage developers and IPPs (23 edges) · AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (10 edges) · Storage integrators and containers (9 edges) · Clean firm and nuclear (8 edges) · Utilities (8 edges) · Cells and chemistry (6 edges) · Capital (5 edges) · Power conversion and rack-power silicon (4 edges) · In-hall power (4 edges) · Neoclouds (3 edges) · EPC and construction (2 edges) · Grid equipment (1 edge)",
+     "Storage developers and IPPs (23 edges) · AIDC developers and landlords (18 edges) · Hyperscalers and AI labs (10 edges) · Storage integrators and containers (9 edges) · Utilities (9 edges) · Clean firm and nuclear (8 edges) · Cells and chemistry (6 edges) · Capital (5 edges) · Power conversion and rack-power silicon (4 edges) · In-hall power (4 edges) · Neoclouds (3 edges) · EPC and construction (2 edges) · Grid equipment (1 edge)",
      "who buys what this segment makes or does"
     ],
     [
      "Suppliers on the record (curated customer / supplier edges)",
-     "Cells and chemistry (22 edges) · Storage integrators and containers (16 edges) · In-hall power (13 edges) · Assurance (4 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Storage developers and IPPs (3 edges) · Bridge and on-site generation (2 edges) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge) · Utilities (1 edge)",
+     "Cells and chemistry (22 edges) · Storage integrators and containers (16 edges) · In-hall power (13 edges) · Storage developers and IPPs (4 edges) · Assurance (4 edges) · Power conversion and rack-power silicon (3 edges) · Grid equipment (3 edges) · Bridge and on-site generation (2 edges) · Utilities (2 edges) · Clean firm and nuclear (1 edge) · Cooling (1 edge) · EPC and construction (1 edge)",
      "who this segment buys from"
     ]
    ]
@@ -34155,74 +35036,74 @@ function clLessonSegmentSoftwareAndOptimization_() {
     {
      "x": 1,
      "lane": "record",
+     "label": "2026-09-24 — Amperical's ERCOT leaderboard (public settlements, 1 January–24 July 2026) ranks Endurance Park 11th of 312 at USD 3.41/kW-month against a USD 1.55 median and Cross Trails 38th; its scheduling-entity table lists Gridmatic Equisetum LLC with '2 sites, 110 MW'",
+     "sub": "Gridmatic · market"
+    },
+    {
+     "x": 2,
+     "lane": "record",
+     "label": "2026-09-16 — Chief Commercial Officer David Miller, interviewed by Energy-Storage.news at the US Battery Asset Management Summit: 'it really comes down to forecast quality'; batteries co-located with large loads to meet ERCOT's curtailment requirement are a new use case — 'now we're actually seeing customers for whom that's the primary use case'",
+     "sub": "Gridmatic · market"
+    },
+    {
+     "x": 3,
+     "lane": "record",
      "label": "2026-09-01 — Chief executive Jennifer Scanlon sells 12,500 Class A shares at $73.21 to $74.72 under a Rule 10b5-1 plan adopted 2025-12-09, six days after the December secondary priced",
      "sub": "UL Solutions · corporate"
     },
     {
-     "x": 2,
+     "x": 4,
      "lane": "record",
      "label": "2026-08-31 — Methanol-ready certification achieved for mtu marine engines, and the portfolio of variable-speed marine gen-sets expanded",
      "sub": "Rolls-Royce Power Systems · product-launch"
     },
     {
-     "x": 3,
+     "x": 5,
      "lane": "record",
      "label": "2026-08-27 — H1 2026 interim: data-centre power +98.48% to RMB 807.59M carries the group; no 800 VDC order disclosed",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 4,
+     "x": 6,
      "lane": "record",
      "label": "2026-08-24 — Shares reach a 52-week low of $111.85 on a Morgan Stanley downgrade to Equal Weight",
      "sub": "NRG Energy · market"
     },
     {
-     "x": 5,
+     "x": 7,
      "lane": "record",
      "label": "2026-08-21 — NVIDIA's second 800VDC white paper (Industry Alignment & Execution) names the Panama Architecture as a transformer-rectifier-unit implementation of its data-hall DC power block, describes TRU-based blocks as highly practical at roughly the 5MW class and already in initial implementation, and dates next-generation solid-state transformers to around 2029",
      "sub": "Zhonhen Electric · other"
     },
     {
-     "x": 6,
+     "x": 8,
      "lane": "record",
-     "label": "2026-08-18 — 'The Gridmatic Podcast' launches with three episodes; the retail president says the business 'scaled to thousands of customers across ERCOT and PJM in just two years'",
-     "sub": "Gridmatic · corporate"
+     "label": "2026-08-18 — 'The Gridmatic Podcast' launches with three episodes; the company says Gridmatic Retail has grown to 'thousands of customers across ERCOT and PJM' in two years 'and is on track to hit $100 million in revenue this year'",
+     "sub": "Gridmatic · financial"
     },
     {
-     "x": 7,
+     "x": 9,
      "lane": "record",
      "label": "2026-08-18 — ENGIE and QTS extend their Texas partnership: 48 MWac of ABEI Energy's ~61 MWac Lubio Solar (Kaufman County) to QTS's Irving data centres, ~150 GWh a year, with retail supply and energy management bundled",
      "sub": "ENGIE North America · customer"
     },
     {
-     "x": 8,
+     "x": 10,
      "lane": "record",
      "label": "2026-08-15 — CATL capital-increase definitive documents disclosed — signed 2026-08-14, not yet closed",
      "sub": "Zhonhen Electric · corporate"
     },
     {
-     "x": 9,
+     "x": 11,
      "lane": "record",
      "label": "2026-08-14 — CATL signs definitive agreements: RMB 4.099B (RMB 3.512B cash + a 49% stake in Times Tianyuan valued RMB 588M) for 49% of controlling holdco Zhonhen Technology Investment; Zhu Guoding remains actual controller (35.7% of holdco post-deal, wife Bao Xiaoru 15.3%); same-day strategic cooperation across computing-power infrastructure, charging/swap and power trading",
      "sub": "Zhonhen Electric · financial"
     },
     {
-     "x": 10,
+     "x": 12,
      "lane": "record",
      "label": "2026-08-13 — CNBC/BofA frame EROC as 'a play on the Anthropic IPO'; Buy reiterated",
      "sub": "ERock · market"
-    },
-    {
-     "x": 11,
-     "lane": "record",
-     "label": "2026-08-12 — EGM approves the third employee stock ownership plan: up to RMB 40M, ≤40 participants, buyback shares at RMB 21.79 (half the market average), with unlock hurdles of revenue +30%/+70%/+120% vs FY2025 (or profit alternatives) across 2026–2028",
-     "sub": "Zhonhen Electric · other"
-    },
-    {
-     "x": 12,
-     "lane": "record",
-     "label": "2026-08-12 — Solarmarkt Group selects PowerTrack EMS to hybridise two operating Hungarian utility-scale solar plants — 40 MW / 80 MWh added to each 60 MWp site, with EPC partner Pannonwatt",
-     "sub": "Stem · customer"
     }
    ]
   },
@@ -34694,6 +35575,14 @@ function clLessonSegmentSoftwareAndOptimization_() {
    "date": "2026-09-19",
    "note": "regenerated: concepts:profiler-concepts 2026-09-13→2026-09-19; graph:profiler-graph 2026-09-13→2026-09-19",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "regenerated: concepts:profiler-concepts 2026-09-19→2026-09-26; graph:profiler-graph 2026-09-19→2026-09-26; profile:gridmatic 2026-09-12→2026-09-24; profile:habitat-energy 2026-09-12→2026-09-24",
+   "changed": [
+    "what-moved",
+    "where-it-sits"
+   ]
   }
  ]
 };
@@ -47904,7 +48793,7 @@ function clLessonScenarioStorageDevelopersAndIppsObjection_() {
   "counterparty": "aypa-power",
   "stage": "shortlist"
  },
- "updated": "2026-09-18",
+ "updated": "2026-09-26",
  "reviewBy": "2027-01-01",
  "tiles": [
   {
@@ -47953,7 +48842,7 @@ function clLessonScenarioStorageDevelopersAndIppsObjection_() {
    {
     "kind": "guidance",
     "ref": "guidance:landscape-storage-developers-and-ipps-2026-09",
-    "date": "2026-09-14",
+    "date": "2026-09-26",
     "note": "the seller's play (find the veto before you find the buyer), the ratio-step indicator, and this buyer's row in the bets table"
    },
    {
@@ -48255,6 +49144,13 @@ function clLessonScenarioStorageDevelopersAndIppsObjection_() {
     "**5 · Whether the diligence priced the supplier concentration.** The dossier says explicitly that this is not knowable from the record. It is the most tempting inference in the file and the one with the least behind it."
    ],
    "sales": "Four of these five are questions to take into the room. The fifth is a reason not to take a theory into it."
+  }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-26",
+   "note": "Re-judged against the storage-developers landscape revised on 26 September 2026, when four utilities joined the segment as adjacents. The revision corrected counts only — 38 members with eleven adjacent, 163 policy entries, twelve live ownership events — and changed no bet, route, gate or seller's move; nothing this room draws from the landscape (the veto, the content-ratio step on 1 January 2027, the foreign-entity reading by construction vintage, this buyer's bet) moved. All three beats hold and no section changed. The landscape pin moves to 26 September; reviewBy stays 1 January 2027, the landscape's own.",
+   "changed": []
   }
  ]
 };
@@ -48649,7 +49545,7 @@ function clLessonScenarioStorageDevelopersAndIppsDiscovery_() {
   "counterparty": "spearmint-energy",
   "stage": "discovery"
  },
- "updated": "2026-09-18",
+ "updated": "2026-09-26",
  "reviewBy": "2027-01-01",
  "tiles": [
   {
@@ -48698,7 +49594,7 @@ function clLessonScenarioStorageDevelopersAndIppsDiscovery_() {
    {
     "kind": "guidance",
     "ref": "guidance:landscape-storage-developers-and-ipps-2026-09",
-    "date": "2026-09-14",
+    "date": "2026-09-26",
     "note": "the seller's play (find the veto before you find the buyer; read the criteria against the project's vintage), the ratio-step indicator, the deferred foreign-entity guidance row that names this buyer, and this buyer's row in the bets table"
    }
   ]
@@ -49005,6 +49901,13 @@ function clLessonScenarioStorageDevelopersAndIppsDiscovery_() {
    ],
    "sales": "Six questions, none of them answerable from outside the company. That is what makes them worth an hour of a buyer's time."
   }
+ ],
+ "revisions": [
+  {
+   "date": "2026-09-26",
+   "note": "Re-judged against the storage-developers landscape revised on 26 September 2026, when four utilities joined the segment as adjacents. The revision corrected counts only — 38 members with eleven adjacent, 163 policy entries, twelve live ownership events — and changed no bet, route, gate or seller's move; nothing this room draws from the landscape (the veto, the content-ratio step on 1 January 2027, the foreign-entity reading by construction vintage, this buyer's bet) moved. All three beats hold and no section changed. The landscape pin moves to 26 September; reviewBy stays 1 January 2027, the landscape's own.",
+   "changed": []
+  }
  ]
 };
 }
@@ -49024,7 +49927,7 @@ function clLessonScenarioUtilitiesObjection_() {
   "counterparty": "dominion-energy",
   "stage": "rfp"
  },
- "updated": "2026-09-24",
+ "updated": "2026-09-26",
  "reviewBy": "2026-10-01",
  "tiles": [
   {
@@ -49073,7 +49976,7 @@ function clLessonScenarioUtilitiesObjection_() {
    {
     "kind": "guidance",
     "ref": "guidance:landscape-utilities-2026-09",
-    "date": "2026-09-24",
+    "date": "2026-09-26",
     "note": "the seller's play (identify the instrument before the account plan; read the collateral not the queue; qualification as an asset with an expiry date), and this buyer's row in the bets table"
    }
   ]
@@ -49355,7 +50258,7 @@ function clLessonScenarioUtilitiesObjection_() {
    "ps": [
     "**In an objection room this is the list of things you must ask rather than assert.** Each is a gap the record states about itself, and each is a sentence a seller under pressure will be tempted to fill.",
     "**1 · The tariff's own text.** The dossier records that the standalone large-load rate sheet, the collateral quantum in dollars per megawatt and the commission's final-order text were **not reachable** — the ramp, exit-fee and notice terms in this file rest on a regulator's fact sheet and an investor deck. Quote the fact sheet's labels or quote nothing.",
-    "**2 · Who the incumbent supplier is.** There is none on the record. The segment's reading is that two of the six franchises run open storage solicitations and **neither one's battery supplier is discoverable in any source** — so do not walk in assuming a competitor is installed here, and do not let the buyer's silence be read as one.",
+    "**2 · Who the incumbent supplier is.** There is none on the record. The segment's reading is that most of the eleven franchises' owned battery lane has **no supplier discoverable in any source** — two that run open storage solicitations name none — so do not walk in assuming a competitor is installed here, and do not let the buyer's silence be read as one.",
     "**3 · The commercial terms of the large-load contracts.** Contracted megawatts, minimum-bill percentages and termination formulas are filed under seal or redacted, and the dossiers say so in their own collection gaps. Every figure in this scenario about those contracts is a company disclosure or a regulator's summary — never the contract.",
     "**4 · How the plan and the statute get reconciled.** That the next comprehensive plan raises the storage number is a moderate-confidence judgment, not a filing. Whether the gap is closed by building or by buying is exactly the question a seller wants answered and exactly the one nobody has published. **Ask it; do not model it.**",
     "**5 · What supplier qualification looks like after the combination.** Neither party has published a position. The record says the dockets survive and the platform decides — which is a shape, not a process. The written answer to that question is worth more than anything else in the meeting, and only this counterparty can give it."
@@ -49371,6 +50274,13 @@ function clLessonScenarioUtilitiesObjection_() {
     "what-the-record-says",
     "beat-3",
     "claims-ledger"
+   ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "Re-judged against the landscape re-pinned on 26 September 2026, when five franchises joined the utilities segment. All three beats hold: the two lanes, the prudence standard, the edition-and-date answer and the qualification-expiry reading are unchanged, and the landscape's new instruments and review date do not reach this buyer. One premise moved: what-the-record-does-not-say taught that two of the six franchises run open storage solicitations and neither one's battery supplier is discoverable; the landscape now counts eleven franchises, most of whose owned lane names no supplier — so the sentence says that, and its advice stands. The landscape pin moves to 26 September; reviewBy stays 1 October, the purchase solicitation's issue date and the separate reframe's gate.",
+   "changed": [
+    "what-the-record-does-not-say"
    ]
   }
  ]
@@ -49770,7 +50680,7 @@ function clLessonScenarioUtilitiesDiscovery_() {
   "counterparty": "southern-company",
   "stage": "prospecting"
  },
- "updated": "2026-09-24",
+ "updated": "2026-09-26",
  "reviewBy": "2026-11-03",
  "tiles": [
   {
@@ -49819,7 +50729,7 @@ function clLessonScenarioUtilitiesDiscovery_() {
    {
     "kind": "guidance",
     "ref": "guidance:landscape-utilities-2026-09",
-    "date": "2026-09-24",
+    "date": "2026-09-26",
     "note": "the seller's play (identify the instrument before the account plan; read the collateral not the queue; qualification as an asset with an expiry date) and this buyer's row in the bets table"
    }
   ]
@@ -50097,7 +51007,7 @@ function clLessonScenarioUtilitiesDiscovery_() {
      "guidance:landscape-utilities-2026-09 · the-sellers-play · analysis"
     ],
     [
-     "Read the collateral, not the queue: every incumbent in this segment publishes a large number it does not itself believe, and here that pair is 75 GW prospective against 17 GW contracted — the smaller number is the one with a signature behind it",
+     "Read the collateral, not the queue: most incumbents in this segment publish a large number they do not themselves believe, and here that pair is 75 GW prospective against 17 GW contracted — the smaller number is the one with a signature behind it",
      "guidance:landscape-utilities-2026-09 · the-sellers-play · analysis"
     ],
     [
@@ -50129,6 +51039,13 @@ function clLessonScenarioUtilitiesDiscovery_() {
    "date": "2026-09-24",
    "note": "Re-judged against the landscape revised on 24 September 2026. All three beats hold and no section moved: the three lanes and their sizes, the balancing-authority reading of the two-hour floor, and the reservation-before-certification timing are all unchanged, and the landscape's two corrections — the Texas permit halt and the merger calendar — do not reach this account. The landscape pin moves to its 24 September revision. The Alabama statute that set the 1 October review date was confirmed enacted and taking effect as scheduled, so reviewBy moves to the next dated gate in this ledger: the 3 November 2026 commission election that gap 5 is about.",
    "changed": []
+  },
+  {
+   "date": "2026-09-26",
+   "note": "Re-judged against the landscape re-pinned on 26 September 2026, when five franchises joined the utilities segment. All three beats hold: the three lanes and their sizes, the two-hour floor against the owned four-hour fleet, and the reservation-before-certification timing are unchanged, and Southern no longer being the only member that owns its batteries does not change which lane is largest here. One ledger premise moved: it taught that every incumbent in the segment publishes a large number it does not itself believe; the landscape now says most do, and that one newcomer publishes no inquiry figure at all — so the row says most, and this buyer's own pair, 75 GW against 17 GW, is unchanged. The landscape pin moves to 26 September; reviewBy stays 3 November, earlier than the landscape's 2 December.",
+   "changed": [
+    "claims-ledger"
+   ]
   }
  ]
 };
@@ -52456,8 +53373,8 @@ function clLessonScenarioUtilitiesDiscoveryAidc_() {
   "counterparty": "aep",
   "stage": "prospecting"
  },
- "updated": "2026-09-24",
- "reviewBy": "2026-12-10",
+ "updated": "2026-09-26",
+ "reviewBy": "2026-12-02",
  "tiles": [
   {
    "k": "AEP",
@@ -52509,7 +53426,7 @@ function clLessonScenarioUtilitiesDiscoveryAidc_() {
    {
     "kind": "guidance",
     "ref": "guidance:landscape-utilities-2026-09",
-    "date": "2026-09-24",
+    "date": "2026-09-26",
     "note": "the seller's play (identify the instrument before the account plan; read the collateral rather than the queue; know which side of the meter you are on, because the policy risk is not symmetric) and this player's row in the bets table"
    },
    {
@@ -52603,7 +53520,7 @@ function clLessonScenarioUtilitiesDiscoveryAidc_() {
    "ps": [
     "**In discovery there is no position to defend, and here the thing the record does not settle is which rulebook the conversation is in.** This counterparty runs two regimes at once, and the public record describes one of them in far more detail than the other because one produces commission orders and the other produces letters. So what follows is the three things the meeting has to establish, in the order a good conversation would take them.",
     "**First: which regime, and therefore which clock.** Seven of this company's state operating companies serve large loads under commission-approved schedules with published thresholds, terms, minimum charges, exit fees and collateral — a regime a seller can read end to end. The eighth, the Texas transmission utility whose territory the flagship campus sits in, has **no company tariff at all**: its 45 GW of contracted load sits under the state's 2025 statute, the market's contracting structure allows letters of agreement only, and the process that classifies and studies those loads was **paused in August 2026** after the governor ordered an audit, with a verification report due in December and the study timeline after it to be reassessed. **The docket you read is real, detailed and about the other seven states.**",
-    "**Second: which number the campus is in.** The segment's own instruction is to read the collateral rather than the queue, because every incumbent here publishes a large figure it does not itself believe — for this one, roughly 195 GW of queue activity against 69 GW contracted, and the company reports them as two separate numbers rather than one. The 45 GW in Texas is inside the contracted figure and is backed by about two billion dollars of posted security. A campus that has posted security is a campus with a signature behind it; a campus in the queue is a letter of intent with an interconnection number. **Which of the two you are looking at decides whether there is a schedule to sell against at all.**",
+    "**Second: which number the campus is in.** The segment's own instruction is to read the collateral rather than the queue, because most incumbents here publish a large figure they do not themselves believe — for this one, roughly 195 GW of queue activity against 69 GW contracted, and the company reports them as two separate numbers rather than one. The 45 GW in Texas is inside the contracted figure and is backed by about two billion dollars of posted security. A campus that has posted security is a campus with a signature behind it; a campus in the queue is a letter of intent with an interconnection number. **Which of the two you are looking at decides whether there is a schedule to sell against at all.**",
     "**Third: which side of the meter, and therefore whose risk.** The segment's reading is that the policy risk in this market is **not symmetric**: when the Texas grid paused interconnections in August 2026, behind-the-meter generation was exempt and grid-served load was not — and on 21 September the state halted every permit data centres seek from its environmental regulator until the audit completes, so the gap between the two routes is now timing rather than exemption. A seller with a behind-the-fence product is selling **against** this franchise's timeline rather than into it — a different buyer, a different call sheet, and quarters rather than regulatory years. Deciding which of those two sellers you are, before you say anything, is what keeps a prospecting meeting from becoming an argument. **And it is separable from the one place this counterparty is unambiguously a buyer**: the extra-high-voltage transformers and breakers it names itself as the binding constraint on its own transmission build."
    ],
    "sales": "Which regime, which number, which side of the meter. Asked in that order they take ten minutes; assumed in that order they cost a year."
@@ -52776,7 +53693,7 @@ function clLessonScenarioUtilitiesDiscoveryAidc_() {
      "profile:aep v1 · decisionMakers[] titles · fact"
     ],
     [
-     "The segment module's instruction is to read the collateral rather than the queue, because every incumbent publishes a large number it does not itself believe and in every case the smaller number is the one with money or a signature behind it",
+     "The segment module's instruction is to read the collateral rather than the queue, because most incumbents publish a large number they do not themselves believe and in every such case the smaller number is the one with money or a signature behind it",
      "guidance:landscape-utilities-2026-09 · the-sellers-play · analysis"
     ],
     [
@@ -52788,7 +53705,7 @@ function clLessonScenarioUtilitiesDiscoveryAidc_() {
      "guidance:landscape-utilities-2026-09 · each-players-bet · analysis"
     ],
     [
-     "Review date, and the route to it: the nearest future day-level gate in this dossier is the 10 December 2026 verification report on the paused batch process. At authoring that was later than the segment module's own reviewBy of 2026-10-01, so the module's bound governed; the module's 24 September 2026 review moved its bound to 2027-01-01, so this scenario's own gate now governs and it takes 10 December",
+     "Review date, and the route to it: the nearest future day-level gate in this dossier is the 10 December 2026 verification report on the paused batch process. At authoring that was later than the segment module's own reviewBy of 2026-10-01, so the module's bound governed; the module's 24 September 2026 review moved its bound to 2027-01-01, so this scenario's own gate governed and it took 10 December; the module's 26 September 2026 re-pin moved its bound to 2026-12-02, earlier than 10 December, so the module's bound governs again and this scenario takes 2 December",
      "profile:aep v1 · policyExposure[0] · analysis; guidance:landscape-utilities-2026-09 · reviewBy · analysis"
     ]
    ]
@@ -52818,6 +53735,14 @@ function clLessonScenarioUtilitiesDiscoveryAidc_() {
    "changed": [
     "the-position",
     "beat-2",
+    "claims-ledger"
+   ]
+  },
+  {
+   "date": "2026-09-26",
+   "note": "Re-judged against the landscape re-pinned on 26 September 2026, when five franchises joined the utilities segment. All three beats hold: the campus is still served under the statute and letters of agreement, the batch is still paused with the verification report due 10 December, the contracted-against-queue pair and the extra-high-voltage constraint are unchanged, and nothing the newcomers add reaches this Texas campus. Two premises moved. The position and the ledger taught that every incumbent publishes a large number it does not itself believe; the landscape now says most do and one newcomer publishes no inquiry figure — so both say most, and this counterparty's pair is unchanged. The review-date row taught that the landscape's bound of 1 January 2027 let this scenario's own 10 December gate govern; the landscape's bound is now 2 December 2026, so it governs again and reviewBy moves to 2 December. The landscape pin moves to 26 September.",
+   "changed": [
+    "the-position",
     "claims-ledger"
    ]
   }
@@ -61919,31 +62844,35 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
  "title": "Landscape — Storage Developers and IPPs",
  "short": "Why nineteen incumbents can share one segment without any of them holding it, what all twenty-seven ranked players are betting, and where the veto on a battery purchase actually sits. The judgment layer above the public segment lesson.",
  "source": {
-  "doc": "Corpus synthesis over the 34 member dossiers of the storage-developers-and-ipps segment, at the profile versions in the claims ledger — no ingested document and no new research",
+  "doc": "Corpus synthesis over the 34 member dossiers of the storage-developers-and-ipps segment, at the profile versions in the claims ledger — no ingested document and no new research; member counts re-measured on 26 September 2026, when four utilities joined the segment as adjacents",
   "publisher": "Internal analysis",
   "date": "September 2026",
   "pages": 9,
   "series": "Industry Guidance — landscape module",
   "repo": "repository-information/industry-guidance/landscape-storage-developers-and-ipps-analysis.md"
  },
- "updated": "2026-09-14",
+ "updated": "2026-09-26",
  "reviewBy": "2027-01-01",
  "revisions": [
   {
    "date": "2026-09-14",
    "note": "First authoring, and the third landscape module of the segment layer. Corpus synthesis over the 34 member dossiers at the profile versions in the claims ledger; no source document was ingested and no new research was run, so the ledger cites dossiers rather than publishers and the analysis file in the repo carries the provenance line. Composed against the public segment lesson rather than restating it: the roster, the normalized figures, the graph edges and the policy fence stay where they are generated. Companies are named and ranked here under the developer-approved exception of 2026-09-07, the one module class that does; every bet in the bets table is that member's own strategy read treated as analysis, and is labelled as analysis rather than blended with fact. All twenty-seven incumbent-and-challenger rows are carried, the longest bets table the corpus holds, because the segment's distinguishing fact is the size of its incumbent set and trimming the table would destroy it. The review date is set from a rate that changes on a schedule, stated inside two members' policy prose and in no date field anywhere in the segment; the reasoning and three rejected nearer candidates are written out in the analysis file."
+  },
+  {
+   "date": "2026-09-26",
+   "note": "Count correction after four utilities — Duke Energy, DTE Energy, WEC Energy Group and Berkshire Hathaway Energy — joined the segment as adjacents on 26 September 2026, each at its first version. Adjacents carry no bet, so no player's bet, rank or route changed; only the counts the module teaches did. The tiles taught 34 members with seven adjacent and no other segment reaching 11 incumbents; the segment now holds 38 with eleven adjacent, and utilities reaches 11. the-indicators taught 142 policy entries with 96 dated; the fence is now 163 with 112 dated, still none in the future and the latest still 1 September 2026, so the review date holds. the-sellers-play taught ten of thirty-four members with a live ownership event; two of the four newcomers carry one — a minority sale of a utility subsidiary and an agreed territory sale — so it is twelve of thirty-eight. claims-ledger re-measures its count rows and adds one for the four. what-the-record-does-not-say taught seven revenue carriers, three other operating measures and twenty-seven without either out of thirty-four; it is now ten, seven and twenty-seven out of thirty-eight, and the fence count changes with it. drill and check-yourself carried the same counts and are corrected; no answer changes."
   }
  ],
  "tiles": [
   {
-   "k": "34",
+   "k": "38",
    "v": "members on record",
-   "sub": "Nineteen incumbent, eight challenger, seven adjacent — the deepest segment in the registry, measured 14 September 2026"
+   "sub": "Nineteen incumbent, eight challenger, eleven adjacent — the deepest segment in the registry, re-measured 26 September 2026 after four utilities joined as adjacents"
   },
   {
    "k": "19",
    "v": "incumbents",
-   "sub": "The largest incumbent set of the nineteen segments. The next-highest carries 16, and no other reaches 11"
+   "sub": "The largest incumbent set of the nineteen segments. The next-highest carries 16, and only one other — utilities, since September 2026 — reaches 11"
   },
   {
    "k": "27",
@@ -62170,7 +63099,7 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
    "title": "The indicators",
    "read": "6 min",
    "kind": "table",
-   "intro": "Dated where the record dates it. A date in the third column is the dossier's own; an entry without one is a condition to watch rather than an event to diary. **Not one of this segment's policy entries carries a future effective date** — the 34 members hold 142 of them between them, 96 carry a date at all, and the latest of those is 1 September 2026 — so a sort of the fence table returns this list **empty**. Every dated gate below was read out of prose. The second row sets this module's review date; the first row is nearer, load-bearing and deliberately not taken.",
+   "intro": "Dated where the record dates it. A date in the third column is the dossier's own; an entry without one is a condition to watch rather than an event to diary. **Not one of this segment's policy entries carries a future effective date** — the 38 members hold 163 of them between them, 112 carry a date at all, and the latest of those is still 1 September 2026 — so a sort of the fence table returns this list **empty**. Every dated gate below was read out of prose. The second row sets this module's review date; the first row is nearer, load-bearing and deliberately not taken.",
    "cols": [
     "What to watch",
     "Whose",
@@ -62278,7 +63207,7 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
    "kind": "callout",
    "ps": [
     "**Two readers arrive here by different roads, and this segment is the end of one of them.** The curriculum's two implicit role paths are the storage seller, who reaches this module through the product and market-access tracks — and for whom this is the terminal segment, because this is the desk that signs — and the AI-data-centre power seller, who reaches it through the power chain and meets a different half of the same roster.",
-    "**The storage seller — four moves.** *First*, **find the veto before you find the buyer.** The registry says this segment decides which integrator's product gets installed; the members say otherwise in their own words. One states plainly that the parties who must approve a battery are the {{tax equity}} banks and the minority co-owners, not the developer alone. Another names five financing syndicates and an {{independent engineer}} process every supplier must clear. A third describes minority sell-downs that put an infrastructure fund's diligence between a vendor and a signature. **Criterion one is not a preference in this segment — it is a description of where the veto sits**, and qualifying the developer without qualifying the syndicate is the characteristic way to lose a year here. *Second*, **read criterion four against the project's vintage, not the company.** The content rules bind by construction start, so a buyer with safe-harboured 2025 positions and the same buyer starting construction in 2026 are two different customers inside one logo — and several members are explicitly both. *Third*, **treat criterion six as the entry point it demonstrably is.** A segment whose sixth buying criterion is dual-sourcing and geography has, by construction, a second slot: one member split its fleet between two suppliers per project, another ran three side by side at gigawatt-hour scale. The instructive exception is the member that is seven-for-seven with one supplier and, on its own record, has **no second-vendor precedent to point at** — which is a harder room than a competitive one. *Fourth*, **ask who owns the counterparty this quarter.** Ten of the thirty-four members carry a live or just-closed ownership event.",
+    "**The storage seller — four moves.** *First*, **find the veto before you find the buyer.** The registry says this segment decides which integrator's product gets installed; the members say otherwise in their own words. One states plainly that the parties who must approve a battery are the {{tax equity}} banks and the minority co-owners, not the developer alone. Another names five financing syndicates and an {{independent engineer}} process every supplier must clear. A third describes minority sell-downs that put an infrastructure fund's diligence between a vendor and a signature. **Criterion one is not a preference in this segment — it is a description of where the veto sits**, and qualifying the developer without qualifying the syndicate is the characteristic way to lose a year here. *Second*, **read criterion four against the project's vintage, not the company.** The content rules bind by construction start, so a buyer with safe-harboured 2025 positions and the same buyer starting construction in 2026 are two different customers inside one logo — and several members are explicitly both. *Third*, **treat criterion six as the entry point it demonstrably is.** A segment whose sixth buying criterion is dual-sourcing and geography has, by construction, a second slot: one member split its fleet between two suppliers per project, another ran three side by side at gigawatt-hour scale. The instructive exception is the member that is seven-for-seven with one supplier and, on its own record, has **no second-vendor precedent to point at** — which is a harder room than a competitive one. *Fourth*, **ask who owns the counterparty this quarter.** Twelve of the thirty-eight members carry a live or just-closed ownership event.",
     "**The AI-data-centre power seller — three moves.** *First*, **know which members are selling power rather than buying batteries.** Three merchant generators in this segment carry its largest generation numbers and its smallest storage procurement — one runs 43,641 MW of generation against a 624 MW battery fleet that shrank by 400 MW between two filings. Reading fleet size as battery opportunity is the most expensive misread available here. *Second*, **the co-location rulebook is being written now, and this segment is where it is being written.** One member's own arrangement produced the finding that a grid operator's tariff was unjust and unreasonable for co-located load, and then show-cause orders to all six operators; its dossier's own words are that the rulebook governing every future co-location is still being written. Nothing in this area is settled, and a proposal that assumes it is will be re-priced. *Third*, **distinguish announced intent from pipeline.** Powered-land and data-centre lines appear across this segment — five members carry one — and in every case the dossier rates it Low or Moderate confidence and records that **no customer, site, megawatt figure or contract has been published.** One member has 445 MW of signed retail power agreements with a counterparty it has never named.",
     "**And one move both readers share.** The market-makers are intelligence, not pipeline — the leading incumbent's own strategy read says so in those words, and the reason generalises past that one company. Its hub economics, its earnings-call supply-chain language and its order book are the best public indicator of domestic-supply tightness anywhere in the corpus. **That is worth more than a meeting you were never going to get**, and it is available for free to anyone who reads the filings."
    ]
@@ -62288,27 +63217,31 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
    "title": "Claims ledger",
    "read": "reference",
    "kind": "ledger",
-   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions in the claims ledger; no ingested document. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 14 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column.",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions in the claims ledger; no ingested document. Every load-bearing claim above traces to a dossier, at that dossier's profile version on 14 September 2026, and to the field inside it; the member counts were re-measured on 26 September 2026, when four utilities joined the segment as adjacents at their first versions. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column.",
    "rows": [
     [
-     "Segment holds 34 members — 19 incumbent, 8 challenger, 7 adjacent; six buying criteria; chain position 11 of 19, tier demand",
-     "profiler-segments.json @ v05.73r — segments[].members[], .buyingCriteria[], .definition, .position, .tier"
+     "Segment holds 38 members — 19 incumbent, 8 challenger, 11 adjacent; six buying criteria; chain position 11 of 19, tier demand",
+     "profiler-segments.json @ v07.58r — segments[].members[], .buyingCriteria[], .definition, .position, .tier"
     ],
     [
-     "The deepest segment in the registry, and the largest incumbent set of the nineteen; next-highest is EPC and construction at 16, and no other segment reaches 11",
-     "profiler-segments.json @ v05.73r — all nineteen segments[].members[], counted 2026-09-14"
+     "The deepest segment in the registry, and the largest incumbent set of the nineteen; next-highest is EPC and construction at 16, and only utilities also reaches 11",
+     "profiler-segments.json @ v07.58r — all nineteen segments[].members[], counted 2026-09-26"
     ],
     [
      "The registry's own definitions of incumbent, challenger and adjacent, quoted in the glossary",
      "profiler-segments.json @ v05.73r — roles"
     ],
     [
-     "Only 7 of the 34 members carry a normalized revenue figure and only 3 carry any non-revenue operating KPI",
-     "the 34 profile files — financials.periods[].metrics[].kpi, read 2026-09-14"
+     "Only 10 of the 38 members carry a normalized revenue figure and only 7 carry any non-revenue operating KPI, in their latest annual period",
+     "the 38 profile files — financials.periods[].metrics[].kpi, latest annual period, read 2026-09-26"
     ],
     [
-     "The 34 members hold 142 policy entries between them, 96 with an effective date, none in the future and the latest 1 September 2026",
-     "the 34 profile files — policyExposure[].effectiveDate, sorted 2026-09-14"
+     "The 38 members hold 163 policy entries between them, 112 with an effective date, none in the future and the latest 1 September 2026",
+     "the 38 profile files — policyExposure[].effectiveDate, sorted 2026-09-26"
+    ],
+    [
+     "Four utilities joined as adjacents — each a rate-based or contracting buyer of storage rather than a developer; two carry an ownership event: a minority sale of one utility subsidiary, 9.2 per cent closed in March 2026 with tranches to June 2028, and an agreed sale of a service territory for 1.9 billion dollars, closing in the first half of 2027",
+     "profiler-segments.json @ v07.58r — segments[].members[].basis; profile:duke-energy @ v1 — strategyRead[4], recentDevelopments[23]; profile:berkshire-hathaway-energy @ v1 — strategyRead[3], productsAndServices[2]"
     ],
     [
      "US operating battery storage at 30 June 2026: first 5.779 GW, second 3.662 GW, third 1.978 GW; one member closed to within 42 MW of third and another reached 1.470 GW",
@@ -62531,14 +63464,14 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
    "kind": "callout",
    "ps": [
     "**1 — There is no owner league table that covers this segment, and three of its own incumbents say so about themselves.** The only independent measurement in the file works from government filings and names three companies out of nineteen. One member's own record says the largest-merchant-battery-owner description of it **should be dropped rather than qualified**, because no independent dated ranking of storage owners by fleet size exists. A second says no independent tracker measures its fleet at owner level, and that its own figure is corroborated only by summing its own project table. A third says it does not appear in the independent top five at all, and that the capacity figure still circulating about it is stale 2024 company material. **This module states no rank without its instrument attached, and invents none.**",
-    "**2 — Twenty-seven of the thirty-four publish no comparable financials.** Seven carry a revenue figure in the normalized overlay and three carry any other operating measure. That is not a collection failure; it is what a buyer class composed mostly of sponsor-owned platforms, family holdings and private developers looks like. **Every fleet figure in this module is therefore a company's own or a third party's**, and is attributed as such.",
+    "**2 — Twenty-seven of the thirty-eight publish no comparable financials.** Ten carry a revenue figure in the normalized overlay and seven carry any other operating measure — the four utilities added as adjacents in September 2026 account for all the change. That is not a collection failure; it is what a buyer class composed mostly of sponsor-owned platforms, family holdings and private developers looks like. **Every fleet figure in this module is therefore a company's own or a third party's**, and is attributed as such.",
     "**3 — This module carries no financial comparison across the segment.** The normalized figures belong to the public segment lesson's numbers section and regenerate on their own clock. Repeating them here would create two copies that drift apart, and the one that drifted would be this one.",
     "**4 — The second-largest US developer by pipeline buys storage invisibly.** Its dossier states that no battery integrator, cell supplier, power-conversion vendor or storage EPC is named in **any** release, microsite, counterparty release or trade-press article read, and that the only chemistry statement anywhere is lithium iron phosphate. A second incumbent's record says the same for North America across cells, modules, inverters and turbines. Two of the segment's largest members are, on the supply question, closed books — and that is a finding about the segment, not a gap in the research.",
     "**5 — No powered-land or data-centre line in this segment has a named customer.** Five members carry one. Every one is rated Low or Moderate confidence by its own dossier, and in each case no site, megawatt figure, offtaker or contract has been published. The sharpest instance is a member with 445 MW of signed retail power agreements and **a counterparty it has never named**.",
     "**6 — The two published merchant-revenue series for the segment's biggest market do not reconcile.** Two research houses measure the same market over the same period and disagree materially, and the dossier carrying both states that no source reconciles them. Any {{augmentation}} or revenue-model conversation in that market rests on a number the record does not agree on.",
     "**7 — Ownership percentages and deal terms are frequently unavailable.** A sponsor's stake in the platform it created, another sponsor's stake in the platform it is selling, the economic split between two classes of unit at a family holding, an investor's current as-converted percentage after a dividend compounding in kind, the purchase price of an acquired operating battery, the sale prices of three flagship projects — all unreported. **A supplier reasoning about who has the capital to sign is reasoning without those numbers.**",
     "**8 — The rulebook that governs co-location is unfinished and undated.** A grid operator's tariff was found unjust and unreasonable for co-located load in December 2025; show-cause orders went to all six operators in June 2026; comments were due 16 September 2026. **The resulting tariff language carries no date anywhere in the record** — which is exactly why the indicators table lists it first and the review date is not set from it.",
-    "**9 — Not one policy entry in this segment carries a future effective date.** The 34 members hold 142 of them; 96 carry a date at all; the latest is 1 September 2026. Every dated gate in the indicators was read out of a paragraph rather than a date field. **A generator implementing 'earliest future effective date, else six months' would find nothing to sort and fall through to the default** — which is precisely what the public segment lesson's own review date does."
+    "**9 — Not one policy entry in this segment carries a future effective date.** The 38 members hold 163 of them; 112 carry a date at all; the latest is still 1 September 2026. Every dated gate in the indicators was read out of a paragraph rather than a date field. **A generator implementing 'earliest future effective date, else six months' would find nothing to sort and fall through to the default** — which is precisely what the public segment lesson's own review date does."
    ]
   },
   {
@@ -62565,7 +63498,7 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
     },
     {
      "q": "Where does this segment's nearest dated gate live, and why can a sort not find it?",
-     "a": "Inside **policy prose**, not a date field. The 34 members hold 142 policy entries, 96 carry an effective date, and **not one of those 96 is in the future** — the latest is 1 September 2026. The real gate is the {{material assistance cost ratio}}, indexed to the calendar year and rising from 55 per cent in 2026 toward 75 per cent in 2030, so it steps on **1 January 2027**. Two members state the mechanism between them and neither puts it in a date field."
+     "a": "Inside **policy prose**, not a date field. The 38 members hold 163 policy entries, 112 carry an effective date, and **not one of those 112 is in the future** — the latest is 1 September 2026. The real gate is the {{material assistance cost ratio}}, indexed to the calendar year and rising from 55 per cent in 2026 toward 75 per cent in 2030, so it steps on **1 January 2027**. Two members state the mechanism between them and neither puts it in a date field."
     },
     {
      "q": "Why is the 16 September 2026 comment deadline not this module's review date, even though it is nearer and load-bearing?",
@@ -62576,7 +63509,7 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
      "a": "That there is, by construction, **a second slot**. The record shows it working: one member split its fleet between two suppliers chosen per project on bankability and geography, with 330-plus containers from the Chinese one; another ran three suppliers side by side at 3.3 GWh scale until a single 8 GWh Korean-US framework replaced the practice. The instructive exception is the member that is **seven-for-seven with one integrator** and, on its own record, has no second-vendor precedent to point at."
     },
     {
-     "q": "Ten of thirty-four members carry a live or just-closed ownership event. Why does that matter more here than the buying criteria suggest?",
+     "q": "Twelve of thirty-eight members carry a live or just-closed ownership event. Why does that matter more here than the buying criteria suggest?",
      "a": "Because ownership decides procurement and **it is in none of the six criteria.** Two dossiers make the identical judgment — that the outcome of a sale, not the current sponsor, decides the next three years of buying. A third warns that the counterparty who signed, the entity owning the asset at commercial operation and the owner deciding future procurement **may be three different organisations within a year.**"
     },
     {
@@ -62615,7 +63548,7 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
       "Nineteen is a data error — the registry over-counts because adjacent members were included"
      ],
      "a": 2,
-     "why": "The only independent measurement works from government filings and names three companies. Beyond those three the record is explicit and unusually candid: one incumbent says the largest-merchant-battery-owner description of it should be dropped rather than qualified; another says no independent tracker measures its fleet at owner level; a third says it appears in no independent top five and that a figure still circulating about it is stale 2024 company material. The seven adjacent members are counted separately and are not among the nineteen."
+     "why": "The only independent measurement works from government filings and names three companies. Beyond those three the record is explicit and unusually candid: one incumbent says the largest-merchant-battery-owner description of it should be dropped rather than qualified; another says no independent tracker measures its fleet at owner level; a third says it appears in no independent top five and that a figure still circulating about it is stale 2024 company material. The eleven adjacent members are counted separately and are not among the nineteen."
     },
     {
      "q": "You are told a segment member has 43,641 MW of generation. What is the correct inference about its battery procurement?",
@@ -62708,36 +63641,37 @@ function guidanceDocLandscapeStorageDevelopersAndIpps_() {
 // in the opening paragraph of who-dominates-and-on-what-basis and held to
 // throughout - that module owns the PROCESS (the four moves, the tariff terms,
 // the five BESS channels, the buyer map, the calendar) and this one owns the
-// PARTIES (the instrument each franchise built, the eight bets, the three
-// disintermediation routes, and the four members the other module never covers).
+// PARTIES (the instrument each franchise built, the thirteen bets, the three
+// disintermediation routes, and the fourteen members the other module never covers).
 // Adding a tariff table or a channel list here would collapse the split and
 // re-tell the playbook, which is the predictable failure the brief named.
 //
-// reviewBy is 2026-10-01, SEVENTEEN DAYS after updated, and that is deliberate.
-// The segment's 14 members carry 76 policyExposure entries, 64 dated, and
-// exactly one of those dates is in the future (2027-01-01). The nearer gate was
-// read out of southern-company's policy PROSE - an Alabama 150 MW threshold
-// statute effective 1 October 2026 - while that same entry's effectiveDate field
-// carries the earlier Georgia step. This module therefore ships inside its own
-// 30-day review horizon and renders a gold review chip immediately. That is the
-// freshness rule working, not a defect; section 10 of the analysis file carries
-// the reasoning and the four rejected candidates.
+// reviewBy is read, not sorted. At authoring (2026-09-14) it was 2026-10-01,
+// seventeen days out, read out of southern-company's policy PROSE (an Alabama
+// threshold statute) while the fence's only future effectiveDate was
+// 2027-01-01. The 24 September review moved it to 2027-01-01 once the statute
+// was confirmed; the 26 September re-pin (five franchises added) moved it to
+// 2026-12-02, the Nevada commission's statutory deadline to rule on NV Energy's
+// resource plan and the form large-load agreement - the first dated decision
+// that fixes an instrument's terms. Hearings, elections, filing deadlines,
+// month-part windows and deliverables are rejected; sections 10, 12 and 13 of
+// the analysis file carry the reasoning and every rejected candidate.
 function guidanceDocLandscapeUtilities_() {
   return {
  "id": "landscape-utilities-2026-09",
  "group": "The Value Chain",
  "title": "Landscape — Utilities",
- "short": "Six franchises that do not compete with each other, two challengers larger than most of them, and a threat that is structural rather than competitive. The judgment layer above the public segment lesson.",
+ "short": "Eleven franchises that do not compete with each other, a challenger out-earned by only one of them, and a threat that is structural rather than competitive. The judgment layer above the public segment lesson.",
  "source": {
-  "doc": "Corpus synthesis over the 14 member dossiers of the utilities segment, at the profile versions in the claims ledger — no ingested document; dated gates re-verified against primary sources at the 24 September 2026 review, which added three primary citations to the claims ledger",
+  "doc": "Corpus synthesis over the 19 member dossiers of the utilities segment, at the profile versions in the claims ledger — no ingested document; dated gates re-verified against primary sources at the 24 September 2026 review, which added three primary citations to the claims ledger; the five franchises that joined the segment on 26 September 2026 were read at their first versions and folded in the same day",
   "publisher": "Internal analysis",
   "date": "September 2026",
   "pages": 9,
   "series": "Industry Guidance — landscape module",
   "repo": "repository-information/industry-guidance/landscape-utilities-analysis.md"
  },
- "updated": "2026-09-24",
- "reviewBy": "2027-01-01",
+ "updated": "2026-09-26",
+ "reviewBy": "2026-12-02",
  "revisions": [
   {
    "date": "2026-09-14",
@@ -62746,13 +63680,17 @@ function guidanceDocLandscapeUtilities_() {
   {
    "date": "2026-09-24",
    "note": "Freshness review ahead of the 1 October gate. The gate itself holds: the Alabama threshold statute is enacted and takes effect on 1 October 2026 as taught, so it no longer bounds the module and the review date moves to the next effective date in the record — Dominion's new large-load class on 1 January 2027, the answer the policy-fence sort returns. Two taught claims had moved. (1) The Texas asymmetry: the August 2026 pause did exempt behind-the-meter generation, but on 21 September 2026 the governor directed the state environmental regulator to halt all permits sought by data centres until the grid operator's audit completes, with a compliance update due 19 October — so the route around the grid now waits on a permit, and the gap between the two routes is timing rather than exemption. Route one, the seller's play, the NRG bet row and the matching quiz item are corrected and a new indicator row is added. (2) The merger calendar: 17 November is Virginia's evidentiary hearing, and 8 December and the final order expected 29 January 2027 are South Carolina's, not a single state commission's. Both corrections cite the primary schedule or directive. Every other in-window gate holds or is unresolved."
+  },
+  {
+   "date": "2026-09-26",
+   "note": "Re-pin against the five franchises that joined the segment on 26 September 2026 — Duke Energy, DTE Energy, WEC Energy Group, Berkshire Hathaway Energy and Exelon, each read at its first version. The fourteen original dossiers had not moved, so every change is a sentence the new record contradicts. who-dominates-and-on-what-basis taught six franchises, 'plus four the playbook does not carry' and 'Southern is the one member that buys the battery itself'; the segment now holds eleven, the playbook covers five of them, and four of the five newcomers own utility batteries — so the section adds the five as variants of the five instruments (Duke the contract, DTE, WEC and NV Energy the customer-specific charge, Exelon the collateral) and reads the eleven as a set. who-threatens taught NRG first and Vistra third by revenue; Duke's 32,237 million puts NRG second and Vistra seventh — the label still means the same thing — and the section now records that a wires-only franchise and a PPA-side one test the three routes without breaking them. each-players-bet taught all eight ranked players; it now carries thirteen rows, the five new bets drawn from the new dossiers' strategy reads and labelled as analysis. the-indicators taught 76 entries and a review date of 1 January 2027; the fence is now 103 entries with still one future effective date, and nine dated or conditional gates are added — the Nevada commission's statutory 2 December 2026 decision on the resource plan and the form large-load agreement becomes the review date, as the first dated decision that fixes an instrument's terms; nearer dates are a filing deadline, an argument, windows and deliverables, rejected in the analysis file. the-sellers-play taught five mechanisms across six franchises, 'every incumbent publishes a large number it does not believe' and 'two of the three largest revenue lines are not utilities'; the play is now two questions — the instrument and who owns the asset under it — Duke is the franchise that publishes no inquiry figure, and one of the three largest revenue lines is not a utility. claims-ledger cites the five at v1, row by row, with strategy reads marked as analysis and the other fields as fact. what-the-record-does-not-say taught 'two of the six' on battery-supplier disclosure and 'the wires incumbent'; it now counts eleven franchises, adds DTE's named supplier, notes that Duke names its turbine supplier, adds the Nevada approval to route one, and adds a ninth gap for the newcomers' own unfound items. drill and check-yourself taught six incumbents, eight ranked players and a first-and-third revenue ranking; the cards and questions that carried those counts are corrected, and the answers do not change."
   }
  ],
  "tiles": [
   {
-   "k": "14",
+   "k": "19",
    "v": "members on record",
-   "sub": "Six incumbent, two challenger, six adjacent — measured 14 September 2026, confirming the programme's written figure exactly"
+   "sub": "Eleven incumbent, two challenger, six adjacent — re-measured 26 September 2026, after five franchises joined the six measured on 14 September"
   },
   {
    "k": "0",
@@ -62766,41 +63704,45 @@ function guidanceDocLandscapeUtilities_() {
   },
   {
    "k": "5",
-   "v": "instruments, six franchises",
-   "sub": "The filter, the certificate, the contract, the collateral and the customer-specific charge — how each turns AI load into plant"
+   "v": "instruments, eleven franchises",
+   "sub": "The filter, the certificate, the contract, the collateral and the customer-specific charge — the five franchises added in September 2026 each run a variant of one, not a sixth"
   }
  ],
  "sections": [
   {
    "id": "who-dominates-and-on-what-basis",
    "title": "Who dominates, and on what basis",
-   "read": "9 min",
+   "read": "11 min",
    "kind": "prose",
    "ps": [
-    "**Read this beside the procurement module, not instead of it.** *When Utility Procurement Meets AI Data-Center Load* is the playbook: the four moves a utility makes against AI load, what the {{large-load tariff}} terms say, the five channels where storage enters, and who signs the purchase order. It answers **what you have to do to sell into this**. This module answers a different question — **who this is, and what they are trying to do** — over the same franchises plus four the playbook does not carry. Nothing below repeats its tariff table, its channel list or its buyer map; where you need those, go there.",
-    "**Six {{incumbent}}s, and not one of them competes with another.** That is the fact everything else here follows from, and it makes the usual form of this section impossible. A {{regulated franchise}} is a geographic monopoly: Dominion cannot bid for load in Georgia, Southern cannot bid for load in Virginia, and Oncor cannot bid for anything at all, because it is not a seller of electricity and certifies no generation. Nobody in this segment takes share from anybody else in it. So a ranking of the six against each other would be a ranking of nothing. What can be ranked is **how far along each one's instrument is** — and the instruments are genuinely different in kind.",
+    "**Read this beside the procurement module, not instead of it.** *When Utility Procurement Meets AI Data-Center Load* is the playbook: the four moves a utility makes against AI load, what the {{large-load tariff}} terms say, the five channels where storage enters, and who signs the purchase order. It answers **what you have to do to sell into this**. This module answers a different question — **who this is, and what they are trying to do** — over the five franchises the playbook covers and fourteen members it does not, six of them franchises. Nothing below repeats its tariff table, its channel list or its buyer map; where you need those, go there.",
+    "**Eleven {{incumbent}}s, and not one of them competes with another.** That is the fact everything else here follows from, and it makes the usual form of this section impossible. A {{regulated franchise}} is a geographic monopoly: Dominion cannot bid for load in Georgia, Southern cannot bid for load in Virginia, and Oncor cannot bid for anything at all, because it is not a seller of electricity and certifies no generation — nor can Exelon, whose six utilities have owned no generation since 2022. Nobody in this segment takes share from anybody else in it. So a ranking of the eleven against each other would be a ranking of nothing. What can be ranked is **how far along each one's instrument is** — and the instruments are genuinely different in kind.",
     "**The filter — Dominion.** The whole disclosure is a conversion ladder. Of 53.8 GW of data-centre capacity contracted, 12.0 GW sits under {{electric service agreement}}s that include the {{revenue requirement}} whether the customer takes service or not, 9.4 GW under construction authorisations with full cost reimbursement on walk-away, and 32.4 GW merely at the engineering stage. Against that, a February 2026 commission filing counted about 70,000 MW of requests against a 24,678 MW peak, 45,000 MW of it with no connection date — while actual connections have run at eleven to fifteen a year for a decade, against 118 requests in 2025 alone. The instrument is the new large-load class effective 1 January 2027 plus the deposit and reimbursement clauses, and the honest measure of throughput is the annual connection count, not the gigawatt headline. Its binding constraint is **wires, not generation**, through at least 2028 and in places 2032 — which is why {{behind-the-meter}} bridge power persists on that system for the rest of the decade.",
-    "**The certificate — Southern, and Entergy in a variant.** Georgia Power plans, certifies and builds inside a system it balances itself: there is no capacity auction to bid into and no regional queue, so the {{CPCN}} is the instrument. It certified 9,885 MW in a single December 2025 order, five votes to nothing — then saw reconsideration denied three to two two months later, after two seats on the elected commission changed hands on affordability. Contracted large load rose from 8 GW to 17 GW in three quarters against a 75 GW prospective figure the company never counts as load. **And Southern is the one member that buys the battery itself:** that certificate added 3,022.5 MW of company-owned stand-alone storage, against a 500 MW storage solicitation that is the developer lane — smaller by an order of magnitude. Entergy runs the same instrument with a customer's name on it. A phase-one Louisiana order certified 2,262 MW for a named Meta subsidiary on an agreement whose minimum charges are designed to recover the annual {{revenue requirement}}, and 15.5 GW of executed agreements was ranked in April 2026 the largest disclosed block among nineteen utilities. Its second instrument closes a market rather than opening one: a turbine exclusivity agreement with a quarterly manufacturing slot for large frames, its minimum order raised from fifteen to twenty-one to twenty-seven power-island sets as the campus filings multiplied.",
+    "**The certificate — Southern, and Entergy in a variant.** Georgia Power plans, certifies and builds inside a system it balances itself: there is no capacity auction to bid into and no regional queue, so the {{CPCN}} is the instrument. It certified 9,885 MW in a single December 2025 order, five votes to nothing — then saw reconsideration denied three to two two months later, after two seats on the elected commission changed hands on affordability. Contracted large load rose from 8 GW to 17 GW in three quarters against a 75 GW prospective figure the company never counts as load. **And Southern buys the battery itself:** that certificate added 3,022.5 MW of company-owned stand-alone storage, against a 500 MW storage solicitation that is the developer lane — smaller by an order of magnitude. It is no longer the only member that does: four of the five franchises added in September 2026 own utility batteries too, though one of the four has put its entire new build with developers — below. Entergy runs the same instrument with a customer's name on it. A phase-one Louisiana order certified 2,262 MW for a named Meta subsidiary on an agreement whose minimum charges are designed to recover the annual {{revenue requirement}}, and 15.5 GW of executed agreements was ranked in April 2026 the largest disclosed block among nineteen utilities. Its second instrument closes a market rather than opening one: a turbine exclusivity agreement with a quarterly manufacturing slot for large frames, its minimum order raised from fifteen to twenty-one to twenty-seven power-island sets as the campus filings multiplied.",
     "**The contract — AEP.** {{Large-load tariff}}s approved in six of eight states by August 2026, every one carrying {{take-or-pay}} minimum billing demand between 80 and 90 per cent, terms of twelve to twenty years, ramp periods, collateral and exit fees. The result is 69 GW contracted, reported separately from roughly 195 GW of queue activity and never blended with it — and in Ohio, 17,861 MW contracted against 30,000 MW of original pre-tariff requests. **The instrument deleted roughly two-fifths of the company's own stated demand, on purpose.** That is the same event the playbook module cites as evidence that tariffs work; here it is evidence of what an incumbent's instrument is *for*. The second moat is physical and far less replicable: nearly 90 per cent of the national 765 kV network, a 33-billion-dollar transmission plan inside a 78-billion-dollar capital plan, and a 2025 agreement aimed at expanding domestic manufacture of extra-high-voltage transformers and breakers — the company treats the supply chain, not the permit, as the binding constraint.",
     "**The collateral — Oncor.** The narrowest and most absolute instrument in the segment, because Oncor certifies no generation, is not a seller of electricity and holds no capacity obligation — in an {{energy-only market}} there is none to hold. It decides whether and when a customer gets a transmission-voltage point of delivery, at what {{contribution in aid of construction}}, against what collateral, and in what batch sequence. It publishes three figures every quarter and never blends them: 737 requests totalling 298 GW at 30 June 2026, about 44 GW eligible in the grid operator's first interconnection batch, and about 8 GW already energised. **Collateral held rose from roughly 2.8 billion dollars in November 2025 to 3.5 billion in February 2026, 4.0 billion in May and 5.9 billion in August — more than doubling in nine months while the request queue's growth rate fell from 24 per cent to 15 per cent year over year.** Money posted is the only commitment test in this segment a customer cannot walk away from for free.",
     "**The customer-specific charge — Xcel.** The first utility to put a hyperscaler's full incremental cost into a charge with that customer's name on it: 1,400 MW of wind, 200 MW of solar and a 300 MW, 30 GWh iron-air battery under a single clean-energy accelerator charge. Large-load tariffs are filed in three states with published minimum-demand, term and exit-fee parameters, and only one is approved. The consequence is visible in the numbers — about 2 GW contracted against more than 20 GW of pipeline, roughly 1 GW expected to be signed in 2026, and a contracted figure that did not move between two consecutive quarterly decks. **Xcel's growth is gated by commission decisions rather than by demand or by equipment**, and its supply was reserved first: twelve gas-turbine reservations and a 2 GW joint development agreement executed before any tariff outside that one state was approved.",
-    "**Reading the six as a set.** Three things separate them that a seller can act on, and none of the three appears in the public segment lesson's player table. **How far along the instrument is** — one company's is approved in six states and already before a state supreme court; another's is approved in one. **Whether the utility owns what it buys** — Southern owns its batteries and reserved the equipment for a ten-gigawatt build under fixed-price turnkey contracts before the certificate issued, while AEP has no named battery supplier or integrator on any project in any source its dossier reviewed, and neither does Entergy on any company-owned system. **And what the instrument is denominated in** — a certificate, a contract, cash, or a line on a bill. **The module's own assessment, stated as analysis rather than as a finding of the record: in this segment you are not selling against the other five. You are selling into one of five machines, and the machine decides the conversation.**"
+    "**Five more franchises joined the segment on 26 September 2026, and each runs a variant of one of those five instruments rather than a sixth.** **Duke runs the contract, and reports it more conservatively than anyone.** It publishes only the rungs with a signature or a crane behind them — about 7.8 GW of signed service agreements, about 5.2 GW under construction and a 15.4 GW late-stage rung that includes the signed tranche — and no inquiry figure at all. Its minimum-demand tariff is still being written: North Carolina's settlements send it to a separate expedited proceeding due to finish before new rates take effect on 1 January 2027, between the company's opening 75 per cent minimum and the advocates' 85, and Florida's public counsel called the company's refiled policy facially noncompliant. It self-builds its storage — about 4.5 GW of utility-owned batteries by 2031, the supplier named nowhere — beside 7,501 MW of new gas, and on 19 September 2026 the North Carolina commission denied its first data-centre-justified turbine because the load behind it had never been tested in a contested proceeding.",
+    "**DTE, WEC and Berkshire Hathaway Energy put the customer's name on the plant, as Xcel does — and route the battery three different ways.** DTE's special contracts make its first hyperscale customer pay, over fifteen years, for 1,383 MW of storage DTE owns, and DTE is buying it: a 1.5 GW, 6 GWh supply agreement with LG Energy Solution Vertech in May 2026, named in DTE's own release. WEC's bespoke-resources tariff has the customer subscribe to named new plants and pay their full cost for fifteen years at a fixed return; the utility owns the batteries, but buys them build-transfer from a developer. Berkshire's NV Energy asks every load of 25 MW or more to sign a large-load agreement carrying a customer-specific generation charge, its commercial percentages left for the state commission to set — and puts all 5,405 MW of its new batteries under power purchase agreements, so a developer owns every one.",
+    "**Exelon runs the collateral, as Oncor does, at larger scale and in a different market.** Its six utilities own no generation; the instrument is the {{transmission security agreement}}, under which a data centre posts collateral, accepts a ramp and pays shortfall and termination charges before the utility builds — six active agreements, backed by more than a billion dollars of letters of credit. It publishes its ladder and cuts it: a 36 GW refined queue, an 11 GW high-probability book cut from 18 GW in one quarter, and 4 GW under signed agreements. On 22 September 2026 the federal regulator left one disputed agreement in force and sent its credit clause to federal court.",
+    "**Reading the eleven as a set.** Three things separate them that a seller can act on, and none of the three appears in the public segment lesson's player table. **How far along the instrument is** — one company's is approved in six states and already before a state supreme court; another's is approved in one; a third's is still being written. **Whether the utility owns what it buys** — Southern, Duke, DTE and WEC own their batteries, and Southern reserved the equipment for a ten-gigawatt build under fixed-price turnkey contracts before the certificate issued, while NV Energy has put its entire new battery build with developers and AEP has no named battery supplier or integrator on any project in any source its dossier reviewed, and neither does Entergy on any company-owned system. **And what the instrument is denominated in** — a certificate, a contract, cash, or a line on a bill. **The module's own assessment, stated as analysis rather than as a finding of the record: in this segment you are not selling against the other ten. You are selling into one of eleven machines built on five designs, and the machine decides the conversation.**"
    ],
-   "sales": "Before the first call, name the instrument: certificate, contract, collateral or charge. It decides whether you are selling to the utility, to the developer bidding its solicitation, or to nobody — Oncor buys no generation at all."
+   "sales": "Before the first call, name the instrument: certificate, contract, collateral or charge. It decides whether you are selling to the utility, to the developer bidding its solicitation, or to nobody — Oncor and Exelon buy no generation at all. Where the instrument is a charge, ask next who owns the asset under it: the same design routes the battery to a utility purchase order at one franchise and to a developer at another."
   },
   {
    "id": "who-threatens",
    "title": "Who threatens, and on which route",
-   "read": "8 min",
+   "read": "9 min",
    "kind": "prose",
    "ps": [
-    "**Start by reading the label honestly, because the registry does.** Its own note for this segment says that regulated franchises have no challenger by construction, and that the competitive retail suppliers of the restructured markets carry the role here. That is the registry telling you the {{challenger}} label in this segment is a **structural placeholder**, not a threat claim. The two companies carrying it are neither insurgents nor small: NRG's 2025 revenue of 30,713 million dollars is the largest figure in the segment, and Vistra's 17,738 million is third. Only Southern at 29,600 million and AEP at 21,876 million sit above Vistra — which puts both challengers ahead of Entergy, Xcel, Dominion and Oncor. **Two of the eight ranked players are labelled challenger and rank first and third by revenue.**",
+    "**Start by reading the label honestly, because the registry does.** Its own note for this segment says that regulated franchises have no challenger by construction, and that the competitive retail suppliers of the restructured markets carry the role here. That is the registry telling you the {{challenger}} label in this segment is a **structural placeholder**, not a threat claim. The two companies carrying it are neither insurgents nor small: NRG's 2025 revenue of 30,713 million dollars is second in the segment, behind only Duke's 32,237 million, and Vistra's 17,738 million is seventh of the twelve ranked members that report a figure — still ahead of Dominion, Xcel, Entergy, WEC and Oncor. **Of the thirteen ranked players, one of the two labelled challenger out-earns every franchise but one.** The five franchises added in September 2026 moved Vistra down the table; they did not change what the label means.",
     "**And in Texas the challenger is the incumbent's customer.** Oncor's record states that the retail subsidiaries of Vistra and NRG are its two largest customers, at 25 per cent and 21 per cent of 2025 total operating revenues, with no other customer above 10 per cent. Both challengers state the same relationship from their own side, and the graph types the edge as *other*, not *competitor*. **Forty-six per cent of the largest pure-play wires incumbent's revenue comes from the two companies the registry calls its challengers.** Where restructuring split the franchise it did not create rivals; it created a wires company and the two retailers that bill through it.",
     "**What the two are actually doing is building the thing a franchise already has, from opposite ends.** NRG started with the customers and bought the generation to match: retail was 29.5 billion of its 30.7 billion dollars of 2025 revenue, and a January 2026 acquisition closing at 10,583 million dollars of consideration plus about 3.2 billion of assumed debt added roughly 13 GW across nine states and doubled the fleet to about 25 GW. Vistra started with the plants and owns the customers to hedge them — and **every signed large-load agreement it has is nuclear**, not gas: 1,200 MW to one hyperscaler and 2,609 MW to another from three nuclear sites and an uprate programme, while its own language about the gas fleet is unchanged across four consecutive filings. Neither is attacking a {{regulated franchise}}. Both are assembling one without the obligation to serve.",
     "**So where is the threat? Not from a rival franchise — there cannot be one. It is disintermediation, it runs on three routes, and the six {{adjacent}} members carry all three.**",
     "**Route one — the load never becomes the franchise's load.** One adjacent frames {{co-location}} of compute at its own generation and storage sites in market-structure terms rather than sustainability terms: relieving congestion, offsetting basis risk, mitigating {{curtailment}}, under a preliminary agreement of up to 300 MW and one collaboration. Neither discloses megawatts under contract and no third party has verified the second counterparty's construction or load commitment, so this is the least proven route as well as the most direct. Another adjacent runs the retail-side version as a Texas {{retail electricity provider}} aggregating home batteries into a {{virtual power plant}}. And one challenger's record prices the route exactly: when Texas paused data-centre grid interconnections in August 2026, its signed 445 MW were grid-served and exposed **while behind-the-meter generation was exempt** — until 21 September 2026, when the governor directed the state environmental regulator, the body that issues the air permits on-site generation needs, to halt all permits sought by data centres until the grid operator's audit completes. The route around the grid now waits on a permit rather than on nothing.",
     "**Route two — the asset arrives already built.** One adjacent created a dedicated unit in April 2026 for natural gas and data-centre development, on a {{build-own-transfer}} model rather than merchant gas: a 918 MW plant filed by one regulated utility, two more filed by another at about 2.3 billion dollars combined, and a further 1.95 GW planned. A second sells utilities ownership slices of interregional lines they would not have planned themselves — one partner at roughly 35 per cent as operator, seven more on non-binding memoranda for 2,550 MW — and its founder's testimony is unambiguous: these electric companies will be the ultimate owners, each owning a slice. A third has already executed the template, transferring a completed line to a regulated utility for 285 million dollars in 2021, and now runs the merchant version as the first {{Subscriber Participating Transmission Owner}} scheduled into the California market. **The franchise still owns the asset and still earns on it. It did not plan, develop or build it — and it is not the party a supplier sold to.**",
     "**Route three — the franchise changes hands.** The largest structural event in the segment is a 67-billion-dollar combination of one incumbent with the parent of the corpus's biggest merchant developer. The incumbent's own reading is that it changes the buyer more than the docket: the release keeps the utility president in place, and the state, federal and nuclear approvals leave the rate proceedings, {{IRP}} cycle and solicitation calendar intact — **but capital allocation, supplier qualification and framework agreements would sit with the acquirer**, whose merchant arm self-integrates, buying cells and DC blocks direct so that a containerised-system vendor has no integrator channel to ride. If that doctrine migrates after an expected second-half-2027 close, the largest regulated procurement machine in the country changes what it will buy without any docket changing at all.",
+    "**Two of the five franchises added in September 2026 test this read, and neither breaks it.** A wires-only franchise has no generation to be disintermediated from — Exelon's six utilities have owned none since 2022 — so routes one and two cannot shrink it. What its record shows instead is the franchise trying to widen its scope again, and even then the asset arrives by route two: a petition for a 500 MW utility-owned battery would be developed, built and operated with Invenergy, which would also choose the battery, as it does on the batteries WEC buys build-transfer. A PPA-side franchise has already written route two into its plan: NV Energy's entire new battery build sits with developers under power purchase agreements, so what the franchise originates is a contract rather than a plant. And Nevada gives route one its first commission-approved instance — the utility warns that its terms may send customers outside its territory, and on 17 September 2026 the state commission conditionally approved 362 MW of temporary gas plants for its largest prospective customer. **The three routes stand; the September additions put two of them inside a franchise's own record rather than only in an adjacent's announcement.** This, too, is the module's assessment.",
     "**The summary, and it is the section's point.** Nothing here threatens an incumbent's *share*, because share is fixed by statute. What is under threat is the **scope of the franchise** — how much of the load sits inside the meter, how much of the asset base the utility actually originated, and who decides what the utility buys. A threat section written to the proportions of the last landscape would have produced eight paragraphs about two retailers and missed all three routes. **This is the module's own assessment, not a claim any single dossier makes.**"
    ],
    "sales": "Ask which side of the meter the opportunity sits on before you ask who signs. The August 2026 Texas pause exempted behind-the-meter generation and caught grid-served load; on 21 September the state halted every permit data centres seek from its environmental regulator until the audit completes. The asymmetry was real in August and is narrower now — check the current state order before you lean on it."
@@ -62808,9 +63750,9 @@ function guidanceDocLandscapeUtilities_() {
   {
    "id": "each-players-bet",
    "title": "Each player's bet",
-   "read": "7 min",
+   "read": "9 min",
    "kind": "table",
-   "intro": "**Everything in the bet column is analysis, not fact.** Each entry reads that member's own strategy-read field, and the dossier's own confidence label travels with it in the last column. A strategy read is itself analytical — the segment-lesson generator is forbidden to touch it for exactly that reason — so a bet is a judgment resting on a judgment, and this table says so rather than letting it read as a finding. **All six incumbents and both challengers are here.** At eight rows this is the shortest bets table in the landscape corpus, against eighteen, fifteen and twenty-seven before it, and that is the segment being reported honestly rather than a table cut for space: six franchises and two retailers is the whole ranked roster. **Note what six of the eight bets are about — an instrument, not a product.** None of these companies sells a technology, so none of them has a technology position to bet on.",
+   "intro": "**Everything in the bet column is analysis, not fact.** Each entry reads that member's own strategy-read field, and the dossier's own confidence label travels with it in the last column. A strategy read is itself analytical — the segment-lesson generator is forbidden to touch it for exactly that reason — so a bet is a judgment resting on a judgment, and this table says so rather than letting it read as a finding. **All eleven incumbents and both challengers are here** — thirteen rows, five of them added on 26 September 2026 when five franchises joined the segment. The table grew because the roster did, not because the bar moved: eleven franchises and two retailers is the whole ranked roster. **Note what the bets are about — an instrument, or who owns the asset under it, not a product.** None of these companies sells a technology, so none of them has a technology position to bet on.",
    "cols": [
     "Player",
     "Role",
@@ -62855,6 +63797,36 @@ function guidanceDocLandscapeUtilities_() {
      "High on the commission gating; low on the template becoming a standard"
     ],
     [
+     "**Duke Energy**",
+     "incumbent",
+     "That a gas-first, storage-second self-build — 7,501 MW of new gas against about 4.5 GW of utility-owned batteries by 2031, the battery supplier undisclosed — can be carried plant by plant through five state commissions, and that a nuclear fleet being renewed to 80-year licences is what will set it apart in a hyperscaler's eyes after 2030. The September 2026 denial of its first data-centre-justified turbine is the first sign the gas half will be tried against the same load it is meant to serve.",
+     "High on gas first; moderate on the storage supplier and the nuclear edge"
+    ],
+    [
+     "**DTE Energy**",
+     "incumbent",
+     "That the customer should pay for the battery and the utility should own it — special contracts under which its first hyperscale customer funds 1,383 MW of DTE-owned storage over fifteen years, bought from a named supplier — and that the exposure is concentration rather than scale: two customers equal to about 40 per cent of retail sales at full ramp, one rated BBB-, in the most politically exposed regulatory environment in the file.",
+     "High on the design and the concentration; moderate on the politics"
+    ],
+    [
+     "**WEC Energy Group**",
+     "incumbent",
+     "That the bespoke subscription makes it the most direct utility buyer of what its hyperscalers need — the customer subscribes to named new plants and pays their full cost for fifteen years at a fixed return, and the utility builds and owns them — and that credit, not load, is the binding constraint: security equal to net book value for any customer rated below A-/A3 has already been tested by one tenant's downgrade. The open front is federal, where a hyperscaler is protesting the transmission charge the tariff assigns to it.",
+     "High on the model and the credit rule; moderate on the federal docket"
+    ],
+    [
+     "**Berkshire Hathaway Energy**",
+     "incumbent",
+     "That the utility should buy the output and leave the equipment with developers — all 5,405 MW of NV Energy's new batteries under power purchase agreements — and that the large-load agreement for any load of 25 MW or more, not the resource list, decides how much of about 22 GW of inquiries becomes load, on commercial terms the commission will set under a governor's order rather than ones the utility negotiates. The parent's rule is that serving hyperscalers must not move other customers' rates.",
+     "High on the PPA route and the agreement; moderate on the Iowa load commitment as the more durable instrument"
+    ],
+    [
+     "**Exelon**",
+     "incumbent",
+     "That the {{transmission security agreement}} is the product — collateral, a ramp, shortfall and termination charges before the utility builds — and that the dispute over one agreement's credit clause will narrow the instrument rather than end it; that 4 GW under signed agreements is the bankable number and 25 GW under study the least; and that it buys no storage or generation in 2026, with a New Jersey decision on a utility-owned battery about February 2027 the first test of whether it ever does again.",
+     "High"
+    ],
+    [
      "**NRG Energy**",
      "challenger",
      "That the natural hedge runs better from the customer end — start with the retail book, buy the generation to match it, and let a behind-the-meter supply model route around a grid-served interconnection pause that exempted it in August — a route the state's September permit halt has since narrowed.",
@@ -62872,9 +63844,9 @@ function guidanceDocLandscapeUtilities_() {
   {
    "id": "the-indicators",
    "title": "The indicators",
-   "read": "6 min",
+   "read": "8 min",
    "kind": "table",
-   "intro": "Dated where the record dates it. A date in the third column is a dossier's own; the last three rows are conditions to watch rather than events to diary, and are marked undated rather than given a guessed date. **The first row set this module's first review date**, seventeen days after authoring; the 24 September 2026 review found that statute enacted and taking effect as scheduled, so the review date moved on to the effective date a sort of the fence returns. Of the 76 policy entries the fourteen members carry, 64 hold an effective date and exactly one of those is in the future — 1 January 2027 — so a sort of the fence returns that. The nearer gate below was read out of a policy entry's prose, where the same entry's date field carries the earlier first step of the same schedule. That is why this list is read rather than sorted.",
+   "intro": "Dated where the record dates it. A date in the third column is a dossier's own; the rows at the foot are conditions to watch rather than events to diary, and are marked undated rather than given a guessed date. **The first row set this module's first review date**, seventeen days after authoring; the 24 September 2026 review found that statute enacted and taking effect as scheduled, so the review date moved on to the effective date a sort of the fence returns. **The 26 September 2026 re-pin moved it nearer again, and again by reading rather than sorting.** Of the 103 policy entries the nineteen members now carry, 85 hold an effective date and still exactly one of those is in the future — 1 January 2027 — so a sort of the fence returns that. The nearer gate was read out of the prose of one of the five dossiers added that day: the statutory date by which a state commission must rule on a resource plan and on the large-load agreement whose commercial terms every filing customer left for it to set. A decision that fixes an instrument's terms is a gate; a hearing, an election, a filing deadline or a report is not. That is why this list is read rather than sorted.",
    "cols": [
     "What to watch",
     "Whose",
@@ -62887,6 +63859,12 @@ function guidanceDocLandscapeUtilities_() {
      "Southern — and every seller working that footprint",
      "**effective 1 October 2026**",
      "The threshold-contract instrument spreads inside a holding company, at a higher bar. **It set this module's first review date**, seventeen days after authoring, because the record genuinely put it there; re-checked on 24 September 2026 and taking effect as scheduled."
+    ],
+    [
+     "Florida's deadline for investor-owned utilities' large-load tariffs to comply with a May 2026 full-cost-of-service law",
+     "Duke",
+     "compliant tariffs due 1 October 2026",
+     "The first test of a statutory full-cost rule on a franchise whose refiled policy public counsel called facially noncompliant. **A filing deadline is not a rule taking effect** — and the company has said its rate schedule comes in its next rate case — which is why it is not the review date."
     ],
     [
      "The state commission hearing on a second-phase single-customer application of 5,278 MW, with the vote expected in December",
@@ -62913,10 +63891,28 @@ function guidanceDocLandscapeUtilities_() {
      "The instrument is sound and the body reading it is elected, with data-centre overbuilding a stated issue. An election is not a rule taking effect."
     ],
     [
+     "The Oregon Supreme Court hears argument in a wildfire class action whose verdicts an appeals court reversed and remanded in April",
+     "Berkshire Hathaway Energy",
+     "argument 3 November 2026",
+     "About 2.85 billion dollars of losses are accrued, and a territory sale and co-op sales fund the liquidity plan against them. An argument is not a ruling."
+    ],
+    [
+     "North Carolina: orders on two multiyear rate plans, then a separate expedited large-load tariff proceeding, then the 2025 resource-plan order",
+     "Duke",
+     "rate orders mid-November 2026; the tariff before new rates take effect 1 January 2027; the resource-plan order due by 31 December 2026",
+     "Sets whether a Carolinas connection is priced near the company's opening 75 per cent minimum or the advocates' 85 — the dossier expects between — and tests the load forecast a turbine denial called untested. **A month-part is a window, and the tariff is dated only by what it must precede**, so neither sets the review date."
+    ],
+    [
      "Merger hearings on a 67-billion-dollar combination — the Virginia commission's evidentiary hearing, and a cost-allocation hearing on a separate utility's hyperscaler contract the same day",
      "Dominion; Entergy",
      "17 November 2026",
      "Route three of the threat map. Conditions on data-centre cost allocation would show the docket outlasting the buyer."
+    ],
+    [
+     "**A state commission rules on a 2026 resource plan and on the form large-load agreement for any load of 25 MW or more**",
+     "Berkshire Hathaway Energy",
+     "**statutory deadline 2 December 2026**",
+     "Sets the minimum-demand, minimum-energy and generation-charge terms every filing customer left blank, and approves or trims 5,405 MW of battery purchase agreements. **This module's review date since the 26 September 2026 re-pin** — the first dated decision on the record that fixes the terms of a large-load instrument the module teaches."
     ],
     [
      "South Carolina's commission hearing on the same merger",
@@ -62931,22 +63927,40 @@ function guidanceDocLandscapeUtilities_() {
      "Governs the batch queue, a 45 GW contracted tranche and one challenger's signed 445 MW alike. **A report due inside an audit is a deliverable, not a commencement** — and the tariff or order it may produce carries no date anywhere in the record."
     ],
     [
+     "The Illinois commission's order on a 15.3-billion-dollar 2028–2031 distribution grid plan",
+     "Exelon",
+     "order expected 15 December 2026",
+     "Data centres are 47 per cent of the plan's new substation demand: the wires franchise's own build, and a lever its security agreements do not set."
+    ],
+    [
      "A dispatchable-generation solicitation's bids due on the largest data-centre system in the country",
      "Dominion",
      "18 December 2026",
      "A storage or hybrid winner would open a third procurement lane on a system whose owned-storage programme is small."
     ],
     [
+     "Certificate decisions on two Invenergy-developed combustion-turbine sites of 270 MW and 1,125 MW, a hyperscaler subscribing to at least the larger; the federal regulator's handling of that hyperscaler's protest against the transmission charge assigned to it",
+     "WEC",
+     "fourth quarter of 2026; the federal docket undated",
+     "The first decides whether a plant the tariff already has a subscriber for gets built on its terms; the second whether the customer keeps paying 100 per cent of the transmission it causes — the half of the model a federal order could shift back onto the network rate."
+    ],
+    [
      "**A new large-load rate class takes effect**, with minimum demand on transmission and on generation set at different percentages",
      "Dominion",
      "**effective 1 January 2027**",
-     "The only future effective date in the whole segment's policy fence, and the answer a sort returns — **this module's review date since the 24 September 2026 review**. It decides the economics of every behind-the-meter project on that system."
+     "The only future effective date in the whole segment's policy fence, and the answer a sort returns — **this module's review date from the 24 to the 26 September 2026 review**, until a nearer decision was read out of a new member's prose. It decides the economics of every behind-the-meter project on that system."
     ],
     [
      "A 500 MW storage solicitation's contracts, and South Carolina's final merger order expected in the same month",
      "Southern; Dominion",
      "January 2027; order expected 29 January 2027",
      "A developer winner other than the utility's existing engineering contractors would widen the one battery lane that franchise leaves open."
+    ],
+    [
+     "A state commission decision on a 500 MW, four-hour utility-owned battery petition, developed, built and operated with an adjacent",
+     "Exelon",
+     "about February 2027",
+     "Would make a wires-only franchise a battery owner for the first time since 2022 — with Invenergy, not the utility, choosing the battery."
     ],
     [
      "A state attorney-general trial over wildfire liability at a growth subsidiary carrying a 22 per cent rate-base growth rate",
@@ -62983,22 +63997,34 @@ function guidanceDocLandscapeUtilities_() {
      "Vistra",
      "*undated, expected late 2026*",
      "Takes the challenger fleet to about 50 GW on capacity-market economics rather than on a signed AI load — the shape of the challenger bet, restated."
+    ],
+    [
+     "The Michigan commission's decision on a second hyperscale special contract — 1.0 GW for twenty years, filed in March 2026",
+     "DTE",
+     "*undated* — decision requested by 10 September 2026; none found by 25 September",
+     "Approval would carry the customer-pays-for-utility-batteries design to a second customer; the dossier expects terms between 80 and 90 per cent minimum. The capital it would add stays out of the plan until an order issues."
+    ],
+    [
+     "Federal court on the credit clause of a transmission security agreement the federal regulator left in force on 22 September 2026",
+     "Exelon",
+     "*undated*",
+     "Decides whether the collateral instrument holds when a customer's letter of credit is disputed. The dossier expects the next agreements to name the instrument and its timing."
     ]
    ],
-   "sales": "Three of these sixteen are proceedings of the state ratemaking class — rate case, resource plan, certificate. That class decides whether the plant gets built and who pays; put it on the account calendar beside the interconnection milestones, not instead of them."
+   "sales": "Eight of these twenty-six are proceedings of the state ratemaking class — a rate case, a resource or grid plan, a certificate, a rate-based petition — and five of the eight arrived with the franchises added in September 2026. That class decides whether the plant gets built and who pays; put it on the account calendar beside the interconnection milestones, not instead of them."
   },
   {
    "id": "the-sellers-play",
    "title": "The seller's play",
-   "read": "5 min",
+   "read": "6 min",
    "kind": "callout",
    "ps": [
-    "**Two readers arrive here by different roads.** The curriculum puts this segment on the storage seller's path — reached through the product and market-access tracks and then the third Value Chain track — while the AI-data-centre power seller reaches the same six franchises through the power chain and the interconnection rulebook. Both end up in front of the same companies with different questions. **And both should have the procurement module open beside this one:** it owns the process, this owns the parties, and a utility account needs both.",
-    "**1 — Identify the instrument before you build the account plan.** The six franchises convert load into plant by five different mechanisms, and the sales motion follows the mechanism, not the logo. Southern buys the battery itself under supply agreements and named engineering contractors, so the work is approved-vendor qualification ahead of the next solicitation. AEP and Entergy have **no named battery supplier on any project in any source their dossiers reviewed**, so the entry point is the developer bidding their solicitations. Dominion's own record puts the addressable market as the developer bidding the October 2026 purchase solicitation and the utility's approved-vendor list, in that order. Oncor buys no generation at all and is never the counterparty for it. **Pitching a container to a wires-only utility is a category error the public segment lesson's player table will not warn you about.**",
-    "**2 — Read the collateral, not the queue.** Every incumbent here publishes a large number it does not itself believe: 298 GW of requests against 8 GW energised; 195 GW of queue against 69 GW contracted; 70,000 MW against eleven to fifteen connections a year; 75 GW prospective against 17 GW contracted; 20 GW of pipeline against 2 GW. In every case the smaller number is the one with money or a signature behind it. Oncor makes the point most cleanly because it publishes the money — **collateral more than doubled in nine months while the queue's growth rate fell** — and the ratio between a franchise's two numbers tells you how far along its instrument actually is.",
+    "**Two readers arrive here by different roads.** The curriculum puts this segment on the storage seller's path — reached through the product and market-access tracks and then the third Value Chain track — while the AI-data-centre power seller reaches the same eleven franchises through the power chain and the interconnection rulebook. Both end up in front of the same companies with different questions. **And both should have the procurement module open beside this one:** it owns the process, this owns the parties, and a utility account needs both.",
+    "**1 — Identify the instrument before you build the account plan.** The eleven franchises convert load into plant by five mechanisms, and the sales motion follows the mechanism, not the logo. Southern buys the battery itself under supply agreements and named engineering contractors, so the work is approved-vendor qualification ahead of the next solicitation. AEP and Entergy have **no named battery supplier on any project in any source their dossiers reviewed**, so the entry point is the developer bidding their solicitations. Dominion's own record puts the addressable market as the developer bidding the October 2026 purchase solicitation and the utility's approved-vendor list, in that order. Oncor and Exelon buy no generation at all and are never the counterparty for it — Exelon's storage doors are the developers holding its security agreements and the state storage procurements. **Pitching a container to a wires-only utility is a category error the public segment lesson's player table will not warn you about.** **And since September 2026 the mechanism alone no longer settles it.** Four franchises now run a customer-specific charge, and under that one design the battery goes three ways: to a utility purchase order with a named supplier at DTE, to a developer's build-transfer and then the utility's books at WEC, and to a developer who keeps it under a power purchase agreement at NV Energy. **So the play is two questions, not one: which instrument, and who owns the asset under it.** The first tells you the calendar; the second tells you who signs.",
+    "**2 — Read the collateral, not the queue.** Most incumbents here publish a large number they do not themselves believe: 298 GW of requests against 8 GW energised; 195 GW of queue against 69 GW contracted; 70,000 MW against eleven to fifteen connections a year; 75 GW prospective against 17 GW contracted; 20 GW of pipeline against 2 GW; and, among the September 2026 additions, a 36 GW refined queue against 4 GW under signed security agreements and about 22 GW of inquiries against about 6 GW of signed infrastructure agreements. In every case the smaller number is the one with money or a signature behind it. **The exception proves the rule: Duke publishes no inquiry figure at all** — only signed agreements, construction and a late-stage rung that includes the signed tranche — so its 7.8 GW is not a smaller book than its peers' so much as one counted from a later rung. Oncor makes the point most cleanly because it publishes the money — **collateral more than doubled in nine months while the queue's growth rate fell** — and the ratio between a franchise's two numbers tells you how far along its instrument actually is.",
     "**3 — Know which side of the meter you are on, because the policy risk has not been symmetric.** When Texas paused grid interconnections in August 2026, {{behind-the-meter}} generation was exempt and grid-served load was not. That one asymmetry is the whole disintermediation thesis in a single event: the regulated route carries the regulatory risk and the routes around it do not. **Then on 21 September the governor directed the state environmental regulator to halt all permits sought by data centres until the audit completes** — so the route around the grid now waits on a permit rather than on an interconnection, and the difference between the two is timing rather than exemption. A seller with a {{behind-the-meter}} or {{co-location}} product is selling **against** the franchise's timeline rather than into it — a different buyer, a different call sheet, and quarters rather than regulatory years.",
     "**4 — Watch who the buyer will become, not only who it is today.** Route three is live on the largest regulated system in the country: a combination that leaves the dockets intact and moves supplier qualification onto a platform whose merchant arm self-integrates, buying cells and DC blocks direct. A vendor qualified with that utility today is not thereby qualified with the combined company after close. **Qualification is an asset with an expiry date, and this is the one segment where it can expire without the customer doing anything.**",
-    "**5 — Two of the three largest revenue lines in this segment are not utilities.** The two challengers sign for generation on commercial timescales rather than certificate timescales, and one of them has signed only nuclear. In the Texas market they are also the parties that actually pay the wires incumbent. **A seller who works this segment as six regulated accounts is ignoring its two largest counterparties.**"
+    "**5 — The second-largest revenue line in this segment is not a utility.** NRG's 2025 revenue is behind only Duke's, and Vistra's sits above five franchises'. The two challengers sign for generation on commercial timescales rather than certificate timescales, and one of them has signed only nuclear. In the Texas market they are also the parties that actually pay the wires incumbent. **A seller who works this segment as eleven regulated accounts is ignoring two of its largest counterparties.**"
    ]
   },
   {
@@ -63006,11 +64032,11 @@ function guidanceDocLandscapeUtilities_() {
    "title": "Claims ledger",
    "read": "reference",
    "kind": "ledger",
-   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document. **At the 24 September 2026 review two dated claims were re-verified against primary sources and corrected**, and those rows cite the publisher directly. Every other load-bearing claim above traces to a dossier, at that dossier's profile version on 14 September 2026, and to the field inside it. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Two claims in this module are the module's own** and are labelled as analysis wherever they appear: that the six incumbents are best read by instrument rather than by size, and that the threat runs on three disintermediation routes.",
+   "intro": "**Provenance:** Corpus synthesis over the segment's member dossiers at the versions below; no ingested document. **At the 24 September 2026 review two dated claims were re-verified against primary sources and corrected**, and those rows cite the publisher directly. Every other load-bearing claim above traces to a dossier, at that dossier's profile version on 14 September 2026 — **or, for the five franchises that joined the segment on 26 September 2026, at their first version, read that day** — and to the field inside it. **A row resting on strategyRead[] or ecosystemRole is the dossier's own analysis; a row resting on policyExposure[], recentDevelopments[], productsAndServices, financials or summary is its fact** — the bets table's labelling, applied row by row. **The dossiers carry the primary sources; this ledger carries the dossiers** — that is the whole provenance chain for a corpus-synthesis module, and it is why no publisher appears in the source column. **Three claims in this module are the module's own** and are labelled as analysis wherever they appear: that the incumbents are best read by instrument rather than by size, that the threat runs on three disintermediation routes, and that the five franchises added in September 2026 each run a variant of one of the five instruments — with the battery under the customer-specific charge going three different ways.",
    "rows": [
     [
-     "Segment holds 14 members — 6 incumbent, 2 challenger, 6 adjacent; six buying criteria; chain position 15 of 19, tier demand",
-     "profiler-segments.json @ v05.77r — segments[].members[], .buyingCriteria[], .definition, .position, .tier"
+     "Segment holds 19 members — 11 incumbent, 2 challenger, 6 adjacent; six buying criteria; chain position 15 of 19, tier demand",
+     "profiler-segments.json @ v07.58r — segments[].members[], .buyingCriteria[], .definition, .position, .tier"
     ],
     [
      "Regulated franchises have no challenger by construction; the competitive retail suppliers of restructured markets carry that role here; the reserved adjacent role was filled by two transmission developers",
@@ -63021,8 +64047,8 @@ function guidanceDocLandscapeUtilities_() {
      "profiler-segments.json @ v05.77r — roles"
     ],
     [
-     "2025 revenue: NRG 30,713M; Southern 29,600M; AEP 21,876M; Vistra 17,738M; Dominion 16,506M; Xcel 14,669M; Entergy 12,947M; Oncor 6,778M — all USD millions",
-     "the eight profile files — financials.periods[] FY2025 annual, metrics[].kpi = revenue, usdMillions"
+     "2025 revenue: Duke 32,237M; NRG 30,713M; Southern 29,600M; Berkshire Hathaway Energy 26,200M, about 22,000M of it energy and the balance HomeServices; Exelon 24,258M; AEP 21,876M; Vistra 17,738M; Dominion 16,506M; Xcel 14,669M; Entergy 12,947M; WEC 9,800M; Oncor 6,778M — all USD millions. DTE's dossier carries no full-year revenue figure, so twelve of the thirteen ranked players are ranked",
+     "the twelve profile files — financials.periods[] FY2025 annual, metrics[].kpi = revenue, usdMillions; profile:dte-energy @ v1 — financials.periods[] FY2025, operating revenue not stated"
     ],
     [
      "53.8 GW contracted split 12.0 GW under service agreements, 9.4 GW under construction authorisation, 32.4 GW at engineering; agreements include the revenue requirement whether service is taken or not",
@@ -63157,6 +64183,90 @@ function guidanceDocLandscapeUtilities_() {
      "profile:xcel-energy @ v4 — strategyRead[3], strategyRead[7]"
     ],
     [
+     "About 7.8 GW of signed service agreements, about 5.2 GW under construction and a 15.4 GW late-stage rung that includes the signed tranche; no inquiry-stage figure reported, so the smaller book is counted from a later rung",
+     "profile:duke-energy @ v1 — strategyRead[0], ecosystemRole"
+    ],
+    [
+     "7,501 MW of new gas with 26 GE Vernova turbines secured, against about 4.5 GW of utility-owned batteries by 2031; no battery supplier named on any project in any release or filing read",
+     "profile:duke-energy @ v1 — summary, strategyRead[1], strategyRead[3]"
+    ],
+    [
+     "The North Carolina commission denied a 255 MW combustion turbine on 19 September 2026, finding about 70 per cent of the modeled load growth behind it never tested in contested proceedings; the 2025 resource-plan order is due by 31 December 2026",
+     "profile:duke-energy @ v1 — strategyRead[1]"
+    ],
+    [
+     "Rate orders on the two North Carolina multiyear plans expected mid-November 2026 and rates effective 1 January 2027; the large-load tariff routed to a separate expedited proceeding to finish before then, between the company's 50 MW, 75 per cent, 10–15 years and advocates' 25 MW, 85 per cent, 20 years",
+     "profile:duke-energy @ v1 — productsAndServices[0], strategyRead[2]"
+    ],
+    [
+     "Florida's May 2026 law requires full cost of service from each large-load customer, with compliant tariffs due 1 October 2026; public counsel called the refiled Florida policy facially noncompliant; the company says its rate schedule comes in its next rate case",
+     "profile:duke-energy @ v1 — policyExposure[1], strategyRead[2]"
+    ],
+    [
+     "Eleven nuclear units to be renewed to 80-year licences, two already holding them; no small-reactor technology, customer or dollar figure disclosed",
+     "profile:duke-energy @ v1 — policyExposure[5], strategyRead[5]"
+    ],
+    [
+     "Special contracts approved ex parte on 18 December 2025: a 19-year supply agreement at 80 per cent minimum billing demand and a 15-year agreement under which the customer pays for 1,383 MW of DTE-owned storage",
+     "profile:dte-energy @ v1 — summary, strategyRead[0]"
+    ],
+    [
+     "A 1.5 GW, 6 GWh supply agreement with LG Energy Solution Vertech on 27 May 2026, 1.6 billion dollars by DTE's own figure; the turbine supplier for the proposed combined cycles is not named",
+     "profile:dte-energy @ v1 — summary, strategyRead[0], strategyRead[3]"
+    ],
+    [
+     "Two customers equal to about 40 per cent of retail sales at full ramp, one rated BBB- since July 2026; the Attorney General has appealed the first approval, and the regulatory environment is the most politically exposed in the file",
+     "profile:dte-energy @ v1 — strategyRead[1], strategyRead[4]"
+    ],
+    [
+     "A second hyperscale contract of 1.0 GW for twenty years filed 17 March 2026; a decision requested by 10 September 2026 and none found by 25 September",
+     "profile:dte-energy @ v1 — summary, strategyRead[2]"
+    ],
+    [
+     "The bespoke-resources tariff approved 24 April 2026: 100 MW threshold, 15-year minimum, 100 per cent cost responsibility for dedicated generation and transmission, a fixed 10.48–10.98 per cent return, security equal to net book value for any customer rated below A-/A3",
+     "profile:wec-energy @ v1 — summary, strategyRead[0]"
+    ],
+    [
+     "2,130 MW of utility-owned batteries and 3,300 MW of combustion turbines in the 2026–2030 plan, the batteries bought build-transfer from Invenergy; no battery or turbine OEM named in any source; 270 MW and 1,125 MW of turbines at two Invenergy-developed sites pending decision in the fourth quarter of 2026, a hyperscaler's fifteen-year agreement subscribing at least to the larger",
+     "profile:wec-energy @ v1 — ecosystemRole, strategyRead[3], summary, productsAndServices[0], productsAndServices[3]"
+    ],
+    [
+     "Credit rather than load is the binding constraint on the second campus; a hyperscaler protests the transmission charge assigned to it at the federal regulator, docket ER26-3265",
+     "profile:wec-energy @ v1 — strategyRead[1], strategyRead[2], policyExposure[1]"
+    ],
+    [
+     "All 5,405 MW of NV Energy's new batteries and 4,370 MW of solar under power purchase agreements; the owned exceptions are Reid Gardner, with BYD cells, and Sierra Solar, supplier undisclosed",
+     "profile:berkshire-hathaway-energy @ v1 — ecosystemRole, strategyRead[0], policyExposure[3]"
+    ],
+    [
+     "A form large-load agreement for any load of 25 MW or more, its minimum-demand, minimum-energy and generation-charge terms left blank by every filing customer; about 22 GW of inquiries against about 6 GW of signed infrastructure agreements; the commission's statutory deadline is 2 December 2026 — the module's review date",
+     "profile:berkshire-hathaway-energy @ v1 — summary, strategyRead[1], policyExposure[1]"
+    ],
+    [
+     "The commission conditionally approved 362 MW of temporary gas plants for the utility's largest prospective customer on 17 September 2026, which the dossier reads as the first evidence of customers seeking options outside the territory",
+     "profile:berkshire-hathaway-energy @ v1 — strategyRead[1], strategyRead[2]"
+    ],
+    [
+     "About 11,000 MW of data-centre load in service or under construction across the group; the Oregon Supreme Court hears argument in the wildfire class action on 3 November 2026, against 2.85 billion dollars accrued",
+     "profile:berkshire-hathaway-energy @ v1 — summary, policyExposure[0]"
+    ],
+    [
+     "Owns no generation; the transmission security agreement — collateral, a ramp, shortfall and termination charges before the utility builds; six active agreements backed by more than 1 billion dollars of letters of credit",
+     "profile:exelon @ v1 — summary, ecosystemRole, strategyRead[0]"
+    ],
+    [
+     "A 36 GW refined queue, an 11 GW high-probability book cut from 18 GW in one quarter, 4 GW under signed agreements; the 25 GW under study the least bankable",
+     "profile:exelon @ v1 — summary, strategyRead[1]"
+    ],
+    [
+     "The federal regulator rejected the cancellation of one 1.8 GW agreement on 22 September 2026 and sent the credit-clause question to the Northern District of Illinois",
+     "profile:exelon @ v1 — summary, policyExposure[1]"
+    ],
+    [
+     "Not a buyer of storage or generation in 2026; a petition for a 500 MW, four-hour utility-owned battery developed with Invenergy, which would select the battery, decision about February 2027; the Illinois grid-plan order expected 15 December 2026, data centres 47 per cent of new substation demand",
+     "profile:exelon @ v1 — ecosystemRole, strategyRead[2], productsAndServices[0]"
+    ],
+    [
      "Started with the customers and bought the generation to match; retail was 29.5 billion of 30.7 billion dollars of 2025 revenue; integration reduces actual and contingent collateral",
      "profile:nrg-energy @ v1 — ecosystemRole, strategyRead[3]"
     ],
@@ -63213,8 +64323,8 @@ function guidanceDocLandscapeUtilities_() {
      "profile:pattern-energy @ v1 — ecosystemRole, strategyRead[0], strategyRead[3]; profiler-segments.json @ v05.77r — members[].basis"
     ],
     [
-     "The fourteen members carry 76 policy entries, 64 with an effective date, and exactly one of those is in the future",
-     "the 14 profile files — policyExposure[], counted 2026-09-14"
+     "The nineteen members carry 103 policy entries, 85 with an effective date, and exactly one of those is in the future; the review date was read out of prose rather than sorted from that field",
+     "the 19 profile files — policyExposure[], counted 2026-09-26"
     ]
    ]
   },
@@ -63224,14 +64334,15 @@ function guidanceDocLandscapeUtilities_() {
    "read": "5 min",
    "kind": "callout",
    "ps": [
-    "**1 — Two of the six incumbents run open storage solicitations and neither one's battery supplier is discoverable.** One dossier states that no battery supplier is named on any company-owned project in any source it found; the other states that no named battery supplier or integrator appears on any project in any source reviewed. Southern is the exception that shows the shape, because its owned fleet does name a supplier and two engineering contractors. **A seller cannot work half this segment's owned lane from the dossiers alone**, and that is a fact about disclosure rather than about the opportunity.",
+    "**1 — Most of this segment's owned battery lane has no discoverable supplier.** Two incumbents that run open storage solicitations name none: one dossier states that no battery supplier is named on any company-owned project in any source it found, the other that no named battery supplier or integrator appears on any project in any source reviewed. Of the five franchises added in September 2026, Duke and WEC name none on any project either, and NV Energy names cells for only one of its two owned batteries. The exceptions show the shape: Southern's owned fleet names a supplier and two engineering contractors, and DTE names LG Energy Solution Vertech in its own release for the storage its hyperscale customer is paying for. **A seller cannot work most of this segment's owned lane from the dossiers alone**, and that is a fact about disclosure rather than about the opportunity.",
     "**2 — The commercial terms that decide the economics are sealed.** Contracted megawatts, minimum-bill percentages and termination formulas in two franchises' large-load contracts are filed under seal or redacted, and both dossiers say so in their own collection gaps. Every figure this module quotes about those contracts is a company disclosure or a regulator's summary, never the contract.",
-    "**3 — The wires incumbent names no large-load customer anywhere.** Not a hyperscaler, a colocation developer, an engineering contractor or a transformer manufacturer, across its annual report, two quarterlies, every earnings release, an investor presentation, a sustainability report and 151 newsroom items. **The composition of its 298 GW is therefore not determinable from its own materials** — how much is one developer filing at several sites, and how much is speculative, cannot be read out.",
-    "**4 — There is no third-party ranking of these six against each other, and there could not be.** They do not compete for the same customer, so no ranking house has a table to build. Every ordering in this module is by instrument and is stated as a judgment. The one third-party ranking the segment touches measures storage ownership and names an adjacent, not an incumbent.",
-    "**5 — The turbine supplier is unstated for most of the gas build this segment is certifying.** Two dossiers infer one manufacturer each at low confidence and both say in terms that no source states it. A supplier reading either as fact would be reading an inference the dossier itself flagged as an inference.",
+    "**3 — The Texas wires incumbent names no large-load customer anywhere.** Not a hyperscaler, a colocation developer, an engineering contractor or a transformer manufacturer, across its annual report, two quarterlies, every earnings release, an investor presentation, a sustainability report and 151 newsroom items. **The composition of its 298 GW is therefore not determinable from its own materials** — how much is one developer filing at several sites, and how much is speculative, cannot be read out. The segment's other wires-only franchise shows the contrast: Exelon's record names the developers holding its transmission security agreements.",
+    "**4 — There is no third-party ranking of these eleven against each other, and there could not be.** They do not compete for the same customer, so no ranking house has a table to build. Every ordering in this module is by instrument and is stated as a judgment. The one third-party ranking the segment touches measures storage ownership and names an adjacent, not an incumbent.",
+    "**5 — The turbine supplier is unstated for much of the gas build this segment is certifying.** Two dossiers infer one manufacturer each at low confidence and both say in terms that no source states it. Of the five franchises added in September 2026 only Duke names one — 26 GE Vernova turbines secured — while DTE, WEC and Berkshire Hathaway Energy name none for the combined cycles, combustion turbines and peakers they have filed. A supplier reading either as fact would be reading an inference the dossier itself flagged as an inference.",
     "**6 — Disclosure is asymmetric between the two challengers in exactly opposite directions.** One publishes no net leverage ratio in any filing and its investor site was unreachable, so the share of expected generation hedged — which its peers publish — is unobtainable. The other discloses storage in megawatts only, with no megawatt-hour figure for any asset in any filing, deck or sustainability report.",
-    "**7 — The most direct disintermediation route is an announced intent, not a delivered one.** Neither co-location arrangement discloses megawatts under contract, and no third party has verified one counterparty's construction progress, financing or load commitment. The same caution applies one link further along route two: whether any of those transferred gas plants is contractually tied to a named hyperscaler campus, beyond the utility filings' own references, is not established.",
-    "**8 — And the franchise most openly designing tariffs says its supplier map is incomplete on purpose.** Its record states that further supply-chain partnerships exist but are undisclosed for confidentiality. **This module states no rank without its instrument attached, and invents nothing to fill these eight gaps.**"
+    "**7 — The most direct disintermediation route is an announced intent, not a delivered one.** Neither co-location arrangement discloses megawatts under contract, and no third party has verified one counterparty's construction progress, financing or load commitment. Nevada has since moved route one from announced to approved in one case — 362 MW of temporary gas plants conditionally approved on 17 September 2026 for a customer the utility is litigating with — but approved is not delivered. The same caution applies one link further along route two: whether any of those transferred gas plants is contractually tied to a named hyperscaler campus, beyond the utility filings' own references, is not established.",
+    "**8 — And the franchise most openly designing tariffs says its supplier map is incomplete on purpose.** Its record states that further supply-chain partnerships exist but are undisclosed for confidentiality.",
+    "**9 — The five franchises added in September 2026 leave gaps of their own.** DTE's dossier carries no full-year revenue figure, so the segment's revenue ranking has a hole in it; PacifiCorp's first Utah large-load contract has no named counterparty or docket; the Pennsylvania utility's large-load tariff filing and the terms of the Maryland utilities' September 2026 large-load rate schedules were not found; and no Michigan order on DTE's second hyperscale contract was found by 25 September. **This module states no rank without its instrument attached, and invents nothing to fill these nine gaps.**"
    ]
   },
   {
@@ -63241,16 +64352,16 @@ function guidanceDocLandscapeUtilities_() {
    "kind": "flashcards",
    "cards": [
     {
-     "q": "This segment holds six incumbents. Why can they not be ranked against each other?",
-     "a": "Because a {{regulated franchise}} is a geographic monopoly and none of them competes with another. One cannot bid for load in another's territory, and one of the six is not a seller of electricity at all. **Share here is fixed by statute**, so the only thing that can be ranked is how far along each one's instrument is."
+     "q": "This segment holds eleven incumbents. Why can they not be ranked against each other?",
+     "a": "Because a {{regulated franchise}} is a geographic monopoly and none of them competes with another. One cannot bid for load in another's territory, and two of the eleven are not sellers of electricity at all. **Share here is fixed by statute**, so the only thing that can be ranked is how far along each one's instrument is."
     },
     {
-     "q": "What are the five instruments the six franchises use to turn AI load into plant?",
-     "a": "**The filter** (a conversion ladder plus a new rate class and deposit clauses), **the certificate** (planning and certifying inside a self-balanced system — used in a single-customer variant by a second member), **the contract** ({{take-or-pay}} minimum billing demand of 80 to 90 per cent), **the collateral** (cash posted before construction, by a wires-only utility), and **the customer-specific charge** (a hyperscaler's full incremental cost billed as a named charge)."
+     "q": "What are the five instruments the eleven franchises use to turn AI load into plant?",
+     "a": "**The filter** (a conversion ladder plus a new rate class and deposit clauses), **the certificate** (planning and certifying inside a self-balanced system — used in a single-customer variant by a second member), **the contract** ({{take-or-pay}} minimum billing demand of 80 to 90 per cent), **the collateral** (cash posted before construction, by a wires-only utility), and **the customer-specific charge** (a hyperscaler's full incremental cost billed as a named charge). **The five franchises added in September 2026 each run a variant of one** — Duke the contract, DTE, WEC and Berkshire's NV Energy the customer-specific charge, Exelon the collateral."
     },
     {
      "q": "The registry labels two companies in this segment challenger. What does its own note say that label means here?",
-     "a": "That regulated franchises have **no challenger by construction**, so the role is carried by the competitive retail suppliers of the restructured markets. It is a **structural placeholder, not a threat claim** — and the two companies carrying it rank first and third in the segment by revenue."
+     "a": "That regulated franchises have **no challenger by construction**, so the role is carried by the competitive retail suppliers of the restructured markets. It is a **structural placeholder, not a threat claim** — and one of the two companies carrying it ranks second in the segment by revenue, behind only Duke."
     },
     {
      "q": "What is the relationship between the wires incumbent and the two challengers in the Texas market?",
@@ -63265,8 +64376,8 @@ function guidanceDocLandscapeUtilities_() {
      "a": "The smaller one — it is the figure with money or a signature behind it. The cleanest evidence in the segment is the wires utility that publishes the money: **collateral held more than doubled in nine months, from about 2.8 to 5.9 billion dollars, while the request queue's growth rate fell from 24 to 15 per cent.**"
     },
     {
-     "q": "Which member of this segment buys the battery itself, and how large is its owned lane against its developer lane?",
-     "a": "Southern. Its December 2025 certificate added **3,022.5 MW of company-owned stand-alone storage**, against a **500 MW** storage solicitation that is the developer lane — smaller by an order of magnitude. Two other incumbents name no battery supplier on any project at all, so their entry point is the developer bidding the solicitation."
+     "q": "Southern buys the battery itself. How large is its owned lane against its developer lane — and is it the only franchise here that owns its batteries?",
+     "a": "Its December 2025 certificate added **3,022.5 MW of company-owned stand-alone storage**, against a **500 MW** storage solicitation that is the developer lane — smaller by an order of magnitude. **It is not the only owner:** Duke, DTE, WEC and NV Energy own utility batteries too — though NV Energy has put its entire new build with developers — and DTE names its supplier. Two other incumbents name no battery supplier on any project at all, so their entry point is the developer bidding the solicitation."
     },
     {
      "q": "Why does this module carry no tariff-terms table, no five-channel list and no buyer map?",
@@ -63285,22 +64396,22 @@ function guidanceDocLandscapeUtilities_() {
      "c": [
       "Rank them by contracted gigawatts — the largest contracted book is the leader",
       "There is no share to take: each franchise is a statutory geographic monopoly, so the useful comparison is which instrument each has built and how far along it is",
-      "Rank them by revenue, since that is the only figure all eight ranked members publish",
+      "Rank them by revenue, the one comparable figure nearly every ranked member publishes",
       "Compare their interconnection queues, which is the standard measure of demand in this segment"
      ],
      "a": 1,
-     "why": "A regulated franchise is a geographic monopoly — one incumbent cannot bid for load in another's territory, and one of the six sells no electricity at all. Contracted gigawatts are not comparable across franchises because the instruments behind them differ in kind, and every incumbent here publishes a queue figure it does not itself treat as demand. What varies and can be acted on is the instrument: certificate, contract, collateral or charge."
+     "why": "A regulated franchise is a geographic monopoly — one incumbent cannot bid for load in another's territory, and two of the eleven sell no electricity at all. Contracted gigawatts are not comparable across franchises because the instruments behind them differ in kind, and every incumbent here publishes a queue figure it does not itself treat as demand. What varies and can be acted on is the instrument: certificate, contract, collateral or charge."
     },
     {
      "q": "A colleague says the two challengers in this segment are small insurgents attacking the regulated incumbents. What does the record show?",
      "c": [
       "Correct — challenger is the registry's term for an entrant contesting the leading set",
       "They are mid-sized and compete with the incumbents for the same large-load contracts",
-      "They rank first and third in the segment by revenue, and in one market they are the wires incumbent's two largest customers — the registry's own note says regulated franchises have no challenger by construction",
+      "One ranks second in the segment by revenue and the other sits above five of the franchises, and in one market they are the wires incumbent's two largest customers — the registry's own note says regulated franchises have no challenger by construction",
       "They are former incumbents that lost their franchises in restructuring and are trying to win them back"
      ],
      "a": 2,
-     "why": "The registry's note for this segment states that regulated franchises have no challenger by construction and that the competitive retail suppliers of restructured markets carry the role. Their 2025 revenues are the largest and third-largest in the segment, and the wires incumbent's own record puts their retail subsidiaries at 25 and 21 per cent of its operating revenues. The label is a structural placeholder, not a threat claim."
+     "why": "The registry's note for this segment states that regulated franchises have no challenger by construction and that the competitive retail suppliers of restructured markets carry the role. Their 2025 revenues are second and seventh of the twelve ranked members that report one — NRG behind only Duke, and the wires incumbent's own record puts their retail subsidiaries at 25 and 21 per cent of its operating revenues. The label is a structural placeholder, not a threat claim."
     },
     {
      "q": "Your product is a behind-the-meter power solution for a data-centre campus. A regulated interconnection pause is announced in that state. What does this segment's record suggest?",
@@ -63333,7 +64444,7 @@ function guidanceDocLandscapeUtilities_() {
       "Neither — the public segment lesson's player table carries everything a first meeting needs"
      ],
      "a": 2,
-     "why": "The two modules were written to a stated split. The procurement module owns the process — the four moves, the tariff terms, the five channels where storage enters and who signs the purchase order. This module owns the parties — the instrument each franchise built, what each of the eight ranked players is betting, the three disintermediation routes, and four members the procurement module does not cover at all. A utility account needs both, and the public segment lesson carries neither judgment layer."
+     "why": "The two modules were written to a stated split. The procurement module owns the process — the four moves, the tariff terms, the five channels where storage enters and who signs the purchase order. This module owns the parties — the instrument each franchise built, what each of the thirteen ranked players is betting, the three disintermediation routes, and the fourteen members the procurement module does not cover at all. A utility account needs both, and the public segment lesson carries neither judgment layer."
     }
    ]
   }

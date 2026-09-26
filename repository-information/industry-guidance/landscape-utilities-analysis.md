@@ -2,6 +2,8 @@
 
 **Provenance:** Corpus synthesis over the segment's member dossiers at the versions in the claims ledger; no ingested document. Compiled 2026-09-14 from `live-site-pages/profiler-data/profiler-segments.json` and the 14 member `<slug>.profile.json` files only — **no new web research, no ingested source**. Nothing under `industry-guidance/sources/` belongs to this module and step 1 of the Industry Guidance Command does not apply. The dossiers already cite their own primary sources; this file cites the dossiers, field by field, in §8. Feeds the in-app module `landscape-utilities-2026-09` in `googleAppsScripts/Classroom/Classroom.gs` (lane: The Value Chain; tier: contributor). This is the fourth module of S2, after `landscape-storage-integrators-and-containers-2026-09` (v05.64r), `landscape-cells-and-chemistry-2026-09` (v05.70r) and `landscape-storage-developers-and-ipps-2026-09` (v05.74r).
 
+> **Current as of the 26 September 2026 re-pin — read §12 and §13 before the body.** §§1–11 are the 14 September authoring text over fourteen members and six franchises. Five franchises joined the segment on 26 September 2026, and §13 records every change that made to the module: 19 members, eleven franchises, thirteen bets and a review date of **2 December 2026**. Where the body and §13 differ, §13 and the module in `Classroom.gs` are current.
+
 ## What this is
 
 `CLASSROOM-CURRICULUM-PLAN.md` §10.1 splits the market-structure layer in two. **Layer 3** is the generated segment lesson `segment-utilities` — public, analyst-visible, and carrying no judgment at all: the registry's definition, its six buying criteria, the 14-row player table with each member's role and basis, the normalized figures the dossiers carry, the graph edges among members, the last twelve months of developments, and the policy fence. **Layer 4 is this module**, and it exists because the lesson states the record and stops.
@@ -318,5 +320,115 @@ A freshness review ahead of the 1 October gate. The Alabama threshold statute is
   - `scenario-utilities-objection`: merger calendar corrected; review date stays 1 October.
   - `scenario-utilities-discovery`: pin only; review date 3 November.
   - `scenario-utilities-discovery-aidc`: Texas premise corrected; review date 10 December.
+
+## 13. Revision — 26 September 2026 re-pin (five franchises added)
+
+Five franchises joined `utilities` as incumbents on 26 September 2026 (Profiler Phase F, v07.57r and v07.58r): `duke-energy`, `dte-energy`, `wec-energy`, `berkshire-hathaway-energy` and `exelon`, each at `profileVersion` 1 with `lastUpdated` 2026-09-26. **The fourteen original dossiers had not moved** — every one is still at the version §8 cites — so each change below is a G3 contradiction: a claim the module taught that the new record states differently. The five dossiers, the segments registry at v07.58r and the F-U1/F-U2 premise verdicts in `PROFILER-COVERAGE-PLAN.md` §11.3 are the only new inputs. No web research was run.
+
+### The segment re-measured
+
+| | 14 September | 26 September | Note |
+|---|---|---|---|
+| Members | 14 | **19** | registry at v07.58r |
+| `incumbent` | 6 | **11** | + Duke, DTE, WEC, Berkshire Hathaway Energy, Exelon |
+| `challenger` / `adjacent` | 2 / 6 | 2 / 6 | unchanged |
+| Policy entries / dated / future | 76 / 64 / 1 | **103 / 85 / 1** | the one future `effectiveDate` is still Dominion's 2027-01-01 |
+| Franchises the procurement playbook covers | 5 of 6 | **5 of 11** | Dominion, Southern, Entergy, Oncor, AEP; none of the five newcomers |
+| FY2025 revenue carriers among the 13 ranked | 8 of 8 | **12 of 13** | DTE's dossier states no full-year revenue (10-K host blocked) |
+
+**Revenue order (USD M, FY2025, `financials` overlay):** Duke 32,237 · NRG 30,713 · Southern 29,600 · Berkshire Hathaway Energy 26,200 (about 22,000 of it energy, the balance HomeServices) · Exelon 24,258 · AEP 21,876 · Vistra 17,738 · Dominion 16,506 · Xcel 14,669 · Entergy 12,947 · WEC 9,800 · Oncor 6,778.
+
+### Section by section — the G3 sentences
+
+- **`who-dominates-and-on-what-basis`** taught "six incumbents", a playbook covering "the same franchises plus four", "Southern is the one member that buys the battery itself" and "one of five machines". The registry now holds eleven franchises and the playbook covers five of them. Duke, DTE and WEC own utility batteries (`productsAndServices`), NV Energy owns two, and DTE names its supplier. **Revised:**
+  - The opening, the Southern sentence and the closing "Reading the eleven as a set" paragraph are corrected.
+  - Three paragraphs are added. They read the five newcomers as variants of the existing five instruments: Duke runs the contract, DTE, WEC and NV Energy the customer-specific charge, and Exelon the collateral.
+  - **That mapping is the module's own analysis, not a claim any dossier makes.** It is labelled as analysis in the ledger intro. The split with the playbook held: no tariff table, no channel list and no buyer map entered.
+- **`who-threatens`** taught NRG first and Vistra third by revenue, both ahead of four incumbents. Duke's 32,237M now leads: NRG is second and Vistra seventh of twelve. The label's meaning is unchanged. **The wires-only and PPA-side test, decided from the record:**
+  - Exelon owns no generation, so routes one and two cannot shrink it. Its record shows the franchise trying to widen its scope again, and even then the ACE petition's battery arrives by route two: Invenergy develops it, builds it and picks the battery (`exelon` SR[2]).
+  - NV Energy's entire new battery build sits with PPA developers (`berkshire-hathaway-energy` SR[0]). Nevada also gives route one its first commission-approved instance: 362 MW of temporary gas for Tract, conditionally approved on 17 September 2026 (SR[1], SR[2]).
+  - **The three routes stand.** The newcomers put two of them inside a franchise's own record.
+- **`each-players-bet`** grows from eight rows to thirteen. The new bets come from `strategyRead[]`, and the confidence labels are carried over:
+  - Duke: SR[1] High, SR[3] and SR[5] Moderate.
+  - DTE: SR[0] and SR[1] High, SR[4] Moderate.
+  - WEC: SR[0] and SR[1] High, SR[2] Moderate.
+  - BHE: SR[0] and SR[1] High, SR[4] Moderate.
+  - Exelon: SR[0]–SR[2] High.
+- **`the-indicators`** taught 76 entries and a 1 January 2027 review date. Nine rows are added:
+  - Florida's 1 October compliant-tariff deadline.
+  - The Oregon Supreme Court argument on 3 November.
+  - North Carolina's mid-November rate orders, the expedited large-load tariff and the 31 December resource-plan order.
+  - **The Nevada commission's 2 December statutory decision.**
+  - The Illinois grid-plan order on 15 December.
+  - WEC's Q4 certificate decisions and ER26-3265.
+  - The NJ BPU decision on ACE Pittsgrove, about February 2027.
+  - Michigan's undated decision on U-22058.
+  - The undated PowerHouse credit-clause case in the Northern District of Illinois.
+
+  The sales line's "three of these sixteen" ratemaking count becomes eight of twenty-six, five of them new.
+- **`the-sellers-play`** taught three things that no longer hold:
+  - Five mechanisms across six franchises. Revised: the instrument-first play becomes two questions — which instrument, and who owns the asset under it — because the charge design routes the battery three ways (DTE purchase order, WEC build-transfer, NV Energy PPA).
+  - "Every incumbent publishes a large number it does not believe." Revised to "most", with Exelon's 36→4 GW and NV Energy's 22→6 GW added. Duke is the exception: it publishes no inquiry figure (`duke-energy` SR[0], `ecosystemRole`).
+  - "Two of the three largest revenue lines are not utilities." Now one: NRG is second behind Duke.
+- **`claims-ledger`**:
+  - 21 rows added for the five newcomers at v1, by field.
+  - The count, revenue and fence rows are re-measured.
+  - The intro now marks `strategyRead[]`/`ecosystemRole` rows as the dossier's analysis and the other fields as fact, and names the module's third own claim (the variant mapping).
+- **`what-the-record-does-not-say`**:
+  - Item 1 now counts the eleven: most of the owned lane names no supplier, DTE names LGES Vertech, and NV Energy names BYD cells for Reid Gardner only.
+  - Item 3 becomes "the Texas wires incumbent", since Exelon names its TSA holders.
+  - Item 4 is re-counted to eleven.
+  - Item 5 records that Duke names GE Vernova (26 turbines) while DTE, WEC and BHE name no turbine OEM.
+  - Item 7 adds Nevada's approval: approved, not delivered.
+  - A new item 9 lists the newcomers' own gaps: DTE's revenue, PacifiCorp's Utah counterparty, PECO's tariff filing, Maryland's PC72 terms and the U-22058 order.
+- **`drill`** cards 1, 2, 3 and 7 and **`check-yourself`** items 1, 2 and 5 carried the old counts and rankings, and are corrected. No correct answer changed.
+- **Outside the sections:**
+  - `short`, tiles 1 and 4 and `source.doc` are updated.
+  - `updated` is 2026-09-26 and `reviewBy` 2026-12-02.
+  - The function's header comment in `Classroom.gs` is updated too. It still said "reviewBy is 2026-10-01" (stale since v07.40r) and "the eight bets".
+
+### The review date, resolved again — 2 December 2026
+
+A sort still returns 1 January 2027: none of the 21 dated entries the newcomers add is in the future. Read in prose, the five dossiers carry nearer dates. Each was tested against §10's three tests and §10.6 (r):
+
+1. **1 October 2026 — rejected.**
+   - Florida SB 484's compliant-tariff deadline (`duke-energy` PE[1]) is a **filing deadline**, and Duke Energy Florida has told the commission its rate schedule comes in its next rate case.
+   - The same day's DTE Gas rate step (`dte-energy` recentDevelopments[3]) fails session 1's Cummins test: no section teaches a gas rate.
+   - The Pennsylvania PUC's tentative curtailment order is a procedural step.
+   - Maryland's PC 74 window (1–31 October) is a solicitation window.
+   - Exelon's CFO change on 5 October is not a policy gate.
+2. **3 November 2026 — rejected.** The Oregon Supreme Court argument in *James* is a hearing.
+3. **Mid-November 2026 — rejected.** The NCUC rate orders and the FERC show-cause responses (`exelon` PE[1]) are month-part windows, and the responses are deliverables.
+4. **15 November 2026 — rejected.** Illinois's first statewide IRP filing is a deliverable.
+5. **2 December 2026 — taken.** This is the PUCN's statutory deadline to rule on NV Energy's 2026 IRP (Docket 26-05007) and the form LLESA, whose minimum-demand, minimum-energy and generation-charge terms every filing customer reserved for the commission (`berkshire-hathaway-energy` PE[1], SR[0], SR[1]). It passes all four tests:
+   - **Taught.** The LLESA is in `who-dominates`, the bets and the indicators, and on the day it is decided the claim "left for the commission" changes.
+   - **In prose.** It sits in the entry's text, while the entry's `effectiveDate` field carries 2026-05-07.
+   - **A stated day.** It is a decision that fixes an instrument's terms, not a procedural step.
+   - **Unclaimed.** No other module carries 2026-12-02.
+
+   §10's own rejection of 10 December foreshadowed this: that candidate failed because "the tariff or order it may lead to carries no date anywhere in the record". This order carries one.
+6. **Later, and not needed:** the ICC order on 15 December, Duke's resource-plan order by 31 December, and 1 January 2027 (Dominion's GS-5 and Duke's Carolinas rates).
+
+**Consequence for the scenarios** (design §6: a scenario never outlives its landscape): `scenario-utilities-discovery-aidc`'s `reviewBy` moves from 2026-12-10 to 2026-12-02.
+
+### Scenarios re-judged (design D6 — a developer session)
+
+- **`scenario-utilities-objection`** (Dominion): all three beats hold.
+  - Changed: `what-the-record-does-not-say`. "Two of the six franchises" becomes the eleven-franchise disclosure read.
+  - Pin 2026-09-24 → 2026-09-26. `reviewBy` stays **2026-10-01**, the reframe's gate; the reframe is its own reminder, 2–6 October.
+- **`scenario-utilities-discovery`** (Southern): all three beats hold.
+  - Changed: `claims-ledger`. "Every incumbent" becomes "most incumbents".
+  - Pin 2026-09-24 → 2026-09-26. `reviewBy` stays 2026-11-03.
+- **`scenario-utilities-discovery-aidc`** (AEP): all three beats hold.
+  - Changed: `the-position` and `claims-ledger`. "Most incumbents" is applied, and the review-date row is rewritten.
+  - Pin 2026-09-24 → 2026-09-26. `reviewBy` 2026-12-10 → 2026-12-02.
+- **Counterparty pins are unchanged:** `dominion-energy` v1 @2026-09-03, `southern-company` v2 @2026-09-05 and `aep` v1 @2026-09-03 are still the registry's current versions. `project:stargate` is also unchanged.
+
+### Flagged, not changed
+
+- **The brief's OEM claim is wrong.** The brief said no battery or turbine OEM is named by any of the five except DTE's LG Energy Solution and Reid Gardner's BYD. Duke's record names **GE Vernova** as its turbine supplier (26 units secured; `summary`, `ecosystemRole`), and the module follows the record. The coverage plan's "no OEM" line for Duke concerns batteries only.
+- **The Profiler session's unreconciled figures are not taught here:** Oracle ~$300M vs DTE's "nearly $2B", MasTec's $4.2B vs BHE's, Exelon's TSA-backed ~8→4 GW with collateral flat, and Compass Hoffman Estates.
+- **Carried from §12, unchanged:** AEP's "six of eight" and Dominion's "all-stock" description. The latter is for the Dominion reframe session.
+- **`landscape-storage-developers-and-ipps-2026-09` received a count-only correction in the same push.** Duke, DTE, WEC and BHE joined it as adjacents. Its analysis file records the correction.
 
 Developed by: LightAISolutions

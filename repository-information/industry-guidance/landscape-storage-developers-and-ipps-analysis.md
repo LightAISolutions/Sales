@@ -2,6 +2,8 @@
 
 **Provenance:** Corpus synthesis over the segment's member dossiers at the versions in the claims ledger; no ingested document. Compiled 2026-09-14 from `live-site-pages/profiler-data/profiler-segments.json` and the 34 member `<slug>.profile.json` files only — **no new web research, no ingested source**. Nothing under `industry-guidance/sources/` belongs to this module and step 1 of the Industry Guidance Command does not apply. The dossiers already cite their own primary sources; this file cites the dossiers, field by field, in §8. Feeds the in-app module `landscape-storage-developers-and-ipps-2026-09` in `googleAppsScripts/Classroom/Classroom.gs` (lane: The Value Chain; tier: contributor). This is the third module of S2, after `landscape-storage-integrators-and-containers-2026-09` (v05.64r) and `landscape-cells-and-chemistry-2026-09` (v05.70r).
 
+> **Counts re-measured 26 September 2026 — see §12.** Four utilities joined the segment as adjacents; the module now teaches 38 members, eleven of them adjacent. Every count in the body below is the 14 September measurement over 34.
+
 ## What this is
 
 `CLASSROOM-CURRICULUM-PLAN.md` §10.1 splits the market-structure layer in two. **Layer 3** is the generated segment lesson `segment-storage-developers-and-ipps` — public, analyst-visible, and carrying no judgment at all: the registry's definition, its six buying criteria, the 34-row player table with each member's role and basis, the normalized figures the dossiers carry, the graph edges among members, the last twelve months of developments, and the policy fence. **Layer 4 is this module**, and it exists because the lesson states the record and stops.
@@ -263,5 +265,39 @@ All eight terms were verified free against the 144 existing ones. `independent p
 **A note on `tv`.** `.claude/rules/scraper-sources.md` blocks any edit to an existing seed's `terms:` array unless its `tv` marker is bumped, because `scSyncInterests_` rewrites a row only when the seed's `tv` exceeds the `seed-terms-vN` marker stored in that row's Notes. **That rule does not bind here and no `tv` was added**: this is a brand-new key with no row in the Interests sheet, so the daily sync upserts it fresh (default-ON, flagged "New topic"), and no entry in `SCRAPER_INTEREST_TOPIC_SEEDS` carries a `tv` field at all — `tv` lives on `SCRAPER_SEGMENT_SEEDS`, a different array. No existing seed's terms were touched. `SCRAPER_SOURCE_ROSTER` was not touched either, so the roster's outlet-probe checklist does not apply.
 
 **The changelog consequence, measured rather than assumed.** This touches `Scraper.gs`, so the Scraper GAS version bumps and a section is added to `Scrapergs.changelog.md`, which stood at **50 raw / 49 non-exempt** before this session. Measured on the EST clock (`TZ=America/New_York date`) at the time of the push commit, this session's section is dated **2026-09-14**, giving **51 raw / 49 non-exempt** — and `.claude/rules/changelogs.md` fires rotation when the counter **reaches** 50 non-exempt, not when the raw count does. **49 is under the line, so no rotation fires.** Had the push landed on 2026-09-15 EST it would have: 51 raw, none exempt, rotation of the twenty-six sections dated 2026-08-28. The clone was unshallowed (`git fetch --unshallow origin main`) early in the session anyway, so SHA enrichment would have been possible — the precondition, not the remedy.
+
+## 12. Revision — 26 September 2026 count correction (four utilities added as adjacents)
+
+On 26 September 2026 (v07.57r–v07.58r) four utilities joined `storage-developers-and-ipps` as **adjacents**, each at `profileVersion` 1:
+
+| Member | Basis (registry) |
+|---|---|
+| `duke-energy` | A rate-based owner of about 4.5 GW of batteries by 2031 |
+| `dte-energy` | 1,383 MW of customer-funded, DTE-owned storage, and the tolling counterparty for Key Capture Energy and Aypa |
+| `wec-energy` | 2,130 MW of batteries bought build-transfer from Invenergy |
+| `berkshire-hathaway-energy` | The contracting buyer on 5,405 MW of NV Energy battery PPAs, plus two owned batteries |
+
+Exelon was deliberately not added (it owns no storage; revisit on the ACE Pittsgrove decision, about February 2027). **Adjacents carry no bet and no route, so no player's bet, rank or threat changed.** What the module taught that the four newcomers contradict is **counts**, and only counts:
+
+| Where | Taught | Now | Source |
+|---|---|---|---|
+| Tile 1; ledger row 1 | 34 members — 19 · 8 · 7 | **38 — 19 · 8 · 11** | registry @ v07.58r |
+| Tile 2; ledger row 2 | "no other segment reaches 11" incumbents | **utilities reaches 11** | registry @ v07.58r |
+| `the-indicators` intro; drill card; item 9 | 142 policy entries, 96 dated, none future, latest 1 Sep 2026 | **163, 112, none future, latest still 1 Sep 2026** | the 38 profile files |
+| Ledger row 4; item 2 | 7 revenue carriers, 3 other operating KPIs, 27 of 34 with neither | **10, 7, and 27 of 38** | latest annual period, the same basis that reproduces the 14 September counts exactly |
+| `the-sellers-play`; drill card | ten of thirty-four with a live or just-closed ownership event | **twelve of thirty-eight** | see below |
+| `check-yourself` rationale | "the seven adjacent members" | **eleven** | registry |
+
+**How the two ownership events were counted.** §6's ten already include a minority stake (Recurrent, BlackRock 20%) and an asset sale (Excelsior's Fund I assets). By the same definition, two of the four newcomers carry one:
+
+- **Duke** — Brookfield's purchase of 19.7% of Duke Energy Florida, whose Powerline and Bartow batteries are part of Duke's basis here. The first 9.2% closed on 3 March 2026, with tranches continuing to June 2028 (`duke-energy` SR[4], recentDevelopments[23]).
+- **Berkshire Hathaway Energy** — the agreed sale of PacifiCorp's Washington business for $1.9B, closing in the first half of 2027. PacifiCorp's storage proxies are part of BHE's basis (`berkshire-hathaway-energy` SR[3], productsAndServices[2]).
+
+DTE and WEC carry none. A ledger row records both events.
+
+**What held:**
+- **`reviewBy` stays 2027-01-01.** The fence still has no future effective date, and the content-ratio step read out of prose is unchanged.
+- **The 27 bets stand.** No section's judgment moved.
+- **Both resting scenarios are re-judged and re-stamped only.** `scenario-storage-developers-and-ipps-objection` and `-discovery` change no section; their landscape pin moves 2026-09-14 → 2026-09-26, and `reviewBy` stays 2027-01-01.
 
 Developed by: LightAISolutions
