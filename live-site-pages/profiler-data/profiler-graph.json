@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-26",
- "companies": 180,
+ "companies": 182,
  "edges": [
   {
    "a": "abb",
@@ -1304,6 +1304,45 @@
   },
   {
    "a": "aep",
+   "b": "berkshire-hathaway-energy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "BHE U.S. Transmission owns half of Electric Transmission Texas with AEP and, through the Transource / Midcontinent Grid Solutions venture with AEP and Evergy, won MISO Tranche 2.1's roughly 200-mile 765 kV Wisconsin segment (about $1.2B, 2034), with four more bids pending in 2026.",
+     "context": "The AEP dossier records the same venture; ATC — 60 percent WEC — lost that segment (WEC dossier).",
+     "source": "https://www.berkshirehathaway.com/bhenergy/BHE2026InvestPresent.pdf",
+     "status": "active",
+     "scale": "ETT 50/50; MISO Tranche 2.1 765 kV Wisconsin ~$1.2B",
+     "via": "Electric Transmission Texas; Midcontinent Grid Solutions (Transource)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: company statements that it owns and operates nearly 90 percent of the national 765 kV network with more than 2,100 miles in service and 30 substations; awards totalling about $3.5B across PJM, SPP, MISO and ERCOT in 2025–2026 that lifted the transmission plan to $33B; three separate joint ventures (Valley Link with FirstEnergy Transmission and Dominion, Grid Growth Ventures with FirstEnergy Transmission, Midcontinent Grid Solutions with a Berkshire Hathaway Energy affiliate); and the stated posture of 'working with other IOUs to assist in their capability to build out 765 kV infrastructure'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Regulated transmission — AEP Transmission Holdco, the state transcos, Transource Energy and the RTO joint ventures",
+     "date": "",
+     "text": "The business is run through AEP Transmission Holdco and the state transmission companies, plus Transource Energy (86.5 percent AEP, 13.5 percent Evergy) and three regional joint ventures: Valley Link in PJM with FirstEnergy Transmission and Dominion, Grid Growth Ventures for the central Ohio 765 kV award, and Midcontinent Grid Solutions in MISO with a Berkshire Hathaway Energy affiliate.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-05",
+     "text": "MISO selected Midcontinent Grid Solutions, the Transource joint venture with a Berkshire Hathaway Energy affiliate, for a nearly 200-mile 765 kV project into Wisconsin estimated at about $1.2B with AEP's share about $500M (month-dated; day not stated) — The fourth RTO in which AEP's 765 kV capability has now been awarded work.",
+     "src": "https://docs.aep.com/docs/investors/filings/docs/AEP_10K_2025.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-05"
+  },
+  {
+   "a": "aep",
    "b": "bloom-energy",
    "curated": {
     "a": {
@@ -1499,6 +1538,21 @@
     }
    ],
    "last": "2026-07-21"
+  },
+  {
+   "a": "aep",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "AEP is Exelon's co-protestant on nuclear co-location (Susquehanna, 2024) and a fellow 765 kV operator; Utility Dive records AEP and Exelon as the utilities that 'sought to stop non-utility generators serving co-located load' in the 2025–2026 PJM proceedings.",
+     "context": "Recorded from the Vistra and Talen dossiers' citations; no joint transmission venture between the two is in the record.",
+     "source": "https://www.utilitydive.com/news/pjm-data-center-colocation-ferc-vistra-constellation/815941/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "aep",
@@ -2665,6 +2719,31 @@
   },
   {
    "a": "aligned",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Aligned Data Centers holds one of the first ComEd TSAs, filed from December 19, 2025 and accepted before the March 10, 2026 order; its Illinois site is not named in the sources read, and its IAD-06 building at Quantum Frederick, Maryland (topped out March 2026) sits in a park whose serving utility is unconfirmed.",
+     "context": "Recorded from Utility Dive's January 14 and March 11, 2026 coverage; the Aligned dossier does not carry the ComEd agreement.",
+     "source": "https://www.utilitydive.com/news/illinois-ag-files-objections-to-comed-data-center-agreements-at-ferc/809576/",
+     "status": "active",
+     "since": "2026-01",
+     "via": "ComEd transmission security agreement (ER26-841 group)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · ComEd regulated delivery service and the large-load framework — Rider DE / LDPAC deposits (ICC 25-0677/25-0679) and FERC transmission security agreements",
+     "date": "",
+     "text": "FERC accepted Karis Critical (about 500 MW, ER26-3087) on February 17, 2026 and Equinix (ER26-3101), Grundy County Power NR I — Tract's Morris park (ER26-3100), PowerHouse Hillwood Holding (ER26-3104) and QTS Investment Properties Chicago (ER26-3102) on March 10, 2026, after Aligned Data Centers, Monarch Rock Air (about 1,200 MW) and Red Energy Partners (ER26-841), applying the Mobile-Sierra presumption over the Illinois attorney general's protest that 'the safeguards in the TSA do not prevent existing customers from paying the costs'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01"
+  },
+  {
+   "a": "aligned",
    "b": "ge-vernova",
    "curated": {
     "a": {
@@ -3352,6 +3431,59 @@
   },
   {
    "a": "amazon",
+   "b": "berkshire-hathaway-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon is a customer on both sides of the group's large-load argument: Sierra Pacific filed its LLESA with Amazon Data Services for Sparks, Nevada on May 29, 2026 and Amazon signed a geothermal deal with NV Energy in May, while Amazon Web Services filed a complaint at the Oregon PUC in November 2025 alleging PacifiCorp failed its obligation to serve its data centers.",
+     "context": "PacifiCorp 'disputes the allegations and continues to serve AWS under its existing agreements'; absent settlement the proceeding 'could take six to eight months' (investor presentation p. 47). Oregon carries 784 MW of data-center load under contract against more than 7,000 MW pursued. The Amazon geothermal terms were not readable (Data Center Dynamics, 2026-05-12).",
+     "source": "https://newprojectmedia.com/origination-nv-energy-seeks-large-load-approvals-for-aws-prologis-novva-and-fleet-data-centers/",
+     "status": "active",
+     "since": "2025-11",
+     "via": "Sierra Pacific LLESA (26-05026); Oregon service under existing agreements; geothermal agreement (May 2026)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus BHE is Amazon's, Google's, Vantage's and Tract's Nevada utility (five LLESA dockets, 26-05026 through 26-05030), Amazon's Oregon adversary at the OPUC, Microsoft's, Google's and Meta's Iowa utility under ten-year load commitment agreements, and — through Tract — the first utility in this file to sue a data-center developer over who decides how the grid gets built.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NV Energy regulated service and the large-load framework — Rule 9 agreements, the form LLESA (Docket 26-05007) and the Clean Transition Tariff",
+     "date": "",
+     "text": "Five customers filed eight LLESAs totalling more than 3.3 GW by 2032 — Amazon Data Services at Sparks (26-05026), Fleet Data Centers / Tract's PR RNO and SV RNO at McCarran (26-05027; 25 years post-COD, minimum bill 90 percent of contracted per New Project Media), Vantage Data Centers NV11 (26-05028), Novva Las Vegas / Proton NLV (26-05029; 300-month term, ramp up to 48 months) and VIP Landco / Prologis (26-05030) — each reserving the minimum-demand and minimum-energy percentages, the generation charge, the rates, the termination payment and the security calculation for PUCN determination (Exhibit G).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NV Energy regulated service and the large-load framework — Rule 9 agreements, the form LLESA (Docket 26-05007) and the Clean Transition Tariff",
+     "date": "",
+     "text": "The Clean Transition Tariff (Docket 24-05023, filed June 7, 2024 with Google's Sierra Pacific agreement, approved March 2025) lets an eligible customer buy bundled service from a named new clean resource at a customer-specific charge — Google's is Fervo's 115 MW Corsac Station 2 (January 2030); a second CTT deal with Ormat and an Amazon geothermal agreement (May 2026) followed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PacifiCorp (Rocky Mountain Power and Pacific Power) — large-load rules in Utah, Oregon and Wyoming, the 2025 IRP Update and the Washington sale",
+     "date": "",
+     "text": "Its large-load position is a set of state rules rather than one tariff: Utah's 2025 SB 132 (loads of 100 MW or more within five years; a 90-day utility evaluation; three service pathways including closed private generation) 'requires large load customers to fully support marginal costs while enabling faster regulatory reviews', and PacifiCorp filed its first contract under it — 'hundreds of MWs', 'nearly $1 billion in estimated net benefits', approval anticipated April 2026, counterparty and docket not found; Oregon's 2025 HB 3546 (the POWER Act) requires new data centers over 20 MW to fully support all costs, and PacifiCorp has proposed Schedule 401 as a large-energy-use-facility class (ADV 1790 / UE 463) after UE 433 added two charges for very large customers — but 'negotiations on additional sites have stalled', and Amazon Web Services filed an OPUC complaint in November 2025 alleging PacifiCorp failed its service obligation, which the company disputes ('six to eight months' absent settlement); Wyoming and Utah tariffs added charges for unused demand.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-03",
+     "text": "Sierra Pacific files its LLESA with Vantage Data Centers NV11 (Docket 26-05028), the fifth customer docket after Amazon, Fleet/Tract, Novva and Prologis on May 29 — The named Nevada book: five customers, eight agreements, more than 3.3 GW by 2032.",
+     "src": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-03"
+  },
+  {
+   "a": "amazon",
    "b": "black-veatch",
    "curated": {
     "b": {
@@ -3749,6 +3881,60 @@
     }
    ],
    "last": "2026-07-10"
+  },
+  {
+   "a": "amazon",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon Data Services holds Exelon's first transmission security agreement — with PECO for Falls Township, Pennsylvania, accepted by FERC on November 21, 2025 over PJM's market monitor — with power reported by Utility Dive to come from Vistra's 1,320 MW Fairless gas plant; EEI lists the project at '$20 billion investment in planned data centers in the state'.",
+     "context": "Amazon is also reported (DCD, April 2025) to be developing at TPG's Quantum Frederick park in Maryland, whose serving utility is not confirmed in the record.",
+     "source": "https://www.utilitydive.com/news/ferc-peco-amazon-data-center-transmission-agreement/806254/",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "$20B of planned Pennsylvania data centers (EEI)",
+     "via": "PECO transmission security agreement (Falls Township)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Exelon as the corpus's wires-only counterparty: the utility that connects the most data-center load in PJM outside Dominion and owns none of the generation or storage that serves it, so the storage and gas sellers in this file do not sell to Exelon today — they sell to the developers who hold its transmission security agreements (PowerHouse, Tract, Equinix, QTS, Aligned, Amazon), to the Illinois Power Agency's Indexed Storage Credit procurements (600 MW awarded September 1, 2026 toward 3,000 MW by 2030, 80 MW of it in the ComEd zone), and to Maryland's Next Generation Energy Act solicitations.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+     "date": "",
+     "text": "At the Q1 2025 call the total was 36 GW with 16 GW 'high probability' (projects in official engineering phases with deposits); Q3 2025 (November 4) put the 'advanced' pipeline at 18 GW with 6 GW 'close to signing TSAs' and 47 GW of potential additions, and PECO signed the first Exelon TSA (Amazon Data Services, Falls Township, Pennsylvania; accepted by FERC November 21, 2025 over PJM's market monitor); the Q4 2025 deck (February 12, 2026) described 'committed data center projects of approximately 18 GW' with 'approximately 45 percent secured with TSAs' and about $1B of collateral; Q1 2026 held 18 GW high-probability and 43 GW under study.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+     "date": "",
+     "text": "Named projects on the record: PowerHouse Hillwood's Joliet Technology Center (1.8 GW, about $20B, 795 acres, 24 buildings in four phases; annexed 8–1 on March 19, 2026); Tract's Morris Technology Park (about 1 GW; first power June 2028); Equinix at Minooka (700 MW, EEI); QTS Investment Properties Chicago; Karis Critical (about 500 MW); Monarch Rock Air (about 1,200 MW); Aligned; Red Energy Partners; Compass Datacenters' $10B Hoffman Estates campus (Building 1 topped out February 2026; the developer withdrew a rezoning request in July 2026); Stream Data Centers at Elk Grove Village (260 MW; ComEd substation groundbreaking September 2025); CyrusOne's 480 MW Yorkville campus and Aurora site; Prime Data Centers' 270 MW ORD01; Amazon at Falls Township ($20B of planned Pennsylvania data centers, EEI); Pepco Holdings' 34 active projects and 13 GW of potential (March 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-owned storage and the generation campaign — ACE's 500 MW Pittsgrove battery with Invenergy, Maryland's storage solicitations, Illinois's 3 GW procurement, and the PJM argument",
+     "date": "",
+     "text": "Exelon's 2024 petition at FERC against Constellation's nuclear co-location deals, and its protest with AEP of the Talen–Amazon Susquehanna agreement, are its documented positions on behind-the-meter supply.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-21",
+     "text": "FERC accepts PECO's transmission security agreement with Amazon Data Services for Falls Township, Pennsylvania — the first Exelon TSA — over PJM's market monitor; Utility Dive reports power from Vistra's 1,320 MW Fairless plant — The instrument's debut was in Pennsylvania, not Illinois.",
+     "src": "https://www.utilitydive.com/news/ferc-peco-amazon-data-center-transmission-agreement/806254/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-21"
   },
   {
    "a": "amazon",
@@ -8160,6 +8346,22 @@
   },
   {
    "a": "apex-clean-energy",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "The Apex Clean Energy dossier lists ComEd among the offtakers of a 300 MW Illinois wind project (with Cargill, Ameren Illinois and MidAmerican, online 2025) and among its utility target segments — offtake that in Illinois runs through the IPA's procurements delivered via the utilities rather than a ComEd purchase.",
+     "context": "Recorded from the corpus's Apex dossier; Exelon's own materials do not name Apex.",
+     "source": "Apex Clean Energy dossier (v1) — corporate and utility offtake table",
+     "status": "active",
+     "via": "Illinois renewable offtake (Apex dossier)"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
    "b": "flexgen",
    "curated": {
     "a": {
@@ -9883,6 +10085,23 @@
   },
   {
    "a": "bechtel",
+   "b": "berkshire-hathaway-energy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Bechtel is the construction partner on TerraPower's Natrium demonstration at Kemmerer, Wyoming, the 345 MWe (500 MWe boosted) sodium reactor PacifiCorp's IRPs carry as Kemmerer Unit 1 by end-2031; construction began in 2026.",
+     "context": "Recorded from the corpus's Bechtel dossier and PacifiCorp's 2025 IRP; the 2023 IRP's two further Natrium units are no longer in the plan.",
+     "source": "https://www.pacificorp.com/about/newsroom/news-releases/2025-integrated-resource-plan-submitted.html",
+     "status": "announced",
+     "scale": "Natrium Kemmerer Unit 1 (345 MWe, 500 MWe with storage)",
+     "via": "TerraPower's Natrium program with PacifiCorp offtake"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "bechtel",
    "b": "black-veatch",
    "curated": {
     "b": {
@@ -10121,6 +10340,499 @@
     }
    ],
    "last": "2025-12-11"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "byd",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "BYD's lithium-iron-phosphate cells sit inside NV Energy's utility-owned Reid Gardner battery (220 MW / 440 MWh, in service December 2023), and BHE held BYD equity until selling the last of it by September 30, 2025 (FY2025 after-tax gain $87M).",
+     "context": "The only battery OEM named anywhere in BHE's record; the Sierra Solar supplier is undisclosed. Recorded from the Reid Gardner Wikipedia summary of NV Energy releases and BHE's Q3 2025 10-Q.",
+     "source": "https://en.wikipedia.org/wiki/Reid_Gardner_Battery_Energy_Storage_System",
+     "status": "historical",
+     "since": "2023",
+     "scale": "220 MW / 440 MWh Reid Gardner cells",
+     "via": "Reid Gardner BESS (Energy Vault EPC)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Berkshire Hathaway Energy as the corpus's PPA-side utility buyer: NV Energy's 2026 plan puts every one of its 5,405 MW of new batteries and 4,370 MW of solar under power purchase agreements with developers (23 PPAs, counterparties confidential), so the storage sellers in this file reach NV Energy through the developers who won its 2024 all-source RFP (198 bids, 21,019 MW, 12,634 MW of it storage) and the named 2024 IRP counterparties — Arevia's Libra (700 MW / 2,800 MWh), NextEra's Dry Lake East, 174 Power Global's Boulder Solar III — not through a utility purchase order; the exceptions are the utility-owned Reid Gardner (220 MW / 440 MWh, Energy Vault EPC, BYD cells) and Sierra Solar (400 MW / 1,600 MWh, supplier undisclosed, 2026) batteries and PacifiCorp's IRP proxies of 4,154 MW of four-hour lithium and 523 MW of 100-hour iron-air by 2045.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-01",
+     "text": "Berkshire's Q3 2025: BHE $1,489M (−8.6 percent); U.S. utilities $850M (−8.2 percent); a $100M wildfire accrual; BHE's BYD stake fully sold (balance sheet $— at September 30 against $415M at year-end 2024) — The exit from BYD — the supplier of Reid Gardner's cells.",
+     "src": "https://www.berkshirehathaway.com/news/nov0125.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-01"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "clearway-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Clearway's four-project Honeycomb battery portfolio in Beaver and Iron Counties, Utah (320 MW / 1,280 MWh, four-hour Tesla batteries, substantial completion May 1, 2026) sells to PacifiCorp under 20-year tolls, and its 530 MW Utah Solar Portfolio is contracted to PacifiCorp to 2036.",
+     "context": "Recorded from the corpus's Clearway Energy dossier; PacifiCorp's IRP documents do not name the counterparty.",
+     "source": "Clearway Energy dossier (v1) — Honeycomb Portfolio PacifiCorp tolling agreements",
+     "status": "active",
+     "since": "2025",
+     "scale": "Honeycomb 320 MW / 1,280 MWh; Utah Solar Portfolio 530 MW",
+     "via": "20-year PacifiCorp tolling agreements to 2046"
+    }
+   },
+   "evid": [],
+   "last": "2025"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "edgecore",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "EdgeCore's 216 MW Reno / TRIC campus is NV Energy load; the EdgeCore dossier records its RN01 energization 'a year past its late-2025 target' awaiting NV Energy power delivery.",
+     "context": "Recorded from the corpus's EdgeCore dossier; EdgeCore does not appear among the 2026 LLESA dockets.",
+     "source": "EdgeCore dossier (v1) — Reno / TRIC campus, 216 MW, NV Energy",
+     "status": "active",
+     "via": "NV Energy service at the Tahoe-Reno Industrial Center"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "excelsior-energy-capital",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Excelsior's Faraday Solar (685 MWdc / 525 MWac, Utah County, commercial operation September 30, 2025) sells to Meta through PacifiCorp's 20-year Schedule 34 green tariff, and its Lydian platform financed a 150 MW / 733 MWh Faraday battery under a PacifiCorp PPA in February 2026.",
+     "context": "Recorded from the corpus's Excelsior Energy Capital dossier — the pattern for how a hyperscaler buys renewables through a BHE utility's green tariff.",
+     "source": "Excelsior Energy Capital dossier (v1) — Faraday Solar and Faraday BESS PacifiCorp contracts",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "Faraday Solar 525 MWac; Faraday BESS Phase 1 150 MW / 733 MWh",
+     "via": "PacifiCorp 20-year Schedule 34 PPA (Meta); Faraday BESS PPA"
+    }
+   },
+   "evid": [],
+   "last": "2025-09"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google is the customer the Clean Transition Tariff was written for — a bundled purchase of Fervo's 115 MW Corsac Station 2 geothermal from Sierra Pacific for its Storey County data center, filed June 7, 2024 and approved March 2025 — and a MidAmerican customer at Council Bluffs ($5.5B) with an August 3, 2026 agreement to explore a 900-acre Salix, Iowa site.",
+     "context": "EEI's September 2026 list carries the CTT row; the corpus's Google and Form Energy dossiers record that Google exported the CTT model to Xcel Minnesota as the Clean Energy Accelerator Charge. Berkshire's roughly $16.5B Alphabet equity position (Q2 2026) is the parent's investment, not BHE's.",
+     "source": "https://www.utilitydive.com/news/google-fervo-nv-energy-nevada-puc-clean-energy-tariff/719472/",
+     "status": "active",
+     "since": "2024-06",
+     "scale": "115 MW Corsac Station 2 geothermal (2030)",
+     "via": "Clean Transition Tariff (Docket 24-05023); MidAmerican service at Council Bluffs; Salix exploration agreement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus BHE is Amazon's, Google's, Vantage's and Tract's Nevada utility (five LLESA dockets, 26-05026 through 26-05030), Amazon's Oregon adversary at the OPUC, Microsoft's, Google's and Meta's Iowa utility under ten-year load commitment agreements, and — through Tract — the first utility in this file to sue a data-center developer over who decides how the grid gets built.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that MidAmerican's ten-year Load Commitment Agreement is the most durable large-load instrument in the group because it is a contract rather than a tariff or a form, and that Iowa will see the next named hyperscaler expansion (Google Salix) before Nevada sees its next LLESA approved.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · NV Energy regulated service and the large-load framework — Rule 9 agreements, the form LLESA (Docket 26-05007) and the Clean Transition Tariff",
+     "date": "",
+     "text": "The Clean Transition Tariff (Docket 24-05023, filed June 7, 2024 with Google's Sierra Pacific agreement, approved March 2025) lets an eligible customer buy bundled service from a named new clean resource at a customer-specific charge — Google's is Fervo's 115 MW Corsac Station 2 (January 2030); a second CTT deal with Ormat and an Amazon geothermal agreement (May 2026) followed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · MidAmerican Energy (Iowa) — the load commitment agreement, 800 MW of solar, a 520–700 MW peaker and the hyperscaler campuses",
+     "date": "",
+     "text": "Named campuses are third-party: Microsoft in West Des Moines ('Project Alluvion', about 200 MW), Google at Council Bluffs ($5.5B) and, from August 3, 2026, an agreement to explore a 900-acre Salix site, Meta at Altoona, Apple at Waukee.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-11",
+     "text": "EEI's large-load list records NV Energy's Vantage Storey County campus ($3B, 224 MW), Google's Clean Transition Tariff geothermal purchase, PacifiCorp's Oregon UE 433 charges and proposed Schedule 401 (ADV 1790 / UE 463) — No MidAmerican, Rocky Mountain Power or Utah entry — the Iowa model has no tariff to list.",
+     "src": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-12",
+     "text": "Amazon signs its first geothermal deal with NV Energy for its Reno data centers (Data Center Dynamics headline; terms not read) — A second hyperscaler on the Clean Transition Tariff model after Google.",
+     "src": "Data Center Dynamics headline (2026-05-12); article inaccessible to the sandbox",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-12",
+     "text": "PUCN approves NV Energy's Clean Transition Tariff (Docket 24-05023) — Google's bundled purchase of Fervo's 115 MW Corsac Station geothermal — The model Google later exported to Xcel Minnesota as the Clean Energy Accelerator Charge.",
+     "src": "https://www.rtoinsider.com/100330-nevada-regulators-approve-nv-energy-clean-transition-tariff/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-11"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "grid-united",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "BHE U.S. Transmission signed a non-binding MOU for 10 percent (300 MW) of Grid United's North Plains Connector HVDC line, one of seven utility MOUs covering 2,550 MW of its 3,000 MW.",
+     "context": "Recorded from the corpus's Grid United dossier; not mentioned in BHE's 2026 presentation.",
+     "source": "Grid United dossier (v1) — North Plains Connector utility MOUs",
+     "status": "announced",
+     "scale": "10 percent / 300 MW of North Plains Connector",
+     "via": "Non-binding MOU"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · BHE Transmission and BHE Pipeline Group — Greenlink, the MISO 765 kV award with AEP, TransCanyon, and 15 percent of U.S. gas",
+     "date": "",
+     "text": "Transmission — 50 percent of Electric Transmission Texas with AEP, Prairie Wind (25 percent), the Transource / Midcontinent Grid Solutions joint venture with AEP and Evergy that won MISO Tranche 2.1's roughly 200-mile, $1.2B 765 kV Wisconsin segment (2034), four more Tranche 2.1 bids pending in 2026 at $0.9–1.5B each, and TransCanyon's 214-mile, $1.2B Cross-Tie 500 kV line between Utah and Nevada (2030); it also signed a non-binding MOU for 10 percent (300 MW) of Grid United's North Plains Connector HVDC.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · BHE Transmission and BHE Pipeline Group — Greenlink, the MISO 765 kV award with AEP, TransCanyon, and 15 percent of U.S. gas",
+     "date": "",
+     "text": "The corpus's only utility group that is simultaneously a state-regulated wires owner, a competitive interregional transmission bidder and an interstate pipeline system — which is why it appears in the AEP, Grid United and MasTec dossiers as a partner rather than a customer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-08",
+     "text": "BHE U.S. Transmission (Berkshire Hathaway Energy) signs a non-binding MOU for 10% / 300 MW of North Plains Connector; Skelly: 'Utilities accounting for 75 percent of the line's capacity have now signed MOUs' — A Berkshire transmission affiliate on the subscriber list is the strongest credit signal the project has; it is still an MOU.",
+     "src": "https://www.tdworld.com/overhead-transmission/news/55262963/bhe-us-transmission-signs-mou-for-3000-mw-north-plains-connector-transmission-project",
+     "from": "b"
+    }
+   ],
+   "last": "2025-01-08"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "kiewit",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Kiewit runs a multi-year PacifiCorp distribution program of at least 350 miles a year over five years; historically Peter Kiewit Sons' part-owned CalEnergy, and the Walter Scott Jr. family's Kiewit-derived stake was the last outside interest in BHE, bought out by Berkshire in 2024.",
+     "context": "Recorded from the corpus's Kiewit dossier and Berkshire's 2025 annual report.",
+     "source": "Kiewit dossier (v7) — Power market page, PacifiCorp program",
+     "status": "active",
+     "via": "PacifiCorp distribution program (≥350 miles a year over five years)"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "mastec",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "MasTec's T&D Power is building NV Energy's Greenlink West line, which the MasTec dossier records as a '$4.2B program' — the figure BHE gives for the combined Greenlink West and North; the two dossiers state it differently and both are kept.",
+     "context": "Recorded from the corpus's MasTec dossier; NV Energy names no Greenlink contractor in the documents read.",
+     "source": "MasTec dossier (v3) — Power Delivery backlog, Greenlink West",
+     "status": "active",
+     "scale": "Greenlink West (525 kV, ~350 miles)",
+     "via": "MasTec's T&D Power"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · BHE Transmission and BHE Pipeline Group — Greenlink, the MISO 765 kV award with AEP, TransCanyon, and 15 percent of U.S. gas",
+     "date": "",
+     "text": "The corpus's only utility group that is simultaneously a state-regulated wires owner, a competitive interregional transmission bidder and an interstate pipeline system — which is why it appears in the AEP, Grid United and MasTec dossiers as a partner rather than a customer.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Meta's Altoona, Iowa campus is MidAmerican load, and its Eagle Mountain, Utah campus — 'Deepening Our Investment in Eagle Mountain' (September 2026) — sits in Rocky Mountain Power's territory alongside the Google, QTS and Tract sites recorded in the Tract dossier.",
+     "context": "Meta also buys Faraday Solar's energy and attributes under PacifiCorp's 20-year Schedule 34 green tariff (Excelsior Energy Capital dossier). No first-party BHE megawatt by customer exists.",
+     "source": "https://en.wikipedia.org/wiki/MidAmerican_Energy_Company",
+     "status": "active",
+     "via": "MidAmerican service at Altoona; Rocky Mountain Power at Eagle Mountain, Utah"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus BHE is Amazon's, Google's, Vantage's and Tract's Nevada utility (five LLESA dockets, 26-05026 through 26-05030), Amazon's Oregon adversary at the OPUC, Microsoft's, Google's and Meta's Iowa utility under ten-year load commitment agreements, and — through Tract — the first utility in this file to sue a data-center developer over who decides how the grid gets built.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · MidAmerican Energy (Iowa) — the load commitment agreement, 800 MW of solar, a 520–700 MW peaker and the hyperscaler campuses",
+     "date": "",
+     "text": "Named campuses are third-party: Microsoft in West Des Moines ('Project Alluvion', about 200 MW), Google at Council Bluffs ($5.5B) and, from August 3, 2026, an agreement to explore a 900-acre Salix site, Meta at Altoona, Apple at Waukee.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft is a MidAmerican customer at its West Des Moines campuses (about 200 MW 'Project Alluvion' per third-party reporting) and proposed a 'ratepayer protection tariff' framework to the PUCN on May 21, 2026 in the Nevada large-load proceedings.",
+     "context": "First-party megawatts by customer are not published by MidAmerican; the campus figures are third-party. Recorded from servercountry.org's Nevada policy tracker and gridlas coverage.",
+     "source": "https://servercountry.org/policy/nevada/",
+     "status": "active",
+     "via": "MidAmerican Load Commitment Agreements (West Des Moines); Nevada tariff proposal at the PUCN"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus BHE is Amazon's, Google's, Vantage's and Tract's Nevada utility (five LLESA dockets, 26-05026 through 26-05030), Amazon's Oregon adversary at the OPUC, Microsoft's, Google's and Meta's Iowa utility under ten-year load commitment agreements, and — through Tract — the first utility in this file to sue a data-center developer over who decides how the grid gets built.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "NextEra Energy Resources is the counterparty on NV Energy's Dry Lake East solar-plus-storage PPA (200 + 200 MW / 800 MWh, $13,440/MW-month, December 2026) and a separate 400 MW standalone battery from the 2024 IRP; Dry Lake East Energy Storage II appears among the 2026 IRP project names.",
+     "context": "Recorded from Energy-Storage.News's June 2024 account of the 2024 IRP filings and the investor presentation's supply table; the 2026 counterparties are confidential.",
+     "source": "https://www.energy-storage.news/nevada-utility-nv-energy-seeks-approval-for-1gw-of-battery-storage-ppas-in-2024-resource-plan/",
+     "status": "active",
+     "since": "2024",
+     "scale": "Dry Lake East 200 MW solar + 200 MW / 800 MWh, plus 400 MW standalone BESS",
+     "via": "2024 IRP PPAs"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · NV Energy 2026 IRP supply plan — 5,405 MW of battery PPAs, 4,370 MW of solar, 1,223 MW of Fort Churchill gas and the $4.2B Greenlink lines",
+     "date": "",
+     "text": "Already approved from the 2024 IRP and its amendments: Sierra Solar, 400 MW of solar and a 400 MW / 1,600 MWh four-hour battery, utility-owned (Sierra Pacific 90 percent, Nevada Power 10 percent; storage 2026, solar 2027; about $1.5B); Libra Solar and Storage (Arevia Power, 700 MW + 700 MW / 2,800 MWh, 25 years, $34.97/MWh and $13,350/MW-month, December 2027); Dry Lake East (NextEra Energy Resources, 200 + 200 MW / 800 MWh, December 2026); Boulder Solar III (174 Power Global, 128 + 128 MW, June 2027); the Dodge Flat 150 MW four-hour battery addition (20-year PPA signed September 27, 2025; July 2027); the North Valmy coal-to-gas conversion (522 MW total, 261 MW NV Energy share; coal ended at end-2025) and 400 MW of Valmy peaking generation 'under evaluation' for May 2028 (about $573M approved December 20, 2024, Docket 24-05041).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "pattern-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Pattern Energy's Spring Valley wind farm (152 MW, Nevada) sells to NV Energy under a long-dated PPA.",
+     "context": "Recorded from the corpus's Pattern Energy dossier.",
+     "source": "Pattern Energy dossier (v1) — Spring Valley, NV Energy offtake",
+     "status": "active",
+     "scale": "Spring Valley 152 MW wind",
+     "via": "NV Energy PPA"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "switch",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Switch South holds a network integration transmission service agreement with Nevada Power (IRP technical appendix TRAN-13) and bought $196M more southern Nevada land in September 2026; it is Tract's litigant at TRIC.",
+     "context": "Recorded from the 2026 IRP technical appendices and Review-Journal headline coverage; Switch is not among the five LLESA filers.",
+     "source": "https://www.nvenergy.com/publish/content/dam/nvenergy/brochures_arch/about-nvenergy/rates-regulatory/recent-regulatory-filings/2026-irp/NPC-SPPC-Volume-2.pdf",
+     "status": "active",
+     "via": "Network integration transmission service agreement (NITSA 17-00004) with Nevada Power"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "tract",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Tract's Fleet Data Centers project companies (PR RNO and SV RNO Property Owner) are NV Energy's largest prospective load and, since July 24, 2026, its litigation counterparty: the utility sued Tract Capital Management in Washoe County to stop an arbitration Tract demanded in June under 2024 agreements, and the PUCN conditionally approved Tract's 218 MW Peru Ridge and 144 MW South Valley temporary gas plants on September 17, 2026.",
+     "context": "NV Energy's account (Nevada Independent, July 28, 2026) is that Tract 'plans to build at least five data centers with a combined load of nearly 5.5 GW' and wants the utility 'to reserve and provide enormous amounts of power for Tract's private development while shifting the infrastructure and energy costs to Nevada families'; Tract says it has spent more than $127M and committed about $1B to network upgrades and calls the complaint 'a public relations blitz'. The corpus's Tract dossier (v3) recorded the PUCN decision as scheduled for September 8, 2026; the commission decided at a special meeting on September 17 — the dossier is revised to v4 with this push. Tract's Morris, Illinois park separately holds a ComEd transmission security agreement (see the Exelon dossier).",
+     "source": "https://thenevadaindependent.com/article/nevadas-electric-utility-is-suing-a-major-data-center-company-heres-why",
+     "status": "active",
+     "since": "2024-06",
+     "scale": "~5.5 GW stated across five Nevada sites; >3.3 GW of LLESAs across five customers",
+     "via": "Rule 9 agreements with Reno Power; LLESA Docket 26-05027"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "NV Energy (Sierra Pacific Power) is the utility for Peru Shelf and South Valley — the counterparty to the June 2024 Reno Power agreements, the LLESA filed 29 May 2026 and the Washoe County suit of 24 July 2026 — and the PUCN that regulates it conditionally approved Fleet's 362 MW of temporary gas plants on 17 September 2026.",
+     "context": "The Berkshire Hathaway Energy dossier carries the utility's side: NV Energy describes Tract's plan as 'at least five data centers with a combined load of nearly 5.5 GW' against a combined 2025 system peak of about 8,200 MW, and its 2026 IRP puts every new battery under PPA with the earliest new turbine in 2029–2030 — the gap the bridging plants fill. Governor Lombardo's EO 2026-005 (17 September) directs the PUCN to set the cost-of-service instrument.",
+     "source": "https://www.govtech.com/artificial-intelligence/amid-data-center-growth-nevada-approves-temporary-gas-plants",
+     "status": "active",
+     "since": "2024-06",
+     "scale": "~5.5 GW of stated Nevada load; 362 MW of bridging gas approved",
+     "via": "NV Energy — Rule 9 agreements with Reno Power; LLESA Docket 26-05027"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Berkshire Hathaway Energy is the largest privately held utility group in the corpus and the one that publishes its data-center book as a single contracted number — approximately 11,000 MW of data-center load 'in-service or in varying stages of construction' across its utilities, 91 percent of it with Aaa–Aa3 counterparties, against a 2025 data-center peak of just over 2,200 MW (about 8 percent of system peak) and a 4,500–5,700 MW peak projected for 2030 — while its lead AI-load utility, NV Energy, has become the corpus's clearest case of a franchise being asked for more than it has: about 22 GW of inquiries and about 6 GW of signed Rule 9 infrastructure agreements against a 2025 system peak of roughly 8,200 MW, answered on May 7, 2026 with a 2026 integrated resource plan (PUCN Docket 26-05007) that asks for 5,405 MW of battery storage and 4,370 MW of solar entirely through power purchase agreements, 1,223 MW of gas turbines at Fort Churchill, and a form Large Load Electric Service Agreement for any load of 25 MW or more — and, on July 24, a lawsuit to keep its largest prospective customer, Tract, in front of the commission rather than an arbitrator.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus BHE is Amazon's, Google's, Vantage's and Tract's Nevada utility (five LLESA dockets, 26-05026 through 26-05030), Amazon's Oregon adversary at the OPUC, Microsoft's, Google's and Meta's Iowa utility under ten-year load commitment agreements, and — through Tract — the first utility in this file to sue a data-center developer over who decides how the grid gets built.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Tract temporary gas plants (362 MW approved September 17) are the first evidence of that exit already happening.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the NV Energy–Tract litigation is a jurisdictional contest, not a commercial one, and that the utility will win the forum question: the suit asks a court to keep supply adequacy, cost allocation and resource-plan treatment in front of the PUCN instead of a private arbitrator, and the PUCN itself approved Tract's bridging plants a week before the executive order gave it the mandate the suit presupposes.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the July 24, 2026 complaint (Washoe County CV26-02142), Tract's June 2026 arbitration demand under the 2024 Reno Power agreements, the 26-05027 LLESA docket, and the September 17 conditional approval of 26-04026/27.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The corpus's Tract dossier carries the developer's side; the Nevada Independent's account is used here for the utility's.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · NV Energy regulated service and the large-load framework — Rule 9 agreements, the form LLESA (Docket 26-05007) and the Clean Transition Tariff",
+     "date": "",
+     "text": "Five customers filed eight LLESAs totalling more than 3.3 GW by 2032 — Amazon Data Services at Sparks (26-05026), Fleet Data Centers / Tract's PR RNO and SV RNO at McCarran (26-05027; 25 years post-COD, minimum bill 90 percent of contracted per New Project Media), Vantage Data Centers NV11 (26-05028), Novva Las Vegas / Proton NLV (26-05029; 300-month term, ramp up to 48 months) and VIP Landco / Prologis (26-05030) — each reserving the minimum-demand and minimum-energy percentages, the generation charge, the rates, the termination payment and the security calculation for PUCN determination (Exhibit G).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-17",
+     "text": "PUCN conditionally approves Fleet Data Centers / Tract's temporary gas plants — Peru Ridge 218 MW (26-04027) and South Valley 144 MW (26-04026) — to run two to three years while NV Energy service is built; construction early 2027 — Nevada's first gas approved for data-center self-supply, filed by the developer NV Energy is suing.",
+     "src": "https://www.govtech.com/artificial-intelligence/amid-data-center-growth-nevada-approves-temporary-gas-plants",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-19",
+     "text": "NV Energy files to lower southern Nevada electric rates and to raise gas rates; Tract seeks to disqualify NV Energy's counsel in the Washoe County case — A rate cut filed in the middle of a 22 GW load debate.",
+     "src": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-24",
+     "text": "NV Energy sues Tract Capital Management in Washoe County (Second Judicial District Court) to stop the arbitration Tract demanded in June under 2024 agreements, saying Tract wants the utility 'to reserve and provide enormous amounts of power for Tract's private development while shifting the infrastructure and energy costs to Nevada families'; Tract cites more than $127M spent and about $1B of committed upgrades — The first utility-versus-developer suit in this corpus over who decides how a franchise is built out.",
+     "src": "https://thenevadaindependent.com/article/nevadas-electric-utility-is-suing-a-major-data-center-company-heres-why",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-03",
+     "text": "Sierra Pacific files its LLESA with Vantage Data Centers NV11 (Docket 26-05028), the fifth customer docket after Amazon, Fleet/Tract, Novva and Prologis on May 29 — The named Nevada book: five customers, eight agreements, more than 3.3 GW by 2032.",
+     "src": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-29",
+     "text": "NV Energy files four Large Load Electric Service Agreements at the PUCN: Amazon Data Services, Sparks (26-05026); PR RNO / SV RNO Property Owner — Fleet Data Centers / Tract, McCarran (26-05027); Novva Las Vegas / Proton NLV (26-05029); VIP Landco / Prologis (26-05030) — The LLESA goes from a form in the IRP to named counterparties in three weeks.",
+     "src": "https://newprojectmedia.com/origination-nv-energy-seeks-large-load-approvals-for-aws-prologis-novva-and-fleet-data-centers/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-17"
+  },
+  {
+   "a": "berkshire-hathaway-energy",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Sierra Pacific filed its Large Load Electric Service Agreement with Vantage Data Centers NV11 on June 3, 2026 for the Tahoe-Reno Industrial Center campus that EEI lists at $3B and 224 MW.",
+     "context": "The corpus's Vantage dossier carries the NV1 campus; Vantage is also We Energies' Port Washington customer under a different instrument, the bespoke-resource tariff.",
+     "source": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "224 MW, $3B Storey County campus (EEI)",
+     "via": "Sierra Pacific LLESA (26-05028)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · NV Energy regulated service and the large-load framework — Rule 9 agreements, the form LLESA (Docket 26-05007) and the Clean Transition Tariff",
+     "date": "",
+     "text": "Five customers filed eight LLESAs totalling more than 3.3 GW by 2032 — Amazon Data Services at Sparks (26-05026), Fleet Data Centers / Tract's PR RNO and SV RNO at McCarran (26-05027; 25 years post-COD, minimum bill 90 percent of contracted per New Project Media), Vantage Data Centers NV11 (26-05028), Novva Las Vegas / Proton NLV (26-05029; 300-month term, ramp up to 48 months) and VIP Landco / Prologis (26-05030) — each reserving the minimum-demand and minimum-energy percentages, the generation charge, the rates, the termination payment and the security calculation for PUCN determination (Exhibit G).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-03",
+     "text": "Sierra Pacific files its LLESA with Vantage Data Centers NV11 (Docket 26-05028), the fifth customer docket after Amazon, Fleet/Tract, Novva and Prologis on May 29 — The named Nevada book: five customers, eight agreements, more than 3.3 GW by 2032.",
+     "src": "https://pucweb1.state.nv.us/puc2/Dktinfo.aspx?Util=Electric",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-03"
   },
   {
    "a": "black-veatch",
@@ -17430,6 +18142,31 @@
   },
   {
    "a": "compass-datacenters",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Compass Datacenters' Hoffman Estates campus on the former Sears site is a ComEd-served project EEI lists at $10B; Building 1 topped out in February 2026 and the developer withdrew a rezoning request in July 2026.",
+     "context": "The Compass dossier (v5) targets ComEd power for Building 1 in mid-2026 per 2024 coverage and flags the energization date as an indicator; no confirmation of energization and no Compass TSA appear in the record — the two are stated, not reconciled.",
+     "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+     "status": "announced",
+     "scale": "$10B Hoffman Estates campus (EEI)",
+     "via": "ComEd service (no TSA on record)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+     "date": "",
+     "text": "Named projects on the record: PowerHouse Hillwood's Joliet Technology Center (1.8 GW, about $20B, 795 acres, 24 buildings in four phases; annexed 8–1 on March 19, 2026); Tract's Morris Technology Park (about 1 GW; first power June 2028); Equinix at Minooka (700 MW, EEI); QTS Investment Properties Chicago; Karis Critical (about 500 MW); Monarch Rock Air (about 1,200 MW); Aligned; Red Energy Partners; Compass Datacenters' $10B Hoffman Estates campus (Building 1 topped out February 2026; the developer withdrew a rezoning request in July 2026); Stream Data Centers at Elk Grove Village (260 MW; ComEd substation groundbreaking September 2025); CyrusOne's 480 MW Yorkville campus and Aurora site; Prime Data Centers' 270 MW ORD01; Amazon at Falls Township ($20B of planned Pennsylvania data centers, EEI); Pepco Holdings' 34 active projects and 13 GW of potential (March 2026).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
    "b": "flex",
    "evid": [
     {
@@ -17803,6 +18540,30 @@
     }
    ],
    "last": "2026-02-09"
+  },
+  {
+   "a": "constellation-energy",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Constellation Energy is Exelon's former generation business, separated on February 1, 2022, and its adversary at FERC over nuclear co-location: Exelon petitioned for a declaratory order against Constellation's behind-the-meter data-center deals in October 2024, and Constellation protested PJM's 2026 co-location package that Exelon's position helped shape.",
+     "context": "No 2025–2026 reporting of re-merger talks was found; Constellation's M&A was Calpine (closed January 2026). Constellation was among bidders in Maryland's dispatchable-generation solicitation that 'fell short' in November 2025.",
+     "source": "https://www.rtoinsider.com/88515-exelon-petition-ferc-constellation-co-location-deals/",
+     "status": "historical",
+     "since": "2022-02"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Spun from Exelon in 2022; completed the $16.4B Calpine acquisition January 2026, creating the largest US private-sector power producer — ~55 GW spanning the largest US nuclear fleet (~22 GW, 94.7% uptime in 2025) plus Calpine's gas and geothermal (after ~5.3 GW of DOJ-mandated divestitures to LS Power).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2022-02"
   },
   {
    "a": "constellation-energy",
@@ -21957,6 +22718,31 @@
   },
   {
    "a": "cyrusone",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "CyrusOne's Yorkville campus (480 MW from ComEd across eight buildings, first building Q1 2028) and its Aurora data center ($350M, groundbreaking October 2024) are ComEd load; neither appears among the named TSA counterparties.",
+     "context": "Recorded from the corpus's CyrusOne dossier and Google News titles.",
+     "source": "CyrusOne dossier (v1) — Yorkville 480 MW from ComEd",
+     "status": "active",
+     "scale": "480 MW Yorkville; Aurora ($350M)",
+     "via": "ComEd service"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+     "date": "",
+     "text": "Named projects on the record: PowerHouse Hillwood's Joliet Technology Center (1.8 GW, about $20B, 795 acres, 24 buildings in four phases; annexed 8–1 on March 19, 2026); Tract's Morris Technology Park (about 1 GW; first power June 2028); Equinix at Minooka (700 MW, EEI); QTS Investment Properties Chicago; Karis Critical (about 500 MW); Monarch Rock Air (about 1,200 MW); Aligned; Red Energy Partners; Compass Datacenters' $10B Hoffman Estates campus (Building 1 topped out February 2026; the developer withdrew a rezoning request in July 2026); Stream Data Centers at Elk Grove Village (260 MW; ComEd substation groundbreaking September 2025); CyrusOne's 480 MW Yorkville campus and Aurora site; Prime Data Centers' 270 MW ORD01; Amazon at Falls Township ($20B of planned Pennsylvania data centers, EEI); Pepco Holdings' 34 active projects and 13 GW of potential (March 2026).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
    "b": "galaxy-digital",
    "evid": [
     {
@@ -24644,6 +25430,29 @@
   },
   {
    "a": "dominion-energy",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Dominion is the other PJM utility with a data-center pipeline of Exelon's scale and appears with Exelon's utilities as a co-awardee in PJM's $11.8B transmission plan (Dominion HVDC; NextEra/Exelon).",
+     "context": "The Dominion dossier lists 'Exelon's utilities' among PJM transmission co-awardees; the two do not compete for load.",
+     "source": "Dominion Energy dossier (v1) — PJM board approves $11.8B transmission plan (Utility Dive)",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Electric transmission — the Loudoun Reliability Loop, the 765 kV backbone and the Heritage–Mosby HVDC link",
+     "date": "",
+     "text": "The corpus's other transmission owners (AEP, FirstEnergy, Exelon's utilities) appear only as PJM co-awardees; Dominion is the transmission owner for the corridor where the load is, which is why its lines carry the corridor's connection dates.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dominion-energy",
    "b": "form-energy",
    "curated": {
     "b": {
@@ -27199,6 +28008,23 @@
   },
   {
    "a": "enchanted-rock",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Enchanted Rock supplies the gas-fired resilience generation for ComEd's Bronzeville community microgrid (selected 2021), the utility-partner route in Enchanted Rock's model alongside Entergy's 'Power Through'.",
+     "context": "Recorded from the corpus's Enchanted Rock dossier and its cited PRNewswire release.",
+     "source": "Enchanted Rock dossier (v4) — ComEd selects Enchanted Rock for the Bronzeville Community Microgrid",
+     "status": "active",
+     "since": "2021",
+     "via": "ComEd Bronzeville community microgrid"
+    }
+   },
+   "evid": [],
+   "last": "2021"
+  },
+  {
+   "a": "enchanted-rock",
    "b": "fluidstack",
    "evid": [
     {
@@ -29104,6 +29930,53 @@
   },
   {
    "a": "equinix",
+   "b": "exelon",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Equinix's 700 MW Minooka project holds a ComEd TSA accepted March 10, 2026; EEI's September 2026 list carries it as the ComEd example of the instrument.",
+     "context": "CBRE's H2 2025 Chicago report (per the CyrusOne and Prime dossiers) lists Equinix's Minooka campus among the fully leased Chicago-market sites while noting ComEd delivery delays 'until 2032 or later' market-wide.",
+     "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "700 MW Minooka, Illinois",
+     "via": "ComEd transmission security agreement (ER26-3101)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Exelon as the corpus's wires-only counterparty: the utility that connects the most data-center load in PJM outside Dominion and owns none of the generation or storage that serves it, so the storage and gas sellers in this file do not sell to Exelon today — they sell to the developers who hold its transmission security agreements (PowerHouse, Tract, Equinix, QTS, Aligned, Amazon), to the Illinois Power Agency's Indexed Storage Credit procurements (600 MW awarded September 1, 2026 toward 3,000 MW by 2030, 80 MW of it in the ComEd zone), and to Maryland's Next Generation Energy Act solicitations.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · ComEd regulated delivery service and the large-load framework — Rider DE / LDPAC deposits (ICC 25-0677/25-0679) and FERC transmission security agreements",
+     "date": "",
+     "text": "FERC accepted Karis Critical (about 500 MW, ER26-3087) on February 17, 2026 and Equinix (ER26-3101), Grundy County Power NR I — Tract's Morris park (ER26-3100), PowerHouse Hillwood Holding (ER26-3104) and QTS Investment Properties Chicago (ER26-3102) on March 10, 2026, after Aligned Data Centers, Monarch Rock Air (about 1,200 MW) and Red Energy Partners (ER26-841), applying the Mobile-Sierra presumption over the Illinois attorney general's protest that 'the safeguards in the TSA do not prevent existing customers from paying the costs'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+     "date": "",
+     "text": "Named projects on the record: PowerHouse Hillwood's Joliet Technology Center (1.8 GW, about $20B, 795 acres, 24 buildings in four phases; annexed 8–1 on March 19, 2026); Tract's Morris Technology Park (about 1 GW; first power June 2028); Equinix at Minooka (700 MW, EEI); QTS Investment Properties Chicago; Karis Critical (about 500 MW); Monarch Rock Air (about 1,200 MW); Aligned; Red Energy Partners; Compass Datacenters' $10B Hoffman Estates campus (Building 1 topped out February 2026; the developer withdrew a rezoning request in July 2026); Stream Data Centers at Elk Grove Village (260 MW; ComEd substation groundbreaking September 2025); CyrusOne's 480 MW Yorkville campus and Aurora site; Prime Data Centers' 270 MW ORD01; Amazon at Falls Township ($20B of planned Pennsylvania data centers, EEI); Pepco Holdings' 34 active projects and 13 GW of potential (March 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-10",
+     "text": "FERC accepts five ComEd TSAs — Equinix, Grundy County Power (Tract, Morris), Karis Critical (February 17), PowerHouse Hillwood and QTS — under Mobile-Sierra, over the Illinois attorney general's protest — The TSA becomes precedent; Commissioner Chang's cost-shift concurrence becomes the dissent to watch.",
+     "src": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-10"
+  },
+  {
+   "a": "equinix",
    "b": "flex",
    "curated": {
     "b": {
@@ -30422,6 +31295,293 @@
    },
    "evid": [],
    "last": "2019-05"
+  },
+  {
+   "a": "exelon",
+   "b": "invenergy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Invenergy is Exelon's development partner twice over: co-developer, builder and operator of the ACE-owned 500 MW Pittsgrove battery petitioned to the NJ BPU in July 2026, and ComEd's partner on about $1.9B of MISO Tranche 2.1 competitive transmission bids in Illinois (May 2026) with two more Iowa bids decided in Q4 2026.",
+     "context": "Invenergy is also We Energies' build-transfer developer (WEC dossier) — the same developer-as-equipment-selector pattern.",
+     "source": "https://njbiz.com/atlantic-city-electric-500mw-battery-project-salem/",
+     "status": "announced",
+     "since": "2026-05",
+     "scale": "ACE 500 MW / 4-hr BESS (~$1B); ~$1.9B of MISO Tranche 2.1 bids",
+     "via": "ACE Pittsgrove storage partnership; ComEd competitive transmission bids"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Owning no plants, Exelon buys none of the batteries and turbines its load requires — but it is asking to: Atlantic City Electric filed for a 500 MW / four-hour, roughly $1B utility-owned battery at Pittsgrove with Invenergy in July 2026, BGE and Pepco filed batteries into Maryland's storage solicitations, and Butler's campaign for 'utility-owned generation ...",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The exception that would change this is the Atlantic City Electric petition of July 24, 2026 — a 500 MW / four-hour, about $1B ACE-owned rate-based battery at Pittsgrove Township developed, built and operated with Invenergy, with a NJ BPU decision targeted for February 2027 — and behind it the legislative campaign (Maryland's HB 1561 'utility-owned backstop', the CRA report, Butler's 'if the merchant, independent guys won't build, we will' as voiced by Pepco Holdings' Anthony) that would make Exelon a direct buyer of storage and dispatchable capacity for the first time since 2022.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "If Pittsgrove is approved, Invenergy — not Exelon — selects the battery, as at We Energies' build-transfer projects.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Transmission — $41.7B of 2026–2029 capital, transmission rate base growing 16 percent a year, $12–17B of upside, MISO Tranche 2.1 with Invenergy",
+     "date": "",
+     "text": "In MISO, FERC's August 14, 2026 order approved cost allocation for Tranche 2.1 facilities built in PJM and assigned ComEd about $904M of projects, ComEd bid about $1.9B of Illinois Tranche 2.1 projects with Invenergy, and two more competitive bids (the MARS and EASL projects in Iowa) have results due in the fourth quarter of 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-owned storage and the generation campaign — ACE's 500 MW Pittsgrove battery with Invenergy, Maryland's storage solicitations, Illinois's 3 GW procurement, and the PJM argument",
+     "date": "",
+     "text": "Atlantic City Electric changed the first half of that on July 24, 2026 by petitioning the New Jersey BPU (Utility Dive cites Docket 2114561) for a 500 MW / four-hour battery on ACE-owned land at Pittsgrove Township, Salem County — an ACE-owned, rate-based asset developed, built and operated with Invenergy at about $1B, in service late 2030, with federal tax credits and PJM capacity and energy revenues offsetting about 70 percent of cost, more than $700M of claimed net customer benefit ($1.36 per $1), no bill impact for the first five years, a 9.6 percent base ROE with performance incentives, and a decision targeted for February 2027 (Butler: 'final order anticipated H1 2027'); no battery supplier is named.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-owned storage and the generation campaign — ACE's 500 MW Pittsgrove battery with Invenergy, Maryland's storage solicitations, Illinois's 3 GW procurement, and the PJM argument",
+     "date": "",
+     "text": "The corpus's first wires-only utility trying to become a storage owner — Pittsgrove would be the largest utility-owned battery in PJM's Mid-Atlantic if approved — while every other Exelon-zone battery is bought by a state agency or a developer; the equipment door, if it opens, is Invenergy's.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-24",
+     "text": "ComEd files a FERC notice of cancellation of the PowerHouse Hillwood Joliet TSA (and cancels the pending ICC retail agreement) over the timing of the security deposit; the same day Atlantic City Electric petitions the NJ BPU for a 500 MW / four-hour, ~$1B ACE-owned battery at Pittsgrove with Invenergy — One door closes on a developer, another opens for a storage supplier.",
+     "src": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-06",
+     "text": "Q1 2026: adjusted operating EPS $0.91 (GAAP $0.90; consensus $0.87–0.88); capital plan raised to $41.7B by adding $1.5B of transmission while cutting $350M of distribution and deferring $1.1B at PECO and BGE; 18 GW high-probability, 43 GW under study; ~$1.9B of MISO Tranche 2.1 bids with Invenergy — 'Leaning into transmission areas with strong visibility and clear need.'",
+     "src": "https://www.exeloncorp.com/newsroom/exelon-reports-first-quarter-2026-results",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-24"
+  },
+  {
+   "a": "exelon",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Microsoft is not a ComEd counterparty in the 2026 FERC disputes — its August 21, 2026 protest concerns ATC and We Energies in Wisconsin — and no 2026 source names it as an Exelon-territory data-center customer; DeKalb-area attributions (near ComEd's KARE project) are unverified.",
+     "context": "Recorded to correct a common conflation in coverage of the August 2026 FERC filings.",
+     "source": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "exelon",
+   "b": "powerhouse-data-centers",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "PowerHouse Hillwood Holding — the PowerHouse Data Centers / Hillwood joint venture behind the 795-acre, 24-building Joliet campus — holds the ComEd TSA FERC accepted on March 10, 2026, which ComEd moved to cancel on July 24 over the timing and form of the security deposit (a $1 letter of credit); FERC rejected the cancellation on September 22, 2026 and the contract question is before the Northern District of Illinois.",
+     "context": "The corpus's PowerHouse dossier (v2) carried the cancellation, the August 14 FERC challenge and the federal suit, and listed 'FERC's ruling on the ComEd cancellation' as an indicator to watch; that ruling — the notice rejected, jurisdiction declined over the credit clause — is recorded there with this push (v3). Utility Dive's framing that the Joliet project was 'classified as speculative under new vetting process' is the article's; no ComEd statement was found. The cancellation filing's docket is reported as ER26-3257 (tftc.io) and ER26-1032 (Construction Review Online) — both recorded.",
+     "source": "https://www.utilitydive.com/news/ferc-exelon-comed-powerhouse-hillwood-data-center/831127/",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "1.8 GW / ~$20B Joliet Technology Center",
+     "via": "ComEd transmission security agreement (ER26-3104)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "ComEd (Exelon) is Joliet's utility under a transmission security agreement accepted by FERC in March 2026, cancelled by ComEd on 24 July 2026 over the timing and form of the initial security, and kept in force by FERC's 22 September 2026 order rejecting the cancellation — with the USD 1 letter-of-credit question left to the Northern District of Illinois.",
+     "context": "The Exelon dossier carries the utility's framework: ICC deposit rules at 50 MW and FERC-jurisdictional TSAs with ramp, readiness, credit, committed-revenue, shortfall and termination-fee terms; Utility Dive's suggestion that Joliet was 'classified as speculative under new vetting process' is the article's framing, and no ComEd statement on the cancellation was found.",
+     "source": "https://www.utilitydive.com/news/ferc-exelon-comed-powerhouse-hillwood-data-center/831127/",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "1.8 GW Joliet Technology Center TSA (ER26-3104)",
+     "via": "ComEd transmission security agreement"
+    }
+   },
+   "evid": [],
+   "last": "2026-03"
+  },
+  {
+   "a": "exelon",
+   "b": "prime-data-centers",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Prime Data Centers' ORD01 campus in Elk Grove Village (270 MW; CoreWeave's Chicago landlord) is ComEd-served with an adjacent substation and a 275 MVA on-site build.",
+     "context": "Recorded from the corpus's Prime Data Centers dossier, which notes ComEd delivery delays 'until 2032 or later' market-wide with Prime's campus already served.",
+     "source": "Prime Data Centers dossier (v3) — ORD01, ComEd",
+     "status": "active",
+     "scale": "ORD01 270 MW, Elk Grove Village",
+     "via": "ComEd service with an adjacent substation"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+     "date": "",
+     "text": "Named projects on the record: PowerHouse Hillwood's Joliet Technology Center (1.8 GW, about $20B, 795 acres, 24 buildings in four phases; annexed 8–1 on March 19, 2026); Tract's Morris Technology Park (about 1 GW; first power June 2028); Equinix at Minooka (700 MW, EEI); QTS Investment Properties Chicago; Karis Critical (about 500 MW); Monarch Rock Air (about 1,200 MW); Aligned; Red Energy Partners; Compass Datacenters' $10B Hoffman Estates campus (Building 1 topped out February 2026; the developer withdrew a rezoning request in July 2026); Stream Data Centers at Elk Grove Village (260 MW; ComEd substation groundbreaking September 2025); CyrusOne's 480 MW Yorkville campus and Aurora site; Prime Data Centers' 270 MW ORD01; Amazon at Falls Township ($20B of planned Pennsylvania data centers, EEI); Pepco Holdings' 34 active projects and 13 GW of potential (March 2026).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "exelon",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "QTS Investment Properties Chicago holds a ComEd TSA accepted March 10, 2026; megawatts and site are not stated in the sources read.",
+     "context": "Recorded from Utility Dive's account of the March 10 FERC order.",
+     "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+     "status": "active",
+     "since": "2026-03",
+     "via": "ComEd transmission security agreement (QTS Investment Properties Chicago, ER26-3102)"
+    }
+   },
+   "evid": [],
+   "last": "2026-03"
+  },
+  {
+   "a": "exelon",
+   "b": "sargent-lundy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Sargent & Lundy engineered BGE's Key Crossing Reliability Initiative (397-foot monopoles, 'the tallest in the Americas') and held a 2002 multi-year engineer-of-choice contract for Exelon's then 17 nuclear units; Exelon was a 2020 top-ten nuclear services client before the Constellation spin.",
+     "context": "Recorded from the corpus's Sargent & Lundy dossier.",
+     "source": "Sargent & Lundy dossier (v2) — Key Crossing Reliability Initiative; Exelon engineer-of-choice contract",
+     "status": "active",
+     "via": "BGE Key Crossing Reliability Initiative; historical engineer-of-choice contract"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Transmission — $41.7B of 2026–2029 capital, transmission rate base growing 16 percent a year, $12–17B of upside, MISO Tranche 2.1 with Invenergy",
+     "date": "",
+     "text": "Named 2026 work: ComEd's KARE 345 kV line and substation near DeKalb (ICC certificate August 24, 2026), a $590M Champlain substation upgrade (PJM TEAC, September 2025), three new Chicago substations and two in northern Illinois in the 2028–2031 grid plan, and BGE's Key Crossing Reliability Initiative (397-foot monopoles, with Sargent & Lundy).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Second, nuclear: TVA's owner's engineer and detailed-design lead for the Clinch River BWRX-300 alongside Bechtel and GE Vernova Hitachi; NRC-inspected design packages for the Palisades restart and the Dow / X-energy Xe-100 site; the 2020 top-ten nuclear services clients read TVA, Exelon, Dominion, PSEG, AEP, DTE, Xcel Energy, Southern Nuclear, APS and Ameren.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "exelon",
+   "b": "talen-energy",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Exelon and AEP filed the protest that led FERC to reject the amended Talen–Amazon Susquehanna interconnection agreement on November 1, 2024 — the corpus's founding co-location dispute.",
+     "context": "The Talen dossier records Exelon as co-protestant; Exelon's formal 2026 position in the successor docket was not found.",
+     "source": "Talen Energy dossier (v2) — FERC order rejecting the amended Susquehanna ISA (Exelon and AEP protest)",
+     "status": "historical",
+     "since": "2024-06"
+    }
+   },
+   "evid": [],
+   "last": "2024-06"
+  },
+  {
+   "a": "exelon",
+   "b": "tract",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Tract's Morris, Illinois park holds a ComEd TSA through its project company Grundy County Power NR I, LLC — accepted by FERC on March 10, 2026 per Utility Dive and announced by Tract in April — carrying 'committed revenue contributions, minimum usage commitments, and shortfall payments for underperformance'; ComEd CEO Gil Quiniones was quoted in Tract's release.",
+     "context": "The Tract dossier records the acceptance as 'April 2026' from Tract's announcement; the FERC acceptance date per Utility Dive is March 10, 2026 — the dossier is revised to carry both with this push. Tract is simultaneously NV Energy's litigation counterparty in Nevada (see the Berkshire Hathaway Energy dossier).",
+     "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "~1 GW Morris Technology Park; first power June 2028",
+     "via": "ComEd transmission security agreement (Grundy County Power NR I, ER26-3100)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "ComEd (Exelon) is the Morris park's utility under a transmission security agreement accepted by FERC on 10 March 2026 (announced by Tract in April) — one of six active ComEd TSAs backed by more than USD 1 billion of letters of credit as of September 2026.",
+     "context": "The Exelon dossier records the instrument's terms (ramp, readiness, credit, committed revenue, shortfall payments, termination-fee schedule) and its live test: ComEd's cancellation of PowerHouse's Joliet agreement over a USD 1 letter of credit, rejected by FERC on 22 September 2026 with the credit question sent to federal court. Tract's own agreement is not in dispute.",
+     "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "1 GW Morris Technology Park; first power June 2028",
+     "via": "ComEd transmission security agreement (Grundy County Power NR I, ER26-3100)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Exelon as the corpus's wires-only counterparty: the utility that connects the most data-center load in PJM outside Dominion and owns none of the generation or storage that serves it, so the storage and gas sellers in this file do not sell to Exelon today — they sell to the developers who hold its transmission security agreements (PowerHouse, Tract, Equinix, QTS, Aligned, Amazon), to the Illinois Power Agency's Indexed Storage Credit procurements (600 MW awarded September 1, 2026 toward 3,000 MW by 2030, 80 MW of it in the ComEd zone), and to Maryland's Next Generation Energy Act solicitations.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · ComEd regulated delivery service and the large-load framework — Rider DE / LDPAC deposits (ICC 25-0677/25-0679) and FERC transmission security agreements",
+     "date": "",
+     "text": "FERC accepted Karis Critical (about 500 MW, ER26-3087) on February 17, 2026 and Equinix (ER26-3101), Grundy County Power NR I — Tract's Morris park (ER26-3100), PowerHouse Hillwood Holding (ER26-3104) and QTS Investment Properties Chicago (ER26-3102) on March 10, 2026, after Aligned Data Centers, Monarch Rock Air (about 1,200 MW) and Red Energy Partners (ER26-841), applying the Mobile-Sierra presumption over the Illinois attorney general's protest that 'the safeguards in the TSA do not prevent existing customers from paying the costs'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+     "date": "",
+     "text": "Named projects on the record: PowerHouse Hillwood's Joliet Technology Center (1.8 GW, about $20B, 795 acres, 24 buildings in four phases; annexed 8–1 on March 19, 2026); Tract's Morris Technology Park (about 1 GW; first power June 2028); Equinix at Minooka (700 MW, EEI); QTS Investment Properties Chicago; Karis Critical (about 500 MW); Monarch Rock Air (about 1,200 MW); Aligned; Red Energy Partners; Compass Datacenters' $10B Hoffman Estates campus (Building 1 topped out February 2026; the developer withdrew a rezoning request in July 2026); Stream Data Centers at Elk Grove Village (260 MW; ComEd substation groundbreaking September 2025); CyrusOne's 480 MW Yorkville campus and Aurora site; Prime Data Centers' 270 MW ORD01; Amazon at Falls Township ($20B of planned Pennsylvania data centers, EEI); Pepco Holdings' 34 active projects and 13 GW of potential (March 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-10",
+     "text": "FERC accepts five ComEd TSAs — Equinix, Grundy County Power (Tract, Morris), Karis Critical (February 17), PowerHouse Hillwood and QTS — under Mobile-Sierra, over the Illinois attorney general's protest — The TSA becomes precedent; Commissioner Chang's cost-shift concurrence becomes the dissent to watch.",
+     "src": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-10"
+  },
+  {
+   "a": "exelon",
+   "b": "vistra",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Vistra's 1,320 MW Fairless gas plant is reported by Utility Dive as the power source behind PECO's Amazon Falls Township TSA, and Vistra protested PJM's co-location package (March 2026) that Exelon and AEP had pushed for — the two are on opposite sides of the co-location docket without a direct commercial relationship.",
+     "context": "Recorded from Utility Dive's November 2025 and March 2026 coverage; the Vistra dossier records the co-location split the same way.",
+     "source": "https://www.utilitydive.com/news/exelon-data-center-amazon-earnings-maryland/804720/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-21",
+     "text": "FERC accepts PECO's transmission security agreement with Amazon Data Services for Falls Township, Pennsylvania — the first Exelon TSA — over PJM's market monitor; Utility Dive reports power from Vistra's 1,320 MW Fairless plant — The instrument's debut was in Pennsylvania, not Illinois.",
+     "src": "https://www.utilitydive.com/news/ferc-peco-amazon-data-center-transmission-agreement/806254/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-21"
   },
   {
    "a": "fermi-america",

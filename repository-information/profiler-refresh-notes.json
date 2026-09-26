@@ -1988,6 +1988,30 @@
     "The unfiled ~1,400 MW balance of the 2,130 MW battery plan and the Invenergy Brillion gas pair (Union Depot 750 MW, Forest Junction 1,200 MW; PSC application expected October 2026 per the Invenergy dossier, not in WEC's September book)",
     "Wisconsin's 2026 governor's race and any data-center statute; the Peoples Gas rate order (December 2026)"
    ]
+  },
+  "berkshire-hathaway-energy": {
+   "source": "Wholly owned by Berkshire Hathaway — no earnings call, no consensus, no company-confirmed dates. BHE files its own combined Form 10-Q (with PacifiCorp, MidAmerican, Nevada Power, Sierra Pacific, Eastern Energy Gas) in the same week Berkshire posts its quarterly results: the Q3 2025 10-Q was filed Friday October 31, 2025 and Berkshire's release came Saturday November 1 (announced October 29). Pattern for Q3 2026: BHE 10-Q about Friday November 6 with Berkshire's release Saturday November 7 (first Saturday of November) — the row date is the inferred 10-Q date, unconfirmed. Read the BHE segment in Berkshire's news release (berkshirehathaway.com/news) and the BHE 10-Q via brkenergy.com/assets (its HTML pages are WAF-blocked; SEC hosts are blocked to the sandbox). The 2026 investor presentation (berkshirehathaway.com/bhenergy) is the richest first-party source and is typically refreshed in the spring.",
+   "watch": [
+    "PUCN order on NV Energy's 2026 IRP (Docket 26-05007) — statutory deadline December 2, 2026 — and on the form LLESA (deemed-approval request September 18): the minimum demand/energy percentages, the customer-specific generation charge and the security calculation the customers reserved in Exhibit G; orders in the five customer dockets 26-05026 to 26-05030 (Amazon, Fleet/Tract, Vantage NV11, Novva, Prologis)",
+    "NV Energy v. Tract Capital Management (Washoe County CV26-02142) — the forum question, Tract's arbitration and its motion to disqualify counsel; Fleet's temporary plants (26-04026/27) construction start early 2027 and NDEP permits",
+    "The PUCN's instrument under EO 2026-005 and the Office of Energy's 'Responsible Speed to Power Plan' due December 31, 2026; any 2027 Nevada large-load statute",
+    "PacifiCorp: the Oregon Supreme Court's James argument November 3, 2026 and decision; the AWS complaint at the OPUC and Schedule 401; the Utah SB 132 contract approval and counterparty; Washington sale approvals (WUTC, OPUC, FERC) toward an H1 2027 close; S&P's rating action",
+    "Any OEM disclosure: Fort Churchill turbines (2030–2032), Sierra Solar's battery supplier, Fleet's containerized engines; NV Energy's Valmy peaker decision (400 MW, 2028); MidAmerican's peaker size (520 vs ~700 MW) and IUC approval",
+    "Group data-center figures in the next investor presentation (the ~11,000 MW contracted, 2,200 MW peak, 4,500–5,700 MW 2030 range) and any BHE Renewables behind-the-meter site announcement (1 GW or more)",
+    "Google's Salix, Iowa decision; MidAmerican's gas rate order; Greenlink West energization (2027)"
+   ]
+  },
+  "exelon": {
+   "source": "Company-published dates come as an 'Exelon to announce ... results' newsroom release about three and a half weeks ahead (July 6 for July 30; January 5 for February 12); as of September 26, 2026 no Q3 notice exists in the exeloncorp.com sitemap and investors.exeloncorp.com returned HTTP 503 all session. Trackers: MarketBeat 'estimated' Tuesday November 3, 2026 (Q3 consensus $0.83); Investing.com November 4 ($0.807, revenue $6.82B); the prior-year call was November 4, 2025 — the row date is the tracker estimate, unconfirmed. Read the results release and the Motley Fool transcript (fool.com/earnings/call-transcripts) when the IR site is down; the 8-K deck text is mirrored at stocktitan.net/sec-filings/EXC. The pipeline ladder (TSA / high-probability / under study) is stated on the call, not in the release.",
+   "watch": [
+    "The Q3 2026 ladder: whether the 4 GW under signed TSAs grows with the two September agreements, the reconciliation of ~8 GW (45 percent of 18) to 4 GW while collateral stayed ~$1B, and the ComEd / Mid-Atlantic split",
+    "PowerHouse Hillwood v. ComEd in the Northern District of Illinois — whether a $1 letter of credit satisfied the TSA's initial credit requirement; any FERC rehearing; the form of collateral in the next TSAs",
+    "NJ BPU decision on ACE's 500 MW Pittsgrove battery (~February 2027) and any named supplier; Maryland's transmission-connected storage awards and PC 74 Round 2 results; HB 1561 or its successor",
+    "ICC order on ComEd's $15.3B 2028–2031 grid plan (December 15, 2026); the LDPAC investigation's outcome; the POWER Act (HB 5513) in the October 2026 veto session; the IPA's 2027 storage procurement",
+    "Maryland PC72 large-load rate-schedule terms and decisions; BGE Case 9888 (January 2027); the FERC RTO-adder complaint; PECO's large-load tariff filing and its next rate case; New Jersey A796 signature; Delaware GS-LL final order",
+    "PJM's December 2026 auction and FERC's action on the large-load show-cause responses (mid-November 2026) and the co-location package; MISO Tranche 2.1 MARS/EASL bid results (Q4 2026)",
+    "Leadership: Kleczynski's first call as CFO (Q3 2026); PECO's permanent CEO; Oddoye at Pepco Holdings"
+   ]
   }
  }
 }

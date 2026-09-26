@@ -22,6 +22,12 @@
    "tier": "watch"
   },
   {
+   "slug": "albemarle",
+   "nextReport": "2026-11-04",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-09"
+  },
+  {
    "slug": "aligned",
    "cadence": "quarterly",
    "lastRefreshed": "2026-08-30",
@@ -34,10 +40,28 @@
    "lastRefreshed": "2026-08-30"
   },
   {
+   "slug": "amd",
+   "nextReport": "2026-11-03",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-08"
+  },
+  {
+   "slug": "amperesand",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-19",
+   "tier": "core"
+  },
+  {
    "slug": "anthropic",
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-05",
    "tier": "core"
+  },
+  {
+   "slug": "aon",
+   "nextReport": "2026-10-30",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-09"
   },
   {
    "slug": "apex-clean-energy",
@@ -76,10 +100,22 @@
    "tier": "core"
   },
   {
+   "slug": "berkshire-hathaway-energy",
+   "nextReport": "2026-11-06",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-26"
+  },
+  {
    "slug": "black-veatch",
    "cadence": "quarterly",
    "lastRefreshed": "2026-08-30",
    "tier": "core"
+  },
+  {
+   "slug": "blackstone",
+   "nextReport": "2026-10-22",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-06"
   },
   {
    "slug": "blattner",
@@ -94,6 +130,12 @@
    "lastRefreshed": "2026-09-06"
   },
   {
+   "slug": "brookfield",
+   "nextReport": "2026-11-07",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-06"
+  },
+  {
    "slug": "burns-mcdonnell",
    "cadence": "quarterly",
    "lastRefreshed": "2026-08-30",
@@ -104,6 +146,12 @@
    "nextReport": "2026-10-31",
    "confirmed": false,
    "lastRefreshed": "2026-09-08"
+  },
+  {
+   "slug": "calb",
+   "nextReport": "2027-03-26",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-09"
   },
   {
    "slug": "canadian-solar",
@@ -166,6 +214,12 @@
    "lastRefreshed": "2026-09-06"
   },
   {
+   "slug": "cornex",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-13",
+   "tier": "core"
+  },
+  {
    "slug": "crrc-zhuzhou",
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-06",
@@ -178,16 +232,40 @@
    "tier": "core"
   },
   {
+   "slug": "csa-group",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-08",
+   "tier": "watch"
+  },
+  {
    "slug": "cummins",
    "nextReport": "2026-10-29",
    "confirmed": false,
    "lastRefreshed": "2026-09-04"
   },
   {
+   "slug": "cyrusone",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-06",
+   "tier": "core"
+  },
+  {
    "slug": "delta-electronics",
    "nextReport": "2026-11-13",
    "confirmed": false,
    "lastRefreshed": "2026-09-23"
+  },
+  {
+   "slug": "dg-matrix",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-19",
+   "tier": "core"
+  },
+  {
+   "slug": "digital-realty",
+   "nextReport": "2026-10-22",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-06"
   },
   {
    "slug": "dnv",
@@ -206,6 +284,18 @@
    "cadence": "quarterly",
    "lastRefreshed": "2026-08-30",
    "tier": "core"
+  },
+  {
+   "slug": "dte-energy",
+   "nextReport": "2026-10-22",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-26"
+  },
+  {
+   "slug": "duke-energy",
+   "nextReport": "2026-11-05",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-26"
   },
   {
    "slug": "eaton",
@@ -274,6 +364,12 @@
    "tier": "watch"
   },
   {
+   "slug": "exelon",
+   "nextReport": "2026-11-03",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-26"
+  },
+  {
    "slug": "fermi-america",
    "nextReport": "2026-11-12",
    "confirmed": false,
@@ -328,10 +424,46 @@
    "lastRefreshed": "2026-09-06"
   },
   {
+   "slug": "gotion",
+   "nextReport": "2026-10-28",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-06"
+  },
+  {
+   "slug": "great-power",
+   "nextReport": "2027-04-28",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-09"
+  },
+  {
+   "slug": "grid-united",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-12",
+   "tier": "core"
+  },
+  {
+   "slug": "gridmatic",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-24",
+   "tier": "watch"
+  },
+  {
    "slug": "gridstor",
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-05",
    "tier": "watch"
+  },
+  {
+   "slug": "habitat-energy",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-24",
+   "tier": "watch"
+  },
+  {
+   "slug": "heron-power",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-12",
+   "tier": "core"
   },
   {
    "slug": "hitachi-energy",
@@ -394,6 +526,12 @@
    "tier": "core"
   },
   {
+   "slug": "intertek",
+   "nextReport": "2026-10-01",
+   "confirmed": true,
+   "lastRefreshed": "2026-09-24"
+  },
+  {
    "slug": "invenergy",
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-05",
@@ -430,6 +568,12 @@
    "tier": "core"
   },
   {
+   "slug": "kwh-analytics",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-08",
+   "tier": "watch"
+  },
+  {
    "slug": "lambda",
    "cadence": "quarterly",
    "lastRefreshed": "2026-08-30",
@@ -460,10 +604,22 @@
    "tier": "core"
   },
   {
+   "slug": "macquarie",
+   "nextReport": "2026-11-06",
+   "confirmed": true,
+   "lastRefreshed": "2026-09-06"
+  },
+  {
    "slug": "mainspring-energy",
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-06",
    "tier": "watch"
+  },
+  {
+   "slug": "marsh-mclennan",
+   "nextReport": "2026-10-15",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-09"
   },
   {
    "slug": "mastec",
@@ -502,6 +658,12 @@
    "lastRefreshed": "2026-08-30"
   },
   {
+   "slug": "mitra-chem",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-13",
+   "tier": "watch"
+  },
+  {
    "slug": "mitsubishi-electric",
    "nextReport": "2026-10-29",
    "confirmed": false,
@@ -536,6 +698,18 @@
    "nextReport": "2026-10-27",
    "confirmed": false,
    "lastRefreshed": "2026-09-06"
+  },
+  {
+   "slug": "novonix",
+   "nextReport": "2026-10-29",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-22"
+  },
+  {
+   "slug": "novos-power",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-19",
+   "tier": "core"
   },
   {
    "slug": "nrg-energy",
@@ -590,6 +764,12 @@
    "nextReport": "2026-10-30",
    "confirmed": false,
    "lastRefreshed": "2026-08-30"
+  },
+  {
+   "slug": "pattern-energy",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-12",
+   "tier": "core"
   },
   {
    "slug": "piller",
@@ -670,6 +850,12 @@
    "tier": "core"
   },
   {
+   "slug": "rept",
+   "nextReport": "2027-03-26",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-06"
+  },
+  {
    "slug": "rolls-royce-power-systems",
    "nextReport": "2026-11-12",
    "confirmed": false,
@@ -748,6 +934,12 @@
    "tier": "core"
   },
   {
+   "slug": "stem",
+   "nextReport": "2026-11-04",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-09"
+  },
+  {
    "slug": "strata-clean-energy",
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-05",
@@ -764,6 +956,12 @@
    "nextReport": "2026-10-30",
    "confirmed": false,
    "lastRefreshed": "2026-09-06"
+  },
+  {
+   "slug": "supermicro",
+   "nextReport": "2026-11-03",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-08"
   },
   {
    "slug": "switch",
@@ -820,6 +1018,12 @@
    "tier": "core"
   },
   {
+   "slug": "ul-solutions",
+   "nextReport": "2026-11-03",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-09"
+  },
+  {
    "slug": "vantage",
    "cadence": "quarterly",
    "lastRefreshed": "2026-08-30",
@@ -856,6 +1060,18 @@
    "lastRefreshed": "2026-08-30"
   },
   {
+   "slug": "wec-energy",
+   "nextReport": "2026-10-29",
+   "confirmed": true,
+   "lastRefreshed": "2026-09-26"
+  },
+  {
+   "slug": "whiting-turner",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-06",
+   "tier": "watch"
+  },
+  {
    "slug": "x-energy",
    "nextReport": "2026-11-13",
    "confirmed": false,
@@ -878,210 +1094,6 @@
    "nextReport": "2026-10-30",
    "confirmed": false,
    "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "digital-realty",
-   "nextReport": "2026-10-22",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "cyrusone",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "core"
-  },
-  {
-   "slug": "blackstone",
-   "nextReport": "2026-10-22",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "brookfield",
-   "nextReport": "2026-11-07",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "macquarie",
-   "nextReport": "2026-11-06",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "gotion",
-   "nextReport": "2026-10-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "rept",
-   "nextReport": "2027-03-26",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-06"
-  },
-  {
-   "slug": "whiting-turner",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-06",
-   "tier": "watch"
-  },
-  {
-   "slug": "amd",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "supermicro",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-08"
-  },
-  {
-   "slug": "kwh-analytics",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-08",
-   "tier": "watch"
-  },
-  {
-   "slug": "csa-group",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-08",
-   "tier": "watch"
-  },
-  {
-   "slug": "marsh-mclennan",
-   "nextReport": "2026-10-15",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "aon",
-   "nextReport": "2026-10-30",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "stem",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "ul-solutions",
-   "nextReport": "2026-11-03",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "intertek",
-   "nextReport": "2026-10-01",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-24"
-  },
-  {
-   "slug": "albemarle",
-   "nextReport": "2026-11-04",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "novonix",
-   "nextReport": "2026-10-29",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-22"
-  },
-  {
-   "slug": "calb",
-   "nextReport": "2027-03-26",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "great-power",
-   "nextReport": "2027-04-28",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-09"
-  },
-  {
-   "slug": "heron-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "habitat-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-24",
-   "tier": "watch"
-  },
-  {
-   "slug": "gridmatic",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-24",
-   "tier": "watch"
-  },
-  {
-   "slug": "grid-united",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "pattern-energy",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-12",
-   "tier": "core"
-  },
-  {
-   "slug": "mitra-chem",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-13",
-   "tier": "watch"
-  },
-  {
-   "slug": "cornex",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-13",
-   "tier": "core"
-  },
-  {
-   "slug": "amperesand",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-19",
-   "tier": "core"
-  },
-  {
-   "slug": "dg-matrix",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-19",
-   "tier": "core"
-  },
-  {
-   "slug": "novos-power",
-   "cadence": "quarterly",
-   "lastRefreshed": "2026-09-19",
-   "tier": "core"
-  },
-  {
-   "slug": "duke-energy",
-   "nextReport": "2026-11-05",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "dte-energy",
-   "nextReport": "2026-10-22",
-   "confirmed": false,
-   "lastRefreshed": "2026-09-26"
-  },
-  {
-   "slug": "wec-energy",
-   "nextReport": "2026-10-29",
-   "confirmed": true,
-   "lastRefreshed": "2026-09-26"
   }
  ]
 }

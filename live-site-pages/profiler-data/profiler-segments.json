@@ -1356,6 +1356,11 @@
      "slug": "wec-energy",
      "role": "adjacent",
      "basis": "productsAndServices › Utility-owned battery storage: 2,130 MW ($2.9B) in the 2026–2030 plan bought build-transfer from Invenergy — a rate-based owner"
+    },
+    {
+     "slug": "berkshire-hathaway-energy",
+     "role": "adjacent",
+     "basis": "productsAndServices › NV Energy 2026 IRP supply plan: the tolling counterparty on 5,405 MW of new battery PPAs plus owned Reid Gardner (220 MW / 440 MWh) and Sierra Solar (400 MW / 1,600 MWh); PacifiCorp's 4,154 MW of lithium and 523 MW of iron-air proxies by 2045 — a contracting buyer, not a developer"
     }
    ]
   },
@@ -1734,6 +1739,16 @@
      "slug": "wec-energy",
      "role": "incumbent",
      "basis": "ecosystemRole: the corpus's cleanest example of the bespoke-resource model — the data-center customer subscribes to specific new generation and the utility builds and owns it"
+    },
+    {
+     "slug": "berkshire-hathaway-energy",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the corpus's PPA-side utility buyer — NV Energy's 5,405 MW of new batteries and 4,370 MW of solar all under PPAs; the 25 MW LLESA framework; MidAmerican's ten-year load commitment agreements; ~11,000 MW of contracted data-center load group-wide"
+    },
+    {
+     "slug": "exelon",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the corpus's largest wires-only utility and the inventor of the transmission security agreement — six ComEd TSAs, >$1B of collateral, 4 GW under signed TSAs of an 11 GW high-probability book; owns no generation or storage today"
     }
    ]
   },

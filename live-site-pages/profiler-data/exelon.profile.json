@@ -1,0 +1,1579 @@
+{
+ "schemaVersion": 7,
+ "slug": "exelon",
+ "name": "Exelon Corporation",
+ "shortName": "Exelon",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.exeloncorp.com",
+ "headquarters": "Chicago, IL, USA",
+ "founded": 2000,
+ "employees": "20,571 at December 31, 2025 (FY2025 Form 10-K: ComEd 6,688; PECO 3,169; BGE 3,383; PHI 4,422; balance at Exelon Business Services); 'approximately 20,000' on exeloncorp.com",
+ "ownership": {
+  "type": "public",
+  "ticker": "Nasdaq: EXC"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Exelon is the corpus's largest wires-only utility — six regulated electric and gas distribution companies (ComEd, PECO, BGE, Pepco, Delmarva Power, Atlantic City Electric) serving about 10.7 million customers in PJM with no owned generation since the 2022 Constellation spin — and the utility that invented the transmission security agreement, the FERC-jurisdictional bilateral contract under which a data center posts collateral, accepts a ramp and pays shortfall and termination charges before ComEd builds its interconnection: six ComEd TSAs are active, backed by more than $1B of letters of credit, and the Q2 2026 call cut the 'high-probability' data-center pipeline from 18 GW to 11 GW (4 GW under signed TSAs plus 7 GW pre-TSA, about 9 GW of it ComEd) inside a refined queue of 36 GW because the company 'weeded out speculative projects'. The instrument is now in court: ComEd cancelled the 1.8 GW PowerHouse Hillwood Joliet TSA on July 24, 2026 over a $1 letter of credit, FERC rejected the cancellation on September 22 and sent the contract question to the Northern District of Illinois. Owning no plants, Exelon buys none of the batteries and turbines its load requires — but it is asking to: Atlantic City Electric filed for a 500 MW / four-hour, roughly $1B utility-owned battery at Pittsgrove with Invenergy in July 2026, BGE and Pepco filed batteries into Maryland's storage solicitations, and Butler's campaign for 'utility-owned generation ... as a cost-effective complement' runs through a $9.6–20B Charles River Associates savings estimate and PJM's third consecutive capacity auction at the price cap, 6.8 GW short. BACKGROUND. Chicago; Pennsylvania corporation; Nasdaq: EXC; 20,571 employees. FY2025 GAAP EPS $2.73 and adjusted operating EPS $2.77 on revenue of $24.3B; 2026 guidance $2.81–$2.91 reaffirmed twice with growth 'near the top end' of 5–7 percent through 2029; a $41.7B 2026–2029 capital plan (from $41.3B in February 2026: −$350M of distribution, −$1.1B of PECO and BGE deferrals, +$1.5B of transmission) growing rate base 7.9 percent a year and transmission rate base about 16 percent, with $12–17B of further transmission opportunity not in the plan; equity need $3.4B through 2029, 37 percent priced. ComEd holds about 4.2 million customers in northern Illinois and an all-time peak near 24,000 MW against more than 28,000 MW of large-load requests; the Mid-Atlantic utilities sit in the PJM zones where residential supply costs rose with the auction. Leadership changes on October 5, 2026 (Kleczynski CFO; Jones to Finance and Strategy), a PECO CEO vacancy since April, and Rodney Oddoye's appointment at Pepco Holdings in September. Collection gap: investors.exeloncorp.com returned HTTP 503 on every attempt, so the Q4 2025, Q1 2026 and Q2 2026 earnings decks — the by-utility pipeline split, the TSA-gigawatt reconciliation between 'about 45 percent of 18 GW' (Q4 2025) and '4 GW' (Q2 2026), the capex split by transmission, distribution and gas — were read only through transcripts, the 8-K mirror and Utility Dive; SEC hosts were blocked and the Q2 2026 10-Q was not read; the six operating companies' websites are single-page applications that return no text, so ComEd's own statement on the PowerHouse cancellation, PECO's large-load compliance filing under the PA PUC's model tariff, the Maryland PC72 rate-schedule terms filed September 1, 2026, the ACE battery's BPU docket text and the Q3 2026 earnings date were not found; the ComEd cancellation filing's FERC docket is recorded two ways (ER26-3257 per tftc.io; ER26-1032 per Construction Review Online) against a confirmed TSA docket of ER26-3104.",
+ "ecosystemRole": "We assess Exelon as the corpus's wires-only counterparty: the utility that connects the most data-center load in PJM outside Dominion and owns none of the generation or storage that serves it, so the storage and gas sellers in this file do not sell to Exelon today — they sell to the developers who hold its transmission security agreements (PowerHouse, Tract, Equinix, QTS, Aligned, Amazon), to the Illinois Power Agency's Indexed Storage Credit procurements (600 MW awarded September 1, 2026 toward 3,000 MW by 2030, 80 MW of it in the ComEd zone), and to Maryland's Next Generation Energy Act solicitations. Basis: the FY2025 10-K ('The Registrants do not own generation'), the Q2 2026 call's pipeline ladder, the IPA's procurement results and the CRGA's design, in which ComEd runs a virtual power plant rider rather than buying batteries. The exception that would change this is the Atlantic City Electric petition of July 24, 2026 — a 500 MW / four-hour, about $1B ACE-owned rate-based battery at Pittsgrove Township developed, built and operated with Invenergy, with a NJ BPU decision targeted for February 2027 — and behind it the legislative campaign (Maryland's HB 1561 'utility-owned backstop', the CRA report, Butler's 'if the merchant, independent guys won't build, we will' as voiced by Pepco Holdings' Anthony) that would make Exelon a direct buyer of storage and dispatchable capacity for the first time since 2022. For the hyperscalers and developers in the corpus Exelon is the utility whose contract they sign first: the TSA's ramp, readiness, credit, committed-revenue and termination-fee schedule is the template FERC accepted under Mobile-Sierra over the Illinois attorney general's protest, the ICC's Rider DE deposits ($1M at 50 MW, $500,000 per additional 100 MW above 200 MW, a letter of credit above $2M) are the entry fee, and the PowerHouse Joliet dispute is the live test of what happens when a developer reads the credit clause differently from the utility.",
+ "productsAndServices": [
+  {
+   "name": "ComEd regulated delivery service and the large-load framework — Rider DE / LDPAC deposits (ICC 25-0677/25-0679) and FERC transmission security agreements",
+   "category": "Regulated utility service",
+   "description": "Commonwealth Edison delivers electricity to about 4.2 million customers across 11,450 square miles of northern Illinois (70 percent of the state's population) under Illinois's restructured model — ComEd owns wires, not plants; supply comes from the Illinois Power Agency's procurements or retail suppliers — with an all-time system peak of about 24,000 MW and a multi-year rate plan (2024–2027; the ICC approved a $243M reconciliation increase on December 18, 2025, effective January 1, 2026) succeeded by the $15.3B 2028–2031 Multi-Year Integrated Grid Plan filed January 16, 2026 (Docket 26-0047; order expected December 15, 2026), in which data centers are 47 percent of new substation demand. Its large-load framework has two layers. At the ICC, the March 19, 2026 order in consolidated Dockets 25-0677/25-0679 approved revisions to Rider DE (Rider Distribution System Extension) and the General Terms and Conditions for Large Demand Project Applicants or Customers (LDPAC) — any single request for 50 MW or more of new or increased load within ten years: a $1M deposit for 50–200 MW plus $500,000 for each additional 100 MW above 200 MW, a letter of credit from an A3/A- bank when the deposit exceeds $2M, a two-deposit structure (planning and engineering study; long-lead materials), deposits credited to project costs or retained net of ComEd's costs on cancellation, and Rider DE extended to cover additional distribution construction for standard service; ComEd told the commission it had 75-plus applications totalling more than 28,000 MW. The ICC called the order 'an important first step', ordered a staff-initiated investigation within eight months (by April 23, 2026) into whether LDPACs warrant a separate tariff, whether Riders NS and ZSS need modification alongside Rider DE, and how interconnection costs are assigned, and required ComEd workshops and an annual compliance report from February 1, 2027. At FERC, ComEd's Transmission Security Agreements — bilateral contracts for transmission-connected loads filed since December 19, 2025 — carry 'defined ramp, customer facility readiness obligation, credit obligations, committed revenue contributions, shortfall payments if usage misses commitments, and published termination-fee schedule', with collateral in the form of letters of credit guaranteeing transmission revenue for the first ten years of operation. FERC accepted Karis Critical (about 500 MW, ER26-3087) on February 17, 2026 and Equinix (ER26-3101), Grundy County Power NR I — Tract's Morris park (ER26-3100), PowerHouse Hillwood Holding (ER26-3104) and QTS Investment Properties Chicago (ER26-3102) on March 10, 2026, after Aligned Data Centers, Monarch Rock Air (about 1,200 MW) and Red Energy Partners (ER26-841), applying the Mobile-Sierra presumption over the Illinois attorney general's protest that 'the safeguards in the TSA do not prevent existing customers from paying the costs'. ComEd cancelled the PowerHouse Hillwood TSA (and the pending ICC retail agreement) on July 24, 2026 over the timing and form of the security deposit — PowerHouse posted a $1 letter of credit — and FERC rejected the notice of cancellation on September 22, declining primary jurisdiction over 'the interpretation of ambiguous contract terms involving credit support' and leaving the question to the U.S. District Court for the Northern District of Illinois (Commissioner LaCerte: '$1 ... an embarrassing legal fiction'). On September 16 ComEd signed two more TSAs with unnamed developers: six active, more than $1B of letters of credit, a queue down from about 39 GW in late 2025 to about 25 GW.",
+   "highlights": [
+    "Rider DE / LDPAC (ICC order March 19, 2026): ≥50 MW; $1M deposit + $500,000 per 100 MW above 200 MW; LOC above $2M; two deposits; eight-month ICC investigation; compliance report from February 1, 2027",
+    "Transmission security agreements (FERC): ramp, readiness, credit, committed revenue, shortfall payments, termination-fee schedule; LOCs covering ten years of transmission revenue; six active, >$1B collateral (September 16, 2026)",
+    "Accepted TSAs: Karis ~500 MW; Equinix (Minooka, 700 MW); Grundy County Power / Tract (Morris, ~1 GW); PowerHouse Hillwood (Joliet, 1.8 GW); QTS Chicago; Aligned; Monarch Rock Air ~1,200 MW; Red Energy Partners",
+    "PowerHouse Joliet: cancelled July 24, 2026; FERC rejected the cancellation September 22; contract dispute in N.D. Illinois",
+    "ComEd queue: >28,000 MW requested (March 2026) against a ~24,000 MW peak; ~39 GW → ~25 GW; $15.3B 2028–2031 grid plan pending (order December 15, 2026)"
+   ],
+   "positioning": "The corpus's fourth large-load design and the only one that is a federal contract rather than a state tariff: where Dominion's GS-5 sets a minimum demand charge, DTE's special contract makes the customer fund utility batteries and We Energies' bespoke tariff sells a subscription to named plants, ComEd's TSA sells committed transmission revenue with collateral and a termination-fee schedule — and, because it is FERC-jurisdictional, its disputes go to FERC and federal court, not the ICC.",
+   "soldThrough": "ICC-approved riders and terms (Rider DE, LDPAC deposits); FERC-filed bilateral transmission security agreements per customer; ICC retail service agreements; Illinois Power Agency procurements for supply",
+   "targetSegments": [
+    "Hyperscale and colocation campuses in the Chicago suburbs and exurbs (Joliet, Minooka, Morris, Elk Grove Village, Hoffman Estates, DeKalb, Yorkville, Aurora)",
+    "4.2 million northern Illinois delivery customers"
+   ],
+   "roadmap": "ICC order on the 2028–2031 grid plan December 15, 2026; the ICC's LDPAC investigation and workshop outcomes; the N.D. Illinois ruling on the PowerHouse credit clause; further TSA filings; the Illinois POWER Act (HB 5513) in the October 2026 veto session; the first annual compliance report February 1, 2027"
+  },
+  {
+   "name": "The data-center pipeline — Exelon's ladder from 36 GW of requests to 4 GW under signed TSAs",
+   "category": "Regulated utility service",
+   "description": "Exelon reports its large-load book as a ladder whose rungs have changed name as the TSA process matured. At the Q1 2025 call the total was 36 GW with 16 GW 'high probability' (projects in official engineering phases with deposits); Q3 2025 (November 4) put the 'advanced' pipeline at 18 GW with 6 GW 'close to signing TSAs' and 47 GW of potential additions, and PECO signed the first Exelon TSA (Amazon Data Services, Falls Township, Pennsylvania; accepted by FERC November 21, 2025 over PJM's market monitor); the Q4 2025 deck (February 12, 2026) described 'committed data center projects of approximately 18 GW' with 'approximately 45 percent secured with TSAs' and about $1B of collateral; Q1 2026 held 18 GW high-probability and 43 GW under study. On the Q2 2026 call (July 30) the queue was 'refined' from 43 GW to 36 GW: 4 GW under signed TSAs backed by about $1B of collateral, 7 GW 'high probability' that pre-dated the TSA process, and 25 GW under study — so the headline high-probability figure fell from 18 GW to 11 GW ('we have now weeded out speculative projects, and it gives us proactive insight into what is real'), of which about 9 GW is ComEd and about 2 GW the Mid-Atlantic utilities. Jones's timing from 2025 stands: about 10 percent online by 2028, a third by 2030, three-quarters by 2034. The TSA-backed gigawatts fell from roughly 8 GW (45 percent of 18) to 4 GW between the Q4 2025 and Q2 2026 disclosures while collateral stayed at about $1B — the deck that would reconcile the two was not readable — and the PowerHouse cancellation of July 24 is the one named removal. Named projects on the record: PowerHouse Hillwood's Joliet Technology Center (1.8 GW, about $20B, 795 acres, 24 buildings in four phases; annexed 8–1 on March 19, 2026); Tract's Morris Technology Park (about 1 GW; first power June 2028); Equinix at Minooka (700 MW, EEI); QTS Investment Properties Chicago; Karis Critical (about 500 MW); Monarch Rock Air (about 1,200 MW); Aligned; Red Energy Partners; Compass Datacenters' $10B Hoffman Estates campus (Building 1 topped out February 2026; the developer withdrew a rezoning request in July 2026); Stream Data Centers at Elk Grove Village (260 MW; ComEd substation groundbreaking September 2025); CyrusOne's 480 MW Yorkville campus and Aurora site; Prime Data Centers' 270 MW ORD01; Amazon at Falls Township ($20B of planned Pennsylvania data centers, EEI); Pepco Holdings' 34 active projects and 13 GW of potential (March 2026). ComEd's KARE project — a six-mile 345 kV double-circuit line and a 345/138 kV substation south of DeKalb, the first ComEd line to need ICC siting since 2017 — was approved August 24, 2026 without a named customer.",
+   "highlights": [
+    "Q2 2026 ladder: 36 GW refined queue = 4 GW signed TSAs (~$1B collateral) + 7 GW high-probability + 25 GW under study; 11 GW high-probability = ~9 GW ComEd + ~2 GW Mid-Atlantic (from 18 GW at Q4 2025 / Q1 2026)",
+    "Timing (Jones): ~10 percent online by 2028, one-third by 2030, three-quarters by 2034; typical interconnection ~36 months",
+    "First TSA: PECO–Amazon Data Services, Falls Township PA (FERC November 21, 2025; power from Vistra's 1,320 MW Fairless plant per Utility Dive)",
+    "Named: PowerHouse Joliet 1.8 GW; Tract Morris ~1 GW; Equinix Minooka 700 MW; Monarch Rock Air ~1.2 GW; Karis ~500 MW; CyrusOne Yorkville 480 MW; Stream 260 MW; Prime ORD01 270 MW; Compass Hoffman Estates $10B",
+    "PHI: 34 active projects, 13 GW potential (Anthony, March 2026); ComEd KARE 345 kV siting approved August 24, 2026"
+   ],
+   "positioning": "The only utility in the corpus whose data-center number went down in 2026 by design — the vetting process converted a 43 GW queue into a 4 GW collateralized book — and the largest PJM load pipeline after Dominion's, sitting in the zone (ComEd) where PJM's simulated uncapped capacity price was highest ($777/MW-day).",
+   "soldThrough": "LDPAC applications and deposits → planning and engineering studies → long-lead materials deposit → transmission security agreement (FERC) and retail service agreement (ICC); Maryland, Pennsylvania, Delaware and New Jersey large-load tariffs for the Mid-Atlantic utilities",
+   "targetSegments": [
+    "Hyperscalers and colocation developers (Amazon, Equinix, QTS, Aligned, PowerHouse, Tract, Compass, CyrusOne, Prime, Stream)",
+    "Industrial large loads in PJM"
+   ],
+   "roadmap": "Q3 2026 results (tracker-estimated November 3–4, 2026; not company-confirmed) for the next ladder; PECO's large-load tariff filing; Maryland PC72 rate-schedule decisions; the FERC-directed PJM large-load rules (RTO responses due mid-November 2026)"
+  },
+  {
+   "name": "The Mid-Atlantic utilities — PECO, BGE and Pepco Holdings under Pennsylvania's model tariff, Maryland's RELIEF Act, Delaware's GS-LL and New Jersey's A796",
+   "category": "Regulated utility service",
+   "description": "PECO (about 1.7 million electric and 553,000 gas customers in southeastern Pennsylvania), BGE (1.4 million electric and 700,000-plus gas customers in central Maryland) and Pepco Holdings — Pepco (1.0 million in DC and Montgomery and Prince George's counties), Delmarva Power (0.6 million electric plus northern Delaware gas) and Atlantic City Electric (0.6 million in southern New Jersey) — are distribution and transmission utilities in PJM's eastern zones, where the 2028/29 Base Residual Auction cleared at the $325/MW-day cap and Exelon says residential supply costs could rise 'up to 80 percent over five years'. Their large-load rules are being written state by state in 2026. Pennsylvania: the PUC's first-of-its-kind large-load model tariff (Docket M-2025-3054271; framework April 30, final order May 13, 2026) covers customers over 50 MW individually or 100 MW in aggregate with 'but for' cost allocation, contributions in aid of construction, six-month studies, deposits and collateral, minimum terms, exit provisions, ramp schedules, a self-build option and a public queue, to be implemented through utility-specific filings — PECO's own filing was not found; the PUC is also opening emergency-curtailment rules (tentative order October 1, 2026) and a ratemaking and ROE working group. PECO's politics dominate: it filed a $429M electric and $81M gas case on March 30, 2026 (ROE 10.95 percent), Governor Shapiro called it 'pure greed', PECO withdrew both on April 16 ('Pennsylvanians are struggling with basic necessities like gas, food, and energy'), CEO David Vahos became a special advisor on April 21 with Innocenzo interim, IBEW Local 614 struck for three days in July, and Barclays, BMO and Mizuho downgraded the stock. Maryland: the Next Generation Energy Act (SB937/HB1035, May 20, 2025) affirmed multi-year plans, barred post-2025 reconciliation filings, set a 150 MW distribution-storage program and expedited-CPCN solicitations for dispatchable generation; the Utility RELIEF Act (HB 1532, passed April 13, signed May 12, effective July 1, 2026) lowered the large-load threshold to 25 MW and load factor to 60 percent, banned forecast test years for a year, ended the 0.5 percent RTO-participation ROE adder (Maryland's agencies filed a FERC complaint on July 2 to strip it from BGE, Delmarva and Pepco — more than $20M a year) and opened Pepco's Phase II cost-removal proceeding; on September 1, 2026 the Maryland Exelon companies filed proposed large-load rate schedules in PC72 (terms not found). Rate outcomes are tightening: the PSC awarded Pepco $50.9M of the $119.9M it asked at a 9.40 percent ROE on August 28, 2026 (Order 92607, Case 9820; $164.9M of White Flint capital disallowed), cut Pepco's reconciliation from $30.6M to $13.4M in March, granted BGE about $77M of a $152M true-up in December 2025, and has BGE's Case 9888 ($156.1M, ROE 10.4 percent, decision January 2027) pending; Maryland's flexible-load plans (Case 9761) are 188 MW at BGE, 185 MW at Pepco and 34 MW at Delmarva. Delaware: the PSC opened Docket 25-0826 on October 15, 2025 and paused interconnections of 25 MW or more until a tariff exists; Delmarva filed GS-LL (General Service – Large Load) for 50 MW or more on December 19, 2025 (workshop February 17; comments March 6, 2026; final order not found); Starwood Digital's 'Project Washington' at Delaware City lost its Coastal Zone appeal and was withdrawn on August 28, 2026; Delmarva's $67.8M base-rate case (25-1555) has interim rates. New Jersey: A796 (passed June 30, 2026; loads of 50 MW or more; financial guarantees of 85 percent of requested service for ten years; BPU authority to use TSAs) awaited the governor's signature; ACE's electric settlement ($54M at 9.60 percent) took effect December 1, 2025. DC: the Court of Appeals reversed the PSC's approval of Pepco's 'Climate Ready Pathway' multiyear plan (April 2026); Order 22860 kept current rates and denied refunds pending remand (Formal Case 1176; evidentiary hearing October 13–14, 2026).",
+   "highlights": [
+    "PA model large-load tariff (M-2025-3054271, May 13, 2026): >50 MW / 100 MW aggregate; 'but for' cost allocation; deposits, minimum terms, exit provisions, self-build; PECO filing not found",
+    "PECO: $510M rate request withdrawn April 16, 2026 after the governor's 'pure greed'; CEO Vahos to special advisor April 21; Innocenzo interim; triple analyst downgrade",
+    "Maryland: RELIEF Act (July 1, 2026) — 25 MW large-load threshold, RTO adder ended, forecast test years banned; PC72 large-load rate schedules filed September 1, 2026; Pepco awarded $50.9M of $119.9M at 9.40 percent (August 28); BGE Case 9888 pending",
+    "Delaware GS-LL (≥50 MW, Docket 25-0826) with a ≥25 MW interconnection pause; New Jersey A796 (≥50 MW, 85 percent / ten-year guarantees) passed June 30, 2026",
+    "PECO–Amazon Falls Township TSA (FERC, November 21, 2025); PHI 34 projects / 13 GW potential"
+   ],
+   "positioning": "The most regulator-constrained half of the company: four states and DC rewriting large-load and ratemaking rules in the same year, with affordability politics (Shapiro, the RELIEF Act, the Pepco disallowance) setting the tone — which is why the Mid-Atlantic carries only about 2 GW of the 11 GW high-probability book against ComEd's 9 GW.",
+   "soldThrough": "State-specific large-load tariffs and schedules (PA model tariff; MD PC72; DE GS-LL; NJ A796) plus FERC TSAs; multi-year rate plans (BGE, Pepco, Delmarva) and single-year cases",
+   "targetSegments": [
+    "Data centers in the Philadelphia exurbs (Falls Township), Maryland (Frederick, Baltimore County), Delaware and southern New Jersey",
+    "About 6.5 million Mid-Atlantic electric and gas customers"
+   ],
+   "roadmap": "MD PSC decisions on PC72 and BGE Case 9888 (January 2027); Pepco DC remand hearing October 13–14, 2026; Delaware GS-LL final order; New Jersey A796 signature and BPU implementation; PA PUC curtailment order (tentative October 1, 2026); PECO's next rate filing 'timing TBD'"
+  },
+  {
+   "name": "Transmission — $41.7B of 2026–2029 capital, transmission rate base growing 16 percent a year, $12–17B of upside, MISO Tranche 2.1 with Invenergy",
+   "category": "Grid",
+   "description": "Transmission is where Exelon's growth has moved: the FY2025 10-K's $41.3B four-year plan (2026 $9,950M; ComEd $3.5B in 2026 with $1.1B of transmission; PECO $2.225B; BGE $2.175B; PHI $2.05B) was raised to $41.7B at Q1 2026 by adding $1.5B of transmission while cutting $350M of distribution and deferring $1.1B at PECO and BGE, and Butler said 80–100 percent of the capex increases across planning cycles have gone to transmission. Rate base grows about $23B to 2029 (7.9 percent a year), transmission rate base about 16 percent a year, and the company cites $12–17B of identified transmission opportunity over the next decade not in the plan, including PJM's 2025 reliability window ($1.2B recommended to Exelon utilities) and 765 kV work — Khouzami: Exelon is 'one of very few transmission operators that own and operate' 765 kV. In MISO, FERC's August 14, 2026 order approved cost allocation for Tranche 2.1 facilities built in PJM and assigned ComEd about $904M of projects, ComEd bid about $1.9B of Illinois Tranche 2.1 projects with Invenergy, and two more competitive bids (the MARS and EASL projects in Iowa) have results due in the fourth quarter of 2026. Named 2026 work: ComEd's KARE 345 kV line and substation near DeKalb (ICC certificate August 24, 2026), a $590M Champlain substation upgrade (PJM TEAC, September 2025), three new Chicago substations and two in northern Illinois in the 2028–2031 grid plan, and BGE's Key Crossing Reliability Initiative (397-foot monopoles, with Sargent & Lundy). Transmission formula rates for June 2025–May 2026: ComEd +$127M at an 11.50 percent allowed ROE; PECO +$22M (10.35 percent); BGE +$35M, Pepco +$51M, DPL +$23M (10.50 percent); ACE −$57M. Financing: $3.4B of equity through 2029 (about $850M a year, 37 percent priced by Q2 2026 through forwards and the ATM, covering 2026 and half of 2027; $1B of 3.25 percent convertible notes December 2025); 86 percent of 2026 debt done by July (ComEd $1,425M, BGE $925M, Pepco $130M in May–June); operating ROE 9–10 percent; FFO/debt about 14 percent.",
+   "highlights": [
+    "Capex $41.7B 2026–2029 (~$10B in 2026); rate base +$23B, 7.9 percent CAGR; transmission rate base +16 percent a year; $12–17B of transmission not in plan",
+    "MISO Tranche 2.1: ~$904M of facilities assigned to ComEd (FERC, August 14, 2026); ~$1.9B of Illinois bids with Invenergy; MARS and EASL bids (Iowa) decided Q4 2026",
+    "ComEd KARE 345 kV (ICC, August 24, 2026); $590M Champlain upgrade; 765 kV operator",
+    "Equity $3.4B through 2029, 37 percent priced; 86 percent of 2026 debt done; ComEd transmission ROE 11.50 percent"
+   ],
+   "positioning": "The corpus's clearest case of a utility redirecting a capital plan from distribution toward transmission to fund data-center growth without raising delivery rates — the reason Exelon's affordability posture (PECO withdrawal, $350M of cuts) and its growth guidance coexist.",
+   "soldThrough": "FERC formula rates (PJM); competitive MISO awards; ICC certificates of public convenience for siting",
+   "targetSegments": [
+    "PJM reliability-window and large-load interconnection projects",
+    "MISO Tranche 2.1 competitive lines"
+   ],
+   "roadmap": "MISO bid results Q4 2026; PJM large-load interconnection rules after FERC's show-cause orders; the $12–17B opportunity converting into the plan at the Q4 2026 call"
+  },
+  {
+   "name": "Utility-owned storage and the generation campaign — ACE's 500 MW Pittsgrove battery with Invenergy, Maryland's storage solicitations, Illinois's 3 GW procurement, and the PJM argument",
+   "category": "Energy storage",
+   "description": "Exelon owns no generation and, until July 2026, no utility-scale storage. Atlantic City Electric changed the first half of that on July 24, 2026 by petitioning the New Jersey BPU (Utility Dive cites Docket 2114561) for a 500 MW / four-hour battery on ACE-owned land at Pittsgrove Township, Salem County — an ACE-owned, rate-based asset developed, built and operated with Invenergy at about $1B, in service late 2030, with federal tax credits and PJM capacity and energy revenues offsetting about 70 percent of cost, more than $700M of claimed net customer benefit ($1.36 per $1), no bill impact for the first five years, a 9.6 percent base ROE with performance incentives, and a decision targeted for February 2027 (Butler: 'final order anticipated H1 2027'); no battery supplier is named. In Maryland, the PSC's Order 92281 (Case 9715, April 8, 2026) set the Next Generation Energy Act's 150 MW distribution-storage program — BGE proposed 29 MW (3 MW BGE-owned, 15 MW customer-sited, 11 MW third-party) and PHI 14.5 MW of third-party front-of-meter batteries (Pepco 10.5 MW, Delmarva 4.0 MW) — and BGE and Pepco submitted projects to the state's transmission-connected storage solicitation (megawatts and docket not found); the Round 2 expedited-CPCN solicitation for dispatchable generation (ELCC 65 percent or more) and 'large capacity energy resources' of 20 MW or more runs October 1–31, 2026 (PC 74) for third-party developers. In Illinois, the Clean and Reliable Grid Affordability Act (Public Act 104-0458, signed January 8, 2026) set a 3,000 MW storage target by 2030 procured by the Illinois Power Agency through Indexed Storage Credits — the first procurement (August 26, 2026) awarded 600 MW of a 1,038 MW target, 520 MW in MISO and 80 MW in the ComEd zone, approved September 1 — and ComEd's role is the Rider SDVPP virtual power plant (effective July 16, 2026; about 1.8 GW of connected DER) and a 25 percent larger efficiency budget, not ownership. The campaign: Charles River Associates' February 2026 report for Exelon estimates utility-generated power could save PJM customers $9.6–20.0B in 2028/29 and cut supply-caused unserved energy 85 percent; Butler supports Maryland's HB 1561 'utility-owned backstop, particularly storage and renewable resources', calls the Pennsylvania generation bill 'a long shot', and told the Q2 call that 'utility-owned generation needs to be part of that mechanism as a cost-effective complement to market-based solutions' after PJM's third consecutive auction at the cap ($325/MW-day; 6,831 MW short; 525 MW of new generation; a simulated uncapped price of about $555 RTO-wide and $777 in ComEd). Exelon's 2024 petition at FERC against Constellation's nuclear co-location deals, and its protest with AEP of the Talen–Amazon Susquehanna agreement, are its documented positions on behind-the-meter supply.",
+   "highlights": [
+    "ACE Pittsgrove BESS: 500 MW / 4 hours, ~$1B, ACE-owned with Invenergy; NJ BPU filed July 2026; late 2030; ~70 percent offset by ITC + PJM revenues; decision ~February 2027; supplier unnamed",
+    "Maryland: 150 MW NGEA distribution storage (BGE 29 MW incl. 3 MW owned; PHI 14.5 MW third-party); BGE/Pepco transmission-connected battery bids; PC 74 Round 2 solicitation October 2026",
+    "Illinois CRGA: 3,000 MW by 2030 via IPA Indexed Storage Credits; 600 MW awarded September 1, 2026 (80 MW ComEd zone); ComEd runs Rider SDVPP, owns no storage",
+    "CRA: $9.6–20B of PJM savings from utility-owned generation; PJM 2028/29 BRA at the $325 cap, 6.8 GW short, 525 MW new"
+   ],
+   "positioning": "The corpus's first wires-only utility trying to become a storage owner — Pittsgrove would be the largest utility-owned battery in PJM's Mid-Atlantic if approved — while every other Exelon-zone battery is bought by a state agency or a developer; the equipment door, if it opens, is Invenergy's.",
+   "soldThrough": "State petitions for rate-based ownership (NJ BPU; Maryland NGEA); IPA Indexed Storage Credit procurements and Maryland solicitations for third-party projects; ComEd's Rider SDVPP for distributed resources",
+   "targetSegments": [
+    "PJM capacity and reliability in the ACE, BGE, Pepco and ComEd zones",
+    "Developers bidding into the IPA and Maryland procurements"
+   ],
+   "roadmap": "NJ BPU decision on Pittsgrove ~February 2027; Maryland transmission-connected storage awards and PC 74 results; IPA procurements 2027 and 2028 (paired projects allowed); the statewide Illinois IRP (first filing November 15, 2026); Maryland IRP preview November 2026; HB 1561's fate"
+  },
+  {
+   "name": "Gas distribution — PECO, BGE and Delmarva",
+   "category": "Gas utility",
+   "description": "About 1.4 million gas customers: PECO's 553,000 in southeastern Pennsylvania, BGE's 700,000-plus in Maryland (multi-year plan increases of $126M, $62M and $41M for 2024–2026 at a 9.45 percent ROE) and Delmarva's 140,000 in northern Delaware ($22M approved at 9.60 percent, effective January 1, 2026). PECO's $81M gas request was withdrawn with the electric case in April 2026. The gas business is not a data-center counterparty; Exelon owns no gas generation and no pipelines.",
+   "highlights": [
+    "~1.4 million gas customers across three utilities",
+    "BGE gas MYP 2024–2026; Delmarva gas +$22M from January 2026; PECO gas request withdrawn April 2026"
+   ],
+   "positioning": "Small and regulatory rather than strategic — the gas franchises matter to Exelon's affordability posture, not to its AI-load story.",
+   "soldThrough": "Regulated distribution service",
+   "targetSegments": [
+    "Residential and commercial gas customers in Pennsylvania, Maryland and Delaware"
+   ],
+   "roadmap": "BGE's next gas filing after the 2024–2026 plan; PECO's re-filed cases 'timing TBD'"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "ComEd Transmission Security Agreement (FERC-jurisdictional bilateral contract) and ICC Rider DE / LDPAC terms (Dockets 25-0677/25-0679, order March 19, 2026)",
+   "specs": [
+    {
+     "band": "TSA",
+     "label": "Protective provisions",
+     "value": "defined ramp; customer facility readiness obligation; credit obligations; committed revenue contributions; shortfall payments if usage misses commitments; published termination-fee schedule (ComEd via Utility Dive, March 11, 2026)"
+    },
+    {
+     "band": "TSA",
+     "label": "Collateral",
+     "value": "letters of credit guaranteeing transmission revenue payments for the first 10 years of operation; six active TSAs backed by more than $1B in LOCs (ComEd, September 16, 2026)"
+    },
+    {
+     "band": "TSA",
+     "label": "Legal standard",
+     "value": "accepted by FERC under the Mobile-Sierra presumption; Chairman Swett and Commissioner LaCerte: 'The Commission will always reject a rate that seriously harms the consuming public'; Commissioner Chang: bilateral agreements 'may not be sufficient to ensure that customers are protected against unjust cost shifts'"
+    },
+    {
+     "band": "TSA",
+     "label": "Dockets",
+     "value": "Karis Critical ER26-3087 (Feb 17, 2026); Grundy County Power NR I / Tract ER26-3100, Equinix ER26-3101, QTS Investment Properties Chicago ER26-3102, PowerHouse Hillwood Holding ER26-3104 (Mar 10, 2026); Red Energy Partners ER26-841; Aligned Data Centers and Monarch Rock Air (earlier); PECO–Amazon Data Services (Nov 21, 2025)"
+    },
+    {
+     "band": "TSA",
+     "label": "Dispute",
+     "value": "ComEd notice of cancellation of the PowerHouse Hillwood TSA July 24, 2026 (security-deposit timing; a $1 letter of credit posted); FERC rejected the notice September 22, 2026, declining primary jurisdiction over 'ambiguous contract terms involving credit support'; contract question in the U.S. District Court for the Northern District of Illinois"
+    },
+    {
+     "band": "ICC",
+     "label": "LDPAC applicability",
+     "value": "Large Demand Project Applicant or Customer = a single request for new or increased load of 50 MW or more within 10 years"
+    },
+    {
+     "band": "ICC",
+     "label": "Deposits",
+     "value": "$1M for 50–200 MW plus $500,000 for each complete additional 100 MW above 200 MW; letter of credit required when deposits exceed $2M (issuing bank rated A3/A- or better); two deposits — planning/engineering study and long-lead materials; credited to project costs, retained net of ComEd's incurred costs on cancellation"
+    },
+    {
+     "band": "ICC",
+     "label": "Rider DE and follow-up",
+     "value": "Rider Distribution System Extension extended to additional distribution construction for standard service; ICC staff investigation initiated by April 23, 2026 (~8 months) on a separate LDPAC tariff, Riders NS/ZSS/DE refinements, collateral and interconnection cost assignment; ComEd workshops; annual compliance report from February 1, 2027"
+    }
+   ],
+   "notes": "The commercial terms a data center actually lives under — ramp, minimum revenue, termination fee — sit in the FERC-jurisdictional TSA, not in the ICC order, which governs deposits and procedure. ComEd's own text of any TSA was not readable (comed.com is a single-page application); terms are as ComEd described them to Utility Dive and Daily Energy Insider."
+  },
+  {
+   "product": "Exelon data-center pipeline ladder — disclosures by quarter",
+   "specs": [
+    {
+     "band": "Q1 2025",
+     "label": "May 1–2, 2025",
+     "value": "36 GW total pipeline (doubled since year-end 2024); 16 GW 'high probability' (official engineering phases with paid deposits)"
+    },
+    {
+     "band": "Q3 2025",
+     "label": "November 4–5, 2025",
+     "value": "18 GW 'advanced' pipeline; 6 GW 'close to signing TSAs'; 47 GW of potential additions; first TSA (PECO–Amazon) accepted November 21"
+    },
+    {
+     "band": "Q4 2025",
+     "label": "February 12, 2026",
+     "value": "'committed data center projects of ~18 GW', '~45 percent secured with TSAs' (~8 GW), ~$1B collateral; excludes 1 GW of other large-load initiatives"
+    },
+    {
+     "band": "Q1 2026",
+     "label": "May 6, 2026",
+     "value": "18 GW high-probability unchanged; 43 GW under study; '~$1 billion of collateral secured via FERC-approved agreements'"
+    },
+    {
+     "band": "Q2 2026",
+     "label": "July 30, 2026",
+     "value": "queue refined 43 → 36 GW: 4 GW signed TSAs (~$1B collateral) + 7 GW high-probability (pre-TSA) + 25 GW under study; headline high-probability 18 → 11 GW (~9 GW ComEd, ~2 GW Mid-Atlantic)"
+    },
+    {
+     "band": "September 2026",
+     "label": "ComEd, September 16",
+     "value": "two more TSAs (developers unnamed); six active TSAs, >$1B of letters of credit; ComEd large-load queue ~39 GW (late 2025) → ~25 GW"
+    },
+    {
+     "band": "Timing",
+     "label": "Jones (2025)",
+     "value": "~10 percent online by 2028; one-third by 2030; three-fourths by 2034; typical interconnection ~36 months"
+    }
+   ],
+   "notes": "The fall in TSA-backed gigawatts from ~8 GW to 4 GW while collateral held at ~$1B is stated, not reconciled — the Q2 2026 deck was unreadable (IR site down). The PowerHouse Hillwood cancellation (1.8 GW) is the one named removal; Utility Dive's framing that it was 'classified as speculative under new vetting process' is the article's, not ComEd's."
+  },
+  {
+   "product": "2026–2029 capital plan and financing (FY2025 10-K; Q1 and Q2 2026 calls)",
+   "specs": [
+    {
+     "band": "Total",
+     "label": "Four-year",
+     "value": "$41.7B (Q1 2026; from $41.3B in the 10-K: −$350M distribution, −$1.1B PECO/BGE deferrals, +$1.5B transmission); ~$10B in 2026; >70 percent of the February increment to transmission"
+    },
+    {
+     "band": "By utility (10-K)",
+     "label": "2026 / beyond 2026",
+     "value": "ComEd $3,500M (T $1,100M, D $2,425M) / $11,450M; PECO $2,225M (T $450M, D $1,375M, gas $400M) / $7,075M; BGE $2,175M (T $1,075M, D $575M, gas $525M) / $6,100M; PHI $2,050M (T $725M, D $1,250M, gas $50M) / $6,650M — Pepco $975M, DPL $625M, ACE $450M in 2026"
+    },
+    {
+     "band": "Growth",
+     "label": "Rate base",
+     "value": "+~$23B by end-2029; 7.9 percent CAGR; transmission rate base ~16 percent a year; $12–17B of transmission opportunity not in plan; PJM 2025 window $1.2B recommended"
+    },
+    {
+     "band": "Earnings",
+     "label": "Guidance",
+     "value": "FY2026 adjusted operating EPS $2.81–$2.91 (set February 12, reaffirmed May 6 and July 30, 2026; 'midpoint or better'); growth 'near the top end' of 5–7 percent 2025–2029; operating ROE 9–10 percent; O&M flat 2024–2026, 2.5 percent CAGR cap through 2029"
+    },
+    {
+     "band": "Financing",
+     "label": "Equity and debt",
+     "value": "$3.4B of equity through 2029 (~$850M a year; 37 percent priced at Q2 2026; 40 percent equity funding of incremental capital); $1B 3.25 percent convertible notes (December 4, 2025); 86 percent of 2026 debt executed by July 30; FFO/debt ~14 percent through 2029"
+    },
+    {
+     "band": "Dividend",
+     "label": "2026",
+     "value": "$0.42 a quarter ($1.68 annualized; ~60 percent payout; 5 percent annual growth) — declared February 12, April 28 and July 28, 2026"
+    },
+    {
+     "band": "Transmission rates",
+     "label": "June 2025–May 2026 formula updates",
+     "value": "ComEd +$127M (allowed ROE 11.50 percent; return on rate base 8.13 percent); PECO +$22M (10.35 percent); BGE +$35M, Pepco +$51M, DPL +$23M (10.50 percent); ACE −$57M; Maryland's July 2, 2026 FERC complaint seeks to remove the 0.5 percent RTO adder (>$20M a year)"
+    }
+   ],
+   "notes": "Ratings: Pepco Moody's Baa1 / S&P A- (Utility Dive, July 2026); Exelon corporate rating actions in 2025–26 not found. Analyst actions: Barclays, BMO and Mizuho downgrades April 17, 2026 after the PECO withdrawal; Argus price target cut to $49 September 22, 2026."
+  },
+  {
+   "product": "PJM 2028/2029 Base Residual Auction (results July 14, 2026) — the market Exelon argues against",
+   "specs": [
+    {
+     "band": "Price",
+     "label": "Clearing",
+     "value": "all LDAs at the cap of $325.00/MW-day UCAP ($256.75 ICAP); floor $175.00; the third consecutive auction at the collar (2027/28 cleared at $333.44)"
+    },
+    {
+     "band": "Adequacy",
+     "label": "Shortfall",
+     "value": "149,181.6 MW UCAP procured, 6,831.3 MW below the RTO reliability requirement (prior auction 6,516 MW short); requirement 152,400 → 156,013 MW, '1,374.5 MW increase in forecasted load, largely due to additional Large Loads'"
+    },
+    {
+     "band": "Supply",
+     "label": "New resources",
+     "value": "524.7 MW UCAP of new generation and uprates (317.1 new, 207.6 uprates); total cost $16.4B; demand response cleared — ComEd 1,105.6 MW, PECO 285.8 MW, Pepco 284.5 MW, DPL 138.5 MW, AECO 40.3 MW"
+    },
+    {
+     "band": "Exelon's read",
+     "label": "Q2 2026 call",
+     "value": "simulated uncapped clearing ~$555/MW-day RTO-wide and ~$777/MW-day in the ComEd zone; July 2026 peak 168 GW; ACE residential bills +$14.70–$23.64 a month if the cap lifts after the December auction; 'Even at the highest allowed price, the market is not attracting the level of new supply the system needs'"
+    },
+    {
+     "band": "Federal",
+     "label": "FERC",
+     "value": "collar extension commended by Exelon April 29, 2026; June 18, 2026 show-cause orders to PJM and five other RTOs on large-load interconnection (>50 MW at >69 kV), cost transparency, co-location and flexible service — responses due mid-November 2026; PJM co-location package (effective June 1, 2029) protested by Vistra, Constellation and the Data Center Coalition; PJM Reliability Backstop procurement and Connect-and-Manage under way"
+    }
+   ],
+   "notes": "Exelon's customers pay the auction through supply charges; the company's remedy of choice — utility-owned generation as a 'complement' — needs state legislation it has not yet obtained (Maryland HB 1561 pending; Pennsylvania 'a long shot')."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$23,028M",
+      "expected": "Q4: $5.44B (MarketBeat)",
+      "verdict": "inline",
+      "result": "Q4 2024 revenue $5.47B against $5.44B; full-year consensus not located",
+      "kpi": "revenue",
+      "usdMillions": 23028,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted operating earnings per share",
+      "actual": "$2.50 (GAAP $2.45)",
+      "expected": "Q4: $0.59 (MarketBeat); $0.60 (Investing.com)",
+      "verdict": "beat",
+      "result": "Q4 2024 EPS $0.64 against $0.59–0.60; net income $2,460M"
+     },
+     {
+      "name": "Data-center pipeline",
+      "actual": "16 GW 'high probability' at year-end 2024; 36 GW total by May 2025",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The pre-TSA ladder",
+      "kpi": "mw-contracted",
+      "qty": 16000
+     }
+    ],
+    "commentary": "The last year before transmission security agreements; the four-year capex plan was $38B."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$24,258M",
+      "expected": "Q4: $5.42B (MarketBeat); $5.51B (Investing.com)",
+      "verdict": "inline",
+      "result": "Q4 2025 revenue $5.41B (Investing.com) against $5.42–5.51B; full-year consensus not located",
+      "kpi": "revenue",
+      "usdMillions": 24258,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted operating earnings per share",
+      "actual": "$2.77 (GAAP $2.73; net income $2,768M) — above the guidance midpoint",
+      "expected": "Q4: $0.55 (MarketBeat); $0.57 (Investing.com)",
+      "verdict": "beat",
+      "result": "Q4 2025 adjusted EPS $0.59 against $0.55–0.57; 7.4 percent annual earnings growth since 2021; ComEd $252M, PECO $162M, BGE $181M, PHI $171M in Q4"
+     },
+     {
+      "name": "Committed data-center pipeline",
+      "actual": "~18 GW, ~45 percent secured with TSAs; ~$1B of collateral (Q4 2025 deck)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Excludes 1 GW of other large-load initiatives",
+      "kpi": "mw-contracted",
+      "qty": 18000
+     },
+     {
+      "name": "Four-year capital plan",
+      "actual": "$41.3B for 2026–2029 (+$3.3B, 9 percent; >70 percent of the increment to transmission)",
+      "expected": "$38B prior plan",
+      "verdict": "beat",
+      "result": "Rate base +~$23B, 7.9 percent CAGR; 2026 $9.95B; equity $3.4B four-year",
+      "kpi": "capex",
+      "usdMillions": 41300,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "2026 guidance initiated at $2.81–$2.91 ('over 6 percent growth from 2025 guidance'); dividend $0.42 a quarter; a $60M Customer Relief Fund."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$7,242M (vs $6,714M): ComEd $1,913M; PECO $1,492M; BGE $1,828M; PHI $2,030M",
+      "expected": "$6.93B (MarketBeat); $7.02B (Investing.com)",
+      "verdict": "beat",
+      "result": "3.1–4.5 percent above trackers; Utility Dive's '$6.2B (+7 percent)' is recorded as a conflicting third-party figure",
+      "kpi": "revenue",
+      "usdMillions": 7242,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted operating earnings per share",
+      "actual": "$0.91 (GAAP $0.90; net income $919M)",
+      "expected": "$0.88 (MarketBeat); $0.87 (Investing.com)",
+      "verdict": "beat",
+      "result": "ComEd $310M; PECO $278M; BGE $298M; PHI $180M; capex $2,358M; operating cash flow $1,724M"
+     },
+     {
+      "name": "Data-center pipeline",
+      "actual": "18 GW high-probability unchanged; 43 GW under study; ~$1B collateral",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Capex raised to $41.7B (+$1.5B transmission; −$350M distribution; −$1.1B PECO/BGE deferrals)",
+      "kpi": "mw-contracted",
+      "qty": 18000
+     }
+    ],
+    "commentary": "The affordability quarter — the PECO withdrawal (April 16) and CEO change (April 21) fell between the period end and the call."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$5.97B (trackers; 10-Q not read)",
+      "expected": "$5.44B (MarketBeat); $5.40B (Investing.com)",
+      "verdict": "beat",
+      "result": "About 10 percent above both trackers",
+      "kpi": "revenue",
+      "usdMillions": 5970,
+      "fxBasis": "as reported (tracker-sourced)"
+     },
+     {
+      "name": "Adjusted operating earnings per share",
+      "actual": "$0.43 (GAAP $0.39; net income $396M); ComEd $249M, PECO $130M, BGE $70M, PHI $126M",
+      "expected": "$0.4357 (MarketBeat); $0.48 (Investing.com)",
+      "verdict": "inline",
+      "result": "In line with MarketBeat and the company ('in line with expectations'); a 10 percent miss against Investing.com's $0.48 — the two trackers conflict and both are recorded; shares fell about 4.6 percent on the day"
+     },
+     {
+      "name": "Data-center pipeline",
+      "actual": "36 GW refined queue: 4 GW signed TSAs (~$1B collateral) + 7 GW high-probability + 25 GW under study; 11 GW high-probability (from 18 GW)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "~9 GW ComEd, ~2 GW Mid-Atlantic; guidance $2.81–$2.91 reaffirmed, Q3 expected ~27 percent of the midpoint; 37 percent of $3.4B equity priced; 86 percent of 2026 debt done",
+      "kpi": "mw-contracted",
+      "qty": 4000
+     }
+    ],
+    "commentary": "The Q3 2026 results date is not company-confirmed as of September 26, 2026 (the IR site was unreachable and no 'to announce third quarter results' notice exists); MarketBeat estimates Tuesday November 3 and Investing.com November 4 (Q3 consensus $0.81–0.83). The prior-year Q3 call was November 4, 2025."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-24",
+   "category": "partnership",
+   "headline": "Exelon's 2c2i venture arm invests in Continuum Industries, whose Optioneer AI grid-planning platform is to be deployed across the six utilities (first-party release September 16)",
+   "read": "Grid planning for the load ramp bought as software, not steel.",
+   "source": "https://www.utilitydive.com/news/utility-giant-exelons-climate-arm-backs-grid-planning-firm-continuum/831276/"
+  },
+  {
+   "date": "2026-09-22",
+   "category": "regulatory",
+   "headline": "FERC rejects ComEd's notice of cancellation of the PowerHouse Hillwood Joliet TSA (1.8 GW, ~$20B), declining primary jurisdiction over 'ambiguous contract terms involving credit support' after PowerHouse posted a $1 letter of credit; the contract question goes to the Northern District of Illinois; LaCerte: 'an embarrassing legal fiction'",
+   "read": "The TSA survives as a FERC contract; whether $1 satisfied it is now a federal judge's question.",
+   "source": "https://www.utilitydive.com/news/ferc-exelon-comed-powerhouse-hillwood-data-center/831127/"
+  },
+  {
+   "date": "2026-09-22",
+   "category": "market",
+   "headline": "Butler at the Atlantic Council blames the data-center backlash on 'lack of communication and community buy-in'; Argus cuts its EXC price target to $49 the same day",
+   "read": "The CEO's framing as the stock sits near a 52-week low.",
+   "source": "https://www.rtoinsider.com/145344-exelons-butler-expounds-data-center-backlash-atlantic-council/"
+  },
+  {
+   "date": "2026-09-16",
+   "category": "customer",
+   "headline": "ComEd signs transmission security agreements with two more northern Illinois data-center developers (unnamed): six active TSAs backed by more than $1B in letters of credit covering ten years of transmission revenue; queue down from ~39 GW to ~25 GW",
+   "read": "Two new signings seven weeks after the PowerHouse cancellation — the instrument is still being used.",
+   "source": "https://dailyenergyinsider.com/news/53810-comed-inks-transmission-security-agreements-with-two-data-center-developers-in-illinois/"
+  },
+  {
+   "date": "2026-09-14",
+   "category": "procurement",
+   "headline": "Illinois's first CRGA storage procurement lands 600 MW of a 1,038 MW target (520 MW MISO, 80 MW in the ComEd/PJM zone), standalone only, online by 2030; ICC approval September 1",
+   "read": "The state, not ComEd, buys Illinois's batteries.",
+   "source": "https://capitolnewsillinois.com/news/huge-step-forward-illinois-inches-closer-on-battery-storage-solar-goals/"
+  },
+  {
+   "date": "2026-09-14",
+   "category": "regulatory",
+   "headline": "Maryland PSC opens the Next Generation Energy Act's Round 2 expedited-CPCN solicitation (PC 74) for dispatchable generation and large capacity resources — window October 1–31, 2026",
+   "read": "A permitting fast-track for third-party developers, not yet utility ownership.",
+   "source": "https://psc.maryland.gov/wp-content/uploads/2026/09/Notice_Round-2_SolicitationPeriod-PC74.pdf"
+  },
+  {
+   "date": "2026-09-11",
+   "category": "policy",
+   "headline": "The Pennsylvania PUC schedules emergency-curtailment rules (tentative order October 1, 2026), a large-load cost-allocation technical conference and a ratemaking/ROE working group as industrial load is forecast +18.6 percent by 2030",
+   "read": "PECO's next rate case will be argued in a changed rulebook.",
+   "source": "https://www.utilitydive.com/news/pennsylvania-puc-to-consider-rates-and-curtailment-as-data-centers-grow/830174/"
+  },
+  {
+   "date": "2026-09-01",
+   "category": "regulatory",
+   "headline": "BGE, Pepco and Delmarva file proposed large-load rate schedules with the Maryland PSC (PC72) under the Next Generation Energy Act and the Utility RELIEF Act; Pepco Holdings names Rodney Oddoye president and CEO as Tyler Anthony moves to Exelon",
+   "read": "Maryland's tariff answer and a new PHI chief on the same day.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "date": "2026-08-28",
+   "category": "regulatory",
+   "headline": "Maryland PSC Order 92607 (Case 9820): Pepco granted $50.9M of its $119.9M request at a 9.40 percent ROE (from 9.50 percent); about $164.9M of White Flint capital disallowed as imprudent; a Phase II cost-removal proceeding under the RELIEF Act",
+   "read": "The sharpest rate outcome in the group — less than half the ask and a lower return.",
+   "source": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-denies-over-half-of-pepcos-rate-increase-request/"
+  },
+  {
+   "date": "2026-08-25",
+   "category": "leadership",
+   "headline": "Robert Kleczynski named CFO effective October 5, 2026; Jeanne Jones to EVP Finance and Strategy; COO Mike Innocenzo (interim PECO CEO) to depart in 2027; ComEd's Josh Levin to Exelon SVP Finance and Andrew Plenge to ComEd CFO on January 1, 2027",
+   "read": "A finance reshuffle that leaves PECO's permanent CEO unnamed.",
+   "source": "https://www.exeloncorp.com/newsroom/exelon-announces-key-leadership-position-changes"
+  },
+  {
+   "date": "2026-08-24",
+   "category": "project",
+   "headline": "The ICC approves siting of ComEd's Kishwaukee Area Reliability Extension — a ~6-mile 345 kV double-circuit line and a new 345/138 kV substation south of DeKalb, the first ComEd line to need ICC siting since 2017",
+   "read": "New 345 kV for the DeKalb corridor, customer unnamed.",
+   "source": "https://www.stocktitan.net/news/EXC/illinois-commerce-commission-approves-com-ed-transmission-plan-for-4cyoi74dk8ys.html"
+  },
+  {
+   "date": "2026-08-14",
+   "category": "regulatory",
+   "headline": "FERC approves cost allocation for MISO Tranche 2.1 facilities built in PJM, assigning ComEd about $904M of projects; the same day PowerHouse Hillwood asks FERC to reject ComEd's cancellation ('utilities like ComEd will use their monopoly power as a bludgeon')",
+   "read": "Transmission upside and the TSA dispute arrive in the same docket sheet.",
+   "source": "https://www.utilitydive.com/news/ferc-miso-pjm-cost-recovery-transmission-projects/828002/"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "customer",
+   "headline": "Exelon announces 'more than $1 billion in customer protections' secured through transmission security agreements across ACE, BGE, ComEd, Delmarva, PECO and Pepco; Butler calls them 'a cornerstone of the Exelon Promise'",
+   "read": "The collateral number becomes the company's headline.",
+   "source": "https://www.exeloncorp.com/newsroom/exelon-secures-more-than-1-billion-in-customer-protections-through-pioneering-transmission-security-agreements"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "financial",
+   "headline": "Q2 2026: adjusted operating EPS $0.43 (GAAP $0.39); guidance $2.81–$2.91 reaffirmed; the queue refined from 43 GW to 36 GW — 4 GW under signed TSAs with ~$1B of collateral, 7 GW high-probability, 25 GW under study; ACE's 500 MW Pittsgrove battery unveiled; PJM 6.8 GW short at the cap",
+   "read": "The pipeline cut by design, and the first utility-owned storage ask in the same call.",
+   "source": "https://www.exeloncorp.com/newsroom/exelon-reports-second-quarter-2026-results"
+  },
+  {
+   "date": "2026-07-24",
+   "category": "customer",
+   "headline": "ComEd files a FERC notice of cancellation of the PowerHouse Hillwood Joliet TSA (and cancels the pending ICC retail agreement) over the timing of the security deposit; the same day Atlantic City Electric petitions the NJ BPU for a 500 MW / four-hour, ~$1B ACE-owned battery at Pittsgrove with Invenergy",
+   "read": "One door closes on a developer, another opens for a storage supplier.",
+   "source": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "corporate",
+   "headline": "'Exelon on Affordability and Reliability: We Hear You' — a $60M Customer Relief Fund (100,000-plus customers), 75 percent of bill increases attributed to supply, a '$20 billion potential savings' claim for utility-generated power, and a shareholder-funded 'ON for You' campaign",
+   "read": "The affordability posture in the company's own words.",
+   "source": "https://finance.yahoo.com/energy/articles/exelon-affordability-reliability-hear-stepping-102400705.html"
+  },
+  {
+   "date": "2026-07-14",
+   "category": "market",
+   "headline": "PJM's 2028/29 Base Residual Auction clears every zone at the $325/MW-day cap, 6,831 MW short of the reliability requirement, with 525 MW of new generation and uprates",
+   "read": "The third auction at the collar — the number behind Exelon's generation campaign.",
+   "source": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "regulatory",
+   "headline": "BGE files Maryland Case 9888 — $156.1M electric increase at a 10.4 percent ROE, about $8 a month residential, decision January 2027; the ICC approves ComEd's Rider SDVPP virtual power plant under the CRGA",
+   "read": "A single-year case in a state that just banned forecast test years.",
+   "source": "https://psc.maryland.gov/news/2026/bge-seeks-156-million-electric-rate-increase/"
+  },
+  {
+   "date": "2026-07-02",
+   "category": "regulatory",
+   "headline": "Maryland's Energy Administration, People's Counsel and PSC file a FERC complaint to strip the 0.5 percent RTO-participation ROE adder from BGE, Delmarva and Pepco (more than $20M a year)",
+   "read": "Jefferies expects it to succeed on California and Ohio precedent.",
+   "source": "https://www.utilitydive.com/news/exelon-firstenergy-ferc-maryland-rto-adder/824576/"
+  },
+  {
+   "date": "2026-06-30",
+   "category": "policy",
+   "headline": "New Jersey's legislature sends A796 to the governor: data centers of 50 MW or more must give financial guarantees of 85 percent of requested service for ten years; the BPU may use transmission security agreements",
+   "read": "ComEd's instrument written into another state's bill.",
+   "source": "https://www.utilitydive.com/news/new-jersey-lawmakers-send-data-center-tariff-bill-to-governor/824191/"
+  },
+  {
+   "date": "2026-06-18",
+   "category": "regulatory",
+   "headline": "FERC issues show-cause orders to PJM and five other RTOs on large-load interconnection (>50 MW at >69 kV): process, cost transparency, co-location and flexible service; responses due mid-November 2026",
+   "read": "The federal rulebook the TSAs pre-empted is being written.",
+   "source": "https://www.utilitydive.com/news/ferc-doe-data-center-interconnection/823360/"
+  },
+  {
+   "date": "2026-06-05",
+   "category": "policy",
+   "headline": "Governor Pritzker suspends Illinois data-center tax incentives after the POWER Act (HB 5513 — separate rate class, self-supply, water reporting, community benefits) stalls in committee; he presses for action in the October veto session",
+   "read": "Illinois's large-load statute is still a bill; ComEd's framework stands alone.",
+   "source": "https://capitolnewsillinois.com/news/power-act-data-center-regulation-wont-move-forward-this-spring/"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "policy",
+   "headline": "The Pennsylvania PUC issues its final order establishing a first-of-its-kind large-load model tariff framework (>50 MW / 100 MW aggregate; 'but for' cost allocation; deposits, minimum terms, exit provisions, self-build)",
+   "read": "A voluntary model — PECO's own filing is the missing piece.",
+   "source": "https://www.puc.pa.gov/press-release/2026/puc-releases-final-order-establishing-first-of-its-kind-large-load-model-tariff-framework-05132026"
+  },
+  {
+   "date": "2026-05-12",
+   "category": "policy",
+   "headline": "Governor Moore signs Maryland's Utility RELIEF Act (HB 1532): large-load threshold to 25 MW, RTO adder ended, forecast test years banned for a year, MYRP true-ups barred",
+   "read": "The most aggressive ratemaking statute in Exelon's footprint.",
+   "source": "https://www.utilitydive.com/news/maryland-legislature-utility-rate-relief-act-exelon-firstenergy/817431/"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "financial",
+   "headline": "Q1 2026: adjusted operating EPS $0.91 (GAAP $0.90; consensus $0.87–0.88); capital plan raised to $41.7B by adding $1.5B of transmission while cutting $350M of distribution and deferring $1.1B at PECO and BGE; 18 GW high-probability, 43 GW under study; ~$1.9B of MISO Tranche 2.1 bids with Invenergy",
+   "read": "'Leaning into transmission areas with strong visibility and clear need.'",
+   "source": "https://www.exeloncorp.com/newsroom/exelon-reports-first-quarter-2026-results"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "leadership",
+   "headline": "PECO president and CEO David Vahos moved to special advisor to Butler a week after the rate-case withdrawal; COO Mike Innocenzo leads PECO on an interim basis",
+   "read": "The affordability politics reached the operating-company CEO.",
+   "source": "https://whyy.org/articles/peco-ceo-removed-special-advisor/"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "regulatory",
+   "headline": "PECO withdraws its $429M electric and $81M gas rate requests (filed March 30 at a 10.95 percent ROE) after Governor Shapiro calls them 'pure greed'; Barclays, BMO and Mizuho downgrade the stock the next day",
+   "read": "The first rate case in this corpus withdrawn under political pressure.",
+   "source": "https://www.utilitydive.com/news/peco-rate-hike-affordability-pennsylvania-puc-exelon/817760/"
+  },
+  {
+   "date": "2026-04-08",
+   "category": "regulatory",
+   "headline": "Maryland PSC Order 92281 (Case 9715) sets the NGEA distribution-storage program: BGE 29 MW (3 MW owned, 15 MW customer-sited, 11 MW third-party), PHI 14.5 MW third-party via RFP",
+   "read": "Maryland's first utility-owned battery is 3 MW.",
+   "source": "https://psc.maryland.gov/wp-content/uploads/2026/04/ORDER_1.pdf"
+  },
+  {
+   "date": "2026-03-25",
+   "category": "market",
+   "headline": "Pepco Holdings CEO Tyler Anthony: 'If the merchant, independent guys won't build, we will'; 34 active data-center projects and 13 GW in PHI's jurisdictions; support for Maryland's HB 1561",
+   "read": "The generation campaign stated as a promise.",
+   "source": "https://www.utilitydive.com/news/regulated-generation-pjm-capacity-affordability-pepco-anthony/815643/"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "regulatory",
+   "headline": "The ICC approves ComEd's Rider DE and LDPAC deposit revisions (25-0677/25-0679) — $1M at 50 MW plus $500,000 per 100 MW above 200 MW, an LOC above $2M — and orders an eight-month investigation; ComEd cites 75-plus applications above 28,000 MW; Joliet's council annexes the PowerHouse campus 8–1 the same day",
+   "read": "The state half of the framework, approved 'as an important first step'.",
+   "source": "https://www.nprillinois.org/illinois/2026-03-20/regulators-ok-comeds-plan-to-increase-deposit-costs-for-large-load-projects-like-data-centers"
+  },
+  {
+   "date": "2026-03-10",
+   "category": "regulatory",
+   "headline": "FERC accepts five ComEd TSAs — Equinix, Grundy County Power (Tract, Morris), Karis Critical (February 17), PowerHouse Hillwood and QTS — under Mobile-Sierra, over the Illinois attorney general's protest",
+   "read": "The TSA becomes precedent; Commissioner Chang's cost-shift concurrence becomes the dissent to watch.",
+   "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/"
+  },
+  {
+   "date": "2026-02-12",
+   "category": "financial",
+   "headline": "FY2025: adjusted operating EPS $2.77 (GAAP $2.73); 2026 guidance $2.81–$2.91; capex $41.3B for 2026–2029 (+$3.3B, >70 percent transmission); rate base +$23B; the ~18 GW committed pipeline '~45 percent secured with TSAs'",
+   "read": "The plan that Q1 would tilt further to transmission.",
+   "source": "https://www.exeloncorp.com/newsroom/exelon-reports-fourth-quarter-and-full-year-2025-results-and-initiates-2026-financial-outlook"
+  },
+  {
+   "date": "2026-02-06",
+   "category": "policy",
+   "headline": "Charles River Associates report for Exelon: utility-generated power could save PJM customers $9.6–20.0B in 2028/29 and cut supply-caused unserved energy 85 percent",
+   "read": "The evidence base for the utility-owned-generation campaign.",
+   "source": "https://www.exeloncorp.com/newsroom/new-report-utility-generated-power-can-save-customers--20b-reduce-risks-of-outages"
+  },
+  {
+   "date": "2026-01-16",
+   "category": "regulatory",
+   "headline": "ComEd files its $15.3B 2028–2031 Multi-Year Integrated Grid Plan (Docket 26-0047): data centers 47 percent of new substation demand, three new Chicago substations; ICC order expected December 15, 2026",
+   "read": "The distribution plan sized to the load ramp.",
+   "source": "https://capitolnewsillinois.com/news/comed-files-15-3-billion-grid-plan-proposal-addressing-rising-demand/"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "legal",
+   "headline": "The Illinois attorney general protests ComEd's TSAs for Monarch Rock Air (~1,200 MW) and Karis Critical (~500 MW) at FERC: 'the safeguards in the TSA do not prevent existing customers from paying the costs caused by this large, discrete load'",
+   "read": "The consumer case against the instrument, later overruled.",
+   "source": "https://www.utilitydive.com/news/illinois-ag-files-objections-to-comed-data-center-agreements-at-ferc/809576/"
+  },
+  {
+   "date": "2026-01-08",
+   "category": "policy",
+   "headline": "Governor Pritzker signs the Clean and Reliable Grid Affordability Act (Public Act 104-0458): 3,000 MW of storage by 2030 via the IPA, a statewide IRP, utility virtual power plants, the nuclear moratorium lifted",
+   "read": "Illinois buys its storage through a state agency; ComEd gets a VPP rider.",
+   "source": "https://www.utilitydive.com/news/illinois-sets-3-gw-energy-storage-target-requires-utilities-to-develop-vir/809189/"
+  },
+  {
+   "date": "2025-12-19",
+   "category": "regulatory",
+   "headline": "Delmarva files Delaware's General Service – Large Load tariff (Docket 25-0826; the PSC had paused ≥25 MW interconnections on October 15, 2025); the ICC approves ComEd's $243M 2026 rate reconciliation the same week",
+   "read": "Delaware's pause-then-tariff sequence, the strictest gate in the footprint.",
+   "source": "https://depsc.delaware.gov/wp-content/uploads/sites/54/2026/01/25-0826-Delmarva-Large-Load-Tariff-Notice-for-Public-Workshop.pdf"
+  },
+  {
+   "date": "2025-11-21",
+   "category": "customer",
+   "headline": "FERC accepts PECO's transmission security agreement with Amazon Data Services for Falls Township, Pennsylvania — the first Exelon TSA — over PJM's market monitor; Utility Dive reports power from Vistra's 1,320 MW Fairless plant",
+   "read": "The instrument's debut was in Pennsylvania, not Illinois.",
+   "source": "https://www.utilitydive.com/news/ferc-peco-amazon-data-center-transmission-agreement/806254/"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "financial",
+   "headline": "Q3 2025: adjusted EPS $0.86 against a $0.69–0.78 consensus; the 'advanced' pipeline at 18 GW with 6 GW close to TSAs and 47 GW of potential; capex $38B plus $10–15B of potential transmission",
+   "read": "The peak of the pre-vetting pipeline.",
+   "source": "https://www.utilitydive.com/news/exelon-data-center-amazon-earnings-maryland/804720/"
+  },
+  {
+   "date": "2025-05-20",
+   "category": "policy",
+   "headline": "Maryland's Next Generation Energy Act signed: multi-year plans affirmed, reconciliation filings barred, 150 MW of distribution storage, dispatchable-generation and transmission-connected storage solicitations, Legislative Energy Relief Refunds",
+   "read": "The statute Exelon's Maryland storage and generation asks now run through.",
+   "source": "https://psc.maryland.gov/wp-content/uploads/2026/09/Notice_Round-2_SolicitationPeriod-PC74.pdf"
+  },
+  {
+   "date": "2025-05-02",
+   "category": "financial",
+   "headline": "Q1 2025: the data-center pipeline doubles to 36 GW with 16 GW 'high probability'; ~10 percent online by 2028, a third by 2030, three-quarters by 2034; capex $38B plus up to $15B of transmission not in plan",
+   "read": "The first ladder, before TSAs existed.",
+   "source": "https://www.utilitydive.com/news/exelon-data-center-pipeline-pjm-maryland-earnings/746971/"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that the transmission security agreement is now the standard instrument for connecting a data center in ComEd's territory and that the PowerHouse dispute will narrow, not end, it: FERC left the TSA in force and sent only the credit-clause question to court, ComEd signed two more TSAs seven weeks after the cancellation, and New Jersey's A796 and Maryland's PC72 filings are copying the form. Basis: the September 22, 2026 FERC order and the LaCerte and Rosner concurrences pressing for clearer security-deposit rules; Daily Energy Insider's September 16 account (six active TSAs, more than $1B of letters of credit); the ICC's parallel LDPAC investigation. We expect the next generation of TSAs to specify the collateral instrument and timing explicitly, which is the fix the $1 letter of credit exposed.",
+  "(High confidence) We assess that Exelon's 4 GW of TSA-backed load is the most bankable data-center number in the corpus and its 25 GW 'under study' the least, and that the company will keep cutting the middle rung rather than growing it. Basis: Jones's 'we have now weeded out speculative projects', the fall from 18 GW to 11 GW between Q1 and Q2 2026, the queue's contraction from about 39 GW to about 25 GW at ComEd, and the ~36-month interconnection cycle against a 2028 first-tranche date. The unreconciled gap — TSA gigawatts falling from about 8 GW to 4 GW while collateral held at about $1B — is the number to test at the Q3 call.",
+  "(High confidence) We assess that Exelon is not a buyer of storage or generation equipment in 2026 and that its route to becoming one runs through state legislatures, with New Jersey's decision on the ACE Pittsgrove battery (about February 2027) the first real test. Basis: the 10-K ('The Registrants do not own generation'); the CRGA design that routes Illinois's 3 GW through the IPA and gives ComEd a VPP rider; Maryland's NGEA program (3 MW BGE-owned); the ACE petition's 9.6 percent-plus-incentives ROE ask and $1.36-per-$1 benefit claim; Butler's 'utility-owned generation ... as a cost-effective complement' and Anthony's 'we will'. If Pittsgrove is approved, Invenergy — not Exelon — selects the battery, as at We Energies' build-transfer projects.",
+  "(Moderate confidence) We assess that the Mid-Atlantic utilities will carry more regulatory risk than growth through 2027 and that the ComEd share of the high-probability book will rise above its current ~80 percent. Basis: the RELIEF Act's 25 MW threshold and RTO-adder repeal, the Pepco order's 9.40 percent ROE and $164.9M disallowance, the PECO withdrawal and CEO change, Delaware's interconnection pause and the collapse of the Delaware City project, against ComEd's transmission ROE of 11.50 percent, its $904M of Tranche 2.1 allocations and six TSAs. The Q1 2026 reallocation — $1.1B deferred at PECO and BGE, $1.5B added to transmission — is the company already acting on this read.",
+  "(Moderate confidence) We assess that PJM's capacity price, not Exelon's own rates, is the political variable that decides whether the generation campaign succeeds, and that a fourth auction at the cap in December 2026 would move Maryland's HB 1561 or its successor. Basis: three consecutive auctions at the collar with 6.8 GW of shortfall and 525 MW of new supply; the company's own simulation of $555–777/MW-day uncapped; the ACE bill-impact figures; the CRA report's $9.6–20B; consumer advocates' August 2026 request that FERC reject PJM's reliability backstop. Pennsylvania remains 'a long shot' by the CEO's own description.",
+  "(Low confidence) We assess that the Constellation re-merger speculation of 2025 has no live basis: no first- or third-party source in the record reports talks, Constellation's 2025–2026 M&A was Calpine, and the two companies are adversaries at FERC over nuclear co-location. Basis: absence of evidence across the newsroom sitemap, RTO Insider and Utility Dive searches; the 2024 declaratory-order petition. Recorded because the question was asked, not because the record supports it."
+ ],
+ "relationships": [
+  {
+   "slug": "powerhouse-data-centers",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-03",
+   "scale": "1.8 GW / ~$20B Joliet Technology Center",
+   "via": "ComEd transmission security agreement (ER26-3104)",
+   "note": "PowerHouse Hillwood Holding — the PowerHouse Data Centers / Hillwood joint venture behind the 795-acre, 24-building Joliet campus — holds the ComEd TSA FERC accepted on March 10, 2026, which ComEd moved to cancel on July 24 over the timing and form of the security deposit (a $1 letter of credit); FERC rejected the cancellation on September 22, 2026 and the contract question is before the Northern District of Illinois.",
+   "context": "The corpus's PowerHouse dossier (v2) carried the cancellation, the August 14 FERC challenge and the federal suit, and listed 'FERC's ruling on the ComEd cancellation' as an indicator to watch; that ruling — the notice rejected, jurisdiction declined over the credit clause — is recorded there with this push (v3). Utility Dive's framing that the Joliet project was 'classified as speculative under new vetting process' is the article's; no ComEd statement was found. The cancellation filing's docket is reported as ER26-3257 (tftc.io) and ER26-1032 (Construction Review Online) — both recorded.",
+   "source": "https://www.utilitydive.com/news/ferc-exelon-comed-powerhouse-hillwood-data-center/831127/"
+  },
+  {
+   "slug": "tract",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-03",
+   "scale": "~1 GW Morris Technology Park; first power June 2028",
+   "via": "ComEd transmission security agreement (Grundy County Power NR I, ER26-3100)",
+   "note": "Tract's Morris, Illinois park holds a ComEd TSA through its project company Grundy County Power NR I, LLC — accepted by FERC on March 10, 2026 per Utility Dive and announced by Tract in April — carrying 'committed revenue contributions, minimum usage commitments, and shortfall payments for underperformance'; ComEd CEO Gil Quiniones was quoted in Tract's release.",
+   "context": "The Tract dossier records the acceptance as 'April 2026' from Tract's announcement; the FERC acceptance date per Utility Dive is March 10, 2026 — the dossier is revised to carry both with this push. Tract is simultaneously NV Energy's litigation counterparty in Nevada (see the Berkshire Hathaway Energy dossier).",
+   "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-11",
+   "scale": "$20B of planned Pennsylvania data centers (EEI)",
+   "via": "PECO transmission security agreement (Falls Township)",
+   "note": "Amazon Data Services holds Exelon's first transmission security agreement — with PECO for Falls Township, Pennsylvania, accepted by FERC on November 21, 2025 over PJM's market monitor — with power reported by Utility Dive to come from Vistra's 1,320 MW Fairless gas plant; EEI lists the project at '$20 billion investment in planned data centers in the state'.",
+   "context": "Amazon is also reported (DCD, April 2025) to be developing at TPG's Quantum Frederick park in Maryland, whose serving utility is not confirmed in the record.",
+   "source": "https://www.utilitydive.com/news/ferc-peco-amazon-data-center-transmission-agreement/806254/"
+  },
+  {
+   "slug": "equinix",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-03",
+   "scale": "700 MW Minooka, Illinois",
+   "via": "ComEd transmission security agreement (ER26-3101)",
+   "note": "Equinix's 700 MW Minooka project holds a ComEd TSA accepted March 10, 2026; EEI's September 2026 list carries it as the ComEd example of the instrument.",
+   "context": "CBRE's H2 2025 Chicago report (per the CyrusOne and Prime dossiers) lists Equinix's Minooka campus among the fully leased Chicago-market sites while noting ComEd delivery delays 'until 2032 or later' market-wide.",
+   "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/"
+  },
+  {
+   "slug": "qts",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-03",
+   "via": "ComEd transmission security agreement (QTS Investment Properties Chicago, ER26-3102)",
+   "note": "QTS Investment Properties Chicago holds a ComEd TSA accepted March 10, 2026; megawatts and site are not stated in the sources read.",
+   "context": "Recorded from Utility Dive's account of the March 10 FERC order.",
+   "source": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/"
+  },
+  {
+   "slug": "aligned",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-01",
+   "via": "ComEd transmission security agreement (ER26-841 group)",
+   "note": "Aligned Data Centers holds one of the first ComEd TSAs, filed from December 19, 2025 and accepted before the March 10, 2026 order; its Illinois site is not named in the sources read, and its IAD-06 building at Quantum Frederick, Maryland (topped out March 2026) sits in a park whose serving utility is unconfirmed.",
+   "context": "Recorded from Utility Dive's January 14 and March 11, 2026 coverage; the Aligned dossier does not carry the ComEd agreement.",
+   "source": "https://www.utilitydive.com/news/illinois-ag-files-objections-to-comed-data-center-agreements-at-ferc/809576/"
+  },
+  {
+   "slug": "compass-datacenters",
+   "type": "customer",
+   "status": "announced",
+   "scale": "$10B Hoffman Estates campus (EEI)",
+   "via": "ComEd service (no TSA on record)",
+   "note": "Compass Datacenters' Hoffman Estates campus on the former Sears site is a ComEd-served project EEI lists at $10B; Building 1 topped out in February 2026 and the developer withdrew a rezoning request in July 2026.",
+   "context": "The Compass dossier (v5) targets ComEd power for Building 1 in mid-2026 per 2024 coverage and flags the energization date as an indicator; no confirmation of energization and no Compass TSA appear in the record — the two are stated, not reconciled.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "slug": "cyrusone",
+   "type": "customer",
+   "status": "active",
+   "scale": "480 MW Yorkville; Aurora ($350M)",
+   "via": "ComEd service",
+   "note": "CyrusOne's Yorkville campus (480 MW from ComEd across eight buildings, first building Q1 2028) and its Aurora data center ($350M, groundbreaking October 2024) are ComEd load; neither appears among the named TSA counterparties.",
+   "context": "Recorded from the corpus's CyrusOne dossier and Google News titles.",
+   "source": "CyrusOne dossier (v1) — Yorkville 480 MW from ComEd"
+  },
+  {
+   "slug": "prime-data-centers",
+   "type": "customer",
+   "status": "active",
+   "scale": "ORD01 270 MW, Elk Grove Village",
+   "via": "ComEd service with an adjacent substation",
+   "note": "Prime Data Centers' ORD01 campus in Elk Grove Village (270 MW; CoreWeave's Chicago landlord) is ComEd-served with an adjacent substation and a 275 MVA on-site build.",
+   "context": "Recorded from the corpus's Prime Data Centers dossier, which notes ComEd delivery delays 'until 2032 or later' market-wide with Prime's campus already served.",
+   "source": "Prime Data Centers dossier (v3) — ORD01, ComEd"
+  },
+  {
+   "slug": "invenergy",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-05",
+   "scale": "ACE 500 MW / 4-hr BESS (~$1B); ~$1.9B of MISO Tranche 2.1 bids",
+   "via": "ACE Pittsgrove storage partnership; ComEd competitive transmission bids",
+   "note": "Invenergy is Exelon's development partner twice over: co-developer, builder and operator of the ACE-owned 500 MW Pittsgrove battery petitioned to the NJ BPU in July 2026, and ComEd's partner on about $1.9B of MISO Tranche 2.1 competitive transmission bids in Illinois (May 2026) with two more Iowa bids decided in Q4 2026.",
+   "context": "Invenergy is also We Energies' build-transfer developer (WEC dossier) — the same developer-as-equipment-selector pattern.",
+   "source": "https://njbiz.com/atlantic-city-electric-500mw-battery-project-salem/"
+  },
+  {
+   "slug": "constellation-energy",
+   "type": "other",
+   "status": "historical",
+   "since": "2022-02",
+   "note": "Constellation Energy is Exelon's former generation business, separated on February 1, 2022, and its adversary at FERC over nuclear co-location: Exelon petitioned for a declaratory order against Constellation's behind-the-meter data-center deals in October 2024, and Constellation protested PJM's 2026 co-location package that Exelon's position helped shape.",
+   "context": "No 2025–2026 reporting of re-merger talks was found; Constellation's M&A was Calpine (closed January 2026). Constellation was among bidders in Maryland's dispatchable-generation solicitation that 'fell short' in November 2025.",
+   "source": "https://www.rtoinsider.com/88515-exelon-petition-ferc-constellation-co-location-deals/"
+  },
+  {
+   "slug": "vistra",
+   "type": "other",
+   "status": "active",
+   "note": "Vistra's 1,320 MW Fairless gas plant is reported by Utility Dive as the power source behind PECO's Amazon Falls Township TSA, and Vistra protested PJM's co-location package (March 2026) that Exelon and AEP had pushed for — the two are on opposite sides of the co-location docket without a direct commercial relationship.",
+   "context": "Recorded from Utility Dive's November 2025 and March 2026 coverage; the Vistra dossier records the co-location split the same way.",
+   "source": "https://www.utilitydive.com/news/exelon-data-center-amazon-earnings-maryland/804720/"
+  },
+  {
+   "slug": "talen-energy",
+   "type": "other",
+   "status": "historical",
+   "since": "2024-06",
+   "note": "Exelon and AEP filed the protest that led FERC to reject the amended Talen–Amazon Susquehanna interconnection agreement on November 1, 2024 — the corpus's founding co-location dispute.",
+   "context": "The Talen dossier records Exelon as co-protestant; Exelon's formal 2026 position in the successor docket was not found.",
+   "source": "Talen Energy dossier (v2) — FERC order rejecting the amended Susquehanna ISA (Exelon and AEP protest)"
+  },
+  {
+   "slug": "aep",
+   "type": "partner",
+   "status": "active",
+   "note": "AEP is Exelon's co-protestant on nuclear co-location (Susquehanna, 2024) and a fellow 765 kV operator; Utility Dive records AEP and Exelon as the utilities that 'sought to stop non-utility generators serving co-located load' in the 2025–2026 PJM proceedings.",
+   "context": "Recorded from the Vistra and Talen dossiers' citations; no joint transmission venture between the two is in the record.",
+   "source": "https://www.utilitydive.com/news/pjm-data-center-colocation-ferc-vistra-constellation/815941/"
+  },
+  {
+   "slug": "dominion-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Dominion is the other PJM utility with a data-center pipeline of Exelon's scale and appears with Exelon's utilities as a co-awardee in PJM's $11.8B transmission plan (Dominion HVDC; NextEra/Exelon).",
+   "context": "The Dominion dossier lists 'Exelon's utilities' among PJM transmission co-awardees; the two do not compete for load.",
+   "source": "Dominion Energy dossier (v1) — PJM board approves $11.8B transmission plan (Utility Dive)"
+  },
+  {
+   "slug": "enchanted-rock",
+   "type": "supplier",
+   "status": "active",
+   "since": "2021",
+   "via": "ComEd Bronzeville community microgrid",
+   "note": "Enchanted Rock supplies the gas-fired resilience generation for ComEd's Bronzeville community microgrid (selected 2021), the utility-partner route in Enchanted Rock's model alongside Entergy's 'Power Through'.",
+   "context": "Recorded from the corpus's Enchanted Rock dossier and its cited PRNewswire release.",
+   "source": "Enchanted Rock dossier (v4) — ComEd selects Enchanted Rock for the Bronzeville Community Microgrid"
+  },
+  {
+   "slug": "sargent-lundy",
+   "type": "supplier",
+   "status": "active",
+   "via": "BGE Key Crossing Reliability Initiative; historical engineer-of-choice contract",
+   "note": "Sargent & Lundy engineered BGE's Key Crossing Reliability Initiative (397-foot monopoles, 'the tallest in the Americas') and held a 2002 multi-year engineer-of-choice contract for Exelon's then 17 nuclear units; Exelon was a 2020 top-ten nuclear services client before the Constellation spin.",
+   "context": "Recorded from the corpus's Sargent & Lundy dossier.",
+   "source": "Sargent & Lundy dossier (v2) — Key Crossing Reliability Initiative; Exelon engineer-of-choice contract"
+  },
+  {
+   "slug": "apex-clean-energy",
+   "type": "supplier",
+   "status": "active",
+   "via": "Illinois renewable offtake (Apex dossier)",
+   "note": "The Apex Clean Energy dossier lists ComEd among the offtakers of a 300 MW Illinois wind project (with Cargill, Ameren Illinois and MidAmerican, online 2025) and among its utility target segments — offtake that in Illinois runs through the IPA's procurements delivered via the utilities rather than a ComEd purchase.",
+   "context": "Recorded from the corpus's Apex dossier; Exelon's own materials do not name Apex.",
+   "source": "Apex Clean Energy dossier (v1) — corporate and utility offtake table"
+  },
+  {
+   "slug": "microsoft",
+   "type": "other",
+   "status": "active",
+   "note": "Microsoft is not a ComEd counterparty in the 2026 FERC disputes — its August 21, 2026 protest concerns ATC and We Energies in Wisconsin — and no 2026 source names it as an Exelon-territory data-center customer; DeKalb-area attributions (near ComEd's KARE project) are unverified.",
+   "context": "Recorded to correct a common conflation in coverage of the August 2026 FERC filings.",
+   "source": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "PJM capacity market",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-14",
+   "exposure": "The 2028/29 Base Residual Auction cleared every zone at the $325/MW-day UCAP cap — the third consecutive auction at the FERC-approved collar — 6,831 MW short of the reliability requirement, with the requirement up 1,374.5 MW 'largely due to additional Large Loads' and only 524.7 MW of new generation and uprates; Exelon's own simulation puts the uncapped price at about $555 RTO-wide and $777 in ComEd. Exelon's customers pay it through supply charges (ACE residential +$14.70–23.64 a month if the cap lifts; Mid-Atlantic supply costs 'up to 80 percent over five years'), and the company's response is political: utility-owned generation 'as a cost-effective complement', the CRA report ($9.6–20B of savings), support for the collar's extension (April 2026) and PJM's reliability backstop, and Maryland's HB 1561. Consumer advocates asked FERC in August 2026 to reject the backstop.",
+   "mitigation": "Collar extension; TSAs that assign transmission cost and collateral to large loads; the ACE battery and Maryland storage petitions as owned capacity; demand response (ComEd 1,105.6 MW cleared).",
+   "source": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf"
+  },
+  {
+   "regime": "FERC — transmission security agreements, large-load show-cause orders and co-location",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-18",
+   "exposure": "ComEd's TSAs are FERC contracts under the Mobile-Sierra presumption, so their disputes go to FERC and federal court: the September 22, 2026 order rejecting ComEd's PowerHouse cancellation declined jurisdiction over 'ambiguous contract terms involving credit support', with Rosner and LaCerte pressing for clearer security-deposit rules and Chang's March concurrence warning that bilateral agreements 'may not be sufficient to ensure that customers are protected against unjust cost shifts'. FERC's June 18, 2026 show-cause orders require PJM and five other RTOs to address large-load interconnection (>50 MW at >69 kV), cost transparency, co-location and flexible service by mid-November 2026; PJM's co-location package (effective June 1, 2029) is protested by Vistra, Constellation and the Data Center Coalition; Exelon's 2024 petition against Constellation's nuclear co-location and its Susquehanna protest with AEP are its documented positions. Maryland's July 2, 2026 complaint seeks to strip the 0.5 percent RTO adder from BGE, Delmarva and Pepco (>$20M a year).",
+   "mitigation": "Six active TSAs with LOCs covering ten years of transmission revenue; explicit collateral terms in the next TSAs; ComEd's 11.50 percent transmission ROE; the ICC's parallel LDPAC investigation as the state backstop.",
+   "source": "https://www.utilitydive.com/news/ferc-exelon-comed-powerhouse-hillwood-data-center/831127/"
+  },
+  {
+   "regime": "Illinois — CRGA (Public Act 104-0458), the ICC large-load order and the stalled POWER Act",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-08",
+   "exposure": "The Clean and Reliable Grid Affordability Act (signed January 8, 2026; provisions effective from June 2026) sets 3,000 MW of storage by 2030 procured by the IPA through Indexed Storage Credits (600 MW awarded September 1, 2026), a statewide IRP (first filing November 15, 2026), utility virtual power plants (ComEd's Rider SDVPP, effective July 16, 2026) and 25 percent larger efficiency budgets — with no utility-owned generation authority. The ICC's March 19, 2026 order approved ComEd's Rider DE and LDPAC deposits 'as an important first step' and opened an eight-month investigation into a separate large-load tariff, Riders NS/ZSS and cost allocation; ComEd must report annually from February 1, 2027. The POWER Act (HB 5513: a separate data-center rate class, self-supply with renewables and storage, water reporting, community benefit agreements) stalled in committee in May 2026; Governor Pritzker suspended data-center tax credits in June and is pressing the October veto session; CUB estimates $24–37B of statewide cost. ComEd's $15.3B 2028–2031 grid plan awaits a December 15, 2026 order.",
+   "mitigation": "TSAs and LDPAC deposits as the cost-shift defense; Rider SDVPP; the $243M 2026 reconciliation already approved; the $60M Customer Relief Fund.",
+   "source": "https://icc.illinois.gov/downloads/public/press-release/03.20.26%20Data%20center%20tariff%20investigation.pdf"
+  },
+  {
+   "regime": "Maryland — Next Generation Energy Act (2025) and Utility RELIEF Act (HB 1532, 2026)",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-01",
+   "exposure": "The NGEA (May 20, 2025) affirmed multi-year plans, barred post-2025 reconciliation filings, created the 150 MW distribution-storage program (Order 92281: BGE 29 MW, PHI 14.5 MW), dispatchable-generation and transmission-connected storage solicitations (PC 74 Round 2 open October 1–31, 2026) and Legislative Energy Relief Refunds (BGE $49M, Pepco $21M, DPL $8M twice). The RELIEF Act (passed April 13, signed May 12, effective July 1, 2026) lowered the large-load threshold to 25 MW and the load factor to 60 percent, banned forecast test years for a year, barred MYRP true-ups, ended the RTO adder and opened Pepco's Phase II cost-removal proceeding; the Maryland Exelon companies filed PC72 large-load rate schedules on September 1, 2026. The PSC's August 28 Pepco order (42 percent of the ask at a 9.40 percent ROE; $164.9M disallowed) and the December 2025 BGE true-up (about $77M of $152M) show the ratemaking climate; HB 1561's utility-owned-generation authority remained pending in the sources read.",
+   "mitigation": "Single-year cases (BGE 9888); the flexible-load plans (Case 9761; 407 MW across BGE, Pepco and Delmarva); BGE and Pepco battery bids into the state solicitations.",
+   "source": "https://psc.maryland.gov/wp-content/uploads/2026/09/Notice_Round-2_SolicitationPeriod-PC74.pdf"
+  },
+  {
+   "regime": "Pennsylvania, Delaware and New Jersey large-load rules; affordability politics",
+   "status": "proposed",
+   "effectiveDate": "2026-05-13",
+   "exposure": "Pennsylvania's PUC model large-load tariff (M-2025-3054271, May 13, 2026) is voluntary and awaits PECO's utility-specific filing (not found); the PUC's curtailment rulemaking (tentative order October 1, 2026; final target January 28, 2027), cost-allocation conference and ROE working group follow PECO's withdrawn $510M request and Governor Shapiro's 'pure greed'. Delaware paused interconnections of 25 MW or more (October 15, 2025) pending Delmarva's GS-LL tariff (≥50 MW; final order not found) and enacted a data-center clean-power law in August 2026 (terms not accessible); New Jersey's A796 (≥50 MW; 85 percent / ten-year guarantees; TSAs) awaited signature after passing June 30, 2026. DC's Court of Appeals reversed the PSC's approval of Pepco's multiyear plan (April 2026), with current rates kept pending remand.",
+   "mitigation": "Generation investment 'as a last resort' and capital decisions 'informed by customer affordability considerations' (PECO/Exelon, April 2026); $1.1B of PECO and BGE deferrals; the shift of capital to FERC-regulated transmission.",
+   "source": "https://www.puc.pa.gov/press-release/2026/puc-releases-final-order-establishing-first-of-its-kind-large-load-model-tariff-framework-05132026"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Exelon's federal tax exposure runs through the customers' bills rather than its own plants: Treasury's February 2026 Corporate Alternative Minimum Tax notice is worth up to $200M of customer savings over four years by the company's estimate, and the ACE Pittsgrove battery's economics assume 'early-year federal tax credits' and PJM revenues offset about 70 percent of its roughly $1B cost — the project's key federal dependency after the OBBBA's accelerated phase-outs. No FEOC or battery-tariff statement was found (Butler, April 2025: tariffs about 1.5 percent of capex and O&M, 'manageable'); the battery's supplier is unnamed and the IPA's Indexed Storage Credit procurements carry sourcing risk with the developers.",
+   "mitigation": "Rate-based recovery with a 9.6 percent-plus ROE ask on Pittsgrove; Invenergy as developer; state procurements that leave equipment risk with third parties.",
+   "source": "https://www.exeloncorp.com/newsroom/exelon-commends-u-s-department-of-the-treasury-for-issuing-tax-notice-that-addresses-affordability-promotes-grid-investment"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Calvin G. Butler Jr.",
+   "title": "President and Chief Executive Officer",
+   "photo": "images/execs/exelon-butler.jpg",
+   "background": [
+    "CEO since the end of 2022 (named November 2, 2022 to succeed Chris Crane) and a director; president and COO of Exelon 2019–2022 over the six utilities; CEO of BGE 2014–2019; joined Exelon in 2008 as ComEd's vice president of governmental and legislative affairs; earlier senior roles at R.R. Donnelley and Central Illinois Light",
+    "The voice of the 'utility-owned generation as a cost-effective complement' argument in PJM, of the transmission security agreement as 'a cornerstone of the Exelon Promise', and — at the Atlantic Council on September 22, 2026 — of the view that the data-center backlash comes from 'lack of communication and community buy-in'",
+    "BA, Bradley University; JD, Washington University School of Law (company bio)"
+   ]
+  },
+  {
+   "name": "Jeanne Jones",
+   "title": "Executive Vice President and Chief Financial Officer (Executive Vice President, Finance and Strategy from October 5, 2026)",
+   "photo": "images/execs/exelon-jones.jpg",
+   "background": [
+    "CFO since 2022; moves to EVP Finance and Strategy reporting to Butler on October 5, 2026, when Robert Kleczynski becomes CFO reporting to her — the executive who presents the pipeline ladder and the capital plan on every call ('we have now weeded out speculative projects')",
+    "Joined Exelon in 2007 from EY (audit manager, Chicago); chief of staff to the CFO; treasury roles; director then vice president of finance at Exelon Nuclear and CFO of Constellation Energy Nuclear Group; senior vice president, corporate finance",
+    "BBA, Notre Dame; MBA, Kellogg; boards of Energy Insurance Mutual, the Exelon Foundation and the Big Shoulders Fund (company bio)"
+   ]
+  },
+  {
+   "name": "Robert Kleczynski",
+   "title": "Executive Vice President and Chief Financial Officer (effective October 5, 2026)",
+   "background": [
+    "Senior vice president, corporate controller, tax and principal accounting officer until October 5, 2026; Butler: 'a career marked by financial discipline' (August 25, 2026 release and 8-K); Caroline Fulginiti becomes vice president and controller the same day",
+    "From January 1, 2027 ComEd's CFO Josh Levin becomes Exelon's senior vice president, finance, reporting to him, and Andrew Plenge becomes ComEd's CFO"
+   ]
+  },
+  {
+   "name": "Carim V. Khouzami",
+   "title": "Executive Vice President, Transmission and Development",
+   "photo": "images/execs/exelon-khouzami.jpg",
+   "background": [
+    "The corporate lead for 'preparing Exelon's transmission operations to meet the unprecedented growth in energy demand' — the closest role to a head of large-load development; presented the $12–17B transmission opportunity and the MISO Tranche 2.1 bids on the Q2 2026 call",
+    "President and CEO of BGE until April 2025 (Tamla Olivier succeeded him); COO and earlier CFO of Exelon Utilities",
+    "BA, Vanderbilt; MBA, Columbia (company bio)"
+   ]
+  },
+  {
+   "name": "Gil C. Quiniones",
+   "title": "President and Chief Executive Officer, ComEd",
+   "photo": "images/execs/exelon-quiniones.jpg",
+   "background": [
+    "Runs the utility that holds about 9 of Exelon's 11 GW of high-probability data-center load, the ICC's Rider DE and large-demand deposit rules, and six active FERC transmission security agreements backed by more than $1B of letters of credit ('By ensuring that large new power users are making meaningful financial commitments before their projects advance', September 16, 2026); ComEd's president and CEO since 2021",
+    "President and CEO of the New York Power Authority for more than ten years (at NYPA 2007–2024); senior vice president for energy and telecommunications in New York City's Bloomberg administration; sixteen years at Con Edison, co-founding Con Edison Solutions",
+    "BS mechanical engineering, De La Salle University; Columbia, Wharton and Harvard Business School executive programs; 2022 presidential appointee to the National Infrastructure Advisory Board (company bio). ComEd's EVP and COO is David Perez; its CFO Josh Levin moves to Exelon on January 1, 2027, succeeded by Andrew Plenge"
+   ]
+  },
+  {
+   "name": "Michael (Mike) Innocenzo",
+   "title": "Executive Vice President and Chief Operating Officer; Interim President and Chief Executive Officer, PECO",
+   "photo": "images/execs/exelon-innocenzo.jpg",
+   "background": [
+    "COO over the six utilities (chairs each operating-company board; manages physical security, safety, supply, training and transmission strategy and compliance) and PECO's interim CEO since David Vahos was moved to special advisor on April 21, 2026, a week after PECO withdrew its $510M rate request; departing in 2027 after nearly forty years (PECO co-op student 1988, full-time 1989)",
+    "PECO president and CEO 2018–2024; earlier PECO vice president of distribution system operations and advanced grid and meter technology; senior vice president and COO of Exelon Utilities from 2024",
+    "BSEE, Widener; MBA, Villanova (company bio). PECO's permanent CEO has not been named in the sources read"
+   ]
+  },
+  {
+   "name": "Tamla Olivier",
+   "title": "President and Chief Executive Officer, BGE",
+   "photo": "images/execs/exelon-olivier.jpg",
+   "background": [
+    "BGE's CEO since April 2025 — the utility that filed Maryland's Case 9888 ($156.1M, ROE 10.4 percent; decision January 2027), the 29 MW distribution-storage plan under the Next Generation Energy Act and a transmission-connected battery proposal, and a PC72 large-load rate schedule on September 1, 2026",
+    "COO of Pepco Holdings (2021); BGE senior vice president of customer operations and chief customer officer; ten years at Constellation including president and CEO of BGE Home; earlier human-resources executive roles at Constellation, T. Rowe Price, United Defense and Wells Fargo",
+    "Cornell ILR; boards of MedStar Health and Century Aluminum (company bio)"
+   ]
+  },
+  {
+   "name": "Rodney Oddoye",
+   "title": "President and Chief Executive Officer, Pepco Holdings (from September 2026)",
+   "background": [
+    "Named president and CEO of Pepco Holdings — Pepco, Delmarva Power and Atlantic City Electric — in early September 2026 as J. Tyler Anthony moved to an Exelon role (Washington Informer, September 1; Business Journals, September 8); his bio was not retrievable this session",
+    "Inherits Anthony's book: 34 active data-center projects and 13 GW of potential in PHI's jurisdictions (March 2026), the ACE 500 MW Pittsgrove battery petition, the Pepco Maryland rate order of August 28, 2026 ($50.9M of $119.9M at a 9.40 percent ROE) and the DC Court of Appeals remand of Pepco's multiyear plan. ACE's region president is Andrew Hendry"
+   ]
+  },
+  {
+   "name": "Colette D. Honorable",
+   "title": "Executive Vice President, Chief Legal Officer, Compliance and Corporate Secretary",
+   "photo": "images/execs/exelon-honorable.jpg",
+   "background": [
+    "Oversees legal, public policy, regulatory affairs and compliance — the executive behind the Charles River Associates utility-owned-generation report ('Utility-generated power will ensure we have enough electricity to meet skyrocketing demand') and the state large-load and generation legislation the company backs; joined September 2023 as chief external affairs officer",
+    "FERC commissioner January 2015–June 2017; Arkansas Public Service Commission 2006–2015 (chairman); partner, Reed Smith; chief of staff in the Arkansas attorney general's office",
+    "BA, University of Memphis; JD, UALR (company bio). The governmental, regulatory and external-affairs senior vice presidents under her are Valencia McClure (BGE, Delmarva Maryland, Pepco) and, under Pepco Holdings, Jaclyn Cantler (Delaware, New Jersey)"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "Utility Dive — Utility giant Exelon's climate arm backs grid-planning firm Continuum",
+   "url": "https://www.utilitydive.com/news/utility-giant-exelons-climate-arm-backs-grid-planning-firm-continuum/831276/",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "tftc.io — FERC blocks ComEd's cancellation of the PowerHouse Hillwood Joliet TSA (timeline; docket ER26-3257)",
+   "url": "https://www.tftc.io/ferc-comed-powerhouse-hillwood-joliet-data-center-tsa-cancellation",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "Construction Review Online — Illinois $20bn PowerHouse Hillwood data-center power deal in play as FERC rejects ComEd's notice (docket ER26-1032)",
+   "url": "https://constructionreviewonline.com/illinois-20bn-powerhouse-hillwood-data-center-power-deal-in-play-as-ferc-rejects-comeeds-notice/",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "Utility Dive — FERC rejects ComEd's cancellation of the PowerHouse Hillwood data-center TSA",
+   "url": "https://www.utilitydive.com/news/ferc-exelon-comed-powerhouse-hillwood-data-center/831127/",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "RTO Insider — FERC commissioners trade concurrences on $1 collateral from data center (paywalled)",
+   "url": "https://www.rtoinsider.com/146251-ferc-commissioners-trade-concurrences-collateral-data-center/",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "mgrid.org — FERC sends a $20 billion data-center fight back to court over a $1 letter of credit",
+   "url": "https://mgrid.org/2026/09/22/ferc-sends-a-20-billion-data-center-fight-back-to-court-over-a-1-letter-of-credit/",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "RTO Insider — Exelon's Butler expounds on data-center backlash at the Atlantic Council (paywalled)",
+   "url": "https://www.rtoinsider.com/145344-exelons-butler-expounds-data-center-backlash-atlantic-council/",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "Daily Energy Insider — ComEd inks transmission security agreements with two data-center developers in Illinois",
+   "url": "https://dailyenergyinsider.com/news/53810-comed-inks-transmission-security-agreements-with-two-data-center-developers-in-illinois/",
+   "date": "2026-09-18"
+  },
+  {
+   "label": "Exelon — Adds Continuum Industries to the 2c2i portfolio",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-adds-continuum-industries-to-2c2i-portfolio,-supporting-smarter-grid-planning-and-long-term-affordability",
+   "date": "2026-09-16"
+  },
+  {
+   "label": "Capitol News Illinois — 'Huge step forward': Illinois inches closer on battery storage and solar goals (IPA 600 MW)",
+   "url": "https://capitolnewsillinois.com/news/huge-step-forward-illinois-inches-closer-on-battery-storage-solar-goals/",
+   "date": "2026-09-14"
+  },
+  {
+   "label": "Maryland PSC — Notice of Round 2 solicitation period (PC 74) under the Next Generation Energy Act",
+   "url": "https://psc.maryland.gov/wp-content/uploads/2026/09/Notice_Round-2_SolicitationPeriod-PC74.pdf",
+   "date": "2026-09-14"
+  },
+  {
+   "label": "EEI — List of Large Customer Projects and Tariffs (updated September 11, 2026)",
+   "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+   "date": "2026-09-11"
+  },
+  {
+   "label": "Utility Dive — Pennsylvania PUC to consider rates and curtailment as data centers grow",
+   "url": "https://www.utilitydive.com/news/pennsylvania-puc-to-consider-rates-and-curtailment-as-data-centers-grow/830174/",
+   "date": "2026-09-11"
+  },
+  {
+   "label": "Illinois Power Agency — Energy storage procurement (600 MW approved September 1, 2026)",
+   "url": "https://ipa.illinois.gov/renewable-resources/energy-storage.html",
+   "date": "2026-09-01"
+  },
+  {
+   "label": "Maryland PSC — Commission denies over half of Pepco's rate increase request (Order 92607, Case 9820)",
+   "url": "https://psc.maryland.gov/news/2026/maryland-public-service-commission-denies-over-half-of-pepcos-rate-increase-request/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Exelon — Announces key leadership position changes (Kleczynski CFO; Jones EVP Finance and Strategy; Innocenzo to depart 2027)",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-announces-key-leadership-position-changes",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "StockTitan — Exelon Form 8-K, leadership changes (mirror)",
+   "url": "https://www.stocktitan.net/sec-filings/EXC/8-k-exelon-corp-reports-material-event-edb13ca6f958.html",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "ComEd via StockTitan — Illinois Commerce Commission approves ComEd transmission plan for DeKalb County (KARE)",
+   "url": "https://www.stocktitan.net/news/EXC/illinois-commerce-commission-approves-com-ed-transmission-plan-for-4cyoi74dk8ys.html",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "Utility Dive — Microsoft, PowerHouse Hillwood dispute data-center service agreements at FERC",
+   "url": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "NJ BPU — Garden State Energy Storage Program straw proposal (August 19, 2026)",
+   "url": "https://www.nj.gov/bpu/newsroom/2026/approved/20260819.html",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "Utility Dive — FERC approves MISO–PJM cost recovery for Tranche 2.1 transmission projects (ComEd ~$904M)",
+   "url": "https://www.utilitydive.com/news/ferc-miso-pjm-cost-recovery-transmission-projects/828002/",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "Exelon — Adds Public Grid and Buckstop to the 2c2i portfolio",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-adds-public-grid-and-buckstop-to-2c2i-portfolio-advancing-affordable-and-sustainable-energy-solutions",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "Exelon — Secures more than $1 billion in customer protections through pioneering transmission security agreements",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-secures-more-than-1-billion-in-customer-protections-through-pioneering-transmission-security-agreements",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Motley Fool — Exelon (EXC) Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/04/exelon-exc-q2-2026-earnings-call-transcript/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Utility Dive — Exelon 'high probability' data-center load falls 40 percent; ACE 500 MW battery",
+   "url": "https://www.utilitydive.com/news/exelon-data-center-load-new-jersey-battery-earnings/826686/",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Exelon — Reports second quarter 2026 results",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-reports-second-quarter-2026-results",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Yahoo Finance — Exelon Q2 2026 call highlights",
+   "url": "https://finance.yahoo.com/energy/articles/exelon-corp-exc-q2-2026-230443789.html",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Utility Dive — Utility profits in the crosshairs amid affordability concerns (Pepco MD case)",
+   "url": "https://www.utilitydive.com/news/utility-profits-in-the-crosshairs-amid-affordability-concerns/825610/",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "The News of Salem County — Atlantic City Electric proposes energy storage facility in Pittsgrove",
+   "url": "https://thenewsofsalemcounty.com/atlantic-city-electric-proposesfacility-pittsgrove/",
+   "date": "2026-07-25"
+  },
+  {
+   "label": "NJBIZ — Atlantic City Electric files for 500 MW battery project in Salem County with Invenergy",
+   "url": "https://njbiz.com/atlantic-city-electric-500mw-battery-project-salem/",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "Utility Dive — Data-center interconnection: FERC's large-load show-cause directives",
+   "url": "https://www.utilitydive.com/news/data-center-interconnection-ferc-large-load-show-cause/824501/",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Exelon via Yahoo Finance — 'Exelon on Affordability and Reliability: We Hear You'",
+   "url": "https://finance.yahoo.com/energy/articles/exelon-affordability-reliability-hear-stepping-102400705.html",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "PJM — 2028/2029 Base Residual Auction results report",
+   "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "WYPR — BGE requests $8-a-month electricity rate hike; Maryland ratepayer advocates intend to challenge",
+   "url": "https://www.wypr.org/wypr-news/2026-07-08/bge-requests-8-per-month-electricity-rate-hike-maryland-ratepayer-advocates-intend-to-challenge",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "Utility Dive — Illinois approves Commonwealth Edison VPP under the new clean-energy law (Rider SDVPP)",
+   "url": "https://www.utilitydive.com/news/illinois-approves-commonwealth-edison-vpp-under-new-clean-energy-law/824723/",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "Utility Dive — Maryland files FERC complaint to strip RTO ROE adder from BGE, Pepco, Delmarva and others",
+   "url": "https://www.utilitydive.com/news/exelon-firstenergy-ferc-maryland-rto-adder/824576/",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Maryland PSC — BGE seeks $156 million electric rate increase (Case 9888)",
+   "url": "https://psc.maryland.gov/news/2026/bge-seeks-156-million-electric-rate-increase/",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "Exelon — To announce second quarter results on July 30",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-to-announce-second-quarter-results-on-july-30",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "Utility Dive — New Jersey lawmakers send data-center tariff bill (A796) to the governor",
+   "url": "https://www.utilitydive.com/news/new-jersey-lawmakers-send-data-center-tariff-bill-to-governor/824191/",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Utility Dive — Six takeaways from FERC's large-load interconnection decision",
+   "url": "https://www.utilitydive.com/news/ferc-doe-data-center-interconnection/823360/",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "ComEd — Rider SDVPP compliance filing under Public Act 104-0458 (ICC, June 1, 2026)",
+   "url": "https://icc.illinois.gov/downloads/public/filing/4/399541.pdf",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Capitol News Illinois — POWER Act data-center regulation won't move forward this spring",
+   "url": "https://capitolnewsillinois.com/news/power-act-data-center-regulation-wont-move-forward-this-spring/",
+   "date": "2026-05-30"
+  },
+  {
+   "label": "Utility Dive — Pennsylvania releases first-of-its-kind large-load model tariff",
+   "url": "https://www.utilitydive.com/news/pennsylvania-releases-first-of-its-kind-large-load-model-tariff/820456/",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Pennsylvania PUC — Final order establishing the large-load model tariff framework (M-2025-3054271)",
+   "url": "https://www.puc.pa.gov/press-release/2026/puc-releases-final-order-establishing-first-of-its-kind-large-load-model-tariff-framework-05132026",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "DC PSC — Order 22860 in Formal Case 1176 (Pepco multiyear plan remand)",
+   "url": "https://dcpsc.org/CMSPages/GetFile.aspx?guid=060a641f-6acb-4e4f-89f5-54b1b1d80928",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Utility Dive — Exelon lowers utility spending to ease electric affordability issues (Q1 2026)",
+   "url": "https://www.utilitydive.com/news/exelon-affordability-peco-transmission-earnings/819563/",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Exelon — Reports first quarter 2026 results",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-reports-first-quarter-2026-results",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Motley Fool — Exelon (EXC) Q1 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/05/06/exelon-exc-q1-2026-earnings-transcript/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "StockTitan — Exelon Form 8-K, Q1 2026 results and deck text (mirror)",
+   "url": "https://www.stocktitan.net/sec-filings/EXC/8-k-exelon-corp-reports-material-event-30ebc8356d62.html",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "StockTitan — Exelon Form 10-Q, Q1 2026 (mirror)",
+   "url": "https://www.stocktitan.net/sec-filings/EXC/10-q-exelon-corp-quarterly-earnings-report-ed654b03719e.html",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Pennsylvania PUC — PUC acts to protect ratepayers and guide data-center growth with a new large-load tariff framework",
+   "url": "https://www.puc.pa.gov/press-release/2026/puc-acts-to-protect-ratepayers-guide-data-center-growth-with-new-large-load-tariff-framework-4-30-26",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Exelon — Declares dividend (April 2026)",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-corporation-declares-dividend-april-2026",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "WYPR — Maryland utility Pepco shrinks rate-increase request after passage of the Utility RELIEF Act",
+   "url": "https://www.wypr.org/wypr-news/2026-04-24/maryland-utility-pepco-shrinks-rate-increase-request-after-passage-of-utility-relief-act",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "WHYY — PECO CEO removed to special advisor role after rate-hike withdrawal",
+   "url": "https://whyy.org/articles/peco-ceo-removed-special-advisor/",
+   "date": "2026-04-22"
+  },
+  {
+   "label": "Utility Dive — PECO withdraws $510M rate requests amid affordability concerns",
+   "url": "https://www.utilitydive.com/news/peco-rate-hike-affordability-pennsylvania-puc-exelon/817760/",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "Capitol News Illinois — Energy demand in ComEd territory could double by 2040, in part driven by data centers",
+   "url": "https://capitolnewsillinois.com/news/energy-demand-in-comed-territory-could-double-by-2040-in-part-driven-by-data-centers/",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "Utility Dive — Maryland regulators weigh investor-owned utilities' flexible-load proposals (Case 9761)",
+   "url": "https://www.utilitydive.com/news/maryland-regulators-weigh-investor-owned-utilities-flexible-load-proposals/817585/",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "Utility Dive — Maryland legislature passes Utility RELIEF Act (HB 1532)",
+   "url": "https://www.utilitydive.com/news/maryland-legislature-utility-rate-relief-act-exelon-firstenergy/817431/",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Maryland PSC — Order 92281 in Case 9715 (NGEA distribution-storage plans)",
+   "url": "https://psc.maryland.gov/wp-content/uploads/2026/04/ORDER_1.pdf",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "magnifyi — ICC approves ComEd's new large-load tariff changes (LDPAC summary)",
+   "url": "https://magnifyi.com/icc-approves-comeds-new-large-load-proposed-tariff-changes/",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "Utility Dive — PECO seeks $429M electric rate increase",
+   "url": "https://www.utilitydive.com/news/peco-energy-rate-hike-puc/816302/",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "Maryland PSC — PSC substantially reduces Pepco's multi-year rate plan reconciliation request (Case 9655)",
+   "url": "https://psc.maryland.gov/news/2026/psc-substantially-reduces-pepcos-multi-year-rate-plan-reconciliation-request/",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Utility Dive — PJM data-center co-location plan draws protests from Vistra, Constellation and others",
+   "url": "https://www.utilitydive.com/news/pjm-data-center-colocation-ferc-vistra-constellation/815941/",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "Utility Dive — Pepco Holdings CEO Tyler Anthony on regulated generation, PJM capacity and affordability",
+   "url": "https://www.utilitydive.com/news/regulated-generation-pjm-capacity-affordability-pepco-anthony/815643/",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "pv magazine USA — Illinois regulators launch investigation into consumer protection against data-center costs",
+   "url": "https://pv-magazine-usa.com/2026/03/23/illinois-regulators-launch-investigation-into-consumer-protection-against-data-center-costs/",
+   "date": "2026-03-23"
+  },
+  {
+   "label": "Illinois Commerce Commission — Press release: ICC looks to develop consumer protection framework amid increase in large energy demand (Dockets 25-0677/25-0679)",
+   "url": "https://icc.illinois.gov/downloads/public/press-release/03.20.26%20Data%20center%20tariff%20investigation.pdf",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "NPR Illinois / Capitol News Illinois — Regulators OK ComEd's plan to increase deposit costs for large-load projects like data centers",
+   "url": "https://www.nprillinois.org/illinois/2026-03-20/regulators-ok-comeds-plan-to-increase-deposit-costs-for-large-load-projects-like-data-centers",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "ELPC — ICC orders investigation into data-center risks in ComEd case",
+   "url": "https://elpc.org/news/icc-orders-investigation-into-data-center-risks-in-comed-case/",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Capitol News Illinois — Political will grows for data-center regulations as POWER Act remains in committee",
+   "url": "https://capitolnewsillinois.com/news/political-will-grows-for-data-center-regulations-as-power-act-remains-in-committee/",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "Utility Dive — FERC approves ComEd–Exelon data-center transmission security agreements",
+   "url": "https://www.utilitydive.com/news/ferc-comed-exelon-data-center-service-agreement/814414/",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "DC PSC — Formal Case 1176 (Pepco multiyear rate plan) status",
+   "url": "https://dcpsc.org/Newsroom/HotTopics/Rate-Case-Applications/FC1176.aspx",
+   "date": "2026-03"
+  },
+  {
+   "label": "RTO Insider — FERC approves four TSAs for ComEd to serve data centers (paywalled)",
+   "url": "https://www.rtoinsider.com/126104-ferc-approves-4-tsas-comed-serve-data-centers/",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "Exelon — Commends U.S. Treasury for CAMT tax notice addressing affordability",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-commends-u-s-department-of-the-treasury-for-issuing-tax-notice-that-addresses-affordability-promotes-grid-investment",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "Exelon — Reports fourth quarter and full year 2025 results and initiates 2026 financial outlook",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-reports-fourth-quarter-and-full-year-2025-results-and-initiates-2026-financial-outlook",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Motley Fool — Exelon (EXC) Q4 2025 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/02/12/exelon-exc-q4-2025-earnings-call-transcript/",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Exelon — 2025 Annual Report including Form 10-K (annualreports.com mirror)",
+   "url": "https://www.annualreports.com/HostedData/AnnualReports/PDF/NYSE_EXC_2025.pdf",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "last10k — Exelon FY2025 Form 10-K filing record (accession 0001109357-26-000018)",
+   "url": "https://last10k.com/sec-filings/exc/0001109357-26-000018.htm",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "Exelon — New report: utility-generated power can save customers up to $20B and reduce outage risk (Charles River Associates)",
+   "url": "https://www.exeloncorp.com/newsroom/new-report-utility-generated-power-can-save-customers--20b-reduce-risks-of-outages",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Capitol News Illinois — ComEd files $15.3 billion grid plan proposal addressing rising demand",
+   "url": "https://capitolnewsillinois.com/news/comed-files-15-3-billion-grid-plan-proposal-addressing-rising-demand/",
+   "date": "2026-01-23"
+  },
+  {
+   "label": "ICC — ComEd Exhibit 9.0 testimony, 2028–2031 Multi-Year Integrated Grid Plan (Docket 26-0047)",
+   "url": "https://icc.illinois.gov/docket/P2026-0047/documents/375129/files/657485.pdf",
+   "date": "2026-01-16"
+  },
+  {
+   "label": "Utility Dive — Illinois AG files objections to ComEd data-center agreements at FERC",
+   "url": "https://www.utilitydive.com/news/illinois-ag-files-objections-to-comed-data-center-agreements-at-ferc/809576/",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "Utility Dive — Illinois sets 3 GW energy storage target, requires utilities to develop virtual power plants (CRGA)",
+   "url": "https://www.utilitydive.com/news/illinois-sets-3-gw-energy-storage-target-requires-utilities-to-develop-vir/809189/",
+   "date": "2026-01-12"
+  },
+  {
+   "label": "Exelon — To announce fourth quarter results on Feb. 12",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-to-announce-fourth-quarter-results-on-feb-12",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Delaware PSC — Docket 25-0826, Delmarva large-load tariff notice for public workshop",
+   "url": "https://depsc.delaware.gov/wp-content/uploads/sites/54/2026/01/25-0826-Delmarva-Large-Load-Tariff-Notice-for-Public-Workshop.pdf",
+   "date": "2026-01"
+  },
+  {
+   "label": "Utility Dive — FERC accepts PECO–Amazon data-center transmission agreement",
+   "url": "https://www.utilitydive.com/news/ferc-peco-amazon-data-center-transmission-agreement/806254/",
+   "date": "2025-11-24"
+  },
+  {
+   "label": "Utility Dive — Exelon's advanced data-center pipeline grows to 18 GW; Amazon TSA; Maryland (Q3 2025)",
+   "url": "https://www.utilitydive.com/news/exelon-data-center-amazon-earnings-maryland/804720/",
+   "date": "2025-11-05"
+  },
+  {
+   "label": "Delaware News — Delaware PSC opens docket for large-load tariff, pauses interconnections",
+   "url": "https://news.delaware.gov/2025/10/14/delaware-psc-opens-docket-for-large-load-tariff-pauses-interconnections/",
+   "date": "2025-10-14"
+  },
+  {
+   "label": "Exelon — Announces executive leadership appointments in governmental, external and regulatory affairs",
+   "url": "https://www.exeloncorp.com/newsroom/exelon-announces-executive-leadership-appointments-in-governmental,-external-and-regulatory-affairs",
+   "date": "2025-07-10"
+  },
+  {
+   "label": "Utility Dive — Exelon's data-center pipeline doubles to 36 GW; PJM; Maryland (Q1 2025)",
+   "url": "https://www.utilitydive.com/news/exelon-data-center-pipeline-pjm-maryland-earnings/746971/",
+   "date": "2025-05-02"
+  },
+  {
+   "label": "RTO Insider — Exelon asks FERC to weigh in on co-location dispute with Constellation",
+   "url": "https://www.rtoinsider.com/88515-exelon-petition-ferc-constellation-co-location-deals/",
+   "date": "2024-10-01"
+  },
+  {
+   "label": "Exelon — Executive profiles (roster and photographs)",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles"
+  },
+  {
+   "label": "Exelon — Calvin Butler biography",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles/calvin-butler"
+  },
+  {
+   "label": "Exelon — Jeanne Jones biography",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles/jeanne-jones"
+  },
+  {
+   "label": "Exelon — Gil C. Quiniones biography",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles/gil-c-quiniones"
+  },
+  {
+   "label": "Exelon — Michael Innocenzo biography",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles/michael-innocenzo"
+  },
+  {
+   "label": "Exelon — Tamla Olivier biography",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles/tamla-olivier"
+  },
+  {
+   "label": "Exelon — Carim V. Khouzami biography",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles/carim-v-khouzami"
+  },
+  {
+   "label": "Exelon — Colette Honorable biography",
+   "url": "https://www.exeloncorp.com/leadership-and-governance/executive-profiles/colette-honorable"
+  },
+  {
+   "label": "Exelon — Our companies (customer counts and service areas)",
+   "url": "https://www.exeloncorp.com/companies"
+  },
+  {
+   "label": "Illinois Power Agency — Clean and Reliable Grid Affordability Act overview",
+   "url": "https://ipa.illinois.gov/crga.html"
+  },
+  {
+   "label": "MarketBeat — Exelon (EXC) earnings history and Q3 2026 estimate",
+   "url": "https://www.marketbeat.com/stocks/NASDAQ/EXC/earnings/"
+  },
+  {
+   "label": "Investing.com — Exelon earnings calendar and history",
+   "url": "https://www.investing.com/equities/exelon-corp-earnings"
+  },
+  {
+   "label": "stockanalysis.com — Exelon financial statements (GAAP annuals)",
+   "url": "https://stockanalysis.com/stocks/exc/financials/"
+  },
+  {
+   "label": "last10k — Exelon filings index",
+   "url": "https://last10k.com/sec-filings/exc"
+  },
+  {
+   "label": "StockTitan — EXC news feed",
+   "url": "https://www.stocktitan.net/news/EXC/"
+  },
+  {
+   "label": "Wikipedia — Exelon",
+   "url": "https://en.wikipedia.org/wiki/Exelon"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

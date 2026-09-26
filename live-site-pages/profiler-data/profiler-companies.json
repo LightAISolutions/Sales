@@ -483,6 +483,66 @@
       ]
     },
     {
+      "slug": "berkshire-hathaway-energy",
+      "name": "Berkshire Hathaway Energy",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "Berkshire's wholly owned utility group — about 11,000 MW of contracted data-center load across NV Energy, PacifiCorp and MidAmerican against a 2,200 MW data-center peak — whose lead AI-load franchise, NV Energy, answered 22 GW of inquiries with a 2026 IRP buying 5,405 MW of batteries and 4,370 MW of solar entirely through PPAs plus 1,223 MW of Fort Churchill gas, a 25 MW-threshold Large Load Electric Service Agreement for Amazon, Vantage, Novva, Prologis and Tract, and a lawsuit to keep Tract in front of the commission; Abel's rule is service 'if there was no impact to the rates'.",
+      "hq": "Des Moines, IA, USA",
+      "ticker": null,
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "BHE",
+        "Berkshire Hathaway Energy Company",
+        "NV Energy",
+        "Nevada Power",
+        "Nevada Power Company",
+        "Sierra Pacific Power",
+        "Sierra Pacific",
+        "PacifiCorp",
+        "Rocky Mountain Power",
+        "Pacific Power",
+        "MidAmerican Energy",
+        "MidAmerican",
+        "BHE Renewables",
+        "BHE Transmission",
+        "BHE U.S. Transmission",
+        "BHE GT&S",
+        "BHE Pipeline Group",
+        "Northern Natural Gas",
+        "Northern Powergrid",
+        "AltaLink",
+        "CalEnergy",
+        "MidAmerican Energy Holdings"
+      ],
+      "domains": [
+        "brkenergy.com",
+        "berkshirehathaway.com",
+        "nvenergy.com",
+        "pacificorp.com",
+        "pacificpower.net",
+        "rockymountainpower.net",
+        "midamericanenergy.com",
+        "bherenewables.com",
+        "northernnaturalgas.com"
+      ],
+      "srcTotal": 88,
+      "srcFirstPct": 40,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
       "slug": "black-veatch",
       "name": "Black & Veatch",
       "categories": [
@@ -1795,6 +1855,55 @@
         {
           "id": "capital",
           "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "exelon",
+      "name": "Exelon",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The largest wires-only utility in PJM — ComEd, PECO, BGE, Pepco, Delmarva and Atlantic City Electric, 10.7 million customers, no owned generation since the 2022 Constellation spin — and the inventor of the transmission security agreement: six ComEd TSAs backed by more than $1B of letters of credit, a data-center pipeline cut by design from 18 GW to 11 GW (4 GW under signed TSAs) inside a 36 GW queue, the PowerHouse Joliet cancellation FERC rejected in September 2026, a $41.7B transmission-tilted plan, and a campaign — with ACE's 500 MW Pittsgrove battery as its first ask — to own generation again.",
+      "hq": "Chicago, IL, USA",
+      "ticker": "Nasdaq: EXC",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "Exelon Corporation",
+        "EXC",
+        "ComEd",
+        "Commonwealth Edison",
+        "PECO",
+        "PECO Energy",
+        "BGE",
+        "Baltimore Gas and Electric",
+        "Pepco",
+        "Potomac Electric Power",
+        "Pepco Holdings",
+        "PHI",
+        "Delmarva Power",
+        "Delmarva",
+        "Atlantic City Electric",
+        "ACE"
+      ],
+      "domains": [
+        "exeloncorp.com",
+        "investors.exeloncorp.com",
+        "comed.com",
+        "peco.com",
+        "bge.com",
+        "pepco.com",
+        "delmarva.com",
+        "atlanticcityelectric.com"
+      ],
+      "srcTotal": 106,
+      "srcFirstPct": 21,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "utilities",
+          "role": "incumbent"
         }
       ]
     },
@@ -3993,14 +4102,14 @@
       "tagline": "American Real Estate Partners' powered-shell and build-to-suit platform: AREP's GP funds put 5–10% into project JVs with Harrison Street (USD 3.2bn), Blue Owl/Chirisa (USD 5bn, CoreWeave at Chesterfield), Provident, Hillwood, Poe and others; one building delivered and sold (ABX-1 to CyrusOne, USD 154.1m); the 1.8 GW Joliet campus annexed 8–1 in March 2026 lost its ComEd transmission security agreement in July and is in litigation.",
       "hq": "McLean, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "powerhousedata.com",
         "americanrepartners.com",
         "joliettechnologycenter.com"
       ],
-      "srcTotal": 114,
-      "srcFirstPct": 52,
+      "srcTotal": 117,
+      "srcFirstPct": 50,
       "kpiNorm": false,
       "segments": [
         {
@@ -4962,14 +5071,14 @@
       "tagline": "Denver powered-land developer (Tract Capital Management, founded 2022 by Cologix's Grant van Rooyen) that entitles and services master-planned parks — 14 parks, ~21,000 acres, ~18.7 GW on its projects page, 12,000 acres of it at Reno's TRIC — and sells shovel-ready parcels; the only recorded buyer is sister platform Fleet Data Centers, whose two 230 MW Storey County campuses are leased 197 months to a tenant Bloomberg names as Nvidia and financed by USD 8.4bn of notes, while NV Energy sued Tract in July 2026 and the PUCN decides its temporary gas plants on 8 September.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-07",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "tract.com",
         "tractcapital.com",
         "fleetdatacenters.com"
       ],
-      "srcTotal": 155,
-      "srcFirstPct": 33,
+      "srcTotal": 159,
+      "srcFirstPct": 32,
       "kpiNorm": false,
       "segments": [
         {

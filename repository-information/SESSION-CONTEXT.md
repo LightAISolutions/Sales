@@ -6,6 +6,54 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-25, 09:07 PM → 10:53 PM EST (unattended; one prompt, two pushes; context compacted once mid-session)
+**Repo version:** v07.58r (two pushes: v07.57r wave 1, v07.58r wave 2)
+**Branch:** `claude/magical-cerf-hwm62m`
+**Model:** Fable 5.1 High (no substitution)
+
+### What was done
+
+- **Phase F sessions F-U1 + F-U2 — the five utilities — complete.** Five schema v7 dossiers, five v2 study guides and five lesson plans; `utility` is now 11 of 182 dossiers.
+  - **v07.57r (wave 1):** `duke-energy` (116 sources), `dte-energy` (106), `wec-energy` (80). Brookfield's first Duke Energy Florida closing is **confirmed** (2026-03-03, 9.2%, $2.8B) — the §11.3 cell was wrong. The DTE Saline figure is stated both ways (1,383 MW approved vs the 332 MW the corpus carried). WEC's VLC docket is 6630-TE-113; Meta Beaver Dam is Alliant's.
+  - **v07.58r (wave 2):** `berkshire-hathaway-energy` (88 sources; display name decided on the Southern Company precedent, NV Energy in `aka[]`) and `exelon` (106; seven photos). BHE's ">9 GW" is the FY2024 figure — the March 2026 presentation says ~11,000 MW. Exelon's 25-vs-36 GW conflict is definitional (36 = 4 TSA + 7 high-probability + 25 under study).
+  - **Step 7:** `tract` v3→v4 (PUCN approved Fleet's 362 MW of gas plants 2026-09-17, not "scheduled 8 September"; the Morris ComEd TSA accepted 2026-03-10) and `powerhouse-data-centers` v2→v3 (FERC rejected ComEd's Joliet cancellation 2026-09-22). No other dossier changed.
+  - **§11.3** F-U1 and F-U2 rows rewritten with premise verdicts; 13 + 13 concepts added; calendar rows for all five (WEC confirmed 10/29; the rest unconfirmed patterns or tracker estimates).
+
+### Where we left off
+
+- **Everything is pushed; wave 2's branch is in the auto-merge workflow.** The tree is clean after the push.
+- **Classroom is now stale, by design:** `landscape-utilities-2026-09` was built on "six franchises" and there are eleven; the three `scenario-utilities-*` rehearsals cite it. `Classroom.gs` was not touched. A Classroom session should re-pin them against the five new dossiers.
+- **Unreconciled figures left loud:** Oracle "~$300M" vs DTE "nearly $2B"; MasTec's "$4.2B Greenlink West" vs BHE's $4.2B combined; Exelon's TSA-backed load ~8 GW → 4 GW with collateral flat at ~$1B; Compass Hoffman Estates energization.
+- **CHANGELOG did not rotate:** both pushes were dated 2026-09-25 EST (110 sections, 12 exempt, 98 non-exempt). The next push after midnight EST must rotate the 2026-09-18 and 2026-09-19 groups (26 sections) after `git fetch --unshallow`.
+
+### Key decisions made
+
+- **BHE display name:** "Berkshire Hathaway Energy", `ownership.type: subsidiary`, `financials.type: private`, calendar row dated from the 10-Q pattern (2026-11-06, unconfirmed).
+- **Segments:** all five `utilities` · incumbent; `storage-developers-and-ipps` · adjacent for Duke, DTE, WEC and BHE (utility-owned or tolled storage is material); **not** for Exelon (owns none; revisit on ACE Pittsgrove's ~Feb 2027 decision).
+- **Photos:** none for Duke (site 403) or BHE (site blocked); DTE's Paul dropped after two 502s.
+- **Three concepts dropped** on checker collisions (their terms were already aliases of `capacity-market`, `planning-reserve-margin`, `vertically-integrated-utility`).
+
+### Known issues
+
+- The two aged 9/8 reports (`jinko`, `oracle` pins) still warn; `verify-profiler-roles.py` (2) and `check-events-plan.js` (2) carried over; `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
+- Not found for any of the five: a battery or turbine OEM (except Reid Gardner's BYD/Energy Vault and DTE's LG Energy Solution); PacifiCorp's Utah SB 132 counterparty; PECO's large-load tariff filing; Maryland's PC72 terms.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **CHANGELOG:** `Sections: 110/100`, 12 dated 9/25 and exempt — rotation due on the first push dated 9/26 or later.
+- **Phase F remaining (§11.2):** F-U3 onward for utilities, F-I1 (BlackRock, KKR) suggested in parallel on Opus 5.5 xhigh, F-N1 folded into the 10/1 neoclouds pass, F-H1 before the 10/7 Megmeet start.
+
+### Recommendation for next session
+
+- Run a **Classroom session to re-pin `landscape-utilities-2026-09` and the three `scenario-utilities-*` lessons** against the eleven utility dossiers — the five new ones make the "six franchises" landscape and its rehearsals stale, and the 9/30 Classroom run is already on the reminders. Phase F's next Profiler session (F-U3, or F-I1 in parallel) can follow.
+
+**To continue:** type `re-pin the utilities landscape and scenarios against the five new dossiers`
+
+## Previous Sessions
+
+### Session — 2026-09-25 07:59 PM → 09:02 PM EST (Phase F approved, the F-U1 + F-U2 prompt written, v07.56r)
+
 **Date:** 2026-09-25, 07:59 PM → 09:02 PM EST (attended; three turns)
 **Repo version:** v07.56r (one push; this save is unversioned)
 **Branch:** `claude/brave-ritchie-un2qt1`
@@ -56,64 +104,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run **Phase F sessions F-U1 + F-U2**, the five utilities, on **Fable 5.1 High** using the prompt in `PROFILER-COVERAGE-PLAN.md` §11.4. Utilities feed both sales seats, and three of the five buy batteries directly.
 
 **To continue:** paste the prompt in `PROFILER-COVERAGE-PLAN.md` §11.4 into a fresh Fable 5.1 High session
-
-## Previous Sessions
-
-### Session — 2026-09-25 07:14 PM → 07:52 PM EST (#12R closed — Events discovery Routine live, v07.55r)
-
-**Date:** 2026-09-25, 07:14 PM → 07:52 PM EST (attended; four turns)
-**Repo version:** v07.55r (two pushes: v07.54r, v07.55r; this save is unversioned)
-**Branch:** `claude/wizardly-mendel-6o4h2e`
-
-### What was done
-
-- **#12R closed — the Events discovery Routine (phase R) is live:**
-  - **v07.54r:** the repo-side queue `repository-information/events-discovery-queue.json`, starting empty, with its schema in `EVENTS-SCHEMA.md` §7.1. `check-events-registry.py` → `check_queue()` validates it. `.claude/rules/events-app.md` gained "The discovery run (R) and `events sync discovery`", covering the five source classes, the bar, the cap of 5, the stand-down and promotion. The Routine prompt is in `ROUTINES-OPERATIONS.md` → "Events discovery — quarterly", with STEP 0 byte-identical to the desk's.
-  - **Developer, in the UI:** created "Events discovery - quarterly" (`trig_01LdSJyaBJAmrEYr4Eq5Fq8c`). Runs with "Claude HQ · Sales", Sonnet 5, no connectors, push and email on. The cron `CRON_TZ=America/New_York 50 8 8 3,6,9,12 *` was set with `/schedule update` in a local terminal; the next fire is Tue 2026-12-08 08:50 ET.
-  - **First run (Run now):** a STAND-DOWN with a full report, no commit and the queue untouched, which §8 accepts.
-  - **v07.55r:** the plan's §11 R row is Done. `ROUTINES-OPERATIONS.md` now has the schedule step corrected and a new settled finding.
-- **Phase A is complete** (#8 at v07.52r/v07.53r, #12R at v07.54r/v07.55r).
-
-### Where we left off
-
-- **Everything is merged; the tree is clean.** Next is Phase B (9/28–10/6): #9a, the registry pass, then the booth-number build.
-- **Dated reminders stand:**
-  - The cooling recheck, from 9/28.
-  - The 9/30 Classroom run.
-  - The neoclouds pass and Habitat Energy, from 10/1.
-  - The Dominion reframe, 10/2–10/6.
-  - The AIDC re-run, after 10/31.
-  - The Megmeet start is Wed 10/7.
-
-### Key decisions made
-
-- **Where the queue lives:** in the repo under `repository-information/`, not the `Proposed` tab, which a fired session cannot reach. It stays out of `live-site-pages/`, so unverified candidates never deploy. Rejected candidates stay in the file as dedup memory.
-- **Promotion is a session command, `events sync discovery`.** No app or GAS change is involved. It re-reads the organiser page, and it re-probes any new roster row before writing it.
-- **Candidate bar:**
-  - relevance of at least 3, not a webinar, starting 21 days to 18 months out;
-  - US or Canada, or a mega show at relevance 4 or higher anywhere;
-  - grounded: a dossier names it, the organiser is on the roster, or at least 2 covered companies appear on the organiser's page;
-  - the organiser's page must be read in the run.
-- **Schedule:** the 8th of Mar/Jun/Sep/Dec, which avoids a 10/8 fire twelve days after the Run now.
-- **Model:** Sonnet 5. Every candidate gets a human decision and a re-read before anything lands.
-- **Settled finding:** `update_trigger` refuses on UI-created Routines ("Agents can only update routines they created"). A custom cron on a committing Routine needs `/schedule update` from a local CLI.
-
-### Known issues
-
-- The first run could not read several organiser pages: AFCOM, SEIA and MISO returned 403, the DCC page is behind a login wall, and CAISO and SPP returned 404. The trade-body and grid-operator classes are therefore mostly dead from the sandbox. If December also stands down for this reason, add those organisers as hand-maintained roster rows. Do not loosen the read-the-page rule.
-- **Carried over:**
-  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition. Its own row says to re-check the index after 10/1.
-  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2, stale fixture dates).
-  - The two aged 9/8 reports still warn.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **CHANGELOG:** `Sections: 107/100` — 9 dated 9/25 are exempt. **The first push dated 9/26 or later must rotate** the oldest date groups (SHA-enriched, after `git fetch --unshallow`).
-- **Routines:** 7 in total. The busiest day is the 1st of a quarter month, with 4 runs.
-
-### Recommendation for next session
-
-- Start Phase B with **#9a, the registry pass**, in a fresh Opus 5.5 High session on or after Mon 9/28. It fills `hours[]`, `venueLatLng` and `agendaUrl` for RE+ 2026 and the 35 events through 11/30, verified against organiser pages. The booth-number build and `events plan re-plus-2026` both depend on those fields. Expect the CHANGELOG archive rotation on that push.
-
-**To continue:** type `write the #9a registry-pass prompt`

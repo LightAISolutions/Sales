@@ -1,0 +1,489 @@
+{
+ "schemaVersion": 2,
+ "slug": "berkshire-hathaway-energy",
+ "title": "Berkshire Hathaway Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "the-ppa-side-utility",
+   "title": "The PPA-side utility: a fourth answer to one question",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The corpus now holds four answers to how a regulated utility serves a gigawatt of new load without sending the bill to everyone else. Dominion's is a rate class with a {{minimum demand charge}}. DTE's is a {{special contract}} in which the customer pays for utility-owned batteries. WEC's is a subscription to named plants at a fixed return. Berkshire Hathaway Energy's lead utility, NV Energy, gives the fourth: contract for almost every new resource under a {{PPA}}, keep only the firm gas in {{rate base}}, and write a bilateral service agreement whose commercial numbers the regulator fills in.",
+    "The scale is the reason it matters. NV Energy's 2026 {{IRP}} asks the Nevada {{public utility commission}} to approve 23 power purchase agreements — about 4,370 MW of paired solar, 180 MW of geothermal and 5,405 MW of battery output by 2031 — plus 1,223 MW of utility-owned gas turbines at Fort Churchill for 2030 to 2032, against about 22,000 MW of data-center inquiries and a system whose two utilities peaked at about 8,200 MW in 2025. The parent's rule, stated by Berkshire's CEO in September 2026, is that hyperscalers will be served 'if there was no impact to the rates'.",
+    "This guide teaches what a high-school-STEM reader needs to follow that: where the equipment decision goes when a plan is bought by contract; the difference between paying for wires and paying for generation; what a large-load service agreement contains and why its percentages were left blank; why a utility would sue its own largest prospective customer over which forum decides; how {{wildfire liability}} rather than load became the binding constraint on a six-state utility; and what a grid without a {{capacity market}} does instead."
+   ]
+  },
+  {
+   "id": "where-the-batteries-come-from",
+   "title": "Where the batteries come from: NV Energy's storage book",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Every row is a battery NV Energy will rely on. Read the third column: it is who chose the cells, the integrator and the EPC.",
+   "cols": [
+    "Project",
+    "Size and date",
+    "Structure — who buys the hardware",
+    "Status"
+   ],
+   "rows": [
+    [
+     "Reid Gardner",
+     "220 MW / 440 MWh; in service December 2023",
+     "Utility-owned; Energy Vault as EPC, BYD lithium-iron-phosphate cells — the one OEM named anywhere in the record",
+     "Operating; about $100M of federal credits"
+    ],
+    [
+     "Sierra Solar",
+     "400 MW solar + 400 MW / 1,600 MWh, storage 2026, solar 2027",
+     "Utility-owned (Sierra Pacific 90 percent); supplier undisclosed",
+     "Approved 2024 IRP amendment, about $1.5B"
+    ],
+    [
+     "Libra Solar and Storage",
+     "700 MW + 700 MW / 2,800 MWh; December 2027",
+     "25-year PPA with Arevia Power at $34.97/MWh and $13,350/MW-month — Arevia chose the hardware",
+     "Approved; a third amendment adds 200 MW in contract years 21–25"
+    ],
+    [
+     "Dry Lake East; standalone BESS",
+     "200 MW + 200 MW / 800 MWh (December 2026); 400 MW standalone",
+     "PPAs with NextEra Energy Resources",
+     "Approved 2024 IRP"
+    ],
+    [
+     "Dodge Flat addition",
+     "150 MW four-hour; July 2027",
+     "20-year PPA signed September 2025; developer unnamed",
+     "First amendment to the 2024 IRP"
+    ],
+    [
+     "The 2026 IRP book",
+     "5,405 MW of battery output by 2031 (Amargosa, Castor, Commerce Station, Fish Springs Ranch, Hot Pot and others)",
+     "23 PPAs; counterparties confidential; chosen from a 2024 RFP of 198 bids and 12,634 MW of storage",
+     "Decision due December 2, 2026"
+    ],
+    [
+     "Valmy and Fort Churchill gas",
+     "400 MW of peakers (2028); 1,223 MW of turbines (2030–2032)",
+     "Utility-owned — the firm capacity the plan keeps in rate base; turbine OEM undisclosed",
+     "Valmy under evaluation; Fort Churchill requested"
+    ]
+   ]
+  },
+  {
+   "id": "wires-versus-generation",
+   "title": "Wires versus generation: Rule 9 and the LLESA",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**Paying for wires.** Under NV Energy's Rule 9, a large customer signs a {{line-extension agreement}}: it advances the cost of the distribution and transmission facilities built to reach it and commits to minimum usage. About 6 GW of these were signed against about 22 GW of inquiries. But the utility's own words are that they 'do not address generation' — the wires arrive and there is nothing to send down them.",
+    "**Paying for generation.** The 2026 IRP therefore files a form {{large-load electric service agreement}} for any accelerated load of 25 MW or more — the lowest threshold in this corpus. It adds a contracted maximum demand and ramp schedule, minimum billing for demand and energy, a customer-specific generation charge recovered from the customer before any plant enters rate base, a termination payment, and customer security under objective credit standards. Where the other three models make the customer pay through a tariff or a subscription, this one charges for the plant up front, as a contribution.",
+    "**Why the split matters to a seller.** The wires charge decides when a campus is energized; the generation charge decides whether the utility's plan — the batteries and turbines above — gets built for it. A customer that has paid for wires but not for generation is exactly the customer that buys its own bridging plants (below)."
+   ]
+  },
+  {
+   "id": "the-llesa-and-its-blanks",
+   "title": "The LLESA's terms and who fills the blanks",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The form agreement filed with the IRP, and what the four filing customers did with each term. Read the last column: in this model the regulator, not the utility, writes the number.",
+   "cols": [
+    "Term",
+    "What the form says",
+    "What the customers filed (Exhibit G)"
+   ],
+   "rows": [
+    [
+     "Threshold",
+     "New and existing accelerated large loads of 25 MW or more",
+     "—"
+    ],
+    [
+     "Demand and ramp",
+     "A Maximum Demand with a ramp schedule",
+     "Novva: 300-month term, ramp up to 48 months; Fleet/Tract: 25 years after commercial operation"
+    ],
+    [
+     "Minimum bill",
+     "Minimum billing for demand and for energy",
+     "Percentages reserved for the commission; Fleet's reported at 90 percent of contracted"
+    ],
+    [
+     "Generation charge",
+     "A customer-specific charge for incremental generation, recovered before rate base",
+     "Reserved for the commission"
+    ],
+    [
+     "Exit",
+     "A termination payment, mitigated if a commensurate customer assumes the load",
+     "Reserved"
+    ],
+    [
+     "Credit",
+     "ESA Customer Security under objective credit standards",
+     "Calculation reserved"
+    ],
+    [
+     "Approval",
+     "Form deemed approved by September 18, 2026 requested; IRP decision due December 2",
+     "Five customer dockets (Amazon, Fleet/Tract, Vantage NV11, Novva, Prologis) filed May 29–June 3; none decided by mid-July"
+    ],
+    [
+     "The state's hand",
+     "Nevada has no large-load statute",
+     "Executive Order 2026-005 (September 17): the commission 'shall determine instrument and terms ensuring data centers bear full service costs with no burden on other ratepayers'"
+    ]
+   ]
+  },
+  {
+   "id": "a-utility-sues-its-customer",
+   "title": "A utility sues its customer: the forum question",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "In June 2024 Tract's Reno Power signed agreements with NV Energy for its Storey County technology parks. On June 16, 2026 Tract demanded private arbitration under them. On July 24 the utility sued Tract Capital Management in Washoe County — not to change a price, but to keep three questions in front of the commission rather than an arbitrator: whether the supply is adequate, who pays for the network, and how Tract's load is treated in the resource plan. NV Energy's phrase was that Tract wants it 'to reserve and provide enormous amounts of power for Tract's private development while shifting the infrastructure and energy costs to Nevada families'. Tract's was that the suit is 'a public relations blitz', that it has spent more than $127M and committed about $1B of upgrades.",
+    "The arithmetic explains the forum fight. The utility says Tract plans 'at least five data centers with a combined load of nearly 5.5 GW' — two-thirds of a system that peaked at about 8,200 MW. A regulator owes a duty to every customer and can weigh {{cross-subsidy}}; an arbitrator is bound to the two parties in front of it. The question of who decides is therefore the question of whether the other 1.5 million customers are in the room.",
+    "The customer's answer was to stop waiting. Fleet's project companies applied in April 2026 for temporary gas plants — 218 MW at Peru Ridge and 144 MW at South Valley, about 90 LNG containerized {{reciprocating engine}}s and 136 CNG units — to run two to three years until utility service arrives. Storey County approved them in July; the commission conditionally approved them on September 17, 2026, the same day the governor's executive order gave it the mandate the utility's suit presupposes. For a seller of engines, turbines and switchgear the lesson is that {{behind-the-meter}} bridging generation is now a permitted product in Nevada precisely because the utility's plan could not deliver in time."
+   ]
+  },
+  {
+   "id": "tract-sequence",
+   "title": "The Tract sequence, in order",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Six dates that turn a utility relationship into a jurisdictional case.",
+   "cols": [
+    "Date",
+    "Event",
+    "What it decides"
+   ],
+   "rows": [
+    [
+     "June 2024",
+     "Reno Power (Tract) signs agreements with NV Energy for Peru Shelf and South Valley",
+     "The contracts the dispute is fought under"
+    ],
+    [
+     "April 20, 2026",
+     "Fleet's project companies apply to the PUCN for 218 MW and 144 MW of temporary gas plants",
+     "The customer's bridge while the utility plans"
+    ],
+    [
+     "May 29, 2026",
+     "NV Energy files the Fleet/Tract LLESA (Docket 26-05027) with four others",
+     "The generation contract the form is meant to become"
+    ],
+    [
+     "June 16, 2026",
+     "Tract demands private arbitration under the 2024 agreements",
+     "The forum question opens"
+    ],
+    [
+     "July 24, 2026",
+     "NV Energy sues in Washoe County to keep the questions before the commission",
+     "The utility picks the regulator as the forum"
+    ],
+    [
+     "September 17, 2026",
+     "The PUCN conditionally approves the 362 MW of temporary plants; the governor signs EO 2026-005",
+     "The bridge is permitted; the regulator is instructed to write the cost-of-service instrument"
+    ]
+   ]
+  },
+  {
+   "id": "wildfire-as-the-constraint",
+   "title": "Wildfire liability: the constraint that is not load",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The number.** PacifiCorp — the group's six-state western utility — has accrued $2.85B of probable {{wildfire liability}} through mid-2026 and paid $2.3B; class verdicts of about $1.2B were reversed and sent back in April 2026 and the Oregon Supreme Court hears the case on November 3, 2026, with 'reasonably possible' further material losses. A utility's ability to build is its ability to borrow, and an unbounded tort liability sits on the same balance sheet as the plan.",
+    "**What it costs.** S&P put PacifiCorp on watch for junk in March 2026 after two verdicts; a $2.55B letter-of-credit facility, a $575M federal settlement and a $150M plaintiff settlement followed; and the sale of the Washington service area to Portland General ($1.9B, closing 2027), the Oregon co-op sales and a {{sale-leaseback}} of the Boardman-to-Hemingway line (about $1.1B) are modeled as liquidity for the damages case. The three-year plan spends $1.5B on wildfire prevention and $0.1B on new wind.",
+    "**What it does to the data-center book.** In Oregon more than 7,000 MW is pursued, 784 MW is under contract, negotiations have 'stalled' under the 2025 large-load statute, and Amazon has complained to the regulator that the utility failed to serve it. In Utah a first contract under the 2025 large-load law is worth 'nearly $1 billion' of net benefits. The 2025 IRP Update added 2,223 MW of gas proxies and 4,677 MW of storage proxies by 2045 — a plan with no procurement door open in 2026. State tort law — Utah's caps, Wyoming's zero noneconomic liability, Oregon's defeated bills — now decides part of who gets served."
+   ]
+  },
+  {
+   "id": "owning-versus-contracting",
+   "title": "Owning versus contracting a battery",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "The two ways a utility gets storage onto its system, as this corpus shows them. NV Energy is the first card; Duke, DTE and WEC are the second.",
+   "cards": [
+    {
+     "t": "Contract it (PPA / tolling)",
+     "meta": "NV Energy's 5,405 MW; Libra, Dry Lake East, Dodge Flat",
+     "adv": [
+      "No utility capital and no rate-base return to defend — the fixed price satisfies 'no impact to the rates' visibly",
+      "Tax-credit qualification, tariff and sourcing risk stay with the developer after the 2025 federal changes",
+      "Speed: the RFP shortlist already exists (198 bids, 12,634 MW of storage)"
+     ],
+     "dis": [
+      "The utility earns nothing on the asset; storage is $0.2B of a $33.6B plan",
+      "The OEM decision was made at bid stage by the developer — a seller reaches the utility only through Arevia, NextEra and the confidential 2026 counterparties",
+      "Delivery depends on counterparties the utility does not control"
+     ]
+    },
+    {
+     "t": "Own it (rate base)",
+     "meta": "Reid Gardner 220 MW; Sierra Solar 400 MW; Duke's Allen and Riverbend; DTE's Trenton Channel; WEC's build-transfers",
+     "adv": [
+      "The utility signs the supply agreement or buys the finished project — a direct buyer",
+      "A regulated return on the asset for its life; controls specification and schedule"
+     ],
+     "dis": [
+      "Capital, construction and supplier risk on the utility (DTE's Powin termination)",
+      "Must clear a {{rate case}} or an IRP prudence review, and the customer or the general body pays the return"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "markets-without-an-auction",
+   "title": "Markets without an auction: EDAM, WEIM and the IRP as the reliability rule",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Exelon's customers in PJM pay a {{capacity market}} price for generators to exist. BHE's western utilities do not: there is no capacity auction west of the Rockies outside California, so {{resource adequacy}} is a planning duty — NV Energy's 2026 IRP targets an open position of no more than 500 MW short by 2031, and the Western Resource Adequacy Program sits in PacifiCorp's plan as a regional check. What the West has instead is an {{energy imbalance market}}: PacifiCorp launched in CAISO's Extended Day-Ahead Market on May 1, 2026 as the first western utility, NV Energy trades in the real-time market, and both save money by balancing across a footprint rather than alone. Nobody pays them for capacity.",
+    "The consequence for the data-center book is that firm capacity is whatever the IRP builds or contracts, on the IRP's timetable. NV Energy's earliest new turbine is 2029–2030; the plan says 'total new thermal may exceed 3 GW in next decade'. That gap between a customer's 2027 energization date and the utility's first turbine is the space Tract's bridging plants occupy — and the reason a Nevada regulator approved gas generation built by a data-center developer.",
+    "MidAmerican, the group's Iowa utility, sits in {{MISO}} and answers large load with a contract rather than a market: the {{load commitment agreement}} — a binding ramp, a minimum monthly charge payable for ten years regardless of usage, exit penalties and customer funding of every substation and line. The forecast counts only signed ones; data centers are about 8 percent of Iowa peak; there is no tariff docket and no litigation. It is the quietest large-load franchise in the corpus because it is a contract that predates the tariff wave."
+   ]
+  },
+  {
+   "id": "four-utilities-four-instruments",
+   "title": "The group at a glance: four businesses, four instruments",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "How each part of Berkshire Hathaway Energy meets a data center, and what a seller reads from it.",
+   "cols": [
+    "Business",
+    "Large-load instrument",
+    "Supply it is buying",
+    "The open door"
+   ],
+   "rows": [
+    [
+     "NV Energy (Nevada Power, Sierra Pacific)",
+     "Rule 9 wires agreements; form LLESA at 25 MW (PUCN to set terms); Clean Transition Tariff for bundled clean service",
+     "5,405 MW of battery PPAs, 4,370 MW of solar, 1,223 MW of owned Fort Churchill gas, 400 MW Valmy peakers; Greenlink 525 kV ($4.2B)",
+     "The 23 PPA developers at bid stage; Valmy and Fort Churchill turbines (OEM undisclosed); bridging generation for waiting customers"
+    ],
+    [
+     "PacifiCorp (Rocky Mountain Power, Pacific Power)",
+     "State statutes: Utah SB 132 contracts (≥100 MW), Oregon HB 3546 and proposed Schedule 401, Wyoming unused-demand charges",
+     "IRP proxies to 2045: 1,370 MW combined-cycle, 853 MW frame turbines, 4,154 MW lithium, 523 MW iron-air; Natrium Kemmerer 1 (2031)",
+     "None open in 2026 — wildfire liquidity first; watch the Oregon Supreme Court and the AWS complaint"
+    ],
+    [
+     "MidAmerican (Iowa)",
+     "Load commitment agreement: 10-year minimum monthly charge, binding ramp, customer-funded T&D",
+     "800 MW solar (pre-approved 9.95 percent return); a 520–700 MW gas peaker (three figures on the record); $1.5B wind repowering",
+     "The peaker's turbines ($1.1B in the plan; 2028–2029); Google's Salix decision"
+    ],
+    [
+     "BHE Renewables / BHE Transmission / Pipelines",
+     "Nonregulated: behind-the-meter generation under diligence at sites 'capable of ... 1 GW or more'",
+     "5,488 MW owned fleet; 75 MW Montana battery; Cross-Tie 500 kV; MISO 765 kV award with AEP; 15 percent of U.S. gas",
+     "The first named BTM data-center site — the one BHE unit that would buy turbines as a developer"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — inquiries, contracts, plan",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "BHE's and NV Energy's own figures at their most recent disclosure. The shape to notice: inquiries are nearly three times the system peak, and the plan's batteries are all by contract.",
+   "items": [
+    {
+     "label": "NV Energy data-center inquiries",
+     "sub": "2026 IRP",
+     "v": 22.0
+    },
+    {
+     "label": "BHE contracted data-center load",
+     "sub": "in service or in construction, March 2026",
+     "v": 11.0
+    },
+    {
+     "label": "NV Energy combined system peak",
+     "sub": "2025",
+     "v": 8.2
+    },
+    {
+     "label": "NV Energy signed Rule 9 agreements",
+     "sub": "wires only",
+     "v": 6.0
+    },
+    {
+     "label": "Battery PPAs requested",
+     "sub": "2026 IRP, by 2031",
+     "v": 5.4
+    },
+    {
+     "label": "2030 data-center peak, group",
+     "sub": "high end of 4.5–5.7",
+     "v": 5.7
+    },
+    {
+     "label": "NV Energy 2030 data-center peak",
+     "sub": "IRP forecast",
+     "v": 3.6
+    },
+    {
+     "label": "LLESAs filed",
+     "sub": "five customers, eight agreements by 2032",
+     "v": 3.3
+    },
+    {
+     "label": "2025 data-center peak, group",
+     "sub": "~8 percent of system peak",
+     "v": 2.2
+    },
+    {
+     "label": "Fort Churchill owned gas",
+     "sub": "2030–2032",
+     "v": 1.223
+    }
+   ],
+   "note": "Battery storage is $0.2B of BHE's $33.6B 2026–2028 plan — the PPAs carry the equipment."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Treating the 5.4 GW as a utility purchase order.** It is 23 PPAs; the utility buys none of the hardware. The seller's counterparties are the developers.",
+    "**Reading the LLESA as a tariff with rates.** It is a form whose percentages the customers reserved for the commission; the numbers do not exist yet.",
+    "**Calling the Tract case a price dispute.** It is a forum dispute — regulator or arbitrator — over supply adequacy and cost allocation.",
+    "**Assuming a capacity market.** The West has imbalance markets and planning duties; nobody is paid to exist, so the IRP's turbine date is the firm-capacity date.",
+    "**Reading BHE's 11 GW as NV Energy's.** It is the group figure across three utilities; NV Energy's own 2030 forecast is 3.6 GW of peak.",
+    "**Forgetting the balance sheet.** PacifiCorp's wildfire accrual, not its load forecast, decides what it can build; the Oregon Supreme Court argument is November 3, 2026."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "In NV Energy's 2026 plan, who chooses the battery cells and integrator for the 5,405 MW of new storage?",
+     "a": "The developers who hold the 23 power purchase agreements — chosen at bid stage in the 2024 all-source RFP; the utility owns only Reid Gardner (BYD cells, Energy Vault EPC) and Sierra Solar."
+    },
+    {
+     "q": "What does a Rule 9 line-extension agreement pay for, and what does it not?",
+     "a": "The distribution and transmission built to reach the customer, with a minimum-usage commitment — not generation; about 6 GW were signed against 22 GW of inquiries."
+    },
+    {
+     "q": "What does the form LLESA add, and at what threshold?",
+     "a": "A maximum demand and ramp, minimum billing for demand and energy, a customer-specific generation charge recovered before rate base, a termination payment and customer security — for accelerated loads of 25 MW or more, the lowest threshold in the corpus."
+    },
+    {
+     "q": "Who sets the LLESA's minimum-bill percentages, generation charge and security?",
+     "a": "The Nevada commission — all four filing customers reserved them in Exhibit G; the governor's September 2026 order directs the PUCN to set an instrument ensuring 'no burden on other ratepayers'."
+    },
+    {
+     "q": "What is NV Energy's suit against Tract actually about?",
+     "a": "The forum: keeping supply adequacy, cost allocation and resource-plan treatment of Tract's ~5.5 GW before the regulator rather than the private arbitrator Tract demanded in June 2026."
+    },
+    {
+     "q": "What did the PUCN approve on September 17, 2026, and why does it matter to an equipment seller?",
+     "a": "Tract/Fleet's 362 MW of temporary gas plants (218 + 144 MW) to run two to three years until utility service — behind-the-meter bridging generation is now a permitted product because the plan could not deliver in time."
+    },
+    {
+     "q": "Why does PacifiCorp spend more on wildfire prevention than on new generation?",
+     "a": "$2.85B of accrued wildfire losses, a junk watch and a $2.55B letter-of-credit facility make the balance sheet the constraint; the plan is liquidity first, and Oregon negotiations have stalled."
+    },
+    {
+     "q": "How is reliability assured in the West without a capacity market?",
+     "a": "By the integrated resource plan — NV Energy targets an open position of no more than 500 MW short by 2031 — while imbalance markets (EDAM, WEIM) trade energy but pay nobody for capacity."
+    },
+    {
+     "q": "What is MidAmerican's load commitment agreement?",
+     "a": "A binding ramp, a minimum monthly charge payable for ten years regardless of usage, exit penalties and customer funding of all incremental T&D — a contract rather than a tariff, so the forecast counts only signed ones."
+    },
+    {
+     "q": "What is the parent's rule for serving hyperscalers?",
+     "a": "Serve them 'if there was no impact to the rates' — which a fixed-price PPA satisfies visibly and a nonregulated behind-the-meter affiliate satisfies by construction."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A storage integrator wants its product in NV Energy's 2026 battery build. Who is the buyer it must win?",
+     "c": [
+      "NV Energy's procurement department",
+      "The developers behind the 23 PPAs, at bid stage — the utility buys none of the 5,405 MW",
+      "The PUCN",
+      "Berkshire Hathaway"
+     ],
+     "a": 1,
+     "why": "The plan is 'more than 5,400 MW of battery storage through power purchase agreements'; only Reid Gardner and Sierra Solar are owned, and both are contracted."
+    },
+    {
+     "q": "A data center has signed a Rule 9 agreement and paid for its substation and lines. What has it not yet secured?",
+     "c": [
+      "Its interconnection",
+      "Generation — Rule 9 'does not address generation'; that is what the LLESA's customer-specific generation charge is for",
+      "Its ramp schedule",
+      "A transmission path"
+     ],
+     "a": 1,
+     "why": "Wires and generation are separate instruments in Nevada."
+    },
+    {
+     "q": "Why did NV Energy sue Tract rather than arbitrate?",
+     "c": [
+      "To raise Tract's rates",
+      "To keep supply adequacy, cost allocation and resource-plan treatment before a regulator with a duty to all customers, instead of an arbitrator bound to two parties",
+      "Because arbitration was unavailable",
+      "To cancel the 2024 agreements"
+     ],
+     "a": 1,
+     "why": "The suit is about which forum decides; the utility calls Tract's plan a cost shift to 'Nevada families'."
+    },
+    {
+     "q": "Which statement about the PUCN's September 17, 2026 approval is correct?",
+     "c": [
+      "It approved NV Energy's Fort Churchill turbines",
+      "It conditionally approved Tract/Fleet's 362 MW of temporary gas plants — the customer's bridge while utility service is built",
+      "It approved the LLESA form",
+      "It rejected the 2026 IRP"
+     ],
+     "a": 1,
+     "why": "The IRP decision is due December 2; the executive order the same day instructs the PUCN on the cost-of-service instrument."
+    },
+    {
+     "q": "Why does a wildfire verdict in Oregon affect whether a Utah data center is served?",
+     "c": [
+      "Utah law requires it",
+      "One balance sheet, one credit rating and one liquidity plan serve six states; the accrued liability sets the cost of every dollar borrowed to build",
+      "It does not",
+      "Oregon supplies Utah's power"
+     ],
+     "a": 1,
+     "why": "$2.85B accrued, a junk watch in March 2026, and a plan that spends $1.5B on wildfire against $0.1B on new generation."
+    },
+    {
+     "q": "A hyperscaler wants firm capacity in Nevada in 2028. Which route is NOT available?",
+     "c": [
+      "An LLESA subscribing to NV Energy's owned Valmy peakers and Fort Churchill turbines as they arrive",
+      "A Clean Transition Tariff resource it pays for",
+      "Its own permitted bridging generation, as Tract did",
+      "Buying capacity in a western capacity auction"
+     ],
+     "a": 3,
+     "why": "There is no capacity market in the West; resource adequacy is an IRP duty and imbalance markets trade energy only."
+    }
+   ]
+  }
+ ]
+}

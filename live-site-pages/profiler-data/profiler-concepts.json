@@ -1782,6 +1782,14 @@
    "def": "Generation that is both low-carbon and available on demand around the clock — nuclear, geothermal, hydro, or a fuel-burning plant with capture. It is what a load with a flat, continuous profile actually needs."
   },
   {
+   "slug": "clean-transition-tariff",
+   "term": "Clean Transition Tariff",
+   "def": "An NV Energy tariff, approved in 2025, under which an eligible large customer buys bundled electric service from a specific new clean-energy resource — Google's is Fervo's 115 MW Corsac Station geothermal — and pays a customer-specific charge that covers its cost, so other customers do not. Google later exported the model to Xcel Minnesota as the Clean Energy Accelerator Charge.",
+   "aliases": [
+    "CTT"
+   ]
+  },
+  {
    "slug": "clearance-distance",
    "term": "clearance",
    "def": "The shortest distance through air between two conductors — the distance that governs whether a spark can jump. Always less than or equal to the creepage distance for the same pair.",
@@ -1889,6 +1897,15 @@
     "net-metering arrangement",
     "co-located net metering",
     "SB 6 net metering"
+   ]
+  },
+  {
+   "slug": "coal-to-gas-conversion",
+   "term": "coal-to-gas conversion",
+   "def": "Refitting a coal-fired boiler or plant to burn natural gas, keeping the site, turbines and grid connection while ending coal use. NV Energy's North Valmy units (522 MW, half owned) ran on gas from early 2026 after coal ended in 2025; a cheaper firm-capacity option than a new plant.",
+   "aliases": [
+    "coal-to-gas",
+    "gas conversion"
    ]
   },
   {
@@ -3384,6 +3401,15 @@
    "def": "UPS topologies that reach N+1 or better without doubling everything. In a block-redundant or catcher design a spare UPS system stands ready to take any block's load through static transfer switches; in a distributed-redundant design each load is fed from two of several systems so any one can fail. Both cost less than 2N, and both place the redundancy in a switching event that has to work."
   },
   {
+   "slug": "distribution-only-service",
+   "term": "distribution-only service",
+   "def": "Service under which a large Nevada customer leaves the utility's bundled supply under the state's 704B exit law and buys its own power, paying the utility only to deliver it. NV Energy delivered 5,790 GWh this way in 2025, and the 2026 IRP's 3,600 MW data-center forecast includes such customers.",
+   "aliases": [
+    "704B exit",
+    "distribution-only customers"
+   ]
+  },
+  {
    "slug": "distribution-service-provider",
    "term": "distribution service provider",
    "def": "In ERCOT, the company that owns the local distribution network a small generator connects to — Oncor, CenterPoint, AEP Texas, TNMP. A distribution-connected battery's interconnection is negotiated with the DSP, not with ERCOT's transmission planners.",
@@ -3879,6 +3905,17 @@
    "aliases": [
     "Wh/L",
     "watt-hours per litre"
+   ]
+  },
+  {
+   "slug": "energy-imbalance-market",
+   "term": "energy imbalance market",
+   "def": "A voluntary real-time (WEIM) or day-ahead (EDAM) market run by CAISO across the western United States, in which utilities that are not in an RTO trade power to balance supply and demand more cheaply than each could alone. PacifiCorp launched in EDAM on May 1, 2026; NV Energy trades in WEIM. The West has no capacity market, so resource adequacy stays an IRP duty.",
+   "aliases": [
+    "WEIM",
+    "EDAM",
+    "Extended Day-Ahead Market",
+    "Western Energy Imbalance Market"
    ]
   },
   {
@@ -5897,6 +5934,15 @@
    ]
   },
   {
+   "slug": "indexed-storage-credit",
+   "term": "Indexed Storage Credit",
+   "def": "Illinois's payment mechanism for the batteries the Illinois Power Agency procures under the 2026 Clean and Reliable Grid Affordability Act: the developer receives a credit that rises when market revenues fall and falls when they rise, so its total revenue is stable. The state agency buys the storage; ComEd delivers the credit through its customers' bills but owns nothing.",
+   "aliases": [
+    "indexed storage credits",
+    "ISC"
+   ]
+  },
+  {
    "slug": "inertia",
    "term": "inertia",
    "def": "The stabilizing effect of heavy spinning generator masses, which resist sudden changes in grid frequency and buy operators seconds to react. As synchronous plants retire in favor of inverter-connected wind, solar, and storage, that inertia has to be replaced — by synchronous condensers, or by grid-forming inverters imitating it electronically.",
@@ -6605,6 +6651,16 @@
    ]
   },
   {
+   "slug": "line-extension-agreement",
+   "term": "line-extension agreement",
+   "def": "The contract under a utility's line-extension rule (NV Energy's Rule 9) by which a new large customer advances the cost of the distribution and transmission facilities built to reach it and commits to minimum usage. It pays for wires, not for generation — which is why NV Energy added a separate large-load service agreement in 2026.",
+   "aliases": [
+    "Rule 9 agreement",
+    "line extension agreement",
+    "line-extension agreements"
+   ]
+  },
+  {
    "slug": "line-interactive",
    "term": "line-interactive",
    "def": "A UPS that normally passes the supply through while a transformer or inverter trims the voltage, stepping in fully only when the supply fails. Cheaper and more efficient than double conversion, at the cost of a short break the load must be able to ride."
@@ -6715,6 +6771,15 @@
    "slug": "load-bank",
    "term": "load bank",
    "def": "A bank of resistors that turns electricity into heat on demand, used to load generators, UPS and batteries during testing when there is no real IT load to use."
+  },
+  {
+   "slug": "load-commitment-agreement",
+   "term": "load commitment agreement",
+   "def": "MidAmerican Energy's contract with a large customer: a binding load ramp schedule, a minimum monthly charge payable for ten years regardless of actual usage, exit penalties, and customer funding of every incremental substation and transmission line. A contract rather than a tariff — the utility's load forecast counts only signed ones.",
+   "aliases": [
+    "Load Commitment Agreement",
+    "load commitment agreements"
+   ]
   },
   {
    "slug": "load-factor",
@@ -7302,6 +7367,15 @@
     "trailer-mounted generation",
     "mobile gen-set",
     "mobile generation fleet"
+   ]
+  },
+  {
+   "slug": "mobile-sierra",
+   "term": "Mobile-Sierra presumption",
+   "def": "A federal legal doctrine under which FERC presumes that the rate in a freely negotiated contract between a utility and a customer is just and reasonable, and will change it only if it seriously harms the public interest. ComEd's transmission security agreements were accepted under it, which is why a dispute over one goes to FERC and federal court rather than a state commission.",
+   "aliases": [
+    "Mobile-Sierra",
+    "Mobile-Sierra doctrine"
    ]
   },
   {
@@ -8946,6 +9020,16 @@
    ]
   },
   {
+   "slug": "price-collar",
+   "term": "price collar",
+   "def": "A cap and floor on a capacity auction's clearing price — in PJM, $325/MW-day and $175/MW-day for the 2026/27 through 2028/29 auctions, extended by FERC in 2026. It limits the bill impact of scarcity but also mutes the price signal that would attract new generation; three consecutive PJM auctions have cleared at the cap.",
+   "aliases": [
+    "capacity price collar",
+    "price cap and floor",
+    "collar"
+   ]
+  },
+  {
    "slug": "price-per-mw",
    "term": "price per MW",
    "def": "A data-center valuation shorthand: the price or appraisal of a building divided by its critical IT capacity. It lets a securitization appraisal, a sale and a construction budget be compared on one axis.",
@@ -9669,6 +9753,16 @@
    ]
   },
   {
+   "slug": "reliability-backstop",
+   "term": "reliability backstop",
+   "def": "A procurement an RTO or a state runs outside the normal capacity market when the market fails to attract enough new supply — PJM's tariff requires a Reliability Backstop Auction after three consecutive auctions clear more than a point short of the reserve margin. Exelon supports it; consumer advocates asked FERC to reject PJM's version in August 2026.",
+   "aliases": [
+    "reliability backstop auction",
+    "reliability backstop procurement",
+    "backstop procurement"
+   ]
+  },
+  {
    "slug": "reliability-must-run",
    "term": "reliability must-run",
    "aliases": [
@@ -10091,6 +10185,15 @@
     "safe harbour",
     "safe-harbored",
     "safe harbor equipment"
+   ]
+  },
+  {
+   "slug": "sale-leaseback",
+   "term": "sale-leaseback",
+   "def": "A transaction in which a company sells an asset and immediately leases it back, raising cash while keeping the use of it. PacifiCorp is selling its Boardman-to-Hemingway transmission line to a Berkshire Hathaway Energy affiliate on this basis, with about $1.1 billion of proceeds in its wildfire liquidity plan.",
+   "aliases": [
+    "sale and leaseback",
+    "sale-leasebacks"
    ]
   },
   {
@@ -10544,6 +10647,16 @@
    "aliases": [
     "should cost",
     "should-cost model"
+   ]
+  },
+  {
+   "slug": "show-cause-order",
+   "term": "show-cause order",
+   "def": "A regulator's order requiring a party to explain why its existing rules or rates should not be found unjust and changed. FERC issued six on June 18, 2026 under section 206 of the Federal Power Act, directing PJM and five other grid operators to justify their large-load interconnection, cost-allocation and co-location rules by mid-November 2026.",
+   "aliases": [
+    "order to show cause",
+    "show cause order",
+    "show-cause orders"
    ]
   },
   {
@@ -12306,6 +12419,16 @@
    "slug": "us-gaap",
    "term": "US GAAP",
    "def": "The accounting rulebook used by companies reporting to the US Securities and Exchange Commission as domestic filers. It is generally more prescriptive than IFRS and more reluctant to revalue assets upward."
+  },
+  {
+   "slug": "utility-owned-generation",
+   "term": "utility-owned generation",
+   "def": "Power plants or batteries owned by the regulated utility and paid for through rate base at an allowed return, rather than bought from independent generators through a market or contract. Prohibited or restricted for wires-only utilities in restructured states; Exelon is campaigning for the right to own it again, with ACE's 500 MW Pittsgrove battery as the first ask.",
+   "aliases": [
+    "utility-owned generation and storage",
+    "utility-owned storage",
+    "regulated generation"
+   ]
   },
   {
    "slug": "v2g",

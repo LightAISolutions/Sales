@@ -3,11 +3,109 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 109/100`
+`Sections: 110/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.58r] — 2026-09-25 10:53:01 PM EST
+
+> **Prompt:** "Picking up from my last session, run Phase F sessions F-U1 and F-U2 of
+> repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: Duke Energy, DTE Energy and WEC
+> Energy (F-U1), then Berkshire Hathaway Energy (NV Energy) and Exelon (F-U2).
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the
+> five F-U1/F-U2 rows of §11.3 are yours); .claude/rules/profiler-app.md (Profiler Command including step
+> 1a identity and step 7 reconciliation, Profiler Prep Command, Scheduled Refreshes);
+> repository-information/PROFILER-SCHEMA.md (Naming and renames, Segments registry, Refresh calendar);
+> repository-information/PROFILER-STYLES.md (active style intel-briefing). Read the dominion-energy,
+> southern-company and aep dossiers and study guides as the house pattern for a utility.
+>
+> TWO WAVES, TWO PUSHES — I am explicitly asking for two separate push commits:
+> - Wave 1: Duke Energy, DTE Energy, WEC Energy -> commit and push.
+> - Wave 2: Berkshire Hathaway Energy, Exelon -> commit and push once wave 1's branch has merged
+>   (Pre-Push #5 push-once).
+> If the session runs short, stop cleanly after wave 1 and hand wave 2 back to me as a prompt.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories ["utility"]) and study guide (schema v2) with its lesson plan under
+> repository-information/study-prep/<slug>/. Populate aka[] BEFORE the step-7 grep (operating utilities
+> and former names: ComEd, Commonwealth Edison, PECO, BGE, Pepco, Delmarva, Atlantic City Electric; NV
+> Energy, Nevada Power, Sierra Pacific, PacifiCorp, MidAmerican; Duke Energy Carolinas / Progress /
+> Florida / Indiana / Ohio, Piedmont; DTE Electric; We Energies, Wisconsin Public Service). Assign segments
+> in live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis: `utilities` ·
+> incumbent; `storage-developers-and-ipps` · adjacent only where utility-owned storage is material in the
+> dossier). Then the registry sync, the graph build, a dated calendar row per company (all five file with
+> the SEC — research each Q3 2026 earnings date), README tree entries, and rewrite and flip your §11.3 rows.
+>
+> IDENTITY (step 1a) — check at least: Brookfield's 19.7% Duke Energy Florida stake (first closing not
+> confirmed); BHE is 100% Berkshire and PacifiCorp is selling its Washington operations to Portland
+> General (close 2027); nothing known for DTE, WEC or Exelon — verify anyway. Proposed slugs: duke-energy,
+> dte-energy, wec-energy, berkshire-hathaway-energy, exelon. Decide BHE's display name under Naming and
+> renames; the precedent for a holding company taught through its lead utility is Southern Company.
+>
+> THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+> budget ran out partway, and nobody has read the underlying articles. Verify every figure against
+> first-party sources (10-K and 10-Q, the Q2 2026 decks, state PUC dockets, and EEI's "Large Load Projects
+> and Tariffs" list updated 11 Sep 2026), record a premise verdict per clause, and rewrite the cells.
+>
+> RECONCILIATION (step 7) — expected inbound: Exelon/ComEd ~19 dossiers, NV Energy/BHE/PacifiCorp ~18,
+> Duke ~10, DTE ~9, WEC ~4. Known drift candidates, all agent-reported and unread:
+> - powerhouse-data-centers says ComEd's Joliet TSA was lost in July; Utility Dive reported FERC rejected
+>   ComEd's cancellation notice on 22 Sep 2026, leaving the dispute in federal court.
+> - tract carries NV Energy's July lawsuit and a pending PUCN gas-plant decision; the PUCN reportedly
+>   approved the two plants conditionally around 19 Sep 2026.
+> - lg-energy-solution carries the DTE 6 GWh LGES Vertech deal — check that both sides agree.
+> - DTE's Saline-linked storage is 1.4 GW in one source and 332 MW in the MPSC approval; state both unless
+>   a source reconciles them.
+> If BHE's or Exelon's reconciliation outgrows the session, say so and defer it per step 7's scope note.
+>
+> DO NOT edit googleAppsScripts/Classroom/Classroom.gs. Five new utilities make landscape-utilities-2026-09
+> (built on "six franchises") and the three scenario-utilities-* rehearsals stale; record that in the
+> CHANGELOG entry and the SESSION-CONTEXT hand-off instead (§11.2, the landscape coupling).
+>
+> CHANGELOG: the first push dated 2026-09-26 or later must rotate. Run `git fetch --unshallow origin main`
+> first, then move the oldest whole date groups with SHA enrichment until fewer than 100 non-exempt
+> sections remain.
+>
+> VERIFY per wave: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check
+> clean; build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+> check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+> warnings read; every new dossier and guide renders (Playwright) with zero page errors. If the Fable weekly
+> cap binds, continue on Opus 5.5 xhigh and record the substitution in the §11.3 Model cell. Normal
+> Pre-Commit and Pre-Push checklists; push on a claude/* branch."
+
+**Phase F, wave 2 (F-U2) — Berkshire Hathaway Energy and Exelon** join the Profiler corpus as the tenth and eleventh `utility` dossiers, each with a v2 study guide and a lesson plan, as the second of the two pushes the prompt asked for (wave 1 was v07.57r). Step-7 reconciliation revised two existing dossiers — `tract` to v4 and `powerhouse-data-centers` to v3 — against the drift candidates the prompt named.
+
+### Added
+
+- **Two schema v7 dossiers** (`profileVersion` 1, `categories: ["utility"]`, intel-briefing style), each from two parallel subagents under the shared two-stage protocol. SEC hosts refused the sandbox throughout, and both companies' investor sites were unreadable (brkenergy.com WAF-blocked; investors.exeloncorp.com HTTP 503), so filings came from Berkshire's 10-Qs, the annualreports.com and last10k mirrors, transcripts and the 8-K mirror.
+  - **`berkshire-hathaway-energy.profile.json`** — 88 sources, 40 developments, 6 products, 18 relationships, 9 decision makers, no photos (brkenergy.com blocked; nvenergy.com renders no server-side content). **Display name decided as "Berkshire Hathaway Energy"** on the Southern Company precedent — the holding company, taught through its lead utility — with NV Energy, Nevada Power, Sierra Pacific, PacifiCorp, Rocky Mountain Power, Pacific Power, MidAmerican, BHE Renewables, BHE Transmission, BHE GT&S, Northern Natural Gas, Northern Powergrid, AltaLink and CalEnergy in `aka[]`. `ownership.type` is `subsidiary` (100% Berkshire; no ticker; an SEC registrant through its debt) and `financials.type` is `private` (no EPS, no consensus, no calls).
+  - **`exelon.profile.json`** — 106 sources, 41 developments, 6 products, 19 relationships, 9 decision makers; seven executive photos from exeloncorp.com (Butler, Jones, Quiniones, Innocenzo, Khouzami, Olivier, Honorable), cropped from the company's banner templates to 480 px squares. `aka[]`: ComEd, Commonwealth Edison, PECO, BGE, Pepco, Pepco Holdings, PHI, Delmarva Power, Atlantic City Electric, ACE.
+- **Two schema v2 study guides** — `berkshire-hathaway-energy.study.json` and `exelon.study.json` (14 sections each, flashcards and a self-test) — and **two lesson plans** under `repository-information/study-prep/<slug>/`, five modules each.
+- **13 new concepts** in `profiler-concepts.json` (1,503 total): `mobile-sierra`, `clean-transition-tariff`, `line-extension-agreement`, `load-commitment-agreement`, `price-collar`, `reliability-backstop`, `energy-imbalance-market`, `sale-leaseback`, `indexed-storage-credit`, `coal-to-gas-conversion`, `show-cause-order`, `utility-owned-generation`, `distribution-only-service`. Three drafted concepts were dropped because the checker found their terms already aliased elsewhere: `base-residual-auction` (an alias of `capacity-market`), `resource-adequacy` (of `planning-reserve-margin`) and `wires-only-utility` (of `vertically-integrated-utility`).
+- **Archived dossiers:** `archive/tract.profile.v3.json` and `archive/powerhouse-data-centers.profile.v2.json`, with `archive-index.json` entries and README tree lines.
+
+### Changed
+
+- **`profiler-companies.json`** — 180 → 182 entries. **`profiler-segments.json`** — `berkshire-hathaway-energy`: `utilities` · incumbent and `storage-developers-and-ipps` · adjacent (the tolling counterparty on 5,405 MW of new battery PPAs plus owned Reid Gardner and Sierra Solar); `exelon`: `utilities` · incumbent only — it owns no generation or storage, and ACE's 500 MW Pittsgrove battery is a petition, to be revisited on the ~February 2027 BPU decision. **`profiler-graph.json`** — rebuilt, 1,560 edges.
+- **`profiler-refresh-calendar.json`** — `berkshire-hathaway-energy` 2026-11-06 (unconfirmed; the inferred 10-Q date from the Q3 2025 pattern, Berkshire's release the Saturday after) and `exelon` 2026-11-03 (unconfirmed; tracker estimate, no company notice yet). **`profiler-refresh-notes.json`** — a source and a `watch[]` list for each.
+- **`tract.profile.json` v3 → v4** — the PUCN's decision on Fleet's 362 MW of temporary gas plants, which the dossier carried as scheduled for 8 September 2026 in six places, is now the conditional approval of 17 September 2026; the Morris ComEd TSA's acceptance date corrected from "April 2026" (Tract's announcement) to 10 March 2026 (ER26-3100) in four places; two developments (the approval; Governor Lombardo's EO 2026-005) and four sources added; two relationships added — `berkshire-hathaway-energy` (NV Energy as the utility and litigant) and `exelon` (ComEd's TSA).
+- **`powerhouse-data-centers.profile.json` v2 → v3** — FERC's 22 September 2026 rejection of ComEd's cancellation of the Joliet TSA, with the $1 letter-of-credit question left to the Northern District of Illinois, recorded in the technical specs, policy exposure, financial commentary and the indicator-to-watch it resolves; two developments and three sources added; an `exelon` relationship added.
+- **`PROFILER-COVERAGE-PLAN.md` §11.3** — the two F-U2 rows rewritten with a premise verdict per clause, `Checked 2026-09-26, v07.58r`, Dossier v1, Guide v2. The identity findings the prompt asked for:
+  - **BHE:** 100% Berkshire — held. The ">9 GW contracted (Mar 2026)" clause — **superseded**: the March 2026 presentation says approximately 11,000 MW; 9 GW is the FY2024 figure. The Tract approval date refined from ~19 to 17 September; the lawsuit date held (Friday 24 July). PacifiCorp's Washington sale held ($1.9B, agreement 15 February 2026, close H1 2027). Nothing else was found to be for sale.
+  - **Exelon:** independent; no re-merger reporting found. The "25 GW vs 36 GW" conflict resolved as definitional (36 GW is the refined queue of 4 + 7 + 25; 25 GW is the under-study rung). Rider DE, the PowerHouse sequence, the ACE battery and the $41.7B plan all held. Stated but unreconciled: TSA-backed load fell from ~8 GW (45% of 18) to 4 GW between Q4 2025 and Q2 2026 while collateral stayed at ~$1B — the decks were unreadable.
+- **README.md** — tree entries for the two profile/study pairs, the two study-prep directories and the two archived dossiers.
+- **`SESSION-CONTEXT.md`** — Latest Session written for the hand-off (Phase F waves 1 and 2 complete; the stale Classroom lessons; the remaining Phase F sessions).
+
+### Notes
+
+- **Step-7 reconciliation** — BHE: 20 dossiers matched by alias, 13 substantive claims read, 1 dossier changed (`tract`); the MasTec dossier's "$4.2B Greenlink West program" against BHE's $4.2B for Greenlink West and North combined is stated in the relationship context, not reconciled. Exelon: 19 dossiers matched, 12 claims read, 1 dossier changed (`powerhouse-data-centers`), with the Tract Morris date folded into the tract revision; the Compass dossier's mid-2026 Hoffman Estates energization target is stated against the July 2026 rezoning withdrawal, not reconciled. The `powerhouse` dossier's "TSA accepted 11 March" (Utility Dive's publication date) against the order date of 10 March is left as is.
+- **Classroom lessons now stale, by design — hand-off item:** `landscape-utilities-2026-09` was built on "six franchises" and there are now eleven `utility` dossiers; the three `scenario-utilities-*` rehearsals cite it. `Classroom.gs` was not edited in either wave — a Profiler session never touches it. A Classroom session should re-pin the landscape and the three scenarios against the five new dossiers.
+- **Checkers:** `sync-profiler-registry.py --check` clean (182 in bijection); `check-profiler-study.py` 0 errors after the three concept drops; `check-profiler-relationships.py` 0 findings; `check-profiler-crossrefs.py` 0 candidates (exit 0; 32 over-cap scopes not examined, as before); `check-readme-tree.py` 0 findings; `check-profiler-reports.py` the same two pre-existing warnings (`jinko` v6 vs pinned v5; `oracle` v5 vs pinned v4), read and left loud.
+- **Playwright:** both new dossiers and guides, and the revised `tract` and `powerhouse-data-centers` dossiers, render on `Profiler.html` with zero console errors and zero unresolved `{{}}` terms; the only page error is the auth-wall's `gis_load_failed`, as in wave 1. `Profiler.html` is unchanged (data-only), so no page version bump.
+- **Archive rotation not performed:** 110 sections, of which twelve are dated today (EST) and exempt, leaving 98 non-exempt against a trigger of 100. This push is dated 2026-09-25 EST, so the "first push dated 2026-09-26" rotation the prompt anticipated did not fall due; the next push after midnight EST must rotate the 2026-09-18 and 2026-09-19 date groups (26 sections) — `git fetch --unshallow` first.
 
 ## [v07.57r] — 2026-09-25 10:13:13 PM EST
 

@@ -1,0 +1,489 @@
+{
+ "schemaVersion": 2,
+ "slug": "exelon",
+ "title": "Exelon — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "the-wires-only-utility",
+   "title": "The wires-only utility",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Every utility this corpus has taught so far — Dominion, DTE, WEC, Berkshire Hathaway Energy — is a {{vertically integrated utility}}: it owns the plants, the wires and the customer relationship, and its large-load tariff decides who pays for new generation. Exelon is the first {{wires-only utility}} in the file. Its six companies — ComEd in northern Illinois, PECO in Philadelphia, BGE in Baltimore, Pepco in Washington and its Maryland suburbs, Delmarva Power in Delaware and Atlantic City Electric in southern New Jersey — deliver electricity to about 10.7 million customers in {{PJM}} and, since the 2022 spin-off of their generation as Constellation, own no power plants at all. The 10-K says it in five words: 'The Registrants do not own generation'.",
+    "That single fact changes every question a seller asks. The utility's earnings come from a delivery charge set by a state commission and a transmission charge set by a {{FERC formula rate}}; the price of the energy on its customers' bills is set by the market and a state procurement, and the company says three-quarters of recent bill increases were supply it does not earn on. It cannot put a battery or a turbine into {{rate base}} without a statute. And so its large-load instrument secures the wires only, its politics are about a market price it does not set, and its route to buying storage runs through legislatures.",
+    "This guide teaches what a high-school-STEM reader needs to follow that: what {{retail choice}} did to the utility's balance sheet; what a {{transmission security agreement}} is and why it is a federal contract; what a $1 letter of credit tested; how to read a pipeline ladder whose top number fell 40 percent by design; what a {{capacity market}} clearing at its cap three years running means; and who buys the batteries in a restructured state."
+   ]
+  },
+  {
+   "id": "restructured-versus-integrated",
+   "title": "Restructured versus vertically integrated: what changes",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The same question answered for the two kinds of utility this corpus now holds. Exelon is the right-hand column.",
+   "cols": [
+    "Question",
+    "Vertically integrated (Dominion, DTE, WEC, BHE)",
+    "Wires-only (Exelon)"
+   ],
+   "rows": [
+    [
+     "Who owns the plants?",
+     "The utility, in rate base at an allowed return",
+     "Nobody in the company; generators sell into PJM's market (Constellation, Vistra, Talen…)"
+    ],
+    [
+     "What sets the energy price on the bill?",
+     "The commission, through the fuel clause and rate cases",
+     "The market and a state procurement (Illinois Power Agency); the utility passes it through"
+    ],
+    [
+     "Where does growth capital go?",
+     "Generation, storage, wires — the IRP decides",
+     "Wires only: $41.7B for 2026–2029, transmission rate base growing ~16 percent a year"
+    ],
+    [
+     "What does the large-load instrument secure?",
+     "Generation cost (DTE's batteries, WEC's plants, NV Energy's generation charge) and wires",
+     "Transmission revenue and collateral — the TSA — plus distribution deposits under state rules"
+    ],
+    [
+     "Who buys the batteries the load needs?",
+     "The utility (Duke, DTE, WEC) or its PPA developers (NV Energy)",
+     "A state agency (Illinois's 3,000 MW), a state solicitation (Maryland) or a developer — until a statute lets the utility own one"
+    ],
+    [
+     "What does the utility argue about?",
+     "Prudence of its own plant and who pays for it",
+     "The capacity auction's price and whether it may own generation again"
+    ]
+   ]
+  },
+  {
+   "id": "the-tsa",
+   "title": "The transmission security agreement: a federal contract",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "ComEd's answer to 28,000 MW of large-load requests against a 24,000 MW all-time peak is a two-layer gate. At the Illinois Commerce Commission, the March 2026 order on Rider DE and the Large Demand Project Applicant rules sets the entry fee for any request of 50 MW or more: a $1M deposit for 50 to 200 MW plus $500,000 for each additional 100 MW above 200 MW, a letter of credit from an A3/A- bank when deposits exceed $2M, two deposits (one for the planning study, one for long-lead materials), refundable net of the utility's costs if the project dies. The commission called it 'an important first step' and opened an eight-month investigation into a separate {{large-load tariff}}.",
+    "The commercial terms live one level up. A {{transmission security agreement}} is a bilateral contract for transmission-connected load that ComEd files at {{FERC}}: 'defined ramp, customer facility readiness obligation, credit obligations, committed revenue contributions, shortfall payments if usage misses commitments, and published termination-fee schedule', with letters of credit covering the first ten years of transmission revenue. FERC accepted eight of them between February and March 2026 under the {{Mobile-Sierra presumption}} — a negotiated rate stands unless it seriously harms the public interest — over the Illinois attorney general's protest that 'the safeguards in the TSA do not prevent existing customers from paying the costs caused by this large, discrete load'. By September there were six active agreements and more than $1B of collateral.",
+    "Why federal? Because transmission service is FERC's jurisdiction, and a utility that owns only wires can offer only wires. The consequence is the one this corpus had not seen before: a data-center contract whose disputes go to FERC and federal court rather than a state commission. Compare the instruments — Dominion's tariff sets a {{minimum demand charge}}; DTE's {{special contract}} makes the customer fund utility batteries; WEC's tariff sells a subscription; NV Energy's LLESA charges for generation up front. The TSA secures committed transmission revenue with collateral and an {{exit fee}} schedule, and nothing else, because there is nothing else the utility builds. New Jersey's 2026 bill lets its regulator use the same instrument."
+   ]
+  },
+  {
+   "id": "two-layers",
+   "title": "Two layers: the ICC's deposits and the TSA's terms",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "What a data center signs at each level, and which regulator hears a dispute about it.",
+   "cols": [
+    "Layer",
+    "Instrument",
+    "Terms",
+    "Who decides a dispute"
+   ],
+   "rows": [
+    [
+     "State (Illinois)",
+     "Rider DE and LDPAC rules — ICC Dockets 25-0677/25-0679, order March 19, 2026",
+     "Applies at 50 MW; $1M deposit + $500,000 per 100 MW above 200 MW; LOC above $2M; two deposits; refundable net of costs; eight-month investigation; annual report from February 2027",
+     "The Illinois Commerce Commission"
+    ],
+    [
+     "Federal (FERC)",
+     "Transmission security agreement, filed per customer since December 19, 2025",
+     "Ramp; facility readiness; credit obligations; committed revenue; shortfall payments; termination-fee schedule; LOCs for ten years of transmission revenue; Mobile-Sierra",
+     "FERC — and, for contract interpretation, federal court"
+    ],
+    [
+     "Accepted",
+     "Karis Critical ~500 MW (Feb 17); Equinix 700 MW, Grundy County Power / Tract ~1 GW, PowerHouse Hillwood 1.8 GW, QTS (Mar 10); Aligned, Monarch Rock Air ~1,200 MW, Red Energy Partners (earlier); PECO–Amazon (Nov 2025)",
+     "Eight by March 2026; six active with >$1B of LOCs after two new signings September 16",
+     "—"
+    ],
+    [
+     "Disputed",
+     "PowerHouse Hillwood Joliet",
+     "Cancelled by ComEd July 24, 2026 over the timing and form of the initial security (a $1 letter of credit); cancellation rejected by FERC September 22; credit question in the Northern District of Illinois",
+     "FERC declined; the district court decides"
+    ],
+    [
+     "Copied",
+     "New Jersey A796 (passed June 30, 2026); Maryland PC72 filings (September 1)",
+     "≥50 MW; financial guarantees of 85 percent of requested service for ten years; the BPU may use TSAs",
+     "State regulators"
+    ]
+   ]
+  },
+  {
+   "id": "the-one-dollar-letter-of-credit",
+   "title": "The $1 letter of credit",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**What happened.** FERC accepted the 1.8 GW PowerHouse Hillwood Joliet agreement on March 10, 2026. On July 24 ComEd filed to cancel it, saying the developer had not posted its initial security on time; the developer had posted a letter of credit for one dollar and read the contract as allowing it. It told FERC 'utilities like ComEd will use their monopoly power as a bludgeon'. On September 22 FERC rejected the cancellation but refused to say whether $1 satisfied the clause — 'the interpretation of ambiguous contract terms involving credit support' was left to the U.S. District Court for the Northern District of Illinois. One commissioner called the idea that $1 could secure such an agreement 'an embarrassing legal fiction'; two others pressed for clearer security-deposit rules.",
+    "**What it tested.** A contract's collateral clause is only as good as its drafting. The TSA specified credit obligations without, apparently, the instrument's minimum amount or timing — the gap a developer used and a utility could not unilaterally close. Seven weeks after the cancellation ComEd signed two more TSAs; the next generation of the form will say what the letter of credit must be and when.",
+    "**Why it matters beyond Joliet.** Every TSA-holding developer in ComEd's queue — Tract at Morris, Equinix at Minooka, QTS, Aligned, Karis, Monarch Rock Air — now knows that the instrument survives at FERC and that its credit terms are litigable. For an equipment seller the buyer is unchanged: it is the developer holding the agreement, and the utility is the gate that can close over a deposit."
+   ]
+  },
+  {
+   "id": "reading-the-ladder",
+   "title": "Reading the ladder: the disclosures by quarter",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Exelon's pipeline as it reported it. The top number fell from 18 GW to 11 GW between April and July 2026 — read why before deciding what it means.",
+   "cols": [
+    "When",
+    "Total / under study",
+    "'High probability'",
+    "Under signed TSA",
+    "Collateral"
+   ],
+   "rows": [
+    [
+     "Q1 2025 (May 2025)",
+     "36 GW total, doubled since year-end",
+     "16 GW — engineering phases with deposits",
+     "—",
+     "—"
+    ],
+    [
+     "Q3 2025 (November 2025)",
+     "47 GW of potential additions",
+     "18 GW 'advanced'; 6 GW 'close to signing TSAs'",
+     "First TSA: PECO–Amazon",
+     "—"
+    ],
+    [
+     "Q4 2025 (February 2026)",
+     "—",
+     "~18 GW 'committed'",
+     "'~45 percent secured with TSAs' (~8 GW)",
+     "~$1B"
+    ],
+    [
+     "Q1 2026 (May 2026)",
+     "43 GW under study",
+     "18 GW unchanged",
+     "(45 percent of 18)",
+     "~$1B"
+    ],
+    [
+     "Q2 2026 (July 2026)",
+     "36 GW refined queue; 25 GW under study",
+     "7 GW pre-TSA — headline 11 GW = 4 + 7; ~9 GW ComEd, ~2 GW Mid-Atlantic",
+     "4 GW",
+     "~$1B"
+    ],
+    [
+     "September 2026 (ComEd)",
+     "Queue ~39 GW (late 2025) → ~25 GW",
+     "—",
+     "Six active TSAs after two new signings",
+     ">$1B of LOCs"
+    ]
+   ]
+  },
+  {
+   "id": "the-auction-at-its-cap",
+   "title": "The auction at its cap",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A {{capacity market}} pays generators to exist. PJM's {{Base Residual Auction}} buys capacity about three years ahead, and every load-serving utility pays the clearing price through its customers' supply charges. The 2028/29 auction (July 14, 2026) cleared every zone at the cap of the {{price collar}}, $325/MW-day; it procured 6,831 MW less than the reliability requirement — a requirement up 1,374 MW 'largely due to additional Large Loads' — and attracted 525 MW of new generation and uprates. It was the third consecutive auction at the cap. Exelon supported the collar's extension and then ran the counterfactual: without it, about $555/MW-day across the footprint and about $777 in ComEd's zone.",
+    "None of that revenue is Exelon's, and all of it is Exelon's problem. Atlantic City Electric's residential bills would rise $14.70 to $23.64 a month if the cap lifts after the December auction; Mid-Atlantic supply costs could rise 'up to 80 percent over five years'. The Maryland legislature answered with a statute that lowered the large-load threshold to 25 MW and ended a transmission return adder; Pennsylvania's governor called PECO's rate request 'pure greed' and PECO withdrew it and lost its CEO; Maryland's commission gave Pepco 42 percent of its ask at a lower return. A wires-only utility carries the politics of a price it cannot influence.",
+    "Its response is to ask to own generation again. Butler: 'Even at the highest allowed price, the market is not attracting the level of new supply the system needs'; {{utility-owned generation}} 'needs to be part of that mechanism as a cost-effective complement to market-based solutions'. Pepco Holdings' chief: 'If the merchant, independent guys won't build, we will.' The evidence is a Charles River Associates estimate of $9.6 to $20 billion of savings for PJM customers in 2028/29; the vehicles are a Maryland 'utility-owned backstop' bill, a Pennsylvania bill the CEO calls 'a long shot', and PJM's {{reliability backstop}} procurement, which consumer advocates have asked FERC to reject."
+   ]
+  },
+  {
+   "id": "owned-versus-market",
+   "title": "Utility-owned generation versus market supply",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "The argument Exelon is making and the one made against it, as the record states them.",
+   "cards": [
+    {
+     "t": "Let the wires utility own generation and storage again",
+     "meta": "Butler; CRA report; Maryland HB 1561; ACE's 500 MW Pittsgrove battery",
+     "adv": [
+      "Adds firm supply the auction has not attracted — 525 MW new against a 6,831 MW shortfall",
+      "A regulated return at 9–10 percent is cheaper capital than a merchant developer's, so CRA estimates $9.6–20B of savings",
+      "The utility can site and build where the load is (Pittsgrove on ACE land, late 2030)"
+     ],
+     "dis": [
+      "Re-creates the affiliate problem restructuring removed — the wires owner competing with the generators it connects",
+      "Puts construction and supplier risk back on ratepayers",
+      "Needs a statute in every state; Pennsylvania is 'a long shot'"
+     ]
+    },
+    {
+     "t": "Keep supply in the market; fix the auction",
+     "meta": "PJM's collar and backstop; generators; consumer advocates",
+     "adv": [
+      "Price signals and merchant risk stay with investors, not customers",
+      "Co-location and behind-the-meter supply (Talen–Amazon, Constellation) add capacity fastest — the generators' argument",
+      "The reliability backstop exists in PJM's tariff already"
+     ],
+     "dis": [
+      "Three auctions at the cap and still short — the signal is muted by design",
+      "Bills carry the scarcity price; the cap's expiry would double it",
+      "Co-location shifts network costs to others, the utilities argue — Exelon and AEP protested Susquehanna"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "who-buys-the-batteries",
+   "title": "Who buys the batteries: five states",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The storage that Exelon's load requires, and the buyer in each state today. The utility appears once, as a petitioner.",
+   "cols": [
+    "State",
+    "Mechanism",
+    "2026 status",
+    "Exelon's role"
+   ],
+   "rows": [
+    [
+     "Illinois",
+     "Clean and Reliable Grid Affordability Act: 3,000 MW by 2030, procured by the Illinois Power Agency through an {{Indexed Storage Credit}}",
+     "First procurement 600 MW of a 1,038 MW target (80 MW in the ComEd zone), approved September 1, 2026",
+     "ComEd delivers the credit and runs a {{virtual power plant}} rider over ~1.8 GW of connected resources; owns nothing"
+    ],
+    [
+     "Maryland",
+     "Next Generation Energy Act: 150 MW distribution-storage program; transmission-connected solicitation; expedited permitting for dispatchable generation",
+     "BGE 29 MW (3 MW utility-owned); Pepco Holdings 14.5 MW third-party; BGE and Pepco bids under review; Round 2 October 1–31, 2026",
+     "A 3 MW owner; a bidder; a campaigner for HB 1561"
+    ],
+    [
+     "New Jersey",
+     "ACE petition to the BPU for a 500 MW / four-hour, ~$1B ACE-owned battery at Pittsgrove with Invenergy",
+     "Filed July 2026; late 2030 in service; tax credits and PJM revenues offset ~70 percent; decision ~February 2027",
+     "The would-be owner — and Invenergy the equipment selector"
+    ],
+    [
+     "Pennsylvania",
+     "PUC model large-load tariff (May 2026) with a self-build option; no storage mandate",
+     "PECO's tariff filing not found; rate case withdrawn; curtailment rules pending",
+     "None"
+    ],
+    [
+     "Delaware / DC",
+     "Delaware large-load docket with a ≥25 MW interconnection pause; DC affordability inquiry",
+     "Delmarva's GS-LL tariff pending; Delaware City project withdrawn; Pepco's DC plan reversed on appeal",
+     "None"
+    ]
+   ]
+  },
+  {
+   "id": "co-location-the-other-side",
+   "title": "Co-location: the other side of the argument",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**What it is.** {{Co-location}} puts a data center at a power plant and serves it {{behind-the-meter}}, bypassing the grid's interconnection queue. Talen's Susquehanna deal with Amazon was the founding case; Constellation's nuclear deals followed.",
+    "**Exelon's position.** With AEP it protested the Susquehanna agreement in 2024 and FERC rejected it; it petitioned FERC against Constellation's arrangements the same year. The wires utility's argument is that a co-located load still leans on the network for backup and shifts its share of the cost to other customers. Vistra, Constellation and the data-center trade group protested PJM's 2026 co-location rules from the opposite side.",
+    "**Why it is the mirror of the TSA.** The TSA says a large load must pay and post collateral for the wires it uses; co-location says the load will use fewer wires. FERC's June 2026 {{show-cause order}}s to PJM ask for one set of rules covering both — responses were due in mid-November 2026."
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — the ladder and the auction",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "Exelon's own figures at their most recent disclosure, with PJM's shortfall for scale.",
+   "items": [
+    {
+     "label": "Refined queue",
+     "sub": "Q2 2026",
+     "v": 36.0
+    },
+    {
+     "label": "ComEd large-load requests",
+     "sub": "March 2026, vs ~24 GW all-time peak",
+     "v": 28.0
+    },
+    {
+     "label": "Under study",
+     "sub": "Q2 2026",
+     "v": 25.0
+    },
+    {
+     "label": "ComEd queue",
+     "sub": "September 2026",
+     "v": 25.0
+    },
+    {
+     "label": "High-probability (headline)",
+     "sub": "4 TSA + 7 pre-TSA",
+     "v": 11.0
+    },
+    {
+     "label": "ComEd share of high-probability",
+     "sub": "~9 of 11",
+     "v": 9.0
+    },
+    {
+     "label": "PJM 2028/29 shortfall",
+     "sub": "6,831 MW at the cap",
+     "v": 6.8
+    },
+    {
+     "label": "Under signed TSAs",
+     "sub": "~$1B collateral",
+     "v": 4.0
+    },
+    {
+     "label": "PowerHouse Joliet",
+     "sub": "the disputed TSA",
+     "v": 1.8
+    },
+    {
+     "label": "New generation cleared in PJM",
+     "sub": "2028/29 auction",
+     "v": 0.525
+    }
+   ],
+   "note": "The gap between 45 percent of 18 GW (~8 GW) and the 4 GW reported in July, with collateral unchanged at ~$1B, is stated in the dossier and unreconciled."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Selling to Exelon as if it were Duke.** It owns no generation or storage; the buyers are the TSA developers, the Illinois Power Agency's winners and Maryland's solicitations — and Invenergy if Pittsgrove is approved.",
+    "**Reading the TSA as a tariff.** It is a bilateral federal contract under Mobile-Sierra; its disputes go to FERC and federal court, and its credit clause was tested by a $1 letter of credit.",
+    "**Treating the 11 GW as demand that fell.** The queue was reclassified; 4 GW is collateralized, 7 GW pre-TSA, 25 GW under study.",
+    "**Assuming the capacity price is Exelon's revenue.** It is a pass-through; the company's exposure is political, and its remedy is a law.",
+    "**Conflating Microsoft's FERC filing with ComEd.** Microsoft's August 2026 protest concerns ATC and We Energies in Wisconsin; no 2026 source names it as a ComEd customer.",
+    "**Expecting the Mid-Atlantic to carry the growth.** About 2 GW of the 11 GW; four states and DC are rewriting the rulebook in the same year."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is a wires-only utility, and why is Exelon one?",
+     "a": "A regulated utility that owns transmission and distribution but no plants, delivering power customers buy from suppliers or a state procurement; Exelon spun off its generation as Constellation in 2022 — 'The Registrants do not own generation'."
+    },
+    {
+     "q": "What are the two layers of ComEd's large-load gate?",
+     "a": "The ICC's Rider DE / LDPAC deposits ($1M at 50 MW plus $500,000 per 100 MW above 200 MW; LOC above $2M) and the FERC-filed transmission security agreement with ramp, readiness, credit, committed revenue, shortfall and termination-fee terms."
+    },
+    {
+     "q": "Why is a TSA dispute heard at FERC and in federal court rather than at the ICC?",
+     "a": "Transmission service is FERC-jurisdictional and the TSA was accepted under the Mobile-Sierra presumption; the ICC's order governs deposits and procedure, not the contract's commercial terms."
+    },
+    {
+     "q": "What did the $1 letter of credit test, and how did FERC rule?",
+     "a": "Whether the TSA's credit clause specified the instrument's amount and timing; FERC rejected ComEd's cancellation but declined to interpret the 'ambiguous' clause, leaving it to the Northern District of Illinois."
+    },
+    {
+     "q": "Decode Exelon's Q2 2026 ladder.",
+     "a": "36 GW refined queue = 4 GW under signed TSAs (~$1B collateral) + 7 GW pre-TSA high-probability + 25 GW under study; the headline 11 GW is the top two rungs, ~9 GW ComEd."
+    },
+    {
+     "q": "Why did the high-probability figure fall from 18 GW to 11 GW?",
+     "a": "Vetting — 'we have now weeded out speculative projects' — reclassified projects without collateral; TSA-backed load is stated at 4 GW against ~8 GW implied a quarter earlier, with collateral unchanged."
+    },
+    {
+     "q": "What did PJM's 2028/29 auction do, in three numbers?",
+     "a": "Cleared at the $325/MW-day cap, procured 6,831 MW less than the reliability requirement, attracted 525 MW of new generation and uprates."
+    },
+    {
+     "q": "Why does a company that earns nothing on supply campaign about the capacity price?",
+     "a": "Its customers pay it, its regulators and legislators answer for it, and the only route to earning on generation again is a statute written in response to it — Maryland's HB 1561, Pennsylvania's 'long shot'."
+    },
+    {
+     "q": "Who buys Illinois's 3,000 MW of storage?",
+     "a": "The Illinois Power Agency, through Indexed Storage Credits under the 2026 CRGA — 600 MW in the first procurement, 80 MW in the ComEd zone; ComEd runs a VPP rider and owns nothing."
+    },
+    {
+     "q": "What is ACE's Pittsgrove proposal, and who would pick the battery?",
+     "a": "A 500 MW / four-hour, ~$1B ACE-owned rate-based battery developed, built and operated with Invenergy, in service late 2030, decision ~February 2027 — Invenergy selects the equipment, as at We Energies' build-transfers."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A battery supplier asks Exelon for a purchase order in 2026. What is the correct answer?",
+     "c": [
+      "ComEd's procurement will issue one under the grid plan",
+      "There is none: the utility owns no storage; Illinois buys through the IPA, Maryland through solicitations, and ACE's Pittsgrove is a petition decided ~February 2027 with Invenergy as developer",
+      "PECO buys batteries under Pennsylvania's model tariff",
+      "Exelon buys through Constellation"
+     ],
+     "a": 1,
+     "why": "'The Registrants do not own generation'; the equipment doors are the developers and the state procurements."
+    },
+    {
+     "q": "A developer holding a ComEd TSA disputes the utility's reading of the credit clause. Where is that decided?",
+     "c": [
+      "The Illinois Commerce Commission",
+      "FERC, for the tariff, and a federal district court for contract interpretation — as the PowerHouse case showed",
+      "The Illinois attorney general",
+      "PJM"
+     ],
+     "a": 1,
+     "why": "Transmission service is federal; FERC declined to interpret the 'ambiguous' credit clause and left it to the Northern District of Illinois."
+    },
+    {
+     "q": "Exelon's 'high probability' pipeline fell from 18 GW to 11 GW. Which reading is correct?",
+     "c": [
+      "Data-center demand in northern Illinois fell 40 percent",
+      "The queue was reclassified: 4 GW is collateralized under TSAs, 7 GW is pre-TSA, 25 GW is under study; the refined queue fell from 43 to 36 GW",
+      "ComEd stopped accepting applications",
+      "FERC rejected 7 GW of agreements"
+     ],
+     "a": 1,
+     "why": "'We have now weeded out speculative projects'; the one named removal is PowerHouse's 1.8 GW."
+    },
+    {
+     "q": "PJM's auction clears at the cap for the third year and 6.8 GW short. What follows for Exelon?",
+     "c": [
+      "Higher earnings from selling capacity",
+      "Higher supply charges on its customers' bills that it does not earn on, and a campaign for statutes letting it own generation as a 'complement'",
+      "Nothing — the utility is unaffected",
+      "It must build a plant under PJM's tariff"
+     ],
+     "a": 1,
+     "why": "The capacity price is a pass-through; the exposure is political and the remedy legislative."
+    },
+    {
+     "q": "Which instrument secures generation cost for the customer, as opposed to wires?",
+     "c": [
+      "ComEd's transmission security agreement",
+      "NV Energy's LLESA generation charge, DTE's special contract or WEC's bespoke subscription — the TSA covers transmission revenue and collateral only",
+      "The ICC's deposit rules",
+      "PJM's price collar"
+     ],
+     "a": 1,
+     "why": "A wires-only utility can contract only for wires."
+    },
+    {
+     "q": "Microsoft filed a FERC protest in August 2026 over a data-center agreement. Which utility was it about?",
+     "c": [
+      "ComEd",
+      "ATC and We Energies in Wisconsin — not ComEd; the ComEd dispute is PowerHouse Hillwood's",
+      "PECO",
+      "BGE"
+     ],
+     "a": 1,
+     "why": "Two separate August 2026 filings are often conflated in coverage."
+    }
+   ]
+  }
+ ]
+}
