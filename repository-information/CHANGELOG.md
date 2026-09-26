@@ -3,11 +3,123 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.62r] — 2026-09-26 02:50:43 AM EST
+
+> **Prompt:** "Picking up from my last session, run Phase F session F-H1 of
+> repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: ByteDance (Volcano Engine), Alibaba
+> Cloud and Chindata — the China buyer side the megmeet dossier lacks. This session runs on Opus 5.5 at
+> xhigh: on 2026-09-26 I decided Phase F runs on Opus 5.5, and repository-information/phase-f-action-plan.md
+> supersedes the Model column of §11.2. Write "Opus 5.5 xhigh" into your §11.3 Model cells.
+>
+> WHY NOW: I start at Megmeet (Senior Sales Manager — SST Solutions) on Wednesday 2026-10-07. Land this
+> before then, with time for me to read it.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; repository-information/phase-f-action-plan.md;
+> PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the three F-H1 rows of §11.3 are yours);
+> .claude/rules/profiler-app.md (Profiler Command including step 1a identity and step 7 reconciliation,
+> Profiler Prep Command, Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md (Naming and
+> renames, Segments registry, Refresh calendar); repository-information/PROFILER-STYLES.md (active style).
+> Read the megmeet, zhonhen, delta-electronics and sinexcel dossiers and study guides — the supply side
+> these three buyers face — and the parts of
+> repository-information/study-prep/megmeet/megmeet-sst-briefing-print.html that name Chinese buyers.
+> Those are context only: cite primary sources, never the briefing.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1) and study guide (schema v2) with its lesson plan under
+> repository-information/study-prep/<slug>/. Category hypotheses: bytedance ["hyperscaler"],
+> alibaba-cloud ["hyperscaler"], chindata ["developer"]. Populate aka[] BEFORE the step-7 grep, including
+> the Chinese names: ByteDance / Volcano Engine / 字节跳动 / 火山引擎; Alibaba Cloud / Alibaba Cloud
+> Intelligence / Aliyun / 阿里云; Chindata / 秦淮数据 / Bridge Data Centres. Assign segments in
+> live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis:
+> hyperscalers-and-ai-labs · challenger for the two hyperscalers; aidc-developers-and-landlords ·
+> challenger for Chindata). Then the registry sync, the graph build, a calendar row per company under the
+> Refresh calendar rules (Alibaba reports publicly — research its next results date; follow the private
+> rule for the others), README tree entries, and rewrite and flip your §11.3 rows.
+>
+> IDENTITY (step 1a) — establish each of these, do not assume it:
+> - Alibaba Cloud: one slug for the cloud unit, or for Alibaba Group? Decide under Naming and renames and
+>   say why.
+> - ByteDance vs Volcano Engine: which entity buys data-centre power equipment.
+> - Chindata: current ownership (Bain Capital's 2023 take-private and anything after it), the reported
+>   Bridge Data Centres sale process (Bloomberg, 29 Jul 2026), and which entity operates Huailai.
+>
+> THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+> budget ran out partway, and nobody has read the underlying articles. Verify against first-party sources
+> (Alibaba's results filings, company releases, Chinese exchange and tender records where reachable),
+> record a premise verdict per clause, and rewrite the cells. Run these checks hardest:
+> - ByteDance's 2026 capex: three reports differ about 2x (RMB 160B / more than RMB 200B / up to $70B).
+>   State the conflict unless a primary source resolves it.
+> - Alibaba's Panama (10 kV to 240 VDC) is a line-frequency transformer-rectifier, not an SST. The zhonhen
+>   dossier already draws this line; keep it. Zhonhen's "~70% share" is secondary-source only.
+> - Chindata at Huailai (2 Jul 2026, for Meituan; HEC and Delta; 10 kV to 800 VDC): verify that it is a
+>   solid-state transformer and who supplied what.
+> - ByteDance's early-2026 HVDC tender and its 800 V pilot: the named suppliers (Kehua, Zhonhen — Kehua has
+>   no dossier) and whether any 800 V award is public.
+>
+> RECONCILIATION (step 7) — expected inbound: ByteDance 3 (mgx, narada, zhonhen), Alibaba 4 (narada,
+> nscale, sungrow, zhonhen), Chindata 3 (amperesand, dg-matrix, stack-infrastructure). Grep again with the
+> full aka[], including the Chinese names. Check that megmeet, zhonhen, delta-electronics and sinexcel
+> agree with the new dossiers on every supplier and customer edge, and record the reciprocal types.
+>
+> DO NOT edit googleAppsScripts/Classroom/Classroom.gs. The three new members make
+> landscape-hyperscalers-and-ai-labs-2026-09 and landscape-aidc-developers-and-landlords-2026-09 stale,
+> and the scenario-hyperscalers-and-ai-labs-* and scenario-aidc-developers-and-landlords-* rehearsals with
+> them. Record that in the CHANGELOG entry and the SESSION-CONTEXT hand-off (§11.2, the landscape
+> coupling); Classroom wave A in the action plan re-authors them.
+>
+> FOR THE MEGMEET START: in the SESSION-CONTEXT hand-off, write one short paragraph on what the three
+> dossiers change about the megmeet dossier's missing customer side. Do not edit the briefing files.
+>
+> VERIFY: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check clean;
+> build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+> check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+> warnings read; every new dossier and guide renders under Playwright with zero page errors. CHANGELOG
+> rotation only if non-exempt sections reach 100. Normal Pre-Commit and Pre-Push checklists; one commit;
+> push on a claude/* branch."
+
+**Phase F, session F-H1 — ByteDance, Alibaba Cloud and Chindata China** join the Profiler corpus: the China buyer side the `megmeet` dossier lacks. Two hyperscalers and one wholesale landlord, each with a v2 study guide and a lesson plan, plus the reciprocal customer edges on the two supplier dossiers that sell to them (`zhonhen` v9, `delta-electronics` v7). Run on Opus 5.5 at xhigh.
+
+### Added
+
+- **Three schema v7 dossiers** (`profileVersion` 1, intel-briefing style), each researched by two parallel subagents under the two-stage protocol (Agent A first-party and exchange records; Agent B third-party). `check-source-reachability.py` ran before Stage 2 was planned: **PARTIAL** — `sec.gov` / `data.sec.gov` blocked, the other probed hosts reachable; the Chinese filing hosts this session needed (cninfo, SZSE, HKEXnews) were read directly.
+  - **`bytedance.profile.json`** — `categories: ["hyperscaler"]`; 69 sources (35% first-party), 31 developments, 7 products, 7 relationships, 4 decision makers. Identity: one group slug; Volcano Engine (北京火山引擎科技有限公司) is the name its own campuses are bought under, so it sits in `aka[]` with 字节跳动 / 火山引擎 / 火山云 / BytePlus / Douyin / TikTok / Doubao.
+  - **`alibaba-cloud.profile.json`** — `categories: ["hyperscaler"]`; 66 sources (48% first-party), 23 developments, 6 products, 6 relationships, 7 decision makers. Identity: **the cloud unit, not the Group** — on the `nextera-energy-resources` precedent: it is the only data-centre-buying part of Alibaba and a reported segment (AI Cloud and Compute Services from the June 2026 quarter). The Group names, T-Head, Qwen and 阿里云 / 阿里巴巴（中国）有限公司 are in `aka[]`.
+  - **`chindata.profile.json`** — `categories: ["developer"]`; 55 sources (40% first-party), 20 developments, 6 products, 6 relationships, 7 decision makers, with a KPI overlay (`mw-energized` 799.34 MW FY2025; `mw-contracted` 886.17 MW). Identity: **Chindata China** — the operating companies Bain's WinTriX DC Group sold to an HEC-led consortium for RMB 28.0B (closed 2026-01-16; the listed HEC Technology holds 30% and is buying the rest); the IDC licence and Huailai sit with 北京秦淮数据有限公司. Bridge Data Centres, the subject of the July 2026 sale reports, is Bain's separate former international arm and appears only in `aka[]` and context.
+- **Three schema v2 study guides** — `alibaba-cloud.study.json` (16 sections), `bytedance.study.json` (16), `chindata.study.json` (14) — each with flashcards and a self-test on concepts only, and **three lesson plans** under `repository-information/study-prep/<slug>/`, five or six modules each, paced to the 2026-10-07 start.
+- **17 new concepts** in `profiler-concepts.json` (1,520 total): `240vdc`, `approved-vendor-list`, `billed-capacity`, `capex`, `delta-connection`, `direct-green-power`, `east-data-west-computing`, `framework-procurement`, `internet-data-center`, `line-frequency-transformer`, `maas`, `panama-power`, `phase-shifting-transformer` (disambiguated from the transmission device of the same name), `rack-power-density`, `supernode`, `token`, `wholesale-colocation`.
+- **One executive photo**, `live-site-pages/images/execs/chindata-wu.jpg`, cropped from Chindata's own captioned news photo.
+
+### Changed
+
+- **`zhonhen.profile.json` v8 → v9** (v8 archived) — two curated customer edges, each the reciprocal of a supplier edge in a new dossier: `alibaba-cloud` (since 2017; the RMB 800M 2021 Panama framework, its contract announcement added as a source) and `bytedance` (since 2025, via precision distribution — the FY2025 annual report already cited). No other field changed.
+- **`delta-electronics.profile.json` v6 → v7** (v6 archived) — two customer edges: `alibaba-cloud` (since 2019, Panama co-launch; Delta China's release added as a source) and `chindata` (since 2025-11, the Sangyuan SST; Delta Brand News added as a source). **The v6 dossier did not name Alibaba or Panama at all.** No other field changed.
+- **`zhonhen.study.json`** — one bullet corrected: it called Panama's device class 'the solid-state transformer / MV rectifier sidecar'; it now says transformer-rectifier, not SST, as the `zhonhen` dossier, the new `alibaba-cloud` dossier and NVIDIA's 2026 execution paper all do. `lastUpdated` 2026-09-26.
+- **`profiler-companies.json`** — 182 → 185 entries, with taglines, `aka[]` (Chinese names included) and `domains[]` populated before the step-7 grep.
+- **`profiler-segments.json`** — `bytedance` and `alibaba-cloud` → `hyperscalers-and-ai-labs` · challenger; `chindata` → `aidc-developers-and-landlords` · challenger; a basis line each.
+- **`profiler-graph.json`** — rebuilt, 1,583 edges (1,197 curated).
+- **`profiler-refresh-calendar.json`** — `alibaba-cloud` dated 2026-11-24 (**unconfirmed**: Alibaba has not announced its September-quarter results date; the date follows its reporting pattern); `bytedance` and `chindata` private, `cadence: quarterly`, `tier: core`. **`profiler-refresh-notes.json`** — a source and a `watch[]` list per slug, inserted without reordering the file.
+- **`report-pins-verified.json`** — the two current reports that pin `zhonhen` and `delta-electronics` (`aidc-power-conversion-rev2--competitive--2026-09-25`, `sst-hall-edge-block-rev2--competitive--2026-09-23`) re-verified at the new versions: every cited source is unchanged; only relationships and sources were added.
+- **`PROFILER-COVERAGE-PLAN.md` §11.3** — the three F-H1 rows rewritten from hypotheses into verified cells with a premise verdict per clause; Model **Opus 5.5 xhigh**; `Checked 2026-09-26, v07.62r`; Dossier v1; Guide v2. The verdicts the prompt asked to run hardest:
+  - **ByteDance capex — refined, unresolved:** the spread is about **3×**, not 2× — RMB 160B (FT, 2025-12-23), more than RMB 200B (SCMP, 2026-05-09), up to US$70B total under discussion (Bloomberg, 2026-05-27); anonymous-source leaks of different scope, none confirmed. Stated as a range.
+  - **ByteDance's HVDC tender and 800 V pilot — not supported:** the 30–40% HVDC share and the tens-of-MW 800 V pilot trace only to one unattributed expo post (2026-01-22); the same site said a week later the 800 V work was 'still out to tender'; 21世纪经济报道 (2026-09-22) confirms only 'first introduced'. **No 800 V or SST award is public.** Zhonhen is named in ByteDance's chain (precision distribution, not HVDC); **Kehua is not** — its filings anonymise customers.
+  - **Panama — held:** a line-frequency transformer-rectifier, not an SST (Zhonhen's own description; NVIDIA's 2026 800 VDC execution paper). **Zhonhen's ~70% — unverifiable:** no filing states a share; broker estimates run from about half to above 90%.
+  - **Chindata's Huailai SST — held, with a qualifier:** a true SST on its makers' functional description (SiC high-frequency conversion, 'from line frequency to high frequency', 10 kV delta-connected to 800 V DC in one step, 98.5%); Delta supplied the SST, HEC the capacitor banks, Chindata the specification and 34 tests, Meituan is the tenant; formal commercial operation 2026-07-02. 'First' holds only as **first in commercial operation** — Eaton has run an SST pilot at VNET since end-2024.
+- **README.md** — tree entries for the three profile/study pairs, the three study-prep directories and the two new archive files, plus the timestamp and repo version.
+
+### Notes
+
+- **Step-7 reconciliation** (grepped with the full `aka[]`, Chinese names included): ByteDance 3 dossiers (`mgx`, `narada`, `zhonhen`), Alibaba Cloud 5 (`narada`, `nscale`, `sungrow`, `zhonhen`, plus `calb`'s career-history line), Chindata 3 (`amperesand`, `dg-matrix`, `stack-infrastructure`). **No inbound claim contradicted the new dossiers**; `amperesand` and `dg-matrix` say the Sangyuan SST went live in February 2026, which is a distinct milestone from the July commercial-operation date and is recorded as such. Reciprocal types recorded: supplier ↔ customer on `zhonhen` (Alibaba Cloud, ByteDance) and `delta-electronics` (Alibaba Cloud, Chindata). **`megmeet` and `sinexcel` carry no edge to any of the three, and none is warranted:** no Megmeet, Sinexcel or Kehua filing names ByteDance, Alibaba or Chindata.
+- **Two supplier claims were back-sourced in the ByteDance dossier before commit:** Jinpan's own bond feasibility report (360 data-centre projects including ByteDance) and Far East's Q1 2026 report (the Volcano Engine Yangtze-Delta campus) — both read in research, added to `sources[]` so the named-supplier sentence rests on each supplier's own filing.
+- **Classroom lessons now stale, by design — `Classroom.gs` was not edited:** `landscape-hyperscalers-and-ai-labs-2026-09` (two new members) and `landscape-aidc-developers-and-landlords-2026-09` (one new member, on top of the `tract` v4 and `powerhouse-data-centers` v3 drift already recorded), and with them the `scenario-hyperscalers-and-ai-labs-*` and `scenario-aidc-developers-and-landlords-*` rehearsals. `build-classroom-segments.py --check` now shows 12 segment lessons due: the two segments above with real section changes (the-players, the-numbers, who-is-connected and more), nine with only the `where-it-sits` roster count, and `insurance-and-risk-transfer` pin-only. **Classroom wave A** in `phase-f-action-plan.md` (Fri 10/2 – Tue 10/6) re-authors them.
+- **Checkers:** `sync-profiler-registry.py --check` clean (roster ↔ calendar bijection holds); `check-profiler-study.py` 0 errors, 0 warnings (185 guides, 1,520 concepts); `check-profiler-relationships.py` 0 findings; `check-profiler-crossrefs.py` 0 candidates (none of the new dossiers' scopes exceeds the size cap); `check-readme-tree.py` 0 findings; `check-profiler-reports.py` 0 errors and the two pre-existing warnings (`jinko` v6, `oracle` v5), read and left loud.
+- **Playwright:** the three new dossiers and guides, plus the revised `zhonhen` and `delta-electronics` (dossier, Relationships tab and study guide each), render on `Profiler.html` with zero console errors and no literal `{{` or `**`; the only page error is the auth wall's `gis_load_failed`, the Google Identity script the sandbox cannot fetch — the same condition every prior session recorded. `Profiler.html` itself is unchanged (data-only), so no page version bump.
+- **No rotation:** 88 sections, under the trigger.
 
 ## [v07.61r] — 2026-09-26 01:21:37 AM EST
 

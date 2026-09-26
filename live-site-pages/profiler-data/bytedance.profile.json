@@ -1,0 +1,1046 @@
+{
+ "schemaVersion": 7,
+ "slug": "bytedance",
+ "name": "Bytedance Ltd.",
+ "shortName": "ByteDance",
+ "categories": [
+  "hyperscaler"
+ ],
+ "website": "https://www.bytedance.com",
+ "headquarters": "Beijing, China (ultimate parent Bytedance Ltd., registered in the Cayman Islands)",
+ "founded": 2012,
+ "employees": "over 150,000 in nearly 120 cities (company website; the page's other copy is dated, so treat as approximate)",
+ "ownership": {
+  "type": "private",
+  "notes": "Privately held; the ultimate parent is Bytedance Ltd. (Cayman Islands) per its FY2025 Spain country-by-country report, which states the parent \"has not made available information with respect to the Group's worldwide operations\". Board: Liang Rubo (chairman), Arthur Dantchik, William E. Ford, Xavier Niel, Neil Shen; named investors include Sequoia Capital, General Atlantic, SoftBank Vision Fund, KKR and Tiger Global. The US TikTok business sits in TikTok USDS Joint Venture LLC (from 2026-01-22), in which ByteDance holds 19.9%. Volcano Engine (火山引擎) is its cloud unit, contracting as 北京火山引擎科技有限公司."
+ },
+ "summary": "BOTTOM LINE UP FRONT: ByteDance is China's largest data-centre tenant and — on Chinese suppliers' own filings, not its own word — a direct buyer of data-centre power equipment, but it names no power vendor, publishes no accounts, and its one reported move toward 800 VDC is a tender, not an award. SemiAnalysis's China model (25 Sep 2026) puts it at roughly a fifth of China's delivered data-centre capacity, nearly all rented; the acquirer of Chindata China discloses that one unnamed customer took 90.12% of that landlord's 2025 revenue, and the same filing identifies that customer's own campuses as Volcano Engine projects. Its 2026 capex is known only from anonymous-source leaks that differ in scope as well as size — a preliminary RMB 160B (Financial Times, Dec 2025), more than RMB 200B (SCMP, May 2026) and up to US$70B under discussion (Bloomberg, May 2026) — and ByteDance has confirmed none of them. BACKGROUND: Founded in 2012 by a team led by Zhang Yiming and Liang Rubo; ultimate parent Bytedance Ltd. (Cayman Islands); operational headquarters Beijing. The consumer platforms (Douyin, TikTok, CapCut, Toutiao) are the demand base; Volcano Engine (火山引擎) sells cloud, GPU compute and the Doubao/Seed models in China, and BytePlus abroad. Per leaks, not filings: 2025 revenue about US$200B and H1 2026 revenue about US$120B with net profit about US$20B (The Information, as relayed in September 2026); an earlier aggregator figure for 2025 is US$186B. The US TikTok business moved into TikTok USDS Joint Venture LLC on 22 Jan 2026 — Oracle, Silver Lake and MGX 15% each, ByteDance 19.9%. Named power-equipment suppliers in exchange filings are Kstar (UPS and power modules), TGOOD (prefabricated substations), Mingyang Electric (power modules), Jinpan (transformers), Sifang (protection and energy management) and Zhonhen (precision distribution); no Megmeet, Sinexcel or Kehua filing names ByteDance. Collection gap: ByteDance's own channels say nothing about data-centre power architecture; every procurement fact here comes from a counterparty.",
+ "ecosystemRole": "We assess ByteDance as the demand anchor of China's wholesale data-centre market and a three-door buyer of power equipment. Door one is its own campuses, run under the Volcano Engine name — Wuhu/Wuwei in Anhui, Taihang in Datong, Horinger in Inner Mongolia, with Ulanqab (5–6 GW, in talks) and Zhongwei next — where suppliers' filings record ByteDance buying UPS and power modules, prefabricated substations, transformers and precision distribution directly. Door two is its landlords' build-to-suit halls: Chindata China (about 90% of revenue from one customer whose self-build list is Volcano Engine's), VNET (510 MW from 'a leading internet customer' Bloomberg names as ByteDance) and Range. Door three runs through the landlord's tender: Chindata's acquirer states that for equipment it tenders among the vendors on the customer's qualified-vendor list and then buys that vendor's UPS, so a UPS vendor must be on the tenant's approved list even when the landlord signs the order. Overseas it leases (Bridge Data Centres in Johor, Green Mountain in Norway, Omnia in Brazil) and rents GPU capacity (Oracle's ASEAN fleet per SemiAnalysis; Aolani in Malaysia per the WSJ). For a power-electronics seller the relevant fact is not the capex headline but which door a given hall sits behind, because the person who writes the specification differs by door. Basis: supplier and landlord exchange filings, SemiAnalysis, trade press; ByteDance itself discloses none of it.",
+ "productsAndServices": [
+  {
+   "name": "Volcano Engine MaaS — Volcano Ark (火山方舟) and the Doubao-Seed models",
+   "category": "Cloud AI services (model-as-a-service)",
+   "description": "Volcano Engine's model platform sells ByteDance's Doubao-Seed models and third-party models (DeepSeek V4, GLM-5.x) per token, post-paid and tiered by input length, with online, low-latency and batch inference plus video, image and audio models; the list-price page was updated 24 Sep 2026. Doubao usage reached 180 trillion tokens a day by June 2026, per Volcano Engine president Tan Dai at the Force conference. Per 36Kr (June 2026), the 2026 MaaS revenue target was raised to RMB 15B and Seedance 2.0 exceeded RMB 1B in a month.",
+   "highlights": [
+    "Doubao-Seed 2.1 Pro list price RMB 6.00 per million input tokens and RMB 30.00 per million output tokens (0–1M-token context tier), per the Volcano Ark price page",
+    "IDC: Volcano Engine held 49.2% of China's public-cloud LLM token calls in H1 2025 (Alibaba Cloud 27%, Baidu 17%)",
+    "On revenue the ranking reverses: Omdia and Frost & Sullivan put Alibaba Cloud first in China enterprise MaaS in H1 2025 (35.8% and 30.2%), per DoNews",
+    "Reported 2025 MaaS revenue conflicts — about RMB 1.5B (36Kr) against about RMB 2B (DoNews); both single-outlet"
+   ],
+   "positioning": "Volcano Engine leads on token volume and competes on price against Alibaba Cloud, Baidu AI Cloud and Tencent Cloud; Alibaba leads on MaaS revenue. The two metrics tell opposite stories and the dossier reports both.",
+   "soldThrough": "Self-serve API and enterprise contracts in China (Volcano Engine); BytePlus ModelArk internationally",
+   "targetSegments": [
+    "Chinese enterprises and developers",
+    "consumer AI apps",
+    "international enterprises via BytePlus"
+   ],
+   "roadmap": "Doubao 2.1 series launched at Force 2026 (23 Jun 2026); Seed releases through Aug 2026 (Seedance 2.5, Seed Audio 1.0, a full-duplex audio-visual LLM)"
+  },
+  {
+   "name": "Volcano Engine cloud and GPU compute (IaaS/PaaS) and BytePlus",
+   "category": "Cloud infrastructure",
+   "description": "Volcano Engine sells compute, storage, networking and GPU cloud in China; BytePlus, 'the AI-native enterprise partner from ByteDance', sells ModelArk, GPU compute, ECS and Kubernetes abroad from an 'ap-southeast-1' region. CEO Liang Rubo said at Force 2026 that Volcano Engine's PaaS business has become a base business of the company. On 30 Jul 2026 ByteDance merged Feishu's go-to-market into Volcano Engine under Tan Dai. Instance specifications and region lists were not extractable from the client-rendered product pages (collection gap).",
+   "highlights": [
+    "Omdia's China cloud-infrastructure ranking (Q3 2025: Alibaba 36%, Huawei 16%, Tencent 9%) does not break Volcano Engine out; it sits inside 'others' (39%)",
+    "Reported revenue: above RMB 12B in 2024 with a 2025 target of RMB 25B+ (华尔街见闻, June 2025); no reported 2025 actual"
+   ],
+   "positioning": "A challenger in IaaS behind Alibaba Cloud, Huawei Cloud and Tencent Cloud, using MaaS volume as the wedge",
+   "soldThrough": "Direct enterprise sales and self-serve",
+   "targetSegments": [
+    "enterprises in China",
+    "ByteDance internal workloads",
+    "international enterprises (BytePlus)"
+   ]
+  },
+  {
+   "name": "Consumer platforms — Douyin, TikTok, CapCut, Toutiao, Doubao app (the demand base)",
+   "category": "Consumer internet (demand driver)",
+   "description": "The consumer apps generate the revenue and the compute demand. Per leaks relayed by 36Kr (April 2026), overseas revenue grew about 50% in 2025 against about 20% at home, lifting the overseas share above 30%; the Doubao app had 345 million monthly users in March 2026. In the United States, TikTok, Lemon8 and CapCut operate inside TikTok USDS Joint Venture LLC, running 'in Oracle's secure U.S. cloud environment'.",
+   "highlights": [
+    "TikTok USDS Joint Venture LLC (announced 23 Jan 2026): Oracle, Silver Lake and MGX 15% each as managing investors; ByteDance 19.9%; Oracle is 'Trusted Security Partner'",
+    "ByteDance's global entities keep 'global product interoperability and certain commercial activities, including e-commerce, advertising, and marketing'"
+   ],
+   "soldThrough": "Advertising, e-commerce, subscriptions",
+   "targetSegments": [
+    "consumers in China and abroad",
+    "advertisers and merchants"
+   ]
+  },
+  {
+   "name": "Self-built data-centre campuses (run under the Volcano Engine name)",
+   "category": "AI data-centre program — own build",
+   "description": "ByteDance's own campuses appear in supplier and regulatory filings under Volcano Engine names: the Yangtze-Delta computing centre at Wuhu with a Wuwei site (火山引擎长三角算力中心 / 长三角无为算力中心; a phase 2 is named by Sifang), the Taihang computing centre in Datong, Shanxi (火山云太行算力中心), and a Horinger computing centre in Inner Mongolia. SemiAnalysis (25 Sep 2026) counts three self-build clusters — Datong, Wuhu and a twin-site Inner Mongolia programme (Horinger and Ulanqab) — and two Ningxia entities registered in Zhongwei in July 2026 'pointing to a fourth'. SCMP (Sep 2026, single anonymous source) reports talks with local data-centre vendors for 5–6 GW of new compute in Ulanqab's Jining district by early 2028.",
+   "highlights": [
+    "Chindata's acquirer lists Customer A's own projects as 火山引擎长三角算力中心 (306 MW), 长三角无为算力中心 (335 MW), 火山云太行算力中心 phase 2 (~187 MW) and 内蒙古和林格尔算力中心 (220 MW) — the filing never names Customer A",
+    "Supplier filings name the buyer as 字节跳动, 火山引擎 or 字节跳动火山云; none names the Douyin entity as an equipment buyer",
+    "Named suppliers to the self-built campuses: TGOOD (Wuwei win; '字节跳动火山云项目订单'), Sifang (Wuhu phase 2), Mingyang Electric (MyPower power module), Far East (cable), Zhonhen (precision distribution in 'ByteDance self-built rooms')",
+    "Wuhu: RMB 8B, 21,824 server racks, 236 network racks and one substation; Datong phase 2: RMB 4.5B, 15,604 racks at 12 kW (中国IDC圈, Jan 2025)"
+   ],
+   "positioning": "Self-build is growing but small: HEC's filing cites Frost & Sullivan for a ByteDance self-build ratio of about 5–15% at end-2025",
+   "soldThrough": "Internal capacity (not sold); equipment bought by tender from domestic suppliers",
+   "targetSegments": [
+    "ByteDance and Volcano Engine workloads"
+   ]
+  },
+  {
+   "name": "Leased wholesale capacity in China (the landlords)",
+   "category": "AI data-centre program — rented",
+   "description": "Most of ByteDance's China capacity is rented. Chindata China's first customer, 'Customer A', took 91.00% of 2024 revenue, 90.12% of 2025 and 90.22% of Jan–Feb 2026 on contracts 'mostly 10 years and longer' (HEC restructuring filings); the customer is not named, but the same filing lists its self-build projects as Volcano Engine campuses and ByteDance was 86.3% of Chindata's revenue in 2022 when it still filed in the US. VNET booked 510 MW from 'a leading internet customer' in Greater Beijing (Q1 2026), which Bloomberg attributed to ByteDance. SemiAnalysis: GDS and VNET 'captured barely a third of ByteDance and Alibaba orders in 2024–2026YTD'.",
+   "highlights": [
+    "Q1 2026 tender: about 1 GW awarded to three operators, mostly Beijing-Tianjin-Hebei and Inner Mongolia (财联社, Jan 2026; expert-call notes)",
+    "Chindata's filing: for equipment the landlord tenders among the vendors on the customer's qualified-vendor list, then buys that vendor's UPS",
+    "Chindata's first wholesale contract expires in November 2027; renewal talks had not started at the filing date (HEC reply, Sep 2026)"
+   ],
+   "positioning": "The largest single tenant in China's wholesale market; SemiAnalysis calls it 'the single most important customer for all wholesale colocation players in the country'",
+   "soldThrough": "Build-to-suit and wholesale leases; tenders let capacity to two or three operators per round",
+   "targetSegments": [
+    "Chindata China, VNET, Range, GDS and other wholesale landlords"
+   ]
+  },
+  {
+   "name": "Overseas capacity — Johor, Thailand, Brazil, Finland, Norway, and rented GPUs",
+   "category": "AI data-centre program — overseas",
+   "description": "Overseas ByteDance leases and rents: it anchors Bridge Data Centres' MY06 campus at Sedenak, Johor (110 MW, opened 2022); Thailand's BOI approved a 126.8 billion baht TikTok data-hosting project (Jan 2025); in Brazil it announced its first Latin American data centre at Pecém with Omnia and Casa dos Ventos, above R$200 billion including R$108 billion of equipment by 2035; in Finland it added a €1 billion Lahti site to Kouvola under the €12 billion Project Clover. The WSJ (via Tekedia, March 2026) reported about 36,000 Nvidia B200s rented through Aolani Cloud in Malaysia; SemiAnalysis (June 2025) wrote that 'most of Oracle's ASEAN GPU capacity' is believed allocated to ByteDance.",
+   "highlights": [
+    "The FT (Dec 2025) reported that overseas data-centre leasing to reach Nvidia hardware is booked as operating expense, outside the capex figures",
+    "Brazil: 100% new dedicated wind from Casa dos Ventos; closed-loop water cooling; operations 2027 (TikTok)"
+   ],
+   "soldThrough": "Leases from landlords (BDC, Omnia, Green Mountain) and GPU rental",
+   "targetSegments": [
+    "TikTok and international workloads"
+   ]
+  },
+  {
+   "name": "In-house AI silicon (reported)",
+   "category": "Custom accelerators",
+   "description": "Per third-party reporting only: ByteDance is designing its own AI accelerators — Bloomberg (via RCR Tech, May 2026) reported that Qualcomm will manufacture 'millions' of ByteDance-designed AI ASICs — and SCMP (May 2026) reported a proportionally larger 2026 budget for domestic AI chips. No ByteDance statement located.",
+   "highlights": [
+    "Reported, not confirmed: Qualcomm manufacturing (Bloomberg via RCR Tech, May 2026); a larger domestic-chip budget (SCMP, May 2026)"
+   ],
+   "soldThrough": "Internal use",
+   "targetSegments": [
+    "ByteDance data centres"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Volcano Ark list prices (RMB per million tokens, online inference, page updated 2026-09-24)",
+   "specs": [
+    {
+     "band": "Doubao-Seed 2.1",
+     "label": "doubao-seed-2.1-pro, input / cache hit / output (0–1,024k)",
+     "value": "6.00 / 1.20 / 30.00"
+    },
+    {
+     "band": "Doubao-Seed 2.1",
+     "label": "doubao-seed-2.1-lite, input / cache hit / output (0–1,024k)",
+     "value": "0.80 (audio 12.00) / 0.16 / 2.70"
+    },
+    {
+     "band": "Doubao-Seed 2.1",
+     "label": "doubao-seed-2.1-turbo, input / cache hit / output (0–256k)",
+     "value": "3.00 / 0.60 / 15.00"
+    },
+    {
+     "band": "Doubao-Seed 2.0",
+     "label": "doubao-seed-2.0-pro, input by tier [0,32] / (32,128] / (128,256]",
+     "value": "3.2 / 4.8 / 9.6"
+    },
+    {
+     "band": "Doubao-Seed 2.0",
+     "label": "doubao-seed-2.0-mini, input by tier",
+     "value": "0.2 / 0.4 / 0.8"
+    },
+    {
+     "band": "Third-party models",
+     "label": "deepseek-v4-pro, input / cache hit / output",
+     "value": "9.00 / 0.30 / 27.00"
+    },
+    {
+     "band": "Third-party models",
+     "label": "glm-5.2, input / cache hit / output",
+     "value": "8.00 / 2.00 / 28.00"
+    },
+    {
+     "band": "Storage",
+     "label": "Cache storage",
+     "value": "0.017 RMB per million tokens per hour"
+    }
+   ],
+   "notes": "Values copied from the first-party price page. Usage: Doubao reached 180 trillion tokens a day by June 2026 (Tan Dai, Force 2026)."
+  },
+  {
+   "product": "Self-built campuses — figures from regulatory, supplier and landlord filings",
+   "specs": [
+    {
+     "band": "Wuhu, Anhui",
+     "label": "Project",
+     "value": "火山引擎长三角算力中心; RMB 8B; 21,824 server racks + 236 network racks + 1 substation (approval notice, ~Jan 2025)"
+    },
+    {
+     "band": "Wuhu, Anhui",
+     "label": "Capacity per Chindata acquirer",
+     "value": "306 MW (长三角算力中心) and 335 MW (长三角无为算力中心), listed as Customer A self-build"
+    },
+    {
+     "band": "Datong, Shanxi",
+     "label": "Project",
+     "value": "火山云太行算力中心 phase 2; RMB 4.5B; 15,604 × 12 kW racks + 510 network racks; phase 2 ~187 MW"
+    },
+    {
+     "band": "Inner Mongolia",
+     "label": "Horinger",
+     "value": "内蒙古和林格尔算力中心, 220 MW (Chindata acquirer filing)"
+    },
+    {
+     "band": "Inner Mongolia",
+     "label": "Ulanqab (reported talks)",
+     "value": "5–6 GW of new compute in Jining district, target early 2028 (SCMP, single anonymous source)"
+    },
+    {
+     "band": "Ningxia",
+     "label": "Zhongwei",
+     "value": "two entities registered July 2026, \"pointing to a fourth\" cluster (SemiAnalysis)"
+    }
+   ],
+   "notes": "No ByteDance source states a campus MW figure; the MW values come from the HEC (东阳光) reply to the SSE inquiry of 23 Sep 2026, which does not name the customer."
+  },
+  {
+   "product": "Early-2026 AIDC tender — what is and is not public",
+   "specs": [
+    {
+     "band": "Capacity tender",
+     "label": "Q1 2026 round",
+     "value": "about 1 GW, awarded to three operators, mostly Beijing-Tianjin-Hebei and Inner Mongolia (财联社 2026-01-13; expert-call notes)"
+    },
+    {
+     "band": "Power architecture",
+     "label": "HVDC share and 800 V pilot",
+     "value": "\"渗透率提升至约30%–40%\" and a \"楼宇级、数十MW规模\" 800 V DC pilot — unattributed expo post, 2026-01-22"
+    },
+    {
+     "band": "Power architecture",
+     "label": "Status a week later",
+     "value": "\"字节跳动的800V还在招标\" (still out to tender), expo post 2026-01-29"
+    },
+    {
+     "band": "Power architecture",
+     "label": "Mainstream confirmation",
+     "value": "\"首次引入800V HVDC方案\" — no share, MW or supplier (21世纪经济报道, 2026-09-22)"
+    },
+    {
+     "band": "Awards",
+     "label": "800 V or SST award to a named supplier",
+     "value": "none public as of 2026-09-26"
+    }
+   ],
+   "notes": "The 30–40% and tens-of-MW figures have no traceable primary source. A retail-blog claim that Xinte Electric and Vertiv won a ByteDance SST pilot is contradicted by Xinte's own investor-platform answer (24 Apr 2026) that its SST's core medium-voltage high-frequency transformer is still at sample testing."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue (leaked, unaudited)",
+      "actual": "US$155B, +29% (Bloomberg, April 2025; headline only)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No published expectation"
+     },
+     {
+      "name": "Net margin (leaked)",
+      "actual": "about 21% (26% in 2023)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The Information via 21世纪经济报道; margins down three years running"
+     },
+     {
+      "name": "Overseas share of revenue (leaked)",
+      "actual": "25%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "36Kr (霞光社), April 2026"
+     }
+    ],
+    "commentary": "All figures are leaks; ByteDance publishes no group accounts."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue (leaked, unaudited)",
+      "actual": "about US$200B (+~29%, The Information as relayed Sep 2026); an earlier aggregator figure is US$186B",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Two figures, not reconciled"
+     },
+     {
+      "name": "Net profit (leaked, unaudited)",
+      "actual": "about US$50B (Bloomberg projection, Dec 2025) vs US$42B (21世纪经济报道, Sep 2026) vs an IFRS decline of more than 70% (Chinese press, Apr 2026)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Douyin VP Li Liang: the 70% figure is IFRS and reflects preferred-share and option cost changes; excluding them 'revenue and profit still grew'"
+     },
+     {
+      "name": "Capex (leaked)",
+      "actual": "RMB 150B+ (Reuters, Jan 2025; ByteDance denied it) vs about US$25B (Bloomberg paraphrase, May 2026)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Two figures, not reconciled"
+     }
+    ],
+    "commentary": "Overseas revenue grew about 50% and domestic about 20%; overseas passed 30% of the total (36Kr, April 2026)."
+   },
+   {
+    "period": "H1 2026",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Revenue (leaked, unaudited)",
+      "actual": "about US$120B, +~30%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "The Information, relayed by Tencent News and Proactive, 15–16 Sep 2026; ByteDance did not comment"
+     },
+     {
+      "name": "Net profit (leaked, unaudited)",
+      "actual": "about US$20B, a single-digit decline; net margin about 16.7%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Weighed down by AI spending, per the report"
+     }
+    ]
+   },
+   {
+    "period": "2026 capex plan (reported)",
+    "periodType": "other",
+    "metrics": [
+     {
+      "name": "Capex — three reports",
+      "actual": "RMB 160B preliminary, ~half (RMB 85B) for AI processors (FT, 2025-12-23) → more than RMB 200B, framed as AI capex, +25% (SCMP, 2026-05-09) → up to US$70B total capex under discussion (Bloomberg, 2026-05-27)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Not reconciled: the FT and SCMP figures describe a budget, Bloomberg a ceiling being weighed; US$70B is about RMB 500B, so the spread is roughly 3× low-to-high, not 2×"
+     },
+     {
+      "name": "Debt raised",
+      "actual": "US$29.6B three-year unsecured syndicated loan (upsized from US$20B; ~30 banks)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "TechNode (via Yicai) and 21世纪经济报道, Sep 2026; purpose reported as data-centre and AI build-out"
+     }
+    ]
+   }
+  ],
+  "commentary": "Collection gap: ByteDance publishes no worldwide accounts — its FY2025 Spain country-by-country report says the ultimate parent 'has not made available information with respect to the Group's worldwide operations'. Every figure above is an anonymous-source leak; none has a published expectation, so every 'expected' field is empty and every verdict is nominal. No normalized-KPI overlay is set, because no figure is audited."
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-25",
+   "category": "market",
+   "headline": "SemiAnalysis's China model: ByteDance 'occupies roughly a fifth of delivered datacenter capacity in China, and it rents nearly all of it'; three self-build clusters (Datong, Wuhu, Horinger/Ulanqab) and two Zhongwei entities registered in July 2026",
+   "read": "The first independent sizing of ByteDance as a tenant; single-outlet, and the metric is not defined in the free text.",
+   "source": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom"
+  },
+  {
+   "date": "2026-09-23",
+   "category": "customer",
+   "headline": "Chindata's acquirer (HEC, SSE 600673) discloses that 'Customer A' took 90.12% of Chindata China's 2025 revenue on mostly 10-year-plus contracts, and lists Customer A's own campuses as Volcano Engine projects",
+   "read": "The landlord's revenue is one tenant, and the filing ties that tenant to Volcano Engine without naming ByteDance.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF"
+  },
+  {
+   "date": "2026-09-22",
+   "category": "procurement",
+   "headline": "21世纪经济报道 reports that ByteDance 'first introduced an 800V HVDC scheme' in its new AI data-centre tender; no share, MW or supplier given",
+   "read": "Eight months after the expo posts, still no named award.",
+   "source": "https://www.21jingji.com/article/20260922/herald/a29e2e80f1eb38b79564b230005b8c4f.html"
+  },
+  {
+   "date": "2026-09-16",
+   "category": "financial",
+   "headline": "The Information (relayed): H1 2026 revenue about US$120B (+~30%), net profit about US$20B, a single-digit decline weighed down by AI spending",
+   "read": "Growth is funding the build; margin is paying for it.",
+   "source": "https://news.qq.com/rain/a/20260916A06BED00"
+  },
+  {
+   "date": "2026-09-04",
+   "category": "financial",
+   "headline": "ByteDance lines up a US$29.6B three-year unsecured syndicated loan, upsized from US$20B, with about 30 banks",
+   "read": "Debt now funds part of the data-centre build.",
+   "source": "https://technode.com/2026/09/04/bytedance-reportedly-lines-up-a-29-6-billion-syndicated-loan/"
+  },
+  {
+   "date": "2026-09-03",
+   "category": "capacity",
+   "headline": "SCMP: ByteDance in talks with local data-centre vendors for 5–6 GW of new compute in Ulanqab's Jining district, targeting early 2028",
+   "read": "If it happens, the largest single campus in the corpus — and built by vendors for ByteDance rather than by ByteDance.",
+   "source": "https://www.scmp.com/tech/big-tech/article/3366220/bytedance-expand-massive-ai-data-centre-cluster-inner-mongolia-source-says"
+  },
+  {
+   "date": "2026-08-28",
+   "category": "procurement",
+   "headline": "Kstar's H1 2026 report names ByteDance first among the IDC customers to which it delivers data-centre UPS and power modules, alongside Chindata and BDC",
+   "read": "The clearest filed evidence that ByteDance buys UPS and power modules directly.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-08-28/1225518833.PDF"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "procurement",
+   "headline": "ByteDance and Tencent each took delivery of about 10,000 Nvidia H200s — about 13% of the 75,000-unit US licence cap — with further purchases needing Beijing sign-off",
+   "read": "Beijing, not Washington, is now the binding constraint on imported GPUs.",
+   "source": "https://www.techtimes.com/articles/325078/20260820/nvidia-h200-chips-enter-china-13-quota-beijing-not-washington-controls-rest.htm"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "corporate",
+   "headline": "Feishu's go-to-market is merged into Volcano Engine in a ToB organisation under Tan Dai",
+   "read": "Volcano Engine becomes the single enterprise front door.",
+   "source": "https://finance.sina.com.cn/roll/2026-07-30/doc-inikqcsm1278898.shtml"
+  },
+  {
+   "date": "2026-07-02",
+   "category": "capacity",
+   "headline": "Construction under way at Pecém, Ceará — reported as ByteDance's largest data centre outside China (US$38–44B total), developed with Omnia and powered by Casa dos Ventos wind",
+   "read": "Overseas capacity is leased from a developer with a dedicated PPA, not self-built.",
+   "source": "https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/"
+  },
+  {
+   "date": "2026-06-23",
+   "category": "product-launch",
+   "headline": "Force 2026: Doubao 2.1 series; Doubao at 180 trillion tokens a day; Liang Rubo calls Volcano Engine PaaS a base business of the company",
+   "read": "Token growth, not capex, is the metric management leads with.",
+   "source": "https://www.cnfin.com/kx/detail/20260623/4430319_1.html"
+  },
+  {
+   "date": "2026-06-08",
+   "category": "policy",
+   "headline": "The Pentagon's 1260H update adds Alibaba, Baidu and BYD; ByteDance is not listed",
+   "read": "ByteDance's US exposure runs through PAFACA and the JV, not the military-company list.",
+   "source": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies"
+  },
+  {
+   "date": "2026-05-28",
+   "category": "partnership",
+   "headline": "Bloomberg (via RCR Tech): Qualcomm to manufacture 'millions' of ByteDance-designed AI ASICs",
+   "read": "Custom silicon would put ByteDance in charge of its rack power envelope.",
+   "source": "https://rcrtech.com/semiconductor-news/qualcomm-ai-chip-deal-bytedance/"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "financial",
+   "headline": "Bloomberg (relayed): ByteDance weighs 2026 capex of up to US$70B, underwritten by about US$50B of 2025 profit",
+   "read": "A ceiling under discussion, not a budget.",
+   "source": "https://finance.sina.com.cn/stock/t/2026-05-28/doc-inhzmpqs0156749.shtml"
+  },
+  {
+   "date": "2026-05-26",
+   "category": "customer",
+   "headline": "VNET's Q1 2026 results: 510 MW from 'a leading internet customer' in Greater Beijing — the order Bloomberg attributed to ByteDance in March",
+   "read": "A second landlord building at ByteDance scale.",
+   "source": "https://www.prnewswire.com/news-releases/vnet-reports-unaudited-first-quarter-2026-financial-results-302781602.html"
+  },
+  {
+   "date": "2026-05-14",
+   "category": "policy",
+   "headline": "The US reportedly approves H200 sales to about ten Chinese firms including ByteDance, up to 75,000 units each; purchases stall under Beijing guidance",
+   "read": "US licences exist; Chinese approvals ration them.",
+   "source": "https://www.trendforce.com/news/2026/05/14/news-u-s-reportedly-approves-nvidia-h200-sales-to-10-chinese-firms-including-alibaba-bytedance-but-deals-stall/"
+  },
+  {
+   "date": "2026-05-09",
+   "category": "financial",
+   "headline": "SCMP: 2026 capex raised to more than RMB 200B, at least 25% above a RMB 160B preliminary plan, on memory costs and more domestic chips",
+   "read": "The budget rose before the ceiling was floated.",
+   "source": "https://www.scmp.com/tech/article/3352906/bytedance-raises-2026-capex-least-25-amid-ai-boom-rising-memory-costs-sources-say"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "procurement",
+   "headline": "Zhonhen's 2025 annual report: its precision-distribution products won projects at 'ByteDance self-built rooms and several third-party co-built rooms'",
+   "read": "ByteDance buys distribution gear for halls it does not own.",
+   "source": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225131190.PDF"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "financial",
+   "headline": "A leak puts 2025 IFRS net profit down more than 70%; Douyin VP Li Liang attributes it to preferred-share and option cost changes and says operating revenue and profit grew",
+   "read": "ByteDance's only on-record financial comment in the period.",
+   "source": "https://finance.sina.com.cn/tech/roll/2026-04-21/doc-inhvfivi8020746.shtml"
+  },
+  {
+   "date": "2026-04-09",
+   "category": "procurement",
+   "headline": "TGOOD's 2025 annual report records a '字节跳动火山云项目订单' (ByteDance Volcano Cloud project order) among its data-centre contracts",
+   "read": "Prefabricated substations and power modules for the self-built campuses.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225086349.PDF"
+  },
+  {
+   "date": "2026-04-08",
+   "category": "capacity",
+   "headline": "TikTok announces a second €1B Finnish data centre in Lahti under the €12B Project Clover",
+   "read": "European capacity is a data-sovereignty programme first.",
+   "source": "https://newsroom.tiktok.com/tiktok-announces-additional-1-billion-investment-in-finland?lang=en-150"
+  },
+  {
+   "date": "2026-03-24",
+   "category": "project",
+   "headline": "Sifang's 2025 annual report names the 'Wuhu ByteDance phase-2 Volcano Engine computing centre' among its projects",
+   "read": "Wuhu has a second phase under way.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-03-24/1225025430.PDF"
+  },
+  {
+   "date": "2026-03-14",
+   "category": "procurement",
+   "headline": "WSJ (via Tekedia): about 36,000 Nvidia B200s rented through Aolani Cloud in Malaysia, above US$2.5B; Aolani says it complies with export controls",
+   "read": "Frontier GPUs are rented abroad rather than imported.",
+   "source": "https://www.tekedia.com/bytedance-builds-major-nvidia-blackwell-ai-cluster-in-malaysia-through-aolani-cloud-partnership-bypassing-china-based-deployment-constraints/"
+  },
+  {
+   "date": "2026-01-29",
+   "category": "procurement",
+   "headline": "The expo site that first reported the 800 V pilot says ByteDance's 800 V is 'still out to tender'",
+   "read": "No award, a week after the headline.",
+   "source": "http://www.idcsummit.cn/shishiyaowen/466.html"
+  },
+  {
+   "date": "2026-01-23",
+   "category": "corporate",
+   "headline": "TikTok USDS Joint Venture LLC announced: Oracle, Silver Lake and MGX 15% each as managing investors, ByteDance 19.9%, a majority-American board",
+   "read": "The PAFACA resolution caps ByteDance at 19.9% of the US business.",
+   "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en"
+  },
+  {
+   "date": "2026-01-22",
+   "category": "procurement",
+   "headline": "Unattributed expo post: ByteDance's latest AIDC tender introduced HVDC at about 30–40% penetration plus a building-level, tens-of-MW 800 V pilot, ending its 'dual-UPS' AC habit",
+   "read": "The source of every 30–40% figure in circulation; no tender document behind it.",
+   "source": "http://www.idcsummit.cn/shishiyaowen/462.html"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "procurement",
+   "headline": "财联社: ByteDance's 1 GW AIDC tender drives a concentrated release of demand",
+   "read": "A capacity tender to landlords, not a power-equipment tender.",
+   "source": "https://www.cls.cn/detail/2256065"
+  },
+  {
+   "date": "2025-12-23",
+   "category": "financial",
+   "headline": "FT (relayed): preliminary 2026 capex of RMB 160B, about half (RMB 85B) for AI processors; overseas leasing booked as opex",
+   "read": "The baseline every later figure is measured from.",
+   "source": "https://www.trendforce.com/news/2025/12/23/news-bytedance-reportedly-to-boost-2026-ai-spend-to-23b-plans-preliminary-20k-h200-chips-order"
+  },
+  {
+   "date": "2025-12-04",
+   "category": "capacity",
+   "headline": "TikTok announces its first Latin American data centre at Pecém, Ceará — above R$200B, R$108B of it equipment by 2035 — with Omnia and Casa dos Ventos",
+   "read": "The largest overseas commitment on record.",
+   "source": "https://newsroom.tiktok.com/tiktok-anuncia-seu-primeiro-data-center-na-america-latina-com-investimento-superior-a-200-billhoes?lang=pt-BR"
+  },
+  {
+   "date": "2025-09-19",
+   "category": "market",
+   "headline": "IDC: Volcano Engine held 49.2% of China's public-cloud LLM token calls in H1 2025, ahead of Alibaba Cloud (27%) and Baidu (17%)",
+   "read": "First on tokens, second on revenue.",
+   "source": "https://www.yicai.com/news/102832701.html"
+  },
+  {
+   "date": "2025-08-28",
+   "category": "procurement",
+   "headline": "TGOOD wins the Volcano Engine Yangtze-Delta Wuwei computing centre; Kstar says it has become a principal supplier to ByteDance",
+   "read": "The self-build programme has named power suppliers.",
+   "source": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224598444.PDF"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that ByteDance buys data-centre power equipment through three doors, and that a seller who does not know which door a hall sits behind is selling to the wrong person. Basis: suppliers' filings record direct ByteDance purchases for its own Volcano Engine campuses (Kstar UPS and power modules, TGOOD prefabricated substations, Mingyang power modules, Sifang protection, Far East cable); Zhonhen records precision-distribution wins in 'third-party co-built rooms' — ByteDance buying inside a landlord's building; and Chindata's acquirer states that UPS vendors are chosen from the customer's qualified-vendor list even when the landlord places the order. The door decides who writes the specification.",
+  "(Moderate confidence) We assess that ByteDance's 800 VDC move is a tender signal, not yet a programme. Basis: the only numbers in circulation — HVDC at 30–40% penetration and a building-level, tens-of-MW 800 V pilot — trace to one unattributed expo post of 22 Jan 2026; the same site said a week later that the 800 V work was 'still out to tender'; 21世纪经济报道 confirmed on 22 Sep only that 800 V HVDC was 'first introduced'; no filing by any listed supplier announces a ByteDance 800 V or SST award. Indicator to watch: the first supplier filing or company release naming a ByteDance 800 V or SST award — its absence through the Q3 2026 reports (due by 31 Oct) would confirm the pilot has not been let.",
+  "(Moderate confidence) We assess that the capex figures bracket a budget and a ceiling rather than disagree. Basis: the FT's RMB 160B (Dec 2025) and SCMP's 'more than RMB 200B' (May 2026) are framed as the planned budget, the second a revision of the first; Bloomberg's 'up to US$70B' (May 2026) is total capex under discussion, 'preliminary and subject to adjustment'. The spread is about 3× low to high. Two dated facts set the scale independently: a US$29.6B loan (Sep 2026) and H1 2026 profit of about US$20B (The Information). ByteDance has confirmed none of these.",
+  "(High confidence) We assess that self-build is the direction of travel and the landlords' main risk. Basis: Chindata's acquirer discloses that Customer A takes about 90% of revenue, that the first wholesale contract expires in November 2027 with no renewal talks started, and it tabulates Customer A's own Volcano Engine campuses (Wuhu 306 MW and 335 MW, Taihang phase 2 ~187 MW, Horinger 220 MW) as a risk; SemiAnalysis counts three self-build clusters and a fourth forming; SCMP reports 5–6 GW of talks in Ulanqab. Self-build moves the power-equipment decision from the landlord's engineers to ByteDance's.",
+  "(Moderate confidence) We assess that ByteDance's named power suppliers are domestic distribution, UPS and substation makers, not the NVIDIA-roster rack-power vendors. Basis: every filing that names ByteDance as a customer comes from Kstar, TGOOD, Mingyang Electric, Jinpan, Sifang, Far East or Zhonhen; a full-text search of Megmeet, Sinexcel and Kehua filings finds no ByteDance mention, and Kehua anonymises its internet customers. Collection gap: absence from filings is not absence of business — Chinese suppliers routinely anonymise hyperscale customers.",
+  "(Low confidence) We assess that ByteDance's most advanced racks may be designed around its own accelerators rather than imported GPUs, which would make ByteDance — not a GPU vendor's reference design — the author of its rack power envelope. Basis: reported, not confirmed — Qualcomm manufacturing ByteDance-designed ASICs (Bloomberg via RCR Tech, May 2026), a larger domestic-chip budget (SCMP, May 2026), and Beijing rationing imported H200s (about 10,000 delivered by August 2026). Indicator to watch: any ByteDance or Volcano Engine statement of a rack power class or busbar voltage."
+ ],
+ "relationships": [
+  {
+   "slug": "chindata",
+   "type": "supplier",
+   "status": "active",
+   "scale": "90.12% of Chindata China 2025 revenue (Customer A, identity inferred)",
+   "via": "hyperscale build-to-suit leases, mostly 10-year terms",
+   "note": "Chindata China's 'Customer A' — about 90% of its revenue — is identified in the acquirer's own filing only by a list of Volcano Engine self-build campuses; ByteDance was 86.3% of Chindata's revenue in 2022 when it still filed in the US.",
+   "context": "HEC's reply to the SSE inquiry (23 Sep 2026) gives Customer A at 91.00% of 2024, 90.12% of 2025 and 90.22% of Jan–Feb 2026 revenue, on contracts 'mostly 10 years and longer', and in the section on Customer A's own build plans lists 火山引擎长三角算力中心, 长三角无为算力中心, 火山云太行算力中心 and 内蒙古和林格尔算力中心 — all Volcano Engine projects. The filing never names Customer A, and Chindata's own profile page gives lower shares (80.23% for 2024, 83.54% for Jan–May 2025), which may reflect different aggregation of entities under common control; no source reconciles the two. The first wholesale contract expires in November 2027. ByteDance is also the anchor tenant of MY06 in Johor, operated by the now-separate Bridge Data Centres.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF"
+  },
+  {
+   "slug": "zhonhen",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "via": "precision power distribution (精密配电)",
+   "note": "Zhonhen's 2025 annual report records precision-distribution wins at 'ByteDance self-built rooms and several third-party co-built rooms'.",
+   "context": "The win is precision distribution, not HVDC — the HVDC win named in the same passage is Bank of China — and Zhonhen's H1 2026 interim does not mention ByteDance. Jinpan's inquiry reply of October 2025 separately lists ByteDance among Zhonhen's end-customers. Retail-blog claims that Zhonhen is ByteDance's 'core supplier' or covers its Ulanqab campus appear in no filing.",
+   "source": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225131190.PDF"
+  },
+  {
+   "slug": "narada",
+   "type": "supplier",
+   "status": "active",
+   "note": "Narada's July 2026 AIDC release names ByteDance among the long-term partners of its backup-power business.",
+   "context": "The statement is a company press release, not an exchange filing — Narada's 2025 annual report and H1 2026 interim do not mention ByteDance. It names no product, date or volume.",
+   "source": "https://en.naradapower.com/news/detail/id/10316.html"
+  },
+  {
+   "slug": "nvidia",
+   "type": "supplier",
+   "status": "active",
+   "scale": "about 10,000 H200 delivered (Aug 2026, reported)",
+   "via": "H200",
+   "note": "ByteDance buys Nvidia accelerators within US licences and Beijing approvals; about 10,000 H200s were delivered by August 2026.",
+   "context": "The FT (Dec 2025) reported RMB 85B of the preliminary 2026 plan for AI processors and a preliminary 20,000-unit H200 order; the US approved H200 sales to about ten Chinese firms including ByteDance in May 2026, up to 75,000 units each, and Beijing conditions each purchase. Frontier Nvidia hardware is also rented abroad (Aolani in Malaysia; Oracle's ASEAN capacity per SemiAnalysis).",
+   "source": "https://www.techtimes.com/articles/325078/20260820/nvidia-h200-chips-enter-china-13-quota-beijing-not-washington-controls-rest.htm"
+  },
+  {
+   "slug": "oracle",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "15% of TikTok USDS JV",
+   "via": "TikTok USDS Joint Venture LLC",
+   "note": "Oracle is a 15% managing investor and 'Trusted Security Partner' of TikTok USDS Joint Venture LLC, in which ByteDance holds 19.9%; the JV runs in Oracle's US cloud.",
+   "context": "TikTok's announcement (23 Jan 2026) names Oracle, Silver Lake and MGX as managing investors at 15% each and gives ByteDance 19.9%; Oracle EVP Kenneth Glueck sits on the seven-member board. Separately, SemiAnalysis (June 2025) wrote that 'most of Oracle's ASEAN GPU capacity' is believed allocated to ByteDance — a single-outlet estimate.",
+   "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en"
+  },
+  {
+   "slug": "mgx",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-01",
+   "scale": "15% of TikTok USDS JV",
+   "via": "TikTok USDS Joint Venture LLC",
+   "note": "MGX holds 15% of TikTok USDS Joint Venture LLC as a managing investor; ByteDance holds 19.9%.",
+   "context": "MGX's David Scott sits on the JV board and its security committee. The corpus's MGX dossier records the same stakes.",
+   "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en"
+  },
+  {
+   "slug": "alibaba-cloud",
+   "type": "competitor",
+   "status": "active",
+   "note": "Volcano Engine competes with Alibaba Cloud in China's cloud and model-API market — first on token volume, second on revenue.",
+   "context": "IDC gave Volcano Engine 49.2% of China's public-cloud LLM token calls in H1 2025 against Alibaba Cloud's 27%; on revenue, Omdia and Frost & Sullivan put Alibaba Cloud first in enterprise MaaS. Both are also China's two largest reported AI-infrastructure spenders in 2026 and compete for the same wholesale landlords.",
+   "source": "https://www.yicai.com/news/102832701.html"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "PAFACA (TikTok divestiture law)",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-22",
+   "exposure": "The Supreme Court upheld the Protecting Americans from Foreign Adversary Controlled Applications Act in TikTok Inc. v. Garland (17 Jan 2025). The US business now sits in TikTok USDS Joint Venture LLC, with ByteDance capped at 19.9%, a majority-American board and Oracle as security partner; ByteDance keeps global interoperability and e-commerce, advertising and marketing activities.",
+   "mitigation": "The joint-venture structure announced 23 Jan 2026.",
+   "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en"
+  },
+  {
+   "regime": "US AI-chip export controls (H200 licensing)",
+   "status": "in-effect",
+   "effectiveDate": "2026-05",
+   "exposure": "US approvals for H200 sales to about ten Chinese firms including ByteDance, up to 75,000 units each (May 2026); Beijing conditions each purchase, and about 10,000 H200s had been delivered by August 2026. The FT reported that ByteDance leases overseas data centres to reach Nvidia hardware legally, booked as opex.",
+   "mitigation": "Overseas leasing and GPU rental (Johor, Oracle ASEAN); a larger domestic-chip budget (SCMP, May 2026).",
+   "source": "https://www.trendforce.com/news/2026/05/14/news-u-s-reportedly-approves-nvidia-h200-sales-to-10-chinese-firms-including-alibaba-bytedance-but-deals-stall/"
+  },
+  {
+   "regime": "East Data, West Computing (东数西算)",
+   "status": "in-effect",
+   "exposure": "SemiAnalysis calls the Wuhu cluster an East-Data-West-Computing cluster serving east-China inference and places the two Zhongwei (Ningxia) entities registered in July 2026 in another EDWC region — the self-build map follows the national hub nodes.",
+   "source": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Liang Rubo (梁汝波)",
+   "title": "Chairman of the Board; Chief Executive Officer",
+   "background": [
+    "Co-founder — the company says it was 'founded in 2012 by a team led by Yiming Zhang and Rubo Liang'",
+    "Listed as Chairman of the Board on ByteDance's leadership page; described as CEO at Force 2026",
+    "At Force 2026 (23 Jun 2026) set the year's focus on model capability and called Volcano Engine's PaaS business a base business of the company"
+   ]
+  },
+  {
+   "name": "Zhang Yiming (张一鸣)",
+   "title": "Founder",
+   "background": [
+    "Founded ByteDance in 2012 with a team including Liang Rubo; Toutiao launched in August 2012 and Douyin in September 2016",
+    "Not listed on the 2026 board page; his current formal role is not stated in any first-party source located"
+   ]
+  },
+  {
+   "name": "Tan Dai (谭待)",
+   "title": "President, Volcano Engine (火山引擎总裁)",
+   "background": [
+    "Presents Volcano Engine's usage and product metrics at Force (e.g. 180 trillion Doubao tokens a day, June 2026)",
+    "From 30 Jul 2026 also heads the ToB go-to-market organisation that absorbed Feishu's sales, per Sina"
+   ]
+  },
+  {
+   "name": "Shou Chew (周受资)",
+   "title": "Chief Executive Officer, TikTok; director, TikTok USDS Joint Venture LLC",
+   "background": [
+    "Named to the seven-member JV board in the 23 Jan 2026 announcement"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "SemiAnalysis — The Chinese AI Infrastructure Boom: introducing the SemiAnalysis China Datacenter Model (Everlyn, Dylan Patel, Patrick Schaabi; free portion read)",
+   "url": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Volcano Engine — 火山方舟 模型价格 (Volcano Ark model price list, page updated 2026-09-24)",
+   "url": "https://www.volcengine.com/docs/82379/1544106",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "HEC Technology (东阳光, SSE 600673) — reply to the SSE inquiry on the Chindata acquisition (审核问询函的回复, 663 pp): Customer A table, Customer A self-build projects, contract terms",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "21世纪经济报道 — ByteDance \"首次引入800V HVDC方案\" in its new AI data-centre tender (林典驰)",
+   "url": "https://www.21jingji.com/article/20260922/herald/a29e2e80f1eb38b79564b230005b8c4f.html",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "21世纪经济报道 / ZAKER — ByteDance margins 2023–H1 2026 and the US$29.6B syndicated loan",
+   "url": "https://m.21jingji.com/article/20260917/herald/363e7190923e722e98779180b29fb289.html",
+   "date": "2026-09-17"
+  },
+  {
+   "label": "Tencent News — relaying The Information: ByteDance H1 2026 revenue ~US$120B, net profit ~US$20B",
+   "url": "https://news.qq.com/rain/a/20260916A06BED00",
+   "date": "2026-09-16"
+  },
+  {
+   "label": "Proactive via Yahoo Finance — TikTok developer ByteDance profit drops (relaying The Information)",
+   "url": "https://finance.yahoo.com/technology/ai/articles/tiktok-developer-bytedance-profit-drops-142800788.html",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "TechNode — ByteDance reportedly lines up a US$29.6 billion syndicated loan (via Yicai)",
+   "url": "https://technode.com/2026/09/04/bytedance-reportedly-lines-up-a-29-6-billion-syndicated-loan/",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "Tencent News (IT时代网) — relaying SCMP: ByteDance in talks for a 5–6 GW AI data-centre cluster in Ulanqab",
+   "url": "https://news.qq.com/rain/a/20260904A05M6400",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "SCMP — ByteDance to expand massive AI data centre cluster in Inner Mongolia, source says",
+   "url": "https://www.scmp.com/tech/big-tech/article/3366220/bytedance-expand-massive-ai-data-centre-cluster-inner-mongolia-source-says",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Kstar (科士达, SZSE 002518) — 2026 interim report: ByteDance named first among IDC customers for UPS and power modules",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-08-28/1225518833.PDF",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Kehua Data (科华数据, SZSE 002335) — 2026 interim report (customers anonymised as 某互联网大厂; no ByteDance mention)",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-08-28/1225522569.PDF",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Tech Times — Nvidia H200 chips enter China: ~13% of the licence quota delivered, Beijing controls the rest",
+   "url": "https://www.techtimes.com/articles/325078/20260820/nvidia-h200-chips-enter-china-13-quota-beijing-not-washington-controls-rest.htm",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Sina — ByteDance merges Feishu go-to-market into Volcano Engine under Tan Dai",
+   "url": "https://finance.sina.com.cn/roll/2026-07-30/doc-inikqcsm1278898.shtml",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "HEC Technology (东阳光) — share-issue acquisition report for Chindata China, filed version (申报稿, 661 pp)",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-07-21/1225433439.PDF",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Narada — \"dual engines\" AIDC release naming ByteDance and Alibaba among long-term partners",
+   "url": "https://en.naradapower.com/news/detail/id/10316.html",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "W.Media — ByteDance begins construction of US$38–44 billion data centre in Brazil (Pecém)",
+   "url": "https://w.media/bytedance-begins-construction-of-us-38-44-billion-data-center-in-brazil/",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "中国金融信息网 — Volcano Engine Force 2026: Doubao 180 trillion tokens a day (Tan Dai)",
+   "url": "https://www.cnfin.com/kx/detail/20260623/4430319_1.html",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "IT之家 — Force 2026: Liang Rubo on model capability and Volcano Engine PaaS as a base business",
+   "url": "https://www.ithome.com/0/967/330.htm",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "WilmerHale — Pentagon adds 65 new entities to the Section 1260H list of Chinese military companies",
+   "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "36氪 via NetEase — Volcano Engine MaaS: 2026 target raised to RMB 15B; Seedance 2.0 above RMB 1B a month",
+   "url": "https://www.163.com/dy/article/KUGJUN9M05118DFD.html",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Sina Finance — relaying Bloomberg: ByteDance weighs 2026 capex of up to US$70 billion",
+   "url": "https://finance.sina.com.cn/stock/t/2026-05-28/doc-inhzmpqs0156749.shtml",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Asia Tech Review — ByteDance hikes its AI spending (Bloomberg paraphrase: RMB 400–500B, 2025 capex ~US$25B)",
+   "url": "https://www.asiatechreview.com/p/bytedance-hikes-its-ai-spending-to",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "RCR Tech — Qualcomm to manufacture ByteDance-designed AI ASICs (citing Bloomberg)",
+   "url": "https://rcrtech.com/semiconductor-news/qualcomm-ai-chip-deal-bytedance/",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "VNET — first-quarter 2026 results: 510 MW from \"a leading internet customer\" in Greater Beijing",
+   "url": "https://www.prnewswire.com/news-releases/vnet-reports-unaudited-first-quarter-2026-financial-results-302781602.html",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "TrendForce — US reportedly approves Nvidia H200 sales to 10 Chinese firms including Alibaba and ByteDance, but deals stall",
+   "url": "https://www.trendforce.com/news/2026/05/14/news-u-s-reportedly-approves-nvidia-h200-sales-to-10-chinese-firms-including-alibaba-bytedance-but-deals-stall/",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "SCMP — ByteDance raises 2026 capex at least 25% amid AI boom and rising memory costs (Coco Feng, Ben Jiang)",
+   "url": "https://www.scmp.com/tech/article/3352906/bytedance-raises-2026-capex-least-25-amid-ai-boom-rising-memory-costs-sources-say",
+   "date": "2026-05-09"
+  },
+  {
+   "label": "Sina — 新特电气 (Xinte Electric) investor-platform answer: its SST core medium-voltage high-frequency transformer is at sample testing",
+   "url": "https://finance.sina.com.cn/stock/relnews/cn/2026-04-24/doc-inhvrhty3146354.shtml",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "36氪 (霞光社) — ByteDance 2025 overseas revenue mix and the April 2026 option buyback",
+   "url": "https://36kr.com/p/3779159715026183",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "Far East Smart Energy (远东股份, SSE 600869) — Q1 2026 report: took part in building the Volcano Engine Yangtze-Delta computing centre among 50-plus computing and data centres",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-04-22/1225139481.PDF",
+   "date": "2026-04-22"
+  },
+  {
+   "label": "Sina Tech (TechWeb) — Douyin VP Li Liang on the reported 70% IFRS profit decline",
+   "url": "https://finance.sina.com.cn/tech/roll/2026-04-21/doc-inhvfivi8020746.shtml",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Zhonhen Electric (中恒电气, SZSE 002364) — 2025 annual report: precision-distribution wins at ByteDance self-built and third-party co-built rooms",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225131190.PDF",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "TGOOD (特锐德, SZSE 300001) — 2025 annual report: \"成功斩获字节跳动火山云项目订单\"",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-04-09/1225086349.PDF",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "TikTok Newsroom — TikTok announces additional €1 billion investment in Finland (Lahti; Project Clover €12 billion)",
+   "url": "https://newsroom.tiktok.com/tiktok-announces-additional-1-billion-investment-in-finland?lang=en-150",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Sifang (四方股份, SSE 601126) — 2025 annual report: Wuhu ByteDance phase-2 Volcano Engine computing centre",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-03-24/1225025430.PDF",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Tekedia — ByteDance builds a Blackwell cluster in Malaysia through Aolani Cloud (citing WSJ)",
+   "url": "https://www.tekedia.com/bytedance-builds-major-nvidia-blackwell-ai-cluster-in-malaysia-through-aolani-cloud-partnership-bypassing-china-based-deployment-constraints/",
+   "date": "2026-03-14"
+  },
+  {
+   "label": "Simply Wall St via Yahoo Finance — VNET and the reported ByteDance data-centre deal (citing Bloomberg)",
+   "url": "https://finance.yahoo.com/news/why-bytedance-reported-data-center-161516181.html",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "Omdia — Mainland China cloud infrastructure market accelerates to 24% growth in Q3 2025",
+   "url": "https://omdia.tech.informa.com/pr/2026/feb/mainland-chinas-cloud-infrastructure-market-accelerates-to-24percent-growth-in-q3-2025",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "DoNews (壹度Pro) — Volcano Engine revenue targets and MaaS share by metric",
+   "url": "https://www.donews.com/article/detail/5164/96836.html",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Greater Bay Area Data Centre Expo news — \"字节跳动的800V还在招标\" (ByteDance's 800 V still out to tender)",
+   "url": "http://www.idcsummit.cn/shishiyaowen/466.html",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Reuters via Yahoo Finance — China gives ByteDance, Alibaba and Tencent a conditional green light for H200 purchases",
+   "url": "https://finance.yahoo.com/news/exclusive-china-gives-green-light-034730976.html",
+   "date": "2026-01-27"
+  },
+  {
+   "label": "TikTok Newsroom — Announcement from the new TikTok USDS Joint Venture LLC",
+   "url": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en",
+   "date": "2026-01-23"
+  },
+  {
+   "label": "Greater Bay Area Data Centre Expo news — \"字节跳动首次大规模引入800V HVDC\" (unattributed trade post)",
+   "url": "http://www.idcsummit.cn/shishiyaowen/462.html",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "财联社 — ByteDance 1 GW AIDC tender drives concentrated demand",
+   "url": "https://www.cls.cn/detail/2256065",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "EqualOcean — ByteDance targets RMB 160bn capital expenditure for AI in 2026 (relaying the Financial Times)",
+   "url": "https://equalocean.com/news/2025122421690-bytedance-targets-rmb-160bn-capital-expenditure-ai-2026",
+   "date": "2025-12-24"
+  },
+  {
+   "label": "TrendForce — ByteDance reportedly to boost 2026 AI spend to US$23B, plans preliminary 20k H200 order (relaying the FT)",
+   "url": "https://www.trendforce.com/news/2025/12/23/news-bytedance-reportedly-to-boost-2026-ai-spend-to-23b-plans-preliminary-20k-h200-chips-order",
+   "date": "2025-12-23"
+  },
+  {
+   "label": "Bloomberg via Yahoo Finance — ByteDance on track for ~US$50 billion profit in 2025",
+   "url": "https://finance.yahoo.com/news/bytedance-track-50-billion-profit-160444958.html",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "TikTok Newsroom (pt-BR) — TikTok announces its first Latin American data centre, investment above R$200 billion",
+   "url": "https://newsroom.tiktok.com/tiktok-anuncia-seu-primeiro-data-center-na-america-latina-com-investimento-superior-a-200-billhoes?lang=pt-BR",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Jinpan Technology (金盘科技, SSE 688676) — reply to the SSE inquiry on its convertible bond (competitor table naming ByteDance as a Zhonhen end-customer)",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-10-14/1224710084.PDF",
+   "date": "2025-10-13"
+  },
+  {
+   "label": "Sina (央广财经) — SSE work letter to HEC: Chindata China's first customer 80.23% of 2024 revenue",
+   "url": "https://finance.sina.com.cn/stock/s/2025-10-10/doc-inftkzvi9663964.shtml",
+   "date": "2025-10-10"
+  },
+  {
+   "label": "Yicai — IDC: Volcano Engine 49.2% of China public-cloud LLM token calls in H1 2025",
+   "url": "https://www.yicai.com/news/102832701.html",
+   "date": "2025-09-19"
+  },
+  {
+   "label": "36Kr — Chindata: ByteDance was 86.3% of revenue in 2022",
+   "url": "https://eu.36kr.com/en/p/3462951581963650",
+   "date": "2025-09-12"
+  },
+  {
+   "label": "Kstar (科士达) — 2025 interim report: \"已成为字节跳动…主要供应商\"",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224588635.PDF",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "TGOOD (特锐德) — 2025 interim report: wins 火山引擎长三角无为算力中心",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-08-28/1224598444.PDF",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "SemiAnalysis — How Oracle is winning the AI compute market (free portion)",
+   "url": "https://newsletter.semianalysis.com/p/how-oracle-is-winning-the-ai-compute-market",
+   "date": "2025-06-30"
+  },
+  {
+   "label": "华尔街见闻 — Volcano Engine 2025 revenue target RMB 25B",
+   "url": "https://wallstreetcn.com/articles/3748822",
+   "date": "2025-06-10"
+  },
+  {
+   "label": "Jinpan Technology (金盘科技) — convertible-bond feasibility report: 360 data-centre projects completed for ByteDance, Baidu, Huawei, Alibaba and others (to 31 Mar 2025)",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-05-10/1223513870.PDF",
+   "date": "2025-05-10"
+  },
+  {
+   "label": "Mingyang Electric (明阳电气, SZSE 301291) — 2024 sustainability report: MyPower power module wins a ByteDance Volcano Engine data-centre project",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-04-24/1223233021.PDF",
+   "date": "2025-04-24"
+  },
+  {
+   "label": "Bloomberg — TikTok drives ByteDance's 29% growth while China business slows (headline; paywalled)",
+   "url": "https://www.bloomberg.com/news/articles/2025-04-11/tiktok-drives-bytedance-s-29-growth-while-china-business-slows",
+   "date": "2025-04-11"
+  },
+  {
+   "label": "Reuters via MarketScreener — Exclusive: ByteDance plans US$20 billion capex in 2025, mostly on AI",
+   "url": "https://www.marketscreener.com/quote/stock/NVIDIA-CORPORATION-57355629/news/Exclusive-ByteDance-plans-20-billion-capex-in-2025-mostly-on-AI-sources-say-48847214/",
+   "date": "2025-01-23"
+  },
+  {
+   "label": "US Supreme Court — TikTok Inc. v. Garland, 604 U.S. ___ (2025)",
+   "url": "https://www.supremecourt.gov/opinions/24pdf/24-656_ca7d.pdf",
+   "date": "2025-01-17"
+  },
+  {
+   "label": "Thailand BOI via PR Newswire APAC — BOI approves TikTok Pte. Ltd. 126.8 billion baht data-hosting project",
+   "url": "https://www.prnewswire.com/apac/news-releases/thailand-boi-approves-investments-worth-a-total-of-us5-billion-including-tiktoks-data-hosting-project-green-lights-revised-incentives-for-the-bioeconomy-302363120.html",
+   "date": "2025-01"
+  },
+  {
+   "label": "中国IDC圈 — Volcano Engine Yangtze-Delta (Wuhu) and Taihang (Datong) computing-centre approvals",
+   "url": "http://news.idcquan.com/news/203906.shtml",
+   "date": "2025-01"
+  },
+  {
+   "label": "W.Media — Bridge Data Centres and ByteDance open the first hyperscale data centre in Malaysia (MY06, Sedenak, Johor)",
+   "url": "https://w.media/bridge-data-centres-bytedance-open-1st-hyperscale-dc-in-malaysia/",
+   "date": "2022-10-20"
+  },
+  {
+   "label": "ByteDance — FY2025 Spain public country-by-country report (ultimate parent Bytedance Ltd., Cayman Islands)",
+   "url": "https://sf16-sg.tiktokcdn.com/obj/eden-sg/xlvbeh7upiuhpqvhog/FY2025-Spain-Public-Country-by-country-Reporting.pdf"
+  },
+  {
+   "label": "ByteDance — Leadership (board of directors)",
+   "url": "https://www.bytedance.com/en/leadership"
+  },
+  {
+   "label": "ByteDance — About (founding, investors, offices)",
+   "url": "https://www.bytedance.com/en/about"
+  },
+  {
+   "label": "ByteDance Seed — model releases",
+   "url": "https://seed.bytedance.com/en/"
+  },
+  {
+   "label": "BytePlus — the international enterprise arm (ModelArk, GPU compute)",
+   "url": "https://www.byteplus.com/en"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

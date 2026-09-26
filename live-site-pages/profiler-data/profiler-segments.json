@@ -1528,6 +1528,11 @@
      "slug": "samsung-ct",
      "role": "adjacent",
      "basis": "productsAndServices › AIDC platform — a dedicated Data Center Business Team (Hanam DC 2024; Stargate Korea; floating DCs)"
+    },
+    {
+     "slug": "chindata",
+     "role": "challenger",
+     "basis": "ecosystemRole: the corpus's first Chinese wholesale landlord — third among China's third-party operators by in-service capacity and first around Beijing (Frost & Sullivan for HEC), ~90% of revenue from one hyperscale tenant, and the named SST reference site (Delta, Sangyuan, 2 Jul 2026)"
     }
    ]
   },
@@ -1585,6 +1590,16 @@
      "slug": "xai",
      "role": "challenger",
      "basis": "ecosystemRole: the extreme case study in behind-the-fence power — ~1 GW Colossus on self-built gas plus the largest Megapack fleet"
+    },
+    {
+     "slug": "bytedance",
+     "role": "challenger",
+     "basis": "ecosystemRole: the demand anchor of China's wholesale data-centre market and a three-door buyer of power equipment — own Volcano Engine campuses, landlords' build-to-suit halls, and the tenant's approved-vendor list inside landlord tenders; a leader elsewhere, not in the established US set"
+    },
+    {
+     "slug": "alibaba-cloud",
+     "role": "challenger",
+     "basis": "ecosystemRole: the Chinese hyperscaler that writes its own power architecture (Panama, co-launched with Delta and Zhonhen) and buys it by framework tender; first in China cloud (Omdia 37%) but about 20% of cloud revenue overseas — a leader elsewhere contesting the market the corpus serves"
     }
    ]
   },

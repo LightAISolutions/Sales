@@ -209,26 +209,6 @@
    "note": "NVIDIA's own 800 VDC roster places Delta and Flex Power in the same named tier — power system components — and both announced 800 VDC racks for the same platform.",
    "context": "The basis is a categorisation by the platform owner rather than a market-share ranking, and that limit is stated rather than glossed. NVIDIA assigns Delta, Flex Power, Bizlink, Lead Wealth, LITEON and Megmeet to one tier.\n\nThe products confirm the overlap. Delta announced 800 VDC in-row 660 kW power racks with 480 kW of battery backup, developed with NVIDIA, at GTC 2026; Flex launched an 800 VDC Power Rack with eight 110 kW shelves for the Vera Rubin platform in the same month.\n\nThe competition is not symmetrical. Delta appears in third-party top-five groupings of the data-centre power market where Flex does not, so Delta holds a facility-power position Flex has been acquiring its way toward — most recently through a $4.4bn agreement to buy EPC Power in September 2026.",
    "source": "https://investors.flex.com/news/news-details/2026/Flex-Launches-800-VDC-Power-Rack-for-Next-Generation-NVIDIA-AI-Infrastructure/default.aspx"
-  },
-  {
-   "slug": "chindata",
-   "type": "customer",
-   "status": "active",
-   "since": "2025-11",
-   "via": "indoor SST (SiC, 1 MW per cabinet)",
-   "note": "Chindata China deployed Delta's indoor SST system for Meituan at its Sangyuan (Huailai) campus — Delta's February 2026 brand-news issue says Chindata 'formally implemented' it; Chindata declared formal commercial operation on 2 Jul 2026.",
-   "context": "Delta: SiC high-frequency conversion and solid insulation, 1 MW per cabinet in one square metre, 240/400/800 V DC outputs, up to 98.5% efficiency, storage switching among utility, battery and combined supply. Chindata: a 10 kV delta-connected SST converting 10 kV AC to 800 V DC in one step, 34 tests, integrated storage; HEC supplied stacked-foil capacitors. The solution was unveiled at CDCC on 20 Nov 2025. Project MW is not disclosed. Reciprocal edge recorded with the Chindata dossier (profileVersion 1, 2026-09-26).",
-   "source": "https://brandnews.deltaww.com/en/SpecialDetail/12748"
-  },
-  {
-   "slug": "alibaba-cloud",
-   "type": "customer",
-   "status": "active",
-   "since": "2019",
-   "via": "Panama power modules",
-   "note": "Delta co-launched Alibaba's Panama power architecture with Alibaba and Zhonhen on 20 Nov 2019 (10 kV AC to 240 V DC, 98.5% module efficiency) and supplies Panama and HVDC equipment to Alibaba.",
-   "context": "Delta's release says Panama was already running at Alibaba data centres in Zhejiang and Jiangsu at launch. Soochow Securities estimates Delta supplied about 20% of Alibaba's 2025 HVDC purchases and Zhonhen 80%-plus — broker estimates, not disclosures. Panama is a transformer-rectifier, not an SST. Reciprocal edge recorded with the Alibaba Cloud dossier (profileVersion 1, 2026-09-26).",
-   "source": "https://www.delta-china.com.cn/zh-cn/news/19212"
   }
  ],
  "policyExposure": [
@@ -447,11 +427,6 @@
    "date": "2026-03-02"
   },
   {
-   "label": "Delta Brand News (issue 2026/02) — Chindata formally implements the Delta SST system at its North China site for Meituan",
-   "url": "https://brandnews.deltaww.com/en/SpecialDetail/12748",
-   "date": "2026-02"
-  },
-  {
    "label": "Infineon — collaboration with Delta Electronics on high-density power modules for vertical power delivery",
    "url": "https://www.infineon.com/technology-news/2025/INFPSS202508-138",
    "date": "2025-08-28"
@@ -527,11 +502,6 @@
    "date": "2025-02-10"
   },
   {
-   "label": "Delta Electronics (China) — Alibaba, Delta and Zhonhen launch Panama power (10 kV AC to 240 V DC)",
-   "url": "https://www.delta-china.com.cn/zh-cn/news/19212",
-   "date": "2019-11-20"
-  },
-  {
    "label": "CommonWealth — >50% AI-server AC/DC share",
    "url": "https://english.cw.com.tw/article/article.action?id=3691"
   },
@@ -540,6 +510,6 @@
    "url": "https://longportapp.com/en/news/227685286"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 7
+ "lastUpdated": "2026-09-23",
+ "profileVersion": 6
 }

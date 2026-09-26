@@ -2,6 +2,18 @@
  "schemaVersion": 1,
  "concepts": [
   {
+   "slug": "240vdc",
+   "term": "240 VDC",
+   "def": "The direct-current voltage China's telecom carriers and internet companies standardised for server power in the 2010s, with 336 V as its higher sibling. A rectifier fed from the building's low-voltage AC charges a battery string and feeds servers whose power supplies accept DC directly, so the inverter half of a double-conversion UPS disappears. Chinese vendors call it 高压直流 (HVDC) because it is high compared with the 48 V of a telephone exchange, not compared with the 800 V racks now arriving.",
+   "aliases": [
+    "240V DC",
+    "240 V DC",
+    "336 VDC",
+    "336V DC",
+    "336 V DC"
+   ]
+  },
+  {
    "slug": "381-agreement",
    "term": "Chapter 381 agreement",
    "def": "A Texas county's economic-development contract under Local Government Code Chapter 381: the county grants tax rebates or other incentives to a developer in exchange for investment and jobs. The Greenport airport campus sits under one signed in 2010.",
@@ -495,6 +507,16 @@
    ]
   },
   {
+   "slug": "approved-vendor-list",
+   "term": "approved vendor list",
+   "def": "A buyer's list of suppliers whose products have passed its qualification tests; only listed makers may bid. In a wholesale data centre the tenant often owns the list for critical power equipment, so the landlord runs the tender while the tenant decides who is allowed to win it.",
+   "aliases": [
+    "AVL",
+    "qualified vendor list",
+    "合格供应商名单"
+   ]
+  },
+  {
    "slug": "arbitration-clause",
    "term": "arbitration clause",
    "def": "A term in a private contract that sends disputes to an arbitrator rather than a court or a regulator. Tract invoked one in its 2024 NV Energy contracts; the utility sued to keep the same questions before the commission — the fight is over which instrument governs.",
@@ -907,6 +929,16 @@
    "aliases": [
     "bid security",
     "delivery security"
+   ]
+  },
+  {
+   "slug": "billed-capacity",
+   "term": "billed capacity",
+   "def": "The megawatts of a data-centre operator's delivered capacity that tenants are currently paying for. Divided by the capacity in service it gives the utilisation rate; the gap is space that is built and energised but still waiting for its tenant to move servers in.",
+   "aliases": [
+    "billed MW",
+    "utilisation rate",
+    "utilization rate"
    ]
   },
   {
@@ -1351,6 +1383,16 @@
    "aliases": [
     "capacity utilization",
     "产能利用率"
+   ]
+  },
+  {
+   "slug": "capex",
+   "term": "capex",
+   "def": "Money spent buying or building long-lived assets — buildings, servers, power equipment — which goes on the balance sheet and is depreciated over years, as opposed to operating expense paid as the service is used. A cloud company that leases a data hall or rents someone else's GPUs moves that spending out of capex, so a capex figure understates what it spends on compute.",
+   "aliases": [
+    "capital expenditure",
+    "capital expenditures",
+    "CapEx"
    ]
   },
   {
@@ -3074,6 +3116,17 @@
    ]
   },
   {
+   "slug": "delta-connection",
+   "term": "delta connection",
+   "def": "A way of wiring a three-phase device so that each of its three branches sits between two phase lines, forming a triangle with no neutral point; the alternative, star (wye), runs each branch from a line to a common centre. A delta branch sees the full line-to-line voltage, √3 times what a star branch sees, so a delta-connected converter must stack more cells per branch but needs no neutral.",
+   "aliases": [
+    "delta-connected",
+    "delta connected",
+    "角形接入",
+    "三角形接法"
+   ]
+  },
+  {
    "slug": "delta-t",
    "term": "delta-T",
    "def": "The temperature difference between the water returning to a chiller and the water leaving it. A plant is designed around a delta-T, and the flow it must pump for a given duty is inversely proportional to it."
@@ -3307,6 +3360,16 @@
    "def": "A simulated copy of a real asset, fed by its live data, used to rehearse changes before they touch the hardware — testing a control strategy, forecasting degradation, or learning what normal looks like so anomalies stand out. It is how an operator tries something on a plant without trying it on the plant.",
    "aliases": [
     "digital twins"
+   ]
+  },
+  {
+   "slug": "direct-green-power",
+   "term": "direct green power supply",
+   "def": "A Chinese arrangement, set out in national rules in 2025, that lets a new wind or solar plant supply a named large user over a dedicated line instead of selling through the public grid. For a data-centre campus it means cheaper, traceable renewable power, and the campus takes on more of the job of matching its load to the plant's output.",
+   "aliases": [
+    "direct green power",
+    "绿电直连",
+    "green-power direct connection"
    ]
   },
   {
@@ -3673,6 +3736,16 @@
    "aliases": [
     "right-of-way",
     "transmission easement"
+   ]
+  },
+  {
+   "slug": "east-data-west-computing",
+   "term": "East Data West Computing",
+   "def": "China's 2022 national plan for data-centre location: eight computing hubs — four near the demand centres (Beijing-Tianjin-Hebei, the Yangtze River Delta, the Greater Bay Area, Chengdu-Chongqing) and four where land, power and cooling are cheap (Inner Mongolia, Guizhou, Gansu, Ningxia) — with ten data-centre clusters inside them. New large campuses are steered into the hubs and held to efficiency ceilings.",
+   "aliases": [
+    "东数西算",
+    "Eastern Data Western Computing",
+    "East Data, West Computing"
    ]
   },
   {
@@ -4881,6 +4954,17 @@
    "aliases": [
     "pure-play foundry",
     "fabless"
+   ]
+  },
+  {
+   "slug": "framework-procurement",
+   "term": "framework procurement",
+   "def": "Tendering a year's or several years' volume of a standard item at once, awarding shares of it to several winning bidders at fixed prices, and then drawing it down with individual orders as projects need it. Chinese grid, telecom and internet buyers use it for power equipment; a winner gets a price and a share of the pool, not a guaranteed quantity.",
+   "aliases": [
+    "centralised procurement",
+    "centralized procurement",
+    "集采",
+    "framework tender"
    ]
   },
   {
@@ -6112,6 +6196,16 @@
    "def": "A second coolant circuit placed between the radioactive primary coolant and the water/steam side, so that a leak between sodium and water cannot happen inside the reactor. It costs efficiency and buys separation."
   },
   {
+   "slug": "internet-data-center",
+   "term": "internet data center",
+   "def": "China's regulatory name for the colocation data-centre business. Running one needs a value-added telecommunications licence, and foreign investors may hold at most half of a licence holder, which is why foreign-listed operators long held theirs through domestic companies tied to them by contract.",
+   "aliases": [
+    "internet data centre",
+    "IDC licence",
+    "IDC license"
+   ]
+  },
+  {
    "slug": "interregional-transfer-capability",
    "term": "interregional transfer capability",
    "def": "How much power can be moved from one grid region to a neighbouring one at a given moment without overloading a line. Low transfer capability between regions is what turns a local shortage into a blackout, because the surplus next door cannot get through.",
@@ -6661,6 +6755,17 @@
    ]
   },
   {
+   "slug": "line-frequency-transformer",
+   "term": "line-frequency transformer",
+   "def": "A conventional iron-core transformer working at the grid's own 50 or 60 Hz. Because the core must carry the flux of each slow cycle it is large and heavy, but it is passive, cheap per kilowatt, very reliable and provides isolation for free. Replacing it with a high-frequency stage is what makes a converter a solid-state transformer.",
+   "aliases": [
+    "工频变压器",
+    "power-frequency transformer",
+    "50 Hz transformer",
+    "60 Hz transformer"
+   ]
+  },
+  {
    "slug": "line-interactive",
    "term": "line-interactive",
    "def": "A UPS that normally passes the supply through while a transformer or inverter trims the voltage, stepping in fully only when the supply fails. Cheaper and more efficient than double conversion, at the cost of a short break the load must be able to ride."
@@ -7010,6 +7115,15 @@
     "LSTK",
     "lump sum turnkey",
     "EPC wrap"
+   ]
+  },
+  {
+   "slug": "maas",
+   "term": "MaaS",
+   "def": "Model-as-a-service: selling access to AI models through an API, billed per token, on the provider's own accelerators. It sits above renting out GPUs — the provider carries the utilisation risk and earns on the model as well as the hardware — and it is the layer where Chinese clouds now compete on price.",
+   "aliases": [
+    "model as a service",
+    "model-as-a-service"
    ]
   },
   {
@@ -8300,6 +8414,17 @@
    "def": "A corporation created alongside a partnership so that its shares are economically identical to the partnership's units and exchangeable one for one. It exists to let investors who cannot or will not hold partnership units buy the same economics."
   },
   {
+   "slug": "panama-power",
+   "term": "Panama power",
+   "def": "A prefabricated medium-voltage-to-DC power system specified by Alibaba and launched with Delta and Zhonhen in 2019: 10 kV AC in, 240 V DC out (later 336, 400 and 800 V), with the medium-voltage switchgear, a phase-shifting transformer and rectifier modules built and tested as one lineup. It is a transformer-rectifier — the isolation is a 50 Hz iron transformer — not a solid-state transformer.",
+   "aliases": [
+    "Panama",
+    "巴拿马电源",
+    "Panama architecture",
+    "Panama Architecture"
+   ]
+  },
+  {
    "slug": "paralleling-switchgear",
    "term": "paralleling switchgear",
    "def": "Switchgear whose controller synchronizes several generators onto one common bus, adds them in a set order, shares the load between them and sheds low-priority load if generation runs short — a room of engines behaving as one plant. It is what turns a collection of standby gen-sets into a campus-scale power source.",
@@ -8610,6 +8735,16 @@
    "def": "The control circuit inside a grid-following inverter that continuously estimates the grid voltage's frequency and phase so the machine can synchronise its injected current to them. It needs a firm voltage to lock onto, which is why grid-following inverters struggle where system strength is low.",
    "aliases": [
     "PLL"
+   ]
+  },
+  {
+   "slug": "phase-shifting-transformer",
+   "term": "phase-shifting transformer",
+   "def": "A line-frequency transformer with several secondary windings whose voltages are displaced in phase from one another, so rectifiers fed from different windings draw current at different moments and much of their distortion cancels before it reaches the grid. It lets a transformer-rectifier meet power-quality limits with plain rectifier modules. (Not the transmission-grid device of the same name that steers power flow between lines.)",
+   "aliases": [
+    "phase-shift transformer",
+    "移相变压器",
+    "multi-winding phase-shifting transformer"
    ]
   },
   {
@@ -9438,6 +9573,17 @@
    "aliases": [
     "rack manifolds",
     "vertical rack manifold"
+   ]
+  },
+  {
+   "slug": "rack-power-density",
+   "term": "rack power density",
+   "def": "The electrical power one rack draws, in kilowatts. Conventional server racks drew 5 to 15 kW; AI racks now draw 100 to 350 kW and roadmaps reach a megawatt. At those levels the current in low-voltage cables and busbars becomes unmanageable, which is what pushes cooling to liquid and distribution to higher DC voltages.",
+   "aliases": [
+    "rack density",
+    "kW per rack",
+    "kilowatts per rack",
+    "power per rack"
    ]
   },
   {
@@ -11433,6 +11579,15 @@
    ]
   },
   {
+   "slug": "supernode",
+   "term": "supernode",
+   "def": "A rack or small group of racks whose accelerators are wired together by a memory-speed fabric so that software treats them as one machine. Packing 72, 128 or more chips that tightly is what lifts a single rack from tens of kilowatts to hundreds.",
+   "aliases": [
+    "super node",
+    "超节点"
+   ]
+  },
+  {
    "slug": "supplemental-transmission",
    "term": "supplemental transmission",
    "def": "Transmission a utility builds for its own reliability, ageing-equipment or local service needs rather than to solve a regional problem the grid operator identified. It enters the regional plan without the competitive window or the benefit-cost test that regional projects face, which is why consumer advocates treat it as the least-reviewed large category of utility spending.",
@@ -11948,6 +12103,16 @@
    "aliases": [
     "time to power",
     "months to power"
+   ]
+  },
+  {
+   "slug": "token",
+   "term": "token",
+   "def": "The unit a language model reads and writes — a word or a piece of one. Model APIs are priced per million tokens in and out, and daily token volume has become the industry's gauge of inference demand: every token is arithmetic done on an accelerator, so token growth turns, through chips, into megawatts.",
+   "aliases": [
+    "tokens",
+    "token volume",
+    "per-million-token pricing"
    ]
   },
   {
@@ -12753,6 +12918,16 @@
    "aliases": [
     "wholesale brokerage",
     "wholesaler"
+   ]
+  },
+  {
+   "slug": "wholesale-colocation",
+   "term": "wholesale colocation",
+   "def": "Leasing whole data halls, buildings or campuses — megawatts at a time, often built to the tenant's own design — to one large customer on a long contract, as opposed to retail colocation's cages and racks for many small tenants. The tenant's specification, not the landlord's preference, usually decides the equipment.",
+   "aliases": [
+    "wholesale data centre",
+    "wholesale data center",
+    "wholesale leasing"
    ]
   },
   {

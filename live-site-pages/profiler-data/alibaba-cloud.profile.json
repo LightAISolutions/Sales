@@ -1,0 +1,1023 @@
+{
+ "schemaVersion": 7,
+ "slug": "alibaba-cloud",
+ "name": "Alibaba Cloud (阿里云) — the cloud business of Alibaba Group Holding Limited",
+ "shortName": "Alibaba Cloud",
+ "categories": [
+  "hyperscaler"
+ ],
+ "website": "https://www.alibabacloud.com",
+ "headquarters": "Hangzhou, China",
+ "employees": "Not disclosed for the cloud business; Alibaba Group headcount 132,165 at 2026-06-30",
+ "ownership": {
+  "type": "subsidiary",
+  "ticker": "NYSE: BABA / HKEX: 9988 (parent, Alibaba Group Holding Limited)",
+  "notes": "A business and legal-entity cluster inside Alibaba Group, not separately listed. PRC operating companies include 阿里云计算有限公司 (Alibaba Cloud Computing Ltd., a variable-interest entity 'involved in the operation of Cloud Intelligence Group') and the wholly owned Hangzhou AliCloud Apsara Information Technology Co., Ltd. Reported as 'Cloud Intelligence Group' through FY2026 (year to 31 Mar 2026) and, from the June 2026 quarter, inside 'AI Cloud and Compute Services' together with the T-Head chip unit. The 2023 full spin-off was cancelled and has not been revived. Alibaba Group has been dual-primary listed in Hong Kong and New York since 28 Aug 2024."
+ },
+ "summary": "BOTTOM LINE UP FRONT: Alibaba Cloud is the one Chinese hyperscaler whose data-centre power architecture has a name, a published specification and a disclosed supply contract — Panama, a 10 kV-to-240/336 V DC transformer-rectifier launched with Delta and Zhonhen in 2019 — and its 2026 ESG report says its 'latest generation of data centers is now fully compatible with HVDC power supply architectures up to 800V'. No Alibaba source discloses a solid-state transformer in service; the only SST-adjacent link on the record is a joint innovation centre with Sungrow (2026). It is spending at hyperscale: 'over RMB190 billion' of a RMB380 billion three-year AI and cloud infrastructure plan had been deployed by 30 Jun 2026, management says five-year needs 'will far exceed' that budget, the June-quarter capex alone was RMB67.7B (+75%), and the Apsara Conference (22 Sep 2026) set a target of more than 20 GW of Alibaba Cloud-operated data-centre capacity by 2032 while warning that 'global shortages across the AI data center supply chain' limit its speed. BACKGROUND: Covered as the cloud unit rather than the group, because it is the only part of Alibaba Group that buys data-centre power equipment and it is reported as its own segment. Segment revenue FY2026 (year to 31 Mar 2026) RMB158.1B (+34%), adjusted EBITA RMB14.3B; June 2026 quarter, in the new AI Cloud and Compute Services segment that adds the T-Head chip unit, RMB48.4B (+45%) and adjusted EBITA RMB5.6B (+133%). Omdia puts it first in mainland China cloud infrastructure at 37% (Q4 2025). It operates 107 availability zones in 31 regions. The Pentagon added Alibaba Group to its Chinese Military Companies list on 8 Jun 2026; Alibaba calls the inclusion 'a mistake', and the list does not bar non-Defense buyers or suppliers. Collection gap: Alibaba names no data-centre power supplier in its own filings; every supplier link comes from the supplier's side.",
+ "ecosystemRole": "We assess Alibaba Cloud as the Chinese hyperscaler that writes its own power architecture and makes suppliers build to it. Basis: Panama was announced jointly by Alibaba's data-centre infrastructure expert, Delta and Zhonhen in November 2019, with Alibaba stating the module efficiency (98.5%) and the equipment saving (40%); Zhonhen's disclosed contracts show Alibaba buying through annual framework tenders signed by Alibaba (China) Co., Ltd. — RMB800 million for Panama in 2021 — and Zhonhen's 2025 report records Panama 2.0, STS and ATS wins at both 'Alibaba self-built rooms and several third-party co-built rooms'. It also designs the rack: the Panjiu AL128 supernode carries up to 350 kW of power per rack through an in-rack busbar, and T-Head's Zhenwu accelerators fill Alibaba's own supernodes. Its role for power sellers is therefore double: the largest single specifier of HVDC in China's cloud market, and a buyer whose 800 V roadmap is stated only as 'compatible', not deployed. Broker estimates, not disclosures, put Zhonhen's share anywhere from about 50% of Alibaba Cloud's HVDC (36Kr) through 80%-plus (Soochow, 2025) to more than 90% of Panama (Shanxi Securities), with Delta at about 20% (Soochow); the '~70%' figure in circulation has no located source.",
+ "productsAndServices": [
+  {
+   "name": "Alibaba Cloud public cloud — Apsara IaaS/PaaS",
+   "category": "Cloud infrastructure",
+   "description": "'A comprehensive suite of cloud services based on a three-tiered architecture of infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS) and model-as-a-service (MaaS)', built on the Apsara operating system (Shenlong virtualisation, Pangu storage, Luoshen networking). Alibaba says the cloud served about 67% of A-share listed companies in FY2026. It operates 107 availability zones in 31 regions (Sep 2026); regions opened in 2025–2026 include Mexico, Johor, Paris, São Paulo and Zhongwei, and Türkiye, Finland and the Netherlands are promised within 12 months of Apsara 2026.",
+   "highlights": [
+    "Omdia, Q4 2025: mainland China cloud infrastructure US$14.7B (+26%); Alibaba Cloud 37%, Huawei Cloud 17%, Tencent Cloud 10%",
+    "Eddie Wu (Aug 2026): 'We operate the largest number of data centers among Asian cloud providers'",
+    "Targets set in 2026: US$100 billion of external cloud revenue by calendar 2030 and above 20% profit margin in the AI cloud business",
+    "Region counts differ by date and definition: 92 AZs in 29 regions (31 Dec 2025), 34 regions (FY2026 annual report, 31 Mar 2026), 107 AZs in 31 regions (Sep 2026)"
+   ],
+   "positioning": "China's leader on infrastructure revenue, about 20% of cloud revenue overseas (SemiAnalysis); competes with Huawei Cloud, Tencent Cloud and Volcano Engine at home and the US hyperscalers abroad",
+   "soldThrough": "Direct enterprise sales, self-serve and partners; hybrid and financial cloud (IDC: first in China financial cloud six years running)",
+   "targetSegments": [
+    "Chinese enterprises",
+    "financial institutions",
+    "AI developers",
+    "international enterprises"
+   ]
+  },
+  {
+   "name": "AI infrastructure — Lingjun clusters, PAI, Panjiu supernodes, HPN networking",
+   "category": "AI compute",
+   "description": "Lingjun (灵骏) intelligent computing clusters and the Platform for AI (PAI) are Alibaba's AI-compute services; PAI integrates 'the full suite of the NVIDIA Physical AI software stack' (Apsara 2025). The Panjiu (磐久) AL128 supernode is Alibaba's own rack design: 128–144 GPUs in a custom double-width rack, 'up to 350 kW power supply capacity and 500 kW heat-removal capacity', 2 kW of liquid cooling per GPU, and centralised in-rack busbar power, with compute nodes decoupled from power nodes. Networking is HPN 8.0 (800 Gbps; the Pro version supports over 130,000 ports at 800G in one cluster). Alibaba says it has cut delivery of a large AI data centre to 100 days.",
+   "highlights": [
+    "Panjiu AL128: 350 kW per rack, in-rack busbar, power nodes decoupled from compute nodes (aliyun.com, Oct 2025) — the busbar voltage is not stated",
+    "Zhenwu M890 supernode instances in commercial sale; Kimi K3 and Qwen 3.8-Max served on them (Aug 2026)",
+    "Management: A100 and V100 GPUs bought in 2018 and 2020 'continue to be used by customers at close to full capacity'"
+   ],
+   "positioning": "An in-house rack and chip stack that makes Alibaba, not a GPU vendor, the author of its rack power envelope",
+   "soldThrough": "Cloud instances and dedicated clusters; management says it may also sell T-Head AI servers to data-centre partners and co-build with them",
+   "targetSegments": [
+    "model developers",
+    "enterprises",
+    "Alibaba internal model labs"
+   ],
+   "roadmap": "Upgraded supernode with Zhenwu V900 and clusters to 500,000 cards (Apsara 2026); V900 mass production Q1 2027"
+  },
+  {
+   "name": "T-Head (平头哥) chips — Zhenwu accelerators and Yitian CPUs (inside the segment since June 2026)",
+   "category": "Custom silicon",
+   "description": "T-Head designs the Zhenwu PPU accelerators, Yitian CPUs, Panmai SmartNICs and Zhenyue SSD controllers. More than 100,000 Zhenwu PPUs were deployed on Alibaba Cloud's public cloud by March 2026 and more than 500,000 previous-generation chips have shipped. The Zhenwu M890 is 'backed entirely by domestic supply chain'; the Zhenwu V900, announced at Apsara 2026, offers 'three times the performance' of the M890 with 216 GB of memory and 1,200 GB/s of inter-chip bandwidth, and is scheduled for mass production in Q1 2027.",
+   "highlights": [
+    "Management (May 2026): domestic chips 'still show some gap, whether in power consumption or efficiency, versus advanced foreign chips'",
+    "Caixin (Jan 2026): Alibaba will support a future T-Head listing; status not re-checked since"
+   ],
+   "soldThrough": "Internal use and external customers (more than 650 for the M890, per the June-quarter call as relayed)",
+   "targetSegments": [
+    "Alibaba Cloud",
+    "external AI customers"
+   ]
+  },
+  {
+   "name": "Model-as-a-service — Model Studio (百炼) and the Qwen models",
+   "category": "Cloud AI services",
+   "description": "Model Studio sells Qwen and third-party models; its customer base grew eight-fold year on year to March 2026. Qwen models run from Qwen3-Max (Sept 2025) to Qwen3.8-Max (Aug 2026, open weights) with Qwen 4 in training; Qwen has been downloaded more than 3 billion times. From the June 2026 quarter the model labs and the Qwen consumer and office products report in a separate 'AI Labs and Applications' segment; model serving to cloud customers stays in AI Cloud and Compute Services.",
+   "highlights": [
+    "AI-related product revenue RMB12.4B in the June 2026 quarter — the 12th straight quarter of triple-digit growth",
+    "Omdia/Frost & Sullivan: first in China enterprise MaaS by revenue (H1 2025); IDC: second to Volcano Engine by token volume"
+   ],
+   "soldThrough": "API, token plans, enterprise agreements",
+   "targetSegments": [
+    "developers",
+    "enterprises"
+   ]
+  },
+  {
+   "name": "Data-centre power architecture — Panama and HVDC up to 800 V",
+   "category": "Data-centre design (specifier)",
+   "description": "Panama (巴拿马电源) was launched on 20 Nov 2019 by Alibaba, Delta and Zhonhen: medium-voltage '10KV AC' converted directly to 240 V DC (also 336 V), power-module efficiency 98.5%, 'single-system capacity above 2.5 MW', with Alibaba's data-centre infrastructure expert saying it removes 40% of the equipment; it was then already running at Alibaba data centres in Zhejiang and Jiangsu. Zhonhen describes the product as integrating '10kV distribution, a new-type transformer, an uninterruptible power supply (HVDC) and intelligent distribution units' — a transformer followed by rectifier modules, not a solid-state transformer. Alibaba's 2026 ESG report: 'Our latest generation of data centers is now fully compatible with HVDC power supply architectures up to 800V', after moving from low-voltage AC to HVDC.",
+   "highlights": [
+    "Topology per broker research: a multi-winding phase-shifting transformer feeding rectifier modules with no separate PFC stage (Tianfeng, Nov 2025); Soochow classes Panama with designs that keep the 50 Hz step-down stage, against the SST that removes it",
+    "Zhonhen's product matrix now lists Panama at 240/400/800 V; no Alibaba source says an 800 V Panama is deployed",
+    "Self-built data-centre PUE 1.187 in FY2026 (1.247 five years earlier); clean electricity 73.6% of self-built data-centre supply; target 100% clean electricity for cloud from 2030",
+    "Leased data centres carry PUE-linked clauses in supplier contracts (ESG 2026)"
+   ],
+   "positioning": "The first hyperscaler-specified single-stage medium-voltage-to-DC architecture in China; NVIDIA's August 2026 800 VDC execution paper names the Panama Architecture as a transformer-rectifier implementation of its data-hall DC power block — as an architecture, not as a company",
+   "soldThrough": "Specified by Alibaba; bought through framework tenders from Zhonhen and Delta",
+   "targetSegments": [
+    "Alibaba self-built and partner-built data centres"
+   ]
+  },
+  {
+   "name": "Data-centre build programme — self-built, leased and co-built capacity",
+   "category": "AI data-centre programme",
+   "description": "Alibaba reports separate PUE series for self-built and leased data centres, so it uses both. Named self-built campuses include Zhangbei (Miaotan), Hangzhou Linping, Heyuan, Shanghai Fengjing, Nantong and Ulanqab. Management said in May 2026 that 'not all of these compute centers will be self-built using our own CapEx ... we will secure some through OpEx leasing arrangements' and co-build with data-centre partners. The HK$80B placing completed on 26 Aug 2026 earmarks about HK$31.9B 'to accelerate the buildout of hyperscale AI data centers' and about HK$47.9B to expand global computing infrastructure.",
+   "highlights": [
+    "Target: more than 20 GW of Alibaba Cloud-operated data-centre capacity by 2032 (Apsara 2026); in 2025 Wu framed it as 10× the 2022 energy scale",
+    "Capital commitments contracted but not provided for: RMB54.1B at 31 Mar 2026",
+    "No landlord is named by Alibaba; AtHub (数据港) takes 98.30% of its revenue from 'a large internet company' it does not name, and Zhonhen's 2017 filings pair an Alibaba Zhangbei project with AtHub's HB33 — an inference, not a disclosure",
+    "SemiAnalysis: GDS and VNET 'captured barely a third of ByteDance and Alibaba orders in 2024–2026YTD'"
+   ],
+   "soldThrough": "Internal capacity; equipment bought by framework tender; leases and co-builds with partners",
+   "targetSegments": [
+    "Alibaba Cloud and T-Head workloads"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Panama power (巴拿马电源) — as launched and as now offered",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Input",
+     "value": "从中压10KV AC直转240V DC (medium-voltage 10 kV AC directly to 240 V DC); 336 V DC also offered"
+    },
+    {
+     "band": "Electrical",
+     "label": "Outputs offered today (Zhonhen)",
+     "value": "Panama（240V/400V/800V）"
+    },
+    {
+     "band": "Ratings",
+     "label": "Capacity per system",
+     "value": "单套系统容量可达2.5MW以上 (Delta, 2019); 单套系统支持 2.5MW IT 负载供电 (Zhonhen, 2025)"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "power module 98.5% (Delta/Alibaba, 2019); system 97.5%以上 (Zhonhen, 2025)"
+    },
+    {
+     "band": "Architecture",
+     "label": "What is integrated",
+     "value": "10kV 配电、变压器、不间断电源和输出配电单元 (10 kV distribution, transformer, UPS and output distribution); 将传统4级的供电链路压缩为1级"
+    },
+    {
+     "band": "Architecture",
+     "label": "Classification",
+     "value": "transformer-rectifier (line-frequency phase-shifting transformer + rectifier modules), not a solid-state transformer"
+    },
+    {
+     "band": "Savings",
+     "label": "Equipment and space",
+     "value": "设备和工程施工量可节省40%，占地面积减少50% (Delta, 2019)"
+    },
+    {
+     "band": "Procurement",
+     "label": "Disclosed framework",
+     "value": "RMB799,996,033.57 (tax-inclusive), '阿里巴巴数据中心2021年巴拿马电源框架项目', signed 2021-11-25 with 阿里巴巴（中国）有限公司"
+    }
+   ],
+   "notes": "The two efficiency figures measure different things (module vs system). 'Panama 2.0' is Zhonhen's term; no Alibaba document defines the generations."
+  },
+  {
+   "product": "Panjiu AL128 supernode (磐久 AI Infra 2.0)",
+   "specs": [
+    {
+     "band": "Compute",
+     "label": "GPUs per rack",
+     "value": "整柜支持128~144颗GPU芯片"
+    },
+    {
+     "band": "Power",
+     "label": "Rack power",
+     "value": "支持高达350kw供电能力"
+    },
+    {
+     "band": "Power",
+     "label": "Distribution",
+     "value": "采用BusBar柜内集中供电; 算力节点与供电节点解耦"
+    },
+    {
+     "band": "Cooling",
+     "label": "Heat removal",
+     "value": "500kw散热能力; 单颗GPU芯片2kw的液冷散热能力"
+    }
+   ],
+   "notes": "The busbar voltage is not stated in any source located."
+  },
+  {
+   "product": "Zhenwu V900 accelerator (T-Head)",
+   "specs": [
+    {
+     "band": "Performance",
+     "label": "Relative performance",
+     "value": "three times the performance of the Zhenwu M890"
+    },
+    {
+     "band": "Memory",
+     "label": "GPU memory",
+     "value": "216 GB"
+    },
+    {
+     "band": "Interconnect",
+     "label": "Inter-chip bandwidth",
+     "value": "1,200 GB/s"
+    },
+    {
+     "band": "Precision",
+     "label": "Formats",
+     "value": "native FP8 and FP4"
+    },
+    {
+     "band": "Schedule",
+     "label": "Availability",
+     "value": "mass production and commercial release in Q1 2027"
+    }
+   ]
+  },
+  {
+   "product": "Data-centre energy KPIs (ESG Report 2026)",
+   "specs": [
+    {
+     "band": "Efficiency",
+     "label": "Average PUE, self-built data centres",
+     "value": "FY2026 1.187 (FY2025 1.190); target ≤1.3"
+    },
+    {
+     "band": "Energy",
+     "label": "Clean electricity, self-built cloud data centres",
+     "value": "73.6% in FY2026 (+9.6 pp)"
+    },
+    {
+     "band": "Water",
+     "label": "WUE, self-built",
+     "value": "1.198 L/kWh"
+    },
+    {
+     "band": "Energy",
+     "label": "Group purchased electricity",
+     "value": "9,310,297 MWh in FY2026 (6,764,967 MWh FY2025)"
+    }
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "RMB",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2025 (year to 31 Mar 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-03-31",
+    "metrics": [
+     {
+      "name": "Cloud Intelligence Group revenue",
+      "actual": "RMB118,028M",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No segment consensus located"
+     },
+     {
+      "name": "Cloud Intelligence Group adjusted EBITA",
+      "actual": "RMB10,556M (+72%), margin 8.9%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company-reported"
+     },
+     {
+      "name": "Group capex",
+      "actual": "RMB85,972M",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Group-wide; the 20-F says capex is primarily computer equipment and data-centre construction"
+     }
+    ]
+   },
+   {
+    "period": "FY2026 (year to 31 Mar 2026)",
+    "periodType": "annual",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Cloud Intelligence Group revenue",
+      "actual": "RMB158,132M (+34%); external +33%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Quarterly growth 26% → 34% → 36% → 38%"
+     },
+     {
+      "name": "Cloud Intelligence Group adjusted EBITA",
+      "actual": "RMB14,265M (+35%), margin 9.0%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Company-reported"
+     },
+     {
+      "name": "Cloud revenue growth, June 2025 quarter",
+      "actual": "+26% (RMB33,398M)",
+      "expected": "+18.4% (LSEG, per Reuters)",
+      "verdict": "beat",
+      "result": "The only published cloud consensus located for the period"
+     },
+     {
+      "name": "Group revenue, June 2025 quarter",
+      "actual": "RMB247.65B",
+      "expected": "RMB252.92B (LSEG, per Reuters)",
+      "verdict": "miss",
+      "result": "US shares rose about 8% at the open on the cloud beat"
+     },
+     {
+      "name": "Group revenue, March 2026 quarter",
+      "actual": "RMB243.38B (+3%)",
+      "expected": "RMB246.5B (FactSet, per IG)",
+      "verdict": "miss",
+      "result": "Reuters (via Yahoo Finance) reported the revenue shortfall"
+     },
+     {
+      "name": "Group capex",
+      "actual": "RMB126,063M (US$18,275M)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Quarterly: 38,676 / 31,501 / 28,999 / 26,887 (RMB M)"
+     }
+    ],
+    "commentary": "Group revenue RMB1,023.67B (+3%; +11% like-for-like), net income RMB102.1B (−19%), free cash flow an outflow of RMB46.6B."
+   },
+   {
+    "period": "Q1 FY2027 (June 2026 quarter)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "AI Cloud and Compute Services revenue",
+      "actual": "RMB48,437M (US$7,139M), +45% on the recast base; external +45%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Segment now combines Cloud Intelligence Group and T-Head; the year-ago quarter was recast from RMB33,398M to RMB33,418M"
+     },
+     {
+      "name": "AI Cloud and Compute Services adjusted EBITA",
+      "actual": "RMB5,628M (+133%), margin about 11.6%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "CFO: margin rising to 12%"
+     },
+     {
+      "name": "AI-related product revenue",
+      "actual": "RMB12,376M (US$1,824M)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "12th consecutive quarter of triple-digit growth"
+     },
+     {
+      "name": "Group revenue",
+      "actual": "RMB268,953M (+9%)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "No consensus figure read in full"
+     },
+     {
+      "name": "Adjusted EPS",
+      "actual": "RMB8.52",
+      "expected": "Bloomberg consensus (24% higher, level not stated)",
+      "verdict": "miss",
+      "result": "Attributed to non-operating items — higher tax, a goodwill impairment, weaker investment income and an EU fine (华尔街见闻)"
+     },
+     {
+      "name": "Group capex",
+      "actual": "RMB67,678M (US$9,975M), +75%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "'Over RMB190 billion' of the RMB380B plan deployed since February 2025; Wu: 'one should not take this quarter's RMB67.7 billion in CapEx, multiply it by four'"
+     }
+    ],
+    "commentary": "Management guided September-quarter cloud growth above 50% (华尔街见闻) and says AI capex pays back 'within three years' at current AI gross margins. Goldman raised its FY2027/FY2028 capex forecasts to RMB210B/RMB240B."
+   }
+  ],
+  "commentary": "Alibaba Cloud is reported as a segment of Alibaba Group (NYSE: BABA / HKEX: 9988). Capex is reported only at group level. Published consensus for the cloud segment itself was located for one quarter only (June 2025); other expectation fields are left empty rather than reconstructed. No normalized-KPI overlay is set: the segment is not the whole reporting company. Next results (September 2026 quarter): not announced as of 26 Sep 2026; the prior two were 15 Nov 2024 and 25 Nov 2025, each preceded by a board-meeting notice about two weeks earlier."
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-24",
+   "category": "product-launch",
+   "headline": "Apsara 2026: Zhenwu V900 (3× the M890, mass production Q1 2027), supernode clusters to 500,000 cards, HPN 8.0 Pro, and first regions in Türkiye, Finland and the Netherlands within 12 months",
+   "read": "More of the rack becomes Alibaba-designed.",
+   "source": "https://www.alizila.com/alibaba-clouds-2026-apsara-conference-full-stack-ai-roadmap-along-with-global-market-expansion-plan/"
+  },
+  {
+   "date": "2026-09-22",
+   "category": "capacity",
+   "headline": "Apsara 2026: Eddie Wu targets more than 20 GW of Alibaba Cloud-operated data-centre capacity by 2032 and says 'global shortages across the AI data center supply chain' limit how fast it can scale",
+   "read": "The demand is set; the constraint named is the equipment supply chain.",
+   "source": "https://www.alizila.com/aliviews-eddie-wu-shares-alibabas-strategic-full-stack-ai-roadmap-at-the-2026-apsara-conference/"
+  },
+  {
+   "date": "2026-08-26",
+   "category": "financial",
+   "headline": "HK$80B placing completed: about 40% of net proceeds for hyperscale AI data centres and cloud upgrades, about 60% for global computing infrastructure",
+   "read": "Equity, not only operating cash, now funds the build.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082601205.pdf"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "financial",
+   "headline": "June 2026 quarter: new AI Cloud and Compute Services segment (Cloud plus T-Head) revenue RMB48.4B (+45%), adjusted EBITA +133%; capex RMB67.7B (+75%); 'over RMB190 billion' of the RMB380B plan deployed",
+   "read": "Cloud accelerates while group profit falls 75%.",
+   "source": "https://data.alibabagroup.com/ecms-files/1532295521/fa5d65fc-9b3e-4e82-a8fc-4ce1c3e2c407/Alibaba%20Group%20Announces%20June%20Quarter%202026%20Results.pdf"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "capacity",
+   "headline": "Wu on the call: Alibaba has cut delivery time for large AI data centres to 100 days",
+   "read": "Speed of build is now a stated competitive metric.",
+   "source": "https://data.alibabagroup.com/ecms-files/1567773279/9a0e4864-83fe-4a69-aa1e-e5c14f5b2e73/EN%20Jun%202026%20Q%20-%20Alibaba%20Earnings%20Call.pdf"
+  },
+  {
+   "date": "2026-08-14",
+   "category": "ma",
+   "headline": "CATL signs definitive agreements to take 49% of the controlling shareholder of Zhonhen, Alibaba's principal Panama and HVDC supplier (RMB4.1B)",
+   "read": "Alibaba's main power supplier gains a battery-maker co-owner.",
+   "source": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF"
+  },
+  {
+   "date": "2026-07-10",
+   "category": "partnership",
+   "headline": "Sungrow unveils a 'Green Token Joint Innovation Center' with Alibaba Cloud at the launch of its EnerNeo SST (medium-voltage AC to 800 V DC)",
+   "read": "The only SST-adjacent link on Alibaba's record — a joint R&D centre, not a purchase.",
+   "source": "https://36kr.com/p/3889131101600521"
+  },
+  {
+   "date": "2026-06-18",
+   "category": "product-launch",
+   "headline": "ESG Report 2026: 'Our latest generation of data centers is now fully compatible with HVDC power supply architectures up to 800V'; self-built PUE 1.187; clean electricity 73.6%",
+   "read": "'Compatible up to 800 V' is a design statement, not a deployment count.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800880.pdf"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "policy",
+   "headline": "Alibaba Group included in the US DoD Chinese Military Companies (1260H) list; the company calls it 'a mistake' and says it will take legal action",
+   "read": "A Defense-contract bar with no general export control attached — but the 20-F already reports suppliers and partners affected by the prospect.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0609/2026060900235.pdf"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "financial",
+   "headline": "FY2026 results: cloud +38% in the March quarter; Wu says five-year capital needs 'will far exceed' RMB380B and some capacity will come through OpEx leasing and co-builds",
+   "read": "The build will be partly rented — landlords gain an Alibaba channel.",
+   "source": "https://data.alibabagroup.com/ecms-files/1508695866/9e0f30c9-651f-41f9-a269-90db4b7d0dd7/EN%20Mar%202026%20Q%20-%20Alibaba%20Earnings%20Call.pdf"
+  },
+  {
+   "date": "2026-04-27",
+   "category": "market",
+   "headline": "Omdia: Alibaba Cloud 37% of mainland China cloud infrastructure spending in Q4 2025 (Huawei 17%, Tencent 10%)",
+   "read": "Share still rising as the market grows 26%.",
+   "source": "https://omdia.tech.informa.com/pr/2026/apr/mainland-china-cloud-infrastructure-spending-rises-26percent-in-q4-2025-driven-by-ai-and-agent-growth"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "procurement",
+   "headline": "Zhonhen's 2025 annual report records Panama 2.0, STS and ATS wins at 'Alibaba self-built rooms and several third-party co-built rooms'",
+   "read": "Alibaba specifies the power system even in partner-built halls.",
+   "source": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225131190.PDF"
+  },
+  {
+   "date": "2026-04-08",
+   "category": "leadership",
+   "headline": "New AI technology committee under Eddie Wu; Li Feifei becomes cloud CTO over technology and AI infrastructure; Zhou Jingren moves to lead the Tongyi model unit",
+   "read": "The infrastructure owner is now a named executive.",
+   "source": "https://www.caixinglobal.com/2026-04-08/alibaba-revamps-ai-structure-with-new-tech-committee-102431852.html"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "financial",
+   "headline": "December 2025 quarter results: cloud +36%; 92 availability zones in 29 regions at year-end",
+   "read": "Reported unusually late in March.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0319/2026031900801.pdf"
+  },
+  {
+   "date": "2026-01-27",
+   "category": "policy",
+   "headline": "China gives ByteDance, Alibaba and Tencent a conditional green light for more than 400,000 H200s in total; licences described as too restrictive",
+   "read": "Imported GPUs arrive rationed.",
+   "source": "https://finance.yahoo.com/news/exclusive-china-gives-green-light-034730976.html"
+  },
+  {
+   "date": "2026-01-23",
+   "category": "corporate",
+   "headline": "Caixin: Alibaba will support a future listing of its chip unit T-Head",
+   "read": "The chip unit is being set up to stand on its own — then folded into the cloud segment in June.",
+   "source": "https://www.caixinglobal.com/2026-01-23/alibaba-plans-spinoff-of-chip-arm-t-head-amid-ai-boom-102406970.html"
+  },
+  {
+   "date": "2025-12-23",
+   "category": "procurement",
+   "headline": "MLex (via TechNode): Alibaba considering 40,000–50,000 AMD MI308 accelerators",
+   "read": "A second foreign GPU source under export licence — unconfirmed.",
+   "source": "https://technode.com/2025/12/23/alibaba-reportedly-plans-to-order-more-than-40000-amd-mi308-chips/"
+  },
+  {
+   "date": "2025-11-29",
+   "category": "market",
+   "headline": "Soochow Securities estimates Zhonhen supplied 80%-plus and Delta about 20% of Alibaba's 2025 HVDC purchases",
+   "read": "Broker estimates, not disclosures — but consistent: a two-supplier architecture.",
+   "source": "https://pdf.dfcfw.com/pdf/H3_AP202511291790795032_1.pdf"
+  },
+  {
+   "date": "2025-11-25",
+   "category": "financial",
+   "headline": "September 2025 quarter: revenue RMB247.8B beats Bloomberg consensus of RMB245.2B; cloud +34%",
+   "read": "The quarter the cloud line crossed 30% growth.",
+   "source": "https://www.scmp.com/tech/big-tech/article/3334116/alibaba-posts-5-rise-quarterly-revenue-ai-cloud-computing-momentum"
+  },
+  {
+   "date": "2025-11-15",
+   "category": "policy",
+   "headline": "FT reports a White House memo alleging Alibaba supported the PLA; Alibaba: 'completely false'",
+   "read": "The precursor to the June 2026 listing.",
+   "source": "https://www.malaymail.com/news/money/2025/11/15/alibaba-shares-fall-after-ft-report-citing-white-house-memo-on-chinese-military-ties-china-calls-claim-groundless/198435"
+  },
+  {
+   "date": "2025-09-24",
+   "category": "product-launch",
+   "headline": "Apsara 2025: investment to go 'beyond' RMB380B; Panjiu AL128 supernode (350 kW per rack); NVIDIA's Physical AI stack in PAI; first data centres promised in Brazil, France and the Netherlands",
+   "read": "The rack moved to 350 kW before the architecture moved to 800 V.",
+   "source": "https://www.alibabacloud.com/blog/602567"
+  },
+  {
+   "date": "2025-08-29",
+   "category": "financial",
+   "headline": "June 2025 quarter: cloud +26% against 18.4% expected; group revenue misses LSEG; US shares up about 8%",
+   "read": "The acceleration begins.",
+   "source": "https://www.investing.com/news/stock-market-news/alibaba-falls-short-of-firstquarter-revenue-estimates-4216135"
+  },
+  {
+   "date": "2025-02-24",
+   "category": "financial",
+   "headline": "Alibaba announces at least RMB380B of cloud and AI infrastructure investment over three years — more than its previous decade of such spending",
+   "read": "The plan every later capex figure is measured against.",
+   "source": "https://www.alibabagroup.com/en-US/document-1830678592242057216"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Alibaba Cloud is a specifier-buyer: it designs the power architecture and then buys it from a short supplier list by framework tender. Basis: Panama was announced by Alibaba with Delta and Zhonhen in 2019 with Alibaba stating the specification; Zhonhen's disclosed contracts run from a 2017 Zhangbei HVDC order through a ~RMB300M 2018 HVDC tender to a RMB800M 2021 Panama framework signed by Alibaba (China) Co., Ltd.; Zhonhen's 2025 report shows Panama 2.0, STS and ATS wins in both self-built and partner-built halls. A vendor enters by being written into the architecture, not by bidding against it.",
+  "(High confidence) We assess that Panama is a transformer-rectifier and that Alibaba's stated 800 V position is compatibility, not deployment. Basis: Zhonhen and Delta describe a 10 kV transformer feeding rectifier modules; Soochow's taxonomy separates designs that keep the 50 Hz step-down stage (Panama) from the SST that removes it; the 2026 ESG report says its latest data centres are 'fully compatible with HVDC power supply architectures up to 800V' but gives no deployed 800 V capacity. No Alibaba source mentions a solid-state transformer. Indicator to watch: an Alibaba or supplier disclosure of 800 V Panama, or of an SST, in service at an Alibaba campus.",
+  "(Moderate confidence) We assess that the supplier base is concentrated and now partly battery-owned. Basis: broker estimates range from about 50% of Alibaba Cloud's HVDC to more than 90% of Panama for Zhonhen, with Delta at about 20% (Soochow); CATL signed definitive agreements on 14 Aug 2026 to take 49% of Zhonhen's controlling holdco. Zhonhen's own 2025 report shows its largest single customer at only RMB93.5M, so its Alibaba revenue is either spread across contracting entities and partners or much smaller than in 2021 (RMB319.9M in the first nine months) — no disclosure settles which.",
+  "(Moderate confidence) We assess that capacity will increasingly be leased and co-built, which moves part of the equipment decision to landlords working to Alibaba's specification. Basis: Wu (May 2026) — 'not all of these compute centers will be self-built ... we will secure some through OpEx leasing arrangements' and co-build with partners, possibly selling T-Head servers to them; separate PUE series for leased data centres and PUE clauses in their contracts; Zhonhen's wins in 'third-party co-built rooms'. Collection gap: Alibaba names no landlord; AtHub's 98.30% single-customer dependence is consistent with Alibaba but unnamed.",
+  "(Moderate confidence) We assess that the rack is where Alibaba's power demand is moving fastest. Basis: the Panjiu AL128 supernode already specifies 350 kW per rack on an in-rack busbar with power nodes decoupled from compute; T-Head's Zhenwu V900 supernodes scale to 500,000 cards; management says domestic chips still trail foreign ones on power efficiency. Collection gap: the busbar voltage and the rack power-supply vendors are not disclosed.",
+  "(Moderate confidence) We assess that the June 2026 1260H listing is a US-facing constraint with limited direct effect on Chinese suppliers. Basis: Alibaba's HKEX statement that the list 'does not impose any other export controls or sanctions, nor does it prohibit any persons (other than the U.S. Department of Defense) from business dealings'; the 20-F nonetheless reports that relationships with business partners 'have been affected' by the prospect of listing. Indicator to watch: any move to the Entity List, which the 20-F names as a risk."
+ ],
+ "relationships": [
+  {
+   "slug": "zhonhen",
+   "type": "supplier",
+   "status": "active",
+   "since": "2017",
+   "scale": "RMB800M Panama framework (2021)",
+   "via": "Panama power (巴拿马电源); HVDC; STS and ATS",
+   "note": "Zhonhen co-launched Panama with Alibaba and Delta in 2019 and is its principal Panama and HVDC supplier; the 2021 framework contract was RMB799,996,033.57 with Alibaba (China) Co., Ltd.",
+   "context": "Zhonhen's disclosures run from 2017 wins at Alibaba's Zhangbei campus, through a ~RMB300M 2018 HVDC and rack-head-cabinet award, to the 2021 Panama framework (about 56% of Zhonhen's 2020 revenue). Its sales to Alibaba and affiliates were RMB88.0M in 2019, RMB298.6M in 2020 and RMB319.9M in the first nine months of 2021. Its 2025 report records Panama 2.0, STS and ATS wins at Alibaba self-built and third-party co-built rooms, but its largest single 2025 customer bought only RMB93.5M. Share estimates are brokers', not Zhonhen's: about 50% of Alibaba Cloud HVDC (36Kr), 80%-plus of 2025 HVDC (Soochow), more than 90% of Panama (Shanxi Securities). No source for the '~70%' figure in circulation was found.",
+   "source": "https://static.cninfo.com.cn/finalpage/2021-11-27/1211710378.PDF"
+  },
+  {
+   "slug": "delta-electronics",
+   "type": "supplier",
+   "status": "active",
+   "since": "2019",
+   "via": "Panama power modules",
+   "note": "Delta co-launched Panama with Alibaba and Zhonhen on 20 Nov 2019 and supplies Panama and HVDC equipment; Soochow estimates about 20% of Alibaba's 2025 HVDC purchases.",
+   "context": "Delta China's launch release quotes Alibaba's data-centre infrastructure expert Liu Shuiwang on 98.5% module efficiency and 40% fewer devices, and says Panama was already running at Alibaba data centres in Zhejiang and Jiangsu. Delta's release credits Delta and Alibaba; independent broker coverage credits all three. Delta reported more than 500 Panama units online across customers by August 2024 (per Tianfeng). The supply share is a broker estimate, not a disclosure.",
+   "source": "https://www.delta-china.com.cn/zh-cn/news/19212"
+  },
+  {
+   "slug": "sungrow",
+   "type": "partner",
+   "status": "active",
+   "since": "2026",
+   "via": "Green Token Joint Innovation Center",
+   "note": "Sungrow and Alibaba Cloud set up a 'Green Token Joint Innovation Center' in H1 2026 to push AIDC power-supply innovation, unveiled at Sungrow's EnerNeo SST launch.",
+   "context": "Sungrow's H1 2026 interim report records the centre; trade coverage describes its scope as green-power direct supply, 800 V DC supply and compute-power coordination. No Alibaba purchase of a Sungrow SST is disclosed.",
+   "source": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF"
+  },
+  {
+   "slug": "narada",
+   "type": "supplier",
+   "status": "active",
+   "via": "data-centre backup power",
+   "note": "Narada said on its investor platform that Alibaba Cloud is a customer for which it mainly provides data-centre backup power products.",
+   "context": "The statement (relayed February 2025) is Narada's own; neither its 2025 annual report nor its H1 2026 interim names Alibaba. Retail-blog claims about specific tender shares were not used.",
+   "source": "https://m.163.com/dy/article/JOTURV0P0519QIKK.html"
+  },
+  {
+   "slug": "nvidia",
+   "type": "supplier",
+   "status": "active",
+   "via": "A100/V100 installed fleet; Physical AI software stack in PAI",
+   "note": "Alibaba runs Nvidia GPUs bought in 2018 and 2020 'at close to full capacity' and integrated Nvidia's Physical AI software stack into PAI in 2025, while replacing externally bought chips with T-Head's where it can.",
+   "context": "The 20-F cites US 'export restrictions on advanced computing chips of Nvidia'. China conditionally approved H200 purchases in January 2026; actual Alibaba H200 deliveries are not confirmed in any source located.",
+   "source": "https://data.alibabagroup.com/ecms-files/1567773279/9a0e4864-83fe-4a69-aa1e-e5c14f5b2e73/EN%20Jun%202026%20Q%20-%20Alibaba%20Earnings%20Call.pdf"
+  },
+  {
+   "slug": "bytedance",
+   "type": "competitor",
+   "status": "active",
+   "note": "ByteDance's Volcano Engine is Alibaba Cloud's closest rival in China's model-API market — first on token volume, while Alibaba leads on revenue — and the other of China's two largest AI-infrastructure spenders.",
+   "context": "IDC gave Volcano Engine 49.2% and Alibaba Cloud 27% of China's public-cloud LLM token calls in H1 2025; Omdia and Frost & Sullivan put Alibaba first on enterprise MaaS revenue. SemiAnalysis groups the two as the wholesale market's largest orders.",
+   "source": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Section 1260H list (US DoD Chinese Military Companies)",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-08",
+   "exposure": "Alibaba Group was included on 8 Jun 2026 (a February 2026 inclusion had been withdrawn). Under FY2024 NDAA §805 the Defense Department may not contract directly with listed entities from 30 Jun 2026, with a product ban from 30 Jun 2027 (WilmerHale). Alibaba says the list 'does not impose any other export controls or sanctions, nor does it prohibit any persons (other than the U.S. Department of Defense) from business dealings with the Group'.",
+   "mitigation": "Alibaba calls its inclusion 'a mistake' and says it 'will take all available legal action'.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0609/2026060900235.pdf"
+  },
+  {
+   "regime": "US AI-chip export controls",
+   "status": "in-effect",
+   "exposure": "The 20-F cites US export restrictions on Nvidia's advanced chips, the House-passed Remote Access Security Act (Jan 2026) that would restrict China-based access to cloud compute on advanced US chips, and a possible new US framework for AI-chip exports; it says access to 'chips and data center services' has been and may be further affected. The 2023 cloud spin-off was cancelled citing these controls.",
+   "mitigation": "T-Head chips 'backed entirely by domestic supply chain' (Zhenwu M890); a second-generation domestic chip taping out in H2 2026.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0520/2026052001340.pdf"
+  },
+  {
+   "regime": "China chip-purchase guidance (CAC)",
+   "status": "in-effect",
+   "effectiveDate": "2025-09",
+   "exposure": "The 20-F reports that in September 2025 the Cyberspace Administration of China 'requested Chinese technology companies to halt purchases of certain chips'; Beijing's later H200 approvals were conditional and, per TrendForce, capped below 200,000 units in total.",
+   "source": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0520/2026052001340.pdf"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Eddie Yongming Wu (吴泳铭)",
+   "title": "Chief Executive Officer and Director, Alibaba Group; Chairman and CEO, Alibaba Cloud Intelligence (as titled in 2025)",
+   "background": [
+    "Alibaba Group CEO since September 2023; co-founder (FY2026 annual report)",
+    "Titled 'Chairman and CEO of Alibaba Cloud Intelligence' at Apsara 2025; 2026 Alizila pieces title him only as Group CEO, so his cloud title after the June 2026 resegmentation is unconfirmed",
+    "Owns the capex narrative: the RMB380B plan, the >20 GW by 2032 target, the three-year payback framing"
+   ]
+  },
+  {
+   "name": "Feifei Li (李飞飞)",
+   "title": "Chief Technology Officer and President of International Business, Alibaba Cloud Intelligence",
+   "background": [
+    "Named cloud CTO over technology and AI infrastructure in April 2026, replacing Zhou Jingren (Caixin)",
+    "Titled CTO and President of International Business at Apsara 2026 (Alizila)"
+   ]
+  },
+  {
+   "name": "Joseph C. Tsai (蔡崇信)",
+   "title": "Chairman, Alibaba Group",
+   "background": [
+    "Chairman per the FY2026 annual report; opened Apsara 2026"
+   ]
+  },
+  {
+   "name": "Toby Hong Xu (徐宏)",
+   "title": "Chief Financial Officer, Alibaba Group",
+   "background": [
+    "Group CFO since April 2022 (FY2026 annual report)",
+    "On the capex cycle: says servers typically recoup their cost within three years against a five-year depreciation life (时代周报, Aug 2026)"
+   ]
+  },
+  {
+   "name": "Jiangwei Jiang (蒋江伟)",
+   "title": "Vice President, Cloud Intelligence Group",
+   "background": [
+    "Listed as a partner with this title in the FY2026 annual report"
+   ]
+  },
+  {
+   "name": "Lei Wang (王磊)",
+   "title": "Senior Vice President, Cloud Intelligence Group",
+   "background": [
+    "Listed as a partner with this title in the FY2026 annual report"
+   ]
+  },
+  {
+   "name": "Liu Shuiwang (刘水旺)",
+   "title": "Senior expert, data-centre infrastructure (as of 2019)",
+   "background": [
+    "Announced Panama with Delta and Zhonhen in November 2019 and quoted its 98.5% module efficiency",
+    "Current role not confirmed in any 2025–2026 source"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "SemiAnalysis — The Chinese AI Infrastructure Boom (free portion)",
+   "url": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Alizila — Alibaba Cloud 2026 Apsara Conference: full-stack AI roadmap and global expansion plan",
+   "url": "https://www.alizila.com/alibaba-clouds-2026-apsara-conference-full-stack-ai-roadmap-along-with-global-market-expansion-plan/",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "TechNode Global — Alibaba Cloud new regions in Europe, Malaysia and Hong Kong; 107 AZs in 31 regions",
+   "url": "https://technode.global/2026/09/23/alibaba-cloud-new-regions-europe-malaysia-hong-kong/",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "Alizila — AliViews: Eddie Wu shares Alibaba's full-stack AI roadmap at the 2026 Apsara Conference (>20 GW by 2032; supply-chain shortages)",
+   "url": "https://www.alizila.com/aliviews-eddie-wu-shares-alibabas-strategic-full-stack-ai-roadmap-at-the-2026-apsara-conference/",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "IT之家 — 2026 Yunqi (Apsara) Conference: Wu targets over 20 GW of Alibaba Cloud data-centre capacity by 2032",
+   "url": "https://www.ithome.com/1/005/587.htm",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "Sungrow (阳光电源, SZSE 300274) — 2026 interim report: EnerNeo SST and the Green Token Joint Innovation Center with Alibaba Cloud",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
+   "date": "2026-08-29"
+  },
+  {
+   "label": "Megmeet (麦格米特, SZSE 002851) — 2026 interim report (no Alibaba customer disclosure)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522762.PDF",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Alibaba Group / HKEX — completion of the placing of 710,000,000 new shares (HK$80B)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0826/2026082601205.pdf",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Alibaba Group / HKEX — proposed placing of new shares under general mandate, use of proceeds",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0823/2026082300007.pdf",
+   "date": "2026-08-23"
+  },
+  {
+   "label": "时代周报 via 21世纪经济网 — June-quarter call: \"over RMB190 billion\" of the RMB380 billion plan deployed; segment reorganisation",
+   "url": "https://www.21jingji.com/article/20260821/herald/317fc4db067ea91b020116fee2448113.html",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "华尔街见闻 — June-quarter results: adjusted EPS 24% below Bloomberg consensus; Goldman raises FY27/FY28 capex forecasts",
+   "url": "https://wallstreetcn.com/articles/3779973",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Caixin Global — Alibaba's profit plunges as e-commerce falters and AI investment jumps",
+   "url": "https://www.caixinglobal.com/2026-08-21/alibabas-profit-plunges-as-e-commerce-business-falters-ai-investment-jumps-102476436.html",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "TechNode — Alibaba's AI spending lifts capex 75% as quarterly profit falls 76%",
+   "url": "https://technode.com/2026/08/21/alibabas-ai-spending-lifts-capex-75-as-quarterly-profit-falls-76/",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Alibaba Group — June Quarter 2026 results release (AI Cloud and Compute Services segment)",
+   "url": "https://data.alibabagroup.com/ecms-files/1532295521/fa5d65fc-9b3e-4e82-a8fc-4ce1c3e2c407/Alibaba%20Group%20Announces%20June%20Quarter%202026%20Results.pdf",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Alibaba Group — June Quarter 2026 earnings call transcript",
+   "url": "https://data.alibabagroup.com/ecms-files/1567773279/9a0e4864-83fe-4a69-aa1e-e5c14f5b2e73/EN%20Jun%202026%20Q%20-%20Alibaba%20Earnings%20Call.pdf",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "Zhonhen Electric — CATL capital increase in the controlling holdco, definitive agreements (cninfo)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "NVIDIA — 800 VDC Architecture: Industry Alignment & Execution (white paper; names the Panama Architecture as a transformer-rectifier implementation; registration-gated)",
+   "url": "https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/",
+   "date": "2026-08"
+  },
+  {
+   "label": "36Kr — Sungrow launches the EnerNeo SST; Green Token Joint Innovation Center with Alibaba Cloud unveiled",
+   "url": "https://36kr.com/p/3889131101600521",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "TrendForce — China reportedly to allow Nvidia H200 imports, approvals capped below 200k chips",
+   "url": "https://www.trendforce.com/news/2026/07/09/news-china-reportedly-to-allow-nvidia-h200-imports-but-approvals-may-be-capped-below-200k-chips-less-than-half-requested/",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Alibaba Group — ESG Report 2026 (HKEX): data-centre power architecture, PUE, clean electricity",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800880.pdf",
+   "date": "2026-06-18"
+  },
+  {
+   "label": "Alibaba Group — FY2026 Annual Report (HKEX): segments, VIEs, listing status, leadership",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800844.pdf",
+   "date": "2026-06-18"
+  },
+  {
+   "label": "WilmerHale — Pentagon adds 65 new entities to the Section 1260H list",
+   "url": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Alibaba Group / HKEX — voluntary announcement on inclusion in the US DoD Chinese Military Companies list",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0609/2026060900235.pdf",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Fortune (Bloomberg) — Pentagon accuses Alibaba, Baidu and BYD of being Chinese military companies",
+   "url": "https://fortune.com/2026/06/08/pentagon-accuses-alibaba-baidu-byd-china-military-companies/",
+   "date": "2026-06-08"
+  },
+  {
+   "label": "36Kr — Zhonhen's share of Alibaba HVDC and Panama (broker-style estimates)",
+   "url": "https://eu.36kr.com/en/p/3824015091736577",
+   "date": "2026-05-25"
+  },
+  {
+   "label": "Alibaba Group — FY2026 Form 20-F (HKEX copy): capex, risk factors, CMC list, export controls",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0520/2026052001340.pdf",
+   "date": "2026-05-20"
+  },
+  {
+   "label": "Alibaba Group — March Quarter 2026 and Fiscal Year 2026 results release",
+   "url": "https://data.alibabagroup.com/ecms-files/1532295521/5b1cb883-8d00-4237-a148-6631cc12a5d2/Alibaba%20Group%20Announces%20March%20Quarter%202026%20and%20Fiscal%20Year%202026%20Results.pdf",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "Alibaba Group — March Quarter 2026 earnings call transcript",
+   "url": "https://data.alibabagroup.com/ecms-files/1508695866/9e0f30c9-651f-41f9-a269-90db4b7d0dd7/EN%20Mar%202026%20Q%20-%20Alibaba%20Earnings%20Call.pdf",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "科创板日报 — FY2026 results: AI infrastructure spending to \"far exceed\" RMB380 billion",
+   "url": "https://www.chinastarmarket.cn/detail/2370588",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "Yahoo Finance — Alibaba Q4 FY2026 earnings: revenue short of expectations per Reuters",
+   "url": "https://finance.yahoo.com/news/alibaba-q4-2026-earnings-profit-111304555.html",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "IG — Alibaba Q4 FY26 earnings preview (FactSet consensus)",
+   "url": "https://www.ig.com/en/news-and-trade-ideas/alibaba-q4-fy26-earnings-preview--what-to-expect-on-13-may-260512",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Omdia — Mainland China cloud infrastructure spending rises 26% in Q4 2025",
+   "url": "https://omdia.tech.informa.com/pr/2026/apr/mainland-china-cloud-infrastructure-spending-rises-26percent-in-q4-2025-driven-by-ai-and-agent-growth",
+   "date": "2026-04-27"
+  },
+  {
+   "label": "Zhonhen Electric — 2025 annual report (Panama 240/400/800 V; Alibaba Panama 2.0, STS and ATS wins)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225131190.PDF",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "AtHub (数据港, SSE 603881) — 2025 annual report: 98.30% of revenue from \"a large internet company\" (unnamed)",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-04-18/1225123460.PDF",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "Caixin Global — Alibaba revamps AI structure with new tech committee",
+   "url": "https://www.caixinglobal.com/2026-04-08/alibaba-revamps-ai-structure-with-new-tech-committee-102431852.html",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Alibaba Group / HKEX — December Quarter 2025 results",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0319/2026031900801.pdf",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Reuters via Yahoo Finance — China gives ByteDance, Alibaba and Tencent a conditional green light for H200 purchases",
+   "url": "https://finance.yahoo.com/news/exclusive-china-gives-green-light-034730976.html",
+   "date": "2026-01-27"
+  },
+  {
+   "label": "Caixin Global — Alibaba to support a future listing of chip unit T-Head",
+   "url": "https://www.caixinglobal.com/2026-01-23/alibaba-plans-spinoff-of-chip-arm-t-head-amid-ai-boom-102406970.html",
+   "date": "2026-01-23"
+  },
+  {
+   "label": "TechNode — Alibaba reportedly plans to order more than 40,000 AMD MI308 chips (citing MLex)",
+   "url": "https://technode.com/2025/12/23/alibaba-reportedly-plans-to-order-more-than-40000-amd-mi308-chips/",
+   "date": "2025-12-23"
+  },
+  {
+   "label": "东吴证券 (Soochow) — 柜外电源专题：从UPS到SST (HVDC/SST report; supplier-share estimates)",
+   "url": "https://pdf.dfcfw.com/pdf/H3_AP202511291790795032_1.pdf",
+   "date": "2025-11-29"
+  },
+  {
+   "label": "Alibaba Group / HKEX — September Quarter 2025 results",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1125/2025112501051.pdf",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "SCMP — Alibaba posts 5% rise in quarterly revenue on AI and cloud momentum",
+   "url": "https://www.scmp.com/tech/big-tech/article/3334116/alibaba-posts-5-rise-quarterly-revenue-ai-cloud-computing-momentum",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "Reuters via Malay Mail — Alibaba shares fall after FT report citing White House memo",
+   "url": "https://www.malaymail.com/news/money/2025/11/15/alibaba-shares-fall-after-ft-report-citing-white-house-memo-on-chinese-military-ties-china-calls-claim-groundless/198435",
+   "date": "2025-11-15"
+  },
+  {
+   "label": "Alibaba Group / HKEX — date of board meeting (September-quarter 2025 results)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1112/2025111200683.pdf",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "天风证券 via Sina — HVDC and Panama architecture (phase-shifting transformer + rectifier modules)",
+   "url": "https://finance.sina.com.cn/roll/2025-11-02/doc-infvyuyt3664013.shtml",
+   "date": "2025-11-02"
+  },
+  {
+   "label": "Alibaba Cloud (阿里云政企业务) — Panjiu AL128 supernode: 350 kW rack power, in-rack busbar",
+   "url": "https://ue.aliyun.com/news/20251021",
+   "date": "2025-10-21"
+  },
+  {
+   "label": "Alibaba Cloud Community — Apsara 2025 recap (Alizila repost)",
+   "url": "https://www.alibabacloud.com/blog/602567",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "Alibaba Group — Apsara Conference 2025: investment beyond the RMB380 billion plan",
+   "url": "https://www.alibabagroup.com/en-US/document-1911884625546838016",
+   "date": "2025-09-29"
+  },
+  {
+   "label": "山西证券 via BigQuant — morning note on Apsara 2025 and Zhonhen's Panama share",
+   "url": "https://bigquant.com/square/paper/9bfa2966-a467-4c25-ae37-1e47b1031f36",
+   "date": "2025-09-25"
+  },
+  {
+   "label": "Xinhua — Eddie Wu keynote: Alibaba Cloud data-centre energy scale 10× 2022 by 2032",
+   "url": "https://www.news.cn/tech/20250924/c0c0f36318774c84afa44e06b2868639/c.html",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "TechCrunch — Alibaba to offer Nvidia's physical-AI development tools in its AI platform",
+   "url": "https://techcrunch.com/2025/09/24/alibaba-to-offer-nvidias-physical-ai-development-tools-in-its-ai-platform/",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "Reuters via Investing.com — Alibaba falls short of first-quarter revenue estimates; cloud +26% vs 18.4% expected",
+   "url": "https://www.investing.com/news/stock-market-news/alibaba-falls-short-of-firstquarter-revenue-estimates-4216135",
+   "date": "2025-08-29"
+  },
+  {
+   "label": "Alibaba Group / HKEX — June Quarter 2025 results",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0829/2025082901540.pdf",
+   "date": "2025-08-29"
+  },
+  {
+   "label": "Alibaba Group / HKEX — March Quarter 2025 and FY2025 results",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0515/2025051500869.pdf",
+   "date": "2025-05-15"
+  },
+  {
+   "label": "Alibaba Group — Alibaba to invest RMB380 billion in AI and cloud infrastructure over next three years",
+   "url": "https://www.alibabagroup.com/en-US/document-1830678592242057216",
+   "date": "2025-02-24"
+  },
+  {
+   "label": "金融界 via NetEase — Narada on the investor platform: Alibaba Cloud is a customer for data-centre backup power",
+   "url": "https://m.163.com/dy/article/JOTURV0P0519QIKK.html",
+   "date": "2025-02-21"
+  },
+  {
+   "label": "Alibaba Group / HKEX — September Quarter 2023 results (full cloud spin-off not to proceed)",
+   "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/1116/2023111600954.pdf",
+   "date": "2023-11-16"
+  },
+  {
+   "label": "Zhonhen Electric — contract announcement: Alibaba data centre 2021 Panama power framework, RMB799,996,033.57 with 阿里巴巴（中国）有限公司",
+   "url": "https://static.cninfo.com.cn/finalpage/2021-11-27/1211710378.PDF",
+   "date": "2021-11-27"
+  },
+  {
+   "label": "Zhonhen Electric — bid-win notice: Alibaba data centre 2021 Panama power framework project",
+   "url": "https://static.cninfo.com.cn/finalpage/2021-10-27/1211388094.PDF",
+   "date": "2021-10-27"
+  },
+  {
+   "label": "证券时报e公司 via 中证网 — Zhonhen wins Alibaba's RMB800M Panama framework",
+   "url": "https://www.cs.com.cn/ssgs/gsxw/202110/t20211026_6213830.html",
+   "date": "2021-10-26"
+  },
+  {
+   "label": "中国IDC圈 — Panama power launch at the 2019 data-centre summit",
+   "url": "https://news.idcquan.com/scqb/172247.shtml",
+   "date": "2019-11-21"
+  },
+  {
+   "label": "Delta Electronics (China) — Alibaba, Delta and Zhonhen launch Panama power (10 kV AC to 240 V DC)",
+   "url": "https://www.delta-china.com.cn/zh-cn/news/19212",
+   "date": "2019-11-20"
+  },
+  {
+   "label": "Zhonhen Electric — 2018 bid win: Alibaba data-centre HVDC and rack-head cabinets (~RMB300M)",
+   "url": "https://static.cninfo.com.cn/finalpage/2018-10-20/1205515703.PDF",
+   "date": "2018-10-19"
+  },
+  {
+   "label": "Zhonhen Electric — 2017 wins at Alibaba Zhangbei and AtHub HB33",
+   "url": "https://static.cninfo.com.cn/finalpage/2017-08-16/1203805407.PDF",
+   "date": "2017-08-16"
+  },
+  {
+   "label": "Wall Street Horizon — Alibaba earnings calendar (next date unconfirmed)",
+   "url": "https://www.wallstreethorizon.com/alibaba-earnings-calendar"
+  },
+  {
+   "label": "Alibaba Cloud — global locations (107 availability zones in 31 regions)",
+   "url": "https://www.alibabacloud.com/en/global-locations"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

@@ -1,0 +1,936 @@
+{
+ "schemaVersion": 7,
+ "slug": "chindata",
+ "name": "Beijing Chindata Co., Ltd. (北京秦淮数据有限公司) and affiliated operating companies — Chindata China",
+ "shortName": "Chindata",
+ "categories": [
+  "developer"
+ ],
+ "website": "https://www.chindatagroup.com",
+ "headquarters": "Beijing, China (Wangjing, Chaoyang District)",
+ "founded": 2015,
+ "employees": "Not disclosed; 115 R&D staff at 28 Feb 2026 (HEC inquiry reply)",
+ "ownership": {
+  "type": "private",
+  "notes": "Chindata China is not one company: HEC's filing defines 秦淮数据 as the operating companies controlled by 宜昌东数三号投资有限责任公司 — eight core companies (seven foreign-invested subsidiaries and a former VIE) plus new Yichang, Shaoguan, Ulanqab and Zhongwei subsidiaries; the IDC licence is held by 北京秦淮数据有限公司. Bain Capital's WinTriX DC Group (the renamed Chindata Group Holdings, taken private in 2023) sold 100% to a consortium led by HEC (东阳光) for RMB28.0B; signed 2025-09-10, closed 2026-01-16. The holding company 宜昌东数一号 'has no controlling shareholder and no actual controller'; the listed HEC Technology (SSE 600673) holds 30% and is issuing shares to buy the rest, pending SSE approval and CSRC registration. Bridge Data Centres, the former international arm, stayed with Bain and is a separate company; a five-year mutual non-compete from 2026-01-16 keeps Chindata China inside mainland China."
+ },
+ "summary": "BOTTOM LINE UP FRONT: Chindata China runs what it calls the industry's first commercial SST-powered compute project — a Delta silicon-carbide solid-state transformer converting 10 kV AC to 800 V DC in one step, built for Meituan at the Sangyuan campus in Huailai and declared in formal operation on 2 Jul 2026 — and says it will scale SST use while working with domestic equipment makers on core components to localise them. The 'first' is Chindata's own claim and holds only as 'commercial': Eaton says an SST pilot at a VNET site in North China has run since end-2024. It is also the landlord behind most of ByteDance's rented North China capacity: its acquirer discloses that one unnamed customer took 90.12% of 2025 revenue on mostly 10-year contracts, and lists that customer's own campuses as Volcano Engine projects. It has 800 MW in service (end-Feb 2026), 886 MW signed but undelivered, and 824 MW of new orders in Jan–Aug 2026 including several hundred MW from a newly won internet company. BACKGROUND: Founded in August 2015 and later controlled by Wangsu; Bain Capital bought it in 2019 (Mingtiandi dates Bain's first investment to 2018), combined it with Bridge Data Centres, listed it on Nasdaq in 2020 and took it private in 2023 at US$8.60 per ADS (US$3.16B equity); the China business was sold to an HEC-led consortium for RMB28.0B (closed 16 Jan 2026), and HEC's listed company is buying out the other investors. 2025 revenue RMB6.37–6.38B; 2024 carve-out net profit RMB1.31B. PUE 1.21 in 2025 and 1.18 in Feb 2026. Its buying rule matters to any power vendor: for equipment it tenders among the vendors on the customer's qualified-vendor list, then buys that vendor's UPS. Named power suppliers: Delta (SST), Changshan Beiming (power modules and UPS), Eaton through its agent, Cummins (gensets), HOPPECKE and Shoto (batteries); Huawei and Schneider are named among core-equipment makers. Megmeet appears nowhere in either HEC filing.",
+ "ecosystemRole": "We assess Chindata China as the corpus's first Chinese wholesale landlord and the clearest named site where a solid-state transformer carries a production AI load in China. Basis: Chindata's own release dates formal commercial operation of the Sangyuan SST project to 2 Jul 2026 and says it wrote the SST technical specification 'from 0 to 1' and led the full-chain design, after 34 performance and safety tests; Delta supplied the SST; HEC supplied custom stacked-foil capacitors; Meituan is the tenant. Chindata is third among third-party operators in China by in-service capacity (9.7%) and first around Beijing (22.7%), per Frost & Sullivan research commissioned for HEC's filing. For a power-electronics seller the landlord is a door with two locks: the landlord writes the architecture — 800 V HVDC plus SST plus storage at three levels is its stated direction — but for UPS it buys from the tenant's approved list. Chindata's stated intent to localise SST core components is the explicit opening for domestic SST and power-module makers; the Delta project is the incumbent reference.",
+ "productsAndServices": [
+  {
+   "name": "Wholesale hyperscale capacity — build-to-suit campuses",
+   "category": "Data-centre leasing (wholesale)",
+   "description": "Chindata leases whole data-centre modules or campuses: 'the data-centre module or campus is the smallest leasing unit, with customised technical solutions and equipment selection' — the tenant brings its servers, Chindata customises rack layout, power and cooling, and bills monthly by racks or billed capacity. Wholesale is 97.7% of revenue and retail 2.3% (Beijing and Shenzhen). Contracts are 'mostly 10 years'; the first wholesale contract expires in November 2027 and renewal talks had not started at the September 2026 filing. The sales team is 'organised by large internet customer'.",
+   "highlights": [
+    "800.15 MW in service and 733.39 MW billed at 28 Feb 2026 (91.66% utilisation); 799.34 MW in service at end-2025",
+    "886.17 MW signed but undelivered (547.84 MW binding, 338.33 MW reserved); 824.17 MW of new orders Jan–Aug 2026, including several hundred MW from a newly won top internet company",
+    "Two contract models: power-inclusive (包电) and power pass-through (非包电)",
+    "Customer A: 91.00% of 2024 revenue, 90.12% of 2025, 90.22% of Jan–Feb 2026; top five above 98.7% (HEC filing). Chindata's own profile page gives 80.23% (2024) and 83.54% (Jan–May 2025) — no source reconciles the two"
+   ],
+   "positioning": "Third among China's third-party operators by in-service capacity (9.7% share) and first around Beijing (22.7%), per Frost & Sullivan research commissioned for HEC's filing; peers by 2025 in-service capacity: GDS 1,515 MW, VNET 889 MW wholesale, Range about 750 MW, AtHub 401 MW",
+   "soldThrough": "Direct to hyperscale internet customers by tender and negotiation; asset-light O&M for third-party owners (Ping An framework, 2025)",
+   "targetSegments": [
+    "Chinese internet platforms (ByteDance inferred as Customer A; Meituan named)",
+    "cloud providers"
+   ]
+  },
+  {
+   "name": "Campus portfolio — capital ring, Yangtze Delta, Greater Bay Area and the northwest",
+   "category": "Data-centre campuses",
+   "description": "In service at end-Feb 2026: capital ring (Huailai in Zhangjiakou, Hebei, and Lingqiu in Datong, Shanxi) 780.30 MW; Yangtze Delta (Nantong) 15.09 MW; Greater Bay Area retail 4.76 MW. Huailai hosts the headquarters base, the Sangyuan base (site of the SST), the Cunrui base and the Guantinghu/Donghuayuan base; Lingqiu's Taihangshan base runs phases 1–9 with an own 220 kV substation. New campuses under HEC: Qingyang (Gansu), Zhongwei (Ningxia; RMB24B, 1.2 GW framework), Shaoguan (Guangdong; phase 1 150 MW), Ulanqab (Inner Mongolia; a GW-scale direct-green-power zone) and a 7.5 MW showcase at Yidu, Hubei.",
+   "highlights": [
+    "Pipeline: 2,289.48 MW under construction or to start by 2028 plus 3,820.88 MW long-term — 6,110.36 MW in total (HEC reply)",
+    "Website, 'as of Q3 2026': 860 MW operating, 660 MW under construction, over 8 GW planned",
+    "Lingqiu's 220 kV substation (2023): 360 MW, stepping 220 kV straight to 10 kV with a patented high-impedance split-winding transformer"
+   ],
+   "soldThrough": "Owned and operated",
+   "targetSegments": [
+    "hyperscale tenants in national hub nodes"
+   ]
+  },
+  {
+   "name": "SST intelligent DC power — the Sangyuan project (with Meituan, HEC and Delta)",
+   "category": "Data-centre power architecture",
+   "description": "Chindata's Sangyuan base in Huailai runs a solid-state-transformer DC power system for Meituan, declared in formal commercial operation on 2 Jul 2026: a '10 kV delta-connected' SST converting 10 kV AC to 800 V DC in one step at 98.5% efficiency, with storage integrated for peak-valley arbitrage and backup. Chindata says it built the SST specification 'from 0 to 1' and led the full-chain design over 34 tests; Delta supplied the indoor SST (SiC high-frequency conversion, solid insulation, 1 MW per cabinet in one square metre, 240/400/800 V DC outputs); HEC supplied custom stacked-foil capacitor banks; Meituan leases the hall long-term. Chindata says it will 'steadily expand' SST use and work with domestic equipment makers on core components to accelerate localisation.",
+   "highlights": [
+    "Dates differ by source: unveiled at CDCC 20 Nov 2025; Delta's February 2026 brand-news issue says Chindata \"formally implemented\" the SST, with a launch ceremony but no date; a trade post of 29 Jan 2026 expected use from April 2026; Chindata dates formal commercial operation to 2 Jul 2026. DG Matrix's republished June 2026 piece says it \"went live\" in February 2026",
+    "HEC's inquiry reply: 'the Sangyuan project has deployed an SST–HVDC–integrated lithium-storage scheme'",
+    "Project MW and the isolation frequency are not disclosed; Delta says upgrading only the power system can accommodate several thousand additional AI servers"
+   ],
+   "positioning": "Chindata calls it 'the industry's first commercial SST intelligent DC power project for a compute centre'; Eaton says its MV SST pilot at a VNET site with a leading internet company has run since end-2024 and claims the first SST deployment in an internet data centre — Chindata's claim holds with the 'commercial' qualifier",
+   "soldThrough": "Built into the tenant's leased hall; equipment bought from Delta and HEC",
+   "targetSegments": [
+    "AI tenants (Meituan first)"
+   ],
+   "roadmap": "Scale SST use across campuses and localise core components with domestic makers (July 2026)"
+  },
+  {
+   "name": "Power engineering products — 玄铁 800 V HVDC module, 磐石 modular architecture, MV UPS",
+   "category": "Data-centre power design",
+   "description": "Chindata's own designs: the 玄铁 (Xuantie) power module v3.0 'supports 12 kW to 150 kW per rack and uses an 800 V high-voltage DC architecture'; the 磐石 (Panshi) modular architecture of six systems and 24 product modules; a medium-voltage UPS (battery clusters on a high-voltage cascaded inverter with a static bypass); an integrated low-voltage power module (UPS, switchgear and battery cabling in one prefabricated enclosure); factory-prefabricated power modules from medium voltage through gensets, transformers and UPS to HVDC; and storage at the grid entry, the room distribution and the rack end to absorb transient spikes. HEC's filing states the architecture: 'an 800 V HVDC scheme combined with solid-state transformers and other equipment'.",
+   "highlights": [
+    "Own substations as standard; the CTO (Sep 2026) calls for dedicated 500 kV stations for GW campuses",
+    "Power density in operation: 7.2–50 kW racks; the Lingqiu phase-8 hall runs 42 kW racks; liquid cooling above 120 kW started at Qingyang",
+    "The prefabrication subsidiaries stayed with Bain's side at the sale; IP-sharing ended 31 Aug 2025"
+   ],
+   "soldThrough": "Internal design; equipment bought from vendors",
+   "targetSegments": [
+    "own campuses"
+   ]
+  },
+  {
+   "name": "Cooling — 玄冰 maglev phase-change and liquid cooling",
+   "category": "Data-centre cooling",
+   "description": "The 玄冰 (Xuanbing) maglev phase-change cooling line in air, liquid and hybrid versions supports racks 'above 200 kW'; the filing lists indirect evaporative cooling, waterless cooling (WUE ≈ 0, CLF ≤ 0.13), high-reliability liquid-cooling CDUs and evaporative cold-plate liquid cooling among ten in-house core technologies. PUE averaged 1.21 in 2025 and 1.18 in Feb 2026; the Lingqiu hybrid-cooled hall runs at 1.13.",
+   "highlights": [
+    "Cooling JV with Envicool (91/9); HVAC from Shenling; HEC contributes liquid-cooling components and fluorinated coolants"
+   ],
+   "soldThrough": "Internal",
+   "targetSegments": [
+    "own campuses"
+   ]
+  },
+  {
+   "name": "NEXT full-stack solution and asset-light operations",
+   "category": "Solutions and services",
+   "description": "The NEXT full-stack compute-centre solution, launched at CDCC on 20 Nov 2025 with Morong Electric, Eimicon, Shenling and Delta, covers power intake, distribution, cooling and operations and adds IT-level energy storage. A July 2025 framework with Ping An Trust and Ping An Infrastructure Fund has Chindata providing O&M and valuation services for data centres Ping An owns.",
+   "highlights": [
+    "The 鲲鹏智维 O&M platform claims fault-prediction accuracy above 95% (Nov 2025) or about 98% (Jul 2026)"
+   ],
+   "soldThrough": "Partnerships and service contracts",
+   "targetSegments": [
+    "third-party data-centre owners"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Sangyuan SST intelligent DC power project (formal operation 2 Jul 2026)",
+   "specs": [
+    {
+     "band": "Grid interface",
+     "label": "Connection",
+     "value": "首创SST 10kV角形接入模式 (first 10 kV delta-connected SST)"
+    },
+    {
+     "band": "Conversion",
+     "label": "Path",
+     "value": "实现10kV交流市电到800V直流一步式转换 (10 kV AC to 800 V DC in one step)"
+    },
+    {
+     "band": "Conversion",
+     "label": "DC outputs (Delta)",
+     "value": "multi-level DC outputs of 240V/400V/800V"
+    },
+    {
+     "band": "Conversion",
+     "label": "Semiconductors and insulation (Delta)",
+     "value": "silicon carbide (SiC) high-frequency power conversion; proprietary solid insulation"
+    },
+    {
+     "band": "Functions",
+     "label": "What the SST integrates",
+     "value": "SST集成电压变换、电气隔离、电能质量调控 (voltage conversion, galvanic isolation, power-quality control); 从\"工频\"到\"高频\""
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "项目供电效率达到98.5% (Chindata); up to 98.5% (Delta)"
+    },
+    {
+     "band": "Density",
+     "label": "Cabinet rating (Delta)",
+     "value": "a single power cabinet delivers up to 1 MW while occupying just one square meter"
+    },
+    {
+     "band": "Density",
+     "label": "Footprint saving",
+     "value": ">50% (Chindata, Jul 2026; Delta); 70% (Chindata, Nov 2025)"
+    },
+    {
+     "band": "Storage",
+     "label": "Integration",
+     "value": "储备一体式设计，可实现全天候峰谷套利和安全备电; switching among utility, battery and combined supply (Delta)"
+    },
+    {
+     "band": "Validation",
+     "label": "Tests",
+     "value": "历经34项全方位性能与安全测试"
+    },
+    {
+     "band": "Scale",
+     "label": "Project MW",
+     "value": "not disclosed"
+    }
+   ],
+   "notes": "Neither Chindata nor Delta states the isolation-transformer frequency. The footprint figures conflict between Chindata's November 2025 and July 2026 releases."
+  },
+  {
+   "product": "Capacity and utilisation (HEC filings)",
+   "specs": [
+    {
+     "band": "In service",
+     "label": "31 Dec 2024",
+     "value": "692.98 MW in service, 664.53 MW billed (95.89%)"
+    },
+    {
+     "band": "In service",
+     "label": "31 Dec 2025",
+     "value": "799.34 MW in service, 729.41 MW billed (91.25%)"
+    },
+    {
+     "band": "In service",
+     "label": "28 Feb 2026",
+     "value": "800.15 MW, 84,961 racks; 733.39 MW billed (91.66%)"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Signed, undelivered",
+     "value": "886.17 MW (547.84 MW binding + 338.33 MW reserved)"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Under construction or starting by 2028",
+     "value": "2,289.48 MW (capital ring 1,474.15; Yangtze Delta 19.13; Greater Bay Area 216.00; northwest 580.20)"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Long-term",
+     "value": "3,820.88 MW (total 6,110.36 MW)"
+    }
+   ]
+  },
+  {
+   "product": "Procurement (HEC filings, RMB million excluding VAT)",
+   "specs": [
+    {
+     "band": "Spend",
+     "label": "Equipment purchases",
+     "value": "2,139.3 (2024); 673.2 (2025); 219.2 (Jan–Feb 2026)"
+    },
+    {
+     "band": "Spend",
+     "label": "Energy purchases",
+     "value": "2,257.2 (2024); 2,512.0 (2025); 404.7 (Jan–Feb 2026); 4.968 TWh in 2025"
+    },
+    {
+     "band": "Suppliers",
+     "label": "Power modules and UPS",
+     "value": "石家庄常山北明科技: 389.3 (2024, 18.20% of equipment); 107.7 (2025, 15.99%)"
+    },
+    {
+     "band": "Suppliers",
+     "label": "Gensets",
+     "value": "康明斯电力(中国): 187.7 (2024); 81.0 (2025)"
+    },
+    {
+     "band": "Suppliers",
+     "label": "Batteries",
+     "value": "荷贝克电源系统(武汉): 60.4 (2025); 双登集团: 11.0 (Jan–Feb 2026)"
+    },
+    {
+     "band": "Suppliers",
+     "label": "UPS via Eaton agent 一零二四",
+     "value": "0.6 (2024); 33.4 (2025, Sangyuan phase 3); 3.7 (Jan–Feb 2026)"
+    },
+    {
+     "band": "Rule",
+     "label": "How UPS vendors are chosen",
+     "value": "根据客户的设备厂商合格供应商名单进行项目招投标后，采购相应厂商的 UPS 设备"
+    },
+    {
+     "band": "Capex ahead",
+     "label": "M&E in the share-raise projects",
+     "value": "Qingyang 417.31; Lingqiu phases 10–11 1,881.02; Ulanqab Huiteng No.5 phase 1 2,449.74"
+    }
+   ],
+   "notes": "The 2025 equipment trough coincides with the sale process. The customer's-list rule is stated for UPS; whether HVDC and power modules follow it is not disclosed."
+  }
+ ],
+ "financials": {
+  "currency": "RMB",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Revenue (audited carve-out)",
+      "actual": "RMB6,047.9M",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Pan-China CPA carve-out audit for the sale (天健审[2025]11-333号)"
+     },
+     {
+      "name": "Net profit (audited carve-out)",
+      "actual": "RMB1,309.4M",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Net assets RMB8,716.5M; total assets RMB21,639.4M"
+     },
+     {
+      "name": "Customer A share of revenue",
+      "actual": "91.00% (RMB5,515.0M)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Chindata's own profile page and the SSE work letter give 80.23% for the first customer — basis not reconciled"
+     }
+    ]
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Revenue",
+      "actual": "RMB6,372.08M (+5.14%, pro-forma audited, 东数一号); RMB6,382M (reported, 上海证券报)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Growth slowed; no performance commitment was attached to the sale (界面)"
+     },
+     {
+      "name": "Net profit",
+      "actual": "RMB949.05M (pro-forma, after acquisition debt and purchase-price allocation) vs RMB1,655M (reported for the operating business)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Different bases — the holding-company pro forma carries the RMB16.8B acquisition loan"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "45.15% (44.96% in 2024)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Pro-forma accounts"
+     },
+     {
+      "name": "In-service capacity",
+      "actual": "799.34 MW (billed 729.41 MW, 91.25%)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "HEC reply",
+      "kpi": "mw-energized",
+      "qty": 799.34
+     }
+    ],
+    "commentary": "Reuters (May 2025) put estimated 2025 EBITDA \"close to 4 billion yuan\"; Fitch downgraded WinTriX to BB from BBB in February 2025 on its shift to overseas investment and slower China hyperscale demand."
+   },
+   {
+    "period": "Jan–Feb 2026",
+    "periodType": "other",
+    "periodEnd": "2026-02-28",
+    "metrics": [
+     {
+      "name": "Revenue (pro-forma)",
+      "actual": "RMB1,065.69M; gross margin 47.33%",
+      "expected": "",
+      "verdict": "inline",
+      "result": "HEC restructuring report"
+     },
+     {
+      "name": "Net profit (pro-forma)",
+      "actual": "RMB157.23M",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Debt-to-assets 70.56% at the holding company"
+     },
+     {
+      "name": "Contracted capacity undelivered",
+      "actual": "886.17 MW (547.84 MW binding)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "HEC reply, 23 Sep 2026",
+      "kpi": "mw-contracted",
+      "qty": 886.17
+     }
+    ]
+   },
+   {
+    "period": "Transaction",
+    "periodType": "other",
+    "metrics": [
+     {
+      "name": "Sale price",
+      "actual": "RMB28.0B for 100% (~US$4B); appraisal RMB29.093B (income approach, 31 May 2025)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Funded RMB11.2B equity + RMB16.8B syndicated M&A loan led by Industrial Bank Shanghai; closed 2026-01-16"
+     },
+     {
+      "name": "Second step",
+      "actual": "HEC Technology to issue RMB8.0502B of shares for the other ~70% of 东数一号, plus a raise of up to RMB8B",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Filed 2026-07-21; revised 2026-09-23; needs SSE approval and CSRC registration"
+     }
+    ]
+   }
+  ],
+  "commentary": "Private since December 2023 and carved out in 2025–26, so no market consensus exists; every 'expected' field is empty. Two audited bases coexist: the carve-out accounts prepared for the sale (FY2024, Jan–May 2025) and the pro-forma accounts of the acquisition holding company (FY2024–Feb 2026), which include the acquisition debt. The last US-listed figures (FY2022 20-F) were not retrieved: SEC hosts were blocked from this session."
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-23",
+   "category": "financial",
+   "headline": "HEC files its reply to the SSE inquiry: 886.17 MW signed but undelivered, 824.17 MW of new orders in Jan–Aug 2026 including several hundred MW from a newly won top internet company, and an '800 V HVDC plus solid-state transformer' architecture",
+   "read": "A second hyperscale customer is arriving just as the first renewal (Nov 2027) approaches.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF"
+  },
+  {
+   "date": "2026-09-14",
+   "category": "leadership",
+   "headline": "CTO Xue Guoqing at the China Computing Power Conference: power–compute–industry integration and dedicated 500 kV stations for GW-scale campuses",
+   "read": "The next campuses are specified at transmission voltage.",
+   "source": "https://www.chindatagroup.com/media/news/539.html"
+  },
+  {
+   "date": "2026-09-10",
+   "category": "corporate",
+   "headline": "HEC's H1 2026 report: the restructuring to take 100% of Chindata China is 'still being pushed forward'",
+   "read": "Ownership remains in transition.",
+   "source": "https://news.qq.com/rain/a/20260910A0CNQW00"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "ma",
+   "headline": "Bloomberg (via The Edge): Sixth Street, SK Telecom, GIC and La Caisse vie for about 50% of Bain's Bridge Data Centres at more than US$4B — the former international arm, now a separate company",
+   "read": "Not Chindata China's transaction; it confirms the split.",
+   "source": "https://theedgemalaysia.com/node/812440"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "leadership",
+   "headline": "CEO Wu Huapeng (Forbes China): from IDC to a 'token factory'; a GW-scale direct-green-power zone at Ulanqab",
+   "read": "Power supply, not buildings, is the stated product.",
+   "source": "https://www.chindatagroup.com/media/news/534.html"
+  },
+  {
+   "date": "2026-07-02",
+   "category": "product-launch",
+   "headline": "Chindata declares formal operation of the 'industry-first commercial SST intelligent DC power project' at its Sangyuan base, built with Meituan, HEC and Delta (10 kV to 800 V DC, 98.5%)",
+   "read": "The reference site for SSTs in Chinese AI data centres — and a stated plan to localise its core components.",
+   "source": "https://www.chindatagroup.com/media/news/532.html"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "ma",
+   "headline": "Reuters: Bain Capital seeks to sell at least 40% of Bridge Data Centres at about US$5B; BDC calls the reports speculative",
+   "read": "The two halves of the old Chindata are now priced separately.",
+   "source": "https://finance.yahoo.com/markets/stocks/articles/bain-capital-sell-stake-bridge-071756280.html"
+  },
+  {
+   "date": "2026-04-03",
+   "category": "capacity",
+   "headline": "Groundbreaking of the HEC·Chindata advanced computing base at Yidu, Hubei (7.5 MW)",
+   "read": "The owner's home province gets a showcase.",
+   "source": "https://www.chindatagroup.com/media/news/529.html"
+  },
+  {
+   "date": "2026-02",
+   "category": "product-launch",
+   "headline": "Delta Brand News: Chindata 'formally implemented' the Delta SST system at its North China site for Meituan; launch ceremony held, no date given",
+   "read": "Delta's account of the same project Chindata dates to July.",
+   "source": "https://brandnews.deltaww.com/en/SpecialDetail/12748"
+  },
+  {
+   "date": "2026-01-16",
+   "category": "ma",
+   "headline": "HEC-led consortium completes the RMB28.0B purchase of 100% of Chindata China from Bain Capital's WinTriX DC Group",
+   "read": "China's largest data-centre deal; Chindata becomes a domestically owned platform.",
+   "source": "https://www.chindatagroup.com/media/news/523.html"
+  },
+  {
+   "date": "2026-01-05",
+   "category": "partnership",
+   "headline": "Framework with the Yichang government and HEC; a 'south–central–north' three-hub layout",
+   "read": "The new owner is steering capacity toward its own regions.",
+   "source": "https://www.chindatagroup.com/media/news/514.html"
+  },
+  {
+   "date": "2025-12-12",
+   "category": "capacity",
+   "headline": "Chindata and HEC announce AI compute projects in Shaoguan and Ulanqab",
+   "read": "GW-scale ambitions announced before the sale closed.",
+   "source": "https://www.prnewswire.com/news-releases/chindata-and-hec-deepen-collaboration-with-ai-compute-projects-in-shaoguan-and-ulanqab-302640015.html"
+  },
+  {
+   "date": "2025-11-27",
+   "category": "regulatory",
+   "headline": "China's SAMR clears the sale without further review; RMB11.2B paid in and a RMB16.8B acquisition loan signed",
+   "read": "The last regulatory gate for the first step.",
+   "source": "http://static.cninfo.com.cn/finalpage/2025-11-27/1224827693.PDF"
+  },
+  {
+   "date": "2025-11-21",
+   "category": "product-launch",
+   "headline": "At CDCC 2025 Chindata launches the NEXT full-stack solution (with Morong, Eimicon, Shenling and Delta) and, with Meituan, HEC and Delta, an SST-based intelligent DC power solution",
+   "read": "The SST was announced as a solution eight months before it was declared in operation.",
+   "source": "https://www.chindatagroup.com/media/news/506.html"
+  },
+  {
+   "date": "2025-10-10",
+   "category": "customer",
+   "headline": "The SSE's work letter to HEC puts Chindata China's first customer at 80.23% of 2024 revenue and 83.54% of Jan–May 2025; HEC declines to name it",
+   "read": "Concentration was the regulator's first question.",
+   "source": "https://finance.cnr.cn/ycbd/20251010/t20251010_527390795.shtml"
+  },
+  {
+   "date": "2025-09-10",
+   "category": "ma",
+   "headline": "Bain Capital agrees to sell 100% of Chindata China to an HEC-led consortium of insurers and local-government funds for RMB28.0B (~US$4B)",
+   "read": "The US-listed-era structure (VIEs) ends; ownership becomes domestic.",
+   "source": "https://www.baincapital.com/news/bain-capital-announces-strategic-sale-wintrixs-china-operations-landmark-us4-billion"
+  },
+  {
+   "date": "2025-08-20",
+   "category": "capacity",
+   "headline": "Chindata signs a RMB24B framework with Zhongwei, Ningxia, for three zero-carbon campuses totalling 1.2 GW, including work on large-scale energy storage",
+   "read": "Storage is written into the campus deal, not bolted on.",
+   "source": "http://m.zqrb.cn/gscy/qiyexinxi/2025-08-20/A1755672208917.html"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "partnership",
+   "headline": "Framework with Ping An Trust and Ping An Infrastructure Fund to provide O&M and valuation services for data centres Ping An owns",
+   "read": "An asset-light line alongside the owned campuses.",
+   "source": "https://www.chindatagroup.com/media/news/480.html"
+  },
+  {
+   "date": "2025-06-12",
+   "category": "leadership",
+   "headline": "Wu Huapeng, then 'Chindata & BDC CEO', speaks at ByteDance's Volcano Engine FORCE conference on off-grid power, modularity and AI operations",
+   "read": "The landlord's CEO on its main tenant's stage.",
+   "source": "https://www.chindatagroup.com/media/news/478.html"
+  },
+  {
+   "date": "2025-05-09",
+   "category": "financial",
+   "headline": "Reuters: Bain seeks to sell the China business at over US$4B; estimated 2025 EBITDA close to RMB4B; Fitch downgraded WinTriX to BB in February",
+   "read": "The sale process begins.",
+   "source": "https://finance.yahoo.com/news/bain-capital-sell-china-data-021851224.html"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Chindata China is the named reference site for solid-state transformers in Chinese AI data centres, and that it is now looking for a domestic supply chain behind the first vendor. Basis: formal commercial operation of the Delta SST at Sangyuan on 2 Jul 2026; Chindata's statement that it will 'steadily expand' SST use and work 'with domestic equipment makers on core components, accelerating localisation of key parts'; HEC's filing naming the house architecture as 800 V HVDC combined with SSTs; a named SST R&D lead (Wang Hao) and an electrical architect who writes technical specifications and runs factory acceptance (Rao Zhiren). Indicator to watch: a second SST project, or a named domestic SST supplier, in Chindata or HEC disclosures.",
+  "(High confidence) We assess that selling power equipment to Chindata means passing two gates — the landlord's architecture and the tenant's approved list. Basis: HEC's filing states that for equipment Chindata tenders among the vendors on the customer's qualified-vendor list and then buys that vendor's UPS; the named UPS and power-module supplier is Changshan Beiming (18.2% of 2024 equipment spend), with Eaton through its designated agent. For a vendor absent from the tenant's list, the landlord's own specification work — the SST programme, 800 V HVDC, storage — is the door, not the UPS tender.",
+  "(High confidence) We assess the business as a single-tenant credit with a 2027 renewal cliff that the new owner is trying to dilute. Basis: Customer A at about 90% of revenue on mostly 10-year contracts, identified in the filing only through Volcano Engine self-build projects; the first wholesale contract expiring in November 2027 with no renewal talks begun; HEC tabling Customer A's own campus build as a risk; and 824 MW of 2026 orders including several hundred MW from a newly won top internet company. The two concentration figures (about 80% on Chindata's page, about 90% in HEC's filing) are not reconciled by any source.",
+  "(Moderate confidence) We assess that HEC ownership pulls procurement toward the owner's own components where they exist. Basis: HEC supplied the stacked-foil capacitors in the Sangyuan SST and describes its supercapacitors as usable for transient buffering in SST equipment; it makes liquid-cooling parts and fluorinated coolants; Sungrow signed SST framework purchase agreements with HEC Technology at its July 2026 launch, with no disclosed link to a Chindata campus; the CEO is also an HEC Group senior vice president. Inference: the owner is assembling a capacitor-to-campus stack, and vendors should expect HEC content in the bill of materials.",
+  "(Moderate confidence) We assess that the next equipment wave is large and dated. Basis: RMB4.75B of mechanical and electrical spend earmarked in the share-raise projects (Ulanqab Huiteng No.5 phase 1 RMB2.45B, Lingqiu phases 10–11 RMB1.88B, Qingyang RMB0.42B), each with a 12-month build; 2,289 MW to start by 2028. The equipment line fell to RMB673M in 2025 during the sale, so 2026–2027 purchasing restarts from a low base. Indicator to watch: SSE approval and CSRC registration of HEC's share issue, which releases the raise."
+ ],
+ "relationships": [
+  {
+   "slug": "bytedance",
+   "type": "customer",
+   "status": "active",
+   "scale": "Customer A: 90.12% of 2025 revenue (identity inferred)",
+   "via": "hyperscale build-to-suit leases, mostly 10-year terms",
+   "note": "Chindata China's 'Customer A' takes about 90% of revenue; HEC's filing never names it but lists its own campuses as Volcano Engine (ByteDance) projects, and ByteDance was 86.3% of Chindata's revenue in 2022.",
+   "context": "Customer A: 91.00% of 2024, 90.12% of 2025 and 90.22% of Jan–Feb 2026 revenue (HEC reply, 23 Sep 2026); the SSE work letter and Chindata's profile page give 80.23% for 2024 and 83.54% for Jan–May 2025 — no source reconciles the two. The reply's section on Customer A's own build lists 火山引擎长三角算力中心 (306 MW), 长三角无为算力中心 (335 MW), 火山云太行算力中心 phase 2 (~187 MW) and 内蒙古和林格尔算力中心 (220 MW). The first wholesale contract expires in November 2027. ByteDance is also the anchor tenant of MY06 in Johor, operated by Bridge Data Centres — now a separate Bain-controlled company.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF"
+  },
+  {
+   "slug": "delta-electronics",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-11",
+   "via": "indoor SST (SiC, 1 MW per cabinet)",
+   "note": "Delta supplied the solid-state transformer at the Sangyuan SST project, built with Meituan and HEC and in formal operation since 2 Jul 2026; Delta is also a partner in Chindata's NEXT full-stack solution.",
+   "context": "The solution was unveiled at CDCC on 20 Nov 2025; Delta's February 2026 brand-news issue says Chindata 'formally implemented' the Delta SST with a launch ceremony but gives no date; a trade post of 29 Jan 2026 expected use from April; Chindata dates formal commercial operation to 2 Jul 2026, after 34 tests. Delta: SiC high-frequency conversion, solid insulation, 1 MW per cabinet in one square metre, 240/400/800 V DC outputs. Chindata: 10 kV delta-connected, 10 kV AC to 800 V DC in one step, 98.5%. Project MW not disclosed.",
+   "source": "https://www.chindatagroup.com/media/news/532.html"
+  },
+  {
+   "slug": "eaton",
+   "type": "supplier",
+   "status": "active",
+   "scale": "RMB33.4M in 2025 (Sangyuan phase 3)",
+   "via": "UPS through designated agent 一零二四",
+   "note": "Chindata buys Eaton UPS through Eaton's designated project agent 1024 — RMB33.4M in 2025 for Sangyuan phase 3 — and names Eaton among its core-equipment makers.",
+   "context": "HEC's filing explains that Eaton sells in mainland China only through authorised project agents and that the UPS vendor is chosen from the customer's qualified-vendor list. Separately, Eaton says its own medium-voltage SST has run at a VNET North China site since end-2024 — the counter-claim to Chindata's 'first'.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577148.PDF"
+  },
+  {
+   "slug": "cummins",
+   "type": "supplier",
+   "status": "active",
+   "scale": "RMB187.7M (2024); RMB81.0M (2025)",
+   "via": "diesel gensets",
+   "note": "Cummins Power (China) was a top-five equipment supplier in 2024 and 2025, supplying diesel gensets.",
+   "context": "HEC's filing lists 康明斯电力(中国) at RMB187.7M (8.77% of 2024 equipment purchases) and RMB81.0M (12.04% of 2025).",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577148.PDF"
+  },
+  {
+   "slug": "huawei-digital-power",
+   "type": "supplier",
+   "status": "active",
+   "via": "UPS and power equipment",
+   "note": "Huawei is named among Chindata's core-equipment makers; its UPS5000-E powered the Huailai data centre in 2018.",
+   "context": "HEC's reply lists 'Cummins, Eaton, Schneider, Huawei, HOPPECKE, Shenling' as the leading domestic and foreign makers of its core equipment; Huawei is not in any year's top-five supplier list. Huawei's 2018 release records the UPS5000-E deployment at Huailai.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "supplier",
+   "status": "active",
+   "note": "Schneider Electric is named among Chindata's core-equipment makers.",
+   "context": "Named in the same HEC list as Cummins, Eaton, Huawei, HOPPECKE and Shenling; no purchase amount is disclosed.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "East Data, West Computing (东数西算)",
+   "status": "in-effect",
+   "exposure": "HEC's filing quotes the rule that new large or hyperscale data centres should in principle be built only in national hub nodes, with PUE no higher than 1.25. Chindata's Feb 2026 average PUE was 1.18 and all its long-term projects sit in hub nodes (Zhangjiakou, Ulanqab, Qingyang, Zhongwei, Shaoguan, Yangtze Delta).",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF"
+  },
+  {
+   "regime": "Foreign ownership of value-added telecom (IDC licence)",
+   "status": "in-effect",
+   "exposure": "Foreign investors may hold at most 50% of a value-added telecom business, which is why US-listed Chindata ran its IDC business through six VIE structures. They were terminated at the sale to domestic owners; the IDC licence is held by 北京秦淮数据有限公司.",
+   "mitigation": "Domestic ownership since 2026-01-16.",
+   "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577148.PDF"
+  },
+  {
+   "regime": "Compute–power coordination (算电协同)",
+   "status": "in-effect",
+   "exposure": "CTO Xue Guoqing (Sep 2026) notes that compute–power coordination was written into the government work report for the first time; Chindata's direct-green-power zone at Ulanqab and source-grid-load-storage work at Zhongwei follow it.",
+   "source": "https://www.chindatagroup.com/media/news/539.html"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Wu Huapeng (吴华鹏)",
+   "title": "Chief Executive Officer and legal representative; Senior Vice President, HEC Group",
+   "photo": "images/execs/chindata-wu.jpg",
+   "background": [
+    "CEO since February 2022; joined in 2019 as China president; titled \"Chindata & BDC CEO\" as late as June 2025 and stayed with Chindata China at the split",
+    "Dual role with the new owner: \"东阳光集团高级副总裁、秦淮数据首席执行官\" (April 2026)",
+    "Earlier: vice president of Phoenix New Media and CTO of ifeng.com; founder of iTechClub"
+   ]
+  },
+  {
+   "name": "Wang Dongning (汪冬宁)",
+   "title": "President and Chief Financial Officer",
+   "background": [
+    "Previously co-CFO; the 'capex for opex' strategy and the line 'efficiently converting power into compute' (2020)",
+    "Named to the 2026 Forbes China industry pioneers list"
+   ]
+  },
+  {
+   "name": "Xue Guoqing (薛国庆)",
+   "title": "Chief Technology Officer",
+   "background": [
+    "Joined 2022 as vice president; CTO after the sale",
+    "Alibaba Cloud director 2013–2021 (data-centre design, build, operations and cost); GDS senior vice president 2021–2022",
+    "Quoted at CDCC 2025: AI compute centres have moved from 'stacking compute' to 'compute–power coordination'; Delta's power electronics and HEC's core components are the pillars of the SST solution"
+   ]
+  },
+  {
+   "name": "Wang Hao (王浩)",
+   "title": "Head of product planning and R&D",
+   "background": [
+    "Joined 2023; leads R&D on liquid cooling and solid-state transformers and on bringing power modules and SSTs into production (HEC reply)",
+    "Formerly Baidu planning-design architect and head of North China operations; North China Electric Power University"
+   ]
+  },
+  {
+   "name": "Rao Zhiren (饶志仁)",
+   "title": "Electrical system architect",
+   "background": [
+    "Joined 2026; registered electrical engineer; led 110 kV substation and electrical design for 40–100 MW campuses",
+    "Writes technical specifications, reviews designs and runs vendor factory acceptance (HEC reply); formerly deputy design director at Puping Data"
+   ]
+  },
+  {
+   "name": "Li Mingjiang (李明江)",
+   "title": "Chief Operating Officer",
+   "background": [
+    "New role after the sale; legal representative of the Huailai WFOE (河北思达歌) and the Zhangjiakou company"
+   ]
+  },
+  {
+   "name": "Zhang Yushuai (张寓帅)",
+   "title": "Chairman, HEC Group; actual controller of HEC Technology (SSE 600673)",
+   "background": [
+    "Drove the acquisition; sole actual controller of the listed HEC company since December 2025",
+    "Owner side, not a Chindata officer"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "SemiAnalysis — The Chinese AI Infrastructure Boom (free portion)",
+   "url": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "HEC Technology (广东东阳光科技控股, SSE 600673) — share-issue acquisition report, revised (报告书修订稿, 668 pp): definition of 秦淮数据, ownership chain, procurement, suppliers, financials",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577148.PDF",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "HEC Technology — reply to the SSE inquiry (审核问询函的回复, 663 pp): capacity, backlog, Customer A, technical team, SST",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "Chindata — CTO Xue Guoqing at the 2026 China Computing Power Conference",
+   "url": "https://www.chindatagroup.com/media/news/539.html",
+   "date": "2026-09-14"
+  },
+  {
+   "label": "Tencent News — HEC buys shares; H1 2026 results; Chindata restructuring still in progress",
+   "url": "https://news.qq.com/rain/a/20260910A0CNQW00",
+   "date": "2026-09-10"
+  },
+  {
+   "label": "Sungrow — 2026 interim report: EnerNeo SST launch and framework purchase agreements signed with HEC Technology",
+   "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
+   "date": "2026-08-29"
+  },
+  {
+   "label": "W.Media — SK Telecom, GIC among bidders for a possible 50% stake in Bridge Data Centres (credits Bloomberg)",
+   "url": "https://w.media/koreas-sk-telecom-singapores-gic-among-bidders-for-possible-50-per-cent-stake-sale-in-bridge-data-centres-report/",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "The Edge Malaysia — Sixth Street, SK Telecom, GIC vie for Bain's Bridge Data Centres (credits Bloomberg)",
+   "url": "https://theedgemalaysia.com/node/812440",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "新浪科技 — CEO Wu Huapeng interview: SST at Sangyuan, Ulanqab green-power zone, Lingqiu PUE 1.13",
+   "url": "https://finance.sina.com.cn/tech/roll/2026-07-10/doc-inihhrae7133894.shtml",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "Chindata — Forbes China interview with CEO Wu Huapeng",
+   "url": "https://www.chindatagroup.com/media/news/534.html",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "科技日报 — \"行业首个算力中心SST智能直流供电商业化项目\" in operation at the Sangyuan base",
+   "url": "https://www.stdaily.com/web/gdxw/2026-07/03/content_541681.html",
+   "date": "2026-07-03"
+  },
+  {
+   "label": "行家说三代半 — Chindata SST project: Delta SiC medium-voltage high-frequency power modules, 10 kV to 800 V DC",
+   "url": "https://www.hangjianet.com/topic/1783060573494",
+   "date": "2026-07-03"
+  },
+  {
+   "label": "Chindata — industry-first commercial SST intelligent DC power project in formal operation (2 Jul 2026)",
+   "url": "https://www.chindatagroup.com/media/news/532.html",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "网易号 — Chindata SST project built with Meituan, HEC Group and Delta; plan to localise core components",
+   "url": "https://www.163.com/dy/article/L0S1GHVM053469RG.html",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "DG Matrix Insights — Solid State Transformers Could Reshape AI Infrastructure (republished; dates the Delta SST at Chindata to February 2026)",
+   "url": "https://www.dgmatrix.com/news-and-media/news/solid-state-transformers-could-reshape-ai-infrastructure/1223",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "央广网 / 上海证券报 — Chindata 2025 revenue RMB6.382B and net profit RMB1.655B; 799 MW operating",
+   "url": "https://finance.cnr.cn/gundong/20260506/t20260506_527611195.shtml",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Reuters via Yahoo Finance — Bain Capital to sell a stake in Bridge Data Centres at about US$5B",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bain-capital-sell-stake-bridge-071756280.html",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "Chindata — groundbreaking of the HEC·Chindata advanced computing base at Yidu (7.5 MW)",
+   "url": "https://www.chindatagroup.com/media/news/529.html",
+   "date": "2026-04-03"
+  },
+  {
+   "label": "Delta Brand News (issue 2026/02) — Chindata formally implements the Delta SST system at its North China site for Meituan",
+   "url": "https://brandnews.deltaww.com/en/SpecialDetail/12748",
+   "date": "2026-02"
+  },
+  {
+   "label": "Greater Bay Area Data Centre Expo news — Meituan SST at Chindata's Huailai park, \"将在2026年4月正式投用\"",
+   "url": "http://www.idcsummit.cn/shishiyaowen/466.html",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "HEC Technology — closing announcement (临2026-04): RMB28.0B paid, transaction closed",
+   "url": "http://static.cninfo.com.cn/finalpage/2026-01-17/1224938783.PDF",
+   "date": "2026-01-17"
+  },
+  {
+   "label": "Chindata — HEC completes the RMB28.0 billion acquisition of Chindata China",
+   "url": "https://www.chindatagroup.com/media/news/523.html",
+   "date": "2026-01-16"
+  },
+  {
+   "label": "Bain Capital — successfully completes US$4 billion strategic sale of WinTriX's China business",
+   "url": "https://www.baincapital.com/news/bain-capital-successfully-completes-4-billion-strategic-sale-wintrixs-china-business",
+   "date": "2026-01-16"
+  },
+  {
+   "label": "第一财经 — HEC completes the Chindata China acquisition",
+   "url": "https://www.yicai.com/news/103008974.html",
+   "date": "2026-01-16"
+  },
+  {
+   "label": "Chindata — framework with the Yichang government and HEC; \"南中北三核\" layout",
+   "url": "https://www.chindatagroup.com/media/news/514.html",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Chindata via PR Newswire — Chindata and HEC deepen collaboration with AI compute projects in Shaoguan and Ulanqab",
+   "url": "https://www.prnewswire.com/news-releases/chindata-and-hec-deepen-collaboration-with-ai-compute-projects-in-shaoguan-and-ulanqab-302640015.html",
+   "date": "2025-12-12"
+  },
+  {
+   "label": "Chindata — Ulanqab framework: China's first hyperscale direct-green-power vertically integrated demonstration zone",
+   "url": "https://www.chindatagroup.com/media/news/509.html",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Chindata — Shaoguan framework and phase-1 150 MW project",
+   "url": "https://www.chindatagroup.com/media/news/507.html",
+   "date": "2025-11-29"
+  },
+  {
+   "label": "HEC Technology — progress announcement (临2025-69): SAMR clearance, RMB11.2B paid, RMB16.8B acquisition loan",
+   "url": "http://static.cninfo.com.cn/finalpage/2025-11-27/1224827693.PDF",
+   "date": "2025-11-27"
+  },
+  {
+   "label": "证券时报 — Delta, Meituan, Chindata and HEC unveil the world's first SST-based intelligent DC power solution at CDCC (tagged CIS)",
+   "url": "https://www.stcn.com/article/detail/3508585.html",
+   "date": "2025-11-24"
+  },
+  {
+   "label": "Chindata — company profile (北京秦淮数据有限公司简介)",
+   "url": "https://www.chindatagroup.com/media/news/531.html",
+   "date": "2025-11-22"
+  },
+  {
+   "label": "Chindata — NEXT full-stack solution and the SST DC power solution launched at CDCC 2025",
+   "url": "https://www.chindatagroup.com/media/news/506.html",
+   "date": "2025-11-21"
+  },
+  {
+   "label": "央广财经 — SSE work letter to HEC: first customer 80.23% (2024) and 83.54% (Jan–May 2025) of revenue",
+   "url": "https://finance.cnr.cn/ycbd/20251010/t20251010_527390795.shtml",
+   "date": "2025-10-10"
+  },
+  {
+   "label": "界面新闻 — HEC to buy Chindata China for RMB28B; 2024 revenue RMB6.048B; no performance commitment",
+   "url": "https://m.jiemian.com/article/13339505.html",
+   "date": "2025-09-12"
+  },
+  {
+   "label": "36Kr — Chindata: ByteDance was 86.3% of revenue in 2022",
+   "url": "https://eu.36kr.com/en/p/3462951581963650",
+   "date": "2025-09-12"
+  },
+  {
+   "label": "HEC Technology — announcement 临2025-54: capital increase in the SPV to acquire 100% of Chindata China (RMB28.0B)",
+   "url": "https://file.finance.qq.com/finance/hs/pdf/2025/09/11/1224650644.PDF",
+   "date": "2025-09-11"
+  },
+  {
+   "label": "Mingtiandi — Bain Capital sells Chindata's China data centres to HEC",
+   "url": "https://www.mingtiandi.com/real-estate/data-centres/bain-capital-sells-chindata-china-data-centres-to-hec/",
+   "date": "2025-09-11"
+  },
+  {
+   "label": "Chindata — sale agreement with the HEC-led consortium",
+   "url": "https://www.chindatagroup.com/media/news/489.html",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "Bain Capital — announces strategic sale of WinTriX's China operations (US$4 billion)",
+   "url": "https://www.baincapital.com/news/bain-capital-announces-strategic-sale-wintrixs-china-operations-landmark-us4-billion",
+   "date": "2025-09-10"
+  },
+  {
+   "label": "证券日报 — Chindata and Zhongwei sign a RMB24B, 1.2 GW zero-carbon computing framework",
+   "url": "http://m.zqrb.cn/gscy/qiyexinxi/2025-08-20/A1755672208917.html",
+   "date": "2025-08-20"
+  },
+  {
+   "label": "Chindata — Zhongwei 1.2 GW framework",
+   "url": "https://www.chindatagroup.com/media/news/484.html",
+   "date": "2025-08-20"
+  },
+  {
+   "label": "Chindata — framework with Ping An Trust and Ping An Infrastructure Fund (asset-light O&M)",
+   "url": "https://www.chindatagroup.com/media/news/480.html",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "smartcity.team — CAICT 2025 computing-centre service-provider analysis (tiers)",
+   "url": "https://www.smartcity.team/reports/%E7%AE%97%E5%8A%9B%E4%B8%AD%E5%BF%83%E6%9C%8D%E5%8A%A1%E5%95%86%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A2025/",
+   "date": "2025-07-14"
+  },
+  {
+   "label": "Chindata — Wu Huapeng at Volcano Engine's FORCE conference (as \"秦淮数据& BDC CEO\")",
+   "url": "https://www.chindatagroup.com/media/news/478.html",
+   "date": "2025-06-12"
+  },
+  {
+   "label": "Reuters via Yahoo Finance — Bain Capital to sell China data centre business likely valued at over US$4 billion (Fitch downgrade to BB)",
+   "url": "https://finance.yahoo.com/news/bain-capital-sell-china-data-021851224.html",
+   "date": "2025-05-09"
+  },
+  {
+   "label": "大同市人民政府 — Taihangshan (Lingqiu) base: phases 1–8 in operation, over 300 MW",
+   "url": "https://www.dt.gov.cn/dtszf/bumdtcm/202501/0c544aa2c256448ca3532ee28319daf4.shtml",
+   "date": "2025-01-20"
+  },
+  {
+   "label": "Mergermarket — Bain's take-private of Chindata (US$8.60 per ADS, US$3.16B equity; ByteDance 86.3% of 2022 revenue)",
+   "url": "https://ionanalytics.com/insights/mergermarket/bains-take-private-of-chindata-set-to-face-dissent-from-disgruntled-minority-shareholders/",
+   "date": "2023-08-21"
+  },
+  {
+   "label": "中国能源报 — Lingqiu 220 kV substation energised: 360 MW, 220 kV directly to 10 kV",
+   "url": "http://paper.people.com.cn/zgnybwap/html/2023-02/20/content_25967449.htm",
+   "date": "2023-02-20"
+  },
+  {
+   "label": "W.Media — Bridge Data Centres and ByteDance open the first hyperscale data centre in Malaysia (MY06)",
+   "url": "https://w.media/bridge-data-centres-bytedance-open-1st-hyperscale-dc-in-malaysia/",
+   "date": "2022-10-20"
+  },
+  {
+   "label": "Huawei — Huawei and Chindata win DCD award; UPS5000-E at the Huailai data centre",
+   "url": "https://www.huawei.com/cn/news/2018/12/huawei-chindata-dcd-edge-award",
+   "date": "2018-12-06"
+  },
+  {
+   "label": "Eaton China — MV SST pilot at a VNET North China data centre with a head internet company, running since end-2024 (case page)",
+   "url": "https://www.eaton.com.cn/cn/zh-cn/markets/success-stories/large-scale-data-center-in-china-sst.html"
+  },
+  {
+   "label": "Chindata — About us (capacity \"截至2026年第三季度\")",
+   "url": "https://www.chindatagroup.com/about_us.html"
+  },
+  {
+   "label": "Chindata — Technology modules (配电能源模块: MV to HVDC factory-prefabricated)",
+   "url": "https://www.chindatagroup.com/technology.html"
+  },
+  {
+   "label": "Bridge Data Centres — Who we are (Bain Capital controlling shareholder; Singapore HQ)",
+   "url": "https://www.bridgedatacentres.com/who-we-are/"
+  },
+  {
+   "label": "Bridge Data Centres — Our leadership",
+   "url": "https://www.bridgedatacentres.com/who-we-are/our-leadership/"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-26",
- "companies": 182,
+ "companies": 185,
  "edges": [
   {
    "a": "abb",
@@ -2534,6 +2534,232 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "amd",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-23",
+     "text": "MLex (via TechNode): Alibaba considering 40,000–50,000 AMD MI308 accelerators — A second foreign GPU source under export licence — unconfirmed.",
+     "src": "https://technode.com/2025/12/23/alibaba-reportedly-plans-to-order-more-than-40000-amd-mi308-chips/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-23"
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "bytedance",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "ByteDance's Volcano Engine is Alibaba Cloud's closest rival in China's model-API market — first on token volume, while Alibaba leads on revenue — and the other of China's two largest AI-infrastructure spenders.",
+     "context": "IDC gave Volcano Engine 49.2% and Alibaba Cloud 27% of China's public-cloud LLM token calls in H1 2025; Omdia and Frost & Sullivan put Alibaba first on enterprise MaaS revenue. SemiAnalysis groups the two as the wholesale market's largest orders.",
+     "source": "https://newsletter.semianalysis.com/p/the-chinese-ai-infrastructure-boom",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Volcano Engine competes with Alibaba Cloud in China's cloud and model-API market — first on token volume, second on revenue.",
+     "context": "IDC gave Volcano Engine 49.2% of China's public-cloud LLM token calls in H1 2025 against Alibaba Cloud's 27%; on revenue, Omdia and Frost & Sullivan put Alibaba Cloud first in enterprise MaaS. Both are also China's two largest reported AI-infrastructure spenders in 2026 and compete for the same wholesale landlords.",
+     "source": "https://www.yicai.com/news/102832701.html",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-27",
+     "text": "China gives ByteDance, Alibaba and Tencent a conditional green light for more than 400,000 H200s in total; licences described as too restrictive — Imported GPUs arrive rationed.",
+     "src": "https://finance.yahoo.com/news/exclusive-china-gives-green-light-034730976.html",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Volcano Engine MaaS — Volcano Ark (火山方舟) and the Doubao-Seed models",
+     "date": "",
+     "text": "Volcano Engine leads on token volume and competes on price against Alibaba Cloud, Baidu AI Cloud and Tencent Cloud; Alibaba leads on MaaS revenue.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Volcano Engine cloud and GPU compute (IaaS/PaaS) and BytePlus",
+     "date": "",
+     "text": "A challenger in IaaS behind Alibaba Cloud, Huawei Cloud and Tencent Cloud, using MaaS volume as the wedge",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-19",
+     "text": "IDC: Volcano Engine held 49.2% of China's public-cloud LLM token calls in H1 2025, ahead of Alibaba Cloud (27%) and Baidu (17%) — First on tokens, second on revenue.",
+     "src": "https://www.yicai.com/news/102832701.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-27"
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "catl",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: broker estimates range from about 50% of Alibaba Cloud's HVDC to more than 90% of Panama for Zhonhen, with Delta at about 20% (Soochow); CATL signed definitive agreements on 14 Aug 2026 to take 49% of Zhonhen's controlling holdco.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-14",
+     "text": "CATL signs definitive agreements to take 49% of the controlling shareholder of Zhonhen, Alibaba's principal Panama and HVDC supplier (RMB4.1B) — Alibaba's main power supplier gains a battery-maker co-owner.",
+     "src": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225474715.PDF",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-14"
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "delta-electronics",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Delta co-launched Panama with Alibaba and Zhonhen on 20 Nov 2019 and supplies Panama and HVDC equipment; Soochow estimates about 20% of Alibaba's 2025 HVDC purchases.",
+     "context": "Delta China's launch release quotes Alibaba's data-centre infrastructure expert Liu Shuiwang on 98.5% module efficiency and 40% fewer devices, and says Panama was already running at Alibaba data centres in Zhejiang and Jiangsu. Delta's release credits Delta and Alibaba; independent broker coverage credits all three. Delta reported more than 500 Panama units online across customers by August 2024 (per Tianfeng). The supply share is a broker estimate, not a disclosure.",
+     "source": "https://www.delta-china.com.cn/zh-cn/news/19212",
+     "status": "active",
+     "since": "2019",
+     "via": "Panama power modules"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Delta co-launched Alibaba's Panama power architecture with Alibaba and Zhonhen on 20 Nov 2019 (10 kV AC to 240 V DC, 98.5% module efficiency) and supplies Panama and HVDC equipment to Alibaba.",
+     "context": "Delta's release says Panama was already running at Alibaba data centres in Zhejiang and Jiangsu at launch. Soochow Securities estimates Delta supplied about 20% of Alibaba's 2025 HVDC purchases and Zhonhen 80%-plus — broker estimates, not disclosures. Panama is a transformer-rectifier, not an SST. Reciprocal edge recorded with the Alibaba Cloud dossier (profileVersion 1, 2026-09-26).",
+     "source": "https://www.delta-china.com.cn/zh-cn/news/19212",
+     "status": "active",
+     "since": "2019",
+     "via": "Panama power modules"
+    }
+   },
+   "evid": [],
+   "last": "2019"
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "narada",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Narada said on its investor platform that Alibaba Cloud is a customer for which it mainly provides data-centre backup power products.",
+     "context": "The statement (relayed February 2025) is Narada's own; neither its 2025 annual report nor its H1 2026 interim names Alibaba. Retail-blog claims about specific tender shares were not used.",
+     "source": "https://m.163.com/dy/article/JOTURV0P0519QIKK.html",
+     "status": "active",
+     "via": "data-centre backup power"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Alibaba runs Nvidia GPUs bought in 2018 and 2020 'at close to full capacity' and integrated Nvidia's Physical AI software stack into PAI in 2025, while replacing externally bought chips with T-Head's where it can.",
+     "context": "The 20-F cites US 'export restrictions on advanced computing chips of Nvidia'. China conditionally approved H200 purchases in January 2026; actual Alibaba H200 deliveries are not confirmed in any source located.",
+     "source": "https://data.alibabagroup.com/ecms-files/1567773279/9a0e4864-83fe-4a69-aa1e-e5c14f5b2e73/EN%20Jun%202026%20Q%20-%20Alibaba%20Earnings%20Call.pdf",
+     "status": "active",
+     "via": "A100/V100 installed fleet; Physical AI software stack in PAI"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · AI infrastructure — Lingjun clusters, PAI, Panjiu supernodes, HPN networking",
+     "date": "",
+     "text": "Lingjun (灵骏) intelligent computing clusters and the Platform for AI (PAI) are Alibaba's AI-compute services; PAI integrates 'the full suite of the NVIDIA Physical AI software stack' (Apsara 2025).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Data-centre power architecture — Panama and HVDC up to 800 V",
+     "date": "",
+     "text": "The first hyperscaler-specified single-stage medium-voltage-to-DC architecture in China; NVIDIA's August 2026 800 VDC execution paper names the Panama Architecture as a transformer-rectifier implementation of its data-hall DC power block — as an architecture, not as a company",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-24",
+     "text": "Apsara 2025: investment to go 'beyond' RMB380B; Panjiu AL128 supernode (350 kW per rack); NVIDIA's Physical AI stack in PAI; first data centres promised in Brazil, France and the Netherlands — The rack moved to 350 kW before the architecture moved to 800 V.",
+     "src": "https://www.alibabacloud.com/blog/602567",
+     "from": "a"
+    }
+   ],
+   "last": "2025-09-24"
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "sungrow",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Sungrow and Alibaba Cloud set up a 'Green Token Joint Innovation Center' in H1 2026 to push AIDC power-supply innovation, unveiled at Sungrow's EnerNeo SST launch.",
+     "context": "Sungrow's H1 2026 interim report records the centre; trade coverage describes its scope as green-power direct supply, 800 V DC supply and compute-power coordination. No Alibaba purchase of a Sungrow SST is disclosed.",
+     "source": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225526948.PDF",
+     "status": "active",
+     "since": "2026",
+     "via": "Green Token Joint Innovation Center"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "No Alibaba source discloses a solid-state transformer in service; the only SST-adjacent link on the record is a joint innovation centre with Sungrow (2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI data-centre power supply — EnerNeo solid-state transformer & 800 V HVDC",
+     "date": "",
+     "text": "Strategic cooperation and framework purchase agreements were signed on launch day with HEC Technology (东阳光) and ZDATA (中联数据), and the unit runs a Green Token Joint Innovation Center with Alibaba Cloud.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026"
+  },
+  {
+   "a": "alibaba-cloud",
+   "b": "zhonhen",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Zhonhen co-launched Panama with Alibaba and Delta in 2019 and is its principal Panama and HVDC supplier; the 2021 framework contract was RMB799,996,033.57 with Alibaba (China) Co., Ltd.",
+     "context": "Zhonhen's disclosures run from 2017 wins at Alibaba's Zhangbei campus, through a ~RMB300M 2018 HVDC and rack-head-cabinet award, to the 2021 Panama framework (about 56% of Zhonhen's 2020 revenue). Its sales to Alibaba and affiliates were RMB88.0M in 2019, RMB298.6M in 2020 and RMB319.9M in the first nine months of 2021. Its 2025 report records Panama 2.0, STS and ATS wins at Alibaba self-built and third-party co-built rooms, but its largest single 2025 customer bought only RMB93.5M. Share estimates are brokers', not Zhonhen's: about 50% of Alibaba Cloud HVDC (36Kr), 80%-plus of 2025 HVDC (Soochow), more than 90% of Panama (Shanxi Securities). No source for the '~70%' figure in circulation was found.",
+     "source": "https://static.cninfo.com.cn/finalpage/2021-11-27/1211710378.PDF",
+     "status": "active",
+     "since": "2017",
+     "scale": "RMB800M Panama framework (2021)",
+     "via": "Panama power (巴拿马电源); HVDC; STS and ATS"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Alibaba is the co-developer and principal buyer of Panama: a RMB799,996,033.57 framework contract signed with Alibaba (China) Co., Ltd. on 2021-11-25, and FY2025 wins for Panama 2.0, STS and ATS systems at Alibaba self-built and third-party co-built rooms.",
+     "context": "Zhonhen's sales to Alibaba and its affiliates were RMB88.0M in 2019 (7.5% of revenue), RMB298.6M in 2020 (20.8%) and RMB319.9M in the first nine months of 2021 (29.7%), per the 2021 contract announcement. Its 2025 largest single customer bought RMB93.5M (4.37%), so current Alibaba volume is not disclosed. Broker estimates of its share of Alibaba's purchases range from about 50% of HVDC to more than 90% of Panama; the '~70%' figure in circulation has no located source. Reciprocal edge recorded with the Alibaba Cloud dossier (profileVersion 1, 2026-09-26).",
+     "source": "https://static.cninfo.com.cn/finalpage/2021-11-27/1211710378.PDF",
+     "status": "active",
+     "since": "2017",
+     "scale": "RMB800M Panama framework (2021)",
+     "via": "Panama power; HVDC; STS and ATS"
+    }
+   },
+   "evid": [],
+   "last": "2017"
   },
   {
    "a": "aligned",
@@ -13583,6 +13809,20 @@
   },
   {
    "a": "byd",
+   "b": "bytedance",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-08",
+     "text": "The Pentagon's 1260H update adds Alibaba, Baidu and BYD; ByteDance is not listed — ByteDance's US exposure runs through PAFACA and the JV, not the military-company list.",
+     "src": "https://www.wilmerhale.com/en/insights/client-alerts/20260611-pentagon-adds-65-new-entities-to-the-1260h-list-of-chinese-military-companies",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-08"
+  },
+  {
+   "a": "byd",
    "b": "calb",
    "evid": [
     {
@@ -14452,6 +14692,300 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "bytedance",
+   "b": "chindata",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Chindata China's 'Customer A' — about 90% of its revenue — is identified in the acquirer's own filing only by a list of Volcano Engine self-build campuses; ByteDance was 86.3% of Chindata's revenue in 2022 when it still filed in the US.",
+     "context": "HEC's reply to the SSE inquiry (23 Sep 2026) gives Customer A at 91.00% of 2024, 90.12% of 2025 and 90.22% of Jan–Feb 2026 revenue, on contracts 'mostly 10 years and longer', and in the section on Customer A's own build plans lists 火山引擎长三角算力中心, 长三角无为算力中心, 火山云太行算力中心 and 内蒙古和林格尔算力中心 — all Volcano Engine projects. The filing never names Customer A, and Chindata's own profile page gives lower shares (80.23% for 2024, 83.54% for Jan–May 2025), which may reflect different aggregation of entities under common control; no source reconciles the two. The first wholesale contract expires in November 2027. ByteDance is also the anchor tenant of MY06 in Johor, operated by the now-separate Bridge Data Centres.",
+     "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF",
+     "status": "active",
+     "scale": "90.12% of Chindata China 2025 revenue (Customer A, identity inferred)",
+     "via": "hyperscale build-to-suit leases, mostly 10-year terms"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Chindata China's 'Customer A' takes about 90% of revenue; HEC's filing never names it but lists its own campuses as Volcano Engine (ByteDance) projects, and ByteDance was 86.3% of Chindata's revenue in 2022.",
+     "context": "Customer A: 91.00% of 2024, 90.12% of 2025 and 90.22% of Jan–Feb 2026 revenue (HEC reply, 23 Sep 2026); the SSE work letter and Chindata's profile page give 80.23% for 2024 and 83.54% for Jan–May 2025 — no source reconciles the two. The reply's section on Customer A's own build lists 火山引擎长三角算力中心 (306 MW), 长三角无为算力中心 (335 MW), 火山云太行算力中心 phase 2 (~187 MW) and 内蒙古和林格尔算力中心 (220 MW). The first wholesale contract expires in November 2027. ByteDance is also the anchor tenant of MY06 in Johor, operated by Bridge Data Centres — now a separate Bain-controlled company.",
+     "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF",
+     "status": "active",
+     "scale": "Customer A: 90.12% of 2025 revenue (identity inferred)",
+     "via": "hyperscale build-to-suit leases, mostly 10-year terms"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "SemiAnalysis's China model (25 Sep 2026) puts it at roughly a fifth of China's delivered data-centre capacity, nearly all rented; the acquirer of Chindata China discloses that one unnamed customer took 90.12% of that landlord's 2025 revenue, and the same filing identifies that customer's own campuses as Volcano Engine projects.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: suppliers' filings record direct ByteDance purchases for its own Volcano Engine campuses (Kstar UPS and power modules, TGOOD prefabricated substations, Mingyang power modules, Sifang protection, Far East cable); Zhonhen records precision-distribution wins in 'third-party co-built rooms' — ByteDance buying inside a landlord's building; and Chindata's acquirer states that UPS vendors are chosen from the customer's qualified-vendor list even when the landlord places the order.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Leased wholesale capacity in China (the landlords)",
+     "date": "",
+     "text": "Chindata China's first customer, 'Customer A', took 91.00% of 2024 revenue, 90.12% of 2025 and 90.22% of Jan–Feb 2026 on contracts 'mostly 10 years and longer' (HEC restructuring filings); the customer is not named, but the same filing lists its self-build projects as Volcano Engine campuses and ByteDance was 86.3% of Chindata's revenue in 2022 when it still filed in the US.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-28",
+     "text": "Kstar's H1 2026 report names ByteDance first among the IDC customers to which it delivers data-centre UPS and power modules, alongside Chindata and BDC — The clearest filed evidence that ByteDance buys UPS and power modules directly.",
+     "src": "http://static.cninfo.com.cn/finalpage/2026-08-28/1225518833.PDF",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is also the landlord behind most of ByteDance's rented North China capacity: its acquirer discloses that one unnamed customer took 90.12% of 2025 revenue on mostly 10-year contracts, and lists that customer's own campuses as Volcano Engine projects.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-12",
+     "text": "Wu Huapeng, then 'Chindata & BDC CEO', speaks at ByteDance's Volcano Engine FORCE conference on off-grid power, modularity and AI operations — The landlord's CEO on its main tenant's stage.",
+     "src": "https://www.chindatagroup.com/media/news/478.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-28"
+  },
+  {
+   "a": "bytedance",
+   "b": "megmeet",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Named power-equipment suppliers in exchange filings are Kstar (UPS and power modules), TGOOD (prefabricated substations), Mingyang Electric (power modules), Jinpan (transformers), Sifang (protection and energy management) and Zhonhen (precision distribution); no Megmeet, Sinexcel or Kehua filing names ByteDance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: every filing that names ByteDance as a customer comes from Kstar, TGOOD, Mingyang Electric, Jinpan, Sifang, Far East or Zhonhen; a full-text search of Megmeet, Sinexcel and Kehua filings finds no ByteDance mention, and Kehua anonymises its internet customers.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "bytedance",
+   "b": "mgx",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "MGX holds 15% of TikTok USDS Joint Venture LLC as a managing investor; ByteDance holds 19.9%.",
+     "context": "MGX's David Scott sits on the JV board and its security committee. The corpus's MGX dossier records the same stakes.",
+     "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "15% of TikTok USDS JV",
+     "via": "TikTok USDS Joint Venture LLC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The US TikTok business moved into TikTok USDS Joint Venture LLC on 22 Jan 2026 — Oracle, Silver Lake and MGX 15% each, ByteDance 19.9%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-23",
+     "text": "TikTok USDS Joint Venture LLC announced: Oracle, Silver Lake and MGX 15% each as managing investors, ByteDance 19.9%, a majority-American board — The PAFACA resolution caps ByteDance at 19.9% of the US business.",
+     "src": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Semiconductors and strategic platforms — Altera, TikTok USDS JV, Binance",
+     "date": "",
+     "text": "TikTok USDS Joint Venture LLC: one of three managing investors — Silver Lake, Oracle and MGX 'each holding 15%' — with ByteDance at 19.9% (January 2026); David Scott sits on the seven-member board and its security committee.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-23",
+     "text": "TikTok USDS Joint Venture LLC formed with Silver Lake, Oracle and MGX as managing investors at 15% each and ByteDance at 19.9%; MGX's David Scott takes a board and security-committee seat — A stated percentage at last — and a US-regulated governance role for an Abu Dhabi fund.",
+     "src": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en",
+     "from": "b"
+    }
+   ],
+   "last": "2026-01-23"
+  },
+  {
+   "a": "bytedance",
+   "b": "narada",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Narada's July 2026 AIDC release names ByteDance among the long-term partners of its backup-power business.",
+     "context": "The statement is a company press release, not an exchange filing — Narada's 2025 annual report and H1 2026 interim do not mention ByteDance. It names no product, date or volume.",
+     "source": "https://en.naradapower.com/news/detail/id/10316.html",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence — lowered from High at v5) We assess the real moat as the 30-year backup-power franchise, not grid BESS: #2 in CNESA's 2024 base-station/DC backup shipments, a customer list spanning China Tower/Mobile/Telecom, GDS, ByteDance, and Alibaba, and a claimed (unverified) foothold in top US data centers via MPI.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "bytedance",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "ByteDance buys Nvidia accelerators within US licences and Beijing approvals; about 10,000 H200s were delivered by August 2026.",
+     "context": "The FT (Dec 2025) reported RMB 85B of the preliminary 2026 plan for AI processors and a preliminary 20,000-unit H200 order; the US approved H200 sales to about ten Chinese firms including ByteDance in May 2026, up to 75,000 units each, and Beijing conditions each purchase. Frontier Nvidia hardware is also rented abroad (Aolani in Malaysia; Oracle's ASEAN capacity per SemiAnalysis).",
+     "source": "https://www.techtimes.com/articles/325078/20260820/nvidia-h200-chips-enter-china-13-quota-beijing-not-washington-controls-rest.htm",
+     "status": "active",
+     "scale": "about 10,000 H200 delivered (Aug 2026, reported)",
+     "via": "H200"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that ByteDance's named power suppliers are domestic distribution, UPS and substation makers, not the NVIDIA-roster rack-power vendors.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "bytedance",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Oracle is a 15% managing investor and 'Trusted Security Partner' of TikTok USDS Joint Venture LLC, in which ByteDance holds 19.9%; the JV runs in Oracle's US cloud.",
+     "context": "TikTok's announcement (23 Jan 2026) names Oracle, Silver Lake and MGX as managing investors at 15% each and gives ByteDance 19.9%; Oracle EVP Kenneth Glueck sits on the seven-member board. Separately, SemiAnalysis (June 2025) wrote that 'most of Oracle's ASEAN GPU capacity' is believed allocated to ByteDance — a single-outlet estimate.",
+     "source": "https://newsroom.tiktok.com/announcement-from-the-new-tiktok-usds-joint-venture-llc?lang=en",
+     "status": "active",
+     "since": "2026-01",
+     "scale": "15% of TikTok USDS JV",
+     "via": "TikTok USDS Joint Venture LLC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The US TikTok business moved into TikTok USDS Joint Venture LLC on 22 Jan 2026 — Oracle, Silver Lake and MGX 15% each, ByteDance 19.9%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Overseas it leases (Bridge Data Centres in Johor, Green Mountain in Norway, Omnia in Brazil) and rents GPU capacity (Oracle's ASEAN fleet per SemiAnalysis; Aolani in Malaysia per the WSJ).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Consumer platforms — Douyin, TikTok, CapCut, Toutiao, Doubao app (the demand base)",
+     "date": "",
+     "text": "In the United States, TikTok, Lemon8 and CapCut operate inside TikTok USDS Joint Venture LLC, running 'in Oracle's secure U.S.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Overseas capacity — Johor, Thailand, Brazil, Finland, Norway, and rented GPUs",
+     "date": "",
+     "text": "The WSJ (via Tekedia, March 2026) reported about 36,000 Nvidia B200s rented through Aolani Cloud in Malaysia; SemiAnalysis (June 2025) wrote that 'most of Oracle's ASEAN GPU capacity' is believed allocated to ByteDance.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01"
+  },
+  {
+   "a": "bytedance",
+   "b": "sinexcel",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Named power-equipment suppliers in exchange filings are Kstar (UPS and power modules), TGOOD (prefabricated substations), Mingyang Electric (power modules), Jinpan (transformers), Sifang (protection and energy management) and Zhonhen (precision distribution); no Megmeet, Sinexcel or Kehua filing names ByteDance.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: every filing that names ByteDance as a customer comes from Kstar, TGOOD, Mingyang Electric, Jinpan, Sifang, Far East or Zhonhen; a full-text search of Megmeet, Sinexcel and Kehua filings finds no ByteDance mention, and Kehua anonymises its internet customers.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "bytedance",
+   "b": "zhonhen",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Zhonhen's 2025 annual report records precision-distribution wins at 'ByteDance self-built rooms and several third-party co-built rooms'.",
+     "context": "The win is precision distribution, not HVDC — the HVDC win named in the same passage is Bank of China — and Zhonhen's H1 2026 interim does not mention ByteDance. Jinpan's inquiry reply of October 2025 separately lists ByteDance among Zhonhen's end-customers. Retail-blog claims that Zhonhen is ByteDance's 'core supplier' or covers its Ulanqab campus appear in no filing.",
+     "source": "https://static.cninfo.com.cn/finalpage/2026-04-21/1225131190.PDF",
+     "status": "active",
+     "since": "2025",
+     "via": "precision power distribution (精密配电)"
+    },
+    "b": {
+     "type": "customer",
+     "note": "ByteDance bought Zhonhen precision-distribution products for 'ByteDance self-built rooms and several third-party co-built rooms' (FY2025 annual report).",
+     "context": "The ByteDance win is precision distribution, not HVDC; the H1 2026 interim does not mention ByteDance. No ByteDance 800 V or SST award to Zhonhen or any other supplier is public (26 Sep 2026). Reciprocal edge recorded with the ByteDance dossier (profileVersion 1, 2026-09-26).",
+     "source": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-04-21/d0543cb8-6de6-4606-9add-49a587d32b30.PDF",
+     "status": "active",
+     "since": "2025",
+     "via": "precision power distribution"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: independent share data (Kezhi Consulting 2025: #1 at 31%, CR3 72%), lead authorship of the national 240V/336V DC standard, MIIT single-champion designation, the Alibaba Panama co-development record, and FY2025 wins spanning Alibaba, Tencent, ByteDance, Bank of China and China Mobile Energy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-21",
+     "text": "FY2025: revenue RMB 2.137B (+8.9%), attributable net profit RMB 126.4M (+15.3%) — below the ~RMB 164M three-institution consensus; data-center power RMB 775.8M (+16.1%); FY2025 wins include Alibaba Panama 2.0/STS/ATS, Tencent elastic DC, ByteDance precision distribution — Revenue in line, profit a 20–25% miss against consensus — the AIDC narrative ran ahead of the income statement for a second straight year.",
+     "src": "FY2025 annual report, cninfo, 2026-04-21; 10jqka consensus",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-21"
   },
   {
    "a": "calb",
@@ -17168,6 +17702,141 @@
     }
    ],
    "last": "2026-08-15"
+  },
+  {
+   "a": "chindata",
+   "b": "cummins",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Cummins Power (China) was a top-five equipment supplier in 2024 and 2025, supplying diesel gensets.",
+     "context": "HEC's filing lists 康明斯电力(中国) at RMB187.7M (8.77% of 2024 equipment purchases) and RMB81.0M (12.04% of 2025).",
+     "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577148.PDF",
+     "status": "active",
+     "scale": "RMB187.7M (2024); RMB81.0M (2025)",
+     "via": "diesel gensets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Named power suppliers: Delta (SST), Changshan Beiming (power modules and UPS), Eaton through its agent, Cummins (gensets), HOPPECKE and Shoto (batteries); Huawei and Schneider are named among core-equipment makers.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "chindata",
+   "b": "delta-electronics",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Delta supplied the solid-state transformer at the Sangyuan SST project, built with Meituan and HEC and in formal operation since 2 Jul 2026; Delta is also a partner in Chindata's NEXT full-stack solution.",
+     "context": "The solution was unveiled at CDCC on 20 Nov 2025; Delta's February 2026 brand-news issue says Chindata 'formally implemented' the Delta SST with a launch ceremony but gives no date; a trade post of 29 Jan 2026 expected use from April; Chindata dates formal commercial operation to 2 Jul 2026, after 34 tests. Delta: SiC high-frequency conversion, solid insulation, 1 MW per cabinet in one square metre, 240/400/800 V DC outputs. Chindata: 10 kV delta-connected, 10 kV AC to 800 V DC in one step, 98.5%. Project MW not disclosed.",
+     "source": "https://www.chindatagroup.com/media/news/532.html",
+     "status": "active",
+     "since": "2025-11",
+     "via": "indoor SST (SiC, 1 MW per cabinet)"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Chindata China deployed Delta's indoor SST system for Meituan at its Sangyuan (Huailai) campus — Delta's February 2026 brand-news issue says Chindata 'formally implemented' it; Chindata declared formal commercial operation on 2 Jul 2026.",
+     "context": "Delta: SiC high-frequency conversion and solid insulation, 1 MW per cabinet in one square metre, 240/400/800 V DC outputs, up to 98.5% efficiency, storage switching among utility, battery and combined supply. Chindata: a 10 kV delta-connected SST converting 10 kV AC to 800 V DC in one step, 34 tests, integrated storage; HEC supplied stacked-foil capacitors. The solution was unveiled at CDCC on 20 Nov 2025. Project MW is not disclosed. Reciprocal edge recorded with the Chindata dossier (profileVersion 1, 2026-09-26).",
+     "source": "https://brandnews.deltaww.com/en/SpecialDetail/12748",
+     "status": "active",
+     "since": "2025-11",
+     "via": "indoor SST (SiC, 1 MW per cabinet)"
+    }
+   },
+   "evid": [],
+   "last": "2025-11"
+  },
+  {
+   "a": "chindata",
+   "b": "eaton",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Chindata buys Eaton UPS through Eaton's designated project agent 1024 — RMB33.4M in 2025 for Sangyuan phase 3 — and names Eaton among its core-equipment makers.",
+     "context": "HEC's filing explains that Eaton sells in mainland China only through authorised project agents and that the UPS vendor is chosen from the customer's qualified-vendor list. Separately, Eaton says its own medium-voltage SST has run at a VNET North China site since end-2024 — the counter-claim to Chindata's 'first'.",
+     "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577148.PDF",
+     "status": "active",
+     "scale": "RMB33.4M in 2025 (Sangyuan phase 3)",
+     "via": "UPS through designated agent 一零二四"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Named power suppliers: Delta (SST), Changshan Beiming (power modules and UPS), Eaton through its agent, Cummins (gensets), HOPPECKE and Shoto (batteries); Huawei and Schneider are named among core-equipment makers.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: HEC's filing states that for equipment Chindata tenders among the vendors on the customer's qualified-vendor list and then buys that vendor's UPS; the named UPS and power-module supplier is Changshan Beiming (18.2% of 2024 equipment spend), with Eaton through its designated agent.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · SST intelligent DC power — the Sangyuan project (with Meituan, HEC and Delta)",
+     "date": "",
+     "text": "Chindata calls it 'the industry's first commercial SST intelligent DC power project for a compute centre'; Eaton says its MV SST pilot at a VNET site with a leading internet company has run since end-2024 and claims the first SST deployment in an internet data centre — Chindata's claim holds with the 'commercial' qualifier",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "chindata",
+   "b": "huawei-digital-power",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Huawei is named among Chindata's core-equipment makers; its UPS5000-E powered the Huailai data centre in 2018.",
+     "context": "HEC's reply lists 'Cummins, Eaton, Schneider, Huawei, HOPPECKE, Shenling' as the leading domestic and foreign makers of its core equipment; Huawei is not in any year's top-five supplier list. Huawei's 2018 release records the UPS5000-E deployment at Huailai.",
+     "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF",
+     "status": "active",
+     "via": "UPS and power equipment"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "chindata",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Schneider Electric is named among Chindata's core-equipment makers.",
+     "context": "Named in the same HEC list as Cummins, Eaton, Huawei, HOPPECKE and Shenling; no purchase amount is disclosed.",
+     "source": "http://static.cninfo.com.cn/finalpage/2026-09-23/1225577167.PDF",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "chindata",
+   "b": "sungrow",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: HEC supplied the stacked-foil capacitors in the Sangyuan SST and describes its supercapacitors as usable for transient buffering in SST equipment; it makes liquid-cooling parts and fluorinated coolants; Sungrow signed SST framework purchase agreements with HEC Technology at its July 2026 launch, with no disclosed link to a Chindata campus; the CEO is also an HEC Group senior vice president.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "cipher-mining",

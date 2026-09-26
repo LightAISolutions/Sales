@@ -1,0 +1,479 @@
+{
+ "schemaVersion": 2,
+ "slug": "bytedance",
+ "title": "ByteDance — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "from-tokens-to-megawatts",
+   "title": "From tokens to megawatts",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "ByteDance is two businesses that meet in the data centre. Its consumer apps — Douyin, TikTok, the Doubao assistant — generate the demand: video to transcode, feeds to rank, questions to answer. Volcano Engine, its cloud, sells the same machinery to others, above all as {{MaaS}}: its own Doubao-Seed models and third-party models served through an API and billed per {{token}}.",
+    "A token is a word or a piece of one. Every token a model reads or writes is arithmetic on an {{AI accelerator}}, and arithmetic is electricity. Volcano Engine's president said in June 2026 that Doubao was processing 180 trillion tokens a day. The chain from that number to a power order runs: more tokens → more accelerator-hours of {{inference}} → more accelerators → more racks → more megawatts of {{critical IT load}} → more transformers, rectifiers, batteries and switchgear.",
+    "Two things break the chain's simplicity. The energy per token keeps falling as chips and models improve, so token growth overstates power growth. And the accelerators do not all sit in ByteDance's own buildings, or even in China: some capacity is leased from landlords and some is rented abroad. Where a given megawatt sits decides who buys its power equipment — the subject of most of this guide."
+   ]
+  },
+  {
+   "id": "how-a-token-is-priced",
+   "title": "How a token is priced, and what the price structure teaches",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "List prices on Volcano Engine's model platform (RMB per million tokens, online inference, page of 24 September 2026). The structure of the price is a map of where the accelerator's time goes.",
+   "cols": [
+    "Model",
+    "Input",
+    "Cache hit",
+    "Output"
+   ],
+   "rows": [
+    [
+     "Doubao-Seed 2.1 Pro (up to 1M-token context)",
+     "6.00",
+     "1.20",
+     "30.00"
+    ],
+    [
+     "Doubao-Seed 2.1 Turbo (up to 256k)",
+     "3.00",
+     "0.60",
+     "15.00"
+    ],
+    [
+     "Doubao-Seed 2.1 Lite (up to 1M)",
+     "0.80",
+     "0.16",
+     "2.70"
+    ],
+    [
+     "DeepSeek V4 Pro (third-party)",
+     "9.00",
+     "0.30",
+     "27.00"
+    ],
+    [
+     "GLM-5.2 (third-party)",
+     "8.00",
+     "2.00",
+     "28.00"
+    ]
+   ]
+  },
+  {
+   "id": "why-output-costs-more",
+   "title": "Why output costs three to five times input",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Input is read in parallel.** When a prompt arrives, the model processes all its tokens together in one pass — the accelerator's arithmetic units are kept busy, and the cost per token is low.",
+    "**Output is written one token at a time.** Each new token needs a full pass through the model's weights, and the next cannot start until the last is finished. That pass is limited by how fast weights can be read from memory, not by arithmetic, so each output token occupies the accelerator far longer. Hence output prices three to five times the input price in the table.",
+    "**A cache hit skips work already done.** If a prompt repeats a prefix the platform has already processed, it can reuse the stored intermediate state instead of recomputing it — so the price falls to between a quarter and a thirtieth of the input price, and the platform charges separately for holding that state in memory (0.017 RMB per million tokens per hour).",
+    "**Why a power seller cares.** Output-heavy, long-context workloads are the ones that fill racks with memory-rich accelerators and keep them busy around the clock; that is the load profile the power chain is being sized for."
+   ]
+  },
+  {
+   "id": "three-doors",
+   "title": "Three doors into the same buyer",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Where ByteDance's capacity sits decides who places the order for its power equipment. Suppliers' and landlords' filings show all three doors in use.",
+   "cols": [
+    "Door",
+    "Who orders the power equipment",
+    "Who writes the specification",
+    "How it shows in the accounts"
+   ],
+   "rows": [
+    [
+     "Own campuses (run under Volcano Engine names)",
+     "ByteDance, directly — suppliers' filings name it as the customer",
+     "ByteDance",
+     "{{capex}}"
+    ],
+    [
+     "Leased halls in China (wholesale landlords)",
+     "The landlord, tendering among makers on the tenant's qualified list",
+     "The tenant, through the lease and its approved vendor list; the landlord for the rest",
+     "Lease payments — operating expense"
+    ],
+    [
+     "Capacity rented abroad (GPU clouds, overseas campuses)",
+     "The owner of the building or the GPUs",
+     "The owner",
+     "Operating expense, outside capex"
+    ]
+   ]
+  },
+  {
+   "id": "racks-times-density",
+   "title": "Racks × density = megawatts",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A data centre's size is usually quoted in megawatts of {{critical IT load}}, but a permit or a tender often lists racks. The conversion is multiplication: racks × kilowatts per rack. One of ByteDance's campuses, the second phase of the Taihang computing centre in Datong, was approved as 15,604 racks at 12 kW each — 15,604 × 12 kW ≈ 187 MW, which is the figure a landlord's filing gives for it.",
+    "Twelve kilowatts is a conventional rack. An AI {{supernode}} draws 100 to 350 kW. The same 187 MW of IT load would fill about 4,700 racks at 40 kW, about 1,440 at 130 kW, or about 535 at 350 kW. The power does not shrink when the racks do; it concentrates. A hall that once spread 187 MW over thousands of rows now has to deliver it to a few hundred cabinets, which is what drives the move to liquid cooling and higher distribution voltages.",
+    "Read in reverse, the arithmetic is a check on any claim. A campus described by rack count and density can be converted to megawatts and compared with the substation behind it; if the two disagree by a factor, one of the numbers describes something else."
+   ]
+  },
+  {
+   "id": "racks-for-187-mw",
+   "title": "Racks needed for 187 MW of IT load",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "racks",
+   "intro": "The same load at four rack densities. The power is unchanged; only its concentration changes.",
+   "items": [
+    {
+     "label": "12 kW racks",
+     "sub": "the approved design at Datong phase 2",
+     "v": 15604
+    },
+    {
+     "label": "40 kW racks",
+     "sub": "a dense air-cooled hall",
+     "v": 4680
+    },
+    {
+     "label": "130 kW racks",
+     "sub": "a liquid-cooled GPU rack",
+     "v": 1440
+    },
+    {
+     "label": "350 kW racks",
+     "sub": "a supernode rack",
+     "v": 535
+    }
+   ],
+   "note": "187.2 MW divided by the rack rating; network racks and cooling excluded."
+  },
+  {
+   "id": "who-makes-what",
+   "title": "Who makes what in the chain",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The equipment categories in a Chinese hyperscale campus, and the makers whose own exchange filings name ByteDance or its Volcano Engine campuses as a customer. Absence from this table is not evidence of absence: Chinese suppliers often anonymise large internet customers.",
+   "cols": [
+    "Stage",
+    "What it does",
+    "Makers whose filings name ByteDance"
+   ],
+   "rows": [
+    [
+     "Substation",
+     "Takes the grid feed at high voltage and steps it to the 10 kV the campus distributes; prefabricated versions arrive as factory-tested blocks",
+     "TGOOD (prefabricated substations)"
+    ],
+    [
+     "Protection and energy management",
+     "Relays and control systems that detect faults, isolate them and manage the campus's power flows",
+     "Sifang"
+    ],
+    [
+     "Transformers",
+     "Step 10 kV down to the building's low-voltage level",
+     "Jinpan (its bond filing lists ByteDance among 360 completed data-centre projects)"
+    ],
+    [
+     "UPS and power modules",
+     "Ride-through and conversion — AC UPS or 240/336 V DC systems",
+     "Kstar; Mingyang Electric"
+    ],
+    [
+     "Precision distribution",
+     "Row- and rack-level distribution: panels, busway, rack-head cabinets, switching",
+     "Zhonhen"
+    ],
+    [
+     "Cable",
+     "Everything in between",
+     "Far East (took part in building the Yangtze-Delta campus)"
+    ]
+   ]
+  },
+  {
+   "id": "reading-an-hvdc-share",
+   "title": "Reading an 'HVDC share' and an '800 V pilot'",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "In a Chinese hyperscale fleet, 'HVDC penetration' means the share of IT load fed by {{240 VDC}} or 336 V DC systems rather than by AC {{UPS}} units. A higher share means fewer conversions and a DC bus the batteries sit on directly. It is a fleet average, so it moves slowly: every hall already built keeps the chain it was built with.",
+    "An '800 V pilot' is a different kind of step. At {{800 VDC}} the rack is fed at a voltage high enough for 100-kilowatt-plus racks without enormous currents, and the source can be a {{transformer-rectifier unit}} or an {{SST}}. A 'building-level, tens-of-megawatts' pilot would mean one hall fed that way — a test of the whole chain, from the source through DC protection to the racks, not a fleet change.",
+    "What the record holds for ByteDance is thinner than the talk. The only figures for either — HVDC at 30 to 40 percent and a tens-of-MW 800 V pilot — trace to one unattributed exhibition post in January 2026; the same site wrote a week later that the 800 V work was 'still out to tender'. In September 2026 a mainstream financial paper confirmed only that ByteDance had 'first introduced' an 800 V HVDC scheme, with no share, size or supplier. No supplier's filing announces a ByteDance 800 V or SST award.",
+    "The distinction to hold is between a tender and an award. A tender is the buyer asking for bids; an award names who won, and in China a listed supplier's winning of a material order usually surfaces in its own filings. Until an award is public, an 800 V programme at ByteDance is a signal of intent."
+   ]
+  },
+  {
+   "id": "signal-to-award",
+   "title": "From signal to award: the 2026 record",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "Months of 2026 across the bottom. The lower lane is what was said about ByteDance's power architecture; the upper lane is capacity and capital. Watch the lower lane stay at 'tender' all year.",
+   "unit": "month of 2026",
+   "lanes": {
+    "cap": "Capacity and capital",
+    "pwr": "Power architecture"
+   },
+   "items": [
+    {
+     "x": 1.4,
+     "lane": "cap",
+     "label": "About 1 GW capacity tender reported awarded to three landlords",
+     "sub": "mostly Beijing-Tianjin-Hebei and Inner Mongolia"
+    },
+    {
+     "x": 1.7,
+     "lane": "pwr",
+     "label": "Exhibition post: HVDC at 30–40%, a tens-of-MW 800 V pilot",
+     "sub": "unattributed; no primary source found"
+    },
+    {
+     "x": 1.95,
+     "lane": "pwr",
+     "label": "Same site: the 800 V work is 'still out to tender'",
+     "sub": "one week later"
+    },
+    {
+     "x": 4.8,
+     "lane": "pwr",
+     "label": "A supplier rumoured to have won an SST pilot says its SST transformer is still at sample testing",
+     "sub": "the medium-frequency transformer is the hard part"
+    },
+    {
+     "x": 5.3,
+     "lane": "cap",
+     "label": "Capex reports: more than RMB 200 billion; up to US$70 billion under discussion",
+     "sub": "anonymous sources, different scopes"
+    },
+    {
+     "x": 9.1,
+     "lane": "cap",
+     "label": "Reported talks for 5–6 GW of new compute in Ulanqab by early 2028",
+     "sub": "single anonymous source"
+    },
+    {
+     "x": 9.7,
+     "lane": "pwr",
+     "label": "Financial press: 800 V HVDC 'first introduced'",
+     "sub": "no share, size or supplier"
+    },
+    {
+     "x": 9.85,
+     "lane": "pwr",
+     "label": "No 800 V or SST award named in any filing",
+     "sub": "the status at this guide's date"
+    }
+   ]
+  },
+  {
+   "id": "why-the-transformer-is-the-hard-part",
+   "title": "Why an SST's transformer is the hard part",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The component.** An {{SST}} replaces the 50 Hz iron transformer with power cells that switch at thousands of hertz, each with a small {{medium-frequency transformer}} to provide {{galvanic isolation}}. Its core shrinks roughly in proportion to the frequency.",
+    "**The difficulty.** The winding must still withstand the full medium-voltage insulation stress, now in a much smaller volume, under the very fast voltage edges that {{SiC}} transistors produce. Insulation, heat and partial discharge — tiny sparks inside the insulation that slowly destroy it — all get harder as the part shrinks.",
+    "**Why it matters for reading claims.** When a supplier says its SST's 'core medium-voltage high-frequency transformer' is at sample testing, it is saying the one part that makes the device an SST is not yet qualified. That is why an SST award is a meaningful event and a tender is not."
+   ]
+  },
+  {
+   "id": "reading-capex-leaks",
+   "title": "Reading three capex numbers that disagree",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The numbers.** For ByteDance's 2026 {{capex}} the press has reported a preliminary RMB 160 billion (December 2025), more than RMB 200 billion (May 2026) and up to US$70 billion under discussion (May 2026). Low to high, the spread is about three times. ByteDance has confirmed none of them.",
+    "**Why they can all be true.** A budget, a revised budget and a ceiling under discussion are different things. Scope differs too: AI infrastructure or all capex; China or worldwide; owned equipment only, or including the leases and rented GPUs that are really operating expense. And a figure in dollars from one date and a figure in yuan from another are not the same measurement.",
+    "**How to use them.** Quote the range, name the scope of each, and anchor on what is independently dated — for a private company, lenders' and landlords' filings often say more than leaks do. Never average leaks into a 'consensus'."
+   ]
+  },
+  {
+   "id": "landlord-or-tenant",
+   "title": "Selling through the landlord or to the tenant",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "A landlord's filing states that UPS makers are chosen by tender from the customer's qualified-vendor list, and that the customer is building more of its own campuses. The two routes to the same end user look like this.",
+   "cards": [
+    {
+     "t": "Through the wholesale landlord",
+     "meta": "the landlord places the order; the tenant owns the list",
+     "adv": [
+      "The landlord runs many halls and tenders often",
+      "A single qualification can serve several tenants' halls",
+      "Landlords are easier to reach than a hyperscaler's central engineering"
+     ],
+     "dis": [
+      "Useless without a place on the tenant's approved vendor list",
+      "Landlords compete on cost per megawatt, so price pressure is severe",
+      "A concentrated landlord rises and falls with its main tenant's renewal"
+     ]
+    },
+    {
+     "t": "Direct to the tenant's own campus",
+     "meta": "the tenant writes the spec and places the order",
+     "adv": [
+      "The specification is written where the order is placed",
+      "Self-build is the direction of travel, so volume follows",
+      "A reference at the tenant carries into its leased halls through the list"
+     ],
+     "dis": [
+      "Long qualification by a demanding central team",
+      "Incumbent domestic suppliers already hold the doors",
+      "Private buyers disclose nothing, so wins are hard to prove to anyone else"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chips-borders-and-buildings",
+   "title": "Chips, borders and where the buildings go",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The rule.** US {{export controls}} restrict which advanced accelerators may be sold to Chinese companies and where they may run. The result is a split compute map.",
+    "**The split.** Inside China, capacity runs on the imported chips that can still be had and on domestic accelerators — which, chip for chip, generally draw more power for the same work. Outside China, capacity is leased or rented where the newest GPUs can legally run: campuses in Southeast Asia, Europe and Latin America, and GPU clouds that own the chips themselves.",
+    "**The consequence for power equipment.** Only the first half of that map buys Chinese power equipment through Chinese procurement. The overseas half buys it — if at all — through local landlords and their own supply chains, and rented GPUs buy none. A seller in China is selling into the domestic half, where the chip mix sets the rack power envelope."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Quoting the 30–40% HVDC share or the tens-of-MW 800 V pilot as fact.** Neither traces to a primary source.",
+    "**Treating a tender as an award.** No 800 V or SST award to a named supplier is public.",
+    "**Reading silence as absence.** Chinese suppliers often anonymise large internet customers; a filing that does not name ByteDance proves nothing either way.",
+    "**Picking one capex number.** Three leaks with different scopes bracket a range; none is confirmed.",
+    "**Selling to only one party in a leased hall.** The landlord places the order; the tenant's list decides who may win it.",
+    "**Counting overseas and rented capacity as power-equipment demand in China.** Rented GPUs buy no transformers, and overseas halls buy through their owners."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why is an output token priced several times higher than an input token?",
+     "a": "Input tokens are processed together in one parallel pass; output tokens are generated one at a time, each needing a full pass through the model's weights, so each occupies the accelerator far longer."
+    },
+    {
+     "q": "What is a cache hit in model pricing, and why is it cheaper?",
+     "a": "Reuse of the stored intermediate state for a prompt prefix the platform has already processed, so the work is not repeated; the platform charges less per token and a separate fee for holding the state in memory."
+    },
+    {
+     "q": "Trace a rise in daily tokens to a power-equipment order.",
+     "a": "More tokens → more accelerator-hours → more accelerators → more racks → more megawatts of IT load → more transformers, rectifiers, UPS, switchgear and distribution — offset by falling energy per token."
+    },
+    {
+     "q": "Name the three doors through which a hyperscaler's power equipment is bought.",
+     "a": "Its own campuses (it orders directly and writes the spec); leased halls (the landlord orders, often from the tenant's qualified list); rented capacity (the owner buys; the tenant buys no equipment)."
+    },
+    {
+     "q": "A campus has 15,600 racks at 12 kW. What is its IT load, and how many 350 kW racks carry the same?",
+     "a": "About 187 MW; about 535 racks. The power is unchanged — it is concentrated into far fewer cabinets."
+    },
+    {
+     "q": "What does 'HVDC penetration' measure in a Chinese data-centre fleet?",
+     "a": "The share of IT load fed by 240 or 336 V DC systems instead of AC UPS; a fleet average that moves slowly because built halls keep their chains."
+    },
+    {
+     "q": "What is the difference between a tender and an award?",
+     "a": "A tender asks for bids; an award names the winner. Only an award — usually visible in a listed supplier's filings — shows that business exists."
+    },
+    {
+     "q": "Why is the medium-frequency transformer the hardest part of an SST?",
+     "a": "It must hold full medium-voltage insulation in a much smaller volume under the fast voltage edges of SiC switching, where heat and partial discharge are hardest to control."
+    },
+    {
+     "q": "Why can three reported capex figures differ threefold without any being false?",
+     "a": "They measure different things — budget, revised budget, ceiling; AI or total; China or global; owned assets or including leases and rentals — at different dates and in different currencies."
+    },
+    {
+     "q": "Why do rented overseas GPUs not show up in capex?",
+     "a": "The renter pays the owner as operating expense; the chips, the building and its power equipment are the owner's assets."
+    },
+    {
+     "q": "Why is a tenant's self-build a risk for its wholesale landlord?",
+     "a": "The tenant moves its growth into buildings it owns, and a landlord that depends on one tenant faces the renewal with little leverage."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A model's list price is RMB 6 per million input tokens and RMB 30 per million output tokens. What explains the gap?",
+     "c": [
+      "Output tokens are longer words",
+      "Output is generated one token at a time, each needing a full pass through the weights, so each ties up the accelerator longer",
+      "Output tokens are taxed",
+      "Input tokens are cached for free"
+     ],
+     "a": 1,
+     "why": "Prompt processing is parallel; generation is sequential and memory-bound — which is why output-heavy {{inference}} fills racks."
+    },
+    {
+     "q": "An approval notice lists 15,604 racks at 12 kW. What IT load does that describe?",
+     "c": [
+      "About 18.7 MW",
+      "About 12 MW",
+      "About 1.87 GW",
+      "About 187 MW"
+     ],
+     "a": 3,
+     "why": "15,604 × 12 kW ≈ 187 MW of {{critical IT load}}; network racks and cooling are extra."
+    },
+    {
+     "q": "An exhibition post says a buyer's HVDC share has reached 30–40%. What should a careful reader do?",
+     "c": [
+      "Treat it as unverified until it traces to a primary source",
+      "Cite it as the buyer's figure",
+      "Assume it means 800 V",
+      "Assume the awards have been made"
+     ],
+     "a": 0,
+     "why": "Unattributed figures travel; only a buyer's statement, a supplier's filing or a tender record anchors them."
+    },
+    {
+     "q": "A landlord says UPS makers are tendered from the customer's qualified-vendor list. Whom must a UPS maker convince?",
+     "c": [
+      "Only the landlord",
+      "Only the tenant",
+      "The tenant, to get on the list, and the landlord, to win the order",
+      "Neither — lowest price wins"
+     ],
+     "a": 2,
+     "why": "The {{approved vendor list}} is the tenant's gate; the order is the landlord's."
+    },
+    {
+     "q": "Three leaks put a company's capex at RMB 160 billion, more than RMB 200 billion and up to US$70 billion. What is the best reading?",
+     "c": [
+      "The highest is right because it is the most recent",
+      "Average them into a consensus",
+      "One must be false",
+      "A budget, a revision and a ceiling under discussion, with different scopes — report the range"
+     ],
+     "a": 3,
+     "why": "Different scopes and dates; none confirmed. Anchor on independently dated filings."
+    },
+    {
+     "q": "A supplier's annual report does not name a Chinese hyperscaler as a customer. What can you conclude?",
+     "c": [
+      "It does not sell to that hyperscaler",
+      "Nothing on its own — Chinese suppliers often anonymise large internet customers",
+      "The hyperscaler buys only imported equipment",
+      "The hyperscaler buys only through landlords"
+     ],
+     "a": 1,
+     "why": "Silence in a filing is a collection gap, not evidence of absence."
+    }
+   ]
+  }
+ ]
+}

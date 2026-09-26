@@ -6,6 +6,78 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-26 01:26 AM → ~03:10 AM EST (one attended prompt, run unattended; context compacted once mid-session)
+**Repo version:** v07.62r (one push)
+**Branch:** `claude/relaxed-shannon-q4fc02`
+**Model:** Opus 5.5 at xhigh, per the developer's 2026-09-26 decision
+
+### What was done
+
+- **v07.62r — Phase F session F-H1**, the China buyer side the `megmeet` dossier lacks:
+  - **Three dossiers (v1) and study guides (v2), each with a lesson plan:** `bytedance` (hyperscaler; Volcano Engine in `aka[]`), `alibaba-cloud` (hyperscaler; the cloud unit, not the Group — the `nextera-energy-resources` precedent), `chindata` (developer; Chindata China under HEC since 2026-01-16 — Bridge Data Centres is Bain's separate company).
+  - **Segments:** the two hyperscalers → `hyperscalers-and-ai-labs` · challenger; Chindata → `aidc-developers-and-landlords` · challenger.
+  - **Calendar:** `alibaba-cloud` 2026-11-24 (unconfirmed — no results date announced); the other two private, quarterly, core.
+  - **17 new concepts** (1,520 total), among them `panama-power`, `phase-shifting-transformer`, `line-frequency-transformer`, `240vdc`, `delta-connection`, `approved-vendor-list`, `framework-procurement`.
+  - **Reciprocal edges:** `zhonhen` v8→v9 (customers Alibaba Cloud, ByteDance) and `delta-electronics` v6→v7 (customers Alibaba Cloud, Chindata — v6 named neither, nor Panama). Both report pins re-verified.
+  - **`zhonhen.study.json`:** one bullet that called Panama an SST corrected to transformer-rectifier.
+  - **§11.3:** the three F-H1 rows flipped (Opus 5.5 xhigh, Checked v07.62r, Dossier v1, Guide v2) with a premise verdict per clause.
+- **Premise verdicts, in one line each:**
+  - ByteDance capex — **about 3×, not 2×**, and unresolved (RMB 160B / >RMB 200B / up to US$70B).
+  - The 30–40% HVDC share and tens-of-MW 800 V pilot — **not supported** (one unattributed expo post); **no 800 V or SST award is public**; Kehua is **not** named in ByteDance's chain, Zhonhen is (precision distribution).
+  - Panama — **a transformer-rectifier, not an SST** (held); Zhonhen's ~70% — **unverifiable**.
+  - Chindata's Sangyuan SST — **a true SST** on its makers' description; 'first' holds only as **first in commercial operation** (Eaton/VNET pilot since end-2024).
+- **Verification:** registry sync clean; study, relationships, crossrefs and README-tree checkers clean; reports checker shows only the two old warnings; Playwright renders all three new dossiers and guides plus revised Zhonhen and Delta with zero console errors (only the sandbox's `gis_load_failed`).
+
+### What the three dossiers change about Megmeet's missing customer side
+
+The `megmeet` dossier names no Chinese customer, and these three do not supply one: no ByteDance, Alibaba or Chindata record — and no Megmeet, Sinexcel or Kehua filing — links Megmeet to any of them. What they add is the map of the doors. **ByteDance** buys its own Volcano Engine campuses' chain from domestic distribution, UPS and substation makers (Kstar, TGOOD, Mingyang, Jinpan, Sifang, Far East, Zhonhen), rents most of its capacity from landlords who tender UPS from its qualified-vendor list, and its 800 V move is still a tender with no award — the open door, if anyone's. **Alibaba** specifies Panama, a 50 Hz transformer-rectifier bought by framework from Zhonhen and Delta; its halls are only 'compatible' with 800 V, and its one SST conversation is Sungrow's joint innovation centre — an incumbent to displace, not an SST base. **Chindata** is China's one SST reference in commercial operation (Delta's SST at Sangyuan, for Meituan), writes its own specifications, says it will localise SST core components with domestic makers, and has a new owner (HEC) that puts its own capacitors and coolants into the bill of materials, with about RMB 4.75B of M&E earmarked — the landlord-as-specifier door a domestic SST maker would knock on first.
+
+### Where we left off
+
+- **Status:** v07.62r pushed at close; the tree is clean.
+- **Next (action plan):** F-N1 (Firmus, HUMAIN, G42) at high by Tue 9/29; F-I1 (BlackRock, KKR) at xhigh Mon 9/28 – Tue 9/29. No paste-in prompt exists for either yet — §4 of `phase-f-action-plan.md` holds only F-H1's, which is the template.
+- **Dated items:**
+  - CoolIT cooling recheck on or after Mon 9/28.
+  - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30.
+  - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1 (rebase first — the 10/1 Profiler Routines commit that day).
+  - Dominion reframe and **Classroom wave A** Fri 10/2 – Tue 10/6.
+  - Megmeet start Wed 10/7 — read the three new guides before then.
+- **Stale and not yet re-authored (Classroom.gs untouched, by design):**
+  - `landscape-hyperscalers-and-ai-labs-2026-09` (+ByteDance, +Alibaba Cloud) and `landscape-aidc-developers-and-landlords-2026-09` (+Chindata, on top of `tract` v4 and `powerhouse-data-centers` v3), and the `scenario-hyperscalers-and-ai-labs-*` and `scenario-aidc-developers-and-landlords-*` rehearsals. Classroom wave A re-authors them.
+  - `build-classroom-segments.py --check`: **12 due** — those two segments with real section changes, nine with only the `where-it-sits` roster count, `insurance-and-risk-transfer` pin-only.
+
+### Key decisions made
+
+- **Alibaba's slug is the cloud unit** (`alibaba-cloud`), not the Group: it is the only data-centre-buying part and a reported segment; Group names live in `aka[]`.
+- **ByteDance is one group slug**; Volcano Engine is the name its campuses are bought under, not a separate buyer.
+- **Chindata means Chindata China** under HEC; Bridge Data Centres is out of scope except as context.
+- **A tender is not an award.** Unattributed figures (the HVDC share, the 800 V pilot, Zhonhen's share of Panama) are stated as unverified, never as fact.
+
+### Known issues
+
+- **Not edited:** `study-prep/zhonhen/zhonhen-interview-brief.md` still calls Panama's device class an SST in two lines (92, 177). It is a private file, outside the scope; the in-app guide was corrected.
+- **README archive tree:** about 60 archive files that predate this session (e.g. `zhonhen.profile.v4`/`v7`, `delta-electronics.profile.v2`) are not listed. This session added only its own two.
+- **Carried over:**
+  - The ERCOT/PJM decision still awaits the developer.
+  - The two aged 9/8 reports still warn.
+  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2).
+  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 185 dossiers, 185 guides, 1,520 concepts, 1,583 graph edges. **CHANGELOG** `Sections: 88/100`.
+
+### Recommendation for next session
+
+- Run **F-N1 (Firmus, HUMAIN, G42)** on Opus 5.5 at high before Tue 9/29, so `landscape-neoclouds-2026-09` is re-authored only once in Classroom wave A. First ask for its paste-in prompt, written from the F-H1 prompt in §4 of `phase-f-action-plan.md`.
+
+**To continue:** type `write the F-N1 prompt`
+
+## Previous Sessions
+
+### Session — 2026-09-25 11:11 PM → 2026-09-26 01:25 AM EST (the Classroom re-pin and the Phase F action plan, v07.60r–v07.61r)
+
 **Date:** 2026-09-25 11:11 PM → 2026-09-26 01:25 AM EST (attended; two turns)
 **Repo version:** v07.61r (two pushes: v07.60r the Classroom re-pin; v07.61r the Phase F action plan and this save)
 **Branch:** `claude/wonderful-planck-ufx3aq`
@@ -65,53 +137,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run **session 1 of the Phase F action plan — F-H1 (ByteDance, Alibaba Cloud, Chindata)** in a fresh Opus 5.5 session at **xhigh**, using the prompt in §4 of `repository-information/phase-f-action-plan.md`, on Saturday 9/26 or Sunday 9/27. It is the only Profiler session tied to the Megmeet start on Wednesday 10/7.
 
 **To continue:** paste the prompt in §4 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh
-
-## Previous Sessions
-
-### Session — 2026-09-25 09:07 PM → 11:09 PM EST (Phase F F-U1 + F-U2, the five utilities; the Classroom re-pin prompt, v07.57r–v07.59r)
-
-**Date:** 2026-09-25, 09:07 PM → 11:09 PM EST (one unattended prompt with two pushes, then one attended turn; context compacted once mid-session)
-**Repo version:** v07.59r (three pushes: v07.57r wave 1, v07.58r wave 2, v07.59r the Classroom re-pin prompt + this save)
-**Branch:** `claude/magical-cerf-hwm62m`
-**Model:** Fable 5.1 High (no substitution)
-
-### What was done
-
-- **Phase F sessions F-U1 + F-U2 — the five utilities — complete.** Five schema v7 dossiers, five v2 study guides and five lesson plans; `utility` is now 11 of 182 dossiers.
-  - **v07.57r (wave 1):** `duke-energy` (116 sources), `dte-energy` (106), `wec-energy` (80). Brookfield's first Duke Energy Florida closing is **confirmed** (2026-03-03, 9.2%, $2.8B) — the §11.3 cell was wrong. The DTE Saline figure is stated both ways (1,383 MW approved vs the 332 MW the corpus carried). WEC's VLC docket is 6630-TE-113; Meta Beaver Dam is Alliant's.
-  - **v07.58r (wave 2):** `berkshire-hathaway-energy` (88 sources; display name decided on the Southern Company precedent, NV Energy in `aka[]`) and `exelon` (106; seven photos). BHE's ">9 GW" is the FY2024 figure — the March 2026 presentation says ~11,000 MW. Exelon's 25-vs-36 GW conflict is definitional (36 = 4 TSA + 7 high-probability + 25 under study).
-  - **Step 7:** `tract` v3→v4 (PUCN approved Fleet's 362 MW of gas plants 2026-09-17, not "scheduled 8 September"; the Morris ComEd TSA accepted 2026-03-10) and `powerhouse-data-centers` v2→v3 (FERC rejected ComEd's Joliet cancellation 2026-09-22). No other dossier changed.
-  - **§11.3** F-U1 and F-U2 rows rewritten with premise verdicts; 13 + 13 concepts added; calendar rows for all five (WEC confirmed 10/29; the rest unconfirmed patterns or tracker estimates).
-
-- **Turn 2 (v07.59r):** the paste-in prompt for the Classroom re-pin session, `repository-information/classroom-utilities-repin-prompt.md` — Part A the 9/30 C2 run check (the standing reminder, now carrying a fold-in pointer), Part B segment regeneration by the generator, Part C the landscape module under G3 with the five new bets and gates, Part D the three rehearsals re-judged and re-pinned (the Dominion room reframe stays its own 10/2–10/6 reminder), Part E checkers, GAS bump, CHANGELOG rotation.
-
-### Where we left off
-
-- **Everything is merged through v07.58r; v07.59r is pushed.** The tree is clean after the push.
-- **Classroom is now stale, by design:** `landscape-utilities-2026-09` was built on "six franchises" and there are eleven; the three `scenario-utilities-*` rehearsals cite it. `Classroom.gs` was not touched. A Classroom session should re-pin them against the five new dossiers.
-- **Unreconciled figures left loud:** Oracle "~$300M" vs DTE "nearly $2B"; MasTec's "$4.2B Greenlink West" vs BHE's $4.2B combined; Exelon's TSA-backed load ~8 GW → 4 GW with collateral flat at ~$1B; Compass Hoffman Estates energization.
-- **CHANGELOG did not rotate:** both pushes were dated 2026-09-25 EST (110 sections, 12 exempt, 98 non-exempt). The next push after midnight EST must rotate the 2026-09-18 and 2026-09-19 groups (26 sections) after `git fetch --unshallow`.
-
-### Key decisions made
-
-- **BHE display name:** "Berkshire Hathaway Energy", `ownership.type: subsidiary`, `financials.type: private`, calendar row dated from the 10-Q pattern (2026-11-06, unconfirmed).
-- **Segments:** all five `utilities` · incumbent; `storage-developers-and-ipps` · adjacent for Duke, DTE, WEC and BHE (utility-owned or tolled storage is material); **not** for Exelon (owns none; revisit on ACE Pittsgrove's ~Feb 2027 decision).
-- **Photos:** none for Duke (site 403) or BHE (site blocked); DTE's Paul dropped after two 502s.
-- **Three concepts dropped** on checker collisions (their terms were already aliases of `capacity-market`, `planning-reserve-margin`, `vertically-integrated-utility`).
-
-### Known issues
-
-- The two aged 9/8 reports (`jinko`, `oracle` pins) still warn; `verify-profiler-roles.py` (2) and `check-events-plan.js` (2) carried over; `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
-- Not found for any of the five: a battery or turbine OEM (except Reid Gardner's BYD/Energy Vault and DTE's LG Energy Solution); PacifiCorp's Utah SB 132 counterparty; PECO's large-load tariff filing; Maryland's PC72 terms.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **CHANGELOG:** `Sections: 110/100`, 12 dated 9/25 and exempt — rotation due on the first push dated 9/26 or later.
-- **Phase F remaining (§11.2):** F-U3 onward for utilities, F-I1 (BlackRock, KKR) suggested in parallel on Opus 5.5 xhigh, F-N1 folded into the 10/1 neoclouds pass, F-H1 before the 10/7 Megmeet start.
-
-### Recommendation for next session
-
-- On or after Wednesday 9/30 (after ~7 AM ET), run the **Classroom re-pin session** from `repository-information/classroom-utilities-repin-prompt.md` in a fresh Opus 5.5 xhigh session — it re-pins `landscape-utilities-2026-09` and the three `scenario-utilities-*` rehearsals against the eleven utility dossiers and folds in the 9/30 C2 run check. `build-classroom-segments.py --check` already reads `utilities` and `storage-developers-and-ipps` due with section changes. Phase F's next Profiler session (F-U3, or F-I1 in parallel) can follow.
-
-**To continue:** paste `repository-information/classroom-utilities-repin-prompt.md` (everything below its rule) into a fresh Opus 5.5 xhigh session on or after 9/30

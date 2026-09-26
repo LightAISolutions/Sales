@@ -1,0 +1,467 @@
+{
+ "schemaVersion": 2,
+ "slug": "alibaba-cloud",
+ "title": "Alibaba Cloud — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "what-a-cloud-buys",
+   "title": "What a cloud buys when it buys power",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A {{hyperscaler}} sells computing by the hour, by the gigabyte and — since 2023 — by the {{token}}. Every one of those products is made in a data centre, and every data centre is at bottom a machine for turning grid electricity into arithmetic and then into heat. Alibaba Cloud is China's largest cloud by infrastructure revenue, and it sells three layers: raw infrastructure, platforms, and {{MaaS}} — its own and other companies' models served through an API.",
+    "The power engineer's view of that business is a chain. Electricity arrives from the grid at 10 kV (China's standard medium-voltage distribution level), is stepped down, made safe against outages, distributed across the hall and converted, inside each server, to the low voltages a chip can use. Each stage costs money, floor space and a slice of the energy that passes through it. A cloud that builds its own halls chooses that chain; a cloud that rents halls inherits someone else's.",
+    "Three numbers set the scale. Alibaba's self-built data centres averaged a {{PUE}} of 1.187 in its 2026 fiscal year, so for every kilowatt-hour reaching the computers about 0.19 kWh went to cooling, conversion and lighting. The group bought 9.3 TWh of electricity that year, up from 6.8 TWh. And it has set a target of more than 20 GW of cloud-operated data-centre capacity by 2032. At that size a one-percentage-point gain in conversion efficiency is worth about 200 MW — a large power plant's output.",
+    "This guide follows that chain from the grid to the rack: why China's internet companies moved to direct current early, what Alibaba's Panama design does, why it is not a {{solid-state transformer}}, what 350 kW racks do to the argument, and how the equipment is actually bought."
+   ]
+  },
+  {
+   "id": "the-four-stage-chain",
+   "title": "The conventional chain: four stages from 10 kV to the rack",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "What each stage of a conventional Chinese data-centre power chain does, and what it costs. Panama's claim is that it folds the first four rows into one factory-built lineup.",
+   "cols": [
+    "Stage",
+    "What it does",
+    "What it costs",
+    "In Panama"
+   ],
+   "rows": [
+    [
+     "10 kV switchgear",
+     "Receives the utility feed; protects and isolates it",
+     "A switchgear room, cable runs, protection engineering",
+     "Built into the lineup's input section"
+    ],
+    [
+     "Distribution transformer",
+     "Steps 10 kV down to 400 V AC for the building",
+     "About 1–2% loss, a large footprint, a transformer room",
+     "Replaced by a phase-shifting transformer feeding rectifiers directly"
+    ],
+    [
+     "UPS or 240 VDC rectifier",
+     "Rides through outages from batteries; a double-conversion UPS rectifies to DC and inverts back to AC",
+     "Two conversions in a UPS (each a few percent), battery rooms, a UPS room",
+     "Rectifier modules make 240 V DC once; batteries sit on the DC bus"
+    ],
+    [
+     "Low-voltage distribution",
+     "Feeds rows and racks through panels, busway and PDUs",
+     "Copper, panel space, more connection points",
+     "Output distribution integrated in the lineup"
+    ],
+    [
+     "Server power supply",
+     "Converts the rack feed to the 12 V or 48 V the boards use",
+     "One more conversion inside every server",
+     "Unchanged — the server still converts the DC it receives"
+    ]
+   ]
+  },
+  {
+   "id": "why-china-chose-240-vdc",
+   "title": "Why China's data centres went to DC early",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A computer runs on direct current. Every server power supply begins by rectifying the AC it receives into DC. A conventional {{UPS}} also makes DC — to charge its batteries — and then, in {{double conversion}}, turns it back into AC so it can travel to the server, which promptly rectifies it again. Each of those conversions wastes a few percent and adds a box that can fail.",
+    "China's telecom carriers had run exchanges on 48 V DC for decades, and in the 2010s the carriers and the big internet companies standardised a higher DC voltage for servers: {{240 VDC}}, with 336 V as a sibling. A rectifier fed from the building's AC charges a battery string sitting directly on the DC bus and feeds servers whose power supplies accept DC. The UPS inverter disappears, and with it one conversion and one failure point. Chinese vendors call this 高压直流 — {{HVDC}} — because 240 V is high next to 48 V; it has nothing to do with long-distance transmission, and it is well below the 800 V now arriving.",
+    "The consequence for anyone selling power equipment in China is that the reference design at the big internet companies was already DC before NVIDIA's 800 V architecture made DC the global conversation. The question in China is not whether to move to DC but which DC voltage, and what should sit between the 10 kV grid and the DC bus."
+   ]
+  },
+  {
+   "id": "panama-one-lineup",
+   "title": "Panama: four stages in one factory-built lineup",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "{{Panama power}} (巴拿马电源) was launched in November 2019 by Alibaba with its suppliers Delta and Zhonhen, and named after the canal — one cut instead of a series of locks. It takes 10 kV AC in and gives 240 V DC out (336 V is also offered, and Zhonhen now offers 400 V and 800 V outputs). Its makers describe it as integrating 10 kV distribution, a transformer, the uninterruptible supply and the output distribution into one lineup: 'compressing the traditional four-stage power chain into one'.",
+    "How it works. The heart is a {{phase-shifting transformer}}: a 50 Hz iron-core transformer with several secondary windings, each displaced in phase from the others. Each winding feeds its own group of rectifier modules. Because the groups draw current at staggered moments, the {{harmonics}} each group would inject largely cancel before they reach the 10 kV side — the same trick as a {{12-pulse rectifier}}, taken further. Broker research describes the modules as having no separate {{PFC}} stage, which is where some of the efficiency comes from.",
+    "What it claims. The launch release gave 98.5% efficiency for the power modules and 'more than 2.5 MW' per system, with Alibaba's data-centre infrastructure expert saying it removed 40% of the equipment; Delta said construction work fell by 40% and floor space by half. Zhonhen's 2025 figure is 'above 97.5%' for the whole system. Those are different measurements — a module figure excludes the transformer's own loss — and should never be compared as if they were the same number.",
+    "Why it matters. Because the lineup is built and tested in a factory, much of the site work that makes a power room slow — pulling cable, terminating it, testing protection — moves indoors and happens in parallel with construction; that is {{offsite fabrication}} applied to the power chain. Alibaba bought it by framework: Zhonhen disclosed an RMB 800 million 'Panama power framework project' for Alibaba's data centres signed in November 2021."
+   ]
+  },
+  {
+   "id": "transformer-rectifier-or-sst",
+   "title": "Transformer-rectifier or solid-state transformer: the test",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Both take medium voltage in and give DC out. The difference is the frequency at which the isolation happens, and everything follows from that.",
+   "cols": [
+    "Question",
+    "Transformer-rectifier (Panama)",
+    "Solid-state transformer"
+   ],
+   "rows": [
+    [
+     "Where is the isolation?",
+     "A 50 Hz iron-core transformer — a line-frequency transformer",
+     "A small medium-frequency transformer inside each power cell, switched at thousands of hertz"
+    ],
+    [
+     "What does the switching?",
+     "Rectifier modules on the low-voltage side of the transformer",
+     "Silicon-carbide transistors on the medium-voltage side, in stacked cells"
+    ],
+    [
+     "Size and weight",
+     "Large: the iron core must carry each slow 50 Hz cycle",
+     "Small: core size falls roughly with frequency"
+    ],
+    [
+     "Efficiency",
+     "Proven: 97.5% system (Zhonhen) with a passive transformer",
+     "Claimed 98.5% for the first commercial installations; less field history"
+    ],
+    [
+     "Control of the output",
+     "Limited: the transformer ratio is fixed, the rectifiers regulate",
+     "Full: the converter can regulate voltage, balance phases and manage power flow both ways"
+    ],
+    [
+     "Storage and renewables",
+     "Batteries on the DC bus, as in 240 VDC",
+     "Can integrate storage and DC sources on its own bus and support the grid"
+    ],
+    [
+     "Maturity and cost",
+     "Built from mature parts; cheaper per kilowatt",
+     "New parts (medium-voltage SiC, high-frequency insulation); cost falling but higher"
+    ]
+   ]
+  },
+  {
+   "id": "the-classification-line",
+   "title": "The classification line, and why a seller needs it",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The line.** A device is a {{solid-state transformer}} when power electronics take over the transformer's job — isolation and voltage change happen in a high-frequency stage built around a {{medium-frequency transformer}}. If the isolation is still a 50 Hz {{line-frequency transformer}}, the device is a {{transformer-rectifier unit}}, however advanced its rectifiers.",
+    "**Where Panama sits.** Its makers describe a transformer followed by rectifier modules; NVIDIA's 2026 800 VDC execution paper names the Panama Architecture as a transformer-rectifier implementation of its data-hall DC power block. It is not an SST, and Alibaba's fleet is not an installed SST base.",
+    "**Why it matters.** An SST sold into Alibaba is not an upgrade to an SST fleet; it is a challenger to an incumbent that has run since 2019, is bought by framework from qualified suppliers and already delivers 97.5% or better. The pitch has to be what the iron cannot do."
+   ]
+  },
+  {
+   "id": "racks-that-draw-350-kw",
+   "title": "Racks that draw 350 kW",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "240 VDC was designed when a rack drew 5 to 15 kW. AI changed the unit. Alibaba's Panjiu AL128 {{supernode}} puts 128 to 144 GPUs in one custom double-width rack, rated for up to 350 kW of power and 500 kW of heat removal, with about 2 kW of liquid cooling per chip. That is {{rack power density}} twenty or thirty times the design point of the older chain.",
+    "Current is power divided by voltage. At 350 kW, a rack fed at 54 V carries about 6,500 amps; at 240 V, about 1,460; at 800 V, about 440. The heat lost in a conductor grows with the square of the current (the {{I2R loss}}), so cutting the current fifteen-fold cuts the loss in the same copper by about two hundred times — or lets far thinner copper carry the same power. This, not fashion, is why the industry is moving the rack feed to 800 V.",
+    "The Panjiu design does two further things a power seller should notice. It feeds the rack from a {{busbar}} — one centralised supply inside the rack instead of a power supply per server — and it decouples the power nodes from the compute nodes, so the chips can change without redesigning the power. Alibaba has not published the busbar voltage. Its 2026 ESG report says only that its latest data centres are 'fully compatible with HVDC power supply architectures up to 800V'."
+   ]
+  },
+  {
+   "id": "amps-at-350-kw",
+   "title": "Current into one 350 kW rack at each DC voltage",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "A",
+   "intro": "I = P ÷ V for a 350 kW rack, ignoring losses. The higher the voltage, the less copper and the less heat.",
+   "items": [
+    {
+     "label": "54 V",
+     "sub": "today's in-rack DC bus",
+     "v": 6481
+    },
+    {
+     "label": "240 V",
+     "sub": "China's HVDC standard",
+     "v": 1458
+    },
+    {
+     "label": "336 V",
+     "sub": "the higher Chinese HVDC level",
+     "v": 1042
+    },
+    {
+     "label": "400 V",
+     "sub": "a Panama output option",
+     "v": 875
+    },
+    {
+     "label": "800 V",
+     "sub": "the next-generation rack feed",
+     "v": 438
+    }
+   ],
+   "note": "Arithmetic, not a measurement: 350,000 W divided by the voltage. Conductor loss scales with the square of these numbers."
+  },
+  {
+   "id": "three-ways-to-get-capacity",
+   "title": "Build, lease or co-build: three ways a cloud gets capacity",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "Alibaba reports separate efficiency figures for self-built and leased data centres, and management said in May 2026 that it would secure some capacity through leases and co-builds rather than its own capital. Each path moves the power-equipment decision to a different desk.",
+   "cards": [
+    {
+     "t": "Self-build",
+     "meta": "the cloud owns the building and the power chain",
+     "adv": [
+      "The cloud writes the specification and buys the equipment, so a design like Panama can be standardised across campuses",
+      "Lowest long-run cost per megawatt once the design is proven",
+      "Full control of efficiency, which feeds the published PUE"
+     ],
+     "dis": [
+      "Every yuan is {{capex}}, on the balance sheet",
+      "Slowest: land, grid connection and construction",
+      "The cloud carries the risk of building ahead of demand"
+     ]
+    },
+    {
+     "t": "Lease from a wholesale landlord",
+     "meta": "the landlord owns the building and buys the chain",
+     "adv": [
+      "Fast: capacity arrives on the landlord's schedule",
+      "Operating expense, not capex",
+      "Flexible: add or drop sites without owning them"
+     ],
+     "dis": [
+      "The landlord's power chain, not the cloud's — unless the lease specifies it",
+      "A premium over self-build in the long run",
+      "Less control over efficiency and equipment"
+     ]
+    },
+    {
+     "t": "Co-build",
+     "meta": "a partner builds to the cloud's design",
+     "adv": [
+      "Speed of a partner with the cloud's specification",
+      "Capital shared or shifted"
+     ],
+     "dis": [
+      "Two parties decide the equipment",
+      "Contract terms decide who owns the upgrade path"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "how-the-equipment-is-bought",
+   "title": "How the power equipment is actually bought",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The instruments visible in suppliers' filings and the landlords' disclosures. A seller needs to know which one a given hall sits behind.",
+   "cols": [
+    "Instrument",
+    "Who runs it",
+    "What a supplier wins",
+    "Example on the record"
+   ],
+   "rows": [
+    [
+     "Framework procurement",
+     "The cloud's procurement arm",
+     "A fixed price and a share of a pooled volume, drawn down by orders",
+     "Zhonhen's RMB 800 million Panama framework (November 2021)"
+    ],
+    [
+     "Project award",
+     "The cloud, for a named campus",
+     "One campus or phase",
+     "Zhonhen's 2017 wins at the Zhangbei campus"
+    ],
+    [
+     "Landlord tender from the tenant's list",
+     "The landlord, choosing among makers the tenant has qualified",
+     "An order from the landlord, on the tenant's approved vendor list",
+     "Chindata's filing: UPS makers are tendered from the customer's qualified-vendor list"
+    ],
+    [
+     "Joint innovation centre",
+     "The cloud and a supplier together",
+     "A place in the design conversation; no purchase implied",
+     "Sungrow and Alibaba Cloud's Green Token Joint Innovation Center (H1 2026)"
+    ]
+   ]
+  },
+  {
+   "id": "chips-and-watts",
+   "title": "Chips decide watts",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The link.** Power demand is work done divided by efficiency. A chip that does the same arithmetic with more energy needs more racks, more cooling and more of the power chain for the same service.",
+    "**What changed.** US {{export controls}} limit the accelerators Chinese clouds can buy, so Alibaba runs imported GPUs bought years ago 'at close to full capacity' and is shifting to its own T-Head Zhenwu accelerators. Management said in May 2026 that domestic chips 'still show some gap, whether in power consumption or efficiency, versus advanced foreign chips'.",
+    "**Why a power seller cares.** Lower-precision arithmetic (the Zhenwu V900 supports FP8 and FP4 natively) cuts energy per operation; a less efficient chip raises it. Either way the rack power envelope is set by the chip roadmap, which is why the Panjiu design separates power nodes from compute nodes: the power chain has to outlive several chip generations."
+   ]
+  },
+  {
+   "id": "reading-pue",
+   "title": "Reading PUE, and where conversion losses hide",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "{{PUE}} is total facility energy divided by the energy delivered to the IT equipment. A PUE of 1.187 means 18.7% on top of the computers' own consumption. Most of that overhead is cooling; the rest is lighting, and the losses in every conversion between the utility meter and the server's input — transformers, UPS or rectifiers, distribution.",
+    "That last item is where the power chain shows up in the scorecard. Take 1 GW of IT load. At 97.5% chain efficiency the facility draws about 1,025.6 MW to deliver it; at 98.5% it draws about 1,015.2 MW. The single percentage point is worth about 10 MW per gigawatt, continuously — and it also removes the heat those 10 MW would have made, which the cooling plant no longer has to reject.",
+    "Two cautions. A published PUE is an average over a year and a fleet, so a new hall's improvement is diluted by the old halls. And Chinese national policy sets PUE ceilings for new large campuses in the hub regions, so a cloud needs efficiency gains to keep building where it wants to."
+   ]
+  },
+  {
+   "id": "where-an-sst-enters",
+   "title": "Where a solid-state transformer could enter",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "An SST has to beat an incumbent that is proven, cheap, bought by framework from qualified suppliers and already 97.5% efficient. Efficiency alone will not do it: the best the first commercial SSTs claim is about one percentage point better, and the passive iron transformer it replaces almost never fails.",
+    "What the iron cannot do is the opening. An SST is small — its makers claim a megawatt in about a square metre — which matters when a 350 kW rack puts a megawatt of load into a few racks' worth of floor. It regulates its output and can run power both ways, so batteries, on-site solar and the grid can share one DC bus and the hall can support the grid instead of merely drawing from it. And it can deliver 800 V directly — an output Zhonhen's Panama range now offers too, but still behind the same 50 Hz transformer.",
+    "Alibaba's own statements mark where the conversation is. Its halls are 'compatible' with DC up to 800 V — the building is ready for the voltage, not yet fed from an SST. Sungrow and Alibaba Cloud opened a 'Green Token Joint Innovation Center' in 2026, unveiled at Sungrow's SST launch and described in trade coverage as covering green-power direct supply, 800 V DC supply and compute-power coordination; no purchase of an SST has been disclosed. The path for any newcomer runs the same way as Panama's did: a joint specification, qualification, then a share of a framework."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Calling Panama an SST.** It is a 50 Hz transformer-rectifier; an SST pitch that treats Alibaba's fleet as SST experience starts from a false premise.",
+    "**Reading '800 V compatible' as '800 V deployed'.** Compatibility describes the hall and the IT gear, not an installed 800 V source.",
+    "**Comparing a module figure with a system figure.** 98.5% for Panama's modules and 97.5% for the whole system measure different boundaries.",
+    "**Treating capex as the whole compute bill.** Leases, co-builds and rented capacity sit outside capital expenditure.",
+    "**Assuming every Alibaba hall runs Panama.** In a leased hall the landlord buys the chain, from the tenant's approved list at best.",
+    "**Quoting a supplier's share as fact.** Broker estimates of the lead Panama supplier's share run from about half to more than ninety percent; no Alibaba source states one."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does Panama power convert, and what does it replace?",
+     "a": "10 kV AC to 240 V DC (336, 400 and 800 V outputs also offered) in one factory-built lineup that replaces the switchgear room, the distribution transformer, the UPS and the low-voltage distribution — four stages in one."
+    },
+    {
+     "q": "Why is Panama a transformer-rectifier and not a solid-state transformer?",
+     "a": "Its isolation and step-down happen in a 50 Hz iron-core phase-shifting transformer; an SST does them in a high-frequency stage built around a small medium-frequency transformer switched by semiconductors."
+    },
+    {
+     "q": "What does a phase-shifting transformer do for the rectifiers behind it?",
+     "a": "It feeds each rectifier group from a winding displaced in phase, so the groups draw current at staggered moments and their harmonic currents largely cancel before reaching the grid."
+    },
+    {
+     "q": "Why did Chinese data centres adopt 240 V DC?",
+     "a": "It removes the UPS inverter: a rectifier charges batteries sitting directly on the DC bus and feeds servers that accept DC, so there is one fewer conversion and one fewer failure point."
+    },
+    {
+     "q": "At 350 kW, roughly how much current flows at 54 V and at 800 V, and why does it matter?",
+     "a": "About 6,500 A and about 440 A. Conductor loss scales with the square of current, so fifteen times less current means roughly two hundred times less loss in the same copper."
+    },
+    {
+     "q": "What is a supernode, and what does it do to rack power?",
+     "a": "A rack of accelerators wired by a memory-speed fabric to act as one machine; packing 128 or more chips together lifts a single rack to hundreds of kilowatts."
+    },
+    {
+     "q": "Where do power-conversion losses appear in PUE?",
+     "a": "In the overhead above 1.0: PUE is total facility energy over IT energy, and every conversion between the meter and the server input adds to the numerator without adding to the denominator."
+    },
+    {
+     "q": "What does one point of chain efficiency (97.5% to 98.5%) save at 1 GW of IT load?",
+     "a": "About 10 MW of continuous draw — 1,000 ÷ 0.975 minus 1,000 ÷ 0.985 — plus the cooling that heat would have needed."
+    },
+    {
+     "q": "What does a winner of a framework procurement actually hold?",
+     "a": "A fixed price and a share of a pooled volume, drawn down by individual orders as projects need it — not a guaranteed quantity."
+    },
+    {
+     "q": "What can an SST do that a transformer-rectifier cannot?",
+     "a": "Regulate its output, move power both ways and host storage and DC sources on its own bus, and do it in a much smaller footprint — the openings an SST has to sell against an efficient incumbent."
+    },
+    {
+     "q": "Why does a less efficient accelerator raise a data centre's power demand?",
+     "a": "Power is work done divided by efficiency: the same service needs more chips drawing more watts, and so more cooling and more of the power chain."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A colleague says Alibaba already runs SSTs because it runs Panama. What is the correct reply?",
+     "c": [
+      "Right — Panama uses silicon-carbide high-frequency conversion",
+      "Panama is a UPS, not a converter",
+      "No — Panama is a 50 Hz transformer-rectifier; its isolation is an iron transformer at line frequency",
+      "Panama converts to AC, so it cannot be an SST"
+     ],
+     "a": 2,
+     "why": "A {{solid-state transformer}} replaces the {{line-frequency transformer}} with a high-frequency stage; Panama keeps the iron and puts rectifier modules behind it."
+    },
+    {
+     "q": "A 350 kW rack is fed at 240 V DC. Roughly what current does it draw?",
+     "c": [
+      "About 1,460 A",
+      "About 146 A",
+      "About 14,600 A",
+      "About 440 A"
+     ],
+     "a": 0,
+     "why": "I = P ÷ V = 350,000 ÷ 240 ≈ 1,458 A — the reason {{240 VDC}} was a design for 5–15 kW racks, not for supernodes."
+    },
+    {
+     "q": "A hall moves from 97.5% to 98.5% power-chain efficiency at 1 GW of IT load. What does it save?",
+     "c": [
+      "About 1 MW",
+      "Nothing — PUE ignores conversion losses",
+      "About 100 MW",
+      "About 10 MW, plus the cooling for it"
+     ],
+     "a": 3,
+     "why": "1,000 ÷ 0.975 ≈ 1,025.6 MW and 1,000 ÷ 0.985 ≈ 1,015.2 MW; conversion losses sit in the {{PUE}} overhead."
+    },
+    {
+     "q": "What did China's move to 240 V DC remove from the power chain?",
+     "c": [
+      "The inverter half of the double-conversion UPS",
+      "The batteries",
+      "The medium-voltage switchgear",
+      "The server power supply"
+     ],
+     "a": 0,
+     "why": "In {{double conversion}} power is rectified and inverted back to AC; 240 VDC keeps it DC and puts the batteries on the DC bus."
+    },
+    {
+     "q": "A supplier wins a share of a framework tender. What has it won?",
+     "c": [
+      "Exclusive supply to every future campus",
+      "A fixed price and a share of a pooled volume drawn down by orders",
+      "A guaranteed quantity delivered this year",
+      "A licence to co-develop the design"
+     ],
+     "a": 1,
+     "why": "{{framework procurement}} awards price and share, not quantity; orders follow projects."
+    },
+    {
+     "q": "A cloud's reported capex falls after it shifts to leased halls and rented GPUs. Did its compute spending fall?",
+     "c": [
+      "Yes — capex measures all compute spending",
+      "Yes — leases are always cheaper",
+      "Not necessarily — leases and rentals are operating expense outside capex",
+      "No — capex includes lease payments"
+     ],
+     "a": 2,
+     "why": "{{capex}} counts owned long-lived assets; renting moves spending to operating expense."
+    },
+    {
+     "q": "Which argument can a solid-state transformer make against an established 97.5%-efficient transformer-rectifier?",
+     "c": [
+      "A lower output voltage",
+      "Footprint, output control, two-way power and storage integration on its DC bus, at comparable efficiency",
+      "No need for qualification",
+      "Higher efficiency is enough on its own"
+     ],
+     "a": 1,
+     "why": "The efficiency gap is about one point; the iron's weaknesses are size and controllability, which is where an {{SST}} wins."
+    }
+   ]
+  }
+ ]
+}

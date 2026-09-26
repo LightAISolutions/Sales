@@ -2,7 +2,7 @@
  "schemaVersion": 2,
  "slug": "zhonhen",
  "title": "Zhonhen Electric \u2014 Study Guide",
- "lastUpdated": "2026-08-19",
+ "lastUpdated": "2026-09-26",
  "sections": [
   {
    "id": "the-physics-toolkit",
@@ -45,7 +45,7 @@
    "ps": [
     "Folds the MV transformer, rectification and distribution into ONE factory-built, pre-tested module: 10kVac in \u2192 240/400/800Vdc out, >97.5% system efficiency, 2.5MW blocks",
     "Named like the canal \u2014 one cut instead of four locks; co-developed with Alibaba (2019)",
-    "In NVIDIA-ecosystem vocabulary its device class is the solid-state transformer / MV rectifier 'sidecar'",
+    "In NVIDIA-ecosystem vocabulary its device class is the transformer-rectifier (MV rectifier) — not the solid-state transformer: its isolation is a 50 Hz phase-shifting transformer, and NVIDIA's 2026 800 VDC execution paper names the Panama Architecture as a transformer-rectifier implementation",
     "Prefabrication moves DC arc-management engineering into the factory \u2014 and substitutes factory labor for scarce field electricians"
    ]
   },

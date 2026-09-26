@@ -25,6 +25,38 @@
       "verifiedAt": 6,
       "when": "2026-09-12",
       "why": "v6 adds only a one-sided Heron Power supplier relationship (letter of intent, announced) and its Latitude Media source; no figure, project attachment or BESS claim the report pinned moved."
+    },
+    {
+      "report": "aidc-power-conversion-rev2--competitive--2026-09-25",
+      "slug": "zhonhen",
+      "pinnedVersion": 8,
+      "verifiedAt": 9,
+      "when": "2026-09-26",
+      "why": "Short-gap pin (v8 -> v9, 1 version): every cited zhonhen source is unchanged (label, url and date identical). The v9 revision (F-H1 step 7, 2026-09-26) only added two curated customer relationships — alibaba-cloud (Panama framework) and bytedance (precision distribution) — and one source (the 2021 Alibaba framework contract announcement); summary, products, specs, financials, developments and judgments are byte-identical. Every cited figure holds."
+    },
+    {
+      "report": "aidc-power-conversion-rev2--competitive--2026-09-25",
+      "slug": "delta-electronics",
+      "pinnedVersion": 6,
+      "verifiedAt": 7,
+      "when": "2026-09-26",
+      "why": "Short-gap pin (v6 -> v7, 1 version): every cited delta-electronics source is unchanged (label, url and date identical). The v7 revision (F-H1 step 7, 2026-09-26) only added two curated customer relationships — chindata (the Sangyuan SST) and alibaba-cloud (Panama co-launch) — and two sources (Delta Brand News 2026/02; the 2019 Panama launch release); every other field is byte-identical. Every cited figure holds."
+    },
+    {
+      "report": "sst-hall-edge-block-rev2--competitive--2026-09-23",
+      "slug": "zhonhen",
+      "pinnedVersion": 8,
+      "verifiedAt": 9,
+      "when": "2026-09-26",
+      "why": "Short-gap pin (v8 -> v9, 1 version): every cited zhonhen source is unchanged (label, url and date identical). The v9 revision (F-H1 step 7, 2026-09-26) only added two curated customer relationships — alibaba-cloud (Panama framework) and bytedance (precision distribution) — and one source (the 2021 Alibaba framework contract announcement); summary, products, specs, financials, developments and judgments are byte-identical. Every cited figure holds."
+    },
+    {
+      "report": "sst-hall-edge-block-rev2--competitive--2026-09-23",
+      "slug": "delta-electronics",
+      "pinnedVersion": 6,
+      "verifiedAt": 7,
+      "when": "2026-09-26",
+      "why": "Short-gap pin (v6 -> v7, 1 version): every cited delta-electronics source is unchanged (label, url and date identical). The v7 revision (F-H1 step 7, 2026-09-26) only added two curated customer relationships — chindata (the Sangyuan SST) and alibaba-cloud (Panama co-launch) — and two sources (Delta Brand News 2026/02; the 2019 Panama launch release); every other field is byte-identical. Every cited figure holds."
     }
   ]
 }

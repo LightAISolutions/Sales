@@ -1,0 +1,403 @@
+{
+ "schemaVersion": 2,
+ "slug": "chindata",
+ "title": "Chindata — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "the-landlord-model",
+   "title": "The wholesale landlord",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A {{hyperscaler}} can build its own data centres or rent them. Chindata China is one of the companies it rents from: a {{wholesale colocation}} landlord that builds whole halls and campuses, often to the tenant's design, and leases them for about ten years at a time. In its own words the smallest unit it leases is a data-centre module or a campus, 'with customised technical solutions and equipment selection'. The tenant brings its servers; Chindata supplies the building, the power, the cooling and the operation, and bills monthly by racks or by {{billed capacity}}.",
+    "Three things follow. First, the business is the power chain: a wholesale landlord sells megawatts of reliable, cooled electricity delivered to a rack, and almost everything it builds — substations, transformers, UPS or DC systems, generators, chillers — is there to make that promise. Second, it is capital-heavy and slow: capacity is built years ahead and paid for by long leases, which lenders finance against the tenant's credit. Third, it is concentrated: one customer, 'Customer A', took about 90% of revenue in 2024 and 2025, a textbook case of {{tenant concentration}}.",
+    "Chindata's campuses sit mostly in the 'capital ring' west of Beijing — Huailai in Hebei and Lingqiu in Shanxi — with smaller sites in the Yangtze River Delta and the Greater Bay Area and new campuses in the northwest. Since January 2026 the China business has been domestically owned, and its new owner is an industrial group that makes some of the components a data centre uses. Both facts come back later in this guide."
+   ]
+  },
+  {
+   "id": "capacity-ladder",
+   "title": "The capacity ladder, in megawatts",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW",
+   "intro": "Each rung is a different promise. Only the billed rung pays today; the rungs above it are construction and contracts still to be delivered.",
+   "items": [
+    {
+     "label": "Long-term pipeline",
+     "sub": "planned beyond 2028",
+     "v": 3820.88
+    },
+    {
+     "label": "Under construction or starting by 2028",
+     "sub": "four regions",
+     "v": 2289.48
+    },
+    {
+     "label": "Signed, not yet delivered",
+     "sub": "binding plus reserved",
+     "v": 886.17
+    },
+    {
+     "label": "In service",
+     "sub": "28 Feb 2026",
+     "v": 800.15
+    },
+    {
+     "label": "Billed",
+     "sub": "91.66% of in-service",
+     "v": 733.39
+    },
+    {
+     "label": "Binding part of signed",
+     "sub": "contracts in force",
+     "v": 547.84
+    },
+    {
+     "label": "Reserved part of signed",
+     "sub": "held, not yet binding",
+     "v": 338.33
+    }
+   ],
+   "note": "From the acquirer's filings. Billed ÷ in-service is the utilisation rate; the difference is capacity built and energised but not yet ramped."
+  },
+  {
+   "id": "who-picks-the-equipment",
+   "title": "Who picks the equipment in a leased hall",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "In a building a hyperscaler owns, the hyperscaler writes the specification and places the order. In a wholesale hall the answer is split, and the split is the most useful thing a power-equipment seller can learn about this business.",
+    "The landlord places the orders — for Chindata, its filings list its largest equipment suppliers by name and spend: power modules and UPS, generator sets, batteries. But its filing also states the rule for UPS: after a tender among the makers on the customer's {{approved vendor list}}, it buys the corresponding maker's UPS equipment. The tenant does not place the order, but it decides who is allowed to win it. Whether the same rule applies to DC power systems and power modules is not disclosed.",
+    "So a supplier to a wholesale hall must be qualified by the tenant and chosen by the landlord. The Sangyuan project below shows a third route: the landlord writes a new specification itself, and a tenant agrees to take the hall."
+   ]
+  },
+  {
+   "id": "inside-the-sangyuan-sst",
+   "title": "The Sangyuan project: 10 kV to 800 V DC in one step",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "At its Sangyuan base in Huailai, Chindata runs a hall fed by a {{solid-state transformer}}, declared in formal commercial operation on 2 July 2026 and leased long-term to Meituan. The division of labour is stated by the parties: Chindata wrote the specification and led the design and 34 performance and safety tests; Delta supplied the SST; Chindata's owner supplied custom capacitor banks; Meituan is the tenant.",
+    "What it does. The SST takes the 10 kV grid supply and converts it to {{800 VDC}} in one step — no 50 Hz transformer, no separate rectifier, no UPS inverter. Chindata describes the SST as integrating voltage conversion, electrical isolation and power-quality control, moving the chain 'from line frequency to high frequency'. Delta describes silicon-carbide high-frequency conversion, its own solid insulation, 240, 400 and 800 V DC outputs, and a cabinet delivering up to 1 MW in about one square metre. Both give 98.5% efficiency.",
+    "Two further features matter. The SST is connected to the 10 kV supply in {{delta connection}} — each of its three branches sits between two phase lines, so each sees the full 10 kV line-to-line voltage and no neutral is needed; Chindata calls this a first. And storage is built in: the system switches among grid, battery and combined supply, so the same batteries that ride through an outage also buy cheap night power and discharge at the day's peak — {{energy arbitrage}}.",
+    "What is not stated. Neither party gives the hall's megawatts or the frequency of the isolation stage, and the footprint saving is quoted as 70% in one Chindata release and more than 50% in a later one. A careful reader keeps those gaps visible."
+   ]
+  },
+  {
+   "id": "how-an-sst-is-built",
+   "title": "How a medium-voltage SST is generally built",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The common architecture for a 10 kV SST, stage by stage. This describes the class of device; neither Chindata nor Delta has published the Sangyuan unit's internal topology.",
+   "cols": [
+    "Stage",
+    "What it does",
+    "Why it is hard"
+   ],
+   "rows": [
+    [
+     "Medium-voltage front end",
+     "Many identical cells in series on each phase — a {{cascaded H-bridge}} — each rectifying a slice of the 10 kV into its own DC link",
+     "Each cell floats at a different voltage above ground; insulation and control signals must cross that gap"
+    ],
+    [
+     "Isolated DC/DC stage",
+     "In each cell a {{dual active bridge}} chops the DC at thousands of hertz through a {{medium-frequency transformer}}, providing isolation and step-down",
+     "The transformer must hold medium-voltage insulation in a small volume under fast switching edges"
+    ],
+    [
+     "Low-voltage DC output",
+     "The cells' outputs are paralleled onto one DC bus — 800 V here, with 240 and 400 V options",
+     "Sharing current evenly among cells; protecting a DC bus that has no zero crossing to help break a fault"
+    ],
+    [
+     "Control and storage port",
+     "Regulates the output, balances the phases, manages two-way power and can host batteries on the DC side",
+     "Software now does what iron did passively — and must never fail unsafe"
+    ]
+   ]
+  },
+  {
+   "id": "is-it-an-sst",
+   "title": "Is it a solid-state transformer? Sangyuan against Panama",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The same test applied to China's two best-known medium-voltage-to-DC designs.",
+   "cols": [
+    "Test",
+    "Panama power (Alibaba, 2019)",
+    "Sangyuan SST (Chindata, 2026)"
+   ],
+   "rows": [
+    [
+     "Where is the isolation?",
+     "A 50 Hz phase-shifting iron transformer",
+     "A high-frequency stage ('from line frequency to high frequency'); frequency not stated"
+    ],
+    [
+     "What switches?",
+     "Rectifier modules behind the transformer",
+     "Silicon-carbide high-frequency conversion"
+    ],
+    [
+     "Conversion path",
+     "10 kV AC → transformer → rectifiers → 240 V DC, built as one lineup",
+     "10 kV AC → 800 V DC in one step"
+    ],
+    [
+     "Outputs",
+     "240 V (336, 400 and 800 V now offered)",
+     "240, 400 and 800 V"
+    ],
+    [
+     "Efficiency claimed",
+     "98.5% module; above 97.5% system",
+     "98.5% (project)"
+    ],
+    [
+     "Class",
+     "Transformer-rectifier",
+     "Solid-state transformer, by its makers' functional description"
+    ]
+   ]
+  },
+  {
+   "id": "first-live-commercial",
+   "title": "'First', 'live' and 'commercial': reading milestone claims",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Three dates for one hall.** The Sangyuan SST was unveiled at a conference on 20 November 2025; a supplier to the project said it went live in February 2026; Delta's February 2026 magazine said it had been 'formally implemented'; Chindata declared formal commercial operation on 2 July 2026. None of these contradicts the others — they are different milestones.",
+    "**What the words mean.** Unveiled: shown. Energised or live: carrying power, often for testing. Implemented: installed and working. Commercial operation: accepted into paid service for the tenant. A seller quoting a reference should use the milestone that matches the claim.",
+    "**'First' needs its qualifier.** Another operator in China has run an SST pilot since the end of 2024, so the defensible claim for Sangyuan is the first in commercial operation, not the first SST in a Chinese data centre."
+   ]
+  },
+  {
+   "id": "storage-at-three-levels",
+   "title": "Storage at three levels of the chain",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Chindata's design places energy storage at the grid entry, in the room distribution and at the rack end. Each level answers a different problem.",
+   "cols": [
+    "Level",
+    "What it absorbs",
+    "Typical technology"
+   ],
+   "rows": [
+    [
+     "Grid entry",
+     "Outages, and the daily price cycle — charge at night, discharge at the peak",
+     "Battery systems sized in hours ({{BESS}}); at Sangyuan, integrated with the SST"
+    ],
+    [
+     "Room distribution",
+     "Ride-through until generators start; fast transients from whole rows",
+     "UPS or DC-system batteries sized in minutes"
+    ],
+    [
+     "Rack end",
+     "The sub-second swings of AI training, when thousands of accelerators switch between computing and communicating in unison",
+     "{{BBU}} shelves and {{supercapacitor}} banks sized in seconds"
+    ]
+   ]
+  },
+  {
+   "id": "the-owner-in-the-bom",
+   "title": "When the owner makes parts of the building",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The new owner.** Since January 2026 Chindata China has been controlled by a consortium led by HEC, an industrial group whose listed arm is buying the rest. HEC makes capacitors, fluorinated coolants and liquid-cooling components — and it supplied the custom capacitor banks in the Sangyuan SST.",
+    "**What that changes.** An owner that makes components has a reason to specify its own parts into the landlord's {{BOM}}. The acquisition filings earmark about RMB 4.75 billion for mechanical and electrical equipment across three campuses, and Chindata says it will work with domestic makers on the SST's core components to speed their localisation.",
+    "**What it means for a supplier.** The capacitor and cooling lines may be captive; the power semiconductors, the medium-frequency transformer and the converter itself are not. A newcomer's opening is the part of the SST the owner does not make — and the owner's stated wish for domestic sources."
+   ]
+  },
+  {
+   "id": "hub-rules-and-green-power",
+   "title": "Hub rules, PUE ceilings and green power",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Where Chindata may build is set by national policy. Under {{East Data West Computing}}, new large data centres should in principle be built only in the national hub regions and meet a {{PUE}} of 1.25 or better. All of Chindata's long-term projects sit in hubs — Zhangjiakou, Ulanqab, Qingyang, Zhongwei, Shaoguan and the Yangtze Delta — and its fleet averaged 1.21 in 2025 and 1.18 in February 2026.",
+    "Energy is the landlord's largest running cost. In 2025 Chindata bought 4.968 TWh of electricity for about RMB 2.51 billion — roughly RMB 0.51 per kWh, and nearly four times what it spent on equipment that year. One percentage point of conversion efficiency across that consumption is about 50 GWh, or some RMB 25 million a year. That, and the PUE ceiling, is the economic case for a more efficient power chain.",
+    "The newer campuses add a second lever: {{direct green power supply}}, in which a wind or solar plant feeds the campus over a dedicated line. Chindata's Ulanqab site is planned as a gigawatt-scale direct-green-power zone. A DC bus that can take storage and renewable sources directly — one of the things an SST can do and an iron transformer cannot — fits that model."
+   ]
+  },
+  {
+   "id": "one-tenant-wholesale",
+   "title": "The one-tenant wholesale model",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "What concentration on one hyperscale tenant gives a landlord, and what it costs.",
+   "cards": [
+    {
+     "t": "Build for one anchor tenant",
+     "meta": "long leases, tenant's design, tenant's credit",
+     "adv": [
+      "Long contracts — mostly ten years — make the capacity financeable",
+      "Build-to-suit halls fill quickly; utilisation stays above 90%",
+      "One engineering relationship to satisfy"
+     ],
+     "dis": [
+      "Revenue tracks one tenant's capital plans",
+      "Renewal negotiations start with the tenant holding the leverage — the first contract expires in November 2027",
+      "The tenant's own campuses compete for the same growth"
+     ]
+    },
+    {
+     "t": "Diversify the tenant base",
+     "meta": "more tenants, including new ones like Meituan at Sangyuan",
+     "adv": [
+      "Less exposure to any one tenant's decisions",
+      "New tenants can take new designs — Sangyuan's SST hall went to a tenant other than the anchor"
+     ],
+     "dis": [
+      "Smaller tenants carry weaker credit",
+      "Each tenant brings its own vendor list and specification"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Calling Sangyuan the first SST in a Chinese data centre.** The defensible claim is the first in commercial operation; another operator's pilot ran from late 2024.",
+    "**Using one date for the project.** Unveiled, live, implemented and commercial operation are four milestones.",
+    "**Confusing Chindata China with Bridge Data Centres.** The overseas business is a separate company under different owners since the 2025–26 sale.",
+    "**Selling only to the landlord.** For UPS, the tenant's qualified list decides who may bid.",
+    "**Reading 'in service' as 'paying'.** Billed capacity is the paying rung.",
+    "**Treating one SST hall as a fleet standard.** Its megawatts are undisclosed; Chindata says it will 'steadily expand' SST use, which is intent, not an order."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does a wholesale colocation landlord sell?",
+     "a": "Whole halls or campuses, often built to the tenant's design, leased for about ten years: megawatts of reliable, cooled power delivered to racks the tenant fills with its own servers."
+    },
+    {
+     "q": "In a leased hall, who places the order for the UPS and who decides who may win it?",
+     "a": "The landlord places the order after a tender; the tenant's approved vendor list decides which makers may take part."
+    },
+    {
+     "q": "What is the utilisation rate of a data-centre landlord?",
+     "a": "Billed capacity divided by capacity in service; the gap is space that is built and energised but not yet paid for."
+    },
+    {
+     "q": "What makes the Sangyuan system a solid-state transformer rather than a transformer-rectifier?",
+     "a": "Its isolation and conversion are done by silicon-carbide high-frequency power electronics — 'from line frequency to high frequency' — rather than by a 50 Hz iron transformer followed by rectifiers."
+    },
+    {
+     "q": "What does delta connection mean for an SST on a 10 kV supply?",
+     "a": "Each of its three branches sits between two phase lines, so each sees the full 10 kV line-to-line voltage and no neutral point is needed — at the cost of more stacked cells per branch."
+    },
+    {
+     "q": "Name the stages of a typical medium-voltage SST.",
+     "a": "Cascaded cells that rectify slices of the medium voltage; in each cell a high-frequency isolated DC/DC stage with a medium-frequency transformer; the cells' outputs paralleled onto one low-voltage DC bus; and the control that regulates it all."
+    },
+    {
+     "q": "Why does integrating storage into an SST's DC bus help a landlord?",
+     "a": "The same batteries that ride through outages can charge on cheap night power and discharge at the peak, and the DC bus can accept storage and renewable sources directly."
+    },
+    {
+     "q": "What three levels of storage does an AI data centre use, and what does each absorb?",
+     "a": "Grid entry (outages and the daily price cycle, hours); room distribution (ride-through to generator start, minutes); rack end (sub-second AI load swings, seconds)."
+    },
+    {
+     "q": "Why does a PUE ceiling push a landlord toward a more efficient power chain?",
+     "a": "Conversion losses sit in the PUE overhead, and new large campuses in the hubs must meet 1.25 or better — while energy is the landlord's largest running cost."
+    },
+    {
+     "q": "Why does an owner that makes components change a supplier's opportunity?",
+     "a": "The owner can specify its own parts into the landlord's bill of materials; the opening lies in the parts it does not make."
+    },
+    {
+     "q": "What do 'live', 'implemented' and 'commercial operation' mean for a new power system?",
+     "a": "Live: energised, often for testing. Implemented: installed and working. Commercial operation: accepted into paid service for the tenant."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A landlord has 800 MW in service and 733 MW billed. What is its utilisation, and what is the rest?",
+     "c": [
+      "About 92%; the rest is built and energised but not yet paid for",
+      "About 92%; the rest is under construction",
+      "About 109%; it has oversold",
+      "About 73%; the rest is reserved"
+     ],
+     "a": 0,
+     "why": "{{billed capacity}} ÷ in-service capacity; the unbilled part is delivered but still ramping."
+    },
+    {
+     "q": "Which fact makes a medium-voltage-to-DC unit a solid-state transformer?",
+     "c": [
+      "Its output is 800 V",
+      "It is factory-built as one lineup",
+      "Its efficiency is above 98%",
+      "Its isolation happens in a high-frequency stage, not a 50 Hz iron transformer"
+     ],
+     "a": 3,
+     "why": "Panama also offers 800 V and is factory-built; what defines an {{SST}} is the high-frequency isolation stage built around a {{medium-frequency transformer}}."
+    },
+    {
+     "q": "A 10 kV SST is delta-connected. What voltage does each of its three branches see?",
+     "c": [
+      "About 5.8 kV",
+      "The full 10 kV line-to-line",
+      "800 V",
+      "Zero — delta has no voltage across branches"
+     ],
+     "a": 1,
+     "why": "In {{delta connection}} each branch sits between two lines; in star it would see the line voltage divided by √3, about 5.8 kV."
+    },
+    {
+     "q": "In 2025 a landlord bought 4.968 TWh of electricity. What is one percentage point of it?",
+     "c": [
+      "About 5 GWh",
+      "About 500 GWh",
+      "About 50 GWh",
+      "About 0.5 GWh"
+     ],
+     "a": 2,
+     "why": "1% of 4,968 GWh ≈ 50 GWh — at about RMB 0.51/kWh, some RMB 25 million a year."
+    },
+    {
+     "q": "A supplier to a new SST project said it 'went live' in February; the landlord declared commercial operation in July. Which is right?",
+     "c": [
+      "Both — they describe different milestones",
+      "Only February",
+      "Only July",
+      "Neither, because the project was unveiled the previous November"
+     ],
+     "a": 0,
+     "why": "Energised, implemented and accepted into paid service are distinct steps."
+    },
+    {
+     "q": "A landlord's new owner makes capacitors and coolants. Where is the best opening for an outside SST supplier?",
+     "c": [
+      "The capacitor banks",
+      "The coolant supply",
+      "The power semiconductors, the medium-frequency transformer and the converter itself",
+      "There is none"
+     ],
+     "a": 2,
+     "why": "Owner-made parts can be specified into the {{BOM}}; the parts it does not make stay open — and it has said it wants domestic sources for the SST's core components."
+    }
+   ]
+  }
+ ]
+}

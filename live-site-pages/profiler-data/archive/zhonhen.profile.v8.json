@@ -373,27 +373,6 @@
    "context": "NVIDIA's published 800VDC partner rosters name Delta and Megmeet among mainland-linked vendors, but not Zhonhen — the roster gap that keeps Zhonhen's export story prospective (exports 4.1% of revenue, no US entity) even as NVIDIA's own engineering text validates the Panama approach.",
    "source": "Dossier competitive assessment — 800VDC rosters",
    "status": "active"
-  },
-  {
-   "slug": "alibaba-cloud",
-   "type": "customer",
-   "status": "active",
-   "since": "2017",
-   "scale": "RMB800M Panama framework (2021)",
-   "via": "Panama power; HVDC; STS and ATS",
-   "note": "Alibaba is the co-developer and principal buyer of Panama: a RMB799,996,033.57 framework contract signed with Alibaba (China) Co., Ltd. on 2021-11-25, and FY2025 wins for Panama 2.0, STS and ATS systems at Alibaba self-built and third-party co-built rooms.",
-   "context": "Zhonhen's sales to Alibaba and its affiliates were RMB88.0M in 2019 (7.5% of revenue), RMB298.6M in 2020 (20.8%) and RMB319.9M in the first nine months of 2021 (29.7%), per the 2021 contract announcement. Its 2025 largest single customer bought RMB93.5M (4.37%), so current Alibaba volume is not disclosed. Broker estimates of its share of Alibaba's purchases range from about 50% of HVDC to more than 90% of Panama; the '~70%' figure in circulation has no located source. Reciprocal edge recorded with the Alibaba Cloud dossier (profileVersion 1, 2026-09-26).",
-   "source": "https://static.cninfo.com.cn/finalpage/2021-11-27/1211710378.PDF"
-  },
-  {
-   "slug": "bytedance",
-   "type": "customer",
-   "status": "active",
-   "since": "2025",
-   "via": "precision power distribution",
-   "note": "ByteDance bought Zhonhen precision-distribution products for 'ByteDance self-built rooms and several third-party co-built rooms' (FY2025 annual report).",
-   "context": "The ByteDance win is precision distribution, not HVDC; the H1 2026 interim does not mention ByteDance. No ByteDance 800 V or SST award to Zhonhen or any other supplier is public (26 Sep 2026). Reciprocal edge recorded with the ByteDance dossier (profileVersion 1, 2026-09-26).",
-   "source": "https://disc.static.szse.cn/download/disc/disk03/finalpage/2026-04-21/d0543cb8-6de6-4606-9add-49a587d32b30.PDF"
   }
  ],
  "decisionMakers": [
@@ -795,11 +774,6 @@
    "date": "2025-01-20"
   },
   {
-   "label": "Zhonhen Electric — contract announcement: Alibaba data centre 2021 Panama power framework, RMB799,996,033.57 with 阿里巴巴（中国）有限公司 (signed 2021-11-25)",
-   "url": "https://static.cninfo.com.cn/finalpage/2021-11-27/1211710378.PDF",
-   "date": "2021-11-27"
-  },
-  {
    "label": "C114 — Alibaba RMB 800M Panama framework contract",
    "url": "https://m.c114.com.cn/w16-1181433.html",
    "date": "2021-10"
@@ -850,6 +824,6 @@
    "date": "2026-08-27"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 9
+ "lastUpdated": "2026-09-08",
+ "profileVersion": 8
 }

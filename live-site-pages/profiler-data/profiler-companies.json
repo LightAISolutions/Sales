@@ -150,6 +150,59 @@
       ]
     },
     {
+      "slug": "alibaba-cloud",
+      "name": "Alibaba Cloud",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The Chinese hyperscaler that writes its own power architecture — Panama (10 kV to 240/336 V DC, a transformer-rectifier) with Zhonhen and Delta; 'compatible up to 800 V', no SST disclosed; RMB190B of a RMB380B plan spent, >20 GW by 2032",
+      "hq": "Hangzhou, China",
+      "ticker": "NYSE: BABA / HKEX: 9988 (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "Alibaba Cloud Intelligence",
+        "Alibaba Cloud Intelligence Group",
+        "Cloud Intelligence Group",
+        "AI Cloud and Compute Services",
+        "Aliyun",
+        "阿里云",
+        "阿里云计算有限公司",
+        "Alibaba Cloud Computing",
+        "Alibaba Group",
+        "Alibaba Group Holding",
+        "Alibaba",
+        "阿里巴巴",
+        "阿里巴巴（中国）有限公司",
+        "T-Head",
+        "平头哥",
+        "Zhenwu",
+        "真武",
+        "Panjiu",
+        "磐久",
+        "Lingjun",
+        "灵骏",
+        "Qwen",
+        "Tongyi",
+        "通义"
+      ],
+      "domains": [
+        "alibabacloud.com",
+        "aliyun.com",
+        "alibabagroup.com",
+        "alizila.com"
+      ],
+      "srcTotal": 66,
+      "srcFirstPct": 48,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "aligned",
       "name": "Aligned Data Centers",
       "categories": [
@@ -733,6 +786,54 @@
       ]
     },
     {
+      "slug": "bytedance",
+      "name": "ByteDance",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "China's largest data-centre tenant — about a fifth of delivered capacity, nearly all rented — and a direct buyer of UPS, power modules and substations for its own Volcano Engine campuses; its 800 V HVDC move is a tender, not an award",
+      "hq": "Beijing, China",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "Bytedance",
+        "Bytedance Ltd.",
+        "ByteDance Ltd.",
+        "Byte Dance",
+        "字节跳动",
+        "Volcano Engine",
+        "Volcengine",
+        "火山引擎",
+        "北京火山引擎科技有限公司",
+        "字节跳动火山云",
+        "火山云",
+        "BytePlus",
+        "Douyin",
+        "抖音",
+        "TikTok",
+        "TikTok USDS Joint Venture",
+        "Doubao",
+        "豆包",
+        "ByteDance Seed"
+      ],
+      "domains": [
+        "bytedance.com",
+        "volcengine.com",
+        "tiktok.com",
+        "byteplus.com",
+        "tiktokcdn.com"
+      ],
+      "srcTotal": 69,
+      "srcFirstPct": 35,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "hyperscalers-and-ai-labs",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "calb",
       "name": "CALB",
       "categories": [
@@ -882,6 +983,44 @@
         "Contemporary Amperex Technology",
         "Contemporary Amperex Technology Co., Limited",
         "宁德时代"
+      ]
+    },
+    {
+      "slug": "chindata",
+      "name": "Chindata",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "ByteDance's main North China landlord (one customer ~90% of revenue) and operator of what it calls the first commercial SST compute hall — Delta's 10 kV-to-800 V DC SST for Meituan at Huailai; HEC-owned since January 2026",
+      "hq": "Beijing, China",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "秦淮数据",
+        "北京秦淮数据有限公司",
+        "Chindata China",
+        "秦淮数据中国",
+        "ChinData",
+        "Chindata Group",
+        "Chindata Group Holdings",
+        "WinTriX DC Group",
+        "WinTriX",
+        "Bridge Data Centres",
+        "Bridge Data Centers",
+        "Sangyuan",
+        "桑园"
+      ],
+      "domains": [
+        "chindatagroup.com"
+      ],
+      "srcTotal": 55,
+      "srcFirstPct": 40,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
       ]
     },
     {
@@ -1263,12 +1402,12 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2308",
       "status": "active",
-      "lastUpdated": "2026-09-23",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "deltaww.com",
         "delta-americas.com"
       ],
-      "srcTotal": 20,
+      "srcTotal": 22,
       "srcFirstPct": 45,
       "kpiNorm": true,
       "segments": [
@@ -5559,14 +5698,14 @@
       "hq": "Hangzhou, China",
       "ticker": "SZSE: 002364",
       "status": "active",
-      "lastUpdated": "2026-09-08",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "en.hzzh.com",
         "hzzh.com",
         "zhonhen.com"
       ],
-      "srcTotal": 50,
-      "srcFirstPct": 44,
+      "srcTotal": 51,
+      "srcFirstPct": 45,
       "kpiNorm": true,
       "segments": [
         {

@@ -469,6 +469,12 @@
    "profileVersion": 5,
    "archivedAt": "2026-09-23",
    "supersededBy": 6
+  },
+  {
+   "file": "delta-electronics.profile.v6.json",
+   "profileVersion": 6,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 7
   }
  ],
  "dpr": [
@@ -2323,6 +2329,12 @@
    "profileVersion": 7,
    "archivedAt": "2026-09-08",
    "supersededBy": 8
+  },
+  {
+   "file": "zhonhen.profile.v8.json",
+   "profileVersion": 8,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 9
   }
  ],
  "piller": [

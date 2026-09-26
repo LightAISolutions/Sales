@@ -39,6 +39,17 @@
     "Chesterton check: the parent is being taken private and has stopped issuing guidance and earnings calls; AES Clean Energy is NOT a reportable segment; the Escondido 2024 battery fire was SDG&E-owned (AES built it in 2017) and the McMicken 2019 explosion was APS-owned with Fluence as integrator — neither is an AES-owned incident; the Utility Dive 'AES layoffs' article that dominates search is from 2018, not the 2025 restructuring; there is no AES product called 'Atlas'. Do not re-import any of these"
    ]
   },
+  "alibaba-cloud": {
+   "source": "UNIT-LEVEL, BUT SEPARATELY REPORTED — Alibaba Cloud is reported as a segment of Alibaba Group Holding Limited (NYSE: BABA / HKEX: 9988): 'Cloud Intelligence Group' through FY2026 and, from the June 2026 quarter, 'AI Cloud and Compute Services' (Cloud + T-Head). Dated row on the nextera-energy-resources precedent. THE DATE IS NOT COMPANY-CONFIRMED — no board-meeting notice for the September 2026 quarter on HKEX as of 2026-09-26. Pattern: September-quarter results on 2024-11-15 and 2025-11-25, each preceded by an HKEX 'Date of Board Meeting' notice about 13 days earlier (2025-11-12). Wall Street Horizon and MarketBeat both estimate Tuesday 2026-11-24 (unconfirmed). HOW TO CONFIRM: watch HKEX filings for stock code 9988 for the board-meeting notice in early-to-mid November; read the release and the call transcript on alibabagroup.com (data.alibabagroup.com PDFs), not sec.gov (blocked from sessions).",
+   "watch": [
+    "Segment revenue growth vs management's guide of above 50% for the September quarter (AI Cloud and Compute Services, recast base)",
+    "Group capex and cumulative spend against the RMB380B plan ('over RMB190 billion' at 30 Jun 2026); any restated multi-year number",
+    "Any Alibaba or supplier disclosure of 800 V Panama or an SST in service (ESG 2026 says only 'compatible up to 800V')",
+    "Leases and co-builds: any landlord named (AtHub, GDS, VNET, Chindata) and T-Head server sales to partners",
+    "1260H listing litigation and any Entity List move; H200 deliveries",
+    "Zhonhen's disclosures of Alibaba framework awards (CATL now 49% of Zhonhen's holdco)"
+   ]
+  },
   "aligned": {
    "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
    "watch": [
@@ -180,6 +191,17 @@
     "Brazil: the forced-labour 'dirty list' entry (Apr 2026) and the unresolved R$257m Bahia labour suit, against the US$98M BESS line built for the December 2026 capacity auctions."
    ]
   },
+  "bytedance": {
+   "source": "Private; no earnings calendar and no published accounts (its FY2025 Spain country-by-country report says the parent has not made worldwide figures available). Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Financial figures arrive as leaks (The Information, Bloomberg, FT, SCMP) — treat each as a single-outlet lead. Procurement facts arrive in Chinese suppliers' exchange filings (Kstar, TGOOD, Sifang, Mingyang, Jinpan, Zhonhen) and in HEC's (600673) disclosures about Chindata's Customer A.",
+   "watch": [
+    "Any named 800 V HVDC or SST award for a ByteDance or Volcano Engine campus (none public at 2026-09-26; the 30–40% HVDC figure traces to one expo post)",
+    "Q3 2026 reports of listed suppliers (due by 31 Oct): Kstar, TGOOD, Sifang, Mingyang, Zhonhen, Kehua, Megmeet — any ByteDance naming",
+    "Ulanqab 5–6 GW talks (SCMP, Sep 2026) and the Zhongwei entities; Chindata's November 2027 contract renewal",
+    "Capex: any figure beyond RMB160B / >RMB200B / up to US$70B; the US$29.6B loan's use",
+    "H200 deliveries under Beijing's approvals; the Qualcomm-built ASIC",
+    "TikTok USDS JV changes (ByteDance 19.9%)"
+   ]
+  },
   "canadian-solar": {
    "source": "PUBLIC COMPANY — NASDAQ: CSIQ (Canadian Solar Inc., CIK 0001375877). **FOREIGN PRIVATE ISSUER** — it files Form 20-F annually and Form 6-K for interim results, NOT 10-Q, so there is no quarterly filing cadence to infer from. THE DATE IS NOT COMPANY-CONFIRMED — no scheduling notice was located as of 2026-09-06. Cadence basis: the dossier's latest reported period is Q1 2026, and Canadian Solar has historically released Q3 results in late November. HOW TO CONFIRM: Canadian Solar issues a scheduling press release about two weeks ahead and files it on EDGAR as a 6-K; check CIK 0001375877.",
    "watch": [
@@ -210,6 +232,16 @@
     "Zhonhen capital increase: closing must occur within six months of the 14 August 2026 signing (SAMR filing is the gating step) — watch for the first CATL-side disclosure of any kind, which has been absent throughout",
     "Data-center and grid storage order momentum, and whether the 'compute-electricity coordination' strand acquires a named product or customer",
     "Overseas capacity progress"
+   ]
+  },
+  "chindata": {
+   "source": "Private (owned since 2026-01-16 by an HEC-led consortium via 宜昌东数一号); covered by the recurring quarterly sweep. The listed HEC Technology (SSE 600673) discloses Chindata China figures in its restructuring filings and, once the share-issue acquisition completes, will consolidate it — its quarterly reports (Q3 2026 due by 31 Oct) are the first-party financial source. Read HEC filings on static.cninfo.com.cn; chindatagroup.com/media/news for company releases.",
+   "watch": [
+    "SSE approval and CSRC registration of HEC's share issue for the remaining ~70% of 东数一号 (filed 2026-07-21; revised 2026-09-23)",
+    "A second SST project, the Sangyuan SST's MW, or a named domestic SST core-component supplier (Chindata said it will localise)",
+    "Customer A (ByteDance, inferred) renewal ahead of the first wholesale contract expiry in November 2027; the newly won 'top internet company' orders",
+    "Ulanqab Huiteng No.5, Lingqiu 10–11 and Qingyang M&E procurement (RMB4.75B earmarked)",
+    "Bridge Data Centres stake sale (Bain; bidders Sixth Street, SK Telecom, GIC, La Caisse) — separate company, context only"
    ]
   },
   "cipher-mining": {
