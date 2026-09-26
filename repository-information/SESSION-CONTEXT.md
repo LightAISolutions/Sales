@@ -6,6 +6,61 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-25, 07:59 PM → 09:02 PM EST (attended; three turns)
+**Repo version:** v07.56r (one push; this save is unversioned)
+**Branch:** `claude/brave-ritchie-un2qt1`
+
+### What was done
+
+- **A deep analysis of the corpus to fill the thin Profiler categories** (turn 1, research only, no commit). The categories stood at investor 5 · utility 6 · neocloud 7 · gc 7 · advisor 8 · hyperscaler 8, out of 177 dossiers.
+  - **Corpus pull:** a word-bounded, alias-aware count of ~300 uncovered names across every dossier, study guide, report and `Classroom.gs`. The most-cited were ERCOT 73 dossiers, PJM 37, BlackRock/GIP 31, Exelon/ComEd 19, NV Energy/BHE 18 and KKR 18.
+  - **Four parallel web-research subagents** checked candidate identity and buying authority. All four ran out of the session's 200-call search budget partway through.
+- **The developer approved every recommended company.** v07.56r recorded them as **Phase F** in `PROFILER-COVERAGE-PLAN.md` §11:
+  - 37 companies in 13 sessions: 11 utilities, 11 capital, 6 neocloud and landlord, 3 China hyperscaler, 3 GC/electrical, 3 advisor;
+  - its own ledger in §11.3, with `Why` cells marked unverified;
+  - the paste-in prompt for **F-U1 + F-U2** in §11.4: Duke, DTE, WEC, then Berkshire Hathaway Energy (NV Energy) and Exelon, run as two pushes on Fable 5.1 High.
+
+### Where we left off
+
+- **Everything is merged; the tree is clean.** The developer has the F-U1 + F-U2 prompt and is about to start it in a new session.
+- **Suggested in parallel:** F-I1, BlackRock and KKR, on Opus 5.5 xhigh. It touches different dossiers. Its prompt is not yet written — ask for `give me the F-I1 prompt`.
+- **Timed rows in §11.2:**
+  - **F-N1** (Firmus, HUMAIN, G42/Khazna) — fold into the 10/1 neoclouds pass.
+  - **F-H1** (ByteDance, Alibaba Cloud, Chindata) — before the 10/7 Megmeet start.
+  - **F-I2** — after SoftBank's DigitalBridge close.
+- **The Phase B Events work (#9a) and all dated reminders still stand**, unchanged by this session.
+
+### Key decisions made
+
+- **Ranking tests:** corpus pull, then buying authority (who signs for batteries, MV gear, generation or SSTs), then seat fit. `utilities` is the only segment in both sales seats, so utilities run first.
+- **Tenants are replaced by their landlords.** Together AI, Vultr, TensorWave and Lightning were dropped for 5C/Hypertec and TECfusions. Most GCs were dropped for Clayco and the electrical integrators Faith Technologies and EMCOR.
+- **ERCOT and PJM are held.** They are grid operators, and adding them would mean first using the empty `other` category. That is the developer's decision.
+- **Excluded, with the reasons in §11.1:** GIC, Silver Lake, Partners Group, the banks, DigitalBridge, PG&E, SCE, Sempra, CenterPoint and FirstEnergy. Clean Energy Associates is already inside `intertek`.
+- **Landscape coupling:** new members make `landscape-utilities-2026-09`, `landscape-capital-2026-09` and `landscape-neoclouds-2026-09` stale. A Profiler session records this and never edits `Classroom.gs`.
+
+### Known issues
+
+- **Drift candidates in existing dossiers** — agent-reported, unread, and carried in the utility prompt:
+  - `powerhouse-data-centers`: FERC rejected ComEd's Joliet TSA cancellation on 22 Sep;
+  - `tract`: the PUCN conditionally approved its gas plants, around 19 Sep;
+  - `stack-infrastructure` / `oracle` / `jupiter-nm`: Oracle's force-majeure notice on Project Jupiter, 24 Sep.
+- **Carried over:** `megmeet-briefing-prompt.md` names the 9/8 AIDC edition; `verify-profiler-roles.py` (2) and `check-events-plan.js` (2); the two aged 9/8 reports.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **CHANGELOG:** `Sections: 108/100`, 10 dated 9/25 and exempt. **The first push dated 9/26 or later must rotate** (after `git fetch --unshallow`).
+
+### Recommendation for next session
+
+- Run **Phase F sessions F-U1 + F-U2**, the five utilities, on **Fable 5.1 High** using the prompt in `PROFILER-COVERAGE-PLAN.md` §11.4. Utilities feed both sales seats, and three of the five buy batteries directly.
+
+**To continue:** paste the prompt in `PROFILER-COVERAGE-PLAN.md` §11.4 into a fresh Fable 5.1 High session
+
+## Previous Sessions
+
+### Session — 2026-09-25 07:14 PM → 07:52 PM EST (#12R closed — Events discovery Routine live, v07.55r)
+
 **Date:** 2026-09-25, 07:14 PM → 07:52 PM EST (attended; four turns)
 **Repo version:** v07.55r (two pushes: v07.54r, v07.55r; this save is unversioned)
 **Branch:** `claude/wizardly-mendel-6o4h2e`
@@ -62,84 +117,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Start Phase B with **#9a, the registry pass**, in a fresh Opus 5.5 High session on or after Mon 9/28. It fills `hours[]`, `venueLatLng` and `agendaUrl` for RE+ 2026 and the 35 events through 11/30, verified against organiser pages. The booth-number build and `events plan re-plus-2026` both depend on those fields. Expect the CHANGELOG archive rotation on that push.
 
 **To continue:** type `write the #9a registry-pass prompt`
-
-## Previous Sessions
-
-### Session — 2026-09-25 06:47 PM → 07:20 PM EST (#8 closed — AIDC power-conversion report refresh and rev2, v07.53r)
-
-**Date:** 2026-09-25, 06:47 PM → 07:20 PM EST (attended; three turns)
-**Repo version:** v07.53r (two pushes: v07.52r, v07.53r; this save is unversioned)
-**Branch:** `claude/quirky-faraday-avb5pv`
-
-### What was done
-
-- **#8 closed — the AIDC power-conversion report was refreshed twice on 9/25:**
-  - **v07.52r:** `aidc-power-conversion--competitive--2026-09-25` superseded the 9/8 edition. It re-pins Megmeet v8, Delta v6 and LITEON v7, and the rack order is now sourced: Delta, LITEON, Megmeet third. It dates Megmeet's SST as pre-research with no class, corrects the 9/8 reading of Sungrow ("supplying" by filing; batch orders from 2027), and adds a Megmeet first-week section and a cross-reference to the SST rev2 report.
-  - **v07.53r (developer decision):** `aidc-power-conversion-rev2--competitive--2026-09-25` added `power-electronics` to Layer 3 (AIPCS, medium voltage to 800 VDC, TRU-class). That makes 16 vendors and 66 citations. The FCC paragraph now says the inverter rule reaches Power Electronics' Spanish-built storage inverters. **rev2 is current.**
-  - `check-profiler-reports.py` reports 0 errors and no warning on rev2.
-- **New reminder:** re-run the report once Megmeet's Q3 is filed (due by Sat 10/31), refreshing the Megmeet dossier first. Zhonhen and Sinexcel report by the same deadline.
-- **The #12R prompt was drafted** (below). It hands the discovery Routine's prompt and the UI steps to a Medium session.
-
-### Where we left off
-
-- **Everything is merged; the tree is clean.** Next is #12R, then Phase B (#9a registry pass and the booth-number build, 9/28–10/6).
-- **Dated reminders stand:**
-  - The cooling recheck, from 9/28.
-  - The 9/30 Classroom run.
-  - The neoclouds pass and Habitat Energy, from 10/1.
-  - The Dominion reframe, 10/2–10/6.
-  - The AIDC re-run, after 10/31.
-  - The Megmeet start is Wed 10/7.
-
-### Key decisions made
-
-- **Power Electronics went in now rather than at the Q3 re-run.** It is a fresh dossier and a clear Layer 3 product, and it is the US-footprint comparison for the first week. The only cost was a same-day third edition, named with `-rev2` per the SST precedent.
-- **Mitsubishi Electric** stays a named candidate for the next edition.
-- **Archive rotation is not due on 9/25:** 105 sections, 7 exempt, 98 non-exempt. **The first push dated 9/26 or later rotates the 2026-09-18 group (8 sections), SHA-enriched after `git fetch --unshallow`.**
-
-### Known issues
-
-- The two older aged 9/8 reports still warn (grid-scale-bess: Jinko; named-project-bess-attach: Oracle). Nothing in this refresh touched what they depend on; they are optional Phase B work.
-- `repository-information/megmeet-briefing-prompt.md` still names the 9/8 edition as current. Its own row says to re-check the index after 10/1, which will find rev2.
-- From before this session: `verify-profiler-roles.py` (2) and `check-events-plan.js` (2, stale fixture dates).
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **CHANGELOG:** `Sections: 105/100`.
-- **Pages:** Profiler v01.92w (unchanged — reports are data-only).
-- **Working files:** the report builder scripts were scratchpad-only, not committed.
-
-### Recommendation for next session
-
-- Run #12R in a fresh Opus 5.5 Medium session by pasting this prompt:
-
-> Run action #12R — draft the discovery Routine's prompt and give me step-by-step instructions to create it in the claude.ai UI (**R** in `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`).
->
-> Read first, in this order:
-> 1. `repository-information/SESSION-CONTEXT.md` → Latest Session.
-> 2. `NETWORK-EVENTS-DESIGN-PLAN.md`: §5.3's **Discovery Routine** bullet, the **R** rows in §8 and §11, and the note headed "**R — the developer.**" Its blocker, Monday's earnings-desk proof, is cleared: the desk landed the first Routine commit on 9/22 (v07.16r).
-> 3. `repository-information/ROUTINES-OPERATIONS.md`:
->    - the current **STEP 0** text — copy it verbatim, not from memory;
->    - the settled findings that a fired session can push only when the repository is attached on the "New routine" form, and that a Routine's repository cannot be edited afterwards;
->    - the 2026-09-21 model evaluation;
->    - the prompts under "The rebuild prompts", as the shape to follow.
-> 4. `.claude/rules/events-app.md` (the Events Sync command and its never-list); `repository-information/EVENTS-SCHEMA.md` (the registry, the roster and the `Proposed` shape); and `live-site-pages/events-data/events.json` and `events-sources.json`.
->
-> Settle these before drafting, and give me each answer with its reason:
-> - **Where proposals go.** A fired session cannot write the Events spreadsheet's `Proposed` tab, and it must never call the deployed app or widen a peer token. Decide the repo-side queue a run writes candidates to (§8's "calendar-file-as-queue"), and how `events sync` or I promote a candidate out of it. If that file or its schema doesn't exist, create it in this session and make `scripts/check-events-registry.py` (or a sibling checker) validate it.
-> - **What counts as a candidate:** the source classes; the relevance bar against the segments and the dossier corpus; dedup against `events.json`; a per-run cap; and the stand-down rule (a quiet run commits nothing and reports why).
-> - **Cadence and model:** quarterly, with the cron written in `CRON_TZ=America/New_York` and a jittered minute. Give me the first fire date and recommend a model with the reason.
-> - **Budget:** list my existing Routines and say whether one more fits before the #12Q quota review (~10/21).
->
-> Deliverables:
-> 1. The complete Routine prompt in one copyable block: STEP 0 verbatim, then identity, the queue, the cap, the stand-down rule and the report shape.
-> 2. That prompt saved as a new subsection under "The rebuild prompts" in `ROUTINES-OPERATIONS.md`, so it can be recreated. Mark the plan's R row "prompt written — awaiting UI creation", add a CHANGELOG entry, and commit and push under the normal checklists.
-> 3. Numbered, click-by-click steps for claude.ai's "New routine" form: name, prompt, repository picker (confirm the **Runs with** card shows `LightAISolutions/Sales` before saving), environment, model, schedule, connectors (none unless the prompt needs one), notifications, then one **Run now**. Check the live docs with `read_documentation` rather than memory.
-> 4. What a good first run looks like (§8: it proposes at least one event and commits, or stands down with a report), and how I verify it: the session report, a commit on `main`, and the queue file.
->
-> Do not create the Routine yourself. `create_trigger` cannot attach a repository, and a Routine without one cannot push.
->
-> Done when: the prompt is committed in `ROUTINES-OPERATIONS.md`, the push has merged, and I have the UI steps.
-
-**To continue:** paste the #12R prompt above into a new Opus 5.5 Medium session
