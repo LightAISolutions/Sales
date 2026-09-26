@@ -1,6 +1,6 @@
 # Phase F action plan on Opus 5.5 — the remaining 32 companies, the Classroom waves, and the paste-in prompts
 
-**Status (v07.66r, 2026-09-26):** F-H1 landed in v07.62r, F-N1 in v07.64r and F-I1 in v07.66r (rows 1, 2 and 4 of §3 done; F-I1 ran early, on 9/26, at xhigh). §5 holds the F-N1 prompt as run and §6 the F-I1 prompt as run. F-N1 moved two Classroom modules that wave A (row 7) already re-authors, plus one scenario: `landscape-neoclouds-2026-09` gains three members, `landscape-aidc-developers-and-landlords-2026-09` gains `g42` as a challenger and `firmus` and `humain` as adjacent, and `scenario-neoclouds-discovery`, tied to the `neoclouds` segment, goes stale with it. F-I1 makes `landscape-capital-2026-09` (built on "4 of 8 buy nothing") and `scenario-capital-objection` (reviewBy 10/14) stale: the `capital` roster is 10 now, with `blackrock` and `kkr` as incumbents, and both pass §11.1 only through platforms they control. Wave B (row 10) re-authors them once F-I2 lands. F-I1's step 7 found 42 BlackRock and 26 KKR hits by the full alias grep (§1 says 31 and 18); after 9 collisions and 8 career-only mentions it read 29 and 22 substantive dossiers, plus `microsoft` and `xai` for the missing AIP edge, and revised 28.
+**Status (v07.67r, 2026-09-26):** F-H1 landed in v07.62r, F-N1 in v07.64r and F-I1 in v07.66r (rows 1, 2 and 4 of §3 done; F-I1 ran early, on 9/26, at xhigh). §5 holds the F-N1 prompt as run and §6 the F-I1 prompt as run. F-N1 moved two Classroom modules that wave A (row 7) already re-authors, plus one scenario: `landscape-neoclouds-2026-09` gains three members, `landscape-aidc-developers-and-landlords-2026-09` gains `g42` as a challenger and `firmus` and `humain` as adjacent, and `scenario-neoclouds-discovery`, tied to the `neoclouds` segment, goes stale with it. F-I1 makes `landscape-capital-2026-09` (built on "4 of 8 buy nothing") and `scenario-capital-objection` (reviewBy 10/14) stale: the `capital` roster is 10 now, with `blackrock` and `kkr` as incumbents, and both pass §11.1 only through platforms they control. Wave B (row 10) re-authors them once F-I2 lands. F-I1's step 7 found 42 BlackRock and 26 KKR hits by the full alias grep (§1 says 31 and 18); after 9 collisions and 8 career-only mentions it read 29 and 22 substantive dossiers, plus `microsoft` and `xai` for the missing AIP edge, and revised 28. **Decided 2026-09-26 (v07.67r):** ERCOT and PJM are approved for coverage as grid operators (row 21 and the note under Stage 3), and wave B has a DigitalBridge fallback (row 10).
 
 **Written 2026-09-26 (v07.61r)**, the night the Classroom utilities re-pin landed (v07.60r). The developer asked for three things:
 - every company still recommended for Profiler;
@@ -28,7 +28,7 @@ Source: `PROFILER-COVERAGE-PLAN.md` §11.3, the Phase F list the developer appro
 | **F-I3** | Apollo (`apollo`) · Ares (`ares`) · Stonepeak (`stonepeak`) | investor · `capital` | 10 · 8 · 2 |
 | **F-I4** | Quinbrook (`quinbrook`) · Energy Capital Partners (`energy-capital-partners`) · CPP Investments (`cpp-investments`) | investor · `capital` | 1 · 3 · 8 |
 | **F-A1** | Anza (`anza`) · SemiAnalysis (`semianalysis`) · EPRI (`epri`) | advisor · `software-and-optimization` / none / `assurance` adjacents | 0 · 22 · 3 |
-| *held* | ERCOT (`ercot`) · PJM Interconnection (`pjm`) | `other` — grid operators, not companies | 73 · 37 |
+| **approved 2026-09-26** | ERCOT (`ercot`) · PJM Interconnection (`pjm`) | `grid-operator` (new category) — grid operators, not companies | 73 · 37 |
 
 **Named elsewhere, not in Phase F and not approved:** Mitsubishi Electric. It is the one candidate the 2026-09-25 reminder names as outside the scope of the AIDC power-conversion report. Raise it with the developer when that report is re-run, not before.
 
@@ -74,7 +74,7 @@ Dates are verified weekdays. The plan interleaves the developer's standing remin
 | # | When | Session | Effort | Why this slot |
 |---|---|---|---|---|
 | 9 | once the DigitalBridge close is confirmed (expected about the end of September) | **F-I2** — SoftBank, SB Energy, Blue Owl (Profiler) | xhigh | SB Energy's S-1 is a long first-party record; SoftBank's dossier should be written once, after the close brings Vantage and Switch under it |
-| 10 | by **Wed 10/14** | **Classroom wave B** — `landscape-capital-2026-09` (BlackRock, KKR, SoftBank, Blue Owl) and `scenario-capital-objection` | xhigh | `scenario-capital-objection` has reviewBy 10/14; re-author capital once, with four new members |
+| 10 | by **Wed 10/14** | **Classroom wave B** — `landscape-capital-2026-09` (BlackRock, KKR, SoftBank, Blue Owl) and `scenario-capital-objection` | xhigh | `scenario-capital-objection` has reviewBy 10/14; re-author capital once, with four new members. **DigitalBridge fallback (developer, 2026-09-26):** if the close has not happened by **Wed 10/7**, move `scenario-capital-objection`'s reviewBy from 10/14 to **Fri 11/6**, the date `landscape-capital-2026-09` already carries, so the two are re-authored together. If it still has not closed by **Fri 10/30**, run wave B without SoftBank and Blue Owl so both land by 11/6, and record F-I2 as a later count correction. As of 26 Sep, DigitalBridge said on 22 Sep that every regulatory approval was in and the deal would close within five business days (by Tue 9/29), so the fallback should not be needed |
 | 11 | mid-October | **F-U3** — PPL, Pinnacle West, NiSource (Profiler) | xhigh | Utilities are regulatory synthesis: IRPs, rate cases and tariffs. Pinnacle West's XHLF decision and RFP awards fall in December |
 | 12 | mid-October | **F-U4** — Florida Power & Light, Salt River Project, TVA (Profiler) | xhigh | FPL must be tested against `nextera-energy-resources` under the one-slug rule. SRP and TVA test the category for public and federal power; TVA's large-load charge is effective 10/1 |
 | 13 | after row 12 | **Classroom wave C** — `landscape-utilities-2026-09` (six more franchises) and the three `scenario-utilities-*` rehearsals | xhigh | The v07.60r pattern again, with seventeen franchises. The utilities module's reviewBy is **2 December** |
@@ -90,15 +90,15 @@ Dates are verified weekdays. The plan interleaves the developer's standing remin
 | 18 | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments | high | Quinbrook is `habitat-energy`'s parent; ECP is `proenergy`'s |
 | 19 | **F-A1** — Anza, SemiAnalysis, EPRI | medium | SemiAnalysis may carry no segment; record it as unassigned if so |
 | 20 | **Classroom wave D** — `landscape-epc-and-construction`, `landscape-in-hall-power`, `landscape-capital` (count correction), `landscape-neoclouds` and `landscape-aidc-developers` (count corrections), `landscape-software-and-optimization`, `landscape-assurance`; regenerate segments; re-pin rehearsals | xhigh | Closes §11.2's "done when" |
-| 21 | **ERCOT and PJM** — decide, then one session | xhigh | See below |
+| 21 | **ERCOT and PJM** — approved 2026-09-26; two sessions, ERCOT then PJM | xhigh | See below |
 
-**ERCOT and PJM — the one decision the developer owns.** **Recommendation: add both, in the unused `other` category, in one final session.**
+**ERCOT and PJM — decided 2026-09-26: cover both, as grid operators.** The developer knows both well and wants them in. The category is a new **`grid-operator`** (label 'Grid operator'), not the generic `other` the earlier recommendation named, so the tag says what they are. That adds one entry to the Profiler page's category list, a page change made in the ERCOT session. The work is **two sessions, ERCOT first**: 73 inbound dossiers alone is a larger step 7 than BlackRock's 42 raw hits, which filled most of F-I1. The earlier reasoning stands:
 - **Why:** they are the two most-cited uncovered entities in the corpus (73 and 37 dossiers). Curating them converts roughly 110 derived mentions into real edges, and their rules (Batch Zero and SB 6; the capacity auction) are what half the utilities and developers in the corpus are exposed to.
 - **The cost:** the dossier schema fits a grid operator loosely. It has no product line or revenue expectation in the usual sense, and its ownership is member-governed. So the session should open with a one-paragraph schema note — `ownership.type`, a `financials` stance, no segment or an adjacent seat — written into `PROFILER-SCHEMA.md` before either dossier.
-- **If you decline**, record the decision in §11.1 so it stops being re-proposed.
+- **The category change:** `PROFILER-SCHEMA.md` (the category list and the schema note), `profiler-companies.json`'s `categories`, and the Profiler page's category list, label and colour, bumped under [PC-HTML-VERSION] #2.
 
 **Totals:**
-- 32 companies in 11 Profiler sessions, plus one ERCOT/PJM session.
+- 32 companies in 11 Profiler sessions, plus two grid-operator sessions (ERCOT, then PJM).
 - 4 Classroom waves, plus the three standing Classroom and Profiler reminders.
 - Effort mix across the 21 rows: **12 xhigh, 6 high, 3 medium**.
 

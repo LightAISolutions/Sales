@@ -540,7 +540,7 @@ Four tests, in this order:
 - **Together AI, Vultr, TensorWave, Lightning AI / Voltage Park** — colocation tenants whose landlords buy the equipment. The landlords are taken instead (F-N2).
 - **Clean Energy Associates** — already covered inside `intertek` as Intertek CEA (checked 2026-09-25). **Cupertino Electric** — a Quanta subsidiary since July 2024, covered through `quanta-services`.
 
-**Held for a developer decision — ERCOT and PJM.** The two most-cited uncovered entities in the corpus are grid operators, not companies. They would be the first entries in the unused `other` category, and the dossier schema (products, financials versus expectations) fits them loosely. Not scheduled until the developer decides the category question.
+**ERCOT and PJM — approved by the developer on 2026-09-26, as grid operators.** The two most-cited uncovered entities in the corpus are grid operators, not companies. They get a new `grid-operator` category rather than the unused `other`, and the dossier schema (products, financials versus expectations) fits them loosely, so the first session opens with a schema note in `PROFILER-SCHEMA.md`. Two sessions, ERCOT then PJM; `phase-f-action-plan.md` §3 row 21 schedules them.
 
 ### 11.2 · Sessions, order and model
 
@@ -611,8 +611,8 @@ The model per session follows §2. **Utilities and private or opaque subjects ru
 | F-A1 | `anza` | Anza | advisor | `software-and-optimization` · adjacent | Fable 5.1 Medium | 0 | Energy Storage Pro covers ~95% of the US BESS market. Transformer Procurement Service (16 Dec 2025) serves MV/HV buyers, data-centre developers included. BESS commissioning support drawn from 11 GWh | — | — | — |
 | F-A1 | `semianalysis` | SemiAnalysis | advisor | none expected — record as unassigned if the dossier supports no segment | Fable 5.1 Medium | 22 | ClusterMAX 3.0 (23 Sep 2026) is the rating `landscape-neoclouds-2026-09` rests on. Datacenter Industry Model (5,000+ facilities); China Datacenter Model (25 Sep 2026) | — | — | — |
 | F-A1 | `epri` | EPRI | advisor | `assurance` · adjacent | Fable 5.1 Medium | 3 | Non-profit. DCFlex data-centre flexibility demonstrations with Google, Meta, Compass and utilities | — | — | — |
-| held | `ercot` | ERCOT | other | — | — | 73 | Grid operator, not a company. Batch Zero / SB 6 large-load process. **Not scheduled until the developer decides the `other` question (§11.1)** | — | — | — |
-| held | `pjm` | PJM Interconnection | other | — | — | 37 | Grid operator. Third straight capacity auction at the price cap, 6.8 GW short (reported 31 Jul 2026). **Held as above** | — | — | — |
+| approved | `ercot` | ERCOT | grid-operator (new) | — | — | 73 | Grid operator, not a company. Batch Zero / SB 6 large-load process. **Approved 2026-09-26 as a grid operator; its own session, before PJM (`phase-f-action-plan.md` row 21)** | — | — | — |
+| approved | `pjm` | PJM Interconnection | grid-operator (new) | — | — | 37 | Grid operator. Third straight capacity auction at the price cap, 6.8 GW short (reported 31 Jul 2026). **Approved 2026-09-26 as above; its own session, after ERCOT** | — | — | — |
 
 ### 11.4 · Paste-in prompt — F-U1 + F-U2, the five utilities
 

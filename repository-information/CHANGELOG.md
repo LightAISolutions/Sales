@@ -3,11 +3,49 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.67r] — 2026-09-26 04:52:03 PM EST
+
+> **Prompt:** "1. What kind of contact address does SEC need? An email or mailing address? Give me the format to give it to you in.
+> 2. I approve the small Profiler page fix. Execute.
+> 3. If DigitalBridge hasn't happened by 10/7, then move the review date later. Recommend how much later.
+> 4. I definitely want to cover ERCOT and PJM as grid operators as they are two of the biggest ones I am familiar with.
+> 5. What are the reminders and their differences?
+> 6. List the 60 older archive files in a housekeeping pass."
+
+The follow-up to F-I1's evaluation: the approved Profiler bold fix, the README archive backfill, and the developer's decisions on ERCOT/PJM and the DigitalBridge fallback, recorded in the plans.
+
+### Fixed
+
+- **Profiler v01.93w — `**` now renders as bold wherever dossier prose is appended after a label.** Five paths inserted text as a raw text node, so house-style bold printed as literal asterisks:
+  - the Relationships tab's 'Mentioned in X's dossier' evidence excerpts;
+  - the Capabilities tab's Positioning, Sold through, Target segments and Roadmap rows;
+  - the Policy tab's Mitigation lines;
+  - the Ecosystem explorer's quote and tie lines.
+  - All five now go through one helper, `ovAppendRich`, which reuses `ovSetText` through a document fragment: no wrapper element, no `innerHTML`. An excerpt with an odd number of markers (cut mid-bold) has them stripped rather than bolding the wrong run.
+  - **Verified with Playwright:** 16 dossiers that showed literal `**` before (`blackrock`, `kkr`, `cyrusone`, `brookfield`, `macquarie`, `blackstone`, `jupiter-power`, `mgx`, `aligned`, `nvidia`, `vistra`, `compass-datacenters`, `aon`, `clearway-energy`, `eolian`, `meta`) now show none on any tab. BlackRock's evidence shows 4 bold runs, and the explorer shows 0 literal markers and 16 bold runs. Zero page errors; the page reports v01.93w.
+  - `Profilerhtml.changelog.md` gains v01.93w. The file sits at its 50-section cap, so the oldest date group (v01.43w, 2026-08-27) moved to `Profilerhtml.changelog-archive.md` with its commit link (`9d8b671`), as the v07.50r rotation did.
+
+### Changed
+
+- **README tree — the 63 unlisted archive files are now listed**, so all 447 archived dossier versions (plus `archive-index.json`) appear. Each sits in version order beside its company's other entries, or alphabetically where the company had none. Eight long legal-name labels were shortened to the dossier's short name, two of them on existing lines (Invenergy, McCarthy). The README tree also shows Profiler at v01.93w.
+- **`phase-f-action-plan.md`:**
+  - **ERCOT and PJM approved** (developer, 2026-09-26) for coverage as grid operators, in a new `grid-operator` category rather than `other`. Two sessions, ERCOT first, because 73 inbound dossiers is a larger step 7 than all of F-I1. The category change (schema note, category list, Profiler page) is made in the ERCOT session. Row 21 and the note under Stage 3 are rewritten; the totals now count two grid-operator sessions.
+  - **DigitalBridge fallback on row 10:** if the close has not happened by Wed 10/7, `scenario-capital-objection`'s reviewBy moves from 10/14 to **Fri 11/6**, the date `landscape-capital-2026-09` already carries, so the two are re-authored together. If it still has not closed by Fri 10/30, wave B runs without SoftBank and Blue Owl.
+  - The status line records both decisions.
+- **`PROFILER-COVERAGE-PLAN.md` §11** — the 'held for a developer decision' paragraph and the two held ERCOT/PJM ledger rows now read approved, with the new category.
+
+### Notes
+
+- **SEC contact format, from SEC's own 'Accessing EDGAR data' page:** `User-Agent: Sample Company Name AdminContact@<sample company domain>.com`. That is a name and an email address; no mailing address is asked for. Tested on 26 Sep with placeholder mailboxes: a `github.io` contact gets 403 from `data.sec.gov` and `www.sec.gov`, while `gmail.com`, `outlook.com` and `acme.com` contacts get 200. The only place the contact lives is `USER_AGENT` in `scripts/check-source-reachability.py`, which stays unchanged until the developer supplies an address.
+- **DigitalBridge, as of 26 Sep:** DigitalBridge announced on Tue 22 Sep that every regulatory approval had been received and that the deal was expected to close within five business days (by Tue 9/29). Completion is not yet confirmed; the fallback applies only if it slips.
+- **Reminders were not changed.** They are the developer's; the two overlapping 9/30 entries were described, not edited.
+- `Classroom.gs` was not edited; the 11/6 move is conditional and dated 10/7.
 
 ## [v07.66r] — 2026-09-26 07:19:39 AM EST
 

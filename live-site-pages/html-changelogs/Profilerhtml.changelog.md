@@ -9,6 +9,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
+## [v01.93w] — 2026-09-26 04:52:03 PM EST — v07.67r
+
+### Fixed
+- **Bold text now shows as bold everywhere in a dossier.** Quoted passages under "Mentioned in …" on the Relationships tab, the Positioning, Sold through and Roadmap lines on the Capabilities tab, Mitigation lines on the Policy tab, and the quotes in the Ecosystem explorer used to show raw asterisks around emphasized words. They now render as bold, and a quote cut off partway through a bold phrase shows as plain text instead
+
 ## [v01.92w] — 2026-09-25 05:49:20 PM EST — v07.50r
 
 ### Added
@@ -332,8 +337,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Added
 - The Summary tab opens with an at-a-glance board: the lead analytic judgment, the beat/miss record across reported financial periods, the newest reported development, product-line and leadership counts, and how fresh the sourcing is — each card jumps straight to its full tab
-
-## [v01.43w] — 2026-08-27 04:09:00 PM EST — v03.03r
-
-### Changed
-- Minor internal improvements

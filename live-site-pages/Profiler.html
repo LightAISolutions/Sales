@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.92w">
+  <meta name="build-version" content="v01.93w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1866,6 +1866,17 @@ function ovDocVersion() {
       });
       return e;
     }
+    // Prose appended as a run after a label (evidence excerpts, kv rows,
+    // mitigation lines) goes through ovSetText via a fragment, so '**' renders
+    // as <strong> with no wrapper element and no innerHTML (v01.93w). An
+    // excerpt cut from a longer passage can carry an unpaired marker; an odd
+    // count strips them all rather than bolding the wrong run.
+    function ovAppendRich(parent, text) {
+      var s = String(text === undefined || text === null ? '' : text);
+      if ((s.match(/\*\*/g) || []).length % 2) s = ovPlain(s);
+      parent.appendChild(ovSetText(document.createDocumentFragment(), s));
+      return parent;
+    }
     function ovEl(tag, cls, text) {
       var e = document.createElement(tag);
       if (cls) e.className = cls;
@@ -3154,7 +3165,7 @@ function ovDocVersion() {
       items.forEach(function(e) {
         var it = ovEl('div', 'ov-rel-it');
         it.appendChild(ovEl('span', 'wh', e.where + (e.date ? ' · ' + e.date : '')));
-        it.appendChild(document.createTextNode(' — ' + e.text + ' '));
+        ovAppendRich(it, ' — ' + e.text + ' ');
         if (e.src) {
           var so2 = ovRelSource(p, e.src);
           if (so2 && so2.url) it.appendChild(ovLink(so2.url, 'srcl', '[' + so2.label + ']'));
@@ -3630,7 +3641,7 @@ function ovDocVersion() {
         var q = ovEl('div', 'nx-quote');
         var fromName = bySlug[best.from === 'a' ? e.a : e.b].name;
         q.appendChild(ovEl('span', 'wh', fromName + ' dossier · ' + best.where + (best.date ? ' · ' + best.date : '')));
-        q.appendChild(document.createTextNode(' — ' + best.text));
+        ovAppendRich(q, ' — ' + best.text);
         row.appendChild(q);
       }
       return row;
@@ -3695,7 +3706,7 @@ function ovDocVersion() {
         [[A, s.ea], [B, s.eb]].forEach(function(p) {
           var d = ovEl('div', 'nx-side');
           d.appendChild(ovEl('span', 'wh', bySlug[p[0]].name + ' ↔ ' + bySlug[s.slug].name));
-          d.appendChild(document.createTextNode(' — ' + tieText(p[0], s.slug, p[1])));
+          ovAppendRich(d, ' — ' + tieText(p[0], s.slug, p[1]));
           row.appendChild(d);
         });
         box.appendChild(row);
@@ -3896,7 +3907,7 @@ function ovDocVersion() {
             if (!pair[1]) return;
             var kv = ovEl('p', 'kv');
             kv.appendChild(ovEl('span', 'k', pair[0]));
-            kv.appendChild(document.createTextNode(pair[1]));
+            ovAppendRich(kv, pair[1]);
             d.appendChild(kv);
           });
           if (prod.highlights && prod.highlights.length) {
@@ -3950,7 +3961,7 @@ function ovDocVersion() {
           if (px.mitigation) {
             var mit = ovEl('p', 'ov-pol-mit');
             mit.appendChild(ovEl('span', 'k', 'Mitigation'));
-            mit.appendChild(document.createTextNode(' ' + px.mitigation));
+            ovAppendRich(mit, ' ' + px.mitigation);
             row.appendChild(mit);
           }
           if (px.source) {
