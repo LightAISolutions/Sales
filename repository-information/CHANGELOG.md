@@ -3,11 +3,46 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.65r] — 2026-09-26 06:03:22 AM EST
+
+> **Prompt:** "give me the prompt to paste into a new Opus 5.5 xhigh session to run F-I1, then remember session"
+
+The follow-up to F-N1: the F-I1 paste-in prompt, with reconciliation counts measured on the current corpus, and the session saved.
+
+### Added
+
+- **`phase-f-action-plan.md` §6 — the F-I1 paste-in prompt** (BlackRock with GIP, AIP and HPS; KKR) for Opus 5.5 **xhigh**. It follows §5's F-N1 prompt:
+  - **Identity:** it asks whether GIP gets its own slug or sits in BlackRock's `aka[]`, and asks for the §11.1 verdict **through each firm's controlled platforms**.
+  - **Hardest checks:** it names the ledger clauses to verify first, including the flagged CyrusOne conflict. It notes that the ledger's own "ECP announced 30 Oct 2024" correction is unverified.
+  - **Reconciliation counts, measured on 2026-09-26** by a word-bounded alias grep. BlackRock has 40 raw hits, 7 of them known collisions:
+    - "AIP" is also American Intelligence & Power (`caterpillar`, `rehlko`, `nscale`), Palantir's AIP (`mccarthy`) and AIP Management (`rosendin`).
+    - "GIP" is Infineon's Green Industrial Power segment.
+    - "HPS" is Prevalon's Hybrid Power Stabilizer.
+    - That leaves about 33 for BlackRock; KKR has 19. No dossier has an edge to either slug yet, and `microsoft` does not name AIP at all.
+  - **A defer-not-skim rule:** if BlackRock's step 7 outgrows the session, KKR and BlackRock's controlled platforms come first, and every remaining slug is recorded by name.
+  - **F-N1's lessons:**
+    - Count inbound hits against the archive copies.
+    - Check for the EDGAR block and read filings from IR sites.
+    - Never edit an existing concept.
+    - Re-verify a pin only on an edge-only change; leave a substantive one loud, with the reason written.
+    - Close the guide overlay with its ✕ button under Playwright.
+  - **A Megmeet paragraph ask:** which controlled platforms buy MV or DC equipment, and whether capital is a door or only a directory.
+
+### Changed
+
+- **`phase-f-action-plan.md`** — the status line records §6. §3 row 4 gives the measured count and points to §6.
+- **`SESSION-CONTEXT.md`** — the Latest Session extended in place for v07.65r, as F-H1's save did, since it was already this session's hand-off. The recommendation now points to the §6 prompt.
+- **README.md** — the action plan's tree description names all three prompts; timestamp and repo version.
+
+### Notes
+
+- **No dossier, guide, page, GAS script or Classroom content changed.** No rotation: 91 sections.
 
 ## [v07.64r] — 2026-09-26 05:27:31 AM EST
 

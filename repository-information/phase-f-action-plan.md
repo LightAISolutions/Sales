@@ -1,6 +1,6 @@
 # Phase F action plan on Opus 5.5 — the remaining 32 companies, the Classroom waves, and the paste-in prompts
 
-**Status (v07.64r, 2026-09-26):** F-H1 landed in v07.62r and F-N1 in v07.64r (rows 1 and 2 of §3 done). §5 holds the F-N1 prompt as run. F-N1 moved two Classroom modules that wave A (row 7) already re-authors, plus one scenario: `landscape-neoclouds-2026-09` gains three members, `landscape-aidc-developers-and-landlords-2026-09` gains `g42` as a challenger and `firmus` and `humain` as adjacent, and `scenario-neoclouds-discovery`, tied to the `neoclouds` segment, goes stale with it.
+**Status (v07.65r, 2026-09-26):** F-H1 landed in v07.62r and F-N1 in v07.64r (rows 1 and 2 of §3 done). §5 holds the F-N1 prompt as run; §6 holds the F-I1 prompt, for xhigh. F-N1 moved two Classroom modules that wave A (row 7) already re-authors, plus one scenario: `landscape-neoclouds-2026-09` gains three members, `landscape-aidc-developers-and-landlords-2026-09` gains `g42` as a challenger and `firmus` and `humain` as adjacent, and `scenario-neoclouds-discovery`, tied to the `neoclouds` segment, goes stale with it.
 
 **Written 2026-09-26 (v07.61r)**, the night the Classroom utilities re-pin landed (v07.60r). The developer asked for three things:
 - every company still recommended for Profiler;
@@ -63,7 +63,7 @@ Dates are verified weekdays. The plan interleaves the developer's standing remin
 | 1 | **Sat 9/26 or Sun 9/27** | **F-H1** — ByteDance, Alibaba Cloud, Chindata (Profiler) | **xhigh** | The only session tied to the developer's own start date: the China buyer side the `megmeet` dossier lacks, landed a week before 10/7 so it can be read. The record is opaque and partly in Chinese, and the capex figures conflict. **Prompt in §4.** |
 | 2 | by **Tue 9/29** | **F-N1** — Firmus, HUMAIN, G42 (Profiler) | high | §11.2 asks for it before the 10/1 neoclouds pass, so `landscape-neoclouds-2026-09` is rewritten once. If it slips, fold it into row 6 |
 | 3 | **Mon 9/28** or later | Cooling recheck after CoolIT's CDU launch (Classroom guidance) | medium | The standing reminder; `landscape-cooling-2026-09` has reviewBy 9/28 |
-| 4 | **Mon 9/28 – Tue 9/29** | **F-I1** — BlackRock, KKR (Profiler) | xhigh | The most-cited uncovered company (31 dossiers); no date gate. If BlackRock's step 7 outgrows the session, split it off, as §11.2 allows |
+| 4 | **Mon 9/28 – Tue 9/29** | **F-I1** — BlackRock, KKR (Profiler) | xhigh | The most-cited uncovered company (31 dossiers; about 33 by the 2026-09-26 alias grep); no date gate. If BlackRock's step 7 outgrows the session, split it off, as §11.2 allows. **Prompt in §6.** |
 | 5 | **Wed 9/30**, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | medium | The standing reminder, re-requested on 9/26. Read the report and check whether a notification arrived |
 | 6 | **Thu 10/1** or later | Neoclouds Profiler pass + `profiler Habitat Energy` (one Profiler session) | high | Both wait on filings due 9/30 (Fluidstack, Habitat Energy). **The 10/1 quarterly and monthly Profiler Routines commit that day — rebase first** |
 | 7 | **Fri 10/2 – Tue 10/6** | **Classroom wave A** — re-author `landscape-neoclouds-2026-09` (F-N1 + row 6), `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1 and F-N1, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their rehearsals | xhigh | Clears the stale modules before the job starts. If it runs long, split neoclouds off first: its module is overdue |
@@ -273,6 +273,127 @@ check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); ch
 warnings read; every new dossier and guide renders under Playwright with zero page errors other than the
 sandbox's gis_load_failed. CHANGELOG rotation only if non-exempt sections reach 100. Normal Pre-Commit
 and Pre-Push checklists; one commit; push on a claude/* branch.
+```
+
+## 6 · Paste-in prompt — session 3, F-I1 (Opus 5.5 · xhigh)
+
+**Written 2026-09-26 (v07.65r), after F-N1 landed.** §3 row 4 runs it **Mon 9/28 – Tue 9/29** at xhigh. It follows §5's F-N1 prompt, with F-I1's substitutions and what F-N1 taught:
+- inbound counts measured against the pre-revision archive copies;
+- alias collisions read, not guessed;
+- report pins left loud with a written reason;
+- the EDGAR block.
+
+The reconciliation counts in it were measured on 2026-09-26 by a word-bounded grep of the current corpus.
+
+```text
+Picking up from my last session, run Phase F session F-I1 of
+repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: BlackRock (with GIP, AIP and HPS)
+and KKR — the two most-cited capital names the corpus does not yet cover. This session runs on Opus 5.5
+at xhigh. The §11.3 Model cells already read "Opus 5.5 xhigh"; keep them.
+
+WHY NOW: BlackRock is the most-cited uncovered company in the corpus, and both dossiers must exist
+before Classroom wave B re-authors landscape-capital-2026-09 and scenario-capital-objection (reviewBy
+10/14). There is no other date gate. Do NOT run F-I2 (SoftBank, SB Energy, Blue Owl) — it waits on the
+DigitalBridge close — and do not run the 10/1 neoclouds pass or `profiler Habitat Energy`.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; repository-information/phase-f-action-plan.md
+(§5 and the F-N1 outcome are the latest pattern); PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the two
+F-I1 rows of §11.3 are yours; §11.1's buying-authority test applies through the platforms each
+controls); .claude/rules/profiler-app.md (Profiler Command including step 1a identity and step 7
+reconciliation, Profiler Prep Command, Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md
+(Naming and renames, Segments registry, Refresh calendar); repository-information/PROFILER-STYLES.md
+(active style). Read the blackstone, brookfield, macquarie and mgx dossiers and study guides as the
+house pattern for a capital-segment incumbent, and the aligned, cyrusone, stack-infrastructure,
+eolian, vistra and aep dossiers — they carry the platforms these two control or co-own.
+
+THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+profileVersion 1) and study guide (schema v2) with its lesson plan under
+repository-information/study-prep/<slug>/. Proposed slugs: blackrock, kkr. Category hypothesis:
+["investor"] for both. Populate aka[] BEFORE the step-7 grep, including the platforms and brands the
+corpus uses: BlackRock — Global Infrastructure Partners / GIP, AI Infrastructure Partnership / AIP, HPS
+Investment Partners, BlackRock Climate Infrastructure, and any controlled developer you establish
+(Akaysha Energy is named in dnv as BlackRock's); KKR — Kohlberg Kravis Roberts, Global Atlantic, and
+its named infrastructure vehicles. Assign segments in
+live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis: capital ·
+incumbent for both; the segment has eight members today). Then the registry sync, the graph build, a
+calendar row per company under the Refresh calendar rules (both are NYSE-listed — BLK and KKR — so take
+each next results date from its own IR site, and mark it unconfirmed until it is announced), README
+tree entries, and rewrite and flip your §11.3 rows.
+
+IDENTITY (step 1a) — establish each of these, do not assume it:
+- BlackRock: one slug for BlackRock, Inc. with GIP, AIP and HPS in aka[], or a separate GIP slug?
+  Decide under Naming and renames and say why — GIP is the platform that controls most of the buyers.
+  Establish when the GIP acquisition closed, AIP's current members and legal form, and whether the HPS
+  and Preqin acquisitions have closed.
+- KKR: KKR & Co. Inc.; which KKR vehicles hold its data-centre and power platforms; Global Atlantic's
+  status.
+- For both: list the platforms each controls or co-controls that sign for batteries, MV gear,
+  generation or SSTs (§11.1 test 2), with the ownership share and a source for each. An investor that
+  buys nothing itself passes the test through a platform it controls, and fails it through one it
+  merely funds.
+
+THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+budget ran out partway, and nobody has read the underlying articles. Verify against first-party sources
+(10-Ks, 10-Qs and results releases from each company's own IR site, counterparties' filings and
+releases, regulator records), record a premise verdict per clause, and rewrite the cells. Run these
+checks hardest:
+- BlackRock: GIP owned since 1 Oct 2024; Aligned bought via AIP with MGX (closed 21 Jul 2026, ~$40B EV,
+  6.4 GW); the AES take-private with EQT (signed 2 Mar 2026, pending) — check who the acquirers are;
+  ALLETE co-control with CPP (closed 15 Dec 2025); Eolian (GIP-backed); exclusive talks for STACK's
+  Asia-Pacific portfolio (~1.1 GW, reported 24 Sep — a report, not a deal); the NVIDIA
+  compute-financing MOU (10 Aug). And the flagged conflict: whether GIP still holds its CyrusOne stake.
+- KKR: CyrusOne 50% with GIP (2022); STT GDC 75% (closed 2 Sep 2026); Helix Digital Infrastructure,
+  more than $10B (Jun 2026, Vistra as preferred power supplier); EDF power solutions North America,
+  $4.2B, pending (5.6 GW including storage); 19.9% of the AEP Ohio and I&M transmission companies. The
+  cell says the ECP $50B partnership was "announced 30 Oct 2024, not 2026" — that correction is itself
+  unverified; read the release and record the date it gives.
+Record the §11.1 buying-authority verdict for each, through its controlled platforms.
+
+RECONCILIATION (step 7) — measured 2026-09-26 by word-bounded alias grep. BlackRock has 40 raw hits, of
+which 7 are known collisions, not inbound: "AIP" is also American Intelligence & Power (caterpillar,
+rehlko, nscale), Palantir's AIP (mccarthy) and AIP Management (rosendin); "GIP" is Infineon's Green
+Industrial Power segment (infineon); "HPS" is Prevalon's Hybrid Power Stabilizer (prevalon). That
+leaves about 33 for BlackRock; KKR has 19. No dossier carries an edge to either slug yet. Grep again
+with the full aka[] and read every hit. Add the reciprocal edge wherever a new dossier curates a
+counterparty, revising that dossier under the Archival Procedure and re-verifying any report pin on it.
+Check microsoft, nvidia and xai for a missing AIP edge — microsoft does not name AIP at all today.
+THIS IS THE HEAVY PART. If BlackRock's reconciliation outgrows the session, land both dossiers and
+guides, reconcile KKR in full and BlackRock's controlled or co-owned platforms first, and record every
+remaining slug by name as deferred in the ledger and the SESSION-CONTEXT hand-off. Defer rather than
+skim (profiler-app.md step 7, scope note).
+
+LESSONS FROM F-H1 AND F-N1 — apply them:
+- Every counterparty named in narrative prose rests on a source in sources[], ideally its own filing.
+- A tender, an MOU, "exclusive talks" or a signed-but-not-closed deal is not a completed transaction.
+  Type each on the record's own word and state the gap. An unattributed figure is stated as unverified.
+- Count inbound hits against the pre-revision copies (the archive), so the ledger's counts are exact.
+- sec.gov and data.sec.gov were blocked from the sandbox in both prior sessions. Run
+  check-source-reachability.py first; if EDGAR is blocked, read the filings from the companies' IR
+  sites and say so in the dossier.
+- Do not edit an existing concept in profiler-concepts.json. Where a registry definition is
+  domain-specific (revenue-share is written for battery optimisers), use a guide glossary term instead.
+  Check new terms and aliases for collisions before adding them.
+- Write each lesson plan and study guide skeleton-first, then Edit (Incremental Writing, item d).
+- Re-verify a report pin on a dossier you revise only if your change is edge-only. When an earlier
+  revision was substantive, leave the pin loud and write down why.
+- If an existing study guide contradicts a verified finding, correct it minimally and record it.
+
+DO NOT edit googleAppsScripts/Classroom/Classroom.gs. The two new members make landscape-capital-2026-09
+(built on "4 of 8 buy nothing") and scenario-capital-objection (reviewBy 10/14) stale, along with any
+other segment you add them to. Record that in the CHANGELOG entry and the SESSION-CONTEXT hand-off
+(§11.2, the landscape coupling); Classroom wave B re-authors them.
+
+FOR THE MEGMEET JOB: in the SESSION-CONTEXT hand-off, write one short paragraph on which platforms these
+two control that buy medium-voltage or DC power equipment (SSTs, 800 VDC, HVDC, batteries), and whether
+capital is a door an SST seller can use or only a way to find the buyers.
+
+VERIFY: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check clean;
+build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+warnings read; every new and revised dossier and guide renders under Playwright with zero page errors
+other than the sandbox's gis_load_failed (the guide overlay closes with its ✕ button, not Escape).
+CHANGELOG rotation only if non-exempt sections reach 100. Normal Pre-Commit and Pre-Push checklists;
+one commit; push on a claude/* branch.
 ```
 
 Developed by: LightAISolutions

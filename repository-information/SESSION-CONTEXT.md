@@ -6,8 +6,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
-**Date:** 2026-09-26 (F-N1; one attended turn, context compacted mid-session)
-**Repo version:** v07.64r
+**Date:** 2026-09-26 04:08 AM → 06:10 AM EST (F-N1 and the F-I1 prompt; two attended turns; context compacted once, mid-F-N1)
+**Repo version:** v07.65r (two pushes: v07.64r F-N1; v07.65r the F-I1 prompt and this save)
 **Branch:** `claude/determined-curie-8zhg3t`
 **Model:** Opus 5.5 at xhigh, per the developer's choice for F-N1
 
@@ -38,6 +38,18 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   - The registry sync, study, relationships, crossrefs and README-tree checkers are all clean.
   - The reports checker shows only the two pre-existing pin warnings (`jinko`, `oracle`).
   - Playwright results are in the CHANGELOG entry.
+- **v07.65r — the follow-up turn:**
+  - **The F-I1 paste-in prompt**, saved as **§6 of `phase-f-action-plan.md`** for Opus 5.5 xhigh (BlackRock with GIP, AIP and HPS; KKR). §3 row 4 now points to it, and the status line records it.
+  - **Its reconciliation counts were measured, not copied.** A word-bounded alias grep gives BlackRock 40 raw hits, 7 of them collisions:
+    - 'AIP' is also American Intelligence & Power (`caterpillar`, `rehlko`, `nscale`), Palantir's AIP (`mccarthy`) and AIP Management (`rosendin`).
+    - 'GIP' is Infineon's Green Industrial Power segment.
+    - 'HPS' is Prevalon's Hybrid Power Stabilizer.
+    - That leaves about 33 for BlackRock and 19 for KKR. No edge to either slug exists yet, and `microsoft` does not name AIP at all.
+  - **What the prompt carries:**
+    - F-N1's lessons: archive-based counts, the EDGAR block, the concept-registry rule, pins left loud with a reason, the overlay-close note for Playwright.
+    - A flag that the ledger's own 'ECP announced 30 Oct 2024' correction is unverified.
+    - A defer-not-skim rule for BlackRock's reconciliation.
+    - A Megmeet paragraph ask: which controlled platforms buy MV or DC gear, and whether capital is a door or a directory.
 
 ### Does any of the three sign for MV or DC power equipment? (the Megmeet paragraph)
 
@@ -45,8 +57,8 @@ None of the three has signed for an SST, 800 VDC or HVDC equipment on the record
 
 ### Where we left off
 
-- **Status:** v07.64r pushed at close as one commit; the tree is clean.
-- **Next (action plan):** F-I1 (BlackRock, KKR) at xhigh, Mon 9/28 – Tue 9/29. It has no paste-in prompt yet; §4 and §5 of `phase-f-action-plan.md` are the templates. BlackRock is the most-cited uncovered company (31 dossiers), so its step-7 reconciliation is the heavy part.
+- **Status:** v07.64r is merged, and v07.65r is pushed at close; the tree is clean.
+- **Next (action plan):** F-I1 (BlackRock, KKR) at xhigh, Mon 9/28 – Tue 9/29. The prompt is in **§6 of `phase-f-action-plan.md`**. BlackRock's ~33 substantive inbound dossiers make step 7 the heavy part, and the prompt allows deferring the remainder by name.
 - **Dated items:**
   - CoolIT cooling recheck on or after Mon 9/28.
   - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30.
@@ -72,6 +84,8 @@ None of the three has signed for an SST, 800 VDC or HVDC equipment on the record
 - **The `revenue-share` concept was left alone.** Its definition is BESS-optimiser-specific, so HUMAIN's guide defines 'revenue-sharing arrangement' in its own glossary rather than editing a shared entry that Classroom lessons may pin.
 - **The `oracle` pin on the named-project report was left loud.** It is pinned at v4, and v5 was an earlier session's substantive refresh (summary, developments, strategy, financials) that a pin note cannot vouch for. This session's v6 only added the G42 edge and its source.
 
+- **Same-session save:** 'remember session' extended this Latest entry in place rather than moving it down, because it was already this session's hand-off (the F-H1 precedent).
+
 ### Known issues
 
 - **Dates to re-check, because these rows flip rather than drift:**
@@ -92,13 +106,13 @@ None of the three has signed for an SST, 800 VDC or HVDC equipment on the record
 ### Active context
 
 - **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 188 dossiers, 188 guides, 1,539 concepts, 1,610 graph edges (1,217 curated). **CHANGELOG** `Sections: 90/100`.
+- **Profiler:** 188 dossiers, 188 guides, 1,539 concepts, 1,610 graph edges (1,217 curated). **CHANGELOG** `Sections: 91/100`.
 
 ### Recommendation for next session
 
-- Write the **F-I1 paste-in prompt** (BlackRock/GIP/AIP and KKR, Opus 5.5 at xhigh) as §6 of `repository-information/phase-f-action-plan.md`, on the §4/§5 template with F-N1's lessons, and run it by Tue 9/29. BlackRock's 31 inbound dossiers make its step-7 reconciliation the session's main cost.
+- Run **F-I1 (BlackRock, KKR)** in a fresh Opus 5.5 session at **xhigh**, Mon 9/28 – Tue 9/29, using the prompt in **§6 of `repository-information/phase-f-action-plan.md`**, so both capital dossiers exist before Classroom wave B re-authors `landscape-capital-2026-09` by 10/14.
 
-**To continue:** type `write the F-I1 prompt`
+**To continue:** paste the prompt in §6 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh
 
 ## Previous Sessions
 
