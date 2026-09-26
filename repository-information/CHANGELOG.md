@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 107/100`
+`Sections: 108/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.56r] — 2026-09-25 08:38:39 PM EST
+
+> **Prompt:** "I approve of adding all companies you recommended above. Give me a prompt to paste into a new Opus 5.5 or Fable 5.1 Medium, High, or Xhigh session to run the five utility-batch companies."
+
+Recorded the developer's approval of the 2026-09-25 thin-category recommendation as **Phase F** of the Profiler coverage plan, and wrote the paste-in prompt for its first session. No dossier was written.
+
+The recommendation came from the previous turn's research, which committed nothing:
+- a word-bounded, alias-aware mention count of ~300 uncovered names across every dossier, study guide, report and `Classroom.gs`;
+- four parallel web-research subagents that re-checked each candidate's identity against sources from the last twelve months. All four exhausted the session's 200-call search budget partway through.
+
+### Added
+
+- **`PROFILER-COVERAGE-PLAN.md` §11 — Phase F, the thin-category fill.** 37 companies in 13 sessions; the categories stood at investor 5 · utility 6 · neocloud 7 · gc 7 · advisor 8 · hyperscaler 8 of 177.
+  - **§11.1 — how the list was chosen:** corpus pull, buying authority, seat fit and identity. It also lists the excluded candidates with a reason each, so they are not re-proposed: passive investors, the banks, DigitalBridge, PG&E/SCE/Sempra/CenterPoint/FirstEnergy, tenant neoclouds, and Clean Energy Associates, already covered inside `intertek`.
+  - **ERCOT and PJM are held for a developer decision.** They are the two most-cited uncovered entities (73 and 37 dossiers), but they are grid operators, and adding them would mean first using the `other` category.
+  - **§11.2 — sessions, order and model under the §2 rule:** utilities first, because `utilities` is the only segment in both sales seats. F-N1 is timed to the 10/1 neoclouds pass and F-H1 before the 10/7 Megmeet start. It also records the landscape coupling: new members make `landscape-utilities-2026-09`, `landscape-capital-2026-09` and `landscape-neoclouds-2026-09` stale, and a Profiler session never edits `Classroom.gs`.
+  - **§11.3 — the ledger:** one row per company, with proposed slug, categories, segment-role hypothesis, model, and inbound-dossier count. The `Why` cells are marked unverified prompt material, as in §5 and §8.
+  - **§11.4 — the paste-in prompt for F-U1 + F-U2:** Duke Energy, DTE Energy, WEC Energy, then Berkshire Hathaway Energy (NV Energy) and Exelon.
+    - It runs as two explicitly requested pushes, on Fable 5.1 High, with Opus 5.5 xhigh as the recorded substitution.
+    - It names the known drift candidates for step-7 reconciliation, and warns that the first push dated 2026-09-26 must rotate the CHANGELOG.
+- **Plan intro:** now points at §11.
 
 ## [v07.55r] — 2026-09-25 07:44:52 PM EST
 

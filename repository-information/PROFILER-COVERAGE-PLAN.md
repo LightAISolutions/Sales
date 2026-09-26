@@ -1,6 +1,6 @@
 # Profiler Coverage Plan — closing Classroom's gap register
 
-**Approved by the developer on 2026-09-03 (v04.39r → v04.40r).** This is the working plan for the Profiler coverage expansion that Classroom's curriculum plan (`CLASSROOM-CURRICULUM-PLAN.md` §6, the gap register) asked for. It is ordered by **model**, not by tier, because that is how the developer will run it: every Fable 5.1 xhigh session first, then every Fable 5.1 High session, then every Opus 5 xhigh session, then back to the Classroom build. Read §2 for the model rule, §3–§6 for the phases, §7 for what every session does, §8 for the status ledger — the one table that says what is done — and **§9 for Phase X, the cross-reference integrity work**, which runs alongside Phases B and C and must close before Phase D. **§10 is Phase E** — the nineteen-company segment fill agreed 2026-09-07 (seventeen at S0; AMD and Supermicro added 2026-09-07 PM at the developer's taxonomy review) (`INTEGRATED-REMEDIATION-PLAN.md` §7.2, S3 in its run order), added at S0 with its ledger rows in §8.
+**Approved by the developer on 2026-09-03 (v04.39r → v04.40r).** This is the working plan for the Profiler coverage expansion that Classroom's curriculum plan (`CLASSROOM-CURRICULUM-PLAN.md` §6, the gap register) asked for. It is ordered by **model**, not by tier, because that is how the developer will run it: every Fable 5.1 xhigh session first, then every Fable 5.1 High session, then every Opus 5 xhigh session, then back to the Classroom build. Read §2 for the model rule, §3–§6 for the phases, §7 for what every session does, §8 for the status ledger — the one table that says what is done — and **§9 for Phase X, the cross-reference integrity work**, which runs alongside Phases B and C and must close before Phase D. **§10 is Phase E** — the nineteen-company segment fill agreed 2026-09-07 (seventeen at S0; AMD and Supermicro added 2026-09-07 PM at the developer's taxonomy review) (`INTEGRATED-REMEDIATION-PLAN.md` §7.2, S3 in its run order), added at S0 with its ledger rows in §8. **§11 is Phase F** — the thin-category fill the developer approved on 2026-09-25 (37 companies in 13 sessions across investors, utilities, neoclouds, hyperscalers, GCs and advisors), with **its own ledger in §11.3** and the first session's paste-in prompt in §11.4.
 
 **How to use this file.** A session that lands a dossier or study guide flips the company's row in §8 in the same commit (`—` → `v1` for a dossier, `—` → `✓` for a guide, with the repo version). A row is not done until its files exist on `main`. When a phase completes, re-run the register checks in `CLASSROOM-CURRICULUM-PLAN.md` §6 and date them there — that register, not this ledger, is what the Classroom backfill reads.
 
@@ -516,5 +516,171 @@ Interleaving the two lanes, ten sessions in this order:
 **Done when** (`INTEGRATED-REMEDIATION-PLAN.md` §7.3, S3): every segment at the floor; registry synced; graph rebuilt; the curriculum plan's §6 register re-run for G10 — the row that closes only when a session re-runs it, never by this file's say-so.
 
 **Paste-in prompt** — the §7 template with two substitutions: *Phase E* for the phase, and this added sentence after the task line: `Then assign each company's segments and roles in live-site-pages/profiler-data/profiler-segments.json with a basis line per PROFILER-SCHEMA.md → Segments registry (the §8 Segment · role cell is a hypothesis — write what the dossier supports), and rewrite the §8 Phase E row.`
+
+---
+
+## 11 · Phase F — the thin-category fill (approved 2026-09-25, v07.56r)
+
+**What it is.** On 2026-09-25 the developer asked for a deep analysis of the corpus and a recommendation of companies to round out the thinnest roster categories — at the time **investor 5 · utility 6 · neocloud 7 · gc 7 · advisor 8 · hyperscaler 8** of 177 dossiers — and **approved every company recommended** the same evening. Phase F is that list: **37 companies in 13 sessions** (F-U1 and F-U2 share one pasted prompt, §11.4), plus two grid operators held for a category decision. **Phase F's ledger is §11.3, not §8** — a Phase F session flips its §11.3 row. Everything else in §7 applies unchanged, including the segment assignment bullet and the Phase E paste-in addition.
+
+### 11.1 · How the list was chosen
+
+Four tests, in this order:
+
+1. **Corpus pull** — how many existing dossiers already name the company. About 300 uncovered names were counted across every `*.profile.json`, `*.study.json`, report and `Classroom.gs` (word-bounded, alias-aware). The most-cited uncovered entities: **ERCOT 73 dossiers · PJM 37 · BlackRock/GIP 31 · Exelon/ComEd 19 · NV Energy/BHE/PacifiCorp 18 · KKR 18 · PG&E 17 · APS 12 · SRP 11 · TVA 11 · Duke 10**. Every such company is a set of derived relationship mentions waiting to become curated edges, and a set of inbound claims step 7 has never reconciled.
+2. **Buying authority** — does the company, or a platform it controls, sign for batteries, MV gear, generation or SSTs? This test removed most neocloud candidates (colocation tenants) and most general contractors (they set owner-furnished gear), and it is why landlords and electrical integrators appear in their place.
+3. **Seat and segment fit** — `profiler-segments.json` → `seats` puts **`utilities` in both sales seats**, the only segment that is; that is why the utilities run first.
+4. **Identity now** — four parallel research subagents checked every candidate against sources dated within the last twelve months. **All four exhausted the session's 200-call web-search budget partway through**, so the tail rows of each category are thinner and carry more `unverified` flags. Nothing in §11.3 has been through Profiler Command step 1a; every session does that itself.
+
+**Deliberately excluded, with the reason, so they are not re-proposed:**
+- **GIC, Silver Lake, Partners Group** — passive co-investors; no platform they control buys equipment.
+- **Goldman Sachs, JPMorgan, Morgan Stanley** — cited in 32–46 dossiers each, but as underwriters, lenders and analysts, not owners.
+- **DigitalBridge** — SoftBank's acquisition had every approval by 2026-09-22 and was expected to close within five business days; it delists on close. Covered through SoftBank (F-I2).
+- **PG&E** (pipeline mostly at application stage), **SCE** (no disclosed data-centre pipeline), **Sempra** (its AIDC value is Oncor, already covered), **CenterPoint** (wires-only; 0 dossiers name it), **FirstEnergy** (thin storage book).
+- **Together AI, Vultr, TensorWave, Lightning AI / Voltage Park** — colocation tenants whose landlords buy the equipment. The landlords are taken instead (F-N2).
+- **Clean Energy Associates** — already covered inside `intertek` as Intertek CEA (checked 2026-09-25). **Cupertino Electric** — a Quanta subsidiary since July 2024, covered through `quanta-services`.
+
+**Held for a developer decision — ERCOT and PJM.** The two most-cited uncovered entities in the corpus are grid operators, not companies. They would be the first entries in the unused `other` category, and the dossier schema (products, financials versus expectations) fits them loosely. Not scheduled until the developer decides the category question.
+
+### 11.2 · Sessions, order and model
+
+The model per session follows §2. **Utilities and private or opaque subjects run on Fable 5.1 High; public companies with a deep first-party record run on Opus xhigh** (Opus 5.5 is now available and is the Opus of record for Phase F). Medium is reserved for the advisor tail, per §2's Medium evidence. If the weekly Fable cap binds mid-session, continue on Opus 5.5 xhigh and record the substitution in the row's Model cell.
+
+| Order | Session | Companies | Model | Why this slot |
+|-------|---------|-----------|-------|---------------|
+| 1 | **F-U1** | Duke Energy · DTE Energy · WEC Energy | Fable 5.1 High | Utilities feed both sales seats; all three buy batteries directly (DTE names its supplier) |
+| 1 | **F-U2** | Berkshire Hathaway Energy (NV Energy) · Exelon | Fable 5.1 High | Same pasted prompt as F-U1, **second push**. The two largest inbound-mention counts among utilities (18 and 19) — the heaviest reconciliation |
+| 2 | **F-I1** | BlackRock (GIP / AIP) · KKR | Opus 5.5 xhigh | The most-cited uncovered company (31 dossiers) and its closest peer; BlackRock's step-7 reconciliation may need its own session |
+| 3 | **F-N1** | Firmus · HUMAIN · G42 (Khazna) | Fable 5.1 High | **Run inside or just before the 10/1 neoclouds pass** (REMINDERS), so `landscape-neoclouds-2026-09` is rewritten once with the new members rather than twice |
+| 4 | **F-H1** | ByteDance · Alibaba Cloud · Chindata | Fable 5.1 High | The China buyer side the `megmeet` dossier lacks (it names no customer but NVIDIA). **Best landed before the 2026-10-07 Megmeet start** |
+| 5 | **F-I2** | SoftBank Group · SB Energy · Blue Owl | Opus 5.5 xhigh | SB Energy's S-1 (2026-09-01) makes it a deep first-party record; run after the DigitalBridge close so SoftBank's dossier is written once |
+| 6 | **F-U3** | PPL · Pinnacle West (APS) · NiSource (NIPSCO) | Fable 5.1 High | Second-tier load books; APS is a serial storage-tolling buyer named in 12 dossiers |
+| 7 | **F-U4** | Florida Power & Light · Salt River Project · TVA | Fable 5.1 High | FPL is NextEra's uncovered regulated side (the Dominion merger is already in the corpus); SRP and TVA are public-power and federal — opaque governance, the Fable case |
+| 8 | **F-N2** | WhiteFiber · 5C (Hypertec) · TECfusions | Fable 5.1 High | The neocloud that owns its site, and the two landlords behind four tenant neoclouds |
+| 9 | **F-G1** | Clayco · Faith Technologies · EMCOR | Fable 5.1 High | The GC that self-performs electrical and buys equipment, plus the two integrators where contractor-furnished gear is bought |
+| 10 | **F-I3** | Apollo · Ares · Stonepeak | Opus 5.5 xhigh | Second-tier capital, each controlling one real buyer |
+| 11 | **F-I4** | Quinbrook · Energy Capital Partners · CPP Investments | Fable 5.1 High | Private managers; Quinbrook is `habitat-energy`'s parent |
+| 12 | **F-A1** | Anza · SemiAnalysis · EPRI | Fable 5.1 Medium | Advisors and market intelligence; thin records, bounded adjudication |
+
+**What every Phase F session also owes — the landscape coupling.** Adding members makes the Classroom landscape module for that segment stale: `landscape-utilities-2026-09` is built on "six franchises", `landscape-capital-2026-09` on "4 of 8 buy nothing", and `landscape-neoclouds-2026-09` on a seven-member roster; the rehearsal scenarios pinned to them go stale with them. **A Profiler session never edits `Classroom.gs`.** It records the stale module in its CHANGELOG entry and its SESSION-CONTEXT hand-off, and the module is re-authored in a Classroom session under `.claude/rules/industry-guidance.md`.
+
+**Done when:** every §11.3 row carries a dossier and a guide version, its `Why` cell is rewritten with premise verdicts, and the three landscape modules above have been re-authored against the enlarged rosters.
+
+### 11.3 · Ledger
+
+> **⚠️ The `Why` cells are UNVERIFIED PROMPT MATERIAL, exactly as §5 and §8 treat theirs.** They were written on 2026-09-25 from four web-research subagents whose search budget ran out partway through, and **I have not read the underlying articles**. Figures carry their reported date; `(conflict)` marks two sources that disagree. **Do not cite a cell, carry it into a dossier, or treat it as a finding.** Every session rewrites its own rows with premise verdicts and fills `Checked`. `Dossiers` is the count of existing dossiers naming the company on 2026-09-25 — the size of its step-7 reconciliation. Slugs are proposals, subject to PROFILER-SCHEMA.md → Slug rules and Naming and renames.
+
+| Session | Slug | Company | Categories | Segment · role (hypothesis) | Model | Dossiers | Why (hypothesis — unverified) | Checked | Dossier | Guide |
+|---------|------|---------|------------|-----------------------------|-------|----------|-------------------------------|---------|---------|-------|
+| F-U1 | `duke-energy` | Duke Energy | utility | `utilities` · incumbent; `storage-developers-and-ipps` · adjacent only if utility-owned storage is material | Fable 5.1 High | 10 | Q2 2026 (4 Aug): 7.8 GW of signed data-centre ESAs, ~15.4 GW late-stage, 5.2 GW under construction; ~4.5 GW of batteries by 2031. The 2026 Carolinas Resource Plan (filed 17 Aug) carries 13 GW of storage by 2041. Capex $103B (2026–30). NC large-load tariff decision expected fall 2026. Brookfield buying 19.7% of Duke Energy Florida — first closing not confirmed | — | — | — |
+| F-U1 | `dte-energy` | DTE Energy | utility | `utilities` · incumbent; storage adjacent as above | Fable 5.1 High | 9 | 2.4 GW executed: Stargate, Saline Township 1.4 GW (MPSC approved 18 Dec 2025, 19 years, 80% minimum bill) and Google, Van Buren 1.0 GW (decision due ~10 Sep 2026; outcome unverified). LG Energy Solution Vertech 1.5 GW / 6 GWh, $1.6B (27 May 2026); MPSC approved 1,332 MW of storage contracts (27 Mar 2026). Capex $36.5B. (conflict) Saline-linked storage is 1.4 GW in one source and 332 MW in the MPSC approval | — | — | — |
+| F-U1 | `wec-energy` | WEC Energy (We Energies) | utility | `utilities` · incumbent; storage adjacent as above | Fable 5.1 High | 4 | September 2026 deck: Microsoft 2.6 GW plus Vantage/OpenAI/Oracle Port Washington 1.3 GW (3.5 GW site potential) through 2030; 2,130 MW of utility-owned batteries ($2.9B) and 3.3 GW of combustion turbines. VLC tariff written order 21 May 2026. Microsoft challenging the ATC / We Energies large-load agreements at FERC (reported 24 Aug). Capex $37.5B | — | — | — |
+| F-U2 | `berkshire-hathaway-energy` | Berkshire Hathaway Energy (NV Energy) | utility | `utilities` · incumbent | Fable 5.1 High | 18 | 100% Berkshire. NV Energy's 2026 IRP: more than 5.4 GW of batteries, all through PPAs, plus 1.2 GW gas; 22 GW of inquiries, ~6 GW of infrastructure agreements; LLESA (≥25 MW) proposed. Sued Tract (~24 Jul 2026); PUCN conditionally approved Tract's ~360 MW of gas plants (~19 Sep). BHE group has more than 9 GW of data-centre load contracted (Mar 2026); capex $33.3B (2026–28). PacifiCorp selling its Washington operations to Portland General ($1.9B, close 2027) | — | — | — |
+| F-U2 | `exelon` | Exelon (ComEd) | utility | `utilities` · incumbent | Fable 5.1 High | 19 | Q2 (30 Jul): high-probability load cut to ~11 GW (ComEd ~9 GW), ~4 GW under TSAs backed by ~$1B collateral — (conflict) press framings of the wider pipeline differ (25 GW vs 36 GW). ComEd Rider DE approved (ICC, Mar 2026). ComEd cancelled the PowerHouse Joliet TSA (24 Jul); FERC rejected the cancellation notice (22 Sep), and the dispute is in N.D. Illinois. Atlantic City Electric 500 MW battery with Invenergy. Capex $41.7B (2026–29) | — | — | — |
+| F-U3 | `ppl` | PPL | utility | `utilities` · incumbent | Fable 5.1 High | 5 | Pennsylvania: 31.8 GW advanced, more than 11 GW under ESAs, more than 6.5 GW under construction; Kentucky 13.7 GW pipeline. Invitium generation JV, Blackstone 49%. More than 500 MW of batteries in plan. Capex $23B (2026–29) | — | — | — |
+| F-U3 | `pinnacle-west` | Pinnacle West (APS) | utility | `utilities` · incumbent | Fable 5.1 High | 12 | 4.5 GW committed large load, ~20 GW uncommitted (Q2). XHLF rate case decision expected Dec 2026. 2025 all-source RFP contracts expected by year-end 2026. The corpus already holds its storage tolls (Strata, Gridstor, Recurrent) | — | — | — |
+| F-U3 | `nisource` | NiSource (NIPSCO) | utility | `utilities` · incumbent | Fable 5.1 High | 4 | 4 GW signed (Amazon 2.4 GW by 2032; Alphabet). NIPSCO GenCo (80.1%): 2 × 1.3 GW combined-cycle plus a 400 MW battery, IURC-approved Jun 2026. Capex $28.6B through 2030 | — | — | — |
+| F-U4 | `florida-power-light` | Florida Power & Light | utility | `utilities` · incumbent | Fable 5.1 High | 6 | NextEra's regulated utility — test the one-slug-per-entity rule against `nextera-energy-resources` before creating it. LLCS-1/2 large-load tariffs effective 1 Jan 2026. NextEra cites more than 130 GW of large-load opportunities. The NextEra–Dominion merger (18 May 2026) is already in the corpus | — | — | — |
+| F-U4 | `salt-river-project` | Salt River Project | utility | `utilities` · incumbent — test the category for public power | Fable 5.1 High | 11 | 59 large-load customers, ~7 GW combined (Apr 2026); E-67 price plan. Marigold: 400 MW **8-hour** battery, 600 MW solar and 675 MW gas (ACC decision expected Nov 2026). NextEra PPA: 3 GW solar plus 1 GW storage. Storage counterparties include Aypa, Plus Power, Invenergy, ESS and Energy Dome | — | — | — |
+| F-U4 | `tva` | Tennessee Valley Authority | utility | `utilities` · incumbent — test the category for a federal utility | Fable 5.1 High | 11 | 2026 IRP approved 20 Aug: 1–5 GW storage, 7–26 GW gas. Data-centre Capacity Commitment Charge for new loads above 5 MW, effective 1 Oct 2026. xAI Memphis served through MLGW. Plus Power 200 MW / 800 MWh tolling agreement | — | — | — |
+| F-I1 | `blackrock` | BlackRock (GIP / AIP) | investor | `capital` · incumbent | Opus 5.5 xhigh | 31 | GIP owned since 1 Oct 2024. Aligned via AIP with MGX (closed 21 Jul 2026, ~$40B EV, 6.4 GW). AES take-private with EQT (signed 2 Mar 2026, pending). ALLETE co-control with CPP (closed 15 Dec 2025). Eolian (GIP-backed). Exclusive talks for STACK's Asia-Pacific portfolio (~1.1 GW, reported 24 Sep). NVIDIA compute-financing MOU (10 Aug). (conflict) Whether GIP still holds CyrusOne | — | — | — |
+| F-I1 | `kkr` | KKR | investor | `capital` · incumbent | Opus 5.5 xhigh | 18 | CyrusOne 50% (with GIP, 2022). STT GDC 75% (closed 2 Sep 2026). Helix Digital Infrastructure, more than $10B (Jun 2026, Vistra as preferred power supplier). EDF power solutions North America, $4.2B, pending (5.6 GW including storage). ECP $50B partnership — announced 30 Oct **2024**, not 2026. 19.9% of the AEP Ohio and I&M transmission companies | — | — | — |
+| F-I2 | `softbank` | SoftBank Group | investor | `capital` · incumbent | Opus 5.5 xhigh | 9 | Stargate equity partner and OpenAI investor. The DigitalBridge acquisition (~$4.0B EV) had every approval by 22 Sep 2026 and was expected to close within five business days, bringing Vantage and Switch under it — run after the close | — | — | — |
+| F-I2 | `sb-energy` | SB Energy | developer | `aidc-developers-and-landlords` · challenger; `storage-developers-and-ipps` · adjacent | Opus 5.5 xhigh | 0 | Public S-1 filed 1 Sep 2026 (proposed Nasdaq: SBE). 10 GW PORTS campus, Pike County, Ohio (≥9.2 GW gas, AEP Ohio 765 kV). 1.2 GW Milam County, Texas Stargate site (OpenAI and SoftBank $1B, Jan 2026). California storage. A direct buyer of substations, gas, solar and batteries | — | — | — |
+| F-I2 | `blue-owl` | Blue Owl Capital | investor | `capital` · incumbent or challenger — decide on the record | Opus 5.5 xhigh | 9 | Owns STACK through IPI (Jan 2025). Meta Hyperion JV at 80% (~$27B); Crusoe Abilene JV (1.2 GW); Project Jupiter, New Mexico (Oracle force-majeure notice, 24 Sep 2026). Led the $2.4B IREN financing (28 Aug). Stock ~$9, down more than 45% in a year | — | — | — |
+| F-I3 | `apollo` | Apollo Global Management | investor | `capital` | Opus 5.5 xhigh | 10 | Stream Data Centers majority (Nov 2025; 4 GW+ of powered land). Anthropic in talks to lease ~1 GW from Stream (reported 23 Sep 2026). xAI/Valor GPU financing. NVIDIA MOU signatory | — | — | — |
+| F-I3 | `ares` | Ares Management | investor | `capital` | Opus 5.5 xhigh | 8 | Apex Clean Energy majority since 2021 (a minority stake is being marketed). Prime Data Centers joint control. Arranged Vantage's $2.4B facility (Feb 2026) | — | — | — |
+| F-I3 | `stonepeak` | Stonepeak | investor | `capital` | Opus 5.5 xhigh | 2 | Montera, Cologix, Digital Edge. Kingdom (Japan BESS); AMPYR Distributed Energy (22 Sep 2026). 50% of Dominion's offshore wind project | — | — | — |
+| F-I4 | `quinbrook` | Quinbrook Infrastructure Partners | investor | `capital` · challenger | Fable 5.1 High | 1 | Parent of `habitat-energy`, whose sale process was reported in March 2026. Supernode, Brisbane (BESS plus data centre); Rowan Digital Infrastructure (Blackstone minority stake, Apr 2026) | — | — | — |
+| F-I4 | `energy-capital-partners` | Energy Capital Partners | investor | `capital` | Fable 5.1 High | 3 | A Bridgepoint subsidiary since Aug 2024. Majority owner of `proenergy`. Sold Calpine to Constellation (closed 7 Jan 2026). KKR $50B partnership; EnergySolutions (pending) | — | — | — |
+| F-I4 | `cpp-investments` | CPP Investments | investor | `capital` | Fable 5.1 High | 8 | Pattern Energy majority owner; ALLETE co-control; atNorth ~51% (closed 2 Sep 2026); Equinix xScale JV (limited partner) | — | — | — |
+| F-N1 | `firmus` | Firmus Technologies | neocloud | `neoclouds` · challenger; `aidc-developers-and-landlords` · challenger | Fable 5.1 High | 0 | ClusterMAX 3.0 Silver. More than 900 MW contracted (8 Sep 2026), OpenAI anchor in Malaysia. Owns its Australian campuses and builds HyperCube modules including the electrical content; buying its fabricator Benmax (A$300M). Gunvor 600 MW supply deal tied to 1.5 GWh of storage. ASX IPO targeted for late Oct 2026 | — | — | — |
+| F-N1 | `humain` | HUMAIN | neocloud — or hyperscaler; decide on the record | `neoclouds` · challenger | Fable 5.1 High | 2 | PIF-owned. 1.9 GW by 2030; Al Sa'ad 1 GW phase 1 by 2027. xAI 500 MW+, Together AI 250 MW (31 Aug 2026). Awards design-build contracts to MIS. ClusterMAX Unavailable | — | — | — |
+| F-N1 | `g42` | G42 (Khazna) | neocloud — or hyperscaler / developer; decide | `neoclouds` · challenger; `aidc-developers-and-landlords` | Fable 5.1 High | 2 | Khazna builds Stargate UAE (1 GW inside a 5 GW campus); long-lead equipment for the first 200 MW already procured. Core42 is a tenant (TeraWulf, 60 MW). UAE moved to Country Group A:5 (Jul 2026) | — | — | — |
+| F-N2 | `whitefiber` | WhiteFiber | neocloud | `neoclouds` · challenger | Fable 5.1 High | 0 | Nasdaq: WYFI. Owns NC-1 (≥99 gross MW by 2029, served by Duke), 40 MW to Nscale (~$865M). Disclosed an MV switchgear supply issue (Q1 2026, resolved Q2). ClusterMAX Underperforming | — | — | — |
+| F-N2 | `5c-group` | 5C (Hypertec) | developer | `aidc-developers-and-landlords` · challenger | Fable 5.1 High | 0 | Landlord to Together AI (Memphis MEM01; Maryland) and Vultr (Springfield, Ohio, a 150 MW building). The legal entity — 5C Group versus Hypertec — is to establish | — | — | — |
+| F-N2 | `tecfusions` | TECfusions | developer | `aidc-developers-and-landlords` · challenger; `bridge-and-on-site-generation` · adjacent | Fable 5.1 High | 0 | TensorWave's landlord (Tucson; Keystone Connect, Pennsylvania, "capable of 3 GW, primarily on-site generation"; 1 GW agreement, Oct 2024) | — | — | — |
+| F-H1 | `bytedance` | ByteDance (Volcano Engine) | hyperscaler | `hyperscalers-and-ai-labs` · challenger | Fable 5.1 High | 3 | (conflict) 2026 capex reports differ about 2× (RMB 160B / more than RMB 200B / up to $70B). About one-fifth of China's delivered data-centre capacity, mostly rented. Its early-2026 tender moved 30–40% of the design to HVDC, plus a tens-of-MW 800 V pilot. Kehua and Zhonhen are named in its chain; no 800 V award is public | — | — | — |
+| F-H1 | `alibaba-cloud` | Alibaba Cloud | hyperscaler | `hyperscalers-and-ai-labs` · challenger | Fable 5.1 High | 4 | RMB 380B three-year plan, ~RMB 190B spent. Panama (10 kV → 240 VDC) is a line-frequency transformer-rectifier, **not** an SST — the `zhonhen` dossier already draws this line correctly. Co-developed with Delta and Zhonhen; Zhonhen said to hold ~70% (secondary source) | — | — | — |
+| F-H1 | `chindata` | Chindata | developer | `aidc-developers-and-landlords` · challenger | Fable 5.1 High | 3 | Operates China's first commercial SST at an AI data centre (Huailai, 2 Jul 2026, for Meituan; HEC and Delta; 10 kV → 800 VDC). Ownership and the reported Bridge Data Centres sale process (Bloomberg, 29 Jul 2026) to establish | — | — | — |
+| F-G1 | `clayco` | Clayco | gc | `epc-and-construction` · incumbent or challenger — decide on the record | Fable 5.1 High | 4 | BD+C 2025 #4 data-centre contractor ($3.64B of 2024 data-centre revenue). Clayco Compute (Jan 2025) self-performs electrical and procures equipment | — | — | — |
+| F-G1 | `faith-technologies` | Faith Technologies | epc — or supplier; decide | `epc-and-construction` · challenger; `in-hall-power` · adjacent | Fable 5.1 High | 0 | ABC's 2026 top data-centre contractor; 950+ MW of greenfield data-centre work; Excellerate factory builds 2 MW prefab power modules. Private, employee-owned | — | — | — |
+| F-G1 | `emcor` | EMCOR | epc | `epc-and-construction` · challenger | Fable 5.1 High | 0 | NYSE: EME. Bought Miller Electric (Feb 2025). Q2 2026 network and communications revenue: $973M electrical, $799M mechanical. RPO $17.14B | — | — | — |
+| F-A1 | `anza` | Anza | advisor | `software-and-optimization` · adjacent | Fable 5.1 Medium | 0 | Energy Storage Pro covers ~95% of the US BESS market. Transformer Procurement Service (16 Dec 2025) serves MV/HV buyers, data-centre developers included. BESS commissioning support drawn from 11 GWh | — | — | — |
+| F-A1 | `semianalysis` | SemiAnalysis | advisor | none expected — record as unassigned if the dossier supports no segment | Fable 5.1 Medium | 22 | ClusterMAX 3.0 (23 Sep 2026) is the rating `landscape-neoclouds-2026-09` rests on. Datacenter Industry Model (5,000+ facilities); China Datacenter Model (25 Sep 2026) | — | — | — |
+| F-A1 | `epri` | EPRI | advisor | `assurance` · adjacent | Fable 5.1 Medium | 3 | Non-profit. DCFlex data-centre flexibility demonstrations with Google, Meta, Compass and utilities | — | — | — |
+| held | `ercot` | ERCOT | other | — | — | 73 | Grid operator, not a company. Batch Zero / SB 6 large-load process. **Not scheduled until the developer decides the `other` question (§11.1)** | — | — | — |
+| held | `pjm` | PJM Interconnection | other | — | — | 37 | Grid operator. Third straight capacity auction at the price cap, 6.8 GW short (reported 31 Jul 2026). **Held as above** | — | — | — |
+
+### 11.4 · Paste-in prompt — F-U1 + F-U2, the five utilities
+
+Written 2026-09-25 and handed to the developer in chat; kept here so it cannot be lost the way the neoclouds prompt was. It is the §7 template with Phase F's substitutions. **Run it on Fable 5.1 High.** Utilities are §2's regulatory-synthesis case; the one head-to-head (Xcel, §2) showed no quality gap against Opus, but High buys the 10-K and docket reading depth that Medium does not. If the weekly Fable cap binds, the prompt itself tells the session to continue on Opus 5.5 xhigh.
+
+```text
+Picking up from my last session, run Phase F sessions F-U1 and F-U2 of
+repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: Duke Energy, DTE Energy and WEC
+Energy (F-U1), then Berkshire Hathaway Energy (NV Energy) and Exelon (F-U2).
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the
+five F-U1/F-U2 rows of §11.3 are yours); .claude/rules/profiler-app.md (Profiler Command including step
+1a identity and step 7 reconciliation, Profiler Prep Command, Scheduled Refreshes);
+repository-information/PROFILER-SCHEMA.md (Naming and renames, Segments registry, Refresh calendar);
+repository-information/PROFILER-STYLES.md (active style intel-briefing). Read the dominion-energy,
+southern-company and aep dossiers and study guides as the house pattern for a utility.
+
+TWO WAVES, TWO PUSHES — I am explicitly asking for two separate push commits:
+- Wave 1: Duke Energy, DTE Energy, WEC Energy -> commit and push.
+- Wave 2: Berkshire Hathaway Energy, Exelon -> commit and push once wave 1's branch has merged
+  (Pre-Push #5 push-once).
+If the session runs short, stop cleanly after wave 1 and hand wave 2 back to me as a prompt.
+
+THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+profileVersion 1, categories ["utility"]) and study guide (schema v2) with its lesson plan under
+repository-information/study-prep/<slug>/. Populate aka[] BEFORE the step-7 grep (operating utilities
+and former names: ComEd, Commonwealth Edison, PECO, BGE, Pepco, Delmarva, Atlantic City Electric; NV
+Energy, Nevada Power, Sierra Pacific, PacifiCorp, MidAmerican; Duke Energy Carolinas / Progress /
+Florida / Indiana / Ohio, Piedmont; DTE Electric; We Energies, Wisconsin Public Service). Assign segments
+in live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis: `utilities` ·
+incumbent; `storage-developers-and-ipps` · adjacent only where utility-owned storage is material in the
+dossier). Then the registry sync, the graph build, a dated calendar row per company (all five file with
+the SEC — research each Q3 2026 earnings date), README tree entries, and rewrite and flip your §11.3 rows.
+
+IDENTITY (step 1a) — check at least: Brookfield's 19.7% Duke Energy Florida stake (first closing not
+confirmed); BHE is 100% Berkshire and PacifiCorp is selling its Washington operations to Portland
+General (close 2027); nothing known for DTE, WEC or Exelon — verify anyway. Proposed slugs: duke-energy,
+dte-energy, wec-energy, berkshire-hathaway-energy, exelon. Decide BHE's display name under Naming and
+renames; the precedent for a holding company taught through its lead utility is Southern Company.
+
+THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+budget ran out partway, and nobody has read the underlying articles. Verify every figure against
+first-party sources (10-K and 10-Q, the Q2 2026 decks, state PUC dockets, and EEI's "Large Load Projects
+and Tariffs" list updated 11 Sep 2026), record a premise verdict per clause, and rewrite the cells.
+
+RECONCILIATION (step 7) — expected inbound: Exelon/ComEd ~19 dossiers, NV Energy/BHE/PacifiCorp ~18,
+Duke ~10, DTE ~9, WEC ~4. Known drift candidates, all agent-reported and unread:
+- powerhouse-data-centers says ComEd's Joliet TSA was lost in July; Utility Dive reported FERC rejected
+  ComEd's cancellation notice on 22 Sep 2026, leaving the dispute in federal court.
+- tract carries NV Energy's July lawsuit and a pending PUCN gas-plant decision; the PUCN reportedly
+  approved the two plants conditionally around 19 Sep 2026.
+- lg-energy-solution carries the DTE 6 GWh LGES Vertech deal — check that both sides agree.
+- DTE's Saline-linked storage is 1.4 GW in one source and 332 MW in the MPSC approval; state both unless
+  a source reconciles them.
+If BHE's or Exelon's reconciliation outgrows the session, say so and defer it per step 7's scope note.
+
+DO NOT edit googleAppsScripts/Classroom/Classroom.gs. Five new utilities make landscape-utilities-2026-09
+(built on "six franchises") and the three scenario-utilities-* rehearsals stale; record that in the
+CHANGELOG entry and the SESSION-CONTEXT hand-off instead (§11.2, the landscape coupling).
+
+CHANGELOG: the first push dated 2026-09-26 or later must rotate. Run `git fetch --unshallow origin main`
+first, then move the oldest whole date groups with SHA enrichment until fewer than 100 non-exempt
+sections remain.
+
+VERIFY per wave: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check
+clean; build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+warnings read; every new dossier and guide renders (Playwright) with zero page errors. If the Fable weekly
+cap binds, continue on Opus 5.5 xhigh and record the substitution in the §11.3 Model cell. Normal
+Pre-Commit and Pre-Push checklists; push on a claude/* branch.
+```
 
 Developed by: LightAISolutions
