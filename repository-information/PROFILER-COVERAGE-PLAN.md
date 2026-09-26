@@ -544,6 +544,8 @@ Four tests, in this order:
 
 ### 11.2 · Sessions, order and model
 
+> **Model column superseded 2026-09-26 (v07.61r) — the developer's decision: Phase F runs on Opus 5.5.** The effort level per session (medium, high or xhigh), the order and the dates are in [`phase-f-action-plan.md`](phase-f-action-plan.md). A session writes its actual model and effort into its §11.3 Model cell. The paragraph and table below are the 2026-09-25 plan as approved.
+
 The model per session follows §2. **Utilities and private or opaque subjects run on Fable 5.1 High; public companies with a deep first-party record run on Opus xhigh** (Opus 5.5 is now available and is the Opus of record for Phase F). Medium is reserved for the advisor tail, per §2's Medium evidence. If the weekly Fable cap binds mid-session, continue on Opus 5.5 xhigh and record the substitution in the row's Model cell.
 
 | Order | Session | Companies | Model | Why this slot |

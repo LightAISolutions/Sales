@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.61r] — 2026-09-26 01:21:37 AM EST
+
+> **Prompt:** "remind me to check the 9/30 Classroom run after it happens, then list out all the other recommended companies to add to Profiler and recommend me an action plan to implement everything. I would like to use Opus 5.5, but make sure to recommend an effort level from medium to high to xhigh. Then, give me a prompt to paste into a new Opus 5.5 session (with your recommended effort level) to start the action plan, then remember session."
+
+The hand-off after the Classroom re-pin: a reminder for the 9/30 pipeline run, the Phase F action plan on the developer's chosen model with an effort level per session, the paste-in prompt for its first session, and the session context saved.
+
+### Added
+
+- **`repository-information/phase-f-action-plan.md`** (new), in four sections:
+  - **§1 — every company still recommended for Profiler.** The 32 remaining Phase F companies in 11 sessions (F-H1, F-N1, F-I1, F-I2, F-U3, F-U4, F-N2, F-G1, F-I3, F-I4, F-A1), each with its slug, category and segment hypothesis, and the count of existing dossiers that name it. ERCOT and PJM are listed as held. Mitsubishi Electric is recorded as named elsewhere but not approved, and the 2026-09-25 exclusions are restated so they are not re-proposed.
+  - **§2 — the effort rule.** It comes from `PROFILER-COVERAGE-PLAN.md` §2's own evidence, "effort buys depth of reading, not care":
+    - **xhigh** for long first-party records, heavy reconciliation and landscape re-authoring.
+    - **high** for thin-record private subjects, reframes and refresh passes.
+    - **medium** for bounded adjudication.
+    - A confidence note states that this is judgment, not measurement.
+  - **§3 — the action plan.** 21 rows in three stages with verified weekdays, interleaving the standing reminders (CoolIT 9/28, the 9/30 run, the neoclouds and Habitat pass on 10/1, the Dominion reframe 10/2–10/6, the Megmeet report by 10/31) with four batched Classroom waves. The effort mix is 12 xhigh, 6 high and 3 medium.
+    - **F-H1 is first**: the only session tied to the developer's 10/7 Megmeet start. F-N1 can fold into the 10/1 pass if it slips.
+    - **Recommendation:** add ERCOT and PJM in `other` after a one-paragraph schema note. This awaits the developer's decision.
+  - **§4 — the F-H1 paste-in prompt** (ByteDance, Alibaba Cloud, Chindata), for xhigh. It follows the §11.4 template, with identity checks, the four premise checks to run hardest, the expected step-7 reconciliation including Chinese aka[] names, the landscape coupling, and a Megmeet hand-off paragraph.
+- **`REMINDERS.md`** — a new active reminder, **check the 9/30 Classroom pipeline run once it has happened** (after ~7:30 AM ET on Wed 2026-09-30). It is additive: the developer's 2026-09-24 reminder for the same check is untouched, and the new entry says either can be dismissed once the check is done.
+
+### Changed
+
+- **`PROFILER-COVERAGE-PLAN.md` §11.2** — a pointer above the table recording that its Model column is superseded by the developer's 2026-09-26 decision and by the action plan. The 2026-09-25 table itself is untouched.
+- **`SESSION-CONTEXT.md`** — the Latest Session is rewritten for v07.60r and v07.61r. The previous Latest moved down, and the older entry was dropped under the two-session cap.
+- **README.md** — a tree entry for the action plan, plus the timestamp and repo version.
+
+### Notes
+
+- **No rotation:** 87 sections, well under the trigger.
+- **No page, GAS script, Classroom content or Profiler dossier changed.**
 
 ## [v07.60r] — 2026-09-26 12:00:11 AM EST
 

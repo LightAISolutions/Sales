@@ -6,6 +6,70 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-25 11:11 PM → 2026-09-26 01:25 AM EST (attended; two turns)
+**Repo version:** v07.61r (two pushes: v07.60r the Classroom re-pin; v07.61r the Phase F action plan and this save)
+**Branch:** `claude/wonderful-planck-ufx3aq`
+
+### What was done
+
+- **v07.60r — the Classroom re-pin**, run from `classroom-utilities-repin-prompt.md`:
+  - **Part A could not run.** The 9/30 C2 Routine had not fired yet (`next_run_at` 2026-09-30T11:02Z).
+  - **Segments:** the generator regenerated the 17 segment lessons `--check` listed with section changes; the 2 pin-only ones were left alone.
+  - **`landscape-utilities-2026-09`**, revised under G3: eleven franchises read as variants of five instruments; NRG second and Vistra seventh by revenue behind Duke; thirteen bets and nine new indicators; the seller's play now two questions (the instrument, and who owns the asset under it). `reviewBy` 2027-01-01 → **2026-12-02**, the PUCN's statutory decision on NV Energy's IRP and LLESA.
+  - **`landscape-storage-developers-and-ipps-2026-09`:** count-only correction (38 members, 11 adjacent, twelve ownership events).
+  - **Rehearsals:** all five resting on the two landscapes were re-judged (every beat holds) and re-pinned; `scenario-utilities-discovery-aidc` `reviewBy` → 2026-12-02.
+  - **Versions:** Classroom GAS v01.92g; the CHANGELOG rotated (9/18 + 9/19 groups, 26 sections, SHA-enriched). The push was held past midnight EST so it was dated 9/26.
+- **v07.61r — this turn:**
+  - A reminder to check the 9/30 run.
+  - **`repository-information/phase-f-action-plan.md`:** the 32 remaining Phase F companies in 11 sessions, plus ERCOT and PJM held; an Opus 5.5 effort level per session; a 21-row dated order interleaving the standing reminders and four Classroom waves; and the paste-in prompt for session 1, F-H1.
+  - A pointer at `PROFILER-COVERAGE-PLAN.md` §11.2 marking its Model column superseded.
+
+### Where we left off
+
+- **Status:** v07.60r is merged and v07.61r pushed at close; the tree is clean.
+- **Next:** session 1 of the action plan, **F-H1** (ByteDance, Alibaba Cloud, Chindata), on xhigh. The prompt is §4 of the action plan.
+- **Dated items:**
+  - CoolIT cooling recheck on or after Mon 9/28.
+  - 9/30 run check after ~7:30 AM ET on Wed 9/30.
+  - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1. The 10/1 Profiler Routines commit that day, so rebase first.
+  - Dominion reframe Fri 10/2 – Tue 10/6, and Classroom wave A by Tue 10/6.
+  - Megmeet start Wed 10/7.
+- **Stale and not yet re-authored:**
+  - `landscape-aidc-developers-and-landlords-2026-09`: `tract` v4 and `powerhouse-data-centers` v3 moved beneath it; not examined.
+  - The capital, neoclouds, hyperscalers, epc, in-hall, software and assurance landscapes go stale as their Phase F members land; the Classroom waves in the action plan re-author them.
+
+### Key decisions made
+
+- **Phase F runs on Opus 5.5** (the developer, 2026-09-26). Effort follows reading depth:
+  - **xhigh** for long first-party records, heavy reconciliation and landscape re-authoring.
+  - **high** for thin-record private subjects, reframes and refresh passes.
+  - **medium** for bounded adjudication: F-A1, the run check and the CoolIT recheck.
+- **F-H1 runs first**: it is the only session tied to the developer's own 10/7 start. F-N1 can fold into the 10/1 neoclouds pass if it slips.
+- **ERCOT and PJM:** recommended to add both in `other` after a one-paragraph schema note. **This awaits the developer's decision.**
+- **The utilities review date** is the first dated decision that fixes an instrument's terms. Hearings, elections, filing deadlines, month-part windows and deliverables are not.
+
+### Known issues
+
+- The re-pin brief's OEM line was wrong (Duke names GE Vernova turbines); recorded in v07.60r.
+- A pre-existing CHANGELOG blank-line irregularity above v07.14r was left as is.
+- Carried over: the two aged 9/8 reports still warn; `verify-profiler-roles.py` (2) and `check-events-plan.js` (2); `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **CHANGELOG** `Sections: 87/100`; `Classroomgs.changelog.md` 44/50.
+- **Classroom:** content checker 0 errors / 0 warnings at 71 lessons; `build-classroom-segments.py --check` shows 2 due, both pin-only.
+
+### Recommendation for next session
+
+- Run **session 1 of the Phase F action plan — F-H1 (ByteDance, Alibaba Cloud, Chindata)** in a fresh Opus 5.5 session at **xhigh**, using the prompt in §4 of `repository-information/phase-f-action-plan.md`, on Saturday 9/26 or Sunday 9/27. It is the only Profiler session tied to the Megmeet start on Wednesday 10/7.
+
+**To continue:** paste the prompt in §4 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh
+
+## Previous Sessions
+
+### Session — 2026-09-25 09:07 PM → 11:09 PM EST (Phase F F-U1 + F-U2, the five utilities; the Classroom re-pin prompt, v07.57r–v07.59r)
+
 **Date:** 2026-09-25, 09:07 PM → 11:09 PM EST (one unattended prompt with two pushes, then one attended turn; context compacted once mid-session)
 **Repo version:** v07.59r (three pushes: v07.57r wave 1, v07.58r wave 2, v07.59r the Classroom re-pin prompt + this save)
 **Branch:** `claude/magical-cerf-hwm62m`
@@ -51,58 +115,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - On or after Wednesday 9/30 (after ~7 AM ET), run the **Classroom re-pin session** from `repository-information/classroom-utilities-repin-prompt.md` in a fresh Opus 5.5 xhigh session — it re-pins `landscape-utilities-2026-09` and the three `scenario-utilities-*` rehearsals against the eleven utility dossiers and folds in the 9/30 C2 run check. `build-classroom-segments.py --check` already reads `utilities` and `storage-developers-and-ipps` due with section changes. Phase F's next Profiler session (F-U3, or F-I1 in parallel) can follow.
 
 **To continue:** paste `repository-information/classroom-utilities-repin-prompt.md` (everything below its rule) into a fresh Opus 5.5 xhigh session on or after 9/30
-
-## Previous Sessions
-
-### Session — 2026-09-25 07:59 PM → 09:02 PM EST (Phase F approved, the F-U1 + F-U2 prompt written, v07.56r)
-
-**Date:** 2026-09-25, 07:59 PM → 09:02 PM EST (attended; three turns)
-**Repo version:** v07.56r (one push; this save is unversioned)
-**Branch:** `claude/brave-ritchie-un2qt1`
-
-### What was done
-
-- **A deep analysis of the corpus to fill the thin Profiler categories** (turn 1, research only, no commit). The categories stood at investor 5 · utility 6 · neocloud 7 · gc 7 · advisor 8 · hyperscaler 8, out of 177 dossiers.
-  - **Corpus pull:** a word-bounded, alias-aware count of ~300 uncovered names across every dossier, study guide, report and `Classroom.gs`. The most-cited were ERCOT 73 dossiers, PJM 37, BlackRock/GIP 31, Exelon/ComEd 19, NV Energy/BHE 18 and KKR 18.
-  - **Four parallel web-research subagents** checked candidate identity and buying authority. All four ran out of the session's 200-call search budget partway through.
-- **The developer approved every recommended company.** v07.56r recorded them as **Phase F** in `PROFILER-COVERAGE-PLAN.md` §11:
-  - 37 companies in 13 sessions: 11 utilities, 11 capital, 6 neocloud and landlord, 3 China hyperscaler, 3 GC/electrical, 3 advisor;
-  - its own ledger in §11.3, with `Why` cells marked unverified;
-  - the paste-in prompt for **F-U1 + F-U2** in §11.4: Duke, DTE, WEC, then Berkshire Hathaway Energy (NV Energy) and Exelon, run as two pushes on Fable 5.1 High.
-
-### Where we left off
-
-- **Everything is merged; the tree is clean.** The developer has the F-U1 + F-U2 prompt and is about to start it in a new session.
-- **Suggested in parallel:** F-I1, BlackRock and KKR, on Opus 5.5 xhigh. It touches different dossiers. Its prompt is not yet written — ask for `give me the F-I1 prompt`.
-- **Timed rows in §11.2:**
-  - **F-N1** (Firmus, HUMAIN, G42/Khazna) — fold into the 10/1 neoclouds pass.
-  - **F-H1** (ByteDance, Alibaba Cloud, Chindata) — before the 10/7 Megmeet start.
-  - **F-I2** — after SoftBank's DigitalBridge close.
-- **The Phase B Events work (#9a) and all dated reminders still stand**, unchanged by this session.
-
-### Key decisions made
-
-- **Ranking tests:** corpus pull, then buying authority (who signs for batteries, MV gear, generation or SSTs), then seat fit. `utilities` is the only segment in both sales seats, so utilities run first.
-- **Tenants are replaced by their landlords.** Together AI, Vultr, TensorWave and Lightning were dropped for 5C/Hypertec and TECfusions. Most GCs were dropped for Clayco and the electrical integrators Faith Technologies and EMCOR.
-- **ERCOT and PJM are held.** They are grid operators, and adding them would mean first using the empty `other` category. That is the developer's decision.
-- **Excluded, with the reasons in §11.1:** GIC, Silver Lake, Partners Group, the banks, DigitalBridge, PG&E, SCE, Sempra, CenterPoint and FirstEnergy. Clean Energy Associates is already inside `intertek`.
-- **Landscape coupling:** new members make `landscape-utilities-2026-09`, `landscape-capital-2026-09` and `landscape-neoclouds-2026-09` stale. A Profiler session records this and never edits `Classroom.gs`.
-
-### Known issues
-
-- **Drift candidates in existing dossiers** — agent-reported, unread, and carried in the utility prompt:
-  - `powerhouse-data-centers`: FERC rejected ComEd's Joliet TSA cancellation on 22 Sep;
-  - `tract`: the PUCN conditionally approved its gas plants, around 19 Sep;
-  - `stack-infrastructure` / `oracle` / `jupiter-nm`: Oracle's force-majeure notice on Project Jupiter, 24 Sep.
-- **Carried over:** `megmeet-briefing-prompt.md` names the 9/8 AIDC edition; `verify-profiler-roles.py` (2) and `check-events-plan.js` (2); the two aged 9/8 reports.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **CHANGELOG:** `Sections: 108/100`, 10 dated 9/25 and exempt. **The first push dated 9/26 or later must rotate** (after `git fetch --unshallow`).
-
-### Recommendation for next session
-
-- Run **Phase F sessions F-U1 + F-U2**, the five utilities, on **Fable 5.1 High** using the prompt in `PROFILER-COVERAGE-PLAN.md` §11.4. Utilities feed both sales seats, and three of the five buy batteries directly.
-
-**To continue:** paste the prompt in `PROFILER-COVERAGE-PLAN.md` §11.4 into a fresh Fable 5.1 High session

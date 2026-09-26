@@ -47,6 +47,16 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **Scope for the re-run:** the 16 vendors of the rev2 edition (Power Electronics added 9/25). Mitsubishi Electric is the named candidate still outside scope.
   - **To resume:** type `profiler Megmeet`, then `profiler report competitive: AIDC power conversion`.
 
+- `2026-09-26 01:21:37 AM EST` — **Check the 9/30 Classroom pipeline run once it has happened — after about 7:30 AM ET on Wednesday 2026-09-30** — the weekly Routine "Classroom curriculum pipeline (C2) - weekly" (`trig_01TiCXzEjowZGbS7aB2e6gQS`) is next due at **2026-09-30 11:02 UTC**. Open its session and read the final `CLASSROOM PIPELINE — 2026-09-30 — …` report.
+  - **Why this was re-requested:** the v07.60r Classroom re-pin ran on the night of 25–26 September, before the run existed, so its Part A could not be done. This covers the same check as the 2026-09-24 reminder above; dismiss either once it is done.
+  - **What to expect:**
+    - A `COMMIT` of a briefing is still the likely outcome: the 9/23 stand-down left the window open at `coveredThrough` 2026-09-21, and the 9/24 Gridmatic and Habitat Energy refreshes should supply a second source. A `STAND-DOWN` is fine if the report explains it; a `BLOCKED —` title needs a look.
+    - v07.60r re-pinned all five rehearsals on the utilities and storage-developers landscapes, so none of them should appear under `Needs the developer`.
+    - It regenerated 17 segment lessons, so only `compute-and-the-rack` and `insurance-and-risk-transfer` (pin-only) should show as due.
+  - **Also check notifications:** did a push or email arrive? None came for 9/21 or 9/23. If the run committed and nothing arrived, raise it with Claude support rather than changing the Routine.
+  - **If it committed:** `git fetch origin main` and rebase any open work before touching `Classroom.gs`, because the run's commit lives inside the content fence.
+  - **To resume:** type `check the 9/30 Classroom run` (row 5 of `phase-f-action-plan.md`).
+
 ## Completed Reminders
 
 - ~~`2026-09-22 12:29:48 AM EST` — **Paste the Megmeet SST briefing prompt — after the Network and Events build plan, before the 2026-10-07 start date** — the prompt is preserved verbatim at `repository-information/megmeet-briefing-prompt.md`; it is not in any chat transcript that will survive. Deliberately deferred on 2026-09-22 so the research lands closer to the start date and the tokens go to the Network/Events build first.~~ — completed `2026-09-23 06:47:20 PM EST` (dismissed by the developer; the briefing it points to ran on 2026-09-23 as v07.29r–v07.31r, and its chapter 9.4 was amended the same evening after Megmeet dossier v8)
