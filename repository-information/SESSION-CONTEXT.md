@@ -6,6 +6,104 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-26 (F-N1; one attended turn, context compacted mid-session)
+**Repo version:** v07.64r
+**Branch:** `claude/determined-curie-8zhg3t`
+**Model:** Opus 5.5 at xhigh, per the developer's choice for F-N1
+
+### What was done
+
+- **v07.64r — Phase F session F-N1**, the neoclouds and AI-capacity builders that sign for their own campuses:
+  - **Three dossiers (v1) and study guides (v2), each with a lesson plan:**
+    - `firmus`: neocloud. Firmus Grid Limited, trading as Firmus Technologies; **unlisted** on 26 Sep, so its calendar row follows the private rule.
+    - `humain`: neocloud, **not** hyperscaler. Legal name Future Artificial Intelligence Co.; PIF-owned.
+    - `g42`: developer + neocloud. One group slug, with Khazna and Core42 in `aka[]`.
+  - **Segments:**
+    - `neoclouds` · challenger for all three.
+    - `aidc-developers-and-landlords`: `g42` challenger (Khazna); `firmus` and `humain` **adjacent** — each builds for its own cloud and leases no shells. Firmus was hypothesised as a challenger there.
+  - **Calendar:** all three private, quarterly, core, each with a source and a `watch[]` list.
+  - **19 new concepts** (1,539 total), among them `power-train`, `exclusive-supply-agreement`, `work-order`, `early-contractor-involvement`, `bulk-supply-point`, `mva`, `maximum-demand`, `country-group`, `approved-recipient`, `end-use-controls`, `site-hardening`, `nvl72`, `clustermax`.
+  - **13 executive photos** (5 Firmus, 8 G42), all company-published.
+  - **Step 7:** eight inbound dossiers revised under the Archival Procedure for missing reciprocal edges:
+    - `amd` v2, `mgx` v3, `terawulf` v8, `openai` v6, `oracle` v6, `microsoft` v5 and `nvidia` v11: edges added only.
+    - `xai` v5: its 'trade reporting also cites a $3B HUMAIN investment' is closed with HUMAIN's own 18 Feb 2026 confirmation.
+    - No inbound claim contradicted the new dossiers.
+  - **Report pins:** `openai` and `xai` were re-verified on the named-project report.
+  - **Ledger and plan:** the three §11.3 rows are flipped and `phase-f-action-plan.md`'s status line updated.
+- **Premise verdicts, in one line each:**
+  - Firmus: 900 MW contracted — **a sales figure**, against two operating sites. Owns its campuses — **in part** (Melbourne sits in CDC's building). 'Builds the electrical content' — **refined**: Maas Group's JLE is 'the exclusive supplier of power train units for Firmus' Australian pipeline'. Benmax — **not closed** by 26 Sep. Gunvor 1.5 GWh — **held**. IPO 22 Oct — **as reported**.
+  - HUMAIN: MIS design-build — **superseded** by a 250 MW EPC under HUMAIN work orders (20 Sep). Al-Saad 1 GW by 2027 — **unreconciled** against the NYT's 250 MW. The rest held as targets or frameworks.
+  - G42: Stargate UAE long-lead equipment — **held**, with no supplier or signing entity named. The A:5 move — **held, with the rider the hypothesis missed**: the named approval expires 6 Apr 2027 unless G42 and Core42 become US companies.
+- **Verification:**
+  - The registry sync, study, relationships, crossrefs and README-tree checkers are all clean.
+  - The reports checker shows only the two pre-existing pin warnings (`jinko`, `oracle`).
+  - Playwright results are in the CHANGELOG entry.
+
+### Does any of the three sign for MV or DC power equipment? (the Megmeet paragraph)
+
+None of the three has signed for an SST, 800 VDC or HVDC equipment on the record, and only Firmus names a power-equipment supplier at all (JLE for its Australian power trains; Eaton's EnergyAware platform under its UPS). The nearest thing to a DC opening is **G42's Khazna**, the group's buyer, which signed a memorandum with Siemens on 15 Sep 2026 to 'continue to progress next-generation 800 VDC power architectures'. That is engineering intent, not an award, and the one recorded conversation belongs to an incumbent. Stargate UAE's first-phase long-lead equipment is already bought, so the door is the next 800 MW, Khazna's more-than-1 GW pipeline, and any redesign the reported dispersal across the UAE forces. **HUMAIN** buys through its EPC contractor (MIS, under HUMAIN work orders) and through partners, to 'robotic, modular' lowest-total-cost designs. An SST seller has to be accepted into the design by HUMAIN and its advisers, then win the contractor's purchase order, and US chip licences, not power, pace how fast that demand arrives. **Firmus**'s Australian power train is locked to JLE, so the entries there are as a tier-2 supplier to JLE, the Wesley Vale behind-the-meter battery trial (the DC side of a backup design), and the Batam and Malaysian Vera Rubin sites, which the exclusivity does not reach. Net for an SST seller: no reference customer among the three yet; one live 800 VDC conversation, held by Siemens; and two buyers whose doors run through intermediaries.
+
+### Where we left off
+
+- **Status:** v07.64r pushed at close as one commit; the tree is clean.
+- **Next (action plan):** F-I1 (BlackRock, KKR) at xhigh, Mon 9/28 – Tue 9/29. It has no paste-in prompt yet; §4 and §5 of `phase-f-action-plan.md` are the templates. BlackRock is the most-cited uncovered company (31 dossiers), so its step-7 reconciliation is the heavy part.
+- **Dated items:**
+  - CoolIT cooling recheck on or after Mon 9/28.
+  - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30.
+  - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1 (rebase first — the 10/1 Profiler Routines commit that day).
+  - Dominion reframe and **Classroom wave A** Fri 10/2 – Tue 10/6.
+  - Megmeet start Wed 10/7.
+  - Firmus prospectus 8 Oct and listing 22 Oct (reported). On listing, its calendar row moves to the public rule.
+- **Stale and not yet re-authored (Classroom.gs untouched, by design):**
+  - `landscape-neoclouds-2026-09`: the roster went from seven to ten (+Firmus, +HUMAIN, +G42), and `scenario-neoclouds-discovery` goes stale with it.
+  - `landscape-aidc-developers-and-landlords-2026-09`, further: +G42 as a challenger, +Firmus and +HUMAIN as adjacent. This is on top of Chindata, `tract` v4, `powerhouse-data-centers` v3 and the `terawulf` v8 edge. Its two `scenario-aidc-developers-and-landlords-*` rehearsals were already stale.
+  - Classroom wave A re-authors them.
+  - `build-classroom-segments.py --check`: **14 due**, 12 with section changes and 2 pin-only (`capital`, from `mgx` v3; `insurance-and-risk-transfer`). `neoclouds` now differs in eight sections.
+
+### Key decisions made
+
+- **G42 is one group slug.** G42 controls Khazna, the BIS approval and Stargate UAE sit at group level, and the corpus uses the names interchangeably; Khazna and Core42 live in `aka[]`.
+- **HUMAIN is a neocloud, not a hyperscaler.** Its own cloud is 1.1 MW; it builds capacity and lets it to others.
+- **Firmus is private** until it lists; its category is neocloud.
+- **§11.1 buying authority:**
+  - **Firmus:** buys its own chain — it owns its connection substations, applies for its generators, and runs UPS and batteries through Synert. In Australia the power train is exclusive to JLE.
+  - **HUMAIN:** owner and grid counterparty. The EPC contractor, or the partner, places the equipment orders.
+  - **G42:** Khazna is the buyer; Core42 leases.
+- **The `revenue-share` concept was left alone.** Its definition is BESS-optimiser-specific, so HUMAIN's guide defines 'revenue-sharing arrangement' in its own glossary rather than editing a shared entry that Classroom lessons may pin.
+- **The `oracle` pin on the named-project report was left loud.** It is pinned at v4, and v5 was an earlier session's substantive refresh (summary, developments, strategy, financials) that a pin note cannot vouch for. This session's v6 only added the G42 edge and its source.
+
+### Known issues
+
+- **Dates to re-check, because these rows flip rather than drift:**
+  - Firmus's Benmax completion (expected by end-September) and its listing.
+  - HUMAIN's Aramco stake (EC-cleared, not completed).
+  - G42's 6 Apr 2027 sunset, and any US vehicle.
+- **One-way edges:** the new dossiers point at `eaton`, `supermicro`, `blackstone`, `coreweave`, `iren` and `amazon`, which do not point back. They show as inbound evidence in the graph and were not revised this session.
+- **Two pin warnings** on the 9/8 reports (`jinko` v6, `oracle` v6), read and left loud.
+- **Pre-existing:** NVIDIA's Relationships tab shows four literal `**`. They come from other dossiers' inbound curated contexts, not from this session's edges; the graph holds 127 `**` both before and after this session. Not fixed here.
+- **README archive tree:** the older unlisted archive files (about 60) are still missing. This session added only its own eight.
+- **Carried over:**
+  - The ERCOT/PJM decision still awaits the developer.
+  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2).
+  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
+  - `study-prep/zhonhen/zhonhen-interview-brief.md` still calls Panama an SST in two lines.
+  - The study-guide PDF renderer is not in the repo.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 188 dossiers, 188 guides, 1,539 concepts, 1,610 graph edges (1,217 curated). **CHANGELOG** `Sections: 90/100`.
+
+### Recommendation for next session
+
+- Write the **F-I1 paste-in prompt** (BlackRock/GIP/AIP and KKR, Opus 5.5 at xhigh) as §6 of `repository-information/phase-f-action-plan.md`, on the §4/§5 template with F-N1's lessons, and run it by Tue 9/29. BlackRock's 31 inbound dossiers make its step-7 reconciliation the session's main cost.
+
+**To continue:** type `write the F-I1 prompt`
+
+## Previous Sessions
+
+### Session — 2026-09-26 01:26 AM → 03:25 AM EST (F-H1 and the F-N1 prompt, v07.62r–v07.63r)
+
 **Date:** 2026-09-26 01:26 AM → 03:25 AM EST (two attended turns; context compacted once mid-session)
 **Repo version:** v07.63r (two pushes: v07.62r F-H1; v07.63r the write-size rule fix, the F-N1 prompt and this save)
 **Branch:** `claude/relaxed-shannon-q4fc02`
@@ -80,67 +178,3 @@ The `megmeet` dossier names no Chinese customer, and these three do not supply o
 - Run **F-N1 (Firmus, HUMAIN, G42)** in a fresh Opus 5.5 session at **xhigh** by Tue 9/29, using the prompt in **§5 of `repository-information/phase-f-action-plan.md`**, so `landscape-neoclouds-2026-09` is re-authored only once in Classroom wave A.
 
 **To continue:** paste the prompt in §5 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh
-
-## Previous Sessions
-
-### Session — 2026-09-25 11:11 PM → 2026-09-26 01:25 AM EST (the Classroom re-pin and the Phase F action plan, v07.60r–v07.61r)
-
-**Date:** 2026-09-25 11:11 PM → 2026-09-26 01:25 AM EST (attended; two turns)
-**Repo version:** v07.61r (two pushes: v07.60r the Classroom re-pin; v07.61r the Phase F action plan and this save)
-**Branch:** `claude/wonderful-planck-ufx3aq`
-
-### What was done
-
-- **v07.60r — the Classroom re-pin**, run from `classroom-utilities-repin-prompt.md`:
-  - **Part A could not run.** The 9/30 C2 Routine had not fired yet (`next_run_at` 2026-09-30T11:02Z).
-  - **Segments:** the generator regenerated the 17 segment lessons `--check` listed with section changes; the 2 pin-only ones were left alone.
-  - **`landscape-utilities-2026-09`**, revised under G3: eleven franchises read as variants of five instruments; NRG second and Vistra seventh by revenue behind Duke; thirteen bets and nine new indicators; the seller's play now two questions (the instrument, and who owns the asset under it). `reviewBy` 2027-01-01 → **2026-12-02**, the PUCN's statutory decision on NV Energy's IRP and LLESA.
-  - **`landscape-storage-developers-and-ipps-2026-09`:** count-only correction (38 members, 11 adjacent, twelve ownership events).
-  - **Rehearsals:** all five resting on the two landscapes were re-judged (every beat holds) and re-pinned; `scenario-utilities-discovery-aidc` `reviewBy` → 2026-12-02.
-  - **Versions:** Classroom GAS v01.92g; the CHANGELOG rotated (9/18 + 9/19 groups, 26 sections, SHA-enriched). The push was held past midnight EST so it was dated 9/26.
-- **v07.61r — this turn:**
-  - A reminder to check the 9/30 run.
-  - **`repository-information/phase-f-action-plan.md`:** the 32 remaining Phase F companies in 11 sessions, plus ERCOT and PJM held; an Opus 5.5 effort level per session; a 21-row dated order interleaving the standing reminders and four Classroom waves; and the paste-in prompt for session 1, F-H1.
-  - A pointer at `PROFILER-COVERAGE-PLAN.md` §11.2 marking its Model column superseded.
-
-### Where we left off
-
-- **Status:** v07.60r is merged and v07.61r pushed at close; the tree is clean.
-- **Next:** session 1 of the action plan, **F-H1** (ByteDance, Alibaba Cloud, Chindata), on xhigh. The prompt is §4 of the action plan.
-- **Dated items:**
-  - CoolIT cooling recheck on or after Mon 9/28.
-  - 9/30 run check after ~7:30 AM ET on Wed 9/30.
-  - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1. The 10/1 Profiler Routines commit that day, so rebase first.
-  - Dominion reframe Fri 10/2 – Tue 10/6, and Classroom wave A by Tue 10/6.
-  - Megmeet start Wed 10/7.
-- **Stale and not yet re-authored:**
-  - `landscape-aidc-developers-and-landlords-2026-09`: `tract` v4 and `powerhouse-data-centers` v3 moved beneath it; not examined.
-  - The capital, neoclouds, hyperscalers, epc, in-hall, software and assurance landscapes go stale as their Phase F members land; the Classroom waves in the action plan re-author them.
-
-### Key decisions made
-
-- **Phase F runs on Opus 5.5** (the developer, 2026-09-26). Effort follows reading depth:
-  - **xhigh** for long first-party records, heavy reconciliation and landscape re-authoring.
-  - **high** for thin-record private subjects, reframes and refresh passes.
-  - **medium** for bounded adjudication: F-A1, the run check and the CoolIT recheck.
-- **F-H1 runs first**: it is the only session tied to the developer's own 10/7 start. F-N1 can fold into the 10/1 neoclouds pass if it slips.
-- **ERCOT and PJM:** recommended to add both in `other` after a one-paragraph schema note. **This awaits the developer's decision.**
-- **The utilities review date** is the first dated decision that fixes an instrument's terms. Hearings, elections, filing deadlines, month-part windows and deliverables are not.
-
-### Known issues
-
-- The re-pin brief's OEM line was wrong (Duke names GE Vernova turbines); recorded in v07.60r.
-- A pre-existing CHANGELOG blank-line irregularity above v07.14r was left as is.
-- Carried over: the two aged 9/8 reports still warn; `verify-profiler-roles.py` (2) and `check-events-plan.js` (2); `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **CHANGELOG** `Sections: 87/100`; `Classroomgs.changelog.md` 44/50.
-- **Classroom:** content checker 0 errors / 0 warnings at 71 lessons; `build-classroom-segments.py --check` shows 2 due, both pin-only.
-
-### Recommendation for next session
-
-- Run **session 1 of the Phase F action plan — F-H1 (ByteDance, Alibaba Cloud, Chindata)** in a fresh Opus 5.5 session at **xhigh**, using the prompt in §4 of `repository-information/phase-f-action-plan.md`, on Saturday 9/26 or Sunday 9/27. It is the only Profiler session tied to the Megmeet start on Wednesday 10/7.
-
-**To continue:** paste the prompt in §4 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh

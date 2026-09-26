@@ -264,14 +264,14 @@
       "hq": "Santa Clara, California, United States",
       "ticker": "NASDAQ: AMD",
       "status": "active",
-      "lastUpdated": "2026-09-08",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "amd.com",
         "ir.amd.com",
         "xilinx.com"
       ],
-      "srcTotal": 84,
-      "srcFirstPct": 67,
+      "srcTotal": 85,
+      "srcFirstPct": 66,
       "kpiNorm": true,
       "segments": [
         {
@@ -2077,6 +2077,50 @@
       ]
     },
     {
+      "slug": "firmus",
+      "name": "Firmus",
+      "categories": [
+        "neocloud"
+      ],
+      "tagline": "Australian neocloud that owns and builds its AI factories — more than 900 MW contracted (OpenAI the anchor for two unbuilt Malaysian sites) against two operating sites; buys its own substations, UPS and batteries, but Maas Group's JLE is the exclusive supplier of its Australian power trains (A$855M order); ASX IPO timed for 22 Oct 2026",
+      "hq": "Sydney, Australia",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "Firmus Technologies",
+        "Firmus Grid",
+        "Firmus Grid Limited",
+        "Firmus Grid Pty Ltd",
+        "Firmus Technologies Pty Ltd",
+        "Firmus AI Cloud",
+        "Sustainable Metal Cloud",
+        "SMC",
+        "Firmus Metal International",
+        "HyperCube",
+        "Firmus Power Cube",
+        "Project Southgate",
+        "Synert"
+      ],
+      "domains": [
+        "firmus.co",
+        "smc.co",
+        "synert.co"
+      ],
+      "srcTotal": 67,
+      "srcFirstPct": 58,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "flex",
       "name": "Flex",
       "categories": [
@@ -2243,6 +2287,61 @@
         {
           "id": "software-and-optimization",
           "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "g42",
+      "name": "G42",
+      "categories": [
+        "developer",
+        "neocloud"
+      ],
+      "tagline": "Abu Dhabi AI group whose Khazna unit is the UAE's dominant data-centre landlord (~650 MW, 73% share) and the builder of the 1 GW Stargate UAE for OpenAI and Oracle; Core42 is its neocloud; licence-free US chip access expires 6 Apr 2027 unless it becomes a US company; a Khazna–Siemens 800 VDC memorandum, no award",
+      "hq": "Abu Dhabi, United Arab Emirates",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "Group 42",
+        "Group 42 Holding Ltd",
+        "G42 Cloud",
+        "G42 Cloud Technology LLC",
+        "Khazna",
+        "Khazna Data Centers",
+        "Khazna Data Centres",
+        "Khazna Data Center Holdings Limited",
+        "Core42",
+        "Core42 Technology Projects LLC",
+        "Stargate UAE",
+        "UAE–US AI Campus",
+        "UAE-US AI Campus",
+        "Inception42",
+        "Inception",
+        "Presight",
+        "Space42",
+        "M42",
+        "Injazat",
+        "Condor Galaxy",
+        "Jais"
+      ],
+      "domains": [
+        "g42.ai",
+        "khaznadatacenters.com",
+        "khazna.ae",
+        "core42.ai",
+        "presight.ai"
+      ],
+      "srcTotal": 57,
+      "srcFirstPct": 56,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
         }
       ]
     },
@@ -2749,6 +2848,47 @@
         {
           "id": "in-hall-power",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "humain",
+      "name": "HUMAIN",
+      "categories": [
+        "neocloud"
+      ],
+      "tagline": "PIF-owned sovereign neocloud and owner-of-record for Saudi AI data-centre power — a 250 MW EPC with MIS run on HUMAIN work orders, a 6 GW Al-Saad campus tender and a National Grid SA supply deal; xAI, Together AI and AWS as tenants; 1.1 MW of its own cloud energised; US licence capped at 35,000 GB300-equivalent",
+      "hq": "Riyadh, Saudi Arabia",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "Humain",
+        "هيوماين",
+        "Future Artificial Intelligence Co.",
+        "Future Artificial Intelligence Company",
+        "شركة المستقبل للذكاء الاصطناعي",
+        "HUMAIN ONE",
+        "HUMAIN Chat",
+        "HUMAIN Node",
+        "ALLaM",
+        "Saudi Company for Artificial Intelligence",
+        "SCAI"
+      ],
+      "domains": [
+        "humain.com",
+        "humain.ai"
+      ],
+      "srcTotal": 53,
+      "srcFirstPct": 28,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "adjacent"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
         }
       ]
     },
@@ -3499,7 +3639,7 @@
       "tagline": "Abu Dhabi's state-backed AI investment vehicle (Mubadala and G42 founding partners; chaired by Sheikh Tahnoon bin Zayed) — USD 49bn Fund I, Stargate initial equity funder, AIP co-founder and owner of Aligned Data Centers, repeat investor in OpenAI, Anthropic and xAI.",
       "hq": "Abu Dhabi, United Arab Emirates",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "mgx.ae"
       ],
@@ -3523,12 +3663,12 @@
       "hq": "Redmond, WA, USA",
       "ticker": "NASDAQ: MSFT",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "microsoft.com"
       ],
-      "srcTotal": 19,
-      "srcFirstPct": 32,
+      "srcTotal": 22,
+      "srcFirstPct": 41,
       "kpiNorm": true,
       "segments": [
         {
@@ -3889,12 +4029,12 @@
       "hq": "Santa Clara, CA, USA",
       "ticker": "NASDAQ: NVDA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "nvidia.com"
       ],
-      "srcTotal": 23,
-      "srcFirstPct": 61,
+      "srcTotal": 27,
+      "srcFirstPct": 63,
       "kpiNorm": true,
       "segments": [
         {
@@ -3998,12 +4138,12 @@
       "tagline": "Anchor demand — ~$1.4T / ~30 GW committed against ~0.3 GW operational; the circular-financing debate is, in large part, the OpenAI-solvency debate.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "openai.com"
       ],
-      "srcTotal": 24,
-      "srcFirstPct": 46,
+      "srcTotal": 26,
+      "srcFirstPct": 42,
       "kpiNorm": false,
       "segments": [
         {
@@ -4022,12 +4162,12 @@
       "hq": "Austin, TX, USA",
       "ticker": "NYSE: ORCL",
       "status": "active",
-      "lastUpdated": "2026-09-21",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "oracle.com"
       ],
-      "srcTotal": 24,
-      "srcFirstPct": 38,
+      "srcTotal": 25,
+      "srcFirstPct": 36,
       "kpiNorm": false,
       "segments": [
         {
@@ -5124,7 +5264,7 @@
       "hq": "Easton, MD, USA",
       "ticker": "NASDAQ: WULF",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "terawulf.com"
       ],
@@ -5640,12 +5780,12 @@
       "tagline": "The extreme case in behind-the-fence power — ~1 GW Colossus on self-built gas + the largest Megapack fleet; now inside SpaceX, monetized by Anthropic at $15B/yr.",
       "hq": "Palo Alto, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "x.ai"
       ],
-      "srcTotal": 19,
-      "srcFirstPct": 32,
+      "srcTotal": 21,
+      "srcFirstPct": 38,
       "kpiNorm": false,
       "segments": [
         {

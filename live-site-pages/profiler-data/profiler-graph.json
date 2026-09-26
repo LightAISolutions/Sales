@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-26",
- "companies": 185,
+ "companies": 188,
  "edges": [
   {
    "a": "abb",
@@ -4290,6 +4290,39 @@
   },
   {
    "a": "amazon",
+   "b": "humain",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "AWS and HUMAIN are building a Riyadh 'AI Zone' in which AWS deploys and manages the accelerators; AWS is described as HUMAIN's preferred AI partner.",
+     "context": "The AI Zone was announced at over US$5B in May 2025. In November 2025 AWS was to 'deploy and manage up to 150,000' accelerators in Riyadh. At LEAP 2026 (1 Sep 2026) the plan was stated as up to 50 MW by 2028. HUMAIN ONE is sold on AWS Marketplace, and ALLaM is to be offered on Amazon Bedrock. In this zone the hyperscaler operates the compute, so the fit-out is AWS's own buying.",
+     "source": "https://www.spa.gov.sa/en/N2665748",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 50 MW in the AI Zone by 2028; up to 150,000 accelerators",
+     "via": "AWS AI Zone (Trainium and NVIDIA), HUMAIN ONE and ALLaM on AWS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Models — ALLaM, humain-m3 and HUMAIN Chat",
+     "date": "",
+     "text": "It powers HUMAIN Chat, launched on 25 Aug 2025 and 'hosted end-to-end on HUMAIN infrastructure in the Kingdom', and is to be offered on Amazon Bedrock and Microsoft Foundry.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-01",
+     "text": "AWS confirms up to 50 MW in the Kingdom's first AI Zone with HUMAIN by 2028; ALLaM on Amazon Bedrock — The AWS zone is AWS-operated capacity — the hyperscaler buys its own fit-out.",
+     "src": "https://www.spa.gov.sa/en/N2665748",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-01"
+  },
+  {
+   "a": "amazon",
    "b": "lambda",
    "evid": [
     {
@@ -5506,6 +5539,47 @@
   },
   {
    "a": "amd",
+   "b": "g42",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "G42's Core42 runs Maximus-01, more than 9,000 AMD Instinct MI300X GPUs at TeraWulf's Lake Mariner campus, ranked 20th on the TOP500.",
+     "context": "G42's November 2025 release reports the Maximus-01 ranking (114.50 PF Rmax). G42 also announced a Cisco-integrated AMD MI350X cluster in the UAE in October 2025, 'pending final approvals'.",
+     "source": "https://www.g42.ai/resources/news/core42-maximus-01-cluster-secures-top-20-ranking-global-top500-supercomputers-list",
+     "status": "active",
+     "since": "2024",
+     "via": "AMD Instinct MI300X (Core42 Maximus-01)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "AMD supplies the GPUs in Core42's Maximus-01 cluster at Lake Mariner — more than 9,000 MI300X, ranked 20th on the TOP500.",
+     "context": "G42's November 2025 release reports Maximus-01's TOP500 ranking (114.50 PF Rmax). A Cisco-integrated AMD MI350X cluster in the UAE was announced in October 2025, 'pending final approvals'. G42 and AMD also partnered on AI compute in France (Grenoble with DataOne, 2025).",
+     "source": "https://www.g42.ai/resources/news/core42-maximus-01-cluster-secures-top-20-ranking-global-top500-supercomputers-list",
+     "status": "active",
+     "since": "2024",
+     "via": "AMD Instinct MI300X (Maximus-01); MI350X cluster with Cisco"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Core42 — sovereign cloud and AI compute",
+     "date": "",
+     "text": "Products: a Sovereign AI Cloud ('Harness the power of NVIDIA, AMD, Qualcomm, Microsoft, or Cerebras'; 'Access 86K+ GPUs across sovereign data centers globally'), with self-service H100 capacity launched at GITEX in October 2025 under a 'tiered vetting system aligned with license conditions'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Core42 — sovereign cloud and AI compute",
+     "date": "",
+     "text": "Its capacity is mostly leased: 60 MW of critical IT at TeraWulf's Lake Mariner, New York, where the Maximus-01 cluster of 'more than 9,000 AMD Instinct MI300X GPUs' ranked 20th on the TOP500.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024"
+  },
+  {
+   "a": "amd",
    "b": "google",
    "curated": {
     "a": {
@@ -5519,6 +5593,126 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "amd",
+   "b": "humain",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "HUMAIN, Saudi Arabia's PIF-owned AI company, runs its first GPU-as-a-service capacity on AMD Instinct MI355X through the AMD–Cisco–HUMAIN joint venture, live since 31 Aug 2026.",
+     "context": "May 2025: 'the parties will invest up to $10B to deploy 500 megawatts of AI compute capacity over the next five years', with HUMAIN overseeing the data centre and 'sustainable power systems'.\n\nNovember 2025: AMD, Cisco and HUMAIN formed a joint venture targeting up to 1 GW by 2030, with a first phase of 100 MW; Reuters reports Luma AI contracted that entire phase.\n\n31 August 2026: MI355X systems went live in production, with the next phase of up to 250 MW on MI400 Series from 2027. The joint venture's legal entity and equity split are not disclosed.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "up to US$10B / 500 MW over five years; joint venture with Cisco up to 1 GW by 2030",
+     "via": "AMD Instinct MI355X; MI400 Series from 2027"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "AMD supplies the GPUs behind HUMAIN's first live GPU-as-a-service capacity, through a joint venture with Cisco in which HUMAIN supplies the data-centre capacity.",
+     "context": "May 2025: AMD and HUMAIN agreed that 'the parties will invest up to $10B to deploy 500 megawatts of AI compute capacity over the next five years', with HUMAIN to 'oversee end-to-end delivery, including hyperscale data center, sustainable power systems, and global fiber interconnects'.\n\nNovember 2025: AMD, Cisco and HUMAIN formed a joint venture targeting up to 1 GW by 2030, with a first phase of 100 MW. Reuters reports Luma AI contracted that entire first phase.\n\n31 August 2026: MI355X systems went live, 'enabling HUMAIN to offer GPU-as-a-service', with the next phase of up to 250 MW on MI400 Series from 2027. The joint venture's legal entity and equity split are not disclosed.",
+     "source": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "up to US$10B / 500 MW over five years; joint venture up to 1 GW by 2030",
+     "via": "AMD Instinct MI355X; MI400 Series from 2027"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-31",
+     "text": "AMD, Cisco and HUMAIN put MI355X infrastructure live in production in Saudi Arabia; next phase up to 250 MW on MI400 Series from 2027 — The first of the sovereign gigawatt agreements to actually carry traffic rather than sit in a memorandum — the joint venture remains on track for up to 1 GW by 2030.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-08",
+     "text": "Commits up to £2bn over five years in the United Kingdom, with Imperial College London and Oriole Networks, and Dell-supported systems at Cambridge — Sovereign-AI money placed where the compute will be bought, following the HUMAIN and TCS pattern.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1288/amd-commits-up-to-2-billion-to-accelerate-ai-innovation-and-research-in-the-united-kingdom",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Energised capacity is small: the only operating figure is its own NVIDIA cloud, launched at 1.1 MW, relayed from its LEAP 2026 disclosures, plus an AMD MI355X cluster live since 31 Aug 2026 with no MW stated.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its main commitments: NVIDIA (18,000 GB300 first, up to 600,000 GPUs over three years in Saudi Arabia and the US), AMD and Cisco (a joint venture targeting up to 1 GW by 2030), a US$3B investment in xAI now held as SpaceX shares, and its own models (ALLaM; humain-m3, built by the Chinese company MiniMax).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "AMD's 2025 release says 'HUMAIN will oversee end-to-end delivery, including hyperscale data center, sustainable power systems'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the one operating figure is a 1.1 MW NVIDIA cloud, plus an AMD cluster of undisclosed size.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: US$3B into xAI before xAI's 500 MW+ framework; HUMAIN led Luma AI's US$900M round, and Luma took the AMD joint venture's first 100 MW (Reuters).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Compute and cloud — GPU-as-a-service and capacity partnerships",
+     "date": "",
+     "text": "The AMD and Cisco systems that went live on 31 Aug 2026 'enabl[e] HUMAIN to offer GPU-as-a-service across a wide range of use cases, from model training to inferencing', on AMD Instinct MI355X with Cisco networking.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Investments — xAI, Luma and the venture programme",
+     "date": "",
+     "text": "Reuters reports HUMAIN led Luma AI's US$900M Series C (Nov 2025); Luma is the reported anchor of the AMD/Cisco joint venture's first 100 MW.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-31",
+     "text": "AMD, Cisco and HUMAIN put MI355X systems live as GPU-as-a-service; the next phase of up to 250 MW on MI400 follows from 2027 — The first HUMAIN capacity a third party confirms as operating.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-19",
+     "text": "AMD, Cisco and HUMAIN form a joint venture targeting up to 1 GW by 2030, phase one 100 MW — HUMAIN supplies the data-centre capacity; AMD and Cisco the technology.",
+     "src": "https://www.prnewswire.com/news-releases/amd-cisco-and-humain-to-form-joint-venture-to-deliver-world-leading-ai-infrastructure-302620704.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-27",
+     "text": "Qualcomm and HUMAIN target 200 MW of AI200/AI250 inference racks starting in 2026 — An inference-silicon second source beside NVIDIA and AMD.",
+     "src": "https://www.prnewswire.com/news-releases/humain-and-qualcomm-to-deploy-ai-infrastructure-in-saudi-arabia-for-global-inferencing-302595524.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-13",
+     "text": "AMD and HUMAIN: up to US$10B to deploy 500 MW over five years, with 'HUMAIN [to] oversee end-to-end delivery, including hyperscale data center, sustainable power systems' — Power scope sits with HUMAIN from the start.",
+     "src": "https://ir.amd.com/news-events/press-releases/detail/1250/amd-and-humain-form-strategic-10b-collaboration-to-advance-global-ai",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-31"
   },
   {
    "a": "amd",
@@ -11633,6 +11827,45 @@
   },
   {
    "a": "blackstone",
+   "b": "firmus",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Blackstone funds led Firmus's US$10B debt facility in February 2026 and Blackstone Tactical Opportunities joined the US$2B equity round in August 2026.",
+     "context": "The facility was 'led by funds managed by Blackstone Tactical Opportunities, Blackstone Credit & Insurance, and affiliated funds', supported by Coatue, to fund the next phase of Project Southgate; tenor, pricing and the drawn amount are not disclosed.",
+     "source": "https://firmus.co/newsroom/firmus-secures-us10-billion-financing-led-by-blackstone-and-coatue-to-scale-energy-efficient-ai-infrastructure",
+     "status": "active",
+     "since": "2026-02",
+     "scale": "US$10B debt facility (lead); equity in the US$2B round"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Equity: A$330M (Sep 2025, NVIDIA joining), A$500M (Nov 2025), US$505M (Apr 2026, US$5.5B post-money) and US$2B (Aug 2026, above US$10.5B post-money), plus a US$10B Blackstone-led debt facility (Feb 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-07",
+     "text": "US$2B strategic equity round, fully subscribed, at a post-money valuation above US$10.5B — Coatue and NVIDIA follow on; Blackstone Tactical Opportunities and Jane Street join — Valuation roughly doubled in four months ahead of the float.",
+     "src": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-09",
+     "text": "US$10B debt financing facility led by Blackstone Tactical Opportunities and Blackstone Credit & Insurance, supported by Coatue — Debt capacity large enough to fund the Southgate build if the capacity is sold.",
+     "src": "https://firmus.co/newsroom/firmus-secures-us10-billion-financing-led-by-blackstone-and-coatue-to-scale-energy-efficient-ai-infrastructure",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-07"
+  },
+  {
+   "a": "blackstone",
    "b": "fluidstack",
    "curated": {
     "a": {
@@ -11669,6 +11902,27 @@
     }
    ],
    "last": "2026-06-10"
+  },
+  {
+   "a": "blackstone",
+   "b": "humain",
+   "evid": [
+    {
+     "where": "Capabilities · AI data centres — owned builds and partner campuses",
+     "date": "",
+     "text": "(3) Partner-led: DataVolt is building HUMAIN's 100 MW inside its Oxagon (NEOM) campus for 2028; AirTrunk (Blackstone) 'will lead development' of a campus of about US$3B; AWS 'will deploy and manage' GPUs in an AI Zone; and an stc/center3 joint venture of up to 1 GW is still a memorandum of understanding.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-28",
+     "text": "Partnership with Blackstone-backed AirTrunk for a Saudi data-centre campus of about US$3B, with AirTrunk leading development — A partner-financed route to capacity.",
+     "src": "https://www.prnewswire.com/news-releases/humain-and-blackstone-backed-airtrunk-announce-partnership-to-build-state-of-the-art-data-centers-in-the-kingdom-of-saudi-arabia-302596808.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-28"
   },
   {
    "a": "blackstone",
@@ -19988,6 +20242,29 @@
   },
   {
    "a": "coreweave",
+   "b": "firmus",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "The benchmark neocloud the Firmus IPO is measured against; SemiAnalysis rates CoreWeave Platinum and Firmus Silver in ClusterMAX 3.0.",
+     "context": "Press compares Firmus's float with CoreWeave's 2025 IPO and places it alongside CoreWeave, Nebius and IREN. The two models differ: CoreWeave leases shells from third-party developers, while Firmus builds and owns its campuses.",
+     "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Firmus AI Cloud (formerly Sustainable Metal Cloud) — GPU cloud and dedicated capacity",
+     "date": "",
+     "text": "Press compares it with CoreWeave, Nebius and IREN; SemiAnalysis calls it 'our favorite in Asia-Pacific' but places it below CoreWeave and Nebius (Platinum) and Oracle and Google Cloud (Gold)",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "coreweave",
    "b": "fluidstack",
    "evid": [
     {
@@ -27537,6 +27814,52 @@
   },
   {
    "a": "eaton",
+   "b": "firmus",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Firmus's Synert subsidiary runs a smart-UPS grid-services platform 'built with Eaton's industry-leading EnergyAware UPS platform' at a Tasmanian site.",
+     "context": "The platform delivers certified fast frequency response into Australia's National Electricity Market from UPS batteries. Firmus's timeline dates first deployment to Q1 2024 ('Synert deployed with Eaton in Tasmania'); the joint showcase release is dated April 2025. Whether Eaton supplies UPS for the new Power Cube power trains, which JLE builds, is not stated.",
+     "source": "https://firmus.co/newsroom/firmus-and-eaton-showcase-how-ai-factories-can-support-the-grid",
+     "status": "active",
+     "since": "2024",
+     "via": "EnergyAware UPS (Synert)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "What Firmus still buys itself is its connection substations, UPS and batteries (on Eaton's EnergyAware platform), backup generators and a behind-the-meter battery trial at Wesley Vale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It runs UPS and batteries through its Synert subsidiary on Eaton's EnergyAware platform.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Synert runs containerised UPS batteries on Eaton's platform.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy, grid and connectivity platform — Synert, Model-to-Grid, Gunvor supply, subsea cable",
+     "date": "",
+     "text": "Synert, a Firmus subsidiary, runs a smart-UPS platform 'built with Eaton's industry-leading EnergyAware UPS platform' that delivers certified fast frequency response into Australia's NEM from a Tasmanian site (Apr 2025).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024"
+  },
+  {
+   "a": "eaton",
    "b": "flex",
    "curated": {
     "a": {
@@ -32552,6 +32875,311 @@
    "last": "2025-12-08"
   },
   {
+   "a": "firmus",
+   "b": "google",
+   "evid": [
+    {
+     "where": "Capabilities · Firmus AI Cloud (formerly Sustainable Metal Cloud) — GPU cloud and dedicated capacity",
+     "date": "",
+     "text": "Press compares it with CoreWeave, Nebius and IREN; SemiAnalysis calls it 'our favorite in Asia-Pacific' but places it below CoreWeave and Nebius (Platinum) and Oracle and Google Cloud (Gold)",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "firmus",
+   "b": "iren",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "IREN is the other Australian-founded AI cloud building in South Australia; SemiAnalysis's September 2026 review contrasts the two.",
+     "context": "Capital Brief (24 Sep 2026) reports SemiAnalysis's lead author saying Firmus is 'up for the challenge' while rating IREN 'not recommended'. Both are Australian-founded AI clouds, and press groups them as peers in the run-up to the float.",
+     "source": "https://www.capitalbrief.com/article/silicon-valleys-top-ai-scrutineer-says-firmus-is-up-for-the-challenge-but-iren-runs-1-worst-site-74ce1b6f-95fb-482d-a5de-6f3752cc758e/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Firmus AI Cloud (formerly Sustainable Metal Cloud) — GPU cloud and dedicated capacity",
+     "date": "",
+     "text": "Press compares it with CoreWeave, Nebius and IREN; SemiAnalysis calls it 'our favorite in Asia-Pacific' but places it below CoreWeave and Nebius (Platinum) and Oracle and Google Cloud (Gold)",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "firmus",
+   "b": "lambda",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-23",
+     "text": "SemiAnalysis ClusterMAX 3.0: 'Lambda, Firmus and TensorWave remain in Silver'; the development GB300 cluster tested showed network drops that killed jobs, a NIC lost in a reboot and poor WAN — The operator is rated a scale-capable build partner with an immature managed-cluster product.",
+     "src": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-23"
+  },
+  {
+   "a": "firmus",
+   "b": "meta",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "Reuters: the draft prospectus shows an expected pro-forma loss after tax of '$77 million' for the half-year to 31 Dec 2026, describes Firmus as 'historically loss-making' and names Nvidia, Meta and OpenAI as customers — The first financial figures on the record come through an unnamed-source account of an unlodged document; the currency is not stated.",
+     "src": "https://www.933thedrive.com/2026/09/24/australias-firmus-expects-77-million-first-half-loss-as-it-plans-5-billion-ipo-sources-say/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-24"
+  },
+  {
+   "a": "firmus",
+   "b": "nebius",
+   "evid": [
+    {
+     "where": "Capabilities · Firmus AI Cloud (formerly Sustainable Metal Cloud) — GPU cloud and dedicated capacity",
+     "date": "",
+     "text": "Press compares it with CoreWeave, Nebius and IREN; SemiAnalysis calls it 'our favorite in Asia-Pacific' but places it below CoreWeave and Nebius (Platinum) and Oracle and Google Cloud (Gold)",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "firmus",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "NVIDIA is Firmus's shareholder, its GPU supplier and, at Batam, its financing partner: the campus is built on NVIDIA's revenue-sharing and credit-support model.",
+     "context": "NVIDIA joined Firmus's A$330M placement in September 2025, which closed at A$1.85B post-money with Ellerston Capital as cornerstone, and followed on in the US$505M (April 2026) and US$2B (August 2026) rounds.\n\nAt Batam, Firmus says it will 'procure NVIDIA infrastructure' under a revenue-sharing and credit-support model and expects US$25-30B of offtake over six years. NVIDIA's own blog names Sharon AI and Firmus 'among the first companies to work with NVIDIA on this new business model'. CDC called NVIDIA the anchor customer of the first Melbourne stage, and the Reuters account of the draft prospectus lists Nvidia among Firmus's customers. Supplier, shareholder, customer and credit backstop at once.",
+     "source": "https://firmus.co/newsroom/firmus-closes-usd330m-raise-with-nvidia-joining-as-an-investor",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "joined the A$330M round; followed on in US$505M and US$2B rounds",
+     "via": "revenue-sharing and credit-support model (Batam)"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "NVIDIA is a Firmus shareholder, from the A$330M round of September 2025, and at Batam its partner in NVIDIA's revenue-sharing and credit-support model for neoclouds.",
+     "context": "Firmus's September 2025 release: 'NVIDIA joining as an investor'; NVIDIA followed on in the US$505M and US$2B rounds of 2026. NVIDIA's own July 2026 blog names 'Sharon AI and Firmus … among the first companies to work with NVIDIA on this new business model', for a DSX AI factory campus in Batam, Indonesia. Firmus is also an NVIDIA GPU customer.",
+     "source": "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/",
+     "status": "active",
+     "since": "2025-09",
+     "via": "revenue-sharing and credit-support model (Batam)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Firmus is an Australian neocloud that develops, owns and operates its own AI factories and sells dedicated NVIDIA capacity from them.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Equity: A$330M (Sep 2025, NVIDIA joining), A$500M (Nov 2025), US$505M (Apr 2026, US$5.5B post-money) and US$2B (Aug 2026, above US$10.5B post-money), plus a US$10B Blackstone-led debt facility (Feb 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Its Batam and Malaysian sites are built to NVIDIA DSX blueprints for Vera Rubin NVL72, outside the JLE exclusivity.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that NVIDIA's several roles and the listing are one risk, not two.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: NVIDIA is shareholder, GPU supplier, customer (CDC called it the Melbourne anchor) and, at Batam, provider of revenue-sharing and credit support.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Firmus AI Cloud (formerly Sustainable Metal Cloud) — GPU cloud and dedicated capacity",
+     "date": "",
+     "text": "The catalogue lists NVIDIA H200, H100, A100 and L40S 8-GPU nodes, with 'NVIDIA GB300 and Vera Rubin NVL72 – coming soon', WEKA parallel storage, Managed Slurm, CUDA stacks, NIM inference APIs and a PaaS layer via Rafay.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Firmus AI Cloud (formerly Sustainable Metal Cloud) — GPU cloud and dedicated capacity",
+     "date": "",
+     "text": "It is an NVIDIA Cloud Partner and lists on NVIDIA DGX Cloud Lepton.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · HyperCube modular AI factory",
+     "date": "",
+     "text": "It 'integrates advanced liquid cooling, mechanical systems and electrification into a repeatable infrastructure system manufactured and prefabricated in regional New South Wales' and is co-designed to NVIDIA DSX blueprints.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Project Southgate and the AI factory campuses",
+     "date": "",
+     "text": "Abroad: Batam, Indonesia, up to 360 MW and 170,000 NVIDIA GPUs with DayOne; two Malaysian sites for OpenAI; and two Singapore sites (Loyang, retrofitted from an STT facility, and Media Hub).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy, grid and connectivity platform — Synert, Model-to-Grid, Gunvor supply, subsea cable",
+     "date": "",
+     "text": "Model-to-Grid and AI FactoryOS are grid-aware orchestration software built on NVIDIA's DSX blueprint, to be coordinated with AEMO.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-08",
+     "text": "Contracted capacity passes 900 MW; OpenAI signs a multi-year partnership as anchor customer for dedicated compute at two new Firmus sites in Malaysia on NVIDIA Vera Rubin NVL72 — A sales milestone, not a build milestone — the Malaysian sites, their MW and any local partner are undisclosed.",
+     "src": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-07",
+     "text": "US$2B strategic equity round, fully subscribed, at a post-money valuation above US$10.5B — Coatue and NVIDIA follow on; Blackstone Tactical Opportunities and Jane Street join — Valuation roughly doubled in four months ahead of the float.",
+     "src": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-28",
+     "text": "Batam campus with NVIDIA and DayOne: up to 170,000 GPUs and 360 MW; NVIDIA's revenue-sharing and credit-support model; US$25-30B of expected offtake over six years — NVIDIA as supplier, investor and credit backstop at once.",
+     "src": "https://firmus.co/newsroom/firmus-to-build-170-000-gpu-ai-factor-y-campus-with-nvidia-for-global-ai-natives",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-17",
+     "text": "Grid-integrated AI factory software (Model-to-Grid) built with NVIDIA DSX, to be coordinated with AEMO — Load flexibility is positioned as a grid service to ease connection.",
+     "src": "https://firmus.co/newsroom/firmus-to-build-grid-integrated-ai-factory-software-with-nvidia",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "Project Southgate expands with CDC Data Centres and NVIDIA: 18,500 GB300 in the first Melbourne stage, targeting up to 1.6 GW through 2028 — The first mainland capacity is in a CDC building, not a Firmus-owned one.",
+     "src": "https://firmus.co/newsroom/southgate-expansion",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-16",
+     "text": "A$330M placement closed at A$1.85B post-money, with Ellerston Capital as cornerstone and NVIDIA joining as an investor — NVIDIA's entry as a shareholder.",
+     "src": "https://firmus.co/newsroom/firmus-closes-usd330m-raise-with-nvidia-joining-as-an-investor",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-08"
+  },
+  {
+   "a": "firmus",
+   "b": "openai",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "OpenAI signed a multi-year strategic partnership to contract dedicated AI compute from two Firmus AI factory sites in Malaysia and 'will become an anchor customer of Firmus'.",
+     "context": "Announced by Firmus on 8 Sep 2026, with a quote from Sachin Katti, OpenAI's VP of Compute Strategy. No OpenAI-hosted release was found, and openai.com was unreachable from this session.\n\nThe sites are new and not yet built. Their location, MW and any Malaysian partner are undisclosed; Firmus declined to disclose financial terms (Reuters). DayOne is Firmus's named Southeast Asian build partner in general, but is not named for Malaysia.",
+     "source": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia",
+     "status": "announced",
+     "since": "2026-09",
+     "via": "dedicated compute on NVIDIA Vera Rubin NVL72 at two Malaysian sites"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Firmus announced OpenAI as anchor customer for dedicated compute at two new Firmus AI factory sites in Malaysia.",
+     "context": "Firmus's 8 Sep 2026 release quotes Sachin Katti, OpenAI's VP of Compute Strategy; no OpenAI-hosted release was found. Site locations, MW and financial terms are undisclosed.",
+     "source": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia",
+     "status": "announced",
+     "since": "2026-09",
+     "via": "dedicated compute on NVIDIA Vera Rubin NVL72 at two Malaysian sites"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It says contracted customer capacity passed 900 MW on 8 Sep 2026, with OpenAI signed as anchor customer for two Malaysian sites that are not yet built.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Project Southgate and the AI factory campuses",
+     "date": "",
+     "text": "Abroad: Batam, Indonesia, up to 360 MW and 170,000 NVIDIA GPUs with DayOne; two Malaysian sites for OpenAI; and two Singapore sites (Loyang, retrofitted from an STT facility, and Media Hub).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "Reuters: the draft prospectus shows an expected pro-forma loss after tax of '$77 million' for the half-year to 31 Dec 2026, describes Firmus as 'historically loss-making' and names Nvidia, Meta and OpenAI as customers — The first financial figures on the record come through an unnamed-source account of an unlodged document; the currency is not stated.",
+     "src": "https://www.933thedrive.com/2026/09/24/australias-firmus-expects-77-million-first-half-loss-as-it-plans-5-billion-ipo-sources-say/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-08",
+     "text": "Contracted capacity passes 900 MW; OpenAI signs a multi-year partnership as anchor customer for dedicated compute at two new Firmus sites in Malaysia on NVIDIA Vera Rubin NVL72 — A sales milestone, not a build milestone — the Malaysian sites, their MW and any local partner are undisclosed.",
+     "src": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-24"
+  },
+  {
+   "a": "firmus",
+   "b": "oracle",
+   "evid": [
+    {
+     "where": "Capabilities · Firmus AI Cloud (formerly Sustainable Metal Cloud) — GPU cloud and dedicated capacity",
+     "date": "",
+     "text": "Press compares it with CoreWeave, Nebius and IREN; SemiAnalysis calls it 'our favorite in Asia-Pacific' but places it below CoreWeave and Nebius (Platinum) and Oracle and Google Cloud (Gold)",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "firmus",
+   "b": "supermicro",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Supermicro was named as an OEM partner when Sustainable Metal Cloud launched with ST Telemedia in Singapore in 2023.",
+     "context": "ST Telemedia's June 2023 release lists 'OEM partners including Supermicro' for the first immersion-cooled HyperCube deployment at STT GDC's Singapore site. No current server OEM is named for the GB300 and Vera Rubin generation.",
+     "source": "https://www.sttelemediagdc.com/in-en/newsroom/st-telemedia-global-data-centres-and-firmus-technologies-forge-partnership-build-global",
+     "status": "historical",
+     "since": "2023",
+     "via": "servers in the immersion-cooled SMC HyperCubes"
+    }
+   },
+   "evid": [],
+   "last": "2023"
+  },
+  {
    "a": "flex",
    "b": "ge-vernova",
    "evid": [
@@ -35214,6 +35842,413 @@
     }
    ],
    "last": "2026-02-24"
+  },
+  {
+   "a": "g42",
+   "b": "humain",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "HUMAIN is the Gulf's other sovereign AI builder; the US approved both for up to 35,000 GB300-equivalent chips on the same day, and since July 2026 only G42 holds licence-free access.",
+     "context": "US Commerce's 19 Nov 2025 statement covered 'G42 … and Humain' together. The July 2026 BIS rule moved the UAE, not Saudi Arabia, to Country Group A:5. Khazna's entry into Dammam (up to 200 MW, December 2025) puts G42's landlord in HUMAIN's home market.",
+     "source": "https://www.globalsecurity.org/military/library/news/2025/11/mil-251119-commerce01.htm",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "G42 is the Gulf's other sovereign AI builder; the US approved both for up to 35,000 GB300-equivalent chips on the same day, and since July 2026 only G42 holds licence-free access.",
+     "context": "US Commerce's 19 Nov 2025 statement authorised exports to 'G42 … and Humain', each for up to 35,000 GB300-equivalent chips under security and reporting conditions. On 10 Jul 2026 BIS moved the UAE to Country Group A:5 and listed G42 and Core42 as approved licence-free recipients; Saudi Arabia was not moved. SemiAnalysis's ClusterMAX 3.0 places G42's Core42 in its Participation Ribbon tier and lists HUMAIN as unavailable.",
+     "source": "https://www.globalsecurity.org/military/library/news/2025/11/mil-251119-commerce01.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-09",
+     "text": "Khazna names a Saudi country head and buys 225,000 m² in Dammam for up to 200 MW; portfolio 'almost 650MW' across 30 live data centres — Khazna enters HUMAIN's home market as a landlord.",
+     "src": "https://khaznadatacenters.com/press-release/khazna-data-centers-names-new-country-head-and-advances-expansion-plans-in-saudi-arabia-in-support-of-vision-2030/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Compute and cloud — GPU-as-a-service and capacity partnerships",
+     "date": "",
+     "text": "A sovereign, export-oriented neocloud: SemiAnalysis covers it in the neocloud universe but has not tested it; its direct Gulf rival is G42's Core42, which holds a stronger US export position",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-12-09"
+  },
+  {
+   "a": "g42",
+   "b": "mgx",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "MGX holds an undisclosed minority stake in Khazna alongside Silver Lake, bought as e& exited in March 2025; G42 was one of MGX's two foundational partners at its creation in 2024.",
+     "context": "Khazna's March 2025 release welcomed 'MGX and Silver Lake as new minority shareholders, alongside majority shareholder G42'. e& sold its 40% for US$2.2B under a binding agreement with G42 and Khazna of 25 Feb 2025.\n\nThe two share a chairman: Sheikh Tahnoon bin Zayed chairs both G42 and MGX. MGX's board has described the Khazna stake as its route into Stargate UAE.",
+     "source": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/",
+     "status": "active",
+     "since": "2025-03"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "MGX holds an undisclosed minority stake in Khazna, G42's data-centre subsidiary, alongside Silver Lake; G42 was one of MGX's two foundational partners and the two share a chairman.",
+     "context": "Khazna's March 2025 release welcomed 'MGX and Silver Lake as new minority shareholders, alongside majority shareholder G42' as e& exited its 40% for US$2.2B. MGX's board describes the stake as support for the Stargate UAE build-out, which Khazna is developing.\n\nG42 was named with Mubadala as MGX's foundational partner at its March 2024 creation, and Sheikh Tahnoon bin Zayed chairs both.",
+     "source": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/",
+     "status": "active",
+     "since": "2025-03",
+     "via": "minority stake in Khazna Data Centers (G42 majority)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-26",
+     "text": "MGX and Silver Lake become minority shareholders in Khazna as e& exits its 40% stake (US$2.2B) — Abu Dhabi's AI fund and a US buyout firm now sit beside G42 in the landlord.",
+     "src": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: MGX is Abu Dhabi's state-backed AI investment vehicle — created in March 2024 by the Artificial Intelligence and Advanced Technology Council with Mubadala and G42 as 'foundational partners', chaired by Sheikh Tahnoon bin Zayed — and in fourteen months it has become the largest single pool of dedicated AI capital on the record: MGX Fund I closed on 1 July 2026 at USD 49 billion against a USD 45 billion target with 14 portfolio companies, it is one of four initial equity funders of Stargate LLC, a co-founder of the AI Infrastructure Partnership (AIP) with BlackRock, GIP and Microsoft, and, with AIP and GIP, the owner since 21 July 2026 of Aligned Data Centers (about USD 40 billion enterprise value, 51 campuses, 6.4 GW).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Board: Chairman Sheikh Tahnoon bin Zayed Al Nahyan (UAE National Security Advisor, chairman of G42, ADIA, ADQ, IHC and FAB), Vice Chairman Khaldoon Al Mubarak (Mubadala Group CEO), Jassem Al Zaabi, Peng Xiao (G42 Group CEO) and Martin Edelman; Managing Director and CEO Ahmed Yahia Al Idrissi (formerly CEO of Mubadala's direct investments platform, ex-McKinsey partner) also chairs the Investment Committee and is Vice Chairman of AIP.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: created by a government council with the UAE's National Security Advisor as chairman and the Mubadala and G42 chiefs on its board; the 'differentiated and restricted opportunities' language in its own fund-close release; co-lead roles in OpenAI and Anthropic rounds within two years of formation; Semafor's account of a 'playbook' built on leadership relationships and co-investment with Silver Lake, BlackRock/GIP and SoftBank.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gap: no headcount; no Mubadala or G42 ownership percentage (a 'ownership-v3.jpg' graphic on the site could not be read); no LP names; no ticket or stake for any frontier-lab, Aligned, Vantage, Khazna, Altera or Stargate position; the mgx.ae news index shows a '$18B Series K' headline for Databricks where the X post and board release say USD 1 billion (treated as a site typo); no MGX statement on the 18–19 May 2026 change of licensed directors at the regulated entity; the alleged intelligence findings on G42 and the reported G42 US-redomiciling plan were not verifiable from any fetched page.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Compute campuses and colocation — Stargate LLC, Vantage, Khazna, Campus AI (France)",
+     "date": "",
+     "text": "Khazna Data Centers: minority stake alongside Silver Lake with G42 as majority owner (March 2025), described by the board as MGX's route into Stargate UAE.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-10",
+     "text": "Warren statement: 'Trump's Commerce Department is giving G42 license-free access to advanced AI chips and promising favorable treatment for MGX'; calls for Lutnick and BIS Under Secretary Kessler to testify — The export-control regime that governs MGX's portfolio (chips into UAE campuses) is being relaxed in its favour and contested in the same month.",
+     "src": "https://www.banking.senate.gov/newsroom/minority/senator-warren-statement-on-trump-administrations-removing-export-controls-on-ai-chips-to-uae",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-10"
+  },
+  {
+   "a": "g42",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Microsoft invested US$1.5B in G42 for a minority stake in April 2024, Brad Smith joined the G42 board, and the work is governed by an Intergovernmental Assurance Agreement.",
+     "context": "The April 2024 announcement also moved G42's AI applications onto Microsoft Azure and created a US$1B developer fund. The percentage has never been disclosed.\n\nMicrosoft is also Khazna's tenant: the November 2025 release announced a 200 MW Azure expansion 'delivered through Khazna Data Centers', to start coming online before the end of 2026. Microsoft's own November 2025 account of its UAE programme counts the US$1.5B as part of US$15.2B of UAE spending from 2023 to 2029.",
+     "source": "https://www.g42.ai/resources/news/microsoft-invests-abu-dhabis-g42",
+     "status": "active",
+     "since": "2024-04",
+     "scale": "US$1.5B minority stake; a board seat",
+     "via": "Azure (Core42 Sovereign Public Cloud); 200 MW expansion delivered through Khazna"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Microsoft invested US$1.5B in G42 for a minority stake in April 2024, with Brad Smith joining G42's board, under an Intergovernmental Assurance Agreement.",
+     "context": "Microsoft's announcement: 'Microsoft will invest $1.5 billion in G42 for a minority stake in the company', G42's data platform 'will migrate to Microsoft Azure', and the work 'is governed by a detailed Intergovernmental Assurance Agreement between G42 and Microsoft'. The percentage is not disclosed.\n\nIn November 2025 Microsoft counted the investment within US$15.2B of UAE spending for 2023-2029. G42 announced a 200 MW Azure expansion delivered through its Khazna Data Centers, to start coming online before the end of 2026 — so Microsoft is both a G42 shareholder and a Khazna tenant.",
+     "source": "https://blogs.microsoft.com/blog/2024/04/15/microsoft-and-g42-partner-to-accelerate-ai-innovation-in-uae-and-beyond/",
+     "status": "active",
+     "since": "2024-04",
+     "scale": "US$1.5B minority stake; board seat",
+     "via": "Azure in the UAE (Core42 Sovereign Public Cloud); 200 MW expansion through Khazna"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Khazna Data Centers — wholesale and hyperscale campuses",
+     "date": "",
+     "text": "The UAE pipeline includes Ajman QAJ1 (100 MW IT in 20 halls of 5 MW, liquid-cooled, initial phase due December 2026), AUH4 at Mafraq and AUH8 at Masdar City (60 MW combined), and Microsoft's 200 MW Azure expansion from the end of 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Khazna Data Centers — wholesale and hyperscale campuses",
+     "date": "",
+     "text": "Tenants include e& ('a major tenant'), Microsoft and the Stargate UAE operators.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Core42 — sovereign cloud and AI compute",
+     "date": "",
+     "text": "Products: a Sovereign AI Cloud ('Harness the power of NVIDIA, AMD, Qualcomm, Microsoft, or Cerebras'; 'Access 86K+ GPUs across sovereign data centers globally'), with self-service H100 capacity launched at GITEX in October 2025 under a 'tiered vetting system aligned with license conditions'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Core42 — sovereign cloud and AI compute",
+     "date": "",
+     "text": "Also a Sovereign Public Cloud on Microsoft Azure regional infrastructure with the Core42 Insight control layer, a Signature Private Cloud for secret and top-secret workloads, and the Compass model gateway.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Sovereign-AI programmes and models abroad",
+     "date": "",
+     "text": "Programmes: Condor Galaxy India, an '8-exaflop AI supercomputing cluster comprising 64 Cerebras CS-3 systems' (commercial terms May 2026); a Vietnam framework with FPT and Viet Thai Group 'backed by consumption commitments of up to $1 billion' across three data-centre locations (framework only); 'Digital Embassies' and the Greenshield control layer (Jan 2026); a Kenya geothermal-powered data-centre plan with Microsoft (2024).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-04"
+  },
+  {
+   "a": "g42",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "NVIDIA supplies the GB300 systems for Stargate UAE and has certified Khazna's data-hall designs for Blackwell.",
+     "context": "NVIDIA's own Q1 FY2026 results release lists Stargate UAE with 'strategic partners G42, OpenAI, Oracle, SoftBank Group and Cisco'. In June 2025 NVIDIA certified Khazna's next-generation designs for Blackwell (halls up to 50 MW, clusters up to 250 MW). US approvals allowed G42 up to 35,000 GB300-equivalent chips in November 2025, and licence-free access from July 2026.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+     "status": "active",
+     "since": "2025-05",
+     "via": "NVIDIA Grace Blackwell GB300 systems"
+    },
+    "b": {
+     "type": "customer",
+     "note": "NVIDIA supplies the Grace Blackwell GB300 systems for Stargate UAE, the 1 GW cluster G42 is building for OpenAI and Oracle, and has certified G42's Khazna data-hall designs for Blackwell.",
+     "context": "NVIDIA's Q1 FY2026 results release lists Stargate UAE 'alongside strategic partners G42, OpenAI, Oracle, SoftBank Group and Cisco'. Since 10 Jul 2026 G42 and Core42 are approved licence-free recipients of advanced computing items under the BIS rule that moved the UAE to Country Group A:5. That approval expires on 6 Apr 2027 unless they become US companies.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026",
+     "status": "active",
+     "since": "2025-05",
+     "via": "GB300 systems for Stargate UAE"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Khazna's designs carry NVIDIA's Blackwell certification and 'future-proofing for Rubin as standard'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Khazna Data Centers — wholesale and hyperscale campuses",
+     "date": "",
+     "text": "Its designs are NVIDIA-certified for Blackwell: 'data halls with capacities of up to 50MW, developing individual AI clusters of up to 250MW'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Stargate UAE and the 5 GW UAE–US AI Campus",
+     "date": "",
+     "text": "Stargate UAE is 'a 1-gigawatt compute cluster' that 'will be built by G42 and operated by OpenAI and Oracle', with Cisco on security and connectivity, SoftBank as a partner and NVIDIA supplying 'the latest NVIDIA Grace Blackwell GB300 systems' (launch, 22 May 2025).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Core42 — sovereign cloud and AI compute",
+     "date": "",
+     "text": "Products: a Sovereign AI Cloud ('Harness the power of NVIDIA, AMD, Qualcomm, Microsoft, or Cerebras'; 'Access 86K+ GPUs across sovereign data centers globally'), with self-service H100 capacity launched at GITEX in October 2025 under a 'tiered vetting system aligned with license conditions'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-11",
+     "text": "NVIDIA certifies Khazna's next-generation designs for Blackwell: halls up to 50 MW, AI clusters up to 250 MW — A standard hall size a power vendor can design to.",
+     "src": "https://khaznadatacenters.com/press-release/khazna-data-centers-and-nvidia-collaborate-to-accelerate-ai-infrastructure-development-across-the-mea-region/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-22",
+     "text": "Stargate UAE launched: a 1 GW cluster built by G42 and operated by OpenAI and Oracle, with NVIDIA GB300, Cisco and SoftBank; first 200 MW expected in 2026 — OpenAI's first 'OpenAI for Countries' campus.",
+     "src": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06-11"
+  },
+  {
+   "a": "g42",
+   "b": "openai",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Stargate UAE, a 1 GW cluster, 'will be built by G42 and operated by OpenAI and Oracle' — the first project of OpenAI's 'OpenAI for Countries' initiative.",
+     "context": "Announced 22 May 2025 with Oracle, NVIDIA, Cisco and SoftBank. G42's November 2025 wording is 'being built by G42 for OpenAI in partnership with Oracle, Cisco, NVIDIA, and SoftBank Group'. Khazna is the developer. Commercial terms between G42 and OpenAI are not disclosed. OpenAI told Reuters in September 2026 it was making 'good progress on the infrastructure and adoption priorities needed to deliver it'.",
+     "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "Stargate UAE: 1 GW cluster; first 200 MW in 2026",
+     "via": "Stargate UAE (OpenAI for Countries)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "G42 is building Stargate UAE, a 1 GW cluster in Abu Dhabi that OpenAI and Oracle will operate — the first project of 'OpenAI for Countries'.",
+     "context": "G42's launch release (22 May 2025): 'will be built by G42 and operated by OpenAI and Oracle', with NVIDIA GB300, Cisco and SoftBank. G42's Khazna Data Centers is the developer, and G42 said in October 2025 that all long-lead equipment had been procured.\n\nThe first 200 MW was targeted for 2026, with no energisation confirmed by 26 Sep 2026. Reuters reported on 11 Sep 2026 that the surrounding 5 GW campus will likely be dispersed across the UAE after Iranian attacks.",
+     "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "1 GW Stargate UAE cluster; first 200 MW targeted for 2026",
+     "via": "Stargate UAE (OpenAI for Countries)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is building the 1 GW Stargate UAE cluster for OpenAI and Oracle inside the 5 GW UAE–US AI Campus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess G42 as the corpus's first Gulf landlord-and-neocloud group, and — through Khazna — the named builder and most likely equipment buyer for Stargate UAE, OpenAI's first 'OpenAI for Countries' campus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Stargate UAE and the 5 GW UAE–US AI Campus",
+     "date": "",
+     "text": "Stargate UAE is 'a 1-gigawatt compute cluster' that 'will be built by G42 and operated by OpenAI and Oracle', with Cisco on security and connectivity, SoftBank as a partner and NVIDIA supplying 'the latest NVIDIA Grace Blackwell GB300 systems' (launch, 22 May 2025).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-22",
+     "text": "Stargate UAE launched: a 1 GW cluster built by G42 and operated by OpenAI and Oracle, with NVIDIA GB300, Cisco and SoftBank; first 200 MW expected in 2026 — OpenAI's first 'OpenAI for Countries' campus.",
+     "src": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "from": "a"
+    }
+   ],
+   "last": "2025-05-22"
+  },
+  {
+   "a": "g42",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Oracle co-operates Stargate UAE with OpenAI on the cluster G42 builds.",
+     "context": "The launch release names Oracle as operator with OpenAI. No Oracle-side release or contract terms for Stargate UAE were found.",
+     "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "status": "active",
+     "since": "2025-05",
+     "via": "Stargate UAE (operator alongside OpenAI)"
+    },
+    "b": {
+     "type": "partner",
+     "note": "G42 is building Stargate UAE, the 1 GW Abu Dhabi cluster that Oracle will operate with OpenAI.",
+     "context": "G42's 22 May 2025 release: 'will be built by G42 and operated by OpenAI and Oracle', with NVIDIA, Cisco and SoftBank. No Oracle-side release or contract terms for Stargate UAE were found. G42's Khazna is the developer, and the first 200 MW was targeted for 2026.",
+     "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "status": "active",
+     "since": "2025-05",
+     "via": "Stargate UAE (operator alongside OpenAI)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It is building the 1 GW Stargate UAE cluster for OpenAI and Oracle inside the 5 GW UAE–US AI Campus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Stargate UAE and the 5 GW UAE–US AI Campus",
+     "date": "",
+     "text": "Stargate UAE is 'a 1-gigawatt compute cluster' that 'will be built by G42 and operated by OpenAI and Oracle', with Cisco on security and connectivity, SoftBank as a partner and NVIDIA supplying 'the latest NVIDIA Grace Blackwell GB300 systems' (launch, 22 May 2025).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-22",
+     "text": "Stargate UAE launched: a 1 GW cluster built by G42 and operated by OpenAI and Oracle, with NVIDIA GB300, Cisco and SoftBank; first 200 MW expected in 2026 — OpenAI's first 'OpenAI for Countries' campus.",
+     "src": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
+     "from": "a"
+    }
+   ],
+   "last": "2025-05-22"
+  },
+  {
+   "a": "g42",
+   "b": "terawulf",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "TeraWulf is Core42's US landlord: 60 MW of critical IT at Lake Mariner on 10-year leases backed by a G42 parent guarantee.",
+     "context": "TeraWulf announced 'over 70 MW' gross in December 2024 (2 + 16 + 42 MW critical IT). Its 8-K call transcript gives $125 per kW-month with a 3% escalator and a 12-month revenue prepayment. All 60 MW was operational by 31 Mar 2026. An option for a further 108 MW of critical IT is not shown exercised, and TeraWulf's Q2 2026 release does not mention Core42.",
+     "source": "https://www.g42.ai/resources/news/g42-expands-us-operations-70mw-data-center-infrastructure-agreement-terawulf",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "60 MW critical IT (72.5 MW gross); about US$1.1B over ten years",
+     "via": "turn-key data-centre leases at Lake Mariner, New York"
+    },
+    "b": {
+     "type": "customer",
+     "note": "G42's Core42 leases 60 MW of critical IT at Lake Mariner on ten-year terms, backed by a G42 parent guarantee.",
+     "context": "Announced in December 2024 as 'over 70 MW' gross (2 + 16 + 42 MW critical IT), at $125 per kW-month with a 3% escalator, with an option for a further 108 MW of critical IT. All 60 MW was operational by 31 Mar 2026. The expansion option is not shown exercised; later Lake Mariner capacity went to Fluidstack.",
+     "source": "https://investors.terawulf.com/news-events/press-releases/detail/99/terawulf-to-deliver-over-70-mw-of-data-center-infrastructure-for-g42s-us-operations",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "60 MW critical IT (72.5 MW gross); about US$1.1B over ten years",
+     "via": "Core42 leases at Lake Mariner"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Core42, its neocloud arm, sells sovereign AI cloud and is a 60 MW tenant at TeraWulf's Lake Mariner campus.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Khazna carries its own debt (US$2.62B), buys its own land and appoints its own contractors (Laing O'Rourke at Ajman), while Core42 leases shells (TeraWulf) and buys IT.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Core42 — sovereign cloud and AI compute",
+     "date": "",
+     "text": "Its capacity is mostly leased: 60 MW of critical IT at TeraWulf's Lake Mariner, New York, where the Maximus-01 cluster of 'more than 9,000 AMD Instinct MI300X GPUs' ranked 20th on the TOP500.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · HPC/AI colocation leasing (WULF Compute)",
+     "date": "",
+     "text": "Build-to-suit, Tier III-aligned AI data-center leases of 10–20 years with annual escalators: Fluidstack at 378 MW critical IT across Lake Mariner's CB-3/CB-4/CB-5 (~$6.7B contracted, up to ~$16B with extensions, Google-backstopped), Anthropic at 401 MW at the Justified campus in Hawesville, KY (20 years, ~$19B initial term, ~$33B with two 5-year extensions), and Core42/G42 at 60 MW (delivered Jul 2025–Mar 2026, ~$1.1B over 10 years).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2024-12"
   },
   {
    "a": "galaxy-digital",
@@ -41740,6 +42775,245 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "humain",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Microsoft and HUMAIN signed a long-term strategic collaboration in August 2026 covering models, enterprise software, consulting and AI PCs.",
+     "context": "The 26 Aug 2026 release covers ALLaM on Microsoft platforms and Microsoft forward-deployed engineers. At LEAP 2026 the partnership was extended to a HUMAIN ONE bundle with Microsoft 365 Copilot on Azure, targeting one million users across the Middle East and Africa, and a Windows-based HUMAIN AI PC. No data-centre capacity is part of the published scope.",
+     "source": "https://www.prnewswire.com/news-releases/microsoft-and-humain-announce-long-term-strategic-collaboration-to-enable-ai-transformation-in-saudi-arabia-and-beyond-302860378.html",
+     "status": "active",
+     "since": "2026-08",
+     "via": "ALLaM on Microsoft Foundry; HUMAIN ONE bundled with Microsoft 365 Copilot; HUMAIN AI PC on Windows"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Microsoft and HUMAIN signed a long-term strategic collaboration in August 2026 covering HUMAIN's models on Microsoft platforms, enterprise software and AI PCs.",
+     "context": "The 26 Aug 2026 release covers ALLaM on Microsoft Foundry and Microsoft forward-deployed engineers. At LEAP 2026 the partnership added a HUMAIN ONE bundle with Microsoft 365 Copilot on Azure and a Windows-based HUMAIN AI PC. No data-centre capacity is part of the published scope.",
+     "source": "https://www.prnewswire.com/news-releases/microsoft-and-humain-announce-long-term-strategic-collaboration-to-enable-ai-transformation-in-saudi-arabia-and-beyond-302860378.html",
+     "status": "active",
+     "since": "2026-08",
+     "via": "ALLaM on Microsoft Foundry; HUMAIN ONE with Microsoft 365 Copilot"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Models — ALLaM, humain-m3 and HUMAIN Chat",
+     "date": "",
+     "text": "It powers HUMAIN Chat, launched on 25 Aug 2025 and 'hosted end-to-end on HUMAIN infrastructure in the Kingdom', and is to be offered on Amazon Bedrock and Microsoft Foundry.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · HUMAIN ONE, enterprise software and devices",
+     "date": "",
+     "text": "It is sold on AWS Marketplace and bundled with Microsoft 365 Copilot on Azure (target: one million users across the Middle East and Africa).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · HUMAIN ONE, enterprise software and devices",
+     "date": "",
+     "text": "Around it: HUMAIN OS (an AI-native Linux, with KORA Systems), the HUMAIN Fabric data platform (with MinIO), AI PCs (Horizon Pro on Snapdragon X Elite; a Windows-based HUMAIN AI PC from 20 Sep 2026), autonomous trucking with Applied Intuition, consulting with Microsoft, Accenture and McKinsey, and framework agreements with the Ministries of Interior, Justice and Communications and with SDAIA.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08"
+  },
+  {
+   "a": "humain",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "NVIDIA is HUMAIN's founding GPU supplier: 18,000 GB300 in the first phase, expanded in November 2025 to up to 600,000 NVIDIA GPUs over three years.",
+     "context": "NVIDIA's May 2025 release set a plan of up to 500 MW and 'several hundred thousand' GPUs over five years, starting with 18,000 GB300. In November 2025 HUMAIN expanded it to 'up to 600,000' GPUs over three years across Saudi Arabia and the United States, with xAI named as partner for the first 18,000-GPU cluster.\n\nThe US licence issued the same day covers the equivalent of up to 35,000 GB300 chips, so most of the Saudi-sited volume needs further licensing. HUMAIN's own NVIDIA cloud launched at 1.1 MW (Global Data Center Hub).",
+     "source": "https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "18,000 GB300 first phase; up to 600,000 GPUs over three years (Saudi Arabia and the US)",
+     "via": "GB300 Grace Blackwell with NVIDIA InfiniBand"
+    },
+    "b": {
+     "type": "customer",
+     "note": "HUMAIN, Saudi Arabia's PIF-owned AI company, bought 18,000 GB300 for its first phase and plans up to 600,000 NVIDIA GPUs over three years in Saudi Arabia and the United States.",
+     "context": "NVIDIA's May 2025 release set up to 500 MW and 'several hundred thousand' GPUs over five years; HUMAIN expanded the plan in November 2025. The US approved HUMAIN for up to 35,000 GB300-equivalent chips on 19 Nov 2025, conditioned on security and reporting requirements.",
+     "source": "https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "18,000 GB300 first phase; up to 600,000 GPUs over three years",
+     "via": "GB300 Grace Blackwell with NVIDIA InfiniBand"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Energised capacity is small: the only operating figure is its own NVIDIA cloud, launched at 1.1 MW, relayed from its LEAP 2026 disclosures, plus an AMD MI355X cluster live since 31 Aug 2026 with no MW stated.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its main commitments: NVIDIA (18,000 GB300 first, up to 600,000 GPUs over three years in Saudi Arabia and the US), AMD and Cisco (a joint venture targeting up to 1 GW by 2030), a US$3B investment in xAI now held as SpaceX shares, and its own models (ALLaM; humain-m3, built by the Chinese company MiniMax).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the one operating figure is a 1.1 MW NVIDIA cloud, plus an AMD cluster of undisclosed size.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Compute and cloud — GPU-as-a-service and capacity partnerships",
+     "date": "",
+     "text": "With NVIDIA, the first phase was 18,000 GB300 (May 2025), expanded to 'up to 600,000' NVIDIA GPUs over three years in Saudi Arabia and the United States (Nov 2025).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-19",
+     "text": "NVIDIA partnership expanded to up to 600,000 NVIDIA GPUs over three years in Saudi Arabia and the United States; AWS to deploy up to 150,000 accelerators in a Riyadh AI Zone — Compute ambition far ahead of both the licence and the energised capacity.",
+     "src": "https://www.prnewswire.com/news-releases/humain-expands-strategic-partnership-with-nvidia-advancing-global-ai-infrastructure-with-xai-global-ai-and-aws-at-the-us-saudi-investment-forum-302620854.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-27",
+     "text": "Qualcomm and HUMAIN target 200 MW of AI200/AI250 inference racks starting in 2026 — An inference-silicon second source beside NVIDIA and AMD.",
+     "src": "https://www.prnewswire.com/news-releases/humain-and-qualcomm-to-deploy-ai-infrastructure-in-saudi-arabia-for-global-inferencing-302595524.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-13",
+     "text": "NVIDIA partnership: up to 500 MW and several hundred thousand GPUs over five years, starting with 18,000 GB300 — The founding compute commitment.",
+     "src": "https://nvidianews.nvidia.com/news/humain-and-nvidia-announce-strategic-partnership-to-build-ai-factories-of-the-future-in-saudi-arabia",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-19"
+  },
+  {
+   "a": "humain",
+   "b": "openai",
+   "evid": [
+    {
+     "where": "Capabilities · Compute and cloud — GPU-as-a-service and capacity partnerships",
+     "date": "",
+     "text": "Developer access runs through HUMAIN Node, an OpenAI-compatible model API.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "humain",
+   "b": "xai",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "xAI is the anchor user of a planned HUMAIN-built network of GPU data centres led by a '500 MW+' flagship, and HUMAIN invested US$3B in xAI's Series E.",
+     "context": "HUMAIN's 19 Nov 2025 release announced 'a landmark framework agreement with xAI' to jointly develop GPU data centres 'anchored by a flagship 500 MW+ facility', combining 'HUMAIN's low-cost value proposition in infrastructure design, construction, and operations with xAI's leadership in frontier AI systems'. No site, owner split or builder is disclosed. At LEAP 2026 the Saudi Communications Minister said the xAI expansion would start at 50 MW and grow to 500 MW.\n\nOn 18 Feb 2026 HUMAIN invested US$3B in xAI's Series E, and the holding converted into SpaceX shares after the merger. Two relationships at once: HUMAIN is a shareholder in xAI's parent and the landlord-operator for xAI's Saudi compute. This dossier types the commercial one.",
+     "source": "https://www.prnewswire.com/news-releases/humain-and-xai-partner-to-build-next-generation-ai-compute-power-and-deploy-grok-in-the-kingdom-to-support-the-most-ai-enabled-nation-objectives-302620677.html",
+     "status": "announced",
+     "since": "2025-11",
+     "scale": "flagship '500 MW+' facility; US$3B HUMAIN equity in xAI (now SpaceX shares)",
+     "via": "GPU data centres designed, built and operated by HUMAIN; Grok deployed nationwide"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "HUMAIN is to design, build and operate a network of Saudi GPU data centres for xAI, anchored by a '500 MW+' flagship, and invested US$3B in xAI's Series E.",
+     "context": "The 19 Nov 2025 framework combines 'HUMAIN's low-cost value proposition in infrastructure design, construction, and operations with xAI's leadership in frontier AI systems'. No site, owner split or builder is disclosed. Saudi Arabia's Communications Minister said at LEAP 2026 the expansion would start at 50 MW and grow to 500 MW.\n\nHUMAIN confirmed its US$3B Series E investment on 18 Feb 2026 and says the holding converted into SpaceX shares after the merger.",
+     "source": "https://www.prnewswire.com/news-releases/humain-and-xai-partner-to-build-next-generation-ai-compute-power-and-deploy-grok-in-the-kingdom-to-support-the-most-ai-enabled-nation-objectives-302620677.html",
+     "status": "announced",
+     "since": "2025-11",
+     "scale": "flagship '500 MW+' facility; HUMAIN's US$3B Series E investment",
+     "via": "GPU data centres designed, built and operated by HUMAIN"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It sells GPU capacity to labs and platforms — xAI, Together AI, Adobe, Luma and an AWS 'AI Zone' — and it is the party that signs for the kingdom's AI data-centre power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its main commitments: NVIDIA (18,000 GB300 first, up to 600,000 GPUs over three years in Saudi Arabia and the US), AMD and Cisco (a joint venture targeting up to 1 GW by 2030), a US$3B investment in xAI now held as SpaceX shares, and its own models (ALLaM; humain-m3, built by the Chinese company MiniMax).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: US$3B into xAI before xAI's 500 MW+ framework; HUMAIN led Luma AI's US$900M round, and Luma took the AMD joint venture's first 100 MW (Reuters).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Indicator to watch: an equipment specification for the Al-Saad halls or the xAI flagship.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI data centres — owned builds and partner campuses",
+     "date": "",
+     "text": "Low-cost Saudi power and land as the offer: xAI's release credits 'HUMAIN's low-cost value proposition in infrastructure design, construction, and operations'; Together AI calls Saudi power capacity 'a key advantage'",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Compute and cloud — GPU-as-a-service and capacity partnerships",
+     "date": "",
+     "text": "Named compute customers and partners: xAI (a framework for a flagship '500 MW+' facility that HUMAIN designs, builds and operates), Together AI (a new 250 MW data centre plus 55 MW of dedicated capacity, which Together resells to its customers), Adobe ('HUMAIN's first global AI data center customer'), Luma, Reflection AI and Cohere.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Investments — xAI, Luma and the venture programme",
+     "date": "",
+     "text": "HUMAIN invested US$3B in xAI's Series E 'just prior to its acquisition by SpaceX', became 'a significant minority shareholder', and its holdings 'subsequently converted into shares in SpaceX' (18 Feb 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-18",
+     "text": "US$3B investment in xAI's Series E; the holding converted into SpaceX shares after the merger — HUMAIN funds the lab that is also its largest planned tenant.",
+     "src": "https://www.prnewswire.com/news-releases/humain-backs-xai-with-3-billion-series-e-investment-ahead-of-historic-spacex-merger-302691510.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-19",
+     "text": "Framework agreement with xAI for a network of GPU data centres anchored by a flagship '500 MW+' facility that HUMAIN designs, builds and operates — The largest tenant plan on the record — a framework, with no site or owner split disclosed.",
+     "src": "https://www.prnewswire.com/news-releases/humain-and-xai-partner-to-build-next-generation-ai-compute-power-and-deploy-grok-in-the-kingdom-to-support-the-most-ai-enabled-nation-objectives-302620677.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-19",
+     "text": "HUMAIN partnership: 500+ MW Saudi AI data-center network — xAI's largest facility outside the US, NVIDIA principal chip supplier (~18,000 GB300s first cluster) — The Gulf expansion lands with PIF capital attached — HUMAIN confirmed a US$3B investment in xAI's Series E on 18 Feb 2026, first reported in trade press at the time.",
+     "src": "https://w.media/elon-musks-xai-to-build-500-mw-data-center-in-saudi-arabia/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-02-18"
   },
   {
    "a": "hunt-energy-network",
@@ -52087,7 +53361,7 @@
     {
      "where": "Recent Reporting",
      "date": "2025-11-19",
-     "text": "HUMAIN partnership: 500+ MW Saudi AI data-center network — xAI's largest facility outside the US, NVIDIA principal chip supplier (~18,000 GB300s first cluster) — The Gulf expansion lands with PIF capital attached — trade reporting also cites a $3B HUMAIN investment in xAI.",
+     "text": "HUMAIN partnership: 500+ MW Saudi AI data-center network — xAI's largest facility outside the US, NVIDIA principal chip supplier (~18,000 GB300s first cluster) — The Gulf expansion lands with PIF capital attached — HUMAIN confirmed a US$3B investment in xAI's Series E on 18 Feb 2026, first reported in trade press at the time.",
      "src": "https://w.media/elon-musks-xai-to-build-500-mw-data-center-in-saudi-arabia/",
      "from": "b"
     }

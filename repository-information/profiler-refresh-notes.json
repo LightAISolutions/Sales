@@ -2044,6 +2044,36 @@
     "PJM's December 2026 auction and FERC's action on the large-load show-cause responses (mid-November 2026) and the co-location package; MISO Tranche 2.1 MARS/EASL bid results (Q4 2026)",
     "Leadership: Kleczynski's first call as CFO (Q3 2026); PECO's permanent CEO; Oddoye at Pepco Holdings"
    ]
+  },
+  "firmus": {
+   "source": "Private until its ASX listing: a Reuters-reported term sheet times the bookbuild for 6-7 Oct, the prospectus for 8 Oct and trading for 22 Oct 2026; no ASX record or prospectus existed on 26 Sep 2026. If it lists, convert this row to a dated nextReport row — the first half-year ends 31 Dec 2026 and the prospectus will carry the reporting calendar. Read firmus.co/newsroom (a public Sanity CMS dataset feeds it) and the ASX announcements platform; Maas Group (ASX: MGH) filings disclose the JLE power-train orders.",
+   "watch": [
+    "ASX listing on or about 22 Oct 2026: prospectus lodgement (8 Oct), ticker, first revenue figures, the capacity table, and the term and exclusivity of the JLE master services agreement",
+    "Benmax completion (expected end-August to end-September 2026)",
+    "Hydro Tasmania's decision on the 450 MW long-term supply request (end-2026); the Bell Bay appeal window",
+    "The Malaysian sites' names, MW and partner for the OpenAI contract; Batam financing (about US$10B under discussion with NVIDIA credit support)",
+    "Wesley Vale R&D factory: the behind-the-meter battery supplier; any DC-distribution or SST specification for the Vera Rubin sites"
+   ]
+  },
+  "humain": {
+   "source": "Unlisted PIF company with no financial statements. The first-party channel is HUMAIN's PR Newswire feed (humain.com returns 403 to this sandbox) and the Saudi Press Agency; counterparty Tadawul disclosures by Al Moammar Information Systems (7200) and stc (7010) are read via Argaam. IPO targeted for 2029 (Riyadh and New York).",
+   "watch": [
+    "MIS work orders under the 250 MW EPC agreement (announced on Tadawul as issued); handover of the first 50 MW hall",
+    "Al-Saad campus: a construction award for the 380/132/33 kV substations and 2,000 MVA bulk supply point; an energisation date",
+    "Aramco minority-stake completion; an stc joint-venture agreement (memorandum extended to about December 2026)",
+    "A second US BIS authorisation beyond 35,000 GB300-equivalent, or a Saudi move to Country Group A:5",
+    "Financing closes: the NIF framework, the Goldman-arranged package, the BSF Capital fund"
+   ]
+  },
+  "g42": {
+   "source": "Private group with no group financials. First-party: g42.ai/resources/news, khaznadatacenters.com/press-release (WordPress; pre-2025 dates are migration stamps) and core42.ai. Counterparty filings: e& (ADX), TeraWulf (8-K and results), Presight (ADX). The BIS rule 91 FR 43034 reads via govinfo (federalregister.gov walls automated readers).",
+   "watch": [
+    "The 6 Apr 2027 sunset of G42's and Core42's BIS approval: a US-domiciled restructuring, a majority sale to US companies (Bloomberg, 4 Sep 2026), or a BIS extension",
+    "Stargate UAE's first 200 MW energisation (targeted Q3 2026) and the revised, dispersed campus plan (Reuters, 11 Sep 2026)",
+    "A named EPC or electrical supplier for Stargate UAE or Khazna's other builds; the Khazna–Siemens 800 VDC memorandum turning into a pilot or an award",
+    "Khazna's Ajman QAJ1, AUH4 and AUH8 completions (December 2026) and the Microsoft 200 MW Azure expansion",
+    "Any BIS Part 744 end-user action or congressional testimony on the UAE decision"
+   ]
   }
  }
 }

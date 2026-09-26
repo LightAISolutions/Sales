@@ -3,11 +3,212 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.64r] — 2026-09-26 05:27:31 AM EST
+
+> **Prompt:** "Picking up from my last session, run Phase F session F-N1 of
+> repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: Firmus Technologies, HUMAIN and
+> G42 (Khazna) — the neoclouds and AI-capacity builders that sign for their own campuses. This session runs
+> on Opus 5.5 at xhigh (the action plan suggested high; I am choosing xhigh). Write "Opus 5.5 xhigh" into
+> your §11.3 Model cells.
+>
+> WHY NOW: §11.2 wants F-N1 landed before the 10/1 neoclouds pass, so landscape-neoclouds-2026-09 is
+> re-authored once, in Classroom wave A (Fri 10/2 – Tue 10/6). Do NOT run the neoclouds pass or
+> `profiler Habitat Energy` here — both wait on filings due 9/30 — and do not revise fluidstack.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; repository-information/phase-f-action-plan.md;
+> PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the three F-N1 rows of §11.3 are yours; §11.1's
+> buying-authority test applies); .claude/rules/profiler-app.md (Profiler Command including step 1a
+> identity and step 7 reconciliation, Profiler Prep Command, Scheduled Refreshes);
+> repository-information/PROFILER-SCHEMA.md (Naming and renames, Segments registry, Refresh calendar);
+> repository-information/PROFILER-STYLES.md (active style). Read the coreweave, nebius, crusoe, fluidstack
+> and nscale dossiers and study guides as the house pattern for a neocloud, and the mgx, xai, amd,
+> terawulf, openai and oracle dossiers — they already name HUMAIN, G42, Khazna, Core42 or Stargate UAE.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1) and study guide (schema v2) with its lesson plan under
+> repository-information/study-prep/<slug>/. Proposed slugs: firmus, humain, g42. Category hypotheses:
+> firmus ["neocloud"]; humain ["neocloud"] or ["hyperscaler"]; g42 ["neocloud"], ["hyperscaler"] or
+> ["developer"] — decide each on the record and say why. Populate aka[] BEFORE the step-7 grep, including
+> brand and subsidiary names (Firmus: Sustainable Metal Cloud if it is Firmus's, HyperCube; G42: Group 42,
+> Khazna, Core42, Stargate UAE; HUMAIN: its Arabic name if it publishes one). Assign segments in
+> live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis: neoclouds ·
+> challenger for all three; aidc-developers-and-landlords · challenger for Firmus and for G42 if Khazna
+> owns and builds its campuses). Then the registry sync, the graph build, a calendar row per company under
+> the Refresh calendar rules (Firmus: public if its ASX listing has happened by your run date — the ASX is
+> reachable from the sandbox — otherwise the private rule; HUMAIN and G42 private), README tree entries,
+> and rewrite and flip your §11.3 rows.
+>
+> IDENTITY (step 1a) — establish each of these, do not assume it:
+> - Firmus: the operating and listing entity, how Sustainable Metal Cloud relates to it, which company owns
+>   and builds the Australian and Malaysian campuses, and the status of the Benmax acquisition.
+> - HUMAIN: its ownership (PIF), and which entity signs for data-centre power equipment — HUMAIN itself, a
+>   joint venture, or a design-build contractor it appoints. Decide neocloud or hyperscaler.
+> - G42: one slug for the group, or a separate one for Khazna? Decide under Naming and renames and say
+>   why. Establish Khazna's and Core42's ownership, Microsoft's stake in G42, and who signs for Stargate
+>   UAE's power equipment.
+>
+> THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+> budget ran out partway, and nobody has read the underlying articles. Verify against first-party sources
+> (company releases, the ASX, government and regulator records, the counterparties' own filings), record a
+> premise verdict per clause, and rewrite the cells. Run these checks hardest:
+> - Firmus: >900 MW contracted (8 Sep 2026) with OpenAI as the Malaysian anchor; the Benmax purchase
+>   (A$300M); the Gunvor 600 MW supply deal tied to 1.5 GWh of storage; the ASX IPO timing; ClusterMAX 3.0
+>   Silver.
+> - HUMAIN: 1.9 GW by 2030 and Al Sa'ad 1 GW phase 1 by 2027; xAI 500 MW+ and Together AI 250 MW
+>   (31 Aug 2026); the design-build awards to MIS; ClusterMAX "Unavailable".
+> - G42: Khazna building Stargate UAE (1 GW inside a 5 GW campus) with long-lead equipment for the first
+>   200 MW procured — who procured it, and from whom; Core42 as TeraWulf's 60 MW tenant; the UAE's move to
+>   Country Group A:5 (Jul 2026) and what it changed.
+> For each company, record the §11.1 buying-authority verdict: does it, or a platform it controls, sign for
+> batteries, MV gear, generation or SSTs?
+>
+> RECONCILIATION (step 7) — expected inbound: Firmus 0; HUMAIN 2 (amd, xai); G42 4 (mgx, terawulf, and
+> openai and oracle through "Stargate UAE"). Known alias collisions, not inbound: hyperstrong's "HyperCube"
+> is HyperStrong's own product line, and dg-matrix's "Inception" is NVIDIA's startup programme. Grep again
+> with the full aka[]. Check every inbound dossier for the reciprocal edge — in F-H1 the delta-electronics
+> dossier did not name a customer it had launched a product with — and where one is missing, revise that
+> dossier under the Archival Procedure and re-verify any report pins on it. Check microsoft and nvidia for
+> a missing G42 or HUMAIN edge too.
+>
+> LESSONS FROM F-H1 — apply them:
+> - Every supplier, customer or partner named in narrative prose rests on a source in sources[], ideally
+>   the counterparty's own filing. F-H1 had to back-source two such claims before commit.
+> - A tender is not an award. An unattributed figure is stated as unverified, never as fact.
+> - Write each lesson plan skeleton-first, then Edit (.claude/rules/behavioral-rules.md, Incremental
+>   Writing, item d).
+> - If an existing study guide contradicts a verified finding, correct it minimally and record it.
+>
+> DO NOT edit googleAppsScripts/Classroom/Classroom.gs. The new members make landscape-neoclouds-2026-09
+> and the scenario-neoclouds-discovery rehearsal stale — and landscape-aidc-developers-and-landlords-2026-09
+> further, if Firmus or G42 join that segment. Record that in the CHANGELOG entry and the SESSION-CONTEXT
+> hand-off (§11.2, the landscape coupling); Classroom wave A re-authors them.
+>
+> FOR THE MEGMEET JOB: in the SESSION-CONTEXT hand-off, write one short paragraph on whether any of the
+> three signs for medium-voltage or DC power equipment (SSTs, 800 VDC, HVDC), and what that means for an
+> SST seller.
+>
+> VERIFY: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check clean;
+> build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+> check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+> warnings read; every new dossier and guide renders under Playwright with zero page errors other than the
+> sandbox's gis_load_failed. CHANGELOG rotation only if non-exempt sections reach 100. Normal Pre-Commit
+> and Pre-Push checklists; one commit; push on a claude/* branch."
+
+**Phase F, session F-N1 — Firmus Technologies, HUMAIN and G42 (Khazna)** join the Profiler corpus: the neoclouds and AI-capacity builders that sign for their own campuses. There are three dossiers, each with a v2 study guide and a lesson plan, plus the reciprocal edges on the eight inbound dossiers that name them. Run on Opus 5.5 at xhigh.
+
+### Added
+
+- **Three schema v7 dossiers** (`profileVersion` 1, intel-briefing style), each researched by two parallel subagents under the two-stage protocol. `check-source-reachability.py` ran before Stage 2 was planned: **PARTIAL** — `sec.gov` and `data.sec.gov` are blocked; the ASX and the other probed hosts are reachable.
+  - **`firmus.profile.json`** — `categories: ["neocloud"]`; 67 sources (58% first-party), 24 developments, 5 products, 7 relationships, 13 decision makers (5 with photos), 5 policy entries.
+    - **Identity:** Firmus Grid Limited (ACN 638 040 534), trading as Firmus Technologies. It is **unlisted** as of 26 Sep 2026: no ASX record and no lodged prospectus. Sustainable Metal Cloud is its legacy cloud brand (smc.co is held by Firmus Metal International).
+    - **Ownership of the campuses:** the South Australian campuses are 'owned and operated by Firmus'. Melbourne sits inside a CDC Data Centres facility.
+    - **The power train:** Maas Group's JLE is 'the exclusive supplier of power train units for Firmus' Australian pipeline'.
+  - **`humain.profile.json`** — `categories: ["neocloud"]`, decided against hyperscaler; 53 sources (28% first-party), 30 developments, 5 products, 6 relationships, 9 decision makers, 4 policy entries.
+    - **Identity:** Future Artificial Intelligence Co. (شركة المستقبل للذكاء الاصطناعي), trading as HUMAIN (هيوماين). PIF-owned; Aramco's minority stake is EC-cleared but not completed.
+    - **Why a neocloud:** its own cloud launched at 1.1 MW, and it builds capacity and lets it to xAI, Together AI, Adobe, Luma and an AWS 'AI Zone'.
+  - **`g42.profile.json`** — `categories: ["developer", "neocloud"]`; 57 sources (56% first-party), 25 developments, 5 products, 8 relationships, 12 decision makers (8 with photos), 4 policy entries.
+    - **Identity:** Group 42 Holding Ltd, kept as **one group slug** under Naming and renames. G42 controls Khazna (majority; MGX and Silver Lake are minorities), and the BIS approval and Stargate UAE sit at group level.
+    - **`aka[]`:** Khazna, Core42, Stargate UAE, Presight, Space42, M42, Inception, Jais, Condor Galaxy and the legal entities.
+- **Three schema v2 study guides**, each with flashcards and a self-test on concepts only:
+  - `firmus.study.json` (15 sections);
+  - `humain.study.json` (15 sections, plus one doc-glossary term, 'revenue-sharing arrangement', because the registry's `revenue-share` is BESS-optimiser-specific);
+  - `g42.study.json` (16 sections).
+- **Three lesson plans** under `repository-information/study-prep/<slug>/` — six, six and eight modules, paced to the 2026-10-07 start. Each was written skeleton-first and then filled in by Edit (the Incremental Writing gate, item d).
+- **19 new concepts** in `profiler-concepts.json` (1,539 total), each checked for term and alias collisions against the registry (`EAR`, `Country Group A:5`, `prefabricated` and `standby generator` were already taken):
+  - AI factory and compute: `ai-factory`, `nvl72`, `clustermax`, `gpu-as-a-service`, `immersion-cooling`.
+  - Power chain: `power-train`, `bulk-supply-point`, `mva`, `maximum-demand`, `backup-generator`, `carbon-capture`, `energy-retailer`.
+  - Contracts: `exclusive-supply-agreement`, `work-order`, `early-contractor-involvement`.
+  - Export rules and security: `country-group`, `approved-recipient`, `end-use-controls`, `site-hardening`.
+  - No existing entry was edited.
+- **13 executive photos** in `live-site-pages/images/execs/`, all company-published: `firmus-*` (5) and `g42-*` (8, from G42's and Khazna's leadership pages; the webp originals were converted to jpg).
+- **Eight archive files**: `amd.profile.v1`, `mgx.profile.v2`, `microsoft.profile.v4`, `nvidia.profile.v10`, `openai.profile.v5`, `oracle.profile.v5`, `terawulf.profile.v7`, `xai.profile.v4`, each with an `archive-index.json` entry.
+
+### Changed
+
+- **Eight inbound dossiers revised under the Archival Procedure** (step 7: the reciprocal edge for each counterparty the new dossiers name). Each gains the edge plus its source in `sources[]`; no other field changed except where noted:
+  - `amd` v1→v2 — customers `humain` (the AMD–Cisco–HUMAIN joint venture, MI355X live 31 Aug 2026) and `g42`.
+  - `xai` v4→v5 — supplier `humain` (announced; the '500 MW+' framework). One development read changed: 'trade reporting also cites a $3B HUMAIN investment' now records **HUMAIN's own confirmation** (18 Feb 2026) — an open question closed.
+  - `mgx` v2→v3 — portfolio `g42` (the Khazna minority alongside Silver Lake, March 2025).
+  - `terawulf` v7→v8 — customer `g42` (Core42's 60 MW critical IT at Lake Mariner, G42 parent guarantee).
+  - `openai` v5→v6 — suppliers `g42` (Stargate UAE) and `firmus` (announced; the two Malaysian sites).
+  - `oracle` v5→v6 — partner `g42` (Stargate UAE operator).
+  - `microsoft` v4→v5 — portfolio `g42` (US$1.5B, April 2024) and partner `humain`.
+  - `nvidia` v10→v11 — customers `humain` and `g42`, portfolio `firmus`.
+- **`profiler-companies.json`** — 185 → 188 entries. Taglines, `aka[]` (brand, subsidiary, legal and Arabic names) and `domains[]` were populated **before** the step-7 grep. The sync pass reconciled `srcTotal`, `srcFirstPct` and `segments`.
+- **`profiler-segments.json`**, each with a basis line:
+  - `neoclouds`: all three as challengers — the roster goes from seven to ten.
+  - `aidc-developers-and-landlords`: `g42` challenger (Khazna); `firmus` and `humain` **adjacent**. Both build for their own clouds and lease no shells; Firmus's hypothesis had been challenger.
+- **`profiler-graph.json`** — rebuilt: 1,610 edges (1,217 curated).
+- **`profiler-refresh-calendar.json`** — all three are private, `cadence: quarterly`, `tier: core`. Firmus had not listed by the run date; its reported ASX listing is 22 Oct 2026. **`profiler-refresh-notes.json`** — a source and a `watch[]` list per slug, appended without reordering the file.
+- **`report-pins-verified.json`** — `openai` (v5→v6) and `xai` (v4→v5) re-verified on `named-project-bess-attach--opportunity--2026-09-08`: every cited source is unchanged, and the report neither cites the changed xAI development nor mentions HUMAIN.
+- **`PROFILER-COVERAGE-PLAN.md` §11.3** — the three F-N1 rows rewritten as verified cells, with a premise verdict per clause and the §11.1 buying-authority answer; Model **Opus 5.5 xhigh**; `Checked 2026-09-26, v07.64r`; Dossier v1; Guide v2. The verdicts run hardest:
+  - **Firmus:**
+    - More than 900 MW contracted — **held, as a sales figure**: 'across all customers', against two operating sites.
+    - OpenAI as the Malaysian anchor — **held**, for two sites not yet built.
+    - 'Owns its Australian campuses' — **held in part**.
+    - 'Builds the electrical content' — **refined**: Benmax fabricates the mechanical and cooling modules; the electrical Power Cube is made exclusively by JLE (A$200M and A$855M work orders).
+    - Benmax A$300M — **held, not closed** by 26 Sep.
+    - Gunvor 600 MW tied to 1.5 GWh — **held**, exactly the energy policy's 2.5 MWh per MW.
+    - IPO 22 Oct — **as reported** (a Reuters term sheet; a draft prospectus shows a '$77 million' pro-forma half-year loss).
+    - ClusterMAX 3.0 Silver — **held**.
+  - **HUMAIN:**
+    - 1.9 GW by 2030 — **a CEO target**.
+    - Al-Saad 1 GW phase 1 by 2027 — **unreconciled** against the NYT's 250 MW by the start of 2027.
+    - xAI 500 MW+ — **a framework**.
+    - Together AI 250 MW (31 Aug) — **held**.
+    - The MIS design-build — **superseded** by a 250 MW EPC of ~SAR 8.76B, 'carried out under work orders issued by HUMAIN' (20 Sep 2026).
+    - ClusterMAX 'Unavailable' — **held**.
+  - **G42:**
+    - Khazna builds Stargate UAE — **held**.
+    - 'Long-lead equipment for the first 200 MW procured' — **held, with a precision**: the October 2025 update says the project 'has completed procurement of all long-lead equipment', naming no supplier, category or signing entity.
+    - Core42 as a 60 MW TeraWulf tenant — **held**.
+    - The UAE's move to A:5 — **held, with the rider the hypothesis missed**: G42 and Core42 are named approved recipients in Supplement No. 8, an approval that 'shall automatically expire on April 6, 2027' unless they 'become U.S. companies'.
+- **`phase-f-action-plan.md`** — the status line records F-N1 as landed. Classroom wave A (row 7) now names F-N1 among the drift it absorbs.
+- **README.md** — tree entries for the three profile/study pairs, the three study-prep directories and the eight archive files, plus the timestamp and repo version.
+- **`SESSION-CONTEXT.md`** — a new Latest Session (the F-N1 hand-off, with the Megmeet paragraph). The F-H1 entry moved to Previous, and the older v07.60r–v07.61r entry dropped under the two-session cap.
+
+### Notes
+
+- **Step-7 reconciliation**, grepped with the full `aka[]` against the pre-revision dossiers:
+  - **Firmus 0.** The only hit was `hyperstrong`'s own 'HyperCube' product line, a collision.
+  - **HUMAIN 2** (`amd`, `xai`).
+  - **G42 4** (`mgx`, `terawulf`, and `openai` and `oracle` via 'Stargate UAE'). `dg-matrix`'s 'Inception' is NVIDIA's startup programme, a collision.
+  - **No inbound claim contradicted the new dossiers**; one open question (xAI's HUMAIN investment) was closed.
+  - `microsoft` and `nvidia` named neither company before this session and now carry the edges.
+  - The new dossiers' edges to `eaton`, `supermicro`, `blackstone`, `coreweave`, `iren` and `amazon` stay one-way and show as inbound evidence in the graph.
+- **§11.1 buying authority:**
+  - **Firmus** is the buyer of record for its own chain: it pays for and owns its connection substations, applies for its backup generation, and runs UPS and batteries on Eaton's EnergyAware platform through Synert. In Australia, though, the power train is exclusive to JLE.
+  - **HUMAIN** is owner and grid counterparty (the National Grid SA agreement, 2 Sep 2026). On the MIS build the EPC contractor buys under HUMAIN-approved designs, and on partner campuses the partner buys. The Al-Saad 380/132/33 kV package (a 2,000 MVA bulk supply point) was tendered on early contractor involvement, and the reported selection is 'not a definitive construction award'.
+  - **G42:** Khazna buys and Core42 leases. The Khazna–Siemens memorandum (15 Sep 2026) to 'continue to progress next-generation 800 VDC power architectures' is a memorandum, not an award.
+  - **None of the three has signed for an SST, 800 VDC or HVDC equipment on the record.**
+- **Existing study guides checked for contradictions:** only `mgx.study.json` names G42, Khazna or Stargate UAE, and it agrees with the new dossiers. No guide was corrected.
+- **Classroom lessons now stale, by design — `Classroom.gs` was not edited:**
+  - `landscape-neoclouds-2026-09`: seven members become ten.
+  - `scenario-neoclouds-discovery` goes stale with it.
+  - `landscape-aidc-developers-and-landlords-2026-09`, further: +`g42` as a challenger, +`firmus` and +`humain` as adjacent, on top of the F-H1 drift. Its `scenario-aidc-developers-and-landlords-*` rehearsals were already stale.
+  - Classroom wave A (Fri 10/2 – Tue 10/6) re-authors them.
+  - `build-classroom-segments.py --check` now shows **14 due**: 12 with section changes (`neoclouds` differs in eight sections) and 2 pin-only (`capital`, from `mgx` v3; `insurance-and-risk-transfer`).
+- **Checkers:**
+  - `sync-profiler-registry.py --check` — clean (188 in bijection).
+  - `check-profiler-study.py` — 0 errors, 0 warnings (188 guides, 1,539 concepts).
+  - `check-profiler-relationships.py` — 0 findings.
+  - `check-profiler-crossrefs.py` — 0 candidates (32 over-cap scopes not examined, as before).
+  - `check-readme-tree.py` — 0 findings.
+  - `check-profiler-reports.py` — 0 errors and two warnings, read and left loud:
+    - `jinko` — pre-existing.
+    - `oracle` — now v6 against a v4 pin. The v4→v5 step was an earlier session's substantive refresh (summary, developments, strategy, financials), which a pin note cannot vouch for; this session's v6 only added the G42 edge.
+- **Playwright:** 11 dossiers (the three new ones and the eight revised) render on `Profiler.html`, with every tab and the study guide, and zero real page errors. The only error is the auth wall's `gis_load_failed`, the Google Identity script the sandbox cannot fetch.
+  - No literal `{{` or `**` appears in any new dossier or guide.
+  - NVIDIA's Relationships tab shows four literal `**`. They are pre-existing: other dossiers' inbound curated contexts, with the graph's count unchanged at 127.
+  - `Profiler.html` is unchanged (data-only), so there is no page version bump.
+- **Not run here, as instructed:** the 10/1 neoclouds pass, `profiler Habitat Energy`, and any `fluidstack` revision.
+- **No rotation:** 90 sections, under the trigger.
 
 ## [v07.63r] — 2026-09-26 03:20:08 AM EST
 

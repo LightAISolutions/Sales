@@ -1,6 +1,6 @@
 # Phase F action plan on Opus 5.5 — the remaining 32 companies, the Classroom waves, and the paste-in prompts
 
-**Status (v07.63r, 2026-09-26):** F-H1 landed in v07.62r (row 1 of §3 done). §5 holds the F-N1 prompt, for xhigh.
+**Status (v07.64r, 2026-09-26):** F-H1 landed in v07.62r and F-N1 in v07.64r (rows 1 and 2 of §3 done). §5 holds the F-N1 prompt as run. F-N1 moved two Classroom modules that wave A (row 7) already re-authors, plus one scenario: `landscape-neoclouds-2026-09` gains three members, `landscape-aidc-developers-and-landlords-2026-09` gains `g42` as a challenger and `firmus` and `humain` as adjacent, and `scenario-neoclouds-discovery`, tied to the `neoclouds` segment, goes stale with it.
 
 **Written 2026-09-26 (v07.61r)**, the night the Classroom utilities re-pin landed (v07.60r). The developer asked for three things:
 - every company still recommended for Profiler;
@@ -66,7 +66,7 @@ Dates are verified weekdays. The plan interleaves the developer's standing remin
 | 4 | **Mon 9/28 – Tue 9/29** | **F-I1** — BlackRock, KKR (Profiler) | xhigh | The most-cited uncovered company (31 dossiers); no date gate. If BlackRock's step 7 outgrows the session, split it off, as §11.2 allows |
 | 5 | **Wed 9/30**, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | medium | The standing reminder, re-requested on 9/26. Read the report and check whether a notification arrived |
 | 6 | **Thu 10/1** or later | Neoclouds Profiler pass + `profiler Habitat Energy` (one Profiler session) | high | Both wait on filings due 9/30 (Fluidstack, Habitat Energy). **The 10/1 quarterly and monthly Profiler Routines commit that day — rebase first** |
-| 7 | **Fri 10/2 – Tue 10/6** | **Classroom wave A** — re-author `landscape-neoclouds-2026-09` (F-N1 + row 6), `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their rehearsals | xhigh | Clears the stale modules before the job starts. If it runs long, split neoclouds off first: its module is overdue |
+| 7 | **Fri 10/2 – Tue 10/6** | **Classroom wave A** — re-author `landscape-neoclouds-2026-09` (F-N1 + row 6), `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1 and F-N1, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their rehearsals | xhigh | Clears the stale modules before the job starts. If it runs long, split neoclouds off first: its module is overdue |
 | 8 | **Fri 10/2 – Tue 10/6** | Reframe the Dominion rehearsal (Classroom, its own session) | high | The standing reminder, after the 10/1 solicitation issues. Also check the unverified "all-stock" merger description |
 
 **Stage 2 — October**

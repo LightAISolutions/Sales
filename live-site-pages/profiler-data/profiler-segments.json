@@ -1533,6 +1533,21 @@
      "slug": "chindata",
      "role": "challenger",
      "basis": "ecosystemRole: the corpus's first Chinese wholesale landlord — third among China's third-party operators by in-service capacity and first around Beijing (Frost & Sullivan for HEC), ~90% of revenue from one hyperscale tenant, and the named SST reference site (Delta, Sangyuan, 2 Jul 2026)"
+    },
+    {
+     "slug": "g42",
+     "role": "challenger",
+     "basis": "productsAndServices › Khazna Data Centers — 'designs, builds and operates wholesale data centers': ~650 MW across 30 live sites (73% UAE share) and the builder of the 1 GW Stargate UAE cluster; a regional challenger abroad"
+    },
+    {
+     "slug": "firmus",
+     "role": "adjacent",
+     "basis": "productsAndServices › Project Southgate and the AI factory campuses — Firmus owns and builds its campuses and connection substations for its own cloud; it does not lease shells to other operators"
+    },
+    {
+     "slug": "humain",
+     "role": "adjacent",
+     "basis": "productsAndServices › AI data centres — owner and grid counterparty for its own builds (250 MW EPC with MIS on HUMAIN work orders; the Al-Saad campus high-voltage tender), capacity let to xAI, Together AI and AWS"
     }
    ]
   },
@@ -1651,6 +1666,21 @@
      "slug": "nscale",
      "role": "challenger",
      "basis": "ecosystemRole: the European entry in the anchored-neocloud model — Microsoft-anchored, ~200,000 GB300 contracted, a reported Anthropic deal"
+    },
+    {
+     "slug": "firmus",
+     "role": "challenger",
+     "basis": "ecosystemRole: the corpus's first Asia-Pacific neocloud — more than 900 MW of contracted customer capacity (OpenAI the Malaysian anchor), two sites operating; SemiAnalysis ClusterMAX 3.0 Silver"
+    },
+    {
+     "slug": "humain",
+     "role": "challenger",
+     "basis": "ecosystemRole: the corpus's first sovereign neocloud — a PIF-owned builder and seller of AI compute to xAI, Together AI, AWS and others; 1.1 MW of its own cloud energised against GW targets"
+    },
+    {
+     "slug": "g42",
+     "role": "challenger",
+     "basis": "productsAndServices › Core42 — sovereign cloud and AI compute: 'Access 86K+ GPUs', 60 MW leased at TeraWulf's Lake Mariner; SemiAnalysis ClusterMAX 3.0 Participation Ribbon"
     }
    ]
   },

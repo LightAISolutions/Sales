@@ -57,6 +57,22 @@
       "verifiedAt": 7,
       "when": "2026-09-26",
       "why": "Short-gap pin (v6 -> v7, 1 version): every cited delta-electronics source is unchanged (label, url and date identical). The v7 revision (F-H1 step 7, 2026-09-26) only added two curated customer relationships — chindata (the Sangyuan SST) and alibaba-cloud (Panama co-launch) — and two sources (Delta Brand News 2026/02; the 2019 Panama launch release); every other field is byte-identical. Every cited figure holds."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "openai",
+      "pinnedVersion": 5,
+      "verifiedAt": 6,
+      "when": "2026-09-26",
+      "why": "Short-gap pin (v5 -> v6, 1 version): the one cited openai source is unchanged (label, url and date identical). The v6 revision (F-N1 step 7, 2026-09-26) only added two curated supplier relationships — g42 (Stargate UAE) and firmus (the Malaysian sites) — and their two sources; every other field is byte-identical. Every cited figure holds."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "xai",
+      "pinnedVersion": 4,
+      "verifiedAt": 5,
+      "when": "2026-09-26",
+      "why": "Short-gap pin (v4 -> v5, 1 version): both cited xai sources are unchanged (label, url and date identical). The v5 revision (F-N1 step 7, 2026-09-26) added a curated humain supplier relationship with two HUMAIN sources and rewrote one development read to record that HUMAIN confirmed its US$3B Series E investment on 18 Feb 2026; the report does not cite that development or mention HUMAIN. Every other field is byte-identical and every cited figure holds."
     }
   ]
 }

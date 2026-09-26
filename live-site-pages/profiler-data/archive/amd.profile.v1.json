@@ -711,27 +711,6 @@
    "note": "IREN's GPU cloud includes 1,100 AMD MI350X alongside a much larger NVIDIA fleet.",
    "context": "IREN's own dossier puts the AMD position at 1.1k MI350X within a fleet that reached about 23,000 GPUs in September 2025 and targets 150,000. The ratio is the finding — at the neocloud tier AMD is presently a minority second source rather than a co-equal platform.",
    "source": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results"
-  },
-  {
-   "slug": "humain",
-   "type": "customer",
-   "status": "active",
-   "since": "2025-05",
-   "scale": "up to US$10B / 500 MW over five years; joint venture with Cisco up to 1 GW by 2030",
-   "via": "AMD Instinct MI355X; MI400 Series from 2027",
-   "note": "HUMAIN, Saudi Arabia's PIF-owned AI company, runs its first GPU-as-a-service capacity on AMD Instinct MI355X through the AMD–Cisco–HUMAIN joint venture, live since 31 Aug 2026.",
-   "context": "May 2025: 'the parties will invest up to $10B to deploy 500 megawatts of AI compute capacity over the next five years', with HUMAIN overseeing the data centre and 'sustainable power systems'.\n\nNovember 2025: AMD, Cisco and HUMAIN formed a joint venture targeting up to 1 GW by 2030, with a first phase of 100 MW; Reuters reports Luma AI contracted that entire phase.\n\n31 August 2026: MI355X systems went live in production, with the next phase of up to 250 MW on MI400 Series from 2027. The joint venture's legal entity and equity split are not disclosed.",
-   "source": "https://ir.amd.com/news-events/press-releases/detail/1298/amd-cisco-and-humain-expand-saudi-arabias-ai-infrastructure-as-amd-instinct-systems-go-live"
-  },
-  {
-   "slug": "g42",
-   "type": "customer",
-   "status": "active",
-   "since": "2024",
-   "via": "AMD Instinct MI300X (Core42 Maximus-01)",
-   "note": "G42's Core42 runs Maximus-01, more than 9,000 AMD Instinct MI300X GPUs at TeraWulf's Lake Mariner campus, ranked 20th on the TOP500.",
-   "context": "G42's November 2025 release reports the Maximus-01 ranking (114.50 PF Rmax). G42 also announced a Cisco-integrated AMD MI350X cluster in the UAE in October 2025, 'pending final approvals'.",
-   "source": "https://www.g42.ai/resources/news/core42-maximus-01-cluster-secures-top-20-ranking-global-top500-supercomputers-list"
   }
  ],
  "policyExposure": [
@@ -1418,11 +1397,6 @@
    "date": "2025-11-18"
   },
   {
-   "label": "G42 — Core42 Maximus-01 cluster (9,000+ AMD Instinct MI300X) secures top-20 ranking on the TOP500",
-   "url": "https://www.g42.ai/resources/news/core42-maximus-01-cluster-secures-top-20-ranking-global-top500-supercomputers-list",
-   "date": "2025-11-18"
-  },
-  {
    "label": "AMD — AMD unveils strategy to lead the $1 trillion compute market (Financial Analyst Day)",
    "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
    "date": "2025-11-11"
@@ -1577,6 +1551,6 @@
    "url": "https://ir.amd.com/news-events/press-releases"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 2
+ "lastUpdated": "2026-09-08",
+ "profileVersion": 1
 }

@@ -254,6 +254,14 @@
    ]
   },
   {
+   "slug": "ai-factory",
+   "term": "AI factory",
+   "def": "A data centre built to do one job — train and run AI models — and judged by how much AI output it produces per watt rather than by floor space. In practice it is a hall designed from the start around racks of tightly coupled GPUs, with the power, cooling and network sized for them. The phrase is NVIDIA's, and operators now use it for their own sites.",
+   "aliases": [
+    "AI factories"
+   ]
+  },
+  {
    "slug": "ai-growth-zone",
    "term": "AI Growth Zone",
    "def": "A UK government designation for an area given faster planning and priority grid access to attract AI data centers. It changes the permitting and connection timeline, not the price of power.",
@@ -507,6 +515,15 @@
    ]
   },
   {
+   "slug": "approved-recipient",
+   "term": "approved recipient",
+   "def": "Under the US export rules for advanced AI chips, a named foreign company that the US government has approved to receive them without a licence for each shipment. The approval attaches to the company, not to its country. It can carry conditions and an end date, and it does not lift restrictions that apply to particular end users or end uses.",
+   "aliases": [
+    "approved end user",
+    "Supplement No. 8"
+   ]
+  },
+  {
    "slug": "approved-vendor-list",
    "term": "approved vendor list",
    "def": "A buyer's list of suppliers whose products have passed its qualification tests; only listed makers may bid. In a wholesale data centre the tenant often owns the list for critical power equipment, so the landlord runs the tender while the tenant decides who is allowed to win it.",
@@ -757,6 +774,16 @@
     "back leverage",
     "holdco debt",
     "holding-company debt"
+   ]
+  },
+  {
+   "slug": "backup-generator",
+   "term": "backup generator",
+   "def": "An engine-driven generator, usually diesel, that starts automatically when the grid supply fails and carries the site until the grid returns. UPS batteries bridge the seconds to a minute the engine needs to start and take load. A large data centre installs dozens to hundreds of them, and local permits often limit how many hours a year they may run outside an emergency.",
+   "aliases": [
+    "diesel generator",
+    "diesel generators",
+    "diesel backup"
    ]
   },
   {
@@ -1172,6 +1199,14 @@
    ]
   },
   {
+   "slug": "bulk-supply-point",
+   "term": "bulk supply point",
+   "def": "The substation where a large customer or a distribution network takes power from the transmission grid, stepping it down from transmission voltage (for example 380 kV) to a sub-transmission level (for example 132 kV). Its rating, in MVA, caps how much the site behind it can ever draw.",
+   "aliases": [
+    "BSP"
+   ]
+  },
+  {
    "slug": "burnup",
    "term": "burnup",
    "def": "How much energy has been extracted from a given mass of fuel before it is discharged, in gigawatt-days per tonne. Higher burnup means fewer refuellings and less spent fuel per unit of electricity."
@@ -1438,6 +1473,16 @@
    "aliases": [
     "captives",
     "captive insurance"
+   ]
+  },
+  {
+   "slug": "carbon-capture",
+   "term": "carbon capture",
+   "def": "Separating carbon dioxide from a power plant's exhaust and storing it underground, or using it, rather than releasing it. On a gas plant it cuts emissions at the cost of extra equipment and some of the plant's own output.",
+   "aliases": [
+    "CO2 capture",
+    "carbon capture and storage",
+    "CCS"
    ]
   },
   {
@@ -1875,6 +1920,14 @@
     "closed-transition transfer",
     "make-before-break",
     "closed-transition ATS"
+   ]
+  },
+  {
+   "slug": "clustermax",
+   "term": "ClusterMAX",
+   "def": "SemiAnalysis's periodic rating of GPU clouds, in tiers from Platinum through Gold and Silver down, based on hands-on tests of real clusters: reliability, networking, storage, security and support. Buyers and lenders use it as an outside check on a cloud's claims. A cloud that gives the testers no access is listed as unavailable rather than rated.",
+   "aliases": [
+    "ClusterMAX rating"
    ]
   },
   {
@@ -2541,6 +2594,16 @@
    "def": "The sequence of parties between the owner of a building and the user of the computers inside it — landlord, tenant of record, operator, guarantor, chip lessor, end user. Each link carries a different risk and a different credit.",
    "aliases": [
     "chain of counterparties"
+   ]
+  },
+  {
+   "slug": "country-group",
+   "term": "Country Group",
+   "def": "The US export regulations sort every country into lettered groups with numbered subgroups (A, B, D, E), and the group sets how strictly exports to that country are controlled. A:5 holds close allies with the fewest licence requirements; the D groups mark national-security, weapons or other concerns and require licences for advanced chips. Moving a country between groups changes what can be shipped to it without a licence.",
+   "aliases": [
+    "Country Groups",
+    "Country Group D:3",
+    "Country Group D:4"
    ]
   },
   {
@@ -3730,6 +3793,14 @@
    ]
   },
   {
+   "slug": "early-contractor-involvement",
+   "term": "early contractor involvement",
+   "def": "A procurement route in which a contractor is appointed while the design is still being developed, before price and scope are final, to help plan the build. The construction contract is negotiated afterwards. Selection for ECI is therefore not a construction award.",
+   "aliases": [
+    "ECI"
+   ]
+  },
+  {
    "slug": "easement",
    "term": "easement",
    "def": "A landowner's grant of a right to use a strip of land — for a transmission line, the right to build and maintain towers and conductors across a farm. A long line needs thousands; the ones a developer cannot buy voluntarily are the ones it seeks by eminent domain.",
@@ -3923,6 +3994,15 @@
    ]
   },
   {
+   "slug": "end-use-controls",
+   "term": "end-use controls",
+   "def": "Export restrictions that apply because of who will use an item or what it will be used for — a listed company, a military or weapons end use — rather than because of the destination country. They stay in force when a country moves to a more favourable country group.",
+   "aliases": [
+    "end-user controls",
+    "Part 744"
+   ]
+  },
+  {
    "slug": "energization",
    "term": "energization",
    "def": "The moment new electrical infrastructure is first put under live voltage and proven, with the utility present. It is the line between contracted megawatts and connected ones: before it, a connection agreement is a promise; after it, power can actually flow, and every schedule upstream of it is measured against this date.",
@@ -4022,6 +4102,14 @@
    "slug": "energy-plus-load",
    "term": "energy-plus-load",
    "def": "Placing a large new electricity consumer — typically a data centre — at a site that already holds a grid connection built for generation or storage, so the consumer inherits the connection rather than joining the queue for a new one. The scarce asset being monetised is the interconnection position, not the equipment."
+  },
+  {
+   "slug": "energy-retailer",
+   "term": "energy retailer",
+   "def": "The company that sells electricity to end customers, buying it from generators or the wholesale market and carrying the price risk in between. A large data centre can buy through a retailer or sign directly with a generator; either way, someone has to firm the supply for the hours renewables cannot cover.",
+   "aliases": [
+    "electricity retailer"
+   ]
   },
   {
    "slug": "energy-storage-service-agreement",
@@ -4299,6 +4387,15 @@
     "excitation system"
    ],
    "def": "The DC current fed to a synchronous machine's rotor winding to create its magnetic field. Raising it lifts the output voltage and the reactive power the machine supplies; the automatic voltage regulator adjusts it continuously, and it is how a rotary UPS or a synchronous condenser holds voltage through a disturbance."
+  },
+  {
+   "slug": "exclusive-supply-agreement",
+   "term": "exclusive supply agreement",
+   "def": "A contract that makes one vendor the only supplier of a category of equipment to a buyer, usually for a region or a pipeline of projects. It secures capacity and price for the buyer and volume for the vendor, and it closes that category to every other vendor for the term.",
+   "aliases": [
+    "exclusive supplier",
+    "exclusivity"
+   ]
   },
   {
    "slug": "exit-fee",
@@ -5289,6 +5386,15 @@
    ]
   },
   {
+   "slug": "gpu-as-a-service",
+   "term": "GPU-as-a-service",
+   "def": "Renting GPU computing by the hour, or on a reserved multi-year contract, instead of buying and running the servers. The provider owns the GPUs, the building and the power supply; the customer pays for time on them.",
+   "aliases": [
+    "GPUaaS",
+    "GPU as a service"
+   ]
+  },
+  {
    "slug": "gpu-cluster",
    "term": "GPU cluster",
    "def": "A large number of accelerators wired together with a high-speed network so they can work on one job. What makes it a cluster rather than a pile of servers is the interconnect and the software that keeps thousands of chips in step."
@@ -5950,6 +6056,15 @@
    "aliases": [
     "imbalance",
     "imbalance cost"
+   ]
+  },
+  {
+   "slug": "immersion-cooling",
+   "term": "immersion cooling",
+   "def": "Cooling servers by submerging them in a tank of electrically insulating liquid that carries heat away from every component. Single-phase immersion keeps the liquid liquid throughout. It removes fans but needs tanks, special handling and servers qualified for the fluid, which is one reason most large GPU builds chose direct-to-chip cold plates instead.",
+   "aliases": [
+    "immersion-cooled",
+    "single-phase immersion"
    ]
   },
   {
@@ -7268,6 +7383,14 @@
    ]
   },
   {
+   "slug": "maximum-demand",
+   "term": "maximum demand",
+   "def": "The highest power a site is permitted, or expected, to draw from the grid, in MW or MVA. The grid connection is sized for it, and it is larger than the critical IT load because it also covers cooling, conversion losses and building services.",
+   "aliases": [
+    "max demand"
+   ]
+  },
+  {
    "slug": "mcs",
    "term": "MCS",
    "def": "Megawatt Charging System: the SAE J3271 / IEC 63379 standard for charging heavy-duty electric vehicles — trucks, buses, port equipment, vessels — through a liquid-cooled connector rated up to 1,250 V DC and 3,000 A, or 3.75 MW. At that power a single charger draws as much as a small factory, which is why megawatt charging is a medium-voltage problem.",
@@ -7687,6 +7810,15 @@
    "def": "A contractual or market requirement that a resource make its capability available to the system operator whenever it is physically able, rather than choosing to sit out. It is what makes a capacity payment meaningful: the buyer is paying for the certainty of being able to call on the resource."
   },
   {
+   "slug": "mva",
+   "term": "MVA",
+   "def": "Megavolt-amperes: a million volt-amperes, the unit of apparent power used to rate transformers, substations and grid connections. Real power in MW is MVA multiplied by the power factor, so a 2,000 MVA supply point delivers somewhat less than 2,000 MW of useful power.",
+   "aliases": [
+    "megavolt-ampere",
+    "megavolt-amperes"
+   ]
+  },
+  {
    "slug": "n-minus-1",
    "term": "N-1",
    "def": "The planning rule that a network must survive losing any single element without shedding load. It is why transmission looks over-built on a normal day, and why one outage can make a region's apparent spare capacity vanish at once.",
@@ -8064,6 +8196,16 @@
     "uprates",
     "extended power uprate",
     "measurement uncertainty recapture"
+   ]
+  },
+  {
+   "slug": "nvl72",
+   "term": "NVL72",
+   "def": "NVIDIA's rack-scale system in which 72 GPUs are linked by NVLink into a single computing domain inside one liquid-cooled rack drawing well over 100 kW. The rack, not the individual server, becomes the unit a data centre's power and cooling are designed around.",
+   "aliases": [
+    "GB300 NVL72",
+    "Vera Rubin NVL72",
+    "NVL72 rack"
    ]
   },
   {
@@ -8978,6 +9120,15 @@
     "DrMOS",
     "integrated power stage",
     "smart power stage"
+   ]
+  },
+  {
+   "slug": "power-train",
+   "term": "power train",
+   "def": "In a data centre, the chain of electrical equipment that carries power from the grid connection to the racks: high-voltage substation, transformers, medium- and low-voltage switchgear, UPS and distribution. It is often delivered as repeated modular blocks, one per slice of capacity.",
+   "aliases": [
+    "power train unit",
+    "power trains"
    ]
   },
   {
@@ -10921,6 +11072,15 @@
     "land control",
     "option to lease",
     "land option"
+   ]
+  },
+  {
+   "slug": "site-hardening",
+   "term": "site hardening",
+   "def": "Designing a facility to survive physical attack or disaster: blast-resistant structures, protected or buried plant, air defence, and dispersal of capacity across several sites so that no single strike takes it all out. It adds cost and can change the electrical design, because each dispersed site needs its own supply.",
+   "aliases": [
+    "physical hardening",
+    "hardened data centre"
    ]
   },
   {
@@ -13007,6 +13167,15 @@
    "def": "A gas's heating value divided by the square root of its relative density, which predicts how much heat it will deliver through a given burner at a given pressure. Two gases with the same value are interchangeable without re-tuning, so a machine's declared Wobbe band is the real measure of how much fuel variation it can absorb.",
    "aliases": [
     "Wobbe number"
+   ]
+  },
+  {
+   "slug": "work-order",
+   "term": "work order",
+   "def": "An instruction issued under a framework contract that authorises one piece of work — a phase, a hall, a quantity — on the framework's agreed terms. The framework sets the rules, but only work orders commit money, so a framework's headline value is a ceiling rather than a guarantee.",
+   "aliases": [
+    "work orders",
+    "call-off order"
    ]
   },
   {

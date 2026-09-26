@@ -1,0 +1,475 @@
+{
+ "schemaVersion": 2,
+ "slug": "firmus",
+ "title": "Firmus — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "capacity-not-space",
+   "title": "Selling capacity, not space",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A data-centre landlord leases halls and the tenant brings its own servers. A {{neocloud}} owns the GPUs and rents computing on them — by the hour, reserved, or as dedicated capacity on multi-year contracts ({{GPU-as-a-service}}). Firmus is the second kind. Press contrasts it with a landlord because 'it supplies customers with access to Nvidia chips rather than requiring them to bring their own'.",
+    "What it builds is an {{AI factory}}: a hall designed from the start for training and running AI models, around racks of tightly coupled GPUs. Its building block, the HyperCube, is 'designed to house 32 NVL racks'. An {{NVL72}} rack joins 72 GPUs into one computing domain and draws well over 100 kW, so the rack, not the server, is what the power and cooling are designed around.",
+    "Firmus is also unusual among neoclouds in owning the top of its power chain. It builds and pays for its own connection substations, orders its power train from a factory, runs its UPS batteries on the grid, and contracts for firmed energy. Each of those is a separate lesson below, and each is a separate door — or a closed one — for an equipment seller."
+   ]
+  },
+  {
+   "id": "three-megawatts",
+   "title": "Three megawatts for every campus",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Every campus carries at least three megawatt figures, and they measure different things. Compare like with like.",
+   "cols": [
+    "Figure",
+    "What it measures",
+    "Example from this company's record"
+   ],
+   "rows": [
+    [
+     "Critical IT load",
+     "What the servers themselves draw — the figure a tenant or GPU count is sized on",
+     "About 1.0 GW at one proposed South Australian campus; 84 MW at the Tasmanian flagship"
+    ],
+    [
+     "Maximum demand",
+     "The most the whole site may draw from the grid: IT plus cooling, conversion losses and building services",
+     "288 MW for a second Tasmanian site, approved in August 2026"
+    ],
+    [
+     "Connection capacity",
+     "What the grid link and substation are sized for, with headroom",
+     "About 1.2 GW against about 1.0 GW of IT at the first South Australian campus; about 1.5 GW against 1.3 GW at the second"
+    ],
+    [
+     "Contracted capacity",
+     "Megawatts customers have signed for — a sales figure, mostly in buildings not yet finished",
+     "More than 900 MW across all customers, against two operating sites"
+    ]
+   ]
+  },
+  {
+   "id": "capacity-ladder",
+   "title": "Seven megawatt figures, seven meanings",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW",
+   "intro": "Figures from this company's record, drawn to scale. They are not the same kind of megawatt, which is the lesson.",
+   "items": [
+    {
+     "label": "Proposed campus, South Australia",
+     "sub": "critical IT; no planning approval yet",
+     "v": 1300
+    },
+    {
+     "label": "Proposed campus, South Australia",
+     "sub": "critical IT; no planning approval yet",
+     "v": 1000
+    },
+    {
+     "label": "Contracted customer capacity",
+     "sub": "all customers, 8 Sep 2026 — a sales figure",
+     "v": 900
+    },
+    {
+     "label": "Firm electricity supply contract",
+     "sub": "12 years from mid-2027",
+     "v": 600
+    },
+    {
+     "label": "Indonesian campus with a regional developer",
+     "sub": "up to; under development",
+     "v": 360
+    },
+    {
+     "label": "Tasmanian site",
+     "sub": "maximum demand, approved Aug 2026",
+     "v": 288
+    },
+    {
+     "label": "Tasmanian flagship",
+     "sub": "critical IT; completing late 2026",
+     "v": 84
+    }
+   ],
+   "note": "Company figures, except the maximum demand (council approval report). Only the smallest bar is an owned campus due in service this year; the largest three are proposals and contracts."
+  },
+  {
+   "id": "cooling-generations",
+   "title": "Air, immersion, direct-to-chip",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Three ways to take heat off a GPU. The company used the second in 2023 and the third now.",
+   "cols": [
+    "Method",
+    "How the heat leaves",
+    "What it demands",
+    "Where it fits"
+   ],
+   "rows": [
+    [
+     "Air",
+     "Fans blow air over heat sinks; the room's air is cooled",
+     "Huge air volumes at high rack power",
+     "Racks of a few tens of kW"
+    ],
+    [
+     "Immersion",
+     "The whole server sits in a tank of insulating fluid — {{immersion cooling}}",
+     "Tanks, fluid handling, servers qualified for the fluid",
+     "The company's 2023 generation: 'multiple modularised 1MW HyperCubes'"
+    ],
+    [
+     "Direct-to-chip",
+     "Cold plates on the GPUs carry a coolant loop; a {{CDU}} hands the heat to the building loop — {{direct liquid cooling}}",
+     "Plumbing to every rack; clean, controlled coolant",
+     "The current generation, for GB300 and Vera Rubin racks"
+    ]
+   ]
+  },
+  {
+   "id": "pue-and-water",
+   "title": "PUE, dry coolers and water",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**PUE.** {{PUE}} is total facility power divided by IT power. At 1.0 all the power would reach the servers. The company claims 1.1 and targets 1.15 or less, against a national 5-star benchmark of 1.40. At 84 MW of IT, a PUE of 1.1 means about 92 MW for the whole site.",
+    "**Dry coolers.** A {{dry cooler}} is a large radiator with fans. It rejects heat to outside air without evaporating water, which works whenever the air is cooler than the coolant. Liquid cooling runs warm enough that this is most of the year in a cool climate. The company says its greenfield campus runs without water for more than 350 days a year.",
+    "**Why it matters to the power chain.** Every watt not spent on cooling is a watt of the grid connection that can go to GPUs. At gigawatt scale, a tenth off the PUE is tens of megawatts."
+   ]
+  },
+  {
+   "id": "power-train",
+   "title": "The power train, grid to rack",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The {{power train}} is the chain of electrical equipment between the grid and the racks. The right-hand column shows who stands at each stage on this company's Australian sites, as far as the record shows.",
+   "cols": [
+    "Stage",
+    "What it does",
+    "On the record here"
+   ],
+   "rows": [
+    [
+     "Connection {{substation}} and switchyard",
+     "Takes power from the transmission grid and steps it down; protects the site from grid faults and the grid from the site",
+     "The company builds, pays for and owns them: 'We are building and paying for our own connection substations up front'"
+    ],
+    [
+     "Transformers and {{switchgear}}",
+     "Step medium voltage down and route it; isolate faults",
+     "Inside the Firmus Power Cube, a modular power-train block made by one manufacturer under an exclusive agreement"
+    ],
+    [
+     "Standby generation",
+     "Carries the site when the grid fails ({{backup generator}})",
+     "Named in the power-train manufacturer's stated scope; planning documents show 40 diesel units at one site and more than a hundred at another"
+    ],
+    [
+     "{{UPS}} and batteries",
+     "Bridge the seconds until generators start; clean the supply",
+     "A company subsidiary's platform, built on Eaton's EnergyAware UPS, which also sells frequency services"
+    ],
+    [
+     "Rack distribution",
+     "Delivers power to the racks and their {{power shelf}} units",
+     "'Rack-level electrical with CDU-fed systems and no {{PDU}} overhead', with about 15% less loss per megawatt claimed"
+    ],
+    [
+     "Firming storage",
+     "Covers the hours renewables cannot",
+     "Owned by third parties and bought as firmed supply under contract"
+    ]
+   ]
+  },
+  {
+   "id": "who-signs-the-order",
+   "title": "Who signs the order — and who cannot",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**One vendor, by contract.** The power-train manufacturer's stock-exchange filings describe a {{master service agreement}} making it 'the exclusive supplier of power train units for Firmus' Australian pipeline'. Money moves through {{work order}} instructions under that agreement: A$200M for the Tasmanian flagship, then A$855M in August 2026 over 18 months.",
+    "**What exclusivity does.** An {{exclusive supply agreement}} buys the customer factory capacity and a fixed partner; it gives the vendor volume. For every other vendor it closes the category for the term. Here the category is the whole power train, from substation equipment to standby generation.",
+    "**The price of a megawatt.** The manufacturer benchmarks the work at about A$200M per 100 MW — about A$2M per megawatt for the electrical chain alone. At that rate A$855M is roughly 430 MW. That figure is arithmetic on the benchmark, not a disclosed number.",
+    "**The open doors.** Components inside the Power Cube, which the manufacturer sources; the UPS and batteries; the behind-the-meter storage trial; and the sites outside Australia, which the exclusivity does not reach."
+   ]
+  },
+  {
+   "id": "ups-on-the-grid",
+   "title": "UPS batteries that hold the grid's frequency",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Australia's grid runs at 50 Hz. When supply and demand match, frequency holds. When a large generator trips, demand exceeds supply, the spinning machines slow and the frequency falls. The market operator buys fast responses to catch it — {{FCAS}}, with {{fast frequency response}} reacting in about a second. Batteries, which have no moving parts, dominate the fastest of these markets.",
+    "A data centre's {{UPS}} batteries exist to carry the site for the seconds before the generators take over, and they sit idle almost all the time. A grid-interactive UPS reserves enough charge for that job and sells the rest as frequency response. The company's subsidiary runs this on Eaton's EnergyAware UPS platform and delivered certified fast frequency response into the national market from a Tasmanian site in April 2025. The company says its UPS systems are 'engineered to deliver FCAS, load modulation, and firming capacity'.",
+    "The load can flex too. The company's energy policy commits it to {{demand response}} of up to 220 hours a year when the grid is short. To a grid operator a gigawatt data centre looks like a new city arriving at once, and a load that steadies frequency and steps back at the peak is easier to connect."
+   ]
+  },
+  {
+   "id": "energy-and-power",
+   "title": "Energy against power: MW and MWh",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Power, in megawatts, is how fast energy flows. Energy, in megawatt-hours, is how much of it there is. A 200 MW battery can deliver 200 MW; holding 800 MWh, it can keep that up for 800 ÷ 200 = 4 hours. That ratio is its {{duration}}, and it decides which jobs the battery can do: seconds for frequency, hours for the evening peak.",
+    "{{Firming}} means adding something controllable — batteries, gas or hydro — so a flat, round-the-clock load is met in the hours sun and wind cannot cover. Tasmania's grid is mostly hydro, which is firm by nature. South Australia's is mostly wind and solar, so there firming has to be bought.",
+    "The company's energy policy requires suppliers to deliver 'at least 2.5 MWh of new firming capacity for every 1 MW' of its load. Its South Australian deal, 600 MW of firm electricity for 12 years from mid-2027, commits the supplier to underwrite 1.5 GWh of new battery storage by 2032. That matches the rule exactly: 600 MW × 2.5 MWh per MW = 1,500 MWh. The first battery named is 200 MW / 800 MWh and {{grid-forming}}, a 4-hour asset owned by its developer."
+   ]
+  },
+  {
+   "id": "firming-choices",
+   "title": "Buy the firmed supply, or own the battery?",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "Two ways a data centre can get round-the-clock clean power. This company uses the first at scale and is trialling the second.",
+   "cards": [
+    {
+     "t": "Buy firmed supply under contract",
+     "meta": "a supplier or {{energy retailer}} carries the storage",
+     "adv": [
+      "No battery capital on the data centre's balance sheet",
+      "The supplier pools storage across many customers and markets",
+      "A long contract makes the supplier's storage financeable"
+     ],
+     "dis": [
+      "The data centre pays a premium for firmness",
+      "Delivery depends on third-party projects arriving on time",
+      "No control over which storage is built or who supplies it"
+     ]
+    },
+    {
+     "t": "Own storage {{behind-the-meter}}",
+     "meta": "batteries on the site's side of the meter",
+     "adv": [
+      "Can replace part of the diesel backup fleet",
+      "Rides through outages and earns grid services",
+      "Control over design, including a DC-coupled one"
+     ],
+     "dis": [
+      "Capital and operating risk sit with the data centre",
+      "A backup role limits how much can be traded",
+      "Still unproven at this scale — hence a 26 MW trial, with the company paying all costs"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "where-800vdc-comes-in",
+   "title": "Where 800 VDC or an SST would come in",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Today's chain converts power many times. Medium-voltage AC meets a 50 Hz transformer and becomes low-voltage AC; the UPS turns it into DC and back; each rack's power shelves rectify it again to the low DC voltage the GPUs use. Every conversion loses a percent or two and takes floor space.",
+    "{{800 VDC}} distributes direct current at 800 V to the rack instead of low-voltage AC. At the same power, higher voltage means less current, so thinner copper and lower losses — decisive once one rack draws hundreds of kilowatts. NVIDIA has said the architecture arrives with later, higher-power rack generations. An {{SST}} does the medium-voltage-to-DC step with high-frequency power electronics instead of an iron transformer and a rectifier, and gives a DC bus that batteries can join directly.",
+    "Nothing in this company's published designs mentions either. Its stated architecture is 'rack-level electrical with CDU-fed systems and no PDU overhead', and neither its own site nor its energy subsidiary's mentions SSTs, 800 VDC or HVDC. That is an inference from absence, and one announcement could end it. If a DC design appears, the likeliest places are the sites outside Australia, built to NVIDIA reference designs for Vera Rubin racks and outside the Australian power-train exclusivity, and the behind-the-meter battery trial."
+   ]
+  },
+  {
+   "id": "neocloud-map",
+   "title": "Where a neocloud sits in the market",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Three ways to sell AI computing capacity. The buyer of the power equipment changes with the model.",
+   "cols": [
+    "Model",
+    "Who owns the GPUs",
+    "Who owns the building and power chain",
+    "Who orders the power equipment"
+   ],
+   "rows": [
+    [
+     "Hyperscaler",
+     "The hyperscaler",
+     "The hyperscaler, or a landlord it leases from",
+     "The hyperscaler, or its landlord to the hyperscaler's specification"
+    ],
+    [
+     "{{Wholesale colocation}} landlord",
+     "The tenant",
+     "The landlord",
+     "The landlord, often from the tenant's approved list"
+    ],
+    [
+     "Neocloud that leases",
+     "The neocloud",
+     "A landlord",
+     "The landlord"
+    ],
+    [
+     "Neocloud that builds — this company",
+     "The neocloud",
+     "The neocloud",
+     "The neocloud, or a vendor it has contracted the whole chain to"
+    ]
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Reading contracted megawatts as built ones.** More than 900 MW is signed, against two operating sites; the first owned campus completes in late 2026.",
+    "**Comparing different megawatts.** Critical IT, maximum demand, connection capacity and contracted capacity are four different numbers, even for the same site.",
+    "**Pitching the Australian power train to the company.** It is contracted exclusively to one manufacturer; the door there is as a component supplier to that manufacturer.",
+    "**Assuming the company buys the firming batteries.** Third parties own them; the company buys firmed supply.",
+    "**Treating immersion as the current platform.** The company's cooling moved to direct-to-chip.",
+    "**Reading silence on 800 VDC as a decision against it.** Nothing has been said either way; the sites outside Australia are where to watch.",
+    "**Taking the 15% loss saving as measured.** It is the company's own claim."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What does a neocloud sell that a colocation landlord does not?",
+     "a": "Time on GPUs it owns — on demand, reserved or as dedicated multi-year capacity. A landlord sells powered, cooled space and the tenant brings its own servers."
+    },
+    {
+     "q": "Why is the rack, not the server, the unit an AI factory is designed around?",
+     "a": "An NVL72 rack joins 72 GPUs into one computing domain and draws well over 100 kW, so power, cooling and floor loading are planned rack by rack."
+    },
+    {
+     "q": "Name the three megawatt figures a campus carries, from smallest to largest.",
+     "a": "Critical IT load (the servers), maximum demand (IT plus cooling, losses and building services), and connection capacity (what the grid link is sized for, with headroom)."
+    },
+    {
+     "q": "Why did GPU cooling move from immersion tanks to direct-to-chip cold plates?",
+     "a": "The GPU maker's liquid-cooled racks are built around cold plates and coolant distribution units; tanks need special handling and fluid-qualified servers, so they became the exception."
+    },
+    {
+     "q": "What does a dry cooler need in order to work without water?",
+     "a": "Outside air cooler than the coolant. Warm-water liquid cooling makes that true for most of the year in a cool climate."
+    },
+    {
+     "q": "What is a data centre's power train?",
+     "a": "The chain of electrical equipment from the grid connection to the racks: substation, transformers, switchgear, UPS and distribution — often delivered as repeated factory-built blocks."
+    },
+    {
+     "q": "What does an exclusive supply agreement do to other vendors?",
+     "a": "It closes the category to them for the term. Their route in becomes supplying components to the exclusive vendor, or selling to sites the exclusivity does not cover."
+    },
+    {
+     "q": "How can a UPS battery earn money without weakening its backup role?",
+     "a": "It keeps a reserve sized for the ride-through to the generators and sells only the charge above that reserve as fast frequency response."
+    },
+    {
+     "q": "What is a battery's duration?",
+     "a": "Energy divided by power: an 800 MWh, 200 MW battery can deliver full power for 4 hours."
+    },
+    {
+     "q": "What does 2.5 MWh of firming per MW of load mean for a 600 MW supply?",
+     "a": "1,500 MWh — 1.5 GWh — of new firming storage."
+    },
+    {
+     "q": "What would 800 VDC change in the power train?",
+     "a": "It replaces low-voltage AC distribution and repeated conversions with direct current at 800 V to the rack: less current at the same power, so less copper and lower losses."
+    },
+    {
+     "q": "What does an SST replace?",
+     "a": "The 50 Hz medium-voltage transformer and the rectifier after it, with high-frequency power electronics that output DC directly."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A campus has 1.0 GW of critical IT load and a 1.2 GW grid connection. What is the other 0.2 GW for?",
+     "c": [
+      "Spare GPUs",
+      "Cooling, conversion losses, building services and headroom",
+      "Battery charging only",
+      "Nothing — the figures are rounding"
+     ],
+     "a": 1,
+     "why": "The connection carries the whole site. {{Critical IT load}} is only what the servers draw; {{maximum demand}} and connection capacity sit above it."
+    },
+    {
+     "q": "A neocloud reports 900 MW of contracted capacity and two operating sites. What does the 900 MW tell you?",
+     "c": [
+      "How much it has built",
+      "How much it has signed with customers, mostly not yet built",
+      "Its grid connection",
+      "Its maximum demand"
+     ],
+     "a": 1,
+     "why": "{{Contracted capacity}} is a sales figure; the build is measured site by site."
+    },
+    {
+     "q": "At a PUE of 1.1, how much does an 84 MW IT load draw in total?",
+     "c": [
+      "About 76 MW",
+      "84 MW",
+      "About 92 MW",
+      "About 118 MW"
+     ],
+     "a": 2,
+     "why": "{{PUE}} = total ÷ IT, so total = 84 × 1.1 ≈ 92 MW."
+    },
+    {
+     "q": "A 200 MW battery holds 800 MWh. How long can it deliver full power?",
+     "c": [
+      "0.25 hours",
+      "4 hours",
+      "8 hours",
+      "200 hours"
+     ],
+     "a": 1,
+     "why": "{{Duration}} = energy ÷ power = 800 ÷ 200 = 4 hours."
+    },
+    {
+     "q": "A buyer's policy requires 2.5 MWh of new firming per MW of load. How much storage does a 600 MW supply deal imply?",
+     "c": [
+      "240 MWh",
+      "600 MWh",
+      "1,500 MWh",
+      "2,500 MWh"
+     ],
+     "a": 2,
+     "why": "600 × 2.5 = 1,500 MWh, or 1.5 GWh — the storage the supplier committed to underwrite."
+    },
+    {
+     "q": "The whole Australian power train is contracted exclusively to one manufacturer. Where does a switchgear maker start?",
+     "c": [
+      "With the data-centre company's procurement team",
+      "With the manufacturer, as a component supplier",
+      "With the grid operator",
+      "With the GPU supplier"
+     ],
+     "a": 1,
+     "why": "An {{exclusive supply agreement}} closes the category; the manufacturer sources the components inside its blocks."
+    },
+    {
+     "q": "Why can a grid-interactive UPS sell frequency response?",
+     "c": [
+      "It has more batteries than it needs for backup, above a reserve",
+      "It runs on diesel",
+      "It is disconnected from the site",
+      "Frequency services need no energy"
+     ],
+     "a": 0,
+     "why": "It keeps a ride-through reserve and offers the charge above it; {{fast frequency response}} events are short."
+    },
+    {
+     "q": "What most distinguishes an SST from a transformer-rectifier?",
+     "c": [
+      "Its output voltage",
+      "Its efficiency",
+      "Isolation in a high-frequency power-electronic stage instead of a 50 Hz iron transformer",
+      "Being factory-built"
+     ],
+     "a": 2,
+     "why": "Output voltage and prefabrication do not decide the class; the isolation stage does — the defining trait of an {{SST}}."
+    }
+   ]
+  }
+ ]
+}

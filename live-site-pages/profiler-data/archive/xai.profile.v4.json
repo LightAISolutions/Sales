@@ -116,7 +116,7 @@
    "date": "2025-11-19",
    "category": "partnership",
    "headline": "HUMAIN partnership: 500+ MW Saudi AI data-center network — xAI's largest facility outside the US, NVIDIA principal chip supplier (~18,000 GB300s first cluster)",
-   "read": "The Gulf expansion lands with PIF capital attached — HUMAIN confirmed a US$3B investment in xAI's Series E on 18 Feb 2026, first reported in trade press at the time.",
+   "read": "The Gulf expansion lands with PIF capital attached — trade reporting also cites a $3B HUMAIN investment in xAI.",
    "source": "https://w.media/elon-musks-xai-to-build-500-mw-data-center-in-saudi-arabia/"
   },
   {
@@ -191,17 +191,6 @@
    "status": "historical",
    "since": "2024-06",
    "scale": "~35 MW bridge"
-  },
-  {
-   "slug": "humain",
-   "type": "supplier",
-   "status": "announced",
-   "since": "2025-11",
-   "scale": "flagship '500 MW+' facility; HUMAIN's US$3B Series E investment",
-   "via": "GPU data centres designed, built and operated by HUMAIN",
-   "note": "HUMAIN is to design, build and operate a network of Saudi GPU data centres for xAI, anchored by a '500 MW+' flagship, and invested US$3B in xAI's Series E.",
-   "context": "The 19 Nov 2025 framework combines 'HUMAIN's low-cost value proposition in infrastructure design, construction, and operations with xAI's leadership in frontier AI systems'. No site, owner split or builder is disclosed. Saudi Arabia's Communications Minister said at LEAP 2026 the expansion would start at 50 MW and grow to 500 MW.\n\nHUMAIN confirmed its US$3B Series E investment on 18 Feb 2026 and says the holding converted into SpaceX shares after the merger.",
-   "source": "https://www.prnewswire.com/news-releases/humain-and-xai-partner-to-build-next-generation-ai-compute-power-and-deploy-grok-in-the-kingdom-to-support-the-most-ai-enabled-nation-objectives-302620677.html"
   }
  ],
  "technicalSpecs": [
@@ -385,11 +374,6 @@
    "date": "2026-03-10"
   },
   {
-   "label": "HUMAIN (PR Newswire) — HUMAIN backs xAI with $3 billion Series E investment ahead of historic SpaceX merger",
-   "url": "https://www.prnewswire.com/news-releases/humain-backs-xai-with-3-billion-series-e-investment-ahead-of-historic-spacex-merger-302691510.html",
-   "date": "2026-02-18"
-  },
-  {
    "label": "xAI — xAI joins SpaceX announcement",
    "url": "https://x.ai/news/xai-joins-spacex",
    "date": "2026-02-02"
@@ -425,11 +409,6 @@
    "date": "2025-11-20"
   },
   {
-   "label": "HUMAIN (PR Newswire) — HUMAIN and xAI partner to build next-generation AI compute power and deploy Grok in the Kingdom (500 MW+ framework)",
-   "url": "https://www.prnewswire.com/news-releases/humain-and-xai-partner-to-build-next-generation-ai-compute-power-and-deploy-grok-in-the-kingdom-to-support-the-most-ai-enabled-nation-objectives-302620677.html",
-   "date": "2025-11-19"
-  },
-  {
    "label": "GSA — OneGov agreement with xAI",
    "url": "https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-xai-partner-to-accelerate-federal-ai-adoption-09252025",
    "date": "2025-09-25"
@@ -453,6 +432,6 @@
    "url": "https://x.ai/memphis"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

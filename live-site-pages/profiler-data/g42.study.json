@@ -1,0 +1,460 @@
+{
+ "schemaVersion": 2,
+ "slug": "g42",
+ "title": "G42 — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "one-group-three-roles",
+   "title": "Landlord, builder and neocloud in one group",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "G42 is a state-aligned technology group in Abu Dhabi. Three of its roles matter for data-centre power, and they are different businesses. Its landlord arm, Khazna, 'designs, builds and operates wholesale data centers' — {{wholesale colocation}} at a scale of 30 live sites and almost 650 MW, with more than 1 GW more in development. Its {{neocloud}}, Core42, sells {{sovereign compute}}: GPU capacity and government-grade clouds, much of it in space leased from other landlords.",
+    "The third role is the flagship. Stargate UAE is 'a 1-gigawatt compute cluster' that 'will be built by G42 and operated by OpenAI and Oracle', inside a planned 5 GW campus. G42's construction update says it is 'being developed by Khazna'. The landlord arm builds it, and foreign operators run the computing.",
+    "The lesson for a seller is where the purchase order comes from. The landlord that designs and builds orders the power chain. A neocloud that leases buys servers, not substations. The group's holding company and its other businesses buy neither."
+   ]
+  },
+  {
+   "id": "who-buys",
+   "title": "Which arm buys the power chain",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Four parts of the group, and what each one buys.",
+   "cols": [
+    "Arm",
+    "What it does",
+    "Buys power equipment?",
+    "On the record"
+   ],
+   "rows": [
+    [
+     "Landlord (Khazna)",
+     "Designs, builds and operates wholesale data centres",
+     "Yes — it builds the halls",
+     "Own debt, own land, own main contractors; building Stargate UAE"
+    ],
+    [
+     "Neocloud (Core42)",
+     "Rents GPU capacity and sovereign clouds",
+     "No — it leases powered space and buys IT",
+     "60 MW of critical IT leased at a New York campus"
+    ],
+    [
+     "Flagship operators",
+     "Run the computing at Stargate UAE",
+     "No — the landlord arm builds for them",
+     "OpenAI and Oracle"
+    ],
+    [
+     "Other group companies",
+     "Analytics, satellites, health, cyber security",
+     "Not on the record",
+     "No data-centre power role"
+    ]
+   ]
+  },
+  {
+   "id": "wholesale-standard",
+   "title": "The Gulf wholesale standard",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "A landlord standardises its halls so it can build them over and over. The features of this one's design, and what each implies for its power chain.",
+   "cols": [
+    "Feature",
+    "What it means",
+    "What it implies for power equipment"
+   ],
+   "rows": [
+    [
+     "Halls up to 50 MW",
+     "A room of racks on shared power and cooling",
+     "Large, repeated transformer and switchgear blocks per hall"
+    ],
+    [
+     "AI clusters up to 250 MW",
+     "Several halls networked to work as one machine",
+     "Many halls energised on one schedule, and a large site connection"
+    ],
+    [
+     "Also 5 MW halls",
+     "One 100 MW site is built as 20 liquid-cooled halls of 5 MW",
+     "Small blocks energised one by one as tenants arrive"
+    ],
+    [
+     "Tier III ({{uptime tier}})",
+     "Every power and cooling path can be maintained without dropping the IT load",
+     "Redundant transformers, UPS strings and generators as standard"
+    ],
+    [
+     "Modular build",
+     "Repeated factory-built blocks assembled on site ({{offsite fabrication}})",
+     "Favours {{power skid}} and {{e-house}} designs that ship tested"
+    ]
+   ]
+  },
+  {
+   "id": "cooling-hot-climate",
+   "title": "Cooling where summer air is hotter than the coolant",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The problem.** A {{dry cooler}} works only when outside air is cooler than the coolant. On a Gulf summer afternoon it often is not.",
+    "**Adiabatic free cooling.** {{Adiabatic cooling}} sprays water to pre-cool the incoming air on the hottest days and runs dry the rest of the year, so water is spent only when it is needed.",
+    "**Liquid-to-liquid.** Heat moves from chip cold plates to the building's water loop without passing through room air ({{direct liquid cooling}}). The landlord names 'adiabatic free cooling and liquid-to-liquid cooling solutions', and one site has 7 MW of solar generation of its own.",
+    "**Why the power chain cares.** Hotter design days mean more cooling power at peak, so {{maximum demand}}, not average demand, sizes the connection."
+   ]
+  },
+  {
+   "id": "capacity-ladder",
+   "title": "The megawatts, from lease to campus",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW",
+   "intro": "Figures from the group's record, drawn to scale. Each label says which kind of megawatt it is.",
+   "items": [
+    {
+     "label": "Planned campus",
+     "sub": "5 GW; siting under review",
+     "v": 5000
+    },
+    {
+     "label": "Stargate UAE cluster",
+     "sub": "1 GW, built by the landlord arm",
+     "v": 1000
+    },
+    {
+     "label": "Landlord's new pipeline",
+     "sub": "more than 1 GW in development",
+     "v": 1000
+    },
+    {
+     "label": "Landlord's live portfolio",
+     "sub": "30 data centres, almost 650 MW",
+     "v": 650
+    },
+    {
+     "label": "Stargate UAE first phase",
+     "sub": "targeted for 2026; long-lead equipment bought",
+     "v": 200
+    },
+    {
+     "label": "Hyperscaler expansion",
+     "sub": "being delivered from end-2026",
+     "v": 200
+    },
+    {
+     "label": "Liquid-cooled site",
+     "sub": "20 halls of 5 MW",
+     "v": 100
+    },
+    {
+     "label": "Neocloud's leased capacity",
+     "sub": "critical IT at another landlord's campus",
+     "v": 60
+    }
+   ],
+   "note": "Company figures, and the landlord's filing for the lease. The campus and pipeline bars are plans, while the live portfolio and the lease are in service."
+  },
+  {
+   "id": "gigawatt-energy",
+   "title": "What a gigawatt campus needs",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "One gigawatt running every hour of a year is 1 GW × 8,760 hours = 8,760 GWh, about 8.8 TWh — what one large power station would produce running flat out all year. The campus behind Stargate UAE is planned at 5 GW on 10 square miles, 'powered by nuclear, solar, and natural gas'.",
+    "Each fuel does a different job. Nuclear is {{baseload}}: it runs flat out round the clock, which matches a flat data-centre load. Solar is cheap by day and absent at night. Gas is {{dispatchable}}: it follows the load and covers the hours the others cannot. A nuclear-and-gas mix needs batteries for seconds and minutes, not for the whole night.",
+    "Abroad the mix differs. A joint-venture plan in Italy would draw on a {{combined-cycle}} gas plant designed with {{carbon capture}}. The utility counterparty for the UAE campus is not named in any first-party source."
+   ]
+  },
+  {
+   "id": "fuel-jobs",
+   "title": "Three fuels, three jobs",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Source",
+    "What it does well",
+    "What it cannot do",
+    "What it needs alongside"
+   ],
+   "rows": [
+    [
+     "Nuclear",
+     "Steady output, day and night, for decades",
+     "Follow a changing load quickly; build fast",
+     "Something to follow the load, and ride-through storage"
+    ],
+    [
+     "Solar",
+     "Cheapest daytime energy; quick to build",
+     "Produce at night or under dust and cloud",
+     "Hours of storage or another source after dark"
+    ],
+    [
+     "Gas turbines",
+     "Start, stop and follow the load",
+     "Run carbon-free without capture",
+     "Fuel supply, and {{carbon capture}} if emissions matter"
+    ]
+   ]
+  },
+  {
+   "id": "long-lead",
+   "title": "Long-lead equipment: bought first, gone first",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**What it is.** A {{long-lead item}} is equipment built to order in factories with long queues — {{large power transformer}} units, switchgear, generators and chillers. It is ordered before the design is finished, or the project waits for the queue.",
+    "**What was said.** In October 2025 G42 said Stargate UAE 'has completed procurement of all long-lead equipment and has already received its first deliveries of mechanical systems', on a 'design-to-build approach' ({{design-build}}).",
+    "**What was not said.** No supplier, no category beyond 'long-lead equipment', no signing entity.",
+    "**The open door.** The first 200 MW is bought. The remaining 800 MW of the cluster and the landlord's wider pipeline are still to be ordered, and a change of siting could reopen the design itself."
+   ]
+  },
+  {
+   "id": "vdc-and-the-memorandum",
+   "title": "800 VDC and the memorandum",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A rack drawing hundreds of kilowatts at low-voltage AC needs very heavy copper, and every AC-to-DC conversion on the way loses a percent or two. {{800 VDC}} distributes direct current at 800 V instead: at the same power, far less current, so less copper, fewer conversions and lower losses. An {{SST}} is one way to feed it. It takes medium-voltage AC and delivers DC directly through high-frequency power electronics, instead of a 50 Hz iron transformer and a rectifier.",
+    "On 15 September 2026 the landlord arm and Siemens signed a memorandum: 'The companies will continue to progress next-generation 800 VDC power architectures and their potential in AI data centers.' The word 'continue' implies earlier joint work. The landlord's designs already promise 'future-proofing for Rubin as standard', NVIDIA's next GPU generation.",
+    "A memorandum of understanding records intent. It commits no purchase and names no site, capacity or product. No SST, HVDC or battery supplier is named at any of this landlord's sites. Still, it is the only Gulf landlord in this corpus with an 800 VDC conversation on the record — so its engineering organisation is where a DC specification is being written."
+   ]
+  },
+  {
+   "id": "reading-signals",
+   "title": "Memorandum, framework, pilot, award",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Four kinds of announcement, and what each one commits.",
+   "cols": [
+    "Signal",
+    "What it commits",
+    "What a supplier does next"
+   ],
+   "rows": [
+    [
+     "Memorandum of understanding",
+     "Intent to cooperate; no purchase",
+     "Get into the engineering conversation and the specification"
+    ],
+    [
+     "Framework agreement",
+     "Terms and a ceiling; money moves by later orders",
+     "Qualify, then win the orders placed under it"
+    ],
+    [
+     "Pilot",
+     "One hall or unit, bought and tested",
+     "Deliver it and make it the reference"
+    ],
+    [
+     "Award or purchase order",
+     "Equipment, a price and a date",
+     "Build and ship"
+    ]
+   ]
+  },
+  {
+   "id": "export-groups",
+   "title": "Country groups, approved recipients and a sunset",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "US {{export controls}} sort countries into lettered groups. On 10 July 2026 the UAE moved from Groups D:3 and D:4, which carry weapons and national-security concerns, to A:5, the close-ally {{Country Group}} with the fewest licence requirements. The same rule named G42 and Core42 as an {{approved recipient}} of advanced computing items — an approval that sits with the companies, not the country.",
+    "The approval carries a sunset. It 'shall automatically expire on April 6, 2027' unless 'the two UAE-based AI companies … become U.S. companies'. A date written into a rule can force a sale, a merger or a re-domiciling. Re-check it on that date rather than assume it holds.",
+    "Some rules survive the move. The approval 'does not overcome the end-use and end-user based license requirements in part 744' — {{end-use controls}} about who uses a chip and for what. Chips are deployed inside a 'Regulated Technology Environment', and a separate framework states an 'intent to develop' geolocation checks and cryptographic tracking of US-origin chips. For an equipment seller the practical point is that a restructuring can change which entity owns a site and signs its contracts."
+   ]
+  },
+  {
+   "id": "dispersal",
+   "title": "Dispersal and site hardening",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "On 1 March 2026 Iranian drones struck AWS data centres in the UAE and Bahrain. Reuters (11 September 2026, citing six people familiar) reports that the 5 GW campus 'will now likely comprise a network of data centers spread across the UAE', with air defences and possibly underground construction. G42 says the project is 'subject to continuous review'.",
+    "{{Site hardening}} covers blast-resistant structures, protected or buried plant, air defence, and spreading capacity so that no single strike removes it all.",
+    "The electrical consequence is general engineering, not a published design. One giant campus needs a few very large supply points. A network of sites needs many medium-sized connections, each with its own substation, transformers, switchgear and backup, with redundancy planned across sites as well as within them. Buried halls must reject heat and exhaust through protected paths, which favours liquid cooling and compact conversion. More sites means more units of smaller equipment, even at the same total megawatts."
+   ]
+  },
+  {
+   "id": "leasing-arithmetic",
+   "title": "Leasing instead of owning: the arithmetic",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The terms (landlord's filing).** '60 megawatts of {{critical IT load}}, which is equivalent to 72.5 megawatts gross, assuming an approximate PUE of 1.25'. The rent is '$125 per kilowatt-month, which equates to $1.5 million per megawatt per year, with a 3% annual escalator'. The term is 10 years with two five-year extensions, 'backed by a parent guarantee from G42'.",
+    "**Critical against gross.** 60 × 1.25 = 75 MW, but the filing says 72.5 MW, which implies a {{PUE}} nearer 1.21; its own figures do not multiply out exactly. The rent is quoted per {{kW-month}} of critical IT load, not of gross power.",
+    "**The rent.** 60,000 kW × $125 × 12 = $90M in year one. With 3% added each year, ten years sum to about $1.03B. The landlord puts contracted revenue at about US$1.1B; the sources do not explain the gap, so state both.",
+    "**The guarantee.** A young subsidiary's lease is backed by its parent ({{parent guarantee}}), so the landlord can borrow against the parent's credit. The landlord built and powered the site; the neocloud filled it with more than 9,000 GPUs. The electrical order was the landlord's."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Pitching the neocloud for power equipment.** It leases; the landlord arm buys.",
+    "**Chasing Stargate UAE's first 200 MW.** Its long-lead equipment was bought by October 2025; the open door is the next phases and the wider pipeline.",
+    "**Booking the 800 VDC memorandum as an order.** It is intent to keep working on a design; no site, capacity or product is named.",
+    "**Treating A:5 as unlimited access.** End-use controls survive, and the named approval sunsets on 6 April 2027 unless the companies become US companies.",
+    "**Assuming the campus layout is fixed.** Reports say it will likely be dispersed across the UAE.",
+    "**Reading a lease's gross megawatts as its rentable ones.** Rent is quoted on critical IT load."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "In a group with a landlord arm and a neocloud arm, which one orders transformers?",
+     "a": "The landlord that designs and builds the halls; a neocloud that leases buys servers, not the power chain."
+    },
+    {
+     "q": "What does Tier III certification require of the power chain?",
+     "a": "Concurrent maintainability: any power or cooling path can be taken out for maintenance without dropping the IT load — so redundant transformers, UPS and generators."
+    },
+    {
+     "q": "What is the difference between a data hall and an AI cluster?",
+     "a": "A hall is a room of racks on shared power and cooling; a cluster is several halls whose GPUs are networked to work as one machine."
+    },
+    {
+     "q": "How does adiabatic free cooling save water?",
+     "a": "It sprays water to pre-cool incoming air only on the hottest days and runs dry the rest of the year."
+    },
+    {
+     "q": "How much energy does 1 GW running all year use?",
+     "a": "1 GW × 8,760 hours = 8,760 GWh, about 8.8 TWh."
+    },
+    {
+     "q": "What job does each of nuclear, solar and gas do for a flat data-centre load?",
+     "a": "Nuclear: steady baseload. Solar: cheap daytime energy. Gas: dispatchable, following the load and covering the gaps."
+    },
+    {
+     "q": "Why is long-lead equipment ordered before the design is final?",
+     "a": "Its factory queues are long enough that waiting for the final design would delay the project by the length of the queue."
+    },
+    {
+     "q": "What does 800 VDC change, and where does an SST fit?",
+     "a": "It distributes DC at 800 V to the rack, cutting current, copper and conversions; an SST is one way to make that DC directly from medium-voltage AC."
+    },
+    {
+     "q": "What does a memorandum of understanding commit?",
+     "a": "Intent to cooperate — no purchase, site, capacity or product."
+    },
+    {
+     "q": "Does a move to Country Group A:5 remove all licence requirements?",
+     "a": "No. End-use and end-user controls still apply, and company-specific approvals can carry conditions and end dates."
+    },
+    {
+     "q": "Why can dispersing a campus increase transformer counts at the same total megawatts?",
+     "a": "Each site needs its own connection and step-down chain with redundancy; many medium sites use more units than one large site."
+    },
+    {
+     "q": "A lease is quoted at $125 per kW-month on critical IT load. What is 1 MW worth per year?",
+     "a": "1,000 kW × $125 × 12 = $1.5M."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A group's neocloud arm signs a 100 MW lease at another company's campus. Who orders the transformers?",
+     "c": [
+      "The neocloud",
+      "The campus owner",
+      "The chip supplier",
+      "The group holding company"
+     ],
+     "a": 1,
+     "why": "The landlord builds and powers the site; the {{neocloud}} rents it and buys IT."
+    },
+    {
+     "q": "How much energy does a 1 GW load use if it runs all year?",
+     "c": [
+      "About 1 TWh",
+      "About 8.8 TWh",
+      "About 88 TWh",
+      "About 365 GWh"
+     ],
+     "a": 1,
+     "why": "1 GW × 8,760 h = 8,760 GWh ≈ 8.8 TWh."
+    },
+    {
+     "q": "A campus says it 'has completed procurement of all long-lead equipment' for its first phase. What should a transformer maker pursue?",
+     "c": [
+      "That first phase",
+      "The later phases and the landlord's wider pipeline",
+      "Nothing — the campus is closed",
+      "The chip supplier"
+     ],
+     "a": 1,
+     "why": "A {{long-lead item}} is bought early; once placed, the first phase's orders are gone."
+    },
+    {
+     "q": "A landlord signs an MoU to 'progress 800 VDC architectures' with a supplier. What has been bought?",
+     "c": [
+      "An 800 VDC pilot hall",
+      "Solid-state transformers for one site",
+      "Nothing — it records intent",
+      "The supplier's whole output"
+     ],
+     "a": 2,
+     "why": "A memorandum commits no purchase; a pilot or award would. {{800 VDC}} is still the design being discussed."
+    },
+    {
+     "q": "A country moves to Country Group A:5. Which statement is true?",
+     "c": [
+      "No export rules apply any more",
+      "End-use and end-user controls still apply",
+      "Only US companies may receive chips",
+      "Licences are needed for every shipment"
+     ],
+     "a": 1,
+     "why": "{{End-use controls}} survive a move between country groups."
+    },
+    {
+     "q": "A lease covers 60 MW of critical IT at $125 per kW-month. What is the first year's rent?",
+     "c": [
+      "$7.5M",
+      "$75M",
+      "$90M",
+      "$900M"
+     ],
+     "a": 2,
+     "why": "60,000 kW × $125 × 12 = $90M. Rent is per {{kW-month}} of critical IT load."
+    },
+    {
+     "q": "Why does a nuclear-and-gas campus need less battery energy than a solar-only one?",
+     "c": [
+      "Batteries do not work in heat",
+      "Nuclear runs round the clock and gas follows the load, so storage covers seconds and minutes, not the night",
+      "Gas plants store energy",
+      "Nuclear plants include batteries"
+     ],
+     "a": 1,
+     "why": "{{Baseload}} and {{dispatchable}} sources cover the night; solar alone needs hours of storage."
+    },
+    {
+     "q": "Why can dispersing one 5 GW campus across several sites raise the number of transformers bought?",
+     "c": [
+      "Transformers are less efficient when spread out",
+      "Each site needs its own connection and step-down chain with redundancy",
+      "Dispersed sites use AC and DC together",
+      "It cannot — the count depends only on megawatts"
+     ],
+     "a": 1,
+     "why": "More sites means more connections and more redundant chains — the electrical side of {{site hardening}}."
+    }
+   ]
+  }
+ ]
+}

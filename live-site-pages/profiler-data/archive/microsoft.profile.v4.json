@@ -197,27 +197,6 @@
    "via": "Grace Blackwell/Vera Rubin",
    "status": "active",
    "since": "2025-11"
-  },
-  {
-   "slug": "g42",
-   "type": "portfolio",
-   "status": "active",
-   "since": "2024-04",
-   "scale": "US$1.5B minority stake; board seat",
-   "via": "Azure in the UAE (Core42 Sovereign Public Cloud); 200 MW expansion through Khazna",
-   "note": "Microsoft invested US$1.5B in G42 for a minority stake in April 2024, with Brad Smith joining G42's board, under an Intergovernmental Assurance Agreement.",
-   "context": "Microsoft's announcement: 'Microsoft will invest $1.5 billion in G42 for a minority stake in the company', G42's data platform 'will migrate to Microsoft Azure', and the work 'is governed by a detailed Intergovernmental Assurance Agreement between G42 and Microsoft'. The percentage is not disclosed.\n\nIn November 2025 Microsoft counted the investment within US$15.2B of UAE spending for 2023-2029. G42 announced a 200 MW Azure expansion delivered through its Khazna Data Centers, to start coming online before the end of 2026 — so Microsoft is both a G42 shareholder and a Khazna tenant.",
-   "source": "https://blogs.microsoft.com/blog/2024/04/15/microsoft-and-g42-partner-to-accelerate-ai-innovation-in-uae-and-beyond/"
-  },
-  {
-   "slug": "humain",
-   "type": "partner",
-   "status": "active",
-   "since": "2026-08",
-   "via": "ALLaM on Microsoft Foundry; HUMAIN ONE with Microsoft 365 Copilot",
-   "note": "Microsoft and HUMAIN signed a long-term strategic collaboration in August 2026 covering HUMAIN's models on Microsoft platforms, enterprise software and AI PCs.",
-   "context": "The 26 Aug 2026 release covers ALLaM on Microsoft Foundry and Microsoft forward-deployed engineers. At LEAP 2026 the partnership added a HUMAIN ONE bundle with Microsoft 365 Copilot on Azure and a Windows-based HUMAIN AI PC. No data-centre capacity is part of the published scope.",
-   "source": "https://www.prnewswire.com/news-releases/microsoft-and-humain-announce-long-term-strategic-collaboration-to-enable-ai-transformation-in-saudi-arabia-and-beyond-302860378.html"
   }
  ],
  "policyExposure": [
@@ -406,11 +385,6 @@
  },
  "sources": [
   {
-   "label": "Microsoft and HUMAIN (PR Newswire) — Microsoft and HUMAIN announce long-term strategic collaboration",
-   "url": "https://www.prnewswire.com/news-releases/microsoft-and-humain-announce-long-term-strategic-collaboration-to-enable-ai-transformation-in-saudi-arabia-and-beyond-302860378.html",
-   "date": "2026-08-26"
-  },
-  {
    "label": "Microsoft — FY2026 Q4 results",
    "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
    "date": "2026-07-29"
@@ -466,11 +440,6 @@
    "date": "2025-11-03"
   },
   {
-   "label": "Microsoft On the Issues — Microsoft's US$15.2 billion investment in the UAE",
-   "url": "https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/",
-   "date": "2025-11-03"
-  },
-  {
    "label": "Microsoft — OpenAI partnership restructuring",
    "url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
    "date": "2025-10-28"
@@ -506,16 +475,11 @@
    "date": "2024-05-01"
   },
   {
-   "label": "Microsoft — Microsoft and G42 partner to accelerate AI innovation in UAE and beyond (US$1.5B minority stake; Brad Smith to G42 board)",
-   "url": "https://blogs.microsoft.com/blog/2024/04/15/microsoft-and-g42-partner-to-accelerate-ai-innovation-in-uae-and-beyond/",
-   "date": "2024-04-15"
-  },
-  {
    "label": "Helion — world's first fusion PPA with Microsoft",
    "url": "https://www.helionenergy.com/articles/helion-announces-worlds-first-fusion-ppa-with-microsoft/",
    "date": "2023-05-10"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

@@ -394,6 +394,12 @@
    "lastRefreshed": "2026-09-05"
   },
   {
+   "slug": "firmus",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-26",
+   "tier": "core"
+  },
+  {
    "slug": "flex",
    "nextReport": "2026-10-28",
    "confirmed": false,
@@ -422,6 +428,12 @@
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-06",
    "tier": "watch"
+  },
+  {
+   "slug": "g42",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-26",
+   "tier": "core"
   },
   {
    "slug": "galaxy-digital",
@@ -511,6 +523,12 @@
    "slug": "huawei-digital-power",
    "cadence": "quarterly",
    "lastRefreshed": "2026-09-07",
+   "tier": "core"
+  },
+  {
+   "slug": "humain",
+   "cadence": "quarterly",
+   "lastRefreshed": "2026-09-26",
    "tier": "core"
   },
   {

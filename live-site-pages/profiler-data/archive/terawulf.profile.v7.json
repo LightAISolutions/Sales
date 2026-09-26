@@ -187,17 +187,6 @@
    "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
    "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
    "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm"
-  },
-  {
-   "slug": "g42",
-   "type": "customer",
-   "status": "active",
-   "since": "2024-12",
-   "scale": "60 MW critical IT (72.5 MW gross); about US$1.1B over ten years",
-   "via": "Core42 leases at Lake Mariner",
-   "note": "G42's Core42 leases 60 MW of critical IT at Lake Mariner on ten-year terms, backed by a G42 parent guarantee.",
-   "context": "Announced in December 2024 as 'over 70 MW' gross (2 + 16 + 42 MW critical IT), at $125 per kW-month with a 3% escalator, with an option for a further 108 MW of critical IT. All 60 MW was operational by 31 Mar 2026. The expansion option is not shown exercised; later Lake Mariner capacity went to Fluidstack.",
-   "source": "https://investors.terawulf.com/news-events/press-releases/detail/99/terawulf-to-deliver-over-70-mw-of-data-center-infrastructure-for-g42s-us-operations"
   }
  ],
  "technicalSpecs": [
@@ -567,6 +556,6 @@
    "date": "2024-10-03"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 8
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 7
 }

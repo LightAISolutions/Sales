@@ -497,16 +497,6 @@
       "note": "Reported only: Bloomberg-sourced reports (June 2026) name the BlackRock/Microsoft/MGX-backed AIP among suitors for STACK's APAC data-centre portfolio, a sale that could exceed USD 30 billion. No party has confirmed; recorded as `announced` with the reporter named.",
       "context": "The corpus's STACK Infrastructure dossier carries the Bloomberg-sourced reporting that Blue Owl is preparing a sale of STACK's Tokyo, Osaka, Sydney, Melbourne and Johor portfolio with AIP, Brookfield, IFM, KKR and DigitalBridge among reported suitors. MGX's own channels are silent; AIP's stated geography ('the U.S. as well as OECD and U.S. partner countries') would admit Japan and Australia. Treat as an unconfirmed lead until AIP, MGX or Blue Owl states it.",
       "source": "STACK Infrastructure dossier (this corpus) — Bloomberg-sourced reports, June 2026; no MGX or AIP statement"
-    },
-    {
-      "slug": "g42",
-      "type": "portfolio",
-      "status": "active",
-      "since": "2025-03",
-      "via": "minority stake in Khazna Data Centers (G42 majority)",
-      "note": "MGX holds an undisclosed minority stake in Khazna, G42's data-centre subsidiary, alongside Silver Lake; G42 was one of MGX's two foundational partners and the two share a chairman.",
-      "context": "Khazna's March 2025 release welcomed 'MGX and Silver Lake as new minority shareholders, alongside majority shareholder G42' as e& exited its 40% for US$2.2B. MGX's board describes the stake as support for the Stargate UAE build-out, which Khazna is developing.\n\nG42 was named with Mubadala as MGX's foundational partner at its March 2024 creation, and Sheikh Tahnoon bin Zayed chairs both.",
-      "source": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/"
     }
   ],
   "policyExposure": [
@@ -1293,6 +1283,6 @@
       "party": "disclosure"
     }
   ],
-  "lastUpdated": "2026-09-26",
-  "profileVersion": 3
+  "lastUpdated": "2026-09-06",
+  "profileVersion": 2
 }

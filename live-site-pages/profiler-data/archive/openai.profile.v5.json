@@ -246,27 +246,6 @@
       "note": "Abu Dhabi's MGX is one of four initial equity funders of Stargate LLC (with SoftBank, OpenAI and Oracle) and a five-time follow-on investor in OpenAI's rounds, including as co-lead of the USD 122 billion round at USD 852 billion (March 2026).",
       "context": "SoftBank's Stargate release: 'The initial equity funders in Stargate are SoftBank, OpenAI, Oracle, and MGX'; Bloomberg reported MGX contributing about USD 7 billion, which no principal has confirmed, and later Stargate releases (September 2025 five sites) omit MGX. MGX's May 2026 board release records 'participation as co-lead in OpenAI's latest US$122 billion funding round. This investment, which marks MGX's fifth follow-on in OpenAI'. MGX publishes no ticket size or stake; MGX's own dossier (this corpus) types the reverse link `other` because the schema's `type` enum has no 'portfolio' value.",
       "source": "https://group.softbank/en/news/press/20250122"
-    },
-    {
-      "slug": "g42",
-      "type": "supplier",
-      "status": "active",
-      "since": "2025-05",
-      "scale": "1 GW Stargate UAE cluster; first 200 MW targeted for 2026",
-      "via": "Stargate UAE (OpenAI for Countries)",
-      "note": "G42 is building Stargate UAE, a 1 GW cluster in Abu Dhabi that OpenAI and Oracle will operate — the first project of 'OpenAI for Countries'.",
-      "context": "G42's launch release (22 May 2025): 'will be built by G42 and operated by OpenAI and Oracle', with NVIDIA GB300, Cisco and SoftBank. G42's Khazna Data Centers is the developer, and G42 said in October 2025 that all long-lead equipment had been procured.\n\nThe first 200 MW was targeted for 2026, with no energisation confirmed by 26 Sep 2026. Reuters reported on 11 Sep 2026 that the surrounding 5 GW campus will likely be dispersed across the UAE after Iranian attacks.",
-      "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
-    },
-    {
-      "slug": "firmus",
-      "type": "supplier",
-      "status": "announced",
-      "since": "2026-09",
-      "via": "dedicated compute on NVIDIA Vera Rubin NVL72 at two Malaysian sites",
-      "note": "Firmus announced OpenAI as anchor customer for dedicated compute at two new Firmus AI factory sites in Malaysia.",
-      "context": "Firmus's 8 Sep 2026 release quotes Sachin Katti, OpenAI's VP of Compute Strategy; no OpenAI-hosted release was found. Site locations, MW and financial terms are undisclosed.",
-      "source": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia"
     }
   ],
   "technicalSpecs": [
@@ -417,11 +396,6 @@
   },
   "sources": [
     {
-      "label": "Firmus — Firmus surpasses 900 MW contracted capacity, adds OpenAI as anchor customer and expands into Malaysia",
-      "url": "https://firmus.co/newsroom/firmus-surpasses-900-mw-contracted-capacity-adds-openai-as-anchor-customer-and-expands-into-malaysia",
-      "date": "2026-09-08"
-    },
-    {
       "label": "WSJ via Yahoo — $750B compute spend",
       "url": "https://finance.yahoo.com/technology/ai/articles/openai-lifts-planned-compute-spending-144917731.html",
       "date": "2026-07-22"
@@ -527,11 +501,6 @@
       "date": "2025-09-11"
     },
     {
-      "label": "G42 — Global tech alliance launches Stargate UAE (built by G42, operated by OpenAI and Oracle)",
-      "url": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
-      "date": "2025-05-22"
-    },
-    {
       "label": "SoftBank Group — Announcing The Stargate Project (initial equity funders SoftBank, OpenAI, Oracle, MGX)",
       "url": "https://group.softbank/en/news/press/20250122",
       "date": "2025-01-22"
@@ -546,6 +515,6 @@
       "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
     }
   ],
-  "lastUpdated": "2026-09-26",
-  "profileVersion": 6
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 5
 }

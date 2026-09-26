@@ -248,16 +248,6 @@
    "source": "Trade reporting (Jul 2025) — unverified",
    "via": "fuel cells",
    "status": "announced"
-  },
-  {
-   "slug": "g42",
-   "type": "partner",
-   "status": "active",
-   "since": "2025-05",
-   "via": "Stargate UAE (operator alongside OpenAI)",
-   "note": "G42 is building Stargate UAE, the 1 GW Abu Dhabi cluster that Oracle will operate with OpenAI.",
-   "context": "G42's 22 May 2025 release: 'will be built by G42 and operated by OpenAI and Oracle', with NVIDIA, Cisco and SoftBank. No Oracle-side release or contract terms for Stargate UAE were found. G42's Khazna is the developer, and the first 200 MW was targeted for 2026.",
-   "source": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
   }
  ],
  "policyExposure": [
@@ -597,11 +587,6 @@
    "date": "2025-07"
   },
   {
-   "label": "G42 — Global tech alliance launches Stargate UAE (built by G42, operated by OpenAI and Oracle)",
-   "url": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae",
-   "date": "2025-05-22"
-  },
-  {
    "label": "Oracle data-center hub (site power detail)",
    "url": "https://www.oracle.com/data-centers/"
   },
@@ -610,6 +595,6 @@
    "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
   }
  ],
- "lastUpdated": "2026-09-26",
- "profileVersion": 6
+ "lastUpdated": "2026-09-21",
+ "profileVersion": 5
 }

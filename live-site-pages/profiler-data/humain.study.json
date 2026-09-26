@@ -1,0 +1,438 @@
+{
+ "schemaVersion": 2,
+ "slug": "humain",
+ "title": "HUMAIN — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "glossary": [
+  {
+   "t": "revenue-sharing arrangement",
+   "d": "A deal in which the owner of computing capacity and the partner that sells it to end customers split what those customers pay, instead of the partner paying fixed rent. Neither side earns unless the end demand arrives."
+  }
+ ],
+ "sections": [
+  {
+   "id": "sovereign-neocloud",
+   "title": "The sovereign neocloud",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A {{neocloud}} rents computing on GPUs it owns. A sovereign neocloud does it as a state-owned company: it builds capacity at home, under its own country's law — {{sovereign compute}} — and rents most of it to foreign labs and platforms. HUMAIN is owned by Saudi Arabia's sovereign wealth fund. Its named customers and partners include xAI, Together AI, Adobe, Luma and an AWS 'AI Zone', and its chief executive said in 2025 that the home country accounted for 'just 1% of usage'.",
+    "It is not a {{hyperscaler}}. A hyperscaler runs a giant cloud of its own services. HUMAIN's own cloud launched at 1.1 MW, and its models and apps are small beside the capacity it builds for others. What it sells is {{GPU-as-a-service}} and capacity partnerships.",
+    "For an equipment seller the important fact is structural. The company is the owner of record for its country's AI data-centre demand and the counterparty to the grid. It is often not the one that places the equipment order. The next sections show who does."
+   ]
+  },
+  {
+   "id": "three-routes",
+   "title": "Three routes to capacity, three buyers",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The company gets capacity three ways, and the buyer of the power equipment is different on each.",
+   "cols": [
+    "Route",
+    "Who designs and builds",
+    "Who orders the power equipment",
+    "On the record"
+   ],
+   "rows": [
+    [
+     "Owner-built",
+     "An {{EPC}} contractor, to designs the owner approves",
+     "The contractor, under work orders the owner issues",
+     "A 250 MW programme, begun as a 50 MW {{design-build}} contract"
+    ],
+    [
+     "Its own campus",
+     "Contractors appointed through the owner's tenders, with client advisers writing the specifications",
+     "The owner specifies the grid equipment; contractors buy under later awards",
+     "An east-Riyadh campus of six 1 GW plots, grid infrastructure tendered"
+    ],
+    [
+     "Partner-led",
+     "A partner developer that builds and runs the site",
+     "The partner",
+     "Sites with DataVolt, AirTrunk and AWS"
+    ],
+    [
+     "Leased",
+     "A {{colocation}} provider",
+     "The provider",
+     "Colocation rented to get capacity sooner"
+    ]
+   ]
+  },
+  {
+   "id": "owner-epc-work-order",
+   "title": "Owner, EPC and work order",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**Design-build, then EPC.** The first owner-built programme began in March 2026 as a 50 MW, 12-month design-build contract of about SAR 1.88B: one party designs and builds. In September it became a 250 MW {{EPC}} agreement of about SAR 8.76B, which adds procurement — the contractor also buys the equipment and hands over a working plant.",
+    "**Work orders.** The works are 'carried out under work orders issued by HUMAIN'. The agreement sets the terms; each {{work order}} commits a phase and its money. Read the headline value as a ceiling.",
+    "**Per megawatt.** SAR 8.76B ÷ 250 MW ≈ SAR 35M per MW, about US$9M, and the first contract works out at about SAR 38M per MW. Neither filing says whether IT equipment is in scope, so check what a figure covers before comparing it.",
+    "**Two steps to an order.** The seller has to get its product accepted into the design the owner approves, then win the contractor's purchase order. Either one without the other produces nothing."
+   ]
+  },
+  {
+   "id": "tender-is-not-award",
+   "title": "Reading contract news: tender, selection, award",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Tendered.** For the east-Riyadh campus the company tendered a grid package — a bulk supply point and two substations — on an {{early contractor involvement}} basis. A tender is an invitation to bid, not a contract.",
+    "**Selected.** Trade press later reported a contractor 'selected', and called it 'an early contractor involvement role, not a definitive construction award'. ECI puts a contractor at the design table before the price is fixed.",
+    "**Awarded.** Only a construction award commits the build, and only purchase orders under it commit equipment. A supplier's pipeline starts at the award, not at the tender."
+   ]
+  },
+  {
+   "id": "voltage-chain",
+   "title": "From 380 kV to the rack",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The grid package tendered for the east-Riyadh campus, step by step. Each step down has its own substation, rated in {{MVA}}.",
+   "cols": [
+    "Level",
+    "What happens there",
+    "As tendered"
+   ],
+   "rows": [
+    [
+     "380 kV transmission",
+     "Power arrives over the national grid at the highest voltage, where current and line losses are lowest",
+     "The campus connects at 380 kV"
+    ],
+    [
+     "{{Bulk supply point}}",
+     "Steps 380 kV down to 132 kV; its rating caps what the whole site can draw",
+     "2,000 MVA"
+    ],
+    [
+     "132/33 kV substations",
+     "Step 132 kV down to 33 kV for distribution across the site",
+     "Two substations, 500 MVA and 200 MVA"
+    ],
+    [
+     "33 kV distribution",
+     "{{Medium voltage}} cables run to each data hall",
+     "Part of the tendered network"
+    ],
+    [
+     "Hall transformers, {{UPS}}, racks",
+     "Step 33 kV down to low voltage, bridge outages and feed the racks",
+     "Inside the halls, bought by whoever builds them"
+    ]
+   ]
+  },
+  {
+   "id": "mva-and-mw",
+   "title": "Why substations are rated in MVA",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A transformer's windings heat up with the current through them, whether or not that current does useful work. So transformers and substations are rated in {{apparent power}} — volts times amps, in MVA — rather than in megawatts of real power. Real power is MVA multiplied by the {{power factor}}. At 0.95, a 2,000 MVA supply point carries about 1,900 MW.",
+    "Substations are usually built with one transformer more than the load needs ({{N+1}}), so that losing any one still leaves full supply. Their firm capacity is therefore below the sum of their transformer ratings. This is general practice; the tender's redundancy scheme is not published.",
+    "Now the arithmetic. The campus is described as six 1 GW plots, up to 6 GW, while the tendered bulk supply point carries at most about 2 GW. The tendered grid package is a first phase, and later phases would need more transmission capacity. That is an inference from the figures, not a published plan."
+   ]
+  },
+  {
+   "id": "ways-to-be-paid",
+   "title": "Three ways to be paid for capacity",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Rent, GPU-hours or a revenue share. The difference is who carries the risk that end demand does not arrive.",
+   "cols": [
+    "Model",
+    "Who owns the GPUs",
+    "What is charged",
+    "Who carries the demand risk"
+   ],
+   "rows": [
+    [
+     "Lease ({{wholesale colocation}})",
+     "The tenant",
+     "Rent per {{kW-month}} of power",
+     "The tenant"
+    ],
+    [
+     "{{GPU-as-a-service}}",
+     "The capacity owner",
+     "Per GPU-hour, or for reserved capacity",
+     "The owner for idle hours; the customer for reserved ones"
+    ],
+    [
+     "{{Revenue-sharing arrangement}}",
+     "The capacity owner",
+     "A share of what the partner's end customers pay",
+     "Both — neither earns unless the end demand arrives"
+    ]
+   ],
+   "note": "One partnership pairs a new 250 MW data centre with 55 MW of dedicated capacity the partner resells. It is 'expected to yield over $5 billion in gross annualized revenue in its first year', a projection for a facility not yet built."
+  },
+  {
+   "id": "capacity-ladder",
+   "title": "A ladder from one megawatt to six gigawatts",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW",
+   "intro": "Company and trade-press figures, drawn to scale. The energised rung at the bottom is too small to see, and that is the lesson.",
+   "items": [
+    {
+     "label": "Target for 2034",
+     "sub": "more than; chief executive's statements",
+     "v": 6000
+    },
+    {
+     "label": "Target for 2030",
+     "sub": "chief executive's statements",
+     "v": 1900
+    },
+    {
+     "label": "Chip-maker joint venture",
+     "sub": "target by 2030",
+     "v": 1000
+    },
+    {
+     "label": "xAI facility framework",
+     "sub": "starting at 50 MW",
+     "v": 500
+    },
+    {
+     "label": "EPC agreement",
+     "sub": "signed; under work orders",
+     "v": 250
+    },
+    {
+     "label": "Together AI partnership",
+     "sub": "new build; plus 55 MW dedicated",
+     "v": 250
+    },
+    {
+     "label": "Own GPU cloud",
+     "sub": "energised at launch",
+     "v": 1.1
+    }
+   ],
+   "note": "An AMD cluster has also been live since 31 Aug 2026, with no megawatts stated. 1.9 GW ÷ 1.1 MW ≈ 1,700 — about three orders of magnitude between the 2030 target and the one energised figure."
+  },
+  {
+   "id": "rung-strength",
+   "title": "Weigh each rung before adding it up",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Capacity figures carry promises of different strength. Add like to like.",
+   "cols": [
+    "Rung",
+    "What stands behind it",
+    "How to use it"
+   ],
+   "rows": [
+    [
+     "Energised",
+     "Power flowing, customers billed ({{energization}})",
+     "Today's business"
+    ],
+    [
+     "EPC with work orders",
+     "Signed contract; capital committed phase by phase",
+     "Equipment demand, on the phasing"
+    ],
+    [
+     "Framework or memorandum",
+     "Intent and terms; no committed build",
+     "A scenario"
+    ],
+    [
+     "Target",
+     "A plan stated by management",
+     "Direction, not demand"
+    ],
+    [
+     "Site maximum",
+     "What the land and grid package could hold",
+     "A ceiling"
+    ]
+   ],
+   "note": "For the east-Riyadh campus's first phase, the company is relayed as saying 1 GW 'by or in 2027', while another report gives 250 MW by the start of 2027. No source reconciles the two; state both."
+  },
+  {
+   "id": "licences-as-supply",
+   "title": "Export licences behave like a supply chain",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "US {{export controls}} sort countries into lettered groups. Close allies sit in {{Country Group}} A:5 with the fewest licence requirements. The UAE was moved there on 10 July 2026, and Saudi Arabia was not. So every shipment of advanced GPUs to a Saudi site still needs a licence.",
+    "A licence counts chips, in performance-equivalent units, so it works like a quota. The only disclosed authorisation for this company covers up to 35,000 GB300-equivalent chips, while its GPU plans run to hundreds of thousands. Even in a favourable group, {{end-use controls}} still apply. Reviewers ask who will use the chips, and one of this company's models was built by a Chinese firm.",
+    "Power equipment is ordered years ahead, and chips are licensed tranche by tranche. A campus's electrical build can therefore run ahead of the chips it will hold. That favours phased, modular power equipment that can be energised as licences arrive."
+   ]
+  },
+  {
+   "id": "chips-to-megawatts",
+   "title": "From a chip licence to megawatts",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The rule of thumb.** An {{NVL72}} rack of 72 top-end GPUs draws well over 100 kW — roughly 2 kW per GPU at the rack.",
+    "**The arithmetic.** 35,000 GPUs × 2 kW ≈ 70 MW of IT load. 600,000 GPUs × 2 kW ≈ 1.2 GW. These are order-of-magnitude estimates, not disclosed figures.",
+    "**The lesson.** A licence for 35,000 chips fills less than a tenth of one 1 GW campus plot. Without further licences, the rest is powered, cooled space with nothing to run. That is why a second licence is a leading indicator for power-equipment demand."
+   ]
+  },
+  {
+   "id": "modular-lowest-tco",
+   "title": "Built for the lowest total cost of ownership",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "The company describes its data centres as 'robotic, modular, and optimized for the lowest {{total cost of ownership}}'. Total cost of ownership adds everything a facility costs over its life — equipment, construction, energy, maintenance and the cost of being late — rather than only the purchase price.",
+    "Modular power equipment fits that brief. Blocks built and tested in a factory arrive faster and can be energised phase by phase as work orders, chips and customers arrive. A buyer optimising total cost weighs efficiency and delivery time against price, because at hundreds of megawatts one point of efficiency pays for itself.",
+    "What the company has not said is equally clear: no first-party or counterparty source names a power-equipment supplier, a DC-distribution choice, {{800 VDC}} or an {{SST}}. That is inference from absence and from the stated philosophy. The first specification for the campus halls, or for the xAI facility, will settle it."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Calling it a hyperscaler.** Its own cloud is small; it builds capacity and rents it to others.",
+    "**Pitching the owner for a purchase order on an EPC site.** The contractor buys; the owner accepts the design. Both steps are needed.",
+    "**Booking a tender or an ECI selection as an order.** Only the construction award, and purchase orders under it, commit equipment.",
+    "**Reading a framework's headline value as spend.** Work orders commit the money, phase by phase.",
+    "**Reading MVA as MW.** Multiply by the power factor, then allow for redundancy.",
+    "**Adding every rung of the ladder.** Energised, contracted, framework, target and site maximum are different promises.",
+    "**Forgetting the licence.** Without chips a powered hall earns nothing; the licence count caps the megawatts worth energising."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What makes a neocloud 'sovereign'?",
+     "a": "It is state-owned and builds capacity at home, under its country's law, then rents most of it to foreign labs and platforms."
+    },
+    {
+     "q": "In an EPC contract, who buys the equipment?",
+     "a": "The EPC contractor — engineering, procurement and construction — against a design the owner approves."
+    },
+    {
+     "q": "What is the difference between a framework agreement and a work order?",
+     "a": "The framework sets terms and a ceiling; a work order commits a specific phase and its money."
+    },
+    {
+     "q": "Is a contractor selected for early contractor involvement awarded the build?",
+     "a": "No. ECI is a design-stage appointment before the price is fixed; the construction award comes later."
+    },
+    {
+     "q": "What does a bulk supply point do?",
+     "a": "It takes power from the transmission grid (for example 380 kV) and steps it down to a sub-transmission level (for example 132 kV); its MVA rating caps the site behind it."
+    },
+    {
+     "q": "Why are transformers rated in MVA rather than MW?",
+     "a": "Their windings heat with current, whether or not the current does useful work, so they are sized on apparent power. Real power = MVA × power factor."
+    },
+    {
+     "q": "Why is a substation's firm capacity lower than its nameplate?",
+     "a": "One transformer is usually held in reserve (N+1), so firm capacity is what remains with any one out of service."
+    },
+    {
+     "q": "Who carries the demand risk in a lease, GPU-as-a-service and a revenue share?",
+     "a": "Lease: the tenant. GPU-as-a-service: the owner for idle hours, the customer for reserved ones. Revenue share: both."
+    },
+    {
+     "q": "Why does a chip licence cap a campus's megawatts?",
+     "a": "Each GPU needs roughly 2 kW at the rack; a licence for a fixed number of chips therefore fixes how much IT load can actually run."
+    },
+    {
+     "q": "What does 'lowest total cost of ownership' add beyond purchase price?",
+     "a": "Construction, energy, maintenance and the cost of delay over the facility's life — so efficiency and delivery time count against price."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A 500 MVA substation serves a load with power factor 0.9. What is the most real power it can deliver with all transformers in service?",
+     "c": [
+      "About 450 MW",
+      "500 MW",
+      "About 555 MW",
+      "About 50 MW"
+     ],
+     "a": 0,
+     "why": "Real power = {{MVA}} × {{power factor}} = 500 × 0.9 = 450 MW; less as firm capacity if one transformer is in reserve."
+    },
+    {
+     "q": "A trade report says a contractor was 'selected' for a campus's grid infrastructure on an ECI basis. What has been committed?",
+     "c": [
+      "The construction contract",
+      "A design-stage appointment before the price is fixed",
+      "All the equipment orders",
+      "The grid connection"
+     ],
+     "a": 1,
+     "why": "{{Early contractor involvement}} is not an award; purchase orders follow a later construction contract."
+    },
+    {
+     "q": "A 250 MW EPC agreement is worth SAR 8.76B. What is that per megawatt?",
+     "c": [
+      "About SAR 3.5M",
+      "About SAR 35M",
+      "About SAR 350M",
+      "About SAR 8.76M"
+     ],
+     "a": 1,
+     "why": "8,760 ÷ 250 ≈ 35 million riyals per MW — scope permitting, since neither filing says whether IT is included."
+    },
+    {
+     "q": "The one energised figure is 1.1 MW and the 2030 target is 1.9 GW. Roughly how many times larger is the target?",
+     "c": [
+      "About 17",
+      "About 170",
+      "About 1,700",
+      "About 17,000"
+     ],
+     "a": 2,
+     "why": "1,900 ÷ 1.1 ≈ 1,700 — three orders of magnitude between plan and energised capacity."
+    },
+    {
+     "q": "A licence covers 35,000 GPUs at roughly 2 kW each at the rack. About how much IT load can they run?",
+     "c": [
+      "About 7 MW",
+      "About 70 MW",
+      "About 700 MW",
+      "About 7 GW"
+     ],
+     "a": 1,
+     "why": "35,000 × 2 kW = 70,000 kW = 70 MW — a small fraction of a gigawatt plot."
+    },
+    {
+     "q": "In which payment model does the capacity owner earn nothing if its partner's end customers do not arrive?",
+     "c": [
+      "A lease",
+      "A reserved GPU contract",
+      "A revenue share",
+      "A take-or-pay contract"
+     ],
+     "a": 2,
+     "why": "A {{revenue-sharing arrangement}} splits what end customers pay; the other three pay regardless of end demand."
+    },
+    {
+     "q": "A 2,000 MVA bulk supply point serves a campus described as up to 6 GW. What does that suggest?",
+     "c": [
+      "The campus is overbuilt",
+      "The tendered package is a first phase; later phases need more transmission capacity",
+      "MVA is larger than MW, so 2,000 MVA covers 6 GW",
+      "The campus runs on diesel"
+     ],
+     "a": 1,
+     "why": "A {{bulk supply point}} of 2,000 MVA carries at most about 2 GW of real power."
+    }
+   ]
+  }
+ ]
+}
