@@ -6,8 +6,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
-**Date:** 2026-09-25, 09:07 PM → 10:53 PM EST (unattended; one prompt, two pushes; context compacted once mid-session)
-**Repo version:** v07.58r (two pushes: v07.57r wave 1, v07.58r wave 2)
+**Date:** 2026-09-25, 09:07 PM → 11:09 PM EST (one unattended prompt with two pushes, then one attended turn; context compacted once mid-session)
+**Repo version:** v07.59r (three pushes: v07.57r wave 1, v07.58r wave 2, v07.59r the Classroom re-pin prompt + this save)
 **Branch:** `claude/magical-cerf-hwm62m`
 **Model:** Fable 5.1 High (no substitution)
 
@@ -19,9 +19,11 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   - **Step 7:** `tract` v3→v4 (PUCN approved Fleet's 362 MW of gas plants 2026-09-17, not "scheduled 8 September"; the Morris ComEd TSA accepted 2026-03-10) and `powerhouse-data-centers` v2→v3 (FERC rejected ComEd's Joliet cancellation 2026-09-22). No other dossier changed.
   - **§11.3** F-U1 and F-U2 rows rewritten with premise verdicts; 13 + 13 concepts added; calendar rows for all five (WEC confirmed 10/29; the rest unconfirmed patterns or tracker estimates).
 
+- **Turn 2 (v07.59r):** the paste-in prompt for the Classroom re-pin session, `repository-information/classroom-utilities-repin-prompt.md` — Part A the 9/30 C2 run check (the standing reminder, now carrying a fold-in pointer), Part B segment regeneration by the generator, Part C the landscape module under G3 with the five new bets and gates, Part D the three rehearsals re-judged and re-pinned (the Dominion room reframe stays its own 10/2–10/6 reminder), Part E checkers, GAS bump, CHANGELOG rotation.
+
 ### Where we left off
 
-- **Everything is pushed; wave 2's branch is in the auto-merge workflow.** The tree is clean after the push.
+- **Everything is merged through v07.58r; v07.59r is pushed.** The tree is clean after the push.
 - **Classroom is now stale, by design:** `landscape-utilities-2026-09` was built on "six franchises" and there are eleven; the three `scenario-utilities-*` rehearsals cite it. `Classroom.gs` was not touched. A Classroom session should re-pin them against the five new dossiers.
 - **Unreconciled figures left loud:** Oracle "~$300M" vs DTE "nearly $2B"; MasTec's "$4.2B Greenlink West" vs BHE's $4.2B combined; Exelon's TSA-backed load ~8 GW → 4 GW with collateral flat at ~$1B; Compass Hoffman Estates energization.
 - **CHANGELOG did not rotate:** both pushes were dated 2026-09-25 EST (110 sections, 12 exempt, 98 non-exempt). The next push after midnight EST must rotate the 2026-09-18 and 2026-09-19 groups (26 sections) after `git fetch --unshallow`.
@@ -46,9 +48,9 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ### Recommendation for next session
 
-- Run a **Classroom session to re-pin `landscape-utilities-2026-09` and the three `scenario-utilities-*` lessons** against the eleven utility dossiers — the five new ones make the "six franchises" landscape and its rehearsals stale, and the 9/30 Classroom run is already on the reminders. Phase F's next Profiler session (F-U3, or F-I1 in parallel) can follow.
+- On or after Wednesday 9/30 (after ~7 AM ET), run the **Classroom re-pin session** from `repository-information/classroom-utilities-repin-prompt.md` in a fresh Opus 5.5 xhigh session — it re-pins `landscape-utilities-2026-09` and the three `scenario-utilities-*` rehearsals against the eleven utility dossiers and folds in the 9/30 C2 run check. `build-classroom-segments.py --check` already reads `utilities` and `storage-developers-and-ipps` due with section changes. Phase F's next Profiler session (F-U3, or F-I1 in parallel) can follow.
 
-**To continue:** type `re-pin the utilities landscape and scenarios against the five new dossiers`
+**To continue:** paste `repository-information/classroom-utilities-repin-prompt.md` (everything below its rule) into a fresh Opus 5.5 xhigh session on or after 9/30
 
 ## Previous Sessions
 

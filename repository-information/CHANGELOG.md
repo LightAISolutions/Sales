@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 110/100`
+`Sections: 111/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.59r] — 2026-09-25 11:09:11 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new session (Fable 5.1 or Opus 5.5, Medium, High, Xhigh effort) to run a Classroom session to re-pin landscape-utilities-2026-09 and the three scenario-utilities-* lessons against the eleven utility dossiers, folding it into the 9/30 Classroom run already on my reminders. Then, remember session."
+
+The hand-off from Phase F waves 1 and 2: the Classroom session that repairs what five new `utility` dossiers made stale is now a paste-in prompt in the repo, and the session context is saved.
+
+### Added
+
+- **`repository-information/classroom-utilities-repin-prompt.md`** — the paste-in prompt, in five parts, for a fresh Opus 5.5 xhigh session (Fable 5.1 High acceptable) on or after Wednesday 2026-09-30 after about 7 AM ET: **A** the 9/30 C2 pipeline-run check from the standing reminder (expected outcome, the notification question, rebase-if-it-committed); **B** segment-lesson regeneration by `build-classroom-segments.py` only — at v07.58r the check reads `utilities` and `storage-developers-and-ipps` due with eight sections differing; **C** `landscape-utilities-2026-09` under the G3 contradiction test — the "14 members / six franchises" tiles, the bets table's five new rows, the new dated gates (NCUC, MPSC U-22058, WEC's Q4 dockets and ER26-3265, PUCN 2026-12-02, ICC 2026-12-15, NJ BPU ~Feb 2027, the Oregon Supreme Court, the PowerHouse credit clause), the five-instrument seller's play, the claims ledger at v1, `reviewBy` re-sorted from the nearest gate, the analysis markdown mirrored, and a G3 check of `landscape-storage-developers-and-ipps-2026-09`'s member counts; **D** the three `scenario-utilities-*` rehearsals re-judged and re-pinned under D6/P13, with the Dominion room reframe left to its own 10/2–10/6 reminder; **E** the checkers, the Playwright render, the Classroom GAS bump, the public changelog line, and the CHANGELOG archive rotation that push will owe. Recommended model and timing are stated at the top.
+
+### Changed
+
+- **`REMINDERS.md`** — a fold-in pointer added under the developer's 9/30 Classroom-run reminder naming the prompt file (additive; the reminder's own text is untouched).
+- **`SESSION-CONTEXT.md`** — the Latest Session extended in place for this turn (repo version, the prompt file, and the recommendation now pointing at it).
+- **README.md** — tree entry for the prompt file.
+
+### Notes
+
+- **Archive rotation not performed:** 111 sections, thirteen dated today (EST) and exempt, 98 non-exempt against a trigger of 100. The Classroom re-pin push will be the first dated 2026-09-26 or later and must rotate; the prompt says so.
 
 ## [v07.58r] — 2026-09-25 10:53:01 PM EST
 
