@@ -6,8 +6,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
-**Date:** 2026-09-26 06:05 AM → 07:55 AM EST (F-I1; one attended turn; context compacted once, before the close-out)
-**Repo version:** v07.66r (one push: v07.66r F-I1)
+**Date:** 2026-09-26 06:05 AM → 05:09 PM EST (F-I1 plus three follow-up turns; context compacted once, during F-I1's close-out)
+**Repo version:** v07.68r (three pushes: v07.66r F-I1; v07.67r the Profiler bold fix, the README archive backfill and the ERCOT/PJM and DigitalBridge decisions; v07.68r the SEC contact). The cooling reminder and this save are housekeeping, with no version bump
 **Branch:** `claude/nice-cannon-goad45`
 **Model:** Opus 5.5 at xhigh, per the F-I1 prompt
 
@@ -39,6 +39,13 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   - **KKR** (6 clauses: 3 held, 3 refined): STTGDC 75%, ECP (30 Oct 2024) and the 19.9% AEP transmission stake held; CyrusOne 50% refined (split unstated); Helix refined (a company, not a fund, with commitments); EDF power solutions refined on scope ('net renewable capacity').
   - **Not in the hypotheses:** Coravel (ACS–GIP 50:50); Meta's El Paso venture (80% BlackRock funds; an exclusivity agreement, not closed); ContourGlobal's 3 GWh CATL order; Avantus's 800 MWh Fluence system; STTGDC's HVDC testbed; 65% of Sempra Infrastructure Partners, signed but not closed.
 - **Verification:** registry sync, study, relationships, crossrefs and README-tree checkers clean; the reports checker's four warnings read. Playwright: 30 dossiers and three guides, zero page errors (details in the CHANGELOG).
+- **v07.67r — the follow-up to the session evaluation:**
+  - **Profiler v01.93w:** bold in inbound evidence excerpts, Capabilities kv rows, Policy mitigation lines and the Ecosystem explorer now renders as bold instead of literal `**`. One fragment-based helper, no `innerHTML`; an odd marker count (an excerpt cut mid-bold) is stripped. Playwright: 16 dossiers and the explorer show 0 literal markers and 0 page errors. The page changelog was at its 50-section cap, so v01.43w moved to the archive with its commit link.
+  - **README tree:** the 63 unlisted archive files are listed, so all 447 archived versions appear.
+  - **ERCOT and PJM approved** as grid operators, in a new `grid-operator` category, as two sessions with ERCOT first (`phase-f-action-plan.md` row 21; §11.3 rows flipped to approved).
+  - **DigitalBridge fallback** on row 10, which I recommended and the developer approved: if the close has not happened by Wed 10/7, move `scenario-capital-objection`'s reviewBy from 10/14 to Fri 11/6 (the landscape's own date); if not by Fri 10/30, run wave B without SoftBank and Blue Owl.
+- **v07.68r — the SEC contact.** The developer supplied a contact, which goes in `SEC_USER_AGENT` in `scripts/check-source-reachability.py` and is sent to SEC hosts only; the other probed hosts keep the neutral User-Agent. The probe's verdict is **OK** for the first time since v04.91r (`sec.gov` and `data.sec.gov` 200). `profiler-app.md`, `PROFILER-SCHEMA.md` and BlackRock's refresh note now call the old 'network-keyed block' a User-Agent rejection, and every SEC request, a subagent's included, uses that string. The older 9/30 run reminder was dismissed by the developer and moved to Completed Reminders.
+- **This save:** a new reminder (26 Sep 5:08 PM) — recheck the cooling module on Mon 9/28 if CoolIT's launch is public, otherwise on Wed 9/30.
 
 ### Which BlackRock and KKR platforms buy MV or DC power equipment? (the Megmeet paragraph)
 
@@ -46,14 +53,15 @@ Neither firm signs for equipment itself; every order is placed at a platform its
 
 ### Where we left off
 
-- **Status:** v07.66r pushed at close for the auto-merge.
-- **Action plan:** rows 1, 2 and 4 of §3 are done. **F-I2** (SoftBank, SB Energy, Blue Owl) waits on the DigitalBridge close, as instructed.
+- **Status:** v07.66r, v07.67r and v07.68r are merged; this save is pushed at close.
+- **Action plan:** rows 1, 2 and 4 of §3 are done. **F-I2** (SoftBank, SB Energy, Blue Owl) waits on the DigitalBridge close, which DigitalBridge said on 22 Sep would come within five business days (by Tue 9/29). **ERCOT and PJM** are approved for row 21: two sessions, ERCOT first, with the `grid-operator` category added in the ERCOT session.
 - **Dated items:**
-  - CoolIT cooling recheck on or after Mon 9/28 (row 3).
+  - Cooling recheck on Mon 9/28 if CoolIT's launch is public, otherwise Wed 9/30 (row 3; the 26 Sep 5:08 PM reminder).
   - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30 (row 5). That reminder expects only two segment lessons due; F-H1, F-N1 and F-I1 have since made **17 due**, by design, so a longer due list in the run's report is expected.
   - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1 (rebase first — the 10/1 Profiler Routines commit that day).
   - Dominion reframe and Classroom wave A, Fri 10/2 – Tue 10/6.
   - Megmeet start Wed 10/7.
+  - Wed 10/7: if DigitalBridge has not closed, move `scenario-capital-objection`'s reviewBy to Fri 11/6 (approved; row 10). Nothing fires on its own — the first session after 10/7 applies it.
   - For the F-I1 slugs:
     - BlackRock Q3 results 13 Oct and KKR's 29 Oct, both unconfirmed.
     - KKR's EDF deal: FERC EC26-151 comments due 13 Oct.
@@ -73,19 +81,20 @@ Neither firm signs for equipment itself; every order is placed at a platform its
 - **AIP gets no slug.** It is a capital partnership the EC does not name as an acquirer. Its members' edges carry it: `mgx`, `microsoft`, `nvidia` and `xai` are partners of `blackrock`.
 - **Typed deal status follows the record's own word:** AES, the El Paso venture and the STACK talks are `announced`; CoolIT is `historical` for KKR.
 - **Pins:** re-verified only where the change was edge-only. `fluence` v10 and `jupiter-power` v7 are left loud, with the reason written.
-- **The SEC probe was not changed.** SEC's fair-access policy wants a real, monitored contact address, which only the developer can supply (see Known issues).
-- **The house-style bold stays in the new dossiers.** The raw `**` that shows in other dossiers' inbound evidence is a renderer gap, not a data fault.
+- **SEC contact:** the developer supplied a contact on 9/26. It lives only in `SEC_USER_AGENT` and goes only to SEC hosts, never to the other probed hosts.
+- **The house-style bold stays in the dossiers.** The raw `**` that showed in inbound evidence was a renderer gap, fixed in Profiler v01.93w rather than in the data.
+- **ERCOT and PJM get a new `grid-operator` category**, not the generic `other`, because the developer asked for them as grid operators. Two sessions, because ERCOT alone has 73 inbound dossiers.
+- **DigitalBridge fallback date: Fri 11/6**, the date `landscape-capital-2026-09` already carries, so the scenario and its landscape are re-authored together.
+- **Reminders:** the older of the two 9/30 run reminders was dismissed (moved to Completed). A new cooling reminder was added with a 9/30 fallback; the 9/24 cooling reminder is still active, because the developer did not ask to dismiss it.
+- **Same-session save:** this Latest entry was extended in place rather than moved down, because it was already this session's hand-off (the F-H1 and F-N1 precedent). F-N1 stays as the Previous entry.
 
 ### Known issues
 
-- **SEC's 403 is a User-Agent rejection, not a network block.** `www.sec.gov` and `data.sec.gov` refuse a User-Agent whose contact address is on a `*.github.io` domain, which is what `scripts/check-source-reachability.py` sends. The same request with another contact domain returns 200. The 'EDGAR block' recorded since v04.91r is this. Fixing the probe needs a real, developer-owned address in its `USER_AGENT`; until then, sessions read filings from IR sites and EDGAR full-text search.
-- **Inbound evidence prints raw `**`.** `ovRelEvidList` in `Profiler.html` inserts excerpts as text nodes, so house-style bold labels from other dossiers print literally on the Relationships tab: 390 in the graph now, against 336 at HEAD. Some dossiers' own `positioning` fields (`blackstone`, `brookfield`, `macquarie`, `cyrusone`) show the same on the Capabilities tab. A page fix, not done here.
 - **Unreconciled figure:** Bosque County — CyrusOne says USD 1.2bn, KKR about USD 4bn. Both sides state it.
 - **Ownership splits nobody publishes:** CyrusOne (no first-party 50:50), Aligned (GIM and MGX shares), and Jupiter Power's owner, which Jupiter's own site does not name.
 - **Four pin warnings:** `fluence` v10 and `jupiter-power` v7, both from this session and left loud; `jinko` v6 and `oracle` v6, pre-existing.
-- **README archive tree:** the older unlisted archive files (about 60) are still missing. This session added only its own 28.
+- **Two active cooling reminders:** the 24 Sep entry and the 26 Sep 5:08 PM entry cover the same recheck; the newer one adds the 9/30 fallback. Dismiss the older one only if the developer says so.
 - **Carried over:**
-  - The ERCOT/PJM decision still awaits the developer.
   - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2), as before. In this sandbox `verify-profiler-roles.py` also stops early: the Python `playwright` module is not installed.
   - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
   - `study-prep/zhonhen/zhonhen-interview-brief.md` still calls Panama an SST in two lines.
@@ -94,11 +103,11 @@ Neither firm signs for equipment itself; every order is placed at a platform its
 ### Active context
 
 - **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 190 dossiers, 190 guides, 1,555 concepts, 1,656 graph edges (1,253 curated), 20 accepted relationship pairs. **CHANGELOG** `Sections: 92/100`.
+- **Profiler:** 190 dossiers, 190 guides, 1,555 concepts, 1,656 graph edges (1,253 curated), 20 accepted relationship pairs; page v01.93w; the README tree lists all 447 archived versions; the reachability probe reads OK. **CHANGELOG** `Sections: 94/100`.
 
 ### Recommendation for next session
 
-- Run the **cooling-module recheck on or after Mon 9/28**, once CoolIT's CDU launch is public (row 3 of `phase-f-action-plan.md`, and the 2026-09-24 reminder). `landscape-cooling-2026-09`'s reviewBy is 9/28, and it is the next dated item. F-I2 is gated on the DigitalBridge close and wave B on F-I2.
+- Run the **cooling-module recheck on Mon 9/28** if CoolIT's CDU launch is public by then, otherwise on **Wed 9/30** (the 26 Sep 5:08 PM reminder; row 3 of `phase-f-action-plan.md`). `landscape-cooling-2026-09`'s reviewBy is 9/28, and it is the next dated item. F-I2 follows the DigitalBridge close, expected by 9/29.
 
 **To continue:** type `recheck the cooling module after CoolIT`
 

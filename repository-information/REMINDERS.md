@@ -50,6 +50,11 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **If it committed:** `git fetch origin main` and rebase any open work before touching `Classroom.gs`, because the run's commit lives inside the content fence.
   - **To resume:** type `check the 9/30 Classroom run` (row 5 of `phase-f-action-plan.md`).
 
+- `2026-09-26 05:08:42 PM EST` — **Recheck the cooling module (`landscape-cooling-2026-09`) on Monday 2026-09-28 if CoolIT's CDU launch is public by then; if it is not, check again on Wednesday 2026-09-30** — requested on 2026-09-26. It restates the 2026-09-24 cooling reminder above with a fallback date; that entry's "What to check" and reviewBy rule still apply.
+  - **Mon 9/28:** see whether CoolIT's launch is public (capacity, ship date, form factor). If it is, run the recheck that day.
+  - **If it is not public on 9/28:** check again on Wed 9/30. The 9/30 Classroom run check falls on the same day, after about 7:30 AM ET.
+  - **To resume:** type `recheck the cooling module after CoolIT`.
+
 ## Completed Reminders
 
 - ~~`2026-09-24 09:54:50 PM EST` — **Check the 9/30 Classroom pipeline run on or after Wednesday 2026-09-30** — the weekly Routine "Classroom curriculum pipeline (C2) - weekly" fires at 4:00 AM PDT. Open its session and read the final `CLASSROOM PIPELINE — 2026-09-30 — …` report.~~ — completed `2026-09-26 05:04:50 PM EST` (dismissed by the developer; superseded by the 2026-09-26 01:21:37 AM entry, which covers the same 9/30 check, and its utilities re-pin fold-in already ran at v07.60r)
