@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-25",
- "companies": 177,
+ "built": "2026-09-26",
+ "companies": 180,
  "edges": [
   {
    "a": "abb",
@@ -1419,6 +1419,36 @@
   },
   {
    "a": "aep",
+   "b": "dte-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Indiana Michigan Power's Tariff LP (U-21986, approved) sits beside DTE's D11 large-load revisions (U-22061, pending) on EEI's Michigan list — the two Michigan large-load tariffs the commission is comparing.",
+     "context": "EEI's September 11, 2026 list places three Michigan large-load tariffs together: Consumers Energy's Rate GPD amendments (U-21859, approved), I&M's Tariff LP (U-21986, approved) and DTE's D11 revisions (U-22061, filed). The Dominion, Southern and AEP dossiers in this corpus are the tariff precedents against which DTE's 80 percent minimum reads.",
+     "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aep",
+   "b": "duke-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer utility whose AEP Ohio data-center tariff (over 25 MW, 85 percent for 12 years) is the benchmark for Duke Energy Ohio's proposed Rate DC (PUCO 26-0755-EL-ATA), and whose Indiana Michigan Power holds the only IURC large-load order.",
+     "context": "Ohio HB 706 (February 2026) would extend the AEP Ohio terms statewide, which would set Duke Energy Ohio's floor; in Indiana the IURC's large-load rules apply to I&M only and Duke Energy Indiana has no tariff.",
+     "source": "https://www.statenews.org/government-politics/2026-03-02/ohio-house-bill-would-extend-data-center-tariff-to-rest-of-state",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "aep",
    "b": "enchanted-rock",
    "curated": {
     "a": {
@@ -1939,6 +1969,21 @@
     }
    ],
    "last": "2025"
+  },
+  {
+   "a": "aep",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Transource, the AEP/Evergy joint venture with Berkshire Hathaway Energy, won the MISO Tranche 2.1 BECI 765 kV segment across Wisconsin (about 190 miles, $1.2B, 2034) that ATC did not — a competitive transmission loss for WEC's affiliate.",
+     "context": "Recorded from PRNewswire (August 5, 2026) and T&D World; Mike Hooper, WEC's COO, spent 15 years at AEP.",
+     "source": "Transource BECI award coverage (PRNewswire, August 5, 2026; T&D World, January 7, 2026); no WEC statement",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "aep",
@@ -3550,6 +3595,60 @@
     }
    ],
    "last": "2026-08-03"
+  },
+  {
+   "a": "amazon",
+   "b": "duke-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon's data-center site in Richmond County, North Carolina is a Q1 2026 deck photo caption and EEI's September 2026 list records the AWS $10B campus as under construction and served by Duke.",
+     "context": "EEI's list quotes Duke: it 'expects each 1,000 MW data center to save existing customers almost $1 billion over the life of a 15-year contract'. Amazon was a 2024 tariff-agreement signatory. WSOC reported in August 2026 that the Richmond County campus proposes 600 diesel generators for backup. It is also the county where the NCUC denied Duke's Smith combustion turbine on September 19, 2026 — the load the plant was justified on is in part this campus.",
+     "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+     "status": "active",
+     "since": "2026-02",
+     "scale": "$10B campus (EEI)",
+     "via": "Electric service agreement (Richmond County, NC)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus it is the counterparty to Microsoft (Person and Catawba Counties), Amazon (Richmond County), QTS (York County), Compass and Digital Realty, and the utility whose 'Customer Protection Plus' terms — customer-funded connection, minimum bills, termination charges, curtailment for up to 50 hours a year — are being turned into tariffs in North Carolina, Florida and Ohio during the fourth quarter of 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that Duke's nuclear position — eleven units being renewed to 80 years, ~300 MW of uprates, a Belews Creek early site permit and the 2024 tariff agreements with Amazon, Google, Microsoft and Nucor — is the asset most likely to distinguish it from Dominion and Southern in the hyperscalers' eyes after 2030, but that no SMR technology, customer commitment or dollar figure has been disclosed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Large-load interconnection — the pipeline ladder from late-stage prospect to electric service agreement to construction",
+     "date": "",
+     "text": "Named sites in Duke's own materials are the substation serving Microsoft's data center in Catawba County, North Carolina, Amazon's data-center site in Richmond County, North Carolina, and QTS's site in York County, South Carolina; a May 2024 agreement with Amazon, Google, Microsoft and Nucor created the Accelerating Clean Energy and Clean Transition tariff concepts for new nuclear and long-duration storage.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Nuclear fleet — 10,773 MW, subsequent license renewals, uprates and the 2037 new-nuclear option",
+     "date": "",
+     "text": "Lee site in Cherokee County, South Carolina for a large reactor, collaborates with TVA on the DOE-funded BWRX-300 program, and signed 2024 agreements with Amazon, Google, Microsoft and Nucor to fund such projects through tariffs.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-05",
+     "text": "Q1 2026: adjusted EPS $1.93 (beat); signed data-center ESAs jump 2.7 GW to ~7.6 GW with Microsoft, Compass, Amazon, Digital Realty and QTS named by trade press; $5.3B of transactions closed; up to $3.1B of tax credits to be sold — The quarter that made Duke a top-three disclosed data-center book among regulated utilities.",
+     "src": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Presentation-w-Reg-G.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-05"
   },
   {
    "a": "amazon",
@@ -7743,20 +7842,6 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Recent Reporting",
-     "date": "2025-07-02",
-     "text": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms — The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
-     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
-     "from": "b"
-    },
-    {
-     "where": "Summary",
-     "date": "",
      "text": "That is the structural line between it and kWh Analytics: kWh is a managing general agent that binds risk, Aon is the channel that reaches it, and this research found no evidence of Aon operating a renewables or storage managing general agency of its own.",
      "src": "",
      "from": "a"
@@ -7781,6 +7866,20 @@
      "text": "At kWh Analytics' 2025 Broker Council readout, John Katilus reports that 'Aon's claims team has seen a small number of hot commissioning losses of Battery Energy Storage System (BESS) farms' — Verified verbatim and correctly attributed. It is also the company's only published statement of battery loss experience anywhere: this research found no counterpart in its own publications, so either it shares loss data in industry fora without publishing it, or the observation never became a company publication.",
      "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "kWh Analytics is not a broker (the seat Marsh and Aon hold) and not a balance-sheet carrier (Aspen, Swiss Re, Everest and Munich Re carry the risk); it is the managing general agent that prices renewable-asset risk on its own loss and performance data and binds paper on the carriers' behalf through specialist brokers.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-02",
+     "text": "Broker Council readout with AmWins, McGriff, Renewable Guard, WTW, Aon, CAC Specialty, Alliant and Marsh; Aon reports 'a small number of hot commissioning losses' on BESS farms — The distribution channel is convened and quoted as a body — the brokers are partners, not competitors, in the MGA model.",
+     "src": "https://www.insurancejournal.com/news/national/2025/07/02/829815.htm",
+     "from": "b"
     }
    ],
    "last": "2026-06-09"
@@ -8042,6 +8141,22 @@
     }
    ],
    "last": "2025-06-11"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "dte-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "The Isabella Energy Center (190 MW) approved on April 30, 2026 sits on the Isabella wind site Apex Clean Energy built and transferred to DTE; the Apex dossier records the build-transfer sale.",
+     "context": "The corpus's Apex Clean Energy dossier lists 'Isabella build-transfer to DTE' among its full sales and DTE among its utility customers. The MPSC's April 30, 2026 release names an Isabella Energy Center of 190 MW among the 660 MW of storage approved in Case U-22054; no source read states whether Apex is the developer of the storage addition, so the link is recorded at the wind-site level only.",
+     "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/04/30/mpsc-takes-additional-steps-to-improve-utility-reliability-and-grid-resilience",
+     "status": "active",
+     "scale": "190 MW (Isabella)"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "apex-clean-energy",
@@ -8524,6 +8639,23 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "WEC Energy Group bought Apex Clean Energy's Jayhawk Wind in 2021 with Invenergy as 10 percent owner and operator; the Apex dossier records the sale.",
+     "context": "Recorded from the counterparty's dossier; the September 2026 investor book lists Jayhawk in the WEC Infrastructure fleet with Meta as offtaker.",
+     "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf",
+     "status": "historical",
+     "since": "2021",
+     "scale": "Jayhawk Wind (190 MW)"
+    }
+   },
+   "evid": [],
+   "last": "2021"
   },
   {
    "a": "applied-digital",
@@ -9581,6 +9713,24 @@
   },
   {
    "a": "aypa-power",
+   "b": "dte-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "The corpus's Aypa Power dossier records the 450 MW Big Mitten Energy Center in Huron County under a 20-year agreement with DTE Electric approved by the MPSC on March 27, 2026; the MPSC release names the project and the tolling term but not the counterparty.",
+     "context": "The MPSC's March 27, 2026 release lists 'Big Mitten Energy Center 450 MW (Huron Co., 20-yr tolling)' among the 1,000 MW approved under the 2022 IRP settlement. Aypa's dossier cites local press (Huron County View) attributing the project to Aypa. No DTE or MPSC document read this session names Aypa, so the attribution rests on the counterparty's side and local reporting.",
+     "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/03/27/mpsc-goes-big-on-batteries",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "450 MW",
+     "via": "20-year tolling agreement (Big Mitten Energy Center)"
+    }
+   },
+   "evid": [],
+   "last": "2026-03"
+  },
+  {
+   "a": "aypa-power",
    "b": "eolian",
    "curated": {
     "a": {
@@ -10056,6 +10206,20 @@
   },
   {
    "a": "black-veatch",
+   "b": "duke-energy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-28",
+     "text": "Duke Energy names Black & Veatch its 2026 Corporate Responsibility Supplier of the Year, citing BESS, substation, distribution, solar, and telecom work — Utility-relationship depth is the distribution channel for the whole AI-era thesis — awards like this are the trust the client-owned-substation product rides on.",
+     "src": "B&V release via Morningstar/Yahoo, 2026-07-28",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-28"
+  },
+  {
+   "a": "black-veatch",
    "b": "kiewit",
    "curated": {
     "a": {
@@ -10498,6 +10662,22 @@
     }
    ],
    "last": "2026-06-30"
+  },
+  {
+   "a": "blackstone",
+   "b": "dte-energy",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Blackstone and PIMCO are reported as financing partners of Related Digital's Saline campus after Blue Owl withdrew in December 2025; not a DTE counterparty.",
+     "context": "Energy-Storage.news (April 28, 2026) names Blackstone and PIMCO as financiers of the Related Digital campus and Reuters headlined a $16B financing on April 1, 2026 (article not reachable). The corpus's Oracle dossier carries the same 'Related Digital/Blackstone/PIMCO financing' line. The link is recorded because the campus's financing is what makes DTE's 1,383 MW obligation bankable, not because DTE contracts with Blackstone.",
+     "source": "https://www.energy-storage.news/utility-dte-energys-plan-to-pause-michigan-rate-increases-hinges-on-oracle-data-centre/",
+     "status": "announced",
+     "since": "2026-04"
+    }
+   },
+   "evid": [],
+   "last": "2026-04"
   },
   {
    "a": "blackstone",
@@ -11916,6 +12096,45 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "brookfield",
+   "b": "duke-energy",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Brookfield Super-Core Infrastructure Partners, through Peninsula Power Holdings L.P., bought 9.2 percent of Florida Progress (Duke Energy Florida's parent) for about $2.8B on March 3, 2026, rising to 19.7 percent by June 2028.",
+     "context": "Duke's August 5, 2025 release announced the up-to-19.7 percent, $6B all-cash minority investment with Duke retaining 80.3 percent and operating the utility; FERC and CFIUS approved in December 2025 and the NRC determined on February 17, 2026 that the investment is not a transfer of control. The March 3, 2026 8-K records the first closing and the remaining tranches — $200M by December 31, 2026, $500M by June 30, 2027, $1.5B by December 31, 2027 and $1B by June 30, 2028 — an eleven-member board with two investor managers, and investor consent rights and a put right.\n\nBrookfield previously bought Duke's commercial renewables business (2023). In this corpus Brookfield also controls Aypa Power, so the same investor sits on both sides of the Florida storage market.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926022610/tm267351d1_8k.htm",
+     "status": "active",
+     "since": "2026-03",
+     "scale": "19.7% of Florida Progress for $6B; 9.2% closed"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the Brookfield structure — 19.7 percent of the Florida utility sold in five tranches through June 2028 with two board seats, consent rights and a put — is the template for how Duke will fund the $5–10B of Florida and Indiana upside if it materializes, and that the company's stated 'genco' evaluation in Indiana is a second version of the same idea.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Solar and renewable procurement — 4,000 MW by 2034 in the Carolinas, Florida self-build, Indiana",
+     "date": "",
+     "text": "The company exited its commercial renewables business to Brookfield in 2023.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-31",
+     "text": "Sale of Piedmont Natural Gas's Tennessee business to Spire closes ($2.48B; ~$800M to Piedmont debt, ~$1.5B to the capital plan) — Gas customers fall from 1.8 million to 1.6 million; the proceeds and the Brookfield tranche cover 2026's equity need.",
+     "src": "https://news.duke-energy.com/releases/duke-energy-completes-sale-of-its-tennessee-piedmont-natural-gas-business-to-spire",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-31"
   },
   {
    "a": "brookfield",
@@ -13538,13 +13757,6 @@
    },
    "evid": [
     {
-     "where": "Capabilities · Commercial-vehicle batteries (Tectrans / Tianxing)",
-     "date": "",
-     "text": "Competes with EVE Energy and CALB in commercial-vehicle cells; differentiates on charge speed plus the only nationwide charge-and-swap network purpose-built for freight.",
-     "src": "",
-     "from": "b"
-    },
-    {
      "where": "Summary",
      "date": "",
      "text": "**BOTTOM LINE UP FRONT:** CALB is the fifth-largest energy-storage cell maker in the world on the modal third-party reading and the fourth-largest EV traction battery maker, but it is a challenger in storage and not an incumbent: its 6.8% share sits at roughly a quarter of CATL's, three rivals are clustered within 0.6 percentage points of it, and one serious research house omits it from the top ten altogether.",
@@ -13606,6 +13818,13 @@
      "text": "CATL sues in the Hangzhou Intermediate People's Court over a top-cover assembly patent, seeking RMB 90m — CALB denies infringement and has filed an accepted CNIPA invalidation request. No progress, settlement or judgment has been announced on any of the three suits in the 21 months since.",
      "src": "HKEX litigation announcement",
      "from": "a"
+    },
+    {
+     "where": "Capabilities · Commercial-vehicle batteries (Tectrans / Tianxing)",
+     "date": "",
+     "text": "Competes with EVE Energy and CALB in commercial-vehicle cells; differentiates on charge speed plus the only nationwide charge-and-swap network purpose-built for freight.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": "2025-01-28"
@@ -13800,6 +14019,13 @@
    },
    "evid": [
     {
+     "where": "Capabilities · ZHIJIU (至久) energy-storage cells",
+     "date": "",
+     "text": "SNE puts CALB 0.1 GWh ahead of REPT BATTERO and 1.3 GWh ahead of Cornex, so the rank is contested rather than held.",
+     "src": "",
+     "from": "a"
+    },
+    {
      "where": "Capabilities · Wending (问顶) cell platform",
      "date": "",
      "text": "Competes against CATL, EVE Energy, Hithium, BYD, CALB and Gotion on the large-format cell capacity race.",
@@ -13819,13 +14045,6 @@
      "text": "Third tier in Chinese EV batteries at roughly 2.5% national share — 19.50 GWh installed in FY2025 per CABIA — behind CATL, BYD, CALB and Gotion.",
      "src": "",
      "from": "b"
-    },
-    {
-     "where": "Capabilities · ZHIJIU (至久) energy-storage cells",
-     "date": "",
-     "text": "SNE puts CALB 0.1 GWh ahead of REPT BATTERO and 1.3 GWh ahead of Cornex, so the rank is contested rather than held.",
-     "src": "",
-     "from": "a"
     }
    ],
    "last": "2026"
@@ -16345,16 +16564,6 @@
    "a": "cipher-mining",
    "b": "engie-north-america",
    "curated": {
-    "b": {
-     "type": "customer",
-     "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
-     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
-     "status": "announced",
-     "since": "2025-05",
-     "scale": "up to 300 MW contemplated",
-     "via": "Co-located data centre at an unnamed West Texas wind facility"
-    },
     "a": {
      "type": "supplier",
      "note": "Preliminary agreement to co-locate up to 300 MW of data centre at an unnamed ENGIE West Texas wind facility.",
@@ -16364,6 +16573,16 @@
      "since": "2025-05",
      "scale": "up to 300 MW contemplated",
      "via": "Co-located data centre at a West Texas wind site"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Counterparty to the preliminary co-location agreement for up to 300 MW at a West Texas wind site — still preliminary a year on.",
+     "context": "ENGIE North America and Cipher signed a preliminary agreement in May 2025 contemplating up to 300 MW of co-located data-centre load at an unnamed West Texas wind facility, framed by ENGIE in market-structure terms — relieving transmission congestion, offsetting basis risk and mitigating curtailment.\n\nCipher's side of the record confirms that it has not advanced. The arrangement appears nowhere in Cipher's contracted-capacity disclosures: its 700 MW of contracted gross HPC capacity comprises Black Pearl, Barber Lake and Stingray only, and no definitive agreement with ENGIE has been announced by either party. This dossier's own indicator — that a definitive Cipher agreement would move the co-location judgment from announced to real — has therefore not fired.\n\nNote also that the counterparty renamed itself **Cipher Digital Inc.** on 20 February 2026; the May 2025 agreement was signed under the former name Cipher Mining Inc., which is why that name is used elsewhere in this dossier.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm",
+     "status": "announced",
+     "since": "2025-05",
+     "scale": "up to 300 MW contemplated",
+     "via": "Co-located data centre at an unnamed West Texas wind facility"
     }
    },
    "evid": [],
@@ -16388,16 +16607,6 @@
    "a": "cipher-mining",
    "b": "fluidstack",
    "curated": {
-    "b": {
-     "type": "supplier",
-     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
-     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
-     "via": "Barber Lake, Colorado City TX"
-    },
     "a": {
      "type": "customer",
      "note": "Tenant of record for the whole of Barber Lake under two tranches, with Google backstopping USD 1.73bn of its obligations.",
@@ -16407,6 +16616,16 @@
      "since": "2025-09",
      "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
      "via": "AI hosting at Barber Lake"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Landlord at Barber Lake, where Fluidstack USA II Inc. is tenant of record for the whole 300 MW under two tranches.",
+     "context": "Cipher Digital Inc. — renamed from Cipher Mining Inc. on 20 February 2026 — is Fluidstack's landlord at Barber Lake. Two tranches signed in September and November 2025 take Fluidstack to the entire 300 MW gross / 207 MW critical IT of the campus on a ten-year modified-gross lease worth about USD 3.8bn over the initial term, or about USD 9.0bn if both five-year extension options are exercised.\n\nGoogle backstops USD 1.73bn of Fluidstack's obligations here — USD 1.4bn at signing plus a USD 333m increase — and took warrants over 24,178,576 Cipher shares at USD 0.01, about 5.4% pro forma, with a USD 430.0m value floor. Cipher's project debt against the lease is USD 1,733m of 7.125% senior secured notes whose amortisation tracks the Google backstop rather than a fixed schedule.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325015073/dp237633_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "300 gross MW / 207 critical IT MW; ~USD 3.8bn over the initial ten-year term",
+     "via": "Barber Lake, Colorado City TX"
     }
    },
    "evid": [
@@ -16509,6 +16728,15 @@
    "a": "cipher-mining",
    "b": "google",
    "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
+     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
+    },
     "b": {
      "type": "portfolio",
      "note": "Backstops USD 1.73bn of Fluidstack's Barber Lake rent and holds penny warrants over ~5.4% of Cipher pro forma — Cipher's landlord equity sits in Google's hands as consideration for the credit support.",
@@ -16518,15 +16746,6 @@
      "since": "2025-09",
      "scale": "$1.73B backstop; ~5.4% warrants",
      "via": "Barber Lake recognition agreement"
-    },
-    "a": {
-     "type": "investor",
-     "note": "Credit backstop of Fluidstack's Barber Lake rent, bought with penny warrants over about 5.4% of Cipher pro forma.",
-     "context": "Google LLC is not a tenant and leases nothing from Cipher. It backstops Fluidstack's obligations under the Barber Lake leases — USD 1.4bn at the September 2025 signing, increased by USD 333m to USD 1.73bn in November 2025 — and in exchange holds warrants over 24,178,576 Cipher shares at an exercise price of USD 0.01, about 5.4% of the company on a pro forma basis. The exercise period opens on the Barber Lake lease commencement date and runs to 24 September 2030.\n\nThe warrant carries a floor that is unusual and material: if the value of the warrant shares does not reach USD 430.0m on the business day before the exercise period opens, Cipher must issue additional shares or pay cash to make up the shortfall. Cipher recorded an offsetting asset of USD 544.5m for the backstop and carries the warrant as a Level 3 liability, which was USD 525.2m at 31 December 2025 and USD 632.1m at 30 June 2026 — its movements produced a USD 410.3m charge in Q4 2025 and a USD 150.5m charge in Q2 2026.\n\nTyped `investor` for consistency with the corpus's treatment of the identical structure at TeraWulf, where Google's backstops likewise bought warrants (about 14% pro forma there against about 5.4% here). The economic substance is credit support priced in equity rather than a conventional investment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000095010325012168/dp234624_ex9901.htm",
-     "status": "active",
-     "since": "2025-09",
-     "scale": "USD 1.73bn backstop; warrants over 24,178,576 shares at USD 0.01, ~5.4% pro forma"
     }
    },
    "evid": [
@@ -16732,18 +16951,18 @@
    "a": "cipher-mining",
    "b": "terawulf",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
-     "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "The closest comparable: both are Fluidstack landlords with Google backstops bought with warrants, and Bernstein initiated on the pair together.",
      "context": "TeraWulf and Cipher are the two companies Bernstein initiated coverage on together in June 2026 at Outperform, calling them 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record, both are backstopped by Google, and both sold penny warrants to Google as the price of bankability, though at very different dilution: about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThey diverge on counterparty mix. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon with a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. On scale TeraWulf is the larger contracted book at about USD 13bn against Cipher's USD 11.4bn.",
      "source": "https://www.theblock.co/post/403636/the-power-landlords-of-ai-bernstein-initiates-coverage-on-bitcoin-miners-terawulf-and-cipher-digital-sees-ninefold-ai-revenue-by-2030",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other half of Bernstein's 'power landlords of AI' initiation, and the same Fluidstack-tenant, Google-backstop structure at a different price in equity.",
+     "context": "Bernstein initiated coverage on TeraWulf and Cipher together in June 2026 at Outperform, with price targets of USD 36 and USD 32, calling the pair 'the power landlords of AI'. The structural similarity is exact — both lease to Fluidstack as tenant of record and both are backstopped by Google — but the dilution differs sharply: Google's warrants represent about 14% of TeraWulf pro forma against about 5.4% of Cipher.\n\nThe counterparty mix diverges too. TeraWulf's book is roughly 91% Fluidstack; Cipher's is roughly two-thirds Amazon under a direct Amazon.com, Inc. guarantee, which is why Bernstein measures Cipher's investment-grade-backed share at 67%. Cipher also renamed itself **Cipher Digital Inc.** on 20 February 2026 and has substantially exited mining, where TeraWulf retains a mining segment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000038/cipherdigital_businessup.htm",
      "status": "active"
     }
    },
@@ -17162,6 +17381,38 @@
     }
    ],
    "last": "2026-09-02"
+  },
+  {
+   "a": "compass-datacenters",
+   "b": "duke-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Compass Datacenters signed a North Carolina ESA reported with Microsoft's on February 10, 2026; the Compass dossier records its Statesville campus with a Duke substation nearby and Duke service reported but unverified.",
+     "context": "Bloomberg (paywalled) and Hoodline report Compass among the ESAs that took Duke's signed total from 3 GW to 4.5 GW. The corpus's Compass dossier lists Statesville, North Carolina (about 330–340 acres, five buildings, rezoning approved September 2025) with 'Duke Energy service for Statesville reported by Bloomberg and E&E in February 2026 but not verifiable from a fetched source' — this dossier's trade-press evidence is consistent with it but is not a Duke or Compass statement naming the site.",
+     "source": "https://hoodline.com/2026/05/ai-power-grab-duke-energy-inks-2-7-gw-in-data-center-deals-around-charlotte/",
+     "status": "active",
+     "since": "2026-02",
+     "via": "Electric service agreement (North Carolina)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Campus power and the 'co-serve' utility model",
+     "date": "",
+     "text": "Utilities named by campus: Mississippi Power (Meridian, under a Public Service Commission-approved special contract with Compass Datacenters Jan I, LLC), Oncor (Red Oak, 'via two on-campus substations' per Commercial Property Executive), APS (Goodyear, '230kV substation adjacent'), ComEd (Hoffman Estates), Hydro-Québec (Montréal, 2019), Duke Energy (Statesville substation nearby).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-16",
+     "text": "Statesville, NC City Council approves the rezoning 8–0 after 17 residents speak against and 5 in favour; five buildings of 270,000 sq ft on about 330–365 acres (sources differ) — A new Southeast market with Duke Energy on the doorstep, won on a unanimous vote despite the noise, battery-safety and farmland objections that stalled other sites.",
+     "src": "https://www.wbtv.com/2025/09/16/statesville-city-council-approves-rezoning-request-new-data-center/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02"
   },
   {
    "a": "compass-datacenters",
@@ -19336,13 +19587,6 @@
    },
    "evid": [
     {
-     "where": "Recent Reporting",
-     "date": "2026-07-02",
-     "text": "Shortlisted as a candidate winner with Hithium and Cornex on NARI Technology's 2026 cell framework of about 4 GWh — The first hard evidence that it can win Chinese utility-scale framework slots against tier-one peers, on a tender split between cells of at least 314Ah and at least 587Ah.",
-     "src": "EnergyTrend reporting the NARI tender notice",
-     "from": "b"
-    },
-    {
      "where": "Capabilities · Energy-storage cells (储能电芯): 314Ah 聚能π, 472Ah, 588Ah and the 600Ah-plus family",
      "date": "",
      "text": "The 588Ah class puts it in the same format race as CATL's 587Ah, EVE's 628Ah and Hithium's 587Ah; the 688Ah programme with CRRC Zhuzhou runs in parallel with CRRC's 688Ah work with REPT and Great Power.",
@@ -19369,6 +19613,13 @@
      "text": "50 GWh of framework agreements at CIBF 2026: CRRC Zhuzhou Institute 25 GWh of large-capacity cells, CLOU 10 GWh, Wolong Storage 5 GWh, Cubenergy 5 GWh, Growatt 5 GWh (100Ah/314Ah residential) — CRRC Zhuzhou Institute's 25 GWh is the largest single signing in the company's history and pairs with the joint 688Ah cell — a covered integrator that now buys cells from Cornex, Great Power and REPT in parallel.",
      "src": "https://www.cornexbattery.com/Index/news_detail/id/1614.html",
      "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-02",
+     "text": "Shortlisted as a candidate winner with Hithium and Cornex on NARI Technology's 2026 cell framework of about 4 GWh — The first hard evidence that it can win Chinese utility-scale framework slots against tier-one peers, on a tender split between cells of at least 314Ah and at least 587Ah.",
+     "src": "EnergyTrend reporting the NARI tender notice",
+     "from": "b"
     }
    ],
    "last": "2026-07-02"
@@ -22412,6 +22663,20 @@
   },
   {
    "a": "dg-matrix",
+   "b": "duke-energy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-18",
+     "text": "Canary Media feature: testing 'with ABB, Duke Energy, and PowerSecure'; North Carolina factory 'opening late 2025' with capacity 'up to 1,000 units annually'; Power Router 'can cost half as much as using the standard mix of multiple technologies' — The factory date slipped: job postings in September 2026 still describe a Morrisville plant before its 'first production build' (analysis).",
+     "src": "https://www.canarymedia.com/articles/distributed-energy-resources/solid-state-transformers-dgmatrix-resilient-power",
+     "from": "a"
+    }
+   ],
+   "last": "2025-08-18"
+  },
+  {
+   "a": "dg-matrix",
    "b": "eaton",
    "curated": {
     "a": {
@@ -22628,13 +22893,6 @@
    },
    "evid": [
     {
-     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
-     "date": "",
-     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
-     "src": "",
-     "from": "b"
-    },
-    {
      "where": "Summary",
      "date": "",
      "text": "BOTTOM LINE UP FRONT: DG Matrix is the third venture-backed solid-state-transformer startup at the AI hall edge and the only one shipping a product — but the product shipping is a six-port low-voltage skid (Interport Flex, 200 and 400 kVA, 480 V AC in, 800 V DC out, 96–97% peak efficiency on its own datasheet), not the 12–34.5 kV medium-voltage unit that competes with Heron Power and Amperesand, which the company's own roadmap dates to '2028+'.",
@@ -22668,6 +22926,13 @@
      "text": "Power Electronics News' GTC 2026 roundup lists 'Delta Electronics, DG Matrix, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton (through Resilient Power Systems), Heron Power' as SST providers citing 'Nvidia's list', and quotes the CTO that NVIDIA is 'incorporating it as the reference architecture for 800V DC' — The only document placing DG Matrix on an NVIDIA roster is this article; every NVIDIA-published list (May 2025, October 2025, August 2026) omits it — treat the roster claim as trade press, not NVIDIA.",
      "src": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
      "from": "a"
+    },
+    {
+     "where": "Capabilities · Heron Link for Data Centers — 34.5 kV to 800 V DC solid-state transformer with SuperBBU",
+     "date": "",
+     "text": "Named competitors at the same layer: GE Vernova (reference designs and a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027), ABB (34.5 kV solid-state UPS), Eaton (Resilient Power SST), Siemens, Hitachi Energy, Sungrow EnerNeo, DG Matrix and Amperesand.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": "2026-04-10"
@@ -23195,6 +23460,38 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "digital-realty",
+   "b": "duke-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Digital Realty appears on the 'select announced large load project ESAs' logo strip of the 2026 investor presentations per third-party slide write-ups and among the Q1 2026 signings per Utility Dive.",
+     "context": "The logo strip is an image and was not text-extractable; the attribution rests on Investing.com's and Utility Dive's write-ups of the deck. Site and megawatts are not disclosed.",
+     "source": "https://www.utilitydive.com/news/duke-energy-earnings-anderson-gas-plant/819428/",
+     "status": "active",
+     "since": "2026",
+     "via": "Electric service agreement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus it is the counterparty to Microsoft (Person and Catawba Counties), Amazon (Richmond County), QTS (York County), Compass and Digital Realty, and the utility whose 'Customer Protection Plus' terms — customer-funded connection, minimum bills, termination charges, curtailment for up to 50 hours a year — are being turned into tariffs in North Carolina, Florida and Ohio during the fourth quarter of 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-05",
+     "text": "Q1 2026: adjusted EPS $1.93 (beat); signed data-center ESAs jump 2.7 GW to ~7.6 GW with Microsoft, Compass, Amazon, Digital Realty and QTS named by trade press; $5.3B of transactions closed; up to $3.1B of tax credits to be sold — The quarter that made Duke a top-three disclosed data-center book among regulated utilities.",
+     "src": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Presentation-w-Reg-G.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-05"
   },
   {
    "a": "digital-realty",
@@ -24238,6 +24535,29 @@
   },
   {
    "a": "dominion-energy",
+   "b": "duke-energy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Peer utility and the corpus's tariff benchmark — Dominion's GS-5 class (14 years, 85/60 percent minimums from 2027) is the standard Duke's 75 percent North Carolina proposal is being measured against by advocates.",
+     "context": "Duke Energy Progress and Dominion Energy North Carolina share the state and the NCUC; the two companies' resource plans, large-load terms and nuclear timelines (Belews Creek and North Anna SMR early site permits, both 2036–2037) run in parallel.",
+     "source": "Peer comparison; no transaction recorded",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Regulated retail electric service — six utilities in six states, and the large-load contract framework",
+     "date": "",
+     "text": "Against Dominion Energy Virginia's GS-5 class (14-year terms, 85/60 percent minimums from 2027) and AEP's eight commission-approved large-load tariffs, Duke's protections are written contract-by-contract inside electric service agreements rather than as one published rate class — the decks say provisions 'may vary across service territories'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dominion-energy",
    "b": "edgecore",
    "curated": {
     "b": {
@@ -24882,6 +25202,828 @@
     }
    },
    "evid": [],
+   "last": ""
+  },
+  {
+   "a": "dte-energy",
+   "b": "duke-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that the coverage plan's 'Oracle 1.4 GW under construction / Google 1 GW awaiting approval' attribution to Duke, which appears in one trade-press item, is a mis-attribution of DTE Energy's two Michigan contracts.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dte-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google LLC's 20-year supply agreement and Clean Capacity Accelerator Agreement for the ~1.0 GW Van Buren Township campus were filed with the MPSC on March 17, 2026 as a contested case (U-22058); no decision had been found by September 25, 2026.",
+     "context": "DTE's application asked for a decision by September 10, 2026. Per the Q2 2026 presentation the load ramp is 'supported by up to 1,600 MW of renewable generation, 480 MW of energy storage and 350 MW of demand response', with about 700 MW of longer-term generation to be identified in the IRP and ~$5B of incremental capital through 2032; Google also supplies about 300 MW of MISO Zone 7 capacity credits at no cost (Energy-Storage.news). The Attorney General's June 11, 2026 testimony seeks a 90 percent minimum bill.\n\nService is targeted for December 2027 and full load by December 2028 through ITC's Project Cannoli 345 kV switching station. Google is also one of five utilities' demand-response counterparties in the corpus's Google dossier, with DTE named.",
+     "source": "https://mi-psc.my.site.com/sfc/servlet.shepherd/version/download/068cs00001pVhXUAA0",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "~1.0 GW",
+     "via": "Primary supply agreement and Clean Capacity Accelerator Agreement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: DTE Electric is the utility whose first two data-center customers, Oracle's Stargate campus at Saline Township (1,383 MW) and Google at Van Buren Township (1.0 GW), together equal roughly 40 percent of its retail sales at full ramp, and it has chosen to serve them from the grid with customer-funded batteries rather than on-site gas: the Michigan Public Service Commission approved the Oracle contracts ex parte on December 18, 2025 (Case U-21990 — a 19-year supply agreement at 80 percent minimum billing demand and a 15-year agreement under which Oracle pays for 1,383 MW of DTE-owned storage), the Google contracts (U-22058, 20 years, filed March 17, 2026) were awaiting a decision requested by September 10, 2026 with no order found by September 25, and the storage is being bought at scale — 1,332 MW approved March 27, 2026, 660 MW on April 30, 300 MW on July 16, and a $1.6B, 1.5 GW / 6 GWh supply agreement with LG Energy Solution Vertech on May 27, 2026 — while the 2026 Integrated Resource Plan filed September 24, 2026 (U-22168) asks for 4.5 GW of storage, 15 GW of renewables and certificates for 2.1 GW of combined-cycle gas by 2032.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The 2026–2030 capital plan is $36.5B — $30B at DTE Electric, of which $15B is 'cleaner generation' ($10B renewables, $2.5B storage, $2.5B combined-cycle gas) and $11B distribution — up $6.5B from the prior plan, 'primarily driven by the Oracle data center project'; the Google contracts would add about $5B through 2032 once approved.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: the FY2025 Form 10-K and the 2026 10-Qs were not reachable (SEC hosts blocked from this network), so employee count, peak demand and operating revenue are taken from the FY2024 10-K and trackers, which disagree on revenue; the MPSC's own order texts were read through its issue brief and later orders; and no source found records a decision on the Google contracts (U-22058) after the requested September 10, 2026 date.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "We expect the remaining tranches to be filed in 2026–2027 and the Google 480 MW to follow the same path if U-22058 is approved.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the Google contracts will be approved with terms between DTE's 80 percent and the Attorney General's 90 percent minimum, but that the decision's timing is now the risk.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The ~$5B of Google-driven capital stays out of the plan until an order issues; the Q3 call or the November EEI conference is when DTE said it would add it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Attorney General's Court of Appeals challenge to the ex parte Oracle approval, her 90 percent minimum-bill testimony in the Google case, at least 18 local data-center moratoriums, an August 2026 poll showing 62 percent of likely voters opposed, and both gubernatorial nominees calling for moratoriums.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Large-load pipeline — 2.4 GW executed, ~2 GW in advanced discussions, 3–4 GW further",
+     "date": "",
+     "text": "Per the investor presentations, the executed rung went from zero at the Q2 2025 call (July 29, 2025, '3-plus GW with hyperscalers' and '4 GW other operators' in discussion) to 1.4 GW at the Q3 2025 call (October 30, 2025, the Oracle subsidiary) to 2.4 GW at the Q1 2026 call (April 30, 2026, adding Google); the advanced-discussions rung fell from ~3 GW to ~2 GW as Google moved up, and the further pipeline has stayed at 3–4 GW, so the total was framed as '~6 GW' in late 2025 and '5–6 GW of additional opportunities' in July 2026 — 'the same pipeline essentially', the CEO said when asked.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "The 2022 IRP settlement (U-21193, approved July 26, 2023) requires 780 MW by 2030 within 2,900 MW by 2042; the Oracle energy storage agreement (U-21990) obliges DTE to build 1,383 MW of company-owned storage matching the data center's contracted demand, paid for by Green Chile Ventures over fifteen years with the customer receiving the wholesale market revenues; and the Google Clean Capacity Accelerator Agreement (U-22058, pending) would fund up to 480 MW more.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-25",
+     "text": "Wayne County executive Warren Evans vetoes Van Buren Township's $125M local tax break for the Google data center (Detroit News, Crain's — headlines only, articles paywalled) — The Google contract's local politics moved against it in the same week its MPSC decision went unreported; the 1.0 GW remains 'upside to plan' until both clear.",
+     "src": "https://www.detroitnews.com/story/news/local/wayne-county/2026/09/25/wayne-county-executive-warren-evans-vetoes-van-buren-twp-data-center-tax-break/91943250007/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-10",
+     "text": "MPSC decides the DTE Gas rate case (U-21973): $74.5M net of a $162.7M request, 9.8 percent return on equity, $2.87 a month from October 1, 2026; the Taggart compressor station ($284.1M) rejected — the requested September 10 decision date for the Google contracts passes with no reported order — The commission cut the gas request by more than half; the silence on U-22058 the same day is the dossier's largest open question.",
+     "src": "https://www.michigan.gov/mpsc/commission/news-releases/2026/09/10/mpsc-approves-dte-gas-co-infrastructure-investments",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-11",
+     "text": "Attorney General Nessel files testimony in the Google contract case (U-22058) seeking a minimum bill of at least 90 percent, higher exit fees and cost-tracking mechanisms — The contested-case route DTE chose for Google gives the state's principal data-center adversary a hearing record the Oracle ex parte case denied her.",
+     "src": "https://www.michigan.gov/ag/news/press-releases/2026/06/11/ag-nessel-files-testimony-to-protect-ratepayers-in-google-data-center-proposal",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "MPSC approves 660 MW more storage (Isabella 190 MW, Meridian 295 MW, Coldwater River 75 MW, Tuscola II 100 MW; Case U-22054) and the LG Energy Solution Vertech replacement supply agreement for Trenton Channel (U-21566); Q1 2026 operating EPS $1.95 and the Google agreement disclosed — A second tranche a month after the first — the customer-funded obligation is being converted to projects at a pace no other utility in this file matches.",
+     "src": "https://www.michigan.gov/mpsc/commission/news-releases/2026/04/30/mpsc-takes-additional-steps-to-improve-utility-reliability-and-grid-resilience",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-22",
+     "text": "RFP for up to 480 MW of storage (COD Q1 2029, bids July 8, 2026, contracts Q1 2027) — 480 MW is the storage figure in the Google agreement; the RFP door for developers opens before the contract is approved.",
+     "src": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-seeking-developers-for-new-energy-storage-projects.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-25"
+  },
+  {
+   "a": "dte-energy",
+   "b": "key-capture-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "The MPSC approved a 15-year tolling agreement with Key Capture Energy's KCE MI 2 LLC (100 MW, COD Q4 2028) under the Oracle energy storage agreement on July 16, 2026 (Case U-22060), alongside Copenhagen Infrastructure Partners' 200 MW Redstart.",
+     "context": "The order records that both projects were sourced through DTE's 2025 energy storage RFP at a blended levelized cost of storage of $15.30/kW-month and that the Attorney General's request for a contested case was denied. The tolls are counted against the 1,383 MW customer-funded obligation, so a merchant developer's battery is being paid for by a hyperscaler through the utility.",
+     "source": "https://adms.apps.lara.state.mi.us/Mpsc/ViewCommissionOrderDocument/27497",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "100 MW",
+     "via": "15-year tolling agreement (KCE MI 2, Calhoun County)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess DTE Electric as the corpus's clearest example of a utility converting a hyperscale contract directly into battery purchase orders: the Oracle energy storage agreement obliges DTE to build 1,383 MW of company-owned storage that the customer pays for over fifteen years, and every storage docket since — the 332 MW Washtenaw County tranche (March 27, 2026), the 660 MW Isabella, Meridian, Coldwater River and Tuscola II set (April 30), the Key Capture Energy and Copenhagen Infrastructure tolling agreements (July 16) and the 1.5 GW / 6 GWh LG Energy Solution Vertech supply agreement — is a purchase made against that obligation or the 2022 plan's 780 MW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "The commission has approved, in 2026 alone: on March 27 (U-21193 and U-21990) 1,332 MW — Big Mitten Energy Center 450 MW (Huron County, 20-year tolling agreement, counterparty not named), Monroe I 350 MW and Fermi Energy Center 200 MW (self-build), and the first 332 MW of the Oracle obligation at Fish Creek 132 MW, Cold Creek 100 MW and Pine River 100 MW in Washtenaw County, with battery-module supply agreements and EPC master service agreements whose counterparties are redacted; on April 30 (U-22054) 660 MW — Isabella 190 MW and Meridian 295 MW (DTE-owned) plus tolling agreements for Coldwater River 75 MW and Tuscola II 100 MW; and on July 16 (U-22060) 300 MW of 15-year tolling agreements under the Oracle agreement with Key Capture Energy's KCE MI 2 (100 MW, Calhoun County, COD Q4 2028) and Copenhagen Infrastructure Partners' Redstart (200 MW, COD Q1 2028) at a blended $15.30/kW-month, sourced from the 2025 RFP.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "The first US utility to have a hyperscaler pay for more than a gigawatt of utility-owned batteries in a commission order, and the largest single utility BESS supply award in the corpus outside Tesla's Megapack contracts; against the merchant developers in this file (Aypa, Spearmint, Gridstor) DTE is the counterparty on the tolling side, with Key Capture Energy already contracted.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-16",
+     "text": "MPSC approves 15-year tolling agreements under the Oracle energy storage agreement with Key Capture Energy's KCE MI 2 (100 MW, COD Q4 2028) and Copenhagen Infrastructure Partners' Redstart (200 MW, COD Q1 2028) at a blended $15.30/kW-month (Case U-22060); the Attorney General's contested-case request denied — The customer-funded storage obligation is being filled with third-party tolls as well as self-build — the first named merchant storage developer in DTE's book.",
+     "src": "https://adms.apps.lara.state.mi.us/Mpsc/ViewCommissionOrderDocument/27497",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-16"
+  },
+  {
+   "a": "dte-energy",
+   "b": "lg-energy-solution",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "LGES Vertech replaced Powin as the Trenton Channel supplier (approved April 30, 2026) and on May 27, 2026 signed a $1.6B agreement for eight Michigan projects totaling 1.5 GW / 6 GWh.",
+     "context": "DTE's May 27, 2026 release describes a '$1.6 billion investment' in 'eight projects across the state, supporting 1.5 gigawatts of storage capacity' delivered over two years with cells made at LG's Holland, Michigan plant; the LGES release gives 6 GWh and the domestic-content compliance but not the dollar figure, which Utility Dive attributes to DTE. Which eight projects are covered is not stated.\n\nThe Trenton Channel replacement followed DTE's termination of Powin's contract on May 19, 2025 after missed deliveries; the MPSC approved the LGES supply agreement in Case U-21566 on April 30, 2026 at more than $30M less than the Powin contract.",
+     "source": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-invests-in-Michigan-made-battery-storage-systems-advancing-clean-energy-goals-and-spurring-billions-in-economic-growth-across-the-state/default.aspx",
+     "status": "active",
+     "since": "2025-11",
+     "scale": "1.5 GW / 6 GWh; $1.6B",
+     "via": "LG Energy Solution Vertech battery systems"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: DTE Electric is the utility whose first two data-center customers, Oracle's Stargate campus at Saline Township (1,383 MW) and Google at Van Buren Township (1.0 GW), together equal roughly 40 percent of its retail sales at full ramp, and it has chosen to serve them from the grid with customer-funded batteries rather than on-site gas: the Michigan Public Service Commission approved the Oracle contracts ex parte on December 18, 2025 (Case U-21990 — a 19-year supply agreement at 80 percent minimum billing demand and a 15-year agreement under which Oracle pays for 1,383 MW of DTE-owned storage), the Google contracts (U-22058, 20 years, filed March 17, 2026) were awaiting a decision requested by September 10, 2026 with no order found by September 25, and the storage is being bought at scale — 1,332 MW approved March 27, 2026, 660 MW on April 30, 300 MW on July 16, and a $1.6B, 1.5 GW / 6 GWh supply agreement with LG Energy Solution Vertech on May 27, 2026 — while the 2026 Integrated Resource Plan filed September 24, 2026 (U-22168) asks for 4.5 GW of storage, 15 GW of renewables and certificates for 2.1 GW of combined-cycle gas by 2032.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess DTE Electric as the corpus's clearest example of a utility converting a hyperscale contract directly into battery purchase orders: the Oracle energy storage agreement obliges DTE to build 1,383 MW of company-owned storage that the customer pays for over fifteen years, and every storage docket since — the 332 MW Washtenaw County tranche (March 27, 2026), the 660 MW Isabella, Meridian, Coldwater River and Tuscola II set (April 30), the Key Capture Energy and Copenhagen Infrastructure tolling agreements (July 16) and the 1.5 GW / 6 GWh LG Energy Solution Vertech supply agreement — is a purchase made against that obligation or the 2022 plan's 780 MW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "On the supply side, the 220 MW / 880 MWh Trenton Channel Energy Center at the retired coal plant in Trenton — announced June 10, 2024 with Powin as supplier — had its Powin contract terminated on May 19, 2025 after missed deliveries, and a replacement supply agreement with LG Energy Solution Vertech was approved on April 30, 2026 (U-21566) at more than $30M less; it is due in service at the end of 2026 as the largest standalone battery in the Great Lakes region.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-27",
+     "text": "$1.6B agreement with LG Energy Solution Vertech for eight Michigan battery projects totaling 1.5 GW / 6 GWh, delivered over two years with cells from Holland, Michigan — The largest utility BESS supply award of 2026 in this corpus, and a domestic-content answer to the tariff and FEOC regime; DTE says the Oracle-funded batteries meet its share of the 2030 state target.",
+     "src": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-invests-in-Michigan-made-battery-storage-systems-advancing-clean-energy-goals-and-spurring-billions-in-economic-growth-across-the-state/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "MPSC approves 660 MW more storage (Isabella 190 MW, Meridian 295 MW, Coldwater River 75 MW, Tuscola II 100 MW; Case U-22054) and the LG Energy Solution Vertech replacement supply agreement for Trenton Channel (U-21566); Q1 2026 operating EPS $1.95 and the Google agreement disclosed — A second tranche a month after the first — the customer-funded obligation is being converted to projects at a pace no other utility in this file matches.",
+     "src": "https://www.michigan.gov/mpsc/commission/news-releases/2026/04/30/mpsc-takes-additional-steps-to-improve-utility-reliability-and-grid-resilience",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-19",
+     "text": "DTE terminates Powin's Trenton Channel supply contract after missed deliveries; Powin files for bankruptcy June 9, 2025 — The supplier failure that put LG Energy Solution into DTE's book — a bankability lesson every utility buyer in this corpus now cites.",
+     "src": "https://www.energy-storage.news/utility-dte-energys-plan-to-pause-michigan-rate-increases-hinges-on-oracle-data-centre/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-27",
+     "text": "Vertech–DTE Energy: 6 GWh / 1.5 GW of Michigan BESS over 2 years, domestic-content-compliant — Grid storage sold on the back of AI load — the projects support the grid serving the Oracle-managed OpenAI data center in Saline Township.",
+     "src": "https://www.prnewswire.com/news-releases/lg-energy-solution-vertech-announces-agreement-with-dte-energy-for-6gwh-of-battery-energy-storage-systems-302783737.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-27"
+  },
+  {
+   "a": "dte-energy",
+   "b": "openai",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "OpenAI is the end user of the Saline Township Stargate campus that DTE serves through Oracle's subsidiary; DTE's own releases name only the Oracle entity.",
+     "context": "The October 30, 2025 announcement by OpenAI, Oracle and Related Digital named Saline Township as a Stargate site ($7B, 1.4 GW, 2.2 million square feet on 575 acres) and quoted DTE: it 'is supplying 100% of the power to the project using existing resources augmented by a new battery storage investment — financed entirely by the project'. Related Digital reached a consent judgment with the township on October 15, 2025 after a rezoning denial and had paid a $40M non-refundable deposit to DTE and ordered about $2B of equipment by February 2026 (Planet Detroit).",
+     "source": "https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "1.4 GW campus",
+     "project": "stargate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "OpenAI, Oracle and Related Digital announce the Stargate site at Saline Township ($7B, 1.4 GW); DTE reports its first 1.4 GW data-center agreement with Q3 2025 results and raises the capital plan 22 percent; DTE: 'supplying 100% of the power to the project using existing resources augmented by a new battery storage investment — financed entirely by the project' — Grid-served, not co-located — the design choice that makes DTE a battery buyer rather than a bystander to on-site gas.",
+     "src": "https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-30"
+  },
+  {
+   "a": "dte-energy",
+   "b": "oracle",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Oracle's subsidiary Green Chile Ventures LLC holds the 19-year supply agreement and 15-year energy storage agreement for the 1,383 MW Stargate campus at Saline Township, approved by the MPSC on December 18, 2025.",
+     "context": "The MPSC's December 18, 2025 release approved 'two special contracts between DTE Electric and Green Chile Ventures LLC' with the customer paying the full cost of 1,383 MW of DTE-owned storage over fifteen years and DTE 'responsible for any costs to serve the 1,383-megawatt (MW) data center in Saline Township that it is unable to recover from Green Chile Ventures LLC'. DTE's Q2 2026 presentation describes a 19-year power supply agreement with minimum monthly charges, a 15-year energy storage contract covering the capital investment, and termination fees combined with credit and collateral requirements; construction started and demand is expected to ramp in 2027–2028.\n\nS&P cut Oracle to BBB- on July 9, 2026; the CFO said the contract's downgrade triggers produced additional collateral postings, with specifics undisclosed at Oracle's request. The approval is under review at the Michigan Court of Appeals.\n\nThe corpus's Oracle dossier records the Saline site as 'DTE grid + ~$300M new battery storage' from Oracle's own October 2025 description; DTE's decks say 'nearly $2 billion storage investment in plan … fully covered by Oracle'. The two figures may describe different scopes (a first tranche against the full obligation) — no source read reconciles them, and both are recorded.",
+     "source": "https://www.michigan.gov/mpsc/commission/news-releases/2025/12/18/mpsc-approves-dte-electric-energy-contracts-for-data-center",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "1,383 MW",
+     "via": "Primary supply agreement and energy storage agreement (Rate D11)",
+     "project": "stargate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: DTE Electric is the utility whose first two data-center customers, Oracle's Stargate campus at Saline Township (1,383 MW) and Google at Van Buren Township (1.0 GW), together equal roughly 40 percent of its retail sales at full ramp, and it has chosen to serve them from the grid with customer-funded batteries rather than on-site gas: the Michigan Public Service Commission approved the Oracle contracts ex parte on December 18, 2025 (Case U-21990 — a 19-year supply agreement at 80 percent minimum billing demand and a 15-year agreement under which Oracle pays for 1,383 MW of DTE-owned storage), the Google contracts (U-22058, 20 years, filed March 17, 2026) were awaiting a decision requested by September 10, 2026 with no order found by September 25, and the storage is being bought at scale — 1,332 MW approved March 27, 2026, 660 MW on April 30, 300 MW on July 16, and a $1.6B, 1.5 GW / 6 GWh supply agreement with LG Energy Solution Vertech on May 27, 2026 — while the 2026 Integrated Resource Plan filed September 24, 2026 (U-22168) asks for 4.5 GW of storage, 15 GW of renewables and certificates for 2.1 GW of combined-cycle gas by 2032.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The 2026–2030 capital plan is $36.5B — $30B at DTE Electric, of which $15B is 'cleaner generation' ($10B renewables, $2.5B storage, $2.5B combined-cycle gas) and $11B distribution — up $6.5B from the prior plan, 'primarily driven by the Oracle data center project'; the Google contracts would add about $5B through 2032 once approved.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess DTE Electric as the corpus's clearest example of a utility converting a hyperscale contract directly into battery purchase orders: the Oracle energy storage agreement obliges DTE to build 1,383 MW of company-owned storage that the customer pays for over fifteen years, and every storage docket since — the 332 MW Washtenaw County tranche (March 27, 2026), the 660 MW Isabella, Meridian, Coldwater River and Tuscola II set (April 30), the Key Capture Energy and Copenhagen Infrastructure tolling agreements (July 16) and the 1.5 GW / 6 GWh LG Energy Solution Vertech supply agreement — is a purchase made against that obligation or the 2022 plan's 780 MW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its regulator is the most adversarial in the corpus — the Attorney General has appealed the Oracle approval to the Michigan Court of Appeals and both gubernatorial candidates call for data-center moratoriums — so every figure above sits behind a docket that can still move.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the CEO's own '40 percent' on the Q1 2026 call; S&P's Oracle downgrade; the CFO's statement that downgrade triggers produced additional collateral.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the commission approved the Oracle contracts 3–0 with conditions rather than rejecting them, and the March 27 order denied the Attorney General standing; against that, DTE asked for a decision by September 10, 2026, none was found by September 25, and the local tax break was vetoed the same week.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Attorney General's Court of Appeals challenge to the ex parte Oracle approval, her 90 percent minimum-bill testimony in the Google case, at least 18 local data-center moratoriums, an August 2026 poll showing 62 percent of likely voters opposed, and both gubernatorial nominees calling for moratoriums.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Large-load pipeline — 2.4 GW executed, ~2 GW in advanced discussions, 3–4 GW further",
+     "date": "",
+     "text": "Per the investor presentations, the executed rung went from zero at the Q2 2025 call (July 29, 2025, '3-plus GW with hyperscalers' and '4 GW other operators' in discussion) to 1.4 GW at the Q3 2025 call (October 30, 2025, the Oracle subsidiary) to 2.4 GW at the Q1 2026 call (April 30, 2026, adding Google); the advanced-discussions rung fell from ~3 GW to ~2 GW as Google moved up, and the further pipeline has stayed at 3–4 GW, so the total was framed as '~6 GW' in late 2025 and '5–6 GW of additional opportunities' in July 2026 — 'the same pipeline essentially', the CEO said when asked.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Large-load pipeline — 2.4 GW executed, ~2 GW in advanced discussions, 3–4 GW further",
+     "date": "",
+     "text": "At full ramp the two executed contracts are 'roughly 40 percent' of DTE Electric's sales; Utility Dive put the Oracle load alone at about a 25 percent increase in electric load.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Large-load pipeline — 2.4 GW executed, ~2 GW in advanced discussions, 3–4 GW further",
+     "date": "",
+     "text": "The counterparty credit that sits under it is Oracle's — cut to BBB- by S&P on July 9, 2026 — and DTE says downgrade triggers in the contract produced additional collateral postings.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "The 2022 IRP settlement (U-21193, approved July 26, 2023) requires 780 MW by 2030 within 2,900 MW by 2042; the Oracle energy storage agreement (U-21990) obliges DTE to build 1,383 MW of company-owned storage matching the data center's contracted demand, paid for by Green Chile Ventures over fifteen years with the customer receiving the wholesale market revenues; and the Google Clean Capacity Accelerator Agreement (U-22058, pending) would fund up to 480 MW more.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "The commission has approved, in 2026 alone: on March 27 (U-21193 and U-21990) 1,332 MW — Big Mitten Energy Center 450 MW (Huron County, 20-year tolling agreement, counterparty not named), Monroe I 350 MW and Fermi Energy Center 200 MW (self-build), and the first 332 MW of the Oracle obligation at Fish Creek 132 MW, Cold Creek 100 MW and Pine River 100 MW in Washtenaw County, with battery-module supply agreements and EPC master service agreements whose counterparties are redacted; on April 30 (U-22054) 660 MW — Isabella 190 MW and Meridian 295 MW (DTE-owned) plus tolling agreements for Coldwater River 75 MW and Tuscola II 100 MW; and on July 16 (U-22060) 300 MW of 15-year tolling agreements under the Oracle agreement with Key Capture Energy's KCE MI 2 (100 MW, Calhoun County, COD Q4 2028) and Copenhagen Infrastructure Partners' Redstart (200 MW, COD Q1 2028) at a blended $15.30/kW-month, sourced from the 2025 RFP.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "On May 27, 2026 DTE announced a $1.6B agreement with LGES Vertech for eight projects totaling 1.5 GW / 6 GWh, delivered over two years with Michigan-made cells from Holland — the dollar figure is DTE's, not in LGES's own text — and said the Oracle-funded batteries alone meet its share of the state's 2030 storage target.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-07",
+     "text": "Attorney General Nessel briefs her Court of Appeals challenge to the Oracle contract approval (Nos. 380362, 380364, 380878); Earthjustice, Sierra Club, MEC and NRDC file separately citing 'nearly half a billion' of up-front costs — The approval that underwrites 1,383 MW of storage is under judicial review while the batteries are being bought; no argument date found.",
+     "src": "https://www.michigan.gov/ag/news/press-releases/2026/08/07/ag-nessel-briefs-appeal-over-mpsc-approval-of-dte-saline-data-center-contracts",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-16",
+     "text": "MPSC approves 15-year tolling agreements under the Oracle energy storage agreement with Key Capture Energy's KCE MI 2 (100 MW, COD Q4 2028) and Copenhagen Infrastructure Partners' Redstart (200 MW, COD Q1 2028) at a blended $15.30/kW-month (Case U-22060); the Attorney General's contested-case request denied — The customer-funded storage obligation is being filled with third-party tolls as well as self-build — the first named merchant storage developer in DTE's book.",
+     "src": "https://adms.apps.lara.state.mi.us/Mpsc/ViewCommissionOrderDocument/27497",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-09",
+     "text": "S&P cuts Oracle to BBB-; DTE says the Saline contracts carry additional collateral requirements at downgrade triggers and that it received more postings (CFO, July 28 call) — The credit under 40 percent of future sales moved one notch above junk; the contract design, not the customer, is now what protects other ratepayers.",
+     "src": "https://wisconsinwatch.org/2026/07/wisconsin-oracle-data-center-credit-rating-drop-rules-fight-tech-energy-ai-utility/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-11",
+     "text": "Attorney General Nessel files testimony in the Google contract case (U-22058) seeking a minimum bill of at least 90 percent, higher exit fees and cost-tracking mechanisms — The contested-case route DTE chose for Google gives the state's principal data-center adversary a hearing record the Oracle ex parte case denied her.",
+     "src": "https://www.michigan.gov/ag/news/press-releases/2026/06/11/ag-nessel-files-testimony-to-protect-ratepayers-in-google-data-center-proposal",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-27",
+     "text": "$1.6B agreement with LG Energy Solution Vertech for eight Michigan battery projects totaling 1.5 GW / 6 GWh, delivered over two years with cells from Holland, Michigan — The largest utility BESS supply award of 2026 in this corpus, and a domestic-content answer to the tariff and FEOC regime; DTE says the Oracle-funded batteries meet its share of the 2030 state target.",
+     "src": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-invests-in-Michigan-made-battery-storage-systems-advancing-clean-energy-goals-and-spurring-billions-in-economic-growth-across-the-state/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-17",
+     "text": "Attorney General files a claim of appeal of the Oracle contract approval (U-21990) in the Michigan Court of Appeals — Judicial review begins four months after the ex parte order.",
+     "src": "https://www.michigan.gov/ag/news/press-releases/2026/04/17/ag-nessel-files-appeal-of-mpsc-approval-of-dtes-saline-data-center-contracts",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-27",
+     "text": "MPSC approves six storage contracts totaling 1,332 MW — Big Mitten 450 MW (tolling), Monroe I 350 MW, Fermi 200 MW, and the first 332 MW of the Oracle obligation at Fish Creek, Cold Creek and Pine River — and denies the Attorney General's rehearing petition and motion to reopen U-21990 — The order that reconciles the '1.4 GW' and '332 MW' figures: 1,383 MW is the obligation, 332 MW the first tranche with named projects.",
+     "src": "https://www.michigan.gov/mpsc/commission/news-releases/2026/03/27/mpsc-goes-big-on-batteries",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-17",
+     "text": "FY2025 operating EPS $7.36 (GAAP $7.03), above the $7.09–$7.23 guidance; 2026 guidance $7.59–$7.73; the 2026–2030 capital plan raised $6.5B to $36.5B, 'primarily driven by the Oracle data center project' — The plan raise is where the data-center contract shows up in the numbers: $6B more at DTE Electric, $5B of it cleaner generation.",
+     "src": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-reports-2025-accomplishments-earnings-and-investments/default.aspx",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-18",
+     "text": "MPSC approves the Oracle / Green Chile Ventures special contracts ex parte and 3–0 (U-21990): a 19-year supply agreement at 80 percent minimum billing demand and a 15-year energy storage agreement for 1,383 MW of customer-funded, DTE-owned batteries, subject to six conditions — The corpus's first commission order making a hyperscaler pay for more than a gigawatt of utility-owned storage; the ex parte route is what the Attorney General is now appealing.",
+     "src": "https://www.michigan.gov/mpsc/commission/news-releases/2025/12/18/mpsc-approves-dte-electric-energy-contracts-for-data-center",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "OpenAI, Oracle and Related Digital announce the Stargate site at Saline Township ($7B, 1.4 GW); DTE reports its first 1.4 GW data-center agreement with Q3 2025 results and raises the capital plan 22 percent; DTE: 'supplying 100% of the power to the project using existing resources augmented by a new battery storage investment — financed entirely by the project' — Grid-served, not co-located — the design choice that makes DTE a battery buyer rather than a bystander to on-site gas.",
+     "src": "https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-07"
+  },
+  {
+   "a": "dte-energy",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Capabilities · Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+     "date": "",
+     "text": "The first US utility to have a hyperscaler pay for more than a gigawatt of utility-owned batteries in a commission order, and the largest single utility BESS supply award in the corpus outside Tesla's Megapack contracts; against the merchant developers in this file (Aypa, Spearmint, Gridstor) DTE is the counterparty on the tolling side, with Key Capture Energy already contracted.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dte-energy",
+   "b": "xcel-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Peer regulated utility in the Midwest; the Xcel dossier compares its growth objective with WEC's and Alliant's, and Sargent & Lundy lists both among its nuclear clients.",
+     "context": "Recorded as a peer link only: the two companies share MISO membership and the same investor comparison set. No commercial relationship between them appears in the record.",
+     "source": "Peer comparison; no transaction recorded",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "duke-energy",
+   "b": "ge-vernova",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "GE Vernova is Duke's turbine supplier for the >7.5 GW gas program — 8 turbines secured before April 2025, up to 11 more under the April 24, 2025 arrangement, 26 in total by the August 2026 call, with the first delivered to Person County in July 2026.",
+     "context": "The April 24, 2025 release describes 'a significant arrangement for gas turbines and associated equipment' and an expansion of GE Vernova's Greenville, South Carolina plant; the Q2 2026 presentation says six turbines were added 'to align with next phase of build in resource plans'. Duke's June 30, 2026 supplier release names GE Vernova's Goldsboro, North Carolina transformer plant among ~$1B of 2025 North Carolina spend. The corpus's GE Vernova dossier records '20 × 7HA turbines' from the May 2026 count; the figure is now 26.",
+     "source": "https://news.duke-energy.com/releases/duke-energy-and-ge-vernova-announce-significant-arangement-for-gas-turbines-and-associated-equipment",
+     "status": "active",
+     "since": "2025-04",
+     "scale": "26 gas turbines",
+     "via": "7HA gas turbines and Goldsboro transformers"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Duke Energy has the corpus's most conservatively reported data-center book — ~7.8 GW of signed electric service agreements at the August 4, 2026 call, ~5.2 GW under construction and a ~15.4 GW 'high-confidence, late-stage pipeline' it expects to convert by the first half of 2027 — and it is building the largest regulated gas fleet in this file against it (7,501 MW across seven plants with 26 GE Vernova turbines secured) alongside ~4.5 GW of utility-owned batteries by 2031, inside a $103B 2026–2030 plan that is 39 percent grid; the terms on which those loads connect are still being written, in a North Carolina large-load tariff proceeding due before January 1, 2027, a Florida large-load policy the state commission has called 'facially noncompliant', and an Ohio Rate DC filing, and on September 18–19, 2026 the North Carolina Utilities Commission denied the company's first data-center-justified gas turbine, a 255 MW peaker, for load 'never tested in contested proceedings'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the storage sellers in this file Duke is a self-build buyer with an undisclosed supplier and three doors — the Carolinas resource-plan batteries at retiring coal sites (Allen, Riverbend, Knightdale), Duke Energy Florida's solar-sited and transmission-tied batteries (Powerline 2027, Bartow 2028), and the South Carolina 400 MW standalone storage RFP — and for the gas and grid vendors it is GE Vernova's largest disclosed utility turbine customer (26 units) and a $1B-a-year North Carolina supply-chain buyer (GE Vernova Goldsboro transformers, Siemens Energy Charlotte).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no Duke release or filing read names a battery OEM for Allen, Riverbend, Knightdale, Powerline or Bartow (Allen 1 earned the 40 percent ITC plus a 10 percent energy-community adder); the company's June 30, 2026 supplier release names GE Vernova and Siemens Energy but no storage vendor; the SC RFP has a utility-ownership track that would put the OEM choice with Duke's EPC.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Dispatchable generation build — more than 7.5 GW of new gas and ~15 GW of capacity by 2031",
+     "date": "",
+     "text": "GE Vernova is the turbine supplier — 19 units at the November 2025 call, 20 in February and May 2026, 26 by August 2026 — with the first Person County turbine delivered in July 2026 from the Greenville, South Carolina factory.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Transmission and distribution — the largest T&D system in the United States and ~39 percent of the capital plan",
+     "date": "",
+     "text": "Duke's 2025 spend with North Carolina suppliers was about $1B, including GE Vernova's Goldsboro transformer plant and Siemens Energy's Charlotte facility, and could reach $5B over five years (June 30, 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "Q2 2026: adjusted EPS $1.43 (GAAP $1.38), guidance $6.55–$6.80 reaffirmed; 7.8 GW of signed data-center ESAs, 5.2 GW under construction, 15.4 GW late-stage; GE Vernova turbines raised to 26; ~15 GW of capacity by 2031; $5–10B of Indiana and Florida upside capital — The build outran the signings this quarter: six more turbines and a gigawatt more capacity for 0.2 GW of new ESAs.",
+     "src": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q2/Q2-2026-Earnings-Presentation_vF-w-Reg-G-FINAL.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-01",
+     "text": "GE Vernova delivers the first 7HA turbine to the Person County combined-cycle site; the framework agreement rises to 26 turbines by the August call — Slots secured in April 2025 (8 plus up to 11) became 26 in sixteen months — the fastest-growing utility turbine book in the corpus.",
+     "src": "https://www.wral.com/news/local/duke-energy-new-gas-turbine-july-2026/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-26",
+     "text": "PSCSC certifies the ~1,365 MW Anderson County combined cycle (GE Vernova equipment; construction summer 2027; in service early 2031) — South Carolina's largest new plant, approved eleven months after it was proposed.",
+     "src": "https://news.duke-energy.com/releases/regulators-approve-duke-energys-proposal-for-new-natural-gas-generation-to-support-south-carolinas-growing-energy-needs",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-24",
+     "text": "GE Vernova arrangement for up to 11 additional 7HA turbines on top of eight already secured, with an expansion of GE Vernova's Greenville, South Carolina plant — The start of the 26-turbine book.",
+     "src": "https://news.duke-energy.com/releases/duke-energy-and-ge-vernova-announce-significant-arangement-for-gas-turbines-and-associated-equipment",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-15",
+     "text": "Duke Energy orders 20 × 7HA turbines (first delivery summer 2026); Chevron 'power foundries' partnership targets up to 4 GW for data centers by 2027 — The two marquee routes to AI load: regulated-utility gas buildout and oil-major behind-the-fence power, both on GEV hardware.",
+     "src": "https://www.gevernova.com/gas-power/resources/articles/2025/meeting-data-center-demand-with-chevron",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-04"
+  },
+  {
+   "a": "duke-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Google signed the May 29, 2024 agreements with Duke, Amazon, Microsoft and Nucor to develop tariffs funding new nuclear and long-duration storage, is a party to the 2026 Carolinas consolidation settlement's clean-transition-tariff evaluation and to South Carolina's generic large-load docket; no Duke-named Google ESA or site was found.",
+     "context": "Duke's May 29, 2024 release quotes Google's Briana Kobor on the ACE and CTT concepts. Canary Media reports Google, Nucor, Walmart, SELC and the Public Staff as parties to the March 2026 DEC/DEP consolidation settlement under which Duke will evaluate a 'clean transition tariff'. Fortune names Google among Duke's customers; Google's South Carolina campuses (Dorchester and Berkeley Counties) are not confirmed as Duke-served in any source read.",
+     "source": "https://news.duke-energy.com/releases/responding-to-growing-demand-duke-energy-amazon-google-microsoft-and-nucor-execute-agreements-to-accelerate-clean-energy-options",
+     "status": "active",
+     "since": "2024-05",
+     "via": "Accelerating Clean Energy and Clean Transition tariff agreements"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that Duke's nuclear position — eleven units being renewed to 80 years, ~300 MW of uprates, a Belews Creek early site permit and the 2024 tariff agreements with Amazon, Google, Microsoft and Nucor — is the asset most likely to distinguish it from Dominion and Southern in the hyperscalers' eyes after 2030, but that no SMR technology, customer commitment or dollar figure has been disclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that the coverage plan's 'Oracle 1.4 GW under construction / Google 1 GW awaiting approval' attribution to Duke, which appears in one trade-press item, is a mis-attribution of DTE Energy's two Michigan contracts.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Large-load interconnection — the pipeline ladder from late-stage prospect to electric service agreement to construction",
+     "date": "",
+     "text": "Named sites in Duke's own materials are the substation serving Microsoft's data center in Catawba County, North Carolina, Amazon's data-center site in Richmond County, North Carolina, and QTS's site in York County, South Carolina; a May 2024 agreement with Amazon, Google, Microsoft and Nucor created the Accelerating Clean Energy and Clean Transition tariff concepts for new nuclear and long-duration storage.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Nuclear fleet — 10,773 MW, subsequent license renewals, uprates and the 2037 new-nuclear option",
+     "date": "",
+     "text": "Lee site in Cherokee County, South Carolina for a large reactor, collaborates with TVA on the DOE-funded BWRX-300 program, and signed 2024 agreements with Amazon, Google, Microsoft and Nucor to fund such projects through tariffs.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-05"
+  },
+  {
+   "a": "duke-energy",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft is a signed ESA customer — the Q1 and Q2 2026 decks caption a 'substation to serve Microsoft data center, Catawba County, NC', Bloomberg reported the ESA on February 10, 2026, and Microsoft confirmed its Person County plans on February 24, 2026.",
+     "context": "Microsoft bought 1,350 acres in Woodsdale Township, Person County for $27M (announced October 31, 2024) next to Duke's Person County combined-cycle complex, and confirmed the data-center plans on February 24, 2026 (The Assembly). It was also a 2024 signatory to the Accelerating Clean Energy and Clean Transition tariff agreements and, in the 2026 North Carolina rate case, urged a separate large-load proceeding — which both settlements now provide. The contracted megawatts are not disclosed.",
+     "source": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Presentation-w-Reg-G.pdf",
+     "status": "active",
+     "since": "2026-02",
+     "via": "Electric service agreements (North Carolina)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the developers and hyperscalers in the corpus it is the counterparty to Microsoft (Person and Catawba Counties), Amazon (Richmond County), QTS (York County), Compass and Digital Realty, and the utility whose 'Customer Protection Plus' terms — customer-funded connection, minimum bills, termination charges, curtailment for up to 50 hours a year — are being turned into tariffs in North Carolina, Florida and Ohio during the fourth quarter of 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that Duke's nuclear position — eleven units being renewed to 80 years, ~300 MW of uprates, a Belews Creek early site permit and the 2024 tariff agreements with Amazon, Google, Microsoft and Nucor — is the asset most likely to distinguish it from Dominion and Southern in the hyperscalers' eyes after 2030, but that no SMR technology, customer commitment or dollar figure has been disclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Large-load interconnection — the pipeline ladder from late-stage prospect to electric service agreement to construction",
+     "date": "",
+     "text": "Named sites in Duke's own materials are the substation serving Microsoft's data center in Catawba County, North Carolina, Amazon's data-center site in Richmond County, North Carolina, and QTS's site in York County, South Carolina; a May 2024 agreement with Amazon, Google, Microsoft and Nucor created the Accelerating Clean Energy and Clean Transition tariff concepts for new nuclear and long-duration storage.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Nuclear fleet — 10,773 MW, subsequent license renewals, uprates and the 2037 new-nuclear option",
+     "date": "",
+     "text": "Lee site in Cherokee County, South Carolina for a large reactor, collaborates with TVA on the DOE-funded BWRX-300 program, and signed 2024 agreements with Amazon, Google, Microsoft and Nucor to fund such projects through tariffs.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-17",
+     "text": "Duke Energy Carolinas settles its North Carolina rate case (E-7 Sub 1329): 9.8 percent ROE, 53 percent equity, $496M over two years (3.7 percent a year), ~$3.8B of multiyear-plan capital, and a separate large-load tariff proceeding to finish before January 1, 2027 — Less than half the $1.0B asked; Microsoft had urged the separate proceeding the settlement now creates.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926084653/tm2620766d1_ex99-1.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-05",
+     "text": "Q1 2026: adjusted EPS $1.93 (beat); signed data-center ESAs jump 2.7 GW to ~7.6 GW with Microsoft, Compass, Amazon, Digital Realty and QTS named by trade press; $5.3B of transactions closed; up to $3.1B of tax credits to be sold — The quarter that made Duke a top-three disclosed data-center book among regulated utilities.",
+     "src": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Presentation-w-Reg-G.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-10",
+     "text": "FY2025 adjusted EPS $6.31; 2026 guidance $6.55–$6.80; five-year plan $103B (2026–2030); ~4.5 GW of signed data-center ESAs (+1.5 GW); growth guidance extended through 2030; Bloomberg reports Microsoft and Compass among the new North Carolina ESAs — The plan raise that put Duke at the top of the regulated capex league.",
+     "src": "https://s201.q4cdn.com/583395453/files/doc_financials/2025/q4/Q4-2025-Earnings-Presentation_vF-w-Reg-G.pdf",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-17"
+  },
+  {
+   "a": "duke-energy",
+   "b": "nscale",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "The corpus's Nscale dossier records a Madison, North Carolina site with '99MW secured Duke Energy' and 40 MW by 2026; no Duke document names Nscale.",
+     "context": "The claim rests on Nscale's own materials as recorded in its dossier. Duke's decks caption Microsoft, Amazon and QTS sites only, and the deck's logo strip as reported by third parties does not include Nscale, so the relationship is recorded from the counterparty's side and remains unconfirmed by Duke.",
+     "source": "Nscale dossier in this corpus (Madison, NC site); no Duke source",
+     "status": "announced",
+     "since": "2026",
+     "scale": "99 MW secured (Nscale)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The European entry in the anchored-neocloud model, and the one that owns its ground: Glomfjord and Narvik on Norwegian hydro, Monarch on a 2 GW Caterpillar gas microgrid, Loughton in Essex, with partner-run halls at Start Campus (Sines), Ionic Digital (Ward County), Verne (Keflavik) and a Duke Energy-served site in North Carolina.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the corpus's power vendors Nscale is Caterpillar's largest single generation order (Monarch) and a Schneider Electric customer per Aker; for the utilities it is a 230 MW Statnett reservation at Kvandal that the grid operator's May 2026 allocation halt has put in doubt, and a Duke Energy '99MW secured' site in Madison.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026"
+  },
+  {
+   "a": "duke-energy",
+   "b": "oracle",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Low confidence) We assess that the coverage plan's 'Oracle 1.4 GW under construction / Google 1 GW awaiting approval' attribution to Duke, which appears in one trade-press item, is a mis-attribution of DTE Energy's two Michigan contracts.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "duke-energy",
+   "b": "powerhouse-data-centers",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Campus list (homepage, with company MW figures): Northern Virginia — ABX-1 (60 MW, sold), Pacific (265 MW, ex-AOL headquarters, under construction), Arcola (120 MW, hyperscale lease January 2026), Quantum Connect (20 MW enterprise suites), PowerHouse 95 in Spotsylvania (900 MW), Chesterfield with Chirisa (CTP-02/03 120 MW fully leased build-to-suit for CoreWeave; 1600 Digital Drive 300 MW+); Texas — Irving (201 MW), Grand Prairie/Ellis County with Provident (1.8 GW switchyard, first 500 MW ERCOT tranche), Circle T in Westlake (300 MW), Red Oak (150 MW), a 500-acre Uhland site; Reno at the Tahoe-Reno Industrial Center (200 MW); Charlotte (380 MW, Duke Energy); Louisville (525 MW page / 402 MW release, LG&E) and Carrollton, Kentucky (USD 9.6 billion, July 2026) with Poe Companies; Carlisle, Pennsylvania (1.35 GW, USD 15 billion) with Pennsylvania Data Center Partners; Hobart (450 MW), Merrillville (750 MW) and La Porte (300 MW), Indiana; and Joliet, Illinois with Hillwood ('1800 MW', 755–795 acres, 24 buildings, '~$20 billion').",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "duke-energy",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "QTS's data-center site in York County, South Carolina is captioned on the Q2 2026 investor presentation and named among the Q1 2026 signings by trade press.",
+     "context": "Utility Dive's May 6, 2026 coverage of the 2.7 GW Q1 increase lists QTS with Microsoft, Compass, Amazon and Digital Realty. Contracted megawatts are not disclosed. QTS's own dossier in this corpus does not yet carry a Duke line.",
+     "source": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q2/Q2-2026-Earnings-Presentation_vF-w-Reg-G-FINAL.pdf",
+     "status": "active",
+     "since": "2026",
+     "via": "Electric service agreement (York County, SC)"
+    }
+   },
+   "evid": [],
+   "last": "2026"
+  },
+  {
+   "a": "duke-energy",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Siemens Energy's Charlotte facility is named in Duke's June 30, 2026 North Carolina supplier release as part of ~$1B of 2025 in-state spend.",
+     "context": "The release frames the spend as supporting the gas and grid build; no Siemens Energy turbine order for a named Duke plant was found — the turbine book is GE Vernova's.",
+     "source": "https://news.duke-energy.com/releases/releases-20260630-6924871",
+     "status": "active",
+     "since": "2025"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the storage sellers in this file Duke is a self-build buyer with an undisclosed supplier and three doors — the Carolinas resource-plan batteries at retiring coal sites (Allen, Riverbend, Knightdale), Duke Energy Florida's solar-sited and transmission-tied batteries (Powerline 2027, Bartow 2028), and the South Carolina 400 MW standalone storage RFP — and for the gas and grid vendors it is GE Vernova's largest disclosed utility turbine customer (26 units) and a $1B-a-year North Carolina supply-chain buyer (GE Vernova Goldsboro transformers, Siemens Energy Charlotte).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: no Duke release or filing read names a battery OEM for Allen, Riverbend, Knightdale, Powerline or Bartow (Allen 1 earned the 40 percent ITC plus a 10 percent energy-community adder); the company's June 30, 2026 supplier release names GE Vernova and Siemens Energy but no storage vendor; the SC RFP has a utility-ownership track that would put the OEM choice with Duke's EPC.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Transmission and distribution — the largest T&D system in the United States and ~39 percent of the capital plan",
+     "date": "",
+     "text": "Duke's 2025 spend with North Carolina suppliers was about $1B, including GE Vernova's Goldsboro transformer plant and Siemens Energy's Charlotte facility, and could reach $5B over five years (June 30, 2026).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025"
+  },
+  {
+   "a": "duke-energy",
+   "b": "southern-company",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Peer utility; Georgia Power's 9,885 MW certified in one order is the only regulated gas program larger than Duke's 7,501 MW, and its utility-owned storage program is the closest analogue to Duke's coal-site batteries.",
+     "context": "Recorded as a peer link only; Duke's Anderson County plant (South Carolina) and Georgia Power's build serve adjacent markets.",
+     "source": "Peer comparison; no transaction recorded",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Battery storage — ~4.5 GW online by 2031, utility-owned on retired coal sites and at solar plants",
+     "date": "",
+     "text": "Duke is a utility-owned storage buyer in the Southern Company and Xcel mould — batteries enter rate base at retired coal sites — rather than a PPA counterparty like NV Energy; the 4.5 GW by 2031 is comparable to Georgia Power's certified program and about twice Dominion's 2,000 MW by 2045 IRP figure, with the supplier still undisclosed.",
+     "src": "",
+     "from": "a"
+    }
+   ],
    "last": ""
   },
   {
@@ -32301,29 +33443,22 @@
    "a": "galaxy-digital",
    "b": "hut-8",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
-     "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
-     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "Peer Texas landlord; Hut 8's Beacon Point campus base-term value is the single figure most often mistaken for a three-company total.",
      "context": "Hut 8 and Galaxy both operate large single-tenant Texas campuses financed with ring-fenced project debt. Hut 8 publishes a company-wide base-term contract value of USD 26.6bn across 949 MW of contracted critical IT, and a Beacon Point campus figure of USD 19.6bn; Galaxy publishes no comparable base-term aggregate at all, only an average annual figure of more than USD 1.2bn. The two cannot be ranked against each other without restating one of them.\n\nOn counterparty credit Hut 8 markets investment-grade tenants and holds a Google backstop at River Bend; Galaxy discloses neither for CoreWeave.",
      "source": "https://www.prnewswire.com/news-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease-bringing-campus-level-base-term-contract-value-to-19-6-billion-302829514.html",
      "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Peer Texas landlord with a single unrated tenant, against Hut 8's investment-grade counterparties.",
+     "context": "Both operate large single-tenant Texas campuses financed with ring-fenced project debt, and the credit difference is priced. Hut 8's River Bend notes carry a 6.192% coupon with BBB- ratings behind a Google backstop; Galaxy's Helios Phase II notes carry 9.875% behind an unrated CoreWeave with no disclosed enhancement. Hut 8 states that 100% of its contracted AI capacity is leased to or backstopped by investment-grade counterparties; Galaxy discloses no equivalent.\n\nThe disclosure conventions differ too: Hut 8 publishes base-term contract values (USD 26.6bn across 949 MW), Galaxy publishes an average annual figure (more than USD 1.2bn) and no all-phase base-term total.",
+     "source": "https://www.spotedcrypto.com/hut-8-cipher-digital-ai-data-center-pivot-2026/",
+     "status": "active"
     }
    },
    "evid": [
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
-     "src": "",
-     "from": "b"
-    },
     {
      "where": "Key Judgments",
      "date": "",
@@ -32351,6 +33486,13 @@
      "text": "On counterparty credit it is at the weak end of that set: CoreWeave is unrated and levered, and unlike Cipher (Amazon.com guaranty) or Hut 8 (an undisclosed high-investment-grade tenant plus a Google backstop at River Bend) Galaxy discloses no credit enhancement behind its single tenant.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hut 8 sits beside Cipher Digital, TeraWulf, Core Scientific, Applied Digital, IREN and Galaxy Digital on the landlord side of this corpus, and it is the one whose capital structure most closely resembles a conventional data-centre developer's: BBB- rated, non-recourse, campus-level notes at 6.192% for River Bend and USD 4.25bn more for Beacon Point, with the parent carrying almost no recourse debt.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -34840,6 +35982,37 @@
   },
   {
    "a": "google",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Google Energy LLC is a 12-year offtaker of WEC Infrastructure's Coyote Ridge (97 MW) and Tatanka Ridge (155 MW) wind projects in South Dakota; no Google data-center load is in WEC's utility territory.",
+     "context": "Recorded from the September 2026 investor book's WEC Infrastructure offtaker table. The relationship is on the non-utility side only.",
+     "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf",
+     "status": "active",
+     "via": "WEC Infrastructure wind PPAs (Coyote Ridge, Tatanka Ridge)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A Wisconsin holding company for We Energies (Wisconsin Electric Power Company and Wisconsin Gas), Wisconsin Public Service, Peoples Gas and North Shore Gas (Chicago), Michigan Gas Utilities, Minnesota Energy Resources and Upper Michigan Energy Resources — about 1.7 million electric and 3.0 million gas customers, 8,375 MW of generating capacity and 7,150 employees (2025 Annual Report) — plus We Power (leased plants), WEC Infrastructure (2,654 MW of non-utility renewables under contract to Microsoft, Google, Meta, Tesla and others) and 60 percent of ATC.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Solar and wind — 3,850 MW of solar and 555 MW of wind in the plan, and WEC Infrastructure's contracted fleet",
+     "date": "",
+     "text": "Separately, WEC Infrastructure owns controlling interests in twelve non-utility renewable projects (2,654 MW nameplate, $3.93B) under long-term contracts — Sapphire Sky wind (250 MW, Microsoft, 12 years), Hardin III solar (250 MW, Microsoft, 15 years, February 2025), Coyote Ridge and Tatanka Ridge wind (Google), Jayhawk wind (190 MW, Meta, 10 years), Delilah I solar (300 MW, Tesla and Honda, 15 years, December 2024) — and sells production tax credits under transferability.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "google",
    "b": "whiting-turner",
    "curated": {
     "b": {
@@ -35227,18 +36400,18 @@
    },
    "evid": [
     {
-     "where": "Capabilities · Residential and C&I storage cells",
-     "date": "",
-     "text": "REPT, EVE and Great Power together held about 63% of the residential segment.",
-     "src": "",
-     "from": "b"
-    },
-    {
      "where": "Capabilities · Residential and portable storage — HOME and POLAR lines",
      "date": "",
      "text": "TrendForce places it second behind REPT BATTERO for the same half.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Capabilities · Residential and C&I storage cells",
+     "date": "",
+     "text": "REPT, EVE and Great Power together held about 63% of the residential segment.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": "2026"
@@ -35467,29 +36640,22 @@
    "a": "gridmatic",
    "b": "habitat-energy",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "The other pure-play merchant optimiser landed in this corpus's software segment; both are listed in Modo Energy's April 2025 US directory and both are quantified there, unlike Stem.",
-     "context": "Modo's directory carries Habitat's self-written entry ('over 1,300 MW... market leader in ERCOT', QSE/DME/auto-bidder, ERCOT only) beside Gridmatic's ('300+ MW... across ERCOT and CAISO', QSE/DME/auto-bidder in both). Gridmatic's model differs in kind: it tolls and floors batteries from its own fund and runs a Texas retail book, while Habitat sells optimisation on revenue share to third-party owners. Neither names the other on its own channels.",
-     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "The other pure-play merchant optimiser in this corpus; both are quantified in Modo Energy's April 2025 US directory, where Habitat claims 'over 1,300 MW' in ERCOT and Gridmatic '300+ MW' across ERCOT and CAISO.",
      "context": "The two compete for the same ERCOT owners but on different terms: Habitat sells a desk on revenue share and originates floors backed by insurers, Gridmatic tolls and floors batteries from its own fund and adds a retail book. Neither names the other on its own channels; Modo's tolling explainer lists Habitat's Octopus toll and Gridmatic's Cross Trails floor in the same table of ERCOT offtake deals.",
      "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
      "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "The other pure-play merchant optimiser landed in this corpus's software segment; both are listed in Modo Energy's April 2025 US directory and both are quantified there, unlike Stem.",
+     "context": "Modo's directory carries Habitat's self-written entry ('over 1,300 MW... market leader in ERCOT', QSE/DME/auto-bidder, ERCOT only) beside Gridmatic's ('300+ MW... across ERCOT and CAISO', QSE/DME/auto-bidder in both). Gridmatic's model differs in kind: it tolls and floors batteries from its own fund and runs a Texas retail book, while Habitat sells optimisation on revenue share to third-party owners. Neither names the other on its own channels.",
+     "source": "https://modoenergy.com/research/en/battery-energy-storage-optimizers-operators-usa-ercot-caiso-miso-spp-pjm-nyiso-isone-serc-wecc",
+     "status": "active"
     }
    },
    "evid": [
-    {
-     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
-     "date": "",
-     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
-     "src": "",
-     "from": "b"
-    },
     {
      "where": "Summary",
      "date": "",
@@ -35503,6 +36669,13 @@
      "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Capabilities · EVOLVE for Battery Storage — integrated optimisation and route-to-market for grid-scale batteries",
+     "date": "",
+     "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -35520,13 +36693,6 @@
     }
    },
    "evid": [
-    {
-     "where": "Capabilities · TraDER — QSE and optimisation platform, in-house and for third parties",
-     "date": "",
-     "text": "Modo's optimiser directory lists HEN/TraDER as 'QSE + DME + Auto-bidder', ERCOT only, beside Ascend, Caerus, CES, Equilibrium, Gridmatic, Habitat and Tesla; the 2026 release says TraDER 'is available for use by other 3rd party generation facilities'.",
-     "src": "",
-     "from": "b"
-    },
     {
      "where": "Capabilities · Battery storage optimisation, tolling and revenue-floor offtake (ERCOT and CAISO)",
      "date": "",
@@ -35547,6 +36713,13 @@
      "text": "Gridmatic Equisetum LLC files comments with the PUCT in Project 58379 as 'a Qualified Scheduling Entity that schedules wholesale energy storage resources in ERCOT', alongside Hunt Energy Network, Jupiter Power and Tesla — The only document in which the company describes its scheduling method in its own words and identifies its QSE entity.",
      "src": "https://interchange.puc.texas.gov/Documents/58379_14_1544998.PDF",
      "from": "a"
+    },
+    {
+     "where": "Capabilities · TraDER — QSE and optimisation platform, in-house and for third parties",
+     "date": "",
+     "text": "Modo's optimiser directory lists HEN/TraDER as 'QSE + DME + Auto-bidder', ERCOT only, beside Ascend, Caerus, CES, Equilibrium, Gridmatic, Habitat and Tesla; the 2026 release says TraDER 'is available for use by other 3rd party generation facilities'.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": "2025-10-03"
@@ -35586,20 +36759,6 @@
    },
    "evid": [
     {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
-     "date": "",
-     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
-     "src": "",
-     "from": "b"
-    },
-    {
      "where": "Summary",
      "date": "",
      "text": "That makes it at once an optimiser (competing with Tesla, Habitat, Fluence, Stem and Hunt for ERCOT and CAISO mandates), an offtaker (the counterparty Energy Vault reports to its shareholders, and the model Modo calls 'the first known battery in ERCOT operated under a revenue floor contract') and a load-serving entity for the data-centre and miner demand the rest of the corpus builds for.",
@@ -35612,6 +36771,20 @@
      "text": "Modo's US directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Habitat Energy, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -35978,20 +37151,6 @@
    },
    "evid": [
     {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
-     "src": "",
-     "from": "b"
-    },
-    {
-     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
-     "date": "",
-     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
-     "src": "",
-     "from": "b"
-    },
-    {
      "where": "Summary",
      "date": "",
      "text": "The segment's two incumbents reach it from adjacent businesses — FlexGen from integration and its HybridOS controls, Stem from solar asset-performance management — and its listed challenger, Fluence's Mosaic, is sold to protect a hardware franchise.",
@@ -36011,6 +37170,20 @@
      "text": "In ERCOT Modo's April 2025 directory lists it beside Ascend Analytics, Caerus, CES, Equilibrium, esVolta, Fluence, GridBeyond, Gridmatic, Hunt Energy Network, Intelligent Generation, Stem, Tenaska, Tesla, Tierra Climate and Tyba — Habitat's self-written entry claims 'over 1,300 MW' and 'market leader in ERCOT'.",
      "src": "",
      "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that it delivers qualified-scheduling-entity services through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PowerTrack Optimizer (storage optimisation and dispatch — the former Athena platform)",
+     "date": "",
+     "text": "Modo Energy's April 2025 directory of seventeen US battery optimizers includes Stem in capability-only language and records that its qualified-scheduling-entity service is delivered through third-party partners, while quantifying performance for Habitat Energy, Gridmatic, Equilibrium, Tesla, Tierra and Caerus.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -36028,13 +37201,6 @@
     }
    },
    "evid": [
-    {
-     "where": "Capabilities · Autobidder & Opticaster (energy software)",
-     "date": "",
-     "text": "Differentiates Tesla as hardware-plus-market-software integrator vs pure hardware vendors; competes with Fluence's Mosaic bidding platform and third-party optimizers (Habitat Energy, GridBeyond, Flexitricity) — Tesla's edge is vertical integration with its own fleet telemetry and the option to buy hardware, EPC, and merchant optimization from one counterparty.",
-     "src": "",
-     "from": "b"
-    },
     {
      "where": "Summary",
      "date": "",
@@ -36062,6 +37228,13 @@
      "text": "Modo Energy data (via Tamarindo) rank Habitat third in Great Britain by MW optimised — 600 MW behind EDF (750 MW) and Tesla (680 MW), after adding 280 MW in 2024 — The only public GB share table; it places the company as the leading pure-play independent behind two utility-scale incumbents.",
      "src": "https://tamarindo.global/insight/analysis/10-battery-optimisers-with-the-biggest-gb-market-share/",
      "from": "a"
+    },
+    {
+     "where": "Capabilities · Autobidder & Opticaster (energy software)",
+     "date": "",
+     "text": "Differentiates Tesla as hardware-plus-market-software integrator vs pure hardware vendors; competes with Fluence's Mosaic bidding platform and third-party optimizers (Habitat Energy, GridBeyond, Flexitricity) — Tesla's edge is vertical integration with its own fleet telemetry and the option to buy hardware, EPC, and merchant optimization from one counterparty.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": "2025-01-23"
@@ -36131,6 +37304,14 @@
    "a": "heron-power",
    "b": "intersect-power",
    "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Intersect Power's CEO Sheldon Kimber is quoted in the Series B release; trade press names Intersect as one of two disclosed customers.",
+     "context": "The February 2026 Series B release carries a customer endorsement from Intersect Power's chief executive, and Latitude Media (August 2026) names Intersect Power and Crusoe as the two customers the company has disclosed. No order size, product configuration or delivery date is public, and Intersect has not announced a purchase; the engagement is recorded as announced rather than active.",
+     "source": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
+     "status": "announced",
+     "since": "2026-02"
+    },
     "b": {
      "type": "supplier",
      "note": "Chief executive Sheldon Kimber is quoted endorsing Heron Link in Heron Power's February 2026 Series B release; trade press names Intersect as one of Heron's two disclosed customers.",
@@ -36139,14 +37320,6 @@
      "status": "announced",
      "since": "2026-02",
      "via": "Heron Link"
-    },
-    "a": {
-     "type": "customer",
-     "note": "Intersect Power's CEO Sheldon Kimber is quoted in the Series B release; trade press names Intersect as one of two disclosed customers.",
-     "context": "The February 2026 Series B release carries a customer endorsement from Intersect Power's chief executive, and Latitude Media (August 2026) names Intersect Power and Crusoe as the two customers the company has disclosed. No order size, product configuration or delivery date is public, and Intersect has not announced a purchase; the engagement is recorded as announced rather than active.",
-     "source": "https://www.globenewswire.com/news-release/2026/02/18/3240170/0/en/Heron-Power-Raises-140-Million-to-Build-a-Next-Generation-Power-Grid-in-Series-B-Co-led-by-Andreessen-Horowitz-Breakthrough-Energy-Ventures.html",
-     "status": "announced",
-     "since": "2026-02"
     }
    },
    "evid": [
@@ -36281,13 +37454,6 @@
    },
    "evid": [
     {
-     "where": "Recent Reporting",
-     "date": "2025-10-13",
-     "text": "OCP Summit: Kyber rack detailed (576 Rubin Ultra GPUs, 2027), 800VDC ecosystem expanded (ABB, GE Vernova, Hitachi Energy, Siemens, Heron Power added) + whitepaper released — The grid-equipment tier joining the partner list moves 800VDC from server-vendor concern to utility-interconnection concern — where BESS lives.",
-     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
-     "from": "b"
-    },
-    {
      "where": "Summary",
      "date": "",
      "text": "BOTTOM LINE UP FRONT: Heron Power is the only startup on NVIDIA's facility-tier 800 V DC roster and holds the most completely specified hall-edge solid-state transformer in the public record — 34.5 kV AC to 800 V DC, 4.2 MW per Heron Link — but it has shipped no unit, names two customers (Intersect Power and a Crusoe letter of intent), and does not begin mass production until late 2027, after NVIDIA's first 800 V halls are built on transformer-rectifier units; whether the Morgan Hill factory ramps on schedule against roughly USD 243M of equity and credit is the whole thesis.",
@@ -36342,6 +37508,13 @@
      "text": "NVIDIA names Heron Power among nine 'data center power system providers' in its 800 V DC ecosystem at the OCP Global Summit — beside ABB, Eaton, GE Vernova, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv; Heron releases its gigascale-AI white paper the same day — The only startup in the facility tier: a positional asset that costs NVIDIA nothing and gives Heron a roster line every subsequent release cites.",
      "src": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
      "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "OCP Summit: Kyber rack detailed (576 Rubin Ultra GPUs, 2027), 800VDC ecosystem expanded (ABB, GE Vernova, Hitachi Energy, Siemens, Heron Power added) + whitepaper released — The grid-equipment tier joining the partner list moves 800VDC from server-vendor concern to utility-interconnection concern — where BESS lives.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
     }
    ],
    "last": "2025-10-13"
@@ -39664,22 +40837,50 @@
    "a": "intertek",
    "b": "ul-solutions",
    "curated": {
-    "b": {
-     "type": "competitor",
-     "note": "Named by UL Solutions in its FY2024 10-K as one of the large global public firms it competes with — and the naming was removed from the FY2025 10-K.",
-     "context": "The FY2024 10-K, filed 2025-02-20, states that the company is subject to competition from large and global public firms such as Intertek, SGS, Bureau Veritas and Eurofins, and that it also competes with large private players including Element, TUV Rheinland, TUV SUD, DEKRA and DNV. The FY2025 10-K, filed 2026-02-19, replaces that sentence with a generic formulation naming nobody: competition from a broad range of players including large and global public and private firms, as well as a broad number of smaller companies and new entrants.\n\nThe removal is a first-party fact; the reason for it is not stated. One plausible reading is that fourteen months after naming Eurofins as a competitor the company agreed to buy Eurofins' Electrical and Electronics division, and naming a target as a competitor in a live filing is the sort of language transaction counsel removes. That is inference, and the dossier records it as such.",
-     "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm",
-     "status": "active"
-    },
     "a": {
      "type": "competitor",
      "note": "The two are named together as the leading players in battery-storage testing, inspection and certification, and UL Solutions named Intertek in its FY2024 10-K before removing every competitor name from the FY2025 edition.",
      "context": "MarketsandMarkets' July 2026 assessment of the battery-storage TIC market names UL Solutions and Intertek as the leading key players and frames the two as pursuing different strategies: UL Solutions on battery-specific technical specialisation, Intertek on lifecycle project assurance extending beyond the laboratory into procurement and asset operations. That is a fair description of the difference — Intertek's distinctive asset here is Intertek CEA, which sits on the buyer's side of a project, while UL Solutions' is the mark and the fire-testing capacity.\n\nThe relationship is asymmetric in the filings. UL Solutions' FY2024 10-K names Intertek first among the large global public firms it competes with; its FY2025 10-K, filed 2026-02-19, removes every name. Intertek's own competitive positioning is expressed through marketing rather than filings: it runs a dedicated page arguing that the UL mark is not required and that the ETL Mark is equivalent, and independent compliance literature reports ETL at 25 to 50 per cent below UL pricing at up to half the turnaround.\n\nThe substitution claim is narrower than it sounds and is time-dependent. Intertek's OSHA NRTL scope did not include UL 9540 until 2025-08-22, four and a half years after it applied, and did not include UL 1973 until 2024-04-24; it has never included UL 9540A, because that is a test method rather than a certification standard and no laboratory holds NRTL scope for it.",
      "source": "https://www.marketsandmarkets.com/ResearchInsight/bess-tic-companies.asp",
      "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Named by UL Solutions in its FY2024 10-K as one of the large global public firms it competes with — and the naming was removed from the FY2025 10-K.",
+     "context": "The FY2024 10-K, filed 2025-02-20, states that the company is subject to competition from large and global public firms such as Intertek, SGS, Bureau Veritas and Eurofins, and that it also competes with large private players including Element, TUV Rheinland, TUV SUD, DEKRA and DNV. The FY2025 10-K, filed 2026-02-19, replaces that sentence with a generic formulation naming nobody: competition from a broad range of players including large and global public and private firms, as well as a broad number of smaller companies and new entrants.\n\nThe removal is a first-party fact; the reason for it is not stated. One plausible reading is that fourteen months after naming Eurofins as a competitor the company agreed to buy Eurofins' Electrical and Electronics division, and naming a target as a competitor in a live filing is the sort of language transaction counsel removes. That is inference, and the dossier records it as such.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1901440/000190144025000012/uls-20241231.htm",
+     "status": "active"
     }
    },
    "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "That is an owner's-engineer function in everything but the contractual title, and it is the reason a market assessment naming UL Solutions and Intertek as the two leading players in battery-storage TIC describes them as pursuing different strategies.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The claim survives only where a market is named: MarketsandMarkets' July 2026 assessment names UL Solutions and Intertek the leading key players in **battery-storage TIC**, a market it sizes at USD 0.66bn in 2026 rising to USD 1.30bn by 2032.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Intertek CEA — solar and energy-storage quality assurance",
+     "date": "",
+     "text": "The differentiator against UL Solutions is not laboratory depth but position: CEA is engaged by the developer, integrator, IPP or financier buying the equipment, not by the manufacturer selling it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Intertek CEA — solar and energy-storage quality assurance",
+     "date": "",
+     "text": "MarketsandMarkets' July 2026 assessment of battery-storage TIC names UL Solutions and Intertek as the leading key players and frames the competition as two strategies — battery-specific technical specialisation against lifecycle project assurance extending beyond the laboratory into procurement and asset operations.",
+     "src": "",
+     "from": "a"
+    },
     {
      "where": "Key Judgments",
      "date": "",
@@ -39721,34 +40922,6 @@
      "text": "The one third-party ranking of battery-storage TIC names UL Solutions and Intertek as the leading key players in a market sized at USD 0.66bn in 2026 — strategically central and financially small, at roughly a fifth of UL Solutions' own revenue and split fifteen ways.",
      "src": "",
      "from": "b"
-    },
-    {
-     "where": "Summary",
-     "date": "",
-     "text": "That is an owner's-engineer function in everything but the contractual title, and it is the reason a market assessment naming UL Solutions and Intertek as the two leading players in battery-storage TIC describes them as pursuing different strategies.",
-     "src": "",
-     "from": "a"
-    },
-    {
-     "where": "Key Judgments",
-     "date": "",
-     "text": "The claim survives only where a market is named: MarketsandMarkets' July 2026 assessment names UL Solutions and Intertek the leading key players in **battery-storage TIC**, a market it sizes at USD 0.66bn in 2026 rising to USD 1.30bn by 2032.",
-     "src": "",
-     "from": "a"
-    },
-    {
-     "where": "Capabilities · Intertek CEA — solar and energy-storage quality assurance",
-     "date": "",
-     "text": "The differentiator against UL Solutions is not laboratory depth but position: CEA is engaged by the developer, integrator, IPP or financier buying the equipment, not by the manufacturer selling it.",
-     "src": "",
-     "from": "a"
-    },
-    {
-     "where": "Capabilities · Intertek CEA — solar and energy-storage quality assurance",
-     "date": "",
-     "text": "MarketsandMarkets' July 2026 assessment of battery-storage TIC names UL Solutions and Intertek as the leading key players and frames the competition as two strategies — battery-specific technical specialisation against lifecycle project assurance extending beyond the laboratory into procurement and asset operations.",
-     "src": "",
-     "from": "a"
     }
    ],
    "last": ""
@@ -40280,6 +41453,109 @@
     }
    ],
    "last": "2026-03-23"
+  },
+  {
+   "a": "invenergy",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Invenergy is We Energies' principal developer counterparty — builder and seller of the Paris, Darien, Koshkonong and Dawn Harvest solar-and-battery parks and Badger Hollow Wind, and developer of the Foundry Ridge (270 MW) and Red Oak Ridge (1,125 MW) combustion-turbine sites We Energies filed to acquire in November 2025.",
+     "context": "The August 4, 2026 groundbreaking release names Invenergy as the builder of Darien, Dawn Harvest and Badger Hollow; the March 12, 2026 Dawn Harvest approval was a $443M purchase from Invenergy. The corpus's Invenergy dossier records the Foundry Ridge ($564.2M) and Red Oak Ridge ($1.77B) filings for We Energies service by end-2028 and end-2029 and a further Brillion pair (Union Depot 750 MW, Forest Junction 1,200 MW) for service by December 2031 with a PSC application expected October 2026 — the latter is not in WEC's September 2026 investor book and is recorded here from Invenergy's side.\n\nWEC Energy Group is also the majority owner of Invenergy-operated Delilah I (Texas) and Hardin III (Ohio) in the WEC Infrastructure fleet, and bought Apex's Jayhawk Wind in 2021 with Invenergy as 10 percent owner and operator.",
+     "source": "https://news.we-energies.com/we-energies-launches-construction-on-solar-wind-and-battery-storage-projects/",
+     "status": "active",
+     "since": "2024",
+     "scale": "~2,120 MW of gas sites and ~450 MW of batteries",
+     "via": "Build-transfer solar, battery and wind projects; Foundry Ridge and Red Oak Ridge gas sites"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale wind and solar — development, ownership and farmdown",
+     "date": "",
+     "text": "The commercial model is to develop, contract and build, then hold or farm down: WEC Energy Group is 'majority owner' of Delilah I Solar (300 MW, Texas, commercial February 2025) and Hardin III Solar (250 MW, Ohio, commercial June 2025) with Invenergy as developer and operator; NIPSCO took Fairbanks Solar (250 MW, Indiana, commercial July 2025) under a build-transfer agreement; AEP's SWEPCO and PSO bought 1 GW of wind and solar for about USD 2.2 billion with construction financed by a Natixis-led USD 1.27 billion facility; and an Invenergy-led consortium with CDPQ and Blackstone bought AEP's 1,365 MW unregulated renewables portfolio for USD 1.5 billion enterprise value in August 2023.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-04",
+     "text": "Hardin III Solar (250 MW, Ohio) commences operations — Microsoft PPA, WEC Energy Group majority owner, Illuminate USA modules — The farmdown model in one release: developer, hyperscaler offtaker, utility owner, affiliate module supplier.",
+     "src": "https://wwww.invenergy.com/news/invenergy-s-hardin-iii-commences-operations",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the storage sellers in this file the doors are the build-transfer purchases from Invenergy (Paris, Darien, Koshkonong, Dawn Harvest) and the not-yet-filed ~1,500 MW balance of the battery plan, with the supplier undisclosed on every project; for the gas vendors it is the 1,100 MW Oak Creek combustion turbines (approved May 2025, in service late 2027), the 128 MW Paris reciprocating engines, and the 270 MW Foundry Ridge and 1,125 MW Red Oak Ridge turbines pending decision in the fourth quarter of 2026, again with no OEM named.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "We expect the equipment for the bespoke plants — Red Oak Ridge's turbines, the unfiled ~1,400 MW of batteries — to be selected by We Energies' major-projects group and by Invenergy on the build-transfer sites, with the OEM decisions unpublished until the certificate dockets.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the 2,130 MW battery plan is real but two-thirds unfiled, and that the filing cadence — one or two 5-BS dockets a year through Invenergy — is the practical ceiling on how fast a storage seller can enter.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "A supplier wanting the balance sells to Invenergy at bid stage or to We Energies' major-projects group for a self-build, and there is no RFP door comparable to Duke's South Carolina solicitation or DTE's annual storage RFP.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-owned battery storage — 2,130 MW ($2.9B) in the 2026–2030 plan, bought build-transfer from developers",
+     "date": "",
+     "text": "Every named battery is bought build-transfer from a developer — Invenergy for Paris, Darien, Koshkonong and Dawn Harvest, OneEnergy Renewables for the Good Oak and Gristmill solar — and no battery supplier, integrator or megawatt-hour rating beyond 'four hours' is disclosed in any document read.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-owned battery storage — 2,130 MW ($2.9B) in the 2026–2030 plan, bought build-transfer from developers",
+     "date": "",
+     "text": "WEC buys batteries the way Duke and Southern do — into rate base at a regulated return — but through developers' build-transfer sales rather than self-build, so the OEM decision sits with Invenergy at bid stage; the 1,410 MW unfiled balance is the largest undisclosed utility battery pipeline in this corpus after Duke's.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Dispatchable generation — 3,300 MW of combustion turbines, 180 MW of reciprocating engines, LNG storage and the Point Beach nuclear extension",
+     "date": "",
+     "text": "Pending with decisions expected in the fourth quarter of 2026: Foundry Ridge, 270 MW (6630-BS-103, $550M, 2028) and Red Oak Ridge, 1,125 MW (6630-BS-104, $1.7B, 2029–2030) — both Invenergy-developed sites that We Energies filed to acquire in November 2025 as part of an 'almost 3 GW', $5.5B package — plus a 100 MW turbine upgrade at the Port Washington Generating Station ($227M, 2028) and gas co-firing at the Elm Road coal units.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-04",
+     "text": "We Energies breaks ground on the Darien battery (75 MW), Dawn Harvest solar and battery (150 MW / 50 MW) and Badger Hollow Wind (110 MW), all Invenergy-built — Three build-transfer projects in one release — the developer, not the utility, is choosing the equipment.",
+     "src": "https://news.we-energies.com/we-energies-launches-construction-on-solar-wind-and-battery-storage-projects/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-12",
+     "text": "PSCW approves the purchase of Dawn Harvest — 150 MW of solar and a 50 MW battery from Invenergy for about $443M (in service 2028); Good Oak and Gristmill solar (OneEnergy) approved March 19 — Another build-transfer battery; the developer's OEM choice stays undisclosed.",
+     "src": "https://news.we-energies.com/regulators-approve-solar-and-battery-project-for-we-energies-customers/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-05",
+     "text": "We Energies files an 'almost 3 GW', $5.5B expansion: seven solar parks (more than 1.1 GW), a 180 MW battery, and the acquisition of two Invenergy-developed gas plants — Foundry Ridge (270 MW, $564.2M, end-2028) and Red Oak Ridge (1.1 GW, $1.77B, end-2029) — plus the Customer Protection Plan — The generation package sized to the Vantage campus, filed before the tariff was approved.",
+     "src": "https://news.we-energies.com/we-energies-announces-major-expansion-plan-to-strengthen-wisconsins-power-grid/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-04"
   },
   {
    "a": "iren",
@@ -44418,6 +45694,44 @@
   },
   {
    "a": "meta",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Meta is the 10-year offtaker of WEC Infrastructure's Jayhawk Wind (190 MW, Kansas, December 2021); Meta's Beaver Dam, Wisconsin data center is Alliant Energy's load, not We Energies', although ATC lists its transmission among the data-center projects.",
+     "context": "EEI's September 11, 2026 list places Beaver Dam under Wisconsin Power and Light, and WPR reported the PSCW's May 2026 approval of Alliant's custom rates for it. The WEC link is the non-utility PPA only.",
+     "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf",
+     "status": "active",
+     "via": "WEC Infrastructure Jayhawk Wind PPA (10 years)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A Wisconsin holding company for We Energies (Wisconsin Electric Power Company and Wisconsin Gas), Wisconsin Public Service, Peoples Gas and North Shore Gas (Chicago), Michigan Gas Utilities, Minnesota Energy Resources and Upper Michigan Energy Resources — about 1.7 million electric and 3.0 million gas customers, 8,375 MW of generating capacity and 7,150 employees (2025 Annual Report) — plus We Power (leased plants), WEC Infrastructure (2,654 MW of non-utility renewables under contract to Microsoft, Google, Meta, Tesla and others) and 60 percent of ATC.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Solar and wind — 3,850 MW of solar and 555 MW of wind in the plan, and WEC Infrastructure's contracted fleet",
+     "date": "",
+     "text": "Separately, WEC Infrastructure owns controlling interests in twelve non-utility renewable projects (2,654 MW nameplate, $3.93B) under long-term contracts — Sapphire Sky wind (250 MW, Microsoft, 12 years), Hardin III solar (250 MW, Microsoft, 15 years, February 2025), Coyote Ridge and Tatanka Ridge wind (Google), Jayhawk wind (190 MW, Meta, 10 years), Delilah I solar (300 MW, Tesla and Honda, 15 years, December 2024) — and sells production tax credits under transferability.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-11",
+     "text": "EEI's large-load projects and tariffs list records We Energies' Mount Pleasant (up to 2,600 MW, $20B) and Port Washington (1,300 MW, $15B) campuses and the approved VLC and Bespoke Resources tariffs (6630-TE-113) — Both campuses and the tariff are now on the industry's own register; Meta's Beaver Dam is listed under Alliant.",
+     "src": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-11"
+  },
+  {
+   "a": "meta",
    "b": "xcel-energy",
    "curated": {
     "b": {
@@ -45755,6 +47069,116 @@
    },
    "evid": [],
    "last": "2025"
+  },
+  {
+   "a": "microsoft",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Microsoft's Mount Pleasant campus is We Energies' largest customer (2.6 GW of demand forecast through 2030, first building operating since April 2026); it signed a 15-year VLC service agreement on July 16, 2026 and on August 21 protested the ATC–Wisconsin Electric transmission agreements for the same campus at FERC.",
+     "context": "The September 2026 investor book puts Microsoft's investment at more than $20B ($7.3B for phases 1–2, $13B additional) with 15 more data centers approved by the village in January 2026; the VLC agreement subscribes at least to the Red Oak Ridge turbines, with megawatts undisclosed, and Wisconsin Watch reported that its resource-location language conflicts with the PSCW order (We Energies says the order governs). At FERC (ER26-3265) Microsoft calls the 15-year minimum transmission charge an early-termination 'windfall' and objects to CWIP recovery and the lack of consultation.\n\nMicrosoft is also an offtaker of WEC Infrastructure's Sapphire Sky wind (250 MW, 12 years, 2023) and Hardin III solar (250 MW, 15 years, February 2025), so the two companies are counterparties three ways — tariff customer, transmission adversary and PPA buyer.",
+     "source": "https://wisconsinwatch.org/2026/08/wisconsin-we-energies-microsoft-data-center-contract-terms-conflict-psc-regulators-electricity/",
+     "status": "active",
+     "since": "2026-07",
+     "scale": "2.6 GW forecast through 2030",
+     "via": "Very Large Customer service agreement (15 years); WEC Infrastructure PPAs"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: WEC Energy Group is the utility that turned two named hyperscale campuses — Microsoft's Mount Pleasant (2.6 GW of demand forecast through 2030, first building operating since April 2026) and the Vantage/OpenAI/Oracle 'Lighthouse' Stargate campus at Port Washington (1.3 GW through 2030, up to 3.5 GW) — into a commission-approved tariff before either drew full load: the Public Service Commission of Wisconsin approved We Energies' Very Large Customer and Bespoke Resources tariffs on April 24, 2026 (written order May 21, Docket 6630-TE-113) at a 100 MW threshold, a 15-year minimum term, 100 percent cost responsibility for dedicated generation and transmission, a fixed 10.48–10.98 percent return on 57 percent equity, and security equal to net book value for any customer rated below A-/A3 — the rule that put Oracle (BBB- since July 9, 2026) into court and then into compliance — while the $37.5B 2026–2030 plan builds 3,300 MW of combustion turbines, 2,130 MW of utility-owned batteries ($2.9B), 3,850 MW of solar and a 60 percent share of American Transmission Company's $4.1B of data-center and regional lines.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A Wisconsin holding company for We Energies (Wisconsin Electric Power Company and Wisconsin Gas), Wisconsin Public Service, Peoples Gas and North Shore Gas (Chicago), Michigan Gas Utilities, Minnesota Energy Resources and Upper Michigan Energy Resources — about 1.7 million electric and 3.0 million gas customers, 8,375 MW of generating capacity and 7,150 employees (2025 Annual Report) — plus We Power (leased plants), WEC Infrastructure (2,654 MW of non-utility renewables under contract to Microsoft, Google, Meta, Tesla and others) and 60 percent of ATC.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: the FY2025 Form 10-K cover and Item 1 were not readable (SEC hosts blocked; the Annual Report PDF carries the financial statements but not the human-capital line), so the employee figure is the annual report's; the PSCW's May 21, 2026 order text, the VLC tariff sheets, the Microsoft agreement's megawatts, the minimum-bill percentage and ramp terms were not retrievable from the commission's ERF system; no battery or turbine OEM is named in any source; and peak demand was not found.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the hyperscalers and developers in the corpus WEC is Microsoft's and Vantage's utility and, through ATC, the transmission owner whose Mount Pleasant cost-allocation agreements Microsoft is protesting at FERC (ER26-3265) — the first case in this file where a hyperscaler is both a utility's tariff customer and its federal-docket adversary.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that FERC's handling of the ATC–Wisconsin Electric Mount Pleasant agreements (ER26-3265) is the single most consequential open docket for WEC's model, because the VLC tariff assigns 100 percent of transmission cost to the customer and Microsoft's protest attacks exactly that assignment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the July 24 filing (15-year minimum charge on 100 percent of requested capacity), Microsoft's August 21 protest, the PSCW's own August 14 comments calling ATC's filing 'far from fully responsive', and FERC's June 18 show-cause order on large-load transmission allocation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: four data-center bills died in the 2026 session (AB 840 passed the Assembly 53–44 and stalled in the Senate), moratorium proposals surfaced on the Q2 call, Kenosha residents sought a moratorium on Microsoft's second site in August, and all three PSCW commissioners are appointees of a governor whose term ends in January 2027.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Solar and wind — 3,850 MW of solar and 555 MW of wind in the plan, and WEC Infrastructure's contracted fleet",
+     "date": "",
+     "text": "Separately, WEC Infrastructure owns controlling interests in twelve non-utility renewable projects (2,654 MW nameplate, $3.93B) under long-term contracts — Sapphire Sky wind (250 MW, Microsoft, 12 years), Hardin III solar (250 MW, Microsoft, 15 years, February 2025), Coyote Ridge and Tatanka Ridge wind (Google), Jayhawk wind (190 MW, Meta, 10 years), Delilah I solar (300 MW, Tesla and Honda, 15 years, December 2024) — and sells production tax credits under transferability.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · American Transmission Company (60 percent) — the data-center lines and the FERC cost-allocation dispute",
+     "date": "",
+     "text": "On July 24, 2026 MISO filed at FERC (ER26-3265) a Minimum Transmission Charge Agreement and four amended Large Load Project Commitment Agreements between ATC and Wisconsin Electric for the Microsoft campus, under which We Energies pays ATC's network rate on 100 percent of the requested transmission capacity for 15 years from completion (capped at the project's lifetime incremental revenue requirement) and passes the cost to Microsoft; Microsoft protested on August 21 (an early-termination 'windfall', CWIP recovery, no consultation, and WEC's position as ATC's largest shareholder), joined by the PSCW's comments, the Citizens Utility Board, the Data Center Coalition and the Wisconsin Industrial Energy Group.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-24",
+     "text": "MISO files at FERC the ATC–Wisconsin Electric Minimum Transmission Charge Agreement and four amended large-load project commitment agreements for Microsoft's Mount Pleasant campus (15-year minimum charge on 100 percent of requested capacity; more than $500M of upgrades); a parallel PSCW affiliate application follows — The transmission half of the VLC bargain, filed federally because ATC is FERC-jurisdictional.",
+     "src": "https://www.wpr.org/news/american-transmission-co-we-energies-data-center-cost-agreement",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-05",
+     "text": "FY2025 adjusted EPS $5.27 (+8 percent); 2026 guidance $5.51–$5.61; capital plan raised $1.0B to $37.5B as Microsoft's forecast rises from 2.1 GW to 2.6 GW (total 3.4 → 3.9 GW); dividend raised 6.7 percent — A single customer's 500 MW expansion moved the five-year plan by a billion dollars.",
+     "src": "https://investor.wecenergygroup.com/investors/news-releases/press-release-details/2026/WEC-Energy-Group-posts-2025-results/default.aspx",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "Q3 2025: capital plan raised from $28B to $36.5B (2026–2030); load forecast +3.4 GW (Microsoft 2.1 GW, Vantage 1.3 GW); 2026 equity $0.9–1.1B — The plan raise that followed the Vantage announcement by eight days.",
+     "src": "https://www.prnewswire.com/news-releases/wec-energy-group-reports-third-quarter-results-302599084.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-22",
+     "text": "OpenAI, Oracle and Vantage Data Centers announce the 'Lighthouse' Stargate campus at Port Washington — $15B-plus, four buildings, close to a gigawatt of AI capacity, completion 2028 — with Vantage 'underwriting 100% of the power infrastructure investment with a dedicated electricity rate from We Energies'; Lauber: 'nearly two gigawatts of new energy to the grid, 30% of which will be dedicated to the homes, farms and other businesses we serve today' — The second campus, and the one whose credit counterparty is Oracle rather than Microsoft.",
+     "src": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-24"
   },
   {
    "a": "microsoft",
@@ -47255,6 +48679,24 @@
     }
    ],
    "last": "2023"
+  },
+  {
+   "a": "nextera-energy-resources",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "NextEra Energy's Point Beach plant supplies about 1 GW under a purchase agreement WEC agreed in August 2026 to extend — Unit 1 to October 2050 and Unit 2 to March 2053 — subject to PSCW approval; pricing undisclosed.",
+     "context": "The existing agreement (86 percent of the plant's output) was to expire in December 2030 and March 2033; the September 2026 investor book says the extension is 'expected to result in savings for customers compared to the terms of the current PPA'. Wisconsin Watch reports the current price at $75.51/MWh in 2026 escalating to $122.45 by 2033 and about 20 percent of the 2027 rate request. Point Beach sits in NextEra's generation portfolio; the corpus's NextEra Energy Resources dossier is the nearest slug.",
+     "source": "https://urbanmilwaukee.com/2026/08/21/we-energies-deal-would-buy-power-from-point-beach-nuclear-plant-into-2050s/",
+     "status": "announced",
+     "since": "2026-08",
+     "scale": "~1 GW to 2050/2053",
+     "via": "Point Beach nuclear purchase agreement"
+    }
+   },
+   "evid": [],
+   "last": "2026-08"
   },
   {
    "a": "nextera-energy-resources",
@@ -49783,6 +51225,45 @@
   },
   {
    "a": "openai",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "OpenAI is the Stargate tenant of the Port Washington campus announced October 22, 2025 with Oracle and Vantage; WEC's own materials name the campus and its developer rather than OpenAI.",
+     "context": "The corpus's OpenAI dossier lists Port Washington WI (1.3 GW, about 70 percent solar, wind and battery) among the Stargate sites. WEC's relationship runs through Vantage's dedicated rate and Oracle's credit; there is no direct We Energies–OpenAI agreement in the record.",
+     "source": "https://www.wpr.org/news/port-washington-data-center-campus-openai-oracle-stargate-chatgpt",
+     "status": "active",
+     "since": "2025-10",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: WEC Energy Group is the utility that turned two named hyperscale campuses — Microsoft's Mount Pleasant (2.6 GW of demand forecast through 2030, first building operating since April 2026) and the Vantage/OpenAI/Oracle 'Lighthouse' Stargate campus at Port Washington (1.3 GW through 2030, up to 3.5 GW) — into a commission-approved tariff before either drew full load: the Public Service Commission of Wisconsin approved We Energies' Very Large Customer and Bespoke Resources tariffs on April 24, 2026 (written order May 21, Docket 6630-TE-113) at a 100 MW threshold, a 15-year minimum term, 100 percent cost responsibility for dedicated generation and transmission, a fixed 10.48–10.98 percent return on 57 percent equity, and security equal to net book value for any customer rated below A-/A3 — the rule that put Oracle (BBB- since July 9, 2026) into court and then into compliance — while the $37.5B 2026–2030 plan builds 3,300 MW of combustion turbines, 2,130 MW of utility-owned batteries ($2.9B), 3,850 MW of solar and a 60 percent share of American Transmission Company's $4.1B of data-center and regional lines.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-center demand — Microsoft Mount Pleasant and the Vantage/OpenAI/Oracle Port Washington campus",
+     "date": "",
+     "text": "Per the September 4, 2026 investor book: Microsoft's Mount Pleasant campus in Racine County ('Fairwater') — a $20B-plus program ($7.3B for phases 1–2 and $13B more; the village approved up to 15 additional data centers on two new campuses in January 2026) — is forecast at 2.6 GW through 2030, raised from 2.1 GW in February 2026 when $1.0B was added to the capital plan and the first building began operating in April 2026 ahead of schedule; the Vantage Data Centers 'Lighthouse' campus at Port Washington, Ozaukee County, announced October 22, 2025 as a Stargate site for OpenAI and Oracle ($15B-plus, four buildings on 672 of about 1,900 acres, close to a gigawatt of AI capacity, first building possibly late 2027, completion 2028) is forecast at 1.3 GW through 2030 with site potential up to 3.5 GW, and Vantage 'is underwriting 100% of the power infrastructure investment with a dedicated electricity rate' plus at least $175M of regional infrastructure.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-22",
+     "text": "OpenAI, Oracle and Vantage Data Centers announce the 'Lighthouse' Stargate campus at Port Washington — $15B-plus, four buildings, close to a gigawatt of AI capacity, completion 2028 — with Vantage 'underwriting 100% of the power infrastructure investment with a dedicated electricity rate from We Energies'; Lauber: 'nearly two gigawatts of new energy to the grid, 30% of which will be dedicated to the homes, farms and other businesses we serve today' — The second campus, and the one whose credit counterparty is Oracle rather than Microsoft.",
+     "src": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-22"
+  },
+  {
+   "a": "openai",
    "b": "whiting-turner",
    "curated": {
     "b": {
@@ -50126,6 +51607,95 @@
     }
    ],
    "last": "2026-02-24"
+  },
+  {
+   "a": "oracle",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Oracle is the credit counterparty behind the Port Washington campus: rated BBB- by S&P since July 9, 2026, it sued the PSCW over the tariff's A-/A3 security rule on June 24, dropped the suit on August 17, and has posted security 'in line with the PSCW requirements' per WEC; it also funds about $1.1B of substation stabilization in ATC's refiled line.",
+     "context": "The CEO told the July 29, 2026 call the company holds 'all the collateral we need … if it goes down, we already have'. Oracle's own credit position is discussed in the corpus's Oracle dossier; the DTE dossier records the same downgrade triggering collateral in Michigan. Oracle's Ozaukee County case number was 2026CV256.",
+     "source": "https://www.wpr.org/news/oracle-drops-wisconsin-suit-financial-requirements-data-centers",
+     "status": "active",
+     "since": "2025-10",
+     "via": "Payment-and-cancellation agreements; VLC service agreements from June 1, 2027",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: WEC Energy Group is the utility that turned two named hyperscale campuses — Microsoft's Mount Pleasant (2.6 GW of demand forecast through 2030, first building operating since April 2026) and the Vantage/OpenAI/Oracle 'Lighthouse' Stargate campus at Port Washington (1.3 GW through 2030, up to 3.5 GW) — into a commission-approved tariff before either drew full load: the Public Service Commission of Wisconsin approved We Energies' Very Large Customer and Bespoke Resources tariffs on April 24, 2026 (written order May 21, Docket 6630-TE-113) at a 100 MW threshold, a 15-year minimum term, 100 percent cost responsibility for dedicated generation and transmission, a fixed 10.48–10.98 percent return on 57 percent equity, and security equal to net book value for any customer rated below A-/A3 — the rule that put Oracle (BBB- since July 9, 2026) into court and then into compliance — while the $37.5B 2026–2030 plan builds 3,300 MW of combustion turbines, 2,130 MW of utility-owned batteries ($2.9B), 3,850 MW of solar and a 60 percent share of American Transmission Company's $4.1B of data-center and regional lines.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: S&P's July 9, 2026 downgrade of Oracle to BBB-; the June 12 rehearing petition by We Energies, Vantage and Cloverleaf to loosen the rule and the commission's refusal; Oracle's June 24 suit and its August 17 dismissal; WEC's statement that Oracle 'has met the financial security requirements'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The payment-and-cancellation agreements carry the campus until VLC service agreements take effect on June 1, 2027; security equal to net book value is what protects the other 1.1 million We Energies customers if Oracle's rating falls further.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Regulated retail electric service — We Energies and Wisconsin Public Service, and the Very Large Customer and Bespoke Resources tariffs",
+     "date": "",
+     "text": "The A-/A3 security test is the strictest credit rule in the file and the one Oracle's downgrade tested.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-center demand — Microsoft Mount Pleasant and the Vantage/OpenAI/Oracle Port Washington campus",
+     "date": "",
+     "text": "Per the September 4, 2026 investor book: Microsoft's Mount Pleasant campus in Racine County ('Fairwater') — a $20B-plus program ($7.3B for phases 1–2 and $13B more; the village approved up to 15 additional data centers on two new campuses in January 2026) — is forecast at 2.6 GW through 2030, raised from 2.1 GW in February 2026 when $1.0B was added to the capital plan and the first building began operating in April 2026 ahead of schedule; the Vantage Data Centers 'Lighthouse' campus at Port Washington, Ozaukee County, announced October 22, 2025 as a Stargate site for OpenAI and Oracle ($15B-plus, four buildings on 672 of about 1,900 acres, close to a gigawatt of AI capacity, first building possibly late 2027, completion 2028) is forecast at 1.3 GW through 2030 with site potential up to 3.5 GW, and Vantage 'is underwriting 100% of the power infrastructure investment with a dedicated electricity rate' plus at least $175M of regional infrastructure.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · American Transmission Company (60 percent) — the data-center lines and the FERC cost-allocation dispute",
+     "date": "",
+     "text": "ATC expects more than $2B of data-center-related transmission — more than $500M for Mount Pleasant and the Port Washington project, whose original $1.39–1.67B application (137-CE-221) had its completeness determination revoked by the PSCW (vote August 7, 2026) and which ATC refiled on September 18 at $2.48–2.72B including about $1.1B of Oracle-funded stabilization equipment at the Decker substation.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-18",
+     "text": "ATC refiles the Port Washington transmission project at $2.48–2.72B, including about $1.1B of Oracle-funded stabilization at the Decker substation, after the PSCW revoked the completeness of its $1.39–1.67B application — The line the campus depends on nearly doubled in cost between filings; Oracle is paying for the difference.",
+     "src": "https://www.wpr.org/news/atc-reapplies-transmission-project-port-washington-data-center",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-04",
+     "text": "September investor book: $37.5B plan reaffirmed, 3.9 GW of data-center demand through 2030, Point Beach PPA extension with NextEra to 2050/2053 (~1 GW), and 'Oracle has met the financial security requirements' — The nuclear PPA extension replaces the $2–2.5B-per-500 MW replacement decision the company had flagged for the Q3 call.",
+     "src": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-09",
+     "text": "S&P cuts Oracle to BBB-, below the VLC tariff's A-/A3 security threshold; the same day environmental groups sue the DNR over the Port Washington air permits — The collateral rule the utility had asked to loosen became binding on its second customer within seven weeks of the order.",
+     "src": "https://milwaukeenns.org/2026/08/04/wisconsin-we-energies-oracle-dispute-port-washington-data-center-on-schedule-legal-challenge-credit-rating/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-22",
+     "text": "OpenAI, Oracle and Vantage Data Centers announce the 'Lighthouse' Stargate campus at Port Washington — $15B-plus, four buildings, close to a gigawatt of AI capacity, completion 2028 — with Vantage 'underwriting 100% of the power infrastructure investment with a dedicated electricity rate from We Energies'; Lauber: 'nearly two gigawatts of new energy to the grid, 30% of which will be dedicated to the homes, farms and other businesses we serve today' — The second campus, and the one whose credit counterparty is Oracle rather than Microsoft.",
+     "src": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-18"
   },
   {
    "a": "oracle",
@@ -53745,6 +55315,37 @@
   },
   {
    "a": "tesla",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Tesla holds a 100 MW virtual PPA on Delilah I Solar (300 MW, Texas, December 2024), of which WEC Energy Group is the majority owner with Invenergy as operator.",
+     "context": "Recorded from the investor book's offtaker table and the corpus's Invenergy dossier. Tesla is not a supplier to any WEC battery project in the record.",
+     "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf",
+     "status": "active",
+     "via": "WEC Infrastructure Delilah I solar PPA (with Honda, 15 years)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A Wisconsin holding company for We Energies (Wisconsin Electric Power Company and Wisconsin Gas), Wisconsin Public Service, Peoples Gas and North Shore Gas (Chicago), Michigan Gas Utilities, Minnesota Energy Resources and Upper Michigan Energy Resources — about 1.7 million electric and 3.0 million gas customers, 8,375 MW of generating capacity and 7,150 employees (2025 Annual Report) — plus We Power (leased plants), WEC Infrastructure (2,654 MW of non-utility renewables under contract to Microsoft, Google, Meta, Tesla and others) and 60 percent of ATC.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Solar and wind — 3,850 MW of solar and 555 MW of wind in the plan, and WEC Infrastructure's contracted fleet",
+     "date": "",
+     "text": "Separately, WEC Infrastructure owns controlling interests in twelve non-utility renewable projects (2,654 MW nameplate, $3.93B) under long-term contracts — Sapphire Sky wind (250 MW, Microsoft, 12 years), Hardin III solar (250 MW, Microsoft, 15 years, February 2025), Coyote Ridge and Tatanka Ridge wind (Google), Jayhawk wind (190 MW, Meta, 10 years), Delilah I solar (300 MW, Tesla and Honda, 15 years, December 2024) — and sells production tax credits under transferability.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "tesla",
    "b": "xai",
    "curated": {
     "b": {
@@ -54089,6 +55690,40 @@
   },
   {
    "a": "vantage",
+   "b": "wec-energy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Vantage Data Centers develops the Port Washington 'Lighthouse' Stargate campus for OpenAI and Oracle and is 'underwriting 100% of the power infrastructure investment with a dedicated electricity rate from We Energies' plus at least $175M of regional infrastructure.",
+     "context": "Vantage's October 22, 2025 release describes four data centers on 672 acres, $15B-plus and completion in 2028; WEC's September 2026 book forecasts 1.3 GW through 2030 and site potential up to 3.5 GW, and Lauber said the campus adds 'nearly two gigawatts of new energy to the grid, 30% of which will be dedicated to the homes, farms and other businesses we serve today'. Vantage intervened in the tariff docket and co-petitioned with We Energies and Cloverleaf on June 12, 2026 to ease the collateral rule; its VLC service agreements take effect June 1, 2027. The corpus's Vantage dossier carries the same dedicated-rate and $175M lines.",
+     "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "1.3 GW forecast through 2030; up to 3.5 GW",
+     "via": "Dedicated electricity rate (VLC tariff); payment-and-cancellation agreements",
+     "project": "lighthouse"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Data-center demand — Microsoft Mount Pleasant and the Vantage/OpenAI/Oracle Port Washington campus",
+     "date": "",
+     "text": "Per the September 4, 2026 investor book: Microsoft's Mount Pleasant campus in Racine County ('Fairwater') — a $20B-plus program ($7.3B for phases 1–2 and $13B more; the village approved up to 15 additional data centers on two new campuses in January 2026) — is forecast at 2.6 GW through 2030, raised from 2.1 GW in February 2026 when $1.0B was added to the capital plan and the first building began operating in April 2026 ahead of schedule; the Vantage Data Centers 'Lighthouse' campus at Port Washington, Ozaukee County, announced October 22, 2025 as a Stargate site for OpenAI and Oracle ($15B-plus, four buildings on 672 of about 1,900 acres, close to a gigawatt of AI capacity, first building possibly late 2027, completion 2028) is forecast at 1.3 GW through 2030 with site potential up to 3.5 GW, and Vantage 'is underwriting 100% of the power infrastructure investment with a dedicated electricity rate' plus at least $175M of regional infrastructure.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-22",
+     "text": "OpenAI, Oracle and Vantage Data Centers announce the 'Lighthouse' Stargate campus at Port Washington — $15B-plus, four buildings, close to a gigawatt of AI capacity, completion 2028 — with Vantage 'underwriting 100% of the power infrastructure investment with a dedicated electricity rate from We Energies'; Lauber: 'nearly two gigawatts of new energy to the grid, 30% of which will be dedicated to the homes, farms and other businesses we serve today' — The second campus, and the one whose credit counterparty is Oracle rather than Microsoft.",
+     "src": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-22"
+  },
+  {
+   "a": "vantage",
    "b": "whiting-turner",
    "curated": {
     "b": {
@@ -54235,6 +55870,21 @@
     }
    ],
    "last": "2024-06-15"
+  },
+  {
+   "a": "wec-energy",
+   "b": "xcel-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Xcel's Northern States Power–Wisconsin filed its own large-load tariff (4220-TE-119, ≥100 MW) in June 2026 on the We Energies model; the Xcel dossier compares WEC's 7–8 percent growth objective with its own.",
+     "context": "EEI's September 2026 list carries three Wisconsin large-load tariffs — We Energies (approved), NSP-Wisconsin (filed) and MGE (proposed) — plus Alliant's Cp-3 rate; the We Energies order is the template the others cite.",
+     "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+     "status": "active"
+    }
+   },
+   "evid": [],
+   "last": ""
   }
  ]
 }

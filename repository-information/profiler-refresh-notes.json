@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "updated": "2026-09-23",
+ "updated": "2026-09-26",
  "description": "Research payload for repository-information/profiler-refresh-calendar.json, keyed by slug. `source` says where to verify the next report; `watch` is the research priority list a refresh works from. Split out of the calendar on 2026-09-21 (v07.02r) because these two fields were 98% of that file's 375 KB while the scheduling logic needs none of them: a Routine reading the queue now reads ~20 KB instead of ~375 KB, and pulls notes only for the handful of rows it actually works on. One entry per calendar row, enforced by scripts/sync-profiler-registry.py.",
  "notes": {
   "abb": {
@@ -1951,6 +1951,42 @@
     "Roster placement: any nvidia.com page, GTC 2027 list, OCP LVDC contributor list or trade-press SST roundup beyond SemiAnalysis naming Novos Power (absent from all as of 2026-09-19); the 2027 SDSU AI x Energy Summit (29–30 March 2027) sponsor and awardee pages",
     "A certification target (UL 2877 stops at 38 kV — the site's 48 kV bound is outside it; UL 1741/IEEE 1547) or NRTL engagement; headcount beyond LinkedIn '2-10'; whether the CEO or CTO leaves ChargePodX / SDSU roles (full-time signal); any Delaware record confirming the incorporation date",
     "Chesterton check: the 'incubated by LACI' claim is not on LACI's cohort pages (ChargePodX is) — do not import it as fact; the '50% footprint reduction' traces to a BigGo summary of SemiAnalysis, not to the SemiAnalysis text read; the 'DOE/NASA-funded' lineage is the CTO's portfolio, not an SST project; the Google and Silicon Valley AI Summit awards have no organiser page"
+   ]
+  },
+  "duke-energy": {
+   "source": "Not company-announced as of 2026-09-26: Duke's newsroom carried no Q3 2026 call notice (the Q3 2025 results were released 2025-11-07 with about four weeks' notice) and investors.duke-energy.com's events page rendered empty. Trackers conflict: TipRanks shows 2026-10-29 before market open and labels it 'confirmed'; MarketBeat shows 2026-11-05 'estimated' (consensus $1.92); Quartr shows 2026-11-06 'confirmed'. The row uses MarketBeat's Nov 5 as the only tracker that says it is estimating. Confirm from https://news.duke-energy.com/releases or the 8-K feed (CIK 1326160; sec.gov Archives were reachable from the 2026-09-26 session even though data.sec.gov was not).",
+   "watch": [
+    "The ladder: signed data-center ESAs (7.8 GW at Aug 2026), under construction (5.2 GW) and the 15.4 GW late-stage pipeline the CEO expects to convert by mid-2027 — and whether the labels move again between quarters",
+    "NCUC orders on the DEC (E-7 Sub 1329) and DEP (E-2 Sub 1380) rate cases, expected mid-November 2026, and the separate large-load tariff proceeding both settlements require to finish before January 1, 2027 — threshold, minimum bill and term against Duke's 50 MW / 75% / 10–15-year proposal",
+    "The Florida PSC written order on DEF's Large Load Customer Policy (Docket 20260064-EI) after the 'facially noncompliant' hearing, and the SB 484 October 1, 2026 compliant-tariff deadline",
+    "The NCUC's 2025 Carolinas Resource Plan order due December 31, 2026 (E-100 Sub 207) after its September 19 denial of the 255 MW Smith CT — whether Buck CT 3–4 and a Smith refiling survive",
+    "Any named battery supplier for the ~4.5 GW by-2031 portfolio; the SC 400 MW storage RFP award; the October 5, 2026 ruling on the paused NC solar-and-storage RFP",
+    "Brookfield's $200M tranche due by December 31, 2026 and any Indiana 'genco' structure announcement; the $5–10B Indiana/Florida upside capital entering the plan",
+    "Duke Energy Ohio's Rate DC tariff (PUCO 26-0755-EL-ATA) and Ohio HB 706; the GE Vernova turbine count beyond 26"
+   ]
+  },
+  "dte-energy": {
+   "source": "Not company-announced as of 2026-09-26: DTE's IR events page showed 'No items found' and no scheduling release had been issued (the Q2 notice came 2026-07-14 for the 2026-07-28 call; Q3 2025 was 2025-10-30, Q3 2024 was 2024-10-24). Trackers: TipRanks and Investing.com show 2026-10-22 (TipRanks calls it 'confirmed', which the company site does not corroborate; consensus $2.39 / $2.40); MarketBeat shows 2026-10-29 'estimated' (consensus $2.31). The row uses the earlier Oct 22 so the desk checks before either candidate. Confirm from https://ir.dteenergy.com/events-and-presentations/default.aspx or the PR Newswire DTE feed.",
+   "watch": [
+    "The MPSC decision on the Google / Van Buren special contracts (Case U-22058) — requested by September 10, 2026 and unreported through September 25; the minimum-bill percentage (DTE 80%, AG 90%) and whether the ~$5B of Google-driven capital enters the plan at the Q3 call or EEI",
+    "The third data-center agreement the CEO targeted by end-2026 ('think of it as two new customers' for the ~2 GW in advanced discussions)",
+    "Storage: the remaining tranches of the 1,383 MW Oracle obligation (632 MW explicitly tied in orders; up to 1,292 MW if U-22054 is counted), Trenton Channel (220 MW / 880 MWh, LGES) entering service at end-2026, the 480 MW RFP contracts (Q1 2027), and which eight projects the $1.6B LGES Vertech agreement covers",
+    "The 2026 IRP (U-22168): the contested-case schedule, the certificates of necessity for the 1,400 MW Livingston and 700 MW Monroe combined cycles, and the turbine OEM",
+    "The electric rate case U-22046 (decision ~February 2027) and the data-center stay-out pledge; the Court of Appeals review of U-21990 (Nos. 380362/380364/380878)",
+    "Oracle's credit (BBB- since July 2026) and collateral postings; Wayne County's veto of the Van Buren tax break and the township's final site plan",
+    "The Oracle dossier's '~$300M new battery storage' against DTE's 'nearly $2B' — reconcile at the next Oracle revision"
+   ]
+  },
+  "wec-energy": {
+   "source": "Company-published: the IR earnings page (https://investor.wecenergygroup.com/investors/earnings/default.aspx) lists 'Q3: Oct. 29, 2026' with the release at 6 a.m. Central and the call normally at 1 p.m. Central; a formal press-release confirmation typically comes about a week ahead (2025-10-23 for the Q3 2025 call). Trackers split: MarketBeat Oct 29 'estimated' (consensus $0.96); Investing.com and TipRanks Nov 3. Q3 guided to $0.92–$0.98.",
+   "watch": [
+    "PSCW orders on the 2027–2028 rate cases (5-UR-112, 6690-UR-129), expected Q4 2026, and whether the '$1.9B paid by data centers in 2027–28' holds",
+    "FERC action in ER26-3265 on the ATC–Wisconsin Electric Mount Pleasant agreements after Microsoft's August 21 protest; the PSCW decision on ATC's refiled $2.48–2.72B Port Washington line",
+    "The Q4 2026 certificate decisions: Foundry Ridge 270 MW and Red Oak Ridge 1,125 MW CTs, Dawn Break 162 MW battery, seven solar dockets; any turbine or battery OEM disclosure",
+    "The third campus the CEO has twice suggested (400–500 MW prospects) and Microsoft's VLC megawatts; Vantage/Oracle VLC service agreements effective June 1, 2027; Oracle's credit and collateral",
+    "PSCW approval and pricing of the Point Beach PPA extension with NextEra (Unit 1 to 2050, Unit 2 to 2053)",
+    "The unfiled ~1,400 MW balance of the 2,130 MW battery plan and the Invenergy Brillion gas pair (Union Depot 750 MW, Forest Junction 1,200 MW; PSC application expected October 2026 per the Invenergy dossier, not in WEC's September book)",
+    "Wisconsin's 2026 governor's race and any data-center statute; the Peoples Gas rate order (December 2026)"
    ]
   }
  }

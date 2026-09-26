@@ -1,0 +1,1373 @@
+{
+ "schemaVersion": 7,
+ "slug": "dte-energy",
+ "name": "DTE Energy Company",
+ "shortName": "DTE Energy",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.dteenergy.com",
+ "headquarters": "Detroit, MI, USA",
+ "founded": 1903,
+ "employees": "~9,500 at December 31, 2024 (FY2024 Form 10-K); 'nearly 10,000' per the CEO in October 2025 — the FY2025 10-K employee line was not reachable this session",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: DTE"
+ },
+ "summary": "BOTTOM LINE UP FRONT: DTE Electric is the utility whose first two data-center customers, Oracle's Stargate campus at Saline Township (1,383 MW) and Google at Van Buren Township (1.0 GW), together equal roughly 40 percent of its retail sales at full ramp, and it has chosen to serve them from the grid with customer-funded batteries rather than on-site gas: the Michigan Public Service Commission approved the Oracle contracts ex parte on December 18, 2025 (Case U-21990 — a 19-year supply agreement at 80 percent minimum billing demand and a 15-year agreement under which Oracle pays for 1,383 MW of DTE-owned storage), the Google contracts (U-22058, 20 years, filed March 17, 2026) were awaiting a decision requested by September 10, 2026 with no order found by September 25, and the storage is being bought at scale — 1,332 MW approved March 27, 2026, 660 MW on April 30, 300 MW on July 16, and a $1.6B, 1.5 GW / 6 GWh supply agreement with LG Energy Solution Vertech on May 27, 2026 — while the 2026 Integrated Resource Plan filed September 24, 2026 (U-22168) asks for 4.5 GW of storage, 15 GW of renewables and certificates for 2.1 GW of combined-cycle gas by 2032. BACKGROUND. Detroit; NYSE: DTE. DTE Energy Company is a Michigan holding company whose DTE Electric serves about 2.3 million customers in southeastern Michigan from a 12,099 MW owned fleet (FY2024 Form 10-K), whose DTE Gas serves about 1.4 million customers, and whose non-utility DTE Vantage and Energy Trading segments contribute the balance; transmission in its territory is owned by ITC, not DTE. FY2025 operating earnings were $7.36 per share (GAAP $7.03), above the $7.09–$7.23 guidance, and 2026 guidance of $7.59–$7.73 was reaffirmed on July 28, 2026 with the company 'positioned to achieve the high end'. The 2026–2030 capital plan is $36.5B — $30B at DTE Electric, of which $15B is 'cleaner generation' ($10B renewables, $2.5B storage, $2.5B combined-cycle gas) and $11B distribution — up $6.5B from the prior plan, 'primarily driven by the Oracle data center project'; the Google contracts would add about $5B through 2032 once approved. The pipeline beyond the executed 2.4 GW is ~2 GW in advanced discussions with 'multiple customers' and 3–4 GW of further opportunities, with one more agreement targeted by end-2026. Collection gap: the FY2025 Form 10-K and the 2026 10-Qs were not reachable (SEC hosts blocked from this network), so employee count, peak demand and operating revenue are taken from the FY2024 10-K and trackers, which disagree on revenue; the MPSC's own order texts were read through its issue brief and later orders; and no source found records a decision on the Google contracts (U-22058) after the requested September 10, 2026 date.",
+ "ecosystemRole": "We assess DTE Electric as the corpus's clearest example of a utility converting a hyperscale contract directly into battery purchase orders: the Oracle energy storage agreement obliges DTE to build 1,383 MW of company-owned storage that the customer pays for over fifteen years, and every storage docket since — the 332 MW Washtenaw County tranche (March 27, 2026), the 660 MW Isabella, Meridian, Coldwater River and Tuscola II set (April 30), the Key Capture Energy and Copenhagen Infrastructure tolling agreements (July 16) and the 1.5 GW / 6 GWh LG Energy Solution Vertech supply agreement — is a purchase made against that obligation or the 2022 plan's 780 MW. Basis: the MPSC's March 27, 2026 release, the U-22060 order and DTE's May 27, 2026 release. For the storage sellers in this file DTE is therefore a direct buyer with a named incumbent (LGES Vertech at Trenton Channel and the eight-project deal) and an annual RFP door (450 MW in 2025, 480 MW in 2026, 800 MW of renewables in 2026); for the AIDC power side it is the utility that has told its regulator each further gigawatt of data-center load 'could necessitate a new natural gas plant' and has now filed for two. Its regulator is the most adversarial in the corpus — the Attorney General has appealed the Oracle approval to the Michigan Court of Appeals and both gubernatorial candidates call for data-center moratoriums — so every figure above sits behind a docket that can still move.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — DTE Electric, Rate D11 and the special-contract route for very large loads",
+   "category": "Regulated utility service",
+   "description": "DTE Electric serves about 2.3 million customers in southeastern Michigan (every 2026 results release) from a fleet the FY2024 Form 10-K puts at 12,099 MW of owned summer net capacity — Monroe coal 3,066 MW, Belle River 1,034 MW (81 percent share; converted to gas in 2025–2026), Blue Water Energy Center combined cycle 1,149 MW, Fermi 2 nuclear 1,141 MW, a 49 percent share of Ludington pumped storage (1,122 MW), 1,953 MW of peakers, about 1,600 MW of wind and 217 MW of solar — plus 609 MW of contracted renewables; the 2025 IRP stakeholder deck describes it as 'capable of producing more than 12,000 MW'. Rates are set by the Michigan Public Service Commission: Case U-21860 (order February 19, 2026) granted $242.4M of a $574.1M request at a 9.9 percent return on equity, effective March 5, 2026; Case U-22046 (filed April 28, 2026) asks for $474.3M at 10.25 percent on a $25.87B rate base with a decision expected in late February 2027, and DTE has said it will not file another electric case until at least 2028 if the Saline data center is on line by end-2027. The standard large-customer rate is D11 (primary and subtransmission voltage, more than 50 kW); per the MPSC's U-21990 issue brief a new customer above 1 MW gets a five-year agreement with 50–60 percent minimum billing demand. Very large loads have instead been served under commission-approved special contracts on the D11 rate, and a generally applicable large-load revision of D11 — Case U-22061, filed within the 90 days the December 2025 order required — was pending on EEI's September 11, 2026 list. Per the CFO on the July 28, 2026 call, both the contracts and the tariff carry 'minimum monthly charges of 80% of the minimum billing demand … for a 10-year period or longer'.",
+   "highlights": [
+    "Oracle / Green Chile Ventures contracts (U-21990, December 18, 2025): 19-year supply agreement with 20-year extension option, 80 percent minimum billing demand, termination payment of up to ten years of minimum demand charges, credit and collateral; DTE bears any cost it cannot recover from the customer",
+    "Google contracts (U-22058, filed March 17, 2026 as a contested case): 20-year supply agreement plus a Clean Capacity Accelerator Agreement; DTE proposes 80 percent minimum billing, the Attorney General 90 percent and a full-remaining-term exit fee; decision requested by September 10, 2026 — no order found by September 25",
+    "General large-load tariff: Rate D11 revisions in Case U-22061, pending (EEI list, September 11, 2026)",
+    "Six conditions on the Oracle approval: cost tracking so the data-center owner pays all costs to serve it, an amended renewable energy plan, with-and-without-load IRP scenarios, emergency procedures that curtail data-center load first, six cost-of-service studies in the next rate case",
+    "Electric rate case U-22046 includes an 'ESA rate base reimbursement' line (−$90.6M) and regulatory-liability treatment for excess margin from the large-load customer, so a faster Oracle ramp flows back to other customers"
+   ],
+   "positioning": "Where Dominion wrote its data-center terms into a GS-5 rate class and AEP into eight commission-approved tariffs, DTE has so far done it contract by contract — two ex parte or contested special-contract dockets and a D11 revision still pending — which makes each customer's terms public in redacted form and each approval a political event. The 80 percent minimum over 19–20 years is below Dominion's 85 percent transmission-and-distribution minimum but longer than Dominion's 14-year term.",
+   "soldThrough": "Commission-approved tariffs (D11, D13 XL High Load Factor) and MPSC-approved special contracts negotiated through DTE's economic-development group, which has a named data-center lead",
+   "targetSegments": [
+    "Residential, commercial and industrial customers in southeastern Michigan",
+    "Hyperscale and colocation data centers above roughly 100 MW under special contracts; manufacturing under the High Load Factor rate"
+   ],
+   "roadmap": "U-22058 (Google) order pending; U-22061 large-load tariff order pending; U-22046 rate order expected late February 2027; the Court of Appeals review of U-21990 (Nos. 380362, 380364, 380878) briefed August 2026 with no argument date found"
+  },
+  {
+   "name": "Large-load pipeline — 2.4 GW executed, ~2 GW in advanced discussions, 3–4 GW further",
+   "category": "Regulated utility service",
+   "description": "DTE reports the pipeline in three rungs: executed agreements, advanced discussions (earlier 'late-stage negotiations') and additional pipeline opportunities. Per the investor presentations, the executed rung went from zero at the Q2 2025 call (July 29, 2025, '3-plus GW with hyperscalers' and '4 GW other operators' in discussion) to 1.4 GW at the Q3 2025 call (October 30, 2025, the Oracle subsidiary) to 2.4 GW at the Q1 2026 call (April 30, 2026, adding Google); the advanced-discussions rung fell from ~3 GW to ~2 GW as Google moved up, and the further pipeline has stayed at 3–4 GW, so the total was framed as '~6 GW' in late 2025 and '5–6 GW of additional opportunities' in July 2026 — 'the same pipeline essentially', the CEO said when asked. The ~2 GW is 'multiple customers … a combination of hyperscalers and co-locators — think of it as two new customers', with one more agreement targeted by end-2026; the 3–4 GW is mostly colocation developers that still need an anchor tenant, zoning and a site plan, and zoning is the bottleneck the CEO named. At full ramp the two executed contracts are 'roughly 40 percent' of DTE Electric's sales; Utility Dive put the Oracle load alone at about a 25 percent increase in electric load. Separately, DTE Vantage (non-utility) has a development agreement for a behind-the-meter generation project of 'hundreds of megawatts' serving a large data-center customer in another state, with equipment on order and permitting problems at the original site (Q1 and Q2 2026 calls).",
+   "highlights": [
+    "Oracle / Stargate Michigan, Saline Township: 1,383 MW; announced by OpenAI, Oracle and Related Digital on October 30, 2025 ($7B, 2.2 million sq ft on 575 acres); DTE supplies '100% of the power … using existing resources augmented by a new battery storage investment — financed entirely by the project'; construction under way, grid connection by end-2026, ramp 2027–2028; ~$300M a year of affordability benefit to other customers claimed by DTE",
+    "Google / 'Project Cannoli', Van Buren Township: 1.0 GW on 282 acres developed by Panattoni; service from December 2027, full load by December 2028; Google funds up to 1,600 MW of renewables, 480 MW of storage and 350 MW of demand response and hands DTE ~300 MW of MISO Zone 7 capacity credits at no cost; ITC's 345 kV switching station and two feeds are dated late 2027 and late 2028; ~$1.7B of affordability benefit over the contract claimed",
+    "~2 GW in advanced discussions with two prospective customers; 3–4 GW of colocation prospects; 'additional ~3 GW could drive over 8% operating EPS CAGR from 2027–2030'",
+    "EEI's September 11, 2026 large-load list carries both DTE projects: Saline ($7B, 1,400 MW) and Van Buren (1,000 MW with 2,700 MW of new resources)"
+   ],
+   "positioning": "The corpus's most concentrated data-center book: two customers equal to ~40 percent of sales, against Dominion's 28 percent of Virginia sales already from data centers and Duke's ~7.8 GW spread over three states. The counterparty credit that sits under it is Oracle's — cut to BBB- by S&P on July 9, 2026 — and DTE says downgrade triggers in the contract produced additional collateral postings.",
+   "soldThrough": "Special contracts negotiated by the growth and regulatory group under the vice chairman and group president; site work through the economic-development team",
+   "targetSegments": [
+    "Hyperscalers building grid-served campuses in southeastern Michigan",
+    "Colocation developers with an anchor tenant, zoning and a site plan"
+   ],
+   "roadmap": "One more executed agreement targeted by end-2026 (update at the Q3 call or the November EEI conference; a Q4-call refresh if a third contract signs); Van Buren's final site plan vote was due September 23 or October 14, 2026; Wayne County's executive vetoed the township's $125M tax break on September 25, 2026 (headline only)"
+  },
+  {
+   "name": "Battery storage — the Oracle-funded 1,383 MW obligation, the IRP batteries and the LG Energy Solution Vertech supply deal",
+   "category": "Energy storage",
+   "description": "DTE's storage book has three sources. The 2022 IRP settlement (U-21193, approved July 26, 2023) requires 780 MW by 2030 within 2,900 MW by 2042; the Oracle energy storage agreement (U-21990) obliges DTE to build 1,383 MW of company-owned storage matching the data center's contracted demand, paid for by Green Chile Ventures over fifteen years with the customer receiving the wholesale market revenues; and the Google Clean Capacity Accelerator Agreement (U-22058, pending) would fund up to 480 MW more. The commission has approved, in 2026 alone: on March 27 (U-21193 and U-21990) 1,332 MW — Big Mitten Energy Center 450 MW (Huron County, 20-year tolling agreement, counterparty not named), Monroe I 350 MW and Fermi Energy Center 200 MW (self-build), and the first 332 MW of the Oracle obligation at Fish Creek 132 MW, Cold Creek 100 MW and Pine River 100 MW in Washtenaw County, with battery-module supply agreements and EPC master service agreements whose counterparties are redacted; on April 30 (U-22054) 660 MW — Isabella 190 MW and Meridian 295 MW (DTE-owned) plus tolling agreements for Coldwater River 75 MW and Tuscola II 100 MW; and on July 16 (U-22060) 300 MW of 15-year tolling agreements under the Oracle agreement with Key Capture Energy's KCE MI 2 (100 MW, Calhoun County, COD Q4 2028) and Copenhagen Infrastructure Partners' Redstart (200 MW, COD Q1 2028) at a blended $15.30/kW-month, sourced from the 2025 RFP. The MPSC's March 27 release put the utility-scale storage portfolio at 2,606 MW including the Ludington share; adding the later orders gives roughly 3.57 GW approved or contracted (our arithmetic). On the supply side, the 220 MW / 880 MWh Trenton Channel Energy Center at the retired coal plant in Trenton — announced June 10, 2024 with Powin as supplier — had its Powin contract terminated on May 19, 2025 after missed deliveries, and a replacement supply agreement with LG Energy Solution Vertech was approved on April 30, 2026 (U-21566) at more than $30M less; it is due in service at the end of 2026 as the largest standalone battery in the Great Lakes region. On May 27, 2026 DTE announced a $1.6B agreement with LGES Vertech for eight projects totaling 1.5 GW / 6 GWh, delivered over two years with Michigan-made cells from Holland — the dollar figure is DTE's, not in LGES's own text — and said the Oracle-funded batteries alone meet its share of the state's 2030 storage target. Which eight projects the LGES deal covers is not stated; 1,332 MW plus Trenton Channel's 220 MW is 1,552 MW.",
+   "highlights": [
+    "1,383 MW of DTE-owned storage owed under the Oracle energy storage agreement; 332 MW (March), and 300 MW of tolling (July) explicitly tied to it in orders, with U-22054's 660 MW described as ESA-related in the Attorney General's brief — up to 1,292 MW identified",
+    "Approved in 2026: 1,332 MW (March 27) + 660 MW (April 30) + 300 MW (July 16); MPSC portfolio 2,606 MW after March including Ludington",
+    "LG Energy Solution Vertech: $1.6B, eight projects, 1.5 GW / 6 GWh, two-year delivery, Holland, Michigan cells, domestic-content compliant (May 27, 2026); LGES shares rose as much as 16 percent the next day",
+    "Trenton Channel 220 MW / 880 MWh: Powin terminated May 2025 (Powin bankrupt June 2025), LGES replacement approved April 30, 2026, in service end-2026",
+    "RFP doors: ~450 MW (March 2025, COD 2028), up to 480 MW (April 2026, COD Q1 2029, bids July 8, 2026, contracts Q1 2027); 1,136 MW on the system by end-2027 'exceeds statewide target two years early' (2026 IRP)",
+    "2026 IRP: 4.5 GW of storage additions including 1.7 GW of long-duration storage (compressed air and iron-air, 2037–2046) — no MW-by-year table in the executive summary"
+   ],
+   "positioning": "The first US utility to have a hyperscaler pay for more than a gigawatt of utility-owned batteries in a commission order, and the largest single utility BESS supply award in the corpus outside Tesla's Megapack contracts; against the merchant developers in this file (Aypa, Spearmint, Gridstor) DTE is the counterparty on the tolling side, with Key Capture Energy already contracted.",
+   "soldThrough": "Self-build under MPSC ex parte approvals (supply agreements plus EPC master service agreements), 15–20-year tolling agreements from annual RFPs, and customer-funded ownership under the data-center energy storage agreements",
+   "targetSegments": [
+    "MISO Zone 7 capacity accreditation for the data-center load ramps",
+    "Michigan's PA 235 storage target (2,500 MW statewide by 2030)",
+    "Retired coal-site reuse (Trenton Channel, Monroe, Fermi)"
+   ],
+   "roadmap": "Trenton Channel in service end-2026; Redstart COD Q1 2028; KCE MI 2 Q4 2028; the 480 MW RFP contracts Q1 2027; the remaining Oracle-obligation tranches and the Google 480 MW after U-22058; long-duration storage from 2037 in the IRP"
+  },
+  {
+   "name": "The 2026 Integrated Resource Plan — 15 GW of renewables, 4.5 GW of storage, 2.1 GW of combined-cycle gas, coal exit 2032",
+   "category": "Generation",
+   "description": "Filed September 24, 2026 as MPSC Case U-22168 (a 20-year plan for 2027–2046 with a decision due within 360 days, about September 2027), the plan's proposed course of action adds 15 GW of renewables (8.7 GW near-term growth 2027–2031 per the narrative; 5,150 MW in 2032–2036), 4.5 GW of storage including 1.7 GW of long-duration, and 2.2 GW of gas: the 138 MW Michigan Power cogeneration plant acquired in 2030 ($130M), a ~1,400 MW combined cycle in Livingston County (Handy Township, $3.9B, construction from late 2027, in service by end-2031) and a ~700 MW combined cycle in Monroe County (Milan Township, $2.5B, construction late 2028, in service 2032), both carbon-capture-ready with capture entering service in 2035 and both with certificates of necessity requested under MCL 460.6s. Fermi 2 gets a 177 MW extended power uprate by 2036. Retirements: Monroe units 3 and 4 (1,535 MW) in 2028, units 1 and 2 (1,531 MW) and the Superior peaker in 2032, Belle River (converted to gas peaking) in 2039. The plan carries 2.4 GW of new customer load in its base case (the two signed contracts), a high case with the full pipeline and an intermediate case, and claims to be $3.5B cheaper than the 2022 plan over 2027–2046 with residential rates ~4 percent lower and carbon down 63 percent by 2029 and 95 percent by 2035 against 2005. DTE had 'put down payments on turbines' and MISO queue positions for the combined cycles by February 2026; the turbine OEM is not named. The 2022 IRP (CleanVision, settled 2023) had planned 15.4 GW of renewables and 1.8 GW of storage by 2042 with an $11B ten-year clean-energy spend.",
+   "highlights": [
+    "Certificates of necessity requested for ~1,400 MW (Livingston County, 2031, $3.9B) and ~700 MW (Monroe County, 2032, $2.5B) combined cycles",
+    "4.5 GW of storage (1.7 GW long-duration from 2037), 15 GW of renewables, Fermi 2 +177 MW by 2036",
+    "~900 MW of renewables a year over the next five years; 330 MW of solar in service in 2025 and 745 MW under construction; tax credits safe-harbored into 2029; an 800 MW wind and solar RFP issued August 11, 2026 (bids September 23, contracts Q2 2027)",
+    "The CEO to the Q3 2025 call: each additional 1 GW data center 'could necessitate a new natural gas plant'; the Sierra Club has asked for a no-data-center scenario"
+   ],
+   "positioning": "A smaller gas build than Duke's 7.5 GW or Southern's 9.9 GW but the same shape — combined cycles certified against data-center load — and a larger storage ratio: 4.5 GW of storage against 2.1 GW of new gas, where Dominion's plan runs 2 GW of storage against 8.5 GW of gas.",
+   "soldThrough": "Self-build under certificates of necessity; renewables and storage through annual RFPs, build-transfer purchases (Isabella from Apex) and PPAs",
+   "targetSegments": [
+    "Michigan's 2035 clean-energy standard (60 percent renewable, 80 percent clean) and 2040 100 percent standard",
+    "The Oracle and Google ramps and the 5–6 GW pipeline"
+   ],
+   "roadmap": "MPSC decision on U-22168 by about September 2027; Livingston construction late 2027; Monroe unit 3–4 retirement 2028"
+  },
+  {
+   "name": "DTE Gas, DTE Vantage and Energy Trading — the non-electric segments",
+   "category": "Other segments",
+   "description": "DTE Gas serves about 1.4 million customers across Michigan; its rate case U-21973 was decided September 10, 2026 (+$74.5M net of a $162.7M request, 9.8 percent return on equity, effective October 1, 2026, with the $284.1M Taggart compressor station rejected), and the DOE granted it a $1.6B Energy Dominance Financing loan, undrawn at July 31, 2026. The five-year gas plan is $4.5B ($2.7B of main renewal). DTE Vantage — renewable natural gas, combined heat and power and custom energy solutions — earned $162M of operating earnings in 2025 with 2026 guidance of $180–190M, driven by RNG tax credits that expire in 2029 (2030 projection $150–160M); its five-year plan is ~$2B and its projects include a Ford custom-energy solution commissioning in 2026, a 42 MW industrial CHP (early 2027) and the out-of-state behind-the-meter data-center generation project of 'hundreds of megawatts' described above. Energy Trading contributed $114M in 2025 (guidance $50–60M for 2026). Utility earnings are to reach 93 percent of the total by 2030.",
+   "highlights": [
+    "DTE Gas: 1.4 million customers; U-21973 order September 10, 2026; $1.6B DOE loan granted, undrawn",
+    "DTE Vantage: $162M (2025); RNG credits expire 2029; a behind-the-meter data-center generation project outside Michigan with equipment on order",
+    "Energy Trading: $114M (2025), guided to $50–60M"
+   ],
+   "positioning": "DTE Vantage is the only place in this dossier where DTE competes with the bridge-power and on-site generation sellers in the corpus rather than regulating them — and it is doing so outside Michigan.",
+   "soldThrough": "Regulated gas distribution; fixed-fee and contracted non-utility projects; physical and financial trading",
+   "targetSegments": [
+    "Michigan gas customers",
+    "Industrial and data-center customers for behind-the-meter energy solutions"
+   ],
+   "roadmap": "Vantage data-center project site and timing to be confirmed; RNG credit expiry 2029"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Oracle / Green Chile Ventures special contracts — MPSC Case U-21990 (order December 18, 2025)",
+   "specs": [
+    {
+     "band": "Load",
+     "label": "Contracted demand",
+     "value": "1,383-megawatt (MW) data center in Saline Township"
+    },
+    {
+     "band": "Primary Supply Agreement",
+     "label": "Rate and term",
+     "value": "D11 rate; minimum 19-year contract duration; 20-year extension option (Planet Detroit)"
+    },
+    {
+     "band": "Primary Supply Agreement",
+     "label": "Minimum billing demand",
+     "value": "80% of contracted demand"
+    },
+    {
+     "band": "Primary Supply Agreement",
+     "label": "Termination payment",
+     "value": "up to 10 years of minimum demand charges"
+    },
+    {
+     "band": "Primary Supply Agreement",
+     "label": "Credit",
+     "value": "credit and collateral requirements (largely redacted); additional collateral requirements at various downgrade triggers (CFO, July 28, 2026)"
+    },
+    {
+     "band": "Energy Storage Agreement",
+     "label": "Obligation",
+     "value": "1,383 MW of company-owned energy storage facilities that Green Chile Ventures must foot the bill to develop to match the data center's contracted demand; 15-year term; customer receives wholesale market revenues"
+    },
+    {
+     "band": "Conditions",
+     "label": "Risk allocation",
+     "value": "DTE responsible for any costs to serve the 1,383-megawatt (MW) data center in Saline Township that it is unable to recover from Green Chile Ventures LLC"
+    },
+    {
+     "band": "Conditions",
+     "label": "Tariff and studies",
+     "value": "file a proposed tariff for similar very-large-load customers within 90 days; six cost-of-service studies in the next rate case; update emergency procedures within 90 days so data-center load is curtailed before other customers"
+    },
+    {
+     "band": "Ramp",
+     "label": "Timing",
+     "value": "demand expected to ramp in the 2027/2028 timeframe (Q2 2026 investor presentation)"
+    }
+   ],
+   "notes": "Approved ex parte 3–0 with six conditions DTE accepted on January 15, 2026; the Attorney General's rehearing petition and motion to reopen were denied March 27, 2026 and the approval is under review at the Michigan Court of Appeals (Nos. 380362, 380364, 380878; briefs August 2026)."
+  },
+  {
+   "product": "Google special contracts — MPSC Case U-22058 (filed March 17, 2026; contested case; decision requested by September 10, 2026)",
+   "specs": [
+    {
+     "band": "Load",
+     "label": "Contracted demand",
+     "value": "~1.0 GW near Van Buren Township; service targeted Dec 2027, max load by Dec 2028"
+    },
+    {
+     "band": "Primary Supply Agreement",
+     "label": "Term",
+     "value": "20-year power supply agreement with minimum monthly charges"
+    },
+    {
+     "band": "Primary Supply Agreement",
+     "label": "Minimum billing demand",
+     "value": "DTE proposes 80%; the Attorney General seeks ≥90% and an exit fee of 100% × remaining months"
+    },
+    {
+     "band": "Clean Capacity Accelerator Agreement",
+     "label": "Resources",
+     "value": "20-year clean capacity acceleration agreement covers renewable and storage investments; up to 1,600 MW of renewable generation, 480 MW of energy storage and 350 MW of demand response; additional ~700 MW of longer-term generation will be identified through the IRP process"
+    },
+    {
+     "band": "Clean Capacity Accelerator Agreement",
+     "label": "Capacity credits",
+     "value": "~300 MW of MISO Zone 7 zonal resource credits provided to DTE at no cost (Energy-Storage.news, March 19, 2026)"
+    },
+    {
+     "band": "Capital",
+     "label": "Incremental investment",
+     "value": "Generation and storage requirements could drive ~$5 billion incremental capital investment through 2032"
+    },
+    {
+     "band": "Transmission",
+     "label": "ITC 'Project Cannoli'",
+     "value": "345 kV switching station + two 345 kV feeds off the Brownstown–Wayne #1/#2 lines; feeds late 2027 / late 2028; station Q1–Q3 2028"
+    }
+   ],
+   "notes": "The first hyperscale special contract taken as a contested case in Michigan; no order was found on any reachable source through September 25, 2026, so the approval the coverage plan assumed is unconfirmed."
+  },
+  {
+   "product": "2026–2030 capital plan (Q2 2026 investor presentation, July 28, 2026)",
+   "specs": [
+    {
+     "band": "Total",
+     "label": "Five-year plan",
+     "value": "$36.5B (prior 2025–2029 plan $30B; +$6.5B)"
+    },
+    {
+     "band": "DTE Electric",
+     "label": "Total",
+     "value": "$30B (prior $24B)"
+    },
+    {
+     "band": "DTE Electric",
+     "label": "Distribution infrastructure",
+     "value": "$11B (prior $10B)"
+    },
+    {
+     "band": "DTE Electric",
+     "label": "Base infrastructure",
+     "value": "$4B"
+    },
+    {
+     "band": "DTE Electric",
+     "label": "Cleaner generation",
+     "value": "$15B (prior $10B) — includes $10 billion of renewable investment, $2.5 billion of energy storage investment and $2.5 billion of combined cycle gas turbine investment"
+    },
+    {
+     "band": "DTE Gas",
+     "label": "Total",
+     "value": "$4.5B — gas renewal program $2.7B; base infrastructure $1.8B"
+    },
+    {
+     "band": "DTE Vantage",
+     "label": "Total",
+     "value": "~$2B"
+    },
+    {
+     "band": "Drivers",
+     "label": "Increase",
+     "value": "primarily driven by Oracle data center project; Incremental storage investment to support data center transaction; fully covered by Oracle"
+    },
+    {
+     "band": "Financing",
+     "label": "Equity",
+     "value": "$500–600M annual equity issuances 2026–2028 with similar levels planned through 2030; ~$3.5 billion increase in capital over the next 3 years to support data center load growth and generation investments"
+    }
+   ],
+   "notes": "Google's ~$5B through 2032 is not in the plan ('upside') and is to be added after MPSC approval."
+  },
+  {
+   "product": "MPSC-approved storage projects, 2026",
+   "specs": [
+    {
+     "band": "March 27, 2026 (U-21193 / U-21990)",
+     "label": "IRP settlement projects",
+     "value": "Big Mitten Energy Center 450 MW (Huron Co., 20-yr tolling); Monroe I Energy Center 350 MW (self-build); Fermi Energy Center 200 MW (self-build)"
+    },
+    {
+     "band": "March 27, 2026 (U-21193 / U-21990)",
+     "label": "Oracle-funded tranche",
+     "value": "Fish Creek 132 MW, Cold Creek 100 MW, Pine River 100 MW (all Washtenaw Co., DTE-owned, funded by Green Chile Ventures over 15 yrs) — the first 332 MW of 1,383 MW"
+    },
+    {
+     "band": "April 30, 2026 (U-22054 / U-21566)",
+     "label": "Additional 660 MW",
+     "value": "Isabella Energy Center 190 MW; Meridian Energy Center 295 MW (DTE-owned); Coldwater River Storage Project 75 MW and Tuscola II Energy Storage Project 100 MW (tolling); Trenton Channel replacement supply agreement with LG Energy Solution Vertech (>$30 million cheaper)"
+    },
+    {
+     "band": "July 16, 2026 (U-22060)",
+     "label": "Tolling under the Oracle ESA",
+     "value": "KCE MI 2 (Calhoun Co.) 100 MW, Key Capture Energy, COD Q4 2028; Redstart 200 MW, Copenhagen Infrastructure IV, COD Q1 2028; 15-yr tolling agreements; blended LCOS $15.30/kW-month"
+    },
+    {
+     "band": "Trenton Channel Energy Center",
+     "label": "Rating",
+     "value": "220 MW / 880 MWh, LFP, 4-hr; ~$460M; $140M IRA-linked incentives; in-service targeted late 2026"
+    },
+    {
+     "band": "LG Energy Solution Vertech agreement (May 27, 2026)",
+     "label": "Scope",
+     "value": "$1.6 billion investment; eight projects across the state, supporting 1.5 gigawatts of storage capacity / 6 gigawatt hours; battery systems delivered over a two-year period; cells made in Michigan (Holland) and US/Canadian facilities"
+    }
+   ],
+   "notes": "The supplier of the Washtenaw County batteries is redacted in the March 27 order; DTE does not say which eight projects the LGES agreement covers."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$6.83 ($1,416M), the high end of the $6.54–$6.83 guidance; GAAP $6.77 ($1,404M)",
+      "expected": "$6.77 (Zacks)",
+      "verdict": "beat",
+      "result": "Q4 2024 operating EPS $1.51 against $1.50 (MarketBeat); FY2025 guidance set at $7.09–$7.23"
+     },
+     {
+      "name": "Operating revenue",
+      "actual": "Not stated in DTE's results releases (segment earnings only); the FY2024 10-K revenue line was not extracted this session",
+      "expected": "Q4: $3.21B (MarketBeat)",
+      "verdict": "inline",
+      "result": "Q4 2024 revenue $3.44B per MarketBeat; full-year revenue is a collection gap"
+     },
+     {
+      "name": "Utility capital investment",
+      "actual": "$4.3B+ across DTE Electric and DTE Gas (company)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Prior five-year plan $30B for 2025–2029"
+     }
+    ],
+    "commentary": "A guidance-topping year before the data-center contracts existed; the December 2024 Michigan data-center tax exemption is the policy that preceded them. Consensus for the full year is from Zacks; no full-year revenue consensus was located."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$7.36 ($1,530M), above the $7.09–$7.23 guidance; GAAP $7.03 ($1,462M)",
+      "expected": "$7.21 (Zacks full-year consensus as of February 2025)",
+      "verdict": "beat",
+      "result": "Q4 2025 operating EPS $1.65 against $1.52–$1.53 (MarketBeat, Investing.com); segment operating earnings — Electric $1,217M, Gas $295M, Vantage $162M, Energy Trading $114M, Corporate −$258M"
+     },
+     {
+      "name": "Operating revenue",
+      "actual": "Not stated in DTE's results releases; trackers conflict for Q4 2025 ($3.35B Investing.com; $4.43B MarketBeat) and no full-year figure was reachable (10-K host blocked)",
+      "expected": "Q4: $3.33B (Investing.com)",
+      "verdict": "inline",
+      "result": "Recorded as a collection gap rather than a figure; the MarketBeat quarterly revenue series is internally implausible and is not used"
+     },
+     {
+      "name": "Data-center agreements executed",
+      "actual": "1.4 GW (the Oracle subsidiary; agreement announced October 30, 2025, approved by the MPSC December 18, 2025)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Five-year capital plan raised 22 percent to $36.5B (2026–2030); 2026 guidance $7.59–$7.73; 6–8 percent operating EPS growth through 2030",
+      "kpi": "mw-contracted",
+      "qty": 1400
+     },
+     {
+      "name": "Five-year capital plan",
+      "actual": "$36.5B for 2026–2030 (DTE Electric $30B, DTE Gas $4.5B, DTE Vantage ~$2B)",
+      "expected": "$30B (prior 2025–2029 plan)",
+      "verdict": "beat",
+      "result": "Up $6.5B, 'primarily driven by Oracle data center project'; 2025 capital spend more than $4.3B",
+      "kpi": "capex",
+      "usdMillions": 36500,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "The year the data-center book started: one contract, approved in December, drove a $6.5B plan raise in February. DTE has met or exceeded operating EPS guidance in 18 of the past 19 years (investor presentations)."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$1.95 ($407M) vs $2.10 a year earlier; GAAP $1.19 ($247M)",
+      "expected": "$1.98 (Zacks); $2.00 (Investing.com)",
+      "verdict": "miss",
+      "result": "A 1.5 percent miss against Zacks on mild weather and higher rate-base costs; 2026 guidance of $7.59–$7.73 reaffirmed with the high end targeted"
+     },
+     {
+      "name": "Operating revenue",
+      "actual": "$4.61B (Investing.com) — DTE's release does not state revenue",
+      "expected": "$4.50B (Investing.com)",
+      "verdict": "beat",
+      "result": "MarketBeat shows $5.14B against $4.37B for the same quarter; the two trackers disagree and neither is company-reported"
+     },
+     {
+      "name": "Data-center agreements executed",
+      "actual": "2.4 GW (1.4 GW Oracle + 1.0 GW Google, filed with the MPSC March 17, 2026); ~2 GW in advanced discussions; 3–4 GW further",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "About $350M of equity priced through forward sales; MPSC approved 1,332 MW of storage on March 27",
+      "kpi": "mw-contracted",
+      "qty": 2400
+     }
+    ],
+    "commentary": "The quarter Google became the second gigawatt. The EPS miss was weather; the plan and the pipeline were unchanged."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating earnings per share (non-GAAP)",
+      "actual": "$1.32 ($274M) vs $1.36 a year earlier; GAAP $1.35 ($282M)",
+      "expected": "$1.47 (Investing.com); $1.14 (Zacks, MarketBeat)",
+      "verdict": "miss",
+      "result": "Trackers conflict: a $0.15 miss against Investing.com and a $0.18 beat against Zacks. Recorded as a miss on the higher, more widely cited figure; DTE Electric operating earnings fell $48M on tax timing, rate-base costs and weather (cooling degree days 15 percent below normal). Guidance $7.59–$7.73 reaffirmed, 'positioned to achieve high end'"
+     },
+     {
+      "name": "Operating revenue",
+      "actual": "$2,044M per the 10-Q as summarized by Quartr (vs $1,979M); Investing.com shows $3.52B vs a $3.61B estimate",
+      "expected": "$3.61B (Investing.com)",
+      "verdict": "miss",
+      "result": "The two figures cannot both be quarterly revenue; DTE does not report revenue in its release and the 10-Q was not reachable. Recorded as unreconciled"
+     },
+     {
+      "name": "Data-center agreements executed",
+      "actual": "2.4 GW executed; ~2 GW in advanced discussions ('think of it as two new customers'); 3–4 GW further; one more agreement targeted by end-2026",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "H1 utility investment more than $2.6B, 'on pace to invest over $6 billion this year'; equity needs for 2026 met with $350M + $150M of forward sales; the Google contracts' ~$5B not yet in the plan",
+      "kpi": "mw-contracted",
+      "qty": 2400
+     }
+    ],
+    "commentary": "The two consensus figures for the quarter differ by $0.33, which is larger than the miss or beat either implies; the dossier records both. The strategic content of the quarter was the storage orders (660 MW in April, 300 MW in July) rather than the earnings."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-25",
+   "category": "regulatory",
+   "headline": "Wayne County executive Warren Evans vetoes Van Buren Township's $125M local tax break for the Google data center (Detroit News, Crain's — headlines only, articles paywalled)",
+   "read": "The Google contract's local politics moved against it in the same week its MPSC decision went unreported; the 1.0 GW remains 'upside to plan' until both clear.",
+   "source": "https://www.detroitnews.com/story/news/local/wayne-county/2026/09/25/wayne-county-executive-warren-evans-vetoes-van-buren-twp-data-center-tax-break/91943250007/"
+  },
+  {
+   "date": "2026-09-24",
+   "category": "regulatory",
+   "headline": "DTE Electric files its 2026 Integrated Resource Plan (Case U-22168): 15 GW of renewables, 4.5 GW of storage, certificates of necessity for ~1,400 MW (Livingston County, 2031, $3.9B) and ~700 MW (Monroe County, 2032, $2.5B) combined cycles, Fermi 2 +177 MW, coal exit 2032",
+   "read": "The first resource plan with the data-center load in the base case turns the CEO's 'each gigawatt could need a gas plant' into two certificate requests, decided by about September 2027.",
+   "source": "https://www.dteenergy.com/us/en/newsroom/2026/Powering-the-next-generation--DTE-lays-out-plan-to-deliver-a-cleaner,-reliable-energy-future-for-Michigan-customers.html"
+  },
+  {
+   "date": "2026-09-11",
+   "category": "policy",
+   "headline": "EEI's large-load projects and tariffs list (updated September 11, 2026) carries DTE's Saline ($7B, 1,400 MW) and Van Buren (1,000 MW, 2,700 MW of new resources) projects and records the D11 large-load revisions in Case U-22061 as filed",
+   "read": "Independent confirmation that the general tariff is still pending nine months after the order that required it within 90 days.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "date": "2026-09-10",
+   "category": "regulatory",
+   "headline": "MPSC decides the DTE Gas rate case (U-21973): $74.5M net of a $162.7M request, 9.8 percent return on equity, $2.87 a month from October 1, 2026; the Taggart compressor station ($284.1M) rejected — the requested September 10 decision date for the Google contracts passes with no reported order",
+   "read": "The commission cut the gas request by more than half; the silence on U-22058 the same day is the dossier's largest open question.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/09/10/mpsc-approves-dte-gas-co-infrastructure-investments"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "legal",
+   "headline": "Attorney General Nessel briefs her Court of Appeals challenge to the Oracle contract approval (Nos. 380362, 380364, 380878); Earthjustice, Sierra Club, MEC and NRDC file separately citing 'nearly half a billion' of up-front costs",
+   "read": "The approval that underwrites 1,383 MW of storage is under judicial review while the batteries are being bought; no argument date found.",
+   "source": "https://www.michigan.gov/ag/news/press-releases/2026/08/07/ag-nessel-briefs-appeal-over-mpsc-approval-of-dte-saline-data-center-contracts"
+  },
+  {
+   "date": "2026-07-28",
+   "category": "financial",
+   "headline": "Q2 2026: operating EPS $1.32 (GAAP $1.35); 2026 guidance $7.59–$7.73 reaffirmed at the high end; 2.4 GW executed, ~2 GW in advanced discussions, 3–4 GW further; an 800 MW renewables RFP announced",
+   "read": "A miss against Investing.com's $1.47 consensus on weather and rate-base costs, but the load story held: 'think of it as two new customers' for the next 2 GW.",
+   "source": "https://s24.q4cdn.com/970999156/files/doc_financials/2026/q2/Q2-26-presentation-FINAL.pdf"
+  },
+  {
+   "date": "2026-07-16",
+   "category": "procurement",
+   "headline": "MPSC approves 15-year tolling agreements under the Oracle energy storage agreement with Key Capture Energy's KCE MI 2 (100 MW, COD Q4 2028) and Copenhagen Infrastructure Partners' Redstart (200 MW, COD Q1 2028) at a blended $15.30/kW-month (Case U-22060); the Attorney General's contested-case request denied",
+   "read": "The customer-funded storage obligation is being filled with third-party tolls as well as self-build — the first named merchant storage developer in DTE's book.",
+   "source": "https://adms.apps.lara.state.mi.us/Mpsc/ViewCommissionOrderDocument/27497"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "market",
+   "headline": "S&P cuts Oracle to BBB-; DTE says the Saline contracts carry additional collateral requirements at downgrade triggers and that it received more postings (CFO, July 28 call)",
+   "read": "The credit under 40 percent of future sales moved one notch above junk; the contract design, not the customer, is now what protects other ratepayers.",
+   "source": "https://wisconsinwatch.org/2026/07/wisconsin-oracle-data-center-credit-rating-drop-rules-fight-tech-energy-ai-utility/"
+  },
+  {
+   "date": "2026-07-03",
+   "category": "incident",
+   "headline": "A July 3 storm leaves about 400,000–450,000 customers without power (more than 600 broken poles); the MPSC opens an investigation and DTE responds August 29",
+   "read": "Reliability remains the regulator's other lever — the 2025 Liberty-audit order puts a ±$10M incentive and penalty mechanism in force from 2027.",
+   "source": "https://www.clickondetroit.com/news/local/2026/08/29/storm-investigation-dte-responds-to-mpsc-investigation-into-july-3-storm-response/"
+  },
+  {
+   "date": "2026-06-23",
+   "category": "leadership",
+   "headline": "Renee Tomina named president and COO of DTE Gas effective June 29, 2026, succeeding Robert Richard",
+   "read": "Continuity: the gas utility's new head ran the grid-modernization and renewables project office.",
+   "source": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-names-Renee-Tomina-president-and-chief-operating-officer-of-DTE-Gas.html"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "regulatory",
+   "headline": "Attorney General Nessel files testimony in the Google contract case (U-22058) seeking a minimum bill of at least 90 percent, higher exit fees and cost-tracking mechanisms",
+   "read": "The contested-case route DTE chose for Google gives the state's principal data-center adversary a hearing record the Oracle ex parte case denied her.",
+   "source": "https://www.michigan.gov/ag/news/press-releases/2026/06/11/ag-nessel-files-testimony-to-protect-ratepayers-in-google-data-center-proposal"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "procurement",
+   "headline": "$1.6B agreement with LG Energy Solution Vertech for eight Michigan battery projects totaling 1.5 GW / 6 GWh, delivered over two years with cells from Holland, Michigan",
+   "read": "The largest utility BESS supply award of 2026 in this corpus, and a domestic-content answer to the tariff and FEOC regime; DTE says the Oracle-funded batteries meet its share of the 2030 state target.",
+   "source": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-invests-in-Michigan-made-battery-storage-systems-advancing-clean-energy-goals-and-spurring-billions-in-economic-growth-across-the-state/default.aspx"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "procurement",
+   "headline": "MPSC approves 660 MW more storage (Isabella 190 MW, Meridian 295 MW, Coldwater River 75 MW, Tuscola II 100 MW; Case U-22054) and the LG Energy Solution Vertech replacement supply agreement for Trenton Channel (U-21566); Q1 2026 operating EPS $1.95 and the Google agreement disclosed",
+   "read": "A second tranche a month after the first — the customer-funded obligation is being converted to projects at a pace no other utility in this file matches.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/04/30/mpsc-takes-additional-steps-to-improve-utility-reliability-and-grid-resilience"
+  },
+  {
+   "date": "2026-04-28",
+   "category": "regulatory",
+   "headline": "DTE Electric files a $474.3M rate case (U-22046; 10.25 percent ROE; ~$800M of distribution spend into the infrastructure recovery mechanism by 2030) and pledges no further electric filing until at least 2028 if the Saline data center is on line by end-2027",
+   "read": "The rate freeze is priced on the data center arriving on time — 'a ransom note', the Attorney General said; the case includes an ESA rate-base reimbursement line and an excess-margin flow-back for the large-load customer.",
+   "source": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-intends-to-pause-future-electric-rate-requests-following-upcoming-filing-as-data-centers-come-online.html"
+  },
+  {
+   "date": "2026-04-22",
+   "category": "procurement",
+   "headline": "RFP for up to 480 MW of storage (COD Q1 2029, bids July 8, 2026, contracts Q1 2027)",
+   "read": "480 MW is the storage figure in the Google agreement; the RFP door for developers opens before the contract is approved.",
+   "source": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-seeking-developers-for-new-energy-storage-projects.html"
+  },
+  {
+   "date": "2026-04-17",
+   "category": "legal",
+   "headline": "Attorney General files a claim of appeal of the Oracle contract approval (U-21990) in the Michigan Court of Appeals",
+   "read": "Judicial review begins four months after the ex parte order.",
+   "source": "https://www.michigan.gov/ag/news/press-releases/2026/04/17/ag-nessel-files-appeal-of-mpsc-approval-of-dtes-saline-data-center-contracts"
+  },
+  {
+   "date": "2026-03-27",
+   "category": "procurement",
+   "headline": "MPSC approves six storage contracts totaling 1,332 MW — Big Mitten 450 MW (tolling), Monroe I 350 MW, Fermi 200 MW, and the first 332 MW of the Oracle obligation at Fish Creek, Cold Creek and Pine River — and denies the Attorney General's rehearing petition and motion to reopen U-21990",
+   "read": "The order that reconciles the '1.4 GW' and '332 MW' figures: 1,383 MW is the obligation, 332 MW the first tranche with named projects.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/03/27/mpsc-goes-big-on-batteries"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "customer",
+   "headline": "Google confirmed as the customer behind 'Project Cannoli' in Van Buren Township; DTE files a 20-year supply agreement and Clean Capacity Accelerator Agreement (~1.0 GW) with the MPSC as a contested case (U-22058), asking for a decision by September 10, 2026",
+   "read": "The second gigawatt, taken through a hearing this time — and structured so Google funds 2.7 GW of new resources.",
+   "source": "https://mi-psc.my.site.com/sfc/servlet.shepherd/version/download/068cs00001pVhXUAA0"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "regulatory",
+   "headline": "MPSC grants $242.4M of DTE Electric's $574.1M rate request (U-21860) at a 9.9 percent ROE, effective March 5, 2026",
+   "read": "Less than half the ask; the next case, filed nine weeks later, is the one tied to the data-center stay-out.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/02/19/commission-approves-additional-242m-for-dte-electric-grid-upgrades"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "financial",
+   "headline": "FY2025 operating EPS $7.36 (GAAP $7.03), above the $7.09–$7.23 guidance; 2026 guidance $7.59–$7.73; the 2026–2030 capital plan raised $6.5B to $36.5B, 'primarily driven by the Oracle data center project'",
+   "read": "The plan raise is where the data-center contract shows up in the numbers: $6B more at DTE Electric, $5B of it cleaner generation.",
+   "source": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-reports-2025-accomplishments-earnings-and-investments/default.aspx"
+  },
+  {
+   "date": "2026-01-20",
+   "category": "legal",
+   "headline": "Attorney General moves to reopen U-21990, alleging DTE's January 15 acceptance letter softened the condition that other customers not cover data-center costs (rehearing petition filed January 8)",
+   "read": "The dispute is over one sentence in an acceptance letter; the commission found no standing and no new evidence on March 27.",
+   "source": "https://www.michigan.gov/ag/news/press-releases/2026/01/09/attorney-general-petitions-mpsc-for-rehearing-on-dte-data-center-special-contracts"
+  },
+  {
+   "date": "2025-12-18",
+   "category": "regulatory",
+   "headline": "MPSC approves the Oracle / Green Chile Ventures special contracts ex parte and 3–0 (U-21990): a 19-year supply agreement at 80 percent minimum billing demand and a 15-year energy storage agreement for 1,383 MW of customer-funded, DTE-owned batteries, subject to six conditions",
+   "read": "The corpus's first commission order making a hyperscaler pay for more than a gigawatt of utility-owned storage; the ex parte route is what the Attorney General is now appealing.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2025/12/18/mpsc-approves-dte-electric-energy-contracts-for-data-center"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "customer",
+   "headline": "OpenAI, Oracle and Related Digital announce the Stargate site at Saline Township ($7B, 1.4 GW); DTE reports its first 1.4 GW data-center agreement with Q3 2025 results and raises the capital plan 22 percent; DTE: 'supplying 100% of the power to the project using existing resources augmented by a new battery storage investment — financed entirely by the project'",
+   "read": "Grid-served, not co-located — the design choice that makes DTE a battery buyer rather than a bystander to on-site gas.",
+   "source": "https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site"
+  },
+  {
+   "date": "2025-09-08",
+   "category": "leadership",
+   "headline": "Joi Harris becomes president and CEO; Jerry Norcia executive chairman; Dave Ruud vice chairman and CFO; Trevor Lauer vice chairman and group president over growth and regulatory (announced June 23, 2025)",
+   "read": "The data-center book was built under a new CEO from her first quarter; the growth and regulatory functions sit with one vice chairman.",
+   "source": "https://www.dteenergy.com/us/en/newsroom/2025/DTE-Energy-Board-of-Directors-elects-Joi-Harris-as-CEO--Jerry-Norcia-elected-Executive-Board-Chairman.html"
+  },
+  {
+   "date": "2025-07-29",
+   "category": "customer",
+   "headline": "Q2 2025 call: about 7 GW of data-center interest — '3-plus GW' with hyperscalers and '4 GW' with other operators",
+   "read": "The pipeline that became 2.4 GW executed a year later.",
+   "source": "https://www.power-eng.com/energy-storage/dte-energy-looking-at-7-gw-data-center-pipeline/"
+  },
+  {
+   "date": "2025-06-12",
+   "category": "regulatory",
+   "headline": "MPSC orders reliability improvements from the Liberty audit (75 recommendations) with a financial incentive and penalty mechanism from 2027",
+   "read": "The other half of DTE's regulatory exposure: distribution performance, not just data-center terms.",
+   "source": "https://www.utilitydive.com/news/michigan-regulators-order-reliability-improvements-consumers-dte/750769/"
+  },
+  {
+   "date": "2025-05-19",
+   "category": "procurement",
+   "headline": "DTE terminates Powin's Trenton Channel supply contract after missed deliveries; Powin files for bankruptcy June 9, 2025",
+   "read": "The supplier failure that put LG Energy Solution into DTE's book — a bankability lesson every utility buyer in this corpus now cites.",
+   "source": "https://www.energy-storage.news/utility-dte-energys-plan-to-pause-michigan-rate-increases-hinges-on-oracle-data-centre/"
+  },
+  {
+   "date": "2025-03-13",
+   "category": "procurement",
+   "headline": "RFP for ~450 MW of standalone storage (COD by end-2028; contracts Q1 2026)",
+   "read": "The RFP whose awards surfaced as the Key Capture and Redstart tolls in July 2026.",
+   "source": "https://www.dteenergy.com/us/en/newsroom/2025/DTE-Energy-seeking-developers-for-new-energy-storage-projects.html"
+  },
+  {
+   "date": "2024-06-10",
+   "category": "project",
+   "headline": "Trenton Channel Energy Center announced: 220 MW / 880 MWh at the retired coal plant, the largest standalone battery in the Great Lakes region, with $140M of federal tax incentives",
+   "read": "DTE's first large battery, and the reason it had a supplier to replace in 2025.",
+   "source": "https://www.dteenergy.com/us/en/newsroom/2024/DTE-Energy-to-build-region-s-largest-battery-energy-storage-center-at-site-of-retired-Trenton-Channel-coal-plant.html"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that DTE has converted its first hyperscale contract into battery purchases faster and more completely than any utility in this corpus, and that the mechanism — the customer pays for utility-owned storage over fifteen years — is the design, not an accident. Basis: the U-21990 energy storage agreement obliges 1,383 MW of DTE-owned storage funded by Green Chile Ventures; the commission approved 332 MW of it on March 27, 2026, 660 MW of related projects on April 30 and 300 MW of tolling on July 16; the $1.6B, 1.5 GW LGES Vertech supply agreement followed on May 27. We expect the remaining tranches to be filed in 2026–2027 and the Google 480 MW to follow the same path if U-22058 is approved.",
+  "(High confidence) We assess that DTE's exposure is concentration rather than scale: two customers equal to roughly 40 percent of retail sales at full ramp, one of them rated BBB- since July 2026. Basis: the CEO's own '40 percent' on the Q1 2026 call; S&P's Oracle downgrade; the CFO's statement that downgrade triggers produced additional collateral. The contract terms (80 percent minimum billing for 19–20 years, termination payments of up to ten years of minimum charges) are what stand between that concentration and other ratepayers, and the electric rate case (U-22046) adds an excess-margin flow-back and an ESA rate-base reimbursement line so a faster ramp benefits customers rather than shareholders.",
+  "(Moderate confidence) We assess that the Google contracts will be approved with terms between DTE's 80 percent and the Attorney General's 90 percent minimum, but that the decision's timing is now the risk. Basis: the commission approved the Oracle contracts 3–0 with conditions rather than rejecting them, and the March 27 order denied the Attorney General standing; against that, DTE asked for a decision by September 10, 2026, none was found by September 25, and the local tax break was vetoed the same week. The ~$5B of Google-driven capital stays out of the plan until an order issues; the Q3 call or the November EEI conference is when DTE said it would add it.",
+  "(Moderate confidence) We assess that the next resource decision is gas and that it will be contested on the data-center premise. Basis: the 2026 IRP (U-22168) requests certificates for 1,400 MW and 700 MW of combined cycles at $6.4B combined, the CEO told the Q3 2025 call each additional gigawatt of data-center load 'could necessitate a new natural gas plant', and the Sierra Club has already asked for a no-data-center scenario. The turbine OEM and EPC are not named; DTE had turbine down payments and MISO queue positions by February 2026, so the equipment decision may already be made.",
+  "(Moderate confidence) We assess that DTE's regulatory environment is the most politically exposed of the utilities in this file, and that the exposure is to the process rather than the economics. Basis: the Attorney General's Court of Appeals challenge to the ex parte Oracle approval, her 90 percent minimum-bill testimony in the Google case, at least 18 local data-center moratoriums, an August 2026 poll showing 62 percent of likely voters opposed, and both gubernatorial nominees calling for moratoriums. A court reversal of U-21990 would not unbuild the batteries but could reopen who pays for them.",
+  "(Low confidence) We assess that the eight LGES Vertech projects are the six commission-approved batteries of March 27, 2026 plus Trenton Channel and one more — the arithmetic (1,332 MW + 220 MW = 1,552 MW against '1.5 GW') fits, but no DTE or LGES statement names the projects, and the March order redacts the supplier. Treat as unverified."
+ ],
+ "relationships": [
+  {
+   "slug": "oracle",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "1,383 MW",
+   "via": "Primary supply agreement and energy storage agreement (Rate D11)",
+   "project": "stargate",
+   "note": "Oracle's subsidiary Green Chile Ventures LLC holds the 19-year supply agreement and 15-year energy storage agreement for the 1,383 MW Stargate campus at Saline Township, approved by the MPSC on December 18, 2025.",
+   "context": "The MPSC's December 18, 2025 release approved 'two special contracts between DTE Electric and Green Chile Ventures LLC' with the customer paying the full cost of 1,383 MW of DTE-owned storage over fifteen years and DTE 'responsible for any costs to serve the 1,383-megawatt (MW) data center in Saline Township that it is unable to recover from Green Chile Ventures LLC'. DTE's Q2 2026 presentation describes a 19-year power supply agreement with minimum monthly charges, a 15-year energy storage contract covering the capital investment, and termination fees combined with credit and collateral requirements; construction started and demand is expected to ramp in 2027–2028.\n\nS&P cut Oracle to BBB- on July 9, 2026; the CFO said the contract's downgrade triggers produced additional collateral postings, with specifics undisclosed at Oracle's request. The approval is under review at the Michigan Court of Appeals.\n\nThe corpus's Oracle dossier records the Saline site as 'DTE grid + ~$300M new battery storage' from Oracle's own October 2025 description; DTE's decks say 'nearly $2 billion storage investment in plan … fully covered by Oracle'. The two figures may describe different scopes (a first tranche against the full obligation) — no source read reconciles them, and both are recorded.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2025/12/18/mpsc-approves-dte-electric-energy-contracts-for-data-center"
+  },
+  {
+   "slug": "openai",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "1.4 GW campus",
+   "project": "stargate",
+   "note": "OpenAI is the end user of the Saline Township Stargate campus that DTE serves through Oracle's subsidiary; DTE's own releases name only the Oracle entity.",
+   "context": "The October 30, 2025 announcement by OpenAI, Oracle and Related Digital named Saline Township as a Stargate site ($7B, 1.4 GW, 2.2 million square feet on 575 acres) and quoted DTE: it 'is supplying 100% of the power to the project using existing resources augmented by a new battery storage investment — financed entirely by the project'. Related Digital reached a consent judgment with the township on October 15, 2025 after a rezoning denial and had paid a $40M non-refundable deposit to DTE and ordered about $2B of equipment by February 2026 (Planet Detroit).",
+   "source": "https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-03",
+   "scale": "~1.0 GW",
+   "via": "Primary supply agreement and Clean Capacity Accelerator Agreement",
+   "note": "Google LLC's 20-year supply agreement and Clean Capacity Accelerator Agreement for the ~1.0 GW Van Buren Township campus were filed with the MPSC on March 17, 2026 as a contested case (U-22058); no decision had been found by September 25, 2026.",
+   "context": "DTE's application asked for a decision by September 10, 2026. Per the Q2 2026 presentation the load ramp is 'supported by up to 1,600 MW of renewable generation, 480 MW of energy storage and 350 MW of demand response', with about 700 MW of longer-term generation to be identified in the IRP and ~$5B of incremental capital through 2032; Google also supplies about 300 MW of MISO Zone 7 capacity credits at no cost (Energy-Storage.news). The Attorney General's June 11, 2026 testimony seeks a 90 percent minimum bill.\n\nService is targeted for December 2027 and full load by December 2028 through ITC's Project Cannoli 345 kV switching station. Google is also one of five utilities' demand-response counterparties in the corpus's Google dossier, with DTE named.",
+   "source": "https://mi-psc.my.site.com/sfc/servlet.shepherd/version/download/068cs00001pVhXUAA0"
+  },
+  {
+   "slug": "lg-energy-solution",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-11",
+   "scale": "1.5 GW / 6 GWh; $1.6B",
+   "via": "LG Energy Solution Vertech battery systems",
+   "note": "LGES Vertech replaced Powin as the Trenton Channel supplier (approved April 30, 2026) and on May 27, 2026 signed a $1.6B agreement for eight Michigan projects totaling 1.5 GW / 6 GWh.",
+   "context": "DTE's May 27, 2026 release describes a '$1.6 billion investment' in 'eight projects across the state, supporting 1.5 gigawatts of storage capacity' delivered over two years with cells made at LG's Holland, Michigan plant; the LGES release gives 6 GWh and the domestic-content compliance but not the dollar figure, which Utility Dive attributes to DTE. Which eight projects are covered is not stated.\n\nThe Trenton Channel replacement followed DTE's termination of Powin's contract on May 19, 2025 after missed deliveries; the MPSC approved the LGES supply agreement in Case U-21566 on April 30, 2026 at more than $30M less than the Powin contract.",
+   "source": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-invests-in-Michigan-made-battery-storage-systems-advancing-clean-energy-goals-and-spurring-billions-in-economic-growth-across-the-state/default.aspx"
+  },
+  {
+   "slug": "key-capture-energy",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "100 MW",
+   "via": "15-year tolling agreement (KCE MI 2, Calhoun County)",
+   "note": "The MPSC approved a 15-year tolling agreement with Key Capture Energy's KCE MI 2 LLC (100 MW, COD Q4 2028) under the Oracle energy storage agreement on July 16, 2026 (Case U-22060), alongside Copenhagen Infrastructure Partners' 200 MW Redstart.",
+   "context": "The order records that both projects were sourced through DTE's 2025 energy storage RFP at a blended levelized cost of storage of $15.30/kW-month and that the Attorney General's request for a contested case was denied. The tolls are counted against the 1,383 MW customer-funded obligation, so a merchant developer's battery is being paid for by a hyperscaler through the utility.",
+   "source": "https://adms.apps.lara.state.mi.us/Mpsc/ViewCommissionOrderDocument/27497"
+  },
+  {
+   "slug": "apex-clean-energy",
+   "type": "supplier",
+   "status": "active",
+   "scale": "190 MW (Isabella)",
+   "note": "The Isabella Energy Center (190 MW) approved on April 30, 2026 sits on the Isabella wind site Apex Clean Energy built and transferred to DTE; the Apex dossier records the build-transfer sale.",
+   "context": "The corpus's Apex Clean Energy dossier lists 'Isabella build-transfer to DTE' among its full sales and DTE among its utility customers. The MPSC's April 30, 2026 release names an Isabella Energy Center of 190 MW among the 660 MW of storage approved in Case U-22054; no source read states whether Apex is the developer of the storage addition, so the link is recorded at the wind-site level only.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/04/30/mpsc-takes-additional-steps-to-improve-utility-reliability-and-grid-resilience"
+  },
+  {
+   "slug": "aypa-power",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-03",
+   "scale": "450 MW",
+   "via": "20-year tolling agreement (Big Mitten Energy Center)",
+   "note": "The corpus's Aypa Power dossier records the 450 MW Big Mitten Energy Center in Huron County under a 20-year agreement with DTE Electric approved by the MPSC on March 27, 2026; the MPSC release names the project and the tolling term but not the counterparty.",
+   "context": "The MPSC's March 27, 2026 release lists 'Big Mitten Energy Center 450 MW (Huron Co., 20-yr tolling)' among the 1,000 MW approved under the 2022 IRP settlement. Aypa's dossier cites local press (Huron County View) attributing the project to Aypa. No DTE or MPSC document read this session names Aypa, so the attribution rests on the counterparty's side and local reporting.",
+   "source": "https://www.michigan.gov/mpsc/commission/news-releases/2026/03/27/mpsc-goes-big-on-batteries"
+  },
+  {
+   "slug": "blackstone",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-04",
+   "note": "Blackstone and PIMCO are reported as financing partners of Related Digital's Saline campus after Blue Owl withdrew in December 2025; not a DTE counterparty.",
+   "context": "Energy-Storage.news (April 28, 2026) names Blackstone and PIMCO as financiers of the Related Digital campus and Reuters headlined a $16B financing on April 1, 2026 (article not reachable). The corpus's Oracle dossier carries the same 'Related Digital/Blackstone/PIMCO financing' line. The link is recorded because the campus's financing is what makes DTE's 1,383 MW obligation bankable, not because DTE contracts with Blackstone.",
+   "source": "https://www.energy-storage.news/utility-dte-energys-plan-to-pause-michigan-rate-increases-hinges-on-oracle-data-centre/"
+  },
+  {
+   "slug": "xcel-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer regulated utility in the Midwest; the Xcel dossier compares its growth objective with WEC's and Alliant's, and Sargent & Lundy lists both among its nuclear clients.",
+   "context": "Recorded as a peer link only: the two companies share MISO membership and the same investor comparison set. No commercial relationship between them appears in the record.",
+   "source": "Peer comparison; no transaction recorded"
+  },
+  {
+   "slug": "aep",
+   "type": "competitor",
+   "status": "active",
+   "note": "Indiana Michigan Power's Tariff LP (U-21986, approved) sits beside DTE's D11 large-load revisions (U-22061, pending) on EEI's Michigan list — the two Michigan large-load tariffs the commission is comparing.",
+   "context": "EEI's September 11, 2026 list places three Michigan large-load tariffs together: Consumers Energy's Rate GPD amendments (U-21859, approved), I&M's Tariff LP (U-21986, approved) and DTE's D11 revisions (U-22061, filed). The Dominion, Southern and AEP dossiers in this corpus are the tariff precedents against which DTE's 80 percent minimum reads.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "MISO capacity market",
+   "status": "in-effect",
+   "effectiveDate": "2026-06",
+   "exposure": "DTE Electric is in MISO Zone 7 (Michigan). The 2026/27 planning resource auction (results April 28, 2026) cleared summer at $424.30/MW-day, fall $33.92, winter $35.97 and spring $7.61 — down from $666.50/MW-day summer in 2025/26 after that year's ten-to-twenty-fold rise. DTE is largely self-supplied and files capacity demonstrations under U-21225; the December 2025 order requires its next demonstration to show the data center's impact, and the Google agreement supplies about 300 MW of Zone 7 zonal resource credits at no cost. The 2026 IRP models MISO's direct-loss-of-load accreditation from planning year 2028/29 and says the plan 'has adequate resources to meet the planning requirements'.",
+   "mitigation": "Self-supply through the storage build and the two proposed combined cycles; the Google-provided capacity credits; the 2022 IRP's 780 MW of storage by 2030 and the customer-funded 1,383 MW.",
+   "source": "https://www.enelnorthamerica.com/insights/blogs/miso-2026-2027-capacity-auction-results"
+  },
+  {
+   "regime": "Michigan PA 235 of 2023 (clean energy standard and storage target)",
+   "status": "in-effect",
+   "effectiveDate": "2024-02",
+   "exposure": "The 2023 laws set a 50 percent renewable standard by 2030 and 60 percent by 2035, an 80 percent clean standard by 2035 and 100 percent by 2040, a statewide 2,500 MW storage target with utility petitions due by December 31, 2029, and a 360-day IRP decision clock. DTE says 1,136 MW on the system by year-end 2027 'exceeds statewide target two years early' and that the Oracle-funded batteries alone meet its share of the 2030 storage target; the 2026 IRP's proposed course of action reaches 84 percent carbon reduction and 53 percent renewables by 2046.",
+   "mitigation": "The 15 GW renewables and 4.5 GW storage in the 2026 IRP; ~900 MW of renewables a year; the 800 MW wind and solar RFP of August 2026.",
+   "source": "https://www.michigan.gov/mpsc/commission/workgroups/2023-energy-legislation"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "DTE has 'safe harbored tax credits into 2029' for its renewables and storage build (Q4 2025 presentation); the Trenton Channel battery carries about $140M of federal incentives; the electric rate case seeks deferral treatment for unamortized investment tax credits; and DTE Vantage's renewable natural gas production credits, which drive the 'high end' of guidance each year, expire in 2029 (2030 Vantage earnings projected at $150–160M after expiry). No explicit statement on the 2025 federal tax law's phase-outs or the prohibited-foreign-entity rules was found in any DTE material.",
+   "mitigation": "Safe-harbor of credits into 2029; the LGES Vertech agreement is 'domestic-content-compliant' with Michigan-made cells, which DTE frames as jobs rather than as a FEOC hedge.",
+   "source": "https://s24.q4cdn.com/970999156/files/doc_financials/2025/q4/Q4-25-presentation-FINAL.pdf"
+  },
+  {
+   "regime": "Michigan data-center sales and use tax exemption (2024)",
+   "status": "in-effect",
+   "effectiveDate": "2024-12",
+   "exposure": "The December 2024 law that made Michigan a hyperscale destination is under political attack: an August 2026 EPIC-MRA poll found 62 percent of likely voters oppose data centers, at least 18 local governments have adopted or proposed moratoriums, both 2026 gubernatorial nominees have called for moratoriums or an end to the tax breaks, and the legislature 'may roll back' the incentives (Latitude Media). DTE's data-center page states that 'Michigan law prohibits customers from subsidizing data center costs'.",
+   "mitigation": "DTE's affordability framing — ~$300M a year (Oracle) and ~$1.7B over the contract (Google) of claimed customer benefit; the July 16, 2026 'Michigan Affordability and Responsible Growth Pledge' signed by technology companies.",
+   "source": "https://planetdetroit.org/2026/09/data-centers-michigan-senate-rogers-el-sayed/"
+  },
+  {
+   "regime": "MPSC reliability order (Liberty audit)",
+   "status": "in-effect",
+   "effectiveDate": "2025-06-12",
+   "exposure": "The June 12, 2025 order adopted 75 audit recommendations and creates a financial incentive and penalty mechanism of up to $10M from 2027; catastrophic-outage credits are $42 a day after 96 hours. The July 3, 2026 storm (about 400,000–450,000 customers out) is under MPSC investigation.",
+   "mitigation": "$11B five-year distribution plan; goals to cut outages 30 percent and outage time in half by 2029 and fully automate the distribution system by end-2029; DTE claims a ~90 percent improvement in outage duration 2023–2025.",
+   "source": "https://www.utilitydive.com/news/michigan-regulators-order-reliability-improvements-consumers-dte/750769/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Joi M. Harris",
+   "title": "President and Chief Executive Officer",
+   "photo": "images/execs/dte-energy-harris.jpg",
+   "background": [
+    "President and CEO since September 8, 2025, succeeding Jerry Norcia, who became executive chairman (company release, June 23, 2025)",
+    "President and chief operating officer of DTE Energy, leading DTE Electric, DTE Gas, customer service, IT, corporate services and environmental health and safety; earlier president and COO of DTE Gas",
+    "Led renewable-project construction and the Blue Water Energy Center build; leadership roles in distribution field operations, system control and transmission operations",
+    "Joined Michigan Consolidated Gas (now DTE Gas) in 1991 after a high-school engineering co-op; BS industrial engineering and MBA, Wayne State University (company bio, April 2026)"
+   ]
+  },
+  {
+   "name": "Gerardo (Jerry) Norcia",
+   "title": "Executive Chairman of the Board",
+   "background": [
+    "Executive chairman since September 8, 2025; chairman since 2022, CEO 2019–2025, president and COO from 2017 (company release, June 23, 2025)",
+    "Joined DTE Energy in 2002; earlier at Union Gas and Enbridge in Canada"
+   ]
+  },
+  {
+   "name": "David (Dave) Ruud",
+   "title": "Vice Chairman and Chief Financial Officer",
+   "photo": "images/execs/dte-energy-ruud.jpg",
+   "background": [
+    "Vice chairman and CFO since September 8, 2025; executive vice president and CFO before that; hosts every results call in 2025 and 2026",
+    "Joined DTE in 2005; led what is now DTE Vantage; senior vice president, corporate development and strategy; ran the company's continuous-improvement program",
+    "Vice president and partner, L.E.K. Consulting (North American energy practice); BS aerospace engineering, Penn State; MBA, Kellogg (company bio, May 2026)"
+   ]
+  },
+  {
+   "name": "Trevor F. Lauer",
+   "title": "Vice Chairman and Group President",
+   "photo": "images/execs/dte-energy-lauer.jpg",
+   "background": [
+    "Leads DTE's growth, business development, regulatory, and corporate and government affairs organizations — the executive over the data-center pipeline and the company's public face on it (company bio, September 2026)",
+    "President and COO of DTE Electric; senior vice president, distribution operations; joined DTE in 2005",
+    "Executive vice president, Strategic Energy LLC; Honeywell; BS Penn State, MBA University of Maryland; MIT nuclear reactor technology program (2019)"
+   ]
+  },
+  {
+   "name": "Matthew (Matt) Paul",
+   "title": "President and Chief Operating Officer, DTE Electric",
+   "background": [
+    "President and COO of DTE Electric; co-signed the 2026 Integrated Resource Plan filed September 24, 2026",
+    "Executive vice president, distribution operations, DTE Electric; president of DTE Gas; roles in electric generation and the non-utility businesses over more than 20 years at DTE",
+    "BS mechanical engineering, Michigan State; MBA, University of Chicago (company bio, March 2026)"
+   ]
+  },
+  {
+   "name": "Renee Tomina",
+   "title": "President and Chief Operating Officer, DTE Gas",
+   "photo": "images/execs/dte-energy-tomina.jpg",
+   "background": [
+    "President and COO of DTE Gas since June 29, 2026, succeeding Robert Richard (company release, June 23, 2026)",
+    "Senior vice president, project management office (grid modernization and renewables build); vice president, DTE Gas operations, construction and pipeline planning; joined DTE in 2010",
+    "BS electrical engineering, Lawrence Technological University; MS systems engineering, Oakland University"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "Detroit News — Wayne County executive vetoes Van Buren Township data-center tax break (headline; paywalled)",
+   "url": "https://www.detroitnews.com/story/news/local/wayne-county/2026/09/25/wayne-county-executive-warren-evans-vetoes-van-buren-twp-data-center-tax-break/91943250007/",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Planet Detroit — Data centers in the Michigan Senate race (Saline under construction; EPIC-MRA poll)",
+   "url": "https://planetdetroit.org/2026/09/data-centers-michigan-senate-rogers-el-sayed/",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "MarketBeat — DTE Energy earnings (Q3 2026 date estimated October 29; consensus $2.31)",
+   "url": "https://www.marketbeat.com/stocks/NYSE/DTE/earnings/",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "TipRanks — DTE Energy earnings (Q3 2026 date October 22; consensus $2.39)",
+   "url": "https://www.tipranks.com/stocks/dte/earnings",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Investing.com — DTE Energy earnings calendar (Q3 2026 October 22; $2.40 / $3.43B)",
+   "url": "https://www.investing.com/equities/dte-energy-earnings",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "DTE Energy — 2026 Integrated Resource Plan press release (U-22168)",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2026/Powering-the-next-generation--DTE-lays-out-plan-to-deliver-a-cleaner,-reliable-energy-future-for-Michigan-customers.html",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "DTE Electric — 2026 Integrated Resource Plan executive summary (Case U-22168)",
+   "url": "https://www.dteenergy.com/content/dam/dteenergy/deg/website/common/about-us/company-information/integrated-resource-plan/IRPExecutiveSummary.pdf",
+   "date": "2026-09"
+  },
+  {
+   "label": "Empowering Michigan (DTE) — Reliable power built on a balanced approach (the two combined cycles)",
+   "url": "https://empoweringmichigan.com/reliable-power-built-on-a-balanced-approach/",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "Michigan Public — DTE's proposed long-term plan has hidden risks due to data centers, Sierra Club says",
+   "url": "https://www.michiganpublic.org/environment-climate-change/2026-09-24/dtes-proposed-long-term-plan-has-hidden-risks-due-to-data-centers-environmental-group-says",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "Planet Detroit — Rural Michigan data-center backlash (moratoriums)",
+   "url": "https://planetdetroit.org/2026/09/rural-michigan-data-centers-backlash/",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "EEI — List of Large Customer Projects and Tariffs (updated September 11, 2026)",
+   "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+   "date": "2026-09-11"
+  },
+  {
+   "label": "MPSC — Commission approves DTE Gas infrastructure investments (U-21973)",
+   "url": "https://www.michigan.gov/mpsc/commission/news-releases/2026/09/10/mpsc-approves-dte-gas-co-infrastructure-investments",
+   "date": "2026-09-10"
+  },
+  {
+   "label": "Planet Detroit — MPSC could decide DTE's Google data-center contracts this week",
+   "url": "https://planetdetroit.org/2026/09/google-dte-van-buren-data-center-contracts/",
+   "date": "2026-09-09"
+  },
+  {
+   "label": "DTE Energy — Trevor Lauer corporate biography",
+   "url": "https://www.dteenergy.com/content/dam/dteenergy/deg/website/common/about-us/company-information/executive-committee/TrevorLauerCorporateBiography.pdf",
+   "date": "2026-09"
+  },
+  {
+   "label": "StockTitan — DTE Energy 8-K: director David A. Thomas retires",
+   "url": "https://www.stocktitan.net/sec-filings/DTB/8-k-dte-energy-co-reports-material-event-ca46401c79e0.html",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "ClickOnDetroit — DTE responds to MPSC investigation of the July 3 storm",
+   "url": "https://www.clickondetroit.com/news/local/2026/08/29/storm-investigation-dte-responds-to-mpsc-investigation-into-july-3-storm-response/",
+   "date": "2026-08-29"
+  },
+  {
+   "label": "Planet Detroit — DTE to seek two natural gas plants in its IRP",
+   "url": "https://planetdetroit.org/2026/08/dte-natural-gas-plants-michigan/",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "MPSC e-docket — DTE Electric 2026 IRP filing announcement (U-22168; certificates of necessity for ~700 MW and ~1,400 MW combined cycles)",
+   "url": "https://mi-psc.my.site.com/sfc/servlet.shepherd/version/download/068cs00002P1tvuAAB",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Michigan Attorney General — Nessel briefs appeal over MPSC approval of DTE Saline data-center contracts",
+   "url": "https://www.michigan.gov/ag/news/press-releases/2026/08/07/ag-nessel-briefs-appeal-over-mpsc-approval-of-dte-saline-data-center-contracts",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Michigan Attorney General — Court of Appeals brief, U-21990 (Nos. 380362, 380364, 380878)",
+   "url": "https://www.michigan.gov/ag/-/media/Project/Websites/AG/releases/2026/August/U-21990_AG_Appeal-Brief_380362_380364_380878.pdf",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "Earthjustice — Groups ask court to overturn rushed approval of DTE's Oracle data-center contracts",
+   "url": "https://earthjustice.org/press/2026/groups-ask-court-to-overturn-rushed-approval-of-dtes-oracle-data-center-contracts",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Utility Dive — DTE touts rate stability as data-center projects advance; 5–6 GW pipeline",
+   "url": "https://www.utilitydive.com/news/dte-rate-stability-data-center-projects-large-load-pipeline/826803/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "StockTitan — DTE Gas 8-K: first-half 2026 results; $1.6B DOE Energy Dominance Financing loan",
+   "url": "https://www.stocktitan.net/sec-filings/DTB/8-k-dte-energy-co-reports-material-event-366d4eca6c0a.html",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "DTE Energy — Q2 2026 earnings release",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2026/q2/1-Q2-2026-Earnings-Release-final-v3.pdf",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "DTE Energy — Q2 2026 earnings conference call presentation",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2026/q2/Q2-26-presentation-FINAL.pdf",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "DTE Energy — Q2 2026 earnings call transcript (FactSet)",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2026/q2/DTE-Q2-26-transcript.pdf",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "DTE Energy — Q2 2026 accomplishments, investments and earnings (newsroom)",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-reports-second-quarter-2026-accomplishments,-investments-and-earnings.html",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Investing.com — DTE Q2 2026 slides: data-center deals fuel growth despite earnings miss (consensus $1.47)",
+   "url": "https://www.investing.com/news/company-news/dte-q2-2026-slides-data-center-deals-fuel-growth-despite-earnings-miss-93CH-4817232",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Zacks (via TradingView) — DTE Energy Q2 earnings beat estimates ($1.14)",
+   "url": "https://www.tradingview.com/news/zacks:c1e9b17d7094b:0-dte-energy-s-q2-earnings-beat-estimates-decrease-year-over-year/",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "Quartr — DTE Energy Q2 2026 (revenue $2,044M)",
+   "url": "https://quartr.com/events/dte-energy-company-dte-q2-2026_ojGB3OF4",
+   "date": "2026-07"
+  },
+  {
+   "label": "DTE Energy — Seeking developers for new renewable energy projects (800 MW RFP)",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-seeking-developers-for-new-renewable-energy-projects1.html",
+   "date": "2026-07-28"
+  },
+  {
+   "label": "MPSC — Order in Case U-22060 (KCE MI 2 and Redstart tolling agreements)",
+   "url": "https://adms.apps.lara.state.mi.us/Mpsc/ViewCommissionOrderDocument/27497",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Wisconsin Watch — Oracle's credit-rating drop and the rules fight over data centers",
+   "url": "https://wisconsinwatch.org/2026/07/wisconsin-oracle-data-center-credit-rating-drop-rules-fight-tech-energy-ai-utility/",
+   "date": "2026-07"
+  },
+  {
+   "label": "Planet Detroit — DTE outages and reliability in 2026",
+   "url": "https://planetdetroit.org/2026/07/dte-power-outages-reliability-2026/",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "DTE Energy — Renee Tomina named president and COO of DTE Gas",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-names-Renee-Tomina-president-and-chief-operating-officer-of-DTE-Gas.html",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "Michigan Attorney General — Nessel files testimony to protect ratepayers in Google data-center proposal (U-22058)",
+   "url": "https://www.michigan.gov/ag/news/press-releases/2026/06/11/ag-nessel-files-testimony-to-protect-ratepayers-in-google-data-center-proposal",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "Utility Dive — DTE Energy to buy 6 GWh of LG batteries",
+   "url": "https://www.utilitydive.com/news/dte-energy-lg-battery-storage/821856/",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "DTE Energy — Invests in Michigan-made battery storage systems ($1.6B, LG Energy Solution Vertech)",
+   "url": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-invests-in-Michigan-made-battery-storage-systems-advancing-clean-energy-goals-and-spurring-billions-in-economic-growth-across-the-state/default.aspx",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "LG Energy Solution Vertech — Agreement with DTE Energy for 6 GWh of battery energy storage systems (PR Newswire)",
+   "url": "https://www.prnewswire.com/news-releases/lg-energy-solution-vertech-announces-agreement-with-dte-energy-for-6gwh-of-battery-energy-storage-systems-302783737.html",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "DTE Energy — David Ruud corporate biography",
+   "url": "https://www.dteenergy.com/content/dam/dteenergy/deg/website/common/about-us/company-information/executive-committee/DavidRuudCorporateBiography.pdf",
+   "date": "2026-05"
+  },
+  {
+   "label": "Planet Detroit — Van Buren planning commission approves Google data-center substation",
+   "url": "https://planetdetroit.org/2026/05/google-data-center-substation/",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "Fortune — The AI data center dividing a Michigan farm town (Saline)",
+   "url": "https://fortune.com/2026/05/06/ai-data-center-michigan-saline-politics-farmland/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Utility Dive — DTE Q1 2026: data-center pipeline and reliability",
+   "url": "https://www.utilitydive.com/news/dte-energy-data-center-earnings-reliability/819052/",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "MPSC — Additional steps to improve utility reliability and grid resilience (U-22054 storage; U-21566 Trenton Channel supplier)",
+   "url": "https://www.michigan.gov/mpsc/commission/news-releases/2026/04/30/mpsc-takes-additional-steps-to-improve-utility-reliability-and-grid-resilience",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "DTE Energy — Q1 2026 accomplishments, investments and financial results",
+   "url": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-reports-first-quarter-2026-accomplishments-investments-and-financial-results/default.aspx",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "DTE Energy — Q1 2026 earnings conference call presentation",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2026/q1/Q1-26-presentation-FINAL.pdf",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "DTE Energy — Q1 2026 earnings call transcript (FactSet)",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2026/q1/DTE-Q1-26-transcript.pdf",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Zacks (via Yahoo Finance) — DTE Energy's Q1 earnings miss estimates ($1.98)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dte-energys-q1-earnings-miss-174300866.html",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Bridge Detroit — DTE ties possible rate-hike freeze to data-center approvals; Nessel: 'ransom note'",
+   "url": "https://www.bridgedetroit.com/dte-ties-possible-rate-hike-freeze-to-data-center-approvals-nessel-says-its-ransom-note/",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Planet Detroit — DTE's $474M rate request and the data-center stay-out",
+   "url": "https://planetdetroit.org/2026/04/dte-rate-hike-data-centers/",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Enel North America — MISO 2026/2027 planning resource auction results",
+   "url": "https://www.enelnorthamerica.com/insights/blogs/miso-2026-2027-capacity-auction-results",
+   "date": "2026-04"
+  },
+  {
+   "label": "Energy-Storage.news — DTE's plan to pause Michigan rate increases hinges on Oracle data centre (Trenton Channel supplier change)",
+   "url": "https://www.energy-storage.news/utility-dte-energys-plan-to-pause-michigan-rate-increases-hinges-on-oracle-data-centre/",
+   "date": "2026-04-28"
+  },
+  {
+   "label": "DTE Energy — Intends to pause future electric rate requests following upcoming filing as data centers come online",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-intends-to-pause-future-electric-rate-requests-following-upcoming-filing-as-data-centers-come-online.html",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "MPSC e-docket — DTE Electric rate case summary, U-22046",
+   "url": "https://mi-psc.my.site.com/sfc/servlet.shepherd/version/download/068cs00001x2BbEAAU",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "DTE Energy — Seeking developers for new energy storage projects (480 MW RFP)",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2026/DTE-Energy-seeking-developers-for-new-energy-storage-projects.html",
+   "date": "2026-04-22"
+  },
+  {
+   "label": "Michigan Attorney General — Nessel files appeal of MPSC approval of DTE's Saline data-center contracts",
+   "url": "https://www.michigan.gov/ag/news/press-releases/2026/04/17/ag-nessel-files-appeal-of-mpsc-approval-of-dtes-saline-data-center-contracts",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "DTE Energy — Joi Harris corporate biography",
+   "url": "https://www.dteenergy.com/content/dam/dteenergy/deg/website/common/about-us/company-information/executive-committee/JoiHarrisCorporateBiography.pdf",
+   "date": "2026-04"
+  },
+  {
+   "label": "ESS News — Michigan approves 1.3 GW BESS portfolio including contested Oracle data-center assets",
+   "url": "https://www.ess-news.com/2026/04/01/michigan-approves-1-3-gw-bess-portfolio-including-contested-oracle-data-center-assets/",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "Energy-Storage.news — Michigan approves 1,332 MW of BESS with 332 MW supporting Oracle data centre",
+   "url": "https://www.energy-storage.news/michigan-approves-1332mw-of-bess-with-332mw-supporting-oracle-data-centre/",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "MPSC — MPSC goes big on batteries: six energy storage contracts totaling 1,332 MW; AG rehearing denied",
+   "url": "https://www.michigan.gov/mpsc/commission/news-releases/2026/03/27/mpsc-goes-big-on-batteries",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "Michigan Attorney General — AG efforts to review DTE data-center contracts rejected again at MPSC",
+   "url": "https://www.michigan.gov/ag/news/press-releases/2026/03/27/ag-efforts-to-review-dte-data-center-contracts-rejected-again-at-mpsc",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "DTE Energy — Matthew Paul corporate biography",
+   "url": "https://www.dteenergy.com/content/dam/dteenergy/deg/website/common/about-us/company-information/executive-committee/MatthewPaulCorporateBiography.pdf",
+   "date": "2026-03"
+  },
+  {
+   "label": "Energy-Storage.news — US roundup: Google/DTE Clean Capacity Accelerator Agreement detail (450 MW / 1,600 MWh BESS, 50 MW LDES, ~300 MW ZRCs)",
+   "url": "https://www.energy-storage.news/us-roundup-solar-plus-storage-projects-advance-across-the-country/",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Michigan Public — Google revealed as the company behind 'Project Cannoli'",
+   "url": "https://www.michiganpublic.org/transportation-infrastructure/2026-03-18/google-revealed-as-company-behind-hyperscale-data-center-project-cannoli",
+   "date": "2026-03-18"
+  },
+  {
+   "label": "MPSC e-docket — DTE Electric application for approval of special contracts with Google LLC (U-22058)",
+   "url": "https://mi-psc.my.site.com/sfc/servlet.shepherd/version/download/068cs00001pVhXUAA0",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Michigan Advance — Google and DTE announce Van Buren Township data-center agreement, commit to contested-case hearing",
+   "url": "https://michiganadvance.com/2026/03/17/google-and-dte-announce-van-buren-township-data-center-agreement-commit-to-contested-case-hearing/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Planet Detroit — Google, DTE and the Van Buren data center",
+   "url": "https://planetdetroit.org/2026/03/google-dte-data-center-van-buren/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Planet Detroit — Judge denies resident's intervention in the Saline consent judgment",
+   "url": "https://planetdetroit.org/2026/02/judge-denies-data-center-intervention/",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "MPSC — Commission approves additional $242M for DTE Electric grid upgrades (U-21860)",
+   "url": "https://www.michigan.gov/mpsc/commission/news-releases/2026/02/19/commission-approves-additional-242m-for-dte-electric-grid-upgrades",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "DTE Energy — 2025 accomplishments, earnings and investments (FY2025 results)",
+   "url": "https://ir.dteenergy.com/news/press-release-details/2026/DTE-Energy-reports-2025-accomplishments-earnings-and-investments/default.aspx",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "DTE Energy — Q4 2025 earnings conference call presentation",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2025/q4/Q4-25-presentation-FINAL.pdf",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "DTE Energy — Q4 2025 earnings call transcript (FactSet)",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2025/q4/DTE-Q4-25-transcript.pdf",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "Utility Dive — DTE raises spending plan to $36.5B on data-center demand",
+   "url": "https://www.utilitydive.com/news/dte-spending-plan-data-center-earnings/812305/",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "Yahoo News / Detroit Free Press — Nessel files to reopen DTE data-center case",
+   "url": "https://www.yahoo.com/news/articles/nessel-files-reopen-dte-data-002630372.html",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Michigan Attorney General — Attorney General petitions MPSC for rehearing on DTE data-center special contracts",
+   "url": "https://www.michigan.gov/ag/news/press-releases/2026/01/09/attorney-general-petitions-mpsc-for-rehearing-on-dte-data-center-special-contracts",
+   "date": "2026-01-09"
+  },
+  {
+   "label": "Latitude Media — What the Michigan Stargate site says about today's AI market",
+   "url": "https://www.latitudemedia.com/news/what-the-michigan-stargate-site-says-about-todays-ai-market/",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "Planet Detroit — DTE data-center contracts approved",
+   "url": "https://planetdetroit.org/2025/12/dte-data-center-contracts-approved/",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "Citizens Utility Board of Michigan — MPSC grants expedited approval for DTE contracts with hyperscale data center",
+   "url": "https://cubofmichigan.org/blog/mpsc-grants-expedited-approval-for-dte-contracts-with-hyperscale-data-center/",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "MPSC — MPSC approves DTE Electric energy contracts for data center (U-21990)",
+   "url": "https://www.michigan.gov/mpsc/commission/news-releases/2025/12/18/mpsc-approves-dte-electric-energy-contracts-for-data-center",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "MPSC — Issue brief, Case U-21990 (DTE Electric special contracts)",
+   "url": "https://www.michigan.gov/mpsc/-/media/Project/Websites/mpsc/consumer/info/briefs/Issue_Brief_U_21990_DTE_12_18_25-(002).pdf",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "ClickOnDetroit — Michigan regulators approve DTE contract for massive Saline Township data center",
+   "url": "https://www.clickondetroit.com/news/local/2025/12/18/michigan-regulators-approve-dte-contract-for-massive-saline-township-data-center/",
+   "date": "2025-12-18"
+  },
+  {
+   "label": "DTE Energy — 2025 EEI Financial Conference presentation",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_presentations/2025/11/2025-EEI-presentation-FINAL.pdf",
+   "date": "2025-11-09"
+  },
+  {
+   "label": "DTE Energy — Q3 2025 earnings release (first 1.4 GW data-center agreement; 2026 early outlook)",
+   "url": "https://s24.q4cdn.com/970999156/files/doc_financials/2025/q3/2-Q3-Earnings-News-Release-final-v3.pdf",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Related Companies — OpenAI, Oracle and Related Digital announce Stargate data-center site in Michigan",
+   "url": "https://www.related.com/press-releases/2025-10-30/openai-oracle-and-related-digital-announce-stargate-data-center-site",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Utility Dive — DTE's 1.4 GW data-center deal is 'transformational'",
+   "url": "https://www.utilitydive.com/news/dte-data-center-deal-transformational-growth-earnings/804231/",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Power Engineering — DTE Energy looking at 7 GW data-center pipeline",
+   "url": "https://www.power-eng.com/energy-storage/dte-energy-looking-at-7-gw-data-center-pipeline/",
+   "date": "2025-07-29"
+  },
+  {
+   "label": "DTE Energy — Board elects Joi Harris as CEO; Jerry Norcia elected executive board chairman",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2025/DTE-Energy-Board-of-Directors-elects-Joi-Harris-as-CEO--Jerry-Norcia-elected-Executive-Board-Chairman.html",
+   "date": "2025-06-23"
+  },
+  {
+   "label": "Utility Dive — Michigan regulators order reliability improvements from Consumers and DTE",
+   "url": "https://www.utilitydive.com/news/michigan-regulators-order-reliability-improvements-consumers-dte/750769/",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "ANS Nuclear Newswire — DTE Energy studying uprate at Fermi 2",
+   "url": "https://www.ans.org/news/2025-04-28/article-6986/dte-energy-studying-uprate-at-fermi2-considers-fermi3s-prospects/",
+   "date": "2025-04-28"
+  },
+  {
+   "label": "DTE Energy — Seeking developers for new energy storage projects (~450 MW RFP)",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2025/DTE-Energy-seeking-developers-for-new-energy-storage-projects.html",
+   "date": "2025-03-13"
+  },
+  {
+   "label": "DTE Energy — FY2024 Form 10-K (annualreports.com mirror)",
+   "url": "https://www.annualreports.com/HostedData/AnnualReportArchive/d/NYSE_DTE_2024.pdf",
+   "date": "2025-02"
+  },
+  {
+   "label": "Power Engineering — Powin selected as battery supplier for DTE's Trenton Channel Energy Center",
+   "url": "https://www.power-eng.com/energy-storage/batteries/powin-selected-as-battery-supplier-for-dtes-trenton-channel-energy-center-in-michigan/",
+   "date": "2024-07-09"
+  },
+  {
+   "label": "DTE Energy — To build the region's largest battery energy storage center at the retired Trenton Channel coal plant",
+   "url": "https://www.dteenergy.com/us/en/newsroom/2024/DTE-Energy-to-build-region-s-largest-battery-energy-storage-center-at-site-of-retired-Trenton-Channel-coal-plant.html",
+   "date": "2024-06-10"
+  },
+  {
+   "label": "Utility Dive — DTE Electric coal retirements and renewable/storage settlement approved (2022 IRP, U-21193)",
+   "url": "https://www.utilitydive.com/news/dte-electric-coal-plant-retirements-renewable-storage-agreement-psc-irp/686917/",
+   "date": "2023-07-13"
+  },
+  {
+   "label": "DTE Energy — 2022 Integrated Resource Plan one-pager (CleanVision)",
+   "url": "https://www.dteenergy.com/content/dam/dteenergy/deg/website/common/about-us/company-information/integrated-resource-plan/IRP_One_pager_2023.pdf",
+   "date": "2023"
+  },
+  {
+   "label": "DTE Energy — Data center facts",
+   "url": "https://www.dteenergy.com/us/en/quicklinks/data-center-facts.html"
+  },
+  {
+   "label": "DTE Energy — Data center information and resources",
+   "url": "https://www.dteenergy.com/us/en/quicklinks/data-center-facts/information-and-resources.html"
+  },
+  {
+   "label": "DTE Energy — Executive committee",
+   "url": "https://www.dteenergy.com/us/en/business/about-dte/about-dte/executive-committee.html"
+  },
+  {
+   "label": "DTE Energy — Integrated resource plan page",
+   "url": "https://www.dteenergy.com/us/en/common/about-us/company-information/integrated-resource-plan.html"
+  },
+  {
+   "label": "DTE Energy — Economic development (High Load Factor Rate; data-center contact)",
+   "url": "https://www.dteenergy.com/us/en/business/service-request/community-development/economic-development.html"
+  },
+  {
+   "label": "DTE Energy — Powering Michigan",
+   "url": "https://www.dteenergy.com/us/en/residential/about-dte/the-future/powering-michigan.html"
+  },
+  {
+   "label": "DTE Energy — Investor relations events (no Q3 2026 date posted)",
+   "url": "https://ir.dteenergy.com/events-and-presentations/default.aspx"
+  },
+  {
+   "label": "ITC Holdings — Project Cannoli (345 kV switching station and feeds)",
+   "url": "https://www.itc-holdings.com/projects/project-cannoli/"
+  },
+  {
+   "label": "Related Digital — Michigan campus",
+   "url": "https://www.related-digital.com/michigan"
+  },
+  {
+   "label": "Panattoni — Van Buren",
+   "url": "https://www.panattoni.com/vanburen/"
+  },
+  {
+   "label": "MPSC — 2023 energy legislation workgroups (PA 235 storage target)",
+   "url": "https://www.michigan.gov/mpsc/commission/workgroups/2023-energy-legislation"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

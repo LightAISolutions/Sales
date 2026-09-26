@@ -1,0 +1,1266 @@
+{
+ "schemaVersion": 7,
+ "slug": "wec-energy",
+ "name": "WEC Energy Group, Inc.",
+ "shortName": "WEC Energy Group",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.wecenergygroup.com",
+ "headquarters": "Milwaukee, WI, USA",
+ "founded": 1896,
+ "employees": "7,150 (2025 Annual Report inside cover); 'approximately 7,000' in every 2026 results release",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: WEC"
+ },
+ "summary": "BOTTOM LINE UP FRONT: WEC Energy Group is the utility that turned two named hyperscale campuses — Microsoft's Mount Pleasant (2.6 GW of demand forecast through 2030, first building operating since April 2026) and the Vantage/OpenAI/Oracle 'Lighthouse' Stargate campus at Port Washington (1.3 GW through 2030, up to 3.5 GW) — into a commission-approved tariff before either drew full load: the Public Service Commission of Wisconsin approved We Energies' Very Large Customer and Bespoke Resources tariffs on April 24, 2026 (written order May 21, Docket 6630-TE-113) at a 100 MW threshold, a 15-year minimum term, 100 percent cost responsibility for dedicated generation and transmission, a fixed 10.48–10.98 percent return on 57 percent equity, and security equal to net book value for any customer rated below A-/A3 — the rule that put Oracle (BBB- since July 9, 2026) into court and then into compliance — while the $37.5B 2026–2030 plan builds 3,300 MW of combustion turbines, 2,130 MW of utility-owned batteries ($2.9B), 3,850 MW of solar and a 60 percent share of American Transmission Company's $4.1B of data-center and regional lines. BACKGROUND. Milwaukee; NYSE: WEC. A Wisconsin holding company for We Energies (Wisconsin Electric Power Company and Wisconsin Gas), Wisconsin Public Service, Peoples Gas and North Shore Gas (Chicago), Michigan Gas Utilities, Minnesota Energy Resources and Upper Michigan Energy Resources — about 1.7 million electric and 3.0 million gas customers, 8,375 MW of generating capacity and 7,150 employees (2025 Annual Report) — plus We Power (leased plants), WEC Infrastructure (2,654 MW of non-utility renewables under contract to Microsoft, Google, Meta, Tesla and others) and 60 percent of ATC. FY2025 adjusted EPS was $5.27 on revenue of $9,800M; 2026 guidance of $5.51–$5.61 was reaffirmed on July 29, 2026 with 7–8 percent long-term growth; the company expects electric demand in its territory to rise about 45 percent over 2026–2030, and the September 2026 investor book puts VLC and bespoke assets at 15 percent of the 2030 asset base. Wisconsin has no integrated resource plan regime — every plant is a separate certificate docket — and no large-load statute (four 2026 bills died), so the tariff and the PSCW's Evers-appointed commissioners are the whole framework. Collection gap: the FY2025 Form 10-K cover and Item 1 were not readable (SEC hosts blocked; the Annual Report PDF carries the financial statements but not the human-capital line), so the employee figure is the annual report's; the PSCW's May 21, 2026 order text, the VLC tariff sheets, the Microsoft agreement's megawatts, the minimum-bill percentage and ramp terms were not retrievable from the commission's ERF system; no battery or turbine OEM is named in any source; and peak demand was not found.",
+ "ecosystemRole": "We assess WEC as the corpus's cleanest example of the 'bespoke resource' model — the data-center customer subscribes to specific new generation and pays its full cost for 15 years at a fixed return, and the utility builds and owns it — which makes We Energies a direct, rate-based buyer of the batteries and turbines the data centers require rather than a PPA counterparty. Basis: the PSCW's April 24, 2026 press release and WEC's September 2026 investor book (VLC and bespoke assets 15 percent of the 2030 asset base; 2,130 MW of batteries and 3,300 MW of combustion turbines in the plan). For the storage sellers in this file the doors are the build-transfer purchases from Invenergy (Paris, Darien, Koshkonong, Dawn Harvest) and the not-yet-filed ~1,500 MW balance of the battery plan, with the supplier undisclosed on every project; for the gas vendors it is the 1,100 MW Oak Creek combustion turbines (approved May 2025, in service late 2027), the 128 MW Paris reciprocating engines, and the 270 MW Foundry Ridge and 1,125 MW Red Oak Ridge turbines pending decision in the fourth quarter of 2026, again with no OEM named. For the hyperscalers and developers in the corpus WEC is Microsoft's and Vantage's utility and, through ATC, the transmission owner whose Mount Pleasant cost-allocation agreements Microsoft is protesting at FERC (ER26-3265) — the first case in this file where a hyperscaler is both a utility's tariff customer and its federal-docket adversary.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — We Energies and Wisconsin Public Service, and the Very Large Customer and Bespoke Resources tariffs",
+   "category": "Regulated utility service",
+   "description": "Wisconsin Electric Power Company (We Energies, southeastern and eastern Wisconsin), Wisconsin Public Service (northeastern Wisconsin) and Upper Michigan Energy Resources serve about 1.7 million electric customers from 8,375 MW of generating capacity (2025 Annual Report); the Wisconsin segment's 2025 retail deliveries were 33 percent large commercial and industrial, of which data centers were 1 percent — the data-center load is almost entirely prospective. Rates are set by the PSCW in biennial cases: the 2027–2028 cases (5-UR-112 for Wisconsin Electric and Wisconsin Gas; 6690-UR-129 for WPS) were filed April 1, 2026 asking 4.7 percent and 4.5 percent for We Energies electric at a 9.9 percent return on equity, with orders expected in the fourth quarter of 2026; the filing says data centers will pay about $1.9B of 2027–2028 costs under the 'Customer Protection Plan'. The Very Large Customer tariff and its companion Bespoke Resources tariff (Docket 6630-TE-113, filed March 31, 2025; verbal approval April 24, 2026; written order May 21) apply to customers with 100 MW or more of forecast new load (the PSCW lowered the proposed 500 MW threshold): the customer subscribes to a portion of one or more dedicated new generation resources for a minimum initial term of 15 years (raised from 10), 20 years for wind and solar and the depreciable life for gas and battery assets, at a return on equity fixed for the term at 10.48–10.98 percent on a 57 percent equity ratio, excluded from future rate cases and the earnings-sharing mechanism; the commission removed the proposed 'capacity-only' option under which a customer would pay 75 percent of generation cost, leaving only the full-benefits model at 100 percent; early termination requires payment of the remaining net book value to the extent assets cannot be repurposed; and a customer rated below A- (S&P) or A3 (Moody's), or failing a tangible-net-worth and liquidity test, must post security equal to the net book value of the investments made to serve it, with the utility's waiver ability removed. Before approval, We Energies used payment-and-cancellation agreements obliging the customer to reimburse all project costs, including ATC's, if it terminated, reduced its load or approval was not received.",
+   "highlights": [
+    "VLC tariff (6630-TE-113): ≥100 MW; 15-year minimum term; 100 percent of dedicated generation and transmission cost; ROE 10.48–10.98 percent and 57 percent equity fixed for the term; security at net book value below A-/A3",
+    "Microsoft signed its 15-year VLC service agreement on July 16, 2026 (subscribing at least to Red Oak Ridge; megawatts undisclosed); Vantage/Oracle move from payment-and-cancellation agreements to VLC service agreements on June 1, 2027",
+    "Oracle sued the PSCW over the collateral rule on June 24, 2026 (Ozaukee County 2026CV256) and dropped the suit on August 17; WEC's September book says Oracle 'has met the financial security requirements'; the PSCW declined the We Energies/Vantage/Cloverleaf rehearing petition in early July",
+    "The utility's own estimate: without the tariff, serving the data centers would cost other customers about $1.5B (BizTimes, February 2026); VLC customers contributed +$0.03 of EPS in Q2 2026, the first quantified margin",
+    "2027–2028 rate cases (5-UR-112, 6690-UR-129) filed April 1, 2026; orders expected Q4 2026"
+   ],
+   "positioning": "The only large-load tariff in this corpus built as a resource subscription rather than a minimum-demand charge: Dominion's GS-5 and AEP Ohio's tariff protect other customers with 85 percent minimums on system service, while We Energies' VLC makes the customer pay for named plants at a return fixed above the utility's base ROE. The A-/A3 security test is the strictest credit rule in the file and the one Oracle's downgrade tested.",
+   "soldThrough": "Commission-approved tariffs; VLC service agreements negotiated per customer and subscribed to specific Bespoke Resources dockets; payment-and-cancellation agreements bridge the period before approval",
+   "targetSegments": [
+    "Residential, commercial and industrial customers in Wisconsin and the Upper Peninsula",
+    "Data-center campuses of 100 MW or more (Microsoft, Vantage/Oracle) and 400–500 MW prospects in discussion"
+   ],
+   "roadmap": "PSCW rate orders Q4 2026; Vantage/Oracle VLC service agreements effective June 1, 2027; FERC decision on the ATC/We Energies Mount Pleasant agreements (ER26-3265); the PSCW's adjustment mechanism and reporting requirements added in the order"
+  },
+  {
+   "name": "Data-center demand — Microsoft Mount Pleasant and the Vantage/OpenAI/Oracle Port Washington campus",
+   "category": "Regulated utility service",
+   "description": "WEC publishes no signed-versus-inquiry ladder; it reports 'forecasted demand through 2030' by campus. Per the September 4, 2026 investor book: Microsoft's Mount Pleasant campus in Racine County ('Fairwater') — a $20B-plus program ($7.3B for phases 1–2 and $13B more; the village approved up to 15 additional data centers on two new campuses in January 2026) — is forecast at 2.6 GW through 2030, raised from 2.1 GW in February 2026 when $1.0B was added to the capital plan and the first building began operating in April 2026 ahead of schedule; the Vantage Data Centers 'Lighthouse' campus at Port Washington, Ozaukee County, announced October 22, 2025 as a Stargate site for OpenAI and Oracle ($15B-plus, four buildings on 672 of about 1,900 acres, close to a gigawatt of AI capacity, first building possibly late 2027, completion 2028) is forecast at 1.3 GW through 2030 with site potential up to 3.5 GW, and Vantage 'is underwriting 100% of the power infrastructure investment with a dedicated electricity rate' plus at least $175M of regional infrastructure. Together they are 3.9 GW, about 45 percent of the company's electric demand over 2026–2030, and the September book projects Wisconsin electric sales growth of 6–8 percent a year over 2028–2030. On the July 29, 2026 call the CEO described three or four further prospects of 400–500 MW each with a possible announcement by year-end, and in May said existing approved sites could add 4–5 GW beyond the five-year plan. EEI's September 11, 2026 list carries both campuses ('Power up to 2,600 MW supporting the data center and additional load in SE Wisconsin'; '$15 billion, 1,300 MW … Stargate'). Meta's Beaver Dam campus, sometimes grouped with them, is Alliant Energy's load.",
+   "highlights": [
+    "Microsoft Mount Pleasant: 2.6 GW through 2030; phase 1 operating April 2026; construction of the first building finished June 2026; 2,200-plus acres; ATC upgrades of more than $500M",
+    "Vantage/OpenAI/Oracle Port Washington: 1.3 GW through 2030, up to 3.5 GW; $15B-plus; ATC's transmission project refiled September 18, 2026 at $2.48–2.72B including about $1.1B of Oracle-funded stabilization at the Decker substation; the local TID lawsuit dismissed September 22, 2026",
+    "Total 3.9 GW = ~45 percent demand growth 2026–2030; VLC/bespoke assets 15 percent of the 2030 asset base",
+    "Prospects: 3–4 customers of 400–500 MW each in discussion; 4–5 GW of further potential at approved sites (CEO, May and July 2026)"
+   ],
+   "positioning": "Smaller than Dominion's, Duke's or AEP's books in gigawatts but the most fully contracted in structure — both campuses sit under a dedicated tariff and the larger one has a signed 15-year agreement — and the most concentrated: two customers are the whole story, as at DTE.",
+   "soldThrough": "VLC service agreements and payment-and-cancellation agreements; ATC large-load project commitment agreements for the transmission",
+   "targetSegments": [
+    "Hyperscalers building owned campuses in southeastern Wisconsin",
+    "Colocation developers with an anchor tenant (Vantage for Oracle/OpenAI)"
+   ],
+   "roadmap": "A possible third announcement by year-end 2026; Port Washington's first building late 2027; Mount Pleasant's second building 2028; the ATC line decision expected by year-end 2026 per WEC"
+  },
+  {
+   "name": "Utility-owned battery storage — 2,130 MW ($2.9B) in the 2026–2030 plan, bought build-transfer from developers",
+   "category": "Energy storage",
+   "description": "The September 2026 investor book carries 2,130 MW of battery storage ($2.9B) inside $12.6B of regulated renewables for 2026–2030; the 10-K's three-year battery capex is $258M (2026), $413M (2027) and $254M (2028). Named projects (WEC share of capacity; all through We Energies and WPS at 90 percent with MGE at 10 percent unless stated): Paris Battery Park, Kenosha County — 110 MW total, 99 MW WEC share, four hours, Wisconsin's first large-scale battery, in service June 3, 2025 ($236.8M in the plant table); Darien, Walworth County — 68 MW of 75 MW (5-BS-255, approved; ground broken late July 2026; 2027); Koshkonong, Dane County — 149 MW of 165 MW (5-BS-258; under construction; 2027); High Noon, Columbia County — 149 MW (5-BS-276, approved April 11, 2025; 2027); Saratoga, Wood County — 45 MW of 50 MW (5-BS-280, approved November 25, 2025; 2028); Dawn Harvest, Rock County — 50 MW, Wisconsin Electric 100 percent (5-BS-281, approved March 12, 2026 with 150 MW of solar for about $443M; ground broken August 2026; 2028); and Dawn Break, Waushara County — 162 MW of 180 MW (5-BS-289, decision expected Q4 2026; 2029). The named projects sum to about 720 MW, so roughly two-thirds of the 2,130 MW plan is not yet filed. Every named battery is bought build-transfer from a developer — Invenergy for Paris, Darien, Koshkonong and Dawn Harvest, OneEnergy Renewables for the Good Oak and Gristmill solar — and no battery supplier, integrator or megawatt-hour rating beyond 'four hours' is disclosed in any document read. We Energies' own August 2026 tally is '600 MW of battery storage in service, under construction or filed'. Pilots: a CMBlu organic-flow battery with EPRI and a 20 MW Energy Dome CO2 battery at Columbia with Alliant and MGE.",
+   "highlights": [
+    "2,130 MW / $2.9B of batteries in the 2026–2030 plan; ~720 MW named with dockets; Paris (99 MW) in service June 2025",
+    "Approved 2025–2026: High Noon 149 MW, Saratoga 45 MW, Dawn Harvest 50 MW; Darien and Koshkonong under construction for 2027; Dawn Break 162 MW pending Q4 2026",
+    "Developer channel: Invenergy build-transfer (Paris, Darien, Koshkonong, Dawn Harvest, Badger Hollow wind); OneEnergy (Good Oak, Gristmill solar)",
+    "No BESS OEM disclosed; solar panels flagged in the 10-K for AD/CVD and UFLPA effects already reflected in dates and costs"
+   ],
+   "positioning": "WEC buys batteries the way Duke and Southern do — into rate base at a regulated return — but through developers' build-transfer sales rather than self-build, so the OEM decision sits with Invenergy at bid stage; the 1,410 MW unfiled balance is the largest undisclosed utility battery pipeline in this corpus after Duke's.",
+   "soldThrough": "Build-transfer purchases of developer projects under PSCW 5-BS certificates; the VLC/Bespoke tariff can dedicate a battery to a data-center subscriber",
+   "targetSegments": [
+    "MISO Zone 2 capacity and the coal retirements (Oak Creek 7–8 end-2027; Weston 3 2031)",
+    "Bespoke resources subscribed by VLC customers"
+   ],
+   "roadmap": "Dawn Break decision Q4 2026; Darien, Koshkonong and High Noon in service 2027; the ~1,400 MW balance to be filed over 2027–2029"
+  },
+  {
+   "name": "Dispatchable generation — 3,300 MW of combustion turbines, 180 MW of reciprocating engines, LNG storage and the Point Beach nuclear extension",
+   "category": "Generation",
+   "description": "The thermal and LNG plan is $7.4B for 2026–2030: 3,300 MW of combustion turbines ($5.2B), 180 MW of reciprocating internal combustion engines ($240M), 150 MW of combined-cycle summer upgrades ($280M), coal-to-gas conversions and fuel-oil backup ($370M) and 6 Bcf of LNG storage ($1.3B). Approved on May 22, 2025: the Oak Creek combustion turbines, 1,100 MW (6630-CE-317, ~$1.2B, in service 2027–2028, under construction, with a 2 Bcf Oak Creek LNG facility and the Rochester lateral) and the Paris reciprocating engines, 128 MW in seven units (6630-CE-316, $300M, 2027). Pending with decisions expected in the fourth quarter of 2026: Foundry Ridge, 270 MW (6630-BS-103, $550M, 2028) and Red Oak Ridge, 1,125 MW (6630-BS-104, $1.7B, 2029–2030) — both Invenergy-developed sites that We Energies filed to acquire in November 2025 as part of an 'almost 3 GW', $5.5B package — plus a 100 MW turbine upgrade at the Port Washington Generating Station ($227M, 2028) and gas co-firing at the Elm Road coal units. The 611 MW Oak Creek units 7–8 are kept through end-2027 as a bridge (retirement deferred twice), Weston 3 retires in 2031, coal goes to backup-only by 2030 and out by 2032, and WEC has 'paused our near-term' carbon goals for reliability while keeping 2050 net-neutral. On the nuclear side, WEC agreed in August 2026 to extend the Point Beach purchase agreement with NextEra — about 1 GW, Unit 1 to October 2050 and Unit 2 to March 2053 — 'expected to result in savings for customers compared to the terms of the current PPA' (price escalating from $75.51/MWh in 2026 to $122.45 by 2033 under the existing contract per Wisconsin Watch); PSCW approval is being sought and pricing is not disclosed. No turbine OEM or EPC is named. There is no new gas plant at Port Washington for the data center; the campus is grid-served through the ATC line.",
+   "highlights": [
+    "3,300 MW of CTs ($5.2B) and 180 MW of RICE in the plan; Oak Creek 1,100 MW and Paris 128 MW approved May 2025, in service late 2027; Foundry Ridge 270 MW and Red Oak Ridge 1,125 MW pending Q4 2026",
+    "Point Beach PPA with NextEra extended to 2050/2053 (~1 GW), PSCW approval pending",
+    "Oak Creek 7–8 (611 MW) coal kept to end-2027 as the bridge; coal exit by 2032",
+    "$1.3B of LNG storage (6 Bcf) for winter gas supply; turbine OEM undisclosed"
+   ],
+   "positioning": "The gas book is peaker-heavy — combustion turbines and engines rather than combined cycle — which suits a load that is contracted to arrive over 2027–2030 and a market (MISO North) whose capacity price fell 42 percent in the 2026/27 auction; Duke and DTE, by contrast, are certifying baseload combined cycles.",
+   "soldThrough": "Self-build under PSCW certificates (CE and BS dockets) and purchases of developer-built plants; Point Beach bought under a PPA",
+   "targetSegments": [
+    "MISO reliability and the data-center ramp",
+    "Bespoke Resources subscriptions — Microsoft subscribes at least to Red Oak Ridge"
+   ],
+   "roadmap": "Foundry Ridge and Red Oak Ridge decisions Q4 2026; Oak Creek CTs and Paris RICE on line late 2027; Point Beach extension order; Columbia 1–2 gas conversion decision"
+  },
+  {
+   "name": "Solar and wind — 3,850 MW of solar and 555 MW of wind in the plan, and WEC Infrastructure's contracted fleet",
+   "category": "Generation",
+   "description": "Regulated solar of 3,850 MW ($7.9B) and wind of 555 MW ($1.8B) sit in the 2026–2030 plan. In service: Paris Solar 180 MW (2024), Darien Solar 225 MW (March 2025), Badger Hollow and Two Creeks. Approved: Koshkonong 270 MW (2026), High Noon 270 MW (2027), Ursa 180 MW (2027), Saratoga 135 MW and Dawn Harvest 135 MW (2028), Good Oak 88 MW and Gristmill 60 MW (5-CE-159, March 19, 2026; 2028), Badger Hollow Wind 100 MW (5-BS-282; ground broken July 2026; 2027) and the Whitetail Wind acquisition (60 MW, ~$178M, closing late 2027). Pending for the fourth quarter of 2026: Sinissippi 100 MW, Whitewater 180 MW, Emerald Bluffs 203 MW, Dawn Break solar 162 MW, Fox 90 MW, Akron 180 MW and Superior 135 MW. Separately, WEC Infrastructure owns controlling interests in twelve non-utility renewable projects (2,654 MW nameplate, $3.93B) under long-term contracts — Sapphire Sky wind (250 MW, Microsoft, 12 years), Hardin III solar (250 MW, Microsoft, 15 years, February 2025), Coyote Ridge and Tatanka Ridge wind (Google), Jayhawk wind (190 MW, Meta, 10 years), Delilah I solar (300 MW, Tesla and Honda, 15 years, December 2024) — and sells production tax credits under transferability.",
+   "highlights": [
+    "3,850 MW solar / 555 MW wind planned; ~1.5 GW of solar approved and ~1 GW pending Q4 2026 decisions",
+    "WEC Infrastructure: 2,654 MW contracted to Microsoft, Google, Meta, Tesla, Honda, Verizon, AT&T and GM",
+    "10-K flags AD/CVD duties on southeast-Asian solar panels and UFLPA actions as already reflected in dates and costs"
+   ],
+   "positioning": "The renewables are the resource the VLC tariff dedicates to Vantage ('100% matched zero-emission energy', 70 percent to the campus and 30 percent to other customers); WEC Infrastructure makes WEC one of the few utilities in this file that is also a corporate-PPA seller to the hyperscalers it serves as a utility.",
+   "soldThrough": "Build-transfer purchases (Invenergy, OneEnergy) under PSCW certificates; WEC Infrastructure projects under corporate PPAs",
+   "targetSegments": [
+    "Wisconsin retail load and VLC bespoke subscriptions",
+    "Corporate offtakers across the Midwest and Texas (WEC Infrastructure)"
+   ],
+   "roadmap": "Seven solar dockets decided Q4 2026; Whitetail Wind closes late 2027"
+  },
+  {
+   "name": "American Transmission Company (60 percent) — the data-center lines and the FERC cost-allocation dispute",
+   "category": "Grid",
+   "description": "WEC owns about 60 percent of ATC (equity-accounted), a MISO transmission owner serving more than five million consumers in Wisconsin, Minnesota, Illinois and Upper Michigan at 69–345 kV. WEC's share of ATC capital is $4.1B for 2026–2030 ($657M in 2026 rising to $901M in 2030): economic growth $1.4B, MISO long-range transmission Tranche 1 $700M and Tranche 2 $400M, with $800M more expected after 2031. ATC expects more than $2B of data-center-related transmission — more than $500M for Mount Pleasant and the Port Washington project, whose original $1.39–1.67B application (137-CE-221) had its completeness determination revoked by the PSCW (vote August 7, 2026) and which ATC refiled on September 18 at $2.48–2.72B including about $1.1B of Oracle-funded stabilization equipment at the Decker substation. On July 24, 2026 MISO filed at FERC (ER26-3265) a Minimum Transmission Charge Agreement and four amended Large Load Project Commitment Agreements between ATC and Wisconsin Electric for the Microsoft campus, under which We Energies pays ATC's network rate on 100 percent of the requested transmission capacity for 15 years from completion (capped at the project's lifetime incremental revenue requirement) and passes the cost to Microsoft; Microsoft protested on August 21 (an early-termination 'windfall', CWIP recovery, no consultation, and WEC's position as ATC's largest shareholder), joined by the PSCW's comments, the Citizens Utility Board, the Data Center Coalition and the Wisconsin Industrial Energy Group. ATC calls it 'a customer protection mechanism that follows the cost causer, cost payer methodology'. FERC's June 18, 2026 order to show cause on large-load transmission cost allocation and its RM26-4 rulemaking are the federal backdrop; MISO Tranche 2.1's Wisconsin 765 kV segments were awarded to other developers (Transource/BHE, Viridon), not ATC.",
+   "highlights": [
+    "WEC share of ATC capex $4.1B (2026–2030); ATC data-center transmission more than $2B",
+    "Port Washington line refiled September 18, 2026 at $2.48–2.72B after the PSCW revoked completeness of the $1.39–1.67B application",
+    "FERC ER26-3265: 15-year minimum transmission charge for Mount Pleasant, protested by Microsoft on August 21, 2026",
+    "Electric distribution $4.7B in the plan; 72,800 miles of distribution lines"
+   ],
+   "positioning": "The only utility in this corpus whose transmission affiliate is in a FERC fight with its own largest data-center customer; the outcome will set the pro forma for how MISO utilities pass transmission risk to large loads.",
+   "soldThrough": "FERC formula rates (ATC, 10.48 percent ROE on 50 percent equity) and large-load project commitment agreements passed through the VLC tariff",
+   "targetSegments": [
+    "Data-center campuses requiring 345 kV interconnection",
+    "MISO regional lines"
+   ],
+   "roadmap": "FERC action on ER26-3265; PSCW decision on the refiled Port Washington project (expected by year-end 2026 per WEC); Tranche 2.1 construction to 2034"
+  },
+  {
+   "name": "Gas distribution — Peoples Gas, North Shore Gas, Wisconsin Gas, WPS gas, Michigan and Minnesota utilities",
+   "category": "Gas utility",
+   "description": "About 3.0 million gas customers: the Wisconsin segment's 1.5 million, Peoples Gas and North Shore Gas's 1.06 million in Chicago and its northern suburbs, and 444,000 at Minnesota Energy Resources and Michigan Gas Utilities. Gas distribution is $7.1B of the 2026–2030 plan, driven by the Illinois Commerce Commission's February 20, 2025 order ending the Peoples Gas System Modernization Program investigation and mandating retirement of cast- and ductile-iron mains by 2035 under a safety monitor, with annual spend ramping to about $500M by 2028; the ICC approved a $2.3B rider settlement 5–0 on May 21, 2026 with $130M of plant reductions and $125M of credits, and Peoples Gas's 2027 rate case (26-0065; request cut to $144M in July 2026) is due for decision in December 2026. Bluewater provides gas storage. The gas business is not a data-center counterparty except as the LNG and pipeline supplier to the new Wisconsin turbines.",
+   "highlights": [
+    "3.0 million gas customers; gas distribution $7.1B of the plan",
+    "ICC-mandated Peoples Gas main retirement by 2035; $2.3B rider settlement approved May 21, 2026",
+    "Peoples Gas rate order due December 2026"
+   ],
+   "positioning": "The Illinois gas franchise is WEC's regulatory soft spot — a mandated program under a safety monitor — and unrelated to the AI-load story except as capital competition.",
+   "soldThrough": "Regulated distribution service",
+   "targetSegments": [
+    "Residential and commercial gas customers in Wisconsin, Illinois, Michigan and Minnesota"
+   ],
+   "roadmap": "ICC order on Peoples Gas 26-0065 in December 2026"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Very Large Customer and Bespoke Resources tariffs — PSCW Docket 6630-TE-113 (order May 21, 2026)",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Threshold",
+     "value": "customers with ≥100 MW of forecasted new load (threshold lowered by the PSCW from the proposed 500 MW)"
+    },
+    {
+     "band": "Term",
+     "label": "Minimum initial term",
+     "value": "15 years (PSCW raised from 10); 20 years for wind and solar; depreciable life for natural gas and battery storage assets"
+    },
+    {
+     "band": "Cost responsibility",
+     "label": "Model",
+     "value": "the proposed 'capacity-only' option (VLC pays 75% of generation cost) was removed — only the Full-Benefits model (VLC pays 100%) approved; tariff revisions ordered to address transmission cost-shifting risk"
+    },
+    {
+     "band": "Return",
+     "label": "Fixed for the term",
+     "value": "ROE range 10.48%–10.98% and equity ratio 57%; specific ROE within range agreed upon with customers; revenues and costs recovered through the tariff are excluded from future rate cases and from the earnings-sharing mechanism"
+    },
+    {
+     "band": "Exit",
+     "label": "Early termination",
+     "value": "customer pays remaining net book value to the extent it cannot be repurposed"
+    },
+    {
+     "band": "Credit",
+     "label": "Financial security",
+     "value": "if credit rating is below A- (S&P) / A3 (Moody's) or the customer fails a tangible-net-worth/liquidity test, security equal to the net book value of the investments to serve the customer is required; utility waiver ability removed"
+    },
+    {
+     "band": "Minimum bill",
+     "label": "Demand",
+     "value": "minimum billing demand with ratchet — higher of projected or actual (Yale CEF); percentage not published"
+    },
+    {
+     "band": "Other",
+     "label": "Oversight",
+     "value": "additional reporting/transparency requirements and a mechanism for future adjustments"
+    }
+   ],
+   "notes": "Verbal decision April 24, 2026 by Commissioners Strand, Nieto and Hawkins; reconsideration requests by Microsoft and by We Energies/Vantage/Cloverleaf both declined by July 2026. The order text itself was not retrievable from the PSCW's ERF system this session."
+  },
+  {
+   "product": "2026–2030 capital plan (September 2026 investor book)",
+   "specs": [
+    {
+     "band": "Total",
+     "label": "Five-year",
+     "value": "$37.5 Billion Projected Capital Spend From 2026-2030 — largest five-year capital plan in company history, 100% regulated"
+    },
+    {
+     "band": "By category",
+     "label": "Electric generation",
+     "value": "$20.3B (regulated renewables $12.6B — solar 3,850 MW $7.9B, battery storage 2,130 MW $2.9B, wind 555 MW $1.8B; thermal and LNG $7.4B — CTs 3,300 MW $5.2B, RICE 180 MW $240M, CCGT summer upgrades 150 MW $280M, coal-to-gas conversions and fuel-oil backup $370M, LNG storage 6 Bcf $1.3B)"
+    },
+    {
+     "band": "By category",
+     "label": "Wires and gas",
+     "value": "Electric distribution $4.7B; gas distribution $7.1B; WI LNG capacity $1.3B; electric transmission (WEC's 60% of ATC) $4.1B"
+    },
+    {
+     "band": "By year",
+     "label": "Total incl. ATC share",
+     "value": "2026 $5,675M; 2027 $7,752M; 2028 $7,852M; 2029 $7,946M; 2030 $8,275M"
+    },
+    {
+     "band": "Asset base",
+     "label": "Growth",
+     "value": "2025A $34.2B → 2030E $59.6B (11.7% CAGR); 2030E mix: 58% WI non-VLC/bespoke, 15% VLC/bespoke, 10% ATC, 9% WECI"
+    },
+    {
+     "band": "Financing",
+     "label": "2026–2030 (excl. ATC)",
+     "value": "capital $33.3B; CFO $20.5–21.5B; common equity $5.3–5.7B; incremental debt $14.2–14.8B incl. $5–6B junior subordinated / equity-content securities"
+    },
+    {
+     "band": "History",
+     "label": "Plan raises",
+     "value": "$28B (2025–2029) → $36.5B (October 30, 2025) → $37.5B after +$1.0B Microsoft-driven add (February 5, 2026)"
+    }
+   ],
+   "notes": "Credit: WEC A-/Baa1 (S&P/Moody's); targets FFO/debt above 15 percent."
+  },
+  {
+   "product": "Named generation dockets (September 2026 investor book, slides 33–35)",
+   "specs": [
+    {
+     "band": "Batteries (WEC share)",
+     "label": "Approved / in service",
+     "value": "Paris 99 MW (in service 2025); Darien 68 MW (5-BS-255, 2027); Koshkonong 149 MW (5-BS-258, 2027); High Noon 149 MW (5-BS-276, 2027); Saratoga 45 MW (5-BS-280, 2028); Dawn Harvest 50 MW (5-BS-281, 2028)"
+    },
+    {
+     "band": "Batteries (WEC share)",
+     "label": "Pending",
+     "value": "Dawn Break 162 MW (5-BS-289, approval expected Q4 2026, 2029)"
+    },
+    {
+     "band": "Gas",
+     "label": "Approved May 22, 2025",
+     "value": "Oak Creek CTs 1,100 MW (6630-CE-317, $1,200E, 2027/2028); Paris RICE 128 MW (6630-CE-316, $300E, 2027)"
+    },
+    {
+     "band": "Gas",
+     "label": "Pending Q4 2026",
+     "value": "Foundry Ridge CTs 270 MW ($550E, 6630-BS-103, 2028); Red Oak Ridge CTs 1,125 MW ($1,700E, 6630-BS-104, 2029/2030); PWGS turbine upgrade 100 MW ($227E, 6630-CE-318, 2028); ERGS fuel flexibility $132E (5-CE-161)"
+    },
+    {
+     "band": "Nuclear",
+     "label": "Point Beach PPA (NextEra)",
+     "value": "Unit 1 from Oct 2030 to Oct 2050, Unit 2 from Mar 2033 to Mar 2053; expected to result in savings for customers compared to the terms of the current PPA; PSCW approval being sought"
+    },
+    {
+     "band": "Retirements",
+     "label": "Coal",
+     "value": "Oak Creek Units 7-8 (611 MW) end of 2027; Weston 3 (328 MW) end-2031; coal backup-only by end-2030, coal exit by end-2032"
+    }
+   ],
+   "notes": "Supplier, integrator and turbine OEM are not disclosed for any project; Invenergy is the developer of the Paris, Darien, Koshkonong, Dawn Harvest and Badger Hollow projects and of the Foundry Ridge and Red Oak Ridge sites."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$8,599.9M (−$293.1M)",
+      "expected": "Q4: $2.50B (MarketBeat); $2.56B (Investing.com)",
+      "verdict": "miss",
+      "result": "Q4 2024 revenue $2.28B against both trackers; full-year consensus not located",
+      "kpi": "revenue",
+      "usdMillions": 8599.9,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$4.88 (+5.4 percent; GAAP $4.83, excluding a $0.06 QIP disallowance)",
+      "expected": "Q4: $1.49 (MarketBeat); $1.47 (Investing.com)",
+      "verdict": "miss",
+      "result": "Q4 2024 EPS $1.43 against $1.47–$1.49; full-year $4.88 landed at the top of the $4.80–$4.90 guidance"
+     },
+     {
+      "name": "Net income",
+      "actual": "$1,527.2M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2025 guidance $5.17–$5.27 reaffirmed; dividend raised 6.9 percent to $0.8925 a quarter"
+     }
+    ],
+    "commentary": "The last year before the data-center campuses were named. Full-year consensus was not located; the Q4 figures are the comparison."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$9,800.1M (+$1.2B)",
+      "expected": "Q4: $2.19B (MarketBeat)",
+      "verdict": "beat",
+      "result": "Q4 2025 revenue $2.54B against $2.19B; full-year consensus not located",
+      "kpi": "revenue",
+      "usdMillions": 9800.1,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$5.27 (+8.0 percent; GAAP $4.81 after a $0.46, $205M pre-tax Illinois rider settlement charge)",
+      "expected": "$5.22 guidance midpoint; Q4: $1.39 (MarketBeat)",
+      "verdict": "beat",
+      "result": "Q4 2025 adjusted EPS $1.42 against $1.39; the year beat the guidance midpoint by $0.05"
+     },
+     {
+      "name": "Net income",
+      "actual": "$1,557.5M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2026 guidance $5.51–$5.61; long-term growth 7–8 percent; dividend raised 6.7 percent to $0.9525 a quarter (23rd consecutive increase); 2025 capex $4,398M"
+     },
+     {
+      "name": "Data-center demand forecast through 2030",
+      "actual": "3.9 GW (Microsoft 2.6 GW, Vantage 1.3 GW) at the February 5, 2026 call, up from 3.4 GW in October 2025",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Capital plan raised $1.0B to $37.5B on Microsoft's 500 MW expansion",
+      "kpi": "mw-contracted",
+      "qty": 3900
+     },
+     {
+      "name": "Five-year capital plan",
+      "actual": "$37.5B for 2026–2030",
+      "expected": "$36.5B (October 2025 plan)",
+      "verdict": "beat",
+      "result": "Electric generation $20.3B; ATC share $4.1B; gas distribution $7.1B; electric distribution $4.7B",
+      "kpi": "capex",
+      "usdMillions": 37500,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "The plan went from $28B to $37.5B in four months on two named campuses; the tariff that makes them pay was still pending at year-end."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$3,434.2M (+$284.7M)",
+      "expected": "$3.21B (Zacks); $3.37B (company-cited estimate)",
+      "verdict": "beat",
+      "result": "7.0 percent above Zacks",
+      "kpi": "revenue",
+      "usdMillions": 3434.2,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Earnings per share",
+      "actual": "$2.45 (no adjustments; vs $2.27)",
+      "expected": "$2.33 (Zacks); $2.30 (MarketBeat); $2.09 (Investing.com)",
+      "verdict": "beat",
+      "result": "5.2 percent above Zacks; Investing.com's figure is an outlier and not used for the verdict; Q2 guided to $0.76–$0.82"
+     }
+    ],
+    "commentary": "Weather and rate-base growth; the VLC tariff was approved three weeks before the release and the Microsoft first building had just begun operating."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$2,062.1M (+2.6 percent); first half $5,496.3M",
+      "expected": "$2.11B (Zacks)",
+      "verdict": "miss",
+      "result": "2.3 percent below Zacks; shares fell about 2.5 percent premarket on the revenue line",
+      "kpi": "revenue",
+      "usdMillions": 2062.1,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Earnings per share",
+      "actual": "$0.91 (no adjustments; vs $0.76); first half $3.36",
+      "expected": "$0.80 (Zacks, MarketBeat); $0.83 (Investing.com)",
+      "verdict": "beat",
+      "result": "13.75 percent above Zacks; drivers vs $0.76 — weather +$0.05, rate base +$0.13, sales growth +$0.04 including VLC +$0.03, ATC +$0.03, WECI +$0.04, offset by D&A, O&M, shares and corporate"
+     },
+     {
+      "name": "Data-center demand forecast through 2030",
+      "actual": "3.9 GW unchanged; three or four prospects of 400–500 MW each in discussion",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2026 guidance $5.51–$5.61 reaffirmed; Q3 guided to $0.92–$0.98; about $760M of the ~$1.1B 2026 equity need locked in through ATM forwards",
+      "kpi": "mw-contracted",
+      "qty": 3900
+     }
+    ],
+    "commentary": "The first quarter with a quantified VLC contribution ($0.03). The Q3 2026 results are company-scheduled for October 29, 2026."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-22",
+   "category": "legal",
+   "headline": "Ozaukee County judge dismisses with prejudice the challenge to Port Washington's tax-increment district for the Vantage campus",
+   "read": "One of three local and state cases around the Lighthouse campus closed; the DNR environmental suit (July 9) and the FERC docket remain.",
+   "source": "https://www.wpr.org/news/judge-dismisses-lawsuit-challenging-port-washington-data-center-tid"
+  },
+  {
+   "date": "2026-09-18",
+   "category": "project",
+   "headline": "ATC refiles the Port Washington transmission project at $2.48–2.72B, including about $1.1B of Oracle-funded stabilization at the Decker substation, after the PSCW revoked the completeness of its $1.39–1.67B application",
+   "read": "The line the campus depends on nearly doubled in cost between filings; Oracle is paying for the difference.",
+   "source": "https://www.wpr.org/news/atc-reapplies-transmission-project-port-washington-data-center"
+  },
+  {
+   "date": "2026-09-11",
+   "category": "policy",
+   "headline": "EEI's large-load projects and tariffs list records We Energies' Mount Pleasant (up to 2,600 MW, $20B) and Port Washington (1,300 MW, $15B) campuses and the approved VLC and Bespoke Resources tariffs (6630-TE-113)",
+   "read": "Both campuses and the tariff are now on the industry's own register; Meta's Beaver Dam is listed under Alliant.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "date": "2026-09-04",
+   "category": "financial",
+   "headline": "September investor book: $37.5B plan reaffirmed, 3.9 GW of data-center demand through 2030, Point Beach PPA extension with NextEra to 2050/2053 (~1 GW), and 'Oracle has met the financial security requirements'",
+   "read": "The nuclear PPA extension replaces the $2–2.5B-per-500 MW replacement decision the company had flagged for the Q3 call.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf"
+  },
+  {
+   "date": "2026-08-21",
+   "category": "regulatory",
+   "headline": "Microsoft protests at FERC (ER26-3265) the ATC–Wisconsin Electric Minimum Transmission Charge Agreement and four amended large-load project commitment agreements for Mount Pleasant — an early-termination 'windfall', CWIP recovery, no consultation; the PSCW (August 14), CUB, the Data Center Coalition and WIEG also file",
+   "read": "A tariff customer becomes a federal-docket adversary over transmission; the outcome is the MISO template for large-load cost allocation.",
+   "source": "https://wisconsinwatch.org/2026/08/wisconsin-data-center-microsoft-ratepayer-advocates-challenge-atc-plan-transmission-costs/"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "procurement",
+   "headline": "Point Beach purchase agreement with NextEra extended — Unit 1 to October 2050, Unit 2 to March 2053, about 1 GW — with PSCW approval to be sought; the existing price escalates from $75.51/MWh in 2026",
+   "read": "About a fifth of the 2027 rate request is this contract; the extension is framed as cheaper than the current terms.",
+   "source": "https://urbanmilwaukee.com/2026/08/21/we-energies-deal-would-buy-power-from-point-beach-nuclear-plant-into-2050s/"
+  },
+  {
+   "date": "2026-08-17",
+   "category": "legal",
+   "headline": "Oracle voluntarily dismisses its June 24 suit against the PSCW over the VLC collateral requirement (Ozaukee County 2026CV256)",
+   "read": "The A-/A3 security rule survived its first test; a BBB- hyperscaler posted collateral rather than litigate.",
+   "source": "https://www.wpr.org/news/oracle-drops-wisconsin-suit-financial-requirements-data-centers"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "regulatory",
+   "headline": "PSCW revokes the completeness determination for ATC's $1.39–1.67B Port Washington transmission application (137-CE-221)",
+   "read": "The first setback for the Lighthouse campus's grid connection; refiled six weeks later at nearly twice the cost.",
+   "source": "https://www.wpr.org/news/psc-denies-transmission-project-port-washington-data-center"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "project",
+   "headline": "We Energies breaks ground on the Darien battery (75 MW), Dawn Harvest solar and battery (150 MW / 50 MW) and Badger Hollow Wind (110 MW), all Invenergy-built",
+   "read": "Three build-transfer projects in one release — the developer, not the utility, is choosing the equipment.",
+   "source": "https://news.we-energies.com/we-energies-launches-construction-on-solar-wind-and-battery-storage-projects/"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "financial",
+   "headline": "Q2 2026: EPS $0.91 (vs $0.76), a beat against the $0.80–0.83 consensus; revenue $2,062M missed; 2026 guidance $5.51–$5.61 reaffirmed with Q3 guided to $0.92–$0.98; VLC customers contribute $0.03; three or four prospects of 400–500 MW each in discussion",
+   "read": "The first quarter with quantified data-center margin; the CEO expects 'another announcement' by year-end.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_earnings/2026/q2/generic/2026-Q2-WEC-Earnings-Package-Final.pdf"
+  },
+  {
+   "date": "2026-07-24",
+   "category": "regulatory",
+   "headline": "MISO files at FERC the ATC–Wisconsin Electric Minimum Transmission Charge Agreement and four amended large-load project commitment agreements for Microsoft's Mount Pleasant campus (15-year minimum charge on 100 percent of requested capacity; more than $500M of upgrades); a parallel PSCW affiliate application follows",
+   "read": "The transmission half of the VLC bargain, filed federally because ATC is FERC-jurisdictional.",
+   "source": "https://www.wpr.org/news/american-transmission-co-we-energies-data-center-cost-agreement"
+  },
+  {
+   "date": "2026-07-16",
+   "category": "customer",
+   "headline": "Microsoft signs a 15-year Very Large Customer service agreement with We Energies, subscribing at least to the Red Oak Ridge turbines; megawatts undisclosed",
+   "read": "The first executed VLC agreement — under the tariff's terms, not a special contract.",
+   "source": "https://wisconsinwatch.org/2026/08/wisconsin-we-energies-microsoft-data-center-contract-terms-conflict-psc-regulators-electricity/"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "market",
+   "headline": "S&P cuts Oracle to BBB-, below the VLC tariff's A-/A3 security threshold; the same day environmental groups sue the DNR over the Port Washington air permits",
+   "read": "The collateral rule the utility had asked to loosen became binding on its second customer within seven weeks of the order.",
+   "source": "https://milwaukeenns.org/2026/08/04/wisconsin-we-energies-oracle-dispute-port-washington-data-center-on-schedule-legal-challenge-credit-rating/"
+  },
+  {
+   "date": "2026-06-24",
+   "category": "legal",
+   "headline": "Oracle sues the PSCW in Ozaukee County Circuit Court over the VLC financial-security requirement; We Energies, Vantage and Cloverleaf had petitioned the commission on June 12 to ease the collateral rule",
+   "read": "The utility and its customers on one side, the commission on the other — dropped two months later.",
+   "source": "https://www.wpr.org/news/oracle-sues-wisconsin-utility-regulators-psc-financial-requirements-data-centers"
+  },
+  {
+   "date": "2026-06-23",
+   "category": "customer",
+   "headline": "Microsoft completes construction of its first Mount Pleasant 'Fairwater' building (operating since April; second building 2028)",
+   "read": "The 2.6 GW forecast has a first building drawing power ahead of schedule.",
+   "source": "https://www.wpr.org/news/microsoft-finishes-construction-mount-pleasant-data-center"
+  },
+  {
+   "date": "2026-05-21",
+   "category": "regulatory",
+   "headline": "PSCW issues its written order on the VLC and Bespoke Resources tariffs; the ICC approves the $2.3B Illinois rider settlement 5–0 the same day",
+   "read": "Two regulators, one day: the data-center framework and the gas-modernization settlement both landed.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf"
+  },
+  {
+   "date": "2026-05-07",
+   "category": "leadership",
+   "headline": "Scott Lauber becomes chairman at the annual meeting; Gale Klappa retires as chairman emeritus; Lauber says more hyperscaler talks are under way",
+   "read": "A finance-trained CEO now chairs the board that approved the largest plan in company history.",
+   "source": "https://www.prnewswire.com/news-releases/lauber-highlights-exceptional-year-for-wec-energy-group-302766192.html"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "financial",
+   "headline": "Q1 2026: EPS $2.45 (vs $2.27), a beat against $2.30–2.33 consensus; revenue $3,434M; the CEO says existing approved sites could add 4–5 GW beyond the plan",
+   "read": "The upside case first quantified — as site potential, not contracts.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_earnings/2026/q1/generic/2026-Q1-WEC-Earnings-Package-Final.pdf"
+  },
+  {
+   "date": "2026-04-28",
+   "category": "market",
+   "headline": "MISO's 2026/27 planning resource auction clears the North/Central zones at $126/MW-day summer, down 42 percent from $217",
+   "read": "The capacity price fell just as WEC's turbine dockets were being decided; the company's stated rationale is reliability, not price.",
+   "source": "https://modoenergy.com/research/en/miso-2026-27-capacity-prices-results"
+  },
+  {
+   "date": "2026-04-24",
+   "category": "regulatory",
+   "headline": "PSCW unanimously approves We Energies' Very Large Customer and Bespoke Resources tariffs after a 13-month review, lowering the threshold to 100 MW, raising the minimum term to 15 years, removing the capacity-only option and requiring security below A-/A3",
+   "read": "The commission wrote a stricter tariff than the utility asked for on every axis but one — the fixed 10.48–10.98 percent return stayed.",
+   "source": "https://psc.wi.gov/Documents/PressReleases/04.24.2026PressRelease.PDF"
+  },
+  {
+   "date": "2026-04-01",
+   "category": "regulatory",
+   "headline": "We Energies, Wisconsin Gas and WPS file 2027–2028 rate cases (5-UR-112; 6690-UR-129): We Energies electric +4.7 percent and +4.5 percent, ROE 9.9 percent; data centers to pay about $1.9B in 2027–2028 under the Customer Protection Plan",
+   "read": "The rate case that will show whether the tariff keeps the data-center costs off everyone else's bill.",
+   "source": "https://news.we-energies.com/we-energies-rate-filing-focuses-on-reliability-protecting-customers-and-supporting-wisconsins-economy/"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "procurement",
+   "headline": "PSCW approves the purchase of Dawn Harvest — 150 MW of solar and a 50 MW battery from Invenergy for about $443M (in service 2028); Good Oak and Gristmill solar (OneEnergy) approved March 19",
+   "read": "Another build-transfer battery; the developer's OEM choice stays undisclosed.",
+   "source": "https://news.we-energies.com/regulators-approve-solar-and-battery-project-for-we-energies-customers/"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "financial",
+   "headline": "FY2025 adjusted EPS $5.27 (+8 percent); 2026 guidance $5.51–$5.61; capital plan raised $1.0B to $37.5B as Microsoft's forecast rises from 2.1 GW to 2.6 GW (total 3.4 → 3.9 GW); dividend raised 6.7 percent",
+   "read": "A single customer's 500 MW expansion moved the five-year plan by a billion dollars.",
+   "source": "https://investor.wecenergygroup.com/investors/news-releases/press-release-details/2026/WEC-Energy-Group-posts-2025-results/default.aspx"
+  },
+  {
+   "date": "2026-01-20",
+   "category": "customer",
+   "headline": "Microsoft proposes 15 more Mount Pleasant data centers on two new campuses (more than $13B); the village approves the plans",
+   "read": "The demand forecast behind the February plan raise.",
+   "source": "https://www.wpr.org/news/microsoft-15-more-data-centers-mount-pleasant"
+  },
+  {
+   "date": "2025-11-25",
+   "category": "procurement",
+   "headline": "PSCW approves Saratoga solar (150 MW) and battery (50 MW), Ursa solar (200 MW), Badger Hollow Wind (112 MW) and Whitetail Wind (67 MW)",
+   "read": "The renewables pipeline that the VLC tariff will dedicate to Vantage's zero-emission commitment.",
+   "source": "https://news.we-energies.com/more-renewable-energy-projects-approved-for-we-energies-customers/"
+  },
+  {
+   "date": "2025-11-05",
+   "category": "project",
+   "headline": "We Energies files an 'almost 3 GW', $5.5B expansion: seven solar parks (more than 1.1 GW), a 180 MW battery, and the acquisition of two Invenergy-developed gas plants — Foundry Ridge (270 MW, $564.2M, end-2028) and Red Oak Ridge (1.1 GW, $1.77B, end-2029) — plus the Customer Protection Plan",
+   "read": "The generation package sized to the Vantage campus, filed before the tariff was approved.",
+   "source": "https://news.we-energies.com/we-energies-announces-major-expansion-plan-to-strengthen-wisconsins-power-grid/"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "financial",
+   "headline": "Q3 2025: capital plan raised from $28B to $36.5B (2026–2030); load forecast +3.4 GW (Microsoft 2.1 GW, Vantage 1.3 GW); 2026 equity $0.9–1.1B",
+   "read": "The plan raise that followed the Vantage announcement by eight days.",
+   "source": "https://www.prnewswire.com/news-releases/wec-energy-group-reports-third-quarter-results-302599084.html"
+  },
+  {
+   "date": "2025-10-22",
+   "category": "customer",
+   "headline": "OpenAI, Oracle and Vantage Data Centers announce the 'Lighthouse' Stargate campus at Port Washington — $15B-plus, four buildings, close to a gigawatt of AI capacity, completion 2028 — with Vantage 'underwriting 100% of the power infrastructure investment with a dedicated electricity rate from We Energies'; Lauber: 'nearly two gigawatts of new energy to the grid, 30% of which will be dedicated to the homes, farms and other businesses we serve today'",
+   "read": "The second campus, and the one whose credit counterparty is Oracle rather than Microsoft.",
+   "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/"
+  },
+  {
+   "date": "2025-06-25",
+   "category": "regulatory",
+   "headline": "Oak Creek units 7–8 (611 MW of coal) retirement pushed from end-2025 to end-2026, and later to end-2027, citing MISO supply tightness",
+   "read": "Coal as the bridge until the turbines arrive in late 2027.",
+   "source": "https://news.we-energies.com/we-energies-announces-updated-timeline-for-oak-creek-plant-retirements/"
+  },
+  {
+   "date": "2025-06-03",
+   "category": "project",
+   "headline": "Paris Battery Park (110 MW, four hours; 99 MW WEC share) enters service — Wisconsin's first large-scale battery",
+   "read": "The template for the 2,130 MW plan: Invenergy-built, utility-owned, supplier unnamed.",
+   "source": "https://news.we-energies.com/wisconsins-first-large-scale-energy-storage-project-now-serving-customers/"
+  },
+  {
+   "date": "2025-05-22",
+   "category": "regulatory",
+   "headline": "PSCW unanimously approves the Oak Creek combustion turbines (1,100 MW, ~$1.2B, with cost caps) and the Paris reciprocating engines (128 MW, $300M), both for late 2027",
+   "read": "1,228 MW of quick-start gas certified two years before the data-center load arrives.",
+   "source": "https://news.we-energies.com/we-energies-natural-gas-plants-in-oak-creek-and-kenosha-county-approved-by-regulators/"
+  },
+  {
+   "date": "2025-03-31",
+   "category": "regulatory",
+   "headline": "We Energies files the Very Large Customer and Bespoke Resources tariff application (6630-TE-113) with a proposed 500 MW threshold and 10-year term",
+   "read": "Thirteen months later the commission approved it at 100 MW and 15 years.",
+   "source": "https://psc.wi.gov/Documents/PressReleases/04.24.2026PressRelease.PDF"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that the Bespoke Resources structure — the data-center customer subscribes to named new plants and pays 100 percent of their cost for at least 15 years at a return fixed at 10.48–10.98 percent — makes We Energies the corpus's most direct utility buyer of the generation its hyperscalers need, and that the PSCW's modifications made the structure stricter for the customer, not the utility. Basis: the April 24, 2026 press release (100 MW threshold, 15-year minimum, capacity-only option removed, A-/A3 security) and the September 2026 investor book (VLC/bespoke assets 15 percent of the 2030 asset base). We expect the equipment for the bespoke plants — Red Oak Ridge's turbines, the unfiled ~1,400 MW of batteries — to be selected by We Energies' major-projects group and by Invenergy on the build-transfer sites, with the OEM decisions unpublished until the certificate dockets.",
+  "(High confidence) We assess that credit, not load, is the binding constraint on the Port Washington campus, and that the tariff's A-/A3 security rule has already done what it was written to do. Basis: S&P's July 9, 2026 downgrade of Oracle to BBB-; the June 12 rehearing petition by We Energies, Vantage and Cloverleaf to loosen the rule and the commission's refusal; Oracle's June 24 suit and its August 17 dismissal; WEC's statement that Oracle 'has met the financial security requirements'. The payment-and-cancellation agreements carry the campus until VLC service agreements take effect on June 1, 2027; security equal to net book value is what protects the other 1.1 million We Energies customers if Oracle's rating falls further.",
+  "(Moderate confidence) We assess that FERC's handling of the ATC–Wisconsin Electric Mount Pleasant agreements (ER26-3265) is the single most consequential open docket for WEC's model, because the VLC tariff assigns 100 percent of transmission cost to the customer and Microsoft's protest attacks exactly that assignment. Basis: the July 24 filing (15-year minimum charge on 100 percent of requested capacity), Microsoft's August 21 protest, the PSCW's own August 14 comments calling ATC's filing 'far from fully responsive', and FERC's June 18 show-cause order on large-load transmission allocation. A FERC decision that trims the early-termination or CWIP terms would shift some of the $2B-plus of data-center transmission back toward the network rate — and WEC owns 60 percent of that network.",
+  "(Moderate confidence) We assess that the 2,130 MW battery plan is real but two-thirds unfiled, and that the filing cadence — one or two 5-BS dockets a year through Invenergy — is the practical ceiling on how fast a storage seller can enter. Basis: the September 2026 investor book's named projects (about 720 MW WEC share) against the plan total; the 10-K's battery capex profile peaking in 2027; We Energies' August 2026 tally of 600 MW in service, under construction or filed. A supplier wanting the balance sells to Invenergy at bid stage or to We Energies' major-projects group for a self-build, and there is no RFP door comparable to Duke's South Carolina solicitation or DTE's annual storage RFP.",
+  "(Moderate confidence) We assess that WEC's exposure to Wisconsin politics is rising and that the 2026 gubernatorial election is the tripwire. Basis: four data-center bills died in the 2026 session (AB 840 passed the Assembly 53–44 and stalled in the Senate), moratorium proposals surfaced on the Q2 call, Kenosha residents sought a moratorium on Microsoft's second site in August, and all three PSCW commissioners are appointees of a governor whose term ends in January 2027. The tariff is an order, not a statute, and a commission with different priorities could revisit its return or its threshold in the next rate cycle.",
+  "(Low confidence) We assess that a third named campus of 400–500 MW will be announced before the February 2027 call, as the CEO has twice suggested, and that it will be a colocation developer rather than a hyperscaler. Basis: 'hopefully another announcement this fall' (May 2026) and 'prospects of 400–500 MW each' (July 2026) — sizes below a hyperscaler's own campus but above the 100 MW tariff threshold. No customer, site or filing has been found."
+ ],
+ "relationships": [
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-07",
+   "scale": "2.6 GW forecast through 2030",
+   "via": "Very Large Customer service agreement (15 years); WEC Infrastructure PPAs",
+   "note": "Microsoft's Mount Pleasant campus is We Energies' largest customer (2.6 GW of demand forecast through 2030, first building operating since April 2026); it signed a 15-year VLC service agreement on July 16, 2026 and on August 21 protested the ATC–Wisconsin Electric transmission agreements for the same campus at FERC.",
+   "context": "The September 2026 investor book puts Microsoft's investment at more than $20B ($7.3B for phases 1–2, $13B additional) with 15 more data centers approved by the village in January 2026; the VLC agreement subscribes at least to the Red Oak Ridge turbines, with megawatts undisclosed, and Wisconsin Watch reported that its resource-location language conflicts with the PSCW order (We Energies says the order governs). At FERC (ER26-3265) Microsoft calls the 15-year minimum transmission charge an early-termination 'windfall' and objects to CWIP recovery and the lack of consultation.\n\nMicrosoft is also an offtaker of WEC Infrastructure's Sapphire Sky wind (250 MW, 12 years, 2023) and Hardin III solar (250 MW, 15 years, February 2025), so the two companies are counterparties three ways — tariff customer, transmission adversary and PPA buyer.",
+   "source": "https://wisconsinwatch.org/2026/08/wisconsin-we-energies-microsoft-data-center-contract-terms-conflict-psc-regulators-electricity/"
+  },
+  {
+   "slug": "vantage",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "1.3 GW forecast through 2030; up to 3.5 GW",
+   "via": "Dedicated electricity rate (VLC tariff); payment-and-cancellation agreements",
+   "project": "lighthouse",
+   "note": "Vantage Data Centers develops the Port Washington 'Lighthouse' Stargate campus for OpenAI and Oracle and is 'underwriting 100% of the power infrastructure investment with a dedicated electricity rate from We Energies' plus at least $175M of regional infrastructure.",
+   "context": "Vantage's October 22, 2025 release describes four data centers on 672 acres, $15B-plus and completion in 2028; WEC's September 2026 book forecasts 1.3 GW through 2030 and site potential up to 3.5 GW, and Lauber said the campus adds 'nearly two gigawatts of new energy to the grid, 30% of which will be dedicated to the homes, farms and other businesses we serve today'. Vantage intervened in the tariff docket and co-petitioned with We Energies and Cloverleaf on June 12, 2026 to ease the collateral rule; its VLC service agreements take effect June 1, 2027. The corpus's Vantage dossier carries the same dedicated-rate and $175M lines.",
+   "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/"
+  },
+  {
+   "slug": "oracle",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-10",
+   "via": "Payment-and-cancellation agreements; VLC service agreements from June 1, 2027",
+   "project": "lighthouse",
+   "note": "Oracle is the credit counterparty behind the Port Washington campus: rated BBB- by S&P since July 9, 2026, it sued the PSCW over the tariff's A-/A3 security rule on June 24, dropped the suit on August 17, and has posted security 'in line with the PSCW requirements' per WEC; it also funds about $1.1B of substation stabilization in ATC's refiled line.",
+   "context": "The CEO told the July 29, 2026 call the company holds 'all the collateral we need … if it goes down, we already have'. Oracle's own credit position is discussed in the corpus's Oracle dossier; the DTE dossier records the same downgrade triggering collateral in Michigan. Oracle's Ozaukee County case number was 2026CV256.",
+   "source": "https://www.wpr.org/news/oracle-drops-wisconsin-suit-financial-requirements-data-centers"
+  },
+  {
+   "slug": "openai",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-10",
+   "project": "lighthouse",
+   "note": "OpenAI is the Stargate tenant of the Port Washington campus announced October 22, 2025 with Oracle and Vantage; WEC's own materials name the campus and its developer rather than OpenAI.",
+   "context": "The corpus's OpenAI dossier lists Port Washington WI (1.3 GW, about 70 percent solar, wind and battery) among the Stargate sites. WEC's relationship runs through Vantage's dedicated rate and Oracle's credit; there is no direct We Energies–OpenAI agreement in the record.",
+   "source": "https://www.wpr.org/news/port-washington-data-center-campus-openai-oracle-stargate-chatgpt"
+  },
+  {
+   "slug": "invenergy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2024",
+   "scale": "~2,120 MW of gas sites and ~450 MW of batteries",
+   "via": "Build-transfer solar, battery and wind projects; Foundry Ridge and Red Oak Ridge gas sites",
+   "note": "Invenergy is We Energies' principal developer counterparty — builder and seller of the Paris, Darien, Koshkonong and Dawn Harvest solar-and-battery parks and Badger Hollow Wind, and developer of the Foundry Ridge (270 MW) and Red Oak Ridge (1,125 MW) combustion-turbine sites We Energies filed to acquire in November 2025.",
+   "context": "The August 4, 2026 groundbreaking release names Invenergy as the builder of Darien, Dawn Harvest and Badger Hollow; the March 12, 2026 Dawn Harvest approval was a $443M purchase from Invenergy. The corpus's Invenergy dossier records the Foundry Ridge ($564.2M) and Red Oak Ridge ($1.77B) filings for We Energies service by end-2028 and end-2029 and a further Brillion pair (Union Depot 750 MW, Forest Junction 1,200 MW) for service by December 2031 with a PSC application expected October 2026 — the latter is not in WEC's September 2026 investor book and is recorded here from Invenergy's side.\n\nWEC Energy Group is also the majority owner of Invenergy-operated Delilah I (Texas) and Hardin III (Ohio) in the WEC Infrastructure fleet, and bought Apex's Jayhawk Wind in 2021 with Invenergy as 10 percent owner and operator.",
+   "source": "https://news.we-energies.com/we-energies-launches-construction-on-solar-wind-and-battery-storage-projects/"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2026-08",
+   "scale": "~1 GW to 2050/2053",
+   "via": "Point Beach nuclear purchase agreement",
+   "note": "NextEra Energy's Point Beach plant supplies about 1 GW under a purchase agreement WEC agreed in August 2026 to extend — Unit 1 to October 2050 and Unit 2 to March 2053 — subject to PSCW approval; pricing undisclosed.",
+   "context": "The existing agreement (86 percent of the plant's output) was to expire in December 2030 and March 2033; the September 2026 investor book says the extension is 'expected to result in savings for customers compared to the terms of the current PPA'. Wisconsin Watch reports the current price at $75.51/MWh in 2026 escalating to $122.45 by 2033 and about 20 percent of the 2027 rate request. Point Beach sits in NextEra's generation portfolio; the corpus's NextEra Energy Resources dossier is the nearest slug.",
+   "source": "https://urbanmilwaukee.com/2026/08/21/we-energies-deal-would-buy-power-from-point-beach-nuclear-plant-into-2050s/"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "via": "WEC Infrastructure wind PPAs (Coyote Ridge, Tatanka Ridge)",
+   "note": "Google Energy LLC is a 12-year offtaker of WEC Infrastructure's Coyote Ridge (97 MW) and Tatanka Ridge (155 MW) wind projects in South Dakota; no Google data-center load is in WEC's utility territory.",
+   "context": "Recorded from the September 2026 investor book's WEC Infrastructure offtaker table. The relationship is on the non-utility side only.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "via": "WEC Infrastructure Jayhawk Wind PPA (10 years)",
+   "note": "Meta is the 10-year offtaker of WEC Infrastructure's Jayhawk Wind (190 MW, Kansas, December 2021); Meta's Beaver Dam, Wisconsin data center is Alliant Energy's load, not We Energies', although ATC lists its transmission among the data-center projects.",
+   "context": "EEI's September 11, 2026 list places Beaver Dam under Wisconsin Power and Light, and WPR reported the PSCW's May 2026 approval of Alliant's custom rates for it. The WEC link is the non-utility PPA only.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf"
+  },
+  {
+   "slug": "tesla",
+   "type": "customer",
+   "status": "active",
+   "via": "WEC Infrastructure Delilah I solar PPA (with Honda, 15 years)",
+   "note": "Tesla holds a 100 MW virtual PPA on Delilah I Solar (300 MW, Texas, December 2024), of which WEC Energy Group is the majority owner with Invenergy as operator.",
+   "context": "Recorded from the investor book's offtaker table and the corpus's Invenergy dossier. Tesla is not a supplier to any WEC battery project in the record.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf"
+  },
+  {
+   "slug": "apex-clean-energy",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2021",
+   "scale": "Jayhawk Wind (190 MW)",
+   "note": "WEC Energy Group bought Apex Clean Energy's Jayhawk Wind in 2021 with Invenergy as 10 percent owner and operator; the Apex dossier records the sale.",
+   "context": "Recorded from the counterparty's dossier; the September 2026 investor book lists Jayhawk in the WEC Infrastructure fleet with Meta as offtaker.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf"
+  },
+  {
+   "slug": "xcel-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Xcel's Northern States Power–Wisconsin filed its own large-load tariff (4220-TE-119, ≥100 MW) in June 2026 on the We Energies model; the Xcel dossier compares WEC's 7–8 percent growth objective with its own.",
+   "context": "EEI's September 2026 list carries three Wisconsin large-load tariffs — We Energies (approved), NSP-Wisconsin (filed) and MGE (proposed) — plus Alliant's Cp-3 rate; the We Energies order is the template the others cite.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "slug": "aep",
+   "type": "competitor",
+   "status": "active",
+   "note": "Transource, the AEP/Evergy joint venture with Berkshire Hathaway Energy, won the MISO Tranche 2.1 BECI 765 kV segment across Wisconsin (about 190 miles, $1.2B, 2034) that ATC did not — a competitive transmission loss for WEC's affiliate.",
+   "context": "Recorded from PRNewswire (August 5, 2026) and T&D World; Mike Hooper, WEC's COO, spent 15 years at AEP.",
+   "source": "Transource BECI award coverage (PRNewswire, August 5, 2026; T&D World, January 7, 2026); no WEC statement"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "MISO capacity market",
+   "status": "in-effect",
+   "effectiveDate": "2026-06",
+   "exposure": "The 2026/27 planning resource auction cleared the North/Central zones, including Wisconsin, at $126/MW-day for summer, down 42 percent from $217 in 2025/26, with a 4.6 GW surplus above the reserve requirement. WEC's public rationale for keeping the 611 MW Oak Creek 7–8 coal units through 2027 and adding 3,300 MW of combustion turbines is 'tightened energy supply requirements in the Midwest power market' and MISO/NERC reliability warnings, not price; the company has 'paused our near-term' carbon goals for the same reason while keeping 2050 net-neutral. No WEC commentary on the auction price was found.",
+   "mitigation": "Oak Creek CTs and Paris RICE in service late 2027; Oak Creek 7–8 retained as the bridge; the Point Beach extension to 2050/2053; support for MISO's expedited resource-addition queue.",
+   "source": "https://modoenergy.com/research/en/miso-2026-27-capacity-prices-results"
+  },
+  {
+   "regime": "FERC large-load transmission cost allocation (ER26-3265; June 18, 2026 show-cause order; RM26-4)",
+   "status": "proposed",
+   "effectiveDate": "2026-07-24",
+   "exposure": "MISO's July 24, 2026 filing of the ATC–Wisconsin Electric Minimum Transmission Charge Agreement and four amended large-load project commitment agreements for Microsoft's Mount Pleasant campus (a 15-year charge on 100 percent of requested capacity, capped at the lifetime incremental revenue requirement, for projects of $100M or 100 MW or more) is protested by Microsoft, the Citizens Utility Board, the Data Center Coalition and the Wisconsin Industrial Energy Group, with the PSCW's own comments calling ATC's filing 'far from fully responsive'. FERC's June 18 order to show cause on large-load transmission allocation (195 FERC ¶ 61,212) and its RM26-4 rulemaking set the federal frame; the CUB argues ATC's agreements should not become the pro forma template.",
+   "mitigation": "ATC: 'a customer protection mechanism that follows the cost causer, cost payer methodology'; WEC says the Vantage line is 'in this forecast' and expects approval by year-end.",
+   "source": "https://wisconsinwatch.org/2026/08/wisconsin-data-center-microsoft-ratepayer-advocates-challenge-atc-plan-transmission-costs/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Net production tax credits reduced tax expense by $168.5M in the first half of 2026 (effective tax rate 6.7 percent, Q2 2026 10-Q per third-party summary); WEC Infrastructure sells PTCs under transferability; the 10-K states the 2025 federal tax law 'preserves the ability to' claim credits for storage, hydro, nuclear and other zero-emission technologies and We Energies' releases cite 'hundreds of millions of dollars' of federal credits as customer-savings drivers for the solar and battery purchases. The 10-K also flags Commerce Department AD/CVD duties on solar panels and cells from four southeast-Asian countries, further investigations (Laos, Indonesia, India) and UFLPA customs actions, with 'expected in-service dates and costs identified above already reflect some of these impacts'. No FEOC or battery-specific tariff statement was found.",
+   "mitigation": "Build-transfer purchases shift panel and battery sourcing risk to the developer until transfer; in-service dates already reflect tariff effects per the 10-K.",
+   "source": "https://s22.q4cdn.com/994559668/files/doc_financials/2025/ar/WEC-2025-Annual-Report.pdf"
+  },
+  {
+   "regime": "Wisconsin data-center legislation (2026 session)",
+   "status": "proposed",
+   "exposure": "No Wisconsin large-load or storage statute exists; the VLC tariff order is the framework. In the 2026 session AB 840/SB 843 (data-center cost and water provisions) passed the Assembly 53–44 and died in the Senate, and AB 722/SB 729, the NDA-ban bill and a moratorium bill all failed. Data centers are an issue in the 2026 governor's race (Governor Evers, who appointed all three PSCW commissioners, is not running; his term ends January 2027), Kenosha residents sought a moratorium on Microsoft's second site in August 2026, and the Wisconsin Rapids mayor has called for state rules.",
+   "mitigation": "We Energies' 'data centers won't raise electricity bills' campaign (March 2026) and the rate filing's '$1.9B paid by data centers in 2027–2028'; the PSCW's own reporting and adjustment mechanisms in the tariff order.",
+   "source": "https://rejournals.com/wisconsins-data-center-reckoning-four-bills-no-resolution-and-a-policy-vacuum/"
+  },
+  {
+   "regime": "Illinois Commerce Commission — Peoples Gas System Modernization Program order",
+   "status": "in-effect",
+   "effectiveDate": "2025-02-20",
+   "exposure": "The ICC's February 20, 2025 order (Docket 24-0081) ended the SMP investigation, mandated retirement of cast- and ductile-iron mains under 36 inches by 2035 under a safety monitor with a penalty warning, and drives about $500M a year of Peoples Gas spend by 2028; the May 21, 2026 rider settlement ($2.3B of dockets) took $130M of plant out and gave $125M of credits, and the 2027 rate case (26-0065) is due in December 2026.",
+   "mitigation": "Gas distribution $7.1B in the plan; Peoples Gas cut its request by $58M in July 2026.",
+   "source": "https://www.illinois.gov/content/dam/soi/en/web/illinois/iisnewsattachments/30954-022025-02.20.25-pgl-smp-final.pdf.pdf"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Scott J. Lauber",
+   "title": "Chairman, President and Chief Executive Officer",
+   "photo": "images/execs/wec-energy-lauber.jpg",
+   "background": [
+    "Chairman since the May 7, 2026 annual meeting (Gale Klappa retired as chairman emeritus); president and CEO and a director since February 2022; chairman and CEO of We Energies, Wisconsin Public Service, Peoples Gas and North Shore Gas",
+    "Chief operating officer (June 2020); senior executive vice president, CFO and treasurer (January 2019); executive vice president and CFO (April 2016); vice president and treasurer (2013)",
+    "Joined Wisconsin Energy in 1990 from Arthur Andersen; controller of the delivery business (2003); BBA accounting, UW-Whitewater; CPA; board of American Transmission Company (company bio)"
+   ]
+  },
+  {
+   "name": "Xia Liu",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "photo": "images/execs/wec-energy-liu.jpg",
+   "background": [
+    "CFO since June 2020",
+    "Executive vice president and CFO, CenterPoint Energy (2019–2020)",
+    "21 years at Southern Company, including executive vice president, CFO and treasurer of Georgia Power and CFO of Gulf Power",
+    "BA and MA finance, Renmin University; MBA, Emory; CFA; audit chair, Badger Meter (company bio)"
+   ]
+  },
+  {
+   "name": "Michael (Mike) Hooper",
+   "title": "Executive Vice President and Chief Operating Officer; President of We Energies, Wisconsin Public Service, Michigan Gas Utilities, Minnesota Energy Resources and Upper Michigan Energy Resources",
+   "photo": "images/execs/wec-energy-hooper.jpg",
+   "background": [
+    "Executive vice president and COO since May 2025; president of We Energies, WPS and UMERC since April 2024 — the executive quoted in every We Energies release on the data-center generation build and the Very Large Customer tariff",
+    "President and COO of NIPSCO (NiSource); senior vice president, regulatory and legislative affairs and strategy; senior vice president, electric operations; vice president, major projects, at NiSource",
+    "15 years at AEP in generation and project management; BS mechanical engineering, West Virginia Institute of Technology (company bio)"
+   ]
+  },
+  {
+   "name": "Dan Krueger",
+   "title": "Executive Vice President, WEC Infrastructure and Generation Planning",
+   "photo": "images/execs/wec-energy-krueger.jpg",
+   "background": [
+    "Leads generation planning, fuel supply strategy, MISO interactions and WEC Infrastructure (the non-utility renewables fleet), and 'maintains relationships with major commercial and industrial clients' — the closest role to a head of large-load customers (company bio)",
+    "Senior vice president, wholesale energy and fuels (2015); joined in 2014 as vice president, Wisconsin Electric (long-term generation strategy; Integrys integration)",
+    "27 years at Accenture (1987–2014) leading its global power-generation and fuels advisory business; BE, University of Illinois"
+   ]
+  },
+  {
+   "name": "Robert (Bert) Garvin",
+   "title": "Executive Vice President, External Affairs",
+   "photo": "images/execs/wec-energy-garvin.jpg",
+   "background": [
+    "Head of regulatory and legislative affairs since June 2015; senior vice president, external affairs, Wisconsin Energy and We Energies (2011)",
+    "Vice president and general counsel, American Transmission Company; vice president, regulatory affairs, NextEra Energy Resources",
+    "Former commissioner of the Public Service Commission of Wisconsin and NARUC director; BA and JD, UW-Madison (company bio)"
+   ]
+  },
+  {
+   "name": "Paul Spicer",
+   "title": "Senior Vice President, Major Projects",
+   "background": [
+    "Since May 2026 'consults, advises and oversees major power generation projects across WEC Energy Group' — the Oak Creek, Paris, Foundry Ridge and Red Oak Ridge build; Scott Cherveny became senior vice president, power generation, the same month",
+    "Senior vice president, power generation (2019–2024); special advisor (2024–2026); vice president, gas and renewable generation (2015); joined WPS in 1993; MS mechanical engineering, University of Minnesota (company bio)"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "WPR — Judge dismisses lawsuit challenging Port Washington data-center TID",
+   "url": "https://www.wpr.org/news/judge-dismisses-lawsuit-challenging-port-washington-data-center-tid",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "WPR — ATC reapplies for transmission project for Port Washington data center ($2.48–2.72B)",
+   "url": "https://www.wpr.org/news/atc-reapplies-transmission-project-port-washington-data-center",
+   "date": "2026-09-18"
+  },
+  {
+   "label": "EEI — List of Large Customer Projects and Tariffs (updated September 11, 2026)",
+   "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+   "date": "2026-09-11"
+  },
+  {
+   "label": "WEC Energy Group — Investor Update, September 2026 (investor book)",
+   "url": "https://s22.q4cdn.com/994559668/files/doc_presentations/2026/Sep/04/09-2026-September-Final.pdf",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "StockTitan — WEC 8-K, September 2026 investor book (Point Beach extension)",
+   "url": "https://www.stocktitan.net/sec-filings/WEC/8-k-wec-energy-group-inc-reports-material-event-bf98847b01cd.html",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "WPR — Kenosha-area residents seek data-center moratorium (Microsoft site)",
+   "url": "https://www.wpr.org/news/kenosha-area-residents-data-center-moratorium-pause-microsoft-development",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "WRJN — Microsoft, ratepayer advocates challenge ATC plan for data-center transmission costs",
+   "url": "https://wrjn.com/news/2026/08/26/microsoft-ratepayer-advocates-challenge-atc-plan-for-data-center-transmission-costs",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Wisconsin Watch — Microsoft and ratepayer advocates challenge ATC's transmission-cost plan (FERC ER26-3265)",
+   "url": "https://wisconsinwatch.org/2026/08/wisconsin-data-center-microsoft-ratepayer-advocates-challenge-atc-plan-transmission-costs/",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Utility Dive — Microsoft, PowerHouse/Hillwood dispute data-center service agreements at FERC",
+   "url": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "WIEG — Intervention and comments, FERC Docket ER26-3265",
+   "url": "https://www.wpr.org/wp-content/uploads/2026/08/20260821-5305_WIEG-Intervention-and-Comments-ER26-3265.pdf",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Urban Milwaukee — We Energies deal would buy power from Point Beach into the 2050s",
+   "url": "https://urbanmilwaukee.com/2026/08/21/we-energies-deal-would-buy-power-from-point-beach-nuclear-plant-into-2050s/",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "WPR — Oracle drops Wisconsin suit over financial requirements for data centers",
+   "url": "https://www.wpr.org/news/oracle-drops-wisconsin-suit-financial-requirements-data-centers",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "PR Newswire — WEC Energy Group's 2025 Corporate Responsibility Report",
+   "url": "https://www.prnewswire.com/news-releases/wec-energy-groups-2025-corporate-responsibility-report-highlights-reliability-sustainability-and-long-term-value-302845833.html",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Motley Fool — WEC Energy Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/wec-energy-wec-q2-2026-earnings-call-transcript/",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "WPR — PSC denies (revokes completeness of) transmission project for Port Washington data center",
+   "url": "https://www.wpr.org/news/psc-denies-transmission-project-port-washington-data-center",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Wisconsin Watch — We Energies–Microsoft contract terms conflict with PSC order",
+   "url": "https://wisconsinwatch.org/2026/08/wisconsin-we-energies-microsoft-data-center-contract-terms-conflict-psc-regulators-electricity/",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "StockTitan — WEC 8-K: Caroline Garcia named VP and Controller",
+   "url": "https://www.stocktitan.net/sec-filings/WEC/8-k-wec-energy-group-inc-reports-material-event-105e1da9b1c9.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "We Energies — Launches construction on solar, wind and battery storage projects (Darien, Dawn Harvest, Badger Hollow)",
+   "url": "https://news.we-energies.com/we-energies-launches-construction-on-solar-wind-and-battery-storage-projects/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "StockTitan — WEC Energy Group Q2 2026 10-Q summary",
+   "url": "https://www.stocktitan.net/sec-filings/WEC/10-q-wec-energy-group-inc-quarterly-earnings-report-a69542e5e2ea.html",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Milwaukee NNS — We Energies–Oracle dispute; Port Washington on schedule; credit rating",
+   "url": "https://milwaukeenns.org/2026/08/04/wisconsin-we-energies-oracle-dispute-port-washington-data-center-on-schedule-legal-challenge-credit-rating/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Urban Milwaukee — ATC, We Energies seek state approval for data-center costs",
+   "url": "https://urbanmilwaukee.com/2026/08/03/american-transmission-co-we-energies-seek-state-approval-for-data-center-costs/",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "WPR — ATC and We Energies data-center cost agreement filed at FERC",
+   "url": "https://www.wpr.org/news/american-transmission-co-we-energies-data-center-cost-agreement",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Wisconsin Watch — We Energies–Oracle dispute, Port Washington on schedule, legal challenge, credit rating",
+   "url": "https://wisconsinwatch.org/2026/07/wisconsin-we-energies-oracle-dispute-port-washington-data-center-on-schedule-legal-challenge-credit-rating/",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "WEC Energy Group — Q2 2026 earnings package",
+   "url": "https://s22.q4cdn.com/994559668/files/doc_earnings/2026/q2/generic/2026-Q2-WEC-Earnings-Package-Final.pdf",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "WEC Energy Group — Reports second-quarter results",
+   "url": "https://investor.wecenergygroup.com/investors/news-releases/press-release-details/2026/WEC-Energy-Group-reports-second-quarter-results/default.aspx",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Zacks (via Yahoo Finance) — WEC Q2 earnings surpass estimates ($0.80)",
+   "url": "https://finance.yahoo.com/energy/articles/wec-q2-earnings-surpass-rate-182600764.html",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Investing.com — WEC Energy Q2 2026 earnings call transcript (consensus $0.83)",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-wec-energy-beats-q2-2026-eps-but-shares-fall-premarket-93CH-4821516",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "WCBU — Peoples Gas cuts $58 million from rate request",
+   "url": "https://www.wcbu.org/state-news/2026-07-15/peoples-gas-cuts-58-million-from-rate-request",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "WPR — Lawsuit over DNR environmental review of Port Washington data centers",
+   "url": "https://www.wpr.org/news/lawsuit-wisconsin-dnr-environmental-review-port-washington-data-centers",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Yale Clean Energy Forum — We Energies' data-center tariff",
+   "url": "https://cleanenergyforum.yale.edu/2026/06/25/we-energies-data-center-tariff",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "WPR — Oracle sues Wisconsin utility regulators over financial requirements for data centers",
+   "url": "https://www.wpr.org/news/oracle-sues-wisconsin-utility-regulators-psc-financial-requirements-data-centers",
+   "date": "2026-06-24"
+  },
+  {
+   "label": "WPR — Microsoft finishes construction of Mount Pleasant data center",
+   "url": "https://www.wpr.org/news/microsoft-finishes-construction-mount-pleasant-data-center",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "WPR — We Energies, Oracle ask state regulators to loosen financial protections for data centers",
+   "url": "https://www.wpr.org/news/we-energies-oracle-ask-state-regulators-to-loosen-financial-protections-for-data-centers",
+   "date": "2026-06-12"
+  },
+  {
+   "label": "StockTitan — WEC 8-K, June 2026 investor update (Microsoft VLC agreement)",
+   "url": "https://www.stocktitan.net/sec-filings/WEC/8-k-wec-energy-group-inc-reports-material-event-8e51a114875e.html",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "PR Newswire — Lauber highlights exceptional year for WEC Energy Group (2026 annual meeting)",
+   "url": "https://www.prnewswire.com/news-releases/lauber-highlights-exceptional-year-for-wec-energy-group-302766192.html",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "WPR — Wisconsin utility executive says more data centers could be on the horizon",
+   "url": "https://www.wpr.org/news/wisconsin-utility-company-executive-says-more-data-centers-could-be-on-horizon",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "WEC Energy Group — Q1 2026 earnings package",
+   "url": "https://s22.q4cdn.com/994559668/files/doc_earnings/2026/q1/generic/2026-Q1-WEC-Earnings-Package-Final.pdf",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Zacks (via Yahoo Finance) — WEC Energy Q1 earnings surpass estimates ($2.33)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/wec-energy-q1-earnings-surpass-170000158.html",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Equibles — WEC Energy Q1 2026 earnings call transcript",
+   "url": "https://equibles.com/stocks/wec/calls/2026-q1",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Modo Energy — MISO 2026/27 capacity auction results",
+   "url": "https://modoenergy.com/research/en/miso-2026-27-capacity-prices-results",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "PSCW — Press release: commission approves We Energies' Very Large Customer tariff with modifications",
+   "url": "https://psc.wi.gov/Documents/PressReleases/04.24.2026PressRelease.PDF",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "We Energies — Wisconsin regulators approve plan to make sure data centers pay their costs",
+   "url": "https://news.we-energies.com/wisconsin-regulators-approve-we-energies-plan-to-make-sure-data-centers-pay-their-costs/",
+   "date": "2026-04-24"
+  },
+  {
+   "label": "We Energies — Rate filing focuses on reliability, protecting customers and Wisconsin's economy (2027–2028 cases)",
+   "url": "https://news.we-energies.com/we-energies-rate-filing-focuses-on-reliability-protecting-customers-and-supporting-wisconsins-economy/",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "WPR — We Energies and WPS rate hikes proposed for 2027–2028",
+   "url": "https://www.wpr.org/news/we-energies-wisconsin-public-service-rate-hikes-2027-2028",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "We Energies — Regulators approve two solar projects (Good Oak, Gristmill)",
+   "url": "https://news.we-energies.com/regulators-approve-two-solar-projects-for-we-energies-customers/",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "We Energies — Regulators approve solar and battery project (Dawn Harvest)",
+   "url": "https://news.we-energies.com/regulators-approve-solar-and-battery-project-for-we-energies-customers/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "WEC Energy Group — 2025 Annual Report (with FY2025 Form 10-K financial statements)",
+   "url": "https://s22.q4cdn.com/994559668/files/doc_financials/2025/ar/WEC-2025-Annual-Report.pdf",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "We Energies — Data centers won't raise electricity bills",
+   "url": "https://news.we-energies.com/data-centers-wont-raise-electricity-bills/",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "StockTitan — WEC Energy Group FY2025 10-K summary (filed February 20, 2026)",
+   "url": "https://www.stocktitan.net/sec-filings/WEC/10-k-wec-energy-group-inc-files-annual-report-18390d3a7c74.html",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "REjournals — Wisconsin's data-center reckoning: four bills, no resolution",
+   "url": "https://rejournals.com/wisconsins-data-center-reckoning-four-bills-no-resolution-and-a-policy-vacuum/",
+   "date": "2026-02"
+  },
+  {
+   "label": "WEC Energy Group — Posts 2025 results",
+   "url": "https://investor.wecenergygroup.com/investors/news-releases/press-release-details/2026/WEC-Energy-Group-posts-2025-results/default.aspx",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "WEC Energy Group — Q4 2025 earnings package",
+   "url": "https://s22.q4cdn.com/994559668/files/doc_earnings/2025/q4/generic/2025-Q4-WEC-Earnings-Package-Final.pdf",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "BizTimes — WEC Energy Group adds $1 billion to spending plan for expanded Microsoft demand",
+   "url": "https://biztimes.com/wec-energy-group-adds-1-billion-to-spending-plan-to-meet-expanded-microsoft-demand/",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "WEC Energy Group — Klappa to retire; Lauber to be appointed chairman",
+   "url": "https://s22.q4cdn.com/994559668/files/doc_news/2026/Jan/22/1-22-26-Klappa-to-retire-Lauber-to-be-appointed-Chair.pdf",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "PR Newswire — WEC Energy Group raises quarterly dividend by 6.7 percent",
+   "url": "https://www.prnewswire.com/news-releases/wec-energy-group-raises-quarterly-dividend-by-6-7-percent-302668475.html",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "WPR — Microsoft proposes 15 more data centers in Mount Pleasant",
+   "url": "https://www.wpr.org/news/microsoft-15-more-data-centers-mount-pleasant",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "We Energies — More renewable energy projects approved (Saratoga, Ursa, Badger Hollow Wind, Whitetail)",
+   "url": "https://news.we-energies.com/more-renewable-energy-projects-approved-for-we-energies-customers/",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "We Energies — Major expansion plan to strengthen Wisconsin's power grid ('almost 3 GW')",
+   "url": "https://news.we-energies.com/we-energies-announces-major-expansion-plan-to-strengthen-wisconsins-power-grid/",
+   "date": "2025-11-05"
+  },
+  {
+   "label": "WPR — We Energies to add 3 GW to electric grid for data-center demand",
+   "url": "https://www.wpr.org/news/we-energies-add-3gw-electric-grid-data-center-demand",
+   "date": "2025-11-05"
+  },
+  {
+   "label": "PR Newswire — WEC Energy Group reports third-quarter 2025 results ($36.5B plan)",
+   "url": "https://www.prnewswire.com/news-releases/wec-energy-group-reports-third-quarter-results-302599084.html",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Vantage Data Centers — OpenAI, Oracle and Vantage announce Stargate data-center site in Wisconsin",
+   "url": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "WPR — Port Washington data-center campus to host OpenAI, Oracle Stargate",
+   "url": "https://www.wpr.org/news/port-washington-data-center-campus-openai-oracle-stargate-chatgpt",
+   "date": "2025-10-23"
+  },
+  {
+   "label": "We Energies — Updated timeline for Oak Creek plant retirements",
+   "url": "https://news.we-energies.com/we-energies-announces-updated-timeline-for-oak-creek-plant-retirements/",
+   "date": "2025-06-25"
+  },
+  {
+   "label": "We Energies — Wisconsin's first large-scale energy storage project now serving customers (Paris)",
+   "url": "https://news.we-energies.com/wisconsins-first-large-scale-energy-storage-project-now-serving-customers/",
+   "date": "2025-06-03"
+  },
+  {
+   "label": "We Energies — Natural gas plants in Oak Creek and Kenosha County approved by regulators",
+   "url": "https://news.we-energies.com/we-energies-natural-gas-plants-in-oak-creek-and-kenosha-county-approved-by-regulators/",
+   "date": "2025-05-22"
+  },
+  {
+   "label": "We Energies — Regulators approve High Noon solar and battery project",
+   "url": "https://news.we-energies.com/regulators-approve-large-clean-energy-project-for-we-energies-customers/",
+   "date": "2025-04-11"
+  },
+  {
+   "label": "Illinois Commerce Commission — Final order, Peoples Gas System Modernization Program investigation (Docket 24-0081)",
+   "url": "https://www.illinois.gov/content/dam/soi/en/web/illinois/iisnewsattachments/30954-022025-02.20.25-pgl-smp-final.pdf.pdf",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "WEC Energy Group — Q4 2024 earnings package (FY2024 results)",
+   "url": "https://s22.q4cdn.com/994559668/files/doc_earnings/2024/q4/generic/2024-Q4-WEC-Earnings-Package-Final.pdf",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "WEC Energy Group — Investor relations: earnings (Q3 2026 scheduled October 29, 2026)",
+   "url": "https://investor.wecenergygroup.com/investors/earnings/default.aspx"
+  },
+  {
+   "label": "WEC Energy Group — Management team",
+   "url": "https://www.wecenergygroup.com/about/management_team/management_team.htm"
+  },
+  {
+   "label": "WEC Energy Group — Scott Lauber biography",
+   "url": "https://www.wecenergygroup.com/about/management_team/bios/lauber_bio.htm"
+  },
+  {
+   "label": "WEC Energy Group — Xia Liu biography",
+   "url": "https://www.wecenergygroup.com/about/management_team/bios/liu_bio.htm"
+  },
+  {
+   "label": "WEC Energy Group — Michael Hooper biography",
+   "url": "https://www.wecenergygroup.com/about/management_team/bios/hooper_bio.htm"
+  },
+  {
+   "label": "WEC Energy Group — Dan Krueger biography",
+   "url": "https://www.wecenergygroup.com/about/management_team/bios/krueger_bio.htm"
+  },
+  {
+   "label": "WEC Energy Group — Robert Garvin biography",
+   "url": "https://www.wecenergygroup.com/about/management_team/bios/garvin_bio.htm"
+  },
+  {
+   "label": "WEC Energy Group — Paul Spicer biography",
+   "url": "https://www.wecenergygroup.com/about/management_team/bios/spicer_bio.htm"
+  },
+  {
+   "label": "WEC Energy Group — Solar and battery projects",
+   "url": "https://www.wecenergygroup.com/environment/solar-battery-projects.htm"
+  },
+  {
+   "label": "WEC Energy Group — About us (per-utility customer counts)",
+   "url": "https://www.wecenergygroup.com/about/aboutus.htm"
+  },
+  {
+   "label": "MarketBeat — WEC Energy Group earnings",
+   "url": "https://www.marketbeat.com/stocks/NYSE/WEC/earnings/"
+  },
+  {
+   "label": "American Transmission Company",
+   "url": "https://www.atcllc.com/"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

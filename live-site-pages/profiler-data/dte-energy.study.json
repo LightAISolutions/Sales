@@ -1,0 +1,453 @@
+{
+ "schemaVersion": 2,
+ "slug": "dte-energy",
+ "title": "DTE Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "the-customer-pays-for-the-battery",
+   "title": "The customer pays for the battery: what the DTE model is",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The Dominion and Duke guides taught how a regulated utility buys through a plan, a certificate and a solicitation, with a {{large-load tariff}} at the end to keep a data center's costs off everyone else's bill. DTE shows a different mechanism, and it is the one that matters most to a storage seller: the data-center customer contracts to pay for utility-owned batteries directly. Under the Oracle agreements the Michigan commission approved in December 2025, DTE Electric will build 1,383 MW of storage — one megawatt for every megawatt the campus contracted — and Oracle's subsidiary pays the full cost over fifteen years while DTE owns the assets in {{rate base}}. The batteries are bought because a customer signed, not because a plan forecast a need.",
+    "Three things follow from that design. The purchase orders arrive fast: 332 MW of named projects three months after the order, 660 MW more a month later, 300 MW of third-party tolling three months after that, and a 1.5 GW supply agreement with one manufacturer in between. The load is served from the grid, not from on-site gas — DTE's own words at the announcement were 'existing resources augmented by a new battery storage investment, financed entirely by the project' — so the AI campus becomes a grid customer with a battery portfolio behind it rather than a self-generator. And the argument moves from 'should the utility build this?' to 'who pays and who bears the risk if the campus never fills?', which is the fight now at the Michigan Court of Appeals.",
+    "This guide teaches the parts of that mechanism a high-school-STEM reader needs: what a {{special contract}} is and why it is approved differently from a tariff; how a battery is funded by a customer and still owned by a utility; how {{MISO}} counts a battery toward reliability and why a hyperscaler might hand a utility 300 MW of capacity credits for free; the four channels a utility uses to buy storage and what happens when a supplier fails; the credit machinery — triggers, collateral, minimum bills — that stands between one customer's rating and two million other bills; and how the same utility then goes to its regulator for gas plants and a plan that carries the whole thing."
+   ]
+  },
+  {
+   "id": "special-contract-vs-tariff",
+   "title": "Special contract or tariff: two ways to approve one customer",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "A tariff is a published rate anyone who qualifies can take; a special contract is a negotiated deal for one customer that the commission approves on its own. DTE used the second for its first two data centers and is now writing the first. The rows are the differences that matter to a seller.",
+   "cols": [
+    "",
+    "Published tariff (Rate D11 revisions, Case U-22061)",
+    "{{special contract}} (Oracle U-21990; Google U-22058)"
+   ],
+   "rows": [
+    [
+     "Who can use it",
+     "Any customer meeting the threshold",
+     "Only the named customer"
+    ],
+    [
+     "What the regulator decides",
+     "The terms for a class — threshold, minimum bill, term",
+     "Whether this deal, with these terms, is reasonable and protects other customers"
+    ],
+    [
+     "Speed",
+     "Months to a year, with intervenors",
+     "Ex parte in weeks (Oracle: filed October 31, approved December 18) or a contested case in six months (Google: filed March 17, decision requested by September 10)"
+    ],
+    [
+     "Transparency",
+     "Public terms",
+     "Redacted terms; the minimum bill (80%) and term (19–20 years) are public, the collateral is not"
+    ],
+    [
+     "Attack surface",
+     "A rate case or rehearing",
+     "Rehearing petitions, motions to reopen, then the Court of Appeals — which is where the Oracle approval sits"
+    ],
+    [
+     "Why DTE chose it",
+     "The December 2025 order required a tariff within 90 days",
+     "'We expect the next data center contract to move through the standard MPSC review process for special contract' — speed for the first customers, and conditions written for each"
+    ]
+   ]
+  },
+  {
+   "id": "ex-parte-and-contested",
+   "title": "Ex parte and contested: why the procedure is the politics",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**Ex parte.** The commission approves on the utility's filing, without a hearing. The Oracle contracts were approved this way, 3–0, seven weeks after filing and with six conditions attached — a fast answer for a customer that had already paid a $40 million deposit and ordered $2 billion of equipment. The price of speed is a thin record: the Attorney General, who was not heard, petitioned for rehearing, moved to reopen, was denied standing in March 2026 and appealed to the Court of Appeals, where briefs were filed in August. The batteries are being built while the approval that funds them is under review.",
+    "**Contested.** For Google, DTE chose a {{contested case}}: testimony, cross-examination, a record. The Attorney General used it to argue for a 90 percent minimum bill instead of 80 and a full-term exit fee. It is slower — the requested decision date, September 10, 2026, passed with no order reported — but an order that survives it is far harder to overturn. The lesson for anyone selling into a special-contract state: the first customer gets speed and a lawsuit, the second gets a hearing and a delay, and the terms that come out of the hearing become the tariff's floor.",
+    "**Conditions are the regulator's tariff by other means.** The six conditions on the Oracle order — cost tracking so the customer pays everything, an amended renewable plan, with-and-without-load resource scenarios, emergency procedures that curtail the data center first, six cost-of-service studies in the next rate case, and a general tariff within 90 days — are what a commission writes when it approves a deal it did not design. Each one is a docket a seller can read."
+   ]
+  },
+  {
+   "id": "funded-by-the-customer-owned-by-the-utility",
+   "title": "Funded by the customer, owned by the utility: the energy storage agreement",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "In an ordinary {{PPA}} or {{tolling agreement}} a developer owns the battery and the utility pays for its output or its availability. In DTE's energy storage agreement the roles are reversed: DTE owns the battery and the customer pays for it. The 1,383 MW obligation matches the campus's contracted demand one for one — the regulator's way of saying the data center must bring its own capacity to the system — and the customer pays the capital cost over fifteen years while receiving the wholesale market revenues the batteries earn. DTE gets a rate-base asset earning its {{allowed return}}; Oracle gets the accredited capacity its load needs and a hedge on the energy it uses; other customers get, on the commission's condition, none of the bill.",
+    "The mechanics are what a storage seller should study. The obligation is filled in tranches, each its own docket: 332 MW of DTE-owned projects (Fish Creek, Cold Creek, Pine River) approved in March 2026 with battery-module supply agreements and {{EPC}} master service agreements whose counterparties are redacted; 660 MW in April (some owned, some tolled); and 300 MW of fifteen-year tolls in July with Key Capture Energy and Copenhagen Infrastructure at a blended $15.30 per kilowatt-month. So a customer-funded obligation is met by self-build *and* by third-party tolls — the developer's battery is paid for by the hyperscaler through the utility. The channel is not exclusive.",
+    "The financial reading is about who bears the tail. Fifteen years is shorter than a battery's rate-base life, so the customer pays faster than the asset depreciates; termination payments of up to ten years of minimum charges and collateral that steps up on a downgrade cover the case where the campus stops paying; and the utility's rate case now carries an 'ESA rate base reimbursement' line so that revenue from the customer reduces what other ratepayers fund. When the CFO says the contracts 'make sure that we pay back all of the invested capital, make sure there's no stranded asset risk', this is the machinery he means — and the Court of Appeals is deciding whether it was approved properly."
+   ]
+  },
+  {
+   "id": "miso-accreditation-and-the-free-300-mw",
+   "title": "MISO accreditation, and why a hyperscaler hands a utility 300 MW for free",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Michigan is in {{MISO}}, a market with a {{capacity market}} that is much thinner than PJM's: most load-serving entities self-supply, and the annual {{planning resource auction}} clears the residual. Each utility must show, for each season, enough accredited capacity — measured in {{zonal resource credit}}s — to cover its share of the reserve requirement. A ZRC is one megawatt of capacity MISO counts on at the hour of need; a 100 MW four-hour battery does not earn 100 ZRCs, it earns what MISO's accreditation method says it will deliver, and from planning year 2028/29 that method becomes 'direct loss of load' — credit based on how much the resource actually helps in the hours the system is short. DTE's 2026 plan models exactly that.",
+    "This is why the Google contract contains a line that reads oddly at first: Google supplies DTE with about 300 MW of Zone 7 resource credits at no cost. A new gigawatt of load raises DTE's capacity obligation before the batteries and renewables built for it are accredited; the customer bridging that gap with credits it holds (from its own contracted resources) is the same idea as Duke's letter agreements or WEC's bespoke resources — the load brings capacity with it — expressed in MISO's currency. The December 2025 Oracle order requires DTE's next capacity demonstration to show the data center's effect for the same reason.",
+    "The price signal matters less than the accreditation. Zone 7's 2026/27 auction cleared summer at $424/MW-day, down from $667 the year before, after a ten-to-twenty-fold jump the year before that — volatile enough that a utility plans to physical accreditation, not to price. For a storage seller the consequence is that the value of a battery in Michigan is set by MISO's accreditation rules and the utility's demonstration, and a four-hour battery's credit will be discounted as more batteries are added; that is why the 2026 plan reaches for 1.7 GW of long-duration storage — {{compressed-air energy storage}} and {{iron-air}} — from 2037."
+   ]
+  },
+  {
+   "id": "four-ways-to-buy-a-battery",
+   "title": "Four ways a utility buys a battery, and where DTE used each",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "DTE's 2026 storage orders use every channel a utility has. Each card is one channel with its trade-offs; a seller's job is to know which channel a given megawatt is passing through, because the buyer of the hardware is different in each.",
+   "cards": [
+    {
+     "t": "Self-build with a supply agreement",
+     "meta": "Trenton Channel (220 MW / 880 MWh); Fish Creek, Cold Creek, Pine River; Monroe I; Fermi",
+     "adv": [
+      "The utility signs the battery supply agreement itself — the OEM sells directly to the buyer",
+      "The asset is rate-based; the utility's credit stands behind the purchase"
+     ],
+     "dis": [
+      "The commission approves the supply agreement, so a price and a supplier can be second-guessed (Trenton Channel's Powin contract was replaced by LG's at more than $30 million less)",
+      "Supplier failure lands on the utility: Powin missed deliveries, was terminated and went bankrupt within a month"
+     ]
+    },
+    {
+     "t": "Build-transfer from a developer",
+     "meta": "Isabella (190 MW) on the Apex-built wind site; Meridian (295 MW)",
+     "adv": [
+      "The developer carries the interconnection, permitting and construction risk to commercial operation, then hands over an operating asset",
+      "The utility still owns it in rate base"
+     ],
+     "dis": [
+      "The developer chose the OEM at bid stage, before the utility was the buyer",
+      "Transfer price scrutiny in the docket"
+     ]
+    },
+    {
+     "t": "A tolling agreement with a merchant developer",
+     "meta": "Big Mitten (450 MW, 20 years); Coldwater River, Tuscola II; KCE MI 2 (100 MW) and Redstart (200 MW) at $15.30/kW-month",
+     "adv": [
+      "No capital on the utility's balance sheet; a fixed monthly payment for availability",
+      "Sourced by RFP — the door a developer can actually walk through (450 MW in 2025, 480 MW in 2026)"
+     ],
+     "dis": [
+      "The utility does not own the asset and earns no return on it — intervenors like tolls, utilities prefer to own",
+      "The OEM is the developer's choice; the utility sees a price per kilowatt-month, not a bill of materials"
+     ]
+    },
+    {
+     "t": "A framework supply agreement",
+     "meta": "LG Energy Solution Vertech: $1.6B, eight projects, 1.5 GW / 6 GWh, two-year delivery, Michigan-made cells",
+     "adv": [
+      "One supplier for a whole tranche — price, schedule and domestic-content compliance locked across projects",
+      "Politically legible: 1,800 jobs at the Holland cell plant became part of the approval story"
+     ],
+     "dis": [
+      "Which projects it covers is not stated; the March order redacts the supplier, so the public record and the deal do not line up",
+      "Concentration: one OEM behind most of the obligation"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "when-the-supplier-fails",
+   "title": "When the supplier fails: Powin, Trenton Channel and what bankability means to a regulated buyer",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The sequence.** Trenton Channel — 220 MW / 880 MWh at a retired coal site, the largest standalone battery in the Great Lakes — was announced in June 2024 with Powin as supplier. Powin missed deliveries; DTE terminated the contract on May 19, 2025; Powin filed for bankruptcy on June 9. DTE filed a replacement supply agreement with LG Energy Solution Vertech in November 2025 and the commission approved it in April 2026 at more than $30 million less than the original. The plant is due at the end of 2026, roughly on its original schedule.",
+    "**What it teaches.** {{Bankability}} to a regulated utility is not only a lender's word. Because the supply agreement itself goes to the commission, a supplier's failure is a regulatory event — a new docket, a new price, a {{prudence review}} question about whether the first choice was reasonable. The utility protected itself with a contract it could terminate and a schedule with slack; the replacement came cheaper because battery prices had fallen and a domestic manufacturer wanted the reference. A seller pitching a utility after this episode is pitching a buyer that has been burned once and whose regulator watched.",
+    "**The domestic-content thread.** LG's cells come from Holland, Michigan; the agreement is 'domestic-content-compliant' and DTE's release counts 1,800 LG jobs and 350 construction jobs. Under the {{domestic content bonus}} and the {{FEOC}} rules that fence out certain foreign-owned suppliers from tax-credit-eligible projects, a Michigan-made battery is worth more to a Michigan utility than a cheaper import — and the commission's approval story was written in those terms. DTE never says the word FEOC; it does not need to."
+   ]
+  },
+  {
+   "id": "credit-triggers-and-collateral",
+   "title": "Credit triggers, collateral and the 80 percent minimum: what stands between one rating and two million bills",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The contracts' protections are the answer to the question every intervenor asks: what if the data center never fills, or its owner cannot pay? Each row is one protection, what it does, and the event in 2026 that tested it.",
+   "cols": [
+    "Protection",
+    "What it does",
+    "DTE's term",
+    "The 2026 test"
+   ],
+   "rows": [
+    [
+     "Minimum billing demand",
+     "The customer pays for a share of contracted capacity whether it uses it or not — the same {{minimum demand charge}} logic as Dominion's 85 percent",
+     "80% for 19 (Oracle) or 20 (Google) years; the general tariff carries the same",
+     "The Attorney General asked for 90% in the Google case; the standard D11 rate gives an ordinary customer 50–60%"
+    ],
+    [
+     "Termination payment",
+     "A lump sum if the customer leaves early",
+     "Up to ten years of minimum demand charges (Oracle)",
+     "Argued in the Court of Appeals brief as insufficient against 'nearly half a billion' of up-front cost"
+    ],
+    [
+     "Collateral with downgrade triggers",
+     "Cash or letters of credit that rise as the customer's rating falls",
+     "Redacted amounts; 'additional collateral requirements at various downgrade triggers'",
+     "S&P cut Oracle to BBB- on July 9, 2026; DTE says it received more postings"
+    ],
+    [
+     "Cost-tracking condition",
+     "The commission's order makes DTE responsible for any cost it cannot recover from the customer",
+     "Condition 1 of six",
+     "The Attorney General's motion to reopen turned on one sentence in DTE's acceptance letter"
+    ],
+    [
+     "Excess-margin flow-back",
+     "If the campus ramps faster than assumed, the extra margin goes to other customers",
+     "Regulatory-liability treatment in rate case U-22046",
+     "Pending; decision ~February 2027"
+    ],
+    [
+     "Curtailment priority",
+     "Data-center load is shed first in an emergency",
+     "Condition 5: emergency procedures updated within 90 days",
+     "Untested"
+    ]
+   ]
+  },
+  {
+   "id": "from-contract-to-gas-plant",
+   "title": "From contract to gas plant: the 2026 plan and the certificate of necessity",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Michigan's resource plan is a contested case with a 360-day clock, and its distinctive instrument is the {{certificate of necessity}}: a finding, inside the {{IRP}}, that a specific plant is needed and that its cost — up to a cap — may be recovered. DTE's 2026 plan, filed September 24, 2026, asks for two: a ~1,400 MW {{combined cycle}} in Livingston County ($3.9 billion, in service by end-2031) and a ~700 MW combined cycle in Monroe County ($2.5 billion, 2032), both carbon-capture-ready with capture entering service in 2035. It also carries 15 GW of renewables, 4.5 GW of storage including 1.7 GW of long-duration, a 177 MW {{nuclear uprate}} at Fermi 2 by 2036, and the exit from coal in 2032.",
+    "The plan's base case is the two signed contracts; a high case carries the full pipeline; an intermediate case sits between. That structure is the CEO's October 2025 remark turned into a filing — 'each additional 1-gigawatt data center could necessitate a new natural gas plant' — and it is the reason the Sierra Club immediately asked for a no-data-center scenario. DTE had turbine down payments and MISO queue positions for the combined cycles by February 2026, so as at Duke the equipment decision precedes the certificate. The OEM is not named.",
+    "For the seller the plan's arithmetic is the point: 4.5 GW of storage against 2.1 GW of new gas, where Dominion's plan runs 2 GW of storage against 8.5 GW of gas. A utility whose first data centers brought their own batteries has a plan that leans on storage for the next ones too — and a long-duration line from 2037 that says the four-hour battery's accreditation will not carry the whole load."
+   ]
+  },
+  {
+   "id": "where-dte-slots-in",
+   "title": "Where DTE's programs slot into the chain",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The seller's map: each thing DTE buys, the document that authorises it, who chooses the hardware, and the open door.",
+   "cols": [
+    "Program",
+    "Authorising document",
+    "Who chooses the equipment",
+    "The open door and its date"
+   ],
+   "rows": [
+    [
+     "1,383 MW of customer-funded storage (Oracle)",
+     "Energy storage agreement, U-21990; tranches in U-21990, U-22054, U-22060",
+     "DTE for self-build (supplier redacted; LGES framework); developers on tolls (Key Capture, CIP, Aypa)",
+     "Remaining tranches 2026–2027; the Google 480 MW after U-22058"
+    ],
+    [
+     "IRP storage (780 MW by 2030; 4.5 GW in the 2026 plan)",
+     "2022 settlement U-21193; 2026 IRP U-22168",
+     "DTE self-build (Monroe I, Fermi) and tolls",
+     "Annual RFP — 480 MW round contracts Q1 2027"
+    ],
+    [
+     "Trenton Channel 220 MW / 880 MWh",
+     "U-21566 (LGES replacement approved April 30, 2026)",
+     "LG Energy Solution Vertech",
+     "In service end-2026"
+    ],
+    [
+     "Two combined cycles (2,100 MW)",
+     "Certificates of necessity in U-22168",
+     "Undisclosed; turbine down payments made",
+     "Decision ~September 2027; construction late 2027 (Livingston)"
+    ],
+    [
+     "Renewables (~900 MW a year)",
+     "IRP and PA 235 standards",
+     "Developers on PPAs and build-transfer; DTE self-build",
+     "800 MW RFP contracts Q2 2027"
+    ],
+    [
+     "Data-center connections",
+     "Special contracts; D11 large-load tariff U-22061 pending",
+     "The customer's substation; ITC's 345 kV switching station for Van Buren",
+     "Google order (U-22058) pending; third agreement targeted by end-2026"
+    ]
+   ]
+  },
+  {
+   "id": "megawatts-on-the-clock",
+   "title": "Megawatts on the clock — the obligation, the approvals and the supply deal",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW",
+   "intro": "DTE's storage figures at their most recent disclosure. The shape to notice: the customer-funded obligation and the LGES supply deal are the same order of magnitude, and the approved projects already exceed both.",
+   "items": [
+    {
+     "label": "Storage approved by the MPSC in 2026",
+     "sub": "March 1,332 + April 660 + July 300",
+     "v": 2292
+    },
+    {
+     "label": "LG Energy Solution Vertech supply agreement",
+     "sub": "eight projects, 6 GWh",
+     "v": 1500
+    },
+    {
+     "label": "Oracle energy storage obligation",
+     "sub": "matches contracted demand",
+     "v": 1383
+    },
+    {
+     "label": "Tranches explicitly tied to the Oracle obligation in orders",
+     "sub": "332 + 300",
+     "v": 632
+    },
+    {
+     "label": "Google Clean Capacity Accelerator storage",
+     "sub": "pending U-22058",
+     "v": 480
+    },
+    {
+     "label": "Trenton Channel",
+     "sub": "LGES, end-2026",
+     "v": 220
+    }
+   ],
+   "note": "The 2022 plan's requirement was 780 MW by 2030; the customer-funded batteries alone meet DTE's share of Michigan's 2,500 MW statewide 2030 target, per the company."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Reading '1.4 GW of storage' and '332 MW' as a contradiction.** One is the obligation, the other the first tranche of named projects. Both are true; the March 2026 order says so.",
+    "**Assuming the LGES deal covers the approved projects.** The arithmetic fits (1,332 + 220 ≈ 1,552 MW) but no document names the eight; the supplier is redacted in the order.",
+    "**Treating the Google contract as approved.** The coverage plan assumed it; no order was found through September 25, 2026, and the local tax break was vetoed the same week.",
+    "**Forgetting that a special contract's approval can be reversed.** The batteries are under construction while the Court of Appeals reviews the order that funds them; a reversal would not unbuild them but could reopen who pays.",
+    "**Pricing to the auction.** Zone 7's capacity price moved $667 → $424 → (earlier) a twenty-fold jump; a battery's value in Michigan is its accreditation under MISO's direct-loss-of-load method, not the clearing price."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "In DTE's energy storage agreement, who owns the battery and who pays for it?",
+     "a": "DTE owns it in rate base and earns its allowed return; the data-center customer pays the full capital cost over fifteen years and receives the wholesale revenues. The obligation is one megawatt of storage per contracted megawatt of load."
+    },
+    {
+     "q": "Special contract versus tariff — the one-line difference.",
+     "a": "A tariff is a published rate any qualifying customer can take; a special contract is a negotiated deal for one customer that the commission approves on its own, with its own conditions."
+    },
+    {
+     "q": "Ex parte versus contested case — what does each buy?",
+     "a": "Ex parte buys speed (Oracle: seven weeks) at the cost of a thin record that invites appeal; a contested case buys a record that survives appeal at the cost of months (Google: six-plus months and counting)."
+    },
+    {
+     "q": "What is a zonal resource credit, and why would Google give DTE 300 MW of them?",
+     "a": "MISO's unit of accredited capacity, one per megawatt counted on at the hour of need. A new gigawatt of load raises DTE's obligation before the resources built for it are accredited; the customer bridges the gap with credits it holds."
+    },
+    {
+     "q": "Why does a four-hour battery earn fewer capacity credits as more batteries are added?",
+     "a": "Accreditation measures how much a resource helps in the hours the system is short; once batteries have shifted the shortfall to longer periods, each additional four-hour battery helps less — which is why DTE's plan reaches for long-duration storage from 2037."
+    },
+    {
+     "q": "Name the four channels DTE used to buy storage in 2026.",
+     "a": "Self-build with a commission-approved supply agreement; build-transfer from a developer; tolling agreements with merchant developers from an RFP; and a framework supply agreement with one manufacturer (LGES, 1.5 GW / 6 GWh)."
+    },
+    {
+     "q": "What made the Powin failure a regulatory event rather than just a commercial one?",
+     "a": "The supply agreement itself is approved by the commission, so replacing the supplier needed a new docket, a new price and a prudence question — DTE's replacement with LGES was approved at more than $30 million less."
+    },
+    {
+     "q": "What is a certificate of necessity?",
+     "a": "Michigan's version of a CPCN, made inside the IRP: a finding that a specific plant is needed and its cost may be recovered up to a cap. DTE's 2026 plan asks for two, for 1,400 MW and 700 MW of combined cycle."
+    },
+    {
+     "q": "Which of the contract protections did Oracle's July 2026 downgrade test?",
+     "a": "The collateral with downgrade triggers — DTE says it received additional postings; the minimum bill and termination payment are untouched by a rating change."
+    },
+    {
+     "q": "Why is DTE's storage-to-gas ratio different from Dominion's?",
+     "a": "Its first customers brought their own batteries under the energy storage agreement, so the 2026 plan runs 4.5 GW of storage against 2.1 GW of new gas; Dominion's plan runs 2 GW of storage against 8.5 GW of gas."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A commission order says a data center's owner must 'foot the bill' for 1,383 MW of utility-owned storage, and a later order approves 332 MW of named projects. A colleague says the utility cut the battery plan by three-quarters. What is right?",
+     "c": [
+      "The plan was cut",
+      "The 1,383 MW is the total obligation and the 332 MW is its first tranche of named projects; later orders added 660 MW and 300 MW",
+      "The 332 MW is a different customer",
+      "The orders conflict"
+     ],
+     "a": 1,
+     "why": "An obligation is filled in tranches, each its own docket."
+    },
+    {
+     "q": "Why would a utility choose an ex parte approval for its first hyperscale contract and a contested case for its second?",
+     "c": [
+      "It ran out of time",
+      "Speed for a customer that had already ordered equipment; then a hearing record for the second so the terms survive appeal — the first choice drew a Court of Appeals challenge",
+      "Ex parte is required for contracts over 1 GW",
+      "The second customer demanded it"
+     ],
+     "a": 1,
+     "why": "Procedure is politics: the Oracle order is on appeal, the Google case has a record."
+    },
+    {
+     "q": "A supplier misses its delivery dates on a utility-owned battery under a commission-approved supply agreement. What must happen before a replacement can be installed?",
+     "c": [
+      "Nothing; the utility swaps suppliers",
+      "The utility terminates, negotiates a new supply agreement and files it for commission approval — which is what DTE did with Powin and LGES",
+      "The developer takes over the project",
+      "The regulator picks a new supplier"
+     ],
+     "a": 1,
+     "why": "In a regulated self-build the supply agreement is part of the approved project; changing it is a docket."
+    },
+    {
+     "q": "A merchant developer wins a 15-year tolling agreement with DTE under the Oracle energy storage agreement. Who ultimately pays for the battery?",
+     "c": [
+      "DTE's ratepayers",
+      "The developer",
+      "Oracle, through the utility — the toll is counted against the customer-funded obligation",
+      "MISO"
+     ],
+     "a": 2,
+     "why": "The customer-funded obligation is met by tolls as well as self-build, so the hyperscaler pays the developer's battery through the utility."
+    },
+    {
+     "q": "Which document in Michigan is where a gas plant's cost cap is set?",
+     "c": [
+      "The rate case",
+      "The certificate of necessity inside the integrated resource plan",
+      "The special contract",
+      "The MISO interconnection agreement"
+     ],
+     "a": 1,
+     "why": "The certificate of necessity is the IRP's finding of need and recoverable cost, up to a cap."
+    },
+    {
+     "q": "The MISO Zone 7 capacity price fell 36 percent between two auctions while DTE was buying more batteries than ever. What explains the buying?",
+     "c": [
+      "DTE expected the price to recover",
+      "A contract obliges the customer-funded storage, and the utility plans to physical accreditation and its own demonstration, not to the auction price",
+      "The batteries were free",
+      "MISO ordered them"
+     ],
+     "a": 1,
+     "why": "Self-supplied utilities plan to accreditation; the price is a residual signal."
+    }
+   ]
+  }
+ ]
+}

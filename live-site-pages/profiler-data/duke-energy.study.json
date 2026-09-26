@@ -1,0 +1,518 @@
+{
+ "schemaVersion": 2,
+ "slug": "duke-energy",
+ "title": "Duke Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "one-company-five-commissions",
+   "title": "One company, five commissions: why a multi-state utility buys in five dialects",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The Dominion guide taught how one {{vertically integrated utility}} buys — the {{IRP}}, the {{CPCN}}, the {{RFP}}, the {{rate case}} — with a single {{public utility commission}} at the end of every arrow. Duke is that machine five times over. Its six electric utilities answer to the North Carolina, South Carolina, Florida, Indiana, Ohio and Kentucky commissions; two of them (Ohio and Kentucky) sit inside {{PJM}}, one (Indiana) inside {{MISO}}, and the Carolinas and Florida belong to no {{RTO}} at all, so their reserve margins are set by the state rather than by an auction. Every decision the earlier guides described as one proceeding is, at Duke, a set of parallel proceedings on different clocks with different statutes behind them.",
+    "That structure changes what a seller can see. A gas plant approved in South Carolina (Anderson County, March 2026) says nothing about whether North Carolina will approve the next one; a battery placed at a retiring coal site in the Carolinas is bought under a resource plan, while a battery in Florida is bought under a ten-year site plan and a rate settlement, and Indiana's is bought under a separate {{IRP}}. The same company can be the corpus's largest disclosed turbine buyer and a regulator's first data-center refusal in the same month — because two commissions were deciding two different questions.",
+    "This guide therefore adds four things to the Dominion foundation: how a multi-jurisdiction utility reports a data-center pipeline honestly (and why its numbers look small), what a {{heavy-duty gas turbine}} order book is and why turbine slots became the scarcest input in the industry, how utility-owned storage at retired coal sites is bought and why the {{point of interconnection}} is the real asset, and how a regulated utility funds a $100 billion plan — {{rate base}}, {{CWIP}}, {{tax credit transferability}}, hybrid securities and minority sales of a whole utility. It closes with the event that ties them together: a commission refusing a plant because the data-center load behind it had never been tested in a hearing."
+   ]
+  },
+  {
+   "id": "reading-a-pipeline-ladder",
+   "title": "Reading a pipeline ladder: signed, under construction, late-stage — and what is not on it",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Every utility in this corpus reports data-center demand on a ladder, but the rungs are not standard. The lesson is to ask, for each number, what a customer has actually signed. Figures are the companies' own at their most recent disclosure; they are here to teach the rungs, not to be memorised.",
+   "cols": [
+    "Rung",
+    "What it means",
+    "Who has signed what",
+    "Duke's figure (Aug 2026)",
+    "Dominion / AEP for contrast"
+   ],
+   "rows": [
+    [
+     "Inquiry or study stage",
+     "A developer has asked for a study; the utility has done engineering work",
+     "Nothing binding; a study fee at most",
+     "Not published",
+     "Dominion 32.4 GW at substation-engineering stage"
+    ],
+    [
+     "Late-stage or advanced",
+     "The utility judges the project likely; a {{letter agreement}} may be in place with refundable capital and termination fees",
+     "A letter agreement, not a service contract",
+     "~15.4 GW 'high-confidence, late-stage' — inclusive of the signed rung",
+     "Dominion 9.4 GW under construction authorizations"
+    ],
+    [
+     "Signed {{ESA}}",
+     "An electric service agreement with a term, minimum bills, credit support and termination damages",
+     "The customer is contractually bound",
+     "~7.8 GW",
+     "Dominion 12.0 GW; AEP 69 GW 'under executed agreements' across 11 states"
+    ],
+    [
+     "Under construction",
+     "Buildings and the utility's substations are being built — a subset of signed",
+     "Capital is being spent on both sides",
+     "~5.2 GW",
+     "Not broken out by the others"
+    ],
+    [
+     "Energised",
+     "Load is drawing power",
+     "Revenue",
+     "Not published as a data-center figure; deliveries 2H 2027 onward",
+     "Dominion: data centers 28% of Virginia sales (2025)"
+    ]
+   ]
+  },
+  {
+   "id": "why-conservative-numbers-still-move",
+   "title": "Why a conservative ladder still moves the plan: the two-step from ESA to capital",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The trap.** A reader who compares 7.8 GW with 53.8 GW concludes Duke has a seventh of Dominion's business. It does not; it reports a different rung. Duke publishes only what is signed and what is being built, and its 15.4 GW 'late-stage' figure *includes* the signed 7.8 GW — so the unsigned late-stage volume is about 7.6 GW, not 15.4 GW. Dominion's headline counts study-stage requests three rungs earlier. Same market, different honesty conventions.",
+    "**Step one — signing moves the forecast.** When 2.7 GW of ESAs signed in one quarter (Q1 2026), the Carolinas load forecast moved to its 'high load case', the enterprise growth guidance became 3–4 percent a year for 2027–2030, and the {{IRP}} filed five months later carried 13 GW of storage and 14 GW of gas through 2041. A signed ESA is the evidence a {{load forecast}} needs to survive a hearing.",
+    "**Step two — the forecast moves the plan, but only on approval.** The $103B five-year plan already carries the plants that the 2024 and 2025 plans justified; the $5–10 billion of Indiana and Florida capital the CFO named in August 2026 is *not* in it, because nothing there is certified yet. So the seller's calendar has two dates per state: the ESA count that moves the forecast, and the certificate order that moves the money. The CPCN denial in North Carolina in September 2026 is what happens when a regulator decides step one was not proven — the plan does not shrink, but the plant does not get built."
+   ]
+  },
+  {
+   "id": "the-turbine-order-book",
+   "title": "The turbine order book: why a gas turbine slot became the scarcest thing a utility buys",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A {{heavy-duty gas turbine}} is a jet engine's bigger cousin bolted to a generator: air is compressed, fuel is burned, and the hot gas spins a turbine that turns the shaft. In a {{simple cycle}} plant that is the whole story — fast to start, cheap to build, expensive to run, so it runs a few hundred hours a year as a peaker. In a {{combined cycle}} the exhaust, still hot enough to boil water, raises steam in an {{HRSG}} to drive a second turbine, which lifts efficiency from the mid-thirties to about sixty percent and makes the plant a baseload machine. Duke's seven projects use both: 'CC' where it needs energy around the clock (Person County, Cayuga, Anderson), 'CT' where it needs capacity for the peak (Marshall, Buck, Smith).",
+    "The scarce input is not gas or land; it is the turbine itself. Three manufacturers (GE Vernova, Siemens Energy, Mitsubishi Power) build the largest class, each machine takes years to make, and the AI buildout, data-center on-site generation and utility resource plans all queued for the same factories at once — by 2026 the order books were reported full through 2030. A utility therefore reserves *slots* before it has a certificate: Duke secured 8 turbines, then up to 11 more (April 2025), then 20, then 26 (August 2026), and the first was delivered to Person County in July 2026, a year before the plant is due. The {{slot reservation}} is a bet that the regulator will say yes; the six turbines added in August 2026 were 'to align with next phase of build in resource plans' — plants that had not yet been filed.",
+    "For a seller this creates two facts. First, the OEM decision for a regulated gas plant is made years before the CPCN, so the plant's supply chain — transformers, switchgear, the balance of plant — is being specified while the docket is still a forecast. Second, a denied certificate leaves a reserved turbine looking for a home: when North Carolina refused the 255 MW Smith peaker, the slot did not vanish, it moved to whichever plant the resource-plan order lets Duke build next. Reading a utility's turbine count against its certified megawatts tells you how much of its plan is still a bet."
+   ]
+  },
+  {
+   "id": "capacity-without-an-auction",
+   "title": "Capacity without an auction: reserve margins in a vertically integrated system",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Dominion's guide ended with {{PJM}}'s {{capacity market}}: a three-year-ahead auction that prices reliability and accredits each resource with an {{ELCC}}. Most of Duke does not live there. The Carolinas and Florida are outside any {{RTO}}; their utilities are their own {{balancing authority}}s, and the state commission decides the {{planning reserve margin}} — the cushion of capacity above the forecast peak — in the resource-plan docket. There is no auction price to signal scarcity, so the argument about how much to build is made with load forecasts, {{capacity credit}} assumptions and the cost of the last plant, in front of commissioners rather than in a market.",
+    "That has three consequences a seller should carry. The reserve margin, not a market, sets the size of the storage and gas slice, so the number to read is the plan's target margin and the winter peak it is applied to (Duke's 2026 Carolinas plan raises the winter peak by more than 10 GW). The {{capacity credit}} the plan gives a four-hour battery decides how much storage counts toward the margin — the same accreditation fight as in PJM, but settled by the utility's model and the commission's order. And when a plant is denied, the reserve margin does not fall by itself: the utility refiles, buys purchased power, or leans on {{demand response}} programs such as South Carolina's PowerShare Storage, which pays customers to let the utility use their batteries at the peak.",
+    "Indiana, Ohio and Kentucky are the exceptions inside the same company. Duke Energy Indiana plans to MISO's rules, and Duke Energy Ohio — a wires-only company since Ohio restructured — owns no generation at all, buying its default supply through auctions and paying PJM's capacity price through riders. That is why the same tariff question ('should data centers pay 85 percent of contracted demand?') has a different shape in Ohio, where the utility is only recovering wires, than in the Carolinas, where it is recovering a plant."
+   ]
+  },
+  {
+   "id": "storage-at-the-coal-site",
+   "title": "Storage at the coal site: why the point of interconnection is the asset",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Duke's Carolinas batteries are being placed at Allen, Riverbend and Mayo — retired or retiring coal plants — rather than on greenfield land. The reason is the grid connection, not the real estate. Each row is a reason the coal site wins.",
+   "cols": [
+    "What the site already has",
+    "Why it matters for a battery",
+    "What it saves"
+   ],
+   "rows": [
+    [
+     "A {{point of interconnection}} at transmission voltage",
+     "The coal plant's generator step-up transformers and switchyard already tie the site to the high-voltage grid at a capacity the battery can reuse",
+     "Years in the {{interconnection queue}} and most of the {{network upgrades}} a greenfield project would pay for"
+    ],
+    [
+     "Existing capacity rights",
+     "The retiring unit's injection rights can be transferred to the replacement resource under surplus-interconnection rules",
+     "A {{system impact study}} that would otherwise size new lines"
+    ],
+    [
+     "Land, water, roads and permits",
+     "Industrial zoning, fenced land, fire-service access and environmental permits are in place",
+     "Permitting time and the local opposition that stalls greenfield storage"
+    ],
+    [
+     "Federal tax treatment",
+     "A retired coal site is an 'energy community', which adds a bonus to the {{ITC}} — Allen 1 earned 40 percent plus a 10 percent adder",
+     "Roughly a tenth of the capital cost"
+    ],
+    [
+     "A rate-base story",
+     "The utility is replacing its own plant on its own land with an asset it owns, which enters {{rate base}} and earns the {{allowed return}}",
+     "The argument with intervenors about whether to own or contract"
+    ]
+   ]
+  },
+  {
+   "id": "who-picks-the-battery",
+   "title": "Who picks the battery: three procurement doors and the missing name",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "Duke has told the market it will have about 4.5 GW of batteries by 2031 but has not named a supplier for any of them. That is not secrecy so much as structure — the supplier is chosen inside one of three channels, and only one of them is public.",
+   "cards": [
+    {
+     "t": "Self-build under the resource plan",
+     "meta": "Allen, Riverbend, Knightdale; the Florida solar-sited units",
+     "adv": [
+      "The utility's engineering and procurement group and its {{EPC}} choose the {{BESS}} — one buyer, one qualification process",
+      "The asset is rate-based, so the buyer's test is {{bankability}} and a {{prudence review}} years later, not price alone"
+     ],
+     "dis": [
+      "The choice is made in a purchase order the docket never shows; a seller learns of it, if at all, from the EPC",
+      "Cost caps in the certificate mean the utility carries overruns — it buys conservatively"
+     ]
+    },
+    {
+     "t": "A competitive solicitation",
+     "meta": "South Carolina's ~400 MW four-hour RFP (2026); the paused North Carolina solar-and-storage RFP",
+     "adv": [
+      "Public: eligibility, size, duration and the bid date are posted",
+      "Two tracks — utility-owned or a storage service agreement — so both an OEM (through the utility's EPC) and a developer (with its own OEM) can win"
+     ],
+     "dis": [
+      "Awards are a small share of the plan (400 MW of 4,500)",
+      "The North Carolina round was paused by the commission in April 2026 and is in court — a door can close for a year"
+     ]
+    },
+    {
+     "t": "A customer-funded or customer-sited battery",
+     "meta": "PowerShare Storage (South Carolina); the 2024 Amazon/Google/Microsoft/Nucor tariff agreements for long-duration storage",
+     "adv": [
+      "The customer chooses and owns the hardware; the utility pays a credit per kW to call on it",
+      "Fastest to market — no certificate"
+     ],
+     "dis": [
+      "Small and behind the meter; not the 4.5 GW",
+      "The long-duration tariff concepts of 2024 have produced no named project yet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "funding-a-hundred-billion",
+   "title": "Funding a $103 billion plan: rate base, CWIP, tax credits and selling a fifth of a utility",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A regulated utility's plan is only as large as its balance sheet allows. The Dominion guide gave the one equation — revenue requirement equals costs plus {{rate base}} times the {{allowed return}} — and the incentive it creates to own plant. Duke's plan shows the five levers a company pulls to keep building when the plan doubles. The first is {{CWIP}}: normally a plant earns nothing until it is in service, and the utility carries the financing cost; North Carolina's 2025 law lets baseload plants earn on construction work in progress, and Indiana already does for Cayuga, which is why a $103B plan whose plants arrive in 2028–2031 does not crush earnings in 2026.",
+    "The second is the credit metric. Rating agencies judge a utility by funds from operations against debt; Duke targets 14.5 percent in 2026 and 15 percent long term, which caps how much of the plan can be borrowed. The rest must be equity — about 35 percent of incremental capital, or $10 billion over 2027–2030 — and that is the third lever: an {{ATM program}} that dribbles shares into the market, and {{equity units}} ($1.75 billion in August 2026) whose share purchase settles in 2029, the year the gas plants enter service. A seller reading a utility's financing plan can see when it expects its plants to start earning.",
+    "The fourth lever is tax credits. Nuclear plants earn a {{nuclear PTC}} per megawatt-hour, batteries an {{ITC}}, solar a production credit; under {{tax credit transferability}} a utility that has more credits than tax can sell them for cash — Duke agreed to sell up to $3.1 billion of credits generated 2025–2028. Regulated utilities then pass the value to customers (Florida returned a battery's $50 million ITC to avoid a rate step), which is why storage projects are politically easier to approve than gas plants: a battery arrives with a discount attached.",
+    "The fifth is the one most corpora miss: selling part of a utility. Brookfield is buying 19.7 percent of Duke Energy Florida's parent for $6 billion in five tranches through 2028, taking two of eleven board seats and consent rights, while Duke keeps 80.3 percent and operates. For Duke it is equity without issuing shares; for the buyer it is a regulated return with a state commission guaranteeing recovery. The CFO's 'Indiana genco under evaluation' is the same idea aimed at the next $5–10 billion. When a utility's upside capital is announced together with a minority-sale structure, the two are one decision."
+   ]
+  },
+  {
+   "id": "eighty-year-reactors",
+   "title": "Eighty-year reactors and uprates: the nuclear position the plan takes for granted",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A reactor's original license runs 40 years; a first renewal takes it to 60 and a {{subsequent license renewal}} to 80. The second renewal is not a redesign — it is an aging-management review of the components that cannot be replaced (the vessel, the containment, buried piping) and a demonstration that the utility has a program to watch them. Oconee got its 80-year license in March 2025, Robinson in April 2026, Brunswick's application is due by end-2026, and Duke intends to renew all eleven units. For the AI-load story this is the quietest large number in the plan: 10,773 MW of {{baseload}} that would otherwise start leaving the system in the 2030s stays until the 2050s.",
+    "A {{nuclear uprate}} adds output to an existing reactor without a new license — larger turbines, better fuel, more precise instruments that let the plant run closer to its limits. About 300 MW across four stations is planned by 2031, at a cost per megawatt far below any new plant. New nuclear is the option, not the plan: an early site permit at Belews Creek (filed December 2025, decision expected 2027) buys the right to build an {{SMR}} there later, on the same 2036–2037 horizon as Dominion's North Anna, with the 2024 hyperscaler tariff agreements as the intended funding route. Nothing about the technology, the vendor or the customer has been chosen.",
+    "The seller's reading is about what nuclear does to the rest of the mix. A fleet that runs at 96.9 percent capacity factor needs peaking and flexible resources beside it, not more baseload — which is why Duke's near-term build is gas turbines and four-hour batteries, and why the resource plan's storage line grows faster than its combined-cycle line. The nuclear PTC, worth about $600 million a year to customers, is also the credit pool the tax-credit sale draws on."
+   ]
+  },
+  {
+   "id": "the-tariff-spectrum",
+   "title": "The large-load tariff spectrum: one utility, three drafts",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The Dominion guide taught what a large-load tariff contains. Duke shows that the same company writes different drafts for different commissions, and that the draft is only the opening bid. Read each row as a negotiation, not a rate.",
+   "cols": [
+    "Term",
+    "Duke's North Carolina proposal (2026 rate case)",
+    "Advocates and Public Staff",
+    "Duke Energy Florida (Docket 20260064-EI)",
+    "Dominion GS-5 (the benchmark)"
+   ],
+   "rows": [
+    [
+     "Threshold",
+     "50 MW",
+     "25 MW",
+     "50 MW at one location (lowered from 100)",
+     "25 MW and 75% load factor"
+    ],
+    [
+     "Minimum bill",
+     "75% of maximum potential demand",
+     "85%",
+     "75–85% take-or-pay of contracted capacity; 60% minimum load factor",
+     "85% of T&D demand, 60% of generation"
+    ],
+    [
+     "Term",
+     "10–15 years",
+     "20 years, separate rate class",
+     "20 years, 2-year notice",
+     "14 years (4-year ramp + 10)"
+    ],
+    [
+     "Exit",
+     "Termination charges",
+     "Exit fees at full remaining obligation",
+     "3 years of minimum bills + net book value of dedicated facilities",
+     "Remaining minimum obligations"
+    ],
+    [
+     "Connection cost",
+     "Refundable capital advances under {{letter agreement}}s",
+     "Customer-funded",
+     "100% of extension cost advanced as CIAC, refundable over 5 years; $150,000 study fee",
+     "Deposits for equipment orders"
+    ],
+    [
+     "Rate schedule",
+     "Standardised bilateral agreements",
+     "A new class",
+     "None until the next rate case — the issue the Florida PSC called 'facially noncompliant'",
+     "A defined class from January 2027"
+    ],
+    [
+     "Status",
+     "Separate expedited proceeding, to finish before January 1, 2027",
+     "—",
+     "Hearing August 2026; written order pending",
+     "In effect 2027"
+    ]
+   ]
+  },
+  {
+   "id": "load-forecast-on-trial",
+   "title": "The load forecast on trial: what a CPCN denial teaches",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**What happened.** On September 19, 2026 the North Carolina commission denied Duke a certificate for a 255 MW simple-cycle turbine at its Smith complex, 3–1, finding that about 70 percent of the load growth the plant was justified on was data centers 'never tested in contested proceedings', and that any reapplication must show compliance with the Ratepayer Protection Pledge the company had signed in July. The turbine slot is reserved; the plant is not.",
+    "**Why it matters more than 255 MW.** A {{CPCN}} is where a {{load forecast}} stops being a slide and becomes evidence. Duke's ladder is conservative, but the plant was filed before the ESAs behind it had been examined in the resource-plan docket (order due December 31, 2026). The commission's message was procedural: prove the load in the plan first, then certify the plant. Every utility in this corpus with a gas program justified on data centers — Dominion's Chesterfield, Southern's 9.9 GW, DTE's two combined cycles — now has a precedent for the question it will be asked.",
+    "**What a seller does with it.** Watch the resource-plan order, not the plant docket; the plant follows. Read the pledge and the settlements' large-load tariff proceeding as the conditions a reapplication must meet. And note the asymmetry: the same commission approved the coal-site batteries without controversy, because a battery that arrives with a tax credit and replaces a retiring unit does not need a data-center forecast to justify it. In a contested state, storage is the easier certificate."
+   ]
+  },
+  {
+   "id": "where-duke-slots-in",
+   "title": "Where Duke's programs slot into the chain",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The seller's map: for each thing Duke buys, which document authorises it, who chooses the hardware, and when the door is open.",
+   "cols": [
+    "Program",
+    "Authorising document",
+    "Who chooses the equipment",
+    "The open door and its date"
+   ],
+   "rows": [
+    [
+     "7,501 MW of gas (7 plants)",
+     "State CPCNs; NC resource-plan order due Dec 31, 2026",
+     "Duke's generation group — GE Vernova for turbines; EPC for balance of plant",
+     "Buck CT 3–4 and any Smith refiling after the resource-plan order; Person County CC2 and Anderson under construction"
+    ],
+    [
+     "~4.5 GW of batteries by 2031",
+     "Carolinas resource plans; Florida ten-year site plan; Indiana IRP",
+     "Undisclosed — the utility's EPC on self-build; developers on the SC RFP's service-agreement track",
+     "SC 400 MW RFP award; the NC RFP ruling October 5, 2026; Florida Powerline (2027) and Bartow (2028)"
+    ],
+    [
+     "Large-load connections (7.8 GW signed)",
+     "ESAs under letter agreements; tariffs pending in NC, FL, OH",
+     "The customer's substation and the utility's — transformers from GE Vernova Goldsboro",
+     "NC tariff proceeding before January 1, 2027; Florida order after September 15 briefs"
+    ],
+    [
+     "Grid ($40B, ~39% of the plan)",
+     "Rate cases and riders; DOE SPARK award",
+     "Duke's grid group; advanced conductors and dynamic line ratings",
+     "NCUC rate orders mid-November 2026; Ohio order by May 2027"
+    ],
+    [
+     "Nuclear renewals and uprates",
+     "NRC licenses",
+     "Duke's nuclear group",
+     "Brunswick application by end-2026; Belews Creek permit 2027"
+    ],
+    [
+     "Solar (4,000 MW by 2034)",
+     "Annual competitive procurements (Carolinas); self-build (Florida)",
+     "Bidding developers (Carolinas); Duke (Florida)",
+     "Each year's procurement round; paused in NC in 2026"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — the ladder, the build and the plan",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "Duke's own figures at their most recent disclosure, side by side. The lesson is the ordering: the plan (13 GW of storage by 2041) is largest, the signed load is in the middle, and what is actually being built is smallest.",
+   "items": [
+    {
+     "label": "Storage in the 2026 Carolinas plan by 2041",
+     "sub": "filed August 2026",
+     "v": 13
+    },
+    {
+     "label": "Late-stage data-center pipeline",
+     "sub": "inclusive of signed; Aug 2026",
+     "v": 15.4
+    },
+    {
+     "label": "Signed data-center ESAs",
+     "sub": "Aug 2026",
+     "v": 7.8
+    },
+    {
+     "label": "New gas in the Q2 2026 table",
+     "sub": "seven plants",
+     "v": 7.5
+    },
+    {
+     "label": "Data centers under construction",
+     "sub": "Aug 2026",
+     "v": 5.2
+    },
+    {
+     "label": "Batteries online by 2031",
+     "sub": "company target",
+     "v": 4.5
+    },
+    {
+     "label": "Batteries named with dockets (Carolinas + Florida)",
+     "sub": "Allen 1–2, Riverbend, Knightdale, Powerline, Bartow",
+     "v": 0.76
+    }
+   ],
+   "note": "The 15.4 GW bar is longer than the 13 GW bar only because it counts load, not capacity; a data-center gigawatt needs roughly a gigawatt of firm capacity plus reserve."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Treating the ladder as comparable across utilities.** Duke's 7.8 GW and Dominion's 53.8 GW are different rungs. Compare signed to signed.",
+    "**Assuming a turbine slot is a plant.** 26 turbines secured against 7,501 MW certified or requested means part of the book is a bet on plans not yet filed; a denied certificate moves a slot, it does not cancel it.",
+    "**Reading 'no supplier named' as 'no supplier chosen'.** Self-build batteries are bought through the EPC; the public doors are the SC RFP and Florida's solar-sited units.",
+    "**Forgetting the fifth commission.** Ohio and Kentucky are PJM; Indiana is MISO; the Carolinas and Florida have no auction. A tariff argument that works in one does not transfer.",
+    "**Ignoring the financing calendar.** Equity units that settle in 2029, CWIP from 2025, tranches of a utility sold through 2028 — the plan's timing is written in its financing, and a seller who reads only the capex table misses when the money actually moves."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Duke reports 7.8 GW signed and 15.4 GW 'late-stage'. How much late-stage load is unsigned?",
+     "a": "About 7.6 GW — the 15.4 GW is inclusive of the signed ESAs. Compare a utility's signed rung with another's signed rung, never a signed figure with a study-stage total."
+    },
+    {
+     "q": "What is a turbine slot reservation, and why does a utility take one before it has a certificate?",
+     "a": "A place in a manufacturer's build queue for a heavy-duty gas turbine. Order books ran full through 2030, so a utility reserves years ahead and bets the regulator will certify a plant to put it in; a denial moves the slot to the next plant rather than cancelling it."
+    },
+    {
+     "q": "Simple cycle versus combined cycle — one sentence each.",
+     "a": "Simple cycle: the turbine's exhaust is wasted, so the plant is cheap to build, fast to start and expensive to run — a peaker. Combined cycle: the exhaust raises steam for a second turbine, lifting efficiency to about 60 percent — a baseload machine."
+    },
+    {
+     "q": "Why does Duke put its Carolinas batteries at retired coal plants?",
+     "a": "The point of interconnection: the site's switchyard, transformers and injection rights already tie it to the transmission grid, saving years in the queue and most network upgrades — plus the energy-community bonus on the investment tax credit."
+    },
+    {
+     "q": "In a state with no RTO, what replaces the capacity auction?",
+     "a": "The state commission sets a planning reserve margin in the resource-plan docket; the utility argues the size of its build with load forecasts and capacity-credit assumptions rather than an auction price."
+    },
+    {
+     "q": "What does CWIP recovery change about a utility's incentive to build?",
+     "a": "It lets a plant earn a return during construction rather than only after it enters service, so a five-year plan whose plants arrive in 2028–2031 does not depress earnings in the years before — and the utility can build sooner."
+    },
+    {
+     "q": "Why is a battery an easier certificate than a gas plant in a contested state?",
+     "a": "It arrives with a tax credit the utility passes to customers, it usually replaces a retiring unit at an existing interconnection, and it does not need a contested data-center load forecast to justify it."
+    },
+    {
+     "q": "What did the September 2026 Smith CPCN denial actually decide?",
+     "a": "That the data-center load growth the plant was justified on had not been tested in a contested proceeding; prove the forecast in the resource plan first, and show compliance with the ratepayer pledge on reapplication."
+    },
+    {
+     "q": "Brookfield buys 19.7 percent of Duke Energy Florida's parent. What does each side get?",
+     "a": "Duke gets $6 billion of equity without issuing shares, keeps 80.3 percent and operates; Brookfield gets a regulated return with commission-guaranteed recovery, two board seats and consent rights."
+    },
+    {
+     "q": "What is a subsequent license renewal?",
+     "a": "The NRC's second 20-year extension, from 60 to 80 years, granted on an aging-management review of the components that cannot be replaced — not a redesign."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A utility's investor deck shows 15.4 GW 'high-confidence, late-stage pipeline, inclusive of signed ESAs' and 7.8 GW of signed ESAs. A colleague says the utility has 23.2 GW in play. What is wrong?",
+     "c": [
+      "Nothing — the figures add",
+      "The 15.4 GW already contains the 7.8 GW; the unsigned late-stage volume is about 7.6 GW",
+      "The 7.8 GW is capacity, not load",
+      "The deck double-counts construction"
+     ],
+     "a": 1,
+     "why": "'Inclusive of signed' means the larger rung contains the smaller; subtract, do not add."
+    },
+    {
+     "q": "A regulator denies a 255 MW peaker because its data-center load forecast was untested, but the utility has already reserved the turbine. What happens to the turbine?",
+     "c": [
+      "The reservation is forfeited",
+      "It is delivered and stored until a plant is certified — the slot moves to the next plant in the plan",
+      "The manufacturer resells it to a data center",
+      "The regulator takes it into rate base"
+     ],
+     "a": 1,
+     "why": "A slot reservation is a bet on future certificates; a denial reassigns the machine within the utility's program rather than cancelling it."
+    },
+    {
+     "q": "Why would a utility choose a four-hour battery at a retired coal plant over a cheaper greenfield site?",
+     "c": [
+      "Coal sites have lower land prices",
+      "The coal site's existing transmission interconnection and injection rights avoid the queue and most network upgrades, and the energy-community ITC adder lowers the cost",
+      "Batteries need the coal plant's water",
+      "State law requires it"
+     ],
+     "a": 1,
+     "why": "The grid connection is the scarce asset; the tax bonus is the second reason."
+    },
+    {
+     "q": "Duke Energy Ohio owns no generation and sits in PJM; Duke Energy Carolinas owns plants and sits in no RTO. Which statement is true of a large-load tariff in each?",
+     "c": [
+      "Both recover the same plant costs",
+      "In Ohio the tariff recovers wires and passes through PJM capacity; in the Carolinas it recovers the utility's own generation and wires against a state-set reserve margin",
+      "Neither can have a minimum bill",
+      "Only Ohio can charge a termination fee"
+     ],
+     "a": 1,
+     "why": "Restructured versus vertically integrated: what the utility owns decides what the tariff recovers."
+    },
+    {
+     "q": "A utility issues $1.75 billion of equity units whose share purchase settles in August 2029. What does the date tell you?",
+     "c": [
+      "Nothing; it is a market convention",
+      "The company expects the plants funded by the equity to be in service and earning around then",
+      "The company plans to buy back shares in 2029",
+      "Its credit rating expires in 2029"
+     ],
+     "a": 1,
+     "why": "Hybrid equity is timed to the rate-base build; the settlement date approximates when the financed plant starts earning."
+    },
+    {
+     "q": "What does the transferability of tax credits let a regulated utility do?",
+     "c": [
+      "Avoid state regulation",
+      "Sell nuclear, solar and storage credits it cannot use against its own tax for cash, and pass the value to customers — which lowers the rate impact of a battery",
+      "Claim credits twice",
+      "Skip the certificate process"
+     ],
+     "a": 1,
+     "why": "Duke agreed to sell up to $3.1 billion of 2025–2028 credits; Florida returned a battery's ITC to avoid a rate step."
+    }
+   ]
+  }
+ ]
+}

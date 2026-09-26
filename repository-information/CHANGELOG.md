@@ -3,11 +3,110 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 108/100`
+`Sections: 109/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.57r] — 2026-09-25 10:13:13 PM EST
+
+> **Prompt:** "Picking up from my last session, run Phase F sessions F-U1 and F-U2 of
+> repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: Duke Energy, DTE Energy and WEC
+> Energy (F-U1), then Berkshire Hathaway Energy (NV Energy) and Exelon (F-U2).
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the
+> five F-U1/F-U2 rows of §11.3 are yours); .claude/rules/profiler-app.md (Profiler Command including step
+> 1a identity and step 7 reconciliation, Profiler Prep Command, Scheduled Refreshes);
+> repository-information/PROFILER-SCHEMA.md (Naming and renames, Segments registry, Refresh calendar);
+> repository-information/PROFILER-STYLES.md (active style intel-briefing). Read the dominion-energy,
+> southern-company and aep dossiers and study guides as the house pattern for a utility.
+>
+> TWO WAVES, TWO PUSHES — I am explicitly asking for two separate push commits:
+> - Wave 1: Duke Energy, DTE Energy, WEC Energy -> commit and push.
+> - Wave 2: Berkshire Hathaway Energy, Exelon -> commit and push once wave 1's branch has merged
+>   (Pre-Push #5 push-once).
+> If the session runs short, stop cleanly after wave 1 and hand wave 2 back to me as a prompt.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1, categories ["utility"]) and study guide (schema v2) with its lesson plan under
+> repository-information/study-prep/<slug>/. Populate aka[] BEFORE the step-7 grep (operating utilities
+> and former names: ComEd, Commonwealth Edison, PECO, BGE, Pepco, Delmarva, Atlantic City Electric; NV
+> Energy, Nevada Power, Sierra Pacific, PacifiCorp, MidAmerican; Duke Energy Carolinas / Progress /
+> Florida / Indiana / Ohio, Piedmont; DTE Electric; We Energies, Wisconsin Public Service). Assign segments
+> in live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis: `utilities` ·
+> incumbent; `storage-developers-and-ipps` · adjacent only where utility-owned storage is material in the
+> dossier). Then the registry sync, the graph build, a dated calendar row per company (all five file with
+> the SEC — research each Q3 2026 earnings date), README tree entries, and rewrite and flip your §11.3 rows.
+>
+> IDENTITY (step 1a) — check at least: Brookfield's 19.7% Duke Energy Florida stake (first closing not
+> confirmed); BHE is 100% Berkshire and PacifiCorp is selling its Washington operations to Portland
+> General (close 2027); nothing known for DTE, WEC or Exelon — verify anyway. Proposed slugs: duke-energy,
+> dte-energy, wec-energy, berkshire-hathaway-energy, exelon. Decide BHE's display name under Naming and
+> renames; the precedent for a holding company taught through its lead utility is Southern Company.
+>
+> THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+> budget ran out partway, and nobody has read the underlying articles. Verify every figure against
+> first-party sources (10-K and 10-Q, the Q2 2026 decks, state PUC dockets, and EEI's "Large Load Projects
+> and Tariffs" list updated 11 Sep 2026), record a premise verdict per clause, and rewrite the cells.
+>
+> RECONCILIATION (step 7) — expected inbound: Exelon/ComEd ~19 dossiers, NV Energy/BHE/PacifiCorp ~18,
+> Duke ~10, DTE ~9, WEC ~4. Known drift candidates, all agent-reported and unread:
+> - powerhouse-data-centers says ComEd's Joliet TSA was lost in July; Utility Dive reported FERC rejected
+>   ComEd's cancellation notice on 22 Sep 2026, leaving the dispute in federal court.
+> - tract carries NV Energy's July lawsuit and a pending PUCN gas-plant decision; the PUCN reportedly
+>   approved the two plants conditionally around 19 Sep 2026.
+> - lg-energy-solution carries the DTE 6 GWh LGES Vertech deal — check that both sides agree.
+> - DTE's Saline-linked storage is 1.4 GW in one source and 332 MW in the MPSC approval; state both unless
+>   a source reconciles them.
+> If BHE's or Exelon's reconciliation outgrows the session, say so and defer it per step 7's scope note.
+>
+> DO NOT edit googleAppsScripts/Classroom/Classroom.gs. Five new utilities make landscape-utilities-2026-09
+> (built on "six franchises") and the three scenario-utilities-* rehearsals stale; record that in the
+> CHANGELOG entry and the SESSION-CONTEXT hand-off instead (§11.2, the landscape coupling).
+>
+> CHANGELOG: the first push dated 2026-09-26 or later must rotate. Run `git fetch --unshallow origin main`
+> first, then move the oldest whole date groups with SHA enrichment until fewer than 100 non-exempt
+> sections remain.
+>
+> VERIFY per wave: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check
+> clean; build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+> check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+> warnings read; every new dossier and guide renders (Playwright) with zero page errors. If the Fable weekly
+> cap binds, continue on Opus 5.5 xhigh and record the substitution in the §11.3 Model cell. Normal
+> Pre-Commit and Pre-Push checklists; push on a claude/* branch."
+
+**Phase F, wave 1 (F-U1) — Duke Energy, DTE Energy and WEC Energy Group** join the Profiler corpus as the seventh, eighth and ninth `utility` dossiers, each with a v2 study guide and a lesson plan. Wave 2 (F-U2, Berkshire Hathaway Energy and Exelon) is researched but not authored — it follows in the next push once this branch has merged, exactly as the prompt asked for two pushes.
+
+### Added
+
+- **Three schema v7 dossiers** (`profileVersion` 1, `categories: ["utility"]`, intel-briefing style), each researched by two parallel subagents under a shared two-stage protocol (first-party filings and decks, then dockets and trade press). The SEC's own host refused the sandbox, so every filing was read from the company's investor mirror.
+  - **`duke-energy.profile.json`** — 116 sources (51% first-party), 37 developments, 8 products, 13 relationships, 7 decision makers. No photos: `duke-energy.com` returns 403 to the sandbox. `aka[]`: Duke Energy Carolinas, Duke Energy Progress, Duke Energy Florida, Duke Energy Indiana, Duke Energy Ohio, Duke Energy Kentucky, Piedmont Natural Gas.
+  - **`dte-energy.profile.json`** — 106 sources, 29 developments, 5 products, 9 relationships; four executive photos (Harris, Ruud, Lauer, Tomina — Paul's download failed twice on a 502, so the entry carries none). `aka[]`: DTE Electric, DTE Gas, Detroit Edison, DTE Vantage.
+  - **`wec-energy.profile.json`** — 80 sources, 32 developments, 7 products, 12 relationships; five photos (Lauber, Liu, Hooper, Krueger, Garvin). `aka[]`: We Energies, Wisconsin Electric, Wisconsin Public Service, WPS, Peoples Gas, North Shore Gas, Wisconsin Gas, Michigan Gas Utilities, Minnesota Energy Resources, Bluewater, Upper Michigan Energy Resources.
+- **Three schema v2 study guides** — `duke-energy.study.json` (16 sections), `dte-energy.study.json` (14), `wec-energy.study.json` (13) — each with flashcards and a self-test, and **three lesson plans** under `repository-information/study-prep/<slug>/`, five modules each, at the high-school-STEM baseline.
+- **13 new concepts** in `profiler-concepts.json` (1,490 total): `special-contract`, `contested-case`, `ex-parte`, `zonal-resource-credit`, `bespoke-resource`, `minimum-transmission-charge`, `certificate-of-necessity` (the `CON` alias was dropped — it already belongs to `certificate-of-need`), `subsequent-license-renewal`, `letter-agreement`, `compressed-air-energy-storage`, `nuclear-ptc`, `equity-units`, `atm-program`.
+- **Nine executive photos** under `live-site-pages/images/execs/` (`dte-energy-*`, `wec-energy-*`), company-published.
+
+### Changed
+
+- **`profiler-companies.json`** — 177 → 180 entries, with taglines, `aka[]` and `domains[]` populated before the step-7 grep.
+- **`profiler-segments.json`** — all three assigned `utilities` · incumbent, and `storage-developers-and-ipps` · adjacent with a basis line each (Duke ~4.5 GW of utility-owned batteries by 2031; DTE 1,383 MW customer-funded storage; WEC 2,130 MW bought build-transfer from Invenergy).
+- **`profiler-graph.json`** — rebuilt, 1,523 edges.
+- **`profiler-refresh-calendar.json`** — three dated rows, each researched: `duke-energy` 2026-11-05 (unconfirmed, pattern), `dte-energy` 2026-10-22 (unconfirmed, pattern), `wec-energy` 2026-10-29 (confirmed). **`profiler-refresh-notes.json`** — a source and a `watch[]` list per slug.
+- **`PROFILER-COVERAGE-PLAN.md` §11.3** — the three F-U1 rows rewritten from hypotheses into verified cells with a premise verdict per clause, `Checked 2026-09-26, v07.57r`, Dossier v1, Guide v2. The identity findings the prompt asked for:
+  - **Brookfield / Duke Energy Florida — the plan cell was wrong.** The first closing is confirmed: 2026-03-03, 9.2% for $2.8B (8-K), toward 19.7%. Piedmont's Tennessee operations were sold to Spire (closed 2026-03-31).
+  - **DTE** — no stake or sale found; the Google Van Buren contract (U-22058) had no MPSC decision through 2026-09-25. The Saline storage figure is stated both ways in the dossier: 1,383 MW approved for the Oracle load, against the 332 MW the earlier corpus carried.
+  - **WEC** — no stake or sale found; the VLC docket is `6630-TE-113`, not `5-UR-110`; Meta Beaver Dam is Alliant's load, not WEC's.
+- **README.md** — tree entries for the three profile/study pairs and the three study-prep directories.
+
+### Notes
+
+- **Step-7 reconciliation** — inbound claims read against the new dossiers: Duke 8 (0 changed), DTE 6 (0 changed; the Oracle dossier's "~$300M" against DTE's "nearly $2B" is stated in the relationship context, not reconciled), WEC 4 (0 changed). No other dossier was edited, so no archive step ran. The `lg-energy-solution` DTE claim (1.5 GW / 6 GWh, $1.6B) agrees on both sides.
+- **Classroom lessons now stale, by design:** `landscape-utilities-2026-09` was built on "six franchises" and there are now nine; the three `scenario-utilities-*` rehearsals cite it. `Classroom.gs` was not edited — a Profiler session never touches it — so those lessons are due for a re-pin in a Classroom session, and the SESSION-CONTEXT hand-off will say so once wave 2 lands.
+- **Checkers:** `sync-profiler-registry.py --check` clean (roster ↔ calendar bijection holds); `check-profiler-study.py` 0 errors; `check-profiler-relationships.py` 0 findings; `check-profiler-crossrefs.py` 0 candidates; `check-readme-tree.py` 0 findings; `check-profiler-reports.py` reports two pre-existing warnings (`jinko` v6 against pinned v5, `oracle` v5 against pinned v4), read and left loud.
+- **Playwright:** all three dossiers and guides render on `Profiler.html` with zero console errors and zero unresolved `{{}}` terms; the only page error is the auth-wall's `gis_load_failed`, the Google Identity script the sandbox cannot fetch. `Profiler.html` itself is unchanged (data-only), so no page version bump.
+- **Archive rotation not performed:** 109 sections, of which eleven are dated today (EST) and exempt, leaving 98 non-exempt against a trigger of 100. The wave-2 push will cross midnight EST and must rotate — the 2026-09-18 and 2026-09-19 date groups (26 sections) are the ones that go.
 
 ## [v07.56r] — 2026-09-25 08:38:39 PM EST
 

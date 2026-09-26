@@ -109,6 +109,47 @@
       ]
     },
     {
+      "slug": "albemarle",
+      "name": "Albemarle",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Lithium and bromine upstream of the cell — carbonate into the LFP that dominates grid storage, SAYTEX flame retardants into the boards and enclosures around it; H1-2026 net income US$799m after two loss years.",
+      "hq": "Charlotte, North Carolina, USA",
+      "ticker": "NYSE: ALB",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Albemarle Corporation",
+        "ALB",
+        "Ketjen",
+        "Rockwood Holdings",
+        "Rockwood Lithium",
+        "Talison Lithium",
+        "Windfield Holdings",
+        "Jordan Bromine Company",
+        "SAYTEX",
+        "MARBL Lithium Joint Venture",
+        "Greenbushes",
+        "Wodgina",
+        "Kemerton",
+        "Salar de Atacama",
+        "Performance Catalyst Solutions"
+      ],
+      "domains": [
+        "albemarle.com"
+      ],
+      "srcTotal": 75,
+      "srcFirstPct": 52,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
       "slug": "aligned",
       "name": "Aligned Data Centers",
       "categories": [
@@ -248,6 +289,44 @@
           "id": "hyperscalers-and-ai-labs",
           "role": "challenger"
         }
+      ]
+    },
+    {
+      "slug": "aon",
+      "name": "Aon",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "The world's second-largest insurance broker and the leader in data-centre risk capacity — a $5bn lifecycle facility plus the first data-centre reinsurance treaty; buying USI for $17bn takes leverage to ~4.8x.",
+      "hq": "Dublin, Ireland",
+      "ticker": "NYSE: AON",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "domains": [
+        "aon.com",
+        "aon.mediaroom.com",
+        "assets.aon.com",
+        "res.aon.com",
+        "ir.aon.com"
+      ],
+      "srcTotal": 100,
+      "srcFirstPct": 41,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "insurance-and-risk-transfer",
+          "role": "incumbent"
+        }
+      ],
+      "aka": [
+        "Aon plc",
+        "Aon Corporation",
+        "Aon Benfield",
+        "Aon Securities",
+        "Aon Reinsurance Solutions",
+        "NFP",
+        "USI",
+        "Aon Risk Services"
       ]
     },
     {
@@ -594,6 +673,59 @@
       ]
     },
     {
+      "slug": "calb",
+      "name": "CALB",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Fifth in global storage-cell shipments and fourth in EV traction, on a 13.08% float with no declared controlling shareholder",
+      "hq": "Changzhou, China",
+      "ticker": "HKEX: 3931",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "CALB Group Co., Ltd.",
+        "CALB Co., Ltd.",
+        "中创新航",
+        "中創新航",
+        "中创新航科技集团股份有限公司",
+        "中創新航科技集團股份有限公司",
+        "CALB Group",
+        "3931.HK",
+        "ZHIJIU",
+        "至久",
+        "DINGLIU",
+        "顶流",
+        "頂流",
+        "ZHIYUAN",
+        "至远",
+        "至遠",
+        "WUJIE",
+        "无界",
+        "無界",
+        "CALB (EUROPE), S.A.",
+        "中航锂电",
+        "中航鋰電",
+        "China Lithium Battery Technology"
+      ],
+      "domains": [
+        "calb-tech.com"
+      ],
+      "srcTotal": 60,
+      "srcFirstPct": 57,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
       "slug": "canadian-solar",
       "name": "Canadian Solar (e-STORAGE)",
       "categories": [
@@ -690,6 +822,31 @@
         "Contemporary Amperex Technology",
         "Contemporary Amperex Technology Co., Limited",
         "宁德时代"
+      ]
+    },
+    {
+      "slug": "cipher-mining",
+      "name": "Cipher Digital",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The miner that finished the pivot and renamed itself — 700 MW / ~$11.4bn contracted across three Texas campuses, two of them Amazon.com-guaranteed; hashrate halved to 11.6 EH/s and one mining site left.",
+      "hq": "New York, NY, USA",
+      "ticker": "NASDAQ: CIFR",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "cipherdigital.com",
+        "ciphermining.com"
+      ],
+      "srcTotal": 47,
+      "srcFirstPct": 45,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
       ]
     },
     {
@@ -845,6 +1002,65 @@
       ]
     },
     {
+      "slug": "cornex",
+      "name": "Cornex",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Seventh on SNE's H1-2026 storage-cell table at 30.2 GWh and 6.5%, from outside the top ten in 2024 — owner-financed, never audited, no listing filed; two 70–80 GWh plants commissioned in August 2026",
+      "hq": "Xiaogan / Wuhan, China",
+      "status": "active",
+      "lastUpdated": "2026-09-13",
+      "aka": [
+        "楚能新能源股份有限公司",
+        "楚能新能源",
+        "楚能",
+        "CORNEX NEW ENERGY CO., LTD.",
+        "Cornex New Energy",
+        "CORNEX",
+        "Chuneng",
+        "Chuneng New Energy",
+        "湖北楚能",
+        "武汉楚能新能源有限公司",
+        "武汉楚能",
+        "孝感楚能新能源创新科技有限公司",
+        "孝感楚能",
+        "宜昌楚能新能源创新科技有限公司",
+        "宜昌楚能",
+        "襄阳楚能",
+        "聚能π",
+        "浸默",
+        "Jinmo",
+        "珠峰",
+        "CORNEX M5",
+        "CORNEX M6",
+        "楚能汽车",
+        "Cornex Auto",
+        "恒信汽车集团",
+        "Hengxin Automobile Group",
+        "代德明",
+        "Dai Deming"
+      ],
+      "domains": [
+        "cornexbattery.com",
+        "cn-ne.cn",
+        "cn-np.com"
+      ],
+      "srcTotal": 139,
+      "srcFirstPct": 53,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
       "slug": "crrc-zhuzhou",
       "name": "CRRC Zhuzhou Institute",
       "categories": [
@@ -893,6 +1109,29 @@
         },
         {
           "id": "neoclouds",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "csa-group",
+      "name": "CSA Group",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Canada's standards body and second North American certification mark after UL — author of the Canadian Electrical Code and of the CSA TS-800/C800 large-scale fire test that NFPA 855-2026 now requires — selling its entire testing and certification arm, marks and NRTL included, to Kiwa Group for about C$2.1 billion (member vote October 2026).",
+      "hq": "Toronto, Ontario, Canada",
+      "status": "active",
+      "lastUpdated": "2026-09-08",
+      "domains": [
+        "csagroup.org"
+      ],
+      "srcTotal": 122,
+      "srcFirstPct": 40,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "assurance",
           "role": "challenger"
         }
       ]
@@ -983,6 +1222,45 @@
         },
         {
           "id": "cooling",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "dg-matrix",
+      "name": "DG Matrix",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The low-voltage-first SST challenger — Raleigh–Durham multi-port solid-state transformer (Interport Flex 200/400 kVA six-port skid shipping pre-certification, Cell-LV sidecar, Cell-MV 12–34.5 kV skid dated 2028+), USD 60M Series A led by Engine Ventures with ABB and Mitsubishi Heavy Industries, Infineon SiC; self-declared NVIDIA MGX member absent from NVIDIA's rosters; no named energised customer.",
+      "hq": "Morrisville, North Carolina, United States (Raleigh–Durham)",
+      "status": "active",
+      "lastUpdated": "2026-09-19",
+      "aka": [
+        "DG Matrix Inc.",
+        "DG Matrix, Inc.",
+        "DGMatrix",
+        "Interport",
+        "Interport SST",
+        "Interport 360",
+        "Power Router",
+        "Power SideCar",
+        "Power Bridge"
+      ],
+      "domains": [
+        "dgmatrix.com",
+        "pub-603db131244d4898a25e35ad020f3bf9.r2.dev"
+      ],
+      "srcTotal": 84,
+      "srcFirstPct": 44,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
           "role": "adjacent"
         }
       ]
@@ -1098,6 +1376,93 @@
       "segments": [
         {
           "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "dte-energy",
+      "name": "DTE Energy",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The Michigan utility whose first two hyperscale contracts — Oracle's 1,383 MW Stargate campus at Saline Township and Google's 1.0 GW at Van Buren — equal ~40 percent of its retail sales at full ramp and are served from the grid with customer-funded batteries: 1,383 MW of DTE-owned storage owed under the Oracle agreement, 2,292 MW approved by the MPSC in 2026, a $1.6B / 1.5 GW LG Energy Solution Vertech supply deal, and a 2026 IRP asking for 4.5 GW of storage and 2.1 GW of combined-cycle gas.",
+      "hq": "Detroit, MI, USA",
+      "ticker": "NYSE: DTE",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "DTE",
+        "DTE Electric",
+        "DTE Gas",
+        "DTE Vantage",
+        "Detroit Edison"
+      ],
+      "domains": [
+        "dteenergy.com",
+        "ir.dteenergy.com",
+        "s24.q4cdn.com",
+        "empoweringmichigan.com",
+        "s7d1.scene7.com"
+      ],
+      "srcTotal": 106,
+      "srcFirstPct": 34,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "duke-energy",
+      "name": "Duke Energy",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The six-state regulated utility with the corpus's most conservatively reported data-center book — ~7.8 GW of signed electric service agreements, ~5.2 GW under construction and a ~15.4 GW late-stage pipeline at August 2026 — building 7.5 GW of GE Vernova gas and ~4.5 GW of utility-owned batteries by 2031 inside a $103B plan, with large-load tariffs still being written in North Carolina, Florida and Ohio and its first data-center-justified gas turbine denied by the NCUC in September 2026.",
+      "hq": "Charlotte, NC, USA",
+      "ticker": "NYSE: DUK",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "Duke",
+        "Duke Energy Carolinas",
+        "Duke Energy Progress",
+        "Duke Energy Florida",
+        "Duke Energy Indiana",
+        "Duke Energy Ohio",
+        "Duke Energy Kentucky",
+        "Progress Energy",
+        "Florida Progress",
+        "Piedmont Natural Gas",
+        "Piedmont",
+        "DEC",
+        "DEP",
+        "DEF"
+      ],
+      "domains": [
+        "duke-energy.com",
+        "news.duke-energy.com",
+        "investors.duke-energy.com",
+        "s201.q4cdn.com",
+        "piedmontng.com"
+      ],
+      "srcTotal": 116,
+      "srcFirstPct": 51,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
           "role": "incumbent"
         }
       ]
@@ -1634,6 +1999,34 @@
       ]
     },
     {
+      "slug": "galaxy-digital",
+      "name": "Galaxy Digital",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "A digital-asset broker-dealer that owns a 1.63 GW ERCOT campus — $60.4bn of gross trading revenue, 800 MW gross / 526 MW critical IT all let to CoreWeave, and a 9.875% coupon that prices a single unrated tenant.",
+      "hq": "New York, NY, USA",
+      "ticker": "NASDAQ: GLXY",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "galaxy.com"
+      ],
+      "srcTotal": 61,
+      "srcFirstPct": 66,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        },
+        {
+          "id": "capital",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
       "slug": "ge-vernova",
       "name": "GE Vernova",
       "categories": [
@@ -1728,6 +2121,155 @@
       ]
     },
     {
+      "slug": "great-power",
+      "name": "Great Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Top-three in residential storage cells and eighth-to-tenth overall; its Hong Kong listing application lapsed unheard in July 2026",
+      "hq": "Guangzhou, China",
+      "ticker": "SZSE: 300438",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Guangzhou Great Power Energy & Technology Co., Ltd.",
+        "广州鹏辉能源科技股份有限公司",
+        "鹏辉能源",
+        "鵬輝能源",
+        "Great Power Energy",
+        "Penghui",
+        "300438",
+        "Fengpeng",
+        "风鹏",
+        "風鵬",
+        "WindPeng",
+        "GreatCom",
+        "GreatOne",
+        "GreatE",
+        "Great One",
+        "Great Com",
+        "Magna-UTL",
+        "LiqPack",
+        "AirPack",
+        "POLAR",
+        "Hanhai",
+        "瀚海",
+        "Qingtian 520",
+        "擎天520",
+        "河南省鹏辉电源有限公司",
+        "珠海鹏辉能源",
+        "佛山市实达科技",
+        "广州耐时电池科技"
+      ],
+      "domains": [
+        "greatpower.net"
+      ],
+      "srcTotal": 57,
+      "srcFirstPct": 61,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "challenger"
+        },
+        {
+          "id": "storage-integrators-and-containers",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "grid-united",
+      "name": "Grid United",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Houston's family-office-owned interregional HVDC developer — five pre-construction lines led by the 420-mile, 3,000 MW North Plains Connector (final EIS August 2026, eight utilities on non-binding MOUs for 2,550 MW, cost now ~USD 6B, operation 2032), Southline (1,000 MW, DOE anchor contracts 'selected'), Three Corners (Oklahoma certificate July 2026); wholly owned by John Arnold's Centaurus Capital per its own Oklahoma filing, Hitachi Energy holds its converter slots, no Form D, no operating asset.",
+      "hq": "Houston, Texas, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Grid United LLC",
+        "Grid United, LLC",
+        "Grid United Texas LLC",
+        "North Plains Connector",
+        "North Plains Connector LLC",
+        "GU Southline LLC",
+        "Southline Transmission",
+        "Southline",
+        "Three Corners Connector",
+        "Pecos West",
+        "Wyoming Intertie",
+        "Continental Connector",
+        "Skelly"
+      ],
+      "domains": [
+        "gridunited.com",
+        "northplainsconnector.com",
+        "southlinetransmission.com",
+        "threecornersconnector.com",
+        "pecoswest.com",
+        "wyomingintertie.com",
+        "continentalconnectorllc.com"
+      ],
+      "srcTotal": 96,
+      "srcFirstPct": 47,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "gridmatic",
+      "name": "Gridmatic",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The founder-led 'AI-first power company' that tolls and floors ERCOT and CAISO batteries from its own USD 50M fund, sells retail power and day-ahead load bidding to data centres and miners in Texas, Ohio and Pennsylvania ('on track' for USD 100M retail revenue in 2026 by its count), and trades all seven ISOs — every ranking its own, one SEC-filed offtake (Energy Vault's Cross Trails), profitable without venture capital by its own account and hiring to run 'upcoming debt and equity raises'.",
+      "hq": "Cupertino, California, United States (retail headquarters Houston, Texas)",
+      "status": "active",
+      "lastUpdated": "2026-09-24",
+      "aka": [
+        "Gridmatic Inc.",
+        "Gridmatic Inc",
+        "Gridmatic Retail",
+        "Gridmatic Rosa",
+        "Gridmatic Rosa LLC",
+        "Gridmatic Panicum",
+        "Gridmatic Equisetum",
+        "Gridmatic Equisetum LLC",
+        "Gridmatic Storage Fund",
+        "Gridmatic Energy Investment Fund",
+        "Gridmatic Cupressus",
+        "Gridmatic Isotria",
+        "AI Load Optimizer"
+      ],
+      "domains": [
+        "gridmatic.com",
+        "gridmaticretail.com"
+      ],
+      "srcTotal": 77,
+      "srcFirstPct": 40,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "gridstor",
       "name": "GridStor",
       "categories": [
@@ -1748,6 +2290,78 @@
         {
           "id": "storage-developers-and-ipps",
           "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "habitat-energy",
+      "name": "Habitat Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The Oxford-born, Quinbrook-owned battery optimiser — EVOLVE desk-plus-registration service on revenue share across GB (BM Virtual Lead Party), ERCOT (Level 4 QSE) and the NEM; 5.5 GW under contract by its count, third in GB and first in ERCOT's December 2025 capture-rate table by Modo's; for sale since March 2026 with no buyer on record.",
+      "hq": "Oxford, United Kingdom",
+      "status": "active",
+      "lastUpdated": "2026-09-24",
+      "aka": [
+        "Habitat Energy Limited",
+        "Habitat",
+        "EVOLVE",
+        "PowerIQ",
+        "Habitat Energy Australia",
+        "Habitat Energy Pty Ltd",
+        "Habitat Energy, Inc",
+        "Habitat Energy USA",
+        "Renewable and Grid Services"
+      ],
+      "domains": [
+        "habitat.energy",
+        "quinbrook.com"
+      ],
+      "srcTotal": 75,
+      "srcFirstPct": 63,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "software-and-optimization",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "heron-power",
+      "name": "Heron Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The only startup on NVIDIA's facility-tier 800 V DC roster — Drew Baglino's (ex-Tesla) 34.5 kV-to-800 V DC solid-state transformer, Heron Link, with a Morgan Hill factory named for late-2027 mass production, two disclosed customers and no shipped unit.",
+      "hq": "Scotts Valley, California, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Heron Power Electronics Company",
+        "Heron Power Electronics Co",
+        "Heron Power, Inc.",
+        "Accelerate Power Co.",
+        "Heron Link",
+        "SuperBBU",
+        "HeronCare",
+        "Heron Factory One"
+      ],
+      "domains": [
+        "heronpower.com"
+      ],
+      "srcTotal": 52,
+      "srcFirstPct": 37,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
+        },
+        {
+          "id": "in-hall-power",
+          "role": "adjacent"
         }
       ]
     },
@@ -1921,6 +2535,30 @@
       ]
     },
     {
+      "slug": "hut-8",
+      "name": "Hut 8",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The largest contracted book in the miner-pivot cohort — 949 MW critical IT / $26.6bn base-term across River Bend and Beacon Point, and the only one where Google's backstop cost no warrants and no equity.",
+      "hq": "Miami, FL, USA",
+      "ticker": "NASDAQ: HUT",
+      "status": "active",
+      "lastUpdated": "2026-09-06",
+      "domains": [
+        "hut8.com"
+      ],
+      "srcTotal": 71,
+      "srcFirstPct": 48,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "hyperstrong",
       "name": "HyperStrong",
       "categories": [
@@ -2004,6 +2642,53 @@
         {
           "id": "aidc-developers-and-landlords",
           "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "intertek",
+      "name": "Intertek",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Fifth-largest testing and inspection group and the ETL Mark's owner — being taken private by EQT on a shareholder-approved scheme awaiting court sanction",
+      "hq": "London, United Kingdom",
+      "ticker": "LSE: ITRK",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Intertek Group plc",
+        "Intertek Testing Services",
+        "Intertek Testing Services NA",
+        "ITSNA",
+        "ETL",
+        "ETL SEMKO",
+        "cETL",
+        "ETL Listed",
+        "Intertek CEA",
+        "Clean Energy Associates",
+        "CEA",
+        "Caleb Brett",
+        "Intertek Caleb Brett",
+        "Isotope Bidco",
+        "Isotope Bidco Limited",
+        "Assuris",
+        "AgriWorld",
+        "Transportation Technologies",
+        "Total Quality Assurance",
+        "Intertek Metoc"
+      ],
+      "domains": [
+        "intertek.com",
+        "intertekcea.com"
+      ],
+      "srcTotal": 91,
+      "srcFirstPct": 41,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "assurance",
+          "role": "incumbent"
         }
       ]
     },
@@ -2176,6 +2861,31 @@
         {
           "id": "epc-and-construction",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "kwh-analytics",
+      "name": "kWh Analytics",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "The renewable-energy managing general agent that turned a solar performance database into USD 100 million per-location property authority on Aspen paper, a Solar Revenue Put lenders size debt against, and a Munich Re-backed parametric wind hedge — agreed to be acquired by Beazley in March 2026, itself being bought by Zurich.",
+      "hq": "San Francisco, California, United States",
+      "ticker": "LSE: BEZ (parent)",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "domains": [
+        "kwhanalytics.com",
+        "beazley.com"
+      ],
+      "srcTotal": 121,
+      "srcFirstPct": 43,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "insurance-and-risk-transfer",
+          "role": "challenger"
         }
       ]
     },
@@ -2368,6 +3078,53 @@
       ]
     },
     {
+      "slug": "marsh-mclennan",
+      "name": "Marsh McLennan",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "The world's largest insurance broker for a sixteenth year, rebranded to Marsh in January 2026 (NYSE: MMC to MRSH) — Nimbus, Nimbus Casualty and the $10bn Stratus exchange for digital infrastructure.",
+      "hq": "New York, United States",
+      "ticker": "NYSE: MRSH",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "domains": [
+        "marsh.com",
+        "marshmclennan.com",
+        "corporate.marsh.com",
+        "marshcommercial.co.uk",
+        "guycarp.com",
+        "oliverwyman.com",
+        "mercer.com"
+      ],
+      "srcTotal": 121,
+      "srcFirstPct": 50,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "insurance-and-risk-transfer",
+          "role": "incumbent"
+        }
+      ],
+      "aka": [
+        "Marsh",
+        "Marsh & McLennan",
+        "Marsh & McLennan Companies",
+        "Marsh Risk",
+        "Marsh Re",
+        "Guy Carpenter",
+        "Mercer",
+        "Marsh People and Investments",
+        "Oliver Wyman",
+        "Marsh Management Consulting",
+        "Marsh McLennan Agency",
+        "McGriff",
+        "Victor",
+        "MMC",
+        "MRSH"
+      ]
+    },
+    {
       "slug": "mastec",
       "name": "MasTec",
       "categories": [
@@ -2529,6 +3286,36 @@
         {
           "id": "hyperscalers-and-ai-labs",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "mitra-chem",
+      "name": "Mitra Chem",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The last DOE-funded US LFP cathode plant in the pipeline after ICL's exit — unbuilt, silent on its own channels since September 2024, groundbreaking guided to early 2027",
+      "hq": "Mountain View, United States",
+      "status": "active",
+      "lastUpdated": "2026-09-13",
+      "aka": [
+        "Mitra Future Technologies, Inc.",
+        "Mitra Future Technologies",
+        "Mitra",
+        "MitraChem",
+        "AmPLIFI"
+      ],
+      "domains": [
+        "mitrachem.com"
+      ],
+      "srcTotal": 106,
+      "srcFirstPct": 38,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
         }
       ]
     },
@@ -2708,6 +3495,74 @@
         {
           "id": "utilities",
           "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "novonix",
+      "name": "NOVONIX",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Pre-revenue US synthetic graphite anode developer under a going-concern material uncertainty: Riverside full capacity slipped to September 2031, a Yorkville amortisation event triggered a US$7.0m redemption, and the Nasdaq cure deadline passed 14 September 2026 with the outcome still unconfirmed.",
+      "hq": "Brisbane, Australia (operating base Chattanooga, Tennessee, USA)",
+      "ticker": "ASX: NVX · Nasdaq: NVX",
+      "status": "active",
+      "lastUpdated": "2026-09-22",
+      "aka": [
+        "NOVONIX Limited",
+        "NVX",
+        "NVNXF",
+        "NOVONIX Anode Materials",
+        "NOVONIX Battery Technology Solutions",
+        "GX-23",
+        "Avrion Battery Labs",
+        "Dryve Battery Materials",
+        "Axon Graphite",
+        "Enterprise South",
+        "Mount Dromedary"
+      ],
+      "domains": [
+        "novonixgroup.com"
+      ],
+      "srcTotal": 76,
+      "srcFirstPct": 71,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "cells-and-chemistry",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
+      "slug": "novos-power",
+      "name": "Novos Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The pre-product SST entrant — 2025 San Diego State University spin-out (CTO Chris Mi, CEO Susan Linwood) claiming a direct 13–48 kV 'Variable Airgap' solid-state transformer at ≥98.5% peak efficiency, 1–50 MW, air-cooled; no funding round, no datasheet, no patent, no customer; pitch-competition wins and one SemiAnalysis citation are the record.",
+      "hq": "San Diego, California, United States (and Palo Alto, California)",
+      "status": "active",
+      "lastUpdated": "2026-09-19",
+      "aka": [
+        "Novos Power Inc.",
+        "Novos Power, Inc.",
+        "NovosPower",
+        "VASST",
+        "Variable Airgap Solid State Transformer",
+        "Variable Air Gap Solid-State Transformer"
+      ],
+      "domains": [
+        "novospower.com"
+      ],
+      "srcTotal": 38,
+      "srcFirstPct": 8,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "power-conversion-and-rack-power-silicon",
+          "role": "challenger"
         }
       ]
     },
@@ -2959,6 +3814,71 @@
         {
           "id": "in-hall-power",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "pattern-energy",
+      "name": "Pattern Energy",
+      "categories": [
+        "developer",
+        "ipp"
+      ],
+      "tagline": "CPP Investments' privately owned renewables-and-transmission platform — ~12 GW operating and in construction across the US, Canada and Mexico after the share-based Cordelio purchase (April 2026), owner-operator of SunZia (3,650 MW New Mexico wind on a 550-mile, 3,000 MW VSC HVDC line, fully operational June 2026, USD 11B financed), Western Spirit built and sold to PNM, Southern Spirit (ERCOT–Southeast HVDC) certificated in Louisiana but not Mississippi; APG/ABP and ART bought Riverstone's stake June 2025, CPP-led ownership 69.1%, no financials published.",
+      "hq": "San Francisco, California, United States (development headquarters and operations in Houston, Texas)",
+      "status": "active",
+      "lastUpdated": "2026-09-12",
+      "aka": [
+        "Pattern Energy Group LP",
+        "Pattern Energy Group, LP",
+        "Pattern Energy Group Inc.",
+        "Pattern Energy Group Holdings 2 LP",
+        "Pattern Development",
+        "Pattern Transmission",
+        "Pattern Canada",
+        "Pattern Energy Operations",
+        "Pattern Renewables",
+        "PEGI",
+        "SunZia",
+        "SunZia Transmission",
+        "SunZia Wind",
+        "Western Spirit",
+        "Southern Spirit",
+        "Southern Cross Transmission",
+        "Silver Rock Transmission",
+        "Bolo Transmission",
+        "Cordelio",
+        "Cordelio Power",
+        "Solect",
+        "Solect Energy",
+        "Dynamic Energy",
+        "Amanecer Puerto Rico"
+      ],
+      "domains": [
+        "patternenergy.com",
+        "patterncanada.ca",
+        "solect.com",
+        "dynamicenergy.com",
+        "cordeliopower.com",
+        "bolo-os.com",
+        "sunzia.net",
+        "southernspirit.com"
+      ],
+      "srcTotal": 116,
+      "srcFirstPct": 60,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "grid-equipment",
+          "role": "adjacent"
+        },
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "adjacent"
         }
       ]
     },
@@ -3716,6 +4636,51 @@
       ]
     },
     {
+      "slug": "stem",
+      "name": "Stem",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Listed pure-play energy-optimisation software — the hardware-agnostic PowerTrack suite over 38.3 GW of solar and 1.8 GWh of storage",
+      "hq": "Houston, United States",
+      "ticker": "NYSE: STEM",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "Stem",
+        "Stem, Inc.",
+        "STEM",
+        "Star Peak Energy Transition Corp.",
+        "Star Peak Energy Acquisition Corp.",
+        "Star Peak",
+        "AlsoEnergy",
+        "Also Energy",
+        "PowerTrack",
+        "PowerTrack Optimizer",
+        "Athena",
+        "PowerBidder",
+        "raicoon",
+        "AIONA"
+      ],
+      "domains": [
+        "stem.com",
+        "alsoenergy.com"
+      ],
+      "srcTotal": 90,
+      "srcFirstPct": 80,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
       "slug": "strata-clean-energy",
       "name": "Strata Clean Energy",
       "categories": [
@@ -4093,6 +5058,63 @@
       ]
     },
     {
+      "slug": "ul-solutions",
+      "name": "UL Solutions",
+      "categories": [
+        "advisor"
+      ],
+      "tagline": "Owner of the UL Mark but not the UL standards — the default North American product-safety certifier, 94% voting-controlled by the non-profit that writes the rules it tests against",
+      "hq": "Northbrook, Illinois, United States",
+      "ticker": "NYSE: ULS",
+      "status": "active",
+      "lastUpdated": "2026-09-09",
+      "aka": [
+        "UL Solutions Inc.",
+        "UL LLC",
+        "UL Inc.",
+        "ULSE",
+        "ULSE Inc.",
+        "UL Standards & Engagement",
+        "UL Standards and Engagement",
+        "Underwriters Laboratories",
+        "Underwriters Laboratories Inc.",
+        "UL Research Institutes",
+        "UL Mark",
+        "UL-CCIC",
+        "ULTRUS",
+        "MET Labs",
+        "ECOLOGO",
+        "HOMER Pro",
+        "HOMER Grid",
+        "Openwind",
+        "Windographer",
+        "WERCSmart",
+        "ComplianceWire",
+        "Prospector",
+        "BatterieIngenieure"
+      ],
+      "domains": [
+        "ul.com",
+        "ir.ul.com",
+        "ulse.org",
+        "ul.org",
+        "shopulstandards.com"
+      ],
+      "srcTotal": 50,
+      "srcFirstPct": 58,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "assurance",
+          "role": "incumbent"
+        },
+        {
+          "id": "software-and-optimization",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
       "slug": "vantage",
       "name": "Vantage Data Centers",
       "categories": [
@@ -4266,6 +5288,53 @@
       ]
     },
     {
+      "slug": "wec-energy",
+      "name": "WEC Energy Group",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The Wisconsin utility that wrote the corpus's first resource-subscription data-center tariff — the PSCW-approved Very Large Customer and Bespoke Resources tariffs (≥100 MW, 15-year minimum, 100 percent of dedicated generation and transmission, a fixed 10.48–10.98 percent return, security at net book value below A-/A3) — for Microsoft's 2.6 GW Mount Pleasant campus and the Vantage/OpenAI/Oracle 1.3 GW Port Washington Stargate site, and is building 3,300 MW of turbines and 2,130 MW of utility-owned batteries against them inside a $37.5B plan.",
+      "hq": "Milwaukee, WI, USA",
+      "ticker": "NYSE: WEC",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "WEC",
+        "We Energies",
+        "Wisconsin Electric",
+        "Wisconsin Electric Power Company",
+        "Wisconsin Public Service",
+        "WPS",
+        "Peoples Gas",
+        "North Shore Gas",
+        "WEC Infrastructure",
+        "We Power",
+        "Wisconsin Energy"
+      ],
+      "domains": [
+        "wecenergygroup.com",
+        "investor.wecenergygroup.com",
+        "we-energies.com",
+        "news.we-energies.com",
+        "s22.q4cdn.com",
+        "wisconsinpublicservice.com",
+        "peoplesgasdelivery.com"
+      ],
+      "srcTotal": 80,
+      "srcFirstPct": 44,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
       "slug": "whiting-turner",
       "name": "Whiting-Turner",
       "categories": [
@@ -4406,941 +5475,6 @@
         {
           "id": "software-and-optimization",
           "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "cipher-mining",
-      "name": "Cipher Digital",
-      "categories": [
-        "developer"
-      ],
-      "tagline": "The miner that finished the pivot and renamed itself — 700 MW / ~$11.4bn contracted across three Texas campuses, two of them Amazon.com-guaranteed; hashrate halved to 11.6 EH/s and one mining site left.",
-      "hq": "New York, NY, USA",
-      "ticker": "NASDAQ: CIFR",
-      "status": "active",
-      "lastUpdated": "2026-09-06",
-      "domains": [
-        "cipherdigital.com",
-        "ciphermining.com"
-      ],
-      "srcTotal": 47,
-      "srcFirstPct": 45,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "aidc-developers-and-landlords",
-          "role": "challenger"
-        }
-      ]
-    },
-    {
-      "slug": "hut-8",
-      "name": "Hut 8",
-      "categories": [
-        "developer"
-      ],
-      "tagline": "The largest contracted book in the miner-pivot cohort — 949 MW critical IT / $26.6bn base-term across River Bend and Beacon Point, and the only one where Google's backstop cost no warrants and no equity.",
-      "hq": "Miami, FL, USA",
-      "ticker": "NASDAQ: HUT",
-      "status": "active",
-      "lastUpdated": "2026-09-06",
-      "domains": [
-        "hut8.com"
-      ],
-      "srcTotal": 71,
-      "srcFirstPct": 48,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "aidc-developers-and-landlords",
-          "role": "challenger"
-        }
-      ]
-    },
-    {
-      "slug": "galaxy-digital",
-      "name": "Galaxy Digital",
-      "categories": [
-        "developer"
-      ],
-      "tagline": "A digital-asset broker-dealer that owns a 1.63 GW ERCOT campus — $60.4bn of gross trading revenue, 800 MW gross / 526 MW critical IT all let to CoreWeave, and a 9.875% coupon that prices a single unrated tenant.",
-      "hq": "New York, NY, USA",
-      "ticker": "NASDAQ: GLXY",
-      "status": "active",
-      "lastUpdated": "2026-09-06",
-      "domains": [
-        "galaxy.com"
-      ],
-      "srcTotal": 61,
-      "srcFirstPct": 66,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "aidc-developers-and-landlords",
-          "role": "challenger"
-        },
-        {
-          "id": "capital",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "kwh-analytics",
-      "name": "kWh Analytics",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "The renewable-energy managing general agent that turned a solar performance database into USD 100 million per-location property authority on Aspen paper, a Solar Revenue Put lenders size debt against, and a Munich Re-backed parametric wind hedge — agreed to be acquired by Beazley in March 2026, itself being bought by Zurich.",
-      "hq": "San Francisco, California, United States",
-      "ticker": "LSE: BEZ (parent)",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "domains": [
-        "kwhanalytics.com",
-        "beazley.com"
-      ],
-      "srcTotal": 121,
-      "srcFirstPct": 43,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "insurance-and-risk-transfer",
-          "role": "challenger"
-        }
-      ]
-    },
-    {
-      "slug": "csa-group",
-      "name": "CSA Group",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "Canada's standards body and second North American certification mark after UL — author of the Canadian Electrical Code and of the CSA TS-800/C800 large-scale fire test that NFPA 855-2026 now requires — selling its entire testing and certification arm, marks and NRTL included, to Kiwa Group for about C$2.1 billion (member vote October 2026).",
-      "hq": "Toronto, Ontario, Canada",
-      "status": "active",
-      "lastUpdated": "2026-09-08",
-      "domains": [
-        "csagroup.org"
-      ],
-      "srcTotal": 122,
-      "srcFirstPct": 40,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "assurance",
-          "role": "challenger"
-        }
-      ]
-    },
-    {
-      "slug": "aon",
-      "name": "Aon",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "The world's second-largest insurance broker and the leader in data-centre risk capacity — a $5bn lifecycle facility plus the first data-centre reinsurance treaty; buying USI for $17bn takes leverage to ~4.8x.",
-      "hq": "Dublin, Ireland",
-      "ticker": "NYSE: AON",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "domains": [
-        "aon.com",
-        "aon.mediaroom.com",
-        "assets.aon.com",
-        "res.aon.com",
-        "ir.aon.com"
-      ],
-      "srcTotal": 100,
-      "srcFirstPct": 41,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "insurance-and-risk-transfer",
-          "role": "incumbent"
-        }
-      ],
-      "aka": [
-        "Aon plc",
-        "Aon Corporation",
-        "Aon Benfield",
-        "Aon Securities",
-        "Aon Reinsurance Solutions",
-        "NFP",
-        "USI",
-        "Aon Risk Services"
-      ]
-    },
-    {
-      "slug": "marsh-mclennan",
-      "name": "Marsh McLennan",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "The world's largest insurance broker for a sixteenth year, rebranded to Marsh in January 2026 (NYSE: MMC to MRSH) — Nimbus, Nimbus Casualty and the $10bn Stratus exchange for digital infrastructure.",
-      "hq": "New York, United States",
-      "ticker": "NYSE: MRSH",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "domains": [
-        "marsh.com",
-        "marshmclennan.com",
-        "corporate.marsh.com",
-        "marshcommercial.co.uk",
-        "guycarp.com",
-        "oliverwyman.com",
-        "mercer.com"
-      ],
-      "srcTotal": 121,
-      "srcFirstPct": 50,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "insurance-and-risk-transfer",
-          "role": "incumbent"
-        }
-      ],
-      "aka": [
-        "Marsh",
-        "Marsh & McLennan",
-        "Marsh & McLennan Companies",
-        "Marsh Risk",
-        "Marsh Re",
-        "Guy Carpenter",
-        "Mercer",
-        "Marsh People and Investments",
-        "Oliver Wyman",
-        "Marsh Management Consulting",
-        "Marsh McLennan Agency",
-        "McGriff",
-        "Victor",
-        "MMC",
-        "MRSH"
-      ]
-    },
-    {
-      "slug": "stem",
-      "name": "Stem",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "Listed pure-play energy-optimisation software — the hardware-agnostic PowerTrack suite over 38.3 GW of solar and 1.8 GWh of storage",
-      "hq": "Houston, United States",
-      "ticker": "NYSE: STEM",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "aka": [
-        "Stem",
-        "Stem, Inc.",
-        "STEM",
-        "Star Peak Energy Transition Corp.",
-        "Star Peak Energy Acquisition Corp.",
-        "Star Peak",
-        "AlsoEnergy",
-        "Also Energy",
-        "PowerTrack",
-        "PowerTrack Optimizer",
-        "Athena",
-        "PowerBidder",
-        "raicoon",
-        "AIONA"
-      ],
-      "domains": [
-        "stem.com",
-        "alsoenergy.com"
-      ],
-      "srcTotal": 90,
-      "srcFirstPct": 80,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "storage-developers-and-ipps",
-          "role": "adjacent"
-        },
-        {
-          "id": "software-and-optimization",
-          "role": "incumbent"
-        }
-      ]
-    },
-    {
-      "slug": "ul-solutions",
-      "name": "UL Solutions",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "Owner of the UL Mark but not the UL standards — the default North American product-safety certifier, 94% voting-controlled by the non-profit that writes the rules it tests against",
-      "hq": "Northbrook, Illinois, United States",
-      "ticker": "NYSE: ULS",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "aka": [
-        "UL Solutions Inc.",
-        "UL LLC",
-        "UL Inc.",
-        "ULSE",
-        "ULSE Inc.",
-        "UL Standards & Engagement",
-        "UL Standards and Engagement",
-        "Underwriters Laboratories",
-        "Underwriters Laboratories Inc.",
-        "UL Research Institutes",
-        "UL Mark",
-        "UL-CCIC",
-        "ULTRUS",
-        "MET Labs",
-        "ECOLOGO",
-        "HOMER Pro",
-        "HOMER Grid",
-        "Openwind",
-        "Windographer",
-        "WERCSmart",
-        "ComplianceWire",
-        "Prospector",
-        "BatterieIngenieure"
-      ],
-      "domains": [
-        "ul.com",
-        "ir.ul.com",
-        "ulse.org",
-        "ul.org",
-        "shopulstandards.com"
-      ],
-      "srcTotal": 50,
-      "srcFirstPct": 58,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "assurance",
-          "role": "incumbent"
-        },
-        {
-          "id": "software-and-optimization",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "intertek",
-      "name": "Intertek",
-      "categories": [
-        "advisor"
-      ],
-      "tagline": "Fifth-largest testing and inspection group and the ETL Mark's owner — being taken private by EQT on a shareholder-approved scheme awaiting court sanction",
-      "hq": "London, United Kingdom",
-      "ticker": "LSE: ITRK",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "aka": [
-        "Intertek Group plc",
-        "Intertek Testing Services",
-        "Intertek Testing Services NA",
-        "ITSNA",
-        "ETL",
-        "ETL SEMKO",
-        "cETL",
-        "ETL Listed",
-        "Intertek CEA",
-        "Clean Energy Associates",
-        "CEA",
-        "Caleb Brett",
-        "Intertek Caleb Brett",
-        "Isotope Bidco",
-        "Isotope Bidco Limited",
-        "Assuris",
-        "AgriWorld",
-        "Transportation Technologies",
-        "Total Quality Assurance",
-        "Intertek Metoc"
-      ],
-      "domains": [
-        "intertek.com",
-        "intertekcea.com"
-      ],
-      "srcTotal": 91,
-      "srcFirstPct": 41,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "assurance",
-          "role": "incumbent"
-        }
-      ]
-    },
-    {
-      "slug": "albemarle",
-      "name": "Albemarle",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "Lithium and bromine upstream of the cell — carbonate into the LFP that dominates grid storage, SAYTEX flame retardants into the boards and enclosures around it; H1-2026 net income US$799m after two loss years.",
-      "hq": "Charlotte, North Carolina, USA",
-      "ticker": "NYSE: ALB",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "aka": [
-        "Albemarle Corporation",
-        "ALB",
-        "Ketjen",
-        "Rockwood Holdings",
-        "Rockwood Lithium",
-        "Talison Lithium",
-        "Windfield Holdings",
-        "Jordan Bromine Company",
-        "SAYTEX",
-        "MARBL Lithium Joint Venture",
-        "Greenbushes",
-        "Wodgina",
-        "Kemerton",
-        "Salar de Atacama",
-        "Performance Catalyst Solutions"
-      ],
-      "domains": [
-        "albemarle.com"
-      ],
-      "srcTotal": 75,
-      "srcFirstPct": 52,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "cells-and-chemistry",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "novonix",
-      "name": "NOVONIX",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "Pre-revenue US synthetic graphite anode developer under a going-concern material uncertainty: Riverside full capacity slipped to September 2031, a Yorkville amortisation event triggered a US$7.0m redemption, and the Nasdaq cure deadline passed 14 September 2026 with the outcome still unconfirmed.",
-      "hq": "Brisbane, Australia (operating base Chattanooga, Tennessee, USA)",
-      "ticker": "ASX: NVX · Nasdaq: NVX",
-      "status": "active",
-      "lastUpdated": "2026-09-22",
-      "aka": [
-        "NOVONIX Limited",
-        "NVX",
-        "NVNXF",
-        "NOVONIX Anode Materials",
-        "NOVONIX Battery Technology Solutions",
-        "GX-23",
-        "Avrion Battery Labs",
-        "Dryve Battery Materials",
-        "Axon Graphite",
-        "Enterprise South",
-        "Mount Dromedary"
-      ],
-      "domains": [
-        "novonixgroup.com"
-      ],
-      "srcTotal": 76,
-      "srcFirstPct": 71,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "cells-and-chemistry",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "calb",
-      "name": "CALB",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "Fifth in global storage-cell shipments and fourth in EV traction, on a 13.08% float with no declared controlling shareholder",
-      "hq": "Changzhou, China",
-      "ticker": "HKEX: 3931",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "aka": [
-        "CALB Group Co., Ltd.",
-        "CALB Co., Ltd.",
-        "中创新航",
-        "中創新航",
-        "中创新航科技集团股份有限公司",
-        "中創新航科技集團股份有限公司",
-        "CALB Group",
-        "3931.HK",
-        "ZHIJIU",
-        "至久",
-        "DINGLIU",
-        "顶流",
-        "頂流",
-        "ZHIYUAN",
-        "至远",
-        "至遠",
-        "WUJIE",
-        "无界",
-        "無界",
-        "CALB (EUROPE), S.A.",
-        "中航锂电",
-        "中航鋰電",
-        "China Lithium Battery Technology"
-      ],
-      "domains": [
-        "calb-tech.com"
-      ],
-      "srcTotal": 60,
-      "srcFirstPct": 57,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "cells-and-chemistry",
-          "role": "challenger"
-        },
-        {
-          "id": "storage-integrators-and-containers",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "great-power",
-      "name": "Great Power",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "Top-three in residential storage cells and eighth-to-tenth overall; its Hong Kong listing application lapsed unheard in July 2026",
-      "hq": "Guangzhou, China",
-      "ticker": "SZSE: 300438",
-      "status": "active",
-      "lastUpdated": "2026-09-09",
-      "aka": [
-        "Guangzhou Great Power Energy & Technology Co., Ltd.",
-        "广州鹏辉能源科技股份有限公司",
-        "鹏辉能源",
-        "鵬輝能源",
-        "Great Power Energy",
-        "Penghui",
-        "300438",
-        "Fengpeng",
-        "风鹏",
-        "風鵬",
-        "WindPeng",
-        "GreatCom",
-        "GreatOne",
-        "GreatE",
-        "Great One",
-        "Great Com",
-        "Magna-UTL",
-        "LiqPack",
-        "AirPack",
-        "POLAR",
-        "Hanhai",
-        "瀚海",
-        "Qingtian 520",
-        "擎天520",
-        "河南省鹏辉电源有限公司",
-        "珠海鹏辉能源",
-        "佛山市实达科技",
-        "广州耐时电池科技"
-      ],
-      "domains": [
-        "greatpower.net"
-      ],
-      "srcTotal": 57,
-      "srcFirstPct": 61,
-      "kpiNorm": true,
-      "segments": [
-        {
-          "id": "cells-and-chemistry",
-          "role": "challenger"
-        },
-        {
-          "id": "storage-integrators-and-containers",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "heron-power",
-      "name": "Heron Power",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "The only startup on NVIDIA's facility-tier 800 V DC roster — Drew Baglino's (ex-Tesla) 34.5 kV-to-800 V DC solid-state transformer, Heron Link, with a Morgan Hill factory named for late-2027 mass production, two disclosed customers and no shipped unit.",
-      "hq": "Scotts Valley, California, United States",
-      "status": "active",
-      "lastUpdated": "2026-09-12",
-      "aka": [
-        "Heron Power Electronics Company",
-        "Heron Power Electronics Co",
-        "Heron Power, Inc.",
-        "Accelerate Power Co.",
-        "Heron Link",
-        "SuperBBU",
-        "HeronCare",
-        "Heron Factory One"
-      ],
-      "domains": [
-        "heronpower.com"
-      ],
-      "srcTotal": 52,
-      "srcFirstPct": 37,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "power-conversion-and-rack-power-silicon",
-          "role": "challenger"
-        },
-        {
-          "id": "in-hall-power",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "habitat-energy",
-      "name": "Habitat Energy",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "The Oxford-born, Quinbrook-owned battery optimiser — EVOLVE desk-plus-registration service on revenue share across GB (BM Virtual Lead Party), ERCOT (Level 4 QSE) and the NEM; 5.5 GW under contract by its count, third in GB and first in ERCOT's December 2025 capture-rate table by Modo's; for sale since March 2026 with no buyer on record.",
-      "hq": "Oxford, United Kingdom",
-      "status": "active",
-      "lastUpdated": "2026-09-24",
-      "aka": [
-        "Habitat Energy Limited",
-        "Habitat",
-        "EVOLVE",
-        "PowerIQ",
-        "Habitat Energy Australia",
-        "Habitat Energy Pty Ltd",
-        "Habitat Energy, Inc",
-        "Habitat Energy USA",
-        "Renewable and Grid Services"
-      ],
-      "domains": [
-        "habitat.energy",
-        "quinbrook.com"
-      ],
-      "srcTotal": 75,
-      "srcFirstPct": 63,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "software-and-optimization",
-          "role": "challenger"
-        }
-      ]
-    },
-    {
-      "slug": "gridmatic",
-      "name": "Gridmatic",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "The founder-led 'AI-first power company' that tolls and floors ERCOT and CAISO batteries from its own USD 50M fund, sells retail power and day-ahead load bidding to data centres and miners in Texas, Ohio and Pennsylvania ('on track' for USD 100M retail revenue in 2026 by its count), and trades all seven ISOs — every ranking its own, one SEC-filed offtake (Energy Vault's Cross Trails), profitable without venture capital by its own account and hiring to run 'upcoming debt and equity raises'.",
-      "hq": "Cupertino, California, United States (retail headquarters Houston, Texas)",
-      "status": "active",
-      "lastUpdated": "2026-09-24",
-      "aka": [
-        "Gridmatic Inc.",
-        "Gridmatic Inc",
-        "Gridmatic Retail",
-        "Gridmatic Rosa",
-        "Gridmatic Rosa LLC",
-        "Gridmatic Panicum",
-        "Gridmatic Equisetum",
-        "Gridmatic Equisetum LLC",
-        "Gridmatic Storage Fund",
-        "Gridmatic Energy Investment Fund",
-        "Gridmatic Cupressus",
-        "Gridmatic Isotria",
-        "AI Load Optimizer"
-      ],
-      "domains": [
-        "gridmatic.com",
-        "gridmaticretail.com"
-      ],
-      "srcTotal": 77,
-      "srcFirstPct": 40,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "storage-developers-and-ipps",
-          "role": "adjacent"
-        },
-        {
-          "id": "software-and-optimization",
-          "role": "challenger"
-        }
-      ]
-    },
-    {
-      "slug": "grid-united",
-      "name": "Grid United",
-      "categories": [
-        "developer"
-      ],
-      "tagline": "Houston's family-office-owned interregional HVDC developer — five pre-construction lines led by the 420-mile, 3,000 MW North Plains Connector (final EIS August 2026, eight utilities on non-binding MOUs for 2,550 MW, cost now ~USD 6B, operation 2032), Southline (1,000 MW, DOE anchor contracts 'selected'), Three Corners (Oklahoma certificate July 2026); wholly owned by John Arnold's Centaurus Capital per its own Oklahoma filing, Hitachi Energy holds its converter slots, no Form D, no operating asset.",
-      "hq": "Houston, Texas, United States",
-      "status": "active",
-      "lastUpdated": "2026-09-12",
-      "aka": [
-        "Grid United LLC",
-        "Grid United, LLC",
-        "Grid United Texas LLC",
-        "North Plains Connector",
-        "North Plains Connector LLC",
-        "GU Southline LLC",
-        "Southline Transmission",
-        "Southline",
-        "Three Corners Connector",
-        "Pecos West",
-        "Wyoming Intertie",
-        "Continental Connector",
-        "Skelly"
-      ],
-      "domains": [
-        "gridunited.com",
-        "northplainsconnector.com",
-        "southlinetransmission.com",
-        "threecornersconnector.com",
-        "pecoswest.com",
-        "wyomingintertie.com",
-        "continentalconnectorllc.com"
-      ],
-      "srcTotal": 96,
-      "srcFirstPct": 47,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "grid-equipment",
-          "role": "adjacent"
-        },
-        {
-          "id": "utilities",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "pattern-energy",
-      "name": "Pattern Energy",
-      "categories": [
-        "developer",
-        "ipp"
-      ],
-      "tagline": "CPP Investments' privately owned renewables-and-transmission platform — ~12 GW operating and in construction across the US, Canada and Mexico after the share-based Cordelio purchase (April 2026), owner-operator of SunZia (3,650 MW New Mexico wind on a 550-mile, 3,000 MW VSC HVDC line, fully operational June 2026, USD 11B financed), Western Spirit built and sold to PNM, Southern Spirit (ERCOT–Southeast HVDC) certificated in Louisiana but not Mississippi; APG/ABP and ART bought Riverstone's stake June 2025, CPP-led ownership 69.1%, no financials published.",
-      "hq": "San Francisco, California, United States (development headquarters and operations in Houston, Texas)",
-      "status": "active",
-      "lastUpdated": "2026-09-12",
-      "aka": [
-        "Pattern Energy Group LP",
-        "Pattern Energy Group, LP",
-        "Pattern Energy Group Inc.",
-        "Pattern Energy Group Holdings 2 LP",
-        "Pattern Development",
-        "Pattern Transmission",
-        "Pattern Canada",
-        "Pattern Energy Operations",
-        "Pattern Renewables",
-        "PEGI",
-        "SunZia",
-        "SunZia Transmission",
-        "SunZia Wind",
-        "Western Spirit",
-        "Southern Spirit",
-        "Southern Cross Transmission",
-        "Silver Rock Transmission",
-        "Bolo Transmission",
-        "Cordelio",
-        "Cordelio Power",
-        "Solect",
-        "Solect Energy",
-        "Dynamic Energy",
-        "Amanecer Puerto Rico"
-      ],
-      "domains": [
-        "patternenergy.com",
-        "patterncanada.ca",
-        "solect.com",
-        "dynamicenergy.com",
-        "cordeliopower.com",
-        "bolo-os.com",
-        "sunzia.net",
-        "southernspirit.com"
-      ],
-      "srcTotal": 116,
-      "srcFirstPct": 60,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "grid-equipment",
-          "role": "adjacent"
-        },
-        {
-          "id": "storage-developers-and-ipps",
-          "role": "adjacent"
-        },
-        {
-          "id": "utilities",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "mitra-chem",
-      "name": "Mitra Chem",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "The last DOE-funded US LFP cathode plant in the pipeline after ICL's exit — unbuilt, silent on its own channels since September 2024, groundbreaking guided to early 2027",
-      "hq": "Mountain View, United States",
-      "status": "active",
-      "lastUpdated": "2026-09-13",
-      "aka": [
-        "Mitra Future Technologies, Inc.",
-        "Mitra Future Technologies",
-        "Mitra",
-        "MitraChem",
-        "AmPLIFI"
-      ],
-      "domains": [
-        "mitrachem.com"
-      ],
-      "srcTotal": 106,
-      "srcFirstPct": 38,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "cells-and-chemistry",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "cornex",
-      "name": "Cornex",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "Seventh on SNE's H1-2026 storage-cell table at 30.2 GWh and 6.5%, from outside the top ten in 2024 — owner-financed, never audited, no listing filed; two 70–80 GWh plants commissioned in August 2026",
-      "hq": "Xiaogan / Wuhan, China",
-      "status": "active",
-      "lastUpdated": "2026-09-13",
-      "aka": [
-        "楚能新能源股份有限公司",
-        "楚能新能源",
-        "楚能",
-        "CORNEX NEW ENERGY CO., LTD.",
-        "Cornex New Energy",
-        "CORNEX",
-        "Chuneng",
-        "Chuneng New Energy",
-        "湖北楚能",
-        "武汉楚能新能源有限公司",
-        "武汉楚能",
-        "孝感楚能新能源创新科技有限公司",
-        "孝感楚能",
-        "宜昌楚能新能源创新科技有限公司",
-        "宜昌楚能",
-        "襄阳楚能",
-        "聚能π",
-        "浸默",
-        "Jinmo",
-        "珠峰",
-        "CORNEX M5",
-        "CORNEX M6",
-        "楚能汽车",
-        "Cornex Auto",
-        "恒信汽车集团",
-        "Hengxin Automobile Group",
-        "代德明",
-        "Dai Deming"
-      ],
-      "domains": [
-        "cornexbattery.com",
-        "cn-ne.cn",
-        "cn-np.com"
-      ],
-      "srcTotal": 139,
-      "srcFirstPct": 53,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "cells-and-chemistry",
-          "role": "challenger"
-        },
-        {
-          "id": "storage-integrators-and-containers",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "dg-matrix",
-      "name": "DG Matrix",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "The low-voltage-first SST challenger — Raleigh–Durham multi-port solid-state transformer (Interport Flex 200/400 kVA six-port skid shipping pre-certification, Cell-LV sidecar, Cell-MV 12–34.5 kV skid dated 2028+), USD 60M Series A led by Engine Ventures with ABB and Mitsubishi Heavy Industries, Infineon SiC; self-declared NVIDIA MGX member absent from NVIDIA's rosters; no named energised customer.",
-      "hq": "Morrisville, North Carolina, United States (Raleigh–Durham)",
-      "status": "active",
-      "lastUpdated": "2026-09-19",
-      "aka": [
-        "DG Matrix Inc.",
-        "DG Matrix, Inc.",
-        "DGMatrix",
-        "Interport",
-        "Interport SST",
-        "Interport 360",
-        "Power Router",
-        "Power SideCar",
-        "Power Bridge"
-      ],
-      "domains": [
-        "dgmatrix.com",
-        "pub-603db131244d4898a25e35ad020f3bf9.r2.dev"
-      ],
-      "srcTotal": 84,
-      "srcFirstPct": 44,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "power-conversion-and-rack-power-silicon",
-          "role": "challenger"
-        },
-        {
-          "id": "in-hall-power",
-          "role": "adjacent"
-        }
-      ]
-    },
-    {
-      "slug": "novos-power",
-      "name": "Novos Power",
-      "categories": [
-        "supplier"
-      ],
-      "tagline": "The pre-product SST entrant — 2025 San Diego State University spin-out (CTO Chris Mi, CEO Susan Linwood) claiming a direct 13–48 kV 'Variable Airgap' solid-state transformer at ≥98.5% peak efficiency, 1–50 MW, air-cooled; no funding round, no datasheet, no patent, no customer; pitch-competition wins and one SemiAnalysis citation are the record.",
-      "hq": "San Diego, California, United States (and Palo Alto, California)",
-      "status": "active",
-      "lastUpdated": "2026-09-19",
-      "aka": [
-        "Novos Power Inc.",
-        "Novos Power, Inc.",
-        "NovosPower",
-        "VASST",
-        "Variable Airgap Solid State Transformer",
-        "Variable Air Gap Solid-State Transformer"
-      ],
-      "domains": [
-        "novospower.com"
-      ],
-      "srcTotal": 38,
-      "srcFirstPct": 8,
-      "kpiNorm": false,
-      "segments": [
-        {
-          "id": "power-conversion-and-rack-power-silicon",
-          "role": "challenger"
         }
       ]
     }

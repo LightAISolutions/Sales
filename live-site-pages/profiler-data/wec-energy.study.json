@@ -1,0 +1,447 @@
+{
+ "schemaVersion": 2,
+ "slug": "wec-energy",
+ "title": "WEC Energy Group — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "the-subscription-tariff",
+   "title": "The subscription tariff: a third way to make a data center pay",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The corpus now holds three answers to the same question — how does a regulated utility serve a gigawatt of new load without sending the bill to everyone else? Dominion's answer is a rate class with minimum demand charges (GS-5). DTE's is a special contract in which the customer pays for utility-owned batteries. WEC's is the third and the most complete: a {{bespoke resource}}. Under We Energies' Very Large Customer and Bespoke Resources tariffs, a customer of 100 MW or more subscribes to specific new plants the utility builds for it, pays 100 percent of their cost for at least fifteen years at a return fixed for the term, and posts security equal to the plants' book value if its credit is below A-. The utility owns the plant; the customer, in effect, has bought a regulated power station on an instalment plan.",
+    "Wisconsin's regulatory structure is what makes this possible and what a seller must understand first. There is no {{IRP}} regime in the state: every plant is its own certificate docket, so a tariff that ties a customer to a named plant fits a system that already approves plants one at a time. The {{public utility commission}} (the PSCW) sets returns by utility and, in this order, set one return for the bespoke assets that is higher than the base return and fixed for the customer's term — 10.48 to 10.98 percent on 57 percent equity, against 9.8 percent for everyone else. That is the tariff's quiet incentive: the utility earns more, for longer, on the plant it builds for a data center than on the plant it builds for the town.",
+    "This guide teaches what a high-school-STEM reader needs to follow that: how the tariff's five terms work and why the commission rewrote four of them; who bears the cost of the transmission lines a campus needs and why that question is now at the federal regulator; how a utility owns batteries it did not develop (build-transfer); why the gas it is building is peakers and engines rather than combined cycles; what a nuclear purchase agreement's extension does to a plan; and how a customer's credit rating, not its load, became the binding constraint on the corpus's first Stargate campus."
+   ]
+  },
+  {
+   "id": "anatomy-of-the-vlc-tariff",
+   "title": "Anatomy of the VLC tariff: five terms, four rewritten",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "We Energies proposed the tariff in March 2025; the commission approved it thirteen months later and changed almost every term against the customer. Read each row as what the utility asked, what the regulator did, and what the term means.",
+   "cols": [
+    "Term",
+    "As proposed",
+    "As approved (April 24, 2026)",
+    "What it does"
+   ],
+   "rows": [
+    [
+     "Threshold",
+     "500 MW of new load",
+     "100 MW",
+     "Decides who is a 'very large customer' — at 100 MW, a single colocation building qualifies"
+    ],
+    [
+     "Minimum term",
+     "10 years",
+     "15 years; 20 for wind and solar subscriptions; the depreciable life for gas and batteries",
+     "The customer's commitment horizon, matched to the plant's payback"
+    ],
+    [
+     "Cost model",
+     "A 'capacity-only' option at 75% of generation cost, or full benefits at 100%",
+     "Capacity-only removed; 100% only",
+     "The customer pays every dollar of the dedicated plant — no shared benefit, no {{cross-subsidy}}"
+    ],
+    [
+     "Return",
+     "ROE 10.48–10.98%, 57% equity, fixed for the term",
+     "Unchanged",
+     "The utility's reward: a return above its base 9.8% that no future {{rate case}} can revisit"
+    ],
+    [
+     "Exit",
+     "Remaining net book value",
+     "Unchanged, with the customer liable for full 15-year recovery of bespoke assets",
+     "The {{stranded cost}} guard — if the campus leaves, it buys the plant"
+    ],
+    [
+     "Credit",
+     "Security at the utility's discretion",
+     "Mandatory below A- (S&P) or A3 (Moody's): security equal to the net book value of investments to serve the customer; utility waiver removed",
+     "Turns the customer's rating into a cash event — the term Oracle tested"
+    ],
+    [
+     "Transmission",
+     "Silent",
+     "Revisions ordered to stop transmission cost-shifting; 100% to the customer",
+     "Sends the wires question to ATC's FERC agreements"
+    ],
+    [
+     "Oversight",
+     "—",
+     "Reporting requirements and a future adjustment mechanism",
+     "The commission keeps a hand on the tariff after approval"
+    ]
+   ]
+  },
+  {
+   "id": "the-fixed-return",
+   "title": "The fixed return: why the utility likes the tariff more than the customer does",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The arithmetic.** The Dominion guide gave the one equation: revenue requirement equals costs plus {{rate base}} times the {{allowed return}}. For most of We Energies' plant the return is set every two years in a rate case, now 9.8 percent on about 53 percent equity. For a bespoke plant the return is 10.48–10.98 percent on 57 percent equity — more return on more equity — and it is fixed for the customer's fifteen-plus years, 'excluded from future rate cases and from the earnings-sharing mechanism'. On a $1 billion plant with 57 percent equity, the bespoke return earns roughly $60–63 million a year against about $52 million at the base terms, and it cannot be cut by the next commission.",
+    "**Why the regulator allowed it.** The customer bears all the cost and all the exit risk, so the higher return is priced as compensation for a concentrated counterparty rather than paid by the general body of ratepayers. That is also why the commission tightened the credit test: a fixed return for fifteen years is only safe if the payer is rated, or collateralised, for fifteen years.",
+    "**What it means for a seller.** Every bespoke megawatt is a rate-base asset the utility wants to own — the tariff makes owning, not contracting, the profitable answer. WEC's September 2026 book puts VLC and bespoke assets at 15 percent of the 2030 asset base. So the buyer of the turbines and batteries behind Microsoft's and Vantage's load is We Energies' major-projects group, not the hyperscaler, and the plant's specification is written to the utility's standards and a commission's cost cap."
+   ]
+  },
+  {
+   "id": "who-pays-for-the-wires",
+   "title": "Who pays for the wires: network rates, minimum transmission charges and the FERC fight",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Transmission is where the bespoke model gets complicated, because the wires belong to a different company under a different regulator. American Transmission Company — 60 percent owned by WEC, equity-accounted — owns the high-voltage grid in eastern Wisconsin and recovers its cost through a {{FERC formula rate}}: a network charge, set by federal formula, that every load-serving utility in the zone pays in proportion to its load. Under that formula a new line built for one data center is normally spread across everyone's bills — exactly the {{cost allocation}} problem the state tariff was written to avoid.",
+    "The fix ATC and We Energies filed in July 2026 is a {{minimum transmission charge}}: for the Microsoft campus, We Energies commits to pay ATC's network rate on 100 percent of the transmission capacity requested, for fifteen years from completion, whether or not the load arrives, and passes that charge to Microsoft under the VLC tariff. Four amended large-load project commitment agreements attach it to specific upgrades (more than $500 million at Mount Pleasant). If the campus fills, nothing changes; if it does not, the customer, not the network, pays for the stranded line. ATC calls it 'cost causer, cost payer'.",
+    "Microsoft — the customer that signed the VLC agreement six weeks earlier — protested at FERC on August 21, 2026 (Docket ER26-3265): the early-termination charge is a 'windfall', recovering {{CWIP}} on transmission is improper, and ATC's largest shareholder is the utility passing through the cost. The state commission's own comments called the filing 'far from fully responsive'. The federal backdrop is FERC's June 2026 order to show cause on how RTOs allocate large-load transmission costs, so the docket is a template, not a one-off. The seller's lesson: the state tariff assigns the wires cost to the customer, but only the federal regulator can make the transmission owner collect it that way — and the customer can fight at one level what it accepted at the other."
+   ]
+  },
+  {
+   "id": "build-transfer",
+   "title": "Build-transfer: how a utility owns batteries it did not develop",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "Every named We Energies battery was developed by someone else — Invenergy for Paris, Darien, Koshkonong and Dawn Harvest — and bought at or before completion. The cards compare that channel with the self-build DTE and Duke use.",
+   "cards": [
+    {
+     "t": "Build-transfer from a developer",
+     "meta": "Paris (99 MW, in service 2025), Darien, Koshkonong, Dawn Harvest; Foundry Ridge and Red Oak Ridge gas sites",
+     "adv": [
+      "The developer carries site control, the {{interconnection queue}}, permitting and construction risk; the utility buys a project that already has a {{point of interconnection}}",
+      "Wisconsin's certificate dockets (5-BS) approve the purchase price and the project together — one docket, one asset",
+      "The utility still owns the plant in {{rate base}} and, under the VLC tariff, can dedicate it to a subscriber at the bespoke return"
+     ],
+     "dis": [
+      "The developer chose the battery and the {{EPC}} at bid stage, so the OEM decision was made before the utility was the buyer — and no WEC document names one",
+      "Transfer-price scrutiny: intervenors compare the purchase to what a self-build would cost",
+      "Pipeline depends on developers' project flow — about 720 MW named against a 2,130 MW plan"
+     ]
+    },
+    {
+     "t": "Self-build with a supply agreement",
+     "meta": "Duke's Allen and Riverbend; DTE's Trenton Channel",
+     "adv": [
+      "The utility signs the supply agreement — the OEM sells to the buyer directly",
+      "The utility controls specification, schedule and the balance of plant"
+     ],
+     "dis": [
+      "The utility carries interconnection and construction risk and any supplier failure (DTE's Powin termination)",
+      "Needs an in-house major-projects capability — which WEC created in May 2026 by appointing a senior vice president for major projects"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "peakers-and-engines",
+   "title": "Peakers and engines: why WEC's gas is quick-start",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Duke and DTE are certifying {{combined cycle}} plants — baseload machines that run most hours. WEC's gas book is different in kind: 3,300 MW of {{simple cycle}} combustion turbines, 180 MW of {{reciprocating engine}}s, summer upgrades to existing units and 6 Bcf of LNG storage. A simple-cycle turbine wastes its exhaust heat and so burns more gas per megawatt-hour, but it starts in minutes, ramps fast and costs a fraction of a combined cycle per megawatt of capacity; a reciprocating engine — a very large piston engine, seven of them at Paris — starts faster still and holds efficiency at part load. Both are bought for hours, not energy: to cover the winter peak, a wind lull, or the gap while a battery recharges.",
+    "That choice reflects the system WEC is building. The Point Beach nuclear contract supplies about a gigawatt of baseload around the clock; 3,850 MW of solar and 555 MW of wind supply energy when the weather does; 2,130 MW of four-hour batteries shift it into the evening; and the turbines and engines fill whatever is left, plus the {{planning reserve margin}} {{MISO}} requires. The LNG storage exists because a peaker that runs on the coldest morning of the year needs gas on a day when pipelines are full — the utility is buying its own fuel buffer. The data-center load, contracted to arrive over 2027–2030, raises the height of the peak the peakers must cover rather than the energy the system must produce every hour.",
+    "For an equipment seller the reading is the order book and the OEM gap. Oak Creek (1,100 MW) and Paris (128 MW) were approved in May 2025 and are under construction for late 2027; Foundry Ridge (270 MW) and Red Oak Ridge (1,125 MW) — both Invenergy-developed sites We Energies filed to buy — are pending decisions in the fourth quarter of 2026, and Microsoft's VLC agreement subscribes to Red Oak Ridge by name. No turbine manufacturer is disclosed for any of them, which at Duke would mean a GE Vernova slot count; here it means the choice sits with Invenergy on the purchased sites and with We Energies' major-projects group on Oak Creek."
+   ]
+  },
+  {
+   "id": "the-nuclear-contract",
+   "title": "The nuclear contract: what extending a PPA does to a plan",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**What it is.** We Energies does not own a reactor; it buys about 86 percent of the output of NextEra's Point Beach plant (about 1 GW) under a {{PPA}} that was to expire in 2030 and 2033. The price escalates by contract — from $75.51 per megawatt-hour in 2026 toward $122 by 2033 — and the contract is about a fifth of the 2027 rate request. In August 2026 WEC agreed to extend it to 2050 and 2053 on terms it says will save customers money against the current contract; the commission's approval and the new price are pending.",
+    "**Why it matters more than its size.** For two years the company told investors that replacing Point Beach would cost roughly $2–2.5 billion per 500 MW to a gigawatt of new capacity — a decision it flagged for the third-quarter 2026 call. The extension removes that decision from the plan: a gigawatt of {{baseload}} that would otherwise need replacing with new gas or storage in 2030 stays, and the $37.5 billion plan does not have to grow to cover it. It is the same logic as Duke's 80-year license renewals, achieved through a contract rather than a license.",
+    "**What a seller reads.** A utility that extends a nuclear contract has decided its next gigawatt of firm capacity will not be new build; what it still needs are peakers for the peak and batteries for the shift, which is exactly the book WEC is buying. And the price, once approved, sets a benchmark for what firm, carbon-free capacity is worth in Wisconsin — the number the data-center subscriptions will be compared with."
+   ]
+  },
+  {
+   "id": "credit-is-the-constraint",
+   "title": "Credit is the constraint: Oracle, the A- rule and the seven weeks that tested it",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The Port Washington campus is developed by Vantage for OpenAI, but the credit behind it is Oracle's. The sequence below is the tariff's security rule meeting a real downgrade, in order.",
+   "cols": [
+    "Date",
+    "Event",
+    "What it tested"
+   ],
+   "rows": [
+    [
+     "2026-04-24",
+     "PSCW approves the tariff with mandatory security at net book value for customers below A-/A3 and removes the utility's ability to waive it",
+     "The rule is written"
+    ],
+    [
+     "2026-06-12",
+     "We Energies, Vantage and Cloverleaf petition the commission to ease the collateral requirement",
+     "The utility sides with its customer against the rule"
+    ],
+    [
+     "2026-06-24",
+     "Oracle sues the PSCW in Ozaukee County over the requirement",
+     "The customer challenges the rule directly"
+    ],
+    [
+     "Early July 2026",
+     "The PSCW declines the rehearing petition",
+     "The rule holds"
+    ],
+    [
+     "2026-07-09",
+     "S&P cuts Oracle to BBB- — below the threshold",
+     "The rule binds: security equal to the book value of the plants built to serve the campus"
+    ],
+    [
+     "2026-07-29",
+     "The CEO: 'all the collateral we need … if it goes down, we already have'",
+     "Security is posted"
+    ],
+    [
+     "2026-08-17",
+     "Oracle drops its suit; WEC's September book says Oracle 'has met the financial security requirements'",
+     "The customer complies"
+    ],
+    [
+     "2027-06-01",
+     "VLC service agreements replace the payment-and-cancellation agreements",
+     "The next test: the fixed-term subscription begins"
+    ]
+   ]
+  },
+  {
+   "id": "where-wec-slots-in",
+   "title": "Where WEC's programs slot into the chain",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The seller's map: each thing WEC buys, the document that authorises it, who chooses the hardware, and the open door.",
+   "cols": [
+    "Program",
+    "Authorising document",
+    "Who chooses the equipment",
+    "The open door and its date"
+   ],
+   "rows": [
+    [
+     "2,130 MW of utility-owned batteries",
+     "PSCW 5-BS purchase dockets (no IRP)",
+     "The developer at bid stage (Invenergy); undisclosed OEM",
+     "Dawn Break decision Q4 2026; ~1,400 MW unfiled — through Invenergy or a self-build under the new major-projects group"
+    ],
+    [
+     "3,300 MW of combustion turbines; 180 MW RICE",
+     "6630-CE and 6630-BS certificates",
+     "We Energies (Oak Creek, Paris); Invenergy (Foundry Ridge, Red Oak Ridge); OEM undisclosed",
+     "Foundry Ridge and Red Oak Ridge decisions Q4 2026"
+    ],
+    [
+     "Bespoke resources for VLCs",
+     "VLC service agreements subscribed to specific dockets",
+     "Same as above — the subscriber does not pick the plant's hardware",
+     "Microsoft subscribed (July 2026); Vantage/Oracle from June 2027"
+    ],
+    [
+     "Transmission (ATC, 60%)",
+     "FERC formula rate; large-load project commitment agreements (ER26-3265); PSCW CE dockets",
+     "ATC",
+     "FERC action on the Mount Pleasant agreements; PSCW decision on the refiled $2.5–2.7B Port Washington line"
+    ],
+    [
+     "Solar (3,850 MW) and wind (555 MW)",
+     "5-BS and 5-CE dockets",
+     "Developers (Invenergy, OneEnergy)",
+     "Seven solar dockets Q4 2026"
+    ],
+    [
+     "Nuclear (~1 GW)",
+     "Point Beach PPA extension",
+     "NextEra",
+     "PSCW approval and price"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — the load, the plan and the named projects",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "WEC's own figures at their most recent disclosure. The shape to notice: the two campuses' forecast load and the plan's turbines are the same size, and the named batteries are a third of the battery plan.",
+   "items": [
+    {
+     "label": "Data-center demand forecast through 2030",
+     "sub": "Microsoft 2.6 + Vantage 1.3",
+     "v": 3.9
+    },
+    {
+     "label": "Combustion turbines in the plan",
+     "sub": "$5.2B",
+     "v": 3.3
+    },
+    {
+     "label": "Turbines with dockets",
+     "sub": "Oak Creek 1.1 + Foundry Ridge 0.27 + Red Oak Ridge 1.125",
+     "v": 2.5
+    },
+    {
+     "label": "Batteries in the plan",
+     "sub": "$2.9B",
+     "v": 2.13
+    },
+    {
+     "label": "Batteries named with dockets (WEC share)",
+     "sub": "Paris to Dawn Break",
+     "v": 0.72
+    },
+    {
+     "label": "Point Beach PPA",
+     "sub": "extended to 2050/2053",
+     "v": 1.0
+    },
+    {
+     "label": "Vantage site potential",
+     "sub": "over time",
+     "v": 3.5
+    }
+   ],
+   "note": "The 3.9 GW is about 45 percent of the company's electric demand growth over 2026–2030; VLC and bespoke assets are 15 percent of the 2030 asset base."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**Reading the tariff as a rate.** It is a subscription: the customer buys named plants at a fixed return. Comparing its 'minimum bill' with Dominion's 85 percent misses that the customer here pays 100 percent of a dedicated asset.",
+    "**Assuming the state tariff settles the wires.** Transmission cost sits with ATC under a federal formula; the minimum transmission charge is a FERC filing, and the customer is fighting it there.",
+    "**Treating Meta's Beaver Dam as WEC load.** It is Alliant's; ATC lists its lines, WEC does not serve it.",
+    "**Expecting an RFP.** Wisconsin has no IRP and WEC runs no storage solicitation; the doors are Invenergy's build-transfer sites and the utility's own major-projects group.",
+    "**Forgetting the commission's politics.** Three appointees of a governor whose term ends in January 2027 wrote the tariff; a legislature that passed no data-center statute in 2026 could yet write one."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is a bespoke resource under We Energies' tariff?",
+     "a": "A plant the utility builds for one very large customer, which subscribes to it and pays 100 percent of its cost for at least 15 years at a return fixed at 10.48–10.98 percent on 57 percent equity; the utility owns it in rate base."
+    },
+    {
+     "q": "Which four terms did the PSCW rewrite, and in which direction?",
+     "a": "Threshold 500 → 100 MW; minimum term 10 → 15 years; the 75 percent capacity-only option removed; security made mandatory below A-/A3 with no utility waiver — all against the customer. The fixed return was left as proposed."
+    },
+    {
+     "q": "Why does a fixed 10.48–10.98 percent return matter more than it looks?",
+     "a": "It is above the utility's 9.8 percent base return, on a higher equity ratio, and excluded from future rate cases — so the utility earns more, for longer, on plants built for data centers than on plants built for everyone else."
+    },
+    {
+     "q": "What is a minimum transmission charge agreement?",
+     "a": "A commitment by the serving utility to pay the transmission owner's network rate on a fixed capacity for a fixed term whether or not the load arrives, passed through to the customer — so a stranded line is the customer's cost, not the network's."
+    },
+    {
+     "q": "Why can Microsoft sign a VLC agreement in July and protest at FERC in August?",
+     "a": "Because the state tariff and the federal transmission agreement are separate instruments under separate regulators: it accepted the generation subscription at the PSCW and is contesting the transmission cost allocation at FERC."
+    },
+    {
+     "q": "Build-transfer versus self-build — who picks the battery?",
+     "a": "In build-transfer the developer (Invenergy) chose the OEM at bid stage and the utility buys the finished project; in self-build the utility signs the supply agreement itself. WEC uses the first, Duke and DTE the second."
+    },
+    {
+     "q": "Why is WEC's gas book peakers and engines rather than combined cycles?",
+     "a": "Its system has nuclear baseload under contract, energy from solar and wind, and batteries for the shift; what the contracted data-center ramp raises is the height of the peak and the reserve margin, which quick-start turbines and reciprocating engines cover at low capital cost."
+    },
+    {
+     "q": "What did extending the Point Beach PPA to 2050/2053 remove from the plan?",
+     "a": "A replacement decision the company had priced at roughly $2–2.5 billion per 500 MW to a gigawatt of new firm capacity in 2030 — the same effect as Duke's 80-year license renewals, achieved by contract."
+    },
+    {
+     "q": "What happens under the tariff when a subscriber is downgraded below A-?",
+     "a": "It must post security equal to the net book value of the investments made to serve it; Oracle was cut to BBB- in July 2026, posted the collateral and dropped its lawsuit against the rule."
+    },
+    {
+     "q": "Why does Wisconsin's lack of an IRP regime suit the bespoke model?",
+     "a": "Every plant is already its own certificate docket, so a tariff that ties a customer to a named plant maps onto how the commission approves plants anyway — one docket, one asset, one subscriber."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A 300 MW data center in Wisconsin subscribes to a $1 billion bespoke turbine plant at the VLC tariff's return, and a similar plant elsewhere earns the base 9.8 percent on 53 percent equity. Roughly how much more does the utility earn on the bespoke plant each year, and can the next commission cut it?",
+     "c": [
+      "About the same; yes",
+      "Roughly $8–11 million more a year; no — it is fixed for the term and excluded from rate cases",
+      "Twice as much; yes",
+      "Nothing — the customer keeps the return"
+     ],
+     "a": 1,
+     "why": "10.48–10.98 percent on 57 percent equity against 9.8 percent on 53 percent; the tariff fixes it for the customer's term."
+    },
+    {
+     "q": "A transmission line built for one campus is recovered through a FERC network rate. What does the minimum transmission charge agreement change?",
+     "c": [
+      "It lowers the network rate",
+      "It commits the serving utility to pay for the requested capacity for 15 years whether or not the load arrives, and passes that cost to the customer — so the stranded line is the customer's, not the network's",
+      "It transfers the line to the customer",
+      "It exempts the campus from the network rate"
+     ],
+     "a": 1,
+     "why": "Cost causer, cost payer — at the federal level, where the customer is now protesting it."
+    },
+    {
+     "q": "Which sequence is correct for the Oracle collateral episode?",
+     "c": [
+      "Downgrade → lawsuit → tariff approved → collateral posted",
+      "Tariff approved with an A-/A3 rule → utility and customer ask to ease it → commission refuses → downgrade to BBB- → collateral posted → suit dropped",
+      "Lawsuit → tariff rewritten → downgrade",
+      "Collateral posted → tariff approved → downgrade → lawsuit"
+     ],
+     "a": 1,
+     "why": "The rule was written first, tested by a real downgrade seven weeks later, and held."
+    },
+    {
+     "q": "Why does WEC buy simple-cycle turbines and reciprocating engines for a contracted data-center ramp rather than a combined cycle?",
+     "c": [
+      "They are cleaner",
+      "The nuclear PPA and renewables supply energy; the ramp raises the peak and the reserve requirement, which quick-start capacity covers at low capital cost per megawatt",
+      "Combined cycles are banned in Wisconsin",
+      "The data centers asked for peakers"
+     ],
+     "a": 1,
+     "why": "Capacity for hours, not energy for every hour."
+    },
+    {
+     "q": "Every named We Energies battery was developed by Invenergy and bought at completion. Which statement about the battery OEM is correct?",
+     "c": [
+      "We Energies chose it in its supply agreement",
+      "Invenergy chose it at bid stage, before the utility was the buyer; no WEC document names it",
+      "The PSCW chose it",
+      "Microsoft chose it as subscriber"
+     ],
+     "a": 1,
+     "why": "Build-transfer moves the OEM decision to the developer."
+    },
+    {
+     "q": "Meta's Beaver Dam data center appears in ATC's list of data-center transmission projects. Whose load is it?",
+     "c": [
+      "We Energies'",
+      "Alliant Energy's (Wisconsin Power and Light) — ATC builds the lines, WEC does not serve it",
+      "WPS's",
+      "Microsoft's"
+     ],
+     "a": 1,
+     "why": "EEI's list and the PSCW's May 2026 approval of Alliant's custom rates place it under Alliant."
+    }
+   ]
+  }
+ ]
+}

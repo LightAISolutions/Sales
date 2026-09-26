@@ -1341,6 +1341,21 @@
      "slug": "pattern-energy",
      "role": "adjacent",
      "basis": "productsAndServices › Operating wind, solar and storage fleet: a ~12 GW wind-and-solar IPP whose storage book is McHenry (20 MW, 2015) and the 220 MW Amanecer Puerto Rico batteries under a USD 489.4 million DOE loan (August 2026) — an IPP at scale, adjacent rather than a storage position on the record"
+    },
+    {
+     "slug": "duke-energy",
+     "role": "adjacent",
+     "basis": "productsAndServices › Battery storage: ~4.5 GW of utility-owned batteries online by 2031 (Allen, Riverbend, Knightdale, Powerline, Bartow) — a rate-based owner, not a developer"
+    },
+    {
+     "slug": "dte-energy",
+     "role": "adjacent",
+     "basis": "productsAndServices › Battery storage: 1,383 MW of DTE-owned storage owed under the Oracle energy storage agreement; 2,292 MW approved in 2026; the counterparty on the tolling side for Key Capture Energy and Aypa"
+    },
+    {
+     "slug": "wec-energy",
+     "role": "adjacent",
+     "basis": "productsAndServices › Utility-owned battery storage: 2,130 MW ($2.9B) in the 2026–2030 plan bought build-transfer from Invenergy — a rate-based owner"
     }
    ]
   },
@@ -1704,6 +1719,21 @@
      "slug": "pattern-energy",
      "role": "adjacent",
      "basis": "productsAndServices › Pattern Transmission: merchant transmission owner scheduled into CAISO as the first Subscriber Participating Transmission Owner, build-own-transfer of Western Spirit Transmission to PNM (USD 285 million, 2021), wholesale seller to SRP, LADWP and eight California CCAs, and the developer Entergy Mississippi opposes at the state commission"
+    },
+    {
+     "slug": "duke-energy",
+     "role": "incumbent",
+     "basis": "registry tagline: the six-state regulated utility with ~7.8 GW of signed data-center ESAs; ecosystemRole: a self-build storage buyer with three procurement doors and GE Vernova's largest disclosed utility turbine customer"
+    },
+    {
+     "slug": "dte-energy",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the corpus's clearest example of a utility converting a hyperscale contract directly into battery purchase orders — 1,383 MW of customer-funded storage owed under the Oracle agreement"
+    },
+    {
+     "slug": "wec-energy",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the corpus's cleanest example of the bespoke-resource model — the data-center customer subscribes to specific new generation and the utility builds and owns it"
     }
    ]
   },
