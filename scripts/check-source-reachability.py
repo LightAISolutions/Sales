@@ -11,6 +11,12 @@ User-Agent, and the block was network-keyed rather than a User-Agent defect. Tha
 was discovered twenty minutes into a refresh, after the research had been planned
 around EDGAR. One command should say so in three seconds instead.
 
+Amended 2026-09-26 (v07.68r): the 'network-keyed' reading was wrong. SEC rejects
+a User-Agent whose contact address is on a *.github.io domain, which is what this
+probe sent; the same request with any ordinary email domain returns 200. SEC hosts
+now get SEC_USER_AGENT, a real contact the developer supplied; every other host
+keeps the neutral USER_AGENT.
+
 The second half is the part a probe alone would miss. When filings are
 unreachable a session silently substitutes company newsrooms — first-party but
 CURATED, where filings are not — and nothing in the toolchain notices the shift.
@@ -33,16 +39,20 @@ Run it BEFORE planning research for a `profiler <Company>` or a scheduled
 refresh — not at commit time, when the answer is too late to be useful.
 """
 import json, sys, os, re, importlib.util
-from urllib import request, error
+from urllib import request, error, parse
 
 DATA = 'live-site-pages/profiler-data'
 REG_PATH = os.path.join(DATA, 'profiler-companies.json')
 SYNC_PATH = 'scripts/sync-profiler-registry.py'
 
-# SEC asks that automated traffic declare itself with company information and a
-# contact. NEVER put a personal email address here — this string is sent to
-# third-party hosts on every run. A role address on an org domain only.
+# The neutral User-Agent, sent to every NON-SEC host. NEVER put a personal email
+# address here — this string goes to third-party hosts on every run.
 USER_AGENT = 'LightAISolutions Profiler Research admin@lightaisolutions.github.io'
+# SEC's fair-access policy wants 'Sample Company Name AdminContact@<domain>.com' —
+# a name and a real, monitored email — and it refuses a *.github.io contact. The
+# developer supplied this address on 2026-09-26 for SEC use; it is sent ONLY to
+# sec.gov hosts (see sec_host). Research sessions reading EDGAR use the same string.
+SEC_USER_AGENT = 'LightAISolutions Profiler Research jonyang92@gmail.com'
 TIMEOUT = 12
 
 # Two SEC endpoints, because www.sec.gov and data.sec.gov sit behind different
@@ -95,6 +105,11 @@ def load_sync():
     return mod
 
 
+def sec_host(url):
+    host = (parse.urlsplit(url).hostname or '').lower()
+    return host == 'sec.gov' or host.endswith('.sec.gov')
+
+
 def probe(url):
     """One GET. Returns (status, verdict, detail). Never raises.
 
@@ -106,7 +121,7 @@ def probe(url):
     """
     try:
         req = request.Request(url, headers={
-            'User-Agent': USER_AGENT,
+            'User-Agent': SEC_USER_AGENT if sec_host(url) else USER_AGENT,
             'Accept-Encoding': 'identity',
             'Accept': '*/*',
         })
@@ -119,8 +134,8 @@ def probe(url):
         except Exception:
             body = ''
         if e.code == 403 and SEC_BLOCK_MARK in body:
-            return e.code, 'blocked', ('SEC undeclared-automated-tool page — the block is keyed to this '
-                                       'network, not to the User-Agent; retrying is pointless load')
+            return e.code, 'blocked', ('SEC undeclared-automated-tool page — SEC refused the declared '
+                                       'User-Agent; check SEC_USER_AGENT holds a real contact email')
         if e.code in (401, 403, 407):
             return e.code, 'blocked', 'denied (%s) — egress policy or host bot rule; do not retry' % e.reason
         if e.code == 429:

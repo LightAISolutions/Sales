@@ -3,11 +3,41 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.68r] — 2026-09-26 05:05:03 PM EST
+
+> **Prompt:** "1. SEC contact: <LightAISolutions Profiler Research> <jonyang92@gmail.com>
+> 2. Looks good.
+> 3. I approve of your recommendation.
+> 4. Good.
+> 5. Keep the newer one and dismiss the older one.
+> 6. Good."
+
+The developer's answers to v07.67r: the SEC contact supplied, the DigitalBridge fallback approved, and the older 9/30 reminder dismissed.
+
+### Fixed
+
+- **`scripts/check-source-reachability.py` — SEC now answers.** SEC hosts get a new `SEC_USER_AGENT`, `LightAISolutions Profiler Research` plus the contact email the developer supplied for this purpose. Every other probed host keeps the neutral `USER_AGENT`, so the address goes to SEC only. The file's own rule, never to send a personal address to third-party hosts, still holds for them.
+  - **Verified:** the probe's verdict is **OK** for the first time since v04.91r: `sec.gov` 200, `data.sec.gov` 200, and the ASX, LSE and NVIDIA control hosts 200.
+  - The probe's 403 message no longer blames 'this network'; it points at `SEC_USER_AGENT`. The docstring carries a dated amendment.
+
+### Changed
+
+- **`.claude/rules/profiler-app.md`** (Profiler Command, the probe step) — records that the v04.91r 'block' was SEC refusing a `github.io` contact. Every request to `sec.gov` or `data.sec.gov`, a subagent's curl included, now sends the exact `SEC_USER_AGENT` string read from the script, and only to SEC hosts.
+- **`PROFILER-SCHEMA.md`** — the disclosure-tier note carries the same correction.
+- **`profiler-refresh-notes.json`** — BlackRock's access note records the fix.
+- **`phase-f-action-plan.md`** — row 10's DigitalBridge fallback is marked recommended and approved: move `scenario-capital-objection`'s reviewBy to Fri 11/6 if the close has not happened by Wed 10/7, with the 10/30 backstop.
+- **`REMINDERS.md`** — the 2026-09-24 09:54 PM reminder to check the 9/30 Classroom run moved to Completed Reminders, dismissed by the developer. The 2026-09-26 01:21 AM reminder covers the same check and stays active, unchanged.
+
+### Notes
+
+- The paste-in prompts kept 'as run' in `phase-f-action-plan.md` still mention the EDGAR block. They are records of what was sent, so they were not rewritten.
+- No page changed, so no page version bump.
 
 ## [v07.67r] — 2026-09-26 04:52:03 PM EST
 
