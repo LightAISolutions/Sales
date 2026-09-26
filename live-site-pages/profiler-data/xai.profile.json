@@ -202,6 +202,16 @@
    "note": "HUMAIN is to design, build and operate a network of Saudi GPU data centres for xAI, anchored by a '500 MW+' flagship, and invested US$3B in xAI's Series E.",
    "context": "The 19 Nov 2025 framework combines 'HUMAIN's low-cost value proposition in infrastructure design, construction, and operations with xAI's leadership in frontier AI systems'. No site, owner split or builder is disclosed. Saudi Arabia's Communications Minister said at LEAP 2026 the expansion would start at 50 MW and grow to 500 MW.\n\nHUMAIN confirmed its US$3B Series E investment on 18 Feb 2026 and says the holding converted into SpaceX shares after the merger.",
    "source": "https://www.prnewswire.com/news-releases/humain-and-xai-partner-to-build-next-generation-ai-compute-power-and-deploy-grok-in-the-kingdom-to-support-the-most-ai-enabled-nation-objectives-302620677.html"
+  },
+  {
+   "slug": "blackrock",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-03",
+   "via": "AI Infrastructure Partnership (AIP)",
+   "note": "xAI joined the BlackRock-chaired AI Infrastructure Partnership, with NVIDIA, on 19 March 2025.",
+   "context": "BlackRock's 19 March 2025 release: NVIDIA and xAI join the partnership, renamed the AI Infrastructure Partnership, and GE Vernova and NextEra Energy agree to collaborate with it. The partnership's first investment is Aligned Data Centers, closed in July 2026, and xAI is named among Aligned's strategic partners. xAI's commitment is undisclosed.",
+   "source": "https://www.blackrock.com/corporate/newsroom/media/press-releases/ai-infrastructure-partnership"
   }
  ],
  "technicalSpecs": [
@@ -445,6 +455,11 @@
    "date": "2025-05-19"
   },
   {
+   "label": "BlackRock — AI Infrastructure Partnership: NVIDIA and xAI join; GE Vernova and NextEra Energy to collaborate",
+   "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/ai-infrastructure-partnership",
+   "date": "2025-03-19"
+  },
+  {
    "label": "xAI — Colossus page",
    "url": "https://x.ai/colossus"
   },
@@ -454,5 +469,5 @@
   }
  ],
  "lastUpdated": "2026-09-26",
- "profileVersion": 5
+ "profileVersion": 6
 }

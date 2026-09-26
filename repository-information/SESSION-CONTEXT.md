@@ -6,6 +6,106 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-26 06:05 AM → 07:55 AM EST (F-I1; one attended turn; context compacted once, before the close-out)
+**Repo version:** v07.66r (one push: v07.66r F-I1)
+**Branch:** `claude/nice-cannon-goad45`
+**Model:** Opus 5.5 at xhigh, per the F-I1 prompt
+
+### What was done
+
+- **v07.66r — Phase F session F-I1**, BlackRock (with GIP, AIP and HPS) and KKR. It ran on 9/26, ahead of its 9/28–9/29 slot:
+  - **Two dossiers (v1) and study guides (v2), each with an eight-module lesson plan:**
+    - `blackrock`: investor. **One slug** for BlackRock, Inc. (NYSE: BLK; CIK 0002012383). GIP is Global Infrastructure Management, LLC, wholly owned and in no separate accounts, so it sits in `aka[]` with AIP, HPS, Preqin, iShares, Aladdin and the platform names. 80 sources, 11 decision makers, all with photos.
+    - `kkr`: investor. KKR & Co. Inc. (NYSE: KKR). Global Atlantic (the Insurance segment), Helix, STTGDC, ContourGlobal, Zenobē, Avantus and Encavis are in `aka[]`. 76 sources, 12 decision makers, all with photos.
+  - **Segments:** `capital` · incumbent for both; the roster goes from eight to ten.
+  - **Calendar:** both public and quarterly. Next results `blackrock` 2026-10-13 and `kkr` 2026-10-29, each `confirmed: false` until the company announces the date.
+  - **16 new concepts** (1,555 total), among them `schedule-13d`, `schedule-13g`, `index-fund`, `open-ended-fund`, `core-infrastructure`, `ferc-section-203`, `blanket-authorization`, `outside-date`, `definitive-agreement`, `transmission-company`, `private-credit`. None edited.
+  - **Step 7, nothing deferred:** 28 inbound dossiers revised under the Archival Procedure for the reciprocal edge, including `microsoft` and `xai`, which lacked their AIP edge. Three carried corrections:
+    - `aes-clean-energy`: Ohio approved the change of control on 17 Sep.
+    - `fluence`: the same fix.
+    - `jupiter-power`: a 'backed by GIP' quote no Jupiter page carries.
+  - **Accepted pairs:** 10 other↔other pairs added to the relationships accept list.
+  - **Guide correction:** `mgx.study.json`, one clause — AIP is *named as* Aligned's buyer; the EC names GIP's manager and MGX as the joint controllers.
+  - **Report pins:** five edge-only revisions re-verified (`aep`, `meta`, `stack-infrastructure`, `xai`, `amperesand`). `fluence` v10 and `jupiter-power` v7 are left loud because their corrections are substantive.
+  - **Ledger and plan:** both §11.3 rows flipped at v07.66r; `phase-f-action-plan.md`'s status line updated.
+- **Premise verdicts, in brief:**
+  - **BlackRock** (8 clauses: 4 held, one of them as MOUs; 2 refined; 1 reported only; 1 conflict settled):
+    - Aligned — **held on the figures, refined on control**: EC M.12259 names GIM and MGX as joint controllers; AIP is not a notifying party.
+    - AES — **refined**: signed 1 Mar by GIP and EQT Infrastructure VI; GIP vehicles 56.625% after closing; FERC (EC26-99) and New York pending; outside date 1 Jun 2027.
+    - ALLETE 60/40 with CPP — **held**.
+    - STACK Asia-Pacific — **reported only**: Bloomberg names AIP and IFM, not GIP.
+    - CyrusOne — **settled**: GIP still co-owns it; no first-party source says 50:50.
+    - NVIDIA compute financing — **held, as MOUs**.
+  - **KKR** (6 clauses: 3 held, 3 refined): STTGDC 75%, ECP (30 Oct 2024) and the 19.9% AEP transmission stake held; CyrusOne 50% refined (split unstated); Helix refined (a company, not a fund, with commitments); EDF power solutions refined on scope ('net renewable capacity').
+  - **Not in the hypotheses:** Coravel (ACS–GIP 50:50); Meta's El Paso venture (80% BlackRock funds; an exclusivity agreement, not closed); ContourGlobal's 3 GWh CATL order; Avantus's 800 MWh Fluence system; STTGDC's HVDC testbed; 65% of Sempra Infrastructure Partners, signed but not closed.
+- **Verification:** registry sync, study, relationships, crossrefs and README-tree checkers clean; the reports checker's four warnings read. Playwright: 30 dossiers and three guides, zero page errors (details in the CHANGELOG).
+
+### Which BlackRock and KKR platforms buy MV or DC power equipment? (the Megmeet paragraph)
+
+Neither firm signs for equipment itself; every order is placed at a platform its funds control. **BlackRock:** no SST, 800 VDC or HVDC purchase is on record at any of its platforms. The medium-voltage and battery buyers it reaches are Aligned (with MGX), CyrusOne (with KKR), Coravel (with ACS), ALLETE and Minnesota Power, Clearway Energy Group, Eolian and Jupiter Power, plus AES once the take-private closes. The El Paso campus's design runs through Meta, not BlackRock. **KKR** has the one real DC-power door. STTGDC, 75% KKR-owned since 2 Sep, runs an HVDC testbed with LITEON and Amperesand's SST and names deployment in future Singapore data centres as its plan. The contact is STTGDC's engineering team, not KKR. KKR's battery buyers are ContourGlobal (3 GWh from CATL) and Avantus (800 MWh from Fluence). EDF power solutions North America, still pending, has a 20 GWh framework with Ford Energy, and Helix's first-look supply rights favour suppliers who are also its investors (NVIDIA, Vistra). **Net:** capital is a directory for finding buyers, and STTGDC is its one door.
+
+### Where we left off
+
+- **Status:** v07.66r pushed at close for the auto-merge.
+- **Action plan:** rows 1, 2 and 4 of §3 are done. **F-I2** (SoftBank, SB Energy, Blue Owl) waits on the DigitalBridge close, as instructed.
+- **Dated items:**
+  - CoolIT cooling recheck on or after Mon 9/28 (row 3).
+  - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30 (row 5). That reminder expects only two segment lessons due; F-H1, F-N1 and F-I1 have since made **17 due**, by design, so a longer due list in the run's report is expected.
+  - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1 (rebase first — the 10/1 Profiler Routines commit that day).
+  - Dominion reframe and Classroom wave A, Fri 10/2 – Tue 10/6.
+  - Megmeet start Wed 10/7.
+  - For the F-I1 slugs:
+    - BlackRock Q3 results 13 Oct and KKR's 29 Oct, both unconfirmed.
+    - KKR's EDF deal: FERC EC26-151 comments due 13 Oct.
+    - KKR's controlled-company Sunset Date, no later than 31 Dec.
+    - AES closing: FERC EC26-99 and New York Case 26-E-0348 (comments due 29 Sep).
+    - Meta El Paso closing, and the STACK Asia-Pacific talks.
+- **Stale and not yet re-authored (`Classroom.gs` untouched, by design):**
+  - `landscape-capital-2026-09` was built on '4 of 8 buy nothing'. The roster is now 10, and both new incumbents buy nothing themselves and pass §11.1 only through platforms they control.
+  - `scenario-capital-objection` (reviewBy 10/14) goes stale with it.
+  - Classroom wave B re-authors both after F-I2.
+  - The F-H1 and F-N1 drift in the neoclouds and AIDC-developers modules still waits for wave A.
+  - `build-classroom-segments.py --check`: **17 due**, 15 with section changes (`capital` in eight sections) and 2 pin-only (`clean-firm-and-nuclear`, `storage-developers-and-ipps`).
+
+### Key decisions made
+
+- **One `blackrock` slug, not a separate GIP slug.** GIP is wholly owned, files no accounts of its own and sits inside BlackRock's single segment, and the EC calls GIM 'ultimately controlled by BlackRock'.
+- **AIP gets no slug.** It is a capital partnership the EC does not name as an acquirer. Its members' edges carry it: `mgx`, `microsoft`, `nvidia` and `xai` are partners of `blackrock`.
+- **Typed deal status follows the record's own word:** AES, the El Paso venture and the STACK talks are `announced`; CoolIT is `historical` for KKR.
+- **Pins:** re-verified only where the change was edge-only. `fluence` v10 and `jupiter-power` v7 are left loud, with the reason written.
+- **The SEC probe was not changed.** SEC's fair-access policy wants a real, monitored contact address, which only the developer can supply (see Known issues).
+- **The house-style bold stays in the new dossiers.** The raw `**` that shows in other dossiers' inbound evidence is a renderer gap, not a data fault.
+
+### Known issues
+
+- **SEC's 403 is a User-Agent rejection, not a network block.** `www.sec.gov` and `data.sec.gov` refuse a User-Agent whose contact address is on a `*.github.io` domain, which is what `scripts/check-source-reachability.py` sends. The same request with another contact domain returns 200. The 'EDGAR block' recorded since v04.91r is this. Fixing the probe needs a real, developer-owned address in its `USER_AGENT`; until then, sessions read filings from IR sites and EDGAR full-text search.
+- **Inbound evidence prints raw `**`.** `ovRelEvidList` in `Profiler.html` inserts excerpts as text nodes, so house-style bold labels from other dossiers print literally on the Relationships tab: 390 in the graph now, against 336 at HEAD. Some dossiers' own `positioning` fields (`blackstone`, `brookfield`, `macquarie`, `cyrusone`) show the same on the Capabilities tab. A page fix, not done here.
+- **Unreconciled figure:** Bosque County — CyrusOne says USD 1.2bn, KKR about USD 4bn. Both sides state it.
+- **Ownership splits nobody publishes:** CyrusOne (no first-party 50:50), Aligned (GIM and MGX shares), and Jupiter Power's owner, which Jupiter's own site does not name.
+- **Four pin warnings:** `fluence` v10 and `jupiter-power` v7, both from this session and left loud; `jinko` v6 and `oracle` v6, pre-existing.
+- **README archive tree:** the older unlisted archive files (about 60) are still missing. This session added only its own 28.
+- **Carried over:**
+  - The ERCOT/PJM decision still awaits the developer.
+  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2), as before. In this sandbox `verify-profiler-roles.py` also stops early: the Python `playwright` module is not installed.
+  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
+  - `study-prep/zhonhen/zhonhen-interview-brief.md` still calls Panama an SST in two lines.
+  - The study-guide PDF renderer is not in the repo.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 190 dossiers, 190 guides, 1,555 concepts, 1,656 graph edges (1,253 curated), 20 accepted relationship pairs. **CHANGELOG** `Sections: 92/100`.
+
+### Recommendation for next session
+
+- Run the **cooling-module recheck on or after Mon 9/28**, once CoolIT's CDU launch is public (row 3 of `phase-f-action-plan.md`, and the 2026-09-24 reminder). `landscape-cooling-2026-09`'s reviewBy is 9/28, and it is the next dated item. F-I2 is gated on the DigitalBridge close and wave B on F-I2.
+
+**To continue:** type `recheck the cooling module after CoolIT`
+
+## Previous Sessions
+
+### Session — 2026-09-26 04:08 AM → 06:10 AM EST (F-N1 and the F-I1 prompt, v07.64r–v07.65r)
+
 **Date:** 2026-09-26 04:08 AM → 06:10 AM EST (F-N1 and the F-I1 prompt; two attended turns; context compacted once, mid-F-N1)
 **Repo version:** v07.65r (two pushes: v07.64r F-N1; v07.65r the F-I1 prompt and this save)
 **Branch:** `claude/determined-curie-8zhg3t`
@@ -113,82 +213,3 @@ None of the three has signed for an SST, 800 VDC or HVDC equipment on the record
 - Run **F-I1 (BlackRock, KKR)** in a fresh Opus 5.5 session at **xhigh**, Mon 9/28 – Tue 9/29, using the prompt in **§6 of `repository-information/phase-f-action-plan.md`**, so both capital dossiers exist before Classroom wave B re-authors `landscape-capital-2026-09` by 10/14.
 
 **To continue:** paste the prompt in §6 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh
-
-## Previous Sessions
-
-### Session — 2026-09-26 01:26 AM → 03:25 AM EST (F-H1 and the F-N1 prompt, v07.62r–v07.63r)
-
-**Date:** 2026-09-26 01:26 AM → 03:25 AM EST (two attended turns; context compacted once mid-session)
-**Repo version:** v07.63r (two pushes: v07.62r F-H1; v07.63r the write-size rule fix, the F-N1 prompt and this save)
-**Branch:** `claude/relaxed-shannon-q4fc02`
-**Model:** Opus 5.5 at xhigh, per the developer's 2026-09-26 decision
-
-### What was done
-
-- **v07.62r — Phase F session F-H1**, the China buyer side the `megmeet` dossier lacks:
-  - **Three dossiers (v1) and study guides (v2), each with a lesson plan:** `bytedance` (hyperscaler; Volcano Engine in `aka[]`), `alibaba-cloud` (hyperscaler; the cloud unit, not the Group — the `nextera-energy-resources` precedent), `chindata` (developer; Chindata China under HEC since 2026-01-16 — Bridge Data Centres is Bain's separate company).
-  - **Segments:** the two hyperscalers → `hyperscalers-and-ai-labs` · challenger; Chindata → `aidc-developers-and-landlords` · challenger.
-  - **Calendar:** `alibaba-cloud` 2026-11-24 (unconfirmed — no results date announced); the other two private, quarterly, core.
-  - **17 new concepts** (1,520 total), among them `panama-power`, `phase-shifting-transformer`, `line-frequency-transformer`, `240vdc`, `delta-connection`, `approved-vendor-list`, `framework-procurement`.
-  - **Reciprocal edges:** `zhonhen` v8→v9 (customers Alibaba Cloud, ByteDance) and `delta-electronics` v6→v7 (customers Alibaba Cloud, Chindata — v6 named neither, nor Panama). Both report pins re-verified.
-  - **`zhonhen.study.json`:** one bullet that called Panama an SST corrected to transformer-rectifier.
-  - **§11.3:** the three F-H1 rows flipped (Opus 5.5 xhigh, Checked v07.62r, Dossier v1, Guide v2) with a premise verdict per clause.
-- **Premise verdicts, in one line each:**
-  - ByteDance capex — **about 3×, not 2×**, and unresolved (RMB 160B / >RMB 200B / up to US$70B).
-  - The 30–40% HVDC share and tens-of-MW 800 V pilot — **not supported** (one unattributed expo post); **no 800 V or SST award is public**; Kehua is **not** named in ByteDance's chain, Zhonhen is (precision distribution).
-  - Panama — **a transformer-rectifier, not an SST** (held); Zhonhen's ~70% — **unverifiable**.
-  - Chindata's Sangyuan SST — **a true SST** on its makers' description; 'first' holds only as **first in commercial operation** (Eaton/VNET pilot since end-2024).
-- **Verification:** registry sync clean; study, relationships, crossrefs and README-tree checkers clean; reports checker shows only the two old warnings; Playwright renders all three new dossiers and guides plus revised Zhonhen and Delta with zero console errors (only the sandbox's `gis_load_failed`).
-- **v07.63r — the follow-up turn:**
-  - **The write-size rule fix, approved by the developer:** the Incremental Writing gate in `.claude/rules/behavioral-rules.md` now lists lesson plans as item (d) of the content types that always run over 50 lines. F-H1 had written a 75-line lesson plan in one call.
-  - **The three new study guides as PDFs**, sent to the developer as files (11–15 pages each: every section kind, an answer key, a glossary for the tooltip terms). They are **not** in the repo; the renderer lived in the session scratchpad.
-  - **The F-N1 paste-in prompt**, saved as **§5 of `phase-f-action-plan.md`** for Opus 5.5 xhigh. It carries F-H1's lessons: back-source every named counterparty, check inbound dossiers for missing reciprocal edges, write lesson plans incrementally. It also flags the two alias collisions (`hyperstrong`'s HyperCube, `dg-matrix`'s Inception) and adds a Megmeet paragraph ask.
-
-### What the three dossiers change about Megmeet's missing customer side
-
-The `megmeet` dossier names no Chinese customer, and these three do not supply one: no ByteDance, Alibaba or Chindata record — and no Megmeet, Sinexcel or Kehua filing — links Megmeet to any of them. What they add is the map of the doors. **ByteDance** buys its own Volcano Engine campuses' chain from domestic distribution, UPS and substation makers (Kstar, TGOOD, Mingyang, Jinpan, Sifang, Far East, Zhonhen), rents most of its capacity from landlords who tender UPS from its qualified-vendor list, and its 800 V move is still a tender with no award — the open door, if anyone's. **Alibaba** specifies Panama, a 50 Hz transformer-rectifier bought by framework from Zhonhen and Delta; its halls are only 'compatible' with 800 V, and its one SST conversation is Sungrow's joint innovation centre — an incumbent to displace, not an SST base. **Chindata** is China's one SST reference in commercial operation (Delta's SST at Sangyuan, for Meituan), writes its own specifications, says it will localise SST core components with domestic makers, and has a new owner (HEC) that puts its own capacitors and coolants into the bill of materials, with about RMB 4.75B of M&E earmarked — the landlord-as-specifier door a domestic SST maker would knock on first.
-
-### Where we left off
-
-- **Status:** v07.62r is merged and v07.63r pushed at close; the tree is clean.
-- **Next (action plan):** F-N1 (Firmus, HUMAIN, G42) at **xhigh** by Tue 9/29, prompt in §5; then F-I1 (BlackRock, KKR) at xhigh Mon 9/28 – Tue 9/29, which has no prompt yet (§4 and §5 are the templates).
-- **Dated items:**
-  - CoolIT cooling recheck on or after Mon 9/28.
-  - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30.
-  - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1 (rebase first — the 10/1 Profiler Routines commit that day).
-  - Dominion reframe and **Classroom wave A** Fri 10/2 – Tue 10/6.
-  - Megmeet start Wed 10/7 — read the three new guides before then.
-- **Stale and not yet re-authored (Classroom.gs untouched, by design):**
-  - `landscape-hyperscalers-and-ai-labs-2026-09` (+ByteDance, +Alibaba Cloud) and `landscape-aidc-developers-and-landlords-2026-09` (+Chindata, on top of `tract` v4 and `powerhouse-data-centers` v3), and the `scenario-hyperscalers-and-ai-labs-*` and `scenario-aidc-developers-and-landlords-*` rehearsals. Classroom wave A re-authors them.
-  - `build-classroom-segments.py --check`: **12 due** — those two segments with real section changes, nine with only the `where-it-sits` roster count, `insurance-and-risk-transfer` pin-only.
-
-### Key decisions made
-
-- **Alibaba's slug is the cloud unit** (`alibaba-cloud`), not the Group: it is the only data-centre-buying part and a reported segment; Group names live in `aka[]`.
-- **ByteDance is one group slug**; Volcano Engine is the name its campuses are bought under, not a separate buyer.
-- **Chindata means Chindata China** under HEC; Bridge Data Centres is out of scope except as context.
-- **A tender is not an award.** Unattributed figures (the HVDC share, the 800 V pilot, Zhonhen's share of Panama) are stated as unverified, never as fact.
-- **F-N1 runs at xhigh**, not the plan's high (the developer, 2026-09-26).
-- **Same-session save:** 'remember session' extended this Latest entry in place rather than moving it down, because it was already this session's hand-off. Moving it would have pushed out the v07.60r–v07.61r entry to make room for a duplicate.
-
-### Known issues
-
-- **Not edited:** `study-prep/zhonhen/zhonhen-interview-brief.md` still calls Panama's device class an SST in two lines (92, 177). It is a private file, outside the scope; the in-app guide was corrected.
-- **The study-guide PDFs are not reproducible from the repo:** the renderer was a scratchpad script. Ask to commit it as a script if PDFs for future guides are wanted.
-- **README archive tree:** about 60 archive files that predate this session (e.g. `zhonhen.profile.v4`/`v7`, `delta-electronics.profile.v2`) are not listed. This session added only its own two.
-- **Carried over:**
-  - The ERCOT/PJM decision still awaits the developer.
-  - The two aged 9/8 reports still warn.
-  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2).
-  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 185 dossiers, 185 guides, 1,520 concepts, 1,583 graph edges. **CHANGELOG** `Sections: 89/100`.
-
-### Recommendation for next session
-
-- Run **F-N1 (Firmus, HUMAIN, G42)** in a fresh Opus 5.5 session at **xhigh** by Tue 9/29, using the prompt in **§5 of `repository-information/phase-f-action-plan.md`**, so `landscape-neoclouds-2026-09` is re-authored only once in Classroom wave A.
-
-**To continue:** paste the prompt in §5 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh

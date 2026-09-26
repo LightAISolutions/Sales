@@ -1,0 +1,1055 @@
+{
+ "schemaVersion": 7,
+ "slug": "clearway-energy",
+ "name": "Clearway Energy, Inc.",
+ "shortName": "Clearway Energy",
+ "categories": [
+  "developer",
+  "ipp"
+ ],
+ "website": "https://investor.clearwayenergy.com",
+ "headquarters": "300 Carnegie Center, Suite 300, Princeton, New Jersey, United States",
+ "founded": "2012 (incorporated in Delaware as NRG Yield, Inc.; renamed Clearway Energy, Inc. in 2018)",
+ "employees": "None — all employees transferred to Clearway Energy Group on 1 January 2025; CWEN is managed under a services agreement",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: CWEN"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Clearway Energy, Inc. is a listed owner of contracted North American generation — about 13.9 GW rated across 27 states at 30 June 2026, of which roughly 11.1 GW is wind, solar and storage and 2.8 GW is California gas — and two things about it are commonly stated wrongly. It has a single listed share class: CWEN.A ceased to exist on 1 May 2026 when every Class A share converted into Class C, and any description of a CWEN/CWEN.A pair is stale. And it is not the same company as Clearway Energy Group, the private sponsor owned 50/50 by Global Infrastructure Partners (now part of BlackRock) and TotalEnergies, which does the development, employs the staff and offers assets down to CWEN for its independent directors to approve. BACKGROUND: FY2025 revenue $1,429m, net loss $(231)m, Adjusted EBITDA $1,217m and Cash Available for Distribution of $430m at the top of the original guidance range; the dividend has grown about 6.5% a year to $0.4750 a quarter. The battery fleet reached 1,439 MW rated / 849 MW net at 30 June 2026, of which 844 MW sits in California. In August 2026 the company cut 2026 CAFD guidance to $430–470m from $470–510m — its first cut in three years — blaming an El Niño wind shortfall that left CAISO wind at 87% of P-50. A material weakness in internal control over financial reporting, disclosed in January 2026 and unremediated at the year end, drew an adverse opinion from PwC.",
+ "ecosystemRole": "We assess Clearway as the clearest listed read on what contracted renewables are worth to data-centre load, and as a structure that separates that exposure across two balance sheets. The hyperscaler contracts are originated at Clearway Energy Group — about 1.17 GW of Google PPAs across Missouri, Texas and West Virginia, 335 MW of Microsoft at Mount Storm, 520 MW at Royal Slope for a Washington utility serving data-centre growth — and reach the listed company only when a project is offered down and the independent directors approve it. For this ecosystem the useful comparison is with the merchant battery owners: Clearway's storage is almost entirely contracted on long tolls and resource-adequacy agreements rather than sold into ancillary markets, which is why its fleet is smaller than ENGIE's or AES's and its revenue far steadier.",
+ "productsAndServices": [
+  {
+   "name": "Utility-scale battery energy storage",
+   "category": "Storage ownership",
+   "description": "1,439 MW rated / 849 MW net operating at 30 June 2026, up from 1,119 MW / 529 MW six months earlier. California is the largest single market at 844 MW rated — Arica 136 MW, Daggett 1 at 114 MW, Daggett 2 at 131 MW, Daggett 3 at 149 MW, Rosamond Central 147 MW, Rosamond South I 117 MW and Victory Pass 50 MW — but the growth has moved out of CAISO: the Honeycomb Portfolio added 320 MW / 1,280 MWh in Utah on 1 May 2026 under 20-year PacifiCorp tolling agreements, Pine Forest added 200 MW in ERCOT, and Hawaii carries 75 MW. Storage energy in MWh is disclosed for almost none of it.",
+   "highlights": [
+    "Honeycomb Portfolio: four 80 MW projects totalling 320 MW / 1,280 MWh of four-hour Tesla batteries in Beaver and Iron Counties, Utah, on 20-year PacifiCorp tolls running to 2046; $605m of construction financing closed 11 March 2025; Rosendin was EPC",
+    "Spindle, under construction in Weld County, Colorado: 199 MW / 398 MWh of two-hour Tesla batteries for Public Service Company of Colorado, $261m financed 5 February 2026, Blattner as EPC, commercial operation targeted late 2026",
+    "Tesla Megapack 2 XL procurement announced 5 June 2025: a new 490 MW / 1,356 MWh order on top of an existing 520 MW / 1,680 MWh, all for 2026 delivery into the California and Colorado portfolios",
+    "Rosamond South II adds 92 MW in Kern County in the second half of 2026; Honeycomb Phase II offers a further 210 MW in Utah for 2027 at about $110m of corporate capital",
+    "Storage MWh is published for Honeycomb and Spindle only — CWEN's SEC filings state storage in megawatts alone, so every MWh figure for the California fleet in circulation is third-party"
+   ],
+   "positioning": "A contracted storage owner rather than a merchant one, and mid-sized rather than large. S&P Global's US battery-owner table runs NextEra Energy Resources at 5.779 GW, ENGIE at 3.662 GW and AES at 1.978 GW; Clearway's 1.439 GW does not appear in that published table, and no independent tracker measures its fleet at owner level. Against Modo Energy's measured CAISO fleet of 16.2 GW in August 2026, Clearway's 844 MW of California storage is roughly 5%.",
+   "soldThrough": "Long-term tolling agreements and resource-adequacy contracts with regulated utilities and load-serving entities",
+   "targetSegments": [
+    "Regulated utilities (PacifiCorp, Public Service Company of Colorado, SDG&E, SCE)",
+    "Hawaiian Electric",
+    "California resource-adequacy buyers"
+   ],
+   "roadmap": "Rosamond South II 92 MW and Spindle 199 MW in the second half of 2026; Honeycomb Phase II 210 MW offered for 2027; Chimney Canyon, 975 MW of solar and storage in Arizona, offered for 2029"
+  },
+  {
+   "name": "Wind generation and repowering",
+   "category": "Renewables ownership",
+   "description": "4,234 MW rated / 3,713 MW net — the largest single technology in the fleet and the source of both the 2026 guidance miss and the clearest growth lever. The repowering programme applies to wind only: Goat Mountain went offline in February 2026 for a repower to 360 MW returning in the second half of 2027, Mt. Storm repowers to 335 MW in the second half of 2026, and Tuolumne and San Juan Mesa follow.",
+   "highlights": [
+    "Alta I–V at 720 MW and Alta X–XI at 227 MW in Tehachapi, California, contracted to Southern California Edison to 2035 and 2038",
+    "Mesquite Sky, 340 MW in Callahan County, Texas — its legacy commodity contract was bought out on 27 March 2026 and replaced with a 15-year PPA with an investment-grade hyperscaler",
+    "Black Rock, 115 MW in West Virginia, sells to Toyota and Google to 2036",
+    "Elbow Creek, 122 MW in Howard County, Texas, hosts a co-located high-performance-computing data centre of about 122 MW of IT load",
+    "Wind capacity factor was 30.6% in FY2025 against 30.1% in FY2024, but Q2 2026 wind availability fell to 92%"
+   ],
+   "positioning": "Repowering is how a yieldco grows without buying anything: the interconnection, land and permits are already owned, so the capital buys turbines and a restarted tax-credit clock rather than a queue position.",
+   "soldThrough": "Long-term power purchase agreements with utilities, corporates and hyperscalers",
+   "targetSegments": [
+    "Investor-owned utilities",
+    "Hyperscalers and corporates",
+    "Municipal and cooperative utilities"
+   ],
+   "roadmap": "Mt. Storm and Tuolumne repowers complete in the second half of 2026; Goat Mountain and San Juan Mesa in the second half of 2027; about 1,871 MW of committed growth investment in total"
+  },
+  {
+   "name": "Utility-scale and distributed solar",
+   "category": "Renewables ownership",
+   "description": "4,730 MW rated / 2,889 MW net of utility-scale solar and 699 MW / 634 MW of distributed generation at 30 June 2026. The distributed business more than doubled on 30 March 2026 with the acquisition of the 613 MW Cardinal Portfolio from Deriva for $322m of net cash, in a co-investment partnership with Fengate.",
+   "highlights": [
+    "Texas Solar Nova 1 and 2, 452 MW combined in Kent County, sell to Verizon to 2042",
+    "The Utah Solar Portfolio totals 530 MW, all contracted to PacifiCorp to 2036, and sits alongside the Honeycomb batteries",
+    "Conetoe, 80 MW in North Carolina, sells to Corning and Lockheed Martin to 2040",
+    "Solar generated 9,225 GWh in FY2025 against 8,658 GWh in FY2024, at a weighted-average capacity factor of 28.9%",
+    "98% of FY2025 total generation came from renewables and storage"
+   ],
+   "positioning": "The steadiest part of the portfolio and the one with the least merchant exposure — weighted-average remaining contract duration across Renewables and Storage is about twelve years on a CAFD-weighted basis.",
+   "soldThrough": "Long-term PPAs; distributed generation through fund structures and co-investment partnerships",
+   "targetSegments": [
+    "Investor-owned utilities",
+    "Corporate offtakers",
+    "Community-choice aggregators and public agencies"
+   ],
+   "roadmap": "Swan Solar, 650 MW in Missouri on a 20-year Google PPA for 2028, and Royal Slope, 520 MW of solar and storage in Washington for 2027, are offered but not yet approved"
+  },
+  {
+   "name": "Flexible Generation — California gas",
+   "category": "Dispatchable generation",
+   "description": "2,770 MW rated / 2,580 MW net, unchanged, and the segment most exposed to a contracting cliff. Marsh Landing at 820 MW, El Segundo at 546 MW, Carlsbad at 523 MW and Walnut Creek at 501 MW are all in CAISO selling resource adequacy; GenConn Devon and Middletown add 380 MW in Connecticut. Marsh Landing's and Walnut Creek's contracts run out between 2026 and 2030 and 2026 and 2027 respectively.",
+   "highlights": [
+    "Segment Adjusted EBITDA of $210m in FY2025 on $291m of revenue — about 17% of group Adjusted EBITDA from 20% of rated capacity",
+    "Generation collapsed from 847 GWh in FY2024 to 323 GWh in FY2025: these are peaking and capacity assets, not baseload, and equivalent availability was 93.4%",
+    "El Segundo recontracted about 272 MW of resource adequacy across two 2025 sales, taking it to 100% contracted through 2027 and about 50% through 2028",
+    "No gas repowering is disclosed anywhere in the filings — the repowering programme is wind-only"
+   ],
+   "positioning": "The part of the business a buyer discounts and a modeller has to watch: dispatchable California capacity is scarce and RA pricing has risen, but the contracts are short and the disclosure is thin.",
+   "soldThrough": "Bilateral resource-adequacy contracts with load-serving entities; tolling agreements",
+   "targetSegments": [
+    "California load-serving entities",
+    "Connecticut Light & Power",
+    "San Diego Gas & Electric"
+   ],
+   "roadmap": "Marsh Landing and Walnut Creek recontracting from 2026 is the nearest material unknown; terms of the Q2 2026 agreements are not public"
+  },
+  {
+   "name": "The sponsor relationship — drop-downs and external management",
+   "category": "Corporate structure",
+   "description": "Clearway Energy, Inc. has no employees and no development arm. Clearway Energy Group originates and builds, then offers assets down; CWEN's independent directors review and approve each one. CWEN paid CEG about $23.8m under the Master Services Agreement in FY2025, and signed a Master Development Services Agreement with Clearway Renew on 22 December 2025 covering future approved repowerings.",
+   "highlights": [
+    "There is no right-of-first-offer agreement: the strings 'right of first offer' and 'ROFO' appear zero times in the FY2025 10-K, and a dossier should not assert one exists",
+    "Nine drop-downs and third-party acquisitions closed across 2025 and 2026, from Rosamond South I at $33m to the Cardinal Portfolio at $322m net",
+    "The sponsor's late-stage pipeline as CWEN reports it grew from 11.2 GW in February 2026 to 13.5 GW in August 2026",
+    "Mt. Storm was sold to Clearway Renew for $152m in October 2025 so the sponsor could repower it, with CWEN agreeing to buy the repowered asset back for a $336m tax-equity Class B purchase"
+   ],
+   "positioning": "A managed yieldco in substance: the listed vehicle supplies capital and a dividend, the sponsor supplies people, pipeline and origination, and the independent directors are the only check on transfer pricing between them.",
+   "soldThrough": "Not applicable — this is the corporate structure rather than a product",
+   "targetSegments": [
+    "Public equity and debt investors",
+    "The sponsor's development pipeline"
+   ],
+   "roadmap": "About 1,871 MW of committed growth investment and roughly $1.0bn of identified corporate capital across offered-but-unapproved projects"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Honeycomb Portfolio (Beaver and Iron Counties, Utah)",
+   "specs": [
+    {
+     "band": "Rating",
+     "label": "Power / energy",
+     "value": "320 MW / 1,280 MWh across four 80 MW projects — Enterprise, Escalante I, Granite Mountain East and Iron Springs"
+    },
+    {
+     "band": "Rating",
+     "label": "Duration",
+     "value": "Four hours"
+    },
+    {
+     "band": "Commercial",
+     "label": "Offtake",
+     "value": "20-year tolling agreements with PacifiCorp, running to 2046"
+    },
+    {
+     "band": "Commercial",
+     "label": "Status",
+     "value": "Substantial completion 1 May 2026; dropped down to Clearway Energy, Inc. in October 2025 at about $97m of corporate capital"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Batteries / EPC",
+     "value": "Tesla batteries; Rosendin as EPC"
+    },
+    {
+     "band": "Finance",
+     "label": "Construction financing",
+     "value": "$605m closed 11 March 2025 with KeyBanc, CoBank, DNB, U.S. Bancorp Impact Finance, National Australia Bank, Bank of America and NORD/LB"
+    }
+   ],
+   "notes": "The largest single storage addition in the fleet's history and the clearest evidence that growth has moved out of California."
+  },
+  {
+   "product": "Spindle (Weld County, Colorado) — under construction",
+   "specs": [
+    {
+     "band": "Rating",
+     "label": "Power / energy",
+     "value": "199 MW / 398 MWh"
+    },
+    {
+     "band": "Rating",
+     "label": "Duration",
+     "value": "Two hours"
+    },
+    {
+     "band": "Commercial",
+     "label": "Offtake",
+     "value": "Public Service Company of Colorado, the Xcel Energy operating utility"
+    },
+    {
+     "band": "Commercial",
+     "label": "Status",
+     "value": "Purchase agreement with a Clearway Energy Group affiliate announced 24 November 2025; commercial operation targeted late 2026"
+    },
+    {
+     "band": "Supply chain",
+     "label": "Batteries / EPC",
+     "value": "Tesla batteries; Blattner as EPC"
+    },
+    {
+     "band": "Finance",
+     "label": "Financing",
+     "value": "$261m closed 5 February 2026 with U.S. Bank, BBVA, KeyBanc, National Australia Bank and NORD/LB; about $93m of corporate capital covers Spindle and Rosamond South II together"
+    }
+   ],
+   "notes": "Two-hour duration against Honeycomb's four is a deliberate market choice: Colorado buys a shorter product than a PacifiCorp toll."
+  },
+  {
+   "product": "California storage fleet (CAISO)",
+   "specs": [
+    {
+     "band": "Operating",
+     "label": "Daggett 1",
+     "value": "114 MW rated / 114 MW net · 100% owned · commercial operation September 2025 · SDG&E to 2040"
+    },
+    {
+     "band": "Operating",
+     "label": "Daggett 3",
+     "value": "149 MW rated / 37 MW net · 25% owned · commercial operation July–November 2023 · various offtakers to 2033–2038"
+    },
+    {
+     "band": "Operating",
+     "label": "Daggett 2",
+     "value": "131 MW rated / 33 MW net · 25% owned · commercial operation December 2023 · various offtakers to 2038"
+    },
+    {
+     "band": "Operating",
+     "label": "Rosamond Central",
+     "value": "147 MW rated / 74 MW net · 50% owned · commercial operation June 2024 · Southern California Edison to 2039"
+    },
+    {
+     "band": "Operating",
+     "label": "Rosamond South I",
+     "value": "117 MW rated / 59 MW net · 50% owned · commercial operation August 2025 · various offtakers to 2035–2040"
+    },
+    {
+     "band": "Operating",
+     "label": "Arica",
+     "value": "136 MW rated / 54 MW net · 40% owned · commercial operation March–June 2024 · various offtakers to 2039–2041"
+    },
+    {
+     "band": "Operating",
+     "label": "Victory Pass",
+     "value": "50 MW rated / 20 MW net · 40% owned · commercial operation March 2024 · various offtakers to 2039"
+    },
+    {
+     "band": "Disclosure gap",
+     "label": "Energy capacity",
+     "value": "No MWh figure is published in any first-party source for any California battery in the fleet — Clearway's SEC filings state storage in megawatts only"
+    }
+   ],
+   "notes": "844 MW rated but only 391 MW net: most of the California fleet is held in partnerships at 25% to 50%, so the rated figure roughly doubles the company's economic share."
+  },
+  {
+   "product": "Flexible Generation — California gas fleet",
+   "specs": [
+    {
+     "band": "Asset",
+     "label": "Marsh Landing, Antioch CA",
+     "value": "820 MW · 100% owned · commercial operation May 2013 · various counterparties · contracts expiring 2026–2030"
+    },
+    {
+     "band": "Asset",
+     "label": "El Segundo, CA",
+     "value": "546 MW · 100% owned · commercial operation August 2013 · contracts expiring 2027–2029 · about 272 MW of resource adequacy recontracted across two 2025 sales, taking it to 100% contracted through 2027"
+    },
+    {
+     "band": "Asset",
+     "label": "Carlsbad, CA",
+     "value": "523 MW · 100% owned · commercial operation December 2018 · SDG&E to 2038"
+    },
+    {
+     "band": "Asset",
+     "label": "Walnut Creek, City of Industry CA",
+     "value": "501 MW · 100% owned · commercial operation May 2013 · contracts expiring 2026–2027"
+    },
+    {
+     "band": "Asset",
+     "label": "GenConn Devon and Middletown, CT",
+     "value": "190 MW each · 50% owned · commercial operation June 2010 and June 2011 · Connecticut Light & Power to 2040 and 2041 · gas and oil fired"
+    },
+    {
+     "band": "Operating",
+     "label": "Utilisation",
+     "value": "323 GWh generated in FY2025 against 847 GWh in FY2024, at 93.4% equivalent availability — capacity assets, not baseload"
+    }
+   ],
+   "notes": "No gas repowering is disclosed anywhere in the filings; the repowering programme covers wind only."
+  },
+  {
+   "product": "Capital structure and credit",
+   "specs": [
+    {
+     "band": "Debt",
+     "label": "Total debt",
+     "value": "$9,137m at 30 June 2026, against $8,674m at 31 December 2025 and $7,235m at 31 December 2024"
+    },
+    {
+     "band": "Debt",
+     "label": "Corporate senior notes",
+     "value": "$850m 4.750% due 2028; $925m 3.750% due 2031; $350m 3.750% due 2032; $600m 5.750% due 2034, issued 13 January 2026 by Clearway Energy Operating LLC and upsized from $500m"
+    },
+    {
+     "band": "Liquidity",
+     "label": "Cash and availability",
+     "value": "$543m of cash and restricted cash plus $442m of revolver availability — $985m of total liquidity at 30 June 2026, down from $1,330m two years earlier"
+    },
+    {
+     "band": "Credit",
+     "label": "Ratings",
+     "value": "S&P BB and Moody's Ba2, both stable, at 31 December 2025; no Fitch rating was located"
+    },
+    {
+     "band": "Concentration",
+     "label": "Offtaker concentration",
+     "value": "Southern California Edison about 22% of FY2025 consolidated revenue and PG&E about 16%; the next five largest about 26% combined; rated offtakers average Moody's Baa1"
+    },
+    {
+     "band": "Control",
+     "label": "Material weakness",
+     "value": "PwC issued an adverse opinion on internal control over financial reporting at 31 December 2025 — ineffective controls over hypothetical-liquidation-at-book-value calculations allocating income to tax-equity partnerships. Disclosed 7 January 2026; no impact on net income or operating cash flow"
+    }
+   ],
+   "notes": "The material weakness is a live diligence item rather than a restatement: the January 2026 8-K revised the 2025 quarterly figures immaterially and left net income and cash flow unchanged."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "2026 guidance cut: CAFD to $430–470m from $470–510m and Adjusted EBITDA to $1,393–1,433m — the first cut in three years",
+   "read": "An outturn, not a strategy change. The company attributes it to an El Niño wind shortfall rather than to contracting or cost, and the shares fell only 1.73% on a quarter that beat on earnings.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm"
+  },
+  {
+   "date": "2026-07-16",
+   "category": "financial",
+   "headline": "Operational update discloses CAISO wind at 87% of P-50 and ERCOT at 98%, with second-quarter wind and solar about 5% below the level the guidance mid-point required",
+   "read": "The clearest published statement of why a contracted portfolio still misses: the contracts are per-megawatt-hour, and the wind decides how many there are.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926084265/tm2620337d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-06-25",
+   "category": "partnership",
+   "headline": "Elbow Creek's legacy commodity contract bought out and replaced with a 15-year PPA with a commercial counterparty",
+   "read": "The third contract restructuring of 2026, each structured as an in-substance financing that settles the old derivative liability over time — a repeatable value lever rather than a one-off.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053421/cwen-20260630.htm"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "partnership",
+   "headline": "Langford's legacy contract replaced with a 15-year PPA with an investment-grade counterparty",
+   "read": "Converts merchant Texas wind into contracted cash flow at the cost of a settlement liability.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053421/cwen-20260630.htm"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "corporate",
+   "headline": "Class A shares convert one-for-one into Class C and CWEN.A is retired; Clearway Energy Group places 41,678,637 Class B shares in a Wilmington Trust voting trust",
+   "read": "A single listed class from here. The voting trust must vote proportionally with all stockholders, which reproduces the pre-conversion 54.88/45.12 split exactly — the sponsor gave up nothing and the public gained liquidity.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926053557/tm2613249d1_8k.htm"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "project",
+   "headline": "Honeycomb Portfolio reaches substantial completion — 320 MW / 1,280 MWh across four Utah projects on 20-year PacifiCorp tolls",
+   "read": "The largest storage addition the company has made, and it is outside California.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/"
+  },
+  {
+   "date": "2026-03-30",
+   "category": "ma",
+   "headline": "Cardinal Portfolio acquired from Deriva — 613 MW of distributed generation across eight states for $322m of net cash in a co-investment partnership with Fengate",
+   "read": "More than doubles the distributed-solar fleet in one transaction and diversifies away from the utility-scale offtaker concentration.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "date": "2026-03-27",
+   "category": "partnership",
+   "headline": "Mesquite Sky recontracted on a 15-year PPA with an investment-grade hyperscaler",
+   "read": "The first of the three 2026 restructurings and the only one whose counterparty is described as a hyperscaler — direct data-centre revenue arriving at the listed company rather than the sponsor.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053421/cwen-20260630.htm"
+  },
+  {
+   "date": "2026-03-24",
+   "category": "corporate",
+   "headline": "2026 proxy states plainly that Global Infrastructure Partners and TotalEnergies each own 50% of Clearway Energy Group through intermediate holding companies",
+   "read": "The sponsor chain in the company's own words. BlackRock's absorption of GIP changed the filer name, not the chain or the percentages.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926033918/tm261444-3_def14a.htm"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "financial",
+   "headline": "FY2025 results: revenue $1,429m, net loss $(231)m, Adjusted EBITDA $1,217m, CAFD $430m at the top of the original guidance range; dividend per share $1.77",
+   "read": "Net loss and record CAFD in the same year is normal for this structure — depreciation and tax-equity allocations drive the GAAP line while cash distributions drive the dividend.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "financial",
+   "headline": "Spindle financing closes at $261m for 199 MW / 398 MWh in Colorado",
+   "read": "A second non-California storage market and a two-hour product, against Honeycomb's four.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "financial",
+   "headline": "$600m of 5.750% senior notes due 2034 issued and upsized from $500m; proceeds repaid the $361m revolver draw",
+   "read": "Terming out revolver borrowings at a coupon two points above the 2031 and 2032 notes — the cost of capital has moved against the sector since those were issued.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "date": "2026-01-07",
+   "category": "corporate",
+   "headline": "Material weakness in internal control over financial reporting disclosed — ineffective review of hypothetical-liquidation-at-book-value calculations for tax-equity partnerships; PwC issues an adverse ICFR opinion",
+   "read": "Unremediated at the year end and a live diligence item, though the immaterial revisions it produced left net income and operating cash flow untouched.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926001542/tm262339d1_8k.htm"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "customer",
+   "headline": "A portfolio of three 2025 Google PPAs totalling about 1.17 GW across Missouri, Texas and West Virginia is announced, taking the partnership to 1.24 GW and more than $2.4bn of infrastructure investment",
+   "read": "Originated at Clearway Energy Group, not the listed company. Only Goat Mountain has been committed to Clearway Energy, Inc. so far; Swan Solar and Catamount are offered but unapproved.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "customer",
+   "headline": "Royal Slope: a 520 MW power purchase and energy storage agreement with Grant County Public Utility District in Washington, serving data-centre load growth",
+   "read": "Data-centre demand reaching a municipal utility rather than a hyperscaler directly — a different contracting route to the same load.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-signs-power-purchase-agreement-and-energy-storage-agreement-totaling-520-mw-with-public-utility-district-of-grant-county/"
+  },
+  {
+   "date": "2025-08-06",
+   "category": "project",
+   "headline": "A high-performance-computing data centre of about 122 MW of IT load is announced co-located with the Elbow Creek wind farm in Texas, developed with Satoshi Energy",
+   "read": "The sponsor's own co-located digital-infrastructure business, which management describes as potential upside to the post-2030 growth rate rather than as committed capital.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-announces-new-high-performance-computing-data-center-colocated-with-texas-wind-farm/"
+  },
+  {
+   "date": "2025-06-05",
+   "category": "procurement",
+   "headline": "Tesla Megapack 2 XL order of 490 MW / 1,356 MWh announced, on top of an existing 520 MW / 1,680 MWh, all for 2026 delivery into the California and Colorado portfolios",
+   "read": "Just over a gigawatt of batteries ordered from a single supplier, built in Lathrop, California with cells partly from Sparks, Nevada — domestic content that matters for the tax credits.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-announces-major-energy-storage-procurement-order-from-tesla/"
+  },
+  {
+   "date": "2025-03-11",
+   "category": "financial",
+   "headline": "$605m of construction financing closes for the 320 MW / 1,280 MWh Honeycomb storage portfolio in Utah",
+   "read": "Seven lenders on a single storage portfolio, against 20-year PacifiCorp tolls — the contracted model that distinguishes this fleet from a merchant one.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "tesla",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "scale": "490 MW / 1,356 MWh ordered on top of an existing 520 MW / 1,680 MWh",
+   "via": "Megapack 2 XL",
+   "note": "Tesla is the battery supplier across the Honeycomb, California and Colorado storage portfolios.",
+   "context": "Clearway announced the incremental Megapack 2 XL order on 5 June 2025, bringing total ordered volume to just over a gigawatt with all deliveries scheduled in 2026 for the California and Colorado portfolios. The units are built in Lathrop, California with cells partly from Sparks, Nevada, which matters for domestic-content adders under the tax credits. Honeycomb's 320 MW / 1,280 MWh in Utah and Spindle's 199 MW / 398 MWh in Colorado are both Tesla-equipped, at four hours and two hours respectively.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-announces-major-energy-storage-procurement-order-from-tesla/"
+  },
+  {
+   "slug": "rosendin",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2025",
+   "scale": "320 MW / 1,280 MWh (Honeycomb Portfolio)",
+   "via": "Electrical EPC",
+   "note": "Rosendin was the EPC contractor on the four-project Honeycomb storage portfolio in Utah.",
+   "context": "Named in Clearway Energy Group's March 2025 financing release for the $605m Honeycomb package. The portfolio reached substantial completion on 1 May 2026 and had already been dropped down to the listed company in October 2025, so the construction relationship sits with the sponsor while the asset sits with Clearway Energy, Inc. Rosendin's own dossier records roughly 10 GWh of installed battery EPC across the ecosystem, of which this is one of the larger single portfolios.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/"
+  },
+  {
+   "slug": "blattner",
+   "type": "supplier",
+   "status": "active",
+   "since": "2026",
+   "scale": "199 MW / 398 MWh (Spindle)",
+   "via": "Battery storage EPC",
+   "note": "Blattner Energy is the EPC on the Spindle battery project in Weld County, Colorado.",
+   "context": "Spindle is a 199 MW / 398 MWh two-hour Tesla installation contracted to Public Service Company of Colorado, financed at $261m in February 2026 and targeted for commercial operation in late 2026. Blattner's own dossier lists repeat-owner frameworks with Pattern, Orsted, RWE, Recurrent and NextEra and records that on Blattner sites the owner furnishes the batteries — consistent with Clearway having procured the Tesla units directly under its own Megapack order rather than through the contractor.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "announced",
+   "since": "2025",
+   "scale": "about 1.17 GW across three PPAs; 1.24 GW including an existing West Virginia contract",
+   "via": "Long-term power purchase agreements originated by Clearway Energy Group",
+   "note": "Google is the counterparty to a portfolio of three 2025 power purchase agreements across Missouri, Texas and West Virginia, announced on 15 January 2026.",
+   "context": "The partnership totals about 1.24 GW and more than $2.4bn of infrastructure investment, serving Google data centres in SPP, ERCOT and PJM. The distinction that matters is which balance sheet holds it: the PPAs were originated at Clearway Energy Group, and only the Goat Mountain repower — 360 MW on a 15-year Google PPA for the second half of 2027 — has been committed to the listed company. Swan Solar, 650 MW in Missouri on a 20-year Google PPA for 2028, and Catamount in West Virginia have been offered to Clearway Energy, Inc. but not yet approved by its independent directors. Separately, Google is already an offtaker at the 115 MW Black Rock wind farm alongside Toyota, to 2036.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "since": "2025",
+   "scale": "335 MW",
+   "via": "20-year power purchase agreement at Mount Storm",
+   "note": "Microsoft holds a 20-year power purchase agreement for 335 MW at the Mount Storm wind farm in West Virginia.",
+   "context": "Clearway paid roughly $35m in May 2025 and a further $39m in July 2025 to buy out Mount Storm's legacy offtake hedge ahead of the Microsoft agreement — the cost of clearing a merchant position to make room for a contracted one. Mount Storm is being repowered to 335 MW for the second half of 2026, with the listed company agreeing a $336m tax-equity Class B purchase to acquire the repowered asset after having sold it to Clearway Renew for $152m in October 2025 so the sponsor could carry out the work.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "slug": "xcel-energy",
+   "type": "customer",
+   "status": "announced",
+   "since": "2025",
+   "scale": "199 MW / 398 MWh (Spindle)",
+   "via": "Storage offtake with Public Service Company of Colorado",
+   "note": "Public Service Company of Colorado, an Xcel Energy operating utility, is the offtaker for the Spindle battery project.",
+   "context": "Spindle is a two-hour, 199 MW / 398 MWh Tesla installation in Weld County targeted for late 2026. Worth stating precisely because the market has misreported it: at least one trade outlet attributed a 200 MW Colorado storage contract to Microsoft, and the counterparty is the regulated utility, not a hyperscaler. Xcel's own dossier records its Colorado storage procurement from the buyer's side.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm"
+  },
+  {
+   "slug": "constellation-energy",
+   "type": "customer",
+   "status": "active",
+   "since": "2025",
+   "scale": "55 MW (Dan's Mountain)",
+   "via": "Long-term power purchase agreement",
+   "note": "Constellation Energy Generation is the offtaker at the 55 MW Dan's Mountain wind farm in Maryland, to 2037.",
+   "context": "Dan's Mountain reached commercial operation in May 2025 in Allegany County, Maryland, and is held 50%. The contract runs to 2037. It is a small position but a clean example of the portfolio's structure — a competitive retail and wholesale supplier buying contracted renewable output rather than a utility or a hyperscaler.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both own large contracted US renewables and storage fleets; S&P Global's US battery-owner table places NextEra first at 5.779 GW, where Clearway's 1.439 GW does not appear.",
+   "context": "A ranking comparison rather than a commercial relationship. The useful contrast is structural: NextEra Energy Resources is the development arm of a regulated utility holding company and retains what it builds, while Clearway Energy, Inc. is an externally managed listed vehicle that buys finished assets from a sponsor and has no employees of its own. Both compete for the same hyperscaler PPAs — NextEra directly, Clearway through Clearway Energy Group's origination team.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "aes-clean-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both are contracted US renewables and storage owners selling to hyperscalers; S&P Global measures AES at 1.978 GW of operating batteries against Clearway's 1,439 MW rated / 849 MW net.",
+   "context": "The closest peer on storage scale in the covered set, and the comparison exposes the ownership question. Clearway reports storage at both rated and net capacity because most of the California fleet sits in partnerships at 25% to 50% — 844 MW rated becomes 391 MW net. A rated-to-rated comparison with AES therefore flatters Clearway, and a net comparison is the honest one. Both companies also sit on the buyer side of the same hyperscaler demand, AES through Amazon and Microsoft and Clearway through Google and Microsoft.",
+   "source": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2"
+  },
+  {
+   "slug": "vistra",
+   "type": "competitor",
+   "status": "active",
+   "note": "Both own California and Texas generation and appear together in independent storage-completion rankings; Vistra's dossier records Clearway among the top ten owners by megawatts brought online in 2023 on an Enverus table.",
+   "context": "A ranking co-appearance rather than a commercial relationship, and it is recorded as such on both sides. The businesses are structurally opposite: Vistra is an integrated merchant with a five-million-customer retail book hedging its generation, while Clearway sells essentially all of its output on long-term contracts and holds no retail position. That difference is why Vistra's storage revenue swings with market prices and Clearway's does not, and it is the more instructive comparison than the megawatt counts.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ITC/45X (One Big Beautiful Bill Act phase-out)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-04",
+   "exposure": "Clearway's growth programme depends on tax credits monetised through tax-equity partnerships, and those partnerships are the subject of the company's disclosed material weakness in internal control. The FY2025 10-K carries the credit regime through the committed growth investments — about 1,871 MW of repowering and new build — where a repowered wind farm can restart credit eligibility. Tax-equity allocations drive the gap between a $(231)m net loss and $430m of cash available for distribution.",
+   "mitigation": "Repowering is itself the mitigation: Goat Mountain, Mt. Storm, Tuolumne and San Juan Mesa reuse existing interconnections and land rights while restarting the credit clock, which is why the committed programme is wind repowering rather than greenfield.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "regime": "California resource adequacy",
+   "status": "in-effect",
+   "exposure": "The 2,770 MW Flexible Generation fleet earns from selling resource adequacy into CAISO rather than from generating — 323 GWh produced in FY2025 against 847 GWh in FY2024. Marsh Landing's contracts expire between 2026 and 2030 and Walnut Creek's between 2026 and 2027, so a material share of the segment's $210m of FY2025 Adjusted EBITDA is exposed to recontracting terms that are not public.",
+   "mitigation": "El Segundo recontracted about 272 MW across two sales in January and February 2025, taking it to 100% contracted through 2027 and about 50% through 2028; the company signed further Marsh Landing and Walnut Creek agreements in the second quarter of 2026 whose tenor, price and megawatts have not been disclosed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "regime": "Domestic content and supply-chain sourcing",
+   "status": "in-effect",
+   "exposure": "Just over a gigawatt of Tesla Megapack 2 XL capacity is on order for 2026 delivery, built in Lathrop, California with cells sourced partly from Sparks, Nevada. Domestic assembly and cell sourcing bear directly on domestic-content adders and on foreign-entity restrictions, and Clearway's single-supplier concentration on Tesla for storage is the corresponding risk.",
+   "mitigation": "Company-published sourcing detail is limited to the Lathrop and Sparks statements in the June 2025 procurement release; no first-party domestic-content percentage or foreign-entity analysis was located.",
+   "source": "https://www.clearwayenergygroup.com/press-releases/clearway-announces-major-energy-storage-procurement-order-from-tesla/"
+  },
+  {
+   "regime": "SEC internal-control reporting (Section 404)",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-07",
+   "exposure": "PwC issued an adverse opinion on internal control over financial reporting as of 31 December 2025. The weakness is in the review of hypothetical-liquidation-at-book-value calculations used to allocate net income and loss to redeemable non-controlling interests and non-controlling interests in tax-equity partnerships — the exact mechanism through which the tax-credit economics reach the income statement. It was unremediated at the year end.",
+   "mitigation": "The company disclosed the weakness itself in an 8-K on 7 January 2026 and revised the first three quarters of 2025 immaterially; the corrections had no impact on net income, loss or cash flow from operations.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926001542/tm262339d1_8k.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Craig Cornelius",
+   "title": "President, Chief Executive Officer and Director, Clearway Energy, Inc.; President and Chief Executive Officer, Clearway Energy Group",
+   "photo": "images/execs/clearway-energy-cornelius.jpg",
+   "background": [
+    "Chief Executive Officer and director of Clearway Energy, Inc. since July 2024, succeeding Christopher Sotos",
+    "Chief Executive Officer of Clearway Energy Group since its 2018 spin-out of NRG's clean-energy businesses",
+    "President of NRG's renewables division (joined NRG 2013)",
+    "Principal then Managing Director, solar investing practice, Hudson Clean Energy Partners",
+    "Program Manager, US Department of Energy Solar Energy Technologies Program, where he led the creation of the $1.5bn Solar America Initiative",
+    "Director of Sunrun Inc. (audit; nominating, governance and sustainability committees)"
+   ]
+  },
+  {
+   "name": "Sarah Rubenstein",
+   "title": "Executive Vice President and Chief Financial Officer, Clearway Energy, Inc.",
+   "background": [
+    "Named executive officer in the 2026 proxy statement",
+    "Signs the company's quarterly and annual certifications"
+   ],
+   "photo": "images/execs/clearway-energy-rubenstein.jpg"
+  },
+  {
+   "name": "Michael A. Brown",
+   "title": "Senior Vice President, General Counsel and Corporate Secretary, Clearway Energy, Inc.",
+   "background": [
+    "Signs Clearway Energy, Inc. filings from July 2026",
+    "Succeeded Kevin P. Malcarney, who retired effective 1 June 2026"
+   ],
+   "photo": "images/execs/clearway-energy-brown.jpg"
+  },
+  {
+   "name": "Steve Miller",
+   "title": "Chief Investment Officer, Clearway Energy, Inc.",
+   "background": [
+    "Listed under the Clearway Energy, Inc. grouping on the Clearway Energy Group leadership page"
+   ],
+   "photo": "images/execs/clearway-energy-miller.jpg"
+  },
+  {
+   "name": "Steve Ryder",
+   "title": "Executive Vice President and Chief Financial Officer, Clearway Energy Group",
+   "background": [
+    "Platform Division of Clearway Energy Group's Management Council",
+    "Collection gap: Clearway Energy Group publishes names, titles and photographs for its leadership but no individual biographies"
+   ],
+   "photo": "images/execs/clearway-energy-ryder.jpg"
+  },
+  {
+   "name": "John Woody",
+   "title": "Chief Development Officer, Clearway Energy Group",
+   "background": [
+    "Leads the Development Division that originates the assets offered down to Clearway Energy, Inc.",
+    "Collection gap: no first-party biography is published"
+   ],
+   "photo": "images/execs/clearway-energy-woody.jpg"
+  },
+  {
+   "name": "Valerie Wooley",
+   "title": "Senior Vice President, Origination, Clearway Energy Group",
+   "background": [
+    "The named company voice on the power-purchase-agreement and data-centre announcements, including the Google portfolio and Royal Slope",
+    "Collection gap: no first-party biography is published"
+   ],
+   "photo": "images/execs/clearway-energy-wooley.jpg"
+  },
+  {
+   "name": "Dan Summa",
+   "title": "Chief Operating Officer, Clearway Energy Group",
+   "background": [
+    "Leads the Operations Division, including asset management and the RENOM operations-and-maintenance business",
+    "Collection gap: no first-party biography is published"
+   ],
+   "photo": "images/execs/clearway-energy-summa.jpg"
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$1,371m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Energy and capacity revenues $1,500m less contract amortisation and mark-to-market",
+      "kpi": "revenue",
+      "usdMillions": 1371,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "$(63)m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Net income attributable to Clearway Energy, Inc. was positive at $88m — the loss sits with non-controlling and redeemable non-controlling interests at $(151)m"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$1,146m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Renewables and Storage $948m, Flexible Generation $232m, Corporate $(34)m"
+     },
+     {
+      "name": "Cash Available for Distribution",
+      "actual": "$425m",
+      "expected": "",
+      "verdict": "beat",
+      "result": "The company stated that full-year 2024 results exceeded guidance"
+     },
+     {
+      "name": "Dividend per share",
+      "actual": "$1.65",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Up from $1.54 in FY2023"
+     }
+    ],
+    "commentary": "Flexible Generation still produced 847 GWh this year, against 323 GWh in FY2025 — the collapse in the following year is a dispatch outcome, not a capacity change."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$1,429m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Energy and capacity revenues $1,565m, other revenues $76m, less $189m of contract amortisation and $23m of mark-to-market on economic hedges",
+      "kpi": "revenue",
+      "usdMillions": 1429,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net loss",
+      "actual": "$(231)m",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Widened from $(63)m. Net income attributable to Clearway Energy, Inc. was $169m; $(400)m was allocated to non-controlling and redeemable non-controlling interests through the tax-equity structures"
+     },
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$1,217m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Renewables and Storage $1,039m, Flexible Generation $210m, Corporate $(32)m"
+     },
+     {
+      "name": "Cash Available for Distribution",
+      "actual": "$430m",
+      "expected": "$400m–$440m (original company guidance, later narrowed to $420m–$440m)",
+      "verdict": "beat",
+      "result": "Described by the company as at the top end of the original guidance range. No published analyst consensus for CAFD or CAFD per share exists for any period — sell-side coverage models EPS and revenue instead, so a CAFD 'consensus' would be invented"
+     },
+     {
+      "name": "Operating cash flow",
+      "actual": "$688m",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Down from $770m in FY2024"
+     },
+     {
+      "name": "Dividend per share",
+      "actual": "$1.77",
+      "expected": "",
+      "verdict": "inline",
+      "result": "About 6.5% annual growth; the quarterly rate reached $0.4750 for the third quarter of 2026"
+     },
+     {
+      "name": "Total debt",
+      "actual": "$8,674m against $818m of cash and restricted cash",
+      "expected": "",
+      "verdict": "inline",
+      "result": "S&P BB and Moody's Ba2, both stable. Total liquidity $1,061m"
+     }
+    ],
+    "commentary": "Renewables and storage produced 98% of total generation. Offtaker concentration is material: Southern California Edison was about 22% of consolidated revenue and PG&E about 16%, with the next five largest about 26% combined. The material weakness in internal control over financial reporting was disclosed on 7 January 2026 and was unremediated at the year end."
+   },
+   {
+    "period": "H1 2026 (latest interim)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Adjusted EBITDA",
+      "actual": "$666m (Q1 $257m, Q2 $409m)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Renewables and Storage $590m, Flexible Generation $98m, Corporate $(22)m"
+     },
+     {
+      "name": "Cash Available for Distribution",
+      "actual": "$237m (Q1 $70m, Q2 $167m)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Against full-year guidance cut to $430m–$470m on 5 August 2026 from $470m–$510m"
+     },
+     {
+      "name": "Net loss",
+      "actual": "$(38)m (Q1 $(68)m, Q2 $30m)",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Q2 adjusted earnings per share of $1.00 beat a $0.38 consensus and revenue of $481m beat $474.94m, yet the shares fell 1.73% on the guidance cut"
+     },
+     {
+      "name": "Total debt",
+      "actual": "$9,137m against $543m of cash and restricted cash",
+      "expected": "",
+      "verdict": "miss",
+      "result": "Implied net debt about $8,594m; total liquidity fell to $985m from $1,330m two years earlier; letters of credit outstanding rose to $1,340m"
+     },
+     {
+      "name": "Operating battery capacity",
+      "actual": "1,439 MW rated / 849 MW net",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Up from 1,119 MW / 529 MW at 31 December 2025, driven by Honeycomb's 320 MW in Utah",
+      "kpi": "mw-energized",
+      "qty": 1439
+     },
+     {
+      "name": "Total fleet",
+      "actual": "13,872 MW rated / 10,665 MW net across 27 states",
+      "expected": "",
+      "verdict": "inline",
+      "result": "Wind 4,234 MW, utility solar 4,730 MW, storage 1,439 MW, distributed solar 699 MW, gas 2,770 MW. The headline gross figure moves every quarter and should always be date-stamped"
+     }
+    ],
+    "commentary": "The 5 August 2026 guidance cut is the first in three years and the company attributes it to weather: an El Niño pattern left measured CAISO wind at 87% of P-50 and ERCOT at 98%, with second-quarter wind and solar about 5% below the level the guidance mid-point required. Wind availability was 92% against 99% for solar. Long-term targets were reaffirmed — 2030 cash available for distribution per share of $2.90 to $3.10, then 5% to 8% or better growth."
+   }
+  ],
+  "commentary": "Two structural features make this income statement hard to read. Depreciation of $682m and tax-equity allocations under hypothetical-liquidation-at-book-value accounting drive a GAAP net loss while cash available for distribution funds a growing dividend — a $(231)m FY2025 net loss and a record $430m of CAFD are the same year. And no published analyst consensus exists for CAFD or CAFD per share, the metrics management guides to and the dividend is set from; consensus exists only for EPS and revenue, so any CAFD 'beat' or 'miss' is measured against company guidance alone."
+ },
+ "strategyRead": [
+  "(High confidence) We assess that two widely repeated descriptions of this company are now wrong, and both matter for anyone modelling it. There is one listed share class, not two: every Class A share converted into Class C at 12:01 a.m. on 1 May 2026, CWEN.A was suspended on the NYSE and a Form 25-NSE was filed. And there is no right-of-first-offer agreement — the strings 'right of first offer' and 'ROFO' appear zero times in the FY2025 10-K, which is a real change from the NRG Yield-era structure. What operates instead is an offer-and-approve process in which the sponsor offers and the independent directors decide.",
+  "(High confidence) We assess the sponsor conversion was designed to change liquidity without changing control, and succeeded. Basis: post-conversion voting power is Class B 39.48%, Class C 45.12% and Class D 15.40% — reproducing the pre-conversion 54.88/45.12 sponsor-versus-public split exactly — because Clearway Energy Group simultaneously placed 41,678,637 Class B shares into a Wilmington Trust voting trust whose trustee must vote in the same proportion as all stockholders. The public got a single, deeper class; the sponsor gave up no relative votes.",
+  "(High confidence) We assess the storage fleet is contracted rather than merchant, and that this is the correct frame for comparing it with the ERCOT battery owners. Basis: Honeycomb's 320 MW / 1,280 MWh sits on 20-year PacifiCorp tolling agreements to 2046, Spindle's 199 MW / 398 MWh is contracted to Public Service Company of Colorado, and the California fleet sells resource adequacy to SDG&E, SCE and other load-serving entities on contracts running to 2033–2041. None of it earns from ancillary-services arbitrage, which is why its revenue did not move when ERCOT ancillary prices collapsed.",
+  "(High confidence) We assess the 'large CAISO storage fleet' framing understates the shift that has already happened. Basis: California is still the largest single storage market at 844 MW rated, but only 391 MW net, and every megawatt of 2026 growth landed elsewhere — Honeycomb's 320 MW in Utah, Pine Forest's 200 MW in ERCOT, Spindle's 199 MW in Colorado, against 92 MW at Rosamond South II in California. Against Modo Energy's measured 16.2 GW CAISO fleet, Clearway's California storage is roughly 5%.",
+  "(Moderate confidence) We assess the hyperscaler exposure is real but sits mostly at the sponsor, and that the gap between the two balance sheets is the single most important thing to track. Basis: about 1.17 GW of Google PPAs, 335 MW of Microsoft at Mount Storm and 520 MW at Royal Slope were all originated at Clearway Energy Group; of these only the Goat Mountain repower is committed to the listed company, while Swan Solar, Catamount and Royal Slope are offered and unapproved. The listed company's own direct data-centre revenue today is the Mesquite Sky 15-year hyperscaler PPA signed in March 2026 and Goat Mountain from 2027.",
+  "(Moderate confidence) We assess the gas fleet is the nearest material unknown and is under-disclosed. Basis: Marsh Landing's contracts expire between 2026 and 2030 and Walnut Creek's between 2026 and 2027, together 1,321 MW of the 2,770 MW segment that produced $210m of FY2025 Adjusted EBITDA; the company signed new resource-adequacy agreements for both in the second quarter of 2026 and published no tenor, price or megawatt figure. California RA pricing has risen, so the terms could move the segment materially in either direction and nothing in the public record fixes them.",
+  "(Moderate confidence) We assess the 2026 guidance cut is a weather outcome rather than a business deterioration, while noting the structure that makes weather bite. Basis: the company's own operational update attributes it to an El Niño pattern leaving measured CAISO wind at 87% of P-50 and ERCOT at 98%, with second-quarter wind and solar about 5% below the guidance mid-point requirement; long-term targets of $2.90 to $3.10 of CAFD per share by 2030 were reaffirmed at the same time, and the second quarter beat on both earnings and revenue. A portfolio contracted per megawatt-hour rather than per megawatt of capacity carries the resource risk itself.",
+  "(Low confidence) We assess the material weakness in internal control is a diligence item rather than an accounting problem, but it sits in an uncomfortable place. Basis: PwC's adverse opinion concerns hypothetical-liquidation-at-book-value calculations allocating income to tax-equity partnerships, the immaterial revisions it produced left net income and operating cash flow untouched, and the company disclosed it itself. Cutting against that comfort: HLBV allocation is precisely the mechanism through which the tax-credit economics reach the income statement, and it explains the $(400)m allocated away from Clearway Energy, Inc. in FY2025. It was unremediated at the year end.",
+  "Collection gap: storage energy capacity is not published for most of the fleet. Clearway's SEC filings state storage in megawatts only, and MWh appears in first-party sources for Honeycomb (1,280 MWh) and Spindle (398 MWh) alone. No MWh figure exists in any first-party source for Arica, the three Daggett projects, Rosamond Central, Rosamond South I, Victory Pass, Pine Forest, Mililani I or Waiawa, so every MWh figure for the California fleet in circulation is third-party.",
+  "Collection gap: no independent tracker measures Clearway's battery fleet at owner level. S&P Global's published US battery-owner table runs NextEra Energy Resources, ENGIE and AES and does not include Clearway; Modo Energy publishes market totals but names no owners; Wood Mackenzie's published rankings measure integrators rather than owners; and the American Clean Power Association's owner data is members-only. The 1,439 MW figure is the company's own, corroborated only by summing its published project table.",
+  "Collection gap: no published analyst consensus exists for cash available for distribution or CAFD per share in any period, which are the metrics management guides to and the dividend is set from. Consensus exists for earnings per share and revenue only. Any statement that Clearway 'beat' or 'missed' on CAFD is measured against its own guidance, not against the market."
+ ],
+ "sources": [
+  {
+   "label": "Jefferies cuts the Clearway Energy price target to $38 from $45, maintaining Buy, on a $3.07 per-share FAD estimate for 2030",
+   "url": "https://www.investing.com/news/analyst-ratings/jefferies-cuts-clearway-energy-stock-price-target-on-rates-93CH-4889641",
+   "date": "2026-09-04"
+  },
+  {
+   "label": "Modo Energy — CAISO battery storage in 2026: 16.2 GW installed at 13 August 2026; resource adequacy is more than half of battery revenue",
+   "url": "https://modoenergy.com/research/en/caiso-battery-storage-2026-things-to-watch",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "EIA Today in Energy — US battery storage reaches about 52 GW at the end of the first half of 2026, from 43.6 GW at end-2025",
+   "url": "https://www.eia.gov/todayinenergy/detail.php?id=67925",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Clearway Energy — 8-K establishing a $100m at-the-market Class C equity distribution programme",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926092109/tm2622221d1_8k.htm",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "Clearway Energy — Q2 2026 Form 10-Q (fleet table at 30 June 2026, contract restructurings, debt and liquidity)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053421/cwen-20260630.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Clearway Energy — Q2 2026 results, 8-K Exhibit 99.1 (2026 guidance cut to $430–470m of CAFD)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "StockTitan — Clearway Energy reports second-quarter 2026 CAFD of $167m and lowers guidance",
+   "url": "https://www.stocktitan.net/news/CWEN/clearway-energy-inc-reports-second-quarter-2026-financial-g0nvztz4x7qs.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Investing.com — Clearway Energy Q2 2026 slides: guidance trim against consensus adjusted EPS of $0.38, revenue $481m against $474.94m, shares down 1.73%",
+   "url": "https://www.investing.com/news/company-news/clearway-energy-q2-2026-slides-growth-pipeline-matures-de",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "S&P Global Commodity Insights — WECC leads US battery storage additions with 2.2 GW in the second quarter (US owner ranking: NextEra Energy Resources 5.779 GW, ENGIE 3.662 GW, AES 1.978 GW)",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/081426-us-battery-storage-wecc-leads-us-battery-storage-additions-with-22-gw-in-q2",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Clearway Energy — Operational Update Presentation, 8-K Exhibit 99.1 (CAISO wind at 87% of P-50 on an El Niño pattern)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926084265/tm2620337d1_ex99-1.htm",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the General Counsel transition (Kevin Malcarney retirement)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926061748/tm2614750d1_8k.htm",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Clearway Energy — Q1 2026 Form 10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026032385/cwen-20260331.htm",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Clearway Energy — Q1 2026 results, 8-K Exhibit 99.1",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026032303/exhibit991-clearwayenergyi.htm",
+   "date": "2026-05-07"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the Class A conversion, the Wilmington Trust voting trust and the 2026 annual meeting results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926053557/tm2613249d1_8k.htm",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Schedule 13D/A No. 3 — TotalEnergies SE and subsidiaries: TotalEnergies Renewables USA holds 50% of Zephyr GP; 84,175,483 shares, 41.0% as-exchanged",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926054215/primary_doc.xml",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Schedule 13D/A No. 3 — BlackRock Portfolio Management LLC on behalf of the GIP Entities: 85,181,445 shares, 41.5% as-exchanged",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926054174/primary_doc.xml",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the Third Amended and Restated Exchange Agreement (Class B units now exchange into Class C)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926038738/tm2610634d1_8k.htm",
+   "date": "2026-04-02"
+  },
+  {
+   "label": "Clearway Energy — 2026 DEF 14A proxy statement (board biographies; 'GIP and TotalEnergies each own 50% of CEG through intermediate holding companies'; related-party transactions)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926033918/tm261444-3_def14a.htm",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Clearway Energy — 8-K announcing the single-share-class proposal",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926025318/tm268314d1_8k.htm",
+   "date": "2026-03-09"
+  },
+  {
+   "label": "Clearway Energy — FY2025 Form 10-K (fleet, segments, drop-down process, offtaker concentration, material weakness, ratings)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm",
+   "date": "2026-02-24"
+  },
+  {
+   "label": "Clearway Energy — FY2025 results, 8-K Exhibit 99.1",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010641/exhibit991-clearwayenergyi.htm",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "GlobeNewswire — Clearway Energy reports full-year 2025 financial results",
+   "url": "https://www.globenewswire.com/news-release/2026/02/23/3243006/0/en/Clearway-Energy-Inc-Reports-Full-Year-2025-Financial-Results.html",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Clearway Energy Operating LLC — 8-K on the closing of $600m of 5.750% senior notes due 2034",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926003322/tm262986d1_8k.htm",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "Clearway Energy Operating LLC — 8-K Exhibit 99.2, pricing of the $600m 5.750% senior notes due 2034",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926002190/tm262608d1_ex99-2.htm",
+   "date": "2026-01-08"
+  },
+  {
+   "label": "Clearway Energy — 8-K disclosing a material weakness in internal control over financial reporting (HLBV allocations) and immaterial revisions to the 2025 quarters",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926001542/tm262339d1_8k.htm",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the Spindle (199 MW BESS, Colorado) and Rosamond South II (92 MW BESS, California) purchase agreement",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925117466/tm2532504d1_8k.htm",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "Clearway Energy Group — Royal Slope: a 520 MW power purchase and energy storage agreement with Grant County Public Utility District serving data-centre load growth",
+   "url": "https://www.clearwayenergygroup.com/press-releases/clearway-signs-power-purchase-agreement-and-energy-storage-agreement-totaling-520-mw-with-public-utility-district-of-grant-county/",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the Deriva / Cardinal solar portfolio purchase agreements with a Fengate joint venture",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925097098/tm2528051d1_8k.htm",
+   "date": "2025-10-06"
+  },
+  {
+   "label": "Clearway Energy Group — a high-performance-computing data centre co-located with the Elbow Creek wind farm in Texas",
+   "url": "https://www.clearwayenergygroup.com/press-releases/clearway-announces-new-high-performance-computing-data-center-colocated-with-texas-wind-farm/",
+   "date": "2025-08-06"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the resignation of Bertrand Barrois and the election of Paige Goodwin",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925066175/tm2520027d1_8k.htm",
+   "date": "2025-07-07"
+  },
+  {
+   "label": "Clearway Energy Group — Tesla Megapack procurement order of 490 MW / 1,356 MWh on top of an existing 520 MW / 1,680 MWh",
+   "url": "https://www.clearwayenergygroup.com/press-releases/clearway-announces-major-energy-storage-procurement-order-from-tesla/",
+   "date": "2025-06-05"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the 2025 annual meeting results",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465925037429/tm2512902d1_8k.htm",
+   "date": "2025-04-22"
+  },
+  {
+   "label": "Clearway Energy Group — $605m financing closes and construction begins on the 320 MW / 1,280 MWh Honeycomb storage portfolio in Utah",
+   "url": "https://www.clearwayenergygroup.com/press-releases/clearway-closes-financing-and-begins-construction-on-605-million-grid-enhancing-battery-energy-storage-portfolio-in-utah/",
+   "date": "2025-03-11"
+  },
+  {
+   "label": "Clearway Energy — FY2024 Form 10-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000156768325000007/cwen-20241231.htm",
+   "date": "2025-02-25"
+  },
+  {
+   "label": "GlobeNewswire — Clearway Energy reports full-year 2024 financial results",
+   "url": "https://www.globenewswire.com/news-release/2025/02/24/3031498/0/en/Clearway-Energy-Inc-Reports-Full-Year-2024-Financial-Results.html",
+   "date": "2025-02-24"
+  },
+  {
+   "label": "Clearway Energy — FY2024 results, 8-K Exhibit 99.1",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000156768325000005/exhibit991-clearwayenergyi.htm",
+   "date": "2025-02-24"
+  },
+  {
+   "label": "Clearway Energy — Q3 2024 results, 8-K Exhibit 99.1",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000156768324000026/exhibit991-clearwayenergyi.htm",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "Clearway Energy — 8-K on the election of Marc-Antoine Pignon, chief executive of TotalEnergies Renewables USA, to the board",
+   "url": "https://www.sec.gov/Archives/edgar/data/1567683/000110465924126298/tm2430390d1_8k.htm",
+   "date": "2024-12-06"
+  },
+  {
+   "label": "Clearway Energy Group — corporate homepage (14 GW gross operating capacity, 11 GW owned, 450+ projects, 35 states, 1,000+ employees)",
+   "url": "https://www.clearwayenergygroup.com/"
+  },
+  {
+   "label": "Clearway Energy Group — About page ('Clearway Energy Group owns a controlling interest in Clearway Energy, Inc.'; GIP and TotalEnergies as parents)",
+   "url": "https://www.clearwayenergygroup.com/about/"
+  },
+  {
+   "label": "Clearway Energy Group — leadership page (29 leaders with titles and company-published headshots; no individual biographies)",
+   "url": "https://www.clearwayenergygroup.com/about/leadership/"
+  },
+  {
+   "label": "Clearway Energy Group — press-release archive",
+   "url": "https://www.clearwayenergygroup.com/press-releases/"
+  },
+  {
+   "label": "stockanalysis.com — Clearway Energy analyst forecasts: consensus price target $42.08 across 13 analysts, FY2026 revenue $1.71bn and adjusted EPS $0.77",
+   "url": "https://stockanalysis.com/stocks/cwen/forecast/"
+  },
+  {
+   "label": "SEC EDGAR — Clearway Energy, Inc. submissions index, CIK 0001567683",
+   "url": "https://data.sec.gov/submissions/CIK0001567683.json"
+  },
+  {
+   "label": "SEC EDGAR — Clearway Energy LLC submissions index, CIK 0001637757",
+   "url": "https://data.sec.gov/submissions/CIK0001637757.json"
+  },
+  {
+   "label": "MarketBeat — Clearway Energy earnings calendar ('has not confirmed its next earnings publication date'; estimated Tuesday 3 November 2026)",
+   "url": "https://www.marketbeat.com/stocks/NYSE/CWEN/earnings/"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

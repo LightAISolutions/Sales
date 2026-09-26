@@ -615,6 +615,16 @@
    "note": "Adjacent seats at the same financial close rather than a commercial relationship — and the same documented absence found on the other incumbent's side.",
    "context": "DNV certifies and writes recommended practice for grid-scale storage, including RP-0043; this company advises the buyer and places the risk. The DNV dossier in this corpus records that it found no insurer document citing RP-0043 or naming any certifier.\n\nThis research corroborates that from the other direction. Across every battery and renewables publication reviewed here — the two UK battery articles, the energy-transition roadmap, the clean-energy-lifecycle article, the renewable construction claims analysis, the Asia-Pacific construction-to-operations piece, the power and renewables capability pages and the Spring 2026 market update — no UL 9540A, NFPA 855, DNV, TUV, CSA or IEC reference appears. The single standard cited anywhere is SCOR's 2022 handbook. What substitutes for a named standard is qualitative engineering criteria: three metres of enclosure spacing, wind-turbine fleet-leader operating hours, OEM facility provenance. Marsh McLennan's guidance does the same across seven documents. Two incumbent brokers, independently, state the requirement and leave the code unnamed.",
    "source": "https://www.aon.com/unitedkingdom/insights/stakeholders-must-work-together-to-unlock-bess"
+  },
+  {
+   "slug": "kkr",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-08",
+   "scale": "USD 17.0bn",
+   "note": "Aon agreed on 31 August 2026 to buy USI from KKR and other shareholders; signed, not closed.",
+   "context": "Aon's release announces a definitive agreement to acquire USI 'from KKR and other shareholders for a total purchase price of $17.0 billion', with closing expected in the fourth quarter of 2026. KKR's 25 September update expects about USD 3.3bn of after-tax proceeds. A transaction counterparty rather than a commercial relationship, hence 'other'.",
+   "source": "https://aon.mediaroom.com/2026-08-31-Aon-to-acquire-USI"
   }
  ],
  "policyExposure": [
@@ -1574,6 +1584,6 @@
    "url": "https://www.aon.com/en/about/leadership-and-governance"
   }
  ],
- "lastUpdated": "2026-09-09",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

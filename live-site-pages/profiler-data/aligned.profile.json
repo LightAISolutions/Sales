@@ -299,6 +299,17 @@
       "note": "Macquarie Asset Management owned Aligned from April 2018 until the sale closed on 21 July 2026.",
       "context": "Held through Macquarie Infrastructure Partners IV, which entered in April 2018 when the platform was two operational facilities and 85 MW, and Macquarie Infrastructure Partners V, which joined in July 2020. The USD 40bn is an **enterprise value**, characterised identically by Aligned, by GIP and by sell-side counsel; the equity cheque is separately reported at about USD 21bn and no source reconciles the two with a stated debt figure. The USD 5bn of growth capital was committed at close and appears in no Macquarie document.\n\nOne refinement from the regulatory record: the European Commission's clearance (Case M.12259, 19 January 2026) names only **two** acquirers of joint control — Global Infrastructure Management LLC, ultimately BlackRock, and MGX Fund Management Limited. The AI Infrastructure Partnership appears in the marketing framing but not as a controlling party, and Microsoft, NVIDIA and xAI are AIP members rather than acquirers. The decision does not mention Macquarie, so it cannot corroborate the seller's identity.",
       "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+    },
+    {
+      "slug": "blackrock",
+      "type": "investor",
+      "status": "active",
+      "since": "2026-07",
+      "scale": "~USD 40bn EV (100% of equity, with AIP and MGX)",
+      "via": "Global Infrastructure Partners; AI Infrastructure Partnership",
+      "note": "BlackRock's Global Infrastructure Partners, with the BlackRock-chaired AI Infrastructure Partnership and MGX, has owned Aligned since 21 July 2026.",
+      "context": "The closing release names 'AIP, MGX, and BlackRock's Global Infrastructure Partners (GIP)' as buyers of 100% of the equity. The European Commission's clearance names Global Infrastructure Management, LLC, 'ultimately controlled by BlackRock', and MGX Fund Management Limited as acquiring joint control. Larry Fink chairs AIP. The split between AIP, MGX and GIP is undisclosed. Blackstone Credit, a different firm often confused with BlackRock, is among Aligned's lenders.",
+      "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
     }
   ],
   "policyExposure": [
@@ -808,6 +819,6 @@
       "date": "2026-02-13"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 7
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 8
 }

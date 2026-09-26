@@ -445,6 +445,15 @@
       "note": "Excelsior's Kingfield (6.3 MWdc) and Wenonah (15.3 MWdc) Minnesota community-solar portfolios, developed with Nokomis, sell under 25-year PPAs in Xcel Energy's Community Solar Garden programme.",
       "context": "The May 2020 release: 21.6 MWdc across 17 projects, 'PPAs under Xcel's Community Solar Garden program' with 25-year terms. Xcel is the tariff administrator rather than a counterparty chosen by Excelsior, so the link is typed `other`.",
       "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-closes-second-investment-with-development-partner-and-commissions-first-tranche-of-minnesota-solar-projects/"
+    },
+    {
+      "slug": "blackrock",
+      "type": "other",
+      "status": "historical",
+      "since": "2024-03",
+      "note": "BlackRock's Evergreen Infrastructure Partners Fund bought Excelsior's 38-project distributed solar and storage portfolio, Fund I's first exit.",
+      "context": "Excelsior's release of 12 March 2024 announces the sale of 38 operating solar and solar-plus-storage projects (89 MWdc) to BlackRock's Evergreen Infrastructure Partners Fund, a 100% divestment. The price is undisclosed. A buyer of assets rather than a commercial customer, hence 'other'.",
+      "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/"
     }
   ],
   "policyExposure": [
@@ -1242,6 +1251,6 @@
       "url": "https://ippjournal.com/company/excelsior-energy-capital"
     }
   ],
-  "lastUpdated": "2026-09-05",
-  "profileVersion": 1
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 2
 }

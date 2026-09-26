@@ -307,6 +307,16 @@
       "context": "Company bios and the Nevada filing ('Former Tesla key lead of Gigafactory Nevada manufacturing for Model 3 … and all Tesla energy products'; NPI manager ex-Tesla) show the operating team was recruited from Tesla's energy and Nevada manufacturing organisations — the same lineage as Heron Power's founder. No commercial relationship with Tesla exists.",
       "source": "https://www.amperesand.io/about.html",
       "status": "historical"
+    },
+    {
+      "slug": "kkr",
+      "type": "other",
+      "status": "active",
+      "since": "2026-09",
+      "via": "STTGDC",
+      "note": "KKR has controlled STTGDC (75%), the host of Amperesand's Singapore HVDC testbed and one of its named SST pilots, since 2 September 2026.",
+      "context": "STT GDC's January 2026 release names Amperesand as a supporter of its FutureGrid Accelerator HVDC testbed, and Amperesand's chief executive named STT GDC among its pilots in July 2026. A KKR-led consortium with Singtel completed the purchase of STTGDC on 2 September 2026, leaving KKR with 75%. The link runs through STTGDC; KKR itself has no Amperesand contract.",
+      "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed"
     }
   ],
   "policyExposure": [
@@ -981,6 +991,6 @@
       "url": "https://tdk-ventures.com/portfolio/energy-cleantech/amperesand/"
     }
   ],
-  "lastUpdated": "2026-09-19",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 3
 }

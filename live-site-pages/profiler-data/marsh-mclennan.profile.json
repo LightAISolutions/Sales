@@ -675,6 +675,15 @@
    "note": "Adjacent seats at the same financial close rather than a commercial relationship: DNV certifies and writes recommended practice, this company advises the buyer and places the risk. Recorded because each documents an absence on the other's side.",
    "context": "The overlap is advisory rather than commercial. DNV certifies and writes recommended practices, including RP-0043 for grid-scale storage; Marsh advises the buyer and places the risk. The DNV dossier records that no insurer document it found cites RP-0043 and that 'Munich Re and Marsh name no certifier', citing Marsh's own battery-energy-storage page.\n\nThis dossier's research confirms and widens that finding: across seven Marsh battery-storage documents spanning 2021 to 2026 and four company web properties, no certification body or standard is named — not UL, UL 9540A, NFPA 855, DNV, CSA, TUV, IEC, IEEE or FM Global. Marsh states insurer requirements in engineering terms — separation between enclosures, routing power to the grid independently of the battery, fire-protection features — while the codes that specify them go unnamed. Aon's published battery guidance does the same, naming only SCOR's 2022 handbook. The unnamed certification layer is the space DNV occupies, and neither broker points to it.",
    "source": "https://www.marsh.com/en/industries/energy-and-power/expertise/battery-energy-storage-systems.html"
+  },
+  {
+   "slug": "blackrock",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-07",
+   "note": "Reported: Marsh is technical adviser to the BlackRock funds on the El Paso data-centre venture while advising Meta on the other side.",
+   "context": "Insurance Business reported on 31 July 2026 that Marsh provided project risk analysis and insurance services to Meta and acted as technical adviser to the BlackRock funds on the roughly USD 14bn El Paso campus. Neither party has confirmed the mandate in a release.",
+   "source": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx"
   }
  ],
  "policyExposure": [
@@ -1716,6 +1725,6 @@
    "url": "https://www.marketbeat.com/stocks/NYSE/MRSH/forecast/"
   }
  ],
- "lastUpdated": "2026-09-09",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

@@ -1,0 +1,986 @@
+{
+  "schemaVersion": 7,
+  "slug": "amperesand",
+  "name": "Amperesand Pte. Ltd. (UEN 202318356C, incorporated 11 May 2023; US subsidiary Amperesand Inc., Delaware, formed 6 December 2024)",
+  "shortName": "Amperesand",
+  "categories": [
+    "supplier"
+  ],
+  "website": "https://www.amperesand.io",
+  "headquarters": "Singapore (Solid State Systems Innovation Center, Harbourlink Innohub); San Francisco, California (Power Electronics Innovation Center); Reno, Nevada (Design and Advanced Manufacturing Center)",
+  "founded": 2023,
+  "employees": "~130+ (Wolfspeed case study, May 2026); 154 listed on LinkedIn and 51 open roles (Sept 2026); 38% of the global workforce in Reno per the Nevada GOED filing (Feb 2026)",
+  "ownership": {
+    "type": "private",
+    "ticker": ""
+  },
+  "summary": "BOTTOM LINE UP FRONT: Amperesand is the platform challenger at the 800 V DC hall edge — a 3.3 kV silicon-carbide medium-voltage solid-state transformer built from 200 kW modules to 4–10 MW, with a decade of NTU-lineage grid testing behind it, USD 122M of reported equity, a Reno production line running from mid-2026 and a Port of Singapore charging pilot as its first commercial engagement — but as of 19 September 2026 it has no confirmed energised unit, no named data-center customer, no certification listing and no place on any NVIDIA 800 V DC roster; whether the '30MW of commercial systems' promised for 2026 ships by year-end is the whole thesis. BACKGROUND. Spun out of Nanyang Technological University's Energy Research Institute in 2023 (Amperesand Pte. Ltd., incorporated 11 May 2023; US subsidiary Amperesand Inc., Delaware, December 2024), incubated by Temasek's Xora Innovation and first company selected for the SGD 75M Temasek–NTU–NUS programme. Research from 2016 produced a 50 kW Generation 0 (2019), 500 kW and 1.5 MW Generation I units on the Singapore grid (2022), full-power and bidirectional testing of Generation 2 (2024) and 18 patent families. Funding per company releases and trade press: USD 12.45M seed (February 2024, Xora and Material Impact), USD 80M Series A (November 2025, Walden Catalyst Ventures and Temasek) and a USD 30M share issuance reported in June 2026 (N47 Services about USD 13.5M; no company statement). Operations in Singapore, San Francisco and Reno; about 130–155 staff. Leadership turned over twice in a year: Xora's Phil Inagaki (interim CEO) to Schneider veteran Gary Lawrence (January 2025) to ex-Tesla Brian Dow (CEO by October 2025), the last change unannounced. Collection gap: no datasheet, revenue, valuation, backlog, MW delivered or shipped-unit figure is published; the company's headline claims were cut from 'up to 10x' faster time to power and '>80%' footprint reduction to '5×' and '50%' in the August 2026 site refresh without explanation.",
+  "ecosystemRole": "We assess Amperesand as the second venture-backed challenger in the hall-edge power-conversion layer beside Heron Power — a modular 3.3 kV SiC solid-state transformer sold against the transformer-rectifier units NVIDIA's 2027 halls use and against the hedged incumbents (ABB, Eaton, GE Vernova, Hitachi Energy, Siemens, Schneider) — distinguished by a multi-application platform (megawatt port charging, storage, data halls) that accumulates field hours across markets, Singapore engineering with a Nevada line, and Temasek on the cap table. It is not a battery, switchgear or rack-power vendor; its adjacency to in-hall power is that the battery on its DC bus takes the UPS's job.",
+  "productsAndServices": [
+    {
+      "name": "Amperesand SST — medium-voltage solid-state transformer platform (third generation) for 800 V DC AI factories",
+      "category": "Hall-edge power conversion (solid-state transformer)",
+      "description": "A factory-built medium-voltage solid-state transformer that takes utility medium voltage and delivers regulated low-voltage DC — the company's homepage calls it 'the world's most advanced Medium Voltage Solid State Transformer' and lists '>98.5% MV-to-LV conversion efficiency', '99.999% uptime via proprietary redundancy', '5× faster time to power' and '50% smaller equipment footprint', with 'configurable MV AC and LV DC' output 'designed for global 800V DC AI factory architectures'. The Wolfspeed case study (May 2026) describes it as 'the first medium voltage SST-to-rack power solution capable of providing 5-10MW of modular power conversion for the emerging 800 VDC AI compute ecosystem', built on 3.3 kV Wolfspeed WolfPACK full-bridge modules with Gen 4 SiC MOSFETs in the medium-voltage front end, liquid-cooled to a module temperature rise below 30°C for operation above 50°C ambient, with power stages 'small and light enough for simple two-person replacement in minutes' and modules swappable 'in less than 20 minutes'. The unit consolidates the line-frequency transformer, switchgear, rectifiers and UPS of the conventional chain into one enclosure — up to two units ship in a single 20-foot flat-rack container per the company's Nevada filing — and its DC bus lets customers 'replace uninterruptible power supply (UPS) systems with lower cost, multi-sourced battery energy storage'. Third-party PCIM 2026 reporting adds the figures the company does not publish: 10–34.5 kV input, 800 V DC or 1,500 V DC output, 200 kW modules scaling to 10 MW, fanless fluid cooling, IP65, about 22 weeks from order to delivery.",
+      "highlights": [
+        "Claims moderated in the August 2026 site refresh: the November 2025 Series A release, the legacy careers site and NTU say 'up to 10x' faster time to power and 'greater than 80%' footprint reduction; the current homepage says '5×' and '50%', and Wolfspeed's May 2026 release says 'over 50%'. No company document explains the change (analysis: the newer figures are the ones to quote).",
+        "Unit rating is stated three ways: '6MW SST platform' demonstrated late 2024 (January 2025 release), '6+ MW' system engineering (Wolfspeed release, May 2026), and '5-10MW of modular power conversion' (Wolfspeed case study); PCIM reporting gives 200 kW modules 'up to 10 MW'. The company publishes no datasheet, so per-unit MW, dimensions and DC output voltages rest on third-party trade-show reporting (collection gap).",
+        "Lifetime is claimed as 'designed and testing to demonstrate 15+ year lifetime' (case study), 'engineered for a 20-30-year lifetime' (Wolfspeed release) and '20 years design life' (PCIM) — unreconciled figures; the underlying claim is Wolfspeed's epoxy-package power-cycling data ('5X improvement' over silicone-gel modules).",
+        "Standards are targets, not listings: job postings name UL 2877 and UL 1741 as 'the primary standards governing Amperesand's products', with IEEE 1547, IEEE 2800, IEC 62443 and IEC 61850 supporting, and NRTL engagement with TÜV, UL, CSA and Intertek; no certification has been announced (collection gap). The homepage says 'UL, IEC & IEEE — certifying to procurement standards'.",
+        "Safety and grid features per the case study: 'settable ultra-fast shutdown of energy delivery to reduce arc flash incident energy', ability to 'safely decouple MV and LV grids', 'grid ride through, ramp rate control, and demand response', and a software suite 'from predictive maintenance to site-level asset visibility'; the Nevada filing adds that the design 'eliminates harmful materials such as SF6 gas' and 'requires no water input'.",
+        "Commercial status: 'now accepting orders for pilot deployments' (Wolfspeed PDF, May 2026); 'First commercial units delivering 2026' and 'Initial hyperscaler deployments in 2026' (homepage, August 2026); no shipped unit, energised pilot or named data-center customer is on the public record as of 19 September 2026."
+      ],
+      "positioning": "Sits at the medium-voltage-to-800 V DC hall-edge block that NVIDIA's August 2026 execution paper builds first from transformer-rectifier units and reserves for 34.5 kV-direct SSTs 'toward 2029'. The company names no competitor and compares only against 'legacy UPS/transformer systems'; the peer set at this layer is Heron Power (34.5 kV, 4.2 MW, mass production late 2027), DG Matrix, and the hedged incumbents — GE Vernova, ABB, Eaton, Siemens, Hitachi Energy, Schneider Electric — plus Sungrow's EnerNeo and Zhonhen's rectifier architecture. Amperesand's differentiators, as the record supports them, are a decade of NTU-lineage development with grid-tested Generation 0–2 hardware (50 kW in 2019, 500 kW and 1.5 MW in 2022, full-power and bidirectional testing of Generation 2 in 2024), a 3.3 kV SiC front end that roughly halves the series cell count of a 1.7 kV design, and a US production line in Reno; it is absent from NVIDIA's published 800 V DC partner rosters, which Heron Power is on (analysis).",
+      "soldThrough": "Direct: the site's 'Talk to sales' form and product-management roles that 'engage directly with hyperscalers, colocation providers, and data-center design-build firms'; partnering with 'battery providers' for DC-side integration; a service organisation (field service, commissioning, spares, warranty, 'MSAs, LTSAs, or availability-guarantee agreements') was being stood up from scratch under a Head of Service posting in September 2026. No EPC, OEM or distributor channel is named.",
+      "targetSegments": [
+        "AI factories — hyperscalers and 'Fortune 100' data-center operators (initial deployments stated for 2026)",
+        "Colocation providers and data-center design-build firms",
+        "Critical industry — ports and heavy industrial sites (PSA Singapore pilot)",
+        "Defense (named in the Series A release)",
+        "Utilities (Generation 5 'in development for utility application')"
+      ],
+      "roadmap": "'30MW of commercial systems to be delivered in 2026 to hyperscale AI data center and critical power customers' and 'first commercial units in early 2026 to the Port of Singapore' (Series A release, November 2025); 'deploying its Medium Voltage SSTs to Fortune 100 customers in 2026' (homepage, August 2026); Reno operations start July 2026 with 62 FTE and USD 18.7M of equipment within two years (Nevada GOED application, February 2026); 'manufacture 500MW of solid-state transformer technology within the next five years' (CEO letter to GOED); 'Gen 5 in development for Utility application' (homepage). Superseded: 'first units to the U.S. and Singapore in 2025' (seed release, February 2024)."
+    },
+    {
+      "name": "Amperesand SST for megawatt charging and port electrification",
+      "category": "Medium-voltage EV and port charging conversion",
+      "description": "The same platform configured for megawatt-class DC charging: the seed-stage description was 'compact, modular, intelligent, bidirectional units for DC fast-charging, microgrids, data centers', shipping as 'containerized SSTs with customizable mixed AC/DC output' in '2, 4, and 6MW units, scalable by combination' (TDK Ventures, February 2024). The first commercial engagement is PSA International: a one-year proof of value at PSA Singapore's electric prime-mover charging, agreed through PSA unboXed in October 2024 and targeted to start mid-2025, with 'first commercial units in early 2026 to the Port of Singapore, supporting a mission critical charging pilot' per the Series A release. The legacy site describes the platform as 'configurable to support a range of applications including megawatt charging and 800V DC AI Factory power', and PCIM 2026 reporting lists 'port power/shore power' among the use cases.",
+      "highlights": [
+        "This is the application on which the technology was proven before AI: a 1.5 MW system tested on the Singapore grid closed a seven-year NTU validation programme (seed release), and the 2024 pilot programme at Singapore's port is the first entry on the company's own timeline after launch.",
+        "Bidirectional operation is a stated property — 'full-power, overload, and bidirectional testing' of Generation 2 completed in 2024 — which is what a charging depot needs for vehicle-to-grid and what a battery block needs for charge and discharge.",
+        "No PSA unit has been confirmed delivered or energised; the 'early 2026' commitment is unverified on either party's channels as of September 2026 (collection gap)."
+      ],
+      "positioning": "Competes with the conventional depot chain (step-down transformer, low-voltage switchgear, per-charger rectifiers) and with the handful of SST-for-charging entrants (WattEV's in-house MV-PCS for truck charging; Delta and ABB's charging-side power). The port use case is a reliability proving ground rather than the revenue story (analysis).",
+      "soldThrough": "Direct to port operators and fleet owners; PSA engagement structured as a proof of value through PSA unboXed.",
+      "targetSegments": [
+        "Port and terminal operators electrifying prime movers and automated guided vehicles",
+        "Heavy-duty truck and bus depots (Megawatt Charging System class loads)",
+        "Shore power"
+      ],
+      "roadmap": "Port of Singapore first commercial units 'early 2026' (Series A release); no further charging-market roadmap published after the November 2025 release, and the August 2026 homepage lists ports under 'Critical Industry' without a date."
+    },
+    {
+      "name": "Amperesand SST for storage, microgrids and the grid (Generation 5 in development)",
+      "category": "Grid and storage power conversion",
+      "description": "The platform's on-grid/off-grid capability — 'supports both on-grid and off-grid environments' with 'AI-native power controls' (Series A release), 'rapid on/off grid switching' and 'large load management … in constrained grid environments' (homepage) — is marketed for storage integration and constrained-grid sites, and the homepage lists a 'Gen 5 in development for Utility application'. The Wolfspeed case study frames the DC bus as the way customers replace UPS with 'lower cost, multi-sourced battery energy storage' and cites 'grid ride through, ramp rate control, and demand response'.",
+      "highlights": [
+        "No storage or utility product name, rating or customer is published; the utility generation exists only as a homepage roadmap line (collection gap).",
+        "Job postings cite IEEE 1547 and IEEE 2800 interconnection standards and 'medium-voltage (5 kV to 36 kV) systems', consistent with a distribution-connected grid product."
+      ],
+      "soldThrough": "Not yet sold; direct engagement with 'utility customers' is stated on the legacy site.",
+      "targetSegments": [
+        "Utilities (distribution-connected conversion)",
+        "Battery storage integrators pairing DC blocks with the SST bus",
+        "Microgrids and off-grid critical loads"
+      ],
+      "roadmap": "'Gen 5 in development for Utility application' (homepage, August 2026); no date."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-08",
+      "category": "corporate",
+      "headline": "Hiring for a Head of Service to stand up field service, commissioning, spares and warranty from scratch, and a Director of Product Compliance naming UL 2877 and UL 1741 as the governing standards",
+      "read": "A service organisation and a compliance lead being recruited in September 2026 date the certification and support work to the present, not the past — consistent with no listing and no energised fleet on the record (analysis).",
+      "source": "https://job-boards.greenhouse.io/amperesand/jobs/4397725009"
+    },
+    {
+      "date": "2026-08-26",
+      "category": "corporate",
+      "headline": "Website relaunch: leadership roster now Dow (CEO), Joyner (SVP Engineering), Reznik (CFO), Bouchet (Chief of Staff); headline claims moderated from 'up to 10x' faster time to power and '>80%' footprint reduction to '5×' and '50%'; 'deploying … to Fortune 100 customers in 2026'",
+      "read": "The claims were halved without explanation as first deliveries approached; the newer figures are the ones a buyer will be shown and the ones this dossier quotes.",
+      "source": "https://www.amperesand.io/"
+    },
+    {
+      "date": "2026-08-18",
+      "category": "market",
+      "headline": "New York Times Magazine feature on a national blackout scenario visits the Reno pilot line, where 'CEO Brian Dow is building a modular solid-state alternative aimed first at AI data centers'",
+      "read": "Mainstream coverage of the transformer shortage is now the company's most visible profile; it says nothing about a shipped unit.",
+      "source": "https://www.nytimes.com/2026/08/18/magazine/national-blackout-power-electricity-outage.html"
+    },
+    {
+      "date": "2026-08-11",
+      "category": "market",
+      "headline": "NVIDIA, Google and Microsoft publish the 800 V DC execution paper and the OCP LVDC Solid-State Transformer Specification v0.3 with 'more than 80 equipment manufacturers'; Amperesand is not named; NVIDIA's own October 2025 roster names ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv at the facility tier, the August 2026 post names no vendors, and DG Matrix and Delta appear only in Power Electronics News' GTC 2026 list (corrected 2026-09-19 with the DG Matrix dossier: no NVIDIA-published roster names DG Matrix either)",
+      "read": "Third consecutive NVIDIA publication without the company; the CEO's statement that Amperesand sits on five of seven OCP working groups is self-reported and the specification's contributor list could not be read.",
+      "source": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/"
+    },
+    {
+      "date": "2026-07-21",
+      "category": "product-launch",
+      "headline": "Power Electronics News CEO interview publishes the fullest specification on record: 10–34.5 kV in, twin 800 V outputs (series for 1,500 V), 200 kW galvanically isolated power stages, 4–10 MW systems, N+X with automatic bypass, IP55 enclosure, sub-25-week lead time, Wolfspeed 3.3 kV baseplate-less modules; pilots named as Port of Singapore, STT GDC and 'hyperscale AI customers'; standards UL 2877 and IEEE 3105",
+      "read": "The only near-datasheet in the public record is an interview; a buyer still cannot download a rating table.",
+      "source": "https://www.powerelectronicsnews.com/inside-amperesands-sst-a-conversation-with-ceo-brian-dow/"
+    },
+    {
+      "date": "2026-06-16",
+      "category": "product-launch",
+      "headline": "PCIM Europe 2026 (Nuremberg): modular SiC SST shown — 10–34.5 kV input, 800 or 1,500 V DC output, 98.5% single-stage efficiency, 200 kW modules to 10 MW, fanless fluid cooling, IP65, ~22 weeks order to delivery, 20-year design life; SiC sourcing breadth cited as Infineon, STMicroelectronics and Wolfspeed; 'a single pilot installation is underway at a Singapore port'",
+      "read": "The first European trade-show appearance pitches lead time against 'one-year-plus' conventional units and names the EU 2030 shore-power mandate as a second market.",
+      "source": "https://www.all-about-industries.com/the-faster-available-alternative-to-the-traditional-line-transformer-a-20e822e9ab4e2a4ca661191834c73a44/"
+    },
+    {
+      "date": "2026-06-02",
+      "category": "financial",
+      "headline": "USD 30M 'fresh share issuance from new and existing investors', with N47 Services contributing about USD 13.5M (DealStreetAsia; Hyphen Partners) — no company release; databases label it Series A-II and total funding USD 122.45M",
+      "read": "A quiet extension seven months after the Series A, by a Singapore-registered investor vehicle rather than a headline lead, reads as bridge capital toward first deliveries (analysis); the company's only acknowledgement is the About page's '>$100M'.",
+      "source": "https://www.dealstreetasia.com/stories/amperesand-30m-funding-484160"
+    },
+    {
+      "date": "2026-05-26",
+      "category": "market",
+      "headline": "SemiAnalysis '800VDC Revolution' names Amperesand (>98.5%) with DG Matrix, Heron Power and Novos Power as the SST vendor set, sizes a 2030 SST market of ~USD 32B at USD 1.25M/MW, and cautions that SSTs 'lack field reliability data at datacenter scale and require active cooling'",
+      "read": "Independent analyst recognition of the vendor set, with the reliability caveat that applies to every name on it.",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "partnership",
+      "headline": "Wolfspeed launches 3.3 kV WolfPACK modules with Amperesand as the named design-in — 'engineering of a 6+ MW medium voltage solid-state transformer system', 'over 50% footprint reduction', '20-30-year lifetime' — and co-publishes a case study ('5-10MW of modular power conversion', 99.999% uptime, <20-minute module swap, 'now accepting orders for pilot deployments')",
+      "read": "The silicon supplier is the company's most detailed public advocate; the dependence on one post-Chapter 11 supplier's 3.3 kV part is the supply-chain risk the same document creates.",
+      "source": "https://www.wolfspeed.com/knowledge-center/article/amperesand-case-study/"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "corporate",
+      "headline": "NTU 'Built to scale' profile: research from 2016, 150 kW proof-of-concept then a 1 MVA containerised demonstrator, Generation 2 full-power, overload and bidirectional testing completed 2024, NRF Central Gap Fund with NTU, ERI@N core team moved to the company in 2024, 'expects to exceed 100 employees worldwide in 2026'",
+      "read": "The university's account of the lineage is the best evidence for the 'ten years of development' claim and is more modest than the '6MW platform' language of the January 2025 release.",
+      "source": "https://www.ntu.edu.sg/innovates/news-events/news/detail/built-to-scale--from-lab-breakthrough-to-global-power-player"
+    },
+    {
+      "date": "2026-03-17",
+      "category": "capacity",
+      "headline": "Reno, Nevada selected for the US manufacturing facility at 9735 Double R Blvd — 73,000 sq ft, USD 18.4M of equipment, 'more than 60 new jobs over the next two years' at USD 55.50 average hourly wage, USD 2,004,004 of state abatements, power-stage manufacturing on site, operations from July 2026",
+      "read": "A modest fit-out rather than a gigafactory: enough to build pilot and early commercial units, not the 500 MW-a-year the CEO's letter aspires to (analysis).",
+      "source": "https://northernnvnow.com/amperesand-inc-selects-reno-for-u-s-manufacturing-facility-focused-on-next-generation-energy-infrastructure/"
+    },
+    {
+      "date": "2026-02-05",
+      "category": "policy",
+      "headline": "Nevada GOED board approves performance-based abatements for Amperesand Inc.; the application (signed 31 October 2025 by Brian Dow as 'Chief Executive Office / Co-Founder') commits 62 FTE in two years, 110 within five, USD 18,684,000 of investment, and states a plan to 'manufacture 500MW of solid-state transformer technology within the next five years'",
+      "read": "The only externally enforceable numbers the company has published; the milestone slide dates the first hyperscaler data-center and Port of Singapore deliveries to Q2 2026 — neither confirmed since.",
+      "source": "https://goed.nv.gov/wp-content/uploads/2026/01/4-A.-Amperesand-Inc.-Board-Packet.pdf"
+    },
+    {
+      "date": "2026-01-26",
+      "category": "partnership",
+      "headline": "STT GDC launches the FutureGrid Accelerator at NTU's Jurong Island campus — 'Southeast Asia's first live HVDC-powered AI infrastructure testbed', developed with LITEON and supported by ERI@N and Amperesand, validating at least 325 kW; STT GDC 'plans to deploy this technology in future data centres in Singapore'",
+      "read": "The first data-center operator engagement on the record is a sub-megawatt testbed with an NVIDIA-listed rack-power partner, in the company's home market.",
+      "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed"
+    },
+    {
+      "date": "2025-11-18",
+      "category": "financial",
+      "headline": "USD 80M oversubscribed Series A co-led by Walden Catalyst Ventures and Temasek; new investors Industry Ventures, Acclimate Ventures, SG Growth Capital; '30MW of commercial systems to be delivered in 2026', first commercial units 'in early 2026 to the Port of Singapore', 'multiple additional 2026 commercial pilots secured' with hyperscale AI customers, headcount to exceed 100 by year-end",
+      "read": "The largest pure-play SST startup raise of 2025 (mgrid) and the round that dated every 2026 commitment this dossier now tracks.",
+      "source": "https://finance.yahoo.com/news/amperesand-raises-80m-series-co-140000819.html"
+    },
+    {
+      "date": "2025-10-31",
+      "category": "leadership",
+      "headline": "Brian Dow signs the Nevada incentive application as 'Chief Executive Office / Co-Founder' — the earliest dated document showing him as CEO after Gary Lawrence's January 2025 appointment; Marc Bouchet joins as Chief of Staff from TDK Ventures (October 2025)",
+      "read": "The company's second CEO change in a year went unannounced; Lawrence's exit has no date or reason on the record, and the Schneider/ABB grid-incumbent profile he brought has been replaced by a Tesla energy-products profile (analysis).",
+      "source": "https://globalventuring.com/corporate/people/bouchet-tdk-ventures-amperesand/"
+    },
+    {
+      "date": "2025-10-13",
+      "category": "market",
+      "headline": "NVIDIA publishes its 800 V DC ecosystem partner list at the OCP Global Summit — nine facility-tier power providers including Heron Power — without Amperesand",
+      "read": "The roster that defines the hall-edge peer set for hyperscaler buyers omitted the company at the moment it was closing its Series A on that very thesis.",
+      "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/"
+    },
+    {
+      "date": "2025-08-18",
+      "category": "market",
+      "headline": "Canary Media's SST survey notes Amperesand's units 'being tested on Singapore's power grid' alongside DG Matrix and Resilient Power (acquired by Eaton that month)",
+      "read": "Grid-connected testing in Singapore is the company's differentiator against paper-stage rivals; the incumbent buying a startup the same month shows how the hedged players intend to compete.",
+      "source": "https://www.canarymedia.com/articles/distributed-energy-resources/solid-state-transformers-dgmatrix-resilient-power"
+    }
+  ],
+  "strategyRead": [
+    "(High confidence) We assess Amperesand's product is specified for NVIDIA's medium-voltage-to-800 V DC block and is not on NVIDIA's list: NVIDIA's October 2025 roster names ABB, Eaton, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric, Schneider Electric, Siemens and Vertiv at the facility tier and omits Amperesand, the August 2026 execution-paper post names no vendors, and Power Electronics News' GTC 2026 list (the only document naming DG Matrix and Delta as SST providers, citing 'Nvidia's list') also omits it. Basis: the NVIDIA developer and corporate blogs read in full and the trade-press GTC coverage (corrected 2026-09-19: an earlier version of this judgment placed DG Matrix on NVIDIA's own rosters; no NVIDIA-published page names it); the CEO's 'five of seven OCP working groups' is self-reported and the specification's contributor list could not be read. A hyperscaler pilot can proceed without a roster line, but the roster is what a buyer's design-build firm reads first (analysis).",
+    "(High confidence) We assess that no delivery commitment has been met on schedule: the PSA proof of value was 'slated for mid-2025' (October 2024), first commercial units 'early 2026' (November 2025), 'Q2 2026' for both the port and a hyperscaler (Nevada milestone slide), and 'underway' with no energisation confirmed by either party by September 2026. Basis: PSA's and the company's releases, the GOED packet and PCIM reporting. The 30 MW 2026 target is therefore back-loaded into the final quarter.",
+    "(Moderate confidence) We assess the platform argument is the company's real differentiator against Heron Power and the reason it entered through ports rather than data centers: a 200 kW cell proven at 1.5 MW on the Singapore grid and cycled daily at megawatt charging loads accumulates the fleet reliability record that a 99.999% uptime claim requires and that no data-center SST vendor yet has. Basis: NTU's account of Generation 0–2 testing, the PSA engagement, and SemiAnalysis's caveat that SSTs 'lack field reliability data at datacenter scale'. The cost is a cell rated for the worst duty cycle of three markets rather than optimised for one (analysis).",
+    "(Moderate confidence) We assess the 3.3 kV Wolfspeed design-in is both the engineering edge and the single-supplier risk: it roughly halves the series cell count of a 1.7 kV design and buys overshoot margin, and it ties the front end to one part (IBB020A33GM4) from a supplier that emerged from Chapter 11 in 2025 whose 200 mm capacity mgrid calls the sector's 'single biggest external constraint'. The company's stated second sources (Infineon, STMicroelectronics, Microchip) are unconfirmed by those suppliers.",
+    "(Moderate confidence) We assess roughly USD 122M of equity against an USD 18.7M Reno fit-out and a 130–155 headcount is sufficient to ship pilot and first commercial units but not the 500 MW-a-year line the CEO's letter describes; a Series B or a manufacturing partnership before the end of 2027 is the expected tripwire, and mgrid's judgment that the Series A is below a real medium-voltage production line's capex is the independent view. The quiet USD 30M extension by a Singapore vehicle rather than a headline lead is consistent with bridge financing (analysis).",
+    "(Low confidence) We assess the unexplained halving of the headline claims (10× → 5× time to power; >80% → 50% footprint) and the CEO turnover reflect a company moving from pitch to delivery under new leadership rather than a technical setback. No source states either; the alternative reading — that early units underperformed the pitch — cannot be excluded from the public record.",
+    "INDICATORS TO WATCH — Q4 2026: an energised unit at PSA Singapore or at a named hyperscaler (confirms the first delivery commitment; a second slip into 2027 would put the company in the 2027 TRU wave with no fleet). Any UL 2877 / UL 1741 listing (converts the standards targets into a bankable product). Any appearance on NVIDIA's GTC 2027 roster or in the OCP LVDC SST specification's contributor list (closes Judgment 1). A company statement on the June 2026 round and any Series B (tests Judgment 5). A datasheet or product page (settles the 4–10 MW, IP55/IP65, 22-versus-25-week and lifetime discrepancies). Reno headcount against the 62-FTE two-year milestone (the only externally enforceable check on the ramp)."
+  ],
+  "relationships": [
+    {
+      "slug": "nvidia",
+      "type": "other",
+      "note": "Absent from every NVIDIA 800 V DC partner roster (October 2025, GTC 2026, August 2026) while building for NVIDIA's 800 V DC architecture; the CEO says the company sits on five of seven OCP working groups.",
+      "context": "NVIDIA's 13 October 2025 developer blog listed nine facility-tier power providers and its rack-power and silicon partners; Power Electronics News' GTC 2026 coverage listed 'Delta Electronics, DG Matrix, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton … Heron Power' as SST providers citing 'Nvidia's list' — a trade-press list, not an NVIDIA page, and the only document naming DG Matrix — and the August 2026 execution-paper post names no vendors at all. Amperesand appears on none, and the OCP LVDC SST specification's contributor list could not be read. Its product is nevertheless specified against that architecture ('designed for global 800V DC AI factory architectures'; twin 800 V outputs), and Wolfspeed's case study says AI-training load profiles 'jointly released by NVIDIA, Open AI and Microsoft' were used in testing — a paper reference, not a partnership.",
+      "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+      "status": "historical",
+      "since": "2025-10"
+    },
+    {
+      "slug": "heron-power",
+      "type": "competitor",
+      "note": "The two venture-backed 34.5 kV-class hall-edge SST startups; SemiAnalysis lists both (Heron 98.5%, Amperesand >98.5%) and trade press pairs them with DG Matrix as the startups 'riding the 800VDC wave'.",
+      "context": "Heron Link is a single 4.2 MW unit for data centers (and 5 MW for solar/storage) with mass production in Morgan Hill from late 2027, USD 140M Series B and a place on NVIDIA's facility-tier roster. Amperesand sells a 200 kW-module platform to 4–10 MW with a Reno line running from mid-2026, USD 80M Series A plus a USD 30M extension, and no roster listing. Neither has a confirmed energised data-center unit as of September 2026. The contest between them is schedule and fleet evidence, not efficiency, since both claim 98.5%-plus (analysis).",
+      "source": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+      "status": "active",
+      "since": "2025-11"
+    },
+    {
+      "slug": "dg-matrix",
+      "type": "competitor",
+      "note": "The third venture-backed SST startup in every survey; DG Matrix ships a six-port 480 V low-voltage skid (Interport Flex) and dates its 12–34.5 kV multi-port unit to 2028+, while Amperesand's platform is medium-voltage from the first unit.",
+      "context": "TechCrunch's February 2026 survey frames the field as 'DG Matrix/ABB' versus 'Heron/a16z' versus Amperesand 'incubated by Temasek's early stage fund'; SemiAnalysis (May 2026) lists DG Matrix as the 'LV-input SST in place of the conventional rectifier-plus-PSU stack' at 'claims up to 98.5%' beside Amperesand's 'greater than 98.5%'. DG Matrix has the earlier shipping product (pre-certification 200/400 kVA units), ABB and Mitsubishi Heavy Industries as investors and an Infineon SiC agreement; neither company appears on any NVIDIA-published roster and neither has a certified, energised data-center unit as of September 2026. The two compete for the same first hyperscaler pilot from opposite ends — Amperesand from medium voltage down, DG Matrix from the low-voltage bus up (analysis).",
+      "source": "https://www.techcrunch.com/2026/02/20/why-investors-are-going-gaga-over-solid-state-transformers/",
+      "status": "active",
+      "since": "2025-08"
+    },
+    {
+      "slug": "liteon",
+      "type": "partner",
+      "note": "Co-developer of the STT GDC FutureGrid Accelerator HVDC testbed at NTU (January 2026), where Amperesand's SST supports the 325 kW-plus system.",
+      "context": "STT GDC's release says the testbed was 'jointly developed by STT GDC and LITEON, supported by ERI@N and NTU deep-tech spinoff Amperesand'. LITEON is an NVIDIA-listed rack-power and BBU vendor, so the testbed pairs a hall-edge SST with a qualified rack shelf on a live HVDC bus — the integration a hyperscaler pilot would require. No commercial agreement between the two companies is published.",
+      "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+      "status": "active",
+      "since": "2026-01"
+    },
+    {
+      "slug": "eaton",
+      "type": "competitor",
+      "note": "Named with ABB, Hitachi Energy and Siemens Energy as the incumbent SST competitors in Series A coverage; Eaton bought Resilient Power in August 2025 and is on every NVIDIA roster.",
+      "context": "mgrid's Series A analysis lists 'Heron Power (modular multilevel topology), DG Matrix (multiport topology) … Eaton, ABB, Hitachi Energy, Siemens Energy' as the competitive set. Eaton's in-house SST via the Resilient Power acquisition and its 2.5 MW MV SST container for the NUS testbed (May 2026) make it the incumbent most directly overlapping Amperesand's Singapore home market; mgrid's separate claim of a 2024 '2.5 MW demonstration with Eaton at NUS' by Amperesand appears in no other source and is treated as a conflation.",
+      "source": "https://mgrid.org/2025/11/18/amperesand-raises-80-million-series-a-led-by-walden-catalyst-and-temasek-for-ai-data-center-solid-state-transformers/",
+      "status": "active"
+    },
+    {
+      "slug": "abb",
+      "type": "competitor",
+      "note": "Incumbent named in the Series A competitive set; ABB is also an investor in rival DG Matrix and holds the 34.5 kV static UPS position at the hall edge.",
+      "context": "mgrid names ABB among the incumbents competing for the medium-voltage-to-DC block; TechCrunch's February 2026 survey frames the startup field as 'DG Matrix/ABB' versus 'Heron/a16z' versus Amperesand 'incubated by Temasek's early stage fund'. No commercial contact between ABB and Amperesand is published.",
+      "source": "https://mgrid.org/2025/11/18/amperesand-raises-80-million-series-a-led-by-walden-catalyst-and-temasek-for-ai-data-center-solid-state-transformers/",
+      "status": "active"
+    },
+    {
+      "slug": "hitachi-energy",
+      "type": "competitor",
+      "note": "Incumbent named in the Series A competitive set; also the transformer supplier whose lead times the company's 'time to power' claim is measured against.",
+      "context": "mgrid lists Hitachi Energy among the incumbent SST developers; the company's own pitch — 'reducing time to power from 24-36 months to just 100 days' (January 2025) — is a claim against the conventional transformer supply chain that Hitachi Energy leads. No commercial contact is published.",
+      "source": "https://mgrid.org/2025/11/18/amperesand-raises-80-million-series-a-led-by-walden-catalyst-and-temasek-for-ai-data-center-solid-state-transformers/",
+      "status": "active"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "competitor",
+      "note": "Named at the hall edge on NVIDIA's GTC 2026 roster from which Amperesand was absent; holds a hyperscaler's conditional commitment to buy 1,000 SSTs from 2027.",
+      "context": "Power Electronics News' GTC 2026 coverage lists the SST vendors NVIDIA showcased — 'DG Matrix, Delta, ABB, Siemens, Hitachi Energy, GE Vernova, Eaton, Heron Power' — and Amperesand is not among them. GE Vernova's conditional 1,000-unit hyperscaler commitment (recorded in the Heron Power dossier) is the tier's key commercial datapoint and the incumbent order Amperesand's 'Fortune 100' pilots would have to displace (analysis).",
+      "source": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+      "status": "active"
+    },
+    {
+      "slug": "delta-electronics",
+      "type": "competitor",
+      "note": "Delta had a live SST deployment (Chindata/Meituan, February 2026) and is ranked with Amperesand on the vendor-authored HIITIO top-ten list; Delta also owns the rack-shelf layer an SST hands off to.",
+      "context": "HIITIO's July 2026 ranking places Amperesand fourth and Delta tenth among data-center SST suppliers — a vendor-authored list that ranks its author first, cited here only as a statement that the two are seen in the same set. Power Electronics News' spotlight piece records Delta's live SST at a Chinese operator, which is the field-hour evidence no startup yet has.",
+      "source": "https://www.hiitio.com/top-10-solid-state-transformer-suppliers-for-data-centers/",
+      "status": "active"
+    },
+    {
+      "slug": "schneider-electric",
+      "type": "other",
+      "note": "Former CEO Gary Lawrence's eleven years as Schneider's global president of power and grid, and 'APC (now Schneider Electric)' hires cited by the company; Schneider is on every NVIDIA roster as an incumbent.",
+      "context": "The January 2025 appointment release presented Lawrence's Schneider Electric and ABB record as the reason for his hiring; he left within the year, unannounced. The company's Reno team includes a 'designer of UPS systems at APC' per the Nevada filing. Schneider competes at the hall edge as one of the hedged incumbents but no direct commercial or competitive statement naming both companies exists beyond roster context.",
+      "source": "https://transformer-technology.com/amperesand-appoints-new-leadership-team-to-accelerate-growth-in-solid-state-transformer-market-transformer-technology-news/",
+      "status": "historical",
+      "since": "2025-01"
+    },
+    {
+      "slug": "infineon",
+      "type": "supplier",
+      "note": "Named with STMicroelectronics and Wolfspeed as the company's SiC sourcing breadth in PCIM 2026 reporting, and by the CEO as a competing 3.3 kV module supplier; Wolfspeed is the design-in.",
+      "context": "all-about-industries' PCIM report says the company sources SiC from 'Infineon, STMicroelectronics, and Wolfspeed'; the July 2026 CEO interview names 'Infineon Technologies, Microchip' as the alternative 3.3 kV module suppliers to Wolfspeed. Wolfspeed (not a covered company) is the named part in the medium-voltage front end (IBB020A33GM4); Infineon's role is second-source optionality, stated by the company and not confirmed by Infineon.",
+      "source": "https://www.all-about-industries.com/the-faster-available-alternative-to-the-traditional-line-transformer-a-20e822e9ab4e2a4ca661191834c73a44/",
+      "status": "announced",
+      "since": "2026-06"
+    },
+    {
+      "slug": "tesla",
+      "type": "other",
+      "note": "The executive lineage: CEO Brian Dow (Powerpack/Megapack, Hornsdale, Supercharger V3, 4680 pilot) and SVP Engineering Tommy Joyner (4680 capacity, Cybertruck 400/800 V architecture, Powerwall 3) are ex-Tesla, and the Reno team is drawn from Gigafactory Nevada.",
+      "context": "Company bios and the Nevada filing ('Former Tesla key lead of Gigafactory Nevada manufacturing for Model 3 … and all Tesla energy products'; NPI manager ex-Tesla) show the operating team was recruited from Tesla's energy and Nevada manufacturing organisations — the same lineage as Heron Power's founder. No commercial relationship with Tesla exists.",
+      "source": "https://www.amperesand.io/about.html",
+      "status": "historical"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Nevada GOED performance-based tax abatements",
+      "status": "in-effect",
+      "effectiveDate": "2026-02-05",
+      "exposure": "USD 2,004,004 over ten years for Amperesand Inc. — a 2% sales-tax abatement for two years (USD 1,154,890), 50% modified business tax for four years (USD 125,452) and 50% personal property tax for ten years (USD 723,662) — against commitments of 62 FTE at USD 55.50 average hourly wage within two years, 110 positions within five, and USD 18,684,000 of capital investment; GOED projects USD 13,812,135 of new tax revenue over the abatement period. The application states 80% of revenue will be generated outside Nevada and that the company will 'manufacture the power stage components of our solid-state transformers on-site'.",
+      "mitigation": "The company sited its US design and manufacturing center at 9735 Double R Blvd, Reno, and markets the product as 'U.S.-built — with optimized supply chains'.",
+      "source": "https://goed.nv.gov/wp-content/uploads/2026/01/4-A.-Amperesand-Inc.-Board-Packet.pdf"
+    },
+    {
+      "regime": "Section 232 tariffs on transformers and power-conversion equipment",
+      "status": "in-effect",
+      "effectiveDate": "2025-08-18",
+      "exposure": "Section 232 steel-and-aluminum derivative duties were extended to transformers from 18 August 2025 (50% on non-US steel and aluminium content) and restructured by Proclamation 11021 (April 2026: power transformers under HTS 8504.21/.22 at 25% on full value; static converters and UPS under HTS 8504.40 dutied on the enclosure) — trade-press summaries that do not mention solid-state transformers or Singapore. No source addresses how an SST built partly in Singapore and partly in Reno would be classified (8504.40 versus 8504.2x) or what share of its content is US-made; Power Electronics News separately notes that higher-voltage SiC devices 'face international shipping restrictions'. The company's only statement is that its hardware 'leverages supply chains optimized for tariffs and lead times' (legacy site). Collection gap: no FEOC, domestic-content or 45X statement exists for the company.",
+      "mitigation": "Power-stage manufacturing in Reno per the Nevada filing; the 'U.S.-built' positioning on the August 2026 site.",
+      "source": "https://gingercontrol.com/blog/data-center-infrastructure-import-duty-2026"
+    },
+    {
+      "regime": "UL 2877 / UL 1741 / IEEE 1547 certification for medium-voltage conversion equipment",
+      "status": "proposed",
+      "exposure": "Asia Business Outlook (November 2025): the company 'has not disclosed specific certification listings or independent field performance data to support its 99.999 percent uptime claim'. The company's September 2026 compliance posting names UL 2877 and UL 1741 as 'the primary standards governing Amperesand's products' with IEEE 1547, IEEE 2800, IEC 62443 and IEC 61850 supporting; the July 2026 interview adds IEEE 3105 and the OCP LVDC SST work. No listing has been announced, and SemiAnalysis (May 2026) records that no vendor had completed data-center SST certification.",
+      "mitigation": "NRTL engagement with TÜV, UL, CSA and Intertek and a Director of Product Compliance hire, per the company's job postings.",
+      "source": "https://www.asiabusinessoutlook.com/news/amperesand-raises-80m-to-scale-solidstate-power-systems-nwid-10543.html"
+    },
+    {
+      "regime": "EU shore-power mandate (FuelEU Maritime / AFIR, 2030)",
+      "status": "announced",
+      "effectiveDate": "2030-01",
+      "exposure": "PCIM 2026 reporting quotes the company that 'EU regulation mandates shore power for ships at major ports starting 2030' and that 'a single pilot installation is underway at a Singapore port for European deployment' — the port configuration's stated demand driver outside Singapore.",
+      "source": "https://www.all-about-industries.com/the-faster-available-alternative-to-the-traditional-line-transformer-a-20e822e9ab4e2a4ca661191834c73a44/"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Amperesand SST (medium-voltage solid-state transformer platform, third generation)",
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Efficiency",
+          "value": ">98.5% MV-to-LV conversion efficiency"
+        },
+        {
+          "band": "Power",
+          "label": "Uptime",
+          "value": "99.999% Uptime via proprietary redundancy"
+        },
+        {
+          "band": "Power",
+          "label": "Modular rating",
+          "value": "5-10MW of modular power conversion for the emerging 800 VDC AI compute ecosystem"
+        },
+        {
+          "band": "Power",
+          "label": "System engineered",
+          "value": "6+ MW medium voltage solid-state transformer system"
+        },
+        {
+          "band": "Power",
+          "label": "Output architecture",
+          "value": "Configurable MV AC and LV DC — Designed for global 800V DC AI factory architectures"
+        },
+        {
+          "band": "Devices",
+          "label": "Semiconductors",
+          "value": "3.3 kV full-bridge Wolfspeed WolfPACK® modules in the MV front-end … integrated Wolfspeed Gen 4 MOSFET technology"
+        },
+        {
+          "band": "Devices",
+          "label": "Voltage margin",
+          "value": "additional voltage margin over typical medium-voltage SST operating voltages, which enables additional redundancy in voltage overshoot scenarios"
+        },
+        {
+          "band": "Thermal",
+          "label": "Cooling",
+          "value": "liquid-based cooling system that unlocks 50º C+ ambient operation; low ΔT (<30°C)"
+        },
+        {
+          "band": "Thermal",
+          "label": "Power cycling",
+          "value": "5X improvement in power cycling performance over standard silicone gel encapsulated modules"
+        },
+        {
+          "band": "Design",
+          "label": "Time to power",
+          "value": "5× Faster time to power"
+        },
+        {
+          "band": "Design",
+          "label": "Footprint",
+          "value": "50% Smaller equipment footprint"
+        },
+        {
+          "band": "Design",
+          "label": "Installation labor",
+          "value": "reduces installation labor by 50%"
+        },
+        {
+          "band": "Design",
+          "label": "Shipping",
+          "value": "up to two SST units to ship in a single 20-foot flat rack container"
+        },
+        {
+          "band": "Design",
+          "label": "Materials",
+          "value": "eliminates harmful materials such as SF6 gas and replaces them with environmental responsible dielectric alternatives. The system requires no water input"
+        },
+        {
+          "band": "Design",
+          "label": "Lifetime",
+          "value": "designing and testing to demonstrate 15+ year lifetime; engineered for a 20-30-year lifetime"
+        },
+        {
+          "band": "Service",
+          "label": "Module swap",
+          "value": "Modules can be swapped out in less than 20 minutes; simple two-person replacement in minutes, using readily available lifts"
+        },
+        {
+          "band": "Safety",
+          "label": "Arc flash",
+          "value": "settable ultra-fast shutdown of energy delivery to reduce arc flash incident energy compared to traditional approaches"
+        },
+        {
+          "band": "Grid",
+          "label": "Grid functions",
+          "value": "grid ride through, ramp rate control, and demand response; can safely decouple MV and LV grids"
+        },
+        {
+          "band": "Grid",
+          "label": "Modes",
+          "value": "Supports both on-grid and off-grid environments"
+        },
+        {
+          "band": "Compliance",
+          "label": "Standards targeted",
+          "value": "UL 2877 and UL 1741 are the primary standards governing Amperesand's products; IEEE 1547; IEEE 2800; IEC 62443; IEC 61850"
+        },
+        {
+          "band": "PEN interview (July 2026)",
+          "label": "Outputs",
+          "value": "Twin 800 V outputs in parallel or series for 1500 V"
+        },
+        {
+          "band": "PEN interview (July 2026)",
+          "label": "Power stage",
+          "value": "This power stage can do 200 kW, and it's fully isolated galvanically from 34.5 kV on the front"
+        },
+        {
+          "band": "PEN interview (July 2026)",
+          "label": "System",
+          "value": "4–10 MW (hyperscaler standard)"
+        },
+        {
+          "band": "PEN interview (July 2026)",
+          "label": "Redundancy",
+          "value": "N+X configuration with automatic bypass"
+        },
+        {
+          "band": "PEN interview (July 2026)",
+          "label": "Enclosure",
+          "value": "Fully liquid-cooled with IP55 enclosure; IP65 internal components"
+        },
+        {
+          "band": "PEN interview (July 2026)",
+          "label": "Lead time",
+          "value": "Sub-25 weeks"
+        },
+        {
+          "band": "PEN interview (July 2026)",
+          "label": "SiC module",
+          "value": "Wolfspeed 3.3 kV (baseplate-less design); part number: IBB020A33GM4 (Wolfspeed case study)"
+        },
+        {
+          "band": "PCIM 2026 (third-party report)",
+          "label": "Input voltage",
+          "value": "10 to 34.5 kV"
+        },
+        {
+          "band": "PCIM 2026 (third-party report)",
+          "label": "Output voltage",
+          "value": "800 V DC or 1,500 V DC"
+        },
+        {
+          "band": "PCIM 2026 (third-party report)",
+          "label": "Module and system",
+          "value": "200 kW per module … up to 10 MW"
+        },
+        {
+          "band": "PCIM 2026 (third-party report)",
+          "label": "Enclosure",
+          "value": "fanless fluid-based cooling; IP65"
+        },
+        {
+          "band": "PCIM 2026 (third-party report)",
+          "label": "Lead time",
+          "value": "approximately 22 weeks from order to delivery"
+        },
+        {
+          "band": "PCIM 2026 (third-party report)",
+          "label": "Design life",
+          "value": "20 years design life"
+        }
+      ],
+      "notes": "Values verbatim from the company homepage (August 2026), the Series A release (November 2025), the Wolfspeed case study and 3.3 kV module release (May 2026), the Nevada GOED application (February 2026) and job postings (September 2026); the last six rows are trade-show reporting from PCIM Europe 2026 (all-about-industries.com), not a company document. No datasheet is public; the seed-stage '2, 4, and 6MW units' (TDK Ventures, 2024) predate the third-generation design. The 'PEN interview' rows are the CEO's own figures as quoted by Power Electronics News (21 July 2026); they differ from the PCIM report on enclosure rating (IP55 vs IP65) and lead time (sub-25 vs ~22 weeks)."
+    },
+    {
+      "product": "Development lineage (NTU / ERI@N programme, company timeline)",
+      "specs": [
+        {
+          "band": "Generations",
+          "label": "Generation 0 (2019)",
+          "value": "Medium voltage AC, 50 kW, 3-phase SST"
+        },
+        {
+          "band": "Generations",
+          "label": "Generation I (2022)",
+          "value": "Medium voltage AC, 500 kW and 1.5 MW, 3-phase SST"
+        },
+        {
+          "band": "Generations",
+          "label": "Generation 2 (2024)",
+          "value": "completed full-power, overload, and bidirectional testing of its Generation 2 system"
+        },
+        {
+          "band": "Generations",
+          "label": "Platform demo (late 2024)",
+          "value": "successfully demonstrated its state-of-the-art 6MW SST platform"
+        },
+        {
+          "band": "IP",
+          "label": "Patents",
+          "value": "18 Patent families"
+        }
+      ],
+      "notes": "From the careers-site timeline, the Series A and January 2025 releases, and the about page. NTU separately describes 'a 150 kW proof-of-concept SST, and later a full 1 MVA containerised demonstrator'."
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Brian Dow",
+      "title": "Chief Executive Officer and Co-Founder (Chief Product Officer at the January 2025 appointment; CEO by the November 2025 Series A release)",
+      "photo": "images/execs/amperesand-dow.jpg",
+      "background": [
+        "Chief Executive Officer — Amperesand (2025–present); joined as Chief Product Officer in January 2025; signs the Nevada GOED abatement application as CEO (February 2026)",
+        "Led the Powerpack and Megapack product lines, the 129 MWh Hornsdale Power Reserve project in South Australia, Supercharger V3 design and the 4680 cell formation pilot at Fremont — Tesla; the company bio credits a '14-day overhaul of the Model 3 battery line' that doubled throughput",
+        "SVP Engineering — Generac",
+        "Earlier roles — Yaskawa-Solectria Solar"
+      ]
+    },
+    {
+      "name": "Tommy Joyner",
+      "title": "Senior Vice President of Engineering (appointed Chief Technology Officer in January 2025; retitled on the August 2026 site)",
+      "photo": "images/execs/amperesand-joyner.jpg",
+      "background": [
+        "Sr. VP of Engineering — Amperesand (2025–present); CTO at the January 2025 appointment",
+        "Delivered 150 GWh of 4680 cell capacity through a software routing engine, introduced the dual-voltage 400 V / 800 V power architecture for the Cybertruck and designed Powerwall 3 — Tesla (company bios, 2025–2026)",
+        "VP of Engineering — Generac",
+        "22+ years across electronic design, software and factory automation (company bio)"
+      ]
+    },
+    {
+      "name": "Andrey Reznik",
+      "title": "Chief Financial Officer",
+      "photo": "images/execs/amperesand-reznik.jpg",
+      "background": [
+        "Chief Financial Officer — Amperesand (listed on the August 2026 site)",
+        "Chief Financial Officer — Pendulum Therapeutics (pre-revenue through commercial growth)",
+        "Senior Director of Finance — JUUL Labs",
+        "Finance roles — Intel; Maxim Integrated; a former software engineer",
+        "B.Sc. and MBA — Indiana University, Kelley School of Business"
+      ]
+    },
+    {
+      "name": "Marc Bouchet",
+      "title": "Chief of Staff",
+      "photo": "images/execs/amperesand-bouchet.jpg",
+      "background": [
+        "Chief of Staff — Amperesand (listed on the August 2026 site)",
+        "Deep-tech investor for 6+ years; invested in ANYbotics, Peak Energy and Verdagy — Senior Investment Associate, TDK Ventures (an Amperesand seed investor) per the TDK Ventures site",
+        "Aerospace engineer by training (company bio)"
+      ]
+    },
+    {
+      "name": "Jan Sudra",
+      "title": "Vice President, Product Management and Supply Chain",
+      "background": [
+        "VP, Product Management and Supply Chain — Amperesand (careers-page testimonial, August 2026; collection gap: no company biography published)"
+      ]
+    },
+    {
+      "name": "Phil Inagaki",
+      "title": "Chair of the Board (per the January 2025 release); Managing Director, Xora Innovation; interim CEO February 2024 – January 2025",
+      "background": [
+        "Chair — Amperesand board (January 2025 release: 'continues to provide strategic direction … as Chair'); no board page exists on the company site and no later confirmation was found (collection gap)",
+        "Interim CEO — Amperesand (2024, quoted as such in the October 2024 PSA release)",
+        "Managing Director — Xora Innovation, the Temasek early-stage deep-tech subsidiary that incubated the company"
+      ]
+    },
+    {
+      "name": "Gary Lawrence",
+      "title": "Former Chief Executive Officer (appointed January 2025; absent from the August 2026 site — no departure announced)",
+      "background": [
+        "Chief Executive Officer — Amperesand (January 2025 – no later than November 2025, when Brian Dow is quoted as CEO; no release records the change — collection gap)",
+        "Global President, Power and Grid segment — Schneider Electric (11 years; segment revenue to EUR 3.0B by 2024, per the appointment release)",
+        "Senior roles — ABB, co-establishing the e-house business unit"
+      ]
+    },
+    {
+      "name": "Dr Anshuman Tripathi",
+      "title": "Co-founder (VP Engineering at the February 2024 seed round); Senior Programme Director, Future Mobility Systems and Power Grids — Energy Research Institute @ NTU",
+      "background": [
+        "Co-founder and VP Engineering — Amperesand (quoted in the February 2024 seed release; not listed on the August 2026 site)",
+        "Led the solid-state transformer R&D programme from 2016 at ERI@N with co-founder Gil Opina Jr; the core team moved to Amperesand in 2024 per NTU (April 2026)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "Funding to date (company releases and About page)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Equity raised",
+            "actual": "USD 12.45M Series Seed (7 February 2024, co-led by Xora Innovation and Material Impact with TDK Ventures and Foothill Ventures) and USD 80M Series A (18 November 2025, co-led by Walden Catalyst Ventures and Temasek; new investors Industry Ventures, Acclimate Ventures and SG Growth Capital); About page states '>$100M Total funding'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "A further ~USD 30M Series A extension in June 2026 is reported by DealStreetAsia and funding databases (Tracxn: 'Series A - II', 2 June 2026) and has no company statement; the About page's '>$100M' total is the only first-party corroboration (12.45 + 80 + 30 ≈ 122). No valuation disclosed by the company"
+          },
+          {
+            "name": "Public support",
+            "actual": "SGD 10M commercialisation boost from the SGD 75M Temasek–NTU–NUS pilot programme (November 2023, first spin-off selected); NRF Central Gap Fund with NTU (amount undisclosed); Nevada GOED performance-based abatements of USD 2,004,004 over ten years (sales tax USD 1,154,890; modified business tax USD 125,452; personal property USD 723,662), approved March 2026",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Grants and abatements; the Nevada award is conditional on 62 FTE at USD 55.50 average hourly wage within two years"
+          }
+        ],
+        "commentary": "The company reports no revenue, backlog, orders or MW delivered. '30MW of commercial systems to be delivered in 2026' (Series A release) and 'Fortune 100 customers in 2026' (homepage) are company statements no customer has corroborated. Expected fields are left empty: no consensus exists for a private company."
+      },
+      {
+        "period": "Committed investment (Nevada GOED application, February 2026)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Reno capital investment",
+            "actual": "USD 18,684,000 total — USD 18,434,000 of capital equipment plus USD 250,000 of building improvements — for a 73,000 sq ft manufacturing floor with clean/ESD areas, R&D/test lab, warehousing and offices; operations start July 2026",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The company manufactures 'the power stage components of our solid-state transformers on-site'"
+          },
+          {
+            "name": "Headcount commitment",
+            "actual": "62 FTE at USD 55.50 average hourly wage within the first two years; 80% of revenue expected to be generated outside Nevada; Reno already 38% of the global workforce and over 50% of the US workforce at filing",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EDAWN projects 'more than 60 new jobs over the next two years' and over USD 13.8M of new tax revenue over the abatement period"
+          }
+        ],
+        "commentary": "The GOED application is the only externally enforceable set of numbers the company has published and the best proxy for the manufacturing ramp; the 500 MW five-year manufacturing plan in the CEO's cover letter is an ambition, not a commitment."
+      }
+    ],
+    "commentary": "Private and pre-revenue on the public record. Funding is documented through two wire releases and the About page; the mid-2026 extension is third-party reported only. Everything else — valuation, orders, unit cost, gross margin, MW shipped — is undisclosed. Analysis: roughly USD 122M of equity against an USD 18.7M Reno fit-out and a 130-plus headcount reaches first commercial deliveries; a 500 MW-a-year line will need a further raise."
+  },
+  "sources": [
+    {
+      "label": "Amperesand — Greenhouse: Senior Staff Product Manager posting (hyperscaler engagement, battery-provider integration, standards)",
+      "url": "https://job-boards.greenhouse.io/amperesand/jobs/4062424009",
+      "date": "2026-09-15"
+    },
+    {
+      "label": "Amperesand — Greenhouse: Head of Service posting (service organisation stood up from scratch; MSAs, LTSAs, availability guarantees)",
+      "url": "https://job-boards.greenhouse.io/amperesand/jobs/4383173009",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "Amperesand — Greenhouse: Director, Product Compliance posting (UL 2877 and UL 1741 as governing standards; NRTLs)",
+      "url": "https://job-boards.greenhouse.io/amperesand/jobs/4397725009",
+      "date": "2026-09-08"
+    },
+    {
+      "label": "New York Times Magazine — What if America went completely dark? (visits the Reno pilot line)",
+      "url": "https://www.nytimes.com/2026/08/18/magazine/national-blackout-power-electricity-outage.html",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "Data Center Richness — Tech titans outline their vision for 800 VDC (NVIDIA/Google/Microsoft paper; OCP SST spec v0.3)",
+      "url": "https://datacenterrichness.substack.com/p/tech-titans-outline-their-vision",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "NVIDIA — 800 VDC power architecture for AI factories: from concept to production (August 2026 execution paper)",
+      "url": "https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/",
+      "date": "2026-08-11"
+    },
+    {
+      "label": "GingerControl — Data-center infrastructure import duties 2026 (Proclamations 11021 and 11032; HTS 8504)",
+      "url": "https://gingercontrol.com/blog/data-center-infrastructure-import-duty-2026",
+      "date": "2026-07-25"
+    },
+    {
+      "label": "Power Electronics News — Inside Amperesand's SST: a conversation with CEO Brian Dow",
+      "url": "https://www.powerelectronicsnews.com/inside-amperesands-sst-a-conversation-with-ceo-brian-dow/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "HIITIO — Top 10 solid-state transformer suppliers for data centers in 2026 (vendor-authored ranking; Amperesand fourth)",
+      "url": "https://www.hiitio.com/top-10-solid-state-transformer-suppliers-for-data-centers/",
+      "date": "2026-07-07"
+    },
+    {
+      "label": "Power Electronics News — The evolution in data center power distribution, panel part 2: SSTs (PCIM; Port of Singapore pilot)",
+      "url": "https://www.powerelectronicsnews.com/the-evolution-in-data-center-power-distribution-panel-part-2-ssts/",
+      "date": "2026-06-29"
+    },
+    {
+      "label": "DG Matrix Insights — Solid-state transformers could reshape AI infrastructure (competitor-authored; Amperesand's port-to-data-center pivot)",
+      "url": "https://www.dgmatrix.com/news-and-media/news/solid-state-transformers-could-reshape-ai-infrastructure/1223",
+      "date": "2026-06-17"
+    },
+    {
+      "label": "all-about-industries (Vogel) — The faster-available alternative to the traditional line transformer (PCIM Europe 2026 showcase)",
+      "url": "https://www.all-about-industries.com/the-faster-available-alternative-to-the-traditional-line-transformer-a-20e822e9ab4e2a4ca661191834c73a44/",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "Hyphen Partners — Ep. 187: How Singapore is buying into … (USD 30M share issuance; N47 Services ~USD 13.5M)",
+      "url": "https://hyphenpartners.substack.com/p/ep-187-how-singapore-is-buying-into",
+      "date": "2026-06-04"
+    },
+    {
+      "label": "DealStreetAsia — Amperesand secures $30m more from new, existing investors (paywalled; teaser)",
+      "url": "https://www.dealstreetasia.com/stories/amperesand-30m-funding-484160",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "SemiAnalysis — Inside the 800VDC revolution, part 1 (SST vendor set and efficiency claims; reliability caveat)",
+      "url": "https://newsletter.semianalysis.com/p/inside-the-800vdc-revolution-part",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Wolfspeed — A new foundation for critical power conversion: Amperesand case study",
+      "url": "https://www.wolfspeed.com/knowledge-center/article/amperesand-case-study/",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Wolfspeed — Amperesand case study (PDF: 'now accepting orders for pilot deployments')",
+      "url": "https://assets.wolfspeed.com/uploads/2026/05/Wolfspeed_Amperesand_A_New_Foundation_for_Critical_Power_Conversion_case_study.pdf",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Wolfspeed — Introduces new 3.3 kV SiC power modules in two industry-standard footprints (Brian Dow quote; 6+ MW system)",
+      "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-introduces-new-3-3-kv-sic-power-modules-in-two-industry-standard-footprints-to-address-the-surging-demand-for-energy/",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "mgrid — The modern solid-state transformer patent landscape (Amperesand 'heavily patent-pending')",
+      "url": "https://mgrid.org/2026/05/14/the-modern-solid-state-transformer-patent-landscape-eaton-abb-hitachi-energy-and-the-startup-wave/",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "mgrid — Wolfspeed's 200 mm SiC wafer capacity is the single biggest 2026 bottleneck on SST production",
+      "url": "https://mgrid.org/2026/04/22/wolfspeeds-200mm-silicon-carbide-wafer-capacity-is-the-single-biggest-2026-bottleneck-on-solid-state-transformer-production/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "NTU Innovation & Entrepreneurship — Built to scale: from lab breakthrough to global power player",
+      "url": "https://www.ntu.edu.sg/innovates/news-events/news/detail/built-to-scale--from-lab-breakthrough-to-global-power-player",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "Power Electronics News — Solid-state transformers: path from concept to common (cost, standards, bypass and export-control critiques)",
+      "url": "https://www.powerelectronicsnews.com/solid-state-transformers-path-from-concept-to-common/",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "Heatmap — The transformer startups: Ayr, DG Matrix, Heron Power (Amperesand 'minimal coverage … no specific customer announcements')",
+      "url": "https://heatmap.news/climate-tech/transformers-startups-ayr-dg-matrix-heron-power",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "Power Electronics News — NVIDIA GTC 2026: 800 VDC power partnerships from grid to processor (SST vendors named; Amperesand absent)",
+      "url": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "Northern Nevada Now / EDAWN — Amperesand, Inc. selects Reno for U.S. manufacturing facility",
+      "url": "https://northernnvnow.com/amperesand-inc-selects-reno-for-u-s-manufacturing-facility-focused-on-next-generation-energy-infrastructure/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "Power Electronics News — Solid-state transformers in the spotlight (vendor field; Delta live deployment)",
+      "url": "https://www.powerelectronicsnews.com/solid-state-transformers-in-the-spotlight/",
+      "date": "2026-03-09"
+    },
+    {
+      "label": "TechCrunch — Why investors are going gaga over solid-state transformers (Amperesand USD 80M vs Heron USD 140M vs DG Matrix USD 60M)",
+      "url": "https://www.techcrunch.com/2026/02/20/why-investors-are-going-gaga-over-solid-state-transformers/",
+      "date": "2026-02-20"
+    },
+    {
+      "label": "Nevada GOED — Four abated companies to invest $341 million (Amperesand Inc. abatements approved)",
+      "url": "https://goed.nv.gov/newsroom/four-abated-companies-to-invest-341-million-and-generate-84-million-in-new-tax-revenue-in-nevada",
+      "date": "2026-02-05"
+    },
+    {
+      "label": "Nevada GOED — Amperesand Inc. board packet (abatement application signed by Brian Dow, CEO/Co-Founder; SilverFlume entity record)",
+      "url": "https://goed.nv.gov/wp-content/uploads/2026/01/4-A.-Amperesand-Inc.-Board-Packet.pdf",
+      "date": "2026-02-05"
+    },
+    {
+      "label": "iTnews Asia — STT GDC launches direct-current data centre testbed in Singapore",
+      "url": "https://www.itnews.asia/news/stt-gdc-launches-direct-current-data-centre-testbed-in-singapore-623234",
+      "date": "2026-01-28"
+    },
+    {
+      "label": "STT GDC — Launches Southeast Asia's first HVDC-powered AI infrastructure testbed (FutureGrid Accelerator with LITEON, ERI@N and Amperesand)",
+      "url": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "NTU — NTU hosts Southeast Asia's first next-generation infrastructure testbed systems to scale AI",
+      "url": "https://www.ntu.edu.sg/news/detail/ntu-hosts-southeast-asia-s-first-next-generation-infrastructure-testbed-systems-to-scale-ai",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "Transformer Magazine — Amperesand secures $80M for medium-voltage SST rollout (Generation 2 tests)",
+      "url": "https://transformer-magazine.com/news/amperesand-secures-80-m-for-medium-voltage-sst-rollout/",
+      "date": "2025-11-26"
+    },
+    {
+      "label": "Gunderson Dettmer — Amperesand announces $80M Series A (counsel note)",
+      "url": "https://www.gunder.com/en/news-insights/client-news/amperesand-announces-dollar80m-series-a-funding-co-led-by-walden-catalyst-ventures-and-temasek",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "TechNode Global — Singapore's Amperesand raises $80M Series A (hubs in San Francisco and Reno established 2025)",
+      "url": "https://technode.global/2025/11/20/singapores-amperesand-raises-80m-series-a-funding-co-led-by-walden-catalyst-ventures-and-temasek/",
+      "date": "2025-11-20"
+    },
+    {
+      "label": "Asia Business Outlook — Amperesand raises $80M to scale solid-state power systems (no certification listings or field data disclosed)",
+      "url": "https://www.asiabusinessoutlook.com/news/amperesand-raises-80m-to-scale-solidstate-power-systems-nwid-10543.html",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "CNBC — Power infrastructure reliability critical for data centers: Amperesand CEO (video)",
+      "url": "https://www.cnbc.com/video/2025/11/19/power-infrastructure-reliability-critical-for-data-centers-amperesand.html",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "Business Wire via Yahoo Finance — Amperesand raises $80M Series A co-led by Walden Catalyst Ventures and Temasek",
+      "url": "https://finance.yahoo.com/news/amperesand-raises-80m-series-co-140000819.html",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "Latitude Media — Amperesand raises $80M Series A (release syndication)",
+      "url": "https://www.latitudemedia.com/industry-news/amperesand-raises-80m-series-a-co-led-by-walden-catalyst-ventures-and-temasek-to-redefine-power-infrastructure-for-ai-data-centers/",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "mgrid — Amperesand raises $80 million Series A for AI data center SSTs (analysis; capex caveat)",
+      "url": "https://mgrid.org/2025/11/18/amperesand-raises-80-million-series-a-led-by-walden-catalyst-and-temasek-for-ai-data-center-solid-state-transformers/",
+      "date": "2025-11-18"
+    },
+    {
+      "label": "Walden Catalyst — Amperesand: the new power architecture fueling the AI era",
+      "url": "https://waldencatalyst.com/blog/amperesand-the-new-power-architecture-fueling-the-ai-era",
+      "date": "2025-11"
+    },
+    {
+      "label": "NVIDIA Developer Blog — Building the 800 VDC ecosystem for efficient, scalable AI factories (partner roster)",
+      "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "Global Venturing — Bouchet leaves TDK Ventures for Amperesand chief-of-staff role",
+      "url": "https://globalventuring.com/corporate/people/bouchet-tdk-ventures-amperesand/",
+      "date": "2025-10-10"
+    },
+    {
+      "label": "TDK Ventures — Why we invested in Amperesand",
+      "url": "https://tdk-ventures.com/news/insights/why-we-invested-in-amperesand/",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "tEDmag — Trump administration increases tariffs on certain transformers (Section 232 extension, 18 August 2025)",
+      "url": "https://tedmag.com/trump-administration-increases-tariffs-on-certain-transformers/",
+      "date": "2025-08-22"
+    },
+    {
+      "label": "Canary Media — Solid-state transformers: DG Matrix, Resilient Power (Amperesand units tested on Singapore's grid)",
+      "url": "https://www.canarymedia.com/articles/distributed-energy-resources/solid-state-transformers-dgmatrix-resilient-power",
+      "date": "2025-08-18"
+    },
+    {
+      "label": "Transformer Technology — Amperesand appoints new leadership team (Lawrence CEO, Dow CPO, Joyner CTO; release syndication)",
+      "url": "https://transformer-technology.com/amperesand-appoints-new-leadership-team-to-accelerate-growth-in-solid-state-transformer-market-transformer-technology-news/",
+      "date": "2025-01-22"
+    },
+    {
+      "label": "Business Wire via Silicon UK — Amperesand appoints veteran leadership team to drive gigascale deployment of SST solutions",
+      "url": "https://www.silicon.co.uk/press-release/amperesand-appoints-veteran-leadership-team-to-drive-gigascale-deployment-of-solid-state-transformer-solutions",
+      "date": "2025-01-21"
+    },
+    {
+      "label": "TechCrunch — Amperesand targets data centers as the next big customer for its solid-state transformers",
+      "url": "https://techcrunch.com/2025/01/21/amperesand-targets-data-centers-as-the-next-big-customer-for-its-solid-state-transformers/",
+      "date": "2025-01-21"
+    },
+    {
+      "label": "PSA International — PSA unboXed collaborates with Amperesand on SST technology trials in Singapore",
+      "url": "https://www.globalpsa.com/psa-unboxed-collaborates-with-amperesand-on-solid-state-transformer-technology-trials-in-singapore/",
+      "date": "2024-10-29"
+    },
+    {
+      "label": "TechCrunch — Amperesand raises $12.45M seed to transform global power grids",
+      "url": "https://techcrunch.com/2024/02/07/amperesand-transformer-seed-round/",
+      "date": "2024-02-07"
+    },
+    {
+      "label": "TDK Ventures (PR Newswire) — TDK Ventures invests in Singapore-based startup Amperesand",
+      "url": "https://www.prnewswire.com/apac/news-releases/tdk-ventures-invests-in-singapore-based-startup-amperesand-to-empower-global-electrification-through-solid-state-transformers-302052328.html",
+      "date": "2024-02-07"
+    },
+    {
+      "label": "Business Wire via Investing.com — Amperesand raises $12.45M to transform global power grids",
+      "url": "https://in.investing.com/news/amperesand-raises-1245m-to-transform-global-power-grids-93CH-4007720",
+      "date": "2024-02-07"
+    },
+    {
+      "label": "NTU — NTU deep-tech energy spin-off to get boost of SGD 10 million for commercialisation",
+      "url": "https://www.ntu.edu.sg/news/detail/ntu-deep-tech-energy-spin-off-to-get-boost-of-SGD10-million-for-commercialisation",
+      "date": "2023-11-01"
+    },
+    {
+      "label": "Amperesand — Homepage (product, capability, manufacturing and partner blocks; office addresses)",
+      "url": "https://www.amperesand.io/"
+    },
+    {
+      "label": "Amperesand — About (leadership bios, investors, 18 patent families, >$100M total funding)",
+      "url": "https://www.amperesand.io/about.html"
+    },
+    {
+      "label": "Amperesand — News (external coverage list)",
+      "url": "https://www.amperesand.io/news.html"
+    },
+    {
+      "label": "Amperesand — Careers (Jan Sudra testimonial)",
+      "url": "https://www.amperesand.io/careers.html"
+    },
+    {
+      "label": "Amperesand — Legacy marketing site (company timeline, Generation 0–I pilots, pre-refresh claims)",
+      "url": "https://careers.amperesand.io/"
+    },
+    {
+      "label": "Amperesand — LinkedIn company page (headcount band; specialties)",
+      "url": "https://sg.linkedin.com/company/amperesandpteltd"
+    },
+    {
+      "label": "ACRA record mirror — Amperesand Pte. Ltd. (UEN 202318356C, incorporated 11 May 2023)",
+      "url": "https://www.companies.sg/business/202318356C/AMPERESAND-PTE-LTD-"
+    },
+    {
+      "label": "Xora Innovation — Portfolio: Amperesand",
+      "url": "https://xora.vc/companies/amperesand"
+    },
+    {
+      "label": "TDK Ventures — Portfolio: Amperesand",
+      "url": "https://tdk-ventures.com/portfolio/energy-cleantech/amperesand/"
+    }
+  ],
+  "lastUpdated": "2026-09-19",
+  "profileVersion": 2
+}

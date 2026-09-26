@@ -507,6 +507,16 @@
       "note": "MGX holds an undisclosed minority stake in Khazna, G42's data-centre subsidiary, alongside Silver Lake; G42 was one of MGX's two foundational partners and the two share a chairman.",
       "context": "Khazna's March 2025 release welcomed 'MGX and Silver Lake as new minority shareholders, alongside majority shareholder G42' as e& exited its 40% for US$2.2B. MGX's board describes the stake as support for the Stargate UAE build-out, which Khazna is developing.\n\nG42 was named with Mubadala as MGX's foundational partner at its March 2024 creation, and Sheikh Tahnoon bin Zayed chairs both.",
       "source": "https://khaznadatacenters.com/press-release/khazna-welcomes-mgx-and-silver-lake-as-strategic-minority-investors/"
+    },
+    {
+      "slug": "blackrock",
+      "type": "partner",
+      "status": "active",
+      "since": "2024-09",
+      "via": "AI Infrastructure Partnership (AIP)",
+      "note": "Co-founder with MGX, GIP and Microsoft of the AI Infrastructure Partnership, which Larry Fink chairs, and co-acquirer of joint control of Aligned through GIP's managing entity.",
+      "context": "BlackRock and its Global Infrastructure Partners launched the partnership with Microsoft and MGX on 17 September 2024. The European Commission's Aligned decision names GIP's Global Infrastructure Management, LLC and MGX Fund Management Limited as the two parties acquiring joint control. BlackRock's own releases call Fink AIP's chairman and MGX's chief executive its vice chairman. The BlackRock dossier (2026-09-26) found no first-party statement of AIP's legal form or of any member's commitment.",
+      "source": "https://www.mgx.ae/news-insights/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership"
     }
   ],
   "policyExposure": [
@@ -1294,5 +1304,5 @@
     }
   ],
   "lastUpdated": "2026-09-26",
-  "profileVersion": 3
+  "profileVersion": 4
 }

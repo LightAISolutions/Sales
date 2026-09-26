@@ -118,6 +118,12 @@
    "tier": "core"
   },
   {
+   "slug": "blackrock",
+   "nextReport": "2026-10-13",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-26"
+  },
+  {
    "slug": "blackstone",
    "nextReport": "2026-10-22",
    "confirmed": false,
@@ -602,6 +608,12 @@
    "cadence": "quarterly",
    "lastRefreshed": "2026-08-30",
    "tier": "core"
+  },
+  {
+   "slug": "kkr",
+   "nextReport": "2026-10-29",
+   "confirmed": false,
+   "lastRefreshed": "2026-09-26"
   },
   {
    "slug": "kwh-analytics",

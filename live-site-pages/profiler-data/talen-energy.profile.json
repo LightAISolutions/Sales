@@ -792,6 +792,15 @@
       "note": "Non-binding letter of intent (March 2026) to assess three or more four-unit Xe-100 plants in Pennsylvania and PJM; Amazon — Talen's Susquehanna counterparty and X-energy's largest shareholder — is not a party.",
       "context": "World Nuclear News (20 March 2026) reported the LOI; X-energy's own release frames the evaluation around 'onshoring of manufacturing, data centers, and electrification' and its prospectus calls the LOI non-binding (X-energy dossier, this corpus). Recorded as `announced`: no definitive agreement, site or schedule exists.",
       "source": "https://www.world-nuclear-news.org/articles/x-energy-talen-to-assess-deployment-of-multiple-smr-plants"
+    },
+    {
+      "slug": "blackrock",
+      "type": "other",
+      "status": "historical",
+      "since": "2025-11",
+      "note": "Talen bought Guernsey Power Station 'from Caithness Energy and BlackRock', completing on 25 November 2025; separately, BlackRock's index funds hold about 9% of Talen as a passive investor.",
+      "context": "Talen's closing release names the sellers of Guernsey as Caithness Energy and BlackRock; this dossier's other sources attribute BlackRock's interest to Global Infrastructure Partners. PJM's market monitor lists a 9.01% BlackRock passive stake in Talen under BlackRock's FERC blanket authorisation, and the 2026 proxy shows 8.6%. The seller of a plant and a passive shareholder are different BlackRock businesses.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000037/ex99120251125pressreleasec.htm"
     }
   ],
   "policyExposure": [
@@ -974,6 +983,11 @@
     }
   ],
   "sources": [
+    {
+      "label": "Talen Energy — completes the Freedom and Guernsey acquisitions (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000037/ex99120251125pressreleasec.htm",
+      "date": "2025-11-25"
+    },
     {
       "label": "RTO Insider — Talen Energy coverage index (RMR extension approved through 2031, 24 August 2026)",
       "url": "https://www.rtoinsider.com/tag/talen-energy/"
@@ -1367,6 +1381,6 @@
       "url": "https://www.publicjustice.net/toxic-coal-ash-york-haven-pennsylvania-lawsuit/"
     }
   ],
-  "lastUpdated": "2026-09-05",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 3
 }

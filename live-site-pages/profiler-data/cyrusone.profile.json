@@ -331,6 +331,26 @@
    "context": "The Prime Data Centers dossier records reporters placing Prime beside Aligned, CyrusOne, Equinix and PowerHouse in CBRE's Chicago survey, and beside Equinix, CyrusOne and Data4 in Madrid. CBRE's H2 2025 Chicago report specifically lists CyrusOne's Wood Dale campus as fully leased alongside Prime's, Aligned's ORD3 and Equinix's Minooka, with ComEd delivery delays affecting the market to 2032 or later.\n\nThe edge is a market-adjacency observation from third-party surveys rather than any transaction between the two.",
    "source": "https://usdatamap.com/rankings/biggest-data-center-operators",
    "status": "active"
+  },
+  {
+   "slug": "kkr",
+   "type": "investor",
+   "status": "active",
+   "since": "2022-03",
+   "scale": "~USD 15bn including assumed debt (2022)",
+   "note": "Co-owner of CyrusOne with BlackRock's GIP since the March 2022 take-private; also CyrusOne's partner, through the KKR–ECP partnership, on the Bosque County campus.",
+   "context": "The 25 March 2022 completion release records the acquisition 'by funds managed by KKR … and Global Infrastructure Partners' for about USD 15bn including assumed debt. KKR's Waldemar Szlezak was quoted jointly with GIP's Will Brilliant on the July 2026 appointment of John Hatem as chief executive, and KKR Capital Markets co-arranges CyrusOne's securitisations. The KKR dossier (2026-09-26) finds no first-party source that states the ownership split.\n\nKKR's 30 July 2025 release presents the 190 MW Bosque County, Texas campus as the first investment of its USD 50bn partnership with Energy Capital Partners, a joint venture with CyrusOne, at about USD 4bn. CyrusOne's own release with Calpine gives USD 1.2bn for DFW10. No source read reconciles the two figures.",
+   "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/"
+  },
+  {
+   "slug": "blackrock",
+   "type": "investor",
+   "status": "active",
+   "since": "2022-03",
+   "via": "Global Infrastructure Partners",
+   "note": "BlackRock owns Global Infrastructure Partners, which co-owns CyrusOne with KKR; GIP partner Will Brilliant sits on CyrusOne's board.",
+   "context": "GIP took CyrusOne private with KKR in March 2022 and became part of BlackRock on 1 October 2024; GIP's portfolio page still lists CyrusOne as unrealised, and GIP's Will Brilliant was quoted with KKR's Waldemar Szlezak on the July 2026 chief-executive change. The owner is funds managed by GIP rather than BlackRock's own balance sheet. The flagged question of whether GIP still holds its stake is settled by those 2026 statements: it does. The split with KKR is not stated first-party.",
+   "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/"
   }
  ],
  "policyExposure": [
@@ -1081,6 +1101,6 @@
    "url": "https://baxtel.com/data-center/cyrusone-fairfield-texas"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

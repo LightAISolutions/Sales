@@ -1,0 +1,467 @@
+{
+ "schemaVersion": 2,
+ "slug": "blackrock",
+ "title": "BlackRock — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: a directory of buyers, not a buyer",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Three layers sit behind the one name, and only the bottom one places equipment orders.",
+   "ps": [
+    "**The firm.** BlackRock, Inc. is a manager. It invests other people's money for a fee and signs no purchase order for a battery, a switchgear line-up or a turbine.",
+    "**The funds.** Its Global Infrastructure Partners (GIP) funds, and a partnership it chairs called the AI Infrastructure Partnership (AIP), own or co-own companies: data-centre landlords, a utility, renewables sponsors and battery owners.",
+    "**The platforms.** Those companies — Aligned, CyrusOne, ALLETE, Eolian and others — employ the engineers who write specifications and sign the orders.",
+    "This guide teaches the machinery that connects the three layers: passive against controlling ownership, joint control, utility take-private approvals, off-balance-sheet campuses and the ladder every deal climbs. It ends with the test that matters to a seller: through which platforms does an investor actually buy?"
+   ]
+  },
+  {
+   "id": "index-ownership",
+   "title": "Index funds: owning a lot without deciding anything",
+   "kind": "prose",
+   "read": "Why BlackRock can hold 11% of a utility and still have no say over its purchasing.",
+   "ps": [
+    "An {{index fund}} buys every company in a published index in proportion to its weight — mostly by market value — instead of picking stocks. An {{ETF}} is a fund whose shares trade on an exchange like a company's; most track an index.",
+    "Run at a scale of trillions of dollars, following an index means owning a large slice of every big company. The PJM market monitor lists BlackRock's passive stakes in 2026 as Exelon 11.02%, PSEG 10.41%, Talen 9.01%, NextEra 8.58%, FirstEnergy 8.49% and NRG 8.48%.",
+    "US law separates such holders from controllers. A holder above 5% who certifies it is passive files a short {{Schedule 13G}}; one who can or will influence control files a {{Schedule 13D}}. BlackRock's index stakes are on 13Gs. Its Clearway Energy stake, held through GIP, is on a 13D. Same parent, two kinds of owner.",
+    "Because power companies are regulated, the federal energy regulator ({{FERC}}) must also approve large voting stakes. BlackRock holds its utility shares under a {{blanket authorization}} that assumes they stay passive. In July 2026 consumer groups asked FERC to force BlackRock to separate the passive business from the controlling one."
+   ]
+  },
+  {
+   "id": "four-kinds-of-position",
+   "title": "Five positions an investor can hold, and what each decides",
+   "kind": "table",
+   "read": "Read a name in a dossier by the position it describes, not by the size of the firm behind it.",
+   "intro": "Examples from BlackRock's own record in 2024–2026.",
+   "cols": [
+    "Position",
+    "Example",
+    "How it is documented",
+    "Say over equipment purchases"
+   ],
+   "rows": [
+    [
+     "Passive index stake",
+     "8–11% of several US utilities",
+     "{{Schedule 13G}}; FERC {{blanket authorization}}",
+     "None"
+    ],
+    [
+     "Controlling or co-controlling stake",
+     "Aligned (with MGX); CyrusOne (with KKR); ALLETE (with CPP Investments)",
+     "{{Schedule 13D}}; merger-control decisions; board seats",
+     "Through the board and the platform's management — shared where control is joint"
+    ],
+    [
+     "Minority preferred",
+     "20% of Recurrent Energy on an {{as-converted}} basis",
+     "Preferred-share terms: dividend, {{liquidation preference}}, exit right",
+     "None"
+    ],
+    [
+     "Lender",
+     "GIP on EdgeCore's construction debt; HPS on Intersect Power's battery loans",
+     "Loan agreement",
+     "None beyond loan covenants"
+    ],
+    [
+     "Memorandum or reported talks",
+     "NVIDIA's compute-financing MOUs; STACK Asia-Pacific talks",
+     "{{Memorandum of understanding}}; news reports",
+     "None until a deal is signed and closed"
+    ]
+   ]
+  },
+  {
+   "id": "buying-a-manager",
+   "title": "What BlackRock bought when it bought GIP",
+   "kind": "prose",
+   "read": "A team and its contracts to manage other people's money — not the assets themselves.",
+   "ps": [
+    "BlackRock completed its purchase of Global Infrastructure Partners on 1 October 2024, paying USD 3bn in cash and about 12 million of its own shares, part of them paid years later against performance targets — {{deferred consideration}}. It then put its own infrastructure businesses under the GIP name.",
+    "The data centres and power plants belong to GIP's funds, whose investors ({{limited partner}}s) are pension funds, sovereign funds and insurers. GIP chooses the investments and earns fees. 'BlackRock owns CyrusOne' is shorthand for 'funds managed by BlackRock's GIP co-own CyrusOne'.",
+    "That is why BlackRock's infrastructure is counted three ways at once, shown below: what pays a fee now, everything clients have committed, and GIP's own description. The gap between the first two is mostly {{dry powder}} — money promised but not yet invested."
+   ]
+  },
+  {
+   "id": "infrastructure-three-ways",
+   "title": "Infrastructure counted three ways",
+   "kind": "bars",
+   "read": "None of the three numbers is wrong; each counts something different.",
+   "unit": "USD billions, mid-2026",
+   "intro": "BlackRock's Q2 2026 figures and GIP's own description.",
+   "items": [
+    {
+     "label": "Fee-paying infrastructure AUM (30 June 2026)",
+     "sub": "Only capital paying a management fee now — {{fee-paying AUM}}",
+     "v": 113.5
+    },
+    {
+     "label": "Infrastructure client assets (Q2 2026 supplement)",
+     "sub": "Adds committed capital not yet invested and co-investment that pays no fee",
+     "v": 197
+    },
+    {
+     "label": "GIP's own description ('over $200 billion')",
+     "sub": "The manager's headline, used in its 2026 releases",
+     "v": 200
+    }
+   ]
+  },
+  {
+   "id": "joint-control",
+   "title": "Who bought Aligned: three names, two controllers",
+   "kind": "prose",
+   "read": "A press release names buyers; a merger-control decision names controllers.",
+   "ps": [
+    "Aligned Data Centers' closing release of 21 July 2026 names 'AIP, MGX, and BlackRock's GIP' as buyers of 100% of the equity, at about USD 40bn of {{enterprise value}}.",
+    "A {{consortium}} buys through a shared vehicle, and a shareholders' agreement decides who sets strategy. European merger law asks exactly that. In Case M.12259 the European Commission named two parties acquiring {{joint control}}: Global Infrastructure Management, LLC (ultimately BlackRock) and MGX Fund Management Limited. The AI Infrastructure Partnership was not a notifying party.",
+    "AIP itself was launched in September 2024 by BlackRock, GIP, Microsoft and MGX to raise USD 30bn of equity and up to USD 100bn with debt for data centres and their power. NVIDIA and xAI joined in March 2025, and the Kuwait Investment Authority and Temasek became anchors. No first-party source gives its legal form. It works as a pool of money that invests through GIP and MGX, and MGX also invested directly beside it — {{co-investment}}.",
+    "For a seller the membership is the point: the tenants' own capital, Microsoft's, NVIDIA's and xAI's, sits among the landlord's owners."
+   ]
+  },
+  {
+   "id": "utility-take-private",
+   "title": "Taking a utility private: the approval ladder",
+   "kind": "timeline",
+   "read": "AES shows every gate a buyer of a US utility must pass, in the order they came.",
+   "intro": "Months after the AES merger agreement was signed on 1 March 2026. Lanes: the deal itself and the approvals it needs.",
+   "unit": "months since signing (1 March 2026 = 0)",
+   "lanes": {
+    "deal": "The deal",
+    "ok": "Approvals"
+   },
+   "items": [
+    {
+     "x": 0,
+     "lane": "deal",
+     "label": "Merger agreement signed",
+     "sub": "GIP and EQT lead; CalPERS and QIA co-underwrite; USD 15.00 a share, all equity"
+    },
+    {
+     "x": 2.7,
+     "lane": "ok",
+     "label": "FERC application filed (Section 203)",
+     "sub": "Docket EC26-99; consumer groups protest in July"
+    },
+    {
+     "x": 3.7,
+     "lane": "ok",
+     "label": "Antitrust waiting period expires",
+     "sub": "US HSR review"
+    },
+    {
+     "x": 3.8,
+     "lane": "ok",
+     "label": "Stockholders approve",
+     "sub": "About 98% of votes cast"
+    },
+    {
+     "x": 5.9,
+     "lane": "ok",
+     "label": "CFIUS clears",
+     "sub": "Foreign-investment review — QIA is a foreign state fund"
+    },
+    {
+     "x": 6.5,
+     "lane": "ok",
+     "label": "Ohio commission approves",
+     "sub": "With conditions on rates and on directors with data-centre interests"
+    },
+    {
+     "x": 6.9,
+     "lane": "deal",
+     "label": "Still open on 26 September 2026",
+     "sub": "FERC and New York's commission"
+    },
+    {
+     "x": 15,
+     "lane": "deal",
+     "label": "Outside date",
+     "sub": "1 June 2027, extendable twice by three months"
+    }
+   ]
+  },
+  {
+   "id": "what-commissions-ask",
+   "title": "What regulators ask a new owner for",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "Every approval can come with conditions, and the conditions reshape the utility's spending.",
+   "ps": [
+    "**{{Section 203}}.** FERC must approve anyone buying control of, or a large voting stake in, a regulated power company. For AES it must also weigh the argument that BlackRock's passive stakes in rival utilities give it 'a novel degree of influence', a phrase from its own April 2025 order.",
+    "**State commissions.** Minnesota approved ALLETE's take-private by GIP and CPP Investments in October 2025 with about USD 200m of customer benefits, including a one-year base-rate freeze and USD 50m of rate credits. Ohio's conditions for AES reportedly include no merger-driven rate changes and recusal of directors with data-centre interests.",
+    "**{{CFIUS}}.** Screens foreign money for national-security risk; AES's co-underwriters include the Qatar Investment Authority.",
+    "**The clock.** A signed deal carries an {{outside date}}, after which either side may walk away. A regulator that orders a hearing can push a deal toward it."
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test: where BlackRock passes and where it fails",
+   "kind": "table",
+   "read": "An investor passes only through a platform it controls, and even then the platform writes the order.",
+   "intro": "BlackRock's positions on 26 September 2026.",
+   "cols": [
+    "Platform",
+    "What it buys",
+    "BlackRock's position",
+    "Passes the test?"
+   ],
+   "rows": [
+    [
+     "Aligned Data Centers",
+     "Power, cooling and electrical gear for hyperscale campuses",
+     "{{Joint control}} with MGX",
+     "Yes — shared"
+    ],
+    [
+     "CyrusOne",
+     "The same, across the US, Europe and Japan",
+     "{{Co-control}} with KKR",
+     "Yes — shared"
+    ],
+    [
+     "Coravel",
+     "Land, power and shells for new data centres",
+     "50:50 venture with the builder ACS",
+     "Yes — shared"
+    ],
+    [
+     "ALLETE / Minnesota Power",
+     "Generation, storage and grid equipment for a regulated utility",
+     "GIP 60%, governance shared equally with CPP Investments",
+     "Yes — shared"
+    ],
+    [
+     "Eolian; Jupiter Power",
+     "Battery containers, inverters, transformers",
+     "Fund-owned {{merchant}} battery platforms",
+     "Yes"
+    ],
+    [
+     "AES",
+     "Batteries and generation, and two utilities",
+     "Signed; 56.625% after closing",
+     "Only on closing"
+    ],
+    [
+     "El Paso campus",
+     "A 1 GW campus's electrical plant",
+     "80% owner; Meta builds and is the tenant",
+     "Ownership yes; design runs through Meta"
+    ],
+    [
+     "Recurrent; EdgeCore; Intersect",
+     "Solar, storage and data-centre construction",
+     "Minority preferred; lender",
+     "No"
+    ]
+   ]
+  },
+  {
+   "id": "off-balance-sheet-campus",
+   "title": "Moving a campus off a hyperscaler's balance sheet",
+   "kind": "prose",
+   "read": "How an investor can own 80% of a campus it neither designs nor occupies.",
+   "ps": [
+    "Meta announced on 28 July 2026 a roughly USD 14bn, 1 GW data-centre campus in El Paso in which funds managed by BlackRock will own 80% and Meta 20%. Meta contributes about USD 2.3bn of land and work in progress, BlackRock about USD 4.9bn in cash, and a USD 12.5bn debt financing funds much of the rest.",
+    "Meta is the only tenant on a four-year lease extendable to twenty years, and gives a {{residual value guarantee}} of about USD 13bn — if the campus is worth less than that when the lease ends, Meta pays the difference. That guarantee is what makes the investor's 80% financeable.",
+    "Meta also provides construction management and property management, so the investor owns the asset while the tenant runs the build. For a supplier, the design authority at El Paso is Meta's.",
+    "Status matters: Meta's quarterly filing two days after the announcement called it an 'exclusivity agreement' subject to {{definitive agreement}}s, and no closing notice had been found by 26 September 2026."
+   ]
+  },
+  {
+   "id": "deal-ladder",
+   "title": "The deal ladder: record the rung, not the headline",
+   "kind": "table",
+   "read": "Every transaction climbs the same rungs; a dossier must say which rung it has reached.",
+   "intro": "BlackRock's 2026 transactions placed on the ladder as of 26 September 2026.",
+   "cols": [
+    "Rung",
+    "What it binds",
+    "Example"
+   ],
+   "rows": [
+    [
+     "Report",
+     "Nobody",
+     "Bloomberg's 24 September report of AIP and IFM talking to Blue Owl about STACK's Asia-Pacific data centres"
+    ],
+    [
+     "{{Exclusive talks}}",
+     "The seller, to negotiate with one bidder for a while",
+     "The same STACK report — 'talks could be prolonged or fail'"
+    ],
+    [
+     "{{Memorandum of understanding}}",
+     "Usually nobody; a statement of intent",
+     "NVIDIA's 10 August compute-financing MOUs, 'subject to execution of the final agreements'"
+    ],
+    [
+     "Signing ({{definitive agreement}})",
+     "Both sides, subject to conditions",
+     "AES, signed 1 March 2026"
+    ],
+    [
+     "Approvals",
+     "The deal waits on votes and regulators",
+     "AES's FERC and New York approvals, pending"
+    ],
+    [
+     "Closing",
+     "Money moves and control passes",
+     "Aligned, 21 July 2026; ALLETE, 15 December 2025"
+    ]
+   ]
+  },
+  {
+   "id": "directory-or-door",
+   "title": "Directory or door: what BlackRock is worth to a seller",
+   "kind": "proscons",
+   "read": "The honest answer to 'should I call BlackRock?'",
+   "intro": "Weigh the value of knowing the owner against the fact that the owner does not buy.",
+   "cards": [
+    {
+     "t": "Why the directory is useful",
+     "meta": "One owner above many buyers",
+     "adv": [
+      "**One map, many buyers.** The same GIP funds sit above data-centre landlords, a utility, a renewables sponsor and battery owners.",
+      "**Shared policy.** A sponsor's risk and compliance rules can shape what its platforms may buy, so a reference at one platform can travel to another.",
+      "**Early signals.** A new take-private or consortium tells a seller which buyer will soon have a new capital plan."
+     ],
+     "dis": [
+      "**No purchase order.** BlackRock, Inc. signs none; the platform's engineers do.",
+      "**Shared control.** At Aligned, CyrusOne, Coravel and ALLETE a co-owner can block a large contract.",
+      "**Moving parts.** Battery platforms whose 2026 releases name no owner may be sold before a supplier relationship pays back."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a fund size.",
+   "cards": [
+    {
+     "q": "What does filing a {{Schedule 13G}} rather than a {{Schedule 13D}} tell you about a large shareholder?",
+     "a": "That it certifies it is passive and will not seek to influence control. A 13D holder can or intends to influence control."
+    },
+    {
+     "q": "Why can an {{index fund}} manager hold 10% of a utility without deciding anything about it?",
+     "a": "The fund buys whatever is in the index in proportion to its weight. It does not choose the company, seek board seats or direct management, and its filings certify that."
+    },
+    {
+     "q": "A press release names three buyers; a merger-control decision names two parties acquiring {{joint control}}. Which tells you who governs the company?",
+     "a": "The decision. Control means the power to decide strategy and major contracts, and that is what the regulator examines."
+    },
+    {
+     "q": "What is {{deferred consideration}} for, in the purchase of a management firm?",
+     "a": "It pays part of the price later and only if targets are met, which keeps the acquired team working to the buyer's plan."
+    },
+    {
+     "q": "Why is infrastructure 'fee-paying AUM' smaller than 'client assets'?",
+     "a": "Client assets include money committed but not yet invested and co-investment that pays no fee; only invested, fee-bearing capital counts as fee-paying."
+    },
+    {
+     "q": "What does FERC's {{Section 203}} review decide?",
+     "a": "Whether a purchase of control, or of a large voting stake, in a regulated power company can proceed — and on what conditions — given its effect on competition, rates and regulation."
+    },
+    {
+     "q": "Why does a {{residual value guarantee}} matter in a sale-and-lease-back campus?",
+     "a": "It shifts the risk that the campus is worth little at the end of the lease to the tenant, which lets the owner borrow against the asset."
+    },
+    {
+     "q": "An investor owns 20% of a developer through {{preferred equity}}. Does it pass the buying-authority test?",
+     "a": "No. A minority preferred position pays first and carries protections, but it gives no control over what the developer buys."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "Which BlackRock position gives it a say over a platform's equipment purchases?",
+     "c": [
+      "A 9% index stake filed on a 13G",
+      "A controlling stake held through GIP funds",
+      "A term loan from its private-credit arm",
+      "A memorandum of understanding"
+     ],
+     "a": 1,
+     "why": "Only control — alone or jointly — reaches the board and the management that approve purchases. Passive stakes, loans and MOUs do not."
+    },
+    {
+     "q": "A utility take-private has shareholder approval and CFIUS clearance. What can still stop it?",
+     "c": [
+      "Nothing; the deal is closed",
+      "Federal energy and state commission approvals, and the outside date",
+      "Only the buyer's financing",
+      "A second shareholder vote"
+     ],
+     "a": 1,
+     "why": "FERC and each relevant state commission must approve, and if they have not by the {{outside date}} either side may walk away."
+    },
+    {
+     "q": "Why was the AI Infrastructure Partnership not a notifying party to the Aligned merger review?",
+     "c": [
+      "It had not yet been formed",
+      "It is a pool of capital that invests through GIP and MGX, which were named as acquiring control",
+      "It bought a minority stake below the notification threshold",
+      "The deal was not reviewed in Europe"
+     ],
+     "a": 1,
+     "why": "The Commission named the parties acquiring {{joint control}}; AIP's money is deployed through vehicles those parties manage."
+    },
+    {
+     "q": "At a campus where an investor owns 80%, the tenant runs construction and gives a residual value guarantee. Whose engineers most likely set the electrical design?",
+     "c": [
+      "The investor's",
+      "The tenant's",
+      "The lenders'",
+      "The regulator's"
+     ],
+     "a": 1,
+     "why": "The tenant manages construction and occupies the whole campus; the investor's role is capital."
+    },
+    {
+     "q": "A news report says a buyer is in exclusive talks. How should a dossier record it?",
+     "c": [
+      "As a completed acquisition",
+      "As a signed deal awaiting approval",
+      "As reported talks that bind no one to buy",
+      "As a memorandum of understanding"
+     ],
+     "a": 2,
+     "why": "{{Exclusive talks}} commit the seller to negotiate with one party for a time, but no one is bound to buy or sell."
+    },
+    {
+     "q": "Why is a manager's infrastructure described by several different AUM numbers?",
+     "c": [
+      "Accounting errors",
+      "Each counts a different thing: fee-paying capital, committed capital, and the manager's own headline",
+      "Currency conversion",
+      "Different fiscal years"
+     ],
+     "a": 1,
+     "why": "Fee-paying AUM excludes committed-but-undeployed money that client assets include; a manager's own figure may use yet another definition."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "buying-authority test",
+   "d": "The Phase F screen for this corpus: does a company, or a platform it controls alone or jointly, sign for batteries, medium-voltage switchgear, generation or solid-state transformers? An investor passes only through a platform it controls."
+  },
+  {
+   "t": "HSR",
+   "d": "The US Hart-Scott-Rodino waiting period: large acquisitions must be notified to the antitrust agencies and cannot close until the waiting period ends."
+  }
+ ]
+}

@@ -58,7 +58,7 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NASDAQ: AEP",
       "status": "active",
-      "lastUpdated": "2026-09-03",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "aep.com",
         "docs.aep.com",
@@ -92,13 +92,13 @@
       "hq": "Arlington, Virginia, United States",
       "ticker": "NYSE: AES (parent)",
       "status": "active",
-      "lastUpdated": "2026-09-09",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "aes.com",
         "aescleanenergy.com",
         "s202.q4cdn.com"
       ],
-      "srcTotal": 57,
+      "srcTotal": 59,
       "srcFirstPct": 44,
       "kpiNorm": true,
       "segments": [
@@ -211,7 +211,7 @@
       "tagline": "The record $40B exit — AIP/MGX/GIP bought the 51-campus, 6.4 GW Americas platform from Macquarie with Microsoft, NVIDIA and xAI inside the buyer consortium; patented Delta³/DeltaFlow waterless cooling (600+ kW/rack hybrid) is the moat.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "aligneddc.com"
       ],
@@ -293,7 +293,7 @@
       "tagline": "The platform SST challenger — NTU Singapore lineage, 3.3 kV Wolfspeed SiC medium-voltage solid-state transformer (5–10 MW modular) for 800 V DC AI factories, megawatt port charging and storage; Reno production line, USD 80M Series A, first deliveries promised for 2026 and unverified.",
       "hq": "Singapore (with San Francisco and Reno, Nevada)",
       "status": "active",
-      "lastUpdated": "2026-09-19",
+      "lastUpdated": "2026-09-26",
       "aka": [
         "Amperesand Inc.",
         "Amperesand Pte Ltd",
@@ -354,7 +354,7 @@
       "hq": "Dublin, Ireland",
       "ticker": "NYSE: AON",
       "status": "active",
-      "lastUpdated": "2026-09-09",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "aon.com",
         "aon.mediaroom.com",
@@ -627,6 +627,71 @@
       ]
     },
     {
+      "slug": "blackrock",
+      "name": "BlackRock",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "USD 15.34tn asset manager and, since buying Global Infrastructure Partners on 1 Oct 2024, first in infrastructure fundraising (USD 113.4bn); signs for no equipment itself — its GIP-branded funds own or co-own Aligned (with MGX), CyrusOne (with KKR), Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power, and lead the AES take-private (signed, awaiting FERC); chairs the AI Infrastructure Partnership",
+      "hq": "New York, NY, United States",
+      "ticker": "NYSE: BLK",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "BlackRock, Inc.",
+        "BlackRock Inc.",
+        "BlackRock Finance, Inc.",
+        "BlackRock Funding, Inc.",
+        "BlackRock Alternatives",
+        "BlackRock Portfolio Management",
+        "BlackRock Real Assets",
+        "BlackRock Climate Infrastructure",
+        "BlackRock Diversified Infrastructure",
+        "Diversified Infrastructure",
+        "Evergreen Infrastructure Partners",
+        "Global Infrastructure Partners",
+        "GIP",
+        "Global Infrastructure Management",
+        "Global Infrastructure Management, LLC",
+        "GIP Mid-Market Fund",
+        "GIP Transition Fund",
+        "AI Infrastructure Partnership",
+        "AIP",
+        "Global AI Infrastructure Investment Partnership",
+        "GAIIP",
+        "HPS Investment Partners",
+        "HPS",
+        "Highbridge Principal Strategies",
+        "Private Financing Solutions",
+        "Preqin",
+        "iShares",
+        "Aladdin",
+        "ElmTree",
+        "Akaysha Energy",
+        "Akaysha",
+        "Coravel",
+        "Vena Energy",
+        "Atlas Renewable Energy",
+        "ALLETE",
+        "Minnesota Power"
+      ],
+      "domains": [
+        "blackrock.com",
+        "global-infra.com",
+        "hpspartners.com",
+        "preqin.com"
+      ],
+      "srcTotal": 80,
+      "srcFirstPct": 54,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "capital",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
       "slug": "blackstone",
       "name": "Blackstone",
       "categories": [
@@ -636,7 +701,7 @@
       "hq": "New York, NY, United States",
       "ticker": "NYSE: BX",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "blackstone.com",
         "breit.com",
@@ -710,7 +775,7 @@
       "hq": "New York, NY, United States",
       "ticker": "NYSE: BAM",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "brookfield.com",
         "bam.brookfield.com",
@@ -1059,7 +1124,7 @@
       "hq": "Princeton, New Jersey, United States",
       "ticker": "NYSE: CWEN",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "clearwayenergy.com",
         "investor.clearwayenergy.com",
@@ -1084,7 +1149,7 @@
       "tagline": "Dallas single-tenant hyperscale campus developer co-controlled by Brookfield Infrastructure and Ontario Teachers' (October 2023) with KKR at asset level since December 2025 — a manufacturing model (84% offsite Moonraker building, Schneider factory on the Red Oak campus), a serial ABS programme with the first Moody's AAA on hyperscale collateral, Meridian's ~500 MW Mississippi Power contract, and a 2026 consent fight that lost the Prince William Digital Gateway and won a second Red Oak campus 4–1.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-07",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "compassdatacenters.com"
       ],
@@ -1135,7 +1200,7 @@
       "tagline": "Calgary direct-liquid-cooling specialist — cold plates, rack manifolds and 80 kW to 2 MW CDUs on NVIDIA's recommended-vendor list — bought by Ecolab for about USD 4.75bn (closed July 2026) after three years under KKR and Mubadala.",
       "hq": "Calgary, Alberta, Canada",
       "status": "active",
-      "lastUpdated": "2026-09-04",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "coolitsystems.com",
         "44473873.fs1.hubspotusercontent-na1.net",
@@ -1378,7 +1443,7 @@
       "tagline": "KKR- and GIP-owned since 2022 and preparing a reported 2027 IPO — 60+ data centres funded entirely in the securitisation market, three flagship Texas campuses co-located on Calpine plants and an Eolian battery, and a November 2025 cooling failure that took CME's markets down and paused a USD 1.3bn bond sale.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "cyrusone.com"
       ],
@@ -1719,7 +1784,7 @@
       "tagline": "Partners Group-owned (2022) single-tenant hyperscale developer whose '1.8 GW delivered or under development on $16.1B planned' rests on two operating buildings (Mesa 26 MW, Santa Clara 36 MW) plus Sterling, Reno, Culpeper and a 1.1 GW Louisa County land position — financed campus by campus with limited-recourse green loans (USD 1.9bn Mesa, USD 1.5bn Sterling) and a first ABS; Holder builds Mesa; no tenant ever named.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "edgecore.com"
       ],
@@ -1874,7 +1939,7 @@
       "tagline": "The American-built ideologue and energy-plus-load pioneer — CyrusOne DFW7 monetizes a BESS interconnection, Flint Grid is PJM's largest battery in the Columbus AI corridor, and both GWh-class supplier slots are open (to FEOC-clean vendors).",
       "hq": "Burlingame, CA, US",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "eolianenergy.com"
       ],
@@ -1978,7 +2043,7 @@
       "tagline": "Minnesota renewable-infrastructure fund manager (USD 1.5bn regulatory AUM; Fund I USD 504m, Fund II just over USD 1bn) that owns wind, solar and storage, develops through its wholly-owned Lydian Energy platform, and reserved 9.7 GWh of US-made batteries from Fluence and LG Energy Solution Vertech.",
       "hq": "Excelsior, Minnesota, USA",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "excelsiorcapital.com",
         "lydianenergy.com"
@@ -2211,12 +2276,12 @@
       "hq": "Arlington, VA, USA",
       "ticker": "NASDAQ: FLNC",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "fluenceenergy.com"
       ],
-      "srcTotal": 33,
-      "srcFirstPct": 61,
+      "srcTotal": 34,
+      "srcFirstPct": 62,
       "kpiNorm": true,
       "segments": [
         {
@@ -3010,7 +3075,7 @@
       "tagline": "Google-owned since March 2026 (USD 4.75bn plus debt) — the co-located energy-park developer behind the Quantum and Meitner Texas campuses; its grid-tied fleet was carved out as IPX Power",
       "hq": "San Francisco, United States",
       "status": "active",
-      "lastUpdated": "2026-09-12",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "intersect.com",
         "intersectpower.com",
@@ -3188,12 +3253,12 @@
       "tagline": "Hithium's biggest disclosed US customer — 3 GWh safe-harbored (2024), prospectus-named, and the 2.8 GWh Trimount design win — while its own channels stay silent and message domestic content. BlackRock-owned, ~8.8 GWh op/UC/contracted.",
       "hq": "Austin, TX, US",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "jupiterpower.io"
       ],
-      "srcTotal": 21,
-      "srcFirstPct": 29,
+      "srcTotal": 22,
+      "srcFirstPct": 32,
       "kpiNorm": false,
       "segments": [
         {
@@ -3248,6 +3313,58 @@
         },
         {
           "id": "epc-and-construction",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "kkr",
+      "name": "KKR",
+      "categories": [
+        "investor"
+      ],
+      "tagline": "Second in infrastructure fundraising (USD 100.5bn); controls STTGDC (75%, running an HVDC testbed with LITEON and Amperesand), co-owns CyrusOne with GIP, sponsors Helix Digital Infrastructure (>USD 10bn; Vistra its preferred power partner) and owns ContourGlobal (3 GWh CATL order) and Avantus (800 MWh Fluence order); EDF power solutions North America and Sempra Infrastructure Partners signed, not closed",
+      "hq": "New York, NY, United States",
+      "ticker": "NYSE: KKR",
+      "status": "active",
+      "lastUpdated": "2026-09-26",
+      "aka": [
+        "KKR & Co. Inc.",
+        "KKR & Co.",
+        "Kohlberg Kravis Roberts",
+        "Kohlberg Kravis Roberts & Co.",
+        "Global Atlantic",
+        "Global Atlantic Financial Group",
+        "KKR Capital Markets",
+        "Global Infrastructure Investors",
+        "Diversified Core Infrastructure Fund",
+        "KKR Infrastructure Conglomerate",
+        "K-INFRA",
+        "Helix Digital Infrastructure",
+        "Helix Fund",
+        "STTGDC",
+        "STT GDC",
+        "ST Telemedia Global Data Centres",
+        "ContourGlobal",
+        "Zenobē",
+        "Zenobe",
+        "Avantus",
+        "Encavis",
+        "Global Technical Realty",
+        "Cretaceous Bidco",
+        "KKR Lafayette Buyer",
+        "KKR Opal"
+      ],
+      "domains": [
+        "kkr.com",
+        "globalatlantic.com"
+      ],
+      "srcTotal": 76,
+      "srcFirstPct": 49,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "capital",
           "role": "incumbent"
         }
       ]
@@ -3426,7 +3543,7 @@
       "hq": "Sydney, NSW, Australia",
       "ticker": "ASX: MQG",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "macquarie.com",
         "macquariegroup.com",
@@ -3475,7 +3592,7 @@
       "hq": "New York, United States",
       "ticker": "NYSE: MRSH",
       "status": "active",
-      "lastUpdated": "2026-09-09",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "marsh.com",
         "marshmclennan.com",
@@ -3614,7 +3731,7 @@
       "hq": "Menlo Park, CA, USA",
       "ticker": "NASDAQ: META",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "meta.com",
         "fb.com",
@@ -3667,8 +3784,8 @@
       "domains": [
         "microsoft.com"
       ],
-      "srcTotal": 22,
-      "srcFirstPct": 41,
+      "srcTotal": 23,
+      "srcFirstPct": 43,
       "kpiNorm": true,
       "segments": [
         {
@@ -4565,7 +4682,7 @@
       "hq": "Subsidiary of Canadian Solar Inc., Kitchener, Ontario, Canada",
       "ticker": "NASDAQ: CSIQ (parent)",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "recurrentenergy.com",
         "csestorage.com",
@@ -5009,12 +5126,12 @@
       "tagline": "Blue Owl's named-tenant build engine — developer-owner of all three campuses in Amazon's $18B Louisiana program plus the 1 GW+ Stargate 'Project Jupiter'; 13 GW stated pipeline across three ring-fenced regions, ten ABS series since 2019, a reported $30B+ APAC sale in motion.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "stackinfra.com"
       ],
-      "srcTotal": 41,
-      "srcFirstPct": 80,
+      "srcTotal": 42,
+      "srcFirstPct": 79,
       "kpiNorm": false,
       "segments": [
         {
@@ -5231,12 +5348,12 @@
       "hq": "Houston, TX, USA",
       "ticker": "NASDAQ: TLN",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "talenenergy.com",
         "susquehannanuclear.com"
       ],
-      "srcTotal": 81,
+      "srcTotal": 82,
       "srcFirstPct": 51,
       "kpiNorm": true,
       "segments": [
@@ -5596,7 +5713,7 @@
       "hq": "Irving, TX, USA",
       "ticker": "NYSE: VST",
       "status": "active",
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-26",
       "domains": [
         "vistracorp.com",
         "investor.vistracorp.com",
@@ -5784,8 +5901,8 @@
       "domains": [
         "x.ai"
       ],
-      "srcTotal": 21,
-      "srcFirstPct": 38,
+      "srcTotal": 22,
+      "srcFirstPct": 36,
       "kpiNorm": false,
       "segments": [
         {

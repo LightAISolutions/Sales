@@ -302,6 +302,25 @@
    "context": "This dossier positions STACK against Equinix and Digital Realty on the ground that it carries no public-REIT overhead and prices delivery credibility rather than interconnection ecosystems. The characterisation holds and is concrete on Digital Realty's side: REIT status requires distributing at least 90% of taxable income, so it cannot fund a USD 4.25-4.75bn 2026 development programme from retained earnings and instead issues equity and debt and raises third-party funds — including a USD 3.25bn US hyperscale fund closed in March 2026 in which it holds 20% and the management mandate.\n\nThe two compete for the same gigawatt-class named-tenant campuses, with Digital Realty at 310 data centres and approximately 3.1 GW of in-place IT capacity against STACK's platform scale.",
    "source": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926015365/dlr-20251231x10k.htm",
    "status": "active"
+  },
+  {
+   "slug": "blackrock",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-06",
+   "via": "AI Infrastructure Partnership",
+   "note": "Reported only: the BlackRock-chaired AI Infrastructure Partnership was named a suitor for STACK's Asia-Pacific portfolio in June 2026 and, with IFM Investors, reported in exclusive talks on 24 September 2026.",
+   "context": "Bloomberg's September report, relayed by Reuters, says the AIP and IFM group has an exclusive window at up to USD 25bn for STACK's Tokyo, Osaka, Sydney, Melbourne and Johor data centres. Reuters could not verify it, and no party commented. The '~1.1 GW' figure in circulation is RuntimeWire's own sum of the site list. Recorded as 'announced' until Blue Owl, STACK or AIP confirms. If it closed it would be AIP's second investment after Aligned.",
+   "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports"
+  },
+  {
+   "slug": "kkr",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-06",
+   "note": "Reported only: KKR was named among suitors for STACK's Asia-Pacific portfolio in June 2026; by September an AIP- and IFM-backed group was reported in exclusive talks.",
+   "context": "The June 2026 Bloomberg reporting listed KKR with Brookfield, IFM and DigitalBridge as potential suitors. The September report of an exclusive window for the AIP and IFM group does not rule other buyers out. No party has confirmed either report.",
+   "source": "https://www.thestar.com.my/business/business-news/2026/06/25/blackrock-backed-aip-eyes-stack-data-centres"
   }
  ],
  "technicalSpecs": [
@@ -580,6 +599,11 @@
  },
  "sources": [
   {
+   "label": "Bloomberg via The Star (Reuters relay) — BlackRock- and IFM-backed group close in on USD 25bn STACK Asia-Pacific data-centre deal; exclusive talks, unconfirmed",
+   "url": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+   "date": "2026-09-24"
+  },
+  {
    "label": "Amazon — $18B Louisiana investment, third campus in Shreveport; STACK developer-owner of all three",
    "url": "https://www.aboutamazon.com/news/company-news/amazon-data-center-louisiana-new-jobs",
    "date": "2026-08-18"
@@ -780,6 +804,6 @@
    "date": "2026-02-13"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 7
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 8
 }

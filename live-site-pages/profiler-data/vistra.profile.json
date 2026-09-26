@@ -837,6 +837,17 @@
    "note": "Clearway appears alongside Vistra in the Enverus ranking of owners by storage megawatts brought online in 2023 that this dossier already records.",
    "context": "This dossier's Terra-Gen entry lists the rest of that top ten as CIM Group, Plus Power, Clearway, Intersect Power, Key Capture Energy, NV Energy and First Solar. The Clearway comparison is the most instructive of them because the two businesses are structural opposites: Vistra is an integrated merchant whose five-million-customer retail book hedges 43,641 MW of generation, while Clearway sells essentially all of its output on long-term contracts, holds no retail position and is externally managed by a private sponsor with no employees of its own. That is why a single project loss moved Vistra's storage standing sharply while Clearway's contracted fleet earns the same whatever the market does. A ranking co-appearance, recorded as such rather than as a commercial relationship.",
    "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026010952/cwen-20251231.htm"
+  },
+  {
+   "slug": "kkr",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "Up to USD 1.0bn Vistra commitment",
+   "via": "Helix Digital Infrastructure",
+   "note": "Vistra is a founding investor in KKR's Helix Digital Infrastructure and its preferred power provider.",
+   "context": "Vistra's Q2 2026 release: 'Announced Helix Digital Infrastructure alongside KKR, KIA, and NVIDIA with an initial commitment from Vistra of up to $1.0 billion'. The 10-Q splits it into USD 500m initially and USD 500m subject to the Helix Fund meeting commercial power supply milestones for existing generation assets, or at Vistra's election. KKR calls Helix 'a new company' with more than USD 10bn of commitments, and its launch release gives founding investors possible 'priority or first look rights, to provide goods or services to Helix investments'. The KKR dossier (2026-09-26) found no Helix project disclosed by that date.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000017/vistra-20260630xearningsre.htm"
   }
  ],
  "policyExposure": [
@@ -1391,6 +1402,6 @@
    "date": "2026-02-24"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 3
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 4
 }

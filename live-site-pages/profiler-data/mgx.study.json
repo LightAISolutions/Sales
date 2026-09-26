@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "slug": "mgx",
   "title": "MGX — Technology Study Guide",
-  "lastUpdated": "2026-09-05",
+  "lastUpdated": "2026-09-26",
   "sections": [
     {
       "id": "start-here-the-money-behind-the-money",
@@ -101,7 +101,7 @@
       "kind": "prose",
       "read": "6 min",
       "ps": [
-        "Put MGX's holdings on the map this corpus already draws. OpenAI is the tenant of Stargate's Abilene campus; Stargate LLC's equity funders are SoftBank, OpenAI, Oracle and MGX; Vantage builds Stargate's Texas and Wisconsin campuses, and MGX has 'further investments in Vantage … to support the Stargate build-out of 2.3 gigawatts'; Oracle is Stargate's operator and MGX's co-managing investor in the TikTok USDS venture. Aligned leases to hyperscalers and labs; AIP — MGX, BlackRock, GIP, Microsoft, with NVIDIA and xAI as technology partners — owns Aligned; MGX also backs xAI and Anthropic, who lease from landlords like these. NVIDIA sells the chips into all of it, sits inside AIP and inside Campus AI with MGX.",
+        "Put MGX's holdings on the map this corpus already draws. OpenAI is the tenant of Stargate's Abilene campus; Stargate LLC's equity funders are SoftBank, OpenAI, Oracle and MGX; Vantage builds Stargate's Texas and Wisconsin campuses, and MGX has 'further investments in Vantage … to support the Stargate build-out of 2.3 gigawatts'; Oracle is Stargate's operator and MGX's co-managing investor in the TikTok USDS venture. Aligned leases to hyperscalers and labs; AIP — MGX, BlackRock, GIP, Microsoft, with NVIDIA and xAI as technology partners — is named as Aligned's buyer, though the EU merger clearance names GIP's manager and MGX as its joint controllers; MGX also backs xAI and Anthropic, who lease from landlords like these. NVIDIA sells the chips into all of it, sits inside AIP and inside Campus AI with MGX.",
         "This is the {{circular financing}} pattern — the concern the Anthropic dossier quotes NVIDIA's CFO answering ('we know some will call this circular financing. We see it differently'). From one investor's chair it is simply vertical exposure: MGX profits if the lab grows, if the landlord fills, and if the campus is built, and it has reduced the risk that any one link fails for want of capital by funding the others. From the system's chair it means the same balance sheets appear on several sides of the same transaction, and that the demand signal (the lab's commitment) is partly financed by the parties who benefit from it.",
         "Two things to hold. First, MGX's actual percentages are undisclosed at every link — so the circle's thickness cannot be measured from public sources. Second, MGX owns no power: every energy statement it makes runs through AIP's agreements with GE Vernova and NextEra Energy ('all forms of energy'), Aligned's cooling and a 31 MW / 62 MWh battery, or Campus AI's partnership with EDF and RTE. The capital layer touches this corpus's power and storage suppliers only through the landlords it owns."
       ]

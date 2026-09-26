@@ -280,6 +280,16 @@
    "since": "2026-01",
    "scale": "200 MW campus",
    "via": "Chisholm Grid BESS"
+  },
+  {
+   "slug": "blackrock",
+   "type": "investor",
+   "status": "active",
+   "since": "2020-12",
+   "via": "Global Infrastructure Partners",
+   "note": "Eolian is 'a portfolio company of Global Infrastructure Partners (GIP), part of BlackRock', alongside employee equity.",
+   "context": "GIP launched Eolian by buying MAP Energy's renewables business in December 2020, and GIP became part of BlackRock on 1 October 2024. Eolian's homepage now describes it in those words and says it operates wholly owned battery storage projects. Which GIP fund holds it and at what share is not stated in any source read on 2026-09-26. BlackRock also owns Jupiter Power through a legacy BlackRock fund.",
+   "source": "https://www.eolianenergy.com/"
   }
  ],
  "policyExposure": [
@@ -451,6 +461,6 @@
    "url": "https://www.eolianenergy.com/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 7
 }

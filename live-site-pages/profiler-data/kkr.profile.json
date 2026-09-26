@@ -1,0 +1,1300 @@
+{
+ "schemaVersion": 7,
+ "slug": "kkr",
+ "name": "KKR & Co. Inc.",
+ "shortName": "KKR",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.kkr.com/",
+ "headquarters": "30 Hudson Yards, New York, NY 10001, United States",
+ "founded": 1976,
+ "employees": "5,043 (31 December 2025), of whom 1,491 in Insurance (Global Atlantic)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: KKR"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** KKR signs for no equipment itself, but the platforms its funds control now reach every layer this corpus sells into. In data centres: STTGDC in Singapore (75%, completed 2 September 2026; it runs an HVDC testbed with LITEON and the solid-state-transformer start-up Amperesand), CyrusOne (co-owned with BlackRock's GIP since 2022), and Helix Digital Infrastructure, a KKR-sponsored data-centre and power company launched on 11 June 2026 with more than USD 10bn of commitments from founding investors including NVIDIA and Vistra. In power: ContourGlobal, which signed for 3 GWh of CATL battery systems on 10 August 2026, Avantus, which bought an 800 MWh Fluence system in July, and Zenobē and Encavis. Two large power deals were signed but not closed on 26 September 2026: EDF power solutions' US and Canadian business (about USD 4.2bn; 5.6 GW of renewables) and a KKR-led 65% of Sempra Infrastructure Partners. Its 19.9% of AEP's Ohio and Indiana Michigan transmission companies is a minority stake AEP operates.\n\n**BACKGROUND.** Per company filings, the registrant is KKR & Co. Inc. (NYSE: KKR; CIK 0001404912), a Delaware corporation reporting three segments: Asset Management, Insurance (Global Atlantic, wholly owned since 2 January 2024) and Strategic Holdings. Assets under management were USD 796bn and fee-paying AUM USD 638bn at 30 June 2026; the chief financial officer puts infrastructure at about USD 120bn. FY2025 adjusted net income was USD 4.38bn (USD 4.87 per adjusted share); Q2 2026 came in at USD 1.63 per share against LSEG's USD 1.41. Infrastructure Investor's 2026 ranking places KKR second in five-year infrastructure fundraising at USD 100.5bn, behind BlackRock. KKR remains a 'controlled company' until a Sunset Date no later than 31 December 2026, when its founders' Series I control ends.",
+ "ecosystemRole": "We assess KKR as the capital segment's most power-led data-centre investor: its own research argues that 'the ultimate limiting factor for building data centers isn't capital; it's power', and it has built that thesis into its vehicles. Helix names Vistra as its preferred power partner and gives founding investors 'priority or first look rights, to provide goods or services to Helix investments'. The USD 50bn partnership with Energy Capital Partners pairs data centres with generation, and its first campus, built with CyrusOne in Bosque County, Texas, sits beside a Calpine gas plant. KKR, Inc. places no orders. The buyers are the platforms (STTGDC, CyrusOne, Helix, ContourGlobal, Zenobē, Avantus, Encavis, and EDF power solutions North America on closing). Global Atlantic, KKR's insurer, is a second channel of long-dated capital: it buys 50% stakes in operating renewables and lends.",
+ "productsAndServices": [
+  {
+   "name": "Infrastructure funds (Real Assets)",
+   "category": "Private markets — infrastructure",
+   "description": "KKR's infrastructure business, part of the Real Assets line, with about USD 120bn of AUM at 30 June 2026 per CFO Robert Lewin. The flagship Global Infrastructure Investors V closed at USD 19.2bn on 3 August 2026, KKR's largest infrastructure fund. Its listed holdings include EDF power solutions North America, Global Technical Realty, Gulf Data Hub, Sempra Infrastructure, Metronet and FiberCop. Alongside it sit Global Infrastructure Investors IV (USD 16.6bn), Asia Pacific Infrastructure Investors II (USD 6.3bn) and III (USD 5.9bn and still raising), the open-ended Diversified Core Infrastructure Fund (USD 14.9bn of commitments), the Global Climate Transition strategy (USD 3.56bn) and the K-INFRA private-wealth vehicle.",
+   "highlights": [
+    "At 31 March 2026 (June 2026 infrastructure overview): digital infrastructure USD 43bn committed across 26 investments; power infrastructure USD 33bn across 36 investments, both including co-investment and signed-not-closed deals",
+    "Q2 2026 call: 'committed and invested over $75 billion across digital Infrastructure and Power'",
+    "Infrastructure Investor 2026: second at USD 100,475m of five-year infrastructure equity fundraising, behind BlackRock (USD 113,365m) and ahead of Brookfield (USD 99,112m)",
+    "Core infrastructure strategy funds the 19.9% AEP transmission stake, Encavis and Vertical Bridge; the climate strategy holds Zenobē, Avantus, CleanPeak and HMC's platform"
+   ],
+   "positioning": "Second in infrastructure fundraising globally; on the Q2 2026 call Lewin claimed that in Asia 'We are the largest Private Equity player. We're the largest Infrastructure player.' The competitors KKR names in its 10-K are categories, not firms.",
+   "soldThrough": "Closed-end drawdown funds and co-investment for institutions; open-ended core vehicles; K-Series evergreen products for private wealth; Global Atlantic insurance accounts.",
+   "targetSegments": [
+    "Pension funds",
+    "Sovereign wealth funds",
+    "Insurers",
+    "Private-wealth investors"
+   ],
+   "roadmap": "About 30 strategies are in the market over the next 12–18 months, including Global Infrastructure, Core Infrastructure, Global Climate Transition, Asia Infrastructure and K-Series Infrastructure (August 2026 deck)."
+  },
+  {
+   "name": "Helix Digital Infrastructure",
+   "category": "Data centres and power — sponsored company",
+   "description": "A company KKR launched on 11 June 2026 to finance, develop and operate hyperscale data centres together with 'baseload and flexible power generation; transmission and distribution infrastructure; fiber', with 'more than $10 billion in total long-duration capital commitments' from founding investors. Adam Selipsky, a KKR adviser on technology and AI strategy from September 2025, is co-founder and chief executive; KKR's Waldemar Szlezak is chief investment officer. NVIDIA is 'a cornerstone strategic partner' and Vistra 'the preferred power partner'; the Kuwait Investment Authority is an anchor investor.",
+   "highlights": [
+    "Vistra committed up to USD 1.0bn: USD 500m initially and USD 500m more subject to the fund meeting 'commercial power supply milestones for existing generation assets', or at Vistra's election (Vistra 10-Q)",
+    "Founding investors 'may have certain rights, such as priority or first look rights, to provide goods or services to Helix investments'",
+    "CFO Lewin calls it a 'perpetual open-ended vehicle … where KKR will earn management fees and performance fees'; co-CEO Nuttall: 'it's a company, not a fund'",
+    "KKR formed it because 'existing Infrastructure funds carry diversification guidelines that limit how much we could dedicate to a single theme' (Q2 2026 call)",
+    "No project, site, ownership split or target size had been disclosed by 26 September 2026"
+   ],
+   "positioning": "A vehicle built around the supply chain: the chip supplier and a power supplier are investors, and investors get first look at supplying the company's projects.",
+   "soldThrough": "Long-duration commitments from founding investors; KKR's anchor is funded from its balance sheet and other managed vehicles.",
+   "targetSegments": [
+    "Hyperscale and AI data-centre tenants",
+    "Power generation and grid assets serving them"
+   ],
+   "roadmap": "Co-CEO Nuttall declined to give a target size ('tens of billions'). The first project announcement is the next disclosure to watch."
+  },
+  {
+   "name": "KKR–Energy Capital Partners data-centre and power partnership",
+   "category": "Data centres and power — partnership",
+   "description": "A USD 50bn strategic partnership with Energy Capital Partners to invest in data centres together with power generation and transmission, announced on 30 October 2024. KKR funds its side from existing infrastructure and real-estate strategies and insurance accounts. The first project, announced on 30 July 2025, is a 190 MW hyperscale campus in Bosque County, Texas, built as a joint venture with CyrusOne and ECP, co-located with Calpine gas generation and expected to operate from the fourth quarter of 2026.",
+   "highlights": [
+    "Announced 30 October 2024 — the date is confirmed by KKR's release, the Business Wire original and contemporaneous trade press",
+    "Bosque County: 144 MW of initial IT capacity and about USD 4bn of investment per KKR; CyrusOne's own release with Calpine gives USD 1.2bn for the same 190 MW DFW10 campus, and no source read reconciles the two figures",
+    "Separately, KKR and ECP jointly agreed to take over DCC, the Dublin-based fuel and gas distributor, for more than GBP 5.7bn; shareholders approved it on 18 September 2026 (78.1%, per Briefs) and completion is expected in Q1 2027 — signed, not closed, and not described as part of the data-centre partnership"
+   ],
+   "positioning": "Pairs a power-plant owner (ECP) with a data-centre owner (KKR's CyrusOne) so campuses can be sited at generation rather than waiting for the grid.",
+   "soldThrough": "Joint investments by the two sponsors.",
+   "targetSegments": [
+    "Hyperscale tenants",
+    "Gas-fired and other generation serving data centres"
+   ],
+   "roadmap": "Further campuses at generation sites are implied but none beyond Bosque County is named."
+  },
+  {
+   "name": "Data-centre platforms",
+   "category": "Private markets — digital infrastructure",
+   "description": "KKR's owned and co-owned data-centre operators. STTGDC (ST Telemedia Global Data Centres) is 75% KKR and 25% Singtel after a consortium bought the remaining ~82% from Temasek's STT Communications for S$6.6bn (S$13.8bn enterprise value). The deal was signed on 3–4 February 2026 and completed on 2 September 2026; STTGDC has 780 MW operational and 2.3 GW of design capacity. CyrusOne is co-owned with GIP since March 2022 and runs more than 60 data centres in the US, Europe and Japan. Global Technical Realty, the European build-to-suit developer KKR co-founded in 2020, received a further USD 1.5bn equity commitment in January 2026. KKR also holds a stake in Gulf Data Hub, 20% of Singtel's Nxera and, once signed deals complete, 29% of SK Telecom's data-centre and cable spin-off.",
+   "highlights": [
+    "STTGDC: operational capacity up 25% and contracted capacity up 50% since the end of 2025, per its completion release",
+    "STT GDC launched the FutureGrid Accelerator in January 2026, which it calls 'Southeast Asia's first live HVDC-powered AI infrastructure testbed', developed with LITEON and supported by ERI@N and the SST start-up Amperesand; STT GDC 'plans to deploy this technology in future data centres in Singapore', and Amperesand names STT GDC among its SST pilots",
+    "Compass Datacenters: Compass says it signed 'a definite agreement to establish a permanent, long-term capital partnership with KKR'; trade press describes a minority interest in some stabilised facilities; no KKR release and no amount",
+    "Reported only: KKR was among the suitors Bloomberg named for STACK's Asia-Pacific portfolio in June 2026; in September an AIP- and IFM-backed group was reported to hold an exclusive window"
+   ],
+   "positioning": "Controls STTGDC with 75% and co-controls CyrusOne with GIP — in both cases alongside a strategic or sponsor partner rather than alone.",
+   "soldThrough": "Controlling and co-controlling stakes held by infrastructure and real-estate funds.",
+   "targetSegments": [
+    "Hyperscalers",
+    "Enterprise colocation customers"
+   ],
+   "roadmap": "Reuters reported on 10 August 2026 that KKR and GIP are preparing a CyrusOne IPO as early as 2027."
+  },
+  {
+   "name": "Power and energy-transition platforms",
+   "category": "Private markets — generation, storage and grid",
+   "description": "The generation, storage and grid companies KKR's funds control or hold. ContourGlobal was taken private in December 2022 by Cretaceous Bidco, owned by funds advised by KKR, for about USD 2.14bn. On 10 August 2026 it signed with CATL for 3 GWh of four-hour battery systems for projects in the UK, Greece and Chile — 526 containers of 5.64 MWh each. Zenobē, a UK battery and electric-fleet business, is jointly controlled with Infracapital after about GBP 600m from KKR in September 2023. Avantus, a US solar-plus-storage developer with a 94 GWh storage pipeline, has been majority-owned since July 2024. Encavis, the German IPP, was delisted and fully merged into KKR's bid vehicle in September 2025.",
+   "highlights": [
+    "Avantus bought a 200 MW / 800 MWh Fluence Smartstack battery system with turnkey EPC for its Rexford 2 project in Tulare County, California (Fluence release, 13 July 2026)",
+    "Signed, not closed: EDF power solutions North America — about USD 4.2bn plus up to USD 0.39bn; 5.6 GW of net renewable capacity at 31 March 2026 per EDF; FERC Docket EC26-151, comments due 13 October 2026. EDF's unit has a framework with Ford Energy for up to 20 GWh of battery systems from 2028",
+    "Signed, not closed: 65% of Sempra Infrastructure Partners for a KKR-led consortium with CPP Investments (USD 10bn for 45%; USD 31.7bn EV); Sempra expected closing in Q3 2026",
+    "Minority: 19.9% of AEP's Ohio and Indiana Michigan transmission companies with PSP Investments, 50/50 between them (USD 2.82bn, closed 5 June 2025); AEP operates",
+    "Global Atlantic's insurance accounts bought 50% of TotalEnergies' 1.4 GW North American solar and 1.2 GW European portfolios; TotalEnergies operates",
+    "Lender: a USD 200m revolving credit facility from KKR insurance accounts to Powin (October 2024)"
+   ],
+   "positioning": "Two 2026 battery purchases at KKR-controlled platforms are on the record — ContourGlobal's 3 GWh from CATL and Avantus's 800 MWh from Fluence; the AEP stake and the TotalEnergies stakes are the opposite case, where KKR funds and the counterparty operates.",
+   "soldThrough": "Infrastructure, core infrastructure and climate funds; insurance accounts.",
+   "targetSegments": [
+    "Independent power producers",
+    "Battery storage developers",
+    "Transmission owners"
+   ],
+   "roadmap": "EDF power solutions North America and Sempra Infrastructure Partners are expected to close in the second half of 2026."
+  },
+  {
+   "name": "Insurance — Global Atlantic",
+   "category": "Insurance",
+   "description": "KKR's retirement and life insurer, about 60% owned from February 2021 and wholly owned since 2 January 2024, reported as the Insurance segment. Global Atlantic's AUM was USD 220bn at 30 June 2026, and insurance operating earnings were USD 1,109m in FY2025 and USD 549m in H1 2026. It sells annuities through more than 250 banks and broker-dealers and about 200 independent marketing organisations.",
+   "highlights": [
+    "Long-dated policyholder liabilities are invested in long-lived assets, including KKR-originated infrastructure and asset-based finance",
+    "Funds part of the ECP partnership and held the TotalEnergies stakes"
+   ],
+   "positioning": "The balance sheet that lets KKR commit to infrastructure without raising a new fund each time; also the source of trade-press criticism of leverage.",
+   "soldThrough": "Banks, broker-dealers and independent marketing organisations.",
+   "targetSegments": [
+    "Retirement savers",
+    "Institutional reinsurance clients"
+   ],
+   "roadmap": "KKR's 2024 Investor Day targeted doubling Global Atlantic's AUM again."
+  },
+  {
+   "name": "Private equity, credit, capital markets and Strategic Holdings",
+   "category": "Private markets and capital markets",
+   "description": "Private equity AUM was USD 255bn and credit and liquid strategies USD 331bn at 30 June 2026. KKR Capital Markets earned USD 930m of transaction fees in FY2025, 23% of them from infrastructure deals. Strategic Holdings, a segment since 2024, holds long-term controlling stakes in companies and earned USD 162m in FY2025. In this corpus the private-equity side appears as sellers: Global Impact Fund II sold CoolIT to Ecolab for USD 4.75bn, closing 2 July 2026, about 15 times KKR's cost. Strategic Holdings agreed on 31 August 2026 to sell USI, the insurance broker, to Aon for USD 17.0bn.",
+   "highlights": [
+    "CoolIT exit: completed",
+    "USI sale: signed; Aon expects closing in Q4 2026; KKR expects about USD 3.3bn of after-tax proceeds",
+    "Q3 2026 intra-quarter update: more than USD 750m of monetisation income"
+   ],
+   "positioning": "Not an AIDC line; recorded because two of its exits touch covered companies.",
+   "soldThrough": "Drawdown funds, K-Series evergreen vehicles and capital-markets services.",
+   "targetSegments": [
+    "Institutional and private-wealth investors",
+    "Corporate borrowers and issuers"
+   ],
+   "roadmap": "2024 Investor Day targets: more than USD 1 trillion of AUM within five years and Strategic Holdings operating earnings above USD 1bn by 2030."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-09-25",
+   "category": "financial",
+   "headline": "KKR's third-quarter update: more than USD 750m of monetisation income so far in the quarter",
+   "read": "The USI sale adds about USD 3.3bn of after-tax proceeds when it closes, expected in Q4 2026. Q3 results had not been scheduled by 26 September.",
+   "source": "https://media.kkr.com/news-details?news_id=20124e2a-4d79-4e21-9f74-d7c075633af4"
+  },
+  {
+   "date": "2026-09-24",
+   "category": "market",
+   "headline": "Bloomberg reports an AIP- and IFM-backed group in an exclusive window for STACK's Asia-Pacific data centres",
+   "read": "KKR, named as a suitor in June, is outside the reported exclusivity, but 'other interested buyers may still be in the mix'. Reported only.",
+   "source": "https://www.briefs.co/news/blackrock-and-ifm-backed-group-in-exclusive-negotiations-for/"
+  },
+  {
+   "date": "2026-09-02",
+   "category": "ma",
+   "headline": "KKR–Singtel consortium completes the acquisition of STTGDC; KKR holds 75%",
+   "read": "KKR now controls STTGDC with 75% — 780 MW operational and 2.3 GW of design capacity, bought at about S$13.8bn of enterprise value.",
+   "source": "https://www.sttgdc.com/newsroom/kkr-singtel-consortium-completes-acquisition-of-sttgdc-company-launches-refreshed-global-brand-next-phase-of-growth"
+  },
+  {
+   "date": "2026-08-31",
+   "category": "ma",
+   "headline": "Aon agrees to buy USI from KKR and other shareholders for USD 17.0bn",
+   "read": "Signed, not closed (Aon expects Q4 2026). A Strategic Holdings exit outside the AIDC corpus, whose proceeds flow into the next vehicles.",
+   "source": "https://aon.mediaroom.com/2026-08-31-Aon-to-acquire-USI-to-establish-the-premier-U-S-middle-market-platform"
+  },
+  {
+   "date": "2026-08-27",
+   "category": "ma",
+   "headline": "KKR and IMM agree to take 29% and 20% of SK Telecom's data-centre and submarine-cable spin-off (318 MW)",
+   "read": "A signed minority stake — SK Telecom keeps 51% and management control — so it funds rather than controls.",
+   "source": "https://media.kkr.com/news-details?news_id=d43fd044-c7f3-427b-a41e-e2a4e43e9f33"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "regulatory",
+   "headline": "EDF power solutions and KKR Lafayette Buyer file for FERC approval of the North American acquisition (Docket EC26-151)",
+   "read": "Comments are due 13 October 2026, so closing cannot come before FERC acts after that date (inference).",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2026-08-25/pdf/2026-17320.pdf"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "procurement",
+   "headline": "ContourGlobal signs with CATL for 3 GWh of four-hour battery systems for projects in the UK, Greece and Chile",
+   "read": "One of two first-party battery orders this research found in 2026 at KKR-controlled platforms (the other is Avantus's Fluence system) — 526 containers of 5.64 MWh each on CATL LFP cells.",
+   "source": "https://www.contourglobal.com/news/contourglobal-secures-3-gwh-battery-supply-from-catl-for-projects-in-uk-greece-and-chile/"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "partnership",
+   "headline": "NVIDIA signs compute-financing memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilise over USD 500bn",
+   "read": "MOUs 'subject to execution of the final agreements'. KKR's statement calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "partnership",
+   "headline": "Vistra discloses an initial commitment of up to USD 1.0bn to Helix Digital Infrastructure as its preferred power provider",
+   "read": "Half of the commitment is tied to Helix buying power from Vistra's existing plants. KKR's data-centre vehicle is structured to be a power customer of one of its investors.",
+   "source": "https://investor.vistracorp.com/2026-08-07-Vistra-Reports-Second-Quarter-2026-Results"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "financial",
+   "headline": "Global Infrastructure Investors V closes at USD 19.2bn, KKR's largest infrastructure fund",
+   "read": "Its listed commitments include EDF power solutions North America, Global Technical Realty, Gulf Data Hub and Sempra Infrastructure.",
+   "source": "https://media.kkr.com/news-details?news_id=4231602b-5c20-4a0a-9e36-e797836bc1c7"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "financial",
+   "headline": "Q2 2026: adjusted net income USD 1.63 per share against LSEG consensus of USD 1.41; AUM USD 796bn",
+   "read": "A 40% year-on-year rise in ANI per share; management had already withdrawn its formal 2026 ANI guidance of USD 7–8 a share.",
+   "source": "https://ir.kkr.com/media/document/15a25fa9-8226-4da1-9ff3-027b9803d436/assets/KKR_Q226_Earnings_Release.pdf?disposition=inline"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "leadership",
+   "headline": "CyrusOne names John Hatem chief executive, with KKR's Waldemar Szlezak and GIP's Will Brilliant quoted jointly",
+   "read": "The clearest 2026 first-party evidence that the KKR–GIP co-ownership is intact.",
+   "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-names-john-hatem-chief-executive-officer-to-accelerate-its-global-digital-infrastructure-strategy"
+  },
+  {
+   "date": "2026-07-13",
+   "category": "procurement",
+   "headline": "Avantus, majority-owned by KKR since July 2024, buys a 200 MW / 800 MWh Fluence Smartstack system with turnkey EPC for Rexford 2 in California",
+   "read": "A KKR-controlled developer buying US domestic-content batteries; per the Fluence dossier it was the first domestic-content Smartstack sale.",
+   "source": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html"
+  },
+  {
+   "date": "2026-07-02",
+   "category": "ma",
+   "headline": "Ecolab completes its USD 4.75bn acquisition of CoolIT Systems from KKR",
+   "read": "An exit at about 15 times KKR's cost, three years after its 2023 purchase.",
+   "source": "https://www.coolitsystems.com/resources/news/ecolab-has-closed-its-acquisition-of-coolit-systems/"
+  },
+  {
+   "date": "2026-06-30",
+   "category": "ma",
+   "headline": "EDF agrees to sell EDF power solutions' US and Canadian business to KKR for about USD 4.2bn plus up to USD 0.39bn",
+   "read": "Signed, not closed: 5.6 GW of net renewable capacity, plus the unit's Ford Energy framework for up to 20 GWh of battery systems. On closing KKR takes a developer that buys batteries at scale.",
+   "source": "https://www.edf.fr/en/the-edf-group/dedicated-sections/journalists/all-press-releases/edf-announces-the-signature-of-an-agreement-to-sell-to-kkr-edf-power-solutions-in-the-united-states-and-canada"
+  },
+  {
+   "date": "2026-06-11",
+   "category": "partnership",
+   "headline": "KKR launches Helix Digital Infrastructure with more than USD 10bn of commitments; NVIDIA, Vistra and the Kuwait Investment Authority among founding investors",
+   "read": "A single-theme AI-infrastructure company outside KKR's diversified funds, run by Adam Selipsky, with first-look supply rights for its investors.",
+   "source": "https://media.kkr.com/news-details?news_id=6a26acd6-83b8-4377-84be-b1dadb847806"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "policy",
+   "headline": "Senator Warren writes to KKR's co-CEOs about data-centre ownership and electricity costs",
+   "read": "One of four letters (with BlackRock, Blackstone and Brookfield). It cites 'KKR's and GIP's $15 billion acquisition of CyrusOne' and asks who controls each holding. No KKR response was found.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "partnership",
+   "headline": "Compass Datacenters describes a signed 'permanent, long-term capital partnership' with KKR",
+   "read": "Only Compass has published it. Trade press describes a minority interest in some stabilised facilities; no KKR release and no amount.",
+   "source": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/"
+  },
+  {
+   "date": "2026-02-05",
+   "category": "financial",
+   "headline": "FY2025: adjusted net income USD 4.87 per share (USD 5.05 excluding a carried-interest repayment) against a Zacks consensus of USD 5.39",
+   "read": "A miss for the year, and Q4's USD 1.12 missed Zacks's USD 1.16. The shares fell about 3% before the open.",
+   "source": "https://ir.kkr.com/media/document/e3d1dd24-a3a9-4c7d-8466-d0a53595081e/assets/KKR_Q425_Earnings_Release.pdf?disposition=inline"
+  },
+  {
+   "date": "2026-02-03",
+   "category": "ma",
+   "headline": "KKR and Singtel agree to buy the remaining ~82% of STT GDC for S$6.6bn",
+   "read": "Converts a 2024 preferred-share position into control, 75% after closing.",
+   "source": "https://media.kkr.com/news-details?news_id=8afcfdeb-2b04-4a83-8103-7473766336e4"
+  },
+  {
+   "date": "2026-01-26",
+   "category": "project",
+   "headline": "STT GDC launches an HVDC testbed in Singapore with LITEON, ERI@N and Amperesand, and says it plans to deploy the technology in future data centres",
+   "read": "Launched before KKR took control, but it is now a KKR-controlled platform with a live DC-distribution programme and a solid-state-transformer vendor in its pilot — the closest any KKR platform comes to an SST purchase.",
+   "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed"
+  },
+  {
+   "date": "2026-01-07",
+   "category": "financial",
+   "headline": "KKR commits a further USD 1.5bn of equity to Global Technical Realty, with Oak Hill adding about USD 400m",
+   "read": "A European build-to-suit developer KKR co-founded in 2020; KKR's percentage is not disclosed.",
+   "source": "https://oakhill.com/2026/01/07/kkr-and-oak-hill-capital-commit-nearly-2-billion-to-leading-european-data-center-platform-global-technical-realty/"
+  },
+  {
+   "date": "2025-09-23",
+   "category": "ma",
+   "headline": "Sempra agrees to sell 45% of Sempra Infrastructure Partners to KKR affiliates with CPP Investments for USD 10bn (USD 31.7bn EV)",
+   "read": "On closing a KKR-led consortium holds 65%; Sempra expected completion in Q3 2026 and no completion notice had been found by 26 September.",
+   "source": "https://semprainfrastructure.com/news-and-events/news-releases/sempra-announces-strategic-transactions-advancing-goal-of-building-leading-u-s-utility-growth-business/"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that **KKR is a directory of buyers, not a door**, like every investor in this segment: KKR & Co. Inc. places no equipment orders, and the purchase orders come from STTGDC, CyrusOne, ContourGlobal, Zenobē, Avantus and Encavis. Basis: the platforms' own releases, including ContourGlobal's 10 August 2026 CATL order and STTGDC's completion release. A seller finds the buyer through KKR's portfolio and sells to the platform.",
+  "**(High confidence)** We assess that **KKR has built its power thesis into the structure of its vehicles, not only its research**. Its November 2025 insight argues that 'the ultimate limiting factor for building data centers isn't capital; it's power'. Helix names a preferred power partner, ties half of Vistra's commitment to Helix buying power from Vistra's existing plants, and gives founding investors first-look rights to supply its projects. The ECP partnership pairs data centres with generation, and its first campus sits on a Calpine gas plant. For a seller that is a warning: in a Helix project, a founding investor has the first look before an outside supplier.",
+  "**(Moderate confidence)** We assess that **KKR's 2026 moves turned it from a data-centre co-owner into a controlling data-centre owner in Asia and a prospective IPP in North America**. Basis: STTGDC went from a 14% preferred position to 75% control on 2 September; EDF power solutions North America (5.6 GW) and 65% of Sempra Infrastructure Partners are signed. If both close, KKR will control an IPP with a battery framework of up to 20 GWh (Ford Energy) as well as the data centres that such IPPs sell to.",
+  "**(Moderate confidence)** We assess that **Helix is the vehicle to watch and the least disclosed**. More than USD 10bn is committed, but no project, ownership split, control arrangement or target size had been published by 26 September 2026, and KKR's own executives describe it differently ('a perpetual open-ended vehicle' against 'a company, not a fund'). The Q2 2026 call explains why it exists: KKR's diversified funds cannot concentrate enough on one theme.",
+  "**(Low confidence)** We assess that **the 50:50 characterisation of CyrusOne is probably right but unproven**. Every trade account says it, the two sponsors speak jointly, and the European Commission cleared joint control in 2022. But no first-party document read for this dossier states the split, and an IPO filing — reported as possible from 2027 — would be the first to do so.",
+  "**(Moderate confidence)** We assess that **STTGDC is the KKR platform closest to buying medium-voltage DC equipment**. Basis: STT GDC's own January 2026 release describes a live HVDC testbed built with LITEON and supported by Amperesand, and says STT GDC 'plans to deploy this technology in future data centres in Singapore'; Amperesand names STT GDC among its solid-state-transformer pilots. No purchase order has been announced, and the testbed predates KKR's control. It is the one KKR platform where an SST or 800 VDC conversation is already on the record.",
+  "**Collection gaps:** Helix's ownership, control and projects; KKR's percentages in CyrusOne, Zenobē, Global Technical Realty and ContourGlobal today; the amount and structure of the Compass partnership, which KKR has not announced; whether Sempra Infrastructure Partners closed in Q3 as expected; whether EDF's 5.6 GW includes storage, which EDF's release does not say.",
+  "**INDICATORS TO WATCH** — *Q3 2026 results (date not announced; Q3 2025 was reported on 7 November):* capital raised into Helix and Asia Infrastructure III. *First Helix project:* the site, the power source and the supplier list would show whether first-look rights shape procurement. *FERC action in EC26-151 after 13 October:* clears the way to close EDF power solutions North America, putting a battery-buying IPP under KKR. *Sempra Infrastructure Partners closing notice:* moves KKR into majority ownership of LNG and pipeline assets. *CyrusOne IPO filing:* the first public statement of the KKR–GIP split."
+ ],
+ "relationships": [
+  {
+   "slug": "cyrusone",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2022-03",
+   "scale": "~USD 15bn including assumed debt (2022)",
+   "via": "KKR infrastructure and real-estate equity strategies",
+   "note": "Co-owned with BlackRock's GIP since the March 2022 take-private; also KKR's partner on the first campus of the KKR–ECP data-centre and power partnership.",
+   "context": "KKR's release of 25 March 2022 records the completion of CyrusOne's acquisition by funds managed by KKR and Global Infrastructure Partners for about USD 15bn including assumed debt; the European Commission cleared joint control. In 2026 the sponsors still speak jointly: CyrusOne's 30 July release naming John Hatem chief executive quotes KKR's Waldemar Szlezak and GIP's Will Brilliant together. The split is reported as 50:50 but stated in no first-party source read for this dossier.\n\nCyrusOne is also KKR's route into generation-sited campuses: the 190 MW Bosque County, Texas campus announced on 30 July 2025 is a joint venture of CyrusOne and ECP under the KKR–ECP partnership, beside a Calpine gas plant. Reuters reported on 10 August 2026 that the owners are preparing an IPO as early as 2027.",
+   "source": "https://media.kkr.com/news-details?news_id=36b7013b-4269-435a-8bcf-ca4cad3d8d23"
+  },
+  {
+   "slug": "blackrock",
+   "type": "partner",
+   "status": "active",
+   "since": "2022-03",
+   "via": "CyrusOne",
+   "note": "BlackRock's GIP co-owns CyrusOne with KKR; the two are also first and second in Infrastructure Investor's 2026 fundraising ranking.",
+   "context": "The two firms share CyrusOne and compete for most other platforms. Infrastructure Investor's 2026 ranking puts BlackRock first at USD 113,365m and KKR second at USD 100,475m. Both signed NVIDIA's compute-financing memoranda on 10 August 2026 and both received Senator Warren's June 2026 letters. For STACK's Asia-Pacific portfolio, Bloomberg named KKR among the suitors in June; in September it reported an AIP- and IFM-backed group — AIP being the BlackRock-chaired partnership — in an exclusive window.",
+   "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/"
+  },
+  {
+   "slug": "vistra",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-06",
+   "scale": "Up to USD 1.0bn Vistra commitment",
+   "via": "Helix Digital Infrastructure",
+   "note": "Founding investor in KKR's Helix Digital Infrastructure and its 'preferred power partner'.",
+   "context": "Vistra's Q2 2026 release: 'Announced Helix Digital Infrastructure alongside KKR, KIA, and NVIDIA with an initial commitment from Vistra of up to $1.0 billion', with Helix described as Vistra's route to serving data centres as 'preferred power provider'. Vistra's 10-Q splits the commitment into USD 500m up front and USD 500m 'subject to the Helix Fund meeting certain commercial power supply milestones for existing generation assets, or at the Company's election'. On the call Vistra called the role 'a preferred power partner, not a requirement'.\n\nThe arrangement runs both ways: Vistra is an investor in KKR's vehicle, and the vehicle is expected to buy Vistra's power. KKR's release gives founding investors possible 'priority or first look rights, to provide goods or services to Helix investments'.",
+   "source": "https://investor.vistracorp.com/2026-08-07-Vistra-Reports-Second-Quarter-2026-Results"
+  },
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-06",
+   "via": "Helix Digital Infrastructure; compute-financing MOU",
+   "note": "A founding investor and 'cornerstone strategic partner' in Helix Digital Infrastructure, and a counterparty to KKR in NVIDIA's August 2026 compute-financing memoranda.",
+   "context": "KKR's 11 June 2026 launch release names NVIDIA 'a cornerstone strategic partner' of Helix. On 10 August 2026 NVIDIA signed memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn of third-party capital. The release says they 'remain subject to execution of the final agreements' and gives no per-firm allocation. KKR's co-CEOs' statement on the partnership calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "slug": "aep",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2025-06",
+   "scale": "19.9% of two transmission companies for USD 2.82bn (with PSP)",
+   "via": "KKR core infrastructure strategy",
+   "note": "KKR and PSP Investments, in a 50/50 partnership, hold 19.9% of AEP's Ohio and Indiana Michigan transmission companies; AEP keeps control and operates them.",
+   "context": "AEP's release of 5 June 2025: 'AEP, KKR and PSP Investments have completed the transaction … to jointly invest $2.82 billion for a 19.9% equity interest' in the Ohio and Indiana Michigan transmission companies, and 'AEP will continue to operate and maintain these transmission facilities'. The joint KKR and PSP release of 9 January 2025 says the two 'formed a 50/50 strategic partnership' and that 'KKR is funding this investment from its core infrastructure strategy'. The price was about 30 times trailing earnings and the stake about 5% of AEP's transmission rate base. This is a minority, funds-only position: KKR does not sign for AEP's equipment.",
+   "source": "https://www.aep.com/news/stories/view/10263/"
+  },
+  {
+   "slug": "compass-datacenters",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2025-12",
+   "note": "Compass describes a signed 'permanent, long-term capital partnership' with KKR at the level of individual campuses; KKR has published no release.",
+   "context": "Bloomberg reported the agreement on 5 December 2025, and w.media, confirming with Compass, described 'a minority interest in some of its stabilized facilities'. Compass's own page of 16 March 2026 says it 'has signed a definite agreement to establish a permanent, long-term capital partnership with KKR', and its boilerplate now lists KKR beside Ontario Teachers' and Brookfield Infrastructure as backers. The amount and the assets involved are not disclosed first-party. KKR funds stabilised campuses here and does not control the company.",
+   "source": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/"
+  },
+  {
+   "slug": "coolit",
+   "type": "portfolio",
+   "status": "historical",
+   "since": "2023-05",
+   "scale": "USD 4.75bn exit to Ecolab",
+   "note": "Owned by KKR's Global Impact Fund II from 2023 until Ecolab's USD 4.75bn acquisition closed on 2 July 2026.",
+   "context": "KKR's Global Impact Fund II bought a majority of CoolIT in 2023 with Mubadala as minority co-investor. KKR agreed the sale to Ecolab in March 2026 for USD 4.75bn in cash, about 15 times its cost per KKR's materials, and CoolIT confirmed on 2 July 2026 that Ecolab had closed the acquisition. CoolIT is now an Ecolab subsidiary.",
+   "source": "https://www.coolitsystems.com/resources/news/ecolab-has-closed-its-acquisition-of-coolit-systems/"
+  },
+  {
+   "slug": "aon",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-08",
+   "scale": "USD 17.0bn",
+   "note": "Aon agreed on 31 August 2026 to buy USI, the insurance broker, from KKR and other shareholders for USD 17.0bn.",
+   "context": "Aon's release announces 'a definitive agreement to acquire USI from KKR and other shareholders for a total purchase price of $17.0 billion', with closing expected in Q4 2026; Aon priced bonds to fund it in September. KKR's 25 September update expects about USD 3.3bn of after-tax proceeds. The deal is signed, not closed, and is outside the AIDC corpus.",
+   "source": "https://aon.mediaroom.com/2026-08-31-Aon-to-acquire-USI-to-establish-the-premier-U-S-middle-market-platform"
+  },
+  {
+   "slug": "stack-infrastructure",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-06",
+   "note": "Reported only: Bloomberg named KKR among suitors for STACK's Asia-Pacific portfolio in June 2026; in September an AIP- and IFM-backed group was reported to hold an exclusive window.",
+   "context": "Bloomberg reported on 24 June 2026 that Blue Owl was preparing to sell STACK's Tokyo, Osaka, Sydney, Melbourne and Johor data centres and that 'other potential suitors include IFM Investors, KKR & Co and DigitalBridge'. On 24 September Bloomberg reported that an AIP- and IFM-backed group had 'locked in an exclusive window' at about USD 20–25bn, adding that 'other interested buyers may still be in the mix'. No party has confirmed either report.",
+   "source": "https://sg.finance.yahoo.com/news/blackrock-backed-aip-kkr-said-004806698.html"
+  },
+  {
+   "slug": "blackstone",
+   "type": "competitor",
+   "status": "active",
+   "note": "A rival for infrastructure capital and data-centre platforms; eighth in Infrastructure Investor's 2026 ranking against KKR's second.",
+   "context": "Both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters on data-centre ownership. Infrastructure Investor's 2026 ranking puts KKR second at USD 100,475m of five-year infrastructure fundraising and Blackstone eighth.",
+   "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/"
+  },
+  {
+   "slug": "brookfield",
+   "type": "competitor",
+   "status": "active",
+   "note": "Third in Infrastructure Investor's 2026 ranking at USD 99,112m, just behind KKR at USD 100,475m; also a Compass co-owner beside KKR's asset-level partnership.",
+   "context": "Brookfield Infrastructure co-controls Compass Datacenters with Ontario Teachers', and KKR invests at campus level through the partnership Compass announced. Both were named among the suitors for STACK's Asia-Pacific portfolio in June 2026, and both signed NVIDIA's compute-financing memoranda.",
+   "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/"
+  },
+  {
+   "slug": "macquarie",
+   "type": "competitor",
+   "status": "active",
+   "note": "Fourth in Infrastructure Investor's 2026 ranking (USD 87,887m), behind KKR.",
+   "context": "Both firms compete for infrastructure capital and assets globally; the ranking measures infrastructure equity funds closed between 2021 and 2025.",
+   "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/"
+  },
+  {
+   "slug": "fluence",
+   "type": "other",
+   "status": "active",
+   "since": "2026-07",
+   "scale": "200 MW / 800 MWh (Rexford 2)",
+   "via": "Avantus",
+   "note": "Fluence supplies Avantus, a KKR majority-owned developer, with a domestic-content Smartstack system and turnkey EPC for Rexford 2.",
+   "context": "Fluence's release of 13 July 2026 announces that it will provide a US domestic-content Smartstack system and turnkey EPC services for Avantus's 800 MWh Rexford 2 project in Tulare County, California. Avantus has been majority-owned by KKR funds, with EIG, since July 2024. The contract is between Fluence and Avantus, not KKR, so the link is typed 'other'.",
+   "source": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html"
+  },
+  {
+   "slug": "amperesand",
+   "type": "other",
+   "status": "active",
+   "since": "2026-01",
+   "via": "STTGDC",
+   "note": "Amperesand supports STT GDC's HVDC testbed in Singapore and names STT GDC among its solid-state-transformer pilots; STTGDC has been 75% KKR-owned since 2 September 2026.",
+   "context": "STT GDC's 26 January 2026 release describes the FutureGrid Accelerator as 'Southeast Asia's first live HVDC-powered AI infrastructure testbed', 'jointly developed by STT GDC and LITEON, supported by ERI@N and NTU deep-tech spinoff Amperesand', validating at least 325 kW, and says STT GDC 'plans to deploy this technology in future data centres in Singapore'. In a July 2026 interview Amperesand's chief executive named STT GDC among its pilots. The testbed predates KKR's control, and no purchase order has been announced; the link runs through STTGDC, not KKR.",
+   "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Senate Banking Committee oversight — data-centre ownership and retail electricity prices",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-10",
+   "exposure": "Ranking Member Warren's letter to co-CEOs Joseph Bae and Scott Nuttall asks KKR to list all its data-centre holdings, including 'who currently controls the company', and to explain how its footprint in energy supply and demand will not raise costs, with a reply due 27 June 2026. It cites 'KKR's and GIP's $15 billion acquisition of CyrusOne'. Parallel letters went to BlackRock, Blackstone and Brookfield.",
+   "mitigation": "No published KKR response was located.",
+   "source": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf"
+  },
+  {
+   "regime": "FERC Section 203 — acquisitions of public utilities and generators",
+   "status": "in-effect",
+   "effectiveDate": "2026-08-12",
+   "exposure": "KKR's purchase of EDF power solutions' US generators requires FERC authorisation: the joint application of EDF Power Solutions, Inc. and KKR Lafayette Buyer, Inc. (Docket EC26-151) was filed on 12 August 2026 with comments due 13 October 2026. The 19.9% AEP transmission stake also needed FERC and CFIUS approval before it closed on 5 June 2025, with AEP retaining control and operation.",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2026-08-25/pdf/2026-17320.pdf"
+  },
+  {
+   "regime": "NYSE controlled-company exemption and the Sunset Date",
+   "status": "in-effect",
+   "exposure": "KKR is a 'controlled company' because KKR Management LLP, owned by senior employees including the co-founders, holds the Series I preferred stock with more than half the director vote; it uses the compensation- and nominating-committee exemptions. On the Sunset Date — the earlier of 31 December 2026 and six months after the death or disability of both co-founders — Series I control ends, voting moves to one vote per share, and KKR takes control of the carry pool.",
+   "source": "https://ir.kkr.com/media/document/459cd963-f64a-4d4c-b6e1-e8440675b9d8/assets/KKR_10K_12.31.25.pdf?disposition=inline"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Assets under management by line at 30 June 2026",
+   "specs": [
+    {
+     "band": "Scale",
+     "label": "Total AUM / fee-paying AUM",
+     "value": "USD 796bn / USD 638bn (USD 744bn / USD 604bn at 31 December 2025)"
+    },
+    {
+     "band": "Scale",
+     "label": "New capital raised",
+     "value": "USD 34.3bn in Q2 2026; USD 62.1bn in H1 2026; USD 129.4bn in FY2025"
+    },
+    {
+     "band": "Asset Management",
+     "label": "Private equity",
+     "value": "USD 255bn AUM / USD 168bn fee-paying"
+    },
+    {
+     "band": "Asset Management",
+     "label": "Real assets",
+     "value": "USD 211bn AUM / USD 175bn fee-paying (infrastructure about USD 120bn per the CFO)"
+    },
+    {
+     "band": "Asset Management",
+     "label": "Credit and liquid strategies",
+     "value": "USD 331bn AUM / USD 295bn fee-paying"
+    },
+    {
+     "band": "Insurance",
+     "label": "Global Atlantic",
+     "value": "USD 220bn AUM; insurance operating earnings USD 549m in H1 2026"
+    },
+    {
+     "band": "Wealth",
+     "label": "K-Series evergreen products",
+     "value": "USD 42bn"
+    }
+   ],
+   "notes": "Per KKR's Q2 2026 earnings release and call. Infrastructure is reported inside Real Assets; the USD 120bn is Lewin's figure on the call."
+  },
+  {
+   "product": "Infrastructure vehicles",
+   "specs": [
+    {
+     "band": "Closed-end",
+     "label": "Global Infrastructure Investors V",
+     "value": "USD 19.2bn final close (3 August 2026); KKR's largest infrastructure fund"
+    },
+    {
+     "band": "Closed-end",
+     "label": "Global Infrastructure Investors IV",
+     "value": "USD 16.6bn"
+    },
+    {
+     "band": "Closed-end",
+     "label": "Asia Pacific Infrastructure Investors II / III",
+     "value": "USD 6.3bn / USD 5.9bn and still raising"
+    },
+    {
+     "band": "Closed-end",
+     "label": "Global Climate Transition",
+     "value": "USD 3.56bn"
+    },
+    {
+     "band": "Open-ended",
+     "label": "Diversified Core Infrastructure Fund",
+     "value": "USD 14.9bn of commitments; holds the AEP transmission stake, Encavis and Vertical Bridge"
+    },
+    {
+     "band": "Open-ended",
+     "label": "Helix Digital Infrastructure",
+     "value": "More than USD 10bn of long-duration commitments from founding investors (June 2026)"
+    },
+    {
+     "band": "Balance sheet",
+     "label": "Global Atlantic insurance accounts",
+     "value": "50% stakes in TotalEnergies portfolios; part of the ECP partnership; Powin revolver"
+    }
+   ],
+   "notes": "Fund sizes are commitments at 30 June 2026 from KKR's Q2 2026 earnings release, except GII V (final close release) and Helix (launch release)."
+  },
+  {
+   "product": "The platform map — who signs for equipment (§11.1 test)",
+   "specs": [
+    {
+     "band": "Controlled or co-controlled",
+     "label": "STTGDC",
+     "value": "75% KKR, 25% Singtel; completed 2 September 2026; 780 MW operational, 2.3 GW design capacity; HVDC testbed with LITEON and Amperesand since January 2026"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "CyrusOne",
+     "value": "Co-owned with GIP since 25 March 2022; split not stated first-party; more than 60 data centres in the US, Europe and Japan"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "ContourGlobal",
+     "value": "Taken private 20 December 2022; 3 GWh CATL battery-system agreement signed 10 August 2026"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Zenobē",
+     "value": "Joint majority with Infracapital since September 2023; UK grid batteries and electric fleets"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Avantus",
+     "value": "Majority since 30 July 2024, with EIG; US solar-plus-storage, 94 GWh storage pipeline; bought an 800 MWh Fluence system for Rexford 2 (July 2026)"
+    },
+    {
+     "band": "Controlled or co-controlled",
+     "label": "Encavis",
+     "value": "Merged into KKR's bid vehicle September 2025; German wind and solar IPP"
+    },
+    {
+     "band": "Sponsored",
+     "label": "Helix Digital Infrastructure",
+     "value": "KKR-sponsored company; KKR provides the CIO; ownership split and control not disclosed"
+    },
+    {
+     "band": "Pending",
+     "label": "EDF power solutions North America",
+     "value": "100% on closing via KKR Lafayette Buyer; about USD 4.2bn; 5.6 GW net renewable capacity; FERC EC26-151 comments due 13 October 2026"
+    },
+    {
+     "band": "Pending",
+     "label": "Sempra Infrastructure Partners",
+     "value": "KKR-led consortium to hold 65% (with CPP Investments); LNG, pipelines and power; closing expected Q3 2026 per Sempra"
+    },
+    {
+     "band": "Funds only",
+     "label": "Minority, asset-level or lender",
+     "value": "AEP transmission companies (19.9% with PSP; AEP operates); Compass Datacenters (asset-level partnership); Nxera (20%); TotalEnergies portfolios (50%, TotalEnergies operates); Powin (lender)"
+    }
+   ],
+   "notes": "An investor passes the buying-authority test only through a platform it controls. KKR passes through the first six rows; ContourGlobal and Avantus carry first-party battery orders in 2026, and STTGDC runs the only HVDC and SST pilot. Helix's control is undisclosed. KKR would pass through EDF power solutions on closing, and fails through the last row."
+  },
+  {
+   "product": "STTGDC — the 2026 take-private",
+   "specs": [
+    {
+     "band": "Terms",
+     "label": "Stake acquired",
+     "value": "About 81.7% (fully diluted) from STT Communications, a Temasek subsidiary"
+    },
+    {
+     "band": "Terms",
+     "label": "Price",
+     "value": "S$6.6bn in cash — half at closing, half at the earlier of the first anniversary or a change of control"
+    },
+    {
+     "band": "Terms",
+     "label": "Enterprise value",
+     "value": "About S$13.8bn (about USD 10.9bn)"
+    },
+    {
+     "band": "Terms",
+     "label": "Ownership after closing",
+     "value": "KKR 75% / Singtel 25% in Opal Holdco I; Singtel equity-accounts its stake"
+    },
+    {
+     "band": "Terms",
+     "label": "Pre-existing positions",
+     "value": "KKR about 14.1% (redeemable preference shares and warrants from 2024); Singtel about 4.2%"
+    },
+    {
+     "band": "Timing",
+     "label": "Signed / completed",
+     "value": "3–4 February 2026 / 2 September 2026"
+    }
+   ],
+   "notes": "Sources: Singtel's SGX announcement and STT GDC's and KKR's releases of February 2026, and STTGDC's completion release."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Henry R. Kravis",
+   "title": "Co-Founder and Co-Executive Chairman",
+   "photo": "images/execs/kkr-kravis.jpg",
+   "background": [
+    "Co-founded KKR in 1976",
+    "Co-Chief Executive Officer until 2021, then Co-Executive Chairman",
+    "Claremont McKenna (BA 1967); Columbia Business School (MBA 1969)"
+   ]
+  },
+  {
+   "name": "George R. Roberts",
+   "title": "Co-Founder and Co-Executive Chairman",
+   "photo": "images/execs/kkr-roberts.jpg",
+   "background": [
+    "Co-founded KKR in 1976; based in Menlo Park",
+    "Co-Chief Executive Officer until 2021, then Co-Executive Chairman",
+    "Founder and chair of REDF"
+   ]
+  },
+  {
+   "name": "Joseph Y. Bae",
+   "title": "Co-Chief Executive Officer and Director",
+   "photo": "images/execs/kkr-bae.jpg",
+   "background": [
+    "Co-CEO since 2021; Co-President and Co-Chief Operating Officer (2017–2021)",
+    "Built KKR's Asia business",
+    "Joined KKR in 1996; director since July 2017"
+   ]
+  },
+  {
+   "name": "Scott C. Nuttall",
+   "title": "Co-Chief Executive Officer and Director",
+   "photo": "images/execs/kkr-nuttall.jpg",
+   "background": [
+    "Co-CEO since 2021; Co-President and Co-Chief Operating Officer (2017–2021)",
+    "Built KKR's capital markets, capital raising and insurance businesses; sits on Global Atlantic's board",
+    "Joined KKR in 1996; director since July 2017"
+   ]
+  },
+  {
+   "name": "Robert H. Lewin",
+   "title": "Chief Financial Officer",
+   "photo": "images/execs/kkr-lewin.jpg",
+   "background": [
+    "Chief Financial Officer; previously Treasurer and Head of Corporate Development",
+    "Earlier co-head of KKR's credit and capital markets businesses; based in Hong Kong 2006–2010",
+    "Joined KKR in 2004 as a private-equity investor; sits on Global Atlantic's board"
+   ]
+  },
+  {
+   "name": "Raj Agrawal",
+   "title": "Partner and Global Head of Real Assets",
+   "photo": "images/execs/kkr-agrawal.jpg",
+   "background": [
+    "Global Head of Real Assets, which includes infrastructure; previously Global Head of Infrastructure",
+    "Joined KKR in 2006",
+    "Earlier at Warburg Pincus, Thayer Capital and McKinsey"
+   ]
+  },
+  {
+   "name": "Waldemar Szlezak",
+   "title": "Partner and Global Head of Digital Infrastructure; Chief Investment Officer of Helix Digital Infrastructure",
+   "photo": "images/execs/kkr-szlezak.jpg",
+   "background": [
+    "Led KKR's investments in CyrusOne, Global Technical Realty, Metronet and Singtel's data centres",
+    "Joined KKR in 2019 from Soros Fund Management, where he was a senior managing director",
+    "Earlier at Credit Suisse First Boston in M&A"
+   ]
+  },
+  {
+   "name": "Brandon A. Freiman",
+   "title": "Partner and Head of North American Infrastructure",
+   "photo": "images/execs/kkr-freiman.jpg",
+   "background": [
+    "Sits on the investment committees of KKR's global infrastructure, core infrastructure, Asia infrastructure and climate strategies",
+    "Joined KKR in 2007 from Credit Suisse's energy investment-banking group"
+   ]
+  },
+  {
+   "name": "Emmanuel Lagarrigue",
+   "title": "Partner, Global Co-Head of Climate Transition and Head of Sustainability",
+   "photo": "images/execs/kkr-lagarrigue.jpg",
+   "background": [
+    "Joined KKR in 2022",
+    "Founding partner of BeyondNetZero at General Atlantic",
+    "More than twenty years at Schneider Electric, latterly as chief strategy, sustainability and innovation officer"
+   ]
+  },
+  {
+   "name": "Charlie Gailliot",
+   "title": "Partner and Global Co-Head of Climate Transition",
+   "photo": "images/execs/kkr-gailliot.jpg",
+   "background": [
+    "Joined KKR in 2023 after about twenty years at Goldman Sachs, latterly a partner in merchant banking",
+    "Board member of Avantus"
+   ]
+  },
+  {
+   "name": "Vincent Policard",
+   "title": "Partner and Co-Head of European Infrastructure",
+   "photo": "images/execs/kkr-policard.jpg",
+   "background": [
+    "Deals include Zenobē, Encavis and Greenvolt",
+    "Joined KKR in 2012 from Morgan Stanley's infrastructure fund; earlier at BNP Paribas"
+   ]
+  },
+  {
+   "name": "David Luboff",
+   "title": "Partner, Co-Head of KKR Asia Pacific and Head of Asia Pacific Infrastructure",
+   "photo": "images/execs/kkr-luboff.jpg",
+   "background": [
+    "Led the STT GDC investment",
+    "Joined KKR in 2019 after eighteen years at Macquarie"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Total revenues (GAAP)",
+      "actual": "USD 21.88bn",
+      "expected": "",
+      "verdict": "",
+      "result": "KKR's GAAP revenue consolidates Global Atlantic's insurance revenue and is not comparable with a pure manager's.",
+      "kpi": "revenue",
+      "usdMillions": 21880,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to KKR common stockholders",
+      "actual": "USD 3.08bn; diluted EPS USD 3.28",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "net-income",
+      "usdMillions": 3080,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted net income (ANI)",
+      "actual": "USD 4.20bn; USD 4.70 per adjusted share",
+      "expected": "",
+      "verdict": "",
+      "result": "KKR's headline non-GAAP measure."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 3.27bn; USD 3.66 per share",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "AUM / fee-paying AUM; capital raised",
+      "actual": "USD 638bn / USD 512bn; USD 113.6bn raised",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     }
+    ],
+    "commentary": "The comparative year."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Total revenues (GAAP)",
+      "actual": "USD 19.46bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Down from FY2024; GAAP revenue is not the measure KKR manages to.",
+      "kpi": "revenue",
+      "usdMillions": 19460,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to KKR common stockholders",
+      "actual": "USD 2.25bn; diluted EPS USD 2.34",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "net-income",
+      "usdMillions": 2250,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted net income (ANI) per adjusted share",
+      "actual": "USD 4.87 (USD 5.05 excluding a carried-interest repayment); USD 4.38bn in total",
+      "expected": "USD 5.39 (Zacks consensus)",
+      "verdict": "miss",
+      "result": "Q4 2025 came in at USD 1.12 against Zacks's USD 1.16; the shares fell about 3% before the open."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 3.71bn; USD 4.13 per share",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "AUM / fee-paying AUM; capital raised",
+      "actual": "USD 744bn / USD 604bn; USD 129.4bn raised",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     }
+    ],
+    "commentary": "The year KKR closed the AEP transmission stake, announced the first ECP-partnership campus and agreed the Sempra Infrastructure Partners stake."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Adjusted net income (ANI) per adjusted share",
+      "actual": "USD 1.63 (+40% year on year); USD 1.49bn in total",
+      "expected": "USD 1.41 (LSEG, per Reuters)",
+      "verdict": "beat",
+      "result": "Zacks's consensus was USD 1.42. H1 2026 ANI was USD 3.02 per share."
+     },
+     {
+      "name": "Total revenues (GAAP)",
+      "actual": "USD 5.73bn",
+      "expected": "",
+      "verdict": "",
+      "result": "No like-for-like revenue consensus was read.",
+      "kpi": "revenue",
+      "usdMillions": 5730,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to KKR common stockholders",
+      "actual": "USD 0.66bn; diluted EPS USD 0.70",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported.",
+      "kpi": "net-income",
+      "usdMillions": 660,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 1.21bn; USD 1.32 per share",
+      "expected": "",
+      "verdict": "",
+      "result": "Company-reported."
+     },
+     {
+      "name": "AUM / fee-paying AUM; capital raised",
+      "actual": "USD 796bn / USD 638bn; USD 34.3bn raised",
+      "expected": "",
+      "verdict": "",
+      "result": "Real-assets capital raised of USD 15.7bn in the quarter was 'primarily driven by Helix Digital Infrastructure, K-Series Infrastructure, Asia Infrastructure III and Global Infrastructure V'."
+     }
+    ],
+    "commentary": "Management removed its formal 2026 ANI target of USD 7–8 a share in Q1 2026, keeping the fee-related earnings and total operating earnings targets."
+   }
+  ],
+  "commentary": "Company figures from KKR's earnings releases, 10-K and 10-Q. Consensus appears only where a primary account was read: Reuters (LSEG) and Zacks. GAAP figures consolidate Global Atlantic, so ANI and fee-related earnings are the measures KKR and analysts use."
+ },
+ "sources": [
+  {
+   "label": "KKR — third-quarter 2026 intra-quarter monetization activity update",
+   "url": "https://media.kkr.com/news-details?news_id=20124e2a-4d79-4e21-9f74-d7c075633af4",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Briefs (relaying Bloomberg) — BlackRock- and IFM-backed group in exclusive negotiations for STACK's Asia-Pacific data centres",
+   "url": "https://www.briefs.co/news/blackrock-and-ifm-backed-group-in-exclusive-negotiations-for/",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "Briefs — DCC investors approve the GBP 5.75bn sale to KKR and ECP",
+   "url": "https://www.briefs.co/news/dcc-investors-greenlight-5-7b-sale-to-kkr-and-ecp/",
+   "date": "2026-09-18"
+  },
+  {
+   "label": "Insurance Journal — Aon prices bonds to fund the USI acquisition",
+   "url": "https://www.insurancejournal.com/news/national/2026/09/15/885133.htm",
+   "date": "2026-09-15"
+  },
+  {
+   "label": "STTGDC — KKR–Singtel consortium completes acquisition of STTGDC; company launches refreshed global brand",
+   "url": "https://www.sttgdc.com/newsroom/kkr-singtel-consortium-completes-acquisition-of-sttgdc-company-launches-refreshed-global-brand-next-phase-of-growth",
+   "date": "2026-09-02"
+  },
+  {
+   "label": "Aon — to acquire USI from KKR and other shareholders for USD 17.0bn",
+   "url": "https://aon.mediaroom.com/2026-08-31-Aon-to-acquire-USI-to-establish-the-premier-U-S-middle-market-platform",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "KKR — SK Horizon: KKR and IMM to take minority stakes in SK Telecom's data-centre and cable business",
+   "url": "https://media.kkr.com/news-details?news_id=d43fd044-c7f3-427b-a41e-e2a4e43e9f33",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Federal Register — FERC Docket EC26-151-000: EDF Power Solutions, Inc. and KKR Lafayette Buyer, Inc., joint application under Section 203 (comments due 13 October 2026)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-25/pdf/2026-17320.pdf",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Sempra — Ecogas sale; Sempra Infrastructure Partners sale expected to close in the third quarter of 2026",
+   "url": "https://www.prnewswire.com/news-releases/sempra-advances-strategic-capital-recycling-program-with-sale-of-ecogas-302856787.html",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "ContourGlobal — secures 3 GWh battery supply from CATL for projects in the UK, Greece and Chile",
+   "url": "https://www.contourglobal.com/news/contourglobal-secures-3-gwh-battery-supply-from-catl-for-projects-in-uk-greece-and-chile/",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "NVIDIA — partners with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute infrastructure financing platforms (memoranda of understanding)",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "KKR — statement on the NVIDIA compute-financing partnership",
+   "url": "https://media.kkr.com/news-details?news_id=2fdd2c1c-a052-4552-aa58-90d7a3d997e0",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Reuters via Yahoo Finance — CyrusOne plans an IPO as early as 2027 (owners KKR and BlackRock's GIP)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/data-center-operator-cyrusone-plans-100520897.html",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Vistra — reports second-quarter 2026 results (Helix Digital Infrastructure commitment)",
+   "url": "https://investor.vistracorp.com/2026-08-07-Vistra-Reports-Second-Quarter-2026-Results",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "KKR & Co. Inc. — Form 10-Q for the quarter ended 30 June 2026",
+   "url": "https://ir.kkr.com/media/document/9c560b72-6b1b-4aff-affa-01c36a7f1661/assets/KKR_10Q_6.30.26.pdf?disposition=inline",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "KKR — Global Infrastructure Investors V closes at USD 19.2bn",
+   "url": "https://media.kkr.com/news-details?news_id=4231602b-5c20-4a0a-9e36-e797836bc1c7",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "KKR — investor presentation, August 2026",
+   "url": "https://ir.kkr.com/media/document/ecf43357-e2a7-4abd-bd6f-933dd0e62501/assets/KKR_Investor_Presentation_-_August_2026.pdf?disposition=inline",
+   "date": "2026-08"
+  },
+  {
+   "label": "KKR — second-quarter 2026 earnings release",
+   "url": "https://ir.kkr.com/media/document/15a25fa9-8226-4da1-9ff3-027b9803d436/assets/KKR_Q226_Earnings_Release.pdf?disposition=inline",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "KKR — second-quarter 2026 earnings call transcript",
+   "url": "https://ir.kkr.com/media/document/f00cf12c-3dfa-4eda-80fc-c25f5552e5b2/assets/KKR_Q226_Earnings_Transcript.pdf?disposition=inline",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Reuters via KELO — KKR's profit jumps on dealmaking strength (LSEG consensus)",
+   "url": "https://kelo.com/2026/07/30/kkrs-profit-jumps-on-dealmaking-strength-asset-growth/",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — KKR shares gain after second-quarter results",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kkr-co-shares-gain-q2-170200805.html",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "CyrusOne — names John Hatem Chief Executive Officer (KKR and GIP partners quoted)",
+   "url": "https://www.cyrusone.com/resources/press-releases/cyrusone-names-john-hatem-chief-executive-officer-to-accelerate-its-global-digital-infrastructure-strategy",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Power Electronics News — inside Amperesand's SST: a conversation with CEO Brian Dow (pilots named as Port of Singapore, STT GDC and hyperscale AI customers)",
+   "url": "https://www.powerelectronicsnews.com/inside-amperesands-sst-a-conversation-with-ceo-brian-dow/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Fluence — to provide a US domestic-content Smartstack system for Avantus's 800 MWh Rexford 2 project in Southern California",
+   "url": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html",
+   "date": "2026-07-13"
+  },
+  {
+   "label": "CoolIT Systems — Ecolab has closed its acquisition of CoolIT Systems",
+   "url": "https://www.coolitsystems.com/resources/news/ecolab-has-closed-its-acquisition-of-coolit-systems/",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "EDF — signs an agreement to sell EDF power solutions in the United States and Canada to KKR",
+   "url": "https://www.edf.fr/en/the-edf-group/dedicated-sections/journalists/all-press-releases/edf-announces-the-signature-of-an-agreement-to-sell-to-kkr-edf-power-solutions-in-the-united-states-and-canada",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "KKR — to acquire EDF power solutions North America",
+   "url": "https://media.kkr.com/news-details?news_id=ccd64ec4-8642-4400-9619-313f0d81db29",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "EDF — KKR irrevocably undertakes to acquire EDF power solutions in the United States and Canada (5.6 GW net capacity)",
+   "url": "https://www.edf.fr/en/the-edf-group/dedicated-sections/journalists/all-press-releases/edf-announces-the-signature-of-an-agreement-to-sell-edf-power-solutions-in-the-united-states-and-canada",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "Bloomberg via Yahoo Finance — BlackRock-backed AIP, KKR said to weigh bids for STACK's Asia data centres",
+   "url": "https://sg.finance.yahoo.com/news/blackrock-backed-aip-kkr-said-004806698.html",
+   "date": "2026-06-24"
+  },
+  {
+   "label": "KKR — launches Helix Digital Infrastructure",
+   "url": "https://media.kkr.com/news-details?news_id=6a26acd6-83b8-4377-84be-b1dadb847806",
+   "date": "2026-06-11"
+  },
+  {
+   "label": "KKR — infrastructure overview presentation (Morgan Stanley conference)",
+   "url": "https://ir.kkr.com/media/document/12b28c27-4df4-4a93-8f2c-237482f83814/assets/KKR_Investor_Presentation_-_June_2026.pdf?disposition=inline",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "US Senate Committee on Banking (Ranking Member Warren) — letter to KKR's co-CEOs on data-centre ownership and electricity costs",
+   "url": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Infrastructure Investor 100 (2026) — ranking by five-year infrastructure equity fundraising",
+   "url": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "EDF power solutions North America — five-year framework with Ford Energy for up to 20 GWh of DC Block battery systems (up to 4 GWh a year; deliveries from 2028)",
+   "url": "https://www.edf-re.com/press-release/ford-energy-and-edf-power-solutions-north-america-announce-five-year-framework-agreement-for-up-to-20-gwh-of-battery-energy-storage-systems/",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "KKR — to sell CoolIT Systems to Ecolab for USD 4.75bn",
+   "url": "https://media.kkr.com/news-details?news_id=9637102b-d93d-4e7e-b92b-53eb925d17a7",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Ecolab — to acquire CoolIT Systems for USD 4.75bn",
+   "url": "https://investor.ecolab.com/news/news-details/2026/Ecolab-to-Acquire-CoolIT-Systems-a-Global-Leader-in-Advanced-Liquid-Cooling-for-Next-Gen-AI-Data-Centers/default.aspx",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Compass Datacenters — a permanent, long-term capital partnership with KKR",
+   "url": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "KKR & Co. Inc. — Form 10-K for fiscal year 2025",
+   "url": "https://ir.kkr.com/media/document/459cd963-f64a-4d4c-b6e1-e8440675b9d8/assets/KKR_10K_12.31.25.pdf?disposition=inline",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "KKR — fourth-quarter and full-year 2025 earnings release",
+   "url": "https://ir.kkr.com/media/document/e3d1dd24-a3a9-4c7d-8466-d0a53595081e/assets/KKR_Q425_Earnings_Release.pdf?disposition=inline",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — KKR shares fall after fourth-quarter results",
+   "url": "https://finance.yahoo.com/news/kkr-co-shares-fall-q4-162600128.html",
+   "date": "2026-02-05"
+  },
+  {
+   "label": "Singtel — SGX announcement: consortium with KKR to acquire STT GDC",
+   "url": "https://links.sgx.com/1.0.0/corporate-announcements/Y85UPC7OFANTRQ15/874052_20260204-ann.pdf",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "STT GDC — KKR-led consortium to fully acquire STT GDC at S$13.8bn enterprise value",
+   "url": "https://www.sttgdc.com/newsroom/kkr-led-consortium-to-fully-acquire-stt-gdc-13.8-billion-enterprise-value",
+   "date": "2026-02-04"
+  },
+  {
+   "label": "KKR — KKR and Singtel to acquire the remaining stake in STT GDC",
+   "url": "https://media.kkr.com/news-details?news_id=8afcfdeb-2b04-4a83-8103-7473766336e4",
+   "date": "2026-02-03"
+  },
+  {
+   "label": "STT GDC — launches Southeast Asia's first HVDC-powered AI infrastructure testbed (FutureGrid Accelerator, with LITEON, ERI@N and Amperesand)",
+   "url": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+   "date": "2026-01-26"
+  },
+  {
+   "label": "Oak Hill Capital — KKR and Oak Hill commit nearly USD 2bn to Global Technical Realty",
+   "url": "https://oakhill.com/2026/01/07/kkr-and-oak-hill-capital-commit-nearly-2-billion-to-leading-european-data-center-platform-global-technical-realty/",
+   "date": "2026-01-07"
+  },
+  {
+   "label": "w.media — KKR to acquire a stake in Compass Datacenters' operating portfolio",
+   "url": "https://w.media/kkr-to-acquire-stake-in-compass-datacenters-operating-portfolio/",
+   "date": "2025-12-12"
+  },
+  {
+   "label": "KKR — third-quarter 2025 earnings release",
+   "url": "https://ir.kkr.com/media/document/d5a1745d-7f75-4d4e-b0ad-a4a02ef6ffee/assets/KKR_Q325_Earnings_Release.pdf?disposition=inline",
+   "date": "2025-11-07"
+  },
+  {
+   "label": "KKR — insight: Beyond the Bubble — why AI infrastructure will compound",
+   "url": "https://www.kkr.com/insights/ai-infrastructure",
+   "date": "2025-11"
+  },
+  {
+   "label": "Sempra Infrastructure — Sempra announces the sale of a 45% interest in Sempra Infrastructure Partners to a KKR-led consortium",
+   "url": "https://semprainfrastructure.com/news-and-events/news-releases/sempra-announces-strategic-transactions-advancing-goal-of-building-leading-u-s-utility-growth-business/",
+   "date": "2025-09-23"
+  },
+  {
+   "label": "Latham & Watkins — advises KKR on the squeeze-out at Encavis",
+   "url": "https://www.lw.com/en/news/2025/09/latham-watkins-advises-kkr-on-squeeze-out-at-encavis",
+   "date": "2025-09-12"
+  },
+  {
+   "label": "KKR — ECP and KKR announce a Bosque County, Texas data-centre campus with CyrusOne",
+   "url": "https://media.kkr.com/news-details?news_id=05131f1d-9cac-4cc4-afb2-19a83bd4cee3",
+   "date": "2025-07-30"
+  },
+  {
+   "label": "AEP — AEP, KKR and PSP Investments complete the transmission minority-stake transaction",
+   "url": "https://www.aep.com/news/stories/view/10263/",
+   "date": "2025-06-05"
+  },
+  {
+   "label": "KKR — fourth-quarter and full-year 2024 earnings release",
+   "url": "https://ir.kkr.com/media/document/303ebb79-89b5-4026-8422-130803394f8d/assets/KKR%20Q424%20Earnings%20Release.pdf?disposition=inline",
+   "date": "2025-02-04"
+  },
+  {
+   "label": "PSP Investments — KKR and PSP Investments acquire a minority stake in two AEP transmission companies (50/50 partnership)",
+   "url": "https://www.investpsp.com/en/news/kkr-and-psp-investments-acquire-minority-stake-in-two-american-electric-power-transmission-companies/",
+   "date": "2025-01-09"
+  },
+  {
+   "label": "AEP — definitive agreement for a KKR and PSP Investments partnership to acquire 19.9% of the Ohio and Indiana Michigan transmission companies",
+   "url": "https://www.aep.com/news/stories/view/9948/",
+   "date": "2025-01-09"
+  },
+  {
+   "label": "KKR — KKR and Energy Capital Partners announce a USD 50bn strategic partnership for data centres and power",
+   "url": "https://media.kkr.com/news-details?news_id=8f924dd6-41ea-480d-9a96-d854c7232bbc",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "ESG Today — KKR and ECP launch a USD 50bn data-centre and power generation investment partnership",
+   "url": "https://www.esgtoday.com/kkr-ecp-launch-50-billion-data-center-and-power-generation-investment-partnership/",
+   "date": "2024-10-30"
+  },
+  {
+   "label": "Avantus — completion of the acquisition by KKR and a USD 522m development facility",
+   "url": "https://avantus.com/news/avantus-announces-completion-of-acquisition-by-kkr-and-closing-of-usd522-million-development-facility",
+   "date": "2024-07-30"
+  },
+  {
+   "label": "Zenobē — new investment from KKR and Infracapital",
+   "url": "https://www.zenobe.com/news-and-events/zenobe-new-investment-kkr-infracapital/",
+   "date": "2023-09-07"
+  },
+  {
+   "label": "KKR — KKR and GIP complete the acquisition of CyrusOne",
+   "url": "https://media.kkr.com/news-details?news_id=36b7013b-4269-435a-8bcf-ca4cad3d8d23",
+   "date": "2022-03-25"
+  },
+  {
+   "label": "Global Infrastructure Partners — KKR and GIP complete the acquisition of CyrusOne",
+   "url": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/",
+   "date": "2022-03-25"
+  },
+  {
+   "label": "ContourGlobal Limited — Annual Report and Financial Statements for the year ended 31 December 2022 (acquisition by Cretaceous Bidco, owned by funds advised by KKR, completed 20 December 2022)",
+   "url": "https://www.contourglobal.com/wp-content/uploads/2025/04/contourglobal_limited_annual_report_and_financial_statements_-_31_december_2022_signed_pwc.pdf"
+  },
+  {
+   "label": "KKR — people: Raj Agrawal, Global Head of Real Assets",
+   "url": "https://www.kkr.com/about/our-people/raj-agrawal"
+  },
+  {
+   "label": "KKR — people: Waldemar Szlezak, Global Head of Digital Infrastructure",
+   "url": "https://www.kkr.com/about/our-people/waldemar-szlezak"
+  },
+  {
+   "label": "KKR — people: Robert Lewin, Chief Financial Officer",
+   "url": "https://www.kkr.com/about/our-people/robert-lewin"
+  },
+  {
+   "label": "KKR — people: Brandon A. Freiman, Head of North American Infrastructure",
+   "url": "https://www.kkr.com/about/our-people/brandon-a-freiman"
+  },
+  {
+   "label": "KKR — people: Emmanuel Lagarrigue, Global Co-Head of Climate Transition",
+   "url": "https://www.kkr.com/about/our-people/emmanuel-lagarrigue"
+  },
+  {
+   "label": "KKR — people: Charlie Gailliot, Global Co-Head of Climate Transition",
+   "url": "https://www.kkr.com/about/our-people/charlie-gailliot"
+  },
+  {
+   "label": "KKR — people: Vincent Policard, Co-Head of European Infrastructure",
+   "url": "https://www.kkr.com/about/our-people/vincent-policard"
+  },
+  {
+   "label": "KKR — people: David Luboff, Co-Head of KKR Asia Pacific and Head of Asia Pacific Infrastructure",
+   "url": "https://www.kkr.com/about/our-people/david-luboff"
+  },
+  {
+   "label": "KKR — people: Henry R. Kravis, Co-Founder and Co-Executive Chairman",
+   "url": "https://www.kkr.com/about/our-people/henry-kravis"
+  },
+  {
+   "label": "KKR — people: George R. Roberts, Co-Founder and Co-Executive Chairman",
+   "url": "https://www.kkr.com/about/our-people/george-roberts"
+  },
+  {
+   "label": "KKR — people: Joseph Y. Bae, Co-Chief Executive Officer",
+   "url": "https://www.kkr.com/about/our-people/joseph-bae"
+  },
+  {
+   "label": "KKR — people: Scott C. Nuttall, Co-Chief Executive Officer",
+   "url": "https://www.kkr.com/about/our-people/scott-nuttall"
+  },
+  {
+   "label": "Global Atlantic — leadership",
+   "url": "https://www.globalatlantic.com/leadership"
+  },
+  {
+   "label": "EDGAR full-text search — KKR & Co. Inc. (CIK 0001404912) filing metadata",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22KKR%20%26%20Co.%20Inc.%22&forms=10-K"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

@@ -1,0 +1,1325 @@
+{
+  "schemaVersion": 7,
+  "slug": "edgecore",
+  "name": "EdgeCore Digital Infrastructure (EdgeCore Internet Real Estate, LLC)",
+  "shortName": "EdgeCore",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://edgecore.com/",
+  "headquarters": "Denver, Colorado, USA (999 17th Street, Suite 200); Northern Virginia office in Sterling, VA",
+  "founded": 2018,
+  "employees": "Not disclosed; 'Employee growth 145%' in 2025 and workforce 'more than doubled' since October 2023 (January 2026 release)",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: EdgeCore Digital Infrastructure is a Denver-based single-tenant hyperscale developer owned since November 2022 by Partners Group 'on behalf of its clients' (initial commitment up to USD 1.2 billion; a further USD 1.9 billion equity round in September 2024 with Partners Group remaining majority investor), which entered 2026 claiming 'more than 1.8 gigawatts of capacity delivered or under development' on 'USD 5.9 billion' of committed equity and debt and 'USD 16.1 billion of planned investment' — figures its own website has since moved to 2.27+ GW and USD 7.4 billion — while the independently verifiable operating base is two buildings (Mesa PH01, 26 MW; Santa Clara SV01, 36 MW) and every tenant is unnamed.\n\nBACKGROUND. Formed 14 February 2018 by Mount Elbert Capital Partners, GIC (lead anchor investor) and OPTrust with 'over US$800 million of equity' under founder-CEO Tom Ray (ex-CoreSite); sold to Partners Group on 11 November 2022 with a 476 MW portfolio across Phoenix, Reno, Santa Clara and Ashburn (price to the sellers undisclosed). Lee Kestler (ex-Vantage CCO, ex-DuPont Fabros) became CEO on 9 March 2023 and refocused the company in October 2023 on 'single tenant data centers' for hyperscalers and AI leaders under the 'Designed for Density' brand: 300+ MW campus designs, 36–144 MW buildings, rack densities 'well over 50 kW' with direct-to-chip liquid cooling readiness, and air-cooled closed-loop chilled water with water usage effectiveness 'below .01 L/kWh'. Six markets per the company: Mesa, AZ (496 MW, five buildings, SRP; Holder Construction as GC per third parties), Reno/Tahoe-Reno Industrial Center, NV (216 MW, three buildings, NV Energy), Santa Clara, CA (72 MW, two buildings, Silicon Valley Power), Sterling, VA (114 MW, two fully leased buildings, Dominion Energy, USD 1.5 billion of construction loans in April 2026), Culpeper, VA (196 MW, capacity from mid-2029, Rappahannock Electric Cooperative) and Louisa County, VA (the 'gigascale' Shannon Hill site: 1.1+ GW, 697 acres bought for USD 42 million, 'USD 17B+', by-right zoning). Capital is raised at project level as green limited-recourse term loans (USD 1.9 billion Mesa, USD 440 million Santa Clara, USD 1.1 billion Reno and Ashburn in 2024; USD 1.5 billion Sterling in 2026) plus a first USD 235 million ABS on the stabilized PH01 lease (July 2025). Collection gap: no tenant, no revenue, no headcount, no first-party GC and no ESG report; Partners Group's 2025 annual report mentions EdgeCore only as an illustrative label.",
+  "ecosystemRole": "A sponsor-owned build-to-suit landlord for hyperscalers, and the source of the '1.8 GW delivered or under development on $16.1B planned' figure the coverage plan attached to the wrong row. EdgeCore is the developer-customer of Holder Construction on the Mesa and Santa Clara campuses, a Dominion Energy large-load customer at Sterling, an SRP customer whose Mesa expansion was redrawn around an SRP switchyard, and — with the August 2026 Ratepayer Protection Pledge — a self-declared 'pay for our own power delivery' developer. It competes for the same single-tenant hyperscale leases as Vantage, STACK, QTS, Aligned and Compass, and its executives are drawn from Vantage, QTS, STACK, DuPont Fabros, CoreSite and Digital Realty.",
+  "productsAndServices": [
+    {
+      "name": "Single-tenant hyperscale campuses — 'Designed for Density' (the core product)",
+      "category": "Wholesale data-center development, ownership and operation",
+      "description": "EdgeCore describes itself as 'a wholesale data center developer, owner and operator' offering 'both ready-for-occupancy and build-to-suit data center campuses that are designed for density'. Since the October 2023 repositioning it has 'concentrated exclusively on meeting the requirements of hyperscalers and leaders in the AI revolution'; Kestler in January 2026: 'Our focus is singular: build high-density, scalable, single tenant data centers with an absolute certainty of execution.' The campus standard is a '300+ MW design' with 'capacity of up to 1.2GW on a single campus'; buildings run '36-144 MW' (Data Center Frontier, 2023), with 'rack densities well over 50 kW' and designs that 'accommodate direct-to-chip liquid cooling'. Every campus page states a 'one building, one customer' model; the company says it 'has never missed a customer milestone' and met '10 out of 10' 2025 targets.",
+      "highlights": [
+        "Portfolio per the six campus pages (September 2026): Mesa 496 MW critical IT load / 5 data centers / 84 acres; Reno 216 MW / 3 / 56 acres; Silicon Valley 72 MW / 2 / 12 acres; Ashburn (Sterling) 114 MW / 2 / 17 acres; Culpeper 196 MW / 2 / 93 acres; Louisa 1,100+ MW / 6 / 697 acres — a sum of about 2.19 GW, consistent with the homepage's '2.27+ GW'.",
+        "January 2026 milestone release: 'more than 1.8 gigawatts of capacity delivered or under development across its U.S. platform'; 'committed more than $5.9 billion in equity capital and debt'; 'backed by $16.1 billion of planned investment'; '7 million sq. ft.'; peak construction workforce 'more than 3500 skilled tradespeople'; '9M+' manhours.",
+        "Delivered and leased buildings that third parties can verify: PH01 Mesa ('26 MW IT capacity, fully leased to single hyperscale tenant', securitized July 2025) and SV01 Santa Clara (36 MW; ribbon-cutting 10 September 2025 with Holder Construction's president present). AS01/AS02 Sterling are 'fully leased' with occupancy targeted November 2026 and July 2027; PH02 (868,000 sq ft) topped out December 2024; Reno's first of three 72 MW buildings is under construction.",
+        "Contract form per Partners Group's investment case: 'The Company signs long-term contracts with large Tier 1 data center users'; 'customers charged a price based on their contracted power capacity, leading to highly visible cashflows'. EdgeCore publishes no lease term, rent or tenant name; Virginia Business (April 2026): the company 'declined to identify tenants or provide projected total construction cost'."
+      ],
+      "positioning": "Six self-stated differentiators: 'Prepared for Growth' (300+ MW campus design), 'Near-term Availability', 'Industry Experience', 'Pragmatic Designs', 'Timely Delivery', 'Layers of Security'. The claim that a hyperscale building 'typically requires 36+ months from groundbreaking to activation' is the yardstick EdgeCore says it beats through pre-permitted sites, secured power and repeatable designs. Named competitors: none on any first-party page; the executive bench comes from Vantage (Kestler, Conner, Thompson), QTS (Heiden), STACK (Thissen), DuPont Fabros, CoreSite and Digital Realty, which is the peer set in practice. The Culpeper site sits 0.52 miles from STACK's NVA10 (datacenterHawk).",
+      "soldThrough": "Direct long-term leases to hyperscalers ('capacity@edgecore.com'); no broker or JV channel is described. Leased buildings are then financed with limited-recourse green loans and, once stabilized, securitized.",
+      "targetSegments": [
+        "'the world's largest cloud and internet companies' (boilerplate)",
+        "Hyperscalers and 'leaders in the AI revolution' taking whole buildings",
+        "Large-scale AI deployments requiring direct-to-chip liquid cooling"
+      ],
+      "roadmap": "AS01 occupancy November 2026 and AS02 July 2027 (April 2026 release); Reno completion 'as early as 2026' with three 72 MW buildings; PH02/PH03 completions '2025 and 2026'; Culpeper 'capacity available beginning in mid 2029' (scaled down from 216/432 MW and an early-2028 target in the 2024 announcement); Louisa construction start not announced, water infrastructure by mid-2026 per local reporting; 'plans to expand into new regions in 2026 and beyond' with no site named."
+    },
+    {
+      "name": "Gigascale campuses and powered-land pre-positioning (Louisa County, Mesa expansion)",
+      "category": "Land, power and entitlement banking",
+      "description": "EdgeCore's 'Gigascale' page defines the product as '1+ gigawatt (1,000+ megawatts) of total power capacity' on 'pre-permitted sites, secured gigawatt power allocations, and repeatable designs'. Kestler (April 2026): 'EdgeCore deploys equity capital to preposition large land parcels, energy delivery assets and construction labor resources where we anticipate strong customer demand.' The flagship is the Shannon Hill Regional Business Park in Louisa County, Virginia — '1.1+ GW critical IT load', '697 acres' bought from the county's industrial development authority for 'USD 42 million' (about USD 60,000 an acre per local reporting), by-right zoning from a 2019 rezoning, 'USD 17B+' of planned investment, power from Rappahannock Electric Cooperative 'and affiliate Hyperscale Energy'.",
+      "highlights": [
+        "Louisa: six data centers; '3.1M' sq ft on the homepage and location page against '3.9+ million' on the gigascale page and the June 2025 release — unreconciled; 'No state incentives provided for this project' (Virginia Business); a county supervisor speculated in June 2026 that EdgeCore might bring 'smaller gas plants or something, maybe small modular reactors' — EdgeCore did not respond.",
+        "Mesa expansion: 43.87 acres bought in May 2025 for USD 43.95 million from a Brookfield Properties affiliate, taking the campus to '450+ MW'; the expansion plan was cut in March 2026 from 2.1 million sq ft and three buildings to 1,236,960 sq ft and two buildings to accommodate an SRP switchyard expansion.",
+        "Culpeper: 120 acres in the Culpeper Technology Zone bought July 2024 (the campus page now shows 93 acres); 'not yet been commissioned or leased' and no on-site substation (datacenterHawk); regional opposition to the seven-campus Technology Zone and the Valley Link 765 kV line does not name EdgeCore.",
+        "Dropped and slipped sites: a Richardson/Dallas campus planned in 2018 ('up to 165 MW') disappears from every post-2022 portfolio list; Reno moved from a 136-acre, 400+ MW airport-adjacent site (August 2023 release) to a 56-acre, 216 MW site at the Tahoe-Reno Industrial Center without explanation, and its first building was still under construction in January 2026 against a 'late 2025' target."
+      ],
+      "positioning": "Pre-positioned land with secured utility allocations is EdgeCore's answer to the 36-month build cycle; the risk is that 'delivered or under development' counts land-stage megawatts — the 1.8 GW figure only reconciles if Louisa's 1.1 GW and unleased Culpeper are included.",
+      "soldThrough": "Sites are held on the company's balance sheet with sponsor equity and leased building-by-building; no powered-land sales are recorded.",
+      "targetSegments": [
+        "Hyperscale tenants seeking 1 GW+ single-campus programmes",
+        "Virginia and Southwest markets 60–85 miles from constrained hubs (Ashburn, Phoenix)"
+      ],
+      "roadmap": "Louisa buildings planned 2028–2033 per directory listings (unverified); performance agreement approved by the county board on 1 December 2025 per search results (not fetched)."
+    },
+    {
+      "name": "Water-neutral, air-cooled design standard (closed-loop chilled water, WUE below 0.01 L/kWh)",
+      "category": "Facility design and sustainability",
+      "description": "Every campus page repeats the same thermal claim: 'air-cooled designs that include ultra-efficient close-looped chilled water systems' with water usage effectiveness 'below .01 L/kWh'; Silicon Valley adds 'PUE <1.3' and 'generator-backed air cooling and adiabatic dry coolers'; DLR Group's project page for Mesa Building 1 states 'PUE <1.25', '68 highly efficient chilled water Computer Room Air Handlers per building' and a 'non-raised floor system'. Mesa is described as a 'LEED-designed, water-neutral campus', where water-neutral means restoring 'water volume equal to withdrawals into geographically relevant watersheds' through an SRP partnership 'expected to achieve water-neutral status on the Mesa campus through 2036' (USD 288,419 and USD 280,560 contributed). Ashburn buildings are 'structurally engineered to accommodate liquid to liquid loads, including NVIDIA VR racks', with 'mechanical galleries sized for variable water-to-air cooling ratios'.",
+      "highlights": [
+        "Certifications: Green Globes for Existing Buildings (PH01, 2023); 'Designed to Earn ENERGY STAR' (PH02, PH03); 'LEED BD+C v4 Silver standards'; member of the Data Center Coalition and iMasons Climate Accord.",
+        "MIT Technology Review (May 2025) independently confirms the Reno design 'will rely on an \"air-cooled closed-loop chiller\" that doesn't require water evaporation for cooling'.",
+        "Third-party gap: no independent source describes deployed liquid cooling at any EdgeCore building; the 2023–2024 building spec was '30-40 kW per rack' (air-cooling range) and the 50 kW+ / direct-to-chip language is design intent.",
+        "No ESG or sustainability report exists on the site; PUE and WUE figures are unaudited design values."
+      ],
+      "positioning": "Water is the siting constraint in Arizona, Nevada and rural Virginia; a closed-loop, near-zero-WUE design is what lets EdgeCore build in Mesa and at TRIC, where regional water opposition (Pyramid Lake Paiute Tribe, Basin and Range Watch) targets evaporative designs.",
+      "soldThrough": "Internal design standard applied to every campus; not sold separately.",
+      "targetSegments": [
+        "EdgeCore's own campuses"
+      ],
+      "roadmap": "Liquid-to-liquid capability at Ashburn AS01/AS02 (occupancy from November 2026)."
+    },
+    {
+      "name": "Project-level green financing and sponsor equity",
+      "category": "Capital programme",
+      "description": "EdgeCore finances each leased campus with limited-recourse senior secured term loans structured as green loans (ING as green-loan structuring agent in every deal), refinances stabilized leases through securitization, and takes equity from Partners Group's client programmes. 2024: 'USD 1.9 billion' for Mesa (MUFG administrative agent; TD Securities, ING, Scotiabank, Santander — 'the company's first green loan'), 'USD 1.1 billion' for Reno and Ashburn (MUFG), 'USD 440 million' for Santa Clara SV01 (MUFG, ING, First-Citizens; borrower MECP1 Santa Clara 1, LLC), and a 'USD 1.9 billion' equity investment led by Partners Group 'with multiple global co-investors' ('significant syndication from our clients' per Partners Group's 2024 annual report). 2025: 'USD 235 million' ABS backed by PH01 (MUFG structuring agent; Goldman Sachs, TD Securities; issuer ECore 2025-1; S&P A- and BBB- on the first two tranches per Commercial Property Executive). 2026: 'USD 1.5 billion' for Sterling AS01/AS02 (Apterra Infrastructure Capital, Global Infrastructure Partners/BlackRock, ING).",
+      "highlights": [
+        "Cumulative company claims: 'USD 4.24 billion' across three 2024 transactions (the three named deals sum to USD 4.9 billion — the company's arithmetic is unexplained); 'more than $5.9 billion in equity capital and debt' (January 2026); '$7.4 billion' committed and '$16.1B' planned investment (site, September 2026).",
+        "Ownership chain: Partners Group acquired EdgeCore 'on behalf of its clients' (November 2022, up to USD 1.2 billion covering acquisition and buildout); Partners Group Holding AG is listed on the SIX Swiss Exchange (PGHN) but no source describes EdgeCore as a balance-sheet holding of the listed company; prior owners GIC, OPTrust and Mount Elbert are not named as sellers by either party.",
+        "Sponsor voice: Fentress Boyse (Partners Group, Infrastructure Americas) in the 2026 financing release; Nils Rode (Partners Group CIO) in the 2025 ABS release; Ed Diffendal in the 2022 and 2024 releases; the 2023 board adds operating directors Heather Dooley, Mark Sokol and Brian Mattson (ex-Google/Microsoft).",
+        "Rating context: EdgeCore's first ABS was rated by S&P alone (A-/BBB-), against the AAA Moody's gave Compass's February 2026 hyperscale ABS — the securitization market differentiates by collateral seasoning and agency."
+      ],
+      "positioning": "The structure keeps recourse at the campus: each borrower is a single-purpose entity (MECP1 Mesa 1 LLC, MECP1 Santa Clara 1 LLC) and the loans are sized to a signed hyperscale lease, which is why EdgeCore can announce 'fully leased' financings without naming the tenant.",
+      "soldThrough": "Bank syndicates (MUFG, ING, TD, Scotiabank, Santander, First-Citizens, Apterra, GIP) and Rule 144A ABS.",
+      "targetSegments": [
+        "Infrastructure lenders and green-loan investors",
+        "Partners Group client programmes and co-investors"
+      ],
+      "roadmap": "'$16.1 billion of planned investment to fund the development of additional hyperscale and AI-ready data center campuses' (January 2026) — no dated drawdown schedule is published."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Mesa (Phoenix) campus, Elliot Road Technology Corridor, Arizona",
+      "specs": [
+        {
+          "band": "Campus",
+          "label": "Critical IT load",
+          "value": "496 MW critical IT load (site); 450+ MW (May 2025 release); minimum of 450 megawatts of critical load (Construction Dive, 2024)"
+        },
+        {
+          "band": "Campus",
+          "label": "Buildings",
+          "value": "5 data centers; 2.7M total building sq. ft. (site); 3.1+ million square feet (2024 release)"
+        },
+        {
+          "band": "Campus",
+          "label": "Land",
+          "value": "84 acres (site); 43.87 acres acquired May 2025 for $43.95 million from Brookfield Properties affiliate"
+        },
+        {
+          "band": "PH01",
+          "label": "Capacity",
+          "value": "26 MW IT capacity, fully leased to single hyperscale tenant (ABS, July 2025); 32 MW of critical load capacity (DLR Group)"
+        },
+        {
+          "band": "PH01",
+          "label": "Efficiency",
+          "value": "PUE <1.25; 68 highly efficient chilled water Computer Room Air Handlers per building; non-raised floor system"
+        },
+        {
+          "band": "PH02",
+          "label": "Size",
+          "value": "868,000 square feet; topped out 4 December 2024; general contractor Holder Construction"
+        },
+        {
+          "band": "Expansion (2026)",
+          "label": "Plan",
+          "value": "1,236,960 sq ft (reduced from 2.1 million sq ft); 2 structures (down from 3) to accommodate an SRP switchyard expansion"
+        },
+        {
+          "band": "Water",
+          "label": "Commitment",
+          "value": "water-neutral status on the Mesa campus through 2036 (SRP watershed partnership); WUE below .01 L/kWh"
+        },
+        {
+          "band": "Utility",
+          "label": "Provider",
+          "value": "SRP"
+        }
+      ],
+      "notes": "Company campus page, May 2025 and January 2024 releases, AZ Big Media, DLR Group, Real Estate Daily News and The Mesa Tribune. PH01 is quoted at both 26 MW (securitization) and 32 MW (design) — the sources are not reconciled."
+    },
+    {
+      "product": "Ashburn (Sterling) AS01/AS02, Loudoun County, Virginia — the April 2026 financing",
+      "specs": [
+        {
+          "band": "Buildings",
+          "label": "AS01",
+          "value": "72 megawatts; 45831 Maries Road; topped out September 2025; initial occupancy: November 2026"
+        },
+        {
+          "band": "Buildings",
+          "label": "AS02",
+          "value": "42 megawatts; 1501 Moran Road; topped out 2 July 2026; occupancy July 2027"
+        },
+        {
+          "band": "Campus",
+          "label": "Total",
+          "value": "114 MW critical IT load; 685,000 square feet (company) / 608,000 square feet (Commercial Property Executive); 17 acres"
+        },
+        {
+          "band": "Leasing",
+          "label": "Status",
+          "value": "two fully leased hyperscale data centers — single tenant, not identified"
+        },
+        {
+          "band": "Financing",
+          "label": "Loans",
+          "value": "$1.5 Billion of Construction Financing; two senior secured, limited-recourse term loans"
+        },
+        {
+          "band": "Financing",
+          "label": "Lenders",
+          "value": "Apterra Infrastructure Capital LLC, Global Infrastructure Partners (BlackRock), ING Capital LLC; AS01 green loan with ING as sole green-loan structuring agent"
+        },
+        {
+          "band": "Design",
+          "label": "Cooling",
+          "value": "structurally engineered to accommodate liquid to liquid loads, including NVIDIA VR racks; mechanical galleries sized for variable water-to-air cooling ratios"
+        },
+        {
+          "band": "Utility",
+          "label": "Provider",
+          "value": "Dominion Energy"
+        }
+      ],
+      "notes": "EdgeCore release (21 April 2026), Virginia Business, Commercial Property Executive, Construction Review and the Server Country project database."
+    },
+    {
+      "product": "Design standard (hyperscale and gigascale pages)",
+      "specs": [
+        {
+          "band": "Campus",
+          "label": "Design",
+          "value": "300+ MW design; capacity of up to 1.2GW on a single campus"
+        },
+        {
+          "band": "Building",
+          "label": "Size",
+          "value": "36-144 MW; starting at 36 MW across three data halls and minimum two stories (Data Center Frontier, 2023)"
+        },
+        {
+          "band": "Rack",
+          "label": "Density",
+          "value": "rack densities well over 50 kW; designed to accommodate direct-to-chip liquid cooling; 2023–24 spec: Designed for 30-40 kW per rack density"
+        },
+        {
+          "band": "Thermal",
+          "label": "Cooling",
+          "value": "air-cooled designs that include ultra-efficient close-looped chilled water systems"
+        },
+        {
+          "band": "Thermal",
+          "label": "WUE",
+          "value": "below .01 L/kWh"
+        },
+        {
+          "band": "Thermal",
+          "label": "PUE",
+          "value": "PUE <1.3 (Silicon Valley); PUE <1.25 (Mesa Building 1, DLR Group)"
+        },
+        {
+          "band": "Delivery",
+          "label": "Benchmark",
+          "value": "Building a hyperscale data center typically requires 36+ months from groundbreaking to activation"
+        },
+        {
+          "band": "Certifications",
+          "label": "Standards",
+          "value": "Green Globes for Existing Buildings (PH01); Designed to Earn ENERGY STAR (PH02, PH03); LEED BD+C v4 Silver standards"
+        }
+      ],
+      "notes": "Verbatim from the Hyperscale, Gigascale and campus pages, the 2023 Data Center Frontier repositioning interview and DLR Group."
+    },
+    {
+      "product": "Louisa County gigascale campus (Shannon Hill Regional Business Park), Virginia",
+      "specs": [
+        {
+          "band": "Programme",
+          "label": "Capacity",
+          "value": "1.1+ GW critical IT load; 1+ gigawatt (1,000+ megawatts) of total power capacity"
+        },
+        {
+          "band": "Programme",
+          "label": "Investment",
+          "value": "$17B+ (site); $17 billion (Virginia Business)"
+        },
+        {
+          "band": "Site",
+          "label": "Land",
+          "value": "697 acres; bought from the Louisa County IDA for $42 million; by-right zoning"
+        },
+        {
+          "band": "Site",
+          "label": "Buildings",
+          "value": "6 data centers; 3.1M total building sq ft (site) / 3.9+ million square feet (gigascale page and June 2025 release)"
+        },
+        {
+          "band": "Power",
+          "label": "Utility",
+          "value": "Rappahannock Electric Cooperative and affiliate Hyperscale Energy"
+        },
+        {
+          "band": "Location",
+          "label": "Distance",
+          "value": "85 miles from Ashburn; off I-64"
+        },
+        {
+          "band": "Incentives",
+          "label": "State",
+          "value": "No state incentives provided (Virginia Business); $300,000 Virginia Business Ready Sites grant to the county in 2022"
+        }
+      ],
+      "notes": "EdgeCore Louisa page, Gigascale page, 25 June 2025 release, Virginia Business and the Louisa County newsletter. Construction start not announced."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-20",
+      "category": "policy",
+      "headline": "Data Center Knowledge: 'EdgeCore Says Data Centers Should Pay Their Own Power Costs' — EVP Finance Julie Brewer: 'We expect to bear 100% of the costs' of power delivery infrastructure, 'roughly 5-10% of upfront project costs'; EdgeCore 'will abandon projects if power economics become financially unworkable'",
+      "read": "The developer is pricing ratepayer politics into site selection and saying so — a walk-away threshold on power cost is unusual candour for a landlord.",
+      "source": "https://www.datacenterknowledge.com/data-center-construction/edgecore-says-data-centers-should-pay-their-own-power-costs"
+    },
+    {
+      "date": "2026-08-13",
+      "category": "policy",
+      "headline": "EdgeCore signs the Ratepayer Protection Pledge: 'Build/bring/buy new power supply; pay for new power delivery infrastructure; pay whether power is used or not; invest in local jobs and workforce development; contribute to grid and community resilience'",
+      "read": "A voluntary federal pledge that mirrors the take-or-pay and infrastructure-funding terms utilities such as SRP and ComEd are already writing into large-load tariffs.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-formally-pledges-commitment-data-center-communities"
+    },
+    {
+      "date": "2026-07-02",
+      "category": "project",
+      "headline": "AS02 Sterling tops out, following AS01 in September 2025; completion targeted July 2027",
+      "read": "Northern Virginia delivery is on the schedule the April 2026 financing assumed.",
+      "source": "https://servercountry.org/data/projects/edgecore-as01-and-as02-sterling-data-centers-va/"
+    },
+    {
+      "date": "2026-06-22",
+      "category": "other",
+      "headline": "A Louisa County supervisor speculates that EdgeCore's Shannon Hill campus might bring 'smaller gas plants or something, maybe small modular reactors'; EdgeCore does not respond",
+      "read": "Power sourcing for a 1.1 GW rural campus on a cooperative's system is the open question the company has not answered publicly.",
+      "source": "https://tammypurcell.substack.com/p/woodward-edgecore-to-bring-its-own"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "leadership",
+      "headline": "Greg Thompson appointed SVP, Enterprise Security (ex-CISO of VHC Health and Vantage Data Centers; ex-FBI) as EdgeCore 'establishes enterprise security function'",
+      "read": "Another Vantage alumnus; the function is a hyperscaler procurement requirement rather than a growth signal.",
+      "source": "https://edgecore.com/resources/press-releases/edgecoredigital-infrastructure-establishes-enterprise-security-function-to-address-nextphase-of-organizational-evolution"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "financial",
+      "headline": "USD 1.5 billion of construction financing for the two fully leased Sterling data centers (114 MW, 685,000 sq ft): two senior secured limited-recourse term loans from Apterra, Global Infrastructure Partners (BlackRock) and ING; occupancy November 2026 and July 2027",
+      "read": "GIP as a lender rather than an owner shows where the infrastructure funds sit in EdgeCore's stack; the release also restates '1.8 gigawatts' and '1.4 GWs under development in Northern and Central Virginia'.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia"
+    },
+    {
+      "date": "2026-03-11",
+      "category": "regulatory",
+      "headline": "Mesa Planning & Zoning approves a revised expansion: 1,236,960 sq ft in two buildings, down from 2.1 million sq ft and three, 'to accommodate an SRP switchyard expansion'; the 43.87 acres were bought in May 2025 for USD 43.95 million from a Brookfield Properties affiliate",
+      "read": "The utility's need for switchyard land cost EdgeCore roughly 800,000 sq ft of building — a concrete example of power infrastructure setting the campus footprint.",
+      "source": "https://realestatedaily-news.com/edgecore-returns-with-revised-mesa-data-center-plan/"
+    },
+    {
+      "date": "2026-01-13",
+      "category": "corporate",
+      "headline": "'EdgeCore Enters 2026 with 1.8GW of Data Center Capacity Delivered or Under Development': USD 5.9 billion committed, USD 16.1 billion planned, 7 million sq ft, 10 of 10 customer milestones met, 145% employee growth, 3,500+ peak trades",
+      "read": "The headline figure counts planning-stage Louisa; the independently verifiable operating base is two buildings. The clause the coverage plan attached to Compass belongs here.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-enters-2026-with-1-8gw-of-data-center-capacity-delivered-or-under-development"
+    },
+    {
+      "date": "2025-12-05",
+      "category": "project",
+      "headline": "Interglobix reports the 10 September 2025 ribbon-cutting of SV01 in Santa Clara with Mayor Lisa Gillmor and Holder Construction president Beth Lowry",
+      "read": "The second delivered building — land bought in 2018, ground broken January 2023, opened September 2025: a 32-month build on a 12-acre urban site.",
+      "source": "https://www.interglobixmagazine.com/edgecore-sv01-data-center-ribbon-cutting-ceremony/"
+    },
+    {
+      "date": "2025-07-24",
+      "category": "financial",
+      "headline": "USD 235 million ABS backed by PH01 Mesa (26 MW, fully leased to a single hyperscale tenant): MUFG structuring agent, Goldman Sachs and TD Securities; Partners Group CIO Nils Rode quoted; S&P A- and BBB- on the first two tranches (Commercial Property Executive)",
+      "read": "EdgeCore's entry into the data-center ABS market on one stabilized lease — a proof of concept for refinancing Mesa and Sterling once occupied.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-completes-235-million-abs-financing"
+    },
+    {
+      "date": "2025-06-25",
+      "category": "project",
+      "headline": "Louisa County, Virginia: 'USD 17B+' gigascale campus — 1.1+ GW, 697 acres bought from the county IDA for USD 42 million, six buildings, Rappahannock Electric Cooperative and Hyperscale Energy; Governor Youngkin quoted; no state incentives",
+      "read": "The single largest addition to the portfolio (roughly half of today's 2.27 GW) is a land-and-power position 85 miles from Ashburn with no announced tenant or construction date.",
+      "source": "https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus"
+    },
+    {
+      "date": "2025-06-05",
+      "category": "leadership",
+      "headline": "Steve Conner appointed President (ex-Vantage CTO and SVP Solution and Architecture Engineering); team up 80% since February 2025",
+      "read": "A second ex-Vantage executive in the top two seats; the company is staffing for a multi-campus construction programme.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-appoints-steve-conner-as-president"
+    },
+    {
+      "date": "2025-05-20",
+      "category": "capacity",
+      "headline": "Metro Phoenix market expanded to '450+ MW' with 43.87 additional acres; SRP CEO Jim Pratt quoted; PH01 Green Globes, PH02/PH03 'Designed to Earn ENERGY STAR'",
+      "read": "Mesa is the anchor market: three buildings built or building and another 250+ MW planned on land bought from Brookfield Properties.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-expansion-of-its-metro-phoenix-data-center-market-to-over-450-mw"
+    },
+    {
+      "date": "2025-02-12",
+      "category": "leadership",
+      "headline": "Personnel expansion: Ruben Thissen (SVP Operations and EHS, founding STACK executive, ex-Microsoft), Therese Kerfoot promoted to EVP Strategy, Bill Jabjiniak to SVP community and government relations",
+      "read": "The hires map the model — operations from a hyperscaler, strategy from CoreSite, community relations from the City of Mesa's former economic-development director.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-implements-strategic-personnel-expansions-to-dynamically-address-data-center-industry-growth"
+    },
+    {
+      "date": "2024-12-04",
+      "category": "project",
+      "headline": "PH02 (868,000 sq ft) tops out in Mesa with general contractor Holder Construction; Arizona Corporation Commissioner Kevin Thompson attends",
+      "read": "The only public naming of a GC on an EdgeCore campus comes from the GC and the trade press, never from EdgeCore.",
+      "source": "https://azbigmedia.com/real-estate/edgecore-celebrates-topping-off-of-second-data-center-building/"
+    },
+    {
+      "date": "2024-09-04",
+      "category": "financial",
+      "headline": "Partners Group completes a USD 1.9 billion equity investment in EdgeCore with multiple global co-investors, remaining majority investor; EdgeCore counts USD 4.24 billion across three 2024 transactions",
+      "read": "Sponsor equity syndicated to Partners Group's clients funds the land bank ahead of leases; the company's USD 4.24 billion total does not match the three named deals (USD 4.9 billion).",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-completes-1-9-billion-equity-investment-to-fuel-continued-rapid-development-of-hyperscale-data-centers-designed-for-density"
+    },
+    {
+      "date": "2024-07-18",
+      "category": "project",
+      "headline": "New market: Culpeper, Virginia — 120 acres in the Culpeper Technology Zone, '216MW' initial and 'up to 432MW', power from Rappahannock Electric Cooperative as early as 2028",
+      "read": "Announced at twice the capacity and 18 months earlier than the campus page now shows (196 MW, mid-2029) — the clearest documented scale-down in the portfolio.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-new-hyperscale-data-center-market-in-culpeper-virginia"
+    },
+    {
+      "date": "2024-04-11",
+      "category": "financial",
+      "headline": "USD 440 million green loan for Santa Clara SV01 (36 MW) from MUFG, ING and First-Citizens — Data Center Frontier records the 2024 building spec: 36 MW minimum per building, three data halls, at least two storeys, 30–40 kW per rack",
+      "read": "The 2024 spec is an air-cooled, 30–40 kW design; the '50 kW+ / direct-to-chip' language postdates it.",
+      "source": "https://www.datacenterfrontier.com/site-selection/article/55017662/edgecore-boosts-19b-funding-with-440m-more-for-silicon-valley-data-center"
+    },
+    {
+      "date": "2024-03-13",
+      "category": "financial",
+      "headline": "Second 2024 debt financing: USD 1.1 billion for the Reno and Ashburn campuses (MUFG administrative agent), taking 2024 debt to USD 3.0 billion",
+      "read": "Every campus is financed separately against its own lease — the limited-recourse pattern that lets an unnamed-tenant developer borrow at scale.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-second-debt-financing-transaction-of-2024-to-fuel-continued-growth-and-meet-high-density-data-center-demands-of-hyperscale-customers"
+    },
+    {
+      "date": "2024-01-04",
+      "category": "financial",
+      "headline": "USD 1.9 billion senior secured credit facility for the flagship Mesa campus (MUFG, TD Securities, ING, Scotiabank, Santander; borrower MECP1 Mesa 1, LLC) — 'the company's first green loan'",
+      "read": "The figure that Construction Dive's headline later styled as a 'USD 1.9B ... job' for Holder — it is EdgeCore's debt, not a contract value.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-completes-1-9-billion-debt-financing-to-enable-continued-growth-and-development-of-its-flagship-data-center-campus-in-greater-phoenix"
+    },
+    {
+      "date": "2023-10-17",
+      "category": "corporate",
+      "headline": "'Designed for Density' repositioning: 300+ MW campuses, USD 600 million planned for new regions in 2024; Kestler: 'The new EdgeCore is born in the age of AI'",
+      "read": "The pivot from a 'land and expand' enterprise-and-cloud developer (2018) to a hyperscale-only single-tenant builder.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-strengthens-its-focus-on-delivering-data-center-density-scalability-and-certainty-of-execution"
+    },
+    {
+      "date": "2023-03-09",
+      "category": "leadership",
+      "headline": "Lee Kestler appointed CEO, succeeding Lex Coors (CEO since the November 2022 acquisition); Kestler had joined in 2019 as President and COO and chaired the board after Partners Group's investment",
+      "read": "The sponsor put its board chair in the CEO seat four months after closing — the operating reset that preceded the AI repositioning.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-appoints-lee-kestler-as-chief-executive-officer"
+    },
+    {
+      "date": "2022-11-11",
+      "category": "ma",
+      "headline": "EdgeCore 'has re-capitalized and is now owned by Partners Group, a leading global private market firm acting on behalf of its clients'; initial commitment 'up to USD 1.2 billion' for existing and under-construction sites and future buildout",
+      "read": "Ownership passed from GIC, OPTrust and Mount Elbert to a Swiss-listed manager's client funds; the price to the sellers was never disclosed.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-acquired-by-partners-group"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "holder-construction",
+      "type": "supplier",
+      "note": "General contractor on the Mesa campus (PH02, PH03) and Santa Clara SV01 — named by Holder, the trade press and the City of Mesa, never by EdgeCore.",
+      "context": "AZ Big Media's December 2024 topping-out coverage names Holder Construction as general contractor for PH02 (868,000 sq ft); Proximo lists Holder as EPC contractor on PH03; Mesa's January 2024 planning record states 'the general contractor is Holder Construction'; and Holder's president Beth Lowry attended the September 2025 SV01 ribbon-cutting in Santa Clara, where the structural-frame vendor's project page also lists Holder as GC. Construction Dive's January 2024 headline 'Holder Construction gets $1.9B Arizona data center job' refers to EdgeCore's USD 1.9 billion debt financing; the article states no contract value.\n\nNot supported: any Holder role at Sterling, Reno, Culpeper or Louisa — no GC is named for those sites in any fetched source.",
+      "source": "https://azbigmedia.com/real-estate/edgecore-celebrates-topping-off-of-second-data-center-building/",
+      "status": "active",
+      "since": "2024-01",
+      "via": "Mesa PH02/PH03 and Santa Clara SV01"
+    },
+    {
+      "slug": "dominion-energy",
+      "type": "supplier",
+      "note": "Power provider for the Sterling AS01/AS02 campus (114 MW), per the April 2026 financing coverage.",
+      "context": "Virginia Business (22 April 2026): 'Power for both data centers will be provided by Dominion Energy'; Construction Review repeats the attribution. EdgeCore's own release does not name the utility. Dominion is also a Valley Link joint-venture partner in the 765 kV transmission line opposed in Louisa and Orange counties, where EdgeCore's Shannon Hill campus is one of the approved sites; Louisa's supervisors deny that data-center approvals drove the line.",
+      "source": "https://virginiabusiness.com/edgecore-secures-1-5b-toward-sterling-data-centers-construction/",
+      "status": "active",
+      "scale": "114 MW"
+    },
+    {
+      "slug": "nvidia",
+      "type": "other",
+      "note": "Design reference: Ashburn buildings are 'structurally engineered to accommodate liquid to liquid loads, including NVIDIA VR racks'.",
+      "context": "EdgeCore's Ashburn campus page cites NVIDIA rack designs as the structural and mechanical benchmark for AS01/AS02 (liquid-to-liquid loads, variable water-to-air cooling ratios). No commercial relationship with NVIDIA is disclosed; the reference is to a tenant-side hardware standard.",
+      "source": "https://edgecore.com/locations/ashburn-data-center",
+      "status": "active"
+    },
+    {
+      "slug": "meta",
+      "type": "other",
+      "note": "Sold about 15 acres of the Mesa expansion land to EdgeCore (2023); former employer of SVP Design & Construction Dave Rezash.",
+      "context": "Mesa's January 2024 planning coverage records EdgeCore 'acquiring approximately 15 acres previously owned by Meta Platforms Inc.' for the Elliot Road expansion; Rezash was 'Geo-Manager, North America East of Meta's Retrofit and Leased Portfolio' before joining EdgeCore. No lease between Meta and EdgeCore is disclosed at any campus.",
+      "source": "https://www.aztechcouncil.org/edgecore-data-center-mesa-planning-zoning/",
+      "status": "historical",
+      "since": "2023"
+    },
+    {
+      "slug": "vantage",
+      "type": "competitor",
+      "note": "Direct competitor in single-tenant hyperscale campuses and the source of EdgeCore's CEO, President and SVP Enterprise Security.",
+      "context": "Lee Kestler was Chief Commercial Officer of Vantage Data Centers before EdgeCore; Steve Conner was Vantage's CTO ('helping Vantage Data Centers grow to almost 1GW'); Greg Thompson was Vantage's CISO. Both companies build sponsor-financed single-tenant campuses for the same hyperscale tenants and co-locate at the Tahoe-Reno Industrial Center. No commercial dealing between the two is recorded.",
+      "source": "https://edgecore.com/company/leadership-team/lee-kestler",
+      "status": "active"
+    },
+    {
+      "slug": "stack-infrastructure",
+      "type": "competitor",
+      "note": "STACK's NVA10 sits 0.52 miles from EdgeCore's Culpeper site; SVP Operations Ruben Thissen was a founding STACK executive.",
+      "context": "datacenterHawk's listing for EdgeCore CP01-03 on Nalles Mill Road notes STACK Infrastructure's NVA10 '0.52 miles away' in the Culpeper Technology Zone; Thissen's bio describes him as a 'founding executive employee of STACK Infrastructure' for six years. Both compete for hyperscale build-to-suit leases in Virginia; no commercial dealing is recorded.",
+      "source": "https://datacenterhawk.com/marketplace/providers/edgecore/nalles-mill-road/cp01-03",
+      "status": "active"
+    },
+    {
+      "slug": "amazon",
+      "type": "competitor",
+      "note": "AWS is the neighbouring hyperscale developer in Louisa County (its own campuses within 15 miles of Shannon Hill) and the former employer of SVP Emerging Technologies Tom Traugott.",
+      "context": "The Louisa County newsletter records AWS proposals in the county alongside EdgeCore's Shannon Hill acquisition; Traugott led 'strategy and execution for new and existing regions across EMEA, APAC, and the Americas' at AWS. Whether AWS is an EdgeCore tenant anywhere is undisclosed — EdgeCore names no tenant.",
+      "source": "https://tammypurcell.substack.com/p/at-town-hall-adams-says-he-opposes",
+      "status": "active"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Arizona Computer Data Center Program (tax-exemption pause)",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-01",
+      "exposure": "Laws 2026 Ch. 140 (HB 4168), signed 13 June 2026, bars the Arizona Commerce Authority from accepting new Computer Data Center Program applications from 1 July 2026 to 30 June 2029; 113 applications were filed in the last two weeks of June. EdgeCore's Mesa expansion (250+ MW planned) is the exposure; whether its buildings hold grandfathered certifications is not disclosed.",
+      "source": "https://azcapitoltimes.com/news/2026/07/09/data-centers-dominated-2026-session-lawmakers-answered-with-3-year-tax-incentive-pause/"
+    },
+    {
+      "regime": "Arizona extra-high-load-factor customer framework (HB 2756)",
+      "status": "in-effect",
+      "effectiveDate": "2026-06-04",
+      "exposure": "Laws 2026 Ch. 111 lets the Arizona Corporation Commission set 'minimum bills, contract terms, infrastructure-payment requirements, and collateral provisions' for 'extra high load factor customers' and requires utilities to report interconnection requests semi-annually. SRP's 2025 Large Customer Integration Process already requires customers to fund dedicated upgrades upfront, and SRP's switchyard needs forced EdgeCore to cut its Mesa expansion by a building in March 2026.",
+      "mitigation": "EdgeCore's stated posture (Brewer, August 2026): 'We expect to bear 100% of the costs' of power delivery infrastructure, and the company signed the Ratepayer Protection Pledge on 13 August 2026.",
+      "source": "https://servercountry.org/policy/arizona/"
+    },
+    {
+      "regime": "Ratepayer Protection Pledge",
+      "status": "in-effect",
+      "effectiveDate": "2026-08-13",
+      "exposure": "A voluntary federal pledge (launched March 2026, expanded July 2026 per Data Center Knowledge) that EdgeCore signed on 13 August 2026: build, bring or buy new power supply; pay for new power delivery infrastructure; pay whether power is used or not; invest in local jobs; contribute to grid and community resilience. It does not determine utility cost allocation.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-formally-pledges-commitment-data-center-communities"
+    },
+    {
+      "regime": "Virginia data-center sales-and-use tax exemption and electricity consumption tax",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-01",
+      "exposure": "The 2026 Virginia budget preserved the long-standing sales and use tax exemption for qualifying data-center equipment but added an electricity consumption tax of USD 0.011 per kWh from 1 July 2026 to 30 June 2028, capped at USD 600 million a year, with a tax-policy study due 15 December 2026. Exposure: three Virginia campuses (Sterling 114 MW, Culpeper 196 MW, Louisa 1.1+ GW). Louisa received no state incentives; Culpeper County has no computer-equipment tax.",
+      "source": "https://www.hklaw.com/en/insights/publications/2026/08/virginia-preserves-data-center-tax-incentive"
+    },
+    {
+      "regime": "Mesa data-center ordinance 5957",
+      "status": "in-effect",
+      "effectiveDate": "2025-07-08",
+      "exposure": "Mesa's July 2025 ordinance confines data centers to general/heavy industrial districts with a council-approved PAD overlay; EdgeCore's Elliot Road expansion 'predates those regulations' and was re-approved by Planning & Zoning in March 2026 without neighbour objection.",
+      "source": "https://www.themesatribune.com/news/re-sized-data-center-in-mesa-sails-to-approval/article_a0ece120-74c7-476b-a64e-ff4015ee7e27.html"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Lee Kestler",
+      "title": "Chief Executive Officer",
+      "photo": "images/execs/edgecore-kestler.jpg",
+      "background": [
+        "CEO since 9 March 2023; joined EdgeCore in 2019 as President and COO; chaired the board after Partners Group's Q4 2022 investment",
+        "Chief Commercial Officer, Vantage Data Centers (a DigitalBridge portfolio company)",
+        "SVP Sales and Leasing, DuPont Fabros Technology (2007 IPO, 'raising $740+ million'); founder, Kopend Ventures (300 MW Palm Beach County project); Savvis, Exodus Communications",
+        "University of Maryland, Baltimore County (computer science)"
+      ]
+    },
+    {
+      "name": "Steve Conner",
+      "title": "President",
+      "photo": "images/execs/edgecore-conner.jpg",
+      "background": [
+        "President since 5 June 2025 (newly created role), based in Northern Virginia",
+        "Seven years at Vantage Data Centers as CTO and SVP Solution and Architecture Engineering ('helping Vantage Data Centers grow to almost 1GW')",
+        "Cloudistics, Nutanix (sales), Arrow Electronics; MBA Florida Institute of Technology, MS computer science George Mason, BS University of Richmond"
+      ]
+    },
+    {
+      "name": "Clint Heiden",
+      "title": "Chief Commercial Officer",
+      "photo": "images/execs/edgecore-heiden.jpg",
+      "background": [
+        "CCO since July 2023, Northern Virginia",
+        "Chief Revenue Officer, QTS Data Centers; CCO, EdgeConneX",
+        "President, Sidera Networks and PAETEC; EVP Worldwide Sales, Cable & Wireless America; VP Global Markets, UUNET; James Madison University"
+      ]
+    },
+    {
+      "name": "John Bean",
+      "title": "Chief Legal Officer",
+      "photo": "images/execs/edgecore-bean.jpg",
+      "background": [
+        "CLO since May 2023",
+        "About six years as VP and Associate General Counsel, Digital Realty; about seven years in the same role at DuPont Fabros Technology",
+        "Cooley LLP; BA Villanova, JD William & Mary"
+      ]
+    },
+    {
+      "name": "Bob Berlinsky",
+      "title": "Executive Vice President (construction)",
+      "photo": "images/execs/edgecore-berlinsky.jpg",
+      "background": [
+        "Joined September 2023 to 'lead all facets of construction'",
+        "EVP, CloudHQ; SVP, DuPont Fabros ('over two billion dollars of data center development')",
+        "AboveNet"
+      ]
+    },
+    {
+      "name": "Julie Brewer",
+      "title": "EVP, Finance",
+      "photo": "images/execs/edgecore-brewer.jpg",
+      "background": [
+        "EVP Finance (SVP Finance until 2024); spokesperson on the 2026 Ratepayer Protection Pledge and power-cost posture",
+        "VP General Management, CoreSite (Los Angeles and Denver, '$2 billion portfolio')",
+        "BS Commerce, University of Virginia"
+      ]
+    },
+    {
+      "name": "Therese Kerfoot",
+      "title": "EVP, Strategy",
+      "photo": "images/execs/edgecore-kerfoot.jpg",
+      "background": [
+        "EVP Strategy since February 2025 — site acquisition, utility relationships, IT and business operations",
+        "VP, CoreSite",
+        "JD University of Colorado Law; BA UT Austin"
+      ]
+    },
+    {
+      "name": "Bill Jabjiniak",
+      "title": "SVP, National Community / Government Relations",
+      "photo": "images/execs/edgecore-jabjiniak.jpg",
+      "background": [
+        "Joined November 2023; SVP since February 2025",
+        "Director of Economic Development, City of Mesa, Arizona; earlier City of Richmond, VA and Manchester, NH",
+        "MS/MBA Southern New Hampshire University"
+      ]
+    },
+    {
+      "name": "Olivia L'Heureux",
+      "title": "VP, Procurement",
+      "photo": "images/execs/edgecore-lheureux.jpg",
+      "background": [
+        "VP Procurement, Denver",
+        "Global Category Leader (Facilities), IBM BPO Procurement",
+        "DuPont Fabros property management (five Northern Virginia data centers); MS Real Estate, Georgetown"
+      ]
+    },
+    {
+      "name": "Dave Rezash",
+      "title": "SVP, Design & Construction",
+      "photo": "images/execs/edgecore-rezash.jpg",
+      "background": [
+        "SVP Design & Construction",
+        "Geo-Manager, North America East, Meta's Retrofit and Leased Portfolio",
+        "VP Operations Project Services Group; EYP Mission Critical, JLL, Accenture; Virginia Tech (industrial and systems engineering)"
+      ]
+    },
+    {
+      "name": "Justin Taylor",
+      "title": "SVP, General Counsel",
+      "photo": "images/execs/edgecore-taylor.jpg",
+      "background": [
+        "SVP General Counsel, Denver",
+        "Davis Graham & Stubbs; Paul Hastings",
+        "JD University of Michigan"
+      ]
+    },
+    {
+      "name": "Ruben Thissen",
+      "title": "SVP, Operations and EHS",
+      "photo": "images/execs/edgecore-thissen.jpg",
+      "background": [
+        "Joined February 2025, Northern Virginia",
+        "Founding executive employee of STACK Infrastructure (six years)",
+        "Eight years in Microsoft data-center construction and operations; US Navy nuclear electrician"
+      ]
+    },
+    {
+      "name": "Greg Thompson",
+      "title": "SVP, Enterprise Security",
+      "photo": "images/execs/edgecore-thompson.jpg",
+      "background": [
+        "Appointed 21 May 2026 to establish the enterprise security function",
+        "CISO, VHC Health and Vantage Data Centers; FBI",
+        "George Mason University; UMGC MBA / MS Cybersecurity"
+      ]
+    },
+    {
+      "name": "Brian Tidd",
+      "title": "SVP, Accounting and Reporting",
+      "photo": "images/execs/edgecore-tidd.jpg",
+      "background": [
+        "Joined EdgeCore in 2018 as VP, Controller",
+        "VP Financial Reporting, CoreSite (through its IPO)",
+        "EY (DuPont Fabros IPO audit lead); Michigan State University"
+      ]
+    },
+    {
+      "name": "Tom Traugott",
+      "title": "SVP, Emerging Technologies",
+      "photo": "images/execs/edgecore-traugott.jpg",
+      "background": [
+        "SVP Emerging Technologies",
+        "Amazon Web Services — 'strategy and execution for new and existing regions across EMEA, APAC, and the Americas'",
+        "Cassidy Turley data-center advisory; Regional VP Sales, CoreSite; Harvard College"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (private developer — no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Project debt raised",
+            "actual": "'$1.9 billion' Mesa senior secured credit facility (January; MUFG, TD Securities, ING, Scotiabank, Santander; 'first green loan'); '$1.1 billion' Reno and Ashburn (March; MUFG); '$440 million' Santa Clara SV01 (April; MUFG, ING, First-Citizens)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; Data Center Frontier; Davis Polk"
+          },
+          {
+            "name": "Sponsor equity",
+            "actual": "'$1.9 Billion Equity Investment' led by Partners Group 'on behalf of clients' with 'multiple global co-investors' (September); Partners Group 'remains majority investor'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore and Partners Group releases; Partners Group Annual Report 2024"
+          },
+          {
+            "name": "Company-stated 2024 total",
+            "actual": "'$4.24 billion' across three transactions — the three named deals (USD 1.9 billion + 1.1 billion + 1.9 billion) sum to USD 4.9 billion and the USD 440 million loan is not counted; the arithmetic is not explained",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore September 2024 release"
+          },
+          {
+            "name": "Land",
+            "actual": "Culpeper 120 acres (July); Louisa announced the following June",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore release"
+          }
+        ],
+        "commentary": "The year the balance sheet was built: about USD 3.4 billion of campus-level debt and USD 1.9 billion of sponsor equity, each loan sized against a signed lease at a named campus and an unnamed tenant."
+      },
+      {
+        "period": "FY2025 (no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Asset-backed securities",
+            "actual": "'$235 million' ABS backed by PH01 Mesa ('26 MW IT capacity, fully leased to single hyperscale tenant'); MUFG structuring agent, Goldman Sachs, TD Securities; issuer ECore 2025-1; S&P 'A-' and 'BBB-' on the first two tranches (Commercial Property Executive)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore release (July); GlobalCapital; Commercial Property Executive"
+          },
+          {
+            "name": "Land purchases",
+            "actual": "Louisa County 697 acres for '$42 million' from the county IDA (June); Mesa 43.87 acres for '$43.95 million' from a Brookfield Properties affiliate (May)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Virginia Business; Real Estate Daily News"
+          },
+          {
+            "name": "Delivery and operating metrics",
+            "actual": "'10 out of 10' 2025 customer targets; '9M+' manhours; 'Employee growth 145%'; peak construction workforce '3500+'; SV01 opened September 2025; PH02 topped out December 2024",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore January 2026 release; Interglobix; AZ Big Media"
+          },
+          {
+            "name": "Portfolio claim at year end",
+            "actual": "'more than 1.8 gigawatts of capacity delivered or under development'; 'more than $5.9 billion in equity capital and debt' committed; '$16.1 billion of planned investment'; '7 million sq. ft.'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore release of 13 January 2026 (reporting on 2025)"
+          }
+        ],
+        "commentary": "Collection gap: no revenue, EBITDA, headcount or valuation. The USD 5.9 billion committed figure reconciles approximately to the four named loans plus the 2024 equity round; the USD 16.1 billion 'planned investment' has no published composition."
+      },
+      {
+        "period": "2026 year to date (through 5 September 2026)",
+        "periodType": "other",
+        "periodEnd": "2026-09-05",
+        "metrics": [
+          {
+            "name": "Project debt raised",
+            "actual": "'$1.5 Billion of Construction Financing' for Sterling AS01/AS02 (April): two senior secured, limited-recourse term loans; Apterra Infrastructure Capital, Global Infrastructure Partners (BlackRock), ING Capital; AS01 green loan",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore release; Virginia Business"
+          },
+          {
+            "name": "Portfolio claim (site, September)",
+            "actual": "'2.27+ GW' Data Center Portfolio; '$7.4 billion' in capital currently committed; '$16.1B' Planned Investment; campus pages sum to about 2.19 GW",
+            "expected": "",
+            "verdict": "inline",
+            "result": "EdgeCore homepage and About page"
+          },
+          {
+            "name": "Cumulative debt (this dossier's arithmetic)",
+            "actual": "USD 1.9 billion + 1.1 billion + 0.44 billion + 0.235 billion + 1.5 billion = about USD 5.2 billion of announced campus-level debt since January 2024",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Sum of company-announced transactions; not a company figure"
+          },
+          {
+            "name": "Sponsor disclosure",
+            "actual": "Partners Group's Annual Report 2025 and Interim Report 2026 carry 'EdgeCore' only as a label with no narrative; its FY2025 results and H1 2026 update do not mention the company",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Partners Group reports and releases"
+          }
+        ],
+        "commentary": "Collection gap: the listed sponsor discloses nothing usable about EdgeCore; the only priced facts are the loans, the ABS and two land purchases. No 'expected' benchmarks exist for a private developer and none are manufactured."
+      }
+    ],
+    "commentary": "A private, sponsor-owned developer whose every disclosed number is a financing or a land deal. Size it from the pieces: up to USD 1.2 billion committed at the 2022 acquisition (price to sellers undisclosed), USD 1.9 billion of syndicated sponsor equity in 2024, about USD 5.2 billion of announced campus-level debt since 2024, and a company-stated USD 7.4 billion committed against USD 16.1 billion 'planned'. The independently verifiable operating base is two buildings (PH01 26 MW; SV01 36 MW); everything else is under construction or land."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that EdgeCore's '1.8 GW delivered or under development' (January 2026) and '2.27+ GW' (site) are land-and-pipeline counts, not delivered capacity, and that the verifiable operating base is about 62 MW in two buildings. Basis: PH01 (26 MW, securitized) and SV01 (36 MW, opened September 2025) are the only buildings third parties record as operating; Sterling's two buildings are financed and topped out but occupy from November 2026; Reno's first building was still under construction in January 2026; Culpeper is 'not yet been commissioned or leased'; and the portfolio figure only reconciles if Louisa's planning-stage 1.1 GW is counted. 'Under development' is doing most of the work in the headline.",
+    "2. **(High confidence)** We assess that the company's operating model is the sponsor-financed single-tenant build-to-suit, executed at project level: pre-positioned land and utility allocations funded by Partners Group's client equity, a signed hyperscale lease, then a limited-recourse green loan sized to that lease and, once stabilized, an ABS. Basis: four campus loans (USD 1.9 billion, 1.1 billion, 440 million, 1.5 billion) each tied to named buildings and unnamed tenants; the ECore 2025-1 ABS on one lease; Partners Group's investment thesis ('customers charged a price based on their contracted power capacity'); and Kestler's 'preposition large land parcels, energy delivery assets and construction labor resources' statement. The tenant's identity is the one variable the whole structure is built to keep private.",
+    "3. **(Moderate confidence)** We assess that Louisa County is the bet that decides EdgeCore's next five years, and that its power supply is unresolved. Basis: 697 acres and 1.1+ GW represent roughly half of the stated portfolio and 'USD 17B+' of planned investment on a cooperative's system (Rappahannock Electric Cooperative and 'affiliate Hyperscale Energy') 85 miles from Ashburn, with no announced tenant, GC, construction date or generation plan; a county supervisor's June 2026 speculation about gas plants or SMRs drew no company response; and the regional Valley Link 765 kV line faces organised opposition. A named tenant or a filed generation or transmission plan would move this judgment either way.",
+    "4. **(Moderate confidence)** We assess that schedule risk in the portfolio is higher than the '100% Customer Milestones Met' claim implies, because the milestones are set after leases are signed while the campuses slip before them. Basis: Reno was a 2018 launch market that broke ground in 2023 and moved sites without explanation; Richardson/Dallas (165 MW, 2018) disappeared from every later list; Culpeper was announced at 216/432 MW with power in early 2028 and now shows 196 MW from mid-2029; Mesa's expansion lost a building to an SRP switchyard in 2026. The claim is true for leased buildings and silent about the pipeline.",
+    "5. **(High confidence)** We assess that EdgeCore has chosen to lead on the ratepayer question rather than resist it: 'We expect to bear 100% of the costs' of power delivery, the Ratepayer Protection Pledge, self-funded substations at every campus and a stated willingness to 'abandon projects if power economics become financially unworkable'. Basis: the August 2026 Data Center Knowledge interview and pledge release, SRP's Large Customer Integration Process, Arizona's HB 2756 and the ICC/ComEd-style deposit rules spreading across its markets. The posture converts an external constraint into a marketing claim, at the price of a walk-away threshold the company has now stated publicly.",
+    "6. **(Low confidence)** We assess that liquid cooling at EdgeCore is design readiness rather than deployed capability. Basis: the 2023–2024 building specification was 30–40 kW per rack air cooling; the 'well over 50 kW' and 'direct-to-chip' language appears on 2026 pages and the Ashburn campus is described as 'engineered to accommodate' liquid-to-liquid loads; no third-party source describes an operating liquid-cooled EdgeCore hall. A named liquid-cooled deployment (AS01, November 2026) would settle this.",
+    "Collection gap: no tenant at any campus; no revenue, EBITDA, headcount or valuation; no first-party GC; no ESG report; the sellers in the 2022 deal and the price paid are undisclosed; the 'USD 4.24 billion' 2024 total and the 3.1M/3.9M sq ft Louisa figures are the company's own unreconciled numbers; Data Center Dynamics (the outlet most likely to have named tenants) was unreadable. Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the middle clause describes EdgeCore, and it is EdgeCore's own January 2026 wording — true as stated then, already superseded by the site's 2.27+ GW and USD 7.4 billion; EdgeCore is Partners Group-owned (its only Brookfield link is the purchase of Mesa land from a Brookfield Properties affiliate) and has no Illinois site.",
+    "INDICATORS TO WATCH — *November 2026 — AS01 occupancy in Sterling:* on time would be the first delivery under the 2023 repositioning and the first liquid-ready hall; a slip would undercut the milestone claim. *2026 — Reno RN01 energisation and NV Energy power delivery:* the campus is a year past its late-2025 target. *Any Louisa County filing naming a tenant, a generation source or a construction start:* the trigger for Judgment 3. *A second ABS or a refinancing of the Mesa USD 1.9 billion facility:* would show whether the 2025 A-/BBB- ratings improve with seasoning, against Compass's Moody's AAA. *Arizona Corporation Commission rules under HB 2756 and the 2029 exemption sunset:* would price the Mesa expansion. *A Partners Group exit process (sale, continuation vehicle or IPO):* Partners Group's client programmes are finite-life funds; four years in, an exit path is the structural question."
+  ],
+  "sources": [
+    {
+      "label": "Data Center Knowledge — EdgeCore Says Data Centers Should Pay Their Own Power Costs",
+      "url": "https://www.datacenterknowledge.com/data-center-construction/edgecore-says-data-centers-should-pay-their-own-power-costs",
+      "date": "2026-08-20"
+    },
+    {
+      "label": "Holland & Knight — Virginia preserves data center tax incentive, adds new electricity consumption tax",
+      "url": "https://www.hklaw.com/en/insights/publications/2026/08/virginia-preserves-data-center-tax-incentive",
+      "date": "2026-08-20"
+    },
+    {
+      "label": "EdgeCore — Formally Pledges Commitment to Data Center Communities",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-formally-pledges-commitment-data-center-communities",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "WJLA — The data center rush reaches rural areas like Culpeper County (July 2026 Board of Supervisors)",
+      "url": "https://wjla.com/news/local/the-data-center-rush-reaches-rural-areas-like-culpeper-county-in-virginia-board-of-supervisors-july-2026",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "Arizona Capitol Times — Data centers dominated the 2026 session; lawmakers answered with a 3-year tax-incentive pause",
+      "url": "https://azcapitoltimes.com/news/2026/07/09/data-centers-dominated-2026-session-lawmakers-answered-with-3-year-tax-incentive-pause/",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "Tammy Purcell (Louisa County newsletter, Substack) — Woodward: EdgeCore to bring its own power to Shannon Hill",
+      "url": "https://tammypurcell.substack.com/p/woodward-edgecore-to-bring-its-own",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "MultiState — State data-center policy shifts as governors impose new restrictions (Arizona HB 4168; Virginia exemption unchanged)",
+      "url": "https://www.multistate.us/insider/2026/6/22/state-data-center-policy-shifts-as-governors-impose-new-restrictions",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "EdgeCore — Establishes Enterprise Security Function",
+      "url": "https://edgecore.com/resources/press-releases/edgecoredigital-infrastructure-establishes-enterprise-security-function-to-address-nextphase-of-organizational-evolution",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Construction Review — $1.5B Financing Completed for AS01 and AS02",
+      "url": "https://www.constructionreviewonline.com/1-5b-financing-completed-for-as01-and-as02-data-center-construction-in-northern-virginia/",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "Virginia Business — EdgeCore secures $1.5B toward Sterling data centers construction",
+      "url": "https://virginiabusiness.com/edgecore-secures-1-5b-toward-sterling-data-centers-construction/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "Commercial Property Executive — EdgeCore Secures $1.5B for NoVa Data Center Developments",
+      "url": "https://www.commercialsearch.com/news/edgecore-secures-1-5b-for-nova-data-center-developments/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "EdgeCore — $1.5 Billion Construction Financing NoVA",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "Charlottesville Tomorrow — In Orange and Louisa, residents and officials voice concerns over the proposed Valley Link transmission line",
+      "url": "https://www.cvilletomorrow.org/in-orange-and-louisa-residents-and-public-officials-voice-concerns-over-proposed-valley-link-transmission-line/",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "The Mesa Tribune — Re-sized data center in Mesa sails to approval",
+      "url": "https://www.themesatribune.com/news/re-sized-data-center-in-mesa-sails-to-approval/article_a0ece120-74c7-476b-a64e-ff4015ee7e27.html",
+      "date": "2026-03-15"
+    },
+    {
+      "label": "Real Estate Daily News — EdgeCore Returns With Revised Mesa Data Center Plan",
+      "url": "https://realestatedaily-news.com/edgecore-returns-with-revised-mesa-data-center-plan/",
+      "date": "2026-03-11"
+    },
+    {
+      "label": "Partners Group — Annual Report 2025 (EdgeCore appears only as an illustrative label; PDF)",
+      "url": "https://www.partnersgroup.com/~/media/files/p/partnersgroup/universal/shareholders/reports-and-presentations/2026/annual-report-2025.pdf",
+      "date": "2026-03"
+    },
+    {
+      "label": "EdgeCore — Enters 2026 with 1.8GW …",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-enters-2026-with-1-8gw-of-data-center-capacity-delivered-or-under-development",
+      "date": "2026-01-13"
+    },
+    {
+      "label": "EdgeCore release (via Yahoo Finance) — EdgeCore enters 2026 with 1.8GW of data center capacity delivered or under development",
+      "url": "https://finance.yahoo.com/news/edgecore-digital-infrastructure-enters-2026-130000868.html",
+      "date": "2026-01-13",
+      "party": "company"
+    },
+    {
+      "label": "Interglobix Magazine — EdgeCore SV01 data center ribbon-cutting ceremony (Santa Clara, 10 September 2025)",
+      "url": "https://www.interglobixmagazine.com/edgecore-sv01-data-center-ribbon-cutting-ceremony/",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Commercial Property Executive — EdgeCore Locks In $235M for Data Center Projects",
+      "url": "https://www.commercialsearch.com/news/edgecore-lands-235m-for-data-center-projects/",
+      "date": "2025-07-25"
+    },
+    {
+      "label": "EdgeCore — Completes $235 Million ABS Financing",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-completes-235-million-abs-financing",
+      "date": "2025-07-24"
+    },
+    {
+      "label": "GlobalCapital — Partners Group's EdgeCore brings first data center ABS (ECore 2025-1; paywalled)",
+      "url": "https://www.globalcapital.com/securitization/article/2f2f2dt8j30k6qy03zsw0/securitization/partners-groups-edgecore-brings-first-data-center-abs",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "EdgeCore — Plans to Invest $17B+ in Louisa County",
+      "url": "https://edgecore.com/resources/press-releases/new-louisa-county-virginia-data-center-campus",
+      "date": "2025-06-25"
+    },
+    {
+      "label": "Virginia Business — EdgeCore to invest $17B in Louisa County data center campus",
+      "url": "https://virginiabusiness.com/17b-louisa-county-data-center-edgecore/",
+      "date": "2025-06-25"
+    },
+    {
+      "label": "EdgeCore — Appoints Steve Conner as President",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-appoints-steve-conner-as-president",
+      "date": "2025-06-05"
+    },
+    {
+      "label": "Tammy Purcell (Louisa County newsletter, Substack) — Adams opposes AWS proposal; EdgeCore acquires Shannon Hill Business Park",
+      "url": "https://tammypurcell.substack.com/p/at-town-hall-adams-says-he-opposes",
+      "date": "2025-06"
+    },
+    {
+      "label": "AZ Big Media — EdgeCore expands Mesa data center campus to over 450 MW",
+      "url": "https://azbigmedia.com/real-estate/edgecore-expands-mesa-data-center-campus-to-over-450-mw/",
+      "date": "2025-05-27"
+    },
+    {
+      "label": "EdgeCore — Expansion of Metro Phoenix to Over 450 MW",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-expansion-of-its-metro-phoenix-data-center-market-to-over-450-mw",
+      "date": "2025-05-20"
+    },
+    {
+      "label": "MIT Technology Review — The data center boom in the desert (Reno/TRIC water; EdgeCore air-cooled claim)",
+      "url": "https://www.technologyreview.com/2025/05/20/1116287/ai-data-centers-nevada-water-reno-computing-environmental-impact/",
+      "date": "2025-05-20"
+    },
+    {
+      "label": "Partners Group — Annual Report 2024 (USD 1.9 billion EdgeCore equity investment with client syndication; PDF)",
+      "url": "https://www.partnersgroup.com/~/media/files/p/partnersgroup/universal/shareholders/reports-and-presentations/2025/annual-report-2024.pdf",
+      "date": "2025-03"
+    },
+    {
+      "label": "EdgeCore — Strategic Personnel Expansions",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-implements-strategic-personnel-expansions-to-dynamically-address-data-center-industry-growth",
+      "date": "2025-02-12"
+    },
+    {
+      "label": "AZ Big Media — EdgeCore celebrates topping off of second data center building",
+      "url": "https://azbigmedia.com/real-estate/edgecore-celebrates-topping-off-of-second-data-center-building/",
+      "date": "2024-12-04"
+    },
+    {
+      "label": "EdgeCore — Completes $1.9 Billion Equity Investment",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-completes-1-9-billion-equity-investment-to-fuel-continued-rapid-development-of-hyperscale-data-centers-designed-for-density",
+      "date": "2024-09-04"
+    },
+    {
+      "label": "Partners Group release — Partners Group completes USD 1.9 billion equity investment in portfolio company EdgeCore (remains majority investor)",
+      "url": "https://www.partnersgroup.com/news-and-views/press-releases/investment-news/detail?news_id=df7d7424-a6bf-4b05-abc3-371ba8b1f151",
+      "date": "2024-09-04"
+    },
+    {
+      "label": "Proximo — EdgeCore closes on construction debt for PH03 data centre (paywalled; Holder EPC; MECP1 Mesa 1 LLC)",
+      "url": "https://www.proximoinfra.com/news/65250/edgecore-closes-on-construction-debt-for-ph03-data-centre",
+      "date": "2024-07-25"
+    },
+    {
+      "label": "Data Center Frontier — Land and Expand: Virginia Data Centers",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/55126944/land-and-expand-virginia-data-centers",
+      "date": "2024-07-19"
+    },
+    {
+      "label": "EdgeCore — New Hyperscale Market in Culpeper",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-new-hyperscale-data-center-market-in-culpeper-virginia",
+      "date": "2024-07-18"
+    },
+    {
+      "label": "EdgeCore — Reno: The AI Boom's Emerging Western Hub",
+      "url": "https://edgecore.com/resources/thought-leadership/reno-the-ai-booms-emerging-western-hub",
+      "date": "2024-07-18"
+    },
+    {
+      "label": "Data Center Frontier — EdgeCore Boosts $1.9B Funding with $440M More",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/55017662/edgecore-boosts-19b-funding-with-440m-more-for-silicon-valley-data-center",
+      "date": "2024-04-11"
+    },
+    {
+      "label": "EdgeCore — Second Debt Financing of 2024",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-second-debt-financing-transaction-of-2024-to-fuel-continued-growth-and-meet-high-density-data-center-demands-of-hyperscale-customers",
+      "date": "2024-03-13"
+    },
+    {
+      "label": "Davis Polk — EdgeCore Digital Infrastructure $440 million data center development financing (MECP1 Santa Clara 1, LLC)",
+      "url": "https://www.davispolk.com/experience/edgecore-digital-infrastructure-440-million-data-center-development-financing",
+      "date": "2024-03-13"
+    },
+    {
+      "label": "Arizona Technology Council — EdgeCore's Mesa campus clears checkpoint (P&Z)",
+      "url": "https://www.aztechcouncil.org/edgecore-data-center-mesa-planning-zoning/",
+      "date": "2024-01-24"
+    },
+    {
+      "label": "Construction Dive — Holder Construction gets $1.9B Arizona data center job (the $1.9B is EdgeCore's debt financing; no contract value stated)",
+      "url": "https://www.constructiondive.com/news/holder-construction-arizona-data-center/704098/",
+      "date": "2024-01-10"
+    },
+    {
+      "label": "KTAR News — EdgeCore secures $1.9B in financing for massive Mesa campus",
+      "url": "https://ktar.com/arizona-news/data-center-developer-edgecore-secures-1-9-billion-in-financing-for-massive-mesa-campus/5556141/",
+      "date": "2024-01-07"
+    },
+    {
+      "label": "Commercial Property Executive — EdgeCore Secures $1.9B for Phoenix Data Center Campus",
+      "url": "https://www.commercialsearch.com/news/edgecore-secures-1-9b-for-phoenix-data-center-campus/",
+      "date": "2024-01-05"
+    },
+    {
+      "label": "EdgeCore — Completes $1.9 Billion Debt Financing (Mesa)",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-completes-1-9-billion-debt-financing-to-enable-continued-growth-and-development-of-its-flagship-data-center-campus-in-greater-phoenix",
+      "date": "2024-01-04"
+    },
+    {
+      "label": "EdgeCore release (PR Newswire) — EdgeCore completes $1.9 billion debt financing for its flagship Greater Phoenix campus",
+      "url": "https://www.prnewswire.com/news-releases/edgecore-digital-infrastructure-completes-1-9-billion-debt-financing-to-enable-continued-growth-and-development-of-its-flagship-data-center-campus-in-greater-phoenix-302025910.html",
+      "date": "2024-01-04",
+      "party": "company"
+    },
+    {
+      "label": "EdgeCore — EdgeCore and SRP Partner on Watershed",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-and-srp-partner-to-improve-arizona-watershed-and-forest-health",
+      "date": "2023-11-15"
+    },
+    {
+      "label": "Data Center Frontier — EdgeCore Retools for Gigawatt-Sized Data Center Opportunities",
+      "url": "https://www.datacenterfrontier.com/design/article/33013464/edgecore-retools-for-gigawatt-sized-data-center-opportunities",
+      "date": "2023-10-19"
+    },
+    {
+      "label": "EdgeCore — Strengthens Focus / \"Designed for Density\" rebrand",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-strengthens-its-focus-on-delivering-data-center-density-scalability-and-certainty-of-execution",
+      "date": "2023-10-17"
+    },
+    {
+      "label": "EdgeCore — Partners with Zayo (SV dark fiber)",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-partners-with-zayo-to-bring-dark-fiber-connectivity-to-its-72mw-silicon-valley-campus",
+      "date": "2023-08-29"
+    },
+    {
+      "label": "Lightwave — EdgeCore breaks ground on Reno campus",
+      "url": "https://www.lightwaveonline.com/data-center/article/14297771/edgecore-digital-infrastructure-breaks-ground-on-reno-nevada-data-center-campus",
+      "date": "2023-08-15"
+    },
+    {
+      "label": "Commercial Property Executive — EdgeCore Breaks Ground on 1.5 MSF Data Center Campus (Reno)",
+      "url": "https://www.commercialsearch.com/news/edgecore-digital-breaks-ground-on-1-5-msf-data-center-campus/",
+      "date": "2023-08-11"
+    },
+    {
+      "label": "EdgeCore — Development of Reno Campus",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-development-of-reno-nevada-data-center-campus",
+      "date": "2023-08-10"
+    },
+    {
+      "label": "EdgeCore — Three Industry Specialists to Board",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-appointment-of-three-industry-specialists-to-its-board",
+      "date": "2023-06-21"
+    },
+    {
+      "label": "EdgeCore — Expansion of Greater Phoenix + Green Globes",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-expansion-of-greater-phoenix-data-center-campus-and-receipt-of-green-globes-certification-for-adoption-of-sustainable-building-best-practices",
+      "date": "2023-04-27"
+    },
+    {
+      "label": "EdgeCore — Expansion in Northern Virginia",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-announces-expansion-in-preeminent-northern-virginia-data-center-market",
+      "date": "2023-03-29"
+    },
+    {
+      "label": "Capacity Media — New owner of EdgeCore appoints Kestler as CEO",
+      "url": "https://capacityglobal.com/news/new-owner-of-edgecore-appoints-kestler-as-ceo/",
+      "date": "2023-03-13"
+    },
+    {
+      "label": "Data Center Frontier — Industry Veteran Lee Kestler Named CEO of EdgeCore",
+      "url": "https://www.datacenterfrontier.com/hyperscale/article/33001571/industry-veteran-lee-kestler-named-ceo-of-edgecore-digital-infrastructure",
+      "date": "2023-03-10"
+    },
+    {
+      "label": "EdgeCore — Appoints Lee Kestler as CEO",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-appoints-lee-kestler-as-chief-executive-officer",
+      "date": "2023-03-09"
+    },
+    {
+      "label": "Data Center Frontier — EdgeCore Breaks Ground on Santa Clara Data Center Project",
+      "url": "https://www.datacenterfrontier.com/site-selection/article/21546189/edgecore-breaks-ground-on-santa-clara-data-center-project",
+      "date": "2023-01-30"
+    },
+    {
+      "label": "EdgeCore — Breaks Ground on First of Two Silicon Valley DCs",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-breaks-ground-on-first-of-two-silicon-valley-data-centers",
+      "date": "2023-01-26"
+    },
+    {
+      "label": "Mingtiandi — Partners Group buys GIC-backed US data centre operator EdgeCore in $1.2B deal (476 MW portfolio at sale)",
+      "url": "https://www.mingtiandi.com/real-estate/data-centres/partners-group-buys-gic-backed-us-data-centre-operator-in-12b-deal/",
+      "date": "2022-11-16"
+    },
+    {
+      "label": "Data Center Frontier — Partners Group Acquires EdgeCore, Plans to Invest $1.2 Billion",
+      "url": "https://www.datacenterfrontier.com/finance/article/21437828/edgecore-is-acquired-by-partners-group",
+      "date": "2022-11-14"
+    },
+    {
+      "label": "EdgeCore — EdgeCore Digital Infrastructure Acquired by Partners Group",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-acquired-by-partners-group",
+      "date": "2022-11-11"
+    },
+    {
+      "label": "Partners Group release — Partners Group acquires EdgeCore Digital Infrastructure on behalf of its clients (up to USD 1.2 billion)",
+      "url": "https://www.partnersgroup.com/news-and-views/press-releases/investment-news/detail?news_id=c74f346e-a0a6-406b-b9d2-a72bcf67cc7d",
+      "date": "2022-11-11"
+    },
+    {
+      "label": "Data Center Frontier — Ready for Launch: EdgeCore Preps First Data Center in Mesa",
+      "url": "https://www.datacenterfrontier.com/cloud/article/11429601/ready-for-launch-edgecore-preps-first-data-center-in-mesa",
+      "date": "2019-05-08"
+    },
+    {
+      "label": "EdgeCore — EdgeCore Internet Real Estate Acquires 36 Acres",
+      "url": "https://edgecore.com/resources/press-releases/edgecore-internet-real-estate-acquires-36-acres-of-scalable-land-in-data-center-alley",
+      "date": "2018-09-13"
+    },
+    {
+      "label": "GIC newsroom — Mount Elbert, GIC and OPTrust form EdgeCore Internet Real Estate (founding release, over US$800 million of equity)",
+      "url": "https://www.gic.com.sg/newsroom/news/mount-elbert-gic-and-optrust-form-edgecore-internet-real-estate/",
+      "date": "2018-02-14",
+      "party": "company"
+    },
+    {
+      "label": "Data Center Frontier — EdgeCore Launches, Plans $2 Billion in Data Center Development",
+      "url": "https://www.datacenterfrontier.com/featured/article/11430341/edgecore-launches-plans-2-billion-in-data-center-development",
+      "date": "2018-02-14"
+    },
+    {
+      "label": "Data Center Knowledge — Singapore Government Backs New US Data Center Developer EdgeCore",
+      "url": "https://www.datacenterknowledge.com/business/singapore-government-backs-new-us-data-center-developer-edgecore",
+      "date": "2018-02-14"
+    },
+    {
+      "label": "EdgeCore — Homepage (2.27+ GW portfolio; $7.4 billion committed; $16.1B planned investment)",
+      "url": "https://edgecore.com/"
+    },
+    {
+      "label": "EdgeCore — About (six markets; 100% customer milestones met)",
+      "url": "https://edgecore.com/company/about-edgecore-digital-infrastructure"
+    },
+    {
+      "label": "EdgeCore — Leadership Team page",
+      "url": "https://edgecore.com/company/leadership-team"
+    },
+    {
+      "label": "EdgeCore — Louisa County Data Centers (1.1+ GW; 697 acres; 6 data centers)",
+      "url": "https://edgecore.com/locations/louisa-county-data-center"
+    },
+    {
+      "label": "EdgeCore — Phoenix (Mesa) Data Centers (496 MW critical IT load; 5 data centers)",
+      "url": "https://edgecore.com/locations/phoenix-data-center"
+    },
+    {
+      "label": "EdgeCore — Reno Data Centers (216 MW; Tahoe-Reno Industrial Center)",
+      "url": "https://edgecore.com/locations/reno-data-center"
+    },
+    {
+      "label": "EdgeCore — Silicon Valley Data Centers (72 MW; Santa Clara)",
+      "url": "https://edgecore.com/locations/silicon-valley-data-center"
+    },
+    {
+      "label": "EdgeCore — Culpeper Data Centers (196 MW; capacity from mid-2029)",
+      "url": "https://edgecore.com/locations/culpeper-data-centers"
+    },
+    {
+      "label": "EdgeCore — Ashburn (Sterling) Data Centers (114 MW; AS01/AS02)",
+      "url": "https://edgecore.com/locations/ashburn-data-center"
+    },
+    {
+      "label": "EdgeCore — Hyperscale Data Center (300+ MW campus design; 50 kW+ racks; direct-to-chip ready)",
+      "url": "https://edgecore.com/hyperscale-data-center"
+    },
+    {
+      "label": "EdgeCore — Gigascale Data Center (1 GW+ campuses; Louisa 1.1+ GW)",
+      "url": "https://edgecore.com/gigascale-data-center"
+    },
+    {
+      "label": "EdgeCore — Why EdgeCore (six differentiators)",
+      "url": "https://edgecore.com/why-edgecore"
+    },
+    {
+      "label": "EdgeCore — Responsibility (sustainability claims; no ESG report)",
+      "url": "https://edgecore.com/responsibility"
+    },
+    {
+      "label": "EdgeCore — Contact (Denver headquarters; Sterling office)",
+      "url": "https://edgecore.com/company/contact"
+    },
+    {
+      "label": "EdgeCore — Lee Kestler, CEO",
+      "url": "https://edgecore.com/company/leadership-team/lee-kestler"
+    },
+    {
+      "label": "EdgeCore — Steve Conner, President",
+      "url": "https://edgecore.com/company/leadership-team/steve-conner"
+    },
+    {
+      "label": "EdgeCore — Clint Heiden, CCO",
+      "url": "https://edgecore.com/company/leadership-team/clint-heiden"
+    },
+    {
+      "label": "EdgeCore — John Bean, CLO",
+      "url": "https://edgecore.com/company/leadership-team/john-bean"
+    },
+    {
+      "label": "EdgeCore — Bob Berlinsky, EVP",
+      "url": "https://edgecore.com/company/leadership-team/bob-berlinsky"
+    },
+    {
+      "label": "EdgeCore — Julie Brewer, EVP Finance",
+      "url": "https://edgecore.com/company/leadership-team/julie-brewer"
+    },
+    {
+      "label": "EdgeCore — Therese Kerfoot, EVP Strategy",
+      "url": "https://edgecore.com/company/leadership-team/therese-kerfoot"
+    },
+    {
+      "label": "EdgeCore — Bill Jabjiniak, SVP Community/Gov Relations",
+      "url": "https://edgecore.com/company/leadership-team/bill-jabjiniak"
+    },
+    {
+      "label": "EdgeCore — Olivia L'Heureux, VP Procurement",
+      "url": "https://edgecore.com/company/leadership-team/olivia-lheureux"
+    },
+    {
+      "label": "EdgeCore — Dave Rezash, SVP Design & Construction",
+      "url": "https://edgecore.com/company/leadership-team/dave-rezash"
+    },
+    {
+      "label": "EdgeCore — Justin Taylor, SVP General Counsel",
+      "url": "https://edgecore.com/company/leadership-team/justin-taylor"
+    },
+    {
+      "label": "EdgeCore — Ruben Thissen, SVP Operations & EHS",
+      "url": "https://edgecore.com/company/leadership-team/ruben-thissen"
+    },
+    {
+      "label": "EdgeCore — Greg Thompson, SVP Enterprise Security",
+      "url": "https://edgecore.com/company/leadership-team/greg-thompson"
+    },
+    {
+      "label": "EdgeCore — Brian Tidd, SVP Accounting & Reporting",
+      "url": "https://edgecore.com/company/leadership-team/brian-tidd"
+    },
+    {
+      "label": "EdgeCore — Tom Traugott, SVP Emerging Technologies",
+      "url": "https://edgecore.com/company/leadership-team/tom-traugott"
+    },
+    {
+      "label": "Storey County business spotlight (newsletter) — EdgeCore Digital Infrastructure (three data centers under construction at TRIC)",
+      "url": "https://mailchi.mp/storeycounty/edgecoredigitalinfrastructurespotlight-13052436"
+    },
+    {
+      "label": "Server Country project database — EdgeCore AS01 and AS02 Sterling data centers (topping-out dates)",
+      "url": "https://servercountry.org/data/projects/edgecore-as01-and-as02-sterling-data-centers-va/"
+    },
+    {
+      "label": "DuraFuse Frames project page — EdgeCore Santa Clara data center (GC Holder Construction)",
+      "url": "https://durafuse.com/projects/edgecore-santa-clara-data-center/"
+    },
+    {
+      "label": "datacenterHawk — EdgeCore CP01-03, Nalles Mill Road, Culpeper (not yet commissioned or leased)",
+      "url": "https://datacenterhawk.com/marketplace/providers/edgecore/nalles-mill-road/cp01-03"
+    },
+    {
+      "label": "DLR Group project page — EdgeCore Phoenix data center campus (Building 1: 32 MW; PUE <1.25)",
+      "url": "https://www.dlrgroup.com/work/edgecore-phoenix-data-center-campus/"
+    },
+    {
+      "label": "Partners Group — Investment case study: EdgeCore (contracted-capacity pricing thesis)",
+      "url": "https://www.partnersgroup.com/en/our-investments/infrastructure/edgecore"
+    },
+    {
+      "label": "Server Country — Arizona data center policy tracker (HB 4168 exemption pause; HB 2756 large-load framework; Mesa Ordinance 5957)",
+      "url": "https://servercountry.org/policy/arizona/"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

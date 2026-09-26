@@ -508,6 +508,16 @@
       "status": "announced",
       "since": "2026-02",
       "via": "Heron Link"
+    },
+    {
+      "slug": "blackrock",
+      "type": "other",
+      "status": "historical",
+      "since": "2021-11",
+      "via": "HPS Investment Partners",
+      "note": "HPS Investment Partners, term lender on Intersect's portfolio financings, has been part of BlackRock since 1 July 2025.",
+      "context": "HPS lent to Intersect's 2021, 2022 and 2024 portfolio rounds, including the USD 837m Texas battery financing of July 2024. BlackRock completed its acquisition of HPS on 1 July 2025, after those loans were made. This is a lending relationship, not ownership.",
+      "source": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas"
     }
   ],
   "policyExposure": [
@@ -1290,6 +1300,6 @@
       "url": "https://www.intersect.com/team/john-k-martinez"
     }
   ],
-  "lastUpdated": "2026-09-12",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 3
 }

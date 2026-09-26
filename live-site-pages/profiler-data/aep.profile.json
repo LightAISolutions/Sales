@@ -1230,6 +1230,16 @@
       "note": "Co-sponsor of the eastern half of the Texas 765 kV backbone, and AEP Texas's largest interconnected counterparty in ERCOT.",
       "context": "An ERCOT Regional Planning Group filing dated December 1, 2025 is titled '25RPG025 — AEP Texas, CPS Energy, Oncor and CNP Texas 765-kV STEP Eastern Backbone Project', naming the four utilities as co-sponsors of the eastern segment of the Strategic Transmission Expansion Plan. AEP Texas's Howard to Solstice 765 kV line in Docket 59366 connects into the same Permian backbone Oncor is certifying through its four pending applications. Oncor's Form 10-K grid-connections table records 21 interconnected lines each at 345 kV, 138 kV and 69 kV with American Electric Power, and notes that one of those 345 kV lines is an asynchronous high-voltage direct current tie to the Southwest Power Pool — the only path off the ERCOT island in Oncor's own table.",
       "source": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf"
+    },
+    {
+      "slug": "kkr",
+      "type": "investor",
+      "status": "active",
+      "since": "2025-06",
+      "scale": "19.9% of two transmission companies; USD 2.82bn with PSP",
+      "note": "KKR and PSP Investments, 50/50 partners, hold 19.9% of AEP's Ohio and Indiana Michigan transmission companies; AEP keeps control and operates them.",
+      "context": "The transaction was announced on 9 January 2025 and completed on 5 June 2025. KKR funded its half from its core infrastructure strategy. AEP intended the sale to offset about USD 5.35bn of equity need through 2029. KKR's stake is in two subsidiaries, not in AEP itself, and it does not sign for AEP's equipment.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000069/a06-2025olympuspressreleas.htm"
     }
   ],
   "policyExposure": [
@@ -2151,6 +2161,6 @@
       "url": "https://www.nextearningsdate.com/aep.html"
     }
   ],
-  "lastUpdated": "2026-09-03",
-  "profileVersion": 1
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 2
 }

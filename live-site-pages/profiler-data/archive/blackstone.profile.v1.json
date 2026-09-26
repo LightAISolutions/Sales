@@ -1,0 +1,820 @@
+{
+ "schemaVersion": 7,
+ "slug": "blackstone",
+ "name": "Blackstone Inc.",
+ "shortName": "Blackstone",
+ "categories": [
+  "investor"
+ ],
+ "website": "https://www.blackstone.com/",
+ "headquarters": "345 Park Avenue, New York, NY 10154, United States",
+ "founded": "1985",
+ "employees": "~5,285 (31 December 2025), including 268 senior managing directors",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: BX"
+ },
+ "summary": "**BOTTOM LINE UP FRONT:** Blackstone is the largest alternative asset manager in this corpus by assets — USD 1,346.3bn of total AUM and USD 961.6bn of fee-earning AUM at 30 June 2026 — and its AI-data-centre position runs through **QTS**, taken private in 2021 and still wholly sponsor-owned. The dossier's subject is the **listed parent, Blackstone Inc. (NYSE: BX)**, because at Blackstone the parent *is* the asset manager: unlike Brookfield, where the manager is a separately listed subsidiary, and unlike Macquarie, where it is an operating group inside a bank, there is one filer and one set of accounts.\n\n**BACKGROUND.** Delaware corporation founded 1985, SEC-classified **SIC 6282, Investment Advice**, a \"controlled company\" under NYSE rules — a single share of Series II preferred stock held by Blackstone Group Management L.L.C. elects the board, and Stephen Schwarzman controls it, with Jonathan Gray the designated successor founding member. FY2025 revenues USD 14,450.3m (+9.2%) and net income attributable to Blackstone Inc. USD 3,019.2m (+8.7%), both taken from XBRL company-facts rather than from a press release. **Four reporting segments — Real Estate, Private Equity, Credit & Insurance and Multi-Asset Investing.** Blackstone Infrastructure is **not** a segment: it sits inside Private Equity, which is the single structural fact most often got wrong about this firm.",
+ "ecosystemRole": "We assess Blackstone as the ecosystem's largest single landlord-by-proxy and, simultaneously, one of its largest lenders — a combination no other covered investor holds. It owns the demand side through QTS and the supply side through Potomac Energy Center, its Invenergy position and VoltaGrid, and it lends across both through Blackstone Credit & Insurance. That dual position is now a named regulatory exposure rather than an analytical observation: the Senate Banking Committee's minority wrote to Blackstone in June 2026 asking how a firm with a \"significant footprint in both energy supply and demand\" will avoid raising electricity costs. For vendors in this corpus Blackstone is reached through its portfolio companies, not directly — QTS buys the switchgear, Aypa buys the batteries — so the firm appears in supplier dossiers as an ownership attribution rather than as a counterparty.",
+ "productsAndServices": [
+  {
+   "name": "Real Estate",
+   "category": "Segment",
+   "description": "Blackstone's largest and oldest real-assets business and the segment that carries the data-centre exposure. USD 314.1bn of total AUM and USD 277.4bn of fee-earning AUM at 30 June 2026, generating USD 613.0m of fee-related earnings and USD 745.3m of segment distributable earnings in the quarter. Roughly 785 employees at 31 December 2025. The segment houses the opportunistic BREP series, the core+ platforms BPP and BREIT, the real-estate debt business BREDS, and — from May 2026 — BXDC.",
+   "highlights": [
+    "USD 314.1bn total AUM / USD 277.4bn fee-earning AUM at 30 June 2026",
+    "BREIT: non-listed perpetual-life REIT, USD 56.55bn of AUM, USD 82.4bn of cumulative net proceeds raised, 4,530 properties plus 63,081 single-family rental homes",
+    "Blackstone Property Partners: a platform of 30+ private core+ funds, co-investment vehicles and separately managed accounts — not a single fund — USD 57.75bn of AUM, inception 2013",
+    "QTS is held here and in Private Equity jointly; BREIT alone carried 35.4% of QTS at 30 June 2026, being 26.1% of BREIT's real-estate asset value",
+    "Real Estate is the only segment whose AUM has shrunk — down about 3% year on year to USD 314.1bn — while its segment earnings rose 32%, so the business is getting more profitable on a smaller asset base"
+   ],
+   "positioning": "Against Brookfield's and Macquarie's real-assets franchises, Blackstone's distinguishing feature is the perpetual-capital share: USD 555.6bn of perpetual-capital AUM at 30 June 2026, up 15% year on year, of which USD 463.0bn is fee-earning — 48% of all fee-earning AUM. Perpetual capital does not have to sell, which is why QTS is still held five years after the take-private while Macquarie's comparable platform was exited at eight.",
+   "soldThrough": "Institutional limited partners; and, for BREIT and BXDC, individual investors through financial advisers.",
+   "targetSegments": [
+    "Institutional LPs",
+    "Private wealth / individual investors",
+    "Insurance balance sheets"
+   ],
+   "roadmap": "BXDC, the NYSE-listed data-centre REIT that IPO'd on 15 May 2026, had acquired no data-centre assets as of 30 June 2026 and describes itself as a blind pool."
+  },
+  {
+   "name": "Private Equity — including Blackstone Infrastructure",
+   "category": "Segment",
+   "description": "USD 454.2bn of total AUM and USD 267.8bn of fee-earning AUM at 30 June 2026; USD 716.9m of fee-related earnings and USD 981.5m of segment distributable earnings in the quarter; ~720 employees. This segment contains Corporate Private Equity, **Blackstone Infrastructure Partners**, Tactical Opportunities, Secondaries (Strategic Partners), Life Sciences, Growth, Capital Markets and Blackstone Total Alternatives Solutions. Blackstone Infrastructure is a business inside this segment, not a reporting segment of its own.",
+   "highlights": [
+    "Blackstone Infrastructure Partners (BIP): NOT a listed vehicle — a family of perpetual-capital, open-ended infrastructure funds and co-investment vehicles, inception 2019, USD 74.96bn of fee-paying AUM and USD 85.6bn including co-investment vehicles that pay no fees; inception-to-date net return 18%",
+    "BXINFRA (Blackstone Infrastructure Strategies): a separate private-wealth perpetual programme, SEC-reporting but non-listed, inception 2025, USD 5.98bn of AUM",
+    "Blackstone Tactical Opportunities: a drawdown hybrid-capital strategy launched 2012, USD 44.26bn of committed capital — the vehicle that led VoltaGrid's 2026 round",
+    "Blackstone Energy Transition Partners: a sector-focused drawdown carry-fund series inside Corporate PE — Fund IV USD 5.88bn committed, Fund V USD 5.67bn committed with its investment period opening June 2026; BETP is the seller of Aypa Power"
+   ],
+   "positioning": "Where Blackstone can be independently ranked in infrastructure it is not first. Infrastructure Investor's 2026 edition, measuring five-year infrastructure capital raised, places Blackstone **eighth at USD 45.7bn** — behind BlackRock (USD 113.4bn), KKR, Brookfield, Macquarie, EQT, Stonepeak and DigitalBridge. In the PEI 300's private-equity table for the same period Blackstone is **third at USD 111.8bn**. Both editions were published 2026-06-01.",
+   "soldThrough": "Institutional LPs for BIP and the drawdown funds; private wealth for BXINFRA.",
+   "targetSegments": [
+    "Pension funds",
+    "Sovereign wealth funds",
+    "Insurers",
+    "Private wealth"
+   ],
+   "roadmap": "Blackstone Energy Transition Partners V entered its investment period in June 2026 with USD 5.67bn committed and USD 5.7bn of inflows in the second quarter alone."
+  },
+  {
+   "name": "Credit & Insurance (BXCI)",
+   "category": "Segment",
+   "description": "The largest segment by assets — USD 469.3bn of total AUM and USD 318.2bn of fee-earning AUM at 30 June 2026 — and the one through which Blackstone touches companies it does not own. BXCI is organised into private corporate credit, liquid corporate credit, and infrastructure & asset-based credit. It is the reason several dossiers in this corpus record a Blackstone relationship that is a loan rather than a holding.",
+   "highlights": [
+    "USD 469.3bn total AUM; USD 370.1m of fee-related earnings in Q2 2026",
+    "BCRED (Blackstone Private Credit Fund): a non-traded BDC of USD 94.62bn — gated for the first time in its history in June 2026 when redemption requests reached roughly 10% of shares against a 5% quarterly cap, and were prorated",
+    "BXSL (Blackstone Secured Lending Fund), NYSE-listed, USD 16.59bn",
+    "The rebrand from 'Blackstone Credit' to 'Blackstone Credit & Insurance' is the company's own usage in its FY2025 10-K"
+   ],
+   "positioning": "BXCI is the vector by which Blackstone appears in dossiers of companies it has no equity in — Strata Clean Energy's 2021 facility was credit, Arevon's Condor financing was preferred equity replacing tax equity, and Blackstone Credit is a lender to Aligned Data Centers, a platform BlackRock's GIP owns. Reading any of those as ownership is the commonest error made about this firm.",
+   "soldThrough": "Institutional mandates, insurance-company balance sheets, and non-traded vehicles sold to individuals.",
+   "targetSegments": [
+    "Insurers",
+    "Institutional credit allocators",
+    "Private wealth"
+   ]
+  },
+  {
+   "name": "Multi-Asset Investing (BXMA)",
+   "category": "Segment",
+   "description": "USD 108.6bn of total AUM and USD 98.1bn of fee-earning AUM at 30 June 2026; USD 83.4m of fee-related earnings and USD 97.7m of segment distributable earnings in the quarter; ~240 employees — the smallest segment by both assets and headcount.",
+   "highlights": [
+    "USD 108.6bn total AUM at 30 June 2026",
+    "Fee-earning AUM of USD 98.1bn is 90% of total AUM, the highest conversion ratio of any segment"
+   ],
+   "soldThrough": "Institutional and private-wealth allocators.",
+   "targetSegments": [
+    "Institutional multi-asset allocators",
+    "Private wealth"
+   ]
+  },
+  {
+   "name": "Digital infrastructure — the AI-data-centre position",
+   "category": "Investment theme",
+   "description": "Blackstone's data-centre exposure is not a segment or a fund but a theme running across Real Estate, Private Equity and Credit. Its anchor is QTS. Its newest vehicle is BXDC. Its scale is stated by the firm in several mutually inconsistent ways and by no independent publisher at all.",
+   "highlights": [
+    "QTS Realty Trust taken private 31 August 2021 at USD 78.00 a share in cash",
+    "BXDC (Blackstone Digital Infrastructure Trust), NYSE-listed REIT, IPO 15 May 2026, gross proceeds over USD 2.0bn and net USD 1.9bn — holding no data-centre assets at 30 June 2026",
+    "Blackstone Credit & Insurance is a lender to Aligned Data Centers, which BlackRock's GIP and MGX own — a credit exposure to a competitor's asset",
+    "Sold its interests in three Northern Virginia data centres to Digital Realty for USD 3.5bn, completed 30 June 2026",
+    "BXDC's prospectus is the fullest first-party account Blackstone has published of its data-centre franchise: about USD 225bn of digital-infrastructure transactions since 2018, over USD 150bn in data-centre assets, over USD 10bn of sector lending, 45-plus dedicated professionals, and QTS leased megawatts up 14-fold since 2021 — which it calls 'the firm's most profitable investment to date'"
+   ],
+   "positioning": "**No published ranking of data-centre owners by capacity or by value exists.** Synergy Research ranks hyperscale operators; Site Selection Group's 2026 list places QTS fourth but publishes no megawatt figures and states no methodology; DC Byte and datacenterHawk are subscription products. Blackstone's own figures do not crosswalk with each other — a portfolio variously described at ~USD 150bn, a pipeline at ~USD 160bn, 'over USD 130bn in data center assets' within 'approximately USD 200bn in transactions since 2018', and a platform valuation reported at USD 185bn are four different measures of four different things. Any statement that Blackstone is the largest data-centre owner is **unfalsifiable as stated** and is carried here only as a company claim.",
+   "soldThrough": "Through the fund and vehicle structures above; Blackstone does not sell data-centre capacity itself.",
+   "targetSegments": [
+    "Hyperscalers and investment-grade technology tenants, via QTS"
+   ]
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Assets under management — the four segments at 30 June 2026",
+   "specs": [
+    {
+     "band": "Scale",
+     "label": "Total AUM",
+     "value": "USD 1,346.3bn"
+    },
+    {
+     "band": "Scale",
+     "label": "Fee-earning AUM",
+     "value": "USD 961.6bn"
+    },
+    {
+     "band": "Scale",
+     "label": "Perpetual-capital AUM",
+     "value": "USD 555.6bn, up 15% year on year"
+    },
+    {
+     "band": "Scale",
+     "label": "Fee-earning perpetual capital",
+     "value": "USD 463.0bn — 48% of total fee-earning AUM"
+    },
+    {
+     "band": "Segment",
+     "label": "Credit & Insurance",
+     "value": "USD 469.3bn AUM / USD 318.2bn fee-earning"
+    },
+    {
+     "band": "Segment",
+     "label": "Private Equity (includes Blackstone Infrastructure)",
+     "value": "USD 454.2bn AUM / USD 267.8bn fee-earning"
+    },
+    {
+     "band": "Segment",
+     "label": "Real Estate",
+     "value": "USD 314.1bn AUM / USD 277.4bn fee-earning"
+    },
+    {
+     "band": "Segment",
+     "label": "Multi-Asset Investing",
+     "value": "USD 108.6bn AUM / USD 98.1bn fee-earning"
+    }
+   ],
+   "notes": "Segment AUM at 31 December 2025 summed exactly to the reported total of USD 1,274.9bn (Real Estate 319.3 + Private Equity 416.4 + Credit & Insurance 443.0 + Multi-Asset 96.2), which is the arithmetic check that confirms the four segments are exhaustive and that Blackstone Infrastructure is inside one of them rather than beside them."
+  },
+  {
+   "product": "The vehicle taxonomy — what each named Blackstone entity actually is",
+   "specs": [
+    {
+     "band": "Perpetual, unlisted",
+     "label": "Blackstone Infrastructure Partners (BIP)",
+     "value": "A family of perpetual-capital, open-ended infrastructure funds and co-investment vehicles for institutional investors, inception 2019 — not a listed vehicle. USD 74.96bn fee-paying AUM, USD 85.6bn including non-fee-paying co-investment vehicles; inception-to-date net return 18%"
+    },
+    {
+     "band": "Perpetual, unlisted",
+     "label": "BXINFRA (Blackstone Infrastructure Strategies)",
+     "value": "A separate private-wealth perpetual programme, SEC-reporting but non-listed, inception 2025, USD 5.98bn AUM"
+    },
+    {
+     "band": "Perpetual, unlisted",
+     "label": "BREIT",
+     "value": "Non-listed perpetual-life REIT, Maryland corporation, USD 56.55bn AUM, USD 82.4bn cumulative net proceeds raised, 4,530 properties plus 63,081 single-family rental homes"
+    },
+    {
+     "band": "Perpetual, unlisted",
+     "label": "Blackstone Property Partners (BPP)",
+     "value": "A platform of 30-plus private core+ funds, co-investment vehicles and separately managed accounts, inception 2013, USD 57.75bn AUM — not a single fund"
+    },
+    {
+     "band": "Drawdown",
+     "label": "Blackstone Tactical Opportunities",
+     "value": "A drawdown hybrid-capital strategy launched 2012, USD 44.26bn committed capital, USD 15.53bn available"
+    },
+    {
+     "band": "Drawdown",
+     "label": "Blackstone Energy Transition Partners",
+     "value": "Sector-focused carry-fund series inside Corporate Private Equity — Fund IV USD 5.88bn, Fund V USD 5.67bn with its investment period opening June 2026"
+    },
+    {
+     "band": "Listed",
+     "label": "BXDC (Blackstone Digital Infrastructure Trust)",
+     "value": "NYSE-listed REIT, IPO 15 May 2026, gross proceeds over USD 2.0bn and net USD 1.9bn, externally managed by BX REIT Advisors — the same manager as BREIT"
+    },
+    {
+     "band": "Business unit",
+     "label": "Blackstone Credit & Insurance (BXCI)",
+     "value": "A reporting segment and business unit, not a fund — private corporate credit, liquid corporate credit, and infrastructure & asset-based credit"
+    }
+   ],
+   "notes": "This table exists because the corpus names five different Blackstone vehicles across its dossiers and trade press writes 'Blackstone' for all of them. The QTS take-private, the VoltaGrid round, the Aypa sale and the Strata credit facility were each executed by a different one."
+  },
+  {
+   "product": "QTS Realty Trust take-private, 31 August 2021 — the consideration, as filed",
+   "specs": [
+    {
+     "band": "Price",
+     "label": "Per common share (Class A and Class B)",
+     "value": "USD 78.00 in cash, without interest and less applicable withholding"
+    },
+    {
+     "band": "Price",
+     "label": "Per Series A preferred share",
+     "value": "USD 25.2325521 plus accrued and unpaid dividends"
+    },
+    {
+     "band": "Price",
+     "label": "Per Class A partnership unit",
+     "value": "USD 78.00"
+    },
+    {
+     "band": "Aggregate",
+     "label": "Equity consideration",
+     "value": "'approximately $6.2 billion' to holders of common stock, equity awards and minority limited partners, plus 'approximately $107 million' for the Series A preferred"
+    },
+    {
+     "band": "Aggregate",
+     "label": "Consolidated indebtedness at 31 March 2021",
+     "value": "'approximately $1.8 billion' of unsecured senior notes, term loans and revolver, plus USD 43 million"
+    },
+    {
+     "band": "Aggregate",
+     "label": "Headline transaction value",
+     "value": "~USD 10bn including debt — a marketing figure, not a filed one"
+    },
+    {
+     "band": "Parties",
+     "label": "Acquisition entities",
+     "value": "Parent Volt Upper Holdings LLC; Merger Sub I Volt Lower Holdings LLC; Merger Sub II Volt Acquisition LP"
+    },
+    {
+     "band": "Parties",
+     "label": "Sponsors as defined in the merger agreement",
+     "value": "Blackstone Infrastructure Partners L.P. ('BIP') and BREIT Operating Partnership L.P. ('BREIT OP')"
+    },
+    {
+     "band": "Financing",
+     "label": "Debt commitment at closing",
+     "value": "Up to ~USD 5.0bn funded at closing plus up to USD 800m delayed-draw property financing, from Citigroup, Barclays, Deutsche Bank and Goldman Sachs, and a separate USD 900m revolver"
+    },
+    {
+     "band": "Financing",
+     "label": "Reverse termination fee",
+     "value": "USD 805 million, guaranteed by the Sponsors"
+    }
+   ],
+   "notes": "The arithmetic does not close: USD 6.2bn of equity plus USD 0.107bn of preferred plus USD 1.8bn of consolidated debt is about USD 8.1bn against a headline of about USD 10bn, and no source located reconciles the roughly USD 1.9bn gap. Unconsolidated joint-venture debt, finance leases and transaction costs are plausible explanations; none is confirmed. Separately, secondary accounts name Blackstone Property Partners as a third acquiring vehicle — 'Blackstone Property Partners' appears zero times in the definitive proxy, whose defined Sponsors are only BIP and BREIT OP. Both readings are recorded; no source reconciles them."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-10",
+   "category": "partnership",
+   "headline": "NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure",
+   "read": "Blackstone is one of six firms — with Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — and no per-firm allocation is published, so this is a memorandum of understanding rather than a committed sum.",
+   "source": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "financial",
+   "headline": "Q2 2026: total AUM USD 1,346.3bn and fee-earning AUM USD 961.6bn; distributable earnings per share USD 1.52 against an LSEG consensus of USD 1.35",
+   "read": "Blackstone beat distributable-earnings consensus in every quarter measurable in the trailing two years, and the shares still fell roughly a quarter over 2026 — the market is not trading this firm on distributable earnings.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526313250/0001193125-26-313250-index.htm"
+  },
+  {
+   "date": "2026-07-22",
+   "category": "ma",
+   "headline": "Brookfield agrees to acquire Aypa Power from funds managed by Blackstone Energy Transition Partners at about USD 7bn enterprise value and USD 3bn equity value",
+   "read": "Signed, not closed: Brookfield's own filed exhibit says only 'subject to customary regulatory approvals', names no regulator and gives no date. Aypa remains a Blackstone portfolio company until it closes.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm"
+  },
+  {
+   "date": "2026-06-30",
+   "category": "ma",
+   "headline": "Digital Realty completes the buy-out of Blackstone's interests in three Northern Virginia data centres for USD 3.5bn",
+   "read": "The 2026 data-centre sale was the 2023 Digital Realty joint venture, not QTS — and Blackstone took over 65% of the price in Digital Realty stock rather than cash, so it did not fully exit.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "policy",
+   "headline": "Senate Banking Committee minority writes to Blackstone, BlackRock, KKR and Brookfield Infrastructure over data-centre ownership and rising electricity prices",
+   "read": "The letter's 'footprint in both energy supply and demand' framing lands on Blackstone more squarely than on any other addressee, because it owns QTS on the demand side and Potomac Energy Center, Invenergy and VoltaGrid on the supply side.",
+   "source": "https://www.banking.senate.gov/newsroom/minority"
+  },
+  {
+   "date": "2026-05-15",
+   "category": "corporate",
+   "headline": "BXDC, a NYSE-listed data-centre REIT externally managed by BX REIT Advisors, completes its IPO at over USD 2.0bn gross",
+   "read": "Blackstone's answer to public data-centre demand was a new blind-pool vehicle rather than an IPO of QTS; BXDC held no data-centre assets at 30 June 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526225090/d52761d424b4.htm"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "financial",
+   "headline": "FY2025: revenues USD 14,450.3m and net income attributable to Blackstone Inc. USD 3,019.2m, both up single digits on FY2024",
+   "read": "Growth is steady and unspectacular at the GAAP line; the operating story is in fee-earning AUM and the perpetual-capital share, neither of which appears in the income statement.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm"
+  },
+  {
+   "date": "2025-02-28",
+   "category": "financial",
+   "headline": "FY2024: revenues USD 13,230.0m and net income attributable to Blackstone Inc. USD 2,776.5m",
+   "read": "The FY2024 base against which FY2025's +9.2% revenue and +8.7% net income are measured.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312525042469/d912273d10k.htm"
+  },
+  {
+   "date": "2021-08-31",
+   "category": "ma",
+   "headline": "QTS Realty Trust take-private completes at USD 78.00 a share",
+   "read": "The transaction that made Blackstone a data-centre landlord; the vehicles named in the definitive agreement are Blackstone Infrastructure Partners and BREIT Operating Partnership.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1577368/000157736821000047/qts-20210831.htm"
+  },
+  {
+   "date": "2020-08-04",
+   "category": "corporate",
+   "headline": "NRStor C&I relaunches as Aypa Power following its acquisition by Blackstone Energy Partners in March 2020",
+   "read": "The record is explicit that Blackstone acquired a three-year-old operating platform rather than founding or seeding one — the rebrand release dates the acquisition to March 2020, not 2021.",
+   "source": "https://www.prnewswire.com/news-releases/nrstor-ci-relaunches-as-aypa-power-301105755.html"
+  }
+ ],
+ "strategyRead": [
+  "**(High confidence)** We assess that Blackstone's defining structural advantage in this ecosystem is **perpetual capital, and that it is visible in a single comparison**. USD 555.6bn of perpetual-capital AUM at 30 June 2026, of which USD 463.0bn is fee-earning — 48% of all fee-earning AUM — means the firm is not obliged to sell. QTS has been held five years and its BREIT position has *risen* from 33% at the take-private to 35.4% at 30 June 2026. Macquarie, running the closest comparable platform in Aligned out of finite-life infrastructure funds, exited at eight years. Same asset class, opposite structural obligation.",
+  "**(High confidence)** We assess that **Blackstone's own data-centre scale claims cannot be independently checked, and that this is a property of the market rather than of the firm**. Basis: no publisher ranks data-centre owners by capacity or value; Synergy ranks hyperscale operators, Site Selection Group publishes a list with no megawatts and no methodology, and DC Byte and datacenterHawk are subscription products. Blackstone's own figures — a portfolio at about USD 150bn, a pipeline at about USD 160bn, over USD 130bn of data-centre assets inside about USD 200bn of transactions since 2018, and a platform valuation reported at USD 185bn — measure four different things and do not crosswalk. Every one is carried here as a company claim.",
+  "**(High confidence)** We assess that **where Blackstone can be independently ranked in infrastructure, it is eighth**. Infrastructure Investor's 2026 edition puts it at USD 45.7bn of five-year infrastructure fundraising against BlackRock's USD 113.4bn, and BlackRock is first *because of* its Global Infrastructure Partners acquisition — the entity most often confused with Blackstone. Blackstone is third in the PEI 300's private-equity table. It is simultaneously the largest alternatives manager by total AUM, eighth in infrastructure fundraising and third in private equity: three different claims that are routinely blurred into one.",
+  "**(Moderate confidence)** We assess that **the credit business is the reason this firm is systematically misread in the corpus**. Blackstone Credit & Insurance lends to companies Blackstone does not own — Strata Clean Energy's 2021 facility was credit and the company's own chief financial officer said so; Arevon's Condor financing was preferred equity replacing tax equity at project level; and Blackstone Credit is a lender to Aligned Data Centers, which BlackRock's GIP and MGX own. A reader who treats a Blackstone appearance as an ownership signal will get all three wrong. The judgment is moderate rather than high because no first-party Blackstone disclosure enumerates these credit positions; each is sourced from the borrower's side.",
+  "**(Moderate confidence)** We assess that **the 2026 share-price decline is a liquidity-structure story rather than an earnings story**, and that it is the most important thing about Blackstone this year that its earnings releases do not say. BCRED, a USD 94.62bn non-traded business development company, enforced its redemption gate for the first time in its history in June 2026 when requests reached roughly 10% of shares against a 5% quarterly cap. The precedent is BREIT's own sixteen-month gating episode from November 2022. Both vehicles are sold to individuals, and both are the channel through which Blackstone raised the perpetual capital that its first judgment above rests on. **Collection gap:** the primary reporting on the BCRED gate sits behind hosts that returned HTTP 403 to this research, so the figures are carried from secondary accounts and should be re-verified against BCRED's own filings before they are relied on.",
+  "**Collection gap, stated rather than worked around:** `www.blackstone.com` returned HTTP 403 on every path tested in this research, including `robots.txt`, and `web.archive.org` is unreachable from this environment, so no Wayback fallback existed. Every fact in this dossier is therefore drawn from SEC filings by Blackstone or by a named counterparty, or from `ir.blackstone.com`. Two consequences are visible in the file: **no executive photographs are carried**, because no company-published image URL could be retrieved and none was constructed; and the first-party share reads high not because the firm is unusually forthcoming but because filings were the only first-party channel available. A dossier sourced this heavily from one channel is under-checked in the schema's own terms, and this one says so."
+ ],
+ "policyExposure": [
+  {
+   "regime": "Senate Banking Committee oversight — data-centre ownership and retail electricity prices",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-10",
+   "exposure": "The minority of the Senate Committee on Banking, Housing and Urban Affairs wrote to Blackstone, BlackRock, KKR and Brookfield Infrastructure asking for documentation of efforts to mitigate the regulatory risks of owning data centres, and for an explanation of how a firm with a significant footprint in both energy supply and demand will not raise energy costs. The letters cite US data-centre electricity consumption rising from 1.9% to 4.4% of the national total between 2018 and 2023 and national average costs potentially rising 6%-29% by 2030, with Virginia up to 57%. Blackstone is the addressee most exposed to the framing: it owns QTS on the demand side and Potomac Energy Center, its Invenergy position and VoltaGrid on the supply side.",
+   "mitigation": "No published Blackstone response to the letters was located.",
+   "source": "https://www.banking.senate.gov/newsroom/minority"
+  },
+  {
+   "regime": "NYSE controlled-company exemption",
+   "status": "in-effect",
+   "exposure": "Blackstone is a controlled company under NYSE rules. A single outstanding share of Series II preferred stock, held by Blackstone Group Management L.L.C. — owned by the senior managing directors and controlled by Stephen Schwarzman — elects the board of directors. The firm is therefore exempt from the majority-independent-board and independent-committee requirements that apply to other NYSE issuers of its size, and public shareholders do not elect its directors.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm"
+  }
+ ],
+ "relationships": [
+  {
+   "slug": "qts",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2021-08",
+   "scale": "USD 78.00 per share; ~USD 10bn including debt",
+   "note": "QTS is Blackstone's anchor data-centre holding, taken private on 31 August 2021 and never sold down.",
+   "context": "The definitive merger proxy names the Sponsors as Blackstone Infrastructure Partners L.P. and BREIT Operating Partnership L.P., acquiring through Volt Upper Holdings LLC. Consideration was USD 78.00 a share in cash for both common classes, with about USD 6.2bn paid to common holders, equity-award holders and minority limited partners and about USD 107m to the Series A preferred. The frequently-quoted 'approximately $10 billion' is a transaction-value headline including debt, and it does not reconcile with the filed figures: equity plus preferred plus about USD 1.8bn of consolidated debt is roughly USD 8.1bn, and no located source closes the gap.\n\nThe position has grown rather than shrunk. BREIT's stake was 33% at the take-private and is reported at **35.4%** and **35.7%** for 2026 in two separate readings of BREIT's own disclosure — no source reconciles the two, and both are carried. By 30 June 2026 the position was 26.1% of BREIT's entire real-estate asset value, up from 22.5% three months earlier, and BREIT deployed USD 3.3bn at its share into QTS development in the second quarter alone. Blackstone bought out founder Chad Williams' rolled-over units for a reported ~USD 3bn in March 2025. There is no QTS initial public offering in the record; the 2026 listing was BXDC, a separate blind-pool vehicle.\n\n**A conflict inside this session's own research, left unresolved rather than smoothed.** One research pass read the definitive proxy's defined 'Sponsors' as **only** Blackstone Infrastructure Partners and BREIT Operating Partnership, recording zero occurrences of 'Blackstone Property Partners' in the document. A second read the acquirer set as **three** vehicles, BIP + BREIT + BPP, which is also how secondary accounts and the corpus's existing QTS dossier describe it. The June 2021 announcement language — 'and other long-term perpetual capital vehicles managed by Blackstone' — admits both. Both readings are recorded here; neither is adopted.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1577368/000119312521221563/d187231ddefm14a.htm"
+  },
+  {
+   "slug": "aypa-power",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2020-03",
+   "scale": "~USD 7bn enterprise value / USD 3bn equity on the pending exit",
+   "note": "Blackstone acquired the platform in March 2020 and has agreed to sell it to Brookfield; the sale is signed and not closed.",
+   "context": "Blackstone Energy Partners acquired NRStor C&I — a behind-the-meter commercial and industrial storage developer founded in 2017 and then the Ontario market leader — in **March 2020**, rebranding it Aypa Power that August. It was the purchase of an operating platform, not a seeding: the rebrand release states the acquisition date plainly, and the business already held over 200 MWh of operational, in-construction and contracted projects.\n\nOn 22 July 2026 Brookfield agreed to acquire Aypa from funds managed by Blackstone Energy Transition Partners at about USD 7bn enterprise value and USD 3bn equity value. Brookfield's own filed exhibit says only that the transaction is 'subject to customary regulatory approvals' — it names no regulator and no expected closing date, and no completion has been announced as of 6 September 2026. Until it closes, Aypa remains a Blackstone portfolio company, and Aypa's own site still describes itself as one.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm"
+  },
+  {
+   "slug": "voltagrid",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2026-05",
+   "scale": "USD 1.0bn (USD 775m primary / USD 225m secondary)",
+   "note": "Blackstone Tactical Opportunities led VoltaGrid's USD 1.0bn round with Halliburton in May 2026 — a late-stage strategic investment, not a seed.",
+   "context": "VoltaGrid was founded in 2020 and had already raised more than USD 580m across four rounds — from CPP Investments, Longbow Capital, Carnelian Energy Capital, Pilot Company and Walter Ventures — before Blackstone appeared. The structure settles the question: USD 775m of primary capital plus **USD 225m of secondary purchases from existing investors**. A seed round does not have a secondary component; a secondary component exists to give early holders liquidity.\n\nThe vehicle was Blackstone Tactical Opportunities, the firm's drawdown hybrid-capital strategy, not an infrastructure fund. Proceeds were stated as accelerating deployment of behind-the-meter generation for data centres, microgrids and industrial applications, alongside a definitive agreement to acquire Propell Energy Technology.",
+   "source": "https://www.prnewswire.com/news-releases/nrstor-ci-relaunches-as-aypa-power-301105755.html"
+  },
+  {
+   "slug": "invenergy",
+   "type": "portfolio",
+   "status": "active",
+   "since": "2022",
+   "scale": "~USD 4bn of equity across 2022-2023",
+   "note": "Blackstone Infrastructure Partners holds a minority equity position in Invenergy Renewables Holdings; CDPQ and management hold the majority.",
+   "context": "Blackstone Infrastructure Partners invested approximately USD 3bn in January 2022 and a further USD 1bn in June 2023 into Invenergy Renewables Holdings LLC, described by both parties as a combined investment of about USD 4bn. It is a minority position: CDPQ holds 52.4% economic ownership of Invenergy Renewables LLC and management is the managing member. This is one of the few Blackstone positions in this corpus that is unambiguously an equity holding rather than a credit facility.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm"
+  },
+  {
+   "slug": "digital-realty",
+   "type": "partner",
+   "status": "historical",
+   "since": "2023",
+   "scale": "USD 3.5bn for a blended 64% interest; USD 7.8bn gross at 100%",
+   "note": "Blackstone and Digital Realty were joint-venture partners in Northern Virginia from 2023 until Digital Realty bought Blackstone out on 30 June 2026.",
+   "context": "Digital Realty acquired Blackstone's 80% interest in two Manassas data centres and its 50% interest in one on the Digital Dulles campus in Sterling — a blended 64% equity interest across 288 MW of IT capacity, fully leased to three investment-grade hyperscale customers. Consideration was USD 3.5bn, of which USD 1.2bn was cash and USD 2.3bn was Digital Realty stock, so Blackstone took over 65% of the price in the buyer's equity and did not fully exit. Digital Realty disclosed an expected initial stabilised capitalisation rate of over 6.5% — a rare independently-published cap rate for a Blackstone data-centre exit. The seller was described by the counterparty as Blackstone-affiliated funds managed by Real Estate, Infrastructure and Tactical Opportunities: three vehicles, where Blackstone's own coverage says one name.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm"
+  },
+  {
+   "slug": "brookfield",
+   "type": "competitor",
+   "status": "active",
+   "note": "Direct peers in infrastructure and digital infrastructure, and counterparties on the pending Aypa Power sale.",
+   "context": "Infrastructure Investor's 2026 edition ranks Brookfield third at USD 99.1bn of five-year infrastructure fundraising and Blackstone eighth at USD 45.7bn — Brookfield raises roughly twice as much infrastructure capital. They compete for the same assets and, in July 2026, transacted with each other: Brookfield's second global transition vintage agreed to buy Aypa Power from Blackstone Energy Transition Partners. Both were also named, with four other firms, in NVIDIA's August 2026 programme to mobilise over USD 500bn of third-party capital for AI infrastructure.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "macquarie",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peers in infrastructure fundraising, and counterparties on the 2024 AirTrunk sale — Blackstone bought the platform Macquarie was exiting.",
+   "context": "Macquarie Asset Management ranks fourth at USD 87.9bn of five-year infrastructure fundraising against Blackstone's eighth at USD 45.7bn. The two met directly on AirTrunk: in September 2024 Blackstone-managed vehicles agreed to acquire the Asia-Pacific platform from Macquarie Asset Management and PSP Investments at an implied enterprise value above A$24bn, with CPP Investments taking 12% alongside. Four Blackstone vehicles participated — Blackstone Real Estate Partners, Blackstone Infrastructure Partners, Blackstone Tactical Opportunities and its private-equity strategy for individual investors — so Blackstone-managed capital holds about 88%, not 100%.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "nvidia",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-08",
+   "scale": "one of six firms in a >USD 500bn programme",
+   "note": "Named by NVIDIA as one of six capital partners in a programme to mobilise third-party capital for AI-infrastructure buildout.",
+   "context": "On 10 August 2026 NVIDIA announced memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over USD 500bn of third-party capital. No per-firm allocation is published and the arrangement is a memorandum rather than a committed sum, so the figure describes the programme and not Blackstone's share of it.",
+   "source": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr"
+  },
+  {
+   "slug": "aligned",
+   "type": "other",
+   "status": "active",
+   "scale": ">USD 1bn of credit commitments",
+   "note": "Blackstone Credit & Insurance is a lender to Aligned Data Centers — a platform Blackstone does not own and whose owners are its competitors.",
+   "context": "This edge exists to prevent a specific error. Aligned was acquired in July 2026 by the AI Infrastructure Partnership, MGX and BlackRock's Global Infrastructure Partners, from funds managed by Macquarie Asset Management. Blackstone is not an owner. But Blackstone Credit & Insurance has a separately announced financing partnership with Aligned surpassing USD 1bn of commitments, so it is a creditor to an asset its competitors own. Both 'Blackstone owns Aligned' and 'Blackstone has no Aligned exposure' are wrong, and the type here is `other` rather than `investor` because a credit commitment is not an equity holding.",
+   "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/"
+  },
+  {
+   "slug": "strata-clean-energy",
+   "type": "other",
+   "status": "active",
+   "since": "2021-05",
+   "scale": "USD 150m credit facility",
+   "note": "Blackstone Credit provided a USD 150m facility in May 2021 — credit, not equity, and typed `other` for that reason.",
+   "context": "Strata Clean Energy's own chief financial officer described the 2021 Blackstone money as a credit facility rather than an equity stake, and Strata's financing page says the company is owned by its founders. `portfolio` would be the wrong word here: Blackstone holds no equity, so there is nothing in its portfolio to name. Whether the facility remains outstanding is not stated by either party.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm"
+  },
+  {
+   "slug": "arevon",
+   "type": "other",
+   "status": "active",
+   "scale": "USD 350m Condor financing",
+   "note": "Blackstone Credit supplied preferred equity at project level on Arevon's Condor financing, replacing traditional tax equity — a structured financing, not a platform holding.",
+   "context": "Arevon's Condor project financing used Blackstone Credit preferred equity in place of conventional tax equity, alongside a Stifel investment-tax-credit transfer purchase. The position is at the project, not the platform, and Arevon's sponsors are unaffected by it. Typed `other` for the same reason as Strata: a project-level preferred instrument is neither an equity holding in the company nor a customer or supplier relationship.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm"
+  },
+  {
+   "slug": "fluidstack",
+   "type": "other",
+   "status": "announced",
+   "since": "2026-06",
+   "scale": "reported USD 35bn initial tranche of the chip vehicle",
+   "note": "Blackstone is reported as a participant in the Broadcom-Apollo-Blackstone vehicle that buys chips and leases them to Anthropic at Fluidstack sites.",
+   "context": "Press accounts of a chip-leasing platform describe an initial USD 35bn tranche to facilitate about 1 GW of compute that Anthropic is expected to deploy at Fluidstack-operated sites, with the vehicle buying Google-designed TPUs and leasing them onward. Bloomberg separately reported in September 2026 that Blackstone was weighing a second debt package for the same arrangement. **This is trade reporting, not a filed arrangement**: no Blackstone filing located names Fluidstack, Anthropic or the vehicle, and the Broadcom release page was unreachable. It is recorded as `other` and as reported rather than confirmed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526340208/d158269d10q.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Stephen A. Schwarzman",
+   "title": "Chairman, Chief Executive Officer and Co-Founder",
+   "background": [
+    "Co-founded Blackstone in 1985 and has been involved in all phases of the firm's development since",
+    "Controls Blackstone Group Management L.L.C., which holds the single share of Series II preferred stock that elects the board — the mechanism behind the firm's NYSE controlled-company status"
+   ]
+  },
+  {
+   "name": "Jonathan D. Gray",
+   "title": "President and Chief Operating Officer",
+   "background": [
+    "Designated successor founding member under Blackstone's governance documents",
+    "Long-tenured leader of the Real Estate business before becoming President and COO"
+   ]
+  },
+  {
+   "name": "Sean Klimczak",
+   "title": "Global Head of Infrastructure",
+   "background": [
+    "Leads Blackstone Infrastructure Partners, the perpetual-capital infrastructure platform launched in 2019 that sits inside the Private Equity segment"
+   ]
+  },
+  {
+   "name": "Gregory Blank",
+   "title": "Chief Executive Officer, Blackstone Infrastructure Strategies (BXINFRA)",
+   "background": [
+    "Leads the private-wealth perpetual infrastructure programme launched in 2025"
+   ]
+  },
+  {
+   "name": "Michael S. Chae",
+   "title": "Chief Financial Officer",
+   "background": [
+    "Represents Blackstone at investor conferences, including the Barclays Global Financial Services Conference on 15 September 2026 — the only forward event on the firm's investor-relations calendar as of 6 September 2026"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Total revenues",
+      "actual": "USD 13,230.0m",
+      "expected": "",
+      "verdict": "",
+      "result": "No published full-year revenue consensus was locatable; the field is left empty rather than reconstructed by summing quarters.",
+      "kpi": "revenue",
+      "usdMillions": 13230.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to Blackstone Inc.",
+      "actual": "USD 2,776.5m",
+      "expected": "",
+      "verdict": "",
+      "result": "Taken from XBRL company-facts (us-gaap:NetIncomeLoss) rather than from a press release.",
+      "kpi": "net-income",
+      "usdMillions": 2776.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Distributable earnings",
+      "actual": "USD 6.0bn — USD 4.64 per share",
+      "expected": "",
+      "verdict": "",
+      "result": "Blackstone's headline non-GAAP measure. No full-year consensus locatable."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 5.3bn — USD 4.32 per share",
+      "expected": "",
+      "verdict": "",
+      "result": "The fee-only earnings stream, excluding performance revenues."
+     }
+    ],
+    "commentary": "FY2024 is the comparative base. Both GAAP figures are XBRL-sourced; the two non-GAAP figures are as reported by the company."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Total revenues",
+      "actual": "USD 14,450.3m (+9.2%)",
+      "expected": "",
+      "verdict": "",
+      "result": "No published full-year revenue consensus was locatable.",
+      "kpi": "revenue",
+      "usdMillions": 14450.3,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable to Blackstone Inc.",
+      "actual": "USD 3,019.2m (+8.7%)",
+      "expected": "",
+      "verdict": "",
+      "result": "XBRL company-facts.",
+      "kpi": "net-income",
+      "usdMillions": 3019.2,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Distributable earnings",
+      "actual": "USD 7.1bn — USD 5.57 per share (+20%)",
+      "expected": "",
+      "verdict": "",
+      "result": "Distributable earnings grew far faster than GAAP net income, which is the normal pattern for a manager recognising realisations."
+     },
+     {
+      "name": "Net income (total, including non-controlling interests)",
+      "actual": "USD 6,047m",
+      "expected": "",
+      "verdict": "",
+      "result": "Stated beside the attributable figure deliberately: USD 6,047m is total net income and USD 3,019.2m is the portion attributable to Blackstone Inc. Both are correct on their own basis and the two are routinely quoted interchangeably."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 5,738m",
+      "expected": "",
+      "verdict": "",
+      "result": "Up from USD 5.3bn in FY2024. No fee-related-earnings consensus was locatable for any period."
+     },
+     {
+      "name": "Total AUM",
+      "actual": "USD 1,274.9bn at 31 December 2025",
+      "expected": "",
+      "verdict": "",
+      "result": "Segment AUM sums exactly: Real Estate 319.3 + Private Equity 416.4 + Credit & Insurance 443.0 + Multi-Asset Investing 96.2."
+     },
+     {
+      "name": "Fee-earning AUM",
+      "actual": "USD 921.7bn at 31 December 2025",
+      "expected": "",
+      "verdict": "",
+      "result": "72% of total AUM is fee-earning."
+     }
+    ],
+    "commentary": "Steady single-digit GAAP growth against 20% distributable-earnings growth. Collection gap: no full-year analyst consensus for revenue, distributable earnings or fee-related earnings was locatable from any provider, so every `expected` field for the annual periods is left empty rather than manufactured."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Distributable earnings per share",
+      "actual": "USD 1.52",
+      "expected": "USD 1.35",
+      "verdict": "beat",
+      "result": "Consensus per LSEG. Two other aggregators published USD 1.34 and USD 1.38 for the same quarter; no source reconciles the three, and the LSEG figure is used with that spread disclosed."
+     },
+     {
+      "name": "Total AUM",
+      "actual": "USD 1,346.3bn (+11% y/y)",
+      "expected": "",
+      "verdict": "",
+      "result": "Perpetual-capital AUM USD 555.6bn, up 15% y/y."
+     },
+     {
+      "name": "Fee-earning AUM",
+      "actual": "USD 961.6bn (+8% y/y)",
+      "expected": "",
+      "verdict": "",
+      "result": "Fee-earning perpetual capital USD 463.0bn — 48% of the total."
+     },
+     {
+      "name": "Fee-related earnings",
+      "actual": "USD 1.8bn",
+      "expected": "",
+      "verdict": "",
+      "result": "No fee-related-earnings consensus was locatable for any period."
+     },
+     {
+      "name": "Segment distributable earnings",
+      "actual": "USD 2.2bn",
+      "expected": "",
+      "verdict": "",
+      "result": "Real Estate 745.3m, Private Equity 981.5m, Credit & Insurance 373.2m, Multi-Asset Investing 97.7m."
+     }
+    ],
+    "commentary": "Blackstone beat distributable-earnings consensus in every quarter measurable across the trailing two years, and the shares still fell roughly 25-30% over 2026. The reported drivers are the BCRED redemption gate of June 2026 and a sector-wide re-rating of alternative managers, not the operating result. Any reading of this company that cites the earnings beats without the share-price decline is materially incomplete."
+   }
+  ],
+  "commentary": "Blackstone reports in USD, so every normalized figure is 'as reported'. The GAAP figures above were verified directly against SEC XBRL company-facts rather than taken from an earnings release. **Collection gap on expectations:** published consensus for Blackstone is quarterly, almost always distributable earnings per share only, and almost always sourced to LSEG; no full-year consensus for any metric was locatable, and fee-related-earnings consensus was locatable for no period at all. Those `expected` fields are empty by choice."
+ },
+ "sources": [
+  {
+   "label": "BXDC (Blackstone Digital Infrastructure Trust) Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/2100161/000210016126000007/bxdc-20260630.htm",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "NVIDIA — partnerships with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to mobilise over $500bn for AI infrastructure",
+   "url": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "Blackstone Inc. Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526340208/d158269d10q.htm",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "BREIT (Blackstone Real Estate Income Trust) Form 10-Q, quarter ended 30 June 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1662972/000166297226000111/breit-20260630.htm",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Brookfield Asset Management Form 8-K exhibit 99.1 — Brookfield to acquire Aypa Power from Blackstone Energy Transition Partners",
+   "url": "https://www.sec.gov/Archives/edgar/data/1937926/000193792626000045/exh991.htm",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Blackstone Inc. Q2 2026 earnings presentation (Form 8-K exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526313250/0001193125-26-313250-index.htm",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Aligned Data Centers — AIP, MGX and BlackRock's GIP close acquisition of Aligned Data Centers",
+   "url": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Site Selection Group — largest US data center operators in 2026",
+   "url": "https://info.siteselectiongroup.com/blog/largest-data-center-operators-in-the-united-states",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Digital Realty Trust Form 8-K exhibit 99.1 — acquisition of Blackstone's interests in three Northern Virginia data centres",
+   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000129799626000071/dlr-20260629xex991.htm",
+   "date": "2026-06-29"
+  },
+  {
+   "label": "US Senate Committee on Banking, Housing and Urban Affairs (Minority) — letters to Blackstone, BlackRock, KKR and Brookfield Infrastructure on data-centre ownership and electricity costs",
+   "url": "https://www.banking.senate.gov/newsroom/minority",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Infrastructure Investor 100 — 2026 edition, five-year infrastructure capital raised",
+   "url": "https://www.infrastructureinvestor.com/ii-100/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "PEI 300 — 2026 edition, five-year private equity capital raised",
+   "url": "https://www.privateequityinternational.com/pei-300/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "BXDC Form 424B4 initial public offering prospectus",
+   "url": "https://www.sec.gov/Archives/edgar/data/2100161/000119312526225090/d52761d424b4.htm",
+   "date": "2026-05-15"
+  },
+  {
+   "label": "Blackstone Inc. Form 10-Q, quarter ended 31 March 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526214609/d60424d10q.htm",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Blackstone Private Multi-Asset Credit & Income Fund (BMACX) Form 486BPOS",
+   "url": "https://www.sec.gov/Archives/edgar/data/2032432/000114036126017513/ef20071264_486bpos.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Blackstone Infrastructure Strategies L.P. (BXINFRA) Form 10-K for FY2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/2030772/000119312526096453/d70902d10k.htm",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Blackstone Inc. Form 10-K for FY2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526082531/d48618d10k.htm",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "European Commission merger decision M.11843 — Ares / Macquarie / Data Realty Group / Prime Data Centers",
+   "url": "https://ec.europa.eu/competition/mergers/cases1/202512/M_11843_10567975_126_3.pdf",
+   "date": "2025-03-18"
+  },
+  {
+   "label": "Blackstone Inc. Form 10-K for FY2024",
+   "url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312525042469/d912273d10k.htm",
+   "date": "2025-02-28"
+  },
+  {
+   "label": "QTS Realty Trust Form 8-K — completion of merger with Blackstone affiliates",
+   "url": "https://www.sec.gov/Archives/edgar/data/1577368/000157736821000047/qts-20210831.htm",
+   "date": "2021-08-31"
+  },
+  {
+   "label": "QTS Realty Trust definitive merger proxy statement (DEFM14A)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1577368/000119312521221563/d187231ddefm14a.htm",
+   "date": "2021-07-19"
+  },
+  {
+   "label": "NRStor C&I relaunches as Aypa Power following Blackstone Energy Partners' March 2020 acquisition (PR Newswire)",
+   "url": "https://www.prnewswire.com/news-releases/nrstor-ci-relaunches-as-aypa-power-301105755.html",
+   "date": "2020-08-04"
+  },
+  {
+   "label": "Blackstone Inc. investor relations — overview and events calendar",
+   "url": "https://ir.blackstone.com/overview/default.aspx"
+  },
+  {
+   "label": "Blackstone Inc. EDGAR submissions record (CIK 0001393818) — SIC 6282, NYSE: BX, filer history",
+   "url": "https://data.sec.gov/submissions/CIK0001393818.json"
+  },
+  {
+   "label": "Blackstone Inc. XBRL company concept — us-gaap:Revenues",
+   "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001393818/us-gaap/Revenues.json"
+  },
+  {
+   "label": "Blackstone Inc. XBRL company concept — us-gaap:NetIncomeLoss",
+   "url": "https://data.sec.gov/api/xbrl/companyconcept/CIK0001393818/us-gaap/NetIncomeLoss.json"
+  },
+  {
+   "label": "BXPE — Blackstone Private Equity Strategies Fund L.P. EDGAR submissions record",
+   "url": "https://data.sec.gov/submissions/CIK0001930054.json"
+  },
+  {
+   "label": "BXSL — Blackstone Secured Lending Fund EDGAR submissions record",
+   "url": "https://data.sec.gov/submissions/CIK0001736035.json"
+  },
+  {
+   "label": "BREIT EDGAR submissions record (CIK 0001662972)",
+   "url": "https://data.sec.gov/submissions/CIK0001662972.json"
+  },
+  {
+   "label": "BXDC EDGAR submissions record (CIK 0002100161)",
+   "url": "https://data.sec.gov/submissions/CIK0002100161.json"
+  },
+  {
+   "label": "EDGAR full-text search — \"Blackstone Infrastructure Partners\" in Form 10-K filings",
+   "url": "https://efts.sec.gov/LATEST/search-index?q=%22Blackstone+Infrastructure+Partners%22&forms=10-K"
+  },
+  {
+   "label": "Private Equity Stakeholder Project — private equity capital and the data-centre buildout",
+   "url": "https://pestakeholder.org/news/private-equity-cash-fuels-data-center-buildout/"
+  }
+ ],
+ "lastUpdated": "2026-09-06",
+ "profileVersion": 1
+}

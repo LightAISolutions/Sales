@@ -61,6 +61,66 @@
       "pair": "amazon x x-energy",
       "why": "Both true at once: Amazon is X-energy's largest outside shareholder (23.4% of Class A) AND the anchor buyer of Xe-100 capacity (Cascade rights, 5 GW option). X-energy types the shareholder side `investor`; Amazon types the commercial side `supplier` because the enum has no `portfolio` value and the purchase relation is the one Amazon's own page describes. F6 investor-pair accept 4 of 4.",
       "when": "2026-09-05"
+    },
+    {
+      "id": "ba3e67901003",
+      "pair": "amperesand x kkr",
+      "why": "Indirect by construction: Amperesand supports the HVDC testbed of STTGDC, which KKR has controlled (75%) since 2 September 2026; KKR itself has no Amperesand contract, so neither customer/supplier nor investor/portfolio is true. F-I1 accept 1 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "560dcae37601",
+      "pair": "aon x kkr",
+      "why": "A signed-not-closed M&A counterparty: Aon is buying USI from KKR (USD 17.0bn, 31 Aug 2026). A buyer of a company from a seller has no enum type; `other`/`other` is the honest typing. F-I1 accept 2 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "af25a4c75b4c",
+      "pair": "blackrock x edgecore",
+      "why": "A lending tie: BlackRock's GIP is a lead lender on EdgeCore's USD 1.5bn Sterling construction financing; there is no `lender` type and investor/portfolio would wrongly imply equity. F-I1 accept 3 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "536cfd4b8c45",
+      "pair": "blackrock x excelsior-energy-capital",
+      "why": "An asset sale: BlackRock's Evergreen Infrastructure Partners Fund bought Excelsior's 38-project portfolio (announced March 2024); a buyer of assets is not a commercial customer, so `other`/`other`. F-I1 accept 4 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "3fb05352439a",
+      "pair": "blackrock x fluence",
+      "why": "Indirect on both legs: Fluence supplies Akaysha (reported BlackRock-owned) and AES, Fluence's anchor shareholder, is being taken private by a GIP-led consortium (pending); no direct BlackRock–Fluence contract. F-I1 accept 5 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "1c97d277c075",
+      "pair": "blackrock x intersect-power",
+      "why": "A lending tie through HPS, which became part of BlackRock on 1 July 2025 after lending to Intersect's 2021–2024 rounds; no `lender` type exists. F-I1 accept 6 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "e81797e0540f",
+      "pair": "blackrock x stack-infrastructure",
+      "why": "Reported only: Bloomberg's 24 Sep 2026 report of AIP and IFM in exclusive talks for STACK's Asia-Pacific portfolio, unconfirmed by any party; no transaction type is true yet, so `other` with status announced on both sides. F-I1 accept 7 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "b792b53cd758",
+      "pair": "blackrock x talen-energy",
+      "why": "Two unrelated BlackRock businesses: a historical plant sale (Guernsey, from Caithness and BlackRock, Nov 2025) and a passive index stake (about 9%); neither fits customer/supplier or investor/portfolio as a curated edge. F-I1 accept 8 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "ec1e8bcdb39d",
+      "pair": "fluence x kkr",
+      "why": "Indirect by construction: Fluence supplies Avantus, which KKR-managed funds majority-own, for Rexford 2 (July 2026); the contract is with Avantus, not KKR. F-I1 accept 9 of 10.",
+      "when": "2026-09-26"
+    },
+    {
+      "id": "c25483413f9b",
+      "pair": "kkr x stack-infrastructure",
+      "why": "Reported only: Bloomberg named KKR among suitors for STACK's Asia-Pacific portfolio (June 2026), and a different group was reported in exclusivity in September; no transaction exists. F-I1 accept 10 of 10.",
+      "when": "2026-09-26"
     }
   ]
 }

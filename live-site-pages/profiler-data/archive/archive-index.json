@@ -61,6 +61,12 @@
    "profileVersion": 6,
    "archivedAt": "2026-09-06",
    "supersededBy": 7
+  },
+  {
+   "file": "aligned.profile.v7.json",
+   "profileVersion": 7,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 8
   }
  ],
  "amazon": [
@@ -587,6 +593,12 @@
    "profileVersion": 5,
    "archivedAt": "2026-09-06",
    "supersededBy": 6
+  },
+  {
+   "file": "eolian.profile.v6.json",
+   "profileVersion": 6,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 7
   }
  ],
  "equinix": [
@@ -721,6 +733,12 @@
    "profileVersion": 8,
    "archivedAt": "2026-09-06",
    "supersededBy": 9
+  },
+  {
+   "file": "fluence.profile.v9.json",
+   "profileVersion": 9,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 10
   }
  ],
  "ge-vernova": [
@@ -1055,6 +1073,12 @@
    "profileVersion": 5,
    "archivedAt": "2026-09-06",
    "supersededBy": 6
+  },
+  {
+   "file": "jupiter-power.profile.v6.json",
+   "profileVersion": 6,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 7
   }
  ],
  "key-capture-energy": [
@@ -1323,6 +1347,12 @@
    "profileVersion": 8,
    "archivedAt": "2026-09-06",
    "supersededBy": 9
+  },
+  {
+   "file": "meta.profile.v9.json",
+   "profileVersion": 9,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 10
   }
  ],
  "microsoft": [
@@ -1349,6 +1379,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-26",
    "supersededBy": 5
+  },
+  {
+   "file": "microsoft.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 6
   }
  ],
  "mortenson": [
@@ -1497,6 +1533,12 @@
    "profileVersion": 10,
    "archivedAt": "2026-09-26",
    "supersededBy": 11
+  },
+  {
+   "file": "nvidia.profile.v11.json",
+   "profileVersion": 11,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 12
   }
  ],
  "on-energy": [
@@ -1929,6 +1971,12 @@
    "profileVersion": 6,
    "archivedAt": "2026-09-06",
    "supersededBy": 7
+  },
+  {
+   "file": "stack-infrastructure.profile.v7.json",
+   "profileVersion": 7,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 8
   }
  ],
  "sungrow": [
@@ -2327,6 +2375,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-26",
    "supersededBy": 5
+  },
+  {
+   "file": "xai.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 6
   }
  ],
  "zhonhen": [
@@ -2483,6 +2537,12 @@
    "profileVersion": 2,
    "archivedAt": "2026-09-06",
    "supersededBy": 3
+  },
+  {
+   "file": "vistra.profile.v3.json",
+   "profileVersion": 3,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 4
   }
  ],
  "oklo": [
@@ -2513,6 +2573,12 @@
    "profileVersion": 1,
    "archivedAt": "2026-09-05",
    "supersededBy": 2
+  },
+  {
+   "file": "talen-energy.profile.v2.json",
+   "profileVersion": 2,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 3
   }
  ],
  "sargent-lundy": [
@@ -2611,6 +2677,12 @@
    "profileVersion": 4,
    "archivedAt": "2026-09-07",
    "supersededBy": 5
+  },
+  {
+   "file": "compass-datacenters.profile.v5.json",
+   "profileVersion": 5,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 6
   }
  ],
  "fluidstack": [
@@ -2649,6 +2721,12 @@
    "profileVersion": 2,
    "archivedAt": "2026-09-26",
    "supersededBy": 3
+  },
+  {
+   "file": "mgx.profile.v3.json",
+   "profileVersion": 3,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 4
   }
  ],
  "hut-8": [
@@ -2703,6 +2781,12 @@
    "profileVersion": 1,
    "archivedAt": "2026-09-09",
    "supersededBy": 2
+  },
+  {
+   "file": "aes-clean-energy.profile.v2.json",
+   "profileVersion": 2,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 3
   }
  ],
  "intersect-power": [
@@ -2711,6 +2795,12 @@
    "profileVersion": 1,
    "archivedAt": "2026-09-12",
    "supersededBy": 2
+  },
+  {
+   "file": "intersect-power.profile.v2.json",
+   "profileVersion": 2,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 3
   }
  ],
  "amperesand": [
@@ -2719,6 +2809,12 @@
    "profileVersion": 1,
    "archivedAt": "2026-09-19",
    "supersededBy": 2
+  },
+  {
+   "file": "amperesand.profile.v2.json",
+   "profileVersion": 2,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 3
   }
  ],
  "novonix": [
@@ -2756,6 +2852,102 @@
  "amd": [
   {
    "file": "amd.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "cyrusone": [
+  {
+   "file": "cyrusone.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "aep": [
+  {
+   "file": "aep.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "coolit": [
+  {
+   "file": "coolit.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "aon": [
+  {
+   "file": "aon.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "blackstone": [
+  {
+   "file": "blackstone.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "brookfield": [
+  {
+   "file": "brookfield.profile.v2.json",
+   "profileVersion": 2,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 3
+  }
+ ],
+ "macquarie": [
+  {
+   "file": "macquarie.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "clearway-energy": [
+  {
+   "file": "clearway-energy.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "recurrent-energy": [
+  {
+   "file": "recurrent-energy.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "excelsior-energy-capital": [
+  {
+   "file": "excelsior-energy-capital.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "edgecore": [
+  {
+   "file": "edgecore.profile.v1.json",
+   "profileVersion": 1,
+   "archivedAt": "2026-09-26",
+   "supersededBy": 2
+  }
+ ],
+ "marsh-mclennan": [
+  {
+   "file": "marsh-mclennan.profile.v1.json",
    "profileVersion": 1,
    "archivedAt": "2026-09-26",
    "supersededBy": 2

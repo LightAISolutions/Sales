@@ -259,6 +259,16 @@
    "note": "RWE Clean Energy is Meta's four-project solar counterparty across Illinois, Louisiana and Texas.",
    "context": "The named projects are Emily Solar (274 MW, Illinois) and Lafitte Solar (100 MW, Louisiana) announced together in August 2024, Waterloo Solar (200 MWac, Bastrop County, Texas) in March 2025 and Rabbit's Foot Solar (298 MWac, Bowie County, Texas) in June 2026 with COD at end-2027. Three totals circulate for the same relationship and no source reconciles them: 374 MW for the first pair, 574 MW in one account that substitutes Waterloo for one of them, and 872 MW for 'agreements totalling 872 MW during the last two years'. RWE renamed the business RWE Americas, LLC in March 2026.",
    "source": "https://www.rwe.com/en/press/rwe-americas/2026-06-11-meta-expands-partnership-with-rwe/"
+  },
+  {
+   "slug": "blackrock",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "~USD 14bn; 1 GW; 80% BlackRock funds / 20% Meta",
+   "note": "Funds managed by BlackRock are to own 80% of the El Paso data-centre venture Meta announced on 28 July 2026; Meta keeps 20%, runs construction and is the sole tenant.",
+   "context": "Meta's announcement gives BlackRock funds 80%, about USD 4.9bn of BlackRock cash against about USD 2.3bn of Meta assets, a USD 12.5bn debt financing, and a Meta residual value guarantee of about USD 13bn. Meta's Q2 10-Q describes the arrangement as an exclusivity agreement subject to definitive agreements, and no first-party closing notice was found by 26 September 2026, so the link is recorded as 'announced'.",
+   "source": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/"
   }
  ],
  "policyExposure": [
@@ -575,6 +585,6 @@
    "url": "https://www.ucs.org/about/news/judge-orders-meta-explain-new-gas-demand-hyperscale-louisiana-data-center"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 9
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 10
 }

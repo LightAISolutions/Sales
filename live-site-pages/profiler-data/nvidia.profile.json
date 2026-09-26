@@ -345,6 +345,26 @@
    "note": "NVIDIA is a Firmus shareholder, from the A$330M round of September 2025, and at Batam its partner in NVIDIA's revenue-sharing and credit-support model for neoclouds.",
    "context": "Firmus's September 2025 release: 'NVIDIA joining as an investor'; NVIDIA followed on in the US$505M and US$2B rounds of 2026. NVIDIA's own July 2026 blog names 'Sharon AI and Firmus … among the first companies to work with NVIDIA on this new business model', for a DSX AI factory campus in Batam, Indonesia. Firmus is also an NVIDIA GPU customer.",
    "source": "https://blogs.nvidia.com/blog/nvidia-unlocks-ai-compute-at-scale-capital-partners-to-power-ai-infrastructure-buildout/"
+  },
+  {
+   "slug": "kkr",
+   "type": "partner",
+   "status": "active",
+   "since": "2026-06",
+   "via": "Helix Digital Infrastructure; compute-financing MOU",
+   "note": "KKR is one of six financiers in NVIDIA's August 2026 compute-financing memoranda, and NVIDIA is a founding investor in KKR's Helix Digital Infrastructure.",
+   "context": "On 10 August 2026 NVIDIA signed memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish compute-financing platforms aiming to mobilise over USD 500bn, 'subject to execution of the final agreements' and with no per-firm allocation. KKR's co-CEOs' statement on the partnership calls NVIDIA 'a founding investor in Helix Digital Infrastructure', which KKR's June 2026 launch release names as a cornerstone strategic partner.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
+  },
+  {
+   "slug": "blackrock",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-09",
+   "via": "AI Infrastructure Partnership; compute-financing MOU",
+   "note": "NVIDIA advised the BlackRock-chaired AI Infrastructure Partnership from its 2024 launch and joined it in March 2025; BlackRock is one of six financiers in NVIDIA's August 2026 compute-financing memoranda.",
+   "context": "BlackRock, GIP, Microsoft and MGX launched the partnership in September 2024 with NVIDIA supporting and advising; NVIDIA and xAI joined the renamed AI Infrastructure Partnership on 19 March 2025, and BlackRock's October 2025 Aligned announcement lists NVIDIA among its founders. AIP's first investment is Aligned Data Centers. In the August 2026 memoranda, Larry Fink said the deal 'deepens our relationship with NVIDIA, including through the AI Infrastructure Partnership'.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
   }
  ],
  "policyExposure": [
@@ -719,5 +739,5 @@
   }
  ],
  "lastUpdated": "2026-09-26",
- "profileVersion": 11
+ "profileVersion": 12
 }

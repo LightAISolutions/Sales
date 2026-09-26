@@ -498,6 +498,17 @@
       "context": "The Louisa County newsletter records AWS proposals in the county alongside EdgeCore's Shannon Hill acquisition; Traugott led 'strategy and execution for new and existing regions across EMEA, APAC, and the Americas' at AWS. Whether AWS is an EdgeCore tenant anywhere is undisclosed — EdgeCore names no tenant.",
       "source": "https://tammypurcell.substack.com/p/at-town-hall-adams-says-he-opposes",
       "status": "active"
+    },
+    {
+      "slug": "blackrock",
+      "type": "other",
+      "status": "active",
+      "since": "2026-04",
+      "scale": "USD 1.5bn construction debt (with Apterra and ING)",
+      "via": "Global Infrastructure Partners",
+      "note": "BlackRock's Global Infrastructure Partners is a lead lender, with Apterra and ING, on EdgeCore's USD 1.5bn Sterling construction financing.",
+      "context": "EdgeCore's 21 April 2026 release names 'Global Infrastructure Partners (GIP), a part of BlackRock' among the three lenders on two senior secured term loans for AS01 and AS02 (114 MW). GIP is a lender here, not an owner.",
+      "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia"
     }
   ],
   "policyExposure": [
@@ -1320,6 +1331,6 @@
       "url": "https://servercountry.org/policy/arizona/"
     }
   ],
-  "lastUpdated": "2026-09-05",
-  "profileVersion": 1
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 2
 }

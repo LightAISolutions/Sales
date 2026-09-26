@@ -1,0 +1,1247 @@
+{
+  "schemaVersion": 7,
+  "slug": "excelsior-energy-capital",
+  "name": "Excelsior Renewable Energy Management Company LP (Excelsior Energy Capital)",
+  "shortName": "Excelsior Energy Capital",
+  "categories": [
+    "investor",
+    "developer"
+  ],
+  "website": "https://excelsiorcapital.com/",
+  "headquarters": "Excelsior, Minnesota (21960 Minnetonka Blvd, Suite 210; the Minneapolis suburb the firm is named for), with offices in Portland, Oregon and New York",
+  "founded": 2017,
+  "employees": "25 (Form ADV annual amendment, 30 March 2026); the team page lists 24 named people",
+  "ownership": {
+    "type": "private"
+  },
+  "summary": "BOTTOM LINE UP FRONT: Excelsior Energy Capital is a Minnesota fund manager that owns and operates US wind, solar and battery assets through two closed-end funds — Fund I (USD 504 million, 2021, fully deployed, now in harvest) and Fund II (just over USD 1 billion, April 2025, anchored by the Development Bank of Japan) — and, since 2023, develops and builds its own solar-plus-storage pipeline through the wholly-owned platform Lydian Energy; its relevance to this corpus is that it reserved 9.7 GWh of US-made batteries in 2024 (2.2 GWh of Fluence Gridstack Pro, 7.5 GWh of LG Energy Solution Vertech) against a Lydian pipeline that carries roughly 4.4 GW of solar and storage, and no source yet names the project that has received either.\n\nBACKGROUND. Founded in 2017 by four former TerraForm Power executives (Chris Moakley, Anne Marie Denman, Alex Ellis, Ryan Fegley). The SEC-registered adviser is Excelsior Renewable Energy Management Company LP (CRD 289890) with USD 1,505,418,687 of regulatory assets under management across two pooled vehicles and 47% non-US clients, per the March 2026 Form ADV. Fund I closed at USD 504 million in January 2021 (Form D/A: USD 503,787,879 sold to 27 investors, first sale 8 September 2017) and was deployed across 16 investments and 1.95 GW, per the Fund II release; Fund II closed at 'just over $1 billion' against a USD 750 million target on 8 April 2025, over 50% deployed across 15 investments and 2.25 GW. Flagship asset: Faraday Solar in Utah County, 685.3 MWdc / 525 MWac, financed at USD 1.3 billion in November 2023 and in commercial operation from 30 September 2025 under PacifiCorp's 20-year Schedule 34 contract with Meta as the buyer of the energy and attributes. Lydian Energy, launched April 2024 with 1.75 GW across nine Texas and New Mexico projects, has since financed three Texas batteries (550 MW / 1.1 GWh, USD 233 million, July 2025) and a USD 689 million tranche (Faraday BESS Phase 1 150 MW / 733 MWh, AC Ranch 1, Yellow Viking; February 2026), and bought Hanwha Renewables' ~1.5 GW Atlas North portfolio in April 2026. Fund I exits: a 38-project distributed portfolio to BlackRock (December 2023) and an 830 MW operating wind and solar portfolio to Enel for about USD 1 billion (signed February 2026, closing expected in the third quarter of 2026; seller entity Excelsior Renewable Energy Intermediate Fund I LP, per trade press).",
+  "ecosystemRole": "A buyer of batteries rather than a builder of them: Excelsior is the counterparty in two of the largest US-made storage supply frameworks on the corpus — Fluence's 2.2 GWh Gridstack Pro agreement (July 2024) and LG Energy Solution Vertech's 7.5 GWh agreement (December 2024) — both signed to capture the Inflation Reduction Act domestic-content bonus. Through Lydian it owns merchant batteries in ERCOT (with CATL cells) and contracted storage in Utah and CAISO, and through Faraday it sells solar to Meta via PacifiCorp. Its 2025–2026 Stella Power and CleanAmps alliances point the platform at firm power for data centres, so far without a named site or offtaker.",
+  "productsAndServices": [
+    {
+      "name": "Closed-end renewable infrastructure funds (Fund I and Fund II)",
+      "category": "Fund management",
+      "description": "Excelsior raises and manages closed-end private equity funds that buy, finance, own and operate US wind, solar and battery projects. Fund I (Excelsior Renewable Energy Investment Fund I LP) closed at USD 504 million in January 2021 against a USD 500 million target; Fund II (Excelsior Renewable Energy Investment Fund II LP, with Feeder Funds II-A and II-B) closed at 'just over $1 billion' against USD 750 million on 8 April 2025, anchored by the Development Bank of Japan.",
+      "highlights": [
+        "Fund I: USD 503,787,879 sold to 27 investors (Form D/A, 29 January 2021); 17 investors from six countries per the close release; 'fully deployed across 16 investments totaling 1.95 GW' per the Fund II release; placement agents Probitas, Consilium, Trinity, MMX Global.",
+        "Fund II: 'just over $1 billion' vs USD 750 million target; first close USD 502 million (March 2023); anchor Development Bank of Japan Inc.; 'Over 50% deployed across 15 investments' and '2.25 GW' at close; SEC Form Ds through May 2024 show USD 234.05 million (main LP, 9 investors), USD 246.16 million (Feeder II-A, 24 investors) and USD 200 million (Feeder II-B, 2 investors) sold — a floor, not the final size.",
+        "Form ADV (30 March 2026): regulatory AUM USD 1,505,418,687 across 2 pooled vehicles; 25 employees; 47% non-US clients; minimum commitment USD 10 million; related-person ownership 5%.",
+        "Investor types per the releases: pension plans, insurance companies, fund-of-funds, asset managers, leasing companies, endowments, family offices and financial institutions from the US, Japan, Europe, Australia and the Middle East.",
+        "Fund I is in harvest: 38-project distributed portfolio sold to BlackRock's Evergreen Infrastructure Partners Fund (December 2023) and an 830 MW wind and solar portfolio to Enel Green Power North America for about USD 1 billion (signed February 2026; seller named as Excelsior Renewable Energy Intermediate Fund I LP by Pulse 2.0)."
+      ],
+      "positioning": "A middle-market owner-operator rather than a mega-fund: Fund I and Fund II together are roughly USD 1.5 billion of equity against Brookfield, Blackstone or BlackRock GIP vehicles an order of magnitude larger. Excelsior's stated edge is 'speed, flexibility, and certainty of execution' and an in-house portfolio-operations team; its 2017 mandate was 'to own and operate renewable investments with contracted returns'.",
+      "soldThrough": "Direct LP fundraising with placement agents (Probitas Partners, The Trinity Group, Consilium Capital, DBJ Securities); Sidley Austin as fund counsel.",
+      "targetSegments": [
+        "Institutional limited partners — pension plans, insurers, fund-of-funds, endowments, family offices (US, Japan, Europe, Australia, Middle East)"
+      ],
+      "roadmap": "No Fund III has been announced on any first-party channel as of September 2026; every 2025–2026 release still says 'two active funds'. A third-party page claiming a USD 1.8 billion Fund III is uncorroborated and is not relied on here."
+    },
+    {
+      "name": "Owned operating portfolio — utility-scale solar, wind and distributed solar",
+      "category": "Asset ownership and operation",
+      "description": "The assets the funds own and operate, headed by Faraday Solar (Utah County, 685.3 MWdc / 525 MWac, COD 30 September 2025) and including Prairie Breeze II and III wind (109 MW, Nebraska, acquired from Invenergy 2019–2020), Skyhawk Solar (Tennessee, TVA/Google), El Centro (25 MWdc, California), the Syncarpha and Nokomis distributed portfolios, and the Investments-page entries the firm lists by state (Arizona, California, Colorado, Massachusetts, Minnesota, Nebraska, New Mexico, New York, Tennessee, Texas, Utah, Vermont, Washington).",
+      "highlights": [
+        "Faraday Solar: USD 1.3 billion financing closed November 2023 — USD 400 million tax equity from U.S. Bancorp Impact Finance via a solar production tax credit partnership, USD 460 million senior loan, USD 300 million tax-exempt bank loan, USD 250 million ancillary facilities; MUFG and Nord/LB coordinating lead arrangers; '1.2 million solar panels'; EPC Energy Project Solutions and RES; offtake 'PacifiCorp's 20-year power purchase agreement via Rocky Mountain Power's Schedule 34 green energy tariff' with Meta 'purchasing energy and environmental attributes'.",
+        "Prairie Breeze II & III: 109 MW combined, 90.1% sponsor equity interest acquired from Invenergy; offtakers Lincoln Electric System (Moody's AA) and City of Grand Island (AA-); Nord/LB back-leverage, Bank of America Merrill Lynch tax equity.",
+        "Skyhawk Solar (Obion County, Tennessee): 100 MW with Origis Energy under TVA's Green Invest programme for Google's data centres; groundbreaking July 2022; Wanzek EPC.",
+        "Homepage counters: '33+' portfolio investments and '6.4 GWs' of capacity; the Investments page lists Excelsior NDS1 (520 MW, Arizona), White Creek (204.7 MW, Washington) and Mustang Hills plus Mustang Hills BESS (150 MW each, California) with no release describing them — collection gap.",
+        "Exits: 38 distributed solar and solar-plus-storage projects (89 MWdc, six states) to BlackRock, KeyBanc lead sell-side advisor, closed December 2023; 830 MW operating wind and solar to Enel for about USD 1 billion (EUR 850 million), enterprise value about USD 1.3 billion, ~2.1 TWh a year, EBITDA about USD 145 million per Enerdatics — conditions include antitrust, FERC and foreign-direct-investment review."
+      ],
+      "positioning": "Contracted, investment-grade offtake is the pattern on the owned book — PacifiCorp/Meta at Faraday, AA-rated municipal buyers at Prairie Breeze, TVA at Skyhawk, Xcel community-solar tariffs in Minnesota. The Enel sale at roughly 8x EV/EBITDA (Enerdatics' arithmetic) is the first public read on what that book is worth.",
+      "soldThrough": "Long-term PPAs and utility tariffs to utilities, municipal buyers and hyperscalers via utility green tariffs; assets sold at exit to strategic and infrastructure buyers (BlackRock, Enel).",
+      "targetSegments": [
+        "Investor-owned utilities and their green-tariff customers (PacifiCorp / Meta)",
+        "Municipal and public power buyers (Lincoln Electric System, Grand Island, TVA / Google)",
+        "Community-solar subscribers under state programmes (Xcel Energy, Minnesota)"
+      ],
+      "roadmap": "Enel acquisition expected to close in the third quarter of 2026 subject to antitrust, FERC and FDI review; Faraday BESS Phase 1 (150 MW / 733 MWh) is under construction at the Faraday site under the February 2026 Lydian financing."
+    },
+    {
+      "name": "Lydian Energy — wholly-owned development, construction and ownership platform",
+      "category": "Development platform (solar and battery storage)",
+      "description": "Lydian Energy LLC (Washington, DC; CEO Emre Ersenkal) was co-founded with Excelsior in 2023, launched publicly on 9 April 2024 with 1.75 GW across nine Texas and New Mexico projects, and is described by trade press as wholly owned by Fund II. It develops, finances, builds and will operate utility-scale solar and BESS: three Texas merchant batteries (Pintail 200 MW, Crane 200 MW, Headcamp 150 MW; USD 233 million from ING and KeyBank, July 2025), a USD 689 million tranche for Faraday BESS Phase 1, AC Ranch 1 and Yellow Viking (CIBC and MUFG, February 2026), and the ~1.5 GW Atlas North acquisition from Hanwha Renewables (April 2026). Its site lists '5.1 GW of solar & storage projects; 17 projects across 6 states'.",
+      "highlights": [
+        "Texas BESS (July 2025): Pintail (San Patricio County) 200 MW / 400 MWh, Crane (Crane County) 200 MW / 400 MWh, Headcamp (Pecos County) 150 MW / 300 MWh per the release (Energy-Storage.news reports 391 / 521 / 521 MWh — the two figures are not reconciled by any source); ING about USD 139 million for Pintail and Crane, KeyBank USD 94 million for Headcamp; tax credit bridge with Fund II co-investment; CATL batteries per Energy-Storage.news; 'ERCOT merchant market but may explore offtake contracts'; release COD target Q4 2025, ERCOT queue record for Headcamp shows July 2026 and Lydian's site still lists all three 'In Construction'.",
+        "February 2026 USD 689 million (CIBC, MUFG): construction-to-term loan, tax credit bridge, co-investment bridge, letter-of-credit facility — Faraday BESS Phase 1 150 MW / 733 MWh (Utah, 'long-term investment-grade PPA' with PacifiCorp), AC Ranch 1 75 MWac / 100 MWdc (New Mexico, busbar PPA), Yellow Viking 170 MWac / 210 MWdc (Texas, Oncor territory, 100 MW under PPA).",
+        "Atlas North (April 2026): four late-stage projects from Hanwha Renewables — 1,000+ MW solar plus 450 MW / 1,800 MWh BESS — with a 500 kV gen-tie to CAISO via Cielo Azul Switchyard and Ten West Link; 'vast majority' contracted to California load-serving entities; 'Lydian's largest investment to date'; price undisclosed.",
+        "Pipeline restated across releases: 1.75 GW / 9 projects (April 2024) → 4.7 GW / 20 projects (July 2025) → 4.4 GW / 18 projects (February 2026) → 5.1 GW / 17 projects on the site after Atlas North.",
+        "Governance: Excelsior's releases name Anne Marie Denman as Chair of Lydian's board (April 2024 launch) and Chris Moakley as 'Chair of the Board at Lydian Energy' in the February and April 2026 releases — the two releases differ and no source explains the change."
+      ],
+      "positioning": "Lydian is how an owner-operator captures development margin without becoming a greenfield originator: its projects are acquired late-stage (Atlas North from Hanwha, the Texas batteries developed under Fund II) and taken through financing and construction in-house. Peers on this corpus that own ERCOT merchant batteries are Spearmint Energy, Hunt Energy Network and Jupiter Power; Lydian's differentiator is the parent's reserved US-made supply and PTC/ITC financing stack.",
+      "soldThrough": "Project-level construction-to-term debt (ING, KeyBank, CIBC, MUFG), tax credit bridge loans and Fund II equity co-investment; merchant ERCOT revenue on the Texas batteries, PPAs elsewhere.",
+      "targetSegments": [
+        "ERCOT merchant energy and ancillary-service markets (Pintail, Crane, Headcamp)",
+        "Investment-grade utility offtakers (PacifiCorp at Faraday BESS)",
+        "California load-serving entities (Atlas North)"
+      ],
+      "roadmap": "Pintail, Crane and Headcamp COD slipped from the released Q4 2025 target (Headcamp queue record: July 2026); Faraday BESS Phase 1, AC Ranch 1 and Yellow Viking in construction under the February 2026 financing; Atlas North build-out timing undisclosed."
+    },
+    {
+      "name": "Battery and module supply frameworks — Fluence 2.2 GWh, LG Energy Solution Vertech 7.5 GWh, Heliene 2 GW",
+      "category": "Procurement (US-made supply reservations)",
+      "description": "Multi-year supply agreements signed in 2024 to lock domestic-content-qualifying equipment for the Excelsior/Lydian pipeline: Fluence Gridstack Pro, 2.2 GWh, deliveries from 2025, cells 'primarily manufactured in Tennessee' (Fluence's site identifies AESC's Tennessee plant and a 305 Ah LFP cell) and modules made by Fluence in Utah (30 July 2024); LG Energy Solution Vertech, 7.5 GWh of 'fully integrated' containerized LFP long-cell systems with AEROS software, first delivery April 2026 (19 December 2024); Heliene, 2 GW of PV modules mostly from Mountain Iron, Minnesota (10 April 2024).",
+      "highlights": [
+        "Fluence: 'Gridstack Pro is one of the first energy storage solutions expected to qualify as domestic content under the Inflation Reduction Act'; Utility Dive: 'five to 10 project sites' including ERCOT and CAISO, storage-only and hybrid; IRA 10% bonus credit. Neither release names a recipient project; Excelsior appears in no Fluence SEC filing or in the Q3 FY2026 call (EDGAR full-text search, zero hits).",
+        "LG Energy Solution Vertech: 7.5 GWh, 'multi-year', 'All projects will meet domestic content requirements'; KED Global estimates the deal at KRW 1.8 trillion (about USD 1.24 billion) and names the JF2 AC Link system — Korean press estimate, not in LG's release; no plant, end year or project is named by any source.",
+        "Heliene: 2 GW over multiple years; 'A majority of the PV modules supplied by Heliene would be produced in the United States'; PV Tech ties the volume to Faraday and Lydian.",
+        "Combined battery reservations of 9.7 GWh against a disclosed Lydian pipeline of about 4.4 GW at the time of the LG deal; Lydian's CEO said the two deals 'do not have an impact on Lydian's three projects', which use CATL cells with LG as 'secondary supplier' per Energy-Storage.news.",
+        "Proximal Energy (15 October 2024): multiyear AI asset-management agreement covering 'Excelsior's pipeline includes 2 GWh of storage projects'."
+      ],
+      "positioning": "Among covered buyers, Excelsior's 7.5 GWh LG framework sits alongside DTE (6 GWh), Terra-Gen (8 GWh) and Qcells (5 GWh) in LG Energy Solution's US pipeline, and its 2.2 GWh Fluence order predates Fluence's first domestically manufactured delivery (September 2025). The reservations are the firm's answer to FEOC and tariff exposure on Chinese cells — while its first three operating-stage batteries still carry CATL.",
+      "soldThrough": "Direct framework/reservation agreements between the fund manager and the OEM, drawn down project by project.",
+      "targetSegments": [
+        "Excelsior- and Lydian-owned storage and hybrid projects in ERCOT, CAISO and the West"
+      ],
+      "roadmap": "LG first delivery slated April 2026 (not confirmed delivered by any source); Fluence deliveries 'beginning in 2025' (no delivery to Excelsior confirmed by any source as of September 2026)."
+    },
+    {
+      "name": "Firm power and data-centre initiatives — Stella Power alliance and CleanAmps collaboration",
+      "category": "Strategic alliances (24/7 and firm power)",
+      "description": "Two 2025–2026 alliances that point the platform at large-load customers: Stella Power Company (8 September 2025) — hybrid plants integrating natural gas generation with renewables and BESS for 'Data centers, utilities, energy-intensive businesses', deliverable in '18 months or less' with 'minimum guaranteed carbon-free energy targets'; and CleanAmps Holdings (2 July 2026) — an expanded 'advisory, system engineering, and joint infrastructure development' collaboration for a 'U.S.-owned Digital Infrastructure Platform' citing '3 GWh of Battery Energy Storage System (BESS) integration projects completed' and '10+ GWh of strategic battery procurement initiatives, including FEOC-compliant and Section 45X-eligible battery storage solutions'.",
+      "highlights": [
+        "Stella Power: no MW, site or customer disclosed; Denman: 'The Stella team have developed a solution that complements and differentiates what Excelsior can provide to the marketplace.'",
+        "CleanAmps: 'more than three years of successful collaboration'; platform described as 'modular data center architecture, firm power integration, high-availability controls, and industrial-grade cybersecurity'; Fegley: 'the next wave of infrastructure investment will increasingly focus on the intersection of power and compute.' No MW, site or signed offtake disclosed.",
+        "The only hyperscaler-linked revenue on the record is indirect: Faraday's energy and attributes go to Meta via PacifiCorp Schedule 34, and Skyhawk serves Google via TVA Green Invest."
+      ],
+      "positioning": "Excelsior is entering the firm-power-for-data-centres lane late and through partners; covered developers already there (Intersect Power's energy parks, Fermi-class campuses) hold sites and interconnection. Excelsior's assets are the reserved batteries, the tax-credit stack and a PacifiCorp/Meta precedent.",
+      "soldThrough": "Advisory and joint-development alliances; no product is sold yet.",
+      "targetSegments": [
+        "Data centres and other large energy users seeking 24/7 or firm low-carbon power",
+        "Utilities and energy-intensive industrials"
+      ],
+      "roadmap": "No dated deliverable: neither release names a site, an offtaker or a first project."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Faraday Solar (Utah County, Utah) — flagship owned asset",
+      "specs": [
+        {
+          "band": "Plant",
+          "label": "Capacity",
+          "value": "685.3 MWDC / 525 MWAC"
+        },
+        {
+          "band": "Plant",
+          "label": "Modules",
+          "value": "1.2 million solar panels"
+        },
+        {
+          "band": "Plant",
+          "label": "Commercial operation",
+          "value": "Commercial operations commenced September 30, 2025; constructed in under two years"
+        },
+        {
+          "band": "Plant",
+          "label": "EPC",
+          "value": "Energy Project Solutions (EPS) and RES Group"
+        },
+        {
+          "band": "Offtake",
+          "label": "Contract",
+          "value": "PacifiCorp's 20-year power purchase agreement via Rocky Mountain Power's Schedule 34 green energy tariff; Meta purchasing energy and environmental attributes"
+        },
+        {
+          "band": "Financing (Nov 2023)",
+          "label": "Package",
+          "value": "$1.3 billion — $400 million tax equity (U.S. Bancorp Impact Finance, solar production tax credit partnership); $460 million senior loan; $300 million tax-exempt bank loan; $250 million ancillary facilities"
+        },
+        {
+          "band": "Financing (Nov 2023)",
+          "label": "Lenders",
+          "value": "MUFG and Nord/LB coordinating lead arrangers; Sumitomo Mitsui Banking, Société Générale, DNB, Zions Bank, CIBC, Huntington Bank, National Bank of Canada joint lead arrangers; Deutsche Bank collateral agent"
+        },
+        {
+          "band": "Storage add-on",
+          "label": "Faraday BESS Phase 1",
+          "value": "150 MW/733 MWh battery energy storage system in Utah with long-term investment-grade PPA (PacifiCorp) — Lydian, financed February 2026"
+        }
+      ],
+      "notes": "Figures verbatim from the November 2023 financing coverage and the 30 October 2025 COD release; Excelsior's Investments page rounds the plant to 682 MW."
+    },
+    {
+      "product": "Lydian Energy project ledger (as released)",
+      "specs": [
+        {
+          "band": "Texas BESS — Jul 2025 ($233M)",
+          "label": "Pintail (Pintail Pass), San Patricio County",
+          "value": "200 MW/400 MWh (release); 521 MWh per Energy-Storage.news; ING lender"
+        },
+        {
+          "band": "Texas BESS — Jul 2025 ($233M)",
+          "label": "Crane, Crane County",
+          "value": "200 MW/400 MWh (release); 521 MWh per Energy-Storage.news; ING lender (~$139 million combined with Pintail)"
+        },
+        {
+          "band": "Texas BESS — Jul 2025 ($233M)",
+          "label": "Headcamp, Pecos County",
+          "value": "150 MW/300 MWh (release); 391 MWh per Energy-Storage.news; KeyBank $94 million; ERCOT queue record 153 MW, expected July 2026"
+        },
+        {
+          "band": "Texas BESS — Jul 2025 ($233M)",
+          "label": "Batteries / market",
+          "value": "CATL (per Energy-Storage.news; release names no supplier); 'ERCOT merchant market but may explore offtake contracts'; release COD target Q4 2025"
+        },
+        {
+          "band": "Feb 2026 tranche ($689M, CIBC and MUFG)",
+          "label": "Faraday BESS Phase 1, Utah",
+          "value": "150 MW/733 MWh; long-term PPA with investment-grade off-taker (PacifiCorp)"
+        },
+        {
+          "band": "Feb 2026 tranche ($689M, CIBC and MUFG)",
+          "label": "AC Ranch 1, New Mexico",
+          "value": "75 MWac / 100 MWdc solar PV; busbar PPA with investment-grade off-taker"
+        },
+        {
+          "band": "Feb 2026 tranche ($689M, CIBC and MUFG)",
+          "label": "Yellow Viking, Texas (Oncor territory)",
+          "value": "170 MWac / 210 MWdc solar PV; 100 MW under PPA with investment-grade off-taker"
+        },
+        {
+          "band": "Feb 2026 tranche ($689M, CIBC and MUFG)",
+          "label": "Structure",
+          "value": "Construction-to-Term Loan, Tax Credit Bridge Loan, Co-Investment Bridge Loan, and Letter of Credit Facility"
+        },
+        {
+          "band": "Atlas North — Apr 2026 (from Hanwha Renewables)",
+          "label": "Portfolio",
+          "value": "approximately 1.5 GW; 1,000+ MW solar generating capacity; 450 MW / 1,800 MWh battery storage; four late-stage projects"
+        },
+        {
+          "band": "Atlas North — Apr 2026 (from Hanwha Renewables)",
+          "label": "Interconnection",
+          "value": "500 kV generation-tie transmission line (up to two miles) to the CAISO grid via Cielo Azul Switchyard and Ten West Link; long-term contracts with California load-serving entities"
+        },
+        {
+          "band": "Pipeline",
+          "label": "Stated size",
+          "value": "1.75 GW / 9 projects (Apr 2024) → 4.7 GW / 20 projects (Jul 2025) → 4.4 GW / 18 projects (Feb 2026) → 5.1 GW of solar & storage projects; 17 projects across 6 states (Lydian site, Sep 2026)"
+        }
+      ],
+      "notes": "Two MWh sets are published for the Texas batteries (release vs Energy-Storage.news); no source reconciles them. Atlas North price undisclosed."
+    },
+    {
+      "product": "Supply frameworks (as released)",
+      "specs": [
+        {
+          "band": "Fluence — 30 Jul 2024",
+          "label": "Volume / product",
+          "value": "2.2 GWh; Gridstack Pro; deliveries beginning in 2025; five to 10 project sites including ERCOT and CAISO"
+        },
+        {
+          "band": "Fluence — 30 Jul 2024",
+          "label": "Domestic content",
+          "value": "battery cells primarily manufactured in Tennessee; battery modules manufactured by Fluence in Utah; expected to qualify as domestic content under the Inflation Reduction Act (10% bonus credit)"
+        },
+        {
+          "band": "LG Energy Solution Vertech — 19 Dec 2024",
+          "label": "Volume / product",
+          "value": "7.5 GWh of fully integrated lithium-ion energy storage projects; containerized lithium-ion battery solutions with LFP long cells; AEROS software; multi-year"
+        },
+        {
+          "band": "LG Energy Solution Vertech — 19 Dec 2024",
+          "label": "Delivery / content",
+          "value": "First delivery slated for April 2026; All projects will meet domestic content requirements and will be delivered to the U.S.; KED Global estimate 1.8 trillion won ($1.24 billion), JF2 AC Link system"
+        },
+        {
+          "band": "Heliene — 10 Apr 2024",
+          "label": "Volume / origin",
+          "value": "2 GW of PV modules; Mountain Iron, Minnesota plus a planned Greater Minneapolis-St. Paul factory; A majority of the PV modules supplied by Heliene would be produced in the United States"
+        }
+      ],
+      "notes": "No release names the projects that receive the Fluence or LG systems; delivery of either to an Excelsior project is unconfirmed as of September 2026."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-07-02",
+      "category": "partnership",
+      "headline": "CleanAmps and Excelsior expand their collaboration into a 'U.S.-owned Digital Infrastructure Platform' for data centres — 3 GWh of BESS integration completed, 10+ GWh of FEOC-compliant, 45X-eligible battery procurement cited; no site or offtaker named",
+      "read": "The data-centre pivot is real as intent and advisory scope, not yet as a project; the procurement figure is the firm's reserved supply restated.",
+      "source": "https://finance.yahoo.com/energy/articles/cleanamps-excelsior-energy-capital-expand-103000201.html"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "ma",
+      "headline": "Lydian Energy acquires Hanwha Renewables' Atlas North portfolio — four late-stage projects, 1,000+ MW solar and 450 MW / 1,800 MWh BESS with a 500 kV gen-tie to CAISO, contracted with California load-serving entities; 'Lydian's largest investment to date'",
+      "read": "The platform buys late-stage rather than originating — and moves the book from ERCOT merchant toward CAISO contracted.",
+      "source": "https://finance.yahoo.com/sectors/energy/articles/lydian-energy-acquires-atlas-north-103000403.html"
+    },
+    {
+      "date": "2026-03-30",
+      "category": "financial",
+      "headline": "Form ADV annual amendment: USD 1,505,418,687 regulatory AUM across two pooled vehicles, 25 employees, 47% non-US clients",
+      "read": "The only audited-grade size figure for a private manager; it matches the '$1.5B+' homepage counter.",
+      "source": "https://reports.adviserinfo.sec.gov/reports/ADV/289890/PDF/289890.pdf"
+    },
+    {
+      "date": "2026-02-23",
+      "category": "ma",
+      "headline": "Enel Green Power North America agrees to buy an 830 MW operating wind and solar portfolio from Excelsior for about USD 1 billion (EUR 850 million; EV about USD 1.3 billion; ~2.1 TWh a year; EBITDA about USD 145 million per Enerdatics); closing expected Q3 2026 subject to antitrust, FERC and FDI review; seller Excelsior Renewable Energy Intermediate Fund I LP",
+      "read": "Fund I's second and largest exit prices the contracted book at roughly 8x EBITDA and returns most of the fund's equity in one transaction.",
+      "source": "https://www.pv-tech.org/enel-acquires-830mw-us-pv-and-wind-portfolio-ups-renewables-investment/"
+    },
+    {
+      "date": "2026-02-17",
+      "category": "financial",
+      "headline": "Lydian closes USD 689 million with CIBC and MUFG — construction-to-term loan, tax credit bridge, co-investment bridge and LC facility — for Faraday BESS Phase 1 (150 MW / 733 MWh, PacifiCorp PPA), AC Ranch 1 (75 MWac, New Mexico) and Yellow Viking (170 MWac, Texas, 100 MW under PPA)",
+      "read": "The second Lydian financing is contracted where the first was merchant; the lender roster widens beyond ING and KeyBank.",
+      "source": "https://finance.yahoo.com/news/lydian-energy-announces-689-million-113000249.html"
+    },
+    {
+      "date": "2025-10-30",
+      "category": "project",
+      "headline": "Faraday Solar (685.3 MWdc / 525 MWac, Utah County) reaches commercial operation on 30 September 2025 — 1.2 million panels, built in under two years, energy and attributes to Meta under PacifiCorp's 20-year Schedule 34 tariff",
+      "read": "Fund II's flagship converts from construction risk to a contracted hyperscaler-backed cash flow.",
+      "source": "https://finance.yahoo.com/news/excelsior-energy-capital-brings-faraday-103000857.html"
+    },
+    {
+      "date": "2025-09-08",
+      "category": "partnership",
+      "headline": "Stella Power Company and Excelsior align to deliver 'firm low carbon power' — gas generation integrated with renewables and BESS into hybrid plants for data centres, utilities and energy-intensive users, in '18 months or less'",
+      "read": "A renewables-only owner adds a gas-hybrid offer for the large-load market; no project is named.",
+      "source": "https://finance.yahoo.com/news/stella-power-company-excelsior-energy-163700188.html"
+    },
+    {
+      "date": "2025-07-09",
+      "category": "financial",
+      "headline": "Lydian secures USD 233 million (ING about USD 139 million for Pintail and Crane; KeyBank USD 94 million for Headcamp) for 550 MW / 1.1 GWh of ERCOT batteries with a tax credit bridge and Fund II co-investment; in-service targeted Q4 2025",
+      "read": "Excelsior's first owned merchant batteries — financed on a merchant ERCOT case with CATL cells, not the reserved US-made supply.",
+      "source": "https://finance.yahoo.com/news/lydian-energy-secures-233m-project-103000663.html"
+    },
+    {
+      "date": "2025-04-08",
+      "category": "financial",
+      "headline": "Fund II closes at 'just over $1 billion' against a USD 750 million target, anchored by the Development Bank of Japan; over 50% deployed across 15 investments and 2.25 GW",
+      "read": "A doubling of fund size on the back of Faraday and Lydian; DBJ's anchor role explains the 47% non-US client share.",
+      "source": "https://oilandgaspress.com/excelsior-energy-capital-closes-fund-ii-at-1b-substantially-exceeding-target/"
+    },
+    {
+      "date": "2024-12-19",
+      "category": "procurement",
+      "headline": "LG Energy Solution Vertech to deliver 7.5 GWh of integrated US-made LFP storage systems to Excelsior, first delivery slated for April 2026; KED Global estimates the deal at KRW 1.8 trillion",
+      "read": "The larger of the two US-made battery reservations — sized to the pipeline, not to a named project.",
+      "source": "https://www.prnewswire.com/news-releases/lg-energy-solution-vertech-to-deliver-7-5-gwh-of-integrated-us-energy-storage-projects-for-excelsior-energy-capital-302336052.html"
+    },
+    {
+      "date": "2024-10-15",
+      "category": "partnership",
+      "headline": "Multiyear agreement with Proximal Energy for AI-powered asset management across a pipeline that 'includes 2 GWh of storage projects'; boilerplate AUM 'over $1.45 billion'",
+      "read": "Operations tooling for a storage fleet the firm did not yet own.",
+      "source": "https://oilandgaspress.com/excelsior-energy-capital-and-proximal-energy-enter-multiyear-agreement-for-ai-powered-asset-management/"
+    },
+    {
+      "date": "2024-07-30",
+      "category": "procurement",
+      "headline": "Multiyear 2.2 GWh Gridstack Pro agreement with Fluence — Tennessee cells and Utah modules, expected to qualify as IRA domestic content, deliveries from 2025 across five to 10 sites in ERCOT and CAISO",
+      "read": "Fluence's first large US-made storage customer, signed before Fluence had delivered a domestically manufactured system.",
+      "source": "https://www.globenewswire.com/news-release/2024/07/30/2921042/0/en/Excelsior-and-Fluence-to-Deploy-2-2-GWh-of-Energy-Storage-Projects-Using-Domestically-Manufactured-Battery-Systems-Starting-in-2025.html"
+    },
+    {
+      "date": "2024-04-10",
+      "category": "procurement",
+      "headline": "Multiyear 2 GW module supply agreement with Heliene, a majority produced in the United States",
+      "read": "The module leg of a domestic-content procurement strategy that later added batteries.",
+      "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-enters-multiyear-2-gw-supply-agreement-with-heliene-for-domestically-produced-solar-panels/"
+    },
+    {
+      "date": "2024-04-09",
+      "category": "corporate",
+      "headline": "Lydian Energy launches as an Excelsior-backed IPP with 1.75 GW across nine Texas and New Mexico projects; CEO Emre Ersenkal; Anne Marie Denman chairs the board",
+      "read": "The owner-operator adds a captive development and construction arm — the fact that makes the developer category defensible.",
+      "source": "https://excelsiorcapital.com/news-insights/lydian-energy-launches-with-focus-on-developing-transformative-solar-and-battery-storage-projects-across-north-america/"
+    },
+    {
+      "date": "2024-03-12",
+      "category": "ma",
+      "headline": "Fund I's first exit: 38 distributed solar and solar-plus-storage projects (89 MWdc, six states) sold to BlackRock's Evergreen Infrastructure Partners Fund; KeyBanc lead sell-side advisor; closed December 2023",
+      "read": "Proof that the distributed book was saleable to a large infrastructure buyer; price undisclosed.",
+      "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "fluence",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024-07",
+      "scale": "2.2 GWh",
+      "via": "Gridstack Pro",
+      "note": "Multiyear 2.2 GWh agreement for US-made Gridstack Pro systems (Tennessee cells, Utah modules) with deliveries beginning in 2025, signed 30 July 2024.",
+      "context": "Fluence's release: 'Excelsior will deploy Fluence's Gridstack Pro product line' with 'battery cells primarily manufactured in Tennessee and battery modules manufactured by Fluence in Utah'; 'one of the first energy storage solutions expected to qualify as domestic content under the Inflation Reduction Act'. Utility Dive adds five to 10 project sites across ERCOT and CAISO, storage-only and hybrid. Denman and Frantz quoted for Excelsior, John Zahurancik for Fluence.\n\nWhat the record does not show: which project receives the systems, and whether any have been delivered — Fluence's September 2025 first-domestic-delivery release names no customer, Excelsior appears in no Fluence SEC filing (EDGAR full-text search, zero hits) and was not mentioned on Fluence's Q3 FY2026 call. Lydian's CEO said the Fluence and LG deals 'do not have an impact on Lydian's three projects'. The agreement is company-confirmed by both sides; its execution is not yet visible.",
+      "source": "https://www.globenewswire.com/news-release/2024/07/30/2921042/0/en/Excelsior-and-Fluence-to-Deploy-2-2-GWh-of-Energy-Storage-Projects-Using-Domestically-Manufactured-Battery-Systems-Starting-in-2025.html"
+    },
+    {
+      "slug": "lg-energy-solution",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024-12",
+      "scale": "7.5 GWh",
+      "via": "LG Energy Solution Vertech integrated LFP long-cell systems (AEROS software)",
+      "note": "Multiyear 7.5 GWh agreement with LG Energy Solution Vertech for fully integrated, US-made LFP storage systems, first delivery slated for April 2026, announced 19 December 2024.",
+      "context": "LG's release (Westborough, Massachusetts): '7.5 GWhs of fully integrated lithium-ion energy storage projects'; 'containerized lithium-ion battery solutions with LFP long cells' with AEROS software, integration and lifecycle services; 'First delivery slated for April 2026'; 'All projects will meet domestic content requirements and will be delivered to the U.S.' KED Global values the deal at KRW 1.8 trillion (about USD 1.24 billion) and names the JF2 AC Link system — a Korean press estimate, not in the release.\n\nThe corpus's LG Energy Solution dossier lists the deal in LG's US pipeline alongside DTE (6 GWh), Terra-Gen (8 GWh) and Qcells (5 GWh) and dates cells to Holland, Michigan for 2028–2030; no fetched source names the plant, an end year or the recipient projects, and LG is described by Energy-Storage.news as a 'secondary supplier' to Lydian, whose first three Texas batteries use CATL. Whether the April 2026 first delivery occurred is not confirmed by any source.",
+      "source": "https://www.prnewswire.com/news-releases/lg-energy-solution-vertech-to-deliver-7-5-gwh-of-integrated-us-energy-storage-projects-for-excelsior-energy-capital-302336052.html"
+    },
+    {
+      "slug": "catl",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-07",
+      "scale": "550 MW / 1.1 GWh (three Texas batteries)",
+      "note": "Lydian's first three ERCOT batteries — Pintail, Crane and Headcamp — use CATL battery systems, per Energy-Storage.news; the Lydian release names no supplier.",
+      "context": "Energy-Storage.news (10 July 2025) reported the USD 233 million financing 'for three Texas BESS provided by CATL' and quoted Lydian's CEO that the Fluence and LG agreements 'do not have an impact on Lydian's three projects'; its February 2026 coverage calls LG a 'secondary supplier' with CATL primary. The attribution is trade-press-sourced — Lydian's own release lists lenders and MW/MWh but no battery supplier — so it is recorded as reported, with the outlet named. It matters because Excelsior's stated procurement strategy is US-made, domestic-content supply, while its first operating-stage batteries carry Chinese cells with FEOC optics.",
+      "source": "https://www.energy-storage.news/lydian-energy-closes-us233-million-financing-for-three-texas-bess-provided-by-catl/"
+    },
+    {
+      "slug": "meta",
+      "type": "customer",
+      "status": "active",
+      "since": "2025-09",
+      "scale": "685.3 MWdc / 525 MWac; 20-year PPA",
+      "via": "Faraday Solar via PacifiCorp Schedule 34",
+      "note": "Meta buys Faraday Solar's energy and environmental attributes under PacifiCorp's 20-year power purchase agreement through Rocky Mountain Power's Schedule 34 green energy tariff.",
+      "context": "Excelsior's COD release (30 October 2025): Faraday 'commenced commercial operations September 30, 2025', with Meta 'purchasing energy and environmental attributes under PacifiCorp's 20-year power purchase agreement via Rocky Mountain Power's Schedule 34 green energy tariff'. The contract counterparty is the utility; Meta is the tariff customer behind it — the indirect hyperscaler structure this corpus's utility dossiers describe. Faraday BESS Phase 1 (150 MW / 733 MWh) is being added under a PacifiCorp PPA per Lydian's February 2026 financing.",
+      "source": "https://finance.yahoo.com/news/excelsior-energy-capital-brings-faraday-103000857.html"
+    },
+    {
+      "slug": "google",
+      "type": "customer",
+      "status": "active",
+      "since": "2022-07",
+      "scale": "100 MW",
+      "via": "Skyhawk Solar via TVA Green Invest",
+      "note": "Skyhawk Solar (Obion County, Tennessee), built with Origis Energy under TVA's Green Invest programme, supplies carbon-free solar to Google's Tennessee and Alabama data centres.",
+      "context": "The July 2022 groundbreaking release: 100 MW, offtake through TVA for Google, COD end-2022, EPC Wanzek, O&M Origis Services; Google's Amanda Peterson Corio called it 'an important step towards achieving Google's 24/7 carbon-free energy goal in Tennessee and Alabama'. Excelsior's Investments page lists Skyhawk at 127 MW (presumably MWdc). As with Faraday, the hyperscaler sits behind a utility — TVA — rather than contracting with the owner directly.",
+      "source": "https://www.globenewswire.com/en/news-release/2022/07/27/2486927/0/en/Origis-Energy-and-Excelsior-Energy-Capital-Break-Ground-on-TVA-Green-Invest-Solar-Project.html"
+    },
+    {
+      "slug": "invenergy",
+      "type": "other",
+      "status": "historical",
+      "since": "2019-11",
+      "scale": "109 MW (90.1% sponsor equity)",
+      "via": "Prairie Breeze II and III",
+      "note": "Invenergy sold Excelsior a 90.1% sponsor equity interest in the 109 MW Prairie Breeze II and III wind portfolio in Nebraska (agreement November 2019, close January 2020).",
+      "context": "Excelsior's release: offtakers Lincoln Electric System (Moody's AA) and City of Grand Island (AA-); Nord/LB back-leverage and Bank of America Merrill Lynch tax equity. A seller-buyer transaction rather than an ongoing commercial tie, typed `other` and marked historical; Prairie Breeze remains on Excelsior's Investments page.",
+      "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-acquires-109-mw-operating-wind-portfolio-from-invenergy/"
+    },
+    {
+      "slug": "oncor",
+      "type": "other",
+      "status": "active",
+      "since": "2026-02",
+      "scale": "170 MWac / 210 MWdc",
+      "via": "Yellow Viking solar",
+      "note": "Lydian's Yellow Viking solar project (170 MWac, 100 MW under PPA) sits in ERCOT's Oncor territory — an interconnection adjacency, not a commercial relationship.",
+      "context": "Lydian's February 2026 financing release locates Yellow Viking in 'ERCOT's Oncor territory'. Recorded as `other` per this corpus's convention that a wires-company adjacency is not a supplier or customer link.",
+      "source": "https://finance.yahoo.com/news/lydian-energy-announces-689-million-113000249.html"
+    },
+    {
+      "slug": "xcel-energy",
+      "type": "other",
+      "status": "active",
+      "since": "2019-05",
+      "scale": "21.6 MWdc (17 projects)",
+      "via": "Xcel Energy Community Solar Garden programme (Minnesota)",
+      "note": "Excelsior's Kingfield (6.3 MWdc) and Wenonah (15.3 MWdc) Minnesota community-solar portfolios, developed with Nokomis, sell under 25-year PPAs in Xcel Energy's Community Solar Garden programme.",
+      "context": "The May 2020 release: 21.6 MWdc across 17 projects, 'PPAs under Xcel's Community Solar Garden program' with 25-year terms. Xcel is the tariff administrator rather than a counterparty chosen by Excelsior, so the link is typed `other`.",
+      "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-closes-second-investment-with-development-partner-and-commissions-first-tranche-of-minnesota-solar-projects/"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "ITC/45X",
+      "status": "in-effect",
+      "effectiveDate": "2024-07",
+      "exposure": "Excelsior's 2024 supply frameworks were built to capture the Inflation Reduction Act domestic-content bonus: Fluence's Gridstack Pro is 'one of the first energy storage solutions expected to qualify as domestic content under the Inflation Reduction Act' (Utility Dive: a 10% bonus tax credit), LG Energy Solution Vertech committed that 'All projects will meet domestic content requirements', and Heliene modules are majority US-made. Faraday Solar was financed with USD 400 million of tax equity 'via solar production tax credit partnership', and Lydian's 2026 financing carries a 'Tax Credit Bridge Loan'.",
+      "mitigation": "Reserved US-made supply (2.2 GWh Fluence, 7.5 GWh LG, 2 GW Heliene) and the CleanAmps collaboration's '10+ GWh of strategic battery procurement initiatives, including FEOC-compliant and Section 45X-eligible battery storage solutions'.",
+      "source": "https://www.globenewswire.com/news-release/2024/07/30/2921042/0/en/Excelsior-and-Fluence-to-Deploy-2-2-GWh-of-Energy-Storage-Projects-Using-Domestically-Manufactured-Battery-Systems-Starting-in-2025.html"
+    },
+    {
+      "regime": "FEOC restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2026",
+      "exposure": "Lydian's first three operating-stage batteries (Pintail, Crane, Headcamp) use CATL systems per Energy-Storage.news, which flags the foreign-entity-of-concern context; the same outlet describes LG as a secondary supplier. The firm's own July 2026 release names 'FEOC-compliant and Section 45X-eligible battery storage solutions' as the procurement target. No source quantifies the exposure or reports a project affected.",
+      "mitigation": "Company statement (CleanAmps release, 2 July 2026): procurement initiatives 'including FEOC-compliant and Section 45X-eligible battery storage solutions'.",
+      "source": "https://finance.yahoo.com/energy/articles/cleanamps-excelsior-energy-capital-expand-103000201.html"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "Christopher (Chris) Moakley",
+      "title": "Co-Founder and Managing Partner; Chair of the Board, Lydian Energy (per the February and April 2026 Lydian releases)",
+      "photo": "images/execs/excelsior-energy-capital-moakley.jpg",
+      "background": [
+        "Co-founded Excelsior Energy Capital in 2017; 'twenty five years and over $20 billion of equity transaction experience'",
+        "President of North America, TerraForm Power (from January 2014); President, EverStream YieldCo",
+        "Partner and CEO, Meridian Investments (1995–2012), where the firm 'raised over $15 billion dollars of tax equity'",
+        "BA Economics, William & Mary; JD Boston University; Duke Fuqua Advanced Management Program; Massachusetts Bar since 1989"
+      ]
+    },
+    {
+      "name": "Anne Marie Denman",
+      "title": "Co-Founder and Partner; Chief Compliance Officer (Form ADV); Chair of Lydian Energy's board at its April 2024 launch",
+      "photo": "images/execs/excelsior-energy-capital-denman.jpg",
+      "background": [
+        "Co-leads investments and sits on the Investment Committee; quoted on the Fluence, LG Energy Solution Vertech, Stem/REX, Unico, Stella and Lydian USD 233 million announcements",
+        "'more than fourteen years of experience in investing in traditional and renewable energy, including leading over $5 billion in wind, solar and storage transactions'",
+        "Managing Director and Assistant General Counsel, TerraForm Power; earlier Bracewell and Jones Day",
+        "JD Georgetown; BA Franciscan University"
+      ]
+    },
+    {
+      "name": "Alex Ellis",
+      "title": "Co-Founder and Partner",
+      "photo": "images/execs/excelsior-energy-capital-ellis.jpg",
+      "background": [
+        "Quoted on the Fund II close (April 2025)",
+        "Managing Director, TerraForm Power, 'focused on acquisitions of large-scale operating wind and solar projects'; earlier SunEdison and Element Power; World Bank and US Ex-Im appointee",
+        "'over $1 billion in wind and solar transaction experience'",
+        "MBA Harvard; BA Bowdoin"
+      ]
+    },
+    {
+      "name": "Ryan Fegley",
+      "title": "Co-Founder and Partner",
+      "photo": "images/execs/excelsior-energy-capital-fegley.jpg",
+      "background": [
+        "Quoted on the Heliene module agreement and the CleanAmps data-centre collaboration",
+        "'over 14 years in the renewable energy industry'; Managing Director, TerraForm Power; EverStream Capital Management; Project Resource Corporation; Black River Asset Management (Cargill)",
+        "Underwriting and financing 'exceeding $2 billion'",
+        "BA University of North Dakota; CFA charterholder"
+      ]
+    },
+    {
+      "name": "Chris Frantz",
+      "title": "Partner, Head of Portfolio Operations",
+      "photo": "images/execs/excelsior-energy-capital-frantz.jpg",
+      "background": [
+        "Quoted on the Fluence agreement, the Proximal Energy agreement and the Faraday COD",
+        "'over 15 years of renewable energy operations and policy experience'; led IPP operations at Cypress Creek Renewables (>1.6 GW solar); EPA regulatory work; utility demand-response work (SCE, PG&E, SDG&E)",
+        "BA Claremont McKenna; MEM Duke; MBA UNC"
+      ]
+    },
+    {
+      "name": "Mike Lang",
+      "title": "Chief Financial Officer (since July 2024, per Form ADV)",
+      "photo": "images/execs/excelsior-energy-capital-lang.jpg",
+      "background": [
+        "Tax Director and Global Controller, Seabury Capital; Grant Thornton",
+        "BA Accounting, St. Cloud State; CPA"
+      ]
+    },
+    {
+      "name": "Nicole Scott",
+      "title": "General Counsel, Finance & Administration",
+      "photo": "images/execs/excelsior-energy-capital-scott.jpg",
+      "background": [
+        "Managing legal counsel, Qcells USA; project finance associate, Akin Gump",
+        "JD Stanford; MA LMU; BA UCLA"
+      ]
+    },
+    {
+      "name": "Gabe Wuebben",
+      "title": "Senior Director, Head of Capital Markets",
+      "photo": "images/execs/excelsior-energy-capital-wuebben.jpg",
+      "background": [
+        "VP Structured Finance, Sol Systems — 'led origination and underwriting over $1.5 billion in project finance'; EY tax credit monetization",
+        "MBA Boston University; BA Michigan"
+      ]
+    },
+    {
+      "name": "Dan Rosenberg",
+      "title": "Senior Director of Asset Management",
+      "photo": "images/execs/excelsior-energy-capital-rosenberg.jpg",
+      "background": [
+        "Quoted on the Proximal Energy AI asset-management agreement",
+        "'10 years of experience managing operations, finance, and engineering for renewable energy assets'; Cuttermill Energy Analytics; Cypress Creek O&M business operations (to 4 GW); TerraVerde; former NYSE derivatives trader",
+        "BS Duke; MS and MBA Carnegie Mellon"
+      ]
+    },
+    {
+      "name": "Dan Bove",
+      "title": "Senior Director, Construction Management and Project Execution",
+      "photo": "images/execs/excelsior-energy-capital-bove.jpg",
+      "background": [
+        "Quoted on the Faraday COD: 'Delivering a project of this scale and complexity reflects the strength of our partnerships and our execution capabilities.'",
+        "VP M&A Operations, Distributed Solar Development; BP Solar (from 2000); COO UR Solar Power; EVP Empower Energies",
+        "BS Robert Morris; MBA Loyola Maryland"
+      ]
+    },
+    {
+      "name": "Emre Ersenkal",
+      "title": "Chief Executive Officer, Lydian Energy (wholly-owned platform)",
+      "background": [
+        "Co-founded Lydian with Excelsior Energy Capital in 2023; quoted on the USD 233 million and USD 689 million financings and the Atlas North acquisition ('Lydian's largest investment to date')",
+        "Lydian leadership per its site: Basilio Guerrero (CFO), Sam Massey (CCO), Patrick Leibach (GC), Ian Moskal (VP Development)"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (private fund manager — no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Assets under management (boilerplate)",
+            "actual": "'two active funds totaling over $1 billion of equity capital' (March–July 2024 releases) → 'over $1.45 billion in assets under management' (Proximal release, 15 October 2024) → 'over $1.5 billion of equity capital' (LG Vertech release, 19 December 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company boilerplate; no audited figure"
+          },
+          {
+            "name": "Fund II capital raised (SEC Form D)",
+            "actual": "USD 234,050,000 sold in Fund II LP (9 investors) plus USD 246,160,000 in Feeder Fund II-A (24 investors) and USD 200,000,000 in Feeder Fund II-B (2 investors) as of the February–May 2024 amendments — about USD 680 million, a floor before the 2025 final close",
+            "expected": "",
+            "verdict": "inline",
+            "result": "SEC Form D / D-A filings"
+          },
+          {
+            "name": "Supply reserved",
+            "actual": "2.2 GWh Fluence Gridstack Pro (July); 7.5 GWh LG Energy Solution Vertech (December); 2 GW Heliene modules (April)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company and counterparty releases; values undisclosed except KED Global's KRW 1.8 trillion estimate for the LG deal"
+          },
+          {
+            "name": "Fund I first exit",
+            "actual": "38 distributed projects, 89 MWdc, sold to BlackRock (closed December 2023, announced 12 March 2024); price undisclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release; KeyBanc deal record"
+          }
+        ],
+        "commentary": "A private manager publishes no P&L. 2024 was the procurement year: three supply frameworks and the Lydian launch, financed from a Fund II still in fundraising."
+      },
+      {
+        "period": "FY2025 (no financial statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Fund II final close",
+            "actual": "'Just over $1 billion' against a USD 750 million target (8 April 2025); anchor Development Bank of Japan; 'Over 50% deployed across 15 investments'; 2.25 GW",
+            "expected": "USD 750 million target",
+            "verdict": "beat",
+            "result": "Company release; target stated by the company"
+          },
+          {
+            "name": "Lydian project financing",
+            "actual": "USD 233 million (ING about USD 139 million; KeyBank USD 94 million) for Pintail, Crane and Headcamp, 550 MW / 1.1 GWh, with tax credit bridge and Fund II co-investment",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lydian release"
+          },
+          {
+            "name": "Faraday Solar COD",
+            "actual": "685.3 MWdc / 525 MWac in commercial operation 30 September 2025; USD 1.3 billion financing (November 2023) including USD 400 million PTC tax equity",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company release"
+          },
+          {
+            "name": "Pipeline (Lydian)",
+            "actual": "'20 solar and storage projects totaling 4.7 GW' (July 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lydian release"
+          }
+        ],
+        "commentary": "The year Fund II closed and the flagship reached COD. The Texas batteries' Q4 2025 in-service target was not met on the public record (Headcamp's ERCOT queue record shows July 2026; Lydian's site lists all three in construction)."
+      },
+      {
+        "period": "2026 year to date (through 5 September 2026)",
+        "periodType": "other",
+        "periodEnd": "2026-09-05",
+        "metrics": [
+          {
+            "name": "Regulatory AUM (Form ADV, 30 March 2026)",
+            "actual": "USD 1,505,418,687 across 2 pooled vehicles; 25 employees; 47% non-US clients",
+            "expected": "",
+            "verdict": "inline",
+            "result": "SEC Form ADV Part 1"
+          },
+          {
+            "name": "Fund I exit to Enel",
+            "actual": "830 MW operating wind and solar for about USD 1 billion (EUR 850 million); enterprise value about USD 1.3 billion; ~2.1 TWh a year; EBITDA about USD 145 million (Enerdatics); signed February 2026, closing expected Q3 2026",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Trade press citing Enel; Excelsior issued no release"
+          },
+          {
+            "name": "Lydian financing",
+            "actual": "USD 689 million (CIBC, MUFG) for Faraday BESS Phase 1, AC Ranch 1 and Yellow Viking (February)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lydian release"
+          },
+          {
+            "name": "Lydian acquisition",
+            "actual": "Atlas North (~1.5 GW: 1,000+ MW solar, 450 MW / 1,800 MWh BESS) from Hanwha Renewables (April); price undisclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lydian release"
+          },
+          {
+            "name": "Pipeline (Lydian)",
+            "actual": "'18 solar and storage projects totaling 4.4 GW' (February) → '5.1 GW ... 17 projects across 6 states' (Lydian site, September)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lydian release and site"
+          }
+        ],
+        "commentary": "Fund I harvest and Fund II build-out in parallel. No fund performance metric (IRR, multiple) is published anywhere; 'expected' is left empty throughout because no consensus or guidance exists for a private manager."
+      }
+    ],
+    "commentary": "Collection gap: no revenue, EBITDA, fee income or fund returns are disclosed. The size figures that exist are the Form ADV regulatory AUM (USD 1.505 billion), fund closes (USD 504 million; just over USD 1 billion), project-level financings (USD 1.3 billion Faraday; USD 233 million and USD 689 million Lydian) and the Enel sale price (about USD 1 billion, trade-press-sourced)."
+  },
+  "strategyRead": [
+    "1. **(High confidence)** We assess that Excelsior is an owner-operator with a captive late-stage development arm, not a greenfield developer — and that the `developer` category rests on Lydian alone. Basis: the founders' own mandate language ('own and operate renewable investments with contracted returns'), the 2019–2022 partner structures in which Unico, Nokomis, Regis and Renewable America developed while Excelsior 'acquires projects upon construction start', and Lydian's growth by acquisition (Atlas North's 'four late-stage projects' from Hanwha). No source shows Excelsior or Lydian originating sites or filing its own interconnection requests.",
+    "2. **(High confidence)** We assess that the 9.7 GWh of reserved US-made batteries is a procurement option sized to the pipeline rather than a delivery schedule, and that its draw-down is unverified. Basis: neither the Fluence nor the LG release names a project; Lydian's first three batteries use CATL cells and its CEO said the two frameworks 'do not have an impact on Lydian's three projects'; Fluence has never named Excelsior in an SEC filing or earnings call; no delivery to an Excelsior site is reported as of September 2026. The July 2026 CleanAmps release restates the volume as '10+ GWh of strategic battery procurement initiatives'.",
+    "3. **(Moderate confidence)** We assess that the contracted book is worth roughly 8x EBITDA to a strategic buyer and that Fund I will return most of its equity through the Enel sale. Basis: about USD 1 billion consideration and about USD 1.3 billion enterprise value for 830 MW with about USD 145 million EBITDA (Enerdatics' arithmetic on Enel's figures) against a USD 504 million fund; closing is still subject to antitrust, FERC and FDI review, and Excelsior itself has issued no release on the sale.",
+    "4. **(Moderate confidence)** We assess that Lydian's merchant ERCOT batteries are behind schedule and that the platform is rotating toward contracted storage. Basis: the July 2025 release targeted Q4 2025 in-service for Pintail, Crane and Headcamp; the ERCOT queue record for Headcamp shows July 2026 and Lydian's site lists all three 'In Construction' in September 2026; the February 2026 tranche is entirely PPA-backed and Atlas North is 'vast majority' contracted to California load-serving entities. The MWh figures for the Texas batteries differ between the release and Energy-Storage.news and no source reconciles them.",
+    "5. **(Low confidence)** We assess that the data-centre and firm-power pivot (Stella Power, CleanAmps) is positioning without a project. Basis: neither release names a site, MW or offtaker; the only hyperscaler revenue on the record runs through utilities (Meta via PacifiCorp Schedule 34 at Faraday; Google via TVA at Skyhawk). A named large-load offtaker or a gas-hybrid site would move this judgment.",
+    "Collection gap: no fund returns, fee terms or Form ADV Part 2 brochure; no first-party statement on the Enel sale; the Investments page lists assets (NDS1 520 MW Arizona, White Creek 204.7 MW Washington, Mustang Hills and Mustang Hills BESS 150 MW each) that no release describes; the Portland office address differs between the homepage (6600 SW 92nd Ave) and the contact page (9900 SW 92nd Ave); one 7 April 2026 Business Wire item could not be identified. Premise check against the coverage-plan row: 'Fluence's 2.2 GWh US-made supply customer' holds, but the agreement dates from July 2024 (not December) and December 2024 is the separate 7.5 GWh LG deal; 'investor · developer' holds only through Lydian.",
+    "INDICATORS TO WATCH — *Q3 2026 — Enel closing:* completion confirms the ~8x read and Fund I's harvest; a lapse would signal FERC or FDI friction. *2026 — first named Fluence or LG delivery to an Excelsior/Lydian site:* would convert Judgment 2 from option to execution; another year without one confirms it. *2026 — Pintail, Crane, Headcamp COD:* energisation dates in ERCOT records versus the Q4 2025 target. *2027 — a Fund III first close or Form D:* would end the 'two active funds' boilerplate. *Any Stella or CleanAmps site announcement with a data-centre offtaker:* the trigger for Judgment 5."
+  ],
+  "sources": [
+    {
+      "label": "Intelligent CIO — CleanAmps and Excelsior expand partnership to accelerate US-owned AI digital infrastructure platform",
+      "url": "https://www.intelligentcio.com/north-america/2026/07/03/cleanamps-and-excelsior-expand-partnership-to-accelerate-us-owned-ai-digital-infrastructure-platform/",
+      "date": "2026-07-03"
+    },
+    {
+      "label": "Excelsior / CleanAmps release (Business Wire via Yahoo Finance) — CleanAmps and Excelsior Energy Capital expand strategic collaboration",
+      "url": "https://finance.yahoo.com/energy/articles/cleanamps-excelsior-energy-capital-expand-103000201.html",
+      "date": "2026-07-02",
+      "party": "company"
+    },
+    {
+      "label": "Excelsior / CleanAmps release (Business Wire via AOL) — U.S.-owned digital infrastructure platform, 3 GWh integrated, 10+ GWh procurement",
+      "url": "https://www.aol.com/articles/cleanamps-excelsior-energy-capital-expand-103000000.html",
+      "date": "2026-07-02",
+      "party": "company"
+    },
+    {
+      "label": "Mercom Capital — Lydian Energy acquires 1.5 GW Atlas North solar and storage portfolio",
+      "url": "https://mercomcapital.com/lydian-energy-acquires-1-5-gw-solar-and-storage-portfolio/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "PV Tech — Lydian acquires Hanwha Renewables' 1.5 GW solar PV and BESS North America portfolio",
+      "url": "https://www.pv-tech.org/lydian-energy-acquires-hanwha-renewables-1-5gw-solar-pv-bess-north-america-portfolio/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "Energy Global — Lydian Energy acquires Atlas North portfolio from Hanwha Renewables",
+      "url": "https://www.energyglobal.com/solar/22042026/lydian-energy-acquires-atlas-north-portfolio-from-hanwha-renewables/amp/",
+      "date": "2026-04-22"
+    },
+    {
+      "label": "Solar Builder — Lydian acquires 1.5 GW portfolio from Hanwha Renewables",
+      "url": "https://solarbuildermag.com/projects/lydian-energy-acquires-1-5-gw-portfolio-from-hanwha-renewables/",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "Lydian Energy release (Business Wire via Yahoo Finance) — Lydian acquires Atlas North portfolio from Hanwha Renewables",
+      "url": "https://finance.yahoo.com/sectors/energy/articles/lydian-energy-acquires-atlas-north-103000403.html",
+      "date": "2026-04-21",
+      "party": "company"
+    },
+    {
+      "label": "SEC Form ADV Part 1 — Excelsior Renewable Energy Management Company LP (CRD 289890), annual amendment",
+      "url": "https://reports.adviserinfo.sec.gov/reports/ADV/289890/PDF/289890.pdf",
+      "date": "2026-03-30",
+      "party": "disclosure"
+    },
+    {
+      "label": "Enerdatics — Enel pays $1B for 830 MW of operating US renewables",
+      "url": "https://www.enerdatics.com/insights/enel-pays-1b-for-830-mw-of-operating-us-renewables",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Renewable Energy World — Enel spends a billion on US wind and solar projects",
+      "url": "https://www.renewableenergyworld.com/solar/enel-spends-a-billion-bucks-on-us-wind-and-solar-projects/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Pulse 2.0 — Enel $1 billion agreement to acquire 830 MW US wind and solar portfolio (names the selling fund)",
+      "url": "https://pulse2.com/enel-1-billion-agreement-signed-to-acquire-830-mw-u-s-wind-and-solar-portfolio/",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "Windtech International — Enel to acquire 830 MW wind and solar portfolio in USA",
+      "url": "https://windtech-international.com/projects-and-contracts/enel-to-acquire-830-mw-wind-and-solar-portfolio-in-usa",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "PV Tech — Enel acquires 830 MW US PV and wind portfolio, ups renewables investment",
+      "url": "https://www.pv-tech.org/enel-acquires-830mw-us-pv-and-wind-portfolio-ups-renewables-investment/",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "Yahoo Finance (Power Technology) — Enel to acquire US wind and solar portfolio of 830 MW",
+      "url": "https://finance.yahoo.com/news/enel-acquire-us-wind-solar-115222801.html",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "SolarQuarter — Enel to acquire 830 MW US wind and solar portfolio from Excelsior Energy Capital",
+      "url": "https://solarquarter.com/2026/02/23/enel-to-acquire-830-mw-u-s-wind-solar-portfolio-from-excelsior-energy-capital-in-a-1-billion-deal-expected-to-generate-2-1-twh-annually/",
+      "date": "2026-02-23"
+    },
+    {
+      "label": "Energy-Storage.news — Lydian Energy secures US$689 million for three US BESS and solar projects",
+      "url": "https://www.energy-storage.news/lydian-energy-secures-us689-million-for-three-us-bess-and-solar-projects/",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "ESG Today — Lydian secures $689 million to build US solar and battery storage projects",
+      "url": "https://www.esgtoday.com/lydian-energy-secures-689-million-to-build-u-s-solar-and-battery-storage-projects/",
+      "date": "2026-02-18"
+    },
+    {
+      "label": "Lydian Energy release (Business Wire via Yahoo Finance) — $689 million financing for solar and battery storage projects",
+      "url": "https://finance.yahoo.com/news/lydian-energy-announces-689-million-113000249.html",
+      "date": "2026-02-17",
+      "party": "company"
+    },
+    {
+      "label": "Excelsior release (Business Wire via Utah Business) — Excelsior Energy Capital brings Faraday Solar project online in Utah",
+      "url": "https://www.utahbusiness.com/press-releases/2025/10/31/excelsior-energy-capital-brings-faraday-solar-project-online-in-utah/",
+      "date": "2025-10-31",
+      "party": "company"
+    },
+    {
+      "label": "Excelsior release (Business Wire via Yahoo Finance) — Faraday Solar online: 685.3 MWdc / 525 MWac, COD 30 September 2025",
+      "url": "https://finance.yahoo.com/news/excelsior-energy-capital-brings-faraday-103000857.html",
+      "date": "2025-10-30",
+      "party": "company"
+    },
+    {
+      "label": "Excelsior / Stella Power release (Business Wire via Yahoo Finance) — alliance to deliver firm low-carbon power",
+      "url": "https://finance.yahoo.com/news/stella-power-company-excelsior-energy-163700188.html",
+      "date": "2025-09-08",
+      "party": "company"
+    },
+    {
+      "label": "Utility Dive — Lydian lands $233M for 550 MW / 1.1 GWh of Texas storage",
+      "url": "https://www.utilitydive.com/news/lydian-energy-storage-financing-ercot-texas/753056/",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "Energy-Storage.news — Lydian closes US$233 million financing for three Texas BESS provided by CATL",
+      "url": "https://www.energy-storage.news/lydian-energy-closes-us233-million-financing-for-three-texas-bess-provided-by-catl/",
+      "date": "2025-07-10"
+    },
+    {
+      "label": "SolarQuarter — Lydian Energy secures $233M to strengthen Texas grid with battery storage",
+      "url": "https://solarquarter.com/2025/07/10/lydian-energy-secures-major-233m-investment-to-strengthen-texas-energy-grid-with-battery-storage/",
+      "date": "2025-07-10"
+    },
+    {
+      "label": "Lydian Energy release (Business Wire via Yahoo Finance) — $233M project financing for battery storage projects across Texas",
+      "url": "https://finance.yahoo.com/news/lydian-energy-secures-233m-project-103000663.html",
+      "date": "2025-07-09",
+      "party": "company"
+    },
+    {
+      "label": "PV Tech — Excelsior closes US$1 billion US renewables equity fund",
+      "url": "https://www.pv-tech.org/excelsior-closes-us1-billion-us-renewables-equity-fund/",
+      "date": "2025-04-09"
+    },
+    {
+      "label": "IPE Real Assets — Excelsior Energy Capital raises over $1bn for renewables fund",
+      "url": "https://realassets.ipe.com/news/excelsior-energy-capital-raises-over-1bn-for-renewables-fund/10129942.article",
+      "date": "2025-04-09"
+    },
+    {
+      "label": "ESG Today — Excelsior Energy Capital raises $1B for renewable energy investment fund",
+      "url": "https://www.esgtoday.com/excelsior-energy-capital-raises-1-billion-for-renewable-energy-investment-fund/",
+      "date": "2025-04-09"
+    },
+    {
+      "label": "Excelsior release (Business Wire via Oil and Gas Press) — Excelsior Energy Capital closes Fund II at $1B, substantially exceeding target",
+      "url": "https://oilandgaspress.com/excelsior-energy-capital-closes-fund-ii-at-1b-substantially-exceeding-target/",
+      "date": "2025-04-08",
+      "party": "company"
+    },
+    {
+      "label": "Excelsior release (Business Wire via Pulse 2.0) — Fund II closed at $1 billion",
+      "url": "https://pulse2.com/excelsior-energy-capital-fund-ii-closed-at-1-billion/",
+      "date": "2025-04",
+      "party": "company"
+    },
+    {
+      "label": "Teslarati — LG Energy Solution to supply 7.5 GWh storage for Excelsior",
+      "url": "https://www.teslarati.com/lg-energy-solution-excelsior-7-5-gwh-storage-project/",
+      "date": "2024-12-26"
+    },
+    {
+      "label": "Shanghai Metals Market — LG Energy Solution signs 7.5 GWh US energy storage deal with Excelsior Energy Capital",
+      "url": "https://news.metal.com/newscontent/103104543-LG-Energy-Solution-Signs-75-GWh-US-Energy-Storage-Deal-with-Excelsior-Energy-Capital",
+      "date": "2024-12-25"
+    },
+    {
+      "label": "KED Global — LG Energy wins 7.5 GWh ESS project from Excelsior (won 1.8 trillion estimate)",
+      "url": "https://www.kedglobal.com/energy/newsView/ked202412200005",
+      "date": "2024-12-20"
+    },
+    {
+      "label": "LG Energy Solution Battery Inside — LGES Vertech to deliver 7.5 GWh of integrated US energy storage projects for Excelsior",
+      "url": "https://inside.lgensol.com/en/2024/12/lg-energy-solution-vertech-to-deliver-7-5-gwh-of-integrated-u-s-energy-storage-projects-for-excelsior-energy-capital/",
+      "date": "2024-12-20"
+    },
+    {
+      "label": "PR Newswire (LG Energy Solution Vertech) — LGES Vertech to deliver 7.5 GWh of integrated US energy storage projects for Excelsior Energy Capital",
+      "url": "https://www.prnewswire.com/news-releases/lg-energy-solution-vertech-to-deliver-7-5-gwh-of-integrated-us-energy-storage-projects-for-excelsior-energy-capital-302336052.html",
+      "date": "2024-12-19"
+    },
+    {
+      "label": "Excelsior / Proximal Energy release (Business Wire via Oil and Gas Press) — multiyear agreement for AI-powered asset management",
+      "url": "https://oilandgaspress.com/excelsior-energy-capital-and-proximal-energy-enter-multiyear-agreement-for-ai-powered-asset-management/",
+      "date": "2024-10-15",
+      "party": "company"
+    },
+    {
+      "label": "Power Technology — Fluence Energy to provide 2.2 GWh of energy storage in the US",
+      "url": "https://www.power-technology.com/news/fluence-energy-to-provide-2-2gwh-of-energy-storage-in-the-us/",
+      "date": "2024-08-01"
+    },
+    {
+      "label": "Utility Dive — Excelsior Energy Capital to install 2.2 GWh of Fluence batteries at 5–10 sites",
+      "url": "https://www.utilitydive.com/news/excelsior-energy-capital-fluence-energy-storage-gridstack-batteries/722918/",
+      "date": "2024-07-31"
+    },
+    {
+      "label": "Energy-Storage.news — Fluence to provide Excelsior with 2.2 GWh of US-manufactured BESS from next year",
+      "url": "https://www.energy-storage.news/fluence-to-provide-excelsior-with-2-2gwh-of-us-manufactured-bess-from-next-year/",
+      "date": "2024-07-31"
+    },
+    {
+      "label": "SolarQuarter — Fluence and Excelsior Energy Capital to install 2.2 GWh of battery storage projects in US starting 2025",
+      "url": "https://solarquarter.com/2024/07/31/fluence-and-excelsior-energy-capital-to-install-2-2-gwh-of-battery-storage-projects-in-u-s-starting-2025/",
+      "date": "2024-07-31"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital enters multiyear 2.2 GWh agreement with Fluence for domestically manufactured battery cells",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-enters-multiyear-22-gwh-agreement-with-fluence-to-utilize-domestically-manufactured-battery-cells-in-us-energy-storage-projects/",
+      "date": "2024-07-30"
+    },
+    {
+      "label": "GlobeNewswire (Fluence Energy) — Excelsior and Fluence to deploy 2.2 GWh of energy storage projects using domestically manufactured battery systems starting in 2025",
+      "url": "https://www.globenewswire.com/news-release/2024/07/30/2921042/0/en/Excelsior-and-Fluence-to-Deploy-2-2-GWh-of-Energy-Storage-Projects-Using-Domestically-Manufactured-Battery-Systems-Starting-in-2025.html",
+      "date": "2024-07-30"
+    },
+    {
+      "label": "SEC Form D — Excelsior Renewable Energy Feeder Fund II-B LP",
+      "url": "https://www.sec.gov/Archives/edgar/data/2016152/000201615224000001/xslFormDX01/primary_doc.xml",
+      "date": "2024-05-08",
+      "party": "disclosure"
+    },
+    {
+      "label": "PV Tech — Heliene inks 2 GW module supply deal with Excelsior",
+      "url": "https://www.pv-tech.org/heliene-inks-2gw-module-supply-deal-with-excelsior/",
+      "date": "2024-04-10"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital enters multiyear 2 GW supply agreement with Heliene for domestically produced solar panels",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-enters-multiyear-2-gw-supply-agreement-with-heliene-for-domestically-produced-solar-panels/",
+      "date": "2024-04-10"
+    },
+    {
+      "label": "Excelsior — Lydian Energy launches with focus on developing solar and battery storage projects across North America",
+      "url": "https://excelsiorcapital.com/news-insights/lydian-energy-launches-with-focus-on-developing-transformative-solar-and-battery-storage-projects-across-north-america/",
+      "date": "2024-04-09"
+    },
+    {
+      "label": "Natural Power — Natural Power supports BlackRock's portfolio acquisition from Excelsior Energy Capital",
+      "url": "https://www.naturalpower.com/us/news/news-post/natural-power-supports-blackrocks-portfolio-acquisition-from-excelsior-energy-capital",
+      "date": "2024-03-22"
+    },
+    {
+      "label": "pv magazine — BlackRock acquires solar and storage assets from Excelsior Energy Capital",
+      "url": "https://www.pv-magazine.com/2024/03/14/blackrock-acquires-solar-storage-assets-from-excelsior-energy-capital/",
+      "date": "2024-03-14"
+    },
+    {
+      "label": "ESG Today — BlackRock acquires 38-project solar and storage portfolio from Excelsior Energy Capital",
+      "url": "https://www.esgtoday.com/blackrock-acquires-38-project-solar-and-storage-portfolio-from-excelsior-energy-capital/",
+      "date": "2024-03-12"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital sells sub-portfolio of solar and solar-plus-storage assets to BlackRock",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/",
+      "date": "2024-03-12"
+    },
+    {
+      "label": "SEC Form D/A — Excelsior Renewable Energy Investment Fund II LP ($234.05M sold, 9 investors)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1960029/000196002924000002/xslFormDX01/primary_doc.xml",
+      "date": "2024-02-16",
+      "party": "disclosure"
+    },
+    {
+      "label": "SEC Form D/A — Excelsior Renewable Energy Feeder Fund II-A LP ($246.16M sold, 24 investors)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1960027/000196002924000003/xslFormDX01/primary_doc.xml",
+      "date": "2024-02-16",
+      "party": "disclosure"
+    },
+    {
+      "label": "Deutsche Bank Trust and Agency Services — supports Excelsior Energy Capital on US$1.3bn Faraday Solar project financing",
+      "url": "https://corporates.db.com/more/latest-news/deutsche-banks-trust-and-agency-services-tas-supports-excelsior-energy-capital-on-a-us-1-3bn-faraday-solar-project-financing",
+      "date": "2024-02"
+    },
+    {
+      "label": "KeyBanc Capital Markets — Excelsior Energy Capital sale of 38 distributed generation projects to BlackRock (sell-side advisor record)",
+      "url": "https://www.key.com/businesses-institutions/our-transactions/deals.excelsior-energy-capital.html",
+      "date": "2023-12"
+    },
+    {
+      "label": "CRC-IB — CRC-IB advises Excelsior Energy Capital on $1.3B Faraday Solar financing",
+      "url": "https://crc-ib.com/crc-ib-advises-excelsior-energy/",
+      "date": "2023-11-30"
+    },
+    {
+      "label": "PV Tech — Renewables investor Excelsior closes financing for 682 MW Utah PV project",
+      "url": "https://www.pv-tech.org/renewables-investor-excelsior-closes-financing-for-682mw-utah-pv-project/",
+      "date": "2023-11-30"
+    },
+    {
+      "label": "NS Energy — Excelsior Energy closes $1.3bn financing for 682.5 MW Faraday Solar project",
+      "url": "https://www.nsenergybusiness.com/company-news/excelsior-energy-closes-1-3bn-financing-for-682-5mw-faraday-solar-project/",
+      "date": "2023-11-29"
+    },
+    {
+      "label": "SEC Form D — Excelsior Renewable Energy Investment Fund II LP (initial, $150M sold)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1960029/000196002923000001/xslFormDX01/primary_doc.xml",
+      "date": "2023-01-03",
+      "party": "disclosure"
+    },
+    {
+      "label": "SEC Form D — Excelsior Renewable Energy Feeder Fund II-A LP (initial)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1960027/000196002723000001/primary_doc.xml",
+      "date": "2023-01-03",
+      "party": "disclosure"
+    },
+    {
+      "label": "Development Bank of Japan — Investment in Excelsior Renewable Energy Investment Fund II",
+      "url": "https://www.dbj.jp/en/topics/dbj_news/2022/html/20230105_204139.html",
+      "date": "2023-01-05"
+    },
+    {
+      "label": "Stem IR — Stem, Regis Energy Partners and Excelsior Energy Capital announce $400M portfolio of energy storage projects in Texas",
+      "url": "https://investors.stem.com/news-events/press-releases/detail/159/stem-regis-energy-partners-and-excelsior-energy-capital-announce-400m-portfolio-of-energy-storage-projects-in-texas",
+      "date": "2022-12-08"
+    },
+    {
+      "label": "GlobeNewswire (Origis Energy) — Origis Energy and Excelsior Energy Capital break ground on TVA Green Invest solar project (Skyhawk)",
+      "url": "https://www.globenewswire.com/en/news-release/2022/07/27/2486927/0/en/Origis-Energy-and-Excelsior-Energy-Capital-Break-Ground-on-TVA-Green-Invest-Solar-Project.html",
+      "date": "2022-07-27"
+    },
+    {
+      "label": "Yahoo Finance (GlobeNewswire) — Origis Energy and Excelsior Energy Capital break ground on Skyhawk Solar",
+      "url": "https://finance.yahoo.com/news/origis-energy-excelsior-energy-capital-130000751.html",
+      "date": "2022-07-27"
+    },
+    {
+      "label": "LevelTen Energy — Renewable America and Excelsior Energy Capital $150 million financing partnership",
+      "url": "https://www.leveltenenergy.com/post/renewable-america-excelsior-energy-capital",
+      "date": "2022-03-28"
+    },
+    {
+      "label": "SEC Form D — Excelsior 2021 TE Vehicle 1, LP (affiliate tax-equity vehicle)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1856874/000185687421000002/xslFormDX01/primary_doc.xml",
+      "date": "2021-04-15",
+      "party": "disclosure"
+    },
+    {
+      "label": "SEC Form D/A — Excelsior Renewable Energy Investment Fund I LP ($503,787,879 sold, 27 investors)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1717846/000171784621000001/xslFormDX01/primary_doc.xml",
+      "date": "2021-01-29",
+      "party": "disclosure"
+    },
+    {
+      "label": "PV Tech — Renewables investor Excelsior secures US$504 million for US solar and wind projects",
+      "url": "https://www.pv-tech.org/renewables-investor-excelsior-secures-us504-million-for-us-solar-and-wind-projects/",
+      "date": "2021-01-14"
+    },
+    {
+      "label": "ESG Today — Excelsior Energy Capital announces final close of inaugural renewable energy fund",
+      "url": "https://www.esgtoday.com/excelsior-energy-capital-announces-final-close-of-inaugural-renewable-energy-fund/",
+      "date": "2021-01-14"
+    },
+    {
+      "label": "Twin Cities Business — Excelsior Energy Capital closes on $504M renewable energy fund",
+      "url": "https://tcbmag.com/excelsior-energy-capital-closes-on-504m-renewable-energy-fund/",
+      "date": "2021-01-13"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital closes inaugural renewable energy fund at $504 million, exceeding target",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-closes-inaugural-renewable-energy-fund-at-504-million-exceeding-target/",
+      "date": "2021-01-13"
+    },
+    {
+      "label": "Power Technology — Excelsior and Unico Solar to build 250 MW C&I solar projects",
+      "url": "https://www.power-technology.com/news/excelsior-unico-solar-to-build-250mw-ci-solar-projects/",
+      "date": "2020-05-29"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital and Unico Solar Investors form long-term partnership to build, own and operate 250 MW of C&I solar",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-and-unico-solar-investors-form-long-term-partnership-to-build-own-and-operate-250-mw-of-commercial-and-industrial-sector-solar-projects/",
+      "date": "2020-05-28"
+    },
+    {
+      "label": "Excelsior — closes second investment with development partner Nokomis and commissions first tranche of Minnesota solar",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-closes-second-investment-with-development-partner-and-commissions-first-tranche-of-minnesota-solar-projects/",
+      "date": "2020-05-11"
+    },
+    {
+      "label": "Excelsior — closes on acquisitions and financing for 109 MW operating wind portfolio from Invenergy",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-closes-on-acquisitions-and-financing-for-109-mw-operating-wind-portfolio-from-invenergy/",
+      "date": "2020-01-09"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital acquires 109 MW operating wind portfolio from Invenergy (Prairie Breeze II and III)",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-acquires-109-mw-operating-wind-portfolio-from-invenergy/",
+      "date": "2019-11-07"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital and Nokomis partner on 16.5 MW Minnesota solar portfolio",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-and-nokomis-partner-on-165-mw-minnesota-solar-portfolio/",
+      "date": "2019-05-14"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital acquires 25 MW operating solar project (El Centro)",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-acquires-25-mw-operating-solar-project/",
+      "date": "2019-04-23"
+    },
+    {
+      "label": "Excelsior — Excelsior Energy Capital acquires 16.2 MW operating solar portfolio from Syncarpha Capital",
+      "url": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-acquires-162-mw-operating-solar-portfolio-from-syncarpha-capital/",
+      "date": "2018-12-20"
+    },
+    {
+      "label": "SEC Form D — Excelsior Renewable Energy Investment Fund I LP (initial, $50M sold to 1 investor)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1717846/000171784617000001/xslFormDX01/primary_doc.xml",
+      "date": "2017-10-02",
+      "party": "disclosure"
+    },
+    {
+      "label": "Excelsior — homepage ($1.5B+ AUM, 2 funds, 33+ investments, 6.4 GW)",
+      "url": "https://excelsiorcapital.com/"
+    },
+    {
+      "label": "Excelsior — About",
+      "url": "https://excelsiorcapital.com/about/"
+    },
+    {
+      "label": "Excelsior — Our Approach",
+      "url": "https://excelsiorcapital.com/our-approach/"
+    },
+    {
+      "label": "Excelsior — Our Commitment (ESG, UNPRI)",
+      "url": "https://excelsiorcapital.com/our-commitment/"
+    },
+    {
+      "label": "Excelsior — Team",
+      "url": "https://excelsiorcapital.com/team/"
+    },
+    {
+      "label": "Excelsior — Investments (project map)",
+      "url": "https://excelsiorcapital.com/investments/"
+    },
+    {
+      "label": "Excelsior — News & Insights",
+      "url": "https://excelsiorcapital.com/news-insights/"
+    },
+    {
+      "label": "Excelsior — Contact (Excelsior MN, Portland OR, New York offices)",
+      "url": "https://excelsiorcapital.com/contact/"
+    },
+    {
+      "label": "Excelsior — bio: Christopher Moakley",
+      "url": "https://excelsiorcapital.com/team/christopher-moakley/"
+    },
+    {
+      "label": "Excelsior — bio: Anne Marie Denman",
+      "url": "https://excelsiorcapital.com/team/anne-marie-denman/"
+    },
+    {
+      "label": "Excelsior — bio: Alex Ellis",
+      "url": "https://excelsiorcapital.com/team/alex-ellis/"
+    },
+    {
+      "label": "Excelsior — bio: Ryan Fegley",
+      "url": "https://excelsiorcapital.com/team/ryan-fegley/"
+    },
+    {
+      "label": "Excelsior — bio: Chris Frantz",
+      "url": "https://excelsiorcapital.com/team/chris-frantz/"
+    },
+    {
+      "label": "Excelsior — bio: Gabe Wuebben",
+      "url": "https://excelsiorcapital.com/team/gabe-wuebben/"
+    },
+    {
+      "label": "Excelsior — bio: Mike Lang",
+      "url": "https://excelsiorcapital.com/team/mike-lang/"
+    },
+    {
+      "label": "Excelsior — bio: Nicole Scott",
+      "url": "https://excelsiorcapital.com/team/nicole-scott/"
+    },
+    {
+      "label": "Excelsior — bio: Dan Rosenberg",
+      "url": "https://excelsiorcapital.com/team/dan-rosenberg/"
+    },
+    {
+      "label": "Excelsior — bio: Dan Bove",
+      "url": "https://excelsiorcapital.com/team/dan-bove/"
+    },
+    {
+      "label": "Lydian Energy — home",
+      "url": "https://www.lydianenergy.com/"
+    },
+    {
+      "label": "Lydian Energy — What We Do (5.1 GW, 17 projects, project list)",
+      "url": "https://www.lydianenergy.com/what-we-do"
+    },
+    {
+      "label": "Lydian Energy — Who We Are (leadership; co-founded with Excelsior in 2023)",
+      "url": "https://www.lydianenergy.com/who-we-are"
+    },
+    {
+      "label": "Lydian Energy — In the News",
+      "url": "https://www.lydianenergy.com/in-the-news"
+    },
+    {
+      "label": "Fluence — Domestic content product page (Tennessee 305Ah LFP cells, Utah modules)",
+      "url": "https://fluenceenergy.com/domestic-content/"
+    },
+    {
+      "label": "Cleanview — Headcamp Energy Storage Plant, Pecos County (ERCOT queue record 23INR0401)",
+      "url": "https://cleanview.co/power-projects/planned/battery-storage-projects/texas/23INR0401/headcamp-energy-storage-plant"
+    },
+    {
+      "label": "SEC EDGAR — Form D filers matching 'excelsior renewable energy' (company list)",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=excelsior+renewable+energy&type=D&dateb=&owner=include&count=40&action=getcompany&output=atom",
+      "party": "disclosure"
+    },
+    {
+      "label": "SEC EDGAR full-text search — 'Excelsior Energy Capital' in filings 2024-01-01 to 2026-09-05 (zero hits)",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=%22Excelsior%20Energy%20Capital%22&dateRange=custom&startdt=2024-01-01&enddt=2026-09-05"
+    },
+    {
+      "label": "C3E Initiative — Excelsior Energy Capital",
+      "url": "https://c3e.org/excelsior-energy-capital"
+    },
+    {
+      "label": "IPP Journal — Excelsior Energy Capital company profile (deal timeline)",
+      "url": "https://ippjournal.com/company/excelsior-energy-capital"
+    }
+  ],
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
+}

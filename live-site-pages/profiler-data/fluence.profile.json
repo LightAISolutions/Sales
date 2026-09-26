@@ -182,7 +182,7 @@
     "(High confidence) We assess Fluence's US differentiation is domestic content — AESC Tennessee cells and Utah module assembly qualifying customers for the ITC domestic-content bonus; the tariff-mitigation story became shipping product in 2025.",
     "(High confidence) We assess AI/data-center demand is a contracted channel, not pipeline talk: roughly $850M of data-center orders through July 2026 and master supply agreements with two hyperscalers underpin the record $6.4B backlog. Basis: company disclosures.",
     "(Moderate confidence) We assess execution of the new manufacturing footprint — not demand — is the binding constraint on converting backlog to revenue; the FY2025 tariff-driven guidance collapse demonstrates the downside when the supply chain slips.",
-    "(Low confidence) Ownership overhang is a monitoring item: Siemens and AES sold $420M of shares in May 2026, AES cut its interest from 28.19% to 22% in that transaction, and AES's own take-private by GIP and EQT is signed and stockholder-approved with FERC and two state commissions outstanding — so the largest anchor shareholder will itself have new owners."
+    "(Low confidence) Ownership overhang is a monitoring item: Siemens and AES sold $420M of shares in May 2026, AES cut its interest from 28.19% to 22% in that transaction, and AES's own take-private by GIP and EQT is signed and stockholder-approved with Ohio's commission approving on 17 September 2026 and FERC and the New York commission still outstanding — so the largest anchor shareholder will itself have new owners."
   ],
   "relationships": [
     {
@@ -251,6 +251,25 @@
       "note": "AES Clean Energy is Fluence's largest customer as well as, through its parent, its second-largest shareholder.",
       "context": "AES's FY2025 10-K states that 'many of the Company's energy storage construction projects utilize Fluence as either a BESS supplier or EPC contractor', recorded primarily in property, plant and equipment; AES's related-party PP&E rose from $851M to $1,254M across 2025, though AES discloses no Fluence-specific figure. From this side the dependence is measurable: Fluence's own FY2025 10-K reports about 24% of revenue with related parties, primarily AES and affiliates, revenue from AES of $1,082.3M in FY2024, and 13% of $5.3B of remaining performance obligations with AES. The equity sits at The AES Corporation rather than at the US renewables unit, which is why this edge is typed on the commercial relationship.",
       "source": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000063/aes-20251231.htm"
+    },
+    {
+      "slug": "blackrock",
+      "type": "other",
+      "status": "active",
+      "via": "Akaysha Energy; AES",
+      "note": "Fluence supplies Akaysha, an Australian battery developer trade press describes as BlackRock-owned, and AES — Fluence's anchor shareholder — is being taken private by a GIP-led consortium.",
+      "context": "Fluence's Mosaic software was chosen for 3.6 GWh of Akaysha batteries in 2024; Akaysha's owner is named by trade press, not by Akaysha. AES held about 22% of Fluence after May 2026, and the GIP- and EQT-led take-private of AES awaits FERC and New York approval. If it closes, GIP-managed vehicles would control AES with 56.625%. No direct BlackRock–Fluence contract exists, hence 'other'.",
+      "source": "https://www.energy-storage.news/fluence-to-use-mosaic-technology-for-3-6gwh-of-akaysha-bess-in-australia/"
+    },
+    {
+      "slug": "kkr",
+      "type": "other",
+      "status": "active",
+      "since": "2026-07",
+      "via": "Avantus",
+      "note": "Fluence's Rexford 2 customer, Avantus, has been majority-owned by KKR since July 2024.",
+      "context": "Fluence will supply a domestic-content Smartstack system and turnkey EPC for Avantus's 200 MW / 800 MWh Rexford 2 project in California (July 2026). Avantus is owned by KKR-managed funds, with EIG. The contract is with Avantus, not KKR, hence 'other'.",
+      "source": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html"
     }
   ],
   "policyExposure": [
@@ -570,6 +589,11 @@
   },
   "sources": [
     {
+      "label": "The AES Corporation — Form 8-K: PUCO approval of the merger",
+      "url": "https://www.sec.gov/Archives/edgar/data/874761/000114036126036994/ef20082051_8k.htm",
+      "date": "2026-09-17"
+    },
+    {
       "label": "ESS News — Q3 FY2026: 164 GWh pipeline, hyperscaler order (Aug 7, 2026)",
       "url": "https://www.ess-news.com/2026/08/07/fluence-reports-164-gwh-pipeline-including-major-hyperscaler-order/",
       "date": "2026-08-07"
@@ -727,6 +751,6 @@
       "url": "https://fluenceenergy.com/domestic-content/"
     }
   ],
-  "lastUpdated": "2026-09-06",
-  "profileVersion": 9
+  "lastUpdated": "2026-09-26",
+  "profileVersion": 10
 }

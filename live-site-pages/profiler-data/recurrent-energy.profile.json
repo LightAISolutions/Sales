@@ -522,6 +522,16 @@
    "note": "Both develop utility-scale storage in the same US markets; Cleanview ranks Jupiter fifth by planned battery megawatts, with Recurrent outside the top 25.",
    "context": "A ranking co-appearance on the Cleanview developer table rather than a commercial relationship. Jupiter is a useful contrast because it is a pure-play merchant storage owner with no manufacturing parent and no module business — the cleanest available comparison for what Recurrent's storage arm would look like without the captive channel and without the solar pipeline.",
    "source": "https://cleanview.co/power-projects/developers/battery-storage"
+  },
+  {
+   "slug": "blackrock",
+   "type": "investor",
+   "status": "active",
+   "since": "2024-06",
+   "scale": "USD 500m for 20% as-converted",
+   "note": "BlackRock's Climate Infrastructure fund holds Series A convertible preferred representing 20% of Recurrent Energy on an as-converted basis.",
+   "context": "A minority preferred position with one board seat and an exit right from May 2029. BlackRock combined its infrastructure businesses, including Climate Infrastructure, under the Global Infrastructure Partners brand in October 2024. BlackRock does not control Recurrent, so Recurrent's equipment choices are Recurrent's and Canadian Solar's.",
+   "source": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/"
   }
  ],
  "policyExposure": [
@@ -1054,6 +1064,6 @@
    "url": "https://data.sec.gov/submissions/CIK0001375877.json"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

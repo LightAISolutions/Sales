@@ -68,11 +68,43 @@
     },
     {
       "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "aep",
+      "pinnedVersion": 1,
+      "verifiedAt": 2,
+      "when": "2026-09-26",
+      "why": "Edge-only revision (F-I1 step 7, 2026-09-26): v2 adds one curated relationship to the new kkr dossier (the KKR and PSP 19.9% transmission stake), citing a source already in v1. Every other field is byte-identical to the archived v1; the one aep source the report cites is unchanged, and the report does not mention KKR."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "meta",
+      "pinnedVersion": 9,
+      "verifiedAt": 10,
+      "when": "2026-09-26",
+      "why": "Edge-only revision (F-I1 step 7, 2026-09-26): v10 adds one curated relationship to the new blackrock dossier (the El Paso venture, 'announced'), citing Meta's own release already in v9. Every other field is byte-identical to the archived v9; both meta sources the report cites are unchanged, and the report does not mention BlackRock."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
+      "slug": "stack-infrastructure",
+      "pinnedVersion": 7,
+      "verifiedAt": 8,
+      "when": "2026-09-26",
+      "why": "Edge-only revision (F-I1 step 7, 2026-09-26): v8 adds curated 'other'/'announced' relationships to the new blackrock and kkr dossiers and one source (Bloomberg via The Star, 24 Sep 2026, on AIP and IFM exclusive talks). Every other field is byte-identical to the archived v7; both stack sources the report cites are unchanged, and the report does not mention BlackRock, KKR or the Asia-Pacific sale."
+    },
+    {
+      "report": "named-project-bess-attach--opportunity--2026-09-08",
       "slug": "xai",
       "pinnedVersion": 4,
-      "verifiedAt": 5,
+      "verifiedAt": 6,
       "when": "2026-09-26",
-      "why": "Short-gap pin (v4 -> v5, 1 version): both cited xai sources are unchanged (label, url and date identical). The v5 revision (F-N1 step 7, 2026-09-26) added a curated humain supplier relationship with two HUMAIN sources and rewrote one development read to record that HUMAIN confirmed its US$3B Series E investment on 18 Feb 2026; the report does not cite that development or mention HUMAIN. Every other field is byte-identical and every cited figure holds."
+      "why": "Short-gap pin re-verified again (v5 -> v6): the v6 revision (F-I1 step 7, 2026-09-26) adds one curated partner relationship to the new blackrock dossier (xAI's March 2025 entry into the AI Infrastructure Partnership) and its source, BlackRock's 19 March 2025 release. Every other field is byte-identical to the archived v5; both cited xai sources are unchanged, and the report does not mention BlackRock or AIP."
+    },
+    {
+      "report": "sst-hall-edge-block-rev2--competitive--2026-09-23",
+      "slug": "amperesand",
+      "pinnedVersion": 2,
+      "verifiedAt": 3,
+      "when": "2026-09-26",
+      "why": "Edge-only revision (F-I1 step 7, 2026-09-26): v3 adds one curated 'other' relationship to the new kkr dossier (KKR has controlled STTGDC, host of Amperesand's HVDC testbed, since 2 Sep 2026), citing the STT GDC release already in v2. Every other field is byte-identical to the archived v2; all seven amperesand sources the report cites are unchanged, and the report does not mention KKR."
     }
   ]
 }

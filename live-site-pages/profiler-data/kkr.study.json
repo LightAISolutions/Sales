@@ -1,0 +1,415 @@
+{
+ "schemaVersion": 2,
+ "slug": "kkr",
+ "title": "KKR — Technology Study Guide",
+ "lastUpdated": "2026-09-26",
+ "sections": [
+  {
+   "id": "start-here",
+   "title": "Start here: an investor built around power",
+   "kind": "callout",
+   "tone": "info",
+   "read": "Four kinds of money sit under one name, and none of them signs an equipment order itself.",
+   "ps": [
+    "**The manager.** KKR & Co. Inc. invests other people's money in private equity, infrastructure, real estate and credit, and earns fees and a share of profits.",
+    "**The insurer.** Global Atlantic, which KKR owns outright, invests policyholders' premiums for decades, much of it in long-lived assets.",
+    "**The vehicles.** Closed-end funds, an open-ended core fund, a USD 50bn partnership with Energy Capital Partners, and Helix Digital Infrastructure, a company built to own data centres and the power behind them.",
+    "**The platforms.** STTGDC, CyrusOne, ContourGlobal, Avantus and others employ the engineers who buy equipment. This guide teaches how each layer works and which platforms actually place orders."
+   ]
+  },
+  {
+   "id": "insurer-balance-sheet",
+   "title": "Why an insurer's money suits infrastructure",
+   "kind": "prose",
+   "read": "Long promises need long assets.",
+   "ps": [
+    "An {{annuity}} is a contract in which a saver pays now and the insurer guarantees payments or a return later. The insurer invests the premiums in its {{general account}} and earns the spread between what those investments yield and what it promised.",
+    "A promise due in twenty years is best matched by an asset that pays for twenty years: a transmission line on a regulated return, a data centre on a long lease, a solar farm on a long contract. That is why Global Atlantic's accounts bought 50% stakes in operating renewables portfolios and help fund KKR's partnership with Energy Capital Partners.",
+    "The weakness is leverage and liquidity. If investments disappoint, the promises remain, and trade press has criticised insurer-backed managers on exactly that point. Insurance money buys finished, income-producing assets; it finances equipment buyers rather than buying equipment itself."
+   ]
+  },
+  {
+   "id": "vehicle-types",
+   "title": "Five vehicles, five clocks",
+   "kind": "table",
+   "read": "How long a vehicle can hold an asset shapes what it will buy.",
+   "intro": "KKR's vehicles in 2026, from shortest-lived to open-ended.",
+   "cols": [
+    "Vehicle",
+    "KKR example",
+    "Life",
+    "What it tends to hold"
+   ],
+   "rows": [
+    [
+     "{{Closed-end fund}}",
+     "Global Infrastructure Investors V (USD 19.2bn)",
+     "About ten years, then sell",
+     "Platforms to grow and exit — EDF power solutions North America (pending), Global Technical Realty"
+    ],
+    [
+     "{{Open-ended fund}} ({{core infrastructure}})",
+     "Diversified Core Infrastructure Fund",
+     "No end date",
+     "Operating, contracted or regulated assets — the AEP transmission stake, Encavis"
+    ],
+    [
+     "Single-theme company",
+     "Helix Digital Infrastructure",
+     "Perpetual",
+     "Data centres plus the generation and grid assets behind them"
+    ],
+    [
+     "Strategic partnership",
+     "KKR–Energy Capital Partners (USD 50bn target)",
+     "Deal by deal",
+     "Data-centre campuses sited at power plants"
+    ],
+    [
+     "Insurance accounts",
+     "Global Atlantic",
+     "As long as the policies",
+     "Stakes in operating assets; loans"
+    ]
+   ]
+  },
+  {
+   "id": "fifty-fifty",
+   "title": "Co-owning a landlord fifty-fifty",
+   "kind": "prose",
+   "read": "Equal owners protect each other — and slow each other down.",
+   "ps": [
+    "KKR and Global Infrastructure Partners, now part of BlackRock, took CyrusOne private in March 2022 for about USD 15bn including debt. The European Commission cleared it as {{joint control}}; the split is widely reported as 50:50 but is stated in no first-party document read for the dossier.",
+    "Under {{co-control}}, a shareholders' agreement lists reserved matters — budgets, large contracts, new debt, a sale — that need both owners' consent. Neither sponsor can impose a strategy alone, which protects each from the other but means a large equipment frame may need two investment committees.",
+    "Co-owners must also agree on an exit. Reuters reported in August 2026 that they are preparing an {{IPO}} as early as 2027, a route that lets both sell down gradually."
+   ]
+  },
+  {
+   "id": "transco-minority",
+   "title": "Owning 19.9% of wires you will never run",
+   "kind": "prose",
+   "read": "A regulated return is predictable enough that an investor accepts no control.",
+   "ps": [
+    "KKR and PSP Investments, 50/50 partners, paid USD 2.82bn in June 2025 for 19.9% of AEP's Ohio and Indiana Michigan {{transmission company}} subsidiaries. AEP keeps control and 'will continue to operate and maintain these transmission facilities'.",
+    "A transmission company earns a return on its {{rate base}} — the depreciated value of its lines and substations — through a {{FERC formula rate}}. The more it invests, the more it earns, and the formula makes that income predictable.",
+    "The utility gets equity for a large capital plan without issuing as many new shares; the investors get steady income without operating risk. The transformers and breakers the transmission companies buy are still AEP's choices: KKR's money pays for them without deciding them."
+   ]
+  },
+  {
+   "id": "power-for-capital",
+   "title": "Helix: a data-centre company that buys power from its investor",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "The most unusual structure in this corpus's capital segment, and a caution for outside suppliers.",
+   "ps": [
+    "KKR launched Helix Digital Infrastructure on 11 June 2026 with more than USD 10bn of commitments to build hyperscale data centres together with generation, transmission and fibre. NVIDIA, the Kuwait Investment Authority and Vistra are among its founding investors.",
+    "**The loop.** Vistra committed up to USD 1.0bn: half up front, half once Helix meets milestones for buying power from Vistra's existing plants, or at Vistra's choice. Vistra is Helix's {{preferred power partner}}, so part of the investment is tied to Helix becoming Vistra's customer.",
+    "**The first look.** KKR's release says founding investors 'may have certain rights, such as priority or first look rights, to provide goods or services to Helix investments'. A {{first-look right}} lets an investor see a supply opportunity before anyone else.",
+    "**Why power is inside.** KKR's research argues that 'the ultimate limiting factor for building data centers isn't capital; it's power'. A vehicle that owns generation beside its data centres controls the scarce input. No Helix project or supplier had been named by 26 September 2026."
+   ]
+  },
+  {
+   "id": "sttgdc-and-dc-power",
+   "title": "Buying a platform abroad — and the DC-power testbed that came with it",
+   "kind": "prose",
+   "read": "The one KKR platform with a high-voltage DC programme on the record.",
+   "ps": [
+    "KKR and Singtel agreed in February 2026 to buy the roughly 82% of STT GDC they did not already own for S$6.6bn in cash, at about S$13.8bn of {{enterprise value}}; the deal completed on 2 September 2026 with KKR at 75% and Singtel at 25%. Half the price is {{deferred consideration}}, due on the first anniversary or on an earlier change of control.",
+    "Enterprise value prices the whole company including debt; the cash price buys only the equity not already held. Keeping a local strategic partner gives a foreign investor a domestic ally in a country that treats data centres as critical infrastructure.",
+    "In January 2026 STT GDC launched a live {{HVDC}} testbed for AI racks, built with LITEON and supported by the start-up Amperesand, and said it 'plans to deploy this technology in future data centres in Singapore'. Amperesand makes a {{solid-state transformer}}, which converts medium-voltage AC to DC electronically. STTGDC's engineering team is therefore the nearest thing to an SST buyer anywhere in KKR's portfolio."
+   ]
+  },
+  {
+   "id": "conversion-chain",
+   "title": "Why DC distribution removes conversion stages",
+   "kind": "table",
+   "read": "Each conversion loses a little power as heat; fewer conversions mean less loss and less cooling.",
+   "intro": "A simplified path from the utility's medium-voltage feed to the chips, in the conventional design and in the DC design STT GDC is testing.",
+   "cols": [
+    "Stage",
+    "Conventional AC hall",
+    "DC hall with a solid-state transformer"
+   ],
+   "rows": [
+    [
+     "From the grid",
+     "{{Medium voltage}} AC to low-voltage AC in a {{transformer}}",
+     "Medium-voltage AC to high-voltage DC in one electronic stage"
+    ],
+    [
+     "Ride-through",
+     "A UPS converts AC to DC for its batteries and back to AC",
+     "Batteries sit on the DC bus with no conversion back to AC"
+    ],
+    [
+     "At the rack",
+     "Each server power supply converts AC to DC",
+     "A DC-DC stage steps the bus down for the boards"
+    ],
+    [
+     "Net effect",
+     "Several conversions, each costing a few per cent",
+     "Fewer conversions and less copper at the higher voltage"
+    ]
+   ]
+  },
+  {
+   "id": "what-an-ipp-buys",
+   "title": "What a power producer buys — and the two orders at KKR platforms",
+   "kind": "table",
+   "read": "Independent power producers sign their own equipment contracts; that is why they pass the test.",
+   "intro": "Battery purchases and frameworks at KKR-controlled or KKR-bound platforms in 2026.",
+   "cols": [
+    "Platform",
+    "KKR position",
+    "What was bought",
+    "Status"
+   ],
+   "rows": [
+    [
+     "ContourGlobal",
+     "Taken private by KKR funds in 2022",
+     "3 GWh of CATL battery systems: 526 containers of 5.64 MWh, four-hour discharge, for the UK, Greece and Chile",
+     "Signed 10 August 2026"
+    ],
+    [
+     "Avantus",
+     "Majority-owned since 2024",
+     "A 200 MW / 800 MWh Fluence system with turnkey construction, Rexford 2, California",
+     "Announced 13 July 2026"
+    ],
+    [
+     "EDF power solutions North America",
+     "Signed purchase, 100% on closing",
+     "A framework with Ford Energy for up to 20 GWh of {{DC block}} systems, up to 4 GWh a year, from 2028",
+     "KKR deal awaiting FERC ({{Section 203}})"
+    ]
+   ]
+  },
+  {
+   "id": "energy-versus-power",
+   "title": "Energy and power: reading a battery order",
+   "kind": "bars",
+   "read": "MWh is how much a battery stores; MW is how fast it can deliver it. Duration is the ratio.",
+   "unit": "MWh of storage",
+   "intro": "The same three commitments, measured in energy. Divide by the stated hours to get power.",
+   "items": [
+    {
+     "label": "Avantus Rexford 2 (Fluence)",
+     "sub": "800 MWh ÷ 4 h = 200 MW",
+     "v": 800
+    },
+    {
+     "label": "ContourGlobal (CATL)",
+     "sub": "526 × 5.64 MWh ≈ 2,967 MWh; at 4 h ≈ 740 MW",
+     "v": 2967
+    },
+    {
+     "label": "EDF power solutions framework (Ford Energy)",
+     "sub": "Up to 20,000 MWh over five years — a ceiling, not an order",
+     "v": 20000
+    }
+   ]
+  },
+  {
+   "id": "who-signs",
+   "title": "The buying-authority test: where KKR passes and where it fails",
+   "kind": "table",
+   "read": "Control, alone or shared, is the only route from an investor to a purchase order.",
+   "intro": "KKR's positions on 26 September 2026.",
+   "cols": [
+    "Platform",
+    "What it buys",
+    "KKR's position",
+    "Passes the test?"
+   ],
+   "rows": [
+    [
+     "STTGDC",
+     "Power and cooling for colocation halls; an HVDC testbed",
+     "75% with Singtel",
+     "Yes"
+    ],
+    [
+     "CyrusOne",
+     "Power and cooling for hyperscale campuses",
+     "{{Co-control}} with GIP",
+     "Yes — shared"
+    ],
+    [
+     "ContourGlobal",
+     "Batteries and generation",
+     "Taken private in 2022",
+     "Yes"
+    ],
+    [
+     "Avantus; Zenobē; Encavis",
+     "Batteries, solar and wind",
+     "Majority or joint majority",
+     "Yes"
+    ],
+    [
+     "Helix Digital Infrastructure",
+     "Data centres plus power and grid assets",
+     "Sponsor; control undisclosed",
+     "Unclear"
+    ],
+    [
+     "EDF power solutions North America",
+     "Renewables and batteries",
+     "Signed, 100% on closing",
+     "Only on closing"
+    ],
+    [
+     "AEP's transmission companies; Compass",
+     "Grid equipment; data-centre campuses",
+     "19.9% minority; asset-level partner",
+     "No"
+    ]
+   ]
+  },
+  {
+   "id": "exits",
+   "title": "Exits: how a fund makes its return",
+   "kind": "prose",
+   "read": "A fund earns when it sells, and the best buyer is often a company in the same business.",
+   "ps": [
+    "KKR's impact fund bought CoolIT, a liquid-cooling maker, in 2023 and sold it to Ecolab for about USD 4.75bn in cash, closing on 2 July 2026 — about 15 times its cost per KKR. A **strategic buyer** in a related business can pay more than another fund because it can combine the target with what it already sells.",
+    "KKR and other shareholders agreed on 31 August 2026 to sell USI, an insurance broker, to Aon for USD 17.0bn, with closing expected in the fourth quarter. Proceeds flow back to fund investors and to KKR's own balance sheet, and feed the next commitments.",
+    "Signed is not closed. USI, EDF power solutions North America and the Sempra Infrastructure Partners stake were all signed but not closed on 26 September 2026, and a dossier records each as announced until closing is confirmed."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "Concept recall — none of these asks for a date, a name or a fund size.",
+   "cards": [
+    {
+     "q": "Why does an {{annuity}} writer want infrastructure in its {{general account}}?",
+     "a": "Its promises run for decades, so it needs long-lived assets with steady income, such as regulated transmission or long-leased data centres."
+    },
+    {
+     "q": "What is the difference between a {{closed-end fund}} and an {{open-ended fund}}?",
+     "a": "A closed-end fund raises once and returns the money after about ten years, so it must sell; an open-ended fund has no end date and can hold assets indefinitely."
+    },
+    {
+     "q": "What can each owner do under {{co-control}} that a minority holder cannot?",
+     "a": "Veto the reserved matters — major budgets, contracts, debt and a sale."
+    },
+    {
+     "q": "Why would a utility sell 19.9% of a {{transmission company}}?",
+     "a": "To raise equity for its capital plan without issuing as many new shares, while keeping control and operation of the lines."
+    },
+    {
+     "q": "What does a {{first-look right}} give a founding investor in a project company?",
+     "a": "The chance to see, and match or take, an opportunity to supply goods or services before an outside supplier."
+    },
+    {
+     "q": "Why does DC distribution with a {{solid-state transformer}} save power?",
+     "a": "It removes conversion stages between the grid and the chips, and each conversion loses a few per cent as heat."
+    },
+    {
+     "q": "A battery is sold as 200 MW / 800 MWh. What is its duration?",
+     "a": "Four hours: energy (MWh) divided by power (MW)."
+    },
+    {
+     "q": "Why can {{enterprise value}} be much larger than the cash paid for a stake?",
+     "a": "Enterprise value prices the whole company including its debt; the cash buys only the equity being purchased."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "Six questions on the mechanics.",
+   "items": [
+    {
+     "q": "KKR holds 19.9% of a transmission company that is buying 50 large transformers. Who chooses the supplier?",
+     "c": [
+      "KKR's infrastructure team",
+      "The utility that operates the company",
+      "The federal regulator",
+      "KKR's co-investor"
+     ],
+     "a": 1,
+     "why": "The majority owner keeps control and operation; the minority investor funds without deciding."
+    },
+    {
+     "q": "Why did KKR create a separate vehicle for AI data centres?",
+     "c": [
+      "Its funds were fully invested",
+      "Its diversified funds limit how much can go into one theme",
+      "Regulators required it",
+      "Its insurer could not invest in data centres"
+     ],
+     "a": 1,
+     "why": "KKR's CFO said the infrastructure funds 'carry diversification guidelines that limit how much we could dedicate to a single theme'."
+    },
+    {
+     "q": "Which KKR platform has a high-voltage DC programme on the record?",
+     "c": [
+      "CyrusOne",
+      "STTGDC",
+      "Avantus",
+      "ContourGlobal"
+     ],
+     "a": 1,
+     "why": "STT GDC's January 2026 testbed with LITEON and Amperesand, which it plans to deploy in future Singapore data centres."
+    },
+    {
+     "q": "526 containers of 5.64 MWh each, discharging over four hours, deliver about how much power?",
+     "c": [
+      "About 190 MW",
+      "About 740 MW",
+      "About 3,000 MW",
+      "About 12,000 MW"
+     ],
+     "a": 1,
+     "why": "526 × 5.64 ≈ 2,967 MWh; divided by 4 hours ≈ 740 MW."
+    },
+    {
+     "q": "A signed acquisition awaits federal energy approval. How should a dossier record the buyer's relationship to the target?",
+     "c": [
+      "As an owner",
+      "As announced, until closing",
+      "As a lender",
+      "As no relationship"
+     ],
+     "a": 1,
+     "why": "Signing binds the parties to conditions; ownership passes only at closing."
+    },
+    {
+     "q": "Why can a strategic buyer outbid a fund for a company?",
+     "c": [
+      "It pays in shares",
+      "It can combine the target with its existing business and cut shared costs",
+      "It is not subject to antitrust review",
+      "It has lower taxes"
+     ],
+     "a": 1,
+     "why": "Synergies make the target worth more to a buyer already in a related business."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "first-look right",
+   "d": "A contractual right to see an opportunity — here, to supply goods or services to a project — before outside parties, with the chance to match or take it."
+  },
+  {
+   "t": "preferred power partner",
+   "d": "In Helix Digital Infrastructure, the founding investor (Vistra) designated to supply power to the vehicle's projects on a preferred basis; Vistra called it 'a preferred power partner, not a requirement'."
+  },
+  {
+   "t": "reserved matters",
+   "d": "Decisions a shareholders' agreement says need every co-owner's consent — typically budgets, large contracts, new debt and a sale."
+  },
+  {
+   "t": "strategic buyer",
+   "d": "A company in the same or a related business, which can pay more for a target than a financial investor because it can combine operations and cut shared costs."
+  }
+ ]
+}

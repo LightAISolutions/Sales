@@ -537,6 +537,16 @@
    "note": "Both own California and Texas generation and appear together in independent storage-completion rankings; Vistra's dossier records Clearway among the top ten owners by megawatts brought online in 2023 on an Enverus table.",
    "context": "A ranking co-appearance rather than a commercial relationship, and it is recorded as such on both sides. The businesses are structurally opposite: Vistra is an integrated merchant with a five-million-customer retail book hedging its generation, while Clearway sells essentially all of its output on long-term contracts and holds no retail position. That difference is why Vistra's storage revenue swings with market prices and Clearway's does not, and it is the more instructive comparison than the megawatt counts.",
    "source": "https://www.sec.gov/Archives/edgar/data/1567683/000162828026053357/exhibit991-clearwayenergyi.htm"
+  },
+  {
+   "slug": "blackrock",
+   "type": "investor",
+   "status": "active",
+   "since": "2018",
+   "via": "Global Infrastructure Partners (50% of Clearway Energy Group)",
+   "note": "BlackRock owns Global Infrastructure Partners, which co-owns Clearway Energy Group 50/50 with TotalEnergies; BlackRock Portfolio Management files the 13D for the GIP entities.",
+   "context": "Clearway's 2026 proxy states that GIP and TotalEnergies each own 50% of Clearway Energy Group, and BlackRock Portfolio Management LLC's Schedule 13D/A of May 2026 reports 85,181,445 shares, 41.5% on an as-exchanged basis, on behalf of the GIP entities. The earlier 13D/A No. 2 put the same shares at 49.9% of Class C. That is a 13D, the control filing; BlackRock's index-fund holdings elsewhere are filed on the passive 13G.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926054174/primary_doc.xml"
   }
  ],
  "policyExposure": [
@@ -1050,6 +1060,6 @@
    "url": "https://www.marketbeat.com/stocks/NYSE/CWEN/earnings/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

@@ -1832,6 +1832,16 @@
      "basis": "ecosystemRole: the sovereign capital behind the largest AI build-outs — Stargate initial equity funder, AIP co-founder, an owner of Aligned and Vantage"
     },
     {
+     "slug": "blackrock",
+     "role": "incumbent",
+     "basis": "ecosystemRole: an investor that buys nothing and controls a great deal — its GIP-branded funds own or co-own Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power; first in Infrastructure Investor's 2026 five-year infrastructure fundraising ranking (USD 113.4bn)"
+    },
+    {
+     "slug": "kkr",
+     "role": "incumbent",
+     "basis": "ecosystemRole: the capital segment's most power-led data-centre investor — controls STTGDC (75%), co-owns CyrusOne, sponsors Helix Digital Infrastructure and owns ContourGlobal and Avantus; second in Infrastructure Investor's 2026 ranking (USD 100.5bn)"
+    },
+    {
      "slug": "excelsior-energy-capital",
      "role": "challenger",
      "basis": "productsAndServices › Closed-end renewable infrastructure funds (Fund I USD 504m, Fund II just over USD 1bn) — a specialist manager beside the giants"

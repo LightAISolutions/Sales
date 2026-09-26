@@ -453,6 +453,22 @@
    "note": "NVIDIA GPUs are the collateral in the Fluidstack facility; the relationship is to the hardware as security, not to NVIDIA as a counterparty.",
    "context": "Recorded so a reader does not infer a Macquarie-NVIDIA commercial relationship from the Fluidstack financing. Macquarie's exposure is to GPUs as an asset class — it lent against them and they were deployed in Iceland — and no source describes a direct arrangement between the two firms. Typed `other` and carried deliberately as a negative-shaped edge.",
    "source": "https://www.macquarie.com/us/en/insights/investing-across-the-digital-ecosystem.html"
+  },
+  {
+   "slug": "blackrock",
+   "type": "competitor",
+   "status": "active",
+   "note": "A competitor for infrastructure capital and platforms; first in Infrastructure Investor's 2026 five-year fundraising ranking.",
+   "context": "BlackRock ranks first in Infrastructure Investor's 2026 table, ahead of Macquarie in fourth; BlackRock's GIP, with AIP and MGX, bought Aligned from Macquarie-managed funds in July 2026.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "kkr",
+   "type": "competitor",
+   "status": "active",
+   "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
+   "context": "KKR ranks second in Infrastructure Investor's 2026 table, ahead of Macquarie in fourth.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
   }
  ],
  "decisionMakers": [
@@ -760,6 +776,6 @@
    "url": "https://efts.sec.gov/LATEST/search-index?q=%22Macquarie+Group+Limited%22"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

@@ -472,6 +472,22 @@
    "note": "Brookfield is named among reported suitors for Blue Owl's STACK Asia-Pacific portfolio — a report, not a transaction.",
    "context": "Bloomberg-sourced reporting from June 2026 places Brookfield among reported bidders for STACK's Tokyo, Osaka, Sydney, Melbourne and Johor portfolio, alongside the AI Infrastructure Partnership, IFM, KKR and DigitalBridge, in a process that could exceed USD 30bn. No party has confirmed. Typed `other` because a reported interest is not an ownership, customer or supplier relationship, and recorded here only so a reader of STACK's dossier can see the claim has been checked from this side and remains unconfirmed.",
    "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "blackrock",
+   "type": "competitor",
+   "status": "active",
+   "note": "A competitor for infrastructure capital and platforms; first in Infrastructure Investor's 2026 five-year fundraising ranking.",
+   "context": "BlackRock ranks first in Infrastructure Investor's 2026 table at USD 113.4bn, ahead of KKR and Brookfield; both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "kkr",
+   "type": "competitor",
+   "status": "active",
+   "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
+   "context": "KKR ranks second in Infrastructure Investor's 2026 table at USD 100.5bn, just ahead of Brookfield at USD 99.1bn; KKR's asset-level partnership with Compass sits beside Brookfield's co-control of it.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
   }
  ],
  "decisionMakers": [
@@ -839,6 +855,6 @@
    "url": "https://www.sec.gov/files/company_tickers.json"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 2
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 3
 }

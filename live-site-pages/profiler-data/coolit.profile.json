@@ -679,6 +679,16 @@
    "note": "Schneider Electric entered the CDU market through its October 2024 purchase of Motivair, which Gigabyte lists alongside CoolIT as a direct-liquid-cooling partner.",
    "context": "Dell'Oro's CDU analysis cites 'Schneider Electric's purchase of Motivair in October 2024' among the consolidation moves reshaping the category. Giga Computing's 2023 release put the two head to head: 'Motivair joins our other partner, CoolIT Systems, to demonstrate GIGABYTE's dedication to offering a comprehensive DLC solution'. Schneider's own CDU guidance (five CDU functions; rack-mounted units 20 to about 40 kW) is the teaching text quoted in this dossier's study guide.",
    "source": "https://www.delloro.com/market-at-the-boiling-point-is-the-cdu-space-becoming-saturated/"
+  },
+  {
+   "slug": "kkr",
+   "type": "investor",
+   "status": "historical",
+   "since": "2023-05",
+   "scale": "USD 4.75bn exit to Ecolab",
+   "note": "KKR's Global Impact Fund II owned a majority of CoolIT from May 2023 until Ecolab's acquisition closed on 2 July 2026.",
+   "context": "KKR agreed to acquire CoolIT in May 2023, with Mubadala as minority co-investor, and sold it to Ecolab for about USD 4.75bn in cash, closing on 2 July 2026. KKR's materials put the return at about 15 times the original equity.",
+   "source": "https://www.coolitsystems.com/resources/news/kkr-to-acquire-coolit-systems/"
   }
  ],
  "policyExposure": [
@@ -1710,6 +1720,6 @@
    "url": "https://newsletter.semianalysis.com/p/vera-rubin-extreme-co-design-an-evolution"
   }
  ],
- "lastUpdated": "2026-09-04",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

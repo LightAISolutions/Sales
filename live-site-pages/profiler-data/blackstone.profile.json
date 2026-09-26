@@ -467,6 +467,22 @@
    "note": "Blackstone is reported as a participant in the Broadcom-Apollo-Blackstone vehicle that buys chips and leases them to Anthropic at Fluidstack sites.",
    "context": "Press accounts of a chip-leasing platform describe an initial USD 35bn tranche to facilitate about 1 GW of compute that Anthropic is expected to deploy at Fluidstack-operated sites, with the vehicle buying Google-designed TPUs and leasing them onward. Bloomberg separately reported in September 2026 that Blackstone was weighing a second debt package for the same arrangement. **This is trade reporting, not a filed arrangement**: no Blackstone filing located names Fluidstack, Anthropic or the vehicle, and the Broadcom release page was unreachable. It is recorded as `other` and as reported rather than confirmed.",
    "source": "https://www.sec.gov/Archives/edgar/data/1393818/000119312526340208/d158269d10q.htm"
+  },
+  {
+   "slug": "blackrock",
+   "type": "competitor",
+   "status": "active",
+   "note": "A competitor for infrastructure capital and platforms; first in Infrastructure Investor's 2026 five-year fundraising ranking.",
+   "context": "BlackRock ranks first in Infrastructure Investor's 2026 five-year fundraising table at USD 113.4bn against Blackstone's eighth; BlackRock's GIP co-owns Aligned, to which Blackstone Credit lends. The two names are routinely confused.",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
+  },
+  {
+   "slug": "kkr",
+   "type": "competitor",
+   "status": "active",
+   "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
+   "context": "KKR ranks second in Infrastructure Investor's 2026 table at USD 100.5bn against Blackstone's eighth; both own hyperscale landlords (KKR with GIP in CyrusOne, Blackstone in QTS).",
+   "source": "https://www.infrastructureinvestor.com/ii-100/"
   }
  ],
  "decisionMakers": [
@@ -815,6 +831,6 @@
    "url": "https://pestakeholder.org/news/private-equity-cash-fuels-data-center-buildout/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 1
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 2
 }

@@ -10,7 +10,7 @@
  "headquarters": "Austin, Texas, United States (offices: Houston, Chicago)",
  "founded": 2017,
  "employees": "~190 (company-claimed team-page stat, 2026; LinkedIn shows ~264)",
- "ownership": "private — owned by funds managed by BlackRock's Diversified Infrastructure business (acquired from EnCap Investments/Yorktown/Mercuria, announced Nov 2022, value undisclosed); current site describes Jupiter as 'backed by Global Infrastructure Partners (GIP), part of BlackRock'",
+ "ownership": "private — owned by funds managed by BlackRock's Diversified Infrastructure business (acquired from EnCap Investments/Yorktown/Mercuria, announced Nov 2022, value undisclosed); Jupiter's own site and 2026 releases, read on 26 September 2026, name no owner — an earlier version of this dossier quoted the site as 'backed by Global Infrastructure Partners (GIP), part of BlackRock', a line that could not be found on that date",
  "summary": "BOTTOM LINE UP FRONT: Jupiter Power is Hithium's most important disclosed US customer — a BlackRock-owned standalone-storage IPP with ~8,800 MWh operating/under-construction/contracted, a 20 GW / 97 GWh development pipeline across 8 RTOs, and a verified three-layer Hithium relationship: the June 20, 2024 supply agreement for 3 GWh of ∞Block 5 MWh containers (314 Ah cells, delivery by end-2025 — timing that landed the equipment inside the pre-2026 FEOC safe-harbor window); Jupiter's naming in Hithium's HKEX prospectus partner roster (per ess-news coverage); and a confirmed design win at Trimount, Everett MA — the largest planned BESS in New England at 700 MW/2,800 MWh, specified with Hithium 5.015 MWh units (Energy-Storage.News, Mar 2026). The asymmetry matters: Jupiter's own channels have never once mentioned Hithium, while publicly messaging domestic content — an Energy Vault 2.4 GWh domestic-content LOI (2022), a Peak Energy sodium-ion agreement up to 4.75 GWh (Nov 2025), and a $500M credit facility earmarked partly for 'domestic battery storage procurement' (Jan 2026).",
  "ecosystemRole": "We assess Jupiter as the reference account in the Hithium-US story and the single best window into how a top-tier US buyer actually manages a Chinese supplier relationship post-FEOC: buy big and quietly inside the safe-harbor window, never co-market, and hedge loudly with domestic supply. Jupiter is also a first-mover franchise collector — first tolled battery in ERCOT (Crossett), Houston's first large BESS (Callisto), Michigan's first utility-scale BESS (Tibbits), and New England's largest planned battery (Trimount) — with an in-house trading desk Modo Energy repeatedly benchmarks among ERCOT's best (its Swoose asset was ERCOT's top-earning battery in Nov 2024). Its AIDC posture is siting-led rather than contract-led: urban load-pocket brownfields (Callisto in Houston, Trimount at Boston's Mystic node) positioned as fast firm capacity for AI-era load, with no named data-center offtake yet — the undisclosed Tidwell Prairie Phase I toll counterparty is the one place a hyperscaler could be hiding.",
  "productsAndServices": [
@@ -258,6 +258,16 @@
    "since": "2024-07",
    "scale": "100 MW / 200 MWh",
    "via": "Energy Vault"
+  },
+  {
+   "slug": "blackrock",
+   "type": "investor",
+   "status": "active",
+   "since": "2022-11",
+   "via": "BlackRock Diversified Infrastructure fund",
+   "note": "A fund managed by BlackRock's Diversified Infrastructure business agreed to buy Jupiter from EnCap in November 2022.",
+   "context": "The EnCap and Jupiter release says 'BlackRock Alternatives (BlackRock), through a fund managed by its Diversified Infrastructure business, has agreed to acquire Jupiter Power LLC'. BlackRock combined its infrastructure businesses under the Global Infrastructure Partners brand when it bought GIP in October 2024, but no source names the fund that now holds Jupiter. Jupiter's September 2026 USD 1.4bn financing release names no owner.",
+   "source": "https://jupiterpower.io/encap-investments-sells-jupiter-power-to-blackrock/"
   }
  ],
  "policyExposure": [
@@ -420,6 +430,11 @@
    "date": "2024-06-20"
   },
   {
+   "label": "Jupiter Power — EnCap Investments sells Jupiter Power to BlackRock",
+   "url": "https://jupiterpower.io/encap-investments-sells-jupiter-power-to-blackrock/",
+   "date": "2022-11-15"
+  },
+  {
    "label": "Energy Vault — Jupiter/Energy Vault 2.4 GWh domestic-content LOI (IR PDF)",
    "url": "https://s203.q4cdn.com/692145866/files/doc_news/JUPITER-POWER-AND-ENERGY-VAULT-SIGN-LETTER-OF-INTENT-TO-SECURE-2.4-GWh-OF-DOMESTIC-CONTENT-QUALIFIED-BATTERY-ENERGY-STORAGE-SYSTEMS-2022.pdf",
    "date": "2022-09-28"
@@ -434,6 +449,6 @@
    "url": "https://jupiterpower.io/"
   }
  ],
- "lastUpdated": "2026-09-06",
- "profileVersion": 6
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 7
 }

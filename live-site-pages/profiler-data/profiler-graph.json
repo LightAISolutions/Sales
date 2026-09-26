@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-26",
- "companies": 188,
+ "companies": 190,
  "edges": [
   {
    "a": "abb",
@@ -1764,6 +1764,48 @@
   },
   {
    "a": "aep",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "KKR and PSP Investments, 50/50 partners, hold 19.9% of AEP's Ohio and Indiana Michigan transmission companies; AEP keeps control and operates them.",
+     "context": "The transaction was announced on 9 January 2025 and completed on 5 June 2025. KKR funded its half from its core infrastructure strategy. AEP intended the sale to offset about USD 5.35bn of equity need through 2029. KKR's stake is in two subsidiaries, not in AEP itself, and it does not sign for AEP's equipment.",
+     "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000069/a06-2025olympuspressreleas.htm",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "19.9% of two transmission companies; USD 2.82bn with PSP"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "KKR and PSP Investments, in a 50/50 partnership, hold 19.9% of AEP's Ohio and Indiana Michigan transmission companies; AEP keeps control and operates them.",
+     "context": "AEP's release of 5 June 2025: 'AEP, KKR and PSP Investments have completed the transaction … to jointly invest $2.82 billion for a 19.9% equity interest' in the Ohio and Indiana Michigan transmission companies, and 'AEP will continue to operate and maintain these transmission facilities'. The joint KKR and PSP release of 9 January 2025 says the two 'formed a 50/50 strategic partnership' and that 'KKR is funding this investment from its core infrastructure strategy'. The price was about 30 times trailing earnings and the stake about 5% of AEP's transmission rate base. This is a minority, funds-only position: KKR does not sign for AEP's equipment.",
+     "source": "https://www.aep.com/news/stories/view/10263/",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "19.9% of two transmission companies for USD 2.82bn (with PSP)",
+     "via": "KKR core infrastructure strategy"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: AEP's own credit sheet puts trailing-twelve-month Moody's FFO/Debt at 13.9 percent against a stated downgrade threshold of 13 percent — 0.9 points of headroom — with Appalachian Power already on negative outlook at Moody's; against that, the $2.82B KKR/PSP sale of a 19.9 percent interest in the Ohio and Indiana Michigan transmission companies (closed June 2025, intended to offset approximately $5.35B of equity need through 2029), $3B of equity forwards executed in May 2026 that the company says cover all currently anticipated marketed growth equity for the plan, a $3.5B at-the-market programme, and roughly $5B of Department of Energy loans.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-05",
+     "text": "The $2.82B sale of a 19.9 percent interest in the Ohio and Indiana Michigan transmission companies to KKR and PSP Investments closed, at a valuation trade press equated to $170 a share against a $92 market price — Selling 5 percent of the transmission rate base at a large premium funded roughly $5.35B of equity need — and created the minority-interest drag that explains the 2026 earnings comparison.",
+     "src": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000069/a06-2025olympuspressreleas.htm",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06-05"
+  },
+  {
+   "a": "aep",
    "b": "meta",
    "curated": {
     "a": {
@@ -2113,6 +2155,33 @@
   },
   {
    "a": "aes-clean-energy",
+   "b": "blackrock",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "BlackRock's Global Infrastructure Partners leads the consortium taking the parent private; signed 1 March 2026, not yet closed.",
+     "context": "GIP and the EQT Infrastructure VI fund, with CalPERS and the Qatar Investment Authority as co-underwriters, agreed to buy The AES Corporation. Per PJM's market monitor, after closing GIP would hold 36.625% and a GIP-managed CalPERS vehicle 20%, a controlling 56.625%. Stockholders, HSR, CFIUS and PUCO are done; FERC and New York remain. Until closing the link stays 'announced'.",
+     "source": "https://www.global-infra.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes/",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "USD 15.00/share; ~USD 10.7bn equity; ~USD 33.4bn EV",
+     "via": "Global Infrastructure Partners"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "GIP leads the consortium taking The AES Corporation private; signed 1 March 2026, awaiting FERC and New York approval on 26 September 2026.",
+     "context": "GIP's release of 2 March 2026: 'Global Infrastructure Partners, a part of BlackRock, and the EQT Infrastructure VI fund, along with co-underwriters' CalPERS and the Qatar Investment Authority, agreed to acquire AES for USD 15.00 a share in cash, funded entirely with equity. Per PJM's market monitor, the post-closing ownership would be GIP 36.625%, EQT 33.375%, CalPERS 20% through a GIP-managed vehicle, and QIA 10% — a controlling 56.625% managed by GIP.\n\nStockholders approved on 26 June, CFIUS cleared on 27 August and PUCO approved on 17 September 2026. FERC (EC26-99) and the New York commission are outstanding, and the outside date is 1 June 2027. The covered slug is AES's US clean-energy development business, which buys batteries and generation; until closing AES remains a listed company, and this link stays 'announced'.",
+     "source": "https://www.global-infra.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes/",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "USD 15.00/share; ~USD 10.7bn equity; ~USD 33.4bn EV"
+    }
+   },
+   "evid": [],
+   "last": "2026-03"
+  },
+  {
+   "a": "aes-clean-energy",
    "b": "clearway-energy",
    "curated": {
     "b": {
@@ -2301,7 +2370,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Indicators to watch: (1) FERC and the Ohio and New York commission decisions on the merger, and whether the advocacy petitions asking FERC to condition or block it get a docket — the outside date is 1 June 2027 and the termination fee US$320,651,487; (2) whether Bellefield Phase 2 reached commercial operation in the second half of 2026 as stated, which would complete the largest US solar-plus-storage facility; (3) the next S&P Global quarterly owner table, for whether Intersect Power passes AES into third place; (4) any AES disclosure naming the Texas private-use-network customer, or a second such agreement, which would establish DTAs as a repeatable line rather than a single contract; (5) whether the Maximo fleet expands past five units against the stated 2026 installation backlog, and whether any third-party EPC is named as a customer.",
+     "text": "Indicators to watch: (1) FERC and New York commission decisions on the merger (PUCO approved on 17 September 2026), and FERC's response to the advocacy protest filed in Dockets EC26-99, EC25-12-001 and EC16-77-005 — the outside date is 1 June 2027 and the termination fee US$320,651,487; (2) whether Bellefield Phase 2 reached commercial operation in the second half of 2026 as stated, which would complete the largest US solar-plus-storage facility; (3) the next S&P Global quarterly owner table, for whether Intersect Power passes AES into third place; (4) any AES disclosure naming the Texas private-use-network customer, or a second such agreement, which would establish DTAs as a repeatable line rather than a single contract; (5) whether the Maximo fleet expands past five units against the stated 2026 installation backlog, and whether any third-party EPC is named as a customer.",
      "src": "",
      "from": "a"
     }
@@ -2780,6 +2849,84 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "aligned",
+   "b": "blackrock",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "BlackRock's Global Infrastructure Partners, with the BlackRock-chaired AI Infrastructure Partnership and MGX, has owned Aligned since 21 July 2026.",
+     "context": "The closing release names 'AIP, MGX, and BlackRock's Global Infrastructure Partners (GIP)' as buyers of 100% of the equity. The European Commission's clearance names Global Infrastructure Management, LLC, 'ultimately controlled by BlackRock', and MGX Fund Management Limited as acquiring joint control. Larry Fink chairs AIP. The split between AIP, MGX and GIP is undisclosed. Blackstone Credit, a different firm often confused with BlackRock, is among Aligned's lenders.",
+     "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "status": "active",
+     "since": "2026-07",
+     "scale": "~USD 40bn EV (100% of equity, with AIP and MGX)",
+     "via": "Global Infrastructure Partners; AI Infrastructure Partnership"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Owned since 21 July 2026 by AIP, MGX and GIP, which bought 100% of the equity from Macquarie-managed funds; AIP's first investment.",
+     "context": "Aligned's closing release names 'AIP, MGX, and BlackRock's Global Infrastructure Partners' as the buyers of 100% of the equity at about USD 40bn of enterprise value, with 51 campuses, more than 6.4 GW of operational and planned capacity and an additional USD 5bn of growth capital. The European Commission's clearance (Case M.12259, 19 January 2026) names Global Infrastructure Management, LLC, 'ultimately controlled by BlackRock', and MGX Fund Management Limited as acquiring joint control; AIP is not a notifying party.\n\nThe split between AIP, MGX and GIP is undisclosed, and the USD 21bn equity cheque is a trade-press figure no party has confirmed. Aligned is the platform that buys the power and cooling equipment; BlackRock reaches it through its board seats.",
+     "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "status": "active",
+     "since": "2026-07",
+     "scale": "~USD 40bn EV; 51 campuses; >6.4 GW",
+     "via": "GIP and the AI Infrastructure Partnership"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Aligned Data Centers is the subject of the largest data-center M&A transaction on record — on 21 July 2026 the Artificial Intelligence Infrastructure Partnership (AIP), MGX, and BlackRock's Global Infrastructure Partners (GIP) closed their acquisition of 100% of the equity from funds managed by Macquarie Asset Management and co-invest partners at an enterprise value of approximately $40B, with a further $5B of growth capital committed at closing; the deal — AIP's first-ever investment against its $30B equity / up-to-$100B-with-debt mandate — hands a platform of 51 campuses and 6.4 GW of operational and planned capacity across the US, Brazil, Mexico, Chile and Colombia to a consortium whose backers include Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra, Kuwait Investment Authority and Temasek.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A disambiguation worth carrying, verified 2026-09-06: Aligned is owned by AIP, MGX and BlackRock's Global Infrastructure Partners — NOT by Blackstone, a different firm.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "AIP, MGX, and BlackRock's GIP close the ~$40B acquisition of 100% of Aligned's equity from Macquarie Asset Management-managed funds — the largest data-center M&A deal on record; $5B of additional growth capital committed; Schaap and management retained, HQ stays in Dallas; platform stated at 51 campuses / 6.4 GW operational and planned — The single defining event of the dossier: the AI-capital complex (Microsoft, NVIDIA, xAI among AIP's backers) now owns the landlord — vertical alignment of demand and capacity that no competitor sale has matched at this scale.",
+     "src": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX, and BlackRock's GIP agree to acquire all equity in Aligned at ~$40B enterprise value — AIP's first investment; anchor investors Kuwait Investment Authority and Temasek; strategic partners Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra; Macquarie exits a position built from 85 MW (April 2018) to 5+ GW / 50 campuses — The record sale price (derived ~$8M per MW of announced operational-and-planned capacity, unverifiable without financials) is best read as the market's price for a proven multi-GW delivery machine plus its cooling IP — and as Macquarie's textbook infrastructure exit.",
+     "src": "https://www.macquarie.com/us/en/about/news/2025/macquarie-asset-management-to-lead-sale-of-aligned-data-centers-at-an-enterprise-value-of-us-40-billion.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "AIP, MGX and GIP complete the acquisition of 100% of Aligned Data Centers from Macquarie-managed funds at about USD 40bn enterprise value — AIP's first investment and the largest data-centre transaction on record. Control sits with GIP's managing entity and MGX per the European Commission.",
+     "src": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and GIP agree to acquire all equity in Aligned Data Centers (50 campuses, more than 5 GW at signing) — The announcement named AIP's founders as BlackRock, GIP, MGX, Microsoft and NVIDIA, and Fink as AIP's chairman.",
+     "src": "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-21"
   },
   {
    "a": "aligned",
@@ -6563,6 +6710,54 @@
   },
   {
    "a": "amperesand",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "KKR has controlled STTGDC (75%), the host of Amperesand's Singapore HVDC testbed and one of its named SST pilots, since 2 September 2026.",
+     "context": "STT GDC's January 2026 release names Amperesand as a supporter of its FutureGrid Accelerator HVDC testbed, and Amperesand's chief executive named STT GDC among its pilots in July 2026. A KKR-led consortium with Singtel completed the purchase of STTGDC on 2 September 2026, leaving KKR with 75%. The link runs through STTGDC; KKR itself has no Amperesand contract.",
+     "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+     "status": "active",
+     "since": "2026-09",
+     "via": "STTGDC"
+    },
+    "b": {
+     "type": "other",
+     "note": "Amperesand supports STT GDC's HVDC testbed in Singapore and names STT GDC among its solid-state-transformer pilots; STTGDC has been 75% KKR-owned since 2 September 2026.",
+     "context": "STT GDC's 26 January 2026 release describes the FutureGrid Accelerator as 'Southeast Asia's first live HVDC-powered AI infrastructure testbed', 'jointly developed by STT GDC and LITEON, supported by ERI@N and NTU deep-tech spinoff Amperesand', validating at least 325 kW, and says STT GDC 'plans to deploy this technology in future data centres in Singapore'. In a July 2026 interview Amperesand's chief executive named STT GDC among its pilots. The testbed predates KKR's control, and no purchase order has been announced; the link runs through STTGDC, not KKR.",
+     "source": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+     "status": "active",
+     "since": "2026-01",
+     "via": "STTGDC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In data centres: STTGDC in Singapore (75%, completed 2 September 2026; it runs an HVDC testbed with LITEON and the solid-state-transformer start-up Amperesand), CyrusOne (co-owned with BlackRock's GIP since 2022), and Helix Digital Infrastructure, a KKR-sponsored data-centre and power company launched on 11 June 2026 with more than USD 10bn of commitments from founding investors including NVIDIA and Vistra.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: STT GDC's own January 2026 release describes a live HVDC testbed built with LITEON and supported by Amperesand, and says STT GDC 'plans to deploy this technology in future data centres in Singapore'; Amperesand names STT GDC among its solid-state-transformer pilots.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-26",
+     "text": "STT GDC launches an HVDC testbed in Singapore with LITEON, ERI@N and Amperesand, and says it plans to deploy the technology in future data centres — Launched before KKR took control, but it is now a KKR-controlled platform with a live DC-distribution programme and a solid-state-transformer vendor in its pilot — the closest any KKR platform comes to an SST purchase.",
+     "src": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09"
+  },
+  {
+   "a": "amperesand",
    "b": "liteon",
    "curated": {
     "a": {
@@ -8429,6 +8624,47 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "aon",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Aon agreed on 31 August 2026 to buy USI from KKR and other shareholders; signed, not closed.",
+     "context": "Aon's release announces a definitive agreement to acquire USI 'from KKR and other shareholders for a total purchase price of $17.0 billion', with closing expected in the fourth quarter of 2026. KKR's 25 September update expects about USD 3.3bn of after-tax proceeds. A transaction counterparty rather than a commercial relationship, hence 'other'.",
+     "source": "https://aon.mediaroom.com/2026-08-31-Aon-to-acquire-USI",
+     "status": "announced",
+     "since": "2026-08",
+     "scale": "USD 17.0bn"
+    },
+    "b": {
+     "type": "other",
+     "note": "Aon agreed on 31 August 2026 to buy USI, the insurance broker, from KKR and other shareholders for USD 17.0bn.",
+     "context": "Aon's release announces 'a definitive agreement to acquire USI from KKR and other shareholders for a total purchase price of $17.0 billion', with closing expected in Q4 2026; Aon priced bonds to fund it in September. KKR's 25 September update expects about USD 3.3bn of after-tax proceeds. The deal is signed, not closed, and is outside the AIDC corpus.",
+     "source": "https://aon.mediaroom.com/2026-08-31-Aon-to-acquire-USI-to-establish-the-premier-U-S-middle-market-platform",
+     "status": "announced",
+     "since": "2026-08",
+     "scale": "USD 17.0bn"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · NFP, and the USI acquisition — the middle market",
+     "date": "",
+     "text": "from KKR and other shareholders for USD 17.0bn in cash — the largest acquisition in its history, agreed thirteen days after its chief financial officer left.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Private equity, credit, capital markets and Strategic Holdings",
+     "date": "",
+     "text": "Strategic Holdings agreed on 31 August 2026 to sell USI, the insurance broker, to Aon for USD 17.0bn.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08"
   },
   {
    "a": "aon",
@@ -11634,6 +11870,1546 @@
    "last": "2025-10-23"
   },
   {
+   "a": "blackrock",
+   "b": "blackstone",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A different firm that is routinely confused with BlackRock; eighth in Infrastructure Investor's 2026 ranking against BlackRock's first.",
+     "context": "Blackstone owns QTS and lends to Aligned, which BlackRock's GIP co-owns. Both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters. Infrastructure Investor's 2026 ranking puts BlackRock first at USD 113,365m of five-year infrastructure fundraising and Blackstone eighth.",
+     "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A competitor for infrastructure capital and platforms; first in Infrastructure Investor's 2026 five-year fundraising ranking.",
+     "context": "BlackRock ranks first in Infrastructure Investor's 2026 five-year fundraising table at USD 113.4bn against Blackstone's eighth; BlackRock's GIP co-owns Aligned, to which Blackstone Credit lends. The two names are routinely confused.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn — MOUs, not definitive agreements: NVIDIA's release says 'These partnerships remain subject to execution of the final agreements' and gives no per-firm allocation. Fink tied it to AIP ('including through the AI Infrastructure Partnership').",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee Ranking Member Warren writes to Larry Fink about BlackRock's data-centre ownership and electricity costs — Parallel letters went to KKR, Blackstone and Brookfield. The letter asks who controls each data-centre holding and how decisions are made, with a reply due 27 June. No BlackRock response was found.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_blackrock.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition puts it at USD 45.7bn of five-year infrastructure fundraising against BlackRock's USD 113.4bn, and BlackRock is first *because of* its Global Infrastructure Partners acquisition — the entity most often confused with Blackstone.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Blackstone Credit & Insurance lends to companies Blackstone does not own — Strata Clean Energy's 2021 facility was credit and the company's own chief financial officer said so; Arevon's Condor financing was preferred equity replacing tax equity at project level; and Blackstone Credit is a lender to Aligned Data Centers, which BlackRock's GIP and MGX own.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Private Equity — including Blackstone Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition, measuring five-year infrastructure capital raised, places Blackstone **eighth at USD 45.7bn** — behind BlackRock (USD 113.4bn), KKR, Brookfield, Macquarie, EQT, Stonepeak and DigitalBridge.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Credit & Insurance (BXCI)",
+     "date": "",
+     "text": "BXCI is the vector by which Blackstone appears in dossiers of companies it has no equity in — Strata Clean Energy's 2021 facility was credit, Arevon's Condor financing was preferred equity replacing tax equity, and Blackstone Credit is a lender to Aligned Data Centers, a platform BlackRock's GIP owns.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure — Blackstone is one of six firms — with Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — and no per-firm allocation is published, so this is a memorandum of understanding rather than a committed sum.",
+     "src": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Blackstone, BlackRock, KKR and Brookfield Infrastructure over data-centre ownership and rising electricity prices — The letter's 'footprint in both energy supply and demand' framing lands on Blackstone more squarely than on any other addressee, because it owns QTS on the demand side and Potomac Energy Center, Invenergy and VoltaGrid on the supply side.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "blackrock",
+   "b": "brookfield",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Third in Infrastructure Investor's 2026 ranking (USD 99,112m), behind BlackRock and KKR.",
+     "context": "Brookfield competes with GIP for utility, data-centre and renewables platforms, and was among the reported suitors for STACK's Asia-Pacific portfolio in June 2026. Both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters.",
+     "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A competitor for infrastructure capital and platforms; first in Infrastructure Investor's 2026 five-year fundraising ranking.",
+     "context": "BlackRock ranks first in Infrastructure Investor's 2026 table at USD 113.4bn, ahead of KKR and Brookfield; both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Global Infrastructure Partners (GIP) — infrastructure equity",
+     "date": "",
+     "text": "The distinguishing feature against Brookfield and KKR is the pairing: the same parent runs the largest index-fund business and a controlling infrastructure business, which is exactly what the July 2026 FERC protest attacks.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn — MOUs, not definitive agreements: NVIDIA's release says 'These partnerships remain subject to execution of the final agreements' and gives no per-firm allocation. Fink tied it to AIP ('including through the AI Infrastructure Partnership').",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee Ranking Member Warren writes to Larry Fink about BlackRock's data-centre ownership and electricity costs — Parallel letters went to KKR, Blackstone and Brookfield. The letter asks who controls each data-centre holding and how decisions are made, with a reply due 27 June. No BlackRock response was found.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_blackrock.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition ranks Brookfield **third at USD 99.1bn** of five-year infrastructure fundraising, behind BlackRock (USD 113.4bn) and KKR (USD 100.5bn) and ahead of Macquarie (USD 87.9bn) and Blackstone (USD 45.7bn).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Brookfield Infrastructure, alongside Blackstone, BlackRock and KKR, on data-centre ownership and electricity prices — Brookfield is exposed to the 'supply and demand' framing through the same franchise: it owns generation through Brookfield Renewable and data-centre demand through Compass, Data4 and Csquare.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "blackrock",
+   "b": "canadian-solar",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Three-arm structure: CSI Solar (China-listed manufacturing subsidiary), e-STORAGE (utility-scale BESS design, manufacture and integration; >20 GWh shipped cumulatively; 15 GWh/yr system plus 3 GWh/yr cell capacity company-claimed), and majority-owned developer Recurrent Energy (84.1 GWh storage development pipeline at 30 June 2026, a captive channel and reference engine; BlackRock holds Series A convertible preferred representing 20% of Recurrent on an as-converted basis, so it is no longer wholly owned).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess e-STORAGE as the most instructive direct comparison for any Chinese containerized-BESS supplier attacking the US: it is what the FEOC-adaptation playbook looks like executed early and at scale — Western listing and governance, a domestic cell plant announced before the rules bit, a corporate restructuring (CS PowerTech, 75.1% parent-held) designed to clear foreign-entity ownership tests, and a captive developer (Recurrent, majority- not wholly-owned since BlackRock took a 20% as-converted preferred stake in 2024) that manufactures its own demand.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Recurrent Energy (captive developer/owner-operator)",
+     "date": "",
+     "text": "BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% of Recurrent Energy B.V.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackrock",
+   "b": "clearway-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "GIP co-owns Clearway Energy Group, the sponsor that controls the listed Clearway Energy, Inc.; BlackRock Portfolio Management files the 13D for the GIP entities.",
+     "context": "Clearway Energy Group's own page says it 'is owned by Global Infrastructure Partners and TotalEnergies'. BlackRock Portfolio Management LLC's Schedule 13D/A No. 3 of May 2026 reports 85,181,445 shares of Clearway Energy, Inc., 41.5% on an as-exchanged basis, beneficially owned through GIP and Clearway Energy Group; the April 13D/A No. 2 put the same holding at 49.9% of Class C. That filing is a 13D, the control filing, where BlackRock's index holdings elsewhere are filed on the passive 13G. Clearway Energy Group develops wind, solar and storage and offers assets down to the listed company.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926054174/primary_doc.xml",
+     "status": "active",
+     "since": "2018",
+     "via": "Clearway Energy Group (GIP 50%, TotalEnergies 50%)"
+    },
+    "b": {
+     "type": "investor",
+     "note": "BlackRock owns Global Infrastructure Partners, which co-owns Clearway Energy Group 50/50 with TotalEnergies; BlackRock Portfolio Management files the 13D for the GIP entities.",
+     "context": "Clearway's 2026 proxy states that GIP and TotalEnergies each own 50% of Clearway Energy Group, and BlackRock Portfolio Management LLC's Schedule 13D/A of May 2026 reports 85,181,445 shares, 41.5% on an as-exchanged basis, on behalf of the GIP entities. The earlier 13D/A No. 2 put the same shares at 49.9% of Class C. That is a 13D, the control filing; BlackRock's index-fund holdings elsewhere are filed on the passive 13G.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926054174/primary_doc.xml",
+     "status": "active",
+     "since": "2018",
+     "via": "Global Infrastructure Partners (50% of Clearway Energy Group)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "places no equipment orders; the GIP-branded funds it manages own or co-own two of the largest US data-centre landlords (Aligned, CyrusOne), a new data-centre developer (Coravel), a regulated Minnesota utility (ALLETE), a renewables-and-storage sponsor (Clearway Energy Group), merchant battery owners (Eolian and Jupiter Power; Akaysha in Australia per trade press) and, if the deal closes, AES.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The GIP-branded funds it manages own or co-own Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power, and would add AES on closing, and each of those signs its own purchase orders.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "And it is not the same company as Clearway Energy Group, the private sponsor owned 50/50 by Global Infrastructure Partners (now part of BlackRock) and TotalEnergies, which does the development, employs the staff and offers assets down to CWEN for its independent directors to approve.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-24",
+     "text": "2026 proxy states plainly that Global Infrastructure Partners and TotalEnergies each own 50% of Clearway Energy Group through intermediate holding companies — The sponsor chain in the company's own words. BlackRock's absorption of GIP changed the filer name, not the chain or the percentages.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1567683/000110465926033918/tm261444-3_def14a.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-24"
+  },
+  {
+   "a": "blackrock",
+   "b": "cyrusone",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Co-owned with KKR since the March 2022 take-private; GIP's Will Brilliant sits on CyrusOne's board.",
+     "context": "GIP's release of 25 March 2022 records the completion of CyrusOne's acquisition 'by funds managed by KKR … and Global Infrastructure Partners' for about USD 15bn including assumed debt. Four years on the sponsors still speak jointly: CyrusOne's 30 July 2026 release naming John Hatem chief executive quotes 'Waldemar Szlezak, Partner at KKR, and Will Brilliant, Partner at Global Infrastructure Partners', and GIP's portfolio page still lists CyrusOne as unrealised.\n\nThe ownership split is widely reported as 50:50 but is stated in no first-party source read for this dossier. Reuters reported on 10 August 2026 that the owners are preparing an IPO as early as 2027; that is a plan reported by unnamed sources, not a filing. The flagged conflict — whether GIP still holds CyrusOne — is settled: it does.",
+     "source": "https://www.cyrusone.com/resources/press-releases/cyrusone-names-john-hatem-chief-executive-officer-to-accelerate-its-global-digital-infrastructure-strategy",
+     "status": "active",
+     "since": "2022-03",
+     "scale": "~USD 15bn including assumed debt (2022)",
+     "via": "Global Infrastructure Partners"
+    },
+    "b": {
+     "type": "investor",
+     "note": "BlackRock owns Global Infrastructure Partners, which co-owns CyrusOne with KKR; GIP partner Will Brilliant sits on CyrusOne's board.",
+     "context": "GIP took CyrusOne private with KKR in March 2022 and became part of BlackRock on 1 October 2024; GIP's portfolio page still lists CyrusOne as unrealised, and GIP's Will Brilliant was quoted with KKR's Waldemar Szlezak on the July 2026 chief-executive change. The owner is funds managed by GIP rather than BlackRock's own balance sheet. The flagged question of whether GIP still holds its stake is settled by those 2026 statements: it does. The split with KKR is not stated first-party.",
+     "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/",
+     "status": "active",
+     "since": "2022-03",
+     "via": "Global Infrastructure Partners"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "places no equipment orders; the GIP-branded funds it manages own or co-own two of the largest US data-centre landlords (Aligned, CyrusOne), a new data-centre developer (Coravel), a regulated Minnesota utility (ALLETE), a renewables-and-storage sponsor (Clearway Energy Group), merchant battery owners (Eolian and Jupiter Power; Akaysha in Australia per trade press) and, if the deal closes, AES.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The GIP-branded funds it manages own or co-own Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power, and would add AES on closing, and each of those signs its own purchase orders.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Aligned is jointly controlled with MGX, CyrusOne co-owned with KKR, Coravel a 50:50 venture with ACS, ALLETE's governance shared equally with CPP Investments, and at El Paso Meta runs construction and property management despite BlackRock funds' 80%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** AIP's legal form, manager and members' commitments; the Aligned equity split between AIP, MGX and GIP (the USD 21bn equity cheque is trade press only); the CyrusOne split with KKR (widely called 50:50, stated by no first-party source); which GIP fund now holds Jupiter Power, Akaysha and Eolian; whether the Meta El Paso venture has closed; the FERC order in EC26-99.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*CyrusOne IPO filing (as early as 2027, reported):* the first public disclosure of the KKR–GIP split.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Ownership is unchanged since 2022 — KKR and GIP, the latter part of BlackRock since October 2024 — with one platform-level joint venture, a 50:50 vehicle with Kansai Electric Power targeting 900 MW in Japan.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Reuters reports KKR and Global Infrastructure Partners are preparing an initial public offering as early as 2027, potentially raising about USD 5 billion, with Goldman Sachs and Morgan Stanley pitching for roles — The first exit signal since the 2022 take-private, and it is unconfirmed: BlackRock, KKR, Goldman, Morgan Stanley all declined to comment and CyrusOne had no comment. Treat as single-source reporting. It landed eleven days after the chief executive changed and eight months after the CME outage; no source connects those facts and this dossier does not.",
+     "src": "https://finance.yahoo.com/markets/stocks/articles/data-center-operator-cyrusone-plans-100520897.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-30",
+     "text": "Calpine and CyrusOne announce a 190 MW hyperscale development at the Thad Hill Energy Center, Bosque County — a USD 1.2 billion infrastructure investment described as the first US data centre co-located with an existing energy source — The template the Freestone deal then repeated at twice the scale. The boilerplate on this release is also the clearest ownership statement the company has published: 'backed by leading investment firms Global Infrastructure Partners (GIP), a part of BlackRock, and KKR'.",
+     "src": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "blackrock",
+   "b": "edgecore",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "GIP is a lead lender, with Apterra and ING, on EdgeCore's USD 1.5bn construction financing for two leased Sterling, Virginia data centres.",
+     "context": "EdgeCore's 21 April 2026 release: the USD 1.5bn financing for sites AS01 and AS02 (114 MW) was 'led by … Apterra Infrastructure Capital, LLC; Global Infrastructure Partners (GIP), a part of BlackRock; and ING Capital LLC'. GIP is a lender here, not an owner.",
+     "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia",
+     "status": "active",
+     "since": "2026-04",
+     "scale": "USD 1.5bn construction debt (with Apterra and ING)"
+    },
+    "b": {
+     "type": "other",
+     "note": "BlackRock's Global Infrastructure Partners is a lead lender, with Apterra and ING, on EdgeCore's USD 1.5bn Sterling construction financing.",
+     "context": "EdgeCore's 21 April 2026 release names 'Global Infrastructure Partners (GIP), a part of BlackRock' among the three lenders on two senior secured term loans for AS01 and AS02 (114 MW). GIP is a lender here, not an owner.",
+     "source": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia",
+     "status": "active",
+     "since": "2026-04",
+     "scale": "USD 1.5bn construction debt (with Apterra and ING)",
+     "via": "Global Infrastructure Partners"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Project-level green financing and sponsor equity",
+     "date": "",
+     "text": "2026: 'USD 1.5 billion' for Sterling AS01/AS02 (Apterra Infrastructure Capital, Global Infrastructure Partners/BlackRock, ING).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-21",
+     "text": "USD 1.5 billion of construction financing for the two fully leased Sterling data centers (114 MW, 685,000 sq ft): two senior secured limited-recourse term loans from Apterra, Global Infrastructure Partners (BlackRock) and ING; occupancy November 2026 and July 2027 — GIP as a lender rather than an owner shows where the infrastructure funds sit in EdgeCore's stack; the release also restates '1.8 gigawatts' and '1.4 GWs under development in Northern and Central Virginia'.",
+     "src": "https://edgecore.com/resources/press-releases/edgecore-digital-infrastructure-secures-1-5-billion-of-construction-financing-for-two-fully-leased-hyperscale-data-centers-in-northern-virginia",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-21"
+  },
+  {
+   "a": "blackrock",
+   "b": "eolian",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "'A portfolio company of Global Infrastructure Partners (GIP), part of BlackRock', owning its battery projects outright.",
+     "context": "Eolian's homepage describes it as 'a portfolio company of Global Infrastructure Partners (GIP), part of BlackRock' that 'operates a growing portfolio of wholly-owned utility-scale battery energy storage projects', and a July 2024 financing release says it is owned by its employees and by funds managed by GIP. GIP launched it by buying MAP Energy's renewables business in December 2020. Which GIP fund holds it and at what share is not stated. Eolian is a buyer of batteries and power conversion in its own right.",
+     "source": "https://www.eolianenergy.com/",
+     "status": "active",
+     "via": "Global Infrastructure Partners"
+    },
+    "b": {
+     "type": "investor",
+     "note": "Eolian is 'a portfolio company of Global Infrastructure Partners (GIP), part of BlackRock', alongside employee equity.",
+     "context": "GIP launched Eolian by buying MAP Energy's renewables business in December 2020, and GIP became part of BlackRock on 1 October 2024. Eolian's homepage now describes it in those words and says it operates wholly owned battery storage projects. Which GIP fund holds it and at what share is not stated in any source read on 2026-09-26. BlackRock also owns Jupiter Power through a legacy BlackRock fund.",
+     "source": "https://www.eolianenergy.com/",
+     "status": "active",
+     "since": "2020-12",
+     "via": "Global Infrastructure Partners"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "places no equipment orders; the GIP-branded funds it manages own or co-own two of the largest US data-centre landlords (Aligned, CyrusOne), a new data-centre developer (Coravel), a regulated Minnesota utility (ALLETE), a renewables-and-storage sponsor (Clearway Energy Group), merchant battery owners (Eolian and Jupiter Power; Akaysha in Australia per trade press) and, if the deal closes, AES.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The GIP-branded funds it manages own or co-own Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power, and would add AES on closing, and each of those signs its own purchase orders.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** AIP's legal form, manager and members' commitments; the Aligned equity split between AIP, MGX and GIP (the USD 21bn equity cheque is trade press only); the CyrusOne split with KKR (widely called 50:50, stated by no first-party source); which GIP fund now holds Jupiter Power, Akaysha and Eolian; whether the Meta El Paso venture has closed; the FERC order in EC26-99.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web: Eolian's Padua complex is Tesla's largest Texas showcase; its Oregon builds delivered assets into PGE/NextEra structures; its Prospect Power origination (sold to Swift Current, now Elevate) seeded PJM's largest operating-class BESS in Data Center Alley; and its sibling relationship with Jupiter Power under BlackRock means sponsor-level procurement norms could converge — in the American-built direction Eolian advocates.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the BlackRock sibling dynamic (Eolian + Jupiter under one sponsor since the GIP absorption) as a convergence risk for Hithium's Jupiter account: if sponsor-level procurement norms harmonize, they harmonize toward Eolian's American-built doctrine, not toward Jupiter's quiet-buyer pragmatism.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2020-12"
+  },
+  {
+   "a": "blackrock",
+   "b": "excelsior-energy-capital",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "BlackRock's Evergreen Infrastructure Partners Fund bought Excelsior's 38-project distributed solar and storage portfolio.",
+     "context": "Excelsior's release of 12 March 2024 announces the 'sale of a portfolio of 38 solar energy and solar plus storage projects … to BlackRock's Evergreen Infrastructure Partners Fund' — 89 MWdc of operating assets across six states and a 100% divestment. A December 2023 closing is recorded by trade press and the sell-side adviser, not by the release.",
+     "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/",
+     "status": "historical",
+     "since": "2024-03"
+    },
+    "b": {
+     "type": "other",
+     "note": "BlackRock's Evergreen Infrastructure Partners Fund bought Excelsior's 38-project distributed solar and storage portfolio, Fund I's first exit.",
+     "context": "Excelsior's release of 12 March 2024 announces the sale of 38 operating solar and solar-plus-storage projects (89 MWdc) to BlackRock's Evergreen Infrastructure Partners Fund, a 100% divestment. The price is undisclosed. A buyer of assets rather than a commercial customer, hence 'other'.",
+     "source": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/",
+     "status": "historical",
+     "since": "2024-03"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Legacy climate and diversified infrastructure funds",
+     "date": "",
+     "text": "The Evergreen Infrastructure Partners Fund bought 38 operating solar and storage projects from Excelsior Energy Capital (announced March 2024).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Fund I exits: a 38-project distributed portfolio to BlackRock (December 2023) and an 830 MW operating wind and solar portfolio to Enel for about USD 1 billion (signed February 2026, closing expected in the third quarter of 2026; seller entity Excelsior Renewable Energy Intermediate Fund I LP, per trade press).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Closed-end renewable infrastructure funds (Fund I and Fund II)",
+     "date": "",
+     "text": "A middle-market owner-operator rather than a mega-fund: Fund I and Fund II together are roughly USD 1.5 billion of equity against Brookfield, Blackstone or BlackRock GIP vehicles an order of magnitude larger.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-03-12",
+     "text": "Fund I's first exit: 38 distributed solar and solar-plus-storage projects (89 MWdc, six states) sold to BlackRock's Evergreen Infrastructure Partners Fund; KeyBanc lead sell-side advisor; closed December 2023 — Proof that the distributed book was saleable to a large infrastructure buyer; price undisclosed.",
+     "src": "https://excelsiorcapital.com/news-insights/excelsior-energy-capital-sells-sub-portfolio-of-solar-and-solar-plus-storage-assets-to-blackrock/",
+     "from": "b"
+    }
+   ],
+   "last": "2024-03-12"
+  },
+  {
+   "a": "blackrock",
+   "b": "exelon",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the July 2026 protest asks FERC to force BlackRock to separate its index business from its utility control; PJM's market monitor opposes the deal without behavioural commitments and lists 8–11% passive stakes in Exelon, PSEG, Talen, NextEra, FirstEnergy and NRG; FERC's April 2025 blanket-authorisation order had already recorded 'some concern' about 'a novel degree of influence'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackrock",
+   "b": "fluence",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Fluence supplies Akaysha, an Australian battery developer trade press describes as BlackRock-owned, and AES — whose take-private GIP leads — is Fluence's anchor shareholder.",
+     "context": "Energy-Storage.news reported in July 2024 that Fluence would use its Mosaic software across 3.6 GWh of Akaysha batteries in Australia; Akaysha was bought by BlackRock's Climate Infrastructure business in 2022 per trade press, and its own site does not name its owner. Separately, AES held about 22% of Fluence after May 2026, so if the GIP-led take-private closes, a GIP-controlled company will be Fluence's anchor shareholder. Neither is a direct BlackRock–Fluence contract, so the link is typed 'other'.",
+     "source": "https://www.energy-storage.news/fluence-to-use-mosaic-technology-for-3-6gwh-of-akaysha-bess-in-australia/",
+     "status": "active",
+     "via": "Akaysha Energy; AES"
+    },
+    "b": {
+     "type": "other",
+     "note": "Fluence supplies Akaysha, an Australian battery developer trade press describes as BlackRock-owned, and AES — Fluence's anchor shareholder — is being taken private by a GIP-led consortium.",
+     "context": "Fluence's Mosaic software was chosen for 3.6 GWh of Akaysha batteries in 2024; Akaysha's owner is named by trade press, not by Akaysha. AES held about 22% of Fluence after May 2026, and the GIP- and EQT-led take-private of AES awaits FERC and New York approval. If it closes, GIP-managed vehicles would control AES with 56.625%. No direct BlackRock–Fluence contract exists, hence 'other'.",
+     "source": "https://www.energy-storage.news/fluence-to-use-mosaic-technology-for-3-6gwh-of-akaysha-bess-in-australia/",
+     "status": "active",
+     "via": "Akaysha Energy; AES"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-02",
+     "text": "A GIP- and EQT-led consortium agrees to take AES private at USD 15.00 a share — about USD 10.7bn of equity and USD 33.4bn of enterprise value — The merger agreement was signed on 1 March. After closing, GIP-managed vehicles would control AES, a large US buyer of batteries and generation and an anchor shareholder of Fluence.",
+     "src": "https://www.global-infra.com/news/consortium-led-by-global-infrastructure-partners-and-eqt-agrees-to-acquire-aes/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-02"
+  },
+  {
+   "a": "blackrock",
+   "b": "galaxy-digital",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The Invesco Galaxy Bitcoin ETF holds about USD 516-526m against BlackRock's IBIT at about USD 51.9bn.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Asset Management and Infrastructure Solutions",
+     "date": "",
+     "text": "Named ETF partners include State Street Global Advisors, Invesco, DWS, CI Global Asset Management and Itaú; BlackRock selected Galaxy as an approved validator for its first rewards-generating crypto ETP in April 2026, and Morgan Stanley Investment Management for new Ethereum and Solana ETPs in August 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Asset Management and Infrastructure Solutions",
+     "date": "",
+     "text": "The one ranked comparison located is an editorial list, not an industry league table, and it places Galaxy fifth of five at USD 12bn behind BlackRock (USD 51.9bn in IBIT alone), Grayscale, Bitwise and Fidelity — and that figure is now stale by roughly 40%.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackrock",
+   "b": "ge-vernova",
+   "evid": [
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "Renamed on 19 March 2025, when NVIDIA and xAI joined and GE Vernova and NextEra Energy 'agreed to collaborate with AIP'.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackrock",
+   "b": "google",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-03",
+     "text": "Indiana regulators reopen the AES Indiana rate case, citing Google's Monrovia data centre and the BlackRock-led acquisition — Not a closing condition for the merger, but the first state action to tie a BlackRock-controlled utility's rates to data-centre load.",
+     "src": "https://www.ipm.org/news/2026-09-03/iurc-agrees-to-reconsider-aes-indiana-rate-case-following-google-blackrock-developments",
+     "from": "a"
+    }
+   ],
+   "last": "2026-09-03"
+  },
+  {
+   "a": "blackrock",
+   "b": "intersect-power",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "HPS, now part of BlackRock, was term lender on Intersect's portfolio financings, including the USD 837m Texas battery round of July 2024.",
+     "context": "Intersect's July 2024 release on the USD 837m financing for about 1 GWh of Texas batteries names HPS for construction and term debt, and Intersect's earlier 2021 and 2022 portfolio rounds used HPS as term lender. HPS became part of BlackRock on 1 July 2025, after these loans were made. This is a lending tie, not ownership.",
+     "source": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas",
+     "status": "historical",
+     "since": "2021-11",
+     "via": "HPS Investment Partners"
+    },
+    "b": {
+     "type": "other",
+     "note": "HPS Investment Partners, term lender on Intersect's portfolio financings, has been part of BlackRock since 1 July 2025.",
+     "context": "HPS lent to Intersect's 2021, 2022 and 2024 portfolio rounds, including the USD 837m Texas battery financing of July 2024. BlackRock completed its acquisition of HPS on 1 July 2025, after those loans were made. This is a lending relationship, not ownership.",
+     "source": "https://www.intersect.com/historical-releases/intersect-power-secures-837-million-in-project-financing-to-build-1-gwh-of-battery-energy-storage-systems-bess-in-texas",
+     "status": "historical",
+     "since": "2021-11",
+     "via": "HPS Investment Partners"
+    }
+   },
+   "evid": [],
+   "last": "2021-11"
+  },
+  {
+   "a": "blackrock",
+   "b": "jupiter-power",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "Agreed in November 2022 to be acquired from EnCap by a fund managed by BlackRock's Diversified Infrastructure business.",
+     "context": "The EnCap and Jupiter release of 15 November 2022 says 'BlackRock Alternatives (BlackRock), through a fund managed by its Diversified Infrastructure business, has agreed to acquire Jupiter Power LLC'. No first-party closing notice was found, and Jupiter's 2026 releases, including a USD 1.4bn financing for ten battery projects on 16 September 2026, name no owner. Its homepage, read on 26 September 2026, names none either. BlackRock's infrastructure businesses were combined under the GIP brand in October 2024, but no source states which GIP fund now holds Jupiter. Jupiter is a direct buyer of battery systems.",
+     "source": "https://jupiterpower.io/encap-investments-sells-jupiter-power-to-blackrock/",
+     "status": "active",
+     "since": "2022-11",
+     "via": "BlackRock Diversified Infrastructure fund"
+    },
+    "b": {
+     "type": "investor",
+     "note": "A fund managed by BlackRock's Diversified Infrastructure business agreed to buy Jupiter from EnCap in November 2022.",
+     "context": "The EnCap and Jupiter release says 'BlackRock Alternatives (BlackRock), through a fund managed by its Diversified Infrastructure business, has agreed to acquire Jupiter Power LLC'. BlackRock combined its infrastructure businesses under the Global Infrastructure Partners brand when it bought GIP in October 2024, but no source names the fund that now holds Jupiter. Jupiter's September 2026 USD 1.4bn financing release names no owner.",
+     "source": "https://jupiterpower.io/encap-investments-sells-jupiter-power-to-blackrock/",
+     "status": "active",
+     "since": "2022-11",
+     "via": "BlackRock Diversified Infrastructure fund"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "places no equipment orders; the GIP-branded funds it manages own or co-own two of the largest US data-centre landlords (Aligned, CyrusOne), a new data-centre developer (Coravel), a regulated Minnesota utility (ALLETE), a renewables-and-storage sponsor (Clearway Energy Group), merchant battery owners (Eolian and Jupiter Power; Akaysha in Australia per trade press) and, if the deal closes, AES.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The GIP-branded funds it manages own or co-own Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian and Jupiter Power, and would add AES on closing, and each of those signs its own purchase orders.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Jupiter Power's and Akaysha's 2026 releases do not name their owner; Akaysha was reported in January 2026 to be weighing a minority sale; Vena sold its India unit in August 2026 and GIP is reported (unconfirmed) to be exploring a controlling-stake sale.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** AIP's legal form, manager and members' commitments; the Aligned equity split between AIP, MGX and GIP (the USD 21bn equity cheque is trade press only); the CyrusOne split with KKR (widely called 50:50, stated by no first-party source); which GIP fund now holds Jupiter Power, Akaysha and Eolian; whether the Meta El Paso venture has closed; the FERC order in EC26-99.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Legacy climate and diversified infrastructure funds",
+     "date": "",
+     "text": "A fund of the Diversified Infrastructure business agreed to buy Jupiter Power in November 2022.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Jupiter Power is Hithium's most important disclosed US customer — a BlackRock-owned standalone-storage IPP with ~8,800 MWh operating/under-construction/contracted, a 20 GW / 97 GWh development pipeline across 8 RTOs, and a verified three-layer Hithium relationship: the June 20, 2024 supply agreement for 3 GWh of ∞Block 5 MWh containers (314 Ah cells, delivery by end-2025 — timing that landed the equipment inside the pre-2026 FEOC safe-harbor window); Jupiter's naming in Hithium's HKEX prospectus partner roster (per ess-news coverage); and a confirmed design win at Trimount, Everett MA — the largest planned BESS in New England at 700 MW/2,800 MWh, specified with Hithium 5.015 MWh units (Energy-Storage.News, Mar 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) For the Hithium lens: protect and expand this account through delivery excellence (Trimount), Mesquite-based US assembly where it helps optics, and patience on co-marketing — while recognizing that Jupiter's leadership reshuffle (Nov 2025) and BlackRock/GIP sponsor-level procurement norms (shared with sibling Eolian, a vocal American-built advocate) could tighten the door over time.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2022-11-15",
+     "text": "EnCap sells Jupiter Power to BlackRock (Diversified Infrastructure); 655 MWh operating, ~11 GW pipeline at close; value undisclosed — The capital platform behind the buildout — and, post the 2024 GIP absorption, the reason Jupiter and Eolian are now sponsor siblings.",
+     "src": "BusinessWire / ESN",
+     "from": "b"
+    }
+   ],
+   "last": "2022-11-15"
+  },
+  {
+   "a": "blackrock",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-owner of CyrusOne with GIP since 2022, and BlackRock's nearest rival in infrastructure fundraising (second to BlackRock in Infrastructure Investor's 2026 ranking).",
+     "context": "The two firms share one platform and compete for the next. They jointly own CyrusOne; both signed NVIDIA's compute-financing memoranda on 10 August 2026; both received Senator Warren's June 2026 letters. Infrastructure Investor's 2026 ranking puts BlackRock first at USD 113,365m and KKR second at USD 100,475m. In June 2026 Bloomberg reported KKR among the suitors for STACK's Asia-Pacific portfolio, for which an AIP-led group was reported in exclusive talks in September.",
+     "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/",
+     "status": "active",
+     "since": "2022-03",
+     "via": "CyrusOne"
+    },
+    "b": {
+     "type": "partner",
+     "note": "BlackRock's GIP co-owns CyrusOne with KKR; the two are also first and second in Infrastructure Investor's 2026 fundraising ranking.",
+     "context": "The two firms share CyrusOne and compete for most other platforms. Infrastructure Investor's 2026 ranking puts BlackRock first at USD 113,365m and KKR second at USD 100,475m. Both signed NVIDIA's compute-financing memoranda on 10 August 2026 and both received Senator Warren's June 2026 letters. For STACK's Asia-Pacific portfolio, Bloomberg named KKR among the suitors in June; in September it reported an AIP- and IFM-backed group — AIP being the BlackRock-chaired partnership — in an exclusive window.",
+     "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/",
+     "status": "active",
+     "since": "2022-03",
+     "via": "CyrusOne"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 ranking puts it first at USD 113.4bn of five-year fundraising, USD 12.9bn ahead of KKR, counting funds closed in 2021–2025 — a window in which the GIP team BlackRock bought in October 2024 closed GIP V alone at USD 25.2bn.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Aligned is jointly controlled with MGX, CyrusOne co-owned with KKR, Coravel a 50:50 venture with ACS, ALLETE's governance shared equally with CPP Investments, and at El Paso Meta runs construction and property management despite BlackRock funds' 80%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** AIP's legal form, manager and members' commitments; the Aligned equity split between AIP, MGX and GIP (the USD 21bn equity cheque is trade press only); the CyrusOne split with KKR (widely called 50:50, stated by no first-party source); which GIP fund now holds Jupiter Power, Akaysha and Eolian; whether the Meta El Paso venture has closed; the FERC order in EC26-99.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*CyrusOne IPO filing (as early as 2027, reported):* the first public disclosure of the KKR–GIP split.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Global Infrastructure Partners (GIP) — infrastructure equity",
+     "date": "",
+     "text": "The distinguishing feature against Brookfield and KKR is the pairing: the same parent runs the largest index-fund business and a controlling infrastructure business, which is exactly what the July 2026 FERC protest attacks.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn — MOUs, not definitive agreements: NVIDIA's release says 'These partnerships remain subject to execution of the final agreements' and gives no per-firm allocation. Fink tied it to AIP ('including through the AI Infrastructure Partnership').",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee Ranking Member Warren writes to Larry Fink about BlackRock's data-centre ownership and electricity costs — Parallel letters went to KKR, Blackstone and Brookfield. The letter asks who controls each data-centre holding and how decisions are made, with a reply due 27 June. No BlackRock response was found.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_blackrock.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In data centres: STTGDC in Singapore (75%, completed 2 September 2026; it runs an HVDC testbed with LITEON and the solid-state-transformer start-up Amperesand), CyrusOne (co-owned with BlackRock's GIP since 2022), and Helix Digital Infrastructure, a KKR-sponsored data-centre and power company launched on 11 June 2026 with more than USD 10bn of commitments from founding investors including NVIDIA and Vistra.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 ranking places KKR second in five-year infrastructure fundraising at USD 100.5bn, behind BlackRock.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs compute-financing memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilise over USD 500bn — MOUs 'subject to execution of the final agreements'. KKR's statement calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR's co-CEOs about data-centre ownership and electricity costs — One of four letters (with BlackRock, Blackstone and Brookfield). It cites 'KKR's and GIP's $15 billion acquisition of CyrusOne' and asks who controls each holding. No KKR response was found.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "blackrock",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Fourth in Infrastructure Investor's 2026 ranking (USD 87,887m), and the seller of Aligned to the AIP, MGX and GIP consortium.",
+     "context": "Macquarie Asset Management's funds sold 100% of Aligned to AIP, MGX and GIP, closing on 21 July 2026 at about USD 40bn of enterprise value. The two firms otherwise compete for the same infrastructure platforms and investors.",
+     "source": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A competitor for infrastructure capital and platforms; first in Infrastructure Investor's 2026 five-year fundraising ranking.",
+     "context": "BlackRock ranks first in Infrastructure Investor's 2026 table, ahead of Macquarie in fourth; BlackRock's GIP, with AIP and MGX, bought Aligned from Macquarie-managed funds in July 2026.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "AIP, MGX and GIP complete the acquisition of 100% of Aligned Data Centers from Macquarie-managed funds at about USD 40bn enterprise value — AIP's first investment and the largest data-centre transaction on record. Control sits with GIP's managing entity and MGX per the European Commission.",
+     "src": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its two largest data-centre positions have both been exited — AirTrunk to Blackstone in 2024 and Aligned to a BlackRock/MGX consortium in 2026 — and its live appearances in other dossiers are Fluidstack's GPU-secured facility, Fermi America's senior loan, Applied Digital's preferred equity and Trina Storage's tax-equity partnership.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition puts Macquarie Asset Management fourth at USD 87.9bn of five-year capital raised, behind BlackRock, KKR and Brookfield; IPE Real Assets' table for the prior year puts it first by assets under management.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Macquarie Asset Management (MAM)",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition ranks Macquarie Asset Management **fourth at USD 87.9bn** of five-year infrastructure capital raised, behind BlackRock, KKR and Brookfield — while IPE Real Assets' table for the prior year ranks it **first by assets under management**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-19",
+     "text": "European Commission clears the Aligned acquisition under Article 6(1)(b) — Case M.12259, GIM / MGX / Aligned — The clearance names only two acquirers of joint control, BlackRock's Global Infrastructure Management and MGX, and does not mention Macquarie at all — so the regulatory record cannot corroborate the seller's identity.",
+     "src": "https://ec.europa.eu/competition/mergers/cases1/202604/M_12259_10869557_118_3.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and BlackRock's GIP agree to acquire all equity in Aligned Data Centers from funds managed by Macquarie Asset Management — Announced with guidance to close in the first half of 2026; it closed on 21 July 2026, and no source explains the slip.",
+     "src": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-21"
+  },
+  {
+   "a": "blackrock",
+   "b": "marsh-mclennan",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Reported as technical adviser to the BlackRock funds on the El Paso data-centre venture while advising Meta on the other side.",
+     "context": "Insurance Business reported on 31 July 2026 that Marsh provided project risk analysis and insurance services to Meta on the El Paso campus and acted as technical adviser to the BlackRock funds. Neither BlackRock nor Marsh has confirmed the mandate in a release, so it is carried as reported.",
+     "source": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx",
+     "status": "active",
+     "since": "2026-07"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Reported: Marsh is technical adviser to the BlackRock funds on the El Paso data-centre venture while advising Meta on the other side.",
+     "context": "Insurance Business reported on 31 July 2026 that Marsh provided project risk analysis and insurance services to Meta and acted as technical adviser to the BlackRock funds on the roughly USD 14bn El Paso campus. Neither party has confirmed the mandate in a release.",
+     "source": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx",
+     "status": "active",
+     "since": "2026-07"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its incumbency in the market this corpus covers is real but unevenly evidenced: independent sources name it repeatedly and specifically in AI data-centre risk — the Nimbus construction facility at USD 2.7bn, the Nimbus Casualty tower, the Stratus property exchange targeting USD 10bn on a single placement, and advisory roles on both sides of the USD 14bn Meta/BlackRock El Paso campus — while its battery-storage credentials appear only on its own website.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: independent trade press names this company repeatedly and specifically in AI-infrastructure risk — Nimbus at USD 2.7bn, Nimbus Casualty at USD 75m excess of USD 25m, Stratus targeting USD 10bn on a single placement, a dedicated Global Digital Infrastructure Contract Advisory Group established in January 2026, advisory roles on both sides of the USD 14bn Meta and BlackRock El Paso campus, and a Business Insurance award for a USD 2bn advanced-reactor placement.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Marsh People and Investments, and Marsh Management Consulting",
+     "date": "",
+     "text": "For this corpus the consulting arm matters mainly as the source of the company's published research on data-centre power economics and as the reason a broker can be engaged as technical advisor on a financing rather than only as a placement agent — the role it took for the BlackRock funds on the El Paso campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-31",
+     "text": "Marsh reported as advising both sides of the approximately USD 14bn Meta and BlackRock El Paso data-centre campus — project risk analysis and insurance services for Meta, and technical advisor to the BlackRock funds — Simultaneously the strongest evidence of incumbency in AI-infrastructure risk and an independently flagged governance question. The deal is 80 percent BlackRock funds and 20 percent Meta, about 1 GW of compute, with a USD 12.5bn debt package and a Meta residual-value guarantee of about USD 13bn.",
+     "src": "https://www.insurancebusinessmag.com/us/news/technology/14-billion-el-paso-data-center-puts-marsh-on-both-sides-of-the-table-584424.aspx",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-31"
+  },
+  {
+   "a": "blackrock",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Partner in the El Paso data-centre venture announced 28 July 2026, in which funds managed by BlackRock will own 80%.",
+     "context": "Meta's announcement: 'Funds managed by BlackRock will own an 80% interest' and Meta the remaining 20% in a roughly USD 14bn, 1 GW campus. Meta contributes about USD 2.3bn of assets, BlackRock about USD 4.9bn in cash, and a USD 12.5bn debt financing funds part of BlackRock's share. Meta provides construction management, administrative and property management services, is the sole tenant on a four-year lease extendable to twenty years, and gives a residual value guarantee of about USD 13bn.\n\nMeta's Q2 10-Q, filed two days later, describes an 'exclusivity agreement … subject to the execution of definitive agreements'. El Paso Matters reports about USD 12.3bn of bonds sold by an issuer named Sopaipilla Investor, but no first-party closing notice was found, so the link stays 'announced'.",
+     "source": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "~USD 14bn; 1 GW; 80% BlackRock funds / 20% Meta"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Funds managed by BlackRock are to own 80% of the El Paso data-centre venture Meta announced on 28 July 2026; Meta keeps 20%, runs construction and is the sole tenant.",
+     "context": "Meta's announcement gives BlackRock funds 80%, about USD 4.9bn of BlackRock cash against about USD 2.3bn of Meta assets, a USD 12.5bn debt financing, and a Meta residual value guarantee of about USD 13bn. Meta's Q2 10-Q describes the arrangement as an exclusivity agreement subject to definitive agreements, and no first-party closing notice was found by 26 September 2026, so the link is recorded as 'announced'.",
+     "source": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "~USD 14bn; 1 GW; 80% BlackRock funds / 20% Meta"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Aligned is jointly controlled with MGX, CyrusOne co-owned with KKR, Coravel a 50:50 venture with ACS, ALLETE's governance shared equally with CPP Investments, and at El Paso Meta runs construction and property management despite BlackRock funds' 80%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** AIP's legal form, manager and members' commitments; the Aligned equity split between AIP, MGX and GIP (the USD 21bn equity cheque is trade press only); the CyrusOne split with KKR (widely called 50:50, stated by no first-party source); which GIP fund now holds Jupiter Power, Akaysha and Eolian; whether the Meta El Paso venture has closed; the FERC order in EC26-99.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Meta El Paso data-centre venture",
+     "date": "",
+     "text": "A roughly USD 14bn, 1 GW data-centre campus in El Paso announced by Meta on 28 July 2026, in which 'funds managed by BlackRock will own an 80% interest' and Meta 20%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Meta is running the steepest AI-infrastructure escalation of any hyperscaler — capex guidance of $130–145B for 2026 (vs $39B actual in 2024), multi-gigawatt named campuses (Hyperion at 5 GW/$50B+, Prometheus ~1 GW, El Paso ~1 GW), and up to 6.6 GW of contracted nuclear — funded off-balance-sheet through JVs with Blue Owl and BlackRock while free cash flow collapsed to under $1B a quarter; it is the only member of the big four with no external cloud/AI revenue line to absorb the spend.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess the SPV/JV financing model (Blue Owl, BlackRock — ~$41B of announced development cost moved off-balance-sheet) is now core strategy: it preserves reported capex optics and credit capacity while transferring residual-value risk to private capital; expect it on every subsequent gigawatt campus.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure & Superclusters",
+     "date": "",
+     "text": "Financing model: SPV/JV structures — Blue Owl (Hyperion: ~$27B, 80/20, $26B PIMCO debt) and BlackRock (El Paso: ~$14B, 80/20) — moving the build off Meta's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-28",
+     "text": "BlackRock JV for the ~1 GW El Paso campus (~$14B, 80/20, $12.5B debt; Meta receives ~$1B distribution) — The Blue Owl playbook repeated — Meta is industrializing off-balance-sheet AI-campus finance, keeping guidance-capex lower than economic capex.",
+     "src": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-28"
+  },
+  {
+   "a": "blackrock",
+   "b": "mgx",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-founder of AIP with BlackRock, GIP and Microsoft, and co-acquirer of joint control of Aligned with GIP's managing entity.",
+     "context": "The 17 September 2024 launch release announced the Global AI Infrastructure Investment Partnership by BlackRock, GIP, Microsoft and MGX, seeking 'to unlock $30 billion of private equity capital' and 'up to $100 billion in total investment potential when including debt financing'. MGX's chief executive is AIP's vice chairman and Larry Fink its chairman. In the Aligned deal MGX is both inside AIP and a direct co-buyer, and the European Commission names MGX Fund Management Limited and GIP's managing entity as the two parties acquiring joint control.",
+     "source": "https://www.global-infra.com/news/global-infrastructure-partners-blackrock-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/",
+     "status": "active",
+     "since": "2024-09",
+     "via": "AI Infrastructure Partnership (AIP)"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Co-founder with MGX, GIP and Microsoft of the AI Infrastructure Partnership, which Larry Fink chairs, and co-acquirer of joint control of Aligned through GIP's managing entity.",
+     "context": "BlackRock and its Global Infrastructure Partners launched the partnership with Microsoft and MGX on 17 September 2024. The European Commission's Aligned decision names GIP's Global Infrastructure Management, LLC and MGX Fund Management Limited as the two parties acquiring joint control. BlackRock's own releases call Fink AIP's chairman and MGX's chief executive its vice chairman. The BlackRock dossier (2026-09-26) found no first-party statement of AIP's legal form or of any member's commitment.",
+     "source": "https://www.mgx.ae/news-insights/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership",
+     "status": "active",
+     "since": "2024-09",
+     "via": "AI Infrastructure Partnership (AIP)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** BlackRock signs for no battery, switchgear or turbine itself, but since it bought Global Infrastructure Partners (GIP) on 1 October 2024 the infrastructure funds it manages own or co-own a long list of this ecosystem's equipment buyers: Aligned Data Centers (with MGX, closed 21 July 2026), CyrusOne (with KKR), the Coravel data-centre venture (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), and the battery owners Eolian and Jupiter Power.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the European Commission's decision on Aligned names Global Infrastructure Management, LLC and MGX Fund Management Limited as the acquirers of joint control, and AIP is not a notifying party; no first-party source gives AIP's legal form, manager or members' commitments.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Aligned is jointly controlled with MGX, CyrusOne co-owned with KKR, Coravel a 50:50 venture with ACS, ALLETE's governance shared equally with CPP Investments, and at El Paso Meta runs construction and property management despite BlackRock funds' 80%.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** AIP's legal form, manager and members' commitments; the Aligned equity split between AIP, MGX and GIP (the USD 21bn equity cheque is trade press only); the CyrusOne split with KKR (widely called 50:50, stated by no first-party source); which GIP fund now holds Jupiter Power, Akaysha and Eolian; whether the Meta El Paso venture has closed; the FERC order in EC26-99.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "A capital partnership launched on 17 September 2024 as the Global AI Infrastructure Investment Partnership by BlackRock, GIP, Microsoft and MGX, seeking 'to unlock $30 billion of private equity capital' and 'up to $100 billion in total investment potential when including debt financing' for data centres and the power to run them, chiefly in the United States.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "Larry Fink is AIP's chairman and MGX's chief executive its vice chairman.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "AIP's distinguishing feature is its membership: the demand side (Microsoft, NVIDIA, xAI) sits beside sovereign money (MGX, KIA, Temasek) and an infrastructure manager (GIP).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "The one regulator to rule on its deal named GIP's managing entity and MGX, not AIP, as the acquirers of control.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "AIP, MGX and GIP complete the acquisition of 100% of Aligned Data Centers from Macquarie-managed funds at about USD 40bn enterprise value — AIP's first investment and the largest data-centre transaction on record. Control sits with GIP's managing entity and MGX per the European Commission.",
+     "src": "https://aligneddc.com/press-release/aip-mgx-and-blackrocks-gip-close-acquisition-of-aligned-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and GIP agree to acquire all equity in Aligned Data Centers (50 campuses, more than 5 GW at signing) — The announcement named AIP's founders as BlackRock, GIP, MGX, Microsoft and NVIDIA, and Fink as AIP's chairman.",
+     "src": "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: MGX is Abu Dhabi's state-backed AI investment vehicle — created in March 2024 by the Artificial Intelligence and Advanced Technology Council with Mubadala and G42 as 'foundational partners', chaired by Sheikh Tahnoon bin Zayed — and in fourteen months it has become the largest single pool of dedicated AI capital on the record: MGX Fund I closed on 1 July 2026 at USD 49 billion against a USD 45 billion target with 14 portfolio companies, it is one of four initial equity funders of Stargate LLC, a co-founder of the AI Infrastructure Partnership (AIP) with BlackRock, GIP and Microsoft, and, with AIP and GIP, the owner since 21 July 2026 of Aligned Data Centers (about USD 40 billion enterprise value, 51 campuses, 6.4 GW).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: created by a government council with the UAE's National Security Advisor as chairman and the Mubadala and G42 chiefs on its board; the 'differentiated and restricted opportunities' language in its own fund-close release; co-lead roles in OpenAI and Anthropic rounds within two years of formation; Semafor's account of a 'playbook' built on leadership relationships and co-investment with Silver Lake, BlackRock/GIP and SoftBank.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · MGX Fund I — the USD 49 billion AI fund",
+     "date": "",
+     "text": "Larger than any single AI-dedicated private vehicle on the record and sovereign-backed, MGX's stated differentiator is access — 'differentiated and restricted opportunities' — through its chairman's and Mubadala's relationships (Semafor's 'playbook' account) and co-investment with Silver Lake, BlackRock/GIP, SoftBank and Bpifrance.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP) and Aligned Data Centers",
+     "date": "",
+     "text": "AIP (launched 17 September 2024 as the Global AI Infrastructure Investment Partnership by BlackRock, Global Infrastructure Partners, Microsoft and MGX, with NVIDIA as technical partner) seeks 'to unlock $30 billion of private equity capital over time' and 'up to $100 billion in total investment potential when including debt financing' for data centres and 'energy infrastructure to create new sources of power for these facilities', chiefly in the United States.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-21",
+     "text": "AIP, MGX and BlackRock's GIP close the acquisition of 100% of Aligned Data Centers from Macquarie-managed funds at about USD 40 billion enterprise value — 51 campuses, more than 6.4 GW operational and planned, USD 5 billion of additional growth capital committed; the largest data-centre deal on record — MGX becomes an owner of the landlord its portfolio labs lease from; AIP's first investment is also its thesis in one asset.",
+     "src": "https://www.mgx.ae/news-insights/aip-mgx-and-blackrocks-gip-close-acquisition-aligned-data-centers",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and BlackRock's GIP agree to acquire all equity in Aligned Data Centers at about USD 40 billion enterprise value (50 campuses, more than 5 GW at announcement); AIP's first investment; anchors KIA and Temasek; partners Microsoft, NVIDIA, xAI, Cisco, GE Vernova, NextEra — The consortium's first deployment goes to a landlord rather than a chip or power asset.",
+     "src": "https://aligneddc.com/press-release/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-09-17",
+     "text": "BlackRock, GIP, Microsoft and MGX launch the Global AI Infrastructure Investment Partnership targeting USD 30 billion of equity and up to USD 100 billion with debt for data centres and 'energy infrastructure to create new sources of power' — MGX's route into data-centre ownership and, later, Aligned — six months after its own creation.",
+     "src": "https://www.mgx.ae/news-insights/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-21"
+  },
+  {
+   "a": "blackrock",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Co-founder of the AI Infrastructure Partnership with BlackRock, GIP and MGX.",
+     "context": "Microsoft was one of the four launching parties on 17 September 2024, providing funding and expertise per the launch release. It is listed among AIP's founders in the October 2025 Aligned announcement, so a Microsoft-backed partnership owns part of a landlord Microsoft may lease from. Its commitment and stake are undisclosed.",
+     "source": "https://www.global-infra.com/news/global-infrastructure-partners-blackrock-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/",
+     "status": "active",
+     "since": "2024-09",
+     "via": "AI Infrastructure Partnership (AIP)"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Microsoft co-founded the AI Infrastructure Partnership with BlackRock, Global Infrastructure Partners and MGX in September 2024.",
+     "context": "The launch release announced the Global AI Infrastructure Investment Partnership to 'unlock $30 billion of private equity capital over time' and 'up to $100 billion in total investment potential when including debt financing' for data centres and the power to supply them. The partnership's first investment, closed in July 2026, is Aligned Data Centers, so a partnership Microsoft co-founded now co-owns a landlord it may lease from. Microsoft's commitment and share are undisclosed.",
+     "source": "https://news.microsoft.com/source/2024/09/17/blackrock-global-infrastructure-partners-microsoft-and-mgx-launch-new-ai-partnership-to-invest-in-data-centers-and-supporting-power-infrastructure/",
+     "status": "active",
+     "since": "2024-09",
+     "via": "AI Infrastructure Partnership (AIP)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a seller AIP's significance is its membership, which puts Microsoft, NVIDIA and xAI — the tenants — among the owners of the landlord.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "A capital partnership launched on 17 September 2024 as the Global AI Infrastructure Investment Partnership by BlackRock, GIP, Microsoft and MGX, seeking 'to unlock $30 billion of private equity capital' and 'up to $100 billion in total investment potential when including debt financing' for data centres and the power to run them, chiefly in the United States.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "AIP's distinguishing feature is its membership: the demand side (Microsoft, NVIDIA, xAI) sits beside sovereign money (MGX, KIA, Temasek) and an infrastructure manager (GIP).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and GIP agree to acquire all equity in Aligned Data Centers (50 campuses, more than 5 GW at signing) — The announcement named AIP's founders as BlackRock, GIP, MGX, Microsoft and NVIDIA, and Fink as AIP's chairman.",
+     "src": "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-10-15"
+  },
+  {
+   "a": "blackrock",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "AIP's technical adviser from launch and a member from March 2025; one of six financiers in NVIDIA's August 2026 compute-financing memoranda.",
+     "context": "The launch release named NVIDIA as supporting and advising AIP. On 19 March 2025 NVIDIA and xAI joined the renamed AI Infrastructure Partnership, with NVIDIA continuing as technical adviser, and the October 2025 Aligned announcement lists NVIDIA among AIP's founders. On 10 August 2026 NVIDIA signed memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn. The release says they 'remain subject to execution of the final agreements' and gives no per-firm allocation. Fink: the deal 'deepens our relationship with NVIDIA, including through the AI Infrastructure Partnership'.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "status": "active",
+     "since": "2024-09",
+     "via": "AI Infrastructure Partnership; compute-financing MOU"
+    },
+    "b": {
+     "type": "partner",
+     "note": "NVIDIA advised the BlackRock-chaired AI Infrastructure Partnership from its 2024 launch and joined it in March 2025; BlackRock is one of six financiers in NVIDIA's August 2026 compute-financing memoranda.",
+     "context": "BlackRock, GIP, Microsoft and MGX launched the partnership in September 2024 with NVIDIA supporting and advising; NVIDIA and xAI joined the renamed AI Infrastructure Partnership on 19 March 2025, and BlackRock's October 2025 Aligned announcement lists NVIDIA among its founders. AIP's first investment is Aligned Data Centers. In the August 2026 memoranda, Larry Fink said the deal 'deepens our relationship with NVIDIA, including through the AI Infrastructure Partnership'.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "status": "active",
+     "since": "2024-09",
+     "via": "AI Infrastructure Partnership; compute-financing MOU"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a seller AIP's significance is its membership, which puts Microsoft, NVIDIA and xAI — the tenants — among the owners of the landlord.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*NVIDIA compute-financing definitive agreements:* any per-firm allocation would size BlackRock's role for the first time.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "Renamed on 19 March 2025, when NVIDIA and xAI joined and GE Vernova and NextEra Energy 'agreed to collaborate with AIP'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "AIP's distinguishing feature is its membership: the demand side (Microsoft, NVIDIA, xAI) sits beside sovereign money (MGX, KIA, Temasek) and an infrastructure manager (GIP).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn — MOUs, not definitive agreements: NVIDIA's release says 'These partnerships remain subject to execution of the final agreements' and gives no per-firm allocation. Fink tied it to AIP ('including through the AI Infrastructure Partnership').",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-15",
+     "text": "AIP, MGX and GIP agree to acquire all equity in Aligned Data Centers (50 campuses, more than 5 GW at signing) — The announcement named AIP's founders as BlackRock, GIP, MGX, Microsoft and NVIDIA, and Fink as AIP's chairman.",
+     "src": "https://www.global-infra.com/news/ai-infrastructure-partnership-aip-mgx-and-blackrocks-global-infrastructure-partners-gip-to-acquire-all-equity-in-aligned-data-centers/",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital — We assess this externalizes the financing of NVIDIA's own demand. The instruments are memorandums of understanding rather than committed capital — the release states MOUs were 'signed with six of the world's premier financial institutions' to establish the platforms, publishes no per-firm allocation, and frames the >$500B as third-party capital the platforms aim to mobilize over time rather than an NVIDIA commitment. Read against the circular-financing critique this dossier rates the most serious structural risk, it is the largest structural answer NVIDIA has offered: it moves demand financing toward independent underwriters instead of NVIDIA's own balance sheet.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "blackrock",
+   "b": "recurrent-energy",
+   "curated": {
+    "a": {
+     "type": "portfolio",
+     "note": "A minority preferred position: BlackRock's Climate Infrastructure fund holds Series A convertible preferred representing 20% of Recurrent Energy.",
+     "context": "Recurrent's release of 3 October 2024 records the final closing of 'a $500 million investment … by BlackRock through a fund managed by its Climate Infrastructure business … representing 20% of the outstanding fully diluted shares of Recurrent Energy on an as-converted basis', with Canadian Solar keeping the majority. Canadian Solar's filings describe it as coming from the fourth vintage of the Climate Infrastructure fund franchise, with a 9% compounding dividend, a 1.3x liquidation preference, one board seat and an exit right from May 2029. This position funds Recurrent but does not control it, so it does not pass the buying-authority test.",
+     "source": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/",
+     "status": "active",
+     "since": "2024-06",
+     "scale": "USD 500m for 20% on an as-converted basis"
+    },
+    "b": {
+     "type": "investor",
+     "note": "BlackRock's Climate Infrastructure fund holds Series A convertible preferred representing 20% of Recurrent Energy on an as-converted basis.",
+     "context": "A minority preferred position with one board seat and an exit right from May 2029. BlackRock combined its infrastructure businesses, including Climate Infrastructure, under the Global Infrastructure Partners brand in October 2024. BlackRock does not control Recurrent, so Recurrent's equipment choices are Recurrent's and Canadian Solar's.",
+     "source": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/",
+     "status": "active",
+     "since": "2024-06",
+     "scale": "USD 500m for 20% as-converted"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Legacy climate and diversified infrastructure funds",
+     "date": "",
+     "text": "The Climate Infrastructure franchise put USD 500m into Recurrent Energy for 20% on an as-converted basis from 'the fourth vintage of BlackRock's Climate Infrastructure fund franchise' (announced January 2024, closed October 2024).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Recurrent Energy is Canadian Solar's development-and-selective-ownership arm, and the single most important fact about it is that it is no longer wholly owned — BlackRock's Climate Infrastructure business holds Series A convertible preferred representing 20% of Recurrent Energy B.V.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Canadian Solar's own final-closing release states BlackRock's $500m represents '20% of the outstanding fully diluted shares of Recurrent Energy on an as-converted basis' while Canadian Solar 'will continue to own the remaining majority shares', and the FY2025 20-F sets out a 9% dividend compounding quarterly in kind, a 1.3x liquidation preference, one board seat, a 60%-of-Series-A consent block and exit rights from the fifth anniversary of the first closing.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess Recurrent is a developer-and-seller that has not completed the pivot to owner-operator the BlackRock proceeds were raised to fund.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Colin Parkin came to the parent's chief executive role from the presidency of e-STORAGE, and Dylan Marx came to Recurrent's from its power-services business and the parent's chief operating officer role, with Ismael Guerrero — who led the BlackRock deal and the ownership pivot — leaving one quarter after describing asset sales as a deleveraging necessity.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gap: BlackRock's current as-converted percentage is not public.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The redeemable non-controlling interest line commingles the preferred with US tax-equity Class A interests and the 20-F does not disaggregate, so neither BlackRock's carrying value nor its accreted stated value can be stated.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Utility-scale solar development",
+     "date": "",
+     "text": "The solar pipeline is contracting: 23.7 GWp at 31 March 2026 and 26 GW at the September 2023 basis quoted when BlackRock invested.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Asset sales and capital recycling",
+     "date": "",
+     "text": "A developer-and-seller rather than a pure owner-operator, notwithstanding the stated pivot to long-term ownership that the BlackRock proceeds were raised to fund.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-10",
+     "text": "FY2025 Form 20-F sets out the BlackRock Series A terms in full: 9% dividend compounding quarterly in kind, 1.3x liquidation preference, one board seat, a 60%-of-Series-A consent block and exit rights from the fifth anniversary of the first closing — The filing is what turns a press-release headline into a capital structure. The preferred sits in temporary equity because redemption is not solely within Canadian Solar's control.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1375877/000110465926041976/csiq-20251231x20f.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-10-03",
+     "text": "Final closing of BlackRock's $500m investment — 20% of Recurrent Energy B.V. on an as-converted basis, with Canadian Solar retaining the remaining majority — The sentence that ends 'wholly owned'. Canadian Solar's own wording is that it will 'continue to own the remaining majority shares', which is not the same claim.",
+     "src": "https://recurrentenergy.com/recurrent-energy-announces-closing-of-500-million-investment-from-blackrock/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-10"
+  },
+  {
+   "a": "blackrock",
+   "b": "rwe-clean-energy",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: RWE's shareholder register at 12 March 2026 shows Qatar Holding at 9.3% and BlackRock at 5.9% with no Amazon holding, and German voting-rights notifications begin at 3%.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "blackrock",
+   "b": "stack-infrastructure",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Reported only: Bloomberg says AIP and IFM Investors are in exclusive talks with Blue Owl for STACK's Asia-Pacific data centres at up to USD 25bn.",
+     "context": "Bloomberg's report of 24 September 2026, relayed by Reuters, says an AIP and IFM group 'has locked in an exclusive window' for STACK's Tokyo, Osaka, Sydney, Melbourne and Johor portfolio. Reuters could not verify it, no party commented, and 'talks could be prolonged or fail'. In June Bloomberg had listed AIP among several suitors, alongside Brookfield, IFM, KKR and DigitalBridge. The '~1.1 GW' figure in circulation is RuntimeWire's own sum of STACK's site list, against 470 MW in another profile. Recorded as 'announced' until a party confirms.",
+     "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+     "status": "announced",
+     "since": "2026-09"
+    },
+    "b": {
+     "type": "other",
+     "note": "Reported only: the BlackRock-chaired AI Infrastructure Partnership was named a suitor for STACK's Asia-Pacific portfolio in June 2026 and, with IFM Investors, reported in exclusive talks on 24 September 2026.",
+     "context": "Bloomberg's September report, relayed by Reuters, says the AIP and IFM group has an exclusive window at up to USD 25bn for STACK's Tokyo, Osaka, Sydney, Melbourne and Johor data centres. Reuters could not verify it, and no party commented. The '~1.1 GW' figure in circulation is RuntimeWire's own sum of the site list. Recorded as 'announced' until Blue Owl, STACK or AIP confirms. If it closed it would be AIP's second investment after Aligned.",
+     "source": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+     "status": "announced",
+     "since": "2026-06",
+     "via": "AI Infrastructure Partnership"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-24",
+     "text": "Bloomberg reports AIP and IFM Investors in exclusive talks with Blue Owl for STACK Infrastructure's Asia-Pacific data centres at up to USD 25bn — A report, not a deal: Reuters could not verify it, and BlackRock, IFM, STACK and AIP did not respond. The '~1.1 GW' figure in circulation is RuntimeWire's own sum of STACK's site list, against 470 MW in another profile. If it signs, it would be AIP's second investment and its first outside the Americas.",
+     "src": "https://www.thestar.com.my/tech/tech-news/2026/09/24/blackrock-ifm-close-in-on-25-billion-stack-data-center-deal-bloomberg-news-reports",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · APAC platform (reported sale process)",
+     "date": "",
+     "text": "Per Bloomberg-sourced reporting (June 2026), Blue Owl is preparing a sale of the APAC portfolio that could exceed $30B, with the BlackRock/Microsoft/MGX-backed AI Infrastructure Partnership, Brookfield, IFM, KKR and DigitalBridge among reported suitors.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-25",
+     "text": "Bloomberg-sourced reports: Blue Owl preparing a sale of STACK's APAC data-center portfolio (Tokyo, Osaka, Sydney, Melbourne, Johor) that could exceed $30B — the BlackRock/Microsoft/MGX-backed AIP, Brookfield, IFM, KKR and DigitalBridge among reported suitors, process as soon as July — The sponsor is monetizing an entire region at AI-era marks — a whole-platform exit lane that reframes every regional buildout as inventory.",
+     "src": "https://www.thestar.com.my/business/business-news/2026/06/25/blackrock-backed-aip-eyes-stack-data-centres",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-24"
+  },
+  {
+   "a": "blackrock",
+   "b": "talen-energy",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Talen bought Guernsey Power Station from Caithness Energy and BlackRock; closed 25 November 2025.",
+     "context": "Talen's closing release says it completed the acquisitions of 'the Freedom Generating Station in Pennsylvania and the Guernsey Power Station in Ohio from Caithness Energy and Caithness Energy and BlackRock, respectively'. The release states no price and does not say which BlackRock fund sold; the Talen dossier's USD 3.8bn is from Talen's other filings. This is a GIP exit, not a continuing tie. Separately, BlackRock's index funds hold 9.01% of Talen as a passive investor per PJM's market monitor.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000037/ex99120251125pressreleasec.htm",
+     "status": "historical",
+     "since": "2025-11"
+    },
+    "b": {
+     "type": "other",
+     "note": "Talen bought Guernsey Power Station 'from Caithness Energy and BlackRock', completing on 25 November 2025; separately, BlackRock's index funds hold about 9% of Talen as a passive investor.",
+     "context": "Talen's closing release names the sellers of Guernsey as Caithness Energy and BlackRock; this dossier's other sources attribute BlackRock's interest to Global Infrastructure Partners. PJM's market monitor lists a 9.01% BlackRock passive stake in Talen under BlackRock's FERC blanket authorisation, and the 2026 proxy shows 8.6%. The seller of a plant and a passive shareholder are different BlackRock businesses.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1622536/000162253625000037/ex99120251125pressreleasec.htm",
+     "status": "historical",
+     "since": "2025-11"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The 2026 proxy shows Vanguard 10.5 percent, BlackRock 8.6 percent, Rubric Capital 7.8 percent and MFN Partners 6.6 percent as of March 2026, and Energy Capital Partners took approximately 5 percent of the pro-forma equity at the June 2026 Cornerstone close.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-25",
+     "text": "Freedom and Guernsey acquisitions close for approximately $3.8 billion gross — Two of PJM's most efficient combined-cycle plants, bought from Caithness Energy and BlackRock's Global Infrastructure Partners at a stated 6.7x 2026 EV/EBITDA, lifting annual generation from about 40 TWh to about 60 TWh.",
+     "src": "https://www.globenewswire.com/news-release/2025/11/18/3189980/0/en/talen-energy-receives-regulatory-clearance-for-freedom-and-guernsey-acquisitions.html",
+     "from": "b"
+    }
+   ],
+   "last": "2025-11-25"
+  },
+  {
+   "a": "blackrock",
+   "b": "xai",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Joined the AI Infrastructure Partnership with NVIDIA on 19 March 2025.",
+     "context": "BlackRock's 19 March 2025 release announced that NVIDIA and xAI would join the partnership, renamed the AI Infrastructure Partnership, and that GE Vernova and NextEra Energy had agreed to collaborate with it. xAI is named among Aligned's strategic partners after the AIP acquisition. Its commitment is undisclosed.",
+     "source": "https://www.blackrock.com/corporate/newsroom/media/press-releases/ai-infrastructure-partnership",
+     "status": "active",
+     "since": "2025-03",
+     "via": "AI Infrastructure Partnership (AIP)"
+    },
+    "b": {
+     "type": "partner",
+     "note": "xAI joined the BlackRock-chaired AI Infrastructure Partnership, with NVIDIA, on 19 March 2025.",
+     "context": "BlackRock's 19 March 2025 release: NVIDIA and xAI join the partnership, renamed the AI Infrastructure Partnership, and GE Vernova and NextEra Energy agree to collaborate with it. The partnership's first investment is Aligned Data Centers, closed in July 2026, and xAI is named among Aligned's strategic partners. xAI's commitment is undisclosed.",
+     "source": "https://www.blackrock.com/corporate/newsroom/media/press-releases/ai-infrastructure-partnership",
+     "status": "active",
+     "since": "2025-03",
+     "via": "AI Infrastructure Partnership (AIP)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For a seller AIP's significance is its membership, which puts Microsoft, NVIDIA and xAI — the tenants — among the owners of the landlord.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "Renamed on 19 March 2025, when NVIDIA and xAI joined and GE Vernova and NextEra Energy 'agreed to collaborate with AIP'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP)",
+     "date": "",
+     "text": "AIP's distinguishing feature is its membership: the demand side (Microsoft, NVIDIA, xAI) sits beside sovereign money (MGX, KIA, Temasek) and an infrastructure manager (GIP).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-03"
+  },
+  {
    "a": "blackstone",
    "b": "brookfield",
    "curated": {
@@ -12020,6 +13796,64 @@
     }
    ],
    "last": "2026-06-10"
+  },
+  {
+   "a": "blackstone",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
+     "context": "KKR ranks second in Infrastructure Investor's 2026 table at USD 100.5bn against Blackstone's eighth; both own hyperscale landlords (KKR with GIP in CyrusOne, Blackstone in QTS).",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A rival for infrastructure capital and data-centre platforms; eighth in Infrastructure Investor's 2026 ranking against KKR's second.",
+     "context": "Both firms signed NVIDIA's August 2026 compute-financing memoranda and received Senator Warren's June 2026 letters on data-centre ownership. Infrastructure Investor's 2026 ranking puts KKR second at USD 100,475m of five-year infrastructure fundraising and Blackstone eighth.",
+     "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Private Equity — including Blackstone Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition, measuring five-year infrastructure capital raised, places Blackstone **eighth at USD 45.7bn** — behind BlackRock (USD 113.4bn), KKR, Brookfield, Macquarie, EQT, Stonepeak and DigitalBridge.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA names Blackstone one of six capital partners in a programme to mobilise over USD 500bn of third-party capital for AI infrastructure — Blackstone is one of six firms — with Apollo, BlackRock, Brookfield, Goldman Sachs and KKR — and no per-firm allocation is published, so this is a memorandum of understanding rather than a committed sum.",
+     "src": "https://bam.brookfield.com/press-releases/nvidia-partners-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Blackstone, BlackRock, KKR and Brookfield Infrastructure over data-centre ownership and rising electricity prices — The letter's 'footprint in both energy supply and demand' framing lands on Blackstone more squarely than on any other addressee, because it owns QTS on the demand side and Potomac Energy Center, Invenergy and VoltaGrid on the supply side.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs compute-financing memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilise over USD 500bn — MOUs 'subject to execution of the final agreements'. KKR's statement calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR's co-CEOs about data-centre ownership and electricity costs — One of four letters (with BlackRock, Blackstone and Brookfield). It cites 'KKR's and GIP's $15 billion acquisition of CyrusOne' and asks who controls each holding. No KKR response was found.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
   },
   {
    "a": "blackstone",
@@ -13401,6 +15235,57 @@
     }
    ],
    "last": "2025-07-15"
+  },
+  {
+   "a": "brookfield",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
+     "context": "KKR ranks second in Infrastructure Investor's 2026 table at USD 100.5bn, just ahead of Brookfield at USD 99.1bn; KKR's asset-level partnership with Compass sits beside Brookfield's co-control of it.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "Third in Infrastructure Investor's 2026 ranking at USD 99,112m, just behind KKR at USD 100,475m; also a Compass co-owner beside KKR's asset-level partnership.",
+     "context": "Brookfield Infrastructure co-controls Compass Datacenters with Ontario Teachers', and KKR invests at campus level through the partnership Compass announced. Both were named among the suitors for STACK's Asia-Pacific portfolio in June 2026, and both signed NVIDIA's compute-financing memoranda.",
+     "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Infrastructure",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition ranks Brookfield **third at USD 99.1bn** of five-year infrastructure fundraising, behind BlackRock (USD 113.4bn) and KKR (USD 100.5bn) and ahead of Macquarie (USD 87.9bn) and Blackstone (USD 45.7bn).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senate Banking Committee minority writes to Brookfield Infrastructure, alongside Blackstone, BlackRock and KKR, on data-centre ownership and electricity prices — Brookfield is exposed to the 'supply and demand' framing through the same franchise: it owns generation through Brookfield Renewable and data-centre demand through Compass, Data4 and Csquare.",
+     "src": "https://www.banking.senate.gov/newsroom/minority",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs compute-financing memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilise over USD 500bn — MOUs 'subject to execution of the final agreements'. KKR's statement calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR's co-CEOs about data-centre ownership and electricity costs — One of four letters (with BlackRock, Blackstone and Brookfield). It cites 'KKR's and GIP's $15 billion acquisition of CyrusOne' and asks who controls each holding. No KKR response was found.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
   },
   {
    "a": "brookfield",
@@ -17347,6 +19232,48 @@
   },
   {
    "a": "catl",
+   "b": "kkr",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In power: ContourGlobal, which signed for 3 GWh of CATL battery systems on 10 August 2026, Avantus, which bought an 800 MWh Fluence system in July, and Zenobē and Encavis.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the platforms' own releases, including ContourGlobal's 10 August 2026 CATL order and STTGDC's completion release.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power and energy-transition platforms",
+     "date": "",
+     "text": "On 10 August 2026 it signed with CATL for 3 GWh of four-hour battery systems for projects in the UK, Greece and Chile — 526 containers of 5.64 MWh each.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power and energy-transition platforms",
+     "date": "",
+     "text": "Two 2026 battery purchases at KKR-controlled platforms are on the record — ContourGlobal's 3 GWh from CATL and Avantus's 800 MWh from Fluence; the AEP stake and the TotalEnergies stakes are the opposite case, where KKR funds and the counterparty operates.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "ContourGlobal signs with CATL for 3 GWh of four-hour battery systems for projects in the UK, Greece and Chile — One of two first-party battery orders this research found in 2026 at KKR-controlled platforms (the other is Avantus's Fluence system) — 526 containers of 5.64 MWh each on CATL LFP cells.",
+     "src": "https://www.contourglobal.com/news/contourglobal-secures-3-gwh-battery-supply-from-catl-for-projects-in-uk-greece-and-chile/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "catl",
    "b": "lg-energy-solution",
    "curated": {
     "a": {
@@ -19155,6 +21082,115 @@
   },
   {
    "a": "compass-datacenters",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "KKR invests at the level of individual campuses under what Compass calls a 'permanent, long-term capital partnership'.",
+     "context": "Bloomberg reported the agreement in December 2025 and Compass's own page of 16 March 2026 describes it as a definite agreement for a permanent capital partnership. KKR has published no release, and neither party gives the amount or the assets involved. Brookfield Infrastructure and Ontario Teachers' remain the co-controlling owners.",
+     "source": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/",
+     "status": "active",
+     "since": "2025-12"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Compass describes a signed 'permanent, long-term capital partnership' with KKR at the level of individual campuses; KKR has published no release.",
+     "context": "Bloomberg reported the agreement on 5 December 2025, and w.media, confirming with Compass, described 'a minority interest in some of its stabilized facilities'. Compass's own page of 16 March 2026 says it 'has signed a definite agreement to establish a permanent, long-term capital partnership with KKR', and its boilerplate now lists KKR beside Ontario Teachers' and Brookfield Infrastructure as backers. The amount and the assets involved are not disclosed first-party. KKR funds stabilised campuses here and does not control the company.",
+     "source": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/",
+     "status": "active",
+     "since": "2025-12"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Compass Datacenters is a Dallas developer-owner of single-tenant hyperscale campuses that is co-controlled by Brookfield Infrastructure and Ontario Teachers' Pension Plan (closing 3 October 2023) with KKR as an asset-level 'permanent capital' partner since December 2025; it publishes no portfolio total, names no tenant and no general contractor, funds growth through a serial asset-backed securities programme (four structured issuances in two years, the February 2026 USD 830 million deal the first hyperscale data-center ABS to carry a Moody's AAA), and in 2026 lost the Prince William Digital Gateway to litigation while winning a second ~830-acre Red Oak campus by a 4–1 midnight vote amid organised opposition.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "A build-to-suit landlord rather than an operator or a power developer: Compass buys land and utility capacity, manufactures standardized single-tenant buildings for hyperscalers, and leases them long-term to tenants it never names, then refinances the stabilized campuses through its ABS master trusts and, since December 2025, an asset-level partnership with KKR.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(High confidence)** We assess that the sponsor structure, not leasing, is the growth engine: Brookfield Infrastructure and Ontario Teachers' co-control, KKR's asset-level 'permanent capital' from December 2025, and a serial ABS programme that recycles stabilized buildings (four structured issuances in two years; the first Moody's AAA on hyperscale collateral).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Bisnow's reading of the KKR deal as capital recycling from stabilized assets into development, Compass's own 'evergreen financing partnership' framing, and Brookfield's Q1 2026 description of the ABS as funding 'contracted growth'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the company publishes no portfolio total; the Markets page sum (1,279 MW) mixes operating, 'nearing completion' and 'development' campuses; Meridian is 320 MW on the Markets page and ~500 MW of supply in the release; Goodyear is 212 MW today against a 2019 plan of 350 MW; three different offsite-fabrication percentages appear on the company's own pages; and the boilerplate on 2019–2025 releases was retro-edited to add KKR as a backer after the December 2025 deal, while the January 2026 wire release still named only Ontario Teachers' and Brookfield.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Premise check against the coverage-plan row 'Brookfield-owned hyperscale builder; 1.8 GW delivered or under development on $16.1B planned; Joliet 1.8 GW campus': only the first clause describes Compass, and imprecisely — it is co-controlled by Brookfield Infrastructure and Ontario Teachers' with KKR at asset level; the 1.8 GW / USD 16.1 billion figures are EdgeCore's January 2026 release and Joliet is Hillwood and PowerHouse's campus (Compass's Illinois campus is Hoffman Estates, 200 MW).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Any first-party or filing disclosure of the KKR amount or the assets transferred:* would size the third sponsor.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Capital programme — ABS master trusts, green finance framework and the KKR partnership",
+     "date": "",
+     "text": "Compass finances stabilized campuses through data-center asset-backed securities and campus-level mortgages, and since December 2025 through an asset-level partnership with KKR.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Capital programme — ABS master trusts, green finance framework and the KKR partnership",
+     "date": "",
+     "text": "In March 2026 Compass described the KKR deal as a 'permanent, long-term capital partnership' and an 'evergreen financing partnership' whose purpose Bisnow summarises as recycling capital from stabilized assets to fund new development.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-16",
+     "text": "Compass describes the KKR deal as 'a New Permanent Capital Partnership to Support Built to Last Vision' — an 'evergreen financing partnership'; amounts undisclosed; Crosby: 'measured in decades, not quarters' — Permanent capital at asset level lets Compass recycle stabilized campuses without a sale of the platform or an IPO — the third leg after sponsor equity and ABS.",
+     "src": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-05",
+     "text": "KKR signs a definitive agreement 'to invest in a portion of its operating data centers and future assets'; 'expected to raise several billion dollars' (Bloomberg) — Asset-level capital from a third sponsor without a change of control — the amount and the assets were never disclosed.",
+     "src": "https://news.bloomberglaw.com/private-equity/kkr-to-invest-in-assets-of-brookfields-compass-datacenters-1",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-16",
+     "text": "Compass Datacenters describes a signed 'permanent, long-term capital partnership' with KKR — Only Compass has published it. Trade press describes a minority interest in some stabilised facilities; no KKR release and no amount.",
+     "src": "https://www.compassdatacenters.com/in-the-news/kkr-permanent-capital-partnership/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-16"
+  },
+  {
+   "a": "compass-datacenters",
    "b": "meta",
    "evid": [
     {
@@ -19685,6 +21721,117 @@
    },
    "evid": [],
    "last": ""
+  },
+  {
+   "a": "coolit",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "KKR's Global Impact Fund II owned a majority of CoolIT from May 2023 until Ecolab's acquisition closed on 2 July 2026.",
+     "context": "KKR agreed to acquire CoolIT in May 2023, with Mubadala as minority co-investor, and sold it to Ecolab for about USD 4.75bn in cash, closing on 2 July 2026. KKR's materials put the return at about 15 times the original equity.",
+     "source": "https://www.coolitsystems.com/resources/news/kkr-to-acquire-coolit-systems/",
+     "status": "historical",
+     "since": "2023-05",
+     "scale": "USD 4.75bn exit to Ecolab"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Owned by KKR's Global Impact Fund II from 2023 until Ecolab's USD 4.75bn acquisition closed on 2 July 2026.",
+     "context": "KKR's Global Impact Fund II bought a majority of CoolIT in 2023 with Mubadala as minority co-investor. KKR agreed the sale to Ecolab in March 2026 for USD 4.75bn in cash, about 15 times its cost per KKR's materials, and CoolIT confirmed on 2 July 2026 that Ecolab had closed the acquisition. CoolIT is now an Ecolab subsidiary.",
+     "source": "https://www.coolitsystems.com/resources/news/ecolab-has-closed-its-acquisition-of-coolit-systems/",
+     "status": "historical",
+     "since": "2023-05",
+     "scale": "USD 4.75bn exit to Ecolab"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: CoolIT Systems is the Calgary direct-liquid-cooling specialist that Ecolab bought from KKR for about USD 4.75 billion in cash on 2 July 2026 — 29 times estimated next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales — because it sits at every point where liquid touches an AI rack: the cold plate on the GPU, the manifold in the rack, the coolant distribution unit (CDU) in the row, and the pre-fabricated piping between them; its CHx2000 row CDU is rated at 2,000 kW and twelve NVIDIA GB300 NVL72 racks, it manufactures 'multi-gigawatts' of CDU capacity a year in Canada, China and Vietnam, and a CDU for racks above 1 MW is due on 28 September 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "KKR's Global Impact Fund II bought a majority in May 2023 (value undisclosed; the Calgary Herald reports US$270 million) with Mubadala as minority co-investor; under that ownership CDU capacity rose 25-fold, headcount roughly doubled and, per KKR's exit materials, revenue was on track to quadruple with EBITDA up tenfold through 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Two premises in the commissioning brief did not survive research and are corrected here rather than smoothed: CoolIT is Ecolab-owned, not KKR-owned; and the Asetek patent litigation never produced a jury verdict — the 2019 case ended on an 11 September 2022 summary judgment holding Asetek's last live patent valid but not infringed by any CoolIT product, followed by a confidential settlement and dismissal with prejudice on 6 October 2022, with CoolIT's own '567 patent later revived by the Federal Circuit in March 2024.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Low confidence)** We assess the two premises the commissioning brief carried — KKR ownership and a 2022 jury verdict — are the kind of errors that propagate through a corpus, and we record the corrections as findings.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gap: CoolIT publishes no revenue, margin, installed-megawatt or annual unit figure; the two Asian contract manufacturers are unnamed; CDU weights, heat-exchanger type, input voltage and coolant temperature limits beyond the ASHRAE class are not published; no hyperscaler, colocation or neocloud customer is named by any source; the full KKR 2023 and 2026 releases and CoolIT's own Ecolab announcement were not readable (403/404); Ken Lau has no headshot; the board and reporting line under Ecolab are not disclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-27",
+     "text": "Calgary Herald's inside story of the sale: incorporated 27 February 2001 by Sandy Scott, Brydon Gierl and Jason Myers; KKR's 2023 purchase reported at US$270 million; employee payouts from one year's salary to eight times annual wage, averaging $240,000 — A US$270 million entry and a US$4.75 billion exit in three years is the return that will bring every private-equity buyer to the next liquid-cooling specialist.",
+     "src": "https://calgaryherald.com/feature/inside-story-cool-it-calgary-startup-purchase-by-ecolab",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-26",
+     "text": "Mubadala agrees to sell its minority stake in the KKR-led USD 4.75 billion transaction; under their ownership CoolIT 'increased coolant distribution unit (CDU) capacity by 25x' and 'delivered approximately 2.18 billion kWh in energy savings in 2025' — The co-investor's exit confirms the capital structure: KKR majority, Mubadala minority, both out.",
+     "src": "https://www.mubadala.com/en/news/mubadala-agrees-to-sell-minority-stake-in-coolit-to-ecolab-in-kkr-led-4-75-billion-transaction",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-25",
+     "text": "KKR's exit 'returns approximately 15 times the original equity invested'; CoolIT 'doubled its headcount by adding more than 300 jobs, expanded manufacturing to over 300,000 square feet' and is 'on track to deliver roughly fourfold revenue growth and tenfold EBITDA growth through 2026'; all 650 employees receive cash payouts — The only growth-rate statements in the record are the seller's; they imply a business whose EBITDA margin expanded sharply as it scaled.",
+     "src": "https://www.alternativeswatch.com/2026/03/25/kkr-coolit-ecolab-sale-exit/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-08",
+     "text": "Financial Times reports KKR working with advisers on a sale of CoolIT 'for a price tag potentially exceeding $3 billion' — The final price came in more than 50 percent above the first leak.",
+     "src": "https://www.investing.com/news/stock-market-news/kkr-eyes-multibilliondollar-sale-of-data-center-cooling-company-ft-reports-4548581",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-09-30",
+     "text": "Dell'Oro: direct liquid cooling 'surged 156 percent year-over-year in 2Q 2025'; 'around 40 companies with CDUs within their product portfolios'; 'We expect fewer than 10 vendors to ultimately capture the lion's share'; KKR's CoolIT deal cited as private equity entering the CDU market — Forty vendors and fewer than ten survivors is the consolidation thesis Ecolab paid to be on the right side of.",
+     "src": "https://www.delloro.com/market-at-the-boiling-point-is-the-cdu-space-becoming-saturated/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-22",
+     "text": "Jason Waxman appointed CEO — 23 years at Intel's data-centre group, three as president of Fluke, founding board member of the Open Compute Project; COO Patrick McGinn becomes President and COO; KKR's Kyle Matter chairs the board — A hyperscaler-facing CEO from the buyer's side of the OCP table, installed a year before the sale.",
+     "src": "https://www.prnewswire.com/news-releases/coolit-welcomes-jason-waxman-as-ceo-302434395.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-02",
+     "text": "Ecolab completes its USD 4.75bn acquisition of CoolIT Systems from KKR — An exit at about 15 times KKR's cost, three years after its 2023 purchase.",
+     "src": "https://www.coolitsystems.com/resources/news/ecolab-has-closed-its-acquisition-of-coolit-systems/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-02"
   },
   {
    "a": "coolit",
@@ -23700,6 +25847,160 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Co-owner of CyrusOne with BlackRock's GIP since the March 2022 take-private; also CyrusOne's partner, through the KKR–ECP partnership, on the Bosque County campus.",
+     "context": "The 25 March 2022 completion release records the acquisition 'by funds managed by KKR … and Global Infrastructure Partners' for about USD 15bn including assumed debt. KKR's Waldemar Szlezak was quoted jointly with GIP's Will Brilliant on the July 2026 appointment of John Hatem as chief executive, and KKR Capital Markets co-arranges CyrusOne's securitisations. The KKR dossier (2026-09-26) finds no first-party source that states the ownership split.\n\nKKR's 30 July 2025 release presents the 190 MW Bosque County, Texas campus as the first investment of its USD 50bn partnership with Energy Capital Partners, a joint venture with CyrusOne, at about USD 4bn. CyrusOne's own release with Calpine gives USD 1.2bn for DFW10. No source read reconciles the two figures.",
+     "source": "https://www.global-infra.com/news/kkr-and-gip-complete-acquisition-of-cyrusone/",
+     "status": "active",
+     "since": "2022-03",
+     "scale": "~USD 15bn including assumed debt (2022)"
+    },
+    "b": {
+     "type": "portfolio",
+     "note": "Co-owned with BlackRock's GIP since the March 2022 take-private; also KKR's partner on the first campus of the KKR–ECP data-centre and power partnership.",
+     "context": "KKR's release of 25 March 2022 records the completion of CyrusOne's acquisition by funds managed by KKR and Global Infrastructure Partners for about USD 15bn including assumed debt; the European Commission cleared joint control. In 2026 the sponsors still speak jointly: CyrusOne's 30 July release naming John Hatem chief executive quotes KKR's Waldemar Szlezak and GIP's Will Brilliant together. The split is reported as 50:50 but stated in no first-party source read for this dossier.\n\nCyrusOne is also KKR's route into generation-sited campuses: the 190 MW Bosque County, Texas campus announced on 30 July 2025 is a joint venture of CyrusOne and ECP under the KKR–ECP partnership, beside a Calpine gas plant. Reuters reported on 10 August 2026 that the owners are preparing an IPO as early as 2027.",
+     "source": "https://media.kkr.com/news-details?news_id=36b7013b-4269-435a-8bcf-ca4cad3d8d23",
+     "status": "active",
+     "since": "2022-03",
+     "scale": "~USD 15bn including assumed debt (2022)",
+     "via": "KKR infrastructure and real-estate equity strategies"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "**BOTTOM LINE UP FRONT:** CyrusOne is the clearest test in this corpus of what a data-centre landlord looks like when it answers to sponsors rather than a share price — taken private by KKR and Global Infrastructure Partners in March 2022 at about USD 15bn, it publishes no revenue, EBITDA, backlog or bookings figure of any kind, and reaches the capital markets instead through serial securitisation, whose collateral tables are the only public window on its tenancy.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Ownership is unchanged since 2022 — KKR and GIP, the latter part of BlackRock since October 2024 — with one platform-level joint venture, a 50:50 vehicle with Kansai Electric Power targeting 900 MW in Japan.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Reuters reports KKR and Global Infrastructure Partners are preparing an initial public offering as early as 2027, potentially raising about USD 5 billion, with Goldman Sachs and Morgan Stanley pitching for roles — The first exit signal since the 2022 take-private, and it is unconfirmed: BlackRock, KKR, Goldman, Morgan Stanley all declined to comment and CyrusOne had no comment. Treat as single-source reporting. It landed eleven days after the chief executive changed and eight months after the CME outage; no source connects those facts and this dossier does not.",
+     "src": "https://finance.yahoo.com/markets/stocks/articles/data-center-operator-cyrusone-plans-100520897.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-30",
+     "text": "John Hatem named Chief Executive Officer and a director, effective immediately; Eric Schwartz steps down — An internal succession after fifteen years in the company — Hatem joined in 2011, became COO in 2020 and President in September 2025, and is credited with the manufacturing-driven construction approach. Both sponsors spoke in their own names, which is the clearest available confirmation that the KKR/GIP stack is intact.",
+     "src": "https://www.businesswire.com/news/home/20260730005910/en/CyrusOne-Names-John-Hatem-Chief-Executive-Officer-to-Accelerate-its-Global-Digital-Infrastructure-Strategy",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-30",
+     "text": "Calpine and CyrusOne announce a 190 MW hyperscale development at the Thad Hill Energy Center, Bosque County — a USD 1.2 billion infrastructure investment described as the first US data centre co-located with an existing energy source — The template the Freestone deal then repeated at twice the scale. The boilerplate on this release is also the clearest ownership statement the company has published: 'backed by leading investment firms Global Infrastructure Partners (GIP), a part of BlackRock, and KKR'.",
+     "src": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In data centres: STTGDC in Singapore (75%, completed 2 September 2026; it runs an HVDC testbed with LITEON and the solid-state-transformer start-up Amperesand), CyrusOne (co-owned with BlackRock's GIP since 2022), and Helix Digital Infrastructure, a KKR-sponsored data-centre and power company launched on 11 June 2026 with more than USD 10bn of commitments from founding investors including NVIDIA and Vistra.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The USD 50bn partnership with Energy Capital Partners pairs data centres with generation, and its first campus, built with CyrusOne in Bosque County, Texas, sits beside a Calpine gas plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The buyers are the platforms (STTGDC, CyrusOne, Helix, ContourGlobal, Zenobē, Avantus, Encavis, and EDF power solutions North America on closing).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "places no equipment orders, and the purchase orders come from STTGDC, CyrusOne, ContourGlobal, Zenobē, Avantus and Encavis.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**(Low confidence)** We assess that **the 50:50 characterisation of CyrusOne is probably right but unproven**.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "**Collection gaps:** Helix's ownership, control and projects; KKR's percentages in CyrusOne, Zenobē, Global Technical Realty and ContourGlobal today; the amount and structure of the Compass partnership, which KKR has not announced; whether Sempra Infrastructure Partners closed in Q3 as expected; whether EDF's 5.6 GW includes storage, which EDF's release does not say.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*CyrusOne IPO filing:* the first public statement of the KKR–GIP split.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · KKR–Energy Capital Partners data-centre and power partnership",
+     "date": "",
+     "text": "The first project, announced on 30 July 2025, is a 190 MW hyperscale campus in Bosque County, Texas, built as a joint venture with CyrusOne and ECP, co-located with Calpine gas generation and expected to operate from the fourth quarter of 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · KKR–Energy Capital Partners data-centre and power partnership",
+     "date": "",
+     "text": "Pairs a power-plant owner (ECP) with a data-centre owner (KKR's CyrusOne) so campuses can be sited at generation rather than waiting for the grid.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre platforms",
+     "date": "",
+     "text": "CyrusOne is co-owned with GIP since March 2022 and runs more than 60 data centres in the US, Europe and Japan.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Data-centre platforms",
+     "date": "",
+     "text": "Controls STTGDC with 75% and co-controls CyrusOne with GIP — in both cases alongside a strategic or sponsor partner rather than alone.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-30",
+     "text": "CyrusOne names John Hatem chief executive, with KKR's Waldemar Szlezak and GIP's Will Brilliant quoted jointly — The clearest 2026 first-party evidence that the KKR–GIP co-ownership is intact.",
+     "src": "https://www.cyrusone.com/resources/press-releases/cyrusone-names-john-hatem-chief-executive-officer-to-accelerate-its-global-digital-infrastructure-strategy",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Senator Warren writes to KKR's co-CEOs about data-centre ownership and electricity costs — One of four letters (with BlackRock, Blackstone and Brookfield). It cites 'KKR's and GIP's $15 billion acquisition of CyrusOne' and asks who controls each holding. No KKR response was found.",
+     "src": "https://www.banking.senate.gov/imo/media/doc/letter_to_pe_companies_re_data_center_ownership_kkr.pdf",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
   },
   {
    "a": "cyrusone",
@@ -34212,6 +36513,62 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "fluence",
+   "b": "kkr",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Fluence's Rexford 2 customer, Avantus, has been majority-owned by KKR since July 2024.",
+     "context": "Fluence will supply a domestic-content Smartstack system and turnkey EPC for Avantus's 200 MW / 800 MWh Rexford 2 project in California (July 2026). Avantus is owned by KKR-managed funds, with EIG. The contract is with Avantus, not KKR, hence 'other'.",
+     "source": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html",
+     "status": "active",
+     "since": "2026-07",
+     "via": "Avantus"
+    },
+    "b": {
+     "type": "other",
+     "note": "Fluence supplies Avantus, a KKR majority-owned developer, with a domestic-content Smartstack system and turnkey EPC for Rexford 2.",
+     "context": "Fluence's release of 13 July 2026 announces that it will provide a US domestic-content Smartstack system and turnkey EPC services for Avantus's 800 MWh Rexford 2 project in Tulare County, California. Avantus has been majority-owned by KKR funds, with EIG, since July 2024. The contract is between Fluence and Avantus, not KKR, so the link is typed 'other'.",
+     "source": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html",
+     "status": "active",
+     "since": "2026-07",
+     "scale": "200 MW / 800 MWh (Rexford 2)",
+     "via": "Avantus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In power: ContourGlobal, which signed for 3 GWh of CATL battery systems on 10 August 2026, Avantus, which bought an 800 MWh Fluence system in July, and Zenobē and Encavis.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power and energy-transition platforms",
+     "date": "",
+     "text": "Two 2026 battery purchases at KKR-controlled platforms are on the record — ContourGlobal's 3 GWh from CATL and Avantus's 800 MWh from Fluence; the AEP stake and the TotalEnergies stakes are the opposite case, where KKR funds and the counterparty operates.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "ContourGlobal signs with CATL for 3 GWh of four-hour battery systems for projects in the UK, Greece and Chile — One of two first-party battery orders this research found in 2026 at KKR-controlled platforms (the other is Avantus's Fluence system) — 526 containers of 5.64 MWh each on CATL LFP cells.",
+     "src": "https://www.contourglobal.com/news/contourglobal-secures-3-gwh-battery-supply-from-catl-for-projects-in-uk-greece-and-chile/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-13",
+     "text": "Avantus, majority-owned by KKR since July 2024, buys a 200 MW / 800 MWh Fluence Smartstack system with turnkey EPC for Rexford 2 in California — A KKR-controlled developer buying US domestic-content batteries; per the Fluence dossier it was the first domestic-content Smartstack sale.",
+     "src": "https://www.globenewswire.com/news-release/2026/07/13/3326469/0/en/Fluence-to-Provide-U-S-Domestic-Content-Smartstack-System-for-Avantus-800-MWh-Rexford-2-Project-in-Southern-California.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
   },
   {
    "a": "fluence",
@@ -45524,6 +47881,278 @@
     }
    ],
    "last": "2025-10-23"
+  },
+  {
+   "a": "kkr",
+   "b": "liteon",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In data centres: STTGDC in Singapore (75%, completed 2 September 2026; it runs an HVDC testbed with LITEON and the solid-state-transformer start-up Amperesand), CyrusOne (co-owned with BlackRock's GIP since 2022), and Helix Digital Infrastructure, a KKR-sponsored data-centre and power company launched on 11 June 2026 with more than USD 10bn of commitments from founding investors including NVIDIA and Vistra.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: STT GDC's own January 2026 release describes a live HVDC testbed built with LITEON and supported by Amperesand, and says STT GDC 'plans to deploy this technology in future data centres in Singapore'; Amperesand names STT GDC among its solid-state-transformer pilots.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-26",
+     "text": "STT GDC launches an HVDC testbed in Singapore with LITEON, ERI@N and Amperesand, and says it plans to deploy the technology in future data centres — Launched before KKR took control, but it is now a KKR-controlled platform with a live DC-distribution programme and a solid-state-transformer vendor in its pilot — the closest any KKR platform comes to an SST purchase.",
+     "src": "https://www.sttgdc.com/sg-en/newsroom/stt-gdc-launches-southeast-asia-first-hvdc-powered-ai-infrastructure-testbed",
+     "from": "a"
+    }
+   ],
+   "last": "2026-01-26"
+  },
+  {
+   "a": "kkr",
+   "b": "macquarie",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Fourth in Infrastructure Investor's 2026 ranking (USD 87,887m), behind KKR.",
+     "context": "Both firms compete for infrastructure capital and assets globally; the ranking measures infrastructure equity funds closed between 2021 and 2025.",
+     "source": "https://www.infrastructureinvestor.com/infrastructure-investor-100/",
+     "status": "active"
+    },
+    "b": {
+     "type": "competitor",
+     "note": "A competitor for infrastructure capital and platforms; second in Infrastructure Investor's 2026 five-year fundraising ranking.",
+     "context": "KKR ranks second in Infrastructure Investor's 2026 table, ahead of Macquarie in fourth.",
+     "source": "https://www.infrastructureinvestor.com/ii-100/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition puts Macquarie Asset Management fourth at USD 87.9bn of five-year capital raised, behind BlackRock, KKR and Brookfield; IPE Real Assets' table for the prior year puts it first by assets under management.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Macquarie Asset Management (MAM)",
+     "date": "",
+     "text": "Infrastructure Investor's 2026 edition ranks Macquarie Asset Management **fourth at USD 87.9bn** of five-year infrastructure capital raised, behind BlackRock, KKR and Brookfield — while IPE Real Assets' table for the prior year ranks it **first by assets under management**.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "kkr",
+   "b": "mgx",
+   "evid": [
+    {
+     "where": "Capabilities · AI Infrastructure Partnership (AIP) and Aligned Data Centers",
+     "date": "",
+     "text": "AIP is the vehicle through which MGX competes with Brookfield, Blackstone/QTS, DigitalBridge and KKR for hyperscale landlords; Aligned's 6.4 GW makes the consortium one of the largest owners of US data-centre capacity after one transaction.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "kkr",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "A founding investor and 'cornerstone strategic partner' in Helix Digital Infrastructure, and a counterparty to KKR in NVIDIA's August 2026 compute-financing memoranda.",
+     "context": "KKR's 11 June 2026 launch release names NVIDIA 'a cornerstone strategic partner' of Helix. On 10 August 2026 NVIDIA signed memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to build compute-financing platforms aiming to mobilise over USD 500bn of third-party capital. The release says they 'remain subject to execution of the final agreements' and gives no per-firm allocation. KKR's co-CEOs' statement on the partnership calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "status": "active",
+     "since": "2026-06",
+     "via": "Helix Digital Infrastructure; compute-financing MOU"
+    },
+    "b": {
+     "type": "partner",
+     "note": "KKR is one of six financiers in NVIDIA's August 2026 compute-financing memoranda, and NVIDIA is a founding investor in KKR's Helix Digital Infrastructure.",
+     "context": "On 10 August 2026 NVIDIA signed memoranda of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish compute-financing platforms aiming to mobilise over USD 500bn, 'subject to execution of the final agreements' and with no per-firm allocation. KKR's co-CEOs' statement on the partnership calls NVIDIA 'a founding investor in Helix Digital Infrastructure', which KKR's June 2026 launch release names as a cornerstone strategic partner.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "status": "active",
+     "since": "2026-06",
+     "via": "Helix Digital Infrastructure; compute-financing MOU"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In data centres: STTGDC in Singapore (75%, completed 2 September 2026; it runs an HVDC testbed with LITEON and the solid-state-transformer start-up Amperesand), CyrusOne (co-owned with BlackRock's GIP since 2022), and Helix Digital Infrastructure, a KKR-sponsored data-centre and power company launched on 11 June 2026 with more than USD 10bn of commitments from founding investors including NVIDIA and Vistra.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Helix Digital Infrastructure",
+     "date": "",
+     "text": "NVIDIA is 'a cornerstone strategic partner' and Vistra 'the preferred power partner'; the Kuwait Investment Authority is an anchor investor.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "NVIDIA signs compute-financing memoranda with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilise over USD 500bn — MOUs 'subject to execution of the final agreements'. KKR's statement calls NVIDIA 'a founding investor in Helix Digital Infrastructure'.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-11",
+     "text": "KKR launches Helix Digital Infrastructure with more than USD 10bn of commitments; NVIDIA, Vistra and the Kuwait Investment Authority among founding investors — A single-theme AI-infrastructure company outside KKR's diversified funds, run by Adam Selipsky, with first-look supply rights for its investors.",
+     "src": "https://media.kkr.com/news-details?news_id=6a26acd6-83b8-4377-84be-b1dadb847806",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "The August 2026 compute-financing platforms — memorandums with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR aiming to mobilize over $500B of third-party capital — are the largest structural answer offered so far, moving demand financing toward independent underwriters rather than NVIDIA's balance sheet.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Memorandums of understanding with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish AI compute financing platforms aiming to mobilize over $500B of third-party capital — We assess this externalizes the financing of NVIDIA's own demand. The instruments are memorandums of understanding rather than committed capital — the release states MOUs were 'signed with six of the world's premier financial institutions' to establish the platforms, publishes no per-firm allocation, and frames the >$500B as third-party capital the platforms aim to mobilize over time rather than an NVIDIA commitment. Read against the circular-financing critique this dossier rates the most serious structural risk, it is the largest structural answer NVIDIA has offered: it moves demand financing toward independent underwriters instead of NVIDIA's own balance sheet.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "kkr",
+   "b": "stack-infrastructure",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Reported only: Bloomberg named KKR among suitors for STACK's Asia-Pacific portfolio in June 2026; in September an AIP- and IFM-backed group was reported to hold an exclusive window.",
+     "context": "Bloomberg reported on 24 June 2026 that Blue Owl was preparing to sell STACK's Tokyo, Osaka, Sydney, Melbourne and Johor data centres and that 'other potential suitors include IFM Investors, KKR & Co and DigitalBridge'. On 24 September Bloomberg reported that an AIP- and IFM-backed group had 'locked in an exclusive window' at about USD 20–25bn, adding that 'other interested buyers may still be in the mix'. No party has confirmed either report.",
+     "source": "https://sg.finance.yahoo.com/news/blackrock-backed-aip-kkr-said-004806698.html",
+     "status": "announced",
+     "since": "2026-06"
+    },
+    "b": {
+     "type": "other",
+     "note": "Reported only: KKR was named among suitors for STACK's Asia-Pacific portfolio in June 2026; by September an AIP- and IFM-backed group was reported in exclusive talks.",
+     "context": "The June 2026 Bloomberg reporting listed KKR with Brookfield, IFM and DigitalBridge as potential suitors. The September report of an exclusive window for the AIP and IFM group does not rule other buyers out. No party has confirmed either report.",
+     "source": "https://www.thestar.com.my/business/business-news/2026/06/25/blackrock-backed-aip-eyes-stack-data-centres",
+     "status": "announced",
+     "since": "2026-06"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · APAC platform (reported sale process)",
+     "date": "",
+     "text": "Per Bloomberg-sourced reporting (June 2026), Blue Owl is preparing a sale of the APAC portfolio that could exceed $30B, with the BlackRock/Microsoft/MGX-backed AI Infrastructure Partnership, Brookfield, IFM, KKR and DigitalBridge among reported suitors.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-25",
+     "text": "Bloomberg-sourced reports: Blue Owl preparing a sale of STACK's APAC data-center portfolio (Tokyo, Osaka, Sydney, Melbourne, Johor) that could exceed $30B — the BlackRock/Microsoft/MGX-backed AIP, Brookfield, IFM, KKR and DigitalBridge among reported suitors, process as soon as July — The sponsor is monetizing an entire region at AI-era marks — a whole-platform exit lane that reframes every regional buildout as inventory.",
+     "src": "https://www.thestar.com.my/business/business-news/2026/06/25/blackrock-backed-aip-eyes-stack-data-centres",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-25"
+  },
+  {
+   "a": "kkr",
+   "b": "terra-gen",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The ECP angle in the tasking is dead: ECP exited Oct 2024, before its own AIDC wave (KKR partnership, Calpine sale).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "kkr",
+   "b": "vistra",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Founding investor in KKR's Helix Digital Infrastructure and its 'preferred power partner'.",
+     "context": "Vistra's Q2 2026 release: 'Announced Helix Digital Infrastructure alongside KKR, KIA, and NVIDIA with an initial commitment from Vistra of up to $1.0 billion', with Helix described as Vistra's route to serving data centres as 'preferred power provider'. Vistra's 10-Q splits the commitment into USD 500m up front and USD 500m 'subject to the Helix Fund meeting certain commercial power supply milestones for existing generation assets, or at the Company's election'. On the call Vistra called the role 'a preferred power partner, not a requirement'.\n\nThe arrangement runs both ways: Vistra is an investor in KKR's vehicle, and the vehicle is expected to buy Vistra's power. KKR's release gives founding investors possible 'priority or first look rights, to provide goods or services to Helix investments'.",
+     "source": "https://investor.vistracorp.com/2026-08-07-Vistra-Reports-Second-Quarter-2026-Results",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "Up to USD 1.0bn Vistra commitment",
+     "via": "Helix Digital Infrastructure"
+    },
+    "b": {
+     "type": "partner",
+     "note": "Vistra is a founding investor in KKR's Helix Digital Infrastructure and its preferred power provider.",
+     "context": "Vistra's Q2 2026 release: 'Announced Helix Digital Infrastructure alongside KKR, KIA, and NVIDIA with an initial commitment from Vistra of up to $1.0 billion'. The 10-Q splits it into USD 500m initially and USD 500m subject to the Helix Fund meeting commercial power supply milestones for existing generation assets, or at Vistra's election. KKR calls Helix 'a new company' with more than USD 10bn of commitments, and its launch release gives founding investors possible 'priority or first look rights, to provide goods or services to Helix investments'. The KKR dossier (2026-09-26) found no Helix project disclosed by that date.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000017/vistra-20260630xearningsre.htm",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "Up to USD 1.0bn Vistra commitment",
+     "via": "Helix Digital Infrastructure"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "In data centres: STTGDC in Singapore (75%, completed 2 September 2026; it runs an HVDC testbed with LITEON and the solid-state-transformer start-up Amperesand), CyrusOne (co-owned with BlackRock's GIP since 2022), and Helix Digital Infrastructure, a KKR-sponsored data-centre and power company launched on 11 June 2026 with more than USD 10bn of commitments from founding investors including NVIDIA and Vistra.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Helix names Vistra as its preferred power partner and gives founding investors 'priority or first look rights, to provide goods or services to Helix investments'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Helix names a preferred power partner, ties half of Vistra's commitment to Helix buying power from Vistra's existing plants, and gives founding investors first-look rights to supply its projects.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Helix Digital Infrastructure",
+     "date": "",
+     "text": "NVIDIA is 'a cornerstone strategic partner' and Vistra 'the preferred power partner'; the Kuwait Investment Authority is an anchor investor.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-11",
+     "text": "KKR launches Helix Digital Infrastructure with more than USD 10bn of commitments; NVIDIA, Vistra and the Kuwait Investment Authority among founding investors — A single-theme AI-infrastructure company outside KKR's diversified funds, run by Adam Selipsky, with first-look supply rights for its investors.",
+     "src": "https://media.kkr.com/news-details?news_id=6a26acd6-83b8-4377-84be-b1dadb847806",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Vistra committed up to $1 billion as a founding investor in a KKR-managed open-ended fund alongside NVIDIA and the Kuwait Investment Authority, with the second $500 million tranche tied to 'commercial power supply milestones for our existing generation assets' — that is, the fund buying power from Vistra — and took the role of preferred power provider.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-11"
   },
   {
    "a": "kwh-analytics",

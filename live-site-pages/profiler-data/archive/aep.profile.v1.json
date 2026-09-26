@@ -1,0 +1,2156 @@
+{
+  "schemaVersion": 7,
+  "slug": "aep",
+  "name": "American Electric Power Company, Inc.",
+  "shortName": "AEP",
+  "categories": [
+    "utility"
+  ],
+  "website": "https://www.aep.com",
+  "headquarters": "Columbus, OH, USA",
+  "founded": 1906,
+  "ownership": {
+    "type": "public",
+    "ticker": "NASDAQ: AEP"
+  },
+  "employees": "17,581 at December 31, 2025 (FY2025 Form 10-K); 'nearly 18,000' in mid-2026 company boilerplate",
+  "summary": "BOTTOM LINE UP FRONT: AEP is the utility that has converted large-load demand into contract before anyone else at scale — 69 GW of incremental load by 2030 backed by fully executed service agreements and letters of agreement as of July 2026, up from 20 GW eighteen months earlier — and it is financing the wires to serve it out of the country's largest transmission franchise, on a $78B five-year capital plan whose transmission half rests on the 765 kV network AEP built and still owns nearly all of. The contracted figure is the company's own, and it is not a forecast: 45 GW of it sits in ERCOT behind roughly $2B of cash, guarantees and letters of credit posted in July 2026. BACKGROUND. Columbus, Ohio; NASDAQ: AEP; incorporated in New York in 1906. Per the FY2025 Form 10-K the company serves about 5.6 million customers across eleven states through seven regulated operating companies and a transmission business, owns approximately 25,400 MW of generation of which about 10,700 MW is coal-fired, operates approximately 38,000 circuit miles of transmission including roughly 2,000 circuit miles at 765 kV plus about 252,000 circuit miles of distribution, employs 17,581 and reported 2025 revenue of $21.876B with operating earnings of $5.97 per share; 2026 guidance was raised in July 2026 to $6.25–$6.55 with a 7–9 percent long-term growth rate through 2030. Its operating companies sit in three different RTOs — PJM, SPP and, through AEP Texas, ERCOT — so a single load-growth story is negotiated under eight state commissions and three sets of market rules at once. Collection gap: AEP does not disclose data-center load per project or a customer count; the gas-turbine manufacturers are named by trade press rather than by the company; the SPP 765 kV awards have no public project-level assignment; no battery supplier is named on any AEP project; and the Q3 2026 earnings date was unannounced by the company, with three trackers giving three different dates.",
+  "ecosystemRole": "We assess AEP as the utility whose competitive position is contractual rather than geographic — the counterparty that solved the large-load problem by writing tariffs that make speculative demand expensive and real demand bankable, then used the resulting certainty to justify the largest transmission program in the country. Basis: large-load tariffs approved in six of eight states by August 2026, all carrying take-or-pay minimum billing demand between 80 and 90 percent, contract terms of twelve to twenty years, ramp periods, collateral and exit fees; 69 GW of contracted load whose ERCOT tranche is backed by about $2B of posted security; and a $33B transmission plan inside a $78B capital plan, against a network that carries nearly 90 percent of America's 765 kV miles. For the sellers in this corpus it is four different counterparties at once. For turbine makers it is a buyer that had secured roughly 13 GW of gas capacity through 2031 with options on 10 GW more — a market largely closed for the decade. For transmission equipment makers it is the single largest domestic buyer of extra-high-voltage transformers and breakers, and through its 2025 agreement with Quanta Services it is trying to expand the domestic manufacturing capacity for them. For battery sellers it is a buyer with open all-source and storage solicitations at Appalachian Power and PSO and no supplier named on any project. And for the hyperscalers and developers here — Amazon, Google, Microsoft, Meta, OpenAI's Stargate through the Lancium campus, TeraWulf and Stack Infrastructure by name in the sources — it is the utility whose price of admission is a signed minimum-demand obligation, and whose Ohio version of that bargain is under appeal at the Supreme Court of Ohio by the manufacturers and the hyperscalers who lost the settlement fight.",
+  "productsAndServices": [
+    {
+      "name": "Regulated transmission — AEP Transmission Holdco, the state transcos, Transource Energy and the RTO joint ventures",
+      "category": "Regulated utility service",
+      "description": "AEP describes itself as the owner and operator of the largest electricity transmission system in the country, with roughly 40,000 line miles in its own boilerplate and approximately 38,000 circuit miles per the FY2025 Form 10-K, of which about 2,000 circuit miles are 765 kV. The company energized the world's first 765 kV line in 1969 and states it owns and operates nearly 90 percent of the nation's 765 kV network, with more than 2,100 miles in service and 30 substations across six states. The business is run through AEP Transmission Holdco and the state transmission companies, plus Transource Energy (86.5 percent AEP, 13.5 percent Evergy) and three regional joint ventures: Valley Link in PJM with FirstEnergy Transmission and Dominion, Grid Growth Ventures for the central Ohio 765 kV award, and Midcontinent Grid Solutions in MISO with a Berkshire Hathaway Energy affiliate. Transmission Holdco earned $1,161M on a GAAP basis in 2025 and carries $12,855M of the 2026–2030 capital budget; the company's August 2026 handout states that more than half of 2026 operating earnings come from the transmission business.",
+      "highlights": [
+        "Awards totalling about $3.5B across four RTOs in 2025–2026 lifted the transmission capital plan to $33B for 2026–2030, 42 percent of the whole plan (Q1 2026 deck)",
+        "PJM 2024 window: $1.7B to AEP interests, of which $1.1B through Valley Link — approximately 260 miles of 765 kV between Putnam County, West Virginia and Frederick County, Maryland, plus about 155 miles between Campbell County and Fauquier County, Virginia",
+        "PJM 2025 window (board approval February 2026): Grid Growth Ventures selected for approximately 300 miles of new 765 kV in central Ohio, the projects estimated at about $1.2B with AEP's share about $600M; FERC accepted the formula rate in July 2026 at a requested 10.8 percent base ROE",
+        "SPP: $1.6B and 315 miles of 765 kV in Oklahoma and Louisiana awarded November 2025 and February 2026, within an $8.6B, 50-project SPP portfolio containing 949 miles of new 765 kV",
+        "ERCOT: AEP Texas is building the Howard–Solstice line, approximately 300 miles from the Solstice substation near Fort Stockton to CPS Energy's Howard substation near San Antonio — one of the three 765 kV import paths the Texas commission approved on April 24, 2025",
+        "MISO: Midcontinent Grid Solutions selected in January 2026 for a nearly 200-mile 765 kV project extending into Wisconsin, estimated at about $1.2B with AEP's share about $500M",
+        "Piketon, Ohio: new 765 kV infrastructure for a 10 GW data-center campus at the former Portsmouth gaseous diffusion plant, with SB Energy committing to pay the entire $4.2B transmission cost and power expected to begin flowing in 2029 — outside the $33B plan",
+        "AEP Texas closed a US Department of Energy loan of up to $3.26B in July 2026 covering nearly 100 projects and approximately 2,800 miles, which the department put at more than $685M of customer savings over 30 years; Appalachian Power closed $1.6B of DOE loans in October 2025 for nearly 5,000 miles"
+      ],
+      "positioning": "The only US utility with a 765 kV franchise at scale, and the one selling that capability to peers — the company describes itself as 'working with other IOUs to assist in their capability to build out 765 kV infrastructure' and is the transmission partner in three separate multi-party RTO joint ventures. Against Dominion (a PJM transmission owner in one state) and Oncor (an ERCOT wires utility recovering on a postage-stamp rate), AEP is the only one whose transmission earnings are diversified across four market designs.",
+      "soldThrough": "FERC formula rates on regulated transmission; competitive RTO planning windows for new projects, bid alone or through joint ventures.",
+      "targetSegments": [
+        "RTO-allocated wholesale transmission customers across PJM, SPP, ERCOT and MISO",
+        "Load-serving entities in AEP's own eleven states",
+        "Large-load campuses funding dedicated transmission directly, as at Piketon"
+      ],
+      "roadmap": "Grid Growth Ohio 765/345 kV in service by 2031–2032 per PJM filings; Valley Link projected in service December 2029 against a June 2029 requirement; Howard–Solstice in service mostly beyond the 2026–2030 plan window (2034 per the Q1 2026 deck); Piketon power flowing 2029."
+    },
+    {
+      "name": "Large-load and data-center service — the tariff franchise",
+      "category": "Regulated utility service",
+      "description": "AEP's distinguishing asset is a set of state-approved large-load tariffs that convert an interconnection request into a take-or-pay obligation. By the August 2026 investor handout the company had approval in six of the eight states where it had filed and was targeting the remainder by the end of 2026. The common structure is a minimum threshold (25 MW in Ohio, 50 MW in Michigan, 70 MW in Indiana, 75 MW in Oklahoma and SWEPCO Texas, 100 MW individual or 150 MW aggregated in Virginia and West Virginia, 150 MW in Kentucky), a contract term of twelve to twenty years usually inclusive of a ramp period, a minimum billing demand of 80 to 90 percent of contracted capacity, an exit fee equal to some years of minimum charges, and collateral. The Q2 2026 Form 10-Q states the tariffs 'include contract lengths of up to 20 years and take-or-pay contractual minimums which can require a customer to pay for as much as 80-90% of their contracted demand'. The company frames the result as customer protection, stating up to $16B of cost offsets for existing residential customers from executed take-or-pay agreements inside the vertically integrated utilities.",
+      "highlights": [
+        "Ohio Schedule DCT, the template the others followed: adopted by the PUCO on July 9, 2025 and effective July 23, 2025 for new data centers of 25 MW and above, with a 12-year term including a four-year ramp, minimum billing demand of 85 percent, an exit fee equal to three years of minimum charges, tiered load-study fees of $10,000 to $100,000, and collateral of 50 percent of total minimum charges for the full term unless the customer is rated at least A- by S&P and A3 by Moody's",
+        "Indiana Tariff I.P., approved by the IURC on February 19, 2025 in Cause 46097, settled with Amazon Data Services, Google, Microsoft, the Data Center Coalition, the OUCC and the Citizens Action Coalition: 70 MW individual or 150 MW aggregated, minimum 12-year initial term after a ramp of up to five years, 80 percent minimum billing demand (the company had asked for 90), collateral of 24 times the maximum expected monthly non-fuel bill, and exit only after five years with 42 months' notice",
+        "Virginia Schedule L.P.S., final order June 1, 2026 in PUR-2025-00057: 100 MW individual or 150 MW aggregated, a 14-year initial term including a four-year ramp, and 80 percent minimum billing demand",
+        "Ohio results as filed with the PUCO on February 13, 2026: 5,642 MW signed under the data-center tariff, 12,219 MW of pre-tariff contracts, 17,861 MW of total contracted projects against original pre-tariff requests of about 30,000 MW — on a system whose peak is roughly 8,000 to 10,500 MW",
+        "AEP Texas operates under Texas SB 6 rather than a company tariff: it requires upfront construction funding as part of the letter of agreement, and received approximately $2B of financial security in cash, corporate or parental guarantees and letters of credit in July 2026 for the 40 GW it submitted to ERCOT's Batch Zero process",
+        "Contract form differs by market, per the August 2026 handout: ERCOT is 100 percent letters of agreement because the ERCOT contracting structure allows only those; PJM is 100 percent letters of agreement and about 95 percent service agreements; SPP is 100 percent letters and about 55 percent service agreements"
+      ],
+      "positioning": "The most complete multi-state tariff franchise in the sector, and the most litigated. Where Dominion's Virginia GS-5 class and Entergy's sealed single-customer service agreements are one-jurisdiction instruments, AEP has run the same argument to conclusion in eight commissions — and in Ohio the version the PUCO adopted was the consumer settlement signed with the staff, the Ohio Consumers' Counsel, the Ohio Energy Group, Walmart and Ohio Partners for Affordable Energy, over a competing settlement backed by Microsoft, Amazon Data Services, Google, the Data Center Coalition, Constellation Energy, Enchanted Rock and others.",
+      "soldThrough": "Direct service under each commission's approved tariff, on negotiated electric service agreements or letters of agreement.",
+      "targetSegments": [
+        "Hyperscale and colocation data-center developers, about 90 percent of contracted load including crypto customers",
+        "Industrial customers, about 10 percent of contracted load",
+        "Aluminium smelting and steel loads such as Emirates Global Aluminum at Inola and Nucor at Apple Grove"
+      ],
+      "roadmap": "Remaining large-load tariffs in Michigan (approved August 2026), Oklahoma and SWEPCO-Texas targeted for approval by the end of 2026; the Ohio tariff's fate rests with the Supreme Court of Ohio in case 2025-1458, argued through March 2026 and undecided."
+    },
+    {
+      "name": "Regulated distribution and vertically integrated service — seven operating companies, eleven states",
+      "category": "Regulated utility service",
+      "description": "AEP serves approximately 5.6 million customers across more than 200,000 square miles in eleven states through AEP Ohio (about 1.53 million customers, wires-only in a restructured market), AEP Texas (about 1.11 million, a transmission-and-distribution utility inside ERCOT), Appalachian Power (about 1.06 million in Virginia and West Virginia, with Wheeling Power and Kingsport Power), Indiana Michigan Power (about 610,000), Public Service Company of Oklahoma (about 580,000), Southwestern Electric Power Company (about 550,000 across Arkansas, Louisiana and Texas) and Kentucky Power (about 160,000). Two of the seven are wires-only and five are vertically integrated, so the regulatory chain taught by the Dominion, Southern and Entergy dossiers runs in two different shapes inside one holding company. Distribution carries $17B of the 2026–2030 capital plan, 22 percent of the total, weighted to AEP Texas at 28 percent and AEP Ohio at 20 percent.",
+      "highlights": [
+        "FY2025 retail sales volumes rose 7.5 percent in total and 9.9 percent in commercial and industrial, which the Form 10-K attributes primarily to new data-processing loads coming online in the commercial class",
+        "2025 was the first year total system sales exceeded 200 million MWh",
+        "Capital by subsidiary for 2026–2030 ($M): AEP Texas 16,802; AEP Transmission Holdco 12,855; Indiana Michigan Power 11,809; Appalachian Power 9,479; SWEPCO 8,942; PSO 8,521; AEP Ohio 5,735; Kentucky Power 1,984",
+        "Rate base is planned to reach roughly $128B by 2030 from about $85B in 2026, an approximately 11 percent compound growth rate; trailing-twelve-month earned ROE was 9.2 percent at June 30, 2026 against a target of approximately 9.5 percent by 2030",
+        "Load growth is being returned to customers in two jurisdictions: the PUCO's April 2026 order reduced AEP Ohio distribution revenues by $58.7M, about $1.22 a month for a residential customer, and in August 2026 Indiana Michigan Power filed a rate case proposing approximately $59M of 2027 bill reductions and a three-year residential rate freeze, which the company attributes to large customers including data centers"
+      ],
+      "positioning": "The only major US holding company operating across PJM, SPP and ERCOT simultaneously, with both wires-only and vertically integrated subsidiaries. That diversity is the company's stated hedge and its most-cited complexity cost: eight commissions, three market designs and, per the CEO in May 2026, open consideration of 'leaving PJM and SPP, staying in them or adopting alternative structures'.",
+      "soldThrough": "Direct regulated retail and delivery service under each state commission's tariffs.",
+      "targetSegments": [
+        "Residential and commercial customers in eleven states",
+        "Industrial customers in the Ohio Valley, the Gulf and the plains",
+        "Large loads under the tariff franchise above"
+      ],
+      "roadmap": "Ohio moves from electric security plans to triennial base rate cases after May 2028 under HB 15; Appalachian Power's Virginia biennial review PUR-2026-00044 has a decision deadline of January 15, 2027; the Indiana Michigan Power rate case has an IURC ruling expected June 2027."
+    },
+    {
+      "name": "Regulated generation — about 25,400 MW owned, and the gas build replacing the coal fleet",
+      "category": "Generation",
+      "description": "AEP owned approximately 25,400 MW at December 31, 2025, of which approximately 10,700 MW was coal-fired, plus the 2,296 MW Cook nuclear plant; company boilerplate puts owned and contracted capacity at approximately 32,000 to 33,000 MW. Generation carries $24B of the 2026–2030 capital plan, 31 percent of the total, split between about $13B of new generation, $8B of renewables and $3B of other. The build is overwhelmingly gas: the company had secured approximately 13 GW of gas-fired turbine capacity through 2031 by the second quarter of 2026, up from 'over 10 GW' six months earlier, with up to 10 GW more through 2035 under evaluation, and had requests for proposals outstanding for roughly 12,100 to 12,700 MW.",
+      "highlights": [
+        "Indiana Michigan Power filed a certificate application in July 2026 for the Rockport Energy Center, a 1,520 MW combined-cycle plant in Spencer County, Indiana, replacing the retiring Rockport coal units, with an IURC order expected in the first quarter of 2027 and operation in summer 2030",
+        "Indiana Michigan Power is also acquiring the 918 MW dual-fuel Sycamore Riverside Energy Center from Invenergy for March 2029 service, closed on the 870 MW Oregon Clean Energy Center in March 2026, and agreed in February 2026 to buy the 318 MW Big Sandy peaker",
+        "SWEPCO is building the 450 MW Hallsville plant on the retired Pirkey site using two General Electric combustion turbines and converting Welsh Units 1 and 3 to gas, a combined capital cost of approximately $723M in service between December 2027 and May 2028",
+        "PSO received Oklahoma Corporation Commission preapproval in May 2026 for approximately $1.3B of generation and storage including a 450 MW combustion-turbine addition at Northeastern by the end of 2028",
+        "Approved-but-not-in-service renewables and storage total 1,808 MW at June 30, 2026, including PSO's 224 MW owned battery project for 2027–2028 — the only utility-owned storage in the plan, with no supplier named",
+        "Nuclear: the Cook plant's two units are licensed to 2034 and 2037 with a renewal notice filed; AEP created a Nuclear Development organization under Alicia Knapp, and Indiana Michigan Power applied as a subrecipient under a Tennessee Valley Authority application with GE Hitachi's BWRX-300 for the Rockport site, with Appalachian Power pursuing a Virginia site at Joshua Falls",
+        "Fuel cells: a November 2024 agreement for up to 1 GW of Bloom Energy solid-oxide fuel cells produced two AEP Ohio contracts totalling about 98 MW for Amazon Web Services and Cologix, and in January 2026 an unregulated subsidiary committed approximately $2.65B for a large share of the 1 GW option for a facility near Cheyenne, Wyoming with a 20-year offtake for all of its output"
+      ],
+      "positioning": "A buyer rather than a developer in the technologies this corpus sells: the turbine capacity is contracted directly with manufacturers, the solar and wind arrive through power purchase agreements and acquisitions, and storage is a small, late and still-unawarded line. The fuel-cell position is the outlier — at up to 1 GW it is the largest utility fuel-cell commitment in the country by the company's own description.",
+      "soldThrough": "Self-build under state certificates, asset acquisitions from developers, all-source and technology-specific requests for proposals, and direct multi-year equipment reservations with manufacturers.",
+      "targetSegments": [
+        "Its own five vertically integrated operating companies' native load",
+        "Large-load customers whose service agreements underwrite the additions",
+        "Wholesale and merchant sales from the Generation and Marketing segment"
+      ],
+      "roadmap": "Rockport Energy Center order expected Q1 2027 for summer 2030 service; Sycamore in service March 2029; Hallsville December 2027; Welsh Unit 3 conversion 2027 and Unit 1 2028; Appalachian Power's Virginia-sited standalone battery RFP planned for Q3/Q4 2026; PSO's 2026 all-source RFP seeking 4,000 MW of SPP accredited capacity for 2029; the Wyoming fuel-cell facility targeted in service by 2028 to qualify for full investment tax credits."
+    },
+    {
+      "name": "Generation and Marketing, AEP Energy and the unregulated tail",
+      "category": "Competitive energy",
+      "description": "The Generation and Marketing segment earned $287M on a GAAP basis in 2025 and covers AEP Energy Partners' customized wholesale power supply products, the company's onsite and renewable ventures, merchant sales from Rockport Unit 2, and the unregulated Wyoming fuel-cell facility with its 20-year offtake to a high investment-grade counterparty. AEP Energy is the retail arm — a certified competitive retail electricity and natural gas supplier operating in 28 service territories across six states and Washington, D.C., with roughly a million customers.",
+      "highlights": [
+        "Generation and Marketing carries only $111M of the 2026–2030 capital budget, so the segment's growth is the Wyoming fuel-cell project rather than the existing book",
+        "Ohio HB 15, effective August 14, 2025, repealed the statute permitting distribution utilities to contract for customer-sited generation such as fuel cells, grandfathering the two existing PUCO-approved contracts — closing the regulated version of the onsite channel prospectively",
+        "The Wyoming facility's purchase conditions were extended in June 2026 to December 2026, so the largest unregulated commitment in the plan was still conditional at the dossier date"
+      ],
+      "positioning": "Small against the regulated business and deliberately so — the company's stated ambition is a regulated growth story, and the unregulated segment's principal role is to host structures the state commissions will no longer allow.",
+      "soldThrough": "Bilateral wholesale contracts, competitive retail supply, and long-term offtake agreements.",
+      "targetSegments": [
+        "Competitive retail customers in Ohio and five other states plus Washington, D.C.",
+        "Wholesale counterparties",
+        "A single investment-grade offtaker for the Wyoming output"
+      ],
+      "roadmap": "Wyoming fuel-cell conditions deadline December 2026; in service targeted by 2028 for full investment tax credits."
+    },
+    {
+      "name": "Economic development and interconnection services",
+      "category": "Customer service",
+      "description": "AEP runs a national customer and business development organization under the chief commercial officer, markets qualified data-center sites across its territories, and administers the interconnection processes its large loads must pass through — AEP Ohio's load-study process, AEP Texas's sponsorship of customer submissions into ERCOT's Batch Zero, and from June 1, 2027 the PJM-mandated Interim Resource Adequacy Service and Large Load Registry that electric distribution utilities will administer for certain new large loads.",
+      "highlights": [
+        "AEP Texas submitted 45 GW to ERCOT's Batch Zero process in July 2026 — 16 GW base load and 29 GW studied load — of which about 40 GW is targeted by 2030",
+        "ERCOT paused Batch Zero classification and study work in August 2026 after the Texas governor's audit directive, and is expected to file a comprehensive data-center verification and audit report on December 10, 2026, with the previous April 2027 timeline to be reassessed",
+        "The company has drawn roughly $5B in DOE loans and almost $400M in DOE grants, which it puts at about $1.4B of customer savings"
+      ],
+      "positioning": "The interconnection desk is where AEP's commercial advantage is actually exercised: it sponsors the customer's place in the queue, sets the collateral, and in ERCOT holds the security. A developer choosing between territories is choosing between interconnection processes as much as between rates.",
+      "soldThrough": "Direct engagement with site selectors, developers and state economic-development agencies.",
+      "targetSegments": [
+        "Hyperscalers and data-center developers selecting sites",
+        "Heavy industry considering the Ohio Valley, Gulf and plains territories"
+      ],
+      "roadmap": "ERCOT's audit report due December 10, 2026; PJM's centralized procurement beginning September 2026 and the Interim Resource Adequacy Service from June 1, 2027."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "System at December 31, 2025 (FY2025 Form 10-K unless noted)",
+      "specs": [
+        {
+          "band": "Customers and territory",
+          "label": "Customers",
+          "value": "5.6 million customers in 11 states (AR, IN, KY, LA, MI, OH, OK, TN, TX, VA, WV); over 200,000 square miles"
+        },
+        {
+          "band": "Customers and territory",
+          "label": "Employees",
+          "value": "17,581 — AEPSC 6,994; I&M 2,152; AEP Texas 1,730; APCo 1,682; OPCo 1,556; SWEPCo 1,392; PSO 1,150; KPCo 304; WPCo 229; KGPCo 48. 'Approximately 24% ... represented by labor unions'"
+        },
+        {
+          "band": "Wires",
+          "label": "Transmission",
+          "value": "Approximately 38,000 circuit miles of transmission lines, including approximately 2,000 circuit miles of 765 kV lines"
+        },
+        {
+          "band": "Wires",
+          "label": "Distribution",
+          "value": "Approximately 252,000 circuit miles of distribution lines"
+        },
+        {
+          "band": "Generation",
+          "label": "Owned capacity",
+          "value": "Approximately 25,400 MWs, of which approximately 10,700 MWs were coal-fired"
+        },
+        {
+          "band": "Generation",
+          "label": "Nuclear",
+          "value": "Cook Plant 2,296 MW; Units 1 and 2 licensed through 2034 and 2037"
+        },
+        {
+          "band": "Generation",
+          "label": "Owned and contracted",
+          "value": "Approximately 32,000 megawatts of diverse owned and contracted capacity (company boilerplate, 2026); '33 GW' in the August 2026 handout"
+        },
+        {
+          "band": "Sales",
+          "label": "FY2025 volume change",
+          "value": "Total Retail 7.5%, Residential 2.9%, Commercial and Industrial 9.9% — 'driven primarily by new data processing loads coming online in 2025 in the commercial customer class'"
+        },
+        {
+          "band": "Sales",
+          "label": "System total",
+          "value": "2025 marks a transformative milestone as total system sales surpass 200 million MWh for the first time (Q4 2025 deck)"
+        }
+      ]
+    },
+    {
+      "product": "Transmission network by voltage class (Q4 2025 earnings deck / 2025 EEI handout)",
+      "specs": [
+        {
+          "band": "Extra-high voltage",
+          "label": "765 kV",
+          "value": "2,124 miles (East); 'AEP owns and operates nearly 90% of the nation's 765 kV network with more than 2,100 miles in service and 30 substations across six states'; supported by over 8,000 structures"
+        },
+        {
+          "band": "Extra-high voltage",
+          "label": "500 kV",
+          "value": "113 miles (East)"
+        },
+        {
+          "band": "High voltage",
+          "label": "345 kV",
+          "value": "2,451 miles (West); 3,583 miles (East)"
+        },
+        {
+          "band": "High voltage",
+          "label": "138 kV",
+          "value": "8,028 miles (West); 9,392 miles (East)"
+        },
+        {
+          "band": "765 kV characteristics",
+          "label": "Throughput",
+          "value": "A single 765 kV circuit carries up to six times the power of a 345 kV line"
+        },
+        {
+          "band": "765 kV characteristics",
+          "label": "Losses",
+          "value": "Half the transmission losses of lower voltage systems"
+        },
+        {
+          "band": "765 kV characteristics",
+          "label": "History",
+          "value": "Energizing the world's first 765 kV line in 1969; Dolan Engineering Laboratory established 1987"
+        }
+      ]
+    },
+    {
+      "product": "Large-load tariffs by state (August 2026 investor handout, 'Innovative Data Center and Large Load Tariffs')",
+      "specs": [
+        {
+          "band": "Approved",
+          "label": "AEP Ohio",
+          "value": "25 MW individual site, aggregated / 12 years (includes 4-year ramp) / 85% minimum demand / after year 5, minimum bills for remaining term (max 3 years) / collateral yes"
+        },
+        {
+          "band": "Approved",
+          "label": "Indiana Michigan Power — Indiana",
+          "value": "70 MW individual site, 150 MW aggregated / 12-17 years / 80% / after year 5, minimum bills for remaining term (max 5 years) / collateral yes"
+        },
+        {
+          "band": "Approved",
+          "label": "Indiana Michigan Power — Michigan",
+          "value": "50 MW individual site, aggregated / 15-20 years / 90% / same termination / collateral yes — order received August 2026"
+        },
+        {
+          "band": "Approved",
+          "label": "Appalachian Power — Virginia",
+          "value": "100 MW individual site, 150 MW aggregated / 14 years (includes 4-year ramp) / 80% / same termination / collateral yes — order received June 2026"
+        },
+        {
+          "band": "Approved",
+          "label": "Appalachian Power — West Virginia",
+          "value": "100 MW individual site, 150 MW aggregated / 12-17 years (depends on ramp period) / 80% / same termination / collateral yes"
+        },
+        {
+          "band": "Approved",
+          "label": "Kentucky Power",
+          "value": "150 MW individual site / 20 years / 90% / same termination / collateral yes"
+        },
+        {
+          "band": "Pending",
+          "label": "PSO — Oklahoma",
+          "value": "75 MW+ individual site, aggregated (10-15 years) and 10-75 MW individual site, aggregated (2-5 years) / 80% / >75 MW: after year 5 (max 5 years); 10-75 MW: after year 2 (max 2 years)"
+        },
+        {
+          "band": "Pending",
+          "label": "SWEPCO — Texas",
+          "value": "75 MW aggregated / 17 years (includes 5-year ramp) / 80% / minimum bills for remaining term"
+        },
+        {
+          "band": "Notes",
+          "label": "Footnotes",
+          "value": "'Percentage may be higher based on prior period's peak demand'; 'Indiana, Michigan, Texas, Virginia and West Virginia tariff minimum bill calculations also include an energy component'"
+        },
+        {
+          "band": "Notes",
+          "label": "Status",
+          "value": "'Obtained approval of large load tariffs in six of the eight states where filings have been submitted; targeting to obtain approval of remaining tariffs by end of 2026'"
+        }
+      ]
+    },
+    {
+      "product": "Contracted incremental load by 2030 — the company's own ladder, kept apart from pipeline",
+      "specs": [
+        {
+          "band": "Contracted (signed ESAs and LOAs)",
+          "label": "February 2025",
+          "value": "'to serve more than 20 gigawatts of new load by the end of the decade'"
+        },
+        {
+          "band": "Contracted (signed ESAs and LOAs)",
+          "label": "July 2025",
+          "value": "'24 gigawatts of secured customer agreements with firm commitments through 2030 (up from 21 GW)'"
+        },
+        {
+          "band": "Contracted (signed ESAs and LOAs)",
+          "label": "October 2025",
+          "value": "'28 GW of load additions by 2030, up 4 GW since July 2025'; peak demand 'to surge to 65 GW by 2030, up from a current peak of 37 GW'"
+        },
+        {
+          "band": "Contracted (signed ESAs and LOAs)",
+          "label": "February 2026",
+          "value": "'56 GW of incremental load by 2030, up from 28 GW in October, all backed by signed agreements' — Texas ~36 GW, Ohio ~11 GW, Oklahoma ~5 GW, Indiana ~3 GW, Virginia ~1 GW; by RTO ERCOT 36 / PJM 15 / SPP 5"
+        },
+        {
+          "band": "Contracted (signed ESAs and LOAs)",
+          "label": "May 2026",
+          "value": "'63 gigawatts by 2030'; '7 gigawatts of new load agreements signed during the first quarter, primarily in Ohio and Texas' — Texas ~41 GW, Ohio ~12 GW, Oklahoma ~5 GW, Indiana ~3 GW, Louisiana ~1 GW, Virginia ~1 GW"
+        },
+        {
+          "band": "Contracted (signed ESAs and LOAs)",
+          "label": "July 2026",
+          "value": "'69 gigawatts (GW) through 2030'; 'six GW of signed load agreements during the second quarter, primarily in Texas' — Texas ~45 GW, Ohio ~12 GW, Oklahoma ~5 GW, Indiana ~4 GW, Kentucky ~1 GW, Louisiana ~1 GW, Virginia ~1 GW; by RTO 45 GW ERCOT, 18 GW PJM, 6 GW SPP; mix '90% Data Centers (includes crypto customers) / 10% Industrials'"
+        },
+        {
+          "band": "Contracted (signed ESAs and LOAs)",
+          "label": "Ramp",
+          "value": "Cumulative contracted additions 2026E 7 GW → 2027E 17 GW → 2028E 34 GW → 2029E 54 GW → 2030E 69 GW (annual 7 / 10 / 17 / 20 / 15 GW)"
+        },
+        {
+          "band": "Pipeline (NOT contracted)",
+          "label": "Interconnection queue",
+          "value": "'Over 190 gigawatts in load requests at various development stages' (July 2025); 'approximately 180 GW of active projects in the interconnection queue' (Q4 2025 deck); '~195 GW of active projects' (August 2026 handout)"
+        },
+        {
+          "band": "Pipeline (NOT contracted)",
+          "label": "AEP Ohio detail",
+          "value": "Signed contracts under Data Center Tariff 5,642 MW; pre-tariff contracts 12,219 MW; total contracted projects 17,861 MW; original requests (pre-tariff) 30,000 MW; requests proceeding to engineering study 13,022.7 MW; AEP Ohio peak approximately 8,000-10,500 MW (PUCO update, February 13, 2026)"
+        },
+        {
+          "band": "Pipeline (NOT contracted)",
+          "label": "ERCOT Batch Zero",
+          "value": "'45 GW Batch Zero Submission (2027-2032)' = '40 GW by 2030' + '5 GW Beyond 2030'; '16 GW Base Load' + '29 GW Studied Load'; 'In July 2026, AEP Texas received approximately $2 billion of financial security in the form of cash collateral, corporate or parental guarantees and letters of credit for the 40 gigawatts'"
+        }
+      ]
+    },
+    {
+      "product": "Capital plan 2026–2030 ($78B, August 2026 investor handout)",
+      "specs": [
+        {
+          "band": "By function",
+          "label": "Transmission",
+          "value": "$33B (42%) — $20B operating-company transmission plus $13B Transmission Holdco"
+        },
+        {
+          "band": "By function",
+          "label": "Generation",
+          "value": "$24B (31%) — $13B new generation, $8B renewables, $3B other generation"
+        },
+        {
+          "band": "By function",
+          "label": "Distribution",
+          "value": "$17B (22%)"
+        },
+        {
+          "band": "By function",
+          "label": "Other",
+          "value": "$4B (5%); '2026 Capital Investment $13B'; '~11% rate base CAGR'"
+        },
+        {
+          "band": "By subsidiary ($M)",
+          "label": "2026–2030",
+          "value": "AEP Texas 16,802; AEP Transmission Holdco 12,855; Indiana Michigan Power 11,809; Appalachian Power 9,479; SWEPCO 8,942; PSO 8,521; AEP Ohio 5,735; Kentucky Power 1,984; Kingsport 120; AEGCo 24; Other 1,666; total 77,937"
+        },
+        {
+          "band": "Line of sight (beyond the plan)",
+          "label": "Identified",
+          "value": "Fuel Cells for the Wyoming Project (Generation and Marketing) ~$4B, in service by 2028 to qualify for full Investment Tax Credits; Piketon Transmission Opportunity (AEP Ohio) $4.2B, power flowing 2029; New Generation Resources (vertically integrated utilities) >$2B"
+        },
+        {
+          "band": "Financing",
+          "label": "Structure",
+          "value": "Cash from operations $47,100M against capital and JV equity contributions $(77,900)M; DRIP $900M; ATM $4,000M ($1B/yr); settlement of March 2025 and May 2026 equity forwards $4,800M; debt to capitalization approximately 60-63%; FFO/Debt targeted 14-15%"
+        },
+        {
+          "band": "Financing",
+          "label": "Equity forwards",
+          "value": "'$3B equity forwards executed in May 2026, covering all currently anticipated marketed growth equity needs for the $78B capital plan' — 23,543,308 shares at a forward price of $124.968, settling on or prior to May 31, 2028"
+        }
+      ]
+    },
+    {
+      "product": "Credit ratings, senior unsecured (AEP fixed-income 'Credit Ratings' sheet, data as of December 2025)",
+      "specs": [
+        {
+          "band": "Parent",
+          "label": "American Electric Power Company",
+          "value": "Moody's Baa2 (Stable) · S&P BBB (Stable) · Fitch BBB (Stable); short-term P2 / A-2 / NR"
+        },
+        {
+          "band": "Operating companies",
+          "label": "AEP Ohio",
+          "value": "Baa1 (S) · BBB+ (S) · A- (S)"
+        },
+        {
+          "band": "Operating companies",
+          "label": "AEP Texas",
+          "value": "Baa3 (S) · BBB+ (S) · BBB+ (S)"
+        },
+        {
+          "band": "Operating companies",
+          "label": "AEP Transmission Company",
+          "value": "A2 (S) · BBB+ (S) · A (S)"
+        },
+        {
+          "band": "Operating companies",
+          "label": "Appalachian Power",
+          "value": "Baa1 (Negative) · BBB+ (S) · A- (S)"
+        },
+        {
+          "band": "Operating companies",
+          "label": "Indiana Michigan Power",
+          "value": "A3 (Positive) · BBB+ (S) · A (S)"
+        },
+        {
+          "band": "Operating companies",
+          "label": "Kentucky Power",
+          "value": "Baa3 (S) · BBB (S) · BBB+ (S)"
+        },
+        {
+          "band": "Operating companies",
+          "label": "PSO / SWEPCO / Transource",
+          "value": "PSO Baa1 (S) · BBB+ (S) · A- (S); SWEPCO Baa2 (S) · BBB+ (S) · BBB+ (S); Transource Energy A2 (S) · NR · NR"
+        },
+        {
+          "band": "Headroom",
+          "label": "Downgrade thresholds and trailing metrics",
+          "value": "Thresholds on a sustained basis: S&P FFO/Debt 13%, Moody's FFO/Debt 13%, Fitch FFO Leverage 5.8x. Trailing twelve months at 12/31/2025: Moody's FFO/Debt 13.9%, Fitch FFO Leverage 5.4x, S&P FFO/Debt 15.2%"
+        }
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "periods": [
+      {
+        "period": "FY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$19,721M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "No outlet-named full-year 2024 revenue consensus was located; the quarterly comparison is Q4 2024 revenue of $4.70B against $4.91B expected (MarketBeat)",
+            "kpi": "revenue",
+            "usdMillions": 19721,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating earnings per share (non-GAAP)",
+            "actual": "$5.62 (operating earnings $2.98B)",
+            "expected": "Q4 2024: $1.24 (MarketBeat); $1.25 (Investing.com)",
+            "verdict": "inline",
+            "result": "Q4 2024 operating EPS $1.24 against $1.24. No outlet-named full-year 2024 operating-EPS consensus was found, so the full-year verdict rests on the quarter",
+            "kpi": "eps"
+          },
+          {
+            "name": "GAAP earnings per share",
+            "actual": "$5.60 (net income $2.97B)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "2025 guidance issued at $5.75–$5.95 with a 6–8 percent long-term growth rate and a 14–15 percent FFO/debt target"
+          },
+          {
+            "name": "Construction expenditures",
+            "actual": "$7,631M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Up from $7,378M in 2023; the five-year capital plan announced with these results was $54B for 2025–2029 plus $10B of potential incremental investment",
+            "kpi": "capex",
+            "usdMillions": 7631,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Contracted incremental load by 2030",
+            "actual": "'more than 20 gigawatts of new load by the end of the decade'",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The first rung of the ladder. Commercial load grew 10.6 percent in 2024 and the company guided to 8–9 percent annual retail load growth for 2025–2027",
+            "kpi": "mw-contracted",
+            "qty": 20000
+          }
+        ],
+        "commentary": "The base year for everything that follows. The data-center tariff was still in settlement at the PUCO, the Indiana tariff was approved a week after these results, and the contracted figure was a round 20 GW."
+      },
+      {
+        "period": "FY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$21,876M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Q4 2025 revenue $5.31B against $5.20B (Zacks) and $5.07B (MarketBeat) — a beat on both bases. StockAnalysis records the full-year figure at $21.88B",
+            "kpi": "revenue",
+            "usdMillions": 21876,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating earnings per share (non-GAAP)",
+            "actual": "$5.97 (operating earnings $3.19B)",
+            "expected": "$5.90 (Zacks, via TradingView)",
+            "verdict": "beat",
+            "result": "Q4 2025 operating EPS $1.19 against $1.15 on both the Zacks and MarketBeat bases. 2026 guidance introduced at $6.15–$6.45 in October 2025",
+            "kpi": "eps"
+          },
+          {
+            "name": "GAAP earnings per share",
+            "actual": "$6.70 (net income $3.58B)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "GAAP exceeded operating because of the gain on the KKR/PSP transmission stake sale; 2025 GAAP segment earnings were Vertically Integrated Utilities $1,605M, Transmission and Distribution Utilities $816M, AEP Transmission Holdco $1,161M, Generation and Marketing $287M"
+          },
+          {
+            "name": "Construction expenditures",
+            "actual": "$8,453M",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The Form 10-K forecast approximately $12.2 billion of construction expenditures for 2026; the capital plan was raised to $72B for 2026–2030 in October 2025",
+            "kpi": "capex",
+            "usdMillions": 8453,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Contracted incremental load by 2030",
+            "actual": "'56 GW of incremental load by 2030, up from 28 GW in October, all backed by signed agreements'",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The doubling that drew the first independent scepticism — a bear case quoted by Simply Wall St called it 'a staggering 100% increase from just six months ago'. AEP Texas alone went from 13 GW to 36 GW",
+            "kpi": "mw-contracted",
+            "qty": 56000
+          }
+        ],
+        "commentary": "The year the tariff franchise converted. Ohio's tariff took effect in July, six states were approved by year-end, and the contracted figure nearly tripled. Retail sales volumes rose 7.5 percent with commercial and industrial up 9.9 percent, which the Form 10-K attributes primarily to new data-processing load."
+      },
+      {
+        "period": "Q1 2026",
+        "periodType": "quarter",
+        "periodEnd": "2026-03-31",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$6,020M (vs $5,463M in Q1 2025)",
+            "expected": "$5.68B (Zacks); $5.72B (MarketBeat)",
+            "verdict": "beat",
+            "result": "A beat on both bases",
+            "kpi": "revenue",
+            "usdMillions": 6020,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating earnings per share (non-GAAP)",
+            "actual": "$1.64 (operating earnings $891M)",
+            "expected": "$1.55 (Zacks); $1.57 (MarketBeat and Investing.com)",
+            "verdict": "beat",
+            "result": "A 5.8 percent beat on the Zacks basis; 2026 guidance reaffirmed at $6.15–$6.45",
+            "kpi": "eps"
+          },
+          {
+            "name": "GAAP earnings per share",
+            "actual": "$1.61 (net income $874M)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Segment GAAP earnings: Vertically Integrated Utilities $462M; Transmission and Distribution Utilities $237M; Transmission Holdco $209M; Generation and Marketing $75M; All Other $(109)M"
+          },
+          {
+            "name": "Contracted incremental load by 2030",
+            "actual": "'63 gigawatts by 2030'; '7 gigawatts of new load agreements signed during the first quarter, primarily in Ohio and Texas'",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "AEP Texas reached 41 GW of new load commitments. The capital plan was raised to $78B from $72B in the same release, with transmission at $33B or 42 percent of it",
+            "kpi": "mw-contracted",
+            "qty": 63000
+          }
+        ],
+        "commentary": "The quarter that set the current plan. Also the quarter in which the chief executive publicly questioned PJM and SPP, saying the state of PJM's performance and stakeholder approval process 'does not give me great confidence' and that options include leaving."
+      },
+      {
+        "period": "Q2 2026 (latest interim)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$5,445M",
+            "expected": "$5.26B (Zacks); $5.34B (MarketBeat)",
+            "verdict": "beat",
+            "result": "A 3.5 percent beat on the Zacks basis. One Investing.com article carried a higher $5.51B figure — the trackers diverge",
+            "kpi": "revenue",
+            "usdMillions": 5445,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Operating earnings per share (non-GAAP)",
+            "actual": "$1.36 (operating earnings $742M)",
+            "expected": "$1.49 (Zacks); $1.48 (MarketBeat and Investing.com)",
+            "verdict": "miss",
+            "result": "An 8.7 percent miss on the Zacks basis, attributed by Zacks to the timing of income taxes and the prior-year transmission minority-interest transaction. The CEO's own framing: 'While I recognize our operating earnings are below last year at this stage due to the 2025 transmission minority interest sale and the timing of tax-related items, I am highly confident in our robust business performance.' Guidance was nevertheless RAISED to $6.25–$6.55 from $6.15–$6.45",
+            "kpi": "eps"
+          },
+          {
+            "name": "GAAP earnings per share",
+            "actual": "$1.31 (net income $713M); year to date $2.92 GAAP and $3.01 operating",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Q2 operating segment earnings: Vertically Integrated Utilities $302M; Transmission and Distribution Utilities $239M; Transmission Holdco $225M; Generation and Marketing $91M"
+          },
+          {
+            "name": "Contracted incremental load by 2030",
+            "actual": "'69 gigawatts (GW) through 2030'; 'six GW of signed load agreements during the second quarter, primarily in Texas'",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "45 GW of the 69 is in ERCOT, where the contracting structure allows letters of agreement only; about $2B of financial security was received in July 2026 for the 40 GW submitted to Batch Zero, which ERCOT then paused in August",
+            "kpi": "mw-contracted",
+            "qty": 69000
+          }
+        ],
+        "commentary": "The quarter that separated the two stories: an earnings miss on tax timing and the minority-interest drag, against a guidance raise and six more gigawatts of signed load. The Q2 Form 10-Q forecasts approximately $12.8 billion of capital expenditures in 2026 and $65.1 billion across 2027–2030. Consensus for 2026 stood at about $6.35 (Zacks); 23 analysts carried a 'Buy' with a $144.0 target (StockAnalysis, accessed September 3, 2026)."
+      }
+    ]
+  },
+  "strategyRead": [
+    "(High confidence) We assess that AEP's durable advantage is contractual rather than physical: it has industrialized the large-load tariff and made the take-or-pay obligation, not the interconnection queue position, the thing a data center actually buys. Basis: approved tariffs in six of the eight states filed by August 2026 with minimum billing demand of 80 to 90 percent, terms of twelve to twenty years, ramp periods, collateral and exit fees, per the company's own comparison table; the Q2 2026 Form 10-Q's description of 'take-or-pay contractual minimums which can require a customer to pay for as much as 80-90% of their contracted demand'; and the resulting separation between 69 GW contracted and roughly 195 GW of queue activity, which the company reports as two different numbers rather than one. The corroborating detail is that AEP Ohio's own PUCO filing shows 17,861 MW contracted against 30,000 MW of original pre-tariff requests — the tariff removed roughly two-fifths of the stated demand.",
+    "(High confidence) We assess that the 765 kV franchise is the second and less replicable moat, and that AEP is now monetizing it in four market designs at once rather than defending it in one. Basis: company statements that it owns and operates nearly 90 percent of the national 765 kV network with more than 2,100 miles in service and 30 substations; awards totalling about $3.5B across PJM, SPP, MISO and ERCOT in 2025–2026 that lifted the transmission plan to $33B; three separate joint ventures (Valley Link with FirstEnergy Transmission and Dominion, Grid Growth Ventures with FirstEnergy Transmission, Midcontinent Grid Solutions with a Berkshire Hathaway Energy affiliate); and the stated posture of 'working with other IOUs to assist in their capability to build out 765 kV infrastructure'. The November 2025 Quanta Services agreement, which pairs 765 kV engineering and construction with a development agreement to expand domestic manufacturing of extra-high-voltage transformers and circuit breakers, indicates the company treats the supply chain rather than the permit as the binding constraint.",
+    "(Moderate confidence) We assess that the 69 GW contracted figure is of materially uneven quality across markets, and that the ERCOT tranche — two thirds of the total — carries the most execution risk despite carrying the most collateral. Basis: the company's own contract-form disclosure that ERCOT is '100% Senate Bill 6 (SB6) compliant load backed by LOAs; ERCOT contracting structure allows for LOAs only', against PJM at '100% LOAs and ~95% ESAs' and SPP at '~55% ESAs'; the 45 GW ERCOT tranche resting on letters of agreement rather than executed service agreements; approximately $2B of security posted in July 2026 for 40 GW of it; and ERCOT's suspension of Batch Zero classification and study work in August 2026 following the governor's audit directive, with the April 2027 study timeline to be reassessed and a verification report due December 10, 2026. A letter of agreement backed by cash is a stronger instrument than a queue position and a weaker one than a filed tariff contract.",
+    "(Moderate confidence) We assess that the Ohio tariff litigation is template risk rather than a single-state exposure, because the other seven states' tariffs were argued from the same premise. Basis: the PUCO adopted the consumer settlement signed with its own staff, the Ohio Consumers' Counsel, the Ohio Energy Group, Walmart and Ohio Partners for Affordable Energy over a competing settlement whose signatories included Microsoft, Amazon Data Services, Google, the Data Center Coalition, Constellation Energy and Enchanted Rock; rehearing was denied in September 2025; and the Ohio Manufacturers' Association Energy Group appealed to the Supreme Court of Ohio in November 2025, with merit briefing through March 2026 and no decision found as of this dossier. The Buckeye Institute's brief attacks the economic logic directly, arguing the tariff 'inverts the Ramsey rule' by charging the most elastic customers the highest markups. A reversal would not void the contracts already signed, but it would remove the instrument the other states copied.",
+    "(Moderate confidence) We assess that the balance sheet, not the demand, is the binding constraint on the $78B plan, and that the company has been pre-funding accordingly. Basis: AEP's own credit sheet puts trailing-twelve-month Moody's FFO/Debt at 13.9 percent against a stated downgrade threshold of 13 percent — 0.9 points of headroom — with Appalachian Power already on negative outlook at Moody's; against that, the $2.82B KKR/PSP sale of a 19.9 percent interest in the Ohio and Indiana Michigan transmission companies (closed June 2025, intended to offset approximately $5.35B of equity need through 2029), $3B of equity forwards executed in May 2026 that the company says cover all currently anticipated marketed growth equity for the plan, a $3.5B at-the-market programme, and roughly $5B of Department of Energy loans. The same stake sale is why Q2 2026 operating earnings fell year over year — the minority interest is a permanent earnings drag bought in exchange for equity headroom.",
+    "(Moderate confidence) We assess that AEP's answer to load growth is gas and firm capacity, with storage a deliberately small and still-unawarded line — which makes it a large turbine buyer and a marginal battery buyer for the rest of the decade. Basis: approximately 13 GW of gas turbine capacity secured through 2031 with options on up to 10 GW more through 2035, which trade press attributes to GE Vernova and Mitsubishi; a generation capital allocation of $24B split $13B new generation, $8B renewables and $3B other; approved-but-not-in-service renewables and storage of 1,808 MW at June 30, 2026 containing a single 224 MW PSO battery project; and no named battery supplier or integrator on any AEP project in any source reviewed. The fuel-cell position is the exception that proves the shape of the strategy: up to 1 GW contracted with Bloom Energy and approximately $2.65B committed for a Wyoming facility, bought because it is firm and fast rather than because it is storage.",
+    "(Low confidence) We assess that the chief executive's public consideration of leaving PJM and SPP is negotiating leverage over interconnection and cost allocation rather than a plan of record, but that it is a real signal about where the company believes its risk now sits. Basis: the May 2026 statement that PJM's performance and stakeholder approval process 'does not give me great confidence' and that options 'include leaving PJM and SPP, staying in them or adopting alternative structures', set against the company's simultaneous deepening of RTO-dependent positions — three transmission joint ventures inside PJM and MISO, $1.6B of SPP awards, and the administration of PJM's Interim Resource Adequacy Service from June 2027. We judge an exit improbable on that evidence; the statement's value is as a marker of the interconnection bottleneck the company will not solve alone."
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-30",
+      "category": "regulatory",
+      "headline": "Texas regulators approved 424 miles of Oncor 765 kV lines despite calls to wait — the Permian backbone AEP Texas's Howard–Solstice line connects to advances alongside it",
+      "read": "The backbone AEP Texas is building into is being approved segment by segment over organized landowner and legislative objection.",
+      "source": "https://www.wbap.com/2026/08/30/texas-regulators-approve-424-miles-of-power-lines-despite-calls-to-wait/"
+    },
+    {
+      "date": "2026-08-28",
+      "category": "regulatory",
+      "headline": "Ohio Consumers' Counsel urged FERC to resolve its three-year-old local transmission complaint, noting Ohio utilities have since put more than $4.3B of local and supplemental projects into PJM's plan",
+      "read": "Supplemental transmission — the category no regulator reviews for prudence — is the quiet half of the transmission story and it is now contested.",
+      "source": "https://www.utilitydive.com/news/ohio-ratepayer-advocate-ferc-local-transmission/829066/"
+    },
+    {
+      "date": "2026-08-26",
+      "category": "regulatory",
+      "headline": "Indiana Michigan Power filed an Indiana base rate case proposing approximately $59M of 2027 bill reductions and a three-year residential rate freeze, enabled by large customers including data centers",
+      "read": "The first case in the corpus where data-center load is used to cut residential bills rather than to justify raising them — the political proof the tariff franchise was built to produce.",
+      "source": "https://www.aep.com/news/stories/view/12206/"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "corporate",
+      "headline": "August/September investor handout: 69 GW contracted, $78B plan, the eight-state tariff table, and the Batch Zero pause",
+      "read": "The clearest single statement of the strategy, and the document that keeps contracted and pipeline figures in separate columns.",
+      "source": "https://docs.aep.com/docs/investors/eventspresentationsandwebcasts/August_2026_Investor_Handout.pdf"
+    },
+    {
+      "date": "2026-08-03",
+      "category": "procurement",
+      "headline": "Trade press reported AEP had secured 13 GW of gas turbines deployable by 2031 from GE Vernova and Mitsubishi, with options on 10 GW more by 2035",
+      "read": "The turbine market for AEP is effectively closed for the decade; the company names the volume, the press names the manufacturers.",
+      "source": "https://www.utilitydive.com/news/aep-secures-13-gw-of-gas-turbines-as-generation-central-to-growth-plans/826808/"
+    },
+    {
+      "date": "2026-08-03",
+      "category": "ma",
+      "headline": "AEP agreed to acquire the 710 MW Longview coal plant and the Mountain State Clean Energy site for a 1,200 MW combined-cycle plant in West Virginia, closing Q4 2026 or Q1 2027 subject to FERC approval",
+      "read": "Buying existing capacity and a permitted gas site is faster than certifying a new one — the same logic as the Oregon and Big Sandy acquisitions.",
+      "source": "https://www.herald-dispatch.com/business/aep-reaches-deal-to-acquire-longview-power-plant-gas-fired-project-site-in-mon-county/article_6885ae02-25b4-47cc-8f1e-26024a5495a6.html"
+    },
+    {
+      "date": "2026-08-01",
+      "category": "regulatory",
+      "headline": "The Michigan Public Service Commission approved Indiana Michigan Power's large-load tariff, taking the franchise to six approved states of eight (month-dated; day not stated)",
+      "read": "Michigan's 90 percent minimum demand is the strictest in the set alongside Kentucky's.",
+      "source": "https://docs.aep.com/docs/investors/eventspresentationsandwebcasts/August_2026_Investor_Handout.pdf"
+    },
+    {
+      "date": "2026-07-31",
+      "category": "customer",
+      "headline": "Appalachian Power told Cardinal News it has 36 potential large-load customers representing about 25,000 MW against a recent peak near 7,200 MW, naming Google in Botetourt County, Stack Infrastructure in Pittsylvania at 299+ MW, TAC Data Centers in Wythe at 1,000+ MW and Fluidstack/Solis Arx in Wythe",
+      "read": "The Virginia pipeline is more than three times the operating company's peak — the ratio that makes the tariff's minimum-demand term the whole argument.",
+      "source": "https://cardinalnews.org/2026/07/31/appalachian-power-anticipates-explosive-growth-in-large-customers-primarily-data-centers/"
+    },
+    {
+      "date": "2026-07-30",
+      "category": "financial",
+      "headline": "Q2 2026: operating EPS $1.36 against a $1.49 Zacks consensus, revenue $5,445M ahead of consensus, guidance RAISED to $6.25–$6.55, contracted load to 69 GW",
+      "read": "A miss on tax timing and the minority-interest drag, and a raise on the underlying business — the company asked investors to read the two separately.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000055/a2q20268kpressreleaseex991.htm"
+    },
+    {
+      "date": "2026-07-21",
+      "category": "leadership",
+      "headline": "David Marriott and Equinix executive chairman Charles Meyers joined the board, which now has 12 directors, 11 of them independent",
+      "read": "Putting a data-center landlord's executive chairman on the board of the utility contracting 69 GW of data-center load is a governance signal worth noting.",
+      "source": "https://www.aep.com/news/stories/view/12106/"
+    },
+    {
+      "date": "2026-07-20",
+      "category": "project",
+      "headline": "Indiana Michigan Power filed a certificate application for the 1,520 MW Rockport Energy Center combined-cycle plant, with an IURC order expected in Q1 2027 and operation in summer 2030",
+      "read": "The largest single generation filing in the plan, replacing the Rockport coal units on the same site.",
+      "source": "https://www.aep.com/news/stories/view/12100/"
+    },
+    {
+      "date": "2026-07-14",
+      "category": "regulatory",
+      "headline": "PJM's 2028/2029 Base Residual Auction cleared entirely at the cap, procuring 6,831.3 MW below the reliability requirement at a 14.4 percent reserve margin; AEP cleared the most demand response of any zone at 1,220.1 MW",
+      "read": "Two consecutive auctions at the cap is the price signal the whole region's politics now runs on, and AEP is the largest demand-response supplier into it.",
+      "source": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf"
+    },
+    {
+      "date": "2026-07-08",
+      "category": "financial",
+      "headline": "The Department of Energy closed a loan of up to $3.26B to AEP Texas for approximately 100 transmission projects covering roughly 2,800 miles, which it put at more than $685M of customer savings over 30 years",
+      "read": "Federal credit is now a material part of how the transmission plan is financed, and it lowers the equity the plan needs.",
+      "source": "https://www.energy.gov/articles/energy-department-closes-loan-aep-texas-delivering-millions-electricity-cost-savings"
+    },
+    {
+      "date": "2026-07-01",
+      "category": "regulatory",
+      "headline": "Oklahoma's attorney general announced a settlement cutting PSO's proposed rate increase to about $2.45 a month for residential customers from roughly $25, with interim rates near $11 from July 1",
+      "read": "The affordability fight follows the load-growth story into every state, and settles rather than litigates.",
+      "source": "https://tulsaflyer.org/2026/07/01/news/post/settlement-cut-proposed-pso-rate-increase/"
+    },
+    {
+      "date": "2026-06-02",
+      "category": "legal",
+      "headline": "Oklahoma Representative Tom Gann appealed the Corporation Commission's $1.3B PSO generation and storage preapproval to the Oklahoma Supreme Court in case 124090; more than 300 PSO customers entered appearances in the rate case",
+      "read": "Preapproval is the mechanism that makes a generation build bankable, and it is being tested in court in the state where AEP is adding the most storage.",
+      "source": "https://www.okhouse.gov/posts/news-20260602_2"
+    },
+    {
+      "date": "2026-06-01",
+      "category": "regulatory",
+      "headline": "The Virginia State Corporation Commission issued its final order in PUR-2025-00057 approving Appalachian Power's Schedule L.P.S. for loads of 100 MW individually or 150 MW aggregated, with a 14-year term and 80 percent minimum billing demand",
+      "read": "Virginia now has two large-load classes — Dominion's GS-5 and APCo's L.P.S. — written by two utilities under one commission.",
+      "source": "https://reisingergooch.com/virginia-energy-regulatory-updates-june-2026/"
+    },
+    {
+      "date": "2026-05-29",
+      "category": "regulatory",
+      "headline": "Appalachian Power filed its Virginia biennial review PUR-2026-00044 seeking about $61.4M gross and $36M net, which the company called the lowest increase in a base rate request in nearly 30 years, with a decision deadline of January 15, 2027",
+      "read": "Filing the smallest increase in three decades while the largest load in company history arrives is a deliberate political sequencing.",
+      "source": "https://reisingergooch.com/virginia-energy-regulatory-updates-june-2026/"
+    },
+    {
+      "date": "2026-05-13",
+      "category": "financial",
+      "headline": "Forward sale agreements covering 23,543,308 shares at a forward price of $124.968 with Bank of America, Goldman Sachs and Morgan Stanley, settling on or prior to May 31, 2028",
+      "read": "The company states this $3B covers all currently anticipated marketed growth equity for the $78B plan — the equity question is answered ahead of the spending.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000119312526223988/d248447d8k.htm"
+    },
+    {
+      "date": "2026-05-06",
+      "category": "market",
+      "headline": "The chief executive said PJM's performance and stakeholder approval process 'does not give me great confidence' and that options include leaving PJM and SPP, staying, or adopting alternative structures",
+      "read": "The largest transmission owner in PJM publicly pricing its membership is the strongest statement yet about the interconnection bottleneck.",
+      "source": "https://www.utilitydive.com/news/aep-pjm-spp-data-centers-earnings/819419/"
+    },
+    {
+      "date": "2026-05-05",
+      "category": "financial",
+      "headline": "Q1 2026: operating EPS $1.64 against $1.55 (Zacks), revenue $6,020M, capital plan raised to $78B from $72B with transmission at $33B, contracted load 63 GW",
+      "read": "The quarter that set the current plan; 7 GW of load signed in three months.",
+      "source": "https://www.aep.com/news/stories/view/11917/"
+    },
+    {
+      "date": "2026-05-01",
+      "category": "regulatory",
+      "headline": "The Oklahoma Corporation Commission approved PSO's request to procure 1.3 GW of generation resources including a 450 MW combustion-turbine addition at Northeastern for the end of 2028 (month-dated; day not stated)",
+      "read": "Preapproval before construction is the Oklahoma equivalent of Mississippi's pre-certification — the risk moves to the prudence review at the end.",
+      "source": "https://docs.aep.com/docs/investors/AEP10Q20262Q.pdf"
+    },
+    {
+      "date": "2026-04-27",
+      "category": "regulatory",
+      "headline": "An advocacy analysis put AEP Ohio's April 2026 basic transmission cost rider at approximately $7.90 a month on the average residential bill, about 5 percent, with PJM capacity costs driving 10 to 15 percent bill increases over the preceding year",
+      "read": "The advocate's arithmetic, not the utility's — but it is the number Ohio politics is reacting to.",
+      "source": "https://stopohiodatacenters.org/data-center-electric-bill-ohio"
+    },
+    {
+      "date": "2026-04-13",
+      "category": "leadership",
+      "headline": "Maryam S. Brown named President and COO of Indiana Michigan Power effective April 27, succeeding Steve Baker",
+      "read": "A Sempra operating-company chief executive taking over the subsidiary with the largest generation filing in the plan.",
+      "source": "https://www.aep.com/news/stories/view/11851/"
+    },
+    {
+      "date": "2026-04-10",
+      "category": "project",
+      "headline": "Indiana Michigan Power filed to acquire the 918 MW dual-fuel Sycamore Riverside Energy Center from Invenergy for March 2029 service",
+      "read": "Buying a developer's project rather than certifying a self-build is the faster path when the in-service date is the constraint.",
+      "source": "https://www.aep.com/news/stories/view/11850/"
+    },
+    {
+      "date": "2026-04-01",
+      "category": "regulatory",
+      "headline": "The PUCO's order on AEP Ohio's distribution base case reduced revenues by $58.7M, about $1.22 a month for a residential customer",
+      "read": "The distribution case cut bills in the same year the transmission rider raised them — the two move in opposite directions and only one is in the utility's control.",
+      "source": "https://docs.aep.com/docs/investors/eventspresentationsandwebcasts/August_2026_Investor_Handout.pdf"
+    },
+    {
+      "date": "2026-03-30",
+      "category": "regulatory",
+      "headline": "American Municipal Power, the Ohio Consumers' Counsel and the Maryland Office of People's Counsel opposed the ROE and incentives sought for the $1.1B Grid Growth Ohio 765/345 kV project, with the OCC noting about 60 percent of the cost falls on Ohio ratepayers",
+      "read": "The cost-allocation fight has moved from generation to transmission, and the same advocates who won the Ohio tariff are now on the other side of the wires.",
+      "source": "https://www.utilitydive.com/news/amp-ratepayer-advocates-ferc-aep-firstenergy-transmission/816060/"
+    },
+    {
+      "date": "2026-03-24",
+      "category": "legal",
+      "headline": "The Ohio Consumers' Counsel filed its merit brief as intervening appellee in Supreme Court of Ohio case 2025-1458, defending the data-center tariff against the Ohio Manufacturers' Association Energy Group's appeal",
+      "read": "The consumer advocate defending a utility's tariff against manufacturers and hyperscalers is the clearest map of who won and who lost in Ohio.",
+      "source": "https://www.supremecourt.ohio.gov/pdf_viewer/pdf_viewer.aspx?pdf=1000491.pdf&subdirectory=2025-1458\\DocketItems"
+    },
+    {
+      "date": "2026-03-20",
+      "category": "partnership",
+      "headline": "Piketon: the Department of Energy, SB Energy and AEP Ohio announced new 765 kV transmission for a 10 GW data-center campus at the former Portsmouth gaseous diffusion plant, with SB Energy committing to pay the entire $4.2B and power expected in 2029",
+      "read": "A customer paying the full transmission cost is the cleanest version of cost-causation in the corpus, and it sits outside the capital plan.",
+      "source": "https://www.aep.com/news/stories/view/10823/"
+    },
+    {
+      "date": "2026-03-17",
+      "category": "leadership",
+      "headline": "Brian Abraham, chief of staff to Senator Jim Justice and a retired Army brigadier general, named President and COO of Appalachian Power effective April 13",
+      "read": "A political appointment to the operating company with the most contested West Virginia and Virginia dockets.",
+      "source": "https://wvmetronews.com/2026/03/17/aep-selects-brian-abraham-to-head-appalachian-power/"
+    },
+    {
+      "date": "2026-03-16",
+      "category": "legal",
+      "headline": "The Buckeye Institute urged the Ohio Supreme Court to reverse the data-center tariff, arguing it 'inverts the Ramsey rule' by charging the most elastic customers the highest markups through an 85 percent take-or-pay mandate",
+      "read": "The free-market critique of the tariff, from the opposite direction to the consumer advocates' — the tariff is attacked from both flanks.",
+      "source": "https://www.buckeyeinstitute.org/library/docLib/2026-03-16-Undermining-Ohio-s-Competitive-Edge-policy-brief.pdf"
+    },
+    {
+      "date": "2026-03-06",
+      "category": "leadership",
+      "headline": "Adrian Rodriguez, formerly president of Xcel Energy's Southwestern Public Service, named President and COO of AEP Texas effective March 30, succeeding Judith Talavera",
+      "read": "The operating company carrying 45 of the 69 contracted gigawatts changed leadership in the middle of Batch Zero.",
+      "source": "https://www.aep.com/news/stories/view/10793/"
+    },
+    {
+      "date": "2026-02-17",
+      "category": "regulatory",
+      "headline": "PJM's board approved an $11.8B transmission expansion plan; Grid Growth Ventures, the Transource–FirstEnergy Transmission joint venture, was selected for about 300 miles of 765 kV in central Ohio at roughly $1.1–1.2B",
+      "read": "The second consecutive PJM window in which an AEP joint venture took a 765 kV backbone award.",
+      "source": "https://www.utilitydive.com/news/pjm-rtep-transmission-expansion-plan-dominion-nextera-exelon/812311/"
+    },
+    {
+      "date": "2026-02-13",
+      "category": "customer",
+      "headline": "AEP Ohio's PUCO update: 5,642 MW signed under the data-center tariff, 12,219 MW of pre-tariff contracts, 17,861 MW contracted in total against about 30,000 MW of original pre-tariff requests",
+      "read": "The single best public measurement of what a tariff does to a queue — roughly two fifths of the stated demand did not sign.",
+      "source": "https://www.aepohio.com/company/news/view?releaseID=10753"
+    },
+    {
+      "date": "2026-02-12",
+      "category": "financial",
+      "headline": "FY2025: GAAP EPS $6.70, operating EPS $5.97 against a $5.90 consensus, revenue $21.876B; contracted load doubled to 56 GW, with AEP Texas going from 13 GW to 36 GW",
+      "read": "The doubling that made the contracted figure the headline number and drew the first sustained scepticism about it.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000011/a4q20258kpressreleaseex991.htm"
+    },
+    {
+      "date": "2026-01-14",
+      "category": "market",
+      "headline": "PJM's 2026 load forecast put the RTO summer peak at 222,106 MW in 2036, a ten-year increase of 65,733 MW and 3.6 percent annual growth, with the AEP zone adjusted for data-center load",
+      "read": "The regional forecast the transmission plan is justified against, and the number every intervenor now audits.",
+      "source": "https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2026-load-report.pdf"
+    },
+    {
+      "date": "2026-01-08",
+      "category": "procurement",
+      "headline": "An unregulated AEP subsidiary signed an unconditional purchase agreement for a substantial portion of its 1 GW Bloom Energy option — approximately $2.65B — for a facility near Cheyenne, Wyoming with a 20-year offtake for 100 percent of its output",
+      "read": "The largest single equipment commitment in the file, made outside the regulated business because Ohio law closed the regulated version of it.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000003/0000004904-26-000003.txt"
+    },
+    {
+      "date": "2026-01-05",
+      "category": "project",
+      "headline": "MISO selected Midcontinent Grid Solutions, the Transource joint venture with a Berkshire Hathaway Energy affiliate, for a nearly 200-mile 765 kV project into Wisconsin estimated at about $1.2B with AEP's share about $500M (month-dated; day not stated)",
+      "read": "The fourth RTO in which AEP's 765 kV capability has now been awarded work.",
+      "source": "https://docs.aep.com/docs/investors/filings/docs/AEP_10K_2025.pdf"
+    },
+    {
+      "date": "2025-12-19",
+      "category": "regulatory",
+      "headline": "FERC found PJM's tariff unjust and unreasonable on co-located load and directed three new services, with 60-day compliance",
+      "read": "The federal answer to the behind-the-meter question every hyperscaler was asking, and it lands on PJM rather than the states.",
+      "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+    },
+    {
+      "date": "2025-12-19",
+      "category": "leadership",
+      "headline": "A special retention award to the chief executive of $10,000,000 in performance shares and $5,000,000 in restricted stock units vesting December 31, 2030",
+      "read": "The board priced continuity through the end of the capital plan.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000198/0000004904-25-000198.txt"
+    },
+    {
+      "date": "2025-12-17",
+      "category": "market",
+      "headline": "PJM's 2027/2028 Base Residual Auction cleared at the cap of $121,705/MW-year with data centers accounting for nearly the entirety of a roughly 5,250 MW peak increase",
+      "read": "The auction result that turned capacity prices into state politics across the whole footprint.",
+      "source": "https://www.enelnorthamerica.com/insights/blogs/pjm-2027-2028-capacity-auction-results"
+    },
+    {
+      "date": "2025-11-25",
+      "category": "financial",
+      "headline": "A new $3.5B at-the-market equity programme with a forward component replaced the $1.7B 2023 programme",
+      "read": "Equity capacity was rebuilt before the plan was raised, not after.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000182/0000004904-25-000182.txt"
+    },
+    {
+      "date": "2025-11-06",
+      "category": "project",
+      "headline": "SPP's board approved a 2025 Integrated Transmission Plan of about $8.6B and 50 projects including 949 miles of new 765 kV, of which AEP later reported $1.6B and 315 miles in Oklahoma and Louisiana",
+      "read": "SPP adopting 765 kV is the clearest evidence that AEP's voltage choice has become the regional default.",
+      "source": "https://www.rtoinsider.com/119101-spp-board-approves-2025-itp-765kv-projects/"
+    },
+    {
+      "date": "2025-11-05",
+      "category": "partnership",
+      "headline": "AEP and Quanta Services signed a Cooperation and Commitment Agreement for 765 kV engineering, procurement and construction and a Development Services Agreement to expand domestic manufacturing capacity for extra-high-voltage transformers and circuit breakers",
+      "read": "The company is buying supply-chain capacity, not just services — the transformer backlog is the constraint it named.",
+      "source": "https://www.aep.com/news/stories/view/10555/"
+    },
+    {
+      "date": "2025-10-29",
+      "category": "financial",
+      "headline": "Q3 2025: operating EPS $1.80, capital plan raised to $72B for 2026–2030, a new 7–9 percent long-term growth rate through 2030, contracted load 28 GW",
+      "read": "The plan and the growth rate that the 2026 raises were built on.",
+      "source": "https://www.aep.com/news/stories/view/10534/"
+    },
+    {
+      "date": "2025-10-17",
+      "category": "financial",
+      "headline": "Appalachian Power closed $1.6B of Department of Energy loans for nearly 5,000 miles of transmission",
+      "read": "The first of the DOE facilities, and the template for the larger AEP Texas loan nine months later.",
+      "source": "https://www.appalachianpower.com/company/news/view?releaseID=10506"
+    },
+    {
+      "date": "2025-09-03",
+      "category": "legal",
+      "headline": "The PUCO denied the applications for rehearing filed by five data-center settlement parties, clearing the way for the appeal to the Ohio Supreme Court",
+      "read": "The regulatory record closed; the fight moved to a court that had not seen the evidence.",
+      "source": "https://www.supremecourt.ohio.gov/pdf_viewer/pdf_viewer.aspx?pdf=1000491.pdf&subdirectory=2025-1458\\DocketItems"
+    },
+    {
+      "date": "2025-08-27",
+      "category": "corporate",
+      "headline": "The Cook nuclear plant marked 50 years; AEP filed a notice of intent to renew licences running to 2034 and 2037 and said it was strategically advancing potential small modular reactor projects in Virginia and Indiana",
+      "read": "Nuclear is a 2035-and-beyond option in this plan, not a 2030 answer.",
+      "source": "https://www.aep.com/news/stories/view/10407/"
+    },
+    {
+      "date": "2025-08-14",
+      "category": "policy",
+      "headline": "Ohio HB 15 took effect, replacing electric security plans with triennial base rate cases after May 2028 and repealing the statute permitting utilities to contract for customer-sited generation such as fuel cells, with two existing contracts grandfathered",
+      "read": "The law that pushed the fuel-cell business out of the regulated utility and into the unregulated subsidiary.",
+      "source": "https://ohiohouse.gov/legislation/136/hb15"
+    },
+    {
+      "date": "2025-07-30",
+      "category": "financial",
+      "headline": "Q2 2025: 24 GW of secured customer agreements with firm commitments through 2030, up from 21 GW, and a preview of an approximately $70B capital plan",
+      "read": "The quarter the contracted figure became the company's headline metric.",
+      "source": "https://www.aep.com/news/stories/view/10354/"
+    },
+    {
+      "date": "2025-07-09",
+      "category": "regulatory",
+      "headline": "The PUCO adopted AEP Ohio's data-center tariff — 25 MW threshold, 12-year term, four-year ramp, 85 percent minimum demand, exit fees and collateral — and directed the utility to lift its moratorium on new central Ohio connections",
+      "read": "The template. Every other AEP state tariff is a variation on this order.",
+      "source": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79"
+    },
+    {
+      "date": "2025-06-17",
+      "category": "leadership",
+      "headline": "Rob Berntsen named EVP and General Counsel effective July 14 and Johannes Eckert EVP and Chief Information and Technology Officer effective July 21",
+      "read": "The general counsel came from Xcel Energy's equivalent role into a company whose central risk is regulatory.",
+      "source": "https://www.aep.com/news/stories/view/10284/"
+    },
+    {
+      "date": "2025-06-05",
+      "category": "financial",
+      "headline": "The $2.82B sale of a 19.9 percent interest in the Ohio and Indiana Michigan transmission companies to KKR and PSP Investments closed, at a valuation trade press equated to $170 a share against a $92 market price",
+      "read": "Selling 5 percent of the transmission rate base at a large premium funded roughly $5.35B of equity need — and created the minority-interest drag that explains the 2026 earnings comparison.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000069/a06-2025olympuspressreleas.htm"
+    },
+    {
+      "date": "2025-06-05",
+      "category": "regulatory",
+      "headline": "The PUCO approved AEP Ohio's onsite fuel cells for Amazon Web Services on a six-year agreement and Cologix on a fifteen-year agreement, about 98 MW in total, with costs borne solely by those customers",
+      "read": "The first delivered instance of the bridge-power model inside a regulated utility, and the one HB 15 then closed.",
+      "source": "https://www.wosu.org/2025-05-28/state-utility-officials-approve-aep-ohios-building-onsite-energy-generators-at-two-data-centers"
+    },
+    {
+      "date": "2025-04-24",
+      "category": "project",
+      "headline": "The Texas commission approved the Permian Basin Reliability Plan's 765 kV import paths; AEP Texas will build the Howard–Solstice line, approximately 300 miles from Solstice substation near Fort Stockton to CPS Energy's Howard substation near San Antonio",
+      "read": "AEP's voltage, in a market it entered as a wires-only utility — and one of the three paths Oncor is building the rest of.",
+      "source": "https://www.aep.com/news/stories/view/10165/"
+    },
+    {
+      "date": "2025-02-27",
+      "category": "project",
+      "headline": "PJM's board approved $6.7B of transmission including a modified AEP, Dominion and FirstEnergy 765 kV backbone proposal; AEP's share was about $1.7B, of which $1.1B through the Valley Link joint venture",
+      "read": "The award that established the multi-utility joint venture as AEP's vehicle for extra-high-voltage work.",
+      "source": "https://www.utilitydive.com/news/pjm-rtep-transmission-expansion-plan-aep-dominion-firstenergy/741097/"
+    },
+    {
+      "date": "2025-02-19",
+      "category": "regulatory",
+      "headline": "The IURC approved Indiana Michigan Power's large-load tariff in Cause 46097, settled with Amazon Data Services, Google, Microsoft, the Data Center Coalition, the state consumer counselor and the Citizens Action Coalition — 70 MW threshold, 12-year minimum term, 80 percent minimum billing demand",
+      "read": "The one large-load tariff the hyperscalers signed rather than fought, and the reason Indiana's terms are milder than Ohio's.",
+      "source": "https://www.in.gov/iurc/files/ord_46097_021925.pdf"
+    },
+    {
+      "date": "2025-01-21",
+      "category": "legal",
+      "headline": "The Sixth Circuit ruled Ohio utilities cannot claim the 50-basis-point RTO participation adder because Ohio law mandates RTO membership, which trade press put at $220M of AEP customer savings through 2031",
+      "read": "A reminder that transmission returns are contestable in court as well as at FERC.",
+      "source": "https://www.utilitydive.com/news/appeals-court-ferc-roe-transmission-adder-aep-duke-firstenergy/737791/"
+    },
+    {
+      "date": "2025-01-17",
+      "category": "legal",
+      "headline": "AEP settled with the SEC for a $19M civil penalty relating to Empowering Ohio's Economy and HB 6, neither admitting nor denying the findings",
+      "read": "The residue of Ohio's previous utility scandal, closed in the same month the company began its data-center build.",
+      "source": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000015/0000004904-25-000015.txt"
+    },
+    {
+      "date": "2025-01-07",
+      "category": "leadership",
+      "headline": "Trevor Mihalik, formerly EVP and CFO and then group president of Sempra, named EVP and Chief Financial Officer effective January 20, succeeding Chuck Zebula",
+      "read": "The CFO who financed Sempra's utilities took over financing the largest capital plan in AEP's history.",
+      "source": "https://www.bradfordera.com/2025/01/07/aep-names-seasoned-energy-executive-trevor-mihalik-executive-vice-president-chief-financial-officer/"
+    },
+    {
+      "date": "2024-12-18",
+      "category": "project",
+      "headline": "SWEPCO filed for the 450 MW Hallsville plant on the retired Pirkey site using two General Electric combustion turbines, plus the Welsh Units 1 and 3 gas conversions and two wind projects",
+      "read": "The first of the gas self-builds, and one of only two projects where the turbine manufacturer is named in a company release.",
+      "source": "https://www.aep.com/news/stories/view/9916/"
+    },
+    {
+      "date": "2024-11-14",
+      "category": "procurement",
+      "headline": "AEP agreed to secure up to 1 GW of Bloom Energy solid-oxide fuel cells, which it described as the largest utility fuel cell technology initiative in the nation, with all costs covered by large customers under special contract",
+      "read": "The bridge-power answer to an interconnection queue the utility could not clear fast enough.",
+      "source": "https://www.aep.com/news/stories/view/9866/"
+    },
+    {
+      "date": "2024-10-23",
+      "category": "regulatory",
+      "headline": "AEP Ohio announced a data-center tariff settlement with the PUCO staff, the Ohio Consumers' Counsel, the Ohio Energy Group, Ohio Partners for Affordable Energy and Walmart",
+      "read": "The consumer coalition, formed a year before the order that adopted it over the hyperscalers' rival settlement.",
+      "source": "https://www.aep.com/news/stories/view/9829/"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "amazon",
+      "type": "customer",
+      "status": "active",
+      "since": "2024",
+      "scale": "$11B New Carlisle campus; ~98 MW of onsite fuel cells with Cologix; part of a $12B Louisiana investment",
+      "via": "Large-load service agreements plus AEP Ohio onsite fuel-cell service",
+      "note": "Amazon Web Services is a named large-load customer at Indiana Michigan Power, AEP Ohio and SWEPCO, and one of two anchor customers for AEP Ohio's onsite fuel-cell contracts.",
+      "context": "Amazon Data Services was a settling party to the IURC's February 19, 2025 order approving Indiana Michigan Power's large-load tariff in Cause 46097, alongside Google, Microsoft and the Data Center Coalition. Its New Carlisle, Indiana campus is an $11 billion investment that broke ground in October 2024. In Ohio the PUCO approved AEP Ohio building onsite solid-oxide fuel cells for AWS under a six-year agreement — about 98 MW across the AWS and Cologix sites, with costs 'borne solely by AWS and Cologix'. The Edison Electric Institute's large-customer list records an AWS data center in New Albany as 'part of $7.8 billion investment by AWS in Central Ohio and $23 billion in the state by 2030', and AWS campuses in SWEPCO's Caddo and Bossier Parishes territory as part of a $12 billion Louisiana investment. Amazon was also a signatory to the competing Ohio data-center settlement the PUCO declined to adopt.",
+      "source": "https://www.in.gov/iurc/files/ord_46097_021925.pdf"
+    },
+    {
+      "slug": "google",
+      "type": "customer",
+      "status": "active",
+      "since": "2024",
+      "scale": "$2B Fort Wayne data center; named projects in Botetourt County VA and Putnam County WV",
+      "via": "Large-load service agreements at Indiana Michigan Power and Appalachian Power",
+      "note": "Google is a named large-load customer at Indiana Michigan Power and at Appalachian Power in both Virginia and West Virginia, and was a settling party to the Indiana large-load tariff.",
+      "context": "Google co-signed the settlement approved by the IURC on February 19, 2025 in Cause 46097 establishing Indiana Michigan Power's large-load tariff. Its Fort Wayne data center, announced in April 2024, is a $2 billion investment. Cardinal News reported in July 2026 that Google is among the named Virginia data-center projects in Appalachian Power's territory, in Botetourt County; the EEI large-customer list separately records a multibillion-dollar Google project in Putnam County, West Virginia in APCo's territory. The Citizens Action Coalition alleges in IURC Cause 46301 that I&M is shifting more than $400 million in costs to connect the Google and Amazon campuses onto other customers.",
+      "source": "https://www.in.gov/iurc/files/ord_46097_021925.pdf"
+    },
+    {
+      "slug": "microsoft",
+      "type": "customer",
+      "status": "active",
+      "since": "2024",
+      "scale": "$1B Indiana investment",
+      "via": "Large-load service agreement at Indiana Michigan Power",
+      "note": "Microsoft is a named Indiana data-center customer and was a settling party to the Indiana Michigan Power large-load tariff order.",
+      "context": "Microsoft co-signed the settlement the IURC approved in Cause 46097 on February 19, 2025 alongside Amazon Data Services, Google and the Data Center Coalition. Trade press records a $1 billion Microsoft investment at LaPorte, Indiana; the EEI large-customer list places a Microsoft site at Granger, Indiana in I&M's territory. Microsoft was also a signatory to the competing data-center settlement in the Ohio tariff case, which the PUCO declined to adopt in favour of the consumer settlement.",
+      "source": "https://www.in.gov/iurc/files/ord_46097_021925.pdf"
+    },
+    {
+      "slug": "meta",
+      "type": "customer",
+      "status": "announced",
+      "since": "2025",
+      "scale": "$1B Tulsa data center",
+      "via": "PSO large-load service",
+      "note": "Meta is named on the Edison Electric Institute's large-customer list as a $1 billion Tulsa data-center project in Public Service Company of Oklahoma's territory.",
+      "context": "The EEI list of large customer projects and tariffs, updated August 28, 2026, records Meta's Tulsa project at $1 billion among the large loads in PSO's service territory. It sits behind the $1.3 billion generation and storage preapproval the Oklahoma Corporation Commission granted PSO in May 2026, which also covers the Emirates Global Aluminum smelter at Inola and which Representative Tom Gann has appealed to the Oklahoma Supreme Court. No AEP release names Meta directly in the sources reviewed.",
+      "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+    },
+    {
+      "slug": "openai",
+      "type": "customer",
+      "status": "announced",
+      "since": "2025",
+      "scale": "$15B data center project at the Lancium Clean Campus",
+      "via": "AEP Texas delivery service",
+      "project": "stargate",
+      "note": "The Edison Electric Institute's large-customer list records a $15 billion data-center project at the Lancium Clean Campus in Abilene, Texas, in AEP Texas's territory, as part of the OpenAI Stargate Project.",
+      "context": "The EEI list, updated August 28, 2026, names the AEP Texas project as a '$15 billion data center project at Lancium Clean Campus, part of OpenAI Stargate Project' at Abilene. AEP's own August 2026 investor handout maps a 'Stargate Data Center' at Abilene among its large-load sites without naming the tenant. The site sits inside the 45 GW of ERCOT load AEP Texas submitted to Batch Zero, for which it received approximately $2 billion of financial security in July 2026 — so the campus's regulatory path runs through the ERCOT audit ordered by the Texas governor in August 2026 rather than through a state tariff proceeding.",
+      "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+    },
+    {
+      "slug": "bloom-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024-11",
+      "scale": "Up to 1 GW of solid-oxide fuel cells; ~$2.65B committed for the Wyoming facility",
+      "via": "Solid-oxide fuel cells",
+      "note": "Bloom Energy is AEP's fuel-cell supplier under a November 2024 agreement for up to 1 GW, which AEP called the largest utility fuel cell technology initiative in the nation.",
+      "context": "AEP announced in November 2024 an agreement to secure up to 1 GW of Bloom Energy solid-oxide fuel cells, initially acquiring 100 MW with an option on the balance, with all costs covered by large customers under special contract. The PUCO approved two AEP Ohio contracts totalling about 98 MW in May 2025 — a six-year agreement for Amazon Web Services and a fifteen-year agreement for Cologix — with costs borne solely by those customers; appeals of those contracts to the Ohio Supreme Court were dismissed in June 2026. In January 2026 an unregulated AEP subsidiary committed approximately $2.65 billion for a substantial portion of the 1 GW option for a facility near Cheyenne, Wyoming with a 20-year offtake for all of its output; the purchase conditions were extended in June 2026 to December 2026, and the company lists roughly $4 billion of line-of-sight capital for it, targeted in service by 2028 to qualify for full investment tax credits.",
+      "source": "https://www.aep.com/news/stories/view/9866/"
+    },
+    {
+      "slug": "ge-vernova",
+      "type": "supplier",
+      "status": "active",
+      "since": "2024",
+      "scale": "Part of ~13 GW of gas turbine capacity secured through 2031; two combustion turbines at Hallsville",
+      "via": "Gas turbines",
+      "note": "Trade press names GE Vernova, with Mitsubishi, as the counterparty to the turbine reservations behind AEP's roughly 13 GW of secured gas capacity; SWEPCO's Hallsville plant uses two General Electric combustion turbines.",
+      "context": "AEP states in its own decks that it has secured approximately 13 GW of gas-fired turbine capacity through 2031 with options on up to 10 GW more through 2035, but does not name the manufacturers. Utility Dive reported in August 2026 that these are 'the turbine deals with GE Vernova and Mitsubishi'. Separately, AEP's own December 2024 release on SWEPCO's generation expansion specifies that the 450 MW Hallsville plant on the retired Pirkey site 'will feature two General Electric combustion gas turbine generators'. The distinction matters for sourcing: the volume figure is first-party, the manufacturer attribution for the fleet-wide reservation is trade press.",
+      "source": "https://www.utilitydive.com/news/aep-secures-13-gw-of-gas-turbines-as-generation-central-to-growth-plans/826808/"
+    },
+    {
+      "slug": "quanta-services",
+      "type": "partner",
+      "status": "active",
+      "since": "2025-11",
+      "scale": "765 kV EPC plus a development agreement on EHV transformer and breaker manufacturing",
+      "via": "Extra-high-voltage transmission construction and equipment manufacturing",
+      "note": "AEP and Quanta Services signed a Cooperation and Commitment Agreement covering design, engineering, procurement and construction of 765 kV and other high-voltage transmission facilities, plus a Development Services Agreement to expand domestic manufacturing capacity for extra-high-voltage transformers and circuit breakers.",
+      "context": "Announced by AEP on November 5, 2025. The agreement is unusual in pairing a construction relationship with an explicit industrial-capacity commitment: the binding constraint AEP names on its 765 kV programme is not permitting but the supply of extra-high-voltage transformers and circuit breakers, whose lead times are measured in years and whose manufacturers are few. The Form 10-K's tariff risk factor makes the same point from the other side, warning that 'constraints in the supply chain could restrict the availability and delay the construction' of projects. No third-party source reviewed corroborates the agreement, which rests on AEP's own release.",
+      "source": "https://www.aep.com/news/stories/view/10555/"
+    },
+    {
+      "slug": "dominion-energy",
+      "type": "partner",
+      "status": "active",
+      "since": "2024-10",
+      "scale": "Valley Link — ~260 miles of 765 kV plus ~155 miles; Dominion holds 30 percent of the JV",
+      "via": "Valley Link Transmission Company joint venture in PJM",
+      "note": "Dominion is AEP's joint-venture partner, with FirstEnergy Transmission, in Valley Link, the vehicle for PJM's 2024-window 765 kV backbone award.",
+      "context": "AEP, Dominion Energy Virginia and FirstEnergy jointly proposed a 765 kV multistate backbone into PJM's 2024 RTEP window in October 2024; PJM's board approved a modified version in February 2025 within a $6.7 billion plan. AEP's share was about $1.7 billion, of which roughly $1.1 billion runs through Valley Link Transmission Company — approximately 260 miles of 765 kV between Putnam County, West Virginia and Frederick County, Maryland, plus about 155 miles between Campbell County and Fauquier County, Virginia, with a new substation in Caroline County. IEEFA puts the equity split at Transource 36 percent, FirstEnergy 34 percent and Dominion 30 percent, with a required in-service date of June 1, 2029 against a projected date of December 1, 2029, and estimates the two West Virginia lines will cost that state's ratepayers more than $440 million over 40 years.",
+      "source": "https://www.aep.com/news/stories/view/10048/"
+    },
+    {
+      "slug": "terawulf",
+      "type": "customer",
+      "status": "announced",
+      "since": "2025",
+      "scale": "1 GW planned at the Muskie Data Campus",
+      "via": "Kentucky Power Industrial General Service tariff",
+      "note": "TeraWulf's Muskie Data Campus in Boyd County, Kentucky is the named large load behind Kentucky Power's 150 MW-threshold large-load tariff.",
+      "context": "Kentucky Power's own data-center page names the Muskie Data Center at the EastPark Industrial Park in Boyd County and describes service under the Industrial General Service tariff for large-load customers of 150 MW or more, with long-term contract commitments and minimum payment requirements. The Edison Electric Institute's August 2026 large-customer list records 'TeraWulf... 1GW data center project planned at the Muskie Data Campus in eastern Kentucky'. Kentucky's tariff carries the longest term in AEP's set at 20 years and a 90 percent minimum demand.",
+      "source": "https://www.kentuckypower.com/company/about/rates/data-centers"
+    },
+    {
+      "slug": "stack-infrastructure",
+      "type": "customer",
+      "status": "announced",
+      "since": "2026",
+      "scale": "299+ MW in Pittsylvania County, Virginia; Louisiana campuses with AWS",
+      "via": "Appalachian Power Schedule L.P.S. and SWEPCO service",
+      "note": "STACK Infrastructure is named as a large-load customer in Appalachian Power's Virginia territory and in SWEPCO's Louisiana territory.",
+      "context": "Cardinal News reported in July 2026 that STACK Infrastructure's Pittsylvania County project, at more than 299 megawatts, is among the named Virginia data-center developments in Appalachian Power's territory, within a set of 36 potential large-load customers representing about 25,000 MW against a recent APCo peak near 7,200 MW. The Edison Electric Institute's large-customer list separately records STACK alongside AWS in SWEPCO's Caddo and Bossier Parishes territory in Louisiana. Both sit under tariffs with 80 percent minimum billing demand.",
+      "source": "https://cardinalnews.org/2026/07/31/appalachian-power-anticipates-explosive-growth-in-large-customers-primarily-data-centers/"
+    },
+    {
+      "slug": "constellation-energy",
+      "type": "other",
+      "status": "historical",
+      "since": "2024",
+      "scale": "Signatory to the competing Ohio data-center settlement",
+      "via": "PUCO case 24-508-EL-ATA",
+      "note": "Constellation Energy was a signatory to the data-center settlement in AEP Ohio's tariff case that the PUCO declined to adopt, placing it opposite AEP in that proceeding.",
+      "context": "The PUCO's July 9, 2025 order in case 24-508-EL-ATA chose between two competing settlements. The one it adopted was signed by AEP Ohio, the commission staff, the Ohio Consumers' Counsel, the Ohio Energy Group, Walmart and Ohio Partners for Affordable Energy. The one it rejected was signed by Microsoft, the Data Center Coalition, Amazon Data Services, Google, Sidecat, Constellation Energy, Enchanted Rock, Interstate Gas Supply, the Ohio Blockchain Council, the Ohio Energy Leadership Council, the Ohio Manufacturers' Association Energy Group, One Power and the Retail Energy Supply Association. This is an adversarial relationship in a regulatory docket rather than a commercial one, and it is recorded because the alignment maps who gains and who loses under a large-load tariff.",
+      "source": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79"
+    },
+    {
+      "slug": "enchanted-rock",
+      "type": "other",
+      "status": "historical",
+      "since": "2024",
+      "scale": "Signatory to the competing Ohio data-center settlement",
+      "via": "PUCO case 24-508-EL-ATA",
+      "note": "Enchanted Rock was a signatory to the competing data-center settlement in AEP Ohio's tariff case that the PUCO did not adopt.",
+      "context": "Enchanted Rock, whose business is behind-the-meter and bridge generation for large loads, signed the data-center settlement in PUCO case 24-508-EL-ATA alongside the hyperscalers and the Data Center Coalition. The commission adopted the rival consumer settlement instead. The alignment is informative for this corpus: a stricter utility tariff raises the value of on-site generation alternatives, so the bridge-power vendors and the hyperscalers argued the same side, and the outcome — an 85 percent take-or-pay obligation — is part of why AEP Ohio's own fuel-cell contracts with Amazon Web Services and Cologix were negotiated as customer-funded onsite service.",
+      "source": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79"
+    },
+    {
+      "slug": "oncor",
+      "type": "partner",
+      "status": "announced",
+      "since": "2025",
+      "scale": "765 kV eastern backbone, co-sponsored by four transmission providers",
+      "via": "ERCOT Regional Planning Group project 25RPG025",
+      "note": "Co-sponsor of the eastern half of the Texas 765 kV backbone, and AEP Texas's largest interconnected counterparty in ERCOT.",
+      "context": "An ERCOT Regional Planning Group filing dated December 1, 2025 is titled '25RPG025 — AEP Texas, CPS Energy, Oncor and CNP Texas 765-kV STEP Eastern Backbone Project', naming the four utilities as co-sponsors of the eastern segment of the Strategic Transmission Expansion Plan. AEP Texas's Howard to Solstice 765 kV line in Docket 59366 connects into the same Permian backbone Oncor is certifying through its four pending applications. Oncor's Form 10-K grid-connections table records 21 interconnected lines each at 345 kV, 138 kV and 69 kV with American Electric Power, and notes that one of those 345 kV lines is an asynchronous high-voltage direct current tie to the Southwest Power Pool — the only path off the ERCOT island in Oncor's own table.",
+      "source": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Texas SB 6 and the PUCT large-load rulemakings",
+      "status": "in-effect",
+      "effectiveDate": "2025-06",
+      "exposure": "AEP Texas's 45 GW of contracted load sits entirely under Texas SB 6 rather than a company tariff — the company's own handout states the ERCOT tranche is '100% Senate Bill 6 (SB6) compliant load backed by LOAs' because 'ERCOT contracting structure allows for LOAs only'. The Form 10-K describes SB 6 as establishing 'a standardized process for connecting large load customers within ERCOT' and directing the PUCT to ensure large loads 'pay a reasonable share of allocated transmission costs', with rulemakings covering interconnection standards, co-location net metering, load forecasting, demand reduction and transmission cost allocation. AEP Texas received approximately $2 billion of financial security in July 2026 for the 40 GW it submitted to ERCOT's Batch Zero process; ERCOT paused Batch Zero classification and study work in August 2026 following the governor's audit directive, with a verification report due December 10, 2026 and the prior April 2027 study timeline to be reassessed.",
+      "mitigation": "The company requires upfront construction funding as part of each letter of agreement and holds the posted security; it also elected into the Texas HB 5247 unified tracker mechanism (PUCT Docket 58315) so that AEP Texas can adjust non-fuel rates annually rather than waiting for a base rate case.",
+      "source": "https://docs.aep.com/docs/investors/AEP10Q20262Q.pdf"
+    },
+    {
+      "regime": "Ohio HB 15 and the PUCO data-center tariff appeal",
+      "status": "in-effect",
+      "effectiveDate": "2025-08-14",
+      "exposure": "Two Ohio exposures run together. HB 15, effective August 14, 2025, replaces electric security plans with triennial base rate cases after May 2028, eliminates the OVEC deferral (AEP Ohio wrote off $24 million), and repeals prospectively the statute permitting distribution utilities to contract for customer-sited generation such as fuel cells, grandfathering the two PUCO-approved contracts. Separately, the data-center tariff the PUCO adopted on July 9, 2025 — the template for AEP's other seven state filings — is on appeal at the Supreme Court of Ohio in case 2025-1458, brought by the Ohio Manufacturers' Association Energy Group after the commission denied rehearing on September 3, 2025; merit briefing ran through March 2026 and no decision had issued as of this dossier.",
+      "mitigation": "AEP Ohio built the tariff on a settlement signed with the PUCO staff, the Ohio Consumers' Counsel, the Ohio Energy Group, Walmart and Ohio Partners for Affordable Energy, and the consumer counsel is defending it as intervening appellee. The fuel-cell business was moved to an unregulated subsidiary, where the Wyoming facility now sits.",
+      "source": "https://ohiohouse.gov/legislation/136/hb15"
+    },
+    {
+      "regime": "Indiana HEA 1007 and SEA 424",
+      "status": "in-effect",
+      "effectiveDate": "2025-05-06",
+      "exposure": "Indiana's 2025 session produced two statutes bearing directly on Indiana Michigan Power. HEA 1007, signed May 6, 2025, is described by the Citizens Action Coalition as intended to require AI data centers to pay 80 percent of costs while compressing the procedural timeline to 90 days and permitting a tracker that charges customers before facilities generate electricity; SEA 424, signed April 10, 2025, allows recovery of small modular reactor development costs. I&M's expedited generation resource plan under HEA 1007 — more than $7 billion and about 85 percent natural gas per Earthjustice — was settled and approved by the IURC in January 2026. The Citizens Action Coalition separately alleges in IURC Cause 46301 that I&M is shifting more than $400 million of interconnection costs for the Google and Amazon campuses onto other customers.",
+      "mitigation": "The company's answer is the August 2026 Indiana rate filing proposing approximately $59 million of 2027 bill reductions and a three-year residential rate freeze, attributed to large customers including data centers.",
+      "source": "https://earthjustice.org/press/2025/indiana-utility-im-proposes-more-than-7-billion-generation-plan-for-amazon-and-google-ai-data-centers"
+    },
+    {
+      "regime": "PJM capacity, cost allocation and the FERC co-location order",
+      "status": "in-effect",
+      "effectiveDate": "2025-12-18",
+      "exposure": "AEP's PJM operating companies face three simultaneous federal exposures. Capacity: the 2027/2028 and 2028/2029 Base Residual Auctions both cleared entirely at the cap, the latter procuring 6,831.3 MW below the reliability requirement at a 14.4 percent reserve margin, driving the bill increases now shaping Ohio politics. Co-location: FERC found PJM's tariff unjust and unreasonable in December 2025 and directed three new services for co-located load, with PJM's July 2026 reforms adding a Reliability Backstop Procurement mechanism, a Large Load Registry and an Interim Resource Adequacy Service that electric distribution utilities must administer for certain new large loads from June 1, 2027. Cost allocation: American Municipal Power, the Ohio Consumers' Counsel and the Maryland Office of People's Counsel are contesting the ROE and incentives sought for the $1.1 billion Grid Growth Ohio project, with the OCC stating about 60 percent of its cost falls on Ohio ratepayers, and IEEFA estimating West Virginia ratepayers will bear more than $440 million for Valley Link and MARL. A separate Sixth Circuit ruling in January 2025 stripped the 50-basis-point RTO participation adder from Ohio utilities.",
+      "mitigation": "The Form 10-Q warns that PJM's reforms 'have the potential to materially impact AEP's competitive retail operations and could materially alter OPCo's cost allocations'; the chief executive has publicly raised leaving PJM and SPP as one option among staying and adopting alternative structures.",
+      "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+    },
+    {
+      "regime": "West Virginia HB 2014 — the Power Generation and Consumption Act",
+      "status": "in-effect",
+      "effectiveDate": "2025-04",
+      "exposure": "West Virginia's 2025 statute permits microgrids serving data centers, where more than 70 percent of generated electricity is consumed by data centers, to be exempt from Public Service Commission jurisdiction on rates, certificates and interconnection standards, with the resulting tax revenue split across a personal income tax reduction fund, the host county, all 55 counties, an economic enhancement grant fund and an electric grid stabilization and security fund. It creates a lawful route for a large load in Appalachian Power's territory to be served outside the regulated relationship altogether. AEP has separately been reported as exploring a non-utility generation-company model for West Virginia large loads.",
+      "mitigation": "Appalachian Power and Wheeling Power received approval in March 2025 to revise their Large Capacity Power and Industrial Power tariffs (WV PSC case 24-0611-E-T-PW), and AEP has agreed to acquire the 710 MW Longview plant and a permitted 1,200 MW combined-cycle site in the state.",
+      "source": "https://www.theintelligencer.net/news/top-headlines/2025/11/site-certification-rules-released-for-west-virginias-new-data-center-microgrid-law/"
+    },
+    {
+      "regime": "EPA greenhouse-gas rules, OBBBA tax-credit phase-out and import tariffs",
+      "status": "in-effect",
+      "effectiveDate": "2025-07",
+      "exposure": "Three federal exposures sit on the generation and supply-chain side. AEP joined other utilities in challenging the April 2024 greenhouse-gas rule, and the EPA proposed in June and July 2025 to eliminate the standards and repeal the 2009 endangerment finding; a new performance standard applies to combustion turbines commencing construction after December 13, 2024, which management states it is evaluating for its new turbine projects. The One Big Beautiful Bill Act modifies and accelerates the phase-out of technology-neutral production and investment credits for wind and solar, which is why the Wyoming fuel-cell facility is explicitly targeted in service by 2028 'to qualify for full Investment Tax Credits'. And the Form 10-K's tariff risk factor warns that tariffs on imported goods and supply-chain constraints 'could restrict the availability and delay the construction' of projects — the constraint the Quanta agreement on domestic extra-high-voltage transformer and breaker manufacturing is meant to relieve.",
+      "mitigation": "Approximately 10,700 MW of the fleet remains coal-fired with retirement and conversion dates set by state proceedings rather than the federal rules; the company also lists proceeds from the sale of tax credits among its forward-looking financial factors.",
+      "source": "https://docs.aep.com/docs/investors/filings/docs/AEP_10K_2025.pdf"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "William J. (Bill) Fehrman",
+      "title": "Chairman of the Board, President and Chief Executive Officer",
+      "photo": "images/execs/aep-fehrman.jpg",
+      "background": [
+        "President and CEO of AEP since August 2024; elected Chairman effective August 1, 2025 — AEP's 13th president and ninth CEO in its 118-year history",
+        "President and CEO — Centuri Holdings",
+        "President, CEO and Director — Berkshire Hathaway Energy (2018–2023)",
+        "President and CEO — MidAmerican Energy (2007–2018); earlier BHE Renewables, PacifiCorp Energy and Nebraska Public Power District",
+        "BS civil engineering, University of Nebraska; MBA, Regis University. Boards include the Edison Electric Institute, the Nuclear Energy Institute and the Secretary of Energy Advisory Board"
+      ]
+    },
+    {
+      "name": "Trevor I. Mihalik",
+      "title": "Executive Vice President and Chief Financial Officer",
+      "photo": "images/execs/aep-mihalik.jpg",
+      "background": [
+        "EVP and CFO of AEP effective January 20, 2025, succeeding Chuck Zebula",
+        "Executive Vice President and Group President — Sempra (SDG&E and SoCalGas), from January 2024",
+        "Executive Vice President and Chief Financial Officer — Sempra (2018–2023); earlier SVP Controller and Chief Accounting Officer",
+        "Iberdrola Renewables; Chevron Natural Gas; Bridgeline Holdings; PricewaterhouseCoopers",
+        "BS accounting, Creighton University; MBA, Rice University; CPA (Texas); director of WD-40"
+      ]
+    },
+    {
+      "name": "Greg Hall",
+      "title": "Executive Vice President and Chief Commercial Officer",
+      "photo": "images/execs/aep-hall.jpg",
+      "background": [
+        "Oversees competitive retail and wholesale businesses, regulated commercial operations and renewable infrastructure development, and AEP's national customer and business development organization — the commercial owner of the large-load franchise",
+        "President — AEP Energy Partners",
+        "Vice President, Energy Marketing — AEP (2002–2006); with AEP since 1997",
+        "MA, The Ohio State University; BS, Brigham Young University"
+      ]
+    },
+    {
+      "name": "Doug Cannon",
+      "title": "President, AEP Transmission",
+      "photo": "images/execs/aep-cannon.jpg",
+      "background": [
+        "President of AEP Transmission effective June 11, 2025; Bob Bradish serves as Chief Transmission Officer reporting to him",
+        "President and CEO — NV Energy",
+        "SVP, General Counsel, Corporate Secretary and Chief Compliance Officer — NV Energy",
+        "Attorney — PacifiCorp; private practice",
+        "JD and MS, University of Colorado; BS, Weber State University"
+      ]
+    },
+    {
+      "name": "Rob Berntsen",
+      "title": "Executive Vice President and General Counsel",
+      "photo": "images/execs/aep-berntsen.jpg",
+      "background": [
+        "EVP and General Counsel effective July 14, 2025",
+        "Executive Vice President and Chief Legal and Compliance Officer — Xcel Energy",
+        "SVP and General Counsel — BHE Renewables; SVP and General Counsel — MidAmerican Energy",
+        "Vice President, Policy — MISO; Chair, Iowa Utilities Commission; Vectren; US Army JAG (Iraq, 2005)",
+        "BA, Georgetown University; JD, University of Iowa"
+      ]
+    },
+    {
+      "name": "Joseph F. Moore",
+      "title": "Executive Vice President, Operational Excellence",
+      "photo": "images/execs/aep-moore.jpg",
+      "background": [
+        "SVP Business Transformation — AEP",
+        "SVP — Berkshire Hathaway Energy",
+        "MidAmerican Energy; PacifiCorp; Nebraska Public Power District"
+      ]
+    },
+    {
+      "name": "Marc Reitter",
+      "title": "President and Chief Operating Officer, AEP Ohio",
+      "photo": "images/execs/aep-reitter.jpg",
+      "background": [
+        "President and COO of AEP Ohio since 2021 — the operating company whose data-center tariff became the template for the franchise",
+        "Vice President, Regulatory and Finance — AEP Ohio (2016–2021); with AEP since 2002",
+        "MBA, The Ohio State University; BS, Arizona State University"
+      ]
+    },
+    {
+      "name": "Adrian Rodriguez",
+      "title": "President and Chief Operating Officer, AEP Texas",
+      "photo": "images/execs/aep-rodriguez.jpg",
+      "background": [
+        "President and COO of AEP Texas effective March 30, 2026, succeeding Judith Talavera — the operating company carrying 45 of the 69 contracted gigawatts",
+        "President — Southwestern Public Service Company, Xcel Energy (2022–2026)",
+        "SVP, Regulatory and Strategy — Puget Sound Energy",
+        "SVP, General Counsel and interim CEO — El Paso Electric",
+        "JD, Columbia University; MPP, Harvard Kennedy School; BA, University of Texas"
+      ]
+    },
+    {
+      "name": "Maryam S. Brown",
+      "title": "President and Chief Operating Officer, Indiana Michigan Power",
+      "photo": "images/execs/aep-brown.jpg",
+      "background": [
+        "President and COO of Indiana Michigan Power effective April 27, 2026, succeeding Steve Baker",
+        "President and CEO — Southern California Gas Company (Sempra)",
+        "Vice President, Federal Government Affairs — Sempra",
+        "Chief Counsel — US House Energy and Power Subcommittee; counsel to Speaker Paul Ryan; SEC attorney; Amoco engineer",
+        "JD and BS mechanical engineering, Louisiana State University"
+      ]
+    },
+    {
+      "name": "Brian Abraham",
+      "title": "President and Chief Operating Officer, Appalachian Power",
+      "photo": "images/execs/aep-abraham.jpg",
+      "background": [
+        "President and COO of Appalachian Power effective April 13, 2026",
+        "Chief of Staff to Senator (and former Governor) Jim Justice of West Virginia",
+        "Prosecuting Attorney, Logan County, West Virginia (1999–2009)",
+        "US Army, retired as brigadier general after 22 years; West Virginia National Guard",
+        "BBA, Fairmont State University; MSS, US Army War College; JD, West Virginia University"
+      ]
+    },
+    {
+      "name": "Leigh Anne Strahler",
+      "title": "President and Chief Operating Officer, Public Service Company of Oklahoma",
+      "photo": "images/execs/aep-strahler.jpg",
+      "background": [
+        "President and COO of PSO since 2022",
+        "Vice President, Regulatory and Finance — AEP Texas",
+        "Appalachian Power; AEP Generation; Limited Brands; IBM",
+        "BA, Bethany College; MBA, Oklahoma State University"
+      ]
+    },
+    {
+      "name": "Brett Mattison",
+      "title": "President and Chief Operating Officer, Southwestern Electric Power Company",
+      "photo": "images/execs/aep-mattison.jpg",
+      "background": [
+        "President and COO of SWEPCO, serving about 547,000 customers in Arkansas, Louisiana and Texas",
+        "President and COO — Kentucky Power",
+        "Director, Customer Services and Marketing — SWEPCO (2004–2019); joined AEP in 1990",
+        "BS, Louisiana Tech University"
+      ]
+    },
+    {
+      "name": "Cindy Wiseman",
+      "title": "President and Chief Operating Officer, Kentucky Power",
+      "photo": "images/execs/aep-wiseman.jpg",
+      "background": [
+        "President and COO of Kentucky Power — the operating company whose 150 MW, 20-year, 90 percent minimum-demand tariff is the strictest in the AEP set",
+        "Named on AEP's leadership roster as of September 2026"
+      ]
+    },
+    {
+      "name": "Alicia Knapp",
+      "title": "President, Nuclear Development",
+      "photo": "images/execs/aep-knapp.jpg",
+      "background": [
+        "President of AEP's Nuclear Development organization, created to pursue small modular reactors at the Rockport site in Indiana and Joshua Falls in Virginia",
+        "President and CEO — BHE Renewables",
+        "Aaron Walker serves as Vice President, Engineering and Quality, Nuclear Development"
+      ]
+    },
+    {
+      "name": "Kelly Ferneau",
+      "title": "Executive Vice President and Chief Nuclear Officer",
+      "photo": "images/execs/aep-ferneau.jpg",
+      "background": [
+        "EVP and Chief Nuclear Officer effective November 1, 2024, responsible for the 2,296 MW Cook plant",
+        "Site Vice President — Cook Plant",
+        "Exelon Byron Station, 18 years"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "WBAP — Texas regulators approve 424 miles of power lines despite calls to wait",
+      "url": "https://www.wbap.com/2026/08/30/texas-regulators-approve-424-miles-of-power-lines-despite-calls-to-wait/",
+      "date": "2026-08-30"
+    },
+    {
+      "label": "Edison Electric Institute — List of Large Customer Projects and Tariffs",
+      "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "Utility Dive — Ohio ratepayer advocate urges FERC to resolve 3-year-old local transmission complaint",
+      "url": "https://www.utilitydive.com/news/ohio-ratepayer-advocate-ferc-local-transmission/829066/",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "AEP — Indiana Michigan Power files rate case with 2027 bill reductions and a three-year freeze",
+      "url": "https://www.aep.com/news/stories/view/12206/",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "AEP — August/September 2026 Investor Handout",
+      "url": "https://docs.aep.com/docs/investors/eventspresentationsandwebcasts/August_2026_Investor_Handout.pdf",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "Utility Dive — AEP secures 13 GW of gas turbines as generation 'central' to growth plans",
+      "url": "https://www.utilitydive.com/news/aep-secures-13-gw-of-gas-turbines-as-generation-central-to-growth-plans/826808/",
+      "date": "2026-08-03"
+    },
+    {
+      "label": "Herald-Dispatch — AEP reaches deal to acquire Longview Power Plant and gas-fired project site",
+      "url": "https://www.herald-dispatch.com/business/aep-reaches-deal-to-acquire-longview-power-plant-gas-fired-project-site-in-mon-county/article_6885ae02-25b4-47cc-8f1e-26024a5495a6.html",
+      "date": "2026-08-03"
+    },
+    {
+      "label": "Cardinal News — Appalachian Power anticipates explosive growth in large customers, primarily data centers",
+      "url": "https://cardinalnews.org/2026/07/31/appalachian-power-anticipates-explosive-growth-in-large-customers-primarily-data-centers/",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "AEP — Q2 2026 earnings release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000055/a2q20268kpressreleaseex991.htm",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "AEP — Q2 2026 earnings release (aep.com)",
+      "url": "https://www.aep.com/news/stories/view/12135/",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "AEP — Q2 2026 earnings presentation",
+      "url": "https://docs.aep.com/docs/newsroom/resources/earnings/2026-07/2Q26EarningsReleasePresentation.pdf",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "AEP — Form 10-Q, quarter ended June 30, 2026",
+      "url": "https://docs.aep.com/docs/investors/AEP10Q20262Q.pdf",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Zacks via The Globe and Mail — American Electric's Q2 earnings lag estimates, revenues increase year over year",
+      "url": "https://www.theglobeandmail.com/investing/markets/stocks/AEP/pressreleases/3556999/american-electrics-q2-earnings-lag-estimates-revenues-increase-yy/",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Investing.com — AEP Q2 2026 slides: guidance raised despite earnings miss on 69 GW demand",
+      "url": "https://www.investing.com/news/company-news/aep-q2-2026-slides-guidance-raised-despite-earnings-miss-on-69-gw-demand-93CH-4825373",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "AEP — David Marriott and Charles Meyers elected to the board",
+      "url": "https://www.aep.com/news/stories/view/12106/",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "AEP — Indiana Michigan Power files CPCN for the 1,520 MW Rockport Energy Center",
+      "url": "https://www.aep.com/news/stories/view/12100/",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "14 News — Plans announced for Rockport natural gas plant",
+      "url": "https://www.14news.com/2026/07/20/one-largest-utility-construction-undertakings-indiana-plans-announced-rockport-natural-gas-plant/",
+      "date": "2026-07-20"
+    },
+    {
+      "label": "Utility Dive — Virginia SCC weighs Dominion data center transmission cost allocation",
+      "url": "https://www.utilitydive.com/news/virginia-scc-dominion-data-center-transmission-cost-allocation/825300/",
+      "date": "2026-07-15"
+    },
+    {
+      "label": "PJM — 2028/2029 Base Residual Auction results report",
+      "url": "https://www.pjm.com/-/media/DotCom/markets-ops/rpm/rpm-auction-info/2028-2029/2028-2029-bra-results-report.pdf",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "US Department of Energy — Energy Department closes loan to AEP Texas",
+      "url": "https://www.energy.gov/articles/energy-department-closes-loan-aep-texas-delivering-millions-electricity-cost-savings",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "AEP — AEP Texas closes DOE loan of up to $3.26 billion",
+      "url": "https://www.aep.com/news/stories/view/12063/",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "RTO Insider — DOE to loan AEP Texas up to $3.26B for upgrades",
+      "url": "https://www.rtoinsider.com/136108-doe-closes-loan-aep-texas-transmission-upgrades/",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "Tulsa Flyer — Oklahoma AG announces settlement to cut proposed PSO rate increase",
+      "url": "https://tulsaflyer.org/2026/07/01/news/post/settlement-cut-proposed-pso-rate-increase/",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Oklahoma House — Gann appeals $1.3B OCC preapproval of new PSO capacity",
+      "url": "https://www.okhouse.gov/posts/news-20260602_2",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "ReisingerGooch — Virginia energy regulatory updates, June 2026 (APCo PUR-2025-00057 final order; PUR-2026-00044)",
+      "url": "https://reisingergooch.com/virginia-energy-regulatory-updates-june-2026/",
+      "date": "2026-06"
+    },
+    {
+      "label": "AEP — Form 8-K, forward sale agreements",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000119312526223988/d248447d8k.htm",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "TipRanks — American Electric Power enters major forward equity agreements",
+      "url": "https://www.tipranks.com/news/company-announcements/american-electric-power-enters-major-forward-equity-agreements",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "AEP — Q1 2026 stock offering pricing",
+      "url": "https://www.aep.com/news/stories/view/11937/",
+      "date": "2026-05-12"
+    },
+    {
+      "label": "Utility Dive — AEP eyes exit from PJM, SPP over slow generation interconnection",
+      "url": "https://www.utilitydive.com/news/aep-pjm-spp-data-centers-earnings/819419/",
+      "date": "2026-05-06"
+    },
+    {
+      "label": "AEP — Q1 2026 earnings release",
+      "url": "https://www.aep.com/news/stories/view/11917/",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "AEP — Q1 2026 earnings release (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000031/a1q20268kpressreleaseex991.htm",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "AEP — Q1 2026 earnings presentation",
+      "url": "https://docs.aep.com/docs/newsroom/resources/earnings/2026-05/1Q26EarningsReleasePresentation.pdf",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "AEP — Quarterly dividend declaration, 464th consecutive",
+      "url": "https://www.aep.com/news/stories/view/11882/",
+      "date": "2026-04-28"
+    },
+    {
+      "label": "Stop Ohio Data Centers — Ohio electric bill data center impact: AEP tariff, BTCR, PJM capacity (advocacy)",
+      "url": "https://stopohiodatacenters.org/data-center-electric-bill-ohio",
+      "date": "2026-04-27"
+    },
+    {
+      "label": "AEP — Maryam Brown named president and COO of Indiana Michigan Power",
+      "url": "https://www.aep.com/news/stories/view/11851/",
+      "date": "2026-04-13"
+    },
+    {
+      "label": "AEP — Indiana Michigan Power files for the 918 MW Sycamore Riverside Energy Center",
+      "url": "https://www.aep.com/news/stories/view/11850/",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "POWER Magazine — DOE's Section 202(c) emergency orders since May 2025",
+      "url": "https://www.powermag.com/doe-has-issued-more-than-40-section-202c-emergency-orders-since-may-2025-heres-an-updated-log/",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "Utility Dive — AMP, ratepayer advocates oppose ROE and rates for the $1.1B AEP-FirstEnergy transmission project",
+      "url": "https://www.utilitydive.com/news/amp-ratepayer-advocates-ferc-aep-firstenergy-transmission/816060/",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "Scioto Post — Battle at the Supreme Court: who should pay for Ohio's data center boom?",
+      "url": "https://www.sciotopost.com/battle-at-the-supreme-court-who-should-pay-for-ohios-data-center-boom/",
+      "date": "2026-03-25"
+    },
+    {
+      "label": "Supreme Court of Ohio, case 2025-1458 — merit brief of intervening appellee, Office of the Ohio Consumers' Counsel",
+      "url": "https://www.supremecourt.ohio.gov/pdf_viewer/pdf_viewer.aspx?pdf=1000491.pdf&subdirectory=2025-1458\\DocketItems",
+      "date": "2026-03-24"
+    },
+    {
+      "label": "AEP — Piketon: DOE, SB Energy and AEP Ohio announce 765 kV transmission for a 10 GW campus",
+      "url": "https://www.aep.com/news/stories/view/10823/",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "AEP — Brian Abraham named president and COO of Appalachian Power",
+      "url": "https://www.aep.com/news/stories/view/10814/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "WV MetroNews — AEP selects Brian Abraham to head Appalachian Power",
+      "url": "https://wvmetronews.com/2026/03/17/aep-selects-brian-abraham-to-head-appalachian-power/",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "The Buckeye Institute — Undermining Ohio's competitive edge (policy brief, advocacy)",
+      "url": "https://www.buckeyeinstitute.org/library/docLib/2026-03-16-Undermining-Ohio-s-Competitive-Edge-policy-brief.pdf",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "AEP — Adrian Rodriguez named president and COO of AEP Texas",
+      "url": "https://www.aep.com/news/stories/view/10793/",
+      "date": "2026-03-06"
+    },
+    {
+      "label": "Utility Dive — PJM board approves $11.8B transmission expansion plan",
+      "url": "https://www.utilitydive.com/news/pjm-rtep-transmission-expansion-plan-dominion-nextera-exelon/812311/",
+      "date": "2026-02-17"
+    },
+    {
+      "label": "AEP — Form 8-K, director not standing for re-election",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000015/0000004904-26-000015.txt",
+      "date": "2026-02-17"
+    },
+    {
+      "label": "AEP — PJM board approves Grid Growth Ventures 765 kV projects in central Ohio",
+      "url": "https://www.aep.com/news/stories/view/10757/",
+      "date": "2026-02-16"
+    },
+    {
+      "label": "AEP Ohio — PUCO data-center contracting update",
+      "url": "https://www.aepohio.com/company/news/view?releaseID=10753",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "AEP — Credit ratings summary (data as of December 2025)",
+      "url": "https://docs.aep.com/docs/investors/fixedincome/Credit_Ratings_December_25.pdf",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Utility Dive — AEP contracted large load pipeline doubles to 56 GW",
+      "url": "https://www.utilitydive.com/news/aep-large-load-data-center-earnings/812181/",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "AEP — FY2025 results (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000011/a4q20258kpressreleaseex991.htm",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "AEP — FY2025 results (aep.com)",
+      "url": "https://www.aep.com/news/stories/view/10752/",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "AEP — Q4 2025 earnings presentation",
+      "url": "https://docs.aep.com/docs/newsroom/resources/earnings/2026-02/4Q25EarningsReleasePresentation.pdf",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Virginia State Corporation Commission — SCC data center initiatives fact sheet",
+      "url": "https://www.scc.virginia.gov/media/sccvirginiagov-home/about-the-scc/fact-sheets/scc-data-center-initiatives-02-2026.pdf",
+      "date": "2026-02"
+    },
+    {
+      "label": "AEP — Form 10-K for the fiscal year ended December 31, 2025",
+      "url": "https://docs.aep.com/docs/investors/filings/docs/AEP_10K_2025.pdf",
+      "date": "2026-02"
+    },
+    {
+      "label": "PJM — 2026 load forecast report",
+      "url": "https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2026-load-report.pdf",
+      "date": "2026-01-14"
+    },
+    {
+      "label": "American Action Forum — Virginia's new data center electricity rate class",
+      "url": "https://www.americanactionforum.org/insight/virginias-new-data-center-electricity-rate-class/",
+      "date": "2026-01-08"
+    },
+    {
+      "label": "AEP — Form 8-K, fuel-cell purchase agreement and 20-year offtake for the Wyoming facility",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490426000003/0000004904-26-000003.txt",
+      "date": "2026-01-08"
+    },
+    {
+      "label": "AEP Ohio — distribution base case settlement filing",
+      "url": "https://www.aepohio.com/company/news/view?releaseID=10674",
+      "date": "2026-01-07"
+    },
+    {
+      "label": "Utility Dive — FERC orders PJM to craft large load colocation rules",
+      "url": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/",
+      "date": "2025-12-19"
+    },
+    {
+      "label": "AEP — Form 8-K, chief executive retention award",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000198/0000004904-25-000198.txt",
+      "date": "2025-12-19"
+    },
+    {
+      "label": "MultiState — States look at ways to encourage off-the-grid power for data centers (WV HB 2014)",
+      "url": "https://www.multistate.us/insider/2025/12/16/states-look-at-ways-to-encourage-off-the-grid-power-for-data-centers",
+      "date": "2025-12-16"
+    },
+    {
+      "label": "AEP — Form 8-K, reopening of junior subordinated debentures",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000196/0000004904-25-000196.txt",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "ERCOT board item 14.1 — 25RPG025, AEP Texas, CPS Energy, Oncor and CNP Texas 765 kV STEP eastern backbone project",
+      "url": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf",
+      "date": "2025-12-01"
+    },
+    {
+      "label": "Enel North America — PJM 2027/2028 capacity auction results",
+      "url": "https://www.enelnorthamerica.com/insights/blogs/pjm-2027-2028-capacity-auction-results",
+      "date": "2025-12"
+    },
+    {
+      "label": "The Intelligencer — Site certification rules released for West Virginia's new data center/microgrid law",
+      "url": "https://www.theintelligencer.net/news/top-headlines/2025/11/site-certification-rules-released-for-west-virginias-new-data-center-microgrid-law/",
+      "date": "2025-11-25"
+    },
+    {
+      "label": "AEP — Form 8-K, $3.5 billion at-the-market equity programme",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000182/0000004904-25-000182.txt",
+      "date": "2025-11-25"
+    },
+    {
+      "label": "AEP — IURC approves Indiana Michigan Power's Oregon Clean Energy Center purchase",
+      "url": "https://www.aep.com/news/stories/view/10588/",
+      "date": "2025-11-19"
+    },
+    {
+      "label": "KJK — Regulating the surge: legal analysis of AEP Ohio's data center tariff and the PUCO's approval",
+      "url": "https://kjk.com/2025/11/14/regulating-surge-legal-analysis-aep-ohios-data-center-tariff-and-pucos-approval/",
+      "date": "2025-11-14"
+    },
+    {
+      "label": "Earthjustice — Indiana utility I&M proposes more than $7 billion generation plan for Amazon and Google AI data centers",
+      "url": "https://earthjustice.org/press/2025/indiana-utility-im-proposes-more-than-7-billion-generation-plan-for-amazon-and-google-ai-data-centers",
+      "date": "2025-11-10"
+    },
+    {
+      "label": "AEP — 2025 EEI investor handout",
+      "url": "https://docs.aep.com/docs/investors/eventspresentationsandwebcasts/2025-EEI-Handout.pdf",
+      "date": "2025-11-09"
+    },
+    {
+      "label": "Utility Dive — Southwest Power Pool to develop 765 kV regional transmission backbone",
+      "url": "https://www.utilitydive.com/news/spp-to-develop-765-kv-regional-backbone/804981/",
+      "date": "2025-11-07"
+    },
+    {
+      "label": "RTO Insider — SPP board approves 2025 ITP with four 765 kV projects",
+      "url": "https://www.rtoinsider.com/119101-spp-board-approves-2025-itp-765kv-projects/",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "AEP — AEP and Quanta Services strategic partnership on 765 kV and EHV equipment manufacturing",
+      "url": "https://www.aep.com/news/stories/view/10555/",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "American Public Power Association — SPP board advances regional transmission plan",
+      "url": "https://www.publicpower.org/periodical/article/spp-board-advances-regional-transmission-plan",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "AEP — Q3 2025 results (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000169/a3q20258kpressreleaseex991.htm",
+      "date": "2025-10-29"
+    },
+    {
+      "label": "AEP — Q3 2025 results; $72B capital plan and 7-9% growth rate",
+      "url": "https://www.aep.com/news/stories/view/10534/",
+      "date": "2025-10-29"
+    },
+    {
+      "label": "Texas Scorecard — Permian Basin power fix becomes a $33 billion statewide project",
+      "url": "https://texasscorecard.com/state/permian-basin-power-fix-becomes-33-billion-statewide-project/",
+      "date": "2025-10-28"
+    },
+    {
+      "label": "AEP — Quarterly dividend increased to $0.95",
+      "url": "https://www.aep.com/news/stories/view/10521/",
+      "date": "2025-10-22"
+    },
+    {
+      "label": "Indiana Michigan Power — files Michigan Large Power Tariff for loads of 50 MW and above",
+      "url": "https://www.indianamichiganpower.com/company/news/view?releaseID=10510",
+      "date": "2025-10-20"
+    },
+    {
+      "label": "Appalachian Power — closes $1.6 billion of DOE loans for nearly 5,000 miles of transmission",
+      "url": "https://www.appalachianpower.com/company/news/view?releaseID=10506",
+      "date": "2025-10-17"
+    },
+    {
+      "label": "Ohio Energy Ratings — OMA to appeal PUCO data center ruling to the Ohio Supreme Court",
+      "url": "https://www.ohenergyratings.com/blog/oma-to-appeal-puco-data-center-ruling-to-ohio-supreme-court/",
+      "date": "2025-10-11"
+    },
+    {
+      "label": "AEP — Form 8-K, junior subordinated debentures",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000165/0000004904-25-000165.txt",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "AEP — Cook Plant marks 50 years; licence renewal intent and SMR statements",
+      "url": "https://www.aep.com/news/stories/view/10407/",
+      "date": "2025-08-27"
+    },
+    {
+      "label": "AEP — Q2 2025 results; 24 GW of secured customer agreements",
+      "url": "https://www.aep.com/news/stories/view/10354/",
+      "date": "2025-07-30"
+    },
+    {
+      "label": "AEP — Form 8-K, board chair transition",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000127/0000004904-25-000127.txt",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "McGuireWoods — Texas Senate Bill 6 significantly expands regulatory oversight over large loads in ERCOT",
+      "url": "https://www.mcguirewoods.com/client-resources/alerts/2025/7/texas-senate-bill-6-significantly-expands-regulatory-oversight-over-large-loads-in-ercot/",
+      "date": "2025-07-10"
+    },
+    {
+      "label": "PUCO (GovDelivery bulletin) — PUCO orders AEP Ohio to create a data center specific tariff",
+      "url": "https://content.govdelivery.com/accounts/OHPUC/bulletins/3e8bb79",
+      "date": "2025-07-09"
+    },
+    {
+      "label": "AEP — PUCO adopts the AEP Ohio data-center tariff",
+      "url": "https://www.aep.com/news/stories/view/10327/",
+      "date": "2025-07-09"
+    },
+    {
+      "label": "Scioto Post — PUCO orders AEP Ohio to create a tariff specific to data centers, lifts moratorium",
+      "url": "https://www.sciotopost.com/puco-orders-aep-ohio-to-create-tariff-specific-to-data-centers-lifts-moratorium-on-new-connections/",
+      "date": "2025-07-09"
+    },
+    {
+      "label": "AEP — Executive leadership changes: general counsel and chief information and technology officer",
+      "url": "https://www.aep.com/news/stories/view/10284/",
+      "date": "2025-06-17"
+    },
+    {
+      "label": "AEP — Supporting growing energy demand",
+      "url": "https://www.aep.com/news/stories/view/10273/",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "AEP — KKR and PSP Investments transmission stake closing (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000069/a06-2025olympuspressreleas.htm",
+      "date": "2025-06-05"
+    },
+    {
+      "label": "AEP — PUCO approves onsite fuel cells for two data-center customers",
+      "url": "https://www.aep.com/news/stories/view/10262/",
+      "date": "2025-06-05"
+    },
+    {
+      "label": "WOSU — State utility officials approve AEP Ohio building onsite energy generators at two data centers",
+      "url": "https://www.wosu.org/2025-05-28/state-utility-officials-approve-aep-ohios-building-onsite-energy-generators-at-two-data-centers",
+      "date": "2025-05-28"
+    },
+    {
+      "label": "AEP — Doug Cannon named president of AEP Transmission",
+      "url": "https://www.aep.com/news/stories/view/10233/",
+      "date": "2025-05-20"
+    },
+    {
+      "label": "AEP — Q1 2025 results",
+      "url": "https://www.aep.com/news/stories/view/10188/",
+      "date": "2025-05-06"
+    },
+    {
+      "label": "IEEFA — West Virginia ratepayers footing the bill for infrastructure build out",
+      "url": "https://ieefa.org/sites/default/files/2025-05/UPDATED_West%20Virginia%20Ratepayers%20Footing%20the%20Bill%20for%20Infrastructure_May%202025.pdf",
+      "date": "2025-05"
+    },
+    {
+      "label": "AEP — AEP Texas set to construct one of the first 765 kV transmission lines in Texas",
+      "url": "https://www.aep.com/news/stories/view/10165/",
+      "date": "2025-04-24"
+    },
+    {
+      "label": "TipRanks/The Fly — AEP's Indiana Michigan Power files to acquire the 870 MW Oregon gas plant",
+      "url": "https://www.tipranks.com/news/the-fly/aeps-indiana-michigan-power-files-to-acquire-870-mw-oregon-gas-plant",
+      "date": "2025-04-11"
+    },
+    {
+      "label": "AEP — $2.0 billion common stock forward offering pricing",
+      "url": "https://www.aep.com/news/stories/view/10108/",
+      "date": "2025-03-24"
+    },
+    {
+      "label": "AEP — Form 8-K, chief information and technology officer resignation",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000053/0000004904-25-000053.txt",
+      "date": "2025-03-20"
+    },
+    {
+      "label": "Utility Dive — PJM board approves $6.7B transmission expansion plan",
+      "url": "https://www.utilitydive.com/news/pjm-rtep-transmission-expansion-plan-aep-dominion-firstenergy/741097/",
+      "date": "2025-02-27"
+    },
+    {
+      "label": "AEP — PJM awards $1.7 billion of transmission projects",
+      "url": "https://www.aep.com/news/stories/view/10047/",
+      "date": "2025-02-27"
+    },
+    {
+      "label": "AEP — Valley Link joint venture with Dominion and FirstEnergy Transmission",
+      "url": "https://www.aep.com/news/stories/view/10048/",
+      "date": "2025-02-27"
+    },
+    {
+      "label": "Utility Dive — Indiana regulators approve large load interconnection rules",
+      "url": "https://www.utilitydive.com/news/indiana-iurc-large-load-interconnection-data-center-aep-amazon-google/740452/",
+      "date": "2025-02-20"
+    },
+    {
+      "label": "Power Technology — IURC approves I&M large load tariff settlement",
+      "url": "https://www.power-technology.com/news/iurc-american-electric-power-im-large-load-tariff/",
+      "date": "2025-02-20"
+    },
+    {
+      "label": "Indiana Utility Regulatory Commission — Order, Cause No. 46097 (Indiana Michigan Power Tariff I.P.)",
+      "url": "https://www.in.gov/iurc/files/ord_46097_021925.pdf",
+      "date": "2025-02-19"
+    },
+    {
+      "label": "Indiana Michigan Power — IURC approves large-load settlement",
+      "url": "https://www.indianamichiganpower.com/company/news/view?releaseID=10036",
+      "date": "2025-02-19"
+    },
+    {
+      "label": "Utility Dive — AEP expects electric sales to jump 8.6% annually over 3 years",
+      "url": "https://www.utilitydive.com/news/aep-data-center-earnings-load-fehrman/740182/",
+      "date": "2025-02-18"
+    },
+    {
+      "label": "AEP — FY2024 results; $54B capital plan and 20+ GW",
+      "url": "https://www.aep.com/news/stories/view/10018/",
+      "date": "2025-02-13"
+    },
+    {
+      "label": "Utility Dive — Appeals court directs FERC to strip the ROE transmission adder from Ohio utilities",
+      "url": "https://www.utilitydive.com/news/appeals-court-ferc-roe-transmission-adder-aep-duke-firstenergy/737791/",
+      "date": "2025-01-21"
+    },
+    {
+      "label": "AEP — Form 8-K, SEC settlement relating to HB 6",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000015/0000004904-25-000015.txt",
+      "date": "2025-01-17"
+    },
+    {
+      "label": "AEP — SMR grant applications for Rockport and Joshua Falls",
+      "url": "https://www.aep.com/news/stories/view/9974/",
+      "date": "2025-01-17"
+    },
+    {
+      "label": "Utility Dive — AEP to sell stake in transmission companies to a KKR-PSP consortium for $2.8B",
+      "url": "https://www.utilitydive.com/news/aep-transmission-kkr-psp-investments-ohio-michigan/737005/",
+      "date": "2025-01-10"
+    },
+    {
+      "label": "AEP — KKR and PSP Investments transaction announcement (Form 8-K Exhibit 99.1)",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000010/a01-2025olympuspressreleas.htm",
+      "date": "2025-01-09"
+    },
+    {
+      "label": "AEP release via the Bradford Era — AEP names Trevor Mihalik executive vice president and chief financial officer",
+      "url": "https://www.bradfordera.com/2025/01/07/aep-names-seasoned-energy-executive-trevor-mihalik-executive-vice-president-chief-financial-officer/",
+      "date": "2025-01-07"
+    },
+    {
+      "label": "AEP — SWEPCO generation expansion: Hallsville, Welsh conversions and wind",
+      "url": "https://www.aep.com/news/stories/view/9916/",
+      "date": "2024-12-18"
+    },
+    {
+      "label": "Utility Dive — Indiana Michigan Power, Amazon, Google and others agree on large load interconnection rules",
+      "url": "https://www.utilitydive.com/news/indiana-michigan-power-aep-amazon-google-microsoft-data-center-interconnect/733850/",
+      "date": "2024-11-25"
+    },
+    {
+      "label": "Power Engineering — While the grid catches up to demand, AEP secures up to 1 GW of fuel cells",
+      "url": "https://www.power-eng.com/onsite-power/while-the-grid-catches-up-to-demand-aep-secures-up-to-1-gw-of-fuel-cells-for-data-centers-large-energy-users/",
+      "date": "2024-11-15"
+    },
+    {
+      "label": "AEP — Agreement to secure up to 1 GW of Bloom Energy solid-oxide fuel cells",
+      "url": "https://www.aep.com/news/stories/view/9866/",
+      "date": "2024-11-14"
+    },
+    {
+      "label": "AEP — Form 8-K, October 2024 leadership changes",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490424000092/0000004904-24-000092.txt",
+      "date": "2024-10-31"
+    },
+    {
+      "label": "AEP — AEP Ohio data-center tariff settlement",
+      "url": "https://www.aep.com/news/stories/view/9829/",
+      "date": "2024-10-23"
+    },
+    {
+      "label": "Utility Dive — AEP, Dominion and FirstEnergy propose joint 765 kV transmission projects across PJM",
+      "url": "https://www.utilitydive.com/news/aep-dominion-firstenergy-pjm-transmission-projects-rtep/729168/",
+      "date": "2024-10-08"
+    },
+    {
+      "label": "AEP — Form 8-K, operating company presidents to report to the chief executive",
+      "url": "https://www.sec.gov/Archives/edgar/data/4904/000000490424000086/0000004904-24-000086.txt",
+      "date": "2024-08-28"
+    },
+    {
+      "label": "Power Engineering — AEP names new president and CEO to take over in August",
+      "url": "https://www.power-eng.com/operations-maintenance/aep-names-new-president-ceo-to-take-over-in-august/",
+      "date": "2024-07-01"
+    },
+    {
+      "label": "AEP Ohio — Data Center Tariff page",
+      "url": "https://www.aepohio.com/company/about/rates/data-center-tariff/"
+    },
+    {
+      "label": "AEP — Leadership roster",
+      "url": "https://www.aep.com/about/leadership/"
+    },
+    {
+      "label": "AEP — 765 kV transmission page",
+      "url": "https://www.aep.com/about/businesses/transmission/765kv"
+    },
+    {
+      "label": "AEP — Operating companies page",
+      "url": "https://www.aep.com/about/businesses/opcos/"
+    },
+    {
+      "label": "AEP — AEP Energy page",
+      "url": "https://www.aep.com/about/businesses/aepenergy/"
+    },
+    {
+      "label": "Kentucky Power — Data centers and large-load service page",
+      "url": "https://www.kentuckypower.com/company/about/rates/data-centers"
+    },
+    {
+      "label": "Ohio House of Representatives — HB 15, 136th General Assembly",
+      "url": "https://ohiohouse.gov/legislation/136/hb15"
+    },
+    {
+      "label": "Office of the Ohio Consumers' Counsel — Data center costs, case 24-0508-EL-ATA",
+      "url": "https://www.occ.ohio.gov/content/data-center-costs-24-0508-el-ata"
+    },
+    {
+      "label": "Citizens Action Coalition — AI data center build-out creates unprecedented risk to Hoosiers (advocacy)",
+      "url": "https://www.citact.org/ai-data-centers"
+    },
+    {
+      "label": "Global Energy Monitor — Mitchell Plant",
+      "url": "https://www.gem.wiki/Mitchell_Plant"
+    },
+    {
+      "label": "Power Engineering — TVA and AEP seek federal funding to accelerate SMR projects",
+      "url": "https://www.power-eng.com/nuclear/tva-aep-seek-federal-funding-to-accelerate-small-modular-reactor-projects/"
+    },
+    {
+      "label": "Power Engineering — SWEPCO expands generation capacity with new gas and renewable resources",
+      "url": "https://www.power-eng.com/gas/swepco-expands-generation-capacity-with-new-gas-renewable-resources/"
+    },
+    {
+      "label": "MarketBeat — AEP earnings history and next reporting date",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/AEP/earnings/"
+    },
+    {
+      "label": "Investing.com — AEP earnings calendar",
+      "url": "https://www.investing.com/equities/american-electric-power-earnings"
+    },
+    {
+      "label": "StockAnalysis — AEP overview (consensus, price target, FY2025)",
+      "url": "https://stockanalysis.com/stocks/aep/"
+    },
+    {
+      "label": "NextEarningsDate — AEP",
+      "url": "https://www.nextearningsdate.com/aep.html"
+    }
+  ],
+  "lastUpdated": "2026-09-03",
+  "profileVersion": 1
+}

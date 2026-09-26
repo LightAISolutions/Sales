@@ -438,6 +438,16 @@
    ]
   },
   {
+   "slug": "annuity",
+   "term": "annuity",
+   "def": "An insurance contract in which a saver pays money now in exchange for guaranteed payments or a guaranteed return later. The insurer invests the premiums, and its profit is the spread between what those investments earn and what it has promised.",
+   "aliases": [
+    "annuities",
+    "fixed annuity",
+    "fixed annuities"
+   ]
+  },
+  {
    "slug": "annuity-style-income",
    "term": "annuity-style income",
    "def": "Revenue a financial firm expects to repeat each year — management fees, lending margins, service charges. Contrasted with income that depends on market conditions, and valued more highly because it is predictable."
@@ -1012,6 +1022,15 @@
    "aliases": [
     "black-start",
     "blackstart"
+   ]
+  },
+  {
+   "slug": "blanket-authorization",
+   "term": "blanket authorization",
+   "def": "A standing approval from the US energy regulator that lets an investor buy voting shares in many utilities, up to set limits, without applying deal by deal — usually on condition that the holdings stay passive.",
+   "aliases": [
+    "blanket authorisation",
+    "blanket authorizations"
    ]
   },
   {
@@ -2241,6 +2260,15 @@
    ]
   },
   {
+   "slug": "consortium",
+   "term": "consortium",
+   "def": "A group of investors that bid and buy together through a shared vehicle, each taking a share. Who controls the target depends on the consortium's agreement, not on who is named first in the press release.",
+   "aliases": [
+    "bidding consortium",
+    "buyer consortium"
+   ]
+  },
+  {
    "slug": "constant-currency",
    "term": "constant currency",
    "def": "A restatement that holds exchange rates fixed between two periods, so a change in reported results reflects the business rather than currency movement. Essential for a landlord earning in many currencies.",
@@ -2498,6 +2526,16 @@
    "slug": "core-ffo",
    "term": "Core FFO",
    "def": "Funds from operations adjusted for items management considers non-recurring, such as transaction costs, debt-extinguishment charges or one-off incentive fees. It is usually the number a REIT guides to, and because each company defines its own adjustments it is not strictly comparable between companies."
+  },
+  {
+   "slug": "core-infrastructure",
+   "term": "core infrastructure",
+   "def": "Infrastructure bought for long-lived, contracted or regulated income — transmission lines, pipelines, stabilised data centres — at lower expected returns than building new projects. Core funds are often open-ended and hold assets for decades.",
+   "aliases": [
+    "core infrastructure fund",
+    "core-plus infrastructure",
+    "core-plus"
+   ]
   },
   {
    "slug": "corporate-ppa",
@@ -3096,6 +3134,25 @@
    "aliases": [
     "DPPM",
     "parts per million defective"
+   ]
+  },
+  {
+   "slug": "deferred-consideration",
+   "term": "deferred consideration",
+   "def": "The part of a purchase price paid after closing, on a fixed date or when conditions are met. It lowers the cash a buyer needs up front and ties part of the seller's reward to what happens next.",
+   "aliases": [
+    "deferred payment",
+    "second instalment"
+   ]
+  },
+  {
+   "slug": "definitive-agreement",
+   "term": "definitive agreement",
+   "def": "The binding contract for a transaction. Signing is not closing: the deal completes only when its conditions — shareholder votes, regulatory approvals, financing — are met, often months later.",
+   "aliases": [
+    "merger agreement",
+    "signed deal",
+    "signing and closing"
    ]
   },
   {
@@ -4379,6 +4436,16 @@
    ]
   },
   {
+   "slug": "exchange-traded-fund",
+   "term": "ETF",
+   "def": "A fund whose shares trade on a stock exchange all day like a company's shares. Most track an index; large dealers create and redeem shares to keep the price close to the value of what the fund holds.",
+   "aliases": [
+    "exchange-traded fund",
+    "exchange-traded funds",
+    "ETFs"
+   ]
+  },
+  {
    "slug": "excitation",
    "term": "excitation",
    "aliases": [
@@ -4395,6 +4462,16 @@
    "aliases": [
     "exclusive supplier",
     "exclusivity"
+   ]
+  },
+  {
+   "slug": "exclusive-talks",
+   "term": "exclusive talks",
+   "def": "A period in which a seller agrees to negotiate with one bidder only. It signals a likely deal but binds no one to buy or sell, and the talks can still collapse.",
+   "aliases": [
+    "exclusive negotiations",
+    "exclusivity window",
+    "exclusivity agreement"
    ]
   },
   {
@@ -4662,6 +4739,16 @@
    "def": "The 2023 order directing the North American reliability organisation to write mandatory standards for inverter-based resources — the instrument that turned ride-through from a voluntary engineering standard into an enforceable obligation on transmission-connected plants.",
    "aliases": [
     "Order 901"
+   ]
+  },
+  {
+   "slug": "ferc-section-203",
+   "term": "Section 203",
+   "def": "The part of the US Federal Power Act that requires the energy regulator's approval before anyone buys control of, or a large voting stake in, a company owning regulated power plants or transmission. The regulator checks the effect on competition, rates and regulation.",
+   "aliases": [
+    "FERC Section 203",
+    "Section 203 approval",
+    "section 203 authorization"
    ]
   },
   {
@@ -6130,6 +6217,17 @@
    "def": "A company that owns power plants and sells their output but is not a regulated utility with captive customers. Its revenue comes from contracts and markets, so its cost of capital and its exposure to prices are both higher than a utility's.",
    "aliases": [
     "IPP"
+   ]
+  },
+  {
+   "slug": "index-fund",
+   "term": "index fund",
+   "def": "A fund that buys every security in a published index in proportion to its weight, instead of choosing stocks. Its manager ends up holding stakes in thousands of companies at once but does not pick them or run them.",
+   "aliases": [
+    "index funds",
+    "passive fund",
+    "passive investing",
+    "index investing"
    ]
   },
   {
@@ -8371,6 +8469,16 @@
    ]
   },
   {
+   "slug": "open-ended-fund",
+   "term": "open-ended fund",
+   "def": "A fund with no fixed end date that keeps accepting new money and allows limited withdrawals, instead of raising once and returning the capital after about ten years. It can hold an asset indefinitely.",
+   "aliases": [
+    "open-end fund",
+    "evergreen fund",
+    "open-ended vehicle"
+   ]
+  },
+  {
    "slug": "open-transition",
    "term": "open transition",
    "def": "A transfer that opens the old source before closing onto the new one — break-before-make — so for a moment the load is fed by nothing. Simpler, and it never back-feeds the utility, but the gap means the UPS or some other stored energy has to carry the load across it or the servers see an outage.",
@@ -8447,6 +8555,15 @@
    "def": "A pre-consensus document a standards body publishes to fill a gap before a full consensus standard exists. It can be tested and certified against, but it has not passed the balanced committee and public review process that makes a document a consensus standard.",
    "aliases": [
     "OOI"
+   ]
+  },
+  {
+   "slug": "outside-date",
+   "term": "outside date",
+   "def": "The date after which either party to a signed deal may walk away if it has not closed, usually extendable when only regulatory approvals remain. It caps how long the approvals can take.",
+   "aliases": [
+    "long-stop date",
+    "longstop date"
    ]
   },
   {
@@ -9377,6 +9494,16 @@
    "def": "A battery cell in a rigid rectangular can, as opposed to a cylinder or a soft pouch. The flat faces pack together with little wasted space and the can carries structural load, which is why grid storage has converged on very large prismatic formats.",
    "aliases": [
     "prismatic"
+   ]
+  },
+  {
+   "slug": "private-credit",
+   "term": "private credit",
+   "def": "Loans made by investment funds rather than banks, negotiated directly with the borrower and held rather than traded. A private-credit fund in a company's finances is a lender with contractual rights, not an owner.",
+   "aliases": [
+    "direct lending",
+    "private lending",
+    "private debt"
    ]
   },
   {
@@ -10566,6 +10693,24 @@
     "State Corporation Commission",
     "Virginia SCC",
     "Virginia State Corporation Commission"
+   ]
+  },
+  {
+   "slug": "schedule-13d",
+   "term": "Schedule 13D",
+   "def": "The US filing required from anyone who acquires more than 5% of a listed company's voting shares with the intent or ability to influence control. It discloses the holder's plans, so owners that control a company file it.",
+   "aliases": [
+    "13D",
+    "13D/A"
+   ]
+  },
+  {
+   "slug": "schedule-13g",
+   "term": "Schedule 13G",
+   "def": "The shorter US filing for holders of more than 5% of a listed company who certify they are passive and will not seek to influence control. Index-fund managers file it for their large stakes.",
+   "aliases": [
+    "13G",
+    "13G/A"
    ]
   },
   {
@@ -12428,6 +12573,15 @@
    "aliases": [
     "transformer-free UPS",
     "transformerless"
+   ]
+  },
+  {
+   "slug": "transmission-company",
+   "term": "transmission company",
+   "def": "A utility subsidiary that owns high-voltage transmission lines and earns a regulated return on them, usually through a federal formula rate. Selling a minority stake in one raises equity without handing over operation of the lines.",
+   "aliases": [
+    "transco",
+    "transcos"
    ]
   },
   {

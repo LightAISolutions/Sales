@@ -3,11 +3,210 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.66r] — 2026-09-26 07:19:39 AM EST
+
+> **Prompt:** "Picking up from my last session, run Phase F session F-I1 of
+> repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: BlackRock (with GIP, AIP and HPS)
+> and KKR — the two most-cited capital names the corpus does not yet cover. This session runs on Opus 5.5
+> at xhigh. The §11.3 Model cells already read "Opus 5.5 xhigh"; keep them.
+>
+> WHY NOW: BlackRock is the most-cited uncovered company in the corpus, and both dossiers must exist
+> before Classroom wave B re-authors landscape-capital-2026-09 and scenario-capital-objection (reviewBy
+> 10/14). There is no other date gate. Do NOT run F-I2 (SoftBank, SB Energy, Blue Owl) — it waits on the
+> DigitalBridge close — and do not run the 10/1 neoclouds pass or `profiler Habitat Energy`.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; repository-information/phase-f-action-plan.md
+> (§5 and the F-N1 outcome are the latest pattern); PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the two
+> F-I1 rows of §11.3 are yours; §11.1's buying-authority test applies through the platforms each
+> controls); .claude/rules/profiler-app.md (Profiler Command including step 1a identity and step 7
+> reconciliation, Profiler Prep Command, Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md
+> (Naming and renames, Segments registry, Refresh calendar); repository-information/PROFILER-STYLES.md
+> (active style). Read the blackstone, brookfield, macquarie and mgx dossiers and study guides as the
+> house pattern for a capital-segment incumbent, and the aligned, cyrusone, stack-infrastructure,
+> eolian, vistra and aep dossiers — they carry the platforms these two control or co-own.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1) and study guide (schema v2) with its lesson plan under
+> repository-information/study-prep/<slug>/. Proposed slugs: blackrock, kkr. Category hypothesis:
+> ["investor"] for both. Populate aka[] BEFORE the step-7 grep, including the platforms and brands the
+> corpus uses: BlackRock — Global Infrastructure Partners / GIP, AI Infrastructure Partnership / AIP, HPS
+> Investment Partners, BlackRock Climate Infrastructure, and any controlled developer you establish
+> (Akaysha Energy is named in dnv as BlackRock's); KKR — Kohlberg Kravis Roberts, Global Atlantic, and
+> its named infrastructure vehicles. Assign segments in
+> live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis: capital ·
+> incumbent for both; the segment has eight members today). Then the registry sync, the graph build, a
+> calendar row per company under the Refresh calendar rules (both are NYSE-listed — BLK and KKR — so take
+> each next results date from its own IR site, and mark it unconfirmed until it is announced), README
+> tree entries, and rewrite and flip your §11.3 rows.
+>
+> IDENTITY (step 1a) — establish each of these, do not assume it:
+> - BlackRock: one slug for BlackRock, Inc. with GIP, AIP and HPS in aka[], or a separate GIP slug?
+>   Decide under Naming and renames and say why — GIP is the platform that controls most of the buyers.
+>   Establish when the GIP acquisition closed, AIP's current members and legal form, and whether the HPS
+>   and Preqin acquisitions have closed.
+> - KKR: KKR & Co. Inc.; which KKR vehicles hold its data-centre and power platforms; Global Atlantic's
+>   status.
+> - For both: list the platforms each controls or co-controls that sign for batteries, MV gear,
+>   generation or SSTs (§11.1 test 2), with the ownership share and a source for each. An investor that
+>   buys nothing itself passes the test through a platform it controls, and fails it through one it
+>   merely funds.
+>
+> THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+> budget ran out partway, and nobody has read the underlying articles. Verify against first-party sources
+> (10-Ks, 10-Qs and results releases from each company's own IR site, counterparties' filings and
+> releases, regulator records), record a premise verdict per clause, and rewrite the cells. Run these
+> checks hardest:
+> - BlackRock: GIP owned since 1 Oct 2024; Aligned bought via AIP with MGX (closed 21 Jul 2026, ~$40B EV,
+>   6.4 GW); the AES take-private with EQT (signed 2 Mar 2026, pending) — check who the acquirers are;
+>   ALLETE co-control with CPP (closed 15 Dec 2025); Eolian (GIP-backed); exclusive talks for STACK's
+>   Asia-Pacific portfolio (~1.1 GW, reported 24 Sep — a report, not a deal); the NVIDIA
+>   compute-financing MOU (10 Aug). And the flagged conflict: whether GIP still holds its CyrusOne stake.
+> - KKR: CyrusOne 50% with GIP (2022); STT GDC 75% (closed 2 Sep 2026); Helix Digital Infrastructure,
+>   more than $10B (Jun 2026, Vistra as preferred power supplier); EDF power solutions North America,
+>   $4.2B, pending (5.6 GW including storage); 19.9% of the AEP Ohio and I&M transmission companies. The
+>   cell says the ECP $50B partnership was "announced 30 Oct 2024, not 2026" — that correction is itself
+>   unverified; read the release and record the date it gives.
+> Record the §11.1 buying-authority verdict for each, through its controlled platforms.
+>
+> RECONCILIATION (step 7) — measured 2026-09-26 by word-bounded alias grep. BlackRock has 40 raw hits, of
+> which 7 are known collisions, not inbound: "AIP" is also American Intelligence & Power (caterpillar,
+> rehlko, nscale), Palantir's AIP (mccarthy) and AIP Management (rosendin); "GIP" is Infineon's Green
+> Industrial Power segment (infineon); "HPS" is Prevalon's Hybrid Power Stabilizer (prevalon). That
+> leaves about 33 for BlackRock; KKR has 19. No dossier carries an edge to either slug yet. Grep again
+> with the full aka[] and read every hit. Add the reciprocal edge wherever a new dossier curates a
+> counterparty, revising that dossier under the Archival Procedure and re-verifying any report pin on it.
+> Check microsoft, nvidia and xai for a missing AIP edge — microsoft does not name AIP at all today.
+> THIS IS THE HEAVY PART. If BlackRock's reconciliation outgrows the session, land both dossiers and
+> guides, reconcile KKR in full and BlackRock's controlled or co-owned platforms first, and record every
+> remaining slug by name as deferred in the ledger and the SESSION-CONTEXT hand-off. Defer rather than
+> skim (profiler-app.md step 7, scope note).
+>
+> LESSONS FROM F-H1 AND F-N1 — apply them:
+> - Every counterparty named in narrative prose rests on a source in sources[], ideally its own filing.
+> - A tender, an MOU, "exclusive talks" or a signed-but-not-closed deal is not a completed transaction.
+>   Type each on the record's own word and state the gap. An unattributed figure is stated as unverified.
+> - Count inbound hits against the pre-revision copies (the archive), so the ledger's counts are exact.
+> - sec.gov and data.sec.gov were blocked from the sandbox in both prior sessions. Run
+>   check-source-reachability.py first; if EDGAR is blocked, read the filings from the companies' IR
+>   sites and say so in the dossier.
+> - Do not edit an existing concept in profiler-concepts.json. Where a registry definition is
+>   domain-specific (revenue-share is written for battery optimisers), use a guide glossary term instead.
+>   Check new terms and aliases for collisions before adding them.
+> - Write each lesson plan and study guide skeleton-first, then Edit (Incremental Writing, item d).
+> - Re-verify a report pin on a dossier you revise only if your change is edge-only. When an earlier
+>   revision was substantive, leave the pin loud and write down why.
+> - If an existing study guide contradicts a verified finding, correct it minimally and record it.
+>
+> DO NOT edit googleAppsScripts/Classroom/Classroom.gs. The two new members make landscape-capital-2026-09
+> (built on "4 of 8 buy nothing") and scenario-capital-objection (reviewBy 10/14) stale, along with any
+> other segment you add them to. Record that in the CHANGELOG entry and the SESSION-CONTEXT hand-off
+> (§11.2, the landscape coupling); Classroom wave B re-authors them.
+>
+> FOR THE MEGMEET JOB: in the SESSION-CONTEXT hand-off, write one short paragraph on which platforms these
+> two control that buy medium-voltage or DC power equipment (SSTs, 800 VDC, HVDC, batteries), and whether
+> capital is a door an SST seller can use or only a way to find the buyers.
+>
+> VERIFY: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check clean;
+> build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+> check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+> warnings read; every new and revised dossier and guide renders under Playwright with zero page errors
+> other than the sandbox's gis_load_failed (the guide overlay closes with its ✕ button, not Escape).
+> CHANGELOG rotation only if non-exempt sections reach 100. Normal Pre-Commit and Pre-Push checklists;
+> one commit; push on a claude/* branch."
+
+Phase F session F-I1: dossiers, study guides and lesson plans for **BlackRock** (with GIP, AIP and HPS) and **KKR**, the two most-cited capital names the corpus did not cover, and a step-7 reconciliation that revised 28 inbound dossiers.
+
+### Added
+
+- **Two schema v7 dossiers** (`profileVersion` 1, intel-briefing style), each researched by two parallel subagents under the two-stage protocol. `check-source-reachability.py` ran before Stage 2 was planned: **PARTIAL** — `sec.gov` and `data.sec.gov` blocked, the IR sites and the other probed hosts reachable. Filings were read from the companies' IR sites and from EDGAR full-text search (`efts.sec.gov`), which answers.
+  - **`blackrock.profile.json`** — `categories: ["investor"]`; 80 sources (54% first-party), 22 developments, 8 product lines, 4 technical specs, 23 relationships, 11 decision makers (all with photos), 4 policy entries.
+    - **Identity — one slug.** The registrant is BlackRock, Inc. (NYSE: BLK; CIK 0002012383), the holding company formed on the GIP closing date; the former BlackRock Inc. is now BlackRock Finance, Inc. GIP is Global Infrastructure Management, LLC, a wholly owned subsidiary: it files no separate accounts, BlackRock reports one segment, and the European Commission names GIM 'ultimately controlled by BlackRock'. AIP is a capital partnership that BlackRock, GIP, Microsoft and MGX launched on 17 Sep 2024 (NVIDIA and xAI joined on 19 Mar 2025, the Kuwait Investment Authority in June 2025). On Aligned, the European Commission names GIM and MGX, not AIP, as the acquirers of joint control, so AIP gets no slug of its own. HPS (closed 1 Jul 2025) and Preqin (closed 3 Mar 2025) are wholly owned. All of it sits in `aka[]`.
+    - **The read:** BlackRock signs for no equipment itself. Its GIP-branded funds own or co-own Aligned (joint control with MGX, closed 21 Jul 2026), CyrusOne (with KKR), Coravel (with ACS), ALLETE and Minnesota Power (with CPP Investments), Clearway Energy Group (with TotalEnergies), Eolian and Jupiter Power, and lead the AES take-private. **A directory of buyers, not a door.**
+  - **`kkr.profile.json`** — `categories: ["investor"]`; 76 sources (49% first-party), 23 developments, 7 product lines, 4 technical specs, 14 relationships, 12 decision makers (all with photos), 3 policy entries.
+    - **Identity:** KKR & Co. Inc. (NYSE: KKR; CIK 0001404912). Global Atlantic has been wholly owned since 2 Jan 2024 and is reported as the Insurance segment, so it sits in `aka[]` with Helix, STTGDC, ContourGlobal, Zenobē, Avantus and Encavis. KKR is a controlled company until a Sunset Date no later than 31 Dec 2026.
+    - **The read:** KKR signs for no equipment itself either, but its platforms reach every layer this corpus sells into: STTGDC (75%, completed 2 Sep 2026), CyrusOne (co-owned with GIP), Helix Digital Infrastructure (launched 11 Jun 2026), ContourGlobal and Avantus.
+- **Two schema v2 study guides**, 14 sections each, with flashcards and a self-test on concepts only: `blackrock.study.json` (plus local glossary terms 'buying-authority test' and 'HSR') and `kkr.study.json` (plus 'first-look right', 'preferred power partner', 'reserved matters' and 'strategic buyer').
+- **Two lesson plans** under `repository-information/study-prep/<slug>/`, eight modules each, paced to the 2026-10-07 start. Both were written skeleton-first and filled in by Edit.
+- **16 new concepts** in `profiler-concepts.json` (1,555 total), each checked for term and alias collisions against the registry:
+  - Funds and markets: `index-fund`, `exchange-traded-fund`, `open-ended-fund`, `core-infrastructure`, `private-credit`, `annuity`.
+  - Ownership disclosure: `schedule-13d`, `schedule-13g`.
+  - Deals: `consortium`, `exclusive-talks`, `definitive-agreement`, `outside-date`, `deferred-consideration`.
+  - Regulation and wires: `ferc-section-203`, `blanket-authorization`, `transmission-company`.
+  - No existing entry was edited.
+- **23 executive photos** in `live-site-pages/images/execs/` (`blackrock-*` 11, `kkr-*` 12), all company-published leadership-page images, converted to JPEG at 600 px or less.
+- **28 archive files** (one per revised dossier, below), each with an `archive-index.json` entry.
+- **10 accepted relationship pairs** in `profiler-relationships-accepted.json` (20 total): the other↔other edges between the new dossiers and `amperesand`, `aon`, `edgecore`, `excelsior-energy-capital`, `fluence`, `intersect-power`, `stack-infrastructure` and `talen-energy`, each with its reason.
+
+### Changed
+
+- **28 inbound dossiers revised under the Archival Procedure** (step 7: the reciprocal edge for each counterparty the new dossiers curate). Each gains the edge, plus a source in `sources[]` where the edge needed a new one; no other field changed except where noted:
+  - **Both new slugs:** `cyrusone` v1→v2 (investors `kkr` and `blackrock`), `nvidia` v11→v12 (partners), `stack-infrastructure` v7→v8 (other, announced; adds Bloomberg's 24 Sep report of AIP and IFM exclusive talks), `blackstone` v1→v2, `brookfield` v2→v3 and `macquarie` v1→v2 (competitors; `macquarie` adds Infrastructure Investor's 2026 ranking), `fluence` v9→v10 (other).
+  - **BlackRock only:** `aligned` v7→v8, `mgx` v3→v4, `microsoft` v5→v6 and `xai` v5→v6 (AIP partners — `microsoft` and `xai` named AIP nowhere before), `clearway-energy` v1→v2, `eolian` v6→v7, `jupiter-power` v6→v7, `aes-clean-energy` v2→v3 (investor, announced), `recurrent-energy` v1→v2, `meta` v9→v10 (partner, announced — the El Paso venture), `talen-energy` v2→v3, `excelsior-energy-capital` v1→v2, `edgecore` v1→v2, `intersect-power` v2→v3, `marsh-mclennan` v1→v2 (customer).
+  - **KKR only:** `vistra` v3→v4 (partner — Helix), `aep` v1→v2 (investor — the 19.9% transmission stake), `compass-datacenters` v5→v6, `coolit` v1→v2 (investor, historical), `aon` v1→v2, `amperesand` v2→v3 (other — the STTGDC testbed).
+  - **Three corrections, not just edges:**
+    - `aes-clean-energy` — the Ohio commission approved the change of control on 17 Sep 2026; the summary, two strategy judgments and one policy entry said it was pending. The open question of which FERC dockets apply is closed (EC26-99, EC25-12-001, EC16-77-005). One development and two sources added.
+    - `fluence` — one strategy judgment corrected to match (Ohio approved; FERC and New York outstanding), with the PUCO source.
+    - `jupiter-power` — the ownership text said 'backed by GIP' with a quote that no Jupiter page carries; Jupiter's site and 2026 releases name no owner. Reworded, and the GIP link now rests on BlackRock's side of the record.
+- **`mgx.study.json`** — one clause corrected: it said AIP 'owns Aligned'. It now says AIP is named as Aligned's buyer, while the EU merger clearance (Case M.12259) names GIP's manager and MGX as the joint controllers — the verified finding, and what the `macquarie` guide already said. `lastUpdated` 2026-09-26.
+- **`profiler-companies.json`** — 188 → 190 entries. Taglines, `aka[]` (GIP, AIP, HPS, Preqin, iShares, Aladdin and the platform and legal names for BlackRock; Global Atlantic, Helix, STTGDC, ContourGlobal, Zenobē, Avantus, Encavis and the bid vehicles for KKR) and `domains[]` were populated **before** the step-7 grep. The sync pass reconciled `srcTotal`, `srcFirstPct` and `segments`.
+- **`profiler-segments.json`** — `capital`: `blackrock` and `kkr` as incumbents, each with a basis line. The roster goes from eight to ten.
+- **`profiler-graph.json`** — rebuilt: 1,656 edges (1,253 curated), 4,923 evidence records.
+- **`profiler-refresh-calendar.json`** — both public (NYSE), `cadence: quarterly`: `blackrock` next results **2026-10-13** and `kkr` **2026-10-29**, both `confirmed: false` until each company announces its date. **`profiler-refresh-notes.json`** — a source and a `watch[]` list per slug.
+- **`report-pins-verified.json`** — five edge-only revisions re-verified: `aep` (v1→v2), `meta` (v9→v10), `stack-infrastructure` (v7→v8) and `xai` (now at v6) on `named-project-bess-attach--opportunity--2026-09-08`, and `amperesand` (v2→v3) on `sst-hall-edge-block-rev2--competitive--2026-09-23`. Every cited source is unchanged in each.
+- **`PROFILER-COVERAGE-PLAN.md` §11.3** — both F-I1 rows rewritten as verified cells, with a premise verdict per clause, the inbound count and the §11.1 buying-authority answer; Model **Opus 5.5 xhigh** kept; `Checked 2026-09-26, v07.66r`; Dossier v1; Guide v2. The verdicts:
+  - **BlackRock** — eight clauses: 4 held (one as MOUs), 2 refined, 1 reported only, 1 flagged conflict settled.
+    - Aligned via AIP — **held on the figures, refined on control**: EC Case M.12259 names GIM and MGX as acquirers of joint control; AIP is not a notifying party.
+    - AES 'signed 2 Mar' — **refined**: signed 1 Mar by GIP and EQT Infrastructure VI; GIP-managed vehicles would hold 56.625%; FERC and New York pending, outside date 1 Jun 2027.
+    - STACK Asia-Pacific talks — **reported only**: Bloomberg names AIP and IFM, not GIP; no party confirmed.
+    - The CyrusOne conflict — **settled: GIP still co-owns it**; no first-party source states 50:50.
+  - **KKR** — six clauses: 3 held, 3 refined. CyrusOne 50% **refined** (co-ownership held, the split unstated); Helix **refined** (a company, not a fund; more than USD 10bn of *commitments*); EDF power solutions **refined on scope** (5.6 GW of 'net renewable capacity', storage not stated).
+- **`phase-f-action-plan.md`** — the status line records F-I1 as landed and the capital modules as stale.
+- **README.md** — tree entries for the two profile/study pairs, the two study-prep directories and the 28 archive files, plus the timestamp and repo version.
+- **`SESSION-CONTEXT.md`** — a new Latest Session (the F-I1 hand-off, with the Megmeet paragraph). The F-N1 entry (v07.64r–v07.65r) moved to Previous, and the F-H1 entry (v07.62r–v07.63r) dropped under the two-session cap.
+
+### Notes
+
+- **Step-7 reconciliation**, grepped with the full `aka[]` against the pre-revision copies. Nothing was deferred.
+  - **BlackRock: 42 raw hits.**
+    - 9 are collisions: 'AIP' as American Intelligence & Power (`caterpillar`, `rehlko`, `nscale`), Palantir's AIP (`mccarthy`) and AIP Management (`rosendin`); 'GIP' as Infineon's segment; 'HPS' as Prevalon's product; and Hut 8's generic 'AI Infrastructure Partnership' headline (`anthropic`, `hut-8`), two the brief did not list.
+    - 4 are career-only (`aon`, `aypa-power`, `gridstor`, `iren`).
+    - 29 were read: 20 revised, 9 unchanged (`canadian-solar`, `digital-realty`, `dnv`, `galaxy-digital`, `google`, `grid-united`, `hunt-energy-network`, `rwe-clean-energy`, `trina-storage`). `microsoft` and `xai` were revised as well, for the AIP edge they lacked.
+  - **KKR: 26 raw hits** (the platform names added 7 to the brief's 19). 4 are career-only (`aypa-power`, `dg-matrix`, `fermi-america`, `strata-clean-energy`). 22 were read: 13 revised, 9 unchanged (`arevon`, `bytedance`, `digital-realty`, `dnv`, `firmus`, `mgx`, `oncor`, `recurrent-energy`, `terra-gen`).
+  - No inbound claim contradicted KKR's dossier. One figure is left unreconciled and stated on both sides: Bosque County, where CyrusOne says USD 1.2bn and KKR about USD 4bn.
+- **§11.1 buying authority:**
+  - **BlackRock, Inc. signs for nothing.** It passes only through the platforms its funds control or co-control (Aligned, CyrusOne, Coravel, ALLETE, Clearway Energy Group, Eolian, Jupiter; AES on closing). It fails through Recurrent (a minority preferred stake), EdgeCore and Intersect (lender), its index stakes, the NVIDIA MOUs and the STACK talks.
+  - **KKR** passes the same way, through STTGDC, CyrusOne, ContourGlobal, Avantus and, once closed, EDF power solutions North America. ContourGlobal signed for 3 GWh of CATL batteries (10 Aug 2026) and Avantus bought an 800 MWh Fluence system (July 2026).
+  - **The one DC-power programme on record** at either firm is STTGDC's HVDC testbed with LITEON and Amperesand, whose SST deployment STTGDC names as its plan for future Singapore sites. No SST, 800 VDC or HVDC purchase is on record at any BlackRock platform.
+- **SEC access, a finding for the probe, not a block:** `www.sec.gov` and `data.sec.gov` return 403 to a User-Agent whose contact address sits on a `*.github.io` domain — the one `check-source-reachability.py` sends — and 200 to the same request with another contact domain. The 'network-keyed EDGAR block' recorded since v04.91r is a User-Agent rejection. The probe was **not** changed: SEC's fair-access policy wants a real, monitored contact address, which only the developer can supply.
+- **Report pins left loud, with the reason:**
+  - `fluence` v10 on `grid-scale-bess--competitive--2026-09-08` — this revision corrected a strategy judgment (the Ohio approval), which is substantive, so a pin note cannot vouch for it.
+  - `jupiter-power` v7 on `named-project-bess-attach--opportunity--2026-09-08` — the ownership text was corrected, also substantive.
+  - `jinko` and `oracle` — pre-existing.
+- **Existing study guides checked for contradictions:** twelve guides name BlackRock, GIP, AIP, KKR or a KKR platform. Eleven agree with the new dossiers; `cyrusone`'s caution that BlackRock 'is not itself a CyrusOne owner' in the 'GIP-owned' sense matches the funds-managed wording of the new edge. One was corrected (below).
+- **Classroom lessons now stale, by design — `Classroom.gs` was not edited:**
+  - `landscape-capital-2026-09` was built on '4 of 8 buy nothing'. The `capital` roster is now 10, and both new incumbents buy nothing themselves and pass §11.1 only through platforms they control.
+  - `scenario-capital-objection` (reviewBy 10/14) goes stale with it.
+  - Classroom wave B re-authors both, after F-I2 adds SoftBank and Blue Owl.
+  - `build-classroom-segments.py --check` now shows **17 due**: 15 with section changes (`capital` differs in eight sections) and 2 pin-only (`clean-firm-and-nuclear`, `storage-developers-and-ipps`).
+- **Checkers:**
+  - `sync-profiler-registry.py --check` — clean (190 in bijection, calendar included).
+  - `check-profiler-study.py` — 0 errors, 0 warnings (190 guides, 1,555 concepts).
+  - `check-profiler-relationships.py` — 0 findings (20 accepted pairs).
+  - `check-profiler-crossrefs.py` — 0 candidates across 529 pairs.
+  - `check-readme-tree.py` — 0 findings.
+  - `check-profiler-reports.py` — 0 errors and four warnings, read and left loud as above.
+- **Playwright:** 30 dossiers (the two new ones and the 28 revised) render on `Profiler.html` with every tab, and the `blackrock`, `kkr` and corrected `mgx` study guides open and close with the ✕ button. **Zero page errors.** The only console lines are resource failures on `script.google.com`, the GAS backend the sandbox cannot reach, the same class as `gis_load_failed`. The harness hides the auth wall and sets the admin UI role in `localStorage` so the tabs and the Study guide button are reachable.
+  - **No literal `{{` or `**` in the new guides**, and none in any tab of the new dossiers except the Relationships tab's inbound evidence.
+  - **Inbound evidence shows raw `**`.** The 'Mentioned in X's dossier' panel inserts each excerpt as a text node, so the house-style bold labels ('**BOTTOM LINE UP FRONT:**', '**Collection gaps:**') print literally. Rendered against a HEAD checkout, the only differences are on the Relationships tab of seven revised dossiers (`mgx` +4, `aligned` +2, `clearway-energy` +2, `cyrusone` +10, `eolian` +4, `jupiter-power` +4, `meta` +2), all excerpts of the new BlackRock and KKR text. The graph holds 390 `**` against 336 at HEAD. This renderer gap is pre-existing (NVIDIA shows the same). The house style was not changed; the fix belongs in `ovRelEvidList` in `Profiler.html`, a page change outside this session.
+  - `Profiler.html` is unchanged (data-only), so there is no page version bump.
+- **Not run here, as instructed:** F-I2 (SoftBank, SB Energy, Blue Owl — it waits on the DigitalBridge close), the 10/1 neoclouds pass and `profiler Habitat Energy`.
+- **No rotation:** 92 sections, under the trigger.
 
 ## [v07.65r] — 2026-09-26 06:03:22 AM EST
 
