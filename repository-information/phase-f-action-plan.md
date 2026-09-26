@@ -1,4 +1,6 @@
-# Phase F action plan on Opus 5.5 — the remaining 32 companies, the Classroom waves, and the first paste-in prompt
+# Phase F action plan on Opus 5.5 — the remaining 32 companies, the Classroom waves, and the paste-in prompts
+
+**Status (v07.63r, 2026-09-26):** F-H1 landed in v07.62r (row 1 of §3 done). §5 holds the F-N1 prompt, for xhigh.
 
 **Written 2026-09-26 (v07.61r)**, the night the Classroom utilities re-pin landed (v07.60r). The developer asked for three things:
 - every company still recommended for Profiler;
@@ -176,6 +178,101 @@ check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); ch
 warnings read; every new dossier and guide renders under Playwright with zero page errors. CHANGELOG
 rotation only if non-exempt sections reach 100. Normal Pre-Commit and Pre-Push checklists; one commit;
 push on a claude/* branch.
+```
+
+## 5 · Paste-in prompt — session 2, F-N1 (Opus 5.5 · xhigh)
+
+**Written 2026-09-26 (v07.63r), after F-H1 landed.** §3 row 2 suggested high; the developer chose **xhigh**. Run it in a fresh session **by Tue 9/29**. It follows §4's F-H1 prompt, with F-N1's substitutions and the lessons F-H1 taught (reciprocal edges, back-sourced counterparties, lesson plans written incrementally).
+
+```text
+Picking up from my last session, run Phase F session F-N1 of
+repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: Firmus Technologies, HUMAIN and
+G42 (Khazna) — the neoclouds and AI-capacity builders that sign for their own campuses. This session runs
+on Opus 5.5 at xhigh (the action plan suggested high; I am choosing xhigh). Write "Opus 5.5 xhigh" into
+your §11.3 Model cells.
+
+WHY NOW: §11.2 wants F-N1 landed before the 10/1 neoclouds pass, so landscape-neoclouds-2026-09 is
+re-authored once, in Classroom wave A (Fri 10/2 – Tue 10/6). Do NOT run the neoclouds pass or
+`profiler Habitat Energy` here — both wait on filings due 9/30 — and do not revise fluidstack.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; repository-information/phase-f-action-plan.md;
+PROFILER-COVERAGE-PLAN.md §2, §7 and §11 (the three F-N1 rows of §11.3 are yours; §11.1's
+buying-authority test applies); .claude/rules/profiler-app.md (Profiler Command including step 1a
+identity and step 7 reconciliation, Profiler Prep Command, Scheduled Refreshes);
+repository-information/PROFILER-SCHEMA.md (Naming and renames, Segments registry, Refresh calendar);
+repository-information/PROFILER-STYLES.md (active style). Read the coreweave, nebius, crusoe, fluidstack
+and nscale dossiers and study guides as the house pattern for a neocloud, and the mgx, xai, amd,
+terawulf, openai and oracle dossiers — they already name HUMAIN, G42, Khazna, Core42 or Stargate UAE.
+
+THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+profileVersion 1) and study guide (schema v2) with its lesson plan under
+repository-information/study-prep/<slug>/. Proposed slugs: firmus, humain, g42. Category hypotheses:
+firmus ["neocloud"]; humain ["neocloud"] or ["hyperscaler"]; g42 ["neocloud"], ["hyperscaler"] or
+["developer"] — decide each on the record and say why. Populate aka[] BEFORE the step-7 grep, including
+brand and subsidiary names (Firmus: Sustainable Metal Cloud if it is Firmus's, HyperCube; G42: Group 42,
+Khazna, Core42, Stargate UAE; HUMAIN: its Arabic name if it publishes one). Assign segments in
+live-site-pages/profiler-data/profiler-segments.json with a basis line (hypothesis: neoclouds ·
+challenger for all three; aidc-developers-and-landlords · challenger for Firmus and for G42 if Khazna
+owns and builds its campuses). Then the registry sync, the graph build, a calendar row per company under
+the Refresh calendar rules (Firmus: public if its ASX listing has happened by your run date — the ASX is
+reachable from the sandbox — otherwise the private rule; HUMAIN and G42 private), README tree entries,
+and rewrite and flip your §11.3 rows.
+
+IDENTITY (step 1a) — establish each of these, do not assume it:
+- Firmus: the operating and listing entity, how Sustainable Metal Cloud relates to it, which company owns
+  and builds the Australian and Malaysian campuses, and the status of the Benmax acquisition.
+- HUMAIN: its ownership (PIF), and which entity signs for data-centre power equipment — HUMAIN itself, a
+  joint venture, or a design-build contractor it appoints. Decide neocloud or hyperscaler.
+- G42: one slug for the group, or a separate one for Khazna? Decide under Naming and renames and say
+  why. Establish Khazna's and Core42's ownership, Microsoft's stake in G42, and who signs for Stargate
+  UAE's power equipment.
+
+THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF. They come from web research on 2026-09-25 whose search
+budget ran out partway, and nobody has read the underlying articles. Verify against first-party sources
+(company releases, the ASX, government and regulator records, the counterparties' own filings), record a
+premise verdict per clause, and rewrite the cells. Run these checks hardest:
+- Firmus: >900 MW contracted (8 Sep 2026) with OpenAI as the Malaysian anchor; the Benmax purchase
+  (A$300M); the Gunvor 600 MW supply deal tied to 1.5 GWh of storage; the ASX IPO timing; ClusterMAX 3.0
+  Silver.
+- HUMAIN: 1.9 GW by 2030 and Al Sa'ad 1 GW phase 1 by 2027; xAI 500 MW+ and Together AI 250 MW
+  (31 Aug 2026); the design-build awards to MIS; ClusterMAX "Unavailable".
+- G42: Khazna building Stargate UAE (1 GW inside a 5 GW campus) with long-lead equipment for the first
+  200 MW procured — who procured it, and from whom; Core42 as TeraWulf's 60 MW tenant; the UAE's move to
+  Country Group A:5 (Jul 2026) and what it changed.
+For each company, record the §11.1 buying-authority verdict: does it, or a platform it controls, sign for
+batteries, MV gear, generation or SSTs?
+
+RECONCILIATION (step 7) — expected inbound: Firmus 0; HUMAIN 2 (amd, xai); G42 4 (mgx, terawulf, and
+openai and oracle through "Stargate UAE"). Known alias collisions, not inbound: hyperstrong's "HyperCube"
+is HyperStrong's own product line, and dg-matrix's "Inception" is NVIDIA's startup programme. Grep again
+with the full aka[]. Check every inbound dossier for the reciprocal edge — in F-H1 the delta-electronics
+dossier did not name a customer it had launched a product with — and where one is missing, revise that
+dossier under the Archival Procedure and re-verify any report pins on it. Check microsoft and nvidia for
+a missing G42 or HUMAIN edge too.
+
+LESSONS FROM F-H1 — apply them:
+- Every supplier, customer or partner named in narrative prose rests on a source in sources[], ideally
+  the counterparty's own filing. F-H1 had to back-source two such claims before commit.
+- A tender is not an award. An unattributed figure is stated as unverified, never as fact.
+- Write each lesson plan skeleton-first, then Edit (.claude/rules/behavioral-rules.md, Incremental
+  Writing, item d).
+- If an existing study guide contradicts a verified finding, correct it minimally and record it.
+
+DO NOT edit googleAppsScripts/Classroom/Classroom.gs. The new members make landscape-neoclouds-2026-09
+and the scenario-neoclouds-discovery rehearsal stale — and landscape-aidc-developers-and-landlords-2026-09
+further, if Firmus or G42 join that segment. Record that in the CHANGELOG entry and the SESSION-CONTEXT
+hand-off (§11.2, the landscape coupling); Classroom wave A re-authors them.
+
+FOR THE MEGMEET JOB: in the SESSION-CONTEXT hand-off, write one short paragraph on whether any of the
+three signs for medium-voltage or DC power equipment (SSTs, 800 VDC, HVDC), and what that means for an
+SST seller.
+
+VERIFY: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check clean;
+build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+warnings read; every new dossier and guide renders under Playwright with zero page errors other than the
+sandbox's gis_load_failed. CHANGELOG rotation only if non-exempt sections reach 100. Normal Pre-Commit
+and Pre-Push checklists; one commit; push on a claude/* branch.
 ```
 
 Developed by: LightAISolutions

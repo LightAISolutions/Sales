@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.63r] — 2026-09-26 03:20:08 AM EST
+
+> **Prompt:** "I approve of your proposed fix for the write-size slip. Output the three new guides as downloadable PDFs. Give me a prompt to paste into a new Opus 5.5 Xhigh session for F-N1, then remember session."
+
+The follow-up to F-H1: the approved rule fix for the write-size slip, the three new study guides as PDFs, the F-N1 paste-in prompt, and the session saved.
+
+### Added
+
+- **`phase-f-action-plan.md` §5 — the F-N1 paste-in prompt** (Firmus Technologies, HUMAIN, G42/Khazna) for Opus 5.5 **xhigh**; §3 had suggested high, and the developer chose xhigh. It follows §4's F-H1 prompt and carries F-H1's lessons:
+  - Every counterparty named in prose rests on a source, ideally its own filing.
+  - Every inbound dossier is checked for a missing reciprocal edge, and revised under the Archival Procedure where one is missing.
+  - Lesson plans are written skeleton-first.
+  - It names the expected inbound set (Firmus 0; HUMAIN 2 — `amd`, `xai`; G42 4 — `mgx`, `terawulf`, and `openai` and `oracle` via Stargate UAE) and two known alias collisions (`hyperstrong`'s HyperCube product line; `dg-matrix`'s NVIDIA Inception badge).
+  - It asks for the §11.1 buying-authority verdict per company and a Megmeet paragraph in the hand-off.
+  - A status line under the plan's title records that F-H1 has landed.
+
+### Changed
+
+- **`.claude/rules/behavioral-rules.md` — Incremental Writing gate, Step 1**: a new item (d) adds `study-prep/<slug>/<slug>-lesson-plan.md` (typically 60–100 lines) to the content types that must be treated as over 50 lines and written skeleton-first. This was the structural fix proposed in v07.62r, after a 75-line lesson plan was written in one call, and the developer approved it. A scan found no conflicting text.
+- **`SESSION-CONTEXT.md`** — the Latest Session extended in place for v07.63r. It was already this session's F-H1 hand-off, so moving it down would have pushed out the v07.60r–v07.61r entry to make room for a duplicate. The recommendation now points at §5.
+- **README.md** — the action plan's tree description names both prompts; timestamp and repo version.
+
+### Notes
+
+- **The PDFs are deliverables, not repo files.** `ByteDance-`, `Alibaba-Cloud-` and `Chindata-Technology-Study-Guide.pdf` (13, 15 and 11 pages) were rendered with Chromium from each `<slug>.study.json` and sent to the developer:
+  - Every section kind is laid out for print.
+  - The tooltip terms are underlined and defined in a closing glossary (17, 25 and 19 terms).
+  - The self-test answers moved to an answer key.
+  - The ByteDance timeline's intro is re-worded for its table form.
+  - Checks: a text extraction found no literal `{{` or `**`, the Chinese glyphs rendered, and every page was inspected.
+- **No dossier, guide, page, GAS script or Classroom content changed.** No rotation: 89 sections.
 
 ## [v07.62r] — 2026-09-26 02:50:43 AM EST
 

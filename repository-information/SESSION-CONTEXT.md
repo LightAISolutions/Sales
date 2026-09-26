@@ -6,8 +6,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
-**Date:** 2026-09-26 01:26 AM → ~03:10 AM EST (one attended prompt, run unattended; context compacted once mid-session)
-**Repo version:** v07.62r (one push)
+**Date:** 2026-09-26 01:26 AM → 03:25 AM EST (two attended turns; context compacted once mid-session)
+**Repo version:** v07.63r (two pushes: v07.62r F-H1; v07.63r the write-size rule fix, the F-N1 prompt and this save)
 **Branch:** `claude/relaxed-shannon-q4fc02`
 **Model:** Opus 5.5 at xhigh, per the developer's 2026-09-26 decision
 
@@ -27,6 +27,10 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   - Panama — **a transformer-rectifier, not an SST** (held); Zhonhen's ~70% — **unverifiable**.
   - Chindata's Sangyuan SST — **a true SST** on its makers' description; 'first' holds only as **first in commercial operation** (Eaton/VNET pilot since end-2024).
 - **Verification:** registry sync clean; study, relationships, crossrefs and README-tree checkers clean; reports checker shows only the two old warnings; Playwright renders all three new dossiers and guides plus revised Zhonhen and Delta with zero console errors (only the sandbox's `gis_load_failed`).
+- **v07.63r — the follow-up turn:**
+  - **The write-size rule fix, approved by the developer:** the Incremental Writing gate in `.claude/rules/behavioral-rules.md` now lists lesson plans as item (d) of the content types that always run over 50 lines. F-H1 had written a 75-line lesson plan in one call.
+  - **The three new study guides as PDFs**, sent to the developer as files (11–15 pages each: every section kind, an answer key, a glossary for the tooltip terms). They are **not** in the repo; the renderer lived in the session scratchpad.
+  - **The F-N1 paste-in prompt**, saved as **§5 of `phase-f-action-plan.md`** for Opus 5.5 xhigh. It carries F-H1's lessons: back-source every named counterparty, check inbound dossiers for missing reciprocal edges, write lesson plans incrementally. It also flags the two alias collisions (`hyperstrong`'s HyperCube, `dg-matrix`'s Inception) and adds a Megmeet paragraph ask.
 
 ### What the three dossiers change about Megmeet's missing customer side
 
@@ -34,8 +38,8 @@ The `megmeet` dossier names no Chinese customer, and these three do not supply o
 
 ### Where we left off
 
-- **Status:** v07.62r pushed at close; the tree is clean.
-- **Next (action plan):** F-N1 (Firmus, HUMAIN, G42) at high by Tue 9/29; F-I1 (BlackRock, KKR) at xhigh Mon 9/28 – Tue 9/29. No paste-in prompt exists for either yet — §4 of `phase-f-action-plan.md` holds only F-H1's, which is the template.
+- **Status:** v07.62r is merged and v07.63r pushed at close; the tree is clean.
+- **Next (action plan):** F-N1 (Firmus, HUMAIN, G42) at **xhigh** by Tue 9/29, prompt in §5; then F-I1 (BlackRock, KKR) at xhigh Mon 9/28 – Tue 9/29, which has no prompt yet (§4 and §5 are the templates).
 - **Dated items:**
   - CoolIT cooling recheck on or after Mon 9/28.
   - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30.
@@ -52,10 +56,13 @@ The `megmeet` dossier names no Chinese customer, and these three do not supply o
 - **ByteDance is one group slug**; Volcano Engine is the name its campuses are bought under, not a separate buyer.
 - **Chindata means Chindata China** under HEC; Bridge Data Centres is out of scope except as context.
 - **A tender is not an award.** Unattributed figures (the HVDC share, the 800 V pilot, Zhonhen's share of Panama) are stated as unverified, never as fact.
+- **F-N1 runs at xhigh**, not the plan's high (the developer, 2026-09-26).
+- **Same-session save:** 'remember session' extended this Latest entry in place rather than moving it down, because it was already this session's hand-off. Moving it would have pushed out the v07.60r–v07.61r entry to make room for a duplicate.
 
 ### Known issues
 
 - **Not edited:** `study-prep/zhonhen/zhonhen-interview-brief.md` still calls Panama's device class an SST in two lines (92, 177). It is a private file, outside the scope; the in-app guide was corrected.
+- **The study-guide PDFs are not reproducible from the repo:** the renderer was a scratchpad script. Ask to commit it as a script if PDFs for future guides are wanted.
 - **README archive tree:** about 60 archive files that predate this session (e.g. `zhonhen.profile.v4`/`v7`, `delta-electronics.profile.v2`) are not listed. This session added only its own two.
 - **Carried over:**
   - The ERCOT/PJM decision still awaits the developer.
@@ -66,13 +73,13 @@ The `megmeet` dossier names no Chinese customer, and these three do not supply o
 ### Active context
 
 - **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 185 dossiers, 185 guides, 1,520 concepts, 1,583 graph edges. **CHANGELOG** `Sections: 88/100`.
+- **Profiler:** 185 dossiers, 185 guides, 1,520 concepts, 1,583 graph edges. **CHANGELOG** `Sections: 89/100`.
 
 ### Recommendation for next session
 
-- Run **F-N1 (Firmus, HUMAIN, G42)** on Opus 5.5 at high before Tue 9/29, so `landscape-neoclouds-2026-09` is re-authored only once in Classroom wave A. First ask for its paste-in prompt, written from the F-H1 prompt in §4 of `phase-f-action-plan.md`.
+- Run **F-N1 (Firmus, HUMAIN, G42)** in a fresh Opus 5.5 session at **xhigh** by Tue 9/29, using the prompt in **§5 of `repository-information/phase-f-action-plan.md`**, so `landscape-neoclouds-2026-09` is re-authored only once in Classroom wave A.
 
-**To continue:** type `write the F-N1 prompt`
+**To continue:** paste the prompt in §5 of `repository-information/phase-f-action-plan.md` into a fresh Opus 5.5 session set to xhigh
 
 ## Previous Sessions
 
