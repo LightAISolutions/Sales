@@ -1,17 +1,19 @@
-# Phase F action plan on Opus 5.5 — the remaining 32 companies, the Classroom waves, and the paste-in prompts
+# Phase F action plan — the remaining companies, the Classroom waves, and the paste-in prompts
 
-**Status (v07.70r, 2026-09-29):** F-H1 landed in v07.62r, F-N1 in v07.64r and F-I1 in v07.66r (rows 1, 2 and 4 of §3 done; F-I1 ran early, on 9/26, at xhigh). **Row 3 ran on 9/29 (v07.69r):** CoolIT's CDU launch slipped past 9/28 with no new date. `landscape-cooling-2026-09` now teaches the slip, and its reviewBy moved to 10/27, Ecolab's Q3 results. The `coolit` dossier was refreshed to v3 the same day (v07.70r) and now records the slip. §5 holds the F-N1 prompt as run and §6 the F-I1 prompt as run. F-N1 moved two Classroom modules that wave A (row 7) already re-authors, plus one scenario: `landscape-neoclouds-2026-09` gains three members, `landscape-aidc-developers-and-landlords-2026-09` gains `g42` as a challenger and `firmus` and `humain` as adjacent, and `scenario-neoclouds-discovery`, tied to the `neoclouds` segment, goes stale with it. F-I1 makes `landscape-capital-2026-09` (built on "4 of 8 buy nothing") and `scenario-capital-objection` (reviewBy 10/14) stale: the `capital` roster is 10 now, with `blackrock` and `kkr` as incumbents, and both pass §11.1 only through platforms they control. Wave B (row 10) re-authors them once F-I2 lands. F-I1's step 7 found 42 BlackRock and 26 KKR hits by the full alias grep (§1 says 31 and 18); after 9 collisions and 8 career-only mentions it read 29 and 22 substantive dossiers, plus `microsoft` and `xai` for the missing AIP edge, and revised 28. **Decided 2026-09-26 (v07.67r):** ERCOT and PJM are approved for coverage as grid operators (row 21 and the note under Stage 3), and wave B has a DigitalBridge fallback (row 10).
+**Re-planned 2026-09-29 (v07.71r) — Fable-first, week by week.** The developer asked to spend the weekly Fable allowance in full. §3 now runs every remaining new-dossier session ahead of the Classroom waves, in budget weeks that reset Saturday 7:00 AM ET, and gives each session its own model and effort. The all-Opus rule of 2026-09-26 is withdrawn: §2 restores `PROFILER-COVERAGE-PLAN.md` §2's split and records the measured session costs behind the schedule. **What is left: 18 sessions, 14 on Fable and 4 on Opus, finishing in the week of 10/10 except the Megmeet refresh, which waits on Megmeet's Q3 filing.**
+
+**Status (v07.70r, 2026-09-29):** F-H1 landed in v07.62r, F-N1 in v07.64r and F-I1 in v07.66r (rows 1, 2 and 4 of the 9/26 plan done; F-I1 ran early, on 9/26, at xhigh). **Its row 3 ran on 9/29 (v07.69r):** CoolIT's CDU launch slipped past 9/28 with no new date. `landscape-cooling-2026-09` now teaches the slip, and its reviewBy moved to 10/27, Ecolab's Q3 results. The `coolit` dossier was refreshed to v3 the same day (v07.70r) and now records the slip. §5 holds the F-N1 prompt as run and §6 the F-I1 prompt as run. F-N1 moved two Classroom modules that wave A (now §3 row 9) already re-authors, plus one scenario: `landscape-neoclouds-2026-09` gains three members, `landscape-aidc-developers-and-landlords-2026-09` gains `g42` as a challenger and `firmus` and `humain` as adjacent, and `scenario-neoclouds-discovery`, tied to the `neoclouds` segment, goes stale with it. F-I1 makes `landscape-capital-2026-09` (built on "4 of 8 buy nothing") and `scenario-capital-objection` (reviewBy 10/14) stale: the `capital` roster is 10 now, with `blackrock` and `kkr` as incumbents, and both pass §11.1 only through platforms they control. Wave B (now §3 row 15) re-authors them once F-I2 lands. F-I1's step 7 found 42 BlackRock and 26 KKR hits by the full alias grep (§1 says 31 and 18); after 9 collisions and 8 career-only mentions it read 29 and 22 substantive dossiers, plus `microsoft` and `xai` for the missing AIP edge, and revised 28. **Decided 2026-09-26 (v07.67r):** ERCOT and PJM are approved for coverage as grid operators (§3 rows 13–14 and the note under the week tables), and wave B has a DigitalBridge fallback (§3 row 15).
 
 **Written 2026-09-26 (v07.61r)**, the night the Classroom utilities re-pin landed (v07.60r). The developer asked for three things:
 - every company still recommended for Profiler;
 - an action plan to implement all of it, **on Opus 5.5**, with an effort level (medium, high or xhigh) per session;
 - a paste-in prompt to start the plan.
 
-This file is that answer. It **supersedes the Model column of `PROFILER-COVERAGE-PLAN.md` §11.2**, which assigned Fable 5.1 High to most sessions. Everything else in §7 and §11 still binds, including the §11.3 ledger each session flips and the landscape coupling.
+This file is that answer. It **superseded the Model column of `PROFILER-COVERAGE-PLAN.md` §11.2**, which assigned Fable 5.1 High to most sessions. **That was reversed on 2026-09-29 (v07.71r):** §11.2's split is back, restated per session in §3. Everything else in §7 and §11 still binds, including the §11.3 ledger each session flips and the landscape coupling.
 
 ## 1 · Every company still recommended
 
-Source: `PROFILER-COVERAGE-PLAN.md` §11.3, the Phase F list the developer approved on 2026-09-25. It had 37 companies in 13 sessions. **F-U1 and F-U2 are done** (Duke, DTE, WEC, Berkshire Hathaway Energy, Exelon — v07.57r/v07.58r). That leaves **32 companies in 11 sessions**, plus two grid operators held for a decision.
+Source: `PROFILER-COVERAGE-PLAN.md` §11.3, the Phase F list the developer approved on 2026-09-25. It had 37 companies in 13 sessions. **F-U1 and F-U2 are done** (Duke, DTE, WEC, Berkshire Hathaway Energy, Exelon — v07.57r/v07.58r). That leaves **32 companies in 11 sessions**, plus two grid operators held for a decision. **As of 2026-09-29**, F-H1, F-N1 and F-I1 have landed: **24 companies in 8 sessions remain, plus ERCOT and PJM**.
 
 **The ledger's "Why" cells are unverified hypotheses** — every session verifies its own rows. Dossier counts are the existing dossiers that name the company, which is the size of its step-7 reconciliation.
 
@@ -34,17 +36,37 @@ Source: `PROFILER-COVERAGE-PLAN.md` §11.3, the Phase F list the developer appro
 
 **Excluded on 2026-09-25, and not to be re-proposed** (§11.1 gives the reasons): GIC, Silver Lake, Partners Group; Goldman Sachs, JPMorgan, Morgan Stanley; DigitalBridge (covered through SoftBank); PG&E, SCE, Sempra, CenterPoint, FirstEnergy; Together AI, Vultr, TensorWave, Lightning AI / Voltage Park; Clean Energy Associates; Cupertino Electric.
 
-## 2 · How the effort levels were chosen
+## 2 · How the model and effort were chosen
 
-The rule comes from `PROFILER-COVERAGE-PLAN.md` §2's own evidence: **effort buys depth of reading, not care.** Premise-checking is prompt-driven — the Medium session F5 caught all three of its wrong premises. Opus's one clear edge in the Xcel head-to-head was reading depth on long first-party filings. So the effort level follows the document the session has to mine, not the importance of the company:
+The rule comes from `PROFILER-COVERAGE-PLAN.md` §2's own evidence: **effort buys depth of reading, not care.** Premise-checking is prompt-driven — the Medium session F5 caught all three of its wrong premises. The model follows the same evidence. In the Xcel head-to-head (2026-09-04: Opus 5 xhigh against Fable 5.1 High, blind), Opus's one clear edge was reading depth on a long 10-K, and Fable's was a narrow one on sourcing and relationship discipline. So the model and the effort follow the document the session has to mine, not the importance of the company:
 
-| Effort | Use it for | Sessions |
+| Model · effort | Use it for | Sessions (§3 row) |
 |---|---|---|
-| **xhigh** | A long first-party record to mine, or a heavy step-7 reconciliation: 10-Ks, S-1s, IRPs and rate-case dockets, Chinese-language filings with conflicting figures, 18 or more inbound dossiers. Also a Classroom session that re-authors a landscape whose roster grew | F-H1, F-I1, F-I2, F-U3, F-U4, F-I3, the ERCOT/PJM session, the Megmeet refresh and AIDC power-conversion report, and the four Classroom waves |
-| **high** | Private or thin-record subjects, where the dossier's value is inference and there is little long text to mine. Also scenario reframes, refresh passes and count corrections | F-N1, F-N2, F-G1, F-I4, the 10/1 neoclouds + Habitat pass, the Dominion reframe |
-| **medium** | Bounded adjudication, where the rule is written and the judgment is whether one record matches another | F-A1, the 9/30 pipeline-run check, the CoolIT cooling recheck |
+| **Opus 5.5 · xhigh** | Long first-party filings to mine: 10-Ks, an S-1, Chinese-language quarterlies with conflicting figures | F-I2 (11), F-I3 (12), the Megmeet refresh and report (18) |
+| **Fable 5.1 · xhigh** | Classroom teaching material that lessons hang on (§2's anchor rule), and the corpus's largest step 7 | Waves A–D (9, 15, 16, 17), ERCOT (13) |
+| **Fable 5.1 · high** | Private or thin records, where the dossier's value is inference; regulatory synthesis (utilities, grid operators); refresh passes and scenario reframes | F-N2 (1), F-U3 (3), F-U4 (4), the neoclouds + Habitat pass (5), F-I4 (6), F-G1 (7), the Dominion reframe (10), PJM (14) |
+| **Fable 5.1 · medium** | Bounded adjudication on thin records | F-A1 (8) |
+| **Opus 5.5 · medium** | Read-only checks | The 9/30 pipeline-run check (2) |
 
-**Confidence note:** this is judgment, not measurement. The repo has never compared Opus 5.5's effort tiers against one another. If an xhigh session's output reads no better than a high one's, demote the rest of that tier.
+**Changed from the 9/26 plan:** F-U3, F-U4 and PJM drop from xhigh to high. That matches F-U1 and F-U2, which ran on Fable 5.1 High and caught their one wrong premise. Every other change is the model.
+
+**Confidence note:** this is judgment, not measurement. The head-to-head is one dossier, and it compared Opus 5, not 5.5. Nothing in the repo compares Opus 5.5 with Fable 5.1, or Fable's effort tiers on lesson writing. If an xhigh session's output reads no better than a high one's, demote the rest of that tier. **If the Fable cap binds mid-session, finish on Opus 5.5 xhigh** and record the substitution in the §11.3 Model cell.
+
+**The budget, measured 2026-09-29.** On Max, Fable can use up to 50% of **one shared weekly limit**; Opus, Sonnet and the Routines draw from the same limit ([Claude Fable models on your plan](https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan); `ROUTINES-OPERATIONS.md`). The week resets **Saturday 7:00 AM ET**, per every session's `rate_limit_info.resetsAt`. Session value below is `get_session`'s `usage.cost_usd`: the list-price value of the tokens used, not a charge. Each figure covers the whole session, follow-up turns included.
+
+| Session | Kind | Model | Value | Per company |
+|---|---|---|---|---|
+| F-U1 + F-U2 (5 utilities, two pushes) | new | Fable 5.1 High | $222 | ~$44 |
+| F-H1 (3, plus three PDFs) | new | Opus 5.5 xhigh | $102 | ~$34 |
+| F-N1 (3) | new | Opus 5.5 xhigh | $84 | ~$28 |
+| F-I1 (2; 28 inbound dossiers revised; three follow-up turns) | new | Opus 5.5 xhigh | $104 | ~$52 |
+| Habitat Energy v2 + Gridmatic | refresh | Opus 5.5 high | $13 | ~$7 |
+| CoolIT v3 + the cooling module | refresh | Opus 5.5 xhigh | $29 | — |
+| Megmeet v8 (~100 sources; two dossiers reconciled) | deep refresh | Opus 5.5 high | $129 | $129 |
+
+- **A light refresh costs a fraction of a new company; a deep one costs more than a whole new session.** Habitat Energy and Gridmatic cost about $7 a company, against $28–$52 for a new one, while Megmeet v8 cost $129, more than any three-company session. Cost follows how much is researched and how many dossiers are re-read, not whether the file exists. Cache reads, which grow with context size × turns, are about half of each Opus session's value (44–61%); on Fable, cache writes and output weigh more. So "write now, refresh later" is cheap when the pending event is one fact (the DigitalBridge close) and dear when it reshapes the company.
+- **The Fable half is about $1,200 a week.** The week of 9/19–9/26 spent about **$1,180 of Fable value across 25 sessions** before the weekly-limit warning appeared on 9/26. The warning threshold is not published, so treat $1,200 as a floor. F-I1's token mix repriced at Fable rates comes to about $188, 1.8× its Opus value. **Plan on about seven heavy Fable sessions a week at $130–$190 each.** *Inference from one week's reading, not a published quota.*
+- **Phase F's 14 Fable sessions are about two weeks of Fable.** After week 3 of §3, the plan needs no Fable at all.
 
 **The landscape coupling, restated because it sets the Classroom waves:**
 - A Profiler session never edits `Classroom.gs`.
@@ -54,43 +76,62 @@ The rule comes from `PROFILER-COVERAGE-PLAN.md` §2's own evidence: **effort buy
 
 ## 3 · The action plan, in order
 
-Dates are verified weekdays. The plan interleaves the developer's standing reminders, because four of them are date-gated and two sessions (F-N1, F-H1) are timed to them.
+**Re-planned 2026-09-29 (v07.71r) — Fable-first, by budget week.** Dates are verified weekdays. Three rules set the order:
+1. **New dossiers first, then the Classroom waves.** A new company makes its segment's landscape stale. Landing all of a segment's new members before its wave means each landscape is re-authored once, so wave D loses its count corrections for capital, neoclouds and AIDC developers.
+2. **One session at a time.** Profiler sessions share the registry, graph, segments, calendar and CHANGELOG, and their step-7 reconciliations edit overlapping dossiers. `MULTI_SESSION_MODE` is Off, and push-once still applies.
+3. **Opus sessions don't draw on the Fable half**, so they sit where a date gate puts them.
 
-**Stage 1 — before the Megmeet start (Saturday 2026-09-26 → Tuesday 2026-10-06)**
+Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are in priority order: if the Fable cap or the days run out, the rest roll into the next week without breaking a dependency. Check Settings → Usage before each Fable session.
 
-| # | When | Session | Effort | Why this slot |
+**Done:**
+
+| Session | Model | Landed |
+|---|---|---|
+| F-U1 + F-U2 — Duke, DTE, WEC, Berkshire Hathaway Energy, Exelon | Fable 5.1 High | v07.57r–v07.58r, 9/26 (before this plan) |
+| F-H1 — ByteDance, Alibaba Cloud, Chindata | Opus 5.5 xhigh | v07.62r, 9/26 |
+| F-N1 — Firmus, HUMAIN, G42 | Opus 5.5 xhigh | v07.64r, 9/26 |
+| F-I1 — BlackRock, KKR | Opus 5.5 xhigh | v07.66r, 9/26 |
+| Cooling recheck, then CoolIT v3 | Opus 5.5 xhigh | v07.69r–v07.70r, 9/29 |
+
+**Week 1 — now to Sat 10/3, 7:00 AM ET.** About $1,150 of the Fable half is left: the week's only Fable session so far (another project) used about $41. The seven Fable rows below come to about $800–$1,000.
+
+| # | When | Session | Model · effort | Why here |
 |---|---|---|---|---|
-| 1 | **Sat 9/26 or Sun 9/27** | **F-H1** — ByteDance, Alibaba Cloud, Chindata (Profiler) | **xhigh** | The only session tied to the developer's own start date: the China buyer side the `megmeet` dossier lacks, landed a week before 10/7 so it can be read. The record is opaque and partly in Chinese, and the capex figures conflict. **Prompt in §4.** |
-| 2 | by **Tue 9/29** | **F-N1** — Firmus, HUMAIN, G42 (Profiler) | high | §11.2 asks for it before the 10/1 neoclouds pass, so `landscape-neoclouds-2026-09` is rewritten once. If it slips, fold it into row 6 |
-| 3 | **Mon 9/28** or later | Cooling recheck after CoolIT's CDU launch (Classroom guidance) | medium | The standing reminder; `landscape-cooling-2026-09` has reviewBy 9/28 |
-| 4 | **Mon 9/28 – Tue 9/29** | **F-I1** — BlackRock, KKR (Profiler) | xhigh | The most-cited uncovered company (31 dossiers; about 33 by the 2026-09-26 alias grep); no date gate. If BlackRock's step 7 outgrows the session, split it off, as §11.2 allows. **Prompt in §6.** |
-| 5 | **Wed 9/30**, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | medium | The standing reminder, re-requested on 9/26. Read the report and check whether a notification arrived |
-| 6 | **Thu 10/1** or later | Neoclouds Profiler pass + `profiler Habitat Energy` (one Profiler session) | high | Both wait on filings due 9/30 (Fluidstack, Habitat Energy). **The 10/1 quarterly and monthly Profiler Routines commit that day — rebase first** |
-| 7 | **Fri 10/2 – Tue 10/6** | **Classroom wave A** — re-author `landscape-neoclouds-2026-09` (F-N1 + row 6), `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1 and F-N1, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their rehearsals | xhigh | Clears the stale modules before the job starts. If it runs long, split neoclouds off first: its module is overdue |
-| 8 | **Fri 10/2 – Tue 10/6** | Reframe the Dominion rehearsal (Classroom, its own session) | high | The standing reminder, after the 10/1 solicitation issues. Also check the unverified "all-stock" merger description |
+| 1 | Tue 9/29 evening or Wed 9/30 | **F-N2** — WhiteFiber, 5C (Hypertec), TECfusions | Fable 5.1 · high | Was November. Lands before wave A, so the neoclouds and AIDC-developer landscapes take its three members in the same pass. Establish 5C's legal entity (5C Group or Hypertec) at step 1a |
+| 2 | Wed 9/30, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | Opus 5.5 · medium | The standing reminder. If the run committed, `git fetch origin main` and rebase before the next session |
+| 3 | Wed 9/30 | **F-U3** — PPL, Pinnacle West, NiSource | Fable 5.1 · high | Was mid-October; no date gate. Same model as F-U1/F-U2. Pinnacle West's XHLF decision and RFP awards fall in December — dossier indicators |
+| 4 | Wed 9/30 – Thu 10/1 | **F-U4** — Florida Power & Light, Salt River Project, TVA | Fable 5.1 · high | Was mid-October. Test FPL against `nextera-energy-resources` under the one-slug rule; SRP and TVA test the category for public and federal power. TVA's large-load charge takes effect 10/1 |
+| 5 | Thu 10/1, after the 10/1 Profiler Routines commit | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) | Fable 5.1 · high | Waits on filings due 9/30 (Fluidstack, Habitat Energy). **Rebase first** |
+| 6 | Thu 10/1 – Fri 10/2 | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments | Fable 5.1 · high | Was November. Lands before wave B, so capital is re-authored once. Quinbrook is `habitat-energy`'s parent; ECP is `proenergy`'s |
+| 7 | Fri 10/2 | **F-G1** — Clayco, Faith Technologies, EMCOR | Fable 5.1 · high | Was November. Decide Faith Technologies' category (epc or supplier) on the record |
+| 8 | Fri 10/2 – Sat 10/3, 7 AM | **F-A1** — Anza, SemiAnalysis, EPRI | Fable 5.1 · medium | Was November. SemiAnalysis may carry no segment; record it as unassigned if so. **First to roll into week 2** if time runs out |
 
-**Stage 2 — October**
+**Week 2 — Sat 10/3 to Sat 10/10.** The Megmeet start is Wed 10/7. The four Fable rows come to about $650–$800, plus any week-1 rollover.
 
-| # | When | Session | Effort | Why this slot |
+| # | When | Session | Model · effort | Why here |
 |---|---|---|---|---|
-| 9 | once the DigitalBridge close is confirmed (expected about the end of September) | **F-I2** — SoftBank, SB Energy, Blue Owl (Profiler) | xhigh | SB Energy's S-1 is a long first-party record; SoftBank's dossier should be written once, after the close brings Vantage and Switch under it |
-| 10 | by **Wed 10/14** | **Classroom wave B** — `landscape-capital-2026-09` (BlackRock, KKR, SoftBank, Blue Owl) and `scenario-capital-objection` | xhigh | `scenario-capital-objection` has reviewBy 10/14; re-author capital once, with four new members. **DigitalBridge fallback (recommended and approved by the developer, 2026-09-26):** if the close has not happened by **Wed 10/7**, move `scenario-capital-objection`'s reviewBy from 10/14 to **Fri 11/6**, the date `landscape-capital-2026-09` already carries, so the two are re-authored together. If it still has not closed by **Fri 10/30**, run wave B without SoftBank and Blue Owl so both land by 11/6, and record F-I2 as a later count correction. As of 26 Sep, DigitalBridge said on 22 Sep that every regulatory approval was in and the deal would close within five business days (by Tue 9/29), so the fallback should not be needed |
-| 11 | mid-October | **F-U3** — PPL, Pinnacle West, NiSource (Profiler) | xhigh | Utilities are regulatory synthesis: IRPs, rate cases and tariffs. Pinnacle West's XHLF decision and RFP awards fall in December |
-| 12 | mid-October | **F-U4** — Florida Power & Light, Salt River Project, TVA (Profiler) | xhigh | FPL must be tested against `nextera-energy-resources` under the one-slug rule. SRP and TVA test the category for public and federal power; TVA's large-load charge is effective 10/1 |
-| 13 | after row 12 | **Classroom wave C** — `landscape-utilities-2026-09` (six more franchises) and the three `scenario-utilities-*` rehearsals | xhigh | The v07.60r pattern again, with seventeen franchises. The utilities module's reviewBy is **2 December** |
-| 14 | after Megmeet's Q3 filing (due by **Sat 10/31**) | `profiler Megmeet`, then `profiler report competitive: AIDC power conversion` | xhigh | The standing reminder. Raise Mitsubishi Electric's scope question here |
+| 9 | Sat 10/3 – Tue 10/6 | **Classroom wave A** — re-author `landscape-neoclouds-2026-09`, `landscape-hyperscalers-and-ai-labs-2026-09` and `landscape-aidc-developers-and-landlords-2026-09` (F-H1, F-N1, F-N2 and row 5, plus `tract` v4 and `powerhouse-data-centers` v3, already moved); regenerate segments; re-judge and re-pin their rehearsals | Fable 5.1 · xhigh | Clears the stale modules before the job starts. If it runs long, split neoclouds off first: its module is overdue |
+| 10 | Sat 10/3 – Tue 10/6 | Reframe the Dominion rehearsal (Classroom, its own session) | Fable 5.1 · high | The standing reminder's window, after the 10/1 solicitation issues. Also check the unverified "all-stock" merger description |
+| 11 | Once the DigitalBridge close is confirmed, and **by Wed 10/7 either way** | **F-I2** — SoftBank, SB Energy, Blue Owl | Opus 5.5 · xhigh | SB Energy's S-1 is a long first-party record. DigitalBridge said on 9/22 the deal would close within five business days. **If it is still pending, write SoftBank's dossier with the deal as pending** and add the close later with a targeted `softbank` refresh: §2 prices a routine refresh at about $7–$29 per company, well below waiting a week |
+| 12 | After row 11 | **F-I3** — Apollo, Ares, Stonepeak | Opus 5.5 · xhigh | Was November. Two 10-K filers. Ares ties to `apex-clean-energy`, Apollo to Stream |
+| 13 | Week 2 | **ERCOT**, with the grid-operator schema note, category and Profiler page change | Fable 5.1 · xhigh | Was the last row. 73 inbound dossiers, the corpus's largest step 7. See the note below |
+| 14 | After ERCOT | **PJM** | Fable 5.1 · high | 37 inbound dossiers; ERCOT has settled the schema |
 
-**Stage 3 — November**
+**Week 3 — Sat 10/10 to Sat 10/17.** The three waves come to about $450–$600 of Fable, which leaves roughly half the allowance free for other work. After this week Phase F needs no Fable.
 
-| # | Session | Effort | Note |
-|---|---|---|---|
-| 15 | **F-N2** — WhiteFiber, 5C (Hypertec), TECfusions | high | Establish 5C's legal entity (5C Group or Hypertec) at step 1a |
-| 16 | **F-G1** — Clayco, Faith Technologies, EMCOR | high | Decide Faith Technologies' category (epc or supplier) on the record |
-| 17 | **F-I3** — Apollo, Ares, Stonepeak | xhigh | Public records (10-Ks); Ares ties to `apex-clean-energy`, Apollo to Stream |
-| 18 | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments | high | Quinbrook is `habitat-energy`'s parent; ECP is `proenergy`'s |
-| 19 | **F-A1** — Anza, SemiAnalysis, EPRI | medium | SemiAnalysis may carry no segment; record it as unassigned if so |
-| 20 | **Classroom wave D** — `landscape-epc-and-construction`, `landscape-in-hall-power`, `landscape-capital` (count correction), `landscape-neoclouds` and `landscape-aidc-developers` (count corrections), `landscape-software-and-optimization`, `landscape-assurance`; regenerate segments; re-pin rehearsals | xhigh | Closes §11.2's "done when" |
-| 21 | **ERCOT and PJM** — approved 2026-09-26; two sessions, ERCOT then PJM | xhigh | See below |
+| # | When | Session | Model · effort | Why here |
+|---|---|---|---|---|
+| 15 | By **Wed 10/14** | **Classroom wave B** — `landscape-capital-2026-09` (up to ten new members since the module was written: BlackRock, KKR, SoftBank, Blue Owl, Apollo, Ares, Stonepeak, Quinbrook, ECP and CPP Investments, each seated as its dossier's segments record) and `scenario-capital-objection` | Fable 5.1 · xhigh | `scenario-capital-objection` has reviewBy 10/14. **DigitalBridge fallback (recommended and approved by the developer, 2026-09-26), unchanged:** if the close has not happened by **Wed 10/7**, move `scenario-capital-objection`'s reviewBy from 10/14 to **Fri 11/6**, the date `landscape-capital-2026-09` already carries, so the two are re-authored together. If it still has not closed by **Fri 10/30**, run wave B without SoftBank and Blue Owl so both land by 11/6, and record F-I2 as a later count correction. With F-I2 written by 10/7 (row 11), the developer can instead let wave B teach the close as pending |
+| 16 | Week 3 | **Classroom wave C** — `landscape-utilities-2026-09` (six more franchises, plus any adjacent seat ERCOT or PJM takes) and the three `scenario-utilities-*` rehearsals | Fable 5.1 · xhigh | The v07.60r pattern again, with seventeen franchises. Runs after rows 13–14 in case either grid operator takes a seat. The utilities module's reviewBy is **2 December** |
+| 17 | Week 3 | **Classroom wave D** — `landscape-epc-and-construction`, `landscape-in-hall-power`, `landscape-software-and-optimization`, `landscape-assurance`, and any landscape an adjacent seat from F-N2, F-G1 or F-A1 touched (for example `bridge-and-on-site-generation`, if TECfusions takes its seat); regenerate segments; re-pin rehearsals | Fable 5.1 · xhigh | Closes §11.2's "done when". Smaller than planned: waves A and B absorb the count corrections |
+
+**After Megmeet's Q3 filing (due by Sat 10/31):**
+
+| # | When | Session | Model · effort | Why here |
+|---|---|---|---|---|
+| 18 | After the filing | `profiler Megmeet`, then `profiler report competitive: AIDC power conversion` | Opus 5.5 · xhigh | The standing reminder. Raise Mitsubishi Electric's scope question here |
+
+**Prompts for these sessions.** §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
 
 **ERCOT and PJM — decided 2026-09-26: cover both, as grid operators.** The developer knows both well and wants them in. The category is a new **`grid-operator`** (label 'Grid operator'), not the generic `other` the earlier recommendation named, so the tag says what they are. That adds one entry to the Profiler page's category list, a page change made in the ERCOT session. The work is **two sessions, ERCOT first**: 73 inbound dossiers alone is a larger step 7 than BlackRock's 42 raw hits, which filled most of F-I1. The earlier reasoning stands:
 - **Why:** they are the two most-cited uncovered entities in the corpus (73 and 37 dossiers). Curating them converts roughly 110 derived mentions into real edges, and their rules (Batch Zero and SB 6; the capacity auction) are what half the utilities and developers in the corpus are exposed to.
@@ -98,9 +139,9 @@ Dates are verified weekdays. The plan interleaves the developer's standing remin
 - **The category change:** `PROFILER-SCHEMA.md` (the category list and the schema note), `profiler-companies.json`'s `categories`, and the Profiler page's category list, label and colour, bumped under [PC-HTML-VERSION] #2.
 
 **Totals:**
-- 32 companies in 11 Profiler sessions, plus two grid-operator sessions (ERCOT, then PJM).
-- 4 Classroom waves, plus the three standing Classroom and Profiler reminders.
-- Effort mix across the 21 rows: **12 xhigh, 6 high, 3 medium**.
+- 18 sessions left: 8 new-dossier Profiler sessions (24 companies), ERCOT and PJM, 4 Classroom waves, the neoclouds + Habitat pass, the Dominion reframe, the 9/30 check and the Megmeet refresh.
+- **14 on Fable 5.1 and 4 on Opus 5.5**; by effort, **8 xhigh, 8 high and 2 medium**.
+- All but row 18 land by Sat 10/17, against late November in the 9/26 plan.
 
 ## 4 · Paste-in prompt — session 1, F-H1 (Opus 5.5 · xhigh)
 

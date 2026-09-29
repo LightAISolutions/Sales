@@ -540,11 +540,13 @@ Four tests, in this order:
 - **Together AI, Vultr, TensorWave, Lightning AI / Voltage Park** — colocation tenants whose landlords buy the equipment. The landlords are taken instead (F-N2).
 - **Clean Energy Associates** — already covered inside `intertek` as Intertek CEA (checked 2026-09-25). **Cupertino Electric** — a Quanta subsidiary since July 2024, covered through `quanta-services`.
 
-**ERCOT and PJM — approved by the developer on 2026-09-26, as grid operators.** The two most-cited uncovered entities in the corpus are grid operators, not companies. They get a new `grid-operator` category rather than the unused `other`, and the dossier schema (products, financials versus expectations) fits them loosely, so the first session opens with a schema note in `PROFILER-SCHEMA.md`. Two sessions, ERCOT then PJM; `phase-f-action-plan.md` §3 row 21 schedules them.
+**ERCOT and PJM — approved by the developer on 2026-09-26, as grid operators.** The two most-cited uncovered entities in the corpus are grid operators, not companies. They get a new `grid-operator` category rather than the unused `other`, and the dossier schema (products, financials versus expectations) fits them loosely, so the first session opens with a schema note in `PROFILER-SCHEMA.md`. Two sessions, ERCOT then PJM; `phase-f-action-plan.md` §3 rows 13–14 schedule them (week 2 of the 2026-09-29 re-plan).
 
 ### 11.2 · Sessions, order and model
 
 > **Model column superseded 2026-09-26 (v07.61r) — the developer's decision: Phase F runs on Opus 5.5.** The effort level per session (medium, high or xhigh), the order and the dates are in [`phase-f-action-plan.md`](phase-f-action-plan.md). A session writes its actual model and effort into its §11.3 Model cell. The paragraph and table below are the 2026-09-25 plan as approved.
+>
+> **Reversed 2026-09-29 (v07.71r) — the developer asked to spend the weekly Fable allowance in full.** The table's model split is back in force: Fable 5.1 for utilities, private and thin-record subjects, Opus 5.5 xhigh for F-I2 and F-I3. `phase-f-action-plan.md` §2 gives the rule, the evidence and the measured session costs, and its §3 restates the model and effort per session in a Fable-first weekly schedule. F-U3 and F-U4 run at High, as this table has them, not at the 9/26 plan's xhigh. ERCOT runs on Fable 5.1 xhigh and PJM on Fable 5.1 High.
 
 The model per session follows §2. **Utilities and private or opaque subjects run on Fable 5.1 High; public companies with a deep first-party record run on Opus xhigh** (Opus 5.5 is now available and is the Opus of record for Phase F). Medium is reserved for the advisor tail, per §2's Medium evidence. If the weekly Fable cap binds mid-session, continue on Opus 5.5 xhigh and record the substitution in the row's Model cell.
 
@@ -611,8 +613,8 @@ The model per session follows §2. **Utilities and private or opaque subjects ru
 | F-A1 | `anza` | Anza | advisor | `software-and-optimization` · adjacent | Fable 5.1 Medium | 0 | Energy Storage Pro covers ~95% of the US BESS market. Transformer Procurement Service (16 Dec 2025) serves MV/HV buyers, data-centre developers included. BESS commissioning support drawn from 11 GWh | — | — | — |
 | F-A1 | `semianalysis` | SemiAnalysis | advisor | none expected — record as unassigned if the dossier supports no segment | Fable 5.1 Medium | 22 | ClusterMAX 3.0 (23 Sep 2026) is the rating `landscape-neoclouds-2026-09` rests on. Datacenter Industry Model (5,000+ facilities); China Datacenter Model (25 Sep 2026) | — | — | — |
 | F-A1 | `epri` | EPRI | advisor | `assurance` · adjacent | Fable 5.1 Medium | 3 | Non-profit. DCFlex data-centre flexibility demonstrations with Google, Meta, Compass and utilities | — | — | — |
-| approved | `ercot` | ERCOT | grid-operator (new) | — | — | 73 | Grid operator, not a company. Batch Zero / SB 6 large-load process. **Approved 2026-09-26 as a grid operator; its own session, before PJM (`phase-f-action-plan.md` row 21)** | — | — | — |
-| approved | `pjm` | PJM Interconnection | grid-operator (new) | — | — | 37 | Grid operator. Third straight capacity auction at the price cap, 6.8 GW short (reported 31 Jul 2026). **Approved 2026-09-26 as above; its own session, after ERCOT** | — | — | — |
+| approved | `ercot` | ERCOT | grid-operator (new) | — | Fable 5.1 xhigh | 73 | Grid operator, not a company. Batch Zero / SB 6 large-load process. **Approved 2026-09-26 as a grid operator; its own session, before PJM (`phase-f-action-plan.md` row 21)** | — | — | — |
+| approved | `pjm` | PJM Interconnection | grid-operator (new) | — | Fable 5.1 High | 37 | Grid operator. Third straight capacity auction at the price cap, 6.8 GW short (reported 31 Jul 2026). **Approved 2026-09-26 as above; its own session, after ERCOT** | — | — | — |
 
 ### 11.4 · Paste-in prompt — F-U1 + F-U2, the five utilities
 

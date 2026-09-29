@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.71r] — 2026-09-29 03:39:25 PM EST
+
+> **Prompt:** "I want to efficiently use up all my Fable usage every week and this project has 14 Fable sessions. Can you revise the plan so that I can run heavy sessions that add dossiers earlier? I assume it will require much less tokens to update an existing dossier than to create it from scratch right?"
+
+The Phase F plan, re-planned Fable-first by budget week. Every remaining new-dossier session now runs ahead of the Classroom waves, and each session carries its own model and effort. The cost question was answered from recorded session values rather than assumed.
+
+### Changed
+
+- **`phase-f-action-plan.md` §3 — a week-by-week schedule, 18 sessions, weeks resetting Saturday 7:00 AM ET:**
+  - **Week 1 (to Sat 10/3), seven Fable sessions:** F-N2, F-U3, F-U4, the neoclouds + Habitat pass, F-I4, F-G1 and F-A1, plus the 9/30 check on Opus 5.5 medium. F-U3 and F-U4 move up from mid-October; F-N2, F-I4, F-G1 and F-A1 from November.
+  - **Week 2 (to Sat 10/10):** wave A and the Dominion reframe before the 10/7 Megmeet start, ERCOT and PJM (from the last row), and F-I2 and F-I3 on Opus 5.5 xhigh. F-I2 runs by 10/7 even if DigitalBridge has not closed: the dossier records the deal as pending, and a targeted refresh adds the close later.
+  - **Week 3 (to Sat 10/17):** waves B, C and D. Wave B takes all ten new capital members at once, and wave D loses its capital, neocloud and AIDC count corrections, because every new member now lands before its wave. The approved DigitalBridge fallback is kept unchanged.
+  - Row 18, the Megmeet refresh and AIDC report, still waits on the Q3 filing. **All other rows land by 10/17, against late November in the 9/26 plan.**
+  - A note on adapting the §4–§6 prompts: replace the hard-coded "Opus 5.5 at xhigh" with the row's model.
+- **`phase-f-action-plan.md` §2 — the model and effort rule, and the budget:**
+  - The all-Opus rule of 9/26 is withdrawn, and `PROFILER-COVERAGE-PLAN.md` §2's split is restored. **Opus 5.5 xhigh** for long filings (F-I2, F-I3, the Megmeet refresh). **Fable 5.1 xhigh** for the Classroom waves and ERCOT. **Fable 5.1 High** for private, thin-record and regulatory subjects (F-U3, F-U4, F-N2, F-G1, F-I4, PJM, the neoclouds pass, the Dominion reframe). **Fable 5.1 Medium** for F-A1. F-U3, F-U4 and PJM drop from xhigh to High. Totals: 14 Fable and 4 Opus sessions; 8 xhigh, 8 high and 2 medium.
+  - **Measured costs, from `get_session`'s `usage.cost_usd` (list-price value, not a charge):**
+    - New dossiers: F-U1 + F-U2 $222 on Fable (~$44 a company); F-H1 $102, F-N1 $84 and F-I1 $104 on Opus 5.5 ($28–$52 a company).
+    - Refreshes: Habitat Energy + Gridmatic $13 (~$7 a company), and CoolIT with the cooling module $29. Megmeet v8, a deep refresh, cost $129.
+    - The answer: **a light refresh costs a fraction of a new company (about $7 against $28–$52), but a deep one costs more than a whole three-company session.** Cost follows research depth and the number of dossiers re-read, not whether the file exists.
+  - **The Fable half is about $1,200 a week:** the week of 9/19–9/26 spent about $1,180 of Fable value across 25 sessions before the weekly warning appeared. That is about seven heavy Fable sessions a week, so Phase F's 14 are about two weeks. This is marked as an inference: the warning threshold is not published.
+  - The 50% Fable share of the one shared weekly limit is re-verified against the help centre.
+- **`phase-f-action-plan.md` header and §1:**
+  - The title drops "on Opus 5.5". A re-plan paragraph now leads the file.
+  - Status-paragraph row references are labelled by plan (9/26 or the 9/29 re-plan).
+  - §1 notes that 24 companies in 8 sessions remain, plus ERCOT and PJM.
+- **`PROFILER-COVERAGE-PLAN.md`:**
+  - A §11.2 note records the reversal. §11.3's ERCOT and PJM Model cells read Fable 5.1 xhigh and Fable 5.1 High.
+  - The ERCOT/PJM note points at §3 rows 13–14.
+- **`README.md`** — the tree entry for `phase-f-action-plan.md` describes the re-plan.
 
 ## [v07.70r] — 2026-09-29 07:58:32 AM EST
 
