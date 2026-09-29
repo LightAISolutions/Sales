@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.72r] — 2026-09-29 03:51:31 PM EST
+
+> **Prompt:** "Based on the context above, generate a new chronological action plan with different phases, each with a recommended model/effort level (Opus 5.5 or Fable 5.1, Medium, High, Xhigh). Then, give me a prompt to paste into a new Fable 5.1 High session to run F-N2, then remember session."
+
+The v07.71r schedule, now grouped into five named phases, plus the paste-in prompt for its first session, and the session context saved.
+
+### Added
+
+- **`phase-f-action-plan.md` §7 — the F-N2 paste-in prompt (WhiteFiber, 5C/Hypertec, TECfusions) for Fable 5.1 High**, modelled on §5's F-N1 prompt with the F-N1 and F-I1 lessons. It covers:
+  - the identity questions: WhiteFiber after the Bit Digital IPO, 5C's legal entity, and who owns Keystone Connect;
+  - the §11.3 clauses to verify hardest, led by WhiteFiber's disclosed MV switchgear supply issue;
+  - a step-7 scope measured on 9/29. No dossier names any of the three, and "5C" in seven cell-maker dossiers is a battery C-rate collision. The work is the counterparty edges (`nscale`, `duke-energy`), with no slug for the excluded tenants (Together AI, Vultr, TensorWave);
+  - the landscape coupling: wave A, plus `landscape-bridge-and-on-site-generation-2026-09` via wave D if TECfusions takes that seat;
+  - a closing request to report the session's `get_session` usage value, so §2's cost table grows.
+
+### Changed
+
+- **`phase-f-action-plan.md` §3 — five named phases over the same 18 rows:**
+  1. New dossiers while this week's Fable is unspent (rows 1–8, to Sat 10/3).
+  2. The stale Classroom modules before the Megmeet start (rows 9–10).
+  3. The capital filers and the grid operators (rows 11–14, to Sat 10/10).
+  4. The remaining landscapes (rows 15–17, to Sat 10/17).
+  5. Megmeet's Q3 (row 18).
+  The prompts note now points at §7.
+- **`SESSION-CONTEXT.md`** — a new Latest Session covers:
+  - the stale "run F-I1" request, and the model question with its correction;
+  - the v07.71r re-plan, with its measured costs and the ~$1,200 weekly Fable floor;
+  - phase 1's order, and the row numbers that `REMINDERS.md` still cites from the 9/26 plan.
+  The cooling-recheck entry moved to Previous, and the 9/26 F-I1 entry dropped under the two-session cap.
+- **`README.md`** — the tree entry for `phase-f-action-plan.md` names the phases and the F-N2 prompt.
 
 ## [v07.71r] — 2026-09-29 03:39:25 PM EST
 

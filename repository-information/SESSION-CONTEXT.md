@@ -6,6 +6,78 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-29 03:19 PM → 03:51 PM EST (the Phase F position check, the model question, the Fable-first re-plan, the F-N2 prompt; five attended turns)
+**Repo version:** v07.72r (two pushes: v07.71r the Fable-first re-plan; v07.72r the phase names, the F-N2 prompt and this save)
+**Branch:** `claude/brave-franklin-2qiehm`
+**Model:** Opus 5.5 at xhigh
+
+### What was done
+
+- **"Run F-I1" was stale.** F-I1 had already landed at v07.66r on 9/26 (`blackrock` and `kkr` v1, 28 inbound dossiers revised). Nothing was re-run.
+- **Model per session, corrected mid-session.** My first answer (Fable at high for every heavy session) came from Anthropic's general docs. The repo's own Xcel head-to-head (`PROFILER-COVERAGE-PLAN.md` §2) points the other way for filing-heavy work: Opus read the 10-K more deeply, and Fable had a narrow edge on sourcing and relationship discipline. The plan now follows that evidence.
+- **v07.71r — `phase-f-action-plan.md` re-planned Fable-first by budget week.**
+  - §2 restores the Opus/Fable split with a model and effort per session, and records measured session values from `get_session`'s `usage.cost_usd`:
+    - New dossiers cost $28–$52 a company (F-H1 $102, F-N1 $84, F-I1 $104 on Opus 5.5; F-U1 + F-U2 $222 for five on Fable).
+    - A light refresh costs about $7 a company (Habitat Energy + Gridmatic, $13).
+    - A deep refresh can cost more than a whole session (Megmeet v8, $129).
+  - **The Fable half is about $1,200 a week**, a floor: the week of 9/19–9/26 spent about $1,180 across 25 Fable sessions before the weekly warning. That is about seven heavy Fable sessions a week. The week resets **Saturday 7:00 AM ET**. The 50% share of one shared limit is re-verified against the help centre.
+  - §3 is 18 sessions (14 Fable, 4 Opus), with new dossiers ahead of the Classroom waves. Everything except the Megmeet refresh lands by 10/17, not late November.
+  - `PROFILER-COVERAGE-PLAN.md` §11.2 records the reversal, and the ERCOT/PJM Model cells are filled in.
+- **v07.72r — the five phases are named in §3, and the F-N2 prompt is written as §7** (Fable 5.1 High). Inbound was measured on 9/29: no dossier names WhiteFiber, 5C, Hypertec or TECfusions. The only "5C" hits are a battery C-rate in seven cell-maker dossiers.
+
+### Where we left off
+
+- **Phase 1 (to Sat 10/3, 7:00 AM ET), in order:**
+  1. **F-N2** on Fable 5.1 High, tonight or Wed. The prompt is in `phase-f-action-plan.md` §7.
+  2. The 9/30 Classroom run check on Opus 5.5 medium, after about 7:30 AM ET Wed.
+  3. F-U3, then F-U4 (Fable High).
+  4. The neoclouds pass + Habitat Energy on Thu 10/1 (Fable High; rebase after the 10/1 Routines commit).
+  5. F-I4, then F-G1 (Fable High).
+  6. F-A1 (Fable Medium), the first to roll into week 2.
+- **Phase 2 (Sat 10/3 – Tue 10/6):** wave A (Fable xhigh) and the Dominion reframe (Fable High), before the Megmeet start on Wed 10/7.
+- **Phase 3 (to Sat 10/10):**
+  - F-I2 (Opus xhigh) by 10/7 either way. As of 9/29 no DigitalBridge completion notice was found; if it is still pending, the dossier records the deal as pending.
+  - F-I3 (Opus xhigh), ERCOT (Fable xhigh) and PJM (Fable High).
+- **Phase 4 (to Sat 10/17):** waves B (by 10/14), C and D, all Fable xhigh.
+- **Phase 5:** the Megmeet refresh and AIDC report (Opus xhigh), after the Q3 filing (due by 10/31).
+- **Prompts:** only F-N2 has one. Each later session adapts the nearest prompt, per the §3 note, with the row's model line.
+
+### Key decisions made
+
+- **Developer:** spend the weekly Fable allowance in full. The 9/26 all-Opus rule is withdrawn.
+- F-U3, F-U4 and PJM run at High, not xhigh, as F-U1/F-U2 did.
+- F-I2 may be written before the DigitalBridge close, and a targeted refresh adds the close later. The approved wave-B fallback (move the scenario's reviewBy to 11/6 if the deal hasn't closed by 10/7) is kept unchanged.
+- Profiler sessions run one at a time; `MULTI_SESSION_MODE` stays Off.
+
+### Known issues
+
+- **Old row numbers:** `REMINDERS.md` (the 9/30 check says "row 5") and the older entry below cite the 9/26 plan's rows. The re-plan's numbers: 9/30 check row 2, neoclouds pass row 5, Dominion row 10, wave B row 15. The reminders were left untouched.
+- **Budget:** the $1,200 is inferred from one week, since the warning threshold is not published. On F-U1/F-U2, $183 of the $222 was uncached input on Fable; the cause is unexplained. Check it first if Fable runs short.
+- **Carried over:**
+  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2).
+  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
+  - `zhonhen-interview-brief.md` calls Panama an SST in two lines.
+  - The study-guide PDF renderer is not in the repo.
+  - `check-classroom-content.py` has 8 segment-roster errors, waiting for waves A/B.
+  - Pin warnings: `fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 190 dossiers, page v01.93w. **Classroom:** GAS v01.93g, page v01.16w, 19 segment lessons due. **CHANGELOG** `Sections: 98/100`.
+- **Budget:** as of 9/29 3:30 PM, about $41 of Fable used this week (another project).
+- **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
+
+### Recommendation for next session
+
+- **Run F-N2 (WhiteFiber, 5C, TECfusions) in a new Fable 5.1 High session with the prompt in `phase-f-action-plan.md` §7**, tonight or Wed 9/30 before the 9/30 check. It is row 1 of phase 1 and must land before Classroom wave A on 10/3.
+
+**To continue:** paste the §7 prompt of `phase-f-action-plan.md` into a new Fable 5.1 High session.
+
+## Previous Sessions
+
+### Session — 2026-09-29 07:19 AM → 03:13 PM EST (the cooling recheck and the CoolIT refresh, v07.69r–v07.70r)
+
 **Date:** 2026-09-29 07:19 AM → 03:13 PM EST (the cooling recheck, then the CoolIT refresh; three attended turns)
 **Repo version:** v07.70r (two pushes: v07.69r the cooling recheck; v07.70r the CoolIT refresh and the reminder dismissal). This save is housekeeping, with no version bump
 **Branch:** `claude/friendly-cori-mm3leo`
@@ -79,112 +151,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Check the 9/30 Classroom pipeline run after about 7:30 AM ET on Wed 9/30** (row 5 of `phase-f-action-plan.md`; the 2026-09-26 01:21 AM reminder). Open the Routine's session and read the final `CLASSROOM PIPELINE — 2026-09-30 — …` report, and check whether a push or email notification arrived. Expect the due list to include the 19 segment lessons.
 
 **To continue:** type `check the 9/30 Classroom run`
-
-## Previous Sessions
-
-### Session — 2026-09-26 06:05 AM → 05:09 PM EST (F-I1 and three follow-ups, v07.66r–v07.68r)
-
-**Date:** 2026-09-26 06:05 AM → 05:09 PM EST (F-I1 plus three follow-up turns; context compacted once, during F-I1's close-out)
-**Repo version:** v07.68r (three pushes: v07.66r F-I1; v07.67r the Profiler bold fix, the README archive backfill and the ERCOT/PJM and DigitalBridge decisions; v07.68r the SEC contact). The cooling reminder and this save are housekeeping, with no version bump
-**Branch:** `claude/nice-cannon-goad45`
-**Model:** Opus 5.5 at xhigh, per the F-I1 prompt
-
-### What was done
-
-- **v07.66r — Phase F session F-I1**, BlackRock (with GIP, AIP and HPS) and KKR. It ran on 9/26, ahead of its 9/28–9/29 slot:
-  - **Two dossiers (v1) and study guides (v2), each with an eight-module lesson plan:**
-    - `blackrock`: investor. **One slug** for BlackRock, Inc. (NYSE: BLK; CIK 0002012383). GIP is Global Infrastructure Management, LLC, wholly owned and in no separate accounts, so it sits in `aka[]` with AIP, HPS, Preqin, iShares, Aladdin and the platform names. 80 sources, 11 decision makers, all with photos.
-    - `kkr`: investor. KKR & Co. Inc. (NYSE: KKR). Global Atlantic (the Insurance segment), Helix, STTGDC, ContourGlobal, Zenobē, Avantus and Encavis are in `aka[]`. 76 sources, 12 decision makers, all with photos.
-  - **Segments:** `capital` · incumbent for both; the roster goes from eight to ten.
-  - **Calendar:** both public and quarterly. Next results `blackrock` 2026-10-13 and `kkr` 2026-10-29, each `confirmed: false` until the company announces the date.
-  - **16 new concepts** (1,555 total), among them `schedule-13d`, `schedule-13g`, `index-fund`, `open-ended-fund`, `core-infrastructure`, `ferc-section-203`, `blanket-authorization`, `outside-date`, `definitive-agreement`, `transmission-company`, `private-credit`. None edited.
-  - **Step 7, nothing deferred:** 28 inbound dossiers revised under the Archival Procedure for the reciprocal edge, including `microsoft` and `xai`, which lacked their AIP edge. Three carried corrections:
-    - `aes-clean-energy`: Ohio approved the change of control on 17 Sep.
-    - `fluence`: the same fix.
-    - `jupiter-power`: a 'backed by GIP' quote no Jupiter page carries.
-  - **Accepted pairs:** 10 other↔other pairs added to the relationships accept list.
-  - **Guide correction:** `mgx.study.json`, one clause — AIP is *named as* Aligned's buyer; the EC names GIP's manager and MGX as the joint controllers.
-  - **Report pins:** five edge-only revisions re-verified (`aep`, `meta`, `stack-infrastructure`, `xai`, `amperesand`). `fluence` v10 and `jupiter-power` v7 are left loud because their corrections are substantive.
-  - **Ledger and plan:** both §11.3 rows flipped at v07.66r; `phase-f-action-plan.md`'s status line updated.
-- **Premise verdicts, in brief:**
-  - **BlackRock** (8 clauses: 4 held, one of them as MOUs; 2 refined; 1 reported only; 1 conflict settled):
-    - Aligned — **held on the figures, refined on control**: EC M.12259 names GIM and MGX as joint controllers; AIP is not a notifying party.
-    - AES — **refined**: signed 1 Mar by GIP and EQT Infrastructure VI; GIP vehicles 56.625% after closing; FERC (EC26-99) and New York pending; outside date 1 Jun 2027.
-    - ALLETE 60/40 with CPP — **held**.
-    - STACK Asia-Pacific — **reported only**: Bloomberg names AIP and IFM, not GIP.
-    - CyrusOne — **settled**: GIP still co-owns it; no first-party source says 50:50.
-    - NVIDIA compute financing — **held, as MOUs**.
-  - **KKR** (6 clauses: 3 held, 3 refined): STTGDC 75%, ECP (30 Oct 2024) and the 19.9% AEP transmission stake held; CyrusOne 50% refined (split unstated); Helix refined (a company, not a fund, with commitments); EDF power solutions refined on scope ('net renewable capacity').
-  - **Not in the hypotheses:** Coravel (ACS–GIP 50:50); Meta's El Paso venture (80% BlackRock funds; an exclusivity agreement, not closed); ContourGlobal's 3 GWh CATL order; Avantus's 800 MWh Fluence system; STTGDC's HVDC testbed; 65% of Sempra Infrastructure Partners, signed but not closed.
-- **Verification:** registry sync, study, relationships, crossrefs and README-tree checkers clean; the reports checker's four warnings read. Playwright: 30 dossiers and three guides, zero page errors (details in the CHANGELOG).
-- **v07.67r — the follow-up to the session evaluation:**
-  - **Profiler v01.93w:** bold in inbound evidence excerpts, Capabilities kv rows, Policy mitigation lines and the Ecosystem explorer now renders as bold instead of literal `**`. One fragment-based helper, no `innerHTML`; an odd marker count (an excerpt cut mid-bold) is stripped. Playwright: 16 dossiers and the explorer show 0 literal markers and 0 page errors. The page changelog was at its 50-section cap, so v01.43w moved to the archive with its commit link.
-  - **README tree:** the 63 unlisted archive files are listed, so all 447 archived versions appear.
-  - **ERCOT and PJM approved** as grid operators, in a new `grid-operator` category, as two sessions with ERCOT first (`phase-f-action-plan.md` row 21; §11.3 rows flipped to approved).
-  - **DigitalBridge fallback** on row 10, which I recommended and the developer approved: if the close has not happened by Wed 10/7, move `scenario-capital-objection`'s reviewBy from 10/14 to Fri 11/6 (the landscape's own date); if not by Fri 10/30, run wave B without SoftBank and Blue Owl.
-- **v07.68r — the SEC contact.** The developer supplied a contact, which goes in `SEC_USER_AGENT` in `scripts/check-source-reachability.py` and is sent to SEC hosts only; the other probed hosts keep the neutral User-Agent. The probe's verdict is **OK** for the first time since v04.91r (`sec.gov` and `data.sec.gov` 200). `profiler-app.md`, `PROFILER-SCHEMA.md` and BlackRock's refresh note now call the old 'network-keyed block' a User-Agent rejection, and every SEC request, a subagent's included, uses that string. The older 9/30 run reminder was dismissed by the developer and moved to Completed Reminders.
-- **This save:** a new reminder (26 Sep 5:08 PM) — recheck the cooling module on Mon 9/28 if CoolIT's launch is public, otherwise on Wed 9/30.
-
-### Which BlackRock and KKR platforms buy MV or DC power equipment? (the Megmeet paragraph)
-
-Neither firm signs for equipment itself; every order is placed at a platform its funds control. **BlackRock:** no SST, 800 VDC or HVDC purchase is on record at any of its platforms. The medium-voltage and battery buyers it reaches are Aligned (with MGX), CyrusOne (with KKR), Coravel (with ACS), ALLETE and Minnesota Power, Clearway Energy Group, Eolian and Jupiter Power, plus AES once the take-private closes. The El Paso campus's design runs through Meta, not BlackRock. **KKR** has the one real DC-power door. STTGDC, 75% KKR-owned since 2 Sep, runs an HVDC testbed with LITEON and Amperesand's SST and names deployment in future Singapore data centres as its plan. The contact is STTGDC's engineering team, not KKR. KKR's battery buyers are ContourGlobal (3 GWh from CATL) and Avantus (800 MWh from Fluence). EDF power solutions North America, still pending, has a 20 GWh framework with Ford Energy, and Helix's first-look supply rights favour suppliers who are also its investors (NVIDIA, Vistra). **Net:** capital is a directory for finding buyers, and STTGDC is its one door.
-
-### Where we left off
-
-- **Status:** v07.66r, v07.67r and v07.68r are merged; this save is pushed at close.
-- **Action plan:** rows 1, 2 and 4 of §3 are done. **F-I2** (SoftBank, SB Energy, Blue Owl) waits on the DigitalBridge close, which DigitalBridge said on 22 Sep would come within five business days (by Tue 9/29). **ERCOT and PJM** are approved for row 21: two sessions, ERCOT first, with the `grid-operator` category added in the ERCOT session.
-- **Dated items:**
-  - Cooling recheck on Mon 9/28 if CoolIT's launch is public, otherwise Wed 9/30 (row 3; the 26 Sep 5:08 PM reminder).
-  - 9/30 Classroom run check after ~7:30 AM ET on Wed 9/30 (row 5). That reminder expects only two segment lessons due; F-H1, F-N1 and F-I1 have since made **17 due**, by design, so a longer due list in the run's report is expected.
-  - Neoclouds pass + `profiler Habitat Energy` on or after Thu 10/1 (rebase first — the 10/1 Profiler Routines commit that day).
-  - Dominion reframe and Classroom wave A, Fri 10/2 – Tue 10/6.
-  - Megmeet start Wed 10/7.
-  - Wed 10/7: if DigitalBridge has not closed, move `scenario-capital-objection`'s reviewBy to Fri 11/6 (approved; row 10). Nothing fires on its own — the first session after 10/7 applies it.
-  - For the F-I1 slugs:
-    - BlackRock Q3 results 13 Oct and KKR's 29 Oct, both unconfirmed.
-    - KKR's EDF deal: FERC EC26-151 comments due 13 Oct.
-    - KKR's controlled-company Sunset Date, no later than 31 Dec.
-    - AES closing: FERC EC26-99 and New York Case 26-E-0348 (comments due 29 Sep).
-    - Meta El Paso closing, and the STACK Asia-Pacific talks.
-- **Stale and not yet re-authored (`Classroom.gs` untouched, by design):**
-  - `landscape-capital-2026-09` was built on '4 of 8 buy nothing'. The roster is now 10, and both new incumbents buy nothing themselves and pass §11.1 only through platforms they control.
-  - `scenario-capital-objection` (reviewBy 10/14) goes stale with it.
-  - Classroom wave B re-authors both after F-I2.
-  - The F-H1 and F-N1 drift in the neoclouds and AIDC-developers modules still waits for wave A.
-  - `build-classroom-segments.py --check`: **17 due**, 15 with section changes (`capital` in eight sections) and 2 pin-only (`clean-firm-and-nuclear`, `storage-developers-and-ipps`).
-
-### Key decisions made
-
-- **One `blackrock` slug, not a separate GIP slug.** GIP is wholly owned, files no accounts of its own and sits inside BlackRock's single segment, and the EC calls GIM 'ultimately controlled by BlackRock'.
-- **AIP gets no slug.** It is a capital partnership the EC does not name as an acquirer. Its members' edges carry it: `mgx`, `microsoft`, `nvidia` and `xai` are partners of `blackrock`.
-- **Typed deal status follows the record's own word:** AES, the El Paso venture and the STACK talks are `announced`; CoolIT is `historical` for KKR.
-- **Pins:** re-verified only where the change was edge-only. `fluence` v10 and `jupiter-power` v7 are left loud, with the reason written.
-- **SEC contact:** the developer supplied a contact on 9/26. It lives only in `SEC_USER_AGENT` and goes only to SEC hosts, never to the other probed hosts.
-- **The house-style bold stays in the dossiers.** The raw `**` that showed in inbound evidence was a renderer gap, fixed in Profiler v01.93w rather than in the data.
-- **ERCOT and PJM get a new `grid-operator` category**, not the generic `other`, because the developer asked for them as grid operators. Two sessions, because ERCOT alone has 73 inbound dossiers.
-- **DigitalBridge fallback date: Fri 11/6**, the date `landscape-capital-2026-09` already carries, so the scenario and its landscape are re-authored together.
-- **Reminders:** the older of the two 9/30 run reminders was dismissed (moved to Completed). A new cooling reminder was added with a 9/30 fallback; the 9/24 cooling reminder is still active, because the developer did not ask to dismiss it.
-- **Same-session save:** this Latest entry was extended in place rather than moved down, because it was already this session's hand-off (the F-H1 and F-N1 precedent). F-N1 stays as the Previous entry.
-
-### Known issues
-
-- **Unreconciled figure:** Bosque County — CyrusOne says USD 1.2bn, KKR about USD 4bn. Both sides state it.
-- **Ownership splits nobody publishes:** CyrusOne (no first-party 50:50), Aligned (GIM and MGX shares), and Jupiter Power's owner, which Jupiter's own site does not name.
-- **Four pin warnings:** `fluence` v10 and `jupiter-power` v7, both from this session and left loud; `jinko` v6 and `oracle` v6, pre-existing.
-- **Two active cooling reminders:** the 24 Sep entry and the 26 Sep 5:08 PM entry cover the same recheck; the newer one adds the 9/30 fallback. Dismiss the older one only if the developer says so.
-- **Carried over:**
-  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2), as before. In this sandbox `verify-profiler-roles.py` also stops early: the Python `playwright` module is not installed.
-  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
-  - `study-prep/zhonhen/zhonhen-interview-brief.md` still calls Panama an SST in two lines.
-  - The study-guide PDF renderer is not in the repo.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 190 dossiers, 190 guides, 1,555 concepts, 1,656 graph edges (1,253 curated), 20 accepted relationship pairs; page v01.93w; the README tree lists all 447 archived versions; the reachability probe reads OK. **CHANGELOG** `Sections: 94/100`.
-
-### Recommendation for next session
-
-- Run the **cooling-module recheck on Mon 9/28** if CoolIT's CDU launch is public by then, otherwise on **Wed 9/30** (the 26 Sep 5:08 PM reminder; row 3 of `phase-f-action-plan.md`). `landscape-cooling-2026-09`'s reviewBy is 9/28, and it is the next dated item. F-I2 follows the DigitalBridge close, expected by 9/29.
-
-**To continue:** type `recheck the cooling module after CoolIT`

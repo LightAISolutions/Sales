@@ -83,6 +83,13 @@ The rule comes from `PROFILER-COVERAGE-PLAN.md` §2's own evidence: **effort buy
 
 Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are in priority order: if the Fable cap or the days run out, the rest roll into the next week without breaking a dependency. Check Settings → Usage before each Fable session.
 
+**Phases (named 2026-09-29, v07.72r):**
+1. **New dossiers while this week's Fable is unspent** — rows 1–8, now to Sat 10/3, 7:00 AM ET.
+2. **Clear the stale Classroom modules before the Megmeet start** — rows 9–10, Sat 10/3 – Tue 10/6.
+3. **The capital filers and the grid operators** — rows 11–14, to Sat 10/10.
+4. **Re-author the remaining landscapes** — rows 15–17, to Sat 10/17.
+5. **Megmeet's Q3** — row 18, after the filing (due by Sat 10/31).
+
 **Done:**
 
 | Session | Model | Landed |
@@ -131,7 +138,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 |---|---|---|---|---|
 | 18 | After the filing | `profiler Megmeet`, then `profiler report competitive: AIDC power conversion` | Opus 5.5 · xhigh | The standing reminder. Raise Mitsubishi Electric's scope question here |
 
-**Prompts for these sessions.** §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
+**Prompts for these sessions.** §7 is row 1's prompt (F-N2, Fable 5.1 High). §4–§6 are the F-H1, F-N1 and F-I1 prompts as run; each hard-codes "Opus 5.5 at xhigh". For a new session, adapt the nearest one (§6 for the capital sessions, `PROFILER-COVERAGE-PLAN.md` §11.4 for F-U3/F-U4). Replace its model line with the row's model and effort, and have the session write that into its §11.3 Model cells.
 
 **ERCOT and PJM — decided 2026-09-26: cover both, as grid operators.** The developer knows both well and wants them in. The category is a new **`grid-operator`** (label 'Grid operator'), not the generic `other` the earlier recommendation named, so the tag says what they are. That adds one entry to the Profiler page's category list, a page change made in the ERCOT session. The work is **two sessions, ERCOT first**: 73 inbound dossiers alone is a larger step 7 than BlackRock's 42 raw hits, which filled most of F-I1. The earlier reasoning stands:
 - **Why:** they are the two most-cited uncovered entities in the corpus (73 and 37 dossiers). Curating them converts roughly 110 derived mentions into real edges, and their rules (Batch Zero and SB 6; the capacity auction) are what half the utilities and developers in the corpus are exposed to.
@@ -435,6 +442,101 @@ warnings read; every new and revised dossier and guide renders under Playwright 
 other than the sandbox's gis_load_failed (the guide overlay closes with its ✕ button, not Escape).
 CHANGELOG rotation only if non-exempt sections reach 100. Normal Pre-Commit and Pre-Push checklists;
 one commit; push on a claude/* branch.
+```
+
+## 7 · Paste-in prompt — §3 row 1, F-N2 (Fable 5.1 · High)
+
+**Written 2026-09-29 (v07.72r), after the Fable-first re-plan.** Row 1 of §3, the first session of phase 1. Run it in a fresh session on **Fable 5.1 at High**, tonight or Wed 9/30. It follows §5's F-N1 prompt, the closest match (neocloud and landlord challengers), with the F-N1 and F-I1 lessons. Inbound counts were measured on 2026-09-29 by a word-bounded grep of the current corpus.
+
+```text
+Picking up from my last session, run Phase F session F-N2 of
+repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: WhiteFiber, 5C (Hypertec) and
+TECfusions — the neocloud that owns its site, and the two landlords behind four tenant neoclouds. This
+session runs on Fable 5.1 at High, per repository-information/phase-f-action-plan.md §3 row 1; the §11.3
+Model cells already read "Fable 5.1 High", so keep them.
+
+WHY NOW: phase 1 of the plan lands every remaining new dossier while this week's Fable allowance is
+unspent (it resets Sat 10/3, 7:00 AM ET). F-N2 goes first because Classroom wave A (row 9, Sat 10/3 –
+Tue 10/6) re-authors the neoclouds and AIDC-developer landscapes, and this session's three members should
+be in them. Do only F-N2: not the 10/1 neoclouds pass, not `profiler Habitat Energy`, not F-U3.
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §2 and §3;
+PROFILER-COVERAGE-PLAN.md §7 and §11 (the three F-N2 rows of §11.3 are yours; §11.1's buying-authority
+test applies); .claude/rules/profiler-app.md (Profiler Command including step 1a identity and step 7
+reconciliation, Profiler Prep Command, Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md
+(Naming and renames, Segments registry, Refresh calendar); repository-information/PROFILER-STYLES.md
+(active style). House pattern: the nscale and firmus dossiers and guides for a neocloud that builds its
+own sites, and the tract and powerhouse-data-centers ones for a landlord.
+
+THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+profileVersion 1) and study guide (schema v2) with its lesson plan under
+repository-information/study-prep/<slug>/. Proposed slugs: whitefiber, 5c-group, tecfusions. Category
+hypotheses: whitefiber ["neocloud"]; 5c-group and tecfusions ["developer"] — decide each on the record.
+Populate aka[] BEFORE the step-7 grep (WhiteFiber: WYFI, its Enovum data centres and the NC-1 campus if
+they are its; 5C: Hypertec, 5C Data Centers, whichever names the record uses). Assign segments with a
+basis line (hypothesis: whitefiber neoclouds · challenger; 5c-group aidc-developers-and-landlords ·
+challenger; tecfusions the same, plus bridge-and-on-site-generation · adjacent). Then the registry sync,
+the graph build, a calendar row per company (WhiteFiber is Nasdaq-listed: take its next results date
+from its own IR site and mark it unconfirmed until announced; the other two follow the private rule),
+README tree entries, and rewrite and flip your §11.3 rows.
+
+IDENTITY (step 1a) — establish, do not assume:
+- WhiteFiber: its relationship to Bit Digital after the 2025 IPO (ownership share, control), and which
+  entity owns and signs for NC-1 and the Canadian sites.
+- 5C: the legal entity — 5C Group, 5C Data Centers or Hypertec — and whether one slug covers it under
+  Naming and renames. Say why.
+- TECfusions: the operating entity, and who owns Keystone Connect and signs for its on-site generation.
+
+THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF — web research from 2026-09-25 that nobody has read.
+Verify against first-party sources (10-K, 10-Q and S-1 via WhiteFiber's IR site; company releases;
+utility and state records; the tenants' own announcements), record a premise verdict per clause, and
+rewrite the cells. Check hardest:
+- WhiteFiber: NC-1 at ≥99 gross MW by 2029, served by Duke; 40 MW to Nscale (~$865M); the disclosed
+  MV switchgear supply issue (Q1 2026, resolved Q2) — what, from whom, and what it delayed;
+  ClusterMAX "Underperforming".
+- 5C: landlord to Together AI (Memphis MEM01; Maryland) and Vultr (Springfield, Ohio, a 150 MW building).
+- TECfusions: TensorWave's landlord (Tucson; Keystone Connect, "capable of 3 GW, primarily on-site
+  generation"; the 1 GW agreement of Oct 2024).
+For each, the §11.1 verdict: does it, or a platform it controls, sign for batteries, MV gear,
+generation or SSTs?
+
+RECONCILIATION (step 7) — measured 2026-09-29: no dossier names WhiteFiber, WYFI, Bit Digital, Enovum,
+5C Group, Hypertec, TECfusions or Keystone Connect. Known collision, not inbound: "5C" as a battery
+C-rate in cornex, crrc-zhuzhou, cummins, gotion, great-power, narada and sunwoda. Grep again with the
+full aka[]. The work is the counterparty edges: nscale (WhiteFiber's tenant, which does not name it
+today) and duke-energy (NC-1's utility) get the reciprocal edge if the record supports one, revised
+under the Archival Procedure with any report pin re-checked. Together AI, Vultr and TensorWave were
+excluded from coverage on 2026-09-25: name them in prose with sources, but create no slug for them and
+do not re-propose them. Check the dossiers that already mention them (Together AI: crusoe, fluidstack,
+humain, iren, nscale; Vultr: amd, digital-realty; TensorWave: amd, fermi-america, firmus) for a
+contradiction with what you verify; revise only on a contradiction.
+
+LESSONS FROM F-H1, F-N1 AND F-I1 — apply them:
+- Every counterparty named in narrative prose rests on a source in sources[], ideally its own filing.
+- A tender, an MOU, a letter of intent or a signed-but-not-closed deal is not a completed transaction.
+  Type each on the record's own word. An unattributed figure is stated as unverified.
+- sec.gov was blocked from the sandbox before. Run check-source-reachability.py first; if EDGAR is
+  blocked, read the filings from the IR site and say so in the dossier.
+- Do not edit an existing concept in profiler-concepts.json; check new terms for collisions.
+- Write each lesson plan and study guide skeleton-first, then Edit (Incremental Writing, item d).
+- If an existing study guide contradicts a verified finding, correct it minimally and record it.
+
+DO NOT edit googleAppsScripts/Classroom/Classroom.gs. The new members make landscape-neoclouds-2026-09,
+scenario-neoclouds-discovery and landscape-aidc-developers-and-landlords-2026-09 stale (wave A, row 9),
+and landscape-bridge-and-on-site-generation-2026-09 if TECfusions takes its seat (wave D, row 17). Record that in
+the CHANGELOG entry and the SESSION-CONTEXT hand-off.
+
+FOR THE MEGMEET JOB: in the SESSION-CONTEXT hand-off, one short paragraph on whether any of the three
+signs for medium-voltage or DC power equipment — WhiteFiber's switchgear shortage is the lead — and what
+it means for an SST seller.
+
+VERIFY: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check clean;
+build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+warnings read; every new and revised dossier and guide renders under Playwright with zero page errors
+other than the sandbox's gis_load_failed. CHANGELOG rotation only if non-exempt sections reach 100 (it
+reads 98/100 after v07.72r). Normal Pre-Commit and Pre-Push checklists; one commit; push on a claude/*
+branch. At the end, tell me the session's usage value from get_session so the plan's cost table grows.
 ```
 
 Developed by: LightAISolutions
