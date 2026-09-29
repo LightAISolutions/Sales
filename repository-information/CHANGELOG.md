@@ -3,11 +3,62 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.70r] — 2026-09-29 07:58:32 AM EST
+
+> **Prompt:** "Dismiss the cooling reminders. Then, continue with your recommendation."
+
+The developer dismissed both cooling reminders. The v07.69r recommendation — a `profiler CoolIT` refresh to fix the dossier's seven 28 September launch-date mentions — ran now rather than waiting for Thursday's Profiler session. It depends on no 9/30 filing, and the dossier was stale today.
+
+### Changed
+
+- **`coolit.profile.json` — refreshed to profileVersion 3; v2 archived** (`archive/coolit.profile.v2.json`, archive index updated).
+  - **Every 28 September launch mention is corrected.** Affected fields: the summary's bottom line, `productsAndServices[0].highlights[5]` and `.roadmap`, `strategyRead[1]`, `[4]` and `[8]`, and the teaser's source label. Each now says the CDU was announced for 28 September, did not launch on that date and has no new one.
+  - **The date's origin is now cited.** CoolIT's LinkedIn post of 22 September says "Launching September 28." The teaser page, last modified 25 September, now offers an undated "official unveiling".
+  - **Seven new developments:**
+    - The missed launch (28 Sep).
+    - The Data Center Frontier Calgary tour (28 Sep): about 950 employees, about 200,000 sq ft across Starfield 1 and 3, a 6 MW test rig, and two-phase work called complementary.
+    - The Globe and Mail's Top Growing Companies 2026 (25 Sep): #168 of 375, 156% three-year growth, CAD 250–500M revenue band, 813 employees.
+    - A Bank of America estimate via Benzinga (24 Sep), marked as a second-hand analyst figure: more than USD 500M revenue entering 2027, and a possible USD 700M run rate in 2027.
+    - The single-phase white paper (21 Sep).
+    - The "Future is Fanless" post (14 Sep).
+    - Ecolab's Investor Day at SC26 on 17 Nov in Chicago (announced 25 Aug), which the 9/04 dossier missed.
+  - **Indicators to watch:**
+    - The next-gen CDU is now undated.
+    - Ecolab's Q3 is day-level: results before market open on 27 Oct, per its 22 Sep release.
+    - Two new venues: the OCP Global Summit (13–15 Oct) and the SC26 Investor Day (17 Nov).
+  - **Other fields:**
+    - `employees`: adds about 950 (DCF) and 813 (G&M).
+    - Ken Lau's title is now **General Manager, APAC** (Data Centre World Asia programme).
+    - `relationships[nvidia]`: adds that NVIDIA's first DSX Ready CDUs (September 2026) came from LG, LiquidStack and Vertiv, not CoolIT.
+    - `sources[]`: 151 → 162 (11 added).
+- **`coolit.study.json`** — one sentence now says the next-gen CDU was announced for 28 September and did not launch on that date. `lastUpdated` → 2026-09-29.
+- **`study-prep/coolit/coolit-lesson-plan.md`** — the same correction, in its boundary paragraph.
+- **`profiler-refresh-notes.json`** — CoolIT's watch item no longer says the CDU "launched 28 September 2026". **`profiler-refresh-calendar.json`** — `lastRefreshed` → 2026-09-29.
+- **`README.md`** — tree entry for `archive/coolit.profile.v2.json`.
+- **Registry and graph:** `sync-profiler-registry.py` (`srcTotal` 151 → 162, `srcFirstPct` 65 → 64, `lastUpdated`) and `build-profiler-graph.py` were both run.
+- **`REMINDERS.md`** — both cooling reminders (2026-09-24 06:34 PM and 2026-09-26 05:08 PM) moved to Completed Reminders, dismissed by the developer after the v07.69r recheck.
+- **`phase-f-action-plan.md`** — the status line records the refresh.
+
+### Notes
+
+- **Identity check (step 1a):** CoolIT is still a private Ecolab subsidiary (NYSE: ECL parent). Its own 24 Sep post calls it "CoolIT, an Ecolab company". The leadership page is unchanged since 28 April. Ecolab has made no 8-K since 28 July, and its only September filing is a director's Form 4.
+- **Research:** Stage 1 covered CoolIT's news feed, WordPress API, CDU catalogue, OCP page and LinkedIn, then Ecolab's releases and EDGAR (with `SEC_USER_AGENT`; the probe verdict was OK). Stage 2 was one background agent: trade press, rankings, litigation and NVIDIA lists, about 38 sources evaluated. I spot-checked the load-bearing claims myself: the LinkedIn "Launching September 28." text, the Globe and Mail data row, and Ecolab's Investor Day release.
+- **Not found:** a new launch date or venue, a Vera Rubin rating, a named customer since 9/4, leadership changes, and litigation. A vendor blog's claim that CoolIT is on a 2 September NVIDIA CDU list could not be verified and was left out.
+- **Step 7 reconciliation:** 4 dossiers mention CoolIT (`dg-matrix`, `flex`, `kkr`, `supermicro`), 13 hits read. All are career history, the Ecolab and KKR transaction, or the recorded Supermicro disagreement. None mentions the launch, and none changed. `check-profiler-crossrefs.py`: 0 candidates.
+- **Segments:** `cooling` · incumbent is unchanged. Neither the role basis nor the product lines moved.
+- **Checks:**
+  - `check-profiler-relationships.py`: 0 findings. `sync-profiler-registry.py --check`: 0 out of sync, calendar in bijection.
+  - `check-profiler-study.py`: 0 errors / 0 warnings on 190 guides.
+  - `check-profiler-reports.py`: 0 errors, 4 existing warnings. No report pins `coolit`.
+  - `check-readme-tree.py`: 0 findings.
+- **Classroom impact:** `build-classroom-segments.py --check` reads **19 due (was 17)**, because the graph rebuild moves every segment's graph pin, as after any dossier write. `cooling` was already due; wave A/B regenerates them. The cooling landscape's ledger still cites `profile:coolit @ v1`. Its parenthetical "the dossier still states the 28 September date" is accurate for v1 and now superseded by v3. It is left for the module's next revision rather than making a same-day Classroom bump.
+- No page changed, so no page version bump. The CHANGELOG counter is 96/100, so no rotation.
 
 ## [v07.69r] — 2026-09-29 07:32:24 AM EST
 

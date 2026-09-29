@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-26",
+ "built": "2026-09-29",
  "companies": 190,
  "edges": [
   {
@@ -21749,7 +21749,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: CoolIT Systems is the Calgary direct-liquid-cooling specialist that Ecolab bought from KKR for about USD 4.75 billion in cash on 2 July 2026 — 29 times estimated next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales — because it sits at every point where liquid touches an AI rack: the cold plate on the GPU, the manifold in the rack, the coolant distribution unit (CDU) in the row, and the pre-fabricated piping between them; its CHx2000 row CDU is rated at 2,000 kW and twelve NVIDIA GB300 NVL72 racks, it manufactures 'multi-gigawatts' of CDU capacity a year in Canada, China and Vietnam, and a CDU for racks above 1 MW is due on 28 September 2026.",
+     "text": "BOTTOM LINE UP FRONT: CoolIT Systems is the Calgary direct-liquid-cooling specialist that Ecolab bought from KKR for about USD 4.75 billion in cash on 2 July 2026 — 29 times estimated next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales — because it sits at every point where liquid touches an AI rack: the cold plate on the GPU, the manifold in the rack, the coolant distribution unit (CDU) in the row, and the pre-fabricated piping between them; its CHx2000 row CDU is rated at 2,000 kW and twelve NVIDIA GB300 NVL72 racks, it manufactures 'multi-gigawatts' of CDU capacity a year in Canada, China and Vietnam, and a CDU for racks above 1 MW, announced for 28 September 2026, did not launch on that date and has no new one.",
      "src": "",
      "from": "a"
     },
@@ -21854,7 +21854,7 @@
     "a": {
      "type": "partner",
      "note": "Member of the NVIDIA Partner Network as 'a Solution Advisor for Compute and DGX AI Compute Systems' with cold plates, manifolds and CDUs on NVIDIA's Recommended Vendor List; NVIDIA engineers are quoted endorsing CoolIT in 2024 and, with Ecolab, in 2026.",
-     "context": "CoolIT's collaboration with NVIDIA 'began in 2009 with the design of the NV200 VGA coldplate for the GeForce GTX 295'. In October 2024 it joined the NVIDIA Partner Network for the Blackwell ramp; NVIDIA's Jeremy Rodriguez, senior director of data center engineering, said the expansion 'will help meet the growing demands of data centers'. At GTC 2025 the company stated that all its chip-to-CDU products 'are available to NVIDIA's server manufacturing partners through the NVIDIA Recommended Vendor List (RVL)', and its site tabulates GB200 NVL72 racks per CDU (CHx2000 12, CHx1500 9, AHx240 4, AHx180 2).\n\nAt the Ecolab close NVIDIA's Ali Heydari and Saket Karajgikar stated that 'NVIDIA has collaborated with Ecolab and CoolIT across a broad range of liquid-cooling initiatives, including coolant qualification, coolant health monitoring, cooling infrastructure development, and next-generation AI factory technologies'. No formal 'NVIDIA-certified' or reference-design designation exists; no CoolIT product is claimed for Vera Rubin NVL72.",
+     "context": "CoolIT's collaboration with NVIDIA 'began in 2009 with the design of the NV200 VGA coldplate for the GeForce GTX 295'. In October 2024 it joined the NVIDIA Partner Network for the Blackwell ramp; NVIDIA's Jeremy Rodriguez, senior director of data center engineering, said the expansion 'will help meet the growing demands of data centers'. At GTC 2025 the company stated that all its chip-to-CDU products 'are available to NVIDIA's server manufacturing partners through the NVIDIA Recommended Vendor List (RVL)', and its site tabulates GB200 NVL72 racks per CDU (CHx2000 12, CHx1500 9, AHx240 4, AHx180 2).\n\nAt the Ecolab close NVIDIA's Ali Heydari and Saket Karajgikar stated that 'NVIDIA has collaborated with Ecolab and CoolIT across a broad range of liquid-cooling initiatives, including coolant qualification, coolant health monitoring, cooling infrastructure development, and next-generation AI factory technologies'. No formal 'NVIDIA-certified' or reference-design designation exists for CoolIT; when NVIDIA's DSX Ready programme qualified its first CDUs in September 2026, they came from LG Electronics, LiquidStack and Vertiv (StorageReview, 23 September), not CoolIT. No CoolIT product is claimed for Vera Rubin NVL72.",
      "source": "https://www.hpcwire.com/off-the-wire/coolit-systems-joins-nvidia-partner-network-unveils-ai-centric-liquid-cooling-solutions/",
      "status": "active",
      "since": "2024-10",
@@ -21865,7 +21865,7 @@
     {
      "where": "Summary",
      "date": "",
-     "text": "BOTTOM LINE UP FRONT: CoolIT Systems is the Calgary direct-liquid-cooling specialist that Ecolab bought from KKR for about USD 4.75 billion in cash on 2 July 2026 — 29 times estimated next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales — because it sits at every point where liquid touches an AI rack: the cold plate on the GPU, the manifold in the rack, the coolant distribution unit (CDU) in the row, and the pre-fabricated piping between them; its CHx2000 row CDU is rated at 2,000 kW and twelve NVIDIA GB300 NVL72 racks, it manufactures 'multi-gigawatts' of CDU capacity a year in Canada, China and Vietnam, and a CDU for racks above 1 MW is due on 28 September 2026.",
+     "text": "BOTTOM LINE UP FRONT: CoolIT Systems is the Calgary direct-liquid-cooling specialist that Ecolab bought from KKR for about USD 4.75 billion in cash on 2 July 2026 — 29 times estimated next-twelve-month adjusted EBITDA on roughly USD 550 million of expected sales — because it sits at every point where liquid touches an AI rack: the cold plate on the GPU, the manifold in the rack, the coolant distribution unit (CDU) in the row, and the pre-fabricated piping between them; its CHx2000 row CDU is rated at 2,000 kW and twelve NVIDIA GB300 NVL72 racks, it manufactures 'multi-gigawatts' of CDU capacity a year in Canada, China and Vietnam, and a CDU for racks above 1 MW, announced for 28 September 2026, did not launch on that date and has no new one.",
      "src": "",
      "from": "a"
     },
@@ -22062,7 +22062,7 @@
     {
      "where": "Key Judgments",
      "date": "",
-     "text": "Basis: the row CDU moved from 750 kW (CHx750) to 1,500 kW and 2,000 kW within 2025, with a 1 MW-plus-rack unit due 28 September 2026; Dell'Oro counts 'around 40 companies with CDUs' and expects 'fewer than 10 vendors to ultimately capture the lion's share', naming Vertiv as leader and CoolIT among 'established players … maintaining strong market share positions'; Omdia had placed CoolIT first in 2023.",
+     "text": "Basis: the row CDU moved from 750 kW (CHx750) to 1,500 kW and 2,000 kW within 2025, with a 1 MW-plus-rack unit announced for 28 September 2026 that had not launched by 29 September and carries no new date; Dell'Oro counts 'around 40 companies with CDUs' and expects 'fewer than 10 vendors to ultimately capture the lion's share', naming Vertiv as leader and CoolIT among 'established players … maintaining strong market share positions'; Omdia had placed CoolIT first in 2023.",
      "src": "",
      "from": "a"
     },

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-29 07:32:24 AM EST` · Repo version: `v07.69r`
+Last updated: `2026-09-29 07:58:32 AM EST` · Repo version: `v07.70r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -565,6 +565,7 @@ Last updated: `2026-09-29 07:32:24 AM EST` · Repo version: `v07.69r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/constellation-energy.profile.v3.json">constellation-energy.profile.v3.json</a> — Archived v3 dossier (Constellation Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/constellation-energy.profile.v4.json">constellation-energy.profile.v4.json</a> — Archived v4 dossier (Constellation Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/coolit.profile.v1.json">coolit.profile.v1.json</a> — Archived v1 dossier (CoolIT Systems Inc.)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/coolit.profile.v2.json">coolit.profile.v2.json</a> — Archived v2 dossier (CoolIT Systems Inc.)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/core-scientific.profile.v1.json">core-scientific.profile.v1.json</a> — Archived v1 dossier (Core Scientific)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/coreweave.profile.v1.json">coreweave.profile.v1.json</a> — Archived v1 dossier (CoreWeave)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/coreweave.profile.v2.json">coreweave.profile.v2.json</a> — Archived v2 dossier (CoreWeave)

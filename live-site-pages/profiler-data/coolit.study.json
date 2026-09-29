@@ -2,7 +2,7 @@
  "schemaVersion": 2,
  "slug": "coolit",
  "title": "CoolIT Systems — Technology Study Guide",
- "lastUpdated": "2026-09-04",
+ "lastUpdated": "2026-09-29",
  "glossary": [
   {
    "t": "ATD",
@@ -336,7 +336,7 @@
     },
     {
      "t": "At the facility (gallery)",
-     "meta": "Facility-scale skids in a mechanical corridor — Vertiv: 'Gallery CDUs are facility-scale systems positioned at the perimeter or in mechanical corridors … require extensive planning for layout, piping, and control logic'. CoolIT's only statement is that a hyperscaler 'requested thousands of skidded CDUs'; its September 2026 launch is described only as 'engineered for 1MW+ ultra-dense AI racks'.",
+     "meta": "Facility-scale skids in a mechanical corridor — Vertiv: 'Gallery CDUs are facility-scale systems positioned at the perimeter or in mechanical corridors … require extensive planning for layout, piping, and control logic'. CoolIT's only statement is that a hyperscaler 'requested thousands of skidded CDUs'; its next-generation CDU, announced for 28 September 2026 and not launched on that date, is described only as 'engineered for 1MW+ ultra-dense AI racks'.",
      "adv": [
       "Nothing but pipes on the data-hall floor; every tile holds IT",
       "Service happens in the corridor, away from the racks",

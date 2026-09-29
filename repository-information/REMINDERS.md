@@ -13,12 +13,6 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **While in the scenario:** check the unverified "all-stock" description of Dominion's merger, which was flagged but left unchanged at v07.40r.
   - **Run it in its own session**, not inside the neoclouds pass. The two draw on different rule files: Classroom authoring versus the Profiler command.
   - **To resume:** type `reframe the Dominion rehearsal`.
-- `2026-09-24 06:34:55 PM EST` — **Recheck the cooling landscape module (`landscape-cooling-2026-09`) after the CoolIT CDU launch on Monday 2026-09-28** — the module's reviewBy stayed at 2026-09-28 at v07.40r for this launch alone. From Monday it shows as due in the curriculum report. Neither the neoclouds pass nor the Dominion reframe covers it, and no Routine does either.
-  - **What to check:** what CoolIT actually launched — capacity, ship date and form factor. Then decide where it sits on the CDU ladder, which Schneider's 3.5 MW WCDU (23 Sep) now tops. Move reviewBy only if the gate has passed or is certain, per the v07.40r rule; if the launch slips, keep reviewBy on the new launch date.
-  - ~~**Fold in while there:** AEP's "six of eight" large-load tariff states, which AEP's 30 Jul release puts at five.~~ Closed 2026-09-24 (v07.41r), no change needed: the 30 Jul Q2 deck said five and the August investor handout says six, after Michigan approved in between. Both are right at their dates, and every repo mention dates "six" to August.
-  - **Small session:** a Classroom guidance recheck under `.claude/rules/industry-guidance.md` (Freshness discipline) and `.claude/rules/classroom-app.md`. It can run on or after 28 Sep, and before the 7 Oct Megmeet start is best.
-  - **To resume:** type `recheck the cooling module after CoolIT`.
-
 - `2026-09-24 08:48:57 PM EST` — **Re-run `profiler Habitat Energy` on or after Thursday 2026-10-01, once its FY2025 accounts are at Companies House** — Habitat Energy Limited (10923911) and its parent Renewable and Grid Services Limited (13250883) both owe accounts to 31 Dec 2025 by Wednesday 30 September. The v2 refresh (v07.46r) ran six days before that deadline, with neither filed.
   - **Why it needs a hand:** the dossier is on the `watch` tier. The 10/1 quarterly Routine skips it, and its next scheduled pass is around March 2027. Nothing else will fold the accounts in.
   - **What to pull:**
@@ -50,12 +44,11 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
   - **If it committed:** `git fetch origin main` and rebase any open work before touching `Classroom.gs`, because the run's commit lives inside the content fence.
   - **To resume:** type `check the 9/30 Classroom run` (row 5 of `phase-f-action-plan.md`).
 
-- `2026-09-26 05:08:42 PM EST` — **Recheck the cooling module (`landscape-cooling-2026-09`) on Monday 2026-09-28 if CoolIT's CDU launch is public by then; if it is not, check again on Wednesday 2026-09-30** — requested on 2026-09-26. It restates the 2026-09-24 cooling reminder above with a fallback date; that entry's "What to check" and reviewBy rule still apply.
-  - **Mon 9/28:** see whether CoolIT's launch is public (capacity, ship date, form factor). If it is, run the recheck that day.
-  - **If it is not public on 9/28:** check again on Wed 9/30. The 9/30 Classroom run check falls on the same day, after about 7:30 AM ET.
-  - **To resume:** type `recheck the cooling module after CoolIT`.
-
 ## Completed Reminders
+
+- ~~`2026-09-24 06:34:55 PM EST` — **Recheck the cooling landscape module (`landscape-cooling-2026-09`) after the CoolIT CDU launch on Monday 2026-09-28** — the module's reviewBy stayed at 2026-09-28 at v07.40r for this launch alone.~~ — completed `2026-09-29 07:38:18 AM EST` (dismissed by the developer after the v07.69r recheck: the launch slipped past 28 Sep with no new date, so the module now teaches the slip and its reviewBy moved to 2026-10-27, Ecolab's Q3 results)
+
+- ~~`2026-09-26 05:08:42 PM EST` — **Recheck the cooling module (`landscape-cooling-2026-09`) on Monday 2026-09-28 if CoolIT's CDU launch is public by then; if it is not, check again on Wednesday 2026-09-30** — it restated the 2026-09-24 cooling reminder with a fallback date.~~ — completed `2026-09-29 07:38:18 AM EST` (dismissed by the developer; the v07.69r recheck on 9/29 covered the 9/30 fallback too)
 
 - ~~`2026-09-24 09:54:50 PM EST` — **Check the 9/30 Classroom pipeline run on or after Wednesday 2026-09-30** — the weekly Routine "Classroom curriculum pipeline (C2) - weekly" fires at 4:00 AM PDT. Open its session and read the final `CLASSROOM PIPELINE — 2026-09-30 — …` report.~~ — completed `2026-09-26 05:04:50 PM EST` (dismissed by the developer; superseded by the 2026-09-26 01:21:37 AM entry, which covers the same 9/30 check, and its utilities re-pin fold-in already ran at v07.60r)
   - **What to expect:** likely a `COMMIT` of a briefing. The 9/23 run stood down with 4 qualifying items across 1 source (NOVONIX) against a bar of 3/2. The window stayed open at `coveredThrough` 2026-09-21, and the 9/24 Gridmatic and Habitat Energy v2 refreshes should supply the second source. A second `STAND-DOWN` is fine if the report explains it; a `BLOCKED —` title needs a look.

@@ -2879,6 +2879,12 @@
    "profileVersion": 1,
    "archivedAt": "2026-09-26",
    "supersededBy": 2
+  },
+  {
+   "file": "coolit.profile.v2.json",
+   "profileVersion": 2,
+   "archivedAt": "2026-09-29",
+   "supersededBy": 3
   }
  ],
  "aon": [
