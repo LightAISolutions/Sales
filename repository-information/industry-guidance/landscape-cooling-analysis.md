@@ -745,4 +745,36 @@ A freshness review ahead of the 28 September gate. The gate itself (the CoolIT n
 - Ecolab's first quarter with CoolIT inside it is now day-level: results on **27 October 2026**.
 - Delta Electronics v6 and LITEON v7 (both 2026-09-23) were re-read. Every claim this module takes from them holds, and the ledger tags were moved.
 
+## Revision — 29 September 2026 recheck
+
+The recheck the 24 September review scheduled, run the day after the gate. **The gate slipped: CoolIT's next-generation CDU did not launch on 28 September 2026**, and CoolIT has not set a new date. Every source below was read on 29 September 2026, around 07:30 ET:
+
+- **News feed** (the site's page and its WordPress news API): the newest item is a 28 September repost of a Data Center Frontier factory tour. That article describes only the CHx2000 ("approximately eight to 12 NVIDIA GB200 NVL72-class racks"). There is no launch post, and the newest press release is the Ecolab close of 2 July.
+- **CDU catalogue** (`cdu-product` post type): five units — CHx2000, CHx200, CHx80, AHx240 and AHx180. **Nothing above 2 MW, and no Rubin rating.** The CHx2000 page was edited on 25 September and still reads 2,000 kW at 5 °C ATD, rated for 12 GB300 NVL72 racks.
+- **"The Next Gen AI CDU"** (posted 17 August, **last modified 25 September**): *"engineered for 1MW+ ultra-dense AI racks. Register to receive … early access to the official unveiling"* — **no date**. The dossier recorded this page on 4 September as "launching 28 September 2026". The earlier copy could not be retrieved (the Wayback Machine is unreachable from this environment), so **the date is gone, but when it was removed is not proven**. The 25 September edit is the latest possible day.
+- **OCP Global Summit 2026 page** (edited 22 September, for the summit on 13–15 October): *"Visit CoolIT and Ecolab to discover … the proven CHx2000 CDU"* — no next-generation unit named.
+
+**What moves.** The CDU ladder does not change: Schneider's 3.5 MW WCDU is still the top single unit, and CoolIT's own rung is still 2.0 MW. The launch's test (`strategyRead[8]`: a named capacity above 2 MW plus a Vera Rubin rating) stands unchanged, but it no longer has a clock.
+
+**`reviewBy`, re-taken: 2026-10-27.** This follows the reminder's rule, "move reviewBy only if the gate has passed; if the launch slips, keep reviewBy on the new launch date". The date has passed, and there is no new launch date to keep. So reviewBy goes to the nearest remaining dated gate on this subject, which is **indicator row 3: Ecolab's Q3 results, before market open on Tuesday 27 October 2026**, with a webcast at 1:00 p.m. ET (Ecolab release, 22 September 2026). It is the first quarter with CoolIT inside Global Water. It is also CoolIT's acquirer's first results release since the launch date was withdrawn. No other module carries 2026-10-27.
+
+Candidates passed over, in writing:
+
+| Candidate | Rejected because |
+|---|---|
+| **13–15 October 2026**, OCP Global Summit | Not in any dossier, and CoolIT's own summit page names only the CHx2000. Tying the launch to it would be an inference, not a gate |
+| **19 October 2026**, Texas compliance update | Nearer, but it is a progress report on a freeze that still has no end date, and it is about water permits rather than cooling equipment. It stays indicator row 9 |
+| **2026-11-09**, Section 301 exclusion expiry | Still `segment-cooling`'s own generated `reviewBy` — §10b's **(bb4)** ground is unchanged |
+
+The quarterly guidance Routine (`trig_01CrhxzfBV6uKQNKpUXLLMSZ`, 15 October) re-verifies every module before 27 October, so a launch in the next two weeks will not wait for the new date.
+
+**Four taught claims were corrected in place.** Each keeps its section id:
+
+1. **`the-indicators`, row 1** — now **undated**. It records the 28 September announcement, the slip and the unchanged test. The section intro's counts follow: **four** rows carry a day (was five), and **two** are undated (one by construction, one withdrawn).
+2. **`the-indicators`, row 3** — now names itself **this module's review date**.
+3. **`claims-ledger` and `drill`** — the launch row now teaches the slip and cites CoolIT's own pages. A new row cites Ecolab's 22 September release for the 27 October date. The drill card on "the single date this module's review clock hangs on" now answers 27 October and explains the slip.
+4. **`the-indicators` sales note** — it said the only regulatory row inside twelve months was the November tariff. The 24 September correction put the **data-centre refrigerant limit on 1 January 2027** into row 7, which is also inside twelve months, so the note now names both. This was an internal contradiction left by the last review, found while in the section. It was not caused by the slip.
+
+**Not changed.** `coolit` moved to **v2 on 26 September** (F-I1 added the KKR relationship). A field-by-field diff shows that nothing else changed, so every CoolIT row in the ledger keeps its `@ v1` tag. **The dossier itself still states the 28 September date seven times** (`summary`, `productsAndServices[0].highlights[5]` and `.roadmap`, `recentDevelopments[1]`, `sources[3].label`, `strategyRead[1]`, `strategyRead[8]`). The module no longer relies on it. Correcting it is a job for a `profiler CoolIT` refresh, not for this module.
+
 Developed by: LightAISolutions

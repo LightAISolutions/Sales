@@ -3,11 +3,51 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.69r] — 2026-09-29 07:32:24 AM EST
+
+> **Prompt:** "recheck the cooling module after CoolIT"
+
+This is the cooling recheck from the standing reminder (row 3 of `phase-f-action-plan.md`). **CoolIT's next-generation CDU did not launch on 28 September 2026, and CoolIT has not set a new date.** I offered three options (revise now with reviewBy 27 Oct, wait until 9/30, or revise with 19 Oct). The developer chose **revise now**, which I recommended.
+
+### Changed
+
+#### Classroom.gs — v01.93g
+
+- **`landscape-cooling-2026-09`** (guidance, contributor+) now records that the launch slipped. `updated` moves 2026-09-24 → 2026-09-29. **`reviewBy` moves 2026-09-28 → 2026-10-27**: Ecolab's Q3 results, before market open (Ecolab release, 22 Sep 2026). That is the nearest remaining dated gate on this subject, and no other module uses it. One entry is appended to `revisions[]`. All of the following was read on 29 Sep from CoolIT's own site:
+  - The news feed and its WordPress news API show no launch post.
+  - The `cdu-product` catalogue still tops out at the 2 MW CHx2000.
+  - "The Next Gen AI CDU" page (last modified 25 Sep) now offers an undated "official unveiling".
+  - The OCP Global Summit 2026 page (edited 22 Sep) shows only "the proven CHx2000".
+- **Corrected in place, section ids unchanged:**
+  - `the-indicators`: row 1 is now undated and row 3 names itself the review date. The intro's counts change to four day-level rows (was five) and two undated rows. The sales note now names both regulatory rows inside twelve months: the November tariff and the **1 January 2027 data-centre refrigerant limit**. That contradiction was left by the 24 Sep correction, not caused by the slip.
+  - `claims-ledger`: the intro and the launch row now cite CoolIT's own pages. A new row cites Ecolab's 22 Sep release.
+  - `drill`: the review-clock card now answers 27 October and explains the slip.
+  - `source.doc` and the function's header comment record the recheck.
+- **Not changed:** the CDU ladder (Schneider's 3.5 MW WCDU still tops it and CoolIT's rung is still 2.0 MW), the launch's test, and every other section.
+- `coolit` moved to v2 on 26 Sep for the KKR edge only. A field diff shows nothing else changed, so its ledger tags stay `@ v1`.
+
+#### Other files
+
+- **`landscape-cooling-analysis.md`** — new section "Revision — 29 September 2026 recheck": the four sources as read, the re-taken `reviewBy` with three candidates rejected in writing, and the four corrections.
+- **`phase-f-action-plan.md`** — the status line records row 3 as run.
+
+### Notes
+
+- **Confidence:** the dossier read the teaser page on 4 Sep as "launching 28 September 2026". The page now has no date, and 25 Sep is its last modification. The earlier copy could not be retrieved because the Wayback Machine is blocked here. So the removal is certain, but its exact day is not.
+- **Follow-up, not done here:** `coolit.profile.json` still states the 28 Sep date in seven fields. That is a `profiler CoolIT` refresh, outside a guidance recheck.
+- **Checks:**
+  - `node --check` clean; `check-gas-inner-scripts.js`: 106 blocks clean.
+  - `check-classroom-content.py`: 8 errors, 0 warnings, **byte-identical to the pre-edit baseline**. All 8 are known segment-roster regenerations waiting for wave A/B.
+  - `check-classroom-curriculum.py --strict`: no structural findings. The only diff from baseline is this module's `PASSED` flag clearing.
+  - `check-classroom-pipeline.py --base origin/main`: 9 × P2 (below-the-fence guidance, expected for a developer session), no P3, so the gate digest is untouched.
+  - `check-readme-tree.py`: 0 findings.
+- No page changed, so no page version bump.
 
 ## [v07.68r] — 2026-09-26 05:05:03 PM EST
 

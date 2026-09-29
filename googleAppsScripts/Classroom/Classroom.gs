@@ -1,4 +1,4 @@
-var VERSION = "v01.92g";
+var VERSION = "v01.93g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -71291,6 +71291,13 @@ function guidanceDocLandscapeEpcAndConstruction_() {
 // ships INSIDE its own 30-day horizon by choice, so the curriculum checker
 // reports 4 items due rather than 3 - (k) for a fourth time, by design.
 //
+// RECHECKED 2026-09-29: THE GATE SLIPPED. Nothing launched on 28 September;
+// the announcement page (edited 25 September) no longer carries a date and
+// the catalogue still tops out at the 2 MW unit. reviewBy moved to 2026-10-27,
+// the acquirer's Q3 results (its release of 22 September) - the nearest dated
+// gate on this subject and no other module's clock. Addendum at the end of
+// the analysis file.
+//
 // SIX OF SIX BUYING CRITERIA RESOLVE, AND IT IS A MEASURED SUPERLATIVE. Run
 // the generator's own READ_NEXT-and-CRITERION_LEXICON intersection across all
 // nineteen segments and cooling is the ONLY one whose criterion table prints
@@ -71314,19 +71321,23 @@ function guidanceDocLandscapeCooling_() {
  "title": "Cooling — the Landscape",
  "short": "Eleven members, three independent rankings, and two of them place the same firm first and fifth — a segment that is not two markets but one chain measured at two points, where the rank order is the inverse of the rank order everywhere else.",
  "source": {
-  "doc": "Corpus synthesis over the 11 member dossiers of the cooling segment, at the profile versions in the claims ledger — no ingested document; dated gates re-verified against primary sources at the 24 September 2026 review, which added three primary citations to the claims ledger",
+  "doc": "Corpus synthesis over the 11 member dossiers of the cooling segment, at the profile versions in the claims ledger — no ingested document; dated gates re-verified against primary sources at the 24 September 2026 review, which added three primary citations to the claims ledger, and again at the 29 September 2026 recheck, which found the review gate's launch date withdrawn and added two more",
   "publisher": "Internal analysis",
   "date": "September 2026",
   "pages": 9,
   "series": "Industry Guidance — landscape module",
   "repo": "repository-information/industry-guidance/landscape-cooling-analysis.md"
  },
- "updated": "2026-09-24",
- "reviewBy": "2026-09-28",
+ "updated": "2026-09-29",
+ "reviewBy": "2026-10-27",
  "revisions": [
   {
    "date": "2026-09-24",
    "note": "Freshness review ahead of the 28 September gate. Three taught claims had moved and were corrected against primary sources. (1) The CDU ladder: Schneider launched a single unit rated up to 3.5 MW at 1.5 L/min per kW (2.5 MW at 2.0) on 23 September 2026, so the adjacent member now sits above two of the four incumbents, not three, and the review gate's test is restated. (2) The refrigerant row taught too broadly: only industrial-process chillers of 100 lb charge or less in semiconductor equipment moved to 1 January 2030; other process chillers keep 2026 and 2028, and data-centre and IT cooling carries its own 700-GWP limit from 1 January 2027. (3) The Texas freeze widened on 21 September to a halt on every data-centre permit at the state environmental regulator until the grid and water audits complete, still with no end date. The acquirer's results date is now day-level (27 October). Delta and LITEON were re-read at v6 and v7; every claim this module takes from them holds. reviewBy stays 28 September: the gate has not resolved and its outcome is not knowable before it."
+  },
+  {
+   "date": "2026-09-29",
+   "note": "Recheck after the 28 September gate. The gate slipped: the vendor's next-generation CDU did not launch on 28 September. Read on 29 September, its news feed carries no launch and its CDU catalogue still tops out at the 2 MW CHx2000. The announcement page, last edited 25 September, now invites registration for an undated unveiling. Its page for the 13 to 15 October OCP Global Summit, edited 22 September, shows only the 2 MW unit. Nothing moves on the CDU ladder: the rival's 3.5 MW single unit still sets the top, and the test for the launch stands unchanged. Four taught claims were corrected in place. (1) The first indicators row is now undated, and the row counts in that section's intro follow. (2) The acquirer's 27 October results release, confirmed by its 22 September announcement, becomes this module's review date. It is the nearest dated gate on this subject and no other module's clock. (3) The claims-ledger row and the drill card on the review clock now teach the slip. (4) The indicators' sales note said the only regulatory row inside twelve months was the tariff. The refrigerant row's data-centre limit from 1 January 2027 has also been inside twelve months since the 24 September correction, so the note now names both. The vendor's dossier moved to v2 on 26 September for one ownership edge only, and every field this module takes from it is unchanged, so its ledger tags stay at v1. The dossier itself still states the 28 September date, and that correction belongs to a dossier refresh."
   }
  ],
  "tiles": [
@@ -71505,7 +71516,7 @@ function guidanceDocLandscapeCooling_() {
    "title": "The indicators",
    "read": "5 min",
    "kind": "table",
-   "intro": "What to watch, dated **only where the record dates it**. The policy fence holds **34 entries across the eleven members, 17 of them dated and exactly one in the future** — and that one is already the public segment lesson's own review date, so it is an indicator here rather than this module's clock. **Five of the ten rows below carry a day**, three carry a month, a quarter or a half-year, one is in force with **no end date at all**, and one is undated by construction.",
+   "intro": "What to watch, dated **only where the record dates it**. The policy fence holds **34 entries across the eleven members, 17 of them dated and exactly one in the future** — and that one is already the public segment lesson's own review date, so it is an indicator here rather than this module's clock. **Four of the ten rows below carry a day**, three carry a month, a quarter or a half-year, one is in force with **no end date at all**, and two are undated — one by construction, and one because the date it was announced for passed with no launch and the vendor has not set another.",
    "cols": [
     "Indicator",
     "Dated",
@@ -71515,9 +71526,9 @@ function guidanceDocLandscapeCooling_() {
    "rows": [
     [
      "**A next-generation CDU sized for racks above 1 MW** — and specifically whether it is named above 2 MW and rated for the Vera Rubin platform",
-     "**28 September 2026**",
+     "**undated** — announced for 28 September 2026, which passed with no launch; the announcement page now promises an unveiling with no date",
      "CoolIT",
-     "**This module's review date.** That dossier's own indicators section states the test: a named capacity above 2 MW and a Rubin rating would confirm that the CDU is where consolidation is decided; a re-badged existing unit would not. It is the firm that set the 2 MW rung replacing its own benchmark — five days after a rival's 3.5 MW single unit reset the top of the single-unit ladder in the first section, so a figure above 2 MW is the floor of the test, not the whole of it."
+     "**This was the module's review date until the launch slipped.** That dossier's own indicators section states the test: a named capacity above 2 MW and a Rubin rating would confirm that the CDU is where consolidation is decided; a re-badged existing unit would not. The test stands and only its clock is gone — the firm's catalogue still tops out at its 2 MW unit, and its page for the October industry summit shows that unit and nothing newer. A rival's 3.5 MW single unit, launched 23 September, still sets the top of the single-unit ladder in the first section, so a figure above 2 MW is the floor of the test, not the whole of it."
     ],
     [
      "**Tariff exclusions covering rotary compressors within defined wattage ranges expire** and entries revert to the underlying list rate",
@@ -71529,7 +71540,7 @@ function guidanceDocLandscapeCooling_() {
      "**The first quarterly filing to carry the acquired CDU specialist inside its new parent's reporting segment**",
      "**27 October 2026** — the results release; the quarterly filing follows it",
      "Ecolab and CoolIT",
-     "Any disclosed contribution or customer-concentration language tests both the 29-times price and the claim of four of the five hyperscalers as customers, none of whom has ever been named."
+     "**This module's review date since the CDU launch lost its date.** Any disclosed contribution or customer-concentration language tests both the 29-times price and the claim of four of the five hyperscalers as customers, none of whom has ever been named. It is also the first results release since the next-generation unit's launch date was withdrawn."
     ],
     [
      "**The next independent liquid-cooling and thermal rankings**",
@@ -71574,7 +71585,7 @@ function guidanceDocLandscapeCooling_() {
      "Two members record the same absence from opposite ends: no public source names any hyperscaler, colocation operator or general contractor as a customer of one incumbent, and another claims four of the five hyperscalers without naming one. **The first disclosure closes the largest gap in this segment's record.**"
     ]
    ],
-   "sales": "Six of these ten rows are somebody's product, filing or ranking calendar rather than a regulation. On this segment the things that move a position are launches, rankings and disclosures — and of the four regulatory rows, the only one inside the next twelve months is a component tariff rather than a refrigerant rule."
+   "sales": "Six of these ten rows are somebody's product, filing or ranking calendar rather than a regulation. On this segment the things that move a position are launches, rankings and disclosures — and of the four regulatory rows, two land inside the next twelve months: a component tariff in November, and the data-centre refrigerant limit in January, which reaches every CDU and chiller line sold into the hall."
   },
   {
    "id": "the-sellers-play",
@@ -71598,7 +71609,7 @@ function guidanceDocLandscapeCooling_() {
    "title": "Claims ledger",
    "read": "reference",
    "kind": "ledger",
-   "intro": "**Provenance:** corpus synthesis over the segment's eleven member dossiers at the versions below; no ingested document. **At the 24 September 2026 review three dated claims were re-verified against primary sources and corrected**, and those rows cite the publisher directly. Every other load-bearing claim above traces to a dossier at its profile version and to the field it rests on, or to the segment registry, or to the relationship graph. Dossiers carry their own sources; this ledger cites the dossiers.",
+   "intro": "**Provenance:** corpus synthesis over the segment's eleven member dossiers at the versions below; no ingested document. **At the 24 September 2026 review three dated claims were re-verified against primary sources and corrected**, and those rows cite the publisher directly. **At the 29 September 2026 recheck the review gate's launch date was found withdrawn**, and that row and the new review date cite the vendor's and the acquirer's own pages. Every other load-bearing claim above traces to a dossier at its profile version and to the field it rests on, or to the segment registry, or to the relationship graph. Dossiers carry their own sources; this ledger cites the dossiers.",
    "rows": [
     [
      "Segment holds 11 members — 4 incumbent, 1 challenger, 6 adjacent; chain position 8, tier build; six buying criteria; and a notes field addressing exactly one member",
@@ -71721,8 +71732,12 @@ function guidanceDocLandscapeCooling_() {
      "profile:trane-technologies @ v1 — policyExposure[4]"
     ],
     [
-     "A next-generation CDU engineered for racks above 1 MW launches 28 September 2026, announced 17 August 2026 with no name, capacity or specification disclosed; a named capacity above 2 MW and a Vera Rubin rating would confirm the CDU consolidation judgment",
-     "profile:coolit @ v1 — strategyRead[8], productsAndServices[0].roadmap, recentDevelopments[1], summary"
+     "A next-generation CDU engineered for racks above 1 MW was announced on 17 August 2026 for launch on 28 September 2026, with no name, capacity or specification disclosed. Nothing launched on that date: the announcement page, last edited 25 September, now invites registration for an undated unveiling; the CDU catalogue still tops out at the 2 MW CHx2000; and the page for the 13 to 15 October OCP Global Summit shows that unit and nothing newer. A named capacity above 2 MW and a Vera Rubin rating would still confirm the CDU consolidation judgment",
+     "profile:coolit @ v1 — strategyRead[8], productsAndServices[0].roadmap, recentDevelopments[1], summary (the test; the dossier still states the 28 September date); CoolIT, 'The Next Gen AI CDU' page, news feed, CDU catalogue and OCP Global Summit 2026 page, read 29 September 2026 (the slip)"
+    ],
+    [
+     "The acquirer issues third-quarter 2026 results before market open on 27 October 2026, with a webcast at 1:00 p.m. Eastern the same day — the first quarter with the CDU specialist inside it",
+     "Ecolab release, 22 September 2026 (date and webcast); profile:coolit @ v1 — strategyRead[8] (the filing as an indicator)"
     ],
     [
      "Only industrial-process chillers of 100 lb charge or less in semiconductor equipment moved to 1 January 2030 under the amended refrigerant transitions rule; other industrial-process chillers keep 1 January 2026 (exiting fluid at or above −30 °C) and 1 January 2028 (−50 to −30 °C), and data-centre and IT cooling products and systems carry a 700-GWP limit from 1 January 2027. The HFC allowance schedule steps down across 2026-2028, 2029-2033, 2034-2035 and 2036 onward",
@@ -71834,7 +71849,7 @@ function guidanceDocLandscapeCooling_() {
     },
     {
      "q": "What single date does this module's review clock hang on, and what would it change?",
-     "a": "**The launch of a next-generation CDU for racks above 1 MW, on 28 September 2026.** That dossier's own indicators section sets the test: a **named capacity above 2 MW and a Vera Rubin rack rating** would confirm that the CDU is where consolidation is decided; a re-badged existing unit would not. It is the firm that set the 2 MW rung replacing its own benchmark — five days after a rival's 3.5 MW single unit reset the top of the single-unit ladder, so above 2 MW is now the floor of the test rather than the whole of it."
+     "a": "**The acquirer's third-quarter results on 27 October 2026** — the first to carry the CDU specialist inside its new parent, testing the 29-times price and the unnamed customers. The clock used to hang on that specialist's next-generation CDU for racks above 1 MW, announced for 28 September. **That date passed with no launch, and the vendor has not set another.** The test is unchanged: a **named capacity above 2 MW and a Vera Rubin rack rating** would confirm that the CDU is where consolidation is decided, and a re-badged existing unit would not. A rival's 3.5 MW single unit still tops the ladder, so above 2 MW is the floor of the test rather than the whole of it."
     },
     {
      "q": "This module owns none of the six buying criteria. Is that a weakness?",
