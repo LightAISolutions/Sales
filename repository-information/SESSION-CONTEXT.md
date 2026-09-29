@@ -6,8 +6,8 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
-**Date:** 2026-09-29 04:00 PM → 04:55 PM EST (Phase F session F-N2: WhiteFiber, 5C Group, TECfusions; one attended turn)
-**Repo version:** v07.73r (one push)
+**Date:** 2026-09-29 04:00 PM → 07:52 PM EST (Phase F session F-N2: WhiteFiber, 5C Group, TECfusions; then the Projects question and this save; three attended turns)
+**Repo version:** v07.73r (one push; this save is a no-bump housekeeping commit)
 **Branch:** `claude/busy-mendel-eey850`
 **Model:** Fable 5.1 at High (per `phase-f-action-plan.md` §3 row 1)
 
@@ -21,9 +21,11 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Step 7:** 0 inbound for all three (the '5C' hits are C-rates). `nscale` v1→v2 gains the `whitefiber` supplier edge; `duke-energy` v1→v2 gains the `whitefiber` customer edge and its `nscale` edge is retyped to the site's tenant. Tenant mentions (Together AI, Vultr, TensorWave) contradicted nothing; no slug created for them.
 - **Segments:** `neoclouds` +whitefiber (challenger), +5c-group (adjacent); `aidc-developers-and-landlords` +all three (challengers); `bridge-and-on-site-generation` +tecfusions (adjacent). Calendar: whitefiber public (`nextReport` 2026-11-12, unconfirmed), the other two private core. 15 concepts added, none edited. §11.3 rows rewritten with verdicts; `phase-f-action-plan.md` marks F-N2 landed.
 - **Checkers all clean**; the four report warnings (`fluence`, `jinko`, `jupiter-power`, `oracle`) are pre-existing. Playwright: five dossiers and guides render with only `gis_load_failed`.
+- **Projects (beta) evaluated and set aside.** After the push, the developer asked how to move the whole expansion plan into Claude Code Projects. Read from [code.claude.com/docs/en/claude-projects](https://code.claude.com/docs/en/claude-projects): a coordinating conversation that spawns cloud threads sharing repositories, ≤16,000-character instructions and a `MEMORY.md`; threads default to Opus high, open one draft PR each and run in parallel, all overridable by instruction text; permission rules from `.claude/settings.json` reach threads only in a one-repository project. The developer tried it: an Opus 5.5 project thread committed `6586795d` (`WebFetch` and `WebSearch` added to the allow list) and the developer committed `be55df2a` on GitHub.com (about 320 `WebFetch(domain:…)` entries). The threads still stopped for web-fetch permission, so the developer **switched back to individual sessions**.
 
 ### Where we left off
 
+- **Both settings commits sit on `main` without a CHANGELOG entry, a version bump or a README timestamp** (they bypassed the claude/* flow). The next push commit should record them under `### Changed` in its version section (`.claude/settings.json` — the allow list now pre-approves `WebFetch`, `WebSearch` and the domain entries). Whether those entries also cut prompts in ordinary sessions is untested.
 - **Phase 1 (to Sat 10/3, 7:00 AM ET), remaining in order:** the 9/30 Classroom run check (Opus 5.5 medium, after ~7:30 AM ET Wed); F-U3 and F-U4 (Fable High); the neoclouds pass + `profiler Habitat Energy` on Thu 10/1 (rebase first); F-I4; F-G1; F-A1 (Fable Medium, first to roll).
 - **Classroom lessons now stale, by design (`Classroom.gs` untouched):** `landscape-neoclouds-2026-09` (10 → 12 members) and `scenario-neoclouds-discovery`; `landscape-aidc-developers-and-landlords-2026-09` (+3 challengers); `landscape-bridge-and-on-site-generation-2026-09` (+tecfusions adjacent). Wave A (row 9, Sat 10/3 – Tue 10/6) takes the first three; wave D (row 17) takes the fourth. `build-classroom-segments.py --check` reads 19 of 19 due.
 - **For the Megmeet job — MV and DC power equipment.** All three sign for medium-voltage gear behind the meter, and none has touched an SST, 800 VDC or a battery. **WhiteFiber is the lead:** it buys switchgear, transformers, UPS, generators and cooling behind a Duke-owned substation, and the one documented failure of that authority is 'certain medium-voltage switchgear components' that pushed its US$865M lease a quarter (supplier unnamed; resolved Q3 2026); its next 60–200 MW (Yadkin County, 2027) is the order book to watch. **5C** owns its 138 kV substation at Springfield, so it buys the step-down transformers as well as the switchgear, plus 19 diesel gensets and 'prefabricated power skids'; an SST would sit inside that customer-owned scope at its next campus. **TECfusions** buys generation, switchgear and UPS directly but has 2 MW live and no vendor named. For an SST seller the realistic door is a retrofit landlord with a demonstrated MV bottleneck (WhiteFiber) or a customer-owned substation (5C), pitched as the step-down stage; nothing in the three records asks for 800 VDC today.
@@ -33,6 +35,7 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - WhiteFiber carries two categories on the record (`neocloud`, `developer`); 5C gets `neoclouds` adjacent for its own cloud line; TECfusions takes the bridge-generation adjacent seat on 'currently powered by turbines'.
 - Display name '5C Group', never bare '5C' (collision test). No reciprocal edge on `crusoe` (the tenancy rests on WYSO and a state tax record only); one-way edges elsewhere show as inbound evidence.
 - Three colliding concept aliases were dropped rather than existing concepts edited.
+- **Developer (07:4x PM):** the expansion plan stays on individual pasted-prompt sessions, not Projects, because project threads could not bypass the web-fetch permission prompts. F-U3 runs next as a fresh Fable 5.1 High session with a prompt the developer pastes.
 
 ### Known issues
 
@@ -49,9 +52,9 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ### Recommendation for next session
 
-- **Run F-U3 (PPL, Pinnacle West, NiSource) on Fable 5.1 High**, adapting `PROFILER-COVERAGE-PLAN.md` §11.4 with the row's model line; it is next in phase 1 and has no date gate. The CHANGELOG will rotate on that push (99/100).
+- **Run F-U3 (PPL, Pinnacle West, NiSource) in a new Fable 5.1 High session**, with a prompt adapted from `PROFILER-COVERAGE-PLAN.md` §11.4 (its model line set to Fable 5.1 High, the three F-U3 rows of §11.3 as the hypotheses, and the F-N2 lessons from `phase-f-action-plan.md` §7 carried over). Open with `git fetch origin main` and a rebase: `main` moved twice after v07.73r. The CHANGELOG rotates on that push (99/100).
 
-**To continue:** type `run F-U3`.
+**To continue:** paste the F-U3 prompt into a new Fable 5.1 High session.
 
 ## Previous Sessions
 
