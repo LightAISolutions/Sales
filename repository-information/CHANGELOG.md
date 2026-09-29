@@ -3,11 +3,150 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.73r] — 2026-09-29 04:52:56 PM EST
+
+> **Prompt:** "Picking up from my last session, run Phase F session F-N2 of
+> repository-information/PROFILER-COVERAGE-PLAN.md as a fresh session: WhiteFiber, 5C (Hypertec) and
+> TECfusions — the neocloud that owns its site, and the two landlords behind four tenant neoclouds. This
+> session runs on Fable 5.1 at High, per repository-information/phase-f-action-plan.md §3 row 1; the §11.3
+> Model cells already read "Fable 5.1 High", so keep them.
+>
+> WHY NOW: phase 1 of the plan lands every remaining new dossier while this week's Fable allowance is
+> unspent (it resets Sat 10/3, 7:00 AM ET). F-N2 goes first because Classroom wave A (row 9, Sat 10/3 –
+> Tue 10/6) re-authors the neoclouds and AIDC-developer landscapes, and this session's three members should
+> be in them. Do only F-N2: not the 10/1 neoclouds pass, not `profiler Habitat Energy`, not F-U3.
+>
+> READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §2 and §3;
+> PROFILER-COVERAGE-PLAN.md §7 and §11 (the three F-N2 rows of §11.3 are yours; §11.1's buying-authority
+> test applies); .claude/rules/profiler-app.md (Profiler Command including step 1a identity and step 7
+> reconciliation, Profiler Prep Command, Scheduled Refreshes); repository-information/PROFILER-SCHEMA.md
+> (Naming and renames, Segments registry, Refresh calendar); repository-information/PROFILER-STYLES.md
+> (active style). House pattern: the nscale and firmus dossiers and guides for a neocloud that builds its
+> own sites, and the tract and powerhouse-data-centers ones for a landlord.
+>
+> THE TASK, per company: `profiler <Company>` then `profiler prep <Company>` — dossier (schema v7,
+> profileVersion 1) and study guide (schema v2) with its lesson plan under
+> repository-information/study-prep/<slug>/. Proposed slugs: whitefiber, 5c-group, tecfusions. Category
+> hypotheses: whitefiber ["neocloud"]; 5c-group and tecfusions ["developer"] — decide each on the record.
+> Populate aka[] BEFORE the step-7 grep (WhiteFiber: WYFI, its Enovum data centres and the NC-1 campus if
+> they are its; 5C: Hypertec, 5C Data Centers, whichever names the record uses). Assign segments with a
+> basis line (hypothesis: whitefiber neoclouds · challenger; 5c-group aidc-developers-and-landlords ·
+> challenger; tecfusions the same, plus bridge-and-on-site-generation · adjacent). Then the registry sync,
+> the graph build, a calendar row per company (WhiteFiber is Nasdaq-listed: take its next results date
+> from its own IR site and mark it unconfirmed until announced; the other two follow the private rule),
+> README tree entries, and rewrite and flip your §11.3 rows.
+>
+> IDENTITY (step 1a) — establish, do not assume:
+> - WhiteFiber: its relationship to Bit Digital after the 2025 IPO (ownership share, control), and which
+>   entity owns and signs for NC-1 and the Canadian sites.
+> - 5C: the legal entity — 5C Group, 5C Data Centers or Hypertec — and whether one slug covers it under
+>   Naming and renames. Say why.
+> - TECfusions: the operating entity, and who owns Keystone Connect and signs for its on-site generation.
+>
+> THE §11.3 WHY CELLS ARE HYPOTHESES, NOT A BRIEF — web research from 2026-09-25 that nobody has read.
+> Verify against first-party sources (10-K, 10-Q and S-1 via WhiteFiber's IR site; company releases;
+> utility and state records; the tenants' own announcements), record a premise verdict per clause, and
+> rewrite the cells. Check hardest:
+> - WhiteFiber: NC-1 at ≥99 gross MW by 2029, served by Duke; 40 MW to Nscale (~$865M); the disclosed
+>   MV switchgear supply issue (Q1 2026, resolved Q2) — what, from whom, and what it delayed;
+>   ClusterMAX "Underperforming".
+> - 5C: landlord to Together AI (Memphis MEM01; Maryland) and Vultr (Springfield, Ohio, a 150 MW building).
+> - TECfusions: TensorWave's landlord (Tucson; Keystone Connect, "capable of 3 GW, primarily on-site
+>   generation"; the 1 GW agreement of Oct 2024).
+> For each, the §11.1 verdict: does it, or a platform it controls, sign for batteries, MV gear,
+> generation or SSTs?
+>
+> RECONCILIATION (step 7) — measured 2026-09-29: no dossier names WhiteFiber, WYFI, Bit Digital, Enovum,
+> 5C Group, Hypertec, TECfusions or Keystone Connect. Known collision, not inbound: "5C" as a battery
+> C-rate in cornex, crrc-zhuzhou, cummins, gotion, great-power, narada and sunwoda. Grep again with the
+> full aka[]. The work is the counterparty edges: nscale (WhiteFiber's tenant, which does not name it
+> today) and duke-energy (NC-1's utility) get the reciprocal edge if the record supports one, revised
+> under the Archival Procedure with any report pin re-checked. Together AI, Vultr and TensorWave were
+> excluded from coverage on 2026-09-25: name them in prose with sources, but create no slug for them and
+> do not re-propose them. Check the dossiers that already mention them (Together AI: crusoe, fluidstack,
+> humain, iren, nscale; Vultr: amd, digital-realty; TensorWave: amd, fermi-america, firmus) for a
+> contradiction with what you verify; revise only on a contradiction.
+>
+> LESSONS FROM F-H1, F-N1 AND F-I1 — apply them:
+> - Every counterparty named in narrative prose rests on a source in sources[], ideally its own filing.
+> - A tender, an MOU, a letter of intent or a signed-but-not-closed deal is not a completed transaction.
+>   Type each on the record's own word. An unattributed figure is stated as unverified.
+> - sec.gov was blocked from the sandbox before. Run check-source-reachability.py first; if EDGAR is
+>   blocked, read the filings from the IR site and say so in the dossier.
+> - Do not edit an existing concept in profiler-concepts.json; check new terms for collisions.
+> - Write each lesson plan and study guide skeleton-first, then Edit (Incremental Writing, item d).
+> - If an existing study guide contradicts a verified finding, correct it minimally and record it.
+>
+> DO NOT edit googleAppsScripts/Classroom/Classroom.gs. The new members make landscape-neoclouds-2026-09,
+> scenario-neoclouds-discovery and landscape-aidc-developers-and-landlords-2026-09 stale (wave A, row 9),
+> and landscape-bridge-and-on-site-generation-2026-09 if TECfusions takes its seat (wave D, row 17). Record
+> that in the CHANGELOG entry and the SESSION-CONTEXT hand-off.
+>
+> FOR THE MEGMEET JOB: in the SESSION-CONTEXT hand-off, one short paragraph on whether any of the three
+> signs for medium-voltage or DC power equipment — WhiteFiber's switchgear shortage is the lead — and what
+> it means for an SST seller.
+>
+> VERIFY: check-source-reachability.py before planning Stage 2; sync-profiler-registry.py --check clean;
+> build-profiler-graph.py; check-profiler-study.py, check-profiler-relationships.py and
+> check-profiler-crossrefs.py clean (accept reviewed candidates with a reason); check-profiler-reports.py
+> warnings read; every new and revised dossier and guide renders under Playwright with zero page errors
+> other than the sandbox's gis_load_failed. CHANGELOG rotation only if non-exempt sections reach 100 (it
+> reads 98/100 after v07.72r). Normal Pre-Commit and Pre-Push checklists; one commit; push on a claude/*
+> branch. At the end, tell me the session's usage value from get_session so the plan's cost table grows."
+
+**Phase F, session F-N2 — WhiteFiber, 5C Group and TECfusions** join the Profiler corpus: the neocloud that owns its site, and the two landlords behind four tenant neoclouds. Three dossiers, each with a v2 study guide and a lesson plan, plus the reciprocal edges on `nscale` and `duke-energy`. Run on Fable 5.1 at High.
+
+### Added
+
+- **Three schema v7 dossiers** (`profileVersion` 1, intel-briefing style), each researched by two parallel subagents under the two-stage protocol. `check-source-reachability.py` ran before Stage 2: **OK** — `sec.gov` and `data.sec.gov` answered 200 with `SEC_USER_AGENT`, so WhiteFiber's 10-K, 10-Qs, prospectus and 8-Ks, Nscale's S-1 and Apex Treasury's 8-K/425 filings were read on EDGAR.
+  - **`whitefiber.profile.json`** — `categories: ["neocloud", "developer"]` ('developer' added on the record: the Nscale lease is 93% of a US$1.0B backlog); 84 sources (61% first-party), 25 developments, 4 products, 10 relationships, 12 decision makers (3 with photos), 4 policy entries.
+    - **Identity:** WhiteFiber, Inc., a Cayman exempted company on the Nasdaq Capital Market (WYFI) since 7 Aug 2025. Bit Digital holds 27.04M shares: 74.3% at the IPO, 69.6% on 12 Aug 2026 and **59.9%** after the 21 Aug 2026 note exchange (13D/A); a 'controlled company' with a shared CEO and no distribution announced.
+    - **NC-1:** 805 Island Drive, Madison, NC, owned through Enovum NC-1 Bidco, LLC, which took the Unifi purchase assignment (US$45M base) and Duke Energy Carolinas' service agreement. Duke's 16 May 2025 letter promises 24/40/99 MW on 'commercially reasonable efforts' by May 2029; 54 gross MW delivered by May 2026.
+    - **The switchgear issue:** disclosed 14 May 2026 as 'certain medium-voltage switchgear components'; the CEO said on 12 Aug 2026 the 'delivering and commissioning issues … have since been resolved'. It pushed Nscale's April/May ready-for-service dates into Q3 2026. No supplier is named anywhere.
+  - **`5c-group.profile.json`** — `categories: ["developer"]`; 77 sources (49% first-party), 22 developments, 3 products, 4 relationships, 8 decision makers, 4 policy entries.
+    - **Identity:** **5C AI Group Inc.** (Saint-Laurent, Quebec), spun out of Hypertec Group on 10 Apr 2025 when Hypertec Cloud acquired 5C Data Centers; Hypertec 'remains largest shareholder', Brookfield holds structured equity. One slug under Naming and renames; display name '5C Group' because bare '5C' fails the collision test.
+    - **The substation:** FirstEnergy's OPSB filing records a 138 kV tap 'to the new 5C Data Center USA, Inc. substation … The customer will own the Benjamin Substation'. Crusoe is a second Springfield tenant the brief did not carry (WYSO; an Ohio tax record).
+  - **`tecfusions.profile.json`** — `categories: ["developer"]`; 77 sources (45% first-party), 23 developments, 3 products, 2 relationships, 12 decision makers, 4 policy entries.
+    - **Identity:** TECfusions, Inc. (Florida), 100% founder-owned via Jeremiah 29:11, LLC. **Keystone Connect is the former Alcoa/Arconic R&D campus in Upper Burrell, PA (New Kensington), not Clarion and not a glass plant.** A US$4.0B SPAC merger with Apex Treasury (APXT → 'TECF') was signed 21 Jul 2026 and is **not closed** (no S-4 by 29 Sep). The deck discloses the founder's prior criminal convictions as a risk factor.
+    - **Generation:** 'currently powered by turbines' (company) against 'drawing from existing grid power lines' (TribLive); no turbine OEM and no PA DEP air permit on the record; 2 MW live at the flagship against 3 GW marketed.
+- **Three schema v2 study guides**, each with flashcards and a self-test on concepts only: `whitefiber.study.json` (14 sections), `5c-group.study.json` (13), `tecfusions.study.json` (12).
+- **Three lesson plans** under `repository-information/study-prep/<slug>/`, six modules each, paced to 7 Oct 2026, written skeleton-first and filled by module (Incremental Writing, item d).
+- **15 new concepts** in `profiler-concepts.json` (1,555 → 1,570), each checked for collisions; three aliases that collided (`contracted backlog` → `contracted-capacity`; `SOFC` → `solid-oxide-fuel-cell`; `tax abatement` → `chapter-312-abatement`) were dropped rather than the existing entries edited: `remaining-performance-obligations`, `adaptive-reuse`, `earn-out`, `lead-time`, `related-party-loan`, `fuel-cell`, `customer-owned-substation`, `upfront-capacity-charge`, `enterprise-zone`, `pilot`, `gas-turbine`, `spac`, `pipe-financing`, `redemption`, `s-4`.
+- **3 executive photos** in `live-site-pages/images/execs/` (`whitefiber-tabar`, `-zhu`, `-krassakopoulos`), from the IR page's leadership cards (avif converted to jpg; the name mapping verified against the page's alt text).
+- **Two archive files**: `nscale.profile.v1.json` and `duke-energy.profile.v1.json`, each with an `archive-index.json` entry.
+
+### Changed
+
+- **Two counterparty dossiers revised under the Archival Procedure** (step 7):
+  - `nscale` v1→v2 — gains the `whitefiber` **supplier** edge (its landlord at the Madison site: 10 years, 40 MW IT, ~US$865M) with the two WhiteFiber sources; its own 'partner-run' Madison prose was accurate and is unchanged.
+  - `duke-energy` v1→v2 — gains the `whitefiber` **customer** edge (the 24/40/99 MW letter and the assigned ESA), and its `nscale` edge is **retyped from customer to `other`**: Nscale is the site's tenant; the Duke agreements are WhiteFiber's. Both edges say no Duke document names either company.
+  - No report pins either dossier, so `report-pins-verified.json` is unchanged.
+- **`profiler-companies.json`** — 190 → 193 entries. `aka[]` (Enovum, Bit Digital, NC-1, MTL-1/2/3, WYFI; Hypertec, Hypertec Cloud, 5C Data Centers, CMH01, MEM01; Keystone Connect, Tecfusions Keystone, Apex Treasury, TECF) and `domains[]` populated **before** the step-7 grep.
+- **`profiler-segments.json`**, each with a basis line: `neoclouds` +`whitefiber` challenger, +`5c-group` adjacent (ten → twelve members); `aidc-developers-and-landlords` +`whitefiber`, +`5c-group`, +`tecfusions`, all challengers; `bridge-and-on-site-generation` +`tecfusions` adjacent (TECfusions took its seat).
+- **`profiler-graph.json`** — rebuilt: 1,685 edges (1,269 curated).
+- **`profiler-refresh-calendar.json`** — `whitefiber` public, `nextReport` 2026-11-12 **unconfirmed** (stockanalysis.com's estimate; Q3 2025 was reported 13 Nov 2025; the IR site lists no date); `5c-group` and `tecfusions` private, `cadence: quarterly`, `tier: core`, with a conversion note each (an IPO filing; the SPAC close). **`profiler-refresh-notes.json`** — a source and `watch[]` per slug.
+- **`profiler-crossref-accepted.json`** — two reviewed candidates accepted with reasons (`duke-energy × nscale`, `duke-energy × whitefiber`): both flag the same 'unconfirmed from Duke's side' marker, which nothing in either dossier can close.
+- **`PROFILER-COVERAGE-PLAN.md` §11.3** — the three F-N2 rows rewritten as verified cells with a premise verdict per clause and the §11.1 answer; Model **Fable 5.1 High**; `Checked 2026-09-29, v07.73r`; Dossier v1; Guide v2. The verdicts that moved: WhiteFiber's 99 MW is a schedule, not a contract, and the switchgear resolution is Q3, not Q2; 5C's '150 MW building' is one of five figures for the same building; TECfusions' place (Upper Burrell), its '3 GW' (a marketing figure against 2 MW live) and its '1 GW agreement' (a commitment restated as a right of first refusal).
+- **`phase-f-action-plan.md`** — F-N2 added to the Done table; §3 row 1 marked landed, with the wave A and wave D seats it adds.
+- **README.md** — tree entries for the three profile/study pairs, the three study-prep directories and the two archive files, plus the timestamp and repo version.
+- **`SESSION-CONTEXT.md`** — a new Latest Session (the F-N2 hand-off, with the Megmeet paragraph). The v07.72r entry moved to Previous; the cooling-recheck entry dropped under the two-session cap.
+
+### Notes
+
+- **Step-7 reconciliation**, grepped with the full `aka[]` against the pre-revision dossiers: **0 inbound for all three**, as measured on 9/29. The seven '5C' hits are battery C-rates. The tenant mentions (Together AI in `crusoe`, `fluidstack`, `humain`, `iren`, `nscale`; Vultr in `amd`, `digital-realty`; TensorWave in `amd`, `fermi-america`, `firmus`) were read against the verified record: **none contradicts it**, so none was revised. Fermi's 222 MW TensorWave lease became the `fermi-america` competitor edge on `tecfusions`. No slug was created for Together AI, Vultr or TensorWave.
+- **§11.1 buying authority:** all three sign for medium-voltage gear behind the meter. **WhiteFiber** buys switchgear, transformers, UPS, generators and cooling behind a Duke-owned substation, and its one documented failure is the switchgear category. **5C** owns the 138 kV substation at Springfield (so the transformers too), 19 diesel gensets and 'prefabricated power skids'; its Memphis behind-the-meter turbines are unpermitted on the public record. **TECfusions** buys generation, UPS, switchgear and 'continuous duty-rated' machines at 2 MW of live flagship capacity. **None has signed for an SST, 800 VDC or a battery**, and none names a vendor or an EPC.
+- **Existing study guides checked for contradictions:** no guide names any of the three; the `nscale` guide's Madison material is unaffected. No guide was corrected.
+- **Classroom lessons now stale, by design — `Classroom.gs` was not edited:** `landscape-neoclouds-2026-09` (ten members become twelve) and `scenario-neoclouds-discovery`; `landscape-aidc-developers-and-landlords-2026-09` (three more challengers); `landscape-bridge-and-on-site-generation-2026-09` (TECfusions adjacent, for wave D). Wave A (row 9) and wave D (row 17) re-author them. `build-classroom-segments.py --check` reads **19 of 19 due** (17 with section changes, 2 pin-only), unchanged in count from before this session.
+- **Checkers:** `sync-profiler-registry.py --check` clean (193 in bijection); `build-profiler-graph.py` rebuilt; `check-profiler-relationships.py` 0 findings; `check-profiler-crossrefs.py` 0 candidates after the two accepts (32 over-cap scopes not examined, as before); `check-profiler-study.py` 0 errors (193 guides, 1,570 concepts); `check-readme-tree.py` 0 findings; `check-profiler-reports.py` 0 errors and the same four pre-existing warnings (`fluence` v10, `jinko` v6, `jupiter-power` v7, `oracle` v6), read and left loud.
+- **Playwright:** the three new dossiers and the revised `nscale` and `duke-energy` render on `Profiler.html` with every tab and the study guide (opened and closed with ✕), no literal `{{` or `**`, and the only page error is the sandbox's `gis_load_failed`. `Profiler.html` is unchanged (data-only), so no page version bump.
+- **Not run here, as instructed:** the 10/1 neoclouds pass, `profiler Habitat Energy` and F-U3.
+- **No rotation:** 99 sections, under the trigger.
 
 ## [v07.72r] — 2026-09-29 03:51:31 PM EST
 

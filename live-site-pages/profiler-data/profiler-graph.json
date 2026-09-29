@@ -1,8 +1,269 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-29",
- "companies": 190,
+ "companies": 193,
  "edges": [
+  {
+   "a": "5c-group",
+   "b": "amd",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "AMD and 5C announced 'AMD Helios-ready gigascale AI campuses' with initial deployments in Ohio and Memphis; 5C's Springfield tenant Vultr runs about 24,000 AMD MI355X there.",
+     "context": "The 9 Jul 2026 release describes 'validated, repeatable rack-scale reference designs' for AMD's Helios generation. Separately, Vultr's Ohio region was launched on MI355X with MI450/Helios 'at a later stage' (trade press, Dec 2025). 5C also lists NVIDIA Blackwell and Intel Gaudi in its cloud catalogue; AMD's own dossier does not name 5C.",
+     "source": "https://5c.ai/news/5c-and-amd-collaborate-to-advance-the-next-generation-of-gigascale-ai-campuses",
+     "status": "active",
+     "since": "2026-07",
+     "via": "AMD Helios-ready rack-scale reference designs; Vultr's MI355X fleet at Springfield"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: nothing on 5c.ai or hypertec.com mentions solid-state transformers, 800 VDC or energy storage; the AMD Helios reference-design work is rack-scale, not distribution-level.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · 5C Cloud — Customer Owned Inventory (CI-Metal-aaS) and Bare Metal (Metal-aaS)",
+     "date": "",
+     "text": "Two models: 'Customer Owned Inventory', where 'Customers provide their own dedicated compute infrastructure and 5C manages the rest (network and storage)', and 'Bare Metal', 'fully dedicated servers and networking environment with full access to physical hardware' on silicon 5C owns ('NVIDIA Blackwell, AMD Instinct, and Intel Gaudi').",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-09",
+     "text": "AMD collaboration: 'AMD Helios-ready gigascale AI campuses' with 'validated, repeatable rack-scale reference designs', initial deployments in Ohio and Memphis 'supporting different neocloud customers' — 5C positions its halls as AMD-ready alongside NVIDIA, matching its Vultr tenant's MI355X fleet.",
+     "src": "https://5c.ai/news/5c-and-amd-collaborate-to-advance-the-next-generation-of-gigascale-ai-campuses",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-27",
+     "text": "JobsOhio: Vultr commits US$901.3M and 20 jobs to Springfield; the 50 MW site runs about 24,000 AMD MI355X (trade press) — The tenant's announcement does not name 5C; the local record does.",
+     "src": "https://www.jobsohio.com/newsroom/news-press/vultr-announces-1-billion-data-center-investment-in-springfield",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-09"
+  },
+  {
+   "a": "5c-group",
+   "b": "applied-digital",
+   "evid": [
+    {
+     "where": "Capabilities · AI data-centre development and leasing — 'Turnkey' and 'Turnkey+' delivery",
+     "date": "",
+     "text": "Its model sits between the corpus's build-to-suit landlords (Prime, EdgeCore, Compass) and the miner-turned-landlords (Applied Digital, Core Scientific): adaptive reuse of vacant corporate buildings with an existing utility feed, sold to one or two neocloud tenants per site, with Hypertec's hardware and immersion background as the 'Turnkey+' upsell.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "5c-group",
+   "b": "brookfield",
+   "curated": {
+    "a": {
+     "type": "investor",
+     "note": "Brookfield Asset Management is 5C's institutional backer: it led the equity portion of the July 2025 US$835M raise 'through its Infrastructure Structured Solutions strategy, alongside affiliated entities' and led the August 2026 US$605M debt financing.",
+     "context": "The equity share is undisclosed. Brookfield's Hamish Kidd called the 2026 loan 'our partnership with 5C'. Deutsche Bank led the debt in the 2025 raise; Moelis was placement agent; the borrower on the 2025 deal was 'CMH01 Holdings', the Springfield campus entity, per Lexpert. Brookfield's own channels have not been checked for a 5C statement; the relationship is recorded from 5C's releases and the law-firm deal notes.",
+     "source": "https://5c.ai/news/5c-group-secures-835-million-of-capital-from-brookfield-and-deutsche-bank",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "led the equity of a US$835M raise (Jul 2025) and a US$605M debt financing (Aug 2026)",
+     "via": "Brookfield Infrastructure Structured Solutions"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: 5C Group is a Montreal-based, Hypertec-controlled, Brookfield-backed developer and operator of AI data centres that leases powered, cooled halls to neoclouds, and it is the landlord of record for Together AI (a Maryland hall live since July 2025 and the Memphis MEM01 campus), Vultr (Springfield, Ohio) and Crusoe (also Springfield).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It has raised more than US$1.4 billion (US$835M of Brookfield-led equity and Deutsche Bank-led debt in July 2025; US$605M of Brookfield-led debt in August 2026) against a roadmap it now states as 'over 1.5 gigawatts', down from 'over 2 GW' a year earlier, with about 110 MW operational in September 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: US$1.4B raised against a stated US$1.3B Springfield project and a US$152M Memphis project; Simon Ahdoot's 'incremental $5 billion or $6 billion' and IPO remarks on 29 Sep 2026; Brookfield's second cheque was debt, not equity.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "US$605M of new debt financing led by Brookfield Asset Management; cumulative capital 'more than US$1.4 billion'; proceeds for the Memphis acquisition and construction and for Ohio and Phoenix 'as they reach key commercial and investment milestones' — Brookfield moves from equity to lender; the roadmap boilerplate now reads 'over 1.5 gigawatts'.",
+     "src": "https://5c.ai/news/5c-secures-more-than-usd-1-4-billion-to-power-north-americas-ai-infrastructure",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-23",
+     "text": "US$835M of capital: equity led by Brookfield Asset Management's Infrastructure Structured Solutions strategy and debt led by Deutsche Bank; Moelis advised; the borrower is 'CMH01 Holdings' (Lexpert) — The Ohio campus is the asset the first institutional money was raised on.",
+     "src": "https://5c.ai/news/5c-group-secures-835-million-of-capital-from-brookfield-and-deutsche-bank",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-10"
+  },
+  {
+   "a": "5c-group",
+   "b": "core-scientific",
+   "evid": [
+    {
+     "where": "Capabilities · AI data-centre development and leasing — 'Turnkey' and 'Turnkey+' delivery",
+     "date": "",
+     "text": "Its model sits between the corpus's build-to-suit landlords (Prime, EdgeCore, Compass) and the miner-turned-landlords (Applied Digital, Core Scientific): adaptive reuse of vacant corporate buildings with an existing utility feed, sold to one or two neocloud tenants per site, with Hypertec's hardware and immersion background as the 'Turnkey+' upsell.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "5c-group",
+   "b": "crusoe",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "WYSO names Crusoe as a confirmed tenant of 5C's Springfield building alongside Vultr; Crusoe was approved for an Ohio data-centre sales-tax exemption for Springfield in December 2025.",
+     "context": "Neither Crusoe nor 5C has announced the tenancy on its own channels; the record is WYSO's August 2026 report ('Other confirmed tenants in the building include cloud infrastructure company Vultr and AI infrastructure company Crusoe Energy Systems') and the Springfield News-Sun's December 2025 report of Crusoe's 50%/10-year state exemption with 20 jobs. Scope and MW are unknown. The corpus's Crusoe dossier does not name 5C or Springfield.",
+     "source": "https://www.wyso.org/news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism",
+     "status": "announced",
+     "since": "2025-12",
+     "via": "Springfield, Ohio (CMH01)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: 5C Group is a Montreal-based, Hypertec-controlled, Brookfield-backed developer and operator of AI data centres that leases powered, cooled halls to neoclouds, and it is the landlord of record for Together AI (a Maryland hall live since July 2025 and the Memphis MEM01 campus), Vultr (Springfield, Ohio) and Crusoe (also Springfield).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess 5C Group as a challenger in the AIDC developer and landlord segment: the counterparty that owns the buildings, the substation and the site power at four US campuses whose tenants (Together AI, Vultr, Crusoe) were excluded from this corpus because they buy compute, not power equipment.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-14",
+     "text": "WYSO: 25 of Springfield's 75 MW phase due 'by the end of September'; tenants Vultr and Crusoe confirmed; 19 diesel generators planned; CEO Jonathan Ahdoot: 'This is a 40, 50 year project and beyond' — First energised phase at the flagship, a year after 'operational by early 2026' was promised.",
+     "src": "https://www.wyso.org/news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism",
+     "from": "a"
+    }
+   ],
+   "last": "2026-08-14"
+  },
+  {
+   "a": "5c-group",
+   "b": "fermi-america",
+   "evid": [
+    {
+     "where": "Capabilities · Site power, substations and behind-the-meter generation — the owner's scope",
+     "date": "",
+     "text": "Like Tract and PowerHouse in this corpus, 5C is the entity a utility signs with; unlike Fermi America it does not build its own plant on the record.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "5c-group",
+   "b": "nvidia",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "NVIDIA's own release names 5C as Together AI's partner at the Maryland B200 site and the Memphis GB200/GB300 site; the Memphis build uses GB200 NVL72 with Dell racks, and 5C's parent Hypertec is an NVIDIA OEM.",
+     "context": "The 28 Oct 2025 NVIDIA release is the only independent source that ties 5C to both Together AI sites by name. 5C's cloud catalogue lists 'NVIDIA Blackwell' beside AMD Instinct and Intel Gaudi. The compute at the tenant sites is owned by the tenants, so NVIDIA's customer is Together AI; 5C is the hall.",
+     "source": "https://nvidianews.nvidia.com/news/nvidia-partners-ai-infrastructure-america",
+     "status": "active",
+     "via": "GB200 NVL72 and GB300 NVL72 at Memphis; HGX B200 in Maryland; Hypertec's CIARA as NVIDIA's first Canadian OEM"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hypertec, its largest shareholder, is also a server maker and NVIDIA's first Canadian OEM.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · 5C Cloud — Customer Owned Inventory (CI-Metal-aaS) and Bare Metal (Metal-aaS)",
+     "date": "",
+     "text": "Two models: 'Customer Owned Inventory', where 'Customers provide their own dedicated compute infrastructure and 5C manages the rest (network and storage)', and 'Bare Metal', 'fully dedicated servers and networking environment with full access to physical hardware' on silicon 5C owns ('NVIDIA Blackwell, AMD Instinct, and Intel Gaudi').",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-09",
+     "text": "AMD collaboration: 'AMD Helios-ready gigascale AI campuses' with 'validated, repeatable rack-scale reference designs', initial deployments in Ohio and Memphis 'supporting different neocloud customers' — 5C positions its halls as AMD-ready alongside NVIDIA, matching its Vultr tenant's MI355X fleet.",
+     "src": "https://5c.ai/news/5c-and-amd-collaborate-to-advance-the-next-generation-of-gigascale-ai-campuses",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-09",
+     "text": "Hypertec's CIARA becomes NVIDIA's first Canadian OEM partner; 5C's David Bitton quoted — The largest shareholder is also the hardware supplier.",
+     "src": "https://hypertec.com/news/hypertec-oem-partner-announcement-with-nvidia",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-28",
+     "text": "NVIDIA: 'Together AI, in partnership with 5C, already operates an AI factory in Maryland featuring NVIDIA B200 GPUs and is bringing a new one online soon in Memphis, Tennessee, featuring NVIDIA GB200 and GB300 systems' — The strongest independent statement that 5C is Together AI's landlord at both sites.",
+     "src": "https://nvidianews.nvidia.com/news/nvidia-partners-ai-infrastructure-america",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-09"
+  },
+  {
+   "a": "5c-group",
+   "b": "tract",
+   "evid": [
+    {
+     "where": "Capabilities · Site power, substations and behind-the-meter generation — the owner's scope",
+     "date": "",
+     "text": "Like Tract and PowerHouse in this corpus, 5C is the entity a utility signs with; unlike Fermi America it does not build its own plant on the record.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "5c-group",
+   "b": "xai",
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 'GRID / BTM' code, the January 2026 drone footage of 'what appeared to be turbines', and the absence of any air permit in 5C's name at a health department that is litigating xAI's turbines.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
   {
    "a": "abb",
    "b": "amperesand",
@@ -6299,6 +6560,27 @@
     }
    ],
    "last": "2026-07-23"
+  },
+  {
+   "a": "amd",
+   "b": "tecfusions",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "TensorWave raises US$350M Series B at US$1.55B post-money (Magnetar, AMD Ventures) with 'over 2 gigawatts of long-term capacity secured'; TECfusions is not mentioned — The anchor tenant's capacity commitments now run beyond its TECfusions landlord.",
+     "src": "https://www.hpcwire.com/aiwire/2026/06/10/tensorwave-raises-350m-series-b-at-1-55b-valuation-to-expand-global-amd-powered-ai-infrastructure/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-14",
+     "text": "'TensorWave Expands with TECfusions, Splitting 20 MW Across Arizona and Pennsylvania': 10 MW more at Tucson and a 10 MW first phase at Keystone Connect, 'scaling to 1 GW; site capable of 3 GW', AMD MI300X/MI325X/MI355X, delivery H1 2026 — The 1 GW figure is restated as a scaling path from a 10 MW phase.",
+     "src": "https://www.prnewswire.com/news-releases/tensorwave-expands-with-tecfusions-splitting-20-mw-across-arizona-and-pennsylvania-locations-302660757.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-10"
   },
   {
    "a": "amd",
@@ -23316,6 +23598,28 @@
   },
   {
    "a": "coreweave",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named in WhiteFiber's 10-K as a cloud competitor alongside Crusoe, Nebius and Lambda; SemiAnalysis rates CoreWeave Platinum and WhiteFiber Underperforming.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+     "date": "",
+     "text": "The 10-K names CoreWeave, Crusoe Energy, Nebius and Lambda Labs as competitors and says the company targets 'small and medium-sized customers with high returns'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "coreweave",
    "b": "xai",
    "evid": [
     {
@@ -24841,6 +25145,28 @@
    "last": ""
   },
   {
+   "a": "crusoe",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named in WhiteFiber's 10-K as a cloud competitor ('Crusoe Energy').",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+     "date": "",
+     "text": "The 10-K names CoreWeave, Crusoe Energy, Nebius and Lambda Labs as competitors and says the company targets 'small and medium-sized customers with high returns'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "csa-group",
    "b": "dnv",
    "curated": {
@@ -26179,6 +26505,20 @@
      "text": "Reporters place CyrusOne beside Aligned, Equinix and PowerHouse in Chicago, beside Equinix, Prime and Data4 in Madrid, and inside the private wholesale cohort with Vantage, QTS, STACK and Switch.",
      "src": "",
      "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "cyrusone",
+   "b": "whitefiber",
+   "evid": [
+    {
+     "where": "Capabilities · Enovum data centres — colocation and build-to-suit leasing (the 'Colocation services' segment)",
+     "date": "",
+     "text": "The 10-K names Digital Realty, Equinix, NTT, CyrusOne, STACK Infrastructure, Aligned and Iron Mountain as competitors.",
+     "src": "",
+     "from": "b"
     }
    ],
    "last": ""
@@ -28042,6 +28382,28 @@
    "last": "2026-09"
   },
   {
+   "a": "digital-realty",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named in WhiteFiber's 10-K as a colocation competitor, with Equinix, NTT, CyrusOne, STACK, Aligned and Iron Mountain.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Enovum data centres — colocation and build-to-suit leasing (the 'Colocation services' segment)",
+     "date": "",
+     "text": "The 10-K names Digital Realty, Equinix, NTT, CyrusOne, STACK Infrastructure, Aligned and Iron Mountain as competitors.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "dnv",
    "b": "fluence",
    "curated": {
@@ -28988,6 +29350,30 @@
     }
    ],
    "last": "2017"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "tecfusions",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Clarksville takes grid service from Dominion Energy Virginia (the site is listed as operational under Dominion by interconnection.fyi), and TECfusions' February 2025 release describes discussions with Dominion and Mecklenburg County to repurpose abandoned 138 kV lines from a decommissioned coal plant.",
+     "context": "Dominion has issued no statement naming TECfusions on the record; the relationship is recorded from TECfusions' release and an aggregator's interconnection listing. The 300 MW Clarksville target depends on that line reuse, which the company describes as 'under discussion'.",
+     "source": "https://www.prnewswire.com/news-releases/tecfusions-expands-data-center-footprint-with-73-acre-virginia-acquisition-302383387.html",
+     "status": "active",
+     "via": "Dominion Energy Virginia service at Clarksville; 138 kV line reuse under discussion"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Adaptive-reuse site development",
+     "date": "",
+     "text": "The company's method is to buy or lease legacy industrial and corporate sites with existing power infrastructure and convert them: the former Alcoa/Arconic Technical Center at Upper Burrell (1,395 acres, 'more than one million square feet' of structures, closed 2 Dec 2024, price undisclosed, a US$2M state RACP grant); Clarksville's 22.5-acre site plus 73 acres bought in Feb 2025 with a plan to 'repurpose abandoned 138kV transmission lines from a decommissioned coal plant' in discussion with Dominion Energy and Mecklenburg County; and Tucson's 1989 data centre, leased from Aphorio Carter Fund Management on a 15-year absolute triple-net lease after the landlord bought it for US$13M in October 2023.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "dominion-energy",
@@ -29949,13 +30335,12 @@
    "b": "nscale",
    "curated": {
     "a": {
-     "type": "customer",
-     "note": "The corpus's Nscale dossier records a Madison, North Carolina site with '99MW secured Duke Energy' and 40 MW by 2026; no Duke document names Nscale.",
-     "context": "The claim rests on Nscale's own materials as recorded in its dossier. Duke's decks caption Microsoft, Amazon and QTS sites only, and the deck's logo strip as reported by third parties does not include Nscale, so the relationship is recorded from the counterparty's side and remains unconfirmed by Duke.",
-     "source": "Nscale dossier in this corpus (Madison, NC site); no Duke source",
-     "status": "announced",
-     "since": "2026",
-     "scale": "99 MW secured (Nscale)"
+     "type": "other",
+     "note": "Nscale is the 40 MW tenant at WhiteFiber's NC-1 campus in Madison, North Carolina, a Duke Energy Carolinas-served site; the Duke capacity letter and service agreement are WhiteFiber's (Enovum NC-1 Bidco, LLC), not Nscale's, and no Duke document names either company.",
+     "context": "Revised 29 Sep 2026 (Profiler F-N2). This edge previously rested on the corpus's Nscale dossier alone ('99MW secured Duke Energy'). WhiteFiber's filings now establish the chain: Duke's 16 May 2025 letter agreement with Enovum Data Centers sets 24, 40 and 99 MW phases at 805 Island Drive; Unifi's electric service agreement was assigned to Enovum NC-1 Bidco on 4 Aug 2025; Nscale signed a 10-year, 40 MW IT colocation agreement with WhiteFiber on 18 Dec 2025. Duke's decks caption Microsoft, Amazon and QTS sites only, so both WhiteFiber and Nscale remain unconfirmed from Duke's side.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm",
+     "status": "active",
+     "scale": "40 MW IT tenant at NC-1 (Madison, NC)"
     }
    },
    "evid": [
@@ -29974,7 +30359,7 @@
      "from": "b"
     }
    ],
-   "last": "2026"
+   "last": ""
   },
   {
    "a": "duke-energy",
@@ -30081,6 +30466,70 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "duke-energy",
+   "b": "whitefiber",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "WhiteFiber's Enovum subsidiaries hold a Duke Energy Carolinas letter agreement of 16 May 2025 (24 MW, 40 MW and 99 MW phases at 805 Island Drive, Madison) and Unifi's assigned electric service agreement for the former yarn plant that is now the NC-1 data centre.",
+     "context": "The letter, signed by Duke's Stu Heishman, states an estimated peak load of 99 MW at 24 kV, promises 'commercially reasonable efforts' on the phases and says Duke 'does not guarantee timelines can be met'; the final 99 MW phase is due within four years, by May 2029. Under the service agreement Duke owns the 'Extra Facilities (including overhead lines, substations, transformers, breakers, and metering equipment)' for a monthly facilities charge. WhiteFiber reported on 14 May 2026 that 'Duke Energy has completed the work required to deliver the initial 54 gross MW of utility power to the site', posted a US$3M surety bond to Duke in July 2026, and says management believes the site 'may receive and support up to 200 MW (gross)' subject to new substations.\n\nRecorded from WhiteFiber's SEC filings; Duke has not named the site or the customer. Added 29 Sep 2026 (Profiler F-N2).",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025063338/ea024838201ex10-22_white.htm",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "99 MW letter target (24 kV); 54 gross MW delivered",
+     "via": "Duke Energy Carolinas electric service at NC-1, Madison (Rockingham County)"
+    },
+    "b": {
+     "type": "supplier",
+     "note": "Duke Energy Carolinas is NC-1's utility: a 16 May 2025 letter agreement with Enovum sets 24, 40 and 99 MW phases, and Unifi's electric service agreement was assigned to Enovum NC-1 Bidco on 4 Aug 2025.",
+     "context": "The letter, signed by Duke's Stu Heishman, states an estimated peak load of 99 MW at 24 kV, promises 'commercially reasonable efforts' on the three phases and says Duke 'does not guarantee timelines can be met'. Under the assigned service agreement Duke owns the 'Extra Facilities' (overhead lines, substations, transformers, breakers, metering) for a US$11,405 monthly charge. Duke completed the work for the initial 54 gross MW by May 2026, and WhiteFiber posted a US$3M surety bond in July 2026.\n\nNo Duke document names WhiteFiber, Enovum or Nscale; Duke's investor decks caption Microsoft, Amazon and QTS sites only. The relationship is recorded from WhiteFiber's filings and the Duke-countersigned letter it filed.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025063338/ea024838201ex10-22_white.htm",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "54 gross MW delivered; 99 MW letter target by May 2029",
+     "via": "Duke Energy Carolinas electric service at NC-1"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It signs for its own sites: it bought NC-1 (US$45 million base) and MTL-3, is buying two more North Carolina buildings for US$60 million, holds the Duke Energy Carolinas service agreement for NC-1 through Enovum NC-1 Bidco, LLC, and disclosed on 14 May 2026 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components' that pushed Nscale's April and May 2026 ready-for-service dates into the third quarter.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess WhiteFiber as the corpus's clearest small-cap case of a neocloud that is also a data-centre owner, and the landlord through which a larger neocloud (Nscale) reaches Duke Energy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: the Duke Energy Carolinas capacity letter (16 May 2025) and Unifi's assigned electric service agreement (4 Aug 2025) are held by WhiteFiber's subsidiary, Enovum NC-1 Bidco, LLC, not by Nscale; Duke owns the 'Extra Facilities (including overhead lines, substations, transformers, breakers, and metering equipment)' under that agreement, while WhiteFiber buys what sits behind the meter: 'power distribution equipment, generators, and cooling systems' and 'power distribution units' (10-K).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NC-1 development and site power — the owner's scope at Madison, North Carolina",
+     "date": "",
+     "text": "It holds the Duke Energy Carolinas capacity letter of 16 May 2025 (24 MW gross 'on or about September 1, 2025', 40 MW 'on or about April 1, 2026', 99 MW 'within four (4) years'; 24 kV three-phase service; Duke 'does not guarantee timelines can be met') and Unifi's electric service agreement, assigned on 4 Aug 2025, under which Duke owns the substation, transformers, breakers and metering as 'Extra Facilities' for a US$11,405 monthly charge.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-16",
+     "text": "Duke Energy Carolinas letter agreement: 24 MW, then 40 MW, then 99 MW 'within four (4) years'; 'Duke Energy does not guarantee timelines can be met' — The 99 MW that the market repeats is an efforts-based schedule from the utility.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025063338/ea024838201ex10-22_white.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2025-05-16"
   },
   {
    "a": "eaton",
@@ -33597,6 +34046,28 @@
    "last": "2026-03-24"
   },
   {
+   "a": "equinix",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named in WhiteFiber's 10-K as a colocation competitor.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Enovum data centres — colocation and build-to-suit leasing (the 'Colocation services' segment)",
+     "date": "",
+     "text": "The 10-K names Digital Realty, Equinix, NTT, CyrusOne, STACK Infrastructure, Aligned and Iron Mountain as competitors.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "esvolta",
    "b": "gridmatic",
    "evid": [
@@ -35067,6 +35538,45 @@
     }
    ],
    "last": "2025"
+  },
+  {
+   "a": "fermi-america",
+   "b": "tecfusions",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Fermi America signed a 222 MW, 15-year lease with TensorWave TEX1, LLC on 9 Aug 2026; TECfusions holds TensorWave's earlier '1 GW' commitment and its Tucson and Keystone Connect phases, so the two landlords now compete for the same tenant's growth.",
+     "context": "TensorWave's June 2026 Series B announcement claims 'over 2 gigawatts of long-term capacity secured' and names neither landlord. Fermi's lease is binding but conditional on project financing and a guarantor by 30 Sep 2026 (per the corpus's Fermi dossier); TECfusions' commitment is described in its own deck as 'anchor tenant with right-of-first-refusal'. Both are generation-first developers; Fermi has 1.5 GW of turbines landed and TECfusions 2 MW live.",
+     "source": "https://www.hpcwire.com/aiwire/2026/06/10/tensorwave-raises-350m-series-b-at-1-55b-valuation-to-expand-global-amd-powered-ai-infrastructure/",
+     "status": "active",
+     "since": "2026-08",
+     "via": "TensorWave as the shared anchor tenant"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the company's own July 2026 deck states 2 MW live and 10 MW contracted at Keystone Connect and footnotes the 3 GW as management estimates 'subject to significant risks of change'; the TensorWave figure is restated as 'anchor tenant with right-of-first-refusal'; TensorWave's Series B names other capacity and Fermi America signed it for 222 MW.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Leased AI-ready data-centre capacity — shell, colocation and turnkey",
+     "date": "",
+     "text": "In this corpus the nearest models are Fermi America (generation-first campus, also a TensorWave landlord) and the converted miners; TECfusions is smaller than any of them in energised capacity.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · On-site natural-gas generation and microgrids — 'TECfusions Power Control'",
+     "date": "",
+     "text": "Against the corpus's bridge-power vendors (VoltaGrid, Enchanted Rock, ProEnergy), TECfusions is a buyer and owner of generation rather than a seller of it; against Fermi America it is far earlier: 2 MW live and no permit trail, where Fermi has 1.5 GW of turbines landed.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08"
   },
   {
    "a": "fermi-america",
@@ -40937,6 +41447,20 @@
    },
    "evid": [],
    "last": "2025"
+  },
+  {
+   "a": "google",
+   "b": "tecfusions",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Founded in February 2023 by Simon Tusha, a former Google negotiator who served 21 months in federal prison for an IRS conspiracy tied to kickbacks; the company discloses the convictions as a risk factor.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "google",
@@ -48597,6 +49121,28 @@
    "last": "2026-08-07"
   },
   {
+   "a": "lambda",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named in WhiteFiber's 10-K as a cloud competitor ('Lambda Labs').",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+     "date": "",
+     "text": "The 10-K names CoreWeave, Crusoe Energy, Nebius and Lambda Labs as competitors and says the company targets 'small and medium-sized customers with high returns'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "lg-energy-solution",
    "b": "mitra-chem",
    "curated": {
@@ -54246,6 +54792,28 @@
    "last": "2026-08"
   },
   {
+   "a": "nebius",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Named in WhiteFiber's 10-K as a cloud competitor.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+     "date": "",
+     "text": "The 10-K names CoreWeave, Crusoe Energy, Nebius and Lambda Labs as competitors and says the company targets 'small and medium-sized customers with high returns'.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "nextera-energy-resources",
    "b": "pattern-energy",
    "curated": {
@@ -55013,6 +55581,84 @@
     }
    ],
    "last": "2026"
+  },
+  {
+   "a": "nscale",
+   "b": "whitefiber",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "WhiteFiber (through Enovum NC-1 Bidco, LLC) is Nscale's landlord at the Madison, North Carolina site: a 10-year, 40 MW IT colocation agreement worth about US$865M, signed 18 Dec 2025, 'backed by an investment-grade hyperscaler offtake'.",
+     "context": "The site this dossier records as 'partner-run' Madison with '99MW secured Duke Energy' is WhiteFiber's NC-1 campus at 805 Island Drive. The Duke Energy Carolinas capacity letter (24, 40 and 99 MW phases) and the assigned electric service agreement are held by WhiteFiber's subsidiary, not by Nscale; Duke had delivered 54 gross MW by May 2026. The two 20 MW phases were due 30 Apr and 30 May 2026; WhiteFiber disclosed on 14 May 2026 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components', and initial billing began in Q3 2026 with the full 40 MW run rate expected in August 2026.\n\nNscale's own S-1 (18 Sep 2026) does not name WhiteFiber or NC-1; the US$1.2B North Carolina GPU delayed-draw facility recorded above is the tenant-side financing for this site. Recorded from WhiteFiber's filings (Profiler F-N2, 29 Sep 2026).",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "40 MW IT · ~US$865M TCV · 10 years",
+     "via": "NC-1 colocation (Madison, North Carolina)"
+    },
+    "b": {
+     "type": "customer",
+     "note": "Nscale is WhiteFiber's anchor tenant: a 10-year, 40 MW IT colocation agreement at NC-1 worth about US$865M, 'backed by an investment-grade hyperscaler offtake', which is 93% of WhiteFiber's remaining performance obligations.",
+     "context": "Signed 18 Dec 2025 by Enovum NC-1 Bidco, LLC. Two 20 MW phases were to be ready for service on 30 Apr and 30 May 2026; the dates moved to 31 May after 'customer requested certain design modifications', then into Q3 2026 after the medium-voltage switchgear issue. Initial billing began in Q3 2026 and the full 40 MW run rate was expected in August 2026 (Q2 call). WhiteFiber gives Nscale priority notification of further capacity.\n\nNscale's S-1 (18 Sep 2026) does not name WhiteFiber, Enovum or NC-1. It records a US$1.2B delayed-draw GPU term loan for 'the applicable data center' in North Carolina, arranged by Goldman Sachs and JPMorgan, rated investment grade, and maturing no later than 27 Dec 2031. The corpus's Nscale dossier records the Madison site as 'partner-run' with '99MW secured Duke Energy'; the Duke agreements are WhiteFiber's, not Nscale's.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm",
+     "status": "active",
+     "since": "2025-12",
+     "scale": "40 MW IT · ~US$865M TCV · 10 years",
+     "via": "NC-1 colocation (Madison, NC)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: WhiteFiber is a Bit Digital-controlled, Nasdaq-listed operator of two businesses: a GPU cloud that SemiAnalysis rates 'Underperforming', and a retrofit data-centre landlord (Enovum) whose one big lease, 40 MW IT to Nscale at NC-1 in Madison, North Carolina for about US$865 million over ten years, is 93% of its US$1.0 billion of remaining performance obligations.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "It signs for its own sites: it bought NC-1 (US$45 million base) and MTL-3, is buying two more North Carolina buildings for US$60 million, holds the Duke Energy Carolinas service agreement for NC-1 through Enovum NC-1 Bidco, LLC, and disclosed on 14 May 2026 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components' that pushed Nscale's April and May 2026 ready-for-service dates into the third quarter.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess WhiteFiber as the corpus's clearest small-cap case of a neocloud that is also a data-centre owner, and the landlord through which a larger neocloud (Nscale) reaches Duke Energy.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: the Duke Energy Carolinas capacity letter (16 May 2025) and Unifi's assigned electric service agreement (4 Aug 2025) are held by WhiteFiber's subsidiary, Enovum NC-1 Bidco, LLC, not by Nscale; Duke owns the 'Extra Facilities (including overhead lines, substations, transformers, breakers, and metering equipment)' under that agreement, while WhiteFiber buys what sits behind the meter: 'power distribution equipment, generators, and cooling systems' and 'power distribution units' (10-K).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the ESA leaves substations, transformers and breakers with Duke as 'Extra Facilities'; the 10-K lists power distribution equipment, generators and cooling as WhiteFiber's procurements; the 14 May 2026 disclosure and the Q2 call attribute the Nscale slip to 'certain medium-voltage switchgear components' and to 'delivering and commissioning issues involving certain switchgear equipment'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-14",
+     "text": "Q1 2026 results disclose 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components' at NC-1; Duke has delivered the initial 54 gross MW; Nscale delivery still expected in Q2 — Medium-voltage switchgear, not the utility, is the gating item on the company's largest contract.",
+     "src": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-first-quarter-2026-results-302771681.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-26",
+     "text": "FY2025: revenue US$79.2M, net loss US$24.7M, adjusted EBITDA US$17.3M, no funded debt at year-end; Nscale RFS moved to 31 May 2026 after 'customer requested certain design modifications'; MTL-2 under strategic review — The first annual report shows a loss-making cloud carried by the colocation backlog.",
+     "src": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-fourth-quarter-and-full-year-2025-results-302725537.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-14"
   },
   {
    "a": "nscale",
@@ -55925,6 +56571,44 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "nvidia",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "WhiteFiber is 'an authorized NVIDIA Preferred Partner through the NPN' and sells NVIDIA GPU capacity; its first GB200 NVL72 systems shipped in April 2025.",
+     "context": "The 10-K describes the company as 'among the first service providers to offer H200, B200, and GB200 servers'. NVIDIA has not named WhiteFiber in its own releases on the record; SemiAnalysis noted WhiteFiber 'integrating a custom interconnect to replace NVIDIA' networking.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active",
+     "via": "NVIDIA Partner Network (Preferred Partner); GB200 NVL72, B200, H200, B300, VR200"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+     "date": "",
+     "text": "Bare-metal, containerised and virtualised NVIDIA GPU capacity sold as reserved instances, managed private cloud and bespoke large deployments, on hardware WhiteFiber owns or, under a 'capital-light managed-services offering', that the customer funds and WhiteFiber operates.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+     "date": "",
+     "text": "The 10-K calls the company 'among the first service providers to offer H200, B200, and GB200 servers' and lists its channels: an NVIDIA Preferred Partner, a Supermicro authorised partner, a Dell CSP (through Advania), an HPE partnership and a QCT relationship.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-14",
+     "text": "September 2026 investor presentation: about 65 gross MW online in Q3 2026, 175 MW targeted for end-2027, '>$550M recent cloud TCV', '7,500+ NVIDIA GPUs contracted' — Capacity guidance moved from the 10-K's 76 MW by Q4 2026 to about 70 MW, with the growth pushed into 2027.",
+     "src": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026099424/ea030525701ex99-1.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-14"
   },
   {
    "a": "nvidia",
@@ -58562,6 +59246,20 @@
   },
   {
    "a": "proenergy",
+   "b": "tecfusions",
+   "evid": [
+    {
+     "where": "Capabilities · On-site natural-gas generation and microgrids — 'TECfusions Power Control'",
+     "date": "",
+     "text": "Against the corpus's bridge-power vendors (VoltaGrid, Enchanted Rock, ProEnergy), TECfusions is a buyer and owner of generation rather than a seller of it; against Fermi America it is far earlier: 2 MW live and no permit trail, where Fermi has 1.5 GW of turbines landed.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "proenergy",
    "b": "voltagrid",
    "curated": {
     "a": {
@@ -60202,6 +60900,20 @@
    "last": ""
   },
   {
+   "a": "stack-infrastructure",
+   "b": "whitefiber",
+   "evid": [
+    {
+     "where": "Capabilities · Enovum data centres — colocation and build-to-suit leasing (the 'Colocation services' segment)",
+     "date": "",
+     "text": "The 10-K names Digital Realty, Equinix, NTT, CyrusOne, STACK Infrastructure, Aligned and Iron Mountain as competitors.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "stem",
    "b": "sungrow",
    "evid": [
@@ -60628,6 +61340,29 @@
    "last": ""
   },
   {
+   "a": "supermicro",
+   "b": "whitefiber",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "The 10-K lists WhiteFiber as 'an authorized partner with SuperMicro', one of its server channels alongside Dell (through Advania), HPE and QCT.",
+     "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+     "status": "active",
+     "via": "authorised partner (server supply)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+     "date": "",
+     "text": "The 10-K calls the company 'among the first service providers to offer H200, B200, and GB200 servers' and lists its channels: an NVIDIA Preferred Partner, a Supermicro authorised partner, a Dell CSP (through Advania), an HPE partnership and a QCT relationship.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "switch",
    "b": "tract",
    "curated": {
@@ -60842,6 +61577,34 @@
     }
    ],
    "last": "2026-03-20"
+  },
+  {
+   "a": "tecfusions",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Capabilities · On-site natural-gas generation and microgrids — 'TECfusions Power Control'",
+     "date": "",
+     "text": "Against the corpus's bridge-power vendors (VoltaGrid, Enchanted Rock, ProEnergy), TECfusions is a buyer and owner of generation rather than a seller of it; against Fermi America it is far earlier: 2 MW live and no permit trail, where Fermi has 1.5 GW of turbines landed.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "tecfusions",
+   "b": "whitefiber",
+   "evid": [
+    {
+     "where": "Capabilities · Adaptive-reuse site development",
+     "date": "",
+     "text": "The same retrofit thesis as WhiteFiber's Enovum in this corpus, at earlier stage and with the company itself as the generator.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "terra-gen",
@@ -61197,6 +61960,20 @@
     }
    },
    "evid": [],
+   "last": ""
+  },
+  {
+   "a": "tract",
+   "b": "whitefiber",
+   "evid": [
+    {
+     "where": "Capabilities · NC-1 development and site power — the owner's scope at Madison, North Carolina",
+     "date": "",
+     "text": "Compared with the landlords in this corpus (Tract sells powered ground; PowerHouse and Prime build to suit), WhiteFiber is a retrofitter that converts an existing industrial connection: NC-1's first 54 gross MW came through Unifi's assigned service agreement rather than a new large-load interconnection.",
+     "src": "",
+     "from": "b"
+    }
+   ],
    "last": ""
   },
   {

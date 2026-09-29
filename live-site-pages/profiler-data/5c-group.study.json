@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 2,
+  "slug": "5c-group",
+  "title": "5C Group — Technology Study Guide",
+  "lastUpdated": "2026-09-29",
+  "sections": [
+    {
+      "id": "ai-landlord",
+      "title": "The AI landlord and its two delivery models",
+      "kind": "prose",
+      "read": "3 min",
+      "ps": [
+        "A {{neocloud}} owns GPUs and rents time on them. An AI landlord owns the building, the {{substation}}, the cooling plant and the standby power, and rents the hall for years under a {{colocation}} lease while the tenant brings the GPUs. At this company's Ohio site the tenant announced more than US$900 million of its own GPU investment; the landlord spends up to US$1.3 billion on the building and power. Same campus, two balance sheets.",
+        "The line between the two can move. 'Turnkey' is 'core/shell construction, MEP installation, operations, and data hall fit-out': a finished hall the tenant racks. 'Turnkey+' adds 'cluster deployment', GPU nodes, InfiniBand or Ethernet networking and storage, so the landlord installs and operates the tenant's compute. Where the line sits decides who signs the equipment orders.",
+        "{{Adaptive reuse}}: the campuses are vacant corporate buildings with big feeds, a decommissioned data centre in Ohio and a former retailer's headquarters in Memphis (about 950,000 square feet on 58 acres, bought for US$25 million). Existing structure, existing utility relationship, a shorter path to the first hall than a greenfield."
+      ]
+    },
+    {
+      "id": "two-ways-to-connect",
+      "title": "Utility-owned or customer-owned substation",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "Two ways a campus connects to the grid. The choice decides who buys the largest items in the corpus's equipment list.",
+      "cols": [
+        "",
+        "Utility-owned substation",
+        "{{Customer-owned substation}}"
+      ],
+      "rows": [
+        [
+          "Who builds the substation",
+          "The utility, at its cost, recovered through a monthly facilities charge",
+          "The customer, from a short tap the utility builds off its line"
+        ],
+        [
+          "Who buys the high-voltage breakers and step-down {{transformer}}s",
+          "The utility",
+          "The customer"
+        ],
+        [
+          "Where the customer's scope starts",
+          "At the {{medium voltage}} {{switchgear}} after the meter",
+          "At the transmission tap: substation, transformers, switchgear and everything downstream"
+        ],
+        [
+          "Why choose it",
+          "Less capital and no lead-time risk for the customer",
+          "Speed and control: the utility's queue for building substations is long, and a customer can size its own for later phases"
+        ],
+        [
+          "The cost",
+          "A monthly charge and the utility's schedule",
+          "Two- to four-year {{lead time}}s on large transformers, carried by the customer"
+        ],
+        [
+          "This corpus's examples",
+          "WhiteFiber's North Carolina campus: the utility owns the 'Extra Facilities (including overhead lines, substations, transformers, breakers, and metering equipment)'",
+          "This company's Ohio campus: 'approximately 115-foot-long (0.02 mile) 138-kV transmission line tap … to the new 5C Data Center USA, Inc. substation. The customer will own the Benjamin Substation.'"
+        ]
+      ]
+    },
+    {
+      "id": "capacity-charge",
+      "title": "The upfront capacity charge and the two approvals",
+      "kind": "prose",
+      "read": "3 min",
+      "ps": [
+        "A municipal utility can charge for a rung of capacity before it exists. Memphis's utility charges data centres an {{upfront capacity charge}} of US$1.52 million per MW: a one-time fee for reserving distribution and transmission capacity, separate from the monthly demand charge. Fifty megawatts costs US$76 million before a kilowatt-hour is used.",
+        "Two approvals stand behind it. The municipal utility distributes; the federal power authority behind it generates and transmits. This company's next 50 MW at Memphis 'requires Tennessee Valley Authority approvals' and 'won't advance' before 2027. A landlord can own the building and still not control the date of its power.",
+        "The same pattern at the Ohio site: the transmission owner needed a state siting case for a 115-foot tap; the campus's first 25 MW waited on it and on the customer's own substation."
+      ]
+    },
+    {
+      "id": "capacity-ladder",
+      "title": "The same building, five megawatt numbers",
+      "kind": "bars",
+      "read": "2 min",
+      "unit": "MW",
+      "intro": "Figures for this company's Ohio campus, drawn to scale. None is wrong; each measures a different rung of the ladder.",
+      "items": [
+        {
+          "label": "Announced in the 2024 acquisition release",
+          "sub": "'200MW secured'",
+          "v": 200
+        },
+        {
+          "label": "Planned per the city's FAQ",
+          "sub": "'up to 150 megawatts'; phases 'only after infrastructure and utility capacity are confirmed'",
+          "v": 150
+        },
+        {
+          "label": "In the company's 2026 column",
+          "sub": "'Fully Committed'",
+          "v": 75
+        },
+        {
+          "label": "Announced by the anchor tenant",
+          "sub": "its GPU cluster",
+          "v": 50
+        },
+        {
+          "label": "Due by the end of September 2026",
+          "sub": "local press: the first energised phase",
+          "v": 25
+        }
+      ],
+      "note": "Equipment is ordered against the approved rung, not the announced one. The roadmap for the whole company fell from 'over 2 GW' to 'over 1.5 gigawatts' in a year; about 110 MW is operational."
+    },
+    {
+      "id": "standby-fleet",
+      "title": "Nineteen generators and two kinds of duty",
+      "kind": "prose",
+      "read": "3 min",
+      "ps": [
+        "Every large hall carries a fleet of diesel generators that almost never run, sized to the whole load plus redundancy. The city's FAQ for this company's Ohio site counts 3 existing units and 16 more in the first phase; the local press says 19. At roughly 2 to 3 MW each, that is a 75 MW hall's worth of {{standby rating}} machines.",
+        "A standby-rated engine runs a few hundred hours a year, mostly in tests, and its {{air permit}} says so: hour limits, ultra-low-sulfur fuel, monthly or fortnightly testing. A {{continuous rating}} engine or a turbine that runs for days is a power plant and needs a plant's permit. The same iron, two very different permits.",
+        "This company's Memphis table codes the site 'GRID / BTM' ({{behind-the-meter}}), drone footage showed 'what appeared to be turbines' under construction, and no air permit naming the company or the address was found, in a county whose health department is litigating another operator's turbines. On the public record the generation is unpermitted."
+      ]
+    },
+    {
+      "id": "moratoria",
+      "title": "What a moratorium is written about",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**The pause.** The city passed a six-month {{moratorium}} on data centres above 25 MW (this company exempt); the county limited them to a conditional industrial use with four public meetings; residents petitioned to cap them at 7.5 MW.",
+        "**The concerns.** Electric rates, water and generator emissions, in that order in the local record. The servers are not the object; the diesel fleet and the water permit are.",
+        "**The consequence.** The next 350 MW at the site will be permitted in that climate. A battery that replaces part of a diesel fleet solves a permitting problem as much as an energy one, which is the pitch a storage seller makes to a landlord facing a moratorium."
+      ]
+    },
+    {
+      "id": "liquid-cooling-water",
+      "title": "Direct-to-chip cooling and the water permit",
+      "kind": "table",
+      "read": "3 min",
+      "intro": "Liquid cooling moves heat with far less air and far less water than the old way, and the water permit is written for the worst day.",
+      "cols": [
+        "Element",
+        "What it does",
+        "This company's record"
+      ],
+      "rows": [
+        [
+          "{{Cold plate}}s and coolant distribution unit",
+          "Carry heat off the GPUs in a rack loop and swap it into the building loop; a 130 kW rack cannot be cooled by air at a sane fan speed",
+          "'direct-to-chip liquid cooling'; Phoenix designed to 132 kW per cabinet"
+        ],
+        [
+          "{{Closed loop}}",
+          "The building loop is sealed and re-used; it consumes no water",
+          "'closed loop' with an on-site reservoir planned"
+        ],
+        [
+          "{{Dry cooler}}",
+          "A radiator with fans that rejects heat to outside air whenever the air is cooler than the coolant",
+          "Most of the year"
+        ],
+        [
+          "Adiabatic trim",
+          "On hot days water is sprayed to cool the air before the dry cooler; the only water the site consumes",
+          "'adiabatic trim cooling'; water drawn only above 80°F"
+        ],
+        [
+          "Permit against use",
+          "The permit is sized for the worst day; use is what the meter shows",
+          "300,000 gallons a day permitted; 'around 10% of that' expected"
+        ],
+        [
+          "{{PUE}}",
+          "Total facility power ÷ IT power; warm-water liquid cooling pushes it toward 1.1–1.3",
+          "Not published; the sibling retrofit landlord in this corpus targets 1.3"
+        ]
+      ]
+    },
+    {
+      "id": "who-signs",
+      "title": "Who signs the order, and for what",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**The customer of record.** The landlord's site companies buy the customer-owned substation and its transformers in Ohio, the medium-voltage switchgear, 19 standby generators, {{UPS}}, the cooling loops and the 'prefabricated power skids and cooling modules' its 2026 blogs describe, for each phase it builds. The tenants buy GPUs and networking.",
+        "**Scale today.** About 110 MW operational; approved rungs of 25 MW in Ohio and 29 MW in Memphis against announced rungs of 350 and 64 MW.",
+        "**What is unnamed.** Every vendor and every EPC. No switchgear, transformer, UPS, generator or cooling supplier appears in any read source."
+      ]
+    },
+    {
+      "id": "capital-stack",
+      "title": "The capital stack of a private landlord",
+      "kind": "table",
+      "read": "3 min",
+      "intro": "A private company with no published revenue is financed campus by campus. Each layer looks to a different thing for repayment.",
+      "cols": [
+        "Layer",
+        "What it is",
+        "This company's record"
+      ],
+      "rows": [
+        [
+          "Structured equity",
+          "Preferred or convertible instruments that behave like debt in bad times and equity in good ones",
+          "An infrastructure investor led the equity in a US$835M raise 'through its Infrastructure Structured Solutions strategy'; the borrower was the Ohio campus holding company"
+        ],
+        [
+          "Private credit",
+          "Loans from funds rather than banks, secured on the campus's leases and the tenant's credit",
+          "A bank led the 2025 debt; the same infrastructure investor led US$605M of debt in 2026"
+        ],
+        [
+          "Public money",
+          "Property-tax abatements and job credits that are part of the return",
+          "A 15-year, 100% {{Enterprise Zone}} abatement worth about US$95M in Ohio; a state job credit worth about US$32M to the tenant's parent; a Memphis {{PILOT}} applied for and abandoned"
+        ],
+        [
+          "The next round",
+          "What it costs to move from operational to roadmap",
+          "'an incremental $5 billion or $6 billion in a combination of debt and equity', and an IPO 'absolutely' considered"
+        ],
+        [
+          "The arithmetic",
+          "At the corpus's US$8–13M per MW, US$1.4B buys 110–175 MW",
+          "About what is operational; the next round is the roadmap's price"
+        ]
+      ]
+    },
+    {
+      "id": "where-new-power-enters",
+      "title": "Where an SST, 800 VDC or a battery would enter",
+      "kind": "prose",
+      "read": "2 min",
+      "ps": [
+        "Nothing on the company's or its parent's channels mentions {{solid-state transformer}}s, {{800 VDC}} or energy storage; the AMD reference-design work is at rack level. This is an inference from absence.",
+        "The customer-owned substation makes the landlord a buyer of conventional step-down transformers and switchgear. A {{solid-state transformer}} would replace the step-down stage inside that scope, so the opening exists in principle at the next campus. A {{BESS}} would enter where the diesel fleet and the moratorium meet."
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**Slippage.** 'Operational by early 2026' became 25 MW by September; Memphis 'this summer' (2025) became 20 MW in 2026; the roadmap shrank by a quarter unexplained.",
+        "**Unpermitted generation.** Turbine-like construction on a site coded behind-the-meter, with no located air permit, in a county already in court over another operator's turbines.",
+        "**A hostile permitting climate.** A moratorium, a county conditional-use rule and a residents' petition at the flagship, and a rejected-in-effect tax freeze at the second site.",
+        "**Refinancing dependence.** US$1.4 billion raised against a US$5–6 billion next round; the largest shareholder is also the hardware supplier."
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What does an AI landlord sell that a neocloud does not?",
+          "a": "A hall with power, cooling and standby generation under a lease of years; the tenant brings the GPUs. A neocloud owns the GPUs and rents time on them."
+        },
+        {
+          "q": "What moves between 'Turnkey' and 'Turnkey+'?",
+          "a": "The line between landlord and tenant: Turnkey+ adds cluster deployment, so the landlord installs and operates the tenant's compute."
+        },
+        {
+          "q": "Who buys the step-down transformers when 'the customer will own the substation'?",
+          "a": "The customer, the landlord, along with the high-voltage breakers and the medium-voltage switchgear; the utility supplies the tap."
+        },
+        {
+          "q": "What is an upfront capacity charge?",
+          "a": "A one-time fee per megawatt for reserving distribution and transmission capacity, paid before any energy is used; separate from the monthly demand charge."
+        },
+        {
+          "q": "Why can a landlord own its building and still not control the date of its power?",
+          "a": "Because the megawatts arrive in rungs, each gated by a utility or transmission approval, such as a federal power authority's sign-off on the next 50 MW."
+        },
+        {
+          "q": "What is the difference between a standby-rated and a continuous-rated engine?",
+          "a": "A standby engine runs a few hundred hours a year under an emergency-generator permit; a continuous engine or turbine runs all year and needs a power plant's permit."
+        },
+        {
+          "q": "What are moratoria on data centres usually written about?",
+          "a": "Electric rates, water and generator emissions: the diesel fleet and the water permit, not the servers."
+        },
+        {
+          "q": "Why is a water permit far larger than water use at a liquid-cooled site?",
+          "a": "The permit is sized for the hottest day, when adiabatic trim sprays water; the closed loop and dry coolers use none for most of the year."
+        },
+        {
+          "q": "What is structured equity?",
+          "a": "Preferred or convertible instruments that behave like debt in bad times and like equity in good ones; a way for an infrastructure investor to fund a campus without owning it outright."
+        },
+        {
+          "q": "Where would a solid-state transformer sit at a campus with a customer-owned substation?",
+          "a": "In the step-down stage inside the customer's own scope, replacing conventional transformers; that is why the opening exists in principle at the next campus."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A tenant invests US$900 million in a landlord's building. What did the tenant buy?",
+          "c": [
+            "The building and its substation",
+            "GPUs and networking",
+            "The standby generators",
+            "The water permit"
+          ],
+          "a": 1,
+          "why": "The landlord owns the hall, the {{substation}} and the generators, and their equipment orders; the tenant's money is compute."
+        },
+        {
+          "q": "A utility filing says 'the customer will own the substation'. Who buys the medium-voltage switchgear?",
+          "c": [
+            "The utility",
+            "The customer",
+            "The tenant",
+            "The state siting board"
+          ],
+          "a": 1,
+          "why": "With a {{customer-owned substation}} the customer's scope starts at the transmission tap and runs through the {{switchgear}} and everything downstream."
+        },
+        {
+          "q": "A utility approves 9 MW and the company's table shows 64 MW next year. What should an equipment vendor size on?",
+          "c": [
+            "64 MW",
+            "9 MW plus the next approval",
+            "The 2 GW roadmap",
+            "The tenant's GPU count"
+          ],
+          "a": 1,
+          "why": "Equipment is ordered against the approved rung; the 64 MW waits on a federal authority."
+        },
+        {
+          "q": "A site has 19 diesel generators under an emergency-use permit. What changes if they run through a summer peak?",
+          "c": [
+            "Nothing",
+            "The permit class: sustained running makes them a power plant",
+            "Only the fuel bill",
+            "The PUE"
+          ],
+          "a": 1,
+          "why": "A {{standby rating}} permit limits hours; continuous running needs a plant's {{air permit}}."
+        },
+        {
+          "q": "A permit allows 300,000 gallons a day and the landlord expects to use 30,000. Which figure appears in the moratorium debate?",
+          "c": [
+            "The 30,000",
+            "The 300,000",
+            "Neither",
+            "The PUE"
+          ],
+          "a": 1,
+          "why": "The permit is the number opponents quote; the use is what the meter shows. Both are true."
+        },
+        {
+          "q": "A landlord has raised US$1.4 billion and states a 1.5 GW roadmap. At US$8–13 million per MW, how much does the money build?",
+          "c": [
+            "About 1.5 GW",
+            "About 110–175 MW",
+            "About 500 MW",
+            "Nothing until the IPO"
+          ],
+          "a": 1,
+          "why": "Roughly what is operational; the stated next round of US$5–6 billion is the roadmap's price."
+        },
+        {
+          "q": "Drone footage shows turbines being built at a site coded 'behind-the-meter', and no air permit names the company. What can you conclude?",
+          "c": [
+            "The turbines are permitted",
+            "The generation is unpermitted on the public record until a permit names it",
+            "The site is grid-only",
+            "The tenant owns the turbines"
+          ],
+          "a": 1,
+          "why": "A photograph and a label are not a permit; a construction permit or a plan approval would name the machines."
+        }
+      ]
+    }
+  ]
+}

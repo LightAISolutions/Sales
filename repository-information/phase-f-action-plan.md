@@ -99,12 +99,13 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | F-N1 — Firmus, HUMAIN, G42 | Opus 5.5 xhigh | v07.64r, 9/26 |
 | F-I1 — BlackRock, KKR | Opus 5.5 xhigh | v07.66r, 9/26 |
 | Cooling recheck, then CoolIT v3 | Opus 5.5 xhigh | v07.69r–v07.70r, 9/29 |
+| F-N2 — WhiteFiber, 5C Group, TECfusions | Fable 5.1 High | v07.73r, 9/29 |
 
 **Week 1 — now to Sat 10/3, 7:00 AM ET.** About $1,150 of the Fable half is left: the week's only Fable session so far (another project) used about $41. The seven Fable rows below come to about $800–$1,000.
 
 | # | When | Session | Model · effort | Why here |
 |---|---|---|---|---|
-| 1 | Tue 9/29 evening or Wed 9/30 | **F-N2** — WhiteFiber, 5C (Hypertec), TECfusions | Fable 5.1 · high | Was November. Lands before wave A, so the neoclouds and AIDC-developer landscapes take its three members in the same pass. Establish 5C's legal entity (5C Group or Hypertec) at step 1a |
+| 1 | ~~Tue 9/29 evening~~ **Landed 9/29 (v07.73r)** | **F-N2** — WhiteFiber, 5C (Hypertec), TECfusions | Fable 5.1 · high | Done. 5C's legal entity is 5C AI Group Inc. (Hypertec the largest shareholder); Keystone Connect is the former Alcoa campus in Upper Burrell, PA; TECfusions' SPAC is signed, not closed. Wave A (row 9) now also absorbs `whitefiber` (neoclouds and AIDC challengers), `5c-group` (AIDC challenger, neoclouds adjacent) and `tecfusions` (AIDC challenger); wave D (row 17) takes `bridge-and-on-site-generation`, where TECfusions took its adjacent seat |
 | 2 | Wed 9/30, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | Opus 5.5 · medium | The standing reminder. If the run committed, `git fetch origin main` and rebase before the next session |
 | 3 | Wed 9/30 | **F-U3** — PPL, Pinnacle West, NiSource | Fable 5.1 · high | Was mid-October; no date gate. Same model as F-U1/F-U2. Pinnacle West's XHLF decision and RFP awards fall in December — dossier indicators |
 | 4 | Wed 9/30 – Thu 10/1 | **F-U4** — Florida Power & Light, Salt River Project, TVA | Fable 5.1 · high | Was mid-October. Test FPL against `nextera-energy-resources` under the one-slug rule; SRP and TVA test the category for public and federal power. TVA's large-load charge takes effect 10/1 |

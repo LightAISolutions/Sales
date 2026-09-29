@@ -1,0 +1,1231 @@
+{
+  "schemaVersion": 7,
+  "slug": "whitefiber",
+  "name": "WhiteFiber, Inc. (Cayman Islands exempted company; formerly White Fiber, Inc.; incorporated as Celer, Inc.)",
+  "shortName": "WhiteFiber",
+  "categories": [
+    "neocloud",
+    "developer"
+  ],
+  "website": "https://www.whitefiber.com",
+  "headquarters": "New York, NY, USA (31 Hudson Yards, Floor 11); Canadian data-centre subsidiary Enovum in Montreal, Quebec",
+  "founded": 2024,
+  "employees": "83 full-time (31 Dec 2025, 10-K)",
+  "ownership": {
+    "type": "public",
+    "ticker": "NASDAQ: WYFI",
+    "notes": "Listed on the Nasdaq Capital Market on 7 Aug 2025 (IPO at US$17.00; US$183.3M gross with the over-allotment). Bit Digital, Inc. (Nasdaq: BTBT) contributed the business on 6 Aug 2025 for 27,043,749 shares and still holds 27,043,750: 74.3% at the IPO, 70.5% at 31 Dec 2025, 69.6% on 12 Aug 2026 and approximately 59.9% after WhiteFiber issued about 6.3 million shares in the 21 Aug 2026 convertible-note exchange (Schedule 13D/A, 25 Aug 2026, on about 45.1 million shares outstanding). WhiteFiber is a 'controlled company' under Nasdaq rules and says it does not currently rely on the exemptions. Bit Digital says it will not sell WhiteFiber shares in 2026 and signed a 60-day lock-up from 18 Aug 2026. No spin-off distribution has been announced. Sam Tabar is chief executive of both companies."
+  },
+  "summary": "BOTTOM LINE UP FRONT: WhiteFiber is a Bit Digital-controlled, Nasdaq-listed operator of two businesses: a GPU cloud that SemiAnalysis rates 'Underperforming', and a retrofit data-centre landlord (Enovum) whose one big lease, 40 MW IT to Nscale at NC-1 in Madison, North Carolina for about US$865 million over ten years, is 93% of its US$1.0 billion of remaining performance obligations. It signs for its own sites: it bought NC-1 (US$45 million base) and MTL-3, is buying two more North Carolina buildings for US$60 million, holds the Duke Energy Carolinas service agreement for NC-1 through Enovum NC-1 Bidco, LLC, and disclosed on 14 May 2026 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components' that pushed Nscale's April and May 2026 ready-for-service dates into the third quarter. BACKGROUND: Bit Digital formed the AI business in October 2023, bought Enovum Data Centers (Montreal) in October 2024, launched the WhiteFiber brand in February 2025 and floated it in August 2025. Sites: MTL-1 (4 MW gross, leased), MTL-2 (5 MW, owned, restarted in Q3 2026), MTL-3 (7 MW gross, Cerebras as sole tenant, bought in May 2026), NC-1 (54 gross MW delivered by Duke, a 99 MW target by May 2029), and NC-2/NC-3 in Yadkin County (60 to about 200 MW, closing Q4 2026). Cloud capacity is leased in Iceland, Atlanta, Paris and, from Q4 2026, Sydney. FY2025 revenue was US$79.2 million (cloud US$68.8 million) with a US$24.7 million net loss; H1 2026 revenue was US$50.8 million. Financed by two convertible issues (US$230 million due 2031, US$310 million due 2032), a related-party US$100 million delayed-draw loan from Bit Digital for NC-1, RBC and Landsbankinn facilities, and a proposed NC-1 project financing in exclusivity as of August 2026. Per company filings unless stated; the 10-K, 10-Qs, prospectus and 8-Ks were read on EDGAR, which was reachable from this session.",
+  "ecosystemRole": "We assess WhiteFiber as the corpus's clearest small-cap case of a neocloud that is also a data-centre owner, and the landlord through which a larger neocloud (Nscale) reaches Duke Energy. Basis: the Duke Energy Carolinas capacity letter (16 May 2025) and Unifi's assigned electric service agreement (4 Aug 2025) are held by WhiteFiber's subsidiary, Enovum NC-1 Bidco, LLC, not by Nscale; Duke owns the 'Extra Facilities (including overhead lines, substations, transformers, breakers, and metering equipment)' under that agreement, while WhiteFiber buys what sits behind the meter: 'power distribution equipment, generators, and cooling systems' and 'power distribution units' (10-K). Its retrofit model targets US$8 to 10 million per gross MW and about six months per build. For a power-equipment seller the buying authority is real but modest in size: one 40 MW IT phase built, 54 gross MW delivered, an unnamed general contractor and unnamed switchgear suppliers, natural-gas fuel cells intended behind the meter 'by partnering with third-party energy providers', and no SST, 800 VDC or battery project on the record. The named opening is the MV switchgear category, where a supply issue delayed the company's largest contract.",
+  "productsAndServices": [
+    {
+      "name": "WhiteFiber Cloud — GPU cloud services (the 'Cloud services' segment)",
+      "category": "GPU cloud / neocloud",
+      "description": "Bare-metal, containerised and virtualised NVIDIA GPU capacity sold as reserved instances, managed private cloud and bespoke large deployments, on hardware WhiteFiber owns or, under a 'capital-light managed-services offering', that the customer funds and WhiteFiber operates. The catalogue lists HGX GB300, HGX B300, HGX H100 and VR200, with a '3.2 Tb/s Infiniband and RoCE GPU Fabric', 'Up to 800 Gb/s Ethernet' and a claimed 'AVERAGE 99.95% Uptime'. The 10-K calls the company 'among the first service providers to offer H200, B200, and GB200 servers' and lists its channels: an NVIDIA Preferred Partner, a Supermicro authorised partner, a Dell CSP (through Advania), an HPE partnership and a QCT relationship. The first GB200 NVL72 shipment arrived from Quanta in April 2025. Capacity sits in leased space: Blönduós, Iceland (6 MW gross, 5.5 MW IT contracted, hydro), Atlanta (two leases from February 2026), third-party space in the Paris region and, from Q4 2026, a Sydney lease.",
+      "highlights": [
+        "Cloud revenue: US$45.7M (FY2024), US$68.8M (FY2025), US$16.8M (Q1 2026), US$23.8M (Q2 2026); the initial customer that was 70.7% of FY2025 revenue was terminated in Q2 2026 under an agreement preserving US$12.5M of receivables, and Bit Digital's 10-Q says WhiteFiber's largest customer was about 63% of H1 2026 revenue",
+        "Contracts disclosed since May 2026 (company figures, none confirmed by the customer): Hyperbolic/Modal Labs (2 years, ~US$17M, H200); an investment-grade technology customer in the Paris region (5 years, >US$160M TCV, RFS targeted 30 Sep 2026); Prime Intellect (576 VR200 in Canada, 3 years, ~US$108M, service Q2 2027); BaseTen (1,392 B300, 36 months, ~US$165.2M, revenue from Nov 2026); an existing Iceland customer (576 B300, 5 years, ~US$87.5M, Dec 2026); Krambu (100 MW of exclusive liquid-cooled capacity from 2027, Q2 2026 call). The September 2026 deck claims '>$550M recent cloud TCV', '7,500+ NVIDIA GPUs contracted' and '20+ customers'",
+        "Independent rating: SemiAnalysis ClusterMAX 2.0 (6 Nov 2025) placed WhiteFiber in 'Not Recommended – Underperforming' for a non-working Slurm/Kubernetes layer and no SOC 2 or ISO 27001 attestation; ClusterMAX 3.0 (23 Sep 2026) kept it there without re-testing: 'We need to verify that these operational problems are fixed'",
+        "Boosteroid (cloud gaming) holds a 2024 master agreement for 489 servers (~US$7.9M through Nov 2029) with an option the company values at up to ~US$700M over five years; DNA Fund's 1,192-GPU agreement was terminated in Nov 2025 with US$7.3M receivable"
+      ],
+      "positioning": "The 10-K names CoreWeave, Crusoe Energy, Nebius and Lambda Labs as competitors and says the company targets 'small and medium-sized customers with high returns'. Against those peers it is small (US$68.8M of FY2025 cloud revenue), unrated below Bronze by SemiAnalysis, and repositioning 'toward longer-duration enterprise deployments, managed infrastructure services, and next-generation GPU capacity' (Q1 2026 release).",
+      "soldThrough": "Direct reserved and managed contracts (12-month minimum for a 256-GPU reserved cluster); on-demand through the Shadeform marketplace (B200 from May 2025); customer-funded managed services",
+      "targetSegments": [
+        "AI labs and inference platforms (BaseTen, Prime Intellect, Hyperbolic)",
+        "enterprises wanting managed private AI (HIPAA, SOC 2, ISO 27001 alignment, air-gapped options)",
+        "cloud gaming (Boosteroid)",
+        "investment-grade technology customers (the Paris contract)"
+      ],
+      "roadmap": "Paris RFS 30 Sep 2026; BaseTen revenue from Nov 2026; Iceland B300 Dec 2026; Sydney capacity from Q4 2026; Prime Intellect Vera Rubin Q2 2027; Krambu 100 MW from 2027 (all company targets)"
+    },
+    {
+      "name": "Enovum data centres — colocation and build-to-suit leasing (the 'Colocation services' segment)",
+      "category": "AIDC developer / landlord",
+      "description": "Enovum Data Centers Corp., bought by Bit Digital in October 2024 for CAD 62.8M, develops Tier 3-design halls, mostly by retrofitting industrial buildings, and leases them under build-to-suit and modified-gross colocation agreements with pass-throughs. The 10-K says the 'average build time for retrofits is intended to be approximately six months' and the 'average build-out cost per MW (gross) is approximately $8 to $10 million, as compared to an industry average of approximately $13 million'. Sites: MTL-1 (3195 Chemin de Bedford, Montreal, 4 MW gross, leased to 2036, 14 to 15 customers, 3 MW IT, fully occupied); MTL-2 (7300 Trans-Canada Hwy, Pointe-Claire, 5 MW gross, owned since Dec 2024, development paused and then restarted in Q3 2026 for delivery 'near the end of the fiscal year'); MTL-3 (Saint-Jérôme, 7 MW gross / 5 MW IT, Cerebras as sole tenant on a five-year term billing CAD 1.4M a month from 1 Nov 2025, purchase option of CAD 24.2M closed May 2026); NC-1 (Madison, NC, see the specs table); and NC-2/NC-3 in Yadkin County, NC (US$60M agreement of 16 Aug 2026, closing Q4 2026).",
+      "highlights": [
+        "Colocation revenue: US$1.4M (FY2024), US$8.9M (FY2025), US$4.8M (Q1 2026), US$4.7M (Q2 2026); remaining performance obligations of US$932.9M at 30 Jun 2026, almost all the Nscale contract",
+        "Nscale: 10-year, 40 MW IT colocation agreement at NC-1 signed 18 Dec 2025, 'approximately $865 million' of contracted revenue including escalators and installation, excluding electricity; two 20 MW phases with ready-for-service targets of 30 Apr and 30 May 2026; 'backed by an investment-grade hyperscaler offtake'; initial billing began in Q3 2026 with full run-rate billing on 40 MW expected in August 2026",
+        "Capacity roadmap (Sep 2026 deck, gross MW online): 11 MW at end-2025, about 65 MW in Q3 2026, about 70 MW at end-2026 and 175 MW at end-2027, against a 10-K target of 76 MW by Q4 2026; pipeline described as about 1.3 to 1.5 GW",
+        "NC-2/NC-3: two former Unifi buildings in Yadkinville (about 62 and 63 acres), 'a combined minimum of 60 MW of initial gross utility capacity' with 'potential to support up to approximately 200 MW', RFS Q3 2027, non-binding LOIs 'with investment-grade credit support'; Yadkin County adopted a two-year data-centre moratorium on 18 Aug 2026 that covers unincorporated areas only"
+      ],
+      "positioning": "The 10-K names Digital Realty, Equinix, NTT, CyrusOne, STACK Infrastructure, Aligned and Iron Mountain as competitors. WhiteFiber's differentiation is the retrofit: former factories (a Unifi yarn plant at NC-1, a mattress factory at MTL-3) converted in months at a stated US$8 to 10 million per gross MW, sold to one or two tenants per site rather than to the multi-tenant market.",
+      "soldThrough": "Long-term build-to-suit and colocation leases (10 years for Nscale, 5 years for Cerebras) with electricity passed through; MTL-1 retail colocation on about 2.5-year average terms",
+      "targetSegments": [
+        "neoclouds needing hyperscaler-specification halls (Nscale)",
+        "AI chip and inference companies (Cerebras)",
+        "enterprise and retail colocation in Montreal (MTL-1)"
+      ],
+      "roadmap": "MTL-2 delivery near end-2026; NC-1 toward 99 gross MW by May 2029 and 'approximately 300 gross megawatts over time'; NC-2/NC-3 RFS Q3 2027; 'more than 100 MW of additional capacity online' in 2027 (21 Aug 2026 release)"
+    },
+    {
+      "name": "NC-1 development and site power — the owner's scope at Madison, North Carolina",
+      "category": "Site development / power procurement",
+      "description": "WhiteFiber, through Enovum NC-1 Bidco, LLC, owns the former Unifi Manufacturing plant at 805 Island Drive, Madison (about 1,000,000 sq ft, 96 acres per WFDD), bought for US$45M base cash on 20 May 2025 with earn-outs tied to Duke delivering 99 MW. It holds the Duke Energy Carolinas capacity letter of 16 May 2025 (24 MW gross 'on or about September 1, 2025', 40 MW 'on or about April 1, 2026', 99 MW 'within four (4) years'; 24 kV three-phase service; Duke 'does not guarantee timelines can be met') and Unifi's electric service agreement, assigned on 4 Aug 2025, under which Duke owns the substation, transformers, breakers and metering as 'Extra Facilities' for a US$11,405 monthly charge. WhiteFiber posted a US$3M surety bond to Duke in July 2026. Behind the meter it buys 'power distribution equipment, generators, and cooling systems' (10-K) and intends 'natural gas fuel cell generation technology' behind the meter 'by partnering with third-party energy providers'.",
+      "highlights": [
+        "Duke 'has completed the work required to deliver the initial 54 gross MW of utility power to the site' (14 May 2026); about US$150M of equity invested by Dec 2025",
+        "The medium-voltage switchgear issue: disclosed 14 May 2026 as 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components'; the Q1 call called it 'not a broad equipment availability issue' and moved delivery to a 'scaled ramp-up'; on the Q2 call (12 Aug 2026) the CEO said 'The pace of the ramp was affected by delivering and commissioning issues involving certain switchgear equipment. Those issues have since been resolved.' No supplier is named in any document",
+        "Long-term power: management 'believes' NC-1 'may receive and support up to 200 MW (gross)' subject to 'developing new substations', and the Q2 release speaks of 'approximately 300 gross megawatts over time'; the marketing page lists 98 MW by Q4 2027 and 298 MW by Q2 2028",
+        "Financing: a US$100M delayed-draw term loan from Bit Digital Capital, Inc. (20 May 2026; 9.5% plus a 1.1x MOIC; US$80M drawn by 31 Jul 2026; a US$20M tranche assigned to B. Riley Securities) bridges a proposed NC-1 project financing with 'a consortium of lenders' in exclusivity as of Aug 2026"
+      ],
+      "positioning": "Compared with the landlords in this corpus (Tract sells powered ground; PowerHouse and Prime build to suit), WhiteFiber is a retrofitter that converts an existing industrial connection: NC-1's first 54 gross MW came through Unifi's assigned service agreement rather than a new large-load interconnection.",
+      "soldThrough": "Owner-developer; the tenant lease (Nscale) funds the build through project-level debt",
+      "targetSegments": [
+        "neoclouds with hyperscaler offtake"
+      ],
+      "roadmap": "99 gross MW by May 2029 (Duke letter); 200 to 300 gross MW with new substations (management belief)"
+    },
+    {
+      "name": "WhiteFiber Continuum — cross-data-centre supercluster networking",
+      "category": "Networking / software",
+      "description": "A dark-fibre interconnect that joins GPU clusters in separate buildings into one training domain. The Q2 2026 10-Q reports R&D results of '111.2 Tbps of bandwidth across 83 kilometers of dark fiber with a guaranteed round-trip latency of 0.9 milliseconds', patent applications filed and a commercial launch targeted for Q3 2026; the product page claims 136 Tbps, developed with Weka.",
+      "highlights": [
+        "Announced 9 Jul 2026; commercial availability 'Q3 2026' per the product page; no customer named"
+      ],
+      "positioning": "Aimed at the problem the company's own footprint creates: small halls (4 to 7 MW in Montreal) that need to be joined to host one large job.",
+      "soldThrough": "Bundled with cloud and colocation contracts (company description)",
+      "targetSegments": [
+        "training customers across multiple WhiteFiber sites"
+      ],
+      "roadmap": "Commercial launch Q3 2026 (company target)"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "NC-1 — Madison, North Carolina (Enovum NC-1 Bidco, LLC)",
+      "specs": [
+        {
+          "band": "Site",
+          "label": "Address",
+          "value": "805 Island Drive, Madison, North Carolina"
+        },
+        {
+          "band": "Site",
+          "label": "Building",
+          "value": "approximately 1,000,000 leasable square feet (former Unifi Manufacturing industrial building)"
+        },
+        {
+          "band": "Site",
+          "label": "Purchase",
+          "value": "USD $45,000,000.00 base purchase price (amended agreement, 19 May 2025); closed 20 May 2025"
+        },
+        {
+          "band": "Power",
+          "label": "Utility",
+          "value": "Duke Energy Carolinas, LLC"
+        },
+        {
+          "band": "Power",
+          "label": "Capacity letter (16 May 2025)",
+          "value": "24 MW on or about September 1, 2025; 40 MW on or about April 1, 2026; 99 MW within four (4) years of the effective date"
+        },
+        {
+          "band": "Power",
+          "label": "Service voltage",
+          "value": "24 kV, 3 phase, and 4-wire"
+        },
+        {
+          "band": "Power",
+          "label": "Delivered",
+          "value": "the initial 54 gross MW of utility power to the site (Duke work completed, 14 May 2026)"
+        },
+        {
+          "band": "Power",
+          "label": "Duke-owned facilities",
+          "value": "Extra Facilities (including overhead lines, substations, transformers, breakers, and metering equipment)"
+        },
+        {
+          "band": "Power",
+          "label": "Long-term",
+          "value": "up to 200 MW (gross), subject to infrastructure upgrades, such as developing new substations"
+        },
+        {
+          "band": "Design",
+          "label": "Tier",
+          "value": "Tier 3-equivalent, ultra-high-density"
+        },
+        {
+          "band": "Design",
+          "label": "Rack density",
+          "value": "up to 150 kW per cabinet"
+        },
+        {
+          "band": "Design",
+          "label": "Redundancy",
+          "value": "fully redundant power distribution and N+1 cooling"
+        },
+        {
+          "band": "Design",
+          "label": "Cooling",
+          "value": "direct-to-chip liquid cooling"
+        },
+        {
+          "band": "Design",
+          "label": "PUE",
+          "value": "targeted average PUE of 1.3 or better"
+        },
+        {
+          "band": "Tenant",
+          "label": "Phase 1",
+          "value": "40 MW of critical IT load to Nscale in two 20 MW phases; approximately $865 million total contract value over 10 years"
+        }
+      ],
+      "notes": "Values are the company's and Duke's own words (10-K, the 16 May 2025 letter agreement filed as S-1 Exhibit 10.22, the Q1 2026 release and the 18 Dec 2025 Nscale release). The 99 MW is a 'commercially reasonable efforts' target, not an executed service agreement for that load; the 10-K states that as of 31 Dec 2025 the company 'has not received an Electric Service Agreement of more than 99 MW'."
+    },
+    {
+      "product": "MTL-3 — Saint-Jérôme, Quebec (Enovum Data Centers Corp.)",
+      "specs": [
+        {
+          "band": "Site",
+          "label": "Building",
+          "value": "approximately 202,000 square feet on 7.7 acres (a former mattress factory)"
+        },
+        {
+          "band": "Power",
+          "label": "Capacity",
+          "value": "7 MW gross / 5 MW IT"
+        },
+        {
+          "band": "Power",
+          "label": "Utility",
+          "value": "Hydro-Québec; an application to more than triple the available power was pending review (Q1 and Q2 2026 calls)"
+        },
+        {
+          "band": "Design",
+          "label": "Build cost",
+          "value": "<C$9M buildout cost per MW"
+        },
+        {
+          "band": "Design",
+          "label": "PUE",
+          "value": "1.3 (versus industry standard of 1.45)"
+        },
+        {
+          "band": "Design",
+          "label": "Delivery",
+          "value": "delivered in only 6 months"
+        },
+        {
+          "band": "Tenant",
+          "label": "Cerebras",
+          "value": "sole tenant; five-year term; CAD 1.4M per month billing from 1 Nov 2025; right of first refusal on additional MW at the site"
+        },
+        {
+          "band": "Ownership",
+          "label": "Purchase option",
+          "value": "CAD 24.2M, exercised 14 Jan 2026 and closed May 2026"
+        }
+      ],
+      "notes": "Company figures (10-K, Sep 2026 investor deck, Bit Digital's 11 Apr 2025 release, Q1 2026 10-Q)."
+    },
+    {
+      "product": "WhiteFiber Cloud — fabric and service levels",
+      "specs": [
+        {
+          "band": "Compute",
+          "label": "GPUs offered",
+          "value": "NVIDIA HGX GB300, HGX B300, HGX H100, VR200"
+        },
+        {
+          "band": "Network",
+          "label": "GPU fabric",
+          "value": "3.2 Tb/s Infiniband and RoCE GPU Fabric"
+        },
+        {
+          "band": "Network",
+          "label": "Ethernet",
+          "value": "Up to 800 Gb/s Ethernet"
+        },
+        {
+          "band": "Storage",
+          "label": "I/O",
+          "value": "Up to 300 Gb/s I/O Storage Clusters"
+        },
+        {
+          "band": "Service",
+          "label": "Uptime",
+          "value": "AVERAGE 99.95% Uptime (cloud page); service lease with an Uptime percentage > 99.5% (10-K)"
+        },
+        {
+          "band": "Service",
+          "label": "Reserved cluster minimum",
+          "value": "32 nodes (256 GPUs), 12-month minimum term"
+        },
+        {
+          "band": "Continuum",
+          "label": "Cross-site interconnect",
+          "value": "111.2 Tbps of bandwidth across 83 kilometers of dark fiber with a guaranteed round-trip latency of 0.9 milliseconds"
+        }
+      ],
+      "notes": "Company pages and the Q2 2026 10-Q. SemiAnalysis's hands-on test (Nov 2025) found the network 'within the reference numbers if not slightly better' and the orchestration layer not working."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-23",
+      "category": "market",
+      "headline": "SemiAnalysis ClusterMAX 3.0 keeps WhiteFiber in 'Not Recommended – Underperforming' without re-testing: 'We need to verify that these operational problems are fixed'",
+      "read": "The cloud business enters its second year public with no independent rating above the floor.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard"
+    },
+    {
+      "date": "2026-09-18",
+      "category": "customer",
+      "headline": "Nscale's S-1 discloses a US$1.2B delayed-draw GPU loan for 'the applicable data center' in North Carolina, rated investment grade, maturing no later than 27 Dec 2031; it names neither WhiteFiber nor NC-1",
+      "read": "The tenant's GPU financing for the site is in place, but its filing does not acknowledge the landlord.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm"
+    },
+    {
+      "date": "2026-09-14",
+      "category": "financial",
+      "headline": "September 2026 investor presentation: about 65 gross MW online in Q3 2026, 175 MW targeted for end-2027, '>$550M recent cloud TCV', '7,500+ NVIDIA GPUs contracted'",
+      "read": "Capacity guidance moved from the 10-K's 76 MW by Q4 2026 to about 70 MW, with the growth pushed into 2027.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026099424/ea030525701ex99-1.htm"
+    },
+    {
+      "date": "2026-09-10",
+      "category": "market",
+      "headline": "B. Riley keeps Buy at US$38, trims Q3 2026 adjusted EBITDA to US$8.0M, values NC-1 at US$1.56B and expects the NC-1 project financing 'within weeks'",
+      "read": "Sell-side value rests on NC-1 as a real-estate asset, not on the cloud.",
+      "source": "https://finance.yahoo.com/markets/stocks/articles/b-riley-keeps-whitefiber-buy-221508312.html"
+    },
+    {
+      "date": "2026-08-25",
+      "category": "corporate",
+      "headline": "Bit Digital's Schedule 13D/A: about 59.9% of WhiteFiber after the convertible exchange, on about 45.1 million shares outstanding; a 60-day lock-up from 18 Aug 2026",
+      "read": "Control stays with Bit Digital, but the exchange diluted it from about 70% in one step.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026093678/xslSCHEDULE_13D_X02/primary_doc.xml"
+    },
+    {
+      "date": "2026-08-21",
+      "category": "financial",
+      "headline": "US$310M of 5.00% convertible senior notes due 2032 closed (conversion price US$33.84); about US$118.5M cash and about 6.3 million shares exchanged US$198.15M of the 2031 notes",
+      "read": "The second convertible in seven months refinances the first at a higher coupon and a higher strike.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026092599/ea030292501ex99-3.htm"
+    },
+    {
+      "date": "2026-08-18",
+      "category": "regulatory",
+      "headline": "Yadkin County commissioners adopt a two-year moratorium on data-centre development in unincorporated areas, the day after WhiteFiber announced NC-2/NC-3 in Yadkinville",
+      "read": "The town says the Unifi properties face 'no legal or zoning hurdle'; the county's signal is still hostile.",
+      "source": "https://www.yadkinripple.com/news/moratorium-approved-for-yadkin-county-as-potential-yadkinville-data-center-project-announced/article_485d48fb-c61b-4167-b885-3d469e9a6bbe.html"
+    },
+    {
+      "date": "2026-08-17",
+      "category": "project",
+      "headline": "Agreement to buy two Unifi sites in Yadkin County, NC for US$60M: a combined minimum of 60 MW of initial gross utility capacity, up to about 200 MW, RFS Q3 2027, closing Q4 2026",
+      "read": "The retrofit model repeats: another seller's buildings and another existing utility connection.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026090492/ea030233401ex99-1.htm"
+    },
+    {
+      "date": "2026-08-12",
+      "category": "financial",
+      "headline": "Q2 2026: revenue US$28.8M (+54% on the prior quarter's cloud base), net loss US$15.0M, RPO US$1,008.0M; 'Initial billing has commenced' at NC-1 and the switchgear issues 'have since been resolved' (call); Krambu takes 100 MW of exclusive capacity from 2027",
+      "read": "NC-1 starts earning about a quarter late; the record's only account of the switchgear resolution is the CEO's sentence on the call.",
+      "source": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-second-quarter-2026-results-302848971.html"
+    },
+    {
+      "date": "2026-08-03",
+      "category": "leadership",
+      "headline": "CFO transition: Erke Huang steps down to senior advisor and board observer, Justin Zhu becomes CFO; Sam Tabar and Michael Rulf join the board; David Andre resigns (all effective 1 Aug 2026)",
+      "read": "The finance function separates from Bit Digital one seat at a time while the CEO seat stays shared.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026084223/ea0299775-8k_whitefiber.htm"
+    },
+    {
+      "date": "2026-07-09",
+      "category": "product-launch",
+      "headline": "WhiteFiber Continuum: 111.2 Tbps over 83 km of dark fibre at 0.9 ms round trip, patents filed, commercial launch targeted for Q3 2026",
+      "read": "A product built to stitch small halls into one cluster.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm"
+    },
+    {
+      "date": "2026-05-27",
+      "category": "financial",
+      "headline": "US$100M delayed-draw term loan for NC-1 from Bit Digital Capital, Inc., upsizable to US$150M, 9.5% with a 1.1x MOIC, secured on Enovum NC-1 Topco; fairness opinions from Needham and Seaport Global",
+      "read": "The parent lends to the subsidiary's project at a return well above the parent's own Ethereum-backed cost of funds.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026061575/ea029228001ex99-1.htm"
+    },
+    {
+      "date": "2026-05-21",
+      "category": "order-win",
+      "headline": "Five-year AI compute agreement with 'an investment-grade technology customer' in the Paris region, total contract value above US$160M, project-level financing plus 12 months of prepaid fees, RFS targeted 30 Sep 2026",
+      "read": "The largest cloud contract on the record is with an unnamed customer in leased third-party space.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026060135/ea029187601ex99-1.htm"
+    },
+    {
+      "date": "2026-05-14",
+      "category": "incident",
+      "headline": "Q1 2026 results disclose 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components' at NC-1; Duke has delivered the initial 54 gross MW; Nscale delivery still expected in Q2",
+      "read": "Medium-voltage switchgear, not the utility, is the gating item on the company's largest contract.",
+      "source": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-first-quarter-2026-results-302771681.html"
+    },
+    {
+      "date": "2026-04-10",
+      "category": "market",
+      "headline": "BTIG initiates at Buy with a US$20 target, the stock at US$13.58, citing power demand",
+      "read": "Coverage arrives near the low, after the Q4 2025 miss.",
+      "source": "https://www.investing.com/news/analyst-ratings/btig-initiates-whitefiber-stock-coverage-with-buy-rating-on-power-demand-93CH-4607272"
+    },
+    {
+      "date": "2026-03-26",
+      "category": "financial",
+      "headline": "FY2025: revenue US$79.2M, net loss US$24.7M, adjusted EBITDA US$17.3M, no funded debt at year-end; Nscale RFS moved to 31 May 2026 after 'customer requested certain design modifications'; MTL-2 under strategic review",
+      "read": "The first annual report shows a loss-making cloud carried by the colocation backlog.",
+      "source": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-fourth-quarter-and-full-year-2025-results-302725537.html"
+    },
+    {
+      "date": "2026-01-28",
+      "category": "corporate",
+      "headline": "Bit Digital 'will not sell any of its WYFI shares during 2026 following the expiration of the IPO lockup' (2 Feb 2026)",
+      "read": "The overhang is deferred by a year, not removed.",
+      "source": "https://www.prnewswire.com/news-releases/bit-digital-reaffirms-long-term-investment-in-whitefiber-shares-302673075.html"
+    },
+    {
+      "date": "2026-01-26",
+      "category": "financial",
+      "headline": "US$230M of 4.50% convertible senior notes due 2031 closed, conversion price US$25.91, with a zero-strike call option of about US$120M",
+      "read": "The first post-IPO capital raise is convertible debt, five months after listing.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026007740/ea027402401ex99-3_white.htm"
+    },
+    {
+      "date": "2025-12-18",
+      "category": "order-win",
+      "headline": "Nscale signs a 10-year, 40 MW colocation agreement at NC-1 worth about US$865M, two 20 MW phases ready for service by 30 Apr and 30 May 2026, 'backed by an investment-grade hyperscaler offtake'",
+      "read": "One lease turns a retrofit into the company's balance sheet.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm"
+    },
+    {
+      "date": "2025-11-13",
+      "category": "financial",
+      "headline": "Q3 2025: revenue US$20.2M, net loss US$15.8M; EPS of –US$0.47 against a –US$0.12 consensus; DNA Fund agreement terminated",
+      "read": "The first quarter as a public company misses by a wide margin.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025110125/ea026564401ex99-1_white.htm"
+    },
+    {
+      "date": "2025-11-06",
+      "category": "market",
+      "headline": "ClusterMAX 2.0 rates WhiteFiber 'Not Recommended – Underperforming': networking within reference, Slurm and Kubernetes not working, no SOC 2 or ISO 27001 attestation",
+      "read": "A public benchmark says the cloud is not yet Bronze.",
+      "source": "https://newsletter.semianalysis.com/p/clustermax-20-the-industry-standard"
+    },
+    {
+      "date": "2025-09-03",
+      "category": "financial",
+      "headline": "Over-allotment exercised in full: 1,406,250 more shares, taking IPO gross proceeds to about US$183.3M",
+      "read": "The IPO closes at its maximum size.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025083731/ea025576301ex99-1_white.htm"
+    },
+    {
+      "date": "2025-08-08",
+      "category": "corporate",
+      "headline": "IPO closes: 9,375,000 shares at US$17.00 on the Nasdaq Capital Market (trading from 7 Aug 2025); Bit Digital contributes WhiteFiber AI for 27,043,749 shares",
+      "read": "The carve-out becomes a controlled public company.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025073717/ea025239101ex99-2_whitefiber.htm"
+    },
+    {
+      "date": "2025-05-21",
+      "category": "project",
+      "headline": "Unifi's 8-K records the NC-1 purchase agreement assigned to Enovum NC-1 Bidco, LLC on 16 May 2025 at a US$45M price, conditioned on a Duke study that 100 MW can be supplied within four years",
+      "read": "The counterparty's filing fixes which WhiteFiber entity owns the site.",
+      "source": "https://www.sec.gov/Archives/edgar/data/100726/000119312525123665/d59337dex101.htm"
+    },
+    {
+      "date": "2025-05-16",
+      "category": "procurement",
+      "headline": "Duke Energy Carolinas letter agreement: 24 MW, then 40 MW, then 99 MW 'within four (4) years'; 'Duke Energy does not guarantee timelines can be met'",
+      "read": "The 99 MW that the market repeats is an efforts-based schedule from the utility.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025063338/ea024838201ex10-22_white.htm"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "nscale",
+      "type": "customer",
+      "status": "active",
+      "since": "2025-12",
+      "scale": "40 MW IT · ~US$865M TCV · 10 years",
+      "via": "NC-1 colocation (Madison, NC)",
+      "note": "Nscale is WhiteFiber's anchor tenant: a 10-year, 40 MW IT colocation agreement at NC-1 worth about US$865M, 'backed by an investment-grade hyperscaler offtake', which is 93% of WhiteFiber's remaining performance obligations.",
+      "context": "Signed 18 Dec 2025 by Enovum NC-1 Bidco, LLC. Two 20 MW phases were to be ready for service on 30 Apr and 30 May 2026; the dates moved to 31 May after 'customer requested certain design modifications', then into Q3 2026 after the medium-voltage switchgear issue. Initial billing began in Q3 2026 and the full 40 MW run rate was expected in August 2026 (Q2 call). WhiteFiber gives Nscale priority notification of further capacity.\n\nNscale's S-1 (18 Sep 2026) does not name WhiteFiber, Enovum or NC-1. It records a US$1.2B delayed-draw GPU term loan for 'the applicable data center' in North Carolina, arranged by Goldman Sachs and JPMorgan, rated investment grade, and maturing no later than 27 Dec 2031. The corpus's Nscale dossier records the Madison site as 'partner-run' with '99MW secured Duke Energy'; the Duke agreements are WhiteFiber's, not Nscale's.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm"
+    },
+    {
+      "slug": "duke-energy",
+      "type": "supplier",
+      "status": "active",
+      "since": "2025-05",
+      "scale": "54 gross MW delivered; 99 MW letter target by May 2029",
+      "via": "Duke Energy Carolinas electric service at NC-1",
+      "note": "Duke Energy Carolinas is NC-1's utility: a 16 May 2025 letter agreement with Enovum sets 24, 40 and 99 MW phases, and Unifi's electric service agreement was assigned to Enovum NC-1 Bidco on 4 Aug 2025.",
+      "context": "The letter, signed by Duke's Stu Heishman, states an estimated peak load of 99 MW at 24 kV, promises 'commercially reasonable efforts' on the three phases and says Duke 'does not guarantee timelines can be met'. Under the assigned service agreement Duke owns the 'Extra Facilities' (overhead lines, substations, transformers, breakers, metering) for a US$11,405 monthly charge. Duke completed the work for the initial 54 gross MW by May 2026, and WhiteFiber posted a US$3M surety bond in July 2026.\n\nNo Duke document names WhiteFiber, Enovum or Nscale; Duke's investor decks caption Microsoft, Amazon and QTS sites only. The relationship is recorded from WhiteFiber's filings and the Duke-countersigned letter it filed.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025063338/ea024838201ex10-22_white.htm"
+    },
+    {
+      "slug": "nvidia",
+      "type": "supplier",
+      "status": "active",
+      "via": "NVIDIA Partner Network (Preferred Partner); GB200 NVL72, B200, H200, B300, VR200",
+      "note": "WhiteFiber is 'an authorized NVIDIA Preferred Partner through the NPN' and sells NVIDIA GPU capacity; its first GB200 NVL72 systems shipped in April 2025.",
+      "context": "The 10-K describes the company as 'among the first service providers to offer H200, B200, and GB200 servers'. NVIDIA has not named WhiteFiber in its own releases on the record; SemiAnalysis noted WhiteFiber 'integrating a custom interconnect to replace NVIDIA' networking.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "slug": "supermicro",
+      "type": "supplier",
+      "status": "active",
+      "via": "authorised partner (server supply)",
+      "note": "The 10-K lists WhiteFiber as 'an authorized partner with SuperMicro', one of its server channels alongside Dell (through Advania), HPE and QCT.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "slug": "coreweave",
+      "type": "competitor",
+      "status": "active",
+      "note": "Named in WhiteFiber's 10-K as a cloud competitor alongside Crusoe, Nebius and Lambda; SemiAnalysis rates CoreWeave Platinum and WhiteFiber Underperforming.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "slug": "nebius",
+      "type": "competitor",
+      "status": "active",
+      "note": "Named in WhiteFiber's 10-K as a cloud competitor.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "slug": "crusoe",
+      "type": "competitor",
+      "status": "active",
+      "note": "Named in WhiteFiber's 10-K as a cloud competitor ('Crusoe Energy').",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "slug": "lambda",
+      "type": "competitor",
+      "status": "active",
+      "note": "Named in WhiteFiber's 10-K as a cloud competitor ('Lambda Labs').",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "slug": "digital-realty",
+      "type": "competitor",
+      "status": "active",
+      "note": "Named in WhiteFiber's 10-K as a colocation competitor, with Equinix, NTT, CyrusOne, STACK, Aligned and Iron Mountain.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "slug": "equinix",
+      "type": "competitor",
+      "status": "active",
+      "note": "Named in WhiteFiber's 10-K as a colocation competitor.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "North Carolina large-load tariff (Duke Energy Carolinas rate case)",
+      "status": "proposed",
+      "exposure": "NC-1 takes service from Duke Energy Carolinas under Unifi's assigned electric service agreement and NCUC-approved tariffs. Duke's 2026 North Carolina rate-case settlements route a large-load tariff to a separate expedited proceeding to finish before new rates take effect on 1 Jan 2027 (per the corpus's Duke dossier). WhiteFiber's 99 MW target and any expansion beyond it would fall under whatever minimum-bill and term rules that proceeding sets; the company's filings do not discuss it.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    },
+    {
+      "regime": "Yadkin County data-centre moratorium",
+      "status": "in-effect",
+      "effectiveDate": "2026-08-18",
+      "exposure": "Yadkin County commissioners adopted a two-year moratorium on data-centre development in unincorporated areas on 18 Aug 2026, the day after WhiteFiber announced NC-2/NC-3. The Unifi properties sit inside Yadkinville's town limits, which the town manager says face 'no legal or zoning hurdle', and the county manager confirmed the moratorium 'only addresses the unincorporated areas of the county'.",
+      "mitigation": "Enovum's Jon Collins told WFDD the company reuses existing buildings 'so an abandoned facility does not become a drag on the county'.",
+      "source": "https://www.wfdd.org/politics-government/2026-08-24/yadkinville-data-center-projects-not-affected-by-county-moratorium"
+    },
+    {
+      "regime": "North Carolina qualifying data-centre sales and use tax exemption",
+      "status": "in-effect",
+      "exposure": "The IPO prospectus describes NC-1 as a qualified North Carolina data centre for the state's sales and use tax exemption on electricity and eligible equipment (per the 424B4).",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025073279/ea0249945-07.htm"
+    },
+    {
+      "regime": "US tariffs on Mexico-transited equipment",
+      "status": "in-effect",
+      "exposure": "The 10-K risk factors state that battery storage systems and cooling systems used in the North American data centres 'are manufactured in or pass through Mexico', exposing the build programme to tariff changes on that route; no specific rate or mitigation is given.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm"
+    }
+  ],
+  "strategyRead": [
+    "(High confidence) We assess that WhiteFiber's value to a power-equipment seller is the landlord, not the cloud. Basis: US$932.9M of the US$1,008.0M remaining performance obligations at 30 Jun 2026 are colocation; B. Riley values NC-1 alone at US$1.56B against a US$719M market capitalisation; the cloud has been rated 'Underperforming' twice and lost its 70.7% customer. Indicator to watch: the NC-1 project financing closing (in exclusivity since August 2026) and the size of the NC-2/NC-3 leases 'during the fourth quarter of 2026'.",
+    "(High confidence) We assess that the company is the buyer of record for everything behind Duke's meter at NC-1, and that medium-voltage switchgear is the category where that authority has already been tested. Basis: the ESA leaves substations, transformers and breakers with Duke as 'Extra Facilities'; the 10-K lists power distribution equipment, generators and cooling as WhiteFiber's procurements; the 14 May 2026 disclosure and the Q2 call attribute the Nscale slip to 'certain medium-voltage switchgear components' and to 'delivering and commissioning issues involving certain switchgear equipment'. Collection gap: no supplier, general contractor or switchgear specification is named anywhere. Indicator to watch: NC-2/NC-3 long-lead orders in the Q3 2026 10-Q.",
+    "(Moderate confidence) We assess that the 99 MW at NC-1 is a schedule, not a contract, and that the delivered 54 gross MW is the only firm figure. Basis: Duke's letter promises 'commercially reasonable efforts' and 'does not guarantee timelines'; the 10-K says no service agreement above 99 MW has been received; the 200 MW and 300 MW figures are management's belief and a marketing page. Indicator to watch: an executed Duke service agreement for the third phase, or the earn-out payments to Unifi that trigger only if Duke delivers or contracts 99 MW.",
+    "(Moderate confidence) We assess that Bit Digital's control will persist but shrink by financing rather than by sale. Basis: Bit Digital pledged not to sell in 2026 and holds a fixed 27.04 million shares, yet its stake fell from about 70% to about 59.9% in one convertible exchange; the parent lends to NC-1 at 9.5% plus a 1.1x MOIC funded by Ethereum-collateralised borrowing at 5.45%. Indicator to watch: the 2027 expiry of the transition services agreement and any change in the shared CEO seat.",
+    "(Low confidence) We assess that on-site generation at WhiteFiber sites will be natural-gas fuel cells owned by a third party, and that batteries and SSTs are not in view. Basis: the 10-K's stated intent to deploy fuel-cell generation 'by partnering with third-party energy providers'; the only battery mention is a supply-chain risk factor; nothing on first-party channels mentions 800 VDC or solid-state transformers. This is an inference from stated intent, with no supplier, site or permit on the record. Indicator to watch: a named fuel-cell provider at NC-1 or NC-2/NC-3."
+  ],
+  "decisionMakers": [
+    {
+      "name": "Sam Tabar",
+      "title": "Chief Executive Officer and Director (also CEO of Bit Digital)",
+      "photo": "images/execs/whitefiber-tabar.jpg",
+      "background": [
+        "CEO of WhiteFiber since Feb 2025; elected a director effective 1 Aug 2026",
+        "CEO of Bit Digital since Mar 2023 (Chief Strategy Officer 2021–2023)",
+        "Centerboard Securities (2020–2023); co-founder and CSO of Fluidity (2017–2020); Partner, FullCycle Fund (2015–2017)",
+        "Director and Head of Capital Strategy APAC, Bank of America Merrill Lynch (2011–2013); Co-Head of Marketing, Sparx Group (2003–2011); associate, Skadden Arps (2001–2004)",
+        "BA, Oxford (2000); LL.M., Columbia (2001)"
+      ]
+    },
+    {
+      "name": "Justin Zhu",
+      "title": "Chief Financial Officer (from 1 Aug 2026)",
+      "photo": "images/execs/whitefiber-zhu.jpg",
+      "background": [
+        "SVP Finance and Chief Accounting Officer of WhiteFiber since the IPO; CFO from 1 Aug 2026 (employment term to 31 Jul 2028)",
+        "VP Finance, Bit Digital (2021–2026); its principal financial and accounting officer from Jul 2025",
+        "Senior Manager, EY (2015–2021); PwC (2012–2015)",
+        "BBA and MS in Taxation, Baruch College; New York CPA"
+      ]
+    },
+    {
+      "name": "Billy Krassakopoulos",
+      "title": "President, Data Centers; CEO of Enovum Data Centers",
+      "photo": "images/execs/whitefiber-krassakopoulos.jpg",
+      "background": [
+        "CEO of Enovum since Jul 2023; President of WhiteFiber's data-centre business after the Oct 2024 acquisition",
+        "Founded Netintelligent Hosting Services (2002), sold to eStruxture (2016); then Vice President at eStruxture",
+        "Signed the NC-1 purchase assignment as President of Enovum NC-1 Topco, Inc. (May 2025)"
+      ]
+    },
+    {
+      "name": "Thomas Sanfilippo",
+      "title": "Chief Technology Officer",
+      "background": [
+        "CTO of WhiteFiber since Feb 2025 (CTO of WhiteFiber AI since Sep 2024)",
+        "Senior Director, DigitalOcean / Paperspace (2023–2024); led the Paperspace GPU cloud and Gradient platform (2015–2023)",
+        "Kaseya; Principal at Microsoft (2006–2014)"
+      ]
+    },
+    {
+      "name": "Erke Huang",
+      "title": "Senior Advisor and non-voting board observer (former CFO and Director; CFO of Bit Digital)",
+      "background": [
+        "CFO and director of WhiteFiber from the IPO to 1 Aug 2026",
+        "CFO of Bit Digital (continuing)"
+      ]
+    },
+    {
+      "name": "Cameron Schnier",
+      "title": "SVP Capital Markets and Corporate Strategy",
+      "background": [
+        "Listed in the September 2026 investor presentation; no biography published"
+      ]
+    },
+    {
+      "name": "Michael Francisco",
+      "title": "VP Cloud, US",
+      "background": [
+        "Listed in the September 2026 investor presentation; no biography published"
+      ]
+    },
+    {
+      "name": "Simon Hamelin-Choquette",
+      "title": "Head of Data Center Strategy",
+      "background": [
+        "Listed in the September 2026 investor presentation; no biography published"
+      ]
+    },
+    {
+      "name": "Ichi Shih",
+      "title": "Independent Director",
+      "background": [
+        "Partner, Cathay Securities; former Goldman Sachs analyst and CFO roles",
+        "Director of Bit Digital since 2020",
+        "NYU Stern; Columbia SIPA"
+      ]
+    },
+    {
+      "name": "Pruitt Hall",
+      "title": "Independent Director",
+      "background": [
+        "Director, Mission Critical Services, Kirkland, Inc. (High Point, NC)",
+        "Consults on NC-1 construction under a professional services agreement (US$162–312 per hour, 10-K)"
+      ]
+    },
+    {
+      "name": "Michael Rulf",
+      "title": "Independent Director (from 1 Aug 2026)",
+      "background": [
+        "Chief Solutions Architect and former CTO Americas, Syntax Systems",
+        "Former VP at Oracle; Executive Director at AT&T"
+      ]
+    },
+    {
+      "name": "Jiashu (Bill) Xiong",
+      "title": "Independent Director",
+      "background": [
+        "Former IT Director, Bit Digital Canada; resigned from Bit Digital's board in Jan 2026",
+        "Formerly Agricultural Bank of China, Canada"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "public",
+    "periods": [
+      {
+        "period": "FY2024 (year to 31 Dec 2024; pre-IPO, carve-out financials)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "US$47.64M (cloud US$45.73M; colocation US$1.36M; other US$0.55M)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No consensus existed; carve-out figures from the prospectus and 10-K",
+            "kpi": "revenue",
+            "usdMillions": 47.64,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income",
+            "actual": "US$1.37M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Adjusted EBITDA US$21.93M",
+            "kpi": "net-income",
+            "usdMillions": 1.37,
+            "fxBasis": "as reported"
+          }
+        ],
+        "commentary": "The last profitable year: one large cloud customer, Enovum for only a quarter, investing outflow US$80.0M."
+      },
+      {
+        "period": "FY2025 (year to 31 Dec 2025)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "US$79.16M (+66%; cloud US$68.75M; colocation US$8.91M; other US$1.50M)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Within the preliminary range given on 21 Jan 2026; stockanalysis.com shows a US$77.67M consensus figure that does not match the reported total, so no verdict is drawn",
+            "kpi": "revenue",
+            "usdMillions": 79.16,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income (loss)",
+            "actual": "–US$24.68M (Q3 –US$15.8M; Q4 –US$1.5M)",
+            "expected": "Q3 EPS –US$0.12; Q4 EPS –US$0.06 (MarketBeat consensus)",
+            "verdict": "miss",
+            "result": "Q3 EPS –US$0.47 and Q4 EPS –US$0.67 against those figures; the stock fell 12.6% and 14% on the two prints",
+            "kpi": "net-income",
+            "usdMillions": -24.68,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Adjusted EBITDA",
+            "actual": "US$17.30M (stock-based compensation US$19.25M)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company non-GAAP measure"
+          },
+          {
+            "name": "Capital expenditure and cash",
+            "actual": "US$267.3M net cash used in investing; cash US$114.4M plus US$3.9M restricted at year-end; no funded debt; RBC facility undrawn",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-K"
+          }
+        ],
+        "commentary": "IPO proceeds of about US$183M gross were spent within the year on NC-1 (about US$150M of equity), GPUs and MTL-3."
+      },
+      {
+        "period": "Q1 2026 (quarter to 31 Mar 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-03-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "US$21.92M (cloud US$16.77M; colocation US$4.77M; other US$0.38M)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Vendor revenue estimates were not consistent across aggregators; none is used"
+          },
+          {
+            "name": "Net income (loss) and EPS",
+            "actual": "–US$12.04M; EPS –US$0.31",
+            "expected": "EPS –US$0.24 (MarketBeat consensus)",
+            "verdict": "miss",
+            "result": "Investing.com carried a –US$0.06 forecast, so the size of the miss depends on the vendor; the stock fell 5.7%"
+          },
+          {
+            "name": "Adjusted EBITDA",
+            "actual": "US$3.00M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company non-GAAP measure"
+          },
+          {
+            "name": "Remaining performance obligations (colocation)",
+            "actual": "about US$921M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q; essentially the Nscale contract"
+          }
+        ],
+        "commentary": "The quarter of the switchgear disclosure; capex of US$169.2M in purchases and deposits, cash down to US$75.8M."
+      },
+      {
+        "period": "Q2 2026 (quarter to 30 Jun 2026)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "US$28.84M (cloud US$23.8M; colocation US$4.7M)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Included about US$12.3M associated with the previously disclosed customer termination"
+          },
+          {
+            "name": "Net income (loss) and EPS",
+            "actual": "–US$14.98M; EPS –US$0.39; operating loss US$9.3M with a US$5.0M software impairment",
+            "expected": "EPS –US$0.40 (MarketBeat consensus)",
+            "verdict": "inline",
+            "result": "In line on MarketBeat's figure and a miss on Investing.com's –US$0.03; the stock rose 16.6% pre-market"
+          },
+          {
+            "name": "Adjusted EBITDA",
+            "actual": "US$5.5M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company non-GAAP measure"
+          },
+          {
+            "name": "Remaining performance obligations",
+            "actual": "US$1,008.0M (colocation US$932.9M; cloud US$75.1M)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q; contract liabilities US$143.1M; deferred revenue up US$63.6M"
+          },
+          {
+            "name": "Balance sheet",
+            "actual": "Cash US$56.1M (US$60.4M with restricted); six-month capex US$344.7M; debt at 30 Jun: US$230M 2031 converts, US$28.4M short-term third-party, US$29.3M short-term related-party, US$25.5M long-term third-party",
+            "expected": "",
+            "verdict": "inline",
+            "result": "10-Q; the 2032 notes and the balance of the Bit Digital loan came after quarter-end"
+          }
+        ],
+        "commentary": "Consensus for FY2026 is revenue of about US$136.8M and EPS of –US$0.61, and for FY2027 revenue of about US$295.9M with positive EPS (stockanalysis.com, 10 analysts, 29 Sep 2026). No company revenue guidance exists; guidance is in megawatts."
+      }
+    ],
+    "commentary": "A public filer since August 2025 with two segments and a fiscal year ending 31 December. The record's tension is between a US$1.0B contracted backlog and a company that has missed three of its first four EPS prints, burned its IPO proceeds inside a year and refinanced through two convertibles and a related-party loan. The Q3 2026 report is expected around mid-November 2026 (Q3 2025 was reported on 13 Nov 2025); no date has been announced."
+  },
+  "sources": [
+    {
+      "label": "stockanalysis.com — WYFI overview and analyst forecast (10 analysts; FY2026E and FY2027E consensus)",
+      "url": "https://stockanalysis.com/stocks/wyfi/forecast/",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "MarketBeat — WYFI earnings history (EPS actual against consensus, Q3 2025 to Q2 2026)",
+      "url": "https://www.marketbeat.com/stocks/NASDAQ/WYFI/earnings/",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "EDGAR — WhiteFiber, Inc. submissions (CIK 0002042022)",
+      "url": "https://data.sec.gov/submissions/CIK0002042022.json",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "SemiAnalysis — ClusterMAX 3.0: The Industry Standard (WhiteFiber in 'Not Recommended – Underperforming')",
+      "url": "https://newsletter.semianalysis.com/p/clustermax-30-the-industry-standard",
+      "date": "2026-09-23"
+    },
+    {
+      "label": "SEC EDGAR — Nscale Limited Form S-1 (North Carolina GPU Facility, US$1.2B delayed-draw term loan)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+      "date": "2026-09-18"
+    },
+    {
+      "label": "Equibles — WYFI short interest (FINRA settlement data)",
+      "url": "https://equibles.com/stocks/wyfi/short-interest",
+      "date": "2026-09-15"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, Investor Presentation September 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026099424/ea030525701ex99-1.htm",
+      "date": "2026-09-14"
+    },
+    {
+      "label": "Yahoo Finance — B. Riley keeps WhiteFiber at Buy with a $38 target",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/b-riley-keeps-whitefiber-buy-221508312.html",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "Bit Digital — 8-K Ex. 99.1, Investor Presentation September 2026 (WYFI stake, DDTL terms)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710350/000121390026098132/ea030473001ex99-1.htm",
+      "date": "2026-09-09"
+    },
+    {
+      "label": "WhiteFiber — Blog: What Are the Key Components of AI Infrastructure?",
+      "url": "https://www.whitefiber.com/blog/what-are-the-key-components-of-ai-infrastructure",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "WhiteFiber — 8-K/A (NC-2/NC-3 Real Estate Purchase and Sale Agreement of 16 Aug 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026094022/ea0303443-8ka1_whitefiber.htm",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "Unifi, Inc. — 10-K Exhibit 10.50, Yadkin County Purchase and Sale Agreement (US$60,000,000)",
+      "url": "https://www.sec.gov/Archives/edgar/data/100726/000010072626000012/ufi-ex10_50.htm",
+      "date": "2026-08-26"
+    },
+    {
+      "label": "Bit Digital — Schedule 13D/A on WhiteFiber (approximately 59.9%; 60-day lock-up)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026093678/xslSCHEDULE_13D_X02/primary_doc.xml",
+      "date": "2026-08-25"
+    },
+    {
+      "label": "WFDD — Yadkinville data center projects not affected by county moratorium",
+      "url": "https://www.wfdd.org/politics-government/2026-08-24/yadkinville-data-center-projects-not-affected-by-county-moratorium",
+      "date": "2026-08-24"
+    },
+    {
+      "label": "Yahoo Finance / Simply Wall St — WhiteFiber (WYFI) down 29.8% after the Krambu announcement and the upsized convert",
+      "url": "https://finance.yahoo.com/technology/ai/articles/whitefiber-wyfi-down-29-8-060857717.html",
+      "date": "2026-08-23"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.3, Closing of Upsized $310.0 Million Convertible Senior Notes Offering",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026092599/ea030292501ex99-3.htm",
+      "date": "2026-08-21"
+    },
+    {
+      "label": "WFDD — WhiteFiber buys Yadkin County land for two data center campuses",
+      "url": "https://www.wfdd.org/politics-government/2026-08-19/whitefiber-yadkin-county-data-center-campuses",
+      "date": "2026-08-19"
+    },
+    {
+      "label": "Yadkin Ripple — Moratorium approved for Yadkin County as potential Yadkinville data center project announced",
+      "url": "https://www.yadkinripple.com/news/moratorium-approved-for-yadkin-county-as-potential-yadkinville-data-center-project-announced/article_485d48fb-c61b-4167-b885-3d469e9a6bbe.html",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "Commercial Property Executive — WhiteFiber eyes NC data center campus",
+      "url": "https://www.commercialsearch.com/news/whitefiber-eyes-nc-data-center-campus/",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, Agreement to Acquire Two New Development Sites in North Carolina (NC-2/NC-3)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026090492/ea030233401ex99-1.htm",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "Bit Digital — 8-K Ex. 99.1, Second Quarter 2026 Results (WhiteFiber section; 'does not intend to sell WhiteFiber shares in 2026')",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710350/000121390026088768/ea030181101ex99-1.htm",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Bit Digital — 10-Q for the quarter ended 30 Jun 2026 (WhiteFiber's seven customers; 63% concentration)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710350/000121390026088709/ea0300693-10q_bitdigital.htm",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "WhiteFiber — 10-Q for the quarter ended 30 Jun 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026088026/ea0300877-10q_whitefiber.htm",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "PR Newswire — WhiteFiber, Inc. Reports Second Quarter 2026 Results",
+      "url": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-second-quarter-2026-results-302848971.html",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "The Motley Fool — WhiteFiber (WYFI) Q2 2026 earnings call transcript ('Those issues have since been resolved')",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/whitefiber-wyfi-q2-2026-earnings-call-transcript/",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "Investing.com — Earnings call transcript: WhiteFiber Q2 2026 revenue jumps 54% as stock rises 16.6%",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-white-fiber-q2-2026-revenue-jumps-54-as-stock-rises-166-93CH-4855417",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "Investing.com — WhiteFiber partners with Krambu for 100 MW GPU capacity in 2027",
+      "url": "https://www.investing.com/news/company-news/whitefiber-partners-with-krambu-for-100mw-gpu-capacity-in-2027-93CH-4855960",
+      "date": "2026-08-12"
+    },
+    {
+      "label": "WhiteFiber — 8-K Item 5.02, officer and director changes effective 1 Aug 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026084223/ea0299775-8k_whitefiber.htm",
+      "date": "2026-08-03"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, Investor Presentation June 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026067329/ea029430601ex99-1.htm",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "Bit Digital — DEF 14A, 2026 annual meeting proxy (no WhiteFiber distribution proposal)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710350/000121390026066338/ea0294006-def14a_bitdigital.htm",
+      "date": "2026-06-08"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, WhiteFiber Secures $100 Million Delayed Draw Facility",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026061575/ea029228001ex99-1.htm",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "Bit Digital — 8-K Ex. 99.1, Bit Digital originates $100 million delayed draw term loan for a WhiteFiber subsidiary",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710350/000121390026061574/ea029203101ex99-1.htm",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "TipRanks / The Fly — WhiteFiber short interest at record high",
+      "url": "https://www.tipranks.com/news/the-fly/short-report-whitefiber-short-interest-at-record-high-thefly-news",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, AI Compute Agreement with Total Contract Value in Excess of $160 Million (Paris region)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026060135/ea029187601ex99-1.htm",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "Investing.com — Earnings call transcript: WhiteFiber Q1 2026 sees significant EPS miss ('certain medium voltage switchgear components')",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-whitefiber-q1-2026-sees-significant-eps-miss-93CH-4689079",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "WhiteFiber — 10-Q for the quarter ended 31 Mar 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026056212/ea0288695-10q_whitefiber.htm",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "PR Newswire — WhiteFiber, Inc. Reports First Quarter 2026 Results (medium-voltage switchgear disclosure)",
+      "url": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-first-quarter-2026-results-302771681.html",
+      "date": "2026-05-14"
+    },
+    {
+      "label": "Investing.com — BTIG initiates WhiteFiber coverage with Buy rating on power demand",
+      "url": "https://www.investing.com/news/analyst-ratings/btig-initiates-whitefiber-stock-coverage-with-buy-rating-on-power-demand-93CH-4607272",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "Investing.com — Craig-Hallum cuts WhiteFiber price target on near-term noise",
+      "url": "https://www.investing.com/news/analyst-ratings/craighallum-cuts-whitefiber-stock-price-target-on-nearterm-noise-93CH-4585504",
+      "date": "2026-03-27"
+    },
+    {
+      "label": "WhiteFiber — Form 10-K for the fiscal year ended 31 Dec 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026034341/ea0278305-10k_white.htm",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "PR Newswire — WhiteFiber, Inc. Reports Fourth Quarter and Full Year 2025 Results",
+      "url": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-fourth-quarter-and-full-year-2025-results-302725537.html",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "Investing.com — Earnings call transcript: WhiteFiber Q4 2025 results fall short, stock tumbles",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-whitefiber-q4-2025-results-fall-short-stock-tumbles-93CH-4582858",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "PR Newswire — Bit Digital Reaffirms Long-Term Investment in WhiteFiber Shares",
+      "url": "https://www.prnewswire.com/news-releases/bit-digital-reaffirms-long-term-investment-in-whitefiber-shares-302673075.html",
+      "date": "2026-01-28"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.3, Closing of $230.0 Million Convertible Senior Notes Offering and Zero-Strike Call Option",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026007740/ea027402401ex99-3_white.htm",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, Investor Presentation January 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026007474/ea027401701ex99-1_white.htm",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "WhiteFiber — 8-K Item 2.02, preliminary FY2025 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026006189/ea0273567-8k_whitefiber.htm",
+      "date": "2026-01-21"
+    },
+    {
+      "label": "Data Center Knowledge — UK's Nscale to boost US footprint with $865M NC data center deal",
+      "url": "https://www.datacenterknowledge.com/investing/uk-s-nscale-to-boost-us-footprint-with-865m-nc-data-center-deal",
+      "date": "2025-12-24"
+    },
+    {
+      "label": "CoinDesk — WhiteFiber NC-1 deal is promising, says B. Riley",
+      "url": "https://www.coindesk.com/markets/2025/12/24/whitefiber-nc-1-deal-is-promising-says-b-riley-seeing-127-stock-price-upside-after-price-plunge",
+      "date": "2025-12-24"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, WhiteFiber and Nscale Announce 10-Year, 40 MW Colocation Agreement (~$865 Million TCV) at NC-1",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "CoinDesk — WhiteFiber signs 10-year, 40 MW colocation deal with Nscale valued at about $865M",
+      "url": "https://www.coindesk.com/markets/2025/12/18/whitefiber-signs-10-year-40-mw-colocation-deal-with-nscale-valued-at-about-usd865-million",
+      "date": "2025-12-18"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, Third Quarter 2025 Results",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025110125/ea026564401ex99-1_white.htm",
+      "date": "2025-11-13"
+    },
+    {
+      "label": "WhiteFiber — 10-Q for the quarter ended 30 Sep 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025109964/ea0263547-10q_whitefiber.htm",
+      "date": "2025-11-13"
+    },
+    {
+      "label": "SemiAnalysis — ClusterMAX 2.0: The Industry Standard (WhiteFiber review)",
+      "url": "https://newsletter.semianalysis.com/p/clustermax-20-the-industry-standard",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "clustermax.ai — WhiteFiber cloud review",
+      "url": "https://www.clustermax.ai/cloudreview/whitefiber",
+      "date": "2025-11-06"
+    },
+    {
+      "label": "Investing.com — WhiteFiber price target raised to $45 from $34 at Needham",
+      "url": "https://www.investing.com/news/analyst-ratings/whitefiber-stock-price-target-raised-to-45-from-34-at-needham-93CH-4310393",
+      "date": "2025-10-27"
+    },
+    {
+      "label": "Bit Digital — 8-K Ex. 99.1, supplemental risk factors (post-IPO relationship with WhiteFiber)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710350/000121390025093092/ea025915701ex99-1_bitdigital.htm",
+      "date": "2025-09-29"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, Exercise in Full of Over-Allotment Option",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025083731/ea025576301ex99-1_white.htm",
+      "date": "2025-09-03"
+    },
+    {
+      "label": "Investing.com — Craig-Hallum initiates WhiteFiber with Buy rating on AI data center strategy (with the other initiations)",
+      "url": "https://www.investing.com/news/analyst-ratings/craighallum-initiates-whitefiber-stock-with-buy-rating-on-ai-data-center-strategy-93CH-4219699",
+      "date": "2025-09-02"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.1, Investor Presentation August 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025081421/ea025484401ex99-1_white.htm",
+      "date": "2025-08-28"
+    },
+    {
+      "label": "WhiteFiber — 8-K Ex. 99.2, Closing of Initial Public Offering",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025073717/ea025239101ex99-2_whitefiber.htm",
+      "date": "2025-08-08"
+    },
+    {
+      "label": "WhiteFiber — Prospectus (Form 424B4) for the initial public offering",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025073279/ea0249945-07.htm",
+      "date": "2025-08-08"
+    },
+    {
+      "label": "Investing.com — WhiteFiber prices upsized IPO at $17 per share",
+      "url": "https://www.investing.com/news/stock-market-news/whitefiber-prices-upsized-ipo-at-17-per-share-432SI-4174878",
+      "date": "2025-08-06"
+    },
+    {
+      "label": "WFDD — Rockingham County set to welcome $1 billion AI data center",
+      "url": "https://www.wfdd.org/story/rockingham-county-set-welcome-1-billion-ai-data-center",
+      "date": "2025-06-03"
+    },
+    {
+      "label": "Investing.com — WhiteFiber expands with North Carolina AI data center",
+      "url": "https://www.investing.com/news/company-news/whitefiber-expands-with-north-carolina-ai-data-center-93CH-4075568",
+      "date": "2025-06-02"
+    },
+    {
+      "label": "Unifi, Inc. — 8-K Exhibit 10.1, amendment and assignment of the Madison purchase agreement to Enovum NC-1 Bidco, LLC (US$45,000,000)",
+      "url": "https://www.sec.gov/Archives/edgar/data/100726/000119312525123665/d59337dex101.htm",
+      "date": "2025-05-21"
+    },
+    {
+      "label": "Duke Energy Carolinas — letter agreement on electric service to 805 Island Drive, Madison (WhiteFiber S-1 Exhibit 10.22)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025063338/ea024838201ex10-22_white.htm",
+      "date": "2025-05-16"
+    },
+    {
+      "label": "Unifi, Inc. — 8-K, Real Estate Purchase and Sale Agreement with Enovum Data Centers Corp. (US$53.2M)",
+      "url": "https://www.sec.gov/Archives/edgar/data/100726/000095017025054775/ufi-20250410.htm",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "Bit Digital — 8-K Ex. 99.1, Secures Site for New Tier 3 Data Center to Support Cerebras Colocation Contract (MTL-3)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1710350/000121390025032132/ea023804201ex99-1_bitdigital.htm",
+      "date": "2025-04-11"
+    },
+    {
+      "label": "SemiAnalysis — The GPU Cloud ClusterMAX Rating System (1.0; WhiteFiber not rated)",
+      "url": "https://newsletter.semianalysis.com/p/the-gpu-cloud-clustermax-rating-system-how-to-rent-gpus",
+      "date": "2025-03-26"
+    },
+    {
+      "label": "SDxCentral — WhiteFiber partners with Cerebras Systems for Montreal deployment",
+      "url": "https://www.sdxcentral.com/news/whitefiber-partners-with-cerebras-systems-for-montreal-deployment/",
+      "date": "2025-03-18"
+    },
+    {
+      "label": "Canadian Lawyer — Bit Digital acquires Enovum Data Centers (CA$62.8M)",
+      "url": "https://www.canadianlawyermag.com/cl-plus/deals/1957",
+      "date": "2024-10-11"
+    },
+    {
+      "label": "WhiteFiber — Investor Relations (leadership, events, filings, governance)",
+      "url": "https://www.whitefiber.com/investors"
+    },
+    {
+      "label": "WhiteFiber — Investor FAQ",
+      "url": "https://www.whitefiber.com/investor-faq"
+    },
+    {
+      "label": "WhiteFiber — NC-1 campus page",
+      "url": "https://www.whitefiber.com/nc-1"
+    },
+    {
+      "label": "WhiteFiber — MTL-1 page",
+      "url": "https://www.whitefiber.com/mtl-1"
+    },
+    {
+      "label": "WhiteFiber — MTL-3 page",
+      "url": "https://www.whitefiber.com/mtl-3"
+    },
+    {
+      "label": "WhiteFiber — AI + HPC Colocation",
+      "url": "https://www.whitefiber.com/data-center/ai-hpc-colocation"
+    },
+    {
+      "label": "WhiteFiber — Cloud Compute",
+      "url": "https://www.whitefiber.com/cloud/compute"
+    },
+    {
+      "label": "WhiteFiber — GPU Pricing (reserved cluster minimums)",
+      "url": "https://www.whitefiber.com/gpu-pricing"
+    },
+    {
+      "label": "WhiteFiber — Private AI",
+      "url": "https://www.whitefiber.com/private-ai"
+    },
+    {
+      "label": "WhiteFiber — WhiteFiber Continuum",
+      "url": "https://www.whitefiber.com/whitefiber-continuum"
+    },
+    {
+      "label": "WhiteFiber — About Us",
+      "url": "https://www.whitefiber.com/about-us"
+    },
+    {
+      "label": "Baxtel — Enovum/WhiteFiber MTL2 (Pointe-Claire)",
+      "url": "https://baxtel.com/data-center/enovum-whitefiber-mtl2"
+    },
+    {
+      "label": "Baxtel — Enovum/WhiteFiber MTL1 (Montreal)",
+      "url": "https://baxtel.com/data-center/enovum-whitefiber-mtl1"
+    }
+  ],
+  "lastUpdated": "2026-09-29",
+  "profileVersion": 1
+}

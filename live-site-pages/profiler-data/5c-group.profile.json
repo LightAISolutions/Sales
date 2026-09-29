@@ -1,0 +1,977 @@
+{
+  "schemaVersion": 7,
+  "slug": "5c-group",
+  "name": "5C AI Group Inc. (operating as 5C and 5C Group; formed from Hypertec Cloud and 5C Data Centers)",
+  "shortName": "5C Group",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://5c.ai",
+  "headquarters": "Saint-Laurent (Montreal), Quebec, Canada (9300 Route Transcanadienne); Hypertec Group is moving its global headquarters to a LaSalle campus that 5C will operate compute in",
+  "founded": 2025,
+  "employees": "Not disclosed by the company; the LinkedIn company page shows the 51–200 band",
+  "ownership": {
+    "type": "private",
+    "notes": "Private. 5C Group was formed on 10 Apr 2025 when Hypertec Cloud, the cloud division of the family-owned Montreal hardware group Hypertec, was spun off and acquired 5C Data Centers; the company's own words are 'the spin-off of Hypertec Cloud from its parent company and the launch of 5C Group as a new independent entity'. Hypertec 'remains largest shareholder' (Bloomberg conference, 29 Sep 2026); Brookfield Asset Management holds equity through its Infrastructure Structured Solutions strategy from the US$835M raise of Jul 2025 (share undisclosed). Simon Ahdoot, Hypertec's CEO, said on 29 Sep 2026 that the company is 'absolutely considering an IPO' after it closes a raise of 'an incremental $5 billion or $6 billion in a combination of debt and equity'. No Quebec registry record or cap table was retrievable from this session; the legal name is taken from the site's Terms of Use."
+  },
+  "summary": "BOTTOM LINE UP FRONT: 5C Group is a Montreal-based, Hypertec-controlled, Brookfield-backed developer and operator of AI data centres that leases powered, cooled halls to neoclouds, and it is the landlord of record for Together AI (a Maryland hall live since July 2025 and the Memphis MEM01 campus), Vultr (Springfield, Ohio) and Crusoe (also Springfield). It signs for its own substations and site power: FirstEnergy's transmission page records a 138 kV tap to 'the new 5C Data Center USA, Inc. substation' at Springfield, which 'the customer will own', and its Memphis site is coded grid plus behind-the-meter. It has raised more than US$1.4 billion (US$835M of Brookfield-led equity and Deutsche Bank-led debt in July 2025; US$605M of Brookfield-led debt in August 2026) against a roadmap it now states as 'over 1.5 gigawatts', down from 'over 2 GW' a year earlier, with about 110 MW operational in September 2026. BACKGROUND: Two lineages merged in April 2025: Hypertec Cloud (the Ahdoot family's IaaS arm, which co-built B200 and GB200 clusters with Together AI) and 5C Data Centers (a 2023-vintage Montreal developer led by Steve Perez that bought the former LexisNexis site in Springfield, Ohio and a Phoenix building in 2024). Its capacity table lists CMH01 Columbus-region Ohio (75 MW 'fully committed' for 2026, 350 MW beyond), MEM01 Memphis (20 MW committed, 64 MW in 2027) and regional lines for the Southwest, Northeast and Southeast. Local records show the reality behind the table: 25 of a 75 MW Springfield phase due by the end of September 2026, 20 MW plus an approved 9 MW at Memphis with the next 50 MW waiting on TVA approval, and Phoenix a year late. No revenue, backlog or EBITDA has been published; the company is private and the financial record is the two financings. Per company releases and local records unless stated.",
+  "ecosystemRole": "We assess 5C Group as a challenger in the AIDC developer and landlord segment: the counterparty that owns the buildings, the substation and the site power at four US campuses whose tenants (Together AI, Vultr, Crusoe) were excluded from this corpus because they buy compute, not power equipment. Basis: at Springfield the customer-owned Benjamin Substation and the 138 kV tap are 5C's under FirstEnergy's OPSB filing, the city's FAQ counts 19 diesel generators for the first phase, and the tenant (Vultr) invests in GPUs while 5C spends up to US$1.3 billion on the building and power; at Memphis 5C MEM01 LLC bought the building, pays MLGW's US$1.52 million-per-MW capacity charge and shows turbine-like construction on drone footage. Its delivery models, 'Turnkey' (core and shell, MEP, fit-out) and 'Turnkey+' (with GPU clusters), make it the buyer of switchgear, transformers, UPS, generators and cooling for every phase it builds, and its 2026 blogs speak of 'prefabricated power skids' and 'warmer-water cooling'. Nothing on its channels mentions solid-state transformers, 800 VDC or batteries, and the behind-the-meter generation at Memphis has no located permit. Hypertec, its largest shareholder, is also a server maker and NVIDIA's first Canadian OEM.",
+  "productsAndServices": [
+    {
+      "name": "AI data-centre development and leasing — 'Turnkey' and 'Turnkey+' delivery",
+      "category": "AIDC developer / landlord",
+      "description": "5C designs, builds and operates 'purpose-built AI factories' and leases them to neoclouds and AI labs. Its data-centres page defines two delivery models: 'Turnkey', covering 'core/shell construction, MEP installation, operations, and data hall fit-out' with 'air, direct-to-chip cooling, and immersion cooling'; and 'Turnkey+', which adds 'cluster deployment' with GPU nodes, InfiniBand or Ethernet networking and storage, 'accelerating the path from megawatts to tokens to profit'. The capacity table (read 29 Sep 2026) lists CMH01 Columbus-region Ohio (75 MW in 2026, 'Fully Committed'; 75 MW in 2027; 350 MW from 2029), MEM01 Memphis (20 MW committed; 64 MW in 2027; 35 MW later; power 'GRID / BTM'), a US Southwest line (16 MW committed), a US Northeast line (50 MW committed; 245, 150 and 1,250 MW in later years, 'GRID / BTM') and a US Southeast line (150 to 750 MW from 2027, 'Selective').",
+      "highlights": [
+        "Springfield, Ohio (CMH01, 601 Benjamin Drive, the former LexisNexis site): '200MW secured' and 'first shell fully leased' (2024); the city's FAQ says 'up to 150 megawatts'; WYSO reports 25 of a 75 MW phase 'expected to be fully operational by the end of September' 2026 with completion planned for 2027; tenants Vultr (50 MW, about 24,000 AMD MI355X, a US$901M JobsOhio commitment) and Crusoe; a 15-year, 100% city Enterprise Zone abatement worth about US$95M (2028–2042)",
+        "Memphis, Tennessee (MEM01, 4300 Getwell Road, the former Fred's headquarters): bought for US$25M by 5C MEM01 LLC in 2026; a US$152.1M project in the PILOT filing (against '>$500 million' in May 2025 press); 20 MW current, 9 MW more approved by MLGW, and 50 MW applied for that 'will not advance' before Q1 2027 pending TVA; Together AI's 'Frontier AI Factory' on GB200 NVL72 with Dell liquid-cooled racks and VAST storage, 'launching in early 2026' per the homepage",
+        "Maryland: NVIDIA's 28 Oct 2025 release states 'Together AI, in partnership with 5C, already operates an AI factory in Maryland featuring NVIDIA B200 GPUs'; Pegatron's liquid-cooled HGX B200 racks are live there; the location is undisclosed and the site is absent from 5C's campus list, so it is most likely leased space",
+        "Phoenix (PHX01, 20 MW critical, up to 132 kW per cabinet, announced Sep 2024 for 2025): the table's 16 MW 'US Southwest' line; aggregators show it under construction for 2026",
+        "The roadmap shrank from 'over 2 GW' (Apr–Nov 2025 boilerplate) to 'over 1.5 gigawatts' (Jul–Aug 2026), unexplained; Charlotte (CLT01), listed by aggregators at 1.6 GW, appears in no 2026 company statement"
+      ],
+      "positioning": "5C names no competitor. Its model sits between the corpus's build-to-suit landlords (Prime, EdgeCore, Compass) and the miner-turned-landlords (Applied Digital, Core Scientific): adaptive reuse of vacant corporate buildings with an existing utility feed, sold to one or two neocloud tenants per site, with Hypertec's hardware and immersion background as the 'Turnkey+' upsell.",
+      "soldThrough": "Long-term leases to neoclouds and AI labs (Vultr's Ohio SPVs hold the state tax credits; Together AI 'jointly built' Memphis); Turnkey+ bundles compute the tenant funds",
+      "targetSegments": [
+        "AI Frontier Labs",
+        "AI Pioneers",
+        "Neoclouds",
+        "sovereign and research customers (Mila, LawZero)"
+      ],
+      "roadmap": "Springfield 75 MW phase through 2027 and 350 MW from 2029; Memphis 64 MW in 2027; Northeast 245 MW in 2027; AMD 'Helios-ready gigascale AI campuses' with initial deployments in Ohio and Memphis (Jul 2026); a European alliance with Together AI 'up to 2 GW' from late 2025 through 2028 with no named site"
+    },
+    {
+      "name": "5C Cloud — Customer Owned Inventory (CI-Metal-aaS) and Bare Metal (Metal-aaS)",
+      "category": "GPU cloud / managed compute",
+      "description": "The inherited Hypertec Cloud business. Two models: 'Customer Owned Inventory', where 'Customers provide their own dedicated compute infrastructure and 5C manages the rest (network and storage)', and 'Bare Metal', 'fully dedicated servers and networking environment with full access to physical hardware' on silicon 5C owns ('NVIDIA Blackwell, AMD Instinct, and Intel Gaudi'). Capacity is described as 'selective', 'from a combination of 5C-owned data centers and global colocation partner facilities' for 2026–2028 across North America, Europe, Asia and the Middle East.",
+      "highlights": [
+        "Hypertec Cloud co-built an HGX B200 cluster with Together AI (Mar 2025) and announced a 36,000-GPU GB200 NVL72 build 'starting Q1 2025' (Together AI, Nov 2024)",
+        "Sovereign compute: 'up to 3 MW' at the LaSalle campus for Mila's Sovereign AI Research Hub, operated by 5C (Sep 2025), and 'dedicated, sovereign compute infrastructure in Canada' for Yoshua Bengio's LawZero with Hypertec (Sep 2026)",
+        "Customer testimonials name Zyphra alongside Together AI; no revenue or GPU count is published"
+      ],
+      "positioning": "A service layer on the landlord business rather than a stand-alone neocloud: the record shows tenants (Vultr, Together AI) owning the GPUs at 5C sites, with 5C's own compute limited to sovereign and research deployments.",
+      "soldThrough": "Direct contracts; 'Customer Owned Inventory' managed services",
+      "targetSegments": [
+        "AI Frontier Labs, AI-Native Companies, Enterprise (company labels)",
+        "Canadian sovereign and research users"
+      ],
+      "roadmap": "Blackwell, Instinct and Gaudi capacity 'available in 2026-2028' (company)"
+    },
+    {
+      "name": "Site power, substations and behind-the-meter generation — the owner's scope",
+      "category": "Power procurement / site infrastructure",
+      "description": "5C owns the grid connection at its campuses and is the counterparty for site power. At Springfield, FirstEnergy's OPSB filing (Case 24-0809-EL-BNR) describes 'approximately 115-foot-long (0.02 mile) 138-kV transmission line tap from the existing East Springfield-North Titus 138-kV transmission line to the new 5C Data Center USA, Inc. substation', adding 'The customer will own the Benjamin Substation'; the city's FAQ counts '3 diesel-powered units' now and '16 additional generators' in Phase 1, and 5C says it will buy 'at least 30%' of its power from Ohio wind, solar or nuclear under PPAs and pay grid-upgrade costs. At Memphis, MLGW charges data centres 'US$1.52 million per MW upfront capacity charge', 5C's capacity table codes the site 'GRID / BTM', and FOX13's drone footage in January 2026 showed 'what appeared to be turbines' under construction. The 2024 Ohio release spoke of the site being developed 'in close partnership with the local utility'.",
+      "highlights": [
+        "Equipment categories the model implies for every phase: MV switchgear and transformers behind the customer-owned substation, diesel standby generators (19 at Springfield), UPS, direct-to-chip cooling loops and 'prefabricated power skids and cooling modules' (blog, Sep 2026); no vendor, EPC or general contractor is named in any read source",
+        "Water: a 300,000 gallons-per-day permit at Springfield with closed-loop direct-to-chip cooling, which 5C says will use 'around 10%' of that; an on-site reservoir is planned",
+        "Behind-the-meter generation at Memphis: no Shelby County Health Department or TDEC air permit naming 5C, MEM01 or 4300 Getwell Road was found; the turbines are unconfirmed by any document"
+      ],
+      "positioning": "Like Tract and PowerHouse in this corpus, 5C is the entity a utility signs with; unlike Fermi America it does not build its own plant on the record. The near-term buying power is one 75 MW Ohio phase and a 20 to 29 MW Memphis phase.",
+      "soldThrough": "Owner-developer; power passed through to tenants under the lease",
+      "targetSegments": [
+        "its own campuses"
+      ],
+      "roadmap": "Springfield 350 MW from 2029 'only after infrastructure and utility capacity are confirmed' (city FAQ); Memphis 50 MW pending TVA in 2027"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "CMH01 — Springfield, Ohio (601 Benjamin Drive, PrimeOhio Corporate Park)",
+      "specs": [
+        {
+          "band": "Site",
+          "label": "Building",
+          "value": "67,000 sq ft existing (former LexisNexis data centre), expanding to 214,000 sq ft (WYSO)"
+        },
+        {
+          "band": "Site",
+          "label": "Land",
+          "value": "1,742,400 sq ft of land; 66,000 sq ft live hall; 320,000 sq ft next phase (5C Data Centers, Jun 2024)"
+        },
+        {
+          "band": "Power",
+          "label": "Utility",
+          "value": "Ohio Edison (FirstEnergy)"
+        },
+        {
+          "band": "Power",
+          "label": "Interconnection",
+          "value": "approximately 115-foot-long (0.02 mile) 138-kV transmission line tap from the existing East Springfield-North Titus 138-kV transmission line to the new 5C Data Center USA, Inc. substation (OPSB Case 24-0809-EL-BNR)"
+        },
+        {
+          "band": "Power",
+          "label": "Substation",
+          "value": "The customer will own the Benjamin Substation"
+        },
+        {
+          "band": "Power",
+          "label": "Capacity",
+          "value": "200MW secured (2024 release); up to 150 megawatts (city FAQ); 75 MW in 2026 'Fully Committed' (capacity table); 25 of its anticipated 75 megawatt capacity by the end of September 2026 (WYSO)"
+        },
+        {
+          "band": "Power",
+          "label": "Standby",
+          "value": "3 diesel-powered units now; 16 additional generators in Phase 1 (city FAQ); 19 diesel-powered generators on-site (WYSO)"
+        },
+        {
+          "band": "Cooling",
+          "label": "Method",
+          "value": "direct-to-chip liquid cooling, closed loop; water drawn only above 80°F (5C, WYSO)"
+        },
+        {
+          "band": "Cooling",
+          "label": "Water permit",
+          "value": "300,000 gallons per day maximum; '10% of that' expected in use"
+        },
+        {
+          "band": "Tenants",
+          "label": "Vultr",
+          "value": "50 MW; about 24,000 AMD Instinct MI355X; US$901,311,378 investment; 20 committed jobs (JobsOhio)"
+        },
+        {
+          "band": "Tenants",
+          "label": "Crusoe",
+          "value": "named as a confirmed tenant (WYSO, Aug 2026); a 50%/10-year Ohio data-centre sales-tax exemption approved (Dec 2025)"
+        },
+        {
+          "band": "Incentives",
+          "label": "City",
+          "value": "15-year, 100% Enterprise Zone exemption, about US$95M (2028–2042)"
+        }
+      ],
+      "notes": "Values from the FirstEnergy transmission page, the City of Springfield FAQ, the 2024 5C Data Centers release, JobsOhio and WYSO. The same building carries 50, 75, 150, 200 and 900 MW in different documents; 25 MW by September 2026 is the only near-term figure a third party has checked."
+    },
+    {
+      "product": "MEM01 — Memphis, Tennessee (4300 Getwell Road, the former Fred's Inc. headquarters)",
+      "specs": [
+        {
+          "band": "Site",
+          "label": "Building",
+          "value": "950,972 sq ft on 57.64 acres (PILOT filing); bought for US$25 million by 5C MEM01 LLC (Shelby County records via FOX13)"
+        },
+        {
+          "band": "Site",
+          "label": "Project cost",
+          "value": "US$152.1 million total (US$111M renovation, US$16M soft costs, US$25M purchase) in the EDGE PILOT application"
+        },
+        {
+          "band": "Power",
+          "label": "Utility",
+          "value": "MLGW (distribution) / TVA"
+        },
+        {
+          "band": "Power",
+          "label": "Capacity",
+          "value": "20 MW current; 9 MW more approved (Sep 2026); 50 MW applied for, pending TVA approval, not before Q1 2027"
+        },
+        {
+          "band": "Power",
+          "label": "Capacity charge",
+          "value": "Data centers pay $1.52 million per MW upfront capacity charge (MLGW CEO)"
+        },
+        {
+          "band": "Power",
+          "label": "Source",
+          "value": "GRID / BTM (5C capacity table); turbine-like construction seen in January 2026 drone footage (FOX13); no air permit located"
+        },
+        {
+          "band": "Compute",
+          "label": "Tenant build",
+          "value": "Together AI Frontier AI Factory: NVIDIA GB200 NVL72, Dell liquid-cooled Integrated Rack Scalable Systems, VAST Data storage; GB300 NVL72 racks from Pegatron to follow"
+        },
+        {
+          "band": "Incentives",
+          "label": "PILOT",
+          "value": "15-year PILOT sought (US$32.3M abatement, 15 jobs) in Nov 2025; never heard; September 2026 reporting says the project proceeds 'without a tax freeze'"
+        }
+      ],
+      "notes": "Local press and public records (Commercial Appeal, Daily Memphian, FOX13, WREG/ABC24 via Yahoo) plus 5C's homepage. 5C's own channels give no address, utility or MW breakdown for Memphis."
+    },
+    {
+      "product": "PHX01 — Phoenix, Arizona",
+      "specs": [
+        {
+          "band": "Site",
+          "label": "Building",
+          "value": "140,000 sq ft, 'within miles of downtown'"
+        },
+        {
+          "band": "Power",
+          "label": "Critical power",
+          "value": "20MW"
+        },
+        {
+          "band": "Design",
+          "label": "Rack density",
+          "value": "up to 132 kW per cabinet"
+        },
+        {
+          "band": "Cooling",
+          "label": "Method",
+          "value": "adiabatic trim cooling with heat-tolerant coolant inlet temperatures; direct-to-chip liquid"
+        },
+        {
+          "band": "Status",
+          "label": "Timing",
+          "value": "launch 2025 (Sep 2024 release); 16 MW 'US Southwest' fully committed for 2026 (capacity table)"
+        }
+      ],
+      "notes": "5C Data Centers release of 18 Sep 2024 and the current capacity table. No PUE, redundancy tier or gross-versus-IT split is published for any 5C site."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-29",
+      "category": "financial",
+      "headline": "At the Bloomberg Canadian Finance Conference, Hypertec CEO Simon Ahdoot says 5C is 'absolutely considering an IPO' after a planned 'incremental $5 billion or $6 billion' raise; about 110 MW operational, a 1,500 MW roadmap, Hypertec 'remains largest shareholder'",
+      "read": "The next financing, not the current one, decides how much of the 1.5 GW is buildable.",
+      "source": "https://www.investing.com/news/stock-market-news/data-center-developer-5c-group-considering-an-ipo-ceo-says-4923281"
+    },
+    {
+      "date": "2026-09-17",
+      "category": "customer",
+      "headline": "LawZero's C$300M Canada–Germany funding: its compute will be built 'in partnership with Canadian partners Hypertec and 5C'",
+      "read": "Sovereign compute in Canada is 5C's own-cloud niche.",
+      "source": "https://hypertec.com/news/lawzero-receives-a-commitment-of-up-to-300m-in-joint-funding-from-canada-and-germany"
+    },
+    {
+      "date": "2026-09-01",
+      "category": "regulatory",
+      "headline": "MLGW: 5C approved for 9 MW more at Memphis; its next 50 MW and an unnamed 300 MW project need TVA approval and 'won't advance' before Q1 2027; data centres pay a US$1.52M-per-MW capacity charge",
+      "read": "Memphis growth is gated by TVA, not by 5C.",
+      "source": "https://www.yahoo.com/news/us/articles/mlgw-hints-future-data-center-214834214.html"
+    },
+    {
+      "date": "2026-09-01",
+      "category": "regulatory",
+      "headline": "Daily Memphian: the Memphis data centre proceeds without the 15-year PILOT sought in November 2025",
+      "read": "The incentive request that was never heard is dropped rather than fought.",
+      "source": "https://dailymemphian.com/subscriber/article/66099"
+    },
+    {
+      "date": "2026-08-14",
+      "category": "capacity",
+      "headline": "WYSO: 25 of Springfield's 75 MW phase due 'by the end of September'; tenants Vultr and Crusoe confirmed; 19 diesel generators planned; CEO Jonathan Ahdoot: 'This is a 40, 50 year project and beyond'",
+      "read": "First energised phase at the flagship, a year after 'operational by early 2026' was promised.",
+      "source": "https://www.wyso.org/news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism"
+    },
+    {
+      "date": "2026-08-10",
+      "category": "financial",
+      "headline": "US$605M of new debt financing led by Brookfield Asset Management; cumulative capital 'more than US$1.4 billion'; proceeds for the Memphis acquisition and construction and for Ohio and Phoenix 'as they reach key commercial and investment milestones'",
+      "read": "Brookfield moves from equity to lender; the roadmap boilerplate now reads 'over 1.5 gigawatts'.",
+      "source": "https://5c.ai/news/5c-secures-more-than-usd-1-4-billion-to-power-north-americas-ai-infrastructure"
+    },
+    {
+      "date": "2026-07-14",
+      "category": "regulatory",
+      "headline": "Springfield passes a six-month moratorium on data centres above 25 MW; 5C's project is exempt",
+      "read": "The next phases at CMH01 will be permitted in a changed climate.",
+      "source": "https://www.springfieldnewssun.com/local/springfield-passes-6-month-moratorium-on-data-centers/article_d9587a42-4cb0-5262-a191-c5dee6a6bfc1.html"
+    },
+    {
+      "date": "2026-07-09",
+      "category": "partnership",
+      "headline": "AMD collaboration: 'AMD Helios-ready gigascale AI campuses' with 'validated, repeatable rack-scale reference designs', initial deployments in Ohio and Memphis 'supporting different neocloud customers'",
+      "read": "5C positions its halls as AMD-ready alongside NVIDIA, matching its Vultr tenant's MI355X fleet.",
+      "source": "https://5c.ai/news/5c-and-amd-collaborate-to-advance-the-next-generation-of-gigascale-ai-campuses"
+    },
+    {
+      "date": "2026-06-09",
+      "category": "project",
+      "headline": "5C MEM01 LLC buys the former Fred's headquarters at 4300 Getwell Road for US$25 million (Shelby County records)",
+      "read": "The Memphis campus becomes owned, not optioned.",
+      "source": "https://www.fox13memphis.com/news/data-center-company-purchases-freds-headquarters-building-for-25-million-records-show/article_4cae4b04-ee6a-41a6-9ac3-279134616909.html"
+    },
+    {
+      "date": "2026-04-09",
+      "category": "partnership",
+      "headline": "Hypertec's CIARA becomes NVIDIA's first Canadian OEM partner; 5C's David Bitton quoted",
+      "read": "The largest shareholder is also the hardware supplier.",
+      "source": "https://hypertec.com/news/hypertec-oem-partner-announcement-with-nvidia"
+    },
+    {
+      "date": "2026-03-02",
+      "category": "customer",
+      "headline": "Ohio Tax Credit Authority adds 'The Constant Company GPU Ohio DH2 LLC' and 'DH3 LLC' as grantees on Vultr's parent's tax-credit agreement",
+      "read": "Two data-hall SPVs for the tenant point to at least two committed halls at Springfield.",
+      "source": "https://dam.assets.ohio.gov/image/upload/development.ohio.gov/business/stateincentives/Meeting_Minutes_TCA_3.2.2026_pn7x3l.pdf"
+    },
+    {
+      "date": "2026-01-07",
+      "category": "project",
+      "headline": "5C details Springfield plans to WYSO: direct-to-chip cooling, about 10% of the 300,000 gal/day water permit, 'at least 30%' renewable power under PPAs with Ohio developers, 5C to pay grid-upgrade costs",
+      "read": "The landlord, not the tenant, is the utility's and the city's counterparty.",
+      "source": "https://www.wyso.org/news/2026-01-07/springfield-data-center-developer-details-plans-for-reduced-water-energy-use"
+    },
+    {
+      "date": "2025-12-09",
+      "category": "customer",
+      "headline": "WYSO: 5C is 'taking over the former LexisNexis data center' and 'the property will be leased out to' Vultr; US$1.3B; 120 jobs; opening 'early 2026'",
+      "read": "The first public naming of 5C as Vultr's landlord.",
+      "source": "https://www.wyso.org/news/2025-12-09/new-1-3-billion-data-center-in-springfield-expected-to-open-in-early-2026"
+    },
+    {
+      "date": "2025-11-27",
+      "category": "customer",
+      "headline": "JobsOhio: Vultr commits US$901.3M and 20 jobs to Springfield; the 50 MW site runs about 24,000 AMD MI355X (trade press)",
+      "read": "The tenant's announcement does not name 5C; the local record does.",
+      "source": "https://www.jobsohio.com/newsroom/news-press/vultr-announces-1-billion-data-center-investment-in-springfield"
+    },
+    {
+      "date": "2025-11-17",
+      "category": "partnership",
+      "headline": "Pegatron, Together AI and 5C: liquid-cooled HGX B200 racks 'live at a Maryland facility'; GB300 NVL72 racks to follow",
+      "read": "The tri-party release places 5C as 'infrastructure provider' beside the rack maker and the compute owner.",
+      "source": "https://www.prnewswire.com/news-releases/pegatron-strengthens-ai-infrastructure-collaboration-with-together-ai-and-5c-for-nvidia-gb300-nvl72-and-nvidia-hgx-b200-liquid-cooled-rack-deployment-in-us-data-centers-302617887.html"
+    },
+    {
+      "date": "2025-11-17",
+      "category": "regulatory",
+      "headline": "5C MEM01 Inc. seeks a 15-year PILOT from EDGE for a US$152.1M Memphis data centre (US$32.3M abatement, 15 jobs)",
+      "read": "The filing puts the project cost at a third of the '>$500 million' reported in May.",
+      "source": "https://finance.yahoo.com/news/tax-incentive-sought-data-center-230105183.html"
+    },
+    {
+      "date": "2025-10-28",
+      "category": "customer",
+      "headline": "NVIDIA: 'Together AI, in partnership with 5C, already operates an AI factory in Maryland featuring NVIDIA B200 GPUs and is bringing a new one online soon in Memphis, Tennessee, featuring NVIDIA GB200 and GB300 systems'",
+      "read": "The strongest independent statement that 5C is Together AI's landlord at both sites.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-partners-ai-infrastructure-america"
+    },
+    {
+      "date": "2025-09-25",
+      "category": "project",
+      "headline": "Mila, 5C and Hypertec announce a C$250M LaSalle campus with a Sovereign AI Research Hub and 'up to 3 MW of secure AI infrastructure' operated by 5C",
+      "read": "Hypertec supplies the campus; 5C runs the compute.",
+      "source": "https://5c.ai/news/mila-5c-and-hypertec-announce-250-million-lasalle-campus-and-sovereign-ai-research-hub-to-strengthen-canadas-role-as-a-global-leader-in-ai-innovation"
+    },
+    {
+      "date": "2025-07-23",
+      "category": "financial",
+      "headline": "US$835M of capital: equity led by Brookfield Asset Management's Infrastructure Structured Solutions strategy and debt led by Deutsche Bank; Moelis advised; the borrower is 'CMH01 Holdings' (Lexpert)",
+      "read": "The Ohio campus is the asset the first institutional money was raised on.",
+      "source": "https://5c.ai/news/5c-group-secures-835-million-of-capital-from-brookfield-and-deutsche-bank"
+    },
+    {
+      "date": "2025-06-12",
+      "category": "partnership",
+      "headline": "Hypertec, 5C and Together AI form a European alliance: 'up to 2 GW', 'up to 100,000 GPUs', 'up to $5 billion in private investments' in France, the UK, Italy and Portugal, 'late 2025 through 2028'",
+      "read": "A framework with no named site fifteen months on.",
+      "source": "https://hypertec.com/news/hypertec-expands-into-europe-with-5c-and-together-ai-a-strategic-ai-infrastructure-alliance-driving-up-to-5-billion-in-private-investments"
+    },
+    {
+      "date": "2025-05-05",
+      "category": "project",
+      "headline": "Daily Memphian: the former Fred's headquarters to become a '>$500 million' AI data centre, opening 'this summer'",
+      "read": "The Memphis timeline slipped by more than a year from this first report.",
+      "source": "https://dailymemphian.com/article/51697/data-center-moving-into-former-freds-headquarters"
+    },
+    {
+      "date": "2025-04-10",
+      "category": "corporate",
+      "headline": "5C Group formed: Hypertec Cloud spins off from Hypertec Group and acquires 5C Data Centers, 'creating one of the largest AI digital infrastructure providers in North America'; Jonathan Ahdoot CEO",
+      "read": "The identity event: a cloud division and a developer become one landlord.",
+      "source": "https://5c.ai/news/5c-group-formed-as-hypertec-cloud-acquires-5c-data-centers-creating-one-of-the-largest-ai-digital-infrastructure-providers-in-north-america"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "brookfield",
+      "type": "investor",
+      "status": "active",
+      "since": "2025-07",
+      "scale": "led the equity of a US$835M raise (Jul 2025) and a US$605M debt financing (Aug 2026)",
+      "via": "Brookfield Infrastructure Structured Solutions",
+      "note": "Brookfield Asset Management is 5C's institutional backer: it led the equity portion of the July 2025 US$835M raise 'through its Infrastructure Structured Solutions strategy, alongside affiliated entities' and led the August 2026 US$605M debt financing.",
+      "context": "The equity share is undisclosed. Brookfield's Hamish Kidd called the 2026 loan 'our partnership with 5C'. Deutsche Bank led the debt in the 2025 raise; Moelis was placement agent; the borrower on the 2025 deal was 'CMH01 Holdings', the Springfield campus entity, per Lexpert. Brookfield's own channels have not been checked for a 5C statement; the relationship is recorded from 5C's releases and the law-firm deal notes.",
+      "source": "https://5c.ai/news/5c-group-secures-835-million-of-capital-from-brookfield-and-deutsche-bank"
+    },
+    {
+      "slug": "amd",
+      "type": "partner",
+      "status": "active",
+      "since": "2026-07",
+      "via": "AMD Helios-ready rack-scale reference designs; Vultr's MI355X fleet at Springfield",
+      "note": "AMD and 5C announced 'AMD Helios-ready gigascale AI campuses' with initial deployments in Ohio and Memphis; 5C's Springfield tenant Vultr runs about 24,000 AMD MI355X there.",
+      "context": "The 9 Jul 2026 release describes 'validated, repeatable rack-scale reference designs' for AMD's Helios generation. Separately, Vultr's Ohio region was launched on MI355X with MI450/Helios 'at a later stage' (trade press, Dec 2025). 5C also lists NVIDIA Blackwell and Intel Gaudi in its cloud catalogue; AMD's own dossier does not name 5C.",
+      "source": "https://5c.ai/news/5c-and-amd-collaborate-to-advance-the-next-generation-of-gigascale-ai-campuses"
+    },
+    {
+      "slug": "nvidia",
+      "type": "supplier",
+      "status": "active",
+      "via": "GB200 NVL72 and GB300 NVL72 at Memphis; HGX B200 in Maryland; Hypertec's CIARA as NVIDIA's first Canadian OEM",
+      "note": "NVIDIA's own release names 5C as Together AI's partner at the Maryland B200 site and the Memphis GB200/GB300 site; the Memphis build uses GB200 NVL72 with Dell racks, and 5C's parent Hypertec is an NVIDIA OEM.",
+      "context": "The 28 Oct 2025 NVIDIA release is the only independent source that ties 5C to both Together AI sites by name. 5C's cloud catalogue lists 'NVIDIA Blackwell' beside AMD Instinct and Intel Gaudi. The compute at the tenant sites is owned by the tenants, so NVIDIA's customer is Together AI; 5C is the hall.",
+      "source": "https://nvidianews.nvidia.com/news/nvidia-partners-ai-infrastructure-america"
+    },
+    {
+      "slug": "crusoe",
+      "type": "customer",
+      "status": "announced",
+      "since": "2025-12",
+      "via": "Springfield, Ohio (CMH01)",
+      "note": "WYSO names Crusoe as a confirmed tenant of 5C's Springfield building alongside Vultr; Crusoe was approved for an Ohio data-centre sales-tax exemption for Springfield in December 2025.",
+      "context": "Neither Crusoe nor 5C has announced the tenancy on its own channels; the record is WYSO's August 2026 report ('Other confirmed tenants in the building include cloud infrastructure company Vultr and AI infrastructure company Crusoe Energy Systems') and the Springfield News-Sun's December 2025 report of Crusoe's 50%/10-year state exemption with 20 jobs. Scope and MW are unknown. The corpus's Crusoe dossier does not name 5C or Springfield.",
+      "source": "https://www.wyso.org/news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "City of Springfield data-centre moratorium and Clark County zoning",
+      "status": "in-effect",
+      "effectiveDate": "2026-07-14",
+      "exposure": "Springfield passed a six-month moratorium on data centres above 25 MW on 14 Jul 2026, with 5C's project exempt; Clark County restricted data centres to I-2 conditional use with at least four public meetings (county land only); a residents' charter-amendment petition would bar new data centres above 7.5 MW. The 350 MW planned at CMH01 from 2029 would be permitted under whatever replaces the moratorium.",
+      "mitigation": "5C says it pays large-user rates and grid-upgrade costs, will source 'at least 30%' of power from Ohio renewables under PPAs, and will use about 10% of its water permit (WYSO, Jan 2026).",
+      "source": "https://www.springfieldnewssun.com/local/springfield-passes-6-month-moratorium-on-data-centers/article_d9587a42-4cb0-5262-a191-c5dee6a6bfc1.html"
+    },
+    {
+      "regime": "Ohio Enterprise Zone abatement and Job Creation Tax Credit",
+      "status": "in-effect",
+      "exposure": "5C holds a 15-year, 100% city Enterprise Zone property-tax exemption at Springfield worth about US$95M (2028–2042); its tenant's parent, The Constant Company, holds a 10-year, 50% state tax credit worth about US$32M, extended in March 2026 to two data-hall SPVs.",
+      "source": "https://www.wyso.org/news/2025-12-09/new-1-3-billion-data-center-in-springfield-expected-to-open-in-early-2026"
+    },
+    {
+      "regime": "MLGW/TVA large-load approval and capacity charge (Memphis)",
+      "status": "in-effect",
+      "exposure": "MLGW charges data centres a US$1.52 million-per-MW upfront capacity charge; 5C's next 50 MW at Memphis requires TVA approval and 'won't advance' before Q1 2027. 5C's 2025 PILOT application to EDGE was never heard, and the company is proceeding without it.",
+      "source": "https://www.yahoo.com/news/us/articles/mlgw-hints-future-data-center-214834214.html"
+    },
+    {
+      "regime": "Air permitting for behind-the-meter generation (Shelby County)",
+      "status": "proposed",
+      "exposure": "5C's capacity table codes Memphis 'GRID / BTM' and drone footage showed turbine-like construction in January 2026, in a county where xAI's turbine permits are under appeal by SELC and the NAACP. No Shelby County Health Department or TDEC permit naming 5C, MEM01 or 4300 Getwell Road was found; the generation is unpermitted on the public record as far as this session could establish.",
+      "source": "https://www.fox13memphis.com/news/data-center-company-purchases-freds-headquarters-building-for-25-million-records-show/article_4cae4b04-ee6a-41a6-9ac3-279134616909.html"
+    }
+  ],
+  "strategyRead": [
+    "(High confidence) We assess that 5C, not its tenants, is the buyer of record for site power at its campuses, and that Springfield is where that authority is documented. Basis: FirstEnergy's OPSB filing names 'the new 5C Data Center USA, Inc. substation' and says 'The customer will own the Benjamin Substation'; the city's FAQ counts 19 diesel generators on 5C's project; Vultr's own announcement invests in GPUs and names no landlord. Collection gap: no switchgear, transformer, UPS, generator or cooling vendor, and no EPC, is named anywhere. Indicator to watch: the Phase 2 permits at Springfield after the moratorium lapses in January 2027.",
+    "(High confidence) We assess the capacity table as a sales document and the local record as the build record. Basis: 'over 2 GW' became 'over 1.5 gigawatts' with no explanation; '600 MW available in 6–18 months' (Apr 2025) became about 110 MW operational (Sep 2026); Springfield 'operational by early 2026' became 25 MW by the end of September 2026; Memphis 'this summer' (2025) became 20 MW in 2026 with the next 50 MW waiting on TVA. Indicator to watch: WYSO's follow-up on the 25 MW date and MLGW's Q1 2027 approvals.",
+    "(Moderate confidence) We assess that the Memphis site will carry behind-the-meter gas generation that 5C signs for, and that it is unpermitted today. Basis: the 'GRID / BTM' code, the January 2026 drone footage of 'what appeared to be turbines', and the absence of any air permit in 5C's name at a health department that is litigating xAI's turbines. This is an inference from a label and a photograph. Indicator to watch: a Shelby County Health Department construction permit or a TDEC notice naming 5C or 4300 Getwell Road.",
+    "(Moderate confidence) We assess that the next financing, not the 2025 and 2026 rounds, decides the buildable roadmap. Basis: US$1.4B raised against a stated US$1.3B Springfield project and a US$152M Memphis project; Simon Ahdoot's 'incremental $5 billion or $6 billion' and IPO remarks on 29 Sep 2026; Brookfield's second cheque was debt, not equity. Indicator to watch: the close of the 'current round of financing' and any IPO filing.",
+    "(Low confidence) We assess that no SST, 800 VDC or battery purchase is in prospect at 5C. Basis: nothing on 5c.ai or hypertec.com mentions solid-state transformers, 800 VDC or energy storage; the AMD Helios reference-design work is rack-scale, not distribution-level. This is an inference from absence. Indicator to watch: the 'prefabricated power skids' the September 2026 blog describes, if a supplier is ever named."
+  ],
+  "decisionMakers": [
+    {
+      "name": "Jonathan Ahdoot",
+      "title": "Chief Executive Officer, 5C Group",
+      "background": [
+        "CEO of 5C Group since its formation on 10 Apr 2025; the company voice on every release since",
+        "President of Hypertec Cloud ('HCI') 2024–Apr 2025; quoted as such in Together AI's Nov 2024 GB200 announcement",
+        "Brother of Hypertec Group CEO Simon Ahdoot (The Logic)"
+      ]
+    },
+    {
+      "name": "Simon Ahdoot",
+      "title": "Chief Executive Officer, Hypertec Group (5C's largest shareholder)",
+      "background": [
+        "CEO of Hypertec Group since Jan 2025 (also styled President); announced the 5C spin-off and the IPO consideration (Sep 2026)",
+        "Hypertec was founded in 1984 by Robert Ahdoot, now executive chair"
+      ]
+    },
+    {
+      "name": "David Dubrovsky",
+      "title": "Chief Investment Officer",
+      "background": [
+        "Joined 5C in Mar 2026 (LinkedIn-sourced reporting; no company release); corporate development, M&A, capital markets and legal",
+        "Background reported as OMERS, AustralianSuper and New York corporate law; not verified on first-party channels"
+      ]
+    },
+    {
+      "name": "David Bitton",
+      "title": "Vice President, AI and Product Strategy",
+      "background": [
+        "Company voice on AMD, NVIDIA GTC and Springfield technical matters (2026); quoted in Hypertec's Apr 2026 NVIDIA OEM release",
+        "Formerly Global Director of Product Strategy, Hypertec (joined 2019, third-party)"
+      ]
+    },
+    {
+      "name": "Michael Gero",
+      "title": "Vice President, Cloud Operations",
+      "background": [
+        "Named in 5C's 2025 year-in-review"
+      ]
+    },
+    {
+      "name": "Guillaume Lemieux",
+      "title": "Director of Engineering, Data Center",
+      "background": [
+        "Named in 5C's September 2026 blogs"
+      ]
+    },
+    {
+      "name": "Nathalie Bergeron",
+      "title": "Director, Marketing and AI Product",
+      "background": [
+        "Media contact on the April 2025 formation release (then at a hypertec.com address)"
+      ]
+    },
+    {
+      "name": "Steve Perez",
+      "title": "Founder of 5C Data Centers (pre-acquisition; current role unknown)",
+      "background": [
+        "Founder and President, then CEO, of 5C Data Centers (2024 releases on Columbus and Phoenix)",
+        "Reported as a founding member of Hypertec DCS and its VP of sales (DCD snippet, unverified)",
+        "Absent from every post-April-2025 first-party document"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2025 (calendar 2025; no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No revenue, EBITDA or backlog figure exists on any channel; aggregator estimates for Hypertec (US$100–500M) are not 5C's"
+          },
+          {
+            "name": "Capital raised",
+            "actual": "US$835M: equity led by Brookfield Asset Management (Infrastructure Structured Solutions), debt led by Deutsche Bank; split undisclosed (23 Jul 2025)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Borrower named as 'CMH01 Holdings' by Lexpert; advisers Moelis, Osler, Simpson Thacher, McCarthy Tétrault, Milbank"
+          },
+          {
+            "name": "Committed capacity",
+            "actual": "161 MW labelled 'Fully Committed' for 2026 in the capacity table (75 + 20 + 16 + 50 MW)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The closest thing to a contracted figure; no dollar backlog",
+            "kpi": "mw-contracted",
+            "qty": 161
+          }
+        ],
+        "commentary": "The formation year: the April 2025 merger, the July 2025 raise and the first tenant announcements (Together AI in Maryland, Vultr in Ohio)."
+      },
+      {
+        "period": "2026 year to date (September)",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Private; the company said on 29 Sep 2026 that an IPO is under consideration after the next raise"
+          },
+          {
+            "name": "Debt raised",
+            "actual": "US$605M led by Brookfield Asset Management (10 Aug 2026); cumulative 'more than US$1.4 billion'",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The release does not itemise how US$835M and US$605M reach US$1.4B beyond 'capital raised in 2025'"
+          },
+          {
+            "name": "Operational capacity",
+            "actual": "About 110 MW operational (Simon Ahdoot, 29 Sep 2026); 25 of Springfield's 75 MW due by end-September; Memphis 20 MW plus 9 MW approved",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Against '600 MW' deployable in 6–18 months claimed in April 2025",
+            "kpi": "mw-energized",
+            "qty": 110
+          },
+          {
+            "name": "Next raise",
+            "actual": "'an incremental $5 billion or $6 billion in a combination of debt and equity' targeted (Hypertec CEO, 29 Sep 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Not launched on the record"
+          },
+          {
+            "name": "Public incentives",
+            "actual": "Springfield Enterprise Zone abatement about US$95M (2028–2042); Memphis PILOT of US$32.3M sought Nov 2025, never heard, project proceeding without it",
+            "expected": "",
+            "verdict": "inline",
+            "result": "WYSO; Daily Memphian"
+          }
+        ],
+        "commentary": "Cash is raised campus by campus against Brookfield's structured equity and private credit; the roadmap boilerplate fell from 'over 2 GW' to 'over 1.5 gigawatts' in the same year."
+      }
+    ],
+    "commentary": "A private company with no published financial statements. Its record is two financings, a set of local incentive filings that put the Memphis project at US$152.1M and the Springfield project at up to US$1.3B, and a September 2026 statement that the next round is US$5–6 billion. The refresh calendar carries it as a quarterly private row; an IPO filing would convert it to a dated row."
+  },
+  "sources": [
+    {
+      "label": "5C blog — Looking back at ALL IN 2026 (LawZero, Vera Rubin)",
+      "url": "https://5c.ai/blog/looking-back-at-all-in-2026",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "Investing.com — Data center developer 5C Group considering an IPO, CEO says (Bloomberg Canadian Finance Conference)",
+      "url": "https://www.investing.com/news/stock-market-news/data-center-developer-5c-group-considering-an-ipo-ceo-says-4923281",
+      "date": "2026-09-29"
+    },
+    {
+      "label": "Compute Atlas — 5C MEM01, Memphis (GRID BTM)",
+      "url": "https://www.compute-atlas.com/facilities/5c-mem01-memphis-tn",
+      "date": "2026-09-21"
+    },
+    {
+      "label": "Hypertec — LawZero receives a commitment of up to $300M in joint funding from Canada and Germany",
+      "url": "https://hypertec.com/news/lawzero-receives-a-commitment-of-up-to-300m-in-joint-funding-from-canada-and-germany",
+      "date": "2026-09-17"
+    },
+    {
+      "label": "5C blog — AI infrastructure: key takeaways from the summer on the road (prefabricated power skids, warmer-water cooling)",
+      "url": "https://5c.ai/blog/ai-infrastructure-key-takeaways-from-the-summer-on-the-road",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "WREG via Yahoo — How many data centers are coming to Memphis? (MLGW capacity charge)",
+      "url": "https://www.yahoo.com/news/us/articles/many-data-centers-coming-impact-214924381.html",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "ABC24 via Yahoo — MLGW hints at future data center development (5C 9 MW approved; 50 MW pending TVA)",
+      "url": "https://www.yahoo.com/news/us/articles/mlgw-hints-future-data-center-214834214.html",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Daily Memphian — New Memphis 5C Group data center shuns tax incentives",
+      "url": "https://dailymemphian.com/subscriber/article/66099",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Daily Memphian — 5C turning former Fred's HQ into AI data center",
+      "url": "https://dailymemphian.com/subscriber/article/66110",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "WYSO — Springfield's $1.3B data center brings economic hope and environmental skepticism",
+      "url": "https://www.wyso.org/news/2026-08-14/springfields-1-3b-data-center-brings-economic-hope-and-environmental-skepticism",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "5C — 5C Secures More Than US$1.4 Billion to Power North America's AI Infrastructure (US$605M Brookfield-led debt)",
+      "url": "https://5c.ai/news/5c-secures-more-than-usd-1-4-billion-to-power-north-americas-ai-infrastructure",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Alternatives Watch — Brookfield leads $600m+ data center financing for 5C Group",
+      "url": "https://www.alternativeswatch.com/2026/08/10/brookfield-5c-group-data-centers-i-squared-ooh-media/",
+      "date": "2026-08-10"
+    },
+    {
+      "label": "Compute Atlas — 5C Group / Vultr, Prime Ohio, Springfield",
+      "url": "https://www.compute-atlas.com/facilities/5c-group-vultr-prime-ohio-springfield-oh",
+      "date": "2026-08-02"
+    },
+    {
+      "label": "5C blog — RAISE Summit 2026",
+      "url": "https://5c.ai/blog/raise-summit-2026",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "Springfield News-Sun — Springfield passes 6-month moratorium on data centers",
+      "url": "https://www.springfieldnewssun.com/local/springfield-passes-6-month-moratorium-on-data-centers/article_d9587a42-4cb0-5262-a191-c5dee6a6bfc1.html",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "Springfield News-Sun — Why a petition has been launched to ban data centers in Springfield",
+      "url": "https://www.springfieldnewssun.com/local/why-a-petition-has-been-launched-to-ban-data-centers-in-springfield/article_dff2e973-2d49-5408-80a5-382ea2f384b9.html",
+      "date": "2026-07-12"
+    },
+    {
+      "label": "Springfield News-Sun — Clark County approves new zoning rules for data centers",
+      "url": "https://www.springfieldnewssun.com/local/clark-county-approves-new-zoning-rules-for-data-centers/article_941ca03e-6407-53b8-85b4-e86901b4c0b4.html",
+      "date": "2026-07-11"
+    },
+    {
+      "label": "5C — 5C and AMD Collaborate to Advance the Next Generation of Gigascale AI Campuses",
+      "url": "https://5c.ai/news/5c-and-amd-collaborate-to-advance-the-next-generation-of-gigascale-ai-campuses",
+      "date": "2026-07-09"
+    },
+    {
+      "label": "TechCrunch — Neocloud Together AI raises $800M, leaps to $8.3B valuation",
+      "url": "https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Daily Memphian — Canada-based company buys former Fred's HQ for $25M near Memphis airport",
+      "url": "https://dailymemphian.com/subscriber/article/63743/5c-data-center-purchases-former-freds-hq-for-25-near-memphis-airport",
+      "date": "2026-06-09"
+    },
+    {
+      "label": "FOX13 Memphis — Data center company purchases Fred's headquarters building for $25 million, records show",
+      "url": "https://www.fox13memphis.com/news/data-center-company-purchases-freds-headquarters-building-for-25-million-records-show/article_4cae4b04-ee6a-41a6-9ac3-279134616909.html",
+      "date": "2026-06"
+    },
+    {
+      "label": "5C blog — Building AI, Closer to Home (CIARA, LaSalle)",
+      "url": "https://5c.ai/blog/building-ai-closer-to-home",
+      "date": "2026-05-25"
+    },
+    {
+      "label": "5C blog — Looking back at NVIDIA GTC26",
+      "url": "https://5c.ai/blog/looking-back-at-nvidia-gtc26-recap",
+      "date": "2026-04-14"
+    },
+    {
+      "label": "Hypertec — Hypertec OEM partner announcement with NVIDIA (CIARA, first Canadian OEM)",
+      "url": "https://hypertec.com/news/hypertec-oem-partner-announcement-with-nvidia",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "BetaKit — Hypertec becomes key partner for Nvidia in Canada",
+      "url": "https://betakit.com/hypertec-becomes-key-partner-for-nvidia-in-canada/",
+      "date": "2026-04-09"
+    },
+    {
+      "label": "Ohio Tax Credit Authority — meeting minutes (The Constant Company GPU Ohio DH2 LLC and DH3 LLC added)",
+      "url": "https://dam.assets.ohio.gov/image/upload/development.ohio.gov/business/stateincentives/Meeting_Minutes_TCA_3.2.2026_pn7x3l.pdf",
+      "date": "2026-03-02"
+    },
+    {
+      "label": "5C blog — Building next-gen AI factories: 2025 in review",
+      "url": "https://5c.ai/blog/building-next-gen-ai-factories-year-in-review",
+      "date": "2026-01-13"
+    },
+    {
+      "label": "WYSO — Springfield data center developer details plans for reduced water, energy use",
+      "url": "https://www.wyso.org/news/2026-01-07/springfield-data-center-developer-details-plans-for-reduced-water-energy-use",
+      "date": "2026-01-07"
+    },
+    {
+      "label": "Springfield News-Sun — Crusoe data center to come to Springfield, expected to create 20 jobs",
+      "url": "https://www.springfieldnewssun.com/news/crusoe-data-center-to-come-to-springfield-expected-to-create-20-jobs/article_80ee7151-1807-56ce-aeb5-f3d511ea5f9d.html",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "WYSO — New $1.3 billion data center in Springfield expected to open in early 2026",
+      "url": "https://www.wyso.org/news/2025-12-09/new-1-3-billion-data-center-in-springfield-expected-to-open-in-early-2026",
+      "date": "2025-12-09"
+    },
+    {
+      "label": "datacenter.news — Vultr launches AMD AI supercluster in Ohio (24,000 MI355X, 50 MW)",
+      "url": "https://datacenter.news/story/vultr-launches-usd-50m-amd-ai-supercluster-in-ohio-for-growth",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Investing.com — Vultr expands AI capacity with AMD GPUs at new Ohio data center",
+      "url": "https://www.investing.com/news/company-news/vultr-expands-ai-capacity-with-amd-gpus-at-new-ohio-data-center-93CH-4386259",
+      "date": "2025-12-02"
+    },
+    {
+      "label": "JobsOhio — Vultr announces $1 billion data center investment in Springfield",
+      "url": "https://www.jobsohio.com/newsroom/news-press/vultr-announces-1-billion-data-center-investment-in-springfield",
+      "date": "2025-11-27"
+    },
+    {
+      "label": "Commercial Appeal via Yahoo — Tax incentive sought for data center at former Fred's (5C MEM01 Inc.; US$152.1M)",
+      "url": "https://finance.yahoo.com/news/tax-incentive-sought-data-center-230105183.html",
+      "date": "2025-11-17"
+    },
+    {
+      "label": "Daily Memphian — Data center at former Fred's wants 15-year PILOT",
+      "url": "https://dailymemphian.com/article/57230",
+      "date": "2025-11-17"
+    },
+    {
+      "label": "PR Newswire — Pegatron strengthens AI infrastructure collaboration with Together AI and 5C (GB300 NVL72; HGX B200 liquid-cooled racks in Maryland)",
+      "url": "https://www.prnewswire.com/news-releases/pegatron-strengthens-ai-infrastructure-collaboration-with-together-ai-and-5c-for-nvidia-gb300-nvl72-and-nvidia-hgx-b200-liquid-cooled-rack-deployment-in-us-data-centers-302617887.html",
+      "date": "2025-11-17"
+    },
+    {
+      "label": "Springfield News-Sun — New data center planned for Springfield, expected to create 20 jobs (Constant Company / Vultr)",
+      "url": "https://www.springfieldnewssun.com/news/new-data-center-planned-for-springfield-expected-to-create-20-jobs/article_723aaab7-1a3b-557e-9294-f124d9e7109e.html",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "NVIDIA — NVIDIA and partners build America's AI infrastructure ('Together AI, in partnership with 5C')",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-partners-ai-infrastructure-america",
+      "date": "2025-10-28"
+    },
+    {
+      "label": "The Logic — Hypertec hopes a new Quebec testing ground will help it sell AI hardware",
+      "url": "https://thelogic.co/news/hypertec-mila-5c-quebec/",
+      "date": "2025-10-06"
+    },
+    {
+      "label": "BetaKit — Mila partners with Hypertec and 5C to launch sovereign AI research hub in Montreal",
+      "url": "https://betakit.com/mila-partners-with-hypertec-and-5c-to-launch-sovereign-ai-research-hub-in-montreal/",
+      "date": "2025-09-29"
+    },
+    {
+      "label": "5C — Mila, 5C and Hypertec announce $250 million LaSalle campus and Sovereign AI Research Hub",
+      "url": "https://5c.ai/news/mila-5c-and-hypertec-announce-250-million-lasalle-campus-and-sovereign-ai-research-hub-to-strengthen-canadas-role-as-a-global-leader-in-ai-innovation",
+      "date": "2025-09-25"
+    },
+    {
+      "label": "5C — Terms of Use (5C AI Group Inc.)",
+      "url": "https://5c.ai/terms-of-use",
+      "date": "2025-09-23"
+    },
+    {
+      "label": "Lexpert — 5C Group's CMH01 Holdings secures US$835M to develop North American data centre portfolio",
+      "url": "https://www.lexpert.ca/big-deals/5c-groups-cmh01-holdings-secures-us835m-to-develop-north-american-data-centre-portfolio/394198",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "McCarthy Tétrault — Brookfield Asset Management provides equity financing to 5C",
+      "url": "https://www.mccarthy.ca/en/experience/brookfield-asset-management-provides-equity-financing-to-5c",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "5C — 5C Group Secures $835 Million of Capital from Brookfield and Deutsche Bank",
+      "url": "https://5c.ai/news/5c-group-secures-835-million-of-capital-from-brookfield-and-deutsche-bank",
+      "date": "2025-07-23"
+    },
+    {
+      "label": "FirstEnergy / ATSI — East Springfield-North Titus 138-kV tap to the 5C Data Center USA, Inc. substation (OPSB 24-0809-EL-BNR)",
+      "url": "https://www.firstenergycorp.com/about/transmission_projects/ohio/east-springfield-north-titus.html",
+      "date": "2025-07-21"
+    },
+    {
+      "label": "5C blog — 5C expands into Europe with AI infrastructure alliance",
+      "url": "https://5c.ai/blog/5c-expands-into-europe-with-ai-infrastructure-alliance",
+      "date": "2025-07-07"
+    },
+    {
+      "label": "Hypertec — Hypertec expands into Europe with 5C and Together AI (up to 2 GW; up to $5 billion)",
+      "url": "https://hypertec.com/news/hypertec-expands-into-europe-with-5c-and-together-ai-a-strategic-ai-infrastructure-alliance-driving-up-to-5-billion-in-private-investments",
+      "date": "2025-06-12"
+    },
+    {
+      "label": "Together AI — Bringing 100,000 GPUs to Europe (with Hypertec and 5C Group)",
+      "url": "https://www.together.ai/blog/together-ai-expands-in-europe",
+      "date": "2025-06-12"
+    },
+    {
+      "label": "Data Center Frontier — 5C Group to drive business growth in HPC and AI data center deployments",
+      "url": "https://www.datacenterfrontier.com/machine-learning/article/55293090/5c-group-to-drive-business-growth-in-hpc-and-ai-data-center-deployments",
+      "date": "2025-06-04"
+    },
+    {
+      "label": "Action News 5 — New AI data center coming to Memphis",
+      "url": "https://www.actionnews5.com/2025/05/08/new-ai-data-center-coming-memphis/",
+      "date": "2025-05-08"
+    },
+    {
+      "label": "5C blog — Hypertec Cloud partners with Together AI and acquires 5C Data Centers",
+      "url": "https://5c.ai/blog/hypertec-cloud-partners-with-together-ai-and-acquires-5c-data-centers-to-shape-the-next-generation-of-ai-factories",
+      "date": "2025-05-06"
+    },
+    {
+      "label": "Daily Memphian — Former Fred's HQ to become AI data center",
+      "url": "https://dailymemphian.com/article/51697/data-center-moving-into-former-freds-headquarters",
+      "date": "2025-05-05"
+    },
+    {
+      "label": "IntelligentCIO — 5C Group formed as Hypertec Cloud acquires 5C Data Centers",
+      "url": "https://www.intelligentcio.com/north-america/2025/04/14/5c-group-formed-as-hypertec-cloud-acquires-5c-data-centers-creating-one-of-the-largest-ai-digital-infrastructure-providers-in-north-america/",
+      "date": "2025-04-14"
+    },
+    {
+      "label": "5C — 5C Group Formed as Hypertec Cloud Acquires 5C Data Centers",
+      "url": "https://5c.ai/news/5c-group-formed-as-hypertec-cloud-acquires-5c-data-centers-creating-one-of-the-largest-ai-digital-infrastructure-providers-in-north-america",
+      "date": "2025-04-10"
+    },
+    {
+      "label": "PR Newswire — 5C Group Formed as Hypertec Cloud Acquires 5C Data Centers (wire copy)",
+      "url": "https://www.prnewswire.com/news-releases/5c-group-formed-as-hypertec-cloud-acquires-5c-data-centers-creating-one-of-the-largest-ai-digital-infrastructure-providers-in-north-america-302425865.html",
+      "date": "2025-04-10"
+    },
+    {
+      "label": "Hypertec Cloud — Unveils NVIDIA Blackwell HGX B200 GPU clusters with Together AI",
+      "url": "https://5c.ai/news/hypertec-cloud-unveils-nvidia-blackwell-hgx-b200-gpu-clusters-with-together-ai",
+      "date": "2025-03-18"
+    },
+    {
+      "label": "Hypertec Cloud — Partners with Potentia to power sustainable AI cloud expansion (480 MW)",
+      "url": "https://5c.ai/news/hypertec-cloud-partners-with-potentia-to-power-sustainable-ai-cloud-expansion",
+      "date": "2025-01-21"
+    },
+    {
+      "label": "Springfield News-Sun — Springfield data center project proposes 100 jobs, over $1 billion investment (5C Data Centers USA, Inc.)",
+      "url": "https://www.springfieldnewssun.com/news/springfield-data-center-project-proposes-100-jobs-over-1-billion-investment/article_209d84e3-058f-54af-8db1-f7faa1ff2f39.html",
+      "date": "2024-11-26"
+    },
+    {
+      "label": "Together AI — Together AI to co-build 36K GB200 NVL72 cluster with Hypertec Cloud",
+      "url": "https://www.together.ai/blog/nvidia-gb200-together-gpu-cluster-36k",
+      "date": "2024-11-18"
+    },
+    {
+      "label": "Area Development — 5C Data Centers plans Phoenix, Arizona operations",
+      "url": "https://www.areadevelopment.com/newsItems/9-23-2024/5c-data-centers-phoenix-arizona.shtml",
+      "date": "2024-09-23"
+    },
+    {
+      "label": "PR Newswire — 5C Data Centers announces new data center region in Phoenix, Arizona (PHX01)",
+      "url": "https://www.prnewswire.com/news-releases/5c-data-centers-announces-new-data-center-region-in-phoenix-arizona-302252217.html",
+      "date": "2024-09-18"
+    },
+    {
+      "label": "Hypertec Cloud — Major expansion to deploy up to 100,000 GPUs by early 2025",
+      "url": "https://5c.ai/news/hypertec-cloud-announces-major-expansion-with-unprecedented-capacity-to-deploy-up-to-100000-gpus-for-ai-by-early-2025",
+      "date": "2024-09-12"
+    },
+    {
+      "label": "Telecom Review Americas — 5C Data Centers to develop mega campus in Columbus, Ohio (CMH01)",
+      "url": "https://www.telecomreviewamericas.com/articles/wholesale-and-capacity/5c-data-centers-to-develop-mega-campus-in-columbus-ohio/",
+      "date": "2024-06-21"
+    },
+    {
+      "label": "PR Newswire — 5C Data Centers announces data center campus in the Columbus, Ohio region (200MW secured)",
+      "url": "https://www.prnewswire.com/news-releases/5c-data-centers-announces-data-center-campus-in-the-columbus-ohio-region-302177131.html",
+      "date": "2024-06-19"
+    },
+    {
+      "label": "5C — Homepage (Memphis Frontier AI Factory with Together AI)",
+      "url": "https://5c.ai/"
+    },
+    {
+      "label": "5C — Data Centers (capacity table; Turnkey and Turnkey+)",
+      "url": "https://5c.ai/datacenters"
+    },
+    {
+      "label": "5C — Cloud (CI-Metal-aaS and Metal-aaS)",
+      "url": "https://5c.ai/cloud"
+    },
+    {
+      "label": "5C — About us",
+      "url": "https://5c.ai/about-us"
+    },
+    {
+      "label": "5C — Contact (5C Headquarters, Saint-Laurent)",
+      "url": "https://5c.ai/contact"
+    },
+    {
+      "label": "City of Springfield — 5C Data Center FAQs (up to 150 MW; generators; water)",
+      "url": "https://springfieldohio.gov/5c-data-center-faqs/"
+    },
+    {
+      "label": "Together AI — Frontier AI Factory",
+      "url": "https://www.together.ai/ai-factory"
+    },
+    {
+      "label": "Together AI — GPU cluster and data center locations",
+      "url": "https://together.ai/data-center-locations"
+    },
+    {
+      "label": "Hypertec — About us (Hypertec Cloud 'acquired 5C and spun off from Hypertec Group in 2025')",
+      "url": "https://hypertec.com/about-us"
+    },
+    {
+      "label": "Sacra — Together AI revenue, valuation and funding (Maryland live since July 2025; Memphis forthcoming)",
+      "url": "https://sacra.com/c/together-ai/"
+    },
+    {
+      "label": "Baxtel — LexisNexis Springfield (the legacy facility 5C acquired)",
+      "url": "https://baxtel.com/data-center/lexisnexus-springfield"
+    },
+    {
+      "label": "5C — LinkedIn company page",
+      "url": "https://ca.linkedin.com/company/5cai"
+    }
+  ],
+  "lastUpdated": "2026-09-29",
+  "profileVersion": 1
+}

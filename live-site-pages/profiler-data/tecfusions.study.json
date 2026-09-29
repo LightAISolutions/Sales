@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 2,
+  "slug": "tecfusions",
+  "title": "TECfusions — Technology Study Guide",
+  "lastUpdated": "2026-09-29",
+  "sections": [
+    {
+      "id": "space-power-cooling",
+      "title": "Space, power and cooling as a product",
+      "kind": "prose",
+      "read": "3 min",
+      "ps": [
+        "A landlord that refuses to own GPUs sells three things. 'We're the space, power, and cooler provider … it's limited to the space, power, and cool', its founder says; its deck adds 'Avoid providing the volatile, expensive and high-risk GPU/compute capacity layer'. The tenant owns the servers and their risk; the landlord owns the hall and the power. Compare a {{neocloud}}, which owns the GPUs and is paid per hour used.",
+        "The price is per kilowatt: fees 'based on the quantum of power per client at a fixed price per kW, with annual escalators and subject to multi-year contractual obligations'. A tenant reserving 10 MW pays for 10,000 kW whether its GPUs are busy or idle, for 'our shortest remaining term is 12 years, maybe 13 years'.",
+        "Three product shapes: a {{powered shell}} (the building with power and cooling to the hall wall), {{colocation}} (a rack, suite or cage in a shared hall) and turnkey (a finished hall to the tenant's specification). The anchor tenant's phases are turnkey, on direct liquid cooling."
+      ]
+    },
+    {
+      "id": "live-vs-leased",
+      "title": "Live, contracted, announced",
+      "kind": "bars",
+      "read": "2 min",
+      "unit": "MW",
+      "intro": "Figures for this company's flagship campus, drawn to scale. Only the smallest has a meter on it.",
+      "items": [
+        {
+          "label": "Marketed capacity",
+          "sub": "'3 GW IT Load' on the flyer; 'management estimates … subject to significant risks of change' in the deck",
+          "v": 3000
+        },
+        {
+          "label": "The anchor tenant's 'commitment'",
+          "sub": "restated in the deck as 'anchor tenant with right-of-first-refusal'",
+          "v": 1000
+        },
+        {
+          "label": "Phase 1 goal",
+          "sub": "'in 18–24 months'",
+          "v": 300
+        },
+        {
+          "label": "Contracted",
+          "sub": "the tenant's first phase",
+          "v": 10
+        },
+        {
+          "label": "Live",
+          "sub": "July 2026",
+          "v": 2
+        }
+      ],
+      "note": "Company documents. Across all three sites 55 MW is live. Read the live column first; the ratio between the rungs is the lesson."
+    },
+    {
+      "id": "on-site-generation",
+      "title": "On-site gas generation: the machine, the duty, the grid",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "A data centre can be its own power plant. Three choices decide what kind.",
+      "cols": [
+        "Choice",
+        "The options",
+        "This company's record"
+      ],
+      "rows": [
+        [
+          "The machine",
+          "A {{gas turbine}} (continuous combustion, tens of MW per unit, fast ramping, recoverable exhaust heat) or a {{reciprocating engine}} (a large piston engine, 1–20 MW per unit, efficient at part load)",
+          "'Currently powered by turbines'; waste heat repurposed 'to lower the PUE'; no maker, model, size or count named"
+        ],
+        [
+          "The duty",
+          "{{Standby rating}} (a few hundred hours a year) or {{continuous rating}} (built and warranted to run all year)",
+          "'We use continuous duty-rated equipment … We're not doing emergency or standby equipment'"
+        ],
+        [
+          "The grid",
+          "{{Islanded}} (no grid connection; 'Operating 100% off-grid when needed') or dual utility (a grid feed as one of two sources)",
+          "'dual utility and on-site microgrid generation'; the local press says the first building runs on grid lines today"
+        ],
+        [
+          "The fuel",
+          "A pipeline supply, or wells and a drying plant on site (a drying plant removes water from wellhead gas)",
+          "'two fracking pads and a gas-drying plant'; well ownership disputed; no pipeline or supplier named"
+        ],
+        [
+          "The price",
+          "Gas price × machine efficiency ÷ load factor, against grid tariffs with demand and capacity charges",
+          "'as low as 4 cents per kWh' under 15-year agreements; 'under 5 cents per kWh' for hyperscalers"
+        ]
+      ]
+    },
+    {
+      "id": "why-self-generate",
+      "title": "Why a landlord becomes a generator",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**Time-to-power.** The {{interconnection queue}} is years long; a gas plant beside the hall can run in months if the gas and the permits are there. The deck sorts the market into 'Slow + Grid-Dependent' developers, 'Fast + Power-Only' behind-the-meter vendors, and itself: 'Fast + Vertically Integrated … On-site power'.",
+        "**The trade.** Owning generation means owning a fuel contract, a maintenance contract, an emissions permit and a plant's operating risk, for the life of a 15-year lease.",
+        "**The corpus's other end.** Fermi America pursues the same thesis at gigawatt scale with 1.5 GW of turbines landed; the bridge-power vendors (VoltaGrid, Enchanted Rock, ProEnergy) sell what this company says it buys and owns."
+      ]
+    },
+    {
+      "id": "permits",
+      "title": "The permits that make generation real",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "A gas plant exists on the public record when its air permit does. Everything before that is a plan.",
+      "cols": [
+        "Permit",
+        "What it covers",
+        "Found in this company's name?"
+      ],
+      "rows": [
+        [
+          "{{Air permit}}: plan approval, general permit or Title V",
+          "The machines, their size and their emissions; required before construction of a new combustion source",
+          "No: none in the state bulletin through September 2026"
+        ],
+        [
+          "Water and wastewater (NPDES and water-quality permits)",
+          "The campus's plumbing, inherited from the research centre that was there before",
+          "Yes: transferred to the site company in 2025"
+        ],
+        [
+          "Zoning and land development",
+          "Whether the use is permitted and how the building is altered",
+          "A building permit with 'zoning permits deemed unnecessary'; one hall's plan approved; the next phase tabled; a residents' appeal in county court"
+        ],
+        [
+          "The township's {{moratorium}} and draft rule",
+          "A 180-day pause with existing permits grandfathered; a draft that would make every new data centre 'supply its own baseload power'",
+          "In force to November 2026; the township 'does not have an ordinance regulating power plants'"
+        ],
+        [
+          "A third party's estimate",
+          "An environmental group modelled a 2,700 MW plant from the announced capacity: 15.7 million tons of CO2 a year",
+          "A calculation from a press release, not a permit, now quoted in the local debate"
+        ]
+      ]
+    },
+    {
+      "id": "announced-permitted-energised",
+      "title": "The test to apply",
+      "kind": "callout",
+      "read": "1 min",
+      "ps": [
+        "**Announced** 3 GW → **contracted** 12 MW → **permitted for generation** none found → **energised** 2 MW. A claim of 'powered by turbines' with only water permits on file means either the machines run under someone else's permit or an exemption, or they do not run. It is unverified until an air permit or a plan approval names them."
+      ]
+    },
+    {
+      "id": "adaptive-reuse",
+      "title": "Adaptive reuse and old wires",
+      "kind": "prose",
+      "read": "3 min",
+      "ps": [
+        "{{Adaptive reuse}}: the asset in a legacy industrial site is its electrical history. A 1,395-acre former aluminium research campus with over a million square feet and its own gas wells; a 1989 data centre built for a software company; a Virginia site beside a decommissioned coal plant. Each came with feeds, substations or transmission lines sized for a previous life.",
+        "At the Virginia site the plan is to 'repurpose abandoned 138kV transmission lines from a decommissioned coal plant' in discussion with the utility and the county. A line that once carried a plant's output can carry a campus's input without a new interconnection study, if the utility agrees. The first live hall at the flagship 'formerly housed' the previous owner's data-centre operations: a building that already had a data-centre feed, which is why 2 MW could be live while 3 GW is a drawing.",
+        "Tenant or owner matters for the balance sheet: Tucson is rented from a real-estate fund on a 15-year absolute {{triple-net lease}}; the other two sites are owned. A landlord that rents its building can still buy the generators and {{switchgear}} inside it; it cannot pledge the building."
+      ]
+    },
+    {
+      "id": "reading-a-spac",
+      "title": "Reading a SPAC",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "A SPAC merger prices a private company by agreement, not by auction. The deck's projections are the price of that agreement, not guidance.",
+      "cols": [
+        "Term",
+        "What it means",
+        "This company's record"
+      ],
+      "rows": [
+        [
+          "{{SPAC}}",
+          "A shell that raised cash in its own IPO, holds it in trust and has about two years to merge with a private business, which becomes listed without its own IPO",
+          "About US$353 million in trust; a signed agreement in July 2026; a targeted close in Q4 2026 and an outside date in March 2027"
+        ],
+        [
+          "Pre-money value",
+          "The agreed value of the private company before the trust cash is added; paid in new shares at a notional US$10.00",
+          "US$4.0 billion; 400 million new shares; the founder's side owns 89% pro forma"
+        ],
+        [
+          "{{PIPE}}",
+          "A private investment in the public company alongside the merger; the only cash certain to arrive",
+          "US$35 million from one investor"
+        ],
+        [
+          "{{Redemption}}",
+          "SPAC shareholders may take their trust cash back at the vote instead of holding the merged company; the cash that stays is what is actually raised",
+          "A US$45 million minimum-cash condition; the CFO-designate hoped to 'retain a lot of that trust money'"
+        ],
+        [
+          "The {{S-4}}",
+          "The registration statement that carries audited financials and lets shareholders vote",
+          "Not filed two months after signing; the financials are 'unaudited' with an audit 'in process'"
+        ],
+        [
+          "Projections",
+          "Management's numbers, disclosed with the deal",
+          "Revenue US$110M → US$289M → US$2.14B (2026–2028) on US$34B of capex 'assumed to be debt financed' at 6–13%; the deck's own footnote: 'subject to significant risks of change'"
+        ]
+      ]
+    },
+    {
+      "id": "equipment-fits",
+      "title": "Where the equipment fits",
+      "kind": "prose",
+      "read": "3 min",
+      "ps": [
+        "The company's own supply-chain post lists what it waits longest for: {{transformer}}s ('up to four years for medium and high voltage units'), {{switchgear}} (12 to 18 months), chillers (12 months or more), generators and {{UPS}}. The state grant scope adds 'generation, UPS, switchgear, cabling'; the deck adds 'domestic sourcing of Transformers, HVAC, immersion cooling'. A landlord that generates its own power buys the whole chain, and the {{lead time}} on the transformer decides the date of everything behind it.",
+        "Who signs: the site company that holds the permits, or the parent; no EPC or general contractor is named, and the founder describes buying 'a different market segment for equipment' by taking continuous-duty machines. A vendor sells to the company directly. Scale today: 55 MW live; 12 MW contracted at the flagship; a 3 GW plan that would need transformer orders placed years ahead of any permit, none of which is on the record.",
+        "Where an {{SST}} or {{800 VDC}} would enter: nowhere on the record; the electrical language is conventional, 'high- and medium-voltage power generation and distribution'. A {{BESS}}: one generic blog on federal rules for backup generators, batteries and demand response; no project. A landlord running turbines all year has a utility's reasons to want a battery: to ride through a trip and to shave the peaks the machines are sized for. If the township's 'bring your own baseload' rule passes, every later entrant becomes a buyer of generation and the switchgear behind it."
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**Claims without permits.** 3 GW marketed, 2 MW live, no air permit, and a conflict between 'powered by turbines' and 'drawing from existing grid power lines' the day after.",
+        "**One tenant, one owner.** A single anchor tenant that has since signed a 222 MW lease with another landlord; a single owner whose prior convictions are a disclosed risk factor and who may sell US$100 million inside the lock-up.",
+        "**A deal not closed.** No S-4, unaudited financials, a trust that may mostly redeem, and projections that need US$34 billion of borrowed capex.",
+        "**A township, not a utility, as the constraint.** A moratorium, a draft ordinance, a land-use appeal and a records case all sit at local level; no grid process is on the record to be delayed."
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What does 'priced per kW with annual escalators' mean for a tenant reserving 10 MW?",
+          "a": "It pays for 10,000 kW every month for the term, busy or idle, with the rate stepping up each year; the landlord's revenue does not depend on GPU utilisation."
+        },
+        {
+          "q": "What is the difference between a gas turbine and a reciprocating engine?",
+          "a": "A turbine burns fuel continuously in a compressor-combustor-turbine, suits tens of MW per unit and gives recoverable exhaust heat; a reciprocating engine is a large piston engine, 1–20 MW per unit, more efficient at part load."
+        },
+        {
+          "q": "What does a continuous duty rating change compared with a standby rating?",
+          "a": "The machine, its price, its maintenance contract and its air permit: continuous means running all year at full output, standby means a few hundred hours."
+        },
+        {
+          "q": "What is the difference between an islanded microgrid and dual utility?",
+          "a": "Islanded runs with no grid connection; dual utility keeps a grid feed as one of two sources."
+        },
+        {
+          "q": "Which permit proves a gas plant exists on the public record?",
+          "a": "The air permit (a plan approval, general permit or Title V) that names the machines and their emissions; water and wastewater permits say nothing about generation."
+        },
+        {
+          "q": "Why is an abandoned 138 kV line worth more to a developer than a new one?",
+          "a": "It exists: no interconnection queue and no years-long study, only the utility's consent to re-energise it."
+        },
+        {
+          "q": "What is a SPAC redemption?",
+          "a": "A SPAC shareholder's right to take trust cash back at the merger vote; the cash that stays is what the merged company actually raises."
+        },
+        {
+          "q": "What does a pre-money value of US$4.0 billion paid in 400 million shares at US$10.00 tell you?",
+          "a": "That the value was set by agreement, not by auction; the shares' worth depends on what the market pays after the close."
+        },
+        {
+          "q": "Why does a four-year transformer lead time matter to a 3 GW plan by 2031?",
+          "a": "The orders would have to be placed years ahead of any permit; none is on the record, so the plan's date is set by procurement, not by construction."
+        },
+        {
+          "q": "Why would a landlord running turbines all year want a battery?",
+          "a": "For the same reasons a utility does: to ride through a machine trip and to shave the peaks the machines are sized for."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A flyer says '1 GW leased today' and the deck says 2 MW live at the same site. What is each number?",
+          "c": [
+            "Both are energised capacity",
+            "A tenant's commitment restated as a right of first refusal, and the energised megawatts",
+            "A permit figure and a lease figure",
+            "Gross and IT megawatts"
+          ],
+          "a": 1,
+          "why": "Only the live figure has a meter on it; the 1 GW is a {{right of first refusal}} on future capacity."
+        },
+        {
+          "q": "A landlord buys continuous duty-rated turbines instead of standby generators. What has it decided?",
+          "c": [
+            "To save money",
+            "To be a power plant: run all year, carry fuel and maintenance, take a plant's air permit",
+            "To stay grid-dependent",
+            "To avoid permits"
+          ],
+          "a": 1,
+          "why": "{{Continuous rating}} means running all year, and that class of machine needs a plant's {{air permit}}."
+        },
+        {
+          "q": "A company says its campus is 'currently powered by turbines' and the state bulletin shows only water permits in its name. What can you conclude?",
+          "c": [
+            "The turbines are permitted",
+            "The claim is unverified until an air permit names the machines",
+            "The site is islanded",
+            "The utility owns the turbines"
+          ],
+          "a": 1,
+          "why": "Water and wastewater permits say nothing about generation; an air permit or plan approval would."
+        },
+        {
+          "q": "A SPAC has US$353 million in trust, a US$35 million PIPE and a US$45 million minimum-cash condition. What is the least the merged company could raise and still close?",
+          "c": [
+            "US$353 million",
+            "About US$45 million",
+            "US$388 million",
+            "US$4.0 billion"
+          ],
+          "a": 1,
+          "why": "The {{PIPE}} plus enough non-redeemed trust cash to reach the minimum; {{redemption}}s can take the rest."
+        },
+        {
+          "q": "Why is an abandoned 138 kV line from a closed coal plant an asset?",
+          "c": [
+            "Copper value",
+            "It exists: no interconnection queue, only the utility's consent to re-energise",
+            "It is cheaper to maintain",
+            "It carries gas"
+          ],
+          "a": 1,
+          "why": "A new line means a years-long {{interconnection queue}}; an old one means a conversation with the utility."
+        },
+        {
+          "q": "A landlord's blog says medium-voltage transformers take 'up to four years'. What does that tell an equipment seller about a 3 GW plan by 2031?",
+          "c": [
+            "The plan is on schedule",
+            "Orders would have to be placed years ahead of any permit, and none is on the record",
+            "Transformers are not needed",
+            "The utility will supply them"
+          ],
+          "a": 1,
+          "why": "The {{lead time}} on the largest item sets the date of everything behind it."
+        },
+        {
+          "q": "Which of these is a landlord that generates its own power NOT buying?",
+          "c": [
+            "Switchgear",
+            "UPS",
+            "The tenant's GPUs",
+            "Generators"
+          ],
+          "a": 2,
+          "why": "The tenant owns the compute; the landlord owns the space, power and cooling and every piece of equipment behind them."
+        }
+      ]
+    }
+  ]
+}

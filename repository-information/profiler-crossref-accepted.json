@@ -73,6 +73,18 @@
       "pair": "lightsource-bp x hithium",
       "why": "Same edge, same v12 edit. Whether the under-construction Hithium BESS and its contract transferred to Aula Energy in the February 2026 portfolio sale is unresolved in Lightsource's record, and Hithium's dossier repeats the uncertainty rather than resolving it — no Hithium source addresses the asset sale.",
       "when": "2026-09-07"
+    },
+    {
+      "id": "bf80c3625ea8",
+      "pair": "duke-energy x nscale",
+      "why": "Same fact from both sides, not an open question: both edges say Duke has never named the NC-1 site's customer. Nscale's S-1 (18 Sep 2026) names neither Duke nor WhiteFiber, so the second passage cannot close the first. Re-check when Duke captions the site or WhiteFiber files an executed ESA.",
+      "when": "2026-09-29"
+    },
+    {
+      "id": "df3f1e9523ae",
+      "pair": "duke-energy x whitefiber",
+      "why": "The 'unconfirmed from Duke's side' marker is the finding itself: WhiteFiber's filings carry the Duke letter and the assigned ESA; no Duke document names WhiteFiber or Enovum. Nothing in the WhiteFiber dossier answers it. Re-check on Duke's next large-load ESA logo strip.",
+      "when": "2026-09-29"
     }
   ]
 }

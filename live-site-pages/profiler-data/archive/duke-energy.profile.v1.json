@@ -1,0 +1,1622 @@
+{
+ "schemaVersion": 7,
+ "slug": "duke-energy",
+ "name": "Duke Energy Corporation",
+ "shortName": "Duke Energy",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.duke-energy.com",
+ "headquarters": "Charlotte, NC, USA",
+ "founded": 1904,
+ "employees": "~26,000 at December 31, 2025 (Q4 2025 investor presentation, company overview slide)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: DUK"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Duke Energy has the corpus's most conservatively reported data-center book — ~7.8 GW of signed electric service agreements at the August 4, 2026 call, ~5.2 GW under construction and a ~15.4 GW 'high-confidence, late-stage pipeline' it expects to convert by the first half of 2027 — and it is building the largest regulated gas fleet in this file against it (7,501 MW across seven plants with 26 GE Vernova turbines secured) alongside ~4.5 GW of utility-owned batteries by 2031, inside a $103B 2026–2030 plan that is 39 percent grid; the terms on which those loads connect are still being written, in a North Carolina large-load tariff proceeding due before January 1, 2027, a Florida large-load policy the state commission has called 'facially noncompliant', and an Ohio Rate DC filing, and on September 18–19, 2026 the North Carolina Utilities Commission denied the company's first data-center-justified gas turbine, a 255 MW peaker, for load 'never tested in contested proceedings'. BACKGROUND. Charlotte, North Carolina; NYSE: DUK. Six electric utilities — Duke Energy Carolinas and Duke Energy Progress (to be combined January 1, 2027), Duke Energy Florida, Duke Energy Indiana, Duke Energy Ohio and Duke Energy Kentucky — serve about 8.7 million customers with 55,700 MW of capacity, and Piedmont Natural Gas about 1.6 million after the Tennessee business was sold to Spire for $2.48B on March 31, 2026. Brookfield Super-Core Infrastructure Partners bought the first 9.2 percent of a 19.7 percent, $6B minority stake in Duke Energy Florida's parent on March 3, 2026 ($2.8B), with the balance due in four tranches through June 2028 — the coverage plan's 'first closing not confirmed' was wrong. FY2025 adjusted EPS was $6.31 on revenue of $32,237M; 2026 guidance of $6.55–$6.80 was reaffirmed in August with 5–7 percent growth through 2030, funded by $10B of common equity over 2027–2030. Collection gap: www.duke-energy.com returned 403 to this network on every path, so leadership bios, the 2026 Carolinas Resource Plan chapters, the Indiana IRP and the tariff sheets were read through filings, regulators' sites and trade press; SEC's Archives were reachable for the 8-Ks but the FY2025 10-K narrative was not read; no battery supplier is named in any source; and the Q3 2026 earnings date is unconfirmed by the company (trackers give October 29, November 5 and November 6).",
+ "ecosystemRole": "We assess Duke Energy as the utility whose data-center exposure is spread across the most jurisdictions in this corpus — five state commissions, two RTOs and two non-RTO regions — and whose disclosed pipeline is therefore the least inflated: it reports signed ESAs and construction, not inquiries, and its 7.8 GW compares with 53.8 GW at Dominion and 69 GW at AEP only because those companies count earlier rungs. Basis: the three 2026 investor presentations and the Q2 2026 call. For the storage sellers in this file Duke is a self-build buyer with an undisclosed supplier and three doors — the Carolinas resource-plan batteries at retiring coal sites (Allen, Riverbend, Knightdale), Duke Energy Florida's solar-sited and transmission-tied batteries (Powerline 2027, Bartow 2028), and the South Carolina 400 MW standalone storage RFP — and for the gas and grid vendors it is GE Vernova's largest disclosed utility turbine customer (26 units) and a $1B-a-year North Carolina supply-chain buyer (GE Vernova Goldsboro transformers, Siemens Energy Charlotte). For the developers and hyperscalers in the corpus it is the counterparty to Microsoft (Person and Catawba Counties), Amazon (Richmond County), QTS (York County), Compass and Digital Realty, and the utility whose 'Customer Protection Plus' terms — customer-funded connection, minimum bills, termination charges, curtailment for up to 50 hours a year — are being turned into tariffs in North Carolina, Florida and Ohio during the fourth quarter of 2026.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — six utilities in six states, and the large-load contract framework",
+   "category": "Regulated utility service",
+   "description": "Duke Energy's electric utilities — Duke Energy Carolinas and Duke Energy Progress (North and South Carolina), Duke Energy Florida, Duke Energy Indiana, Duke Energy Ohio and Duke Energy Kentucky — serve about 8.7 million customers and own about 55,700 MW of generating capacity (56 GW winter rating at December 31, 2025), per the Q2 2026 results release and the Q4 2025 investor presentation. The Carolinas and Florida utilities are vertically integrated and sit outside any RTO (SERC and FRCC reliability regions); Duke Energy Indiana is in MISO; Duke Energy Ohio is a wires-only company inside PJM under an electric security plan through May 2028, and Duke Energy Kentucky owns generation in PJM. Rates are set by five state commissions: the NCUC and PSCSC (the North Carolina multiyear rate plans filed November 20, 2025 settled in July and August 2026 at a 9.8 percent return on equity, with orders expected in mid-November 2026 and rates from January 1, 2027), the Florida PSC (a 2025–2027 multiyear settlement), the IURC (Indiana's HEA 1002 multiyear framework) and the PUCO (electric case 26-0132-EL-AIR filed March 30, 2026). Large-load terms are being written state by state. In North Carolina, Duke's rate-case proposal (Canary Media, July 2026) sets a 50 MW threshold, a minimum bill of 75 percent of maximum potential demand and 10–15-year terms with termination charges; advocates and the Public Staff want 25 MW, 85 percent, 20 years and a separate class, and both NC settlements commit to a separate, expedited large-load tariff proceeding to finish before rates take effect on January 1, 2027. In Florida, Duke Energy Florida's Large Load Customer Policy (FPSC Docket 20260064-EI, refiled April 22, 2026 under SB 484) applies at 50 MW with a 20-year minimum term, take-or-pay of 75–85 percent of contracted capacity, a termination fee of three years of minimum bills plus the net book value of dedicated facilities, 100 percent of extension cost advanced as refundable CIAC, and no rate schedule until the next rate case — the Office of Public Counsel and Commissioner La Rosa called it 'facially noncompliant' at the August 25–26 hearing and a written order is pending. Duke Energy Ohio has proposed a Rate DC data-center tariff (PUCO 26-0755-EL-ATA); South Carolina opened a generic large-load docket (2026-138-E) after service-regulation updates for loads of 50 MW or more.",
+   "highlights": [
+    "Large-load contract provisions the company lists on every 2026 investor deck: long-term contract, minimum billing demand, credit support, termination damages, refundable capital advance and an interruptibility provision — 'detailed contract provisions may vary across service territories'",
+    "'Customer Protection Plus' (July 23, 2026): engineering studies before connection; long-term agreements with customer-funded connection costs, upfront financial security, termination charges and temporary curtailment for targeted grid events; revenue sharing when large-load revenues exceed the cost to serve",
+    "Duke Energy Progress is to be merged into Duke Energy Carolinas effective January 1, 2027, with FERC, NCUC and PSCSC approvals received by May 2026 and an estimated $2.3B of net customer savings over 2027–2040",
+    "Retail load growth guidance: 1.5–2 percent in 2026 and 3–4 percent a year over 2027–2030 for the enterprise; ~2 percent and 4–5 percent for the Carolinas",
+    "Florida large-load policy (Docket 20260064-EI): ≥50 MW, 20-year term, 75–85 percent take-or-pay, three-year termination fee plus net book value, CIAC advanced in full and refunded over five years, $150,000 system-impact-study fee, no service to foreign-entity large loads"
+   ],
+   "positioning": "Against Dominion Energy Virginia's GS-5 class (14-year terms, 85/60 percent minimums from 2027) and AEP's eight commission-approved large-load tariffs, Duke's protections are written contract-by-contract inside electric service agreements rather than as one published rate class — the decks say provisions 'may vary across service territories'. The Florida proposal's 20-year term is the longest in the corpus; its absence of a rate schedule is what the Florida PSC is testing against SB 484.",
+   "soldThrough": "Direct, under commission-approved tariffs and negotiated electric service agreements; large loads connect after site evaluation and engineering studies, with connection costs customer-funded",
+   "targetSegments": [
+    "Residential, commercial and industrial customers in NC, SC, FL, IN, OH and KY",
+    "Data-center and manufacturing loads under electric service agreements — the 'high-confidence, late-stage pipeline'"
+   ],
+   "roadmap": "NCUC orders on the DEC and DEP multiyear rate plans expected mid-November 2026, rates effective January 1, 2027; the NC large-load tariff proceeding to conclude before January 1, 2027; the Florida PSC written order on Docket 20260064-EI (briefs closed September 15, 2026; statewide compliant-tariff deadline October 1, 2026); Duke Energy Ohio electric rate order by May 2027; DEC/DEP combination effective January 1, 2027"
+  },
+  {
+   "name": "Large-load interconnection — the pipeline ladder from late-stage prospect to electric service agreement to construction",
+   "category": "Regulated utility service",
+   "description": "Duke reports its data-center business on a three-rung ladder: a 'high-confidence, late-stage pipeline', signed electric service agreements (ESAs), and load under construction. Per the investor presentations, signed data-center ESAs moved from about 3 GW at the November 2025 call to ~4.5 GW (February 10, 2026), ~7.6 GW (May 5, 2026, including contract volume signed in 2024) and ~7.8 GW (August 4, 2026); about 5.2 GW of data centers were under construction in August 2026 and the late-stage pipeline stood at ~15.4 GW on both 2026 decks. The Q2 2026 deck adds $5–10B of potential capital to serve large loads in Indiana and Florida that is not in the $103B plan. Named sites in Duke's own materials are the substation serving Microsoft's data center in Catawba County, North Carolina, Amazon's data-center site in Richmond County, North Carolina, and QTS's site in York County, South Carolina; a May 2024 agreement with Amazon, Google, Microsoft and Nucor created the Accelerating Clean Energy and Clean Transition tariff concepts for new nuclear and long-duration storage. Duke publishes no inquiry-stage gigawatt figure.",
+   "highlights": [
+    "Signed data-center ESAs: ~3 GW (Nov 2025) → ~4.5 GW (Feb 2026) → ~7.6 GW (May 2026) → ~7.8 GW (Aug 2026)",
+    "~5.2 GW of data centers under construction and a ~15.4 GW high-confidence late-stage pipeline at the Q2 2026 call",
+    "2025 economic development: more than 29,000 jobs and $30B of announced capital investment across the states; 25,000-plus new North Carolina jobs and $19B of investment announced in 2025 alone (2025 Carolinas Resource Plan release)",
+    "Trade press names Microsoft and Compass (February 2026), Amazon (Richmond County, a $10B campus under construction per EEI), Digital Realty and QTS among the Q1 2026 signings; Microsoft's Person County site (1,350 acres bought October 2024, plans confirmed February 24, 2026) sits beside the Person County combined-cycle complex"
+   ],
+   "positioning": "Duke's disclosed ladder is smaller and firmer than its peers' headline numbers — 7.8 GW signed against Dominion's 53.8 GW contracted (12.0 GW under ESAs) and AEP's 69 GW under executed agreements — because Duke reports only ESA-stage and construction-stage volumes and publishes no inquiry or study-stage total.",
+   "soldThrough": "Electric service agreements negotiated per site after engineering studies; capital for connection recovered through the rate cases and multiyear plans",
+   "targetSegments": [
+    "Hyperscale and colocation data centers in the Carolinas, Indiana and Florida",
+    "Manufacturing (BMW, Nucor, Novo Nordisk named on the deck logo strip per third-party write-ups)"
+   ],
+   "roadmap": "Conversion of the ~15.4 GW late-stage pipeline into ESAs is the figure to watch on the November 2026 call; Indiana and Florida large-load capital ($5–10B) would be added to the plan if contracts sign"
+  },
+  {
+   "name": "Dispatchable generation build — more than 7.5 GW of new gas and ~15 GW of capacity by 2031",
+   "category": "Generation",
+   "description": "The 'all-of-the-above' build on the Q2 2026 investor presentation adds about 15 GW of capacity by 2031 (raised from ~14 GW in February), including uprates of more than 1 GW (gas ~670 MW, nuclear ~250 MW, hydro ~85 MW) and 7,501 MW of new gas: Person County CC1 (North Carolina, 1,360 MW, CPCN approved, in service year-end 2028), Marshall CT 1 and 2 (850 MW, approved, 2028), Person County CC2 (1,360 MW, approved, 2029), Cayuga CC 1 and 2 (Indiana, 1,476 MW, approved, 2029/2030, ground broken May 14, 2026), Buck CT 3 and 4 (850 MW, CPCN requested, 2029), Smith CT (240 MW, requested, 2029) and Anderson County CC (South Carolina, ~1,365 MW, certified by the PSCSC on March 26, 2026, in service early 2031). Construction is under way on about 5 GW in the Carolinas and Indiana with EPC contracts signed for the first ~5 GW and gas supply contracted for every announced plant. GE Vernova is the turbine supplier — 19 units at the November 2025 call, 20 in February and May 2026, 26 by August 2026 — with the first Person County turbine delivered in July 2026 from the Greenville, South Carolina factory. The 2025 Carolinas Resource Plan's near-term action plan carries five combined-cycle units (6,825 MW) and seven combustion turbines (2,825 MW) by 2033.",
+   "highlights": [
+    "7,501 MW of new gas across seven projects; five approved and two with certificates requested as of August 2026",
+    "GE Vernova turbine slots: 19 → 20 → 26 between November 2025 and August 2026 — the six added 'to align with next phase of build in resource plans'",
+    "Hydrogen-capable gas is ~20 percent of the $103B five-year plan and ~13 percent of the $200–220B ten-year plan",
+    "Cayuga: two 1x1 combined cycles replacing 1,005 MW of coal, with a settlement (June 17, 2025) that adds a third-party feasibility study of the coal units and CWIP recovery in rates"
+   ],
+   "positioning": "The largest disclosed regulated gas-turbine order book among the utilities in this corpus — Southern's 9,885 MW certified in one Georgia order is the only larger single program — and, unlike Dominion's 944 MW Chesterfield plant, spread across four state commissions and two Carolinas resource plans.",
+   "soldThrough": "Self-build under certificates of public convenience and necessity, recovered through rate base in the multiyear rate plans; EPC contracted (Zachry named as a labor-training partner)",
+   "targetSegments": [
+    "The Carolinas, Indiana and South Carolina resource plans' capacity need — data-center and manufacturing load, coal retirements"
+   ],
+   "roadmap": "Buck CT 3–4 and Smith CT certificates pending; Person County CC1 in service year-end 2028; Marshall CTs 2028; Cayuga 2029/2030; Anderson County early 2031; a further 6,825 MW of combined cycle by 2033 in the 2025 CRP action plan"
+  },
+  {
+   "name": "Battery storage — ~4.5 GW online by 2031, utility-owned on retired coal sites and at solar plants",
+   "category": "Energy storage",
+   "description": "Every 2026 investor deck states that Duke is 'accelerating battery storage development, with ~4.5 GW of capacity online by 2031', and the Q2 2026 construction table carries a 'Battery Storage Portfolio' of ~4,500 MW across North Carolina, South Carolina, Florida and Indiana for 2026–2030 in active construction, regulatory approval or development. The 2025 Carolinas Resource Plan (filed October 1, 2025) plans 5,600 MW of battery storage in service by 2034 (2,900 MW more than the 2023 plan) sited at retiring coal plants including Allen, Riverbend and Mayo; the January 2026 Allen release cites 6,550 MW of batteries across the Carolinas by 2035, and the North Carolina rate cases include $1.7B of battery storage and about $400M of solar paired with storage for 2027–2028. Named projects: Allen BESS 1 — 50 MW, four hours, ~$100M, at the former Allen coal plant in Belmont, North Carolina, online November 2025 'under budget and ahead of schedule'; Allen BESS 2 — 167 MW, four hours, construction from May 2026, the company's largest; Riverbend BESS — 115 MW, Mount Holly, construction late 2026, online late 2027; Knightdale BESS — 100 MW; in Florida, Powerline (100 MW, more than 200 MWh, 2027) and Bartow (225 MW, 2028) in the 2026 Ten-Year Site Plan, plus a 5 MW, eight-hour sodium-sulfur battery at Suwannee and 50–75 MW batteries at solar sites; a 400 MW standalone storage RFP in South Carolina under the 2026 resource plan. Duke Energy Florida plans 1.4 GW of storage over ten years with more than $500M of investment tax credits. No battery supplier is named in any 2025–2026 Duke release; the company is testing EnerVenue nickel-hydrogen, Eos zinc and GKN hydrogen storage. 175 MW of storage entered service in 2025.",
+   "highlights": [
+    "~4.5 GW of battery storage online by 2031 (all three 2026 investor presentations); 5,600 MW in the Carolinas by 2034 (2025 CRP)",
+    "Allen BESS 1 (50 MW) online November 2025; Allen 2 (167 MW) and Riverbend (115 MW) under construction 2026; a third Allen battery proposed by end-2028",
+    "Florida: Powerline 100 MW (2027) and Bartow 225 MW (2028); the Powerline ITC is being accelerated to avoid the 2027 base-rate step ($50M, July 10, 2026)",
+    "South Carolina 400 MW standalone storage RFP announced with the 2026 Carolinas Resource Plan (August 2026)",
+    "The South Carolina combination settlement (March 10, 2026) removed 200 MW of battery storage from the long-range plan"
+   ],
+   "positioning": "Duke is a utility-owned storage buyer in the Southern Company and Xcel mould — batteries enter rate base at retired coal sites — rather than a PPA counterparty like NV Energy; the 4.5 GW by 2031 is comparable to Georgia Power's certified program and about twice Dominion's 2,000 MW by 2045 IRP figure, with the supplier still undisclosed.",
+   "soldThrough": "Self-build under CPCNs and resource-plan approvals; the South Carolina 400 MW RFP and Florida solar-sited batteries are the procurement doors for developers and OEMs",
+   "targetSegments": [
+    "Carolinas capacity and ancillary needs at retiring coal sites",
+    "Florida solar firming and microgrid backup (Trenton, Micanopy)",
+    "Indiana"
+   ],
+   "roadmap": "Riverbend online late 2027; Powerline 2027; Bartow 2028; the SC 400 MW RFP award; supplier disclosure for the 2026–2030 portfolio has not been made"
+  },
+  {
+   "name": "Nuclear fleet — 10,773 MW, subsequent license renewals, uprates and the 2037 new-nuclear option",
+   "category": "Generation",
+   "description": "Eleven units at six plants (Brunswick 1,870 MW, Harris 964 MW, McGuire 2,316 MW, Catawba 2,310 MW, Oconee 2,554 MW, Robinson 759 MW) ran at a record 96.9 percent capacity factor in 2025, the 27th consecutive year above 90 percent, and generated about $600M of nuclear production tax credits that flowed to customers (company release, February 20, 2026). The NRC granted Oconee's subsequent license renewal to 2053–2054 on March 31, 2025 and Robinson's to 2050 in April 2026; the Brunswick application is due by end-2026 and the company intends to renew all eleven units. About 300 MW of uprates are planned at four stations (~250 MW by 2031). For new nuclear, Duke filed an early site permit for Belews Creek, Stokes County, North Carolina on December 30, 2025 (permit expected 2027; four SMR and two non-light-water designs under consideration; first SMR targeted 2036, 600 MW by 2037), holds the W.S. Lee site in Cherokee County, South Carolina for a large reactor, collaborates with TVA on the DOE-funded BWRX-300 program, and signed 2024 agreements with Amazon, Google, Microsoft and Nucor to fund such projects through tariffs. The NCUC's 2024 order approved $440M of new-nuclear development spending toward 300 MW by 2034 and 600 MW by 2035.",
+   "highlights": [
+    "Record 96.9 percent fleet capacity factor in 2025; ~$600M of nuclear PTCs to customers; nuclear fuel ~$3.2B in the 2026–2030 plan",
+    "Oconee renewed to 2053/2054 (March 2025); Robinson to 2050 (April 2026); Brunswick filing by end-2026",
+    "Belews Creek early site permit filed December 30, 2025, decision expected 2027; 'maintaining optionality for new nuclear to be online by 2037'",
+    "Up to $3.1B of nuclear, solar and storage tax credits generated 2025–2028 sold under a transfer agreement announced May 4, 2026"
+   ],
+   "positioning": "The second-largest regulated nuclear fleet in the United States after Southern Nuclear's by unit count is Duke's, and unlike Constellation's merchant fleet its output is rate-based; the new-nuclear timetable (2036–2037) matches Dominion's North Anna SMR horizon.",
+   "soldThrough": "Regulated generation in rate base; tax credits monetized through transfer agreements",
+   "targetSegments": [
+    "Carolinas retail load",
+    "Hyperscalers willing to fund advanced nuclear through the ACE and CTT tariff structures"
+   ],
+   "roadmap": "Brunswick SLR application by end-2026; Belews Creek ESP decision 2027; SMR design selection not yet announced"
+  },
+  {
+   "name": "Transmission and distribution — the largest T&D system in the United States and ~39 percent of the capital plan",
+   "category": "Grid",
+   "description": "About 320,000 miles of transmission and distribution lines; grid investment is ~39 percent of the $103B 2026–2030 plan and ~40 percent of the $200–220B ten-year plan (Q4 2025 investor presentation). Federal support in 2026: a $50M DOE SPARK selection (September 24, 2026) for advanced conductors and dynamic line ratings in Greenville and Spartanburg, South Carolina and Henderson and Polk, North Carolina ($201M total project cost); about $96M of Defense Production Act grants for coal-plant refurbishment at East Bend, Roxboro and Belews Creek (June 5, 2026); and DOE loan applications (May 11, 2026) the company says could save customers 'potentially billions'. About $1B of North Carolina and ~$600M of South Carolina storm costs were securitized in 2025. Duke's 2025 spend with North Carolina suppliers was about $1B, including GE Vernova's Goldsboro transformer plant and Siemens Energy's Charlotte facility, and could reach $5B over five years (June 30, 2026).",
+   "highlights": [
+    "Grid ~39 percent of $103B (2026–2030); ~40 percent of the ten-year plan",
+    "DOE SPARK $50M for advanced conductors and dynamic line ratings in the Carolinas (September 2026)",
+    "~$1.6B of storm-cost securitization bonds in 2025",
+    "Substations built for named data centers — Microsoft, Catawba County (deck photo caption)"
+   ],
+   "positioning": "Duke's grid program is distribution-heavy and state-regulated; it has no 765 kV backbone comparable to AEP's and, outside Ohio and Kentucky, no FERC-formula transmission rate — the Carolinas and Florida recover transmission through retail rates.",
+   "soldThrough": "Rate base under retail rate cases; storm securitization",
+   "targetSegments": [
+    "All retail customers; large-load connections"
+   ],
+   "roadmap": "DOE loan decisions pending; SPARK projects to be built over the plan period"
+  },
+  {
+   "name": "Solar and renewable procurement — 4,000 MW by 2034 in the Carolinas, Florida self-build, Indiana",
+   "category": "Generation",
+   "description": "The 2025 Carolinas Resource Plan carries 4,000 MW of new solar by 2034 through annual competitive procurement; the 2024 NCUC order had set 3,460 MW of solar and 1,100 MW of storage by 2031 and 1,200 MW of onshore wind with 300 MW by 2031, and waived the 70 percent-by-2030 interim carbon target. Duke Energy Florida self-builds solar under its 2024 rate settlement (more than 900 MW pre-approved for 2025–early 2028, then 375 MW in 2028 rising to 600 MW a year after 2030 per the 2026 Ten-Year Site Plan), completing the Sumter County site on May 21, 2026 and unveiling the Rattler Renewable Energy Center with FAMU on May 8, 2026. Hydro: the 280 MW Bad Creek pumped-storage upgrade is complete, a 50-year FERC relicense was sought on August 15, 2025 (the license expires July 2027), and Bad Creek II was deferred to 2040 in the 2025 plan. 305 MW of solar entered service in 2025. The company exited its commercial renewables business to Brookfield in 2023.",
+   "highlights": [
+    "4,000 MW of Carolinas solar by 2034 via annual RFPs; 3,460 MW by 2031 per the 2024 NCUC order",
+    "Florida: >900 MW of pre-approved solar 2025–2028; 600 MW a year after 2030 (2026 Ten-Year Site Plan, via search index — PDF host blocked)",
+    "Bad Creek II second powerhouse deferred to 2040; relicense pending"
+   ],
+   "positioning": "Duke buys Carolinas solar through competitive procurement (developers choose the OEM) and self-builds in Florida — the same two-lane model as Dominion's VCEA program.",
+   "soldThrough": "Annual competitive solar procurements (Carolinas); self-build (Florida); PPAs",
+   "targetSegments": [
+    "Carolinas carbon-plan compliance",
+    "Florida"
+   ],
+   "roadmap": "Annual Carolinas solar procurement rounds; Bad Creek relicense decision before July 2027"
+  },
+  {
+   "name": "Piedmont Natural Gas and the Midwest gas utilities — 1.6 million customers after the Tennessee sale",
+   "category": "Gas utility",
+   "description": "Piedmont Natural Gas (North and South Carolina) and Duke Energy Ohio and Kentucky's gas operations serve about 1.6 million customers after the sale of Piedmont's Tennessee business — about 3,800 miles of pipe, 205,000 customers and an LNG facility — to Spire for $2.48B, announced July 29, 2025 and closed March 31, 2026 (1.8 times 2024 rate base; ~$800M to repay Piedmont debt, ~$1.5B net to the capital plan). The gas LDC is ~8 percent of the five-year plan; a Piedmont South Carolina rate case ($16M, filed April 1, 2026) settled on August 27, 2026 and Duke Energy Ohio filed a $102M gas case (26-0635-GA-AIR) on June 29, 2026. Gas supply for the new generation fleet is contracted separately by the electric utilities.",
+   "highlights": [
+    "Tennessee LDC sold to Spire for $2.48B, closed March 31, 2026",
+    "Gas LDC ~8 percent of the $103B plan"
+   ],
+   "positioning": "A modest LDC beside the electric business; its role in this corpus is as the internal counterparty for the gas-fired build's fuel logistics rather than as a buyer of storage or power equipment.",
+   "soldThrough": "Regulated distribution service",
+   "targetSegments": [
+    "Residential and commercial gas customers in NC, SC, OH and KY"
+   ],
+   "roadmap": "Duke Energy Ohio gas rate order 2027"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Data-center pipeline ladder (investor presentations, 2026)",
+   "specs": [
+    {
+     "band": "Q4 2025 call (February 10, 2026)",
+     "label": "Signed ESAs",
+     "value": "~4.5 GW Data Center ESAs (+1.5 GW since Q3 call); ~9 GW late-stage (call)"
+    },
+    {
+     "band": "Q1 2026 call (May 5, 2026)",
+     "label": "Signed ESAs",
+     "value": "~7.6 GW (+~2.7 GW since Q4 call); Includes data center contract volume signed in 2024"
+    },
+    {
+     "band": "Q1 2026 call (May 5, 2026)",
+     "label": "Under construction / late-stage",
+     "value": "~5 GW of data centers under construction; ~15.4 GW high-confidence, late-stage pipeline includes ~7.6 GW signed ESAs"
+    },
+    {
+     "band": "Q2 2026 call (August 4, 2026)",
+     "label": "Signed ESAs",
+     "value": "~7.8 GW (+0.2 GW since Q1 call)"
+    },
+    {
+     "band": "Q2 2026 call (August 4, 2026)",
+     "label": "Under construction / late-stage",
+     "value": "~5.2 GW under construction; ~15.4 GW late-stage pipeline; Potential for $5–$10 billion of additional capital to serve large loads in Indiana and Florida"
+    },
+    {
+     "band": "Load growth",
+     "label": "Enterprise retail",
+     "value": "1.5%–2% in 2026E and 3%–4% 2027–2030E; Carolinas ~2% 2026E and 4%–5% 2027–2030E"
+    }
+   ],
+   "notes": "The 15.4 GW is 'inclusive of signed ESAs' (Q1 call); the labels moved between quarters and the CEO expects 'landing all of that 15 gigawatts by the first half of next year'."
+  },
+  {
+   "product": "New gas generation — 'Advancing >7.5 GW' table (Q2 2026 investor presentation)",
+   "specs": [
+    {
+     "band": "North Carolina",
+     "label": "Person County CC1",
+     "value": "1,360 MW; CPCN approved; in service YE2028"
+    },
+    {
+     "band": "North Carolina",
+     "label": "Marshall CT 1&2",
+     "value": "850 MW; approved; 2028"
+    },
+    {
+     "band": "North Carolina",
+     "label": "Person County CC2",
+     "value": "1,360 MW; approved; 2029"
+    },
+    {
+     "band": "North Carolina",
+     "label": "Buck CT 3&4",
+     "value": "850 MW; CPCN requested; 2029"
+    },
+    {
+     "band": "North Carolina",
+     "label": "Smith CT",
+     "value": "240 MW; requested; 2029 — NCUC denied the certificate on September 18–19, 2026 (255 MW, $584M)"
+    },
+    {
+     "band": "Indiana",
+     "label": "Cayuga CC 1&2",
+     "value": "1,476 MW; approved (IURC Cause 46193, October 29, 2025, ~$3.33B); 2029/2030"
+    },
+    {
+     "band": "South Carolina",
+     "label": "Anderson County CC",
+     "value": "1,365 MW; CECPCN approved (PSCSC, March 26, 2026); 2030 — release says early 2031"
+    },
+    {
+     "band": "Total",
+     "label": "Table",
+     "value": "7,501 MW; construction underway on ~5 GW; EPC contracts signed for first ~5 GW; gas supply contracted for all announced plants"
+    },
+    {
+     "band": "Turbines",
+     "label": "GE Vernova",
+     "value": "19 turbines (Nov 2025) → 20 (Feb/May 2026) → 26 (Aug 2026); first Person County turbine delivered July 2026"
+    }
+   ],
+   "notes": "The 2025 Carolinas Resource Plan's near-term action plan carries 5 CC units (6,825 MW) and 7 CT units (2,825 MW) by 2033; the 2026 plan filed in South Carolina on August 14, 2026 carries 8.2 GW of combined cycle and 5.8 GW of combustion turbines through 2041."
+  },
+  {
+   "product": "Duke Energy Florida Large Load Customer Policy — FPSC Docket 20260064-EI (petition 02327-2026, April 22, 2026)",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Threshold",
+     "value": "50,000 kW (50 MW) of firm load at a single location (lowered from 100 MW)"
+    },
+    {
+     "band": "Term",
+     "label": "Minimum term",
+     "value": "20-year minimum term (raised from 15) with 2-year termination notice"
+    },
+    {
+     "band": "Minimum bill",
+     "label": "Take-or-pay",
+     "value": "75–85% of contracted capacity; 60% minimum load factor (McNees tracker)"
+    },
+    {
+     "band": "Termination",
+     "label": "Fee",
+     "value": "3 years of minimum bills + net book value of CIAC facilities less unrefunded CIAC"
+    },
+    {
+     "band": "Security",
+     "label": "Credit",
+     "value": "letter of credit, cash or parent guarantee; security percentage ≥10% where termination obligation >$100M"
+    },
+    {
+     "band": "Connection cost",
+     "label": "CIAC",
+     "value": "applicants advance total estimated extension cost, refundable over 5 years (unrefunded balance becomes non-refundable); $150,000 non-refundable system impact study fee"
+    },
+    {
+     "band": "Rate",
+     "label": "Rate schedule",
+     "value": "no new rate schedule — large loads take GSD-1/GSDT-1 until DEF's next rate case, when a large-load rate schedule will be proposed"
+    },
+    {
+     "band": "Other",
+     "label": "Eligibility",
+     "value": "foreign-entity large loads cannot be served; anti-load-splitting clause; Load Ramp Period"
+    }
+   ],
+   "notes": "Tariffs suspended June 19, 2026; hearing August 25–26; post-hearing briefs September 15; written order pending. The Office of Public Counsel and Commissioner La Rosa said the petition appears 'facially noncompliant' with SB 484."
+  },
+  {
+   "product": "North Carolina large-load proposals in the 2025–2026 rate cases (E-7 Sub 1329, E-2 Sub 1380)",
+   "specs": [
+    {
+     "band": "Duke proposal (Canary Media, July 6, 2026)",
+     "label": "Terms",
+     "value": "threshold 50 MW; minimum bill 75% of maximum potential demand; contract term 10–15 yrs; standardized bilateral agreements"
+    },
+    {
+     "band": "Advocates / Public Staff",
+     "label": "Counter-proposal",
+     "value": "25 MW threshold, 85% minimum, ≥20-yr, separate customer class; Public Staff adds peak curtailment"
+    },
+    {
+     "band": "Settlements",
+     "label": "DEC (July 17, 2026)",
+     "value": "9.8% ROE, 53% equity, $496M over two years; support a separate proceeding to evaluate a large load tariff, with the intention to complete that proceeding prior to new rates going into effect"
+    },
+    {
+     "band": "Settlements",
+     "label": "DEP (August 5, 2026)",
+     "value": "9.8% ROE, 53% equity, $338M over two years; PTC flow-back raised from $40M to $120M/yr for 2027–28; support separate large-load-tariff proceeding"
+    },
+    {
+     "band": "Existing practice",
+     "label": "Letter agreements",
+     "value": "advance refundable capital payments, minimum bills, termination fees, interruptible obligations, accelerated ESA deadlines; process = engagement → transmission study → Letter Agreement → ESA (Nelson Mullins)"
+    },
+    {
+     "band": "Curtailment",
+     "label": "CEO (Fortune)",
+     "value": "50 hours per year that we can curtail them"
+    }
+   ],
+   "notes": "NCUC orders on both rate cases expected mid-November 2026; the tariff proceeding's docket number and the late-September filing were not located (NCUC docket viewer blocked from this network)."
+  },
+  {
+   "product": "2026–2030 capital plan (Q4 2025 investor presentation)",
+   "specs": [
+    {
+     "band": "Total",
+     "label": "Five-year",
+     "value": "$103B (~$93B electric, ~$8B gas); up $16B from $87B"
+    },
+    {
+     "band": "Split",
+     "label": "Categories",
+     "value": "Grid ~39%; Regulated zero-carbon generation ~25%; Hydrogen-capable gas generation ~20%; Gas LDC ~8%; Corp/IT/Cyber ~3%; Environmental remediation ~2%; Coal maintenance ~2%"
+    },
+    {
+     "band": "Ten-year",
+     "label": "2026–2035",
+     "value": "$200–220B (Grid ~40%, zero-carbon gen ~30%, gas gen ~13%, LDC ~6%)"
+    },
+    {
+     "band": "Earnings base",
+     "label": "Growth",
+     "value": "$114B (2025A) → $180B (2030), 9.6% CAGR (8.8% net of the Florida minority)"
+    },
+    {
+     "band": "Financing",
+     "label": "Equity",
+     "value": "$10B common equity 2027–2030 via DRIP/ATM (~35% equity funding of incremental capital); FFO/debt 14.5% 2026 target, 15% long-term"
+    },
+    {
+     "band": "Upside",
+     "label": "Not in plan",
+     "value": "$5–$10 billion of additional capital to serve large loads in Indiana and Florida (Q2 2026)"
+    }
+   ],
+   "notes": "2026 capex about $17.75B (Investing.com slide write-up)."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$30,357M",
+      "expected": "Q4 2024: $7.65B (MarketBeat)",
+      "verdict": "miss",
+      "result": "Q4 2024 revenue $7.36B against $7.65B (MarketBeat); no full-year revenue consensus located",
+      "kpi": "revenue",
+      "usdMillions": 30357,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$5.90 (GAAP $5.71)",
+      "expected": "Q4 2024: $1.61 (MarketBeat)",
+      "verdict": "beat",
+      "result": "Q4 2024 adjusted EPS $1.66 against $1.61 (MarketBeat); full-year $5.90 was within the $5.85–$6.10 guidance as narrowed during 2024"
+     },
+     {
+      "name": "Net income available to common shareholders",
+      "actual": "$4,402M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Special items of $0.19 per share (regulatory matters, a system post-implementation charge, preferred-stock redemption, noncore asset sales and impairments, a captive storm deductible) separate GAAP from adjusted (FY2025 results release comparative column)"
+     },
+     {
+      "name": "Data-center electric service agreements signed",
+      "actual": "~3 GW recently signed at the Q3 2025 call (November 2025); the Q4 2025 deck restates the year-end figure as ~4.5 GW",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Five-year capital plan raised twice during 2025: $83B to $87B (August, with the Brookfield transaction) and to $95–105B guidance (November)"
+     }
+    ],
+    "commentary": "The last year before the data-center ladder was disclosed in gigawatts. Consensus for the full year was not located; the Q4 figures are the comparison, as with the corpus's Dominion dossier."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$32,237M (+6.2%)",
+      "expected": "Q4 2025: $7.66B (Zacks); $7.57B (MarketBeat)",
+      "verdict": "beat",
+      "result": "Q4 2025 revenue $7.94B, 3.9 percent above Zacks; full-year revenue consensus not located",
+      "kpi": "revenue",
+      "usdMillions": 32237,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$6.31 (GAAP $6.31; no special items)",
+      "expected": "Q4 2025: $1.51 (Zacks); $1.49 (MarketBeat)",
+      "verdict": "inline",
+      "result": "Q4 2025 adjusted EPS $1.50 — a $0.01 miss against Zacks and a $0.01 beat against MarketBeat; the year's $6.31 sat above the $6.30 midpoint of the narrowed $6.25–$6.35 range. 2026 guidance midpoint of $6.675 was set below the $6.70 consensus"
+     },
+     {
+      "name": "Net income available to common shareholders",
+      "actual": "$4,912M (vs $4,402M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q4 2025 adjusted EPS $1.50 against $1.66 a year earlier; 2025 guidance had been narrowed to $6.25–$6.35 in November and the year landed at $6.31, the midpoint used as the base for 5–7% growth through 2030"
+     },
+     {
+      "name": "Data-center electric service agreements signed",
+      "actual": "~4.5 GW at the Q4 2025 call (+1.5 GW since the Q3 call), per the February 10, 2026 investor presentation",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "305 MW of solar and 175 MW of storage placed in service during 2025; nuclear fleet capacity factor 96.9%, a record; ~$600M of nuclear production tax credits generated",
+      "kpi": "mw-contracted",
+      "qty": 4500
+     },
+     {
+      "name": "Five-year capital plan",
+      "actual": "$103B for 2026–2030 (Grid ~39%, regulated zero-carbon generation ~25%, hydrogen-capable gas ~20%, gas LDC ~8%)",
+      "expected": "$95–105B range guided in November 2025",
+      "verdict": "inline",
+      "result": "Earnings base $114B (2025) to $180B (2030), 9.6% compound growth; ten-year 2026–2035 plan $200–220B",
+      "kpi": "capex",
+      "usdMillions": 103000,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "The year the ladder went from ~3 GW to ~4.5 GW of signed data-center ESAs and the five-year plan from $87B to $103B. Zacks and MarketBeat disagree by two cents on the Q4 consensus; both are recorded and the verdict is inline."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$9,178M (vs $8,249M)",
+      "expected": "$8.40B (Zacks); $8.49B (Investing.com); $8.44B (MarketBeat)",
+      "verdict": "beat",
+      "result": "About 9 percent above Zacks; up 11 percent year on year",
+      "kpi": "revenue",
+      "usdMillions": 9178,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$1.93 (GAAP $1.97; vs $1.76 a year earlier)",
+      "expected": "$1.79 (Zacks); $1.86 (Investing.com); $1.87 (MarketBeat)",
+      "verdict": "beat",
+      "result": "A 7.6 percent beat against Zacks and a $0.06–$0.07 beat against the other trackers; GAAP $1.97 includes a $0.19 gain from regulatory settlements and $0.22 of asset-sale gains netted against $0.02 of discontinued operations"
+     },
+     {
+      "name": "Data-center electric service agreements signed",
+      "actual": "~7.6 GW (+~2.7 GW since the Q4 call), ~5 GW of data centers under construction, ~15.4 GW high-confidence late-stage pipeline (May 5, 2026 investor presentation)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Closed $5.3B of strategic transactions in the quarter — the Brookfield first closing ($2.8B, March 3) and the Piedmont Tennessee sale to Spire ($2.5B, March 31) — satisfying 2026 equity needs; up to $3.1B tax-credit transfer agreement announced",
+      "kpi": "mw-contracted",
+      "qty": 7600
+     }
+    ],
+    "commentary": "The quarter of the 2.7 GW jump in signed ESAs (Microsoft, Compass, Amazon, Digital Realty and QTS per trade press) and the two closings that funded 2026's equity need. Every tracker recorded a beat; the size depends on which consensus is used."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Total operating revenues",
+      "actual": "$7,592M (vs $7,508M); six months $16,770M (vs $15,757M)",
+      "expected": "$7.72B (Zacks); $7.66B (MarketBeat)",
+      "verdict": "miss",
+      "result": "1.6 percent below Zacks; up 1.1 percent year on year",
+      "kpi": "revenue",
+      "usdMillions": 7592,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$1.43 (GAAP $1.38; vs $1.25 a year earlier); six months adjusted $3.36",
+      "expected": "$1.29 (Zacks); $1.32 (Investing.com); $1.30 (MarketBeat)",
+      "verdict": "beat",
+      "result": "A 10.9 percent beat against Zacks and an $0.11 beat against Investing.com; GAAP $1.38 carries a $0.05 charge for the Carolinas rate-case settlements"
+     },
+     {
+      "name": "Data-center electric service agreements signed",
+      "actual": "~7.8 GW (+0.2 GW since the Q1 call); ~5.2 GW under construction; ~15.4 GW late-stage pipeline; $5–10B of potential additional capital to serve large loads in Indiana and Florida, not in the $103B plan (August 4, 2026 investor presentation)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2026 guidance of $6.55–$6.80 reaffirmed; gas turbine count with GE Vernova raised from 20 to 26; capacity to be added by 2031 raised from ~14 GW to ~15 GW; dividend raised to $1.085 a quarter",
+      "kpi": "mw-contracted",
+      "qty": 7800
+     }
+    ],
+    "commentary": "The signed ladder barely moved (+0.2 GW) but the build did: 26 turbines, 15 GW by 2031, $5–10B of upside capital named for Indiana and Florida. The NCUC's September 18–19 denial of the 255 MW Smith combustion turbine, citing untested data-center load, came after the quarter and is the first regulatory 'no' in the record."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-25",
+   "category": "leadership",
+   "headline": "Joyce Mullen, former Insight Enterprises CEO, joins the board effective September 28 (audit; operations and nuclear oversight)",
+   "read": "A technology-sector director added as the customer base tilts to data centers.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926110588/tm2626114d1_8k.htm"
+  },
+  {
+   "date": "2026-09-24",
+   "category": "policy",
+   "headline": "DOE selects Duke for a $50M SPARK award for advanced conductors and dynamic line ratings in Greenville and Spartanburg, SC and Henderson and Polk, NC ($201M total)",
+   "read": "Federal money for grid capacity in the counties where the Carolinas load is landing.",
+   "source": "https://news.duke-energy.com/releases/doe-announces-50-million-selection-of-duke-energy-to-strengthen-grid-reliability-and-support-growing-communities-in-the-carolinas"
+  },
+  {
+   "date": "2026-09-19",
+   "category": "regulatory",
+   "headline": "NCUC denies the certificate for the 255 MW Smith Energy Complex combustion turbine ($584M, Richmond County), 3–1, finding about 70 percent of the modeled load growth was data centers 'never tested in contested proceedings'; Duke may refile after the resource-plan order and must show compliance with the Ratepayer Protection Pledge",
+   "read": "The first regulatory refusal of a data-center-justified plant in this corpus, and a warning that the 15.4 GW pipeline will be litigated rung by rung.",
+   "source": "https://www.canarymedia.com/articles/fossil-fuels/regulators-reject-duke-gas-plant-north-carolina"
+  },
+  {
+   "date": "2026-09-11",
+   "category": "policy",
+   "headline": "EEI's large-load projects and tariffs list records Duke entries in five states — NC E-7 Sub 1329, FL 20260064, OH 26-0755-EL-ATA (Rate DC), SC 2025-172-E / 2025-154-E / 2026-138-E — and the AWS Richmond County campus ('each 1,000 MW data center to save existing customers almost $1 billion over the life of a 15-year contract')",
+   "read": "Duke's tariff work is the most geographically spread in the list; none of the five is a final approved data-center rate class yet.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "date": "2026-08-26",
+   "category": "regulatory",
+   "headline": "Florida PSC hears Duke Energy Florida's large-load policy (Docket 20260064-EI); the Office of Public Counsel says it 'doesn't attempt to comply with the most basic provisions' of SB 484 and Commissioner La Rosa calls it 'facially noncompliant'; written order after September 15 briefs",
+   "read": "The Florida terms (20 years, 75–85 percent take-or-pay, no rate schedule) are the strictest on paper and the most exposed to rejection.",
+   "source": "https://www.utilitydive.com/news/duke-energy-florida-psc-large-load-rate/828951/"
+  },
+  {
+   "date": "2026-08-17",
+   "category": "regulatory",
+   "headline": "2026 Carolinas Resource Plan filed with the PSCSC (August 14; Docket 2026-10-E): 18.5 GW of solar, 8.2 GW of combined cycle, 5.8 GW of combustion turbines, 13 GW of storage and ~4.5 GW of new nuclear through 2041; a 400 MW South Carolina standalone storage RFP; hearing April 5, 2027",
+   "read": "The storage line rose from 5,600 MW by 2034 to 13 GW by 2041 in one filing cycle; the SC RFP is the nearest open door for developers.",
+   "source": "https://investors.duke-energy.com/news/news-details/2026/Duke-Energys-resource-plan-builds-on-work-already-underway-that-supports-South-Carolinas-growth-while-delivering-value-to-customers/default.aspx"
+  },
+  {
+   "date": "2026-08-13",
+   "category": "financial",
+   "headline": "$1.75B of equity units close (35 million units at $50; 4.85 percent remarketable notes due 2032 and 2036; purchase contracts settle August 1, 2029; option to $2.0B)",
+   "read": "The first tranche of the $10B equity program, structured to land in 2029 when the gas plants enter service.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001326160/000110465926095903/tm2623082d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "regulatory",
+   "headline": "Duke Energy Progress settles its North Carolina rate case (E-2 Sub 1380): 9.8 percent ROE, 53 percent equity, $338M over two years, PTC flow-back raised to $120M a year, and support for a separate large-load tariff proceeding to conclude before rates take effect January 1, 2027",
+   "read": "Both Carolinas settlements now route the data-center terms into their own expedited docket.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0001326160/000110465926091159/tm2622337d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026: adjusted EPS $1.43 (GAAP $1.38), guidance $6.55–$6.80 reaffirmed; 7.8 GW of signed data-center ESAs, 5.2 GW under construction, 15.4 GW late-stage; GE Vernova turbines raised to 26; ~15 GW of capacity by 2031; $5–10B of Indiana and Florida upside capital",
+   "read": "The build outran the signings this quarter: six more turbines and a gigawatt more capacity for 0.2 GW of new ESAs.",
+   "source": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q2/Q2-2026-Earnings-Presentation_vF-w-Reg-G-FINAL.pdf"
+  },
+  {
+   "date": "2026-07-23",
+   "category": "policy",
+   "headline": "Duke launches 'Customer Protection Plus' — engineering studies before connection, customer-funded connection costs, upfront security, termination charges, targeted curtailment and revenue sharing above cost to serve — and signs the White House Ratepayer Protection Pledge; North Carolina's attorney general and governor ask the NCUC to make it binding",
+   "read": "A voluntary framework that the September 19 CPCN denial has since turned into a compliance test.",
+   "source": "https://investors.duke-energy.com/news/news-details/2026/Duke-Energy-Data-center-growth-will-deliver-billions-of-dollars-in-customer-savings/default.aspx"
+  },
+  {
+   "date": "2026-07-17",
+   "category": "regulatory",
+   "headline": "Duke Energy Carolinas settles its North Carolina rate case (E-7 Sub 1329): 9.8 percent ROE, 53 percent equity, $496M over two years (3.7 percent a year), ~$3.8B of multiyear-plan capital, and a separate large-load tariff proceeding to finish before January 1, 2027",
+   "read": "Less than half the $1.0B asked; Microsoft had urged the separate proceeding the settlement now creates.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926084653/tm2620766d1_ex99-1.htm"
+  },
+  {
+   "date": "2026-07-10",
+   "category": "regulatory",
+   "headline": "Duke Energy Florida avoids the 2027 base-rate step by accelerating the Powerline battery's investment tax credit ($50M) to customers",
+   "read": "A storage tax credit used as rate relief — and the first Florida battery (100 MW, March 2027) named in the process.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-florida-delivers-50-million-in-customer-savings-avoids-2027-base-rate-increase-through-innovative-tax-strategy"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "procurement",
+   "headline": "GE Vernova delivers the first 7HA turbine to the Person County combined-cycle site; the framework agreement rises to 26 turbines by the August call",
+   "read": "Slots secured in April 2025 (8 plus up to 11) became 26 in sixteen months — the fastest-growing utility turbine book in the corpus.",
+   "source": "https://www.wral.com/news/local/duke-energy-new-gas-turbine-july-2026/"
+  },
+  {
+   "date": "2026-06-19",
+   "category": "regulatory",
+   "headline": "Florida PSC suspends Duke Energy Florida's large-load tariff sheets for full review; the same week environmental groups sue the NCUC over its April 23 pause of Duke's 2026 solar-and-storage RFP (ruling due October 5)",
+   "read": "Two of the three storage doors — the Florida policy and the Carolinas RFP — are in litigation or suspension at once.",
+   "source": "https://cleanenergy.org/news/a-chairmans-order-a-lawsuit-and-a-ticking-clock-inside-the-fight-over-north-carolinas-2026-solar-rfp/"
+  },
+  {
+   "date": "2026-05-27",
+   "category": "regulatory",
+   "headline": "PSCSC approves the PowerShare Storage program for non-residential customer batteries ($120/kW connection credit plus $30/kW renewable adder, $3.50/kW-month, $0.10/kWh; 30–36 events a year), launched August 2026",
+   "read": "Behind-the-meter batteries bought as demand response under the SC Energy Security Act.",
+   "source": "https://news.duke-energy.com/releases/new-duke-energy-program-helps-south-carolina-nonresidential-customers-lower-costs-while-supporting-a-growing-grid"
+  },
+  {
+   "date": "2026-05-14",
+   "category": "project",
+   "headline": "Ground broken on the Cayuga Energy Complex in Vermillion County, Indiana — two 1x1 combined cycles, 1,476 MW, ~$3.33B, in service September 2029 and May 2030",
+   "read": "Indiana's first data-center-era gas plant; the Citizens Action Coalition's appeal is at the state Supreme Court.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-breaks-ground-on-cayuga-energy-complex-project-in-vermillion-county"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "financial",
+   "headline": "Q1 2026: adjusted EPS $1.93 (beat); signed data-center ESAs jump 2.7 GW to ~7.6 GW with Microsoft, Compass, Amazon, Digital Realty and QTS named by trade press; $5.3B of transactions closed; up to $3.1B of tax credits to be sold",
+   "read": "The quarter that made Duke a top-three disclosed data-center book among regulated utilities.",
+   "source": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Presentation-w-Reg-G.pdf"
+  },
+  {
+   "date": "2026-05-04",
+   "category": "regulatory",
+   "headline": "NCUC and PSCSC approve the Duke Energy Progress–Duke Energy Carolinas combination (effective January 1, 2027; $2.3B of customer savings through 2040) and Duke signs a transfer agreement for up to $3.1B of nuclear, solar and storage tax credits generated 2025–2028",
+   "read": "One Carolinas utility from 2027 — one rate case, one resource plan, one large-load tariff.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-finalizes-two-initiatives-to-deliver-more-than-5-billion-in-cost-saving-benefits-to-customers"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "regulatory",
+   "headline": "NRC renews Robinson's license to 2050 (759 MW); the same day the NCUC chair pauses the 2026 Carolinas solar-and-storage RFP required by the 2024 plan order",
+   "read": "Nuclear life extension advances while the competitive storage procurement stalls.",
+   "source": "https://news.duke-energy.com/releases/robinson-nuclear-plant-receives-approval-from-u-s-nuclear-regulatory-commission-to-continue-operating-until-2050"
+  },
+  {
+   "date": "2026-04-22",
+   "category": "regulatory",
+   "headline": "Duke Energy Florida refiles its Large Load Customer Policy under SB 484 (Docket 20260064-EI): 50 MW threshold, 20-year term, 75–85 percent take-or-pay, three-year termination fee, CIAC advanced in full",
+   "read": "The first Florida filing under the new law — and the one the commission has since questioned.",
+   "source": "https://www.floridapsc.com/pscfiles/library/filings/2026/02327-2026/02327-2026.pdf"
+  },
+  {
+   "date": "2026-04-20",
+   "category": "procurement",
+   "headline": "South Carolina 2026 battery RFP posted: ~400 MW of four-hour storage (about 300 MW DEC, 100 MW DEP), minimum 25 MW per facility, COD by December 31, 2031, utility-ownership or energy-storage-service-agreement tracks",
+   "read": "The one open competitive storage door in the Carolinas while the NC RFP is paused.",
+   "source": "https://dms.psc.sc.gov/Attachments/Matter/cdbec8e5-6c18-4105-bf55-d3144ab6ee40"
+  },
+  {
+   "date": "2026-03-31",
+   "category": "ma",
+   "headline": "Sale of Piedmont Natural Gas's Tennessee business to Spire closes ($2.48B; ~$800M to Piedmont debt, ~$1.5B to the capital plan)",
+   "read": "Gas customers fall from 1.8 million to 1.6 million; the proceeds and the Brookfield tranche cover 2026's equity need.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-completes-sale-of-its-tennessee-piedmont-natural-gas-business-to-spire"
+  },
+  {
+   "date": "2026-03-26",
+   "category": "regulatory",
+   "headline": "PSCSC certifies the ~1,365 MW Anderson County combined cycle (GE Vernova equipment; construction summer 2027; in service early 2031)",
+   "read": "South Carolina's largest new plant, approved eleven months after it was proposed.",
+   "source": "https://news.duke-energy.com/releases/regulators-approve-duke-energys-proposal-for-new-natural-gas-generation-to-support-south-carolinas-growing-energy-needs"
+  },
+  {
+   "date": "2026-03-03",
+   "category": "ma",
+   "headline": "Brookfield's first closing: Peninsula Power Holdings L.P. (Brookfield Super-Core Infrastructure Partners) buys 9.2 percent of Florida Progress for ~$2.8B; further tranches of $200M (December 2026), $500M (June 2027), $1.5B (December 2027) and $1B (June 2028) take it to 19.7 percent; NRC cleared the deal February 17 as the last condition",
+   "read": "Confirmed in the 8-K and the Q1 deck — the coverage plan's 'not confirmed' was stale. Brookfield gets two of eleven board seats, consent rights and a put.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926022610/tm267351d1_8k.htm"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "customer",
+   "headline": "Microsoft confirms its Person County, North Carolina data-center plans on 1,350 acres bought in October 2024, next to the Person County combined-cycle complex",
+   "read": "The named hyperscaler behind the Q1 ESA jump; the substation serving its Catawba County site is the deck's photo.",
+   "source": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/"
+  },
+  {
+   "date": "2026-02-10",
+   "category": "financial",
+   "headline": "FY2025 adjusted EPS $6.31; 2026 guidance $6.55–$6.80; five-year plan $103B (2026–2030); ~4.5 GW of signed data-center ESAs (+1.5 GW); growth guidance extended through 2030; Bloomberg reports Microsoft and Compass among the new North Carolina ESAs",
+   "read": "The plan raise that put Duke at the top of the regulated capex league.",
+   "source": "https://s201.q4cdn.com/583395453/files/doc_financials/2025/q4/Q4-2025-Earnings-Presentation_vF-w-Reg-G.pdf"
+  },
+  {
+   "date": "2026-01-15",
+   "category": "leadership",
+   "headline": "Kelvin Henderson becomes chief generation officer and Steven Capps chief nuclear officer from March 1, 2026; Preston Gillespie to lead the new-nuclear decision before retiring March 1, 2027",
+   "read": "The generation build and the SMR decision get dedicated owners.",
+   "source": "https://investors.duke-energy.com/news/news-details/2026/Duke-Energy-announces-leadership-changes-in-its-generation-and-operational-excellence-organization/default.aspx"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "project",
+   "headline": "Allen BESS 1 (50 MW / 200 MWh, ~$100M) on line at the former Allen coal plant, 'under budget and ahead of schedule'; Allen 2 (167 MW) and Riverbend (115 MW) announced; 6,550 MW of Carolinas batteries by 2035 cited",
+   "read": "The coal-site battery template Duke will repeat; supplier still unnamed.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-brings-new-grid-battery-on-line-at-former-allen-coal-plant"
+  },
+  {
+   "date": "2025-12-30",
+   "category": "project",
+   "headline": "Early site permit application for Belews Creek, Stokes County, filed with the NRC (permit expected 2027; first SMR targeted 2036, 600 MW by 2037)",
+   "read": "The new-nuclear option is on the same clock as Dominion's North Anna.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-submits-early-site-permit-application-for-potential-new-nuclear-development-in-north-carolina"
+  },
+  {
+   "date": "2025-11-20",
+   "category": "regulatory",
+   "headline": "Duke Energy Carolinas ($1.0B) and Duke Energy Progress ($729M) file North Carolina multiyear rate cases at a 10.95 percent ROE, with data centers more than 85 percent of expected economic-development load growth",
+   "read": "The cases that became the vehicle for the state's first large-load tariff.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-proposes-new-investments-in-north-carolina-to-boost-reliability-and-support-economic-growth-across-the-state"
+  },
+  {
+   "date": "2025-10-29",
+   "category": "regulatory",
+   "headline": "IURC approves the Cayuga combined cycles (Cause 46193; 1,476 MW; ~$3.33B) with CWIP recovery",
+   "read": "Indiana certifies data-center-era gas before any Indiana large-load tariff exists.",
+   "source": "https://secure.in.gov/oucc/electric/key-cases-by-utility/duke-energy-rates/cayuga-generating-station-cpcn"
+  },
+  {
+   "date": "2025-10-01",
+   "category": "regulatory",
+   "headline": "2025 Carolinas Resource Plan filed in North Carolina (E-100 Sub 207): 5,600 MW of storage by 2034, 4,000 MW of solar, 6,825 MW of combined cycle and 2,825 MW of combustion turbines by 2033; order due December 31, 2026",
+   "read": "The plan the NCUC is weighing while it has already refused one of its peakers.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-files-2025-carolinas-resource-plan-continues-modernizing-energy-infrastructure-to-support-future-growth"
+  },
+  {
+   "date": "2025-08-05",
+   "category": "ma",
+   "headline": "Brookfield agrees to buy 19.7 percent of Duke Energy Florida's parent for $6B; five-year plan raised to $87B",
+   "read": "Minority capital at the utility level — the structure Brookfield later repeated at Aypa and elsewhere in this corpus.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-partners-with-brookfield-to-secure-investment-in-duke-energy-florida-expands-capital-plan-to-87-billion"
+  },
+  {
+   "date": "2025-07-29",
+   "category": "policy",
+   "headline": "North Carolina SB 266 (S.L. 2025-78) enacted over veto: the 70 percent-by-2030 interim carbon target removed, CWIP recovery for baseload plants added",
+   "read": "The statute that lets Duke recover gas-plant construction costs during construction — and shifts fuel-cost burden to residential customers per EDF.",
+   "source": "https://www.wunc.org/politics/2025-06-19/nc-energy-bill-power-costs-duke-energy-residential-customers"
+  },
+  {
+   "date": "2025-04-24",
+   "category": "procurement",
+   "headline": "GE Vernova arrangement for up to 11 additional 7HA turbines on top of eight already secured, with an expansion of GE Vernova's Greenville, South Carolina plant",
+   "read": "The start of the 26-turbine book.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-and-ge-vernova-announce-significant-arangement-for-gas-turbines-and-associated-equipment"
+  },
+  {
+   "date": "2025-04-01",
+   "category": "leadership",
+   "headline": "Harry Sideris becomes president and CEO, succeeding Lynn Good; Ted Craver becomes chair",
+   "read": "A Progress Energy operations lifer takes over as the data-center book begins.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-board-of-directors-appoints-harry-sideris-as-president-and-chief-executive-officer-effective-april-1-succeeds-lynn-good-who-retires-as-chair-and-ceo"
+  },
+  {
+   "date": "2025-03-31",
+   "category": "regulatory",
+   "headline": "NRC grants Oconee (2,554 MW) a subsequent license renewal to 2053–2054",
+   "read": "The first 80-year license in the fleet; all eleven units are to be renewed.",
+   "source": "https://news.duke-energy.com/releases/duke-energys-largest-nuclear-plant-receives-approval-to-extend-operations-supports-growing-energy-demand-helps-keep-customer-costs-as-low-as-possible"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Duke's disclosed data-center ladder is the most conservative among the large regulated utilities in this file, and that this is a reporting choice rather than a smaller business. Basis: the decks report only signed ESAs (7.8 GW), construction (5.2 GW) and a 'high-confidence, late-stage' rung (15.4 GW, inclusive of signed) with no inquiry-stage figure, where Dominion reports 53.8 GW across three rungs and AEP 69 GW of executed agreements; Duke's own Carolinas forecast counts 43 large-load projects adding 8 GW through 2035 with data centers about 80 percent of the energy. We expect the 15.4 GW to be the number the November 2026 and February 2027 calls are measured against, and the CEO has said it should convert by mid-2027.",
+  "(High confidence) We assess that Duke has bet on gas first and storage second, and that the NCUC's September 19, 2026 denial of the Smith peaker is the first evidence the bet will be adjudicated plant by plant against the same data-center load it is meant to serve. Basis: 7,501 MW of new gas in the Q2 table against ~4.5 GW of batteries by 2031; SB 266's CWIP recovery for baseload; and the commission's finding that about 70 percent of the modeled load growth behind the 255 MW turbine had 'never [been] tested in contested proceedings'. The 2025 resource-plan order due by December 31, 2026 is where the load forecast gets tested; Buck CT 3–4 and any Smith refiling depend on it.",
+  "(Moderate confidence) We assess that the large-load tariff Duke ends up with in North Carolina will sit between its own proposal (50 MW, 75 percent, 10–15 years) and the advocates' (25 MW, 85 percent, 20 years), and that Florida is the jurisdiction most likely to reject the company's first draft outright. Basis: both Carolinas settlements commit to a separate expedited proceeding before January 1, 2027 with the Public Staff as a co-author; the Florida PSC's public counsel and a commissioner have already called the DEF policy 'facially noncompliant' with SB 484 and the statewide compliant-tariff deadline was October 1, 2026. A seller pricing a Carolinas or Florida connection should assume Dominion-class minimums (85 percent) rather than Duke's opening 75 percent.",
+  "(Moderate confidence) We assess that the storage supplier decision for the 2026–2030 portfolio is either made and undisclosed or being made through the EPC channel, and that the SC 400 MW RFP and DEF's solar-sited batteries are the doors a new supplier can actually enter. Basis: no Duke release or filing read names a battery OEM for Allen, Riverbend, Knightdale, Powerline or Bartow (Allen 1 earned the 40 percent ITC plus a 10 percent energy-community adder); the company's June 30, 2026 supplier release names GE Vernova and Siemens Energy but no storage vendor; the SC RFP has a utility-ownership track that would put the OEM choice with Duke's EPC. Treat any claim that Duke has a named storage incumbent as unverified.",
+  "(Moderate confidence) We assess that the Brookfield structure — 19.7 percent of the Florida utility sold in five tranches through June 2028 with two board seats, consent rights and a put — is the template for how Duke will fund the $5–10B of Florida and Indiana upside if it materializes, and that the company's stated 'genco' evaluation in Indiana is a second version of the same idea. Basis: the March 3, 2026 8-K; the Q2 call's statement that upside capital is 'mainly Indiana and Florida'; the CEO's 'Indiana genco structure under evaluation'. Minority capital at the operating-company level keeps the holding company's 35 percent equity-funding ratio intact.",
+  "(Moderate confidence) We assess that Duke's nuclear position — eleven units being renewed to 80 years, ~300 MW of uprates, a Belews Creek early site permit and the 2024 tariff agreements with Amazon, Google, Microsoft and Nucor — is the asset most likely to distinguish it from Dominion and Southern in the hyperscalers' eyes after 2030, but that no SMR technology, customer commitment or dollar figure has been disclosed. Basis: the 2024 MOU release, the December 30, 2025 ESP filing and the NCUC's $440M development approval. The 2027 permit decision is the next observable.",
+  "(Low confidence) We assess that the coverage plan's 'Oracle 1.4 GW under construction / Google 1 GW awaiting approval' attribution to Duke, which appears in one trade-press item, is a mis-attribution of DTE Energy's two Michigan contracts. No Duke document, filing or second source carries it; it is recorded here only so the next revision does not re-import it."
+ ],
+ "relationships": [
+  {
+   "slug": "brookfield",
+   "type": "investor",
+   "status": "active",
+   "since": "2026-03",
+   "scale": "19.7% of Florida Progress for $6B; 9.2% closed",
+   "note": "Brookfield Super-Core Infrastructure Partners, through Peninsula Power Holdings L.P., bought 9.2 percent of Florida Progress (Duke Energy Florida's parent) for about $2.8B on March 3, 2026, rising to 19.7 percent by June 2028.",
+   "context": "Duke's August 5, 2025 release announced the up-to-19.7 percent, $6B all-cash minority investment with Duke retaining 80.3 percent and operating the utility; FERC and CFIUS approved in December 2025 and the NRC determined on February 17, 2026 that the investment is not a transfer of control. The March 3, 2026 8-K records the first closing and the remaining tranches — $200M by December 31, 2026, $500M by June 30, 2027, $1.5B by December 31, 2027 and $1B by June 30, 2028 — an eleven-member board with two investor managers, and investor consent rights and a put right.\n\nBrookfield previously bought Duke's commercial renewables business (2023). In this corpus Brookfield also controls Aypa Power, so the same investor sits on both sides of the Florida storage market.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926022610/tm267351d1_8k.htm"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-04",
+   "scale": "26 gas turbines",
+   "via": "7HA gas turbines and Goldsboro transformers",
+   "note": "GE Vernova is Duke's turbine supplier for the >7.5 GW gas program — 8 turbines secured before April 2025, up to 11 more under the April 24, 2025 arrangement, 26 in total by the August 2026 call, with the first delivered to Person County in July 2026.",
+   "context": "The April 24, 2025 release describes 'a significant arrangement for gas turbines and associated equipment' and an expansion of GE Vernova's Greenville, South Carolina plant; the Q2 2026 presentation says six turbines were added 'to align with next phase of build in resource plans'. Duke's June 30, 2026 supplier release names GE Vernova's Goldsboro, North Carolina transformer plant among ~$1B of 2025 North Carolina spend. The corpus's GE Vernova dossier records '20 × 7HA turbines' from the May 2026 count; the figure is now 26.",
+   "source": "https://news.duke-energy.com/releases/duke-energy-and-ge-vernova-announce-significant-arangement-for-gas-turbines-and-associated-equipment"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-02",
+   "via": "Electric service agreements (North Carolina)",
+   "note": "Microsoft is a signed ESA customer — the Q1 and Q2 2026 decks caption a 'substation to serve Microsoft data center, Catawba County, NC', Bloomberg reported the ESA on February 10, 2026, and Microsoft confirmed its Person County plans on February 24, 2026.",
+   "context": "Microsoft bought 1,350 acres in Woodsdale Township, Person County for $27M (announced October 31, 2024) next to Duke's Person County combined-cycle complex, and confirmed the data-center plans on February 24, 2026 (The Assembly). It was also a 2024 signatory to the Accelerating Clean Energy and Clean Transition tariff agreements and, in the 2026 North Carolina rate case, urged a separate large-load proceeding — which both settlements now provide. The contracted megawatts are not disclosed.",
+   "source": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Presentation-w-Reg-G.pdf"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-02",
+   "scale": "$10B campus (EEI)",
+   "via": "Electric service agreement (Richmond County, NC)",
+   "note": "Amazon's data-center site in Richmond County, North Carolina is a Q1 2026 deck photo caption and EEI's September 2026 list records the AWS $10B campus as under construction and served by Duke.",
+   "context": "EEI's list quotes Duke: it 'expects each 1,000 MW data center to save existing customers almost $1 billion over the life of a 15-year contract'. Amazon was a 2024 tariff-agreement signatory. WSOC reported in August 2026 that the Richmond County campus proposes 600 diesel generators for backup. It is also the county where the NCUC denied Duke's Smith combustion turbine on September 19, 2026 — the load the plant was justified on is in part this campus.",
+   "source": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs"
+  },
+  {
+   "slug": "qts",
+   "type": "customer",
+   "status": "active",
+   "since": "2026",
+   "via": "Electric service agreement (York County, SC)",
+   "note": "QTS's data-center site in York County, South Carolina is captioned on the Q2 2026 investor presentation and named among the Q1 2026 signings by trade press.",
+   "context": "Utility Dive's May 6, 2026 coverage of the 2.7 GW Q1 increase lists QTS with Microsoft, Compass, Amazon and Digital Realty. Contracted megawatts are not disclosed. QTS's own dossier in this corpus does not yet carry a Duke line.",
+   "source": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q2/Q2-2026-Earnings-Presentation_vF-w-Reg-G-FINAL.pdf"
+  },
+  {
+   "slug": "compass-datacenters",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-02",
+   "via": "Electric service agreement (North Carolina)",
+   "note": "Compass Datacenters signed a North Carolina ESA reported with Microsoft's on February 10, 2026; the Compass dossier records its Statesville campus with a Duke substation nearby and Duke service reported but unverified.",
+   "context": "Bloomberg (paywalled) and Hoodline report Compass among the ESAs that took Duke's signed total from 3 GW to 4.5 GW. The corpus's Compass dossier lists Statesville, North Carolina (about 330–340 acres, five buildings, rezoning approved September 2025) with 'Duke Energy service for Statesville reported by Bloomberg and E&E in February 2026 but not verifiable from a fetched source' — this dossier's trade-press evidence is consistent with it but is not a Duke or Compass statement naming the site.",
+   "source": "https://hoodline.com/2026/05/ai-power-grab-duke-energy-inks-2-7-gw-in-data-center-deals-around-charlotte/"
+  },
+  {
+   "slug": "digital-realty",
+   "type": "customer",
+   "status": "active",
+   "since": "2026",
+   "via": "Electric service agreement",
+   "note": "Digital Realty appears on the 'select announced large load project ESAs' logo strip of the 2026 investor presentations per third-party slide write-ups and among the Q1 2026 signings per Utility Dive.",
+   "context": "The logo strip is an image and was not text-extractable; the attribution rests on Investing.com's and Utility Dive's write-ups of the deck. Site and megawatts are not disclosed.",
+   "source": "https://www.utilitydive.com/news/duke-energy-earnings-anderson-gas-plant/819428/"
+  },
+  {
+   "slug": "google",
+   "type": "partner",
+   "status": "active",
+   "since": "2024-05",
+   "via": "Accelerating Clean Energy and Clean Transition tariff agreements",
+   "note": "Google signed the May 29, 2024 agreements with Duke, Amazon, Microsoft and Nucor to develop tariffs funding new nuclear and long-duration storage, is a party to the 2026 Carolinas consolidation settlement's clean-transition-tariff evaluation and to South Carolina's generic large-load docket; no Duke-named Google ESA or site was found.",
+   "context": "Duke's May 29, 2024 release quotes Google's Briana Kobor on the ACE and CTT concepts. Canary Media reports Google, Nucor, Walmart, SELC and the Public Staff as parties to the March 2026 DEC/DEP consolidation settlement under which Duke will evaluate a 'clean transition tariff'. Fortune names Google among Duke's customers; Google's South Carolina campuses (Dorchester and Berkeley Counties) are not confirmed as Duke-served in any source read.",
+   "source": "https://news.duke-energy.com/releases/responding-to-growing-demand-duke-energy-amazon-google-microsoft-and-nucor-execute-agreements-to-accelerate-clean-energy-options"
+  },
+  {
+   "slug": "siemens-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025",
+   "note": "Siemens Energy's Charlotte facility is named in Duke's June 30, 2026 North Carolina supplier release as part of ~$1B of 2025 in-state spend.",
+   "context": "The release frames the spend as supporting the gas and grid build; no Siemens Energy turbine order for a named Duke plant was found — the turbine book is GE Vernova's.",
+   "source": "https://news.duke-energy.com/releases/releases-20260630-6924871"
+  },
+  {
+   "slug": "nscale",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026",
+   "scale": "99 MW secured (Nscale)",
+   "note": "The corpus's Nscale dossier records a Madison, North Carolina site with '99MW secured Duke Energy' and 40 MW by 2026; no Duke document names Nscale.",
+   "context": "The claim rests on Nscale's own materials as recorded in its dossier. Duke's decks caption Microsoft, Amazon and QTS sites only, and the deck's logo strip as reported by third parties does not include Nscale, so the relationship is recorded from the counterparty's side and remains unconfirmed by Duke.",
+   "source": "Nscale dossier in this corpus (Madison, NC site); no Duke source"
+  },
+  {
+   "slug": "dominion-energy",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer utility and the corpus's tariff benchmark — Dominion's GS-5 class (14 years, 85/60 percent minimums from 2027) is the standard Duke's 75 percent North Carolina proposal is being measured against by advocates.",
+   "context": "Duke Energy Progress and Dominion Energy North Carolina share the state and the NCUC; the two companies' resource plans, large-load terms and nuclear timelines (Belews Creek and North Anna SMR early site permits, both 2036–2037) run in parallel.",
+   "source": "Peer comparison; no transaction recorded"
+  },
+  {
+   "slug": "southern-company",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer utility; Georgia Power's 9,885 MW certified in one order is the only regulated gas program larger than Duke's 7,501 MW, and its utility-owned storage program is the closest analogue to Duke's coal-site batteries.",
+   "context": "Recorded as a peer link only; Duke's Anderson County plant (South Carolina) and Georgia Power's build serve adjacent markets.",
+   "source": "Peer comparison; no transaction recorded"
+  },
+  {
+   "slug": "aep",
+   "type": "competitor",
+   "status": "active",
+   "note": "Peer utility whose AEP Ohio data-center tariff (over 25 MW, 85 percent for 12 years) is the benchmark for Duke Energy Ohio's proposed Rate DC (PUCO 26-0755-EL-ATA), and whose Indiana Michigan Power holds the only IURC large-load order.",
+   "context": "Ohio HB 706 (February 2026) would extend the AEP Ohio terms statewide, which would set Duke Energy Ohio's floor; in Indiana the IURC's large-load rules apply to I&M only and Duke Energy Indiana has no tariff.",
+   "source": "https://www.statenews.org/government-politics/2026-03-02/ohio-house-bill-would-extend-data-center-tariff-to-rest-of-state"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "NC SB 266 (S.L. 2025-78)",
+   "status": "in-effect",
+   "effectiveDate": "2025-07-29",
+   "exposure": "Enacted over the governor's veto on July 29, 2025, the law removed the 70 percent-by-2030 interim carbon target (keeping 2050 neutrality), allows CWIP recovery for baseload plants where the NCUC finds savings, permits 100 percent securitization of retired coal and exempts large generation from the $500M multiyear-plan cap. EDF estimates about $87M a year of fuel-cost burden shifts from commercial and industrial to residential customers; an NCSU analysis put the added fuel cost at up to $23B through 2050.",
+   "mitigation": "Duke cites the 2025 Carolinas Resource Plan's 2.1 percent bill CAGR and the settlements' $120M-a-year tax-credit flow-back; the DEC and DEP settlements accept 9.8 percent ROE against 10.95 percent requested.",
+   "source": "https://www.wunc.org/politics/2025-06-19/nc-energy-bill-power-costs-duke-energy-residential-customers"
+  },
+  {
+   "regime": "Florida SB 484 (large-load cost of service)",
+   "status": "in-effect",
+   "effectiveDate": "2026-07",
+   "exposure": "Signed May 7, 2026 and effective July 2026, SB 484 requires each large-load customer to bear its full cost of service — connection, incremental transmission and generation, operations — and set an October 1, 2026 deadline for investor-owned utilities' compliant tariffs. Duke Energy Florida's refiled Large Load Customer Policy (Docket 20260064-EI) has a 20-year term and 75–85 percent take-or-pay but no rate schedule; the Office of Public Counsel and Commissioner La Rosa called it 'facially noncompliant' at the August 25–26 hearing.",
+   "mitigation": "DEF committed to propose a large-load rate schedule in its next rate case (its 2024 settlement runs through 2027) and says any cost gap before then falls to shareholders; FPL's LLCS-1/LLCS-2 (50 MW, 85 percent load factor) effective January 1, 2026 is the in-state benchmark.",
+   "source": "https://news.wfsu.org/state-news/2026-08-28/a-florida-law-to-protect-consumers-from-data-center-costs-faces-its-first-test"
+  },
+  {
+   "regime": "PJM capacity market",
+   "status": "in-effect",
+   "effectiveDate": "2025-06",
+   "exposure": "Duke Energy Ohio (wires-only under an electric security plan through May 2028) and Duke Energy Kentucky (generation-owning, in PJM since 2011) sit in PJM, where the July 2026 base residual auction cleared about 7 GW short of target with roughly 500 MW of new supply and FERC's chair spoke of 'alarm bells'. The Carolinas and Florida utilities are outside any RTO and Duke Energy Indiana is in MISO, so the capacity-price exposure is confined to the Midwest utilities and is not discussed in the 2026 investor presentations.",
+   "mitigation": "Duke Energy Ohio's proposed Rate DC data-center tariff (PUCO 26-0755-EL-ATA) and Duke Energy Kentucky's June 2026 IRP; no Duke-specific FERC co-location docket found.",
+   "source": "https://www.utilitydive.com/news/pjm-capacity-auction-governance-ferc-swett/825508/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Duke is monetizing up to $3.1B of nuclear production, solar production and storage investment tax credits generated 2025–2028 under a transfer agreement announced May 4, 2026; about $600M of nuclear PTCs flowed to customers in 2025; the DEP settlement raises the customer flow-back to $120M a year for 2027–2028; Duke Energy Florida returns $50M of the Powerline battery's ITC in 2027 and expects more than $500M of ITCs from 1.4 GW of storage over ten years; Allen BESS 1 earned the 40 percent ITC plus a 10 percent energy-community adder. No Duke deck or release read mentions the 2025 federal tax law's phase-outs, the prohibited-foreign-entity rules or battery import tariffs; the forward-looking statements cite 'increased tariffs, export controls'.",
+   "mitigation": "Tax-credit transfer agreements; the Florida large-load policy bars service to foreign-entity large loads (a customer rule, not a supply-chain one).",
+   "source": "https://news.duke-energy.com/releases/duke-energy-finalizes-two-initiatives-to-deliver-more-than-5-billion-in-cost-saving-benefits-to-customers"
+  },
+  {
+   "regime": "White House Ratepayer Protection Pledge",
+   "status": "in-effect",
+   "effectiveDate": "2026-07",
+   "exposure": "Duke signed the pledge in July 2026 and launched 'Customer Protection Plus' the same week; North Carolina's attorney general and governor asked the NCUC to make it binding, and the commission's September 19, 2026 order denying the Smith combustion turbine says any reapplication must show compliance with the pledge. A federal bill, the Ratepayer Protection Act (HR 9340, marked up July 21, 2026), would codify similar terms.",
+   "mitigation": "Customer Protection Plus's three commitments — studies before connection, long-term agreements with security and termination charges, and revenue sharing above cost to serve.",
+   "source": "https://www.wral.com/news/nccapitol/duke-energy-data-center-pledge-north-carolina-july-2026/"
+  },
+  {
+   "regime": "NRC subsequent license renewal",
+   "status": "in-effect",
+   "effectiveDate": "2025-03-31",
+   "exposure": "Oconee (to 2053–2054) and Robinson (to 2050) hold 80-year licenses; Brunswick's application is due by end-2026 and all eleven units are to be renewed. The Belews Creek early site permit (filed December 30, 2025) is expected in 2027. About 300 MW of uprates are planned.",
+   "mitigation": "Not applicable — the regime is an enabler; the exposure is schedule.",
+   "source": "https://news.duke-energy.com/releases/robinson-nuclear-plant-receives-approval-from-u-s-nuclear-regulatory-commission-to-continue-operating-until-2050"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Harry K. Sideris",
+   "title": "President and Chief Executive Officer",
+   "background": [
+    "President and CEO since April 1, 2025, succeeding Lynn Good; president since April 2024 (company release, January 13, 2025)",
+    "Executive vice president, customer experience, solutions and services; president, Duke Energy Florida; senior vice president, customer delivery and services (October 2019); senior vice president and chief distribution officer",
+    "Vice president, environmental health and safety; vice president, power generation for the fossil and hydro fleet in western North Carolina and South Carolina",
+    "Joined Progress Energy in 1996; 29-year career across the Carolinas and Florida (company release)"
+   ]
+  },
+  {
+   "name": "Brian D. Savoy",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "background": [
+    "Chief financial officer; hosts every quarterly results call in 2025 and 2026 (company results releases)",
+    "Senior vice president, business transformation and technology, and chief administrative officer (October 2019 release)",
+    "Earlier finance and controller roles at Duke Energy; the date of his appointment as CFO was not reachable this session (company leadership page blocked from this network)"
+   ]
+  },
+  {
+   "name": "Kodwo Ghartey-Tagoe",
+   "title": "Executive Vice President and Chief Executive Officer, Duke Energy Carolinas and Natural Gas Business",
+   "background": [
+    "Executive vice president and CEO of Duke Energy Carolinas and the natural gas business since July 1, 2025 (2026 proxy statement, via search index)",
+    "Executive vice president and chief legal officer (October 2019 release)",
+    "State president, Duke Energy South Carolina"
+   ]
+  },
+  {
+   "name": "Kelvin Renjel",
+   "title": "Executive Vice President and Chief Executive Officer, Duke Energy Florida and Midwest; Chief Corporate Affairs Officer",
+   "background": [
+    "Executive vice president and CEO of Duke Energy Florida and the Midwest utilities since July 1, 2025 (2026 proxy statement, via search index)",
+    "Chief corporate affairs officer; earlier corporate affairs and government relations roles at Duke Energy (company release, July 2025)"
+   ]
+  },
+  {
+   "name": "Sasha Weintraub",
+   "title": "Executive Vice President and Chief Customer Officer",
+   "background": [
+    "Executive vice president and chief customer officer; quoted on the Customer Protection Plus large-load framework (company release, July 23, 2026)",
+    "Senior vice president, natural gas business unit (2019); senior vice president and chief commercial officer for natural gas",
+    "Earlier roles in fuels and system optimization at Duke Energy"
+   ]
+  },
+  {
+   "name": "Scott Batson",
+   "title": "Executive Vice President and Chief Power Grid Officer",
+   "background": [
+    "Executive vice president and chief power grid officer; quoted on the DOE SPARK advanced-conductor selection (company release, September 24, 2026)",
+    "Earlier senior vice president and chief distribution officer, and vice president roles in transmission and distribution at Duke Energy"
+   ]
+  },
+  {
+   "name": "Kelvin Henderson",
+   "title": "Senior Vice President, Chief Generation Officer and Enterprise Operational Excellence",
+   "background": [
+    "Chief generation officer since March 1, 2026, taking the regulated generation fleet from Preston Gillespie, who moves to a nuclear strategy role and retires March 1, 2027 (company release, January 15, 2026)",
+    "Chief nuclear officer for five years; more than 35 years in nuclear operations",
+    "Steven Capps, 30 years at Duke, became senior vice president and chief nuclear officer on the same date"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "SEC — Duke Energy 8-K: Joyce Mullen appointed to the board",
+   "url": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926110588/tm2626114d1_8k.htm",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Duke Energy — Board appoints Joyce Mullen",
+   "url": "https://news.duke-energy.com/releases/duke-energy-board-appoints-joyce-mullen-as-new-member",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "PSCSC — Docket 2026-10-E, Duke Energy Carolinas 2026 Integrated Resource Plan",
+   "url": "https://dms.psc.sc.gov/Web/Dockets/Detail/119500",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "MarketBeat — Duke Energy earnings (Q3 2026 date November 5, estimated; consensus $1.92)",
+   "url": "https://www.marketbeat.com/stocks/NYSE/DUK/earnings/",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "TipRanks — Duke Energy earnings (Q3 2026 date October 29)",
+   "url": "https://www.tipranks.com/stocks/duk/earnings",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Quartr — Duke Energy Corporation (Q3 2026 date November 6)",
+   "url": "https://quartr.com/companies/duke-energy-corporation_3711",
+   "date": "2026-09-25"
+  },
+  {
+   "label": "Duke Energy — DOE announces $50 million SPARK selection for Carolinas grid reliability",
+   "url": "https://news.duke-energy.com/releases/doe-announces-50-million-selection-of-duke-energy-to-strengthen-grid-reliability-and-support-growing-communities-in-the-carolinas",
+   "date": "2026-09-24"
+  },
+  {
+   "label": "McNees — State data-center ratepayer tracker (FPSC 20260064-EI procedural dates)",
+   "url": "https://markmcnees.com/press/data-center-tracker.html",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "mgrid — North Carolina regulators deny Duke Energy a 255 MW gas turbine over unverified data-center load growth",
+   "url": "https://mgrid.org/2026/09/22/north-carolina-regulators-deny-duke-energy-a-255-mw-gas-turbine-over-unverified-data-center-load-growth/",
+   "date": "2026-09-22"
+  },
+  {
+   "label": "Canary Media — Regulators reject Duke gas plant in North Carolina",
+   "url": "https://www.canarymedia.com/articles/fossil-fuels/regulators-reject-duke-gas-plant-north-carolina",
+   "date": "2026-09-21"
+  },
+  {
+   "label": "RTO Insider — North Carolina AG urges creation of a data-center tariff (paywalled)",
+   "url": "https://www.rtoinsider.com/143725-north-carolina-ag-urges-creation-data-center-tariff/",
+   "date": "2026-09-16"
+  },
+  {
+   "label": "EEI — List of Large Customer Projects and Tariffs (updated September 11, 2026)",
+   "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+   "date": "2026-09-11"
+  },
+  {
+   "label": "Duke Energy Florida — Second battery facility capable of providing backup power (Trenton)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-florida-launches-its-second-battery-facility-capable-of-providing-backup-power-for-customers",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "mgrid — Duke Energy Florida's first large-load tariff covers 50 MW customers and sets no rate",
+   "url": "https://mgrid.org/2026/08/28/duke-energy-floridas-first-large-load-tariff-covers-50-mw-customers-and-sets-no-rate-for-them/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "WFSU — A Florida law to protect consumers from data-center costs faces its first test",
+   "url": "https://news.wfsu.org/state-news/2026-08-28/a-florida-law-to-protect-consumers-from-data-center-costs-faces-its-first-test",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "SACE — A chairman's order, a lawsuit and a ticking clock: North Carolina's 2026 solar RFP",
+   "url": "https://cleanenergy.org/news/a-chairmans-order-a-lawsuit-and-a-ticking-clock-inside-the-fight-over-north-carolinas-2026-solar-rfp/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Utility Dive — Duke Energy Florida asks PSC to defer a specific large-load rate",
+   "url": "https://www.utilitydive.com/news/duke-energy-florida-psc-large-load-rate/828951/",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "WSOC — How NC regulators could protect ratepayers from the cost of powering data centers",
+   "url": "https://www.wsoctv.com/news/local/how-nc-regulators-could-protect-ratepayers-cost-powering-data-centers/D2VXMA2MKRAULMG4K3HDCHSMP4/",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "Industrial Info — Duke Energy files 2026 Carolinas Resource Plan",
+   "url": "https://www.industrialinfo.com/news/article/duke-energy-files-2026-carolinas-resource-plan--361666",
+   "date": "2026-08-24"
+  },
+  {
+   "label": "Utility Dive — Duke's Carolinas resource plan targets 18.5 GW of solar, gas and nuclear",
+   "url": "https://www.utilitydive.com/news/dukes-carolinas-resource-plan-solar-gas-nuclear/828402/",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "FPSC — Docket 20260064-EI, PCS Phosphate and Nucor motion for official recognition (Doc. 05289-2026)",
+   "url": "https://www.psc.state.fl.us/library/FILINGS/2026/05289-2026/05289-2026.pdf",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Duke Energy IR — Resource plan builds on work already underway that supports South Carolina's growth (2026 CRP filed August 14)",
+   "url": "https://investors.duke-energy.com/news/news-details/2026/Duke-Energys-resource-plan-builds-on-work-already-underway-that-supports-South-Carolinas-growth-while-delivering-value-to-customers/default.aspx",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "T&D World — Duke executives quantify data-center capex upside",
+   "url": "https://www.tdworld.com/utility-business/news/55398294/utility-business-notes-duke-executives-quantify-data-center-capex-upside",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "SEC — Duke Energy 8-K: equity units offering (exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001326160/000110465926095903/tm2623082d1_ex99-1.htm",
+   "date": "2026-08-13"
+  },
+  {
+   "label": "Duke Energy — Pricing of equity units offering",
+   "url": "https://news.duke-energy.com/releases/duke-energy-announces-pricing-of-equity-units-offering",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "mgrid — Duke Energy PowerShare Storage, South Carolina ($120/kW battery credit)",
+   "url": "https://mgrid.org/2026/08/11/duke-energy-powershare-storage-south-carolina-120-kw-battery-credit/",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "Utility Dive — Duke Energy to issue $10B in equity to capture 'once-in-a-generation' growth",
+   "url": "https://www.utilitydive.com/news/duke-energy-to-issue-10b-in-equity-to-capture-once-in-a-generation-gro/827039/",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "SEC — Duke Energy 8-K: Duke Energy Progress comprehensive settlement, NCUC E-2 Sub 1380 (exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001326160/000110465926091159/tm2622337d1_ex99-1.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Duke Energy — Duke Energy Progress reaches agreement with the North Carolina Public Staff and other stakeholders",
+   "url": "https://news.duke-energy.com/releases/duke-energy-progress-reaches-agreement-with-north-carolina-public-staff-and-other-stakeholders-to-deliver-a-lower-cost-path-to-power-north-carolinas-future",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Duke Energy — Q2 2026 earnings release",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q2/Q2-2026-Earnings-Release_vF.pdf",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Duke Energy — Q2 2026 earnings presentation",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q2/Q2-2026-Earnings-Presentation_vF-w-Reg-G-FINAL.pdf",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "SEC — Duke Energy Q2 2026 earnings release (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001326160/000132616026000037/er-20260630xearningsreleas.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "SEC — Duke Energy Form 10-Q for the quarter ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001326160/000132616026000040/duk-20260630.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — Duke Energy Q2 2026 slides: EPS beats amid data-center boom",
+   "url": "https://www.investing.com/news/company-news/duke-energy-q2-2026-slides-eps-beats-amid-data-center-boom-93CH-4835216",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Motley Fool — Duke Energy Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/04/duke-energy-duk-q2-2026-earnings-call-transcript/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Zacks (via Yahoo Finance) — Duke Energy Q2 earnings beat estimates ($1.29)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/duke-energy-q2-earnings-beat-160900742.html",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Duke Energy IR — Data center growth will deliver billions of dollars in customer savings (Customer Protection Plus)",
+   "url": "https://investors.duke-energy.com/news/news-details/2026/Duke-Energy-Data-center-growth-will-deliver-billions-of-dollars-in-customer-savings/default.aspx",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "WRAL — Duke Energy signs the White House data-center pledge; AG and governor want it binding",
+   "url": "https://www.wral.com/news/nccapitol/duke-energy-data-center-pledge-north-carolina-july-2026/",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "EDF Climate 411 — Duke Energy settlement is the beginning of North Carolina data-center energy policy",
+   "url": "https://blogs.edf.org/climate411/2026/07/23/duke-energy-settlement-beginning-north-carolina-data-center-energy-policy/",
+   "date": "2026-07-23"
+  },
+  {
+   "label": "Citrus County Chronicle — Duke Energy is charging ahead (Crystal River / Powerline battery)",
+   "url": "https://www.chronicleonline.com/news/local/duke-energy-is-charging-ahead/article_03b6f791-521c-53b9-803b-f485e1c00077.html",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "SEC — Duke Energy 8-K: Duke Energy Carolinas comprehensive settlement, NCUC E-7 Sub 1329 (exhibit 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926084653/tm2620766d1_ex99-1.htm",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Duke Energy — Duke Energy Carolinas reaches agreement with the North Carolina Public Staff and other stakeholders",
+   "url": "https://news.duke-energy.com/releases/duke-energy-carolinas-reaches-agreement-with-north-carolina-public-staff-and-other-stakeholders-to-deliver-a-lower-cost-path-to-power-north-carolinas-future",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Utility Dive — PJM capacity auction, governance and FERC Chair Swett",
+   "url": "https://www.utilitydive.com/news/pjm-capacity-auction-governance-ferc-swett/825508/",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Duke Energy — Dividend payments to shareholders ($1.085 a quarter)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-announces-dividend-payments-to-shareholders-6925932",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "Duke Energy Florida — $50 million in customer savings; avoids 2027 base-rate increase through tax strategy",
+   "url": "https://news.duke-energy.com/releases/duke-energy-florida-delivers-50-million-in-customer-savings-avoids-2027-base-rate-increase-through-innovative-tax-strategy",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "Canary Media — Duke Energy proposes special rules for data centers in North Carolina",
+   "url": "https://www.canarymedia.com/articles/data-centers/duke-energy-proposes-special-rules-for-data-centers-in-north-carolina",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "WRAL — Duke Energy's first new gas turbine arrives (Person County)",
+   "url": "https://www.wral.com/news/local/duke-energy-new-gas-turbine-july-2026/",
+   "date": "2026-07"
+  },
+  {
+   "label": "Duke Energy — ~$1 billion spent with North Carolina suppliers in 2025 (GE Vernova Goldsboro, Siemens Energy Charlotte)",
+   "url": "https://news.duke-energy.com/releases/releases-20260630-6924871",
+   "date": "2026-06-30"
+  },
+  {
+   "label": "Canary Media — Data centers are key to Duke's North Carolina rate fight",
+   "url": "https://www.canarymedia.com/articles/data-centers/duke-electric-rates-north-carolina",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "Duke Energy — DOE grants for Duke Energy projects bring total funding to nearly $96 million",
+   "url": "https://news.duke-energy.com/releases/the-doe-announces-grants-for-duke-energy-projects-bringing-total-funding-to-nearly-96-million",
+   "date": "2026-06-05"
+  },
+  {
+   "label": "Duke Energy — New program helps South Carolina nonresidential customers lower costs (PowerShare Storage)",
+   "url": "https://news.duke-energy.com/releases/new-duke-energy-program-helps-south-carolina-nonresidential-customers-lower-costs-while-supporting-a-growing-grid",
+   "date": "2026-05-27"
+  },
+  {
+   "label": "Duke Energy — Breaks ground on Cayuga Energy Complex in Vermillion County",
+   "url": "https://news.duke-energy.com/releases/duke-energy-breaks-ground-on-cayuga-energy-complex-project-in-vermillion-county",
+   "date": "2026-05-14"
+  },
+  {
+   "label": "The Assembly — Person County, Microsoft and the nondisclosure agreements",
+   "url": "https://www.theassemblync.com/news/business/person-county-microsoft-data-center-nondisclosure-agreements/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Duke Energy — Applies for DOE loans representing potentially billions in customer savings",
+   "url": "https://news.duke-energy.com/releases/duke-energy-applies-for-department-of-energy-loans-that-represent-potentially-billions-of-dollars-in-customer-savings",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Utility Dive — Duke Energy adds 2.7 GW of data-center contracts in Q1; Anderson gas plant",
+   "url": "https://www.utilitydive.com/news/duke-energy-earnings-anderson-gas-plant/819428/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Hoodline — Duke Energy inks 2.7 GW in data-center deals around Charlotte",
+   "url": "https://hoodline.com/2026/05/ai-power-grab-duke-energy-inks-2-7-gw-in-data-center-deals-around-charlotte/",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "Duke Energy — Q1 2026 earnings release",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Release.pdf",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Duke Energy — Q1 2026 earnings presentation",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2026/q1/Q1-2026-Earnings-Presentation-w-Reg-G.pdf",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Motley Fool — Duke Energy Q1 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/05/05/duke-energy-duk-q1-2026-earnings-transcript/",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Zacks (via Yahoo Finance) — Duke Energy Q1 earnings beat estimates ($1.79)",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/duke-energy-q1-earnings-beat-143300029.html",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Duke Energy — Finalizes two initiatives to deliver more than $5 billion in cost-saving benefits (DEC/DEP combination; $3.1B tax-credit transfer)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-finalizes-two-initiatives-to-deliver-more-than-5-billion-in-cost-saving-benefits-to-customers",
+   "date": "2026-05-04"
+  },
+  {
+   "label": "Fortune — Duke Energy to spend an industry-record $103 billion",
+   "url": "https://fortune.com/2026/04/25/utility-giant-duke-energy-spend-industry-record-103-billion-growth-data-centers-affordability/",
+   "date": "2026-04-25"
+  },
+  {
+   "label": "Duke Energy — Robinson nuclear plant receives NRC approval to operate until 2050",
+   "url": "https://news.duke-energy.com/releases/robinson-nuclear-plant-receives-approval-from-u-s-nuclear-regulatory-commission-to-continue-operating-until-2050",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "FPSC — Duke Energy Florida petition for Large Load Customer Policy and Agreement (Doc. 02327-2026, Docket 20260064-EI)",
+   "url": "https://www.floridapsc.com/pscfiles/library/filings/2026/02327-2026/02327-2026.pdf",
+   "date": "2026-04-22"
+  },
+  {
+   "label": "PSCSC — Duke Energy 2026 South Carolina Battery RFP (~400 MW)",
+   "url": "https://dms.psc.sc.gov/Attachments/Matter/cdbec8e5-6c18-4105-bf55-d3144ab6ee40",
+   "date": "2026-04-20"
+  },
+  {
+   "label": "FOX 13 — Fort Meade data-center project and community opposition",
+   "url": "https://www.fox13news.com/news/fort-meade-data-center-project-community-opposition",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Duke Energy Florida — 2026 Ten-Year Site Plan (FPSC copy)",
+   "url": "https://www.floridapsc.com/pscfiles/website-files/PDF/Utilities/Electricgas/TenYearSitePlans/2026/Duke%20Energy%20Florida.pdf",
+   "date": "2026-04"
+  },
+  {
+   "label": "SEC — Duke Energy 8-K: Piedmont Tennessee sale to Spire completed",
+   "url": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926038007/tm2610676d1_8k.htm",
+   "date": "2026-04-01"
+  },
+  {
+   "label": "Duke Energy — Completes sale of its Tennessee Piedmont Natural Gas business to Spire",
+   "url": "https://news.duke-energy.com/releases/duke-energy-completes-sale-of-its-tennessee-piedmont-natural-gas-business-to-spire",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "Duke Energy — Regulators approve Anderson County natural gas generation (PSCSC)",
+   "url": "https://news.duke-energy.com/releases/regulators-approve-duke-energys-proposal-for-new-natural-gas-generation-to-support-south-carolinas-growing-energy-needs",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "Canary Media — Duke Energy agrees to explore a cleaner way to serve data centers (consolidation settlement)",
+   "url": "https://www.canarymedia.com/articles/data-centers/duke-energy-agrees-to-explore-cleaner-way",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "WUNC — Duke Energy's Knightdale battery and storage plans",
+   "url": "https://www.wunc.org/environment/2026-03-11/duke-energy-battery-storage-renewable",
+   "date": "2026-03-11"
+  },
+  {
+   "label": "Duke Energy — Prices upsized $1.3 billion 3.000% convertible senior notes due 2029",
+   "url": "https://news.duke-energy.com/releases/duke-energy-prices-upsized-offering-of-1-3-billion-of-3-000-convertible-senior-notes-due-2029",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Duke Energy — Agreement with South Carolina customer groups on the DEC/DEP combination",
+   "url": "https://news.duke-energy.com/releases/duke-energy-reaches-agreement-with-south-carolina-customer-groups-and-others-on-proposed-combination-of-duke-energy-carolinas-duke-energy-progress",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "SEC — Duke Energy / Duke Energy Florida 8-K: first closing of the Brookfield investment in Florida Progress",
+   "url": "https://www.sec.gov/Archives/edgar/data/1326160/000110465926022610/tm267351d1_8k.htm",
+   "date": "2026-03-03"
+  },
+  {
+   "label": "Statehouse News — Ohio House bill would extend the AEP data-center tariff statewide (HB 706)",
+   "url": "https://www.statenews.org/government-politics/2026-03-02/ohio-house-bill-would-extend-data-center-tariff-to-rest-of-state",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Duke Energy — Nuclear fleet sets all-time reliability record; $600M of tax credits to customers",
+   "url": "https://news.duke-energy.com/releases/duke-energy-nuclear-fleet-sets-new-all-time-reliability-record-delivers-value-for-customers",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "SEC — Duke Energy Florida 8-K: NRC determines the Brookfield investment is not a transfer of control",
+   "url": "https://www.sec.gov/Archives/edgar/data/37637/000110465926017086/tm266690d1_8k.htm",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "NC Governor — Energy Policy Task Force interim report",
+   "url": "https://governor.nc.gov/documents/files/nc-energy-policy-task-force-2026-report/open",
+   "date": "2026-02-15"
+  },
+  {
+   "label": "Duke Energy — Q4 2025 earnings release (FY2025 results)",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2025/q4/Q4-2025-Earnings-Release-vF.pdf",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Duke Energy — Q4 2025 earnings presentation ($103B plan)",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2025/q4/Q4-2025-Earnings-Presentation_vF-w-Reg-G.pdf",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Motley Fool — Duke Energy Q4 2025 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/02/10/duke-energy-duk-q4-2025-earnings-call-transcript/",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "Zacks (via Yahoo Finance) — Duke Energy Q4 earnings lag estimates ($1.51)",
+   "url": "https://finance.yahoo.com/news/duke-energy-q4-earnings-lag-140300613.html",
+   "date": "2026-02-10"
+  },
+  {
+   "label": "NCSEA — Analyzing Duke Energy's 2025/2026 proposed carbon plan",
+   "url": "https://www.energync.org/blog/analyzing-duke-energys-2026-proposed-carbon-plan/",
+   "date": "2026-01-23"
+  },
+  {
+   "label": "pv magazine — Duke Energy commissions 50 MW battery at former coal site",
+   "url": "https://pv-magazine-usa.com/2026/01/20/duke-energy-commissions-50-mw-battery-storage-project-at-former-coal-site/",
+   "date": "2026-01-20"
+  },
+  {
+   "label": "Duke Energy IR — Leadership changes in generation and operational excellence",
+   "url": "https://investors.duke-energy.com/news/news-details/2026/Duke-Energy-announces-leadership-changes-in-its-generation-and-operational-excellence-organization/default.aspx",
+   "date": "2026-01-15"
+  },
+  {
+   "label": "Duke Energy — Brings new grid battery on line at former Allen coal plant",
+   "url": "https://news.duke-energy.com/releases/duke-energy-brings-new-grid-battery-on-line-at-former-allen-coal-plant",
+   "date": "2026-01-14"
+  },
+  {
+   "label": "Duke Energy — Submits early site permit application for potential new nuclear in North Carolina (Belews Creek)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-submits-early-site-permit-application-for-potential-new-nuclear-development-in-north-carolina",
+   "date": "2025-12-30"
+  },
+  {
+   "label": "Duke Energy — Key leadership appointments (finance)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-announces-key-leadership-appointments-6915338",
+   "date": "2025-12-12"
+  },
+  {
+   "label": "Duke Energy — Proposes new investments in North Carolina (DEC and DEP rate cases filed)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-proposes-new-investments-in-north-carolina-to-boost-reliability-and-support-economic-growth-across-the-state",
+   "date": "2025-11-20"
+  },
+  {
+   "label": "Duke Energy — Q3 2025 earnings release",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2025/q3/Q3-2025-DUK-Earnings-Release_vF.pdf",
+   "date": "2025-11-07"
+  },
+  {
+   "label": "Duke Energy — Q3 2025 earnings presentation",
+   "url": "https://s201.q4cdn.com/583395453/files/doc_financials/2025/q3/Q3-2025-Earnings-Presentation_vF-w-Reg-G.pdf",
+   "date": "2025-11-07"
+  },
+  {
+   "label": "OUCC — Cayuga Generating Station CPCN (Cause 46193)",
+   "url": "https://secure.in.gov/oucc/electric/key-cases-by-utility/duke-energy-rates/cayuga-generating-station-cpcn",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "Duke Energy — Files 2025 Carolinas Resource Plan",
+   "url": "https://news.duke-energy.com/releases/duke-energy-files-2025-carolinas-resource-plan-continues-modernizing-energy-infrastructure-to-support-future-growth",
+   "date": "2025-10-01"
+  },
+  {
+   "label": "Duke Energy — Seeks 50-year Bad Creek license extension",
+   "url": "https://news.duke-energy.com/releases/duke-energy-seeks-to-extend-operations-for-another-50-years-at-bad-creek-supporting-unprecedented-growth-in-the-carolinas",
+   "date": "2025-08-15"
+  },
+  {
+   "label": "PV Tech — Brookfield acquires 19.7% stake in Duke Energy Florida for $6 billion",
+   "url": "https://www.pv-tech.org/brookfield-acquires-19-7-stake-in-duke-energy-florida-for-us6-billion/",
+   "date": "2025-08-06"
+  },
+  {
+   "label": "Duke Energy — Partners with Brookfield on Duke Energy Florida investment; capital plan to $87 billion",
+   "url": "https://news.duke-energy.com/releases/duke-energy-partners-with-brookfield-to-secure-investment-in-duke-energy-florida-expands-capital-plan-to-87-billion",
+   "date": "2025-08-05"
+  },
+  {
+   "label": "Nelson Mullins — How Duke Energy integrates data centers and other large loads in North Carolina",
+   "url": "https://www.nelsonmullins.com/insights/blogs/megawatt-minute-blog/power-generation/developments-on-how-duke-energy-integrates-data-centers-and-other-new-large-load-customers-in-north-carolina",
+   "date": "2025-08-01"
+  },
+  {
+   "label": "Duke Energy — Sale of Tennessee Piedmont Natural Gas business to Spire for $2.48 billion",
+   "url": "https://news.duke-energy.com/releases/duke-energy-announces-sale-of-its-tennessee-piedmont-natural-gas-business-to-spire-for-2-48-billion",
+   "date": "2025-07-29"
+  },
+  {
+   "label": "WUNC — NC energy bill (SB 266) passes; power costs and Duke Energy residential customers",
+   "url": "https://www.wunc.org/politics/2025-06-19/nc-energy-bill-power-costs-duke-energy-residential-customers",
+   "date": "2025-06-19"
+  },
+  {
+   "label": "Duke Energy Indiana — Cayuga coal-unit feasibility study agreement",
+   "url": "https://news.duke-energy.com/releases/duke-energy-indiana-agrees-to-cayuga-coal-unit-feasibility-study-in-addition-to-building-new-gas-units-on-site",
+   "date": "2025-06-17"
+  },
+  {
+   "label": "Duke Energy — Proposes Anderson County natural gas plant (South Carolina)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-proposes-milestone-new-natural-gas-plant-to-help-build-a-stronger-energy-future-for-south-carolina",
+   "date": "2025-06-09"
+  },
+  {
+   "label": "Duke Energy — Key leadership appointments (Ghartey-Tagoe, Renjel, Glenn)",
+   "url": "https://news.duke-energy.com/releases/duke-energy-announces-key-leadership-appointments-6910288",
+   "date": "2025-05-02"
+  },
+  {
+   "label": "Duke Energy — Duke Energy and GE Vernova arrangement for gas turbines and associated equipment",
+   "url": "https://news.duke-energy.com/releases/duke-energy-and-ge-vernova-announce-significant-arangement-for-gas-turbines-and-associated-equipment",
+   "date": "2025-04-24"
+  },
+  {
+   "label": "Duke Energy — Oconee receives NRC approval to extend operations",
+   "url": "https://news.duke-energy.com/releases/duke-energys-largest-nuclear-plant-receives-approval-to-extend-operations-supports-growing-energy-demand-helps-keep-customer-costs-as-low-as-possible",
+   "date": "2025-03-31"
+  },
+  {
+   "label": "Utility Dive — Indiana regulators' large-load interconnection rules (I&M)",
+   "url": "https://www.utilitydive.com/news/indiana-iurc-large-load-interconnection-data-center-aep-amazon-google/740452/",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "Duke Energy — Board appoints Harry Sideris president and CEO effective April 1",
+   "url": "https://news.duke-energy.com/releases/duke-energy-board-of-directors-appoints-harry-sideris-as-president-and-chief-executive-officer-effective-april-1-succeeds-lynn-good-who-retires-as-chair-and-ceo",
+   "date": "2025-01-13"
+  },
+  {
+   "label": "NCSEA — Carbon Plan order out: mixed results for clean energy (2024 CPIRP)",
+   "url": "https://www.energync.org/blog/carbon-plan-order-out-mixed-results-for-clean-energy/",
+   "date": "2024-11-26"
+  },
+  {
+   "label": "Duke Energy — Responds to Carolinas Resource Plan decision by the NCUC",
+   "url": "https://news.duke-energy.com/releases/duke-energy-responds-to-constructive-carolinas-resource-plan-decision-by-north-carolina-utilities-commission",
+   "date": "2024-11-02"
+  },
+  {
+   "label": "WUSF — Florida commission approves Duke Energy settlement (2024 rate agreement)",
+   "url": "https://www.wusf.org/economy-business/2024-08-22/florida-commission-approves-duke-energy-settlement-increase-base-electric-rates",
+   "date": "2024-08-22"
+  },
+  {
+   "label": "Duke Energy — Duke Energy, Amazon, Google, Microsoft and Nucor execute agreements to accelerate clean energy options",
+   "url": "https://news.duke-energy.com/releases/responding-to-growing-demand-duke-energy-amazon-google-microsoft-and-nucor-execute-agreements-to-accelerate-clean-energy-options",
+   "date": "2024-05-29"
+  },
+  {
+   "label": "Duke Energy — News releases",
+   "url": "https://news.duke-energy.com/releases"
+  },
+  {
+   "label": "Duke Energy — News releases, financial category",
+   "url": "https://news.duke-energy.com/releases?c=27332"
+  },
+  {
+   "label": "Duke Energy IR — Investor relations",
+   "url": "https://investors.duke-energy.com/"
+  },
+  {
+   "label": "Compute Atlas — North Carolina data-center and generation map",
+   "url": "https://www.compute-atlas.com/states/north-carolina"
+  },
+  {
+   "label": "OUCC — Duke Energy Indiana rate cases",
+   "url": "https://secure.in.gov/oucc/electric/key-cases-by-utility/duke-energy-rates/"
+  }
+ ],
+ "lastUpdated": "2026-09-26",
+ "profileVersion": 1
+}

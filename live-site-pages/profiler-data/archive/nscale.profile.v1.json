@@ -621,17 +621,6 @@
       "note": "Nebius and Nscale are named together by NVIDIA as DGX Cloud Lepton contributors and are both Microsoft-anchored European neoclouds.",
       "context": "NVIDIA's June 2025 Lepton release lists 'Mistral AI, Nebius, Nscale, Firebird, Fluidstack, Hydra Host, Scaleway and Together AI' as contributors. Both companies own their data centres and both signed multi-billion Microsoft capacity deals in the autumn of 2025; Nebius is Nasdaq-listed and finances with convertible notes, Nscale is private and finances with GPU-backed and project term loans ahead of a reported IPO.",
       "source": "https://nvidianews.nvidia.com/news/nvidia-dgx-cloud-lepton-connects-europes-developers-to-global-nvidia-compute-ecosystem"
-    },
-    {
-      "slug": "whitefiber",
-      "type": "supplier",
-      "status": "active",
-      "since": "2025-12",
-      "scale": "40 MW IT · ~US$865M TCV · 10 years",
-      "via": "NC-1 colocation (Madison, North Carolina)",
-      "note": "WhiteFiber (through Enovum NC-1 Bidco, LLC) is Nscale's landlord at the Madison, North Carolina site: a 10-year, 40 MW IT colocation agreement worth about US$865M, signed 18 Dec 2025, 'backed by an investment-grade hyperscaler offtake'.",
-      "context": "The site this dossier records as 'partner-run' Madison with '99MW secured Duke Energy' is WhiteFiber's NC-1 campus at 805 Island Drive. The Duke Energy Carolinas capacity letter (24, 40 and 99 MW phases) and the assigned electric service agreement are held by WhiteFiber's subsidiary, not by Nscale; Duke had delivered 54 gross MW by May 2026. The two 20 MW phases were due 30 Apr and 30 May 2026; WhiteFiber disclosed on 14 May 2026 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components', and initial billing began in Q3 2026 with the full 40 MW run rate expected in August 2026.\n\nNscale's own S-1 (18 Sep 2026) does not name WhiteFiber or NC-1; the US$1.2B North Carolina GPU delayed-draw facility recorded above is the tenant-side financing for this site. Recorded from WhiteFiber's filings (Profiler F-N2, 29 Sep 2026).",
-      "source": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm"
     }
   ],
   "policyExposure": [
@@ -1122,11 +1111,6 @@
       "date": "2026-05-26"
     },
     {
-      "label": "PR Newswire — WhiteFiber, Inc. Reports First Quarter 2026 Results (medium-voltage switchgear supply issue at NC-1; 54 gross MW delivered by Duke)",
-      "url": "https://www.prnewswire.com/news-releases/whitefiber-inc-reports-first-quarter-2026-results-302771681.html",
-      "date": "2026-05-14"
-    },
-    {
       "label": "Nscale — secures USD 790 million financing in Norway",
       "url": "https://www.nscale.com/press-releases/nscale-secures-790-million-norway",
       "date": "2026-05-11"
@@ -1270,11 +1254,6 @@
       "label": "Caterpillar — AIP forms strategic alliance with Caterpillar and Boyd CAT (release; unreachable)",
       "url": "https://www.caterpillar.com/en/news/corporate-press-releases/h/aip-boyd-cat.html",
       "date": "2026-01"
-    },
-    {
-      "label": "WhiteFiber — 8-K Ex. 99.1: WhiteFiber and Nscale Announce 10-Year, 40 MW Colocation Agreement Representing Approximately $865 Million in Total Contract Value at NC-1",
-      "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390025123321/ea026991801ex99-1_white.htm",
-      "date": "2025-12-18"
     },
     {
       "label": "Nscale — acquires Future-tech",
@@ -1594,6 +1573,6 @@
       "url": "https://en.wikipedia.org/wiki/Nscale"
     }
   ],
-  "lastUpdated": "2026-09-29",
-  "profileVersion": 2
+  "lastUpdated": "2026-09-05",
+  "profileVersion": 1
 }

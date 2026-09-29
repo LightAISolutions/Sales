@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-29 04:00 PM → 04:55 PM EST (Phase F session F-N2: WhiteFiber, 5C Group, TECfusions; one attended turn)
+**Repo version:** v07.73r (one push)
+**Branch:** `claude/busy-mendel-eey850`
+**Model:** Fable 5.1 at High (per `phase-f-action-plan.md` §3 row 1)
+
+### What was done
+
+- **Three new dossiers (v1) with v2 study guides and lesson plans:** `whitefiber` (`neocloud` · `developer`), `5c-group` (`developer`), `tecfusions` (`developer`). Six research subagents (first-party and third-party per company); EDGAR was reachable, so the WhiteFiber, Nscale and Apex Treasury filings were read directly.
+- **Identity findings that moved the brief:**
+  - WhiteFiber is a Cayman company on the Nasdaq Capital Market; Bit Digital holds **59.9%** after the Aug 2026 note exchange (was ~70%); NC-1 is owned through Enovum NC-1 Bidco, which holds the Duke Energy Carolinas letter (24/40/99 MW) and the assigned ESA.
+  - 5C's legal entity is **5C AI Group Inc.** (Quebec), spun out of Hypertec in April 2025; Hypertec is the largest shareholder, Brookfield the structured-equity investor; one slug, display name '5C Group'. Crusoe is a second Springfield tenant.
+  - Keystone Connect is the **former Alcoa/Arconic campus in Upper Burrell, PA**, not Clarion; TECfusions' US$4.0B SPAC with Apex Treasury is signed, not closed (no S-4); its founder's prior convictions are a disclosed risk factor; 2 MW live against 3 GW marketed.
+- **Step 7:** 0 inbound for all three (the '5C' hits are C-rates). `nscale` v1→v2 gains the `whitefiber` supplier edge; `duke-energy` v1→v2 gains the `whitefiber` customer edge and its `nscale` edge is retyped to the site's tenant. Tenant mentions (Together AI, Vultr, TensorWave) contradicted nothing; no slug created for them.
+- **Segments:** `neoclouds` +whitefiber (challenger), +5c-group (adjacent); `aidc-developers-and-landlords` +all three (challengers); `bridge-and-on-site-generation` +tecfusions (adjacent). Calendar: whitefiber public (`nextReport` 2026-11-12, unconfirmed), the other two private core. 15 concepts added, none edited. §11.3 rows rewritten with verdicts; `phase-f-action-plan.md` marks F-N2 landed.
+- **Checkers all clean**; the four report warnings (`fluence`, `jinko`, `jupiter-power`, `oracle`) are pre-existing. Playwright: five dossiers and guides render with only `gis_load_failed`.
+
+### Where we left off
+
+- **Phase 1 (to Sat 10/3, 7:00 AM ET), remaining in order:** the 9/30 Classroom run check (Opus 5.5 medium, after ~7:30 AM ET Wed); F-U3 and F-U4 (Fable High); the neoclouds pass + `profiler Habitat Energy` on Thu 10/1 (rebase first); F-I4; F-G1; F-A1 (Fable Medium, first to roll).
+- **Classroom lessons now stale, by design (`Classroom.gs` untouched):** `landscape-neoclouds-2026-09` (10 → 12 members) and `scenario-neoclouds-discovery`; `landscape-aidc-developers-and-landlords-2026-09` (+3 challengers); `landscape-bridge-and-on-site-generation-2026-09` (+tecfusions adjacent). Wave A (row 9, Sat 10/3 – Tue 10/6) takes the first three; wave D (row 17) takes the fourth. `build-classroom-segments.py --check` reads 19 of 19 due.
+- **For the Megmeet job — MV and DC power equipment.** All three sign for medium-voltage gear behind the meter, and none has touched an SST, 800 VDC or a battery. **WhiteFiber is the lead:** it buys switchgear, transformers, UPS, generators and cooling behind a Duke-owned substation, and the one documented failure of that authority is 'certain medium-voltage switchgear components' that pushed its US$865M lease a quarter (supplier unnamed; resolved Q3 2026); its next 60–200 MW (Yadkin County, 2027) is the order book to watch. **5C** owns its 138 kV substation at Springfield, so it buys the step-down transformers as well as the switchgear, plus 19 diesel gensets and 'prefabricated power skids'; an SST would sit inside that customer-owned scope at its next campus. **TECfusions** buys generation, switchgear and UPS directly but has 2 MW live and no vendor named. For an SST seller the realistic door is a retrofit landlord with a demonstrated MV bottleneck (WhiteFiber) or a customer-owned substation (5C), pitched as the step-down stage; nothing in the three records asks for 800 VDC today.
+
+### Key decisions made
+
+- WhiteFiber carries two categories on the record (`neocloud`, `developer`); 5C gets `neoclouds` adjacent for its own cloud line; TECfusions takes the bridge-generation adjacent seat on 'currently powered by turbines'.
+- Display name '5C Group', never bare '5C' (collision test). No reciprocal edge on `crusoe` (the tenancy rests on WYSO and a state tax record only); one-way edges elsewhere show as inbound evidence.
+- Three colliding concept aliases were dropped rather than existing concepts edited.
+
+### Known issues
+
+- Pre-existing: `duke-energy` v1's `sources[]` was already out of date order at one entry (2026-04 before 2026-04-01); left as found.
+- The WhiteFiber Q3 2026 date (2026-11-12) is an aggregator estimate; confirm in early November.
+- Carried over: `verify-profiler-roles.py` (2) and `check-events-plan.js` (2); `megmeet-briefing-prompt.md` names the 9/8 AIDC edition; `zhonhen-interview-brief.md` calls Panama an SST in two lines; the study-guide PDF renderer is not in the repo; `check-classroom-content.py`'s 8 segment-roster errors wait for waves A/B; report pin warnings `fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6.
+- Old row numbers in `REMINDERS.md` (9/26 plan): 9/30 check row 2, neoclouds pass row 5, Dominion row 10, wave B row 15.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 193 dossiers, page v01.93w. **Classroom:** GAS v01.93g, page v01.16w, 19 segment lessons due. **CHANGELOG** `Sections: 99/100` — **the next push commit rotates.**
+- **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
+
+### Recommendation for next session
+
+- **Run F-U3 (PPL, Pinnacle West, NiSource) on Fable 5.1 High**, adapting `PROFILER-COVERAGE-PLAN.md` §11.4 with the row's model line; it is next in phase 1 and has no date gate. The CHANGELOG will rotate on that push (99/100).
+
+**To continue:** type `run F-U3`.
+
+## Previous Sessions
+
 **Date:** 2026-09-29 03:19 PM → 03:51 PM EST (the Phase F position check, the model question, the Fable-first re-plan, the F-N2 prompt; five attended turns)
 **Repo version:** v07.72r (two pushes: v07.71r the Fable-first re-plan; v07.72r the phase names, the F-N2 prompt and this save)
 **Branch:** `claude/brave-franklin-2qiehm`
@@ -74,80 +123,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **To continue:** paste the §7 prompt of `phase-f-action-plan.md` into a new Fable 5.1 High session.
 
-## Previous Sessions
-
-### Session — 2026-09-29 07:19 AM → 03:13 PM EST (the cooling recheck and the CoolIT refresh, v07.69r–v07.70r)
-
-**Date:** 2026-09-29 07:19 AM → 03:13 PM EST (the cooling recheck, then the CoolIT refresh; three attended turns)
-**Repo version:** v07.70r (two pushes: v07.69r the cooling recheck; v07.70r the CoolIT refresh and the reminder dismissal). This save is housekeeping, with no version bump
-**Branch:** `claude/friendly-cori-mm3leo`
-**Model:** Opus 5.5
-
-### What was done
-
-- **v07.69r — the cooling recheck** (row 3 of `phase-f-action-plan.md`). **CoolIT's next-gen CDU did not launch on 28 Sep, and there is no new date.** Read on 9/29:
-  - CoolIT's news feed has no launch post.
-  - Its CDU catalogue still tops out at the 2 MW CHx2000.
-  - The teaser page, last modified 25 Sep, now offers an undated "official unveiling".
-  - Its OCP 13–15 Oct page shows only "the proven CHx2000".
-  - The developer chose **revise now** (my recommendation, over "wait until 9/30" or "reviewBy 19 Oct"). `landscape-cooling-2026-09` changed as follows:
-    - reviewBy 9/28 → **10/27**, Ecolab's Q3 results before market open (22 Sep release). It is the nearest dated gate on this subject and no other module uses it.
-    - Indicators row 1 is now undated, and row 3 is the review date.
-    - The ledger and drill card teach the slip.
-    - The indicators sales note now names both regulatory rows inside twelve months: the November tariff and the **1 Jan 2027 data-centre refrigerant limit**. That was a contradiction left by the 9/24 review.
-    - Classroom GAS moved to **v01.93g**, and the analysis file gained a "29 September 2026 recheck" section.
-- **v07.70r — the CoolIT refresh** (dossier v2 → **v3**, v2 archived), run the same day rather than on Thursday:
-  - All seven 28 Sep mentions now record the slip. The date is traced to CoolIT's LinkedIn post of 22 Sep ("Launching September 28.").
-  - Seven developments added:
-    - the slip
-    - the DCF Calgary tour (about 950 staff, about 200,000 sq ft, a 6 MW test rig)
-    - the Globe and Mail's Top Growing Companies 2026 (#168 of 375, 156% growth, 813 staff)
-    - a BofA estimate via Benzinga (over USD 500M revenue entering 2027), marked second-hand
-    - the single-phase white paper and the fanless post
-    - Ecolab's **SC26 Investor Day on 17 Nov**, which the 9/04 dossier missed
-  - Indicators now include OCP (13–15 Oct), Ecolab Q3 (27 Oct) and SC26 (17 Nov). Ken Lau is **General Manager, APAC**. NVIDIA's first DSX Ready CDUs came from LG, LiquidStack and Vertiv, not CoolIT. Sources went 151 → 162.
-  - The same correction went into `coolit.study.json`, the lesson plan and the refresh notes. The calendar's `lastRefreshed` is 9/29.
-  - Step 7: 4 dossiers (13 hits) mention CoolIT. All are accurate and none mentions the launch, so none changed.
-- **Reminders:** both cooling reminders (24 Sep and 26 Sep) moved to Completed, dismissed by the developer.
-
-### Where we left off
-
-- **Status:** v07.69r and v07.70r are merged; this save is pushed at close.
-- **Action plan:** rows 1–4 of §3 are done. Next is **row 5**: check the 9/30 Classroom pipeline run after about 7:30 AM ET on Wed 9/30.
-- **Classroom:** `build-classroom-segments.py --check` now reads **19 due**, up from 17. The graph rebuild moves every segment's graph pin, and `cooling` was already due. Wave A/B regenerates them. Expect the 9/30 run's report to list more due items than its reminder predicts.
-- **Dated items:**
-  - Thu 10/1: the neoclouds pass and `profiler Habitat Energy`. Rebase first, because the 10/1 Profiler Routines commit that day.
-  - Fri 10/2 – Tue 10/6: the Dominion reframe and Classroom wave A.
-  - Wed 10/7: the Megmeet start, and the DigitalBridge fallback check (row 10).
-  - Oct 13–15: OCP. 10/15: the quarterly guidance Routine. 10/27: Ecolab Q3, the cooling module's new reviewBy. 11/17: the SC26 Investor Day.
-
-### Key decisions made
-
-- **A slipped launch with no new date:** the module's reviewBy moves to the nearest dated gate on the same subject (Ecolab Q3), not to a guessed venue. I passed over OCP because tying the launch to it is an inference and CoolIT's page names only the CHx2000. I passed over the Texas 19 Oct update because it is about water permits, not cooling equipment. The 15 Oct Routine is the backstop.
-- **One commit per revision:** I held the CoolIT commit through a stop-hook prompt until the research agent returned, rather than landing a partial v3 and then a same-day v4.
-- **Left as is:** the cooling module's ledger cites `profile:coolit @ v1` with "the dossier still states the 28 September date". That is accurate for v1. It waits for the module's next revision rather than a second Classroom bump the same day.
-- **Kept out:** a vendor blog's claim that CoolIT is on a 2 Sep NVIDIA CDU list was not verifiable and stayed out of the dossier.
-
-### Known issues
-
-- **Undated launch:** CoolIT's next-gen CDU has no date. Nothing flags a surprise launch before the 10/15 Routine; OCP and SC26 are the likely venues.
-- **Carried over:**
-  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2), as before.
-  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
-  - `zhonhen-interview-brief.md` still calls Panama an SST in two lines.
-  - The study-guide PDF renderer is not in the repo.
-  - `check-classroom-content.py` has 8 known segment-roster errors, waiting for wave A/B.
-  - Pin warnings: `fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 190 dossiers, 190 guides, 1,555 concepts, 1,656 graph edges (1,253 curated); page v01.93w; the reachability probe reads OK.
-- **Classroom:** GAS v01.93g, page v01.16w. **CHANGELOG** `Sections: 96/100`.
-- **Active reminders (5):** neoclouds pass, Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
-
-### Recommendation for next session
-
-- **Check the 9/30 Classroom pipeline run after about 7:30 AM ET on Wed 9/30** (row 5 of `phase-f-action-plan.md`; the 2026-09-26 01:21 AM reminder). Open the Routine's session and read the final `CLASSROOM PIPELINE — 2026-09-30 — …` report, and check whether a push or email notification arrived. Expect the due list to include the 19 segment lessons.
-
-**To continue:** type `check the 9/30 Classroom run`
+Developed by: LightAISolutions

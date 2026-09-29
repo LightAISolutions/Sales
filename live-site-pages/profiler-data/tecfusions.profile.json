@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 7,
+  "slug": "tecfusions",
+  "name": "TECfusions, Inc. (Florida corporation, document P23000017138; site entities include Tecfusions Keystone LLC and TECfusions Clarksville LLC)",
+  "shortName": "TECfusions",
+  "categories": [
+    "developer"
+  ],
+  "website": "https://tecfusions.com",
+  "headquarters": "Clearwater, Florida, USA (19995 US Highway 19 N); earlier releases datelined Tampa; the Florida registry lists a Gulfport, FL principal address",
+  "founded": 2023,
+  "employees": "Not disclosed; the LinkedIn company page shows the 51–200 band (55 listed)",
+  "ownership": {
+    "type": "private",
+    "notes": "Privately held, 100% by the founder: the Stockholder Support Agreement of 21 Jul 2026 (SEC exhibit) names 'Jeremiah 29:11, LLC', whose sole member is the Simon Tusha Revocable Trust dated 28 May 2025, as holder of '100% of the Company common stock'. A Business Combination Agreement signed 21 Jul 2026 with Apex Treasury Corporation (Nasdaq: APXT, a Cayman SPAC with about US$353M in trust at 30 Jun 2026) values TECfusions at US$4.0 billion pre-money (400.0 million new shares at US$10.00), with a US$35M PIPE from Eleven Ventures LLC, an expected Nasdaq ticker of 'TECF', a targeted close in Q4 2026 and an outside date of 31 Mar 2027. It is signed, not closed: no Form S-4 had been filed on EDGAR as of 29 Sep 2026. Pro forma ownership: TECfusions holders 89.0%, SPAC public 7.6%, sponsor 2.6%, PIPE 0.8%. The founder may sell up to US$100 million inside the six-month lock-up. The investor deck's risk factors state that results 'may be adversely affected by its founder's and majority shareholder's prior criminal convictions and alleged misconduct'."
+  },
+  "summary": "BOTTOM LINE UP FRONT: TECfusions is a founder-owned Florida developer that leases 'space, power, and cooling' in re-used industrial buildings, is TensorWave's landlord in Tucson and Pennsylvania, and is the only landlord in this corpus that says its flagship campus is 'currently powered by turbines' it controls. Its record is small next to its claims: 37 MW live at Clarksville, Virginia, 16 MW at Tucson (a building it rents) and 2 MW at Keystone Connect against a marketed '3 GW' for that site, a '1 GW' TensorWave figure that the company's own deck calls 'anchor tenant with right-of-first-refusal', and a US$4.0 billion SPAC valuation that is signed but not closed. BACKGROUND: Founded in February 2023 by Simon Tusha, a former Google negotiator who served 21 months in federal prison for an IRS conspiracy tied to kickbacks; the company discloses the convictions as a risk factor. It built Clarksville's first halls in months in 2024 under a US$300 million-plus loan from an unnamed 'dedicated investor', took a 15-year net lease on a former NortonLifeLock data centre in Tucson, and bought 1,395 acres of the former Alcoa research campus in Upper Burrell, Pennsylvania in December 2024 (not Clarion, and not a glass plant, as the coverage-plan row had it). Keystone Connect went live in Building J in mid-2026 with 2 MW leased and 10 MW contracted, environmental permits held by Tecfusions Keystone LLC, no located air permit, and a township moratorium, a draft 'bring your own baseload' ordinance and a residents' land-use appeal around it. Business-combination projections run revenue from US$110M in 2026 to US$2.14B in 2028 with US$34 billion of debt-funded capex; the financials are unaudited. Per company documents and the SEC filings of its SPAC counterparty unless stated; EDGAR was reachable from this session.",
+  "ecosystemRole": "We assess TECfusions as a challenger in the AIDC developer and landlord segment and an adjacent member of the bridge and on-site generation segment: it is a landlord that is also, by its own account, the generator. Basis: its deck says 'Design, build and lease AI-ready data centers', 'Avoid providing the volatile, expensive and high-risk GPU/compute capacity layer' and 'Operate a real estate landlord / developer business model with long-term contracted lease revenues'; its services pages sell 'reliable power through our self generated natural gas systems'; its August 2026 release says New Kensington is 'currently powered by turbines' and will move to 'dual utility and on-site microgrid generation' on 'two fracking pads and a gas-drying plant'. It signs for the whole chain it builds: the founder says 'we use continuous duty-rated equipment', the RACP grant scope lists 'generation, UPS, switchgear, cabling', and its supply-chain blog names transformers ('up to four years for medium and high voltage units'), switchgear (12 to 18 months), chillers, generators and UPS as the items it buys around. No turbine OEM, switchgear vendor, EPC, gas supplier or utility is named anywhere on the record, no battery, SST or 800 VDC project exists, and one local report says Building J still draws grid power. For a power-equipment seller the buying authority is real and unusually direct, and the counterparty risk is equally direct: a single owner, one anchor tenant, unaudited financials and a pending SPAC.",
+  "productsAndServices": [
+    {
+      "name": "Leased AI-ready data-centre capacity — shell, colocation and turnkey",
+      "category": "AIDC developer / landlord",
+      "description": "TECfusions builds and leases high-density halls in re-used industrial buildings and sells 'Shell, colocation and turnkey options for hyperscalers and neoclouds' (deck). Its services pages offer Colocation ('a single rack, a private suite, or a customized cage' with a 99.999% SLA), HyperScale ('vast amounts of space' on 'self-generated natural gas systems') and AI/HPC hosting with liquid and air cooling. Pricing is 'based on the quantum of power per client at a fixed price per kW, with annual escalators and subject to multi-year contractual obligations'; the CEO said 'our shortest remaining term is 12 years, maybe 13 years'. Sites: Clarksville, VA (37 MW live and fully leased, 42 MW under contract in a 220 MW Phase 2, 300 MW target on 73 added acres); Tucson, AZ (16 MW live, 12 MW contracted, a 20 MW Phase 2 on the Arizona grid); Keystone Connect, Upper Burrell, PA (2 MW live, 10 MW contracted, 'up to 3 GW' planned by 2031).",
+      "highlights": [
+        "TensorWave is the only tenant the company names: a 'landmark 1 GW capacity commitment' (31 Oct 2024) that the deck restates as '1 GW anchor tenant with right-of-first-refusal'; 14.4 MW delivered at Tucson in 2025 'in under 4 months'; 20 MW added in Jan 2026, split 10 MW Tucson and a 10 MW first phase at Keystone Connect on AMD MI300X, MI325X and MI355X; TribLive later reported the Building J tenant as 'Undisclosed due to non-disclosure agreement. Previously reported as TensorWave'",
+        "Speed as the product: 'Contract to deployment in less than 6 months' on every flyer; Clarksville's 10.5 MW C-Hall was built 'in 3 months' (Sep 2024)",
+        "Capex 'US$10 to 13 million per megawatt' for contracted capacity excluding the Pennsylvania power plant; 'We develop largely to order' (CFO-designate, Jul 2026 webinar)",
+        "Deck projections (unaudited): MW in service 92 (2026), 422 (2027), 1,467 (2028); a '675+ MW potential tenant pipeline' of contracts 'which may be executed within the next 2 years'"
+      ],
+      "positioning": "The deck's 2×2 places traditional developers as 'Slow + Grid-Dependent, 12-24 mo. build cycles', behind-the-meter power-as-a-service as 'Fast + Power-Only', and TECfusions as 'Fast + Vertically Integrated, <6 mo. deployment | On-site power'. No competitor is named. In this corpus the nearest models are Fermi America (generation-first campus, also a TensorWave landlord) and the converted miners; TECfusions is smaller than any of them in energised capacity.",
+      "soldThrough": "Long-term leases priced per kW with escalators (12- to 15-year terms); master service agreements with the anchor neocloud",
+      "targetSegments": [
+        "neoclouds and GPU-as-a-service operators (TensorWave)",
+        "hyperscalers and enterprise AI users (company targets)",
+        "sovereign and public-sector users (a 40 MW Uganda MOU, 2023; Chile with Baeza Group)"
+      ],
+      "roadmap": "Clarksville Phase 2 capacity 'Q3 of 2026'; Tucson Phase 2 20 MW 'energizing'; Keystone Phase 1 '300 MW' in 18 to 24 months and 1.1 GW IT, 3 GW by 2031; Puente Alto, Chile 10 MW rising to 100 MW; sites 'identified' in Norway (all company statements)"
+    },
+    {
+      "name": "On-site natural-gas generation and microgrids — 'TECfusions Power Control'",
+      "category": "On-site generation / bridge power",
+      "description": "The company's stated point of difference: it generates its own power. Keystone Connect is 'Currently powered by turbines', with a 'future power plan' of 'dual utility and on-site microgrid generation, supported by existing site infrastructure, including two fracking pads and a gas-drying plant' and 'on-site wells accessing Marcellus Shale natural gas' (Aug 2026 release; SEC 425). The deck aims at '99.999% uptime via on-site natural gas-fired microgrids with layered redundancy', 'Low-emission turbines supporting Pennsylvania clean energy goals', and a New Kensington power plant 'operating from Q4 '27 onwards' that contributes 'approximately $0.5B in revenue during 2028'. Blogs price gas power 'as low as 4 cents per kWh' under 15-year agreements and 'under 5 cents per kWh' for hyperscalers, and say turbine waste heat is repurposed 'to lower the PUE'. Clarksville's site plan includes 'a microgrid'; Tucson has 'dual utility and on-site power for 15 MW critical power'.",
+      "highlights": [
+        "No turbine OEM, model, unit size or count is named in any company or third-party document; the Environmental Integrity Project models a 'TECfusions Keystone Connect Power Plant' of 2,700 MW from the announced capacity, 'New — 2031/Unknown'",
+        "No Pennsylvania DEP air-quality plan approval, general permit or Title V in TECfusions' name was found in the PA Bulletin; the permits located are NPDES PA0000469 and two water-quality permits transferred to Tecfusions Keystone LLC in March and April 2025",
+        "Conflict on the record: the company says Building J is 'powered by turbines'; TribLive (28 Aug 2026) says it is 'currently drawing from existing grid power lines; transitioning to onsite natural gas generation'. Gas ownership is also unconfirmed: the company says wells it owns, while Allegheny Front photographed EQT signage at wells by the site",
+        "Equipment philosophy: 'we use continuous duty-rated equipment … We're not doing emergency or standby equipment' (founder, Jul 2026 webinar); the deck names 'domestic sourcing of Transformers, HVAC, immersion cooling'"
+      ],
+      "positioning": "Against the corpus's bridge-power vendors (VoltaGrid, Enchanted Rock, ProEnergy), TECfusions is a buyer and owner of generation rather than a seller of it; against Fermi America it is far earlier: 2 MW live and no permit trail, where Fermi has 1.5 GW of turbines landed.",
+      "soldThrough": "Bundled into the lease as a power price per kWh under 15-year terms",
+      "targetSegments": [
+        "its own tenants"
+      ],
+      "roadmap": "New Kensington power plant from Q4 2027 (deck); 'Operating 100% off-grid when needed' (sustainability page); a township draft ordinance would require every new data centre to 'supply its own baseload power'"
+    },
+    {
+      "name": "Adaptive-reuse site development",
+      "category": "Site development",
+      "description": "The company's method is to buy or lease legacy industrial and corporate sites with existing power infrastructure and convert them: the former Alcoa/Arconic Technical Center at Upper Burrell (1,395 acres, 'more than one million square feet' of structures, closed 2 Dec 2024, price undisclosed, a US$2M state RACP grant); Clarksville's 22.5-acre site plus 73 acres bought in Feb 2025 with a plan to 'repurpose abandoned 138kV transmission lines from a decommissioned coal plant' in discussion with Dominion Energy and Mecklenburg County; and Tucson's 1989 data centre, leased from Aphorio Carter Fund Management on a 15-year absolute triple-net lease after the landlord bought it for US$13M in October 2023.",
+      "highlights": [
+        "Keystone Connect's approvals: a building permit in 2025 with 'zoning permits deemed unnecessary'; a Building J land-development plan approved 5 Aug 2026 ('generator and chiller replacement'); Phase 2 approval tabled in June 2026; a 180-day township moratorium (to 2 Nov 2026) with TECfusions 'grandfathered in'; a residents' land-use appeal filed 25 Aug 2026 in Westmoreland County court",
+        "A US$300 million-plus, 15-year loan for Clarksville Phase I from an unnamed 'dedicated investor' (Oct 2024), with US$160M allocated to construction",
+        "Puente Alto, Chile: a 40-acre site with Baeza Group, 10 MW initial and 100 MW planned (Jun 2025); a 2023 Uganda MOU; a 'Lista, Norway site identified' (Mar 2025)"
+      ],
+      "positioning": "The same retrofit thesis as WhiteFiber's Enovum in this corpus, at earlier stage and with the company itself as the generator.",
+      "soldThrough": "Owner-developer (Clarksville, Keystone Connect) and tenant-developer (Tucson)",
+      "targetSegments": [
+        "legacy industrial sites with gas and grid access"
+      ],
+      "roadmap": "Keystone Phases 2–5 to 2031; Chile 100 MW; no dates for Norway"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "Keystone Connect — Upper Burrell Township (New Kensington), Westmoreland County, PA",
+      "specs": [
+        {
+          "band": "Site",
+          "label": "Land",
+          "value": "1395 acres in Upper Burrell, PA; the former Alcoa R&D campus and surrounding real estate"
+        },
+        {
+          "band": "Site",
+          "label": "Structures",
+          "value": "existing industrial structures totaling more than one million square feet (BCA release); 650,000 sq. ft. (flyer)"
+        },
+        {
+          "band": "Site",
+          "label": "Acquired",
+          "value": "closed 2 Dec 2024 from Arconic Corp.; price undisclosed"
+        },
+        {
+          "band": "Power",
+          "label": "Live",
+          "value": "2 MW live and fully leased, with an additional 10 MW contracted (Jul 2026)"
+        },
+        {
+          "band": "Power",
+          "label": "Plan",
+          "value": "12 MW immediately available (Jan 2025); 300 MW Phase I goal in 18–24 months; up to 1.1 GW IT load; 3 GW build plan (5-year pipeline to 2031)"
+        },
+        {
+          "band": "Power",
+          "label": "Source",
+          "value": "Currently powered by turbines; future power plan includes dual utility and on-site microgrid generation, supported by two fracking pads and a gas-drying plant (company); currently drawing from existing grid power lines (TribLive)"
+        },
+        {
+          "band": "Power",
+          "label": "Gas",
+          "value": "on-site wells accessing Marcellus Shale natural gas (company); well ownership unconfirmed"
+        },
+        {
+          "band": "Power",
+          "label": "Utility / grid",
+          "value": "no utility, PJM queue entry or interconnection filing named in any document"
+        },
+        {
+          "band": "Cooling",
+          "label": "Method",
+          "value": "Direct liquid cooling with high-rack-density designs (TensorWave phase); closed-loop glycol (TribLive); airside chillers rather than cooling towers (founder)"
+        },
+        {
+          "band": "Permits",
+          "label": "Environmental",
+          "value": "NPDES PA0000469 and WQM permits 6570201 and 6570401 issued to Tecfusions Keystone LLC (Apr 2025); no air-quality plan approval or GP-5 located"
+        },
+        {
+          "band": "Permits",
+          "label": "Local",
+          "value": "Building J land-development plan approved 5 Aug 2026; Phase 2 tabled Jun 2026; 180-day moratorium to 2 Nov 2026 (grandfathered); land-use appeal filed 25 Aug 2026"
+        },
+        {
+          "band": "Incentives",
+          "label": "State",
+          "value": "$2,000,000 RACP grant for 'three buildings with dual fuel energy-efficient micro-grid power systems and Phase I infrastructure (generation, UPS, switchgear, cabling)'"
+        }
+      ],
+      "notes": "Company releases, the investor deck (SEC Ex. 99.2), the PA Bulletin, Sen. Pittman's RACP notice and TribLive. The company's own deck footnotes the 3 GW plan as 'Based on management estimates … preliminary and subject to significant risks of change'."
+    },
+    {
+      "product": "Tucson, Arizona (3701 E. Columbia Street)",
+      "specs": [
+        {
+          "band": "Site",
+          "label": "Building",
+          "value": "213,000 sq. ft. (flyer); 133,450 sq ft with 40,790 sq ft raised floor (purchase record, 2023); built 1989, a data centre since 2004 (former NortonLifeLock)"
+        },
+        {
+          "band": "Site",
+          "label": "Tenure",
+          "value": "leased from Aphorio Carter Fund Management on a 15-year absolute triple-net lease; the landlord paid US$13M in Oct 2023"
+        },
+        {
+          "band": "Power",
+          "label": "Live",
+          "value": "16 MW live and fully leased, with an additional 12 MW contracted (Jul 2026); 14.4 MW phase delivered in 2025 in under four months; 15 MW IT Load (flyer)"
+        },
+        {
+          "band": "Power",
+          "label": "Phase 2",
+          "value": "20 MW expansion, energizing in progress, power secured (AZ grid)"
+        },
+        {
+          "band": "Power",
+          "label": "Utility",
+          "value": "Tucson Electric Power (aggregator); not named by the company"
+        },
+        {
+          "band": "Power",
+          "label": "On-site",
+          "value": "Dual utility and on-site power for 15 MW critical power"
+        },
+        {
+          "band": "Network",
+          "label": "Fibre",
+          "value": "3 diverse fiber entry points, 6 MMRs, and 7+ carriers"
+        },
+        {
+          "band": "Tenant",
+          "label": "TensorWave",
+          "value": "AMD MI300X, MI325X and MI355X; 10 MW added Jan 2026 for delivery in H1 2026"
+        }
+      ],
+      "notes": "Company flyer and deck; the tenure and building history come from the 2023 sale coverage (AltsWire, RealEstateDaily). Capacity is stated as 14, 14.4, 15 and 16 MW across the company's own documents."
+    },
+    {
+      "product": "Clarksville, Virginia (250 Burlington Drive, Mecklenburg County)",
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Live",
+          "value": "37 MW live and fully leased (Jul 2026); four halls totalling 37.5 MW"
+        },
+        {
+          "band": "Power",
+          "label": "Phase 2",
+          "value": "220 MW, energising in progress, capacity available Q3 2026; 42 MW currently under contract"
+        },
+        {
+          "band": "Power",
+          "label": "Target",
+          "value": "300 MW IT Load on the 73 acres added in Feb 2025"
+        },
+        {
+          "band": "Power",
+          "label": "Grid",
+          "value": "plan to repurpose abandoned 138kV transmission lines from a decommissioned coal plant, in discussion with Dominion Energy and Mecklenburg County; listed as operational under Dominion Energy Virginia (interconnection.fyi)"
+        },
+        {
+          "band": "Build",
+          "label": "Speed",
+          "value": "C-Hall (10.5 MW) built in 3 months (Sep 2024)"
+        },
+        {
+          "band": "Finance",
+          "label": "Loan",
+          "value": "Over $300 million 15-year loan from an unnamed dedicated investor; $160 million allocated to construction"
+        },
+        {
+          "band": "Compliance",
+          "label": "Certification",
+          "value": "ISO 27001 (Clarksville)"
+        }
+      ],
+      "notes": "Company releases and deck. The tenant is described only as 'a key tenant' and 'a large tenant-owned GPU cluster'."
+    }
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-09-28",
+      "category": "regulatory",
+      "headline": "Allegheny Front: Upper Burrell residents push to regulate the data centre; EQT signage photographed at wells by the site the company says it owns",
+      "read": "Gas ownership, the premise of the on-site plan, is contested on the ground.",
+      "source": "https://www.alleghenyfront.org/in-upper-burrell-where-the-fracking-and-ai-industries-converge-residents-look-to-regulate-data-center/"
+    },
+    {
+      "date": "2026-09-15",
+      "category": "legal",
+      "headline": "Technical.ly: TECfusions petitions Commonwealth Court to keep its US$250k state pitch sealed after the Office of Open Records ordered it unredacted; the case is pending",
+      "read": "The company's growth documents are the subject of litigation, not disclosure.",
+      "source": "https://technical.ly/civics/why-tecfusions-is-fighting-to-keep-its-250k-pa-pitch-secret/"
+    },
+    {
+      "date": "2026-09-03",
+      "category": "regulatory",
+      "headline": "PublicSource: the township treats the campus as a permitted 'research and technology park' use; residents' land-use appeal argues a special exception was required",
+      "read": "The approval trail is thin enough to be attacked for its absence.",
+      "source": "https://www.publicsource.org/upper-burrell-data-center-transparency-backlash/"
+    },
+    {
+      "date": "2026-08-31",
+      "category": "regulatory",
+      "headline": "Protect PT: the township's revised draft ordinance would require every new data centre to 'supply its own baseload power', with setbacks and a 75 dB cap",
+      "read": "A rule that would make TECfusions' model mandatory for the next phases.",
+      "source": "https://www.protectpt.org/post/residents-are-furious-as-upper-burrellleaders-silently-publish-new-data-centers-ordinance"
+    },
+    {
+      "date": "2026-08-28",
+      "category": "capacity",
+      "headline": "TribLive: Building J 'live since June 2026', 'currently drawing from existing grid power lines; transitioning to onsite natural gas generation'; tenant 'Undisclosed due to non-disclosure agreement. Previously reported as TensorWave'",
+      "read": "The local account contradicts the company's 'powered by turbines' the day after it was issued.",
+      "source": "https://community.triblive.com/news/4126238"
+    },
+    {
+      "date": "2026-08-27",
+      "category": "capacity",
+      "headline": "'TECfusions Announces New Kensington Data Center is Live': 'Currently powered by turbines'; a future plan of 'dual utility and on-site microgrid generation' on 'two fracking pads and a gas-drying plant'; aligned with Executive Order 2026-05 and the GRID Requirements",
+      "read": "The flagship's first megawatts, framed around the on-site power thesis.",
+      "source": "https://www.globenewswire.com/news-release/2026/08/27/3351973/0/en/tecfusions-announces-new-kensington-data-center-is-live-delivering-gpu-capacity-and-responsible-on-site-power-plan.html"
+    },
+    {
+      "date": "2026-08-25",
+      "category": "legal",
+      "headline": "Protect PT and two residents file a land-use appeal in Westmoreland County Court of Common Pleas against the Board of Supervisors' approval",
+      "read": "The Building J approval is now in court.",
+      "source": "https://www.publicsource.org/upper-burrell-data-center-transparency-backlash/"
+    },
+    {
+      "date": "2026-08-05",
+      "category": "regulatory",
+      "headline": "Upper Burrell supervisors approve a Building J land-development plan ('electrical and mechanical upgrades', 'generator and chiller replacement')",
+      "read": "The only local approval on the record for the first phase.",
+      "source": "https://community.triblive.com/news/4126238"
+    },
+    {
+      "date": "2026-07-28",
+      "category": "corporate",
+      "headline": "Business-combination webinar: 'we're the space, power, and cooler provider'; 'our shortest remaining term is 12 years'; 'we use continuous duty-rated equipment'; financing 'has been at a project level'",
+      "read": "The founder's own description of the model and the equipment philosophy, on the SEC record as a Form 425.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2079253/000121390026082490/ea0299618-425_apex.htm"
+    },
+    {
+      "date": "2026-07-22",
+      "category": "ma",
+      "headline": "Business Combination Agreement with Apex Treasury Corp: US$4.0B pre-money, 400 million new shares, US$35M PIPE from Eleven Ventures, ticker 'TECF', close targeted Q4 2026; investor deck projects revenue of US$110M, US$289M and US$2.14B for 2026–2028",
+      "read": "Signed, not closed; the projections are unaudited and assume US$34B of debt-funded capex.",
+      "source": "https://www.sec.gov/Archives/edgar/data/2079253/000121390026080199/ea0298664-8k425_apex.htm"
+    },
+    {
+      "date": "2026-07-04",
+      "category": "regulatory",
+      "headline": "TribLive: Phase 2 approval tabled at the June planning commission; the Environmental Integrity Project's 15.6 million-ton CO2e estimate for a 2,700 MW plant enters the local debate",
+      "read": "The 3 GW plan is being litigated as a power plant before it is permitted as one.",
+      "source": "https://community.triblive.com/news/4087050"
+    },
+    {
+      "date": "2026-07-01",
+      "category": "market",
+      "headline": "Environmental Integrity Project lists 'TECfusions Keystone Connect Power Plant — New — 2031/Unknown — 2,700 MW' with 15,668,145 tons/yr CO2e, an estimate from announced capacity",
+      "read": "The only third-party sizing of the generation, and it is a model, not a permit.",
+      "source": "https://environmentalintegrity.org/wp-content/uploads/2026/06/EIP-Data-Center-Power-Report-EMBARGOED-for-7.1.26.pdf"
+    },
+    {
+      "date": "2026-06-10",
+      "category": "customer",
+      "headline": "TensorWave raises US$350M Series B at US$1.55B post-money (Magnetar, AMD Ventures) with 'over 2 gigawatts of long-term capacity secured'; TECfusions is not mentioned",
+      "read": "The anchor tenant's capacity commitments now run beyond its TECfusions landlord.",
+      "source": "https://www.hpcwire.com/aiwire/2026/06/10/tensorwave-raises-350m-series-b-at-1-55b-valuation-to-expand-global-amd-powered-ai-infrastructure/"
+    },
+    {
+      "date": "2026-05-15",
+      "category": "regulatory",
+      "headline": "Upper Burrell adopts a 180-day data-centre moratorium (to 2 Nov 2026); TECfusions' permits 'grandfathered in'",
+      "read": "The first phase proceeds; everything after it waits on an ordinance.",
+      "source": "https://community.triblive.com/news/4053350"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "customer",
+      "headline": "TribLive: TensorWave is Keystone Connect's first tenant, 10 MW in Building J (Arconic's former data-centre building), 'up to 1 gigawatt eventually', installations by summer 2026; Foley & Lardner advised TensorWave",
+      "read": "The first named tenant at the flagship, in the building that already had a data-centre feed.",
+      "source": "https://community.triblive.com/news/3958294"
+    },
+    {
+      "date": "2026-01-14",
+      "category": "order-win",
+      "headline": "'TensorWave Expands with TECfusions, Splitting 20 MW Across Arizona and Pennsylvania': 10 MW more at Tucson and a 10 MW first phase at Keystone Connect, 'scaling to 1 GW; site capable of 3 GW', AMD MI300X/MI325X/MI355X, delivery H1 2026",
+      "read": "The 1 GW figure is restated as a scaling path from a 10 MW phase.",
+      "source": "https://www.prnewswire.com/news-releases/tensorwave-expands-with-tecfusions-splitting-20-mw-across-arizona-and-pennsylvania-locations-302660757.html"
+    },
+    {
+      "date": "2025-06-02",
+      "category": "project",
+      "headline": "Land agreement with Baeza Group for a 40-acre site at Puente Alto, Chile: 10 MW initial, scalable to 100 MW",
+      "read": "A second country with no build date.",
+      "source": "https://tecfusions.com/tecfusions-and-baeza-group-secure-landmark-land-deal-for-chiles-largest-planned-data-center/"
+    },
+    {
+      "date": "2025-04-12",
+      "category": "regulatory",
+      "headline": "PA DEP issues NPDES PA0000469 and water-quality permits 6570201 and 6570401 to Tecfusions Keystone LLC for the Upper Burrell site",
+      "read": "The permits on the record are water and waste, not air.",
+      "source": "https://www.pacodeandbulletin.gov/secure/pabulletin/data/vol55/55-15/491b.html"
+    },
+    {
+      "date": "2025-02-24",
+      "category": "project",
+      "headline": "73 acres bought at Clarksville for a 300 MW target; plan to reuse abandoned 138 kV lines from a decommissioned coal plant in discussion with Dominion and Mecklenburg County",
+      "read": "The Virginia site's growth depends on an old wire, not a new interconnection.",
+      "source": "https://www.prnewswire.com/news-releases/tecfusions-expands-data-center-footprint-with-73-acre-virginia-acquisition-302383387.html"
+    },
+    {
+      "date": "2025-01-14",
+      "category": "project",
+      "headline": "Keystone Connect unveiled: 1,395 acres of the former Alcoa R&D campus in Upper Burrell, '3 GW capacity over six years', '12 MW immediately available', a US$2M RACP grant",
+      "read": "The claim that every later document has been measured against.",
+      "source": "https://www.prnewswire.com/news-releases/tecfusions-unveils-massive-1400-acre-data-center-project-in-pennsylvania-revitalizing-former-industrial-plant-302350041.html"
+    },
+    {
+      "date": "2024-10-31",
+      "category": "order-win",
+      "headline": "'TECfusions Secures Landmark 1 GW Capacity Commitment from TensorWave': 1 GW 'strategically allocated across TECfusions' global facilities', 'a large portion' available by early 2025; no term, price or site list",
+      "read": "A commitment the deck later describes as an anchor tenant with a right of first refusal.",
+      "source": "https://www.prnewswire.com/news-releases/tecfusions-secures-landmark-1-gw-capacity-commitment-from-tensorwave-for-ai-ready-infrastructure-302292903.html"
+    },
+    {
+      "date": "2024-10-31",
+      "category": "financial",
+      "headline": "'Over $300 million' 15-year loan for Clarksville Phase I from a 'dedicated investor'; US$160M allocated to construction",
+      "read": "The only debt on the record, from a lender never named.",
+      "source": "https://tecfusions.com/tecfusions-secures-over-300-million-loan-agreement-to-accelerate-virginia-data-center/"
+    },
+    {
+      "date": "2024-09-19",
+      "category": "capacity",
+      "headline": "Clarksville C-Hall (10.5 MW) delivered in three months; 24 MW total with D-Hall (13.5 MW) to follow; a 220 MW site plan with microgrid",
+      "read": "The speed claim the company has traded on since.",
+      "source": "https://www.prnewswire.com/news-releases/tecfusions-unveils-ai-ready-data-center-in-record-time-302253126.html"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "fermi-america",
+      "type": "competitor",
+      "status": "active",
+      "since": "2026-08",
+      "via": "TensorWave as the shared anchor tenant",
+      "note": "Fermi America signed a 222 MW, 15-year lease with TensorWave TEX1, LLC on 9 Aug 2026; TECfusions holds TensorWave's earlier '1 GW' commitment and its Tucson and Keystone Connect phases, so the two landlords now compete for the same tenant's growth.",
+      "context": "TensorWave's June 2026 Series B announcement claims 'over 2 gigawatts of long-term capacity secured' and names neither landlord. Fermi's lease is binding but conditional on project financing and a guarantor by 30 Sep 2026 (per the corpus's Fermi dossier); TECfusions' commitment is described in its own deck as 'anchor tenant with right-of-first-refusal'. Both are generation-first developers; Fermi has 1.5 GW of turbines landed and TECfusions 2 MW live.",
+      "source": "https://www.hpcwire.com/aiwire/2026/06/10/tensorwave-raises-350m-series-b-at-1-55b-valuation-to-expand-global-amd-powered-ai-infrastructure/"
+    },
+    {
+      "slug": "dominion-energy",
+      "type": "supplier",
+      "status": "active",
+      "via": "Dominion Energy Virginia service at Clarksville; 138 kV line reuse under discussion",
+      "note": "Clarksville takes grid service from Dominion Energy Virginia (the site is listed as operational under Dominion by interconnection.fyi), and TECfusions' February 2025 release describes discussions with Dominion and Mecklenburg County to repurpose abandoned 138 kV lines from a decommissioned coal plant.",
+      "context": "Dominion has issued no statement naming TECfusions on the record; the relationship is recorded from TECfusions' release and an aggregator's interconnection listing. The 300 MW Clarksville target depends on that line reuse, which the company describes as 'under discussion'.",
+      "source": "https://www.prnewswire.com/news-releases/tecfusions-expands-data-center-footprint-with-73-acre-virginia-acquisition-302383387.html"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Upper Burrell Township data-centre moratorium and draft ordinance",
+      "status": "in-effect",
+      "effectiveDate": "2026-05",
+      "exposure": "A 180-day moratorium adopted in May 2026 runs to 2 Nov 2026 with TECfusions' existing permits grandfathered. The revised draft ordinance (Aug 2026) would require every new data centre to supply its own baseload power, impose 500- and 1,000-foot setbacks and a 75 dB limit; the planning commission paused it on 22 Sep 2026 ahead of a 7 Oct supervisors' meeting. The township has no ordinance regulating power plants. Phases 2 to 5 of Keystone Connect would be permitted under whatever is adopted.",
+      "mitigation": "The company says the project is 'aligned with' Governor Shapiro's Executive Order 2026-05 and the GRID Requirements, under which projects bear the cost of new power infrastructure that serves them.",
+      "source": "https://community.triblive.com/news/4053350"
+    },
+    {
+      "regime": "Pennsylvania Executive Order 2026-05 (Responsible Infrastructure Development, 'GRID' Requirements)",
+      "status": "in-effect",
+      "effectiveDate": "2026",
+      "exposure": "The company invokes the order in its August 2026 release; its behind-the-meter model is the form of compliance it claims. No PJM queue entry or utility filing for Keystone Connect exists on the record, so the grid half of the 'dual utility' plan is undocumented.",
+      "source": "https://www.globenewswire.com/news-release/2026/08/27/3351973/0/en/tecfusions-announces-new-kensington-data-center-is-live-delivering-gpu-capacity-and-responsible-on-site-power-plan.html"
+    },
+    {
+      "regime": "Pennsylvania air-quality permitting for on-site generation (PA DEP)",
+      "status": "proposed",
+      "exposure": "The company says Keystone Connect is 'currently powered by turbines' and plans a plant the Environmental Integrity Project models at 2,700 MW, yet no DEP air-quality plan approval, general permit or Title V in TECfusions' or Tecfusions Keystone LLC's name appears in the PA Bulletin through September 2026. The permits located are NPDES and water-quality permits.",
+      "source": "https://www.pacodeandbulletin.gov/secure/pabulletin/data/vol55/55-15/491b.html"
+    },
+    {
+      "regime": "Pennsylvania Right-to-Know Law (state funding pitch)",
+      "status": "in-effect",
+      "exposure": "The Office of Open Records ordered the company's US$250k DCED pitch unredacted; TECfusions petitioned Commonwealth Court to keep it sealed and the case is pending. The proposal 'became the target of lawsuits and partially inspired a local moratorium' (Technical.ly).",
+      "source": "https://technical.ly/civics/why-tecfusions-is-fighting-to-keep-its-250k-pa-pitch-secret/"
+    }
+  ],
+  "strategyRead": [
+    "(High confidence) We assess that TECfusions signs for its own power chain, generation included, and that its buying is small today and undocumented as to vendors. Basis: the RACP scope ('generation, UPS, switchgear, cabling'), the founder's 'continuous duty-rated equipment' remark, the deck's 'domestic sourcing of Transformers, HVAC, immersion cooling', and the supply-chain blog listing transformer, switchgear, chiller, generator and UPS lead times; against that, 55 MW live across three sites, 2 MW at the flagship, and no OEM named anywhere. Indicator to watch: a DEP air-quality application or a turbine order naming an OEM for New Kensington.",
+    "(High confidence) We assess the '3 GW' and '1 GW leased' figures as marketing, and the deck's phase table as the company's real position. Basis: the company's own July 2026 deck states 2 MW live and 10 MW contracted at Keystone Connect and footnotes the 3 GW as management estimates 'subject to significant risks of change'; the TensorWave figure is restated as 'anchor tenant with right-of-first-refusal'; TensorWave's Series B names other capacity and Fermi America signed it for 222 MW. Indicator to watch: the S-4, which must carry audited financials and the contracted-MW schedule.",
+    "(Moderate confidence) We assess the SPAC as likely to close at a lower cash level than the trust implies, if it closes. Basis: US$353M in trust with a US$45M minimum cash condition and a US$35M PIPE; the CFO-designate's hope to 'retain a lot of that trust money'; no S-4 filed two months after signing; a founder risk factor on prior convictions; an outside date of 31 Mar 2027. Redemptions on 2026-vintage SPACs are the base rate this rests on, not a company fact. Indicator to watch: the S-4 filing date and the redemption figure at the shareholder vote.",
+    "(Moderate confidence) We assess that the township, not the utility, is the binding constraint on Keystone Connect through 2027. Basis: the moratorium, the draft 'bring your own baseload' ordinance, the land-use appeal and the Right-to-Know case all sit at township and county level; no PJM or utility process is on the record to be delayed. Indicator to watch: the 7 Oct 2026 supervisors' meeting and the ordinance adopted before 2 Nov.",
+    "(Low confidence) We assess that batteries, SSTs and 800 VDC are outside the company's plans. Basis: the only storage mention is a generic blog on FERC Order 2222 resources; nothing on tecfusions.com mentions solid-state transformers, 800 VDC or HVDC; the deck's 'immersion cooling' and 'domestic transformers' point to conventional MV distribution. This is an inference from absence on a thin record. Indicator to watch: the equipment list in any Phase 2 land-development application."
+  ],
+  "decisionMakers": [
+    {
+      "name": "Simon Tusha",
+      "title": "Founder and Chief Technology Officer; sole beneficial owner (via Jeremiah 29:11, LLC)",
+      "background": [
+        "Founder of TECfusions (Feb 2023); owner and founder of True Data Centers / Tusha & Associates (2011–present)",
+        "CTO, Quality Technology Services (2009–2011); International Director, Strategic Development, Google (2007–2009); founder and CEO, Mission Critical Enterprises (2000–2007); earlier AOL, AboveNet and Global Crossing (interview)",
+        "Sentenced on 10 Jan 2019 to 21 months in federal prison for conspiracy to obstruct the IRS over about US$3.2M of kickbacks received while at Google, with US$962,100 restitution (Cecil Whig); a 1999 guilty plea for interstate transportation of stolen checks. The company discloses 'prior criminal convictions and alleged misconduct' as a risk factor",
+        "Said on the July 2026 webinar that he will 'step back' as the board runs the public company"
+      ]
+    },
+    {
+      "name": "Denis Minihane",
+      "title": "Chief Executive Officer and Board Member",
+      "background": [
+        "CEO named in the July 2026 deck and the August 2026 releases (spelled 'Dennis' in some); previously EVP Critical Development (third-party)",
+        "'over 33 years spanning government service, the private sector, and multinational enterprise', beginning in the Irish government (deck); no employer names or years given"
+      ]
+    },
+    {
+      "name": "Andrea Judkins",
+      "title": "President and Chairperson of the Board",
+      "background": [
+        "'35 years of experience across business, finance, operations, and entrepreneurship' (deck)",
+        "The Florida registry lists an 'Andrea Lay' as Secretary, Treasurer and Director; possibly the same person, unverified"
+      ]
+    },
+    {
+      "name": "Paul Sykes",
+      "title": "Chief Financial Officer (designate; CFO of Apex Treasury Corp)",
+      "background": [
+        "CFO of the SPAC counterparty, to become TECfusions' CFO at closing",
+        "Former CFO, Springbig Holdings; CFO, dmg information; Group Treasurer, EMAP plc"
+      ]
+    },
+    {
+      "name": "Mark Hamilton",
+      "title": "Chief Operating Officer",
+      "background": [
+        "'over three decades' in digital infrastructure (deck)"
+      ]
+    },
+    {
+      "name": "Steve Hackenburg",
+      "title": "Chief Revenue Officer",
+      "background": [
+        "Quoted on the January 2026 TensorWave expansion; 'more than 20 years', career begun at the Uptime Institute (deck)",
+        "Succeeded Shawn Novak, CRO on the October 2024 TensorWave release"
+      ]
+    },
+    {
+      "name": "Eric Daniels",
+      "title": "Chief Engineering Officer",
+      "background": [
+        "'two decades' of electrical design, construction and operational management, including 'high- and medium-voltage power generation and distribution' (deck)"
+      ]
+    },
+    {
+      "name": "Meytal Cohen Marco",
+      "title": "Chief Legal Officer and General Counsel",
+      "background": [
+        "Licensed in New York and Israel; 20+ years (deck)"
+      ]
+    },
+    {
+      "name": "Dan Richardson",
+      "title": "Vice President, Construction",
+      "background": [
+        "With TECfusions since Jul 2023; previously COO, Panache Asset (2020–2022)"
+      ]
+    },
+    {
+      "name": "Joseph Rubino",
+      "title": "Vice President, Real Estate",
+      "background": [
+        "Formerly CenterSquare Investment Management"
+      ]
+    },
+    {
+      "name": "Steve Hershey",
+      "title": "Vice President, Government and Regulatory Affairs",
+      "background": [
+        "Quoted on the January 2025 Keystone Connect release"
+      ]
+    },
+    {
+      "name": "Lord Benjamin Mancroft",
+      "title": "Director (named on the July 2026 webinar)",
+      "background": [
+        "UK peer; other post-closing directors 'to be announced'"
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "type": "private",
+    "periods": [
+      {
+        "period": "FY2024 (calendar 2024; no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The webinar describes the financials as 'unaudited' with an audit 'in process'; none are on the record"
+          },
+          {
+            "name": "Debt",
+            "actual": "'Over $300 million' 15-year loan for Clarksville Phase I from an unnamed 'dedicated investor'; US$160M allocated to construction (31 Oct 2024)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Lender, rate and security undisclosed; funding began January 2024 'in response to urgent capacity needs from a key tenant'"
+          }
+        ],
+        "commentary": "Clarksville's first halls were built and leased in this year; the TensorWave '1 GW' commitment and the Alcoa campus purchase closed in Q4."
+      },
+      {
+        "period": "FY2025 (calendar 2025; no statements published)",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Revenue",
+            "actual": "Not disclosed",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No figure on any channel"
+          },
+          {
+            "name": "Live capacity",
+            "actual": "Tucson 14.4 MW delivered in 2025 'in under four months'; Clarksville four halls (37.5 MW) leased",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company releases; no MW figure is audited"
+          }
+        ],
+        "commentary": "The year of the Keystone Connect announcement, the RACP grant and the Chile land deal."
+      },
+      {
+        "period": "2026 year to date (September) and business-combination projections",
+        "periodType": "other",
+        "metrics": [
+          {
+            "name": "Live and contracted capacity (Jul 2026)",
+            "actual": "Clarksville 37 MW live and fully leased (42 MW under contract for Phase 2); Tucson 16 MW live plus 12 MW contracted; New Kensington 2 MW live plus 10 MW contracted",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Business Combination Agreement release and investor deck",
+            "kpi": "mw-energized",
+            "qty": 55
+          },
+          {
+            "name": "Projected revenue (deck slide 24, unaudited)",
+            "actual": "US$110M (2026), US$289M (2027), US$2.14B (2028); MW in service 92, 422 and 1,467; net income –US$23M, –US$10M and US$189M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Management projections; capex US$1.4B, US$16.9B and US$16.1B 'assumed to be debt financed' at 'approximately 6% to 13%'; the New Kensington plant 'contributes ~$500M in 2028'"
+          },
+          {
+            "name": "SPAC terms",
+            "actual": "US$4.0B pre-money; 400.0M new shares at US$10.00; pro forma EV about US$4.2B; US$35M PIPE (Eleven Ventures); about US$353M in trust at 30 Jun 2026; minimum cash US$45M",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Apex Treasury 8-K and 10-Q; no S-4 filed as of 29 Sep 2026"
+          },
+          {
+            "name": "Public incentives",
+            "actual": "US$2M Pennsylvania RACP grant for Keystone Connect Phase I infrastructure",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Sen. Pittman's notice, Nov 2024"
+          }
+        ],
+        "commentary": "Every forward figure is the company's; the only externally checked numbers are the live megawatts and the trust balance. The refresh calendar carries the company as a private quarterly row until the SPAC closes, at which point it becomes a dated row."
+      }
+    ],
+    "commentary": "A three-year-old private company with no published financial statements, one disclosed loan from an unnamed lender, and a pending SPAC whose deck projects a twentyfold revenue rise in two years on US$34B of debt-funded capex. Read the projections as the price of the equity story, not as guidance."
+  },
+  "sources": [
+    {
+      "label": "Allegheny Front — In Upper Burrell, where the fracking and AI industries converge, residents look to regulate data center",
+      "url": "https://www.alleghenyfront.org/in-upper-burrell-where-the-fracking-and-ai-industries-converge-residents-look-to-regulate-data-center/",
+      "date": "2026-09-28"
+    },
+    {
+      "label": "Mon Valley Independent — Fracking flourishes amid data center surge in western Pa.",
+      "url": "https://www.monvalleyindependent.com/2026/09/24/fracking-flourishes-amid-data-center-surge-in-western-pa/",
+      "date": "2026-09-24"
+    },
+    {
+      "label": "Technical.ly — Why TECfusions is fighting to keep its $250K PA pitch secret",
+      "url": "https://technical.ly/civics/why-tecfusions-is-fighting-to-keep-its-250k-pa-pitch-secret/",
+      "date": "2026-09-15"
+    },
+    {
+      "label": "Compute Atlas — TECfusions Keystone Connect, Upper Burrell",
+      "url": "https://www.compute-atlas.com/facilities/tecfusions-keystone-connect-upper-burrell-pa",
+      "date": "2026-09-10"
+    },
+    {
+      "label": "PublicSource — Upper Burrell data center transparency backlash (land-use appeal)",
+      "url": "https://www.publicsource.org/upper-burrell-data-center-transparency-backlash/",
+      "date": "2026-09-03"
+    },
+    {
+      "label": "PennBiz Report — New Kensington data center goes live with 'responsible' power plan",
+      "url": "https://pennbizreport.com/news/33443-new-kensington-data-center-goes-live-with-responsible-power-plan-company-announces/",
+      "date": "2026-09-01"
+    },
+    {
+      "label": "Protect PT — Residents are furious as Upper Burrell leaders silently publish new data centers ordinance",
+      "url": "https://www.protectpt.org/post/residents-are-furious-as-upper-burrellleaders-silently-publish-new-data-centers-ordinance",
+      "date": "2026-08-31"
+    },
+    {
+      "label": "TribLive — TECfusions data center in Upper Burrell operational (Building J; grid power; tenant undisclosed)",
+      "url": "https://community.triblive.com/news/4126238",
+      "date": "2026-08-28"
+    },
+    {
+      "label": "GlobeNewswire — TECfusions Announces New Kensington Data Center is Live, Delivering GPU Capacity and Responsible On-Site Power Plan",
+      "url": "https://www.globenewswire.com/news-release/2026/08/27/3351973/0/en/tecfusions-announces-new-kensington-data-center-is-live-delivering-gpu-capacity-and-responsible-on-site-power-plan.html",
+      "date": "2026-08-27"
+    },
+    {
+      "label": "SEC — Apex Treasury Corp Form 425 (New Kensington live release)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002079253/000121390026094375/ea0303583-425_apex.htm",
+      "date": "2026-08-27"
+    },
+    {
+      "label": "WPXI — TECfusions data center in New Kensington now up and running",
+      "url": "https://www.wpxi.com/news/local/tecfusions-data-center-new-kensington-now-up-running/QGDYKKBEQFGZZAMHZGXPK3DIYM/",
+      "date": "2026-08-27"
+    },
+    {
+      "label": "SEC — Apex Treasury Corp 10-Q for the quarter ended 30 Jun 2026 (trust balance)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0002079253/000121390026087813/ea0301001-10q_apex.htm",
+      "date": "2026-08-14"
+    },
+    {
+      "label": "TECfusions — Business-combination webinar transcript (28 Jul 2026)",
+      "url": "https://tecfusions.com/wp-content/uploads/2026/08/TECF-Webinar-Transcript-7.28.26.pdf",
+      "date": "2026-07-28"
+    },
+    {
+      "label": "SEC — Apex Treasury Corp Form 425 (webinar transcript)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2079253/000121390026082490/ea0299618-425_apex.htm",
+      "date": "2026-07-28"
+    },
+    {
+      "label": "Tampa Bay Business & Wealth — Clearwater data center developer going public at $4B",
+      "url": "https://tbbwmag.com/2026/07/22/clearwater-data-center-developer/",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "SEC — Apex Treasury Corp 8-K (Business Combination Agreement terms)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2079253/000121390026080199/ea0298664-8k425_apex.htm",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "SEC — Apex Treasury Corp 8-K Ex. 99.2, TECfusions investor presentation",
+      "url": "https://www.sec.gov/Archives/edgar/data/2079253/000121390026080199/ea029866401ex99-2.htm",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "GlobeNewswire — TECfusions signs Business Combination Agreement with Apex Treasury Corp",
+      "url": "https://www.globenewswire.com/news-release/2026/07/22/3331301/0/en/tecfusions-a-rapidly-growing-developer-and-operator-of-ai-ready-data-centers-and-power-infrastructure-signs-business-combination-agreement-with-apex-treasury-corp.html",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "TradingView — Apex Treasury to merge with TECfusions in $4 billion all-stock deal, secures $35 million PIPE",
+      "url": "https://www.tradingview.com/news/tradingview:6781720a3b2b0:0-apex-treasury-to-merge-with-tecfusions-in-4-billion-all-stock-deal-secures-35-million-pipe/",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "SEC — Apex Treasury Corp 8-K Ex. 10.2, Stockholder Support Agreement (Jeremiah 29:11, LLC)",
+      "url": "https://www.sec.gov/Archives/edgar/data/2079253/000121390026080202/ea029866401ex10-2.htm",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "StorageReview — TensorWave raises $350M Series B at $1.55B valuation",
+      "url": "https://www.storagereview.com/news/tensorwave-raises-350m-series-b-at-1-55b-valuation-to-grow-its-amd-instinct-ai-cloud",
+      "date": "2026-07-07"
+    },
+    {
+      "label": "TribLive — Skepticism over TECfusions plans in Upper Burrell; Phase 2 tabled",
+      "url": "https://community.triblive.com/news/4087050",
+      "date": "2026-07-04"
+    },
+    {
+      "label": "Environmental Integrity Project — The Power Behind AI (Appendix C: TECfusions Keystone Connect Power Plant, 2,700 MW estimate)",
+      "url": "https://environmentalintegrity.org/wp-content/uploads/2026/06/EIP-Data-Center-Power-Report-EMBARGOED-for-7.1.26.pdf",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Bay News 9 — Clearwater-based tech company offering solutions to data center dilemma",
+      "url": "https://baynews9.com/fl/tampa/news/2026/06/28/clearwater-based-tech-company-offering-solutions-to-data-center-dilemma-being-faced-by-many-municipalities",
+      "date": "2026-06-28"
+    },
+    {
+      "label": "GlobeNewswire — TECfusions' Simon Tusha participates in Nasdaq Global Industrials Forum",
+      "url": "https://www.globenewswire.com/news-release/2026/06/22/3315609/0/en/tecfusions-simon-tusha-participates-in-nasdaq-global-industrials-forum-highlighting-the-critical-role-of-data-centers-in-the-ai-economy.html",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "HPCwire — TensorWave raises $350M Series B at $1.55B valuation to expand global AMD-powered AI infrastructure",
+      "url": "https://www.hpcwire.com/aiwire/2026/06/10/tensorwave-raises-350m-series-b-at-1-55b-valuation-to-expand-global-amd-powered-ai-infrastructure/",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "TribLive — Upper Burrell adopts data-center moratorium; TECfusions grandfathered",
+      "url": "https://community.triblive.com/news/4053350",
+      "date": "2026-05-15"
+    },
+    {
+      "label": "TribLive — Upper Burrell residents uneasy over data center plans",
+      "url": "https://community.triblive.com/news/3996445",
+      "date": "2026-03-06"
+    },
+    {
+      "label": "TribLive — TensorWave first tenant at TECfusions' Upper Burrell campus (Building J)",
+      "url": "https://community.triblive.com/news/3958294",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "Foley & Lardner — Foley advises TensorWave in 20 MW data center expansion with TECfusions",
+      "url": "https://www.foley.com/news/2026/01/foley-advises-tensorwave-in-20-mw-data-center-expansion-with-tecfusions/",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "TensorWave — TensorWave and TECfusions expand AMD capacity in Tucson and Pennsylvania",
+      "url": "https://tensorwave.com/blog/tensorwave-and-tecfusions-expand-amd-capacity-tucson-pa",
+      "date": "2026-01-14"
+    },
+    {
+      "label": "PR Newswire — TensorWave Expands with TECfusions, Splitting 20 MW Across Arizona and Pennsylvania Locations",
+      "url": "https://www.prnewswire.com/news-releases/tensorwave-expands-with-tecfusions-splitting-20-mw-across-arizona-and-pennsylvania-locations-302660757.html",
+      "date": "2026-01-14"
+    },
+    {
+      "label": "TECfusions — Keystone Connect flyer (3 GW IT Load; 1 GW leased today)",
+      "url": "https://tecfusions.com/wp-content/uploads/2025/11/KEYSTONE-CONNECT-FLYER.pdf",
+      "date": "2025-11"
+    },
+    {
+      "label": "TECfusions — Tucson flyer (15 MW IT Load; dual utility and on-site power)",
+      "url": "https://tecfusions.com/wp-content/uploads/2025/11/TUCSON-FLYER.pdf",
+      "date": "2025-11"
+    },
+    {
+      "label": "TECfusions — Clarksville flyer (300 MW IT Load)",
+      "url": "https://tecfusions.com/wp-content/uploads/2025/11/CLARKSVILLE-FLYER.pdf",
+      "date": "2025-11"
+    },
+    {
+      "label": "TECfusions — Blog: Adapting to supply chain constraints (transformer, switchgear, chiller, generator and UPS lead times)",
+      "url": "https://tecfusions.com/adapting-to-supply-chain-constraints/",
+      "date": "2025-09-22"
+    },
+    {
+      "label": "TECfusions — TECfusions and Baeza Group secure landmark land deal for Chile's largest planned data center",
+      "url": "https://tecfusions.com/tecfusions-and-baeza-group-secure-landmark-land-deal-for-chiles-largest-planned-data-center/",
+      "date": "2025-06-02"
+    },
+    {
+      "label": "ConvergeDigest — TECfusions to build Chile's largest AI-ready data center campus",
+      "url": "https://convergedigest.com/tecfusions-to-build-chiles-largest-ai-ready-data-center-campus/",
+      "date": "2025-06-02"
+    },
+    {
+      "label": "TechCrunch — TensorWave raises $100M for its AMD-powered AI cloud",
+      "url": "https://techcrunch.com/2025/05/14/tensorwave-raises-100m-for-its-amd-powered-ai-cloud/",
+      "date": "2025-05-14"
+    },
+    {
+      "label": "Pennsylvania Bulletin vol. 55 no. 15 — NPDES PA0000469 and WQM permits issued to Tecfusions Keystone LLC",
+      "url": "https://www.pacodeandbulletin.gov/secure/pabulletin/data/vol55/55-15/491b.html",
+      "date": "2025-04-12"
+    },
+    {
+      "label": "TECfusions — Blog: Unlocking power stability and sustainability (FERC Order 2222 resources)",
+      "url": "https://tecfusions.com/unlocking-power-stability-and-sustainability/",
+      "date": "2025-03-27"
+    },
+    {
+      "label": "TECfusions — Blog: Powering the future — the implications of natural gas at scale for data centers",
+      "url": "https://tecfusions.com/powering-the-future-the-implications-of-natural-gas-at-scale-for-data-centers/",
+      "date": "2025-03-19"
+    },
+    {
+      "label": "Pennsylvania Bulletin vol. 55 no. 11 — NPDES PA0000469 transfer application, Tecfusions Keystone LLC",
+      "url": "https://www.pacodeandbulletin.gov/secure/pabulletin/data/vol55/55-11/55-11.pdf",
+      "date": "2025-03-15"
+    },
+    {
+      "label": "PR Newswire — TECfusions expands data center footprint with 73-acre Virginia acquisition",
+      "url": "https://www.prnewswire.com/news-releases/tecfusions-expands-data-center-footprint-with-73-acre-virginia-acquisition-302383387.html",
+      "date": "2025-02-24"
+    },
+    {
+      "label": "WPXI / Pittsburgh Business Times — TECfusions buys former Alcoa research facility for data center campus",
+      "url": "https://www.wpxi.com/news/local/tecfusions-buys-former-alcoa-research-facility-data-center-campus/2EWEPOPRMNCJTGS5XABVT7UPUM/",
+      "date": "2025-01-17"
+    },
+    {
+      "label": "Commercial Property Executive — TECfusions unveils data center campus near Pittsburgh",
+      "url": "https://www.commercialsearch.com/news/tecfusions-unveils-data-center-campus-near-pittsburgh/",
+      "date": "2025-01-15"
+    },
+    {
+      "label": "Lightwave — TECfusions to repurpose former Pennsylvania Alcoa plant as a data center site",
+      "url": "https://www.lightwaveonline.com/home/article/55260840/tecfusions-to-repurpose-former-pennsylvania-alcoa-plant-as-a-data-center-site",
+      "date": "2025-01-14"
+    },
+    {
+      "label": "PR Newswire — TECfusions unveils massive 1,400-acre data center project in Pennsylvania",
+      "url": "https://www.prnewswire.com/news-releases/tecfusions-unveils-massive-1400-acre-data-center-project-in-pennsylvania-revitalizing-former-industrial-plant-302350041.html",
+      "date": "2025-01-14"
+    },
+    {
+      "label": "TECfusions — Blog: Today's dilemma — financing rapid deployments for cash-constrained AI startups",
+      "url": "https://tecfusions.com/todays-dilemma-financing-rapid-deployments-for-cash-constrained-ai-startups/",
+      "date": "2024-12-02"
+    },
+    {
+      "label": "Commercial Property Executive — TECfusions lands $300M for Virginia data center",
+      "url": "https://www.commercialsearch.com/news/tecfusions-lands-300m-for-virginia-data-center/",
+      "date": "2024-11-22"
+    },
+    {
+      "label": "Baxtel — TECfusions signs AI infrastructure deal with TensorWave",
+      "url": "https://baxtel.com/news/tecfusions-signs-ai-infrastructure-deal-with-tensorwave",
+      "date": "2024-11-01"
+    },
+    {
+      "label": "Sen. Joe Pittman — $5 million in RACP grants awarded in Westmoreland County (Keystone Connect, $2,000,000)",
+      "url": "https://senatorpittman.com/2024/11/01/pittman-cooper-announce-5-million-in-racp-grants-awarded-in-westmoreland-county/",
+      "date": "2024-11-01"
+    },
+    {
+      "label": "PR Newswire — TECfusions Secures Landmark 1 GW Capacity Commitment from TensorWave for AI-Ready Infrastructure",
+      "url": "https://www.prnewswire.com/news-releases/tecfusions-secures-landmark-1-gw-capacity-commitment-from-tensorwave-for-ai-ready-infrastructure-302292903.html",
+      "date": "2024-10-31"
+    },
+    {
+      "label": "TensorWave — TensorWave secures a massive 1 GW capacity for AI-powered infrastructure",
+      "url": "https://tensorwave.com/blog/tensorwave-secures-a-massive-1-gw-capacity-for-ai-powered-infrastructure",
+      "date": "2024-10-31"
+    },
+    {
+      "label": "TECfusions — TECfusions secures over $300 million loan agreement to accelerate Virginia data center",
+      "url": "https://tecfusions.com/tecfusions-secures-over-300-million-loan-agreement-to-accelerate-virginia-data-center/",
+      "date": "2024-10-31"
+    },
+    {
+      "label": "CIO Influence — Interview with Simon Tusha, Founder and CTO of TECfusions",
+      "url": "https://cioinfluence.com/datacentre/cio-influence-interview-with-simon-tusha-founder-and-cto-of-tecfusions/",
+      "date": "2024-10-28"
+    },
+    {
+      "label": "PR Newswire — TECfusions unveils AI-ready data center in record time (Clarksville C-Hall)",
+      "url": "https://www.prnewswire.com/news-releases/tecfusions-unveils-ai-ready-data-center-in-record-time-302253126.html",
+      "date": "2024-09-19"
+    },
+    {
+      "label": "TECfusions — Blog: Unlocking power independence — TECfusions' approach to on-site microgrid generation",
+      "url": "https://tecfusions.com/unlocking-power-independence-tecfusions-approach-to-on-site-microgrid-generation/",
+      "date": "2024-08-28"
+    },
+    {
+      "label": "RealEstateDaily — Aphorio Carter acquires leased data center in Tucson for $13 million",
+      "url": "https://realestatedaily-news.com/aphorio-carter-acquires-leased-data-center-in-tucson-for-13-million/",
+      "date": "2023-11-09"
+    },
+    {
+      "label": "AltsWire — Aphorio Carter acquires $13 million Arizona data center (15-year absolute NNN lease to TECfusions)",
+      "url": "https://altswire.com/aphorio-carter-acquires-13-million-arizona-data-center/",
+      "date": "2023-10-20"
+    },
+    {
+      "label": "Cecil Whig — Former Elk Neck venue owner gets 21 months for tax evasion",
+      "url": "https://www.cecildaily.com/news/local_news/former-elk-neck-venue-owner-gets-21-mo-for-tax-evasion/article_b596ae09-8395-5a19-b345-311f987decd2.html",
+      "date": "2019-02-18"
+    },
+    {
+      "label": "DutchNews — Businessman charged with bribing Google exec faces 21 months in jail",
+      "url": "https://www.dutchnews.nl/2018/09/businessman-charged-with-bribing-google-exec-faces-21-months-in-jail/",
+      "date": "2018-09-25"
+    },
+    {
+      "label": "Cecil Whig — Former Google exec's tax-fraud case draws international intrigue",
+      "url": "https://www.cecildaily.com/news/local_news/former-google-execs-tax-fraud-case-draws-international-intrigue/article_70ef8312-e647-5faf-99dd-1dd3dff6d6b3.html",
+      "date": "2016-12-14"
+    },
+    {
+      "label": "TECfusions — Homepage",
+      "url": "https://tecfusions.com/"
+    },
+    {
+      "label": "TECfusions — Leadership",
+      "url": "https://tecfusions.com/leadership/"
+    },
+    {
+      "label": "TECfusions — History",
+      "url": "https://tecfusions.com/history/"
+    },
+    {
+      "label": "TECfusions — Business combination page",
+      "url": "https://tecfusions.com/business-combination/"
+    },
+    {
+      "label": "TECfusions — New Kensington (Keystone Connect) site page",
+      "url": "https://tecfusions.com/data-centers/new-kensington/"
+    },
+    {
+      "label": "TECfusions — Tucson site page",
+      "url": "https://tecfusions.com/data-centers/tucson/"
+    },
+    {
+      "label": "TECfusions — Clarksville site page",
+      "url": "https://tecfusions.com/data-centers/clarksville/"
+    },
+    {
+      "label": "TECfusions — Services: Colocation ('self generated natural gas systems')",
+      "url": "https://tecfusions.com/services/colocation/"
+    },
+    {
+      "label": "TECfusions — Sustainable Solutions (microgrids, carbon capture, 'Operating 100% off-grid when needed')",
+      "url": "https://tecfusions.com/sustainable-solutions/"
+    },
+    {
+      "label": "TECfusions — Investor deck (July 2026)",
+      "url": "https://tecfusions.com/wp-content/uploads/2026/07/TECfusions-Investor-Deck.pdf"
+    },
+    {
+      "label": "Florida Division of Corporations record — TECFUSIONS INC., P23000017138 (registry mirror)",
+      "url": "https://www.bizprofile.net/fl/gulfport/tecfusions-inc"
+    },
+    {
+      "label": "interconnection.fyi — TECfusions Clarksville LLC (Dominion Energy Virginia, operational)",
+      "url": "https://www.interconnection.fyi/data-center/project/tecfusions-clarksville-llc-97493cfd"
+    },
+    {
+      "label": "Baxtel — TECfusions Tucson",
+      "url": "https://baxtel.com/data-center/tecfusions-tucson-az"
+    },
+    {
+      "label": "TECfusions — LinkedIn company page",
+      "url": "https://www.linkedin.com/company/tecfusions"
+    }
+  ],
+  "lastUpdated": "2026-09-29",
+  "profileVersion": 1
+}

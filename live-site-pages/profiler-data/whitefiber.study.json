@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 2,
+  "slug": "whitefiber",
+  "title": "WhiteFiber — Technology Study Guide",
+  "lastUpdated": "2026-09-29",
+  "sections": [
+    {
+      "id": "two-businesses",
+      "title": "Two businesses, one backlog",
+      "kind": "prose",
+      "read": "4 min",
+      "ps": [
+        "A {{neocloud}} owns GPUs and rents time on them; a landlord owns a hall and rents it for years under a {{colocation}} lease while the tenant brings the servers. WhiteFiber is both: a GPU cloud (GB300, B300, H100 and VR200 systems on a 3.2 Tb/s fabric) and a data-centre arm that leases a Montreal hall to a chip company for five years and a North Carolina campus to Nscale for ten.",
+        "The two businesses earn differently. Cloud revenue is recognised as hours are used, and a customer that stops using them stops paying: the customer that was 70.7% of 2025 revenue was terminated in 2026. Rent is owed whether or not the tenant's GPUs are busy.",
+        "{{Remaining performance obligations}} are contracted revenue not yet earned. At mid-2026 the company carried about US$1,008 million of them: US$933 million from colocation and US$75 million from cloud. Most of today's revenue is cloud; 93% of tomorrow's is one lease."
+      ]
+    },
+    {
+      "id": "backlog-ladder",
+      "title": "One backlog, two businesses, drawn to scale",
+      "kind": "bars",
+      "read": "2 min",
+      "unit": "US$ million",
+      "intro": "Figures from this company's mid-2026 record. The lease dominates the backlog; the cloud dominates today's revenue.",
+      "items": [
+        {
+          "label": "Remaining performance obligations, colocation",
+          "sub": "almost entirely one ten-year lease",
+          "v": 933
+        },
+        {
+          "label": "One analyst's value for the leased campus alone",
+          "sub": "20× the campus's projected net operating income",
+          "v": 1560
+        },
+        {
+          "label": "Market value of the whole company",
+          "sub": "29 Sep 2026 close",
+          "v": 719
+        },
+        {
+          "label": "Remaining performance obligations, cloud",
+          "sub": "reserved and managed contracts",
+          "v": 75
+        },
+        {
+          "label": "Half-year revenue, 2026",
+          "sub": "about four-fifths cloud",
+          "v": 51
+        }
+      ],
+      "note": "Company filings and one sell-side note. The campus's value rests on a lease with an investment-grade offtake behind the tenant; the cloud, rated below Bronze by the only independent benchmark, gets no such multiple."
+    },
+    {
+      "id": "retrofit",
+      "title": "The retrofit: buying a feed, not a floor",
+      "kind": "prose",
+      "read": "3 min",
+      "ps": [
+        "{{Adaptive reuse}}: the company converts factories rather than building shells. A yarn plant of about 1,000,000 square feet became NC-1; a mattress factory became MTL-3; two more textile buildings are NC-2 and NC-3. It says a retrofit takes about six months at US$8 to 10 million per gross megawatt, against an industry average it puts at US$13 million.",
+        "The value is the electrical history. A factory that ran spinning lines already has a utility service agreement, a {{substation}} and a transmission tap. NC-1 inherited the plant's {{electric service agreement}} by assignment, which is why 54 gross MW arrived within a year of purchase without a new large-load interconnection.",
+        "The price was written in megawatts: the seller earns US$8 million more if the utility delivers or contracts at least 99 MW within two years, US$5 million within three, and US$200,000 for every megawatt above 99. An {{earn-out}} on power, not on profit."
+      ]
+    },
+    {
+      "id": "three-megawatts",
+      "title": "Gross, IT and contracted megawatts",
+      "kind": "table",
+      "read": "3 min",
+      "intro": "Every campus carries at least three megawatt figures, and a lease and a utility letter are written in different ones.",
+      "cols": [
+        "Figure",
+        "What it measures",
+        "Example from this company's record"
+      ],
+      "rows": [
+        [
+          "Gross MW",
+          "What the utility delivers to the site: servers plus cooling, conversion losses and building services",
+          "24, then 40, then 99 gross MW in the utility's letter; 54 gross MW delivered by May 2026"
+        ],
+        [
+          "IT MW",
+          "What the servers draw; the figure a lease is written on ({{critical IT load}})",
+          "40 MW of IT to one tenant in two 20 MW phases"
+        ],
+        [
+          "The bridge between them",
+          "{{PUE}} = gross ÷ IT; at the campus's target of 1.3, 40 MW of IT needs about 52 gross MW",
+          "The first 54 gross MW map onto one 40 MW tenant"
+        ],
+        [
+          "Contracted MW",
+          "Megawatts customers have signed for, built or not",
+          "About 65 gross MW online in Q3 2026 against a stated 1.3 to 1.5 GW pipeline"
+        ],
+        [
+          "Management's belief",
+          "What the site 'may receive and support' with new substations",
+          "200 gross MW, and 'approximately 300' on a later call; neither is a utility commitment"
+        ]
+      ]
+    },
+    {
+      "id": "meter-property-line",
+      "title": "The meter as a property line",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "At a data centre the utility owns the equipment on one side of the meter and the customer everything on the other. The documents fix the line.",
+      "cols": [
+        "Stage, grid to rack",
+        "Who owns it at this campus",
+        "The document"
+      ],
+      "rows": [
+        [
+          "Transmission tap and utility {{substation}} ({{transformer}}s to 24 kV, breakers, metering)",
+          "The utility, as 'Extra Facilities' built at its cost of about US$1.14 million and recovered through a US$11,405 monthly charge",
+          "The assigned electric service agreement"
+        ],
+        [
+          "{{Medium voltage}} {{switchgear}}: the site's main breakers, protection and feeders at 24 kV",
+          "The customer: the first thing it owns after the meter",
+          "The 10-K's list of what it buys: 'power distribution equipment, generators, and cooling systems'"
+        ],
+        [
+          "Step-down transformers to {{low voltage}}, {{UPS}} and batteries, distribution to the racks",
+          "The customer",
+          "The same list, plus the risk factor on battery systems that transit Mexico"
+        ],
+        [
+          "Backup generators beside the UPS",
+          "The customer",
+          "The 10-K"
+        ],
+        [
+          "Behind-the-meter generation",
+          "A third party: 'natural gas fuel cell generation technology … by partnering with third-party energy providers'",
+          "The 10-K's stated intent; no provider named"
+        ]
+      ]
+    },
+    {
+      "id": "letter-vs-agreement",
+      "title": "A letter is not a service agreement",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**The letter.** The utility's 16 May 2025 {{letter agreement}} states an estimated peak load of 99 MW at 24 kV and promises 'commercially reasonable efforts' to deliver 24, 40 and 99 gross MW on a schedule, adding that it 'does not guarantee timelines can be met'. The final phase is due within four years, by May 2029.",
+        "**The agreement.** The executed {{electric service agreement}} is the one inherited from the yarn plant, with a minimum monthly bill of US$8,754. The company's annual report says no agreement for more than 99 MW has been received.",
+        "**The tariff.** Every term defers to tariffs approved by the state commission, which is writing a {{large-load tariff}} in a separate proceeding before 2027 rates take effect. Whatever minimum bill and term it sets will govern the next phases.",
+        "**The contrast.** At another landlord's Ohio site the transmission owner records that 'the customer will own' the substation. Same wire, opposite property line: there the customer buys the transformers and breakers too. Ask which model a site uses before asking who buys what."
+      ]
+    },
+    {
+      "id": "mv-switchgear",
+      "title": "Medium-voltage switchgear: the item that delays a lease",
+      "kind": "prose",
+      "read": "4 min",
+      "ps": [
+        "{{Medium voltage}} {{switchgear}} is a lineup of metal-enclosed cabinets at 5 to 35 kV holding circuit breakers, disconnects, protection relays and metering. It takes the utility's feed, protects the site against faults and splits the power into feeders for the transformers that step it down to the 480 V the UPS and racks use: the site's main fuse box at the scale of a building.",
+        "It is on the critical path because every downstream item is tested against a live medium-voltage bus. No switchgear, no bus, no {{commissioning}}. {{Lead time}}s for medium-voltage gear have run 12 to 18 months in the current cycle, and the relays and breakers inside come from a short list of makers.",
+        "The company's words, in order: 'a recently identified supply-chain-related issue affecting certain medium-voltage switchgear components' (May); 'not a broad equipment availability issue', with delivery as 'a scaled ramp-up' (the same call); 'delivering and commissioning issues involving certain switchgear equipment. Those issues have since been resolved' (August).",
+        "The cost: two 20 MW phases due 30 April and 30 May began billing in the third quarter, with the full run rate expected in August. Roughly a quarter of rent on a lease worth about US$7 million a month. The utility's substation was on time; the delay sat inside the customer's own scope. No supplier is named anywhere."
+      ]
+    },
+    {
+      "id": "who-signs",
+      "title": "Who signs the order, and for what",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**The customer of record.** Everything behind the utility's meter is bought by the landlord's site company: medium-voltage switchgear, transformers, UPS, generators, direct-to-chip cooling for two 20 MW phases, and the same list again at the 60 to 200 MW Yadkin County sites from 2027.",
+        "**The demonstrated gap.** The only place on this record where that buying authority was exercised and failed is medium-voltage switchgear. A vendor that can deliver it on a six-month retrofit schedule is selling into a documented pain.",
+        "**What is not bought.** The substation and transformers on the utility side; the fuel cells, which a third-party provider would own and operate; and any battery, {{SST}} or {{800 VDC}} project, none of which appears on the company's channels."
+      ]
+    },
+    {
+      "id": "financing-stack",
+      "title": "The financing stack of a controlled company",
+      "kind": "table",
+      "read": "4 min",
+      "intro": "A small listed landlord finances a big lease with layers. Each layer has a different lender and a different claim.",
+      "cols": [
+        "Layer",
+        "What it is",
+        "This company's record"
+      ],
+      "rows": [
+        [
+          "{{Carve-out}} IPO",
+          "A parent lists a subsidiary and keeps most of it; above 50% of the votes it is a {{controlled company}} that may skip some board-independence rules",
+          "Parent kept 27 million shares (74% at the IPO); says it does not use the exemptions"
+        ],
+        [
+          "{{Convertible notes}}",
+          "Debt the holder may swap for shares at a set price; cheaper than straight debt, dilutive if the shares rise",
+          "US$230M at 4.5% (Jan 2026, convertible at US$25.91); US$310M at 5.0% (Aug 2026, at US$33.84), retiring most of the first"
+        ],
+        [
+          "Dilution by issuance",
+          "New shares shrink the parent's stake without a sale",
+          "About 6.3M shares issued in the August exchange took the parent from about 70% to about 59.9%"
+        ],
+        [
+          "{{Related-party loan}}",
+          "A loan from the parent to the subsidiary's project, needing independent approval because the two share a chief executive",
+          "US$100M {{delayed-draw term loan}} at 9.5% plus a 1.1× minimum return, funded by the parent's own 5.45% borrowing; two fairness opinions"
+        ],
+        [
+          "{{Project finance}}",
+          "Debt secured on one asset's contracted cash flow, not on the company",
+          "A campus financing 'with a consortium of lenders' in exclusivity since August 2026; the lease with an {{investment grade}} offtake behind the tenant is the collateral"
+        ],
+        [
+          "The tenant's side",
+          "The tenant finances its own servers against the same lease",
+          "A US$1.2B GPU loan for 'the applicable data center' in North Carolina, rated investment grade, in the tenant's own filing"
+        ]
+      ]
+    },
+    {
+      "id": "rating",
+      "title": "What a cloud rating measures",
+      "kind": "prose",
+      "read": "2 min",
+      "ps": [
+        "{{ClusterMAX}} tests a cloud's networking, orchestration, monitoring and security attestation by renting it and running jobs. This company's networking was 'within the reference numbers if not slightly better'; its Slurm and Kubernetes layer did not work; it had no SOC 2 or ISO 27001 attestation. Result: 'Not Recommended – Underperforming', kept in the next edition without a re-test.",
+        "The rating says nothing about the halls. A landlord's product is power, cooling and uptime under a lease; the cloud's product is a working scheduler on a fast fabric. That is why the same company can be worth more as a landlord than as the cloud the rating describes."
+      ]
+    },
+    {
+      "id": "where-new-power-enters",
+      "title": "Where new power technology would enter",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**Fuel cells.** The stated intent is natural-gas {{fuel cell}} generation {{behind-the-meter}} 'by partnering with third-party energy providers'. A fuel cell converts gas to electricity electrochemically, in modular blocks; the provider owns them and sells the power. The landlord signs a power contract, not an equipment order.",
+        "**Batteries.** The only mention is a supply-chain risk factor on battery systems that transit Mexico: {{UPS}} batteries, not a storage project.",
+        "**SST and 800 VDC.** Nowhere on the company's channels. A retrofit reuses a 24 kV feed and conventional transformers; racks are {{NVL72}}-class at up to 150 kW per cabinet on standard 480 V distribution. A {{solid-state transformer}} or an {{800 VDC}} bus would first make sense at the 2027 sites, designed from scratch, if a tenant asked."
+      ]
+    },
+    {
+      "id": "where-it-fails",
+      "title": "Where it fails",
+      "kind": "callout",
+      "read": "2 min",
+      "ps": [
+        "**One lease.** 93% of the backlog is one tenant, itself dependent on one hyperscaler; the tenant's loan for the site matures 'on the date on which the customer makes its final scheduled payment'.",
+        "**A cloud that misses.** Three of the first four quarterly results missed consensus by wide margins; the largest customer was terminated; the independent rating is below Bronze.",
+        "**A parent that lends.** Control at 59.9% and falling with each issue; a related-party loan at 9.5% funded by borrowing against a cryptocurrency at 5.45%.",
+        "**A county that pauses.** The next two sites sit inside a town whose county adopted a two-year {{moratorium}} the day after they were announced; the town says its limits exempt them."
+      ]
+    },
+    {
+      "id": "drill",
+      "title": "Flashcards",
+      "kind": "flashcards",
+      "read": "drill",
+      "cards": [
+        {
+          "q": "What are remaining performance obligations, and why can one lease dominate them?",
+          "a": "Contracted revenue not yet earned. A ten-year lease books a decade of rent at signing; cloud contracts are short and are earned as hours are used."
+        },
+        {
+          "q": "What is the difference between gross MW and IT MW?",
+          "a": "Gross is what the utility delivers to the whole site; IT is what the servers draw. PUE links them: at 1.3, 40 MW of IT needs about 52 gross MW."
+        },
+        {
+          "q": "Where does the utility's equipment end at a site with a utility-owned substation?",
+          "a": "At the meter, after the substation, transformers, breakers and metering it owns as 'Extra Facilities' and recovers through a monthly charge. The customer's scope starts at the medium-voltage switchgear."
+        },
+        {
+          "q": "What does medium-voltage switchgear do?",
+          "a": "Takes the utility's feed at 5 to 35 kV, protects the site with breakers and relays, and splits it into feeders for the transformers that step it down to the voltage the UPS and racks use."
+        },
+        {
+          "q": "Why can late switchgear components delay a lease that the utility has already powered?",
+          "a": "Every downstream item is commissioned against a live medium-voltage bus; without the switchgear nothing downstream can be energised, so rent cannot start."
+        },
+        {
+          "q": "What is the difference between a utility's letter agreement and an executed electric service agreement?",
+          "a": "A letter promises commercially reasonable efforts on a schedule and guarantees nothing; a service agreement commits to serve a stated load under the tariff."
+        },
+        {
+          "q": "How can a parent's stake fall ten points without selling a share?",
+          "a": "The subsidiary issues new shares, for example in a convertible-note exchange; control dilutes by issuance."
+        },
+        {
+          "q": "What is a related-party loan, and why does it need fairness opinions?",
+          "a": "A loan between companies that share control or management; independent committees and outside opinions are needed because the lender and borrower cannot bargain at arm's length."
+        },
+        {
+          "q": "Who buys the fuel cells when a data centre 'partners with third-party energy providers'?",
+          "a": "The provider, which owns and operates them; the data centre signs a power contract, not an equipment order."
+        },
+        {
+          "q": "What does a ClusterMAX rating test, and what does it not?",
+          "a": "The cloud: networking, orchestration, monitoring, security attestation. Not the halls: power, cooling, uptime under a lease."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "title": "Self-test",
+      "kind": "quiz",
+      "read": "drill",
+      "items": [
+        {
+          "q": "A company reports US$29 million of quarterly revenue, four-fifths cloud, and a US$1.0 billion backlog, 93% colocation. Which business is the balance sheet built on?",
+          "c": [
+            "The cloud, because it earns most revenue",
+            "The colocation, because the backlog is what can be financed",
+            "Neither: backlog is not cash",
+            "Both equally"
+          ],
+          "a": 1,
+          "why": "{{Remaining performance obligations}} are what lenders borrow against, and here they are almost entirely one lease."
+        },
+        {
+          "q": "A lease says 40 MW of IT and the utility's letter says 99 MW. At a PUE of 1.3, how much IT load could 99 gross MW carry?",
+          "c": [
+            "99 MW",
+            "About 76 MW",
+            "About 129 MW",
+            "40 MW"
+          ],
+          "a": 1,
+          "why": "Gross ÷ {{PUE}} = IT: 99 ÷ 1.3 ≈ 76 MW."
+        },
+        {
+          "q": "The utility finished its substation in May and the tenant's rent started in August. Where did the three months go?",
+          "c": [
+            "In the utility's queue",
+            "Inside the customer's scope: medium-voltage switchgear components late or failing commissioning",
+            "In the tenant's GPU delivery",
+            "In the state tariff proceeding"
+          ],
+          "a": 1,
+          "why": "The company's own disclosures place the delay on 'certain medium-voltage switchgear components' and their commissioning; the utility side was on time."
+        },
+        {
+          "q": "Which document commits a utility to serve a stated load?",
+          "c": [
+            "A letter agreement promising commercially reasonable efforts",
+            "An executed electric service agreement under the tariff",
+            "An investor presentation",
+            "An earn-out clause"
+          ],
+          "a": 1,
+          "why": "The letter guarantees nothing; the {{electric service agreement}} is the contract."
+        },
+        {
+          "q": "A parent pledges not to sell shares in 2026, yet its stake falls from about 70% to about 60%. Why?",
+          "c": [
+            "It sold in 2025",
+            "The subsidiary issued about 6.3 million new shares in a note exchange",
+            "A stock split",
+            "The pledge expired"
+          ],
+          "a": 1,
+          "why": "Dilution by issuance: the parent's share count was fixed while the total grew."
+        },
+        {
+          "q": "What is the first thing the customer owns after the meter at a site with a utility-owned substation?",
+          "c": [
+            "The transmission tap",
+            "The medium-voltage switchgear",
+            "The step-down transformers on the utility side",
+            "The metering"
+          ],
+          "a": 1,
+          "why": "Under the assigned agreement the utility owns the lines, substation, transformers, breakers and metering as Extra Facilities; the customer's chain starts at its {{switchgear}}."
+        },
+        {
+          "q": "A data centre intends fuel-cell generation 'by partnering with third-party energy providers'. What does it sign?",
+          "c": [
+            "An equipment purchase order",
+            "A power contract with the provider that owns the cells",
+            "A utility interconnection agreement",
+            "A battery supply agreement"
+          ],
+          "a": 1,
+          "why": "The provider owns and operates the {{fuel cell}}s; the data centre is the offtaker."
+        }
+      ]
+    }
+  ]
+}

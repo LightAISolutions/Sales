@@ -16,6 +16,55 @@
   ],
   "companies": [
     {
+      "slug": "5c-group",
+      "name": "5C Group",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Montreal-based, Hypertec-controlled and Brookfield-backed developer-landlord of AI data centres — Together AI's landlord in Maryland and Memphis, Vultr's and Crusoe's in Springfield, Ohio — that owns its 138 kV substation and site power, has raised more than US$1.4B against a roadmap cut from 2 GW to 1.5 GW with about 110 MW operational, and says an IPO is under consideration after a US$5–6B raise",
+      "hq": "Montreal, Canada",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "5C",
+        "5C Group",
+        "5C AI Group",
+        "5C AI Group Inc.",
+        "5C Data Centers",
+        "5CDC",
+        "5C Data Centers USA",
+        "5C Data Center USA",
+        "5C MEM01",
+        "5C Cloud",
+        "CMH01 Holdings",
+        "CMH01",
+        "MEM01",
+        "PHX01",
+        "Hypertec Cloud",
+        "Hypertec",
+        "Hypertec Group",
+        "HCI"
+      ],
+      "domains": [
+        "5c.ai",
+        "hypertec.com",
+        "5cdatacenters.com"
+      ],
+      "srcTotal": 77,
+      "srcFirstPct": 39,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        },
+        {
+          "id": "neoclouds",
+          "role": "adjacent"
+        }
+      ]
+    },
+    {
       "slug": "abb",
       "name": "ABB",
       "categories": [
@@ -1693,7 +1742,7 @@
       "hq": "Charlotte, NC, USA",
       "ticker": "NYSE: DUK",
       "status": "active",
-      "lastUpdated": "2026-09-26",
+      "lastUpdated": "2026-09-29",
       "aka": [
         "Duke",
         "Duke Energy Carolinas",
@@ -1717,8 +1766,8 @@
         "s201.q4cdn.com",
         "piedmontng.com"
       ],
-      "srcTotal": 116,
-      "srcFirstPct": 51,
+      "srcTotal": 119,
+      "srcFirstPct": 52,
       "kpiNorm": true,
       "segments": [
         {
@@ -4117,13 +4166,13 @@
       "tagline": "Microsoft-anchored European neocloud that owns its ground — Glomfjord and Narvik hydro, the 2 GW Caterpillar-powered Monarch campus — ~200,000 GB300 + 96,000 Rubin contracted, a reported USD 45bn Anthropic deal after Microsoft walked, USD 3.7bn equity and USD 6.1bn debt against ~USD 100M quarterly revenue.",
       "hq": "London, United Kingdom",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-29",
       "domains": [
         "nscale.com",
         "docs.nscale.com"
       ],
-      "srcTotal": 126,
-      "srcFirstPct": 51,
+      "srcTotal": 128,
+      "srcFirstPct": 52,
       "kpiNorm": false,
       "segments": [
         {
@@ -5372,6 +5421,50 @@
       ]
     },
     {
+      "slug": "tecfusions",
+      "name": "TECfusions",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "Founder-owned Florida developer that leases 'space, power, and cooling' in re-used industrial sites and generates its own gas power — TensorWave's landlord at Tucson and at Keystone Connect, the 1,395-acre former Alcoa campus near Pittsburgh marketed at 3 GW with 2 MW live — pending a US$4.0B SPAC merger with Apex Treasury (signed Jul 2026, not closed) under a township moratorium, a land-use appeal and a founder with disclosed prior convictions",
+      "hq": "Clearwater, FL, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "TECfusions",
+        "Tecfusions",
+        "TecFusions",
+        "Tech Fusions",
+        "TECfusions Inc.",
+        "Tecfusions Keystone",
+        "TECfusions Clarksville",
+        "Keystone Connect",
+        "Kensington Connect",
+        "TECfusions Keystone Connect",
+        "New Kensington",
+        "Apex Treasury",
+        "APXT",
+        "TECF"
+      ],
+      "domains": [
+        "tecfusions.com",
+        "tecfusions.net"
+      ],
+      "srcTotal": 77,
+      "srcFirstPct": 45,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "bridge-and-on-site-generation",
+          "role": "adjacent"
+        },
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        }
+      ]
+    },
+    {
       "slug": "terawulf",
       "name": "TeraWulf",
       "categories": [
@@ -5836,6 +5929,60 @@
         {
           "id": "utilities",
           "role": "incumbent"
+        }
+      ]
+    },
+    {
+      "slug": "whitefiber",
+      "name": "WhiteFiber",
+      "categories": [
+        "neocloud",
+        "developer"
+      ],
+      "tagline": "Bit Digital-controlled (59.9%), Nasdaq-listed neocloud and retrofit data-centre landlord (Enovum) — Nscale's 40 MW, ~US$865M, 10-year tenancy at NC-1 in Madison, NC is 93% of its US$1.0B backlog; holds the Duke Energy Carolinas service agreement for the site (54 gross MW delivered, 99 MW targeted by May 2029), disclosed a medium-voltage switchgear supply issue that pushed the lease into Q3 2026, and is rated ClusterMAX 'Underperforming' on the cloud side",
+      "hq": "New York, NY, USA",
+      "ticker": "NASDAQ: WYFI",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "WhiteFiber",
+        "White Fiber",
+        "WhiteFiber, Inc.",
+        "WYFI",
+        "Enovum",
+        "Enovum Data Centers",
+        "Enovum NC-1",
+        "Enovum NC-1 Bidco",
+        "NC-1",
+        "NC-2",
+        "NC-3",
+        "MTL-1",
+        "MTL-2",
+        "MTL-3",
+        "WhiteFiber AI",
+        "WhiteFiber HPC",
+        "WhiteFiber Iceland",
+        "WhiteFiber Canada",
+        "WhiteFiber Continuum",
+        "Bit Digital",
+        "Bit Digital AI",
+        "Celer"
+      ],
+      "domains": [
+        "whitefiber.com",
+        "bit-digital.com"
+      ],
+      "srcTotal": 84,
+      "srcFirstPct": 61,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "aidc-developers-and-landlords",
+          "role": "challenger"
+        },
+        {
+          "id": "neoclouds",
+          "role": "challenger"
         }
       ]
     },
