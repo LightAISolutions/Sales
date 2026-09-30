@@ -113,7 +113,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | 2 | Wed 9/30, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | Opus 5.5 · medium | The standing reminder. If the run committed, `git fetch origin main` and rebase before the next session |
 | 3 | ~~Wed 9/30~~ **Landed 9/29 (v07.74r)** | **F-U3** — PPL, Pinnacle West, NiSource | Fable 5.1 · high | Done, as a project thread: two research threads wrote the verified notes and a hand-off, and a third thread finished the six NiSource gaps and wrote the dossiers. NiSource is a Delaware corporation per its 10-K cover; `quanta-services` v5→v6 corrected its '~3 GW CCGT' to 2 × 1,300 MW plus a 400 MW battery. Wave C (row 16) now takes eight new franchises since `landscape-utilities-2026-09` was written (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource) |
 | 4 | ~~Wed 9/30 – Thu 10/1~~ **Landed 9/29 (v07.76r)** | **F-U4** — Florida Power & Light, Salt River Project, TVA | Fable 5.1 · high | Done, in one session with three research subagents. FPL got its own slug on the record (a separate SEC registrant and the LLCS counterparty); SRP and TVA stayed inside `utility` with `public (public power)` / `public (federal corporation)` ownership variants and a schema note rather than a new category. TVA's Capacity Commitment Charge is approved for 10/1 with its price unpublished; the Clinch River construction permit issued 9/29. Wave C (row 16) now takes eleven new franchises since `landscape-utilities-2026-09` was written (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource, FPL, SRP, TVA) |
-| 5 | Thu 10/1, after the 10/1 Profiler Routines commit | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) | Fable 5.1 · high | Waits on filings due 9/30 (Fluidstack, Habitat Energy). **Rebase first** |
+| 5 | Thu 10/1, **after 5:00 PM PT** (the 10/1 Profiler Routines fire at 9:05 AM and 1:02 PM ET; the drift check is the one predicted to commit) | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) — prompt in §8 | Fable 5.1 · high | Waits on filings due 9/30 (Fluidstack, Habitat Energy). **Rebase first.** First application of the step-5 segment sub-rule (v07.78r): its push regenerates all 15 due segment lessons, which clears the red baseline that blocked the 9/30 pipeline run before the 10/7 run |
 | 6 | Thu 10/1 – Fri 10/2 | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments | Fable 5.1 · high | Was November. Lands before wave B, so capital is re-authored once. Quinbrook is `habitat-energy`'s parent; ECP is `proenergy`'s |
 | 7 | Fri 10/2 | **F-G1** — Clayco, Faith Technologies, EMCOR | Fable 5.1 · high | Was November. Decide Faith Technologies' category (epc or supplier) on the record |
 | 8 | Fri 10/2 – Sat 10/3, 7 AM | **F-A1** — Anza, SemiAnalysis, EPRI | Fable 5.1 · medium | Was November. SemiAnalysis may carry no segment; record it as unassigned if so. **First to roll into week 2** if time runs out |
@@ -542,6 +542,96 @@ warnings read; every new and revised dossier and guide renders under Playwright 
 other than the sandbox's gis_load_failed. CHANGELOG rotation only if non-exempt sections reach 100 (it
 reads 98/100 after v07.72r). Normal Pre-Commit and Pre-Push checklists; one commit; push on a claude/*
 branch. At the end, tell me the session's usage value from get_session so the plan's cost table grows.
+```
+
+## 8 · Paste-in prompt — §3 row 5, the neoclouds pass + Habitat Energy (Fable 5.1 · High)
+
+Written 2026-09-30 (v07.79r) after the 9/30 Classroom pipeline run blocked on a red baseline and the segment-regeneration sub-rule landed in `profiler-app.md` step 5 (v07.78r). Rebuilt from the v07.40r record (the 9/24 neoclouds re-verification: ClusterMAX 3.0, Nscale's S-1, Fluidstack naming its end customer) and the v07.46r record (Habitat v2), plus the two standing reminders. Run it **Thursday 2026-10-01 after 5:00 PM PT (8:00 PM ET)** — the three 10/1 Profiler Routines fire at 9:05 AM ET (desk, quarterly sweep — both predicted to stand down) and 1:02 PM ET (the opportunity-report drift check — predicted to commit a superseding BESS-attach report), and their pushes must be on `main` before this session's. It is also the first application of the step-5 sub-rule: this push regenerates every due segment lesson, which is what turns `main` green before the 10/7 pipeline run.
+
+```text
+Picking up from my last session, run repository-information/phase-f-action-plan.md §3 row 5 as a fresh
+session: the neoclouds Profiler pass plus `profiler Habitat Energy`, one session. This session runs on
+Fable 5.1 at High; check Settings → Usage first. It is Thursday 2026-10-01 after 5:00 PM PT, so the three
+10/1 Profiler Routines have fired — the opportunity-report drift check (1:02 PM ET) was predicted to commit
+a superseding BESS-attach report; the earnings desk and the quarterly sweep were predicted to stand down.
+
+STEP 0 — REBASE FIRST, before any edit: git fetch origin main; git merge-base --is-ancestor origin/main
+HEAD || git rebase origin/main. Then git log origin/main --oneline -8: confirm the drift check's push is
+there (a `named-project-bess-attach--opportunity--2026-10-01` report). If it is absent, read that Routine's
+session before assuming anything. Read the CHANGELOG counter after the rebase (96/100 at v07.78r; only
+sections dated today are exempt — rotate only if the non-exempt count reaches 100).
+
+READ FIRST: repository-information/SESSION-CONTEXT.md; phase-f-action-plan.md §3 row 5 and §8 (this
+prompt); REMINDERS.md — the neoclouds and Habitat Energy reminders, whose "what to pull" lists are the
+brief; .claude/rules/profiler-app.md — Profiler Command step 1a (identity), step 5 including the NEW
+segment-regeneration sub-rule (v07.78r), step 7 (reconciliation), the Archival Procedure; PROFILER-SCHEMA.md
+(Refresh calendar, Segments registry); PROFILER-STYLES.md (active style); .claude/rules/classroom-app.md
+(the content fence, the verification list, the gateDigest obligation); and the v07.40r and v07.46r sections
+of CHANGELOG.md — the 9/24 neoclouds re-verification and the Habitat v2 refresh that this pass extends.
+
+PART A — THE NEOCLOUDS PASS. Profiler only: the Classroom landscape `landscape-neoclouds-2026-09` and
+`scenario-neoclouds-discovery` are re-authored by wave A (§3 row 9), not here. Do not edit any landscape or
+scenario lesson.
+1. Fluidstack — `fluidstack`, v2 of 2026-09-06; Fluidstack Ltd, Companies House 10985545. THE GATE: accounts
+   were due Wednesday 30 September 2026. Open the Companies House filing history first (run
+   check-source-reachability.py; if find-and-update.company-information.service.gov.uk is blocked, say so and
+   use the cached filing index). FILED → pull turnover, loss, net assets, headcount, auditor, going-concern
+   language, and any directors'-report or post-balance-sheet note on the Google backstop, the named end
+   customer or the reported round; archive v2 and write v3. NOT FILED → the late filing is itself the finding:
+   record the date checked and the overdue status in the summary, the financials commentary and the
+   indicators. Either way fold in what 9/24 verified but the dossier still lacks: Fluidstack naming its end
+   customer (the dossier has zero "end customer" mentions — cite the counterparty's own document, not the
+   9/24 module), ClusterMAX 3.0 of 23 September (Fluidstack rated Unavailable), and the watch[] items in
+   profiler-refresh-notes.json (lease commencement dates, any Google publication naming Fluidstack, the
+   reported USD 1.5bn round).
+2. Nscale — `nscale`, v2 of 2026-09-29 (that bump only added the WhiteFiber edges; the S-1 is cited twice
+   and not worked through). Re-run the financials from the S-1 of 18 September, the first first-party
+   revenue, backlog and debt disclosure: the Anthropic contract at up to about USD 44.6bn, about 1 GW of
+   1.37 GW at owned sites, the IPO size, the site-company financing and its rating; ClusterMAX 3.0 rates it
+   Unavailable. Archive v2, write v3. Check whether the IPO has priced or the S-1 has been amended since.
+3. ClusterMAX 3.0 across the rest of the segment: CoreWeave (v4), Nebius (v5 — Platinum beside CoreWeave),
+   Crusoe (v6 — dropped to Bronze), Lambda (v5). A rating move is a targeted refresh under the Archival
+   Procedure (archive, profileVersion +1, the rating row and its source, a one-line recent development), not
+   a full research pass — unless step 1a or the row's watch[] shows the record moved further, in which case
+   say so and run the full command for that company. IREN (v5, re-pinned 9/24) stays unless the S-1 or
+   ClusterMAX names it. WhiteFiber, 5C Group, Firmus, HUMAIN and G42 are v1 dossiers from 9/26–9/29: touch
+   them only through step 7.
+4. Step 7 for every refreshed dossier, by aka[]. Re-read the neoclouds segment memberships against the
+   revised ecosystemRole and rating (ClusterMAX is a stated basis input, so a role may move). Say in the
+   summary whether any membership or role moved — that is what the step-5 sub-rule keys on.
+
+PART B — `profiler Habitat Energy` — `habitat-energy`, v2 of 2026-09-24, watch tier; Habitat Energy Limited
+10923911, parent Renewable and Grid Services Limited 13250883; both owed accounts to 31 Dec 2025 by
+30 September. Same gate: filing history first. FILED → the group "Optimisation services" line (FY2024 GBP
+4.17M, +80%); the UK entity's turnover and loss (FY2024 GBP 1.99M and GBP 5.0M); any directors'-report or
+post-balance-sheet mention of the Quinbrook sale process (JLL/BCG, New Project Media 17 March 2026, still
+unresolved at v2); and recheck the PSC and officers pages for a change of control at the same time. NOT
+FILED → the late filing is the finding (the prior two years filed in late December and early January, so a
+miss is out of pattern). Archive v2, write v3; move the calendar row's lastRefreshed; update its watch[].
+The quarterly sweep skips the watch tier, so nothing else folds these accounts in.
+
+PART C — THE SEGMENT CATCH-UP (the step-5 sub-rule's first application). Whether or not a membership
+moved, this push regenerates every segment the generator reports due — 15 at v07.78r, seven of them red on
+main (check-classroom-content.py: 14 errors, the cause of the 9/30 pipeline BLOCKED): python3
+scripts/build-classroom-segments.py --check, then --all; bump Classroom.gs VERSION v01.93g → v01.94g and
+live-site-pages/gs-versions/Classroomgs.version.txt; one generic entry in
+live-site-pages/gs-changelogs/Classroomgs.changelog.md; the README tree's Classroom version display;
+python3 scripts/check-classroom-content.py must report 0 errors; node --check on a .js copy of Classroom.gs;
+node scripts/check-gas-inner-scripts.js; python3 scripts/check-classroom-pipeline.py --base origin/main —
+P1, P2 and P10 are expected on a developer commit; if P3 reports a gate mismatch, refresh gateDigest per
+classroom-app.md. The goal is main green before the 10/7 07:02 AM ET pipeline run. Do Part C after Parts A
+and B, since their membership changes are inputs to it.
+
+VERIFY: check-source-reachability.py first; sync-profiler-registry.py --check clean; build-profiler-graph.py;
+check-profiler-relationships.py, check-profiler-crossrefs.py and check-profiler-study.py clean (accept
+reviewed candidates with a reason); check-profiler-reports.py warnings read (four pre-existing pin warnings —
+fluence v10, jupiter-power v7, jinko v6, oracle v6 — plus whatever the 10/1 drift check changed);
+check-readme-tree.py 0 findings; Playwright render of every revised dossier and of the Classroom segments
+route, zero page errors other than the sandbox's gis_load_failed. Normal Pre-Commit and Pre-Push checklists;
+ONE commit; push on your claude/* branch once ls-remote is empty. The two reminders (the neoclouds pass,
+Habitat Energy) are mine: report them as done in the summary and I will dismiss them. At the end: one line
+each on whether the Fluidstack and Habitat accounts were filed or missed; the segment count regenerated and
+the content checker's final line; and the session's usage value from get_session for the cost table.
 ```
 
 Developed by: LightAISolutions

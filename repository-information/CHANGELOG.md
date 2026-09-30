@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.79r] — 2026-09-30 06:41:21 PM EST
+
+> **Prompt:** "give me a prompt to paste into a new Fable 5.1 High session to run the neoclouds pass + profiler Habitat Energy on 10/1 after 5pm PST. Rebase first, and let the new rule's step do the fifteen-segment catch-up in that push. Then, remember session."
+
+### Added
+- `repository-information/phase-f-action-plan.md` §8 — the paste-in prompt for §3 row 5 (neoclouds pass + `profiler Habitat Energy`, Fable 5.1 High, Thu 2026-10-01 after 5:00 PM PT). Rebuilt from the v07.40r record (ClusterMAX 3.0 of 23 Sep, Nscale's S-1 of 18 Sep, Fluidstack naming its end customer) and the v07.46r Habitat v2 record plus the two standing reminders. Three parts: A — Fluidstack (Companies House 10985545, accounts due 9/30, filed-or-missed is the finding either way) and Nscale (S-1 financials) to v3, ClusterMAX 3.0 rating rows as targeted refreshes on CoreWeave, Nebius, Crusoe and Lambda; B — Habitat Energy (10923911 / parent 13250883) to v3 with the reminder's pull list; C — the first application of the step-5 segment sub-rule: regenerate all 15 due segment lessons, Classroom GAS v01.93g → v01.94g, content checker to zero errors, so `main` is green before the 10/7 pipeline run. Opens with a rebase because the 10/1 drift-check Routine (1:02 PM ET) is predicted to commit a superseding BESS-attach report
+
+### Changed
+- `repository-information/phase-f-action-plan.md` §3 row 5 — timing made concrete (after 5:00 PM PT; the three 10/1 Routines and which one commits), pointer to §8, and the segment catch-up recorded as the row's second job
+- `repository-information/SESSION-CONTEXT.md` — Latest Session written for this session (the 9/30 run check, the BLOCKED diagnosis, the v07.77r–v07.79r pushes); F-U4 moved to Previous Sessions; F-U3 kept as the one earlier entry (2-session cap)
+
+### Notes
+- **No page, GAS script or diagram changed.** Counter 97/100; three sections dated today are exempt, 94 non-exempt
 
 ## [v07.78r] — 2026-09-30 06:09:16 PM EST
 
