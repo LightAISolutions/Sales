@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-29 08:54 PM → 10:05 PM EST (Phase F session F-U4: Florida Power & Light, Salt River Project, TVA — one attended turn; three parallel research subagents, then the write)
+**Repo version:** v07.75r → v07.76r (one push; this save is the second)
+**Branch:** `claude/cool-cannon-5hj5at`
+**Model:** Fable 5.1 at High (per `phase-f-action-plan.md` §3 row 4; no substitution)
+
+### What was done
+
+- **Three new dossiers (v1) with v2 study guides and lesson plans:** `florida-power-light`, `salt-river-project`, `tva` — all `utility`, all `utilities` · incumbent; FPL and SRP `storage-developers-and-ipps` · adjacent on the owned-storage test, TVA not (20 MW owned against 425 MW of tolls). Research by three parallel `general-purpose` subagents writing `*-verified-notes.md` in the scratchpad (about 65 / 60 / 60 sources); the dossiers were written from those notes only. `check-source-reachability.py` first: SEC hosts 200; srpnet.com HTML and tva.com 403 (SRP's PDF assets and media site, TVA's Azure CDN board decks carried them).
+- **Identity findings (step 1a):** FPL got its own slug — a separate SEC registrant (CIK 0000037634), wholly owned, no listed securities, the LLCS counterparty and the buyer of its own batteries; `nextera-energy-resources` keeps NYSE: NEE. **Scott Bores is FPL CEO since May 18, 2026** (Pimentel to NEE Vice Chairman). TVA: **Mike Skaggs Interim CEO** since April 24, 2026 (Moul retired July 1 after the $500,000 pay memorandum); the Board lost its quorum April 1, 2025–January 2026, six of nine seats filled, two in holdover to January 3, 2027; ratings Aa1 / AA+ / AA+, not Aaa. SRP: two legal entities, one landowner-elected Board (8–6 April 2026, 7–7 August); Palo Verde 20.4 percent.
+- **Category test passed inside `utility`:** `ownership.type` `public (public power)` and `public (federal corporation)` with an optional `notes`; three notes written into PROFILER-SCHEMA.md (category row, `ownership` row, `financials` line). No category added.
+- **Premise verdicts (§11.3 rewritten and flipped):** FPL — LLCS-1/2 effective Jan 1, 2026 held and refined (50 MW / 85%, three 500 kV zones, 3 GW cap, $11.67/kW, 20-year, 70%, exit fee, 5/10-year security); '130 GW' is the combined NextEra + Dominion pipeline; merger signed May 15, both votes Sep 3, VA SCC hearing Nov 17. SRP — 59 / ~7,000 MW is SRP's own ACC-workshop statement (pipeline, not served); E-67 held (20 MW, 80 percent minimum billing demand); Marigold held with the mechanics fixed (siting Cases 267/268 → ACC CEC vote in November; solar and batteries outside it); NextEra's 1 GW of storage is trade press only. TVA — IRP held (ranges by resolution, no NEPA ROD yet); CCC above 5 MW from Oct 1 held but its price is unpublished (the '$1.5M/MW' figure is one blocked report, not carried); xAI through MLGW partially held and outdated (MZX Tech approved as a direct customer Aug 20); Plus Power held; **Clinch River's construction permit issued Sep 29, 2026**.
+- **Step 7:** FPL 7 / SRP 12 / TVA 14 dossiers grepped by alias; 0 changed; two figures stated unreconciled (`prime-data-centers`' SRP contract terms; `kiewit`'s Cumberland reference). One pre-existing crossref candidate accepted (`powerhouse-data-centers × ppl`, two campuses).
+- **10 concepts** added (1,583 → 1,593); `debt service coverage` folded into `dscr` as an alias. Calendar rows: `florida-power-light` ~10/27 unconfirmed, `tva` ~11/13 unconfirmed on its fiscal-year 10-K cadence, `salt-river-project` quarterly `watch`. Four FPL executive photos downloaded to `images/execs/` (hotlinks are blocked by the page's CSP — the render test caught it). All checkers clean; Playwright six routes zero errors.
+- **No CHANGELOG rotation:** the push landed 09:56 PM EST on 9/29 — 102 raw / 94 non-exempt with 8 same-day sections. **The first push dated 2026-09-30 EST or later rotates the 2026-09-20 group (v06.75r–v06.82r, 8 sections)**; a dry run (`rotate.py`, scratchpad, not in the repo) resolved all eight SHAs on the deep clone.
+
+### Where we left off
+
+- **Phase 1 (to Sat 10/3, 7:00 AM ET), remaining in order:** the 9/30 Classroom run check (Opus 5.5 medium, after ~7:30 AM ET Wed); the neoclouds pass + `profiler Habitat Energy` on Thu 10/1 (rebase first); F-I4 (Quinbrook, ECP, CPP Investments); F-G1 (Clayco, Faith Technologies, EMCOR); F-A1 (Anza, SemiAnalysis, EPRI).
+- **Classroom lessons stale, by design (`Classroom.gs` untouched):** `landscape-utilities-2026-09` is now **eleven** franchises behind (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource, FPL, SRP, TVA) plus the three `scenario-utilities-*` rehearsals — wave C (row 16, week 3).
+- **For the Megmeet job — MV and DC power equipment.** None of the three buys an SST or 800 VDC. **FPL is the lead battery account by volume and the hardest to reach:** 7,454 MW of FPL-owned batteries through 2035 (1,419.5 MW in 2026) bought through NextEra's enterprise supply chain with no OEM ever named; the door for a non-lithium vendor is the $78M long-duration pilot. **SRP:** the 2026 All-Source RFP bidders (short list November 2026) and the Marigold 400 MW / 8-hour battery (supplier open). **TVA:** the toll developers (Plus Power, Tenaska), the Kingston 100 MW design-build award, and GE Vernova for turbines.
+
+### Key decisions made
+
+- FPL as its own slug, decided on the registrant record rather than the plan; the NEER relationship written one-way from FPL's side (no NEER revision — nothing contradicted it).
+- Public power and the federal corporation kept inside `utility` with descriptive `ownership.type` variants (the corpus already carries such strings and the renderer prints them verbatim), documented as an authoring convention in the schema rather than a schema change.
+- TVA's dollar figure for the Capacity Commitment Charge left out: a single blocked trade-press source is not a basis under the no-fabrication rule; the dossier says the price is unpublished.
+- Session dates written as the EST push date (9/29) even though the research subagents ran past midnight UTC.
+
+### Known issues
+
+- Pre-existing: the four report pin warnings (`fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6); `verify-profiler-roles.py` (2) and `check-events-plan.js` (2) carried over; `duke-energy` v1 `sources[]` order.
+- FPL's Chapter 2026-65 compliance filing (due 2026-10-01) and the Florida Supreme Court case number were not located; TVA's CCC pricing and the MZX Tech MW are unpublished; SRP's FY2026 annual report (year ended 2026-04-30) was not found at the probed URL.
+- The harness pre-created `claude/cool-cannon-5hj5at` on the remote at `origin/main`'s SHA; it had been swept before the push, so Pre-Push #5 saw an empty `ls-remote`.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 199 dossiers, page v01.93w (unchanged). **Classroom:** GAS v01.93g, page v01.16w. **CHANGELOG** `Sections: 102/100` (eight 2026-09-29 sections exempt, 94 non-exempt) — **the next push dated 9/30 or later rotates the 2026-09-20 group.**
+- **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
+
+### Recommendation for next session
+
+- **Check the 9/30 Classroom pipeline run first (after ~7:30 AM ET), then run the neoclouds pass + `profiler Habitat Energy` on Thu 10/1 after the 10/1 Profiler Routines commit** (`phase-f-action-plan.md` §3 row 5; rebase first) — and note that its push will be the first dated 9/30 or later, so it carries the CHANGELOG rotation of the 2026-09-20 group with SHA enrichment.
+
+**To continue:** type `run the neoclouds pass`, or `run F-I4` for the next Fable dossier session.
+
+
+## Previous Sessions
+
 **Date:** 2026-09-29 07:52 PM → 08:45 PM EST (Phase F session F-U3: PPL, Pinnacle West, NiSource — the write thread of a three-thread project row; one attended turn)
 **Repo version:** v07.74r → v07.75r (two pushes: the F-U3 landing, then the F-U4 prompt + this hand-off)
 **Branch:** `claude/awesome-galileo-8qrhfo`
@@ -49,54 +98,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Check the 9/30 Classroom pipeline run first (after ~7:30 AM ET), then run F-U4 (Florida Power & Light, Salt River Project, TVA) on Fable 5.1 High** with the paste-in prompt saved at `PROFILER-COVERAGE-PLAN.md` §11.5 (written at the end of this session, v07.75r); it decides FPL's slug on the record, writes the public-power and federal category tests as schema notes, and carries the rotation due on the first push dated 9/30 or later.
 
 **To continue:** paste `PROFILER-COVERAGE-PLAN.md` §11.5 into a fresh Fable 5.1 High session, or type `run F-U4`.
-
-## Previous Sessions
-**Date:** 2026-09-29 04:00 PM → 07:52 PM EST (Phase F session F-N2: WhiteFiber, 5C Group, TECfusions; then the Projects question and this save; three attended turns)
-**Repo version:** v07.73r (one push; this save is a no-bump housekeeping commit)
-**Branch:** `claude/busy-mendel-eey850`
-**Model:** Fable 5.1 at High (per `phase-f-action-plan.md` §3 row 1)
-
-### What was done
-
-- **Three new dossiers (v1) with v2 study guides and lesson plans:** `whitefiber` (`neocloud` · `developer`), `5c-group` (`developer`), `tecfusions` (`developer`). Six research subagents (first-party and third-party per company); EDGAR was reachable, so the WhiteFiber, Nscale and Apex Treasury filings were read directly.
-- **Identity findings that moved the brief:**
-  - WhiteFiber is a Cayman company on the Nasdaq Capital Market; Bit Digital holds **59.9%** after the Aug 2026 note exchange (was ~70%); NC-1 is owned through Enovum NC-1 Bidco, which holds the Duke Energy Carolinas letter (24/40/99 MW) and the assigned ESA.
-  - 5C's legal entity is **5C AI Group Inc.** (Quebec), spun out of Hypertec in April 2025; Hypertec is the largest shareholder, Brookfield the structured-equity investor; one slug, display name '5C Group'. Crusoe is a second Springfield tenant.
-  - Keystone Connect is the **former Alcoa/Arconic campus in Upper Burrell, PA**, not Clarion; TECfusions' US$4.0B SPAC with Apex Treasury is signed, not closed (no S-4); its founder's prior convictions are a disclosed risk factor; 2 MW live against 3 GW marketed.
-- **Step 7:** 0 inbound for all three (the '5C' hits are C-rates). `nscale` v1→v2 gains the `whitefiber` supplier edge; `duke-energy` v1→v2 gains the `whitefiber` customer edge and its `nscale` edge is retyped to the site's tenant. Tenant mentions (Together AI, Vultr, TensorWave) contradicted nothing; no slug created for them.
-- **Segments:** `neoclouds` +whitefiber (challenger), +5c-group (adjacent); `aidc-developers-and-landlords` +all three (challengers); `bridge-and-on-site-generation` +tecfusions (adjacent). Calendar: whitefiber public (`nextReport` 2026-11-12, unconfirmed), the other two private core. 15 concepts added, none edited. §11.3 rows rewritten with verdicts; `phase-f-action-plan.md` marks F-N2 landed.
-- **Checkers all clean**; the four report warnings (`fluence`, `jinko`, `jupiter-power`, `oracle`) are pre-existing. Playwright: five dossiers and guides render with only `gis_load_failed`.
-- **Projects (beta) evaluated and set aside.** After the push, the developer asked how to move the whole expansion plan into Claude Code Projects. Read from [code.claude.com/docs/en/claude-projects](https://code.claude.com/docs/en/claude-projects): a coordinating conversation that spawns cloud threads sharing repositories, ≤16,000-character instructions and a `MEMORY.md`; threads default to Opus high, open one draft PR each and run in parallel, all overridable by instruction text; permission rules from `.claude/settings.json` reach threads only in a one-repository project. The developer tried it: an Opus 5.5 project thread committed `6586795d` (`WebFetch` and `WebSearch` added to the allow list) and the developer committed `be55df2a` on GitHub.com (about 320 `WebFetch(domain:…)` entries). The threads still stopped for web-fetch permission, so the developer **switched back to individual sessions**.
-
-### Where we left off
-
-- **Both settings commits sit on `main` without a CHANGELOG entry, a version bump or a README timestamp** (they bypassed the claude/* flow). The next push commit should record them under `### Changed` in its version section (`.claude/settings.json` — the allow list now pre-approves `WebFetch`, `WebSearch` and the domain entries). Whether those entries also cut prompts in ordinary sessions is untested.
-- **Phase 1 (to Sat 10/3, 7:00 AM ET), remaining in order:** the 9/30 Classroom run check (Opus 5.5 medium, after ~7:30 AM ET Wed); F-U3 and F-U4 (Fable High); the neoclouds pass + `profiler Habitat Energy` on Thu 10/1 (rebase first); F-I4; F-G1; F-A1 (Fable Medium, first to roll).
-- **Classroom lessons now stale, by design (`Classroom.gs` untouched):** `landscape-neoclouds-2026-09` (10 → 12 members) and `scenario-neoclouds-discovery`; `landscape-aidc-developers-and-landlords-2026-09` (+3 challengers); `landscape-bridge-and-on-site-generation-2026-09` (+tecfusions adjacent). Wave A (row 9, Sat 10/3 – Tue 10/6) takes the first three; wave D (row 17) takes the fourth. `build-classroom-segments.py --check` reads 19 of 19 due.
-- **For the Megmeet job — MV and DC power equipment.** All three sign for medium-voltage gear behind the meter, and none has touched an SST, 800 VDC or a battery. **WhiteFiber is the lead:** it buys switchgear, transformers, UPS, generators and cooling behind a Duke-owned substation, and the one documented failure of that authority is 'certain medium-voltage switchgear components' that pushed its US$865M lease a quarter (supplier unnamed; resolved Q3 2026); its next 60–200 MW (Yadkin County, 2027) is the order book to watch. **5C** owns its 138 kV substation at Springfield, so it buys the step-down transformers as well as the switchgear, plus 19 diesel gensets and 'prefabricated power skids'; an SST would sit inside that customer-owned scope at its next campus. **TECfusions** buys generation, switchgear and UPS directly but has 2 MW live and no vendor named. For an SST seller the realistic door is a retrofit landlord with a demonstrated MV bottleneck (WhiteFiber) or a customer-owned substation (5C), pitched as the step-down stage; nothing in the three records asks for 800 VDC today.
-
-### Key decisions made
-
-- WhiteFiber carries two categories on the record (`neocloud`, `developer`); 5C gets `neoclouds` adjacent for its own cloud line; TECfusions takes the bridge-generation adjacent seat on 'currently powered by turbines'.
-- Display name '5C Group', never bare '5C' (collision test). No reciprocal edge on `crusoe` (the tenancy rests on WYSO and a state tax record only); one-way edges elsewhere show as inbound evidence.
-- Three colliding concept aliases were dropped rather than existing concepts edited.
-- **Developer (07:4x PM):** the expansion plan stays on individual pasted-prompt sessions, not Projects, because project threads could not bypass the web-fetch permission prompts. F-U3 runs next as a fresh Fable 5.1 High session with a prompt the developer pastes.
-
-### Known issues
-
-- Pre-existing: `duke-energy` v1's `sources[]` was already out of date order at one entry (2026-04 before 2026-04-01); left as found.
-- The WhiteFiber Q3 2026 date (2026-11-12) is an aggregator estimate; confirm in early November.
-- Carried over: `verify-profiler-roles.py` (2) and `check-events-plan.js` (2); `megmeet-briefing-prompt.md` names the 9/8 AIDC edition; `zhonhen-interview-brief.md` calls Panama an SST in two lines; the study-guide PDF renderer is not in the repo; `check-classroom-content.py`'s 8 segment-roster errors wait for waves A/B; report pin warnings `fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6.
-- Old row numbers in `REMINDERS.md` (9/26 plan): 9/30 check row 2, neoclouds pass row 5, Dominion row 10, wave B row 15.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 193 dossiers, page v01.93w. **Classroom:** GAS v01.93g, page v01.16w, 19 segment lessons due. **CHANGELOG** `Sections: 99/100` — **the next push commit rotates.**
-- **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
-
-### Recommendation for next session
-
-- **Run F-U3 (PPL, Pinnacle West, NiSource) in a new Fable 5.1 High session**, with a prompt adapted from `PROFILER-COVERAGE-PLAN.md` §11.4 (its model line set to Fable 5.1 High, the three F-U3 rows of §11.3 as the hypotheses, and the F-N2 lessons from `phase-f-action-plan.md` §7 carried over). Open with `git fetch origin main` and a rebase: `main` moved twice after v07.73r. The CHANGELOG rotates on that push (99/100).
-
-**To continue:** paste the F-U3 prompt into a new Fable 5.1 High session.
