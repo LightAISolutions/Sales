@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.77r] — 2026-09-30 06:02:30 PM EST
+
+> **Prompt:** "I don't fully understand the problem. Explain again why the 9/30 classroom pipeline run was blocked and how I can unblock it. Will adopting the pipeline's own suggestion as a rule resolve everything (I approve by the way)? Dismiss the two 9/30 check reminders.
+>
+> What is my ideal result after the classroom pipeline run?"
+
+### Changed
+- `repository-information/REMINDERS.md` — the 2026-09-26 "Check the 9/30 Classroom pipeline run" reminder moved to Completed at the developer's request; its 2026-09-24 duplicate was already there
+
+### Notes
+- **The 9/30 Classroom pipeline run (session `cse_01Er6Rdt6vPQL95C41VR3Qme`, 11:03–11:07 UTC, Opus 5) ended `BLOCKED`** at pre-flight §5.1 step 2: `check-classroom-content.py` reported 14 errors on `main` — seven `segment-*` lessons (aidc-developers-and-landlords, bridge-and-on-site-generation, capital, hyperscalers-and-ai-labs, neoclouds, storage-developers-and-ipps, utilities) no longer matched `profiler-segments.json` after the F-H1, F-N1, F-I1, F-N2, F-U3 and F-U4 pushes added 17 members since the v07.60r regeneration. Gate digest, schema versions and the push path all passed; nothing was written and no branch was left. The lessons are **not** regenerated in this push: the next Profiler session (`phase-f-action-plan.md` §3 row 5, Thu 10/1) regenerates all fifteen due segments, rule landed or not, so the 10/7 run starts green
+- **Archive rotation fired.** First push dated 2026-09-30 EST: 103 sections, 1 exempt (today's), 102 non-exempt ≥ 100 → the 2026-09-20 date group (v06.75r–v06.82r, 8 sections) rotated to `CHANGELOG-archive.md` with SHA enrichment (8 of 8 resolved on the deep clone) → 94 non-exempt remain. Counter 95/100
+- **The approved rule was not written.** The developer approved adopting the pipeline's own suggestion — a Profiler session that adds or removes a segment member or moves a role regenerates every due `segment-*` lesson (`build-classroom-segments.py --check`, then `--segment <id>` / `--all`), bumps the Classroom GAS version and runs `check-classroom-content.py` to zero errors before committing, with refresh-only sessions exempt. The session's permission classifier refused the write into `.claude/rules/profiler-app.md` (Instruction Poisoning), so the rule text was handed back in chat for the developer to paste under Profiler Command step 5, or to re-run with the write allowed. Until it lands, the segment regeneration is a manual obligation of the 10/1 session
+- **No page, GAS script or diagram changed**
 
 ## [v07.76r] — 2026-09-29 09:56:07 PM EST
 
@@ -4137,238 +4152,5 @@ Classroom.gs VERSION v01.86g → v01.87g.
 - Prompted by the first live card (v01.03w / v01.04g on the phone, one side, filed in Drive, `check: website`): the pipeline worked but showed its progress as one line of text
 - **"No way to interact with the saved contacts" — nothing is saved yet.** A strip is a card held on the phone after extraction; the Contacts list stays at 0 until session 2's `nop=save`. This pass makes held cards viewable (photos, fields), not editable
 - **First rotation on the new EST day**: 104 sections, none exempt (today's is the new one), 104 non-exempt ≥ 100 → the 2026-09-15 date group (26 sections, v05.79r–v06.04r) moved to `CHANGELOG-archive.md` with SHA enrichment on every header (26 of 26 resolved on the deep clone; v05.90r's push commit carries no version prefix and was matched by its 04:43 timestamp). 79 sections remain, 78 non-exempt. CHANGELOG `Sections: 78/100` → `79/100`
-
-## [v06.82r] — 2026-09-20 09:55:33 PM EST
-
-> **Prompt:** "Run N1 session 1 — capture and extraction — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md: §13.5 is the brief (follow its reading list in order, then steps 1–5 of Session 1 exactly; do not start session 2's steps 6–10 — the review card, dedupe, save and the schema checker are the next session's), §4.2 is the pipeline it implements, and repository-information/NETWORK-SCHEMA.md §1, §3, §6, §7, §12, §13 are the shapes you build against. D6 is Gemini only (the Receipts geminiExtractFromBase64_ idiom with the §7 responseSchema, GEMINI_API_KEY from this project's Script Properties, no second vendor), D8 opaque ids (nop=newid mints the c- id before upload so the filename is opaque from the first byte), D9 the privacy posture (audit rows carry the c- id and a field count only — never a card field), D14 no data poll (fetch on load, on visibilitychange, after writes; nwAfterWrite() is the refresh). Build in the PROJECT regions of Network.gs and Network.html only — never edit a TEMPLATE region. Verify with node --check on a .js copy of Network.gs (Node refuses the .gs extension), scripts/check-gas-inner-scripts.js, python3 scripts/check-readme-tree.py, scripts/verify-network-roles.py (the capture card present for admin, absent for the other three tiers, at phone width, zero page errors) and served Playwright screenshots of the capture card with a queued count. Page + GAS bumps with changelogs, CHANGELOG entry, no §11 flip (N1 closes at session 2) — then write my hand-off in chat: the GEMINI_API_KEY Script Property to set, the drive.file consent the first upload will ask for, and what to photograph for the session-2 done-when (20 real cards, three Chinese-script, two two-sided). Do not touch Events, the list's filters or exports (N3), accounts beyond what capture needs (N2), or any interval (Q). Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG stands at Sections: 103/100 with seven sections dated 2026-09-20 EST exempt (96 non-exempt): if your push lands on 2026-09-21 EST or later, the exemption lifts and 103 non-exempt is over the 100 trigger, so the oldest date group (2026-09-15) rotates into the archive with SHA enrichment on every header — read the counter and CHANGELOG-archive.md §"Rotation Logic" before assuming otherwise. One push."
-
-### Added
-
-#### `googleAppsScripts/Network/Network.gs` — v01.04g
-- **N1 session 1 — extraction (D6 Gemini only, NETWORK-SCHEMA.md §7).** `GEMINI_MODEL` / `GEMINI_FALLBACK_MODEL` pinned as in Receipts; `nwExtractionSchema_()` is the §7 `responseSchema` verbatim (`fullName … languages[], rawText, confidence{}` with the seven confidence keys required); `NW_EXTRACTION_PROMPT` carries the §7 rules (romanise CJK and keep the native script in parentheses, a second image is the back of the same card, never invent a field, honest per-field confidence); `nwExtractFromBase64_(frontB64, backB64, mime)` is `geminiExtractFromBase64_` with both images as `inline_data` parts in one call, the key from this project's `GEMINI_API_KEY` Script Property, the three-leg retry plan (primary, primary after 2 s, fallback after 1 s) and an error that is a code only (`gemini_http_<n>`, `gemini_parse_failed`, `gemini_key_missing`) so it can be audited
-- `nwNormaliseExtraction_(raw, qr)` coerces the answer into the §7 shape (kinds validated against `NW_EMAIL_KINDS` / `NW_PHONE_KINDS`, confidence clamped 0–1, absent → 0) and merges QR-decoded fields over the model's with confidence 1; `nwFieldCount_()` is the only per-extraction number an audit row may carry
-- `nop=newid` (D8: mints the `c-` id through `nwNewId_` before the upload so the Drive filename is opaque from the first byte; `c` prefix only) and `nop=extract` (`nwExtractOp_`: body-POST only, `contactId` validated against `NW_ID_RE`, both images ≤ 7,000,000 chars, MD5-digest cache of the pair for 600 s, audit rows `network_extract` / `network_extract_failed` carrying `{ contactId, fields, sides }` / `{ contactId, error }` — never a card field, §12) on `handleNetworkOp_`
-
-#### `live-site-pages/Network.html` — v01.03w
-- **The capture card** (`nwCaptureMount`, admin only — the inputs never enter the DOM for a turned-away tier): the Receipts inputs (`capture="environment"` single, `multiple` batch of `NW_MAX_BATCH` = 15) behind two buttons, a Front / Back segmented toggle that stages a pair (`_nwPair`) with thumbnails and flips to Back after the front is captured, Extract / Clear, a status line and the queued count with a "send now" link; `nwCompressImage` unchanged at 2,000 px / 0.82
-- **IndexedDB offline queue** (`nw-capture` db, stores `queue` + `pending`, no Worker): when `navigator.onLine` is false the compressed pair is queued and the count shows on the card; `nwQueueDrain()` runs on `online` (and once on mount) through the same `nwProcessPair` pipeline, oldest first, deleting each record only after success and stopping at the first failure; `pending` holds extracted-but-unsaved cards across a reload for session 2's review card
-- **Own-Drive upload** with the user's `drive.file` token from a separate token client (`NW_DRIVE_SCOPE`; the sign-in scope is untouched, so the first upload asks the consent once): `nwEnsureFolders` creates `Network App/` and `_inbox/` browser-side on first use and parks the ids through `nop=setfolders` (read back from the list payload on load, `nop=folders` on demand), `nwUploadPair` files `<c-id>-front.jpg` / `-back.jpg` by multipart upload; a Drive failure is soft — the extraction still runs and the pending record remembers `driveError`
-- **QR decode** with `BarcodeDetector` where present (`nwQrDecode` → `nwParseQr`: vCard FN/N/ORG/TITLE/EMAIL/TEL/ADR/URL, or a bare URL), merged before the model call; a vCard naming the person with an email or phone (`nwQrSufficient`) fills the card without a model round-trip (`nwQrExtraction`, confidence 1 on carried fields, 0 elsewhere)
-- `nwApiBody()` — the `_gasPostBody` idiom (form-urlencoded body, three attempts, no GET fallback) for `nop=extract`; `nwProcessPair` orders newid → upload → QR-or-extract → pending → strip, spacing model calls ≥ 6.5 s in a batch or drain; `nwRenderStrip` shows the name / title · company / id · sides · Drive filed / "check:" fields below `NW_CONFIDENCE_FLOOR`
-- `nwLoadList` keeps the capture card and re-renders only `#nw-listwrap`, and reads `folders` from the list payload into `_nwFolders`; `nwEnsureFolders` calls `nwAfterWrite()` after `setfolders` (D14)
-
-### Changed
-
-#### `scripts/verify-network-roles.py`
-- Asserts the capture card (card, both inputs, the toggle, a queued count of 0) for admin and its absence for contributor / analyst / viewer; a new scenario takes the context offline, stages a canvas-generated card photo, taps Extract and checks the queue reads 1 with no request issued (`network-capture-queued.png`), then reconnects and checks the drain mints the id before the Drive upload, the strip renders and the count returns to 0 (`network-capture-extracted.png`); the GAS stub answers `nop=newid` / `folders` / `setfolders` and a body-POST `nop=extract`, and a Drive stub answers folder creation and the multipart upload
-
-### Notes
-- Still 2026-09-20 EST at the push (09:55 PM) — 104 sections, eight exempt, 96 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `104/100`. The first push dated 2026-09-21 EST or later rotates the 2026-09-15 date group (unshallow first)
-- §11's N1 row is unchanged (Proposed) — it flips at the close of session 2, which also writes the N2 brief as §13.6
-
-## [v06.81r] — 2026-09-20 09:14:47 PM EST
-
-> **Prompt:** "give me a prompt to paste into the next session (with recommended AI model/effort level) in the action plan, then remember session."
-
-### Added
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- **The paste-in prompt for N1 session 1** (Fable 5.1 High, with the model/effort rationale and the note that E0 can run beside it), verbatim, as a block under §13.5: steps 1–5 of the brief only, the D6/D8/D9/D14 constraints restated, the verification train, the hand-off to write in chat, and the rotation state the push will meet
-
-### Changed
-
-#### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten for the Q0 session (v06.79r rollout, v06.80r probe table, this push); recommendation: paste the N1 session-1 prompt. The prior entry moved to Previous Sessions under the two-session cap
-
-#### `README.md`
-- `Last updated` and `Repo version` refreshed
-
-### Notes
-
-- Still 2026-09-20 EST — 103 sections, seven exempt, 96 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `103/100`.
-
-## [v06.80r] — 2026-09-20 09:11:43 PM EST
-
-> **Prompt:** *(same Q0 prompt as v06.79r — the post-merge step: "after the merge, run `bash scripts/check-quota.sh` and paste its table into the CHANGELOG entry's Notes")*
-
-### Changed
-
-#### `repository-information/CHANGELOG.md`
-- The v06.79r section's Notes now carry the first `check-quota.sh` table: six deployed projects answered on their new GAS versions, three placeholder-id projects skipped, 27 executions today (Network 26, Profiler 1) against 20,000/day
-
-#### `README.md`
-- `Last updated` and `Repo version` refreshed
-
-### Notes
-
-- Q0 is complete end to end: op rolled out, script verified live, §11 row Done. Still 2026-09-20 EST — 102 sections, six exempt, 96 non-exempt, no rotation. CHANGELOG `Sections: 78/100` → `102/100`.
-
-## [v06.79r] — 2026-09-20 09:06:03 PM EST
-
-> **Prompt:** "Run Q0 — the quota-counter rollout — from `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`: §3 row D14 and the §8 Q0 row are the whole spec. Read first `nwQuotaProbe_()` and the two `op=quota` dispatch lines beside `op=aclhealth` in `googleAppsScripts/Network/Network.gs` `doGet` (the source of truth — copy it, do not redesign it), the `op=aclhealth` dispatch in `Receipts.gs` `doGet` as the precedent for where a PROJECT-marked unauthenticated probe sits inside the AUTH `doGet`, `scripts/check-acl-health.sh` (the probe-script shape to follow, including how it discovers projects from the `.gs` files and skips `YOUR_DEPLOYMENT_ID` projects), and `.claude/rules/gas-scripts.md` §"Template vs Project Code Separation". Then, in **one commit**: (1) copy the function into the eight existing projects — Classroom, Globalacl, MasterACL, Profiler, Receipts, Scraper, Testauthgas1, Testauthhtml1 (`Claspdeploytest` has no config and is not a project) — as `quotaProbe_()` with the same body and comment, and rename Network's `nwQuotaProbe_` to `quotaProbe_` so all nine read identically for Q's grep; it depends only on template globals (`SPREADSHEET_ID`, `AUTH_CONFIG`, `ACL_PAGE_NAME`, `VERSION`, `getEpochCache`) that every auth project has, and every one of the eight already runs with `ENABLE_AUDIT_LOG` on (the two `standard`-preset projects, Classroom and Profiler, override it on), so no preset changes; (2) add the `if (action === 'api' && op === 'quota')` dispatch beside `op=deploy` in each `doGet`, marked `// PROJECT:` exactly as Network's is; (3) write `scripts/check-quota.sh` on the `check-acl-health.sh` shape — one row per deployed project (`page`, `gasVersion`, `date`, `executions`, the top three `byEvent` keys), a total across the fleet against the 20,000/day account quota, `audit_log_disabled` / `spreadsheet_not_configured` surfaced as warnings not failures, exit 0 healthy / 1 any probe unreachable / 2 nothing probed; (4) nine GAS bumps with nine GAS changelog entries (user-facing: "a daily execution counter the operator can read"), no page bumps (no HTML changes), README tree entry for the script, CHANGELOG entry, flip §11's Q0 row to Done with the version. Verify with `node --check` on every `.gs` copy and `scripts/check-gas-inner-scripts.js`; after the merge, run `bash scripts/check-quota.sh` and paste its table into the CHANGELOG entry's Notes (the three placeholder-id projects — Globalacl, Testauthgas1, Testauthhtml1 — never deploy, so their copies are repo-only bookkeeping and the script skips them; the deployed six plus Network answer). Do not touch `Events` (E1 inherits the op from the shared template region when it is scaffolded), do not change any interval (that is Q), do not add auth to the probe (counts only, never a user or a details cell — the trust model is `aclhealth`'s). Normal Session Start, Pre-Commit and Pre-Push checklists on a `claude/*` branch restarted from `origin/main`; run `git fetch --unshallow origin main` first. The repo CHANGELOG stands at `Sections: 78/100` with four sections dated 2026-09-20 EST exempt: **if your push lands on 2026-09-21 EST or later, 100 non-exempt reaches the 100 trigger and the oldest date group rotates** into the archive with SHA enrichment on every header — read the counter and `CHANGELOG-archive.md` §"Rotation Logic" before assuming otherwise."
-
-### Added
-
-#### `scripts/check-quota.sh`
-- **Fleet execution-quota probe** on the `check-acl-health.sh` shape: discovers every project whose `doGet` dispatches `op=quota`, skips the placeholder-id projects, prints one row per deployed project (page, GAS version, date, executions, top three `byEvent` keys) and a fleet total against the 20,000/day account quota. `audit_log_disabled` / `spreadsheet_not_configured` are warnings; an empty or non-JSON body (or `audit_log_unreadable`) is a failure. Exit 0 healthy / 1 any probe unreachable / 2 nothing probed. README tree entry added
-
-#### `googleAppsScripts/*` — Classroom, Globalacl, MasterACL, Profiler, Receipts, Scraper, Testauthgas1, Testauthhtml1
-- **`quotaProbe_()` + the `op=quota` dispatch** copied verbatim from `Network.gs` into all eight (same body, same comment; the dispatch sits beside `op=deploy` — after `op=aclhealth` in Profiler and Receipts — marked `// PROJECT:` exactly as Network's). The function lives in each file's first PROJECT region (after `aclHealthProbe_` where one exists). It depends only on template globals every auth project has; no preset changes (all eight already run `ENABLE_AUDIT_LOG` on). GAS bumps: Classroom v01.86g, Globalacl v01.09g, MasterACL v01.15g, Profiler v01.40g, Receipts v01.30g, Scraper v02.21g, Testauthgas1 v01.08g, Testauthhtml1 v01.08g — one page/GAS changelog entry each
-
-### Changed
-
-#### `googleAppsScripts/Network/Network.gs`
-- `nwQuotaProbe_` renamed to `quotaProbe_` so all nine copies read identically for Q's grep (v01.03g)
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- §11 Q0 row flipped to **Done — v06.79r**
-
-#### `README.md`
-- `check-quota.sh` tree entry; nine GAS version displays; `Last updated` and `Repo version` refreshed
-
-### Notes
-
-- **No page bumps** — no HTML changed. Events is untouched (E1 inherits the op from the shared template region); no interval changed (that is Q); the probe carries no auth (counts only, never a user or a details cell — aclhealth's trust model).
-- **Verified** with `node --check` on all nine `.gs` copies (copied to `.js` in the scratchpad, since Node refuses the `.gs` extension), `scripts/check-gas-inner-scripts.js` (10 files, 96 inner blocks clean) and `scripts/check-readme-tree.py` (0 findings).
-- **The three placeholder-id projects** — Globalacl, Testauthgas1, Testauthhtml1 — never deploy, so their copies are repo-only bookkeeping and the script skips them; the deployed six plus Network answer. The first `bash scripts/check-quota.sh` table lands in the follow-up push once this merge has deployed the nine scripts.
-- **First `bash scripts/check-quota.sh` run, after the merge deployed the nine scripts** (2026-09-20 09:10:55 PM EDT, exit 0) — every deployed project answers on its new GAS version, which is the deploy confirmation:
-
-  ```
-          page          gas      date       executions  top events
-    OK    Classroom     v01.86g  2026-09-20          0  -
-    SKIP  globalacl     not deployed (no deployment id)
-    OK    MasterACL     v01.15g  2026-09-20          0  -
-    OK    Network       v01.03g  2026-09-20         26  security_alert 12, data_read 8, login_success 3
-    OK    Profiler      v01.40g  2026-09-20          1  security_alert 1
-    OK    Receipts      v01.30g  2026-09-20          0  -
-    OK    Scraper       v02.21g  2026-09-20          0  -
-    SKIP  testauthgas1  not deployed (no deployment id)
-    SKIP  testauthhtml1 not deployed (no deployment id)
-
-  TOTAL — 27 execution(s) today across 6 probed project(s) = 0% of the 20000/day account quota.
-  ```
-- **No rotation fired.** The push lands on 2026-09-20 EST: 101 sections total, five dated today exempt, 96 non-exempt → below the 100 trigger. The first push dated 2026-09-21 EST or later rotates the oldest date group (2026-09-15). CHANGELOG `Sections: 78/100` → `101/100`.
-
-## [v06.78r] — 2026-09-20 08:53:15 PM EST
-
-> **Prompt:** "ive signed into Network.html once more - see screenshot. Give me a prompt to paste into a new Fable 5.1 Medium session to start Q0, then remember session." — and, mid-turn: "Upon checking the overall Network and Events plan, I noticed Q0 is supposed to be the last phase of the plan. Evaluate the plan again and give me a prompt to paste that is confirmed to be the next step."
-
-### Added
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- **The paste-in prompt for the Q0 session** (Fable 5.1 Medium), verbatim, as a block under §13.3 beside the N0 prompt: copy `nwQuotaProbe_()` + the `op=quota` dispatch into the eight existing projects as `quotaProbe_()` (Network renamed to match — nine GAS bumps), `scripts/check-quota.sh` on the `check-acl-health.sh` shape, the placeholder-id projects skipped by the script, the CHANGELOG rotation the push will trigger on 2026-09-21 EST or later, and the do-nots (no Events, no interval change, no auth on the probe)
-
-### Changed
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- §11 N0 row: the live done-when closed 2026-09-20 — deployed `AKfycbxu…c0_U8`, admin signed in, `op=deploy` → `Already up to date (v01.02g)`, `op=aclhealth` → `acl_ok`, `op=quota` answering, `check-acl-health.sh` lists Network; the bootstrap lesson for E1 recorded (Manage deployments → Edit → New version once, by hand)
-
-#### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten for the N0 session (v06.76r scaffold, v06.77r deployment id, the live verification, this push); recommendation: paste the Q0 prompt. The prior entry moved to Previous Sessions under the two-session cap
-
-#### `README.md`
-- `Last updated` and `Repo version` refreshed
-
-### Notes
-- **Order confirmed against the plan (the developer asked whether Q0 is the last phase):** it is not — there are two quota phases. **Q0** (the counter rollout) follows N0 in D16's decided sequence (§3 line "Gate → N0 → **Q0** → N1 …"), in §8's Q0 row, in §9 and in §11 ("after N0"); **Q** (the quota *review*) is the final phase, "after E5" in §8 and §11. No reordering was made; the Q0 prompt is the confirmed next step
-- **Live probe results this session (no push):** `op=quota` reported 23 executions on 2026-09-20 including 12 `security_alert` rows — most plausibly `data_access_expired_session` retries during the redeploy window; the developer may confirm in the `SessionAuditLog` Details column. `grace: NOT armed` on Network arms on the next sign-in against v01.02g (the developer has since signed in once more)
-- **§13 numbering collision for the next brief-writer:** the N1 brief reserves §13.6 for N2 and the E0 brief reserves §13.6 for E1 — first writer takes 13.6, the other 13.7
-- **No rotation — but at capacity.** 100 sections, four dated 2026-09-20 EST exempt → 96 non-exempt against the 100 trigger; counter `Sections: 78/100`. The first push dated 2026-09-21 EST or later finds 100 non-exempt and rotates the oldest date group
-
-## [v06.77r] — 2026-09-20 08:38:53 PM EST
-
-> **Prompt:** "set Network DEPLOYMENT_ID to AKfycbxuayBnl0pM0upSFEoqUkaW4bbXbVCKGKeGVdcgKiBM5FBj_ykQn30BINHyJMvc0_U8"
-
-### Changed
-
-#### `googleAppsScripts/Network/Network.config.json`
-- `DEPLOYMENT_ID` set to the developer's first Web-app deployment (`AKfycbxu…c0_U8`) — the workflow's `Deploy Network` step now fires the self-update webhook on every `Network.gs` merge
-
-#### `googleAppsScripts/Network/Network.gs` — v01.02g
-- `DEPLOYMENT_ID` synced from the config per [PC-GAS-CONFIG] #14
-
-#### `live-site-pages/Network.html` — v01.02w
-- `var _e` set to the base64 of the reversed `/exec` URL (decoded and round-trip-checked), so the page now creates its GAS iframe and the fetch transport has a base URL; sign-in reaches the live backend
-
-#### `README.md`
-- Network version displays v01.02w · v01.02g; `Last updated` and `Repo version` refreshed
-
-### Notes
-- **Deploy hand-off status**: Part A (project, manifest, GCP link, `GITHUB_TOKEN`, grant — `diagnoseAuthorization` reported all seven declared scopes granted, nothing outstanding) and Part B (deployment + this sync) are done. **Next for the developer — Part C**: once this merges, load `Network.html` once so `registerSelfProject()` creates the `Network` column in the Master ACL Access tab, tick TRUE on your row (role `admin`), run `clearAllAccessCache` from the editor, then sign in; the first admin list call creates the eight tabs. Then Part D: `?action=api&op=deploy` → `Already up to date (v01.02g)`, `op=aclhealth` → `acl_ok`, `op=quota`, `bash scripts/check-acl-health.sh`
-- **The webhook's first real run is this merge**: `Network.gs` changed, so the `Deploy Network` step calls `doPost(action=deploy)` against the new id and the live script pulls v01.02g from `main` — the GET probe above confirms it
-- **No rotation.** 99 sections, four dated today (exempt) → 95 non-exempt against the 100 trigger
-
-## [v06.76r] — 2026-09-20 12:56:34 AM EST
-
-> **Prompt:** "Run N0 — the Network scaffold — from repository-information/NETWORK-EVENTS-DESIGN-PLAN.md. Read the plan's §3 (every decision row is decided — D7 admin-only, D14 no data poll, D1 the Profiler "Ecosystem" relabel), §8 (the N0 and Q0 rows) and §13.3 (the N0 brief — follow its eight steps exactly, in order), then repository-information/NETWORK-SCHEMA.md in full, and the reading list §13.3 opens with. Do not build capture, extraction or the list (that is N1); do not scaffold Events (E1); do not touch Scraper. Before running scripts/setup-gas-project.sh, ask me for the values only I hold — SPREADSHEET_ID, CLIENT_ID, and whether the Global ACL default for MASTER_ACL_SPREADSHEET_ID is right — then run it once; every other key in the JSON is fixed by §13.3 step 1. Build the PWA files with the manifest-src 'self' override on both CSP tags, the admin-only door on both sides and scripts/verify-network-roles.py, ensureNetworkTabs_() with exactly the NETWORK-SCHEMA.md §3 columns and the §4 enum mirrors, NW_ID_RE / nwNewId_, the folder ops, the D14 intervals (600 s heartbeat, no data poll — both .gs and .html per [PC-SESSION-SYNC] #20) and the op=quota API, and the Profiler "Ecosystem" relabel with its Profiler page bump, page changelog and a clean scripts/verify-profiler-roles.py run. Verify with node --check on the .gs copy, scripts/check-gas-inner-scripts.js, python3 scripts/check-readme-tree.py, and served Playwright screenshots (scripts/playwright-harness.py) of admin's empty list and the three turned-away cards at phone width with zero page errors. End by writing my deploy hand-off steps in chat (§13.3 step 7), flipping §11's N0 row to Done with the version, and writing the N1 brief as §13.5 of the plan — then one push. Normal Session Start, Pre-Commit and Pre-Push checklists on a claude/* branch restarted from origin/main; run git fetch --unshallow origin main first. The repo CHANGELOG rotated at v06.75r — read its Sections: counter before assuming anything about rotation."
-
-### Added
-
-#### `live-site-pages/Network.html` — v01.01w
-- **N0 scaffold of the Network app** (design plan §13.3, all eight steps). Generated by `scripts/setup-gas-project.sh` from the auth template (`hipaa` preset, `ACL_PAGE_NAME: Network`, `PORTAL_ICON: 📇`, the developer's `SPREADSHEET_ID` `1YjY3…ptBiQ`, the fleet `CLIENT_ID`, the fleet Master ACL `1kG2K…UvE` passed explicitly because the Global ACL config the script would default from still carries its placeholder); ten files created, GAS Projects table row, README tree entries, REPO-ARCHITECTURE nodes and the `Deploy Network` workflow step registered by the script
-- **PWA**: `network.webmanifest` on the `receipts.webmanifest` shape (`id` / `start_url` / `scope` = `./Network.html`, `display: standalone`), `images/network-icon-192.png` + `-512.png` (Pillow-drawn card glyph on the app's navy, `any maskable` on the 512), `<link rel="manifest">`, `theme-color`, `apple-touch-icon` and the standalone metas; the **`manifest-src 'self'` PROJECT OVERRIDE on both CSP tags** (template ships `'none'`); `worker-src 'none'` stays — no service worker (D2)
-- **The door, client half (D7 — admin-only)**: `NW_ROLE_CAPS` with all four tier keys (admin holds `contacts` · `accounts` · `profiler` · `signals` · `drafts` · `export` · `purge`, the other three empty), `nwRole()` / `nwPreviewRole()` / `nwEffectiveRole()` / `nwCan()` / `nwAdmitted()` with only-subtracting `?as=` preview semantics; `nwRenderDenied()` paints the turned-away card for non-admin tiers **before any request is issued** (`nwLoadList` is never reached); the grouped `NW_ENUMS` map with display labels mirroring NETWORK-SCHEMA.md §4
-- **Surface**: masthead (`#nw-header`, the Classroom/Profiler editorial family, 62 px top margin to clear the template's fixed user pill on a phone), `#nw-backdrop` above the template's GAS iframe, `nwApi()` over `_gasPost` (`action=network` with the `op=network` GET mirror), `nwLoadList()` rendering contact/account counts and the empty list, `nwAfterWrite()` and a `visibilitychange` refetch (D14 — no data poll), the `showApp` wrapper mounting `nwAppMount()`
-- **D14 intervals** in `HTML_CONFIG`: `HEARTBEAT_INTERVAL: 600000`, `DATA_POLL_INTERVAL: 0` with a PROJECT OVERRIDE note (the template declares the poll interval but never arms a timer from it; nothing may) — paired with the `.gs` per [PC-SESSION-SYNC] #20
-
-#### `googleAppsScripts/Network/Network.gs` — v01.01g
-- **The door, server half**: `NW_ROLE_CAPS`, `nwRoleOf_` / `nwAdmitted_` (`role === 'admin'`) / `nwCan_` / `nwRequire_` on the Classroom pattern — every turned-away tier writes a `security_alert` audit row carrying op name and tier only
-- **Enums (D5)**: the flat lists `NW_RELATIONSHIPS`, `NW_STAGES`, `NW_ROLES`, `NW_INTERACTION_KINDS`, `NW_SIGNAL_KINDS` (+ consent, draft status, signal source, and `NW_STAGE_RELATIONSHIPS` for the D5 validator rule), byte-identical to NETWORK-SCHEMA.md §4
-- **Ids (D8)**: `NW_ID_RE` (`^[acisdm]-[0-9a-z]{13}$`), `nwRandomBase36_()` (SHA-256 over `Utilities.getUuid()`, first 8 bytes → 13 base36 digits by 64-bit long division), `nwNewId_(prefix, takenIds)` collision-checked against the tab — never a name, never a date
-- **Tabs**: `ensureNetworkTabs_()` creating `Accounts` · `Contacts` · `Interactions` · `Signals` · `Mailings` · `Drafts` · `Shares` · `Profiles` with exactly the §3 columns in order (`NW_TABS`), frozen row 1, in-place header upgrade; `nwNormaliseCompany_()` (the §3 dedupe key)
-- **Folder registry**: `PROP_NW_FOLDERS` with `nwFoldersGet_` / `nwFoldersSet_` (`root`, `inbox`, `accounts{}` map, id-shape checked) — the Profiler `recfolders` precedent, exposed as `nop=folders` / `nop=setfolders`
-- **Ownership**: `getShareScope_`, `resolveOwnerScope_`, `resolveOwnerSet_` and the not-found-not-forbidden convention copied verbatim from `Receipts.gs` (the D7 widening path; `Shares` has no UI in v1)
-- **Ops**: `handleNetworkOp_()` (`action=network`, `nop=list|folders|setfolders`) wired into `doPost` and the `doGet` `action=api` fallback; `nop=list` returns the minimum-necessary subset via `nwListRows_()` with soft-deleted rows filtered and an audit row of counts only
-- **`?action=api&op=quota` (D14)**: `nwQuotaProbe_()` — today's `SessionAuditLog` rows (EST) grouped by event, `{ success, date, tz, executions, byEvent }`, counts only, 60 s cache, bounded 5,000-row read; **this is the op Q0 copies into the other eight projects**. `op=aclhealth` ported beside it so `scripts/check-acl-health.sh` enrols the project automatically
-- **D14 intervals**: `PROJECT_OVERRIDES.HEARTBEAT_INTERVAL: 600` (paired with the `.html`)
-
-#### `scripts/verify-network-roles.py`
-- The four-tier door check on the `verify-profiler-roles.py` shape: serves `live-site-pages/`, seeds the page-scoped session the way `saveSession()` writes it, gives the page a stub base URL and answers the fetch transport's load-time heartbeat, then asserts per tier — admin: the empty list and exactly one `nop=list` request; contributor / analyst / viewer: the turned-away card and **zero** data requests; `?as=viewer` on admin turns away, `?as=admin` on viewer gains nothing; zero page errors. Phone-width (390 × 844) screenshots per tier. **Passes.**
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- **§13.5 — the N1 brief** (capture → extraction → review → save, two Fable 5.1 High sessions), written at the close of N0 per the Classroom rule
-
-### Changed
-
-#### `live-site-pages/Profiler.html` — v01.91w
-- **D1 relabel**: the `#network` explorer heading `'Ecosystem Network'` → `'Ecosystem'` and the denied-view sentence to match; the `network` capability key, the `#network` hash and the masthead button are untouched. `scripts/verify-profiler-roles.py`'s deep-link label `'ecosystem network'` → `'ecosystem'`; the 13 × 4 matrix is unchanged and every tier's deep-link assertion passes
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- §11: **N0 → Done — v06.76r** (what landed; the live-page checks — sign-in, `DEPLOYMENT_ID`, the webhook GET probe — wait on the developer's deploy); Q0's row now names `nwQuotaProbe_()` as the source to copy
-
-#### `repository-information/REPO-ARCHITECTURE.md`
-- Flowchart: `NETWORK_PAGE` and `GAS_NETWORK` nodes and their five edges (added by the setup script); the Flowchart's mermaid.live URL regenerated and decompression-verified (9,178 chars). The file carries no `<details>` copy blocks, so none was mirrored
-
-#### `README.md`
-- Tree: `network.webmanifest`, `scripts/verify-network-roles.py`, the Network page entry's description; version displays Profiler v01.91w, Network v01.01w · v01.01g (`check-readme-tree.py`: 0 findings); `Last updated` and `Repo version` refreshed
-
-### Notes
-- **Setup script input** (§13.3 step 1): the developer supplied `SPREADSHEET_ID` = `1YjY3XMXDGwhW4U-lf3aKxGTJz5JvMyQcdCyVWdptBiQ`, chose the fleet `CLIENT_ID`, and confirmed the fleet Master ACL id after the session found that `globalacl.config.json`'s own `MASTER_ACL_SPREADSHEET_ID` is still `YOUR_MASTER_ACL_SPREADSHEET_ID` — the script's Global ACL auto-default therefore resolves to nothing and the id had to be passed explicitly. Both generated files carry the real id (Setup GAS Project Command step 3 verified)
-- **Deploy hand-off** (§13.3 step 7), for the developer: (1) create the Apps Script project and paste `Network.gs`; (2) Project Settings → show `appsscript.json` and set it from `.claude/rules/gas-scripts-reference.md` §"Setup Steps" (includes `script.scriptapp`); (3) link the GCP project and enable the Apps Script API and the Google Drive API on it; (4) Deploy → New deployment → Web app → execute as me, access Anyone; (5) paste the deployment id into `googleAppsScripts/Network/Network.config.json` `DEPLOYMENT_ID` and sync per [PC-GAS-CONFIG] #14 (the `.gs` `DEPLOYMENT_ID` and the page's `var _e` = base64 of the reversed `/exec` URL); (6) set `GITHUB_TOKEN` in Script Properties; (7) run any function from the editor, open the consent screen as the script account and **tick every checkbox** (a partial grant reproduces the Receipts v02.59r outage); (8) load `Network.html` once so `registerSelfProject()` creates the `Network` column in the Master ACL's Access tab, tick TRUE for your row, then run `clearAllAccessCache` from the editor; (9) verify: sign in on the live page, `curl -sL "https://script.google.com/macros/s/<ID>/exec?action=api&op=deploy" --max-time 90` answers `Already up to date (v01.01g)`, `?action=api&op=quota` answers today's counts, `?action=api&op=aclhealth` answers `acl_ok`, and `bash scripts/check-acl-health.sh` now lists Network
-- **Verification this push**: `node --check` on the `.gs` copy clean; `scripts/check-gas-inner-scripts.js` — 10 files, all inner scripts parse; both inline `<script>` blocks of `Network.html` parse; `scripts/check-readme-tree.py` 0 findings; `scripts/playwright-harness.py Network Profiler` 2/2 pass (file://); `scripts/verify-network-roles.py` all checks pass with zero page errors (served over localhost at 390 × 844); `scripts/verify-profiler-roles.py` — matrix unchanged, deep-link denials pass; its two **guidance-progress isolation** failures (`admin tick did not persist`) reproduce identically on an untouched `origin/main` worktree, so they are pre-existing (the guidance hub moved to Classroom in C3 and `gdSetProgress` no longer persists on Profiler) and outside N0
-- **Pre-existing template oddity noticed, not touched** (Chesterton's fence): `doPost`'s `action=getData` route calls `processDataPoll()`, which no project defines — the route is dead in every project and no page calls it; N0 sets `DATA_POLL_INTERVAL: 0` and arms nothing
-- **No rotation.** 98 sections, three dated today (exempt) → 95 non-exempt against the 100 trigger. Profiler's page changelog reached `Sections: 50/50` with today's section exempt (49 non-exempt against a 50 trigger) — no rotation there either
-
-## [v06.75r] — 2026-09-20 12:26:53 AM EST
-
-> **Prompt:** "give me a prompt to paste into a Fable 5.1 High session to run N0, then remember session."
-
-### Added
-
-#### `repository-information/NETWORK-EVENTS-DESIGN-PLAN.md`
-- **The paste-in prompt for the N0 session** (Fable 5.1 High), verbatim, as a block under the §13.3 brief — the §13.2 precedent: it points the session at §3, §8, §13.3 and `NETWORK-SCHEMA.md`, names the three values only the developer holds (`SPREADSHEET_ID`, `CLIENT_ID`, the Master ACL default) to ask for before the setup script runs, forbids N1/E1/Scraper work, lists the verification set (`node --check`, `check-gas-inner-scripts.js`, `check-readme-tree.py`, served Playwright screenshots of the four tier states), and ends with the deploy hand-off, the §11 flip and the N1 brief as §13.5
-
-### Changed
-
-#### `repository-information/SESSION-CONTEXT.md`
-- Latest Session rewritten for the two-push gate session (v06.74r the gate, v06.75r this push): decisions, the D15 → N4 consequence, the schemas, the rotation, the values N0 will ask for; recommendation: paste the §13.3 N0 prompt. The prior entry moved to Previous Sessions under the two-session cap
-
-#### `README.md`
-- `Last updated` and `Repo version` refreshed
-
-### Notes
-
-- **Archive rotation fired.** This push lands on **2026-09-20 EST**, so the eighteen sections dated 2026-09-19 stopped being exempt: 116 non-exempt against the 100 trigger → the **2026-09-14 date group (v05.59r–v05.78r, 20 sections)** moved to `CHANGELOG-archive.md` with a commit SHA appended to every header (20 of 20 resolved on the unshallowed clone; post-rotation grep clean) → 96 non-exempt, below the trigger. Counter `Sections: 78/100`.
-- **No page, GAS script, diagram or rule changed.**
 
 Developed by: LightAISolutions
