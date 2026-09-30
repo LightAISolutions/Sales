@@ -1,0 +1,913 @@
+{
+ "schemaVersion": 7,
+ "slug": "pinnacle-west",
+ "name": "Pinnacle West Capital Corporation",
+ "shortName": "Pinnacle West",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.pinnaclewest.com",
+ "headquarters": "Phoenix, AZ, USA",
+ "employees": "6,610 at December 31, 2025 (Pinnacle West 94, APS 6,516; FY2025 Form 10-K); 'approximately 6,600 employees in Arizona and New Mexico' in the July 2026 boilerplate",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: PNW"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Pinnacle West is the Arizona holding company whose sole utility, Arizona Public Service (APS), carries a committed large-load queue of about 4.5 GW — 'mainly data centers and some manufacturing', with TSMC's north Phoenix fabs the one named customer at 'over 1 gigawatt' — against a 2025 system peak of 8.6 GW, plus roughly 20 GW of uncommitted requests it is converting into individually negotiated subscription contracts under its Extra High Load Factor (XHLF) rate schedule; the framework that decides how that load pays is the rate case heard over 31 days from May 18 to July 7, 2026 (a $692M gross / $609M net revenue request, a 10.70 percent return, a first-ever Formula Rate Adjustment Mechanism and a roughly 45 percent increase for extra-large users), with the administrative law judge's recommended order expected in late November, a Commission vote due by December 31, 2026 and new rates in early 2027. BACKGROUND. Phoenix; NYSE: PNW; an Arizona corporation with about $31B of consolidated assets and 6,610 employees at year-end 2025 (FY2025 Form 10-K). APS serves about 1.4–1.5 million customers in 11 of Arizona's 15 counties from 6,257 MW of owned and leased regulated generation, including a 29.1 percent share of the three-unit Palo Verde nuclear station (1,146 MW entitlement) that it plans to relicense to 2065–2067. FY2025 net income attributable was $616.5M, or $5.05 per share (FY2024 $608.8M, $5.24); 2026 weather-normalized guidance is $4.55–4.75, reaffirmed on August 4, 2026 after a second quarter of $1.43 that missed the $1.47 consensus while retail sales grew 5.6 percent weather-normalized and 9.6 percent in total. The 2025–2028 capital plan is $10.35B, excluding up to $440M for converting two retired Cholla coal units to about 380 MW of gas by 2029, and rate base is guided from $14.7B (2024) to $19.7B (2028). APS buys most of its new capacity rather than building it: the 2023 all-source RFP signed about 7,300 MW (2,650 MW solar, 3,610 MW storage, 500-plus MW wind, 520 MW gas), of which only Ironwood Solar (170 MW), the Agave battery (150 MW) and the Sundance and Redhawk gas units are APS-owned; the storage is largely 20-year tolls with Recurrent Energy (Papago, 1,200 MWh), Strata Clean Energy (Scatter Wash, Justice) and GridStor (White Tank, 100 MW / 400 MWh, 2027), and the 2025 all-source RFP's awards were still under negotiation in August 2026 with 'some of those resources contracted by the end of the year'. Collection gap: the ACC docket documents themselves (testimony, the proposed XHLF sheets, the Staff and RUCO positions beyond press summaries) were not read; no data-center customer other than TSMC is named in any first-party source; the 2025 RFP awards, the Cholla and Redhawk turbine OEMs and the battery OEMs behind the tolls are undisclosed; the Q3 2026 results date had not been announced as of September 29, 2026; the $0.91 quarterly dividend is known only from wire headlines (the release body returned 403) and its prior amount is not stated here.",
+ "ecosystemRole": "We assess Pinnacle West as the corpus's clearest case of a utility that buys storage by toll rather than owning it: APS runs recurring all-source RFPs (2022, 2023, 2025) that have produced about 3.6 GW of contracted storage against roughly 150 MW it owns (Agave), so the four toll counterparties in this file — Recurrent Energy, Strata Clean Energy, GridStor and, through the 2023 awards, the developers whose projects are still undisclosed — are where the battery and the integrator get chosen, not APS's own major-projects desk. Basis: the November 21, 2024 award release (3,610 MW of storage, 150 MW owned) and the Recurrent, Strata and GridStor releases. On the demand side APS is the gatekeeper for the West Valley data-center cluster and for TSMC: its XHLF schedule (effective March 8, 2024) already requires an Electric Supply Agreement with contract length, minimum and maximum monthly loads and a minimum bill, and the 2025 rate case asks to raise XHLF rates, minimum bills and collateral and to add a formula rate — so the 4.5 GW committed queue and the 20 GW behind it convert into subscription contracts only after the Commission's December 2026 decision. For gas vendors the doors are the Cholla conversion (about 380 MW, 2029, up to $440M), the Redhawk expansion (2028) and 'up to 2 gigawatts' of new gas from 2030 (a 2,000 MW proposal near Gila Bend), fuelled by an anchor position on Energy Transfer's 1.5 Bcf/d Desert Southwest expansion in late 2029; for transmission vendors it is the Four Corners–Cholla line described on the August 2026 call as a potential $1B, several-hundred-mile project.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — Arizona Public Service, and the 2025 rate case",
+   "category": "Regulated utility service",
+   "description": "Arizona Public Service Company, Pinnacle West's sole utility subsidiary, serves about 1.4 million customers (FY2025 Form 10-K; 'about 1.5 million' in the July 2026 boilerplate) in 11 of Arizona's 15 counties from 6,257 MW of owned and leased regulated generation. Customer growth was 2.4 percent in 2025 and 2.1 percent in the second quarter of 2026, guided at 1.5–2.5 percent a year through 2030; weather-normalized retail sales grew 5.0 percent in 2025, 9.4 percent in the first quarter of 2026 (the warmest winter on record in Phoenix, with the earliest 100-degree day on March 18) and 5.6 percent in the second quarter, and the company guides 4–6 percent for 2026 and 5–7 percent a year through 2030, of which 3–5 points come from 'large facilities' — data centers and manufacturing. Rates are set by the Arizona Corporation Commission (ACC): the allowed return today is 9.55 percent on 51.93 percent equity from a test year ended June 30, 2022, and the rate case filed in June 2025 asks for a total revenue requirement increase of $692M ($609M net), a 10.70 percent return on a 52.35 percent equity ratio, a 14.69 percent day-one bill impact (about 14 percent overall, roughly $240 a year per household per the Arizona Capitol Times) and the state's first Formula Rate Adjustment Mechanism (FRAM), an annual cost-to-serve adjustment by class. The evidentiary hearing ran 31 days from May 18 to July 7, 2026 with nearly three dozen intervenors and more than 50 witnesses; initial briefs were due August 27 and reply briefs September 11; the administrative law judge's recommended order is expected in late November, the Commission must vote by December 31, 2026, and new rates are expected in early 2027. ACC Staff proposed a 9.55–9.80 percent return; the Residential Utility Consumer Office opposes formula rates and wants a separate data-center class; Attorney General Kris Mayes argued the increase could be about 3 percent at a 6 percent return and called the request a '$524 million wealth transfer'.",
+   "highlights": [
+    "Rate case components: rate base growth $206M, post-test-year plant $162M, fair value increment $89M, cost of capital $129M, other $107M (Q2 2026 slides); implementation expected in the second half of 2026 on the slides, early 2027 per the ACC's own timeline",
+    "FY2025 EPS $5.05 against 2025 guidance raised in November to $4.90–5.10; 2026 guidance $4.55–4.75 weather-normalized, reaffirmed in May and August 2026; long-term EPS growth 5–7 percent off the original 2024 midpoint",
+    "2026 cost guidance: adjusted gross margin $3.31–3.37B, adjusted O&M $1.02–1.04B (core $970–980M), planned outage $45–55M, interest net of AFUDC $415–435M",
+    "About $70M a year of customer support programs in 2025 (FY2025 release); 100 percent of Palo Verde's water is recycled wastewater and APS says water use for operations halved over ten years"
+   ],
+   "positioning": "The smallest of the corpus's regulated franchises by customer count after DTE and WEC, but with the fastest weather-normalized sales growth on record in this file (9.4 percent in Q1 2026) and the only one whose rate case is simultaneously deciding a formula-rate mechanism and the large-load class — the ACC's July 10, 2026 note lists both as the case's headline issues. Unlike the Wisconsin bespoke-resource model (WEC) or Kentucky's regulated CCGT build (PPL), APS's model is to buy capacity from third parties under tolls and PPAs and to recover the cost through rates, which is why its regulatory risk sits in the return and the FRAM rather than in a plant docket.",
+   "soldThrough": "ACC-approved rate schedules; Electric Supply Agreements under the XHLF schedule for customers above 5,000 kW; FERC formula rates on transmission (10.75 percent return on 51.99 percent equity)",
+   "targetSegments": [
+    "Residential and commercial customers in 11 Arizona counties (Phoenix metro, Yuma, Flagstaff, Prescott)",
+    "Large commercial and industrial load — semiconductor fabs and data centers under the XHLF schedule"
+   ],
+   "roadmap": "ALJ recommended order late November 2026; Commission decision by December 31, 2026; new rates early 2027; subscription-model XHLF agreements to be filed with the ACC in 2026; integrated resource plan filed in summer 2026 reflecting the 4.5 GW of committed load."
+  },
+  {
+   "name": "Extra High Load Factor service and the large-load queue — TSMC, the West Valley data centers and the subscription model",
+   "category": "Regulated utility service",
+   "description": "APS discloses its large-load book as a committed queue of 'close to 4.5 GW' ('4,500 megawatts of large C&I that's ramping up' — CFO Andrew Cooper, August 2026; '4.5-plus gigawatts of our committed queue' — CEO Ted Geisler) and an uncommitted queue of about 20 GW (19.0 GW on the company's data-center page), against a 2025 system peak of 8.6 GW and a 2035 forecast peak of 12.0 GW versus 8.7 GW in 2025; the Q2 2026 slides put the total potential at about 33 GW. The committed load is 'mainly data centers and some manufacturing': Geisler said in February 2026 that 'the majority of that committed is still a healthy amount of high load factor customers that are data centers or related', that TSMC is a 'material portion' with a second fab moving to full production in 2027, a third under construction, a fourth fab and an advanced packaging facility in early development and 900 additional acres acquired, and in August that TSMC's previously committed load was 'over 1 gigawatt' with its new $100B investment adding more, that 20,000 acres around the fabs are in planning (the Halo Vista mixed-use development, about 30 million square feet and 9,000 homes) and that 'half a dozen different campuses' of data centers are ramping. Data centers were about 5 percent of APS's peak in 2025 and the average data center equals about 64,000 homes; Phoenix ranks second in North America for proposed data-center development. Large-load service runs under Rate Schedule XHLF (General Service Extra High Load Factor, effective March 8, 2024, Decision No. 79293): monthly demand of at least 5,000 kW and a load factor of at least 92 percent in nine of the prior twelve months, with sustainability features required at 15,000 kW and above (50 percent 'Carbon Free Activity'); the customer must sign an Electric Supply Agreement fixing contract length, minimum and maximum monthly loads and special charges, is subject to a minimum bill per contract, and above 15,000 kW pays contributions in aid of construction, a maintenance contract and a share of replacement-facility cost; bundled secondary rates are $5.682 a day basic, $18.750 per kW of demand and $0.04210 per kWh, and the sheet contains no explicit exit fee. The June 2025 rate request proposes about a 45 percent increase for extra-large users and updates to XHLF rates, minimum bill and collateral, with long-term contracts covering infrastructure cost and up-front contributions that can accelerate service; APS says data centers 'will not be subsidized by existing customers'. Since May 2026 APS has been developing subscription-based, individually negotiated XHLF contracts — cost-of-service pricing with negotiated term, collateral and exit fees, customer contributions to financing or accelerating key equipment, and front-of-the-meter or self-supply options — and expects to file them with the ACC in 2026.",
+   "highlights": [
+    "Committed ~4.5 GW; uncommitted ~20 GW; 2025 peak 8.6 GW; total potential ~33 GW (Q2 2026 slides); C&I sales +12.7 percent in Q2 2026 and +13.6 percent year-to-date, 'at or above the top end' of the 4–6 percent long-term C&I growth rate",
+    "TSMC: 'over 1 gigawatt' committed, the only large-load customer named by APS; 'half a dozen' data-center campuses ramping, none named — the AZ Technology Council's dated list places Compass, Microsoft, Stack, Stream and Vantage in APS's West Valley (Goodyear, Avondale, El Mirage) and Google and NTT in SRP's Mesa, but APS confirms none of them",
+    "XHLF schedule: ≥5,000 kW and ≥92 percent load factor; ESA with minimum bill; $18.750/kW demand and $0.04210/kWh energy; no explicit exit fee on the sheet — the rate case adds collateral, higher minimum bills and a roughly 45 percent increase for the class",
+    "Statewide context (ACC workshop, April 16, 2026, docket E-00000A-25-0069): two dozen operating data centers of 2,000-plus MW and 10,600 MW planned; SRP has 59 large-load customers at about 7,000 MW; TEP/UNSE 286 MW contracted, ~800 MW prospective, 8–10 GW speculative; the ACC summary put APS's large-customer peak demand estimate at ~13.1 GW 'this year', a figure read as a forecast or queue number and treated cautiously",
+    "Arizona paused its data-center transaction-privilege and use-tax exemption for three years (through 2029) in the 2026 session, with a rush of applications before the June 30 deadline; the ACC holds exclusive rate authority and commissioners have discussed 'bring-your-own-capacity'"
+   ],
+   "positioning": "Against Dominion's GS-5 class, Duke's and DTE's signed electric service agreements and WEC's bespoke-resource tariff, APS is the corpus's example of a utility whose large-load tariff pre-dates the boom (XHLF, 2024) and is being rebuilt in a contested rate case rather than in a stand-alone tariff docket: the minimum bill and collateral exist, the exit fee and the subscription structure do not yet, and the Commission's December 2026 vote is the gate. The disclosed committed queue (4.5 GW) is smaller than PPL Electric's 11 GW of signed ESAs or Duke's 7.8 GW, but it equals more than half of APS's own 2025 peak, the highest ratio in this file.",
+   "soldThrough": "Electric Supply Agreements under Rate Schedule XHLF; subscription contracts (negotiated term, collateral, exit fees) to be filed with the ACC in 2026; FERC-jurisdictional transmission service for self-supply options",
+   "targetSegments": [
+    "Hyperscale and colocation data-center campuses in the Phoenix West Valley (Goodyear, Avondale, Buckeye, El Mirage)",
+    "Semiconductor fabs and advanced packaging (TSMC's north Phoenix campus)",
+    "Other manufacturing and 'large facilities' above 5,000 kW"
+   ],
+   "roadmap": "Subscription-model XHLF agreements filed with the ACC in 2026; the rate case's XHLF and FRAM decision by December 31, 2026; contracts for the 20 GW uncommitted queue disclosed 'when contracts finalized'; the 2025 all-source RFP contracted 'by the end of the year'."
+  },
+  {
+   "name": "Owned generation — Palo Verde, the Cholla conversion, Redhawk and up to 2 GW of new gas",
+   "category": "Generation",
+   "description": "APS owns or leases 6,257 MW of regulated generation (FY2025 Form 10-K), the core of which is its 29.1 percent share of the three-unit, 4,200 MW Palo Verde Generating Station (29.1 percent of Units 1 and 3, about 23.9 percent owned plus leasehold in Unit 2, a 1,146 MW entitlement; co-owners SRP, El Paso Electric, Southern California Edison, PNM, SCPPA and LADWP), which ran at a 92 percent capacity factor over the first half of 2026 and 100 percent through summer 2025 and won a 2025 INPO Excellence Award; APS will file a Subsequent License Renewal Application in late 2027 to extend all three units by 20 years — Unit 1 to 2065, Unit 2 to 2066, Unit 3 to 2067 — and the Q2 2026 slides carry about $200M for a Palo Verde capacity buyout and a ten-year program of roughly $500M more. Coal is ending: the Cholla plant (Navajo County, about 1 GW at its peak) fully retired in March 2025, and in July 2026 APS announced it would convert two of the retired units to up to 380 MW of natural gas, with construction in 2028 and service in 2029 at 'about $440 million of incremental capital investment, mostly in 2027 and 2028' (Cooper), excluded from the $10.35B plan and still needing formal permitting; the coal capacity factor was 64 percent in Q2 2026 (Four Corners). Gas additions APS owns: 'over 400 megawatts of APS-owned resources brought online ahead of schedule' in 2025 (new Sundance units, the Agave battery, Ironwood Solar), the Redhawk expansion 'on track for completion in 2028', and 'ongoing preparations to support additional gas capacity of up to 2 gigawatts commencing in 2030' — the 2,000 MW natural gas plant proposed near Gila Bend in November 2025 in response to 'unprecedented requests from extra-large energy users, such as data centers and manufacturers'. Fuel comes through an anchor position on Energy Transfer's Desert Southwest expansion of the Transwestern system (1.5 Bcf/d from the Permian, in service late 2029; APS's contracted capacity undisclosed), and the Four Corners–Cholla strategic transmission project was described in August 2026 as a 'multi potential $1 billion project ... several hundred miles' on top of $300–400M a year of core transmission spend.",
+   "highlights": [
+    "Palo Verde: 29.1 percent, 1,146 MW entitlement; SLR application late 2027 for licenses to 2065/2066/2067; ~$200M capacity buyout plus ~$500M ten-year program in the plan; 100 percent recycled wastewater",
+    "Cholla conversion: two retired coal units to up to 380 MW of gas, construction 2028, service 2029, up to $440M excluded from the $10.35B plan (announced July 2026; VP of Generation Johnny Penrod)",
+    "Redhawk gas expansion (about 400 MW from the 2023 RFP) in service 2028; Sundance 90 MW online 2025; up to 2 GW of new gas from 2030 (2,000 MW Gila Bend proposal, November 2025)",
+    "Desert Southwest pipeline (Energy Transfer/Transwestern, 1.5 Bcf/d, late 2029): APS is the anchor customer alongside SRP; 'I expect us to break our peak this year ... mostly just due to large customer data center load growth' — Jordan Tillinghast, APS data center strategy, August 2025",
+    "Generation and purchased power in Q2 2026: 5,962 GWh generated, 4,925 GWh purchased (up from 3,720), against retail sales of 10,537 GWh — purchases now supply nearly half"
+   ],
+   "positioning": "A nuclear-anchored owner that is adding gas for the ramp and buying everything else. Its owned fleet is smaller than any other corpus utility except DTE's storage-adjusted book, and its purchased power (4,925 GWh in one quarter) is the largest relative share in this file — which is why the tolls, not the plant dockets, are where the equipment decisions sit.",
+   "soldThrough": "Rate-based ownership under ACC review (no state certificate-of-need regime for generation is described in the read sources; the Cholla conversion 'needs formal permitting and planning'); FERC formula rates on transmission",
+   "targetSegments": [
+    "APS retail load and the XHLF ramp",
+    "WECC non-ISO balancing area reliability (APS is not in CAISO; the reported 2024 decision to join SPP Markets+ is unverified in this file)"
+   ],
+   "roadmap": "Redhawk expansion 2028; Cholla 380 MW 2029; Desert Southwest pipeline late 2029; up to 2 GW of gas from 2030; Palo Verde SLR filing late 2027; Four Corners–Cholla transmission."
+  },
+  {
+   "name": "Storage and renewable procurement — the all-source RFPs and the 20-year tolls",
+   "category": "Energy storage",
+   "description": "APS procures new capacity through recurring all-source RFPs and contracts most of it from third parties. The 2023 all-source RFP (issued in late 2024 for delivery from 2026) signed about 7,300 MW: about 2,650 MW of solar (170 MW Ironwood, APS-owned, Yuma County, 2026, plus 2,480 MW under PPAs), about 3,610 MW of storage (150 MW Agave, APS-owned, plus 3,460 MW under PPAs and tolls), more than 500 MW of wind in Navajo County and about 520 MW of gas (90 MW at Sundance, the roughly 400 MW Redhawk expansion and a 30 MW PPA) — Geisler described it in August 2025 as 'about 2 GW secured through' the RFP for the near term. The storage tolls the corpus can see are all 20-year: Papago Storage (Recurrent Energy, 1,200 MWh, Maricopa County, from the May 2022 RFP, Arizona's largest standalone battery, in service 2025), Scatter Wash (Strata Clean Energy, 255 MW / 1,020 MWh, from the 2022 RFP, later sold to Copenhagen Infrastructure Partners), Justice (Strata, 150 MW / 600 MWh) and White Tank (100 MW / 400 MWh, Avondale, from the 2023 RFP, sold by Strata to GridStor in September 2025, $220M of financing closed September 23, 2026, commercial in the first half of 2027); the 2023 RFP sought 1.4 GW of storage and 700 MW of solar or wind, with 365 equivalent cycles a year at 50 percent average state of charge. The 2025 all-source RFP was still in evaluation and negotiation in August 2026 ('we expect to be able to have some of those resources contracted by the end of the year'); no award has been disclosed. The 2019 McMicken battery fire, for which APS commissioned DNV's forensic report, is carried in the corpus's DNV dossier and is not re-verified here.",
+   "highlights": [
+    "2023 all-source RFP: ~7,300 MW — solar ~2,650 MW (170 MW owned), storage ~3,610 MW (150 MW owned), wind 500-plus MW, gas ~520 MW (Brian Cole, VP Resource Management, November 21, 2024)",
+    "20-year tolls: Papago 1,200 MWh (Recurrent), Scatter Wash 255 MW / 1,020 MWh and Justice 150 MW / 600 MWh (Strata), White Tank 100 MW / 400 MWh (GridStor, COD 1H 2027) — the toller (APS) takes market risk, the owner takes availability risk",
+    "Contract design (2023 RFP): 365 equivalent cycles a year, 50 percent average state of charge; no battery OEM is named by APS in any read source",
+    "2025 all-source RFP: evaluation and negotiation continuing; contracts expected 'by the end of the year' (August 2026 call); no awards disclosed",
+    "Renewable and demand-side management spend guided at $80–90M in 2026"
+   ],
+   "positioning": "The corpus's purest toll buyer among utilities: where WEC buys batteries build-transfer into rate base and Duke self-builds, APS contracts the capacity and leaves ownership, financing and the OEM choice with Strata, Recurrent, GridStor and the undisclosed 2023 awardees. For a storage or integrator seller the account is the developer bidding into the next APS RFP, and the RFP's cycle and state-of-charge terms are the specification.",
+   "soldThrough": "All-source RFPs (2022, 2023, 2025) producing 20-year tolling agreements and PPAs; APS-owned projects (Agave, Ironwood) only where the RFP economics favoured ownership",
+   "targetSegments": [
+    "Storage developers and IPPs bidding into APS RFPs (Strata, Recurrent, GridStor, Invenergy, EDF Renewables per the Strata dossier)",
+    "Solar and wind developers under PPA"
+   ],
+   "roadmap": "2025 RFP awards by year-end 2026; White Tank commercial 1H 2027; the IRP filed in summer 2026 reflecting 4.5 GW of committed load sets the next RFP's need."
+  },
+  {
+   "name": "Capital plan, financing and credit — $10.35B through 2028 and the rate-base path",
+   "category": "Corporate",
+   "description": "The 2025–2028 capital plan is $10.35B ($2.40B in 2025 rising to $2.70B in 2028; 2025: generation $890M, transmission $465M, distribution $710M, other about $400M a year; 2028: generation $710M, transmission $860M, distribution $795M), excluding up to $440M for the Cholla conversion; rate base grows from $14.7B at year-end 2024 to $19.7B in 2028 (7–9 percent a year). Financing for 2026–2028 is about $3.8B of operating cash net of dividends, $2.6–2.9B of APS debt, $300–350M of Pinnacle West debt and $1.0–1.2B of Pinnacle West equity; equity forwards of $685M were priced through July 2026 and the at-the-market program is fully used, and by August 2026 APS had issued $600M of its $1.2B 2026 debt need, Pinnacle West $500M of debt and $650M of equity priced pending settlement — 'the 2026 equity needs are largely de-risked'. Ratings at July 31, 2026: APS Baa1 / BBB+ / BBB+, Pinnacle West Baa2 / BBB+ / BBB, stable, reaffirmed in April 2026; the FFO-to-debt target is 14–16 percent with more than 100 basis points of cushion above Moody's threshold, holding-company debt in the mid-teens percent and APS equity above 50 percent. The quarterly dividend was declared at $0.91 in October 2025 (wire headlines; the release body was not readable, so the prior amount is not stated). Long-term EPS growth is guided at 5–7 percent off the original 2024 midpoint.",
+   "highlights": [
+    "Capex $10.35B 2025–2028 (+ up to $440M Cholla); rate base $14.7B (2024) → $19.7B (2028), 7–9 percent CAGR",
+    "2026–2028 sources: ~$3.8B operating cash net of dividends; APS debt $2.6–2.9B; PNW debt $300–350M; PNW equity $1.0–1.2B ($685M of forwards priced through July 2026; ATM fully used)",
+    "Ratings: APS Baa1/BBB+/BBB+, PNW Baa2/BBB+/BBB, stable (July 31, 2026); FFO/debt target 14–16 percent",
+    "Allowed returns: ACC 9.55 percent on 51.93 percent equity (current) and 10.70 percent requested; FERC transmission 10.75 percent on 51.99 percent equity"
+   ],
+   "positioning": "The smallest capital plan among the corpus's regulated utilities (Duke $103B, PPL $23B, NiSource $28.6B, WEC $37.5B, DTE $36.5B) and the lowest-rated at the holding company (Baa2/BBB), which is why the return and the formula-rate outcome of the December 2026 decision carry more weight for its equity story than any single plant.",
+   "soldThrough": "Not applicable — corporate finance",
+   "targetSegments": [
+    "Not applicable"
+   ],
+   "roadmap": "Rate-base guidance to 2028; the ACC decision on the 10.70 percent return and FRAM by December 31, 2026; Cholla capital mostly in 2027–2028."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Rate Schedule XHLF — General Service Extra High Load Factor (effective March 8, 2024, ACC Decision No. 79293)",
+   "specs": [
+    {
+     "band": "Eligibility",
+     "label": "Demand",
+     "value": "monthly demand ≥5,000 kW"
+    },
+    {
+     "band": "Eligibility",
+     "label": "Load factor",
+     "value": "≥92% for at least 9 of the prior 12 months"
+    },
+    {
+     "band": "Eligibility",
+     "label": "Sustainability",
+     "value": "at ≥15,000 kW, sustainability features and 50% Carbon Free Activity"
+    },
+    {
+     "band": "Contract",
+     "label": "Electric Supply Agreement",
+     "value": "required; specifies contract length, minimum and maximum monthly loads and special charges"
+    },
+    {
+     "band": "Contract",
+     "label": "Minimum bill",
+     "value": "per the contract"
+    },
+    {
+     "band": "Contract",
+     "label": "Above 15,000 kW",
+     "value": "contributions in aid of construction; maintenance contract; share of replacement facility cost"
+    },
+    {
+     "band": "Rates (bundled, secondary)",
+     "label": "Basic service",
+     "value": "$5.682 per day"
+    },
+    {
+     "band": "Rates (bundled, secondary)",
+     "label": "Demand",
+     "value": "$18.750 per kW"
+    },
+    {
+     "band": "Rates (bundled, secondary)",
+     "label": "Energy",
+     "value": "$0.04210 per kWh"
+    },
+    {
+     "band": "Exit",
+     "label": "Exit fee",
+     "value": "none explicit on the sheet — proposed collateral, minimum-bill and rate changes are in the 2025 rate case; negotiated term, collateral and exit fees are in the subscription model under development"
+    }
+   ],
+   "notes": "The tariff sheet as published by APS; the rate case proposes about a 45 percent increase for extra-large users and formula-rate treatment. The Commission's decision is due by December 31, 2026."
+  },
+  {
+   "product": "2025 APS rate case (filed June 2025; hearing May 18 – July 7, 2026)",
+   "specs": [
+    {
+     "band": "Request",
+     "label": "Revenue requirement",
+     "value": "+$692M total; +$609M net"
+    },
+    {
+     "band": "Request",
+     "label": "Return on equity",
+     "value": "10.70% (current allowed 9.55% on 51.93% equity, test year June 30, 2022 adjusted through June 30, 2023)"
+    },
+    {
+     "band": "Request",
+     "label": "Capital structure",
+     "value": "52.35% equity / 47.65% debt"
+    },
+    {
+     "band": "Request",
+     "label": "Bill impact",
+     "value": "14.69% on day one (about 14% overall; about 45% for extra-large users)"
+    },
+    {
+     "band": "Request",
+     "label": "Components",
+     "value": "rate base growth $206M; post-test-year plant $162M; fair value increment $89M; WACC $129M; other $107M"
+    },
+    {
+     "band": "Request",
+     "label": "Mechanism",
+     "value": "Formula Rate Adjustment Mechanism (FRAM) — annual adjustments on projected costs by class"
+    },
+    {
+     "band": "Positions",
+     "label": "ACC Staff",
+     "value": "ROE 9.55–9.80%"
+    },
+    {
+     "band": "Positions",
+     "label": "RUCO",
+     "value": "opposes formula rates; wants a separate data-center class"
+    },
+    {
+     "band": "Positions",
+     "label": "Attorney General",
+     "value": "about 3% increase at a 6% ROE; '$524 million wealth transfer'"
+    },
+    {
+     "band": "Schedule",
+     "label": "Process",
+     "value": "31 hearing days, nearly three dozen intervenors, >50 witnesses; initial briefs Aug 27, reply briefs Sep 11, 2026; ALJ recommended order late November 2026; Commission vote by December 31, 2026; new rates early 2027"
+    }
+   ],
+   "notes": "Sources: Q2 2026 investor slides, the ACC's July 10, 2026 'What's next in the APS rate case', the Arizona Capitol Times' May 19, 2026 hearing report. Docket testimony was not read."
+  },
+  {
+   "product": "2025–2028 capital plan and financing (Q2 2026 investor slides)",
+   "specs": [
+    {
+     "band": "Capex",
+     "label": "Total 2025–2028",
+     "value": "$10.35B (2025 $2.40B; 2028 $2.70B); Cholla conversion up to $440M excluded"
+    },
+    {
+     "band": "Capex",
+     "label": "2025 by category",
+     "value": "generation $890M; transmission $465M; distribution $710M; other ~$400M/yr"
+    },
+    {
+     "band": "Capex",
+     "label": "2028 by category",
+     "value": "generation $710M; transmission $860M; distribution $795M"
+    },
+    {
+     "band": "Rate base",
+     "label": "Path",
+     "value": "$14.7B year-end 2024 → $19.7B 2028 (7–9% CAGR)"
+    },
+    {
+     "band": "Financing 2026–2028",
+     "label": "Sources",
+     "value": "operating cash ~$3.8B net of dividends; APS debt $2.6–2.9B; PNW debt $300–350M; PNW equity $1.0–1.2B"
+    },
+    {
+     "band": "Financing 2026–2028",
+     "label": "Equity executed",
+     "value": "equity forwards $685M priced through July 2026; ATM fully utilized; 2026 PNW equity $650M priced pending settlement"
+    },
+    {
+     "band": "Financing 2026–2028",
+     "label": "Debt 2026",
+     "value": "APS $600M issued of a $1.2B need; PNW $500M issued"
+    },
+    {
+     "band": "Credit",
+     "label": "Ratings (July 31, 2026)",
+     "value": "APS Baa1 / BBB+ / BBB+; PNW Baa2 / BBB+ / BBB; stable, reaffirmed April 2026"
+    },
+    {
+     "band": "Credit",
+     "label": "Targets",
+     "value": "FFO/debt 14–16%; >100 bp cushion above Moody's threshold; holdco debt mid-teens %; APS equity >50%"
+    },
+    {
+     "band": "Returns",
+     "label": "FERC transmission",
+     "value": "ROE 10.75%; equity 51.99%"
+    }
+   ],
+   "notes": "All figures as summarized from the Q2 2026 slides (August 2026)."
+  },
+  {
+   "product": "Large-load ladder and system (Q2 2026 slides; APS data-center page; ACC workshop)",
+   "specs": [
+    {
+     "band": "Load",
+     "label": "2025 system peak",
+     "value": "8.6 GW"
+    },
+    {
+     "band": "Load",
+     "label": "Committed queue",
+     "value": "~4.5 GW ('4,500 megawatts of large C&I that's ramping up')"
+    },
+    {
+     "band": "Load",
+     "label": "Uncommitted queue",
+     "value": "~20 GW (19.0 GW on the data-center page)"
+    },
+    {
+     "band": "Load",
+     "label": "Total potential",
+     "value": "~33 GW"
+    },
+    {
+     "band": "Load",
+     "label": "2035 forecast peak",
+     "value": "12.0 GW vs 8.7 GW in 2025 (data-center page)"
+    },
+    {
+     "band": "Load",
+     "label": "Data centers' share of 2025 peak",
+     "value": "~5%"
+    },
+    {
+     "band": "Growth",
+     "label": "Weather-normalized sales",
+     "value": "2025 +5.0%; Q1 2026 +9.4%; Q2 2026 +5.6%; 2026 guidance 4–6% (3–5 points from large facilities); 2026–2030 5–7%/yr; C&I long-term 4–6%"
+    },
+    {
+     "band": "Growth",
+     "label": "Customer growth",
+     "value": "2025 2.4%; Q2 2026 2.1%; guidance 1.5–2.5%/yr through 2030"
+    },
+    {
+     "band": "Operations (Q2 2026)",
+     "label": "Sales and supply",
+     "value": "retail sales 10,537 GWh (Q2 2025 9,431); generation 5,962 GWh; purchased power 4,925 GWh (3,720); nuclear capacity factor 86% for the quarter, 92% for six months; coal 64%; cooling degree days 619 (578)"
+    },
+    {
+     "band": "Supply",
+     "label": "Owned/leased generation",
+     "value": "6,257 MW regulated (FY2025 Form 10-K); Palo Verde entitlement 1,146 MW"
+    }
+   ],
+   "notes": "The ACC workshop summary's '13.1 GW' large-customer peak estimate is treated as a forecast or queue figure and not adopted."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Net income attributable to common shareholders",
+      "actual": "$608.8M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Comparative figure from the FY2025 release; consensus for the year not located",
+      "kpi": "net-income",
+      "usdMillions": 608.8,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share",
+      "actual": "$5.24",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q4 2024 was a net loss of $6.8M, or −$0.06 per share; the year's guidance and consensus were not read",
+      "kpi": "eps"
+     }
+    ],
+    "commentary": "Read only as the comparison year in the FY2025 release; the FY2024 results release itself was not consulted."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Net income attributable to common shareholders",
+      "actual": "$616.5M (FY2024 $608.8M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Third-quarter net income $413.2M ($3.39) beat the $3.37 of a year earlier and, per GuruFocus, consensus; Q4 net income $15.4M ($0.13) against a Q4 2024 loss",
+      "kpi": "net-income",
+      "usdMillions": 616.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted earnings per share",
+      "actual": "$5.05 (FY2024 $5.24)",
+      "expected": "$4.90–5.10 guidance (raised November 3, 2025 from the prior range); Q4 consensus $0.05 (TheFly headline)",
+      "verdict": "beat",
+      "result": "Q4 2025 EPS of $0.13 beat the $0.05 consensus; the year landed inside the raised guidance",
+      "kpi": "eps"
+     },
+     {
+      "name": "Third-quarter operating revenue",
+      "actual": "$1.82B (Q3 2024 $1.77B)",
+      "expected": "Beat per GuruFocus",
+      "verdict": "beat",
+      "result": "Customer growth 2.4 percent; weather-normalized sales +5.4 percent; residential +4.3 percent; 'third-hottest Arizona summer on record'"
+     },
+     {
+      "name": "Committed large-load queue",
+      "actual": "About 4.5 GW committed, ~20 GW uncommitted (February 2026 call)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "TSMC a 'material portion' of the committed queue",
+      "kpi": "mw-contracted",
+      "qty": 4500
+     }
+    ],
+    "commentary": "Full-year revenue was not stated in the read releases; the quarter-by-quarter record (Q1 loss, Q3 $1.82B) is what the comparison rests on. The dividend was declared at $0.91 a quarter in October 2025 (wire headline only)."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$1,149.6M (Q1 2025 $1,032.3M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Weather-normalized sales +9.4 percent; customer growth 2.2 percent",
+      "kpi": "revenue",
+      "usdMillions": 1149.6,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable / diluted EPS",
+      "actual": "$32.9M / $0.27 (Q1 2025 net loss $4.6M / −$0.04)",
+      "expected": "Beat per Investing.com's headline ('surprises with strong EPS'); the consensus figure was not read",
+      "verdict": "beat",
+      "result": "2026 guidance $4.55–4.75 reaffirmed; Phoenix's warmest winter on record, February the hottest ever, March 12.1 degrees above normal"
+     }
+    ],
+    "commentary": "The quarter that put weather-normalized sales growth at 9.4 percent — the highest in this file — on the back of an unprecedented winter."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$1,455.7M (Q2 2025 $1,358.8M); operating expenses $1,150.1M ($1,051.2M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Total retail sales +9.6 percent; weather-normalized +5.6 percent; cooling degree days +7 percent",
+      "kpi": "revenue",
+      "usdMillions": 1455.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Net income attributable / diluted EPS",
+      "actual": "$178.6M / $1.43 (Q2 2025 $192.6M / $1.58)",
+      "expected": "$1.47 consensus (GuruFocus / Yahoo headline)",
+      "verdict": "miss",
+      "result": "Lower than a year earlier despite higher sales; guidance $4.55–4.75 reaffirmed; 'Summer arrived early this year, with temperatures reaching 105° F back in March' (Geisler)"
+     },
+     {
+      "name": "Committed large-load queue",
+      "actual": "~4.5 GW committed; ~20 GW uncommitted; ~33 GW total potential",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "C&I sales +12.7 percent in the quarter, +13.6 percent year-to-date",
+      "kpi": "mw-contracted",
+      "qty": 4500
+     },
+     {
+      "name": "Capital plan 2025–2028",
+      "actual": "$10.35B, plus up to $440M for the Cholla conversion",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Rate base $14.7B → $19.7B (2028)",
+      "kpi": "capex",
+      "usdMillions": 10350,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "Sales growth and a miss in the same quarter: the load is arriving faster than the rate case can price it, and the second-half comparison carries last summer's third-hottest-on-record base."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-23",
+   "category": "financial",
+   "headline": "GridStor closes $220M of financing (ING Capital, KeyBank, Zions) for the 100 MW / 400 MWh White Tank battery under its 20-year APS tolling agreement; commercial operation in the first half of 2027",
+   "read": "The last of the corpus-visible 2023 RFP tolls reaches financial close with the toll as the bankable contract — APS's counterparty risk is what the lenders priced.",
+   "source": "https://www.energy-storage.news/gridstor-closes-us220-million-financing-for-400mwh-arizona-bess/"
+  },
+  {
+   "date": "2026-08-11",
+   "category": "customer",
+   "headline": "Q2 call: 'close to 4.5 GW' committed with TSMC at 'over 1 gigawatt', 20,000 acres in planning around the fabs, 'half a dozen' data-center campuses ramping; 2025 RFP awards still in negotiation with 'some of those resources contracted by the end of the year'; Four Corners–Cholla transmission a potential $1B project",
+   "read": "The committed queue is unchanged since February, which means the conversion of the 20 GW uncommitted queue is waiting on the subscription contracts and the rate case rather than on demand.",
+   "source": "https://www.fool.com/earnings/call-transcripts/2026/08/11/pinnacle-west-capital-pnw-q2-2026-earnings-call-transcript/"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Q2 2026 net income $178.6M, $1.43 per share (Q2 2025 $1.58) against a $1.47 consensus; operating revenue $1,455.7M; weather-normalized sales +5.6 percent; guidance $4.55–4.75 reaffirmed",
+   "read": "A miss on a growing top line: operating expenses rose $99M against a $97M revenue gain, the cost of serving load the current rates were not set for.",
+   "source": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2026/Pinnacle-West-Reports-Lower-2026-Second-Quarter-Financial-Results-Compared-to-a-Year-Ago/default.aspx"
+  },
+  {
+   "date": "2026-07-10",
+   "category": "regulatory",
+   "headline": "ACC sets the rate-case timeline after 31 hearing days: ALJ recommended order late November 2026, Commission vote by December 31, new rates early 2027; XHLF changes and the Formula Rate Adjustment Mechanism are the headline issues",
+   "read": "The Commission itself names the large-load class and the formula rate as what the case decides — the two terms every counterparty in this file is waiting on.",
+   "source": "https://www.azcc.gov/news/home/2026/07/10/what-s-next-in-the-aps-rate-case"
+  },
+  {
+   "date": "2026-07-09",
+   "category": "policy",
+   "headline": "Arizona pauses the data-center transaction-privilege and use-tax exemption for three years (through 2029) after a session dominated by data centers; applications rushed before the June 30 deadline; the state counts about 98 operating and 86 planned data centers",
+   "read": "Tax policy turned against the build-out while rate policy (the ACC's exclusive authority) is still being written — an incentive pause that does not touch the queue already in APS's hands.",
+   "source": "https://azcapitoltimes.com/news/2026/07/09/data-centers-dominated-2026-session-lawmakers-answered-with-3-year-tax-incentive-pause/"
+  },
+  {
+   "date": "2026-07-06",
+   "category": "capacity",
+   "headline": "APS to convert two retired Cholla coal units (Navajo County) to up to 380 MW of natural gas: construction 2028, service 2029, permitting still to come; 'about $440 million of incremental capital investment, mostly in 2027 and 2028'",
+   "read": "Coal-to-gas on an existing site is the fastest firm capacity APS can add itself; it sits outside the $10.35B plan and is the first owned-gas decision since Redhawk.",
+   "source": "https://www.utilitydive.com/news/aps-convert-coal-units-adding-380-mw-natural-gas/824471/"
+  },
+  {
+   "date": "2026-05-19",
+   "category": "regulatory",
+   "headline": "Rate-case hearing opens with hours of public protest over a 14 percent increase (45 percent for large-load users, about $240 a year per household); RUCO opposes formula rates and wants a separate data-center class; the Attorney General calls the request a '$524 million wealth transfer'",
+   "read": "The formula rate, not the data-center class, is the politically exposed term — every consumer party wants the large-load class and none wants annual adjustments.",
+   "source": "https://azcapitoltimes.com/news/2026/05/19/aps-rate-case-kicks-off-with-hours-of-protest-over-14-rate-increase/"
+  },
+  {
+   "date": "2026-05-12",
+   "category": "product-launch",
+   "headline": "APS is developing subscription-based, individually negotiated XHLF contracts — cost-of-service pricing, negotiated term, collateral and exit fees, front-of-the-meter or self-supply options — and expects to file them with the ACC in 2026; committed ~4.5 GW, uncommitted nearly 20 GW",
+   "read": "The subscription model is APS's version of WEC's bespoke resource, arriving by negotiated contract rather than tariff — and it is where the exit fee the XHLF sheet lacks will finally appear.",
+   "source": "https://www.newsdata.com/california_energy_markets/financial_news/aps-courts-xhlf-customers-with-tariff-subscription-models-for-service/"
+  },
+  {
+   "date": "2026-05-04",
+   "category": "financial",
+   "headline": "Q1 2026 net income $32.9M, $0.27 per share, against a $4.6M loss a year earlier; revenue $1,149.6M; weather-normalized sales +9.4 percent after the warmest winter on record in Phoenix",
+   "read": "A first quarter that is normally a loss turned positive on weather and load — the base the 2026 guidance was reaffirmed on.",
+   "source": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2026/Pinnacle-West-Reports-2026-First-Quarter-Financial-Results/default.aspx"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "regulatory",
+   "headline": "ACC large-load workshop (docket E-00000A-25-0069): statewide two dozen operating data centers above 2,000 MW and 10,600 MW planned; SRP 59 large-load customers at ~7,000 MW; TEP/UNSE 286 MW contracted with an 8–10 GW speculative queue; commissioners weigh large-load tariffs, ESAs assigning costs and a statewide mechanism",
+   "read": "Arizona's regulator is building a statewide large-load framework in parallel with APS's rate case, which could standardize the terms APS is negotiating bilaterally.",
+   "source": "https://www.azcc.gov/news/home/2026/04/20/acc-large-load-data-center-workshop-highlights"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "capacity",
+   "headline": "APS will file a Subsequent License Renewal Application in late 2027 to extend all three Palo Verde units by 20 years (Unit 1 to 2065, Unit 2 to 2066, Unit 3 to 2067)",
+   "read": "The corpus's third nuclear life-extension after Duke's and WEC's Point Beach contract: 1,146 MW of firm, carbon-free entitlement kept out of the replacement plan.",
+   "source": "https://www.aps.com/en/About/Our-Company/Newsroom/Articles/APS_Seeks_to_Renew_Palo_Verde_Generating_Station_Licensing"
+  },
+  {
+   "date": "2026-02-25",
+   "category": "financial",
+   "headline": "FY2025 net income $616.5M, $5.05 per share (FY2024 $5.24); Q4 $0.13 against a $0.05 consensus; 2026 guidance $4.55–4.75; 4.5 GW committed and 20 GW uncommitted 'under negotiation via subscription model'; over 400 MW of APS-owned resources online ahead of schedule; Redhawk 2028 and up to 2 GW of gas from 2030",
+   "read": "The call that first quantified the two queues and tied the rate case to 'getting the rate design changes agreed to for the new high load factor tariff'.",
+   "source": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2026/Pinnacle-West-Reports-2025-Full-Year-and-Fourth-Quarter-Results/default.aspx"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "capacity",
+   "headline": "Q3 2025: net income $413.2M, $3.39 per share; 2025 guidance raised to $4.90–5.10; 'unprecedented requests from extra-large energy users, such as data centers and manufacturers' prompt a proposed 2,000 MW natural gas plant near Gila Bend",
+   "read": "The 2 GW gas proposal is the owned-generation answer to the uncommitted queue — sized to the large-load requests, not to organic growth.",
+   "source": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2025/Pinnacle-West-Reports-2025-Third-Quarter-Financial-Results/default.aspx"
+  },
+  {
+   "date": "2025-08-07",
+   "category": "procurement",
+   "headline": "APS becomes the anchor customer on Energy Transfer's 1.5 Bcf/d Desert Southwest expansion of the Transwestern pipeline (Permian to Arizona, in service late 2029), alongside SRP; Geisler cites 'close to 4.5 GW of committed, high load customer demand, mainly data centers and some manufacturing'",
+   "read": "Fuel supply booked four years ahead of the gas plants it will feed — the physical commitment behind the 'up to 2 GW from 2030' line.",
+   "source": "https://www.utilitydive.com/news/arizona-utilities-aps-srp-transwestern-gas-pipeline-data-center/757040/"
+  },
+  {
+   "date": "2025-04-01",
+   "category": "leadership",
+   "headline": "Ted Geisler becomes Chairman, President and CEO of Pinnacle West and APS on Jeff Guldner's retirement (announced December 12, 2024; Guldner advisory through March 2026)",
+   "read": "An internal succession — 23 years at APS, president since 2022 — that keeps the rate-case and large-load strategy continuous through the decision year.",
+   "source": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2024/Pinnacle-West-and-APS-Announce-Leadership-Succession/default.aspx"
+  },
+  {
+   "date": "2024-11-21",
+   "category": "procurement",
+   "headline": "APS signs agreements for about 7,300 MW from the 2023 all-source RFP: ~2,650 MW solar (170 MW Ironwood owned), ~3,610 MW storage (150 MW Agave owned, 3,460 MW under PPAs and tolls), 500-plus MW wind and ~520 MW gas (Sundance, the Redhawk expansion, a 30 MW PPA)",
+   "read": "The procurement that defines APS's model: 96 percent of the storage is contracted, not owned, so the battery buyers are the developers on the other side of the tolls.",
+   "source": "https://www.tdworld.com/renewables/news/55245162/aps-signs-agreements-to-add-about-7300-mw-of-renewable-power-battery-energy-storage-and-natural-gas-to-energy-mix"
+  },
+  {
+   "date": "2024-11-14",
+   "category": "procurement",
+   "headline": "Strata Clean Energy signs a 20-year tolling agreement with APS for White Tank Energy Storage (100 MW / 400 MWh, Avondale) from the 2023 all-source RFP, following Justice (150 MW / 600 MWh) and Scatter Wash (255 MW / 1,020 MWh) from the 2022 RFP; the RFP sought 1.4 GW of storage at 365 equivalent cycles a year",
+   "read": "The toll terms — cycles and state of charge — are APS's battery specification; the OEM behind each project is the developer's decision.",
+   "source": "https://www.energy-storage.news/strata-clean-energy-signs-another-rfp-driven-bess-tolling-agreement-with-arizona-public-service/"
+  },
+  {
+   "date": "2024-03-08",
+   "category": "regulatory",
+   "headline": "Rate Schedule XHLF (General Service Extra High Load Factor) takes effect under ACC Decision No. 79293: ≥5,000 kW and ≥92 percent load factor, an Electric Supply Agreement with a minimum bill, contributions in aid of construction above 15,000 kW, $18.750/kW demand and $0.04210/kWh energy",
+   "read": "A large-load schedule written before the boom — it has the minimum bill and the ESA but no exit fee, which is what the 2025 rate case and the subscription model add.",
+   "source": "https://www.aps.com/-/media/APS/APSCOM-PDFs/Utility/Regulatory-and-Legal/Regulatory-Plan-Details-Tariffs/Business/Business-NonResidential-Plans/ExtraHighLoadFactor.pdf"
+  },
+  {
+   "date": "2023-08-16",
+   "category": "procurement",
+   "headline": "APS awards Recurrent Energy a 20-year tolling agreement for Papago Storage (1,200 MWh, Maricopa County) from the May 2022 all-source RFP — Arizona's largest standalone battery, construction from Q3 2024, commercial operation targeted Q2 2025",
+   "read": "The first of the tolls that made APS the corpus's largest toll counterparty; Recurrent (Canadian Solar) owns and operates it.",
+   "source": "https://recurrentenergy.com/arizona-public-service-awards-recurrent-energy-with-1200-mwh-energy-storage-tolling-agreement/"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that APS is the corpus's purest toll buyer among regulated utilities, and that the battery and integrator decisions for its territory are made by the developers on the other side of its all-source RFPs, not by APS. Basis: the November 21, 2024 award release (about 3,610 MW of storage signed, 150 MW of it APS-owned), the Recurrent, Strata and GridStor releases (20-year tolls on Papago, Scatter Wash, Justice and White Tank) and the RFP's own terms (365 equivalent cycles a year, 50 percent average state of charge). For a storage seller the account is the bidder into the 2025 RFP, whose awards APS expects 'by the end of the year'; no APS document names a battery OEM.",
+  "(High confidence) We assess that the December 2026 rate-case decision, not demand, is the gate on converting the roughly 20 GW uncommitted queue into contracted load. Basis: Geisler's February 2026 statement that 'getting the rate design changes agreed to for the new high load factor tariff' is critical; the XHLF sheet's absence of an exit fee and the rate case's proposed collateral and minimum-bill changes; APS's May 2026 statement that subscription contracts will be filed with the ACC in 2026; and the ACC's July 10 timeline (ALJ order late November, vote by December 31). The committed queue has sat at about 4.5 GW from August 2025 through August 2026.",
+  "(Moderate confidence) We assess that the Formula Rate Adjustment Mechanism is the term most likely to be cut or narrowed, and that its loss would matter more to Pinnacle West's earnings path than a lower return would. Basis: RUCO's opposition ('one, two, three or four increases on an annual basis'), the Attorney General's position, Staff's 9.55–9.80 percent return against the 10.70 percent asked, and the company's own 5–7 percent growth guidance off a rate base growing 7–9 percent — a growth rate that only holds if regulatory lag is removed. This is an assessment of the intervenor record as reported by the press; the docket testimony was not read.",
+  "(Moderate confidence) We assess that APS's next owned generation will be gas on existing sites — Cholla (380 MW, 2029), Redhawk (2028) and up to 2 GW from 2030 near Gila Bend — fuelled by the Desert Southwest pipeline, and that Palo Verde's license renewal removes the replacement decision that would otherwise have competed for the same capital. Basis: the July 2026 Cholla announcement and Cooper's $440M figure, the Q4 2025 call's 2 GW line, the August 2025 anchor-shipper report and the March 2026 SLR announcement. The turbine OEMs for Cholla and Redhawk are undisclosed.",
+  "(Low confidence) We assess that the concentration of committed load in one manufacturer (TSMC, 'over 1 gigawatt' and a 'material portion' of the 4.5 GW) and in unnamed data-center campuses leaves the load forecast exposed to a single semiconductor cycle. Basis: the company names no other customer, and the AZ Technology Council's dated list is the only public map of West Valley operators; the corpus's Tract (Buckeye, up to 1.8 GW) and Compass (Goodyear) dossiers place their own campuses in APS territory but APS confirms neither. Treat the customer mix as unverified."
+ ],
+ "relationships": [
+  {
+   "slug": "recurrent-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2023-08",
+   "scale": "1,200 MWh Papago Storage; 600 MWh Desert Bloom per the Recurrent dossier",
+   "via": "20-year tolling agreements from the 2022 all-source RFP",
+   "note": "Recurrent Energy owns and operates Papago Storage (1,200 MWh, Maricopa County), Arizona's largest standalone battery, under a 20-year APS tolling agreement awarded in August 2023 from the May 2022 all-source RFP.",
+   "context": "The award release describes Papago as serving about 244,000 homes for four hours, with construction from the third quarter of 2024 and commercial operation targeted for the second quarter of 2025; Recurrent, a Canadian Solar subsidiary, owns and operates it and APS takes the market risk as toller. The corpus's Recurrent and Canadian Solar dossiers add a second 20-year APS toll on Desert Bloom (600 MWh) and report Papago energized in 2025; those additions are carried from the counterparty's record and were not re-verified here.",
+   "source": "https://recurrentenergy.com/arizona-public-service-awards-recurrent-energy-with-1200-mwh-energy-storage-tolling-agreement/"
+  },
+  {
+   "slug": "strata-clean-energy",
+   "type": "supplier",
+   "status": "active",
+   "since": "2022",
+   "scale": "Scatter Wash 255 MW / 1,020 MWh; Justice 150 MW / 600 MWh; White Tank 100 MW / 400 MWh",
+   "via": "20-year tolling agreements from the 2022 and 2023 all-source RFPs",
+   "note": "Strata Clean Energy has won three 20-year APS tolls — Scatter Wash and Justice from the 2022 RFP and White Tank from the 2023 RFP — and sells the projects on with the toll attached (Scatter Wash to Copenhagen Infrastructure Partners, White Tank to GridStor).",
+   "context": "The November 14, 2024 report on White Tank lists the prior Strata–APS tolls and the 2023 RFP's terms (1.4 GW of storage and 700 MW of solar or wind sought; 365 equivalent cycles a year; 50 percent average state of charge). The corpus's Strata dossier characterizes the business as originate-contract-and-sell around APS's RFPs, with Justice retained and operational in April 2026 per the company's schedule.",
+   "source": "https://www.energy-storage.news/strata-clean-energy-signs-another-rfp-driven-bess-tolling-agreement-with-arizona-public-service/"
+  },
+  {
+   "slug": "gridstor",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "100 MW / 400 MWh White Tank",
+   "via": "20-year tolling agreement (assigned from Strata)",
+   "note": "GridStor acquired White Tank Energy Storage (100 MW / 400 MWh, Avondale) from Strata in September 2025 with its 20-year APS toll and closed $220M of financing from ING Capital, KeyBank and Zions Capital Markets on September 23, 2026; commercial operation in the first half of 2027.",
+   "context": "The financing is the corpus's most recent evidence that an APS toll is bankable on its own terms. GridStor's dossier records the same toll and places the project east of APS's Colter substation.",
+   "source": "https://www.energy-storage.news/gridstor-closes-us220-million-financing-for-400mwh-arizona-bess/"
+  },
+  {
+   "slug": "invenergy",
+   "type": "supplier",
+   "status": "active",
+   "scale": "11 APS-contracted storage projects (261 MW / 903 MWh) per the Invenergy dossier",
+   "via": "Power purchase and energy-storage agreements",
+   "note": "The corpus's Invenergy dossier records eleven APS-contracted storage projects commissioned in 2023–2024 (Cotton Center, Desert Star, El Sol, Foothills I and II, Gila Bend I and II, Paloma, Hyder I and II and Yuma — 261 MW / 903 MWh) and the Yuma Solar Energy Center (70 MW solar plus 70 MW storage) under an APS PPA.",
+   "context": "Carried from the counterparty's record: no APS source read for this dossier names Invenergy, so the relationship is stated on the Invenergy dossier's own citations (Energy-Storage.news and Invenergy's Yuma release) and was not re-verified here.",
+   "source": "Invenergy dossier (profileVersion 3) — products and technical specifications, corpus"
+  },
+  {
+   "slug": "tract",
+   "type": "customer",
+   "status": "announced",
+   "scale": "up to 1.8 GW at Buckeye per the Tract dossier",
+   "via": "Large-load service (XHLF)",
+   "note": "The corpus's Tract dossier places its 2,069-acre Buckeye, Arizona campus (up to 20 million square feet, as many as 40 data centers) at up to 1.8 GW with APS, still 'planned or proposed' in May 2026; APS names no data-center customer other than TSMC.",
+   "context": "Stated on Tract's record only. Whether Buckeye sits inside APS's 4.5 GW committed queue or the 20 GW uncommitted queue is not disclosed by either party.",
+   "source": "Tract dossier (profileVersion 4) — products and ecosystem role, corpus"
+  },
+  {
+   "slug": "compass-datacenters",
+   "type": "customer",
+   "status": "active",
+   "via": "Large-load service (230 kV substation adjacent, Goodyear)",
+   "note": "The corpus's Compass Datacenters dossier names APS as the utility for its Goodyear campus ('230kV substation adjacent'); the AZ Technology Council's dated list puts the Goodyear site at 350 MW.",
+   "context": "Stated on Compass's record and a dated third-party list; APS confirms no data-center customer by name.",
+   "source": "Compass Datacenters dossier (profileVersion 6) — products, corpus"
+  },
+  {
+   "slug": "dnv",
+   "type": "partner",
+   "status": "historical",
+   "since": "2019",
+   "via": "Forensic review of the McMicken battery event; data-center efficiency programme",
+   "note": "APS chose DNV GL to consolidate the forensic and expert inputs on the April 2019 McMicken battery explosion into a single report (attributing the event to an internal cell defect), and DNV administers APS's efficiency-programme collateral for data centers.",
+   "context": "Carried from the corpus's DNV dossier, which cites APS's own 2020 statement and DNV's APS segment guide; not re-verified here.",
+   "source": "DNV dossier (profileVersion 1) — products and ecosystem role, corpus"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ACC 2025 rate case — XHLF redesign and the Formula Rate Adjustment Mechanism",
+   "status": "proposed",
+   "effectiveDate": "2027",
+   "exposure": "APS's June 2025 filing asks for a $692M revenue increase, a 10.70 percent return, about a 45 percent increase for extra-large users with higher minimum bills and collateral, and Arizona's first formula rate; the ACC's July 10, 2026 note lists XHLF changes and FRAM authorization as the case's issues, with a decision due by December 31, 2026 and rates in early 2027. Staff proposed 9.55–9.80 percent; RUCO opposes formula rates; the Attorney General argues for a far smaller increase.",
+   "mitigation": "APS's stated position: data centers 'will not be subsidized by existing customers'; subscription-model XHLF contracts with negotiated collateral and exit fees to be filed in 2026; Geisler calls the outcome a 'sustainable cost recovery framework'.",
+   "source": "https://www.azcc.gov/news/home/2026/07/10/what-s-next-in-the-aps-rate-case"
+  },
+  {
+   "regime": "Arizona data-center tax-exemption pause (2026 session)",
+   "status": "in-effect",
+   "effectiveDate": "2026-07",
+   "exposure": "The legislature paused the data-center transaction-privilege and use-tax exemption for three years, through 2029, after applications rushed in before the June 30 deadline; the Capitol Times reports about 98 operating and 86 planned data centers in the state and Democratic proposals to shield residential ratepayers, with rate authority resting exclusively with the ACC. The pause bears on the pipeline behind APS's 20 GW uncommitted queue, not on load already under agreement.",
+   "mitigation": "None stated by APS; commissioners have discussed 'bring-your-own-capacity' models and the ACC's statewide large-load workshop (April 2026) is developing standard mechanisms.",
+   "source": "https://azcapitoltimes.com/news/2026/07/09/data-centers-dominated-2026-session-lawmakers-answered-with-3-year-tax-incentive-pause/"
+  },
+  {
+   "regime": "ACC statewide large-load framework (docket E-00000A-25-0069)",
+   "status": "proposed",
+   "effectiveDate": "2026-04",
+   "exposure": "The April 16, 2026 workshop reviewed large-load tariffs, electric supply agreements that assign costs, statewide standard mechanisms and the federal Ratepayer Protection Pledge, with a further workshop planned on tariff certainty, IRP changes and hook-up fees. A statewide mechanism could standardize terms APS is negotiating bilaterally under XHLF.",
+   "mitigation": "APS's XHLF schedule and subscription contracts already carry ESAs, minimum bills and collateral; the IRP filed in summer 2026 reflects the 4.5 GW committed queue.",
+   "source": "https://www.azcc.gov/news/home/2026/04/20/acc-large-load-data-center-workshop-highlights"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Ted N. Geisler",
+   "title": "Chairman, President and Chief Executive Officer, Pinnacle West and APS",
+   "background": [
+    "Chairman, President and CEO of Pinnacle West and APS since April 1, 2025, succeeding Jeff Guldner (announced December 12, 2024); President of APS since 2022; on the executive team since 2018",
+    "Prior roles at APS: chief financial officer, chief information officer, general manager of transmission and distribution operations, director of corporate strategy; joined APS in 2001",
+    "BS, Colorado State University; MBA, Arizona State University; MIT Nuclear Reactor Technology Course; Stanford GSB Strategic Financial Leadership; boards of the Nuclear Energy Institute, Arizona Chamber, GPEC, Greater Phoenix Leadership and the W.P. Carey Dean's Council; honorary commander, Luke Air Force Base (company bio)"
+   ]
+  },
+  {
+   "name": "Andrew Cooper",
+   "title": "Senior Vice President and Chief Financial Officer, Pinnacle West and APS",
+   "background": [
+    "SVP and CFO since 2020; the voice of the capital plan and financing on the 2026 calls ('4,500 megawatts of large C&I that's ramping up'; Cholla 'about $440 million of incremental capital investment')",
+    "Director of Corporate Finance, Consolidated Edison; more than ten years as a Barclays investment banker covering power and utilities",
+    "BA, Harvard College; JD, Harvard Law School; MIT Nuclear Reactor Technology Course; member of the New York Bar (company bio)"
+   ]
+  },
+  {
+   "name": "Jacob Tetlow",
+   "title": "Executive Vice President and Chief Operating Officer, APS",
+   "background": [
+    "EVP and COO of APS; previously senior vice president of operations, vice president of transmission and distribution, general manager of T&D operations",
+    "Eleven years in fossil generation, from boiler inspector to director",
+    "BS, mechanical engineering, Arizona State University (company bio)"
+   ]
+  },
+  {
+   "name": "Adam Heflin",
+   "title": "Executive Vice President and Chief Nuclear Officer, APS",
+   "background": [
+    "Leads Palo Verde Generating Station; quoted on the March 2026 announcement that APS will seek subsequent license renewal for all three units to 2065–2067",
+    "Career history not read this session (leadership page bio not retrieved)"
+   ]
+  },
+  {
+   "name": "Jose Esparza",
+   "title": "Senior Vice President, Public Policy, Pinnacle West and APS",
+   "background": [
+    "Spoke on the rate case and the ACC process on the Q2 2026 call (briefs August 27 and September 11; final decision before year-end)",
+    "Career history not read this session"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "Energy-Storage.news — GridStor closes $220M financing for 400 MWh Arizona BESS (White Tank, 20-year APS toll, COD 1H 2027)",
+   "url": "https://www.energy-storage.news/gridstor-closes-us220-million-financing-for-400mwh-arizona-bess/",
+   "date": "2026-09-23"
+  },
+  {
+   "label": "Motley Fool — Pinnacle West (PNW) Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/11/pinnacle-west-capital-pnw-q2-2026-earnings-call-transcript/",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "Investing.com — Pinnacle West Q2 2026 slides: strong sales offset margin pressure",
+   "url": "https://www.investing.com/news/company-news/pinnacle-west-q2-2026-slides-strong-sales-offset-margin-pressure-93CH-4835392",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Pinnacle West — Reports lower 2026 second-quarter financial results compared to a year ago",
+   "url": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2026/Pinnacle-West-Reports-Lower-2026-Second-Quarter-Financial-Results-Compared-to-a-Year-Ago/default.aspx",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Arizona Corporation Commission — What's next in the APS rate case",
+   "url": "https://www.azcc.gov/news/home/2026/07/10/what-s-next-in-the-aps-rate-case",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "Arizona Capitol Times — Data centers dominated 2026 session; lawmakers answered with 3-year tax incentive pause",
+   "url": "https://azcapitoltimes.com/news/2026/07/09/data-centers-dominated-2026-session-lawmakers-answered-with-3-year-tax-incentive-pause/",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Pinnacle West — Sets date for 2026 second-quarter results (August 4, 2026; company boilerplate)",
+   "url": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2026/Pinnacle-West-Sets-Date-for-2026-Second-Quarter-Financial-Results-WebcastConference-Call/default.aspx",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Utility Dive — APS to convert coal units, adding 380 MW of natural gas (Cholla)",
+   "url": "https://www.utilitydive.com/news/aps-convert-coal-units-adding-380-mw-natural-gas/824471/",
+   "date": "2026-07-06"
+  },
+  {
+   "label": "Arizona Capitol Times — APS rate case kicks off with hours of protest over 14% rate increase",
+   "url": "https://azcapitoltimes.com/news/2026/05/19/aps-rate-case-kicks-off-with-hours-of-protest-over-14-rate-increase/",
+   "date": "2026-05-19"
+  },
+  {
+   "label": "NewsData (California Energy Markets) — APS courts XHLF customers with tariff subscription models for service",
+   "url": "https://www.newsdata.com/california_energy_markets/financial_news/aps-courts-xhlf-customers-with-tariff-subscription-models-for-service/",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Pinnacle West — Reports 2026 first-quarter financial results",
+   "url": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2026/Pinnacle-West-Reports-2026-First-Quarter-Financial-Results/default.aspx",
+   "date": "2026-05-04"
+  },
+  {
+   "label": "Arizona Corporation Commission — Large load / data center workshop highlights (April 16, 2026; docket E-00000A-25-0069)",
+   "url": "https://www.azcc.gov/news/home/2026/04/20/acc-large-load-data-center-workshop-highlights",
+   "date": "2026-04-20"
+  },
+  {
+   "label": "APS — APS seeks to renew Palo Verde Generating Station licensing (SLR application late 2027)",
+   "url": "https://www.aps.com/en/About/Our-Company/Newsroom/Articles/APS_Seeks_to_Renew_Palo_Verde_Generating_Station_Licensing",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Motley Fool — Pinnacle West (PNW) Q4 2025 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/02/25/pinnacle-west-pnw-q4-2025-earnings-transcript/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Pinnacle West — Reports 2025 full-year and fourth-quarter results",
+   "url": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2026/Pinnacle-West-Reports-2025-Full-Year-and-Fourth-Quarter-Results/default.aspx",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Pinnacle West — FY2025 Form 10-K (IR mirror; registrants, employees, customers, Palo Verde ownership)",
+   "url": "https://s22.q4cdn.com/464697698/files/doc_financials/2025/ar/PNW-10-K.pdf",
+   "date": "2026-02"
+  },
+  {
+   "label": "Pinnacle West — Reports 2025 third-quarter financial results (guidance raised; 2,000 MW Gila Bend gas proposal)",
+   "url": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2025/Pinnacle-West-Reports-2025-Third-Quarter-Financial-Results/default.aspx",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Power Engineering — Arizona utilities lock in fuel supply for gas plants to power data center boom (Desert Southwest expansion; Tillinghast quote)",
+   "url": "https://www.power-eng.com/gas/arizona-utilities-lock-in-fuel-supply-for-gas-plants-to-power-data-center-boom/",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "Utility Dive — Arizona utilities APS, SRP anchor Transwestern gas pipeline expansion for data centers",
+   "url": "https://www.utilitydive.com/news/arizona-utilities-aps-srp-transwestern-gas-pipeline-data-center/757040/",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "Pinnacle West and APS — Announce leadership succession (Geisler to succeed Guldner April 1, 2025)",
+   "url": "https://www.pinnaclewest.com/newsroom/company-news/news-release-details/2024/Pinnacle-West-and-APS-Announce-Leadership-Succession/default.aspx",
+   "date": "2024-12-12"
+  },
+  {
+   "label": "T&D World — APS signs agreements to add about 7,300 MW of renewable power, battery storage and natural gas",
+   "url": "https://www.tdworld.com/renewables/news/55245162/aps-signs-agreements-to-add-about-7300-mw-of-renewable-power-battery-energy-storage-and-natural-gas-to-energy-mix",
+   "date": "2024-11-21"
+  },
+  {
+   "label": "Energy-Storage.news — Strata Clean Energy signs another RFP-driven BESS tolling agreement with APS (White Tank)",
+   "url": "https://www.energy-storage.news/strata-clean-energy-signs-another-rfp-driven-bess-tolling-agreement-with-arizona-public-service/",
+   "date": "2024-11-14"
+  },
+  {
+   "label": "APS — Rate Schedule XHLF, General Service Extra High Load Factor (effective March 8, 2024; Decision No. 79293)",
+   "url": "https://www.aps.com/-/media/APS/APSCOM-PDFs/Utility/Regulatory-and-Legal/Regulatory-Plan-Details-Tariffs/Business/Business-NonResidential-Plans/ExtraHighLoadFactor.pdf",
+   "date": "2024-03-08"
+  },
+  {
+   "label": "Recurrent Energy — APS awards Recurrent Energy a 1,200 MWh energy storage tolling agreement (Papago Storage)",
+   "url": "https://recurrentenergy.com/arizona-public-service-awards-recurrent-energy-with-1200-mwh-energy-storage-tolling-agreement/",
+   "date": "2023-08-16"
+  },
+  {
+   "label": "APS — Data centers: how we're protecting customers while planning for big energy needs (undated; references the June 2025 rate request)",
+   "url": "https://www.aps.com/en/Utility/Company-wide-Events-and-Messages/Data_Centers_How_Were_Protecting_Customers_While_Planning-for_Big_Energy_Needs"
+  },
+  {
+   "label": "APS — Cholla Conversion project page",
+   "url": "https://www.aps.com/en/About/Construction-and-Power-Line-Siting/Reliability-upgrades/Cholla-Conversion"
+  },
+  {
+   "label": "Pinnacle West — Leadership: Ted N. Geisler",
+   "url": "https://www.pinnaclewest.com/about-us/leadership/Ted-N-Geisler/"
+  },
+  {
+   "label": "Pinnacle West — Leadership: Andrew Cooper",
+   "url": "https://www.pinnaclewest.com/about-us/leadership/Andrew-Cooper/"
+  },
+  {
+   "label": "Pinnacle West — Leadership: Jacob Tetlow",
+   "url": "https://www.pinnaclewest.com/about-us/leadership/Jacob-Tetlow/"
+  }
+ ],
+ "lastUpdated": "2026-09-29",
+ "profileVersion": 1
+}

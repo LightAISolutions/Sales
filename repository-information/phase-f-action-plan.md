@@ -83,6 +83,8 @@ The rule comes from `PROFILER-COVERAGE-PLAN.md` §2's own evidence: **effort buy
 
 Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are in priority order: if the Fable cap or the days run out, the rest roll into the next week without breaking a dependency. Check Settings → Usage before each Fable session.
 
+**Rows now run as project threads (2026-09-29, v07.74r).** F-U3 was the first row split across threads of one project: two research threads read the sources and left `*-verified-notes.md` files and an `F-U3-PROGRESS-HANDOFF.md`, and a third thread finished the gaps and wrote the dossiers from those notes only. The pattern holds the model line per thread and lets a session that runs out of budget hand its research forward without re-reading; the finishing thread's cost is the writing, not the research.
+
 **Phases (named 2026-09-29, v07.72r):**
 1. **New dossiers while this week's Fable is unspent** — rows 1–8, now to Sat 10/3, 7:00 AM ET.
 2. **Clear the stale Classroom modules before the Megmeet start** — rows 9–10, Sat 10/3 – Tue 10/6.
@@ -100,6 +102,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 | F-I1 — BlackRock, KKR | Opus 5.5 xhigh | v07.66r, 9/26 |
 | Cooling recheck, then CoolIT v3 | Opus 5.5 xhigh | v07.69r–v07.70r, 9/29 |
 | F-N2 — WhiteFiber, 5C Group, TECfusions | Fable 5.1 High | v07.73r, 9/29 |
+| F-U3 — PPL, Pinnacle West, NiSource | Fable 5.1 High | v07.74r, 9/29 (run as three project threads: research, hand-off, write) |
 
 **Week 1 — now to Sat 10/3, 7:00 AM ET.** About $1,150 of the Fable half is left: the week's only Fable session so far (another project) used about $41. The seven Fable rows below come to about $800–$1,000.
 
@@ -107,7 +110,7 @@ Weeks run **Saturday 7:00 AM ET to Saturday 7:00 AM ET**. Rows within a week are
 |---|---|---|---|---|
 | 1 | ~~Tue 9/29 evening~~ **Landed 9/29 (v07.73r)** | **F-N2** — WhiteFiber, 5C (Hypertec), TECfusions | Fable 5.1 · high | Done. 5C's legal entity is 5C AI Group Inc. (Hypertec the largest shareholder); Keystone Connect is the former Alcoa campus in Upper Burrell, PA; TECfusions' SPAC is signed, not closed. Wave A (row 9) now also absorbs `whitefiber` (neoclouds and AIDC challengers), `5c-group` (AIDC challenger, neoclouds adjacent) and `tecfusions` (AIDC challenger); wave D (row 17) takes `bridge-and-on-site-generation`, where TECfusions took its adjacent seat |
 | 2 | Wed 9/30, after ~7:30 AM ET | Check the 9/30 Classroom pipeline run (read-only) | Opus 5.5 · medium | The standing reminder. If the run committed, `git fetch origin main` and rebase before the next session |
-| 3 | Wed 9/30 | **F-U3** — PPL, Pinnacle West, NiSource | Fable 5.1 · high | Was mid-October; no date gate. Same model as F-U1/F-U2. Pinnacle West's XHLF decision and RFP awards fall in December — dossier indicators |
+| 3 | ~~Wed 9/30~~ **Landed 9/29 (v07.74r)** | **F-U3** — PPL, Pinnacle West, NiSource | Fable 5.1 · high | Done, as a project thread: two research threads wrote the verified notes and a hand-off, and a third thread finished the six NiSource gaps and wrote the dossiers. NiSource is a Delaware corporation per its 10-K cover; `quanta-services` v5→v6 corrected its '~3 GW CCGT' to 2 × 1,300 MW plus a 400 MW battery. Wave C (row 16) now takes eight new franchises since `landscape-utilities-2026-09` was written (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource) |
 | 4 | Wed 9/30 – Thu 10/1 | **F-U4** — Florida Power & Light, Salt River Project, TVA | Fable 5.1 · high | Was mid-October. Test FPL against `nextera-energy-resources` under the one-slug rule; SRP and TVA test the category for public and federal power. TVA's large-load charge takes effect 10/1 |
 | 5 | Thu 10/1, after the 10/1 Profiler Routines commit | Neoclouds Profiler pass + `profiler Habitat Energy` (one session) | Fable 5.1 · high | Waits on filings due 9/30 (Fluidstack, Habitat Energy). **Rebase first** |
 | 6 | Thu 10/1 – Fri 10/2 | **F-I4** — Quinbrook, Energy Capital Partners, CPP Investments | Fable 5.1 · high | Was November. Lands before wave B, so capital is re-authored once. Quinbrook is `habitat-energy`'s parent; ECP is `proenergy`'s |

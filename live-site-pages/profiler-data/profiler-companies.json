@@ -4053,6 +4053,58 @@
       ]
     },
     {
+      "slug": "nisource",
+      "name": "NiSource",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The Indiana utility that ring-fenced its data-center build in a commission-declined affiliate — NIPSCO Generation LLC ('GenCo', 80.1 percent NiSource / 19.9 percent Blackstone Infrastructure) — to serve about 4 GW of signed load (Amazon Data Services up to 3 GW, 2.4 GW by end-2032; an Alphabet subsidiary from summer 2026) with two 1,300 MW combined cycles at Schahfer and a 400 MW / 1,600 MWh battery at Mitchell under a Quanta–Zachry EPC, returning about $1.4B of bill credits to retail customers and carrying $7.6B of the $28.6B 2026–2030 plan outside the rate base.",
+      "hq": "Merrillville, IN, USA",
+      "ticker": "NYSE: NI",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "NIPSCO",
+        "Northern Indiana Public Service",
+        "Northern Indiana Public Service Company",
+        "NIPSCO GenCo",
+        "GenCo",
+        "NIPSCO Generation",
+        "NIPSCO Generation LLC",
+        "Columbia Gas",
+        "Columbia Gas of Ohio",
+        "Columbia Gas of Pennsylvania",
+        "Columbia Gas of Virginia",
+        "Columbia Gas of Kentucky",
+        "Columbia Gas of Maryland",
+        "NIPSCO Industries"
+      ],
+      "domains": [
+        "nisource.com",
+        "investors.nisource.com",
+        "nipsco.com",
+        "columbiagasohio.com",
+        "columbiagaspa.com",
+        "columbiagasva.com",
+        "columbiagasky.com",
+        "columbiagasmd.com",
+        "s1.q4cdn.com"
+      ],
+      "srcTotal": 22,
+      "srcFirstPct": 55,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
       "slug": "novonix",
       "name": "NOVONIX",
       "categories": [
@@ -4466,6 +4518,40 @@
       ]
     },
     {
+      "slug": "pinnacle-west",
+      "name": "Pinnacle West",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "Arizona Public Service's holding company — the corpus's purest toll buyer among utilities (about 3.6 GW of storage contracted under 20-year tolls with Recurrent, Strata and GridStor against 150 MW owned) — carrying a committed large-load queue of about 4.5 GW (TSMC at 'over 1 gigawatt') and about 20 GW uncommitted against an 8.6 GW system peak, with the XHLF large-load schedule, a formula rate and a 10.70 percent return all decided in the rate case the Arizona Corporation Commission must vote on by December 31, 2026.",
+      "hq": "Phoenix, AZ, USA",
+      "ticker": "NYSE: PNW",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "APS",
+        "Arizona Public Service",
+        "Arizona Public Service Company",
+        "Pinnacle West Capital",
+        "Pinnacle West Capital Corporation",
+        "PNW"
+      ],
+      "domains": [
+        "pinnaclewest.com",
+        "aps.com",
+        "s22.q4cdn.com"
+      ],
+      "srcTotal": 29,
+      "srcFirstPct": 48,
+      "kpiNorm": false,
+      "segments": [
+        {
+          "id": "utilities",
+          "role": "incumbent"
+        }
+      ]
+    },
+    {
       "slug": "plus-power",
       "name": "Plus Power",
       "categories": [
@@ -4560,6 +4646,59 @@
         {
           "id": "aidc-developers-and-landlords",
           "role": "challenger"
+        }
+      ]
+    },
+    {
+      "slug": "ppl",
+      "name": "PPL",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The holding company running all three answers to the data-center question at once — a Pennsylvania wires-only utility with 31.8 GW of advanced-stage projects and more than 11 GW of signed electric service agreements priced under the state's first large-load tariff (≥50 MW, 10-year minimum, 80 percent guaranteed, exit fees); Kentucky utilities building two 645 MW combined cycles against a 13.7 GW pipeline; and Invitium, a 51/49 joint venture with Blackstone Infrastructure holding more than 5 GW of combined-cycle turbine reservations before its first hyperscaler contract — on a $23B 2026–2029 plan.",
+      "hq": "Allentown, PA, USA",
+      "ticker": "NYSE: PPL",
+      "status": "active",
+      "lastUpdated": "2026-09-29",
+      "aka": [
+        "PPL Corporation",
+        "PPL Corp",
+        "PPL Electric Utilities",
+        "PPL Electric",
+        "LG&E",
+        "KU",
+        "Louisville Gas and Electric",
+        "Louisville Gas & Electric",
+        "Kentucky Utilities",
+        "LG&E and KU",
+        "LG&E-KU",
+        "Rhode Island Energy",
+        "RIE",
+        "Invitium Energy",
+        "Invitium",
+        "PPL Capital Funding",
+        "Narragansett Electric"
+      ],
+      "domains": [
+        "pplweb.com",
+        "investors.pplweb.com",
+        "news.pplweb.com",
+        "lge-ku.com",
+        "pplelectric.com",
+        "filecache.investorroom.com",
+        "rienergy.com"
+      ],
+      "srcTotal": 33,
+      "srcFirstPct": 42,
+      "kpiNorm": true,
+      "segments": [
+        {
+          "id": "storage-developers-and-ipps",
+          "role": "adjacent"
+        },
+        {
+          "id": "utilities",
+          "role": "incumbent"
         }
       ]
     },
@@ -4702,11 +4841,11 @@
       "hq": "Houston, TX, USA",
       "ticker": "NYSE: PWR",
       "status": "active",
-      "lastUpdated": "2026-09-05",
+      "lastUpdated": "2026-09-29",
       "domains": [
         "quantaservices.com"
       ],
-      "srcTotal": 14,
+      "srcTotal": 16,
       "srcFirstPct": 50,
       "kpiNorm": true,
       "segments": [

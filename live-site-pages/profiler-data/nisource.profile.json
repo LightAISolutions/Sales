@@ -1,0 +1,802 @@
+{
+ "schemaVersion": 7,
+ "slug": "nisource",
+ "name": "NiSource Inc.",
+ "shortName": "NiSource",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.nisource.com",
+ "headquarters": "Merrillville, IN, USA",
+ "employees": "7,668 full-time and 70 part-time active employees at December 31, 2025, 32 percent under collective bargaining agreements (FY2025 Form 10-K)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: NI"
+ },
+ "summary": "BOTTOM LINE UP FRONT: NiSource is the utility that built a separate, commission-declined generation company — NIPSCO Generation LLC, 'GenCo', 80.1 percent NiSource and 19.9 percent Blackstone Infrastructure Partners — to serve about 4 GW of signed data-center load in northern Indiana (Amazon Data Services, up to 3 GW with deliveries from January 1, 2027 ramping to 2.4 GW by the end of 2032; an Alphabet subsidiary from summer 2026 on a roughly 340 MW GenCo portfolio) with two nominal 1,300 MW combined-cycle units at the Schahfer site and a 400 MW / 1,600 MWh battery at the retired Mitchell coal site, so that the $7.6B of data-center capital in its $28.6B 2026–2030 plan sits outside the retail rate base and returns about $1.4B of bill credits to existing NIPSCO customers over the contracts' 15-year terms. BACKGROUND. Merrillville, Indiana; NYSE: NI; a Delaware corporation (successor to an Indiana corporation organized in 1987 as NIPSCO Industries) and a holding company under the Public Utility Holding Company Act, serving about 3.8 million customers in six states through Columbia Gas (about 2.4 million gas customers in Ohio, Pennsylvania, Virginia, Kentucky and Maryland) and NIPSCO (about 0.9 million gas and 500,000 electric customers in northern Indiana; Blackstone Infrastructure holds 19.9 percent of NIPSCO since January 2024 for $2.16B); 7,668 full-time employees at year-end 2025 (FY2025 Form 10-K). FY2025 adjusted earnings were $1.90 a share (GAAP $1.95; net income $929.5M) on a 2026 guidance of $2.02–2.07, with the 2026–2033 adjusted EPS growth rate raised in May 2026 to 9–10 percent as GenCo's contribution rises from $0.01–0.02 in 2026 to $0.40–0.60 in 2032–2033; the second quarter of 2026 missed ($0.16 adjusted against a $0.23 consensus) on storm costs and union-negotiation expense. The build is contracted: Quanta Services and Zachry Group were selected on October 30, 2025 for 'approximately 3 gigawatts' of generation and grid infrastructure, with a 50/50 Quanta–Zachry joint venture delivering the combined-cycle units near Wheatfield, Indiana; the IURC approved the GenCo structure in September 2025, the Amazon special contract in June 2026 (Cause 46362 order of June 17, declining CPCN jurisdiction but finding the build reasonable and necessary for settlement purposes) and the Alphabet agreement in July 2026, and a July 2026 filing raised Amazon's contracted load by 400 MW. The company counts about 3 GW more in active negotiation and 2 GW in development, a pipeline of up to 9 GW that would take its generation from 5.2 GW in 2026 to as much as 9 GW. Collection gap: the turbine OEM for the two 1,300 MW combined-cycle units is not named in any source read (Quanta, Zachry, the IURC order and NiSource's releases are all silent), and the battery supplier for the Mitchell project is likewise unnamed; the confidential cost of the GenCo facilities in Cause 46362 is not public; the specific site of the Alphabet-served data center is not disclosed (Google's Fort Wayne and Morgan County projects are outside NIPSCO's territory); the Q3 2026 results date had not been announced as of September 29, 2026 (the Q3 2025 call was October 29); and the union negotiations cited on the Q2 call, and the Virginia, Kentucky and Ohio rate cases mentioned there, were not read in the dockets.",
+ "ecosystemRole": "We assess NiSource as the corpus's cleanest example of ring-fencing a data-center build: rather than a tariff (WEC), a special contract inside the utility (DTE) or an unregulated joint venture outside it (PPL's Invitium), NIPSCO created an affiliate, obtained the Indiana commission's declination of jurisdiction over it (September 2025), sold Blackstone Infrastructure 19.9 percent of it for a $1.5B commitment (October 2025) and had the commission find its 2,600 MW of combined cycle and 400 MW of storage 'reasonable and necessary' for the Amazon settlement while barring cost recovery from non-megaload ratepayers without independent review (June 2026). Basis: the IURC's Cause 46362 order, the September 24, 2025 declination release and the Paul Weiss deal note. For equipment sellers the doors are the Quanta–Zachry EPC joint venture (the buyer of the combined-cycle turbines, whose OEM is undisclosed), GenCo itself for the 400 MW / 1,600 MWh Mitchell battery (supplier undisclosed; completion by January 1, 2027) and the roughly 340 MW GenCo-owned portfolio serving Alphabet, plus NIPSCO's own regulated generation transition — Fairbanks Solar bought build-transfer from Invenergy (250 MW, 2025), Dunns Bridge II solar-and-storage (435 MW) and the retirement of Michigan City coal by 2028 after the Schahfer coal units were held open by a federal 202(c) emergency order through March 23, 2026. On the demand side NIPSCO is the gatekeeper for the northern Indiana corridor between Chicago and the Michigan line: about 4 GW signed (Amazon and Alphabet), about 3 GW in active negotiation and about 2 GW in development. Its shared partner with PPL — Blackstone Infrastructure — and its shared EPC with the corpus's Quanta and Zachry records are the cross-references a reader should follow.",
+ "productsAndServices": [
+  {
+   "name": "NIPSCO Generation LLC ('GenCo') — the ring-fenced data-center generation company",
+   "category": "Generation",
+   "description": "NIPSCO Generation LLC is the separate entity NiSource created to own, build and manage generation serving data centers in northern Indiana, so that the cost of new large-load growth is isolated from NIPSCO's retail customers. The Indiana Utility Regulatory Commission approved its declination petition on September 24, 2025 (the commission declined to treat GenCo as a public utility for these purposes); in October 2025 NiSource sold a 19.9 percent interest in Generation Holdings II, GenCo's sole owner, to affiliates of Blackstone Infrastructure Partners (BIP Orion Holdco L.P. and BIP Orion Holdco II L.P.) for a $1.5B equity commitment, NiSource retaining 80.1 percent of profit or loss (FY2025 Form 10-K; Paul Weiss). Its first program is the Amazon package: two nominal 1,300 MW gas-fired combined-cycle units in a 2 x 2 x 1 configuration at the R.M. Schahfer site near Wheatfield (Jasper County) and one 400 MW, four-hour (1,600 MWh) battery at the retired Mitchell Generating Station site in Gary (Lake County), a combined spend Utility Dive put at about $7B across generation, storage and transmission; the IURC's Cause 46362 order (June 17, 2026) declined CPCN jurisdiction under IC 8-1-8.5 but found construction reasonable and necessary solely for compliance with the settlement, with no cost recovery from non-megaload ratepayers without independent review, construction anticipated from the second quarter of 2026 and the cost confidential. Quanta Services and Zachry Group were selected on October 30, 2025 for the design, procurement and construction of 'generation and infrastructure resources capable of producing approximately 3 gigawatts', with the combined-cycle units delivered by a 50/50 Quanta–Zachry joint venture (Zachry leading engineering, procurement, project management and commissioning; Quanta the craft workforce), execution from 2026 after regulatory approvals and full power availability by 2032. GenCo's second program serves an Alphabet subsidiary from a roughly 340 MW GenCo-owned portfolio plus up to 175 MW of seasonal market purchases, with service from summer 2026 and load ramping to full capacity by 2030. NiSource guides GenCo's adjusted EPS contribution at $0.01–0.02 in 2026, $0.25–0.35 in 2028–2031 and $0.40–0.60 in 2032–2033, and puts the data-center portion of the 2026–2030 capital plan at $7.6B.",
+   "highlights": [
+    "Ownership: NiSource 80.1 percent / Blackstone Infrastructure Partners 19.9 percent (October 2025, $1.5B commitment); IURC declination approved September 24, 2025",
+    "Amazon package: 2 x 1,300 MW nominal CCGT (2 x 2 x 1) at Schahfer, Wheatfield, plus 400 MW / 1,600 MWh BESS at Mitchell, Gary — about $7B with transmission; battery by January 1, 2027; full power by 2032",
+    "EPC: Quanta–Zachry 50/50 JV for the combined cycles (October 30, 2025); turbine OEM undisclosed in every source read; battery supplier undisclosed",
+    "IURC Cause 46362 (June 17, 2026): CPCN jurisdiction declined; build 'reasonable and necessary' for the settlement; no recovery from non-megaload ratepayers without independent review; cost confidential",
+    "Alphabet program: ~340 MW GenCo-owned portfolio + up to 175 MW seasonal purchases; service summer 2026; full capacity by 2030; IURC approval July 2026"
+   ],
+   "positioning": "The corpus's fourth model for data-center generation, and the most fully ring-fenced: WEC's bespoke resource keeps the plant in the utility's rate base at a fixed return; DTE's special contract keeps it in the utility with the customer paying; PPL's Invitium puts it in an unregulated joint venture; NiSource's GenCo keeps it in a utility affiliate that the commission has declined to regulate, with the same minority partner (Blackstone Infrastructure) as Invitium and a bill credit to retail customers as the political price. Against the merchant sellers (Talen, Constellation) it offers new build with the utility's interconnection and land.",
+   "soldThrough": "Long-term special contracts with the data-center customer (Amazon Data Services: 15-year term from initial energization, fixed capacity charge and pass-through charges from January 2027, Amazon.com guarantee — FY2025 Form 10-K), approved by the IURC as NIPSCO special contracts",
+   "targetSegments": [
+    "Hyperscale data-center campuses in NIPSCO's northern Indiana territory (Amazon Data Services; an Alphabet subsidiary)",
+    "The ~3 GW in active negotiation and ~2 GW in development that NiSource counts toward a 9 GW pipeline"
+   ],
+   "roadmap": "Battery complete by January 1, 2027; Amazon deliveries from January 1, 2027 ramping to 2.4 GW by end-2032 (plus the July 2026 +400 MW amendment); full power availability 2032; Alphabet ramp to full capacity by 2030; GenCo EPS $0.25–0.35 from 2028."
+  },
+  {
+   "name": "The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+   "category": "Regulated utility service",
+   "description": "NIPSCO entered into an agreement with Amazon Data Services, Inc. (ADS), a subsidiary of Amazon.com, in September 2025 to serve its northern Indiana data centers: up to 3 GW of new generation, with deliveries starting January 1, 2027 and rising to 2.4 GW by the end of 2032 under a contract whose initial term ends 15 years after the initial energization of ADS's first data center, with ADS paying a fixed capacity charge and pass-through charges from January 2027 and Amazon.com guaranteeing payment (FY2025 Form 10-K). The IURC reaffirmed its approval of the package on November 19, 2025 and approved the special contract in June 2026; a July 2026 filing increased Amazon's contracted load by 400 MW. On April 16, 2026 NiSource announced an expanded and updated Amazon agreement accelerating site energization, and a long-term agreement with an Alphabet subsidiary served by GenCo (about 340 MW plus up to 175 MW seasonal), approved by the IURC in July 2026. The company's customer-protection claim is explicit: about $1B of savings over the 15-year Amazon deal (about $7 a month in residential credits, Utility Dive), expanded to about $1.25B ($90–115 a year per residential customer) with Alphabet in April and to 'approximately $1.4 billion of bill reductions' by the second-quarter 2026 call, plus a $17M community fund. Its pipeline ladder at August 2026: about 4 GW signed (Amazon and Alphabet), about 3 GW in active strategic negotiations and 'line of sight to approximately 2 gigawatts of additional potential customers' — up to 9 GW, which would take NIPSCO-area generation from 2.7 GW in 2021 and 5.2 GW in 2026 to as much as 9 GW.",
+   "highlights": [
+    "Amazon: up to 3 GW; deliveries from January 1, 2027 to 2.4 GW by end-2032; 15-year term from first energization; fixed capacity charge + pass-throughs; Amazon.com guarantee; +400 MW filed July 2026",
+    "Alphabet: ~340 MW GenCo portfolio + up to 175 MW seasonal purchases; service summer 2026; full capacity by 2030; specific site undisclosed",
+    "Customer credits: ~$1B (Nov 2025) → ~$1.25B (Apr 2026) → ~$1.4B (Aug 2026) over the contract terms; ~$7/month residential; $17M community fund",
+    "Pipeline: ~4 GW signed; ~3 GW active negotiations; ~2 GW developing; up to 9 GW total; generation 5.2 GW (2026) → up to 9 GW"
+   ],
+   "positioning": "The corpus's only utility whose data-center contracts are marketed to its regulator and its retail customers as a source of bill credits rather than as cost avoidance — the reverse of the Kentucky and Arizona framing. The Amazon contract's shape (15 years from first energization, a fixed capacity charge, a parent guarantee) is DTE's Saline agreement with the plant moved to an affiliate.",
+   "soldThrough": "IURC-approved special contracts with NIPSCO, supplied by GenCo",
+   "targetSegments": [
+    "Amazon Data Services (northern Indiana campuses)",
+    "An Alphabet subsidiary (site undisclosed)",
+    "~3 GW of counterparties in negotiation"
+   ],
+   "roadmap": "First Amazon deliveries January 1, 2027; Alphabet energization summer 2026; further special contracts from the 3 GW in negotiation; credits flow over the 15-year terms."
+  },
+  {
+   "name": "NIPSCO — northern Indiana electric and gas, the generation transition and the rate case",
+   "category": "Regulated utility service",
+   "description": "Northern Indiana Public Service Company LLC serves about 500,000 electric and 0.9 million gas customers as Indiana's largest vertically integrated electric-and-gas utility (about 1.3 million customers in total, Paul Weiss), with Blackstone Infrastructure Partners holding a 19.9 percent indirect non-controlling interest since January 2, 2024 ($2.16B plus a $250M additional equity commitment). Its owned generation table in the FY2025 Form 10-K totals 3,967 MW: R.M. Schahfer coal (722 MW, Wheatfield), Michigan City coal (455 MW, to be retired by the end of 2028), the Sugar Creek combined cycle (665 MW), Schahfer gas peakers (155 MW), Oakdale hydro and the renewable fleet — Dunns Bridge II solar and storage (435 MW, Jasper County), Fairbanks Solar (250 MW, Sullivan County, bought build-transfer from Invenergy and commercial in July 2025), Gibson Solar (200 MW) and others, several as tax-equity joint ventures NIPSCO manages. In December 2025 the US Secretary of Energy issued a section 202(c) emergency order requiring the Schahfer coal facility to keep operating for 90 days, through March 23, 2026, citing an energy emergency across MISO's North and Central regions, with cost recovery authorized; the company's target remains coal retirement by 2028 and net-zero Scope 1 and 2 emissions by 2040. Rates: the IURC approved an electric rate settlement on June 26, 2025 after a year-long review — an average residential bill (672 kWh) up about $23 a month (16.75 percent), phased from July 2025 to the first quarter of 2026, down from the $32 proposed — with NLMK Indiana, U.S. Steel, Walmart, the RV Industry User's Group and the NIPSCO Industrial Group among the settling parties. Second-quarter 2026 adjusted operating income was $150.9M (+14 percent).",
+   "highlights": [
+    "~500,000 electric and ~0.9 million gas customers; Blackstone Infrastructure 19.9 percent of NIPSCO since January 2024 ($2.16B)",
+    "Owned generation 3,967 MW (10-K table): Schahfer coal 722 MW (held open by a 202(c) order to March 23, 2026), Michigan City coal 455 MW (retire by end-2028), Sugar Creek CCGT 665 MW, solar and storage JVs incl. Dunns Bridge II 435 MW and Fairbanks 250 MW (Invenergy build-transfer)",
+    "Electric rate settlement approved June 26, 2025: +~$23/month residential (16.75 percent), phased to Q1 2026, vs $32 proposed",
+    "Coal retirement by 2028; net-zero Scope 1 and 2 by 2040; Q2 2026 adjusted operating income $150.9M (+14 percent)"
+   ],
+   "positioning": "A mid-sized MISO utility whose own generation (about 4 GW) is smaller than the data-center program its affiliate is building (3 GW for Amazon alone) — the inversion that the GenCo structure exists to manage. The Invenergy build-transfer at Fairbanks is the corpus's second such purchase after WEC's.",
+   "soldThrough": "IURC-approved rates and trackers (fuel adjustment clause updated quarterly; Generation Cost Tracker); special contracts for large loads",
+   "targetSegments": [
+    "Residential, commercial and industrial customers in northern Indiana (steel, RV manufacturing)",
+    "Large-load customers under special contracts"
+   ],
+   "roadmap": "Michigan City retirement by end-2028; further renewable and storage additions under the IRP; the next electric rate case not scheduled in the read sources."
+  },
+  {
+   "name": "Columbia Gas — the five-state gas distribution business",
+   "category": "Gas utility",
+   "description": "Columbia Operations provides natural gas to approximately 2.4 million customers in Ohio, Pennsylvania, Virginia, Kentucky and Maryland over about 37,300 miles of distribution main (FY2025 Form 10-K), and is where 38 percent of the 2026–2030 capital plan ('gas system hardening') is spent. Recent rate outcomes: the Pennsylvania PUC approved about $55.6M (6.05 percent) of a $110.5M (12 percent) request for Columbia Gas of Pennsylvania on December 4, 2025 (docket R-2025-3053499; residential customer charge $23 against $31.97 proposed; effective January 1, 2026; about 445,000 customers in 26 counties); the Ohio Supreme Court on June 25, 2026 unanimously rejected the ELPC/CUB Ohio challenge to the $68M increase PUCO approved in 2023, which raised the fixed residential charge from $36 to $58 and eliminated non-low-income demand-side management programs (about $120M a year); and the second-quarter 2026 call mentioned pending Virginia, Kentucky and Ohio rate cases. Second-quarter 2026 adjusted operating income was $115.6M (−6 percent).",
+   "highlights": [
+    "~2.4 million gas customers in five states; ~37,300 miles of distribution main; 38 percent of 2026–2030 capex is gas system hardening",
+    "Columbia Gas of Pennsylvania: $55.6M (6.05 percent) approved of $110.5M asked, effective January 1, 2026",
+    "Columbia Gas of Ohio: Ohio Supreme Court upheld the 2023 $68M increase and the $36 → $58 fixed charge (June 25, 2026)",
+    "Q2 2026 adjusted operating income $115.6M (−6 percent); Virginia, Kentucky and Ohio cases pending"
+   ],
+   "positioning": "The larger half of NiSource by customers and the source of most of its base capital plan; not a data-center business, but the rate-case calendar that decides the consolidated return.",
+   "soldThrough": "State-commission-approved distribution rates and infrastructure riders",
+   "targetSegments": [
+    "Residential and commercial gas customers in Ohio, Pennsylvania, Virginia, Kentucky and Maryland"
+   ],
+   "roadmap": "Virginia, Kentucky and Ohio rate cases (mentioned August 2026, not read); continued hardening spend."
+  },
+  {
+   "name": "Capital plan, financing and credit — $28.6B through 2030 and the 9–10 percent growth rate",
+   "category": "Corporate",
+   "description": "The 2026–2030 capital plan is $28.6B: $21.0B of base plan plus $7.6B of data-center infrastructure (from $28.0B including nearly $7.0B in February 2026), with a further $2.0B of upside not in the base; by allocation, gas system hardening 38 percent, GenCo 25 percent, electric modernization 14 percent, growth 8 percent; 56 percent of the spend is recovered within six months, 29 percent in 7–12 months and 15 percent beyond a year. Rate base is guided to grow 9–11 percent a year over 2026–2033 and adjusted EPS 9–10 percent (raised from 8–9 percent in May 2026; the base plan alone 6–8 percent through 2030), from 2026 guidance of $2.02–2.07 (base plan $2.01–2.05 plus GenCo). Funding is 40–45 percent debt, 45–50 percent cash from operations, 5–10 percent equity ($400–600M of planned annual issuances) and 3–5 percent minority interest, at an FFO-to-debt target of 14–16 percent through 2030 with average annual customer bill increases held under 5 percent and more than $40M of cost optimization. The board declared a $0.30 quarterly dividend on September 10, 2026 (payable November 20). Minority partners: Blackstone Infrastructure holds 19.9 percent of NIPSCO (since January 2024) and 19.9 percent of GenCo's parent (since October 2025).",
+   "highlights": [
+    "Capex $28.6B 2026–2030 = $21.0B base + $7.6B data center; +$2.0B upside; GenCo 25 percent of the plan",
+    "Adjusted EPS CAGR 9–10 percent 2026–2033 (base 6–8 percent through 2030); rate base +9–11 percent; 2026 guidance $2.02–2.07",
+    "Funding 40–45 percent debt / 45–50 percent CFO / 5–10 percent equity ($400–600M a year) / 3–5 percent minority interest; FFO/debt 14–16 percent",
+    "Dividend $0.30 a quarter (declared September 10, 2026); bill increases <5 percent a year; >$40M cost optimization"
+   ],
+   "positioning": "A plan whose data-center quarter ($7.6B) is financed with a minority partner's equity at the affiliate level rather than with parent equity — which is why NiSource can guide the fastest EPS growth among the corpus's regulated utilities (9–10 percent) at an FFO-to-debt target below PPL's.",
+   "soldThrough": "Not applicable — corporate finance",
+   "targetSegments": [
+    "Not applicable"
+   ],
+   "roadmap": "GenCo EPS contribution $0.25–0.35 from 2028; $2.0B of upside outside the base plan; equity $400–600M a year."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "GenCo Amazon package — IURC Cause 46362 (order June 17, 2026) and the EPC award",
+   "specs": [
+    {
+     "band": "Generation",
+     "label": "Combined cycle",
+     "value": "two nominal 1,300 MW gas-fired combined cycle units in a 2 x 2 x 1 configuration (Zachry) — 2,600 MW at the R.M. Schahfer site near Wheatfield, Jasper County (IURC order)"
+    },
+    {
+     "band": "Storage",
+     "label": "Battery",
+     "value": "one 400 MW BESS at the Mitchell Generating Station site, Gary, Lake County; 4-hour, 1.6 GWh (Energy-Storage.news); completion by January 1, 2027"
+    },
+    {
+     "band": "Customer",
+     "label": "Load",
+     "value": "Amazon Data Services, Inc. — up to 3 GW; service from January 1, 2027; periodic increases to 2,400 MW by end-2032; +400 MW amendment filed July 2026"
+    },
+    {
+     "band": "Regulatory",
+     "label": "Finding",
+     "value": "CPCN jurisdiction under IC 8-1-8.5 declined (GenCo not a public utility for this purpose); construction reasonable and necessary solely for Settlement compliance; no cost recovery from non-megaload ratepayers without independent review"
+    },
+    {
+     "band": "Cost",
+     "label": "Capital",
+     "value": "confidential in the order; ~$7B across generation, storage and transmission (Utility Dive); $7.6B data-center capital in the 2026–2030 plan"
+    },
+    {
+     "band": "EPC",
+     "label": "Contractors",
+     "value": "Quanta Services and Zachry Group (selected October 30, 2025); 50/50 Quanta–Zachry JV for the CCGTs — Zachry: engineering, procurement, project management, commissioning; Quanta: craft workforce; execution from 2026; full power by 2032"
+    },
+    {
+     "band": "Equipment",
+     "label": "Turbine OEM / battery supplier",
+     "value": "Collection gap: not named in any source read"
+    }
+   ],
+   "notes": "Energy-Storage.news reported the gas units as filed as turbines with a planned later combined-cycle conversion; the IURC order and Zachry's award release both describe combined-cycle units, which this dossier adopts."
+  },
+  {
+   "product": "Amazon Data Services special contract (FY2025 Form 10-K; Utility Dive)",
+   "specs": [
+    {
+     "band": "Term",
+     "label": "Initial term",
+     "value": "ends 15 years after the initial energization of ADS's initial data center"
+    },
+    {
+     "band": "Payment",
+     "label": "Charges",
+     "value": "from January 2027 a fixed capacity charge and certain pass-through charges, structured to return the invested capital over the fifteen-year term"
+    },
+    {
+     "band": "Credit",
+     "label": "Guarantee",
+     "value": "Amazon.com, Inc. (investment grade) guarantees ADS's payment obligations"
+    },
+    {
+     "band": "Customer benefit",
+     "label": "Credits",
+     "value": "~$1B over 15 years (Nov 2025; ~$7/month residential) → ~$1.25B with Alphabet (Apr 2026; $90–115/yr) → ~$1.4B (Aug 2026); $17M community fund"
+    },
+    {
+     "band": "Approvals",
+     "label": "IURC",
+     "value": "package reaffirmed November 19, 2025; special contract approved June 2026; Alphabet agreement approved July 2026"
+    }
+   ],
+   "notes": "Signed September 2025 per the 10-K; the contract itself is not public."
+  },
+  {
+   "product": "2026–2030 capital plan and financing (Q2 2026 slides)",
+   "specs": [
+    {
+     "band": "Capex",
+     "label": "Total",
+     "value": "$28.6B = $21.0B base + $7.6B data-center infrastructure; +$2.0B upside not in base (Feb 2026: ~$28.0B incl. nearly $7.0B)"
+    },
+    {
+     "band": "Capex",
+     "label": "Allocation",
+     "value": "gas system hardening 38%; GenCo 25%; electric modernization 14%; growth 8%"
+    },
+    {
+     "band": "Recovery",
+     "label": "Timing",
+     "value": "56% ≤6 months; 29% 7–12 months; 15% >12 months"
+    },
+    {
+     "band": "Growth",
+     "label": "Guidance",
+     "value": "2026 adjusted EPS $2.02–2.07 (base $2.01–2.05; GenCo $0.01–0.02); 2026–2033 adjusted EPS CAGR 9–10% (base 6–8% through 2030); rate base +9–11% (2026–2033)"
+    },
+    {
+     "band": "GenCo EPS",
+     "label": "Contribution",
+     "value": "$0.01–0.02 (2026); $0.25–0.35 (2028–2031); $0.40–0.60 (2032–2033)"
+    },
+    {
+     "band": "Funding",
+     "label": "Mix",
+     "value": "debt 40–45%; CFO 45–50%; equity 5–10% ($400–600M/yr); minority interest 3–5%"
+    },
+    {
+     "band": "Credit",
+     "label": "Target",
+     "value": "FFO/debt 14–16% through 2030; average annual bill increases <5%; >$40M cost optimization"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Data center",
+     "value": "~4 GW signed; ~3 GW active negotiations; ~2 GW developing; up to 9 GW; generation 2.7 GW (2021) → 5.2 GW (2026) → up to 9 GW"
+    }
+   ],
+   "notes": "As summarized from the August 5, 2026 slides."
+  },
+  {
+   "product": "NIPSCO owned generation (FY2025 Form 10-K)",
+   "specs": [
+    {
+     "band": "Thermal",
+     "label": "R.M. Schahfer",
+     "value": "coal 722 MW (Wheatfield) — held open by a DOE 202(c) emergency order for 90 days through March 23, 2026; two gas peaking units 155 MW"
+    },
+    {
+     "band": "Thermal",
+     "label": "Michigan City",
+     "value": "coal 455 MW — scheduled retirement by the end of 2028"
+    },
+    {
+     "band": "Thermal",
+     "label": "Sugar Creek",
+     "value": "CCGT 665 MW (West Terre Haute)"
+    },
+    {
+     "band": "Renewables",
+     "label": "Solar and storage",
+     "value": "Dunns Bridge II 435 MW solar and storage (Jasper County); Fairbanks Solar 250 MW (Sullivan County; Invenergy build-transfer, commercial July 2025); Gibson Solar 200 MW; Oakdale hydro 9 MW; several projects as tax-equity JVs NIPSCO manages"
+    },
+    {
+     "band": "Total",
+     "label": "Capacity",
+     "value": "3,967 MW (net generating capability for fossil and hydro; nameplate for wind and solar)"
+    }
+   ],
+   "notes": "The generation table's wind entries and JV details were not transcribed in full; the total is the 10-K's."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Net income available to common shareholders (GAAP)",
+      "actual": "$739.7M; $1.62 per diluted share",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Comparative figures from the FY2025 release",
+      "kpi": "net-income",
+      "usdMillions": 739.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted net income / EPS",
+      "actual": "$798.6M; $1.75",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q4 2024 adjusted $231.2M / $0.49",
+      "kpi": "eps"
+     }
+    ],
+    "commentary": "Read only as the comparison year; the FY2024 release was not consulted."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Net income available to common shareholders (GAAP)",
+      "actual": "$929.5M; $1.95 per diluted share (FY2024 $739.7M / $1.62)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q4 2025 GAAP $257.8M / $0.53 vs $223.9M / $0.47",
+      "kpi": "net-income",
+      "usdMillions": 929.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted net income / EPS",
+      "actual": "$905.2M; $1.90 (FY2024 $1.75)",
+      "expected": "Consensus for the year not read",
+      "verdict": "inline",
+      "result": "Q4 2025 adjusted $249.2M / $0.51 vs $231.2M / $0.49; 2026 guidance $2.02–2.07; 2026–2033 CAGR 8–9 percent (raised to 9–10 percent in May 2026)",
+      "kpi": "eps"
+     },
+     {
+      "name": "Capital plan 2026–2030",
+      "actual": "~$28.0B including nearly $7.0B of data-center infrastructure (February 2026)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Raised to $28.6B ($7.6B data center) by August 2026",
+      "kpi": "capex",
+      "usdMillions": 28000,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Signed data-center load",
+      "actual": "Amazon: up to 3 GW, ramping to 2.4 GW by end-2032 (agreement September 2025)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "'$1 billion in savings to retail customers' (Yates, February 2026)",
+      "kpi": "mw-contracted",
+      "qty": 3000
+     }
+    ],
+    "commentary": "The year GenCo was approved, sold down to Blackstone and contracted to Amazon; revenue was not stated in the releases read."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Net income available to common shareholders (GAAP)",
+      "actual": "$510.7M; $1.06 (Q1 2025 $474.8M / $1.00)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Adjusted $509.6M / $1.06 vs $462.3M / $0.98; guidance $2.02–2.07 maintained; long-term CAGR raised to 9–10 percent through 2033",
+      "kpi": "net-income",
+      "usdMillions": 510.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Customer savings from the special contracts",
+      "actual": "~$1.4B with Alphabet added",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "'We are off to a strong start in 2026' (Yates)"
+     }
+    ],
+    "commentary": "The quarter of the Alphabet agreement and the growth-rate upgrade."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Net income available to common shareholders (GAAP)",
+      "actual": "$45.5M; $0.09 (Q2 2025 $102.2M / $0.22); six months $556.2M / $1.15 vs $577.0M / $1.22",
+      "expected": "—",
+      "verdict": "miss",
+      "result": "Higher O&M from 'higher-than-usual storm activity and elevated expense to maintain workforce continuity during the ongoing union negotiations'",
+      "kpi": "net-income",
+      "usdMillions": 45.5,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted net income / EPS",
+      "actual": "$77.6M; $0.16 (Q2 2025 $101.9M / $0.22; −27 percent); six months $587.2M / $1.22 vs $564.2M / $1.19",
+      "expected": "$0.23 consensus (Investing.com)",
+      "verdict": "miss",
+      "result": "Guidance $2.02–2.07 maintained; segment adjusted operating income Columbia $115.6M (−6 percent), NIPSCO $150.9M (+14 percent)"
+     },
+     {
+      "name": "Signed data-center load",
+      "actual": "~4 GW (Amazon and Alphabet); ~3 GW in negotiation; ~2 GW developing",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Amazon +400 MW filed July 2026; Alphabet 'ready to energize this summer'",
+      "kpi": "mw-contracted",
+      "qty": 4000
+     },
+     {
+      "name": "Capital plan 2026–2030",
+      "actual": "$28.6B = $21.0B base + $7.6B data center",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Rate base +9–11 percent; FFO/debt 14–16 percent",
+      "kpi": "capex",
+      "usdMillions": 28600,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "A weather-and-labour miss in the quarter the two special contracts were approved; the growth story moved forward while the earnings did not."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-10",
+   "category": "financial",
+   "headline": "Board declares a $0.30 quarterly dividend payable November 20, 2026 (record October 30); no third-quarter results date announced on the newsroom as of September 29",
+   "read": "Cadence unchanged; the Q3 call, held October 29 in 2025, is the next disclosure of the 3 GW in negotiation.",
+   "source": "https://www.nisource.com/news/news-archive"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "customer",
+   "headline": "Q2 call: Amazon's contracted load raised by 400 MW in a July filing; Alphabet's project 'ready to energize this summer' with load ramping to full capacity by 2030; '3 gigawatts in active strategic negotiations and line of sight to approximately 2 gigawatts of additional potential customers'; agreements 'expected to provide approximately $1.4 billion of bill reductions'; equity $400–600M a year",
+   "read": "The pipeline ladder now reads 4 signed / 3 negotiating / 2 developing — and the second signed customer energizes before the first plant is built, on GenCo's existing 340 MW.",
+   "source": "https://www.fool.com/earnings/call-transcripts/2026/08/12/nisource-ni-q2-2026-earnings-call-transcript/"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "financial",
+   "headline": "Q2 2026 GAAP EPS $0.09 and adjusted $0.16 (consensus $0.23; Q2 2025 $0.22) on storm costs and union-negotiation expense; guidance $2.02–2.07 maintained; capital plan $28.6B ($21.0B base + $7.6B data center); 2026–2033 adjusted EPS CAGR 9–10 percent",
+   "read": "A 27 percent adjusted decline in the quarter the special contracts were approved — the earnings will follow the credits, not precede them.",
+   "source": "https://www.nisource.com/news/article/nisource-announces-second-quarter-2026-results"
+  },
+  {
+   "date": "2026-06-25",
+   "category": "legal",
+   "headline": "Ohio Supreme Court unanimously rejects the ELPC/CUB Ohio challenge to Columbia Gas of Ohio's 2023 $68M rate increase (fixed residential charge $36 → $58; non-low-income DSM programs eliminated)",
+   "read": "The gas side's largest fixed-charge redesign in the group survives; it is the kind of order that carries Columbia's 38 percent hardening spend.",
+   "source": "https://www.courtnewsohio.gov/cases/2026/SCO/0625/241548.asp"
+  },
+  {
+   "date": "2026-06-17",
+   "category": "regulatory",
+   "headline": "IURC order in Cause 46362: declines CPCN jurisdiction over NIPSCO Generation LLC's two 1,300 MW Schahfer combined-cycle units and 400 MW Mitchell battery, finds construction reasonable and necessary solely for compliance with the Amazon settlement, bars cost recovery from non-megaload ratepayers without independent review; construction anticipated from Q2 2026; cost confidential",
+   "read": "The order that makes GenCo work: no certificate, no rate-base review, no recovery from retail customers — the build stands on the Amazon contract and Blackstone's equity.",
+   "source": "https://secure.in.gov/iurc/files/ord_46362_061726.pdf"
+  },
+  {
+   "date": "2026-05-06",
+   "category": "financial",
+   "headline": "Q1 2026 GAAP EPS $1.06 (adjusted $1.06 vs $0.98); guidance maintained; 2026–2033 adjusted EPS CAGR raised to 9–10 percent from 8–9 percent; customer savings expanded to about $1.4B with Alphabet",
+   "read": "The growth-rate upgrade is the GenCo contribution being pulled into the long-term number for the first time.",
+   "source": "https://www.nisource.com/news/article/nisource-announces-first-2026-quarter-results"
+  },
+  {
+   "date": "2026-04-17",
+   "category": "customer",
+   "headline": "Alphabet signs an energy supply agreement with NiSource for a large-scale data center in northern Indiana, served by GenCo from a ~340 MW pool from summer 2026; Google's Fort Wayne and Morgan County projects sit outside NIPSCO's territory and the served site is undisclosed",
+   "read": "A second hyperscaler on GenCo before the first plant exists — served from generation GenCo already owns, which is what the 340 MW pool is.",
+   "source": "https://www.datacenterdynamics.com/en/news/alphabet-signs-energy-supply-agreement-with-indiana-utility-nisource-to-power-large-scale-data-center-in-northern-indiana/"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "customer",
+   "headline": "NiSource announces strategic energy infrastructure agreements: an Alphabet subsidiary served from about 340 MW of GenCo-owned generation plus up to 175 MW of seasonal purchases from summer 2026, and an expanded Amazon agreement accelerating site energization with residential credits; total customer savings about $1.25B ($90–115 a year per residential customer); $17M community fund",
+   "read": "'Our strategy is centered on protecting our customers from cost increases associated with these projects' — the credits are the political licence for the build.",
+   "source": "https://www.nisource.com/news/article/nisource-announces-strategic-energy-infrastructure-agreements-to-enhance-customer-value-and-economic-growth-in-indiana"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "financial",
+   "headline": "FY2025 GAAP EPS $1.95 (adjusted $1.90; net income $929.5M); 2026 guidance $2.02–2.07; capex about $28.0B 2026–2030 including nearly $7.0B of data-center infrastructure; 2026–2033 adjusted EPS CAGR 8–9 percent; Amazon agreement '$1 billion in savings to retail customers'",
+   "read": "The first plan with the data-center capital inside it, at nearly a quarter of the total.",
+   "source": "https://www.nisource.com/news/article/nisource-announces-full-year-2025-results"
+  },
+  {
+   "date": "2025-12-04",
+   "category": "regulatory",
+   "headline": "Pennsylvania PUC approves about $55.6M (6.05 percent) of Columbia Gas of Pennsylvania's $110.5M request; residential customer charge $23 (vs $31.97 proposed); effective January 1, 2026",
+   "read": "Half the ask on the gas side, the pattern of the group's 2025–2026 rate cases.",
+   "source": "https://www.puc.pa.gov/press-release/2025/puc-approves-substantially-reduced-rate-changes-for-columbia-gas-of-pennsylvania-12042025"
+  },
+  {
+   "date": "2025-12-04",
+   "category": "project",
+   "headline": "Energy-Storage.news: the Amazon package's 1.6 GWh (400 MW / 4-hour) battery goes on the former Mitchell coal site in Gary, due by January 1, 2027; the two 1.3 GW gas units are described as filed as turbines with a later combined-cycle conversion; Amazon funds construction via GenCo",
+   "read": "The battery is the first GenCo asset to complete and the only one due before the Amazon deliveries start.",
+   "source": "https://www.energy-storage.news/indiana-utility-to-deliver-1-6gwh-bess-for-amazons-data-center-expansion-though-fossil-fuels-form-major-part-of-package/"
+  },
+  {
+   "date": "2025-11-25",
+   "category": "customer",
+   "headline": "NIPSCO and GenCo to supply up to 3 GW to Amazon's northern Indiana data centers, with deliveries from January 1, 2027 climbing to 2.4 GW by the end of 2032 — two 1.3 GW gas plants and a 400 MW four-hour battery, about $7B in all; about $1B of savings over the 15-year deal and about $7 a month in residential credits; IURC reaffirmed its approval November 19",
+   "read": "The first 'GenCo model' contract: the customer funds the plant, the affiliate owns it, the retail customer gets a credit.",
+   "source": "https://www.utilitydive.com/news/nisource-nipsco-amazon-data-centers-indiana/806396/"
+  },
+  {
+   "date": "2025-11-24",
+   "category": "corporate",
+   "headline": "NiSource publishes its explainer 'Powering Indiana's Future: How NIPSCO, GenCo, and Amazon Keep Energy Reliable and Affordable' — a nearly $7B first partnership, up to 3 GW of new generation for Amazon, about $1B returned as bill credits over 15 years, and the customer paying 'even if the customer leaves before contract completion'",
+   "read": "The company's own statement that the exit risk sits with the data center, not the ratepayer.",
+   "source": "https://www.nisource.com/news/article/powering-indiana-s-future-how-nipsco-genco-and-amazon-keep-energy-reliable-and-affordable-20251124"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "procurement",
+   "headline": "Quanta Services and Zachry Group selected for the design, procurement and construction of 'generation and infrastructure resources capable of producing approximately 3 gigawatts' for a large-load customer — a 50/50 Quanta–Zachry JV for the combined-cycle units (two nominal 1,300 MW, 2 x 2 x 1, near Wheatfield), execution from 2026, full power by 2032",
+   "read": "The EPC is signed before the commission's order: the 'approximately 3 gigawatts' is 2.6 GW of combined cycle plus the 400 MW battery.",
+   "source": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "financial",
+   "headline": "Blackstone Infrastructure Partners commits $1.5B for a 19.9 percent interest in NIPSCO Generation LLC's parent (Generation Holdings II); NiSource keeps 80.1 percent",
+   "read": "The second Blackstone minority stake in NiSource, and the equity that lets $7.6B of data-center capital sit outside the parent's issuance plan.",
+   "source": "https://www.paulweiss.com/insights/client-news/blackstone-infrastructure-partners-acquires-minority-interest-in-nisource-affiliate-genco-in-15-billion-deal"
+  },
+  {
+   "date": "2025-09-24",
+   "category": "regulatory",
+   "headline": "IURC approves NIPSCO Generation LLC's declination petition — a separate entity to own, build and manage generation for data centers in northern Indiana, shielding NIPSCO's retail customers",
+   "read": "'An important step forward to position Northern Indiana at the center of a fast-growing industry' — the structural decision every later approval rests on.",
+   "source": "https://www.businesswire.com/news/home/20250924911782/en/NiSource-Achieves-IURC-Regulatory-Approval-for-GenCo-Strategy"
+  },
+  {
+   "date": "2025-06-26",
+   "category": "regulatory",
+   "headline": "IURC approves NIPSCO's electric rate settlement after a year-long review: average residential bill (672 kWh) up about $23 a month (16.75 percent), phased from July 2025 to Q1 2026, down from the $32 proposed; NLMK, U.S. Steel, Walmart and the RV industry among settling parties",
+   "read": "The retail rate base was reset the summer before the data-center program was structured to stay out of it.",
+   "source": "https://www.nipsco.com/our-company/news-room/news-article/newly-approved-nipsco-electric-rates-support-safety--reliability-and-customer-programs"
+  },
+  {
+   "date": "2024-01-02",
+   "category": "financial",
+   "headline": "NiSource completes the sale of a 19.9 percent indirect non-controlling interest in NIPSCO to Blackstone Infrastructure Partners for $2.16B plus a $250M additional equity commitment",
+   "read": "The template for GenCo's later sell-down: the same partner, the same 19.9 percent.",
+   "source": "https://www.businesswire.com/news/home/20240102814933/en/NiSource-Inc.-Completes-NIPSCO-Minority-Equity-Interest-Transaction"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that GenCo is the corpus's most complete ring-fence for a data-center build, and that its three approvals — the September 2025 declination, the October 2025 Blackstone sell-down and the June 2026 Cause 46362 order — together move the plant, its financing and its cost risk outside NIPSCO's retail rate base while leaving NIPSCO as the contracting utility. Basis: the IURC order's own words (jurisdiction declined; construction reasonable and necessary for the settlement; no recovery from non-megaload ratepayers without independent review), the FY2025 Form 10-K (80.1/19.9 attribution of GenCo's profit or loss; the ADS contract's fixed capacity charge and Amazon.com guarantee) and the customer-credit arithmetic the company markets. The structure is why NiSource guides 9–10 percent EPS growth at a 14–16 percent FFO-to-debt target.",
+  "(High confidence) We assess that the equipment decisions for the Amazon package sit with the Quanta–Zachry joint venture for the combined cycles and with GenCo for the Mitchell battery, and that neither the turbine OEM nor the battery supplier has been disclosed. Basis: the Quanta and Zachry releases (October 30, 2025), the IURC order and the Energy-Storage.news report; the corpus's Quanta dossier was revised in this pass to state the 2.6 GW / 400 MW split. A seller's door is the EPC joint venture, whose engineering and procurement lead is Zachry.",
+  "(Moderate confidence) We assess that the 'approximately 3 gigawatts' of the EPC award and the 'up to 3 GW' of the Amazon contract are the same 2,600 MW of combined cycle plus 400 MW of storage, and that the July 2026 +400 MW amendment to Amazon's contracted load is served within that build rather than by new plant. Basis: the Zachry release's two nominal 1,300 MW units, the IURC order's facilities list and the Q2 call; no source states what serves the additional 400 MW, and Amazon's ramp reaches 2.4 GW of a 3 GW ceiling by end-2032.",
+  "(Moderate confidence) We assess that the next GenCo build will be sized by the roughly 3 GW in active negotiation rather than by NIPSCO's own need, and that the Alphabet agreement shows GenCo can also sell from existing assets: the ~340 MW pool serves Alphabet from summer 2026 with no new plant. Basis: the April 16, 2026 release and the Q2 call's 9 GW pipeline. The 2 GW 'in development' and the up-to-9 GW ceiling are company statements without counterparties.",
+  "(Low confidence) We assess that the second-quarter 2026 miss (adjusted $0.16 against $0.23) is transitory — storms and the cost of workforce continuity during union negotiations whose agreements expire between March 2026 and June 2027 per the 10-K — but the negotiations themselves were not read and their outcome is unknown."
+ ],
+ "relationships": [
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-09",
+   "scale": "up to 3 GW; 2.4 GW by end-2032 (+400 MW amendment July 2026)",
+   "via": "NIPSCO special contract supplied by GenCo (2 x 1,300 MW CCGT + 400 MW BESS)",
+   "note": "Amazon Data Services, Inc. signed a special contract with NIPSCO in September 2025 for up to 3 GW of new generation for its northern Indiana data centers — deliveries from January 1, 2027 rising to 2.4 GW by the end of 2032, a 15-year term from first energization, a fixed capacity charge and an Amazon.com guarantee — approved by the IURC in June 2026 and raised by 400 MW in a July 2026 filing.",
+   "context": "The FY2025 Form 10-K describes the ADS Contract's term, charges and guarantee; the IURC's Cause 46362 order names ADS as the customer and lists the two Schahfer combined-cycle units and the Mitchell battery GenCo builds to serve it; Utility Dive and NiSource's November 2025 explainer put the package at about $7B and the customer credits at about $1B over 15 years. Amazon funds the construction through GenCo (Energy-Storage.news).",
+   "source": "https://secure.in.gov/iurc/files/ord_46362_061726.pdf"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-04",
+   "scale": "~340 MW GenCo portfolio + up to 175 MW seasonal purchases",
+   "via": "Long-term agreement with an Alphabet subsidiary, supplied by GenCo",
+   "note": "An Alphabet subsidiary signed a long-term agreement announced April 16, 2026 under which GenCo serves a large-scale northern Indiana data center from about 340 MW of GenCo-owned generation plus up to 175 MW of seasonal market purchases, with service from summer 2026 and load ramping to full capacity by 2030; approved by the IURC in July 2026.",
+   "context": "The served site is not disclosed; DCD notes Google's Fort Wayne facility and Morgan County campus are outside NIPSCO's territory. The corpus's Google dossier is the counterparty record.",
+   "source": "https://www.nisource.com/news/article/nisource-announces-strategic-energy-infrastructure-agreements-to-enhance-customer-value-and-economic-growth-in-indiana"
+  },
+  {
+   "slug": "blackstone",
+   "type": "investor",
+   "status": "active",
+   "since": "2024-01",
+   "scale": "19.9% of NIPSCO ($2.16B + $250M, Jan 2024); 19.9% of GenCo's parent ($1.5B commitment, Oct 2025)",
+   "via": "Blackstone Infrastructure Partners minority stakes",
+   "note": "Blackstone Infrastructure Partners holds a 19.9 percent indirect non-controlling interest in NIPSCO (closed January 2, 2024, $2.16B plus a $250M additional commitment) and, through BIP Orion Holdco L.P. and BIP Orion Holdco II L.P., 19.9 percent of Generation Holdings II, GenCo's sole owner, for a $1.5B equity commitment (October 2025).",
+   "context": "The same sponsor is PPL's 49 percent partner in Invitium Energy, the corpus's other utility-affiliated data-center generation vehicle. Sebastien Sherman, senior managing director, is quoted on both the NIPSCO closing and the PPL joint venture.",
+   "source": "https://www.paulweiss.com/insights/client-news/blackstone-infrastructure-partners-acquires-minority-interest-in-nisource-affiliate-genco-in-15-billion-deal"
+  },
+  {
+   "slug": "quanta-services",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "'approximately 3 gigawatts' of generation and grid infrastructure (2 x 1,300 MW CCGT + 400 MW BESS)",
+   "via": "EPC — Quanta Power Generation Solutions; 50/50 Quanta–Zachry JV for the CCGTs",
+   "note": "NiSource engaged Quanta on October 30, 2025 for the design, procurement and construction of generation and infrastructure resources 'capable of producing approximately 3 gigawatts' for a large-load customer, with the combined-cycle units delivered through a 50/50 joint venture with Zachry Group; execution from 2026, full power by 2032.",
+   "context": "Quanta's release names the scope as generation, battery storage, transmission, substation and underground infrastructure; the corpus's Quanta dossier (revised to v6 in this pass) carries the reciprocal edge and the 2.6 GW / 400 MW split.",
+   "source": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html"
+  },
+  {
+   "slug": "invenergy",
+   "type": "supplier",
+   "status": "historical",
+   "since": "2025-07",
+   "scale": "Fairbanks Solar 250 MW (build-transfer)",
+   "via": "Build-transfer agreement",
+   "note": "NIPSCO took Fairbanks Solar (250 MW, Sullivan County, Indiana) under a build-transfer agreement from Invenergy; commercial operation July 2025 (FY2025 Form 10-K generation table; Invenergy dossier).",
+   "context": "The corpus's Invenergy dossier records the build-transfer and NIPSCO among its regulated-utility customers; the 10-K lists Fairbanks Solar Energy Center LLC as a NIPSCO subsidiary and defines 'BTA' as build-transfer agreement.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1111711/000111171126000027/nix-20251231.htm"
+  },
+  {
+   "slug": "ppl",
+   "type": "other",
+   "status": "active",
+   "via": "Shared partner: Blackstone Infrastructure",
+   "note": "NiSource (GenCo, 19.9 percent) and PPL (Invitium, 49 percent) are the corpus's two utility-affiliated data-center generation vehicles with Blackstone Infrastructure as the minority partner.",
+   "context": "Stated for the Relationships tab's cross-reference; the two companies have no disclosed dealing with each other.",
+   "source": "https://www.paulweiss.com/insights/client-news/blackstone-infrastructure-partners-acquires-minority-interest-in-nisource-affiliate-genco-in-15-billion-deal"
+  },
+  {
+   "slug": "marsh-mclennan",
+   "type": "other",
+   "status": "active",
+   "via": "Board seat",
+   "note": "Lloyd Yates, NiSource's president and CEO, sits on Marsh McLennan's board (the corpus's Marsh McLennan dossier records the seat).",
+   "context": "A director-level link only; no commercial relationship is stated.",
+   "source": "https://www.nisource.com/company/leadership/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "IURC jurisdictional declination and Cause 46362 (GenCo)",
+   "status": "in-effect",
+   "effectiveDate": "2026-06-17",
+   "exposure": "The IURC approved GenCo's declination petition on September 24, 2025 and, in Cause 46362 (June 17, 2026), declined CPCN jurisdiction over the Schahfer combined cycles and the Mitchell battery under IC 8-1-8.5 while finding the construction reasonable and necessary solely for compliance with the Amazon settlement and barring cost recovery from non-megaload ratepayers without independent review. The structure keeps $7.6B of data-center capital outside NIPSCO's rate base but also outside the commission's prudence review; any future attempt to recover GenCo cost from retail customers would require that review.",
+   "mitigation": "Customer credits of about $1.4B over the contract terms, a $17M community fund, Amazon.com's guarantee of ADS's payments and the Blackstone equity at the affiliate level.",
+   "source": "https://secure.in.gov/iurc/files/ord_46362_061726.pdf"
+  },
+  {
+   "regime": "DOE section 202(c) emergency orders (MISO North/Central)",
+   "status": "expired",
+   "effectiveDate": "2025-12",
+   "exposure": "In December 2025 the Secretary of Energy ordered the R.M. Schahfer coal facility to keep operating for 90 days, through March 23, 2026, citing an energy emergency across MISO's North and Central regions, with cost recovery authorized under 16 U.S.C. § 824a(c). The order sits on the site where GenCo's combined cycles are built and against NiSource's coal-retirement-by-2028 and net-zero-by-2040 targets; Michigan City's retirement by end-2028 and the Schahfer gas peakers' planned retirement are exposed to renewal.",
+   "mitigation": "'Absent a directive to remain open' the company intends to retire the units as planned (10-K); the GenCo combined cycles and NIPSCO's solar-and-storage additions supply the replacement capacity.",
+   "source": "https://www.sec.gov/Archives/edgar/data/1111711/000111171126000027/nix-20251231.htm"
+  },
+  {
+   "regime": "State gas rate regulation — Ohio DSM elimination upheld; Pennsylvania half-ask",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "Columbia Gas of Ohio's 2023 order ($68M; fixed charge $36 → $58; non-low-income DSM programs eliminated, about $120M a year) was upheld by the Ohio Supreme Court on June 25, 2026; Columbia Gas of Pennsylvania received about half its December 2025 request; Virginia, Kentucky and Ohio cases were pending per the August 2026 call. The gas business is 38 percent of the plan and the source of most of the base-plan growth.",
+   "mitigation": "Riders and trackers recover 56 percent of capex within six months; average bill increases held under 5 percent a year (company target).",
+   "source": "https://www.courtnewsohio.gov/cases/2026/SCO/0625/241548.asp"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Lloyd M. Yates",
+   "title": "President and Chief Executive Officer, NiSource Inc.",
+   "background": [
+    "President and CEO since February 2022; NiSource director since 2020; chair of the American Gas Association board; director of Marsh McLennan",
+    "Duke Energy: executive vice president, customer and delivery operations; president, Carolinas region; president and CEO, Progress Energy Carolinas; earlier at PECO",
+    "BS mechanical engineering, University of Pittsburgh; MBA, Saint Joseph's University; Wharton Advanced Management Program; Harvard Business School (company bio)"
+   ]
+  },
+  {
+   "name": "Shawn Anderson",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "background": [
+    "EVP and CFO; 15 years at NiSource — previously chief strategy and risk officer, treasurer, and vice president of regulatory affairs at Columbia Gas of Ohio",
+    "BSBA, Ohio State University; MBA, Ohio University (company bio)",
+    "On the Q2 2026 call: $400–600M of planned annual equity issuances; the $28.6B plan"
+   ]
+  },
+  {
+   "name": "Michael Luhrs",
+   "title": "Executive Vice President of Technology, Customer and Chief Commercial Officer",
+   "background": [
+    "Leads the commercial (data-center) pipeline — the 3 GW in negotiation and 2 GW in development on the Q2 2026 call",
+    "Senior vice president, customer experience and strategy, Alliant Energy; vice president roles at Duke Energy; more than 25 years in the industry",
+    "BS chemical engineering and BAs, North Carolina State University (company bio)"
+   ]
+  },
+  {
+   "name": "Vince Parisi",
+   "title": "President and Chief Operating Officer, NIPSCO",
+   "background": [
+    "President and COO of NIPSCO; quoted on the November 2025 Amazon announcement as NIPSCO's president, COO and CEO",
+    "President and COO, Columbia Gas of Ohio; president and COO, Indianapolis Power & Light; president and CEO, Dayton Power & Light; president, US utilities, AES; general counsel, Gas Natural and IGS Energy",
+    "BA economics, Ohio State University; JD and LLM, Capital University (company bio)"
+   ]
+  },
+  {
+   "name": "Melody Birmingham",
+   "title": "Group President, NiSource Utilities",
+   "background": [
+    "Group president over the operating utilities (Q2 2026 call speaker)",
+    "Career history not read this session"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "NiSource — News archive (dividend declaration September 10, 2026; no Q3 2026 date release as of September 29)",
+   "url": "https://www.nisource.com/news/news-archive",
+   "date": "2026-09-10"
+  },
+  {
+   "label": "Motley Fool — NiSource (NI) Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/nisource-ni-q2-2026-earnings-call-transcript/",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Investing.com — NiSource Q2 2026 slides: data center push amid earnings pressure",
+   "url": "https://www.investing.com/news/company-news/nisource-q2-2026-slides-data-center-push-amid-earnings-pressure-93CH-4838731",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "NiSource — Announces second quarter 2026 results",
+   "url": "https://www.nisource.com/news/article/nisource-announces-second-quarter-2026-results",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Court News Ohio — Supreme Court rejects challenge to Columbia Gas of Ohio rate increase (2024-1548)",
+   "url": "https://www.courtnewsohio.gov/cases/2026/SCO/0625/241548.asp",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "IURC — Order in Cause 46362, NIPSCO Generation LLC (Schahfer CCGTs and Mitchell BESS for Amazon Data Services)",
+   "url": "https://secure.in.gov/iurc/files/ord_46362_061726.pdf",
+   "date": "2026-06-17"
+  },
+  {
+   "label": "NiSource — Announces first quarter 2026 results",
+   "url": "https://www.nisource.com/news/article/nisource-announces-first-2026-quarter-results",
+   "date": "2026-05-06"
+  },
+  {
+   "label": "DCD — Alphabet signs energy supply agreement with Indiana utility NiSource to power large-scale data center in northern Indiana",
+   "url": "https://www.datacenterdynamics.com/en/news/alphabet-signs-energy-supply-agreement-with-indiana-utility-nisource-to-power-large-scale-data-center-in-northern-indiana/",
+   "date": "2026-04-17"
+  },
+  {
+   "label": "NiSource — Announces strategic energy infrastructure agreements to enhance customer value and economic growth in Indiana (Alphabet; expanded Amazon)",
+   "url": "https://www.nisource.com/news/article/nisource-announces-strategic-energy-infrastructure-agreements-to-enhance-customer-value-and-economic-growth-in-indiana",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "SEC EDGAR — NiSource Inc. Form 10-K for FY2025 (cover: Delaware, Merrillville; employees; customers; GenCo 80.1/19.9; ADS Contract; 202(c) order; generation table)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1111711/000111171126000027/nix-20251231.htm",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "NiSource — Announces full year 2025 results",
+   "url": "https://www.nisource.com/news/article/nisource-announces-full-year-2025-results",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "PA PUC — Approves substantially reduced rate changes for Columbia Gas of Pennsylvania",
+   "url": "https://www.puc.pa.gov/press-release/2025/puc-approves-substantially-reduced-rate-changes-for-columbia-gas-of-pennsylvania-12042025",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Energy-Storage.news — Indiana utility to deliver 1.6 GWh BESS for Amazon's data center expansion (Mitchell site, Gary)",
+   "url": "https://www.energy-storage.news/indiana-utility-to-deliver-1-6gwh-bess-for-amazons-data-center-expansion-though-fossil-fuels-form-major-part-of-package/",
+   "date": "2025-12-04"
+  },
+  {
+   "label": "Utility Dive — NiSource's NIPSCO to supply up to 3 GW to Amazon data centers in Indiana",
+   "url": "https://www.utilitydive.com/news/nisource-nipsco-amazon-data-centers-indiana/806396/",
+   "date": "2025-11-25"
+  },
+  {
+   "label": "NiSource — Powering Indiana's future: how NIPSCO, GenCo and Amazon keep energy reliable and affordable",
+   "url": "https://www.nisource.com/news/article/powering-indiana-s-future-how-nipsco-genco-and-amazon-keep-energy-reliable-and-affordable-20251124",
+   "date": "2025-11-24"
+  },
+  {
+   "label": "Quanta Services (PR Newswire) — Expands its total solutions platform and announces its selection by NiSource for ~3 GW of generation and grid infrastructure; 50% JV with Zachry",
+   "url": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Zachry Group (Business Wire via Yahoo Finance) — Awarded EPC contract for NiSource's combined cycle generation project (two nominal 1,300 MW units, 2 x 2 x 1, near Wheatfield)",
+   "url": "https://finance.yahoo.com/news/zachry-group-awarded-engineering-procurement-110000992.html",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Paul Weiss — Blackstone Infrastructure Partners acquires minority interest in NiSource affiliate GenCo in $1.5 billion deal",
+   "url": "https://www.paulweiss.com/insights/client-news/blackstone-infrastructure-partners-acquires-minority-interest-in-nisource-affiliate-genco-in-15-billion-deal",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Business Wire — NiSource achieves IURC regulatory approval for GenCo strategy",
+   "url": "https://www.businesswire.com/news/home/20250924911782/en/NiSource-Achieves-IURC-Regulatory-Approval-for-GenCo-Strategy",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "NIPSCO — Newly approved NIPSCO electric rates support safety, reliability and customer programs",
+   "url": "https://www.nipsco.com/our-company/news-room/news-article/newly-approved-nipsco-electric-rates-support-safety--reliability-and-customer-programs",
+   "date": "2025-06-26"
+  },
+  {
+   "label": "Business Wire — NiSource completes NIPSCO minority equity interest transaction (Blackstone 19.9%, $2.16B)",
+   "url": "https://www.businesswire.com/news/home/20240102814933/en/NiSource-Inc.-Completes-NIPSCO-Minority-Equity-Interest-Transaction",
+   "date": "2024-01-02"
+  },
+  {
+   "label": "NiSource — Leadership",
+   "url": "https://www.nisource.com/company/leadership/"
+  }
+ ],
+ "lastUpdated": "2026-09-29",
+ "profileVersion": 1
+}

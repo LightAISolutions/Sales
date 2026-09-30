@@ -2515,6 +2515,17 @@
       ]
     },
     {
+      "slug": "cooling-degree-day",
+      "term": "cooling degree day",
+      "def": "A measure of how much cooling a day required: each degree that the day's average temperature sits above a base (65°F in US utility practice) counts as one cooling degree day. Summing them over a season lets a utility compare one summer's air-conditioning load with another's and separate weather from real growth.",
+      "aliases": [
+        "cooling degree days",
+        "CDD",
+        "heating degree day",
+        "degree days"
+      ]
+    },
+    {
       "slug": "cooling-tower",
       "term": "cooling tower",
       "def": "An open device that rejects heat by evaporating a small part of the water flowing through it into an air stream. It reaches a colder temperature than any air-cooled device can, and it consumes water to do so.",
@@ -3146,6 +3157,17 @@
       "slug": "deep-foundation",
       "term": "deep foundation",
       "def": "Piles or drilled shafts that carry load past unsuitable near-surface soil to competent material below. They are chosen when the ground near the surface cannot be made good enough."
+    },
+    {
+      "slug": "default-service",
+      "term": "default service",
+      "def": "In a state with retail choice, the electricity supply a distribution utility must provide to customers who have not chosen a competitive supplier, bought through commission-approved auctions and passed through without markup. The wires company delivers it but does not generate it, which is why it cannot build a plant for a data center.",
+      "aliases": [
+        "default service provider",
+        "provider of last resort",
+        "POLR",
+        "default supply"
+      ]
     },
     {
       "slug": "defects-per-million",
@@ -4024,6 +4046,17 @@
       ]
     },
     {
+      "slug": "emergency-order-202c",
+      "term": "202(c) emergency order",
+      "def": "An order under section 202(c) of the Federal Power Act by which the US Secretary of Energy can require a power plant to keep running during a declared emergency, overriding a planned retirement and allowing the owner to recover the cost. It has been used to hold coal units past their retirement dates when the grid operator warned of a shortfall.",
+      "aliases": [
+        "202(c)",
+        "202(c) order",
+        "emergency order",
+        "Section 202(c)"
+      ]
+    },
+    {
       "slug": "emergency-planning-zone",
       "term": "emergency planning zone",
       "def": "The area around a reactor within which off-site emergency plans must exist. Shrinking it is one of the concrete practical claims small designs make, and it is decided by the regulator against the source term, not by the vendor."
@@ -4355,6 +4388,16 @@
         "turbine warehouse",
         "equipment warehouse line",
         "warehouse loan"
+      ]
+    },
+    {
+      "slug": "equity-forward",
+      "term": "equity forward",
+      "def": "An agreement to sell new shares at a price fixed today with the shares delivered and the cash received later, when the company chooses within an agreed window. A utility uses it to lock in the price of the equity a capital plan needs without diluting earnings before the plant that needs the money is built.",
+      "aliases": [
+        "forward equity sale",
+        "forward sale agreement",
+        "equity forwards"
       ]
     },
     {
@@ -5176,6 +5219,17 @@
       "aliases": [
         "pure-play foundry",
         "fabless"
+      ]
+    },
+    {
+      "slug": "four-hour-battery",
+      "term": "four-hour battery",
+      "def": "A grid battery whose energy capacity is four times its power rating — 400 MW paired with 1,600 MWh — so it can discharge at full power for four hours. Four hours is the duration most US capacity rules credit as firm for the evening peak, which is why it is the standard size utilities buy.",
+      "aliases": [
+        "4-hour battery",
+        "four-hour duration",
+        "four-hour storage",
+        "4-hour storage"
       ]
     },
     {
@@ -6714,6 +6768,16 @@
       "aliases": [
         "J/TH",
         "joules per terahash per second"
+      ]
+    },
+    {
+      "slug": "jurisdictional-declination",
+      "term": "declination",
+      "def": "A utility commission's formal decision to decline jurisdiction over a company or an activity, usually because the entity serves a single large customer under a contract rather than the public at large. It lets a utility affiliate build generation for a data center outside the commission's cost review while keeping the retail utility's customers off the hook.",
+      "aliases": [
+        "declination petition",
+        "jurisdictional declination",
+        "declines jurisdiction"
       ]
     },
     {
@@ -8931,6 +8995,17 @@
       ]
     },
     {
+      "slug": "peak-demand",
+      "term": "peak demand",
+      "def": "The highest instantaneous load a system serves in a period, usually a summer or winter hour. Plants, wires and reserve margins are sized to the peak, so a customer that adds load at the peak hour costs more to serve than one that adds the same energy at night.",
+      "aliases": [
+        "system peak",
+        "peak load",
+        "summer peak",
+        "winter peak"
+      ]
+    },
+    {
       "slug": "peak-shaving",
       "term": "peak shaving",
       "def": "Running on-site generation or storage during the hours that set a site's demand charge, so the meter never records the peak. It turns a backup asset into an earning one, but it also moves the engine out of the emergency-only regulatory class and into a permit that counts its hours.",
@@ -9824,6 +9899,16 @@
       ]
     },
     {
+      "slug": "pumped-storage",
+      "term": "pumped storage",
+      "def": "A hydroelectric battery: water is pumped uphill to a reservoir when power is cheap and released through turbines when it is needed. It stores energy for eight hours or more at gigawatt scale but takes years to build and a site with the right terrain.",
+      "aliases": [
+        "pumped-storage hydro",
+        "pumped hydro",
+        "pumped storage hydropower"
+      ]
+    },
+    {
       "slug": "punch-list",
       "term": "punch list",
       "def": "The list of minor incomplete or defective items outstanding at substantial completion, which the contractor must close before final completion. Closing it routinely takes longer than the commissioning that preceded it, because damages have stopped and the crews have gone — the owner's only remaining leverage is the retention it still holds.",
@@ -10237,6 +10322,16 @@
       ]
     },
     {
+      "slug": "reimbursement-agreement",
+      "term": "reimbursement agreement",
+      "def": "A contract in which a prospective large customer agrees to repay the costs a utility incurs preparing to serve it — studies, equipment, construction — if the customer's project does not go ahead. It is the signed step between an inquiry and a service agreement, and it is what lets a utility count a pipeline as more than interest.",
+      "aliases": [
+        "reimbursement agreements",
+        "cost reimbursement agreement",
+        "payment-and-cancellation agreement"
+      ]
+    },
+    {
       "slug": "reinstatement",
       "term": "reinstatement",
       "def": "A term that restores a catastrophe layer's limit after a loss has used it, usually for an extra premium and usually a limited number of times. Whether a layer has one, several or none is a material difference in a season with two events.",
@@ -10590,6 +10685,16 @@
         "ROFO",
         "right of first refusal",
         "ROFR"
+      ]
+    },
+    {
+      "slug": "ring-fencing",
+      "term": "ring-fencing",
+      "def": "Legal and financial separation of one business from its affiliates — separate entities, separate debt, limits on dividends and guarantees — so that the failure or the cost of one cannot reach the customers or creditors of another. Utilities ring-fence a data-center generation affiliate so its risk stays with the affiliate and its investors.",
+      "aliases": [
+        "ring-fenced",
+        "ring fencing",
+        "ring fence"
       ]
     },
     {
@@ -11091,6 +11196,16 @@
       "def": "The part of a service contract defining how quickly a supplier must respond to and resolve faults, graded by severity. What matters is the definition of severity and when the clock starts — a response measured from a ticket the owner must raise behaves very differently from one triggered by remote monitoring.",
       "aliases": [
         "SLA"
+      ]
+    },
+    {
+      "slug": "service-territory",
+      "term": "service territory",
+      "def": "The geographic area a utility has the exclusive right and the obligation to serve under its state franchise. A data center's utility is decided by where the site sits, which is why the same metro can be split between two utilities with different tariffs.",
+      "aliases": [
+        "service area",
+        "franchise territory",
+        "service territories"
       ]
     },
     {
@@ -13339,6 +13454,16 @@
       ]
     },
     {
+      "slug": "weather-normalized",
+      "term": "weather-normalized",
+      "def": "A sales figure adjusted to what it would have been under average weather, so that a hot summer or a mild winter does not disguise the underlying growth or decline. Utilities report both the actual and the weather-normalized number; the second is the one that says whether new customers and new load are really arriving.",
+      "aliases": [
+        "weather-normalised",
+        "weather normalization",
+        "weather-adjusted"
+      ]
+    },
+    {
       "slug": "wecc-path-rating",
       "term": "WECC path rating",
       "def": "The maximum transfer capability the Western grid's reliability body accepts for a transmission path after a multi-phase study of its effect on neighbouring lines. A new line cannot schedule its full capacity into the Western grid until it holds an accepted rating.",
@@ -13499,6 +13624,17 @@
       "aliases": [
         "xenon-135",
         "xenon pit"
+      ]
+    },
+    {
+      "slug": "xhlf",
+      "term": "XHLF",
+      "def": "Extra High Load Factor: the name of Arizona Public Service's rate schedule for customers above 5,000 kW whose load runs flat — at least 92 percent load factor — such as data centers and semiconductor fabs. It bundles a contract, a minimum bill and construction contributions with lower unit rates, because a flat load is cheaper to serve per kilowatt-hour than a peaky one.",
+      "aliases": [
+        "extra-high load factor",
+        "extra high load factor",
+        "extra-high-load-factor",
+        "XHLF tariff"
       ]
     },
     {

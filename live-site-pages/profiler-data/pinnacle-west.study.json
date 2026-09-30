@@ -1,0 +1,396 @@
+{
+ "schemaVersion": 2,
+ "slug": "pinnacle-west",
+ "title": "Pinnacle West (APS) — Technology Study Guide",
+ "lastUpdated": "2026-09-29",
+ "sections": [
+  {
+   "id": "the-toll-buyer",
+   "title": "The toll buyer: how a utility gets 3.6 GW of batteries without owning them",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The corpus now has four ways a regulated utility ends up with a battery on its system. Duke self-builds and signs the supply agreement. WEC buys a developer's finished project into {{rate base}} ({{build-transfer}}). DTE takes a customer's money and owns the plant. Arizona Public Service does none of these for most of its storage: it runs an {{all-source RFP}}, picks the winning bids, and signs a {{tolling agreement}} — a contract under which the developer builds, finances and owns the battery and APS pays a fixed fee for the right to charge and discharge it as it pleases for twenty years. The toller takes the market risk; the owner takes the availability risk. Of about 3,610 MW of storage APS signed from its 2023 solicitation, roughly 150 MW (the Agave project) is APS-owned. The rest sits on the balance sheets of Recurrent Energy, Strata Clean Energy, GridStor and developers not yet named.",
+    "This matters to a seller because it moves the buying decision one step away from the utility. The battery cells, the {{PCS}}, the enclosure and the {{EPC}} are chosen by the developer at bid stage, to hit a price the RFP will accept. APS never signs a battery purchase order; it signs a toll whose terms are the specification. The 2023 RFP asked for 365 equivalent cycles a year at a 50 percent average {{state of charge}} — a battery that is exercised once a day, every day, and rests half-full. That pair of numbers is what a bidder's warranty and augmentation plan have to cover, and it is the closest thing to a datasheet APS publishes.",
+    "The toll also explains what makes an APS project financeable. GridStor bought the 100 MW / 400 MWh White Tank project from Strata with the toll attached and, a year later, closed $220 million of construction financing from three banks. The lenders were pricing a twenty-year payment stream from a Baa1-rated utility, not a merchant battery's revenue forecast. Strata's business, as its own dossier records, is to win the toll, carry the project through interconnection and permitting, then sell it with the contract on — Scatter Wash to Copenhagen Infrastructure Partners, White Tank to GridStor. The toll is the asset; the battery is what it is attached to."
+   ]
+  },
+  {
+   "id": "four-ways-to-own-a-battery",
+   "title": "Four ways a utility ends up with a battery",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The same 400 MWh can reach a utility's system by four different contracts. Read each row as who owns, who chooses the equipment, who carries the market risk and where the corpus has seen it.",
+   "cols": [
+    "Route",
+    "Who owns the plant",
+    "Who picks the OEM and EPC",
+    "Who carries market risk",
+    "Corpus example"
+   ],
+   "rows": [
+    [
+     "Tolling agreement",
+     "The developer or a fund that bought it",
+     "The developer, at bid stage",
+     "The utility (it schedules the charge and discharge)",
+     "APS — Papago (Recurrent), Scatter Wash and Justice (Strata), White Tank (GridStor)"
+    ],
+    [
+     "Power purchase agreement with storage",
+     "The developer",
+     "The developer",
+     "Shared by contract shape (energy price, capacity payment)",
+     "APS — the 2,480 MW of solar PPAs from the 2023 RFP; Invenergy's Yuma solar-plus-storage"
+    ],
+    [
+     "Build-transfer into rate base",
+     "The utility, after completion",
+     "The developer, before the utility was the buyer",
+     "The utility's customers, through rates",
+     "WEC — Paris, Darien, Koshkonong from Invenergy"
+    ],
+    [
+     "Self-build with a supply agreement",
+     "The utility from day one",
+     "The utility",
+     "The utility's customers, through rates",
+     "Duke — Allen and Riverbend; APS — the 150 MW Agave battery and 170 MW Ironwood Solar"
+    ]
+   ]
+  },
+  {
+   "id": "the-load-factor-tariff",
+   "title": "The load-factor tariff: why a flat load gets its own rate schedule",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "{{load factor}} is average demand divided by peak demand. A house that runs air-conditioning on summer afternoons and little at night might run at 30 percent; a data center that draws the same power every hour of the year runs above 90. The cost of serving a customer is dominated by the plant and wires sized to its peak, so two customers using the same energy cost very different amounts if one is peaky and one is flat. That is the logic behind APS's {{XHLF}} schedule, in force since March 2024: any customer above 5,000 kW whose load factor has held at 92 percent or better for nine of the last twelve months can take service at a lower energy rate ($0.04210 per kWh) with a demand charge of $18.750 per kW, because its kilowatts pay for themselves every hour.",
+    "What the schedule bundles with the price is the part a seller should read twice. The customer must sign an {{ESA}} that fixes contract length, minimum and maximum monthly loads and any special charges, and it pays a minimum bill for the term — the {{minimum demand charge}} idea in contract form. Above 15,000 kW it also pays contributions in aid of construction, a maintenance contract and a share of the cost of any facility the utility has to replace. What the schedule does not contain is an {{exit fee}}: the sheet has no early-termination payment, and no collateral formula. Those are the two terms every other utility in this corpus wrote into its 2025–2026 large-load tariff, and they are what APS's rate case and its 'subscription model' are adding now.",
+    "The subscription model is the contract form APS began describing in May 2026: individually negotiated XHLF agreements at cost-of-service prices, with a negotiated term, {{credit support}}, exit fees, and — the new element — the customer's option to contribute to financing or to accelerate key equipment such as substations and transformers, or to bring its own {{front-of-meter}} supply. It is WEC's {{bespoke resource}} arriving by contract instead of by tariff. Until the Corporation Commission's decision, expected by the end of 2026, the 4.5 GW APS calls committed is committed under ESAs written on the old sheet."
+   ]
+  },
+  {
+   "id": "formula-rates",
+   "title": "Formula rates: the term the consumer parties fight hardest",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The mechanism.** A traditional {{rate case}} sets prices from a historical {{test year}} and leaves them until the next case, so a utility whose {{rate base}} grows 7–9 percent a year earns below its {{allowed return}} in between — {{regulatory lag}}. A {{formula rate}} resets rates annually by formula from projected costs by customer class, closing the lag. APS's 2025 case asks for Arizona's first, the Formula Rate Adjustment Mechanism, alongside a 10.70 percent return (current 9.55) and a 14.69 percent day-one increase.",
+    "**Why it is contested.** The Residential Utility Consumer Office called it 'one, two, three or four increases on an annual basis' and asked instead for a separate data-center class; Commission Staff proposed a 9.55–9.80 percent return; the Attorney General argued for about 3 percent at a 6 percent return. Every consumer party accepts the large-load class; none accepts the annual reset. In a state with a five-member elected Commission, the formula rate is the politically exposed term, and its loss would cost more earnings than a lower return would.",
+    "**What a seller reads.** A utility that wins a formula rate can carry a bigger capital plan at the same credit metrics, which is where the Cholla conversion, the Redhawk expansion and the 'up to 2 GW' of new gas sit. A utility that loses it keeps buying capacity by toll — the cheapest route for its balance sheet — which is APS's model already."
+   ]
+  },
+  {
+   "id": "committed-and-uncommitted",
+   "title": "Committed and uncommitted: reading a queue against a peak",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "APS publishes two numbers for its large-load book and a third that frames them. About 4.5 GW is 'committed' — under signed agreements and 'ramping up', in the CFO's words. About 20 GW is 'uncommitted' — requests in negotiation under the subscription model. And the 2025 system {{peak demand}} was 8.6 GW. The committed queue alone equals more than half of the system's peak; the uncommitted queue is two and a half times it. No other utility in this corpus shows a ratio like that: Dominion's contracted book is large but sits on a 20-plus GW system, and PPL Electric's 11 GW of signed agreements sits on a wires network in a market where it does not build the generation.",
+    "A queue is a claim on the peak, not on the energy. A data center at 92 percent load factor adds almost the same megawatts at the peak hour as at midnight, so 4.5 GW of committed load raises the capacity APS must have on the hottest afternoon by about 4.5 GW — before the 20 GW behind it. That is why the responses are all capacity: 380 MW at Cholla, the Redhawk expansion, a 2,000 MW gas plant proposed near Gila Bend, 3.6 GW of contracted batteries, and an anchor position on a 1.5 Bcf/d gas pipeline four years before the plants that will burn the gas. It is also why the 2035 forecast peak on APS's own page is 12.0 GW against 8.7 in 2025.",
+    "The ramp is the part a seller can watch. Commercial and industrial sales grew 12.7 percent in the second quarter of 2026 and 13.6 percent year to date — 'at or above the top end' of the 4–6 percent long-term rate APS guides for that class. TSMC's fabs are the one named source ('over 1 gigawatt'); 'half a dozen' data-center campuses are the rest, unnamed. When the committed number moves, a contract has been signed; when the C&I sales number moves, a contract has started to draw."
+   ]
+  },
+  {
+   "id": "coal-to-gas-on-a-brownfield",
+   "title": "Coal-to-gas on a brownfield: what Cholla buys and what it does not",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "APS retired its last Cholla coal unit in March 2025 and in July 2026 said it would convert two of the retired units to about 380 MW of gas by 2029, at up to $440 million. The cards compare that route with a new combined-cycle plant on an empty site.",
+   "cards": [
+    {
+     "t": "Convert retired coal units on the existing site",
+     "meta": "Cholla, Navajo County — up to 380 MW, construction 2028, service 2029",
+     "adv": [
+      "The {{point of interconnection}}, the switchyard and the transmission already exist — no {{interconnection queue}}",
+      "Water rights, rail and road access and a permitted industrial site come with the plant",
+      "Capital is a fraction of a greenfield {{combined cycle}}: about $440 million for 380 MW, mostly spent in 2027–2028"
+     ],
+     "dis": [
+      "The output is capped by what the existing steam side and site can support; 380 MW does not move a 4.5 GW queue",
+      "Efficiency is that of the converted boiler or a {{simple cycle}} unit, not a modern combined cycle",
+      "Permitting is still required, and the plant's transmission path (Four Corners–Cholla) is a separate, potentially $1 billion project"
+     ]
+    },
+    {
+     "t": "New combined-cycle plant on a new site",
+     "meta": "The 2,000 MW proposal near Gila Bend, from 2030",
+     "adv": [
+      "Scale matched to the queue — 2 GW in one program",
+      "The best {{heat rate}} available, which matters when the plant runs at high {{capacity factor}} for flat load",
+      "A greenfield site can be laid out for the pipeline lateral, the water supply and future units"
+     ],
+     "dis": [
+      "A new interconnection and a new transmission path, each with its own study and docket",
+      "Turbine delivery slots and EPC capacity are the industry's binding constraint through the decade",
+      "Fuel: the plant depends on the Desert Southwest pipeline expansion arriving in late 2029"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-desert-summer",
+   "title": "The desert summer: degree days, normalization and purchased power",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The measurement.** A {{cooling degree day}} counts each degree the day's average temperature sits above 65°F. APS's second quarter of 2026 had 619 of them against 578 a year earlier — 7 percent more cooling demand from weather alone. Total retail sales rose 9.6 percent; {{weather-normalized}} sales rose 5.6 percent. The gap between the two numbers is the weather; the second number is the growth a seller should plan on.",
+    "**The supply.** In that quarter APS generated 5,962 GWh and bought 4,925 GWh — purchases up from 3,720 GWh a year earlier and now nearly half of supply. A utility that owns 6,257 MW against an 8.6 GW peak covers the gap with contracted plants (the tolls and PPAs) and with market purchases, and a hot quarter pushes more of the load onto the purchased side. Palo Verde ran at 86 percent for the quarter (a refuelling outage) and 92 percent for the half; the coal units ran at 64 percent.",
+    "**Why the miss.** Revenue rose $97 million and operating expenses rose $99 million: the cost of serving the extra load under rates set from a June 2022 test year exceeded what those rates recovered. That is regulatory lag in one quarter, and it is the case for the formula rate the company is asking for."
+   ]
+  },
+  {
+   "id": "nuclear-life-extension",
+   "title": "Nuclear life extension: relicensing a plant you own a third of",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Palo Verde is three units of about 1,400 MW each west of Phoenix, owned by seven utilities; APS operates it and holds 29.1 percent — a 1,146 MW entitlement, the largest single block of firm capacity on its system. The units' current licenses run to the mid-2040s. In March 2026 APS said it would file a {{subsequent license renewal}} application in late 2027 to take each unit to 80 years: 2065, 2066 and 2067. Duke did the same for Oconee and Robinson; WEC achieved a similar result by contract, extending its Point Beach purchase to 2050. In every case the effect on the plan is identical — a gigawatt of baseload that would otherwise need replacing in the 2040s stays, and the capital plan does not have to grow to replace it.",
+    "The renewal has a cost that shows up in the capital plan now rather than later: about $200 million for a capacity buyout at Palo Verde and roughly $500 million over ten years, on the second-quarter 2026 slides. The application itself needs an aging-management review of the reactor vessels, containment and cables. The plant's water is 100 percent recycled wastewater from the Phoenix metro, and APS says operational water use has halved in ten years — the constraint a desert nuclear plant is judged on.",
+    "For a seller the reading is the same as at Duke and WEC. A utility that has decided to keep its nuclear for another twenty years has decided its next gigawatt of firm capacity will not be new nuclear and will not be a like-for-like replacement; what it still needs is capacity for the peak — the Cholla and Redhawk gas, the tolled batteries, the 2 GW program — and energy from the solar PPAs. The nuclear decision fixes the shape of everything else that gets bought."
+   ]
+  },
+  {
+   "id": "where-aps-slots-in",
+   "title": "Where APS's programs slot into the chain",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "One row per program, with who signs the equipment contract and what a seller can actually address.",
+   "cols": [
+    "Program",
+    "Scale and date",
+    "Who buys the equipment",
+    "Seller's door"
+   ],
+   "rows": [
+    [
+     "Storage tolls from the all-source RFPs",
+     "~3,610 MW signed from the 2023 RFP; 2025 RFP awards by end-2026",
+     "The developer (Strata, Recurrent, GridStor, others), at bid stage",
+     "The bidder into the next RFP; the RFP's cycle and state-of-charge terms are the spec"
+    ],
+    [
+     "APS-owned storage and solar",
+     "Agave 150 MW; Ironwood 170 MW (2025–2026)",
+     "APS",
+     "Direct, but small — the owned share of the 2023 awards was 4 percent of the storage"
+    ],
+    [
+     "Cholla conversion",
+     "~380 MW gas, 2029, up to $440M",
+     "APS",
+     "Turbine or conversion package; OEM undisclosed"
+    ],
+    [
+     "Redhawk expansion and new gas",
+     "~400 MW in 2028; up to 2 GW from 2030 (Gila Bend proposal)",
+     "APS",
+     "Combined-cycle turbines and EPC; fuel via the Desert Southwest pipeline from late 2029"
+    ],
+    [
+     "Transmission",
+     "$300–400M a year rising; Four Corners–Cholla potentially $1B",
+     "APS (FERC formula rate, 10.75 percent return)",
+     "Lines, substations, transformers — the customer-funded 'key equipment' the subscription model lets a data center accelerate"
+    ],
+    [
+     "Large-load contracts",
+     "~4.5 GW committed; ~20 GW uncommitted",
+     "The customer (front-of-meter or self-supply options under the subscription model)",
+     "On-site or dedicated substations and, if self-supply is chosen, the customer's own generation and storage"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — the queue, the peak and the plan",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "APS's own figures at their most recent disclosure. The shape to notice: the committed queue is more than half the system peak, and contracted storage is twenty-four times the owned storage.",
+   "items": [
+    {
+     "label": "Uncommitted queue",
+     "sub": "under negotiation, subscription model",
+     "v": 20.0
+    },
+    {
+     "label": "2025 system peak",
+     "sub": "August 2026 slides",
+     "v": 8.6
+    },
+    {
+     "label": "Owned and leased generation",
+     "sub": "FY2025 10-K",
+     "v": 6.257
+    },
+    {
+     "label": "Committed large load",
+     "sub": "'close to 4.5 GW'",
+     "v": 4.5
+    },
+    {
+     "label": "Storage signed from the 2023 RFP",
+     "sub": "150 MW owned, 3,460 MW tolled/PPA",
+     "v": 3.61
+    },
+    {
+     "label": "New gas from 2030",
+     "sub": "'up to 2 gigawatts'",
+     "v": 2.0
+    },
+    {
+     "label": "Palo Verde entitlement",
+     "sub": "29.1 percent, to 2065–2067",
+     "v": 1.146
+    },
+    {
+     "label": "Cholla conversion",
+     "sub": "2029",
+     "v": 0.38
+    },
+    {
+     "label": "APS-owned storage",
+     "sub": "Agave",
+     "v": 0.15
+    }
+   ],
+   "note": "The 2035 forecast peak on APS's data-center page is 12.0 GW against 8.7 GW in 2025; the total potential large load on the Q2 2026 slides is about 33 GW."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The queue does not convert.** The committed figure has read 'about 4.5 GW' from August 2025 to August 2026. If the Commission narrows the XHLF terms or rejects the formula rate in December 2026, the subscription contracts APS is negotiating lose their pricing basis and the 20 GW stays uncommitted.",
+    "**The customer mix is a single fab.** TSMC is the only named customer and a 'material portion' of the committed queue; the data-center campuses are unnamed. A semiconductor downturn would move APS's load forecast more than any one data center could.",
+    "**Tolls are only as good as the toller.** The 2023 RFP's projects are financed against APS's Baa1 rating and its right to recover the toll payments in rates; a rate outcome that disallows purchased-power cost, or a downgrade, would change what the next RFP's bidders can finance.",
+    "**Fuel arrives in 2029, the plants in 2030.** The 2 GW gas program depends on the Desert Southwest pipeline expansion; a slip in either moves the other, and the Cholla conversion (380 MW) is the only owned addition between Redhawk in 2028 and 2030."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is a tolling agreement, and who carries which risk?",
+     "a": "A contract under which a developer builds, owns and operates a battery and the utility pays a fixed fee for the right to charge and discharge it for the term — the utility (toller) takes the market risk, the owner takes the availability risk."
+    },
+    {
+     "q": "Who chooses the battery OEM and the EPC on a tolled project?",
+     "a": "The developer, at bid stage, to hit the price the RFP will accept — the utility signs a toll, never a battery purchase order."
+    },
+    {
+     "q": "What two numbers in the 2023 all-source RFP act as APS's battery specification?",
+     "a": "365 equivalent cycles a year and a 50 percent average state of charge — one full cycle a day, resting half-full; the warranty and augmentation plan must cover them."
+    },
+    {
+     "q": "What is load factor, and why does a 92 percent threshold earn a lower rate?",
+     "a": "Average demand divided by peak demand. A flat load uses the plant and wires sized to its peak every hour, so each kilowatt pays for itself; the energy rate can be lower because the capacity is fully used."
+    },
+    {
+     "q": "Which two terms does the XHLF sheet lack that every 2025–2026 large-load tariff in the corpus carries?",
+     "a": "An exit fee (early-termination payment) and a collateral formula — the rate case and the subscription model are adding both."
+    },
+    {
+     "q": "What does a formula rate change compared with a traditional rate case?",
+     "a": "Rates reset annually by formula from projected costs by class instead of waiting for the next contested case, closing regulatory lag; it is the term consumer parties oppose most."
+    },
+    {
+     "q": "Why does a 4.5 GW committed queue matter more than 4.5 GW of energy sales?",
+     "a": "A flat load adds almost the same megawatts at the peak hour as at midnight, so it raises the capacity the utility must hold at the peak by nearly its full size — before the uncommitted queue behind it."
+    },
+    {
+     "q": "What does converting a retired coal unit to gas buy that a greenfield plant does not?",
+     "a": "An existing interconnection, switchyard, water, site and permits — no interconnection queue — at a fraction of the capital; the cost is a capped output and an older cycle's efficiency."
+    },
+    {
+     "q": "What is a cooling degree day, and why report weather-normalized sales beside actual sales?",
+     "a": "Each degree the day's average sits above 65°F counts one; a season's total measures weather-driven cooling load. Weather-normalized sales strip that out to show the growth new customers and new load actually produced."
+    },
+    {
+     "q": "What does a subsequent license renewal do to a utility's capital plan?",
+     "a": "It keeps a block of firm baseload for twenty more years, so the plan does not have to replace it — the next firm capacity bought is for the peak (gas, tolled batteries), not like-for-like baseload."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A developer wins a 20-year APS toll on a 100 MW / 400 MWh battery and then sells the project to a fund, which raises bank debt against it. What were the lenders pricing?",
+     "c": [
+      "The battery's merchant revenue forecast",
+      "The twenty-year payment stream from an investment-grade utility under the toll",
+      "The developer's balance sheet",
+      "The battery warranty"
+     ],
+     "a": 1,
+     "why": "The toll is the asset; the lenders priced APS's fixed payments, which is why the toll travels with the project when it is sold."
+    },
+    {
+     "q": "A customer above 5,000 kW ran at 88 percent load factor for the last year. Does it qualify for XHLF?",
+     "c": [
+      "Yes — any customer above 5,000 kW qualifies",
+      "No — the schedule requires at least 92 percent in nine of the prior twelve months",
+      "Yes, if it signs an ESA",
+      "Only if it is a data center"
+     ],
+     "a": 1,
+     "why": "The load-factor test is what earns the lower rate; the ESA is required in addition, not instead."
+    },
+    {
+     "q": "APS's second-quarter revenue rose $97 million and operating expenses rose $99 million. Which mechanism in the rate case is aimed at exactly this?",
+     "c": [
+      "The higher return on equity",
+      "The Formula Rate Adjustment Mechanism — an annual reset from projected costs, closing regulatory lag",
+      "The XHLF minimum bill",
+      "The Palo Verde capacity buyout"
+     ],
+     "a": 1,
+     "why": "Rates set from a 2022 test year did not recover the cost of 2026's load; a formula rate resets them annually."
+    },
+    {
+     "q": "Total retail sales rose 9.6 percent and weather-normalized sales rose 5.6 percent in the same quarter. What is the 4-point gap?",
+     "c": [
+      "New customers",
+      "Weather — 7 percent more cooling degree days",
+      "A rate increase",
+      "Purchased power"
+     ],
+     "a": 1,
+     "why": "Normalization removes the weather; the 5.6 percent is the growth to plan on."
+    },
+    {
+     "q": "Which of these is the fastest firm capacity APS can add itself before 2030, and why?",
+     "c": [
+      "The 2,000 MW Gila Bend plant — it is the largest",
+      "The Cholla conversion — it reuses an existing interconnection, site and permits",
+      "Palo Verde's license renewal — it adds a unit",
+      "The White Tank battery — it is APS-owned"
+     ],
+     "a": 1,
+     "why": "Cholla is brownfield: no interconnection queue and a fraction of greenfield capital, in service 2029; Gila Bend is from 2030 and White Tank is GridStor's."
+    },
+    {
+     "q": "A storage seller wants APS's next 1 GW of batteries. Who is the account?",
+     "c": [
+      "APS's major-projects group",
+      "The Arizona Corporation Commission",
+      "The developers bidding into the 2025 all-source RFP — the toll structure puts the OEM decision with them",
+      "TSMC"
+     ],
+     "a": 2,
+     "why": "APS owns about 4 percent of the storage it signed; the rest is chosen by the toll counterparties at bid stage."
+    }
+   ]
+  }
+ ]
+}

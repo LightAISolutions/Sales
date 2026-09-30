@@ -1,0 +1,973 @@
+{
+ "schemaVersion": 7,
+ "slug": "ppl",
+ "name": "PPL Corporation",
+ "shortName": "PPL",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.pplweb.com",
+ "headquarters": "Allentown, PA, USA",
+ "employees": "6,653 at December 31, 2024 (FY2024 Form 10-K: PPL Electric 1,393, LG&E 906, KU 723 among the registrants); the FY2025 figure was not read",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: PPL"
+ },
+ "summary": "BOTTOM LINE UP FRONT: PPL is the utility holding company whose Pennsylvania wires-only utility carries the largest signed-but-unserved data-center book in this file — 31.8 GW of projects 'in advanced stages' at June 30, 2026, more than 11 GW under signed electric service agreements and more than 6.5 GW under construction, up for the tenth consecutive quarter — while its Kentucky utilities are building two 645 MW combined-cycle units (Brown 12 in 2030, Mill Creek 6 in 2031) against a 13.7 GW pipeline of which 1.3 GW is under signed reimbursement agreements, and its 51 percent Invitium Energy joint venture with Blackstone Infrastructure has reserved more than 5 GW of combined-cycle turbines to build for hyperscalers outside rate base, with PJM having accepted more than 5 GW of its interconnection requests. BACKGROUND. Allentown, Pennsylvania; NYSE: PPL; a Pennsylvania corporation serving more than 3.6 million customers through PPL Electric Utilities (about 1.5 million electric customers in Pennsylvania, no generation), Louisville Gas and Electric and Kentucky Utilities (about 990,000 electric and 336,000 gas customers in Kentucky and Virginia, 7,264 MW of owned generation) and Rhode Island Energy (about 515,000 electric and 280,000 gas customers, acquired May 25, 2022). FY2025 ongoing earnings were $1.81 a share (+7.1 percent; reported $1.59, net income $1.18B reported and $1.34B ongoing) on revenue of $9.04B; 2026 guidance is $1.90–1.98 with 6–8 percent annual growth through at least 2029 'near the top end'; the 2026–2029 capital plan is $23B (distribution $4.75B, transmission $6.65B, non-coal generation $4.125B, coal generation $1.575B, gas operations $1.6B), taking rate base from $29.0B to $42.9B at a 10.3 percent compound rate, with about $3B of equity of which about $2B was executed by August 2026. The regulatory year settled all three jurisdictions: a $275M Pennsylvania distribution increase effective July 1, 2026 (5-0, against $356.3M asked) carrying the state's first large-load tariff (50 MW, ten-year minimum, ramp up to five years, minimum-load guarantees, exit fees, security equal to the upgrades); Kentucky orders of 6.54 percent (KU) and 4.73 percent (LG&E electric) effective January 1, 2026 at about half the request, with a rehearing on the sharing mechanism the stay-out depended on; and a Rhode Island order effective September 1, 2026 that kept the 9 percent return of 2018 against 10.75 percent asked and preceded $170M of 'Hold Harmless' credits owed from the 2022 acquisition. Second-quarter 2026 ongoing earnings of $0.33 missed a $0.37 consensus on revenue of $2.11B. Collection gap: the FY2025 Form 10-K was not read (SEC hosts were blocked in the research session), so the employee count and per-utility customer counts are the FY2024 10-K's; the Q2 2026 deck's '26 GW signed ESAs in service 2026–2031' and '20.6 GW in service by 2030' lines came through a summarizer and are treated cautiously against the release's 'more than 11 GW' of signed ESAs; Invitium's turbine supplier, sites and hyperscaler counterparties are undisclosed; the Kentucky EHLF tariff's threshold is reported as 100 MW by Louisville Public Media and as '50 MVA' on the Q2 deck, and no source reconciles them; the E.W. Brown battery's supplier is not named in the filing read (a Burns & McDonnell project page surfaced by a search describes 152 Tesla Megapack 2XL enclosures at the site, unread and unverified this session); and the Q3 2026 results date was not on the investor calendar as of September 29, 2026.",
+ "ecosystemRole": "We assess PPL as the corpus's case of one holding company running all three answers to the data-center question at once: a restructured-market wires company that cannot build generation and therefore prices the load through a large-load tariff and a proposed Customer Protection Transmission Rider (PPL Electric, 31.8 GW advanced); a vertically integrated pair that builds regulated combined cycles and batteries against signed reimbursement agreements (LG&E and KU, 13.7 GW pipeline, 1,290 MW of CCGTs approved); and an unregulated generation joint venture with a private-infrastructure sponsor that reserves turbines first and signs hyperscalers second (Invitium, 51/49 with Blackstone Infrastructure, more than 5 GW of CCGT reservations). Basis: the Q2 2026 release and deck (August 7, 2026), the July 15, 2025 joint-venture release and the October 30, 2025 Kentucky approval. For the equipment sellers in this file the doors are different in each state: in Pennsylvania PPL buys wires, substations and network upgrades and the customer or Invitium buys the generation (Sorgi: 'bilateral contracting will likely be the predominant path for getting new generation development in PJM'); in Kentucky LG&E and KU are the buyer of two 645 MW combined cycles (EPC and turbine OEM undisclosed in the read sources; GE Vernova supplied the earlier Mill Creek 5 unit per POWER), the 125 MW / 500 MWh E.W. Brown battery (supplier unnamed, in service early 2027), the Ghent 2 SCR, the 266 MW / 8-hour Lewis Ridge pumped-storage project with Rye Development and, if refiled, the 400 MW / 1,600 MWh Cane Run battery withdrawn from the 2025 certificate; and at Invitium the counterparty is a 51 percent-owned joint venture whose turbine supplier is not named, whose batteries 'could be owned directly by the hyperscalers', and whose first commercial agreements are promised 'by year-end' 2026. PPL Electric is also the transmission and delivery provider for Talen's Susquehanna–Amazon front-of-the-meter arrangement, which is why PPL appears in this corpus's Talen dossier.",
+ "productsAndServices": [
+  {
+   "name": "PPL Electric Utilities — Pennsylvania transmission and distribution, the large-load tariff and the 31.8 GW pipeline",
+   "category": "Regulated utility service",
+   "description": "PPL Electric Utilities delivers electricity to about 1.5 million customers in central and eastern Pennsylvania and owns no generation (FY2024 Form 10-K): in Pennsylvania's restructured market it provides default service and the wires, and generation is sold by competitive suppliers or built by others. Its data-center book is the largest disclosed in this file. At June 30, 2026 it reported 31.8 GW of data-center projects 'in advanced stages' (projects that have signed agreements with developers, with costs incurred reimbursable by the developer if the project does not proceed), more than 11 GW under signed electric service agreements (the deck's chart reads 11.1 GW, up from 10.0 GW a quarter earlier) and more than 6.5 GW under construction, the tenth consecutive quarterly increase; two data centers began service in the second quarter and are expected to ramp to about 2 GW by 2031, and the May 2026 disclosure (28.3 GW by 2034) had ramps of 0.6 GW in 2026 rising to 20.7 GW in 2030, with QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named by Utility Dive as counterparties. The Pennsylvania PUC approved a $275M distribution rate increase on June 4, 2026 (5-0, modified settlement, docket R-2025-3057164; $356.3M requested; residential bill at 918 kWh from $177.01 to $184.49, +4.9 percent; customer charge $14.09 to $15), effective July 1, 2026, with class increases under 4 percent, delivery rates about 20 percent below the state average, a two-year stay-out and $11M a year of low-income funding. The order carries the state's first large-load tariff: customers of 50 MW or more at a single facility (or 75 MW aggregate within ten miles at 69 kV or above) take an initial term of at least ten years, a ramp of up to five years, minimum-load guarantees ('guaranteed payments of at least 80% of the capacity they reserve'), exit fees, security equal to the cost of the upgrades and an interruptible option — written inside the PUC's May 13, 2026 model-tariff framework (docket M-2025-3054271: thresholds above 50 MW individually or 100 MW aggregate, ramping, minimum terms, exit provisions, deposits and collateral, a six-month study, a public queue and self-construction). On September 14, 2026 PPL Electric proposed a Customer Protection Transmission Rider to replace the Transmission Service Charge and assign certain transmission network-upgrade costs to the LP-6 large-load class, for implementation in the first quarter of 2028. Sorgi's arithmetic on the August 2026 call: if the 31.8 GW is realized, the transmission component of a residential bill falls by about $25 a month over time.",
+   "highlights": [
+    "31.8 GW advanced-stage (signed with developers, costs reimbursable); >11 GW signed ESAs (11.1 GW on the deck chart, from 10.0 GW); >6.5 GW under construction — Q2 2026, tenth consecutive quarterly increase",
+    "Large-load tariff (effective July 1, 2026): ≥50 MW single site or 75 MW aggregate within 10 miles at ≥69 kV; ≥10-year initial term; ramp ≤5 years; ≥80 percent of reserved capacity guaranteed; exit fees; security equal to the upgrade cost; interruptible option",
+    "$275M rate order (June 4, 2026; $356.3M asked): +4.9 percent residential; two-year stay-out; delivery rates ~20 percent below the Pennsylvania average",
+    "Customer Protection Transmission Rider proposed September 14, 2026 — network-upgrade costs to the LP-6 class, implementation Q1 2028; LP-6 customers already make 'significant financial and usage commitments before connecting' (Martin)",
+    "Named counterparties (Utility Dive, May 2026): QTS, Amazon Web Services, PowerHouse Data Centers (Carlisle, 1.35 GW per the PowerHouse dossier), CoreWeave; Talen's Susquehanna–Amazon arrangement runs front-of-the-meter with PPL Electric providing transmission and delivery"
+   ],
+   "positioning": "Against Dominion's contracted book (~53.8 GW in its own dossier) and Exelon's ~11 GW high-probability queue, PPL Electric's 11 GW of signed ESAs is the corpus's largest signed figure at a wires-only utility, and its tariff is the first in this file written under a state model-tariff order. What it cannot do is build the generation — which is why the Invitium joint venture exists and why Sorgi says 'bilateral contracting will likely be the predominant path' in PJM.",
+   "soldThrough": "PUC-approved distribution tariffs and default service; large-load electric service agreements under the June 2026 tariff; FERC formula-rate transmission (about 25 percent of capex recovered near real time)",
+   "targetSegments": [
+    "Hyperscale and colocation data-center developers in central and eastern Pennsylvania (QTS, AWS, PowerHouse, CoreWeave)",
+    "Residential and commercial default-service customers",
+    "Competitive retail suppliers using PPL's wires (Talen for Amazon)"
+   ],
+   "roadmap": "Customer Protection Transmission Rider decision and implementation Q1 2028; the 0.6 GW (2026) → 20.7 GW (2030) ramp on the May 2026 disclosure; the two-year rate stay-out to mid-2028."
+  },
+  {
+   "name": "LG&E and KU — Kentucky regulated generation, the EHLF tariff and the 2025 certificate",
+   "category": "Regulated utility service",
+   "description": "Louisville Gas and Electric and Kentucky Utilities serve about 440,000 electric and 336,000 gas customers (LG&E) and 549,000 Kentucky and 28,000 Virginia customers (KU) from about 7,264 MW of owned generation (LG&E 2,466 MW, KU 4,798 MW; FY2024 Form 10-K), as vertically integrated utilities under the Kentucky Public Service Commission. Their data-center pipeline was 13.7 GW at June 30, 2026 (11.6 GW data center, 2.1 GW other, from 11.9 GW plus 1 GW in May), with 1.3 GW under signed reimbursement agreements (0.9 GW a quarter earlier) and expected new load of 3.7 GW by 2032 against the 1.8 GW assumed in the 2025 certificate case; the first named customer is the PowerHouse Data Centers–Poe Companies 400 MW Louisville campus (130 MW by October 2026, LG&E switch station September 2026, initial capacity 335 MW rising to 402 MW), and the corpus's PowerHouse dossier adds a $9.6B Carrollton campus with LG&E 'confirmed capacity'. The February 2025 certificate application (case 2025-00045; POWER's summary: Brown 12, a 645 MW combined cycle at E.W. Brown, $1.38B, 2030; Mill Creek 6, 645 MW, $1.42B, 2031; a 400 MW / 1,600 MWh battery at Cane Run, $775M, 2028; a Ghent 2 SCR, $153M, 2028; load 32,808 GWh in 2025 to 48,129 GWh in 2032 and peak 6,230 MW to 8,034 MW, more than 6,000 MW data-center related) was approved on October 28, 2025 for the two combined cycles and the SCR — $2.798B including transmission per the Kentucky Lantern — while the Cane Run battery was withdrawn as moot 'with the right to file a future CPCN if necessary', the commission denied a cost-recovery mechanism for Mill Creek 6, the Mill Creek 2 adjustment clause and advance recovery of notice expenses, called the load probabilities 'troubling' and unsupported, opened a monitoring case for Mill Creek 6 and ordered a synchronous-condenser study in the next IRP. The Extremely High Load Factor tariff (LPM, August 2025: a minimum bill of 80 percent of forecast monthly consumption for 15 years, collateral up to $100M, a 100 MW threshold; the Q2 deck: 50 MVA and 85 percent expected load factor, 15-year minimum, monthly billing at 80 percent of contract capacity or the highest measured load of the preceding 11 months) was approved, and a 525 MW data center under it would owe about $1.4B of demand charges over 15 years per testimony. Rates rose 6.54 percent (KU) and 4.73 percent (LG&E electric, 11.09 percent gas) from January 1, 2026 (cases 2025-00113/00114), about half the request; LG&E and KU sought rehearing on March 20, 2026 of the rejected sharing-mechanism adjustment clause on which the stay-out to August 2028 depended. Also in Kentucky: the E.W. Brown battery (125 MW / 500 MWh, Mercer County, case 2022-00402, in service 'first part of 2027', supplier unnamed); Marion and Mercer solar and the Brown battery under the Generation Cost Recovery mechanism; a July 22, 2026 RFP for renewables above 50 MW and storage of 50–400 MW / 200–1,600 MWh (PPA, asset purchase or build-transfer, bids due September 3, 2026); the Lewis Ridge pumped-storage project with Rye Development (266 MW, 8-hour, Bell County, $81M DOE grant, FERC license application filed June 2025, construction from December 2027, KU 63 percent / LG&E 37 percent); and an April 30, 2026 feasibility study with X-energy on the Xe-100 (80 MWe per module) under Kentucky's nuclear site-readiness pilot. A potential further certificate by year-end 2026 could add Lewis Ridge, the 400 MW of batteries deferred in 2025 and an additional combined cycle — $3.5–4.0B incremental over 2027–2032 — with the trigger being 'conversion from developer to hyperscaler contract'.",
+   "highlights": [
+    "Pipeline 13.7 GW (11.6 GW data center); 1.3 GW signed reimbursement agreements; expected new load 3.7 GW by 2032 vs 1.8 GW in the 2025 CPCN",
+    "Approved October 28, 2025: Brown 12 (645 MW, 2030) and Mill Creek 6 (645 MW, 2031) combined cycles, Ghent 2 SCR (2028); $2.798B incl. transmission; Cane Run 400 MW / 1,600 MWh battery withdrawn with the right to refile; no cost-recovery mechanism for MC6",
+    "EHLF tariff: 15-year minimum; 80 percent minimum bill; collateral up to $100M; threshold reported as 100 MW (LPM) and 50 MVA / 85 percent load factor (Q2 deck) — unreconciled",
+    "E.W. Brown battery 125 MW / 500 MWh in service early 2027 (supplier unnamed); July 2026 RFP for storage 50–400 MW / 200–1,600 MWh; Lewis Ridge 266 MW / 8-hour pumped storage with Rye Development; X-energy Xe-100 feasibility study",
+    "Rates +6.54 percent KU / +4.73 percent LG&E electric from January 1, 2026 (half the request); rehearing sought on the sharing mechanism the August 2028 stay-out depended on; Kentucky HB 593 (no cross-subsidy of data centers) died in the Senate in April 2026 — LG&E and KU 'didn't like it' (Rep. Bray)"
+   ],
+   "positioning": "Kentucky is where PPL is a generation buyer in the ordinary sense — two 645 MW combined cycles, an SCR, a battery and a pumped-storage project in rate base — and the state's regulator has been the corpus's most explicit about the risk of building for load that may not come, approving the plants while denying the recovery mechanisms and calling the probabilities 'troubling'. The EHLF tariff's 80 percent / 15-year minimum bill is the same shape as DTE's Saline contract and WEC's bespoke resource, arrived at through a tariff case rather than a special contract.",
+   "soldThrough": "KPSC-certificated rate-base generation (CPCN) recovered through base rates and the Generation Cost Recovery mechanism; EHLF tariff service for large loads; PPAs, asset purchases or build-transfer for RFP resources",
+   "targetSegments": [
+    "Hyperscale and colocation campuses in Louisville, Carroll County and central Kentucky (PowerHouse/Poe; BlueOval SK ~250 MW per POWER)",
+    "Residential, commercial and industrial customers in Kentucky and southwest Virginia"
+   ],
+   "roadmap": "Brown 12 in 2030 and Mill Creek 6 in 2031; E.W. Brown battery early 2027; renewable/storage RFP bids September 3, 2026; a possible additional CPCN by year-end 2026 (Lewis Ridge, 400 MW of batteries, another CCGT); PSC rehearing decision on the sharing mechanism expected by August 14, 2026 per the deck (outcome not read)."
+  },
+  {
+   "name": "Rhode Island Energy — the 2022 acquisition, the 2026 rate order and the Hold Harmless credits",
+   "category": "Regulated utility service",
+   "description": "Rhode Island Energy (the former Narragansett Electric, acquired from National Grid on May 25, 2022) serves about 515,000 electric and 280,000 gas customers. Its first PPL-era rate case (filed November 26, 2025, docket 25-45-GE, requesting $181M in year one and $49M in year two at a 10.75 percent return) was decided in August 2026 with rates effective September 1: the PUC kept the 9 percent return in place since 2018, rejected the two-year plan, denied $9.4M of IT costs and deferred recovery of the billing system. On August 25, 2026 the company said it would implement 'Hold Harmless' bill credits from the 2022 acquisition commitment — $170M in net present value, about $14 a month on electric bills from October 2026 to September 2027 and about $51 a month on gas bills from December 2026 to April 2027. Rhode Island contributed $0.10 of ongoing EPS in the first quarter of 2026 and $0.01 in the second.",
+   "highlights": [
+    "Rate order effective September 1, 2026: 9 percent ROE retained (10.75 percent asked); two-year plan rejected; $9.4M IT costs denied; billing-system recovery deferred",
+    "Hold Harmless credits: $170M NPV; ~$14/month electric (Oct 2026–Sep 2027); ~$51/month gas (Dec 2026–Apr 2027)",
+    "Segment ongoing EPS: Q1 2026 $0.10; Q2 2026 $0.01"
+   ],
+   "positioning": "The one PPL jurisdiction with no data-center story and the lowest allowed return in the group; it matters here as the reason PPL's consolidated return lags its Pennsylvania and Kentucky utilities.",
+   "soldThrough": "RIPUC-approved distribution tariffs; standard-offer supply",
+   "targetSegments": [
+    "Rhode Island residential and commercial electric and gas customers"
+   ],
+   "roadmap": "Credits run through September 2027 (electric) and April 2027 (gas); the next rate filing after the rejected two-year plan is not scheduled in the read sources."
+  },
+  {
+   "name": "Invitium Energy — the 51/49 generation joint venture with Blackstone Infrastructure",
+   "category": "Generation",
+   "description": "Announced July 15, 2025 at the Pennsylvania Energy and Innovation Summit: a joint venture owned 51 percent by PPL and 49 percent by Blackstone Infrastructure to build combined-cycle gas generation in Pennsylvania under long-term energy services agreements with hyperscalers, with 'regulated-like risk profiles', excluding PPL Electric; PPL cited a 6 GW shortfall over five to six years, about $15B of investment, more than 60 GW of data-center interest and 13 GW in advanced stages at the time. By August 2026 the venture, now named Invitium Energy, had executed reservation agreements for more than 5 GW of combined-cycle turbines (supplier not named), PJM had accepted more than 5 GW of its interconnection requests, its sites can host 8–14 GW, the 5 GW represents $12.5–15.0B of potential JV-level investment through 2032, and PPL expects 'one or more commercial agreements by year-end'; the first turbines could be online 'as early as 2031-2032', while batteries and other shorter-lead-time resources could contribute earnings in 2029 or 2030, and Sorgi said batteries are 'the easiest for the hyperscalers to embed in their designs' and 'some of that could be owned directly by the hyperscalers'. PPL counts $10–12B of total investment upside through 2032 across Kentucky regulated generation and its Invitium interest, none of it in the $23B plan; construction-period financing is expected off PPL's balance sheet (Bergstein).",
+   "highlights": [
+    "51 percent PPL / 49 percent Blackstone Infrastructure; combined-cycle gas under long-term ESAs with hyperscalers; excludes PPL Electric",
+    "August 2026: >5 GW of CCGT turbine reservations (OEM undisclosed); PJM accepted >5 GW of interconnection requests; sites for 8–14 GW; $12.5–15.0B potential JV-level investment through 2032",
+    "First commercial agreements expected 'by year-end' 2026; turbines online as early as 2031–2032; batteries possibly earning from 2029–2030 and possibly hyperscaler-owned",
+    "Not in the $23B plan; $10–12B of upside through 2032 with Kentucky; construction financing off balance sheet"
+   ],
+   "positioning": "The corpus's clearest case of a regulated holding company building unregulated generation for hyperscalers with a private-infrastructure partner — Blackstone Infrastructure is also NiSource's 19.9 percent partner in NIPSCO and in its GenCo. Against Talen's and Constellation's existing plants, Invitium sells new build with turbines reserved before customers are signed; against NiSource's GenCo, it is outside rate base and outside the commission's review entirely.",
+   "soldThrough": "Long-term energy services agreements with hyperscalers; bilateral contracting rather than the PJM process ('irrespective of the PJM process' — Sorgi)",
+   "targetSegments": [
+    "Hyperscalers building owned campuses in PJM's Pennsylvania zones",
+    "Large data-center developers seeking dedicated supply"
+   ],
+   "roadmap": "One or more commercial agreements by year-end 2026; first CCGT online 2031–2032; earlier battery contribution 2029–2030; up to 14 GW of sites."
+  },
+  {
+   "name": "Capital plan, financing and credit — $23B through 2029 and the rate-base path",
+   "category": "Corporate",
+   "description": "The 2026–2029 capital plan is $23B, raised from $20B in February 2026 ($5.125B in 2026, $6.025B in 2027, $6.2B in 2028, $5.625B in 2029; by category distribution $4.75B, transmission $6.65B, non-coal generation $4.125B, coal generation $1.575B, gas operations $1.6B, other $0.55B), taking rate base from $29.0B at year-end 2025 to $42.9B in 2029 (10.3 percent compound); about 60 percent of capex is recovered near real time (FERC transmission 25 percent, trackers 18 percent, AFUDC 15 percent; base rates 42 percent). Equity needs are about $3B over 2026–2029, about $2B executed by August 2026 through the at-the-market program and February 2026 equity units. Ratings: Moody's Baa1 (PPL), A3 (PPL Electric, LG&E, KU); S&P A- (PPL), A (PPL Electric), BBB+ (LG&E and KU); the FFO-to-debt target is 16–18 percent. The quarterly dividend was raised 4.6 percent to $0.2850 in February 2026 with 4–6 percent dividend growth targeted; Sorgi's 'a dollar of O&M ... eight dollars of capital' describes the cost-saving programme that funds the plan. Guidance: $1.90–1.98 for 2026 (midpoint $1.94, +7.2 percent) and 6–8 percent annual growth through at least 2029 'near the top end', with the joint venture excluded and treated as back-end upside.",
+   "highlights": [
+    "Capex $23B 2026–2029 (from $20B); rate base $29.0B → $42.9B (10.3 percent CAGR); ~60 percent near-real-time recovery",
+    "Equity ~$3B 2026–2029, ~$2B executed (ATM + February 2026 equity units); dividend $0.2850 a quarter (+4.6 percent), 4–6 percent growth",
+    "Ratings Baa1 / A- (PPL); A3 / A (PPL Electric); A3 / BBB+ (LG&E-KU); FFO/debt 16–18 percent target",
+    "Upside outside the plan: $10–12B through 2032 (Kentucky generation + Invitium); Invitium construction financing off balance sheet"
+   ],
+   "positioning": "Mid-sized among the corpus utilities' plans ($23B against Duke's $103B and NiSource's $28.6B) but with the strongest operating-company ratings in the file (A3/A at PPL Electric) and the largest unfunded upside relative to plan, since neither the Kentucky CPCN candidates nor Invitium is in the $23B.",
+   "soldThrough": "Not applicable — corporate finance",
+   "targetSegments": [
+    "Not applicable"
+   ],
+   "roadmap": "Rate-base guidance to 2029; EPS growth 6–8 percent through at least 2029; equity ~$1B still to execute; JV upside from 2029–2032."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "PPL Electric large-load tariff (PA PUC order June 4, 2026, docket R-2025-3057164; model framework M-2025-3054271)",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Threshold",
+     "value": "≥50 MW at a single facility, or 75 MW aggregate within 10 miles at ≥69 kV (settlement); PUC model framework: >50 MW individually or 100 MW aggregate"
+    },
+    {
+     "band": "Term",
+     "label": "Initial term",
+     "value": "at least 10 years ('long contracts with a minimum term of 10 years' — Sorgi)"
+    },
+    {
+     "band": "Term",
+     "label": "Ramp",
+     "value": "up to 5 years"
+    },
+    {
+     "band": "Payment",
+     "label": "Minimum load",
+     "value": "minimum load guarantees — 'guaranteed payments of at least 80% of the capacity they reserve'"
+    },
+    {
+     "band": "Exit",
+     "label": "Exit fees",
+     "value": "exit fees apply"
+    },
+    {
+     "band": "Credit",
+     "label": "Security",
+     "value": "security equal to the cost of the upgrades; PUC framework: deposits and collateral"
+    },
+    {
+     "band": "Process",
+     "label": "Study and queue",
+     "value": "6-month study; public queue; self-construction option (PUC framework)"
+    },
+    {
+     "band": "Options",
+     "label": "Interruptible",
+     "value": "interruptible service option"
+    },
+    {
+     "band": "Transmission",
+     "label": "Customer Protection Transmission Rider (proposed Sep 14, 2026)",
+     "value": "replaces the Transmission Service Charge; assigns certain transmission network upgrade costs to the LP-6 large-load class; implementation Q1 2028"
+    }
+   ],
+   "notes": "The tariff sits inside the $275M rate order effective July 1, 2026. Sources: Utility Dive (March 16, 2026), the PA PUC's June 4 and May 13 releases, the Q2 2026 call and the September 14 CPTR release."
+  },
+  {
+   "product": "LG&E and KU Extremely High Load Factor (EHLF) tariff",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Threshold",
+     "value": "100 MW (LPM, August 2025); '50 MVA and 85% expected average load factor' (Q2 2026 deck) — no source reconciles the two"
+    },
+    {
+     "band": "Term",
+     "label": "Minimum term",
+     "value": "15 years"
+    },
+    {
+     "band": "Payment",
+     "label": "Minimum bill",
+     "value": "80% of forecasted monthly consumption (LPM); monthly billing at 80% of contract capacity or the highest measured load from the preceding 11 months (deck)"
+    },
+    {
+     "band": "Credit",
+     "label": "Collateral",
+     "value": "up to $100M"
+    },
+    {
+     "band": "Illustration",
+     "label": "525 MW data center",
+     "value": "~$1.4B of demand charges obligated over 15 years (testimony reported by LPM)"
+    }
+   ],
+   "notes": "Approved by the KPSC; LG&E and KU cite it as the protection HB 593 would have added. Kentucky Lantern, April 16, 2026."
+  },
+  {
+   "product": "Kentucky generation certificate — case 2025-00045 (filed February 28, 2025; order October 28, 2025)",
+   "specs": [
+    {
+     "band": "Approved",
+     "label": "Brown 12",
+     "value": "645 MW net summer NGCC at E.W. Brown (Mercer County), in service 2030; $1.38B (POWER, application)"
+    },
+    {
+     "band": "Approved",
+     "label": "Mill Creek 6",
+     "value": "645 MW net summer NGCC at Mill Creek (Jefferson County), in service 2031; $1.42B (application)"
+    },
+    {
+     "band": "Approved",
+     "label": "Ghent 2 SCR",
+     "value": "selective catalytic reduction at Ghent Unit 2, 2028; $153M"
+    },
+    {
+     "band": "Approved",
+     "label": "Combined cost",
+     "value": "$2.798B for the two combined cycles plus transmission (~$1.399B each) — Kentucky Lantern"
+    },
+    {
+     "band": "Withdrawn",
+     "label": "Cane Run battery",
+     "value": "400 MW / 1,600 MWh, $775M, 2028 — withdrawn as moot 'with the right to file a future CPCN if necessary'"
+    },
+    {
+     "band": "Denied",
+     "label": "Recovery mechanisms",
+     "value": "cost-recovery mechanism for Mill Creek 6; Mill Creek 2 adjustment clause; advance recovery of notice expenses"
+    },
+    {
+     "band": "Conditions",
+     "label": "Oversight",
+     "value": "monitoring case for Mill Creek 6; synchronous condenser study in the next IRP; 'speculative costs of powering an expected 1,470 MW of load growth'"
+    },
+    {
+     "band": "Forecast",
+     "label": "Load in the application",
+     "value": "32,808 GWh (2025) → 48,129 GWh (2032); peak 6,230 MW → 8,034 MW; >6,000 MW data-center related; BlueOval SK ~250 MW"
+    }
+   ],
+   "notes": "Mill Creek 2's retirement authority (2027) was previously granted and the PSC did not rule on it here. GE Vernova supplied the earlier Mill Creek 5 turbines per POWER; the OEM for Brown 12 and Mill Creek 6 is not named in the read sources."
+  },
+  {
+   "product": "2026–2029 capital plan and financing (Q2 2026 investor update)",
+   "specs": [
+    {
+     "band": "Capex",
+     "label": "Total",
+     "value": "$23B (2026 $5.125B; 2027 $6.025B; 2028 $6.2B; 2029 $5.625B) — raised from $20B in February 2026"
+    },
+    {
+     "band": "Capex",
+     "label": "By category",
+     "value": "distribution $4.75B; transmission $6.65B; generation non-coal $4.125B; generation coal $1.575B; gas operations $1.6B; other $0.55B"
+    },
+    {
+     "band": "Rate base",
+     "label": "Path",
+     "value": "$29.0B year-end 2025 → $42.9B 2029; 10.3% CAGR"
+    },
+    {
+     "band": "Recovery",
+     "label": "Timing",
+     "value": "~60% near real time — FERC transmission 25%, trackers 18%, AFUDC 15%; base rates 42%"
+    },
+    {
+     "band": "Equity",
+     "label": "Needs",
+     "value": "~$3B 2026–2029; ~$2B executed (ATM + February 2026 equity units)"
+    },
+    {
+     "band": "Credit",
+     "label": "Ratings",
+     "value": "Moody's Baa1 PPL / A3 PPL Electric / A3 LG&E-KU; S&P A- PPL / A PPL Electric / BBB+ LG&E-KU; FFO/debt target 16–18%"
+    },
+    {
+     "band": "Upside",
+     "label": "Outside the plan",
+     "value": "$10–12B through 2032 (Kentucky regulated generation + PPL's Invitium interest); Invitium 5 GW = $12.5–15.0B at JV level; Kentucky incremental $3.5–4.0B 2027–2032"
+    },
+    {
+     "band": "Dividend",
+     "label": "Quarterly",
+     "value": "$0.2850 (+4.6%, February 2026); 4–6% growth targeted"
+    }
+   ],
+   "notes": "The deck's dividend line was read two ways by the summarizer ($0.2625 annualized $1.14 vs $0.2850); the February 2026 release's $0.2850 is used."
+  },
+  {
+   "product": "Invitium Energy (51% PPL / 49% Blackstone Infrastructure) — status August 2026",
+   "specs": [
+    {
+     "band": "Structure",
+     "label": "Ownership",
+     "value": "PPL 51% / Blackstone Infrastructure 49%; excludes PPL Electric; construction-period financing expected off PPL's balance sheet"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Turbines",
+     "value": "reservation agreements for >5 GW of combined-cycle turbines (supplier not named)"
+    },
+    {
+     "band": "Pipeline",
+     "label": "Interconnection",
+     "value": "PJM accepted >5 GW of interconnection requests; sites for 8–14 GW"
+    },
+    {
+     "band": "Economics",
+     "label": "Investment",
+     "value": "5 GW ≈ $12.5–15.0B potential JV-level investment through 2032; 'up to $15B through 2032' (Utility Dive)"
+    },
+    {
+     "band": "Timing",
+     "label": "Milestones",
+     "value": "'one or more commercial agreements by year-end' 2026; CCGT online as early as 2031–2032; batteries could contribute earnings 2029 or 2030"
+    },
+    {
+     "band": "Model",
+     "label": "Contracting",
+     "value": "long-term energy services agreements with hyperscalers, 'regulated-like risk profiles'; bilateral, 'irrespective of the PJM process'"
+    }
+   ],
+   "notes": "No hyperscaler counterparty, site or turbine OEM was named as of the August 10, 2026 report."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$8.46B",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Comparative figure from the FY2025 reporting; consensus for the year not located",
+      "kpi": "revenue",
+      "usdMillions": 8460,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Earnings per share",
+      "actual": "Reported $1.20; ongoing $1.69 (derived: FY2025's $1.81 was +7.1 percent)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Used only as the base year; the FY2024 release was not read",
+      "kpi": "eps"
+     }
+    ],
+    "commentary": "Read only as the comparison year in the FY2025 release and the Q4 coverage."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$9.04B (FY2024 $8.46B)",
+      "expected": "Q4: $2.34B consensus (Zacks)",
+      "verdict": "miss",
+      "result": "Q4 2025 revenue $2.27B against $2.34B; full-year consensus not located",
+      "kpi": "revenue",
+      "usdMillions": 9040,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Earnings per share",
+      "actual": "Reported $1.59 (FY2024 $1.20); ongoing $1.81 (+7.1 percent)",
+      "expected": "$1.78–1.84 guidance (narrowed November 2025); Q4 ongoing consensus $0.42 (Zacks)",
+      "verdict": "miss",
+      "result": "Q4 2025 ongoing EPS $0.41 against $0.42; the year landed at the top half of the narrowed range",
+      "kpi": "eps"
+     },
+     {
+      "name": "Net income",
+      "actual": "Reported $1.18B; ongoing $1.34B",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "2026 guidance $1.90–1.98 (+7.2 percent at the midpoint); 6–8 percent growth through at least 2029; capex raised to $23B from $20B",
+      "kpi": "net-income",
+      "usdMillions": 1180,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Signed data-center electric service agreements (PPL Electric)",
+      "actual": "About 10 GW at year-end 2025 (the deck's chart reads 10.0 GW at Q1 2026)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "25.2 GW advanced-stage at year-end 2025, per the May 2026 disclosure's prior figure",
+      "kpi": "mw-contracted",
+      "qty": 10000
+     }
+    ],
+    "commentary": "The year the plan went to $23B and Invitium was formed; ongoing growth of 7.1 percent met the 6–8 percent target with a small Q4 miss."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$2.77B (+10.8 percent from $2.5B)",
+      "expected": "$2.62B (Zacks)",
+      "verdict": "beat",
+      "result": "5.9 percent above consensus",
+      "kpi": "revenue",
+      "usdMillions": 2770,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Ongoing earnings per share",
+      "actual": "$0.63 ($478M; year-ago $0.60)",
+      "expected": "$0.61 (Zacks)",
+      "verdict": "beat",
+      "result": "Segments: Pennsylvania $0.25, Kentucky $0.33 (from $0.30), Rhode Island $0.10, Corporate −$0.05; full-year guidance reaffirmed"
+     }
+    ],
+    "commentary": "Kentucky's rate order from January 1 shows in the segment; the advanced-stage pipeline moved to 28.3 GW."
+   },
+   {
+    "period": "Q2 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$2.11B (+4 percent from $2.03B)",
+      "expected": "$2.19B consensus (Investing.com)",
+      "verdict": "miss",
+      "result": "$80M, or 3.7 percent, below consensus",
+      "kpi": "revenue",
+      "usdMillions": 2110,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Earnings per share",
+      "actual": "Reported $0.30 ($230M; Q2 2025 $0.25); ongoing $0.33 (Q2 2025 $0.32)",
+      "expected": "$0.37 consensus (Investing.com)",
+      "verdict": "miss",
+      "result": "$0.04, or 10.8 percent, below; segments Kentucky $0.18, Pennsylvania $0.17, Rhode Island $0.01, Corporate −$0.06; six-month ongoing $0.96 vs $0.92; guidance $1.90–1.98 reaffirmed"
+     },
+     {
+      "name": "Signed data-center electric service agreements (PPL Electric)",
+      "actual": "More than 11 GW (11.1 GW on the deck chart, from 10.0 GW); 31.8 GW advanced-stage; >6.5 GW under construction",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Tenth consecutive quarterly increase; Kentucky 13.7 GW pipeline with 1.3 GW of signed reimbursement agreements",
+      "kpi": "mw-contracted",
+      "qty": 11100
+     },
+     {
+      "name": "Capital plan 2026–2029",
+      "actual": "$23B",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Rate base $29.0B → $42.9B; $10–12B of upside through 2032 outside the plan",
+      "kpi": "capex",
+      "usdMillions": 23000,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "The quarter of the miss and the turbine reservations: earnings lagged on timing while the two things the story depends on — signed ESAs and Invitium's turbines — both advanced."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-14",
+   "category": "regulatory",
+   "headline": "PPL Electric proposes a Customer Protection Transmission Rider to replace the Transmission Service Charge and assign certain transmission network-upgrade costs to the LP-6 large-load class; PA PUC filing, implementation Q1 2028",
+   "read": "The transmission half of cost causation, after the distribution tariff landed in June — the wires company's answer to the FERC-level fight WEC is having over ATC's lines.",
+   "source": "https://news.pplweb.com/2026-09-14-PPL-Electric-Proposes-New-Customer-Protection-Transmission-Rider,-Building-on-its-Existing-Customer-Protection-Framework"
+  },
+  {
+   "date": "2026-08-25",
+   "category": "regulatory",
+   "headline": "Rhode Island Energy to implement 'Hold Harmless' bill credits from the 2022 acquisition commitment: $170M NPV, about $14 a month on electric bills (Oct 2026–Sep 2027) and $51 a month on gas (Dec 2026–Apr 2027)",
+   "read": "The acquisition's price to customers comes due in the same month the PUC held the return at 9 percent — Rhode Island is PPL's cost of capital problem, not its growth story.",
+   "source": "https://news.pplweb.com/Rhode-Island-Energy-to-implement-Hold-Harmless-bill-credits-providing-additional-relief-to-customers"
+  },
+  {
+   "date": "2026-08-21",
+   "category": "regulatory",
+   "headline": "Rhode Island PUC cuts Rhode Island Energy's rate request: 9 percent ROE kept (10.75 percent asked), two-year plan rejected, $9.4M of IT costs denied, billing-system recovery deferred; rates effective September 1, 2026",
+   "read": "The lowest allowed return in the PPL group is unchanged since 2018, and the governor wanted it lower.",
+   "source": "https://whatsupnewp.com/2026/08/puc-cuts-rhode-island-energys-rate-request-approves-170-million-in-bill-credits/"
+  },
+  {
+   "date": "2026-08-14",
+   "category": "customer",
+   "headline": "Q2 call: 'bilateral contracting will likely be the predominant path for getting new generation development in PJM'; Pennsylvania large-load contracts run 'a minimum term of 10 years' with 'guaranteed payments of at least 80% of the capacity they reserve'; the 31.8 GW would take about $25 a month off the transmission component of a residential bill; the Kentucky CPCN trigger is 'conversion from developer to hyperscaler contract'",
+   "read": "The call fixes the terms a Pennsylvania data center signs and the event that starts Kentucky's next certificate — a hyperscaler, not a developer, on the contract.",
+   "source": "https://www.fool.com/earnings/call-transcripts/2026/08/14/ppl-ppl-q2-2026-earnings-call-transcript/"
+  },
+  {
+   "date": "2026-08-10",
+   "category": "procurement",
+   "headline": "Invitium, the PPL–Blackstone Infrastructure joint venture, secures reservation agreements for more than 5 GW of combined-cycle turbines (supplier unnamed), online as early as 2031, up to $15B through 2032; PJM has accepted about 5 GW of its interconnection requests; sites for up to 14 GW; no hyperscaler signed",
+   "read": "Turbines reserved before customers: in a slot-constrained market the reservation is the scarce asset, and Invitium now holds one of the largest uncommitted blocks in PJM.",
+   "source": "https://www.utilitydive.com/news/ppl-blackstone-joint-venture-secures-5-gw-of-gas-turbines-for-data-centers/827408/"
+  },
+  {
+   "date": "2026-08-07",
+   "category": "financial",
+   "headline": "Q2 2026: reported EPS $0.30, ongoing $0.33 (consensus $0.37); revenue $2.11B ($2.19B expected); guidance $1.90–1.98 reaffirmed; Pennsylvania 31.8 GW advanced, >11 GW signed ESAs, >6.5 GW under construction; Kentucky 13.7 GW pipeline, 1.3 GW signed; Invitium >5 GW turbines reserved",
+   "read": "The tenth straight quarterly rise in signed agreements matters more than the four-cent miss; the ramp is 2 GW by 2031 from the two campuses already in service.",
+   "source": "https://news.pplweb.com/2026-08-07-PPL-Corporation-Delivers-Solid-Second-Quarter-2026-Earnings-Reaffirms-Guidance-and-Long-Term-Growth-Outlook"
+  },
+  {
+   "date": "2026-07-22",
+   "category": "procurement",
+   "headline": "LG&E and KU issue an RFP for long-term renewable supply above 50 MW and storage of 50–400 MW / 200–1,600 MWh (PPA, asset purchase or build-transfer; any COD); bids due September 3, 2026",
+   "read": "The storage sizing matches the Cane Run battery withdrawn from the 2025 certificate — the door for a battery seller into Kentucky is this RFP, not a CPCN.",
+   "source": "https://lge-ku.com/newsroom/press-releases/2026/07/22/lge-and-ku-seeking-long-term-proposals-renewable-energy"
+  },
+  {
+   "date": "2026-06-04",
+   "category": "regulatory",
+   "headline": "PA PUC approves (5-0) a modified settlement giving PPL Electric $275M of the $356.3M requested, effective July 1, 2026 — residential +4.9 percent — with large-load provisions requiring 'long-term service commitments, minimum demand guarantees, and financial protections'",
+   "read": "Pennsylvania's first large-load tariff lands inside a base-rate order, three weeks after the PUC's model framework, and PPL takes a two-year stay-out with it.",
+   "source": "https://www.puc.pa.gov/press-release/2026/puc-issues-decision-in-ppl-electric-rate-proceeding-06042026"
+  },
+  {
+   "date": "2026-05-13",
+   "category": "policy",
+   "headline": "PA PUC final order establishes a first-of-its-kind large-load model tariff framework (docket M-2025-3054271): >50 MW individually or 100 MW aggregate; ramping, minimum terms, exit provisions, deposits and collateral, a six-month study, a public queue and self-construction",
+   "read": "The state writes the template PPL's settlement was already following — the corpus's first case of a model-tariff order preceding a utility's tariff.",
+   "source": "https://www.puc.pa.gov/press-release/2026/puc-releases-final-order-establishing-first-of-its-kind-large-load-model-tariff-framework-05132026"
+  },
+  {
+   "date": "2026-05-11",
+   "category": "customer",
+   "headline": "Pennsylvania advanced-stage pipeline 28.3 GW by 2034 (from 25.2 GW), ramping 0.6 GW in 2026 to 20.7 GW in 2030 with about 5 GW under construction; Kentucky 11.9 GW data-center pipeline (from 8 GW); QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named; Sorgi 'executing multiple gas turbine reservation agreements'",
+   "read": "The first quarter the names appeared — and the first hint of the turbine reservations announced in August.",
+   "source": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/"
+  },
+  {
+   "date": "2026-05-08",
+   "category": "financial",
+   "headline": "Q1 2026 ongoing EPS $0.63 (consensus $0.61; year-ago $0.60) on revenue of $2.77B (+10.8 percent; consensus $2.62B); Kentucky $0.33 from $0.30",
+   "read": "The Kentucky rate order's first quarter and a clean beat; the pipeline disclosure did the rest of the work.",
+   "source": "https://investors.pplweb.com/2026-05-08-PPL-Corporation-delivers-solid-first-quarter-2026-earnings-reaffirms-full-year-guidance-and-long-term-growth-targets"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "partnership",
+   "headline": "LG&E and KU launch an early-stage feasibility study with X-energy on deploying the Xe-100 (80 MWe per module; 4-unit 320 MWe or 12-unit plants) in Kentucky under the state's Nuclear Reactor Site Readiness Pilot Program (up to $25M per project)",
+   "read": "A site-readiness study, not an order; it puts Kentucky's next firm capacity beyond the two combined cycles into the 2030s conversation.",
+   "source": "https://lge-ku.com/newsroom/press-releases/2026/04/30/lge-and-ku-collaborate-x-energy-explore-nuclear-energy"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "project",
+   "headline": "Lewis Ridge pumped storage (Rye Development; 266 MW, 8-hour, Bell County, former coal mine; $81M DOE grant; FERC license application filed June 2025) — construction from December 2027 over about four years, proposed KU 63 percent / LG&E 37 percent ownership; Jefferies: about $4.9M/MW, 'doesn't appear viable without a data center hyperscaler willing to pay for it'",
+   "read": "Long-duration storage in rate base is on the table only if a hyperscaler contract pays for it — the same trigger as the next CPCN.",
+   "source": "https://www.utilitydive.com/news/rye-pumped-storage-ppl-kentucky/817868/"
+  },
+  {
+   "date": "2026-04-16",
+   "category": "policy",
+   "headline": "Kentucky HB 593 (Rep. Josh Bray), which would have barred subsidization of data-center customers by other ratepayers, dies without a Senate vote after passing the House 90-8; Bray blames 'the Senate in general' and says LG&E and KU 'didn't like it'; the utilities point to the approved EHLF tariff's protections",
+   "read": "The tariff, not a statute, is Kentucky's ratepayer protection — and the utility preferred it that way.",
+   "source": "https://kentuckylantern.com/2026/04/16/housing-data-center-legislation-dies-on-final-day-of-2026-session/"
+  },
+  {
+   "date": "2026-03-20",
+   "category": "regulatory",
+   "headline": "LG&E and KU ask the KPSC to reconsider its rejection of the sharing-mechanism adjustment clause, the term the stay-out before August 1, 2028 depended on; the Attorney General supports the motion (KU +$9 a month, LG&E +$5)",
+   "read": "Losing the mechanism means another rate case within the year instead of a stay-out — the regulatory calendar the data-center build depends on.",
+   "source": "https://www.weku.org/the-commonwealth/2026-03-20/lg-e-and-ku-ask-for-a-rehearing-on-rate-case-at-the-kentucky-psc"
+  },
+  {
+   "date": "2026-03-16",
+   "category": "regulatory",
+   "headline": "PPL Electric rate-case settlement: $275M (vs $356.3M asked), 4.9 percent residential, customer charge $14.09 to $15; large-load tariff at ≥50 MW single facility or 75 MW aggregate within 10 miles at ≥69 kV, ≥10-year initial term, ramp up to 5 years, minimum load guarantees, exit fees, security equal to the upgrades, interruptible option; $11M a year low-income",
+   "read": "The terms every seller into Pennsylvania should know: ten years, 80 percent, security for the upgrades.",
+   "source": "https://www.utilitydive.com/news/ppl-electric-rate-case-settlement-data-center-tariff/814760/"
+  },
+  {
+   "date": "2026-02-20",
+   "category": "financial",
+   "headline": "FY2025: reported EPS $1.59 (FY2024 $1.20), ongoing $1.81 (+7.1 percent); 2026 guidance $1.90–1.98; 6–8 percent growth through 2029; capex $23B 2026–2029 (from $20B), rate base +10.3 percent a year; equity ~$3B; dividend +4.6 percent to $0.2850; Q4 ongoing $0.41 vs $0.42 consensus",
+   "read": "The plan's step-up to $23B is the regulated book; the joint venture is excluded and treated as 'back-end upside'.",
+   "source": "https://investors.pplweb.com/2026-02-20-PPL-Corporation-reports-2025-earnings-results-provides-business-plan-update-through-2029,-extending-EPS-growth-targets"
+  },
+  {
+   "date": "2026-02-16",
+   "category": "regulatory",
+   "headline": "KPSC orders: KU +6.54 percent ($8.73 a month; 11.5 percent asked), LG&E electric +4.73 percent ($5.14; 8.3 percent asked), LG&E gas +11.09 percent ($8.27; 14 percent asked) — cases 2025-00113/00114; the first increase since 2020",
+   "read": "Half the request, with the sharing mechanism rejected — the order that triggered the rehearing and put the stay-out in doubt.",
+   "source": "https://psc.ky.gov/agencies/psc/press/022026/0216_r01.pdf"
+  },
+  {
+   "date": "2025-11-05",
+   "category": "financial",
+   "headline": "Q3 2025: reported EPS $0.43, ongoing $0.48 (year-ago $0.42); guidance narrowed to $1.78–1.84; KPSC approval of the two 645 MW combined cycles noted",
+   "read": "The quarter that banked the Kentucky certificate.",
+   "source": "https://investors.pplweb.com/2025-11-05-PPL-Corporation-reports-third-quarter-2025-results-narrows-earnings-forecast-and-reaffirms-growth-targets"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "regulatory",
+   "headline": "LG&E and KU receive KPSC approval (case 2025-00045) for Brown 12 (645 MW, 2030), Mill Creek 6 (645 MW, 2031) and the Ghent 2 SCR (2028) — $2.798B including transmission; the Cane Run battery withdrawn with the right to refile; the commission denies the Mill Creek 6 recovery mechanism and calls the load probabilities 'troubling'",
+   "read": "Approval of the plants without the mechanisms: Kentucky will let PPL build for data centers but not pre-collect for them.",
+   "source": "https://lge-ku.com/newsroom/press-releases/2025/10/30/lge-and-ku-receive-approval-plans-meet-kentuckys-growing-energy"
+  },
+  {
+   "date": "2025-08-28",
+   "category": "regulatory",
+   "headline": "LG&E and KU's proposed Extremely High Load Factor tariff: a minimum bill of 80 percent of forecast monthly consumption for 15 years, collateral up to $100M, a 100 MW threshold; a 525 MW data center would owe about $1.4B of demand charges over 15 years; critics question the sequencing and the absence of signed contracts",
+   "read": "The take-or-pay shape of every 2025–2026 large-load tariff in this corpus, at 80 percent and 15 years — DTE's Saline terms in a Kentucky tariff.",
+   "source": "https://www.lpm.org/news/2025-08-28/lg-e-says-3b-expansion-will-protect-kentucky-ratepayers-from-data-center-costs-others-are-doubtful"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "partnership",
+   "headline": "PPL and Blackstone Infrastructure form a 51/49 joint venture to build combined-cycle gas generation in Pennsylvania under long-term energy services agreements with hyperscalers; PPL cites a 6 GW shortfall over five to six years, about $15B, more than 60 GW of interest and 13 GW in advanced stages",
+   "read": "A regulated holding company's route around a restructured market: it cannot put generation in PPL Electric's rate base, so it builds it in a venture with a private-infrastructure partner.",
+   "source": "https://investors.pplweb.com/2025-07-15-PPL-Corporation-and-Blackstone-Infrastructure-create-joint-venture-to-build-natural-gas-generation-in-Pennsylvania-in-support-of-data-center-development"
+  },
+  {
+   "date": "2025-03-04",
+   "category": "project",
+   "headline": "LG&E and KU's $3.7B certificate application (filed February 28, 2025): Brown 12 (645 MW, $1.38B, 2030), Mill Creek 6 (645 MW, $1.42B, 2031), a 400 MW / 1,600 MWh Cane Run battery ($775M, 2028) and a Ghent 2 SCR ($153M, 2028); load forecast 32,808 GWh to 48,129 GWh by 2032, peak 6,230 MW to 8,034 MW, more than 6,000 MW data-center related",
+   "read": "The filing sized Kentucky's build to a data-center forecast the regulator later called unsupported — and approved anyway.",
+   "source": "https://www.powermag.com/lge-ku-propose-3-7b-power-buildout-1-3-gw-of-new-gas-plants-153m-coal-unit-upgrade/"
+  },
+  {
+   "date": "2025-01-16",
+   "category": "customer",
+   "headline": "LG&E announces its first major data-center customer: a PowerHouse Data Centers–Poe Companies 400 MW campus in Louisville, 130 MW available by October 2026, an LG&E switch station in September 2026 and a dedicated on-site substation; initial capacity 335 MW rising to 402 MW",
+   "read": "The named anchor behind Kentucky's pipeline — a developer campus, which is why the CPCN trigger is a hyperscaler signing on it.",
+   "source": "https://lge-ku.com/newsroom/press-releases/2025/01/16/lge-announces-first-major-data-center-electric-customer"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that PPL Electric's 31.8 GW advanced-stage pipeline and its 11 GW of signed electric service agreements are the largest signed data-center book at a wires-only utility in this file, and that the June 2026 tariff (ten-year minimum, at least 80 percent of reserved capacity guaranteed, exit fees, security equal to the upgrades) makes it the corpus's clearest statement of what a Pennsylvania data center now pays for. Basis: the Q2 2026 release and deck, the March 16 settlement and the PUC's June 4 order. What the wires company cannot supply is the generation, so the load's power will be contracted bilaterally — which is where Invitium and the counterparties named by Utility Dive (QTS, AWS, PowerHouse, CoreWeave) sit.",
+  "(High confidence) We assess that Invitium's more than 5 GW of turbine reservations, made before any hyperscaler agreement, is the venture's real asset in a slot-constrained market, and that the first commercial agreement 'by year-end' 2026 is the indicator that decides whether $12.5–15B of investment through 2032 is a plan or an option. Basis: the July 2025 JV release, the August 2026 Utility Dive report and the Q2 call. The turbine supplier, the sites and the counterparties are all undisclosed; the batteries the CEO expects to earn first 'could be owned directly by the hyperscalers', which would put the storage decision with the customer rather than the venture.",
+  "(Moderate confidence) We assess that Kentucky's next certificate — Lewis Ridge, the deferred 400 MW of batteries and a third combined cycle, $3.5–4.0B over 2027–2032 — will be filed only when a developer's reimbursement agreement converts into a hyperscaler contract, because the commission approved the 2025 plants while denying every pre-collection mechanism and calling the load probabilities 'troubling'. Basis: the October 2025 order, the Q2 2026 deck's 'potential additional generation CPCN by YE2026' and Sorgi's statement of the trigger. Until then the battery seller's door in Kentucky is the July 2026 RFP (50–400 MW / 200–1,600 MWh), not a rate-base docket.",
+  "(Moderate confidence) We assess that PPL's regulatory risk sits in the recovery mechanisms rather than in the plants: Kentucky rejected the sharing mechanism the stay-out depended on and the Mill Creek 6 recovery mechanism, Rhode Island held the return at 9 percent, and Pennsylvania's transmission rider is a proposal for 2028. Basis: the February and March 2026 Kentucky filings, the August 2026 Rhode Island order and the September 14 CPTR release. A second Kentucky rate case within the year is the plausible consequence of the rehearing failing (the Attorney General's own reading).",
+  "(Low confidence) We assess that the Kentucky EHLF threshold is 100 MW as reported by Louisville Public Media and that the deck's '50 MVA and 85 percent load factor' describes the deck's illustrative customer rather than a different threshold. No source read this session reconciles the two, and both are stated in the dossier."
+ ],
+ "relationships": [
+  {
+   "slug": "blackstone",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-07",
+   "scale": "49 percent of Invitium; >5 GW of CCGT turbine reservations",
+   "via": "Invitium Energy joint venture",
+   "note": "Blackstone Infrastructure holds 49 percent of Invitium Energy, the joint venture formed July 15, 2025 to build combined-cycle gas generation in Pennsylvania for hyperscalers under long-term energy services agreements; PPL holds 51 percent.",
+   "context": "The venture excludes PPL Electric and was framed at launch around a 6 GW shortfall over five to six years and about $15B of investment; by August 2026 it had reserved more than 5 GW of turbines, had more than 5 GW accepted into PJM's queue and sites for 8–14 GW, with the first commercial agreements expected by year-end 2026 and construction financing off PPL's balance sheet. Blackstone Infrastructure is also NiSource's 19.9 percent partner in NIPSCO and in NIPSCO Generation (GenCo), the corpus's other utility-affiliated data-center generation vehicle.",
+   "source": "https://investors.pplweb.com/2025-07-15-PPL-Corporation-and-Blackstone-Infrastructure-create-joint-venture-to-build-natural-gas-generation-in-Pennsylvania-in-support-of-data-center-development"
+  },
+  {
+   "slug": "powerhouse-data-centers",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-01",
+   "scale": "400 MW Louisville campus (335 MW initial → 402 MW); 1.35 GW Carlisle, PA per the PowerHouse dossier",
+   "via": "LG&E electric service; PPL Electric large-load service",
+   "note": "LG&E's first major data-center customer is the PowerHouse Data Centers–Poe Companies 400 MW Louisville campus (130 MW by October 2026, switch station September 2026, dedicated on-site substation); Utility Dive also names PowerHouse among PPL Electric's Pennsylvania counterparties.",
+   "context": "The January 16, 2025 release describes initial capacity of 335 MW rising to 402 MW, construction in 2025 and a first building in the fourth quarter of 2026. The corpus's PowerHouse dossier adds a $9.6B Carrollton, Kentucky campus with LG&E 'confirmed capacity' and a 1.35 GW Carlisle, Pennsylvania joint venture on PPL Electric's system with 300 MW by the second quarter of 2027 — both carried from PowerHouse's record and not re-verified here.",
+   "source": "https://lge-ku.com/newsroom/press-releases/2025/01/16/lge-announces-first-major-data-center-electric-customer"
+  },
+  {
+   "slug": "x-energy",
+   "type": "partner",
+   "status": "announced",
+   "since": "2026-04",
+   "via": "Xe-100 feasibility study (Kentucky Nuclear Reactor Site Readiness Pilot Program)",
+   "note": "LG&E and KU launched an early-stage feasibility study with X-energy on April 30, 2026 on deploying the Xe-100 (80 MWe per module) in Kentucky, under a state pilot that funds up to $25M per project.",
+   "context": "A study, not a procurement; the corpus's X-energy dossier carries the same announcement.",
+   "source": "https://lge-ku.com/newsroom/press-releases/2026/04/30/lge-and-ku-collaborate-x-energy-explore-nuclear-energy"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "via": "PPL Electric large-load service; transmission and delivery for the Talen Susquehanna arrangement",
+   "note": "Amazon Web Services is one of four counterparties Utility Dive named in PPL Electric's Pennsylvania data-center pipeline (May 2026), and PPL Electric provides transmission and delivery for the front-of-the-meter Susquehanna supply Talen sells to Amazon.",
+   "context": "PPL itself does not name customers; the AWS attribution is Utility Dive's, and the Talen delivery role is carried from the corpus's Talen dossier (amended June 2025 agreement).",
+   "source": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/"
+  },
+  {
+   "slug": "qts",
+   "type": "customer",
+   "status": "active",
+   "via": "PPL Electric large-load service",
+   "note": "QTS is named by Utility Dive (May 11, 2026) among the counterparties in PPL Electric's advanced-stage Pennsylvania pipeline.",
+   "context": "PPL itself does not name customers; the attribution is Utility Dive's.",
+   "source": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/"
+  },
+  {
+   "slug": "coreweave",
+   "type": "customer",
+   "status": "active",
+   "via": "PPL Electric large-load service",
+   "note": "CoreWeave is named by Utility Dive (May 11, 2026) among the counterparties in PPL Electric's advanced-stage Pennsylvania pipeline.",
+   "context": "PPL itself does not name customers; the attribution is Utility Dive's.",
+   "source": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/"
+  },
+  {
+   "slug": "talen-energy",
+   "type": "partner",
+   "status": "active",
+   "since": "2025-06",
+   "via": "Transmission and delivery for the Susquehanna–Amazon front-of-the-meter supply",
+   "note": "Under the amended June 2025 Talen–Amazon agreement, Susquehanna sells into PJM, Talen acts as Amazon's licensed Pennsylvania retail supplier and PPL Electric Utilities provides transmission and delivery.",
+   "context": "Carried from the corpus's Talen dossier; no PPL source read for this dossier describes the arrangement.",
+   "source": "Talen Energy dossier (profileVersion 3) — products and relationships, corpus"
+  },
+  {
+   "slug": "nisource",
+   "type": "other",
+   "status": "active",
+   "via": "Shared partner: Blackstone Infrastructure",
+   "note": "Both PPL (Invitium, 49 percent) and NiSource (NIPSCO and GenCo, 19.9 percent each) build data-center generation with Blackstone Infrastructure as the minority partner — the two utility-affiliated generation vehicles in this corpus with the same sponsor.",
+   "context": "Stated for the Relationships tab's cross-reference; the two companies have no disclosed dealing with each other.",
+   "source": "https://www.utilitydive.com/news/ppl-blackstone-joint-venture-secures-5-gw-of-gas-turbines-for-data-centers/827408/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Pennsylvania large-load model tariff framework (PA PUC docket M-2025-3054271) and PPL Electric's tariff (R-2025-3057164)",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-01",
+   "exposure": "The PUC's May 13, 2026 final order set a statewide framework (>50 MW individually or 100 MW aggregate; ramping, minimum terms, exit provisions, deposits and collateral, a six-month study, a public queue, self-construction), and PPL Electric's June 4 rate order carries the state's first tariff under it (≥50 MW, ten-year minimum, up to five-year ramp, ≥80 percent of reserved capacity guaranteed, exit fees, security equal to the upgrades). The September 14, 2026 Customer Protection Transmission Rider would extend cost assignment to transmission network upgrades from Q1 2028.",
+   "mitigation": "PPL's own framing: 'Without appropriate protections' the load would shift cost to other customers; the tariff and the CPTR are the protections, and the company projects the 31.8 GW would cut the transmission component of residential bills by about $25 a month over time.",
+   "source": "https://www.puc.pa.gov/press-release/2026/puc-releases-final-order-establishing-first-of-its-kind-large-load-model-tariff-framework-05132026"
+  },
+  {
+   "regime": "Kentucky data-center legislation — HB 593 (2026 session, died)",
+   "status": "expired",
+   "effectiveDate": "2026-04",
+   "exposure": "HB 593 would have required utilities to write rules for prospective data-center customers and to ensure contracts prevented subsidization of data centers by other customers; it passed the House 90-8, was attached to and then stripped from SB 197, and never received a Senate vote. Rep. Bray said LG&E and KU 'didn't like it'; the Senate President cited the PSC's approved tariffs. The utilities' EHLF tariff (15 years, 80 percent minimum bill, up to $100M collateral) is the ratepayer protection that stands.",
+   "mitigation": "LG&E and KU point to the approved EHLF tariff's protections; the CPCN trigger for further generation is a signed hyperscaler contract.",
+   "source": "https://kentuckylantern.com/2026/04/16/housing-data-center-legislation-dies-on-final-day-of-2026-session/"
+  },
+  {
+   "regime": "Kentucky PSC cost-recovery orders (cases 2025-00045, 2025-00113/00114)",
+   "status": "in-effect",
+   "effectiveDate": "2026-01-01",
+   "exposure": "The October 2025 CPCN order approved the two combined cycles but denied a cost-recovery mechanism for Mill Creek 6, the Mill Creek 2 adjustment clause and advance recovery of notice expenses, opened a monitoring case and called the load probabilities unsupported; the February 2026 rate orders granted about half the request and rejected the sharing-mechanism adjustment clause on which the August 2028 stay-out depended, prompting a March 2026 rehearing request supported by the Attorney General.",
+   "mitigation": "Rehearing sought March 20, 2026; the deck expected a reconsideration decision by August 14, 2026 (outcome not read); the Attorney General's office expects a new base-rate case within the year if the clause stays rejected.",
+   "source": "https://psc.ky.gov/agencies/psc/press/102025/1028_r01.pdf"
+  },
+  {
+   "regime": "PJM capacity market and large-load interconnection",
+   "status": "in-effect",
+   "exposure": "PPL Electric's zone cleared PJM's capacity auctions with MAAC and PPL zones at $49.49/MW-day for 2023/24 and 2024/25 per the corpus's Talen dossier; PJM has accepted more than 5 GW of Invitium's interconnection requests and Sorgi expects bilateral contracting rather than the PJM process to produce new generation ('irrespective of the PJM process'). Utility Dive's May 2026 report notes concerns about PJM's reliability backstop procurement.",
+   "mitigation": "Invitium's turbine reservations and bilateral hyperscaler contracting; PPL Electric's self-construction option under the PUC framework.",
+   "source": "https://www.fool.com/earnings/call-transcripts/2026/08/14/ppl-ppl-q2-2026-earnings-call-transcript/"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Vincent Sorgi",
+   "title": "President and Chief Executive Officer, PPL Corporation",
+   "background": [
+    "President and CEO since May 2020; president and chief operating officer July 2019–May 2020; executive vice president and CFO January–July 2019; senior vice president and CFO 2014–2019; vice president and controller before that",
+    "Joined PPL in 2006 (PPL Generation); earlier at PSEG and Deloitte",
+    "BS accounting, Penn State; MBA, Villanova; MIT nuclear reactor technology course; EEI board and executive committee; past chair, EPRI (company bio)"
+   ]
+  },
+  {
+   "name": "Joseph P. Bergstein Jr.",
+   "title": "Executive Vice President and Chief Financial Officer, PPL Corporation",
+   "background": [
+    "EVP and CFO; joined PPL in 1999; treasurer 2016–2018; vice president, investor relations and corporate development",
+    "Earlier at AmeriGas; Bloomsburg University; EPRI board (company bio)",
+    "On the Q2 2026 call: Invitium's construction-period financing is expected off PPL's balance sheet"
+   ]
+  },
+  {
+   "name": "Christine Martin",
+   "title": "President, PPL Electric Utilities",
+   "background": [
+    "President of PPL Electric since September 2023; previously senior vice president, public affairs and chief sustainability officer; joined PPL in June 2003",
+    "Deputy secretary, Pennsylvania Department of Environmental Protection, before PPL; BA, Indiana University of Pennsylvania; MPA, Penn State; co-chair, EEI OCLWG (company bio)",
+    "Quoted on the September 14, 2026 Customer Protection Transmission Rider: LP-6 customers already make 'significant financial and usage commitments before connecting'"
+   ]
+  },
+  {
+   "name": "John R. Crockett III",
+   "title": "President, LG&E and KU Energy LLC; Senior Vice President and Chief Development Officer, PPL Services",
+   "background": [
+    "President of LG&E and KU since October 2021; general counsel and chief compliance officer of LG&E and KU from January 2018",
+    "27 years at Frost Brown Todd, nine as chairman; BA, University of North Carolina; JD, University of Kentucky (company bio)",
+    "Quoted on the October 2025 CPCN approval, the January 2025 PowerHouse customer announcement and the April 2026 X-energy study"
+   ]
+  },
+  {
+   "name": "Greg Cornett",
+   "title": "President, Rhode Island Energy",
+   "background": [
+    "President of Rhode Island Energy since March 2024; previously vice president and deputy general counsel, PPL; joined PPL in 2007",
+    "BA and JD, University of Kentucky; Wharton (company bio)",
+    "Quoted on the August 25, 2026 Hold Harmless bill credits"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "PPL Electric — Proposes new Customer Protection Transmission Rider, building on its existing customer protection framework",
+   "url": "https://news.pplweb.com/2026-09-14-PPL-Electric-Proposes-New-Customer-Protection-Transmission-Rider,-Building-on-its-Existing-Customer-Protection-Framework",
+   "date": "2026-09-14"
+  },
+  {
+   "label": "PPL — Rhode Island Energy to implement Hold Harmless bill credits ($170M NPV)",
+   "url": "https://news.pplweb.com/Rhode-Island-Energy-to-implement-Hold-Harmless-bill-credits-providing-additional-relief-to-customers",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "What's Up Newp — PUC cuts Rhode Island Energy's rate request, approves $170 million in bill credits",
+   "url": "https://whatsupnewp.com/2026/08/puc-cuts-rhode-island-energys-rate-request-approves-170-million-in-bill-credits/",
+   "date": "2026-08-21"
+  },
+  {
+   "label": "Motley Fool — PPL (PPL) Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/14/ppl-ppl-q2-2026-earnings-call-transcript/",
+   "date": "2026-08-14"
+  },
+  {
+   "label": "Utility Dive — PPL–Blackstone joint venture secures 5 GW of gas turbines for data centers",
+   "url": "https://www.utilitydive.com/news/ppl-blackstone-joint-venture-secures-5-gw-of-gas-turbines-for-data-centers/827408/",
+   "date": "2026-08-10"
+  },
+  {
+   "label": "PPL — Delivers solid second-quarter 2026 earnings; reaffirms guidance and long-term growth outlook",
+   "url": "https://news.pplweb.com/2026-08-07-PPL-Corporation-Delivers-Solid-Second-Quarter-2026-Earnings-Reaffirms-Guidance-and-Long-Term-Growth-Outlook",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "PPL — Q2 2026 investor update (deck: pipeline chart, capital plan, ratings, EHLF and Invitium slides)",
+   "url": "https://filecache.investorroom.com/mr5ir_pplweb2/1337/PPL_2026_Q2_Investor_Update_vFINAL.pdf",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "Investing.com — PPL misses second-quarter estimates on earnings and revenue",
+   "url": "https://www.investing.com/news/earnings/ppl-misses-secondquarter-estimates-on-earnings-and-revenue-93CH-4846132",
+   "date": "2026-08-07"
+  },
+  {
+   "label": "LG&E and KU — Seeking long-term proposals for renewable energy and storage (RFP; bids due September 3, 2026)",
+   "url": "https://lge-ku.com/newsroom/press-releases/2026/07/22/lge-and-ku-seeking-long-term-proposals-renewable-energy",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "PA PUC — PUC issues decision in PPL Electric rate proceeding ($275M; effective July 1, 2026)",
+   "url": "https://www.puc.pa.gov/press-release/2026/puc-issues-decision-in-ppl-electric-rate-proceeding-06042026",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "PA PUC — Final order establishing first-of-its-kind large-load model tariff framework (M-2025-3054271)",
+   "url": "https://www.puc.pa.gov/press-release/2026/puc-releases-final-order-establishing-first-of-its-kind-large-load-model-tariff-framework-05132026",
+   "date": "2026-05-13"
+  },
+  {
+   "label": "Utility Dive — PPL's data center pipeline reaches 28.3 GW; QTS, AWS, PowerHouse, CoreWeave named; turbine reservations",
+   "url": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Yahoo Finance (Zacks) — PPL Q1 earnings surpass estimates, revenues increase y/y",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ppl-q1-earnings-surpass-estimates-144500907.html",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "PPL — Delivers solid first-quarter 2026 earnings; reaffirms full-year guidance and long-term growth targets",
+   "url": "https://investors.pplweb.com/2026-05-08-PPL-Corporation-delivers-solid-first-quarter-2026-earnings-reaffirms-full-year-guidance-and-long-term-growth-targets",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "LG&E and KU — Collaborate with X-energy to explore nuclear energy (Xe-100 feasibility study)",
+   "url": "https://lge-ku.com/newsroom/press-releases/2026/04/30/lge-and-ku-collaborate-x-energy-explore-nuclear-energy",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Utility Dive — Rye Development's Lewis Ridge pumped storage with LG&E and KU (266 MW, 8-hour)",
+   "url": "https://www.utilitydive.com/news/rye-pumped-storage-ppl-kentucky/817868/",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Kentucky Lantern — Housing, data center legislation dies on final day of 2026 session (HB 593)",
+   "url": "https://kentuckylantern.com/2026/04/16/housing-data-center-legislation-dies-on-final-day-of-2026-session/",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "WEKU — LG&E and KU ask for a rehearing on rate case at the Kentucky PSC",
+   "url": "https://www.weku.org/the-commonwealth/2026-03-20/lg-e-and-ku-ask-for-a-rehearing-on-rate-case-at-the-kentucky-psc",
+   "date": "2026-03-20"
+  },
+  {
+   "label": "Utility Dive — PPL Electric rate case settlement includes data center tariff ($275M; ≥50 MW; 10-year minimum)",
+   "url": "https://www.utilitydive.com/news/ppl-electric-rate-case-settlement-data-center-tariff/814760/",
+   "date": "2026-03-16"
+  },
+  {
+   "label": "Nasdaq (Zacks) — PPL Q4 earnings and revenues lag estimates",
+   "url": "https://www.nasdaq.com/articles/ppl-ppl-q4-earnings-and-revenues-lag-estimates",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "PPL — Reports 2025 earnings results; provides business plan update through 2029, extending EPS growth targets",
+   "url": "https://investors.pplweb.com/2026-02-20-PPL-Corporation-reports-2025-earnings-results-provides-business-plan-update-through-2029,-extending-EPS-growth-targets",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "Kentucky PSC — Orders in the LG&E and KU rate cases (2025-00113/00114)",
+   "url": "https://psc.ky.gov/agencies/psc/press/022026/0216_r01.pdf",
+   "date": "2026-02-16"
+  },
+  {
+   "label": "PPL — Reports third-quarter 2025 results, narrows earnings forecast and reaffirms growth targets",
+   "url": "https://investors.pplweb.com/2025-11-05-PPL-Corporation-reports-third-quarter-2025-results-narrows-earnings-forecast-and-reaffirms-growth-targets",
+   "date": "2025-11-05"
+  },
+  {
+   "label": "LG&E and KU — Receive approval on plans to meet Kentucky's growing energy needs (Brown 12, Mill Creek 6, Ghent 2 SCR)",
+   "url": "https://lge-ku.com/newsroom/press-releases/2025/10/30/lge-and-ku-receive-approval-plans-meet-kentuckys-growing-energy",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Kentucky Lantern — LG&E and KU win approval to build gas-fired power for prospective data centers ($2.798B)",
+   "url": "https://kentuckylantern.com/2025/10/30/psc-gives-permission-to-lge-and-ku-to-build-gas-fired-power-for-prospective-data-centers/",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Kentucky PSC — Order in case 2025-00045 (two NGCC units approved; mechanisms denied; Cane Run battery withdrawn)",
+   "url": "https://psc.ky.gov/agencies/psc/press/102025/1028_r01.pdf",
+   "date": "2025-10-28"
+  },
+  {
+   "label": "Louisville Public Media — LG&E says $3B expansion will protect Kentucky ratepayers from data center costs; others are doubtful (EHLF tariff terms)",
+   "url": "https://www.lpm.org/news/2025-08-28/lg-e-says-3b-expansion-will-protect-kentucky-ratepayers-from-data-center-costs-others-are-doubtful",
+   "date": "2025-08-28"
+  },
+  {
+   "label": "PPL — PPL Corporation and Blackstone Infrastructure create joint venture to build natural gas generation in Pennsylvania",
+   "url": "https://investors.pplweb.com/2025-07-15-PPL-Corporation-and-Blackstone-Infrastructure-create-joint-venture-to-build-natural-gas-generation-in-Pennsylvania-in-support-of-data-center-development",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Kentucky PSC (case 2022-00402) — LG&E and KU notice of start of construction, E.W. Brown battery energy storage (125 MW / 500 MWh; in service first part of 2027)",
+   "url": "https://psc.ky.gov/pscecf/2022-00402/rick.lovekamp@lge-ku.com/04112025095819/Closed/20250411_LGE_KU_Brown_BESS_Start_Construction.pdf",
+   "date": "2025-04-11"
+  },
+  {
+   "label": "POWER — LG&E, KU propose $3.7B power buildout: 1.3 GW of new gas plants, $153M coal unit upgrade",
+   "url": "https://www.powermag.com/lge-ku-propose-3-7b-power-buildout-1-3-gw-of-new-gas-plants-153m-coal-unit-upgrade/",
+   "date": "2025-03-04"
+  },
+  {
+   "label": "SEC EDGAR — PPL Corporation Form 10-K for FY2024 (filing index; employees and customer counts)",
+   "url": "https://www.sec.gov/Archives/edgar/data/922224/000092222425000009/0000922224-25-000009-index.htm",
+   "date": "2025-02-13"
+  },
+  {
+   "label": "LG&E — Announces first major data center electric customer (PowerHouse Data Centers and Poe Companies, 400 MW)",
+   "url": "https://lge-ku.com/newsroom/press-releases/2025/01/16/lge-announces-first-major-data-center-electric-customer",
+   "date": "2025-01-16"
+  },
+  {
+   "label": "PPL — Leadership team",
+   "url": "https://www.pplweb.com/about-us/leadership-team/"
+  }
+ ],
+ "lastUpdated": "2026-09-29",
+ "profileVersion": 1
+}

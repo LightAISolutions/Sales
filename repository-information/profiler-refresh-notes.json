@@ -2134,6 +2134,37 @@
         "Cloud: whether the Paris (RFS 30 Sep 2026), BaseTen (Nov 2026), Iceland B300 (Dec 2026) and Krambu (2027) contracts start as stated; ClusterMAX 3.1/4.0 re-test; SOC 2 attestation",
         "On-site generation: a named natural-gas fuel-cell provider at any site; MTL-2 delivery near end-2026; Hydro-Québec's decision on tripling MTL-3"
       ]
+    },
+    "ppl": {
+      "source": "Cadence inference: the Q3 2026 date was not on the IR events page as of 2026-09-29 (Q3 2025 released 2025-11-05; Q3 2024 on 2024-11-01); PPL announces the webcast date about three weeks ahead (2025-10-15 for the Nov 5 call). Confirm from https://investors.pplweb.com/ in mid-October.",
+      "watch": [
+        "Invitium's first commercial agreement 'by year-end' 2026 — counterparty, site, megawatts, and whether the batteries are hyperscaler-owned; the turbine OEM behind the >5 GW of reservations",
+        "The Pennsylvania pipeline ladder each quarter: advanced-stage (31.8 GW), signed ESAs (>11 GW), under construction (>6.5 GW), in service; the CPTR docket at the PA PUC (implementation Q1 2028)",
+        "Kentucky: the KPSC decision on the March 2026 rehearing (sharing mechanism / stay-out) and whether a new base-rate case is filed; the 'potential additional generation CPCN by YE2026' (Lewis Ridge, 400 MW batteries, a third CCGT) and its hyperscaler trigger; results of the July 22 renewable/storage RFP (bids Sep 3, 2026); the E.W. Brown battery's supplier and in-service date",
+        "The EHLF threshold — 100 MW (LPM) vs 50 MVA / 85 percent (deck) — if a filing reconciles it",
+        "The FY2025 Form 10-K (employees, per-utility customer counts) — read it on the next pass now that sec.gov answers",
+        "Rhode Island: the next filing after the rejected two-year plan; the Hold Harmless credits' completion"
+      ]
+    },
+    "pinnacle-west": {
+      "source": "Cadence inference: Pinnacle West had not announced its Q3 2026 date as of 2026-09-29; date releases come about four weeks ahead (2026-07-07 for the Aug 4 call) and Q3 2025 was reported 2025-11-03. Confirm from https://www.pinnaclewest.com/newsroom/ in early October.",
+      "watch": [
+        "The ACC rate case: the ALJ's recommended order (late November 2026), the Commission's vote by December 31, the ROE against the 10.70 percent asked, whether the Formula Rate Adjustment Mechanism survives, and the XHLF terms (collateral, minimum bill, exit fee) — new rates early 2027",
+        "The subscription-model XHLF agreements filed with the ACC in 2026 and any movement in the committed (4.5 GW) / uncommitted (~20 GW) queue; any named data-center customer beyond TSMC",
+        "2025 all-source RFP awards 'by the end of the year' — counterparties, storage MW/MWh, tolls vs owned, and any battery OEM disclosure; White Tank commercial operation (1H 2027)",
+        "Cholla conversion permitting and the turbine OEM; Redhawk expansion (2028); the up-to-2 GW gas program near Gila Bend and the Desert Southwest pipeline (late 2029); the Four Corners–Cholla transmission project",
+        "Palo Verde SLR application (late 2027); the $0.91 dividend's prior amount and the next declaration; the ACC statewide large-load docket E-00000A-25-0069"
+      ]
+    },
+    "nisource": {
+      "source": "Cadence inference: no Q3 2026 date release on the NiSource news archive as of 2026-09-29 (latest item the Sep 10 dividend); the Q3 2025 call was 2025-10-29 and date releases come about a week ahead (2026-07-22 for the Aug 5 call). Confirm from https://www.nisource.com/news in mid-October.",
+      "watch": [
+        "GenCo construction: Schahfer combined-cycle turbine OEM and delivery schedule; the Mitchell 400 MW / 1,600 MWh battery's supplier and completion by January 1, 2027; first Amazon deliveries January 1, 2027",
+        "The next special contracts from the ~3 GW in active negotiation and ~2 GW in development; the Alphabet site and energization; any further Amazon amendment beyond the July 2026 +400 MW",
+        "The union negotiations and storm costs behind the Q2 2026 miss; the Virginia, Kentucky and Ohio gas rate cases mentioned in August 2026",
+        "Any DOE 202(c) renewal for Schahfer coal or Michigan City (retirement by end-2028); NIPSCO's IRP and further build-transfer purchases",
+        "Blackstone Infrastructure's stakes (19.9 percent of NIPSCO and of GenCo's parent) — any further sell-down or the $250M additional commitment being drawn"
+      ]
     }
   }
 }

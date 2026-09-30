@@ -121,6 +121,12 @@
       "pair": "kkr x stack-infrastructure",
       "why": "Reported only: Bloomberg named KKR among suitors for STACK's Asia-Pacific portfolio (June 2026), and a different group was reported in exclusivity in September; no transaction exists. F-I1 accept 10 of 10.",
       "when": "2026-09-26"
+    },
+    {
+      "id": "5a62a5b48a4f",
+      "pair": "nisource x ppl",
+      "why": "Both sides type the link 'other' by design: the two companies have no dealing with each other; the edge records that they are the corpus's two utility-affiliated data-center generation vehicles sharing Blackstone Infrastructure as minority partner (GenCo 19.9 percent; Invitium 49 percent). No inverse type applies. F-U3 accept 1 of 1.",
+      "when": "2026-09-29"
     }
   ]
 }

@@ -1,0 +1,339 @@
+{
+ "schemaVersion": 2,
+ "slug": "nisource",
+ "title": "NiSource (NIPSCO) — Technology Study Guide",
+ "lastUpdated": "2026-09-29",
+ "sections": [
+  {
+   "id": "the-ring-fence",
+   "title": "The ring-fence: building for a data center in an affiliate the commission declined to regulate",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The corpus now holds four ways a regulated utility puts generation behind a data center. WEC keeps the plant in its own {{rate base}} under a {{bespoke resource}} tariff; DTE keeps it in the utility under a customer-funded {{special contract}}; PPL's Invitium builds it in an unregulated {{joint venture}} outside the utility entirely. NiSource's answer sits between the last two: NIPSCO created an affiliate, NIPSCO Generation LLC — 'GenCo' — asked the Indiana commission to decline jurisdiction over it, sold Blackstone Infrastructure Partners 19.9 percent of it, and contracts with the data center through the regulated utility while the affiliate owns the plant. The word for the separation is {{ring-fencing}}: separate entity, separate equity, no recovery of its cost from retail customers.",
+    "The mechanism is the {{declination}}. A state commission regulates public utilities; an entity that serves one large customer under a contract rather than the public at large can ask the commission to decline jurisdiction, and in September 2025 Indiana's did. Nine months later, in Cause 46362, the commission went a step further: it declined {{CPCN}} jurisdiction over GenCo's two 1,300 MW combined-cycle units and its 400 MW battery, found the construction 'reasonable and necessary' solely for compliance with the Amazon settlement, and barred cost recovery from non-megaload ratepayers without independent review. No certificate, no prudence review, no rate-base entry — the build stands on the customer's contract and the affiliate's equity.",
+    "For a seller the consequence is where the purchase order sits. GenCo buys the combined cycles through a Quanta–Zachry engineering-procurement-construction joint venture and the battery on its own account; NIPSCO buys nothing for the data centers except wires. The turbine OEM and the battery supplier are undisclosed in every document read, which is itself a feature of the structure: an affiliate the commission does not regulate does not have to file its equipment choices."
+   ]
+  },
+  {
+   "id": "four-vehicles-for-data-center-generation",
+   "title": "Four vehicles for data-center generation",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The same 1.3 GW combined cycle could be built under four structures. Read each row as where the plant sits, who reviews it, who bears the cost if the customer leaves and where the corpus has seen it.",
+   "cols": [
+    "Vehicle",
+    "Where the plant sits",
+    "Who reviews the cost",
+    "Who bears exit risk",
+    "Corpus example"
+   ],
+   "rows": [
+    [
+     "Bespoke-resource tariff",
+     "Utility rate base, subscribed by the customer",
+     "The state commission (fixed return for the term)",
+     "The customer — remaining net book value",
+     "WEC — Microsoft, Vantage"
+    ],
+    [
+     "Special contract",
+     "Utility rate base, funded by the customer",
+     "The state commission (contract approval)",
+     "The customer — minimum bills and termination charges",
+     "DTE — Saline / Oracle"
+    ],
+    [
+     "Ring-fenced affiliate",
+     "An affiliate the commission declined to regulate",
+     "Nobody, for the build; the commission only if recovery from retail customers is ever sought",
+     "The customer and the affiliate's investors — 'even if the customer leaves before contract completion'",
+     "NiSource — GenCo, Amazon and Alphabet"
+    ],
+    [
+     "Unregulated joint venture",
+     "Outside the utility group's regulated entities",
+     "Nobody; financed on the customer's contract",
+     "The venture and its partner",
+     "PPL — Invitium with Blackstone Infrastructure"
+    ]
+   ]
+  },
+  {
+   "id": "who-pays-and-who-gets-paid",
+   "title": "Who pays and who gets paid: the fixed capacity charge and the bill credit",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The contract.** Amazon Data Services signed with NIPSCO in September 2025: up to 3 GW of new generation, deliveries from January 1, 2027 rising to 2.4 GW by the end of 2032, an initial term ending 15 years after the first data center is energized, and from January 2027 a fixed capacity charge plus pass-through charges 'structured to provide us with a return of our invested capital over the fifteen-year term', with Amazon.com guaranteeing payment. That is a {{take-or-pay}} contract: the {{demand charge}} is fixed whether or not the load draws, so the plant is financed against the customer's credit rather than against the market.",
+    "**The credit.** NiSource markets the deal to its regulator and its retail customers as a source of savings — about $1 billion over 15 years when Amazon signed (about $7 a month on a residential bill), about $1.25 billion when Alphabet was added in April 2026, 'approximately $1.4 billion of bill reductions' by August — plus a $17 million community fund. The arithmetic is that a plant paid for by one customer produces excess capacity and cost sharing that flows back to the others. It is the political licence for the build, and the reverse of the Kentucky and Arizona framing, where the tariff exists to keep the data center from costing the ratepayer anything.",
+    "**What a seller reads.** A fixed 15-year capacity charge from a guaranteed counterparty is the most financeable contract in this file; it is why a 19.9 percent minority investor committed $1.5 billion to the affiliate. The equipment behind it is bought once, at the start, to a schedule the contract fixes — deliveries in 2027, full power by 2032."
+   ]
+  },
+  {
+   "id": "reading-the-package",
+   "title": "Reading the package: 'approximately 3 gigawatts' is 2.6 plus 0.4",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Three documents describe the same build in three vocabularies, and reconciling them is a skill worth practising. Quanta's award release says 'generation and infrastructure resources capable of producing approximately 3 gigawatts'. Zachry's release says 'two nominal 1,300-megawatt gas-fired {{combined cycle}} units in a 2 x 2 x 1 configuration' near Wheatfield. The commission's order lists two 1,300 MW combined-cycle units at Schahfer and one 400 MW battery at Mitchell. So the 3 GW is 2,600 MW of gas plus 400 MW of storage — and a dossier elsewhere in this corpus that read the 3 GW as all combined cycle was corrected on that basis.",
+    "The configuration matters to a seller. A 2 x 2 x 1 combined cycle is two gas turbines, two heat-recovery steam generators and one steam turbine sharing a shaft or a generator: the exhaust of both gas turbines boils water for one steam turbine, which is what lifts a plant's efficiency from the 35–40 percent of a {{simple cycle}} unit to the 55–60 percent range. Two such blocks of 1,300 MW nominal is a large order — four gas turbines, two steam turbines — placed in a decade when turbine slots are the industry's binding constraint, and the OEM is not named.",
+    "The battery is the first thing to complete. A 400 MW {{four-hour battery}} (1,600 MWh) on the retired Mitchell coal site in Gary is due by January 1, 2027 — the date Amazon's deliveries begin and four years before the combined cycles reach full power. A brownfield coal site brings an interconnection, a switchyard and permits; the battery is what serves the first megawatts while the gas is built."
+   ]
+  },
+  {
+   "id": "the-second-customer",
+   "title": "The second customer: serving a hyperscaler from plant you already own",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "GenCo's second agreement, announced April 16, 2026, shows the other thing an affiliate can do. An Alphabet subsidiary is served from about 340 MW of GenCo-owned generation plus up to 175 MW of seasonal market purchases, with service from summer 2026 and load ramping to full capacity by 2030 — no new plant. The affiliate had a portfolio; it contracted it. The Indiana commission approved the agreement in July 2026, a month after the Amazon contract.",
+    "That changes how to read NiSource's pipeline. About 4 GW is signed (Amazon and Alphabet), about 3 GW is in active negotiation and about 2 GW is 'developing' — up to 9 GW that would take generation in the NIPSCO area from 5.2 GW in 2026 to as much as 9 GW. Some of that will be new combined cycles sized to the customers who sign; some, as with Alphabet, can be existing assets moved behind a contract. The Amazon contract's July 2026 amendment — 400 MW more of contracted load — is served within the 3 GW build, not by new plant.",
+    "The retail utility's own fleet is the backdrop. NIPSCO owns about 4 GW: Schahfer coal (held open by a federal {{202(c) emergency order}} through March 23, 2026 after MISO warned of an emergency), Michigan City coal (to retire by the end of 2028), the Sugar Creek combined cycle, gas peakers, and a solar-and-storage fleet that includes Fairbanks Solar, bought from Invenergy under a {{build-transfer}} agreement. The affiliate's program for one customer is three-quarters the size of the utility's entire fleet — the inversion the ring-fence exists to manage."
+   ]
+  },
+  {
+   "id": "minority-partners",
+   "title": "Minority partners: how 19.9 percent finances a $7.6 billion program",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**Twice, the same number.** In January 2024 NiSource sold Blackstone Infrastructure Partners a 19.9 percent indirect non-controlling interest in NIPSCO for $2.16 billion plus a $250 million commitment. In October 2025 it sold the same partner 19.9 percent of GenCo's parent for a $1.5 billion equity commitment. Below 20 percent the buyer holds a {{minority interest}} that does not change who controls the utility or trigger the approvals a change of control would; above it the accounting and the regulatory questions change. The number is chosen for that reason.",
+    "**What it does to the plan.** The 2026–2030 capital plan is $28.6 billion — $21.0 billion of base plan and $7.6 billion of data-center infrastructure — funded 40–45 percent by debt, 45–50 percent by cash from operations, 5–10 percent by parent equity ($400–600 million a year) and 3–5 percent by minority interest. The affiliate-level equity is what lets a company with a 14–16 percent {{FFO}}-to-debt target carry a data-center program a quarter the size of its plan while guiding 9–10 percent earnings growth.",
+    "**The pair in this corpus.** The same sponsor holds 49 percent of PPL's Invitium. Read the two together: one vehicle ring-fenced inside the utility group with the commission's declination, one placed outside it, both financed by the same infrastructure fund on the strength of hyperscaler contracts."
+   ]
+  },
+  {
+   "id": "where-nisource-slots-in",
+   "title": "Where NiSource's programs slot into the chain",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "One row per program, with who signs the equipment contract and what a seller can actually address.",
+   "cols": [
+    "Program",
+    "Scale and date",
+    "Who buys the equipment",
+    "Seller's door"
+   ],
+   "rows": [
+    [
+     "GenCo combined cycles (Amazon)",
+     "2 x 1,300 MW nominal, 2 x 2 x 1, Schahfer; execution from 2026, full power 2032",
+     "The Quanta–Zachry EPC JV (Zachry: engineering and procurement)",
+     "Turbines and balance of plant through the EPC; OEM undisclosed"
+    ],
+    [
+     "GenCo battery (Amazon)",
+     "400 MW / 1,600 MWh at Mitchell, Gary; by January 1, 2027",
+     "GenCo",
+     "The battery, PCS and integration — supplier undisclosed"
+    ],
+    [
+     "GenCo existing portfolio (Alphabet)",
+     "~340 MW + up to 175 MW seasonal purchases; summer 2026; full by 2030",
+     "GenCo (already built)",
+     "Augmentation or expansion behind the ramp to 2030"
+    ],
+    [
+     "Next GenCo build",
+     "~3 GW in negotiation; ~2 GW developing; up to 9 GW total",
+     "GenCo and its next EPC",
+     "Sized by the next signed customer, not by NIPSCO's need"
+    ],
+    [
+     "NIPSCO regulated fleet",
+     "3,967 MW owned; Michigan City coal retires by 2028; solar and storage JVs",
+     "NIPSCO, under the IRP and IURC review",
+     "Replacement capacity for the coal; build-transfer from developers (Invenergy at Fairbanks)"
+    ],
+    [
+     "NIPSCO wires for the campuses",
+     "Transmission for the Amazon package (part of the ~$7B)",
+     "NIPSCO",
+     "Substations, lines and transformers to the data-center sites"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — the pipeline, the build and the fleet",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "NiSource's own figures at their most recent disclosure. The shape to notice: the affiliate's first program is three-quarters the size of the utility's whole fleet, and the pipeline ceiling is more than double both.",
+   "items": [
+    {
+     "label": "Pipeline ceiling",
+     "sub": "4 signed + 3 negotiating + 2 developing",
+     "v": 9.0
+    },
+    {
+     "label": "Signed data-center load",
+     "sub": "Amazon + Alphabet",
+     "v": 4.0
+    },
+    {
+     "label": "NIPSCO owned generation",
+     "sub": "FY2025 10-K table",
+     "v": 3.967
+    },
+    {
+     "label": "Amazon package",
+     "sub": "2.6 GW CCGT + 0.4 GW BESS",
+     "v": 3.0
+    },
+    {
+     "label": "Amazon ramp by end-2032",
+     "sub": "from January 1, 2027",
+     "v": 2.4
+    },
+    {
+     "label": "Schahfer + Michigan City coal",
+     "sub": "722 + 455 MW; retire by 2028",
+     "v": 1.177
+    },
+    {
+     "label": "GenCo portfolio serving Alphabet",
+     "sub": "plus up to 175 MW seasonal",
+     "v": 0.34
+    }
+   ],
+   "note": "NiSource's own arithmetic: generation in the NIPSCO area from 2.7 GW in 2021 to 5.2 GW in 2026 and as much as 9 GW at the pipeline ceiling."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The ring-fence is only as strong as the contract.** The build has no certificate and no prudence review; if the Amazon contract were ever renegotiated, the cost has one home — the affiliate and its investors — and any move to recover it from retail customers needs the 'independent review' the order requires.",
+    "**Four turbines and two steam turbines with no named OEM.** Full power by 2032 depends on delivery slots the documents do not disclose; the EPC joint venture's schedule is the thing to watch.",
+    "**The credit story has a denominator.** About $1.4 billion over 15 years is real money to a retail customer and small against a $7.6 billion program; a cost overrun the affiliate absorbs does not reach the credit, but a weaker contract would.",
+    "**Coal was held open by federal order.** The 202(c) order kept Schahfer running through March 2026 on the site where the combined cycles go; another such order, or a MISO shortfall, moves the retirement plan the new gas is meant to replace.",
+    "**The quarter's miss was labour and weather.** Adjusted earnings fell 27 percent in the second quarter of 2026 on storms and union-negotiation costs; the agreements expire between March 2026 and June 2027, and their outcome was not read."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is ring-fencing, in the GenCo sense?",
+     "a": "Legal and financial separation of the data-center generation affiliate from the retail utility — separate entity, separate equity, no cost recovery from retail customers — so the build's risk stays with the affiliate and its investors."
+    },
+    {
+     "q": "What did the Indiana commission do in a declination, and why does it matter?",
+     "a": "It declined jurisdiction over GenCo as a public utility because it serves one large customer under contract; the build then needs no certificate and no rate-base review."
+    },
+    {
+     "q": "What did the Cause 46362 order say about the Schahfer and Mitchell facilities?",
+     "a": "CPCN jurisdiction declined; construction reasonable and necessary solely for compliance with the Amazon settlement; no cost recovery from non-megaload ratepayers without independent review."
+    },
+    {
+     "q": "Why is 'approximately 3 gigawatts' not 3 GW of combined cycle?",
+     "a": "It is two nominal 1,300 MW combined-cycle units (2.6 GW) plus a 400 MW battery — the same package described in three vocabularies by Quanta, Zachry and the commission."
+    },
+    {
+     "q": "What is a 2 x 2 x 1 combined cycle?",
+     "a": "Two gas turbines and two heat-recovery steam generators feeding one steam turbine; recovering the exhaust heat lifts efficiency from the mid-30s percent of a simple cycle to the high-50s."
+    },
+    {
+     "q": "What makes the Amazon contract financeable?",
+     "a": "A fixed capacity charge from January 2027 for a 15-year term from first energization, structured to return the invested capital, with Amazon.com guaranteeing payment — take-or-pay against an investment-grade parent."
+    },
+    {
+     "q": "Why do retail customers get a credit from a plant built for Amazon?",
+     "a": "The company's arithmetic: a plant one customer pays for produces excess capacity and cost sharing that flow back to the others — about $1.4 billion over the contract terms, the political licence for the build."
+    },
+    {
+     "q": "What did the Alphabet agreement show that the Amazon one did not?",
+     "a": "That the affiliate can serve a hyperscaler from generation it already owns — about 340 MW plus seasonal purchases, energized in summer 2026 with no new plant."
+    },
+    {
+     "q": "Why 19.9 percent, twice?",
+     "a": "Below 20 percent a buyer holds a minority interest that does not change control or trigger change-of-control approvals; NiSource used it for NIPSCO in 2024 and for GenCo's parent in 2025, both with Blackstone Infrastructure."
+    },
+    {
+     "q": "What is a 202(c) emergency order, and where did it land here?",
+     "a": "A federal order under the Federal Power Act requiring a plant to keep running in a declared emergency with cost recovery; it held the Schahfer coal units open through March 23, 2026 on the site where GenCo's combined cycles are built."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A utility affiliate builds 2.6 GW of gas for one data center under a commission declination. Who reviewed the cost of the plant before it was built?",
+     "c": [
+      "The state commission, in a certificate case",
+      "FERC",
+      "Nobody — the commission declined jurisdiction; the build stands on the customer contract and the affiliate's equity",
+      "The customer's auditors"
+     ],
+     "a": 2,
+     "why": "That is what a declination plus the Cause 46362 order produce: no CPCN, no prudence review, and recovery from retail customers only after an independent review."
+    },
+    {
+     "q": "Three documents say '3 gigawatts', 'two nominal 1,300 MW combined cycle units' and 'two 1,300 MW CCGT plus a 400 MW BESS'. Are they consistent?",
+     "c": [
+      "No — one of them is wrong",
+      "Yes — 2 x 1,300 MW of combined cycle plus 400 MW of storage is approximately 3 GW",
+      "No — the battery is separate from the 3 GW",
+      "Only if the battery is 800 MW"
+     ],
+     "a": 1,
+     "why": "Reconciling vocabularies is the skill; a dossier that read the 3 GW as all combined cycle was corrected on this basis."
+    },
+    {
+     "q": "The Amazon contract's initial term is 15 years from what date?",
+     "c": [
+      "The signing in September 2025",
+      "January 1, 2027, the first delivery date",
+      "The initial energization of Amazon's first data center",
+      "Full power in 2032"
+     ],
+     "a": 2,
+     "why": "The 10-K ties the term to first energization; the fixed capacity charge starts in January 2027."
+    },
+    {
+     "q": "GenCo signs a second hyperscaler for 340 MW in April 2026 and energizes it that summer. What does that tell you about the affiliate?",
+     "c": [
+      "It built a new plant in four months",
+      "It can contract generation it already owns behind a customer — the pipeline is not only new build",
+      "The commission approved a second CPCN",
+      "Amazon's load fell"
+     ],
+     "a": 1,
+     "why": "The Alphabet agreement is served from GenCo's existing ~340 MW portfolio plus seasonal purchases, ramping to full capacity by 2030."
+    },
+    {
+     "q": "Why does a 14–16 percent FFO-to-debt utility guide 9–10 percent earnings growth while carrying a $7.6 billion data-center program?",
+     "c": [
+      "Because the program is in rate base",
+      "Because the affiliate-level minority equity (Blackstone's $1.5 billion) and the customer's fixed capacity charge carry the program outside the parent's balance-sheet constraint",
+      "Because the commission guaranteed the return",
+      "Because coal was retired"
+     ],
+     "a": 1,
+     "why": "The plan is funded 40–45 percent debt, 45–50 percent CFO, 5–10 percent equity and 3–5 percent minority interest; GenCo's contribution rises to $0.40–0.60 a share by 2032–2033."
+    },
+    {
+     "q": "A turbine seller wants the Schahfer order. Who is the account?",
+     "c": [
+      "NIPSCO's regulated procurement",
+      "The Indiana commission",
+      "The Quanta–Zachry EPC joint venture, with Zachry leading engineering and procurement — the OEM is not yet disclosed",
+      "Amazon"
+     ],
+     "a": 2,
+     "why": "GenCo buys through the EPC; Zachry's release names it the engineering, procurement and commissioning lead."
+    }
+   ]
+  }
+ ]
+}

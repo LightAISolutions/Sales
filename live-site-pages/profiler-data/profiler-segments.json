@@ -1366,6 +1366,16 @@
           "slug": "berkshire-hathaway-energy",
           "role": "adjacent",
           "basis": "productsAndServices › NV Energy 2026 IRP supply plan: the tolling counterparty on 5,405 MW of new battery PPAs plus owned Reid Gardner (220 MW / 440 MWh) and Sierra Solar (400 MW / 1,600 MWh); PacifiCorp's 4,154 MW of lithium and 523 MW of iron-air proxies by 2045 — a contracting buyer, not a developer"
+        },
+        {
+          "slug": "ppl",
+          "role": "adjacent",
+          "basis": "productsAndServices › LG&E and KU: utility-owned storage in rate base — the 125 MW / 500 MWh E.W. Brown battery (2027), the 400 MW / 1,600 MWh Cane Run project withdrawn with the right to refile, and a July 2026 RFP for 50–400 MW of storage"
+        },
+        {
+          "slug": "nisource",
+          "role": "adjacent",
+          "basis": "productsAndServices › NIPSCO Generation LLC: GenCo owns the 400 MW / 1,600 MWh Mitchell battery built for Amazon (complete by January 1, 2027) and NIPSCO owns Dunns Bridge II solar-and-storage (435 MW)"
         }
       ]
     },
@@ -1824,6 +1834,21 @@
           "slug": "exelon",
           "role": "incumbent",
           "basis": "ecosystemRole: the corpus's largest wires-only utility and the inventor of the transmission security agreement — six ComEd TSAs, >$1B of collateral, 4 GW under signed TSAs of an 11 GW high-probability book; owns no generation or storage today"
+        },
+        {
+          "slug": "ppl",
+          "role": "incumbent",
+          "basis": "ecosystemRole: one holding company running all three answers to the data-center question — the PPL Electric wires franchise pricing 31.8 GW of advanced-stage load under Pennsylvania's first large-load tariff, LG&E and KU building regulated combined cycles, and Invitium building for hyperscalers outside rate base"
+        },
+        {
+          "slug": "pinnacle-west",
+          "role": "incumbent",
+          "basis": "ecosystemRole: the gatekeeper for the Phoenix West Valley data-center cluster and TSMC — a 4.5 GW committed queue and 20 GW uncommitted under the XHLF schedule, converting into subscription contracts only after the ACC's December 2026 rate-case decision"
+        },
+        {
+          "slug": "nisource",
+          "role": "incumbent",
+          "basis": "ecosystemRole: the gatekeeper for the northern Indiana corridor — about 4 GW signed (Amazon, Alphabet), 3 GW in negotiation and 2 GW in development, served through the commission-declined GenCo affiliate"
         }
       ]
     },

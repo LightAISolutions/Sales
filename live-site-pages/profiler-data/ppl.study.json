@@ -1,0 +1,429 @@
+{
+ "schemaVersion": 2,
+ "slug": "ppl",
+ "title": "PPL Corporation — Technology Study Guide",
+ "lastUpdated": "2026-09-29",
+ "sections": [
+  {
+   "id": "three-answers-in-one-company",
+   "title": "Three answers in one company: wires, rate base and a joint venture",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "PPL is the one utility in this corpus that runs all three ways of serving a data center at once, because its three utilities sit in three different regulatory regimes. In Pennsylvania, a state with {{retail choice}}, PPL Electric owns the wires and provides {{default service}} but owns no generation and cannot build any into {{rate base}} — the law that restructured the market took that away. So its answer is a price: a {{large-load tariff}} that fixes what a data center pays for the wires and a proposed rider that assigns the transmission upgrades to the large-load class. In Kentucky, a {{vertically integrated utility}} regime, LG&E and KU own the plants, so their answer is to build — two 645 MW {{combined cycle}} units approved in 2025 under a {{CPCN}}. And in PJM at large, PPL's answer to the generation it cannot put in Pennsylvania's rate base is Invitium, a 51/49 {{joint venture}} with Blackstone Infrastructure that reserves turbines and signs {{hyperscaler}} contracts outside any commission's review.",
+    "The first thing to fix is why a wires company cannot simply build the plant. In a restructured state the distribution utility's customers buy energy from competitive suppliers or from the default-service auction; the utility earns its return on poles, wires, substations and meters. Put a gas plant in its rate base and every customer pays for it whether or not they buy that supplier's power — the {{cross-subsidy}} restructuring was written to prevent. That is why PPL's chief executive says 'bilateral contracting will likely be the predominant path for getting new generation development in PJM': the data center will contract with a generator — Talen's Susquehanna, a merchant developer, or Invitium — and PPL Electric will deliver it.",
+    "The three answers produce three different buyers of equipment. PPL Electric buys transformers, switchgear, lines and substations — the network upgrades the tariff makes the customer secure. LG&E and KU buy turbines, a battery, an SCR and, if a hyperscaler pays for it, a pumped-storage plant. Invitium buys combined-cycle turbines — more than 5 GW reserved by August 2026 — and, perhaps, batteries that the hyperscaler may prefer to own itself. A seller reading PPL as one account is reading three."
+   ]
+  },
+  {
+   "id": "anatomy-of-the-pennsylvania-tariff",
+   "title": "Anatomy of the Pennsylvania tariff: what a data center signs",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The PUC set a statewide model in May 2026 and PPL Electric's June 2026 rate order carries the first tariff written under it. Read each row as the term, the number and what the term protects against.",
+   "cols": [
+    "Term",
+    "PPL Electric (effective July 1, 2026)",
+    "PUC model framework (May 13, 2026)",
+    "What it does"
+   ],
+   "rows": [
+    [
+     "Threshold",
+     "≥50 MW at one site, or 75 MW aggregate within 10 miles at ≥69 kV",
+     ">50 MW individually or 100 MW aggregate",
+     "Decides who is a large-load customer — a single colocation building qualifies"
+    ],
+    [
+     "Initial term",
+     "At least 10 years",
+     "Minimum terms",
+     "The commitment horizon, matched to the payback on the upgrades"
+    ],
+    [
+     "Ramp",
+     "Up to 5 years",
+     "Ramping provisions",
+     "How fast the customer must reach its contracted load — and start paying for it"
+    ],
+    [
+     "Minimum payment",
+     "'At least 80% of the capacity they reserve'",
+     "Minimum demand guarantees",
+     "The {{minimum demand charge}} — the wires are paid for whether or not the load arrives"
+    ],
+    [
+     "Exit",
+     "Exit fees",
+     "Exit provisions",
+     "The {{stranded cost}} guard — leaving early does not leave the upgrades unpaid"
+    ],
+    [
+     "Credit",
+     "Security equal to the cost of the upgrades",
+     "Deposits and collateral",
+     "Turns the customer's rating into {{credit support}} sized to the utility's exposure"
+    ],
+    [
+     "Process",
+     "—",
+     "6-month study, public queue, self-construction option",
+     "A visible line and a way for the customer to build its own connection"
+    ],
+    [
+     "Transmission",
+     "Customer Protection Transmission Rider proposed Sep 2026, for Q1 2028",
+     "—",
+     "Moves transmission {{network upgrades}} to the LP-6 class instead of the network rate"
+    ]
+   ]
+  },
+  {
+   "id": "why-the-transmission-rider-matters",
+   "title": "Why the transmission rider matters: the wires nobody has paid for yet",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**Two kinds of wires.** Distribution — the lines and substations inside PPL Electric's territory — is priced by the state commission, and the June 2026 tariff assigns its upgrades to the customer. Transmission — the 230 kV and 500 kV network — is priced under a {{FERC formula rate}} that spreads the network's cost across every load in the zone by its share of the peak. A substation and lines built for one campus would, by default, be paid for by everyone.",
+    "**The rider.** On September 14, 2026 PPL Electric proposed replacing its Transmission Service Charge with a Customer Protection Transmission Rider that assigns certain transmission network-upgrade costs to the LP-6 large-load class, for implementation in the first quarter of 2028. It is the state-side mechanism for the problem WEC and Microsoft are fighting about at FERC over ATC's Mount Pleasant lines. The chief executive's arithmetic: if the 31.8 GW of advanced-stage load is realized, the transmission component of a residential bill falls by about $25 a month over time — because a much larger load shares a network whose cost the large-load class now carries.",
+    "**What a seller reads.** Transmission is where PPL Electric's own capital goes ($6.65B of the $23B plan) and where the customer's security is sized. The customer pays for what serves it; the network's growth is spread; and the transformer, switchgear and line orders behind a 31.8 GW pipeline are PPL Electric's purchase orders, recovered at a FERC return with about 60 percent of the company's capex earning near real time."
+   ]
+  },
+  {
+   "id": "the-kentucky-build",
+   "title": "The Kentucky build: two combined cycles, a withdrawn battery and a regulator's warning",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "In February 2025 LG&E and KU asked the Kentucky commission for a {{CPCN}} to build two 645 MW {{combined cycle}} units (Brown 12 for 2030, Mill Creek 6 for 2031), a 400 MW / 1,600 MWh {{four-hour battery}} at Cane Run for 2028 and a {{selective catalytic reduction}} retrofit on the coal-fired Ghent 2 — $3.7B in all — against a forecast in which load grew from 32,808 GWh to 48,129 GWh by 2032 and the peak from 6,230 MW to 8,034 MW, more than 6,000 MW of it data-center related. In October the commission approved the two gas units and the SCR, at $2.798B including transmission, and the battery was withdrawn as moot 'with the right to file a future CPCN if necessary'. The commission also denied every mechanism that would have let the utilities collect for the plants early — a Mill Creek 6 recovery mechanism, a retirement adjustment clause, advance recovery of notice expenses — opened a monitoring case and wrote that the load probabilities were 'troubling' and unsupported.",
+    "That is the pattern a seller should carry from Kentucky: the regulator will let the utility build for a data-center forecast but will not let it pre-collect for one, and it approved the plants because the developer contracts were real enough (a 400 MW PowerHouse campus in Louisville, 1.3 GW of {{reimbursement agreement}} commitments by mid-2026) rather than because the hyperscaler contracts were. The chief executive's own statement of the trigger for the next certificate — a third combined cycle, the deferred 400 MW of batteries, a 266 MW {{pumped storage}} plant — is 'conversion from developer to hyperscaler contract'. Until a hyperscaler signs, the battery seller's door in Kentucky is the July 2026 request for proposals (50–400 MW, 200–1,600 MWh), not a rate-base docket.",
+    "The tariff that goes with the build is the Extremely High Load Factor rate: a 15-year minimum term, a {{minimum demand charge}} of 80 percent of forecast consumption, collateral up to $100 million. A 525 MW data center under it would owe about $1.4 billion of demand charges over 15 years, per testimony — the {{take-or-pay}} arithmetic that makes the plant financeable. The state legislature tried to write the no-{{cross-subsidy}} rule into law in 2026 and the bill died without a Senate vote; the utility preferred the tariff, and the tariff is what stands."
+   ]
+  },
+  {
+   "id": "the-joint-venture",
+   "title": "The joint venture: turbines before customers",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Invitium Energy is PPL's answer to the plant it cannot build in Pennsylvania's rate base. Formed in July 2025 with Blackstone Infrastructure as the 49 percent partner, it exists to build {{combined cycle}} plants for hyperscalers under long-term energy services agreements with 'regulated-like risk profiles' — contracts long and firm enough that the plant is financed against the customer rather than against the market. By August 2026 it had reserved more than 5 GW of turbines (the supplier unnamed), had more than 5 GW accepted into PJM's {{interconnection queue}} and sites able to host 8–14 GW; the first commercial agreements were promised by year-end 2026, the first turbines could run 'as early as 2031–2032', and construction financing is expected off PPL's balance sheet.",
+    "The order of operations is the point. In a market where turbine delivery slots are the binding constraint through the decade, a reservation is the scarce asset, and Invitium holds one of PJM's largest uncommitted blocks before it has a customer. The venture's economics are 5 GW for $12.5–15 billion at the joint-venture level, none of it in PPL's $23 billion regulated plan — 'back-end upside', in the company's phrase. The same sponsor, Blackstone Infrastructure, is NiSource's 19.9 percent partner in NIPSCO and in its data-center generation affiliate; the two vehicles are the corpus's pair.",
+    "Where the batteries go is the open question a storage seller should watch. The chief executive expects batteries and other short-lead-time resources to earn before the turbines do, in 2029 or 2030, calls them 'the easiest for the hyperscalers to embed in their designs' — and says 'some of that could be owned directly by the hyperscalers'. If so, the battery purchase order sits with the customer, not the venture, and Invitium's role is the gas."
+   ]
+  },
+  {
+   "id": "reading-a-pipeline-ladder",
+   "title": "Reading a pipeline ladder: advanced, signed, under construction, in service",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "PPL Electric publishes four rungs and the discipline of reading them in order is the whole skill. 'Advanced stages' — 31.8 GW at June 30, 2026 — means projects that have signed agreements with developers, where the costs PPL incurs are reimbursable by the developer if the project does not proceed: a {{reimbursement agreement}}, the signed step above an inquiry. 'Signed ESAs' — more than 11 GW — means {{ESA}} contracts under the tariff terms: ten years, 80 percent, security. 'Under construction' — more than 6.5 GW — means the customer's site and PPL's upgrades are being built. And 'in service' — two data centers that began taking power in the second quarter, expected to ramp to about 2 GW by 2031 — is the only rung that produces a kilowatt-hour.",
+    "The ramp is the number that connects the rungs to a year. In May 2026 PPL disclosed the shape: 0.6 GW of new load in 2026 rising to 20.7 GW in 2030 out of a 28.3 GW pipeline by 2034. Read that against the tenth consecutive quarterly increase in signed agreements and the picture is a book that grows faster at the top than it converts at the bottom — which is normal for a wires company whose customers must also find generation, and which is why the bill relief the chief executive quotes ('about $25 a month' off the transmission component) is stated as a long-run outcome, not a 2027 one.",
+    "Kentucky publishes the same ladder in different words: a 13.7 GW pipeline (11.6 GW of it data center), 1.3 GW of signed reimbursement agreements, an expected 3.7 GW of new load by 2032 against the 1.8 GW assumed in the 2025 certificate. Here the rung that matters is not 'signed' but 'hyperscaler' — the conversion from a developer's agreement to an end customer's contract is what starts the next plant."
+   ]
+  },
+  {
+   "id": "recovery-mechanisms",
+   "title": "Recovery mechanisms: where PPL's regulatory risk actually sits",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**The plants were approved; the mechanisms were not.** Kentucky's October 2025 order granted the two combined cycles and denied a Mill Creek 6 cost-recovery mechanism, a retirement adjustment clause and advance recovery of notice expenses. Its February 2026 rate orders granted about half the request and rejected the sharing-mechanism adjustment clause on which a {{rate freeze}} to August 2028 depended, so the utilities sought rehearing in March with the Attorney General's support — and his office's reading is that, if the clause stays rejected, a new base-rate case comes within the year.",
+    "**Rhode Island held the return.** The August 2026 order kept the 9 percent {{allowed return}} in place since 2018 against 10.75 percent asked, rejected a two-year plan and deferred the billing-system recovery — the lowest return in the group, on the utility that also owes $170 million of acquisition credits.",
+    "**Pennsylvania's mechanism is a proposal.** The transmission rider that would assign network upgrades to the large-load class is filed for 2028; until then the June 2026 tariff covers distribution and the {{FERC formula rate}} spreads transmission. **The reading:** PPL's plants are certain; its timing of recovery is the variable — which is what a 10.3 percent rate-base growth rate at a 16–18 percent {{FFO}}-to-debt target is sensitive to."
+   ]
+  },
+  {
+   "id": "storage-in-three-places",
+   "title": "Storage in three places: rate base, an RFP and a hyperscaler's design",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "PPL's batteries could arrive by three routes, and each puts the purchase order with a different party. The cards compare them.",
+   "cards": [
+    {
+     "t": "Regulated, in Kentucky rate base",
+     "meta": "E.W. Brown 125 MW / 500 MWh (2027); the 400 MW / 1,600 MWh Cane Run project, withdrawn with the right to refile",
+     "adv": [
+      "The utility signs the supply agreement and owns the asset in {{rate base}}",
+      "A {{CPCN}} fixes the size and the date",
+      "The Generation Cost Recovery mechanism covers the 2022 projects"
+     ],
+     "dis": [
+      "The 2025 battery was withdrawn as moot — the commission would not fund storage for unsigned load",
+      "The next certificate waits on a hyperscaler contract",
+      "The commission denied the pre-collection mechanisms for the plants it did approve"
+     ]
+    },
+    {
+     "t": "Contracted through the July 2026 RFP",
+     "meta": "50–400 MW / 200–1,600 MWh; PPA, asset purchase or build-transfer; bids due September 3, 2026",
+     "adv": [
+      "Open now, to any developer with a project of the right size",
+      "Three commercial forms, including build-transfer into rate base",
+      "Sized to the battery the certificate deferred"
+     ],
+     "dis": [
+      "The developer picks the OEM at bid stage",
+      "Any commercial operation date — no fixed need date",
+      "A regulated buyer's price discipline"
+     ]
+    },
+    {
+     "t": "Embedded in a hyperscaler's own design",
+     "meta": "Invitium's batteries, 2029–2030 — 'some of that could be owned directly by the hyperscalers'",
+     "adv": [
+      "Earliest earnings in the venture's own timeline",
+      "The customer specifies what it wants behind its own meter",
+      "No commission review"
+     ],
+     "dis": [
+      "The buyer may be the hyperscaler, not Invitium or PPL",
+      "Nothing disclosed: size, site, supplier or contract form",
+      "Waits on the first commercial agreement, promised by year-end 2026"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "where-ppl-slots-in",
+   "title": "Where PPL's programs slot into the chain",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "One row per program, with who signs the equipment contract and what a seller can actually address.",
+   "cols": [
+    "Program",
+    "Scale and date",
+    "Who buys the equipment",
+    "Seller's door"
+   ],
+   "rows": [
+    [
+     "PPL Electric wires and network upgrades",
+     "31.8 GW advanced; $6.65B transmission + $4.75B distribution 2026–2029",
+     "PPL Electric, at a FERC or PUC return",
+     "Transformers, switchgear, lines, substations — secured by the customer under the tariff"
+    ],
+    [
+     "Kentucky combined cycles",
+     "Brown 12 (645 MW, 2030), Mill Creek 6 (645 MW, 2031); $2.798B incl. transmission",
+     "LG&E and KU, under the 2025 CPCN",
+     "Turbines and EPC — OEM undisclosed; GE Vernova supplied the earlier Mill Creek 5"
+    ],
+    [
+     "Kentucky storage",
+     "E.W. Brown 125 MW / 500 MWh (2027); RFP 50–400 MW; Cane Run 400 MW deferred",
+     "LG&E and KU (rate base) or the RFP bidder",
+     "The RFP now; a CPCN when a hyperscaler signs"
+    ],
+    [
+     "Kentucky long-duration and nuclear",
+     "Lewis Ridge 266 MW / 8-hour (Rye; construction from Dec 2027); X-energy Xe-100 study",
+     "LG&E and KU with a developer partner",
+     "Only viable 'with a data center hyperscaler willing to pay for it' (Jefferies)"
+    ],
+    [
+     "Invitium",
+     ">5 GW of CCGT turbines reserved; sites for 8–14 GW; $12.5–15B",
+     "The joint venture (turbines); possibly the hyperscaler (batteries)",
+     "Balance of plant behind reserved turbines; batteries if the customer does not own them"
+    ],
+    [
+     "Rhode Island Energy",
+     "Rate order Sep 2026; $170M credits",
+     "RIE distribution",
+     "No data-center program"
+    ]
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — the ladder, the plants and the venture",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "GW",
+   "intro": "PPL's own figures at their most recent disclosure. The shape to notice: the top of the Pennsylvania ladder is thirty times what is in service, and the venture's reserved turbines equal the signed Kentucky reimbursement agreements four times over.",
+   "items": [
+    {
+     "label": "Pennsylvania advanced-stage pipeline",
+     "sub": "signed with developers, Q2 2026",
+     "v": 31.8
+    },
+    {
+     "label": "Kentucky pipeline",
+     "sub": "11.6 GW data center + 2.1 GW other",
+     "v": 13.7
+    },
+    {
+     "label": "Pennsylvania signed ESAs",
+     "sub": "'more than 11 GW'",
+     "v": 11.1
+    },
+    {
+     "label": "Pennsylvania under construction",
+     "sub": "'more than 6.5 GW'",
+     "v": 6.5
+    },
+    {
+     "label": "Invitium turbine reservations",
+     "sub": "combined cycle, supplier unnamed",
+     "v": 5.0
+    },
+    {
+     "label": "Pennsylvania in service, ramping",
+     "sub": "two data centers, ~2 GW by 2031",
+     "v": 2.0
+    },
+    {
+     "label": "Kentucky signed reimbursement agreements",
+     "sub": "from 0.9 GW in Q1",
+     "v": 1.3
+    },
+    {
+     "label": "Kentucky combined cycles approved",
+     "sub": "Brown 12 + Mill Creek 6",
+     "v": 1.29
+    },
+    {
+     "label": "Kentucky storage in construction",
+     "sub": "E.W. Brown",
+     "v": 0.125
+    }
+   ],
+   "note": "The May 2026 disclosure's ramp: 0.6 GW of new Pennsylvania load in 2026 rising to 20.7 GW in 2030 out of 28.3 GW by 2034."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "**The top of the ladder is a developer's signature.** 31.8 GW is projects with developer agreements whose costs are reimbursable — not hyperscaler contracts. The signed and under-construction rungs are the numbers to hold PPL to.",
+    "**Kentucky built for a forecast its regulator called 'troubling'.** If the developer campuses do not convert to hyperscaler contracts, two 645 MW plants serve 1.3 GW of reimbursement agreements and the Sierra Club's bill-risk range ($23–138 a year) becomes the story.",
+    "**Invitium has turbines and no customer.** Reservations before contracts is the right order in a slot-constrained market and the wrong order if the first commercial agreement does not arrive 'by year-end' 2026.",
+    "**Recovery timing, not plant approval.** A failed rehearing in Kentucky means another rate case within the year; Rhode Island's 9 percent stands; the Pennsylvania transmission rider is a 2028 proposal."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why can a wires-only utility in a retail-choice state not build a gas plant for a data center?",
+     "a": "Restructuring removed generation from its rate base: customers buy supply competitively or through default service, and a plant in the wires company's rate base would be paid for by every customer — the cross-subsidy the market was designed to prevent."
+    },
+    {
+     "q": "What are the four rungs of PPL Electric's pipeline ladder, in order?",
+     "a": "Advanced stages (signed with developers, costs reimbursable), signed electric service agreements, under construction, in service."
+    },
+    {
+     "q": "What is a reimbursement agreement?",
+     "a": "A contract under which a prospective customer repays the costs the utility incurs preparing to serve it if the project does not go ahead — the signed step between an inquiry and a service agreement."
+    },
+    {
+     "q": "Name the five economic terms of the Pennsylvania large-load tariff.",
+     "a": "At least ten years; ramp up to five years; at least 80 percent of reserved capacity guaranteed; exit fees; security equal to the cost of the upgrades — for loads of 50 MW or more (75 MW aggregate within ten miles at 69 kV or above)."
+    },
+    {
+     "q": "Why does a transmission rider exist separately from the distribution tariff?",
+     "a": "Transmission is priced under a FERC formula rate that spreads the network's cost across every load in the zone; a rider assigns the upgrades built for the large-load class to that class instead."
+    },
+    {
+     "q": "What did Kentucky's regulator approve in October 2025, and what did it deny?",
+     "a": "Approved two 645 MW combined cycles and an SCR; withdrew the 400 MW battery as moot; denied the pre-collection mechanisms and called the load probabilities 'troubling'."
+    },
+    {
+     "q": "What is the trigger for the next Kentucky certificate?",
+     "a": "'Conversion from developer to hyperscaler contract' — an end customer signing on a developer's campus."
+    },
+    {
+     "q": "What does the Extremely High Load Factor tariff require of a Kentucky data center?",
+     "a": "A 15-year minimum term, a minimum bill of 80 percent of forecast consumption and collateral up to $100 million — take-or-pay arithmetic that makes the plant financeable."
+    },
+    {
+     "q": "Why does Invitium reserve turbines before it has a customer?",
+     "a": "Turbine delivery slots are the binding constraint through the decade; in that market the reservation is the scarce asset and the contract can follow."
+    },
+    {
+     "q": "Where might Invitium's batteries be bought, and by whom?",
+     "a": "Embedded in the hyperscaler's own design and possibly owned directly by the hyperscaler — so the storage purchase order may sit with the customer rather than the venture."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A developer signs an agreement with PPL Electric under which it reimburses PPL's study and upgrade costs if its campus is cancelled. Which rung of the ladder is that?",
+     "c": [
+      "In service",
+      "Under construction",
+      "Signed ESA",
+      "Advanced stages — a reimbursement agreement with a developer"
+     ],
+     "a": 3,
+     "why": "The 31.8 GW is this rung; it is not a hyperscaler contract and not an electric service agreement."
+    },
+    {
+     "q": "A 60 MW data center in Pennsylvania reserves 60 MW, ramps over four years and draws 40 MW in year three. What does it pay for?",
+     "c": [
+      "40 MW",
+      "At least 48 MW — 80 percent of the reserved capacity",
+      "60 MW",
+      "Nothing until the ramp ends"
+     ],
+     "a": 1,
+     "why": "The tariff guarantees payments of at least 80 percent of reserved capacity for at least ten years."
+    },
+    {
+     "q": "A substation and lines are built for one campus and recovered through PJM's network rate. Who pays by default, and what does the proposed rider change?",
+     "c": [
+      "The campus; nothing",
+      "Every load in the zone by its share of the peak; the rider assigns the upgrade cost to the large-load class",
+      "PPL's shareholders; nothing",
+      "FERC; the rider abolishes the network rate"
+     ],
+     "a": 1,
+     "why": "That is the difference between a formula rate and cost causation, and why the rider is filed for 2028."
+    },
+    {
+     "q": "Kentucky approved two combined cycles but withdrew the battery and denied the recovery mechanisms. What is the regulator saying?",
+     "c": [
+      "Batteries are not needed in Kentucky",
+      "Build for the forecast, but do not pre-collect for it, and do not build storage for unsigned load",
+      "The plants are too expensive",
+      "Data centers must build their own generation"
+     ],
+     "a": 1,
+     "why": "The order found a 'reasonable basis' that load is coming while calling the probabilities unsupported."
+    },
+    {
+     "q": "A storage seller wants a Kentucky order in 2026. Which door is open?",
+     "c": [
+      "A new CPCN",
+      "The July 2026 RFP for 50–400 MW / 200–1,600 MWh — PPA, asset purchase or build-transfer",
+      "Invitium",
+      "The Pennsylvania tariff"
+     ],
+     "a": 1,
+     "why": "The next certificate waits on a hyperscaler contract; the RFP is open now, with bids due September 3, 2026."
+    },
+    {
+     "q": "Invitium has reserved more than 5 GW of turbines and signed no customer. What decides whether that is a plan or an option?",
+     "c": [
+      "PJM's capacity auction",
+      "The first commercial agreement, promised by year-end 2026",
+      "PPL's dividend",
+      "The Kentucky rate case"
+     ],
+     "a": 1,
+     "why": "The reservations are the scarce asset; the contract is what turns $12.5–15 billion of potential investment into a build."
+    }
+   ]
+  }
+ ]
+}

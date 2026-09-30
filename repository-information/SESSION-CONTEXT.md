@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-29 07:52 PM → 08:45 PM EST (Phase F session F-U3: PPL, Pinnacle West, NiSource — the write thread of a three-thread project row; one attended turn)
+**Repo version:** v07.74r (one push)
+**Branch:** `claude/awesome-galileo-8qrhfo`
+**Model:** Fable 5.1 at High (per `phase-f-action-plan.md` §3 row 3)
+
+### What was done
+
+- **Three new dossiers (v1) with v2 study guides and lesson plans:** `ppl`, `pinnacle-west`, `nisource` — all `utility`, all `utilities` · incumbent; PPL and NiSource `storage-developers-and-ipps` · adjacent. Written from the hand-off's §5 verified notes only (no research subagents); the six NiSource gaps in its §3.2 were closed one fetch at a time (Quanta, Zachry, the NiSource news archive, EDGAR index + FY2025 10-K, the GenCo explainer). The shell had outbound HTTPS through the proxy, so the fetches ran as `curl` reads, not summarizer calls.
+- **Identity finding:** NiSource is a **Delaware** corporation per the 10-K cover (EDGAR's company record shows IN for NIPSCO's own CIK); 801 East 86th Avenue, Merrillville; 7,668 full-time employees. Pinnacle West: Geisler is Chairman, President and CEO since Apr 1, 2025 — no split president found. PPL: FY2025 10-K not read; FY2024 employees used.
+- **Step 7:** PPL 8 / Pinnacle West 12 / NiSource 5 dossiers grepped by alias; one change — `quanta-services` v5→v6 ('~3 GW CCGT' → 2 × 1,300 MW CCGT + 400 MW BESS, reciprocal `nisource` edge). One relationships finding accepted (`nisource × ppl`, both `other`).
+- **13 concepts** added (`xhlf`, `ring-fencing`, `jurisdictional-declination`, `four-hour-battery`, `reimbursement-agreement`, `default-service`, `emergency-order-202c`, `equity-forward`, `peak-demand`, `pumped-storage`, `service-territory`, `weather-normalized`, `cooling-degree-day`); `stay-out` exists under `rate-freeze`.
+- Calendar rows unconfirmed: `ppl` ~11/05, `pinnacle-west` ~11/03, `nisource` ~10/28. §11.3 rows rewritten and flipped; `phase-f-action-plan.md` row 3 landed with the project-threads note. Checkers all clean; Playwright six routes zero errors.
+- **No CHANGELOG rotation** — 100 raw / 94 non-exempt with six 2026-09-29 sections exempt. **The first push dated 2026-09-30 EST or later rotates the 2026-09-20 group (v06.75r–v06.82r, 8 sections) with SHA enrichment** (full SHAs resolve on the deep clone).
+
+### Where we left off
+
+- **Phase 1 (to Sat 10/3, 7:00 AM ET), remaining in order:** the 9/30 Classroom run check (Opus 5.5 medium, after ~7:30 AM ET Wed); F-U4 (FPL, SRP, TVA — Fable High; the `public-power` and federal-utility category tests); the neoclouds pass + `profiler Habitat Energy` on Thu 10/1 (rebase first); F-I4; F-G1; F-A1.
+- **Classroom lessons now stale, by design (`Classroom.gs` untouched):** `landscape-utilities-2026-09` is eight franchises behind (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource) plus the three `scenario-utilities-*` rehearsals — wave C (row 16, week 3).
+- **For the Megmeet job — MV and DC power equipment.** None of the three buys an SST, 800 VDC or a battery directly today. **NiSource/GenCo is the lead:** four gas turbines and two steam turbines with no named OEM go through the Quanta–Zachry EPC JV (Zachry leads procurement), and GenCo itself buys the 400 MW / 1,600 MWh Mitchell battery (supplier unnamed) due January 1, 2027. **PPL:** the Kentucky RFP (50–400 MW storage, bids Sep 3, 2026) and the E.W. Brown battery (an unread Burns & McDonnell page names Tesla Megapacks — verify); Invitium's batteries may be hyperscaler-owned. **APS:** the account is the developer bidding into the 2025 all-source RFP (awards by year-end), whose toll terms (365 cycles, 50% SOC) are the spec; APS names no OEM anywhere.
+
+### Key decisions made
+
+- Rotation followed the CHANGELOG-archive rule (today's sections exempt) over the hand-off's expectation; recorded in the entry.
+- Relationships to counterparties were added one-way (inbound evidence shows in the graph); only `quanta-services` got a reciprocal edge, because it was revised for a contradiction anyway. Corpus-only claims (Invenergy, Tract, Compass, DNV, Talen) carry label sources naming the dossier.
+- Two NiSource developments with an unsourced day-of-month (the 202(c) order, the July Alphabet approval) were kept in policy/prose and dropped from `recentDevelopments[]`.
+
+### Known issues
+
+- Pre-existing: the four report pin warnings (`fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6); `verify-profiler-roles.py` (2) and `check-events-plan.js` (2) carried over; `duke-energy` v1 `sources[]` order.
+- The PPL EHLF threshold (100 MW per LPM vs 50 MVA on the deck) is stated unreconciled; the PPL FY2025 10-K should be read on the next pass now that sec.gov answers.
+- The harness pre-created `claude/awesome-galileo-8qrhfo` on the remote at `origin/main`'s SHA; Pre-Push #5 treated it as safe because it carried no commits.
+
+### Active context
+
+- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
+- **Profiler:** 196 dossiers, page v01.93w (unchanged). **Classroom:** GAS v01.93g, page v01.16w. **CHANGELOG** `Sections: 100/100` — **the next push dated 9/30 or later rotates.**
+- **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
+
+### Recommendation for next session
+
+- **Check the 9/30 Classroom pipeline run first (after ~7:30 AM ET), then run F-U4 (Florida Power & Light, Salt River Project, TVA) on Fable 5.1 High**, adapting `PROFILER-COVERAGE-PLAN.md` §11.4 with the row's model line; test FPL against `nextera-energy-resources` under the one-slug rule and use the new `public-power`-style category tests the row names. The CHANGELOG rotates on that push (2026-09-20 group, 8 sections).
+
+**To continue:** type `run F-U4`.
+
+## Previous Sessions
 **Date:** 2026-09-29 04:00 PM → 07:52 PM EST (Phase F session F-N2: WhiteFiber, 5C Group, TECfusions; then the Projects question and this save; three attended turns)
 **Repo version:** v07.73r (one push; this save is a no-bump housekeeping commit)
 **Branch:** `claude/busy-mendel-eey850`
@@ -55,75 +100,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Run F-U3 (PPL, Pinnacle West, NiSource) in a new Fable 5.1 High session**, with a prompt adapted from `PROFILER-COVERAGE-PLAN.md` §11.4 (its model line set to Fable 5.1 High, the three F-U3 rows of §11.3 as the hypotheses, and the F-N2 lessons from `phase-f-action-plan.md` §7 carried over). Open with `git fetch origin main` and a rebase: `main` moved twice after v07.73r. The CHANGELOG rotates on that push (99/100).
 
 **To continue:** paste the F-U3 prompt into a new Fable 5.1 High session.
-
-## Previous Sessions
-
-**Date:** 2026-09-29 03:19 PM → 03:51 PM EST (the Phase F position check, the model question, the Fable-first re-plan, the F-N2 prompt; five attended turns)
-**Repo version:** v07.72r (two pushes: v07.71r the Fable-first re-plan; v07.72r the phase names, the F-N2 prompt and this save)
-**Branch:** `claude/brave-franklin-2qiehm`
-**Model:** Opus 5.5 at xhigh
-
-### What was done
-
-- **"Run F-I1" was stale.** F-I1 had already landed at v07.66r on 9/26 (`blackrock` and `kkr` v1, 28 inbound dossiers revised). Nothing was re-run.
-- **Model per session, corrected mid-session.** My first answer (Fable at high for every heavy session) came from Anthropic's general docs. The repo's own Xcel head-to-head (`PROFILER-COVERAGE-PLAN.md` §2) points the other way for filing-heavy work: Opus read the 10-K more deeply, and Fable had a narrow edge on sourcing and relationship discipline. The plan now follows that evidence.
-- **v07.71r — `phase-f-action-plan.md` re-planned Fable-first by budget week.**
-  - §2 restores the Opus/Fable split with a model and effort per session, and records measured session values from `get_session`'s `usage.cost_usd`:
-    - New dossiers cost $28–$52 a company (F-H1 $102, F-N1 $84, F-I1 $104 on Opus 5.5; F-U1 + F-U2 $222 for five on Fable).
-    - A light refresh costs about $7 a company (Habitat Energy + Gridmatic, $13).
-    - A deep refresh can cost more than a whole session (Megmeet v8, $129).
-  - **The Fable half is about $1,200 a week**, a floor: the week of 9/19–9/26 spent about $1,180 across 25 Fable sessions before the weekly warning. That is about seven heavy Fable sessions a week. The week resets **Saturday 7:00 AM ET**. The 50% share of one shared limit is re-verified against the help centre.
-  - §3 is 18 sessions (14 Fable, 4 Opus), with new dossiers ahead of the Classroom waves. Everything except the Megmeet refresh lands by 10/17, not late November.
-  - `PROFILER-COVERAGE-PLAN.md` §11.2 records the reversal, and the ERCOT/PJM Model cells are filled in.
-- **v07.72r — the five phases are named in §3, and the F-N2 prompt is written as §7** (Fable 5.1 High). Inbound was measured on 9/29: no dossier names WhiteFiber, 5C, Hypertec or TECfusions. The only "5C" hits are a battery C-rate in seven cell-maker dossiers.
-
-### Where we left off
-
-- **Phase 1 (to Sat 10/3, 7:00 AM ET), in order:**
-  1. **F-N2** on Fable 5.1 High, tonight or Wed. The prompt is in `phase-f-action-plan.md` §7.
-  2. The 9/30 Classroom run check on Opus 5.5 medium, after about 7:30 AM ET Wed.
-  3. F-U3, then F-U4 (Fable High).
-  4. The neoclouds pass + Habitat Energy on Thu 10/1 (Fable High; rebase after the 10/1 Routines commit).
-  5. F-I4, then F-G1 (Fable High).
-  6. F-A1 (Fable Medium), the first to roll into week 2.
-- **Phase 2 (Sat 10/3 – Tue 10/6):** wave A (Fable xhigh) and the Dominion reframe (Fable High), before the Megmeet start on Wed 10/7.
-- **Phase 3 (to Sat 10/10):**
-  - F-I2 (Opus xhigh) by 10/7 either way. As of 9/29 no DigitalBridge completion notice was found; if it is still pending, the dossier records the deal as pending.
-  - F-I3 (Opus xhigh), ERCOT (Fable xhigh) and PJM (Fable High).
-- **Phase 4 (to Sat 10/17):** waves B (by 10/14), C and D, all Fable xhigh.
-- **Phase 5:** the Megmeet refresh and AIDC report (Opus xhigh), after the Q3 filing (due by 10/31).
-- **Prompts:** only F-N2 has one. Each later session adapts the nearest prompt, per the §3 note, with the row's model line.
-
-### Key decisions made
-
-- **Developer:** spend the weekly Fable allowance in full. The 9/26 all-Opus rule is withdrawn.
-- F-U3, F-U4 and PJM run at High, not xhigh, as F-U1/F-U2 did.
-- F-I2 may be written before the DigitalBridge close, and a targeted refresh adds the close later. The approved wave-B fallback (move the scenario's reviewBy to 11/6 if the deal hasn't closed by 10/7) is kept unchanged.
-- Profiler sessions run one at a time; `MULTI_SESSION_MODE` stays Off.
-
-### Known issues
-
-- **Old row numbers:** `REMINDERS.md` (the 9/30 check says "row 5") and the older entry below cite the 9/26 plan's rows. The re-plan's numbers: 9/30 check row 2, neoclouds pass row 5, Dominion row 10, wave B row 15. The reminders were left untouched.
-- **Budget:** the $1,200 is inferred from one week, since the warning threshold is not published. On F-U1/F-U2, $183 of the $222 was uncached input on Fable; the cause is unexplained. Check it first if Fable runs short.
-- **Carried over:**
-  - `verify-profiler-roles.py` (2) and `check-events-plan.js` (2).
-  - `megmeet-briefing-prompt.md` still names the 9/8 AIDC edition.
-  - `zhonhen-interview-brief.md` calls Panama an SST in two lines.
-  - The study-guide PDF renderer is not in the repo.
-  - `check-classroom-content.py` has 8 segment-roster errors, waiting for waves A/B.
-  - Pin warnings: `fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 190 dossiers, page v01.93w. **Classroom:** GAS v01.93g, page v01.16w, 19 segment lessons due. **CHANGELOG** `Sections: 98/100`.
-- **Budget:** as of 9/29 3:30 PM, about $41 of Fable used this week (another project).
-- **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
-
-### Recommendation for next session
-
-- **Run F-N2 (WhiteFiber, 5C, TECfusions) in a new Fable 5.1 High session with the prompt in `phase-f-action-plan.md` §7**, tonight or Wed 9/30 before the 9/30 check. It is row 1 of phase 1 and must land before Classroom wave A on 10/3.
-
-**To continue:** paste the §7 prompt of `phase-f-action-plan.md` into a new Fable 5.1 High session.
-
-Developed by: LightAISolutions

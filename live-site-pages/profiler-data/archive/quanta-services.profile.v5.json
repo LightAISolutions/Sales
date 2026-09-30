@@ -12,7 +12,7 @@
  "ownership": "public",
  "employees": "69,500 (2025; 50,000+ craft laborers)",
  "website": "https://www.quantaservices.com",
- "summary": "BOTTOM LINE UP FRONT: Quanta Services is the #1 US electrical contractor by a wide margin ($13.5B electrical revenue per EC&M 2025 — roughly 3.7x #2 Rosendin) and the fastest-scaling craft-labor platform in the AIDC buildout: Q2 2026 revenue hit $9.56B (+41%), record backlog reached $53.4B, its Technology & Load Centers end market is guided to grow 220-240% in 2026, and FY2026 guidance was raised to $39.3-39.7B — a company that did $23.7B just two years earlier. The data-center entry was bought: Cupertino Electric (2024, ~$1.54B — itself a top-6 US electrical contractor with 20M+ sq ft of DC installs), then Dynamic Systems (mechanical/process, ~$1.35B), Tri-City, Phalcon, and Enerfab. BACKGROUND: Quanta's model is self-performed craft labor at scale (>80% self-perform, 69,500 employees, a 2,300-acre lineman college, ~$250M/yr on training — 'it takes about four years to make a craftsman') across utility T&D, renewables/storage EPC (>29 GW of solar completed), and now gas generation (the NiSource program with Zachry — 'approximately 3 gigawatts', which NiSource's own filings and Zachry's award release break down as two nominal 1,300 MW combined-cycle units at Schahfer plus a 400 MW battery at Mitchell — largely NOT yet in backlog). Counterweights: ~89x trailing P/E with a $789→$363 intra-year drawdown showing how violently the multiple compresses, a wide GAAP-vs-adjusted EPS gap from serial M&A, and the LUMA Energy Puerto Rico JV — two island-wide blackouts in four months and live contract-cancellation threats.",
+ "summary": "BOTTOM LINE UP FRONT: Quanta Services is the #1 US electrical contractor by a wide margin ($13.5B electrical revenue per EC&M 2025 — roughly 3.7x #2 Rosendin) and the fastest-scaling craft-labor platform in the AIDC buildout: Q2 2026 revenue hit $9.56B (+41%), record backlog reached $53.4B, its Technology & Load Centers end market is guided to grow 220-240% in 2026, and FY2026 guidance was raised to $39.3-39.7B — a company that did $23.7B just two years earlier. The data-center entry was bought: Cupertino Electric (2024, ~$1.54B — itself a top-6 US electrical contractor with 20M+ sq ft of DC installs), then Dynamic Systems (mechanical/process, ~$1.35B), Tri-City, Phalcon, and Enerfab. BACKGROUND: Quanta's model is self-performed craft labor at scale (>80% self-perform, 69,500 employees, a 2,300-acre lineman college, ~$250M/yr on training — 'it takes about four years to make a craftsman') across utility T&D, renewables/storage EPC (>29 GW of solar completed), and now gas generation (NiSource ~3 GW CCGT program with Zachry, largely NOT yet in backlog). Counterweights: ~89x trailing P/E with a $789→$363 intra-year drawdown showing how violently the multiple compresses, a wide GAAP-vs-adjusted EPS gap from serial M&A, and the LUMA Energy Puerto Rico JV — two island-wide blackouts in four months and live contract-cancellation threats.",
  "ecosystemRole": "We assess Quanta as the craft-labor chokepoint of the AIDC buildout — the counterpart on the labor side to what Hitachi Energy is on equipment. Basis: management puts craft-led spend at ~$13.5M per MW of data center (excluding outside-the-fence power) and claims balance-of-plant coverage of '80-90% of a data center build'; its addressable slices span HV transformers/substations (10-15% of a load-center budget), low-voltage electrical (10-15%), mechanical plumbing (5-8%), and MEP procurement (5-10%). It is also vertically integrating into the equipment bottleneck itself: a $500-700M program to nearly double HV transformer manufacturing capacity by 2028 and the Hyosung HICO JV making 800 kV-class breakers in Pennsylvania. For an equipment or storage vendor, Quanta is simultaneously channel (its EPC pulls BESS/electrical equipment — ~7,000 inverters supplied/installed 2021-25), competitor (self-manufactured transformers/breakers), and customer intelligence (its backlog is the single best leading indicator of US grid construction). Direct rival to Rosendin in data-center electrical; the NiSource program puts it in gas-generation EPC against Bechtel/Kiewit-tier players.",
  "productsAndServices": [
   {
@@ -41,7 +41,7 @@
   },
   {
    "name": "Power Generation & Energy Storage EPC",
-   "description": "Renewables/storage: >29 GW of solar completed 2021-25 (~740,000 tracker rows, ~8M piles, ~7,000 inverters supplied/installed), 6,100+ MW of domestic solar in 2025 alone, Solar Power World's Top US Solar Solutions Provider 2026; storage EPC bundled with solar and standalone. New gas platform (Oct 2025): selected by NiSource for 'generation and infrastructure resources capable of producing approximately 3 gigawatts' for 'a large load customer' via a 50/50 JV with Zachry Group — per Zachry's award release and the IURC's June 2026 order (Cause 46362) the generation is two nominal 1,300 MW combined-cycle units (2 x 2 x 1) near Wheatfield, Indiana, plus a 400 MW battery, so the combined-cycle scope is 2.6 GW, not 3 GW; execution from 2026, phased delivery through 2032. Power Generation & Energy Storage is ~25% of revenue growing 10-15%.",
+   "description": "Renewables/storage: >29 GW of solar completed 2021-25 (~740,000 tracker rows, ~8M piles, ~7,000 inverters supplied/installed), 6,100+ MW of domestic solar in 2025 alone, Solar Power World's Top US Solar Solutions Provider 2026; storage EPC bundled with solar and standalone. New gas platform (Oct 2025): selected by NiSource for ~3 GW of combined-cycle gas generation plus grid infrastructure for 'a large load customer' via a JV with Zachry Group — execution from 2026, phased delivery through 2032. Power Generation & Energy Storage is ~25% of revenue growing 10-15%.",
    "positioning": "One of the largest US renewables EPCs (Blattner legacy) now crossing into gas — the 'all forms of power generation' pitch matches where AIDC demand actually is. The NiSource program's 'significant majority' is NOT in reported backlog — pure upside.",
    "soldThrough": "EPC and balance-of-plant contracts with utilities, developers, and large-load customers.",
    "targetSegments": [
@@ -96,7 +96,7 @@
   {
    "date": "2025-10-30",
    "category": "order-win",
-   "headline": "NiSource selects Quanta (JV with Zachry Group) for 'approximately 3 gigawatts' of generation plus grid infrastructure for 'a large load customer' — two nominal 1,300 MW combined-cycle units plus a 400 MW battery per the Zachry release and IURC Cause 46362; delivery through 2032",
+   "headline": "NiSource selects Quanta (JV with Zachry Group) for ~3 GW of combined-cycle gas generation plus grid infrastructure for 'a large load customer' — delivery through 2032",
    "read": "The gas-generation platform launch, and almost certainly data-center-driven (NiSource's territory includes the Indiana AIDC corridor). The 'significant majority' of this program is excluded from reported backlog — a multi-billion-dollar shadow pipeline. Zachry brings 60+ GW of gas-plant construction pedigree.",
    "source": "https://investors.quantaservices.com/news-events/press-releases/detail/386/"
   },
@@ -124,7 +124,7 @@
  ],
  "strategyRead": [
   "(High confidence) Quanta owns the scarcest input in the US buildout — trained craft labor at scale (69,500 employees, >80% self-perform, 4-year craftsman development cycle, ~$250M/yr training spend) — and every AIDC power trend (transmission, substations, gas generation, BESS, inside-the-fence electrical/mechanical) converges on that labor pool. Basis: EC&M #1 ranking at 3.7x the runner-up, company disclosures, and management's credible 'nowhere near capacity' claim given +15,500 hires in a year.",
-  "(High confidence) The reported $53.4B backlog understates the real pipeline in two specific ways: the NiSource ~3 GW program's (2.6 GW of combined cycle plus a 400 MW battery) 'significant majority' is excluded, and data-center MSA work runs book-and-burn outside backlog entirely. Offsetting: backlog includes MSA estimates and RPO (the SEC measure) is only $33.6B — headline backlog is neither floor nor firm. Read both directions before citing it. Basis: company commentary and 10-Q.",
+  "(High confidence) The reported $53.4B backlog understates the real pipeline in two specific ways: the NiSource ~3 GW program's 'significant majority' is excluded, and data-center MSA work runs book-and-burn outside backlog entirely. Offsetting: backlog includes MSA estimates and RPO (the SEC measure) is only $33.6B — headline backlog is neither floor nor firm. Read both directions before citing it. Basis: company commentary and 10-Q.",
   "(Moderate confidence) The vertical integration into transformers and 800 kV breakers is strategically significant beyond Quanta: if the #1 buyer of grid equipment self-supplies from 2028, the scarcity rents currently flowing to Hitachi/Siemens Energy/GE Vernova erode at the margin, and Quanta's EPC bids gain a schedule weapon competitors can't match. Execution risk is real — contractor-run manufacturing is a different discipline. Basis: announced programs; no production track record yet.",
   "(Moderate confidence) Growth quality is the bear case: 41% headline growth with heavy M&A assist (12 acquisitions in 18 months), a 43% GAAP-to-adjusted EPS uplift driven by deal amortization, goodwill+intangibles at ~39% of assets, and ~89x trailing P/E after the Q2 pop. The intra-year $789→$363 drawdown shows what happens when the multiple meets doubt. Operationally excellent; priced for the 2030 targets landing on schedule. Basis: 10-Q data and third-party valuation coverage.",
   "(Low confidence) LUMA Energy is a low-probability, high-visibility tail risk: contract cancellation (120-day clause) would be immaterial to earnings but would hand critics a narrative about Quanta-run grid operations at exactly the moment it is pitching utilities on ever-larger programs. No evidence it affects US commercial momentum today."
@@ -191,17 +191,6 @@
    "source": "Dossier peer-set assessment",
    "via": "gas-generation EPC",
    "status": "active"
-  },
-  {
-   "slug": "nisource",
-   "type": "customer",
-   "status": "active",
-   "since": "2025-10",
-   "scale": "'approximately 3 gigawatts' (2 x 1,300 MW CCGT + 400 MW BESS)",
-   "via": "Power Generation Solutions; Quanta–Zachry EPC JV (50/50)",
-   "note": "NiSource engaged Quanta on October 30, 2025 for the design, procurement and construction of generation and grid infrastructure 'capable of producing approximately 3 gigawatts' for a large-load customer, with the combined-cycle units delivered through a 50/50 joint venture with Zachry Group.",
-   "context": "Quanta's release names the scope as generation plus grid infrastructure for 'a large load customer' and says the joint venture with Zachry will design, construct and deliver the combined-cycle gas turbines, with Quanta holding 50% and recognizing the JV through proportionate consolidation; the scope-and-estimation phase began in 2025, execution was expected to begin in 2026 after regulatory approvals, and full power availability by 2032. Zachry's same-day release specifies two nominal 1,300 MW gas-fired combined-cycle units in a 2 x 2 x 1 configuration near Wheatfield, Indiana, owned and operated by a NiSource subsidiary. NiSource's own filings identify the customer as Amazon Data Services and the owner as NIPSCO Generation LLC (GenCo), and add a 400 MW battery at the Mitchell site — so 'approximately 3 gigawatts' is 2.6 GW of combined cycle plus 0.4 GW of storage.",
-   "source": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html"
   }
  ],
  "technicalSpecs": [
@@ -246,7 +235,7 @@
     {
      "band": "Generation",
      "label": "NiSource program",
-     "value": "'approximately 3 gigawatts' of generation + grid infrastructure — 2 x 1,300 MW nominal CCGT (2.6 GW) plus a 400 MW BESS per Zachry / IURC Cause 46362 — phased delivery through 2032 (Zachry JV)"
+     "value": "~3 GW CCGT + grid infrastructure, phased delivery through 2032 (Zachry JV)"
     },
     {
      "band": "Supply chain",
@@ -288,7 +277,7 @@
    "name": "Abbey Roy",
    "title": "President – Power Generation Solutions",
    "background": [
-    "Leads the new gas-generation platform (NiSource 'approximately 3 gigawatts' award, Zachry JV)",
+    "Leads the new gas-generation platform (NiSource ~3 GW award, Zachry JV)",
     "Platform brief spans generation, BESS, transmission, substation, and underground infrastructure"
    ]
   },
@@ -440,16 +429,6 @@
    "date": "2025-10-30"
   },
   {
-   "label": "Quanta (PR Newswire) — Selection by NiSource for generation and grid infrastructure 'capable of producing approximately 3 gigawatts'; 50% JV with Zachry for the CCGTs",
-   "url": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html",
-   "date": "2025-10-30"
-  },
-  {
-   "label": "Zachry Group — Awarded EPC contract for NiSource's Combined Cycle Generation Project (two nominal 1,300 MW units, 2 x 2 x 1, near Wheatfield, Indiana; Zachry–Quanta JV)",
-   "url": "https://finance.yahoo.com/news/zachry-group-awarded-engineering-procurement-110000992.html",
-   "date": "2025-10-30"
-  },
-  {
    "label": "Quanta — Dynamic Systems acquisition press release",
    "url": "https://investors.quantaservices.com/news-events/press-releases/detail/380/quanta-services-acquires-dynamic-systems-a-premier-turnkey-mechanical-and-process-infrastructure-solutions-provider",
    "date": "2025-07-25"
@@ -474,6 +453,6 @@
    "url": "https://en.wikipedia.org/wiki/LUMA_Energy"
   }
  ],
- "lastUpdated": "2026-09-29",
- "profileVersion": 6
+ "lastUpdated": "2026-09-05",
+ "profileVersion": 5
 }

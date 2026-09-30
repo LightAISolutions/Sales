@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-29",
- "companies": 193,
+ "built": "2026-09-30",
+ "companies": 196,
  "edges": [
   {
    "a": "5c-group",
@@ -4873,6 +4873,186 @@
   },
   {
    "a": "amazon",
+   "b": "nisource",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon Data Services, Inc. signed a special contract with NIPSCO in September 2025 for up to 3 GW of new generation for its northern Indiana data centers — deliveries from January 1, 2027 rising to 2.4 GW by the end of 2032, a 15-year term from first energization, a fixed capacity charge and an Amazon.com guarantee — approved by the IURC in June 2026 and raised by 400 MW in a July 2026 filing.",
+     "context": "The FY2025 Form 10-K describes the ADS Contract's term, charges and guarantee; the IURC's Cause 46362 order names ADS as the customer and lists the two Schahfer combined-cycle units and the Mitchell battery GenCo builds to serve it; Utility Dive and NiSource's November 2025 explainer put the package at about $7B and the customer credits at about $1B over 15 years. Amazon funds the construction through GenCo (Energy-Storage.news).",
+     "source": "https://secure.in.gov/iurc/files/ord_46362_061726.pdf",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "up to 3 GW; 2.4 GW by end-2032 (+400 MW amendment July 2026)",
+     "via": "NIPSCO special contract supplied by GenCo (2 x 1,300 MW CCGT + 400 MW BESS)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: NiSource is the utility that built a separate, commission-declined generation company — NIPSCO Generation LLC, 'GenCo', 80.1 percent NiSource and 19.9 percent Blackstone Infrastructure Partners — to serve about 4 GW of signed data-center load in northern Indiana (Amazon Data Services, up to 3 GW with deliveries from January 1, 2027 ramping to 2.4 GW by the end of 2032; an Alphabet subsidiary from summer 2026 on a roughly 340 MW GenCo portfolio) with two nominal 1,300 MW combined-cycle units at the Schahfer site and a 400 MW / 1,600 MWh battery at the retired Mitchell coal site, so that the $7.6B of data-center capital in its $28.6B 2026–2030 plan sits outside the retail rate base and returns about $1.4B of bill credits to existing NIPSCO customers over the contracts' 15-year terms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The build is contracted: Quanta Services and Zachry Group were selected on October 30, 2025 for 'approximately 3 gigawatts' of generation and grid infrastructure, with a 50/50 Quanta–Zachry joint venture delivering the combined-cycle units near Wheatfield, Indiana; the IURC approved the GenCo structure in September 2025, the Amazon special contract in June 2026 (Cause 46362 order of June 17, declining CPCN jurisdiction but finding the build reasonable and necessary for settlement purposes) and the Alphabet agreement in July 2026, and a July 2026 filing raised Amazon's contracted load by 400 MW.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess NiSource as the corpus's cleanest example of ring-fencing a data-center build: rather than a tariff (WEC), a special contract inside the utility (DTE) or an unregulated joint venture outside it (PPL's Invitium), NIPSCO created an affiliate, obtained the Indiana commission's declination of jurisdiction over it (September 2025), sold Blackstone Infrastructure 19.9 percent of it for a $1.5B commitment (October 2025) and had the commission find its 2,600 MW of combined cycle and 400 MW of storage 'reasonable and necessary' for the Amazon settlement while barring cost recovery from non-megaload ratepayers without independent review (June 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "On the demand side NIPSCO is the gatekeeper for the northern Indiana corridor between Chicago and the Michigan line: about 4 GW signed (Amazon and Alphabet), about 3 GW in active negotiation and about 2 GW in development.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the IURC order's own words (jurisdiction declined; construction reasonable and necessary for the settlement; no recovery from non-megaload ratepayers without independent review), the FY2025 Form 10-K (80.1/19.9 attribution of GenCo's profit or loss; the ADS contract's fixed capacity charge and Amazon.com guarantee) and the customer-credit arithmetic the company markets.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that the equipment decisions for the Amazon package sit with the Quanta–Zachry joint venture for the combined cycles and with GenCo for the Mitchell battery, and that neither the turbine OEM nor the battery supplier has been disclosed.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the 'approximately 3 gigawatts' of the EPC award and the 'up to 3 GW' of the Amazon contract are the same 2,600 MW of combined cycle plus 400 MW of storage, and that the July 2026 +400 MW amendment to Amazon's contracted load is served within that build rather than by new plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Zachry release's two nominal 1,300 MW units, the IURC order's facilities list and the Q2 call; no source states what serves the additional 400 MW, and Amazon's ramp reaches 2.4 GW of a 3 GW ceiling by end-2032.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NIPSCO Generation LLC ('GenCo') — the ring-fenced data-center generation company",
+     "date": "",
+     "text": "Its first program is the Amazon package: two nominal 1,300 MW gas-fired combined-cycle units in a 2 x 2 x 1 configuration at the R.M.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+     "date": "",
+     "text": "NIPSCO entered into an agreement with Amazon Data Services, Inc.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+     "date": "",
+     "text": "(ADS), a subsidiary of Amazon.com, in September 2025 to serve its northern Indiana data centers: up to 3 GW of new generation, with deliveries starting January 1, 2027 and rising to 2.4 GW by the end of 2032 under a contract whose initial term ends 15 years after the initial energization of ADS's first data center, with ADS paying a fixed capacity charge and pass-through charges from January 2027 and Amazon.com guaranteeing payment (FY2025 Form 10-K).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+     "date": "",
+     "text": "The IURC reaffirmed its approval of the package on November 19, 2025 and approved the special contract in June 2026; a July 2026 filing increased Amazon's contracted load by 400 MW.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+     "date": "",
+     "text": "On April 16, 2026 NiSource announced an expanded and updated Amazon agreement accelerating site energization, and a long-term agreement with an Alphabet subsidiary served by GenCo (about 340 MW plus up to 175 MW seasonal), approved by the IURC in July 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+     "date": "",
+     "text": "The company's customer-protection claim is explicit: about $1B of savings over the 15-year Amazon deal (about $7 a month in residential credits, Utility Dive), expanded to about $1.25B ($90–115 a year per residential customer) with Alphabet in April and to 'approximately $1.4 billion of bill reductions' by the second-quarter 2026 call, plus a $17M community fund.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+     "date": "",
+     "text": "Its pipeline ladder at August 2026: about 4 GW signed (Amazon and Alphabet), about 3 GW in active strategic negotiations and 'line of sight to approximately 2 gigawatts of additional potential customers' — up to 9 GW, which would take NIPSCO-area generation from 2.7 GW in 2021 and 5.2 GW in 2026 to as much as 9 GW.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · The special contracts and the customer credits — Amazon, Alphabet and the ~$1.4B",
+     "date": "",
+     "text": "The Amazon contract's shape (15 years from first energization, a fixed capacity charge, a parent guarantee) is DTE's Saline agreement with the plant moved to an affiliate.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NIPSCO — northern Indiana electric and gas, the generation transition and the rate case",
+     "date": "",
+     "text": "A mid-sized MISO utility whose own generation (about 4 GW) is smaller than the data-center program its affiliate is building (3 GW for Amazon alone) — the inversion that the GenCo structure exists to manage.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-17",
+     "text": "IURC order in Cause 46362: declines CPCN jurisdiction over NIPSCO Generation LLC's two 1,300 MW Schahfer combined-cycle units and 400 MW Mitchell battery, finds construction reasonable and necessary solely for compliance with the Amazon settlement, bars cost recovery from non-megaload ratepayers without independent review; construction anticipated from Q2 2026; cost confidential — The order that makes GenCo work: no certificate, no rate-base review, no recovery from retail customers — the build stands on the Amazon contract and Blackstone's equity.",
+     "src": "https://secure.in.gov/iurc/files/ord_46362_061726.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-16",
+     "text": "NiSource announces strategic energy infrastructure agreements: an Alphabet subsidiary served from about 340 MW of GenCo-owned generation plus up to 175 MW of seasonal purchases from summer 2026, and an expanded Amazon agreement accelerating site energization with residential credits; total customer savings about $1.25B ($90–115 a year per residential customer); $17M community fund — 'Our strategy is centered on protecting our customers from cost increases associated with these projects' — the credits are the political licence for the build.",
+     "src": "https://www.nisource.com/news/article/nisource-announces-strategic-energy-infrastructure-agreements-to-enhance-customer-value-and-economic-growth-in-indiana",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "FY2025 GAAP EPS $1.95 (adjusted $1.90; net income $929.5M); 2026 guidance $2.02–2.07; capex about $28.0B 2026–2030 including nearly $7.0B of data-center infrastructure; 2026–2033 adjusted EPS CAGR 8–9 percent; Amazon agreement '$1 billion in savings to retail customers' — The first plan with the data-center capital inside it, at nearly a quarter of the total.",
+     "src": "https://www.nisource.com/news/article/nisource-announces-full-year-2025-results",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-04",
+     "text": "Energy-Storage.news: the Amazon package's 1.6 GWh (400 MW / 4-hour) battery goes on the former Mitchell coal site in Gary, due by January 1, 2027; the two 1.3 GW gas units are described as filed as turbines with a later combined-cycle conversion; Amazon funds construction via GenCo — The battery is the first GenCo asset to complete and the only one due before the Amazon deliveries start.",
+     "src": "https://www.energy-storage.news/indiana-utility-to-deliver-1-6gwh-bess-for-amazons-data-center-expansion-though-fossil-fuels-form-major-part-of-package/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-25",
+     "text": "NIPSCO and GenCo to supply up to 3 GW to Amazon's northern Indiana data centers, with deliveries from January 1, 2027 climbing to 2.4 GW by the end of 2032 — two 1.3 GW gas plants and a 400 MW four-hour battery, about $7B in all; about $1B of savings over the 15-year deal and about $7 a month in residential credits; IURC reaffirmed its approval November 19 — The first 'GenCo model' contract: the customer funds the plant, the affiliate owns it, the retail customer gets a credit.",
+     "src": "https://www.utilitydive.com/news/nisource-nipsco-amazon-data-centers-indiana/806396/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-24",
+     "text": "NiSource publishes its explainer 'Powering Indiana's Future: How NIPSCO, GenCo, and Amazon Keep Energy Reliable and Affordable' — a nearly $7B first partnership, up to 3 GW of new generation for Amazon, about $1B returned as bill credits over 15 years, and the customer paying 'even if the customer leaves before contract completion' — The company's own statement that the exit risk sits with the data center, not the ratepayer.",
+     "src": "https://www.nisource.com/news/article/powering-indiana-s-future-how-nipsco-genco-and-amazon-keep-energy-reliable-and-affordable-20251124",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-17"
+  },
+  {
+   "a": "amazon",
    "b": "nrg-energy",
    "evid": [
     {
@@ -5127,6 +5307,44 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "amazon",
+   "b": "ppl",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Amazon Web Services is one of four counterparties Utility Dive named in PPL Electric's Pennsylvania data-center pipeline (May 2026), and PPL Electric provides transmission and delivery for the front-of-the-meter Susquehanna supply Talen sells to Amazon.",
+     "context": "PPL itself does not name customers; the AWS attribution is Utility Dive's, and the Talen delivery role is carried from the corpus's Talen dossier (amended June 2025 agreement).",
+     "source": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/",
+     "status": "active",
+     "via": "PPL Electric large-load service; transmission and delivery for the Talen Susquehanna arrangement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "PPL Electric is also the transmission and delivery provider for Talen's Susquehanna–Amazon front-of-the-meter arrangement, which is why PPL appears in this corpus's Talen dossier.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PPL Electric Utilities — Pennsylvania transmission and distribution, the large-load tariff and the 31.8 GW pipeline",
+     "date": "",
+     "text": "At June 30, 2026 it reported 31.8 GW of data-center projects 'in advanced stages' (projects that have signed agreements with developers, with costs incurred reimbursable by the developer if the project does not proceed), more than 11 GW under signed electric service agreements (the deck's chart reads 11.1 GW, up from 10.0 GW a quarter earlier) and more than 6.5 GW under construction, the tenth consecutive quarterly increase; two data centers began service in the second quarter and are expected to ramp to about 2 GW by 2031, and the May 2026 disclosure (28.3 GW by 2034) had ramps of 0.6 GW in 2026 rising to 20.7 GW in 2030, with QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named by Utility Dive as counterparties.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-11",
+     "text": "Pennsylvania advanced-stage pipeline 28.3 GW by 2034 (from 25.2 GW), ramping 0.6 GW in 2026 to 20.7 GW in 2030 with about 5 GW under construction; Kentucky 11.9 GW data-center pipeline (from 8 GW); QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named; Sorgi 'executing multiple gas turbine reservation agreements' — The first quarter the names appeared — and the first hint of the turbine reservations announced in August.",
+     "src": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-11"
   },
   {
    "a": "amazon",
@@ -14239,6 +14457,95 @@
   },
   {
    "a": "blackstone",
+   "b": "nisource",
+   "curated": {
+    "b": {
+     "type": "investor",
+     "note": "Blackstone Infrastructure Partners holds a 19.9 percent indirect non-controlling interest in NIPSCO (closed January 2, 2024, $2.16B plus a $250M additional commitment) and, through BIP Orion Holdco L.P. and BIP Orion Holdco II L.P., 19.9 percent of Generation Holdings II, GenCo's sole owner, for a $1.5B equity commitment (October 2025).",
+     "context": "The same sponsor is PPL's 49 percent partner in Invitium Energy, the corpus's other utility-affiliated data-center generation vehicle. Sebastien Sherman, senior managing director, is quoted on both the NIPSCO closing and the PPL joint venture.",
+     "source": "https://www.paulweiss.com/insights/client-news/blackstone-infrastructure-partners-acquires-minority-interest-in-nisource-affiliate-genco-in-15-billion-deal",
+     "status": "active",
+     "since": "2024-01",
+     "scale": "19.9% of NIPSCO ($2.16B + $250M, Jan 2024); 19.9% of GenCo's parent ($1.5B commitment, Oct 2025)",
+     "via": "Blackstone Infrastructure Partners minority stakes"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: NiSource is the utility that built a separate, commission-declined generation company — NIPSCO Generation LLC, 'GenCo', 80.1 percent NiSource and 19.9 percent Blackstone Infrastructure Partners — to serve about 4 GW of signed data-center load in northern Indiana (Amazon Data Services, up to 3 GW with deliveries from January 1, 2027 ramping to 2.4 GW by the end of 2032; an Alphabet subsidiary from summer 2026 on a roughly 340 MW GenCo portfolio) with two nominal 1,300 MW combined-cycle units at the Schahfer site and a 400 MW / 1,600 MWh battery at the retired Mitchell coal site, so that the $7.6B of data-center capital in its $28.6B 2026–2030 plan sits outside the retail rate base and returns about $1.4B of bill credits to existing NIPSCO customers over the contracts' 15-year terms.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Merrillville, Indiana; NYSE: NI; a Delaware corporation (successor to an Indiana corporation organized in 1987 as NIPSCO Industries) and a holding company under the Public Utility Holding Company Act, serving about 3.8 million customers in six states through Columbia Gas (about 2.4 million gas customers in Ohio, Pennsylvania, Virginia, Kentucky and Maryland) and NIPSCO (about 0.9 million gas and 500,000 electric customers in northern Indiana; Blackstone Infrastructure holds 19.9 percent of NIPSCO since January 2024 for $2.16B); 7,668 full-time employees at year-end 2025 (FY2025 Form 10-K).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess NiSource as the corpus's cleanest example of ring-fencing a data-center build: rather than a tariff (WEC), a special contract inside the utility (DTE) or an unregulated joint venture outside it (PPL's Invitium), NIPSCO created an affiliate, obtained the Indiana commission's declination of jurisdiction over it (September 2025), sold Blackstone Infrastructure 19.9 percent of it for a $1.5B commitment (October 2025) and had the commission find its 2,600 MW of combined cycle and 400 MW of storage 'reasonable and necessary' for the Amazon settlement while barring cost recovery from non-megaload ratepayers without independent review (June 2026).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its shared partner with PPL — Blackstone Infrastructure — and its shared EPC with the corpus's Quanta and Zachry records are the cross-references a reader should follow.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) We assess that GenCo is the corpus's most complete ring-fence for a data-center build, and that its three approvals — the September 2025 declination, the October 2025 Blackstone sell-down and the June 2026 Cause 46362 order — together move the plant, its financing and its cost risk outside NIPSCO's retail rate base while leaving NIPSCO as the contracting utility.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NIPSCO Generation LLC ('GenCo') — the ring-fenced data-center generation company",
+     "date": "",
+     "text": "The Indiana Utility Regulatory Commission approved its declination petition on September 24, 2025 (the commission declined to treat GenCo as a public utility for these purposes); in October 2025 NiSource sold a 19.9 percent interest in Generation Holdings II, GenCo's sole owner, to affiliates of Blackstone Infrastructure Partners (BIP Orion Holdco L.P.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NIPSCO Generation LLC ('GenCo') — the ring-fenced data-center generation company",
+     "date": "",
+     "text": "The corpus's fourth model for data-center generation, and the most fully ring-fenced: WEC's bespoke resource keeps the plant in the utility's rate base at a fixed return; DTE's special contract keeps it in the utility with the customer paying; PPL's Invitium puts it in an unregulated joint venture; NiSource's GenCo keeps it in a utility affiliate that the commission has declined to regulate, with the same minority partner (Blackstone Infrastructure) as Invitium and a bill credit to retail customers as the political price.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NIPSCO — northern Indiana electric and gas, the generation transition and the rate case",
+     "date": "",
+     "text": "Northern Indiana Public Service Company LLC serves about 500,000 electric and 0.9 million gas customers as Indiana's largest vertically integrated electric-and-gas utility (about 1.3 million customers in total, Paul Weiss), with Blackstone Infrastructure Partners holding a 19.9 percent indirect non-controlling interest since January 2, 2024 ($2.16B plus a $250M additional equity commitment).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-17",
+     "text": "IURC order in Cause 46362: declines CPCN jurisdiction over NIPSCO Generation LLC's two 1,300 MW Schahfer combined-cycle units and 400 MW Mitchell battery, finds construction reasonable and necessary solely for compliance with the Amazon settlement, bars cost recovery from non-megaload ratepayers without independent review; construction anticipated from Q2 2026; cost confidential — The order that makes GenCo work: no certificate, no rate-base review, no recovery from retail customers — the build stands on the Amazon contract and Blackstone's equity.",
+     "src": "https://secure.in.gov/iurc/files/ord_46362_061726.pdf",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-01-02",
+     "text": "NiSource completes the sale of a 19.9 percent indirect non-controlling interest in NIPSCO to Blackstone Infrastructure Partners for $2.16B plus a $250M additional equity commitment — The template for GenCo's later sell-down: the same partner, the same 19.9 percent.",
+     "src": "https://www.businesswire.com/news/home/20240102814933/en/NiSource-Inc.-Completes-NIPSCO-Minority-Equity-Interest-Transaction",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-17"
+  },
+  {
+   "a": "blackstone",
    "b": "nvidia",
    "curated": {
     "a": {
@@ -14312,6 +14619,67 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "blackstone",
+   "b": "ppl",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Blackstone Infrastructure holds 49 percent of Invitium Energy, the joint venture formed July 15, 2025 to build combined-cycle gas generation in Pennsylvania for hyperscalers under long-term energy services agreements; PPL holds 51 percent.",
+     "context": "The venture excludes PPL Electric and was framed at launch around a 6 GW shortfall over five to six years and about $15B of investment; by August 2026 it had reserved more than 5 GW of turbines, had more than 5 GW accepted into PJM's queue and sites for 8–14 GW, with the first commercial agreements expected by year-end 2026 and construction financing off PPL's balance sheet. Blackstone Infrastructure is also NiSource's 19.9 percent partner in NIPSCO and in NIPSCO Generation (GenCo), the corpus's other utility-affiliated data-center generation vehicle.",
+     "source": "https://investors.pplweb.com/2025-07-15-PPL-Corporation-and-Blackstone-Infrastructure-create-joint-venture-to-build-natural-gas-generation-in-Pennsylvania-in-support-of-data-center-development",
+     "status": "active",
+     "since": "2025-07",
+     "scale": "49 percent of Invitium; >5 GW of CCGT turbine reservations",
+     "via": "Invitium Energy joint venture"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: PPL is the utility holding company whose Pennsylvania wires-only utility carries the largest signed-but-unserved data-center book in this file — 31.8 GW of projects 'in advanced stages' at June 30, 2026, more than 11 GW under signed electric service agreements and more than 6.5 GW under construction, up for the tenth consecutive quarter — while its Kentucky utilities are building two 645 MW combined-cycle units (Brown 12 in 2030, Mill Creek 6 in 2031) against a 13.7 GW pipeline of which 1.3 GW is under signed reimbursement agreements, and its 51 percent Invitium Energy joint venture with Blackstone Infrastructure has reserved more than 5 GW of combined-cycle turbines to build for hyperscalers outside rate base, with PJM having accepted more than 5 GW of its interconnection requests.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess PPL as the corpus's case of one holding company running all three answers to the data-center question at once: a restructured-market wires company that cannot build generation and therefore prices the load through a large-load tariff and a proposed Customer Protection Transmission Rider (PPL Electric, 31.8 GW advanced); a vertically integrated pair that builds regulated combined cycles and batteries against signed reimbursement agreements (LG&E and KU, 13.7 GW pipeline, 1,290 MW of CCGTs approved); and an unregulated generation joint venture with a private-infrastructure sponsor that reserves turbines first and signs hyperscalers second (Invitium, 51/49 with Blackstone Infrastructure, more than 5 GW of CCGT reservations).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Invitium Energy — the 51/49 generation joint venture with Blackstone Infrastructure",
+     "date": "",
+     "text": "Announced July 15, 2025 at the Pennsylvania Energy and Innovation Summit: a joint venture owned 51 percent by PPL and 49 percent by Blackstone Infrastructure to build combined-cycle gas generation in Pennsylvania under long-term energy services agreements with hyperscalers, with 'regulated-like risk profiles', excluding PPL Electric; PPL cited a 6 GW shortfall over five to six years, about $15B of investment, more than 60 GW of data-center interest and 13 GW in advanced stages at the time.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Invitium Energy — the 51/49 generation joint venture with Blackstone Infrastructure",
+     "date": "",
+     "text": "The corpus's clearest case of a regulated holding company building unregulated generation for hyperscalers with a private-infrastructure partner — Blackstone Infrastructure is also NiSource's 19.9 percent partner in NIPSCO and in its GenCo.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-10",
+     "text": "Invitium, the PPL–Blackstone Infrastructure joint venture, secures reservation agreements for more than 5 GW of combined-cycle turbines (supplier unnamed), online as early as 2031, up to $15B through 2032; PJM has accepted about 5 GW of its interconnection requests; sites for up to 14 GW; no hyperscaler signed — Turbines reserved before customers: in a slot-constrained market the reservation is the scarce asset, and Invitium now holds one of the largest uncommitted blocks in PJM.",
+     "src": "https://www.utilitydive.com/news/ppl-blackstone-joint-venture-secures-5-gw-of-gas-turbines-for-data-centers/827408/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-15",
+     "text": "PPL and Blackstone Infrastructure form a 51/49 joint venture to build combined-cycle gas generation in Pennsylvania under long-term energy services agreements with hyperscalers; PPL cites a 6 GW shortfall over five to six years, about $15B, more than 60 GW of interest and 13 GW in advanced stages — A regulated holding company's route around a restructured market: it cannot put generation in PPL Electric's rate base, so it builds it in a venture with a private-infrastructure partner.",
+     "src": "https://investors.pplweb.com/2025-07-15-PPL-Corporation-and-Blackstone-Infrastructure-create-joint-venture-to-build-natural-gas-generation-in-Pennsylvania-in-support-of-data-center-development",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-10"
   },
   {
    "a": "blackstone",
@@ -15998,6 +16366,20 @@
     }
    ],
    "last": "2026-06-24"
+  },
+  {
+   "a": "burns-mcdonnell",
+   "b": "ppl",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Brown battery's supplier is not named in the filing read (a Burns & McDonnell project page surfaced by a search describes 152 Tesla Megapack 2XL enclosures at the site, unread and unverified this session); and the Q3 2026 results date was not on the investor calendar as of September 29, 2026.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "burns-mcdonnell",
@@ -21517,6 +21899,22 @@
   },
   {
    "a": "compass-datacenters",
+   "b": "pinnacle-west",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "The corpus's Compass Datacenters dossier names APS as the utility for its Goodyear campus ('230kV substation adjacent'); the AZ Technology Council's dated list puts the Goodyear site at 350 MW.",
+     "context": "Stated on Compass's record and a dated third-party list; APS confirms no data-center customer by name.",
+     "source": "Compass Datacenters dossier (profileVersion 6) — products, corpus",
+     "status": "active",
+     "via": "Large-load service (230 kV substation adjacent, Goodyear)"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "compass-datacenters",
    "b": "qts",
    "curated": {
     "a": {
@@ -23388,6 +23786,44 @@
     }
    ],
    "last": "2025-05-27"
+  },
+  {
+   "a": "coreweave",
+   "b": "ppl",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "CoreWeave is named by Utility Dive (May 11, 2026) among the counterparties in PPL Electric's advanced-stage Pennsylvania pipeline.",
+     "context": "PPL itself does not name customers; the attribution is Utility Dive's.",
+     "source": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/",
+     "status": "active",
+     "via": "PPL Electric large-load service"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "What the wires company cannot supply is the generation, so the load's power will be contracted bilaterally — which is where Invitium and the counterparties named by Utility Dive (QTS, AWS, PowerHouse, CoreWeave) sit.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PPL Electric Utilities — Pennsylvania transmission and distribution, the large-load tariff and the 31.8 GW pipeline",
+     "date": "",
+     "text": "At June 30, 2026 it reported 31.8 GW of data-center projects 'in advanced stages' (projects that have signed agreements with developers, with costs incurred reimbursable by the developer if the project does not proceed), more than 11 GW under signed electric service agreements (the deck's chart reads 11.1 GW, up from 10.0 GW a quarter earlier) and more than 6.5 GW under construction, the tenth consecutive quarterly increase; two data centers began service in the second quarter and are expected to ramp to about 2 GW by 2031, and the May 2026 disclosure (28.3 GW by 2034) had ramps of 0.6 GW in 2026 rising to 20.7 GW in 2030, with QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named by Utility Dive as counterparties.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-11",
+     "text": "Pennsylvania advanced-stage pipeline 28.3 GW by 2034 (from 25.2 GW), ramping 0.6 GW in 2026 to 20.7 GW in 2030 with about 5 GW under construction; Kentucky 11.9 GW data-center pipeline (from 8 GW); QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named; Sorgi 'executing multiple gas turbine reservation agreements' — The first quarter the names appeared — and the first hint of the turbine reservations announced in August.",
+     "src": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-11"
   },
   {
    "a": "coreweave",
@@ -28574,6 +29010,31 @@
    },
    "evid": [],
    "last": "2022"
+  },
+  {
+   "a": "dnv",
+   "b": "pinnacle-west",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "APS chose DNV GL to consolidate the forensic and expert inputs on the April 2019 McMicken battery explosion into a single report (attributing the event to an internal cell defect), and DNV administers APS's efficiency-programme collateral for data centers.",
+     "context": "Carried from the corpus's DNV dossier, which cites APS's own 2020 statement and DNV's APS segment guide; not re-verified here.",
+     "source": "DNV dossier (profileVersion 1) — products and ecosystem role, corpus",
+     "status": "historical",
+     "since": "2019",
+     "via": "Forensic review of the McMicken battery event; data-center efficiency programme"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs and the 20-year tolls",
+     "date": "",
+     "text": "The 2019 McMicken battery fire, for which APS commissioned DNV's forensic report, is carried in the corpus's DNV dossier and is not re-verified here.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2019"
   },
   {
    "a": "dnv",
@@ -35180,6 +35641,20 @@
   },
   {
    "a": "exelon",
+   "b": "ppl",
+   "evid": [
+    {
+     "where": "Capabilities · PPL Electric Utilities — Pennsylvania transmission and distribution, the large-load tariff and the 31.8 GW pipeline",
+     "date": "",
+     "text": "Against Dominion's contracted book (~53.8 GW in its own dossier) and Exelon's ~11 GW high-probability queue, PPL Electric's 11 GW of signed ESAs is the corpus's largest signed figure at a wires-only utility, and its tariff is the first in this file written under a state model-tariff order.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "exelon",
    "b": "prime-data-centers",
    "curated": {
     "a": {
@@ -40021,6 +40496,20 @@
   },
   {
    "a": "ge-vernova",
+   "b": "ppl",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the equipment sellers in this file the doors are different in each state: in Pennsylvania PPL buys wires, substations and network upgrades and the customer or Invitium buys the generation (Sorgi: 'bilateral contracting will likely be the predominant path for getting new generation development in PJM'); in Kentucky LG&E and KU are the buyer of two 645 MW combined cycles (EPC and turbine OEM undisclosed in the read sources; GE Vernova supplied the earlier Mill Creek 5 unit per POWER), the 125 MW / 500 MWh E.W.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "ge-vernova",
    "b": "proenergy",
    "curated": {
     "b": {
@@ -41166,6 +41655,39 @@
     }
    ],
    "last": "2025-12-08"
+  },
+  {
+   "a": "google",
+   "b": "nisource",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "An Alphabet subsidiary signed a long-term agreement announced April 16, 2026 under which GenCo serves a large-scale northern Indiana data center from about 340 MW of GenCo-owned generation plus up to 175 MW of seasonal market purchases, with service from summer 2026 and load ramping to full capacity by 2030; approved by the IURC in July 2026.",
+     "context": "The served site is not disclosed; DCD notes Google's Fort Wayne facility and Morgan County campus are outside NIPSCO's territory. The corpus's Google dossier is the counterparty record.",
+     "source": "https://www.nisource.com/news/article/nisource-announces-strategic-energy-infrastructure-agreements-to-enhance-customer-value-and-economic-growth-in-indiana",
+     "status": "active",
+     "since": "2026-04",
+     "scale": "~340 MW GenCo portfolio + up to 175 MW seasonal purchases",
+     "via": "Long-term agreement with an Alphabet subsidiary, supplied by GenCo"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Collection gap: the turbine OEM for the two 1,300 MW combined-cycle units is not named in any source read (Quanta, Zachry, the IURC order and NiSource's releases are all silent), and the battery supplier for the Mitchell project is likewise unnamed; the confidential cost of the GenCo facilities in Cause 46362 is not public; the specific site of the Alphabet-served data center is not disclosed (Google's Fort Wayne and Morgan County projects are outside NIPSCO's territory); the Q3 2026 results date had not been announced as of September 29, 2026 (the Q3 2025 call was October 29); and the union negotiations cited on the Q2 call, and the Virginia, Kentucky and Ohio rate cases mentioned there, were not read in the dockets.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-17",
+     "text": "Alphabet signs an energy supply agreement with NiSource for a large-scale data center in northern Indiana, served by GenCo from a ~340 MW pool from summer 2026; Google's Fort Wayne and Morgan County projects sit outside NIPSCO's territory and the served site is undisclosed — A second hyperscaler on GenCo before the first plant exists — served from generation GenCo already owns, which is what the 340 MW pool is.",
+     "src": "https://www.datacenterdynamics.com/en/news/alphabet-signs-energy-supply-agreement-with-indiana-utility-nisource-to-power-large-scale-data-center-in-northern-indiana/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-17"
   },
   {
    "a": "google",
@@ -42614,6 +43136,74 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "gridstor",
+   "b": "pinnacle-west",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "GridStor acquired White Tank Energy Storage (100 MW / 400 MWh, Avondale) from Strata in September 2025 with its 20-year APS toll and closed $220M of financing from ING Capital, KeyBank and Zions Capital Markets on September 23, 2026; commercial operation in the first half of 2027.",
+     "context": "The financing is the corpus's most recent evidence that an APS toll is bankable on its own terms. GridStor's dossier records the same toll and places the project east of APS's Colter substation.",
+     "source": "https://www.energy-storage.news/gridstor-closes-us220-million-financing-for-400mwh-arizona-bess/",
+     "status": "active",
+     "since": "2025-09",
+     "scale": "100 MW / 400 MWh White Tank",
+     "via": "20-year tolling agreement (assigned from Strata)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "APS buys most of its new capacity rather than building it: the 2023 all-source RFP signed about 7,300 MW (2,650 MW solar, 3,610 MW storage, 500-plus MW wind, 520 MW gas), of which only Ironwood Solar (170 MW), the Agave battery (150 MW) and the Sundance and Redhawk gas units are APS-owned; the storage is largely 20-year tolls with Recurrent Energy (Papago, 1,200 MWh), Strata Clean Energy (Scatter Wash, Justice) and GridStor (White Tank, 100 MW / 400 MWh, 2027), and the 2025 all-source RFP's awards were still under negotiation in August 2026 with 'some of those resources contracted by the end of the year'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Pinnacle West as the corpus's clearest case of a utility that buys storage by toll rather than owning it: APS runs recurring all-source RFPs (2022, 2023, 2025) that have produced about 3.6 GW of contracted storage against roughly 150 MW it owns (Agave), so the four toll counterparties in this file — Recurrent Energy, Strata Clean Energy, GridStor and, through the 2023 awards, the developers whose projects are still undisclosed — are where the battery and the integrator get chosen, not APS's own major-projects desk.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Basis: the November 21, 2024 award release (3,610 MW of storage, 150 MW owned) and the Recurrent, Strata and GridStor releases.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the November 21, 2024 award release (about 3,610 MW of storage signed, 150 MW of it APS-owned), the Recurrent, Strata and GridStor releases (20-year tolls on Papago, Scatter Wash, Justice and White Tank) and the RFP's own terms (365 equivalent cycles a year, 50 percent average state of charge).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs and the 20-year tolls",
+     "date": "",
+     "text": "The storage tolls the corpus can see are all 20-year: Papago Storage (Recurrent Energy, 1,200 MWh, Maricopa County, from the May 2022 RFP, Arizona's largest standalone battery, in service 2025), Scatter Wash (Strata Clean Energy, 255 MW / 1,020 MWh, from the 2022 RFP, later sold to Copenhagen Infrastructure Partners), Justice (Strata, 150 MW / 600 MWh) and White Tank (100 MW / 400 MWh, Avondale, from the 2023 RFP, sold by Strata to GridStor in September 2025, $220M of financing closed September 23, 2026, commercial in the first half of 2027); the 2023 RFP sought 1.4 GW of storage and 700 MW of solar or wind, with 365 equivalent cycles a year at 50 percent average state of charge.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs and the 20-year tolls",
+     "date": "",
+     "text": "The corpus's purest toll buyer among utilities: where WEC buys batteries build-transfer into rate base and Duke self-builds, APS contracts the capacity and leaves ownership, financing and the OEM choice with Strata, Recurrent, GridStor and the undisclosed 2023 awardees.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-23",
+     "text": "GridStor closes $220M of financing (ING Capital, KeyBank, Zions) for the 100 MW / 400 MWh White Tank battery under its 20-year APS tolling agreement; commercial operation in the first half of 2027 — The last of the corpus-visible 2023 RFP tolls reaches financial close with the toll as the bankable contract — APS's counterparty risk is what the lenders priced.",
+     "src": "https://www.energy-storage.news/gridstor-closes-us220-million-financing-for-400mwh-arizona-bess/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-23"
   },
   {
    "a": "gridstor",
@@ -47151,6 +47741,46 @@
   },
   {
    "a": "invenergy",
+   "b": "nisource",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "NIPSCO took Fairbanks Solar (250 MW, Sullivan County, Indiana) under a build-transfer agreement from Invenergy; commercial operation July 2025 (FY2025 Form 10-K generation table; Invenergy dossier).",
+     "context": "The corpus's Invenergy dossier records the build-transfer and NIPSCO among its regulated-utility customers; the 10-K lists Fairbanks Solar Energy Center LLC as a NIPSCO subsidiary and defines 'BTA' as build-transfer agreement.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1111711/000111171126000027/nix-20251231.htm",
+     "status": "historical",
+     "since": "2025-07",
+     "scale": "Fairbanks Solar 250 MW (build-transfer)",
+     "via": "Build-transfer agreement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For equipment sellers the doors are the Quanta–Zachry EPC joint venture (the buyer of the combined-cycle turbines, whose OEM is undisclosed), GenCo itself for the 400 MW / 1,600 MWh Mitchell battery (supplier undisclosed; completion by January 1, 2027) and the roughly 340 MW GenCo-owned portfolio serving Alphabet, plus NIPSCO's own regulated generation transition — Fairbanks Solar bought build-transfer from Invenergy (250 MW, 2025), Dunns Bridge II solar-and-storage (435 MW) and the retirement of Michigan City coal by 2028 after the Schahfer coal units were held open by a federal 202(c) emergency order through March 23, 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NIPSCO — northern Indiana electric and gas, the generation transition and the rate case",
+     "date": "",
+     "text": "Schahfer coal (722 MW, Wheatfield), Michigan City coal (455 MW, to be retired by the end of 2028), the Sugar Creek combined cycle (665 MW), Schahfer gas peakers (155 MW), Oakdale hydro and the renewable fleet — Dunns Bridge II solar and storage (435 MW, Jasper County), Fairbanks Solar (250 MW, Sullivan County, bought build-transfer from Invenergy and commercial in July 2025), Gibson Solar (200 MW) and others, several as tax-equity joint ventures NIPSCO manages.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NIPSCO — northern Indiana electric and gas, the generation transition and the rate case",
+     "date": "",
+     "text": "The Invenergy build-transfer at Fairbanks is the corpus's second such purchase after WEC's.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-07"
+  },
+  {
+   "a": "invenergy",
    "b": "nscale",
    "evid": [
     {
@@ -47244,6 +47874,23 @@
      "from": "b"
     }
    ],
+   "last": ""
+  },
+  {
+   "a": "invenergy",
+   "b": "pinnacle-west",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "The corpus's Invenergy dossier records eleven APS-contracted storage projects commissioned in 2023–2024 (Cotton Center, Desert Star, El Sol, Foothills I and II, Gila Bend I and II, Paloma, Hyder I and II and Yuma — 261 MW / 903 MWh) and the Yuma Solar Energy Center (70 MW solar plus 70 MW storage) under an APS PPA.",
+     "context": "Carried from the counterparty's record: no APS source read for this dossier names Invenergy, so the relationship is stated on the Invenergy dossier's own citations (Energy-Storage.news and Invenergy's Yuma release) and was not re-verified here.",
+     "source": "Invenergy dossier (profileVersion 3) — products and technical specifications, corpus",
+     "status": "active",
+     "scale": "11 APS-contracted storage projects (261 MW / 903 MWh) per the Invenergy dossier",
+     "via": "Power purchase and energy-storage agreements"
+    }
+   },
+   "evid": [],
    "last": ""
   },
   {
@@ -50264,6 +50911,30 @@
     }
    ],
    "last": "2026-07-31"
+  },
+  {
+   "a": "marsh-mclennan",
+   "b": "nisource",
+   "curated": {
+    "b": {
+     "type": "other",
+     "note": "Lloyd Yates, NiSource's president and CEO, sits on Marsh McLennan's board (the corpus's Marsh McLennan dossier records the seat).",
+     "context": "A director-level link only; no commercial relationship is stated.",
+     "source": "https://www.nisource.com/company/leadership/",
+     "status": "active",
+     "via": "Board seat"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-25",
+     "text": "Peter Harrison, former chief executive of Schroders, appointed to the board — Adds asset-management depth to a board that already holds two energy directors — Lloyd Yates, chief executive of NiSource, and Judith Hartmann, former deputy chief executive and finance director of ENGIE.",
+     "src": "https://www.sec.gov/Archives/edgar/data/62709/000006270926000035/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-25"
   },
   {
    "a": "mastec",
@@ -55017,6 +55688,186 @@
    "last": "2026-02"
   },
   {
+   "a": "nisource",
+   "b": "pinnacle-west",
+   "evid": [
+    {
+     "where": "Capabilities · Capital plan, financing and credit — $10.35B through 2028 and the rate-base path",
+     "date": "",
+     "text": "The smallest capital plan among the corpus's regulated utilities (Duke $103B, PPL $23B, NiSource $28.6B, WEC $37.5B, DTE $36.5B) and the lowest-rated at the holding company (Baa2/BBB), which is why the return and the formula-rate outcome of the December 2026 decision carry more weight for its equity story than any single plant.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "nisource",
+   "b": "ppl",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "NiSource (GenCo, 19.9 percent) and PPL (Invitium, 49 percent) are the corpus's two utility-affiliated data-center generation vehicles with Blackstone Infrastructure as the minority partner.",
+     "context": "Stated for the Relationships tab's cross-reference; the two companies have no disclosed dealing with each other.",
+     "source": "https://www.paulweiss.com/insights/client-news/blackstone-infrastructure-partners-acquires-minority-interest-in-nisource-affiliate-genco-in-15-billion-deal",
+     "status": "active",
+     "via": "Shared partner: Blackstone Infrastructure"
+    },
+    "b": {
+     "type": "other",
+     "note": "Both PPL (Invitium, 49 percent) and NiSource (NIPSCO and GenCo, 19.9 percent each) build data-center generation with Blackstone Infrastructure as the minority partner — the two utility-affiliated generation vehicles in this corpus with the same sponsor.",
+     "context": "Stated for the Relationships tab's cross-reference; the two companies have no disclosed dealing with each other.",
+     "source": "https://www.utilitydive.com/news/ppl-blackstone-joint-venture-secures-5-gw-of-gas-turbines-for-data-centers/827408/",
+     "status": "active",
+     "via": "Shared partner: Blackstone Infrastructure"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess NiSource as the corpus's cleanest example of ring-fencing a data-center build: rather than a tariff (WEC), a special contract inside the utility (DTE) or an unregulated joint venture outside it (PPL's Invitium), NIPSCO created an affiliate, obtained the Indiana commission's declination of jurisdiction over it (September 2025), sold Blackstone Infrastructure 19.9 percent of it for a $1.5B commitment (October 2025) and had the commission find its 2,600 MW of combined cycle and 400 MW of storage 'reasonable and necessary' for the Amazon settlement while barring cost recovery from non-megaload ratepayers without independent review (June 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Its shared partner with PPL — Blackstone Infrastructure — and its shared EPC with the corpus's Quanta and Zachry records are the cross-references a reader should follow.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · NIPSCO Generation LLC ('GenCo') — the ring-fenced data-center generation company",
+     "date": "",
+     "text": "The corpus's fourth model for data-center generation, and the most fully ring-fenced: WEC's bespoke resource keeps the plant in the utility's rate base at a fixed return; DTE's special contract keeps it in the utility with the customer paying; PPL's Invitium puts it in an unregulated joint venture; NiSource's GenCo keeps it in a utility affiliate that the commission has declined to regulate, with the same minority partner (Blackstone Infrastructure) as Invitium and a bill credit to retail customers as the political price.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Capital plan, financing and credit — $28.6B through 2030 and the 9–10 percent growth rate",
+     "date": "",
+     "text": "A plan whose data-center quarter ($7.6B) is financed with a minority partner's equity at the affiliate level rather than with parent equity — which is why NiSource can guide the fastest EPS growth among the corpus's regulated utilities (9–10 percent) at an FFO-to-debt target below PPL's.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Invitium Energy — the 51/49 generation joint venture with Blackstone Infrastructure",
+     "date": "",
+     "text": "The corpus's clearest case of a regulated holding company building unregulated generation for hyperscalers with a private-infrastructure partner — Blackstone Infrastructure is also NiSource's 19.9 percent partner in NIPSCO and in its GenCo.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Invitium Energy — the 51/49 generation joint venture with Blackstone Infrastructure",
+     "date": "",
+     "text": "Against Talen's and Constellation's existing plants, Invitium sells new build with turbines reserved before customers are signed; against NiSource's GenCo, it is outside rate base and outside the commission's review entirely.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Capital plan, financing and credit — $23B through 2029 and the rate-base path",
+     "date": "",
+     "text": "Mid-sized among the corpus utilities' plans ($23B against Duke's $103B and NiSource's $28.6B) but with the strongest operating-company ratings in the file (A3/A at PPL Electric) and the largest unfunded upside relative to plan, since neither the Kentucky CPCN candidates nor Invitium is in the $23B.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "nisource",
+   "b": "quanta-services",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "NiSource engaged Quanta on October 30, 2025 for the design, procurement and construction of generation and infrastructure resources 'capable of producing approximately 3 gigawatts' for a large-load customer, with the combined-cycle units delivered through a 50/50 joint venture with Zachry Group; execution from 2026, full power by 2032.",
+     "context": "Quanta's release names the scope as generation, battery storage, transmission, substation and underground infrastructure; the corpus's Quanta dossier (revised to v6 in this pass) carries the reciprocal edge and the 2.6 GW / 400 MW split.",
+     "source": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "'approximately 3 gigawatts' of generation and grid infrastructure (2 x 1,300 MW CCGT + 400 MW BESS)",
+     "via": "EPC — Quanta Power Generation Solutions; 50/50 Quanta–Zachry JV for the CCGTs"
+    },
+    "b": {
+     "type": "customer",
+     "note": "NiSource engaged Quanta on October 30, 2025 for the design, procurement and construction of generation and grid infrastructure 'capable of producing approximately 3 gigawatts' for a large-load customer, with the combined-cycle units delivered through a 50/50 joint venture with Zachry Group.",
+     "context": "Quanta's release names the scope as generation plus grid infrastructure for 'a large load customer' and says the joint venture with Zachry will design, construct and deliver the combined-cycle gas turbines, with Quanta holding 50% and recognizing the JV through proportionate consolidation; the scope-and-estimation phase began in 2025, execution was expected to begin in 2026 after regulatory approvals, and full power availability by 2032. Zachry's same-day release specifies two nominal 1,300 MW gas-fired combined-cycle units in a 2 x 2 x 1 configuration near Wheatfield, Indiana, owned and operated by a NiSource subsidiary. NiSource's own filings identify the customer as Amazon Data Services and the owner as NIPSCO Generation LLC (GenCo), and add a 400 MW battery at the Mitchell site — so 'approximately 3 gigawatts' is 2.6 GW of combined cycle plus 0.4 GW of storage.",
+     "source": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "'approximately 3 gigawatts' (2 x 1,300 MW CCGT + 400 MW BESS)",
+     "via": "Power Generation Solutions; Quanta–Zachry EPC JV (50/50)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "The build is contracted: Quanta Services and Zachry Group were selected on October 30, 2025 for 'approximately 3 gigawatts' of generation and grid infrastructure, with a 50/50 Quanta–Zachry joint venture delivering the combined-cycle units near Wheatfield, Indiana; the IURC approved the GenCo structure in September 2025, the Amazon special contract in June 2026 (Cause 46362 order of June 17, declining CPCN jurisdiction but finding the build reasonable and necessary for settlement purposes) and the Alphabet agreement in July 2026, and a July 2026 filing raised Amazon's contracted load by 400 MW.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · NIPSCO Generation LLC ('GenCo') — the ring-fenced data-center generation company",
+     "date": "",
+     "text": "Quanta Services and Zachry Group were selected on October 30, 2025 for the design, procurement and construction of 'generation and infrastructure resources capable of producing approximately 3 gigawatts', with the combined-cycle units delivered by a 50/50 Quanta–Zachry joint venture (Zachry leading engineering, procurement, project management and commissioning; Quanta the craft workforce), execution from 2026 after regulatory approvals and full power availability by 2032.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "Quanta Services and Zachry Group selected for the design, procurement and construction of 'generation and infrastructure resources capable of producing approximately 3 gigawatts' for a large-load customer — a 50/50 Quanta–Zachry JV for the combined-cycle units (two nominal 1,300 MW, 2 x 2 x 1, near Wheatfield), execution from 2026, full power by 2032 — The EPC is signed before the commission's order: the 'approximately 3 gigawatts' is 2.6 GW of combined cycle plus the 400 MW battery.",
+     "src": "https://www.prnewswire.com/news-releases/building-upon-decades-of-power-generation-experience-quanta-expands-its-total-solutions-platform-and-announces-its-selection-by-nisource-to-provide-power-generation-and-grid-infrastructure-solutions-for-a-large-load-customer-302599432.html",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BACKGROUND: Quanta's model is self-performed craft labor at scale (>80% self-perform, 69,500 employees, a 2,300-acre lineman college, ~$250M/yr on training — 'it takes about four years to make a craftsman') across utility T&D, renewables/storage EPC (>29 GW of solar completed), and now gas generation (the NiSource program with Zachry — 'approximately 3 gigawatts', which NiSource's own filings and Zachry's award release break down as two nominal 1,300 MW combined-cycle units at Schahfer plus a 400 MW battery at Mitchell — largely NOT yet in backlog).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Direct rival to Rosendin in data-center electrical; the NiSource program puts it in gas-generation EPC against Bechtel/Kiewit-tier players.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(High confidence) The reported $53.4B backlog understates the real pipeline in two specific ways: the NiSource ~3 GW program's (2.6 GW of combined cycle plus a 400 MW battery) 'significant majority' is excluded, and data-center MSA work runs book-and-burn outside backlog entirely.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power Generation & Energy Storage EPC",
+     "date": "",
+     "text": "New gas platform (Oct 2025): selected by NiSource for 'generation and infrastructure resources capable of producing approximately 3 gigawatts' for 'a large load customer' via a 50/50 JV with Zachry Group — per Zachry's award release and the IURC's June 2026 order (Cause 46362) the generation is two nominal 1,300 MW combined-cycle units (2 x 2 x 1) near Wheatfield, Indiana, plus a 400 MW battery, so the combined-cycle scope is 2.6 GW, not 3 GW; execution from 2026, phased delivery through 2032.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Power Generation & Energy Storage EPC",
+     "date": "",
+     "text": "The NiSource program's 'significant majority' is NOT in reported backlog — pure upside.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-30",
+     "text": "NiSource selects Quanta (JV with Zachry Group) for 'approximately 3 gigawatts' of generation plus grid infrastructure for 'a large load customer' — two nominal 1,300 MW combined-cycle units plus a 400 MW battery per the Zachry release and IURC Cause 46362; delivery through 2032 — The gas-generation platform launch, and almost certainly data-center-driven (NiSource's territory includes the Indiana AIDC corridor). The 'significant majority' of this program is excluded from reported backlog — a multi-billion-dollar shadow pipeline. Zachry brings 60+ GW of gas-plant construction pedigree.",
+     "src": "https://investors.quantaservices.com/news-events/press-releases/detail/386/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-30"
+  },
+  {
    "a": "novonix",
    "b": "panasonic",
    "curated": {
@@ -58473,6 +59324,153 @@
    "last": "2025-12-30"
   },
   {
+   "a": "pinnacle-west",
+   "b": "ppl",
+   "evid": [
+    {
+     "where": "Capabilities · Regulated retail electric service — Arizona Public Service, and the 2025 rate case",
+     "date": "",
+     "text": "Unlike the Wisconsin bespoke-resource model (WEC) or Kentucky's regulated CCGT build (PPL), APS's model is to buy capacity from third parties under tolls and PPAs and to recover the cost through rates, which is why its regulatory risk sits in the return and the FRAM rather than in a plant docket.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Extra High Load Factor service and the large-load queue — TSMC, the West Valley data centers and the subscription model",
+     "date": "",
+     "text": "The disclosed committed queue (4.5 GW) is smaller than PPL Electric's 11 GW of signed ESAs or Duke's 7.8 GW, but it equals more than half of APS's own 2025 peak, the highest ratio in this file.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Capital plan, financing and credit — $10.35B through 2028 and the rate-base path",
+     "date": "",
+     "text": "The smallest capital plan among the corpus's regulated utilities (Duke $103B, PPL $23B, NiSource $28.6B, WEC $37.5B, DTE $36.5B) and the lowest-rated at the holding company (Baa2/BBB), which is why the return and the formula-rate outcome of the December 2026 decision carry more weight for its equity story than any single plant.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "pinnacle-west",
+   "b": "recurrent-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Recurrent Energy owns and operates Papago Storage (1,200 MWh, Maricopa County), Arizona's largest standalone battery, under a 20-year APS tolling agreement awarded in August 2023 from the May 2022 all-source RFP.",
+     "context": "The award release describes Papago as serving about 244,000 homes for four hours, with construction from the third quarter of 2024 and commercial operation targeted for the second quarter of 2025; Recurrent, a Canadian Solar subsidiary, owns and operates it and APS takes the market risk as toller. The corpus's Recurrent and Canadian Solar dossiers add a second 20-year APS toll on Desert Bloom (600 MWh) and report Papago energized in 2025; those additions are carried from the counterparty's record and were not re-verified here.",
+     "source": "https://recurrentenergy.com/arizona-public-service-awards-recurrent-energy-with-1200-mwh-energy-storage-tolling-agreement/",
+     "status": "active",
+     "since": "2023-08",
+     "scale": "1,200 MWh Papago Storage; 600 MWh Desert Bloom per the Recurrent dossier",
+     "via": "20-year tolling agreements from the 2022 all-source RFP"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "APS buys most of its new capacity rather than building it: the 2023 all-source RFP signed about 7,300 MW (2,650 MW solar, 3,610 MW storage, 500-plus MW wind, 520 MW gas), of which only Ironwood Solar (170 MW), the Agave battery (150 MW) and the Sundance and Redhawk gas units are APS-owned; the storage is largely 20-year tolls with Recurrent Energy (Papago, 1,200 MWh), Strata Clean Energy (Scatter Wash, Justice) and GridStor (White Tank, 100 MW / 400 MWh, 2027), and the 2025 all-source RFP's awards were still under negotiation in August 2026 with 'some of those resources contracted by the end of the year'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Pinnacle West as the corpus's clearest case of a utility that buys storage by toll rather than owning it: APS runs recurring all-source RFPs (2022, 2023, 2025) that have produced about 3.6 GW of contracted storage against roughly 150 MW it owns (Agave), so the four toll counterparties in this file — Recurrent Energy, Strata Clean Energy, GridStor and, through the 2023 awards, the developers whose projects are still undisclosed — are where the battery and the integrator get chosen, not APS's own major-projects desk.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs and the 20-year tolls",
+     "date": "",
+     "text": "The storage tolls the corpus can see are all 20-year: Papago Storage (Recurrent Energy, 1,200 MWh, Maricopa County, from the May 2022 RFP, Arizona's largest standalone battery, in service 2025), Scatter Wash (Strata Clean Energy, 255 MW / 1,020 MWh, from the 2022 RFP, later sold to Copenhagen Infrastructure Partners), Justice (Strata, 150 MW / 600 MWh) and White Tank (100 MW / 400 MWh, Avondale, from the 2023 RFP, sold by Strata to GridStor in September 2025, $220M of financing closed September 23, 2026, commercial in the first half of 2027); the 2023 RFP sought 1.4 GW of storage and 700 MW of solar or wind, with 365 equivalent cycles a year at 50 percent average state of charge.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2023-08-16",
+     "text": "APS awards Recurrent Energy a 20-year tolling agreement for Papago Storage (1,200 MWh, Maricopa County) from the May 2022 all-source RFP — Arizona's largest standalone battery, construction from Q3 2024, commercial operation targeted Q2 2025 — The first of the tolls that made APS the corpus's largest toll counterparty; Recurrent (Canadian Solar) owns and operates it.",
+     "src": "https://recurrentenergy.com/arizona-public-service-awards-recurrent-energy-with-1200-mwh-energy-storage-tolling-agreement/",
+     "from": "a"
+    }
+   ],
+   "last": "2023-08-16"
+  },
+  {
+   "a": "pinnacle-west",
+   "b": "strata-clean-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Strata Clean Energy has won three 20-year APS tolls — Scatter Wash and Justice from the 2022 RFP and White Tank from the 2023 RFP — and sells the projects on with the toll attached (Scatter Wash to Copenhagen Infrastructure Partners, White Tank to GridStor).",
+     "context": "The November 14, 2024 report on White Tank lists the prior Strata–APS tolls and the 2023 RFP's terms (1.4 GW of storage and 700 MW of solar or wind sought; 365 equivalent cycles a year; 50 percent average state of charge). The corpus's Strata dossier characterizes the business as originate-contract-and-sell around APS's RFPs, with Justice retained and operational in April 2026 per the company's schedule.",
+     "source": "https://www.energy-storage.news/strata-clean-energy-signs-another-rfp-driven-bess-tolling-agreement-with-arizona-public-service/",
+     "status": "active",
+     "since": "2022",
+     "scale": "Scatter Wash 255 MW / 1,020 MWh; Justice 150 MW / 600 MWh; White Tank 100 MW / 400 MWh",
+     "via": "20-year tolling agreements from the 2022 and 2023 all-source RFPs"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "APS buys most of its new capacity rather than building it: the 2023 all-source RFP signed about 7,300 MW (2,650 MW solar, 3,610 MW storage, 500-plus MW wind, 520 MW gas), of which only Ironwood Solar (170 MW), the Agave battery (150 MW) and the Sundance and Redhawk gas units are APS-owned; the storage is largely 20-year tolls with Recurrent Energy (Papago, 1,200 MWh), Strata Clean Energy (Scatter Wash, Justice) and GridStor (White Tank, 100 MW / 400 MWh, 2027), and the 2025 all-source RFP's awards were still under negotiation in August 2026 with 'some of those resources contracted by the end of the year'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Pinnacle West as the corpus's clearest case of a utility that buys storage by toll rather than owning it: APS runs recurring all-source RFPs (2022, 2023, 2025) that have produced about 3.6 GW of contracted storage against roughly 150 MW it owns (Agave), so the four toll counterparties in this file — Recurrent Energy, Strata Clean Energy, GridStor and, through the 2023 awards, the developers whose projects are still undisclosed — are where the battery and the integrator get chosen, not APS's own major-projects desk.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Storage and renewable procurement — the all-source RFPs and the 20-year tolls",
+     "date": "",
+     "text": "The storage tolls the corpus can see are all 20-year: Papago Storage (Recurrent Energy, 1,200 MWh, Maricopa County, from the May 2022 RFP, Arizona's largest standalone battery, in service 2025), Scatter Wash (Strata Clean Energy, 255 MW / 1,020 MWh, from the 2022 RFP, later sold to Copenhagen Infrastructure Partners), Justice (Strata, 150 MW / 600 MWh) and White Tank (100 MW / 400 MWh, Avondale, from the 2023 RFP, sold by Strata to GridStor in September 2025, $220M of financing closed September 23, 2026, commercial in the first half of 2027); the 2023 RFP sought 1.4 GW of storage and 700 MW of solar or wind, with 365 equivalent cycles a year at 50 percent average state of charge.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-11-14",
+     "text": "Strata Clean Energy signs a 20-year tolling agreement with APS for White Tank Energy Storage (100 MW / 400 MWh, Avondale) from the 2023 all-source RFP, following Justice (150 MW / 600 MWh) and Scatter Wash (255 MW / 1,020 MWh) from the 2022 RFP; the RFP sought 1.4 GW of storage at 365 equivalent cycles a year — The toll terms — cycles and state of charge — are APS's battery specification; the OEM behind each project is the developer's decision.",
+     "src": "https://www.energy-storage.news/strata-clean-energy-signs-another-rfp-driven-bess-tolling-agreement-with-arizona-public-service/",
+     "from": "a"
+    }
+   ],
+   "last": "2024-11-14"
+  },
+  {
+   "a": "pinnacle-west",
+   "b": "tract",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "The corpus's Tract dossier places its 2,069-acre Buckeye, Arizona campus (up to 20 million square feet, as many as 40 data centers) at up to 1.8 GW with APS, still 'planned or proposed' in May 2026; APS names no data-center customer other than TSMC.",
+     "context": "Stated on Tract's record only. Whether Buckeye sits inside APS's 4.5 GW committed queue or the 20 GW uncommitted queue is not disclosed by either party.",
+     "source": "Tract dossier (profileVersion 4) — products and ecosystem role, corpus",
+     "status": "announced",
+     "scale": "up to 1.8 GW at Buckeye per the Tract dossier",
+     "via": "Large-load service (XHLF)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the company names no other customer, and the AZ Technology Council's dated list is the only public map of West Valley operators; the corpus's Tract (Buckeye, up to 1.8 GW) and Compass (Goodyear) dossiers place their own campuses in APS territory but APS confirms neither.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
    "a": "plus-power",
    "b": "prime-data-centers",
    "curated": {
@@ -58952,6 +59950,60 @@
   },
   {
    "a": "powerhouse-data-centers",
+   "b": "ppl",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "LG&E's first major data-center customer is the PowerHouse Data Centers–Poe Companies 400 MW Louisville campus (130 MW by October 2026, switch station September 2026, dedicated on-site substation); Utility Dive also names PowerHouse among PPL Electric's Pennsylvania counterparties.",
+     "context": "The January 16, 2025 release describes initial capacity of 335 MW rising to 402 MW, construction in 2025 and a first building in the fourth quarter of 2026. The corpus's PowerHouse dossier adds a $9.6B Carrollton, Kentucky campus with LG&E 'confirmed capacity' and a 1.35 GW Carlisle, Pennsylvania joint venture on PPL Electric's system with 300 MW by the second quarter of 2027 — both carried from PowerHouse's record and not re-verified here.",
+     "source": "https://lge-ku.com/newsroom/press-releases/2025/01/16/lge-announces-first-major-data-center-electric-customer",
+     "status": "active",
+     "since": "2025-01",
+     "scale": "400 MW Louisville campus (335 MW initial → 402 MW); 1.35 GW Carlisle, PA per the PowerHouse dossier",
+     "via": "LG&E electric service; PPL Electric large-load service"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-15",
+     "text": "Carlisle, Pennsylvania joint venture with Pennsylvania Data Center Partners: '1.35 GW' expandable to 1.8 GW, 'USD 15 billion', about 700 acres, PPL Electric Utilities, 300 MW by Q2 2027; Senator McCormick quoted — A third 1 GW-class site announced within six months, each with a different JV partner.",
+     "src": "https://www.powerhousedata.com/news/pennsylvania-data-center-partners-and-powerhouse-data-centers-launch-joint-venture-to-build-next-gen-1-35-gw-hyperscale-data-center-campus-in-carlisle-pennsylvania",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · PPL Electric Utilities — Pennsylvania transmission and distribution, the large-load tariff and the 31.8 GW pipeline",
+     "date": "",
+     "text": "At June 30, 2026 it reported 31.8 GW of data-center projects 'in advanced stages' (projects that have signed agreements with developers, with costs incurred reimbursable by the developer if the project does not proceed), more than 11 GW under signed electric service agreements (the deck's chart reads 11.1 GW, up from 10.0 GW a quarter earlier) and more than 6.5 GW under construction, the tenth consecutive quarterly increase; two data centers began service in the second quarter and are expected to ramp to about 2 GW by 2031, and the May 2026 disclosure (28.3 GW by 2034) had ramps of 0.6 GW in 2026 rising to 20.7 GW in 2030, with QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named by Utility Dive as counterparties.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · LG&E and KU — Kentucky regulated generation, the EHLF tariff and the 2025 certificate",
+     "date": "",
+     "text": "Their data-center pipeline was 13.7 GW at June 30, 2026 (11.6 GW data center, 2.1 GW other, from 11.9 GW plus 1 GW in May), with 1.3 GW under signed reimbursement agreements (0.9 GW a quarter earlier) and expected new load of 3.7 GW by 2032 against the 1.8 GW assumed in the 2025 certificate case; the first named customer is the PowerHouse Data Centers–Poe Companies 400 MW Louisville campus (130 MW by October 2026, LG&E switch station September 2026, initial capacity 335 MW rising to 402 MW), and the corpus's PowerHouse dossier adds a $9.6B Carrollton campus with LG&E 'confirmed capacity'.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-11",
+     "text": "Pennsylvania advanced-stage pipeline 28.3 GW by 2034 (from 25.2 GW), ramping 0.6 GW in 2026 to 20.7 GW in 2030 with about 5 GW under construction; Kentucky 11.9 GW data-center pipeline (from 8 GW); QTS, Amazon Web Services, PowerHouse Data Centers and CoreWeave named; Sorgi 'executing multiple gas turbine reservation agreements' — The first quarter the names appeared — and the first hint of the turbine reservations announced in August.",
+     "src": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-01-16",
+     "text": "LG&E announces its first major data-center customer: a PowerHouse Data Centers–Poe Companies 400 MW campus in Louisville, 130 MW available by October 2026, an LG&E switch station in September 2026 and a dedicated on-site substation; initial capacity 335 MW rising to 402 MW — The named anchor behind Kentucky's pipeline — a developer campus, which is why the CPCN trigger is a hyperscaler signing on it.",
+     "src": "https://lge-ku.com/newsroom/press-releases/2025/01/16/lge-announces-first-major-data-center-electric-customer",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-11"
+  },
+  {
+   "a": "powerhouse-data-centers",
    "b": "prime-data-centers",
    "curated": {
     "b": {
@@ -58987,6 +60039,107 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "ppl",
+   "b": "qts",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "QTS is named by Utility Dive (May 11, 2026) among the counterparties in PPL Electric's advanced-stage Pennsylvania pipeline.",
+     "context": "PPL itself does not name customers; the attribution is Utility Dive's.",
+     "source": "https://www.utilitydive.com/news/ppl-data-center-pipeline-pjm-blackstone-earnings/819804/",
+     "status": "active",
+     "via": "PPL Electric large-load service"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "ppl",
+   "b": "talen-energy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "Under the amended June 2025 Talen–Amazon agreement, Susquehanna sells into PJM, Talen acts as Amazon's licensed Pennsylvania retail supplier and PPL Electric Utilities provides transmission and delivery.",
+     "context": "Carried from the corpus's Talen dossier; no PPL source read for this dossier describes the arrangement.",
+     "source": "Talen Energy dossier (profileVersion 3) — products and relationships, corpus",
+     "status": "active",
+     "since": "2025-06",
+     "via": "Transmission and delivery for the Susquehanna–Amazon front-of-the-meter supply"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Long-term large-load power supply (the AWS arrangement)",
+     "date": "",
+     "text": "Since April 2026 this runs front-of-the-meter: Susquehanna sells its power into PJM, Talen acts as Amazon's licensed Pennsylvania retail electric generation supplier, and PPL Electric Utilities provides transmission and delivery.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-11",
+     "text": "Amazon PPA expanded to 1,920 MW through 2042 and moved front-of-the-meter — The workaround: Susquehanna sells into PJM, Talen becomes Amazon's Pennsylvania retail supplier and PPL Electric handles delivery, so no FERC approval is required. Talen says it 'will significantly decrease Talen's market risk and minimize its reliance on the Federal nuclear production tax credit'.",
+     "src": "https://www.sec.gov/Archives/edgar/data/1622536/000162828025030559/a20250611pressreleasebusin.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2025-06-11"
+  },
+  {
+   "a": "ppl",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Brown battery's supplier is not named in the filing read (a Burns & McDonnell project page surfaced by a search describes 152 Tesla Megapack 2XL enclosures at the site, unread and unverified this session); and the Q3 2026 results date was not on the investor calendar as of September 29, 2026.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "ppl",
+   "b": "x-energy",
+   "curated": {
+    "a": {
+     "type": "partner",
+     "note": "LG&E and KU launched an early-stage feasibility study with X-energy on April 30, 2026 on deploying the Xe-100 (80 MWe per module) in Kentucky, under a state pilot that funds up to $25M per project.",
+     "context": "A study, not a procurement; the corpus's X-energy dossier carries the same announcement.",
+     "source": "https://lge-ku.com/newsroom/press-releases/2026/04/30/lge-and-ku-collaborate-x-energy-explore-nuclear-energy",
+     "status": "announced",
+     "since": "2026-04",
+     "via": "Xe-100 feasibility study (Kentucky Nuclear Reactor Site Readiness Pilot Program)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · LG&E and KU — Kentucky regulated generation, the EHLF tariff and the 2025 certificate",
+     "date": "",
+     "text": "Brown battery (125 MW / 500 MWh, Mercer County, case 2022-00402, in service 'first part of 2027', supplier unnamed); Marion and Mercer solar and the Brown battery under the Generation Cost Recovery mechanism; a July 22, 2026 RFP for renewables above 50 MW and storage of 50–400 MW / 200–1,600 MWh (PPA, asset purchase or build-transfer, bids due September 3, 2026); the Lewis Ridge pumped-storage project with Rye Development (266 MW, 8-hour, Bell County, $81M DOE grant, FERC license application filed June 2025, construction from December 2027, KU 63 percent / LG&E 37 percent); and an April 30, 2026 feasibility study with X-energy on the Xe-100 (80 MWe per module) under Kentucky's nuclear site-readiness pilot.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "LG&E and KU launch an early-stage feasibility study with X-energy on deploying the Xe-100 (80 MWe per module; 4-unit 320 MWe or 12-unit plants) in Kentucky under the state's Nuclear Reactor Site Readiness Pilot Program (up to $25M per project) — A site-readiness study, not an order; it puts Kentucky's next firm capacity beyond the two combined cycles into the 2030s conversation.",
+     "src": "https://lge-ku.com/newsroom/press-releases/2026/04/30/lge-and-ku-collaborate-x-energy-explore-nuclear-energy",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "LG&E and KU (PPL) launch an early-stage feasibility study with X-energy on Xe-100 deployment in Kentucky — A regulated utility joins the prospect list; no MW or site.",
+     "src": "https://x-energy.com/news/lg-and-e-and-ku-collaborate-with-x-enrgy-to-explore-nuclear-energy/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-04-30"
   },
   {
    "a": "prevalon",

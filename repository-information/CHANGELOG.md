@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v07.74r] — 2026-09-29 08:41:27 PM EST
+
+> **Prompt:** "@"/root/.claude/uploads/8127051b-4a08-5104-9efc-cfd58f7ccfba/a14e1271-pinnacle-west-verified-notes.md"
+> @"/root/.claude/uploads/8127051b-4a08-5104-9efc-cfd58f7ccfba/372ebe92-ppl-verified-notes.md"
+> @"/root/.claude/uploads/8127051b-4a08-5104-9efc-cfd58f7ccfba/0aa3333a-F-U3-PROGRESS-HANDOFF.md"
+> @"/root/.claude/uploads/8127051b-4a08-5104-9efc-cfd58f7ccfba/6c0ea8b9-nisource-verified-notes.md"
+> Run Profiler row F-U3 (PPL, Pinnacle West, NiSource) in LightAISolutions/Sales on Fable 5.1 High.
+> Read the attached F-U3-PROGRESS-HANDOFF.md first, along with any attached *-verified-notes.md files,
+> and treat its §5 notes as the only research inputs. Finish the six NiSource gaps in §3.2 one fetch
+> at a time, with no parallel research agents. Then write the three dossiers, guides and lesson plans,
+> and complete the §4 finish sequence as one v07.74r push commit to a claude/* branch."
+> *(The same message was sent once before with the earlier upload ids and interrupted before any work; the four files are identical copies.)*
+
+### Added
+- **Three new utility dossiers (schema v7, profileVersion 1), study guides (schema v2) and lesson plans — Phase F row F-U3**, written from the hand-off's §5 verified notes only (`F-U3-PROGRESS-HANDOFF.md`, `ppl-verified-notes.md`, `pinnacle-west-verified-notes.md`, `nisource-verified-notes.md`), with the six NiSource gaps in its §3.2 closed one fetch at a time (Quanta's PR Newswire release; Zachry's award via the Yahoo mirror; the NiSource news archive for the Q3 date — none announced, dividend $0.30 declared Sep 10; the EDGAR filing index and the FY2025 10-K main document for identity; the GenCo–Amazon explainer):
+  - `live-site-pages/profiler-data/ppl.profile.json` (33 sources) + `ppl.study.json` (13 sections) + `repository-information/study-prep/ppl/ppl-lesson-plan.md` — PPL Electric's 31.8 GW advanced-stage / >11 GW signed-ESA / >6.5 GW under-construction ladder under Pennsylvania's first large-load tariff (≥50 MW, 10-yr, 80% guaranteed, exit fees, security = upgrades; PA PUC order June 4, 2026) and the Sep 14 Customer Protection Transmission Rider; LG&E-KU's Brown 12 and Mill Creek 6 (645 MW each, $2.798B, Oct 28, 2025 order that denied every recovery mechanism), the withdrawn Cane Run battery, the EHLF tariff and the March 2026 rehearing; Invitium (51/49 with Blackstone Infrastructure) with >5 GW of CCGT turbine reservations and no customer; RI's 9% ROE held. Truncated first-party URLs in the notes were resolved from the pplweb.com and lge-ku.com listings and eleven third-party citations by single searches; the E.W. Brown 125 MW / 500 MWh KPSC filing (2022-00402) surfaced with an unread Burns & McDonnell page naming Tesla Megapacks, recorded as an unverified lead in the collection gap.
+  - `pinnacle-west.profile.json` (29 sources) + `pinnacle-west.study.json` (13 sections) + `study-prep/pinnacle-west/pinnacle-west-lesson-plan.md` — APS as the corpus's purest toll buyer (~3.6 GW of storage under 20-year tolls with Recurrent, Strata and GridStor against 150 MW owned; the 2023 RFP's 365-cycle / 50% SOC terms as the battery spec), the XHLF schedule (Decision 79293: ≥5,000 kW, ≥92% load factor, ESA, minimum bill, no explicit exit fee) and the subscription model, the 4.5 GW committed / ~20 GW uncommitted queue against an 8.6 GW peak, the rate case ($692M, 10.70% ROE, FRAM; ALJ order late Nov, ACC vote by Dec 31, 2026), Cholla coal-to-gas 380 MW by 2029, Palo Verde SLR to 2065–67.
+  - `nisource.profile.json` (22 sources) + `nisource.study.json` (11 sections) + `study-prep/nisource/nisource-lesson-plan.md` — the ring-fenced GenCo affiliate (80.1/19.9 with Blackstone Infrastructure per the 10-K; IURC declination Sep 2025; Cause 46362 order of June 17, 2026 declining CPCN jurisdiction), the Amazon package (2 × 1,300 MW CCGT in 2 x 2 x 1 at Schahfer + 400 MW / 1,600 MWh at Mitchell; up to 3 GW, 2.4 GW by end-2032; 15-yr fixed capacity charge with an Amazon.com guarantee; +400 MW July 2026), Alphabet on a ~340 MW GenCo portfolio, the Quanta–Zachry EPC JV, ~$1.4B of bill credits, the $28.6B plan. **Identity corrected against the 10-K cover: NiSource is a Delaware corporation** (the hand-off's memory note said Delaware; EDGAR's company record shows IN for NIPSCO's own CIK), 801 East 86th Avenue, Merrillville; 7,668 full-time employees.
+- **13 concepts** registered in `profiler-concepts.json` (1,570 → 1,583), collision-checked: `cooling-degree-day`, `default-service`, `emergency-order-202c`, `equity-forward`, `four-hour-battery`, `jurisdictional-declination`, `peak-demand`, `pumped-storage`, `reimbursement-agreement`, `ring-fencing`, `service-territory`, `weather-normalized`, `xhlf`. `stay-out` was dropped: `rate stay-out` is already an alias of `rate-freeze`.
+- Registry entries (193 → 196; `aka[]` and `domains[]` populated before the step-7 grep), segment memberships (`utilities` · incumbent for all three; `storage-developers-and-ipps` · adjacent for PPL and NiSource, none for Pinnacle West, which owns ~150 MW against ~3.6 GW tolled), calendar rows (`ppl` ~2026-11-05, `pinnacle-west` ~2026-11-03, `nisource` ~2026-10-28, all `confirmed:false`) with notes, README tree entries for six data files and three curricula.
+
+### Changed
+- **`quanta-services` dossier v5 → v6 (v5 archived)** — step-7 reconciliation: its '~3 GW CCGT' program is two nominal 1,300 MW combined-cycle units (2.6 GW) plus a 400 MW battery per Zachry's award release and IURC Cause 46362; six strings corrected, the two reconciling sources added and a reciprocal `nisource` customer edge written.
+- `PROFILER-COVERAGE-PLAN.md` §11.3: the three F-U3 rows rewritten with premise verdicts (PPL: four held, one partially held; Pinnacle West: four held, one refined; NiSource: three held, two refined, identity corrected) and flipped to v1 / v2. `phase-f-action-plan.md` §3: row 3 marked landed, the Done table extended, and a note that rows now run as project threads (research → hand-off → write).
+- `profiler-relationships-accepted.json`: one reviewed finding accepted (`nisource × ppl`, both `other` by design — the shared Blackstone Infrastructure partner, no dealing between them).
+
+### Verified
+- `sync-profiler-registry.py --check` clean (roster and calendar in bijection); `build-profiler-graph.py` 1,685 → 1,712 edges; `check-profiler-study.py` 0/0; `check-profiler-relationships.py` 0 findings (21 accepted); `check-profiler-crossrefs.py` 0 candidates on the four dossiers; `check-profiler-reports.py` the four pre-existing pin warnings (`fluence`, `jinko`, `jupiter-power`, `oracle`); `check-readme-tree.py` 0 findings; Playwright: all six routes (three dossiers, three guides) render with zero page errors.
+- Step-7 inbound reads: PPL 8 dossiers grepped by alias (5 substantive, 0 changed); Pinnacle West 12 (8 substantive, 0 changed); NiSource 5 (1 changed — `quanta-services`).
+- **No rotation.** This push lands on **2026-09-29 EST**: 100 raw / **94 non-exempt** against a 100 trigger with 6 same-day sections, so the 2026-09-20 date group (v06.75r–v06.82r, 8 sections) the hand-off expected to rotate stays; the first push dated 2026-09-30 EST or later will count 100 non-exempt (the six 2026-09-29 sections stop being exempt) and must rotate it with SHA enrichment. Counter `Sections: 99/100` → `100/100`.
+- **Classroom untouched by design:** `Classroom.gs` was not edited; `landscape-utilities-2026-09` and the three `scenario-utilities-*` rehearsals are now stale by eight new franchises (wave C, row 16). **No page, GAS script, diagram or rule changed.**
 
 ## [v07.73r] — 2026-09-29 04:52:56 PM EST
 
