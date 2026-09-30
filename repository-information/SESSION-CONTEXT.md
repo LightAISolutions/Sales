@@ -98,49 +98,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **To continue:** type `run the neoclouds pass`, or `run F-I4` for the next Fable dossier session.
 
-
-**Date:** 2026-09-29 07:52 PM → 08:45 PM EST (Phase F session F-U3: PPL, Pinnacle West, NiSource — the write thread of a three-thread project row; one attended turn)
-**Repo version:** v07.74r → v07.75r (two pushes: the F-U3 landing, then the F-U4 prompt + this hand-off)
-**Branch:** `claude/awesome-galileo-8qrhfo`
-**Model:** Fable 5.1 at High (per `phase-f-action-plan.md` §3 row 3)
-
-### What was done
-
-- **Three new dossiers (v1) with v2 study guides and lesson plans:** `ppl`, `pinnacle-west`, `nisource` — all `utility`, all `utilities` · incumbent; PPL and NiSource `storage-developers-and-ipps` · adjacent. Written from the hand-off's §5 verified notes only (no research subagents); the six NiSource gaps in its §3.2 were closed one fetch at a time (Quanta, Zachry, the NiSource news archive, EDGAR index + FY2025 10-K, the GenCo explainer). The shell had outbound HTTPS through the proxy, so the fetches ran as `curl` reads, not summarizer calls.
-- **Identity finding:** NiSource is a **Delaware** corporation per the 10-K cover (EDGAR's company record shows IN for NIPSCO's own CIK); 801 East 86th Avenue, Merrillville; 7,668 full-time employees. Pinnacle West: Geisler is Chairman, President and CEO since Apr 1, 2025 — no split president found. PPL: FY2025 10-K not read; FY2024 employees used.
-- **Step 7:** PPL 8 / Pinnacle West 12 / NiSource 5 dossiers grepped by alias; one change — `quanta-services` v5→v6 ('~3 GW CCGT' → 2 × 1,300 MW CCGT + 400 MW BESS, reciprocal `nisource` edge). One relationships finding accepted (`nisource × ppl`, both `other`).
-- **13 concepts** added (`xhlf`, `ring-fencing`, `jurisdictional-declination`, `four-hour-battery`, `reimbursement-agreement`, `default-service`, `emergency-order-202c`, `equity-forward`, `peak-demand`, `pumped-storage`, `service-territory`, `weather-normalized`, `cooling-degree-day`); `stay-out` exists under `rate-freeze`.
-- Calendar rows unconfirmed: `ppl` ~11/05, `pinnacle-west` ~11/03, `nisource` ~10/28. §11.3 rows rewritten and flipped; `phase-f-action-plan.md` row 3 landed with the project-threads note. Checkers all clean; Playwright six routes zero errors.
-- **No CHANGELOG rotation on either push** — 101 raw / 94 non-exempt with seven 2026-09-29 sections exempt after the hand-off push. **The first push dated 2026-09-30 EST or later rotates the 2026-09-20 group (v06.75r–v06.82r, 8 sections) with SHA enrichment** (full SHAs resolve on the deep clone).
-
-### Where we left off
-
-- **Phase 1 (to Sat 10/3, 7:00 AM ET), remaining in order:** the 9/30 Classroom run check (Opus 5.5 medium, after ~7:30 AM ET Wed); F-U4 (FPL, SRP, TVA — Fable High; the `public-power` and federal-utility category tests); the neoclouds pass + `profiler Habitat Energy` on Thu 10/1 (rebase first); F-I4; F-G1; F-A1.
-- **Classroom lessons now stale, by design (`Classroom.gs` untouched):** `landscape-utilities-2026-09` is eight franchises behind (Duke, DTE, WEC, BHE, Exelon, PPL, Pinnacle West, NiSource) plus the three `scenario-utilities-*` rehearsals — wave C (row 16, week 3).
-- **For the Megmeet job — MV and DC power equipment.** None of the three buys an SST, 800 VDC or a battery directly today. **NiSource/GenCo is the lead:** four gas turbines and two steam turbines with no named OEM go through the Quanta–Zachry EPC JV (Zachry leads procurement), and GenCo itself buys the 400 MW / 1,600 MWh Mitchell battery (supplier unnamed) due January 1, 2027. **PPL:** the Kentucky RFP (50–400 MW storage, bids Sep 3, 2026) and the E.W. Brown battery (an unread Burns & McDonnell page names Tesla Megapacks — verify); Invitium's batteries may be hyperscaler-owned. **APS:** the account is the developer bidding into the 2025 all-source RFP (awards by year-end), whose toll terms (365 cycles, 50% SOC) are the spec; APS names no OEM anywhere.
-
-### Key decisions made
-
-- Rotation followed the CHANGELOG-archive rule (today's sections exempt) over the hand-off's expectation; recorded in the entry.
-- Relationships to counterparties were added one-way (inbound evidence shows in the graph); only `quanta-services` got a reciprocal edge, because it was revised for a contradiction anyway. Corpus-only claims (Invenergy, Tract, Compass, DNV, Talen) carry label sources naming the dossier.
-- Two NiSource developments with an unsourced day-of-month (the 202(c) order, the July Alphabet approval) were kept in policy/prose and dropped from `recentDevelopments[]`.
-
-### Known issues
-
-- Pre-existing: the four report pin warnings (`fluence` v10, `jupiter-power` v7, `jinko` v6, `oracle` v6); `verify-profiler-roles.py` (2) and `check-events-plan.js` (2) carried over; `duke-energy` v1 `sources[]` order.
-- The PPL EHLF threshold (100 MW per LPM vs 50 MVA on the deck) is stated unreconciled; the PPL FY2025 10-K should be read on the next pass now that sec.gov answers.
-- The harness pre-created `claude/awesome-galileo-8qrhfo` on the remote at `origin/main`'s SHA; Pre-Push #5 treated it as safe because it carried no commits.
-
-### Active context
-
-- **Toggles:** START On · BOOKENDS Off · TIMING On · END On · MULTI_SESSION Off.
-- **Profiler:** 196 dossiers, page v01.93w (unchanged). **Classroom:** GAS v01.93g, page v01.16w. **CHANGELOG** `Sections: 101/100` (seven 2026-09-29 sections exempt, 94 non-exempt) — **the next push dated 9/30 or later rotates the 2026-09-20 group.**
-- **Active reminders (5):** the neoclouds pass, the Dominion reframe, `profiler Habitat Energy`, the AIDC power-conversion re-run, and the 9/30 run check.
-
-### Recommendation for next session
-
-- **Check the 9/30 Classroom pipeline run first (after ~7:30 AM ET), then run F-U4 (Florida Power & Light, Salt River Project, TVA) on Fable 5.1 High** with the paste-in prompt saved at `PROFILER-COVERAGE-PLAN.md` §11.5 (written at the end of this session, v07.75r); it decides FPL's slug on the record, writes the public-power and federal category tests as schema notes, and carries the rotation due on the first push dated 9/30 or later.
-
-**To continue:** paste `PROFILER-COVERAGE-PLAN.md` §11.5 into a fresh Fable 5.1 High session, or type `run F-U4`.
-
 Developed by: LightAISolutions
